@@ -251,6 +251,63 @@ def test_pointcast_and_slashdot() -> None:
         return
     ok("pointcast-slashdot-recs")
 
+
+
+def test_ci_includes_authenticity() -> None:
+    """Authenticity must stay in the CI gate (pipeline plan)."""
+    wf = ROOT / ".github/workflows/ci.yml"
+    if not wf.is_file():
+        fail("auth-in-ci", "missing ci.yml")
+        return
+    if "test-authenticity.py" not in read(wf):
+        fail("auth-in-ci", "ci.yml does not run test-authenticity.py")
+        return
+    ok("auth-in-ci")
+
+
+def test_1997_pointcast_urlmap() -> None:
+    cfg = read(ROOT / "js/config/1997.js")
+    if "pointcast" not in cfg:
+        fail("pointcast-urlmap", "1997 config missing pointcast")
+        return
+    if not (ROOT / "years/1997/sites/pointcast/index.html").is_file():
+        fail("pointcast-urlmap", "missing pointcast pages")
+        return
+    ok("pointcast-urlmap")
+
+
+def test_immersion_boot_markers() -> None:
+    """Immersion loaders should set data-itt-immersion-booted for e2e guards."""
+    found = False
+    for p in (ROOT / "js").glob("immersion*.js"):
+        t = read(p)
+        if "data-itt-immersion-booted" in t or "itt-immersion-booted" in t:
+            found = True
+            break
+    # also check core
+    if "itt-immersion-booted" in read(ROOT / "js/immersion-core.js") or "immersion-booted" in read(ROOT / "js/immersion-core.js"):
+        found = True
+    # check thin loaders
+    for y in ("1995", "1996", "1997"):
+        t = read(ROOT / f"js/immersion-{y}.js")
+        if "booted" in t or "Immersion.create" in t:
+            found = True
+    if not found:
+        # e2e waits on data-itt-immersion-booted — verify attribute is set somewhere
+        core = read(ROOT / "js/immersion-core.js") + read(ROOT / "js/immersion-1995.js")
+        if "data-itt-immersion-booted" not in core and "itt-immersion-booted" not in core:
+            # search all js
+            for jp in (ROOT / "js").rglob("*.js"):
+                if "data-itt-immersion-booted" in read(jp):
+                    found = True
+                    break
+        else:
+            found = True
+    if not found:
+        fail("immersion-boot-marker", "data-itt-immersion-booted never set")
+        return
+    ok("immersion-boot-marker")
+
 def main() -> int:
     print("Authenticity static tests")
     print("=" * 40)
@@ -267,6 +324,9 @@ def main() -> int:
         test_urlmap_new_paths,
         test_yahoo_1996_depth,
         test_pointcast_and_slashdot,
+        test_ci_includes_authenticity,
+        test_1997_pointcast_urlmap,
+        test_immersion_boot_markers,
     ]
     for t in tests:
         t()

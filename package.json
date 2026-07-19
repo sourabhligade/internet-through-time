@@ -7,9 +7,9 @@
     "smoke": "python3 scripts/smoke-production.py",
     "smoke:http": "python3 scripts/smoke-production.py --base http://127.0.0.1:8080",
     "audit:links": "python3 scripts/audit-internal-links.py",
-    "test:static": "python3 scripts/test-authenticity.py",
+    "test:static": "python3 scripts/test-authenticity.py && python3 scripts/test-pipeline.py",
     "test:e2e": "playwright test",
-    "check": "python3 scripts/smoke-production.py && python3 scripts/audit-internal-links.py && python3 scripts/test-authenticity.py",
+    "check": "python3 scripts/smoke-production.py && python3 scripts/audit-internal-links.py && python3 scripts/test-authenticity.py && python3 scripts/test-pipeline.py",
     "test": "npm run check && playwright test",
     "ci": "bash scripts/ci.sh",
     "perf": "python3 scripts/measure-perf.py"

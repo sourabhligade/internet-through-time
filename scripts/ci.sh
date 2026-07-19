@@ -12,6 +12,9 @@ python3 scripts/audit-internal-links.py
 echo "==> Static: authenticity"
 python3 scripts/test-authenticity.py
 
+echo "==> Static: pipeline"
+python3 scripts/test-pipeline.py
+
 echo "==> Static: HTTP smoke (ephemeral server)"
 python3 -m http.server 8080 --bind 127.0.0.1 >/tmp/itt-ci-http.log 2>&1 &
 SERVER_PID=$!

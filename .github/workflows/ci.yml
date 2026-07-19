@@ -29,6 +29,9 @@ jobs:
       - name: Authenticity invariants
         run: python3 scripts/test-authenticity.py
 
+      - name: Pipeline invariants
+        run: python3 scripts/test-pipeline.py
+
       - name: Start static server
         run: |
           python3 -m http.server 8080 --bind 127.0.0.1 > /tmp/itt-http.log 2>&1 &
