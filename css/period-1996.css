@@ -1,0 +1,80 @@
+/* 1996 document defaults — extend 1995 commercial web */
+@import url("period-1995.css");
+
+/* Nested tables + denser portals still Times/Arial period mix */
+.sj-wrap {
+  background: #000033;
+  color: #ffffcc;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 12px;
+  min-height: 320px;
+}
+.sj-wrap a:link { color: #66ccff; }
+.sj-wrap a:visited { color: #cc99ff; }
+.sj-hub td {
+  text-align: center;
+  padding: 8px;
+  vertical-align: top;
+}
+.sj-hub img { vertical-align: middle; }
+/* legacy text planets — prefer GIF planets on hub */
+.sj-planet {
+  display: inline-block;
+  width: 88px;
+  height: 88px;
+  line-height: 1.2;
+  padding-top: 28px;
+  box-sizing: border-box;
+  background: #336699;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  border: 2px solid #99ccff;
+}
+/* HoTMaiL 1996 — utilitarian free webmail */
+.hm-bar {
+  background: #000080;
+  color: #fff;
+  padding: 6px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.hm-bar a { color: #ffff99; margin: 0 4px; }
+.hm-box {
+  border: 2px solid #000080;
+  background: #e8e8f0;
+  padding: 14px;
+  max-width: 420px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hm-logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000080;
+  letter-spacing: -1px;
+}
+.hm-logo .hm-hot { color: #cc0000; }
+.hm-footer {
+  margin-top: 16px;
+  border-top: 1px solid #808080;
+  padding-top: 8px;
+  font-size: 11px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hm-inbox th {
+  background: #000080;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  padding: 4px 6px;
+}
+.hm-inbox td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+  padding: 3px 6px;
+}

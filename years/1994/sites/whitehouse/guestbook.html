@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Guest Book</title>
+<link rel="stylesheet" href="../../../../css/mosaic-defaults.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+
+<div data-guestbook data-gb-key="whitehouse"
+  data-gb-name="n" data-gb-from="f" data-gb-msg="c"
+  data-gb-seeds='[{"name":"Maria G.","from":"Madrid","msg":"Greetings from Spain! Amazing to visit the White House online.","date":"Nov 1994"},{"name":"Tom R.","from":"Ohio","msg":"Used Mosaic in the library. My kids cannot believe the President has a URL.","date":"Nov 1994"},{"name":"Kenji S.","from":"Tokyo","msg":"Information superhighway is real!","date":"Dec 1994"},{"name":"Anonymous","from":"","msg":"Socks for President.","date":"Dec 1994"}]'>
+
+<h1>White House Guest Book</h1>
+<p><a href="index.html">White House Home</a></p>
+<hr>
+<p>Please sign our electronic guest book!</p>
+<p data-gb-notice style="display:none;background:#ffffcc;padding:6px;border:1px solid #999;"></p>
+<form action="guestbook.html" method="get" data-gb-form>
+<p>Name: <input type="text" name="n" size="30" required></p>
+<p>From: <input type="text" name="f" size="30"></p>
+<p>Comments:<br><textarea name="c" rows="4" cols="50" required></textarea></p>
+<p><input type="submit" value="Sign Guest Book"></p>
+</form>
+<hr>
+<h3>Recent entries</h3>
+<ul data-gb-list></ul>
+<p><font size="2">Entries are stored in this browser (like a local guestbook file). Reload anytime — your signature stays.</font></p>
+</div>
+<script src="../../../../js/immersion.js"></script>
+</body>
+</html>

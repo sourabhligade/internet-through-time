@@ -1,0 +1,69 @@
+/* IE4 chrome overrides — loaded after win95-netscape.css for 1997 only */
+
+/* Title bar: IE4 blue gradient */
+.titlebar {
+  background: linear-gradient(90deg, #0050a0, #0078d7);
+}
+.titlebar .title,
+.titlebar .icon {
+  color: #ffffff;
+}
+
+/* Toolbar: flatter look */
+.toolbar {
+  background: #d4d0c8;
+  border-bottom: 1px solid var(--chrome-shadow);
+}
+.toolbar .btn {
+  border: 1px solid transparent;
+  background: transparent;
+}
+.toolbar .btn:hover {
+  border: 1px solid var(--chrome-shadow);
+  background: #e8e4dc;
+}
+.toolbar .btn:active {
+  border: 1px solid var(--chrome-dark);
+  background: #c0bcb4;
+}
+
+/* Throbber: spinning "e" */
+.throbber:not(.idle) {
+  animation: ie4-spin 1s linear infinite;
+}
+@keyframes ie4-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Location bar: flatter */
+.locationbar {
+  background: #d4d0c8;
+}
+.locationbar input {
+  border: 1px solid #808080;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* Menu bar: subtle difference */
+.menubar {
+  background: #d4d0c8;
+}
+
+/* Directory bar: flatter */
+.dirbar {
+  background: #d4d0c8;
+}
+.dirbar .dir-btn {
+  border: 1px solid transparent;
+}
+.dirbar .dir-btn:hover {
+  border: 1px solid #808080;
+  background: #e8e4dc;
+}
+
+/* Status bar matches */
+.statusbar {
+  background: #d4d0c8;
+}

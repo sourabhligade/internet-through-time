@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netscape Navigator — 1994</title>
+  <base href="./">
+  <link rel="icon" href="../../favicon.gif" type="image/gif">
+  <link rel="stylesheet" href="../../css/netscape-chrome.css">
+</head>
+<body>
+  <a class="skip-to-content" href="#content">Skip to page content</a>
+  <!-- Modem connect immersion -->
+  <div class="connect-overlay" id="connect-overlay" role="dialog" aria-labelledby="connect-title">
+    <div class="connect-box">
+      <h2 id="connect-title">Dial-Up Networking</h2>
+      <pre id="connect-log">Initializing modem...</pre>
+      <button type="button" id="connect-btn">Connect at 14,400 bps</button>
+      <button type="button" class="skip" id="skip-connect">Skip</button>
+    </div>
+  </div>
+
+  <!-- Modal dialogs (Win 3.1 style) -->
+  <div class="modal-backdrop hidden" id="modal-backdrop"></div>
+
+  <div class="dialog hidden" id="dlg-open-location" role="dialog" aria-labelledby="dlg-ol-title">
+    <div class="dialog-titlebar"><span id="dlg-ol-title">Open Location</span>
+      <button type="button" class="dialog-x" data-close="dlg-open-location">×</button>
+    </div>
+    <div class="dialog-body">
+      <p>Open Location in Netscape Navigator:</p>
+      <input type="text" id="dlg-ol-input" class="dialog-input" spellcheck="false" placeholder="http://">
+      <div class="dialog-btns">
+        <button type="button" id="dlg-ol-ok">Open</button>
+        <button type="button" data-close="dlg-open-location">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog hidden" id="dlg-find" role="dialog">
+    <div class="dialog-titlebar"><span>Find</span>
+      <button type="button" class="dialog-x" data-close="dlg-find">×</button>
+    </div>
+    <div class="dialog-body">
+      <p>Find what:</p>
+      <input type="text" id="dlg-find-input" class="dialog-input">
+      <label class="dialog-check"><input type="checkbox" id="dlg-find-case"> Match case</label>
+      <div class="dialog-btns">
+        <button type="button" id="dlg-find-ok">Find Next</button>
+        <button type="button" data-close="dlg-find">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog dialog-wide hidden" id="dlg-source" role="dialog">
+    <div class="dialog-titlebar"><span>Document Source</span>
+      <button type="button" class="dialog-x" data-close="dlg-source">×</button>
+    </div>
+    <div class="dialog-body">
+      <pre class="source-view" id="dlg-source-text"></pre>
+      <div class="dialog-btns">
+        <button type="button" id="dlg-source-save">Save As...</button>
+        <button type="button" data-close="dlg-source">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog hidden" id="dlg-info" role="dialog">
+    <div class="dialog-titlebar"><span>Document Information</span>
+      <button type="button" class="dialog-x" data-close="dlg-info">×</button>
+    </div>
+    <div class="dialog-body">
+      <table class="info-table" id="dlg-info-table"></table>
+      <div class="dialog-btns">
+        <button type="button" data-close="dlg-info">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog dialog-wide hidden" id="dlg-bookmarks" role="dialog">
+    <div class="dialog-titlebar"><span>Bookmarks</span>
+      <button type="button" class="dialog-x" data-close="dlg-bookmarks">×</button>
+    </div>
+    <div class="dialog-body">
+      <p class="dialog-hint">Double-click a bookmark to open it. Bookmarks are saved on this computer.</p>
+      <select id="dlg-bm-list" class="bm-list" size="12"></select>
+      <div class="dialog-btns">
+        <button type="button" id="dlg-bm-go">Go To</button>
+        <button type="button" id="dlg-bm-remove">Remove</button>
+        <button type="button" data-close="dlg-bookmarks">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog dialog-wide hidden" id="dlg-prefs" role="dialog">
+    <div class="dialog-titlebar"><span>Preferences</span>
+      <button type="button" class="dialog-x" data-close="dlg-prefs">×</button>
+    </div>
+    <div class="dialog-body">
+      <fieldset>
+        <legend>Styles</legend>
+        <label>Underline links: <input type="checkbox" id="pref-underline" checked></label><br>
+        <label>Followed link expires after (days): <input type="number" id="pref-expire" value="30" min="0" max="999" class="dialog-num"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Images / Network</legend>
+        <label><input type="checkbox" id="pref-autoload" checked> Automatically load images</label><br>
+        <label>Simulated modem:
+          <select id="pref-modem">
+            <option value="0">None (instant)</option>
+            <option value="90">28.8 kbps (fast feel)</option>
+            <option value="160" selected>14.4 kbps (default)</option>
+            <option value="280">14.4 kbps (period)</option>
+            <option value="450">9600 bps (slow)</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Home page</legend>
+        <label>Location: <input type="text" id="pref-home" class="dialog-input" value="http://home.nerf.edu/web1994/"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Show / Hide</legend>
+        <label><input type="checkbox" id="pref-toolbar" checked> Show Toolbar</label><br>
+        <label><input type="checkbox" id="pref-location" checked> Show Location</label><br>
+        <label><input type="checkbox" id="pref-dirbar" checked> Show Directory Buttons</label><br>
+        <label><input type="checkbox" id="pref-desktopicons" checked> Show Desktop Icons</label>
+      </fieldset>
+      <fieldset>
+        <legend>Desktop</legend>
+        <label>Background:
+          <select id="pref-desktop">
+            <option value="#000000">Black</option>
+            <option value="#008080">Teal (Windows 3.1)</option>
+          </select>
+        </label>
+      </fieldset>
+      <div class="dialog-btns">
+        <button type="button" id="dlg-prefs-ok">OK</button>
+        <button type="button" data-close="dlg-prefs">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog hidden" id="dlg-about" role="dialog">
+    <div class="dialog-titlebar"><span>About Netscape</span>
+      <button type="button" class="dialog-x" data-close="dlg-about">×</button>
+    </div>
+    <div class="dialog-body about-body">
+      <p><b>Netscape Navigator</b></p>
+      <p>Version 1.0N<br>Copyright © 1994 Netscape Communications Corporation</p>
+      <p>This is a historical reconstruction for<br><i>The Internet Through Time</i>.</p>
+      <p>Optimized for 14.4 kilobit/second modems<br>and higher bandwidth lines.</p>
+      <p>Mozilla says: &quot;The Web is for everyone.&quot;</p>
+      <div class="dialog-btns">
+        <button type="button" data-close="dlg-about">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog hidden" id="dlg-mail" role="dialog">
+    <div class="dialog-titlebar"><span>Mail Document</span>
+      <button type="button" class="dialog-x" data-close="dlg-mail">×</button>
+    </div>
+    <div class="dialog-body">
+      <p>Mail this document's URL to:</p>
+      <input type="text" id="dlg-mail-to" class="dialog-input" placeholder="friend@university.edu">
+      <p>Subject:</p>
+      <input type="text" id="dlg-mail-subj" class="dialog-input">
+      <p>Message (URL will be included):</p>
+      <textarea id="dlg-mail-body" class="dialog-textarea" rows="4"></textarea>
+      <div class="dialog-btns">
+        <button type="button" id="dlg-mail-send">Send Mail</button>
+        <button type="button" data-close="dlg-mail">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog hidden" id="dlg-alert" role="dialog">
+    <div class="dialog-titlebar"><span id="dlg-alert-title">Netscape</span>
+      <button type="button" class="dialog-x" data-close="dlg-alert">×</button>
+    </div>
+    <div class="dialog-body">
+      <p id="dlg-alert-msg"></p>
+      <div class="dialog-btns">
+        <button type="button" data-close="dlg-alert" id="dlg-alert-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="desktop">
+    <div class="exit-bar" id="exit-bar">
+      <span class="year-label">1994 · Netscape 1.0</span>
+      <a href="../../index.html" title="Leave immersion and return to year menu">← Exit to year menu</a>
+    </div>
+
+    <div class="desktop-icons" id="desktop-icons" aria-hidden="true">
+      <div class="desk-icon" title="My Computer">
+        <span class="desk-glyph desk-pc"></span>
+        <span class="desk-label">My Computer</span>
+      </div>
+      <div class="desk-icon" title="Network Neighborhood">
+        <span class="desk-glyph desk-net"></span>
+        <span class="desk-label">Network<br>Neighborhood</span>
+      </div>
+      <div class="desk-icon" title="Inbox">
+        <span class="desk-glyph desk-mail"></span>
+        <span class="desk-label">Inbox</span>
+      </div>
+      <div class="desk-icon" title="Recycle Bin">
+        <span class="desk-glyph desk-bin"></span>
+        <span class="desk-label">Recycle Bin</span>
+      </div>
+    </div>
+
+    <div class="browser" id="browser" role="application" aria-label="Netscape Navigator 1.0 simulation">
+      <div class="titlebar" id="titlebar">
+        <span class="icon" aria-hidden="true">N</span>
+        <span class="title" id="window-title">Welcome to the World Wide Web — Netscape</span>
+        <div class="win-btns">
+          <button type="button" class="win-btn" id="btn-min" title="Minimize">_</button>
+          <button type="button" class="win-btn" id="btn-max" title="Maximize">□</button>
+          <button type="button" class="win-btn" id="btn-close" aria-label="Close browser" title="Close">×</button>
+        </div>
+      </div>
+
+      <div class="menubar" id="menubar" role="menubar">
+        <div class="menu-root" data-menu="file">
+          <button type="button" class="menu-item" id="menu-file"><u>F</u>ile</button>
+          <div class="menu-dropdown" role="menu" hidden>
+            <button type="button" role="menuitem" data-cmd="file-new">New Web Browser</button>
+            <button type="button" role="menuitem" data-cmd="file-open-file">Open File...</button>
+            <button type="button" role="menuitem" data-cmd="file-open-loc">Open Location... <span class="accel">Ctrl+L</span></button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="file-save">Save As... <span class="accel">Ctrl+S</span></button>
+            <button type="button" role="menuitem" data-cmd="file-mail">Mail Document...</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="file-print">Print... <span class="accel">Ctrl+P</span></button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="file-close">Close</button>
+            <button type="button" role="menuitem" data-cmd="file-exit">Exit</button>
+          </div>
+        </div>
+        <div class="menu-root" data-menu="edit">
+          <button type="button" class="menu-item" id="menu-edit"><u>E</u>dit</button>
+          <div class="menu-dropdown" role="menu" hidden>
+            <button type="button" role="menuitem" data-cmd="edit-undo" disabled>Undo <span class="accel">Ctrl+Z</span></button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="edit-cut">Cut <span class="accel">Ctrl+X</span></button>
+            <button type="button" role="menuitem" data-cmd="edit-copy">Copy <span class="accel">Ctrl+C</span></button>
+            <button type="button" role="menuitem" data-cmd="edit-paste">Paste <span class="accel">Ctrl+V</span></button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="edit-find">Find... <span class="accel">Ctrl+F</span></button>
+            <button type="button" role="menuitem" data-cmd="edit-find-again">Find Again <span class="accel">Ctrl+G</span></button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="edit-select-all">Select All</button>
+          </div>
+        </div>
+        <div class="menu-root" data-menu="view">
+          <button type="button" class="menu-item" id="menu-view"><u>V</u>iew</button>
+          <div class="menu-dropdown" role="menu" hidden>
+            <button type="button" role="menuitem" data-cmd="view-reload">Reload <span class="accel">Ctrl+R</span></button>
+            <button type="button" role="menuitem" data-cmd="view-images">Load Images</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="view-source">Document Source</button>
+            <button type="button" role="menuitem" data-cmd="view-info">Document Info</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="view-stop">Stop Loading <span class="accel">Esc</span></button>
+          </div>
+        </div>
+        <div class="menu-root" data-menu="go">
+          <button type="button" class="menu-item" id="menu-go"><u>G</u>o</button>
+          <div class="menu-dropdown" role="menu" hidden id="menu-go-dropdown">
+            <button type="button" role="menuitem" data-cmd="go-back">Back</button>
+            <button type="button" role="menuitem" data-cmd="go-forward">Forward</button>
+            <button type="button" role="menuitem" data-cmd="go-home">Home</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="go-stop">Stop Loading</button>
+            <div class="menu-sep" id="go-history-sep"></div>
+            <!-- history items injected here -->
+          </div>
+        </div>
+        <div class="menu-root" data-menu="bookmarks">
+          <button type="button" class="menu-item" id="menu-bookmarks"><u>B</u>ookmarks</button>
+          <div class="menu-dropdown" role="menu" hidden id="menu-bm-dropdown">
+            <button type="button" role="menuitem" data-cmd="bm-add">Add Bookmark <span class="accel">Ctrl+D</span></button>
+            <button type="button" role="menuitem" data-cmd="bm-view">View Bookmarks...</button>
+            <div class="menu-sep" id="bm-sep"></div>
+            <!-- bookmarks injected -->
+          </div>
+        </div>
+        <div class="menu-root" data-menu="options">
+          <button type="button" class="menu-item" id="menu-options"><u>O</u>ptions</button>
+          <div class="menu-dropdown" role="menu" hidden>
+            <button type="button" role="menuitem" data-cmd="opt-prefs">Preferences...</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="opt-toolbar" id="opt-toolbar-item">✓ Show Toolbar</button>
+            <button type="button" role="menuitem" data-cmd="opt-location" id="opt-location-item">✓ Show Location</button>
+            <button type="button" role="menuitem" data-cmd="opt-dirbar" id="opt-dirbar-item">✓ Show Directory Buttons</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="opt-autoload" id="opt-autoload-item">✓ Auto Load Images</button>
+          </div>
+        </div>
+        <div class="menu-root" data-menu="directory">
+          <button type="button" class="menu-item" id="menu-directory"><u>D</u>irectory</button>
+          <div class="menu-dropdown" role="menu" hidden>
+            <button type="button" role="menuitem" data-cmd="dir-welcome">Welcome</button>
+            <button type="button" role="menuitem" data-cmd="dir-new">What's New!</button>
+            <button type="button" role="menuitem" data-cmd="dir-cool">What's Cool!</button>
+            <button type="button" role="menuitem" data-cmd="dir-handbook">Handbook</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="dir-search">Internet Search</button>
+            <button type="button" role="menuitem" data-cmd="dir-directory">Internet Directory (Yahoo!)</button>
+            <button type="button" role="menuitem" data-cmd="dir-whitepages">Internet White Pages</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="dir-about-net">About the Internet</button>
+          </div>
+        </div>
+        <div class="menu-root" data-menu="help">
+          <button type="button" class="menu-item" id="menu-help"><u>H</u>elp</button>
+          <div class="menu-dropdown" role="menu" hidden>
+            <button type="button" role="menuitem" data-cmd="help-about">About Netscape...</button>
+            <button type="button" role="menuitem" data-cmd="help-handbook">Handbook</button>
+            <button type="button" role="menuitem" data-cmd="help-faq">Frequently Asked Questions</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="help-support">How to Get Support</button>
+            <button type="button" role="menuitem" data-cmd="help-feedback">How to Give Feedback</button>
+            <div class="menu-sep"></div>
+            <button type="button" role="menuitem" data-cmd="help-exhibit">About This Exhibit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbar" id="toolbar">
+        <button type="button" class="btn" id="btn-back" title="Back" disabled>
+          <span class="icon-glyph icon-back" aria-hidden="true"></span>
+          <span>Back</span>
+        </button>
+        <button type="button" class="btn" id="btn-forward" title="Forward" disabled>
+          <span class="icon-glyph icon-fwd" aria-hidden="true"></span>
+          <span>Forward</span>
+        </button>
+        <button type="button" class="btn" id="btn-home" title="Home">
+          <span class="icon-glyph icon-home" aria-hidden="true"></span>
+          <span>Home</span>
+        </button>
+        <button type="button" class="btn" id="btn-reload" title="Reload">
+          <span class="icon-glyph icon-reload" aria-hidden="true"></span>
+          <span>Reload</span>
+        </button>
+        <button type="button" class="btn" id="btn-images" title="Load Images">
+          <span class="icon-glyph icon-images" aria-hidden="true"></span>
+          <span>Images</span>
+        </button>
+        <button type="button" class="btn" id="btn-open" title="Open Location">
+          <span class="icon-glyph icon-open" aria-hidden="true"></span>
+          <span>Open</span>
+        </button>
+        <button type="button" class="btn" id="btn-find" title="Find">
+          <span class="icon-glyph icon-find" aria-hidden="true"></span>
+          <span>Find</span>
+        </button>
+        <button type="button" class="btn" id="btn-stop" title="Stop">
+          <span class="icon-glyph icon-stop" aria-hidden="true"></span>
+          <span>Stop</span>
+        </button>
+        <div class="separator"></div>
+        <div class="throbber idle" id="throbber" title="Netscape">
+          <img src="../../assets/gif/netscape-throbber.gif" alt="" width="32" height="32">
+        </div>
+      </div>
+
+      <div class="locationbar" id="locationbar">
+        <label for="location">Location:</label>
+        <input type="text" id="location" value="http://home.nerf.edu/web1994/" spellcheck="false" autocomplete="off">
+      </div>
+
+      <div class="dirbar" id="dirbar">
+        <button type="button" class="dir-btn" data-go="pages/whats-new.html">What's New</button>
+        <button type="button" class="dir-btn" data-go="pages/cool.html">What's Cool</button>
+        <button type="button" class="dir-btn" data-go="pages/handbook.html">Handbook</button>
+        <button type="button" class="dir-btn" data-go="sites/lycos/index.html">Net Search</button>
+        <button type="button" class="dir-btn" data-go="sites/yahoo/index.html">Net Directory</button>
+      </div>
+
+      <div class="content-frame">
+        <iframe
+          id="content" tabindex="-1"
+          title="Web page content"
+          src="pages/home.html"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"
+        ></iframe>
+      </div>
+
+      <div class="statusbar">
+        <div class="status-text" id="status">Document: Done</div>
+        <div class="status-done" id="status-done">Document: Done</div>
+      </div>
+    </div>
+
+    <!-- minimized taskbar icon -->
+    <button type="button" class="task-icon hidden" id="task-icon" title="Restore Netscape">
+      <span>N</span> Netscape
+    </button>
+  </div>
+
+  <!-- hidden file input for Open File -->
+  <input type="file" id="file-open-input" accept=".html,.htm,.txt,text/html,text/plain" hidden>
+
+  <script src="../../js/lib/util.js"></script>
+  <script src="../../js/browser-core.js"></script>
+  <script src="../../js/config/1994.js"></script>
+  <script src="../../js/browser.js"></script>
+</body>
+</html>

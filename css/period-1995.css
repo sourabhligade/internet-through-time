@@ -1,0 +1,174 @@
+/* 1995 document defaults — tables for layout, commercial web */
+html { background: #ffffff; }
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  margin: 8px;
+  line-height: 1.25;
+}
+a:link { color: #0000ee; text-decoration: underline; }
+a:visited { color: #551a8b; text-decoration: underline; }
+a:active { color: #ff0000; }
+a img { border: 2px solid #0000ee; }
+img[border="0"], img.noborder { border: 0 !important; }
+table.layout { width: 100%; border-collapse: collapse; }
+table.layout td { vertical-align: top; }
+hr {
+  border: none;
+  height: 2px;
+  background: #808080;
+  color: #808080;
+  margin: 0.6em 0;
+}
+h1 { font-size: 1.75em; margin: 0.4em 0; }
+h2 { font-size: 1.25em; margin: 0.6em 0 0.3em; }
+.small, font[size="2"] { /* keep native */ }
+.tiny { font-size: 11px; }
+.hit-counter { font-family: "Courier New", monospace; font-weight: bold; color: #060; }
+* { border-radius: 0 !important; box-shadow: none !important; }
+
+/* Win95-ish form widgets */
+input[type="text"], input[type="password"], input:not([type]), textarea, select {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 12px;
+  background: #fff;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 2px 3px;
+}
+input[type="submit"], input[type="button"], button {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 12px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  padding: 2px 12px;
+  cursor: pointer;
+}
+input[type="submit"]:active, input[type="button"]:active, button:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* Amazon period purple bar */
+.amz-top {
+  background: #c0c0c0;
+  color: #000;
+  padding: 4px 6px;
+  border-bottom: 1px solid #808080;
+}
+.amz-top a { color: #0000ee; }
+.amz-box { border: 1px solid #808080; background: #e0e0e0; padding: 8px; }
+.amz-price { color: #000; font-size: 1.15em; font-weight: bold; }
+.amz-btn {
+  background: #c0c0c0 !important;
+  font-weight: bold;
+}
+
+/* Yahoo red wordmark */
+.yahoo-mark {
+  font-family: Times, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #f00;
+  letter-spacing: -2px;
+  margin: 0;
+  line-height: 1;
+}
+
+/* AuctionWeb utilitarian */
+.aw-header {
+  background: #003366;
+  color: #fff;
+  padding: 6px 8px;
+  font-family: Arial, sans-serif;
+}
+.aw-header a { color: #cff; }
+.aw-table { border-collapse: collapse; width: 100%; }
+.aw-table th, .aw-table td {
+  border: 1px solid #999;
+  padding: 4px 6px;
+  font-size: 13px;
+}
+.aw-table th { background: #ddd; text-align: left; }
+
+/* CNN red */
+.cnn-bar { background: #c00; color: #fff; padding: 6px 8px; }
+.cnn-nav { background: #000; color: #fff; padding: 4px 8px; font-size: 12px; }
+.cnn-nav a { color: #fff; margin-right: 10px; }
+
+/* GeoCities flair */
+.gc-marquee {
+  background: #000080;
+  color: #ff0;
+  padding: 4px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  border: 2px solid #ff0;
+}
+
+blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { visibility: hidden; } }
+
+.newbadge {
+  display: inline-block;
+  background: #f00;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 1px 4px;
+  vertical-align: middle;
+}
+
+/* Injected exhibit navigation strip */
+#itt-exhibit-nav {
+  margin: -8px -8px 8px -8px;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+}
+#itt-exhibit-nav a:link,
+#itt-exhibit-nav a:visited { text-decoration: none; }
+#itt-exhibit-nav a:hover font { color: #FFFFFF !important; text-decoration: underline; }
+#itt-exhibit-foot {
+  clear: both;
+  margin-top: 1.5em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Cleaner content rhythm */
+body {
+  max-width: 920px;
+}
+
+/* Museum UX helpers (shell content pages) */
+.itt-nav-slot {
+  min-height: 28px;
+  margin: -8px -8px 8px -8px;
+}
+body > .itt-nav-slot:empty {
+  /* reserve height before JS injects nav — reduces layout jump */
+  background: #000080;
+  min-height: 28px;
+}
+#itt-exhibit-nav {
+  margin: 0;
+}
+#itt-exhibit-nav table {
+  margin: 0;
+}
+.itt-flash {
+  margin: 0 0 8px 0;
+}
+.itt-flash a { color: #0000ee; }
+.itt-tour-table {
+  margin: 0.5em 0 1em;
+}

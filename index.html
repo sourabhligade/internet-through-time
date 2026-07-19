@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Internet Through Time</title>
+  <meta property="og:title" content="The Internet Through Time">
+  <meta property="og:description" content="Museum-style reconstruction of the Web in 1994, 1995, 1996, and 1997.">
+  <meta property="og:type" content="website">
+  <meta name="description" content="Historical reconstruction of the World Wide Web — year by year. Not retro-inspired. Historically accurate.">
+  <link rel="stylesheet" href="css/hub.css">
+  <link rel="icon" href="favicon.gif" type="image/gif">
+</head>
+<body>
+  <div class="hub">
+    <header class="hub-header">
+      <h1>The Internet Through Time</h1>
+      <p class="tagline">
+        Choose a year. Step into how the Web actually looked and felt.<br>
+        <em>Historical reconstruction — not a modern redesign.</em>
+      </p>
+      <p id="resume-row" class="resume-row hidden">
+        <a id="resume-link" class="resume-btn" href="#">Continue where you left off →</a>
+      </p>
+    </header>
+
+    <p class="mobile-notice">📺 This experience is designed for desktop browsers — just like the 1990s web.</p>
+
+    <div class="year-grid">
+      <a class="year-card available" href="years/1994/" data-year="1994">
+        <p class="year">1994</p>
+        <p class="label">Netscape Navigator 1.0 · Mosaic · Yahoo at Stanford · gray pages · 14.4 kbps</p>
+        <p class="meta">Enter immersion</p>
+      </a>
+
+      <a class="year-card available" href="years/1995/" data-year="1995">
+        <p class="year">1995</p>
+        <p class="label">Windows 95 · Netscape 2.0 · yahoo.com · Amazon · AuctionWeb · GeoCities</p>
+        <p class="meta">Enter immersion</p>
+      </a>
+
+      <a class="year-card available" href="years/1996/" data-year="1996">
+        <p class="year">1996</p>
+        <p class="label">Netscape 3 · IE3 · Hotmail · Space Jam · portals · Flash/CSS born</p>
+        <p class="meta">Enter immersion</p>
+      </a>
+
+      <a class="year-card available" href="years/1997/" data-year="1997">
+        <p class="year">1997</p>
+        <p class="label">IE4 · browser wars peak · eBay · Amazon IPO · Mars Pathfinder · 56k · DHTML</p>
+        <p class="meta">Enter immersion</p>
+      </a>
+
+      <div class="year-card locked" aria-disabled="true">
+        <p class="year">1998–2000</p>
+        <p class="label">Google · iMac · Napster · Y2K · dot-com peak</p>
+        <p class="meta">Planned</p>
+      </div>
+    </div>
+
+    <section class="compare" id="compare">
+      <h2>How each year is different</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th></th><th>1994</th><th>1995</th><th>1996</th><th>1997</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OS / browser</td><td>Win 3.1 &middot; Netscape 1.0</td><td>Win 95 &middot; Netscape 2.0</td><td>Win 95 &middot; Netscape 3.0</td><td>Win 95 &middot; IE 4.0</td></tr>
+          <tr><td>Finding things</td><td>Yahoo at Stanford</td><td>yahoo.com &middot; AltaVista</td><td>Portals &middot; Excite</td><td>HotBot &middot; Babel Fish &middot; search wars</td></tr>
+          <tr><td>Commerce</td><td>Almost none</td><td>Amazon &middot; AuctionWeb</td><td>Denser catalogs</td><td>Amazon IPO &middot; eBay rebrand</td></tr>
+          <tr><td>Culture</td><td>University pages</td><td>GeoCities homesteads</td><td>Hotmail &middot; Space Jam</td><td>Diana &middot; Pathfinder &middot; Slashdot</td></tr>
+          <tr><td>Modem</td><td>14.4 kbps</td><td>28.8 kbps</td><td>28.8 kbps</td><td>56k</td></tr>
+        </tbody>
+      </table>
+      <p class="compare-hint">Each year opens a full browser window. Follow the on-page tour, then explore freely.</p>
+    </section>
+
+    <div class="note">
+      <p class="legal-blurb">
+      <strong>Educational reconstruction.</strong> Trademarks (Netscape, Yahoo!, Amazon, Microsoft, Warner Bros., etc.)
+      belong to their owners and appear only for historical illustration. No affiliation.
+      Cart, mail, and tour progress use <em>browser localStorage only</em> — nothing is uploaded.
+      </p>
+      
+      <strong>About this project.</strong>
+      Each year is rebuilt from archived screenshots, browser documentation,
+      contemporary HTML capabilities, and period sources — not “retro aesthetic.”
+      Imperfections, default fonts, gray backgrounds, and slow-loading pages are intentional.
+      Use <strong>Exit</strong> at the top of the immersion desktop to return here.
+    </div>
+
+    <footer class="hub-footer">
+      The Internet Through Time · Museum-style web history
+    </footer>
+  </div>
+  <script>
+  (function () {
+    try {
+      var y = localStorage.getItem("itt-last-year");
+      var row = document.getElementById("resume-row");
+      var link = document.getElementById("resume-link");
+      if (y === "1994" || y === "1995" || y === "1996" || y === "1997") {
+        link.href = "years/" + y + "/";
+        link.textContent = "Continue " + y + " immersion →";
+        row.classList.remove("hidden");
+      }
+    } catch (e) {}
+  })();
+  </script>
+</body>
+</html>

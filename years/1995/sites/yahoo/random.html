@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yahoo! Random</title>
+<link rel="stylesheet" href="../../../../css/period-1995.css">
+</head>
+<body bgcolor="#FFFFFF">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<p><a href="index.html"><font color="#f00"><b>Yahoo!</b></font></a> : Random Link</p>
+<hr>
+<p>Feeling lucky? Pick one:</p>
+<ul id="rlist">
+<li><a href="../amazon/index.html">Amazon.com</a></li>
+<li><a href="../auctionweb/index.html">AuctionWeb</a></li>
+<li><a href="../geocities/Hollywood/1234/index.html">GeoCities Hollywood/1234</a></li>
+<li><a href="../altavista/index.html">AltaVista</a></li>
+<li><a href="../cnn/index.html">CNN Interactive</a></li>
+<li><a href="../geocities/SiliconValley/42/index.html">SiliconValley/42</a></li>
+<li><a href="Entertainment/index.html">Yahoo! Entertainment</a></li>
+</ul>
+<p><a href="random.html"><b>Shuffle again</b></a></p>
+<script>
+(function(){
+  var ul=document.getElementById('rlist');
+  var items=[].slice.call(ul.getElementsByTagName('li'));
+  for(var i=items.length-1;i>0;i--){
+    var j=Math.floor(Math.random()*(i+1));
+    ul.appendChild(items[j]);
+    items=[].slice.call(ul.getElementsByTagName('li'));
+  }
+  var first=ul.getElementsByTagName('li')[0];
+  if(first) first.innerHTML='<b>→ '+first.innerHTML+'</b>';
+})();
+</script>
+<script src="../../../../js/immersion-1995.js"></script>
+</body>
+</html>

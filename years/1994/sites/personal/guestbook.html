@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Guestbook</title>
+<link rel="stylesheet" href="../../../../css/mosaic-defaults.css">
+</head>
+<body bgcolor="#C0C0C0" text="#000000" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+
+<div data-guestbook data-gb-key="jdoe"
+  data-gb-name="n" data-gb-url="u" data-gb-msg="m"
+  data-gb-seeds='[{"name":"Dave","from":"","msg":"Cool page! Liked your IUMA link.","date":"Oct 1994"},{"name":"Susan","from":"Michigan","msg":"Found you via Yahoo. Hi from Michigan.","date":"Nov 1994"},{"name":"labmate","from":"CS lab","msg":"Stop surfing and finish the homework.","date":"Nov 1994"}]'>
+
+<p><a href="index.html">John's Home Page</a></p>
+<h1>Guestbook</h1><hr>
+<p>Thanks for visiting! Leave a note:</p>
+<p data-gb-notice style="display:none;background:#ffffcc;padding:4px;"></p>
+<form action="guestbook.html" method="get" data-gb-form>
+Name: <input name="n" size="25"><br>
+URL (optional): <input name="u" size="40"><br>
+Message:<br><textarea name="m" rows="4" cols="45"></textarea><br>
+<input type="submit" value="Sign Guestbook">
+</form>
+<hr>
+<h3>Previous visitors</h3>
+<ul data-gb-list></ul>
+<p><font size="2">Your entry is saved in this browser until you clear site data.</font></p>
+</div>
+<script src="../../../../js/immersion.js"></script>
+</body>
+</html>

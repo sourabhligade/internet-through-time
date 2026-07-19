@@ -1,0 +1,1472 @@
+/* Windows 95 + Netscape Navigator 2.0 chrome (late 1995) */
+
+:root {
+  --chrome-face: #c0c0c0;
+  --chrome-shadow: #808080;
+  --chrome-dark: #404040;
+  --chrome-highlight: #ffffff;
+  --chrome-title: #000080;
+  --content-bg: #c0c0c0;
+  --desktop-bg: #008080;
+  --taskbar-face: #c0c0c0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  background: var(--desktop-bg);
+  color: #000;
+}
+
+/* Win3.1-ish desktop */
+.desktop {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background: var(--desktop-bg);
+  position: relative;
+}
+
+/* Desktop icons (decoration — click shows a period-style alert via JS) */
+.desktop-icons {
+  position: absolute;
+  top: 36px;
+  left: 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 76px;
+}
+
+.desktop-icons.hidden {
+  display: none;
+}
+
+.desk-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  user-select: none;
+  padding: 2px;
+}
+
+.desk-icon:hover .desk-label,
+.desk-icon:focus .desk-label {
+  background: var(--chrome-title);
+  color: #fff;
+}
+
+.desk-label {
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.15;
+  text-shadow: 1px 1px 0 #000;
+  padding: 1px 2px;
+}
+
+.desk-glyph {
+  width: 32px;
+  height: 32px;
+  display: block;
+  position: relative;
+  image-rendering: pixelated;
+}
+
+.desk-pc {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-sizing: border-box;
+}
+.desk-pc::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  right: 4px;
+  height: 14px;
+  background: #000080;
+}
+.desk-pc::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  bottom: 3px;
+  width: 12px;
+  height: 4px;
+  background: #808080;
+}
+
+.desk-net {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-sizing: border-box;
+}
+.desk-net::before,
+.desk-net::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000080;
+  border: 1px solid #fff;
+}
+.desk-net::before { left: 4px; top: 6px; }
+.desk-net::after { right: 4px; bottom: 6px; }
+
+.desk-mail {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-sizing: border-box;
+}
+.desk-mail::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  right: 3px;
+  bottom: 6px;
+  border: 1px solid #000;
+  background: #fff;
+}
+.desk-mail::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 8px solid #000080;
+}
+
+.desk-bin {
+  background: #808080;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-sizing: border-box;
+  border-radius: 0 0 4px 4px;
+}
+.desk-bin::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  height: 4px;
+  background: #c0c0c0;
+  border: 1px solid #404040;
+}
+
+.desktop.browser-max .desktop-icons {
+  display: none !important;
+}
+
+/* Exit immersion — keep quiet so the desktop feels like a 90s PC */
+.exit-bar {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px 4px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 10px;
+  color: #c0c0c0;
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+
+.exit-bar:hover,
+.exit-bar:focus-within {
+  opacity: 1;
+}
+
+.exit-bar a {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+.exit-bar a:hover {
+  color: #fff;
+}
+
+.exit-bar .year-label {
+  opacity: 0.9;
+}
+
+.desktop.browser-max .exit-bar {
+  display: none;
+}
+
+/* Browser window */
+.browser {
+  position: relative;
+  z-index: 10;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--chrome-face);
+  border-top: 2px solid var(--chrome-highlight);
+  border-left: 2px solid var(--chrome-highlight);
+  border-right: 2px solid var(--chrome-dark);
+  border-bottom: 2px solid var(--chrome-dark);
+  box-shadow: 2px 2px 0 #00000040;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+}
+
+/* Title bar */
+.titlebar {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 3px;
+  background: var(--chrome-title);
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+  user-select: none;
+  flex: 0 0 auto;
+}
+
+.titlebar .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  background: #000080;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+}
+
+.titlebar .title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titlebar .win-btns {
+  display: flex;
+  gap: 2px;
+}
+
+.titlebar .win-btn {
+  width: 16px;
+  height: 14px;
+  background: var(--chrome-face);
+  border-top: 1px solid var(--chrome-highlight);
+  border-left: 1px solid var(--chrome-highlight);
+  border-right: 1px solid var(--chrome-dark);
+  border-bottom: 1px solid var(--chrome-dark);
+  color: #000;
+  font-size: 9px;
+  line-height: 12px;
+  text-align: center;
+  padding: 0;
+  cursor: default;
+  font-family: inherit;
+}
+
+/* Menu bar styles: see "Working menu bar" section below */
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 2px;
+  padding: 3px 4px;
+  background: var(--chrome-face);
+  border-bottom: 1px solid var(--chrome-shadow);
+  flex: 0 0 auto;
+  user-select: none;
+}
+
+.toolbar .btn {
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 40px;
+  padding: 2px 4px;
+  background: var(--chrome-face);
+  border-top: 2px solid var(--chrome-highlight);
+  border-left: 2px solid var(--chrome-highlight);
+  border-right: 2px solid var(--chrome-dark);
+  border-bottom: 2px solid var(--chrome-dark);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  color: #000;
+}
+
+.toolbar .btn:active,
+.toolbar .btn.pressed {
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+.toolbar .btn:disabled {
+  color: #808080;
+  cursor: default;
+}
+
+.toolbar .btn .icon-glyph {
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 1px;
+}
+
+.toolbar .separator {
+  width: 2px;
+  height: 36px;
+  margin: 0 3px;
+  border-left: 1px solid var(--chrome-shadow);
+  border-right: 1px solid var(--chrome-highlight);
+}
+
+.toolbar .throbber {
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  background: #000080;
+  border-top: 1px solid var(--chrome-dark);
+  border-left: 1px solid var(--chrome-dark);
+  border-right: 1px solid var(--chrome-highlight);
+  border-bottom: 1px solid var(--chrome-highlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.toolbar .throbber img {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+.toolbar .throbber.idle img {
+  animation: none;
+  opacity: 0.85;
+}
+
+/* Location bar */
+.locationbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  background: var(--chrome-face);
+  border-bottom: 1px solid var(--chrome-shadow);
+  flex: 0 0 auto;
+}
+
+.locationbar label {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.locationbar input {
+  flex: 1;
+  min-width: 0;
+  height: 20px;
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  background: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  padding: 1px 4px;
+  outline: none;
+}
+
+/* Directory buttons */
+.dirbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 2px 4px 4px;
+  background: var(--chrome-face);
+  border-bottom: 1px solid var(--chrome-shadow);
+  flex: 0 0 auto;
+}
+
+.dirbar .dir-btn {
+  padding: 2px 10px;
+  background: var(--chrome-face);
+  border-top: 1px solid var(--chrome-highlight);
+  border-left: 1px solid var(--chrome-highlight);
+  border-right: 1px solid var(--chrome-dark);
+  border-bottom: 1px solid var(--chrome-dark);
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  color: #000;
+}
+
+.dirbar .dir-btn:active {
+  border-top: 1px solid var(--chrome-dark);
+  border-left: 1px solid var(--chrome-dark);
+  border-right: 1px solid var(--chrome-highlight);
+  border-bottom: 1px solid var(--chrome-highlight);
+}
+
+/* Content */
+.content-frame {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+  min-height: 0;
+  background: var(--content-bg);
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  margin: 2px 4px 0;
+}
+
+.content-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #ffffff;
+  display: block;
+}
+
+/* Status bar */
+.statusbar {
+  display: flex;
+  align-items: stretch;
+  height: 20px;
+  margin: 2px 4px 3px;
+  flex: 0 0 auto;
+  background: var(--chrome-face);
+}
+
+.statusbar .status-text {
+  flex: 1;
+  min-width: 0;
+  padding: 2px 4px;
+  border-top: 1px solid var(--chrome-dark);
+  border-left: 1px solid var(--chrome-dark);
+  border-right: 1px solid var(--chrome-highlight);
+  border-bottom: 1px solid var(--chrome-highlight);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+}
+
+.statusbar .status-secure,
+.statusbar .status-done {
+  width: 80px;
+  margin-left: 2px;
+  padding: 2px 4px;
+  border-top: 1px solid var(--chrome-dark);
+  border-left: 1px solid var(--chrome-dark);
+  border-right: 1px solid var(--chrome-highlight);
+  border-bottom: 1px solid var(--chrome-highlight);
+  text-align: center;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* Connect overlay (modem immersion) */
+.connect-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000000cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  font-family: "Courier New", Courier, monospace;
+  color: #0f0;
+}
+
+.connect-overlay.hidden {
+  display: none;
+}
+
+.connect-box {
+  background: #000;
+  border: 2px solid #0f0;
+  padding: 24px 32px;
+  max-width: 420px;
+  width: 90%;
+  text-align: left;
+}
+
+.connect-box h2 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #0f0;
+}
+
+.connect-box pre {
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  min-height: 5em;
+  white-space: pre-wrap;
+}
+
+.connect-box button {
+  font-family: inherit;
+  font-size: 12px;
+  background: #003300;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.connect-box button:hover {
+  background: #0f0;
+  color: #000;
+}
+
+.connect-box .skip {
+  margin-left: 12px;
+  background: transparent;
+  border-color: #060;
+  color: #0a0;
+}
+
+@media (max-width: 640px) {
+  .desktop {
+    padding: 0;
+  }
+  .browser {
+    max-width: none;
+    border: none;
+    box-shadow: none;
+  }
+  .toolbar .btn {
+  min-height: 40px;
+    min-width: 40px;
+    height: 36px;
+    font-size: 9px;
+  }
+  .dirbar {
+    display: none;
+  }
+}
+
+/* ===== Working menu bar (Win 3.1 / Netscape style) ===== */
+.menubar {
+  display: flex;
+  flex: 0 0 auto;
+  background: var(--chrome-face);
+  border-bottom: 1px solid var(--chrome-shadow);
+  padding: 0 2px;
+  user-select: none;
+  position: relative;
+  z-index: 50;
+}
+
+.menu-root {
+  position: relative;
+}
+
+.menubar .menu-item {
+  display: block;
+  padding: 2px 8px;
+  cursor: default;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+  color: #000;
+}
+
+.menubar .menu-item:hover,
+.menubar .menu-root.open > .menu-item {
+  background: var(--chrome-title);
+  color: #fff;
+}
+
+.menubar .menu-item u {
+  text-decoration: underline;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--chrome-face);
+  border-top: 1px solid var(--chrome-highlight);
+  border-left: 1px solid var(--chrome-highlight);
+  border-right: 2px solid var(--chrome-dark);
+  border-bottom: 2px solid var(--chrome-dark);
+  box-shadow: 2px 2px 0 #00000055;
+  padding: 2px 0;
+  z-index: 100;
+}
+
+.menu-dropdown[hidden] {
+  display: none !important;
+}
+
+.menu-dropdown button[role="menuitem"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+  padding: 3px 24px 3px 20px;
+  color: #000;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.menu-dropdown button[role="menuitem"]:hover:not(:disabled),
+.menu-dropdown button[role="menuitem"]:focus:not(:disabled) {
+  background: var(--chrome-title);
+  color: #fff;
+  outline: none;
+}
+
+.menu-dropdown button[role="menuitem"]:disabled {
+  color: #808080;
+}
+
+.menu-dropdown .accel {
+  margin-left: 24px;
+  color: inherit;
+  opacity: 0.85;
+  font-size: 10px;
+}
+
+.menu-sep {
+  height: 0;
+  margin: 3px 2px;
+  border-top: 1px solid var(--chrome-shadow);
+  border-bottom: 1px solid var(--chrome-highlight);
+}
+
+/* ===== Dialogs ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 200;
+  cursor: default;
+}
+
+.modal-backdrop.hidden {
+  display: none;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  max-width: 94vw;
+  background: var(--chrome-face);
+  border-top: 2px solid var(--chrome-highlight);
+  border-left: 2px solid var(--chrome-highlight);
+  border-right: 2px solid var(--chrome-dark);
+  border-bottom: 2px solid var(--chrome-dark);
+  box-shadow: 3px 3px 0 #00000066;
+  z-index: 210;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+}
+
+.dialog.dialog-wide {
+  width: 520px;
+}
+
+.dialog.hidden {
+  display: none;
+}
+
+.dialog-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--chrome-title);
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 4px;
+  height: 20px;
+}
+
+.dialog-x {
+  width: 16px;
+  height: 14px;
+  padding: 0;
+  line-height: 12px;
+  background: var(--chrome-face);
+  border-top: 1px solid var(--chrome-highlight);
+  border-left: 1px solid var(--chrome-highlight);
+  border-right: 1px solid var(--chrome-dark);
+  border-bottom: 1px solid var(--chrome-dark);
+  font-size: 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+.dialog-body {
+  padding: 12px 14px;
+}
+
+.dialog-body p {
+  margin: 0 0 8px;
+}
+
+.dialog-input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 22px;
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  background: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  padding: 2px 4px;
+  margin-bottom: 10px;
+}
+
+.dialog-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  background: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  padding: 4px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.dialog-num {
+  width: 48px;
+  border: 1px solid #808080;
+  background: #fff;
+}
+
+.dialog-check {
+  display: block;
+  margin: 6px 0 10px;
+}
+
+.dialog-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dialog-btns button {
+  min-width: 72px;
+  padding: 3px 12px;
+  font-family: inherit;
+  font-size: 11px;
+  background: var(--chrome-face);
+  border-top: 2px solid var(--chrome-highlight);
+  border-left: 2px solid var(--chrome-highlight);
+  border-right: 2px solid var(--chrome-dark);
+  border-bottom: 2px solid var(--chrome-dark);
+  cursor: pointer;
+}
+
+.dialog-btns button:active {
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+}
+
+.dialog-hint {
+  color: #404040;
+  font-size: 10px;
+}
+
+.source-view {
+  height: 280px;
+  overflow: auto;
+  background: #fff;
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  padding: 6px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  margin: 0 0 10px;
+  color: #000;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.info-table td {
+  padding: 3px 6px;
+  vertical-align: top;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.info-table td:first-child {
+  font-weight: bold;
+  width: 35%;
+  white-space: nowrap;
+}
+
+.bm-list {
+  width: 100%;
+  height: 200px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  border-top: 2px solid var(--chrome-dark);
+  border-left: 2px solid var(--chrome-dark);
+  border-right: 2px solid var(--chrome-highlight);
+  border-bottom: 2px solid var(--chrome-highlight);
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.dialog fieldset {
+  border: 1px solid var(--chrome-shadow);
+  margin: 0 0 10px;
+  padding: 8px 10px;
+}
+
+.dialog legend {
+  padding: 0 4px;
+}
+
+.about-body {
+  text-align: center;
+}
+
+.about-body p {
+  margin: 0 0 10px;
+}
+
+/* Minimized task */
+.task-icon {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--chrome-face);
+  border-top: 2px solid var(--chrome-highlight);
+  border-left: 2px solid var(--chrome-highlight);
+  border-right: 2px solid var(--chrome-dark);
+  border-bottom: 2px solid var(--chrome-dark);
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.task-icon.hidden {
+  display: none;
+}
+
+.task-icon span {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  background: #000080;
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+
+.browser.maximized {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.desktop.browser-max {
+  padding: 0;
+}
+
+/* Wait cursor + immediate visual feedback while transferring */
+.browser.loading,
+.browser.loading iframe,
+.browser.loading .content-frame {
+  position: relative;
+  z-index: 2;
+  cursor: wait;
+}
+
+.browser.loading .content-frame iframe {
+  opacity: 0.62;
+  filter: grayscale(0.15);
+  pointer-events: none;
+  transition: opacity 0.08s linear;
+}
+
+.browser:not(.loading) .content-frame iframe {
+  opacity: 1;
+  filter: none;
+  pointer-events: auto;
+  transition: opacity 0.08s linear;
+}
+
+/* Snappy chrome press feedback */
+.toolbar button:active:not(:disabled),
+.dir-btn:active,
+.win95-task-btn:active {
+  transform: translate(1px, 1px);
+}
+
+.toolbar button:disabled {
+  opacity: 0.55;
+}
+
+/* Period-style toolbar glyphs (no modern emoji) */
+.toolbar .icon-glyph {
+  display: block;
+  width: 18px;
+  height: 14px;
+  margin: 0 auto 2px;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+}
+
+.toolbar .icon-back::before,
+.toolbar .icon-fwd::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.toolbar .icon-back::before {
+  border-right: 8px solid #000;
+}
+
+.toolbar .icon-fwd::before {
+  left: 6px;
+  border-left: 8px solid #000;
+}
+
+.toolbar .icon-home::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 12px;
+  height: 8px;
+  background: #000;
+}
+
+.toolbar .icon-home::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 6px solid #000;
+}
+
+.toolbar .icon-reload::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000;
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.toolbar .icon-images::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 14px;
+  height: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.toolbar .icon-images::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 4px solid #404040;
+}
+
+.toolbar .icon-open::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 14px;
+  height: 9px;
+  border: 1px solid #000;
+  background: #e0e0e0;
+  box-sizing: border-box;
+}
+
+.toolbar .icon-open::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 3px;
+  border: 1px solid #000;
+  border-bottom: 0;
+  background: #c0c0c0;
+}
+
+.toolbar .icon-find::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 1px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.toolbar .icon-find::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  width: 5px;
+  height: 2px;
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.toolbar .icon-stop::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  background: #800000;
+  border: 1px solid #400000;
+  box-sizing: border-box;
+}
+
+.browser.minimized {
+  display: none !important;
+}
+
+.browser.toolbar-hidden #toolbar {
+  display: none;
+}
+
+.browser.location-hidden #locationbar {
+  display: none;
+}
+
+.browser.dirbar-hidden #dirbar {
+  display: none;
+}
+
+/* Find highlight in iframe pages injected via class */
+
+
+/* ===== Windows 95 additions (1995 immersion) ===== */
+.desktop {
+  padding: 4px 4px 32px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.desktop.browser-max {
+  padding: 0 0 28px;
+}
+
+.desktop.browser-max .browser.maximized {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  flex: 1 1 auto;
+}
+
+.desktop.browser-max .exit-bar {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  z-index: 60;
+  opacity: 0.35;
+  padding: 0;
+}
+
+.desktop.browser-max .desktop-icons {
+  top: 28px;
+  left: 6px;
+}
+
+/* Netscape 2 directory bar looks bolder */
+.dirbar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+}
+
+.dirbar .dir-btn {
+  font-weight: bold;
+  min-width: 72px;
+}
+
+.locationbar label {
+  font-weight: bold;
+}
+
+/* Soft teal Win95 wallpaper pattern feel */
+.desktop {
+  background-color: var(--desktop-bg);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04) 0 1px, transparent 2px),
+    radial-gradient(circle at 80% 60%, rgba(0,0,0,0.05) 0 1px, transparent 2px);
+  background-size: 12px 12px, 18px 18px;
+}
+
+.win95-taskbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 28px;
+  background: var(--taskbar-face, #c0c0c0);
+  border-top: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  z-index: 80;
+  font-size: 11px;
+  box-shadow: 0 -1px 0 #808080;
+}
+
+.win95-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 8px 0 4px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+}
+
+.win95-start:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.win95-start .flag {
+  width: 16px;
+  height: 14px;
+  background: linear-gradient(90deg, #f00 0 25%, #0c0 25% 50%, #00f 50% 75%, #ff0 75% 100%);
+  border: 1px solid #000;
+  image-rendering: pixelated;
+}
+
+.win95-task-btn {
+  height: 22px;
+  min-width: 140px;
+  max-width: 200px;
+  padding: 0 8px;
+  background: #c0c0c0;
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: default;
+}
+
+.win95-task-btn.inactive {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+}
+
+.win95-tray {
+  margin-left: auto;
+  height: 22px;
+  padding: 0 8px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* full width default for 1995 */
+
+.titlebar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  height: 22px;
+}
+
+.exit-bar {
+  color: #fff;
+  opacity: 0.55;
+}
+
+.dirbar .dir-btn {
+  font-weight: bold;
+}
+
+/* Period content helper when parent wants white pages */
+body.year-1995 {
+  /* shell only */
+}
+
+/* Period bitmap toolbar buttons */
+.toolbar .btn.btn-img {
+  padding: 0;
+  min-width: 52px;
+  min-height: 40px;
+  background: transparent;
+  border: 0;
+}
+.toolbar .btn.btn-img img {
+  display: block;
+  image-rendering: pixelated;
+}
+.toolbar .btn.btn-img:disabled {
+  opacity: 0.45;
+}
+.win95-start img {
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* Active directory button */
+.dirbar .dir-btn.dir-active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Larger content area feel */
+.content-frame {
+  background: #fff;
+}
+
+.statusbar .status-text {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+
+/* Taskbar button shows current page */
+.win95-task-btn {
+  font-weight: bold;
+}
+
+
+/* UX: stronger exit affordance */
+.exit-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 10px;
+  background: #000080;
+  color: #fff;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+  animation: exit-bar-pulse 2s ease-in-out 1;
+}
+.exit-bar:hover,
+.exit-bar:focus-within {
+  opacity: 1.0;
+}
+@keyframes exit-bar-pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.75; }
+}
+.exit-bar a {
+  color: #ffff99;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 2px 8px;
+  border: 1px solid #99ccff;
+  background: #000060;
+}
+.exit-bar a:hover,
+.exit-bar a:focus {
+  color: #fff;
+  background: #0000aa;
+  outline: none;
+}
+/* exit-bar-ux-boost */
+
+/* A11y: chrome-only */
+.skip-to-content{position:absolute;left:-9999px;top:0;z-index:1000;background:#000;color:#fff;padding:8px 12px;font-size:12px;}
+.skip-to-content:focus{left:8px;top:8px;}
+.toolbar button:focus-visible,.dir-btn:focus-visible,.menu-item:focus-visible,.win-btn:focus-visible,
+.locationbar input:focus-visible,.dialog button:focus-visible,.dialog input:focus-visible{
+  outline:2px solid #0000aa;outline-offset:1px;
+}
+@media (prefers-reduced-motion: reduce){
+  .browser.loading .content-frame iframe,
+  .browser:not(.loading) .content-frame iframe{transition:none;}
+}
+
+/* Win95 Start Menu */
+.win95-start-menu {
+  position: fixed;
+  bottom: 28px;
+  left: 0;
+  background: var(--chrome-face, #c0c0c0);
+  border: 2px outset #dfdfdf;
+  box-shadow: 2px -2px 4px rgba(0,0,0,0.25);
+  z-index: 9999;
+  display: flex;
+  min-width: 180px;
+}
+.win95-start-menu.hidden { display: none; }
+.start-menu-banner {
+  background: linear-gradient(to top, #000080, #1084d0);
+  width: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+}
+.start-banner-text {
+  color: #c0c0c0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 1px;
+}
+.start-banner-text b { color: #ffffff; }
+.start-menu-items {
+  flex: 1;
+  padding: 2px 0;
+}
+.start-menu-item {
+  padding: 4px 24px 4px 8px;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  cursor: default;
+  white-space: nowrap;
+}
+.start-menu-item:hover {
+  background: #000080;
+  color: #ffffff;
+}
+.start-menu-sep {
+  height: 1px;
+  background: #808080;
+  margin: 2px 4px;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* B8: Throbber Animation */
+.throbber:not(.idle) img {
+  animation: throbber-pulse 0.8s ease-in-out infinite;
+}
+@keyframes throbber-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

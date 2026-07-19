@@ -1,0 +1,20 @@
+{
+  "name": "internet-through-time",
+  "private": true,
+  "description": "Museum static site \u2014 no build required for deploy",
+  "scripts": {
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
+    "smoke": "python3 scripts/smoke-production.py",
+    "smoke:http": "python3 scripts/smoke-production.py --base http://127.0.0.1:8080",
+    "audit:links": "python3 scripts/audit-internal-links.py",
+    "test:static": "python3 scripts/test-authenticity.py",
+    "test:e2e": "playwright test",
+    "check": "python3 scripts/smoke-production.py && python3 scripts/audit-internal-links.py && python3 scripts/test-authenticity.py",
+    "test": "npm run check && playwright test",
+    "ci": "bash scripts/ci.sh",
+    "perf": "python3 scripts/measure-perf.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.0"
+  }
+}

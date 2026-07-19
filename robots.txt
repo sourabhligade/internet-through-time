@@ -1,0 +1,5 @@
+# Educational museum — indexing allowed for hub; years are fine to index
+User-agent: *
+Allow: /
+
+Sitemap: /sitemap.txt

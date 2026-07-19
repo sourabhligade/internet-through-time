@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: Static checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Filesystem + config smoke
+        run: python3 scripts/smoke-production.py
+
+      - name: Internal link audit
+        run: python3 scripts/audit-internal-links.py
+
+      - name: Authenticity invariants
+        run: python3 scripts/test-authenticity.py
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 > /tmp/itt-http.log 2>&1 &
+          echo $! > /tmp/itt-http.pid
+          for i in $(seq 1 20); do
+            if curl -sf -o /dev/null http://127.0.0.1:8080/; then
+              echo "server up"
+              exit 0
+            fi
+            sleep 0.5
+          done
+          echo "server failed to start" >&2
+          cat /tmp/itt-http.log || true
+          exit 1
+
+      - name: HTTP smoke
+        run: python3 scripts/smoke-production.py --base http://127.0.0.1:8080
+
+  e2e:
+    name: Playwright e2e
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright e2e
+        run: npx playwright test
+        env:
+          CI: true
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
