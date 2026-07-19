@@ -10,9 +10,9 @@ test.describe('1996 Space Jam + HoTMaiL polish', () => {
     await expect(frame.locator('body')).toBeVisible({ timeout: 20000 });
     await waitForImmersion(page, '1996');
 
-    await expect(frame.locator('text=/SPACE JAM|Space Jam/i').first()).toBeVisible();
-    // Planet GIFs from period pack
-    const planets = frame.locator('img[src*="spacejam/planet-"]');
+    await expect(frame.locator('img[alt="Space Jam"]').first()).toBeVisible({ timeout: 10000 });
+    // Authentic planet GIFs harvested from spacejam.com/1996
+    const planets = frame.locator('img[src*="spacejam/p-"]');
     await expect(planets.first()).toBeVisible({ timeout: 10000 });
     const count = await planets.count();
     expect(count).toBeGreaterThanOrEqual(6);

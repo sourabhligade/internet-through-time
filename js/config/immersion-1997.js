@@ -56,6 +56,11 @@
         label: "Slashdot",
         href: "sites/slashdot/index.html",
         match: "/slashdot/"
+      },
+      {
+        label: "ICQ",
+        href: "sites/icq/index.html",
+        match: "/icq/"
       }
     ],
     footerNav: [

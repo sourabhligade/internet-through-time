@@ -28,3 +28,7 @@ Download manually into `docs/references/1995/screenshots/` (hotlink often blocke
 - Amazon orange smile (2000+)
 - Modern eBay yellow branding on AuctionWeb
 - Invented glitter GeoCities peak aesthetics for mid-1995
+
+
+## Research
+See `docs/ARCHIVE-DEEP-RESEARCH-2026-07.md` for WDM / Version Museum / CHM sources for Amazon, AuctionWeb, GeoCities.

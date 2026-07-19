@@ -112,16 +112,17 @@ def test_amazon_period_inputs() -> None:
 def test_spacejam_assets_and_hub() -> None:
     assets = ROOT / "assets/period/1996/spacejam"
     needed = [
-        "planet-jam.gif",
-        "planet-lineup.gif",
-        "planet-press.gif",
-        "planet-bball.gif",
-        "planet-tunes.gif",
-        "planet-jump.gif",
-        "planet-junior.gif",
-        "planet-souvenirs.gif",
-        "planet-store.gif",
-        "planet-sitemap.gif",
+        "p-jamcentral.gif",
+        "p-lineup.gif",
+        "p-pressbox.gif",
+        "p-bball.gif",
+        "p-lunartunes.gif",
+        "p-jump.gif",
+        "p-junior.gif",
+        "p-souvenirs.gif",
+        "p-studiostore.gif",
+        "p-sitemap.gif",
+        "p-jamlogo.gif",
     ]
     missing = [n for n in needed if not (assets / n).is_file()]
     if missing:
@@ -131,8 +132,8 @@ def test_spacejam_assets_and_hub() -> None:
     if "border-radius" in hub and "sj-planet" in hub and "planet-jam.gif" not in hub:
         fail("spacejam-hub", "hub still CSS-circle only")
         return
-    if "planet-jam.gif" not in hub:
-        fail("spacejam-hub", "hub missing planet GIF refs")
+    if "p-jamcentral.gif" not in hub and "planet-jam.gif" not in hub:
+        fail("spacejam-hub", "hub missing authentic planet GIF refs")
         return
     # subpages exist
     for name in ("bball.htm", "tunes.htm", "jump.htm", "store.htm", "sitemap.htm"):
@@ -308,6 +309,20 @@ def test_immersion_boot_markers() -> None:
         return
     ok("immersion-boot-marker")
 
+
+
+def test_icq_1997() -> None:
+    if not (ROOT / "years/1997/sites/icq/index.html").is_file():
+        fail("icq-1997", "missing ICQ landing")
+        return
+    if "icq" not in read(ROOT / "js/config/1997.js"):
+        fail("icq-1997", "urlMap missing icq")
+        return
+    if not (ROOT / "assets/period/1997/icq/logo.gif").is_file():
+        fail("icq-1997", "missing logo asset")
+        return
+    ok("icq-1997")
+
 def main() -> int:
     print("Authenticity static tests")
     print("=" * 40)
@@ -327,6 +342,7 @@ def main() -> int:
         test_ci_includes_authenticity,
         test_1997_pointcast_urlmap,
         test_immersion_boot_markers,
+        test_icq_1997,
     ]
     for t in tests:
         t()
