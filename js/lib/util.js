@@ -118,6 +118,12 @@
     }
   }
 
+  /**
+   * Resolve a content href relative to the current year-page path.
+   * Paths that already start with year-root roots (sites/, pages/) are
+   * absolute within the year — never join them under pages/ or sites/foo/.
+   * That bug produced 404s like pages/sites/fishcam/index.html.
+   */
   function resolveRelativePath(href, currentPath) {
     if (!href) return null;
     if (href.charAt(0) === "#") return null;
@@ -125,7 +131,21 @@
     if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
       return { external: true, href: href };
     }
-    var pathOnly = String(currentPath).split("?")[0];
+    if (href.indexOf("javascript:") === 0) return null;
+
+    var q = "";
+    var qi = href.indexOf("?");
+    if (qi !== -1) {
+      q = href.slice(qi);
+      href = href.slice(0, qi);
+    }
+
+    // Year-root absolute (config / immersion convention)
+    if (/^(sites|pages)\//.test(href)) {
+      return { external: false, path: fixYearRootPath(href) + q };
+    }
+
+    var pathOnly = String(currentPath || "").split("?")[0];
     var baseDir = pathOnly.replace(/\/[^/]*$/, "/");
     if (pathOnly.indexOf("/") === -1) baseDir = "";
     var combined = href.charAt(0) === "/" ? href.replace(/^\//, "") : baseDir + href;
@@ -139,7 +159,19 @@
         out.push(segs[s]);
       }
     }
-    return { external: false, path: out.join("/") };
+    return { external: false, path: fixYearRootPath(out.join("/")) + q };
+  }
+
+  /** Collapse accidental pages/sites/… or sites/pages/… joins */
+  function fixYearRootPath(path) {
+    path = String(path || "");
+    // pages/sites/foo → sites/foo  (href sites/* resolved from pages/*)
+    if (path.indexOf("pages/sites/") === 0) path = path.slice("pages/".length);
+    if (path.indexOf("sites/pages/") === 0) path = path.slice("sites/".length);
+    // double roots
+    path = path.replace(/^(sites\/)+/, "sites/");
+    path = path.replace(/^(pages\/)+pages\//, "pages/");
+    return path;
   }
 
   function normalizeYearPath(path, year, home) {
@@ -159,7 +191,7 @@
       if (j !== -1) path = path.slice(j + ("years/" + year + "/").length);
       else path = path.replace(/^\//, "");
     }
-    return path;
+    return fixYearRootPath(path);
   }
 
   function hostFromUrl(url) {
