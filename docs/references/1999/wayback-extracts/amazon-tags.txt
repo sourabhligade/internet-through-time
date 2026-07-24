@@ -1,0 +1,120 @@
+<body bgcolor="#FFFFFF" link="#003399" alink="#FF9933" vlink="#996633" text="#000000">
+<a name="top">
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr align=center bgcolor="#FFFFFF">
+<td>
+<a href=/g/v11/nav/tabs/top-nav.map/ >
+<img width=590 height=75 border=0 src="/g/v11/nav/tabs/product-type-gateway.gif" alt="Welcome to Amazon.com" USEMAP="#top_nav_map" ISMAP>
+<tr bgcolor=#990000>
+<td align=center>
+<a href=/g/v9/nav/gateway-nav.map/ >
+<img src="/g/v11/nav/gateway-holiday-nav-default.gif" width=590 height=28 alt="" USEMAP="#gateway_nav_map" ISMAP border=0>
+<area shape="rect" coords="0,40,62,75" href=/exec/obidos/subst/home/home.html/>
+<area shape="rect" coords="62,43,113,75" href=/exec/obidos/subst/home/books.html/ref=tab_b/>
+<area shape="rect" coords="112,43,162,75" href=/exec/obidos/subst/home/music.html/ref=tab_m/>
+<area shape="rect" coords="161,43,215,75" href=/exec/obidos/subst/home/video.html/ref=tab_v/>
+<area shape="rect" coords="215,43,300,75" href=/exec/obidos/subst/electronics/home/home.html/ref=tab_e/>
+<area shape="rect" coords="299,43,384,75" href=/exec/obidos/subst/toys/home/home.html/ref=tab_t/>
+<area shape="rect" coords="385,43,470,75" href=/exec/obidos/tg/stores/browse/-/hi/228013/>
+<area shape="rect" coords="472,43,536,75" href="/exec/obidos/redirect-to-external-url/ref=tab_a/?path=http://s1.amazon.com/exec/varzea/subst/home/home.html">
+<area shape="rect" coords="536,43,589,75" href="/exec/obidos/redirect-to-external-url/ref=tab_a/?path=http://s1.amazon.com/exec/varzea/subst/home/fixed.html">
+<area shape="rect" coords="311,4,350,26" href=/exec/obidos/shopping-basket/>
+<area shape="rect" coords="351,5,450,27" href=/exec/obidos/account-access-login/>
+<area shape="rect" coords="506,3,588,26" href=/exec/obidos/subst/misc/sell-items.html/>
+<area shape="rect" coords="451,5,499,26" href=/exec/obidos/subst/help/desk.html/>
+<area shape="rect" coords="464,0,589,26" href="http://cards.amazon.com/exec/obidos/subst/cards/home/home.html/">
+<area shape="rect" coords="346,0,464,27" href=/exec/obidos/subst/gifts/gift-services/gift-certificates.html/ref=gw_m_tn_gc/>
+<area shape="rect" coords="219,0,346,26" href=/exec/obidos/subst/wishlist/wishlist-portal.html/ref=gw_m_tn_wl/>
+<area shape="rect" coords="99,0,219,26"  href=/exec/obidos/subst/home/gifts.html/ref=gw_m_tn_gi/>
+<area shape="rect" coords="0,0,99,27"    href=/exec/obidos/subst/help/how-to-order.html/ref=gw_m_tn_ho/>
+<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+<TR>
+<TD width="171" valign=top>
+<TABLE border=0 cellspacing=0 cellpadding=0>
+<TR valign=bottom align=center>
+<td>
+<img width=171 height=19 src="/g/v9/search-browse/search-gifts.gif" vspace=0 alt="Search Amazon.com">
+<TR valign=top align=center>
+<TD>
+<TABLE border=0 width= 171 cellpadding=1 cellspacing=0 bgcolor=#990000 >
+<TR>
+<TD width=100%>
+<TABLE width=100% border=0 cellpadding=4 cellspacing=0 bgcolor=#990000>
+<TR>
+<TD bgcolor=#FFCC66 valign=top width=100%>
+<form method="post" action="/exec/obidos/search-handle-form/" >
+<input type="text" name="field-keywords" size="15">
+<input type="image" height=21 width=21 border=0 value="Go" name="Go" src="/g/v9/search-browse/go-button-gateway.gif" align=absmiddle>
+<font face=verdana,arial,helvetica size="-2">
+<a href="/exec/obidos/search-handle-url/index=blended&field-keywords=Palm%20V%20Organizer/">
+<font>
+<TABLE border=0 cellspacing=0 cellpadding=0>
+<TR valign=bottom align=center>
+<td>
+<img width=171 height=19 src="/g/v9/search-browse/browse-gifts.gif" vspace=0 alt="Browse Amazon.com">
+<TR valign=top align=center>
+<TD>
+<TABLE border=0 width= 171 cellpadding=1 cellspacing=0 bgcolor=#990000 >
+<TR>
+<TD width=100%>
+<TABLE width=100% border=0 cellpadding=4 cellspacing=0 bgcolor=#990000>
+<TR>
+<TD bgcolor=#ffffff valign=top width=100%>
+<table cellpadding=3 cellspacing=0>
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/home/gifts.html/ref=gw_m_ln_br_gi_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/toys/home/home.html/ref=gw_m_ln_br_tg_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/home/books.html/ref=gw_m_ln_br_bo_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/home/music.html/ref=gw_m_ln_br_mu_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/home/video.html/ref=gw_m_ln_br_vi_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/electronics/home/home.html/ref=gw_m_ln_br_el_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/electronics/software/home.html/ref=gw_m_ln_br_el_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/subst/toys/videogames/home.html/ref=gw_m_ln_br_vg_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="/exec/obidos/tg/stores/browse/-/hi/228013/ref=gw_m_ln_br_hi_2/">
+<a href="/exec/obidos/tg/stores/browse/-/hi/228013/ref=gw_m_ln_br_hi_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="http://sothebys.amazon.com/exec/varzea/subst/home/sothebys.html/ref=gw_m_ln_br_so_2/">
+<a href="http://sothebys.amazon.com/exec/varzea/subst/home/sothebys.html/ref=gw_m_ln_br_so_2/">
+<tr>
+<td>
+<font face=verdana,arial,helvetica size=-1>
+<font color=#003399 size=-2>
+<a href="http://s1.amazon.com/exec/varzea/subst/home/fixed.html/ref=gw_m_ln_br_zs_2/">

@@ -1,0 +1,589 @@
+/* ============================================================
+   IE 5.0 + Win98 SE chrome — structure & button feel
+   Loaded after win95-netscape.css on years/1999 only
+   ============================================================ */
+
+/* Shared Win9x bevel helpers */
+body.browser-ie5 {
+  --ie-face: #d4d0c8;
+  --ie-hi: #ffffff;
+  --ie-lo: #808080;
+  --ie-dk: #404040;
+  --ie-blue: #0a246a;
+  --ie-blue2: #a6caf0;
+  --ie-desk: #3a6ea5;
+}
+
+/* ----- Desktop structure ----- */
+body.year-1999 .desktop {
+  background: var(--ie-desk);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.06) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 40%, rgba(0,0,0,0.05) 0 1px, transparent 2px);
+  background-size: 24px 24px, 18px 18px;
+}
+body.year-1999 .exit-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: linear-gradient(90deg, #0a246a, #1e4d9c);
+  color: #fff;
+  border-bottom: 1px solid #000040;
+  padding: 3px 10px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  min-height: 22px;
+}
+body.year-1999 .exit-bar .year-label {
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+body.year-1999 .exit-bar a {
+  color: #ffe566;
+  text-decoration: none;
+  padding: 1px 8px;
+  border: 1px solid transparent;
+}
+body.year-1999 .exit-bar a:hover {
+  border-color: var(--ie-lo);
+  background: rgba(255,255,255,0.08);
+  text-decoration: underline;
+}
+
+/* Window frame slightly tighter */
+body.browser-ie5 .browser {
+  border-top-color: var(--ie-hi);
+  border-left-color: var(--ie-hi);
+  border-right-color: var(--ie-dk);
+  border-bottom-color: var(--ie-dk);
+}
+
+/* ----- Title bar ----- */
+body.browser-ie5 .titlebar {
+  background: linear-gradient(90deg, var(--ie-blue) 0%, #3c78b4 55%, var(--ie-blue2) 100%);
+  border-bottom: 1px solid #000040;
+  min-height: 20px;
+  padding: 2px 3px 2px 4px;
+  align-items: center;
+}
+body.browser-ie5 .titlebar .title {
+  color: #fff;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,40,0.45);
+}
+body.browser-ie5 .titlebar .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: #fff;
+  color: var(--ie-blue);
+  border: 1px solid #000040;
+  border-radius: 1px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  box-shadow: inset 0 0 0 1px #cde;
+}
+body.browser-ie5 .titlebar .win-btn {
+  width: 16px;
+  height: 14px;
+  margin-left: 2px;
+  background: var(--ie-face);
+  border-top: 1px solid var(--ie-hi);
+  border-left: 1px solid var(--ie-hi);
+  border-right: 1px solid var(--ie-dk);
+  border-bottom: 1px solid var(--ie-dk);
+  color: #000;
+  font-size: 9px;
+  line-height: 11px;
+  font-weight: bold;
+  box-shadow: none;
+}
+body.browser-ie5 .titlebar .win-btn:hover {
+  background: #e8e4dc;
+}
+body.browser-ie5 .titlebar .win-btn:active {
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  padding-top: 1px;
+  padding-left: 1px;
+}
+body.browser-ie5 .titlebar .win-btn#btn-close:hover {
+  background: #e81123;
+  color: #fff;
+}
+
+/* ----- Menu bar ----- */
+body.browser-ie5 .menubar {
+  background: var(--ie-face);
+  border-bottom: 1px solid var(--ie-lo);
+  padding: 1px 2px;
+  gap: 0;
+}
+body.browser-ie5 .menubar .menu-item {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  padding: 2px 7px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #000;
+}
+body.browser-ie5 .menubar .menu-item:hover,
+body.browser-ie5 .menu-root.open > .menu-item {
+  border: 1px solid var(--ie-lo);
+  background: #e8e4dc;
+}
+body.browser-ie5 .menubar .menu-item:active {
+  border-top-color: var(--ie-dk);
+  border-left-color: var(--ie-dk);
+  border-right-color: var(--ie-hi);
+  border-bottom-color: var(--ie-hi);
+}
+
+/* ----- Toolbar: grouped structure + real press feel ----- */
+body.browser-ie5 .toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 1px;
+  padding: 3px 4px 2px;
+  background: var(--ie-face);
+  border-bottom: 1px solid var(--ie-lo);
+  box-shadow: inset 0 1px 0 var(--ie-hi);
+  overflow-x: auto;
+}
+body.browser-ie5 .toolbar .btn,
+body.browser-ie5 .toolbar .btn-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  min-width: 52px;
+  min-height: 46px;
+  height: auto;
+  margin: 0 1px;
+  padding: 3px 5px 2px;
+  background: var(--ie-face);
+  border-top: 1px solid var(--ie-hi);
+  border-left: 1px solid var(--ie-hi);
+  border-right: 1px solid var(--ie-dk);
+  border-bottom: 1px solid var(--ie-dk);
+  box-shadow: 0 0 0 1px var(--ie-face);
+  cursor: default;
+  color: #000;
+  user-select: none;
+}
+body.browser-ie5 .toolbar .btn:hover,
+body.browser-ie5 .toolbar .btn-img:hover {
+  background: #e4e0d8;
+  border-top-color: var(--ie-hi);
+  border-left-color: var(--ie-hi);
+  border-right-color: var(--ie-dk);
+  border-bottom-color: var(--ie-dk);
+}
+body.browser-ie5 .toolbar .btn:active,
+body.browser-ie5 .toolbar .btn-img:active,
+body.browser-ie5 .toolbar .btn.pressed,
+body.browser-ie5 .toolbar .btn-img.pressed {
+  background: #c8c4bc;
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 4px;
+  padding-bottom: 1px;
+}
+body.browser-ie5 .toolbar .btn:disabled,
+body.browser-ie5 .toolbar .btn-img:disabled {
+  color: #808080;
+  background: var(--ie-face);
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 0.75;
+}
+body.browser-ie5 .toolbar .btn:disabled:hover,
+body.browser-ie5 .toolbar .btn-img:disabled:hover,
+body.browser-ie5 .toolbar .btn:disabled:active,
+body.browser-ie5 .toolbar .btn-img:disabled:active {
+  background: var(--ie-face);
+  border-color: transparent;
+  padding: 3px 5px 2px;
+}
+body.browser-ie5 .toolbar .btn-img img {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  display: block;
+  pointer-events: none;
+}
+body.browser-ie5 .toolbar .btn-glyph {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+  font-family: "Segoe UI Symbol", "MS Sans Serif", sans-serif;
+  pointer-events: none;
+}
+body.browser-ie5 .toolbar .btn-label {
+  display: block;
+  font-size: 10px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  line-height: 1.05;
+  color: inherit;
+  pointer-events: none;
+}
+body.browser-ie5 .toolbar .separator {
+  width: 2px;
+  min-height: 40px;
+  margin: 3px 5px;
+  border-left: 1px solid var(--ie-lo);
+  border-right: 1px solid var(--ie-hi);
+  background: transparent;
+  align-self: center;
+  flex: 0 0 auto;
+}
+body.browser-ie5 .toolbar .throbber {
+  margin-left: auto;
+  width: 38px;
+  height: 38px;
+  align-self: center;
+  background: #fff;
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+body.browser-ie5 .toolbar .throbber img {
+  width: 30px;
+  height: 30px;
+  image-rendering: pixelated;
+}
+body.browser-ie5 .toolbar .throbber:not(.idle) {
+  animation: ie5-throb 0.85s steps(3) infinite;
+}
+@keyframes ie5-throb {
+  0%   { background: #fff; }
+  33%  { background: #dce8f8; }
+  66%  { background: #b8d0f0; }
+  100% { background: #fff; }
+}
+
+/* ----- Address row structure ----- */
+body.browser-ie5 .locationbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  background: var(--ie-face);
+  border-bottom: 1px solid var(--ie-lo);
+  box-shadow: inset 0 1px 0 var(--ie-hi);
+}
+body.browser-ie5 .locationbar label {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  white-space: nowrap;
+  color: #000;
+  min-width: 48px;
+}
+body.browser-ie5 .locationbar input {
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  border-top: 2px solid var(--ie-dk);
+  border-left: 2px solid var(--ie-dk);
+  border-right: 2px solid var(--ie-hi);
+  border-bottom: 2px solid var(--ie-hi);
+  background: #fff;
+  font-family: "MS Sans Serif", Tahoma, "Courier New", monospace;
+  font-size: 12px;
+  padding: 1px 5px;
+  outline: none;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,0.08);
+}
+body.browser-ie5 .locationbar input:focus {
+  background: #fffff8;
+}
+body.browser-ie5 .locationbar .btn-go {
+  flex: 0 0 auto;
+  height: 22px;
+  min-width: 36px;
+  padding: 0 12px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  background: var(--ie-face);
+  border-top: 1px solid var(--ie-hi);
+  border-left: 1px solid var(--ie-hi);
+  border-right: 1px solid var(--ie-dk);
+  border-bottom: 1px solid var(--ie-dk);
+  cursor: default;
+  line-height: 18px;
+}
+body.browser-ie5 .locationbar .btn-go:hover {
+  background: #e8e4dc;
+}
+body.browser-ie5 .locationbar .btn-go:active {
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-right: 11px;
+}
+
+/* ----- Links bar ----- */
+body.browser-ie5 .dirbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 6px 4px;
+  background: var(--ie-face);
+  border-bottom: 1px solid var(--ie-lo);
+  box-shadow: inset 0 1px 0 var(--ie-hi);
+}
+body.browser-ie5 .dirbar::before {
+  content: "Links";
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 10px;
+  color: #404040;
+  margin-right: 6px;
+  padding: 2px 8px 2px 0;
+  border-right: 1px solid var(--ie-lo);
+  box-shadow: 1px 0 0 var(--ie-hi);
+  flex: 0 0 auto;
+}
+body.browser-ie5 .dirbar .dir-btn {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  color: #000080;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 2px 8px;
+  text-decoration: underline;
+  cursor: default;
+  border-radius: 0;
+}
+body.browser-ie5 .dirbar .dir-btn:hover {
+  border-top: 1px solid var(--ie-hi);
+  border-left: 1px solid var(--ie-hi);
+  border-right: 1px solid var(--ie-dk);
+  border-bottom: 1px solid var(--ie-dk);
+  background: #e8e4dc;
+  text-decoration: none;
+  color: #000;
+}
+body.browser-ie5 .dirbar .dir-btn:active,
+body.browser-ie5 .dirbar .dir-btn.dir-active {
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  background: #c8c4bc;
+  text-decoration: none;
+  padding-top: 3px;
+  padding-left: 9px;
+  padding-right: 7px;
+  padding-bottom: 1px;
+}
+
+/* ----- Status bar structure ----- */
+body.browser-ie5 .statusbar {
+  display: flex;
+  align-items: stretch;
+  gap: 3px;
+  background: var(--ie-face);
+  border-top: 1px solid var(--ie-hi);
+  padding: 2px 3px;
+  min-height: 20px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+}
+body.browser-ie5 .statusbar .status-text,
+body.browser-ie5 .statusbar .status-done {
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  padding: 1px 6px;
+  background: var(--ie-face);
+  line-height: 14px;
+}
+body.browser-ie5 .statusbar .status-text {
+  flex: 1;
+}
+body.browser-ie5 .statusbar .status-done {
+  flex: 0 0 auto;
+  min-width: 110px;
+  text-align: center;
+}
+
+/* ----- Taskbar / Start ----- */
+body.year-1999 .win95-taskbar {
+  background: var(--ie-face);
+  border-top: 2px solid var(--ie-hi);
+  box-shadow: inset 0 1px 0 #e8e4dc;
+  height: 30px;
+  padding: 2px 3px;
+  align-items: center;
+}
+body.year-1999 .win95-task-btn {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  height: 22px;
+  padding: 0 10px;
+  background: var(--ie-face);
+  border-top: 1px solid var(--ie-hi);
+  border-left: 1px solid var(--ie-hi);
+  border-right: 1px solid var(--ie-dk);
+  border-bottom: 1px solid var(--ie-dk);
+}
+body.year-1999 .win95-task-btn:active,
+body.year-1999 .win95-task-btn.active {
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  background: #c8c4bc;
+}
+body.year-1999 .win95-tray {
+  border-top: 1px solid var(--ie-dk);
+  border-left: 1px solid var(--ie-dk);
+  border-right: 1px solid var(--ie-hi);
+  border-bottom: 1px solid var(--ie-hi);
+  padding: 1px 8px;
+  font-size: 11px;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+}
+body.year-1999 .start-menu-banner {
+  background: linear-gradient(180deg, #000080 0%, #1084d0 100%);
+}
+body.year-1999 .start-banner-text {
+  color: #fff;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body.year-1999 .start-menu-item {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  padding: 4px 18px 4px 8px;
+}
+body.year-1999 .start-menu-item:hover {
+  background: #0a246a;
+  color: #fff;
+}
+
+/* Desktop icons cleaner structure */
+body.year-1999 .desk-icon {
+  width: 74px;
+}
+body.year-1999 .desk-label {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  text-shadow: 1px 1px 0 #000040;
+}
+
+/* Dialogs / connect box — same 3D press */
+body.browser-ie5 .dialog-btns button,
+body.browser-ie5 .connect-box button,
+body.browser-ie5 .dialog-body button {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  min-width: 72px;
+  height: 24px;
+  padding: 0 12px;
+  background: #d4d0c8;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  color: #000;
+  cursor: default;
+  border-radius: 0;
+}
+body.browser-ie5 .dialog-btns button:hover,
+body.browser-ie5 .connect-box button:hover {
+  background: #e8e4dc;
+}
+body.browser-ie5 .dialog-btns button:active,
+body.browser-ie5 .connect-box button:active {
+  border-top: 1px solid #404040;
+  border-left: 1px solid #404040;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding-top: 1px;
+  padding-left: 13px;
+}
+body.browser-ie5 .connect-box {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  background: #d4d0c8;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+}
+body.browser-ie5 .connect-box h2 {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 12px;
+  background: linear-gradient(90deg, #0a246a, #a6caf0);
+  color: #fff;
+  margin: -8px -10px 10px;
+  padding: 4px 8px;
+}
+body.browser-ie5 .dialog {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.28);
+}
+body.browser-ie5 .dialog-titlebar {
+  background: linear-gradient(90deg, #0a246a, #3c78b4 60%, #a6caf0);
+  color: #fff;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+body.browser-ie5 .dialog-x {
+  background: #d4d0c8;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  color: #000;
+  width: 16px;
+  height: 14px;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+body.browser-ie5 .dialog-x:active {
+  border-top: 1px solid #404040;
+  border-left: 1px solid #404040;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}

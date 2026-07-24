@@ -1,0 +1,22 @@
+SOURCE: https://www.pewresearch.org/internet/2002/06/23/main-report-the-broadband-difference/
+TITLE: Main Report: The Broadband Difference
+DATE: June 23, 2002 (Pew Internet & American Life Project)
+STATUS: [visited] 2026-07-23
+
+KEY FACTS FOR EXHIBIT:
+- June 2000: 6% of Internet users had home high-speed (≈3% of all Americans / ~6M people)
+- Feb 2001: 13% of Internet users
+- End 2001: 16% of Internet users
+- May 2002 survey: **21% of all Internet users in America** have broadband at home
+  = **24 million** people / **12% of all American adults**
+- Callback survey broadband mix: **71% cable modem**, **27% DSL**, 2% satellite/fixed wireless
+- Framing quote (Part 1 title): Internet transforms from a “sometimes” tool to an
+  **“always-on information appliance”**
+- On a typical day: 82% of broadband users do something online vs 58% dial-up
+- Broadband users 3–5× more likely to download files/music, create content, share files
+- Excite@Home bankruptcy end 2001; shut doors **February 2002** (failure lore)
+
+EXHIBIT USE:
+- About / home thesis line
+- Prefs: Broadband default option for 2002
+- CNN / ISP educational room optional

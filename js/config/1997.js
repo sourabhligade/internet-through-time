@@ -22,7 +22,7 @@
       underline: true,
       expireDays: 30,
       autoload: true,
-      modemDelay: 30,
+      modemDelay: 50,
       homeUrl: "http://home.microsoft.com/intl/web1997/",
       homePath: "pages/home.html",
       showToolbar: true,
@@ -33,17 +33,24 @@
     },
     /* 56k modem = ~2x throughput of 28.8k — nav and images should feel snappier */
     perf: {
-      navJitterMax: 28,          // was 48 — less jitter at higher speed
-      navFixedMax: 20,           // was 36
-      imageBudgetMs: 180,        // was 280 — images load noticeably faster
-      imageMaxStepMs: 30,        // was 48 — quicker per-image reveal
-      imageStartMs: 4,           // was 8
-      singleImageMs: 24,         // was 40
-      connectEarlyMs: 120,       // was 160 — faster handshake
-      connectLineMs: 180,        // was 220
-      connectEndMs: 140          // was 180
+      /* 56k — still waits, just less */
+      navJitterMax: 70,
+      navFixedMax: 50,
+      imageBudgetMs: 480,
+      imageMinStepMs: 40,
+      imageMaxStepMs: 100,
+      imageStartMs: 90,
+      connectEarlyMs: 140,
+      connectLineMs: 200,
+      connectBusyMs: 400,
+      connectEndMs: 150,
+      connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/altavista/about.html": "http://www.altavista.com/about.html",
+      "sites/icq/about.html": "http://www.icq.com/about.html",
+      "sites/pointcast/about.html": "http://www.pointcast.com/about.html",
+      "sites/microsoft/about.html": "http://www.microsoft.com/about.html",
       "pages/home.html": "http://home.microsoft.com/intl/web1997/",
       "pages/about.html": "http://home.microsoft.com/intl/web1997/about.html",
       "pages/cool.html": "http://home.microsoft.com/intl/web1997/whats-cool.html",
@@ -74,6 +81,16 @@
       "sites/yahoo/computers.html": "http://www.yahoo.com/Computers_and_Internet/",
       "sites/yahoo/news.html": "http://dailynews.yahoo.com/",
       "sites/yahoo/mail.html": "http://mail.yahoo.com/",
+      "sites/yahoo/recreation.html": "http://www.yahoo.com/Recreation/",
+      "sites/yahoo/reference.html": "http://www.yahoo.com/Reference/",
+      "sites/yahoo/regional.html": "http://www.yahoo.com/Regional/",
+      "sites/yahoo/science.html": "http://www.yahoo.com/Science/",
+      "sites/yahoo/social_science.html": "http://www.yahoo.com/Social_Science/",
+      "sites/yahoo/society.html": "http://www.yahoo.com/Society_and_Culture/",
+      "sites/yahoo/whats-new.html": "http://www.yahoo.com/new/",
+      "sites/yahoo/whats-cool.html": "http://www.yahoo.com/Entertainment/Cool_Links/",
+      "sites/ebay/register.html": "http://pages.ebay.com/services/registration/register.html",
+      "sites/ebay/sell.html": "http://pages.ebay.com/services/buyandsell/sellers-overview.html",
       "sites/geocities/index.html": "http://www.geocities.com/",
       "sites/geocities/neighborhoods.html": "http://www.geocities.com/neighborhoods/",
       "sites/geocities/Area51/9277/index.html": "http://www.geocities.com/Area51/9277/",
@@ -82,6 +99,7 @@
       "sites/hotbot/search.html": "http://www.hotbot.com/default.asp",
       "sites/pointcast/index.html": "http://www.pointcast.com/",
       "sites/icq/index.html": "http://www.icq.com/",
+      "sites/icq/aim.html": "http://www.aol.com/aim/",
       "sites/cnn/showbiz.html": "http://www.cnn.com/SHOWBIZ/",
       "sites/cnn/tech.html": "http://www.cnn.com/TECH/",
       "sites/pointcast/channels.html": "http://www.pointcast.com/channels/",
@@ -97,6 +115,10 @@
       "sites/drudge/index.html": "http://www.drudgereport.com/"
     },
     titleMap: {
+      "sites/altavista/about.html": "About",
+      "sites/icq/about.html": "About",
+      "sites/pointcast/about.html": "About",
+      "sites/microsoft/about.html": "About",
       "pages/home.html": "Welcome to the World Wide Web — 1997",
       "pages/about.html": "About 1997",
       "pages/cool.html": "What's Cool — 1997",
@@ -127,6 +149,16 @@
       "sites/yahoo/computers.html": "Yahoo! Computers and Internet",
       "sites/yahoo/news.html": "Yahoo! Daily News",
       "sites/yahoo/mail.html": "Yahoo! Mail",
+      "sites/yahoo/recreation.html": "Yahoo! - Recreation & Sports",
+      "sites/yahoo/reference.html": "Yahoo! - Reference",
+      "sites/yahoo/regional.html": "Yahoo! - Regional",
+      "sites/yahoo/science.html": "Yahoo! - Science",
+      "sites/yahoo/social_science.html": "Yahoo! - Social Science",
+      "sites/yahoo/society.html": "Yahoo! - Society & Culture",
+      "sites/yahoo/whats-new.html": "Yahoo! - What's New",
+      "sites/yahoo/whats-cool.html": "Yahoo! - What's Cool",
+      "sites/ebay/register.html": "eBay - Register",
+      "sites/ebay/sell.html": "eBay - Sell Your Item",
       "sites/geocities/index.html": "GeoCities - The Largest Community on the Web",
       "sites/geocities/neighborhoods.html": "GeoCities Neighborhoods",
       "sites/geocities/Area51/9277/index.html": "The X-Files Zone - Area51/9277",

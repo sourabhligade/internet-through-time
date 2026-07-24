@@ -1,0 +1,15 @@
+<BODY bgcolor="#FFFFFF" text="#000000" link="#000099" vlink="#003366" alink="#000099">
+<IMG src="images/Title_HomPg.gif" width=600 height=130 border=0 usemap="#map1" alt=Google>
+<AREA shape=RECT coords="493,58,595,103" href=about.html alt="About Google">
+<AREA shape=RECT coords="381,55,490,108" href=jobs.html alt="Google Jobs">
+<TABLE width="95%" border=0>
+<TR>
+<TD>
+<FORM action="/search" method=get name=f>
+<INPUT type=text value="" framewidth=4 name=q size=40>
+<INPUT type=submit value="Google Search">
+<INPUT name=sa type=submit value="I'm feeling lucky">
+<font face="arial,geneva,helvetica">
+<a href="pressrel/pressrelease6.html">
+<font face="arial,geneva,helvetica">
+<font size=-2>

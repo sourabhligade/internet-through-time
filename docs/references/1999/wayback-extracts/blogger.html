@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<META  name="description" 
+content="Free, automated weblog publishing tool.">
+
+<META  name="keywords" content="weblog, web publishing tool, blog, FTP updates,
+Pyra, web management, site updater">
+
+	<title>blogger.com</title>
+<script>
+function newBlog() {
+
+	alert("Please log in first.");
+	document.login.username.focus();
+
+}
+</script>
+<style>
+A {text-decoration:none;}
+A:hover {text-decoration:underline;}
+</style>
+</head>
+
+<body bgcolor=#0d2352 text=white link=Yellow vlink=#ffff9d alink=#90C800 
+topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr>
+	<td width=25>&nbsp;</td>
+	<td><font size="1">&nbsp;</font><BR>
+<table width=540 border=0 cellspacing=0 cellpadding=3 bgcolor=#0d2352>
+<tr valign=top bgcolor=#074adb>
+	<td width=375 colspan="2">
+<img src="images/blogger.gif" width=353 height="98" alt="blogger!">
+	</td>
+	<td width=165 rowspan=2>
+			<font size=2 face="arial, helvetica">
+			<script>
+function checknewuserlogin(f) {
+	if (f.username.value < " ") {
+		alert("Please enter a username.");
+		f.username.focus();
+		return false;
+	}
+	if (f.password.value < " ") {
+		alert("Please enter a password.");
+		f.password.focus();
+		return false;
+	}
+	if (f.vpassword.value < " ") {
+		alert("Please enter your password again, for verification.");
+		f.vpassword.focus();
+		return false;
+	}
+	if (f.password.value != f.vpassword.value) {
+		alert("The passwords you entered do not match.");
+		f.password.focus();
+		f.password.select();
+		return false;
+	}
+}
+
+
+</script>
+
+
+	<table cellpadding=1 cellspacing=1 border=0 style="font-family:Arial, Helv, Sans Serif;font-size:12px;">
+		<form name="login" action="login-action.pyra" method="post" target="_top">
+		<tr>
+			<td colspan=2>
+			<font face="Arial, Helv, Sans Serif" size="2">
+			<b>Registered Users</b><BR>Please log in.
+			</font>
+			</td>
+		</tr>
+		<tr>
+			<td align=right><font face="Arial, Helv, Sans Serif" size="2">Username</font></td>
+			<td><input type=text name=username size=11></td>
+		</tr>
+		<tr>
+			<td align=right><font face="Arial, Helv, Sans Serif" size="2">Password</font></td>
+			<td><input type=password name=password size=11></td>
+		</tr>
+		<tr><td></td>
+			<td>
+			<input type=checkbox name=remember value="1"><font face="Trebuchet MS, Arial, Helv, Sans Serif" size="1"> <a href="javascript:alert('Checking this box will cause a cookie to be placed on your browser, which will \nautomatically log you into Blogger (and all Pyra Network sites) from this \ncomputer in the future.\n\nIf other people use the computer you are currently on, you probably do not want \nto do this.')">remember me</a></font>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type=submit value="enter" style="font-size:10;"></td>
+		</tr>
+
+		
+
+</form><form name="newuserlogin" action="newuserlogin-action.pyra" onsubmit="return checknewuserlogin(this)">
+	
+		<tr>
+			<td colspan=2>
+			<font face="Arial, Helv, Sans Serif" size="2">
+			<b>New Users</b><BR>Please choose a username and password.
+			</font>
+			</td>
+		</tr>
+		<tr>
+			<td align=right><font face="Arial, Helv, Sans Serif" size="2">Username</font></td>
+			<td><input type=text name=username size=11></td>
+		</tr>
+		<tr>
+			<td align=right><font face="Arial, Helv, Sans Serif" size="2">Password</font></td>
+			<td><input type=password name=password size=11></td>
+		</tr>
+		<tr>			
+		<td align=right><font face="Arial, Helv, Sans Serif" size="2">Verify Password</font></td>
+			<td><input type=password name=vpassword size=11></td>
+
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type=submit value="enter" style="font-size:10;"></td>
+		</tr>
+		</table>
+
+			<P>					
+			<a href="javascript:newBlog()"><b>Create a New Blog &gt;&gt;</b></a>
+			
+			</font>
+	</td>
+</tr>
+<tr bgcolor=#074adb>
+<td width=15>&nbsp;&nbsp;</td>
+<Td width=360>
+
+	<font size=2 face="verdana, arial, helvetica">
+
+
+<b>Now: Post instantly from any web page!</b><BR>
+If you use Internet Explorer 4 or 5 for Windows, here's an even quicker
+way to update your blog: Right-click on any page on the web, select "Blog this!" from the 
+<img src="http://www.pyra.com/images/rightmouse.gif" width=167 height=51 align=right vspace=2>
+context menu, and instantly bring up a Blogger form, populated with a link to the current 
+page and any text you have selected. 
+You can add a menu entry for each of your blogs by clicking on the Add to Browser Menu
+link on the right of your blog edit view.
+
+<p>
+
+	<b>What is it?</b><BR>
+	Blogger is an automated weblog publishing tool. 
+	<P>
+	<b>What does it do?</b><BR>
+	You make posts to your weblog (or your What's New page or any other web page you want to 
+	update frequently with chronologically sorted posts) by submitting a form on this web site, 
+	and the results immediately show up on *your* site, with *your* design. 
+	<P>
+	<b>How does it work?</b><BR>
+	Magic! Well, actually, you provide Blogger a template of your page (or use the default)
+	that indicates where you want your posts to appear. When you make a new post, you'll
+	get a "Save to Server" button that will automatically FTP your new page to your web server. 
+	No muss. No fuss. Total control. 
+	<P>
+	<b>Wow, where do I enter my credit card number?</b><BR>
+	Blogger is free. Try it out.
+	<BR><BR>
+</font>
+</td>
+</tr>
+
+<tr bgcolor=#0d2352>
+<td colspan=3 align=right style="padding:1;"><font color="#074adb" face="ms sans serif" size=1>Copyright &copy; 1999 Pyra.com Ltd.
+</font></td>
+</tr>
+</table>
+<a href="http://www.pyra.com"><img alt="Powered by Pyra" src="images/pyra_button.gif" width=88 height=31 border=0></a><BR>
+<font face="arial,geneva" size=1 color=gray><b>Blogger</b> is integrated with and powered by Pyra -- the collaborative web site management tool. </font>	<BR><BR>
+	</td>
+	
+	<td></td>
+	
+</tr>
+</table>
+
+
+
+
+</body>
+</html>
+

@@ -1,7 +1,8 @@
 {
   "name": "internet-through-time",
   "private": true,
-  "description": "Museum static site \u2014 no build required for deploy",
+  "description": "Museum static site — historical web reconstruction year by year (no build for deploy)",
+  "license": "MIT",
   "scripts": {
     "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
     "smoke": "python3 scripts/smoke-production.py",
@@ -12,7 +13,11 @@
     "check": "python3 scripts/smoke-production.py && python3 scripts/audit-internal-links.py && python3 scripts/test-authenticity.py && python3 scripts/test-pipeline.py",
     "test": "npm run check && playwright test",
     "ci": "bash scripts/ci.sh",
-    "perf": "python3 scripts/measure-perf.py"
+    "perf": "python3 scripts/measure-perf.py",
+    "github:ready": "bash scripts/github-ready.sh"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
     "@playwright/test": "1.49.0"

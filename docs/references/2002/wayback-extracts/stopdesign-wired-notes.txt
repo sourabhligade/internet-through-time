@@ -1,0 +1,16 @@
+SOURCE: https://stopdesign.com/journal/2002/10/11/finally-were-live.html
+TITLE: Finally, we're live (Douglas Bowman / Stopdesign)
+STATUS: [visited] 2026-07-23
+
+KEY FACTS:
+- Wired News redesign launched ~10pm PDT previous night (Oct 2002)
+- Strict **XHTML 1.0**; pages **rely entirely on CSS** for design/format/presentation
+- Millions of pageviews; convert thousands of pages
+- “Significant event in the development and evolution of the Web”
+- Related: Wired article “A Site for Your Eyes” + “Behind the Wired News Redesign”
+- WA announcement path cited elsewhere: 20021013195949 wired culture article
+- Later same year: HotBot redesign also XHTML/CSS (Dec 2002 Stopdesign post)
+
+EXHIBIT USE:
+- sites/wired/ CSS reconstruction + standards beat
+- Contrast with table-heavy MTV / portals

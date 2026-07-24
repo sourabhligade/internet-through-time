@@ -2,15 +2,14 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('hub + year shells', () => {
-  test('hub lists 1994–1997 as available', async ({ page }) => {
+  test('hub lists 1994–2005 as available', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a[href*="years/1994"]')).toBeVisible();
-    await expect(page.locator('a[href*="years/1995"]')).toBeVisible();
-    await expect(page.locator('a[href*="years/1996"]')).toBeVisible();
-    await expect(page.locator('a[href*="years/1997"]')).toBeVisible();
+    for (const y of ['1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005']) {
+      await expect(page.locator(`a[href*="years/${y}"]`)).toBeVisible();
+    }
   });
 
-  for (const year of ['1994', '1995', '1996', '1997']) {
+  for (const year of ['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005']) {
     test(`${year} shell boots with content iframe`, async ({ page }) => {
       await page.goto(`/years/${year}/`);
       const skip = page.locator('#skip-connect');

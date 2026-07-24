@@ -1,0 +1,23 @@
+SOURCE: https://cybercultural.com/p/internet-2002/
+STATUS: [visited] 2026-07-23 (reconfirm)
+
+KEY FACTS:
+- Pew Jun 2002 broadband 21% / 24M (matches Pew primary)
+- MTV.com Aug 8 2002: tables + image buttons; RealPlayer/WMP streams; Shockwave microsites (Osbournes)
+- MTV community profiles ≈ proto-MySpace (lists of bands/shows, not friend graph) — Friendster is separate product
+- KaZaA Aug 2002: ~100 million downloads; FastTrack; Estonian/Tallinn lineage → later Skype
+- Morpheus kicked from FastTrack Feb 2002 → Gnutella; spyware accusations; Grokster
+- iPod gen 2 Aug 2002; labels courtship for future iTunes Store (not yet)
+- last.fm + Audioscrobbler 2002 launches
+- IE6 ~90% + other IE ~5%; no IE7 until 2006
+- Mozilla 1.0 Jun 5 2002 suite (browser+mail+chat)
+- Phoenix 0.1 Sep 23 2002 → Firefox lineage
+
+WA TARGETS NAMED IN ESSAY:
+- MTV homepage 8 Aug 2002
+- Wired redesign announcement WA 20021013195949
+- MT features 20021207200657
+- Blogger 20021202091911
+- Microcontent blogosphere 20020604065327
+- Register Morpheus Mar 15 2002: https://www.theregister.com/2002/03/15/old_morpheus_still_works/
+- MozillaZine Mozilla 1.0: https://www.mozillazine.org/articles/article2278.html

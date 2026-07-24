@@ -11,16 +11,21 @@ test.describe('1997 authenticity', () => {
 
     const logo = frame.locator('.eb-logo').first();
     await expect(logo).toBeVisible({ timeout: 15000 });
-    await expect(logo).toContainText(/eBay/i);
 
     // Multicolor letter spans should not drive the mark
     const multi = await frame.locator('.eb-logo .eb-e, .eb-logo .eb-b, .eb-logo .eb-a, .eb-logo .eb-y').count();
     expect(multi).toBe(0);
 
-    // Computed color of logo text should be near black
-    const color = await logo.evaluate((el) => getComputedStyle(el).color);
-    // rgb(0, 0, 0) or similar dark
-    expect(color).toMatch(/rgb\(\s*0\s*,\s*0\s*,\s*0\s*\)|#000|black/i);
+    // Accept period black wordmark as either text or GIF (SRP-era authenticity)
+    const logoImg = frame.locator('.eb-logo img[alt*="eBay" i], .eb-logo img[src*="ebay" i]');
+    const imgCount = await logoImg.count();
+    if (imgCount > 0) {
+      await expect(logoImg.first()).toBeVisible();
+    } else {
+      await expect(logo).toContainText(/eBay/i);
+      const color = await logo.evaluate((el) => getComputedStyle(el).color);
+      expect(color).toMatch(/rgb\(\s*0\s*,\s*0\s*,\s*0\s*\)|#000|black/i);
+    }
   });
 
   test('Drudge headlines link to real exhibit pages', async ({ page }) => {

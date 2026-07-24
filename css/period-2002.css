@@ -1,0 +1,68 @@
+/* 2002 document styles — broadband · Friendster · KaZaA · blogosphere · Wired CSS
+   Year delta: @import period-2001. Only 2002-specific rules below. */
+@import url("period-2001.css");
+
+/* Broadband / always-on copy helpers */
+.fs02-note { font-size: 12px; color: #444; }
+
+/* KaZaA client chrome (document theater) */
+.kz02-client {
+  border: 1px solid #666;
+  background: #e8e8e8;
+  padding: 8px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+}
+.kz02-title {
+  background: #003399;
+  color: #fff;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+/* Wired News 2002 CSS redesign energy */
+.wn-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  color: #111;
+}
+.wn-top {
+  border-bottom: 3px solid #c00;
+  padding: 8px 0 10px;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wn-hero { margin: 0 0 16px; }
+.wn-grid { display: table; width: 100%; }
+.wn-col { display: table-cell; vertical-align: top; padding-right: 16px; }
+.wn-rail {
+  display: table-cell;
+  width: 220px;
+  vertical-align: top;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-left: 1px solid #ddd;
+  padding-left: 12px;
+}
+.wn-story { margin: 0 0 14px; }
+.wn-meta { font-size: 11px; color: #666; font-family: Arial, sans-serif; }
+.wn-foot {
+  margin-top: 24px;
+  padding-top: 8px;
+  border-top: 1px solid #ccc;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  color: #666;
+}
+.wn-wrap .box {
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+/* Daypop / Technorati light chrome */
+.dp02-list { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+.tc02-cosmos { font-family: Arial, sans-serif; font-size: 12px; color: #333; }

@@ -14,3 +14,12 @@ Red bar wordmark reconstruction for Interactive section pages.
 ## eBay / PointCast / Slashdot
 
 See `assets/period/1997/` — schematic marks; prefer early black eBay (not multicolor 1999+).
+
+## Harvest refresh 2026-07-24 (improve-years code pass)
+
+| Path | Source |
+|------|--------|
+| `icq/logo.gif` | **WA** `19971210072826` `http://www.icq.com/images/logo.gif` (80×72) |
+| `icq/banner-side.gif` | **WA** same capture `images/icq.gif` (150×480) |
+
+Propagated logo to 1998–2003 `assets/period/*/icq/logo.gif` for continuity ICQ rooms.

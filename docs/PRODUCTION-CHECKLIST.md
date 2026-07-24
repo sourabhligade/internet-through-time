@@ -16,7 +16,7 @@
 
 | ID | Item | Status | Evidence |
 |----|------|--------|----------|
-| **P1** | CI runs smoke on every push/PR | [x] | `.github/workflows/smoke.yml` |
+| **P1** | CI runs smoke on every push/PR | [x] | `.github/workflows/ci.yml` |
 | **P2** | E2E 1995 cart → localStorage | [x] | `e2e/1995-cart.spec.js` (passed) |
 | **P3** | E2E 1996 HoTMaiL login → inbox | [x] | `e2e/1996-hotmail.spec.js` (passed) |
 | **P4** | Cache headers for `/assets/*` | [x] | `netlify.toml`, `vercel.json` |
@@ -35,7 +35,7 @@
 |----|------|--------|----------|
 | **C1** | Asset link scan | [x] | smoke-production.py |
 | **C2** | urlMap ↔ disk | [x] | smoke-production.py |
-| **C3** | 1995 internal links | [x] | `audit-internal-links.py` → 0 broken |
+| **C3** | Internal links all years | [x] | `audit-internal-links.py` → 0 broken / 14k+ (1994–2005) |
 | **C4** | 1994 internal links | [x] | same |
 | **C5** | 1996 internal links | [x] | same |
 | **C6** | Assets inventory | [x] | `docs/references/ASSETS-INVENTORY.md` |
@@ -86,4 +86,5 @@ python3 scripts/measure-perf.py
 
 | 2026-07-19 | Sprint A–C authenticity pass: eBay logo, Space Jam planets, museum voice strip, Amazon period inputs, 1997 zero href=#, SSL checkout, GeoCities homestead+webring, HoTMaiL redesign, phone-line theater |
 | 2026-07-19 | Pipeline: `ci.yml` (static + e2e), authenticity in CI, `npm run ci` / `scripts/ci.sh`, Playwright CI retries + report artifact |
+| 2026-07-24 | Prod ready: expanded `.gitignore`, `.gitattributes`, `.env.example`, removed local backups, hub years 1994–2005, link audit 0 broken, pixel harvest pass |
 

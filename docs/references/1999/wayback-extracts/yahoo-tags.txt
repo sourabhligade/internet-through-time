@@ -1,0 +1,120 @@
+<body>
+<form action=http://search.yahoo.com/bin/search>
+<area coords="72,0,130,58" href=r/wn>
+<area coords="131,0,189,58" href=http://mail.yahoo.com>
+<area coords="414,0,472,58" href=r/i1>
+<area coords="473,0,531,58" href=r/hw>
+<a href=/bin/top33>
+<img width=600 height=59 border=0 usemap="#m" ismap src=http://a1.g.a.yimg.com/7/1/31/000/us.yimg.com/i/main33.gif alt=Yahoo>
+<table border=0 cellspacing=0 cellpadding=4 width=600>
+<tr>
+<td align=center width=160>
+<a href="/homet/?http://edit.yahoo.com/config/download_companion">
+<img src="http://a1.g.a.yimg.com/7/1/31/000/us.yimg.com/i/new2.gif" height=11 width=28>
+<td align=center>
+<a href="http://messenger.yahoo.com">
+<img width=230 height=33 src="http://a32.g.a.yimg.com/7/32/31/000/us.yimg.com/a/ya/yahoopager/messenger/messengerpromo.gif" alt="Yahoo! Messenger" border=0>
+<td align=center width=160>
+<a href="/homet/?http://mail.yahoo.com">
+<tr>
+<td colspan=3 align=center>
+<input size=30 name=p>
+<input type=submit value=Search>
+<a href=r/so>
+<table border=0 cellspacing=0 cellpadding=4 width=600>
+<tr>
+<td nowrap align=center>
+<a href="/homet/?http://auctions.yahoo.com">
+<font color="red">
+<a href="/homet/?http://auctions.yahoo.com/25971-category-leaf.html">
+<a href="/homet/?http://auctions.yahoo.com/27745-category.html">
+<a href="/homet/?http://auctions.yahoo.com/20296-category-leaf.html">
+<a href="/homet/?http://auctions.yahoo.com/44367-category.html">
+<a href="/homet/?http://auctions.yahoo.com/44465-category-leaf.html">
+<tr>
+<td nowrap align=center>
+<a href=r/sh>
+<a href=r/os>
+<a href=r/yp>
+<a href=r/ps>
+<a href=r/mp>
+<a href=r/ta>
+<a href=r/cf>
+<a href=r/pr>
+<a href=r/pl>
+<a href=r/yc>
+<a href=r/ub>
+<a href=http://mail.yahoo.com>
+<a href=r/ca>
+<a href=r/pg>
+<a href=r/cm>
+<a href=r/i2>
+<a href=r/dn>
+<a href=r/ys>
+<a href=r/wt>
+<a href=r/tg>
+<a href=r/sq>
+<a href=r/xy>
+<tr>
+<td>
+<table border=0 cellspacing=0 width=600>
+<tr>
+<td bgcolor=6699cc>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td height=2>
+<table border=0 cellspacing=7 cellpadding=2>
+<tr>
+<td valign=top align=center>
+<table border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign=top nowrap>
+<font size=3 face=arial>
+<a href=r/ar>
+<a href=r/li>
+<a href=r/ph>
+<font size=3 face=arial>
+<a href=r/bu>
+<a href=r/co>
+<a href=r/fi>
+<a href=r/jo>
+<font size=3 face=arial>
+<a href=r/ci>
+<a href=r/in>
+<a href=r/ww>
+<a href=r/sf>
+<a href=r/ga>
+<font size=3 face=arial>
+<a href=r/ed>
+<a href=r/un>
+<a href=r/k2>
+<font size=3 face=arial>
+<a href=r/en>
+<a href=r/cl>
+<a href=r/mo>
+<a href=r/hu>
+<a href=r/mu>
+<font size=3 face=arial>
+<a href=r/go>
+<a href=r/el>
+<a href=r/mi>
+<a href=r/la>
+<a href=r/tx>
+<font size=3 face=arial>
+<a href=r/he>
+<a href=r/md>
+<a href=r/ds>
+<a href=r/dg>
+<a href=r/ft>
+<td valign=top nowrap>
+<font size=3 face=arial>
+<a href=r/nm>
+<a href=r/fc>
+<a href=r/nw>
+<a href=r/tv>
+<font size=3 face=arial>
+<a href=r/rs>
+<a href=r/sp>
+<a href=r/tr>
+<a href=r/au>
+<a href=r/od>

@@ -19,15 +19,15 @@ Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
 ## Production deploy
 
-This repo is **static only** (no build step, no backend).
+This repo is **static only** (no build step, no backend, no API keys).
 
 | Host | How |
 |------|-----|
-| **Netlify** | Publish directory `.` — `netlify.toml` included |
-| **Vercel** | Import repo — `vercel.json` included |
-| **GitHub Pages / S3 / nginx** | Serve repo root as document root |
+| **Netlify** | Connect GitHub repo · publish directory **`.`** · `netlify.toml` (CSP + asset cache) |
+| **Vercel** | Import repo · Framework **Other** · output/static root **`.`** · `vercel.json` |
+| **GitHub Pages / S3 / nginx** | Serve **repo root** as document root (not a subfolder alone) |
 
-### Production checklist
+### Pre-deploy checklist
 
 ```bash
 # Full local CI (static smoke + links + authenticity + HTTP smoke + Playwright)
@@ -36,15 +36,35 @@ npm run ci
 # Fast static only (no browser)
 npm run check
 
-# Deploy entire repo root (must keep /years /js /css /assets together)
+# GitHub push preflight (no remote/push)
+npm run github:ready
 ```
 
-CI on GitHub: `.github/workflows/ci.yml` (static job + e2e job).
+CI on GitHub: `.github/workflows/ci.yml` (static job + e2e job on push/PR to `main`).
 
 **Requirements for production:**
 - Single origin for hub + years (iframe + localStorage + script injection)
 - Trailing-slash URLs OK (`vercel.json` sets `trailingSlash`)
+- Deploy the **entire** repo root — keep `/years` `/js` `/css` `/assets` together
 - Do not deploy only `years/1995/` without parent `js/` and `css/`
+
+## Publish to GitHub (first time)
+
+```bash
+# 1) Preflight (safe — no push)
+bash scripts/github-ready.sh
+
+# 2) Commit museum work on main (if not already)
+
+# 3) Auth + create public repo + push
+gh auth login
+gh repo create internet-through-time --public --source=. --remote=origin --push
+```
+
+Use `--private` instead of `--public` if you want a private museum first.  
+CI runs automatically on push to `main` (static smoke + Playwright).
+
+Then connect **Netlify** or **Vercel** to the same GitHub repo for production CDN.
 
 ## What’s built
 
@@ -55,26 +75,48 @@ CI on GitHub: `.github/workflows/ci.yml` (static job + e2e job).
 | `/years/1995/` | Win95 · Netscape 2.0 · Amazon · AuctionWeb · GeoCities · AltaVista |
 | `/years/1996/` | Netscape 3.0 · HoTMaiL · Space Jam · Excite · portal wars |
 | `/years/1997/` | IE4 · Win95 · eBay · Amazon IPO · Slashdot · HotBot · Think Different |
+| `/years/1998/` | Win98 · IE4 · portals · Google! · Amazon Music · eBay IPO · Mozilla |
+| `/years/1999/` | Win98 SE · IE5 · Napster · Blogger · Google funded · Y2K · multi-cat Amazon · **museum grade** |
+| `/years/2000/` | Win98/ME · IE5.5 · Amazon smile · Napster · Pets.com · Flash 5 · **museum densify** |
+| `/years/2001/` | Windows XP · IE6 · Wikipedia · iPod · post-crash rebuild |
+| `/years/2002/` | XP · IE6 · Friendster · KaZaA · blogosphere · Wired CSS · broadband |
+| `/years/2003/` | XP · IE6 · MySpace · iTunes Store · WordPress · LinkedIn · social web |
+| `/years/2004/` | XP · IE6 · Firefox 1.0 · Gmail · Flickr · Thefacebook · Google IPO · **MVP unlock** |
+| `/years/2005/` | XP · IE6 · YouTube · Google Maps · Reddit · Digg · Ajax · **MVP unlock** |
+
+**Full inventory** (every site, feature, test, asset, and deploy detail): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
+
+**Every source, artifact & image provenance** (full inventory): [`docs/MASTER-PROVENANCE.md`](docs/MASTER-PROVENANCE.md).  
+**External bibliography + link audit:** [`docs/SOURCES.md`](docs/SOURCES.md) · [`docs/SOURCE-AUDIT.md`](docs/SOURCE-AUDIT.md).  
+**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md).
 
 ## Architecture (keep this clean)
 
 ```
 js/
-  lib/util.js           # shared helpers
-  browser-core.js       # Netscape chrome engine
-  immersion-core.js     # cart, bids, hotmail, tour, flash
-  config/<year>.js      # browser data only
+  lib/util.js              # shared helpers
+  browser-core.js          # loader → browser/*
+  browser/create.js        # Netscape chrome controller
+  browser/connect.js       # dial-up + modem sound
+  browser/load-theater.js  # progressive-image timing helpers
+  browser/year-boot.js     # bootBrowserYear(year)
+  immersion/registry.js    # FEATURES_BY_YEAR (one place)
+  immersion/boot.js        # shared immersion loader
+  immersion/*.js           # SRP features: amazon, google, excite, …
+  immersion/create.js      # orchestrator only
+  config/<year>.js         # browser data only
   config/immersion-<year>.js
-  browser-<year>.js     # thin boot
-  immersion-<year>.js   # thin loader
-years/<year>/           # shell + content HTML
-css/                    # hub + chrome + period document styles
-assets/                 # period GIFs
-docs/                   # research dossiers
+  browser-<year>.js        # thin: bootBrowserYear
+  immersion-<year>.js      # thin: set year → boot.js
+years/<year>/              # shell + content HTML
+css/                       # hub + chrome + period styles
+assets/                    # period GIFs
+docs/                      # research + SRP-SPLIT-PLAN.md
 scripts/smoke-production.py
 ```
 
-Year differences live in **config + content**, not forked engines.
+Year differences live in **config + content**, not forked engines.  
+See `docs/ARCHITECTURE.md` (growth rules) and `docs/SRP-SPLIT-PLAN.md` (module split).
 
 ## Build / minify
 

@@ -1,0 +1,120 @@
+<BODY BGCOLOR=#FFFFFF LINK=#000000 VLINK=#666666 onLoad="scroll();">
+<AREA SHAPE="RECT" COORDS="0,0,36,11" HREF="/index.asp">
+<AREA SHAPE="RECT" COORDS="290,0,474,11" HREF="/docs/corporate/index.html">
+<AREA SHAPE="RECT" COORDS="86,0,120,11" HREF="/docs/help">
+<AREA SHAPE="RECT" COORDS="38,0,82,11" HREF="/docs/about">
+<AREA SHAPE="RECT" COORDS="199,0,313,9" HREF="/docs/about/advertise.html">
+<AREA SHAPE="RECT" COORDS="0,0,70,9" HREF="/channels/JeevesTopic.asp?category=entertainment">
+<AREA SHAPE="RECT" COORDS="333,0,452,9" HREF="http://www.corporate-ir.net/ireye/ir_site.zhtml?ticker=askj">
+<AREA SHAPE="RECT" COORDS="98,0,173,9" HREF="http://www.ynot.com/postcards/askjeeves/store2.html">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 BGCOLOR="#FFFFCC" WIDTH="620">
+<TR BGCOLOR=#666699>
+<TD HEIGHT=20 COLSPAN="2">
+<IMG SRC="/images/common/homeAboutHelp2.gif" WIDTH="475" HEIGHT="12" HSPACE="11" VSPACE="4" BORDER="0" USEMAP="#topNav">
+<TD HEIGHT=20 ALIGN="RIGHT" VALIGN="BOTTOM">
+<IMG SRC="/images/common/pageCurlMakeHomepageTop.gif" WIDTH="41" HEIGHT="16" BORDER="0">
+<TD HEIGHT=20>
+<FONT SIZE="1">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 BGCOLOR="#FFFFCC" WIDTH="620">
+<TR>
+<TD HEIGHT=90 VALIGN=BOTTOM>
+<IMG SRC="/images/common/jeevesTop2.gif" WIDTH="223" HEIGHT="77" HSPACE="17">
+<TD HEIGHT=90>
+<IMG SRC="/images/common/tagLine2.gif" WIDTH=181 HEIGHT=62 BORDER=0 ALT="Answering Millions of Your Questions Each Day!" HSPACE="29">
+<TD HEIGHT=90 ALIGN="RIGHT" VALIGN="TOP">
+<IMG SRC="/images/common/pageCurlMakeHomepageBtm.gif" WIDTH="120" HEIGHT="90" BORDER="0" USEMAP="#curlMap">
+<TD ALIGN=LEFT VALIGN=TOP BGCOLOR="#666699" WIDTH="2" HEIGHT="90">
+<FONT SIZE="1">
+<TABLE WIDTH=620 BORDER=0 CELLSPACING=0 CELLPADDING=0 HEIGHT=12 BGCOLOR="#FFFFCC">
+<TR>
+<TD WIDTH=195 ALIGN=LEFT VALIGN=TOP>
+<IMG SRC="/images/common/jeevesBtm2.gif" WIDTH="134" HEIGHT="140" HSPACE="17">
+<TD ALIGN="LEFT" VALIGN="TOP" COLSPAN=2>
+<FORM METHOD="get" ACTION="/main/askJeeves.asp" TARGET="_top">
+<TABLE WIDTH=372 BORDER=0 BGCOLOR=#FFFFCC>
+<TR>
+<TD VALIGN="top" ALIGN="RIGHT">
+<FONT SIZE=2>
+<TD VALIGN="top" ALIGN="left">
+<TR>
+<TD ALIGN="center">
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2" BGCOLOR="#999966">
+<TR>
+<TD>
+<INPUT TYPE="text" NAME="ask" SIZE=40 VALUE="">
+<INPUT TYPE="hidden" NAME="origin" VALUE="">
+<INPUT TYPE="hidden" NAME="qSource" VALUE="0">
+<INPUT TYPE="hidden" NAME="site_name" VALUE="Jeeves">
+<INPUT TYPE="hidden" name="metasearch" VALUE="yes">
+<TD WIDTH="18%" ROWSPAN="2" VALIGN="TOP">
+<INPUT TYPE=IMAGE SRC="/images/common/asksm.gif" WIDTH=36 HEIGHT=23 BORDER=0 ALT="Ask!" NAME="IMAGE">
+<TR>
+<TD ALIGN="RIGHT">
+<INPUT TYPE="checkbox" NAME="spellcheck" VALUE="on">
+<FONT SIZE=1 FACE="Verdana, Arial, Helvetica, sans-serif">
+<TABLE BORDER=0 WIDTH=372 BGCOLOR=#FFFFCC>
+<TR>
+<TD VALIGN="top" ALIGN="left" COLSPAN="2">
+<FONT FACE="Arial, Helvetica, sans-serif" SIZE=2 CLASS="homePageCaptions">
+<TD ROWSPAN="2">
+<A HREF="/main/ovalRedirect.asp?link=/channels/JeevesTopic.asp?tpc=mac&img=ovalQuickTimeTV.gif">
+<IMG SRC="/images/channelImages/ovalQuickTimeTV.gif" WIDTH=120 HEIGHT=54 BORDER=0">
+<TR>
+<FORM NAME="rotate" METHOD="get" ACTION="/docs/peek/index.asp">
+<TD VALIGN="top" ALIGN="left">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1>
+<TR>
+<TD BGCOLOR=#999966 VALIGN="top" ALIGN="left">
+<INPUT TYPE="hidden" NAME="qSource" VALUE="1">
+<INPUT TYPE="hidden" NAME="origin" VALUE="">
+<INPUT TYPE="hidden" NAME="site_name" VALUE="Jeeves">
+<INPUT TYPE="hidden" NAME="metasearch" VALUE="yes">
+<TD VALIGN="TOP">
+<INPUT TYPE=IMAGE SRC="/images/common/asksm.gif" WIDTH=36 HEIGHT=23 BORDER=0 ALT="Ask!" ID=IMAGE1 NAME=IMAGE1>
+<TD VALIGN="TOP">
+<TD ALIGN=LEFT VALIGN=TOP BGCOLOR="#666699" WIDTH="2">
+<FONT SIZE="1">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 HEIGHT=12 BGCOLOR=#666699 WIDTH=620>
+<TR BGCOLOR=#666699>
+<TD>
+<IMG SRC="/images/common/pickATopic.gif" WIDTH=610 HEIGHT=12 VSPACE="4" HSPACE="5">
+<TABLE WIDTH=620 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD>
+<TABLE WIDTH=620 BORDER=0 CELLSPACING=0 CELLPADDING=0 BGCOLOR=#CCCC99>
+<TR>
+<TD WIDTH=16>
+<FONT SIZE="5">
+<FONT COLOR="#CC0000" SIZE="4">
+<TD WIDTH=139 CLASS="channels">
+<A HREF="/docs/funny/" CLASS="channelsSmall">
+<TD WIDTH=16>
+<FONT SIZE="5">
+<FONT COLOR="#CC0000" SIZE="4">
+<TD WIDTH=116>
+<A HREF="/channels/JeevesTopic.asp?category=shopping" CLASS="channelsSmall">
+<TD WIDTH=16>
+<FONT SIZE="5">
+<FONT COLOR="#CC0000" SIZE="4">
+<TD WIDTH=91>
+<A HREF="/channels/JeevesTopic.asp?category=health" CLASS="channelsSmall">
+<TD WIDTH=16>
+<FONT SIZE="5">
+<FONT COLOR="#CC0000" SIZE="4">
+<TD WIDTH=62>
+<A HREF="/channels/travel/index.asp" CLASS="channelsSmall">
+<TD WIDTH=148 ROWSPAN=2>
+<A HREF="http://www.ajkids.com">
+<IMG SRC="/images/common/ajKidsHomePageLogo.gif" WIDTH=143 HEIGHT=26 ALIGN="MIDDLE" ALT="Ask Jeeves for Kids!" BORDER=0>
+<TD WIDTH=2 ROWSPAN=2 BGCOLOR="#666699">
+<FONT SIZE="1">
+<TR>
+<TD WIDTH=16>
+<FONT SIZE="5">
+<FONT COLOR="#CC0000" SIZE="4">
+<TD WIDTH=139>
+<A HREF="/channels/JeevesTopic.asp?category=computers" CLASS="channelsSmall">
+<TD WIDTH=16>
+<FONT SIZE="5">
+<FONT COLOR="#CC0000" SIZE="4">
+<TD WIDTH=116>

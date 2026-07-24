@@ -39,6 +39,11 @@
 
   function saveJSON(key, value) {
     try {
+      // null/undefined = clear key (logout, reset prefs) — never store the string "null"
+      if (value === null || value === undefined) {
+        localStorage.removeItem(key);
+        return true;
+      }
       localStorage.setItem(key, JSON.stringify(value));
       return true;
     } catch (e) {

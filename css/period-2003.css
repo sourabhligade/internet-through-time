@@ -1,0 +1,165 @@
+/* 2003 document styles — MySpace · iTunes Store · WordPress · LinkedIn · social web
+   Year delta: @import period-2002. Only 2003-specific rules below.
+   Do not truncate this file — authenticity densify checks .ms-body / .it-chrome / .li-body. */
+@import url("period-2002.css");
+
+/* ========== MySpace 2003 ========== */
+.ms-body { background: #e5e5e5; }
+.ms-box { font-family: Arial, Helvetica, sans-serif; }
+
+.ms-logo-2003 {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.05;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.ms-logo-2003 .ms-mark {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.ms-logo-2003 .ms-head {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  background: #b0b0b0;
+  border-radius: 50%;
+}
+/* person torso inside mark — not body.ms-body */
+.ms-logo-2003 .ms-mark .ms-body,
+.ms-logo-2003 .ms-body {
+  position: absolute;
+  left: 8px;
+  top: 16px;
+  width: 18px;
+  height: 14px;
+  background: #f5c400;
+  border-radius: 0 0 10px 10px;
+  /* reset page bg when nested */
+  margin: 0;
+  padding: 0;
+}
+.ms-logo-2003 .ms-arrow-l,
+.ms-logo-2003 .ms-arrow-r {
+  position: absolute;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #888;
+  border-top: none;
+  border-left: none;
+}
+.ms-logo-2003 .ms-arrow-l { left: 0; transform: rotate(135deg); }
+.ms-logo-2003 .ms-arrow-r { right: 0; transform: rotate(-45deg); }
+.ms-logo-2003 .ms-word {
+  display: inline-block;
+  vertical-align: middle;
+  color: #666666;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.ms-logo-2003 .ms-word span {
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  color: #888;
+  letter-spacing: 0;
+}
+.ms-logo-2003-onblue .ms-word { color: #ffffff; }
+.ms-logo-2003-onblue .ms-word span { color: #ccd6ee; }
+
+.ms-avatar-neutral {
+  width: 64px;
+  height: 64px;
+  background: #c8c8c8;
+  border: 1px solid #666;
+  display: inline-block;
+  position: relative;
+}
+.ms-avatar-neutral:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  background: #999;
+  border-radius: 50%;
+}
+.ms-avatar-neutral:before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 38px;
+  width: 36px;
+  height: 28px;
+  background: #aaa;
+  border-radius: 18px 18px 0 0;
+}
+
+/* ========== iTunes Music Store 2003 ========== */
+.it-body { background: #1a1a2e; color: #fff; }
+.it-chrome { background: #2a2a40; border: 1px solid #444; }
+.it-top { background: linear-gradient(#3a3a55, #2a2a40); }
+.it-sidebar { font-size: 12px; }
+.it-table { width: 100%; border-collapse: collapse; color: #000; }
+.it-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+.it-buy {
+  background: #4a90d9;
+  color: #fff;
+  border: 1px solid #2a60a0;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* ========== WordPress 2003 ========== */
+.wp-body { background: #f0f0f0; }
+.wp-top { color: #fff; }
+.wp-panel { font-family: Georgia, serif; }
+.wp-panel h1 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ========== LinkedIn 2003 ========== */
+.li-body { background: #e8eef5; }
+.li-top { color: #fff; }
+.li-card {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* ========== 2003 home mood board ========== */
+.sp03-wrap {
+  max-width: 760px;
+  margin: 10px auto;
+  font-family: Arial, sans-serif;
+}
+.sp03-banner {
+  background: #003399;
+  color: #fff;
+  padding: 10px;
+}
+.sp03-hero {
+  background: #fff8dc;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 8px 0;
+}
+.sp03-mood {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.sp03-banner a { color: #ffcc00; }

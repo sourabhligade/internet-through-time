@@ -425,3 +425,13 @@ a:hover { color: #cc0000 !important; }
   color: #000000 !important;
   font-size: inherit;
 }
+
+/* HotBot period form controls */
+.hb-select, .hb-input {
+  background: #001a00;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  font-family: "Courier New", Courier, monospace;
+}
+.amz97-nav a { color: #FFCC00; }
+.amz97-logo { color: #FFFFFF; text-decoration: none; font-family: Times, serif; font-size: 28px; }

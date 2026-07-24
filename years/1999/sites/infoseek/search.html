@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Infoseek Search Results</title>
+<link rel="stylesheet" href="../../../../css/period-1999.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#003399">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="100%" bgcolor="#009900" cellpadding="6"><tr>
+<td><font face="Arial" color="#FFFFFF" size="4"><b>Infoseek</b></font>
+<font face="Arial" color="#CCFFCC" size="2"> results</font></td>
+<td align="right"><font face="Arial" size="1"><a href="index.html"><font color="#FFFFFF">New search</font></a></font></td>
+</tr></table>
+<table width="640" align="center" cellpadding="10"><tr><td>
+<font face="Arial" size="2">
+<form action="search.html" method="get">
+<input type="text" name="q" size="40" id="q"> <input type="submit" value="Infoseek">
+</form>
+<p><b>Results</b> (best matches from this year's sites):</p>
+<ul>
+<li><a href="../yahoo/index.html">Yahoo!</a> — Web directory</li>
+<li><a href="../google/index.html">Google</a> — search</li>
+<li><a href="../cnn/index.html">CNN.com</a> — news</li>
+<li><a href="../amazon/index.html">Amazon.com</a> — books &amp; more</li>
+</ul>
+<script>
+(function(){
+  var m = location.search.match(/[?&]q=([^&]*)/);
+  if (m) {
+    var q = decodeURIComponent(m[1].replace(/\+/g,' '));
+    var el = document.getElementById('q');
+    if (el) el.value = q;
+  }
+})();
+</script>
+</font>
+</td></tr></table>
+<script src="../../../../js/immersion-1999.js"></script>
+</body></html>

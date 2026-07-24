@@ -78,3 +78,22 @@
   border-bottom: 1px solid #ccc;
   padding: 3px 6px;
 }
+
+/* denser HoTMaiL login chrome */
+.hm-box input[type="text"],
+.hm-box input[type="password"] {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  border: 2px inset #808080;
+  background: #fff;
+}
+.hm-box input[type="submit"] {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.hm-footer b { color: #000080; }

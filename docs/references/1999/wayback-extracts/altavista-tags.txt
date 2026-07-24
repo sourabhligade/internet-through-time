@@ -1,0 +1,120 @@
+<body bgcolor="#FFFFFF" text="#000000" link="#000099" vlink="#663366" alink="#FF0000">
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td>
+<a href="/">
+<img src="/av2/gifs/main.gif" width=480 height=60 alt="AltaVista - The most powerful and useful guide to the Net" border=0>
+<td align=right valign=bottom nowrap>
+<font size=-1>
+<table width="100%" border=0 cellspacing=0 cellpadding=0 bgcolor="#99CCFF">
+<tr>
+<td rowspan=3>
+<a href="/">
+<img src="/av2/gifs/homecon.gif" width=356 height=21 alt=Connections border=0>
+<td colspan=2 bgcolor="#003399">
+<img src="/av2/gifs/pixel.gif" width=244 height=1>
+<td width=1 rowspan=3 bgcolor="#003399">
+<img src="/av2/gifs/pixel.gif" width=1 height=1>
+<tr>
+<td width="100%" align=right nowrap>
+<font size=-1>
+<a href="http://jump.altavista.com/global/av/myav">
+<a href="http://jump.altavista.com/global/av_front/shopp">
+<a href="http://jump.altavista.com/global/av_front/zip2">
+<td>
+<img src="/av2/gifs/pixel.gif" width=1 height=19>
+<tr>
+<td colspan=2 bgcolor="#003399">
+<img src="/av2/gifs/pixel.gif" width=1 height=1>
+<tr>
+<td colspan=4 bgcolor="#996600">
+<img src="/av2/gifs/pixel.gif" width=1 height=1>
+<table width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#CC9900">
+<tr>
+<td>
+<table width="100%" border=0 cellspacing=0 cellpadding=3 bgcolor="#FFCC66">
+<tr>
+<form action="/cgi-bin/query" name=mfrm>
+<INPUT TYPE=hidden NAME=pg VALUE=q>
+<td rowspan=4>
+<td nowrap>
+<font size=-1>
+<td rowspan=3 align=right valign=top nowrap>
+<font size=-2>
+<a href="http://jump.altavista.com/help">
+<a href="/cgi-bin/query?pg=aq&amp;what=web">
+<font size=-1>
+<a href="http://jump.altavista.com/searchtip/av/content/search_tips.htm#10">
+<td rowspan=4>
+<tr>
+<td>
+<font size=-1>
+<font size=-2>
+<input type=radio name=stype value=stext checked>
+<input type=radio name=stype value=simage>
+<input type=radio name=stype value=svideo>
+<input type=radio name=stype value=saudio>
+<tr>
+<td nowrap>
+<input type=text name=q size=50 maxlength=800 value="">
+<input type=image name=search src="/av2/gifs/search.gif" alt=Search border=0>
+<tr>
+<td colspan=2>
+<font face=arial,helvetica size=-1>
+<tr>
+<td bgcolor="#ffffff">
+<img src="/av2/gifs/pixel.gif" width=600 height=1>
+<table width="100%" border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td>
+<font size=-1>
+<a href="http://jump.altavista.com/global/av/myav">
+<a href="http://jump.altavista.com/front_channel/finance">
+<a href="http://jump.altavista.com/travel">
+<a href="http://jump.altavista.com/shopping">
+<a href="http://jump.altavista.com/career">
+<a href="http://jump.altavista.com/health">
+<a href="http://jump.altavista.com/news">
+<a href="http://jump.altavista.com/getwild">
+<tr>
+<td>
+<font size=-1>
+<a href="http://jump.altavista.com/front_tools/microav">
+<font color="#FF0000">
+<a href="http://microav.com/help">
+<a href="http://image.altavista.com/cgi-bin/globalff">
+<a href="http://jump.altavista.com/translate">
+<a href="http://jump.altavista.com/business">
+<a href="http://jump.altavista.com/people">
+<a href="http://jump.altavista.com/maps">
+<a href="http://jump.altavista.com/front_tools/usenet">
+<a href="http://jump.altavista.com/email">
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td bgcolor="#000099">
+<img src="/av2/gifs/pixel.gif" width=1 height=2>
+<tr>
+<td height=10>
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+<tr valign=top>
+<td width="25%">
+<font size=-1>
+<table width="100%" border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td bgcolor="#FFCC66">
+<img src="/av2/gifs/pixel.gif" width=1 height=2>
+<tr>
+<td height=3>
+<a href="http://jump.altavista.com/cat/auto">
+<img src="/av2/gifs/pixel.gif" width=1 height=7>
+<a href="http://jump.altavista.com/cat/busn">
+<img src="/av2/gifs/pixel.gif" width=1 height=7>
+<a href="http://jump.altavista.com/cat/comp">
+<img src="/av2/gifs/pixel.gif" width=1 height=7>
+<a href="http://jump.altavista.com/cat/hlth">
+<img src="/av2/gifs/pixel.gif" width=1 height=7>
+<a href="http://jump.altavista.com/cat/hobb">
+<img src="/av2/gifs/pixel.gif" width=1 height=7>
+<a href="http://jump.altavista.com/cat/home">
+<img src="/av2/gifs/pixel.gif" width=1 height=7>
+<a href="http://jump.altavista.com/cat/entr">

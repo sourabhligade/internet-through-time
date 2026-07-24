@@ -1,0 +1,25 @@
+SOURCE: https://cybercultural.com/p/blogs-rss-2002/
+TITLE: How the Blogosphere Takes Shape in 2002, Along With RSS 2.0
+STATUS: [visited] 2026-07-23
+
+KEY FACTS:
+- Radio UserLand: write + RSS read in one desktop app (Winer); author anecdote Mar 2002
+- Daypop: “current events search engine”; Feb 2002 ~6300 news+weblogs; EOY ~7500
+- Daypop Top 40 = “front page of the Internet” (Wired / Burning Man anecdote)
+- Blogdex redesign Nov 2002 (MIT)
+- Technorati founded late 2002 (Dave Sifry); early feature “Cosmos” (who links to whom)
+- Google News quiet beta early 2002; NYT Sep 2002; blogs not treated as journalism yet
+- RSS 2.0: Winer Sep 6 2002 promotes 0.94 → RSS 2.0 + namespaces; “Really Simple Syndication”
+- Mark Pilgrim MT RSS 2.0 template late Sep 2002
+- Movable Type **trackback** June 2002 — “blog tennis”; pop-up UI; peer-to-peer between blogs
+- Pingback: Ian Hickson (Langridge/Willison ideas) — automated, software-agnostic
+- MT 2.51: templates, categories, comments, trackback (WA 20021207200657)
+- Blogger still strong (WA 20021202091911); Google acquires Blogger **Feb 2003** (do not put in 2002 default)
+- Also: LiveJournal, Xanga, Radio UserLand
+- Plasticbag (Tom Coates) = design peak blog aesthetic
+- Hiler Microcontent News blogosphere article (WA 20020604065327)
+
+EXHIBIT USE:
+- Movable Type product room + trackback theater
+- Daypop / Technorati thin educational pages (P1)
+- Blog sidebar grammar: narrow column + stuffed blogroll

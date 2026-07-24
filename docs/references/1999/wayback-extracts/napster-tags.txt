@@ -1,0 +1,116 @@
+<body bgcolor="#000000" background="images/bk.gif" onLoad="MM_preloadImages('images/whatis-mo.gif','#934087305183')" text="#000000" link="#000099" vlink="#336699" alink="#FFCC00">
+<table border="0" cellspacing="0" cellpadding="0" width="546">
+<tr>
+<td colspan="2">
+<a href="index.html" onMouseOver="MM_swapImage('document.napster','document.napster','images/napster.gif')">
+<img src="images/napster.gif" width="273" height="68" name="napster" alt="Napster" border="0">
+<td>
+<td rowspan="2" valign="bottom">
+<img src="images/arrows.gif" width="174" height="73" name="arrows">
+<td rowspan="4" valign="bottom">
+<img src="images/download-curve.gif" width="12" height="103">
+<tr>
+<td bgcolor="#666666">
+<img src="images/home-page.gif" width="130" height="23" name="home" border="0">
+<td bgcolor="#666666">
+<img src="images/whatis.gif" width="143" height="23" name="what" border="0">
+<td bgcolor="#666666">
+<img src="images/company.gif" width="87" height="23" name="company" border="0">
+<tr>
+<td>
+<img src="images/available.gif" width="130" height="20">
+<td colspan="2">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td rowspan="3">
+<img src="images/number-left.gif" width="1" height="20">
+<td>
+<img src="images/number-top.gif" width="222" height="3">
+<td rowspan="3">
+<img src="images/number-right.gif" width="7" height="20">
+<tr>
+<td bgcolor="#99cccc">
+<img src="images/clear.gif" width="5" height="12">
+<img src="images/songs.gif" width="60" height="12">
+<tr>
+<td>
+<img src="images/number-bottom.gif" width="222" height="5">
+<td bgcolor="#666666">
+<img src="images/download.gif" width="174" height="20" name="download" alt="Download" border="0">
+<tr>
+<td colspan="4" bgcolor="#cccc99">
+<img src="images/cap-yellow.gif" width="534" height="10">
+<tr>
+<td colspan="4" valign="top">
+<table border="0" cellspacing="0" cellpadding="0" width="534">
+<tr>
+<td valign="top" bgcolor="#999999" width="113">
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#666666">
+<tr>
+<td>
+<img src="images/left-whatis.gif" width="113" height="16" name="what2" border="0">
+<tr>
+<td>
+<img src="images/left-download.gif" width="113" height="16" name="download2" border="0">
+<tr>
+<td>
+<img src="images/left-advertise.gif" width="113" height="16" name="jobs" border="0">
+<tr>
+<td>
+<img src="images/left-company.gif" width="113" height="16" name="company2" border="0">
+<tr>
+<td>
+<img src="images/left-space.gif" width="113" height="16">
+<tr>
+<td>
+<img src="images/left-space.gif" width="113" height="49">
+<tr>
+<td>
+<img src="images/left-help.gif" width="113" height="16" name="help" border="0">
+<tr>
+<td>
+<img src="images/left-disclaimer.gif" width="113" height="16" name="disclaimer" border="0">
+<tr>
+<td>
+<img src="images/left-bottom.gif" width="113" height="13">
+<td bgcolor="#777777" valign="top" width="1">
+<img src="images/clear.gif" width="1" height="1">
+<td bgcolor="#4f4f4f" valign="top" width="1">
+<img src="images/clear.gif" width="1" height="1">
+<td bgcolor="#cccc99" valign="top" width="400">
+<img src="images/body-spacer.gif" width="399" height="2">
+<table border="0" cellspacing="0" cellpadding="0" width="398">
+<tr>
+<td>
+<img src="images/clear.gif" width="15" height="15">
+<td valign="top">
+<font face="Arial, Helvetica, sans-serif" size="3">
+<font face="Arial, Helvetica, sans-serif" size=+1>
+<a href=download.html>
+<table width=300 border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td>
+<font face="Arial, Helvetica, sans-serif" size="2">
+<a href=artists.html>
+<font face="Arial, Helvetica, sans-serif" size="2">
+<a href=whatisnapster.html>
+<a href=download.html>
+<font face="Arial, Helvetica, sans-serif" size="2">
+<a href="dmca.html">
+<a href="disclaimer.html">
+<td valign="top" width="19" bgcolor="#cccc99">
+<img src="images/bodycurve-yellow.gif" width="20" height="37">
+<tr>
+<td valign="top" bgcolor="#999999" width="113">
+<td bgcolor="#777777" valign="top" width="1">
+<img src="images/clear.gif" width="1" height="1">
+<td bgcolor="#4f4f4f" valign="top" width="1">
+<img src="images/clear.gif" width="1" height="1">
+<td bgcolor="#cccc99" valign="top" width="400">
+<font size="-2" face="Arial, Helvetica, sans-serif">
+<td valign="top" width="19" bgcolor="#cccc99">
+<td>
+<tr>
+<td colspan="4">
+<img src="images/bottom.gif" width="534" height="20">
+<td>

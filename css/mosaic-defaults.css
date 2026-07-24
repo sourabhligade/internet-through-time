@@ -2,6 +2,11 @@
    Simulates Mosaic / Netscape Navigator 1.0 page defaults.
    NOT a modern redesign. */
 
+/* Live-flow panels (shared immersion) — keep gray document grammar */
+.itt-live-host { margin: 8px 0; }
+.itt-live-panel { border-radius: 0 !important; box-shadow: none !important; }
+.itt-flash { margin: 0 0 8px 0; }
+
 html {
   background: #c0c0c0;
 }

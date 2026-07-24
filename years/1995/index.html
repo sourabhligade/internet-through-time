@@ -15,7 +15,7 @@
       <h2>Dial-Up Networking</h2>
       <pre id="connect-log">Initializing modem...</pre>
       <button type="button" id="connect-btn">Connect at 28,800 bps</button>
-      <button type="button" class="skip" id="skip-connect">Skip</button>
+      <button type="button" class="skip" id="skip-connect">Skip dial-up</button>
     </div>
   </div>
 
@@ -101,12 +101,12 @@
         <legend>Images / Network</legend>
         <label><input type="checkbox" id="pref-autoload" checked> Automatically load images</label><br>
         <label>Simulated modem:
-          <select id="pref-modem">
+                                        <select id="pref-modem">
             <option value="0">None (instant)</option>
-            <option value="45" selected>28.8 kbps (default)</option>
-            <option value="100">28.8 kbps (period)</option>
-            <option value="180">14.4 kbps</option>
-            <option value="350">9600 bps (slow)</option>
+            <option value="50">33.6 kbps (faster)</option>
+            <option value="90" selected>28.8 kbps (default)</option>
+            <option value="160">14.4 kbps (slow)</option>
+            <option value="280">9600 bps</option>
           </select>
         </label>
       </fieldset>

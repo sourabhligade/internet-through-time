@@ -1,13 +1,76 @@
+# OS / editor
 .DS_Store
-*.log
-node_modules/
-.venv/
-__pycache__/
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
 .idea/
 .vscode/
-*.swp
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Logs & local env (never commit secrets)
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets/
+.secret
+
+# Dependencies / virtualenvs
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build / cache / tooling
 .cache/
 dist/
+build/
+coverage/
+.nyc_output/
+.turbo/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# Playwright / test output
 test-results/
 playwright-report/
 blob-report/
+playwright/.cache/
+
+# Local CI / server scratch
+/tmp-itt-*
+.http-server.pid
+*.local
+
+# Editor / OS backups and local deltas (do not ship)
+*.bak
+*.orig
+*.tmp
+*_backup*/
+*_backup_*/
+css/_delta_backup*/
+js/_backup*/
+.grok/
+
+# Optional local notes
+TODO.local.md
+NOTES.local.md
