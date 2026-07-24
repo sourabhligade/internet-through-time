@@ -261,7 +261,28 @@
     }
 
     function resolveHref(href, currentPath) {
-      return U.resolveRelativePath(href, currentPath);
+      if (!href) return null;
+      // Same-origin absolute URLs (immersion R() now emits /years/YYYY/sites/…)
+      try {
+        if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
+          var absU = new URL(href, window.location.href);
+          if (absU.origin === window.location.origin) {
+            href = absU.pathname + absU.search + absU.hash;
+          } else {
+            return { external: true, href: href };
+          }
+        }
+      } catch (eAbs) { /* keep href */ }
+      var marker = "/years/" + YEAR + "/";
+      var mi = href.indexOf(marker);
+      if (mi !== -1) {
+        return { external: false, path: normalizePath(href.slice(mi + marker.length)) };
+      }
+      var resolved = U.resolveRelativePath(href, currentPath);
+      if (resolved && !resolved.external && resolved.path) {
+        resolved.path = normalizePath(resolved.path);
+      }
+      return resolved;
     }
 
     function displayUrl(path) {
@@ -479,17 +500,10 @@
         var absCheck = absContentUrl(checkPath);
         setStatus("Transferring data from " + host + "...");
         setIframeSrc(path);
-        // HEAD + allow cache — avoid no-store double-download of every page
-        fetch(absCheck, { method: "HEAD", cache: "force-cache" })
-          .then(function (res) {
-            if (gen !== loadGen) return;
-            if (!res.ok && res.status === 404) {
-              sessionStorage.setItem("itt-last-url", url);
-              sessionStorage.setItem("itt-last-status", String(res.status));
-              setIframeSrc("pages/error/404.html");
-            }
-          })
-          .catch(function () { /* page may still load from iframe */ });
+        // Do NOT HEAD-probe and force museum 404 — some hosts/CDNs mishandle HEAD
+        // or cache a false 404 and make every link look broken. Real missing files
+        // still fail visibly in the iframe; path repair happens in normalizePath.
+        void absCheck;
       }, startAt);
     }
 

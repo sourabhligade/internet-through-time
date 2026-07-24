@@ -94,8 +94,22 @@
     return depth ? "../".repeat(depth) : "";
   }
 
+  /**
+   * Build href to a year-root path (sites/…, pages/…).
+   * Prefer absolute /years/YYYY/… so links work from any nested page
+   * without depending on correct ../ depth (fixes pages/sites/* 404s).
+   */
   function joinRoot(year, relFromRoot, pathname) {
-    return yearRootPrefix(year, pathname) + String(relFromRoot || "").replace(/^\//, "");
+    var rel = String(relFromRoot || "").replace(/^\//, "");
+    try {
+      if (typeof window !== "undefined" && window.location && window.location.pathname) {
+        var absRoot = yearRootPath(year);
+        if (absRoot && absRoot.charAt(0) === "/") {
+          return absRoot + rel;
+        }
+      }
+    } catch (eJoin) { /* fall through */ }
+    return yearRootPrefix(year, pathname) + rel;
   }
 
   /**
@@ -143,6 +157,12 @@
     // Year-root absolute (config / immersion convention)
     if (/^(sites|pages)\//.test(href)) {
       return { external: false, path: fixYearRootPath(href) + q };
+    }
+
+    // Absolute site path: /years/1998/sites/foo or /internet-through-time/years/1998/sites/foo
+    var ym = href.match(/\/years\/\d{4}\/(.*)$/);
+    if (ym) {
+      return { external: false, path: fixYearRootPath(ym[1]) + q };
     }
 
     var pathOnly = String(currentPath || "").split("?")[0];
