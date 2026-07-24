@@ -1,9 +1,9 @@
-# Optional static site on GitHub Pages (root). Netlify/Vercel remain primary prod hosts.
+# Optional GitHub Pages deploy. Manual only so first-time pushes don't fail
+# when the github-pages environment is not enabled yet.
+# Enable: Settings → Pages → Source: GitHub Actions, then run this workflow.
 name: GitHub Pages
 
 on:
-  push:
-    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -17,16 +17,25 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Prepare publish tree
+        run: |
+          # Static museum root only — drop tooling that must not ship as site files
+          rm -rf node_modules test-results playwright-report .git
+          # Keep docs for provenance; drop huge optional extracts if needed later
+          touch .nojekyll
+
       - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - id: deployment
         uses: actions/deploy-pages@v4
