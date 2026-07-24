@@ -12,6 +12,10 @@
   if (!base || base === src) {
     base = "/js/";
   }
+  // Propagate cache-bust query from browser-core.js?v=… onto dependent modules
+  var bust = "";
+  var qi = src.indexOf("?");
+  if (qi !== -1) bust = src.slice(qi);
   // Order: optional extract modules first, then create (full controller for now)
   var parts = [
     "browser/connect.js",
@@ -20,6 +24,6 @@
     "browser/year-boot.js"
   ];
   for (var i = 0; i < parts.length; i++) {
-    document.write('<script src="' + base + parts[i] + '"><\/script>');
+    document.write('<script src="' + base + parts[i] + bust + '"><\/script>');
   }
 })();

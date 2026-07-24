@@ -243,6 +243,8 @@
         q = relPath.slice(qi);
         relPath = relPath.slice(0, qi);
       }
+      if (relPath.indexOf("pages/sites/") === 0) relPath = relPath.slice("pages/".length);
+      if (relPath.indexOf("sites/pages/") === 0) relPath = relPath.slice("sites/".length);
       return yearRoot() + relPath.replace(/^\//, "") + q;
     }
 
@@ -397,6 +399,13 @@
     function navigate(path, options) {
       options = options || {};
       path = normalizePath(path);
+      // Defense: never load the bogus pages/sites/* join (year-root hrefs from pages/*)
+      if (path.indexOf("pages/sites/") === 0) {
+        path = path.slice("pages/".length);
+      }
+      if (path.indexOf("sites/pages/") === 0) {
+        path = path.slice("sites/".length);
+      }
       clearLoadTimers();
       var gen = ++loadGen;
       loadStartedAt = Date.now();
@@ -654,7 +663,10 @@
           navigate("pages/error/unreachable.html");
           return;
         }
-        navigate(resolved.path);
+        // Year-root safety net (also handles sites/* from pages/*)
+        var go = resolved.path || "";
+        if (go.indexOf("pages/sites/") === 0) go = go.slice("pages/".length);
+        navigate(go);
       }, true);
       doc.addEventListener("submit", function (e) {
         var form = e.target;

@@ -23,7 +23,8 @@
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    # Short cache so path-resolution / immersion fixes reach visitors quickly
+    Cache-Control = "public, max-age=300, must-revalidate"
 
 [[headers]]
   for = "/*.html"
