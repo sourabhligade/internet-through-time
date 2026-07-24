@@ -29,7 +29,7 @@
       showLocation: true,
       showDirbar: true,
       showDesktopIcons: true,
-      desktopBg: "#008080"
+      desktopBg: "#000000"
     },
     /* 56k modem = ~2x throughput of 28.8k — nav and images should feel snappier */
     perf: {

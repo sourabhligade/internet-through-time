@@ -29,7 +29,7 @@
       showLocation: true,
       showDirbar: true,
       showDesktopIcons: true,
-      desktopBg: "#008080"
+      desktopBg: "#000000"
     },
     perf: {
       /* 28.8 kbps */

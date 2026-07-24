@@ -29,7 +29,7 @@
       showLocation: true,
       showDirbar: true,
       showDesktopIcons: true,
-      desktopBg: "#3a6ea5"
+      desktopBg: "#000000"
     },
     perf: {
       navJitterMax: 40,

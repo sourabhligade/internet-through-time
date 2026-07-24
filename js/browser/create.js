@@ -128,6 +128,13 @@
       prefs.perfVersion = PERF.prefsPerfVersion;
       try { U.saveJSON(PREFS_KEY, prefs); } catch (eMig) { /* */ }
     }
+    // Desktop stays black (prior year defaults were teal / Win blue — migrate those to black)
+    var wantBlack = (config.defaultPrefs && config.defaultPrefs.desktopBg) || "#000000";
+    var bgNow = String(prefs.desktopBg || "").toLowerCase().replace(/\s/g, "");
+    if (!bgNow || bgNow === "#008080" || bgNow === "#3a6ea5" || bgNow === "#000080" || bgNow === "#0000aa") {
+      prefs.desktopBg = wantBlack;
+      try { U.saveJSON(PREFS_KEY, prefs); } catch (eBg) { /* */ }
+    }
     var bookmarks = loadBookmarks();
 
     /* ---------- DOM ---------- */
