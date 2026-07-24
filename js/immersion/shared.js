@@ -376,11 +376,11 @@
       var tips = document.querySelectorAll("[data-itt-error-help]");
       for (var er = 0; er < tips.length; er++) {
         tips[er].innerHTML =
-          '<p><b>Lost?</b> This URL is not part of the ' + escapeHtml(YEAR) +
-          ' exhibit mirror.</p><ul>' +
-          '<li><a href="' + R("pages/home.html") + '"><b>Starting Point</b></a> — guided tour</li>' +
-          '<li><a href="' + R("sites/yahoo/index.html") + '">Yahoo!</a> — browse by category</li>' +
-          '<li>Or use the browser <b>Back</b> button / directory buttons above</li></ul>';
+          '<p><b>Not Found</b></p>' +
+          '<p>The server cannot find the file or directory you requested.</p><ul>' +
+          '<li><a href="' + R("pages/home.html") + '"><b>Return to the Starting Point</b></a></li>' +
+          '<li><a href="' + R("sites/yahoo/index.html") + '">Yahoo!</a> — search or browse categories</li>' +
+          '<li>Use the browser <b>Back</b> button and try another link</li></ul>';
       }
 
       /* Live museum flows — period-skinned UI per year era.
