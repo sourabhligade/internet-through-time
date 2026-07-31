@@ -85,6 +85,208 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.hub-stats {
+  margin: 10px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333;
+}
+
+.hub-stat-muted {
+  color: #666;
+}
+
+/* —— Start path (first-visit CTAs) —— */
+.start-path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 6px;
+  align-items: center;
+}
+
+.start-btn {
+  display: inline-block;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  padding: 4px 10px;
+  background: #c0c0c0;
+  cursor: pointer;
+}
+
+.start-btn:hover,
+.start-btn:focus {
+  background: #d4d0c8;
+  outline: 1px dotted #000;
+}
+
+.start-btn:active {
+  border-top: 1px solid #404040;
+  border-left: 1px solid #404040;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.start-btn.start-primary {
+  background: #000080;
+  color: #fff;
+  border-top-color: #1084d0;
+  border-left-color: #1084d0;
+  border-right-color: #000040;
+  border-bottom-color: #000040;
+  font-weight: bold;
+}
+
+.start-btn.start-primary:hover,
+.start-btn.start-primary:focus {
+  background: #0000a0;
+  color: #fff;
+}
+
+.start-btn.start-resume {
+  background: #ffffcc;
+  border-color: #ffffff #808000 #808000 #ffffff;
+}
+
+.resume-wrap.hidden { display: none; }
+
+.start-hint {
+  margin: 6px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.era-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000080;
+  margin: 14px 0 4px;
+  padding: 0 2px;
+}
+
+.era-note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+  margin: 0 0 8px;
+  padding: 0 2px;
+}
+
+/* Thesis strip under header */
+.hub-thesis {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  padding: 8px 12px;
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.thesis-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.45;
+  color: #222;
+}
+
+.thesis-list li {
+  margin-bottom: 4px;
+}
+
+.thesis-list code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  background: #f0f0f0;
+  padding: 0 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.compare-intro {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #444;
+  margin: 0 0 8px;
+  line-height: 1.45;
+}
+
+.compare-sub {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 12px 0 4px;
+  color: #000;
+}
+
+.how {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  padding: 10px 12px;
+  margin: 0 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.how h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.how-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.5;
+  color: #222;
+}
+
+.how-list li {
+  margin-bottom: 4px;
+}
+
+.how-list code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  background: #f0f0f0;
+  padding: 0 3px;
+}
+
+.how-aside {
+  margin: 8px 0 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.how-aside a {
+  color: #000080;
+}
+
+.hub-footer a {
+  color: #000080;
+}
+
 .resume-row {
   margin: 10px 0 0;
 }
@@ -246,9 +448,17 @@ body {
 .year-card .label {
   margin: 0 0 3px;
   font-size: 11px;
-  line-height: 1.3;
+  line-height: 1.35;
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
+}
+
+.year-card .scale {
+  margin: 0 0 4px;
+  font-size: 10px;
+  line-height: 1.3;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
 }
 
 .year-card .meta {
@@ -271,46 +481,354 @@ body {
   content: "";
 }
 
-/* Subtle left-edge year accents only (WDM-like restraint) */
-.y1994 { border-left-color: #666; }
-.y1994 .motif { background-image: url("../assets/gif/netscape-throbber.gif"); opacity: 0.28; }
+/* —— Per-year period skins (match each immersion’s UI grammar) ——
+   Top chrome strip + face colors + era chips · not loud parody. */
 
-.y1995 { border-left-color: #008080; }
-.y1995 .motif { background-image: url("../assets/gif/yahoo-logo.gif"); opacity: 0.22; }
-
-.y1996 { border-left-color: #996600; background: #fffef8; }
-.y1996 .motif { background-image: url("../assets/period/1996/spacejam/title.gif"); opacity: 0.2; }
-
-.y1997 { border-left-color: #003399; }
-.y1997 .era-chip { border-color: #99b; }
-
-.y1998 { border-left-color: #738adb; }
-.y1998 .motif { background-image: url("../assets/period/1998/google/logo-wa.gif"); opacity: 0.3; }
-
-.y1999 { border-left-color: #336633; }
-.y1999 .era-chip { background: #f4fff4; }
-
-.y2000 { border-left-color: #e47911; }
-.y2000 .motif { background-image: url("../assets/period/2000/amazon/logo-smile-wa.gif"); opacity: 0.28; }
-
-.y2001 { border-left-color: #245edb; }
-.y2001 .era-chip { background: #eef3ff; }
-
-.y2002 { border-left-color: #cc5500; }
-
-.y2003 { border-left-color: #003399; }
-.y2003 .era-chip { background: #ffeef6; border-color: #e99; color: #603; }
-
-.y2004 { border-left-color: #dd4b39; }
-.y2004 .motif {
-  background-image: url("../assets/period/2004/gmail/logo-wa.gif");
-  opacity: 0.28;
+.year-card.available {
+  border-left-width: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
-.y2005 { border-left-color: #cc181e; }
-.y2005 .motif { background-image: url("../assets/period/2005/youtube/logo-wa.gif"); opacity: 0.28; }
+.year-card.available::before {
+  content: "";
+  display: block;
+  height: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 9px;
+  line-height: 16px;
+  padding: 0 6px;
+  color: #fff;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-.y2006 { border-left-color: #999; }
+.year-card.available .year-card-inner {
+  padding-top: 7px;
+}
+
+/* 1994 — Mosaic / Netscape gray document */
+.y1994 {
+  border-left-color: #808080;
+  background: #c0c0c0;
+  font-family: "Times New Roman", Times, serif;
+}
+.y1994::before {
+  content: "Netscape 1.0 — http://";
+  background: #808080;
+  color: #fff;
+  border-bottom-color: #404040;
+}
+.y1994 .year-card-inner { background: #c0c0c0; }
+.y1994 .year { font-family: "Times New Roman", Times, serif; color: #000; }
+.y1994 .label { color: #000; font-family: "Times New Roman", Times, serif; }
+.y1994 .era-chip { background: #dfdfdf; border-color: #666; color: #000; }
+.y1994 .meta { color: #0000ee; font-family: "Times New Roman", Times, serif; }
+.y1994 .motif { background-image: url("../assets/gif/netscape-throbber.gif"); opacity: 0.45; }
+.y1994:hover, .y1994:focus { background: #d0d0d0; }
+
+/* 1995 — Win95 teal · commercial Web · Yahoo */
+.y1995 {
+  border-left-color: #008080;
+  background: #ffffff;
+}
+.y1995::before {
+  content: "Windows 95 · Netscape 2.0";
+  background: #000080;
+  border-bottom: 1px solid #000050;
+}
+.y1995 .era-chip { background: #008080; border-color: #004040; color: #fff; }
+.y1995 .meta { color: #000080; }
+.y1995 .motif { background-image: url("../assets/gif/yahoo-logo.gif"); opacity: 0.35; width: 72px; }
+
+/* 1996 — Space Jam / portal navy · commercial denser */
+.y1996 {
+  border-left-color: #ffcc00;
+  background: #000033;
+  color: #ffffcc;
+}
+.y1996::before {
+  content: "Space Jam · Netscape 3 · portals";
+  background: #000066;
+  color: #ffcc00;
+  border-bottom-color: #336;
+}
+.y1996 .year-card-inner { background: transparent; }
+.y1996 .year { color: #ffffcc; }
+.y1996 .label { color: #ccddff; }
+.y1996 .era-chip { background: #003366; border-color: #ffcc00; color: #ffcc00; }
+.y1996 .meta { color: #66ccff; }
+.y1996 .motif { background-image: url("../assets/period/1996/spacejam/title.gif"); opacity: 0.55; width: 80px; height: 48px; }
+.y1996:hover, .y1996:focus { background: #000044; outline-color: #ffcc00; }
+.y1996.available:hover .year { color: #ffffff; }
+
+/* 1997 — Browser wars · IE blue · eBay black */
+.y1997 {
+  border-left-color: #000000;
+  background: #ffffff;
+}
+.y1997::before {
+  content: "IE 4.0 · 56k · eBay · Slashdot";
+  background: linear-gradient(to bottom, #1084d0 0%, #0a5a9c 100%);
+  background: #0a5a9c;
+  border-bottom-color: #063;
+}
+.y1997 .era-chip { background: #000; border-color: #000; color: #ff0; font-weight: bold; }
+.y1997 .meta { color: #003399; }
+.y1997 .motif {
+  background-image: url("../assets/period/1997/ebay-logo.gif");
+  opacity: 0.4;
+  width: 64px;
+}
+
+/* 1998 — Portal peak · sparse Google blue */
+.y1998 {
+  border-left-color: #738adb;
+  background: #ffffff;
+}
+.y1998::before {
+  content: "Google! · Win98 · portals peak";
+  background: #738adb;
+  border-bottom-color: #4a5a9a;
+}
+.y1998 .year { color: #0000cc; font-family: Arial, Helvetica, sans-serif; }
+.y1998 .era-chip { background: #e8eeff; border-color: #738adb; color: #334; }
+.y1998 .meta { color: #0000cc; }
+.y1998 .motif { background-image: url("../assets/period/1998/google/logo-wa.gif"); opacity: 0.5; width: 88px; height: 36px; }
+
+/* 1999 — Napster / bubble · green-black tech */
+.y1999 {
+  border-left-color: #00cc00;
+  background: #111111;
+  color: #ccffcc;
+}
+.y1999::before {
+  content: "Napster · Blogger · Y2K · IE 5";
+  background: #000;
+  color: #00ff00;
+  border-bottom-color: #060;
+  font-family: "Courier New", Courier, monospace;
+}
+.y1999 .year-card-inner { background: transparent; }
+.y1999 .year { color: #00ff66; font-family: "Courier New", Courier, monospace; }
+.y1999 .label { color: #aaddaa; font-family: "Courier New", Courier, monospace; font-size: 10px; }
+.y1999 .era-chip { background: #003300; border-color: #00cc00; color: #00ff66; }
+.y1999 .meta { color: #66ff99; font-family: "Courier New", Courier, monospace; }
+.y1999 .motif { opacity: 0; }
+.y1999:hover, .y1999:focus { background: #1a1a1a; outline-color: #00cc00; }
+.y1999.available:hover .year { color: #99ffbb; }
+
+/* 2000 — Amazon orange · crash year */
+.y2000 {
+  border-left-color: #e47911;
+  background: #ffffff;
+}
+.y2000::before {
+  content: "Amazon smile · crash · Napster · IE 5.5";
+  background: #232f3e;
+  color: #ff9900;
+  border-bottom-color: #131a22;
+}
+.y2000 .era-chip { background: #fff4e6; border-color: #e47911; color: #994400; }
+.y2000 .meta { color: #c45500; }
+.y2000 .motif { background-image: url("../assets/period/2000/amazon/logo-smile-wa.gif"); opacity: 0.45; width: 90px; }
+
+/* 2001 — Windows XP Luna blue */
+.y2001 {
+  border-left-color: #245edb;
+  background: #ece9d8;
+}
+.y2001::before {
+  content: "Windows XP · IE 6 · Wikipedia · iPod";
+  background: linear-gradient(to bottom, #0a246a 0%, #a6caf0 8%, #0a246a 100%);
+  background: #0a246a;
+  border-bottom: 1px solid #3a6ea5;
+}
+.y2001 .year-card-inner { background: #ffffff; margin: 0; border-top: 1px solid #fff; }
+.y2001 .era-chip { background: #e8f0ff; border-color: #245edb; color: #0a246a; }
+.y2001 .meta { color: #245edb; }
+.y2001 .motif {
+  background-image: url("../assets/period/2001/google/logo-wa.gif");
+  opacity: 0.4;
+  width: 80px;
+}
+
+/* 2002 — broadband · Friendster · KaZaA orange */
+.y2002 {
+  border-left-color: #ff6600;
+  background: #fffaf5;
+}
+.y2002::before {
+  content: "Always-on · Friendster · KaZaA · Wired CSS";
+  background: #333;
+  color: #ff9933;
+  border-bottom-color: #111;
+}
+.y2002 .era-chip { background: #fff0e6; border-color: #ff6600; color: #993300; }
+.y2002 .meta { color: #cc5500; }
+.y2002 .motif {
+  background-image: url("../assets/period/2002/friendster/logo.gif");
+  opacity: 0.4;
+  width: 72px;
+}
+
+/* 2003 — MySpace blue / hot-pink social */
+.y2003 {
+  border-left-color: #ff3399;
+  background: #ffffff;
+}
+.y2003::before {
+  content: "MySpace · iTunes Store · WordPress · LinkedIn";
+  background: #003399;
+  color: #ffcc00;
+  border-bottom-color: #002266;
+}
+.y2003 .era-chip { background: #ffeef6; border-color: #ff66aa; color: #990066; }
+.y2003 .meta { color: #003399; }
+.y2003 .motif {
+  background-image: url("../assets/period/2003/myspace/logo.gif");
+  opacity: 0.45;
+  width: 80px;
+}
+
+/* 2004 — Thefacebook blue · Gmail · Flickr pink */
+.y2004 {
+  border-left-color: #3b5998;
+  background: #ffffff;
+}
+.y2004::before {
+  content: "Gmail · Flickr · Thefacebook · Firefox 1.0";
+  background: #3b5998;
+  color: #fff;
+  border-bottom-color: #1d3c78;
+}
+.y2004 .era-chip { background: #e8f0fe; border-color: #3b5998; color: #1a3a6b; }
+.y2004 .meta { color: #3b5998; }
+.y2004 .year { color: #3b5998; }
+.y2004 .motif {
+  background-image: url("../assets/period/2004/gmail/logo-wa.gif");
+  opacity: 0.42;
+  width: 72px;
+}
+.y2004 .year-card-inner {
+  border-bottom: 2px solid #ff0084;
+}
+
+/* 2005 — YouTube red · Web 2.0 boom */
+.y2005 {
+  border-left-color: #cc181e;
+  background: #ffffff;
+}
+.y2005::before {
+  content: "YouTube · Maps · Reddit · Digg · Ajax";
+  background: #cc181e;
+  color: #fff;
+  border-bottom-color: #990000;
+}
+.y2005 .era-chip { background: #ffeaea; border-color: #cc181e; color: #990000; font-weight: bold; }
+.y2005 .meta { color: #cc181e; }
+.y2005 .year { color: #cc181e; }
+.y2005 .motif {
+  background-image: url("../assets/period/2005/youtube/logo-wa.gif");
+  opacity: 0.5;
+  width: 88px;
+  height: 36px;
+}
+
+/* 2006 — social breakthrough · FB blue chrome + Twitter cyan accent */
+.y2006 {
+  border-left-color: #33ccff;
+  background: #ffffff;
+}
+.y2006::before {
+  content: "Twitter · Facebook open · YouTube deal · Digg peak";
+  background: #3b5998;
+  color: #fff;
+  border-bottom: 2px solid #33ccff;
+}
+.y2006 .era-chip {
+  background: #e5f6ff;
+  border-color: #33ccff;
+  color: #0a4a6b;
+  font-weight: bold;
+}
+.y2006 .meta { color: #3b5998; }
+.y2006 .year { color: #3b5998; }
+.y2006 .label { color: #222; }
+.y2006 .motif {
+  background-image: url("../assets/period/2006/youtube/logo-wa.gif");
+  opacity: 0.5;
+  width: 88px;
+  height: 36px;
+}
+.y2006 .year-card-inner {
+  border-bottom: 2px solid #33ccff;
+  background: #fafcff;
+}
+.y2006:hover,
+.y2006:focus {
+  background: #eef4ff;
+  outline-color: #33ccff;
+}
+
+/* 2007 — iPhone black glass · multi-touch blue accent · open web */
+.y2007 {
+  border-left-color: #09f;
+  background: #0a0a0a;
+  color: #eee;
+}
+.y2007::before {
+  content: "iPhone · Gmail open · Street View · FB Platform";
+  background: #111;
+  color: #fff;
+  border-bottom: 2px solid #09f;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.y2007 .year-card-inner {
+  background: #111;
+  border-bottom: 2px solid #09f;
+}
+.y2007 .year {
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.02em;
+}
+.y2007 .label {
+  color: #bbb;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.y2007 .era-chip {
+  background: #1a1a1a;
+  border-color: #09f;
+  color: #09f;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.y2007 .meta {
+  color: #09f;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.y2007 .motif {
+  background-image: url("../assets/period/2007/gmail/logo-wa.gif");
+  opacity: 0.55;
+  width: 72px;
+  height: 32px;
+  filter: brightness(1.15);
+}
+.y2007:hover,
+.y2007:focus {
+  background: #1a1a1a;
+  outline-color: #09f;
+}
+.y2007.available:hover .year,
+.y2007.available:focus .year {
+  color: #fff;
+  filter: none;
+}
+
 
 /* —— Compare: plain document table —— */
 .compare {
@@ -396,7 +914,92 @@ body {
   border: 1px solid #808080;
 }
 
-/* Soften hub-year hover — no flashy filters */
+/* Soften hub-year hover — period skins own their hover colors */
 .year-card.available:hover .year {
-  color: #000080;
+  color: inherit;
+}
+
+/* 2008 — App Store green + Chrome blue energy */
+.y2008 {
+  --card-accent: #34a853;
+}
+.y2008::before {
+  background: linear-gradient(90deg, #4285f4, #34a853 40%, #fbbc05 70%, #ea4335);
+  opacity: 0.9;
+}
+.y2008 .year-card-inner {
+  border-color: #c8e6c9;
+}
+.y2008 .year {
+  color: #1b5e20;
+}
+.y2008 .label {
+  color: #222;
+}
+.y2008 .era-chip {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #a5d6a7;
+}
+.y2008 .meta {
+  color: #2e7d32;
+}
+.y2008 .motif {
+  background: radial-gradient(circle at 30% 30%, rgba(66, 133, 244, 0.25), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(52, 168, 83, 0.2), transparent 50%);
+}
+.y2008:hover,
+.y2008:focus {
+  box-shadow: 0 4px 16px rgba(52, 168, 83, 0.25);
+}
+.y2008.available:hover .year,
+.y2008.available:focus .year {
+  color: #0d47a1;
+}
+
+.year-card.available:not(.y1996):not(.y1999):not(.y2007):not(.y2008):hover .year {
+  filter: brightness(0.92);
+}
+
+/* Compare table: slight era column tint for scannability (1994–1999 table) */
+.compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(2) { background: #d8d8d8; } /* 1994 */
+.compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(3) { background: #c8e0e0; } /* 1995 */
+.compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(4) { background: #dde; color: #003; } /* 1996 */
+.compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(5) { background: #cde; } /* 1997 */
+.compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(6) { background: #dde4ff; } /* 1998 */
+.compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(7) { background: #cfc; } /* 1999 */
+
+/* 2000–2005 columns */
+.compare-2000s th:nth-child(2) { background: #ffe8cc; } /* 2000 orange */
+.compare-2000s th:nth-child(3) { background: #cde0ff; } /* 2001 XP blue */
+.compare-2000s th:nth-child(4) { background: #ffe0cc; } /* 2002 */
+.compare-2000s th:nth-child(5) { background: #ffd0e8; } /* 2003 MySpace */
+.compare-2000s th:nth-child(6) { background: #d0dcf0; } /* 2004 FB */
+.compare-2000s th:nth-child(7) { background: #ffd0d0; } /* 2005 YT */
+
+/* 2006–2007 two-column */
+.compare-late th:nth-child(2) { background: #d0e8ff; color: #1d3c78; } /* 2006 */
+.compare-late th:nth-child(3) { background: #222; color: #09f; } /* 2007 */
+.compare-late { max-width: 720px; }
+
+/* Available open years: uniform lift, period skins keep face colors */
+.year-card.available.y1994:hover,
+.year-card.available.y1995:hover,
+.year-card.available.y1997:hover,
+.year-card.available.y1998:hover,
+.year-card.available.y2000:hover,
+.year-card.available.y2001:hover,
+.year-card.available.y2002:hover,
+.year-card.available.y2003:hover,
+.year-card.available.y2004:hover,
+.year-card.available.y2005:hover,
+.year-card.available.y2006:hover {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 699px) {
+  .year-card .motif { opacity: 0.12; width: 44px; }
+  .year-card-inner { padding-right: 52px; }
+  .year-card.available::before { font-size: 8px; }
+  .y2007 .motif { opacity: 0.35; }
 }

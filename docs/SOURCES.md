@@ -1,12 +1,19 @@
 # Sources, archives & provenance — Internet Through Time
 
-**Purpose:** Canonical **external URL bibliography** for the 1994–2005 research stack (hub unlock 1994–2005): websites, museums, archives, blogs, books, captures.  
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). F1/F2 densify shipped. Residual = true WA/IE6 pixels · platform debt · git Track E. Canonical: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
+
+**Purpose:** Canonical **external URL bibliography** for the 1994–2005 research stack (hub playable **1994–2002**; 2003–05 research only until rebuild): websites, museums, archives, blogs, books, captures.  
 **Scope:** Research links used to design and rebuild the exhibit — not a claim that every pixel is an official brand file.  
 **Use:** Educational reconstruction only. Trademarks belong to their owners.
 
 **For the complete inventory** (every asset file → source, every exhibit site → sources, facts, people, books, internal dossiers): see **[`docs/MASTER-PROVENANCE.md`](MASTER-PROVENANCE.md)**.  
+**What each nostalgia source is good for (visited, detailed):** [`docs/NOSTALGIA-UI-SOURCES-DETAILED.md`](NOSTALGIA-UI-SOURCES-DETAILED.md).  
+**Rebuild later years from earlier sources/artifacts:** [`docs/REBUILD-ARTIFACT-MAP.md`](REBUILD-ARTIFACT-MAP.md).  
+**2000–2002 hub:** [`docs/2000-2001-2002.md`](2000-2001-2002.md).  
 **Implementation backlog vs tree:** [`docs/LEFT-OUT.md`](LEFT-OUT.md).  
 **Incomplete years map (gaps → sources → harvest artifacts → internal MDs):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](INCOMPLETE-YEARS-RESEARCH.md).  
+**Ordered remaining work:** [`docs/LEFT-TO-DO-STEP-BY-STEP.md`](LEFT-TO-DO-STEP-BY-STEP.md).  
 **Visual authenticity (reference vs exhibit):** [`docs/VISUAL-AUTHENTICITY-AUDIT.md`](VISUAL-AUTHENTICITY-AUDIT.md).  
 **Perfect-site bingo (per-year checklist):** [`docs/BINGO.md`](BINGO.md).
 
@@ -600,31 +607,55 @@ Deep pass: [`docs/2000-DEEP-RESEARCH-2026-07-23.md`](2000-DEEP-RESEARCH-2026-07-
 
 ## 19. Year 2001 — research stack
 
-Dossier: [`docs/2001-RESEARCH.md`](2001-RESEARCH.md) · Capture: [`references/2001/CAPTURE-LOG.md`](references/2001/CAPTURE-LOG.md)
+Dossier: [`docs/2001-RESEARCH.md`](2001-RESEARCH.md) · Deep: [`docs/2001-DEEP-RESEARCH-2026-07-26.md`](2001-DEEP-RESEARCH-2026-07-26.md) · Capture: [`references/2001/CAPTURE-LOG.md`](references/2001/CAPTURE-LOG.md) · Extracts: `references/2001/wayback-extracts/` (23)
+
+**Visit pass:** 2026-07-26 (every primary narrative + museums + P0/P1 Wayback `id_` bodies re-opened).
 
 | Resource | URL | Role |
 |----------|-----|------|
-| Cybercultural — Internet 2001 | https://cybercultural.com/p/internet-2001/ | Post-crash durable rituals |
-| Wikipedia project history | public encyclopedia launched Jan 15 2001 | Wiki densify room |
-| Apple iPod (Oct 23 2001) | contemporary Apple/press framing | Portable jukebox story |
-| WDM / XP · IE6 software pages | webdesignmuseum.org software gallery | Chrome targets |
-| Live Stats | internetlivestats.com | Scale |
+| Cybercultural — Internet 2001 | https://cybercultural.com/p/internet-2001/ | Year spine |
+| Cybercultural — Blogs/RSS 2001 | https://cybercultural.com/p/blogs-rss-2001/ | Warblogs, MT, Blogdex |
+| Cybercultural — iTunes launch 2001 | https://cybercultural.com/p/itunes-launch-2001/ | Digital hub Jan 9 |
+| Cybercultural — Wayback launch 2001 | https://cybercultural.com/p/wayback-machine-launch-2001/ | Memory meta Oct 24 |
+| History of Wikipedia | https://en.wikipedia.org/wiki/History_of_Wikipedia | Jan 15 launch facts |
+| Live Stats | https://www.internetlivestats.com/total-number-of-websites/ | 29.25M sites · 500.6M users |
+| Version Museum Amazon | https://www.versionmuseum.com/history-of/amazon-website | Smile + 2001 tab refine |
+| Version Museum Wikipedia | https://www.versionmuseum.com/history-of/wikipedia-website | 2001 frames |
+| WDM year-2001 | https://www.webdesignmuseum.org/gallery/year-2001 | Design peers |
+| GUIdebook WinXP | https://guidebookgallery.org/screenshots/winxppro | Luna crops |
+| evolt IE | https://browsers.evolt.org/ | IE6 VM crops |
+| WA Wikipedia Jul gold | `20010727112808` wikipedia.org | UseMod grammar |
+| WA iPod / iTunes / Google / Amazon / Yahoo / CNN / Blogger / MT / Blogdex / eBay / Mozilla | see CAPTURE-LOG | Dated bodies |
 
-**Anachronism bans:** iTunes Store (2003), Friendster/MySpace mature social, Facebook/Gmail.
+**Anachronism bans:** iTunes Store (2003), Friendster/MySpace mature social, Facebook/Gmail, Firefox brand, Vector wiki.
 
 ---
 
 ## 20. Year 2002 — research stack
 
-Deep pass: [`docs/2002-DEEP-RESEARCH-2026-07-23.md`](2002-DEEP-RESEARCH-2026-07-23.md) · Capture: [`references/2002/CAPTURE-LOG.md`](references/2002/CAPTURE-LOG.md)
+Dossier: [`docs/2002-RESEARCH.md`](2002-RESEARCH.md) · **Canonical deep:** [`docs/2002-DEEP-RESEARCH-2026-07-26.md`](2002-DEEP-RESEARCH-2026-07-26.md) · **Handoff from shipped 2001:** [`docs/2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md`](2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md) · Prior: project-stack 07-25 · 07-23 · Capture: [`references/2002/CAPTURE-LOG.md`](references/2002/CAPTURE-LOG.md) · Artifacts visit: [`references/2002/wayback-extracts/ARTIFACTS-VISIT-2026-07-26.md`](references/2002/wayback-extracts/ARTIFACTS-VISIT-2026-07-26.md) · Rebuild map: [`REBUILD-ARTIFACT-MAP.md`](REBUILD-ARTIFACT-MAP.md) §3–§5
+
+**Visit pass:** 2026-07-26 — every URL in this § + REBUILD 2002 rooms + full 2001 §19 handoff re-open for scaffold continuity.
 
 | Resource | URL | Role |
 |----------|-----|------|
-| Cybercultural — Internet 2002 | https://cybercultural.com/p/internet-2002/ | Broadband, KaZaA, Friendster, Wired CSS |
-| Cybercultural — Blogs/RSS 2002 | https://cybercultural.com/p/blogs-rss-2002/ | Daypop, Technorati, TrackBack |
-| Pew Broadband Difference | https://www.pewresearch.org/internet/2002/06/23/main-report-the-broadband-difference/ | Always-on stats |
+| Cybercultural — Internet 2002 | https://cybercultural.com/p/internet-2002/ | Year spine: broadband, KaZaA, Friendster, Wired CSS, browsers |
+| Cybercultural — Blogs/RSS 2002 | https://cybercultural.com/p/blogs-rss-2002/ | Daypop, Technorati, TrackBack, RSS 2.0 |
+| Cybercultural — iPod 2002 | https://cybercultural.com/p/ipod-2002/ | Gen 2 · MusicMatch · no Store |
+| Cybercultural — Internet 2001 | https://cybercultural.com/p/internet-2001/ | Handoff |
+| Pew Broadband Difference | https://www.pewresearch.org/internet/2002/06/23/main-report-the-broadband-difference/ | 21% / 24M always-on |
 | StopDesign Wired live | https://stopdesign.com/journal/2002/10/11/finally-were-live.html | CSS redesign |
-| WDM year 2002 | https://www.webdesignmuseum.org/gallery/year-2002 | Netflix/Steam optional list |
+| Live Stats | https://www.internetlivestats.com/total-number-of-websites/ | 38.76M sites · ~663M users |
+| WDM year 2002 | https://www.webdesignmuseum.org/gallery/year-2002 | Netflix/Wired/Steam shortlist |
+| Version Museum Amazon | https://www.versionmuseum.com/history-of/amazon-website | Smile chronology |
+| Version Museum Yahoo | https://www.versionmuseum.com/history-of/yahoo-website | Portal frames |
+| GUIdebook WinXP | guidebookgallery.org (path may move) | Luna chrome crops |
+| evolt browsers | https://browsers.evolt.org/ | IE6 / Mozilla installs |
+| Friendster history | https://en.wikipedia.org/wiki/Friendster | Founding 2002 · mass often 2003 |
+| The Register Morpheus | https://www.theregister.com/2002/03/15/old_morpheus_still_works/ | FastTrack chaos |
+| WA Blogger / MT TrackBack / KaZaA / MTV / Wired / Google / Amazon / Yahoo / Wikipedia / Mozilla / News / CNN / eBay | see CAPTURE-LOG | Dated bodies |
+
+**Anachronism bans:** MySpace default · iTunes Store · WordPress default · Facebook · Firefox final brand · Netflix streaming · Blogger-by-Google mid-2002 · always-on = most adults.
 
 **Optional not yet built:** Netflix DVD, Steam, last.fm rooms.
 
@@ -665,7 +696,7 @@ Dossier: [`docs/2004-RESEARCH.md`](2004-RESEARCH.md) · Museum note: [`docs/2004
 
 ## 23. Year 2005 — research stack
 
-Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · Deep pass: [`docs/2005-DEEP-RESEARCH-2026-07-24.md`](2005-DEEP-RESEARCH-2026-07-24.md) · Capture: [`references/2005/CAPTURE-LOG.md`](references/2005/CAPTURE-LOG.md) · Assets: [`references/2005/ASSETS.md`](references/2005/ASSETS.md)
+Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · **Detailed gather:** [`docs/2005-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md`](2005-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md) · **Web expand:** [`docs/2005-WEB-EXPAND-RESEARCH-2026-07-30.md`](2005-WEB-EXPAND-RESEARCH-2026-07-30.md) · **Phases from research:** [`docs/2005-FROM-RESEARCH-IMPLEMENTATION-PHASES.md`](2005-FROM-RESEARCH-IMPLEMENTATION-PHASES.md) · **Step-by-step implement:** [`docs/2005-IMPLEMENTATION-STEP-BY-STEP-FROM-RESEARCH.md`](2005-IMPLEMENTATION-STEP-BY-STEP-FROM-RESEARCH.md) · Deep pass: [`docs/2005-DEEP-RESEARCH-2026-07-24.md`](2005-DEEP-RESEARCH-2026-07-24.md) · Capture: [`references/2005/CAPTURE-LOG.md`](references/2005/CAPTURE-LOG.md) · Assets: [`references/2005/ASSETS.md`](references/2005/ASSETS.md) · Extracts: [`references/2005/wayback-extracts/`](references/2005/wayback-extracts/) (**46** stored)
 
 | Resource | URL | Role |
 |----------|-----|------|
@@ -680,13 +711,44 @@ Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · Deep pass: [`docs/2005-D
 | Facebook history | Wikipedia History of Facebook | Domain Aug 2005 · high school Sep 2005 · still gated |
 | Apple Newsroom podcasts | https://www.apple.com/newsroom/2005/06/28Apple-Takes-Podcasting-Mainstream/ | iTunes 4.9 · Jun 28 2005 |
 | Ajax essay (Garrett) | Adaptive Path / MIT designftw PDF | Coined Ajax · Feb 2005 |
+| Google Maps 15yr blog | https://blog.google/products-and-platforms/products/maps/look-back-15-years-mapping-world/ | **Feb 8 2005** launch · API June · Earth 2005 |
+| Flickr Blog Yahoo acquire | https://blog.flickr.net/en/2005/03/20/yahoo-actually-does-acquire-flickr/ | **Mar 20 2005** Ludicorp |
+| Apple 1M podcasts PR | https://www.apple.com/newsroom/2005/06/30iTunes-Podcast-Subscriptions-Top-One-Million-in-First-Two-Days/ | **>1M subs in two days** |
+| News Corp Intermix SEC | https://www.sec.gov/Archives/edgar/data/1308161/000118143105040705/rrd86058_6819.htm | MySpace **$580M Jul 18** |
+| TechCrunch del.icio.us | https://techcrunch.com/2005/12/09/yahoo-acquires-delicious/ | Yahoo **Dec 9 2005** |
+| YouTube Blog Sequoia | https://youtube.googleblog.com/2005/11/ | **Nov 7 2005** $3.5M |
+| WDM Million Dollar Homepage | https://www.webdesignmuseum.org/gallery/the-million-dollar-homepage-2005 | Aug 26 2005 novelty |
 | YouTube WA (example) | https://web.archive.org/web/20050428014715/http://www.youtube.com/ | Capture queue |
 | Reddit WA (example) | https://web.archive.org/web/20050725010627/http://reddit.com/ | Capture queue |
 | TechCrunch WA Jun 2005 | https://web.archive.org/web/20050614012404/http://www.techcrunch.com/ | Tech blog culture |
 
 **P0 planned rooms:** YouTube · Google Maps · Reddit · Digg · Google · MySpace · Flickr · Facebook (rename era) · Yahoo · Amazon · Wikipedia · iTunes podcasts.
 
-**Hub state:** **2005 MVP unlocked** (2026-07-24). Research stack remains §23.
+**Hub state:** **1994–2005 open** (2026-07-25+). Research stack §16–§23 remains bibliography for densify/pixels.
 
 **Anachronism bans:** Twitter (2006) · Facebook open registration (2006) · Google owns YouTube (2006) · iPhone · Chrome browser · modern YouTube/Maps/Reddit UI · Street View as 2005 default · consumer “cloud” branding.
+
+## 24. Year 2006 — research stack
+
+Dossier: [`docs/2006-RESEARCH.md`](2006-RESEARCH.md) · **Fresh deep research:** [`docs/2006-DEEP-RESEARCH-FRESH-2026-07-31.md`](2006-DEEP-RESEARCH-FRESH-2026-07-31.md) · **Implement phases:** [`docs/2006-IMPLEMENT-PHASES-CLEAR-2026-07-31.md`](2006-IMPLEMENT-PHASES-CLEAR-2026-07-31.md) · Detailed gather: [`docs/2006-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md`](2006-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md) · Capture: [`references/2006/CAPTURE-LOG.md`](references/2006/CAPTURE-LOG.md) · Extracts: [`references/2006/wayback-extracts/`](references/2006/wayback-extracts/)
+
+| Source | URL | Role |
+|--------|-----|------|
+| Cybercultural — Internet 2006 | https://cybercultural.com/p/internet-2006/ | Social breakthrough · Twitter · FB Feed/open · Google-YT · Digg · cloud · Docs · Time You |
+| Internet Live Stats | https://www.internetlivestats.com/total-number-of-websites/ | **85,507,314** sites · Twttr mark |
+| Google YouTube PR (SEC) | https://www.sec.gov/Archives/edgar/data/1288776/000119312506206884/dex991.htm | **Oct 9 2006** · **$1.65B** · independent brand |
+| Facebook Expansion | https://about.fb.com/news/2006/09/facebook-expansion-enables-more-people-to-connect-with-friends-in-a-trusted-environment/ | **Sep 26 2006** open |
+| Facebook Feed privacy | https://about.fb.com/news/2006/09/facebook-launches-additional-privacy-controls-for-news-feed-and-mini-feed/ | **Sep 8 2006** |
+| History.com Twitter | https://www.history.com/this-day-in-history/july-15/twitter-launches | **Jul 15** public · Mar 21 first tweet |
+| Amazon S3 press | https://press.aboutamazon.com/2006/3/amazon-web-services-launches | **Mar 14 2006** |
+| TechCrunch Docs | https://techcrunch.com/2006/10/10/google-docs-spreadsheets-launches/ | **Oct 10** Docs & Spreadsheets |
+| IE7 for XP | https://news.microsoft.com/source/2006/10/18/microsoft-releases-windows-internet-explorer-7-for-windows-xp/ | **Oct 18 2006** |
+| WDM Twitter 2006 | https://www.webdesignmuseum.org/gallery/twitter-2006 | Visual primary |
+| WDM IE7 2006 | https://www.webdesignmuseum.org/software/internet-explorer-7-0-in-2006 | Browser chrome |
+
+**P0 planned rooms:** Twitter/Twttr · Facebook (open + News Feed) · YouTube (two-era Google) · Digg peak · Google Docs · AWS · continuity MySpace/Flickr/Maps.
+
+**Hub state:** **1994–2005 open** · **2006 research freeze** (tree not built).
+
+**Anachronism bans:** iPhone · Chrome · Street View default · Gmail open-as-year-start (Feb 2007) · Vista retail default (Jan 2007) · Google owns YouTube before Oct/Nov 2006 · modern X · campus-only Facebook after Sep 26 as product truth.
 

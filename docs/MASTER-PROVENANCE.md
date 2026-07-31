@@ -1,6 +1,6 @@
 # Master provenance — every source, artifact & place we learned from
 
-**Purpose:** One inventory of **every external place, blog, museum, archive, capture, book, person, and on-disk asset** that informed the **1994–2005** museum (hub unlocked through 2005).  
+**Purpose:** One inventory of **every external place, blog, museum, archive, capture, book, person, and on-disk asset** that informed the **1994–2002** museum (hub unlocked through 2002; 2003–05 research only / not rebuilt).  
 **Not limited to one chat session** — harvested from all project research dossiers, asset notes, year builds, and the live bibliography.  
 **Scope note (2026-07-24):** Early sections still lean 1994–1998 narrative depth; later years are covered via `SOURCES.md` §16–§23, per-year `*-RESEARCH.md` / `*-MUSEUM-GRADE.md`, and `docs/references/<YYYY>/`.
 

@@ -1,0 +1,25 @@
+/* 2006 document styles — XP · IE6 · social breakthrough · Twitter · open FB · Google-YouTube late
+   Year delta: @import period-2005 then 2006-specific rules. */
+@import url("period-2005.css");
+
+body.year-2006 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #33ccff;
+}
+
+/* Twitter 2006 sparse */
+.tw-shell { font-family: Arial, Helvetica, sans-serif; font-size: 13px; background: #9ae4e8; color: #000; }
+.tw-card { max-width: 560px; margin: 16px auto; background: #fff; border: 1px solid #69c; padding: 12px; }
+.tw-compose textarea { width: 95%; font-size: 14px; }
+.tw-timeline .tw-item { border-bottom: 1px solid #eee; padding: 8px 0; }
+
+/* Facebook News Feed 2006 */
+.fb-feed-item { border-bottom: 1px solid #d8dfea; padding: 8px 0; font-size: 12px; }
+.fb-feed-item b { color: #3b5998; }
+
+/* Docs 2006 */
+.docs-shell { font-family: Arial, sans-serif; max-width: 720px; margin: 12px auto; font-size: 13px; }
+.docs-editor { border: 1px solid #999; min-height: 200px; padding: 10px; background: #fff; }
+
+/* AWS educational */
+.aws-shell { font-family: Verdana, Arial, sans-serif; max-width: 640px; margin: 12px auto; font-size: 13px; }

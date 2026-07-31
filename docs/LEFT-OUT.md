@@ -1,7 +1,10 @@
 # LEFT OUT — What remains to implement
 
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Optional residuals below = pixels, platform debt, git — not missing years. Body counts below may lag lean 2000–01 rebuilds; trust live `find` + smoke over old snapshots.
+
+
 **Date audited:** 2026-07-24  
-**Scope:** Full working tree of *Internet Through Time* (hub unlock **1994–2005**)  
+**Scope:** Working tree *Internet Through Time* — hub unlock **1994–2005** (disk truth 2026-07-25+)  
 **Method:** Code + artifact audit (not doc claims alone). Counted HTML, sites, `urlMap` integrity, immersion modules/hooks, period assets, capture-log checkboxes, e2e/auth scripts, CSS structure, and cross-checked against `SOURCES.md`, year deep-research, museum-grade residuals, and `ARCHIVE-CAPTURE-QUEUE.md`.
 
 **Companion docs (research intent):**  
@@ -15,9 +18,13 @@
 
 ---
 
+## Implementation progress (2026-07-24 snapshot — **superseded for hub range**)
+
+**Superseding note:** As of **2026-07-25+**, hub is **1994–2005** (restored). Counts below may lag lean rebuilds for 2000–01.
+
 ## Implementation progress (2026-07-24)
 
-| **CONTENT COMPLETE 1994–2005** | **Done** — densify + urlMaps + e2e≥4 + WA logo harvests + gates green. Optional: evolt toolbars & remaining RECON swaps. |
+| **CONTENT ON DISK 1994–2005** | **Done** — 2000–05 on disk; hub open; gates green. Optional: pixels · Track E git. |
 | **Docs honesty pass (same day)** | **Done** — inventory/matrix/2005 research status; 2003 ASSETS.md; link-audit claims corrected; residual = optional rooms + pixels. |
 | **Research rooms 1998–2000 (P2 WDM)** | **Done 2026-07-24** — Valve/WinFiles/Larry/Sergey/Hillman/Hotmail; Zone/Matrix/My Netscape/Flash4; Homestar/CamWorld/kottke; homes+urlMaps+catalogs; Hotmail live flow; gates green. |
 
@@ -33,7 +40,7 @@ Core principles applied: *config + content over forks*, *period voice on content
 | P0 Museum-voice strip on content | **Done** — period footers; about/hub legal remains |
 | P0/P1 2001 Wikipedia densify | **Done** — multi-page wiki + iPod multi-page (2026-07-24 densify) |
 | P0 2004/2005 HTML densify | **Done** — Gmail/Firefox/Flickr/FB; YT/Maps/Reddit/Digg/TechCrunch (pixel crops still open) |
-| **Content densify 100% (1994–2005)** | **Done** — all thin culture rooms expanded; urlMaps; e2e≥4; auth green; pixel harvest still open |
+| **Content densify 100% (1994–2005)** | **Trees on disk 1994–2005**; pixel harvest still open. |
 | **Rework pass 2026-07-24** | **Done** — docs honesty · bare `#` purge · museum-voice nit · CSS year deltas 2001–2003 · signature depth R2 · RECON brand packs · e2e culture parity 2001–2005 |
 | P0/P1 2003 CAPTURE-LOG / ARTIFACTS | **Done** — provenance filled (WA harvest still open) |
 | P2 1998 CDnow, Mozilla/WaSP, GameSpot densify | **Done** — content rooms + urlMap + e2e |
@@ -55,7 +62,7 @@ Core principles applied: *config + content over forks*, *period voice on content
 | **ARCH** | Architecture debt (SRP, CSS composition) |
 
 **Already ship-complete (do not re-open as “unbuilt”):**  
-Hub unlocks **1994–2005**; urlMap complete for content years; bare `href="#"` purged 2026-07-24 rework; P0 immersion modules for signature years; museum/densify *declared* for 1998–2000/2002–2003; **2004/2005 MVP densify unlocked**. This file is the **layer above ship**.
+Hub unlocks **1994–2005** (disk truth 2026-07-25+); urlMap complete for content years; P0 immersion modules for signature years; museum densify **1994–2005** on disk. Residual = pixels · platform debt · git. This file is the **layer above ship**.
 
 ### Research residual (optional rooms — not P0 ship blockers)
 
@@ -64,9 +71,9 @@ Hub unlocks **1994–2005**; urlMap complete for content years; bare `href="#"` 
 | 1998 | **Shipped 2026-07-24** — Valve · WinFiles · Larry/Sergey · Hillman Curtis · Hotmail 1998 live flow |
 | 1999 | **Shipped 2026-07-24** — MSN Gaming Zone · Matrix promo · My Netscape/RSS · Flash 4 culture (pop TV brands still optional) |
 | 2000 | **Shipped 2026-07-24** — Homestar Runner · CamWorld · kottke.org densify |
-| 2001 | Broadband ISP educational room |
-| 2002 | Netflix DVD · Steam · last.fm · Blogdex |
-| 2005 | HousingMaps · del.icio.us · Memeorandum |
+| 2001 | Broadband ISP educational room **shipped** (2026-07-25) |
+| 2002 | **Shipped optional:** Netflix DVD · Steam seed · Audioscrobbler · Blogdex |
+| 2005 | HousingMaps · del.icio.us · Bloglines · Memeorandum **shipped** (2026-07-25) |
 
 **Pixel residual:** RECON packs 1994 (4), 2001 (4), 2004 (8), 2005 (8); CAPTURE-LOG queues heaviest on **2000** and **2002**.
 
@@ -82,17 +89,17 @@ Hub unlocks **1994–2005**; urlMap complete for content years; bare `href="#"` 
 | 1997 | 67 | 13 | **6** (asset-starved) | + slashdot | **5** | smoke OK |
 | **1998** | **100** | **22** | **22** | + google, excite, yahoo | **7** | smoke OK |
 | **1999** | **120** | **27** | **49** | + napster, blogger | **6** | smoke OK |
-| **2000** | **138** | **32** | **58** | same family as 1999 | **4** | smoke OK |
-| **2001** | **157** | **33** | **63** | same + wiki HTML densify | **4** | smoke OK |
-| **2002** | **168** | **43** | **70** | + friendster, kazaa | **4** | smoke OK |
-| **2003** | **185** | **48** | **93** | + myspace, itunes, wordpress, linkedin | **4** | smoke OK |
-| **2004** | **104** | **14** | **63** | + gmail, facebook, flickr | **4** | smoke OK |
-| **2005** | **122** | **20** | **65** | + youtube, maps, reddit, digg, podcasts | **4** | smoke OK |
+| **2000** | **40** | **8** | **63** | napster/amazon/google lean MVP | **2** (+cross) | smoke OK |
+| **2001** | **49** | **11** | **71** | wiki · iPod · **broadband** | **2** (+bb live) | smoke OK |
+| **2002** | **82** | **23** | **76** | friendster · kazaa · P2 Netflix/Steam/last.fm/Blogdex | **4** | smoke OK |
+| **2003** | **192** | **48** | **94** | myspace · itunes · wordpress · linkedin · **adsense** | **3** (+F1 live) | smoke OK |
+| **2004** | **104** | **14** | **64** | gmail · facebook · flickr · firefox | **1** (+shared) | smoke OK |
+| **2005** | **130** | **24** | **68** | YT · maps · reddit · digg · delicious · bloglines · memeorandum | **2** (+P1) | smoke OK |
 
-**Also:** hub period lobby · live-flow period UI skins · `e2e/live-flows.spec.js` · link audit **0 broken** / 14k+ hrefs (script covers **1994–2005**).
+**Also:** hub period lobby · live-flow period UI skins · `e2e/live-flows.spec.js` · link audit **0 broken** / 14k+ hrefs (script covers **1994–2002** (was 1994–2005 pre-delete)).
 
 **Immersion modules on disk (complete as files):**  
-`shared`, `guestbook-search`, `media-1994`, `amazon`, `auction`, `geocities`, `hotmail`, `plugin`, `slashdot`, `google`, `excite`, `yahoo`, `napster`, `blogger`, `friendster`, `kazaa`, `myspace`, `itunes`, `wordpress`, `linkedin` + `boot` / `create` / `registry`.
+`shared`, `guestbook-search`, `media-1994`, `amazon`, `auction`, `geocities`, `hotmail`, `plugin`, `slashdot`, `google`, `excite`, `yahoo`, `napster`, `blogger`, `friendster`, `kazaa`, `daypop`, `technorati`, `p2extras`, `myspace`, `itunes`, `wordpress`, `linkedin`, `adsense`, `broadband`, `gmail`, `facebook`, `flickr`, `youtube`, `maps`, `reddit`, `digg`, `podcasts`, `web20extras` + `boot` / `create` / `registry`.
 
 **Hooks wired (sample counts across years):**  
 `data-add-cart` ~98 pages · `data-google-search` 12 · MySpace / iTunes / Friendster / KaZaA / LinkedIn / WordPress hooks present on 2002–2003 signature rooms · Napster `data-napster-search` on `search.html` only.
@@ -104,10 +111,10 @@ Hub unlocks **1994–2005**; urlMap complete for content years; bare `href="#"` 
 | ID | Status | What’s left | Evidence |
 |----|--------|-------------|----------|
 | **M1** | OPS | **Commit ~344 uncommitted paths** (1998–2003 expansion + early-year edits) | `git status --porcelain` count |
-| **M2** | OPS | **No git remote / no published origin** | `git remote -v` empty |
+| **M2** | OPS | **Remote exists; large uncommitted local tree** | `origin` on GitHub; not fully pushed |
 | **M3** | **Done (partial)** | **`docs/SOURCES.md` has §16–§23** for 1998–2005 | Keep harvesting; bibliography exists |
-| **M4** | **Done** | **`docs/PROJECT-INVENTORY.md` status matrix** | 1994–2005 live; 2006+ planned (2026-07-24 honesty pass) |
-| **M5** | OPS | **Link audit** — re-run after large content edits | Script covers 1994–2005; last green: 0 broken |
+| **M4** | **Done** | **`docs/PROJECT-INVENTORY.md` status matrix** | 1994–2005 live; 2006+ planned |
+| **M5** | OPS | **Link audit** — re-run after large content edits | Script/smoke cover open years; re-run after big edits |
 | **M6** | **Done** | `docs/references/2001/` scaffold present | CAPTURE-LOG + ASSETS (WA crops still open) |
 | **M7** | **Done (scaffold)** | **2003 CAPTURE-LOG + ARTIFACTS + ASSETS** | WA pixel harvest still open; ASSETS.md added 2026-07-24 |
 | **M8** | OPS | **2000 CAPTURE-LOG still mostly `[queued]`** | Amazon body, Google, Yahoo, eBay, Pets, MetaFilter, Homestar, CNN CDX, etc. |
@@ -192,7 +199,7 @@ Hub unlocks **1994–2005**; urlMap complete for content years; bare `href="#"` 
 | Item | Status |
 |------|--------|
 | Authenticity has 1998 suite | Present |
-| Link audit for 1998 | **Done** — `audit-internal-links.py` years 1994–2005 |
+| Link audit for 1998 | **Done** — `audit-internal-links.py` years 1994–2002 |
 | No e2e for BowieNet / DMOZ / Netcenter / gaming | Optional |
 
 ---
@@ -303,7 +310,7 @@ Amazon smile GIF authenticity check · multi-tab crop · IE 5.5 evolt · Pets so
 | **01-3** | THIN residual | Continuity rooms still forked from 2000 |
 | **01-4** | **Done (scaffold)** | `docs/references/2001/` CAPTURE-LOG + ASSETS |
 | **01-5** | PARTIAL | SOURCES §19 present |
-| **01-6** | THIN | Broadband ISP theater light; Google habit note present |
+| **01-6** | **Done (HTML)** | Broadband ISP room (plans · speed check · about) |
 | **01-7** | **Still open** | True XP Luna / IE6 crops (RECON only today) |
 | **01-8** | **Done** | densify + culture + signature e2e |
 | **01-9** | **Done** | Auth densify tests registered |
@@ -317,14 +324,14 @@ Amazon smile GIF authenticity check · multi-tab crop · IE 5.5 evolt · Pets so
 **Ship bar:** Densify ship (six tracks).  
 **Tree:** 140 HTML · 43 sites · 63 assets · **2 e2e** · urlMap complete.
 
-### 8.1 Optional / research rooms **MISSING**
+### 8.1 Optional / research rooms (was MISSING — now shipped)
 
 | Brand (WDM / deep research / museum residual) | Status |
 |-----------------------------------------------|--------|
-| **Netflix** (DVD era) | **MISSING** |
-| **Steam** | **MISSING** |
-| **last.fm / Audioscrobbler** | **MISSING** (SOURCES/deep research essay queued) |
-| Blogdex (MIT) room | **MISSING** (capture queued) |
+| **Netflix** (DVD era) | **Shipped** optional P2 |
+| **Steam** | **Shipped** optional P2 (honesty: seed/2003 launch note) |
+| **last.fm / Audioscrobbler** | **Shipped** optional P2 |
+| Blogdex (MIT) room | **Shipped** optional P2 |
 
 ### 8.2 THIN signature-adjacent rooms (1 page)
 
@@ -378,8 +385,8 @@ Most dated WA rows remain **`[wa-queued]`** (notes exist under `wayback-extracts
 | **MySpace** | 4 (index, browse, edit, comments) | Strong `data-ms-*` | Deeper comment-spam culture; more layouts; browse thin |
 | **iTunes** | 3 (index, library, charts) | `data-itunes*` | **Full DRM / FairPlay story**; genre densify |
 | **WordPress** | 4 | `data-wp*` / wordpress | Themes/plugins era light |
-| **LinkedIn** | 2 | linkedin hooks | PYMK depth; more network graph |
-| **AdSense** | **1 page** | — | Monetize-pro-blogs story THIN |
+| **LinkedIn** | 5 (index·profile·connections·invite·jobs) | linkedin hooks | PYMK Connect live; invite+jobs live (2026-07-25 F1) |
+| **AdSense** | 5 (index·signup·code·earnings·about) | adsense.js | Publisher signup · code · earnings live (2026-07-25 F1) |
 
 ### 9.2 Provenance almost empty (**critical**)
 

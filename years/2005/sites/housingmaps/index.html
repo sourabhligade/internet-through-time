@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>HousingMaps mashup (2005)</title>
+<link rel="stylesheet" href="../../../../css/period-2005.css"></head>
+<body class="hm-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;padding:10px;font-size:13px">
+ <h1 style="font-size:18px">HousingMaps</h1>
+ <p><b>Paul Rademacher</b> · ~<b>April 2005</b> — the first famous Google Maps mashup.
+ Craigslist-class rentals and for-sale listings plotted on the map
+ <b>before</b> Google shipped an official Maps API (API lands <b>June 2005</b>).
+ Google Code Featured Projects highlighted the mashup on <b>April 13, 2005</b> —
+ reverse-engineered Maps JS, not an official product.
+ Powered by craigslist and Google Maps — <b>this site is in no way affiliated with craigslist or Google</b>
+ (period disclaimer from the live product).</p>
+ <p style="font-size:12px">
+  Tabs energy: <b>For Rent</b> · <b>For Sale</b> · <b>Rooms</b> · <b>Sublets</b>.
+  City chooser samples: San Francisco Bay Area · New York · Chicago · Los Angeles · Seattle · Austin · Boston.
+  Price ranges: under $750 · $500–$1000 · $1000–$1500 · $1500–$2000 · $2000+ (period form flavor).
+ </p>
+ <form data-hm-filter style="font-size:12px;background:#eee;border:1px solid #999;padding:8px;margin:8px 0">
+  City
+  <select name="city">
+   <option>San Francisco</option>
+   <option>New York</option>
+   <option>Chicago</option>
+   <option>Austin</option>
+   <option>Seattle</option>
+  </select>
+  · Kind
+  <select name="kind">
+   <option value="rent">For Rent</option>
+   <option value="sale">For Sale</option>
+   <option value="sublet">Sublets</option>
+   <option value="any">Any</option>
+  </select>
+  · Max $
+  <input name="max" size="8" value="2000">
+  <button type="submit">Refresh map</button>
+ </form>
+ <p data-hm-status style="font-size:11px;color:#333;margin:4px 0"></p>
+ <div class="hm-map" data-hm-pins></div>
+ <p style="font-size:11px;color:#666">Sample pins only — not live Craigslist or Google tiles. Filter state: <code>itt05-housingmaps</code>.</p>
+ <div style="font-size:12px;background:#f8f8ff;border:1px solid #99a;padding:10px;margin:12px 0">
+  <b>Ajax / maps trail</b>
+  <ol style="margin:6px 0 0 18px;line-height:1.5">
+   <li><a href="../maps/about.html">Ajax essay</a> (Feb 18 · Maps as showcase)</li>
+   <li><a href="../maps/index.html">Google Maps Local Search</a> (Feb 8 public)</li>
+   <li><b>HousingMaps</b> (this room · ~Apr · pre-API)</li>
+   <li><a href="../maps/mashups.html">Mashups / API culture</a> (official API June)</li>
+   <li><a href="../techcrunch/index.html">TechCrunch</a> · <a href="../web20conference/index.html">Web 2.0 Conf</a></li>
+  </ol>
+  Also: <a href="../gmail/index.html">Gmail</a> (Ajax sibling) ·
+  <a href="../delicious/index.html">del.icio.us</a> (tag “maps”) ·
+  <a href="../../pages/home.html">2005 Start</a>
+ </div>
+ <p style="font-size:12px">
+  Read more: <a href="../maps/mashups.html">Maps mashups</a> ·
+  <a href="../maps/about.html">Ajax / Maps about</a> ·
+  <a href="../maps/index.html">Google Maps</a>
+ </p>
+</div>
+<script src="../../../../js/immersion-2005.js"></script>
+</body></html>

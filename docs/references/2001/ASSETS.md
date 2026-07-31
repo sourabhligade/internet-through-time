@@ -1,17 +1,32 @@
-# 2001 period assets
+# 2001 period assets — on-disk provenance
 
-Many 2001 bitmaps continue the 2000 pack (`assets/period/2001/**`) with smile-era Amazon continuity.
+**Date:** 2026-07-27 (TO-100 densify)  
+**Tree:** `assets/period/2001/**`  
+**Legal:** Educational reconstruction only.
 
-| Path | Method | Notes |
-|------|--------|-------|
-| `assets/period/2001/amazon/*` | Continuity from 2000 smile pack | Smile allowed |
-| `assets/period/2001/chrome/*` | Often generated / copied | Prefer IE6/XP harvest later |
-| Wikipedia | CSS + HTML tables only | No official logo pack required for densify v1 |
+## Honesty policy
 
-Educational reconstructions only.
+| Tag | Meaning |
+|-----|---------|
+| **WA** | Dated Wayback `im_` harvest |
+| **GUIDEBOOK** | Crop from GUIdebook gallery screenshot |
+| **CONTINUITY** | Copy from adjacent years |
+| **RECON** | Schematic — not archive pixels |
 
+## Highlights
 
-## Reconstruction placeholders (2026-07-24 rework)
+| Path | Provenance |
+|------|------------|
+| `xp/start.gif` · `start-wa.gif` | **GUIDEBOOK** tighter green Start crop (re-crop 2026-07-27) |
+| `xp/taskbar.gif` · `taskbar-wa.gif` | **GUIDEBOOK** crop same pass |
+| `xp/*-recon.gif` | Prior RECON kept for comparison |
+| `google/logo-wa-2001.gif` | **WA** mid-2001 logo.gif |
+| `google/logo-wa.gif` | Prior pack |
+| `apple/ipod-*-wa.*` · `ipod-device-wa.gif` | **WA** Akamai product stills Nov 2001 |
+| `apple/ipod-device-recon.gif` | Prior RECON |
+| `amazon/logo-smile*` | CONTINUITY smile pack |
+| `chrome/btn-*.gif` · throbber | **RECON v2** (2026-07-27) readable IE6-style glyphs — not evolt OEM |
 
-wikipedia xp — logo-recon.gif RECON placeholders 2026-07-24 (Luna still queued)
-Do not claim WA harvest. Swap when CAPTURE-LOG crops land.
+## Companion
+
+[`CAPTURE-LOG.md`](CAPTURE-LOG.md) · [`docs/2001-MUSEUM-GRADE.md`](../../2001-MUSEUM-GRADE.md)

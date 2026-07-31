@@ -49,7 +49,11 @@
       "sites/hotwired/index.html": "http://www.hotwired.com/",
       "sites/amazon/eyes.html": "http://www.amazon.com/eyes",
       "sites/microsoft/index.html": "http://www.microsoft.com/",
+      "sites/microsoft/plus.html": "http://www.microsoft.com/windows/plus/",
+      "sites/microsoft/ie.html": "http://www.microsoft.com/ie/",
       "sites/netscape/index.html": "http://home.netscape.com/",
+      "sites/netscape/features.html": "http://home.netscape.com/comprod/products/navigator/version_2.0/",
+      "sites/netscape/download.html": "http://home.netscape.com/download/",
       "sites/whitehouse/index.html": "http://www.whitehouse.gov/",
 
       "sites/yahoo/Reference/Dictionaries/index.html": "http://www.yahoo.com/Reference/Dictionaries/index.html",

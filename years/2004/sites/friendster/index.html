@@ -2,75 +2,53 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Friendster - The new way to meet people</title>
+<title>Friendster — the new way to meet people</title>
 <link rel="stylesheet" href="../../../../css/period-2004.css">
 </head>
-<body bgcolor="#fff5eb" text="#333333" link="#ff6600" vlink="#cc5500">
+<body bgcolor="#ffffff" text="#000000" link="#ff6600" data-itt-year="2004">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="760" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="margin-top:10px;border:1px solid #ff9933">
-<tr bgcolor="#ff6600">
-  <td style="padding:8px 12px" colspan="2">
-    <table width="100%" cellpadding="0" cellspacing="0"><tr>
-      <td><img src="../../../../assets/period/2004/friendster/logo.gif" width="200" height="48" alt="Friendster" border="0"></td>
-      <td align="right">
-        <font face="Arial" size="2" color="#ffffff">
-        <a href="profile.html"><font color="#fff"><b>My Profile</b></font></a> ·
-        <a href="friends.html"><font color="#fff">Friends</font></a> ·
-        <a href="testimonials.html"><font color="#fff">Testimonials</font></a> ·
-        <a href="about.html"><font color="#fff">About</font></a>
-        </font>
-      </td>
-    </tr></table>
-  </td>
-</tr>
-<tr>
-  <td width="180" valign="top" bgcolor="#fff0e0" style="padding:12px;border-right:1px solid #ffcc99">
-    <font face="Arial" size="2">
-    <img src="../../../../assets/period/2004/friendster/avatar.gif" width="64" height="64" alt="photo" border="1" style="border-color:#ff9933"><br><br>
-    <b data-fs-name>WebVisitor</b><br>
-    <font size="1" color="#666">San Francisco Bay Area</font><br><br>
-    <font size="1">
-    <a href="profile.html">Edit profile</a><br>
-    <a href="friends.html">View friends</a><br>
-    <a href="testimonials.html">Testimonials</a>
-    </font>
-    </font>
-  </td>
-  <td valign="top" style="padding:14px" data-friendster-profile>
-    <font face="Verdana,Arial,sans-serif" size="2">
-    <h2 style="color:#ff6600;margin:0 0 6px;font-size:18px">The new way to meet people</h2>
-    <p style="margin:0 0 10px;color:#555">Connect to friends <b>and</b> friends of friends. See paths through the graph.</p>
-    <table width="100%" cellpadding="8" bgcolor="#fffaf5" style="border:1px solid #ffcc99"><tr>
-      <td>
-        <b>Status:</b> <span data-fs-status>…</span><br><br>
-        <b>About</b><br>
-        <span data-fs-about>…</span>
-      </td>
-    </tr></table>
-    <br>
-    <b>Friends (<span id="fs-count">4</span>)</b>
-    <ul data-fs-friends style="margin:6px 0;padding-left:18px;columns:2;-webkit-columns:2"></ul>
-    <form data-friendster-add style="margin-top:10px;padding:8px;background:#fff0e0;border:1px dashed #ff9933">
-      <font size="1">Add by username:</font>
-      <input type="text" name="friend" size="18" class="field9x">
-      <input type="submit" value="Add friend" class="btn9x">
-    </form>
-    <p style="margin-top:12px;font-size:11px;color:#888">
-    Founded 2002 · Still huge in 2004 — MySpace just launched
-    </p>
-    </font>
-  </td>
-</tr>
-</table>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  setTimeout(function(){
-    var ul = document.querySelector("[data-fs-friends]");
-    var c = document.getElementById("fs-count");
-    if (ul && c) c.textContent = ul.querySelectorAll("li").length || "4";
-  }, 400);
-});
-</script>
+<div data-friendster-root class="friendster-shell">
+ <div class="friendster-header">
+ <img src="../../../../assets/period/2004/friendster/logo.gif" height="32" alt="Friendster" style="vertical-align:middle">
+ <img src="../../../../assets/period/2004/friendster/slogan-wa.gif" height="28" alt="the new way to meet people" style="vertical-align:middle;margin-left:6px">
+ </div>
+ <table width="720" cellpadding="10" cellspacing="0" border="0" align="center">
+ <tr valign="top">
+ <td width="160" bgcolor="#fff5eb">
+ <img src="../../../../assets/period/2004/friendster/avatar.gif" width="80" height="80" alt="avatar"><br>
+ <font face="Verdana" size="2">
+ <b data-friendster-name>(your name)</b><br>
+ <span data-friendster-location style="font-size:11px;color:#666">—</span>
+ <p style="font-size:11px"><p>
+ <a class="fs-btn" href="profile.html">Edit profile</a>
+ <a class="fs-btn" href="friends.html">View friends</a>
+ <a class="fs-btn" href="testimonials.html">Testimonials</a>
+ </p><br>
+ <a href="testimonials.html">Testimonials</a></p>
+ </font>
+ </td>
+ <td>
+ <font face="Verdana" size="2">
+ <h1 style="font-size:18px;color:#ff6600">Welcome to Friendster</h1>
+ <p>Friendster is a new way to meet people — through the friends of your friends.
+ Build your <b>Circle of Friends</b>, leave testimonials, and discover people who share your interests.</p>
+ <p data-friendster-about style="background:#f9f9f9;padding:8px;border:1px solid #ddd">
+ Click Edit profile to introduce yourself.
+ </p>
+ <h2 style="font-size:14px">Friends in your circle</h2>
+ <ul data-friendster-friends style="list-style:none;padding:0"></ul>
+ <p style="font-size:10px;color:#666;margin-top:16px;border-top:1px solid #ddd;padding-top:8px">
+ <b>Museum honesty:</b> Friendster was <b>founded in 2002</b> (Jonathan Abrams).
+ The mass public “went live” / Silicon Valley boom year is often dated <b>March 2003</b>.
+ By fall 2003 ~<b>3 million</b> registered users — still larger than MySpace (~100k by Oct).
+ This room is early-graph reconstruction — localStorage only. No real accounts.
+ </p>
+ </font>
+ </td>
+ </tr>
+ </table>
+</div>
 <script src="../../../../js/immersion-2004.js"></script>
+<p style="font-size:11px;background:#ffe;padding:6px;border:1px solid #cc0"><b>2003 mass year:</b> Friendster public scale (~3M by fall) — still larger than MySpace seed (~100k by Oct). Tech slowness opens the door for MySpace.</p>
 </body>
 </html>

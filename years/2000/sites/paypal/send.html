@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>PayPal — Send Money</title>
+<link rel="stylesheet" href="../../../../css/period-2000.css"></head>
+<body bgcolor="#003366" text="#000" link="#03c">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="560" align="center" cellpadding="16" bgcolor="#fff" style="margin-top:20px;border:2px solid #039">
+<tr><td>
+<font face="Arial" size="2">
+<h2 style="color:#039;margin-top:0">Send Money</h2>
+<p>To an email address (auction winner, friend, roommate). March 2000: X.com + Confinity → PayPal lineage.</p>
+<form data-paypal-send id="paypal-send-form">
+<table cellpadding="6" style="font-size:12px">
+<tr><td>To (email)</td><td><input name="to" size="32" value="winner@example.com"></td></tr>
+<tr><td>Amount (USD)</td><td><input name="amount" size="8" value="24.50"> </td></tr>
+<tr><td>Note</td><td><input name="note" size="32" value="eBay item payment"></td></tr>
+</table>
+<p>
+<input type="submit" value="Send Money">
+<input type="button" value="Cancel" onclick="location.href='index.html'">
+</p>
+</form>
+<p id="paypal-status" style="font-size:12px;color:#060"></p>
+<hr>
+<p><b>Recent sends (this browser)</b></p>
+<div id="paypal-history"><i>No sends yet.</i></div>
+<p style="font-size:11px;color:#666;margin-top:10px">No bank APIs — ledger is localStorage only. Money does not leave your computer.</p>
+<p><a href="index.html">« PayPal home</a> · <a href="about.html">About / X.com</a> · <a href="../ebay/myebay.html">My eBay</a></p>
+</font>
+<script>
+(function () {
+  var KEY = "itt00-paypal-sends";
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) { return []; }
+  }
+  function save(list) {
+    try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 30))); } catch (e) {}
+  }
+  function render() {
+    var list = load();
+    var host = document.getElementById("paypal-history");
+    if (!host) return;
+    if (!list.length) {
+      host.innerHTML = "<i>No sends yet — try the form above.</i>";
+      return;
+    }
+    var html = '<table width="100%" border="1" cellpadding="4" cellspacing="0" bordercolor="#ccc" style="font-size:11px">';
+    html += "<tr bgcolor=\"#eef\"><td><b>When</b></td><td><b>To</b></td><td><b>Amount</b></td><td><b>Note</b></td></tr>";
+    for (var i = 0; i < list.length; i++) {
+      var r = list[i];
+      var d = r.t ? new Date(r.t).toLocaleString() : "—";
+      html += "<tr><td>" + d + "</td><td>" + String(r.to || "").replace(/</g, "") +
+        "</td><td>$" + String(r.amount || "0") + "</td><td>" + String(r.note || "").replace(/</g, "") + "</td></tr>";
+    }
+    html += "</table>";
+    host.innerHTML = html;
+  }
+  var f = document.getElementById("paypal-send-form") || document.querySelector("[data-paypal-send]");
+  if (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var to = (f.to && f.to.value) || "friend@example.com";
+      var amt = (f.amount && f.amount.value) || "0";
+      var note = (f.note && f.note.value) || "";
+      var list = load();
+      list.unshift({ to: to, amount: amt, note: note, t: Date.now() });
+      save(list);
+      var el = document.getElementById("paypal-status");
+      if (el) {
+        el.innerHTML = "Sent <b>$" + String(amt).replace(/</g, "") + "</b> to <b>" +
+          String(to).replace(/</g, "") + "</b> — recorded below. No bank moved money.";
+      }
+      render();
+    });
+  }
+  render();
+})();
+</script>
+<script src="../../../../js/immersion-2000.js"></script>
+</body></html>

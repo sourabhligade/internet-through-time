@@ -1,0 +1,31 @@
+2007 relatable content / period voice research visit log
+Date: 2026-07-31
+Doc: docs/2007-RELATABLE-CONTENT-AND-PERIOD-VOICE-2026-07-31.md
+
+Opened / used:
+- https://cybercultural.com/p/internet-2007/
+  Desktop-primary year; iPhone transition; Netflix electronic delivery;
+  Tumblr; FriendFeed; OpenSocial; Twitter SXSW; FB Platform vs MySpace scale;
+  DoubleClick / aQuantive; Beacon privacy.
+- https://ricmac.org/2007/12/31/top-10-web-tech-stories-of-2007/
+  Period Top 10 ranking (iPhone, Platform, DoubleClick, OpenSocial, Kindle,
+  CNN/YouTube debates, Android, DRM letter, Beacon, AIR).
+- https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/
+  Three-in-one pitch; multi-touch; Visual Voicemail; Safari; Maps; $499/$599;
+  Cingular; June US ship; no App Store.
+- https://maps.googleblog.com/2007/05/introducing-street-view.html
+  SF NYC Vegas Miami Denver; 360 street-level; “walking down the street”.
+- Gmail open Feb 14 2007 (Google Blog + contemporary press class).
+- Facebook Beacon wiki + period privacy coverage (MoveOn, opt-out, Dec apology class).
+- Twitter SXSW: 20k→60k tweets/day class; plasma screens; 40404 shortcode.
+- CNN/YouTube presidential debates Jul/Sep 2007.
+- Live Stats scale lock retained: 121,892,559 sites / 1,373,327,790 users.
+
+Project MD re-read:
+- 2007-RESEARCH.md
+- 2007-DEEP-RESEARCH-FRESH-2026-07-31.md
+- 2007-MUSEUM-GRADE.md
+- 2007-CONNECTIONS-AND-TRAILS.md
+- years/2007/pages/home.html · about.html
+
+Not claimed as mass 2007 product: Chrome, App Store, Android phones, modern X/iOS.

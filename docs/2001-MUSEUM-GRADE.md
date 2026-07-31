@@ -1,30 +1,36 @@
-# 2001 — densify progress note
+# 2001 — museum-grade status
 
-**Status:** Playable MVP **+ densify pass (2026-07-24)** — Wikipedia multi-page + iPod multi-page + Google habit note. Full pixel/chrome harvest still open.
-
-## Shipped (densify)
+**Date:** 2026-07-29  
+**Status:** **Museum densify complete** (wiki densify auth · XP Start GUIdebook · Google/iPod WA · broadband · e2e expand) · hub **unlocked**
 
 | Item | Notes |
 |------|-------|
-| Shell | XP / IE6 labels, dial-up + rising broadband story |
-| Wikipedia | Main + sidebar · community · languages · edit/history/recent · articles incl. Nupedia & free content |
-| iPod | Hero + **specs / howto / faq** under `sites/apple/ipod/` |
-| Google | Sparse home + 2001 habit educational note |
-| Tour / nav | Wikipedia + iPod in immersion nav/catalog |
-| urlMap | Complete for new densify pages |
-| Gates | authenticity densify + `e2e/2001-densify.spec.js` |
+| Shell | Windows **XP** + IE 6 labels · Start wired to `xp/start.gif` (GUIdebook crop) |
+| Wikipedia | UseMod multi-page · **Recent changes** densify nav · community/languages |
+| iPod / iTunes | Slogan + multipage · WA product stills · **no Store** |
+| Google | Sparse home · `logo-wa-2001.gif` |
+| Broadband | Always-on ISP theater room |
+| Amazon | Smile + cart |
+| Gates | authenticity 2001-* including wiki-densify · e2e mvp + densify · **`2001-flows`** |
 
-## Still left (true pixel densify)
+## Residual optional
 
-- XP Luna Start + IE6 toolbar crops (evolt / GUIdebook)
-- Dated WA body for early Wikipedia Main Page look
-- True iPod product photography / WA crop
-- Careful CNN 2001 CDX (avoid wrong-year redirects)
-- Broadband ISP theater (optional)
+- True **evolt IE6** OEM toolbar bitmaps (chrome is RECON v2 readable glyphs, not OEM)
+- Deeper portal WA HTML dumps
 
 ## Verify
 
 ```bash
 python3 scripts/test-authenticity.py
-npx playwright test e2e/2001-*.spec.js
+python3 scripts/smoke-production.py
+npx playwright test e2e/2001-*.spec.js e2e/hub-years.spec.js
 ```
+
+*TO-100 YEAR-2001 phases 0–5 implemented 2026-07-27. Educational reconstruction only.*
+
+
+## Residual densify closed (2026-07-29)
+
+Phases 5–7 of [`2000-2001-IMPLEMENTATION-PHASES.md`](2000-2001-IMPLEMENTATION-PHASES.md):
+CNN section densify · Movable Type · wiki welcome · iTunes note (library not store) · Loudcloud ·
+continuity (Excite / My eBay / dmoz / GameSpot / Blogdex) · hard `e2e/2001-flows.spec.js`.

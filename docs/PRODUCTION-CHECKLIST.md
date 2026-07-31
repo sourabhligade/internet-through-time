@@ -1,5 +1,8 @@
 # Production checklist — Internet Through Time
 
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). Residual = pixels · optional rooms · git (Track E). See `DISK-TRUTH.md`.
+
+
 **Legend:** `[ ]` todo · `[~]` partial · `[x]` done  
 
 ---
@@ -35,7 +38,7 @@
 |----|------|--------|----------|
 | **C1** | Asset link scan | [x] | smoke-production.py |
 | **C2** | urlMap ↔ disk | [x] | smoke-production.py |
-| **C3** | Internal links all years | [x] | `audit-internal-links.py` → 0 broken / 14k+ (1994–2005) |
+| **C3** | Internal links all years | [x] | `audit-internal-links.py` → 0 broken / 14k+ (1994–2002) |
 | **C4** | 1994 internal links | [x] | same |
 | **C5** | 1996 internal links | [x] | same |
 | **C6** | Assets inventory | [x] | `docs/references/ASSETS-INVENTORY.md` |
@@ -86,5 +89,5 @@ python3 scripts/measure-perf.py
 
 | 2026-07-19 | Sprint A–C authenticity pass: eBay logo, Space Jam planets, museum voice strip, Amazon period inputs, 1997 zero href=#, SSL checkout, GeoCities homestead+webring, HoTMaiL redesign, phone-line theater |
 | 2026-07-19 | Pipeline: `ci.yml` (static + e2e), authenticity in CI, `npm run ci` / `scripts/ci.sh`, Playwright CI retries + report artifact |
-| 2026-07-24 | Prod ready: expanded `.gitignore`, `.gitattributes`, `.env.example`, removed local backups, hub years 1994–2005, link audit 0 broken, pixel harvest pass |
+| 2026-07-24 | Prod ready: expanded `.gitignore`, `.gitattributes`, `.env.example`, removed local backups, hub years 1994–2002 (2003–05 not on disk as of 2026-07-25), link audit 0 broken, pixel harvest pass |
 

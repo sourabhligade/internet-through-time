@@ -1,122 +1,169 @@
 /**
- * LinkedIn 2003 — profile + connections + people-you-may-know theater
+ * LinkedIn immersion — professional network (localStorage)
+ * Year-aware: 2004 → itt04-li-* · 2003 → itt03-li-* · 2005 → itt05-li-*
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-  ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
-  ITT.ImmersionFeatures.push({
-    id: "linkedin",
-    needs: function (cfg) { return cfg.features && cfg.features.linkedin; },
-    init: function (api) {
-      var storageKey = api.storageKey, loadJSON = api.loadJSON, saveJSON = api.saveJSON;
-      var escapeHtml = api.escapeHtml, showFlash = api.showFlash, markTourProgress = api.markTourProgress;
-      var KEY = storageKey("li-connections");
-      var PKEY = storageKey("li-profile");
-      function defProfile() {
-        return {
-          name: "Web Visitor",
-          headline: "Product Manager · Bay Area",
-          summary: "Building relationships that matter. Open to opportunities."
-        };
-      }
-      function profile() {
-        var p = loadJSON(PKEY, null);
-        if (!p) { p = defProfile(); saveJSON(PKEY, p); }
-        return p;
-      }
-      function cons() {
-        return loadJSON(KEY, null) || [
-          { name: "Jane Recruiter", title: "Talent @ Startup", deg: "1st" },
-          { name: "Sam Engineer", title: "Software Engineer", deg: "1st" },
-          { name: "Alex Founder", title: "CEO · Seed stage", deg: "2nd" }
-        ];
-      }
-      function paintProfile() {
-        var p = profile();
-        var n = document.querySelector("[data-li-name]");
-        var h = document.querySelector("[data-li-headline]");
-        var s = document.querySelector("[data-li-summary]");
-        if (n) n.textContent = p.name;
-        if (h) h.textContent = p.headline;
-        if (s) s.textContent = p.summary;
-      }
-      function render() {
-        var out = document.querySelector("[data-li-list]");
-        if (!out) return;
-        var C = cons();
-        var html = "<table width='100%' cellpadding='6' cellspacing='0'>";
-        for (var i = 0; i < C.length; i++) {
-          html += "<tr style='border-bottom:1px solid #dde'>" +
-            "<td width='48'><div style='width:40px;height:40px;background:#0077b5;color:#fff;text-align:center;line-height:40px;font-weight:bold'>" +
-            escapeHtml((C[i].name || "?")[0]) + "</div></td>" +
-            "<td><b>" + escapeHtml(C[i].name) + "</b><br><font size='1' color='#555'>" +
-            escapeHtml(C[i].title) + "</font></td>" +
-            "<td align='right'><font size='1' color='#0077b5'>" + escapeHtml(C[i].deg || "1st") + "</font></td></tr>";
+
+  function year() {
+    return String(
+      ITT._immersionYear ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        ""
+    );
+  }
+  function tag() {
+    var y = year();
+    if (y === "2004") return "itt04";
+    if (y === "2008") return "itt08";
+    if (y === "2007") return "itt07";
+    if (y === "2006") return "itt06";
+    if (y === "2005") return "itt05";
+    return "itt03";
+  }
+  function pkey() {
+    return tag() + "-li-profile";
+  }
+  function ckey() {
+    return tag() + "-li-connections";
+  }
+  function getJSON(k, leg) {
+    try {
+      var raw = localStorage.getItem(k);
+      if (raw) return JSON.parse(raw);
+      if (leg && leg !== k) {
+        raw = localStorage.getItem(leg);
+        if (raw) {
+          localStorage.setItem(k, raw);
+          return JSON.parse(raw);
         }
-        html += "</table>";
-        out.innerHTML = html;
-        var count = document.querySelector("[data-li-count]");
-        if (count) count.textContent = String(C.length);
-        markTourProgress("linkedin");
       }
-      function renderPymk() {
-        var out = document.querySelector("[data-li-pymk]");
-        if (!out) return;
-        var people = [
-          { name: "Riley Designer", title: "UI · Agency" },
-          { name: "Casey Analyst", title: "BizOps" },
-          { name: "Morgan Dev", title: "Full-stack" }
-        ];
-        var html = "";
-        for (var i = 0; i < people.length; i++) {
-          html += "<div style='margin:0 0 8px;padding:6px;background:#f0f6fa;border:1px solid #b3d4e8'>" +
-            "<b>" + escapeHtml(people[i].name) + "</b><br><font size='1'>" +
-            escapeHtml(people[i].title) + " · 2nd</font></div>";
-        }
-        out.innerHTML = html;
+    } catch (e) { /* */ }
+    return null;
+  }
+
+  function loadP() {
+    return getJSON(pkey(), "itt03-li-profile");
+  }
+  function saveP(p) {
+    localStorage.setItem(pkey(), JSON.stringify(p));
+  }
+  function loadC() {
+    var v = getJSON(ckey(), "itt03-li-connections");
+    return v || [];
+  }
+  function saveC(c) {
+    localStorage.setItem(ckey(), JSON.stringify(c));
+  }
+
+  function defaults() {
+    return [
+      { name: "Reid Hoffman", title: "Founder · seed" },
+      { name: "Alex Chen", title: "Product Manager" },
+      { name: "Sam Rivera", title: "Software Engineer" },
+    ];
+  }
+
+  function esc(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function render(doc) {
+    var p = loadP() || { name: "You", title: "Professional", company: "" };
+    var n = doc.querySelector("[data-li-name]");
+    var t = doc.querySelector("[data-li-title]");
+    var c = doc.querySelector("[data-li-company]");
+    if (n) n.textContent = p.name;
+    if (t) t.textContent = p.title;
+    if (c) c.textContent = p.company || "—";
+    var list = doc.querySelector("[data-li-connections]");
+    if (list) {
+      var cons = loadC();
+      if (!cons.length) {
+        cons = defaults();
+        saveC(cons);
       }
-      var form = document.querySelector("form[data-li-add]");
-      if (form) {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          var n = form.querySelector('[name="name"]');
-          var t = form.querySelector('[name="title"]');
-          var C = cons();
-          C.unshift({
-            name: (n && n.value) || "Contact",
-            title: (t && t.value) || "Professional",
-            deg: "1st"
-          });
-          saveJSON(KEY, C);
-          if (n) n.value = "";
-          if (t) t.value = "";
-          if (showFlash) showFlash("Connection request sent (accepted).");
-          render();
-        });
-      }
-      var pform = document.querySelector("form[data-li-profile]");
-      if (pform) {
-        var p = profile();
-        ["name", "headline", "summary"].forEach(function (k) {
-          var el = pform.querySelector('[name="' + k + '"]');
-          if (el && p[k]) el.value = p[k];
-        });
-        pform.addEventListener("submit", function (e) {
-          e.preventDefault();
-          var p2 = profile();
-          ["name", "headline", "summary"].forEach(function (k) {
-            var el = pform.querySelector('[name="' + k + '"]');
-            if (el) p2[k] = el.value;
-          });
-          saveJSON(PKEY, p2);
-          if (showFlash) showFlash("Profile updated.");
-          paintProfile();
-        });
-      }
-      paintProfile();
-      render();
-      renderPymk();
+      list.innerHTML = cons
+        .map(function (x) {
+          return (
+            "<div class='li-card'><b>" +
+            esc(x.name) +
+            "</b><br><span style='font-size:11px'>" +
+            esc(x.title || "") +
+            "</span></div>"
+          );
+        })
+        .join("");
     }
-  });
+  }
+
+  function boot(doc) {
+    doc = doc || document;
+    if (!doc.querySelector("[data-li-root], [data-li-profile-form], [data-li-invite]")) return;
+    var form = doc.querySelector("[data-li-profile-form]");
+    if (form) {
+      var p = loadP() || {};
+      ["name", "title", "company"].forEach(function (n) {
+        var el = form.querySelector('[name="' + n + '"]');
+        if (el && p[n]) el.value = p[n];
+      });
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        saveP({
+          name: (form.querySelector('[name="name"]') || {}).value || "You",
+          title: (form.querySelector('[name="title"]') || {}).value || "",
+          company: (form.querySelector('[name="company"]') || {}).value || "",
+        });
+        var st = form.querySelector("[data-li-status]");
+        if (st) st.textContent = "Profile saved (this browser only).";
+        render(doc);
+      });
+    }
+    var inv = doc.querySelector("[data-li-invite]");
+    if (inv) {
+      inv.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var name = (inv.querySelector('[name="name"]') || {}).value || "New connection";
+        var title = (inv.querySelector('[name="title"]') || {}).value || "Professional";
+        var cons = loadC();
+        if (!cons.length) cons = defaults();
+        cons.unshift({ name: name, title: title, ts: Date.now() });
+        saveC(cons.slice(0, 40));
+        var st = doc.querySelector("[data-li-invite-status]");
+        if (st) st.textContent = "Connection added: " + name + " (stored in this browser).";
+        inv.reset();
+        render(doc);
+      });
+    }
+    var pymk = doc.querySelectorAll("[data-li-connect]");
+    for (var i = 0; i < pymk.length; i++) {
+      pymk[i].addEventListener("click", function (ev) {
+        var btn = ev.currentTarget;
+        var name = btn.getAttribute("data-name") || "Contact";
+        var title = btn.getAttribute("data-title") || "";
+        var cons = loadC();
+        if (!cons.length) cons = defaults();
+        cons.unshift({ name: name, title: title, ts: Date.now() });
+        saveC(cons.slice(0, 40));
+        btn.disabled = true;
+        btn.textContent = "Connected";
+        render(doc);
+      });
+    }
+    render(doc);
+  }
+  function register() {
+    if (!ITT.ImmersionFeatures || !ITT.ImmersionFeatures.registerLocal) {
+      setTimeout(register, 20);
+      return;
+    }
+    ITT.ImmersionFeatures.registerLocal({ id: "linkedin", boot: boot });
+  }
+  register();
 })(typeof window !== "undefined" ? window : this);

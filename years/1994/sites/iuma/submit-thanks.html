@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../../../../css/mosaic-defaults.css">
 </head>
 <body bgcolor="#000033" text="#FFFFFF" link="#FFFF00" vlink="#FF00FF" alink="#00FF00"
-  data-echo-fields="b:#echo-band,e:#echo-email">
+ data-echo-fields="b:#echo-band,e:#echo-email">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 
 <p><a href="index.html">IUMA</a></p>
@@ -27,15 +27,15 @@ Your request has been received.
 <script src="../../../../js/immersion.js"></script>
 <script>
 (function(){
-  try {
-    var b = (location.search.match(/[?&]b=([^&]*)/)||[])[1];
-    var e = (location.search.match(/[?&]e=([^&]*)/)||[])[1];
-    if (b || e) {
-      var list = JSON.parse(localStorage.getItem('itt-iuma-subs')||'[]');
-      list.unshift({band:decodeURIComponent((b||'').replace(/\+/g,' ')), email:decodeURIComponent((e||'').replace(/\+/g,' ')), date:new Date().toLocaleString()});
-      localStorage.setItem('itt-iuma-subs', JSON.stringify(list.slice(0,20)));
-    }
-  } catch(err){}
+ try {
+ var b = (location.search.match(/[?&]b=([^&]*)/)||[])[1];
+ var e = (location.search.match(/[?&]e=([^&]*)/)||[])[1];
+ if (b || e) {
+ var list = JSON.parse(localStorage.getItem('itt-iuma-subs')||'[]');
+ list.unshift({band:decodeURIComponent((b||'').replace(/\+/g,' ')), email:decodeURIComponent((e||'').replace(/\+/g,' ')), date:new Date().toLocaleString()});
+ localStorage.setItem('itt-iuma-subs', JSON.stringify(list.slice(0,20)));
+ }
+ } catch(err){}
 })();
 </script>
 </body>

@@ -1,0 +1,158 @@
+SOURCE: https://web.archive.org/web/20021114161952id_/http://www.cnn.com/
+FINAL: https://web.archive.org/web/20021114161952id_/http://www.cnn.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-cnn
+ROLE: CNN year rails
+TITLE: CNN.com
+BYTES: 51575
+ERROR: 
+
+KEY FACTS / TEXT:
+CNN.com
+CNN Europe
+CNN Asia
+Languages
+---------
+Spanish
+Portuguese
+German
+Italian
+Korean
+Arabic
+Japanese
+On CNN TV
+Transcripts
+Headline News
+CNN International
+About CNN.com
+Preferences
+SEARCH CNN.COM:
+Home Page
+World
+U.S.
+Weather
+Business
+Sports
+Politics
+Law
+Technology
+Science & Space
+Health
+Entertainment
+Travel
+Education
+Special Reports
+SERVICES
+Video
+Newswatch
+E-Mail Services
+CNN To Go
+SEARCH CNN.COM:
+Updated: 11:08 a.m. EST (1608 GMT) November 14, 2002
+What will inspectors face?
+The new U.N. weapons inspectors will pick up where their predecessors left off in Iraq in 1998. But there will be some big differences -- both in personnel and technology. With the first inspectors due in Baghdad on Monday, will they find unfettered access or a game of "cheat and retreat?"
+FULL STORY
+• Video: Stopping Iraq's 'cheat and retreat'
+• Video: Double-edged sword for U.S.?
+• Vague Iraq letter could spell trouble ahead
+• Text of Iraq letter to U.N.
+ON CNN TV
+Larry King Live (9 p.m. ET): She's used to asking all the questions; but, this time, Barbara Walters provides the answers. She joins Larry for the hour.
+HARRY'S FUTURE
+VIDEO: NEW TEST
+What's going to happen to the boy wizard?
+Cholesterol not only heart attack risk factor
+MORE TOP STORIES
+• U.S. looks for 'signals' in bin Laden tape
+| Video
+• China's 'fourth generation' takes over
+| Who is Hu?
+| Video
+• White House criticizes FBI over 'low credibility' hospital threat
+• Israel: Kibbutz attack suspect arrested
+• Teen brothers won't be retried for father's slaying
+• 'King of Pop' takes off surgical mask, takes witness stand
+BUSINESS
+STOCK/FUND QUOTES:
+enter symbol
+sponsored by:
+MARKETS:
+11:17am ET, 11/14
+DJIA
++64.80
+8463.20
++ 0.77%
+NAS
++26.47
+1387.81
++ 1.91%
+S&P
++12.68
+895.21
++ 1.42%
+•  Jewish Defense League leader dies
+•  Bush to end N. Korea fuel shipments
+•  FBI searching for al Qaeda suspect
+•  China begins transfer of power
+•  French police evict church refugees
+•  TIME.com: What if Iraq cooperates?
+•  Review: New PC tablets cool but clunky
+•  Computers hone in on bin Laden's voice
+•  It pays to be an Elvis impersonator
+•  A prostitute, much sex, and a hit novel
+•  Democrats set to elect new leader
+•  Boston to host Democratic convention
+•  Virginia set to execute CIA killer
+•  John Allen Muhammad's attorney blasts media leaks
+•  A heart risk worse than cholesterol
+•  New predictor of breast cancer survival?
+•  Leonids may shine despite glaring guest
+•  NASA wants space plane, new shuttle
+•  Bill would delay bag screening
+•  Cruisers sickened again
+•  U.N.: Global education gulf deepening
+•  UC president stepping down next year
+•  Head2Head: Should the NFL change its OT format?
+•  Giants hire Alou to replace Baker
+•  Buyers flock to stocks
+•  Retail sales flat
+VIDEO
+Jeanne Moos looks at a contest for the cleverest cat act.
+PLAY VIDEO
+OFFBEAT
+Penny prank
+Truck-load of pennies settles court-ordered tab
+ON THE SCENE
+Wolf Blitzer in Washington
+Bin Laden might be alive, but is he still kicking?
+Jamie McIntyre at the Pentagon
+Iraqi cooperation creates complications
+IN STYLE
+What's hot now
+Add pizzazz to your party with easy entertaining ideas
+PAGING DR. GUPTA
+Boosting baby's smart potential
+Send in your questions and watch CNN from 10 a.m. to noon.
+WEATHER
+Get your hometown weather on the home page! Enter city name or U.S. Zip Code:
+Or select location from a list
+Will Iraq's response to the U.N. resolution on disarmament make military action unnecessary?
+• Yes
+• No
+View Results
+From our Partners
+•  Why Saddam Blinked (Or At Least Winked) •  Turkey's Islamic Mystery Man •  Can Vaccines Cause Autism?
+• SI Online: This Week's Issue
+• NFL: Week 10 By the Numbers
+• College FB: Week at a Glance
+•  What's Happening Now: Miami •  Hollywood Jet Set •  Transformations: Halle Berry
+All external sites will open in a new browser.
+Denotes premium content.
+© 2002 Cable News Network LP, LLLP.
+An AOL Time Warner Company. All Rights Reserved.
+Terms under which this service is provided to you.
+Read our privacy guidelines . Contact us .
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

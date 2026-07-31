@@ -2,6 +2,20 @@
 
 Museum-grade harvest status from `docs/1999-DEEP-RESEARCH-2026-07-23.md`.
 
+## TO-100 densify triage (2026-07-27 year #6)
+
+**Already ship:** 133 HTML · Napster marketing GIFs · Google WA · multicolor eBay · Amazon tabs · Ask Jeeves · 7 e2e · no smile.
+
+**Still need (honest):**
+- IE5 toolbar: RECON pack on disk — evolt OEM residual
+- Napster **client window** art (marketing pack present)
+- True CNN 1999 pixel crop (HTML already year-verified 1999 beats)
+
+**Dead buttons:** Start menu plain divs (fix in Phase 1).
+
+**P0 implement:** Start menu live · IE5 chrome RECON-v2 refresh · Napster legal/client densify · CNN honesty note · about densify · e2e buttons
+
+
 | Target | URL | Status | Used for |
 |--------|-----|--------|----------|
 | Google late 1999 | https://web.archive.org/web/19991129190623/http://www.google.com/ | `[wa-text]` 2026-07-23 | Home: “Search the web using Google”; PC Mag award; ©1999 |
@@ -38,14 +52,14 @@ Museum-grade harvest status from `docs/1999-DEEP-RESEARCH-2026-07-23.md`.
 | Cybercultural BowieWorld | https://cybercultural.com/p/online-identity-bowieworld-1999/ | `[visited]` | Identity / P2 |
 | DOJ Findings of Fact | https://www.justice.gov/atr/us-v-microsoft-courts-findings-fact | `[visited]` | Nov 5 1999 news beat |
 
-## Still need screenshot crops (human / browser)
+## Still need screenshot crops (human / browser) — updated 2026-07-27 TO-100
 
-- [ ] Napster **client** window (not only marketing site)
+- [x] Napster **client** theater page (`sites/napster/client.html`) — marketing GIFs on disk; true client screenshot residual
 - [x] eBay **multicolor logo** GIF — WA 19991012 logo_home_tb.gif (harvest 2026-07-24)
-- [ ] IE5 toolbar/throbber from evolt or WDM
+- [x] IE5 toolbar/throbber — **RECON v2** glyphs 2026-07-27 (evolt OEM residual)
 - [x] Amazon tab bar crop — WA 19991204 product-type-gateway.gif (harvest 2026-07-24)
 - [x] Ask Jeeves butler mark — WA 19991013 jeevesTop2/jeevesBtm2 (harvest 2026-07-24)
-- [ ] True CNN Interactive 1999 homepage
+- [~] True CNN Interactive 1999 homepage pixel crop — HTML year-verified (Findings of Fact · Napster suit · Updated 1999)
 
 ## Banned captures
 
@@ -90,3 +104,8 @@ Installed authentic Wayback Machine bitmaps for flagship 1999 surfaces:
 | Blogger blogger.gif | ~200001 | 353×98 |
 
 HTML rebuilt to match harvested wayback-extracts grammar (Yahoo 600px + #dcdcdc rail, Google form + map, Amazon #990000/#FFCC66, eBay category counts, Napster 546px black).
+
+## Button pass 2026-07-27
+- Start menu data-start-cmd live
+- e2e/1999-buttons.spec.js
+- Napster legal.html + client.html

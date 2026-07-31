@@ -1,22 +1,78 @@
 SOURCE: https://www.pewresearch.org/internet/2002/06/23/main-report-the-broadband-difference/
-TITLE: Main Report: The Broadband Difference
-DATE: June 23, 2002 (Pew Internet & American Life Project)
-STATUS: [visited] 2026-07-23
+FINAL: https://www.pewresearch.org/internet/2002/06/23/main-report-the-broadband-difference/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: pew-broadband
+ROLE: always-on stats
+TITLE: Main Report: The Broadband Difference | Pew Research Center
+BYTES: 512896
+ERROR: 
 
-KEY FACTS FOR EXHIBIT:
-- June 2000: 6% of Internet users had home high-speed (≈3% of all Americans / ~6M people)
-- Feb 2001: 13% of Internet users
-- End 2001: 16% of Internet users
-- May 2002 survey: **21% of all Internet users in America** have broadband at home
-  = **24 million** people / **12% of all American adults**
-- Callback survey broadband mix: **71% cable modem**, **27% DSL**, 2% satellite/fixed wireless
-- Framing quote (Part 1 title): Internet transforms from a “sometimes” tool to an
-  **“always-on information appliance”**
-- On a typical day: 82% of broadband users do something online vs 58% dial-up
-- Broadband users 3–5× more likely to download files/music, create content, share files
-- Excite@Home bankruptcy end 2001; shut doors **February 2002** (failure lore)
+KEY FACTS / TEXT:
+Main Report: The Broadband Difference | Pew Research Center
+Numbers, Facts and Trends Shaping Your World
+Newsletters Press My Account Donate Contacted By Us?
+Read our research on:
+Beliefs & Practices Donald Trump Middle East
+Search
+Research Topics
+Topics
+Politics & Policy
+International Affairs
+Immigration & Migration
+Race & Ethnicity
+Religion
+Age & Generations
+Gender & LGBTQ
+Family & Relationships
+Economy & Work
+Science
+Internet & Technology
+News Habits & Media
+Methodological Research
+Full Topic List
+Regions & Countries
+Asia & the Pacific
+Europe & Russia
+Latin America
+Middle East & North Africa
+North America
+Sub-Saharan Africa
+Multiple Regions / Worldwide
+Formats
+Feature
+Fact Sheet
+Video
+Data Essay
+Publications Our Methods Short Reads Tools & Datasets Experts About Us
+Research Topics Publications Short Reads Tools & Datasets About Pew Research Center Newsletters Press My Account Contacted By Us?
+Search
+Read Our Research On:
+Beliefs & Practices Donald Trump Middle East
+Home > Research Topics
+Report
+|
+June 23, 2002
+The Broadband Difference: How online behavior changes with high-speed Internet connections
+Main Report: The Broadband Difference
+X
+Facebook
+Threads
+LinkedIn
+WhatsApp
+Mail
+Add Us On Google
+By John B. Horrigan and Lee Rainie
+Table of Contents
+The Broadband Difference: How online behavior changes with high-speed Internet connections
+Main Report: The Broadband Difference
+Methodology
+Introduction
+The promise of a high-speed data connection into people’s homes has been around longer than the Worldwide Web.  Digital technologies developed in the 1980s, which made possible the transmission of voice, video, and text over the same wire, upped the ante in the information revolution.  Mass media would no longer mean the transmission of identical messages to millions of people, but rather the transmission of messages and images from multiple sources, tailored to specific needs, to millions of people in their home.  Lots of things were never to be the same according to prognosticators of the 1980s.  High-speed links to the home would revolutionize democratic participation, entertainment, health care delivery, education, commerce, and more.
+Integrated Services Digital Network (ISDN), developed in the 1980s at Bell labs, was the earliest hope for making digital dreams a reality in the home.  ISDN allowed voice, video, and data to be transmitted at, for those days, a very fast rate of 64 kilobits per second (Kps).  As that technology improved throughout the 1980s, it was thought that most homes would one day be equipped with ISDN.  However, the promise was never realized.
+In 1990, one telephone company, GTE, had begun a trial in Cerritos, California, where consumers were equipped with high-speed fiber optic connections to the home.  It, too, did not thrive. Cable companies also entered the act around the turn of the decade by touting interactive TV as a way to bring high-speed connections into people’s home that would offer not just video-on-demand, but health care, games, and other information services.  In 1994, Time Warner Cable launched a trial in Orlando, Florida, called the Full Service Network as a test bed for high-speed interactive services.  Neither this nor other trials met much success, and the Full Service Network was quietly mothballed after a short time.
+The invention of the Worldwide Web in 1991 and the subsequent widespread adoption of the Internet renewed the hopes for broadband to the home.  With the Web making the Internet easily navigable and with home computer purchases on the rise, technology backers hoped that the expanding ranks of technophiles would demand high-speed, or broadband, connections at home.  Alas, even in the era of the Web, some firms that hoped to capitalize on broadband to the home have foundered. Perhaps the most trenchant example of this is the failure of Excite@Home. The ambitious attempt to marry a content company, Excite, with the broadband provider @Home, failed as its business model proved unsustainable and as subscriber growth fell short of expectations. Declining dot-com share prices also proved punishing to the company.  Once valued at $6.7 billion, the company filed for bankruptcy at the end of 2001 and shut its doors in February 2002.
+Cities and towns have also tried to enter the broadband fray.  Many places have considered or built citywide high-speed networks to improve government service delivery and promote economic development.  Some sizable cities in the mid- to late 1990s, such as Chicago, Seattle, Palo Alto, and Austin, Texas, contemplated building city-supported broadband networks.  One that came to fruition, in Palo Alto, met tepid customer response. Others, such as Austin’s, stalled due to controversy over whether municipal government should be offering services that compete with private sector in broadband development.  Because of debate over government’s role in such networks, eleven states prohibit cities from building broadband networks to serve re
 
-EXHIBIT USE:
-- About / home thesis line
-- Prefs: Broadband default option for 2002
-- CNN / ISP educational room optional
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

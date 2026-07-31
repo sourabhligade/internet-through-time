@@ -1,242 +1,396 @@
 /**
- * Immersion: YouTube 2005 — video list / watch / upload theater (localStorage)
+ * YouTube — real localStorage flows (no soft mocks)
+ * Keys via config.storagePrefix: {prefix}-yt-uploads · {prefix}-yt-views
+ * Upload → list → watch ?v= · like/views persist
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-  ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
-  ITT.ImmersionFeatures.push({
-    id: "youtube",
-    needs: function (cfg) { return cfg.features && cfg.features.youtube; },
-    init: function (api) {
-      var loadJSON = api.loadJSON, saveJSON = api.saveJSON, storageKey = api.storageKey;
-      var escapeHtml = api.escapeHtml, showFlash = api.showFlash, markTourProgress = api.markTourProgress;
-      var KEY = storageKey("yt-videos");
-      var UKEY = storageKey("yt-user");
 
-      function seed() {
-        return [
-          { id: "zoo", title: "Me at the zoo", by: "jawed", tags: "zoo elephants", views: 1284, desc: "The cool thing about these guys is that they have really, really, really long trunks…" },
-          { id: "2", title: "Skate park session", by: "user2005", tags: "skate funny", views: 402, desc: "Friends at the park." },
-          { id: "3", title: "My band practice", by: "garage", tags: "music band", views: 89, desc: "First take." }
-        ];
-      }
-      function getV() {
-        var v = loadJSON(KEY, null);
-        if (!v) { v = seed(); saveJSON(KEY, v); }
-        return v;
-      }
-      function setV(v) { saveJSON(KEY, v); }
+  function U() {
+    return ITT.util || {};
+  }
+  function uploadsKey() {
+    return U().immersionStorageKey
+      ? U().immersionStorageKey("yt-uploads", "itt05")
+      : "itt05-yt-uploads";
+  }
+  function viewsKey() {
+    return U().immersionStorageKey
+      ? U().immersionStorageKey("yt-views", "itt05")
+      : "itt05-yt-views";
+  }
+  function esc(s) {
+    if (U().escapeHtml) return U().escapeHtml(s);
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
 
-      function paintList() {
-        var host = document.querySelector("[data-yt-list]");
-        if (!host) return;
-        var list = getV();
-        var html = '<table class="yt05-list" width="100%" cellpadding="4">';
-        for (var i = 0; i < list.length; i++) {
-          var v = list[i];
-          html += '<tr><td width="90"><div class="yt05-thumb"></div></td><td><a href="watch.html?id=' +
-            escapeHtml(v.id) + '"><font size="2"><b>' + escapeHtml(v.title) +
-            '</b></font></a><br><font size="1">by ' + escapeHtml(v.by) +
-            ' · ' + (v.views || 0) + ' views · tags: ' + escapeHtml(v.tags || "") +
-            '</font></td></tr>';
-        }
-        html += "</table>";
-        host.innerHTML = html;
-      }
-
-      function paintWatch() {
-        var host = document.querySelector("[data-yt-watch]");
-        if (!host) return;
-        var id = api.qs("id") || "zoo";
-        var list = getV();
-        var v = null;
-        for (var i = 0; i < list.length; i++) if (String(list[i].id) === String(id)) v = list[i];
-        if (!v) v = list[0];
-        if (v) {
-          v.views = (v.views || 0) + 1;
-          setV(list);
-          host.innerHTML =
-            '<div class="yt05-player"><div class="yt05-playbtn">▶</div><font size="1" color="#ccc">Flash player theater</font></div>' +
-            '<p><font size="3"><b>' + escapeHtml(v.title) + '</b></font><br>' +
-            '<font size="2">From: ' + escapeHtml(v.by) + ' · ' + v.views + ' views</font></p>' +
-            '<p><font size="2">' + escapeHtml(v.desc || "") + '</font></p>' +
-            '<p><font size="1" color="#666">Tags: ' + escapeHtml(v.tags || "") + '</font></p>';
-          markTourProgress();
-        }
-      }
-
-      function currentUser() {
-        try { return localStorage.getItem(UKEY) || ""; } catch (e) { return ""; }
-      }
-
-      function paintUserChrome() {
-        var user = currentUser();
-        var slot = document.querySelector("[data-yt-user-slot]");
-        if (slot) {
-          if (user) {
-            /* 2005 YouTube: sparse top bar — plain links, red only on wordmark class */
-            slot.innerHTML =
-              "<span class=\"yt05-user\">Hi, <b class=\"yt05-user-name\">" + escapeHtml(user) + "</b> · " +
-              "<a href=\"#\" data-yt-logout>Log Out</a> · " +
-              "<a href=\"upload.html\">Upload</a></span>";
-            var lo = slot.querySelector("[data-yt-logout]");
-            if (lo) {
-              lo.addEventListener("click", function (ev) {
-                ev.preventDefault();
-                try { localStorage.removeItem(UKEY); } catch (e2) {}
-                showFlash("Signed out of YouTube.");
-                paintUserChrome();
-              });
-            }
-          } else {
-            slot.innerHTML =
-              "<span class=\"yt05-user\">" +
-              "Username <input size=\"10\" data-yt-user name=\"user\" class=\"yt05-field\"> " +
-              "Password <input type=\"password\" size=\"10\" data-yt-pass name=\"pass\" class=\"yt05-field\"> " +
-              "<input type=\"button\" value=\"Log In\" data-yt-login class=\"yt05-login\">" +
-              "</span>";
-            wireLoginControls(slot);
-          }
-        }
-        var who = document.querySelectorAll("[data-yt-who]");
-        for (var w = 0; w < who.length; w++) {
-          who[w].textContent = user || "you";
-        }
-      }
-
-      function wireLoginControls(root) {
-        var btn = (root || document).querySelector("[data-yt-login]");
-        if (!btn || btn.getAttribute("data-yt-bound") === "1") return;
-        btn.setAttribute("data-yt-bound", "1");
-        btn.addEventListener("click", function (ev) {
-          ev.preventDefault();
-          var uEl = document.querySelector("[data-yt-user]");
-          var pEl = document.querySelector("[data-yt-pass]");
-          var u = ((uEl && uEl.value) || "").trim();
-          if (!u) {
-            showFlash("Enter a username to sign in.");
-            return;
-          }
-          try { localStorage.setItem(UKEY, u); } catch (e) {}
-          showFlash("Welcome, <b>" + escapeHtml(u) + "</b> — Broadcast Yourself.");
-          markTourProgress();
-          paintUserChrome();
-        });
-      }
-
-      var form = document.querySelector("[data-yt-upload]");
-      if (form) {
-        var fileInp = form.querySelector('input[type="file"]');
-        if (fileInp) {
-          fileInp.disabled = false;
-          fileInp.removeAttribute("title");
-          fileInp.addEventListener("change", function () {
-            var name = (fileInp.files && fileInp.files[0] && fileInp.files[0].name) || "";
-            var hint = form.querySelector("[data-yt-file-name]");
-            if (hint) hint.textContent = name ? ("Selected: " + name) : "";
-            var titleEl = form.querySelector('[name="title"]');
-            if (titleEl && !titleEl.value && name) {
-              titleEl.value = name.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ");
-            }
-          });
-        }
-        form.addEventListener("submit", function (ev) {
-          ev.preventDefault();
-          var title = (form.querySelector('[name="title"]') || {}).value || "Untitled";
-          var desc = (form.querySelector('[name="desc"]') || {}).value || "";
-          var tags = (form.querySelector('[name="tags"]') || {}).value || "";
-          var fileInp2 = form.querySelector('input[type="file"]');
-          var fname = (fileInp2 && fileInp2.files && fileInp2.files[0] && fileInp2.files[0].name) || "";
-          if (fname && desc) desc = desc + "\n\n[file: " + fname + "]";
-          else if (fname) desc = "[file: " + fname + "]";
-          var list = getV();
-          var id = String(Date.now());
-          var by = currentUser() || "you";
-          list.unshift({ id: id, title: title, by: by, tags: tags, views: 1, desc: desc });
-          setV(list);
-          showFlash("Video uploaded as <b>" + escapeHtml(by) + "</b> (local only).");
-          markTourProgress();
-          location.href = "watch.html?id=" + id;
-        });
-      }
-
-      wireLoginControls(document);
-      paintUserChrome();
-
-      /* Search theater — filter list by tags/title */
-      function paintListFiltered(q) {
-        var host = document.querySelector("[data-yt-list]");
-        if (!host) return;
-        var list = getV();
-        var qq = (q || "").toLowerCase().trim();
-        if (qq) {
-          list = list.filter(function (v) {
-            var hay = ((v.title || "") + " " + (v.tags || "") + " " + (v.by || "") + " " + (v.desc || "")).toLowerCase();
-            return hay.indexOf(qq) !== -1;
-          });
-        }
-        if (!list.length) {
-          host.innerHTML = "<p><font size=\"2\">No videos match <b>" + escapeHtml(q) + "</b>.</font></p>";
-          return;
-        }
-        var html = '<table class="yt05-list" width="100%" cellpadding="4">';
-        for (var i = 0; i < list.length; i++) {
-          var v = list[i];
-          html += '<tr><td width="90"><div class="yt05-thumb"></div></td><td><a href="watch.html?id=' +
-            escapeHtml(v.id) + '"><font size="2"><b>' + escapeHtml(v.title) +
-            '</b></font></a><br><font size="1">by ' + escapeHtml(v.by) +
-            ' · ' + (v.views || 0) + ' views · tags: ' + escapeHtml(v.tags || "") +
-            '</font></td></tr>';
-        }
-        html += "</table>";
-        host.innerHTML = html;
-      }
-
-      var searchForm = document.querySelector("[data-yt-search]");
-      if (searchForm) {
-        searchForm.addEventListener("submit", function (ev) {
-          ev.preventDefault();
-          var inp = searchForm.querySelector('input[name="q"], input[type="text"], input:not([type])');
-          var q = (inp && inp.value) || "";
-          paintListFiltered(q);
-          showFlash(q ? "Search: <b>" + escapeHtml(q) + "</b>" : "Showing all videos.");
-          markTourProgress();
-        });
-        var sbtn = searchForm.querySelector('input[type="button"], button[type="button"]');
-        if (sbtn) {
-          sbtn.addEventListener("click", function () {
-            var inp = searchForm.querySelector('input[name="q"], input[type="text"], input:not([type])');
-            paintListFiltered((inp && inp.value) || "");
-          });
-        }
-      }
-
-      /* Comment theater on watch page */
-      var cform = document.querySelector("[data-yt-comment]");
-      if (cform) {
-        cform.addEventListener("submit", function (ev) {
-          ev.preventDefault();
-          var inp = cform.querySelector('input[type="text"], input:not([type]), textarea');
-          var msg = (inp && inp.value || "").trim();
-          if (!msg) {
-            showFlash("Type a comment first.");
-            return;
-          }
-          var box = document.querySelector("[data-yt-comments]");
-          if (box) {
-            var line = document.createElement("div");
-            line.innerHTML = "<font size=\"1\"><b>you</b> · " + escapeHtml(msg) + "</font>";
-            box.appendChild(line);
-          }
-          if (inp) inp.value = "";
-          showFlash("Comment posted (local only).");
-          markTourProgress();
-        });
-      }
-
-      paintList();
-      paintWatch();
+  function load() {
+    try {
+      return JSON.parse(localStorage.getItem(uploadsKey()) || "null");
+    } catch (e) {
+      return null;
     }
-  });
+  }
+  function save(list) {
+    localStorage.setItem(uploadsKey(), JSON.stringify(list));
+  }
+  function loadViews() {
+    try {
+      return JSON.parse(localStorage.getItem(viewsKey()) || "{}") || {};
+    } catch (e) {
+      return {};
+    }
+  }
+  function saveViews(map) {
+    localStorage.setItem(viewsKey(), JSON.stringify(map));
+  }
+  function seed() {
+    var list = load();
+    if (list && list.length) return list;
+    list = [
+      { title: "Me at the zoo", desc: "jawed · early public beta lore", id: "zoo" },
+      { title: "Lazy Sunday vibes", desc: "sample clip · no real file", id: "lazy" },
+      { title: "My first upload", desc: "session sample", id: "demo" }
+    ];
+    save(list);
+    return list;
+  }
+  function qs(doc, name) {
+    try {
+      var s = (doc.defaultView && doc.defaultView.location && doc.defaultView.location.search) || "";
+      var m = s.match(new RegExp("[?&]" + name + "=([^&]*)"));
+      return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+    } catch (e) {
+      return "";
+    }
+  }
+  function watchHref(title) {
+    return "watch.html?v=" + encodeURIComponent(title || "Me at the zoo");
+  }
+  function docCreate(doc, tag) {
+    return doc.createElement(tag);
+  }
+  function renderList(listEl, list) {
+    var doc = listEl.ownerDocument;
+    var views = loadViews();
+    var i;
+    var v;
+    var cell;
+    var a;
+    var meta;
+    var n;
+    listEl.innerHTML = "";
+    if ((listEl.className || "").indexOf("yt-grid") < 0) {
+      listEl.className = ((listEl.className || "") + " yt-grid").replace(/^\s+/, "");
+    }
+    for (i = 0; i < list.length && i < 24; i++) {
+      v = list[i];
+      cell = docCreate(doc, "div");
+      cell.className = "yt-cell";
+      a = docCreate(doc, "a");
+      a.className = "yt-thumb";
+      a.href = watchHref(v.title);
+      a.setAttribute("data-yt-item", v.title);
+      a.setAttribute("title", v.title);
+      a.innerHTML =
+        "<span class='yt-thumb-play'>&#9654;</span>" +
+        "<span class='yt-thumb-label'>" +
+        esc(String(v.title || "video").slice(0, 28)) +
+        "</span>";
+      meta = docCreate(doc, "div");
+      meta.className = "yt-cell-meta";
+      n = parseInt(views[v.title], 10) || 0;
+      meta.innerHTML =
+        "<a href='" +
+        watchHref(v.title) +
+        "' class='yt-cell-title'>" +
+        esc(v.title || "") +
+        "</a>" +
+        (v.desc
+          ? "<div class='yt-cell-desc'>" + esc(String(v.desc).slice(0, 48)) + "</div>"
+          : "") +
+        "<div class='yt-cell-views'>" +
+        (n > 0 ? n + " views" : "new") +
+        "</div>";
+      cell.appendChild(a);
+      cell.appendChild(meta);
+      listEl.appendChild(cell);
+    }
+    listEl.setAttribute("data-yt-seeded", "1");
+  }
+  function findByTitle(list, title) {
+    var i;
+    for (i = 0; i < list.length; i++) {
+      if (list[i].title === title) return list[i];
+    }
+    return null;
+  }
+  function boot(doc) {
+    doc = doc || document;
+    /* Fast path: skip work when page has no YouTube hooks */
+    if (
+      !doc.querySelector(
+        "[data-yt-list], [data-yt-upload], [data-yt-title], [data-yt-like], [data-yt-channel-mine], [data-yt-player], [data-yt-views], [data-yt-play]"
+      )
+    ) {
+      return;
+    }
+
+    var list = seed();
+    var views = loadViews();
+
+    var listEl = doc.querySelector("[data-yt-list]");
+    if (listEl) renderList(listEl, list);
+
+    var form = doc.querySelector("[data-yt-upload]");
+    if (form && form.getAttribute("data-yt-bound") !== "1") {
+      form.setAttribute("data-yt-bound", "1");
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var titleInput = form.querySelector('[name="title"]');
+        var descInput = form.querySelector('[name="desc"]');
+        var title = (titleInput && titleInput.value) || "Untitled";
+        var desc = (descInput && descInput.value) || "";
+        title = String(title).replace(/^\s+|\s+$/g, "") || "Untitled";
+        var cur = load() || seed();
+        cur.unshift({ title: title, desc: desc, id: "u" + Date.now(), ts: Date.now() });
+        save(cur.slice(0, 40));
+        views = loadViews();
+        if (!views[title]) views[title] = 1;
+        saveViews(views);
+        var st = doc.querySelector("[data-yt-upload-status]");
+        if (st) {
+          var shareUrl = "http://www.youtube.com/watch?v=" + encodeURIComponent(title);
+          st.innerHTML =
+            "Upload complete — your video is on the list. " +
+            '<a href="index.html">Videos</a> · ' +
+            '<a href="' +
+            watchHref(title) +
+            '"><b>Watch</b></a> · ' +
+            '<a href="../digg/submit.html?title=' +
+            encodeURIComponent(title) +
+            "&url=" +
+            encodeURIComponent(shareUrl) +
+            '">Digg it</a> · ' +
+            '<a href="../reddit/submit.html?title=' +
+            encodeURIComponent(title) +
+            "&url=" +
+            encodeURIComponent(shareUrl) +
+            '">reddit</a>';
+        }
+        form.reset();
+        var homeList = doc.querySelector("[data-yt-list]");
+        if (homeList) renderList(homeList, cur);
+      });
+    }
+
+    var titleEl = doc.querySelector("[data-yt-title]");
+    var watchTitle = "Me at the zoo";
+    if (titleEl) {
+      var fromQ = qs(doc, "v");
+      if (fromQ) {
+        titleEl.textContent = fromQ;
+        watchTitle = fromQ;
+      } else if (!titleEl.textContent || !String(titleEl.textContent).replace(/\s/g, "").length) {
+        titleEl.textContent = watchTitle;
+      } else {
+        watchTitle = titleEl.textContent;
+      }
+      /* count a view when opening watch page (once per page load; bootOnce guards re-entry) */
+      if (doc.querySelector("[data-yt-player]") || doc.querySelector("[data-yt-views]")) {
+        views[watchTitle] = (parseInt(views[watchTitle], 10) || 0) + 1;
+        saveViews(views);
+      }
+    }
+
+    var vEl = doc.querySelector("[data-yt-views]");
+    if (vEl) {
+      var base = parseInt(vEl.getAttribute("data-yt-base") || vEl.textContent, 10) || 0;
+      var stored = parseInt(views[watchTitle], 10) || 0;
+      /* show max of base lore and stored so counter always moves with likes */
+      vEl.textContent = String(Math.max(base, stored));
+      vEl.setAttribute("data-yt-base", String(base));
+    }
+
+    var like = doc.querySelector("[data-yt-like]");
+    if (like && like.getAttribute("data-yt-bound") !== "1") {
+      like.setAttribute("data-yt-bound", "1");
+      like.addEventListener("click", function () {
+        var v = doc.querySelector("[data-yt-views]");
+        var n = v ? parseInt(v.textContent, 10) || 0 : 0;
+        n += 1;
+        if (v) v.textContent = String(n);
+        views = loadViews();
+        views[watchTitle] = n;
+        saveViews(views);
+        var cur = load();
+        if (cur) {
+          var row = findByTitle(cur, watchTitle);
+          if (row) {
+            row.views = n;
+            save(cur);
+          }
+        }
+        var st = doc.querySelector("[data-yt-status]");
+        if (st) st.textContent = "Rated · " + n + " views (saved in this browser).";
+      });
+    }
+
+    /* Flash player theater — play/pause + progress (no real stream) */
+    var player = doc.querySelector("[data-yt-player]");
+    if (player && player.getAttribute("data-yt-player-bound") !== "1") {
+      player.setAttribute("data-yt-player-bound", "1");
+      var playing = false;
+      var pct = 0;
+      var timer = null;
+      function paintPlayer() {
+        var fill = Math.max(0, Math.min(100, pct));
+        player.innerHTML =
+          "<div class='yt-player-stage'>" +
+          "<div class='yt-player-big'>" +
+          (playing ? "▌▌" : "▶") +
+          "</div>" +
+          "<div class='yt-player-caption'>" +
+          (playing ? "Buffering / playing (Flash)…" : "Click to play · Flash player") +
+          "</div>" +
+          "</div>" +
+          "<div class='yt-player-bar' data-yt-progress>" +
+          "<div class='yt-player-bar-fill' style='width:" +
+          fill +
+          "%'></div>" +
+          "<span class='yt-player-bar-label'>" +
+          fill +
+          "%</span>" +
+          "</div>";
+      }
+      function tick() {
+        if (!playing) return;
+        pct = Math.min(100, pct + 2);
+        paintPlayer();
+        if (pct >= 100) {
+          playing = false;
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+          var stDone = doc.querySelector("[data-yt-status]");
+          if (stDone) stDone.textContent = "Finished — share the URL or rate it.";
+        }
+      }
+      paintPlayer();
+      player.style.cursor = "pointer";
+      player.setAttribute("role", "button");
+      player.setAttribute("tabindex", "0");
+      player.setAttribute("title", "Play / pause");
+      function togglePlay() {
+        playing = !playing;
+        if (playing) {
+          if (pct >= 100) pct = 0;
+          if (timer) clearInterval(timer);
+          timer = setInterval(tick, 160);
+          /* count a view on first play this load */
+          if (player.getAttribute("data-yt-played") !== "1") {
+            player.setAttribute("data-yt-played", "1");
+            views = loadViews();
+            views[watchTitle] = (parseInt(views[watchTitle], 10) || 0) + 1;
+            saveViews(views);
+            var vEl2 = doc.querySelector("[data-yt-views]");
+            if (vEl2) {
+              var curN = parseInt(vEl2.textContent, 10) || 0;
+              vEl2.textContent = String(Math.max(curN, views[watchTitle]));
+            }
+          }
+          var stP = doc.querySelector("[data-yt-status]");
+          if (stP) stP.textContent = "Playing… (broadband / Flash lore)";
+        } else {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+          var stPa = doc.querySelector("[data-yt-status]");
+          if (stPa) stPa.textContent = "Paused.";
+        }
+        paintPlayer();
+      }
+      player.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        togglePlay();
+      });
+      player.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " ") {
+          ev.preventDefault();
+          togglePlay();
+        }
+      });
+      var playBtn = doc.querySelector("[data-yt-play]");
+      if (playBtn && playBtn.getAttribute("data-yt-bound") !== "1") {
+        playBtn.setAttribute("data-yt-bound", "1");
+        playBtn.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          togglePlay();
+        });
+      }
+    }
+
+    /* Vote trail bridges — real submit handoff to Digg / Reddit */
+    var bridges = doc.querySelector("[data-yt-share-bridges]");
+    if (bridges) {
+      var shareUrl =
+        "http://www.youtube.com/watch?v=" + encodeURIComponent(watchTitle || "Me at the zoo");
+      var shareTitle = watchTitle || "Me at the zoo";
+      bridges.innerHTML =
+        "<b>Share / vote this clip</b> — " +
+        '<a href="../digg/submit.html?title=' +
+        encodeURIComponent(shareTitle) +
+        "&url=" +
+        encodeURIComponent(shareUrl) +
+        '">Submit to Digg</a> · ' +
+        '<a href="../reddit/submit.html?title=' +
+        encodeURIComponent(shareTitle) +
+        "&url=" +
+        encodeURIComponent(shareUrl) +
+        '">Submit to Reddit</a> · ' +
+        '<a href="../delicious/index.html?url=' +
+        encodeURIComponent(shareUrl) +
+        "&title=" +
+        encodeURIComponent(shareTitle) +
+        '&tags=video+youtube">Save on del.icio.us</a>';
+    }
+
+    /* channels: your uploads block */
+    var ch = doc.querySelector("[data-yt-channel-mine]");
+    if (ch) {
+      var mine = list.filter(function (v) {
+        return v.id && String(v.id).charAt(0) === "u";
+      });
+      if (!mine.length) {
+        ch.innerHTML = "<font size='2' color='#666'>No session uploads yet — use Upload.</font>";
+      } else {
+        var html = "";
+        var mi;
+        for (mi = 0; mi < mine.length; mi++) {
+          html +=
+            "<div><a href='" +
+            watchHref(mine[mi].title) +
+            "'>" +
+            mine[mi].title +
+            "</a></div>";
+        }
+        ch.innerHTML = html;
+      }
+    }
+  }
+  function register() {
+    if (!ITT.ImmersionFeatures || !ITT.ImmersionFeatures.registerLocal) {
+      setTimeout(register, 20);
+      return;
+    }
+    ITT.ImmersionFeatures.registerLocal({ id: "youtube", boot: boot });
+  }
+  register();
 })(typeof window !== "undefined" ? window : this);

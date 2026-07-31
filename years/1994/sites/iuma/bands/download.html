@@ -17,11 +17,11 @@ Netscape is launching an external helper application for:
 <p><tt>audio/x-mpeg &nbsp; · &nbsp; <span id="fname">track.mp2</span></tt></p>
 
 <div data-iuma-player
-  data-audio-src="../../../../../assets/audio/demo-track.wav"
-  data-player-mode="download"
-  data-size-mb="2.1"
-  data-autoplay="0"
-  id="player-root">
+ data-audio-src="../../../../../assets/audio/demo-track.wav"
+ data-player-mode="download"
+ data-size-mb="2.1"
+ data-autoplay="0"
+ id="player-root">
 
 <table border="2" cellpadding="10" cellspacing="0" bgcolor="#C0C0C0" width="440">
 <tr><td>
@@ -60,27 +60,27 @@ Receiving
 
 <script>
 (function () {
-  var params = {};
-  try {
-    var q = location.search.replace(/^\?/, "").split("&");
-    for (var i = 0; i < q.length; i++) {
-      var p = q[i].split("=");
-      if (p[0]) params[decodeURIComponent(p[0])] = decodeURIComponent((p[1] || "").replace(/\+/g, " "));
-    }
-  } catch (e) {}
-  var track = params.track || "Demo Track";
-  var band = params.band || "IUMA";
-  var play = params.play === "1";
-  var name = band + "-" + track.replace(/\s+/g, "_") + ".mp2";
-  var el = document.getElementById("fname");
-  var el2 = document.getElementById("fname2");
-  if (el) el.textContent = name;
-  if (el2) el2.textContent = name;
-  document.title = "IUMA — " + track;
-  var h = document.getElementById("headline");
-  if (h) h.textContent = play ? "Play: " + track : "Download: " + track;
-  var root = document.getElementById("player-root");
-  if (root && play) root.setAttribute("data-autoplay", "1");
+ var params = {};
+ try {
+ var q = location.search.replace(/^\?/, "").split("&");
+ for (var i = 0; i < q.length; i++) {
+ var p = q[i].split("=");
+ if (p[0]) params[decodeURIComponent(p[0])] = decodeURIComponent((p[1] || "").replace(/\+/g, " "));
+ }
+ } catch (e) {}
+ var track = params.track || "Demo Track";
+ var band = params.band || "IUMA";
+ var play = params.play === "1";
+ var name = band + "-" + track.replace(/\s+/g, "_") + ".mp2";
+ var el = document.getElementById("fname");
+ var el2 = document.getElementById("fname2");
+ if (el) el.textContent = name;
+ if (el2) el2.textContent = name;
+ document.title = "IUMA — " + track;
+ var h = document.getElementById("headline");
+ if (h) h.textContent = play ? "Play: " + track : "Download: " + track;
+ var root = document.getElementById("player-root");
+ if (root && play) root.setAttribute("data-autoplay", "1");
 })();
 </script>
 <script src="../../../../../js/immersion.js"></script>

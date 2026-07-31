@@ -1,40 +1,40 @@
-# 2005 assets
+# 2005 period assets — on-disk provenance
 
-**Status:** Pre-build. No production harvests yet.
+**Date:** 2026-07-28 (Phase 9 residual close)  
+**Tree:** `assets/period/2005/**`  
+**Legal:** Educational reconstruction only. Trademarks belong to their owners.
 
-## Planned folders
-```
-assets/period/2005/
-  chrome/     # XP/IE6 continuity (copy from 2004 until authentic pack)
-  xp/
-  youtube/
-  maps/
-  reddit/
-  digg/
-  facebook/
-  google/     # continuity
-  yahoo/
-  amazon/
-  myspace/
-  flickr/
-```
+## Honesty policy
 
-## Rules
-1. Copy shell chrome from `assets/period/2004/` only as **bootstrap** — log in CAPTURE-LOG.  
-2. Signature 2005 brands (YouTube, Maps, Reddit, Digg) require **dated** WA/WDM provenance before claiming authenticity.  
-3. Quarantine modern CDN logos under `_nonauthentic_do_not_use/`.  
-4. Prefer HTML/CSS reconstruction over fake GIFs when harvest fails (document in CAPTURE-LOG).
+| Tag | Meaning |
+|-----|---------|
+| **WA** | Dated Wayback harvest |
+| **CONTINUITY** | Copy forward from `assets/period/2004` (or earlier) |
+| **RECON** | Generated / schematic — do not claim archive pixels |
+| **WA→GIF** | Archive PNG converted for `logo.gif` wire-up; originals retained |
 
-## Banned assets
-- Modern YouTube Material / Shorts UI  
-- Chrome browser chrome  
-- Twitter bird  
-- iPhone Safari chrome as default  
-- Open-registration Facebook product art from 2010s  
+## P0 signature brands (Phase 9)
 
+| Brand | Files | Provenance |
+|-------|-------|------------|
+| **youtube** | `logo-wa.gif` / `logo.gif` | **WA** mid/late 2005 `logo_sm.gif` (rebuild + re-fetch match 2026-07-28) |
+| **maps** | `logo-wa.gif` / `google-logo-wa.gif` / `logo.gif` | **WA** Google wordmark as Maps mark (2005 Maps often shares Google branding) |
+| **reddit** | `logo-wa.png` / `logo.gif` | **WA** header/spreddit era · GIF for HTML |
+| **digg** | `logo-wa.gif` / `logo.gif` · `comments-wa.gif` | **WA** digg.com/img/logo.gif · comments icon WA 20050617 |
+| **facebook** | `logo-wa.gif` + left/right JPEGs | **WA/CONTINUITY** Thefacebook era (may match 2004 digest) |
 
+## Continuity / other
 
-## Reconstruction placeholders (2026-07-24 rework)
+| Class | Notes |
+|-------|--------|
+| chrome / xp | CONTINUITY from 2004 · XP Start GUIdebook chain |
+| gmail · flickr · firefox · amazon smile · myspace · … | CONTINUITY from 2004 packs |
+| `*-recon.gif` | Residual schematic kept beside WA |
 
-youtube maps reddit digg — logo-recon.gif RECON placeholders 2026-07-24
-Do not claim WA harvest. Swap when CAPTURE-LOG crops land.
+## Companion
+
+- **Full map (sources · extracts · rooms · hooks · residual):** [`ARTIFACTS-MAP.md`](ARTIFACTS-MAP.md)  
+- CAPTURE: [`CAPTURE-LOG.md`](CAPTURE-LOG.md)  
+- Museum: [`docs/2005-MUSEUM-GRADE.md`](../../2005-MUSEUM-GRADE.md)  
+- Residual audit: [`docs/2005-DEEP-RESEARCH-AUDIT-2026-07-30.md`](../../2005-DEEP-RESEARCH-AUDIT-2026-07-30.md)  
+- Plan: [`docs/TO-100-PERCENT/YEAR-2005.md`](../../TO-100-PERCENT/YEAR-2005.md)

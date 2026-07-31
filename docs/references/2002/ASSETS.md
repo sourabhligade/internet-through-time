@@ -1,22 +1,31 @@
 # 2002 period assets — provenance
 
-**Status:** MVP + densify pass 2026-07-23 (crafted GIFs + 2001 pack continuity).
+**Status:** Phase **9 densify complete 2026-07-26** · continuity + RECON pack  
+**Companions:** [`ARTIFACTS.md`](ARTIFACTS.md) · [`CAPTURE-LOG.md`](CAPTURE-LOG.md) · `assets/period/2002/README-PIXELS.txt`
 
-| Path | Method | Notes |
-|------|--------|-------|
-| `xp/start.gif`, `xp/taskbar.gif` | PIL Luna-style | Green start + blue bar |
-| `win98/start.gif` | Copy of xp/start | Shell compatibility |
-| `chrome/btn-*.gif`, `throbber.gif` | PIL IE6 bevel | 32×32 |
-| `friendster/logo.gif`, `avatar.gif` | PIL | Orange brand + face |
-| `kazaa/logo.gif` | PIL | Green Media Desktop |
-| `movabletype/logo.gif` | PIL | Wordmark |
-| `wired/logo.gif` | PIL | Black/red WIRED |
-| `mtv/logo.gif` | PIL | Multicolor MTV |
-| `daypop/logo.gif` | PIL | Blue/gold |
-| `technorati/logo.gif` | PIL | Cosmos-era mark |
-| `googlenews/logo.gif` | PIL | Google + News |
-| `mozilla/logo.gif`, `phoenix/logo.gif` | PIL | Open browser subplot |
-| `amazon/*`, `google/*`, `yahoo/*`, `ebay/*`, `blogger/*` | Copied from 2001 pack | Continuity |
+## Continuity (from `assets/period/2001/`)
 
-## Banned
-MySpace default, iTunes Store, Facebook, WordPress default, Firefox final brand, streaming Netflix
+| Brands | Notes |
+|--------|--------|
+| `amazon/*` smile set | Correct for 2002 |
+| `google/*`, `yahoo/*`, `blogger/*`, `ebay/*` | Continuity + some harvest logos |
+| `chrome/btn-*.gif` | RECON IE6-style bevel buttons |
+| `xp/*` | RECON Luna-inspired Start/taskbar (Phase 9 redraw) |
+| `cnn`, `wikipedia`, `mozilla`, `napster`, … | Continuity |
+
+## RECON brand marks (Phase 9)
+
+Schematic wordmarks for offline museum — **not** Wayback harvests:
+
+`friendster` · `kazaa` · `wired` · `mtv` · `daypop` · `technorati` · `googlenews` · `phoenix` · `movabletype` · `netflix` · `steam` · `lastfm` · `isp` · `apple/ipod-gen2-recon.gif`
+
+## Harvest upgrades still optional
+
+True GUIdebook WinXP screenshot crops · evolt IE6 VM toolbar · clean Friendster CDX GIFs when archive allows.
+
+## Banned claims
+
+Do not claim RECON files are authentic archive captures.
+
+---
+*Phase 9 densify 2026-07-26.*

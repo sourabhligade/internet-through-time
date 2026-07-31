@@ -16,6 +16,14 @@
    python3 scripts/smoke-production.py --base http://127.0.0.1:8080
    npx playwright test
    ```
+   Fast multi-year + per-scenario real-flow gates:
+   ```bash
+   npm run test:e2e:cross-year      # multi-year product matrix
+   npm run test:e2e:scenarios      # one test per interactive scenario
+   npm run test:e2e:real-gates     # both
+   ```
+   Plan: `docs/CROSS-YEAR-REAL-FLOWS-EXECUTION.md`  
+   CI: job **Playwright cross-year real flows (fast gate)** runs both suites + full e2e job.
 2. Tag a museum release:
    ```bash
    git tag -a v0.3.0-museum -m "1994–1997 museum + production pack"

@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Checkout</title>
-<link rel="stylesheet" href="../../../../css/period-1996.css"></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Secure Checkout — Amazon.com</title>
+<link rel="stylesheet" href="../../../../css/period-1996.css">
+</head>
 <body bgcolor="#FFFFFF" data-checkout>
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="100%" bgcolor="#C0C0C0" cellpadding="4"><tr>
+<td><a href="index.html"><img src="../../../../assets/period/1995/amazon/logo.gif" width="160" height="65" border="0" alt="amazon.com"></a></td>
+<td align="right"><font size="2">
+<a href="cart.html">cart</a> (<span data-cart-count>0</span>) ·
+<a href="checkout.html">checkout</a>
+</font></td></tr></table>
 <h1>Secure Checkout</h1>
-<p><font size="2">You are about to enter a secure document. Information is encrypted using SSL (simulated).</font></p>
-<div>
+<p><font size="2" color="#006600">You are about to enter a secure document. Information is encrypted using SSL (simulated). No real payment is processed.</font></p>
+<table width="100%" cellpadding="8"><tr>
+<td width="55%" valign="top">
+<form data-checkout-form>
+<p><b>Ship to</b></p>
+Name: <input name="name" size="35" required><br>
+Address: <input name="addr" size="40"><br>
+Email: <input name="email" size="30"><br>
+<p><b>Payment</b> (theater)</p>
+Card #: <input name="cc" size="20" value="4111-xxxx-xxxx-1111"><br>
+Exp: <input name="exp" size="8" value="12/98">
+<p><input type="submit" value="Place your order"></p>
+</form>
+</td>
+<td valign="top" bgcolor="#FFFFEE">
+<b>Order summary</b>
 <ul data-checkout-list></ul>
 <p>Total: <b data-checkout-total>$0.00</b></p>
-<form data-checkout-form>
-Name: <input name="name" size="30"><br>
-Card #: <input name="cc" size="20" placeholder="****-****-****-****"><br>
-<input type="submit" value="Place your order">
-</form>
-</div>
+<p><font size="2">Associates Program referrals still earn 8% in 1996 lore.</font></p>
+</td>
+</tr></table>
+<p><a href="cart.html">Back to cart</a></p>
 <script src="../../../../js/immersion-1996.js"></script>
-</body></html>
+</body>
+</html>

@@ -142,7 +142,7 @@ function initHomestead() {
       created: new Date().toLocaleString()
     };
     saveJSON(storageKey("homestead"), hs);
-    showFlash("✓ Homestead filed: <b>" + escapeHtml(neighborhood) + "/" + escapeHtml(number) + "</b>");
+    showFlash("Homestead claimed: <b>" + escapeHtml(neighborhood) + "/" + escapeHtml(number) + "</b>");
     location.href = R("sites/geocities/my-homestead.html");
   };
 }

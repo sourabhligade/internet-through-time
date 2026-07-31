@@ -1,0 +1,20 @@
+# Internet Explorer 7 — Oct 18, 2006
+# Sources:
+#   https://news.microsoft.com/source/2006/10/18/microsoft-releases-windows-internet-explorer-7-for-windows-xp/
+#   https://www.webdesignmuseum.org/software/internet-explorer-7-0-in-2006
+#   Wikipedia Internet Explorer 7
+# Visited: 2026-07-31
+
+LOCKED FACTS:
+- Public release: October 18, 2006
+- Available for Windows XP (SP2 class) · default browser story on Vista
+- First major IE version since IE6
+- Features period press: tabbed browsing · phishing filter · improved CSS · RSS feeds in browser
+
+EXHIBIT:
+- sites/microsoft/ie7.html or firefox-adjacent download room
+- Shell DEFAULT remains XP + IE6 for most of 2006
+- IE7 is late-year product story, not year-long default chrome
+
+BAN:
+- Do not make IE7 the only shell for entire 2006 immersion

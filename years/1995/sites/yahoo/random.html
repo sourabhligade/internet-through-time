@@ -22,15 +22,15 @@
 <p><a href="random.html"><b>Shuffle again</b></a></p>
 <script>
 (function(){
-  var ul=document.getElementById('rlist');
-  var items=[].slice.call(ul.getElementsByTagName('li'));
-  for(var i=items.length-1;i>0;i--){
-    var j=Math.floor(Math.random()*(i+1));
-    ul.appendChild(items[j]);
-    items=[].slice.call(ul.getElementsByTagName('li'));
-  }
-  var first=ul.getElementsByTagName('li')[0];
-  if(first) first.innerHTML='<b>→ '+first.innerHTML+'</b>';
+ var ul=document.getElementById('rlist');
+ var items=[].slice.call(ul.getElementsByTagName('li'));
+ for(var i=items.length-1;i>0;i--){
+ var j=Math.floor(Math.random()*(i+1));
+ ul.appendChild(items[j]);
+ items=[].slice.call(ul.getElementsByTagName('li'));
+ }
+ var first=ul.getElementsByTagName('li')[0];
+ if(first) first.innerHTML='<b>→ '+first.innerHTML+'</b>';
 })();
 </script>
 <script src="../../../../js/immersion-1995.js"></script>

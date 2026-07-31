@@ -68,12 +68,14 @@
       var era = periodEra();
       var face = periodFace();
       var titleBg = periodTitleBg();
-      var dismiss = '<a href="#" id="itt-flash-dismiss"><font size="1" color="#0000ee">[dismiss]</font></a>';
-      if (era === "early") {
+      /* Period system note — never brand the flash as "Internet Through Time" on content pages */
+      var dismiss = '<a href="#" id="itt-flash-dismiss"><font size="1" color="#0000ee">[OK]</font></a>';
+      if (era === "early" || era === "nav") {
+        /* 1994–97: yellow browser/system note (no museum title bar) */
         el.innerHTML =
-          '<table width="100%" cellpadding="4" cellspacing="0" border="1" bordercolor="#808080" bgcolor="#FFFFCC">' +
-          "<tr><td><font face=\"" + face + "\" size=\"2\">" + html + " &nbsp; " + dismiss +
-          "</font></td></tr></table>";
+          '<table width="100%" cellpadding="4" cellspacing="0" border="1" bordercolor="#808080" bgcolor="#FFFFCC" class="itt-flash-period">' +
+          "<tr><td><font face=\"" + face + "\" size=\"2\" color=\"#000000\">" + html +
+          " &nbsp; " + dismiss + "</font></td></tr></table>";
       } else if (era === "web2") {
         /* XP info bar — not a soft Material toast */
         el.innerHTML =
@@ -81,11 +83,13 @@
           '<tr><td style="padding:6px 8px;font-family:Tahoma,Arial,sans-serif;font-size:11px;color:#000">' +
           html + " &nbsp; " + dismiss + "</td></tr></table>";
       } else {
-        /* Win9x / IE dialog strip */
+        /* Win9x / IE status strip — period product title, not museum name */
+        var y = parseInt(YEAR, 10) || 1999;
+        var flashTitle = y <= 1998 ? "Netscape" : y <= 2001 ? "Microsoft Internet Explorer" : "Message";
         el.innerHTML =
           '<table width="100%" cellpadding="0" cellspacing="0" border="0" class="itt-flash-win" style="border:2px solid;border-color:#fff #808080 #808080 #fff;background:#c0c0c0">' +
           '<tr bgcolor="' + titleBg + '"><td style="padding:2px 6px"><font face="' + face +
-          '" size="1" color="#ffffff"><b>Internet Through Time</b></font></td>' +
+          '" size="1" color="#ffffff"><b>' + flashTitle + "</b></font></td>" +
           '<td align="right" style="padding:2px 4px">' + dismiss + "</td></tr>" +
           '<tr><td colspan="2" style="padding:8px;background:#c0c0c0"><font face="' + face +
           '" size="2" color="#000">' + html + "</font></td></tr></table>";
@@ -137,9 +141,8 @@
           if (!done[s.id]) {
             done[s.id] = true;
             changed = true;
-            if (s.doneMessage) {
-              showFlash("✓ Tour: " + escapeHtml(s.doneMessage));
-            }
+            /* Quiet progress — no flash on mere visit (tour table updates on Starting Point).
+               Action flows (cart, bid, mail) still flash from their own handlers. */
           }
         }
       }
@@ -161,29 +164,32 @@
         var s = steps[i];
         var ok = !!done[s.id];
         if (ok) nDone++;
-        var mark = ok ? "✓" : String(i + 1);
-        var bg = ok ? "#E8FFE8" : "#E0E0E0";
+        /* Period checklist: asterisk, not a modern checkmark glyph */
+        var mark = ok ? "*" : String(i + 1);
+        var bg = ok ? "#E8FFE8" : "#F0F0F0";
         rows +=
           '<tr bgcolor="' + bg + '">' +
-          '<td width="8%" align="center"><font size="3"><b>' + mark + "</b></font></td>" +
-          "<td>" +
+          '<td width="8%" align="center"><font size="2"><b>' + mark + "</b></font></td>" +
+          "<td><font size=\"2\">" +
           (ok
-            ? "<font color=\"#006600\"><b>" + escapeHtml(s.label) + "</b></font> — done"
+            ? "<font color=\"#006600\"><b>" + escapeHtml(s.label) + "</b></font> — visited"
             : '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a>" +
               (s.hint ? " — " + s.hint : "")) +
-          "</td></tr>";
+          "</font></td></tr>";
       }
       var allDone = nDone === steps.length && steps.length > 0;
       host.innerHTML =
-        '<table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#808080" class="itt-tour-table">' +
-        '<tr bgcolor="#000080"><td colspan="2"><font color="#FFFF00"><b>★ Suggested tour</b></font> ' +
-        '<font color="#AACCFF" size="2">(' + nDone + "/" + steps.length + " complete)</font></td></tr>" +
+        '<table width="100%" border="1" cellpadding="6" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#808080" class="itt-tour-table">' +
+        '<tr bgcolor="#000080"><td colspan="2"><font color="#FFFF00" size="2"><b>Places to try</b></font> ' +
+        '<font color="#AACCFF" size="1">(' + nDone + "/" + steps.length + ")</font></td></tr>" +
         rows +
         (allDone
           ? '<tr bgcolor="#FFFFCC"><td colspan="2"><font size="2"><b>Tour complete!</b> ' +
-            escapeHtml(config.tourCompleteHint || "Try the Location bar — type a site name and press Enter. Or open Favorites.") +
+            escapeHtml(config.tourCompleteHint || "Try the Location bar — type a site name and press Enter. Or open Bookmarks / Favorites.") +
             "</font></td></tr>"
-          : "") +
+          : '<tr bgcolor="#FFFFEE"><td colspan="2"><font size="1" color="#333333">' +
+            "Click a link below, explore the site, then come back here — visited places light up." +
+            "</font></td></tr>") +
         "</table>";
       host.style.display = "block";
     }
@@ -239,11 +245,11 @@
       }
       if (!lines.length) {
         host.innerHTML =
-          '<font size="2" color="#666666"><i>No activity yet — complete a tour step to leave a trail here.</i></font>';
+          '<font size="2" color="#666666"><i>No activity yet — cart, bids, and guestbooks show up here.</i></font>';
         return;
       }
       host.innerHTML =
-        "<b>Your activity this session</b><ul><li>" + lines.join("</li><li>") + "</li></ul>";
+        "<b>This session</b><ul><li>" + lines.join("</li><li>") + "</li></ul>";
     }
 
     /* ---------- Hit counters ---------- */
@@ -287,49 +293,64 @@
       if (!config.nav || !config.nav.length) return;
       if (document.getElementById("itt-exhibit-nav")) return;
       var here = location.pathname || "";
+      /* Starting Point already has dirbar + destinations + tour —
+         skip the navy strip on home for all years (avoids triple-nav).
+         Site pages still get the wayfinding bar. */
+      var onHome = here.indexOf("/pages/home") !== -1;
+      var skipBar = onHome;
+
       function active(frag) {
         return here.indexOf(frag) !== -1 ? " itt-nav-on" : "";
       }
-      var links = [];
-      for (var i = 0; i < config.nav.length; i++) {
-        var item = config.nav[i];
-        links.push(
-          '<a class="itt-nav' + active(item.match || item.href) + '" href="' +
-            R(item.href) + '"><font color="#FFFF99">' + escapeHtml(item.label) + "</font></a>"
-        );
-      }
-      var bar = document.createElement("div");
-      bar.id = "itt-exhibit-nav";
-      bar.innerHTML =
-        '<table width="100%" cellpadding="3" cellspacing="0" border="0" bgcolor="#000080">' +
-        "<tr><td>" +
-        '<font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">' +
-        "<b>" + escapeHtml(YEAR) + "</b>&nbsp;" +
-        links.join(" · ") +
-        "</font></td>" +
-        '<td align="right" nowrap><font face="Arial" size="1" color="#99CCFF">' +
-        escapeHtml(config.navSubtitle || "") +
-        ' · <a href="' + R("pages/home.html") + '"><font color="#FFFFFF"><b>Start</b></font></a>' +
-        ' · <a href="#" id="itt-exit-link"><font color="#FFCCCC">Exit</font></a>' +
-        "</font></td></tr></table>";
-      var slot = document.getElementById("itt-nav-slot");
-      if (slot) {
-        slot.innerHTML = "";
-        slot.appendChild(bar);
-        slot.setAttribute("aria-hidden", "false");
-      } else if (document.body.firstChild) {
-        document.body.insertBefore(bar, document.body.firstChild);
+
+      if (!skipBar) {
+        var links = [];
+        for (var i = 0; i < config.nav.length; i++) {
+          var item = config.nav[i];
+          var on = active(item.match || item.href);
+          /* Site directory strip — wayfinding only, not a museum badge */
+          links.push(
+            '<a class="itt-nav' + on + '" href="' + R(item.href) + '">' +
+              '<font color="' + (on ? "#FFFFFF" : "#FFFF99") + '">' +
+              escapeHtml(item.label) + "</font></a>"
+          );
+        }
+        var bar = document.createElement("div");
+        bar.id = "itt-exhibit-nav";
+        /* Right side: era subtitle only (first nav link is already Start/Home) */
+        var right = escapeHtml(config.navSubtitle || "");
+        if (!right) {
+          right =
+            '<a href="' + R("pages/home.html") + '"><font color="#FFFFFF">Home</font></a>';
+        }
+        bar.innerHTML =
+          '<table width="100%" cellpadding="3" cellspacing="0" border="0" bgcolor="#000080">' +
+          "<tr><td>" +
+          '<font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">' +
+          links.join(" &nbsp;|&nbsp; ") +
+          "</font></td>" +
+          '<td align="right" nowrap><font face="Arial, Helvetica, sans-serif" size="1" color="#99CCFF">' +
+          right +
+          "</font></td></tr></table>";
+        var slot = document.getElementById("itt-nav-slot");
+        if (slot) {
+          slot.innerHTML = "";
+          slot.appendChild(bar);
+          slot.setAttribute("aria-hidden", "false");
+        } else if (document.body.firstChild) {
+          document.body.insertBefore(bar, document.body.firstChild);
+        } else {
+          document.body.appendChild(bar);
+        }
       } else {
-        document.body.appendChild(bar);
-      }
-      var exitA = document.getElementById("itt-exit-link");
-      if (exitA) {
-        exitA.onclick = function (e) {
-          e.preventDefault();
-          var path = location.pathname || "";
-          var yi = path.indexOf("/years/");
-          window.top.location.href = yi !== -1 ? path.slice(0, yi) + "/index.html" : "../../index.html";
-        };
+        /* Collapse reserved navy slot on Starting Point */
+        var emptySlot = document.getElementById("itt-nav-slot");
+        if (emptySlot) {
+          emptySlot.style.minHeight = "0";
+          emptySlot.style.margin = "0";
+          emptySlot.style.background = "transparent";
+          emptySlot.setAttribute("aria-hidden", "true");
+        }
       }
 
       if (config.footerNav && config.footerNav.length && !document.getElementById("itt-exhibit-foot")) {
@@ -339,6 +360,14 @@
         for (var f = 0; f < config.footerNav.length; f++) {
           fl.push('<a href="' + R(config.footerNav[f].href) + '">' + escapeHtml(config.footerNav[f].label) + "</a>");
         }
+        /* Standalone (not inside desktop iframe): offer return to year menu / hub */
+        try {
+          if (window.self === window.top) {
+            var yi = (location.pathname || "").indexOf("/years/");
+            var hub = yi !== -1 ? location.pathname.slice(0, yi) + "/index.html" : "../../../index.html";
+            fl.push('<a href="' + hub + '" id="itt-year-menu-link">Year menu</a>');
+          }
+        } catch (eTop) { /* */ }
         foot.innerHTML = '<hr><p align="center"><font size="2">' + fl.join(" · ") + "</font></p>";
         document.body.appendChild(foot);
       }
@@ -436,7 +465,7 @@
             '<tr><td style="padding:10px 12px;background:#ffffff">' +
             '<font face="Tahoma,Arial,sans-serif" size="2" color="#000">' + bodyHtml + "</font></td></tr>" +
             '<tr bgcolor="#ece9d8"><td style="padding:6px 8px;text-align:right;border-top:1px solid #aca899">' +
-            '<font size="1" color="#666">Windows XP · File Download (exhibit)</font></td></tr></table>'
+            '<font size="1" color="#666">File Download</font></td></tr></table>'
           );
         }
         /* win9x / nav / ie6 — File Download dialog grammar */
@@ -569,7 +598,7 @@
           (era === "win9x" || era === "ie6"
             ? "<b>Saving:</b> " + escapeHtml(file) + " from the Internet<br>" +
               "<font size=\"1\">" + escapeHtml(product) + " · " + sizeMb + " MB class · " + escapeHtml(speedLine) + "</font><br><br>" +
-              "Estimated time left: ~" + estMin + " min (sped up for exhibit)<br><br>" +
+              "Estimated time left: ~" + estMin + " min<br><br>" +
               '<div data-itt-dl-blocks>' + graphicBar(0) + "</div>"
             : era === "web2"
             ? "Getting <b>" + escapeHtml(file) + "</b>…<br>" +
@@ -721,7 +750,7 @@
         if (el.getAttribute("data-itt-download") != null) return;
         var msg = el.getAttribute("data-itt-theater") ||
           (el.form && el.form.getAttribute("data-itt-theater")) ||
-          "Done (museum theater).";
+          "Done.";
         var panelSel = el.getAttribute("data-itt-panel") ||
           (el.form && el.form.getAttribute("data-itt-panel"));
         if (panelSel) {

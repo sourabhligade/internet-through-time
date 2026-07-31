@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Wayback Machine — Internet Archive</title>
+<link rel="stylesheet" href="../../../../css/period-2005.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000cc">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="600" align="center" cellpadding="12"><tr><td>
+<font face="Arial" size="2">
+<h2>The Wayback Machine</h2>
+<p>Public launch: <b>October 24, 2001</b> · Internet Archive · Brewster Kahle</p>
+<p>Enter a URL. See an earlier version. Time travel for websites —
+broken images and missing scripts included. The Web gains a <b>memory</b>.</p>
+<form onsubmit="return false;" style="margin:12px 0">
+<input type="text" size="40" value="http://www.apple.com/" id="wa-url">
+<input type="button" value="Take Me Back" id="wa-go">
+</form>
+<div id="wa-out" style="display:none;border:1px solid #999;padding:10px;background:#f8f8f8;font-size:12px"></div>
+<p style="font-size:11px;color:#555">
+FAQ honesty: some pages broken, graphics missing, sites incomplete.
+Average web page life ~100 days. Educational theater only — not a live Archive proxy.
+</p>
+<p><a href="../../pages/home.html">Starting Point</a> ·
+<a href="../wikipedia/index.html">Wikipedia</a></p>
+</font>
+</td></tr></table>
+<script>
+(function(){
+ var btn=document.getElementById("wa-go");
+ var out=document.getElementById("wa-out");
+ if(!btn)return;
+ btn.onclick=function(){
+ var u=(document.getElementById("wa-url")||{}).value||"http://example.com/";
+ out.style.display="block";
+ out.innerHTML="<b>Archived snapshot (theater)</b><br>URL: "+u.replace(/</g,"&lt;")+
+ "<br>Captured: sometime in 1996–2001<br><i>Images may be missing. Scripts may not run.</i><br>"+
+ "Try a real capture later at web.archive.org — this immersion stays offline.";
+ };
+})();
+</script>
+<script src="../../../../js/immersion-2005.js"></script>
+</body></html>

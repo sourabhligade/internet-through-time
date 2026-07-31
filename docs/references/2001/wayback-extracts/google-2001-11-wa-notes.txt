@@ -1,0 +1,19 @@
+SOURCE: https://web.archive.org/web/20011127233552id_/http://www.google.com/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: Google
+ROLE: P0 sparse search habit
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Extremely minimal home (logo + form)
+- Links: Advanced Search · Language, Display, & Filtering Options (Preferences)
+- Footer: Advertise with Us · Add Google to Your Site · Jobs, Press, Cool Stuff... (about.html)
+- ©2001 Google
+- No app grid, no Knowledge Graph, no Material logo system
+
+BUILD:
+- Search form + I'm Feeling Lucky continuity (google.js)
+- Results page sparse blue links
+- Logo: harvest logo.gif from same-era WA im_ path when available
+
+BAN: Froogle as dominant (later), Local Maps UI, Gmail, Chrome

@@ -1,0 +1,301 @@
+/* Mid-2000s announcement UI — tickers, NEW badges, news tables, welcome popups.
+   Shared by hub + games wing. Not modern toast design. */
+
+/* —— NEW / HOT / UPDATED badges (star-gif energy, pure CSS) —— */
+.ann-badge {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1px 5px;
+  margin: 0 3px 0 0;
+  vertical-align: middle;
+  border: 1px solid #000;
+  line-height: 1.3;
+  animation: ann-pulse 1.2s ease-in-out infinite alternate;
+}
+.ann-badge-new {
+  background: #f00;
+  color: #ff0;
+  border-color: #900;
+}
+.ann-badge-hot {
+  background: #ff6600;
+  color: #fff;
+  border-color: #930;
+}
+.ann-badge-upd {
+  background: #00c;
+  color: #fff;
+  border-color: #006;
+}
+.ann-badge-free {
+  background: #090;
+  color: #fff;
+  border-color: #060;
+}
+@keyframes ann-pulse {
+  from { filter: brightness(1); }
+  to { filter: brightness(1.25); }
+}
+
+/* —— Scrolling news ticker (period portal chrome) —— */
+.ann-ticker {
+  background: #000080;
+  color: #fff;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 0 10px;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.ann-ticker-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #c00;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 8px;
+  z-index: 2;
+  border-right: 1px solid #fff;
+  line-height: 24px;
+}
+.ann-ticker-inner {
+  margin-left: 64px;
+  overflow: hidden;
+  height: 100%;
+}
+.ann-ticker-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ann-scroll 32s linear infinite;
+  will-change: transform;
+}
+.ann-ticker-track:hover { animation-play-state: paused; }
+.ann-ticker a { color: #ff0; text-decoration: underline; }
+.ann-ticker .ann-badge {
+  animation: none;
+  vertical-align: baseline;
+}
+@keyframes ann-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* —— Site news / announcement table (classic yellow box) —— */
+.ann-newsbox {
+  background: #ffffcc;
+  border: 2px solid #999900;
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.ann-newsbox-head {
+  background: #cccc00;
+  color: #000;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-bottom: 1px solid #999900;
+  font-size: 12px;
+  overflow: hidden;
+}
+.ann-newsbox-head .ann-more {
+  float: right;
+  font-weight: normal;
+  font-size: 11px;
+  color: #00c;
+  text-decoration: underline;
+}
+.ann-newsbox-body {
+  padding: 8px 10px;
+  line-height: 1.45;
+}
+.ann-newsbox table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.ann-newsbox td {
+  padding: 4px 6px;
+  border-bottom: 1px dotted #bbb;
+  vertical-align: top;
+}
+.ann-newsbox tr:last-child td { border-bottom: 0; }
+.ann-date {
+  color: #666;
+  white-space: nowrap;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  width: 72px;
+}
+
+/* —— Featured spotlight (portal “game of the week”) —— */
+.ann-feature {
+  background: #fff;
+  border: 3px double #c00;
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+.ann-feature-star {
+  position: absolute;
+  top: -1px;
+  right: 8px;
+  background: #ff0;
+  color: #c00;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid #c00;
+  padding: 2px 6px;
+}
+.ann-feature h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #00c;
+}
+.ann-feature p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #222;
+}
+.ann-feature .ann-cta {
+  display: inline-block;
+  background: #0a0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 1px solid #060;
+  border-top-color: #0c0;
+  border-left-color: #0c0;
+}
+.ann-feature .ann-cta:hover { background: #0c0; }
+
+/* —— Welcome / announce popup (period modal) —— */
+.ann-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.ann-modal-backdrop.hidden { display: none !important; }
+.ann-modal {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 4px 4px 0 #000;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.ann-modal-title {
+  background: #000080;
+  color: #fff;
+  padding: 3px 6px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ann-modal-title button {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-size: 10px;
+  width: 16px;
+  height: 14px;
+  line-height: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+.ann-modal-body {
+  background: #fff;
+  margin: 8px;
+  border: 1px solid #808080;
+  padding: 12px;
+  line-height: 1.45;
+  color: #000;
+}
+.ann-modal-body h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #000080;
+}
+.ann-modal-actions {
+  padding: 0 8px 8px;
+  text-align: center;
+}
+.ann-modal-actions button,
+.ann-modal-actions .ann-ok {
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  min-width: 72px;
+  padding: 3px 14px;
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #fff #404040 #404040 #fff;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+.ann-modal-actions button:active,
+.ann-modal-actions .ann-ok:active {
+  border-color: #404040 #fff #fff #404040;
+}
+
+/* —— Under-construction / hit-counter energy strip —— */
+.ann-blink-row {
+  background: #000;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  padding: 4px 8px;
+  margin: 0 0 10px;
+  border: 1px solid #0f0;
+}
+.ann-blink {
+  animation: ann-blink 1s step-end infinite;
+}
+@keyframes ann-blink {
+  50% { opacity: 0; }
+}
+
+/* —— Hub-specific strip —— */
+.hub-ann-strip {
+  background: #ffffee;
+  border: 2px solid;
+  border-color: #dfdfdf #808000 #808000 #dfdfdf;
+  padding: 8px 10px;
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  clear: both;
+  overflow: hidden;
+}
+.hub-ann-strip a { color: #000080; font-weight: bold; }
+
+/* Hub: ticker sits inside .hub max-width */
+.hub .ann-ticker {
+  margin-top: 0;
+}

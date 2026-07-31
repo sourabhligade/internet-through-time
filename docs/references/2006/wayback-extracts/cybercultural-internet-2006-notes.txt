@@ -1,0 +1,24 @@
+# Cybercultural — What the Internet Was Like in 2006
+# Source: https://cybercultural.com/p/internet-2006/
+# Author: Richard MacManus · June 28, 2024
+# Re-read: 2026-07-31 fresh deep research
+
+## Locked beats
+- Social web breakthrough: Twitter Jul · Facebook News Feed + open Sep · Google acquires YouTube Oct
+- No smartphones, fat laptops
+- 2005 = decentralized blogosphere + social software (Flickr, delicious)
+- 2006 = big tech asserts platform power / "maturing" internet
+- Cloud: S3 Mar · SQS Jul · EC2 Aug · Bezos BusinessWeek Nov
+- Web office: Writely Mar · Google Apps for Your Domain Aug · Docs & Spreadsheets Oct
+- UGC king: Digg definitive · surpasses Slashdot · power laws (~30% front page from ~10 people)
+- Digg Sep algorithm "digging diversity" · top users backlash
+- Reddit similar ambitions but much less popular than Digg
+- RSS geeks over-index · Google Reader redesign late Sep · most people don't know RSS
+- Time "You" Person of the Year · Lev Grossman Web 2.0 · stupidity and wisdom of crowds
+- Later clear: "You" not in charge — FB/Google/Amazon platform power only beginning
+
+## Exhibit mapping
+- Thesis About 2006
+- Twitter P0 · Facebook Feed P0 · YouTube Google late P0 · Digg peak P0
+- AWS / Docs P1 platform spine
+- BAN: modern X · modern Facebook · iPhone · Chrome

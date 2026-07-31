@@ -1,0 +1,16 @@
+SOURCE: https://blog.google/products-and-platforms/products/maps/look-back-15-years-mapping-world/
+Author: Elizabeth Reid, VP Eng Google Maps · Feb 6, 2020
+FETCHED: 2026-07-30 web-expand pass
+---
+1. Google Maps born: Feb 8, 2005 launched for desktop — "get from point A to point B"
+   Original Google Blog post: https://googleblog.blogspot.com/2005/02/mapping-your-way.html
+2. Google Earth: few months later (2005)
+3. Google Maps API: mid-2005 announced for developers
+   Blog: https://googleblog.blogspot.com/2005/06/world-is-your-javascript-enabled_29.html
+   (Wikipedia: official API after reverse-engineered mashups HousingMaps / chicagocrime)
+4. Transit Trip Planner: Dec 2005 Portland first city
+5. Street View: May 29, 2007 — BAN for 2005 year
+6. Mobile Maps 2.0: Nov 2007 — BAN for 2005
+
+EXHIBIT: Lock Maps public day as February 8, 2005 (was "Feb 8-ish" / "February 2005").
+HousingMaps predates official API (April 2005 class reverse-engineer).

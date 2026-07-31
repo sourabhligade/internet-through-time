@@ -1,46 +1,67 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Profile — Thefacebook</title>
-<link rel="stylesheet" href="../../../../css/period-2004.css"></head>
-<body bgcolor="#ffffff">
+<html lang="en"><head><meta charset="utf-8">
+<title>Thefacebook — Profile</title>
+<link rel="stylesheet" href="../../../../css/period-2004.css">
+</head>
+<body class="fb-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="fb04-wrap">
-  <div class="fb04-header">
-    <b>thefacebook</b> ·
-    <a href="index.html">home</a> ·
-    <a href="profile.html">profile</a> ·
-    <a href="friends.html">friends</a> ·
-    <a href="edit.html">edit my profile</a>
+<div class="fb-card">
+ <div class="fb-top">
+  [ thefacebook ]
+  · <a href="index.html">home</a>
+  · <a href="friends.html">friends</a>
+  · <a href="networks.html">networks</a>
+  · <a href="invite.html">invite</a>
+  · <a href="about.html">about</a>
+ </div>
+ <div class="fb-body">
+ <table width="100%" cellpadding="8" cellspacing="0" border="0"><tr valign="top">
+ <td class="fb-side" width="160">
+  <div class="fb-photo">no photo</div>
+  <p style="font-size:11px;margin:4px 0">
+   <b data-fb-name>Name</b><br>
+   <span data-fb-school>School</span>
+  </p>
+  <p style="font-size:11px;margin:6px 0 0">
+   <button type="button" data-fb-add>Add to Friends</button>
+  </p>
+  <span data-fb-add-status style="display:block;font-size:10px;color:#060;margin-top:4px"></span>
+  <p style="font-size:10px;color:#666;margin-top:10px">
+   a Mark Zuckerberg production<br>Thefacebook © 2004
+  </p>
+ </td>
+ <td>
+  <h2 style="margin:0 0 6px;font-size:16px;color:#3b5998">Profile</h2>
+  <table class="fb-info-table">
+   <tr><th>Status</th><td><i data-fb-status></i></td></tr>
+   <tr><th>School</th><td><span data-fb-school>Harvard</span></td></tr>
+   <tr><th>Network</th><td>College network only</td></tr>
+   <tr><th>Account</th><td>Campus-gated · not open internet</td></tr>
+  </table>
+  <div class="fb-note">
+   You can search people at your school, find classmates, look up friends' friends,
+   and visualize your campus graph. <b>No News Feed</b> (2006). Not open registration for everyone.
   </div>
-  <br>
-  <table width="100%" cellpadding="6"><tr valign="top">
-  <td width="200" class="fb04-sidebar">
-    <div style="width:120px;height:140px;background:#c5cfe0;border:1px solid #8b9dc3;text-align:center;padding-top:50px;font-size:10px;color:#555">Profile<br>Photo</div>
-    <p><font size="1">
-    <a href="javascript:void(0)" data-fb-add>Add to Friends</a><br>
-    <a href="friends.html">View Friends</a><br>
-    <a href="edit.html">Edit Profile</a><br>
-    Send Message (theater)
-    </font></p>
-    <p><font size="1"><b>Networks:</b><br>Harvard University<br>Class of 200x</font></p>
-  </td>
-  <td class="fb04-profile">
-    <font size="2">
-    <span style="font-size:16px"><b data-fb-name>…</b></span><br>
-    <font size="1" color="#666">Student · Campus network only</font>
-    <hr size="1" color="#d8dfea">
-    <b>Status:</b> <span data-fb-status>…</span><br>
-    <b>Concentration:</b> <span data-fb-conc>…</span><br>
-    <b>Residence:</b> <span data-fb-res>…</span><br>
-    <b>Birthday:</b> show to friends (theater)<br>
-    <b>Looking for:</b> Friendship, Networking
-    <hr size="1" color="#d8dfea">
-    <b>Friends</b>
-    <div data-fb-friends></div>
-    <hr size="1" color="#d8dfea">
-    <font size="1" color="#666">Thefacebook 2004 — directory energy, not the later global product.</font>
-    </font>
-  </td>
-  </tr></table>
+  <h3 style="font-size:13px;color:#3b5998;margin:12px 0 4px">Friends</h3>
+  <ul data-fb-friends style="font-size:12px;line-height:1.6"></ul>
+  <div class="fb-edit-box">
+   <h3 style="font-size:12px;margin:0 0 6px;color:#3b5998">Edit profile</h3>
+   <form data-fb-edit style="font-size:12px">
+    Name<br><input name="name" size="28"><br><br>
+    School<br><input name="school" size="28" value="Harvard"><br><br>
+    Status<br><input name="status" size="40"><br><br>
+    <button type="submit">Save</button>
+   </form>
+   <p data-fb-save-status style="font-size:11px;color:#060"></p>
+  </div>
+  <p style="font-size:11px;margin-top:10px">
+   <a href="networks.html">Networks</a> ·
+   <a href="invite.html">Invite classmates</a> ·
+   <a href="friends.html">All friends</a>
+  </p>
+ </td>
+ </tr></table>
+ </div>
 </div>
 <script src="../../../../js/immersion-2004.js"></script>
 </body></html>

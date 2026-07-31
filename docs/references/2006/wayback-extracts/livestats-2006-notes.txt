@@ -1,0 +1,15 @@
+# Internet Live Stats — 2006 row
+# Source: https://www.internetlivestats.com/total-number-of-websites/
+# Re-visited: 2026-07-31
+
+Year (June) | Websites | Change | Internet Users | Users/site | Launches
+2006 | 85,507,314 | +32% | 1,160,335,280 | 13.6 | Twttr
+2005 | 64,780,617 | +26% | 1,027,580,990 | 16 | YouTube, Reddit
+2004 | 51,611,646 | +26% | 910,060,180 | 18 | Thefacebook, Flickr
+2007 | 121,892,559 | +43% | 1,373,327,790 | 11.3 | Tumblr
+
+EXHIBIT LABELS (use exactly):
+- ~85.5 million websites (June 2006)
+- ~1.16 billion internet users class
+- YoY site growth ~+32% from 2005
+- Chart birthmark: Twttr

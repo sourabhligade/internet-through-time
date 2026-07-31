@@ -1,6 +1,5 @@
 /**
  * Browser year stub — 2000
- * SRP: year id only; create lives in browser/create.js via browser-core.
  */
 (function () {
   "use strict";

@@ -1,0 +1,17 @@
+SOURCE: https://web.archive.org/web/20010922021000id_/https://www.mozilla.org/
+STATUS: [wa-visited] 2026-07-26 deep research pass (NEW)
+TITLE: mozilla.org
+ROLE: P1 open-source browser hope (suite bloat honesty)
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Latest milestone: Mozilla 0.9.4 (Sep 2001)
+- Download Win/Mac/Linux talkback builds
+- Nightly builds · Bugzilla 2.14 · Venkman JS debugger · MultiZilla tabs extension alpha
+- NPL/GPL/LGPL relicensing effort
+- Developer-heavy org site — not consumer Firefox product page
+- Cybercultural: IE6 more compatible with real sites; Mozilla promising but bloated
+
+BUILD:
+- Educational "download Mozilla" page; contrast IE6 monopoly
+- BAN: Firefox final brand name as 2001 product

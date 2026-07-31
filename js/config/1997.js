@@ -100,6 +100,11 @@
       "sites/pointcast/index.html": "http://www.pointcast.com/",
       "sites/icq/index.html": "http://www.icq.com/",
       "sites/icq/aim.html": "http://www.aol.com/aim/",
+      "sites/hotmail/index.html": "http://www.hotmail.com/",
+      "sites/hotmail/inbox.html": "http://www.hotmail.com/cgi-bin/inbox",
+      "sites/hotmail/compose.html": "http://www.hotmail.com/cgi-bin/compose",
+      "sites/hotmail/read.html": "http://www.hotmail.com/cgi-bin/read",
+      "sites/amazon/ipo.html": "http://www.amazon.com/ipo.html",
       "sites/cnn/showbiz.html": "http://www.cnn.com/SHOWBIZ/",
       "sites/cnn/tech.html": "http://www.cnn.com/TECH/",
       "sites/pointcast/channels.html": "http://www.pointcast.com/channels/",
@@ -149,6 +154,10 @@
       "sites/yahoo/computers.html": "Yahoo! Computers and Internet",
       "sites/yahoo/news.html": "Yahoo! Daily News",
       "sites/yahoo/mail.html": "Yahoo! Mail",
+      "sites/hotmail/index.html": "HoTMaiL - FREE Web-Based Email",
+      "sites/hotmail/inbox.html": "HoTMaiL Inbox",
+      "sites/hotmail/compose.html": "HoTMaiL Compose",
+      "sites/hotmail/read.html": "HoTMaiL Read",
       "sites/yahoo/recreation.html": "Yahoo! - Recreation & Sports",
       "sites/yahoo/reference.html": "Yahoo! - Reference",
       "sites/yahoo/regional.html": "Yahoo! - Regional",
@@ -232,6 +241,10 @@
         base: "http://www.amazon.com/"
       },
       {
+        prefix: "sites/hotmail/",
+        base: "http://www.hotmail.com/"
+      },
+      {
         prefix: "sites/cnn/",
         base: "http://www.cnn.com/"
       },
@@ -276,8 +289,11 @@
     fallbackUrlBase: "http://home.microsoft.com/intl/web1997/",
     displayUrlExtras: null,
     locationHints: [
+      { re: /icq/i, path: "sites/icq/index.html" },
+      { re: /pointcast/i, path: "sites/pointcast/index.html" },
       { re: /ebay/i, path: "sites/ebay/index.html" },
       { re: /amazon/i, path: "sites/amazon/index.html" },
+      { re: /hotmail/i, path: "sites/hotmail/index.html" },
       { re: /cnn/i, path: "sites/cnn/index.html" },
       { re: /yahoo/i, path: "sites/yahoo/index.html" },
       { re: /geocit/i, path: "sites/geocities/index.html" },
@@ -292,6 +308,7 @@
     dirSiteKeys: [
       "ebay",
       "amazon",
+      "hotmail",
       "cnn",
       "yahoo",
       "geocities",

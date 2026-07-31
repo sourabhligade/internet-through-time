@@ -17,7 +17,7 @@
     maximizedDefault: true,
     browserTitleSuffix: " - Microsoft Internet Explorer",
     connectSpeedLine: "CONNECT 56000/ARQ",
-    connectBrowserLine: "Starting Internet Explorer 6...",
+    connectBrowserLine: "Starting Internet Explorer 6.0...",
     defaultPrefs: {
       underline: true,
       expireDays: 30,
@@ -45,6 +45,21 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/wikipedia/welcome.html": "http://www.wikipedia.org/wiki/Welcome,_newcomers",
+      "sites/encarta/index.html": "http://encarta.msn.com/",
+      "sites/loudcloud/index.html": "http://www.loudcloud.com/",
+      "sites/moreover/index.html": "http://www.moreover.com/",
+      "sites/blogdex/about.html": "http://blogdex.media.mit.edu/info.asp",
+      "sites/movabletype/download.html": "http://www.movabletype.org/download/",
+      "sites/movabletype/features.html": "http://www.movabletype.org/features/",
+      "sites/microsoft/xp.html": "http://www.microsoft.com/windows/xp/",
+      "sites/napster/legal.html": "http://www.napster.com/legal.html",
+      "sites/apple/itunes.html": "http://www.apple.com/itunes/",
+      "sites/movabletype/index.html": "http://www.movabletype.org/",
+      "sites/blogdex/index.html": "http://blogdex.media.mit.edu/",
+      "sites/mozilla/index.html": "http://www.mozilla.org/",
+      "sites/wayback/index.html": "http://www.archive.org/wayback/",
+      "sites/microsoft/ie6.html": "http://www.microsoft.com/windows/ie/",
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/y2k/about.html": "http://www.y2k.com/about.html",
       "sites/metafilter/about.html": "http://www.metafilter.com/about.html",
@@ -104,6 +119,9 @@
       "sites/macromedia/index.html": "http://www.macromedia.com/",
       "sites/hampsterdance/index.html": "http://www.hampsterdance.com/",
       "sites/zombo/index.html": "http://www.zombo.com/",
+      "sites/broadband/index.html": "http://www.example-isp.com/broadband/",
+      "sites/broadband/plans.html": "http://www.example-isp.com/broadband/plans.html",
+      "sites/broadband/speed.html": "http://www.example-isp.com/broadband/speed.html",
 
       "sites/amazon/auctions.html": "http://www.amazon.com/auctions",
       "sites/amazon/book-harry-cos.html": "http://www.amazon.com/exec/obidos/ASIN/harry-cos/",
@@ -246,6 +264,12 @@
 
       "sites/wikipedia/index.html": "Wikipedia",
       "sites/apple/ipod.html": "Apple iPod",
+      "sites/apple/itunes.html": "Apple iTunes",
+      "sites/movabletype/index.html": "Movable Type",
+      "sites/blogdex/index.html": "Blogdex",
+      "sites/mozilla/index.html": "mozilla.org",
+      "sites/wayback/index.html": "Wayback Machine",
+      "sites/microsoft/ie6.html": "Internet Explorer 6",
       "sites/itunes-note.html": "iTunes",
       "sites/cnn/aol-tw.html": "CNN — AOL Time Warner",
       "sites/cnn/markets.html": "CNN — Markets",
@@ -386,9 +410,11 @@
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web2001/",
     locationHints: [
+      { re: /wiki|wikipedia/i, path: "sites/wikipedia/index.html" },
       { re: /icq/i, path: "sites/icq/index.html" },
       { re: /napster|mp3/i, path: "sites/napster/index.html" },
       { re: /pets|sock.?puppet/i, path: "sites/pets/index.html" },
+      { re: /broadband|dsl|always.?on|cable.?modem/i, path: "sites/broadband/index.html" },
       { re: /gnutella/i, path: "sites/gnutella/index.html" },
       { re: /flash|macromedia/i, path: "sites/macromedia/index.html" },
       { re: /startup|failure|dot.?bomb|fuckedcompany/i, path: "sites/startupfailures/index.html" },
@@ -429,6 +455,6 @@
       "help-handbook": "pages/about.html",
       "help-faq": "pages/about.html"
     },
-    desktopAlert: "Decorative Windows 98 desktop icon.\nOnly Internet Explorer is functional in this exhibit."
+    desktopAlert: "Decorative Windows XP desktop icon.\nOnly Internet Explorer is functional in this room."
   };
 })(typeof window !== "undefined" ? window : this);

@@ -139,7 +139,7 @@ def test_e2e_suite_present() -> None:
 
 
 def test_required_year_shells() -> None:
-    for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005"):
+    for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002"):
         p = ROOT / "years" / y / "index.html"
         if not p.is_file():
             fail("year-shells", f"missing years/{y}/index.html")

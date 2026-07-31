@@ -55,9 +55,9 @@ function initAmazonAdd() {
       cart.push(item);
       setCart(cart);
       updateCartBadges();
-      var msg = "* Added <b>" + escapeHtml(item.title) + "</b> — " +
+      var msg = "Added <b>" + escapeHtml(item.title) + "</b> to your Shopping Cart. " +
         '<a href="' + bookHref("cart.html") + '"><b>View cart</b></a> · ' +
-        '<a href="' + bookHref("checkout.html") + '">Checkout</a>';
+        '<a href="' + bookHref("checkout.html") + '">Proceed to checkout</a>';
       var note = document.getElementById("cart-flash");
       if (note) {
         note.style.display = "block";

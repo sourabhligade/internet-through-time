@@ -1,32 +1,59 @@
-# 2002 Museum Grade — densify ship note
+# 2002 — Museum grade status
 
-**Status:** **Densify ship 2026-07-23** (MVP + six improve tracks).
+**Date:** 2026-07-29  
+**Status:** **Full year complete** (MVP + P1 + P2 densify + Phase 9 RECON pixels + Phase 11 re-verify) · hub **unlocked**
 
-| Criterion | 2002 |
-|-----------|------|
-| Shell | Luna-style XP start · IE6 32px bevel chrome · dirbar includes Daypop |
-| P0 new | Friendster densified · KaZaA client chrome · MT TrackBack · Wired CSS |
-| P1 new | **Daypop Top 40** · **Technorati Cosmos** · **Google News beta** |
-| Continuity | Yahoo always-on strip · Amazon 2002 banner · denser Wikipedia |
-| Modules | `friendster.js` · `kazaa.js` + reused immersion |
-| Assets | Crafted pack under `assets/period/2002/**` · ARTIFACTS updated |
-| Hub | **2002 unlocked** · 2003 locked |
-| Gates | smoke · authenticity · e2e 2002 signature + densify |
+## Visitor outcome
 
-## The six tracks delivered
+Open **2002** → Windows XP + Internet Explorer 6 shell. Always-on broadband thesis (Pew honesty), Friendster friend graph seed, KaZaA search theater, Movable Type TrackBack, Blogger (Pyra), Wired all-CSS, Daypop / Technorati, Mozilla 1.0 + Phoenix 0.1, Google ~3.08B + News-New!/BETA, Amazon smile, continuity portals, plus P2 seeds: Netflix DVD-by-mail, Steam early, last.fm scrobble, ISP broadband landing.
 
-1. Pixel densify Friendster / KaZaA / MTV / Wired (+ GIFs)  
-2. Luna XP chrome pack  
-3. Daypop  
-4. Technorati Cosmos  
-5. Google News beta  
-6. Denser Yahoo / Amazon / Wikipedia + ARTIFACTS  
+## Ship checklist
 
-## Still optional
-True Wayback HTML body dumps · Netflix/Steam/last.fm rooms
+| Gate | Result |
+|------|--------|
+| `years/2002/` boots | Yes |
+| Hub card | **Available** |
+| smoke-production | Green · urlMap **193** · all asset refs resolve |
+| test-authenticity | **40/40** incl. `2002-p2-pixels` |
+| e2e | **`2002-flows`** · `2002-mvp` · `2002-buttons` · `2002-link-button-audit` · `2002-p2-pixels` |
+| residual spot-check | P2 rooms + RECON logos + home links + Netflix DVD-only copy |
 
-```bash
-python3 scripts/smoke-production.py
-python3 scripts/test-authenticity.py
-npx playwright test e2e/2002-*.spec.js
-```
+## Live flows
+
+| Room | Mechanism |
+|------|-----------|
+| Friendster | `friendster.js` |
+| KaZaA | `kazaa.js` |
+| TrackBack / Blogger / Amazon / Google / eBay | shared immersion modules |
+| Downloads | `data-itt-download` theater |
+| last.fm | local scrobble list |
+| Netflix queue | `data-itt-theater` panel |
+| Steam / ISP | download theater |
+
+## Phase status
+
+| 0–8 MVP | **Complete** |
+| 7 P1 | **Complete** |
+| 9 RECON pixel densify | **Complete** (true WA crops still optional upgrade) |
+| 10 Docs | **Complete** |
+| 11 Re-verify | **Complete** |
+| P2 densify | **Complete** (Netflix DVD · Steam · last.fm · ISP) |
+
+## Implement pass 2026-07-28
+
+XP Start/taskbar WA wired · Friendster header · KaZaA client chrome · Wired densify links.
+
+## Remaining optional (not blockers)
+
+True GUIdebook/evolt screenshot crops labeled `*-wa.gif` when harvested · multi-story news densify · prune 2001 filler rooms.
+
+---
+
+*Full-year densify closed 2026-07-26.*
+
+
+## Residual densify closed (2026-07-29)
+
+Phases from [`2002-2003-IMPLEMENTATION-PHASES.md`](2002-2003-IMPLEMENTATION-PHASES.md):
+museum-voice purge · signature/continuity densify · hard `2002-flows.spec.js`.
+Optional forever: true WA Tom / KaZaA body / iPod stills — not blockers.

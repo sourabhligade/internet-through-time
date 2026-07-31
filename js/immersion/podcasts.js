@@ -1,39 +1,97 @@
 /**
- * Immersion: iTunes podcasts 2005 subscribe theater
+ * iTunes podcasts 2005 — real subscribe list (itt05-pod-subs)
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-  ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
-  ITT.ImmersionFeatures.push({
-    id: "podcasts",
-    needs: function (cfg) { return cfg.features && cfg.features.podcasts; },
-    init: function (api) {
-      var loadJSON = api.loadJSON, saveJSON = api.saveJSON, storageKey = api.storageKey;
-      var showFlash = api.showFlash, markTourProgress = api.markTourProgress;
-      var KEY = storageKey("podcasts-subs");
-      var status = document.querySelector("[data-pod-status]");
-      function get() { return loadJSON(KEY, []) || []; }
-      function paint() {
-        if (!status) return;
-        var s = get();
-        status.innerHTML = s.length
-          ? "<font size=\"2\">Subscribed (local): <b>" + s.join(", ") + "</b></font>"
-          : "<font size=\"1\" color=\"#666\">Subscriptions stay in this browser only (localStorage).</font>";
-      }
-      var btns = document.querySelectorAll("[data-pod-sub]");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function (ev) {
-          var id = ev.currentTarget.getAttribute("data-pod-sub");
-          var s = get();
-          if (s.indexOf(id) < 0) s.push(id);
-          saveJSON(KEY, s);
-          showFlash("Subscribed to podcast (iTunes 4.9 theater).");
-          markTourProgress();
-          paint();
-        });
-      }
-      paint();
+  function KEY() {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("pod-subs", "itt05");
     }
-  });
+    var y = String(
+      ITT._immersionYear ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        "2005"
+    );
+    if (y === "2008") return "itt08-pod-subs";
+    if (y === "2007") return "itt07-pod-subs";
+    if (y === "2006") return "itt06-pod-subs";
+    return "itt05-pod-subs";
+  }
+  function load() {
+    try {
+      return JSON.parse(localStorage.getItem(KEY()) || "[]");
+    } catch (e) {
+      return [];
+    }
+  }
+  function save(list) {
+    localStorage.setItem(KEY(), JSON.stringify(list));
+  }
+  function esc(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+  function renderList(doc) {
+    var el = doc.querySelector("[data-pod-list]");
+    if (!el) return;
+    var list = load();
+    if (!list.length) {
+      el.innerHTML = "<font size='2' color='#666'>No podcast subscriptions yet.</font>";
+      return;
+    }
+    el.innerHTML =
+      "<ul style='margin:4px 0 0 1.2em;padding:0;font-size:12px'>" +
+      list
+        .map(function (p) {
+          return "<li><b>" + esc(p.name) + "</b> <font color='#666' size='1'>(subscribed)</font></li>";
+        })
+        .join("") +
+      "</ul>";
+  }
+  function boot(doc) {
+    doc = doc || document;
+    var btns = doc.querySelectorAll("[data-pod-sub]");
+    var i;
+    for (i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var name = ev.currentTarget.getAttribute("data-pod-sub") || "Podcast";
+        var list = load();
+        /* avoid exact duplicate consecutive spam; allow re-sub as refresh */
+        var exists = false;
+        var j;
+        for (j = 0; j < list.length; j++) {
+          if (list[j].name === name) {
+            exists = true;
+            break;
+          }
+        }
+        if (!exists) list.unshift({ name: name, ts: Date.now() });
+        else {
+          list = list.filter(function (p) {
+            return p.name !== name;
+          });
+          list.unshift({ name: name, ts: Date.now() });
+        }
+        save(list.slice(0, 30));
+        var st = doc.querySelector("[data-pod-status]");
+        if (st) st.textContent = "Subscribed to “" + name + "” (this browser only · " + list.length + " total).";
+        renderList(doc);
+      });
+    }
+    renderList(doc);
+  }
+  function register() {
+    if (!ITT.ImmersionFeatures || !ITT.ImmersionFeatures.registerLocal) {
+      setTimeout(register, 20);
+      return;
+    }
+    ITT.ImmersionFeatures.registerLocal({ id: "podcasts", boot: boot });
+  }
+  register();
 })(typeof window !== "undefined" ? window : this);

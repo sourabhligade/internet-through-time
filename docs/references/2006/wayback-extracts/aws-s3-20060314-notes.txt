@@ -1,0 +1,8 @@
+# Amazon S3 launch
+# https://aws.amazon.com/blogs/aws/eight-years-and-counting-of-cloud-computing/
+# Visited: 2026-07-30
+
+Amazon S3 launched March 14, 2006 with press release and simple blog post.
+EC2 followed August 2006 (Wikipedia AWS / Cybercultural).
+
+Exhibit use: optional AWS educational room — developer cloud, not modern console UI.

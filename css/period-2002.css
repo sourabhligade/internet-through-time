@@ -1,68 +1,171 @@
-/* 2002 document styles — broadband · Friendster · KaZaA · blogosphere · Wired CSS
-   Year delta: @import period-2001. Only 2002-specific rules below. */
-@import url("period-2001.css");
+/* 2002 document styles — Windows XP · IE 6 · Wikipedia · iPod · post-crash rebuild
+   Year delta: @import period-1999 (2000 wiped) (smile / densify grammar). Only 2002-specific rules below. */
+@import url("period-1999.css");
 
-/* Broadband / always-on copy helpers */
-.fs02-note { font-size: 12px; color: #444; }
-
-/* KaZaA client chrome (document theater) */
-.kz02-client {
-  border: 1px solid #666;
-  background: #e8e8e8;
-  padding: 8px;
-  font-family: "MS Sans Serif", Arial, sans-serif;
-  font-size: 11px;
+/* —— Wikipedia densify shell —— */
+.wiki-shell {
+  max-width: 860px;
+  margin: 8px auto;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #000;
 }
-.kz02-title {
-  background: #003399;
-  color: #fff;
+.wiki-bar {
+  background: #f9f9f9;
+  border: 1px solid #aaa;
   padding: 4px 8px;
-  font-weight: bold;
-}
-
-/* Wired News 2002 CSS redesign energy */
-.wn-wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 15px;
-  color: #111;
-}
-.wn-top {
-  border-bottom: 3px solid #c00;
-  padding: 8px 0 10px;
-  margin-bottom: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.wn-hero { margin: 0 0 16px; }
-.wn-grid { display: table; width: 100%; }
-.wn-col { display: table-cell; vertical-align: top; padding-right: 16px; }
-.wn-rail {
-  display: table-cell;
-  width: 220px;
-  vertical-align: top;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  border-left: 1px solid #ddd;
-  padding-left: 12px;
-}
-.wn-story { margin: 0 0 14px; }
-.wn-meta { font-size: 11px; color: #666; font-family: Arial, sans-serif; }
-.wn-foot {
-  margin-top: 24px;
-  padding-top: 8px;
-  border-top: 1px solid #ccc;
   font-size: 11px;
-  font-family: Arial, sans-serif;
-  color: #666;
+  margin-bottom: 6px;
 }
-.wn-wrap .box {
-  border: 1px solid #ccc;
+.wiki-bar a { margin-right: 8px; }
+.wiki-sidebar {
+  width: 150px;
+  vertical-align: top;
+  background: #f6f6f6;
+  border: 1px solid #aaa;
+  padding: 6px;
+  font-size: 11px;
+}
+.wiki-main { vertical-align: top; padding: 0 12px; }
+.wiki-h1 {
+  font-family: serif;
+  font-size: 22px;
+  font-weight: normal;
+  border-bottom: 1px solid #aaa;
+  margin: 0 0 8px;
+}
+.wiki-box {
+  background: #f8f8ff;
+  border: 1px solid #aaa;
   padding: 8px;
-  margin-bottom: 10px;
-  background: #fafafa;
+  margin: 8px 0;
+}
+.wiki-foot {
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #aaa;
+  margin-top: 16px;
+  padding-top: 6px;
+}
+table.wiki-cols { width: 100%; border-collapse: collapse; }
+
+/* —— iPod product densify —— */
+.ipod-wrap {
+  max-width: 680px;
+  margin: 12px auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ipod-hero {
+  text-align: center;
+  padding: 16px;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+}
+.ipod-device {
+  width: 120px;
+  height: 200px;
+  margin: 12px auto;
+  background: linear-gradient(#f8f8f8, #ddd);
+  border: 2px solid #999;
+  border-radius: 12px;
+  position: relative;
+}
+.ipod-screen {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  right: 14px;
+  height: 70px;
+  background: #9ab;
+  border: 1px solid #666;
+}
+.ipod-wheel {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  border: 8px solid #bbb;
+  border-radius: 50%;
+  background: #eee;
+}
+.ipod-grid td {
+  padding: 8px;
+  font-size: 13px;
+  vertical-align: top;
+  border: 1px solid #ddd;
 }
 
-/* Daypop / Technorati light chrome */
-.dp02-list { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
-.tc02-cosmos { font-family: Arial, sans-serif; font-size: 12px; color: #333; }
+/* Google sparse / habit accent */
+.g01-logo {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  color: #000;
+}
+.g01-logo span { color: #0000cc; }
+.g01form { margin: 16px 0; }
+.g01-note {
+  text-align: left;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  padding: 10px;
+  margin-top: 24px;
+}
+.g01 {
+  max-width: 560px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+/* —— 2002 year deltas —— */
+body.year-2002 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #245edc;
+}
+.friendster-shell { font-family: Verdana, Arial, sans-serif; background: #fff; color: #000; }
+.friendster-header { background: #ff6600; color: #fff; padding: 8px 12px; font-weight: bold; }
+.kazaa-shell { font-family: Tahoma, Arial, sans-serif; background: #e8e8e8; }
+.kazaa-client { border: 2px solid #336699; background: #fff; padding: 8px; }
+.wired-css-shell { font-family: Georgia, "Times New Roman", serif; max-width: 720px; margin: 0 auto; }
+.wired-css-shell h1 { font-size: 1.4em; border-bottom: 2px solid #c00; }
+.trackback-box { border: 1px solid #999; background: #f5f5f5; padding: 8px; margin: 8px 0; font-size: 12px; }
+.mtv-broadband { background: #000; color: #fff; font-family: Arial, sans-serif; }
+.daypop-shell { font-family: Verdana, sans-serif; font-size: 12px; }
+.phoenix-shell { font-family: sans-serif; background: #f0f0f0; padding: 12px; }
+
+/* Live Start menu items (not inert divs) */
+button.start-menu-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  padding: 4px 12px;
+  cursor: pointer;
+  color: inherit;
+}
+button.start-menu-item:hover {
+  background: #0a246a;
+  color: #fff;
+}
+
+a.fs-btn {
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  padding: 4px 10px;
+  background: #ff6600;
+  color: #fff !important;
+  text-decoration: none;
+  font: bold 12px Verdana, sans-serif;
+  border: 1px solid #cc5200;
+}
+a.fs-btn:hover { background: #ff8533; }
+
+/* Phase 9 note: shell taskbar Luna lives in css/ie5-overrides.css
+   (iframe period CSS cannot style the parent shell). */

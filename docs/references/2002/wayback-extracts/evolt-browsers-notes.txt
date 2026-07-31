@@ -1,0 +1,171 @@
+SOURCE: https://browsers.evolt.org/
+FINAL: https://browsers.evolt.org/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: evolt-browsers
+ROLE: IE6/Mozilla installs path
+TITLE: browsers.evolt.org
+BYTES: 21813
+ERROR: 
+
+KEY FACTS / TEXT:
+browsers.evolt.org
+evolt.org
+Articles
+Browsers
+Lists
+Colophon
+browsers.evolt.org
+evolt.org
+>
+Browser Archive
+Pardon our dust! This iteration of browsers.evolt.org is under test, containing content which has not yet been finalized.
+evolt.org Browser Archive
+Who archived all these?
+One of the founding members of evolt.org,
+Adrian Roselli
+(or aardvark
+for those of you who visit the site or are on the mailing list), has provided
+the archive as well as its support through his company,
+Algonquin Studios .
+You can see more information at his archive announcement .
+Browser submissions should be sent in the form of a URL using
+our contact form , so that evolt.org
+staff can download the software into the master archive.
+Recent Changes to the Archive ...
+2024-02-07 First pass at adding the archive.org collection to download links
+2024-01-31 The evolt.org community has closed, but the Browser Archive is still active
+2012-03-11 New evolt.org look-and-feel finally applied to site
+Note that updates to the Archive may take ~ 24-48 hours to reach mirror sites.
+And so, to the Archive ...
+1x — Science Traveller International
+Air Mosaic — Sprynet
+AllWorld Explorer — G.O. International Air Service
+Amaya — W3C
+Arachne — xChaos
+ArcWeb — Stewart Brodie
+Ariadna — Advanced Multimedia System Design
+AtomNet — Change 7
+AWeb — AmiTrix
+Beonex — Ben Bucksch
+Bobby — Center for Applied Special Technology
+Bohemian Net Browser — BohemianNet
+BrownIE — Compunet
+Browse2000 — 1st Choice Software
+CAB — Alexander Clauss
+Cello — Thomas Bruce
+Charlie — Mundial Avenue
+ChiBrow — KCS & Associates
+Chimera — University of Nevada Las Vegas
+Contiki — Adam Dunkels
+Custom Browser — LION
+Cyberdog — Apple Computer, inc.
+CyberGate — BlackSun Interactive
+Cyber Passage — Sony
+DigiCams — DigiBand
+DOSLynx — University of Kansas
+DR-WebSpyder — Caldera
+ELinks — Mikulas Patocka, the ELinks team
+Emacs-W3 — William M. Perry
+Emissary — Attachmate
+Flock — Flock
+FreeWebBrowser — Yellow Tree Services
+Galahad — Jean van Waterschoot
+goAnywhere! — Mikey LeBeau
+Grail — Corporation for National Research Initiatives
+GrassHopper MDI Explorer — Santrim Software
+HandWeb — Smartcode Software
+HexaBit Junior — HexaBit
+Home Page Reader — IBM
+HotJava — Sun Microsystems
+I-comm — Talent Communications
+I-O-D-4 - The Web Stalker — Escape
+I-View — EnReach Technology
+iBrowse — Omnipresence International
+iCab — Alexander Clauss & iCab Company
+Internet Explorer — Microsoft, Inc.
+Internet Explorer — Sprynet
+Internet Plus — Dean Software Design
+Internet WorkHorse — MarketNet
+K-Meleon —
+Kagetaga —
+KidNet Explorer — Resource Communications
+KidSafe Explorer — Arlington Technology
+LIS Web Browser — Lahman Internet Services
+Links — Mikulas Patocka
+Lynx — Distributed Computing Group
+MacLynx — Olivier Gutknecht
+MacWeb — TradeWave (EINet)
+MacWWW (Samba) — CERN
+MathBrowser — MathSoft
+Microviet First Explorer — Microviet
+Minuet — University of Minnesota
+Mosaic — National Center for Supercomputing Applications
+Mosaic (QuarterDeck) — QuarterDeck
+Mosaic (SpryNet) — SpryNet
+Mosaic (Spyglass) — Spyglass
+Mozilla, incl. Firefox — The Mozilla Foundation
+Multilingual Mosaic — Accent Software
+MultiWeb Viewer — MultiSource
+MyBrowser — Softorange
+Navigator — Netscape Communications Corporation
+NCompass — ExCITE
+NeoPlanet — NeoPlanet
+Net-Tamer — Net-Tamer
+NetCaptor — Stilesoft
+NetCruiser — Netcom
+NetForKids — WebData Communications
+Net M@anager — Virtual Innovations
+Netomat — Maciej Wisniewski
+NetPositive — Be, Inc.
+NetSentry — Natdat
+NetShark — InterCon
+NetShift — NetShift Software
+Nuthin' But Net — PAKSoft Productions
+Off By One — Home Page Software
+OmniWeb — OmniGroup
+Opera — Opera Software
+PowerBrowser — Oracle
+ProStream Browser — PS Group
+Proxiweb — ProxyNet, Inc.
+pwWebSpeak Plus — The Productivity Works
+Pythia — Appian Interactive
+QuickScape — Quickscape
+Safari — Apple Computer, Inc.
+Santa's Browser — Branded Browser Technologies
+SimulBrowse — Seaglass Software
+SiteKiosk — ProVisio GmbH
+SlipKnot — MicroMind
+Softerm Plus — Softronics
+SuperHighway Browser — Frontier Technologies
+Surfin' Annette — SpyCatcher
+SurfMonkey — MediaLive
+Talking Browser — WeMedia
+Talva Document Explorer — Talva
+Tango Multilingual — Alis Technologies
+The Other Browser-Emailer — Pixelogic
+UdiWWW — Bernd Richter
+Video On Line Browser — Video On Line
+Voyager — VaporWare
+WannaBe — David T. Pierson
+Web-O-Matic Digital Browser — Circle Group Internet, Inc.
+Web SurfACE — ToolPool
+Web-Talkit — Grover Industries
+WebExplorer — IBM
+WebProwler — MacroByte
+WebRacer — Software Savvy
+Websurfer — NetManage
+WebTV Viewer — WebTV Networks
+WebView — South Pacific Information Services
+WebWhacker — Blue Squirrel
+Wildcat Navigator — Harmony International
+WinWEB — TradeWave (EINet)
+WorldWideWeb (Nexus) — Tim Berners-Lee
+.
+browsers.evolt.org is made possible by the hard working volunteers of evolt.org , and our gracious mirror maintainers.
+What's this?
+Workers of the Web, Unite!
+Founded in 1998, evolt.org is a world community for web developers, promoting the mutual 
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

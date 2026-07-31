@@ -65,7 +65,7 @@ function initAuction() {
       saveJSON(key, high);
       saveJSON(key + "-hist", history);
       paint();
-      showFlash("✓ You're high bidder at <b>$" + amt.toFixed(2) + "</b> — bid saved if you reload.");
+      showFlash("You are the high bidder at <b>$" + amt.toFixed(2) + "</b>.");
       saveJSON(storageKey("auction-last"), {
           id: id,
           amount: high.amount,

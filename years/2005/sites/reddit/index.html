@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>reddit</title>
+<title>reddit.com: what's new online!</title>
 <link rel="stylesheet" href="../../../../css/period-2005.css">
 </head>
-<body bgcolor="#ffffff" link="#0000ff">
+<body class="reddit-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="rd05-wrap">
-  <div class="rd05-top">
-    <table width="100%"><tr>
-    <td>
-      <img src="../../../../assets/period/2005/reddit/logo-wa.gif" width="19" height="15" align="absmiddle" alt="reddit" border="0" align="absmiddle">
-      <b class="rd05-word">reddit</b>
-      &nbsp; <a href="index.html">hottest</a>
-      <a href="index.html">newest</a>
-      <a href="index.html">recently promoted</a>
-      <a href="index.html">top</a>
-      <a href="index.html">all-time</a>
-      <a href="submit.html">submit</a>
-      <a href="about.html">faq</a>
-    </td>
-    <td align="right"><font size="1"><a href="index.html">register</a> · <a href="index.html">browse</a> · <a href="submit.html">submit a link</a></font></td>
-    </tr></table>
-  </div>
-  <p><font size="1" color="#666">
-  the front page of the internet (pitch) · launched <b>June 23, 2005</b> · Y Combinator first class ·
-  period word: <b>boosts</b> (not modern karma chrome)
-  </font></p>
-  <table width="100%" cellpadding="4" bgcolor="#f0f7ff" style="border:1px solid #5f99cf;margin-bottom:8px">
-  <tr><td><font size="1">
-  <b>What's hot:</b> geek news links + digg-like voting energy.
-  Sibling: <a href="../digg/index.html">Digg</a> · not Facebook · not Twitter (2006).
-  </font></td></tr>
-  </table>
-  <div data-reddit-list></div>
-  <p style="font-size:11px;color:#888;margin-top:12px">
-  <a href="submit.html">submit</a> a link · 
-  </p>
+
+<div class="reddit-header" style="padding:8px">
+ <img src="../../../../assets/period/2005/reddit/logo.gif" alt="reddit" height="28" style="vertical-align:middle">
+ <b>reddit</b>
+ · <a href="index.html" data-reddit-sort="hottest">what's hot</a>
+ · <a href="index.html" data-reddit-sort="newest">newest</a>
+ · <a href="submit.html">submit</a>
+ · <a href="about.html">about</a>
+ · <a href="../../pages/home.html">start</a>
 </div>
+<p style="font-size:11px;padding:0 8px;color:#666;max-width:700px">
+ <a href="about.html">register</a> ·
+ <a href="index.html" data-reddit-sort="hottest">browse</a> ·
+ <a href="submit.html">submit</a> ·
+ <a href="about.html">faq</a>
+ &nbsp;|&nbsp;
+ <a href="index.html" data-reddit-sort="hottest"><b>hottest</b></a> ·
+ <a href="index.html" data-reddit-sort="newest">newest</a> ·
+ recently promoted · top · all-time
+</p>
+<div style="padding:8px;max-width:700px" data-reddit-list>
+ <!-- filled by reddit.js — boosts language · localStorage itt05-reddit-links -->
+</div>
+<p style="font-size:11px;padding:8px;max-width:700px">
+ <b>June 23, 2005</b> — Steve Huffman &amp; Alexis Ohanian; Y Combinator first class (Medford / Common Lisp lore).
+ Sparse front page: title · domain · submitter · “with N <b>boosts</b>” (period WA word — not modern “upvotes”).
+ Boost and submit update the list in this browser only (<code>itt05-reddit-links</code>).
+</p>
+ <p style="font-size:11px;color:#555;padding:0 8px 8px">Period reconstruction of the sparse 2005 front page — not modern reddit redesign.
+ No awards UI, no app store framing, no Condé Nast 2006 story as launch. <a href="submit.html">submit a link</a> ·
+ <a href="about.html">about</a>.</p>
+ <div style="font-size:12px;max-width:700px;margin:8px;padding:8px;background:#f0f7fc;border:1px solid #5f99cf">
+  <b>Also vote / publish this year</b> —
+  <a href="../digg/index.html">Digg</a> (rise + Diggnation) ·
+  <a href="../slashdot/index.html">Slashdot</a> (old nerd front page) ·
+  <a href="../youtube/index.html">YouTube</a> (submit video URLs) ·
+  <a href="../technorati/index.html">Technorati</a> (who links to what) ·
+  <a href="../techcrunch/index.html">TechCrunch</a> ·
+  <a href="../web20conference/index.html">Web 2.0 Conf</a>
+ </div>
+
 <script src="../../../../js/immersion-2005.js"></script>
 </body></html>

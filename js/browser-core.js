@@ -16,8 +16,9 @@
   var bust = "";
   var qi = src.indexOf("?");
   if (qi !== -1) bust = src.slice(qi);
-  // Order: optional extract modules first, then create (full controller for now)
+  // Order: pure helpers first, then create (wires + chrome/history)
   var parts = [
+    "browser/navigate.js",
     "browser/connect.js",
     "browser/load-theater.js",
     "browser/create.js",

@@ -1,0 +1,3 @@
+FETCH FAILED
+URL: https://web.archive.org/web/20050615000000/http://gmail.google.com/
+ERROR: <urlopen error [Errno 61] Connection refused>

@@ -18,9 +18,9 @@
     navSubtitle: "Netscape 2.0 · 28.8k",
     nav: [
       {
-        label: "Start",
+        label: "Home",
         href: "pages/home.html",
-        match: "/pages/"
+        match: "/pages/home"
       },
       {
         label: "Yahoo!",
@@ -83,42 +83,42 @@
     tour: [
       {
         id: "yahoo",
-        label: "Yahoo! directory",
+        label: "Yahoo!",
         href: "sites/yahoo/index.html",
         match: "/yahoo/",
-        hint: "browse a category, then try Search for <i>books</i>",
-        doneMessage: "You visited Yahoo! — the human directory of the Web."
+        hint: "browse a category · search for <i>books</i>",
+        doneMessage: "Yahoo! — the human directory of the Web."
       },
       {
         id: "amazon",
-        label: "Amazon cart",
+        label: "Amazon.com",
         href: "sites/amazon/index.html",
         match: "/amazon/",
-        hint: "add a book · open cart · checkout",
+        hint: "open a book · try the shopping cart",
         doneMessage: "Amazon.com — Earth's Biggest Bookstore (1995)."
       },
       {
         id: "auction",
-        label: "AuctionWeb bid",
+        label: "AuctionWeb",
         href: "sites/auctionweb/item-laser.html",
         match: "/auctionweb/",
-        hint: "place a bid higher than the current high bid",
+        hint: "the broken laser pointer · place a bid if you like",
         doneMessage: "AuctionWeb — person-to-person auctions."
       },
       {
         id: "geocities",
-        label: "GeoCities guestbook",
+        label: "GeoCities",
         href: "sites/geocities/Hollywood/1234/index.html",
         match: "/geocities/",
-        hint: "sign the guestbook, then reload",
+        hint: "a free homestead · optional guestbook",
         doneMessage: "GeoCities homestead — free home pages."
       },
       {
         id: "altavista",
-        label: "AltaVista search",
+        label: "AltaVista",
         href: "sites/altavista/index.html",
         match: "/altavista/",
-        hint: "search for <i>gibson</i> or <i>auction</i>",
+        hint: "full-text search — try <i>gibson</i>",
         doneMessage: "AltaVista — full-text search of the Web."
       }
     ],
@@ -218,6 +218,23 @@
         blurb: "Browser wars news."
       },
       {
+        title: "Download Netscape Navigator",
+        path: "sites/netscape/download.html",
+        kw: "netscape download navigator installer",
+        blurb: "Get Navigator 2.0."
+      },
+      {
+        title: "Microsoft Internet Explorer",
+        path: "sites/microsoft/ie.html",
+        kw: "internet explorer ie microsoft browser",
+        blurb: "IE for Windows 95."
+      },
+      {
+        title: "Amazon Eyes & Editors",
+        path: "sites/amazon/eyes.html",
+        kw: "eyes editors amazon notify email books",
+        blurb: "Personal book notification service."
+      }, {
         title: "Starting Point",
         path: "pages/home.html",
         kw: "home start welcome exhibit 1995",

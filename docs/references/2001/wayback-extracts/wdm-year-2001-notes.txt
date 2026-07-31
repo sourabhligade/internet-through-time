@@ -1,0 +1,12 @@
+SOURCE: https://www.webdesignmuseum.org/gallery/year-2001 (via WA mirror when live 403)
+STATUS: [visited] 2026-07-26 deep research pass
+ROLE: Visual peer shortlist for density
+
+BRANDS SEEN ON YEAR-2001 GALLERY (design/agency/culture):
+- Flash agency: 2Advanced v2/v3, Designgraphik, Theory7, Afterlab, Cubadust, Chapter3, Bionic Systems, Submethod, HSE7EN3, Surfstation, Inword…
+- Pop/entertainment: Donnie Darko, Shrek, Warp Records, Neopets, Nintendo, Dancing Paul…
+
+BUILD USE:
+- Optional P2 Flash culture rooms (skip button mandatory)
+- Density peer: flash black/neon agency vs sparse Google / wiki plain
+- Pair with WDM IE6 software page for browser product screenshots

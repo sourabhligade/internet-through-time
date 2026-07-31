@@ -74,3 +74,6 @@ js/_backup*/
 # Optional local notes
 TODO.local.md
 NOTES.local.md
+
+# Wayback CDX probe leftovers
+cdx_*.json

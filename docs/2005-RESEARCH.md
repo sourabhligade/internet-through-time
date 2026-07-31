@@ -1,13 +1,28 @@
 # 2005 Research Dossier — The Internet Through Time
 
-**Status:** **Hub unlocked · playable MVP + densify (2026-07-24+)** · residual = WA brand crops + optional P1 rooms  
+**Status:** **`years/2005/` live** · hub **unlocked** · YouTube · Maps · Reddit · Digg · **research gather 2026-07-30** · **fresh deep web re-pass 2026-07-31**  
 **Ship note:** [`docs/2005-MUSEUM-GRADE.md`](2005-MUSEUM-GRADE.md)  
+**Fresh deep research (2026-07-31 web re-visit · minute timeline · full source index):** [`2005-DEEP-RESEARCH-FRESH-2026-07-31.md`](2005-DEEP-RESEARCH-FRESH-2026-07-31.md)  
+**Goals · phases · how-to · period user flows (canonical playbook):** [`2005-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2005-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md)  
+**Clear implement phases (goals · sources · steps · acceptance):** [`2005-IMPLEMENT-PHASES-CLEAR-2026-07-31.md`](2005-IMPLEMENT-PHASES-CLEAR-2026-07-31.md)  
+**Mock→real flows + top UI match (YouTube/Maps):** [`2005-MOCK-TO-REAL-AND-UI-RESEARCH.md`](2005-MOCK-TO-REAL-AND-UI-RESEARCH.md)  
+**Detailed source research (everything gathered · same recipe as 2004):** [`2005-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md`](2005-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md)  
+**Full artifact revisit + web expand (this pass):** [`2005-FULL-ARTIFACT-AND-WEB-EXPAND-RESEARCH-2026-07-30.md`](2005-FULL-ARTIFACT-AND-WEB-EXPAND-RESEARCH-2026-07-30.md)  
+**Artifacts · sources · downloads · step-by-step (implement bible):** [`2005-ARTIFACTS-SOURCES-DOWNLOADS-STEP-BY-STEP.md`](2005-ARTIFACTS-SOURCES-DOWNLOADS-STEP-BY-STEP.md)  
+**Web expand (more primaries · exact dates):** [`2005-WEB-EXPAND-RESEARCH-2026-07-30.md`](2005-WEB-EXPAND-RESEARCH-2026-07-30.md)  
+**From-research implementation phases bible:** [`2005-FROM-RESEARCH-IMPLEMENTATION-PHASES.md`](2005-FROM-RESEARCH-IMPLEMENTATION-PHASES.md)  
+**Implement step-by-step (goals · every artifact · every website):** [`2005-IMPLEMENTATION-STEP-BY-STEP-FROM-RESEARCH.md`](2005-IMPLEMENTATION-STEP-BY-STEP-FROM-RESEARCH.md)  
+**Source visit research (all sources 2026-07-30 deep — mid/late YT · delicious · Digg/Maps Oct · Ajax full):** [`2005-SOURCE-VISIT-RESEARCH-2026-07-30.md`](2005-SOURCE-VISIT-RESEARCH-2026-07-30.md)  
+**Residual audit (latest):** [`2005-DEEP-RESEARCH-AUDIT-2026-07-30.md`](2005-DEEP-RESEARCH-AUDIT-2026-07-30.md) — full source re-visit · disk residual · densify kits  
+**Artifacts map (master inventory):** [`references/2005/ARTIFACTS-MAP.md`](references/2005/ARTIFACTS-MAP.md) — sources · extracts · pixels · rooms · hooks · residual R1–R14  
+**Residual implement plan:** [`2005-RESIDUAL-IMPLEMENTATION-PHASES.md`](2005-RESIDUAL-IMPLEMENTATION-PHASES.md) · **bible:** [`2005-RESIDUAL-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2005-RESIDUAL-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) — **Implemented 2026-07-30** · voice · densify · real-flows e2e  
 **Deep visit pass:** [`docs/2005-DEEP-RESEARCH-2026-07-24.md`](2005-DEEP-RESEARCH-2026-07-24.md)  
 **Capture queue:** [`docs/references/2005/CAPTURE-LOG.md`](references/2005/CAPTURE-LOG.md)  
 **Assets provenance:** [`docs/references/2005/ASSETS.md`](references/2005/ASSETS.md)  
-**Live tree (audit):** ~122 HTML · 20 site rooms · period pack under `assets/period/2005/` · e2e ≥4 · immersion: youtube/maps/reddit/digg/podcasts  
-**Prior year:** 2004 (Firefox 1.0 · Gmail · Flickr · Thefacebook · Google IPO · Web 2.0 hinge)  
-**Next year (planned):** 2006 (Twitter · Facebook open · Google buys YouTube…)  
+**Extracts (46 files):** `docs/references/2005/wayback-extracts/` · visit log `references/2005/notes/VISIT-LOG-2026-07-30-deep-gather.txt` · web-expand `references/2005/notes/WEB-EXPAND-2026-07-30.md`  
+**Live tree:** `years/2005/` · 71 rooms · 260 HTML (disk truth 2026-07-30)  
+**Prior year:** 2004 residual hard flows closed 2026-07-30  
+**Next year:** 2006 research freeze opened 2026-07-30 — see [`2006-RESEARCH.md`](2006-RESEARCH.md) (Twitter · Facebook open · Google buys YouTube…)  
 **Target immersion:** Calendar year **2005** — **Web 2.0 business boom** · **YouTube** · **Google Maps / Ajax** · **Reddit** · **Digg peak rise** · **podcasting in iTunes** · **M&A wave** (Flickr, MySpace, Skype) · IE6 still default · Firefox is what cool bloggers use  
 
 **Sources method:** Same stack as `docs/SOURCES.md` — Cybercultural · Web Design Museum · Wayback · company histories · Live Stats · Adaptive Path (Ajax essay).
@@ -28,19 +43,20 @@
 |------|------------------------|
 | **~64.8M websites** (2005) | Internet Live Stats: **64,780,617** (+26% YoY from 2004’s ~51.6M) |
 | **~1.03B internet users** class | Live Stats lineage (~15.8% of world pop) |
-| **Google Maps** | Public launch era **Feb 2005** — drag/zoom map as Ajax poster child |
+| **Google Maps** | Public **February 8, 2005** (Google Blog) — drag/zoom Ajax poster child; official **API June 2005** |
 | **Ajax coined** | Jesse James Garrett / Adaptive Path essay **Feb 18, 2005** — Asynchronous JavaScript + XML |
 | **YouTube founded** | **Feb 14, 2005** (domain); public beta **Apr 23, 2005** with first video *Me at the zoo* |
-| **YouTube exits beta** | **Dec 15, 2005** era; ~8M views/day class by late year (period press) |
+| **YouTube Sequoia / exit beta** | Sequoia **$3.5M Nov 7, 2005**; **Dec 15** launch class; ~8M views/day late year |
 | **Reddit** | **Jun 23, 2005** — Huffman/Ohanian; Y Combinator first class; “front page of the internet” pitch |
-| **Digg** | Public **Dec 5, 2004** — **2005 is the rise year** (rivals Slashdot for geek traffic) |
-| **HousingMaps** | Early Google Maps **mashup** (Paul Rademacher) — cultural icon of APIs |
-| **Yahoo buys Flickr** | **Mar 2005** — Web 2.0 acquisition signal |
-| **News Corp buys MySpace** | **Jul 2005** — mainstream media buys social |
-| **eBay buys Skype** | **Sep 2005** — multi-billion Web 2.0 deal class |
+| **Digg** | Public **Dec 5, 2004** — **2005 is the rise year**; **Diggnation ep.1 July 1, 2005** |
+| **HousingMaps** | ~**April 2005** Google Maps **mashup** (Paul Rademacher) — **before** official Maps API |
+| **Yahoo buys Flickr** | **March 20, 2005** (~$22–25M) — Flickr blog confirms Ludicorp deal |
+| **News Corp buys MySpace** | **July 18, 2005** Intermix **$580M** → Fox Interactive Media |
+| **eBay buys Skype** | **September 12, 2005** ~**$2.6B** up-front (earnouts higher) |
 | **Google buys Android** | **Jul 2005** — barely noticed at the time |
-| **Yahoo buys del.icio.us** | **Dec 2005** |
-| **iTunes podcasting** | **Jun 28, 2005** — iTunes 4.9; 3,000+ free podcasts; 1M+ subs in ~2 days (Apple PR) |
+| **Yahoo buys del.icio.us** | **December 9, 2005** (~300k users; “fraternal twin Flickr”) |
+| **iTunes podcasting** | **Jun 28, 2005** iTunes 4.9; 3,000+ free; **>1M subs in two days** (Apple PR Jun 30) |
+| **Million Dollar Homepage** | **Aug 26, 2005** Alex Tew · $1/pixel · raised $1,037,100 (optional P2) |
 | **Facebook rename** | Domain **facebook.com** acquired **Aug 2005** (~$200k); drops “The” |
 | **Facebook high schools** | **Sep 2005** — still not open internet |
 | **TechCrunch** | **Jun 2005** (Arrington) |
@@ -56,25 +72,32 @@
 
 | Date | Event | Exhibit use |
 |------|-------|-------------|
-| **Feb 8–ish 2005** | **Google Maps** public | **P0 maps room** — pan/zoom theater (no live tiles required) |
+| **Feb 8 2005** | **Google Maps** public desktop | **P0 maps room** — pan/zoom theater (no live tiles) |
 | **Feb 14 2005** | YouTube domain / company founding story | About YouTube page |
 | **Feb 18 2005** | Adaptive Path **Ajax** essay | Educational / about “web apps” page |
 | **Feb 2005** | Ask acquires **Bloglines** | RSS / reader culture beat |
-| **Mar 2005** | **Yahoo acquires Flickr** | Continuity Flickr room + Yahoo M&A news |
+| **Mar 20 2005** | **Yahoo acquires Flickr** (Ludicorp) | Continuity Flickr + M&A news |
+| **~Apr 2005** | **HousingMaps** mashup (pre-API) | Maps mashups room |
 | **Apr 23 2005** | YouTube public beta · *Me at the zoo* | **P0 YouTube** watch/upload theater |
-| **May 2005** | Accel invests in Facebook (~$13M class) | Facebook continuity about |
-| **Jun 2005** | **Reddit** launches | **P0 Reddit** front page + dig/upvote theater |
+| **May 2005** | Accel invests in Facebook (**$12.7M**) | Facebook continuity about |
+| **Jun 2005** | **Google Maps API** public | Mashup culture mainstream |
+| **Jun 2005** | **Reddit** launches (Jun 23) | **P0 Reddit** front page + boosts theater |
 | **Jun 2005** | **TechCrunch** launches | P1 tech-blog culture |
-| **Jun 28 2005** | **iTunes 4.9 podcasting** | iTunes densify / podcast directory theater |
-| **Jul 2005** | **News Corp → MySpace** | MySpace continuity “sold” beat |
+| **Jun 28 2005** | **iTunes 4.9 podcasting** | Podcast directory theater |
+| **Jun 30 2005** | **>1M iTunes podcast subscriptions** | Densify scale claim |
+| **Jul 1 2005** | **Diggnation** ep.1 | Digg culture beat |
+| **Jul 18 2005** | **News Corp → Intermix/MySpace $580M** | MySpace continuity “sold” beat |
 | **Jul 2005** | Google → Android (quiet) | Optional about note only |
 | **~Jul 2005** | **Mashable** | Tech blog flavor |
 | **Aug 2005** | Facebook buys **facebook.com**, drops “The” | Facebook rename room |
-| **Sep 2005** | **eBay → Skype** | News / commerce beat |
+| **Aug 26 2005** | **Million Dollar Homepage** | Optional P2 novelty |
+| **Sep 12 2005** | **eBay → Skype ~$2.6B** | News / commerce beat |
 | **Sep 2005** | Facebook **high school** version | Still gated social |
 | **Oct 2005** | **Web 2.0 Conference** | Culture / about 2005 thesis |
+| **Nov 7 2005** | YouTube Sequoia **$3.5M** | YouTube growth (still independent) |
 | **Nov 2005** | Google Base; Microsoft “Live” era talk | Optional Google densify |
-| **Dec 2005** | Yahoo → **del.icio.us**; YouTube exits beta class | Social bookmarking optional; YouTube full |
+| **Dec 9 2005** | Yahoo → **del.icio.us** | Social bookmarking |
+| **Dec 15 2005** | YouTube official launch class | YouTube full |
 | Late 2005 | Digg rivals Slashdot (period claim) | Digg room honesty |
 
 ---

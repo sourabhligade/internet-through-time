@@ -1,0 +1,9 @@
+SOURCE class: BBC 2005-09-12 · Stanford case · Wikipedia Skype · eBay stories
+FETCHED: 2026-07-30 web-expand pass
+---
+September 12, 2005: eBay agrees to acquire Skype Technologies.
+- Up-front ~US$2.5–2.6 billion (cash + stock); total deal class often cited $2.6–4.1B with performance earnouts (Cybercultural Top-10)
+- BBC: "eBay to buy Skype in $2.6bn deal"
+- Stanford case: intention announced Sep 12 2005; completed later
+
+EXHIBIT: Optional news/commerce beat; Skype room if present should note eBay acquisition as 2005 fact (2004 year had independent Skype).

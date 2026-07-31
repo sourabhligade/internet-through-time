@@ -1,0 +1,59 @@
+SOURCE: https://web.archive.org/web/20021013195949id_/http://www.wired.com/news/culture/0,1284,55675,00.html
+FINAL: https://web.archive.org/web/20021013195949id_/http://www.wired.com/news/culture/0,1284,55675,00.html
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-wired-pr
+ROLE: Wired redesign PR
+TITLE: Wired News: Wired News: A Site for Your Eyes
+BYTES: 18391
+ERROR: 
+
+KEY FACTS / TEXT:
+Wired News: Wired News: A Site for Your Eyes
+Welcome to Wired News. Skip directly to: Search Box , Section Navigation , Content .
+Search:
+News
+Animations
+Wired Magazine
+HotBot (the Web)
+Wired News: A Site for Your Eyes
+By Jon Rochmis   |   Also by this reporter
+Page 1 of 2
+next  »
+02:00 AM Oct. 11, 2002 PDT
+Wired News looks a little bit different. OK, it's a lot different.
+But what you can't see is even more significant than what you can.
+Story Tools
+Story Images
+Click thumbnails for full-size image:
+See also
+Browsing Around for New Targets Reality Check for Web Design A Flashy Web Communication Tool Discover more Net Culture
+Today's Top 5 Stories
+A Kiddie GPS for the Masses?
+Nasdaq Down, Psychic Readings Up
+Weather Forecasts to Believe In
+Wired News: A Site for Your Eyes
+Kiwi Symphony's Errant Scat Music
+For the first time in two years, this site has undergone some noticeable bodywork: Colors have changed, navigation has shifted, some sections have changed names and new features have appeared. But as chief designer Douglas Bowman says, it's the elements of the engine and chassis we're using that will help "lift the Web out of the dark ages."
+That this is Wired News' first makeover in two years is noteworthy because back in the Mesozoic Era of Web Design (circa late-20th century), the website at www.wired.com was given a new look practically every six months.
+Longtime readers will notice that many of the early design elements are back, the color scheme is different (and will be changing daily) and several navigation capabilities have been dramatically redone.
+But what isn't readily noticeable is the backbone of this new design, a landmark undertaking for a heavily trafficked, content-heavy website like Wired News. With this edition, we have rebuilt the site to comply with Web standards recommended by the World Wide Web Consortium .
+The group set out in 1998 to make websites accessible to all users and to end the so-called browser wars that resulted in cumbersome HTML, slow-to-load pages and Web designers gone mad.
+By converting to the hybrid markup language XHTML (extensible hypertext markup language) and adopting cascading stylesheets (CSS), Wired News is now faster to load and can be read by practically every version of every Web browser. It can be displayed on a wider range of browser platforms, including mobile phones, PDAs and televisions. It's more accessible to the visually impaired, and may be updated on any or all of its thousands of pages quickly, with a simple list of commands.
+"I simply can't overstate the importance of Wired News' new design," said Eric A. Meyer, standards evangelist for Netscape Communications, a W3C member and author of several Web design books.
+The work of Wired News' Bowman, he adds, "is carried out with insight and precision. Both he and the engineers (Aaron Jones and Kevin Cooke) who worked with him deserve the highest praise, not to mention a tinge of envy, as the simple markup that now drives the site will be a great deal easier to maintain.
+"In making their own work easier, they have also made their site better for everyone who visits. I'm more than impressed, I'm delighted."
+Wired News isn't the first website to be written in XHTML and to utilize CSS; many weblogs and designers' sites have already converted to these standards. But it may be the first major, heavily trafficked, constantly updated site to adopt them. Wired News encourages other sites to follow the Web Standards Project in the campaign to encourage users to upgrade their browsers.
+Then again, innovation is nothing new to Wired News and Wired Digital. In addition to being one of the first independent daily news sites on the Web, Wired News, as part of the HotWired network, invented the first ad banner, created the Web's first online member system and was one of the first to offer the concept of site sponsorship.
+HotWired engineers were among the founding members of the Apache Project, which created the Apache Web server, the world's most popular Web serving software.
+Story continued on Page 2  »
+Page 1 of 2
+next  »
+Wired News: Contact Us
+We are translated daily into Spanish , Portuguese , and Japanese
+© Copyright 2002, Lycos, Inc. All Rights Reserved.
+Your use of this website constitutes acceptance of the Lycos Privacy Policy and Terms & Conditions
+Note: Wired News content is accessible to all versions of every browser. However, this browser may not support basic Web standards, preventing the display of our site's design details. We support the mission of the Web Standards Project in the campaign encouraging users to upgrade their browsers. ( Read More )
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

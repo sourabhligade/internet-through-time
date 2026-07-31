@@ -1,67 +1,127 @@
 /**
- * WordPress 2003 — posts + simple dashboard theater
+ * WordPress immersion — 2003 self-host publish / install demo (localStorage)
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-  ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
-  ITT.ImmersionFeatures.push({
-    id: "wordpress",
-    needs: function (cfg) { return cfg.features && cfg.features.wordpress; },
-    init: function (api) {
-      var storageKey = api.storageKey, loadJSON = api.loadJSON, saveJSON = api.saveJSON;
-      var escapeHtml = api.escapeHtml, showFlash = api.showFlash, markTourProgress = api.markTourProgress;
-      var KEY = storageKey("wp-posts");
-      function posts() {
-        return loadJSON(KEY, null) || [
-          { title: "Hello world!", body: "Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!", date: "May 27, 2003" },
-          { title: "Code is Poetry", body: "WordPress is a free, self-hosted fork of b2/cafelog. Own your blog. Publish from the browser.", date: "May 28, 2003" }
-        ];
-      }
-      function render() {
-        var out = document.querySelector("[data-wp-posts]");
-        if (!out) return;
-        var P = posts();
-        var html = "";
-        for (var i = 0; i < P.length; i++) {
-          html += "<div class='wp-post' style='margin:0 0 20px;padding-bottom:14px;border-bottom:1px solid #ddd'>" +
-            "<h3 style='margin:0 0 4px;color:#21759b'>" + escapeHtml(P[i].title) + "</h3>" +
-            "<font size='1' color='#888'>" + escapeHtml(P[i].date || "") + " · by admin</font>" +
-            "<p style='margin:8px 0 0'>" + escapeHtml(P[i].body) + "</p></div>";
+  function year() {
+    return String(
+      ITT._immersionYear ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        ""
+    );
+  }
+  function tag() {
+    if (year() === "2004") return "itt04";
+    if (year() === "2008") return "itt08";
+    if (year() === "2007") return "itt07";
+    if (year() === "2006") return "itt06";
+    if (year() === "2005") return "itt05";
+    return "itt03";
+  }
+  function postsKey() {
+    return tag() + "-wp-posts";
+  }
+  function installKey() {
+    return tag() + "-wp-installed";
+  }
+
+  function loadPosts() {
+    try {
+      var raw = localStorage.getItem(postsKey());
+      if (raw) return JSON.parse(raw);
+      if (postsKey() !== "itt03-wp-posts") {
+        var leg = localStorage.getItem("itt03-wp-posts");
+        if (leg) {
+          localStorage.setItem(postsKey(), leg);
+          return JSON.parse(leg);
         }
-        out.innerHTML = html;
-        markTourProgress("wordpress");
       }
-      function renderDash() {
-        var out = document.querySelector("[data-wp-dash]");
-        if (!out) return;
-        var P = posts();
-        out.innerHTML = "<b>" + P.length + "</b> posts · <b>0</b> comments awaiting · Theme: <i>Default (Kubrick-ish)</i>";
+      return [];
+    } catch (e) {
+      return [];
+    }
+  }
+  function savePosts(p) {
+    localStorage.setItem(postsKey(), JSON.stringify(p));
+  }
+
+  function esc(s) {
+    return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function render(doc) {
+    var el = doc.querySelector("[data-wp-posts]");
+    if (!el) return;
+    var posts = loadPosts();
+    if (!posts.length) {
+      el.innerHTML = "<p style='font-size:12px;color:#666'>No posts yet — publish from the dashboard.</p>";
+      return;
+    }
+    el.innerHTML = posts.map(function (p) {
+      return "<div class='wp-post'><h3 style='margin:0 0 4px'>" + esc(p.title || "Untitled") +
+        "</h3><div style='font-size:11px;color:#666'>" + esc(p.date || "") +
+        "</div><p style='font-size:13px'>" + esc(p.body || "") + "</p></div>";
+    }).join("");
+  }
+
+  function boot(doc) {
+    doc = doc || document;
+    var form = doc.querySelector("[data-wp-publish]");
+    if (form) {
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var title = (form.querySelector('[name="title"]') || {}).value || "Hello world";
+        var body = (form.querySelector('[name="body"]') || {}).value || "";
+        var posts = loadPosts();
+        posts.unshift({ title: title, body: body, date: new Date().toLocaleString() });
+        savePosts(posts.slice(0, 40));
+        var st = doc.querySelector("[data-wp-status]");
+        if (st) st.textContent = "Published (this browser only) — WordPress self-host era.";
+        form.reset();
+        render(doc);
+      });
+    }
+    var install = doc.querySelector("[data-wp-install]");
+    if (install) {
+      install.addEventListener("click", function () {
+        localStorage.setItem(installKey(), "1");
+        var st = doc.querySelector("[data-wp-install-status]");
+        if (st) st.textContent = "Download recorded: wordpress-0.7.zip (this browser only) — continue to install.";
+      });
+    }
+    var root = doc.querySelector("[data-wp-install-root]");
+    if (root) {
+      var step = 1;
+      function showStep(n) {
+        step = n;
+        var num = doc.querySelector("[data-wp-step-num]");
+        if (num) num.textContent = String(n);
+        for (var i = 1; i <= 3; i++) {
+          var el = doc.querySelector('[data-wp-step="' + i + '"]');
+          if (el) el.style.display = i === n ? "block" : "none";
+        }
+        if (n === 3) localStorage.setItem(installKey(), "1");
       }
-      var form = document.querySelector("form[data-wp-new]");
-      if (form) {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          var t = form.querySelector('[name="title"]');
-          var b = form.querySelector('[name="body"]');
-          var P = posts();
-          var d = new Date();
-          var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-          P.unshift({
-            title: (t && t.value) || "Untitled",
-            body: (b && b.value) || "",
-            date: months[d.getMonth()] + " " + d.getDate() + ", 2003"
-          });
-          saveJSON(KEY, P);
-          if (t) t.value = "";
-          if (b) b.value = "";
-          if (showFlash) showFlash("Post published.");
-          render();
-          renderDash();
+      var nexts = doc.querySelectorAll("[data-wp-next]");
+      for (var j = 0; j < nexts.length; j++) {
+        nexts[j].addEventListener("click", function () {
+          showStep(Math.min(3, step + 1));
+          var st = doc.querySelector("[data-wp-install-status]");
+          if (st && step >= 3) st.textContent = "Installed (this browser only).";
         });
       }
-      render();
-      renderDash();
     }
-  });
+    if (form || doc.querySelector("[data-wp-posts]") || install || root) render(doc);
+  }
+  function register() {
+    if (!ITT.ImmersionFeatures || !ITT.ImmersionFeatures.registerLocal) {
+      setTimeout(register, 20);
+      return;
+    }
+    ITT.ImmersionFeatures.registerLocal({ id: "wordpress", boot: boot });
+  }
+  register();
 })(typeof window !== "undefined" ? window : this);

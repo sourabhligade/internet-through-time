@@ -63,6 +63,121 @@
     return "1995";
   }
 
+  /**
+   * Split feature list so the current product page boots fast.
+   * 2005 loads ~30 modules; waiting on all of them makes YouTube/Maps/etc. feel laggy.
+   * Priority: shared + page-matched module(s). Rest loads after Immersion.create.
+   */
+  function splitFeaturesForPage(all) {
+    all = all || [];
+    var path = "";
+    try {
+      path = String((typeof location !== "undefined" && location.pathname) || "").toLowerCase();
+    } catch (e) {
+      path = "";
+    }
+    var hints = [
+      ["youtube", "immersion/youtube.js"],
+      ["housingmaps", "immersion/housingmaps.js"],
+      ["maps", "immersion/maps.js"],
+      ["reddit", "immersion/reddit.js"],
+      ["digg", "immersion/digg.js"],
+      ["delicious", "immersion/delicious.js"],
+      ["gmail", "immersion/gmail.js"],
+      ["facebook", "immersion/facebook.js"],
+      ["flickr", "immersion/flickr.js"],
+      ["myspace", "immersion/myspace.js"],
+      ["itunes", "immersion/itunes.js"],
+      ["blogger", "immersion/blogger.js"],
+      ["bloglines", "immersion/bloglines.js"],
+      ["technorati", "immersion/technorati.js"],
+      ["wordpress", "immersion/wordpress.js"],
+      ["linkedin", "immersion/linkedin.js"],
+      ["adsense", "immersion/adsense.js"],
+      ["friendster", "immersion/friendster.js"],
+      ["orkut", "immersion/orkut.js"],
+      ["livejournal", "immersion/livejournal.js"],
+      ["craigslist", "immersion/craigslist.js"],
+      ["amazon", "immersion/amazon.js"],
+      ["ebay", "immersion/auction.js"],
+      ["auctionweb", "immersion/auction.js"],
+      ["slashdot", "immersion/slashdot.js"],
+      ["google", "immersion/google.js"],
+      ["yahoo", "immersion/yahoo.js"],
+      ["excite", "immersion/excite.js"],
+      ["napster", "immersion/napster.js"],
+      ["kazaa", "immersion/kazaa.js"],
+      ["netflix", "immersion/netflix.js"],
+      ["geocities", "immersion/geocities.js"],
+      ["hotmail", "immersion/hotmail.js"],
+      ["twitter", "immersion/twitter.js"],
+      ["docs", "immersion/docs.js"],
+      ["aws", "immersion/aws.js"],
+      ["reader", "immersion/reader.js"],
+      ["iphone", "immersion/iphone.js"],
+      ["appstore", "immersion/appstore.js"],
+      ["chrome", "immersion/chrome-browser.js"],
+      ["android", "immersion/android.js"],
+      ["hulu", "immersion/hulu.js"],
+      ["feedburner", "immersion/feedburner.js"],
+      ["podcasts", "immersion/podcasts.js"]
+    ];
+    var priority = [];
+    var seen = {};
+    function add(rel) {
+      if (!rel || seen[rel]) return;
+      var i;
+      for (i = 0; i < all.length; i++) {
+        if (all[i] === rel) {
+          seen[rel] = 1;
+          priority.push(rel);
+          return;
+        }
+      }
+    }
+    /* shared first — nav / flash / tour */
+    add("immersion/shared.js");
+    var h;
+    for (h = 0; h < hints.length; h++) {
+      var key = hints[h][0];
+      if (
+        path.indexOf("/sites/" + key + "/") !== -1 ||
+        path.indexOf("/" + key + "/") !== -1
+      ) {
+        add(hints[h][1]);
+        if (key === "itunes") add("immersion/podcasts.js");
+        if (key === "maps") add("immersion/housingmaps.js");
+      }
+    }
+    /* guestbook / search pages */
+    if (
+      path.indexOf("guestbook") !== -1 ||
+      path.indexOf("/search") !== -1 ||
+      path.indexOf("whitehouse") !== -1
+    ) {
+      add("immersion/guestbook-search.js");
+    }
+    var rest = [];
+    var j;
+    for (j = 0; j < all.length; j++) {
+      if (!seen[all[j]]) rest.push(all[j]);
+    }
+    /* If nothing page-specific matched, keep full list as priority (home/about). */
+    if (priority.length <= 1 && rest.length) {
+      return { priority: all.slice(), rest: [] };
+    }
+    return { priority: priority, rest: rest };
+  }
+
+  function loadAll(base, rels) {
+    var jobs = [];
+    var i;
+    for (i = 0; i < rels.length; i++) {
+      jobs.push(loadScript(base + rels[i]));
+    }
+    return Promise.all(jobs);
+  }
+
   function start(year) {
     var YEAR = String(year || resolveYear());
     ITT._immersionYear = YEAR;
@@ -79,6 +194,32 @@
       ITT.Immersion.create(cfg);
     }
 
+    /**
+     * Init only modules that registered after first create (deferred phase).
+     * Uses ITT._immersionFeaturesInited cursor set by create.js boot.
+     */
+    function bootLateFeatures() {
+      try {
+        var cfg = ITT.immersionConfigs && ITT.immersionConfigs[YEAR];
+        if (!cfg || !ITT.ImmersionFeatures) return;
+        var api = ITT._immersionApi;
+        var features = ITT.ImmersionFeatures;
+        var start = typeof ITT._immersionFeaturesInited === "number" ? ITT._immersionFeaturesInited : 0;
+        var i;
+        for (i = start; i < features.length; i++) {
+          var f = features[i];
+          if (!f || typeof f.init !== "function") continue;
+          try {
+            if (f.needs && !f.needs(cfg)) continue;
+            f.init(api);
+          } catch (err) {
+            console.error("ITT immersion late feature failed:", f.id, err);
+          }
+        }
+        ITT._immersionFeaturesInited = features.length;
+      } catch (e) { /* */ }
+    }
+
     var needUtil = !(ITT.util);
     var chain = needUtil ? loadScript(base + "lib/util.js") : Promise.resolve();
 
@@ -89,21 +230,42 @@
       .then(function () {
         var map = ITT.IMMERSION_FEATURES_BY_YEAR || {};
         var features = map[YEAR] || map["1995"] || [];
-        var parallel = [];
-        for (var i = 0; i < features.length; i++) {
-          parallel.push(loadScript(base + features[i]));
-        }
+        var split = splitFeaturesForPage(features);
+        ITT._immersionFeatureSplit = split;
+
+        var phase1 = split.priority.slice();
         if (!(ITT.immersionConfigs && ITT.immersionConfigs[YEAR])) {
-          var cfgFile = (ITT.immersionConfigFile && ITT.immersionConfigFile(YEAR)) ||
-            ("immersion-" + YEAR + ".js");
-          parallel.push(loadScript(base + "config/" + cfgFile));
+          var cfgFile =
+            (ITT.immersionConfigFile && ITT.immersionConfigFile(YEAR)) ||
+            "immersion-" + YEAR + ".js";
+          phase1.push("config/" + cfgFile);
         }
-        return Promise.all(parallel);
+
+        return loadAll(base, phase1).then(function () {
+          return loadScript(base + "immersion/create.js");
+        }).then(function () {
+          bootCreate();
+          /* Defer the rest so YouTube/Maps/etc. paint and wire immediately */
+          if (split.rest && split.rest.length) {
+            var loadRest = function () {
+              loadAll(base, split.rest)
+                .then(function () {
+                  bootLateFeatures();
+                })
+                .catch(function (err) {
+                  console.error("ITT immersion deferred features failed:", err);
+                });
+            };
+            if (typeof requestIdleCallback === "function") {
+              requestIdleCallback(function () {
+                loadRest();
+              }, { timeout: 1200 });
+            } else {
+              setTimeout(loadRest, 0);
+            }
+          }
+        });
       })
-      .then(function () {
-        return loadScript(base + "immersion/create.js");
-      })
-      .then(bootCreate)
       .catch(function (err) {
         console.error("ITT immersion bootstrap failed:", err);
       });

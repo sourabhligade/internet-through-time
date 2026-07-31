@@ -24,8 +24,8 @@ def resolve(page: Path, href: str):
             out.append(p)
     return Path(*out)
 
-# All unlocked museum years (hub 1994–2005). Keep in sync with index.html year cards.
-YEARS = ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005")
+# Open museum years (hub 1994–1999). Keep in sync with index.html year cards.
+YEARS = ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003")  # 2000/2004+ wiped
 
 for year in YEARS:
     yroot = ROOT / "years" / year

@@ -26,20 +26,20 @@
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "Wikipedia", href: "sites/wikipedia/index.html", match: "/wikipedia/" },
       { label: "iPod", href: "sites/apple/ipod.html", match: "/ipod/" },
-      { label: "Amazon", href: "sites/amazon/index.html", match: "/amazon/" },
-      { label: "Napster", href: "sites/napster/index.html", match: "/napster/" },
-      { label: "Pets.com", href: "sites/pets/index.html", match: "/pets/" },
+      { label: "iTunes", href: "sites/apple/itunes.html", match: "/itunes" },
       { label: "Google", href: "sites/google/index.html", match: "/google/" },
+      { label: "Amazon", href: "sites/amazon/index.html", match: "/amazon/" },
       { label: "Yahoo!", href: "sites/yahoo/index.html", match: "/yahoo/" },
-      { label: "eBay", href: "sites/ebay/index.html", match: "/ebay/" },
-      { label: "Flash", href: "sites/macromedia/index.html", match: "/macromedia/" },
       { label: "CNN", href: "sites/cnn/index.html", match: "/cnn/" },
-      { label: "MetaFilter", href: "sites/metafilter/index.html", match: "/metafilter/" }
+      { label: "Blogger", href: "sites/blogger/index.html", match: "/blogger/" },
+      { label: "MT", href: "sites/movabletype/index.html", match: "/movabletype/" },
+      { label: "Wayback", href: "sites/wayback/index.html", match: "/wayback/" },
+      { label: "eBay", href: "sites/ebay/index.html", match: "/ebay/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
-      { label: "Amazon smile", href: "sites/amazon/index.html" },
-      { label: "Napster", href: "sites/napster/index.html" },
+      { label: "Wikipedia", href: "sites/wikipedia/index.html" },
+      { label: "iPod", href: "sites/apple/ipod.html" },
       { label: "About 2001", href: "pages/about.html" }
     ],
     tour: [
@@ -48,16 +48,8 @@
         label: "Wikipedia",
         href: "sites/wikipedia/index.html",
         match: "/wikipedia/",
-        hint: "read the free encyclopedia intro · follow a blue link",
-        doneMessage: "Wikipedia — collaboration after the crash."
-      },
-      {
-        id: "google",
-        label: "Google",
-        href: "sites/google/index.html",
-        match: "/google/",
-        hint: "search something ordinary — watch quality still feel magical",
-        doneMessage: "Google — habit-forming search."
+        hint: "edit this page right now · try Show preview",
+        doneMessage: "Wikipedia — free, community encyclopedia."
       },
       {
         id: "ipod",
@@ -66,6 +58,22 @@
         match: "/ipod/",
         hint: "1,000 songs in your pocket",
         doneMessage: "iPod — portable jukebox era begins."
+      },
+      {
+        id: "itunes",
+        label: "iTunes",
+        href: "sites/apple/itunes.html",
+        match: "/itunes",
+        hint: "library · free download · no Music Store yet",
+        doneMessage: "iTunes — jukebox software, not a store."
+      },
+      {
+        id: "google",
+        label: "Google",
+        href: "sites/google/index.html",
+        match: "/google/",
+        hint: "type a word → Google Search",
+        doneMessage: "Google — habit-forming sparse search."
       },
       {
         id: "amazon",
@@ -92,9 +100,9 @@
         doneMessage: "CNN — the always-on news window."
       }
     ],
-    tourCompleteHint: "Type amazon, napster, or pets in the Address bar — or open Favorites.",
+    tourCompleteHint: "Type wikipedia, ipod, itunes, blogdex, or wayback in the Address bar.",
     activityGuestbooks: ["area51-9277", "sunset-4100"],
-    searchEmptyHint: "Try: <i>amazon</i>, <i>napster</i>, <i>pets</i>, <i>google</i>, <i>yahoo</i>, <i>ebay</i>.",
+    searchEmptyHint: "Try: <i>wikipedia</i>, <i>ipod</i>, <i>itunes</i>, <i>google</i>, <i>amazon</i>, <i>blogger</i>.",
     catalog: [
       { title: "Wikipedia", path: "sites/wikipedia/index.html", kw: "wikipedia wiki encyclopedia free edit", blurb: "Anyone can edit." },
       { title: "Apple iPod", path: "sites/apple/ipod.html", kw: "ipod apple 1000 songs jukebox", blurb: "1,000 songs in your pocket." },
@@ -106,10 +114,22 @@
       { title: "eBay", path: "sites/ebay/index.html", kw: "ebay auction bid marketplace", blurb: "Personal trading community." },
       { title: "PayPal", path: "sites/paypal/index.html", kw: "paypal x.com confinity money", blurb: "Email money / merger era." },
       { title: "Blogger", path: "sites/blogger/index.html", kw: "blogger blog weblog pyra", blurb: "Automated weblogs." },
+      { title: "Movable Type", path: "sites/movabletype/index.html", kw: "movable type six apart blog rss templates", blurb: "Pro personal publishing." },
+      { title: "Blogdex", path: "sites/blogdex/index.html", kw: "blogdex mit media lab most linked", blurb: "Most-linked weblog URLs." },
+      { title: "iTunes", path: "sites/apple/itunes.html", kw: "itunes jukebox rip burn ipod sync", blurb: "Digital jukebox — no store." },
+      { title: "Wayback Machine", path: "sites/wayback/index.html", kw: "wayback archive memory kahle", blurb: "Time travel for URLs." },
+      { title: "Internet Explorer 6", path: "sites/microsoft/ie6.html", kw: "ie6 internet explorer windows xp", blurb: "Browser monopoly peak." },
+      { title: "Mozilla 0.9.4", path: "sites/mozilla/index.html", kw: "mozilla open source browser suite", blurb: "Open-source hope (still a suite)." },
       { title: "Flash 5", path: "sites/macromedia/index.html", kw: "flash macromedia actionscript splash", blurb: "Motion design cool factor." },
       { title: "Gnutella", path: "sites/gnutella/index.html", kw: "gnutella p2p nullsoft frankel", blurb: "Decentralized file sharing." },
       { title: "Startup Failures", path: "sites/startupfailures/index.html", kw: "startup failure crash nasdaq pets", blurb: "Dot-com wreckage catalog." },
-      { title: "CNN.com", path: "sites/cnn/index.html", kw: "cnn news aol time warner nasdaq", blurb: "News of the crash year." },
+      { title: "CNN.com", path: "sites/cnn/index.html", kw: "cnn news afghanistan 2001", blurb: "News web under pressure." },
+      { title: "Moreover", path: "sites/moreover/index.html", kw: "moreover webfeed rss news widgets", blurb: "Webfeed company · portal widgets." },
+      { title: "Loudcloud", path: "sites/loudcloud/index.html", kw: "loudcloud andreessen enterprise bust", blurb: "Enterprise hangover 2001." },
+      { title: "Encarta contrast", path: "sites/encarta/index.html", kw: "encarta encyclopedia wikipedia contrast", blurb: "Why wiki felt different." },
+      { title: "Windows XP", path: "sites/microsoft/xp.html", kw: "windows xp luna retail october", blurb: "XP retail Oct 25 2001." },
+      { title: "Napster legal", path: "sites/napster/legal.html", kw: "napster injunction court 2001 endgame", blurb: "Court endgame timeline." },
+
       { title: "MetaFilter", path: "sites/metafilter/index.html", kw: "metafilter mefi community weblog", blurb: "Conversational social news." },
       { title: "Netscape 6", path: "sites/netscape/netscape6.html", kw: "netscape 6 gecko sidebar aim", blurb: "Open-source consumer browser." }
     ],
@@ -132,6 +152,8 @@
       { artist: "U2", title: "Beautiful Day", users: "1,120", time: "4:06", bitrate: "160" }
     ],
     googleCatalog: [
+      { title: "Wikipedia, the free encyclopedia", url: "http://www.wikipedia.org/", path: "sites/wikipedia/index.html", snippet: "Anyone can edit. Free collaborative encyclopedia." },
+      { title: "Apple - iPod", url: "http://www.apple.com/ipod/", path: "sites/apple/ipod.html", snippet: "1,000 songs in your pocket. FireWire. Mac-first." },
       { title: "Napster - music at Internet speed", url: "http://www.napster.com/", path: "sites/napster/index.html", snippet: "Download Napster. Find MP3s. Largest online music community." },
       { title: "Amazon.com - Earth's Biggest Selection", url: "http://www.amazon.com/", path: "sites/amazon/index.html", snippet: "Books, music, DVD, toys, electronics — everything A to Z." },
       { title: "Pets.com - Because Pets Can't Drive", url: "http://www.pets.com/", path: "sites/pets/index.html", snippet: "Pet supplies online. Famous sock puppet." },

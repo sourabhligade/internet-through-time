@@ -1,0 +1,22 @@
+Period web games research visit log
+Date: 2026-07-31
+Doc: docs/GAMES-PERIOD-RESEARCH-2026-07-31.md
+
+Web / secondary:
+- Kongregate Wikipedia: launch 2006-10-10 alpha; badges/high scores; Flash portal culture; beta into 2007
+- Club Penguin Wikipedia: public 2005-10-24; Disney acquisition 2007-08-01
+- Browser/Flash nostalgia catalogs: Line Rider 2006, Bloons/TD mid-2000s, Stick RPG, Motherload,
+  Helicopter Game, Portal Flash Version 2007 class
+- Portal name-checks: Miniclip, Newgrounds, AddictingGames, Armor Games, Cool Math, Y8/Friv later
+- Kids worlds: Neopets 1999, Webkinz, Habbo, Toontown class
+- Cybercultural / general 2000s internet culture context
+
+Project disk:
+- years/*/sites/gamespot thin coverage portals
+- years/*/sites/steam early client seed (wrong-year copy risk on 2007)
+- years/*/sites/macromedia Flash product (Skip Intro), not games portal
+- No games/ wing, no hub games CTA, no SWF binaries (correct)
+
+Legal stance locked in research:
+- No ripped commercial SWFs in repo
+- Portal UI theater + original simple JS games + localStorage scores preferred

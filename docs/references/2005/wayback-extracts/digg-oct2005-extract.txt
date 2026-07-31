@@ -1,0 +1,14 @@
+TITLE: digg
+CAPTURE: https://web.archive.org/web/20051001015226/http://digg.com/
+DATE_CLASS: Oct 1, 2005
+STATUS: re-opened 2026-07-30 deep research pass
+
+latest front page news
+story grammar: submitted by USER · N hours ago · (via URL) · N comments · blog this · category: CAT
+categories seen: linux/unix · links · design · gaming · apple · science · technology · software
+sidebar "What's Digg?": technology news website that combines social bookmarking, blogging, RSS, and non-hierarchical editorial control. users submit stories; users (not editors) decide homepage.
+actions: digg for stories · submit a new link
+recently promoted categories: all · apple · deals · design · gaming · hardware · links · linux/unix · mods · movies
+front page news in rss
+sample story titles period: SuSE 10.1 Alpha · Ubuntu Linux · Odysseus Ithaca · Flash Powered E-Mail · iTunes 5.0 for PSP · new iPods rumor · Sony PSP hacks · XP SP3 · CSS/Javascript Desktop
+NOTE: Diggnation podcast era (Jul 2005 launch class per wiki)

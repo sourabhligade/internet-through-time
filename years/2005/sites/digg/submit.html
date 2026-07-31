@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Digg - Submit</title>
+<title>Digg submit</title>
 <link rel="stylesheet" href="../../../../css/period-2005.css">
 </head>
-<body bgcolor="#ffffff">
+<body class="digg-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="dg05-wrap">
-  <div class="dg05-top"><span class="dg05-logo">digg</span> · Submit</div>
-  <form data-digg-submit style="background:#f0f0f0;border:1px solid #1b5790;padding:12px">
-    <font size="2">
-    Link URL<br><input name="url" size="50" value="http://"><br><br>
-    Title<br><input name="title" size="50"><br><br>
-    <input type="submit" value="Submit to Digg">
-    </font>
-  </form>
-  <p><a href="index.html">« Front Page</a></p>
+
+<div style="padding:12px;max-width:560px;font-size:13px">
+ <p>
+  <img src="../../../../assets/period/2005/digg/logo.gif" alt="Digg" height="28" style="vertical-align:middle">
+  <b>Submit a story</b>
+  · <a href="index.html">Popular</a>
+  · <a href="about.html">About</a>
+ </p>
+ <h1 style="font-size:18px">Submit a link</h1>
+ <p><b>2005 is the rise year</b> (public launch Dec 5, 2004). Digg it / bury, comments, Diggnation ep.1 Jul 1 2005.
+ No real Digg accounts — list stays in this browser.</p>
+ <form data-digg-submit action="#" id="digg-submit">
+  Title<br><input name="title" size="40"><br><br>
+  URL<br><input name="url" size="40" value="http://"><br><br>
+  <button type="submit">Submit to Digg</button>
+ </form>
+ <p id="digg-status" data-digg-status style="color:#060"></p>
+ <p style="font-size:12px"><b>Your submissions</b></p>
+ <div id="digg-mine" data-digg-mine></div>
+ <p style="font-size:12px;margin-top:14px"><b>Popular (digg / bury / comment)</b></p>
+ <div data-digg-list style="margin-top:8px"></div>
+ <p style="font-size:12px;color:#444;border-top:1px solid #ddd;padding-top:8px;margin-top:12px">
+ Keys: <code>itt05-digg-links</code> · <code>itt05-digg-comments</code>.
+ Trail: <a href="../reddit/submit.html">Reddit submit</a> ·
+ <a href="../youtube/index.html">YouTube</a> ·
+ <a href="../itunes/index.html">iTunes podcasts</a> (Diggnation culture).
+ </p>
+ <p><a href="index.html">← Popular</a> · <a href="about.html">About Digg rise</a></p>
 </div>
+
 <script src="../../../../js/immersion-2005.js"></script>
 </body></html>

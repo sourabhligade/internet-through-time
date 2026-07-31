@@ -7,7 +7,3 @@
 /years/1999/
 /years/2000/
 /years/2001/
-/years/2002/
-/years/2003/
-/years/2004/
-/years/2005/

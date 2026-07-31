@@ -955,10 +955,12 @@ html, body {
   cursor: wait;
 }
 
+/* Dim only — never block clicks. pointer-events:none made links/buttons feel dead
+   during modem transfer (years using win95-netscape.css: 1995–2005). */
 .browser.loading .content-frame iframe {
-  opacity: 0.62;
-  filter: grayscale(0.15);
-  pointer-events: none;
+  opacity: 0.85;
+  filter: grayscale(0.06);
+  pointer-events: auto;
   transition: opacity 0.08s linear;
 }
 

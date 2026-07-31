@@ -1,0 +1,29 @@
+SOURCE: https://web.archive.org/web/20011031205736id_/http://www.apple.com/iTunes/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: Apple - iTunes
+ROLE: P0 iTunes 2 library software — NOT store
+YEAR TARGET: 2001
+
+KEY FEATURES LISTED ON PAGE:
+- Equalizer: 10-band + 22 EQ presets
+- Import: CD → high-quality MP3
+- Search / Browse library index
+- Playlists: drag and drop
+- Burn: audio CD + MP3 CD (>150 songs)
+- Visualizer
+- Internet Radio: hundreds of stations
+- iPod sync: "iTunes to go" · FireWire auto-update
+- Crossfader · Sound Enhancer
+- Multilingual/unicode (Japanese, Korean, Chinese)
+- "Coming Soon: iTunes 2 will be available in early November as a free download"
+- Still offers iTunes 1.1 for Mac OS 9 download
+- Fact Sheet + FAQ PDFs (Akamai)
+- External CD-RW support notes
+
+BUILD:
+- Feature grid + download theater (no real installer)
+- Cross-link to iPod room
+- BAN: Music Store, iTunes Match, Apple Music, podcasts directory (2005 story)
+
+NARRATIVE COMPANION:
+- Cybercultural itunes-launch-2001: Macworld SF Jan 9 2001 digital hub; SoundJam lineage; MP3-first vs WMA

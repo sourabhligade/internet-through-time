@@ -79,6 +79,20 @@
 
   function connectSequence(busyFirst, config) {
     config = config || {};
+    var mode = String(config.connectMode || "dialup").toLowerCase();
+    // 2001–2002 always-on broadband minority: skip ATDT modem ritual
+    if (mode === "broadband" || mode === "always-on" || mode === "always_on") {
+      return [
+        "Initializing network adapter...",
+        "DHCP discover...",
+        "IP address assigned.",
+        "DNS servers resolved.",
+        config.connectSpeedLine || "Connected · always-on broadband",
+        "Network stack ready.",
+        "Connected to Internet.",
+        config.connectBrowserLine || "Starting Internet Explorer 6.0..."
+      ];
+    }
     var lines = [
       "Initializing modem...",
       "ATZ",

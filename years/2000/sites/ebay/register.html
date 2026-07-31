@@ -1,24 +1,64 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>eBay - Register</title>
-<link rel="stylesheet" href="../../../../css/period-2000.css"></head>
-<body bgcolor="#FFFFFF" text="#000000" link="#0000EE" vlink="#551A8B">
+<html lang="en"><head><meta charset="utf-8">
+<title>eBay registration — 2000</title>
+<link rel="stylesheet" href="../../../../css/period-2000.css">
+</head>
+<body bgcolor="#ffffff" link="#0000cc">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="100%" cellpadding="0" cellspacing="0"><tr><td class="eb-bar">
-<a href="index.html" class="eb-logo"><b>eBay</b></a>
+<table width="640" align="center" cellpadding="10"><tr><td>
+ <font face="Arial" size="2">
+ <p><a href="index.html"><img src="../../../../assets/period/2000/ebay/logo.gif" height="40" border="0" alt="eBay"></a></p>
+ <h1 style="font-size:16px">Register for the personal trading community</h1>
+ <p>Signing up for eBay in 2000 is a ritual: choose a user ID, agree to the User Agreement,
+ and start building feedback.</p>
+ <table width="100%" cellpadding="6" bgcolor="#f5f5ff" style="border:1px solid #99c">
+ <tr><td>
+ <form id="ebay-register-form" action="myebay.html" method="get">
+ User ID: <input type="text" name="user" id="ebay-user" size="24" value=""><br><br>
+ Email: <input type="text" name="email" id="ebay-email" size="28" value=""><br><br>
+ <label><input type="checkbox" id="ebay-agree" checked> I agree to the User Agreement (sample)</label><br><br>
+ <input type="submit" value="Register Now">
+ </form>
+ <p id="ebay-reg-status" style="font-size:12px;color:#060"></p>
+ </td></tr>
+ </table>
+ <p style="font-size:11px;color:#666">Registration is saved in <b>this browser only</b> (localStorage) and shown on
+ <a href="myebay.html">My eBay</a>. No email is sent to the internet.</p>
+ <p><a href="index.html">Home</a> · <a href="category.html">Categories</a> ·
+ <a href="search.html">Search</a> · <a href="sell.html">Sell</a></p>
+ </font>
 </td></tr></table>
-<br>
-<font face="Arial, Helvetica, sans-serif">
-<h2>Register to buy and sell</h2>
-<p><font size="2">Join the personal trading community. Registration is free.</font></p>
-<form action="bid-confirm.html" method="get">
-<table border="0" cellpadding="4">
-<tr><td><font size="2">User ID:</font></td><td><input type="text" name="user" size="24"></td></tr>
-<tr><td><font size="2">Email:</font></td><td><input type="text" name="email" size="28"></td></tr>
-<tr><td><font size="2">Password:</font></td><td><input type="password" name="pass" size="24"></td></tr>
-<tr><td></td><td><input type="submit" value="Register Now"></td></tr>
-</table>
-</form>
-<p><font size="2"><a href="index.html">Back to eBay Home</a> · <a href="sell.html">Sell an item</a></font></p>
-</font>
+<script>
+(function () {
+  var f = document.getElementById("ebay-register-form");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var user = (document.getElementById("ebay-user").value || "").replace(/^\s+|\s+$/g, "");
+    var email = (document.getElementById("ebay-email").value || "").replace(/^\s+|\s+$/g, "");
+    var agree = document.getElementById("ebay-agree");
+    var st = document.getElementById("ebay-reg-status");
+    if (!user) {
+      if (st) st.textContent = "Choose a User ID.";
+      return;
+    }
+    if (agree && !agree.checked) {
+      if (st) st.textContent = "You must agree to the User Agreement.";
+      return;
+    }
+    try {
+      var key = "itt00-ebay-user";
+      localStorage.setItem(key, JSON.stringify({
+        user: user,
+        email: email || (user + "@example.com"),
+        registeredAt: Date.now(),
+        feedback: 0
+      }));
+    } catch (err) {}
+    if (st) st.innerHTML = "Welcome, <b>" + user.replace(/</g, "") + "</b> — opening My eBay…";
+    setTimeout(function () { location.href = "myebay.html"; }, 400);
+  });
+})();
+</script>
 <script src="../../../../js/immersion-2000.js"></script>
 </body></html>

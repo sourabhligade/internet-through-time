@@ -28,6 +28,25 @@ function hotmailHref(file) {
   return R("sites/hotmail/" + file);
 }
 
+/** Prefer shell navigate so Location bar / history stay in sync */
+function hotmailGo(file) {
+  var path = "sites/hotmail/" + file;
+  try {
+    if (parentBrowser && typeof parentBrowser.navigate === "function") {
+      parentBrowser.navigate(path, { instant: true });
+      return;
+    }
+  } catch (eNav) { /* fall through */ }
+  try {
+    if (window.top && window.top.ITT && window.top.ITT.activeBrowser &&
+        typeof window.top.ITT.activeBrowser.navigate === "function") {
+      window.top.ITT.activeBrowser.navigate(path, { instant: true });
+      return;
+    }
+  } catch (eTop) { /* fall through */ }
+  location.href = hotmailHref(file);
+}
+
 function getHotmailUser() {
   return loadJSON(storageKey("hotmail-user"), null);
 }
@@ -92,9 +111,9 @@ function initHotmail() {
       }
       setHotmailUser({ login: login, pass: pass ? "set" : "" });
       seedMail({ login: login });
-      showFlash("✓ Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
+      showFlash("Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
       markTourProgress();
-      location.href = hotmailHref("inbox.html");
+      hotmailGo("inbox.html");
     };
   }
 
@@ -177,12 +196,12 @@ function initHotmail() {
       });
       saveJSON(storageKey("hotmail-sent"), sent.slice(0, 30));
       showFlash(
-        "✓ Message queued to <b>" + escapeHtml(to || "recipient") +
-        "</b>. <font size=\"1\">Get your free email at HoTMaiL — exhibit theater.</font>"
+        "Message queued to <b>" + escapeHtml(to || "recipient") +
+        "</b>. <font size=\"1\">Get your free email at HoTMaiL.</font>"
       );
       markTourProgress();
       window.setTimeout(function () {
-        location.href = hotmailHref("inbox.html");
+        hotmailGo("inbox.html");
       }, 800);
     };
   }
@@ -193,7 +212,7 @@ function initHotmail() {
       e.preventDefault();
       setHotmailUser(null);
       showFlash("Signed out of HoTMaiL.");
-      location.href = hotmailHref("index.html");
+      hotmailGo("index.html");
     };
   }
 }

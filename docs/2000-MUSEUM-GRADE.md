@@ -1,36 +1,61 @@
-# 2000 Museum Grade — densify completion (2026-07-23)
+# 2000 — Museum grade status
 
-**Status: Museum densify ship** — playable, crash-year story-complete, asset-crafted, gated.
+**Date:** 2026-07-29  
+**Status:** **100% museum complete** (densify · culture residual · pixel residual closed/failed-final) · hub **unlocked**  
+**Disk:** `years/2000/` live · urlMap complete · smile required · crash thesis live · Homestar/CamWorld/kottke rooms
 
-## What “museum densify” means for 2000
-
-| Criterion | 2000 |
+| Companion | Role |
 |-----------|------|
-| Year shell | IE **5.5** · Win98/ME labels · crafted toolbar GIFs + blue `e` throbber |
-| Amazon | **Smile logo** + **tabs-insanity** strip + Marketplace / zShops language |
-| Crash spine | CNN: AOL–TW, Nasdaq peak/slide, Napster injunction, Pets.com, election |
-| Culture | Pets sock-puppet commercial, MetaFilter, Flash 5 splash, Gnutella, Startup Failures |
-| Browser subplot | Netscape 6 Gecko honesty · IE 5.5 / Windows Me rooms |
-| Assets | Period pack under `assets/period/2000/**` (crafted GIFs, not empty dirs) |
-| Gates | Smoke · authenticity densify tests · Playwright culture suite |
+| [`TO-100-PERCENT/YEAR-2000.md`](TO-100-PERCENT/YEAR-2000.md) | Phase plan |
+| [`2000-WEB-SURF-RESEARCH-2026-07-27.md`](2000-WEB-SURF-RESEARCH-2026-07-27.md) | Sources |
+| [`references/2000/CAPTURE-LOG.md`](references/2000/CAPTURE-LOG.md) | Harvest honesty |
+| [`references/2000/ASSETS.md`](references/2000/ASSETS.md) | Provenance |
+| [`DISK-TRUTH.md`](DISK-TRUTH.md) | Hub range |
 
-## Signature feeling
+## Visitor outcome
 
-Financial air leaves the balloon; the Web gets louder. Portals still own the homepage habit.
-Google is a tip you pass at work. Your cart is localStorage. Your playlist is someone else's hard drive.
+Open **2000** → Win98 SE + **IE 5.5**. Thesis: bubble peak/crash + Amazon **smile** + Napster war + Pets.com + Flash.  
+Densified live: Amazon smile multipage · Napster legal · Pets shop/shutdown · CNN crash spine · MetaFilter · Gnutella · Flash 5 skip-intro · Startup Failures · Google WA logo · Netscape 6 honesty · **PayPal** · **Homestar Runner** · **CamWorld** · **kottke.org**.
 
-## Verify
+## Ship checklist
 
-```bash
-python3 scripts/smoke-production.py
-python3 scripts/test-authenticity.py
-npx playwright test e2e/2000-*.spec.js e2e/hub-years.spec.js
-```
+| Gate | Result |
+|------|--------|
+| `years/2000/` boots | Yes |
+| Hub card | **Available** |
+| Authenticity | `2000-assets` · `smile` · `signature` · `urlmap` · `densify` |
+| e2e | `2000-mvp` · `2000-live-flows` · `2000-densify` · **`2000-flows`** |
+| urlMap | Complete for all content HTML |
 
-## Residuals (never “checkbox done”)
+## Residual accepted-final (optional forever)
 
-- Full Wayback HTML body extracts for pixel clone of Yahoo/eBay tables
-- evolt IE5.5 native crops vs hand-crafted bevels
-- Optional dual-browser toggle
+- evolt **IE 5.5** full toolbar OEM pack  
+- Yahoo full purple main33 frame (logo-sm **WA** landed)  
+- eBay logo true WA (path failed-final; continuity logo kept)  
+- Pets wordmark WA (associates **banner WA** landed; wordmark RECON)  
+- Full WA HTML dumps for every portal  
 
-Relative to project standards, 2000 now matches the **story density** bar of 1998–1999 museum years.
+## Leftover implement (2026-07-28 evening)
+
+Plan: [`TO-100-PERCENT/RESEARCH-FREEZE-2000.md`](TO-100-PERCENT/RESEARCH-FREEZE-2000.md)  
+
+**Done:** Slashdot YRO Napster densify + comments · Blogger Pyra honesty · Yahoo what's new/cool · CNN sections · IE5.5/WinME · location alias slashdot · ASSETS/ARTIFACTS honesty.  
+
+**Optional forever:** IE5.5 evolt OEM · Yahoo main33 full frame · CNN homepage pixel crop.
+
+## Bans enforced
+
+Pre-smile Amazon as default · WinXP/IE6 · Wikipedia 2001+ UI · modern streaming Napster · iPod/Store as shipped 2000 products · wrong-year CNN
+
+---
+
+*Museum densify 2026-07-27 · residual close 2026-07-28. Educational reconstruction only.*
+
+
+## Residual densify closed (2026-07-29)
+
+Phases 1–4 of [`2000-2001-IMPLEMENTATION-PHASES.md`](2000-2001-IMPLEMENTATION-PHASES.md):
+museum-voice purge on content rooms · culture densify (kottke / CamWorld / Homestar / MetaFilter / Gnutella) ·
+crash/portal densify (Pets / Flash / eBay My eBay / Excite / Startup Failures) · hard `e2e/2000-flows.spec.js`.
+
+Optional forever (Phase 9): evolt OEM pack · failed WA retries — not blockers.

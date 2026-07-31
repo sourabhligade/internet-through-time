@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Gmail - Compose</title>
-<link rel="stylesheet" href="../../../../css/period-2005.css"></head>
-<body bgcolor="#ffffff">
+<html lang="en"><head><meta charset="utf-8">
+<title>Gmail — Compose</title>
+<link rel="stylesheet" href="../../../../css/period-2005.css">
+</head>
+<body class="gmail-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="gm04-wrap">
-  <div class="gm04-nav"><a href="inbox.html">« Inbox</a></div>
-  <form data-gmail-compose class="gm04-compose">
-    <font size="2">
-    To: <input name="to" size="40"><br><br>
-    Subject: <input name="subj" size="40"><br><br>
-    <textarea name="body" rows="10" cols="60"></textarea><br><br>
-    <input type="submit" value="Send">
-    </font>
-  </form>
+<div class="gmail-header">
+ <b>Gmail</b> · Compose · <a href="inbox.html">Inbox</a> · <a href="invite.html">Invites</a> · <a href="about.html">About</a>
+</div>
+<div class="gmail-layout">
+ <div class="gmail-labels">
+ <a href="inbox.html">Inbox</a><br>
+ <b>Compose</b><br>
+ Starred<br>
+ Sent Mail<br>
+ <a href="invite.html">Invitations</a>
+ <p style="font-size:10px;color:#666;margin-top:12px">Search, don't sort<br>1 GB free (preview lore)</p>
+ </div>
+ <div class="gmail-main">
+ <p style="font-size:12px;color:#444">Conversation-style mail · Ajax-era web app (same family as Maps). Invite-only roots (Apr 1 2004); still a hot invite in 2005.</p>
+ <form data-gmail-compose>
+ To:<br><input name="to" size="52" value="friend@example.com"><br><br>
+ Subject:<br><input name="subj" size="52" value="Have you got a Gmail invite?"><br><br>
+ Message:<br>
+ <textarea name="body" rows="12" cols="60">Hey —
+
+I got into the Gmail preview. One gigabyte free. Search instead of folders.
+Need an invite?
+
+— sent from Gmail (demo)
+</textarea><br><br>
+ <button type="submit">Send</button>
+ <button type="button" onclick="history.back()">Discard</button>
+ <button type="button" data-gmail-draft>Save Draft</button>
+ </form>
+ <p data-gmail-compose-status style="font-size:12px;color:#060"></p>
+ <p style="font-size:11px;color:#666">No real SMTP. Messages stay in this browser (localStorage · itt05-gmail* on 2005).</p>
+ </div>
 </div>
 <script src="../../../../js/immersion-2005.js"></script>
 </body></html>

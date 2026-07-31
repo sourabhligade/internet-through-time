@@ -1,0 +1,39 @@
+2003 deep research visit pass — 2026-07-26
+==========================================
+Disk: years/2003 + assets/period/2003 WIPED. Research only.
+Scaffold future year from years/2002.
+
+LIVE VISITS
+- cybercultural.com/p/internet-2003/  [visited]
+  Thesis: blogging mainstream; AdSense; iTunes Store; Friendster+MySpace; Flash peak; Blogger→Google
+- cybercultural.com/p/myspace-2003/  [visited]
+  eUniverse; Friendster clone; HTML profiles; Aug narrative launch; ~100k Oct vs Friendster ~3M
+- internetlivestats.com/total-number-of-websites/  [visited]
+  2003: 40,912,332 sites; ~778,555,680 users
+- apple.com/newsroom/2003/04/28...iTunes-Music-Store/  [visited]
+  Apr 28 2003; 99c; 200k songs; AAC; Mac+US; personal use rights
+- apple.com/newsroom/2003/12/15...25-Million-Songs/  [visited]
+  Dec 15; 25M songs; 400k catalog; Windows+Mac; gifts/allowance Oct 16
+- en.wikipedia.org/wiki/WordPress  [visited]  May 27 2003 v0.7 b2 fork
+- en.wikipedia.org/wiki/LinkedIn  [visited]  May 5 2003 launch; founded Dec 2002
+- en.wikipedia.org/wiki/MySpace  [visited]  Aug 1 2003 launch (wiki)
+- en.wikipedia.org/wiki/Pyra_Labs  [visited]  Google acquires Feb 17 2003
+- about.linkedin.com  [visited]  confirms May 5 2003
+
+WAYBACK id_
+- 20030618021947 wordpress.org  [wa-visited]
+  semantic personal publishing; b2 official branch
+- 20031008115927 myspace.com/misc/about.html  [wa-visited]
+  friends' friends; photos journals; invite network
+- 20030630191256 google AdSense press  [wa-visited]
+  Jun 18 2003 self-service; expands Mar content targeting
+- 20030704094052 bloglines.com  [wa-visited]
+  free browser RSS; no install
+
+HONESTY
+- MySpace date: wiki Aug 1 vs Cybercultural/Angwin Aug 15 — label "August 2003"
+- MySpace not yet larger than Friendster in 2003
+- No Facebook/Gmail/YouTube/Firefox 1.0 as defaults
+- iTunes Store != streaming
+
+NEXT: implementation phases from this pack; scaffold cp years/2002 → 2003

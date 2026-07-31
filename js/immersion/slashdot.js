@@ -85,7 +85,7 @@ function initSlashdotComments() {
       saveComments(comments);
       paint(comments);
       form.reset();
-      showFlash("✓ Comment posted (stored in this browser only).");
+      showFlash("Comment posted.");
       markTourProgress();
     };
   }

@@ -1,0 +1,16 @@
+SOURCE: https://web.archive.org/web/20030315000000/http://www.friendster.com/
+STATUS: [wa-failed] 2026-07-25 — Wayback returned modern Internet Archive chrome ("Hamburger icon"), not Friendster body
+ALT NARRATIVE: https://en.wikipedia.org/wiki/Friendster [visited]
+YEAR TARGET: 2002
+
+ROLE: Social graph pioneer — DATE HONESTY REQUIRED
+
+BUILD NOTES (from wiki + Cybercultural, not bad WA body):
+- Founded 2002 by Jonathan Abrams (Circle of Friends / small-world graph).
+- Public mass "went live" often dated **2003** (Wikipedia: live 2003 / Mar 22 2003 in infobox; lead also says March 2002 — conflict; prefer founding-2002 + denser UI early-2003).
+- Features for exhibit: profiles, friends list, testimonials, messages — localStorage graph only.
+- Do NOT use 2011 gaming Friendster UI.
+- At scaffold: restore git assets/period/2002/friendster/* as RECON interim; harvest classic profile when CDX resolves cleanly.
+
+ANACHRONISM CHECK:
+No MySpace (2003 default social). No Facebook. Honesty labels if UI grammar is early-2003.

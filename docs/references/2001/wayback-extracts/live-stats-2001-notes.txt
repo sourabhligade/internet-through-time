@@ -1,0 +1,11 @@
+SOURCE: https://www.internetlivestats.com/total-number-of-websites/
+STATUS: [visited] 2026-07-26 deep research pass
+ROLE: Scale labels (home/About only)
+
+2001 (June snapshot):
+- Websites: 29,254,370 (+71% YoY from 17,087,182 in 2000)
+- Internet users: 500,609,240
+- Users per website: 17
+- Landmark launch row: Wikipedia (links WA 20010727112808)
+
+Cite "Internet Live Stats / NetCraft elaboration" on About. Never put live modern billion-site counter into 2001 rooms.

@@ -11,7 +11,7 @@
     features: { nav: true, amazon: false, auction: false, museumBar: true },
     navSubtitle: "Netscape 1.0 · 14.4k",
     nav: [
-      { label: "Start", href: "pages/home.html", match: "/pages/home" },
+      { label: "Home", href: "pages/home.html", match: "/pages/home" },
       { label: "Yahoo!", href: "sites/yahoo/index.html", match: "/yahoo/" },
       { label: "Lycos", href: "sites/lycos/index.html", match: "/lycos/" },
       { label: "NASA", href: "sites/nasa/index.html", match: "/nasa/" },
@@ -85,7 +85,10 @@
       { title: "Netscape What's Cool!", path: "pages/cool.html", kw: "cool netscape directory", blurb: "Netscape Directory — What's Cool." },
       { title: "Netscape Handbook", path: "pages/handbook.html", kw: "handbook manual help netscape", blurb: "Learn Netscape Navigator." },
       { title: "Ugly Mugs (IUMA)", path: "sites/iuma/bands/ugly-mugs.html", kw: "ugly mugs band iuma", blurb: "Santa Cruz indie rock on IUMA." },
-      { title: "Space Shuttle Status", path: "sites/nasa/shuttle.html", kw: "shuttle nasa spaceflight", blurb: "Space Shuttle information." }
+      { title: "Space Shuttle Status", path: "sites/nasa/shuttle.html", kw: "shuttle nasa spaceflight", blurb: "Space Shuttle information." },
+      { title: "HotWired — AT&T You Will", path: "sites/hotwired/ad-att.html", kw: "banner ad att you will hotwired", blurb: "Early Web banner campaign." },
+      { title: "Exploratorium", path: "sites/exploratorium/index.html", kw: "exploratorium museum science", blurb: "Hands-on science museum online." },
+      { title: "WebLouvre", path: "sites/weblouvre/index.html", kw: "art museum weblouvre louvre", blurb: "Art on the early Web." },
     ]
   };
 })(typeof window !== "undefined" ? window : this);

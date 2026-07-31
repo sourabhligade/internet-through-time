@@ -1,0 +1,24 @@
+2007 deep research visit log — 2026-07-31
+========================================
+
+Opened / verified:
+- Internet Live Stats total websites table → 2007 = 121,892,559 (+43%), users 1,373,327,790, birthmark Tumblr
+- Cybercultural https://cybercultural.com/p/internet-2007/ — year essay (iPhone, Android announce, Netflix streaming seed, Tumblr, Twitter SXSW, FB Platform, DoubleClick/aQuantive, Beacon)
+- Apple Newsroom iPhone 2007-01-09
+- Google Blog Gmail open 2007-02-14 “From Gmail with <3”
+- Google Lat Long Street View introduce post — cities SF, NYC, Las Vegas, Miami, Denver
+- Microsoft Source Vista consumer 2007-01-29 / GA Jan 30
+- OHA press + Google “Where’s my Gphone?” 2007-11-05
+- Amazon Kindle press 2007-11-19
+- Wired / TechCrunch Twitter SXSW March 2007
+
+Disk inventory:
+- years/2007 ~292 HTML, 84 sites, ~162 assets
+- Signature rooms thin (1–2.5KB) but hooks present
+- Gmail compose/inbox still invite-default copy
+- About/Home previously said ~155M sites — CORRECT to 121,892,559
+
+Outputs:
+- docs/2007-DEEP-RESEARCH-FRESH-2026-07-31.md
+- docs/2007-RESEARCH.md refresh
+- docs/references/2007/* scaffold

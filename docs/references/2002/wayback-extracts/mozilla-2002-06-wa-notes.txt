@@ -1,0 +1,102 @@
+SOURCE: https://web.archive.org/web/20020606030900id_/http://www.mozilla.org/
+FINAL: https://web.archive.org/web/20020606030900id_/http://www.mozilla.org/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-mozilla
+ROLE: Mozilla 1.0 era
+TITLE: mozilla.org
+BYTES: 11899
+ERROR: 
+
+KEY FACTS / TEXT:
+mozilla.org
+The Mozilla Organization
+At A Glance
+Feedback
+Get Involved
+Newsgroups
+License Terms
+Newsbot
+Developer Docs
+Roadmap
+Projects
+Ports
+Module Owners
+Hacking
+Get the Source
+Build It
+Testing
+Download
+Report A Bug
+Bugzilla
+Bug Writing
+Tools
+View Source
+Tree Status
+New Checkins
+Submit A Bug
+FAQ
+Search
+Mozilla News
+5 June 2002
+Mozilla 1.0 Released We are pleased to announce the release of Mozilla 1.0, available for
+download now. Thanks to
+everyone who made this possible.
+Gecko Embedding Guides Check out the newest documentation for Gecko, Mozilla's layout engine.
+Gecko Embedding Basics offers a high level description of
+how to embed Gecko in your application.
+Gecko Embedding API Reference is a first cut at documenting
+Gecko's frozen interfaces.
+Mozilla 1.0 Party Join us in celebrating the upcoming release of Mozilla 1.0 at a
+party we're
+throwing at 8pm Wednesday, June 12, 2002 at the
+DNA Lounge in San Francisco.
+Free source, free admission, cash bar. 21+, ID required (no matter
+how old you look). If you can't make it, plan a
+satellite party
+in your own area.
+more...
+Status Update
+5 June 2002
+This status update contains information on
+Necko, Imagelib, XPCOM, Mailnews, XSLT, Navigator,
+and more...
+more...
+Download Mozilla
+Mozilla is an open-source web browser and toolkit, designed for
+standards compliance, performance and portability.
+Mozilla.org provides binaries for testing and feedback.
+For more about mozilla.org, read
+Mozilla at a Glance .
+Mozilla 1.0
+Stick a fork in it. It's done.
+Download
+Release Notes
+Guide To Mozilla 1.0
+Press Release
+Frequently Asked Questions
+Nightly Builds
+Created most weekdays from the previous day's work,
+these will probably work, but maybe not. Use them to verify
+whether a bug you're tracking has been fixed.
+MacOS 9 ,
+MacOS X ,
+i386 Linux ,
+Windows ,
+Linux PPC ,
+Solaris ,
+FreeBSD ,
+Irix ,
+BeOS ,
+HPUX ,
+OS/2 ,
+BSD/OS ,
+etc .
+more...
+Copyright © 1998-2002 The Mozilla Organization.
+Last modified June 5, 2002.
+Document History .
+Edit this Page
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

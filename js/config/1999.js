@@ -100,6 +100,7 @@
       "sites/napster/index.html": "http://www.napster.com/",
       "sites/napster/search.html": "http://www.napster.com/search.html",
       "sites/paypal/index.html": "http://www.paypal.com/",
+      "sites/paypal/send.html": "http://www.paypal.com/send/",
       "sites/y2k/index.html": "http://www.year2000.com/",
 
       "sites/cnn/world.html": "http://www.cnn.com/",
@@ -331,7 +332,14 @@
     ],
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web1999/",
+      "sites/napster/client.html": "http://www.napster.com/client.html",
+      "sites/napster/legal.html": "http://www.napster.com/legal.html",
     locationHints: [
+      { re: /bowienet/i, path: "sites/bowienet/index.html" },
+      { re: /gamespot/i, path: "sites/gamespot/index.html" },
+      { re: /infoseek/i, path: "sites/infoseek/index.html" },
+      { re: /netscape/i, path: "sites/netscape/index.html" },
+      { re: /you'?ve.?got.?mail|ygm/i, path: "sites/youvegotmail/index.html" },
       { re: /zone|gaming/i, path: "sites/msngaming/index.html" },
       { re: /matrix/i, path: "sites/matrix/index.html" },
       { re: /my.?netscape|rss/i, path: "sites/mynetscape/index.html" },

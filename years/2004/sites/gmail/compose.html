@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Gmail - Compose</title>
+<title>Gmail — Compose Mail</title>
 <link rel="stylesheet" href="../../../../css/period-2004.css">
 </head>
-<body bgcolor="#ffffff">
+<body class="gmail-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="gm04-wrap">
-  <img src="../../../../assets/period/2004/gmail/logo-wa.gif" width="143" height="59" alt="Gmail" border="0" align="absmiddle"> <div class="gm04-logo" style="font-size:18px"><span class="c1">G</span><span class="c2">mail</span></div>
-  <div class="gm04-nav">
-    <a href="compose.html"><b>Compose Mail</b></a> ·
-    <a href="inbox.html">Inbox</a> ·
-    <a href="index.html">Sign out</a>
+<div class="gmail-header">
+ <img src="../../../../assets/period/2004/gmail/logo.gif" alt="Gmail" height="28" width="68" style="vertical-align:middle">
+ <b>Compose Mail</b>
+ · <a href="inbox.html">Inbox</a>
+ · <a href="invite.html">Invites</a>
+ · <a href="about.html">About</a>
+ · <a href="index.html">Sign out</a>
+</div>
+<div class="gmail-layout">
+ <div class="gmail-labels">
+ <b>Mail</b><br>
+ <a href="inbox.html">Inbox</a><br>
+ <b>Compose Mail</b><br>
+ Sent Mail<br>
+ Starred<br>
+ Drafts<br>
+ All Mail<br>
+ Spam<br>
+ Trash<br>
+ <br><a href="invite.html"><b>Invitations</b></a>
+ <br><br><font size="1" color="#666">1 GB free</font>
+ </div>
+ <div class="gmail-main">
+ <div class="gmail-bubble">New Message</div>
+ <form data-gmail-compose class="gmail-compose-form">
+  <label>To:</label>
+  <input name="to" value="friend@example.com">
+  <label>Subject:</label>
+  <input name="subj" value="Have you got a Gmail invite?">
+  <label>Message:</label>
+  <textarea name="body">Hey —
+
+I got into the Gmail preview (April 1 launch — people thought it was a joke).
+1 gigabyte free. Search instead of folders. Conversations stay together.
+
+Want an invite?
+
+</textarea>
+  <div class="gmail-compose-actions">
+   <button type="submit">Send</button>
+   <button type="button" onclick="history.back()">Discard</button>
+   <button type="button" data-gmail-draft>Save Draft</button>
   </div>
-  <form data-gmail-compose class="gm04-compose">
-    <font size="2">
-    <table cellpadding="4">
-    <tr><td align="right">To:</td><td><input name="to" size="48" placeholder="friend@example.com"></td></tr>
-    <tr><td align="right">Subject:</td><td><input name="subject" size="48" placeholder="Subject"></td></tr>
-    <tr><td align="right" valign="top">Message:</td>
-        <td><textarea name="body" rows="12" cols="50" placeholder="Write your message…"></textarea></td></tr>
-    <tr><td></td><td>
-      <input type="submit" value="Send">
-      <input type="button" value="Save Draft" data-gmail-draft>
-      <input type="button" value="Discard" onclick="location.href='inbox.html'">
-    </td></tr>
-    </table>
-    </font>
-  </form>
-  <p><font size="1">No attachment virus theater required — keep it 2004-simple.</font></p>
+ </form>
+ <p data-gmail-compose-status style="font-size:12px;color:#060"></p>
+ <p style="font-size:11px;color:#666;margin-top:10px">
+  No real SMTP. Sent mail appears in Inbox in this browser only.
+  Conversation threads · search, don't sort · no pop-up ads.
+ </p>
+ </div>
 </div>
 <script src="../../../../js/immersion-2004.js"></script>
 </body></html>

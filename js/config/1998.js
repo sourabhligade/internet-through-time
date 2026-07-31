@@ -296,6 +296,12 @@
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web1998/",
     locationHints: [
+      { re: /bowienet/i, path: "sites/bowienet/index.html" },
+      { re: /gamespot/i, path: "sites/gamespot/index.html" },
+      { re: /infoseek/i, path: "sites/infoseek/index.html" },
+      { re: /mozilla/i, path: "sites/mozilla/index.html" },
+      { re: /netscape/i, path: "sites/netscape/index.html" },
+      { re: /you'?ve.?got.?mail|ygm/i, path: "sites/youvegotmail/index.html" },
       { re: /valve|halflife|half-life/i, path: "sites/valve/index.html" },
       { re: /winfiles|shareware/i, path: "sites/winfiles/index.html" },
       { re: /larry|page/i, path: "sites/larrypage/index.html" },

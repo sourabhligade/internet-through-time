@@ -1,0 +1,18 @@
+SOURCE: https://web.archive.org/web/20021111080812id_/http://www.google.com/
+FINAL: https://web.archive.org/web/20021111080812id_/http://www.google.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-google
+ROLE: Google sparse + News-New!
+TITLE: Google
+BYTES: 2532
+ERROR: 
+
+KEY FACTS / TEXT:
+Google
+Web   Images   Groups   Directory   News- New!      •  Advanced Search  •  Preferences  •  Language Tools
+Advertise with Us - Search Solutions - Services & Tools - Jobs, Press, & Help
+©2002 Google - Searching 3,083,324,652 web pages
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

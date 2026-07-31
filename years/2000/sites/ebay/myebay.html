@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>My eBay</title>
+<title>My eBay (2000)</title>
 <link rel="stylesheet" href="../../../../css/period-2000.css">
 </head>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff" link="#0000cc">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p><a href="index.html"><b>eBay</b></a> · My eBay</p>
-<h2>My eBay</h2>
-<p><font size="2">Launched May 2000 — customize your trading experience.</font></p>
-<ul>
-<li><a href="category.html">Items I&#39;m bidding on</a></li>
-<li><a href="sell.html">Items I&#39;m selling</a></li>
-<li><a href="search.html">Favorite searches</a></li>
-<li><a href="register.html">Account settings</a></li>
-</ul>
-<p><font size="2">September 2000: eBay goes public (NASDAQ: EBAY).</font></p>
+<table width="640" align="center" cellpadding="10"><tr><td>
+ <font face="Arial" size="2">
+ <p><a href="index.html"><img src="../../../../assets/period/2000/ebay/logo.gif" height="40" border="0" alt="eBay"></a></p>
+ <h1 style="font-size:16px">My eBay</h1>
+ <p id="ebay-hello" style="font-size:13px">Your personal trading desk: watch list, bidding, selling, and feedback.</p>
+
+ <table width="100%" border="1" cellpadding="6" cellspacing="0" bordercolor="#99ccff">
+ <tr bgcolor="#0066cc"><td colspan="3"><font color="#fff"><b>Signed-in summary</b></font></td></tr>
+ <tr bgcolor="#eef"><td width="30%"><b>User ID</b></td>
+ <td colspan="2"><span id="ebay-uid">— not registered —</span>
+ · <a href="register.html">Register / change</a></td></tr>
+ <tr><td><b>Email</b></td><td colspan="2"><span id="ebay-email">—</span></td></tr>
+ <tr bgcolor="#eef"><td><b>Active bids</b></td>
+ <td colspan="2"><span id="ebay-bids">0</span>
+ · <a href="item-laptop.html">Laptop auction</a> · <a href="item-pda.html">PDA auction</a></td></tr>
+ <tr><td><b>High bidder on</b></td><td colspan="2"><span id="ebay-winning">—</span></td></tr>
+ <tr bgcolor="#eef"><td><b>Feedback</b></td><td colspan="2"><span id="ebay-fb">0</span> (starts at zero)</td></tr>
+ </table>
+
+ <p style="margin-top:12px"><b>Quick links</b></p>
+ <ul>
+ <li><a href="search.html">Search</a> / <a href="category.html">Categories</a></li>
+ <li><a href="sell.html">Sell an item</a></li>
+ <li><a href="../paypal/send.html">Pay with PayPal / X.com lineage</a></li>
+ </ul>
+ <p style="font-size:11px;color:#666;margin-top:10px">
+ Registration and bids are stored in this browser only — not the live eBay network.
+ Place a bid on an item page, then reload My eBay to see it count.
+ </p>
+ <p><a href="index.html">Home</a> · <a href="register.html">Register</a> · <a href="sell.html">Sell</a></p>
+ </font>
+</td></tr></table>
+<script>
+(function () {
+  function loadUser() {
+    try { return JSON.parse(localStorage.getItem("itt00-ebay-user") || "null"); }
+    catch (e) { return null; }
+  }
+  function countBids() {
+    var n = 0, winning = [];
+    /* auction.js: key = itt00-bid-<id> → {amount,bidder}; hist = key+"-hist" → array */
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (!k || k.indexOf("itt00-bid-") !== 0) continue;
+        if (k.indexOf("-hist") !== -1) {
+          var hist = JSON.parse(localStorage.getItem(k) || "[]");
+          if (hist && hist.length) n += hist.length;
+          continue;
+        }
+        var data = JSON.parse(localStorage.getItem(k) || "null");
+        if (data && data.bidder && data.bidder !== "(opening)") {
+          winning.push((data.bidder || "?") + " @ $" + (data.amount != null ? data.amount : "?") +
+            " (" + k.replace("itt00-bid-", "") + ")");
+        }
+      }
+    } catch (e2) {}
+    return { n: n, winning: winning };
+  }
+  var u = loadUser();
+  var elU = document.getElementById("ebay-uid");
+  var elE = document.getElementById("ebay-email");
+  var elH = document.getElementById("ebay-hello");
+  var elB = document.getElementById("ebay-bids");
+  var elW = document.getElementById("ebay-winning");
+  var elF = document.getElementById("ebay-fb");
+  if (u && u.user) {
+    if (elU) elU.textContent = u.user;
+    if (elE) elE.textContent = u.email || "—";
+    if (elH) elH.innerHTML = "Hello, <b>" + String(u.user).replace(/</g, "") + "</b> — your trading desk.";
+    if (elF) elF.textContent = String(u.feedback || 0);
+  }
+  var b = countBids();
+  if (elB) elB.textContent = String(b.n);
+  if (elW) elW.textContent = b.winning.length ? b.winning.join("; ") : "— place a bid on a listing —";
+})();
+</script>
 <script src="../../../../js/immersion-2000.js"></script>
 </body></html>

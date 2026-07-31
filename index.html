@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Internet Through Time</title>
   <meta property="og:title" content="The Internet Through Time">
-  <meta property="og:description" content="Museum-style reconstruction of the Web in 1994–2005.">
+  <meta property="og:description" content="Museum of the live Web, 1994–2008. Period browsers, real product flows, localStorage-only theater — not a retro skin pack.">
   <meta property="og:type" content="website">
-  <meta name="description" content="Historical reconstruction of the World Wide Web — year by year. Not retro-inspired. Historically accurate.">
+  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2008. Open a year: desktop, browser chrome, sites, and flows reconstructed from archives — not a modern redesign.">
   <link rel="stylesheet" href="css/hub.css">
+  <link rel="stylesheet" href="css/period-announce.css">
   <link rel="icon" href="favicon.gif" type="image/gif">
 </head>
 <body>
@@ -21,21 +22,80 @@
       <div class="hub-header-body">
         <h1>The Internet Through Time</h1>
         <p class="tagline">
-          Choose a year. Step into how the Web actually looked and felt.<br>
-          <em>Historical reconstruction — not a modern redesign.</em><br>
-          <span class="blink-ish">Select a year below to open that era’s browser immersion.</span>
+          A year-by-year museum of how the live Web actually looked and worked —
+          period desktop, browser chrome, signature sites, and product flows you can click through.
+          <em>Historical reconstruction from archives — not a modern redesign, and not a wallpaper pack.</em>
         </p>
-        <p id="resume-row" class="resume-row hidden">
-          <a id="resume-link" class="resume-btn" href="#">Continue where you left off</a>
+        <p class="hub-stats" aria-label="Museum coverage">
+          <b>15 years open</b> · 1994–2008 · each card skinned like that era’s shell
+        </p>
+        <p class="hub-stats hub-stat-muted" aria-label="Scale arc">
+          Scale arc (order of magnitude): ~10k sites in late 1994 → ~17M (2000) → ~65M (2005) → ~122M (2007) → ~172M (2008)
+          · Internet Live Stats / period sources, cited inside each year
+        </p>
+
+        <div class="start-path" role="navigation" aria-label="Start paths">
+          <a class="start-btn start-primary" href="years/1994/">Begin with 1994</a>
+          <a class="start-btn" href="years/1998/">1998 · Google!</a>
+          <a class="start-btn" href="years/2005/">2005 · YouTube · Maps</a>
+          <a class="start-btn" href="years/2007/">2007 · iPhone · open Gmail</a>
+          <a class="start-btn" href="years/2008/">2008 · App Store · Chrome</a>
+          <a class="start-btn" href="games/index.html">Period web games →</a>
+          <a class="start-btn" href="#directory">Browse the directory ↓</a>
+          <span id="resume-wrap" class="resume-wrap hidden">
+            <a id="resume-link" class="start-btn start-resume" href="#">Continue where you left off</a>
+          </span>
+        </div>
+        <p class="start-hint">
+          First visit? Start in <b>1994</b> (Netscape gray, 14.4k modem theater) and walk forward year by year —
+          or jump to a signature hinge below. Each card’s colors and chrome strip match that immersion’s shell.
+          Inside a year you get a full period desktop + browser; use <b>Exit</b> to return here. Progress stays in this browser only.
         </p>
       </div>
     </header>
 
-    <p class="mobile-notice">This experience is designed for desktop browsers — just like the 1990s web.</p>
+    <p class="mobile-notice">Best on a desktop browser — just like the 1990s and early-2000s web. Phones work, but the shells are built for larger screens.</p>
 
-    <p class="year-section-title">Directory of years</p>
+    <div class="ann-ticker" aria-label="Museum news ticker">
+      <span class="ann-ticker-label">NEWS</span>
+      <div class="ann-ticker-inner">
+        <div class="ann-ticker-track">
+          ★ 15 years open · 1994–2008 ★
+          NEW: Period web games wing — Flash portals · Club Penguin · museum arcade ★
+          2007: iPhone Safari · open Gmail · Street View · Facebook Platform ★
+          2008: App Store · iPhone 3G · Chrome · Android G1 · Hulu ★
+          Progress stays in this browser only (localStorage) ★
+          <a href="games/index.html">Enter games wing</a> ★
+          <a href="games/announcements.html">Site announcements (period UI)</a> ★
+        </div>
+      </div>
+    </div>
+
+    <div class="hub-ann-strip">
+      <span class="ann-badge ann-badge-new">New</span>
+      <span class="ann-badge ann-badge-hot">Hot</span>
+      <b>Site announcement:</b>
+      After-school internet is open —
+      <a href="games/index.html">Web Games wing</a>
+      (Miniclip / Newgrounds / Kongregate culture · playable arcade) ·
+      <a href="games/announcements.html">read the yellow news board »</a>
+      <span style="color:#666;font-size:11px"> · mid-2000s announce style, not modern banners</span>
+    </div>
+
+    <section class="hub-thesis" aria-label="What this is">
+      <h2 class="visually-hidden">What this museum is</h2>
+      <ul class="thesis-list">
+        <li><b>One year at a time.</b> Opening 2005 does not give you 2007’s iPhone or open Gmail. Products appear only when history says they should.</li>
+        <li><b>Real flows, private theater.</b> Carts, mail, uploads, queues, and tour checks use <code>localStorage</code> in your browser — nothing is sent to a server.</li>
+        <li><b>Sources over vibes.</b> Layouts, chrome, and copy track Wayback captures, period docs, and research notes in the repo — not “retro aesthetic.”</li>
+      </ul>
+    </section>
+
+    <div id="directory" class="year-section-title">Directory of years — each card matches that era’s browser / product UI</div>
     <hr class="rainbow-hr" aria-hidden="true">
 
+    <p class="era-heading">1994–1999 · From Mosaic gray to bubble peak</p>
+    <p class="era-note">University Web → commercial Web → portals → sparse Google → Napster. Dial-up is the default story.</p>
     <div class="year-grid">
       <a class="year-card available y1994" href="years/1994/" data-year="1994">
         <div class="motif" aria-hidden="true"></div>
@@ -44,7 +104,8 @@
             <p class="year">1994</p>
             <span class="era-chip">Netscape 1.0 · 14.4k</span>
           </div>
-          <p class="label">Mosaic gray · Yahoo@Stanford · IUMA · university home pages · helper apps</p>
+          <p class="label">The public Web’s first mass year — Mosaic gray, Yahoo at Stanford, CERN, NCSA, IUMA helper apps, personal university pages.</p>
+          <p class="scale">~10k sites by Dec · Matthew Gray / MIT class</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -56,7 +117,8 @@
             <p class="year">1995</p>
             <span class="era-chip">Win95 · NN2 · 28.8k</span>
           </div>
-          <p class="label">yahoo.com · Amazon bookstore · AuctionWeb · GeoCities · commercial Web</p>
+          <p class="label">Windows 95 ships; the commercial Web wakes up — yahoo.com, Amazon bookstore, AuctionWeb, GeoCities homesteads.</p>
+          <p class="scale">28.8k modem · Netscape 2 era</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -68,7 +130,8 @@
             <p class="year">1996</p>
             <span class="era-chip">Space Jam · HoTMaiL</span>
           </div>
-          <p class="label">Netscape 3 · portals · Excite · Flash/CSS born · Warner Bros. movie site</p>
+          <p class="label">Portals and free webmail — Netscape 3, Excite, HoTMaiL, Space Jam’s famous movie site; Flash and CSS are born this year.</p>
+          <p class="scale">Portal grammar · free mail story</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -80,7 +143,8 @@
             <p class="year">1997</p>
             <span class="era-chip">IE4 · 56k · eBay</span>
           </div>
-          <p class="label">Browser wars peak · Amazon IPO · Slashdot · PointCast · DHTML</p>
+          <p class="label">Browser wars peak — IE 4 vs Netscape, Amazon IPO, eBay, Slashdot, PointCast push, DHTML demos; Web crosses ~1M sites.</p>
+          <p class="scale">~1.1M sites · 56k class</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -92,7 +156,8 @@
             <p class="year">1998</p>
             <span class="era-chip">Google! · Win98</span>
           </div>
-          <p class="label">Portals peak · sparse Google · Amazon Music · eBay IPO · Mozilla</p>
+          <p class="label">Portals still rule the front page — then sparse Google! appears. Win98, Amazon Music, eBay IPO, Mozilla opens the source.</p>
+          <p class="scale">~2.4M sites (order-of-magnitude)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -104,19 +169,25 @@
             <p class="year">1999</p>
             <span class="era-chip">Napster · Y2K</span>
           </div>
-          <p class="label">IE5 · Blogger · Google funded · multicolor eBay · bubble peak</p>
+          <p class="label">Bubble peak and new habits — IE 5, Napster, Blogger, Google funded, multicolor eBay, Y2K anxiety in the air.</p>
+          <p class="scale">56k still common · P2P arrives</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
+    </div>
 
+    <p class="era-heading">2000–2003 · Crash, rebuild, always-on</p>
+    <p class="era-note">Dot-com crash through post-crash rebuild. XP and IE 6 lock in; blogs, wiki, MySpace, and the 99¢ Store reshape culture.</p>
+    <div class="year-grid">
       <a class="year-card available y2000" href="years/2000/" data-year="2000">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2000</p>
-            <span class="era-chip">Crash · smile</span>
+            <span class="era-chip">Smile · Crash · Napster</span>
           </div>
-          <p class="label">Dot-com peak &amp; crash · Amazon smile · Napster monster · Flash 5 · Pets.com</p>
+          <p class="label">Peak and crash in one year — Amazon smile logo, Napster legal fight, Pets.com lore, IE 5.5 on Win98/ME.</p>
+          <p class="scale">~17.1M sites · ~413M users (Live Stats, June)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -126,9 +197,10 @@
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2001</p>
-            <span class="era-chip">XP · IE6 · Wiki</span>
+            <span class="era-chip">XP · Wiki · iPod</span>
           </div>
-          <p class="label">Windows XP Luna · Wikipedia · iPod · Google habit · post-crash rebuild</p>
+          <p class="label">Post-crash rebuild — Windows XP + IE 6 default, Wikipedia born, iPod + early iTunes, Google as habit, blogs densify.</p>
+          <p class="scale">~29.3M sites · ~501M users (Live Stats, June)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -138,9 +210,10 @@
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2002</p>
-            <span class="era-chip">Broadband · social</span>
+            <span class="era-chip">Always-on · KaZaA</span>
           </div>
-          <p class="label">Always-on · Friendster · KaZaA · blogosphere · Wired CSS · IE6 peak</p>
+          <p class="label">Broadband minority, IE 6 peak — Friendster seed, KaZaA, TrackBack blogs, Wired CSS era, Google News and RSS habits form.</p>
+          <p class="scale">~38.8M sites · ~663M users (Live Stats, June)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -150,21 +223,27 @@
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2003</p>
-            <span class="era-chip">MySpace · iTunes</span>
+            <span class="era-chip">MySpace · 99¢ Store</span>
           </div>
-          <p class="label">MySpace · iTunes Store · WordPress · LinkedIn · social web arrives</p>
+          <p class="label">Social + paid music — MySpace, iTunes Music Store (99¢), WordPress, LinkedIn, AdSense; broadband more common.</p>
+          <p class="scale">~40.9M sites · ~779M users (Live Stats, June)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
+    </div>
 
+    <p class="era-heading">2004–2008 · Web 2.0, platforms, mobile apps, Chrome</p>
+    <p class="era-note">Gmail through open Gmail; Thefacebook through Platform; YouTube independent then Google-owned; iPhone ships with no App Store.</p>
+    <div class="year-grid">
       <a class="year-card available y2004" href="years/2004/" data-year="2004">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2004</p>
-            <span class="era-chip">Gmail · Firefox</span>
+            <span class="era-chip">Web 2.0 hinge</span>
           </div>
-          <p class="label">Firefox 1.0 · Gmail · Flickr · Thefacebook · Google IPO · Web 2.0 dawn</p>
+          <p class="label">The hinge year named “Web 2.0” — Gmail (invite), Flickr, Thefacebook, Firefox 1.0, Google IPO; folksonomy and tags.</p>
+          <p class="scale">~51.6M sites · ~910M users (Live Stats, June)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -176,70 +255,172 @@
             <p class="year">2005</p>
             <span class="era-chip">YouTube · Ajax</span>
           </div>
-          <p class="label">YouTube · Google Maps · Reddit · Digg · podcasts · Web 2.0 boom</p>
+          <p class="label">Web 2.0 becomes business — YouTube (still independent), Google Maps + Ajax, Reddit, Digg rise, podcasting in iTunes.</p>
+          <p class="scale">~64.8M sites · ~1.03B users (Live Stats)</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
 
-      <div class="year-card locked y2006" aria-disabled="true">
+      <a class="year-card available y2006" href="years/2006/" data-year="2006">
+        <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2006</p>
-            <span class="era-chip">Planned</span>
+            <span class="era-chip">Twitter · Feed · open FB</span>
           </div>
-          <p class="label">Twitter · Facebook open · Google buys YouTube</p>
-          <p class="meta">Coming later</p>
+          <p class="label">Social breakthrough — Twitter, Facebook News Feed + open registration, Digg peak, Docs, AWS; Google buys YouTube late year. Still pre-iPhone.</p>
+          <p class="scale">~85.5M sites · ~1.16B users (Live Stats, June)</p>
+          <p class="meta">Enter immersion</p>
         </div>
-      </div>
-    </div>
+      </a>
+
+      <a class="year-card available y2007" href="years/2007/" data-year="2007">
+        <div class="motif" aria-hidden="true"></div>
+        <div class="year-card-inner">
+          <div class="year-row">
+            <p class="year">2007</p>
+            <span class="era-chip">iPhone · open Gmail</span>
+          </div>
+          <p class="label">Phone as real browser — iPhone Safari (no App Store), Gmail open to all, Street View, Facebook Platform, Twitter SXSW; YouTube Google-owned all year.</p>
+          <p class="scale">~121.9M sites · ~1.37B users (Live Stats)</p>
+          <p class="meta">Enter immersion</p>
+        </div>
+      </a>
+
+    
+      <a class="year-card available y2008" href="years/2008/" data-year="2008">
+        <div class="motif" aria-hidden="true"></div>
+        <div class="year-card-inner">
+          <div class="year-row">
+            <p class="year">2008</p>
+            <span class="era-chip">App Store · Chrome · G1</span>
+          </div>
+          <p class="label">Apps + browser reinvention — App Store with iPhone 3G, Google Chrome beta, first Android phone (G1), Hulu public; desktop still mass.</p>
+          <p class="scale">172,338,726 sites · ~1.57B users · Dropbox birthmark</p>
+          <p class="meta">Enter immersion</p>
+        </div>
+      </a>
+</div>
 
     <hr class="rainbow-hr" aria-hidden="true">
 
     <section class="compare" id="compare">
       <h2>How each year is different</h2>
+      <p class="compare-intro">
+        Same museum, different defaults: OS shell, browser, how you find things, what “commerce” and “social” mean.
+        Scroll sideways on small screens. Each column is one immersion — products are year-locked on purpose.
+      </p>
+
+      <h3 class="compare-sub">1994–1999</h3>
       <div class="compare-scroll">
       <table class="compare-table">
         <thead>
-          <tr><th></th><th>1994</th><th>1995</th><th>1996</th><th>1997</th><th>1998</th><th>1999</th><th>2000</th><th>2001</th><th>2002</th><th>2003</th><th>2004</th><th>2005</th></tr>
+          <tr><th scope="col"></th><th scope="col">1994</th><th scope="col">1995</th><th scope="col">1996</th><th scope="col">1997</th><th scope="col">1998</th><th scope="col">1999</th></tr>
         </thead>
         <tbody>
-          <tr><td>OS / browser</td><td>Win 3.1 · Netscape 1.0</td><td>Win 95 · Netscape 2.0</td><td>Win 95 · Netscape 3.0</td><td>Win 95 · IE 4.0</td><td>Win 98 · IE 4.0</td><td>Win 98 SE · IE 5.0</td><td>Win 98/ME · IE 5.5</td><td>Windows XP · IE 6</td><td>XP · IE 6 peak</td><td>XP · IE 6</td><td>XP · IE 6 · Firefox 1.0</td><td>XP · IE 6 · Firefox 1.x · Ajax</td></tr>
-          <tr><td>Finding things</td><td>Yahoo at Stanford</td><td>yahoo.com · AltaVista</td><td>Portals · Excite</td><td>HotBot · Babel Fish</td><td>Portals peak · Google!</td><td>Google funded · portals</td><td>Portals · Google rising</td><td>Google habit · Wikipedia</td><td>Google + blogs</td><td>Google default</td><td>Google IPO</td><td>Maps · mashups</td></tr>
-          <tr><td>Commerce</td><td>Almost none</td><td>Amazon · AuctionWeb</td><td>Denser catalogs</td><td>Amazon IPO · eBay</td><td>Amazon Music · eBay IPO</td><td>Multi-cat Amazon</td><td>Smile · crash</td><td>Smile holds</td><td>Broadband retail</td><td>iTunes 99¢</td><td>Web apps</td><td>Podcasts · M&amp;A</td></tr>
-          <tr><td>Culture</td><td>University pages</td><td>GeoCities</td><td>Hotmail · Space Jam</td><td>Slashdot · Pathfinder</td><td>Portal TV · Mozilla</td><td>Napster · Blogger</td><td>Crash · Flash 5</td><td>Wiki · iPod</td><td>Friendster · KaZaA</td><td>MySpace · WordPress</td><td>Gmail · Flickr · FB</td><td>YouTube · Reddit · Digg</td></tr>
-          <tr><td>Modem</td><td>14.4 kbps</td><td>28.8 kbps</td><td>28.8 kbps</td><td>56k</td><td>56k</td><td>56k</td><td>56k (DSL rising)</td><td>DSL/cable rising</td><td>Broadband always-on</td><td>Broadband mainstream</td><td>Broadband common</td><td>Broadband default</td></tr>
+          <tr><th scope="row">OS / browser</th><td>Win 3.1 · Netscape 1.0</td><td>Win 95 · Netscape 2.0</td><td>Win 95 · Netscape 3.0</td><td>Win 95 · IE 4.0</td><td>Win 98 · IE 4.0</td><td>Win 98 SE · IE 5.0</td></tr>
+          <tr><th scope="row">Finding things</th><td>Yahoo at Stanford</td><td>yahoo.com · AltaVista</td><td>Portals · Excite</td><td>HotBot · Babel Fish</td><td>Portals peak · Google!</td><td>Google funded · portals</td></tr>
+          <tr><th scope="row">Commerce</th><td>Almost none</td><td>Amazon · AuctionWeb</td><td>Denser catalogs</td><td>Amazon IPO · eBay</td><td>Amazon Music · eBay IPO</td><td>Multi-cat Amazon</td></tr>
+          <tr><th scope="row">Culture</th><td>University pages</td><td>GeoCities</td><td>Hotmail · Space Jam</td><td>Slashdot · Pathfinder</td><td>Portal TV · Mozilla</td><td>Napster · Blogger</td></tr>
+          <tr><th scope="row">Modem / scale</th><td>14.4k · ~10k sites</td><td>28.8k</td><td>28.8k</td><td>56k · ~1M sites</td><td>56k · ~2.4M sites</td><td>56k · P2P arrives</td></tr>
         </tbody>
       </table>
       </div>
-      <p class="compare-hint">Each year opens a full period browser window. Follow the on-page tour, then explore freely. Use <b>Exit</b> on the immersion desktop to return here.</p>
+
+      <h3 class="compare-sub">2000–2005</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-2000s">
+        <thead>
+          <tr><th scope="col"></th><th scope="col">2000</th><th scope="col">2001</th><th scope="col">2002</th><th scope="col">2003</th><th scope="col">2004</th><th scope="col">2005</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">OS / browser</th><td>Win 98/ME · IE 5.5</td><td>Windows XP · IE 6</td><td>XP · IE 6 peak</td><td>XP · IE 6</td><td>XP · IE 6 · Firefox 1.0</td><td>XP · IE 6 · Firefox 1.x</td></tr>
+          <tr><th scope="row">Finding things</th><td>Portals + Google habit</td><td>Google default · Wiki born</td><td>Google · blogs · RSS seed</td><td>Google · blogosphere</td><td>Search + tags · folksonomy</td><td>Maps · votes · video URLs</td></tr>
+          <tr><th scope="row">Commerce / platforms</th><td>Amazon smile · crash</td><td>Post-crash rebuild</td><td>P2P · always-on minority</td><td>iTunes 99¢ · AdSense</td><td>Google IPO · Web 2.0 name</td><td>M&amp;A boom · podcasts</td></tr>
+          <tr><th scope="row">Culture</th><td>Napster · Pets.com lore</td><td>Wikipedia · iPod</td><td>Friendster · KaZaA · TrackBack</td><td>MySpace · WordPress · LinkedIn</td><td>Gmail · Flickr · Thefacebook</td><td>YouTube · Reddit · Digg</td></tr>
+          <tr><th scope="row">Connection / scale</th><td>56k + early BB · ~17M sites</td><td>BB rising · ~29M</td><td>Always-on minority · ~39M</td><td>BB more common · ~41M</td><td>BB cool-kids · ~52M</td><td>Always-on Ajax · ~65M</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="compare-sub">2006–2007 · Platforms &amp; mobile</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late">
+        <thead>
+          <tr><th scope="col"></th><th scope="col">2006</th><th scope="col">2007</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">OS / browser</th><td>XP · IE 6 (IE7 late)</td><td>XP · IE 6/7 · Vista retail optional</td></tr>
+          <tr><th scope="row">Signature products</th><td>Twitter · FB News Feed + open · Digg peak · Docs · AWS</td><td>iPhone Safari · Gmail open · Street View · FB Platform</td></tr>
+          <tr><th scope="row">Video / maps</th><td>YouTube independent → Google deal late year</td><td>YouTube Google-owned all year · Street View May 29</td></tr>
+          <tr><th scope="row">Social</th><td>MySpace still mass · Facebook opens Sep 26</td><td>Platform apps · Beacon privacy · Twitter SXSW</td></tr>
+          <tr><th scope="row">Mobile</th><td>Pre-iPhone (ban)</td><td>iPhone ships Jun 29 · <b>no App Store</b></td></tr>
+          <tr><th scope="row">Scale (Live Stats)</th><td>~85.5M sites · ~1.16B users</td><td>~121.9M sites · ~1.37B users</td></tr>
+          <tr><th scope="row">Connection story</th><td>Social breakthrough · platform power begins</td><td>Phone as real browser · open accounts · desktop still mass</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="compare-hint">
+        Open a year → period desktop + browser. Follow the Starting Point tour, then free-roam.
+        Cart, mail, uploads, queues, and tour checks stay in <b>this browser only</b> (localStorage) — clear site data to reset a year.
+      </p>
     </section>
 
-    <div class="note">
-      <p class="legal-blurb">
-      <strong>Educational reconstruction.</strong> Trademarks (Netscape, Yahoo!, Amazon, Microsoft, Warner Bros., etc.)
-      belong to their owners and appear only for historical illustration. No affiliation.
-      Cart, mail, and tour progress use <em>browser localStorage only</em> — nothing is uploaded.
+    <section class="how" id="how">
+      <h2>How to use the museum</h2>
+      <ol class="how-list">
+        <li><b>Pick a year</b> — start at 1994 and walk forward, or jump to a hinge (1998 Google · 2004 Gmail · 2005 YouTube · 2007 iPhone · 2008 App Store).</li>
+        <li><b>Connect theater</b> — dial-up or always-on boot may play; use <b>Skip</b> if offered. It sets the era’s “feel,” not a real modem.</li>
+        <li><b>Starting Point + tour</b> — each year has a home page and short guided stops; then free-roam period sites in the content frame.</li>
+        <li><b>Do real things</b> — add to cart, compose mail, digg a story, build a queue: state is local only, year-prefixed so years don’t collide.</li>
+        <li><b>Exit / resume</b> — desktop <b>Exit</b> returns to this lobby. “Continue …” reopens your last year (stored as <code>itt-last-year</code>).</li>
+      </ol>
+      <p class="how-aside">
+        Tip: open <a href="#compare">Compare years</a> when you wonder why 2005 has Maps but not Street View, or why 2006 is still pre-iPhone.
       </p>
-      <strong>About this project.</strong>
-      Each year is rebuilt from archived screenshots, browser documentation,
-      contemporary HTML capabilities, and period sources — not “retro aesthetic.”
-      Imperfections, default fonts, gray backgrounds, and slow-loading pages are intentional.
+    </section>
+
+    <div class="note" id="about">
+      <p class="legal-blurb">
+      <strong>Educational reconstruction.</strong> Trademarks and brand names (Netscape, Yahoo!, Amazon, Microsoft, Google, YouTube, Facebook, Apple, and others)
+      belong to their respective owners and appear only for historical illustration and criticism.
+      This project is independent — <em>no affiliation, endorsement, or official status</em>.
+      </p>
+      <p class="legal-blurb">
+      <strong>Privacy / theater.</strong> Carts, mail, uploads, tours, and similar state use <em>browser localStorage only</em>.
+      Nothing is uploaded to a server for those flows. Clearing site data resets progress for that origin.
+      </p>
+      <p class="legal-blurb">
+      <strong>How years are built.</strong> Layouts and chrome track archived screenshots (Wayback and peers), browser documentation,
+      contemporary HTML/CSS/JS capabilities, and research notes in this repo — not a generic “retro aesthetic.”
+      Gray backgrounds, default fonts, sparse Google, broken-feeling tables, and intentional slow paths are part of the exhibit.
+      </p>
+      <p class="legal-blurb" style="margin-bottom:0">
+      <strong>Accuracy bar.</strong> Products and UI motifs are year-locked. Soft “mock” buttons that only look clickable are treated as bugs;
+      immersive actions should either work in-local or clearly refuse. Imperfections and missing pixels are preferred over inventing brand art.
+      </p>
     </div>
 
     <footer class="hub-footer">
-      The Internet Through Time · Museum-style web history · 1994–2005 open
+      The Internet Through Time · Museum-style web history ·
+      <a href="#directory">Years 1994–2008</a> ·
+      <a href="games/index.html">Web games wing</a> ·
+      <a href="#compare">Compare</a> ·
+      <a href="#how">How to use</a> ·
+      <a href="#about">About / legal</a>
+      · 2008+ planned
     </footer>
   </div>
   <script>
   (function () {
     try {
       var y = localStorage.getItem("itt-last-year");
-      var row = document.getElementById("resume-row");
+      var wrap = document.getElementById("resume-wrap");
       var link = document.getElementById("resume-link");
-      if (/^(199[4-9]|200[0-5])$/.test(y)) {
+      if (wrap && link && /^(199[4-9]|200[0-7])$/.test(y)) {
         link.href = "years/" + y + "/";
-        link.textContent = "Continue " + y + " immersion »";
-        row.classList.remove("hidden");
+        link.textContent = "Continue " + y + " »";
+        wrap.classList.remove("hidden");
       }
     } catch (e) {}
   })();

@@ -1,0 +1,19 @@
+SOURCE: https://web.archive.org/web/20011101014040id_/http://www.yahoo.com/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: Yahoo!
+ROLE: P0 portal — year-correct 2001 news rails
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Dense service strip: Shop · Media · Connect · Personal · Fun
+- Services: Mail, Messenger, GeoCities, Chat, Clubs, Personals, Photos, My Yahoo!, PayDirect, Yahooligans, Finance, News, Sports…
+- Directory categories classic 14-column style
+- In the News (Nov 1 2001 era capture): Ashcroft bans 46 terror groups · Taliban · anthrax · SLA Olson · Gold cache WTC · Halloween full moon · World Series / NBA / NHL / NFL
+- Marketplace + Broadcast Events + Inside Yahoo!
+- Local Yahoo!s Europe / Asia Pacific / Americas / US Cities
+- "Make Yahoo! your home page"
+
+BUILD:
+- MUST rewrite news rails for 2001 — never fork 1997/2000 news
+- Portal density vs sparse Google contrast
+- Continuity: yahoo.js personalize optional
