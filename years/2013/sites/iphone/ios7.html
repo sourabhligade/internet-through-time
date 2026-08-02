@@ -9,20 +9,35 @@
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <div style="max-width:400px;margin:16px auto;padding:12px">
- <p style="font-size:11px"><a href="index.html">← iPhone</a> · <a href="touchid.html">Touch ID</a> · <a href="../../pages/home.html">Start</a></p>
- <h1 style="font-size:20px;font-weight:300">iOS 7</h1>
- <p style="font-size:13px">Unveiled <b>June 10, 2013</b> · public <b>September 18, 2013</b>.
- The most significant redesign since the original iPhone: flat icons, translucency, layering, parallax — end of default leather/linen skeuomorphism.</p>
- <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0;padding:16px;background:linear-gradient(180deg,#5b8def,#9b6bff);border-radius:12px">
-  <div style="background:rgba(255,255,255,0.9);border-radius:12px;height:56px"></div>
-  <div style="background:rgba(255,255,255,0.9);border-radius:12px;height:56px"></div>
-  <div style="background:rgba(255,255,255,0.9);border-radius:12px;height:56px"></div>
-  <div style="background:rgba(255,255,255,0.9);border-radius:12px;height:56px"></div>
+ <div class="ios7-statusbar">Carrier · 9:41 AM · iOS 7</div>
+ <p style="font-size:11px;font-weight:400">
+  <a href="index.html">← iPhone</a> · <a href="touchid.html">Touch ID</a> · <a href="../../pages/home.html">Start</a>
+ </p>
+ <h1 style="font-size:28px;margin:8px 0">iOS 7</h1>
+ <p style="font-size:14px;font-weight:400;color:#3c3c43">
+  Unveiled <b>June 10, 2013</b> · public <b>September 18, 2013</b>.
+  Flat icons · translucency · layering · parallax — end of default leather/linen skeuomorphism.
+ </p>
+ <div class="ios7-springboard" aria-hidden="true">
+  <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+  <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
  </div>
- <p style="font-size:12px;background:#fff;border:1px solid #ccc;padding:8px">Honesty: museum mock springboard — not inventing Apple trademarks as perfect pixels. Ships with iPhone 5s/5c; also updates older devices class.</p>
- <p><button type="button" data-ios7-ack style="padding:8px 14px;background:#007aff;color:#fff;border:0;border-radius:6px;cursor:pointer">I upgraded to iOS 7 (save)</button>
- <span data-ios7-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
- <p style="font-size:11px;color:#666"><code>itt13-ios7</code> · not iOS 8 · not iPhone 6</p>
+ <div class="ios7-card">
+  Museum springboard theater — flat tiles only (failed-final RECON). Not inventing Apple app glyphs.
+  Dual honesty: many phones still on iOS 6 until upgrade night.
+ </div>
+ <div class="ios7-card" style="margin-top:10px;font-size:12px">
+  <b>What changed for you? (saved)</b><br>
+  <label style="display:block;margin:3px 0"><input type="checkbox" data-ios7-change="flat"> Flat icons overnight</label>
+  <label style="display:block;margin:3px 0"><input type="checkbox" data-ios7-change="parallax"> Parallax / layers</label>
+  <label style="display:block;margin:3px 0"><input type="checkbox" data-ios7-change="skeuo"> Leather/linen skeuomorphism gone</label>
+  <label style="display:block;margin:3px 0"><input type="checkbox" data-ios7-change="still6"> Still on iOS 6 a while (honest)</label>
+ </div>
+ <p style="margin-top:14px">
+  <button type="button" class="ios7-btn" data-ios7-ack>I upgraded to iOS 7 (save)</button>
+  <span class="itt13-status" data-ios7-status style="display:inline;margin-left:8px"></span>
+ </p>
+ <p class="itt13-ban"> · not iOS 8 · not iPhone 6</p>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,7 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var st = document.querySelector("[data-ios7-status]");
   try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
   if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ flat: true, date: "2013-09-18", ts: Date.now() })); } catch (e2) {}
+    var changes = {};
+    var boxes = document.querySelectorAll("[data-ios7-change]");
+    for (var i = 0; i < boxes.length; i++) {
+      changes[boxes[i].getAttribute("data-ios7-change")] = !!boxes[i].checked;
+    }
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        flat: true,
+        date: "2013-09-18",
+        changes: changes,
+        ts: Date.now()
+      }));
+    } catch (e2) {}
     var msg = "iOS 7 upgrade · flat design · " + KEY;
     if (st) st.textContent = msg;
     try {

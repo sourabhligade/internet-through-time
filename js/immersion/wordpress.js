@@ -4,6 +4,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   function year() {
     return String(
       ITT._immersionYear ||
@@ -79,7 +88,10 @@
         posts.unshift({ title: title, body: body, date: new Date().toLocaleString() });
         savePosts(posts.slice(0, 40));
         var st = doc.querySelector("[data-wp-status]");
-        if (st) st.textContent = "Published (this browser only) — WordPress self-host era.";
+        if (st) {
+          st.textContent = "Published (this browser only) — WordPress self-host era.";
+          ittFeedback(st.textContent, st);
+        }
         form.reset();
         render(doc);
       });
@@ -89,7 +101,10 @@
       install.addEventListener("click", function () {
         localStorage.setItem(installKey(), "1");
         var st = doc.querySelector("[data-wp-install-status]");
-        if (st) st.textContent = "Download recorded: wordpress-0.7.zip (this browser only) — continue to install.";
+        if (st) {
+          st.textContent = "Download recorded: wordpress-0.7.zip (this browser only) — continue to install.";
+          ittFeedback(st.textContent, st);
+        }
       });
     }
     var root = doc.querySelector("[data-wp-install-root]");

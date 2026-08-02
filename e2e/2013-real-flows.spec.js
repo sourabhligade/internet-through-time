@@ -76,5 +76,59 @@ test.describe('2013 real flows (storage required)', () => {
     await page.locator('[data-fb-home-install]').click();
     await expectStorageTruthy(page, 'itt13-fb-home');
   });
+
+  test('HealthCare.gov ack storage', async ({ page }) => {
+    await page.goto('/years/2013/sites/healthcare/index.html');
+    await clearKeys(page, ['itt13-healthcare-ack']);
+    await page.reload();
+    await page.locator('[data-hc-try="1"]').click().catch(() => {});
+    await page.waitForTimeout(700);
+    await page.locator('[data-hc-try="2"]').click().catch(() => {});
+    await page.waitForTimeout(800);
+    await page.locator('[data-healthcare-ack]').click();
+    await expectStorageTruthy(page, 'itt13-healthcare-ack');
+  });
+
+  test('iPad Air interest storage', async ({ page }) => {
+    await page.goto('/years/2013/sites/ipad/air.html');
+    await clearKeys(page, ['itt13-ipadair']);
+    await page.reload();
+    await page.locator('[data-ipadair-ack]').click();
+    await expectStorageTruthy(page, 'itt13-ipadair');
+  });
+
+  test('UberX request storage', async ({ page }) => {
+    await page.goto('/years/2013/sites/uber/index.html');
+    await clearKeys(page, ['itt13-uber']);
+    await page.reload();
+    await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
+    const raw = await expectStorageTruthy(page, 'itt13-uber');
+    expect(raw).toMatch(/uberx|true/i);
+  });
+
+  test('Spotify invite writes itt13-spotify*', async ({ page }) => {
+    await page.goto('/years/2013/sites/spotify/index.html');
+    await page.evaluate(() => {
+      try {
+        Object.keys(localStorage)
+          .filter((k) => k.indexOf('itt13-spotify') === 0)
+          .forEach((k) => localStorage.removeItem(k));
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForTimeout(500);
+    await page.locator('[data-spotify-invite]').first().click();
+    const n = await page.evaluate(() => {
+      let c = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.indexOf('itt13-spotify') === 0) c++;
+      }
+      return c;
+    });
+    expect(n).toBeGreaterThan(0);
+  });
 });
 

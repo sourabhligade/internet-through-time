@@ -1,5 +1,5 @@
 /**
- * Google+ 2011 — Circles · +1 · Hangouts mock (localStorage only)
+ * Google+ 2011 — Circles · +1 · Hangouts offline theater (localStorage only)
  */
 (function (global) {
   "use strict";
@@ -107,15 +107,35 @@
     if (hangoutBtn && hangoutOut) {
       hangoutBtn.addEventListener("click", function (ev) {
         ev.preventDefault();
+        var circle =
+          (document.querySelector("[data-gplus-circle].on, [data-gplus-circle-active]") &&
+            (document.querySelector("[data-gplus-circle].on, [data-gplus-circle-active]")
+              .getAttribute("data-gplus-circle") ||
+              document.querySelector("[data-gplus-circle].on, [data-gplus-circle-active]")
+                .textContent)) ||
+          "Friends";
+        var session = {
+          started: true,
+          circle: String(circle).trim() || "Friends",
+          tiles: ["You", "Alex", "Sam"],
+          ts: Date.now()
+        };
         hangoutOut.innerHTML =
-          "<div style='background:#111;color:#eee;padding:12px;border:1px solid #444'>" +
-          "<b>Hangout (mock)</b><br>" +
+          "<div style='background:#111;color:#eee;padding:12px;border:1px solid #444' data-gplus-hangout-session>" +
+          "<b>Hangout started</b> · circle: <b>" +
+          (session.circle.replace(/</g, "&lt;")) +
+          "</b><br>" +
           "<span style='display:inline-block;width:48px;height:48px;background:#444;margin:6px;text-align:center;line-height:48px'>A</span>" +
-          "<span style='display:inline-block;width:48px;height:48px;background:#555;margin:6px;text-align:center;line-height:48px'>B</span>" +
-          "<span style='display:inline-block;width:48px;height:48px;background:#666;margin:6px;text-align:center;line-height:48px'>You</span>" +
-          "<p style='font-size:11px;color:#aaa'>Multi-person video theater · no live WebRTC · educational only</p></div>";
-        saveJSON(key("gplus-hangout"), true);
-        setStatus("Hangout started (mock tiles).");
+          "<span style='display:inline-block;width:48px;height:48px;background:#555;margin:6px;text-align:center;line-height:48px'>S</span>" +
+          "<span style='display:inline-block;width:48px;height:48px;background:#1a73e8;margin:6px;text-align:center;line-height:48px'>You</span>" +
+          "<p style='font-size:11px;color:#aaa'>Multi-person video in this browser only · no live camera · 2011 field-trial theater</p></div>";
+        saveJSON(key("gplus-hangout"), session);
+        setStatus("Hangout started with " + session.tiles.length + " people · saved.");
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback("Hangout started · circle “" + session.circle + "”.", {
+            flash: true
+          });
+        }
         if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
           ITT._immersionApi.markTourProgress();
         }

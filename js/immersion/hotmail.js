@@ -19,6 +19,7 @@
       var loadJSON = api.loadJSON;
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
       var markTourProgress = api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
@@ -106,12 +107,12 @@ function initHotmail() {
       var login = ((loginForm.querySelector('[name="login"]') || {}).value || "").trim();
       var pass = ((loginForm.querySelector('[name="pass"]') || {}).value || "").trim();
       if (!login) {
-        showFlash("Enter a login name.");
+        actionFeedback("Enter a login name.");
         return;
       }
       setHotmailUser({ login: login, pass: pass ? "set" : "" });
       seedMail({ login: login });
-      showFlash("Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
+      actionFeedback("Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
       markTourProgress();
       hotmailGo("inbox.html");
     };
@@ -195,7 +196,7 @@ function initHotmail() {
         date: new Date().toLocaleString()
       });
       saveJSON(storageKey("hotmail-sent"), sent.slice(0, 30));
-      showFlash(
+      actionFeedback(
         "Message queued to <b>" + escapeHtml(to || "recipient") +
         "</b>. <font size=\"1\">Get your free email at HoTMaiL.</font>"
       );
@@ -211,7 +212,7 @@ function initHotmail() {
     logout.onclick = function (e) {
       e.preventDefault();
       setHotmailUser(null);
-      showFlash("Signed out of HoTMaiL.");
+      actionFeedback("Signed out of HoTMaiL.");
       hotmailGo("index.html");
     };
   }

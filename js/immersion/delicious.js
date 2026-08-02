@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function year() {
     return String(
       ITT._immersionYear ||
@@ -132,7 +141,10 @@
         });
         save(list.slice(0, 40));
         var st = doc.querySelector("[data-delicious-status]");
-        if (st) st.textContent = "Posted to del.icio.us (this browser) — " + title;
+        if (st) {
+          st.textContent = "Posted to del.icio.us (this browser) — " + title;
+          ittFeedback(st.textContent, st);
+        }
         form.reset();
         render(doc);
       });

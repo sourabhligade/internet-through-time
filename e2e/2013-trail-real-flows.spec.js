@@ -51,11 +51,73 @@ test.describe('2013 trail — flat phone + privacy', () => {
     await requireKey(page, 'itt13-touchid');
 
     await page.goto('/years/2013/sites/snowden/index.html');
+    await page.locator('[data-snowden-card]').evaluateAll((els) => els.forEach((e) => { e.checked = true; e.dispatchEvent(new Event('change', { bubbles: true })); }));
     await page.locator('[data-snowden-ack]').click();
     await requireKey(page, 'itt13-snowden-ack');
 
     await page.goto('/years/2013/pages/about.html');
     await page.locator('[data-thesis-ack]').click();
     await requireKey(page, 'itt13-thesis-ack');
+  });
+});
+
+test.describe('2013 trail — public web + tablet', () => {
+  test('Snowden → HealthCare.gov → iPad Air', async ({ page }) => {
+    await page.goto('/years/2013/sites/snowden/index.html');
+    await clearKeys(page, ['itt13-snowden-ack', 'itt13-healthcare-ack', 'itt13-ipadair']);
+    await page.reload();
+    await page.locator('[data-snowden-card]').evaluateAll((els) => els.forEach((e) => { e.checked = true; e.dispatchEvent(new Event('change', { bubbles: true })); }));
+    await page.locator('[data-snowden-ack]').click();
+    await requireKey(page, 'itt13-snowden-ack');
+
+    await page.goto('/years/2013/sites/healthcare/index.html');
+    await page.locator('[data-hc-try="1"]').click().catch(() => {});
+    await page.waitForTimeout(700);
+    await page.locator('[data-hc-try="2"]').click().catch(() => {});
+    await page.waitForTimeout(800);
+    await page.locator('[data-healthcare-ack]').click();
+    await requireKey(page, 'itt13-healthcare-ack');
+
+    await page.goto('/years/2013/sites/ipad/air.html');
+    await page.locator('[data-ipadair-ack]').click();
+    await requireKey(page, 'itt13-ipadair');
+  });
+
+  test('home trails link HealthCare.gov and iPad Air', async ({ page }) => {
+    await page.goto('/years/2013/pages/home.html');
+    const text = await page.locator('body').innerText();
+    expect(text).toMatch(/HealthCare\.gov|healthcare/i);
+    expect(text).toMatch(/iPad Air/i);
+    await expect(page.locator('a[href*="healthcare"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="ipad/air"]').first()).toBeVisible();
+  });
+});
+
+test.describe('2013 trail — continuity residual N–R', () => {
+  test('Spotify invite → Netflix stream → UberX', async ({ page }) => {
+    await page.goto('/years/2013/sites/spotify/index.html');
+    await clearKeys(page, ['itt13-uber', 'itt13-netflix-stream']);
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-spotify-invite]').first().click();
+    const spotKeys = await page.evaluate(() => {
+      const o = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.indexOf('itt13-spotify') === 0) o.push(k);
+      }
+      return o;
+    });
+    expect(spotKeys.length).toBeGreaterThan(0);
+
+    await page.goto('/years/2013/sites/netflix/index.html');
+    await page.reload();
+    await page.waitForTimeout(300);
+    await page.locator('#stream-seed').click();
+    await requireKey(page, 'itt13-netflix-stream');
+
+    await page.goto('/years/2013/sites/uber/index.html');
+    await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
+    await requireKey(page, 'itt13-uber');
   });
 });

@@ -2,37 +2,78 @@
 <html lang="en" data-itt-year="2011">
 <head>
 <meta charset="utf-8">
-<title>Spotify player — 2011 theater</title>
+<title>Spotify — Player</title>
 <link rel="stylesheet" href="../../../../css/period-2011.css">
 <script src="../../../../js/immersion-2011.js" defer></script>
 </head>
-<body bgcolor="#000">
+<body class="sp-client-body">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="sp-us" style="max-width:640px;margin:16px auto;padding:16px">
- <p style="font-size:12px"><a href="index.html">← Spotify</a> · <a href="plans.html">Plans</a></p>
- <h1>Player</h1>
- <p data-spotify-status style="font-size:12px;color:#8c8"></p>
- <div class="sp-ad" data-spotify-ad style="display:none;margin:10px 0"></div>
- <div class="sp-card">
-  <b>Playlist</b>
-  <div data-spotify-playlist style="margin-top:8px"></div>
- </div>
- <div class="sp-card">
-  <p style="margin:0 0 8px"><b>Catalog theater</b> (not real audio)</p>
-  <p>
-   <a href="#" data-spotify-add data-title="Dog Days Are Over" data-artist="Florence + The Machine">+ Add Dog Days Are Over</a> ·
-   <a href="#" data-spotify-play data-title="Dog Days Are Over">Play</a>
-  </p>
-  <p>
-   <a href="#" data-spotify-add data-title="Rolling in the Deep" data-artist="Adele">+ Add Rolling in the Deep</a> ·
-   <a href="#" data-spotify-play data-title="Rolling in the Deep">Play</a>
-  </p>
-  <p>
-   <a href="#" data-spotify-add data-title="Pumped Up Kicks" data-artist="Foster the People">+ Add Pumped Up Kicks</a> ·
-   <a href="#" data-spotify-play data-title="Pumped Up Kicks">Play</a>
-  </p>
- </div>
- <p style="font-size:11px;color:#666">Free plan shows ad interstitial · Premium skips ads · <code>itt11-spotify-playlist</code></p>
+<div class="sp-client">
+  <aside class="sp-side">
+    <div class="sp-logo">Spotify</div>
+    <a href="index.html" class="sp-nav">Home</a>
+    <a href="player.html" class="sp-nav is-on">Playlists</a>
+    <a href="plans.html" class="sp-nav">Search</a>
+    <div class="sp-side-label">YOUR MUSIC</div>
+    <a href="player.html" class="sp-nav">Songs</a>
+    <div class="sp-side-label">PLAYLISTS</div>
+    <span class="sp-nav muted">Starred</span>
+  </aside>
+  <main class="sp-main">
+    <header class="sp-main-head">
+      <span>Playlist</span>
+      <a href="plans.html" class="sp-upgrade">Upgrade</a>
+    </header>
+    <div class="sp-ad" data-spotify-ad style="display:none"></div>
+    <p data-spotify-status class="sp-status"></p>
+    <table class="sp-tracktable" cellspacing="0">
+      <thead><tr><th>#</th><th>TITLE</th><th>ARTIST</th><th></th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Dog Days Are Over</td>
+          <td>Florence + The Machine</td>
+          <td>
+            <a href="#" data-spotify-add data-title="Dog Days Are Over" data-artist="Florence + The Machine">+</a>
+            <a href="#" data-spotify-play data-title="Dog Days Are Over">Play</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rolling in the Deep</td>
+          <td>Adele</td>
+          <td>
+            <a href="#" data-spotify-add data-title="Rolling in the Deep" data-artist="Adele">+</a>
+            <a href="#" data-spotify-play data-title="Rolling in the Deep">Play</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Pumped Up Kicks</td>
+          <td>Foster the People</td>
+          <td>
+            <a href="#" data-spotify-add data-title="Pumped Up Kicks" data-artist="Foster the People">+</a>
+            <a href="#" data-spotify-play data-title="Pumped Up Kicks">Play</a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Somebody That I Used to Know</td>
+          <td>Gotye</td>
+          <td>
+            <a href="#" data-spotify-add data-title="Somebody That I Used to Know" data-artist="Gotye">+</a>
+            <a href="#" data-spotify-play data-title="Somebody That I Used to Know">Play</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="sp-pl-head">Your playlist</h3>
+    <div data-spotify-playlist class="sp-playlist"></div>
+  </main>
+</div>
+<div class="sp-nowbar">
+  <span data-spotify-now>Nothing playing</span>
+  <span class="sp-nowbar-hint">◀ ▐▐ ▶ · free plan may insert ads</span>
 </div>
 </body>
 </html>

@@ -55,5 +55,11 @@ test.describe('2013 MVP', () => {
     await expect(page.locator('[data-btc-note]')).toBeVisible();
     await expect(page.locator('body')).toContainText(/Silk Road|Bitcoin/i);
   });
-});
 
+  test('home trails HealthCare.gov and iPad Air', async ({ page }) => {
+    await page.goto('/years/2013/pages/home.html');
+    await expect(page.locator('a[href*="healthcare"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="ipad/air"]').first()).toBeVisible();
+    await expect(page.locator('body')).toContainText(/HealthCare\.gov|iPad Air/i);
+  });
+});

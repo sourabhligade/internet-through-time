@@ -16,6 +16,7 @@
       var markTourProgress = api.markTourProgress;
       var R = api.R;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
 
       function catalog() {
         return config.googleCatalog || [];

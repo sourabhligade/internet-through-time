@@ -20,9 +20,8 @@
 <script src="../../../../js/immersion-2011.js"></script>
 
 <p style="max-width:480px;margin:12px auto;font-family:Helvetica,Arial,sans-serif">
- <button type="button" data-wa-seed>Note WhatsApp 2010 seed (theater)</button>
+ <button type="button" data-wa-seed>Note early WhatsApp</button>
  <span data-wa-status style="font-size:12px;color:#060"></span>
- <br><code style="font-size:11px">itt11-whatsapp-seed</code>
 </p>
 <script>
 (function(){
@@ -32,7 +31,7 @@
   b.addEventListener("click", function(){
     try{ localStorage.setItem(KEY, JSON.stringify({seed:true,year:2010,ts:Date.now()})); }catch(e){}
     var st=document.querySelector("[data-wa-status]");
-    if(st) st.textContent="Saved · "+KEY+" · not mass SMS killer yet";
+    if(st) st.textContent="Saved · early seed · not SMS killer yet";
   });
 })();
 </script>

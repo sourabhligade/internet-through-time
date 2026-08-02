@@ -93,6 +93,7 @@
       { label: "Stories", href: "sites/snapchat/story.html" },
       { label: "iPhone 5s", href: "sites/iphone/index.html" },
       { label: "Snowden", href: "sites/snowden/index.html" },
+      { label: "HealthCare.gov", href: "sites/healthcare/index.html" },
       { label: "What's New", href: "pages/whats-new.html" },
       { label: "About 2013", href: "pages/about.html" }
     ],

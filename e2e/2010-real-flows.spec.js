@@ -101,7 +101,7 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/facebook/places.html');
     await clearKeys(page, 'itt10-fb-places');
     await page.reload();
-    await page.locator('#pl').click();
+    await page.locator('[data-fb-place]').first().click();
     await requireKey(page, 'itt10-fb-places');
   });
 

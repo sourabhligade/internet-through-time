@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Telegram — 2013 messenger seed</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body class="tg-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="tg-card">
+ <p style="font-size:11px"><a href="../../pages/home.html" style="color:#fffc00">Start</a> · <a href="../whatsapp/index.html" style="color:#fffc00">WhatsApp</a> · <a href="../snowden/index.html" style="color:#fffc00">Privacy</a></p>
+ <h1 style="font-size:28px;font-weight:normal;margin:8px 0">Telegram</h1>
+ <p>
+  <b>2013</b> — Telegram launches as a cloud messenger (Pavel Durov lore) emphasizing speed and
+  optional secret chats in press framing. Still a <b>seed</b> next to SMS · iMessage · WhatsApp growth.
+ </p>
+ <div class="tg-bubble">Hello from 2013 · cloud messenger seed · not mass default yet</div>
+ <div class="itt13-honesty" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.3);color:#eef">
+  No real MTProto · no account signup · pairs with post-Snowden privacy mood.
+ </div>
+ <p style="margin-top:16px">
+  <button type="button" class="tg-btn" data-telegram-seed>Note Telegram 2013 seed (save)</button>
+  <span class="itt13-status" data-telegram-status style="display:block"></span>
+ </p>
+ 
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-telegram";
+  var btn = document.querySelector("[data-telegram-seed]");
+  var st = document.querySelector("[data-telegram-status]");
+  if (btn) btn.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ seed: true, year: 2013, ts: Date.now() })); } catch (e) {}
+    if (st) st.textContent = "Saved · seed only · " + KEY;
+  });
+});
+</script>
+</body>
+</html>

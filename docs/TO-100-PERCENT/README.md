@@ -1,9 +1,16 @@
 # TO 100% — Implementation plans by year
 
 **Created:** 2026-07-27  
-**Updated:** 2026-08-02 — hub **1994–2012** playable · **2013+** not on disk  
+**Updated:** 2026-08-02 — hub **1994–2013** MVP live · **2014+** locked  
 **Purpose:** One detailed, research-backed todo plan **per year** so we can implement **one year at a time** to strict 100% completion.  
 **Rule:** Follow sources already in repo research MDs + CAPTURE-LOGs. **Do not invent brand pixels.** If harvest fails → log `[failed]` and keep honest RECON.
+
+### Active program: 2011–2013 → 100%
+
+**Master step plan:** [`PLAN-2011-2012-2013-TO-100.md`](PLAN-2011-2012-2013-TO-100.md)  
+
+Linear goals **G0.1 → G5.3**: baseline → 2013 museum-ready → 2013 densify → 2011 L3 → 2012 L3 → cross-year close.  
+Use that file as the single implementer checklist; per-year `YEAR-201x.md` remain residual detail.
 
 ## What “100%” means (this folder)
 
@@ -17,19 +24,23 @@
 
 Ship bar (**museum-ready**) is **true** for **1994–2012** hub — see [`MUSEUM-READY-BAR-1994-2012.md`](../MUSEUM-READY-BAR-1994-2012.md).  
 **2011–2012** elevated 2026-08-02 (densify + trail e2e · minute research · asset honesty packs).  
+**2013** is **MVP + honesty** on hub (not full museum-ready until Pass 1 of the 2011–2013 plan).  
 **Forever residual:** perfect WA brand stills (do not invent).  
-**2013+** is hub-locked until research freeze + implement.
+**2014+** is hub-locked until research freeze + implement.
 
-**Current research snapshot:** [`RESEARCH-100-ALL-YEARS-2026-08-01.md`](RESEARCH-100-ALL-YEARS-2026-08-01.md) · DISK-TRUTH · year master bibles
+**Current research snapshot:** [`RESEARCH-100-ALL-YEARS-2026-08-01.md`](RESEARCH-100-ALL-YEARS-2026-08-01.md) · DISK-TRUTH · year master bibles  
+
+**UI feel · artifact harvest · ROI (all years 1994–2013):** [`../UI-FEEL-ARTIFACT-ROI-MASTER-1994-2013.md`](../UI-FEEL-ARTIFACT-ROI-MASTER-1994-2013.md) — source stack (WA / Version Museum / WDM / evolt) · disk asset cliff · year-by-year step goals · MVPP download queues · implement sprints
 
 ## Implement order (recommended)
 
 | Order | Year | Why first |
 |------:|------|-----------|
-| **1** | Residual **2011–2012** densify + WA pixels | MVP live — elevate toward 100% content |
-| **2** | Optional residual **2008–2010** pixels | Forever WA retries only |
-| 3 | Ops gates | Link audit + check-all-years + core/signature/handoff through 2012 |
-| 4 | **2009** optional | FB / FarmVille / 4sq / KS WA logo retries ([YEAR-2009.md](YEAR-2009.md)) |
+| **0** | **[PLAN-2011-2012-2013-TO-100.md](PLAN-2011-2012-2013-TO-100.md)** | Single checklist: 2013 L2 → 2013 L3 → 2011 L3 → 2012 L3 → gates |
+| **1** | **2013** museum-ready + densify | Only year not yet full museum-ready |
+| **2** | Residual **2011–2012** WA pixels + forest scrub | Close last ~6–10% each |
+| **3** | Optional residual **2008–2010** pixels | Forever WA retries only |
+| 4 | Ops gates | Link audit + check-all-years + core/signature/handoff through **2013** |
 | 5 | **1994–2007** | Optional forever pixels only — do **not** reopen densify |
 
 ### Historical implement order (completed)
@@ -66,8 +77,10 @@ Work **one year at a time**. Start at Phase **R** or **0** of that file.
 | [YEAR-2008.md](YEAR-2008.md) | 2008 | **100% content** (densify ship) |
 | [YEAR-2009.md](YEAR-2009.md) | 2009 | **100% content** |
 | [YEAR-2010.md](YEAR-2010.md) | 2010 | **100% content** / museum-ready |
-| [YEAR-2011.md](YEAR-2011.md) | 2011 | **MVP ship** · residual densify/pixels |
-| [YEAR-2012.md](YEAR-2012.md) | 2012 | **MVP ship** · residual densify/pixels |
+| [YEAR-2011.md](YEAR-2011.md) | 2011 | **Museum-ready** · residual L3 pixels/forest |
+| [YEAR-2012.md](YEAR-2012.md) | 2012 | **Museum-ready** · residual L3 pixels/forest |
+| [YEAR-2013.md](YEAR-2013.md) | 2013 | **MVP + honesty** · residual museum-ready + L3 |
+| **[PLAN-2011-2012-2013-TO-100.md](PLAN-2011-2012-2013-TO-100.md)** | 2011–2013 | **Active step-by-step program** |
 | [RESEARCH-100-ALL-YEARS-2026-08-01.md](RESEARCH-100-ALL-YEARS-2026-08-01.md) | 1994–2012+ | Research board (partially superseded by DISK-TRUTH) |
 
 ## Shared source stack (every year)

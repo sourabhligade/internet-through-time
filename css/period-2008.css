@@ -90,3 +90,12 @@ body.chrome-shell {
 .docs-shell { font-family: Arial, sans-serif; max-width: 720px; margin: 12px auto; font-size: 13px; }
 .docs-editor { border: 1px solid #999; min-height: 200px; padding: 10px; background: #fff; }
 .aws-shell { font-family: Verdana, Arial, sans-serif; max-width: 640px; margin: 12px auto; font-size: 13px; }
+
+/* ITT feel tokens 2008 — Chrome · App Store · Android */
+:root {
+  --itt08-chrome: #4d90fe;
+  --itt08-android: #a4c639;
+  --itt08-appstore: #1c1c1c;
+  --itt08-hulu: #66aa33;
+}
+

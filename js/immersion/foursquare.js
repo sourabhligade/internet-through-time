@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() { return ITT.util || {}; }
   function storageKey() {
     return U().immersionStorageKey
@@ -32,6 +41,7 @@
     if (st) {
       st.textContent =
         list.length + " check-in(s) · points " + list.length * 5 + " · " + storageKey();
+      ittFeedback(st.textContent, st);
     }
     if (el) {
       if (!list.length) {

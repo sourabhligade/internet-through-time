@@ -23,3 +23,11 @@ body.year-2007 .itt-year-chip {
 
 /* AWS educational */
 .aws-shell { font-family: Verdana, Arial, sans-serif; max-width: 640px; margin: 12px auto; font-size: 13px; }
+
+/* ITT feel tokens 2007 — iPhone · Street View */
+:root {
+  --itt07-apple: #555555;
+  --itt07-iphone: #000000;
+  --itt07-gmail: #c3d9ff;
+}
+

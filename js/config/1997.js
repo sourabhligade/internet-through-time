@@ -51,6 +51,8 @@
       "sites/icq/about.html": "http://www.icq.com/about.html",
       "sites/pointcast/about.html": "http://www.pointcast.com/about.html",
       "sites/microsoft/about.html": "http://www.microsoft.com/about.html",
+      "sites/netscape/index.html": "http://home.netscape.com/",
+      "sites/netscape/about.html": "http://home.netscape.com/comprod/about_company.html",
       "pages/home.html": "http://home.microsoft.com/intl/web1997/",
       "pages/about.html": "http://home.microsoft.com/intl/web1997/about.html",
       "pages/cool.html": "http://home.microsoft.com/intl/web1997/whats-cool.html",

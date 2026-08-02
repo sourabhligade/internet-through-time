@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() { return ITT.util || {}; }
   function prefKey() {
     return U().immersionStorageKey
@@ -50,7 +59,10 @@
         ev.preventDefault();
         localStorage.setItem(prefKey(), JSON.stringify({ interested: true, ts: Date.now() }));
         var st = doc.querySelector("[data-android-status]");
-        if (st) st.textContent = "Noted interest · G1 first · " + prefKey();
+        if (st) {
+          st.textContent = "Noted interest · G1 first · " + prefKey();
+          ittFeedback(st.textContent, st);
+        }
       });
     }
     var installs = doc.querySelectorAll("[data-android-install]");
@@ -64,7 +76,10 @@
         list.unshift({ name: name, ts: Date.now() });
         saveApps(list.slice(0, 30));
         var st = doc.querySelector("[data-android-status]");
-        if (st) st.textContent = "Installed (Market theater): " + name + " · " + appsKey();
+        if (st) {
+          st.textContent = "Installed (Market theater): " + name + " · " + appsKey();
+          ittFeedback(st.textContent, st);
+        }
         render(doc);
       });
     }

@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function year() {
     return String(
       ITT._immersionYear ||
@@ -156,7 +165,10 @@
         save(rec);
         paint(doc, rec);
         var st = doc.querySelector("[data-feedburner-status]");
-        if (st) st.textContent = "Stats refreshed (+1 subscriber · museum counter).";
+        if (st) {
+          st.textContent = "Stats refreshed (+1 subscriber · museum counter).";
+          ittFeedback(st.textContent, st);
+        }
       });
     }
     paint(doc, load());

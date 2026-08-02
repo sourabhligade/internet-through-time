@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   var CATALOG = [
     { name: "demo-track-01.mp3", size: "3.8 MB", user: "user_x92", quality: "128kbps" },
     { name: "sample-album-cover.jpg", size: "420 KB", user: "sharebot", quality: "—" },
@@ -138,8 +147,8 @@
         list.unshift({ file: file, term: term, ts: Date.now() });
         saveHistory(list.slice(0, 40));
         if (status) {
-          status.textContent =
-            "Download complete — logged in this browser (" + storageKey() + "). No real file written.";
+          status.textContent ="Download complete — logged in this browser (" + storageKey() + "). No real file written."
+          ittFeedback(status.textContent, status);
         }
         try {
           var histEl = document.querySelector("[data-kazaa-history]");

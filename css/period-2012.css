@@ -175,3 +175,184 @@ body.year-2012 .itt-year-chip {
   padding: 8px 12px;
   margin: 4px;
 }
+
+/* —— Feel pass: 2012 portal + Instagram app —— */
+body.portal-2012 {
+  margin: 0;
+  background: #fafafa;
+  color: #262626;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.portal-shell-2012 { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+.portal-head-2012 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  background: #fff;
+  margin: -20px -16px 16px;
+  padding: 18px 16px 12px;
+}
+.portal-head-2012 h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+.portal-2012 .portal-sub { margin: 4px 0 0; color: #8e8e8e; font-size: 13px; }
+.portal-2012 .portal-scale { color: #8e8e8e; font-size: 11px; }
+.portal-2012 .portal-lede { font-size: 15px; color: #262626; margin: 0 0 16px; }
+.portal-apps-2012 .portal-app {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+}
+.portal-apps-2012 .portal-app span { color: #8e8e8e; }
+.portal-app.ig b { color: #517fa4; }
+.portal-app.pin b { color: #e60023; }
+.portal-app.sopa b { color: #000; }
+.portal-2012 .portal-trails h2 { font-size: 14px; color: #262626; }
+.portal-2012 .portal-trails a { color: #003569; }
+.portal-2012 .portal-bans {
+  background: #fff;
+  border: 1px solid #ed4956;
+  color: #ed4956;
+}
+.portal-2012 .portal-foot a { color: #003569; }
+
+/* Instagram phone chrome */
+body.ig-app-body { margin: 0; background: #fafafa; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.ig-phone {
+  max-width: 390px;
+  margin: 12px auto 24px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.ig-status-fake {
+  font-size: 10px;
+  text-align: center;
+  padding: 4px;
+  background: #fafafa;
+  color: #8e8e8e;
+}
+.ig-app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+}
+.ig-wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+.ig-subnav {
+  font-size: 11px;
+  padding: 6px 12px;
+  background: #fafafa;
+  border-bottom: 1px solid #efefef;
+  color: #8e8e8e;
+}
+.ig-subnav a { color: #003569; text-decoration: none; }
+.ig-compose-card { padding: 0 0 12px; }
+.ig-stage {
+  position: relative;
+  background: #000;
+  aspect-ratio: 1;
+  max-height: 390px;
+}
+.ig-stage-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  background:
+    linear-gradient(135deg, #667eea 0%, #764ba2 40%, #f093fb 70%, #f5576c 100%);
+  transition: filter 0.2s ease;
+}
+.ig-stage-label {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+.ig-filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 10px 10px 0;
+}
+.ig-f {
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  font-size: 11px;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.ig-f.is-on { border-color: #3897f0; color: #3897f0; font-weight: bold; }
+.ig-platform-row { padding: 8px 10px; font-size: 12px; }
+.ig-plat {
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  padding: 4px 10px;
+  margin-right: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  border-radius: 3px;
+}
+.ig-plat.is-on { border-color: #262626; font-weight: bold; }
+.ig-plat-st { font-size: 11px; color: #8e8e8e; margin-left: 6px; }
+.ig-caption {
+  display: block;
+  width: calc(100% - 24px);
+  margin: 8px 12px;
+  padding: 8px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+.ig-share-btn {
+  display: block;
+  width: calc(100% - 24px);
+  margin: 0 12px 8px;
+  background: #3897f0;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.ig-status { font-size: 12px; color: #262626; padding: 0 12px; min-height: 1.2em; }
+.ig-feed-label { font-size: 12px; font-weight: 600; padding: 10px 12px 4px; border-top: 1px solid #efefef; }
+.ig-feed { padding: 0 12px 12px; min-height: 40px; font-size: 12px; color: #262626; }
+.ig-tabbar {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #dbdbdb;
+  padding: 10px 0;
+  font-size: 16px;
+  background: #fff;
+}
+.ig-tabbar .is-on { font-weight: bold; }
+
+/* ITT feel tokens 2012 — IG · IPO · Lightning · Win8 */
+:root {
+  --itt12-ig: #3897f0;
+  --itt12-fb: #3b5998;
+  --itt12-pin: #bd081c;
+  --itt12-win8: #00bcf2;
+}
+

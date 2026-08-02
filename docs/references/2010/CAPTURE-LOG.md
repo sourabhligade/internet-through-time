@@ -55,4 +55,19 @@
 
 - [x] H10-01…H10-08 each `[wa]` or `[failed-final]`  
 - [x] No invented pixels  
-- [x] Provenance honest in CAPTURE + HTML  
+- [x] Provenance honest in CAPTURE + HTML
+
+## ROI implement pass 2026-08-03
+
+**Source:** [`UI-FEEL-ARTIFACT-ROI-MASTER-1994-2013.md`](../../UI-FEEL-ARTIFACT-ROI-MASTER-1994-2013.md)
+
+| Action | Result |
+|--------|--------|
+| Continuity asset copy from 2008 chrome/spotify | [continuity] labeled in ASSETS.md |
+| CDX WA harvest (Twitter 2009, Apple 2010–12, Spotify 2011) | [wa] files under `assets/period/YYYY/` |
+| Recon tokens | filter/color token text files (no invented logos) |
+| Voice strip product HTML | visitor-facing `ittXX-` codes removed (JS keys remain) |
+| Amazon catalog freeze soft | 2006–2013 |
+| Product chips on Starting Points | 2004–2010 |
+| Period CSS feel tokens | all years 1994–2013 |
+

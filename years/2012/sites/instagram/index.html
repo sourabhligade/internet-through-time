@@ -2,61 +2,98 @@
 <html lang="en" data-itt-year="2012">
 <head>
 <meta charset="utf-8">
-<title>Instagram — 2012</title>
+<title>Instagram</title>
 <link rel="stylesheet" href="../../../../css/period-2012.css">
 <script src="../../../../js/immersion-2012.js" defer></script>
 </head>
-<body bgcolor="#fafafa">
+<body class="ig-app-body">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="ig-2012">
- <div class="ig-bar">INSTAGRAM</div>
- <p style="font-size:11px;margin:8px 0">
-  <a href="../../pages/home.html">Start</a> ·
-  <a href="android.html">Android</a> ·
-  <a href="acquired.html">FB acquisition</a> ·
-  <a href="about.html">About</a>
- </p>
- <div class="ig-warn">
-  <b>2012:</b> iOS <b>and</b> Android (Apr 3) · Facebook buys Instagram Apr 9 (~$1B) but app stays <b>standalone</b>.
-  No Stories · no Reels · no Meta branding.
- </div>
- <div class="ig-card">
-  <b>Platform</b>
-  <p>
-   <button type="button" data-ig-platform="ios">iOS</button>
-   <button type="button" data-ig-platform="android">Android</button>
-   <span data-ig-platform-status style="font-size:11px;color:#060;margin-left:8px"></span>
-  </p>
-  <p><b>Filters</b></p>
-  <span class="ig-filter" data-ig-filter="Normal">Normal</span>
-  <span class="ig-filter" data-ig-filter="Earlybird">Earlybird</span>
-  <span class="ig-filter" data-ig-filter="X-Pro II">X-Pro II</span>
-  <span class="ig-filter" data-ig-filter="Valencia">Valencia</span>
-  <span class="ig-filter" data-ig-filter="Toaster">Toaster</span>
-  <p style="margin-top:10px"><input data-ig-caption size="28" placeholder="Write a caption…" style="width:90%;padding:6px"></p>
-  <button type="button" data-ig-share style="background:#3897f0;color:#fff;border:0;padding:8px 16px">Share</button>
-  <div data-ig-status style="font-size:11px;color:#060;margin-top:8px"></div>
-  <div data-ig-feed style="min-height:60px;margin-top:12px"></div>
- </div>
- <p style="font-size:10px;color:#888">localStorage theater · <code>itt12-ig-posts</code> · educational only</p>
+<div class="ig-phone">
+  <div class="ig-status-fake">Carrier · 9:41 AM · 100%</div>
+  <header class="ig-app-bar">
+    <span class="ig-cam">⊕</span>
+    <span class="ig-wordmark">Instagram</span>
+    <span class="ig-dm">✉</span>
+  </header>
+  <div class="ig-subnav">
+    <a href="android.html">Android</a> ·
+    <a href="acquired.html">News</a> ·
+    <a href="filters.html">Filters</a>
+    <span style="display:block;margin-top:4px;color:#8e8e8e">Square photos · filters · no Stories · no Reels · standalone brand</span>
+  </div>
+  <div class="ig-compose-card">
+    <div class="ig-stage" data-ig-stage>
+      <div class="ig-stage-photo" data-ig-photo></div>
+      <div class="ig-stage-label"><span data-ig-filter-label>Normal</span></div>
+    </div>
+    <div class="ig-filters-row">
+      <button type="button" class="ig-f is-on" data-ig-filter="Normal">Normal</button>
+      <button type="button" class="ig-f" data-ig-filter="Earlybird">Earlybird</button>
+      <button type="button" class="ig-f" data-ig-filter="X-Pro II">X-Pro II</button>
+      <button type="button" class="ig-f" data-ig-filter="Valencia">Valencia</button>
+      <button type="button" class="ig-f" data-ig-filter="Toaster">Toaster</button>
+    </div>
+    <div class="ig-platform-row">
+      <button type="button" data-ig-platform="ios" class="ig-plat">iOS</button>
+      <button type="button" data-ig-platform="android" class="ig-plat">Android</button>
+      <span data-ig-platform-status class="ig-plat-st"></span>
+    </div>
+    <input type="text" data-ig-caption class="ig-caption" placeholder="Write a caption…">
+    <button type="button" data-ig-share class="ig-share-btn">Share</button>
+    <div data-ig-status class="ig-status"></div>
+  </div>
+  <div class="ig-feed-label">Feed</div>
+  <div data-ig-feed class="ig-feed"></div>
+  <nav class="ig-tabbar">
+    <span class="is-on">⌂</span><span>🔍</span><span>＋</span><span>♡</span><span>○</span>
+  </nav>
 </div>
 <script>
-(function(){
-  function key(k){ return "itt12-"+k; }
-  document.addEventListener("DOMContentLoaded", function(){
+(function () {
+  function key(k) { return "itt12-" + k; }
+  document.addEventListener("DOMContentLoaded", function () {
+    var filter = "Normal";
+    var photo = document.querySelector("[data-ig-photo]");
+    var flabel = document.querySelector("[data-ig-filter-label]");
+    var fbtns = document.querySelectorAll("[data-ig-filter]");
+    var FILTERS = {
+      Normal: "none",
+      Earlybird: "sepia(0.45) contrast(1.1) brightness(1.05)",
+      "X-Pro II": "contrast(1.25) saturate(1.35) hue-rotate(-10deg)",
+      Valencia: "sepia(0.25) contrast(1.05) brightness(1.08) saturate(1.2)",
+      Toaster: "sepia(0.35) contrast(1.3) brightness(0.95) saturate(1.4)"
+    };
+    function applyFilter(name) {
+      filter = name;
+      if (flabel) flabel.textContent = name;
+      if (photo) photo.style.filter = FILTERS[name] || "none";
+      for (var i = 0; i < fbtns.length; i++) {
+        fbtns[i].classList.toggle("is-on", fbtns[i].getAttribute("data-ig-filter") === name);
+      }
+    }
+    for (var i = 0; i < fbtns.length; i++) {
+      fbtns[i].addEventListener("click", function (ev) {
+        applyFilter(ev.currentTarget.getAttribute("data-ig-filter") || "Normal");
+      });
+    }
+    applyFilter("Normal");
+
     var st = document.querySelector("[data-ig-platform-status]");
-    var btns = document.querySelectorAll("[data-ig-platform]");
-    for (var i=0;i<btns.length;i++){
-      btns[i].addEventListener("click", function(ev){
-        var p = ev.currentTarget.getAttribute("data-ig-platform")||"ios";
-        try { localStorage.setItem(key("ig-platform"), p); } catch(e){}
-        if (st) st.textContent = "Platform: "+p+" · "+key("ig-platform");
+    var plats = document.querySelectorAll("[data-ig-platform]");
+    for (var p = 0; p < plats.length; p++) {
+      plats[p].addEventListener("click", function (ev) {
+        var plat = ev.currentTarget.getAttribute("data-ig-platform") || "ios";
+        try { localStorage.setItem(key("ig-platform"), plat); } catch (e) {}
+        if (st) st.textContent = plat === "android" ? "Android · Apr 3" : "iOS";
+        for (var j = 0; j < plats.length; j++) {
+          plats[j].classList.toggle("is-on", plats[j] === ev.currentTarget);
+        }
       });
     }
     try {
       var cur = localStorage.getItem(key("ig-platform"));
-      if (cur && st) st.textContent = "Platform: "+cur;
-    } catch(e2){}
+      if (cur && st) st.textContent = cur === "android" ? "Android · Apr 3" : "iOS";
+    } catch (e2) {}
   });
 })();
 </script>

@@ -1,11 +1,12 @@
-# 2011 period assets
+# Assets — 2011
 
-**Status:** Museum-ready honesty pack · no invented brand pixels.
+| Path | Status | Note |
+|------|--------|------|
+| `spotify/logo-wa.png` | [continuity] 2008 EU logo | US launch residual — verify year-ok |
+| `spotify/green-token.txt` | [recon-token] | #1db954 client |
+| `chrome/logo-sm-wa.jpg` | [continuity] | |
+| `facebook/` | open | Timeline stills |
+| `iphone/` | open | 4S / Siri Newsroom |
+| `ie9/` | open | IE9 download chrome |
 
-| Brand | Disk | Provenance |
-|-------|------|------------|
-| Continuity UI | Use `assets/period/2007–2010/*` where wired | CAPTURE earlier years |
-| Spotify / G+ / Siri / Timeline | HTML theater + text | [failed-final] brand pack — harvest H11-* |
-| IE9 / Win7 chrome | Shell CSS + XP/Win7 continuity | evolt/GUIdebook residual |
-
-See `docs/references/2011/CAPTURE-LOG.md` for H11 queue.
+**MVPP:** Spotify · Timeline · 4S/Siri · IE9 · Qwikster residual.

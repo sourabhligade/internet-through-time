@@ -6,22 +6,21 @@
 <link rel="stylesheet" href="../../../../css/period-2013.css">
 <script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body bgcolor="#000000" text="#fffc00" link="#fff" vlink="#ccc">
+<body class="snap-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:400px;margin:16px auto;font-family:Avenir,Helvetica,Arial,sans-serif;font-size:13px">
- <p style="font-size:11px"><a href="index.html">← Snapchat</a> · <a href="../../pages/home.html">Start</a></p>
- <h1 style="font-size:18px;color:#fff">My Story</h1>
- <p style="color:#aaa;font-size:12px"><b>October 3, 2013</b> — Snapchat Stories: chain snaps for <b>24 hours</b>, unlimited rewatches until they expire.
- Not Instagram Stories (2016). Classic timer snaps still core.</p>
- <div class="snap-story-rail" data-snap-story-rail style="min-height:60px;margin:12px 0">My Story · empty</div>
- <p>
-  <button type="button" data-snap-story-add style="padding:10px 14px;background:#fffc00;color:#000;border:0;font-weight:bold;cursor:pointer">
-   Add snap to My Story
-  </button>
- </p>
- <div data-snap-story-status style="font-size:12px;color:#8f8;min-height:1.3em"></div>
- <p style="font-size:11px;color:#666"><code>itt13-snap-story</code></p>
-</div>
+<p style="font-size:11px"><a href="index.html">← Snapchat</a> · <a href="../../pages/home.html">Start</a></p>
+<h1 style="font-size:22px;color:#fff;margin:8px 0">My Story</h1>
+<p style="color:#aaa;font-size:12px">
+ <b style="color:#fffc00">October 3, 2013</b> — Snapchat Stories: chain snaps for <b style="color:#fffc00">24 hours</b>, unlimited rewatches until they expire.
+ Not Instagram Stories (2016). Classic timer snaps still core.
+</p>
+<div class="snap-cam">📷 camera · add to Story</div>
+<div class="snap-story-rail" data-snap-story-rail>My Story · empty · add a snap</div>
+<p>
+ <button type="button" class="snap-cta" data-snap-story-add>Add snap to My Story</button>
+</p>
+<div class="itt13-status" data-snap-story-status></div>
+<p class="itt13-ban" style="color:#555">24h Story · not Instagram Stories (that’s 2016)</p>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var KEY = "itt13-snap-story";
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       list.unshift({ kind: "snap", hours: 24, ts: Date.now() });
       try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 24))); } catch (e) {}
       render();
-      var msg = "Added to Story · 24h · " + KEY;
+      var msg = "Added to My Story · 24h";
       if (st) st.textContent = msg;
       try {
         if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {

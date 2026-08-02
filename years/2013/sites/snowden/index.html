@@ -6,39 +6,82 @@
 <link rel="stylesheet" href="../../../../css/period-2013.css">
 <script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body bgcolor="#f4f1ea" text="#111" link="#00c">
+<body class="news-2013">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:640px;margin:16px auto;font-family:Georgia,'Times New Roman',serif;font-size:14px;line-height:1.45">
- <p style="font-size:11px;font-family:Arial,sans-serif"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About 2013</a></p>
- <p style="font-size:11px;letter-spacing:0.06em;color:#666;font-family:Arial,sans-serif">CULTURE ROOM · PUBLIC NEWS FRAMING ONLY</p>
- <h1 style="font-size:24px;font-weight:normal">June 2013 — the stack is watched</h1>
- <p>On <b>June 5–6, 2013</b>, reporting in <i>The Guardian</i> and <i>The Washington Post</i> brought mass surveillance programs into public view — including telephony metadata collection and the internet program known as <b>PRISM</b>, which documents described as involving major U.S. internet companies (Microsoft, Google, Facebook, Apple, Yahoo, and others named in public slides).</p>
- <p>For museum visitors: this is the year privacy stops being only a specialist concern. Encryption, “who can read email,” and government access become ordinary front-page tech talk — continuing the open-web politics line after 2012’s SOPA blackout.</p>
- <div style="background:#fff;border:1px solid #999;padding:12px;font-size:12px;font-family:Arial,sans-serif">
-  <b>Educational rules for this room</b>
-  <ul style="margin:6px 0 0 18px">
-   <li>Public journalism sources only — no classified dump gallery</li>
-   <li>No exploit how-tos · no doxxing</li>
-   <li>Trademarks and company names as reported in the press</li>
-  </ul>
- </div>
- <p style="margin-top:14px">
-  <button type="button" data-snowden-ack style="font-size:13px;padding:8px 12px;cursor:pointer">I understand PRISM became public news in June 2013 (save)</button>
-  <span data-snowden-status style="font-size:11px;color:#060;margin-left:8px"></span>
- </p>
- <p style="font-size:11px;color:#666;font-family:Arial,sans-serif"><code>itt13-snowden-ack</code> · sources: Guardian · Washington Post · public records</p>
+<p class="kicker" style="font-family:Arial,sans-serif">
+ <a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About 2013</a> ·
+ <a href="../healthcare/index.html">HealthCare.gov</a> · <a href="../glass/index.html">Glass</a>
+</p>
+<p class="kicker">CULTURE ROOM · PUBLIC NEWS FRAMING ONLY · MULTI-STEP LITERACY</p>
+<h1>June 2013 — the stack is watched</h1>
+<p>On <b>June 5–6, 2013</b>, reporting in <i>The Guardian</i> and <i>The Washington Post</i> brought mass surveillance programs into public view — including telephony metadata collection and the internet program known as <b>PRISM</b>.</p>
+<div class="rules">
+ <b>Educational rules</b>
+ <ul style="margin:6px 0 0 18px">
+  <li>Public journalism sources only — no classified dump gallery</li>
+  <li>No exploit how-tos · no doxxing</li>
+ </ul>
 </div>
+<div style="margin:14px 0;padding:10px;border:1px solid #666;background:#f8f8f0;font-family:Arial,sans-serif;font-size:13px">
+ <b>Step 1 — Read the spine (check each card)</b>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="metadata"> June 5: telephony metadata order becomes public news</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="prism"> June 6: PRISM slides / company names in press</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="encryption"> Encryption &amp; “who can read mail” becomes front-page talk</label>
+ <p style="font-size:11px;color:#444">Cards read: <span data-snowden-progress>0</span> / 3</p>
+</div>
+<p style="margin-top:14px">
+ <button type="button" data-snowden-ack disabled>I understand PRISM became public news in June 2013 (save)</button>
+ <span class="itt13-status" data-snowden-status style="display:inline;margin-left:8px;color:#060"></span>
+</p>
+<p style="font-size:11px;color:#666;font-family:Arial,sans-serif"> · multi-step literacy · Guardian · Washington Post</p>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var KEY = "itt13-snowden-ack";
   var btn = document.querySelector("[data-snowden-ack]");
   var st = document.querySelector("[data-snowden-status]");
-  try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
+  var prog = document.querySelector("[data-snowden-progress]");
+  var cards = document.querySelectorAll("[data-snowden-card]");
+  function readCards() {
+    var o = {};
+    var n = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var id = cards[i].getAttribute("data-snowden-card");
+      o[id] = !!cards[i].checked;
+      if (cards[i].checked) n++;
+    }
+    if (prog) prog.textContent = String(n);
+    if (btn) btn.disabled = n < 3;
+    return { cards: o, count: n };
+  }
+  try {
+    var prev = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (prev && prev.cards) {
+      for (var j = 0; j < cards.length; j++) {
+        var cid = cards[j].getAttribute("data-snowden-card");
+        if (prev.cards[cid]) cards[j].checked = true;
+      }
+    }
+    if (prev && st) st.textContent = "Saved · " + KEY;
+  } catch (e) {}
+  readCards();
+  for (var k = 0; k < cards.length; k++) {
+    cards[k].addEventListener("change", readCards);
+  }
   if (btn) btn.addEventListener("click", function () {
-    try {
-      localStorage.setItem(KEY, JSON.stringify({ event: "prism-public", date: "2013-06", ts: Date.now() }));
-    } catch (e2) {}
-    var msg = "Saved · privacy literacy · " + KEY;
+    var state = readCards();
+    if (state.count < 3) {
+      if (st) st.textContent = "Check all three cards first.";
+      return;
+    }
+    var payload = {
+      event: "prism-public",
+      date: "2013-06",
+      cards: state.cards,
+      literacy: true,
+      ts: Date.now()
+    };
+    try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e2) {}
+    var msg = "Saved · privacy literacy · " + state.count + " cards · " + KEY;
     if (st) st.textContent = msg;
     try {
       if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {

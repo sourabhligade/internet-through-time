@@ -169,3 +169,10 @@ a.fs-btn:hover { background: #ff8533; }
 
 /* Phase 9 note: shell taskbar Luna lives in css/ie5-overrides.css
    (iframe period CSS cannot style the parent shell). */
+
+/* ITT feel tokens 2002 — Friendster · broadband */
+:root {
+  --itt02-friendster: #ff6600;
+  --itt02-xp: #0a246a;
+}
+

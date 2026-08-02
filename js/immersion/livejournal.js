@@ -4,6 +4,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   function key(k) {
     if (ITT.util && ITT.util.immersionStorageKey) {
       return ITT.util.immersionStorageKey("lj-" + k, "itt04");
@@ -89,7 +98,10 @@
         posts.unshift({ title: title, body: body, date: new Date().toLocaleString() });
         savePosts(posts.slice(0, 40));
         var st = doc.querySelector("[data-lj-status]");
-        if (st) st.textContent = "Posted to your journal (this browser only).";
+        if (st) {
+          st.textContent = "Posted to your journal (this browser only).";
+          ittFeedback(st.textContent, st);
+        }
         form.reset();
         renderPosts();
       });
@@ -104,7 +116,10 @@
         friends.unshift({ name: name, about: about });
         saveFriends(friends.slice(0, 40));
         var st = doc.querySelector("[data-lj-friend-status]");
-        if (st) st.textContent = "Added " + name + " to friends list.";
+        if (st) {
+          st.textContent = "Added " + name + " to friends list.";
+          ittFeedback(st.textContent, st);
+        }
         fform.reset();
         renderFriends();
       });

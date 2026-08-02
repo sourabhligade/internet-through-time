@@ -25,6 +25,7 @@
     "test:e2e:2011": "playwright test e2e/2011-mvp.spec.js e2e/2011-real-flows.spec.js e2e/2011-densify.spec.js e2e/2011-flows.spec.js e2e/2011-trail-real-flows.spec.js --workers=1",
     "test:e2e:2012": "playwright test e2e/2012-mvp.spec.js e2e/2012-real-flows.spec.js e2e/2012-densify.spec.js e2e/2012-flows.spec.js e2e/2012-trail-real-flows.spec.js --workers=1",
     "test:e2e:2013": "playwright test e2e/2013-mvp.spec.js e2e/2013-densify.spec.js e2e/2013-flows.spec.js e2e/2013-real-flows.spec.js e2e/2013-trail-real-flows.spec.js e2e/2013-shell-honesty.spec.js --workers=1",
+    "test:e2e:1998-2003": "playwright test e2e/1998-2003-real-flows.spec.js --workers=1",
     "test:e2e:core": "playwright test e2e/year-core-flows.spec.js e2e/year-signature-flows.spec.js e2e/hub-years.spec.js e2e/all-years-smoke.spec.js --workers=1",
     "test:e2e:handoff": "playwright test e2e/year-handoff-flows.spec.js --workers=1",
     "test:e2e:all-flows": "playwright test e2e/*-flows.spec.js e2e/*-mvp.spec.js e2e/*-real-flows.spec.js e2e/*-densify.spec.js e2e/*-trail-real-flows.spec.js e2e/year-core-flows.spec.js e2e/year-signature-flows.spec.js e2e/year-handoff-flows.spec.js e2e/cross-year-real-flows.spec.js e2e/hub-years.spec.js e2e/all-years-smoke.spec.js --workers=1",

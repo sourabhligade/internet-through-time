@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() { return ITT.util || {}; }
   function storageKey() {
     return U().immersionStorageKey
@@ -23,8 +32,8 @@
       );
       var st = doc.querySelector("[data-wave-status]");
       if (st) {
-        st.textContent =
-          "Invite requested (theater) · " + storageKey() + " · public mass is 2010, not 2009 daily driver.";
+        st.textContent ="Invite requested (theater) · " + storageKey() + " · public mass is 2010, not 2009 daily driver."
+        ittFeedback(st.textContent, st);
       }
     });
   }

@@ -12,16 +12,68 @@
  <p><a href="index.html">← Netflix</a> · <a href="pricing-2011.html">Pricing</a></p>
  <h1 style="color:#e50914;margin-top:0">Qwikster</h1>
  <div class="qw-warn">
-  <b>Historical exhibit only — minute timeline.</b>
+  <b>Historical exhibit — multi-step timeline (localStorage theater).</b>
   <ul style="margin:8px 0 0 18px;font-size:13px">
-   <li><b>Jul 12, 2011</b> — Price unbundle: dual DVD+stream rises from ~$10 to up to ~<b>$15.98</b> (~60% hike class); stream-only ~$7.99; DVD-only ~$7.99.</li>
-   <li><b>Sep 18, 2011</b> — Blog announce: DVD-by-mail spins to separate brand/site <b>Qwikster</b> (two queues, two brands).</li>
-   <li><b>Oct 10, 2011</b> — Split <b>cancelled</b> before launch (~<b>23 days</b>). One site, one password again.</li>
-   <li><b>Honesty:</b> the <b>price hike remains</b>. Streaming stays Netflix. SNL / CNET lore welcome; no real DVD dispatch.</li>
+   <li><b>Jul 12, 2011</b> — Price unbundle: dual DVD+stream rises from ~$10 to up to ~<b>$15.98</b>; stream-only ~$7.99; DVD-only ~$7.99.</li>
+   <li><b>Sep 18, 2011</b> — Blog announce: DVD-by-mail spins to separate brand <b>Qwikster</b>.</li>
+   <li><b>Oct 10, 2011</b> — Split <b>cancelled</b> before launch (~23 days). One site, one password again.</li>
+   <li><b>Honesty:</b> the <b>price hike remains</b>. Streaming stays Netflix.</li>
   </ul>
  </div>
- <p>May traffic lore: Netflix ~<b>30%</b> of peak North America downstream internet (Sandvine class) — streaming is infrastructure <i>and</i> brand farce this year.</p>
- <p style="font-size:11px;color:#888">CNET · NPR · Hastings blog · museum honesty room · not permanent DVD home after reverse</p>
+ <div style="background:#1a1a1a;border:1px solid #e50914;padding:12px;margin:12px 0;font-size:13px;color:#eee">
+  <b>Step 1 — Mark what you remember</b><br>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-qw-event="hike"> July price unbundle (~60% hike class)</label>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-qw-event="split"> September Qwikster brand split announce</label>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-qw-event="reverse"> October reverse — split cancelled</label>
+  <b style="display:block;margin-top:10px">Step 2 — What stuck after reverse?</b><br>
+  <label style="display:block;margin:4px 0"><input type="radio" name="qw-outcome" data-qw-outcome value="hike-stayed" checked> Price hike stayed · split died</label>
+  <label style="display:block;margin:4px 0"><input type="radio" name="qw-outcome" data-qw-outcome value="two-brands"> Two brands forever (wrong — cancelled)</label>
+  <p style="margin-top:12px">
+   <button type="button" data-qwikster-save style="background:#e50914;color:#fff;border:0;padding:8px 14px;cursor:pointer">Save what you marked</button>
+   <span data-qwikster-status style="margin-left:8px;color:#8c8;font-size:12px"></span>
+  </p>
+  <p style="font-size:11px;color:#888">No real DVD dispatch · local timeline only</p>
+ </div>
+ <p style="font-size:11px;color:#888">CNET · NPR · Hastings blog · period reverse</p>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt11-qwikster";
+  var st = document.querySelector("[data-qwikster-status]");
+  var btn = document.querySelector("[data-qwikster-save]");
+  try {
+    if (localStorage.getItem(KEY) && st) st.textContent = "Saved · reverse Oct 10 · hike stays";
+  } catch (e) {}
+  if (btn) btn.addEventListener("click", function () {
+    var events = {};
+    var boxes = document.querySelectorAll("[data-qw-event]");
+    for (var i = 0; i < boxes.length; i++) {
+      events[boxes[i].getAttribute("data-qw-event")] = !!boxes[i].checked;
+    }
+    var outcome = "hike-stayed";
+    var radios = document.querySelectorAll("[data-qw-outcome]");
+    for (var j = 0; j < radios.length; j++) {
+      if (radios[j].checked) outcome = radios[j].value;
+    }
+    var payload = {
+      brand: "Qwikster",
+      year: 2011,
+      events: events,
+      outcome: outcome,
+      reverse: true,
+      hikeRemains: true,
+      ts: Date.now()
+    };
+    try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e2) {}
+    var msg = "Saved · reverse Oct 10 · price hike stays";
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "qwikster" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
 </body>
 </html>

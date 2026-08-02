@@ -7,14 +7,13 @@
  <p style="font-size:12px"><a href="about.html" style="color:#fd8">About</a> · <a href="sf.html" style="color:#fd8">SF only</a> · <a href="../../pages/home.html" style="color:#fd8">Start</a></p>
  <h1 style="font-weight:300;color:#fff">Uber · San Francisco 2010</h1>
  <p style="background:#332200;border:1px solid #996;padding:10px;font-size:12px;color:#fd8">
-  <b>2011 residual honesty:</b> Founded 2009 as <b>UberCab</b>. SF <b>black-car</b> service culture 2010. Renamed <b>Uber</b> ~Oct 2010.
-  <b>Not</b> UberX · <b>not</b> every city · <b>not</b> mass ride-hail as later years. Educational theater only — no real dispatch.
+  Founded 2009 as <b>UberCab</b>. SF <b>black-car</b> culture · renamed <b>Uber</b> ~Oct 2010.
+  <b>Not</b> UberX · <b>not</b> every city · not later mass ride-hail.
  </p>
- <p style="font-size:12px;color:#aaa">Seed of 2011s on-demand cars · still a luxury black-car story this year.</p>
- <button type="button" id="uber-req">Request black car (theater)</button>
+ <p style="font-size:12px;color:#aaa">On-demand luxury black car in San Francisco.</p>
+ <button type="button" id="uber-req">Request black car</button>
  <div id="uber-st" style="font-size:12px;color:#9f9;margin-top:8px"></div>
- <p style="font-size:11px;color:#666"><code>itt11-uber</code></p>
 </div>
-<script>(function(){var KEY="itt11-uber";document.getElementById("uber-req").onclick=function(){localStorage.setItem(KEY,JSON.stringify({requested:true,city:"San Francisco",kind:"black-car",ts:Date.now()}));document.getElementById("uber-st").textContent="Request noted · SF black-car · "+KEY+" · not UberX mass.";};})();</script>
+<script>(function(){var KEY="itt11-uber";document.getElementById("uber-req").onclick=function(){localStorage.setItem(KEY,JSON.stringify({requested:true,city:"San Francisco",kind:"black-car",ts:Date.now()}));document.getElementById("uber-st").textContent="Request sent · SF black car · ETA theater";};})();</script>
 <script src="../../../../js/immersion-2011.js"></script>
 </body></html>

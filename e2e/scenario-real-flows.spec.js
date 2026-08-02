@@ -707,9 +707,12 @@ test.describe('scenario: orkut 2004', () => {
 test.describe('scenario: amazon cart (sample years)', () => {
   for (const year of ['1995', '2000', '2004']) {
     test(`amazon ${year}: add-to-cart stores cart`, async ({ page }) => {
-      // Find a product page with data-add-cart
+      // Find a product page with data-add-cart (catalog titles differ by year)
       const candidates = [
         `/years/${year}/sites/amazon/book-neuromancer.html`,
+        `/years/${year}/sites/amazon/book-being-digital.html`,
+        `/years/${year}/sites/amazon/book-microserfs.html`,
+        `/years/${year}/sites/amazon/music.html`,
         `/years/${year}/sites/amazon/index.html`,
       ];
       let loaded = false;
@@ -721,10 +724,7 @@ test.describe('scenario: amazon cart (sample years)', () => {
           break;
         }
       }
-      if (!loaded) {
-        test.skip();
-        return;
-      }
+      expect(loaded, `no data-add-cart page found for Amazon ${year}`).toBeTruthy();
       const key = ittKey(year, 'amazon-cart');
       await clearKeys(page, key);
       await page.reload();

@@ -36,3 +36,10 @@ body.year-2000 .itt-year-chip {
   margin: 12px auto;
   padding: 8px;
 }
+
+/* ITT feel tokens 2000 — smile Amazon · crash */
+:root {
+  --itt00-smile: #ff9900;
+  --itt00-portal: #0a246a;
+}
+

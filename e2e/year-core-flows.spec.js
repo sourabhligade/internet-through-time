@@ -16,7 +16,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005',
-  '2006', '2007', '2008', '2009', '2010', '2011', '2012',
+  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -40,6 +40,7 @@ const LOCATION_HINT = {
   '2010': { type: 'chrome', re: /chrome/i },
   '2011': { type: 'spotify', re: /spotify/i },
   '2012': { type: 'instagram', re: /instagram/i },
+  '2013': { type: 'vine', re: /vine/i },
 };
 
 for (const year of YEARS) {

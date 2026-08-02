@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function year() {
     return String(
       ITT._immersionYear ||
@@ -120,7 +129,10 @@
           company: (form.querySelector('[name="company"]') || {}).value || "",
         });
         var st = form.querySelector("[data-li-status]");
-        if (st) st.textContent = "Profile saved (this browser only).";
+        if (st) {
+          st.textContent = "Profile saved (this browser only).";
+          ittFeedback(st.textContent, st);
+        }
         render(doc);
       });
     }
@@ -135,7 +147,10 @@
         cons.unshift({ name: name, title: title, ts: Date.now() });
         saveC(cons.slice(0, 40));
         var st = doc.querySelector("[data-li-invite-status]");
-        if (st) st.textContent = "Connection added: " + name + " (stored in this browser).";
+        if (st) {
+          st.textContent = "Connection added: " + name + " (stored in this browser).";
+          ittFeedback(st.textContent, st);
+        }
         inv.reset();
         render(doc);
       });

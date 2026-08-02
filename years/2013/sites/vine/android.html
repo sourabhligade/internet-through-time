@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Vine for Android — June 2, 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body class="vine-app">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="vine-topbar">Vine · Android</div>
+<div style="padding:16px">
+ <p style="font-size:11px;opacity:0.85"><a href="index.html">← Vine</a> · <a href="record.html">Record</a> · <a href="about.html">About</a></p>
+ <h1 style="font-size:20px;font-weight:normal;margin:12px 0">Vine for Android</h1>
+ <p style="font-size:13px;color:#ccc"><b style="color:#fffc00">June 2, 2013</b> — after the Jan 24 iOS launch. Same core: <b style="color:#00bf8f">up to 6 seconds</b> · hold-to-record · loop forever.</p>
+ <p style="margin:20px 0"><button type="button" class="vine-cta" data-vine-android>Get Vine for Android</button>
+ <a href="record.html" style="margin-left:12px;font-size:13px">Record →</a></p>
+ <div class="itt13-status" data-vine-android-status></div>
+ <p class="itt13-ban" style="color:#666">June 2, 2013 · same 6s loops · not TikTok</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-vine-android";
+  var btn = document.querySelector("[data-vine-android]");
+  var st = document.querySelector("[data-vine-android-status]");
+  if (btn) btn.addEventListener("click", function () {
+    try {
+      localStorage.setItem(KEY, "1");
+      localStorage.setItem("itt13-vine-platform", "android");
+    } catch (e) {}
+    if (st) st.textContent = "Installed · Android · open Camera";
+  });
+});
+</script>
+</body>
+</html>

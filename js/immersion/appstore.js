@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   var CATALOG = [
     { id: "games-free", name: "Koi Pond", price: "Free", cat: "Games" },
     { id: "games-paid", name: "Super Monkey Ball", price: "$9.99", cat: "Games" },
@@ -61,7 +70,10 @@
         var id = ev.currentTarget.getAttribute("data-appstore-remove");
         save(load().filter(function (x) { return x.id !== id; }));
         var st = doc.querySelector("[data-appstore-status]");
-        if (st) st.textContent = "Removed · " + storageKey();
+        if (st) {
+          st.textContent = "Removed · " + storageKey();
+          ittFeedback(st.textContent, st);
+        }
         renderInstalled(doc);
       });
     }
@@ -85,7 +97,10 @@
       save(list.slice(0, 40));
     }
     var st = doc.querySelector("[data-appstore-status]");
-    if (st) st.textContent = (exists ? "Already installed: " : "Installed: ") + app.name + " · " + storageKey();
+    if (st) {
+      st.textContent = (exists ? "Already installed: " : "Installed: ") + app.name + " · " + storageKey();
+      ittFeedback(st.textContent, st);
+    }
     renderInstalled(doc);
   }
   function boot(doc) {

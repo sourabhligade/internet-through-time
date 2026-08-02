@@ -23,3 +23,11 @@ body.year-2006 .itt-year-chip {
 
 /* AWS educational */
 .aws-shell { font-family: Verdana, Arial, sans-serif; max-width: 640px; margin: 12px auto; font-size: 13px; }
+
+/* ITT feel tokens 2006 — Twitter · Feed · Reader */
+:root {
+  --itt06-twitter: #33ccff;
+  --itt06-fb: #3b5998;
+  --itt06-reader: #e0e0e0;
+}
+

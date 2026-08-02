@@ -94,6 +94,18 @@
   function boot(doc) {
     doc = doc || document;
     if (bootStreetView(doc)) return;
+    /* Apple Maps controversy rooms (2012+) use page-local theater with
+       data-maps-q + button[data-maps-search] — do not stomp with Google Maps canvas. */
+    var appleQ = doc.querySelector("[data-maps-q]");
+    var searchHook = doc.querySelector("[data-maps-search]");
+    var hasCanvas = !!doc.querySelector("[data-maps-canvas]");
+    var isAppleMapsRoom =
+      appleQ &&
+      searchHook &&
+      !hasCanvas &&
+      searchHook.tagName &&
+      searchHook.tagName.toLowerCase() === "button";
+    if (isAppleMapsRoom) return;
     var saved = loadState() || {};
     var zoom = typeof saved.zoom === "number" ? saved.zoom : 12;
     var pan = saved.pan && typeof saved.pan.x === "number" ? saved.pan : { x: 0, y: 0 };

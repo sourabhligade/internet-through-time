@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() { return ITT.util || {}; }
   function storageKey() {
     return U().immersionStorageKey
@@ -50,7 +59,10 @@
         list.unshift({ title: title, ts: Date.now() });
         save(list.slice(0, 40));
         var st = doc.querySelector("[data-hulu-status]");
-        if (st) st.textContent = "Watching (ad-supported theater): " + title + " · " + storageKey();
+        if (st) {
+          st.textContent = "Watching (ad-supported theater): " + title + " · " + storageKey();
+          ittFeedback(st.textContent, st);
+        }
         var screen = doc.querySelector("[data-hulu-screen]");
         if (screen) {
           screen.innerHTML =

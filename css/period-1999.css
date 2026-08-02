@@ -1340,3 +1340,10 @@ body[link="#000099"] input[type="submit"] {
   font-family: serif;
   font-size: 13px;
 }
+
+/* ITT feel tokens 1999 — Napster · Y2K */
+:root {
+  --itt99-napster: #000000;
+  --itt99-y2k: #ff0000;
+}
+

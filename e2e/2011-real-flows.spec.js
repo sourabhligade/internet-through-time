@@ -29,17 +29,47 @@ test.describe('2011 real flows', () => {
     await expect(page.locator('[data-fb-feed-mode-status]')).toContainText(/Top Stories/i);
   });
 
-  test('Google+ Hangout mock', async ({ page }) => {
+  test('Google+ Hangout offline theater stores session', async ({ page }) => {
     await page.goto('/years/2011/sites/googleplus/hangouts.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt11-gplus-hangout');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
     await page.waitForSelector('[data-gplus-hangout-start]', { timeout: 20000 });
     await page.locator('[data-gplus-hangout-start]').click();
-    await expect(page.locator('[data-gplus-hangout]')).toContainText(/Hangout|mock/i);
+    await expect(page.locator('[data-gplus-hangout]')).toContainText(/Hangout started/i);
+    await expect(page.locator('[data-gplus-hangout]')).not.toContainText(/mock/i);
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt11-gplus-hangout')), {
+        timeout: 8000,
+      })
+      .toBeTruthy();
   });
 
-  test('Qwikster exhibit honesty', async ({ page }) => {
+  test('Qwikster multi-step literacy → itt11-qwikster', async ({ page }) => {
     await page.goto('/years/2011/sites/netflix/qwikster.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt11-qwikster');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
     await expect(page.locator('body')).toContainText(/Qwikster/i);
     await expect(page.locator('body')).toContainText(/reverse|cancelled|October/i);
+    await page.locator('[data-qw-event="hike"]').check();
+    await page.locator('[data-qw-event="reverse"]').check();
+    await page.locator('[data-qwikster-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt11-qwikster')), { timeout: 8000 })
+      .toBeTruthy();
+    const raw = await page.evaluate(() => localStorage.getItem('itt11-qwikster'));
+    expect(raw || '').toMatch(/hike|reverse|Qwikster/i);
   });
 
   test('Snapchat timer seed', async ({ page }) => {

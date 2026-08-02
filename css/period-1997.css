@@ -435,3 +435,10 @@ a:hover { color: #cc0000 !important; }
 }
 .amz97-nav a { color: #FFCC00; }
 .amz97-logo { color: #FFFFFF; text-decoration: none; font-family: Times, serif; font-size: 28px; }
+
+/* ITT feel tokens 1997 — eBay multicolor · IE4 */
+:root {
+  --itt97-ebay: #990000;
+  --itt97-slashdot: #006666;
+}
+

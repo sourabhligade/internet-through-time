@@ -16,7 +16,7 @@
 | Orientation only | §1–6 · stop |
 | Implement / scaffold | Reading order §10 · **[`2013-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2013-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)** |
 | Scale numbers | §2 · [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) |
-| UI / harvest | Deep harvest · CAPTURE-LOG |
+| UI / harvest | **[`2013-UI-PERIOD-MATCH-RESEARCH.md`](2013-UI-PERIOD-MATCH-RESEARCH.md)** · deep harvest · CAPTURE-LOG |
 | Continuity from 2012 | §12 · reverse 2012 hard bans carefully |
 
 **Do not** re-scaffold the live tree.  

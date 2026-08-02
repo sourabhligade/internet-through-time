@@ -2,25 +2,27 @@
 <html lang="en" data-itt-year="2013">
 <head>
 <meta charset="utf-8">
-<title>Record a Vine — 6 seconds</title>
+<title>Vine — Camera</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
 <script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body bgcolor="#111" text="#fff" link="#fffc00">
+<body class="vine-app">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:420px;margin:20px auto;font-family:Arial,sans-serif;font-size:13px;text-align:center">
- <p style="font-size:11px;text-align:left"><a href="index.html">← Vine</a></p>
- <h1 style="font-size:18px">Hold to record · max 6s</h1>
- <div data-vine-progress style="height:8px;background:#333;margin:12px 0;border-radius:4px;overflow:hidden">
-  <div data-vine-bar style="height:100%;width:0;background:#00bf8f"></div>
- </div>
- <button type="button" data-vine-hold style="width:120px;height:120px;border-radius:60px;border:4px solid #00bf8f;background:#222;color:#fff;font-size:14px;cursor:pointer">Hold</button>
- <p style="margin-top:12px">
-  <input type="text" data-vine-caption placeholder="Caption…" style="width:90%;padding:8px;font-size:13px">
- </p>
- <p><button type="button" data-vine-post style="padding:8px 16px;background:#fffc00;color:#000;border:0;font-weight:bold;cursor:pointer">Post Vine</button></p>
- <div data-vine-status style="font-size:12px;color:#8f8;min-height:1.4em;margin-top:8px"></div>
- <p style="font-size:11px;color:#888">Theater only · no real camera CDN · <code>itt13-vine-posts</code></p>
+<div class="vine-topbar">
+  <a href="index.html" style="color:#fffc00;text-decoration:none">← Home</a>
+  <span>Camera</span>
+  <span></span>
+</div>
+<div class="vine-progress" data-vine-progress><div data-vine-bar></div></div>
+<div class="vine-camera">
+  <p class="vine-camera-hint">Hold to record · up to <b>6 seconds</b></p>
+  <button type="button" class="vine-hold" data-vine-hold aria-label="Hold to record">Hold</button>
+  <p style="margin-top:16px">
+    <input type="text" data-vine-caption class="vine-caption" placeholder="Add a caption…" maxlength="120">
+  </p>
+  <p><button type="button" class="vine-cta" data-vine-post>Post</button></p>
+  <div class="itt13-status" data-vine-status style="min-height:1.2em;margin-top:10px;color:#8f8"></div>
+  <p style="font-size:11px;color:#666;margin-top:20px"><a href="index.html">Back to feed</a></p>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -32,12 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var cap = document.querySelector("[data-vine-caption]");
   var secs = 0;
   var timer = null;
+  var holding = false;
   var MAX = 6;
   function setBar(s) {
     secs = Math.min(MAX, s);
     if (bar) bar.style.width = (secs / MAX * 100) + "%";
   }
-  var holding = false;
   function startHold(ev) {
     if (holding) return;
     holding = true;
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     holding = false;
     if (timer) clearInterval(timer);
     timer = null;
-    if (st) st.textContent = "Recorded ~" + secs.toFixed(1) + "s · ready to post";
+    if (st) st.textContent = "Ready · ~" + secs.toFixed(1) + "s";
   }
   if (hold) {
     if (window.PointerEvent) {
@@ -69,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
       hold.addEventListener("mouseleave", endHold);
       hold.addEventListener("touchstart", startHold, { passive: false });
       hold.addEventListener("touchend", endHold);
-      hold.addEventListener("touchcancel", endHold);
     }
   }
   if (post) {
@@ -77,15 +78,21 @@ document.addEventListener("DOMContentLoaded", function () {
       if (secs < 0.3) secs = 3;
       var list = [];
       try { list = JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) {}
-      list.unshift({ caption: (cap && cap.value) || "untitled", secs: Math.min(MAX, Math.round(secs) || 6), ts: Date.now() });
+      var caption = (cap && cap.value) || "untitled";
+      list.unshift({
+        caption: caption,
+        secs: Math.min(MAX, Math.round(secs) || 6),
+        ts: Date.now()
+      });
       try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 40))); } catch (e2) {}
-      var msg = "Vine posted · " + (Math.min(MAX, Math.round(secs) || 6)) + "s · " + KEY;
+      var msg = "Posted · " + (Math.min(MAX, Math.round(secs) || 6)) + "s loop";
       if (st) st.textContent = msg;
       try {
         if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback(msg, { status: st, kind: "vine" });
         }
       } catch (e3) {}
+      setTimeout(function () { location.href = "index.html"; }, 450);
     });
   }
 });

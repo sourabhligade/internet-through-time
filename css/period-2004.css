@@ -1151,3 +1151,11 @@ body[bgcolor="#ffffff"] form[data-google-search] input[type="submit"] {
   background: #ccffcc;
   color: #003300;
 }
+
+/* ITT feel tokens 2004 — Thefacebook · Gmail · Firefox */
+:root {
+  --itt04-fb: #3b5998;
+  --itt04-gmail: #c3d9ff;
+  --itt04-ff: #ff6600;
+}
+

@@ -86,3 +86,12 @@ body.year-2009 .itt-year-chip {
 
 /* Twitter still bird-era blue */
 .tw-shell { background: #c0deed; }
+
+/* ITT feel tokens 2009 — Like · Bing · Win7 · 3GS */
+:root {
+  --itt09-like: #3b5998;
+  --itt09-bing: #ffb900;
+  --itt09-win7: #1e90ff;
+  --itt09-farm: #5a9e2e;
+}
+

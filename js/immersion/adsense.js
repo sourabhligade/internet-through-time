@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function year() {
     return String(
       ITT._immersionYear ||
@@ -66,8 +75,8 @@
       }
       var st = doc.querySelector("[data-adsense-status]");
       if (st)
-        st.textContent =
-          "Approved for " + site + " — code saved in this browser. CPC text ads era (self-serve from Jun 18 2003).";
+        st.textContent ="Approved for " + site + " — code saved in this browser. CPC text ads era (self-serve from Jun 18 2003)."
+        ittFeedback(st.textContent, st);
       var earn = doc.querySelector("[data-adsense-earnings]");
       if (earn) earn.textContent = "Estimated earnings: $0.00 (no real money — local only).";
     });

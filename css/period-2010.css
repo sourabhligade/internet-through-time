@@ -78,3 +78,12 @@ body.year-2010 .itt-year-chip {
   padding-top: 6px;
   margin-top: 6px;
 }
+
+/* ITT feel tokens 2010 — iPad · IG · Retina */
+:root {
+  --itt10-ig: #517fa4;
+  --itt10-ipad: #7d7e80;
+  --itt10-fb: #3b5998;
+  --itt10-4sq: #0d9488;
+}
+

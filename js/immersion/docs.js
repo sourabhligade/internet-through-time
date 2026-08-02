@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() {
     return ITT.util || {};
   }
@@ -93,7 +102,10 @@
         data.body = (b && (b.value != null ? b.value : b.textContent)) || data.body;
         save(data);
         var st = doc.querySelector("[data-docs-status]");
-        if (st) st.textContent = "Saved in this browser · collaborators can “see” edits (theater).";
+        if (st) {
+          st.textContent = "Saved in this browser · collaborators can “see” edits (theater).";
+          ittFeedback(st.textContent, st);
+        }
       });
     }
     var invite = doc.querySelector("[data-docs-invite]");
@@ -114,7 +126,10 @@
             .join("");
         }
         var st = doc.querySelector("[data-docs-invite-status]");
-        if (st) st.textContent = "Invited " + email + " (local only).";
+        if (st) {
+          st.textContent = "Invited " + email + " (local only).";
+          ittFeedback(st.textContent, st);
+        }
       });
     }
   }

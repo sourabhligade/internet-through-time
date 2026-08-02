@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded",function(){
     var msg=funny[Math.floor(Math.random()*funny.length)];
     if(out)out.innerHTML="<b>"+String(term).replace(/</g,"&lt;")+"</b><br>"+msg;
     try{localStorage.setItem(KEY,JSON.stringify({q:term,note:msg,ts:Date.now()}));}catch(e){}
-    if(st)st.textContent="Saved · "+KEY;
+    if(st)st.textContent="Saved · Apple Maps note · “"+String(term).replace(/</g,"&lt;")+"”";
   });
 });
 </script>

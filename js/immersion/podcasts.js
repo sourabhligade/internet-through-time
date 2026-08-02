@@ -4,6 +4,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   function KEY() {
     if (ITT.util && ITT.util.immersionStorageKey) {
       return ITT.util.immersionStorageKey("pod-subs", "itt05");
@@ -78,7 +87,10 @@
         }
         save(list.slice(0, 30));
         var st = doc.querySelector("[data-pod-status]");
-        if (st) st.textContent = "Subscribed to “" + name + "” (this browser only · " + list.length + " total).";
+        if (st) {
+          st.textContent = "Subscribed to “" + name + "” (this browser only · " + list.length + " total).";
+          ittFeedback(st.textContent, st);
+        }
         renderList(doc);
       });
     }

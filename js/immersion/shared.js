@@ -465,15 +465,19 @@
           st.type = "text/css";
           st.appendChild(
             document.createTextNode(
+              /* pointer-events:none on bar so bid/checkout submits under the strip still work;
+               * only anchors capture clicks (flow masterpiece Pass 1). */
               "#itt-wayfind{position:fixed;left:0;right:0;bottom:0;z-index:9999;" +
                 "display:block;text-align:center;padding:7px 12px;background:#000080;color:#fff;" +
-                "font-family:Arial,Helvetica,sans-serif;font-size:12px;border-top:2px solid #99ccff;}" +
-              "#itt-wayfind a{color:#ffff99;font-weight:bold;text-decoration:underline;margin:0 4px;}" +
+                "font-family:Arial,Helvetica,sans-serif;font-size:12px;border-top:2px solid #99ccff;" +
+                "pointer-events:none;}" +
+              "#itt-wayfind a{color:#ffff99;font-weight:bold;text-decoration:underline;margin:0 4px;" +
+                "pointer-events:auto;}" +
               "#itt-wayfind a.itt-wayfind-home{color:#fff;background:#000060;border:1px solid #99ccff;" +
                 "text-decoration:none;padding:3px 10px;display:inline-block;}" +
               "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
               "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
-              "body.has-itt-wayfind{padding-bottom:48px !important;}" +
+              "body.has-itt-wayfind{padding-bottom:56px !important;}" +
               "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
                 "background:#000060;text-decoration:none !important;}" +
               "#itt-exhibit-nav a.itt-nav-home:hover{background:#0000aa;}"

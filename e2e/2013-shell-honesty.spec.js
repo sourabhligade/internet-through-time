@@ -19,7 +19,10 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
         story: tm['sites/snapchat/story.html'] || null,
         chrome: tm['sites/chrome/index.html'] || null,
         snowden: tm['sites/snowden/index.html'] || null,
+        healthcare: tm['sites/healthcare/index.html'] || null,
+        ipadAir: tm['sites/ipad/air.html'] || null,
         bookmark0: (cfg.defaultBookmarks && cfg.defaultBookmarks[0] && cfg.defaultBookmarks[0].title) || null,
+        bookmarks: (cfg.defaultBookmarks || []).map((b) => b.title + '|' + b.path),
       };
     });
     expect(titles.home, 'home titleMap').toMatch(/2013/);
@@ -30,8 +33,23 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
     expect(titles.story, 'story titleMap').toMatch(/Stor(y|ies)|Snapchat/i);
     expect(titles.chrome, 'chrome titleMap').toMatch(/Chrome/i);
     expect(titles.snowden, 'snowden titleMap').toMatch(/Snowden|PRISM/i);
+    expect(titles.healthcare, 'healthcare titleMap').toMatch(/HealthCare|Healthcare|2013/i);
+    expect(titles.ipadAir, 'ipad air titleMap').toMatch(/iPad Air|2013/i);
     expect(titles.bookmark0, 'default bookmark').toMatch(/2013/);
     expect(titles.bookmark0).not.toMatch(/2010|2004/);
+    expect(titles.bookmarks.some((b) => /healthcare/i.test(b))).toBeTruthy();
+    expect(titles.bookmarks.some((b) => /ipad\/air/i.test(b))).toBeTruthy();
+  });
+
+  test('locationHints resolve healthcare and ipad air', async ({ page }) => {
+    await enterYear(page, '2013');
+    const hints = await page.evaluate(() => {
+      const cfg = (window.ITT && ITT.configs && ITT.configs['2013']) || {};
+      return cfg.locationHints || [];
+    });
+    const paths = hints.map((h) => h.path || '');
+    expect(paths.some((p) => /healthcare/i.test(p))).toBeTruthy();
+    expect(paths.some((p) => /ipad\/air/i.test(p))).toBeTruthy();
   });
 
   test('window title starts 2013 and never shows 2004', async ({ page }) => {

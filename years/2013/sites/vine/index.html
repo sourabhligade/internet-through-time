@@ -2,21 +2,29 @@
 <html lang="en" data-itt-year="2013">
 <head>
 <meta charset="utf-8">
-<title>Vine — 6-second loops · 2013</title>
+<title>Vine</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
 <script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body class="vine-shell" bgcolor="#00bf8f" text="#ffffff" link="#ffff99" vlink="#eeffee">
+<body class="vine-app">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:480px;margin:16px auto;font-family:Arial,sans-serif;font-size:13px">
- <p style="font-size:11px"><a href="../../pages/home.html" style="color:#fff">← Start</a> ·
-  <a href="record.html" style="color:#fffc00"><b>Record</b></a> ·
-  <a href="about.html" style="color:#fff">About Vine</a></p>
- <h1 style="font-size:22px;font-weight:normal">Vine</h1>
- <p>Make a scene · <b>up to 6 seconds</b> · loops forever · Twitter-owned · launched <b>Jan 24, 2013</b> (iOS).</p>
- <div data-vine-list style="background:#000;border-radius:8px;padding:10px;min-height:120px;margin:12px 0"></div>
- <p style="font-size:11px;opacity:0.9">Not TikTok · not Reels · not multi-minute. Storage <code>itt13-vine-posts</code>.</p>
- <p><a href="record.html" style="display:inline-block;background:#fffc00;color:#000;padding:10px 16px;text-decoration:none;font-weight:bold">Record a Vine →</a></p>
+<div class="vine-topbar">
+  <span>Vine</span>
+  <span class="vine-topbar-actions">
+    <a href="record.html">Record</a>
+  </span>
+</div>
+<nav class="vine-tabs" aria-label="Vine">
+  <a href="index.html" class="is-on">Home</a>
+  <a href="index.html#explore">Explore</a>
+  <a href="record.html">Camera</a>
+  <a href="android.html">Activity</a>
+  <a href="about.html">Profile</a>
+</nav>
+<div class="vine-feed" style="padding:0 0 24px">
+  <p class="vine-tagline">Make a scene · 6 seconds · loops forever</p>
+  <div data-vine-list></div>
+  <p class="vine-empty-cta"><a href="record.html" class="vine-cta">Record a Vine</a></p>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -29,14 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!el) return;
     var list = load();
     if (!list.length) {
-      el.innerHTML = "<div style='padding:24px;color:#8f8;text-align:center'>No vines yet · record a 6s loop</div>";
+      el.innerHTML =
+        "<div class='vine-card'>" +
+        "<div class='vine-card-loop vine-loop-anim'>No vines yet</div>" +
+        "<div class='vine-card-meta'>Hold on Camera to capture 6 seconds</div></div>";
       return;
     }
-    el.innerHTML = list.slice(0, 12).map(function (v) {
-      return "<div style='border-bottom:1px solid #333;padding:8px 0'>" +
-        "<div style='background:#111;height:80px;display:flex;align-items:center;justify-content:center;color:#0f8'>▶ loop · " +
-        (v.secs || 6) + "s</div>" +
-        "<div style='font-size:12px;margin-top:4px'>" + String(v.caption || "untitled").replace(/</g, "&lt;") + "</div></div>";
+    el.innerHTML = list.slice(0, 20).map(function (v, i) {
+      var cap = String(v.caption || "untitled").replace(/</g, "&lt;");
+      var s = v.secs || 6;
+      return (
+        "<article class='vine-card' data-vine-item>" +
+        "<div class='vine-card-loop vine-loop-anim' style='animation-delay:" + (i * 0.15) + "s'>" +
+        "<span class='vine-play'>▶</span> " + s + "s loop</div>" +
+        "<div class='vine-card-meta'><b>you</b> · " + cap + "</div>" +
+        "<div class='vine-card-actions'>Revine · Comment · Share</div>" +
+        "</article>"
+      );
     }).join("");
   }
   render();

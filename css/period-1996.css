@@ -97,3 +97,10 @@
   cursor: pointer;
 }
 .hm-footer b { color: #000080; }
+
+/* ITT feel tokens 1996 — Space Jam / HoTMaiL / portals */
+:root {
+  --itt96-hotmail: #ff6600;
+  --itt96-portal: #003399;
+}
+

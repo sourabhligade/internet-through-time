@@ -169,7 +169,9 @@ blink { animation: blink 1s step-end infinite; }
   font-size: 1.05em;
 }
 
-/* Sticky wayfind — always-visible path back to year landing */
+/* Sticky wayfind — always-visible path back to year landing.
+ * pointer-events:none on the bar so form submits / buttons under the strip
+ * still receive clicks; only the links are clickable (Pass 1 flow fix 2026-08). */
 #itt-wayfind {
   position: fixed;
   left: 0;
@@ -188,12 +190,14 @@ blink { animation: blink 1s step-end infinite; }
   font-size: 12px;
   border-top: 2px solid #99ccff;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
 #itt-wayfind a {
   color: #ffff99;
   font-weight: bold;
   text-decoration: underline;
   padding: 2px 6px;
+  pointer-events: auto;
 }
 #itt-wayfind a.itt-wayfind-home {
   color: #fff;
@@ -217,7 +221,8 @@ blink { animation: blink 1s step-end infinite; }
   opacity: 0.8;
 }
 body.has-itt-wayfind {
-  padding-bottom: 48px !important;
+  /* Clearance so last form controls are not under the sticky strip */
+  padding-bottom: 56px !important;
 }
 @media (prefers-reduced-motion: reduce) {
   #itt-wayfind {
@@ -358,3 +363,11 @@ input[type="button"]:active {
 input:focus, textarea:focus, select:focus {
   outline: 1px dotted #000;
 }
+
+/* ITT feel tokens 1995 — Win95 commerce */
+:root {
+  --itt95-win: #c0c0c0;
+  --itt95-link: #0000ee;
+  --itt95-amazon: #000080;
+}
+

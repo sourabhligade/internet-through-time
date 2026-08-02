@@ -201,3 +201,15 @@ button:active {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
+/* ITT feel tokens 1994 — Mosaic gray era */
+:root {
+  --itt94-bg: #c0c0c0;
+  --itt94-link: #0000ee;
+  --itt94-vlink: #551a8b;
+  --itt94-chrome: #808080;
+}
+body[data-itt-year="1994"], html[data-itt-year="1994"] body {
+  background: var(--itt94-bg);
+}
+

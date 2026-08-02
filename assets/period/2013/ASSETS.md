@@ -1,6 +1,14 @@
-# assets/period/2013 — honesty pack
+# Assets — 2013
 
-**Status:** Directory reserved · **no brand pixels harvested yet** (2026-08-02).  
-**Rule:** Never invent logos. Prefer CAPTURE-LOG H13 entries · WA 2013* · official PR.
+| Path | Status | Note |
+|------|--------|------|
+| `vine/color-token.txt` | [recon-token] | #00bf8f / #fffc00 |
+| `spotify/logo-wa.png` | [continuity] | residual |
+| `chrome/logo-sm-wa.jpg` | [continuity] | |
+| `snapchat/` | open | Stories press |
+| `ios7/` | open | flat marketing |
+| `iphone/` | open | 5s Touch ID |
+| `snowden/` | open | news layout |
+| `healthcare/` | open | HealthCare.gov |
 
-When files land, record path + source URL + date here.
+**MVPP:** Vine · Snap Stories · iOS 7 · 5s · Chrome · Snowden · HC.gov.

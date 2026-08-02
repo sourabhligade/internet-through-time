@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Medium — 2013 long-form residual</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body class="medium-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="medium-wrap">
+ <p class="meta">
+  <a href="../../pages/home.html">Start</a> ·
+  <a href="../wordpress/index.html">WordPress</a> ·
+  <a href="../tumblr/index.html">Tumblr</a>
+ </p>
+ <h1>Medium</h1>
+ <p style="color:#666;font-size:15px;font-family:Helvetica,Arial,sans-serif;font-weight:400">
+  Ev Williams’s post-Twitter publishing experiment (launched <b>2012</b>) grows through <b>2013</b> as
+  a clean reading / writing surface — not a full WordPress host, not Tumblr reblog culture.
+ </p>
+ <div class="medium-accent">
+  <b>Period UI:</b> large Georgia · generous margins · <b>no sidebars</b> · green publish.
+  “A beautiful space for reading and writing — and little else.”
+ </div>
+ <p>
+  <textarea data-medium-draft placeholder="Write a draft…"></textarea>
+ </p>
+ <p>
+  <button type="button" class="medium-pub" data-medium-publish>Publish draft (theater)</button>
+  <span class="itt13-status meta" data-medium-status style="display:inline;margin-left:8px"></span>
+ </p>
+ <p class="meta" style="color:#888"> · no real Medium CDN</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-medium-drafts";
+  var btn = document.querySelector("[data-medium-publish]");
+  var st = document.querySelector("[data-medium-status]");
+  if (btn) btn.addEventListener("click", function () {
+    var t = (document.querySelector("[data-medium-draft]") || {}).value || "";
+    var list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) {}
+    list.unshift({ text: String(t).slice(0, 2000), ts: Date.now() });
+    try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 20))); } catch (e2) {}
+    if (st) st.textContent = "Draft published (theater) · " + KEY;
+  });
+});
+</script>
+</body>
+</html>

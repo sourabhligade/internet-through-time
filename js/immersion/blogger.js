@@ -7,6 +7,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function year() {
     return String(
       ITT._immersionYear ||
@@ -68,7 +77,11 @@
     var st =
       doc.querySelector("[data-blogger-status]") ||
       doc.getElementById("blogger-status");
-    if (st) st.textContent = msg;
+    if (st) {
+      st.textContent = msg;
+      ittFeedback(st.textContent, st);
+    }
+    ittFeedback(msg, st);
   }
   function renderView(doc) {
     var el = doc.getElementById("blogger-view");

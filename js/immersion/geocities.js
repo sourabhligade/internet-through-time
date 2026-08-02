@@ -5,6 +5,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
   ITT.ImmersionFeatures.push({
     id: "geocities",

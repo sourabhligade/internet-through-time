@@ -19,20 +19,21 @@
   promise to keep it independently managed / standalone brand. <a href="acquired.html">Acquisition room →</a>
   Still: square photos · filters · captions · <b>no Stories · no Reels · no Meta</b>.
  </p>
- <p><button type="button" data-ig-android-install style="background:#a4c639;color:#fff;border:0;padding:8px 14px">Install Instagram (theater)</button></p>
+ <p><button type="button" data-ig-android-install style="background:#a4c639;color:#fff;border:0;padding:8px 14px">Get Instagram</button>
+ <a href="index.html" style="margin-left:10px;font-size:13px">Open feed →</a></p>
  <div data-ig-android-status style="font-size:12px;color:#060;margin-top:8px"></div>
- <p style="font-size:11px;color:#666">TechCrunch Apr 3 2012 · no real APK · <code>itt12-ig-android</code></p>
+ <p style="font-size:11px;color:#666">Press day · April 3, 2012 · Google Play era install theater</p>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
   var btn = document.querySelector("[data-ig-android-install]");
   var st = document.querySelector("[data-ig-android-status]");
   var KEY = "itt12-ig-android";
-  function show(){ try { if(localStorage.getItem(KEY)==="1"&&st) st.textContent="Installed (theater) · "+KEY; } catch(e){} }
+  function show(){ try { if(localStorage.getItem(KEY)==="1"&&st) st.textContent="Installed · Android"; } catch(e){} }
   show();
   if(btn) btn.addEventListener("click", function(){
     try { localStorage.setItem(KEY,"1"); localStorage.setItem("itt12-ig-platform","android"); } catch(e2){}
-    if(st) st.textContent="Installed (theater) · "+KEY+" · platform android";
+    if(st) st.textContent="Installed · Android · open the feed";
   });
 });
 </script>

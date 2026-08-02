@@ -1,11 +1,13 @@
-# 2012 period assets
+# Assets — 2012
 
-**Status:** Museum-ready honesty pack · no invented brand pixels.
+| Path | Status | Note |
+|------|--------|------|
+| `instagram/filter-note.txt` | [recon-token] | Live CSS filters on phone shell |
+| `chrome/logo-sm-wa.jpg` | [continuity] | |
+| `facebook/` | open | IPO day stills |
+| `iphone/` | open | Lightning / 5 |
+| `windows8/` | open | Start tiles |
+| `wikipedia/` | open | SOPA blackout |
+| `pinterest/` | open | |
 
-| Brand | Disk | Provenance |
-|-------|------|------------|
-| Continuity UI | Use `assets/period/2007–2010/*` where wired | CAPTURE earlier years |
-| Instagram Android / IPO / Win8 / Chrome war | HTML theater + text | [failed-final] brand pack — harvest H12-* |
-| iPhone 5 / iPad mini | Product rooms multipage | Apple Newsroom numbers; pixels optional WA |
-
-See `docs/references/2012/CAPTURE-LOG.md` for H12 queue.
+**MVPP:** IG Android · FB IPO · Lightning · Win8 · SOPA · Pinterest.

@@ -199,3 +199,214 @@ body.year-2011 .itt-year-chip {
   font-size: 13px;
   text-align: center;
 }
+
+/* —— Feel pass: 2011 portal + Spotify client —— */
+body.portal-2011 {
+  margin: 0;
+  background: #0d0d0d;
+  color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.portal-shell {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+.portal-head-2011 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 2px solid #1db954;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.portal-head-2011 h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #1db954;
+  letter-spacing: -1px;
+}
+.portal-sub { margin: 4px 0 0; color: #888; font-size: 13px; }
+.portal-scale { color: #666; font-size: 11px; align-self: flex-end; }
+.portal-lede { font-size: 15px; color: #ccc; margin: 0 0 16px; line-height: 1.45; }
+.portal-apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.portal-app {
+  display: block;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 14px 12px;
+  text-decoration: none;
+  color: #eee;
+  min-height: 72px;
+}
+.portal-app b { display: block; font-size: 15px; margin-bottom: 4px; }
+.portal-app span { font-size: 11px; color: #888; }
+.portal-app.sp { border-color: #1db954; }
+.portal-app.sp b { color: #1db954; }
+.portal-app.fb { border-color: #3b5998; }
+.portal-app.fb b { color: #8b9dc3; }
+.portal-app.gp b { color: #dd4b39; }
+.portal-trails h2 { font-size: 14px; color: #1db954; margin: 18px 0 8px; }
+.portal-trails ol { margin: 0; padding-left: 20px; color: #bbb; font-size: 13px; line-height: 1.6; }
+.portal-trails a { color: #1db954; }
+.portal-bans {
+  margin-top: 16px;
+  font-size: 11px;
+  color: #a66;
+  background: #1a1010;
+  border: 1px solid #633;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+.portal-foot { margin-top: 18px; font-size: 12px; color: #666; }
+.portal-foot a { color: #888; }
+
+/* Spotify desktop client */
+body.sp-client-body { margin: 0; background: #000; color: #ddd; font-family: Arial, Helvetica, sans-serif; }
+.sp-client { display: flex; min-height: calc(100vh - 52px); max-width: 1100px; margin: 0 auto; }
+.sp-side {
+  width: 200px;
+  background: #121212;
+  padding: 12px 0;
+  border-right: 1px solid #222;
+  flex-shrink: 0;
+}
+.sp-logo {
+  color: #1db954;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 16px 16px;
+  letter-spacing: 0.5px;
+}
+.sp-nav {
+  display: block;
+  color: #b3b3b3;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 13px;
+}
+.sp-nav:hover, .sp-nav.is-on { color: #fff; background: #1a1a1a; }
+.sp-nav.muted { color: #555; cursor: default; }
+.sp-side-label {
+  font-size: 10px;
+  color: #666;
+  letter-spacing: 0.08em;
+  padding: 14px 16px 4px;
+}
+.sp-main { flex: 1; background: #181818; padding: 0 0 24px; min-width: 0; }
+.sp-main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: #282828;
+  font-size: 12px;
+  color: #aaa;
+}
+.sp-upgrade {
+  color: #000;
+  background: #1db954;
+  padding: 6px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 11px;
+}
+.sp-hero { padding: 20px 18px 8px; }
+.sp-hero h1 { color: #fff; font-size: 28px; margin: 0 0 8px; }
+.sp-hero p { color: #b3b3b3; font-size: 13px; margin: 0 0 12px; }
+.sp-btn-green {
+  display: inline-block;
+  background: #1db954;
+  color: #000 !important;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.sp-btn-ghost {
+  display: inline-block;
+  color: #fff !important;
+  border: 1px solid #555;
+  padding: 9px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.sp-status { font-size: 12px; color: #1db954; min-height: 1.2em; }
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  padding: 8px 18px 20px;
+}
+.sp-tile {
+  background: #282828;
+  border-radius: 6px;
+  padding: 14px;
+  text-decoration: none;
+  color: #eee;
+}
+.sp-tile b { display: block; color: #1db954; margin-bottom: 4px; }
+.sp-tile span { font-size: 11px; color: #888; }
+.sp-tracktable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 8px 0;
+}
+.sp-tracktable th {
+  text-align: left;
+  color: #666;
+  font-size: 11px;
+  font-weight: normal;
+  border-bottom: 1px solid #333;
+  padding: 8px 12px;
+}
+.sp-tracktable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #222;
+  color: #ddd;
+}
+.sp-tracktable a { color: #1db954; margin-left: 8px; text-decoration: none; font-size: 12px; }
+.sp-pl-head { font-size: 14px; color: #fff; padding: 8px 12px; margin: 0; }
+.sp-playlist { padding: 0 12px 16px; font-size: 13px; color: #bbb; min-height: 40px; }
+.sp-nowbar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #282828;
+  border-top: 1px solid #000;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #fff;
+  z-index: 5;
+}
+.sp-nowbar-hint { color: #666; }
+.sp-ad {
+  background: #2a2a00;
+  border: 1px solid #886;
+  padding: 8px 12px;
+  margin: 8px 18px;
+  font-size: 12px;
+  color: #cc8;
+}
+
+/* ITT feel tokens 2011 — Spotify · Timeline · Siri */
+:root {
+  --itt11-spotify: #1db954;
+  --itt11-fb: #3b5998;
+  --itt11-gplus: #dd4b39;
+  --itt11-siri: #111111;
+}
+

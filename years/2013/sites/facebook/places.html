@@ -7,16 +7,32 @@
  <p style="font-size:12px"><a href="index.html">facebook</a> · <a href="../foursquare/index.html">Foursquare contrast</a></p>
  <h1 style="color:#3b5998;font-size:18px">Places</h1>
  <p style="background:#fff8dc;border:1px solid #cc0;padding:8px;font-size:12px">
-  <b>2012 residual honesty:</b> Facebook Places (~Aug 2010 class) — check-in competition with Foursquare. Theater only · no live GPS.
+  <b>2013 honesty:</b> Facebook Places check-in theater · no live GPS.
  </p>
  <p>Check in (theater):</p>
- <button type="button" id="pl">Coffee House</button>
- <button type="button" id="pl2">Airport</button>
- <div id="st" style="font-size:12px;color:#060;margin-top:8px"></div>
- <p style="font-size:11px;color:#666"><code>itt13-fb-places</code></p>
+ <button type="button" data-fb-place="Coffee House">Coffee House</button>
+ <button type="button" data-fb-place="Airport">Airport</button>
+ <div data-fb-places-status style="font-size:12px;color:#060;margin-top:8px"></div>
+ 
 </div>
 <script>
-(function(){var KEY="itt13-fb-places";function go(v){var list=[];try{list=JSON.parse(localStorage.getItem(KEY)||"[]")||[]}catch(e){}list.unshift({venue:v,ts:Date.now()});localStorage.setItem(KEY,JSON.stringify(list.slice(0,20)));document.getElementById("st").textContent="Checked in: "+v+" · "+KEY;}document.getElementById("pl").onclick=function(){go("Coffee House")};document.getElementById("pl2").onclick=function(){go("Airport")};})();
+(function(){
+  var KEY="itt13-fb-places";
+  var st=document.querySelector("[data-fb-places-status]");
+  var btns=document.querySelectorAll("[data-fb-place]");
+  function go(v){
+    var list=[];
+    try{list=JSON.parse(localStorage.getItem(KEY)||"[]")||[]}catch(e){}
+    list.unshift({venue:v,ts:Date.now()});
+    localStorage.setItem(KEY,JSON.stringify(list.slice(0,20)));
+    var msg="Checked in: "+v+" · "+KEY;
+    if(st) st.textContent=msg;
+    try{ if(window.ITT&&ITT._immersionApi&&ITT._immersionApi.actionFeedback) ITT._immersionApi.actionFeedback(msg,{status:st}); }catch(e2){}
+  }
+  for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener("click",function(ev){ go(ev.currentTarget.getAttribute("data-fb-place")); });
+  }
+})();
 </script>
 <script src="../../../../js/immersion-2013.js"></script>
 </body></html>

@@ -32,16 +32,16 @@
   </p>
   <div data-siri-log></div>
  </div>
- <p style="font-size:11px;color:#666">Apple Newsroom 2011-10-04 · no real speech API · <code>itt11-siri-history</code></p>
+ <p style="font-size:11px;color:#666">iPhone 4S · Oct 4, 2011 · canned answers · not live speech</p>
 </div>
 <script>
 /* Page-local theater (works even if immersion module races). Immersion/siri.js may also bind. */
 (function () {
   var KEY = "itt11-siri-history";
   var ANSWERS = [
-    { match: /umbrella|weather|rain|weekend/i, a: "It looks like rain this weekend — you might want an umbrella. (Siri beta · canned museum answer)" },
-    { match: /call mom|remind me to call/i, a: "OK — I’ll remind you to call Mom when you get home. (Contacts + location theater)" },
-    { match: /traffic|around here/i, a: "Traffic looks moderate around here. (Location theater · no live maps)" }
+    { match: /umbrella|weather|rain|weekend/i, a: "It looks like rain this weekend — you might want an umbrella." },
+    { match: /call mom|remind me to call/i, a: "OK — I’ll remind you to call Mom when you get home." },
+    { match: /traffic|around here/i, a: "Traffic looks moderate around here." }
   ];
   function answerFor(q) {
     for (var i = 0; i < ANSWERS.length; i++) if (ANSWERS[i].match.test(q)) return ANSWERS[i].a;

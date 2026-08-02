@@ -34,13 +34,30 @@ test.describe('year-signature 1995', () => {
       }), { timeout: 12000 })
       .toBeGreaterThan(0);
   });
-  test('AuctionWeb bid form present', async ({ page }) => {
+  test('AuctionWeb bid updates high bidder + storage', async ({ page }) => {
     await enterYear(page, '1995');
+    await page.evaluate(() => {
+      Object.keys(localStorage)
+        .filter((k) => k.indexOf('itt95') === 0 && k.indexOf('bid') !== -1)
+        .forEach((k) => localStorage.removeItem(k));
+    });
     await goImmersion(page, '1995', 'sites/auctionweb/item-bean.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/Auction|bid|Bean/i, { timeout: 15000 });
-    const bid = frame.locator('[data-auction-bid], form[data-auction-bid], input[name="bid"], input[type="submit"]').first();
-    await expect(bid).toBeVisible({ timeout: 10000 });
+    const form = frame.locator('form[data-bid-form]');
+    await expect(form).toBeVisible({ timeout: 10000 });
+    await form.locator('input[name="bidder"]').fill('Sig95');
+    await form.locator('input[name="bid"]').fill('50.00');
+    await form.locator('input[type="submit"]').click({ force: true });
+    await expect(frame.locator('[data-high-bidder]')).toContainText('Sig95', { timeout: 10000 });
+    await expect
+      .poll(async () =>
+        page.evaluate(() =>
+          Object.keys(localStorage).some(
+            (k) => k.indexOf('itt95') === 0 && (localStorage.getItem(k) || '').includes('Sig95')
+          )
+        )
+      )
+      .toBeTruthy();
   });
 });
 
@@ -68,12 +85,30 @@ test.describe('year-signature 1996', () => {
 });
 
 test.describe('year-signature 1997', () => {
-  test('eBay item bid form', async ({ page }) => {
+  test('eBay item bid raises high bid (real storage)', async ({ page }) => {
     await enterYear(page, '1997');
+    await page.evaluate(() => {
+      Object.keys(localStorage)
+        .filter((k) => k.indexOf('itt97') === 0 && k.indexOf('bid') !== -1)
+        .forEach((k) => localStorage.removeItem(k));
+    });
     await goImmersion(page, '1997', 'sites/ebay/item-laptop.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/eBay|Bid|Auction/i, { timeout: 15000 });
-    await expect(frame.locator('[data-ebay-bid], form, input[name="bid"], input[type="submit"]').first()).toBeVisible();
+    const form = frame.locator('form[data-bid-form]');
+    await expect(form).toBeVisible({ timeout: 10000 });
+    await form.locator('input[name="bid"]').fill('510.00');
+    await form.locator('input[type="submit"]').click({ force: true });
+    await expect(frame.locator('[data-high-bid]')).toContainText('510', { timeout: 10000 });
+    await expect
+      .poll(async () =>
+        page.evaluate(() =>
+          Object.keys(localStorage).some(
+            (k) => k.indexOf('itt97') === 0 && (localStorage.getItem(k) || '').includes('510')
+          )
+        )
+      )
+      .toBeTruthy();
   });
   test('Slashdot comments form', async ({ page }) => {
     await enterYear(page, '1997');
@@ -95,12 +130,11 @@ test.describe('year-signature 1998', () => {
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Google/i, { timeout: 15000 });
     const form = frame.locator('form[data-google-search], form').first();
-    if (await form.locator('input[name="q"]').count()) {
-      await form.locator('input[name="q"]').fill('Yahoo');
-      await form.locator('input[type="submit"], button[type="submit"]').first().click();
-      await page.waitForTimeout(600);
-      await expect(frame.locator('body')).toContainText(/Yahoo|result|Search/i, { timeout: 12000 });
-    }
+    await expect(form.locator('input[name="q"]')).toBeVisible({ timeout: 10000 });
+    await form.locator('input[name="q"]').fill('Yahoo');
+    await form.locator('input[type="submit"], button[type="submit"]').first().click();
+    await page.waitForTimeout(600);
+    await expect(frame.locator('body')).toContainText(/Yahoo|result|Search/i, { timeout: 12000 });
   });
   test('Amazon Music add to cart', async ({ page }) => {
     await enterYear(page, '1998');
@@ -122,20 +156,50 @@ test.describe('year-signature 1999', () => {
   test('Napster client/download theater', async ({ page }) => {
     await enterYear(page, '1999');
     await goImmersion(page, '1999', 'sites/napster/index.html');
-    await expect(contentFrame(page).locator('body')).toContainText(/Napster/i, { timeout: 15000 });
-    // prefer client or download link
     const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Napster/i, { timeout: 15000 });
     const link = frame.locator('a[href*="client"], a[href*="download"], a[href*="legal"]').first();
-    if (await link.count()) {
-      await link.click();
-      await page.waitForTimeout(700);
-      await expect(frame.locator('body')).toContainText(/Napster|Download|Legal|Client|Beta/i, { timeout: 12000 });
-    }
+    await expect(link).toBeVisible({ timeout: 10000 });
+    await link.click();
+    await page.waitForTimeout(700);
+    await expect(frame.locator('body')).toContainText(/Napster|Download|Legal|Client|Beta/i, {
+      timeout: 12000,
+    });
   });
-  test('Blogger home', async ({ page }) => {
+  test('Blogger post → view + itt99-blog', async ({ page }) => {
     await enterYear(page, '1999');
-    await goImmersion(page, '1999', 'sites/blogger/index.html');
-    await expect(contentFrame(page).locator('body')).toContainText(/Blog|Pyra|Blogger/i, { timeout: 15000 });
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt99-blog');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '1999', 'sites/blogger/edit.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-blogger-post]')).toBeVisible({ timeout: 15000 });
+    const title = 'SigBlog99 ' + Date.now();
+    await frame.locator('[data-blogger-post] [name="title"]').fill(title);
+    await frame.locator('[data-blogger-post] [name="body"]').fill('signature post body');
+    await Promise.all([
+      page.waitForFunction(
+        () => {
+          try {
+            const f = document.getElementById('content');
+            const src = (f && f.getAttribute('src')) || '';
+            return /view\.html/i.test(src);
+          } catch (e) {
+            return false;
+          }
+        },
+        null,
+        { timeout: 15000 }
+      ).catch(() => {}),
+      frame.locator('[data-blogger-post] input[type="submit"]').click({ force: true }),
+    ]);
+    await page.waitForTimeout(500);
+    const raw = await page.evaluate(() => localStorage.getItem('itt99-blog'));
+    expect(raw || '', 'itt99-blog').toContain(title);
   });
 });
 
@@ -175,20 +239,36 @@ test.describe('year-signature 2001', () => {
 });
 
 test.describe('year-signature 2002', () => {
-  test('Friendster profile form', async ({ page }) => {
+  test('Friendster profile save → storage', async ({ page }) => {
     await enterYear(page, '2002');
-    await goImmersion(page, '2002', 'sites/friendster/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt02-friendster-profile');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2002', 'sites/friendster/profile.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Friendster/i, { timeout: 15000 });
-    const form = frame.locator('[data-friendster-profile-form], form').first();
-    if (await form.count()) {
-      const name = form.locator('input[name="name"], input[name="display"]').first();
-      if (await name.count()) {
-        await name.fill('Museum User');
-        await form.locator('input[type="submit"], button[type="submit"]').first().click();
-        await page.waitForTimeout(400);
-      }
-    }
+    const form = frame.locator('[data-friendster-profile-form]');
+    await expect(form).toBeVisible({ timeout: 10000 });
+    await form.locator('input[name="name"], input[name="display"]').first().fill('Museum User');
+    await form.locator('input[type="submit"], button[type="submit"]').first().click();
+    await expect
+      .poll(async () =>
+        page.evaluate(() => {
+          try {
+            return Object.keys(localStorage).some(
+              (k) => k.indexOf('itt02-friendster') === 0 && (localStorage.getItem(k) || '').length > 2
+            );
+          } catch (e) {
+            return false;
+          }
+        }),
+        { timeout: 8000 }
+      )
+      .toBeTruthy();
   });
   test('KaZaA download theater', async ({ page }) => {
     await enterYear(page, '2002');
@@ -221,15 +301,19 @@ test.describe('year-signature 2004', () => {
     await goImmersion(page, '2004', 'sites/gmail/index.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Gmail|Google Mail|GB/i, { timeout: 15000 });
-    const form = frame.locator('form[data-gmail-login], form').first();
-    if (await form.locator('input[name="email"], input[name="login"], input[type="text"]').count()) {
-      await form.locator('input[name="email"], input[name="login"], input[type="text"]').first().fill('you@college.edu');
-      const pass = form.locator('input[type="password"]');
-      if (await pass.count()) await pass.first().fill('secret');
-      await form.locator('input[type="submit"], button[type="submit"]').first().click();
-      await page.waitForTimeout(700);
-      await expect(frame.locator('body')).toContainText(/Inbox|Compose|Mail|Invitation/i, { timeout: 15000 });
-    }
+    const form = frame.locator('form[data-gmail-login]');
+    await expect(form).toBeVisible({ timeout: 10000 });
+    await form
+      .locator('input[name="email"], input[name="login"], input[type="text"]')
+      .first()
+      .fill('you@college.edu');
+    const pass = form.locator('input[type="password"]');
+    if (await pass.count()) await pass.first().fill('secret');
+    await form.locator('input[type="submit"], button[type="submit"]').first().click();
+    await page.waitForTimeout(700);
+    await expect(frame.locator('body')).toContainText(/Inbox|Compose|Mail|Invitation/i, {
+      timeout: 15000,
+    });
   });
   test('Digg seed room (Dec 2004 honesty)', async ({ page }) => {
     await enterYear(page, '2004');
@@ -261,18 +345,28 @@ test.describe('year-signature 2005', () => {
     const raw = await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'));
     expect(raw || '').toContain(title);
   });
-  test('Reddit submit', async ({ page }) => {
+  test('Reddit submit → storage', async ({ page }) => {
     await enterYear(page, '2005');
-    await goImmersion(page, '2005', 'sites/reddit/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt05-reddit-links');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2005', 'sites/reddit/submit.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/reddit|Reddit/i, { timeout: 15000 });
+    await expect(frame.locator('body')).toContainText(/reddit|Reddit|submit/i, { timeout: 15000 });
     const form = frame.locator('[data-reddit-submit]');
-    if (await form.count()) {
-      await form.locator('input[name="title"]').fill('E2E post ' + Date.now());
-      await form.locator('input[type="submit"], button[type="submit"]').first().click();
-      await page.waitForTimeout(400);
-      await expect(frame.locator('[data-reddit-status], body')).toContainText(/submit|local|front/i, { timeout: 8000 });
-    }
+    await expect(form).toBeVisible({ timeout: 10000 });
+    const title = 'E2E post ' + Date.now();
+    await form.locator('input[name="title"]').fill(title);
+    await form.locator('input[type="submit"], button[type="submit"]').first().click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit-links')), {
+        timeout: 8000,
+      })
+      .toContain(title);
   });
   test('Maps zoom theater', async ({ page }) => {
     await enterYear(page, '2005');
@@ -280,21 +374,19 @@ test.describe('year-signature 2005', () => {
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Maps|Google|Zoom|pan/i, { timeout: 15000 });
     const zin = frame.locator('[data-maps-zoom="in"]');
-    if (await zin.count()) {
-      await zin.click();
-      await expect(frame.locator('[data-maps-status]')).toContainText(/Zoom/i, { timeout: 5000 });
-    }
+    await expect(zin).toBeVisible({ timeout: 10000 });
+    await zin.click();
+    await expect(frame.locator('[data-maps-status]')).toContainText(/Zoom/i, { timeout: 5000 });
   });
   test('Digg dig button', async ({ page }) => {
     await enterYear(page, '2005');
     await goImmersion(page, '2005', 'sites/digg/index.html');
     const frame = contentFrame(page);
     const dig = frame.locator('[data-digg-up]').first();
-    if (await dig.count()) {
-      await dig.click();
-      await page.waitForTimeout(300);
-      await expect(frame.locator('[data-digg-list]')).toContainText(/digg/i);
-    }
+    await expect(dig).toBeVisible({ timeout: 10000 });
+    await dig.click();
+    await page.waitForTimeout(300);
+    await expect(frame.locator('[data-digg-list]')).toContainText(/digg/i);
   });
 });
 
@@ -312,13 +404,12 @@ test.describe('year-signature 2006', () => {
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Twitter|tweet|twttr/i, { timeout: 15000 });
     const form = frame.locator('[data-twitter-compose]');
-    if (await form.count()) {
-      await form.locator('[data-twitter-status], textarea').first().fill('sig tweet 2006');
-      await form.evaluate((f) => f.requestSubmit());
-      await expect
-        .poll(async () => page.evaluate(() => localStorage.getItem('itt06-tweets')), { timeout: 8000 })
-        .toBeTruthy();
-    }
+    await expect(form).toBeVisible({ timeout: 10000 });
+    await form.locator('[data-twitter-status], textarea').first().fill('sig tweet 2006');
+    await form.evaluate((f) => f.requestSubmit());
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt06-tweets')), { timeout: 8000 })
+      .toBeTruthy();
   });
 });
 
@@ -346,12 +437,11 @@ test.describe('year-signature 2008', () => {
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/App Store|app/i, { timeout: 15000 });
     const btn = frame.locator('[data-appstore-install]').first();
-    if (await btn.count()) {
-      await btn.click();
-      await expect
-        .poll(async () => page.evaluate(() => localStorage.getItem('itt08-apps')), { timeout: 8000 })
-        .toBeTruthy();
-    }
+    await expect(btn).toBeVisible({ timeout: 10000 });
+    await btn.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt08-apps')), { timeout: 8000 })
+      .toBeTruthy();
   });
 });
 

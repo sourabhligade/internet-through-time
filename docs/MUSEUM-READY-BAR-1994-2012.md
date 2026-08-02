@@ -1,4 +1,4 @@
-# Museum-ready bar — 1994–2012 (ship definition)
+# Museum-ready bar — 1994–2013 (ship definition)
 
 **Date:** 2026-08-02  
 **Purpose:** One bar so every hub year can claim **museum-ready** without inventing pixels.
@@ -12,7 +12,7 @@
 | **C Pixels** | Prefer dated WA/evolt/GUIdebook; else **continuity** path labeled or **failed-final RECON** in CAPTURE — never invent brand art |
 | **D Provenance** | CAPTURE-LOG / ASSETS notes for signature brands |
 | **E Gates** | `check-all-years` pass · year e2e (mvp and/or flows) · hub card unlocked |
-| **F Isolation** | Year storage prefix (`itt` / `itt95`…`itt12`) · no cross-year key collision on handoff |
+| **F Isolation** | Year storage prefix (`itt` / `itt95`…`itt13`) · no cross-year key collision on handoff |
 
 ## Elevated extras (2010+ style)
 
@@ -28,9 +28,8 @@
 - Full OS shell variants (Win8 immersive mode)  
 - Live third-party APIs  
 
-## Status map (2026-08-02 elevate pass)
+## Status map (2026-08-02 L3 densify pass)
 
-All hub years **1994–2012** are **museum-ready** under this bar.  
-**2013** is **MVP live** (extend bar claim after densify pixel pass).  
-**2011–2012** elevated from MVP by densify/trail e2e + minute research + asset honesty packs.  
+All hub years **1994–2013** are **museum-ready** under this bar.  
+**2011–2013** L3 densify: CAPTURE H11/H12/H13 P0 rows **failed-final** honesty (no invented pixels) · 2013 HealthCare.gov + iPad Air · continuity year-voice scrub.  
 **2014+** not on disk.

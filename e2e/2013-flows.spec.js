@@ -128,6 +128,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/snowden/index.html');
     await clearKeys(page, ['itt13-snowden-ack']);
     await page.reload();
+    await page.locator('[data-snowden-card]').evaluateAll((els) => els.forEach((e) => { e.checked = true; e.dispatchEvent(new Event('change', { bubbles: true })); }));
     await page.locator('[data-snowden-ack]').click();
     await expectStorageTruthy(page, 'itt13-snowden-ack');
   });
@@ -158,6 +159,86 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.reload();
     await page.locator('[data-btc-note]').click();
     await expectStorageTruthy(page, 'itt13-btc-note');
+  });
+
+  test('N HealthCare.gov public-web literacy', async ({ page }) => {
+    await page.goto('/years/2013/sites/healthcare/index.html');
+    await expect(page.locator('body')).toContainText(/HealthCare\.gov|October 1|open enrollment/i);
+    await expect(page.locator('body')).toContainText(/no real enrollment|educational|PII/i);
+    await clearKeys(page, ['itt13-healthcare-ack']);
+    await page.reload();
+    await page.locator('[data-hc-try="1"]').click().catch(() => {});
+    await page.waitForTimeout(700);
+    await page.locator('[data-hc-try="2"]').click().catch(() => {});
+    await page.waitForTimeout(800);
+    await page.locator('[data-healthcare-ack]').click();
+    const raw = await expectStorageTruthy(page, 'itt13-healthcare-ack');
+    expect(raw).toMatch(/healthcare|newsOnly|2013/i);
+  });
+
+  test('O iPad Air claim theater', async ({ page }) => {
+    await page.goto('/years/2013/sites/ipad/air.html');
+    await expect(page.locator('body')).toContainText(/iPad Air|October 22|A7|iOS 7/i);
+    await clearKeys(page, ['itt13-ipadair']);
+    await page.reload();
+    await page.locator('[data-ipadair-ack]').click();
+    const raw = await expectStorageTruthy(page, 'itt13-ipadair');
+    expect(raw).toMatch(/ipad-air|2013-10-22|ipadair/i);
+  });
+
+  test('P Spotify residual invite storage', async ({ page }) => {
+    await page.goto('/years/2013/sites/spotify/index.html');
+    await expect(page.locator('body')).toContainText(/2013/);
+    await clearKeys(page, ['itt13-spotify-invite', 'itt13-spotify', 'itt13-spotify-us']);
+    await page.reload();
+    await page.waitForTimeout(500);
+    const invite = page.locator('[data-spotify-invite]').first();
+    await expect(invite).toBeVisible();
+    await invite.click();
+    const keys = await page.evaluate(() => {
+      const o = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.indexOf('itt13-spotify') === 0) o[k] = localStorage.getItem(k);
+      }
+      return o;
+    });
+    expect(Object.keys(keys).length, 'expected itt13-spotify* key').toBeGreaterThan(0);
+  });
+
+  test('Q Netflix residual stream/queue storage', async ({ page }) => {
+    await page.goto('/years/2013/sites/netflix/index.html');
+    await expect(page.locator('body')).toContainText(/2013/);
+    await clearKeys(page, ['itt13-netflix-stream', 'itt13-netflix-queue']);
+    await page.reload();
+    await page.waitForTimeout(400);
+    const streamBtn = page.locator('#stream-seed, [data-netflix-stream]').first();
+    if (await streamBtn.count()) {
+      await streamBtn.click();
+      await expectStorageTruthy(page, 'itt13-netflix-stream');
+    } else {
+      const form = page.locator('[data-netflix-queue-form]');
+      await expect(form).toBeVisible();
+      await form.locator('input[type="submit"], button[type="submit"]').first().click();
+      const any = await page.evaluate(() => {
+        for (let i = 0; i < localStorage.length; i++) {
+          const k = localStorage.key(i);
+          if (k && k.indexOf('itt13-netflix') === 0) return localStorage.getItem(k);
+        }
+        return null;
+      });
+      expect(any).toBeTruthy();
+    }
+  });
+
+  test('R UberX residual request storage', async ({ page }) => {
+    await page.goto('/years/2013/sites/uber/index.html');
+    await expect(page.locator('body')).toContainText(/UberX|2013/i);
+    await clearKeys(page, ['itt13-uber']);
+    await page.reload();
+    await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
+    const raw = await expectStorageTruthy(page, 'itt13-uber');
+    expect(raw).toMatch(/uberx|UberX|true/i);
   });
 
   test('S ban literacy', async ({ page }) => {

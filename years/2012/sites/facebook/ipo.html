@@ -25,9 +25,15 @@
    <li>Later months: stock sinks well below $38 (not “always up” honesty)</li>
   </ul>
   <p style="font-size:12px">Same year: Instagram buy Apr 9 · <b>1 billion</b> MAU Oct · Timeline residual · <b>Like</b> only (no Reactions).</p>
-  <p><button type="button" data-fb-ipo-ack>I was there (save theater)</button>
+  <div style="font-size:12px;background:#f0f2f5;border:1px solid #ccd0d5;padding:8px;margin:10px 0">
+   <b>Minute facts (optional checks → saved with ack)</b><br>
+   <label style="display:block;margin:3px 0"><input type="checkbox" data-ipo-fact="price38"> IPO price <b>$38</b></label>
+   <label style="display:block;margin:3px 0"><input type="checkbox" data-ipo-fact="nasdaq"> Nasdaq delay / glitch lore</label>
+   <label style="display:block;margin:3px 0"><input type="checkbox" data-ipo-fact="notAlwaysUp"> Later months below $38 (not “always up”)</label>
+  </div>
+  <p><button type="button" data-fb-ipo-ack>Mark IPO day</button>
   <span data-fb-ipo-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
-  <p style="font-size:11px;color:#666">Investopedia · DealBook · CNBC · educational · no real trading · <code>itt12-fb-ipo-ack</code></p>
+  <p style="font-size:11px;color:#666">May 18, 2012 · $38 IPO · no real trading</p>
  </div>
 </div>
 <script>
@@ -35,10 +41,15 @@ document.addEventListener("DOMContentLoaded", function(){
   var btn=document.querySelector("[data-fb-ipo-ack]");
   var st=document.querySelector("[data-fb-ipo-status]");
   var KEY="itt12-fb-ipo-ack";
-  try{if(localStorage.getItem(KEY)&&st)st.textContent="Saved · "+KEY;}catch(e){}
+  try{if(localStorage.getItem(KEY)&&st)st.textContent="Saved · May 18 · $38";}catch(e){}
   if(btn)btn.addEventListener("click",function(){
-    try{localStorage.setItem(KEY,JSON.stringify({price:38,date:"2012-05-18",ts:Date.now()}));}catch(e2){}
-    if(st)st.textContent="Saved · $38 · "+KEY;
+    var facts={};
+    var boxes=document.querySelectorAll("[data-ipo-fact]");
+    for(var i=0;i<boxes.length;i++){facts[boxes[i].getAttribute("data-ipo-fact")]=!!boxes[i].checked;}
+    try{localStorage.setItem(KEY,JSON.stringify({price:38,date:"2012-05-18",facts:facts,ts:Date.now()}));}catch(e2){}
+    var msg="Saved · May 18 · $38";
+    if(st)st.textContent=msg;
+    try{if(window.ITT&&ITT._immersionApi&&ITT._immersionApi.actionFeedback)ITT._immersionApi.actionFeedback(msg,{status:st,kind:"ipo"});}catch(e3){}
   });
 });
 </script>

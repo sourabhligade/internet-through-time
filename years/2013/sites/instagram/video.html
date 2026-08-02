@@ -6,27 +6,33 @@
 <link rel="stylesheet" href="../../../../css/period-2013.css">
 <script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body bgcolor="#fafafa" text="#262626" link="#003569">
+<body class="igv-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:420px;margin:16px auto;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px">
- <p style="font-size:11px"><a href="index.html">← Instagram</a> · <a href="about.html">About</a> · <a href="../../pages/home.html">Start</a></p>
- <h1 style="font-size:18px;font-weight:normal">Video on Instagram</h1>
- <p style="font-size:12px;color:#555"><b>June 20, 2013</b> — share up to <b>15 seconds</b> of video with filters. Competes with Vine’s 6-second loops. Still: <b>no Stories · no Reels · no Meta branding</b>.</p>
- <p><b>Filter:</b>
-  <button type="button" data-igv-filter="Normal">Normal</button>
+<div class="igv-wrap">
+ <div class="igv-nav">
+  <a href="index.html">← Instagram</a> · <a href="about.html">About</a> · <a href="../../pages/home.html">Start</a>
+ </div>
+ <div style="padding:12px 12px 0;font-size:12px;color:#555">
+  <b>June 20, 2013</b> — share up to <b>15 seconds</b> of video with filters. Competes with Vine’s 6s loops.
+ </div>
+ <div class="igv-filters">
+  <button type="button" data-igv-filter="Normal" class="is-on">Normal</button>
   <button type="button" data-igv-filter="Cinema">Cinema</button>
   <button type="button" data-igv-filter="Memo">Memo</button>
   <button type="button" data-igv-filter="Neon">Neon</button>
- </p>
- <div style="background:#222;height:200px;display:flex;align-items:center;justify-content:center;color:#fff;margin:10px 0">
-  ▶ 15s theater · <span data-igv-filter-label>Normal</span>
  </div>
- <p>
-  <input type="text" data-igv-caption placeholder="Caption…" style="width:70%;padding:6px">
-  <button type="button" data-igv-share style="padding:6px 12px;background:#3897f0;color:#fff;border:0;cursor:pointer">Share video</button>
- </p>
- <div data-igv-status style="font-size:12px;color:#060;min-height:1.3em"></div>
- <p style="font-size:11px;color:#888"><code>itt13-ig-video</code> · Facebook-owned · standalone brand promise residual</p>
+ <div class="igv-stage">
+  <div>▶ Video theater</div>
+  <div class="igv-chip"><span data-igv-filter-label>Normal</span> · max <b>15s</b></div>
+ </div>
+ <div class="igv-compose">
+  <input type="text" data-igv-caption placeholder="Write a caption…">
+  <button type="button" class="igv-share" data-igv-share>Share</button>
+ </div>
+ <div style="padding:0 12px 12px">
+  <div class="itt13-status" data-igv-status style="color:#060"></div>
+  <p class="itt13-ban">No Stories · no Reels · no Meta branding</p>
+ </div>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -39,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
     nodes[i].addEventListener("click", function (ev) {
       filter = ev.currentTarget.getAttribute("data-igv-filter") || "Normal";
       if (fl) fl.textContent = filter;
+      for (var j = 0; j < nodes.length; j++) nodes[j].classList.remove("is-on");
+      ev.currentTarget.classList.add("is-on");
     });
   }
   var share = document.querySelector("[data-igv-share]");

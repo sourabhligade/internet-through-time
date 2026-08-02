@@ -4,6 +4,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   function key() {
     if (ITT.util && ITT.util.immersionStorageKey) {
       return ITT.util.immersionStorageKey("craigslist-posts", "itt04");
@@ -68,7 +77,10 @@
         });
         save(posts.slice(0, 50));
         var st = doc.querySelector("[data-cl-status]");
-        if (st) st.textContent = "Posted to local classifieds (this browser only · no real listing).";
+        if (st) {
+          st.textContent = "Posted to local classifieds (this browser only · no real listing).";
+          ittFeedback(st.textContent, st);
+        }
         form.reset();
         render();
       });

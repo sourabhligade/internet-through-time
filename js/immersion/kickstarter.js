@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() { return ITT.util || {}; }
   function storageKey() {
     return U().immersionStorageKey
@@ -29,7 +38,10 @@
     var list = load();
     var el = doc.querySelector("[data-ks-list]");
     var st = doc.querySelector("[data-ks-status]");
-    if (st) st.textContent = list.length + " pledge(s) · " + storageKey() + " · no real money";
+    if (st) {
+      st.textContent = list.length + " pledge(s) · " + storageKey() + " · no real money";
+      ittFeedback(st.textContent, st);
+    }
     if (el) {
       if (!list.length) el.innerHTML = "<font color='#888'>No pledges yet.</font>";
       else {

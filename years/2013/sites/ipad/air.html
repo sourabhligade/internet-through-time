@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>iPad Air — October 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body class="ios7-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:480px;margin:16px auto;padding:12px;font-family:Helvetica,Arial,sans-serif">
+ <p style="font-size:11px">
+  <a href="index.html">← iPad</a> ·
+  <a href="../iphone/index.html">iPhone 5s</a> ·
+  <a href="../iphone/ios7.html">iOS 7</a> ·
+  <a href="../../pages/home.html">Start</a>
+ </p>
+ <h1 style="font-size:22px;font-weight:300">iPad Air</h1>
+ <p style="font-size:13px;color:#555">
+  Announced <b>October 22, 2013</b> with <b>iPad mini with Retina display</b>.
+  Thinner / lighter full-size iPad class · <b>A7</b> · <b>iOS 7</b> · Lightning residual.
+ </p>
+ <div style="background:#f5f5f7;border:1px solid #d2d2d7;padding:12px;font-size:12px;margin:12px 0">
+  <b>Honesty:</b> Museum text product room — not inventing Apple product photography.
+  Price ladder class Wi‑Fi starts mid-range tablet tier (period PR) · not a live store.
+ </div>
+ <ul style="font-size:13px;line-height:1.5">
+  <li>Pairs the autumn hardware story with <a href="../iphone/index.html">iPhone 5s/5c</a> (Sep)</li>
+  <li>Still <b>not</b> iPad Pro · not USB‑C · not Face ID</li>
+  <li>Same flat UI era as <a href="../iphone/ios7.html">iOS 7</a></li>
+ </ul>
+ <div style="font-size:12px;background:#f5f5f7;border:1px solid #d2d2d7;padding:10px;margin:10px 0;border-radius:8px">
+  <b>Configure interest (saved)</b><br>
+  <label style="display:block;margin:4px 0"><input type="radio" name="air-size" data-air-cfg="wifi" checked> Wi‑Fi</label>
+  <label style="display:block;margin:4px 0"><input type="radio" name="air-size" data-air-cfg="cellular"> Wi‑Fi + Cellular</label>
+  <label style="display:block;margin:4px 0"><input type="checkbox" data-air-mini> Also looking at iPad mini with Retina</label>
+ </div>
+ <p>
+  <button type="button" data-ipadair-ack style="padding:8px 14px;background:#007aff;color:#fff;border:0;border-radius:6px;cursor:pointer">
+   I’m interested in iPad Air (theater)
+  </button>
+  <span data-ipadair-status style="font-size:11px;color:#060;margin-left:8px"></span>
+ </p>
+ 
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-ipadair";
+  var btn = document.querySelector("[data-ipadair-ack]");
+  var st = document.querySelector("[data-ipadair-status]");
+  try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
+  if (btn) btn.addEventListener("click", function () {
+    var cfg = "wifi";
+    var radios = document.querySelectorAll("[data-air-cfg]");
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) cfg = radios[i].getAttribute("data-air-cfg");
+    }
+    var mini = !!(document.querySelector("[data-air-mini]") && document.querySelector("[data-air-mini]").checked);
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        model: "ipad-air",
+        date: "2013-10-22",
+        config: cfg,
+        alsoMiniRetina: mini,
+        ts: Date.now()
+      }));
+    } catch (e2) {}
+    var msg = "iPad Air interest · " + cfg + " · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "ipadair" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
+</body>
+</html>

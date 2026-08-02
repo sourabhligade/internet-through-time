@@ -1,12 +1,925 @@
-/* 2013 — Chrome · Vine · iOS 7 · Stories · 5s/5c · Win8.1 · Snowden */
+/* 2013 — period UI match kits (see docs/2013-UI-PERIOD-MATCH-RESEARCH.md) */
 @import url("period-2012.css");
+
+/* Tokens */
+:root {
+  --itt13-vine: #00bf8f;
+  --itt13-vine-yellow: #fffc00;
+  --itt13-snap-yellow: #fffc00;
+  --itt13-ig-blue: #3897f0;
+  --itt13-ig-bg: #fafafa;
+  --itt13-ios-blue: #007aff;
+  --itt13-ios-bg: #efeff4;
+  --itt13-medium: #00ab6c;
+  --itt13-tg: #5682a3;
+  --itt13-wa: #075e54;
+  --itt13-wa-bg: #ece5dd;
+  --itt13-tumblr: #36465d;
+  --itt13-gov-blue: #0071bc;
+  --itt13-chrome-blue: #4d90fe;
+}
 
 body.year-2013 .itt-year-chip {
   color: #34aadc;
   border-bottom-color: #fffc00;
 }
 
-/* iOS 7 flat accents */
-.ios7-shell { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #efeff4; color: #000; }
-.vine-shell { font-family: Arial, Helvetica, sans-serif; background: #00bf8f; color: #fff; }
-.snap-story-rail { background: #000; color: #fffc00; padding: 8px; font-size: 12px; }
+/* —— Honesty strip (museum, not period product) —— */
+.itt13-honesty {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  background: #fff8dc;
+  border: 1px solid #cc0;
+  padding: 8px 10px;
+  margin: 10px 0;
+  color: #333;
+}
+.itt13-honesty b { color: #000; }
+.itt13-ban {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #666;
+  margin: 8px 0;
+}
+
+/* —— iOS 7 flat —— */
+.ios7-shell {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--itt13-ios-bg);
+  color: #000;
+  font-weight: 300;
+}
+.ios7-shell h1 {
+  font-weight: 200;
+  letter-spacing: -0.5px;
+}
+.ios7-shell a { color: var(--itt13-ios-blue); text-decoration: none; }
+.ios7-shell .ios7-btn {
+  display: inline-block;
+  background: var(--itt13-ios-blue);
+  color: #fff !important;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: inherit;
+}
+.ios7-springboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+  padding: 18px 14px 28px;
+  background: linear-gradient(180deg, #5b8def 0%, #9b6bff 55%, #c48bff 100%);
+  border-radius: 14px;
+}
+.ios7-springboard .tile {
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+.ios7-statusbar {
+  font-size: 11px;
+  font-weight: 500;
+  color: #000;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+.ios7-card {
+  background: #fff;
+  border: 1px solid #d1d1d6;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* —— Vine —— */
+.vine-shell {
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--itt13-vine);
+  color: #fff;
+}
+.vine-app {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #000;
+  min-height: 100vh;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+.vine-app a { color: var(--itt13-vine-yellow); }
+.vine-topbar {
+  background: var(--itt13-vine);
+  padding: 10px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.vine-progress {
+  height: 4px;
+  background: #333;
+  overflow: hidden;
+}
+.vine-progress > div {
+  height: 100%;
+  background: var(--itt13-vine);
+  width: 0;
+  transition: width 0.05s linear;
+}
+.vine-hold {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 4px solid var(--itt13-vine);
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+.vine-hold:active { background: #0d0d0d; border-color: var(--itt13-vine-yellow); }
+.vine-cta {
+  display: inline-block;
+  background: var(--itt13-vine-yellow);
+  color: #000 !important;
+  border: 0;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.vine-card {
+  border-bottom: 1px solid #222;
+  padding: 10px 0;
+}
+.vine-card-loop {
+  background: #111;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--itt13-vine);
+  font-size: 13px;
+}
+
+/* —— Instagram Video —— */
+.igv-shell {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--itt13-ig-bg);
+  color: #262626;
+  font-size: 13px;
+}
+.igv-shell a { color: #003569; }
+.igv-wrap {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  min-height: 80vh;
+}
+.igv-nav {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px 12px;
+  font-size: 12px;
+  background: #fff;
+}
+.igv-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+}
+.igv-filters button {
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.igv-filters button.is-on,
+.igv-filters button:focus {
+  border-color: var(--itt13-ig-blue);
+  color: var(--itt13-ig-blue);
+  font-weight: 600;
+}
+.igv-stage {
+  background: #222;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+}
+.igv-chip {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin-top: 8px;
+}
+.igv-share {
+  background: var(--itt13-ig-blue);
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.igv-compose {
+  padding: 12px;
+  border-top: 1px solid #efefef;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.igv-compose input {
+  flex: 1;
+  border: 1px solid #dbdbdb;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+/* —— Snapchat —— */
+.snap-shell {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #fffc00;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 90vh;
+  padding: 12px 14px 24px;
+  font-size: 13px;
+}
+.snap-shell a { color: #fff; }
+.snap-shell a.snap-cta {
+  background: var(--itt13-snap-yellow);
+  color: #000 !important;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+.snap-story-rail {
+  background: #111;
+  color: var(--itt13-snap-yellow);
+  padding: 12px;
+  font-size: 12px;
+  border: 1px solid #333;
+  min-height: 56px;
+  margin: 12px 0;
+}
+.snap-cam {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+/* —— Win8.1 Metro product —— */
+.win81-shell {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #00188f;
+  color: #fff;
+  font-size: 13px;
+  min-height: 100vh;
+}
+.win81-shell a { color: #9cf; }
+.win81-start {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.win81-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 16px 0;
+}
+.win81-tiles [data-win81-tile] {
+  min-height: 88px;
+  padding: 16px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+.win81-startbtn {
+  background: #fff;
+  color: #00188f;
+  border: 0;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+/* —— Chrome product —— */
+.ch-2013 {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 680px;
+  margin: 24px auto;
+  padding: 16px;
+  color: #222;
+  background: #fff;
+}
+.ch-2013 h1 {
+  font-weight: normal;
+  font-size: 28px;
+  color: #444;
+}
+.ch-btn {
+  background: var(--itt13-chrome-blue);
+  color: #fff;
+  border: 1px solid #3079ed;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-family: inherit;
+}
+.ch-btn.secondary {
+  background: #f5f5f5;
+  color: #333;
+  border-color: #ccc;
+}
+
+/* —— Snowden / news culture —— */
+.news-2013 {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f4f1ea;
+  color: #111;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.news-2013 h1 { font-weight: normal; font-size: 24px; }
+.news-2013 .kicker {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #666;
+}
+.news-2013 .rules {
+  background: #fff;
+  border: 1px solid #999;
+  padding: 12px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.news-2013 button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* —— HealthCare.gov RECON —— */
+.hc-shell {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f0f4f8;
+  color: #112e51;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.hc-banner {
+  background: var(--itt13-gov-blue);
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.hc-banner span { font-weight: 400; font-size: 12px; opacity: 0.9; }
+.hc-body {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.hc-btn {
+  background: var(--itt13-gov-blue);
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.hc-footer {
+  border-top: 1px solid #aeb0b5;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #5b616b;
+}
+
+/* —— Tumblr dashboard —— */
+.tumblr-dash {
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--itt13-tumblr);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.tumblr-dash a { color: #a8d4ff; }
+.tumblr-inner { max-width: 560px; margin: 0 auto; padding: 16px 12px; }
+.tumblr-dash h1 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin: 0 0 4px;
+}
+.tumblr-types {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.tumblr-types span {
+  background: #529ecc;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: default;
+}
+.tumblr-compose {
+  background: #2c3e50;
+  border: 1px solid #529ecc;
+  padding: 12px;
+  margin: 12px 0;
+}
+.tumblr-compose input,
+.tumblr-compose textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 0;
+  font-size: 13px;
+  font-family: inherit;
+}
+.tumblr-compose button {
+  margin-top: 8px;
+  background: #529ecc;
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+}
+.yahoo-deal {
+  background: #6001d2;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  padding: 16px;
+}
+.yahoo-deal a { color: #fffc00; }
+.yahoo-deal .card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+}
+
+/* —— Google Glass marketing —— */
+.glass-shell {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.glass-hero {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  text-align: center;
+}
+.glass-hero h1 {
+  font-weight: 300;
+  font-size: 36px;
+  color: #4285f4;
+  margin: 0 0 8px;
+}
+.glass-prism {
+  height: 8px;
+  max-width: 280px;
+  margin: 24px auto;
+  background: linear-gradient(90deg, #ea4335, #fbbc05, #34a853, #4285f4);
+  border-radius: 2px;
+  opacity: 0.85;
+}
+.glass-cmds {
+  text-align: left;
+  max-width: 320px;
+  margin: 20px auto;
+  font-family: "Roboto Mono", Consolas, monospace;
+  font-size: 12px;
+  background: #f8f9fa;
+  border: 1px solid #dadce0;
+  padding: 12px 16px;
+  color: #5f6368;
+}
+.glass-cmds li { margin: 4px 0; }
+.glass-btn {
+  background: #4285f4;
+  color: #fff;
+  border: 0;
+  padding: 10px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 2px;
+}
+
+/* —— Medium reading —— */
+.medium-shell {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fff;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.65;
+}
+.medium-shell .meta {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+.medium-shell h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+.medium-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+.medium-shell textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-family: Georgia, serif;
+  padding: 12px 0;
+  min-height: 120px;
+  resize: vertical;
+}
+.medium-pub {
+  background: var(--itt13-medium);
+  color: #fff;
+  border: 0;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+}
+.medium-accent {
+  border-left: 3px solid var(--itt13-medium);
+  background: #fafafa;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 16px 0;
+}
+
+/* —— Telegram —— */
+.tg-shell {
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--itt13-tg);
+  color: #fff;
+  font-size: 13px;
+  min-height: 100vh;
+}
+.tg-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.tg-bubble {
+  background: #fff;
+  color: #222;
+  border-radius: 8px 8px 8px 2px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  font-size: 13px;
+  max-width: 85%;
+}
+.tg-btn {
+  background: #fff;
+  color: var(--itt13-tg);
+  border: 0;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+/* —— WhatsApp —— */
+.wa-shell {
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--itt13-wa-bg);
+  font-size: 13px;
+  min-height: 100vh;
+  padding: 12px;
+}
+.wa-phone {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.wa-header {
+  background: var(--itt13-wa);
+  color: #fff;
+  padding: 12px 14px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.wa-chat {
+  background: var(--itt13-wa-bg);
+  padding: 12px;
+  min-height: 200px;
+}
+.wa-bubble {
+  background: #dcf8c6;
+  color: #111;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  max-width: 80%;
+  margin: 4px 0;
+}
+.wa-btn {
+  background: var(--itt13-wa);
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  margin: 12px;
+}
+
+/* —— Console marketing —— */
+.ps4-shell {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #003087;
+  color: #fff;
+  font-size: 13px;
+  min-height: 100vh;
+  padding: 16px;
+}
+.ps4-shell a { color: #ffff99; }
+.xbox-shell {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: #107c10;
+  color: #fff;
+  font-size: 13px;
+  min-height: 100vh;
+  padding: 16px;
+}
+.xbox-shell a { color: #ffff99; }
+.console-panel {
+  max-width: 520px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+}
+.console-panel button {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+/* —— Facebook Home flop —— */
+.fbhome-shell {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #3b5998;
+  color: #fff;
+  font-size: 13px;
+  min-height: 100vh;
+  padding: 16px;
+}
+.fbhome-shell a { color: #ffff99; }
+.fbhome-panel {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #2d4373;
+  padding: 14px;
+}
+
+/* Status lines */
+.itt13-status {
+  font-size: 12px;
+  min-height: 1.3em;
+  margin-top: 8px;
+  color: #0a0;
+}
+.vine-app .itt13-status,
+.snap-shell .itt13-status,
+.ps4-shell .itt13-status,
+.xbox-shell .itt13-status,
+.fbhome-shell .itt13-status,
+.tumblr-dash .itt13-status {
+  color: #8f8;
+}
+
+/* —— Feel pass: 2013 portal + Vine feed —— */
+body.portal-2013 {
+  margin: 0;
+  background: #0a0a0a;
+  color: #eee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.portal-shell-2013 { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+.portal-head-2013 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 3px solid #fffc00;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.portal-head-2013 h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #fffc00;
+}
+.portal-2013 .portal-sub { color: #888; font-size: 13px; margin: 4px 0 0; }
+.portal-2013 .portal-scale { color: #555; font-size: 11px; }
+.portal-2013 .portal-lede { font-size: 15px; color: #ccc; line-height: 1.45; }
+.portal-apps-2013 .portal-app {
+  background: #141414;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #eee;
+}
+.portal-app.vine { border-color: #00bf8f; }
+.portal-app.vine b { color: #00bf8f; }
+.portal-app.snap { border-color: #fffc00; }
+.portal-app.snap b { color: #fffc00; }
+.portal-app.igv b { color: #3897f0; }
+.portal-app.ios b { color: #007aff; }
+.portal-2013 .portal-trails h2 { color: #fffc00; font-weight: 400; font-size: 14px; }
+.portal-2013 .portal-trails a { color: #00bf8f; }
+.portal-2013 .portal-bans {
+  background: #1a1010;
+  border-color: #844;
+  color: #c88;
+}
+.portal-2013 .portal-foot a { color: #888; }
+
+.vine-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  border-bottom: 1px solid #222;
+  font-size: 11px;
+  padding: 8px 0;
+}
+.vine-tabs a {
+  color: #888;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.vine-tabs a.is-on { color: #00bf8f; font-weight: bold; }
+.vine-tagline {
+  font-size: 12px;
+  color: #888;
+  padding: 12px 14px 4px;
+  margin: 0;
+}
+.vine-card {
+  margin: 10px 12px;
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+.vine-card-loop {
+  height: 200px;
+  background: linear-gradient(160deg, #00bf8f 0%, #0a3d32 50%, #111 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #fff;
+  position: relative;
+}
+.vine-loop-anim {
+  animation: vinePulse 2.4s ease-in-out infinite;
+}
+@keyframes vinePulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.12); }
+}
+.vine-play { opacity: 0.9; margin-right: 6px; }
+.vine-card-meta {
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #ccc;
+}
+.vine-card-actions {
+  padding: 0 10px 10px;
+  font-size: 11px;
+  color: #666;
+}
+.vine-empty-cta { text-align: center; padding: 8px; }
+.vine-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vine-topbar-actions a { color: #fffc00; font-size: 12px; text-decoration: none; }
+.vine-camera { padding: 20px 16px; text-align: center; }
+.vine-camera-hint { font-size: 12px; color: #aaa; }
+.vine-caption {
+  width: 90%;
+  padding: 10px;
+  font-size: 13px;
+  border: 0;
+  background: #222;
+  color: #fff;
+  border-radius: 4px;
+}
+.vine-hold {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 4px solid #00bf8f;
+  background: #111;
+  color: #00bf8f;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+.vine-cta {
+  display: inline-block;
+  background: #00bf8f;
+  color: #000 !important;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+.vine-progress {
+  height: 4px;
+  background: #222;
+  width: 100%;
+}
+.vine-progress [data-vine-bar] {
+  height: 100%;
+  width: 0;
+  background: #00bf8f;
+  transition: width 0.05s linear;
+}
+/* ITT feel tokens 2013 — see :root vars above */

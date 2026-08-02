@@ -6,6 +6,15 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
+
   function U() {
     return ITT.util || {};
   }
@@ -82,8 +91,8 @@
         render(doc);
         var st = doc.querySelector("[data-aws-status]");
         if (st) {
-          st.textContent =
-            "Bucket “" + name + "” created (local only) — S3 launched Mar 14, 2006.";
+          st.textContent ="Bucket “" + name + "” created (local only) — S3 launched Mar 14, 2006."
+          ittFeedback(st.textContent, st);
         }
         form.reset();
       });

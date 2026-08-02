@@ -5,6 +5,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   var STUBS = [
     { t: "Windows 7 — Microsoft", u: "http://www.microsoft.com/windows/windows-7/", snip: "The next generation of Windows. Available Oct 22, 2009." },
     { t: "Bing — Decision Engine", u: "http://www.bing.com/", snip: "Make better decisions with search that helps you decide." },
@@ -32,7 +41,10 @@
       var payload = { q: q, ts: Date.now(), searched: true };
       localStorage.setItem(storageKey(), JSON.stringify(payload));
       var st = doc.querySelector("[data-bing-status]");
-      if (st) st.textContent = "Searched: “" + q + "” · " + storageKey() + " · stub results (not live Bing)";
+      if (st) {
+        st.textContent = "Searched: “" + q + "” · " + storageKey() + " · stub results (not live Bing)";
+        ittFeedback(st.textContent, st);
+      }
       var box = doc.querySelector("[data-bing-results]");
       if (box) {
         box.style.display = "block";

@@ -120,3 +120,10 @@ table.wiki-cols { width: 100%; border-collapse: collapse; }
   text-align: center;
   font-family: Arial, sans-serif;
 }
+
+/* ITT feel tokens 2001 — XP · Wikipedia · iPod */
+:root {
+  --itt01-xp-blue: #0a246a;
+  --itt01-wiki: #000000;
+}
+

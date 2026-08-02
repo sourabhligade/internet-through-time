@@ -4,6 +4,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   function key(k) {
     if (ITT.util && ITT.util.immersionStorageKey) {
       return ITT.util.immersionStorageKey("orkut-" + k, "itt04");
@@ -85,7 +94,10 @@
           status: (form.querySelector('[name="status"]') || {}).value || "",
         });
         var st = doc.querySelector("[data-orkut-status-msg]");
-        if (st) st.textContent = "Profile saved (this browser only).";
+        if (st) {
+          st.textContent = "Profile saved (this browser only).";
+          ittFeedback(st.textContent, st);
+        }
         render(doc);
       });
     }
@@ -99,7 +111,10 @@
         friends.unshift({ name: name, about: about });
         saveFriends(friends.slice(0, 40));
         var st = doc.querySelector("[data-orkut-add-status]");
-        if (st) st.textContent = "Added " + name + " to friends.";
+        if (st) {
+          st.textContent = "Added " + name + " to friends.";
+          ittFeedback(st.textContent, st);
+        }
         add.reset();
         render(doc);
       });
