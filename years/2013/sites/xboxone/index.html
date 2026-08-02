@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Xbox One — November 22, 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body bgcolor="#107c10" text="#fff" link="#ffff99">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:520px;margin:16px auto;font-family:Segoe UI,Arial,sans-serif;font-size:13px">
+ <p style="font-size:11px"><a href="../../pages/home.html">← Start</a> · <a href="../ps4/index.html">PS4</a></p>
+ <h1 style="font-size:20px">Xbox One</h1>
+ <p><b>November 22, 2013</b> — launch in 13 markets class. Competes with <a href="../ps4/index.html" style="color:#ffff99">PlayStation 4</a> (NA Nov 15).</p>
+ <ul style="font-size:12px;line-height:1.5">
+  <li>Kinect-in-box launch package class (region residual)</li>
+  <li><b>Honesty:</b> always-online / used-game DRM controversy defined the pre-launch press cycle; policies softened toward launch</li>
+  <li>Museum densify only · <b>no real Xbox Live</b> · no storefront catalog</li>
+ </ul>
+ <p><button type="button" data-xbox-ack style="padding:8px 12px;cursor:pointer">I saw the Xbox One launch (save)</button>
+ <span data-xbox-status style="margin-left:8px;color:#cfc"></span></p>
+ <p style="font-size:11px"><code>itt13-xbox</code></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-xbox";
+  var btn = document.querySelector("[data-xbox-ack]");
+  var st = document.querySelector("[data-xbox-status]");
+  if (btn) btn.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ launch: "2013-11-22", ts: Date.now() })); } catch (e) {}
+    var msg = "Xbox One launch noted · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "xbox" });
+      }
+    } catch (e2) {}
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2012">
+<head>
+<meta charset="utf-8">
+<title>iPhone 5 — 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css">
+<script src="../../../../js/immersion-2012.js" defer></script>
+</head>
+<body bgcolor="#f2f2f2">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12" bgcolor="#ffffff" style="margin:16px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;border:1px solid #ccc">
+<tr><td>
+ <p style="font-size:12px">
+  <a href="../../pages/home.html">Start</a> ·
+  <a href="lightning.html">Lightning</a> ·
+  <a href="ios6.html">iOS 6</a> ·
+  <a href="maps.html">Maps</a> ·
+  <a href="prices.html">Prices</a> ·
+  <a href="about.html">About</a>
+ </p>
+ <h1 style="font-size:20px">iPhone 5</h1>
+ <p><b>September 12, 2012</b> announce · ship class <b>September 21</b>. Thinnest/lightest yet · <b>4-inch</b> taller Retina · <b>A6</b> · LTE · <b>Lightning</b> replaces 30-pin.</p>
+ <div class="iphone5-note">
+  <b>Also:</b> iOS 6 with Apple Maps (controversy) · Passbook · Facebook integration · Siri languages densify.
+  Residual: iPhone 4S still around.
+ </div>
+ <p><button type="button" data-iphone5-claim>I’m interested (theater)</button>
+ <span data-iphone5-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
+ <p style="font-size:11px;color:#666">Apple Newsroom 2012-09-12 · <code>itt12-iphone5</code></p>
+</td></tr>
+</table>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var KEY="itt12-iphone5";
+  var btn=document.querySelector("[data-iphone5-claim]");
+  var st=document.querySelector("[data-iphone5-status]");
+  try{if(localStorage.getItem(KEY)&&st)st.textContent="Noted · "+KEY;}catch(e){}
+  if(btn)btn.addEventListener("click",function(){
+    try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPhone 5",ts:Date.now()}));}catch(e2){}
+    if(st)st.textContent="Noted · "+KEY;
+  });
+});
+</script>
+</body>
+</html>

@@ -16,11 +16,11 @@
     );
   }
   function KEY() {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("flickr-stream", "itt04");
+    }
     var y = year();
-    if (y === "2008") return "itt08-flickr-stream";
-    if (y === "2007") return "itt07-flickr-stream";
-    if (y === "2006") return "itt06-flickr-stream";
-    if (y === "2005") return "itt05-flickr-stream";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-flickr-stream";
     return "itt04-flickr-stream";
   }
   function load() {

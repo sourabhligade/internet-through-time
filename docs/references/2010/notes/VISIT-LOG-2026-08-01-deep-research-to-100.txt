@@ -1,0 +1,108 @@
+2010 research visit log — 100% readiness pass
+==============================================
+Date: 2026-08-01 (second pass — MVP already on disk)
+Goal: Re-visit every primary source + artifact target needed to take 2010 to 100% content
+Disk truth: years/2010/ LIVE · hub open · itt10 · MVP ship · assets/period/2010/* scaffolded empty
+
+Sources visited / re-confirmed this pass
+----------------------------------------
+PRIMARY OFFICIAL
+1. Apple Newsroom 2010-01-27 iPad — FULL PR body
+   - Magical & Revolutionary · 0.5" · 1.5 lb · 9.7" IPS · A4 · 10h battery claim
+   - Wi-Fi late Mar: $499/$599/$699 (16/32/64) · Wi-Fi+3G Apr: $629/$729/$829
+   - Runs almost all >140,000 App Store apps · 12 new iPad apps · iBooks · iWork $9.99 each
+   - AT&T 3G prepaid data plans · SDK for Universal apps
+   URL: https://www.apple.com/newsroom/2010/01/27Apple-Launches-iPad/
+
+2. Apple Newsroom 2010-06-07 iPhone 4 — FULL PR body
+   - FaceTime · Retina 960×640 · 326 ppi · 5MP + LED flash · HD video · A4 · 3-axis gyro
+   - Thinnest smartphone 9.3 mm · glass + stainless steel
+   - iOS 4: Multitasking · Folders · Mail · Enterprise · iAd · 100+ features · 1500 APIs
+   - App Store: >225,000 apps · >5 billion downloads · 90 countries
+   - US ship Jun 24: $199 16GB · $299 32GB (2-yr AT&T) · 3GS 8GB $99
+   - iOS 4 free Jun 21 · pre-order Jun 15 · 88 countries by end Sep
+   URL: https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/
+
+3. Apple Newsroom 2010-06-28 iPhone 4 sales
+   - >1.7 million sold through Jun 26 · 3 days after Jun 24 launch
+   - “most successful product launch in Apple’s history” (Jobs) · supply shortage apology
+   URL: https://www.apple.com/newsroom/2010/06/28iPhone-4-Sales-Top-1-7-Million/
+
+SCALE
+4. Internet Live Stats websites table
+   - June 2010: 206,956,723 (−13% YoY) · users 2,045,865,660 · users/site 9.9
+   - Birthmarks column: Pinterest · Instagram
+   URL: https://www.internetlivestats.com/total-number-of-websites/
+
+5. Pingdom Internet 2010 in numbers (Jan 12, 2011) — FULL recap
+   - Email: 107T · 294B/day · 1.88B users · 89.1% spam
+   - Sites Dec 2010: 255M · +21.4M in year
+   - Users Jun 2010: 1.97B (+14%) · Asia 825.1M · Europe 475.1M · NA 266.2M
+   - Social: blogs 152M · tweets 25B · Twitter 175M people Sep · FB 600M (+250M) · 30B content/mo · 20M apps/day
+   - Video: YT 2B views/day · 35h/min upload
+   - Images: Flickr 5B Sep · FB 3+B photos/mo
+   URL: https://www.pingdom.com/blog/internet-2010-in-numbers/
+
+CULTURE
+6. Cybercultural “What the Internet Was Like in 2010” (MacManus 2024)
+   - Mobile apps breakthrough · Instagram pivot from Burbn · 1M by year-end
+   - iPad Apr · Flipboard Jul · Nexus One Jan
+   - Social mainstream · Pew >50% Americans on social network · FB 500M Jul · Social Network film Oct
+   - New Twitter Sep · “You don’t have to tweet” (Williams)
+   - Foursquare mayors · Gowalla competition · photos Dec
+   - China censorship · Ai Weiwei · Arab Spring seed #sidibouzid Dec
+   URL: https://cybercultural.com/p/internet-2010/
+
+PRODUCT HISTORY (search + prior freeze)
+7. Instagram — Britannica/Wikipedia: Oct 6 2010 iOS App Store · ~25k day-1 · ~1M in ~2 months · Systrom/Krieger
+8. FarmVille — Wikipedia: peak 83.76M MAU Mar 2010 · DAU peak 34.5M · CSM/Forbes period peak ~84M
+9. Facebook Open Graph / 500–600M — Cybercultural + Pingdom · Social Network Oct 1 US
+10. Google Wave — public May 19 2010 · development ends Aug 4 2010
+11. Nexus One — Jan 5 2010 US
+12. IE9 public beta — Sep 15 2010
+13. Uber — SF black-car 2010 · rename Oct · not UberX mass
+14. Pinterest — Mar 2010 beta · Live Stats birthmark
+15. Spotify US — Jul 2011 (Wired) → hard ban for 2010
+16. WDM Instagram for iPhone 2010 — screenshot gallery URL confirmed (binary harvest queued)
+    https://www.webdesignmuseum.org/iphone/instagram-for-iphone-in-2010
+17. Version Museum Facebook history — timeline reference for 2010 chrome
+18. Antennagate — Jul–Aug 2010 period press (death grip · free cases · Jobs presser)
+
+WAYBACK / ARTIFACT SEEDS (for CAPTURE execute)
+----------------------------------------------
+https://web.archive.org/web/201004*/http://www.apple.com/ipad/
+https://web.archive.org/web/201006*/http://www.apple.com/iphone/
+https://web.archive.org/web/201010*/http://instagr.am/
+https://web.archive.org/web/201007*/http://www.facebook.com/
+https://web.archive.org/web/201009*/http://twitter.com/
+https://web.archive.org/web/201006*/http://foursquare.com/
+https://web.archive.org/web/201001*/http://www.google.com/phone/
+https://web.archive.org/web/201005*/http://wave.google.com/
+https://web.archive.org/web/*/http://pinterest.com/ (2010)
+Apple Newsroom image stills (educational) for iPad / iPhone 4 heroes
+
+Disk audit (this pass)
+----------------------
+- years/2010 HTML ~333 · sites 106 · e2e ×5 green previously
+- P0 rooms live: ipad(2) iphone(2) instagram(2) appstore(2) facebook(11) foursquare(2) farmville(2)
+- Thin multipage residual: ipad/iphone/instagram/appstore often 2 pages only
+- assets/period/2010/* : dirs empty except README-AUTHENTICITY
+- Continuity logos from 2008/2009 OK when year-true
+
+Locked residual → 100% content
+------------------------------
+Layer B: densify multipage signature rooms (iPad catalog · iPhone 4 FaceTime/Antenna multipage · IG filter grid · App Store scale)
+Layer C: execute HARVEST-QUEUE H10-01…H10-08 P0 · P1 as time allows · failed-final OK
+Layer D: CAPTURE-LOG rows [wa]|[failed-final]
+Layer E: already strong e2e; re-run after harvest/wire
+Optional forever: Cablegate culture page · dual shell skins
+
+Not inventing pixels this pass — research only.
+
+Outputs
+-------
+docs/2010-DEEP-RESEARCH-100-PERCENT-PASS-2026-08-01.md
+docs/references/2010/harvest/HARVEST-QUEUE-2010.md (expanded)
+docs/TO-100-PERCENT/YEAR-2010.md (residual phases)
+docs/2010-RESEARCH.md (status refresh)
+docs/references/2010/wayback-extracts/*.txt notes

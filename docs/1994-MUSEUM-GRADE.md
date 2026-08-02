@@ -1,7 +1,9 @@
 # 1994 — Museum grade status
 
 **Date:** 2026-07-28  
-**Status:** **Leftover densify pass complete** (TO-100 #7) · hub unlocked · playable  
+**Status:** **Museum-ready** · was: **Leftover densify pass complete** (TO-100 #7) · hub unlocked · playable  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Plan:** [`TO-100-PERCENT/YEAR-1994.md`](TO-100-PERCENT/YEAR-1994.md) · freeze [`TO-100-PERCENT/RESEARCH-FREEZE-1994-1995.md`](TO-100-PERCENT/RESEARCH-FREEZE-1994-1995.md)
 
 ## Visitor outcome

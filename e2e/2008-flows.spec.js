@@ -442,31 +442,81 @@ test.describe('Flow O — MySpace', () => {
 });
 
 /* ═══════════════════════════════════════════════════════════════════════
- * Flow P — Spotify Europe (optional)
+ * Flow P — Spotify Europe
  * ═══════════════════════════════════════════════════════════════════════ */
 
-test.describe('Flow P — Spotify Europe (optional)', () => {
-  test('no US Spotify as default product room', async ({ page }) => {
-    // Optional room may not exist — About must ban US Spotify
+test.describe('Flow P — Spotify Europe', () => {
+  test('About bans US Spotify · Europe room live', async ({ page }) => {
     await page.goto('/years/2008/pages/about.html');
     await expect(page.locator('body')).toContainText(/Spotify/i);
     await expect(page.locator('body')).toContainText(/not US|Europe|2011/i);
     const res = await page.goto('/years/2008/sites/spotify/index.html');
-    // 404 or missing is OK for optional; if present must say Europe
-    if (res && res.ok()) {
-      await expect(page.locator('body')).toContainText(/Europe|not US|invite/i);
-    }
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.locator('body')).toContainText(/Europe|not US|invite/i);
+    await expect(page.locator('body')).toContainText(/not.*US public|Hard ban|2011/i);
+  });
+
+  test('Europe invite → itt08-spotify-eu', async ({ page }) => {
+    await page.goto('/years/2008/sites/spotify/index.html');
+    await page.evaluate(() => {
+      try { localStorage.removeItem('itt08-spotify-eu'); } catch (e) { /* */ }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-spotify-join]', { timeout: 15000 });
+    await page.fill('[data-spotify-invite]', 'EURO-TEST');
+    await page.click('[data-spotify-join]');
+    await page.waitForTimeout(150);
+    const raw = await page.evaluate(() => localStorage.getItem('itt08-spotify-eu'));
+    expect(raw).toBeTruthy();
+    expect(raw).toMatch(/EU|EURO|notUS|region/i);
   });
 });
 
 /* ═══════════════════════════════════════════════════════════════════════
- * Flow Q — Dropbox birthmark (optional)
+ * Flow Q — Dropbox birthmark
  * ═══════════════════════════════════════════════════════════════════════ */
 
-test.describe('Flow Q — Dropbox birthmark (optional)', () => {
-  test('Live Stats birthmark named on About', async ({ page }) => {
+test.describe('Flow Q — Dropbox birthmark', () => {
+  test('Live Stats birthmark named · room live', async ({ page }) => {
     await page.goto('/years/2008/pages/about.html');
     await expect(page.locator('body')).toContainText(/Dropbox/i);
+    const res = await page.goto('/years/2008/sites/dropbox/index.html');
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.locator('body')).toContainText(/Dropbox|birthmark|folder/i);
+  });
+
+  test('put file → itt08-dropbox-files', async ({ page }) => {
+    await page.goto('/years/2008/sites/dropbox/index.html');
+    await page.evaluate(() => {
+      try { localStorage.removeItem('itt08-dropbox-files'); } catch (e) { /* */ }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-dropbox-add]', { timeout: 15000 });
+    await page.fill('[data-dropbox-name]', 'thesis-final.doc');
+    await page.click('[data-dropbox-add]');
+    await page.waitForTimeout(150);
+    const raw = await page.evaluate(() => localStorage.getItem('itt08-dropbox-files'));
+    expect(raw).toMatch(/thesis-final/i);
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════════════════
+ * Flow P2 — Google Friend Connect (social identity stack)
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+test.describe('Flow — Google Friend Connect', () => {
+  test('enable gadget → itt08-friendconnect', async ({ page }) => {
+    await page.goto('/years/2008/sites/friendconnect/index.html');
+    await page.evaluate(() => {
+      try { localStorage.removeItem('itt08-friendconnect'); } catch (e) { /* */ }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-gfc-enable]', { timeout: 15000 });
+    await page.click('[data-gfc-enable]');
+    await page.waitForTimeout(150);
+    const raw = await page.evaluate(() => localStorage.getItem('itt08-friendconnect'));
+    expect(raw).toMatch(/enabled|opensocial/i);
+    await expect(page.locator('body')).toContainText(/OpenSocial|Facebook Connect/i);
   });
 });
 

@@ -14,7 +14,13 @@ test.describe('2002 Phase 9 pixels + P2 rooms', () => {
     await expect(page.getByText(/DVD/i).first()).toBeVisible();
     await expect(page.getByText(/stream now|watch instantly/i)).toHaveCount(0);
     await page.locator('input[type="submit"]').click();
-    await expect(page.locator('#nf-out')).toBeVisible({ timeout: 5000 });
+    // Queue theater: status + list (legacy #nf-out replaced by data-netflix-*)
+    await expect(page.locator('[data-netflix-status], [data-netflix-queue]').first()).toBeVisible({
+      timeout: 8000,
+    });
+    await expect(page.locator('[data-netflix-queue], [data-netflix-status]').first()).toContainText(
+      /Amélie|Queued|queue/i
+    );
   });
 
   test('Steam install theater', async ({ page }) => {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Facebook IPO — May 18, 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body bgcolor="#e7ebf2">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="fb-ipo">
+ <div class="fb-blue">facebook · IPO day culture</div>
+ <p style="font-size:11px;margin:8px 0">
+  <a href="index.html">Home</a> · <a href="about.html">About / 1B</a> · <a href="timeline.html">Timeline</a> · <a href="feed.html">Feed</a> ·
+  <a href="../../pages/home.html">Start</a>
+ </p>
+ <div class="fb-panel">
+  <h1 style="font-size:16px;margin:0 0 8px">Facebook goes public</h1>
+  <p><b>Friday, May 18, 2012</b> — Nasdaq ticker <b>FB</b>.</p>
+  <p class="fb-price">$38 <span style="font-size:14px;font-weight:normal;color:#666">/ share IPO price</span></p>
+  <ul style="font-size:13px;margin:8px 0 8px 18px;line-height:1.45">
+   <li>~<b>421 million</b> shares · ~<b>$16 billion</b> raised · ~<b>$104 billion</b> market-cap class (largest US tech IPO lore)</li>
+   <li>Trading planned ~<b>11:00 a.m. ET</b> · delayed to ~<b>11:30</b> (Nasdaq technical problems)</li>
+   <li>Open ~<b>$42.05</b> · day close ~<b>$38.23</b> (barely above IPO) · order confirmations chaos for retail lore</li>
+   <li>Later months: stock sinks well below $38 (not “always up” honesty)</li>
+  </ul>
+  <p style="font-size:12px">Same year: Instagram buy Apr 9 · <b>1 billion</b> MAU Oct · Timeline residual · <b>Like</b> only (no Reactions).</p>
+  <p><button type="button" data-fb-ipo-ack>I was there (save theater)</button>
+  <span data-fb-ipo-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
+  <p style="font-size:11px;color:#666">Investopedia · DealBook · CNBC · educational · no real trading · <code>itt13-fb-ipo-ack</code></p>
+ </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var btn=document.querySelector("[data-fb-ipo-ack]");
+  var st=document.querySelector("[data-fb-ipo-status]");
+  var KEY="itt13-fb-ipo-ack";
+  try{if(localStorage.getItem(KEY)&&st)st.textContent="Saved · "+KEY;}catch(e){}
+  if(btn)btn.addEventListener("click",function(){
+    try{localStorage.setItem(KEY,JSON.stringify({price:38,date:"2012-05-18",ts:Date.now()}));}catch(e2){}
+    if(st)st.textContent="Saved · $38 · "+KEY;
+  });
+});
+</script>
+</body>
+</html>

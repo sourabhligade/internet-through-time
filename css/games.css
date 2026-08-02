@@ -123,6 +123,33 @@ html, body {
   outline: 1px dotted #00c;
 }
 
+.games-card:focus-visible,
+.games-top a:focus-visible,
+.ann-cta:focus-visible,
+.games-panel a:focus-visible,
+.ann-modal button:focus-visible,
+.play-hud button:focus-visible {
+  outline: 2px solid #ffcc00;
+  outline-offset: 2px;
+}
+
+/* First-visit try path (U4) */
+.games-try-path {
+  background: #fffef0;
+  border-color: #886600;
+}
+
+.try-path-list {
+  margin: 4px 0 0;
+  padding-left: 22px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.try-path-list a {
+  color: #003399;
+}
+
 .games-card .title {
   font-weight: bold;
   font-size: 14px;

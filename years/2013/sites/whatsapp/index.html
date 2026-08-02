@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>WhatsApp — 2013 seed</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+</head>
+<body bgcolor="#ece5dd">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:480px;margin:16px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;background:#fff;padding:16px;border-radius:8px;line-height:1.45">
+ <p style="font-size:12px"><a href="../../pages/home.html">Starting Point</a> · <a href="../appstore/index.html">App Store</a> · <a href="../../pages/about.html">About 2013</a></p>
+ <h1 style="color:#075e54;margin-top:0">WhatsApp</h1>
+ <p style="background:#fff8dc;padding:8px;font-size:12px;border:1px solid #cc0">
+  <b>Seed only:</b> Incorporated <b>Feb 24, 2009</b> (Koum birthday lore) · App Store <b>May 3, 2009</b>.
+  BlackBerry client class Jun 2009. Status / “what’s up” path → messaging.
+  <b>Not</b> the global default chat of 2009 — mass is a <b>2010s</b> story.
+ </p>
+ <p>Jan Koum &amp; Brian Acton (ex-Yahoo). Early iPhone app culture — missing calls at the gym lore.
+  Sits next to the <a href="../appstore/index.html">App Store’s 50k+ apps</a> as one small status tool, not SMS killer yet.</p>
+ <p style="font-size:12px;color:#666">Ban: WhatsApp as default US / global SMS replacement in 2009.</p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
+
+<p style="max-width:480px;margin:12px auto;font-family:Helvetica,Arial,sans-serif">
+ <button type="button" data-wa-seed>Note WhatsApp 2010 seed (theater)</button>
+ <span data-wa-status style="font-size:12px;color:#060"></span>
+ <br><code style="font-size:11px">itt13-whatsapp-seed</code>
+</p>
+<script>
+(function(){
+  var KEY="itt13-whatsapp-seed";
+  var b=document.querySelector("[data-wa-seed]");
+  if(!b) return;
+  b.addEventListener("click", function(){
+    try{ localStorage.setItem(KEY, JSON.stringify({seed:true,year:2010,ts:Date.now()})); }catch(e){}
+    var st=document.querySelector("[data-wa-status]");
+    if(st) st.textContent="Saved · "+KEY+" · not mass SMS killer yet";
+  });
+})();
+</script>
+</body></html>

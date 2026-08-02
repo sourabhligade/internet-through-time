@@ -297,3 +297,159 @@ test.describe('year-signature 2005', () => {
     }
   });
 });
+
+test.describe('year-signature 2006', () => {
+  test('Twitter compose theater', async ({ page }) => {
+    await enterYear(page, '2006');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt06-tweets');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2006', 'sites/twitter/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Twitter|tweet|twttr/i, { timeout: 15000 });
+    const form = frame.locator('[data-twitter-compose]');
+    if (await form.count()) {
+      await form.locator('[data-twitter-status], textarea').first().fill('sig tweet 2006');
+      await form.evaluate((f) => f.requestSubmit());
+      await expect
+        .poll(async () => page.evaluate(() => localStorage.getItem('itt06-tweets')), { timeout: 8000 })
+        .toBeTruthy();
+    }
+  });
+});
+
+test.describe('year-signature 2007', () => {
+  test('iPhone product room', async ({ page }) => {
+    await enterYear(page, '2007');
+    await goImmersion(page, '2007', 'sites/iphone/index.html');
+    await expect(contentFrame(page).locator('body')).toContainText(/iPhone|Apple|Safari|2007/i, {
+      timeout: 15000,
+    });
+  });
+});
+
+test.describe('year-signature 2008', () => {
+  test('App Store install theater', async ({ page }) => {
+    await enterYear(page, '2008');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt08-apps');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2008', 'sites/appstore/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/App Store|app/i, { timeout: 15000 });
+    const btn = frame.locator('[data-appstore-install]').first();
+    if (await btn.count()) {
+      await btn.click();
+      await expect
+        .poll(async () => page.evaluate(() => localStorage.getItem('itt08-apps')), { timeout: 8000 })
+        .toBeTruthy();
+    }
+  });
+});
+
+test.describe('year-signature 2009', () => {
+  test('FarmVille plant → itt09-farm', async ({ page }) => {
+    await enterYear(page, '2009');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt09-farm');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2009', 'sites/farmville/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/FarmVille|plant|crop/i, { timeout: 15000 });
+    const plant = frame.locator('[data-farm-plant]').first();
+    await expect(plant).toBeVisible({ timeout: 10000 });
+    await plant.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt09-farm')), { timeout: 8000 })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2010', () => {
+  test('Instagram share → itt10-ig-posts', async ({ page }) => {
+    await enterYear(page, '2010');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt10-ig-posts');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2010', 'sites/instagram/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Instagram|filter|iOS/i, { timeout: 15000 });
+    const share = frame.locator('[data-ig-share]');
+    await expect(share).toBeVisible({ timeout: 10000 });
+    await share.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt10-ig-posts')), { timeout: 8000 })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2011', () => {
+  test('Spotify invite → itt11-spotify-invited', async ({ page }) => {
+    await enterYear(page, '2011');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt11-spotify-invited');
+        localStorage.removeItem('itt11-spotify-plan');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2011', 'sites/spotify/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Spotify|United States|July 14/i, {
+      timeout: 15000,
+    });
+    const invite = frame.locator('[data-spotify-invite]');
+    await expect(invite).toBeVisible({ timeout: 15000 });
+    await invite.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt11-spotify-invited')), {
+        timeout: 8000,
+      })
+      .toMatch(/true/i);
+  });
+});
+
+test.describe('year-signature 2012', () => {
+  test('Instagram Android install → itt12-ig-android', async ({ page }) => {
+    await enterYear(page, '2012');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt12-ig-android');
+        localStorage.removeItem('itt12-ig-platform');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2012', 'sites/instagram/android.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Android|April 3|Instagram/i, {
+      timeout: 15000,
+    });
+    const install = frame.locator('[data-ig-android-install]');
+    await expect(install).toBeVisible({ timeout: 10000 });
+    await install.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt12-ig-android')), {
+        timeout: 8000,
+      })
+      .toBe('1');
+  });
+});
+

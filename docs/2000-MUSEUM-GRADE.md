@@ -1,7 +1,9 @@
 # 2000 — Museum grade status
 
 **Date:** 2026-07-29  
-**Status:** **100% museum complete** (densify · culture residual · pixel residual closed/failed-final) · hub **unlocked**  
+**Status:** **Museum-ready** · was: **100% museum complete** (densify · culture residual · pixel residual closed/failed-final) · hub **unlocked**  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2000/` live · urlMap complete · smile required · crash thesis live · Homestar/CamWorld/kottke rooms
 
 | Companion | Role |

@@ -31,6 +31,23 @@ test.describe('games wing', () => {
     await expect(page.locator('a[href="../index.html"]').first()).toContainText(/hub|Museum/i);
   });
 
+  test('lobby try-this path + Escape closes welcome (UX U4)', async ({ page }) => {
+    await page.goto('/games/index.html');
+    // Fresh welcome: clear dismiss key then reload
+    await page.evaluate(() => {
+      try { localStorage.removeItem('itt-games-ann-dismissed'); } catch (e) { /* */ }
+    });
+    await page.reload();
+    const modal = page.locator('#ann-welcome:not(.hidden)');
+    if (await modal.isVisible().catch(() => false)) {
+      await page.keyboard.press('Escape');
+      await expect(page.locator('#ann-welcome')).toHaveClass(/hidden/);
+    }
+    await expect(page.locator('.games-try-path')).toBeVisible();
+    await expect(page.locator('.games-try-path')).toContainText(/HoverChop|Miniclip|Club Penguin/i);
+    await expect(page.locator('a[href="play/heli.html"]').first()).toBeVisible();
+  });
+
   test('hub CTA to games wing', async ({ page }) => {
     await page.goto('/');
     const link = page.locator('a[href="games/index.html"], a[href*="games/index.html"]');

@@ -14,11 +14,11 @@
     );
   }
   function storageKey() {
-    if (year() === "2004") return "itt04-itunes-library";
-    if (year() === "2008") return "itt08-itunes-library";
-    if (year() === "2007") return "itt07-itunes-library";
-    if (year() === "2006") return "itt06-itunes-library";
-    if (year() === "2005") return "itt05-itunes-library";
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("itunes-library", "itt03");
+    }
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-itunes-library";
     return "itt03-itunes-library";
   }
 

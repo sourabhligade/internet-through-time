@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Touch ID — iPhone 5s · 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body class="ios7-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:400px;margin:20px auto;padding:12px;text-align:center">
+ <p style="font-size:11px;text-align:left"><a href="index.html">← iPhone 5s</a> · <a href="ios7.html">iOS 7</a></p>
+ <h1 style="font-size:18px;font-weight:300">Touch ID</h1>
+ <p style="font-size:13px">iPhone <b>5s</b> (Sep 20, 2013) — fingerprint sensor in the Home button. Unlock and Apple purchases class. Ships with <b>iOS 7</b> and <b>A7</b> 64-bit chip.</p>
+ <div style="width:80px;height:80px;margin:20px auto;border-radius:40px;border:3px solid #007aff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#007aff">Home</div>
+ <p><button type="button" data-touchid-enroll style="padding:10px 16px;background:#007aff;color:#fff;border:0;border-radius:8px;cursor:pointer">Enroll fingerprint (theater)</button></p>
+ <div data-touchid-status style="font-size:12px;color:#060;min-height:1.3em"></div>
+ <p style="font-size:11px;color:#666"><code>itt13-touchid</code> · not Face ID</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-touchid";
+  var btn = document.querySelector("[data-touchid-enroll]");
+  var st = document.querySelector("[data-touchid-status]");
+  try { if (localStorage.getItem(KEY) && st) st.textContent = "Enrolled · " + KEY; } catch (e) {}
+  if (btn) btn.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ enrolled: true, device: "iphone-5s", ts: Date.now() })); } catch (e2) {}
+    var msg = "Touch ID enrolled · theater · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "touchid" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
+</body>
+</html>

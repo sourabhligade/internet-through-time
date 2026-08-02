@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2012">
+<head><meta charset="utf-8"><title>Windows 8 — 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css"><script src="../../../../js/immersion-2012.js" defer></script></head>
+<body class="win8-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<p style="font-size:12px"><a href="../../pages/home.html">Start (museum)</a> · <a href="ie10.html">IE 10</a> · <a href="about.html">About</a></p>
+<h1 style="font-size:22px;font-weight:normal">Start</h1>
+<p style="font-size:12px;opacity:0.9">Windows 8 retail GA <b>October 26, 2012</b> · Start screen · live tiles · not January mass default (Win7 residual honesty)</p>
+<div>
+ <div class="tile mail" data-win8-tile="Mail">Mail</div>
+ <div class="tile ie" data-win8-tile="Internet Explorer">Internet Explorer</div>
+ <div class="tile store" data-win8-tile="Store">Store</div>
+ <div class="tile photos" data-win8-tile="Photos">Photos</div>
+ <div class="tile desktop" data-win8-tile="Desktop">Desktop<br><span style="font-size:11px;font-weight:normal">classic apps still live here</span></div>
+</div>
+<p data-win8-status style="font-size:12px;margin-top:12px"></p>
+<p style="font-size:11px;opacity:0.7">Microsoft PR · tile theater · <code>itt12-win8-tour</code> · educational</p>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var KEY="itt12-win8-tour";
+  var st=document.querySelector("[data-win8-status]");
+  var tiles=document.querySelectorAll("[data-win8-tile]");
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")||[];}catch(e){return[];}}
+  function save(list){try{localStorage.setItem(KEY,JSON.stringify(list.slice(0,20)));}catch(e){}}
+  for(var i=0;i<tiles.length;i++){
+    tiles[i].addEventListener("click",function(ev){
+      var name=ev.currentTarget.getAttribute("data-win8-tile")||"Tile";
+      var list=load(); list.unshift({tile:name,ts:Date.now()}); save(list);
+      if(st) st.textContent="Opened "+name+" (theater) · "+KEY;
+    });
+  }
+});
+</script>
+</body>
+</html>

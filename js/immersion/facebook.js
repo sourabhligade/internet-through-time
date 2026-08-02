@@ -19,11 +19,11 @@
     );
   }
   function KEY() {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("thefacebook", "itt04");
+    }
     var y = year();
-    if (y === "2008") return "itt08-thefacebook";
-    if (y === "2007") return "itt07-thefacebook";
-    if (y === "2006") return "itt06-thefacebook";
-    if (y === "2005") return "itt05-thefacebook";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-thefacebook";
     return "itt04-thefacebook";
   }
   function feedKey() {
@@ -31,9 +31,7 @@
       return ITT.util.immersionStorageKey("fb-feed", "itt06");
     }
     var y = year();
-    if (y === "2008") return "itt08-fb-feed";
-    if (y === "2007") return "itt07-fb-feed";
-    if (y === "2006") return "itt06-fb-feed";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-fb-feed";
     return "itt05-fb-feed";
   }
   function load() {
@@ -93,11 +91,19 @@
     localStorage.setItem(appsKey(), JSON.stringify(list));
   }
   function defaultProfile() {
-    if (year() === "2008" || year() === "2007" || year() === "2006") {
+    var y = year();
+    if (y >= "2006") {
+      var status = "joined Facebook";
+      if (y === "2007") status = "using Facebook Platform apps";
+      else if (y === "2008") status = "using Facebook Connect";
+      else if (y === "2009") status = "Liking everything · FarmVille later";
+      else if (y === "2010") status = "Open Graph · Like everywhere";
+      else if (y === "2011") status = "Timeline · real names era";
+      else if (y === "2012") status = "IPO year · 1B users";
       return {
         name: "You",
         school: "Regional network",
-        status: (year() === "2008" || year() === "2007") ? (year() === "2008" ? "using Facebook Connect" : "using Facebook Platform apps") : "joined Facebook",
+        status: status,
         friends: ["High school friend", "College roommate", "Work buddy", "Cousin"]
       };
     }
@@ -316,6 +322,61 @@
       });
     }
 
+
+    /* 2009 Like button theater */
+    function likesKey() {
+      if (ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("fb-likes", "itt09");
+      }
+      return "itt09-fb-likes";
+    }
+    function loadLikes() {
+      try { return JSON.parse(localStorage.getItem(likesKey()) || "{}") || {}; }
+      catch (e) { return {}; }
+    }
+    function saveLikes(map) {
+      localStorage.setItem(likesKey(), JSON.stringify(map));
+    }
+    function renderLikes(doc) {
+      var map = loadLikes();
+      var nodes = doc.querySelectorAll("[data-fb-like]");
+      var i;
+      for (i = 0; i < nodes.length; i++) {
+        var id = nodes[i].getAttribute("data-fb-like") || "post";
+        var n = map[id] || 0;
+        var countEl = doc.querySelector('[data-fb-like-count="' + id + '"]');
+        if (countEl) countEl.textContent = String(n);
+        nodes[i].textContent = n ? "Unlike" : "Like";
+      }
+    }
+    renderLikes(doc);
+    var likeBtns = doc.querySelectorAll("[data-fb-like]");
+    var li;
+    for (li = 0; li < likeBtns.length; li++) {
+      if (likeBtns[li].getAttribute("data-like-bound") === "1") continue;
+      likeBtns[li].setAttribute("data-like-bound", "1");
+      likeBtns[li].addEventListener("click", function (ev) {
+        var id = ev.currentTarget.getAttribute("data-fb-like") || "post";
+        var map = loadLikes();
+        map[id] = (map[id] || 0) + 1;
+        saveLikes(map);
+        renderLikes(doc);
+        var msg = "Liked · " + likesKey() + " · this browser only";
+        var st = doc.querySelector("[data-fb-like-status]");
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, {
+            doc: doc,
+            status: st,
+            kind: "fb-like",
+            flash: true
+          });
+        } else if (ITT._immersionApi && ITT._immersionApi.showFlash) {
+          ITT._immersionApi.showFlash(msg);
+        }
+      });
+    }
+
     var login = doc.querySelector("[data-fb-login]");
     if (login) {
       login.addEventListener("submit", function (ev) {
@@ -369,6 +430,69 @@
           })
           .join("");
       }
+    }
+    /* 2011 Timeline + algorithmic feed theater */
+    function tlKey() {
+      if (ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("fb-timeline", "itt11");
+      }
+      return "itt" + year().slice(2) + "-fb-timeline";
+    }
+    function feedModeKey() {
+      if (ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("fb-feed-mode", "itt11");
+      }
+      return "itt" + year().slice(2) + "-fb-feed-mode";
+    }
+    var tlEnable = doc.querySelector("[data-fb-timeline-enable]");
+    var tlStatus = doc.querySelector("[data-fb-timeline-status]");
+    if (tlEnable) {
+      try {
+        if (localStorage.getItem(tlKey()) === "1" && tlStatus) {
+          tlStatus.innerHTML = "Timeline <b>on</b> for this profile (museum · this browser).";
+        }
+      } catch (eTl) { /* */ }
+      tlEnable.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        try {
+          localStorage.setItem(tlKey(), "1");
+        } catch (e2) { /* */ }
+        if (tlStatus) {
+          tlStatus.innerHTML =
+            "Timeline enabled · life story profile · Wall effectively retired (Sep 22, 2011 F8 class).";
+        }
+        if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
+          ITT._immersionApi.markTourProgress();
+        }
+        if (ITT._immersionApi && ITT._immersionApi.showFlash) {
+          ITT._immersionApi.showFlash("Facebook Timeline on (this browser).");
+        }
+      });
+    }
+    var modeBtns = doc.querySelectorAll("[data-fb-feed-mode]");
+    var modeStatus = doc.querySelector("[data-fb-feed-mode-status]");
+    function showMode() {
+      var m = "top";
+      try {
+        m = localStorage.getItem(feedModeKey()) || "top";
+      } catch (eM) { /* */ }
+      if (modeStatus) {
+        modeStatus.innerHTML =
+          m === "recent"
+            ? "Feed mode: <b>Most Recent</b> (closer to chrono)."
+            : "Feed mode: <b>Top Stories</b> (algorithmic “personal newspaper” era begins).";
+      }
+    }
+    showMode();
+    for (var mi = 0; mi < modeBtns.length; mi++) {
+      modeBtns[mi].addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var mode = ev.currentTarget.getAttribute("data-fb-feed-mode") || "top";
+        try {
+          localStorage.setItem(feedModeKey(), mode);
+        } catch (e3) { /* */ }
+        showMode();
+      });
     }
   }
   function register() {

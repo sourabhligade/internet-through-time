@@ -83,14 +83,24 @@
       list.unshift({ title: title, ts: Date.now() });
       save(list.slice(0, 40));
       var st = doc.querySelector("[data-netflix-status]");
+      var msg =
+        "Queued: " + title + " · " + storageKey() + " · DVD mail theater only";
       if (st) {
         st.style.display = "block";
+        st.setAttribute("data-allow-html", "1");
         st.innerHTML =
           "<b>Queued:</b> " +
           esc(title) +
           " · saved in <code>" +
           esc(storageKey()) +
           "</code>. Envelope ships in museum time only — no real DVD.";
+      }
+      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, {
+          doc: doc,
+          status: st,
+          kind: "netflix-queue"
+        });
       }
       renderQueue(doc);
       if (input) input.value = "";

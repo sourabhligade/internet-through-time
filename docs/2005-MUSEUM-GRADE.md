@@ -1,7 +1,9 @@
 # 2005 — Museum grade status
 
 **Date:** 2026-07-31  
-**Status:** **100% museum complete** + residual closed 2026-07-30 + **Phase 15/16 implement pass 2026-07-31** (thin densify · MDH · Memeorandum · Skype) · hub **unlocked**  
+**Status:** **Museum-ready** · was: **100% museum complete** + residual closed 2026-07-30 + **Phase 15/16 implement pass 2026-07-31** (thin densify · MDH · Memeorandum · Skype) · hub **unlocked**  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2005/` live · **~266 HTML · ~75 rooms** · urlMap complete · P0 YouTube · Maps · Reddit · Digg · logos **WA**
 
 | Companion | Role |

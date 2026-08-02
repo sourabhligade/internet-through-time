@@ -111,9 +111,98 @@
       }
     }
 
+    /**
+     * Action feedback kit — every signature click must *feel* saved.
+     * 1) period flash bar  2) nearest status node  3) aria-live region
+     * opts: { status, statusSelector, flash:bool, ms, doc, kind }
+     */
+    function stripHtml(s) {
+      return String(s || "")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/\s+/g, " ")
+        .replace(/^\s+|\s+$/g, "");
+    }
+
+    function ensureActionLive(doc) {
+      doc = doc || document;
+      var live = doc.getElementById("itt-action-live");
+      if (live) return live;
+      live = doc.createElement("div");
+      live.id = "itt-action-live";
+      live.className = "itt-action-live";
+      live.setAttribute("role", "status");
+      live.setAttribute("aria-live", "polite");
+      live.setAttribute("aria-atomic", "true");
+      /* Visually minimal — screen readers + optional CSS highlight */
+      live.style.cssText =
+        "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;";
+      if (doc.body) doc.body.appendChild(live);
+      return live;
+    }
+
+    function resolveStatusNode(doc, opts) {
+      opts = opts || {};
+      doc = doc || document;
+      if (opts.status && opts.status.nodeType === 1) return opts.status;
+      if (opts.statusSelector) {
+        var bySel = doc.querySelector(opts.statusSelector);
+        if (bySel) return bySel;
+      }
+      var defaults = [
+        "[data-itt-action-status]",
+        "[data-fb-like-status]",
+        "[data-fb-feed-status]",
+        "[data-fb-save-status]",
+        "[data-ig-status]",
+        "[data-pin-status]",
+        "[data-yt-status]",
+        "[data-spotify-status]",
+        "[data-snap-status]",
+        "[data-uber-status]",
+        "[data-maps-status]",
+        "[data-cart-flash]",
+        "#cart-flash"
+      ];
+      var i;
+      for (i = 0; i < defaults.length; i++) {
+        var n = doc.querySelector(defaults[i]);
+        if (n) return n;
+      }
+      return null;
+    }
+
+    function actionFeedback(message, opts) {
+      opts = opts || {};
+      var doc = opts.doc || document;
+      var html = String(message || "Saved (this browser only).");
+      var plain = stripHtml(html);
+      var st = resolveStatusNode(doc, opts);
+      if (st) {
+        /* Prefer text for status lines (safe); allow HTML if data-allow-html=1 */
+        if (st.getAttribute("data-allow-html") === "1") st.innerHTML = html;
+        else st.textContent = plain;
+        st.setAttribute("data-itt-feedback", "1");
+        st.className = (st.className || "").replace(/\bitt-status-pulse\b/g, "") + " itt-status-pulse";
+      }
+      try {
+        var live = ensureActionLive(doc);
+        live.textContent = plain;
+      } catch (eLive) { /* */ }
+      if (opts.flash !== false) {
+        showFlash(html, { ms: opts.ms != null ? opts.ms : 5500 });
+      }
+      try {
+        api.lastActionFeedback = { message: plain, kind: opts.kind || "", ts: Date.now() };
+        if (typeof ITT !== "undefined") ITT.lastActionFeedback = api.lastActionFeedback;
+      } catch (eLast) { /* */ }
+      return plain;
+    }
+
     api.periodEra = periodEra;
     api.periodFace = periodFace;
     api.periodTitleBg = periodTitleBg;
+    api.actionFeedback = actionFeedback;
+    api.resolveStatusNode = resolveStatusNode;
 
     /* ---------- UX: guided tour ---------- */
     function tourStateKey() {
@@ -298,9 +387,17 @@
          Site pages still get the wayfinding bar. */
       var onHome = here.indexOf("/pages/home") !== -1;
       var skipBar = onHome;
+      var homeHref = R("pages/home.html");
 
       function active(frag) {
         return here.indexOf(frag) !== -1 ? " itt-nav-on" : "";
+      }
+
+      function isHomeNavItem(item) {
+        if (!item) return false;
+        var h = String(item.href || "");
+        var lab = String(item.label || "").toLowerCase();
+        return h.indexOf("pages/home") !== -1 || lab === "start" || lab === "home" || lab.indexOf("starting") !== -1;
       }
 
       if (!skipBar) {
@@ -308,20 +405,26 @@
         for (var i = 0; i < config.nav.length; i++) {
           var item = config.nav[i];
           var on = active(item.match || item.href);
+          var homeCls = isHomeNavItem(item) ? " itt-nav-start" : "";
           /* Site directory strip — wayfinding only, not a museum badge */
           links.push(
-            '<a class="itt-nav' + on + '" href="' + R(item.href) + '">' +
-              '<font color="' + (on ? "#FFFFFF" : "#FFFF99") + '">' +
-              escapeHtml(item.label) + "</font></a>"
+            '<a class="itt-nav' + homeCls + on + '" href="' + R(item.href) + '">' +
+              '<font color="' + (on || homeCls ? "#FFFFFF" : "#FFFF99") + '">' +
+              (homeCls ? "<b>" + escapeHtml(item.label) + "</b>" : escapeHtml(item.label)) +
+              "</font></a>"
           );
         }
         var bar = document.createElement("div");
         bar.id = "itt-exhibit-nav";
-        /* Right side: era subtitle only (first nav link is already Start/Home) */
-        var right = escapeHtml(config.navSubtitle || "");
-        if (!right) {
-          right =
-            '<a href="' + R("pages/home.html") + '"><font color="#FFFFFF">Home</font></a>';
+        /* Right side: ALWAYS a clear path back to Starting Point (subtitle is secondary) */
+        var right =
+          '<a class="itt-nav-home" href="' + homeHref + '" title="Back to this year\'s Starting Point">' +
+          '<font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b>← Starting Point</b></font></a>';
+        if (config.navSubtitle) {
+          right +=
+            ' <font color="#99CCFF" face="Arial, Helvetica, sans-serif" size="1"> · ' +
+            escapeHtml(config.navSubtitle) +
+            "</font>";
         }
         bar.innerHTML =
           '<table width="100%" cellpadding="3" cellspacing="0" border="0" bgcolor="#000080">' +
@@ -329,9 +432,9 @@
           '<font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">' +
           links.join(" &nbsp;|&nbsp; ") +
           "</font></td>" +
-          '<td align="right" nowrap><font face="Arial, Helvetica, sans-serif" size="1" color="#99CCFF">' +
+          '<td align="right" nowrap class="itt-nav-home-cell">' +
           right +
-          "</font></td></tr></table>";
+          "</td></tr></table>";
         var slot = document.getElementById("itt-nav-slot");
         if (slot) {
           slot.innerHTML = "";
@@ -353,28 +456,93 @@
         }
       }
 
+      /* Sticky wayfind: always reachable exit to year landing (not on Starting Point) */
+      if (!onHome && !document.getElementById("itt-wayfind")) {
+        /* Inline CSS so 1994 Mosaic + every year get the bar (not only period-1995 chain) */
+        if (!document.getElementById("itt-wayfind-css")) {
+          var st = document.createElement("style");
+          st.id = "itt-wayfind-css";
+          st.type = "text/css";
+          st.appendChild(
+            document.createTextNode(
+              "#itt-wayfind{position:fixed;left:0;right:0;bottom:0;z-index:9999;" +
+                "display:block;text-align:center;padding:7px 12px;background:#000080;color:#fff;" +
+                "font-family:Arial,Helvetica,sans-serif;font-size:12px;border-top:2px solid #99ccff;}" +
+              "#itt-wayfind a{color:#ffff99;font-weight:bold;text-decoration:underline;margin:0 4px;}" +
+              "#itt-wayfind a.itt-wayfind-home{color:#fff;background:#000060;border:1px solid #99ccff;" +
+                "text-decoration:none;padding:3px 10px;display:inline-block;}" +
+              "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
+              "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
+              "body.has-itt-wayfind{padding-bottom:48px !important;}" +
+              "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
+                "background:#000060;text-decoration:none !important;}" +
+              "#itt-exhibit-nav a.itt-nav-home:hover{background:#0000aa;}"
+            )
+          );
+          (document.head || document.documentElement).appendChild(st);
+        }
+        var way = document.createElement("div");
+        way.id = "itt-wayfind";
+        way.setAttribute("role", "navigation");
+        way.setAttribute("aria-label", "Back to Starting Point");
+        var wayInner =
+          '<a class="itt-wayfind-home" href="' + homeHref + '">← Starting Point</a>' +
+          '<span class="itt-wayfind-sep" aria-hidden="true"> · </span>' +
+          '<a class="itt-wayfind-top" href="#itt-exhibit-nav">Top of page</a>';
+        try {
+          if (window.self === window.top) {
+            var y0 = (location.pathname || "").indexOf("/years/");
+            var hub0 = y0 !== -1 ? location.pathname.slice(0, y0) + "/index.html" : "../../../index.html";
+            wayInner +=
+              '<span class="itt-wayfind-sep" aria-hidden="true"> · </span>' +
+              '<a class="itt-wayfind-hub" href="' + hub0 + '">Year menu</a>';
+          }
+        } catch (eWay) { /* */ }
+        way.innerHTML = wayInner;
+        document.body.appendChild(way);
+        /* Room for sticky bar so last content is not covered */
+        try {
+          document.body.className = (document.body.className || "") + " has-itt-wayfind";
+        } catch (eCls) { /* */ }
+      }
+
       if (config.footerNav && config.footerNav.length && !document.getElementById("itt-exhibit-foot")) {
         var foot = document.createElement("div");
         foot.id = "itt-exhibit-foot";
         var fl = [];
+        /* Lead with Starting Point so visitors never hunt for it */
+        fl.push(
+          '<a class="itt-foot-home" href="' + homeHref + '"><b>← Starting Point</b></a>'
+        );
         for (var f = 0; f < config.footerNav.length; f++) {
-          fl.push('<a href="' + R(config.footerNav[f].href) + '">' + escapeHtml(config.footerNav[f].label) + "</a>");
+          var flab = config.footerNav[f].label || "";
+          var fhref = config.footerNav[f].href || "";
+          /* Skip duplicate Starting Point / Start entries from config */
+          if (/starting point|^start$|^home$/i.test(flab) || String(fhref).indexOf("pages/home") !== -1) {
+            continue;
+          }
+          fl.push('<a href="' + R(fhref) + '">' + escapeHtml(flab) + "</a>");
         }
         /* Standalone (not inside desktop iframe): offer return to year menu / hub */
         try {
           if (window.self === window.top) {
             var yi = (location.pathname || "").indexOf("/years/");
             var hub = yi !== -1 ? location.pathname.slice(0, yi) + "/index.html" : "../../../index.html";
-            fl.push('<a href="' + hub + '" id="itt-year-menu-link">Year menu</a>');
+            fl.push('<a href="' + hub + '" id="itt-year-menu-link"><b>Year menu</b></a>');
           }
         } catch (eTop) { /* */ }
-        foot.innerHTML = '<hr><p align="center"><font size="2">' + fl.join(" · ") + "</font></p>";
+        foot.innerHTML =
+          '<hr><p align="center" class="itt-exhibit-foot-line"><font size="2">' +
+          fl.join(" · ") +
+          "</font></p>";
         document.body.appendChild(foot);
       }
     }
 
 
     api.showFlash = showFlash;
+    api.actionFeedback = actionFeedback;
+    api.resolveStatusNode = resolveStatusNode;
     api.markTourProgress = markTourProgress;
     api.renderCounter = renderCounter;
     api.renderTour = renderTour;

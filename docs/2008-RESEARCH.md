@@ -1,12 +1,15 @@
 # 2008 Research Dossier — The Internet Through Time
 
-**Status:** Research freeze **[x]** · **MVP implement [x]** (2026-07-31) · hub **1994–2008** · `years/2008/` · `itt08`  
-**Deep research:** [`2008-DEEP-RESEARCH-FRESH-2026-07-31.md`](2008-DEEP-RESEARCH-FRESH-2026-07-31.md)  
-**Goals · phases · flows (clear + period flows A–T):** [`2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
-**Implement bible (long):** [`2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md) · checklist [`2008-IMPLEMENT-PHASES-CLEAR-2026-07-31.md`](2008-IMPLEMENT-PHASES-CLEAR-2026-07-31.md)  
+**Status:** Research freeze **[x]** · **densify ship [x]** (2026-08-01) · hub **1994–2008** · `years/2008/` · `itt08`  
+**★ Master bible (goals · phases · flows · sources · how-to):** [`2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
+**Deep research (long web harvest):** [`2008-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md`](2008-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md)  
+**Deep research (earlier):** [`2008-DEEP-RESEARCH-FRESH-2026-07-31.md`](2008-DEEP-RESEARCH-FRESH-2026-07-31.md)  
+**Goals · phases · flows (clear):** [`2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
+**Implement bible (older long):** [`2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md) · checklist [`2008-IMPLEMENT-PHASES-CLEAR-2026-07-31.md`](2008-IMPLEMENT-PHASES-CLEAR-2026-07-31.md)  
 **Connections:** [`2008-CONNECTIONS-AND-TRAILS.md`](2008-CONNECTIONS-AND-TRAILS.md)  
+**Capture / artifacts:** [`references/2008/CAPTURE-LOG.md`](references/2008/CAPTURE-LOG.md) · [`ARTIFACTS-MAP.md`](references/2008/ARTIFACTS-MAP.md)  
 **Parent:** 2007 museum densify complete (iPhone Safari · open Gmail · Street View · FB Platform · Twitter SXSW)  
-**Next:** optional residual densify (Spotify Europe · Dropbox room · WA pixels)  
+**Next:** optional **WA pixel harvest** only (App Store · Chrome · G1 · Hulu · Dropbox logos)  
 
 ## One-line thesis
 

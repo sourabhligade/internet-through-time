@@ -5,6 +5,9 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
   function key(k) {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("orkut-" + k, "itt04");
+    }
     return "itt04-orkut-" + k;
   }
   function loadFriends() {

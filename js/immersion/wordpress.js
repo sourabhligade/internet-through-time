@@ -14,11 +14,11 @@
     );
   }
   function tag() {
-    if (year() === "2004") return "itt04";
-    if (year() === "2008") return "itt08";
-    if (year() === "2007") return "itt07";
-    if (year() === "2006") return "itt06";
-    if (year() === "2005") return "itt05";
+    if (ITT.util && ITT.util.immersionStoragePrefix) {
+      return ITT.util.immersionStoragePrefix("itt03");
+    }
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
     return "itt03";
   }
   function postsKey() {

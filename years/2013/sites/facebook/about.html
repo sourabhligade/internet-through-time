@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>About Facebook 2012 — 1 billion users</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body bgcolor="#e7ebf2">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="fb-ipo">
+ <div class="fb-blue">facebook</div>
+ <div class="fb-panel">
+  <p><a href="ipo.html">← IPO</a> · <a href="timeline.html">Timeline</a> · <a href="feed.html">Feed</a></p>
+  <h1 style="font-size:16px">One billion monthly active users</h1>
+  <p><b>October 2012</b> (Zuckerberg announcement class) — <b>1 billion</b> people use Facebook each month.
+  ~<b>600 million</b> mobile users class at the milestone. IPO was May 18 · Instagram bought April 9.</p>
+  <p><button type="button" data-fb-1b-ack>Mark 1B milestone (save)</button>
+  <span data-fb-1b-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
+  <p style="font-size:11px;color:#666">Guardian Oct 4 2013 · Pingdom · <code>itt13-fb-1b-ack</code> · Like only (no Reactions)</p>
+ </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var btn=document.querySelector("[data-fb-1b-ack]");
+  var st=document.querySelector("[data-fb-1b-status]");
+  var KEY="itt13-fb-1b-ack";
+  try{if(localStorage.getItem(KEY)&&st)st.textContent="Saved · "+KEY;}catch(e){}
+  if(btn)btn.addEventListener("click",function(){
+    try{localStorage.setItem(KEY,JSON.stringify({mau:1000000000,ts:Date.now()}));}catch(e2){}
+    if(st)st.textContent="Saved · 1B · "+KEY;
+  });
+});
+</script>
+</body>
+</html>

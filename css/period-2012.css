@@ -1,0 +1,177 @@
+/* 2012 — Win7/Chrome · visual web · Instagram · Pinterest · Metro · Lightning */
+@import url("period-2011.css");
+
+body.year-2012 .itt-year-chip {
+  color: #517fa4;
+  border-bottom-color: #e60023;
+}
+
+/* Instagram 2012 */
+.ig-2012 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #262626;
+  font-size: 13px;
+  max-width: 480px;
+  margin: 12px auto;
+  padding: 12px;
+}
+.ig-2012 a { color: #003569; }
+.ig-2012 .ig-bar {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 10px 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.ig-2012 .ig-card {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  margin: 12px 0;
+  padding: 12px;
+}
+.ig-2012 .ig-filter {
+  display: inline-block;
+  border: 1px solid #dbdbdb;
+  padding: 4px 8px;
+  margin: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  background: #fff;
+}
+.ig-2012 .ig-filter.on { border-color: #3897f0; color: #3897f0; }
+.ig-2012 .ig-warn {
+  background: #fff8e6;
+  border: 1px solid #e6c200;
+  padding: 8px;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* Pinterest 2012 */
+.pin-2012 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f7f5f5;
+  color: #333;
+  font-size: 13px;
+}
+.pin-2012 a { color: #e60023; }
+.pin-2012 .pin-top {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 16px;
+}
+.pin-2012 .pin-logo { color: #e60023; font-weight: bold; font-size: 20px; }
+.pin-2012 .pin-grid { max-width: 900px; margin: 12px auto; padding: 8px; }
+.pin-2012 .pin-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  margin: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 12px;
+}
+.pin-2012 .pin-thumb {
+  height: 140px;
+  background: #eee;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  text-align: center;
+  line-height: 140px;
+  color: #999;
+  font-size: 28px;
+}
+
+/* Facebook IPO */
+.fb-ipo {
+  font-family: "lucida grande", Tahoma, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  background: #e7ebf2;
+  color: #333;
+  max-width: 640px;
+  margin: 16px auto;
+  padding: 12px;
+}
+.fb-ipo .fb-blue {
+  background: #3b5998;
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+.fb-ipo .fb-panel {
+  background: #fff;
+  border: 1px solid #c4cde0;
+  padding: 12px;
+  margin-top: 10px;
+}
+.fb-ipo .fb-price {
+  font-size: 28px;
+  color: #3b5998;
+  font-weight: bold;
+}
+
+/* Windows 8 Metro theater */
+.win8-shell {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #00188f;
+  color: #fff;
+  min-height: 400px;
+  padding: 16px;
+  font-size: 13px;
+}
+.win8-shell a { color: #9cf; }
+.win8-shell .tile {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: 6px;
+  padding: 10px;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.win8-shell .tile.mail { background: #0072c6; }
+.win8-shell .tile.ie { background: #00bcf2; }
+.win8-shell .tile.store { background: #00a300; }
+.win8-shell .tile.photos { background: #8c0095; }
+.win8-shell .tile.desktop { background: #2d89ef; width: 252px; }
+
+/* iPhone 5 / Lightning */
+.iphone5-note {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 13px;
+}
+.maps-warn {
+  background: #fee;
+  border: 1px solid #c66;
+  padding: 10px;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* Chrome war */
+.chrome-2012 {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 640px;
+  margin: 16px auto;
+  font-size: 13px;
+  background: #fff;
+  color: #222;
+}
+.chrome-2012 h1 { color: #4285f4; }
+.chrome-2012 .chip {
+  display: inline-block;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  margin: 4px;
+}

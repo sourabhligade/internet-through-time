@@ -171,6 +171,7 @@ body {
   color: #000080;
   margin: 14px 0 4px;
   padding: 0 2px;
+  scroll-margin-top: 8px;
 }
 
 .era-note {
@@ -236,6 +237,122 @@ body {
   font-size: 12px;
   margin: 12px 0 4px;
   color: #000;
+}
+
+/* —— Compact first-run how-to (U1) —— */
+.how-quick {
+  background: #ffffee;
+  border: 2px solid;
+  border-color: #dfdfdf #808000 #808000 #dfdfdf;
+  padding: 8px 12px 10px;
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.how-quick-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  color: #000080;
+}
+
+.how-quick-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.45;
+  color: #222;
+}
+
+.how-quick-list li {
+  margin-bottom: 6px;
+}
+
+.how-quick-list a {
+  color: #000080;
+}
+
+.how-nav-map {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+  color: #222;
+}
+
+.how-nav-map li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.how-nav-cheat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 4px;
+}
+
+.how-nav-pill {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.35;
+  padding: 4px 8px;
+  background: #e8eef8;
+  border: 1px solid #99b;
+  color: #000040;
+}
+
+.how-quick-more {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #444;
+}
+
+.how-quick-more a {
+  color: #000080;
+}
+
+/* Era jump chips under directory title */
+.era-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 8px;
+  padding: 0 2px;
+}
+
+.era-jump-chip {
+  display: inline-block;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  padding: 3px 9px;
+  background: #d4d0c8;
+}
+
+.era-jump-chip:hover {
+  background: #e8e4d8;
+}
+
+.era-jump-chip:focus-visible,
+.start-btn:focus-visible,
+.year-card:focus-visible,
+.how-quick a:focus-visible,
+.hub-footer a:focus-visible {
+  outline: 2px solid #000080;
+  outline-offset: 2px;
+}
+
+.era-anchor {
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  scroll-margin-top: 12px;
 }
 
 .how {
@@ -957,7 +1074,157 @@ body {
   color: #0d47a1;
 }
 
-.year-card.available:not(.y1996):not(.y1999):not(.y2007):not(.y2008):hover .year {
+/* 2009 — social blue + FarmVille green + Bing teal */
+.y2009 {
+  --card-accent: #3b5998;
+}
+.y2009::before {
+  background: linear-gradient(90deg, #3b5998, #00aeef 45%, #7cb342 75%, #008373);
+  opacity: 0.9;
+}
+.y2009 .year-card-inner {
+  border-color: #c5cae9;
+}
+.y2009 .year {
+  color: #1a237e;
+}
+.y2009 .label {
+  color: #222;
+}
+.y2009 .era-chip {
+  background: #e8eaf6;
+  color: #1a237e;
+  border: 1px solid #9fa8da;
+}
+.y2009 .meta {
+  color: #283593;
+}
+.y2009 .motif {
+  background: radial-gradient(circle at 25% 30%, rgba(59, 89, 152, 0.28), transparent 55%),
+    radial-gradient(circle at 75% 65%, rgba(124, 179, 66, 0.22), transparent 50%);
+}
+.y2009:hover,
+.y2009:focus {
+  box-shadow: 0 4px 16px rgba(59, 89, 152, 0.28);
+}
+.y2009.available:hover .year,
+.y2009.available:focus .year {
+  color: #0d47a1;
+}
+
+/* 2010 — iPad gray + Instagram blue + Retina black */
+.y2010 {
+  --card-accent: #517fa4;
+}
+.y2010::before {
+  background: linear-gradient(90deg, #111 0%, #517fa4 40%, #bd081c 70%, #7cb342);
+  opacity: 0.9;
+}
+.y2010 .year-card-inner {
+  border-color: #cfd8dc;
+}
+.y2010 .year {
+  color: #263238;
+}
+.y2010 .label {
+  color: #222;
+}
+.y2010 .era-chip {
+  background: #eceff1;
+  color: #37474f;
+  border: 1px solid #90a4ae;
+}
+.y2010 .meta {
+  color: #455a64;
+}
+.y2010 .motif {
+  background: radial-gradient(circle at 30% 35%, rgba(81, 127, 164, 0.3), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(189, 8, 28, 0.15), transparent 50%);
+}
+.y2010:hover,
+.y2010:focus {
+  box-shadow: 0 4px 16px rgba(81, 127, 164, 0.3);
+}
+.y2010.available:hover .year,
+.y2010.available:focus .year {
+  color: #1a6fb5;
+}
+
+.y2011 {
+  background: #0d0d0d;
+  border-color: #1db954;
+}
+.y2011::before {
+  background: linear-gradient(90deg, #1db954, #3b5998, #dd4b39);
+}
+.y2011 .year-card-inner {
+  background: #121212;
+  color: #eee;
+}
+.y2011 .year {
+  color: #1db954;
+}
+.y2011 .label {
+  color: #ccc;
+}
+.y2011 .era-chip {
+  background: #1a1a1a;
+  border-color: #1db954;
+  color: #1db954;
+}
+.y2011 .meta {
+  color: #1db954;
+}
+.y2011 .motif {
+  opacity: 0.15;
+}
+.y2011:hover,
+.y2011:focus {
+  box-shadow: 0 0 0 2px #1db954;
+}
+.y2011.available:hover .year,
+.y2011.available:focus .year {
+  color: #1565c0;
+}
+
+.y2012 {
+  background: #1a1a2e;
+  border-color: #3897f0;
+}
+.y2012::before {
+  background: linear-gradient(90deg, #3897f0, #3b5998, #bd081c, #4d90fe);
+}
+.y2012 .year-card-inner {
+  background: #16213e;
+  color: #eee;
+}
+.y2012 .year {
+  color: #3897f0;
+}
+.y2012 .label {
+  color: #ccc;
+}
+.y2012 .era-chip {
+  background: #0f3460;
+  border-color: #3897f0;
+  color: #89c4ff;
+}
+.y2012 .meta {
+  color: #3897f0;
+}
+.y2012 .motif {
+  opacity: 0.15;
+}
+.y2012:hover,
+.y2012:focus {
+  box-shadow: 0 0 0 2px #3897f0;
+}
+.y2012.available:hover .year,
+.y2012.available:focus .year {
+  color: #5eb0ff;
+}
+
+.year-card.available:not(.y1996):not(.y1999):not(.y2007):not(.y2008):not(.y2009):not(.y2010):not(.y2011):not(.y2012):hover .year {
   filter: brightness(0.92);
 }
 
@@ -1003,3 +1270,10 @@ body {
   .year-card.available::before { font-size: 8px; }
   .y2007 .motif { opacity: 0.35; }
 }
+
+/* 2013 card skin — Vine green / iOS blue */
+.year-card.y2013 { border-color: #00bf8f #404040 #404040 #00bf8f; }
+.year-card.y2013 .year-card-inner { background: linear-gradient(180deg, #e8fff8 0%, #f5f5f7 40%); }
+.year-card.y2013 .year { color: #007aff; }
+.year-card.y2013 .era-chip { background: #00bf8f; color: #fff; }
+.year-card.y2013 .motif { background: linear-gradient(135deg, #00bf8f, #007aff); }

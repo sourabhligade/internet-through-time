@@ -1,0 +1,12 @@
+/* 2013 — Chrome · Vine · iOS 7 · Stories · 5s/5c · Win8.1 · Snowden */
+@import url("period-2012.css");
+
+body.year-2013 .itt-year-chip {
+  color: #34aadc;
+  border-bottom-color: #fffc00;
+}
+
+/* iOS 7 flat accents */
+.ios7-shell { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #efeff4; color: #000; }
+.vine-shell { font-family: Arial, Helvetica, sans-serif; background: #00bf8f; color: #fff; }
+.snap-story-rail { background: #000; color: #fffc00; padding: 8px; font-size: 12px; }

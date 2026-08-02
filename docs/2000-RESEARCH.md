@@ -1,6 +1,7 @@
 # 2000 Research Dossier — The Internet Through Time
 
 **Status:** **MVP shipped 2026-07-27** · hub **unlocked** · research + implement · **pair audit 2026-07-29**  
+**★ Consolidated index (2000–2002 deep pack):** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
 **Deep research:** [`2000-DEEP-RESEARCH-2026-07-23.md`](2000-DEEP-RESEARCH-2026-07-23.md)  
 **Implementation phases (Goal · Source artifacts · Steps):** [`2000-2001-IMPLEMENTATION-PHASES.md`](2000-2001-IMPLEMENTATION-PHASES.md)  
 **Pair audit + residual (2000–2001):** [`2000-2001-DEEP-RESEARCH-AUDIT-2026-07-29.md`](2000-2001-DEEP-RESEARCH-AUDIT-2026-07-29.md)  

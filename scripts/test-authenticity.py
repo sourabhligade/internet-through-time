@@ -1666,6 +1666,231 @@ def test_2008_urlmap_complete() -> None:
     ok("2008-urlmap-complete")
 
 
+def test_2009_signature() -> None:
+    if not (ROOT / "years/2009").exists():
+        ok("2009-signature-skip")
+        return
+    need = [
+        "years/2009/index.html",
+        "years/2009/pages/home.html",
+        "years/2009/pages/about.html",
+        "years/2009/sites/appstore/index.html",
+        "years/2009/sites/iphone/index.html",
+        "years/2009/sites/facebook/feed.html",
+        "years/2009/sites/farmville/index.html",
+        "years/2009/sites/bing/index.html",
+        "years/2009/sites/windows7/index.html",
+        "js/config/2009.js",
+        "js/config/immersion-2009.js",
+        "js/immersion/appstore.js",
+        "js/immersion/farmville.js",
+        "js/immersion/bing.js",
+        "css/period-2009.css",
+        "docs/2009-RESEARCH.md",
+    ]
+    missing = [n for n in need if not (ROOT / n).is_file()]
+    if missing:
+        fail("2009-signature", "missing: " + ", ".join(missing))
+        return
+    if 'data-itt-year="2009"' not in read(ROOT / "years/2009/index.html"):
+        fail("2009-signature", "shell year")
+        return
+    if 'storagePrefix: "itt09"' not in read(ROOT / "js/config/immersion-2009.js"):
+        fail("2009-signature", "itt09")
+        return
+    if 'href="years/2009/"' not in read(ROOT / "index.html"):
+        fail("2009-signature", "hub locked")
+        return
+    about = read(ROOT / "years/2009/pages/about.html")
+    if "238,027,855" not in about:
+        fail("2009-signature", "scale")
+        return
+    if "3GS" not in about or "FarmVille" not in about:
+        fail("2009-signature", "thesis products")
+        return
+    if "iPad" not in about:
+        fail("2009-signature", "iPad ban")
+        return
+    apps = read(ROOT / "years/2009/sites/appstore/index.html")
+    if "data-appstore-install" not in apps and "data-appstore-catalog" not in apps:
+        fail("2009-signature", "appstore hooks")
+        return
+    if "50,000" not in apps and "50000" not in apps and "50k" not in apps.lower():
+        fail("2009-signature", "50k honesty")
+        return
+    iphone = read(ROOT / "years/2009/sites/iphone/index.html")
+    if "3GS" not in iphone or "$199" not in iphone:
+        fail("2009-signature", "iphone 3GS prices")
+        return
+    farm = read(ROOT / "years/2009/sites/farmville/index.html")
+    if "data-farm-plant" not in farm:
+        fail("2009-signature", "farmville hooks")
+        return
+    feed = read(ROOT / "years/2009/sites/facebook/feed.html")
+    if "data-fb-like" not in feed:
+        fail("2009-signature", "like hooks")
+        return
+    ok("2009-signature")
+
+
+def test_2009_urlmap_complete() -> None:
+    if not (ROOT / "years/2009").exists():
+        ok("2009-urlmap-complete-skip")
+        return
+    root = ROOT / "years/2009"
+    cfg = read(ROOT / "js/config/2009.js")
+    missing = []
+    for pth in root.rglob("*.html"):
+        rel = str(pth.relative_to(root)).replace("\\", "/")
+        if rel == "index.html":
+            continue
+        if f'"{rel}"' not in cfg:
+            missing.append(rel)
+    if missing:
+        fail("2009-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
+        return
+    ok("2009-urlmap-complete")
+
+
+def test_2009_no_anachronism_products() -> None:
+    if not (ROOT / "years/2009").exists():
+        ok("2009-no-anachronism-products-skip")
+        return
+    home = read(ROOT / "years/2009/pages/home.html").lower()
+    about = read(ROOT / "years/2009/pages/about.html").lower()
+    if "3gs" not in home and "3gs" not in about:
+        fail("2009-anachronism", "3GS should be present")
+        return
+    if "ipad" in home and "ban" not in home:
+        # hard bans box should mention iPad
+        pass
+    if "ipad" not in about and "ipad" not in home:
+        fail("2009-anachronism", "iPad ban should appear on about/home")
+        return
+    # FarmVille day-one peak lie (allow "not 80M day one" honesty)
+    farm = read(ROOT / "years/2009/sites/farmville/index.html").lower()
+    if re.search(r"(?<!not )(?<!not\s)80\s*m(illion)?\s*day\s*one", farm):
+        fail("2009-anachronism", "FarmVille peak as day-one")
+        return
+    ok("2009-no-anachronism-products")
+
+
+def test_2010_signature() -> None:
+    if not (ROOT / "years/2010").exists():
+        ok("2010-signature-skip")
+        return
+    need = [
+        "years/2010/index.html",
+        "years/2010/pages/home.html",
+        "years/2010/pages/about.html",
+        "years/2010/sites/ipad/index.html",
+        "years/2010/sites/iphone/index.html",
+        "years/2010/sites/instagram/index.html",
+        "years/2010/sites/appstore/index.html",
+        "years/2010/sites/facebook/feed.html",
+        "years/2010/sites/farmville/index.html",
+        "years/2010/sites/foursquare/index.html",
+        "js/config/2010.js",
+        "js/config/immersion-2010.js",
+        "js/immersion/instagram.js",
+        "css/period-2010.css",
+        "docs/2010-RESEARCH.md",
+    ]
+    missing = [n for n in need if not (ROOT / n).is_file()]
+    if missing:
+        fail("2010-signature", "missing: " + ", ".join(missing))
+        return
+    if 'data-itt-year="2010"' not in read(ROOT / "years/2010/index.html"):
+        fail("2010-signature", "shell year")
+        return
+    if 'storagePrefix: "itt10"' not in read(ROOT / "js/config/immersion-2010.js"):
+        fail("2010-signature", "itt10")
+        return
+    if 'href="years/2010/"' not in read(ROOT / "index.html"):
+        fail("2010-signature", "hub locked")
+        return
+    about = read(ROOT / "years/2010/pages/about.html")
+    if "206,956,723" not in about:
+        fail("2010-signature", "scale")
+        return
+    if "iPad" not in about or "Instagram" not in about:
+        fail("2010-signature", "thesis products")
+        return
+    if "Spotify" not in about and "Snapchat" not in about:
+        fail("2010-signature", "bans")
+        return
+    apps = read(ROOT / "years/2010/sites/appstore/index.html")
+    if "data-appstore-catalog" not in apps and "data-appstore-install" not in apps:
+        fail("2010-signature", "appstore hooks")
+        return
+    if "225" not in apps and "5 billion" not in apps.lower() and "5B" not in apps:
+        fail("2010-signature", "225k/5B honesty")
+        return
+    iphone = read(ROOT / "years/2010/sites/iphone/index.html")
+    if "iPhone 4" not in iphone and "iPhone 4" not in read(ROOT / "years/2010/sites/iphone/about.html"):
+        fail("2010-signature", "iphone 4")
+        return
+    if "$199" not in iphone and "$199" not in read(ROOT / "years/2010/sites/iphone/about.html"):
+        fail("2010-signature", "iphone prices")
+        return
+    ig = read(ROOT / "years/2010/sites/instagram/index.html")
+    if "data-ig-share" not in ig and "data-ig-filter" not in ig:
+        fail("2010-signature", "instagram hooks")
+        return
+    farm = read(ROOT / "years/2010/sites/farmville/index.html")
+    if "data-farm-plant" not in farm:
+        fail("2010-signature", "farmville hooks")
+        return
+    feed = read(ROOT / "years/2010/sites/facebook/feed.html")
+    if "data-fb-like" not in feed:
+        fail("2010-signature", "like hooks")
+        return
+    ok("2010-signature")
+
+
+def test_2010_urlmap_complete() -> None:
+    if not (ROOT / "years/2010").exists():
+        ok("2010-urlmap-complete-skip")
+        return
+    root = ROOT / "years/2010"
+    cfg = read(ROOT / "js/config/2010.js")
+    missing = []
+    for pth in root.rglob("*.html"):
+        rel = str(pth.relative_to(root)).replace("\\", "/")
+        if f'"{rel}"' not in cfg:
+            missing.append(rel)
+    if missing:
+        fail("2010-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
+        return
+    ok("2010-urlmap-complete")
+
+
+def test_2010_no_anachronism_products() -> None:
+    if not (ROOT / "years/2010").exists():
+        ok("2010-no-anachronism-products-skip")
+        return
+    about = read(ROOT / "years/2010/pages/about.html").lower()
+    home = read(ROOT / "years/2010/pages/home.html").lower()
+    if "ipad" not in about and "ipad" not in home:
+        fail("2010-anachronism", "iPad should be present as product")
+        return
+    if "instagram" not in about and "instagram" not in home:
+        fail("2010-anachronism", "Instagram should be present")
+        return
+    # Spotify US must appear as ban not product default
+    if "spotify" in about and "us" not in about and "2011" not in about:
+        fail("2010-anachronism", "Spotify US ban should be labeled")
+        return
+    ig = read(ROOT / "years/2010/sites/instagram/index.html").lower()
+    if "ios only" not in ig and "ios-only" not in ig and "iphone only" not in ig:
+        fail("2010-anachronism", "Instagram iOS-only honesty")
+        return
+    if "stories" in ig and "not" not in ig:
+        fail("2010-anachronism", "Stories without ban framing")
+        return
+    ok("2010-no-anachronism-products")
+
+
 def test_2008_dirbar_and_modules() -> None:
     """Shell dirbar P0 + immersion modules registered for 2008."""
     if not (ROOT / "years/2008").exists():
@@ -1780,7 +2005,10 @@ def test_2008_densify() -> None:
 def test_immersion_registry_complete() -> None:
     """Every shipped year must appear in immersion/registry.js with modules."""
     reg = read(ROOT / "js/immersion/registry.js")
-    for year in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008"):
+    for year in (
+        "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
+        "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010",
+    ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
         if not (ROOT / "years" / year).is_dir():
             continue
@@ -1822,6 +2050,22 @@ def test_immersion_registry_complete() -> None:
         if "reader.js" not in reg:
             fail("immersion-registry", "2006 reader.js missing from registry")
             return
+    if (ROOT / "years/2009").is_dir():
+        for mod in ("farmville.js", "bing.js"):
+            if mod not in reg:
+                fail("immersion-registry", f"2009 {mod} missing from registry")
+                return
+    if (ROOT / "years/2010").is_dir():
+        for mod in ("instagram.js", "foursquare.js", "pinterest.js"):
+            if mod not in reg:
+                fail("immersion-registry", f"2010 {mod} missing from registry")
+                return
+        # Storage keys must use util (no bare fallthrough to itt04 for late years)
+        fb = read(ROOT / "js/immersion/facebook.js")
+        if "immersionStorageKey" not in fb:
+            if "immersionStorageKey(\"thefacebook\"" not in fb and "immersionStorageKey('thefacebook'" not in fb:
+                fail("immersion-registry", "facebook.js KEY must use immersionStorageKey")
+                return
     ok("immersion-registry-complete")
 
 
@@ -1982,6 +2226,12 @@ def main() -> int:
         test_2008_dirbar_and_modules,
         test_2008_no_anachronism_products,
         test_2008_densify,
+        test_2009_signature,
+        test_2009_urlmap_complete,
+        test_2009_no_anachronism_products,
+        test_2010_signature,
+        test_2010_urlmap_complete,
+        test_2010_no_anachronism_products,
         test_immersion_registry_complete,
         test_year_stubs_use_shared_boot,
         test_p1_immersion_hooks,

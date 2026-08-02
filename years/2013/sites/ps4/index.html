@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>PlayStation 4 — November 15, 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body bgcolor="#003087" text="#fff" link="#ffff99">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:520px;margin:16px auto;font-family:Arial,sans-serif;font-size:13px">
+ <p style="font-size:11px"><a href="../../pages/home.html">← Start</a> · <a href="../xboxone/index.html">Xbox One</a></p>
+ <h1 style="font-size:20px">PlayStation 4</h1>
+ <p><b>November 15, 2013</b> North America launch (Europe <b>Nov 29</b> class). Eighth-generation living-room console — competes with <a href="../xboxone/index.html" style="color:#ffff99">Xbox One</a> (Nov 22).</p>
+ <ul style="font-size:12px;line-height:1.5">
+  <li>DualShock 4 · share button culture class</li>
+  <li>PSN online residual — museum has <b>no real network play</b></li>
+  <li>Launch window vs Xbox One “always online / used games” controversy lore</li>
+ </ul>
+ <p style="font-size:11px;background:#002060;padding:8px">Honesty: product room only · not inventing box art · not a storefront catalog.</p>
+ <p><button type="button" data-ps4-ack style="padding:8px 12px;cursor:pointer">I saw the PS4 launch (save)</button>
+ <span data-ps4-status style="margin-left:8px;color:#8f8"></span></p>
+ <p style="font-size:11px"><code>itt13-ps4</code></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-ps4";
+  var btn = document.querySelector("[data-ps4-ack]");
+  var st = document.querySelector("[data-ps4-status]");
+  if (btn) btn.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ launch: "2013-11-15", ts: Date.now() })); } catch (e) {}
+    var msg = "PS4 launch noted · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "ps4" });
+      }
+    } catch (e2) {}
+  });
+});
+</script>
+</body>
+</html>

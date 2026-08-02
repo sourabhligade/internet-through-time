@@ -16,11 +16,14 @@
     );
   }
   function pref() {
+    /* Prefer shared year prefix (itt10, itt09, …) so new years never fall through to itt04. */
+    try {
+      if (ITT.util && typeof ITT.util.immersionStoragePrefix === "function") {
+        return ITT.util.immersionStoragePrefix("itt04");
+      }
+    } catch (e) { /* */ }
     var y = year();
-    if (y === "2008") return "itt08";
-    if (y === "2007") return "itt07";
-    if (y === "2006") return "itt06";
-    if (y === "2005") return "itt05";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
     return "itt04";
   }
   function KEY() {
@@ -116,7 +119,11 @@
         var email = (login.querySelector('[name="email"]') || {}).value || "you@gmail.com";
         saveUser({ email: email, invited: true, ts: Date.now() });
         var st = doc.querySelector("[data-gmail-status]");
-        if (st) st.textContent = "Signed in. Opening inbox…";
+        var msg = "Signed in. Opening inbox…";
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { doc: doc, status: st, kind: "gmail-login" });
+        }
         setTimeout(function () {
           if (global.location) global.location.href = "inbox.html";
         }, 200);
@@ -170,7 +177,11 @@
         msgs.unshift({ from: "me (sent)", subj: subj, body: body, to: to, ts: Date.now() });
         saveMsgs(msgs.slice(0, 40));
         var st = doc.querySelector("[data-gmail-compose-status]");
-        if (st) st.textContent = "Message sent — opening inbox…";
+        var msg = "Message sent — opening inbox…";
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { doc: doc, status: st, kind: "gmail-send" });
+        }
         setTimeout(function () {
           if (global.location) global.location.href = "inbox.html";
         }, 250);
@@ -196,9 +207,11 @@
           drafts.unshift({ to: to, subj: subj, body: body, ts: Date.now() });
           saveDrafts(drafts.slice(0, 20));
           var st = doc.querySelector("[data-gmail-compose-status]");
-          if (st) {
-            st.textContent =
-              "Draft saved in this browser (" + DRAFTKEY() + "). " + drafts.length + " draft(s).";
+          var dmsg =
+            "Draft saved in this browser (" + DRAFTKEY() + "). " + drafts.length + " draft(s).";
+          if (st) st.textContent = dmsg;
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback(dmsg, { doc: doc, status: st, kind: "gmail-draft" });
           }
           return false;
         };
@@ -231,7 +244,11 @@
         }
         setInv(left - 1);
         if (el) el.textContent = String(left - 1);
-        if (st) st.textContent = "Invitation recorded for " + email + ". " + (left - 1) + " left.";
+        var imsg = "Invitation recorded for " + email + ". " + (left - 1) + " left.";
+        if (st) st.textContent = imsg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(imsg, { doc: doc, status: st, kind: "gmail-invite" });
+        }
         inv.reset();
       });
     }

@@ -1,8 +1,14 @@
 # 1997 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · ready for implementation  
+**Status:** **100% content** · hub open · `years/1997/` · optional forever pixels only  
+**Ship card:** [`1997-MUSEUM-GRADE.md`](1997-MUSEUM-GRADE.md)  
+**Pixel residual phases:** [`1997-TO-100-PIXEL-PHASES.md`](1997-TO-100-PIXEL-PHASES.md)  
+**Pair audit:** [`1996-1997-DEEP-RESEARCH-AUDIT-2026-07-29.md`](1996-1997-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
+**TO-100:** [`TO-100-PERCENT/YEAR-1997.md`](TO-100-PERCENT/YEAR-1997.md)  
+**Capture:** [`references/1997/CAPTURE-LOG.md`](references/1997/CAPTURE-LOG.md) · [`ASSETS.md`](references/1997/ASSETS.md)  
 **Target immersion:** Late 1997 (IE4 launch · Netscape Communicator · DHTML · browser wars peak · push technology)  
-**Prior year:** 1996 (Netscape 3.0 · IE 3.0 · HoTMaiL · Space Jam · portal wars · FutureSplash/Flash birth)
+**Prior year:** [`1996-RESEARCH.md`](1996-RESEARCH.md) · **Next:** [`1998-RESEARCH.md`](1998-RESEARCH.md)  
+**Era board:** [`TO-100-PERCENT/RESEARCH-100-ALL-YEARS-2026-08-01.md`](TO-100-PERCENT/RESEARCH-100-ALL-YEARS-2026-08-01.md)
 
 ---
 

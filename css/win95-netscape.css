@@ -182,17 +182,19 @@ html, body {
   display: none !important;
 }
 
-/* Exit immersion — keep quiet so the desktop feels like a 90s PC */
+/* Exit immersion — always findable (was too quiet / hidden when maximized) */
 .exit-bar {
   flex: 0 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4px 4px;
+  gap: 10px;
+  padding: 3px 8px;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
-  font-size: 10px;
-  color: #c0c0c0;
-  opacity: 0.4;
+  font-size: 11px;
+  color: #fff;
+  background: #000080;
+  opacity: 0.92;
   transition: opacity 0.15s;
 }
 
@@ -202,20 +204,35 @@ html, body {
 }
 
 .exit-bar a {
-  color: #ddd;
-  text-decoration: underline;
+  color: #ffff99;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px 10px;
+  border: 1px solid #99ccff;
+  background: #000060;
 }
 
-.exit-bar a:hover {
+.exit-bar a:hover,
+.exit-bar a:focus {
   color: #fff;
+  background: #0000aa;
+  outline: none;
 }
 
 .exit-bar .year-label {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
+/* Maximized: keep Exit visible (do not hide — primary hub escape) */
 .desktop.browser-max .exit-bar {
-  display: none;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  flex: 0 0 auto;
+  opacity: 1;
+  padding: 4px 10px;
+  border-bottom: 1px solid #000060;
 }
 
 /* Browser window */
@@ -1165,14 +1182,7 @@ html, body {
   flex: 1 1 auto;
 }
 
-.desktop.browser-max .exit-bar {
-  position: absolute;
-  top: 2px;
-  right: 8px;
-  z-index: 60;
-  opacity: 0.35;
-  padding: 0;
-}
+/* browser-max exit-bar rules live with base .exit-bar (always visible sticky strip) */
 
 .desktop.browser-max .desktop-icons {
   top: 28px;
@@ -1188,6 +1198,83 @@ html, body {
 .dirbar .dir-btn {
   font-weight: bold;
   min-width: 72px;
+}
+
+/* Year landing — Starting Point dir button always stands out */
+.dirbar .dir-btn[data-go*="pages/home"],
+.dirbar .dir-btn[data-go$="home.html"] {
+  background: #000080;
+  color: #ffff99;
+  border: 1px solid #000060;
+  box-shadow: inset 1px 1px 0 #6688cc;
+}
+.dirbar .dir-btn[data-go*="pages/home"]:hover,
+.dirbar .dir-btn[data-go$="home.html"]:hover {
+  background: #0000aa;
+  color: #fff;
+}
+
+/* Shell nav legend — always-on map for visitors */
+.shell-nav-legend {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  padding: 3px 10px;
+  background: #d4d0c8;
+  border-bottom: 1px solid #808080;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #000;
+  z-index: 70;
+}
+.shell-nav-legend .shell-nav-label {
+  font-weight: bold;
+  color: #000080;
+}
+.shell-nav-legend .shell-nav-btn {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 8px;
+  cursor: pointer;
+  background: #000080;
+  color: #ffff99;
+  border-top: 1px solid #6688cc;
+  border-left: 1px solid #6688cc;
+  border-right: 1px solid #000040;
+  border-bottom: 1px solid #000040;
+}
+.shell-nav-legend .shell-nav-btn:hover,
+.shell-nav-legend .shell-nav-btn:focus {
+  background: #0000aa;
+  color: #fff;
+  outline: none;
+}
+.shell-nav-legend .shell-nav-exit {
+  font-weight: bold;
+  color: #000080;
+  text-decoration: underline;
+  padding: 1px 4px;
+}
+.shell-nav-legend .shell-nav-exit:hover,
+.shell-nav-legend .shell-nav-exit:focus {
+  color: #0000cc;
+}
+.shell-nav-legend .shell-nav-sep {
+  color: #666;
+}
+.shell-nav-legend .shell-nav-hint {
+  margin-left: auto;
+  font-size: 10px;
+  color: #333;
+  opacity: 0.9;
+}
+@media (max-width: 720px) {
+  .shell-nav-legend .shell-nav-hint {
+    display: none;
+  }
 }
 
 .locationbar label {
@@ -1357,46 +1444,17 @@ body.year-1995 {
 }
 
 
-/* UX: stronger exit affordance */
+/* exit-bar-ux-boost: primary rules above; pulse once on load for discoverability */
 .exit-bar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 4px 10px;
-  background: #000080;
-  color: #fff;
-  font-family: "MS Sans Serif", Tahoma, sans-serif;
-  font-size: 11px;
-  opacity: 0.75;
-  transition: opacity 0.15s;
-  animation: exit-bar-pulse 2s ease-in-out 1;
-}
-.exit-bar:hover,
-.exit-bar:focus-within {
-  opacity: 1.0;
+  animation: exit-bar-pulse 1.6s ease-in-out 1;
 }
 @keyframes exit-bar-pulse {
-  0% { opacity: 0.3; }
-  50% { opacity: 1; }
-  100% { opacity: 0.75; }
+  0% { opacity: 0.55; }
+  40% { opacity: 1; }
+  100% { opacity: 0.92; }
 }
-.exit-bar a {
-  color: #ffff99;
-  font-weight: bold;
-  text-decoration: underline;
-  padding: 2px 8px;
-  border: 1px solid #99ccff;
-  background: #000060;
-}
-.exit-bar a:hover,
-.exit-bar a:focus {
-  color: #fff;
-  background: #0000aa;
-  outline: none;
+@media (prefers-reduced-motion: reduce) {
+  .exit-bar { animation: none; }
 }
 /* exit-bar-ux-boost */
 

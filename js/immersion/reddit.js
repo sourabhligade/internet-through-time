@@ -182,6 +182,18 @@
           var id = ev.currentTarget.getAttribute(attr);
           bump(id, delta);
           render(doc);
+          var msg =
+            (delta > 0 ? "Boosted" : "Buried") +
+            " · " +
+            id +
+            " · this browser only";
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback(msg, {
+              doc: doc,
+              statusSelector: "[data-reddit-status]",
+              kind: "reddit-boost"
+            });
+          }
         });
       }
     }
@@ -236,6 +248,7 @@
         saveSort("newest");
         var st = doc.querySelector("[data-reddit-status]");
         if (st) {
+          st.setAttribute("data-allow-html", "1");
           st.innerHTML =
             "Submitted — on your front page in this browser. " +
             '<a href="index.html">what\'s hot</a> · ' +
@@ -245,6 +258,14 @@
             "&url=" +
             encodeURIComponent(url) +
             '">Also digg it</a>';
+        }
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback("Submitted · “" + title + "” · this browser only", {
+            doc: doc,
+            status: st,
+            kind: "reddit-submit",
+            flash: true
+          });
         }
         form.reset();
         if (doc.querySelector("[data-reddit-list]")) render(doc);

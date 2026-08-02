@@ -14,7 +14,11 @@
     { id: "music", name: "Shazam", price: "Free", cat: "Music" },
     { id: "news", name: "NYTimes", price: "Free", cat: "News" },
     { id: "photo", name: "Camera+", price: "$0.99", cat: "Photography" },
-    { id: "nav", name: "Google Mobile", price: "Free", cat: "Navigation" }
+    { id: "nav", name: "Google Mobile", price: "Free", cat: "Navigation" },
+    { id: "twitter", name: "Twitter", price: "Free", cat: "Social Networking" },
+    { id: "pandora", name: "Pandora", price: "Free", cat: "Music" },
+    { id: "ola", name: "Ocarina", price: "$0.99", cat: "Music" },
+    { id: "foursquare", name: "Foursquare", price: "Free", cat: "Social Networking" }
   ];
 
   function U() { return ITT.util || {}; }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Windows 8.1 — October 17, 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body bgcolor="#00188f" text="#fff" link="#ffff99">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;font-family:Segoe UI,Tahoma,Arial,sans-serif;font-size:13px">
+ <p style="font-size:11px"><a href="../../pages/home.html">← Start</a> · <a href="about.html">About 8.1</a> · <a href="../windows8/index.html">Win8 residual</a></p>
+ <h1 style="font-size:22px;font-weight:normal">Windows 8.1</h1>
+ <p><b>October 17, 2013</b> — free upgrade path for Windows 8. Story: the <b>Start button</b> returns (class honesty) after 2012 Metro backlash. Still dual: Start screen + desktop.</p>
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:14px 0">
+  <div data-win81-tile style="background:#00bcf2;padding:20px;cursor:pointer">Mail</div>
+  <div data-win81-tile style="background:#e81123;padding:20px;cursor:pointer">Store</div>
+  <div data-win81-tile style="background:#00b294;padding:20px;cursor:pointer">Photos</div>
+  <div data-win81-tile style="background:#00188f;padding:20px;border:1px solid #fff;cursor:pointer">Desktop</div>
+ </div>
+ <p><button type="button" data-win81-start style="padding:8px 14px;background:#fff;color:#00188f;border:0;cursor:pointer;font-weight:bold">Start button tour (save)</button>
+ <span data-win81-status style="margin-left:8px;color:#8f8;font-size:12px"></span></p>
+ <p style="font-size:11px;background:#000;padding:8px">Honesty: <b>Windows 7 still mass residual</b> early–mid year. 8.1 is product/upgrade story — not January-only shell for everyone.</p>
+ <p style="font-size:11px"><code>itt13-win81-tour</code></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-win81-tour";
+  var st = document.querySelector("[data-win81-status]");
+  var tiles = document.querySelectorAll("[data-win81-tile]");
+  var clicked = [];
+  for (var i = 0; i < tiles.length; i++) {
+    tiles[i].addEventListener("click", function (ev) {
+      var t = (ev.currentTarget.textContent || "").trim();
+      if (clicked.indexOf(t) < 0) clicked.push(t);
+      if (st) st.textContent = "Tile: " + t + " · " + clicked.length + " visited";
+    });
+  }
+  var btn = document.querySelector("[data-win81-start]");
+  if (btn) btn.addEventListener("click", function () {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ startButton: true, tiles: clicked, ts: Date.now() }));
+    } catch (e) {}
+    var msg = "Win8.1 Start tour · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "win81" });
+      }
+    } catch (e2) {}
+  });
+});
+</script>
+</body>
+</html>

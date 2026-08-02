@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Netflix Queue — 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css"></head>
+<body bgcolor="#000" text="#fff" link="#e50914">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;font-family:Arial,sans-serif;padding:16px">
+ <p style="font-size:12px"><a href="index.html">← Netflix</a> · <a href="about.html">About</a> · <a href="streaming.html">Streaming</a></p>
+ <h1 style="color:#e50914;font-size:18px">Your queue (discs + stream lore)</h1>
+ <form data-netflix-queue-form>
+  <input name="q" data-netflix-q size="32" placeholder="Title">
+  <input type="submit" value="Add to Queue">
+ </form>
+ <div data-netflix-status style="font-size:12px;color:#8c8;margin:8px 0"></div>
+ <div data-netflix-queue style="background:#111;border:1px solid #333;padding:10px;min-height:50px"></div>
+ <p style="font-size:11px;color:#666"><code>itt12-netflix-queue</code></p>
+</div>
+<script>
+(function(){
+  function qkey(){ try{ if(window.ITT&&ITT.util&&ITT.util.immersionStorageKey) return ITT.util.immersionStorageKey("netflix-queue","itt12"); }catch(e){} return "itt12-netflix-queue"; }
+  function boot(){
+    var form=document.querySelector("[data-netflix-queue-form]"); var list=document.querySelector("[data-netflix-queue]"); var st=document.querySelector("[data-netflix-status]");
+    function render(){
+      var items=[]; try{ items=JSON.parse(localStorage.getItem(qkey())||"[]"); if(!Array.isArray(items)) items=[]; }catch(e){ items=[]; }
+      if(list) list.innerHTML = items.length ? items.map(function(x){ return "<div>• "+(x.title||x)+"</div>"; }).join("") : "<div style='color:#666'>Nothing here yet — add a title.</div>";
+    }
+    render();
+    if(form) form.addEventListener("submit", function(ev){
+      ev.preventDefault();
+      var q=(form.querySelector("[data-netflix-q]")||{}).value||"";
+      if(!String(q).trim()){ if(st) st.textContent="Type something first."; return; }
+      var items=[]; try{ items=JSON.parse(localStorage.getItem(qkey())||"[]"); if(!Array.isArray(items)) items=[]; }catch(e){ items=[]; }
+      items.unshift({title:q,ts:Date.now()}); localStorage.setItem(qkey(), JSON.stringify(items.slice(0,40)));
+      if(st) st.textContent="Saved (theater) · "+qkey(); render();
+    });
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",boot); else boot();
+})();
+</script>
+<script src="../../../../js/immersion-2012.js"></script>
+</body></html>

@@ -1,6 +1,7 @@
 /**
- * iPhone 2007 — Safari browse theater (localStorage)
- * Keys: {prefix}-iphone-history · BAN: App Store grid
+ * iPhone Safari browse theater (localStorage)
+ * Keys: {prefix}-iphone-history
+ * Year HTML carries product truth (2007: no App Store · 2008: 3G + App Store CTA).
  */
 (function (global) {
   "use strict";
@@ -76,6 +77,9 @@
       note ||
       (function () {
       var y = (ITT.util && ITT.util.immersionYear) ? ITT.util.immersionYear("2007") : "2007";
+      if (y === "2009") {
+        return "Safari on <b>iPhone 3GS</b> · OS 3.0 · copy/paste · video · daily App Store.";
+      }
       if (y === "2008") {
         return "Safari still loads the real web. <b>2008:</b> iPhone 3G + App Store — also try native apps in the App Store room.";
       }

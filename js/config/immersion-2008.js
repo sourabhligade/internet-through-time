@@ -129,6 +129,30 @@
         match: "/youtube/",
         hint: "Google · Flash · HD late year",
         doneMessage: "Broadcast Yourself under Google."
+      },
+      {
+        id: "dropbox",
+        label: "Dropbox birthmark",
+        href: "sites/dropbox/index.html",
+        match: "/dropbox/",
+        hint: "Live Stats 2008 chart · folder sync theater",
+        doneMessage: "Magic folder · USB stick replacement lore."
+      },
+      {
+        id: "spotify",
+        label: "Spotify Europe",
+        href: "sites/spotify/index.html",
+        match: "/spotify/",
+        hint: "Oct Europe · invite · not US public",
+        doneMessage: "Freemium Europe · US still iTunes/P2P residual."
+      },
+      {
+        id: "friendconnect",
+        label: "Friend Connect",
+        href: "sites/friendconnect/index.html",
+        match: "/friendconnect/",
+        hint: "Dec OpenSocial paste path vs FB Connect",
+        doneMessage: "Social login stack wars · still no monopoly."
       }
     ]
   };

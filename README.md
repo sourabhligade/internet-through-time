@@ -85,7 +85,11 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2005/` | YouTube · Maps · Reddit · Digg · **museum densify** |
 | `/years/2006/` | Twitter · Facebook open · Digg peak · Docs · AWS · **museum densify** |
 | `/years/2007/` | iPhone Safari · open Gmail · Street View · Facebook Platform · **museum densify** |
-| `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **MVP** |
+| `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
+| `/years/2009/` | iPhone 3GS · Like · FarmVille · Bing · Windows 7 · **ship** |
+| `/years/2010/` | iPad · iPhone 4 · Instagram · Foursquare · Open Graph · **ship** |
+| `/years/2011/` | Spotify US · Timeline · Google+ · iPhone 4S/Siri · Qwikster · **museum-ready** |
+| `/years/2012/` | Instagram Android · FB IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome · **museum-ready** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
 **Full inventory** (every site, feature, test, asset, and deploy detail): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).

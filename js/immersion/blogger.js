@@ -17,11 +17,12 @@
     );
   }
   function KEY() {
-    if (year() === "2005") return "itt05-blog";
-    if (year() === "2004") return "itt04-blog";
-    if (year() === "2003") return "itt03-blog";
-    /* legacy storageKey("blog") with prefix */
-    return year() ? "itt" + String(year()).slice(2) + "-blog" : "itt05-blog";
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("blog", "itt05");
+    }
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-blog";
+    return "itt05-blog";
   }
   function loadBlog() {
     try {

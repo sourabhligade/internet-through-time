@@ -1,0 +1,201 @@
+/* 2011 document styles — Win7 · IE 9 · Spotify US · Timeline · Google+ · Siri · Qwikster
+   Year delta: @import period-2010 then 2011-specific product grammar. */
+@import url("period-2010.css");
+
+body.year-2011 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #1db954;
+}
+
+/* Spotify US 2011 — dark desktop client marketing */
+.spotify-shell,
+.sp-us {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #121212;
+  color: #eee;
+  font-size: 13px;
+}
+.sp-us a { color: #1db954; }
+.sp-us h1 { color: #1db954; font-size: 26px; margin: 0 0 8px; }
+.sp-us .sp-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 12px;
+  margin: 10px 0;
+}
+.sp-us .sp-plan {
+  display: inline-block;
+  border: 1px solid #1db954;
+  padding: 10px 14px;
+  margin: 6px 8px 6px 0;
+  min-width: 140px;
+  vertical-align: top;
+  background: #0d0d0d;
+}
+.sp-us .sp-plan b { color: #1db954; }
+.sp-us .sp-ad {
+  background: #2a2a00;
+  border: 1px solid #886;
+  padding: 8px;
+  font-size: 12px;
+  color: #dda;
+}
+
+/* Facebook Timeline 2011 — two-column life story */
+.fb-timeline-2011 {
+  font-family: "lucida grande", Tahoma, Verdana, Arial, sans-serif;
+  font-size: 11px;
+  background: #e7ebf2;
+  color: #333;
+}
+.fb-timeline-2011 .fb-bluebar {
+  background: #3b5998;
+  color: #fff;
+  padding: 6px 12px;
+  font-weight: bold;
+}
+.fb-timeline-2011 .fb-bluebar a { color: #fff; margin-right: 10px; text-decoration: none; }
+.fb-timeline-2011 .fb-cover {
+  background: #6d84b4;
+  min-height: 120px;
+  border: 1px solid #29447e;
+  position: relative;
+  margin-bottom: 28px;
+}
+.fb-timeline-2011 .fb-avatar {
+  width: 120px;
+  height: 120px;
+  background: #ddd;
+  border: 3px solid #fff;
+  position: absolute;
+  left: 16px;
+  bottom: -24px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 48px;
+  color: #666;
+}
+.fb-timeline-2011 .fb-spine {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 12px;
+}
+.fb-timeline-2011 .fb-event {
+  background: #fff;
+  border: 1px solid #c4cde0;
+  padding: 10px;
+  margin: 0 0 10px;
+}
+.fb-timeline-2011 .fb-event .when { color: #777; font-size: 10px; }
+
+/* Google+ 2011 */
+.gplus-shell {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  font-size: 13px;
+}
+.gplus-shell a { color: #dd4b39; }
+.gplus-shell .gplus-top {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 16px;
+}
+.gplus-shell .gplus-logo { color: #dd4b39; font-weight: bold; font-size: 20px; }
+.gplus-shell .gplus-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  max-width: 640px;
+  margin: 12px auto;
+  padding: 12px;
+}
+.gplus-shell .circle-chip {
+  display: inline-block;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 3px 10px;
+  margin: 3px;
+  font-size: 12px;
+}
+.gplus-shell .plusone {
+  display: inline-block;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.gplus-shell .plusone.on { background: #dd4b39; color: #fff; border-color: #c13; }
+
+/* Siri / iOS 5 theater */
+.siri-shell {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  max-width: 360px;
+  margin: 16px auto;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+}
+.siri-shell .siri-bubble {
+  background: #222;
+  border: 1px solid #555;
+  padding: 8px 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+.siri-shell .siri-you { border-color: #6af; }
+.siri-shell .siri-bot { border-color: #aaa; color: #ddd; }
+
+/* IE 9 product */
+.ie9-shell {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  max-width: 720px;
+  margin: 12px auto;
+  font-size: 13px;
+}
+.ie9-shell h1 { color: #1a6fb5; }
+.ie9-shell .ie9-dl {
+  background: #f0f6fc;
+  border: 1px solid #8eb4d6;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+
+/* Qwikster historical exhibit */
+.qwikster-shell {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #eee;
+  max-width: 640px;
+  margin: 12px auto;
+  padding: 12px;
+  border: 2px solid #e50914;
+  font-size: 13px;
+}
+.qwikster-shell a { color: #e50914; }
+.qwikster-shell .qw-warn {
+  background: #3a1515;
+  border: 1px solid #c44;
+  padding: 10px;
+  margin: 10px 0;
+  color: #fcc;
+}
+
+/* Snapchat 2011 seed */
+.snap-shell {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffc00;
+  color: #111;
+  max-width: 360px;
+  margin: 16px auto;
+  padding: 12px;
+  border: 2px solid #000;
+  font-size: 13px;
+  text-align: center;
+}

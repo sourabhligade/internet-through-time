@@ -140,14 +140,22 @@
     urlMap = urlMap || {};
     locationHints = locationHints || [];
 
+    /* Prefer longest urlMap match so /iphone/ wins over apple.com/ and
+       /windows-7/ wins over microsoft.com/ (prefix collision). */
+    var bestPath = null;
+    var bestLen = -1;
     for (var k in urlMap) {
       if (Object.prototype.hasOwnProperty.call(urlMap, k)) {
         var mapped = String(urlMap[k]).toLowerCase();
         if (mapped === lower || lower.indexOf(mapped) === 0) {
-          return { path: k };
+          if (mapped.length > bestLen) {
+            bestLen = mapped.length;
+            bestPath = k;
+          }
         }
       }
     }
+    if (bestPath) return { path: bestPath };
 
     for (var h = 0; h < locationHints.length; h++) {
       var hint = locationHints[h];

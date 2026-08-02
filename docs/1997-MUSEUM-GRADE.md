@@ -1,7 +1,9 @@
 # 1997 — Museum grade status
 
 **Date:** 2026-07-31  
-**Status:** **Museum densify complete** + **pixel residual closed honestly** (WA / CONTINUITY / RECON-FINAL) · hub unlocked · playable  
+**Status:** **Museum-ready** · was: **Museum densify complete** + **pixel residual closed honestly** (WA / CONTINUITY / RECON-FINAL) · hub unlocked · playable  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Plan:** [`TO-100-PERCENT/YEAR-1997.md`](TO-100-PERCENT/YEAR-1997.md) · temp residual [`1997-TO-100-PIXEL-PHASES.md`](1997-TO-100-PIXEL-PHASES.md)
 
 ## Visitor outcome

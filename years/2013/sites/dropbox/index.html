@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Dropbox — files that follow you (2009 birthmark)</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<style>
+.dbx{font-family:Arial,Helvetica,sans-serif;max-width:620px;margin:16px auto;padding:16px;background:#fff;border:1px solid #7baaf7}
+.dbx h1{font-size:22px;margin:0 0 6px;color:#1a73e8}
+.dbx-note{background:#e8f0fe;border:1px solid #7baaf7;padding:10px;font-size:12px;margin:12px 0;line-height:1.45}
+.dbx-box{border:1px solid #ccc;padding:10px;margin:10px 0;background:#fafafa;font-size:13px}
+</style>
+</head>
+<body bgcolor="#f0f0f0">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="dbx">
+ <p style="font-size:12px">
+  <a href="../../pages/home.html">Starting Point</a> ·
+  <a href="about.html">About this birthmark</a> ·
+  <a href="../../pages/about.html">About 2013</a>
+ </p>
+ <p style="margin:0 0 8px">
+  <img src="../../../../assets/period/2008/dropbox/logo-wa.gif" width="220" height="71" alt="Dropbox" border="0" style="max-width:100%;height:auto">
+ </p>
+ <h1>Dropbox</h1>
+ <p style="color:#555;font-size:13px;margin:0 0 8px">A folder that syncs · beta-class product story · <b>2009 Live Stats chart birthmark</b>.</p>
+ <p style="margin:8px 0">
+  <img src="../../../../assets/period/2008/dropbox/welcome-sync-wa.png" width="48" height="48" alt="sync" border="0">
+  <img src="../../../../assets/period/2008/dropbox/welcome-briefcase-wa.png" width="48" height="48" alt="briefcase" border="0" style="margin-left:8px">
+  <span style="font-size:11px;color:#666;margin-left:8px">getdropbox.com Mar 2009 · CAPTURE [wa]</span>
+ </p>
+
+ <div class="dbx-note">
+  <b>Museum honesty:</b> Internet Live Stats marks <b>Dropbox</b> as a 2009 website-count birthmark —
+  not that every visitor used it. Product feels like: install a tray app · a magic folder ·
+  files show up on another machine. <b>No real cloud API</b> here — localStorage theater only.
+ </div>
+
+ <div class="dbx-box">
+  <b>Your folder (theater)</b>
+  <ul style="margin:8px 0 0 18px;font-size:12px" data-dropbox-list>
+   <li><i>Empty — drop a file name below</i></li>
+  </ul>
+  <p style="margin:10px 0 4px">
+   <input type="text" data-dropbox-name size="28" placeholder="report-final.doc" style="font-size:12px">
+   <button type="button" data-dropbox-add style="font-size:12px">Put in Dropbox</button>
+  </p>
+  <div data-dropbox-status style="font-size:12px;color:#060;min-height:1.2em"></div>
+ </div>
+
+ <p style="font-size:12px;line-height:1.45">
+  Continuity 2009: still mostly email attachments · USB sticks · FTP for nerds.
+  Dropbox is the “why is this folder on both computers?” story that scales later.
+ </p>
+ <p style="font-size:11px;color:#666"><code>itt13-dropbox-files</code> · files stay in this browser only</p>
+</div>
+<script>
+(function () {
+  function key() {
+    try {
+      if (window.ITT && ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("dropbox-files", "itt13");
+      }
+    } catch (e) {}
+    return "itt13-dropbox-files";
+  }
+  function load() {
+    try {
+      var raw = localStorage.getItem(key());
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+  function save(list) {
+    localStorage.setItem(key(), JSON.stringify(list));
+  }
+  function esc(s) {
+    return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  function render() {
+    var list = load();
+    var el = document.querySelector("[data-dropbox-list]");
+    var st = document.querySelector("[data-dropbox-status]");
+    if (!el) return;
+    if (!list.length) {
+      el.innerHTML = "<li><i>Empty — drop a file name below</i></li>";
+    } else {
+      el.innerHTML = list.map(function (f) {
+        return "<li>" + esc(f.name) + " <font size='1' color='#666'>· synced (theater)</font></li>";
+      }).join("");
+    }
+    if (st) st.textContent = list.length ? (list.length + " file(s) · " + key()) : "";
+  }
+  function boot() {
+    var btn = document.querySelector("[data-dropbox-add]");
+    var input = document.querySelector("[data-dropbox-name]");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        var name = (input && input.value || "").trim() || "untitled.txt";
+        var list = load();
+        list.unshift({ name: name, ts: Date.now() });
+        if (list.length > 20) list = list.slice(0, 20);
+        save(list);
+        if (input) input.value = "";
+        render();
+      });
+    }
+    render();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+<script src="../../../../js/immersion-2013.js"></script>
+</body></html>

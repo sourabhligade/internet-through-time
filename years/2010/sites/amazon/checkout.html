@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Amazon.com - Checkout</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000EE" vlink="#551A8B" data-checkout>
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="100%" cellpadding="6" cellspacing="0" border="0">
+<tr bgcolor="#000033"><td>
+<a href="index.html" style="color:#FFFFFF;text-decoration:none;font-family:Times,serif;font-size:28px"><b>Amazon.com</b></a>
+</td>
+<td bgcolor="#000033" align="right">
+<font face="Arial, Helvetica, sans-serif" size="2">
+<a href="cart.html" style="color:#FFCC00">Shopping Cart</a> |
+<a href="index.html" style="color:#FFCC00">Help</a>
+</font>
+</td></tr></table>
+<br>
+<font face="Arial, Helvetica, sans-serif">
+<font size="4"><b>Checkout</b></font>
+<hr>
+<font size="2">
+<p>Please enter your shipping and payment information below.</p>
+<div>
+<form data-checkout-form action="order-thanks.html" method="get">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#CCCCCC" width="80%">
+<tr bgcolor="#003366"><td colspan="2"><font color="#FFFFFF"><b>Shipping Address</b></font></td></tr>
+<tr><td><font size="2">Full Name:</font></td><td><input type="text" name="name" size="35"></td></tr>
+<tr bgcolor="#F0F0F0"><td><font size="2">Street Address:</font></td><td><input type="text" name="address1" size="35"></td></tr>
+<tr><td><font size="2">Address Line 2:</font></td><td><input type="text" name="address2" size="35"></td></tr>
+<tr bgcolor="#F0F0F0"><td><font size="2">City:</font></td><td><input type="text" name="city" size="25"></td></tr>
+<tr><td><font size="2">State:</font></td><td><input type="text" name="state" size="5"> <font size="2">Zip:</font> <input type="text" name="zip" size="10"></td></tr>
+<tr bgcolor="#F0F0F0"><td><font size="2">Country:</font></td><td><select name="country"><option>United States</option><option>Canada</option><option>United Kingdom</option><option>Other</option></select></td></tr>
+</table>
+<br>
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#CCCCCC" width="80%">
+<tr bgcolor="#003366"><td colspan="2"><font color="#FFFFFF"><b>Payment Method</b></font></td></tr>
+<tr><td><font size="2">Card Type:</font></td>
+<td><select name="cardtype"><option>Visa</option><option>MasterCard</option><option>American Express</option><option>Discover</option></select></td></tr>
+<tr bgcolor="#F0F0F0"><td><font size="2">Card Number:</font></td><td><input type="text" name="cardnum" size="20"></td></tr>
+<tr><td><font size="2">Exp. Date:</font></td>
+<td><select name="exp_mo"><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option></select> / <select name="exp_yr"><option>1997</option><option>2001</option><option>2001</option><option>2001</option></select></td></tr>
+</table>
+<br>
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#CCCCCC" width="80%">
+<tr bgcolor="#003366"><td colspan="2"><font color="#FFFFFF"><b>Order Summary</b></font></td></tr>
+<tr><td colspan="2"><ul data-checkout-list></ul></td></tr>
+<tr><td><font size="2"><b>Order Total:</b></font></td><td align="right"><font size="2"><b data-checkout-total>$0.00</b></font></td></tr>
+</table>
+<br>
+<input type="submit" value="Place Your Order">
+<font size="1"><br><br>By placing your order, you agree to Amazon.com's <a href="index.html">Conditions of Use</a>.</font>
+</form>
+</div>
+</font>
+</font>
+<hr>
+<font face="Arial, Helvetica, sans-serif" size="1" color="#666666">
+Amazon.com, Inc. &copy; 1997. Your transaction is secure.
+</font>
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

@@ -72,7 +72,7 @@
     ids.forEach(function (g) {
       var s = ITTGames.getScores(g.id);
       html += "<div style='margin-top:8px'><b>" + g.label + "</b>";
-      if (!s.length) html += " — none yet";
+      if (!s.length) html += " — nothing here yet · play a round above";
       else html += "<ol style='margin:2px 0 0 18px'>" + s.map(function (x) {
         return "<li>" + x.score + " · " + x.name + "</li>";
       }).join("") + "</ol>";

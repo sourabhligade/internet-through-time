@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>About Facebook — 2011</title>
+<link rel="stylesheet" href="../../../../css/period-2011.css"></head>
+<body bgcolor="#edeff4">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;background:#fff;border:1px solid #b3b3b3;font-family:tahoma,arial,sans-serif">
+ <div style="background:#3b5998;color:#fff;padding:8px 12px;font-weight:bold">facebook · About 2011</div>
+ <div style="padding:14px 16px;font-size:13px;line-height:1.45">
+  <p><a href="feed.html">Feed</a> · <a href="places.html">Places</a> · <a href="../farmville/index.html">FarmVille</a></p>
+  <h1 style="font-size:18px;color:#3b5998">Facebook in 2011 — Open Graph + 600M</h1>
+  <p><b>Open Graph</b> / external Like plugins · <b>Places</b> · ~500M mid-year · ~<b>600M</b> end-year · <i>The Social Network</i> (Oct). Beacon remains dead (2009).</p>
+  <p style="background:#fee;border:1px solid #c66;padding:8px;font-size:12px"><b>Ban:</b> Reactions · Reels · Stories.</p>
+  <p>
+  <button type="button" data-fb-culture>Note Social Network film (theater)</button>
+  <span data-fb-culture-status style="font-size:12px;color:#060;margin-left:8px"></span>
+ </p>
+ <p style="font-size:12px"><code>itt11-fb-likes</code> · <code>itt11-fb-culture</code></p>
+<script>
+(function(){
+  var KEY="itt11-fb-culture";
+  function boot(){
+    var b=document.querySelector("[data-fb-culture]");
+    var st=document.querySelector("[data-fb-culture-status]");
+    if(!b) return;
+    b.addEventListener("click", function(){
+      try{ localStorage.setItem(KEY, JSON.stringify({film:true,year:2010,ts:Date.now()})); }catch(e){}
+      if(st) st.textContent="Noted · "+KEY;
+    });
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+</script>
+ </div>
+</div>
+<script src="../../../../js/immersion-2011.js"></script>
+</body></html>

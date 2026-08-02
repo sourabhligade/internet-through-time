@@ -1,6 +1,7 @@
 # 2002 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · **full year shipped 2026-07-26** (MVP+P1+P2+Phase 9 RECON pixels) · hub unlocked · Phase 11 re-verify complete
+**Status:** Research complete · **full year shipped 2026-07-26** (MVP+P1+P2+Phase 9 RECON pixels) · hub unlocked · Phase 11 re-verify complete · **100% content**  
+**★ Consolidated index (2000–2002 deep pack):** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
 **Deep research (canonical):** [`2002-DEEP-RESEARCH-2026-07-26.md`](2002-DEEP-RESEARCH-2026-07-26.md)  
 **Pair audit (2026-07-29):** [`2002-2003-DEEP-RESEARCH-AUDIT-2026-07-29.md`](2002-2003-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
 **2001→2002 handoff (scaffold bible):** [`2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md`](2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md)  

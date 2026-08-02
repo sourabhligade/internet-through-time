@@ -15,9 +15,7 @@
           document.documentElement.getAttribute("data-itt-year")) ||
         "2005"
     );
-    if (y === "2008") return "itt08-pod-subs";
-    if (y === "2007") return "itt07-pod-subs";
-    if (y === "2006") return "itt06-pod-subs";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-pod-subs";
     return "itt05-pod-subs";
   }
   function load() {

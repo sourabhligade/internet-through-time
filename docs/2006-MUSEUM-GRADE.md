@@ -1,6 +1,8 @@
 # 2006 — Museum-grade status
 
-**Status:** **100% museum complete** (2026-07-31) · hub **1994–2006**  
+**Status:** **Museum-ready** · was: **100% museum complete** (2026-07-31) · hub **1994–2006**  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2006/` live · `itt06` · P0 + Docs/AWS + Reader/IE7 + continuity densify · gates green  
 **Legal:** Educational reconstruction only. Trademarks belong to owners. localStorage theater only.
 

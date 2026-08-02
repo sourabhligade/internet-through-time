@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Spotify — Europe invite (2008)</title>
+<link rel="stylesheet" href="../../../../css/period-2008.css">
+<style>
+.sp{font-family:Arial,Helvetica,sans-serif;max-width:620px;margin:16px auto;padding:16px;background:#121212;color:#eee}
+.sp h1{color:#1db954;font-size:26px;margin:0 0 8px}
+.sp a{color:#1db954}
+.sp-note{background:#1a1a1a;border:1px solid #1db954;padding:10px;font-size:12px;margin:12px 0;line-height:1.45;color:#ddd}
+.sp-ban{background:#3a1515;border:1px solid #c44;padding:10px;font-size:12px;margin:12px 0;color:#fcc}
+.track{border-bottom:1px solid #333;padding:8px 0;font-size:13px}
+</style>
+</head>
+<body bgcolor="#000">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="sp">
+ <p style="font-size:12px;color:#aaa">
+  <a href="../../pages/home.html">Starting Point</a> ·
+  <a href="about.html">About Spotify 2008</a> ·
+  <a href="../itunes/index.html">iTunes Store</a>
+ </p>
+ <p style="margin:0 0 8px">
+  <img src="../../../../assets/period/2008/spotify/logo-wa.png" width="72" height="77" alt="Spotify" border="0">
+  <img src="../../../../assets/period/2008/spotify/beta-stamp-wa.png" width="72" height="39" alt="beta" border="0" style="margin-left:10px;vertical-align:bottom">
+ </p>
+ <h1>Spotify</h1>
+ <p style="color:#aaa;margin:0 0 8px;font-size:13px">Music · all of it · <b>Europe</b> · invite / freemium class · Oct 2008</p>
+ <p style="font-size:10px;color:#666">Logo: spotify.com Oct 2008 via Wayback · CAPTURE [wa]</p>
+
+ <div class="sp-ban">
+  <b>Hard ban:</b> This is <b>not</b> a US public launch room.
+  Spotify US public is a <b>2011-class</b> story. If you are “in the US” in this museum year,
+  you still buy tracks on <a href="../itunes/index.html">iTunes</a> or live with residual P2P culture.
+ </div>
+
+ <div class="sp-note">
+  <b>2008 honesty:</b> Launch energy is <b>Europe</b> (Oct class) · invite codes · free tier with ads ·
+  desktop client lore · “all the music” vs buying one track at a time.
+  <b>No real audio streams</b> — theater only.
+ </div>
+
+ <p style="font-size:13px">
+  <label>Invite code (theater)
+   <input type="text" data-spotify-invite size="16" placeholder="EURO-2008" style="margin-left:6px">
+  </label>
+  <button type="button" data-spotify-join style="margin-left:6px">Join (Europe theater)</button>
+ </p>
+ <div data-spotify-status style="font-size:12px;color:#1db954;min-height:1.2em;margin-bottom:10px"></div>
+
+ <div class="track"><b>Now playing (theater)</b> — sample playlist · ads between tracks on free tier</div>
+ <div class="track">1. Indie single you heard on a blog</div>
+ <div class="track">2. Chart hit your friend texted you</div>
+ <div class="track">3. Album deep cut — no DRM fight in the UI story</div>
+
+ <p style="font-size:11px;color:#888;margin-top:14px">
+  <code>itt08-spotify-eu</code> · Europe theater only · no real audio streams
+ </p>
+</div>
+<script>
+(function () {
+  function key() {
+    try {
+      if (window.ITT && ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("spotify-eu", "itt08");
+      }
+    } catch (e) {}
+    return "itt08-spotify-eu";
+  }
+  function boot() {
+    var btn = document.querySelector("[data-spotify-join]");
+    var input = document.querySelector("[data-spotify-invite]");
+    var st = document.querySelector("[data-spotify-status]");
+    try {
+      var raw = localStorage.getItem(key());
+      if (raw && st) {
+        var o = JSON.parse(raw);
+        st.textContent = "Europe invite accepted (theater) · region=EU · " + key();
+        if (input && o.code) input.value = o.code;
+      }
+    } catch (e) {}
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var code = (input && input.value || "EURO-2008").trim();
+      localStorage.setItem(key(), JSON.stringify({
+        region: "EU",
+        notUS: true,
+        code: code,
+        ts: Date.now()
+      }));
+      if (st) {
+        st.textContent = "Welcome (Europe theater) · not available as US public product · " + key();
+      }
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+<script src="../../../../js/immersion-2008.js"></script>
+</body></html>

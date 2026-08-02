@@ -16,13 +16,11 @@
     );
   }
   function yearTag() {
+    if (ITT.util && ITT.util.immersionStoragePrefix) {
+      return ITT.util.immersionStoragePrefix("itt03");
+    }
     var y = year();
-    if (y === "2004") return "itt04";
-    if (y === "2005") return "itt05";
-    if (y === "2008") return "itt08";
-    if (y === "2007") return "itt07";
-    if (y === "2006") return "itt06";
-    if (y === "2003") return "itt03";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
     return "itt03";
   }
   function key(k) {
@@ -174,7 +172,15 @@
           mood: (form.querySelector('[name="mood"]') || {}).value || ":-)",
         });
         var st = form.querySelector("[data-myspace-status]");
-        if (st) st.textContent = "Profile saved (this browser only).";
+        var msg = "Profile saved (this browser only).";
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, {
+            doc: doc,
+            status: st,
+            kind: "myspace-profile"
+          });
+        }
         render(doc);
       });
     }
@@ -203,7 +209,15 @@
         invs.unshift({ email: email, message: message, ts: Date.now() });
         saveInvites(invs.slice(0, 40));
         var st = doc.querySelector("[data-myspace-invite-status]");
-        if (st) st.textContent = "Invite saved for " + email + " (no SMTP — this browser only).";
+        var imsg = "Invite saved for " + email + " (no SMTP — this browser only).";
+        if (st) st.textContent = imsg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(imsg, {
+            doc: doc,
+            status: st,
+            kind: "myspace-invite"
+          });
+        }
         iform.reset();
         render(doc);
       });
@@ -223,9 +237,17 @@
         });
         saveContacts(acts.slice(0, 40));
         var st = doc.querySelector("[data-myspace-contact-status]");
+        var cmsg = label + " saved in this browser.";
         if (st) {
-          st.textContent = label + " saved in this browser.";
+          st.textContent = cmsg;
           st.style.color = "#060";
+        }
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(cmsg, {
+            doc: doc,
+            status: st,
+            kind: "myspace-contact"
+          });
         }
         render(doc);
       });

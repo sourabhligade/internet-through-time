@@ -16,12 +16,11 @@
     );
   }
   function tag() {
+    if (ITT.util && ITT.util.immersionStoragePrefix) {
+      return ITT.util.immersionStoragePrefix("itt03");
+    }
     var y = year();
-    if (y === "2004") return "itt04";
-    if (y === "2008") return "itt08";
-    if (y === "2007") return "itt07";
-    if (y === "2006") return "itt06";
-    if (y === "2005") return "itt05";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
     return "itt03";
   }
   function pkey() {

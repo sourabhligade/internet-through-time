@@ -1,0 +1,17 @@
+# Visit log — 2012 ultra-deep full pass 2026-08-02
+
+## Sources consulted
+- https://www.pingdom.com/blog/internet-2012-in-numbers/
+- https://www.internetlivestats.com/total-number-of-websites/
+- https://cybercultural.com/p/internet-2012/ (full page)
+- https://about.fb.com/news/2012/04/facebook-to-acquire-instagram/
+- Apple Newsroom 2012-09-12 iPhone 5 · 2012-09-24 sales · 2012-10-23 iPad mini
+- Microsoft Windows 8 arrives 2012-10-25
+- StatCounter Chrome overtakes IE press May–Jul 2012
+- Investopedia / DealBook / CNBC Facebook IPO May 18 2012
+- Wikipedia: Instagram · SOPA protests · Windows 8 · iPad Mini · Uber
+- Wikimedia Diff SOPA blackout Jan 18 2012
+- Meeker Internet Trends 2012 class (via Cybercultural D10)
+
+## Output
+- docs/2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md

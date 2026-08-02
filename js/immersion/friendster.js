@@ -14,14 +14,11 @@
     );
   }
   function tag() {
+    if (ITT.util && ITT.util.immersionStoragePrefix) {
+      return ITT.util.immersionStoragePrefix("itt02");
+    }
     var y = year();
-    if (y === "2004") return "itt04";
-    if (y === "2008") return "itt08";
-    if (y === "2007") return "itt07";
-    if (y === "2006") return "itt06";
-    if (y === "2005") return "itt05";
-    if (y === "2003") return "itt03";
-    if (y === "2002") return "itt02";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
     return "itt02";
   }
   function key(k) {
@@ -113,7 +110,15 @@
           location: l ? l.value : ""
         });
         var status = form.querySelector("[data-friendster-status]");
-        if (status) status.textContent = "Profile saved (this browser only).";
+        var msg = "Profile saved (this browser only).";
+        if (status) status.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, {
+            doc: doc,
+            status: status,
+            kind: "friendster-profile"
+          });
+        }
         renderProfile(doc);
       });
     }

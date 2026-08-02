@@ -16,11 +16,11 @@
     );
   }
   function storageKey() {
-    if (year() === "2004") return "itt04-bloglines-feeds";
-    if (year() === "2008") return "itt08-bloglines-feeds";
-    if (year() === "2007") return "itt07-bloglines-feeds";
-    if (year() === "2006") return "itt06-bloglines-feeds";
-    if (year() === "2005") return "itt05-bloglines-feeds";
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("bloglines-feeds", "itt03");
+    }
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-bloglines-feeds";
     return "itt03-bloglines-feeds";
   }
 

@@ -16,11 +16,11 @@
     );
   }
   function KEY() {
-    if (year() === "2004") return "itt04-feedburner";
-    if (year() === "2008") return "itt08-feedburner";
-    if (year() === "2007") return "itt07-feedburner";
-    if (year() === "2006") return "itt06-feedburner";
-    if (year() === "2005") return "itt05-feedburner";
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("feedburner", "itt05");
+    }
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-feedburner";
     return "itt05-feedburner";
   }
   function load() {

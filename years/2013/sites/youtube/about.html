@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>About YouTube — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013-lite.css">
+</head>
+<body class="yt-shell" bgcolor="#ffffff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="yt-header">
+ <a href="index.html"><img src="../../../../assets/period/2007/youtube/logo.gif" alt="YouTube" height="32" border="0" style="vertical-align:middle"></a>
+ · About · <a href="index.html">Videos</a> · <a href="upload.html">Upload</a> · <a href="channels.html">Channels</a>
+</div>
+<div style="max-width:600px;margin:0 auto;padding:14px;font-family:Arial,sans-serif;font-size:13px;line-height:1.45">
+ <h1 style="font-size:18px;font-weight:normal">About YouTube (2012)</h1>
+ <p style="font-size:12px;color:#555">Google-owned · Flash still common · HTML5 rising · culture is global virality.</p>
+ <div style="background:#e8f0fe;border:1px solid #06c;padding:8px;font-size:12px;margin:10px 0">
+  <b>Gangnam Style:</b> PSY’s “Gangnam Style” released <b>July 15, 2012</b> class · becomes first YouTube video to hit
+  <b>1 billion</b> views (<b>December 2012</b> class). Global meme + horse dance — museum culture note, not an official pixel pack.
+  <p style="margin:8px 0 0">
+   <button type="button" data-yt-gangnam-ack>I watched Gangnam Style (save theater)</button>
+   <span data-yt-gangnam-status style="color:#060;margin-left:8px;font-size:11px"></span>
+  </p>
+  <p style="font-size:11px;color:#666;margin:4px 0 0"><code>itt13-yt-gangnam</code> · also try <a href="watch.html">Watch / Like</a> real views</p>
+ </div>
+ <p><b>Broadcast Yourself</b> still echoes · mobile watch grows · desktop remains mass for longer sessions.</p>
+ <script>
+ document.addEventListener("DOMContentLoaded", function () {
+   var KEY = "itt13-yt-gangnam";
+   var btn = document.querySelector("[data-yt-gangnam-ack]");
+   var st = document.querySelector("[data-yt-gangnam-status]");
+   try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
+   if (btn) btn.addEventListener("click", function () {
+     try {
+       localStorage.setItem(KEY, JSON.stringify({ title: "Gangnam Style", viewsClass: "1B-dec-2012", ts: Date.now() }));
+     } catch (e2) {}
+     if (st) st.textContent = "Saved · 1B class · " + KEY;
+   });
+ });
+ </script>
+ <p style="background:#ffc;border:1px solid #cc0;padding:8px;font-size:12px">
+  Not YouTube Shorts · not modern algorithmic home as sole framing · not inventing channel art.
+ </p>
+ <p>
+  <a href="index.html">Videos</a> ·
+  <a href="upload.html">Upload</a> ·
+  <a href="../../pages/home.html">Start</a>
+ </p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
+</body>
+</html>

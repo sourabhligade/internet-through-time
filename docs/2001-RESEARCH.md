@@ -1,6 +1,7 @@
 # 2001 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · **full year shipped 2026-07-26** (P0/P1/P2 densify) · **pair audit 2026-07-29**  
+**Status:** Research complete · **full year shipped 2026-07-26** (P0/P1/P2 densify) · **pair audit 2026-07-29** · **100% content**  
+**★ Consolidated index (2000–2002 deep pack):** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
 **Deep research (canonical):** [`docs/2001-DEEP-RESEARCH-2026-07-26.md`](2001-DEEP-RESEARCH-2026-07-26.md)  
 **Implementation phases (Goal · Source artifacts · Steps):** [`2000-2001-IMPLEMENTATION-PHASES.md`](2000-2001-IMPLEMENTATION-PHASES.md)  
 **Pair audit + residual (2000–2001):** [`docs/2000-2001-DEEP-RESEARCH-AUDIT-2026-07-29.md`](2000-2001-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
@@ -10,8 +11,8 @@
 **Assets provenance:** [`references/2001/ASSETS.md`](references/2001/ASSETS.md)  
 **Extracts:** `references/2001/wayback-extracts/` (**23** notes)  
 **Build bible:** [`2001-IMPLEMENTATION-PHASES.md`](2001-IMPLEMENTATION-PHASES.md)  
-**Prior year:** 1999 playable; 2000 research exists (tree wiped)  
-**Next year:** 2002 research pack  
+**Prior year:** **2000 full year shipped** (smile · crash · Pets · Napster)  
+**Next year:** [`2002-RESEARCH.md`](2002-RESEARCH.md)  
 **Target immersion:** Calendar year **2001** — post-crash rebuild · **Wikipedia** · **Wayback Machine** · **iTunes library + iPod** · **IE 6 / Windows XP** · warblogs · Movable Type · Google as habit  
 **Sources method:** Cybercultural year + blogs + iTunes/Wayback launch essays · Live Stats · Wikipedia History · Version Museum · WDM · dated Wayback `id_`  
 

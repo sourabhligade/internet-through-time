@@ -1,7 +1,9 @@
 # 1996 — Museum grade status
 
 **Date:** 2026-07-28  
-**Status:** **Leftover densify complete** (TO-100 #7) · hub unlocked  
+**Status:** **Museum-ready** · was: **Leftover densify complete** (TO-100 #7) · hub unlocked  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Plan:** [`TO-100-PERCENT/YEAR-1996.md`](TO-100-PERCENT/YEAR-1996.md)
 
 ## Visitor outcome

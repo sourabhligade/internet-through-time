@@ -152,7 +152,15 @@
         if (input) input.value = "";
         wireCounter(form, doc);
         renderTimeline(doc);
-        if (st) st.textContent = "Posted · saved in this browser only.";
+        var msg = "Posted · saved in this browser only.";
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, {
+            doc: doc,
+            status: st,
+            kind: "twitter-post"
+          });
+        }
       });
     } else if (form) {
       wireCounter(form, doc);

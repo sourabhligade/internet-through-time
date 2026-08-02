@@ -23,3 +23,11 @@ No invented brand pixels. Log every harvest attempt (OK / RECON / failed-final).
 ## Extract notes
 
 Put visit notes in `wayback-extracts/` and `notes/`.
+
+### Densify residual (2026-08-01 research-improvement)
+
+Optional-forever harvest cookbook + visit notes:
+
+- [`wayback-extracts/HARVEST-DENSIFY-QUEUE-2026-08-01.md`](wayback-extracts/HARVEST-DENSIFY-QUEUE-2026-08-01.md)
+
+**Board:** 2007 is **100% content**. Open CAPTURE rows above do **not** block ship — harvest only if explicitly polishing Layer C.

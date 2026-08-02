@@ -1,6 +1,8 @@
 # 2007 — Museum-grade status
 
-**Status:** **Densify implement landed** (2026-07-31) · hub **1994–2007**  
+**Status:** **Museum-ready** · was: **Densify implement landed** (2026-07-31) · hub **1994–2007**  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2007/` · `itt07` · iPhone history/presets · Gmail open copy · Street View turns · Platform remove · Beacon · trails e2e  
 **Shell:** XP + IE · Vista retail optional · iPhone product room (no App Store)  
 **Deep research:** [`2007-DEEP-RESEARCH-FRESH-2026-07-31.md`](2007-DEEP-RESEARCH-FRESH-2026-07-31.md) · dossier [`2007-RESEARCH.md`](2007-RESEARCH.md)  

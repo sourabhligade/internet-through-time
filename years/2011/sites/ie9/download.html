@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2011">
+<head>
+<meta charset="utf-8">
+<title>Download Internet Explorer 9</title>
+<link rel="stylesheet" href="../../../../css/period-2011.css">
+<script src="../../../../js/immersion-2011.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var btn = document.querySelector("[data-ie9-download]");
+  var st = document.querySelector("[data-ie9-status]");
+  function show() {
+    try {
+      if (localStorage.getItem("itt11-ie9") === "1" && st) {
+        st.innerHTML = "IE 9 marked <b>installed</b> (this browser only · museum theater).";
+      }
+    } catch (e) {}
+  }
+  show();
+  if (btn) {
+    btn.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      try { localStorage.setItem("itt11-ie9", "1"); } catch (e2) {}
+      show();
+      if (st) st.innerHTML = "Download complete · IE 9 ready · no real installer ran.";
+    });
+  }
+});
+</script>
+</head>
+<body bgcolor="#ffffff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="ie9-shell">
+ <p><a href="index.html">← IE 9</a></p>
+ <h1>Download Internet Explorer 9</h1>
+ <div class="ie9-dl">
+  <p>Free upgrade for Windows Vista and Windows 7.</p>
+  <p><a href="#" data-ie9-download style="background:#1a6fb5;color:#fff;padding:8px 16px;text-decoration:none;font-weight:bold">Download now (theater)</a></p>
+  <p data-ie9-status style="font-size:12px;margin-top:10px"></p>
+ </div>
+ <p style="font-size:11px;color:#666">No real binary · <code>itt11-ie9</code></p>
+</div>
+</body>
+</html>

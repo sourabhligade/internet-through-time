@@ -16,12 +16,11 @@
     );
   }
   function storageKey() {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("adsense", "itt03");
+    }
     var y = year();
-    if (y === "2008") return "itt08-adsense";
-    if (y === "2007") return "itt07-adsense";
-    if (y === "2006") return "itt06-adsense";
-    if (y === "2005") return "itt05-adsense";
-    if (y === "2004") return "itt04-adsense";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-adsense";
     return "itt03-adsense";
   }
 

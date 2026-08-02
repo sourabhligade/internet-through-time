@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2011">
+<head>
+<meta charset="utf-8">
+<title>Siri — iPhone 4S (2011)</title>
+<link rel="stylesheet" href="../../../../css/period-2011.css">
+<script src="../../../../js/immersion-2011.js" defer></script>
+</head>
+<body bgcolor="#111" text="#eee">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:420px;margin:12px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px">
+ <p style="font-size:12px">
+  <a href="index.html" style="color:#6af">← iPhone 4S</a> ·
+  <a href="ios5.html" style="color:#6af">iOS 5</a> ·
+  <a href="icloud.html" style="color:#6af">iCloud</a>
+ </p>
+ <h1 style="font-size:18px">Siri <font size="2" color="#aaa">(beta · Oct 4, 2011)</font></h1>
+ <p style="color:#aaa;font-size:12px">
+  Intelligent assistant on <b>iPhone 4S</b> only at launch (event day before Jobs dies Oct 5) ·
+  EN-US/UK/AU · FR · DE · canned museum answers · not modern Siri.
+ </p>
+ <div class="siri-shell">
+  <form data-siri-form>
+   <input type="text" data-siri-input placeholder="Ask Siri…" style="width:95%;padding:8px;font-size:14px">
+   <p style="margin:8px 0"><button type="submit">Ask</button></p>
+  </form>
+  <p style="font-size:11px;color:#888">Try:</p>
+  <p>
+   <a href="#" data-siri-phrase="Will I need an umbrella this weekend?" style="color:#6af">umbrella / weather</a> ·
+   <a href="#" data-siri-phrase="Remind me to call Mom when I get home" style="color:#6af">call Mom</a> ·
+   <a href="#" data-siri-phrase="What's the traffic like around here?" style="color:#6af">traffic</a>
+  </p>
+  <div data-siri-log></div>
+ </div>
+ <p style="font-size:11px;color:#666">Apple Newsroom 2011-10-04 · no real speech API · <code>itt11-siri-history</code></p>
+</div>
+<script>
+/* Page-local theater (works even if immersion module races). Immersion/siri.js may also bind. */
+(function () {
+  var KEY = "itt11-siri-history";
+  var ANSWERS = [
+    { match: /umbrella|weather|rain|weekend/i, a: "It looks like rain this weekend — you might want an umbrella. (Siri beta · canned museum answer)" },
+    { match: /call mom|remind me to call/i, a: "OK — I’ll remind you to call Mom when you get home. (Contacts + location theater)" },
+    { match: /traffic|around here/i, a: "Traffic looks moderate around here. (Location theater · no live maps)" }
+  ];
+  function answerFor(q) {
+    for (var i = 0; i < ANSWERS.length; i++) if (ANSWERS[i].match.test(q)) return ANSWERS[i].a;
+    return "I’m not sure I understand. Try weather, traffic, or “remind me to call Mom.” (Siri beta)";
+  }
+  function esc(s) {
+    return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function ask(q) {
+    q = String(q || "").replace(/^\s+|\s+$/g, "");
+    if (!q) return;
+    var a = answerFor(q);
+    var log = document.querySelector("[data-siri-log]");
+    if (log) {
+      log.innerHTML =
+        "<div><b>You:</b> " + esc(q) + "</div><div><b>Siri:</b> " + esc(a) + "</div>" + (log.innerHTML || "");
+    }
+    try {
+      var h = JSON.parse(localStorage.getItem(KEY) || "[]") || [];
+      h.unshift({ q: q, a: a, ts: Date.now() });
+      localStorage.setItem(KEY, JSON.stringify(h.slice(0, 20)));
+    } catch (e) { /* */ }
+  }
+  function boot() {
+    var form = document.querySelector("[data-siri-form]");
+    var input = document.querySelector("[data-siri-input]");
+    if (form && form.getAttribute("data-local-bound") !== "1") {
+      form.setAttribute("data-local-bound", "1");
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        ask(input && input.value);
+        if (input) input.value = "";
+      });
+    }
+    var chips = document.querySelectorAll("[data-siri-phrase]");
+    for (var i = 0; i < chips.length; i++) {
+      if (chips[i].getAttribute("data-local-bound") === "1") continue;
+      chips[i].setAttribute("data-local-bound", "1");
+      chips[i].addEventListener("click", function (ev) {
+        ev.preventDefault();
+        ask(ev.currentTarget.getAttribute("data-siri-phrase") || "");
+      });
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+</body>
+</html>

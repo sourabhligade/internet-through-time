@@ -13,13 +13,11 @@
     );
   }
   function key() {
-    if (year() === "2008") return "itt08-technorati-cosmos";
-    if (year() === "2007") return "itt07-technorati-cosmos";
-    if (year() === "2006") return "itt06-technorati-cosmos";
-    if (year() === "2005") return "itt05-technorati-cosmos";
-    if (year() === "2004") return "itt04-technorati-cosmos";
-    if (year() === "2003") return "itt03-technorati-cosmos";
-    if (year() === "2002") return "itt02-technorati-cosmos";
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("technorati-cosmos", "itt03");
+    }
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-technorati-cosmos";
     return "itt03-technorati-cosmos";
   }
 

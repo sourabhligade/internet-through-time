@@ -18,11 +18,11 @@
   }
 
   function fallbackPrefix() {
+    if (ITT.util && ITT.util.immersionStoragePrefix) {
+      return ITT.util.immersionStoragePrefix("itt05");
+    }
     var y = year();
-    if (y === "2004") return "itt04";
-    if (y === "2006") return "itt06";
-    if (y === "2008") return "itt08";
-    if (y === "2007") return "itt07";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
     return "itt05";
   }
   function storageKey() {
@@ -289,6 +289,18 @@
             list2[idx].diggs = Math.max(0, (list2[idx].diggs || 0) + delta);
             save(list2);
             render(doc);
+            var msg =
+              (delta > 0 ? "Dugg" : "Buried") +
+              " · " +
+              (list2[idx].title || "story") +
+              " · this browser only";
+            if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+              ITT._immersionApi.actionFeedback(msg, {
+                doc: doc,
+                statusSelector: "[data-digg-status]",
+                kind: "digg"
+              });
+            }
           }
         });
       }

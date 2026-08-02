@@ -1,7 +1,9 @@
 # 2002 — Museum grade status
 
 **Date:** 2026-07-29  
-**Status:** **Full year complete** (MVP + P1 + P2 densify + Phase 9 RECON pixels + Phase 11 re-verify) · hub **unlocked**
+**Status:** **Museum-ready** · was: **Full year complete** (MVP + P1 + P2 densify + Phase 9 RECON pixels + Phase 11 re-verify) · hub **unlocked**
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 
 ## Visitor outcome
 

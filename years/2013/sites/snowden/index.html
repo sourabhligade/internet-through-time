@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Snowden / PRISM — June 2013 · open-web privacy</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body bgcolor="#f4f1ea" text="#111" link="#00c">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;font-family:Georgia,'Times New Roman',serif;font-size:14px;line-height:1.45">
+ <p style="font-size:11px;font-family:Arial,sans-serif"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About 2013</a></p>
+ <p style="font-size:11px;letter-spacing:0.06em;color:#666;font-family:Arial,sans-serif">CULTURE ROOM · PUBLIC NEWS FRAMING ONLY</p>
+ <h1 style="font-size:24px;font-weight:normal">June 2013 — the stack is watched</h1>
+ <p>On <b>June 5–6, 2013</b>, reporting in <i>The Guardian</i> and <i>The Washington Post</i> brought mass surveillance programs into public view — including telephony metadata collection and the internet program known as <b>PRISM</b>, which documents described as involving major U.S. internet companies (Microsoft, Google, Facebook, Apple, Yahoo, and others named in public slides).</p>
+ <p>For museum visitors: this is the year privacy stops being only a specialist concern. Encryption, “who can read email,” and government access become ordinary front-page tech talk — continuing the open-web politics line after 2012’s SOPA blackout.</p>
+ <div style="background:#fff;border:1px solid #999;padding:12px;font-size:12px;font-family:Arial,sans-serif">
+  <b>Educational rules for this room</b>
+  <ul style="margin:6px 0 0 18px">
+   <li>Public journalism sources only — no classified dump gallery</li>
+   <li>No exploit how-tos · no doxxing</li>
+   <li>Trademarks and company names as reported in the press</li>
+  </ul>
+ </div>
+ <p style="margin-top:14px">
+  <button type="button" data-snowden-ack style="font-size:13px;padding:8px 12px;cursor:pointer">I understand PRISM became public news in June 2013 (save)</button>
+  <span data-snowden-status style="font-size:11px;color:#060;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666;font-family:Arial,sans-serif"><code>itt13-snowden-ack</code> · sources: Guardian · Washington Post · public records</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-snowden-ack";
+  var btn = document.querySelector("[data-snowden-ack]");
+  var st = document.querySelector("[data-snowden-status]");
+  try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
+  if (btn) btn.addEventListener("click", function () {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ event: "prism-public", date: "2013-06", ts: Date.now() }));
+    } catch (e2) {}
+    var msg = "Saved · privacy literacy · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "snowden" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
+</body>
+</html>

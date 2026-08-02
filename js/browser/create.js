@@ -556,7 +556,22 @@
      * ============================================================ */
     function ensureImmersion(doc) {
       try {
-        if (!doc || doc.querySelector("script[data-itt-immersion]")) return;
+        if (!doc) return;
+        /* Already injected by shell */
+        if (doc.querySelector("script[data-itt-immersion]")) return;
+        /* Content page already loads immersion-YYYY.js — do not double-boot
+           (double load was racing form bind / registerLocal once-guards). */
+        try {
+          if (doc.documentElement && doc.documentElement.getAttribute("data-itt-immersion-booted")) return;
+        } catch (eBoot) { /* */ }
+        var existing = doc.getElementsByTagName("script");
+        var si;
+        for (si = 0; si < existing.length; si++) {
+          var es = existing[si].getAttribute("src") || "";
+          if (/immersion(-\d{4})?\.js(\?|$)/.test(es) || /\/immersion\/boot\.js(\?|$)/.test(es)) {
+            return;
+          }
+        }
         var s = doc.createElement("script");
         s.setAttribute("data-itt-immersion", "1");
         var root = yearRoot();
@@ -624,6 +639,38 @@
         if (href.indexOf("mailto:") === 0) {
           e.preventDefault();
           openMailDialog(href.replace(/^mailto:/i, ""), "From Web page");
+          return;
+        }
+        /* Museum hub / games wing escapes: iframe sandbox blocks target=_top
+         * (no allow-top-navigation). Parent chrome navigates the top window. */
+        var tgt = (linkEl.getAttribute("target") || "").toLowerCase();
+        if (tgt === "_top" || tgt === "_parent") {
+          e.preventDefault();
+          e.stopPropagation();
+          var absTop = "";
+          try {
+            absTop = linkEl.href || "";
+          } catch (errTop) {
+            absTop = "";
+          }
+          if (!absTop) {
+            try {
+              var base = (iframe.contentWindow && iframe.contentWindow.location &&
+                iframe.contentWindow.location.href) || window.location.href;
+              absTop = new URL(href, base).href;
+            } catch (errUrl) {
+              absTop = href;
+            }
+          }
+          try {
+            (window.top || window).location.href = absTop;
+          } catch (errNav) {
+            window.location.href = absTop;
+          }
+          return;
+        }
+        if (tgt === "_blank") {
+          /* allow-popups is on shell sandbox — let default / open */
           return;
         }
         var livePath = pathFromIframe() || path;
@@ -1500,6 +1547,87 @@
     if (btnBack) btnBack.addEventListener("click", goBack);
     if (btnForward) btnForward.addEventListener("click", goForward);
     on("btn-home", "click", goHome);
+    /* Make Home affordance read as year landing (Starting Point) */
+    (function labelHomeAffordances() {
+      var homeBtn = byId("btn-home");
+      if (homeBtn) {
+        homeBtn.setAttribute("title", "Starting Point — year home");
+        var hl = homeBtn.querySelector(".btn-label");
+        if (hl && /home/i.test(hl.textContent || "")) hl.textContent = "Home";
+      }
+      var closeBtn = byId("btn-close");
+      if (closeBtn) {
+        closeBtn.setAttribute("title", "Exit to year menu");
+        closeBtn.setAttribute("aria-label", "Exit to year menu");
+      }
+      var exitBar = byId("exit-bar");
+      if (exitBar) {
+        var exitA = exitBar.querySelector("a");
+        if (exitA) {
+          /* Keep title="Exit" for a11y + e2e; clarify label for visitors */
+          if (!exitA.getAttribute("title")) exitA.setAttribute("title", "Exit");
+          exitA.setAttribute("aria-label", "Exit to year menu");
+          var et = (exitA.textContent || "").trim();
+          if (/^←\s*Exit$/i.test(et) || /^Exit$/i.test(et)) {
+            exitA.textContent = "← Year menu";
+          }
+        }
+      }
+      var dirStart = document.querySelector('.dir-btn[data-go*="pages/home"], .dir-btn[data-go$="home.html"]');
+      if (dirStart) {
+        dirStart.setAttribute("title", "Starting Point — year landing");
+        if (/^start$/i.test((dirStart.textContent || "").trim())) {
+          dirStart.textContent = "Starting Point";
+        }
+      }
+    })();
+
+    /* Always-visible shell nav legend — visitors learn Starting Point vs Year menu */
+    (function injectShellNavLegend() {
+      if (document.getElementById("itt-shell-nav-legend")) return;
+      var exitBar = byId("exit-bar");
+      var legend = document.createElement("div");
+      legend.id = "itt-shell-nav-legend";
+      legend.className = "shell-nav-legend";
+      legend.setAttribute("role", "navigation");
+      legend.setAttribute("aria-label", "How to navigate this year");
+      var hubHref = "../../index.html";
+      try {
+        var yi = (location.pathname || "").indexOf("/years/");
+        if (yi !== -1) hubHref = location.pathname.slice(0, yi) + "/index.html";
+      } catch (eH) { /* */ }
+      legend.innerHTML =
+        '<span class="shell-nav-label">Navigate:</span> ' +
+        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-start" title="Year map — trails and About">' +
+        "Starting Point</button>" +
+        '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
+        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-back" title="Previous page in this year">Back</button>' +
+        '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
+        '<a class="shell-nav-exit" href="' + hubHref + '" title="Exit">← Year menu</a>' +
+        '<span class="shell-nav-hint">Lost? Starting Point = year map · Year menu = all years</span>';
+      if (exitBar && exitBar.parentNode) {
+        if (exitBar.nextSibling) {
+          exitBar.parentNode.insertBefore(legend, exitBar.nextSibling);
+        } else {
+          exitBar.parentNode.appendChild(legend);
+        }
+      } else {
+        var desk = document.querySelector(".desktop");
+        if (desk) desk.insertBefore(legend, desk.firstChild);
+      }
+      var goStart = document.getElementById("itt-shell-goto-start");
+      if (goStart) {
+        goStart.addEventListener("click", function () {
+          goHome();
+        });
+      }
+      var goBackBtn = document.getElementById("itt-shell-goto-back");
+      if (goBackBtn) {
+        goBackBtn.addEventListener("click", function () {
+          goBack();
+        });
+      }
+    })();
     on("btn-reload", "click", reload);
     on("btn-stop", "click", stopLoad);
     on("btn-images", "click", function () { runCommand("view-images"); });
@@ -1683,7 +1811,15 @@
         "2002": "Friendster · KaZaA · Google",
         "2003": "MySpace · iTunes · WordPress",
         "2004": "Gmail · Flickr · Firefox",
-        "2005": "YouTube · Maps · Reddit"
+        "2005": "YouTube · Maps · Reddit",
+        "2006": "Twitter · YouTube · Facebook",
+        "2007": "iPhone · Gmail · Street View",
+        "2008": "App Store · Chrome · Android",
+        "2009": "Like · FarmVille · Bing",
+        "2010": "iPad · Instagram · Foursquare",
+        "2011": "Spotify · Timeline · Siri",
+        "2012": "Instagram · FB IPO · Pinterest",
+        "2013": "Vine · IG Video · Stories · iOS 7"
       };
       var locTips = {
         "1994": "yahoo or whitehouse",
@@ -1697,19 +1833,28 @@
         "2002": "friendster or kazaa",
         "2003": "myspace or itunes",
         "2004": "gmail or flickr",
-        "2005": "youtube or reddit"
+        "2005": "youtube or reddit",
+        "2006": "twitter or youtube",
+        "2007": "iphone or gmail",
+        "2008": "chrome or appstore",
+        "2009": "facebook or farmville",
+        "2010": "instagram or ipad",
+        "2011": "spotify or siri",
+        "2012": "instagram or pinterest",
+        "2013": "vine or snowden"
       };
       var dirHint = dirExamples[YEAR] || "directory buttons on the bar";
       var locTip = locTips[YEAR] || "a site name from this year";
       var msg =
         "You are inside a reconstructed " + browserLabel + " window for " + YEAR + ".\n\n" +
-        "• Links open inside this window (not a new browser tab)\n" +
-        "• Use Back and the directory buttons (" + dirHint + ")\n" +
-        "• On the Starting Point: Places to try walks you through the year\n" +
-        "• Click OK so the page stays clickable\n" +
-        "• ← Exit (top of the desktop) returns to the year menu\n\n" +
-        "Tip: in Location, try typing " + locTip + " and press Enter.";
-      showAlert("Welcome — " + YEAR, msg);
+        "HOW TO NAVIGATE\n" +
+        "• Starting Point = this year’s map (trails, About). Use the Starting Point button, toolbar Home, or the sticky bar on site pages.\n" +
+        "• Year menu = leave this year back to the museum lobby. Use ← Year menu (top) or window ×.\n" +
+        "• Directory bar: " + dirHint + "\n" +
+        "• Links open inside this window (not a new browser tab). Use Back to go previous.\n\n" +
+        "Tip: in Location, type " + locTip + " and press Enter.\n" +
+        "Click OK (or wait) so the page stays clickable.";
+      showAlert("Welcome — " + YEAR + " · how to navigate", msg);
       /* Non-blocking coach: full-screen backdrop was intercepting dirbar/toolbar/iframe
          clicks so “buttons felt dead” until OK. Keep the dialog, drop the dimmer. */
       try {

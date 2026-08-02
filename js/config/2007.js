@@ -207,6 +207,7 @@
       "sites/itunes-note.html": "http://www.itunes-note.html.com/itunes-note.html",
       "sites/itunes/browse.html": "http://www.itunes.com/browse.html",
       "sites/itunes/fairplay.html": "http://www.itunes.com/fairplay.html",
+      "sites/itunes/podcasts.html": "http://www.apple.com/itunes/podcasts/",
       "sites/itunes/index.html": "http://www.itunes.com/",
       "sites/itunes/library.html": "http://www.itunes.com/library.html",
       "sites/kazaa/client.html": "http://www.kazaa.com/client.html",

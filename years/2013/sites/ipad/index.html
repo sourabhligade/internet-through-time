@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>iPad mini — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<style>
+.ipad{font-family:Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:20px;background:#f5f5f5}
+.note{background:#fff8dc;border:1px solid #cc0;padding:10px;font-size:12px;margin:12px 0}
+.card{background:#fff;border:1px solid #ccc;padding:14px;margin:12px 0}
+.price{font-size:22px;color:#08c;font-weight:bold}
+</style>
+</head>
+<body bgcolor="#e8e8e8">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<p class="itt-phone-frame" style="font-size:11px;background:#ffffee;border:1px solid #996;color:#333;padding:6px 8px;margin:8px 0"><b>Desktop museum frame</b> — period website inside the year shell, not a full iOS simulator.</p>
+<div class="ipad">
+ <p style="font-size:12px">
+  <a href="../../pages/home.html">Starting Point</a> ·
+  <a href="about.html">About</a> ·
+  <a href="prices.html">Prices</a> ·
+  <a href="apps.html">Apps</a> ·
+  <a href="../iphone/index.html">iPhone 5</a> ·
+  <a href="../appstore/index.html">App Store</a>
+ </p>
+ <h1 style="font-weight:200;font-size:32px;margin:0">iPad mini</h1>
+ <p style="color:#555">7.9-inch · just right · ships <b>November 2, 2012</b></p>
+ <div class="note">
+  <b>2012 honesty:</b> Announced with iPad 4 / iOS 6 era autumn. Wi-Fi starts at <b>$329</b> (16GB) ·
+  <b>$429</b> (32GB) · <b>$529</b> (64GB). Wi-Fi + Cellular higher. Non-Retina 7.9" display class · A5 ·
+  Lightning connector (same family as iPhone 5). Residual: full-size iPad 2 / new iPad still sold.
+  <b>Not</b> iPad mini with Retina (2013) · <b>not</b> modern iPadOS chrome.
+  See <a href="prices.html">full price table</a>.
+ </div>
+ <div class="card">
+  <p class="price">From $329</p>
+  <p style="font-size:13px">16GB Wi-Fi · US SRP class · Apple Newsroom autumn 2012</p>
+  <button type="button" data-ipad-claim>I’m interested (theater)</button>
+  <div data-ipad-status style="font-size:12px;color:#060;margin-top:8px"></div>
+  <p style="font-size:11px;color:#666"><code>itt13-ipad-history</code></p>
+ </div>
+ <div class="card" style="font-size:12px">
+  <b>Also this autumn:</b> <a href="../iphone/index.html">iPhone 5</a> ·
+  <a href="../iphone/lightning.html">Lightning</a> ·
+  <a href="../iphone/maps.html">Apple Maps</a> ·
+  iPad with Retina (4th gen) residual shelf.
+ </div>
+</div>
+<script>
+(function(){
+  var KEY="itt13-ipad-history";
+  function boot(){
+    var btn=document.querySelector("[data-ipad-claim]");
+    var st=document.querySelector("[data-ipad-status]");
+    if(!btn)return;
+    try{if(localStorage.getItem(KEY)&&st)st.textContent="Noted · "+KEY;}catch(e){}
+    btn.addEventListener("click",function(){
+      try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPad mini",priceFrom:329,ts:Date.now()}));}catch(e2){}
+      if(st)st.textContent="Noted · iPad mini · $329+ · "+KEY;
+    });
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
+})();
+</script>
+<script src="../../../../js/immersion-2013.js"></script>
+</body>
+</html>

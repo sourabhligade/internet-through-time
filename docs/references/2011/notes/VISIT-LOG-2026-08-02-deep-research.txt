@@ -1,0 +1,79 @@
+# 2011 deep research visit log — 2026-08-02
+
+Session: museum research freeze for year 2011 (no implement / no scaffold).
+Method: web search + full page opens + cross-check against 2010 research templates
+and SCALE-LEDGER. Goal: thesis, scale, P0 kits, UI grammar, harvest queues.
+
+## Visited / used (primary)
+
+SCALE & MACRO
+- https://www.pingdom.com/blog/internet-2011-in-numbers/  (opened full; email/web/social/mobile stats)
+- https://www.internetlivestats.com/total-number-of-websites/  (June 2011 = 346,004,403; users 2.28B)
+- https://cybercultural.com/p/internet-2011/  (opened full; G+ · Timeline · Siri · Snapchat · Spotify · Netflix · cloud)
+
+APPLE
+- https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/  (opened full)
+- https://www.apple.com/newsroom/2011/03/02Apple-Launches-iPad-2/  (search + summary)
+- https://www.apple.com/newsroom/2011/10/05Statement-by-Apples-Board-of-Directors/  (search)
+
+SOCIAL
+- https://www.versionmuseum.com/history-of/facebook-website  (opened; 2011 two-column Timeline section)
+- https://www.webdesignmuseum.org/gallery/facebook-2011  (opened; gallery entry)
+- https://en.wikipedia.org/wiki/Google%2B  (search)
+- https://www.theguardian.com/technology/2011/jun/29/google-plus-facebook-social-networking
+- https://en.wikipedia.org/wiki/Snapchat  (Picaboo Jul → Snapchat Sep)
+- https://en.wikipedia.org/wiki/History_of_Facebook  (Messenger · Timeline · iPad app dates)
+
+STREAMING
+- https://www.npr.org/sections/therecord/2011/07/14/137842612/spotify-has-arrived-stateside-heres-what-you-need-to-know
+- https://techcrunch.com/2011/07/14/spotify-reveals-the-detail-behind-its-us-launch/  ($4.99 / $9.99 / invite free)
+- https://www.wired.com/2011/07/spotify-launches-in-the-u-s-at-last/
+- https://www.cnet.com/home/smart-home/spotify-finally-launches-in-the-u-s/
+- https://www.cnet.com/tech/services-and-software/netflixs-lost-year-the-inside-story-of-the-price-hike-train-wreck/
+
+BROWSERS / ANDROID
+- https://news.microsoft.com/source/2011/03/14/microsoft-announces-global-availability-of-internet-explorer-9-2/
+- https://en.wikipedia.org/wiki/Internet_Explorer_9
+- https://googleblog.blogspot.com/2011/10/unwrapping-ice-cream-sandwich-on-galaxy.html
+- https://en.wikipedia.org/wiki/Android_Ice_Cream_Sandwich
+
+INSTAGRAM HONESTY
+- TechCrunch Android Apr 2012 · Forbes · Wikipedia Instagram (iOS-only through 2011)
+
+INTERNAL TEMPLATES READ
+- docs/2010-RESEARCH.md
+- docs/2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md
+- docs/2010-MASTER-BIBLE-… / GOALS-PHASES clear
+- docs/references/2010/ARTIFACTS-MAP.md · CAPTURE-LOG.md
+- docs/references/SCALE-LEDGER.md (already listed 2011 dual-cite)
+- docs/DISK-TRUTH.md (2011+ locked)
+
+## Outputs written
+
+- docs/2011-RESEARCH.md
+- docs/2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md
+- docs/2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+- docs/2011-MUSEUM-GRADE.md
+- docs/references/2011/ARTIFACTS-MAP.md
+- docs/references/2011/CAPTURE-LOG.md
+- docs/references/2011/harvest/HARVEST-QUEUE-2011.md
+- this visit log
+- assets/period/2011/ (empty scaffold dir)
+
+## Not done this session
+
+- years/2011 HTML scaffold
+- actual WA image downloads
+- hub unlock
+- immersion code
+
+---
+## 2026-08-02 minute-detail improve pass
+- Pingdom 2011 in numbers (scale dual-cite, FB 800M, Twitter, WhatsApp 1B/day)
+- Live Stats websites + users tables
+- Google+ Blog Jun 28 2011 field trial; Guardian Sep 20 public open
+- Netflix Qwikster: Jul 12 price hike, Sep 18 announce, Oct 10 cancel (~23 days) — CNET/NPR
+- Spotify US Jul 14 freemium ladder $4.99/$9.99 — TechCrunch/NPR class
+- Apple 4S/Siri Oct 4; Jobs Oct 5; iPad 2 Mar; IE9 Mar 14
+- Wrote docs/2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md
+- Densified years/2011 About, Spotify, Qwikster, G+, home

@@ -33,6 +33,14 @@
     function close() {
       backdrop.classList.add("hidden");
       setDismissed();
+      document.removeEventListener("keydown", onKey);
+    }
+
+    function onKey(e) {
+      if (e.key === "Escape" || e.keyCode === 27) {
+        e.preventDefault();
+        close();
+      }
     }
 
     var ok = backdrop.querySelector("[data-ann-ok]");
@@ -42,6 +50,11 @@
     backdrop.addEventListener("click", function (e) {
       if (e.target === backdrop) close();
     });
+    document.addEventListener("keydown", onKey);
+    /* Focus primary dismiss so keyboard users can OK or Escape immediately */
+    try {
+      if (ok && typeof ok.focus === "function") ok.focus();
+    } catch (err) { /* */ }
   }
 
   if (document.readyState === "loading") {

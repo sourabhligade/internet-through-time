@@ -10,15 +10,29 @@
   function U() {
     return ITT.util || {};
   }
+  function yearFallbackPrefix() {
+    try {
+      var y =
+        (ITT._immersionYear && String(ITT._immersionYear)) ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        "";
+      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
+    } catch (e) { /* */ }
+    return "itt05";
+  }
   function uploadsKey() {
+    var fb = yearFallbackPrefix();
     return U().immersionStorageKey
-      ? U().immersionStorageKey("yt-uploads", "itt05")
-      : "itt05-yt-uploads";
+      ? U().immersionStorageKey("yt-uploads", fb)
+      : fb + "-yt-uploads";
   }
   function viewsKey() {
+    var fb = yearFallbackPrefix();
     return U().immersionStorageKey
-      ? U().immersionStorageKey("yt-views", "itt05")
-      : "itt05-yt-views";
+      ? U().immersionStorageKey("yt-views", fb)
+      : fb + "-yt-views";
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);
@@ -151,7 +165,9 @@
     if (form && form.getAttribute("data-yt-bound") !== "1") {
       form.setAttribute("data-yt-bound", "1");
       form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
+        /* Capture before chrome shell can navigate away */
+        if (ev.preventDefault) ev.preventDefault();
+        if (ev.stopPropagation) ev.stopPropagation();
         var titleInput = form.querySelector('[name="title"]');
         var descInput = form.querySelector('[name="desc"]');
         var title = (titleInput && titleInput.value) || "Untitled";
@@ -186,7 +202,38 @@
         form.reset();
         var homeList = doc.querySelector("[data-yt-list]");
         if (homeList) renderList(homeList, cur);
+        return false;
       });
+    }
+
+    /* Index search → watch ?v= (works inside year shell chrome, not only plain GET) */
+    var searchForms = doc.querySelectorAll("[data-yt-search], form.yt-search-bar");
+    var sfi;
+    for (sfi = 0; sfi < searchForms.length; sfi++) {
+      (function (sf) {
+        if (!sf || sf.getAttribute("data-yt-search-bound") === "1") return;
+        sf.setAttribute("data-yt-search-bound", "1");
+        sf.addEventListener("submit", function (ev) {
+          if (ev.preventDefault) ev.preventDefault();
+          if (ev.stopPropagation) ev.stopPropagation();
+          var inp =
+            sf.querySelector('input[name="v"]') ||
+            sf.querySelector('input[name="q"]') ||
+            sf.querySelector('input[type="text"]');
+          var q = inp ? String(inp.value || "").replace(/^\s+|\s+$/g, "") : "";
+          var href = watchHref(q || "Me at the zoo");
+          try {
+            if (doc.defaultView && doc.defaultView.location) {
+              doc.defaultView.location.href = href;
+            }
+          } catch (eNav) {
+            try {
+              doc.location.href = href;
+            } catch (e2) { /* */ }
+          }
+          return false;
+        });
+      })(searchForms[sfi]);
     }
 
     var titleEl = doc.querySelector("[data-yt-title]");
@@ -237,7 +284,11 @@
           }
         }
         var st = doc.querySelector("[data-yt-status]");
-        if (st) st.textContent = "Rated · " + n + " views (saved in this browser).";
+        var msg = "Rated · " + n + " views (saved in this browser).";
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { doc: doc, status: st, kind: "yt-like" });
+        }
       });
     }
 
@@ -391,6 +442,28 @@
       return;
     }
     ITT.ImmersionFeatures.registerLocal({ id: "youtube", boot: boot });
+    /*
+     * Soft re-bind: if first boot raced (shell inject / late form), re-run once
+     * after a tick so data-yt-upload gets data-yt-bound without double-seed issues.
+     */
+    function rebindIfNeeded() {
+      try {
+        var form = document.querySelector("[data-yt-upload]");
+        var list = document.querySelector("[data-yt-list]");
+        var need =
+          (form && form.getAttribute("data-yt-bound") !== "1") ||
+          (list && list.getAttribute("data-yt-seeded") !== "1");
+        if (need && ITT.youtube && typeof ITT.youtube.boot === "function") {
+          /* Clear once-guard so boot runs again */
+          try {
+            document.documentElement.removeAttribute("data-itt-feat-youtube");
+          } catch (eA) { /* */ }
+          ITT.youtube.boot(document);
+        }
+      } catch (eR) { /* */ }
+    }
+    setTimeout(rebindIfNeeded, 50);
+    setTimeout(rebindIfNeeded, 400);
   }
   register();
 })(typeof window !== "undefined" ? window : this);

@@ -280,6 +280,14 @@
         /* pin-ish pan shift for feedback */
         pan.x += 1;
         paint();
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback("Maps search · “" + label + "” · this browser only", {
+            doc: doc,
+            status: status,
+            kind: "maps-search",
+            flash: true
+          });
+        }
       });
     }
     var dirForm = doc.querySelector("[data-maps-directions]");

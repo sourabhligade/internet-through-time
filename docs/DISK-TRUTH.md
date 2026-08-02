@@ -1,9 +1,14 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-07-31  
+**Date:** 2026-08-02 · **Ship update:** hub **1994–2013** playable · **2013 MVP live** · **2014+ not on disk**  
+**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
 **Purpose:** Single source of truth for what is **playable on disk** vs research-only.
 
-**Flow-layer research (all open years):** [`FLOW-IMPROVEMENTS-DEEP-RESEARCH-1994-2008.md`](FLOW-IMPROVEMENTS-DEEP-RESEARCH-1994-2008.md)
+**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)  
+**Completion pass:** immersion storage isolation · period CSS through 2012 · early shell `data-itt-year` · 2011–12 densify/trail elevate.  
+**2000–2002 deep-doc index:** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
+**Flow-layer research (earlier open years):** [`FLOW-IMPROVEMENTS-DEEP-RESEARCH-1994-2008.md`](FLOW-IMPROVEMENTS-DEEP-RESEARCH-1994-2008.md)  
+**UI/UX improvement plan (hub · years · games):** [`UI-UX-IMPROVEMENT-PLAN.md`](UI-UX-IMPROVEMENT-PLAN.md)
 
 ### Period games wing (separate from years)
 
@@ -23,12 +28,100 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2008** |
-| Hub locked | **2009+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2008/` |
-| Period CSS | `css/period-1995.css` … `period-2008.css` |
+| Hub open years | **1994–2013** |
+| Hub locked | **2014+** (not scaffolded) |
+| Year trees | `years/1994/` … `years/2013/` |
+| Period CSS | `css/period-1995.css` … `period-2013.css` |
+| **2010** | **Museum-ready** · playable · see section below |
+| **2011** | **Museum-ready** · playable · see section below |
+| **2012** | **Museum-ready** · playable · see section below |
+| **2013** | **MVP live** · playable · see section below |
 
-### 2008 (MVP ship · playable)
+### 2013 (MVP live · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2013/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt13`** |
+| Scale | Live Stats June **672,985,183** (−3%) · users **~2.76B** · Dec **~861M** class |
+| P0 | Vine · IG Video · Snapchat Stories · iOS 7 / 5s/5c/Touch ID · Win8.1 · Chrome · Snowden |
+| P1 | PS4 · Xbox One · FB Home flop |
+| Research | **[`2013-READ-FIRST.md`](2013-READ-FIRST.md)** · master bible · deep harvest |
+| e2e | `npm run test:e2e:2013` |
+| Capture | [`references/2013/`](references/2013/) · honesty pack stub |
+| Residual | WA pixels · deeper densify |
+
+### 2012 (museum-ready · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2012/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt12`** |
+| Shell | Win7 + Chrome/IE9 rising · **Win8 + IE10** product late (not January-only mass) |
+| Scale | Live Stats June **697,089,489** (+101%) · Pingdom Dec **634M** · users ~**2.4B** |
+| P0 | **Instagram Android + FB $1B buy** · **Facebook IPO + 1B users** · **Pinterest mass** · **iPhone 5/Lightning/Maps** · **iPad mini** · **Win8** · **Chrome > IE** |
+| P1 | UberX · Snapchat densify · YouTube Gangnam · Reddit residual |
+| Research | **[`2012-READ-FIRST.md`](2012-READ-FIRST.md)** · RESEARCH · master bible · ultra-deep · minute pack |
+| Museum grade | [`2012-MUSEUM-GRADE.md`](2012-MUSEUM-GRADE.md) — **Museum-ready** |
+| e2e | mvp · densify · flows A–T · real · trail · hub-years |
+| Capture | CAPTURE-LOG · ASSETS honesty pack (continuity / failed-final) |
+| Residual forever | Perfect WA brand stills optional |
+
+### 2011 (museum-ready · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2011/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt11`** |
+| Shell | Win7 + **IE 9** · Chrome product · IE8 residual honest |
+| Scale | Live Stats June **346,004,403** (+67%) · Pingdom Dec **555M** · users ~**2.1–2.28B** |
+| P0 | **Spotify US** · **Facebook Timeline** · **Google+** · **iPhone 4S/Siri/iOS 5/iCloud** · **iPad 2** · **Netflix/Qwikster** · **IE 9** |
+| P1 seeds | Snapchat · Instagram densify (still iOS-only) · Android ICS |
+| Research | [`2011-RESEARCH.md`](2011-RESEARCH.md) · master bible · minute pack |
+| Museum grade | [`2011-MUSEUM-GRADE.md`](2011-MUSEUM-GRADE.md) — **Museum-ready** |
+| e2e | mvp · densify · flows A–T · real · trail · hub-years |
+| Capture | CAPTURE-LOG · ASSETS honesty pack (continuity / failed-final) |
+| Residual forever | Perfect WA brand stills optional |
+
+### 2010 (museum-ready · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2010/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt10`** |
+| Shell | Win7 + **IE 8** · IE9 beta product · Chrome product room |
+| Scale | Live Stats June **206,956,723** · Pingdom Dec **~255M** · users ~**2B** class |
+| P0 | **iPad** multipage · **iPhone 4** FaceTime/Antenna/iOS4 · **Instagram** · App Store catalog · Facebook Open Graph · Foursquare · FarmVille peak |
+| P1 seeds | Pinterest · Uber SF · Wave funeral · Nexus One · IE9 beta |
+| Research | [`2010-RESEARCH.md`](2010-RESEARCH.md) · [`2010-TO-100-PERCENT-STEP-BY-STEP-PLAN.md`](2010-TO-100-PERCENT-STEP-BY-STEP-PLAN.md) · master bible |
+| Museum grade | [`2010-MUSEUM-GRADE.md`](2010-MUSEUM-GRADE.md) — **Museum-ready** |
+| e2e | mvp · densify · flows · real · trail · hub-years |
+| Capture | [`references/2010/CAPTURE-LOG.md`](references/2010/CAPTURE-LOG.md) · [wa] iPad/FB/4sq · failed-final residual |
+
+### 2009 (100% content · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2009/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt09`** |
+| Shell | XP + **IE 8** · Win7 product (Oct) · Chrome product room |
+| Scale | **238,027,855** sites · ~1.77B users (Live Stats) |
+| P0 | iPhone **3GS** · App Store 50k/1B · Facebook **Like** · **FarmVille** · **Bing** · Twitter · Win7/IE8 |
+| P1 seeds | Foursquare · Kickstarter · Wave · WhatsApp · FriendFeed epitaph · UberCab seed |
+| Continuity | Gmail · YT · Hulu · Netflix · Spotify **EU** · Dropbox · Android multiphone · Chrome Mac/Linux late |
+| Research | [`2009-RESEARCH.md`](2009-RESEARCH.md) · [`2009-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2009-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) · [`2009-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md`](2009-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md) |
+| Goals / phases / flows | [`2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) |
+| Museum grade | [`2009-MUSEUM-GRADE.md`](2009-MUSEUM-GRADE.md) — **100% content** |
+| e2e | `2009-mvp` · densify · flows · real · trail · hub-years |
+| Assets | `assets/period/2009/` [wa] iPhone · App Store · Bing · Win7 · Twitter · Chrome · **Foursquare** · FB/FV/KS failed-final RECON · continuity 2008 |
+| Capture | [`references/2009/CAPTURE-LOG.md`](references/2009/CAPTURE-LOG.md) · [`ARTIFACTS-MAP.md`](references/2009/ARTIFACTS-MAP.md) |
+
+### 2008 (museum-ready · densify + WA ship · playable)
 
 | Item | Status |
 |------|--------|
@@ -39,13 +132,15 @@
 | Scale | **172,338,726** sites · Dropbox birthmark (Live Stats) |
 | P0 | App Store · iPhone 3G · Chrome · Android G1 · Hulu |
 | Continuity | open Gmail · Street View · FB Connect · Twitter · YouTube HD densify |
-| Research | [`2008-RESEARCH.md`](2008-RESEARCH.md) · [`2008-DEEP-RESEARCH-FRESH-2026-07-31.md`](2008-DEEP-RESEARCH-FRESH-2026-07-31.md) |
+| Research | [`2008-RESEARCH.md`](2008-RESEARCH.md) · [`2008-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md`](2008-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md) · [`2008-DEEP-RESEARCH-FRESH-2026-07-31.md`](2008-DEEP-RESEARCH-FRESH-2026-07-31.md) |
 | Goals / phases / flows (clear) | [`2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) |
+| **Master bible (all detail)** | [`2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) |
 | Implement bible (long) | [`2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md) |
 | Connections | [`2008-CONNECTIONS-AND-TRAILS.md`](2008-CONNECTIONS-AND-TRAILS.md) |
-| Museum grade | [`2008-MUSEUM-GRADE.md`](2008-MUSEUM-GRADE.md) — **MVP on disk** |
+| Museum grade | [`2008-MUSEUM-GRADE.md`](2008-MUSEUM-GRADE.md) — **densify + WA pixel harvest ship** |
 | e2e | `2008-mvp` · `real-flows` · `densify` · `flows` A–T · `trail` |
-| Residual optional | Spotify Europe room · Dropbox room · WA pixels App Store/Chrome/G1 |
+| Assets | `assets/period/2008/` Chrome · App Store · iPhone · G1 · Hulu · Dropbox · Spotify **[wa]** |
+| Residual optional | Friend Connect logo · full WDM Chrome UI pack · deeper multipage |
 | References | [`references/2008/`](references/2008/) |
 
 

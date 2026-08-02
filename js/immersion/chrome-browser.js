@@ -40,7 +40,22 @@
         o.ts = Date.now();
         o.platform = "Windows";
         save(o);
-        if (st) st.textContent = "Download started (theater) · Windows beta/1.0 · " + storageKey();
+        var yLabel = "";
+        try {
+          yLabel = String(ITT._immersionYear || "") ||
+            (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) || "";
+        } catch (eY) { /* */ }
+        var era =
+          yLabel === "2008" || yLabel === "2009"
+            ? "Windows beta/1.0 class"
+            : yLabel
+              ? "stable auto-update · " + yLabel
+              : "download theater";
+        var msg = "Download started (theater) · " + era + " · " + storageKey();
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { doc: doc, status: st, kind: "chrome-dl" });
+        }
       });
     }
     var pref = doc.querySelector("[data-chrome-prefer]");
@@ -52,7 +67,11 @@
         o.preferred = true;
         o.ts = Date.now();
         save(o);
-        if (st) st.textContent = "Set as preferred (local only · museum shell still IE) · " + storageKey();
+        var msg = "Set as preferred (local only · museum shell still IE) · " + storageKey();
+        if (st) st.textContent = msg;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { doc: doc, status: st, kind: "chrome-pref" });
+        }
       });
     }
   }

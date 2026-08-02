@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Core shell flows for every exhibit year 1994–2005.
+ * Core shell flows for every exhibit year 1994–2012.
  * Covers: boot · home content · dirbar · home button · start menu · location Go.
  */
 const { test, expect } = require('@playwright/test');
@@ -16,7 +16,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005',
-  '2006', '2007',
+  '2006', '2007', '2008', '2009', '2010', '2011', '2012',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -34,6 +34,12 @@ const LOCATION_HINT = {
   '2005': { type: 'youtube', re: /youtube/i },
   '2006': { type: 'twitter', re: /twitter|twttr/i },
   '2007': { type: 'iphone', re: /iphone|apple/i },
+  /* Prefer keys that exist in each year's locationHints map */
+  '2008': { type: 'iphone', re: /iphone/i },
+  '2009': { type: 'bing', re: /bing/i },
+  '2010': { type: 'chrome', re: /chrome/i },
+  '2011': { type: 'spotify', re: /spotify/i },
+  '2012': { type: 'instagram', re: /instagram/i },
 };
 
 for (const year of YEARS) {
@@ -92,6 +98,23 @@ for (const year of YEARS) {
       }
       expect(result.prefsOpen, 'Settings should open prefs').toBeTruthy();
       expect(result.runOpen, 'Run should open Open Location').toBeTruthy();
+    });
+
+    test(`Museum hub link leaves immersion (UX U2)`, async ({ page }) => {
+      /* Spot-check a few years so suite stays fast; path is same pattern all years. */
+      test.skip(!['1995', '2005', '2010'].includes(year), 'spot-check only');
+      await enterYear(page, year);
+      await killOverlays(page);
+      const frame = contentFrame(page);
+      const hub = frame.locator('a[href*="index.html"][target="_top"]').filter({ hasText: /Museum hub/i }).first();
+      await expect(hub).toBeVisible({ timeout: 15000 });
+      await hub.click();
+      await page.waitForURL((url) => {
+        const p = url.pathname || '';
+        return p === '/' || p === '/index.html' || /\/index\.html$/.test(p) && !/\/years\//.test(p);
+      }, { timeout: 15000 });
+      await expect(page.locator('body')).toContainText(/Internet Through Time|Directory of years|How to use/i);
+      await expect(page).not.toHaveURL(new RegExp(`/years/${year}/?$`));
     });
 
     test(`location bar Enter resolves signature hint`, async ({ page }) => {

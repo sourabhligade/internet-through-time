@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Facebook Places — 2010</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css"></head>
+<body bgcolor="#edeff4">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:560px;margin:16px auto;background:#fff;border:1px solid #b3b3b3;padding:16px;font-family:tahoma,arial,sans-serif;font-size:13px">
+ <p style="font-size:12px"><a href="index.html">facebook</a> · <a href="../foursquare/index.html">Foursquare contrast</a></p>
+ <h1 style="color:#3b5998;font-size:18px">Places</h1>
+ <p style="background:#fff8dc;border:1px solid #cc0;padding:8px;font-size:12px">
+  <b>2010 honesty:</b> Facebook Places (~Aug 2010 class) — check-in competition with Foursquare. Theater only · no live GPS.
+ </p>
+ <p>Check in (theater):</p>
+ <button type="button" id="pl">Coffee House</button>
+ <button type="button" id="pl2">Airport</button>
+ <div id="st" style="font-size:12px;color:#060;margin-top:8px"></div>
+ <p style="font-size:11px;color:#666"><code>itt10-fb-places</code></p>
+</div>
+<script>
+(function(){var KEY="itt10-fb-places";function go(v){var list=[];try{list=JSON.parse(localStorage.getItem(KEY)||"[]")||[]}catch(e){}list.unshift({venue:v,ts:Date.now()});localStorage.setItem(KEY,JSON.stringify(list.slice(0,20)));document.getElementById("st").textContent="Checked in: "+v+" · "+KEY;}document.getElementById("pl").onclick=function(){go("Coffee House")};document.getElementById("pl2").onclick=function(){go("Airport")};})();
+</script>
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

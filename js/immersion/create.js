@@ -38,6 +38,8 @@
       },
       // filled by ImmersionInstallShared
       showFlash: function () {},
+      actionFeedback: function () {},
+      resolveStatusNode: function () { return null; },
       markTourProgress: function () {},
       renderCounter: function () {},
       renderTour: function () {},
@@ -78,6 +80,7 @@
       R: api.R,
       boot: boot,
       showFlash: function (h, o) { return api.showFlash(h, o); },
+      actionFeedback: function (h, o) { return api.actionFeedback(h, o); },
       renderTour: function (r) { return api.renderTour(r); }
     };
   }

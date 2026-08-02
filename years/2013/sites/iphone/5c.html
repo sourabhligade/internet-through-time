@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>iPhone 5c — colorful · September 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css">
+<script src="../../../../js/immersion-2013.js" defer></script>
+</head>
+<body class="ios7-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:420px;margin:16px auto;padding:12px;font-family:Helvetica,Arial,sans-serif">
+ <p style="font-size:11px"><a href="index.html">← iPhone 5s</a> · <a href="ios7.html">iOS 7</a></p>
+ <h1 style="font-size:18px;font-weight:300">iPhone 5c</h1>
+ <p style="font-size:13px">Ships <b>September 20, 2013</b> with the 5s. Colorful polycarbonate · lower price tier class · still Lightning · 4″ · <b>iOS 7</b>.</p>
+ <div style="display:flex;gap:8px;margin:12px 0">
+  <div style="flex:1;height:48px;background:#ff3b30;border-radius:8px" title="red"></div>
+  <div style="flex:1;height:48px;background:#ffcc00;border-radius:8px" title="yellow"></div>
+  <div style="flex:1;height:48px;background:#4cd964;border-radius:8px" title="green"></div>
+  <div style="flex:1;height:48px;background:#5ac8fa;border-radius:8px" title="blue"></div>
+  <div style="flex:1;height:48px;background:#fff;border:1px solid #ccc;border-radius:8px" title="white"></div>
+ </div>
+ <p><button type="button" data-5c-ack style="padding:8px 14px;background:#ff3b30;color:#fff;border:0;border-radius:6px;cursor:pointer">Save 5c interest (theater)</button>
+ <span data-5c-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
+ <p style="font-size:11px;color:#666"><code>itt13-iphone5c</code> · not inventing product photography</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt13-iphone5c";
+  var btn = document.querySelector("[data-5c-ack]");
+  var st = document.querySelector("[data-5c-status]");
+  if (btn) btn.addEventListener("click", function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ model: "5c", ts: Date.now() })); } catch (e) {}
+    var msg = "5c saved · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "5c" });
+      }
+    } catch (e2) {}
+  });
+});
+</script>
+</body>
+</html>

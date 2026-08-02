@@ -16,11 +16,11 @@
     );
   }
   function KEY() {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("delicious-posts", "itt05");
+    }
     var y = year();
-    if (y === "2004") return "itt04-delicious-posts";
-    if (y === "2008") return "itt08-delicious-posts";
-    if (y === "2007") return "itt07-delicious-posts";
-    if (y === "2006") return "itt06-delicious-posts";
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-delicious-posts";
     return "itt05-delicious-posts";
   }
 

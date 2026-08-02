@@ -1,7 +1,9 @@
 # 2004 — Museum grade status
 
 **Date:** 2026-07-30  
-**Status:** **100% museum complete** + **residual hard-flow pass closed 2026-07-30** (voice purge · P0 densify · `2004-flows`) · hub **unlocked**  
+**Status:** **Museum-ready** · was: **100% museum complete** + **residual hard-flow pass closed 2026-07-30** (voice purge · P0 densify · `2004-flows`) · hub **unlocked**  
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2004/` live · **66** rooms · `assets/period/2004/` signatures **WA** · urlMap **complete**
 
 | Companion | Role |

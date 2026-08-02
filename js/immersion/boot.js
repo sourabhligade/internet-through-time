@@ -119,8 +119,19 @@
       ["chrome", "immersion/chrome-browser.js"],
       ["android", "immersion/android.js"],
       ["hulu", "immersion/hulu.js"],
+      ["farmville", "immersion/farmville.js"],
+      ["bing", "immersion/bing.js"],
+      ["foursquare", "immersion/foursquare.js"],
+      ["kickstarter", "immersion/kickstarter.js"],
+      ["wave", "immersion/wave.js"],
+      ["instagram", "immersion/instagram.js"],
+      ["pinterest", "immersion/pinterest.js"],
       ["feedburner", "immersion/feedburner.js"],
-      ["podcasts", "immersion/podcasts.js"]
+      ["podcasts", "immersion/podcasts.js"],
+      ["spotify", "immersion/spotify.js"],
+      ["googleplus", "immersion/googleplus.js"],
+      ["snapchat", "immersion/snapchat.js"],
+      ["siri", "immersion/siri.js"]
     ];
     var priority = [];
     var seen = {};

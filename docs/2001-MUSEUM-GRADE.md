@@ -1,7 +1,9 @@
 # 2001 — museum-grade status
 
 **Date:** 2026-07-29  
-**Status:** **Museum densify complete** (wiki densify auth · XP Start GUIdebook · Google/iPod WA · broadband · e2e expand) · hub **unlocked**
+**Status:** **Museum-ready** · was: **Museum densify complete** (wiki densify auth · XP Start GUIdebook · Google/iPod WA · broadband · e2e expand) · hub **unlocked**
+
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 
 | Item | Notes |
 |------|-------|

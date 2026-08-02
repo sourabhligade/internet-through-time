@@ -25,8 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum intends to ship eventually (research may exist without a tree)
-KNOWN_YEARS = [str(y) for y in range(1994, 2007)]  # 1994–2006
+# Years the museum ships (hub open 1994–2013 — DISK-TRUTH)
+KNOWN_YEARS = [str(y) for y in range(1994, 2014)]  # 1994–2013
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -49,7 +49,85 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/reddit/index.html",
         "sites/digg/index.html",
     ],
-    "2006": [],  # research only until scaffold
+    "2006": ["pages/home.html", "sites/twitter/index.html", "sites/facebook/feed.html", "sites/youtube/index.html"],
+    "2007": [
+        "pages/home.html",
+        "sites/iphone/index.html",
+        "sites/gmail/index.html",
+        "sites/maps/streetview.html",
+        "sites/facebook/platform.html",
+    ],
+    "2008": [
+        "pages/home.html",
+        "sites/appstore/index.html",
+        "sites/chrome/index.html",
+        "sites/android/index.html",
+        "sites/hulu/index.html",
+        "sites/dropbox/index.html",
+        "sites/spotify/index.html",
+        "sites/friendconnect/index.html",
+    ],
+    "2009": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/appstore/index.html",
+        "sites/iphone/index.html",
+        "sites/facebook/feed.html",
+        "sites/farmville/index.html",
+        "sites/bing/index.html",
+        "sites/windows7/index.html",
+    ],
+    "2010": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/ipad/index.html",
+        "sites/iphone/index.html",
+        "sites/instagram/index.html",
+        "sites/appstore/index.html",
+        "sites/facebook/feed.html",
+        "sites/farmville/index.html",
+        "sites/foursquare/index.html",
+        "sites/windows7/index.html",
+    ],
+    "2011": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/spotify/index.html",
+        "sites/facebook/timeline.html",
+        "sites/googleplus/index.html",
+        "sites/iphone/siri.html",
+        "sites/ipad/index.html",
+        "sites/netflix/qwikster.html",
+        "sites/ie9/index.html",
+    ],
+    "2012": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/instagram/index.html",
+        "sites/instagram/android.html",
+        "sites/instagram/acquired.html",
+        "sites/facebook/ipo.html",
+        "sites/pinterest/index.html",
+        "sites/iphone/index.html",
+        "sites/iphone/maps.html",
+        "sites/ipad/index.html",
+        "sites/windows8/index.html",
+        "sites/chrome/index.html",
+    ],
+    "2013": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/vine/index.html",
+        "sites/vine/record.html",
+        "sites/instagram/video.html",
+        "sites/snapchat/story.html",
+        "sites/iphone/index.html",
+        "sites/iphone/ios7.html",
+        "sites/iphone/touchid.html",
+        "sites/windows81/index.html",
+        "sites/chrome/index.html",
+        "sites/snowden/index.html",
+    ],
 }
 
 # Optional research markers (year can be "research-only" without tree)

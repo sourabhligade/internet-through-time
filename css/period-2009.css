@@ -1,0 +1,88 @@
+/* 2009 document styles — XP residual · IE 8 · Win7 product · Like · FarmVille · Bing · 3GS
+   Year delta: @import period-2008 then 2009 product grammar. */
+@import url("period-2008.css");
+
+body.year-2009 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #6b9;
+}
+
+/* Facebook Like era */
+.fb-like-btn,
+[data-fb-like] {
+  background: #eceef5;
+  border: 1px solid #cad4e7;
+  color: #3b5998;
+  font: bold 11px "lucida grande", Tahoma, sans-serif;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+/* FarmVille culture page */
+.farmville-shell {
+  font-family: Arial, sans-serif;
+  background: #c8e6a0;
+  color: #234;
+  font-size: 13px;
+}
+.farmville-shell .fv-field {
+  background: #8c4;
+  border: 3px solid #680;
+  min-height: 120px;
+  padding: 10px;
+}
+
+/* Bing 2009 — blue gradient search product */
+.bing-shell {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  font-size: 13px;
+}
+.bing-shell .bing-searchbox {
+  border: 1px solid #999;
+  padding: 6px 8px;
+  font-size: 16px;
+  width: 70%;
+  max-width: 420px;
+}
+.bing-shell .bing-btn {
+  background: #00809d;
+  color: #fff;
+  border: 0;
+  padding: 6px 14px;
+  font-weight: bold;
+}
+
+/* Windows 7 product room */
+.win7-shell {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #0a3d62;
+  color: #fff;
+  font-size: 13px;
+}
+.win7-shell a { color: #9cf; }
+.win7-shell .win7-hero {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px;
+  margin: 12px 0;
+}
+
+/* Foursquare 2009 seed */
+.foursquare-shell {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  font-size: 13px;
+}
+.foursquare-shell .fsq-checkin {
+  background: #00a;
+  color: #fff;
+  padding: 8px 12px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Twitter still bird-era blue */
+.tw-shell { background: #c0deed; }

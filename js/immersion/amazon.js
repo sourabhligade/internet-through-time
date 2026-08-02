@@ -63,7 +63,11 @@ function initAmazonAdd() {
         note.style.display = "block";
         note.innerHTML = msg;
       }
-      showFlash(msg);
+      if (api.actionFeedback) {
+        api.actionFeedback(msg, { kind: "amazon-cart", statusSelector: "#cart-flash, [data-cart-flash]" });
+      } else {
+        showFlash(msg);
+      }
       markTourProgress();
     });
   }

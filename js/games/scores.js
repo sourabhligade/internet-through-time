@@ -46,7 +46,7 @@
     if (!el) return;
     var list = getScores(gameId);
     if (!list.length) {
-      el.innerHTML = "<p style='margin:0;color:#666'>No scores yet — play a round!</p>";
+      el.innerHTML = "<p style='margin:0;color:#666'>Nothing here yet — play a round above. Scores stay in this browser only.</p>";
       return;
     }
     var html = "<ol>";

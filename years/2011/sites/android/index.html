@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2011">
+<head>
+<meta charset="utf-8">
+<title>Android · Ice Cream Sandwich — 2011</title>
+<link rel="stylesheet" href="../../../../css/period-2011.css">
+<script src="../../../../js/immersion-2011.js" defer></script>
+</head>
+<body bgcolor="#e0e0e0">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;padding:16px;background:#f5f5f5;font-family:Arial,sans-serif;font-size:13px">
+ <p style="font-size:12px">
+  <a href="../../pages/home.html">Starting Point</a> ·
+  <a href="about.html">About</a> ·
+  <a href="market.html">Market</a>
+ </p>
+ <h1 style="font-size:22px;margin:0">Android 4.0 · Ice Cream Sandwich</h1>
+ <p style="color:#555">Galaxy Nexus · phone + tablet UI unify · soft buttons lore · Roboto</p>
+ <div style="background:#e8f5e9;border:1px solid #4caf50;padding:10px;font-size:12px;margin:10px 0">
+  <b>Minute honesty (2011):</b>
+  <ul style="margin:6px 0 0 18px">
+   <li><b>Oct 19, 2011</b> — Galaxy Nexus + Android <b>4.0 Ice Cream Sandwich</b> (Google/Samsung class)</li>
+   <li>Unifies phone &amp; tablet UI story · soft navigation · better multitasking lore</li>
+   <li>Residual: Nexus One / multiphone 2010 continuity still on shelves</li>
+   <li><b>Not</b> mass default desktop · <b>not</b> Instagram Android (that is <b>Apr 2012</b>)</li>
+  </ul>
+ </div>
+ <p>
+  <button type="button" data-android-claim>I’m interested (theater)</button>
+  <span data-android-status style="font-size:12px;color:#060;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666"><code>itt11-android</code> · Google Blog / ICS era · educational</p>
+</div>
+<script>
+(function(){
+  var KEY="itt11-android";
+  function boot(){
+    var btn=document.querySelector("[data-android-claim]");
+    var st=document.querySelector("[data-android-status]");
+    if(!btn)return;
+    try{if(localStorage.getItem(KEY)&&st)st.textContent="Noted · "+KEY;}catch(e){}
+    btn.addEventListener("click",function(){
+      try{localStorage.setItem(KEY,JSON.stringify({interested:true,os:"Ice Cream Sandwich",device:"Galaxy Nexus class",ts:Date.now()}));}catch(e2){}
+      if(st)st.textContent="Noted · ICS / Galaxy Nexus class · "+KEY;
+    });
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
+})();
+</script>
+</body>
+</html>
