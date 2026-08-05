@@ -21,6 +21,7 @@
       var showFlash = api.showFlash;
       var actionFeedback = api.actionFeedback || showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -113,7 +114,7 @@ function initHotmail() {
       setHotmailUser({ login: login, pass: pass ? "set" : "" });
       seedMail({ login: login });
       actionFeedback("Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
-      markTourProgress();
+      markTourUsed();
       hotmailGo("inbox.html");
     };
   }
@@ -200,7 +201,7 @@ function initHotmail() {
         "Message queued to <b>" + escapeHtml(to || "recipient") +
         "</b>. <font size=\"1\">Get your free email at HoTMaiL.</font>"
       );
-      markTourProgress();
+      markTourUsed();
       window.setTimeout(function () {
         hotmailGo("inbox.html");
       }, 800);

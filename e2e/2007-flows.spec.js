@@ -517,6 +517,36 @@ test.describe('Flow S — Beacon privacy', () => {
     await page.goto('/years/2007/sites/facebook/about.html');
     await expect(page.locator('body')).toContainText(/Beacon/i);
     await expect(page.locator('a[href*="platform"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="beacon"]').first()).toBeVisible();
+  });
+
+  test('Beacon multipage REAL → itt07-beacon-ack (empty blocked · isolation)', async ({ page }) => {
+    await page.goto('/years/2007/sites/facebook/beacon.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-beacon-ack');
+        localStorage.removeItem('itt06-beacon-ack');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await expect(page.locator('body')).toContainText(/Nov(?:ember)?\s*6|Beacon|partner/i);
+    // Empty gate: no checks → no write
+    await page.locator('[data-itt-real-save]').click();
+    await page.waitForTimeout(300);
+    expect(await page.evaluate(() => localStorage.getItem('itt07-beacon-ack'))).toBeFalsy();
+    // REAL multi-step
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''), {
+        timeout: 10000,
+      })
+      .toMatch(/multiStep|checks/i);
+    expect(await page.evaluate(() => localStorage.getItem('itt06-beacon-ack'))).toBeNull();
   });
 });
 

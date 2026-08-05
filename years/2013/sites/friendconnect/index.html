@@ -34,9 +34,12 @@
  <div class="gfc-box">
   <b>Your blog (museum partner stub)</b><br>
   <font size="2" color="#555">Add a members gadget · visitors sign in with a Google/OpenSocial identity (theater).</font>
+  <label style="display:block;margin:8px 0;font-size:12px">
+   <input type="checkbox" data-gfc-opensocial> OpenSocial gadget stack literacy (required)
+  </label>
   <p style="margin:10px 0 4px">
    <button type="button" data-gfc-enable style="background:#4d90fe;color:#fff;border:1px solid #3079ed;padding:6px 12px;font-size:12px;cursor:pointer">
-    Enable Friend Connect (theater)
+    Enable Friend Connect (REAL)
    </button>
    <button type="button" data-gfc-disable style="margin-left:6px;font-size:12px">Remove</button>
   </p>
@@ -75,7 +78,17 @@
     show();
     if (on) {
       on.addEventListener("click", function () {
-        localStorage.setItem(key(), JSON.stringify({ enabled: true, stack: "opensocial", ts: Date.now() }));
+        var lit = document.querySelector("[data-gfc-opensocial]");
+        if (lit && !lit.checked) {
+          if (st) st.textContent = "Check OpenSocial gadget literacy first (not mock).";
+          return;
+        }
+        localStorage.setItem(key(), JSON.stringify({
+          enabled: true,
+          stack: "opensocial",
+          multiStep: true,
+          ts: Date.now()
+        }));
         show();
       });
     }

@@ -29,32 +29,17 @@
   <p style="font-size:11px;color:#666"> · local flag only · no OAuth network</p>
  </div>
 </div>
-<script>
-(function () {
-  function key() {
-    try {
-      if (window.ITT && ITT.util && ITT.util.immersionStorageKey) {
-        return ITT.util.immersionStorageKey("fb-connect", "itt13");
-      }
-    } catch (e) {}
-    return "itt13-fb-connect";
-  }
-  function boot() {
-    var btn = document.querySelector("[data-fb-connect]");
-    var st = document.querySelector("[data-fb-connect-status]");
-    if (!btn) return;
-    try {
-      var raw = localStorage.getItem(key());
-      if (raw && st) st.textContent = "Connected (theater) · " + key();
-    } catch (e) {}
-    btn.addEventListener("click", function () {
-      localStorage.setItem(key(), JSON.stringify({ connected: true, ts: Date.now() }));
-      if (st) st.textContent = "Approved · graph follows you (theater) · " + key();
-    });
-  }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
-  else boot();
-})();
-</script>
+
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Facebook Connect</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Connect / Platform residual</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real OAuth</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="fb-connect" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-fb-connect</code></p>
+</div>
 <script src="../../../../js/immersion-2013.js"></script>
 </body></html>

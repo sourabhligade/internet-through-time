@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Touch ID — iPhone 5s · 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -22,22 +22,17 @@
  <div class="itt13-status" data-touchid-status></div>
  
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-touchid";
-  var btn = document.querySelector("[data-touchid-enroll]");
-  var st = document.querySelector("[data-touchid-status]");
-  if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ enrolled: true, model: "5s", ts: Date.now() })); } catch (e) {}
-    var msg = "Touch ID enrolled (theater) · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "touchid" });
-      }
-    } catch (e2) {}
-  });
-});
-</script>
+
+<div style="margin:12px 0;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px">
+ <b>Multi-step REAL — Touch ID</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Fingerprint sensor literacy (5s)</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real biometrics / Secure Enclave</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="touchid" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-touchid</code></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

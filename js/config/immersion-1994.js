@@ -7,8 +7,9 @@
   ITT.immersionConfigs = ITT.immersionConfigs || {};
   ITT.immersionConfigs["1994"] = {
     year: "1994",
-    storagePrefix: "itt",
-    features: { nav: true, amazon: false, auction: false, museumBar: true },
+    storagePrefix: "itt94",
+    features: {
+      flowMap: true, nav: true, amazon: false, auction: false, museumBar: true },
     navSubtitle: "Netscape 1.0 · 14.4k",
     nav: [
       { label: "Home", href: "pages/home.html", match: "/pages/home" },
@@ -21,6 +22,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Yahoo!", href: "sites/yahoo/index.html" },
       { label: "About 1994", href: "pages/about.html" }
     ],

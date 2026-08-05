@@ -24,6 +24,7 @@
       var saveJSON = api.saveJSON;
       var storageKey = api.storageKey;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var showFlash = api.showFlash;
 
       var toggles = document.querySelectorAll("[data-excite-toggle]");
@@ -55,7 +56,7 @@
           el.style.display = hide ? "none" : "";
           state[id] = !hide;
           saveJSON(key, state);
-          markTourProgress();
+          markTourUsed();
           if (showFlash) {
             showFlash(
               hide

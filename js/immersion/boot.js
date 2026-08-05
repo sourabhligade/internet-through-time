@@ -131,7 +131,8 @@
       ["spotify", "immersion/spotify.js"],
       ["googleplus", "immersion/googleplus.js"],
       ["snapchat", "immersion/snapchat.js"],
-      ["siri", "immersion/siri.js"]
+      ["siri", "immersion/siri.js"],
+      ["icq", "immersion/icq.js"]
     ];
     var priority = [];
     var seen = {};

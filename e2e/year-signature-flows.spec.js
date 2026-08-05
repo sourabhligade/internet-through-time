@@ -368,8 +368,15 @@ test.describe('year-signature 2005', () => {
       })
       .toContain(title);
   });
-  test('Maps zoom theater', async ({ page }) => {
+  test('Maps zoom + search write itt05-maps-state', async ({ page }) => {
     await enterYear(page, '2005');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt05-maps-state');
+      } catch (e) {
+        /* */
+      }
+    });
     await goImmersion(page, '2005', 'sites/maps/index.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Maps|Google|Zoom|pan/i, { timeout: 15000 });
@@ -377,20 +384,63 @@ test.describe('year-signature 2005', () => {
     await expect(zin).toBeVisible({ timeout: 10000 });
     await zin.click();
     await expect(frame.locator('[data-maps-status]')).toContainText(/Zoom/i, { timeout: 5000 });
+    await frame.locator('[name="what"]').fill('sig maps');
+    await frame.locator('[name="where"]').fill('Boston, MA');
+    await frame.locator('[data-maps-search] button[type="submit"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-maps-state') || ''), {
+        timeout: 8000,
+      })
+      .toMatch(/sig maps|Boston|zoom|history/i);
   });
-  test('Digg dig button', async ({ page }) => {
+  test('Digg dig mutates itt05-digg-links (not mock count only)', async ({ page }) => {
     await enterYear(page, '2005');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt05-digg-links');
+        localStorage.removeItem('itt04-digg-links');
+      } catch (e) {
+        /* */
+      }
+    });
     await goImmersion(page, '2005', 'sites/digg/index.html');
     const frame = contentFrame(page);
-    const dig = frame.locator('[data-digg-up]').first();
+    const dig = frame.locator('[data-digg-up="0"]');
     await expect(dig).toBeVisible({ timeout: 10000 });
+    const before = parseInt(await frame.locator('[data-digg-count="0"]').innerText(), 10);
     await dig.click();
-    await page.waitForTimeout(300);
-    await expect(frame.locator('[data-digg-list]')).toContainText(/digg/i);
+    await expect(frame.locator('[data-digg-count="0"]')).toContainText(String(before + 1), {
+      timeout: 5000,
+    });
+    const raw = await page.evaluate(() => localStorage.getItem('itt05-digg-links'));
+    expect(raw && raw.length > 2).toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt04-digg-links'))).toBeNull();
   });
 });
 
 test.describe('year-signature 2006', () => {
+  test('Digg peak digg → itt06-digg-links', async ({ page }) => {
+    await enterYear(page, '2006');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt06-digg-links');
+        localStorage.removeItem('itt05-digg-links');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2006', 'sites/digg/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-digg-up="0"]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-digg-up="0"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt06-digg-links')), {
+        timeout: 8000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt05-digg-links'))).toBeNull();
+  });
+
   test('Twitter compose theater', async ({ page }) => {
     await enterYear(page, '2006');
     await page.evaluate(() => {
@@ -414,6 +464,29 @@ test.describe('year-signature 2006', () => {
 });
 
 test.describe('year-signature 2007', () => {
+  test('Gmail open compose → itt07-gmail-msgs', async ({ page }) => {
+    await enterYear(page, '2007');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-gmail-msgs');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2007', 'sites/gmail/compose.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-gmail-compose]')).toBeVisible({ timeout: 15000 });
+    const subj = 'sig07 ' + Date.now();
+    await frame.locator('[name="subj"]').fill(subj);
+    await frame.locator('[name="body"]').fill('open gmail 2007');
+    await frame.locator('[data-gmail-compose] button[type="submit"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-gmail-msgs')), {
+        timeout: 10000,
+      })
+      .toMatch(new RegExp(subj.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  });
+
   test('iPhone product room', async ({ page }) => {
     await enterYear(page, '2007');
     await goImmersion(page, '2007', 'sites/iphone/index.html');
@@ -424,6 +497,28 @@ test.describe('year-signature 2007', () => {
 });
 
 test.describe('year-signature 2008', () => {
+  test('Chrome download theater → itt08-chrome', async ({ page }) => {
+    await enterYear(page, '2008');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt08-chrome');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2008', 'sites/chrome/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Chrome|beta|download/i, { timeout: 15000 });
+    const dl = frame.locator('[data-chrome-download]');
+    await expect(dl).toBeVisible({ timeout: 10000 });
+    await dl.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt08-chrome')), {
+        timeout: 8000,
+      })
+      .toBeTruthy();
+  });
+
   test('App Store install theater', async ({ page }) => {
     await enterYear(page, '2008');
     await page.evaluate(() => {
@@ -540,6 +635,56 @@ test.describe('year-signature 2012', () => {
         timeout: 8000,
       })
       .toBe('1');
+  });
+});
+
+test.describe('year-signature 2013', () => {
+  test('Vine hold → post → itt13-vine-posts', async ({ page }) => {
+    await enterYear(page, '2013');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt13-vine-posts');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2013', 'sites/vine/record.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Hold|6 second|Vine/i, { timeout: 15000 });
+    const hold = frame.locator('[data-vine-hold]');
+    await expect(hold).toBeVisible({ timeout: 10000 });
+    await hold.dispatchEvent('mousedown');
+    await page.waitForTimeout(350);
+    await hold.dispatchEvent('mouseup');
+    await frame.locator('[data-vine-caption]').fill('sig vine ' + Date.now());
+    await frame.locator('[data-vine-post]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-vine-posts')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('Snapchat Story add → itt13-snap-story', async ({ page }) => {
+    await enterYear(page, '2013');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt13-snap-story');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2013', 'sites/snapchat/story.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Story|Snapchat|24/i, { timeout: 15000 });
+    const add = frame.locator('[data-snap-story-add]');
+    await expect(add).toBeVisible({ timeout: 10000 });
+    await add.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-snap-story')), {
+        timeout: 8000,
+      })
+      .toBeTruthy();
   });
 });
 

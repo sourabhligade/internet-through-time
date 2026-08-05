@@ -11,6 +11,7 @@
     year: "2000",
     storagePrefix: "itt00",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -34,6 +35,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Amazon smile", href: "sites/amazon/index.html" },
       { label: "Napster", href: "sites/napster/index.html" },
       { label: "About 2000", href: "pages/about.html" }

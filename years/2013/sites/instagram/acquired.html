@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Facebook acquires Instagram — April 9, 2012</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body bgcolor="#fafafa">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -14,21 +14,23 @@
  <p><b>April 9, 2012</b> — days after Android launch. Consideration ~<b>$1 billion</b> cash + stock.
  Period promise: Instagram remains an <b>independently branded standalone app</b>.</p>
  <div class="ig-warn"><b>Honesty:</b> Not buried into Facebook Photos. Not “Meta.” Not Stories. Educational reconstruction only.</div>
- <p><button type="button" data-ig-acquired-ack>I understand the acquisition (save)</button>
+ <p>
  <span data-ig-acquired-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
  <p style="font-size:11px;color:#666">NYT DealBook · TechCrunch Apr 9 2013</p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  var btn = document.querySelector("[data-ig-acquired-ack]");
-  var st = document.querySelector("[data-ig-acquired-status]");
-  var KEY = "itt13-ig-owned";
-  try { if(localStorage.getItem(KEY)&&st) st.textContent="Saved · "+KEY; } catch(e){}
-  if(btn) btn.addEventListener("click", function(){
-    try { localStorage.setItem(KEY, JSON.stringify({owned:true, buyer:"Facebook", price:"~$1B", ts:Date.now()})); } catch(e2){}
-    if(st) st.textContent="Saved · "+KEY;
-  });
-});
-</script>
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Instagram FB acquisition residual</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Owned by Facebook residual literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real Instagram account</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="ig-acquired" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-ig-acquired</code></p>
+</div>
+
+
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

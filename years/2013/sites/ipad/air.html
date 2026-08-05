@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>iPad Air — October 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -36,44 +36,24 @@
   <label style="display:block;margin:4px 0"><input type="checkbox" data-air-mini> Also looking at iPad mini with Retina</label>
  </div>
  <p>
-  <button type="button" data-ipadair-ack style="padding:8px 14px;background:#007aff;color:#fff;border:0;border-radius:6px;cursor:pointer">
-   I’m interested in iPad Air (theater)
-  </button>
+  
   <span data-ipadair-status style="font-size:11px;color:#060;margin-left:8px"></span>
  </p>
  
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-ipadair";
-  var btn = document.querySelector("[data-ipadair-ack]");
-  var st = document.querySelector("[data-ipadair-status]");
-  try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
-  if (btn) btn.addEventListener("click", function () {
-    var cfg = "wifi";
-    var radios = document.querySelectorAll("[data-air-cfg]");
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].checked) cfg = radios[i].getAttribute("data-air-cfg");
-    }
-    var mini = !!(document.querySelector("[data-air-mini]") && document.querySelector("[data-air-mini]").checked);
-    try {
-      localStorage.setItem(KEY, JSON.stringify({
-        model: "ipad-air",
-        date: "2013-10-22",
-        config: cfg,
-        alsoMiniRetina: mini,
-        ts: Date.now()
-      }));
-    } catch (e2) {}
-    var msg = "iPad Air interest · " + cfg + " · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "ipadair" });
-      }
-    } catch (e3) {}
-  });
-});
-</script>
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — iPad Air interest</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> iPad Air product interest</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real purchase</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="ipadair" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-ipadair</code></p>
+</div>
+
+
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

@@ -93,6 +93,27 @@
   100% { transform: translateX(-100%); }
 }
 
+/* Respect reduced motion — pause scroll/pulse */
+@media (prefers-reduced-motion: reduce) {
+  .ann-ticker-track {
+    animation: none !important;
+    padding-left: 8px;
+    white-space: normal;
+  }
+  .ann-badge {
+    animation: none !important;
+  }
+}
+
+/* Hub: single announcement strip (no second ticker) */
+.hub-ann-strip-solo {
+  margin-bottom: 12px;
+}
+.hub-ann-extra {
+  color: #666;
+  font-size: 11px;
+}
+
 /* —— Site news / announcement table (classic yellow box) —— */
 .ann-newsbox {
   background: #ffffcc;

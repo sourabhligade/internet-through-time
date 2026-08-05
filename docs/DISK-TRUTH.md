@@ -1,7 +1,8 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-02 · **Ship update:** hub **1994–2013** playable · **2013 MVP live** · **2014+ not on disk**  
-**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
+**Date:** 2026-08-06 · **Ship update:** hub **1994–2014** playable · **2014 MVP live** · **2015+ not on disk**  
+**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md)  
+**2014:** MVP live · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
 **Purpose:** Single source of truth for what is **playable on disk** vs research-only.
 
 **Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)  
@@ -28,10 +29,10 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2013** |
-| Hub locked | **2014+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2013/` |
-| Period CSS | `css/period-1995.css` … `period-2013.css` |
+| Hub open years | **1994–2014** |
+| Hub locked | **2015+** (not scaffolded) |
+| Year trees | `years/1994/` … `years/2014/` |
+| Period CSS | `css/period-1995.css` … `period-2014.css` |
 | **2010** | **Museum-ready** · playable · see section below |
 | **2011** | **Museum-ready** · playable · see section below |
 | **2012** | **Museum-ready** · playable · see section below |
@@ -51,6 +52,19 @@
 | e2e | `npm run test:e2e:2013` |
 | Capture | [`references/2013/`](references/2013/) · honesty pack stub |
 | Residual | WA pixels · deeper densify |
+
+### 2014 (MVP live · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2014/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt14`** |
+| Scale | Live Stats June **968,882,453** (+44%) · users **2,925,249,355** · **1B first crossed Sep 2014** |
+| P0 | WhatsApp deal+chat · Heartbleed · iPhone 6/6 Plus/Pay/Bendgate · Ice Bucket · 1B · Chrome · Win10 TP honesty |
+| P1 | Twitch · Oculus · Alibaba · Material · Serial · Echo announce |
+| Research | **[`2014-READ-FIRST.md`](2014-READ-FIRST.md)** · step-by-step · master bible · deep harvest |
+| e2e | `npm run test:e2e:2014` |
 
 ### 2012 (museum-ready · playable)
 

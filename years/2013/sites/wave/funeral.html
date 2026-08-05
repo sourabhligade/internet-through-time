@@ -11,16 +11,17 @@
  <div data-wave-status style="font-size:12px;color:#060;margin-top:8px"></div>
  
 </div>
-<script>
-(function(){
-  var KEY="itt13-wave";
-  var b=document.querySelector("[data-wave-funeral]");
-  var st=document.querySelector("[data-wave-status]");
-  if(b) b.onclick=function(){
-    localStorage.setItem(KEY, JSON.stringify({funeral:true,public:"2010-05-19",ended:"2010-08-04",ts:Date.now()}));
-    if(st) st.textContent="Noted · public then dead · "+KEY;
-  };
-})();
-</script>
+
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Google Wave funeral residual</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Wave ended 2010 residual note</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real Wave product</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="wave-funeral" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-wave-funeral</code></p>
+</div>
 <script src="../../../../js/immersion-2013.js"></script>
 </body></html>

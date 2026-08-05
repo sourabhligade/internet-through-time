@@ -4,42 +4,95 @@
 <meta charset="utf-8">
 <title>WhatsApp — 2013 growth residual</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body class="wa-shell">
+<body class="wa-shell" bgcolor="#e5ddd5">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="wa-phone">
- <div class="wa-header">WhatsApp</div>
- <div class="wa-chat">
-  <div class="wa-bubble">Hey — still on WhatsApp in 2013?</div>
-  <div class="wa-bubble">Yeah · cross-platform · not iMessage-only</div>
+<div class="wa-phone" style="max-width:420px;margin:12px auto;font-family:Helvetica,Arial,sans-serif;background:#fff;border:1px solid #ccc">
+ <div class="wa-header" style="background:#075e54;color:#fff;padding:10px 12px;font-weight:bold">
+  WhatsApp
+  <span style="float:right;font-size:11px;font-weight:normal">
+   <a href="chat.html" style="color:#cfc">Chats</a> ·
+   <a href="about.html" style="color:#cfc">About</a>
+  </span>
  </div>
- <div style="padding:0 12px 4px;font-size:12px;color:#555">
-  <b>2013 residual:</b> major growth story (international SMS alternative class).
-  Facebook has <b>not</b> acquired WhatsApp yet (that’s <b>2014</b>).
+ <div style="padding:10px 12px;font-size:12px;background:#fff8e0;border-bottom:1px solid #c90">
+  <b>2013 residual · multi-step REAL:</b> verify → install → chat.
+  Facebook has <b>not</b> acquired WhatsApp yet (deal = <b>2014</b>).
+  Storage <code>itt13-wa-*</code> · no real SMS.
  </div>
- <button type="button" class="wa-btn" data-wa-seed>Note WhatsApp 2013 residual (theater)</button>
- <div style="padding:0 12px 12px">
-  <span class="itt13-status" data-wa-status></span>
-  <p class="itt13-ban"> · ban: 2020s channels UI as 2013 default</p>
+ <div style="padding:12px;font-size:13px">
+  <p><b>Step 1 — Verify phone (theater)</b></p>
+  <label>+1 <input data-wa13-phone placeholder="5551234567" size="14" maxlength="15"></label>
+  <button type="button" data-wa13-verify style="margin-left:6px">Send code (fake)</button>
+  <p style="margin-top:12px"><b>Step 2 — Install</b></p>
+  <button type="button" data-wa13-install style="background:#25d366;border:none;padding:10px 16px;color:#fff;font-weight:bold;cursor:pointer">Install WhatsApp (theater)</button>
+  <span data-wa13-status style="display:block;margin-top:8px;font-size:12px;color:#075e54"></span>
+  <p style="margin-top:12px;font-size:12px"><b>Step 3 —</b> <a href="chat.html">Open chats</a> and send a message.</p>
  </div>
+ <p style="font-size:11px;padding:8px 12px">
+  <a href="../../pages/home.html">Starting Point</a> ·
+  <a href="../telegram/index.html">Telegram</a> ·
+  <a href="../appstore/index.html">App Store</a>
+ </p>
 </div>
-<p style="max-width:400px;margin:10px auto;font-size:11px;font-family:Helvetica,Arial,sans-serif">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../telegram/index.html">Telegram</a> ·
- <a href="../appstore/index.html">App Store</a>
-</p>
+<script src="../../../../js/immersion-2013.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-whatsapp";
-  var b = document.querySelector("[data-wa-seed]");
-  var st = document.querySelector("[data-wa-status]");
-  if (!b) return;
-  b.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ residual: true, year: 2013, preFbDeal: true, ts: Date.now() })); } catch (e) {}
-    if (st) st.textContent = "Saved · residual · pre-Facebook deal";
+(function () {
+  var PHONE = "itt13-wa-phone";
+  var INST = "itt13-wa-installed";
+  function st(el, msg, err) {
+    if (!el) return;
+    el.textContent = msg || "";
+    el.style.color = err ? "#a00" : "#075e54";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var phoneIn = document.querySelector("[data-wa13-phone]");
+    var verify = document.querySelector("[data-wa13-verify]");
+    var install = document.querySelector("[data-wa13-install]");
+    var status = document.querySelector("[data-wa13-status]");
+    try {
+      if (localStorage.getItem(INST)) st(status, "Already installed · open chats");
+      else if (localStorage.getItem(PHONE)) st(status, "Phone verified · install next");
+    } catch (e0) {}
+    if (verify) {
+      verify.addEventListener("click", function () {
+        var n = (phoneIn && phoneIn.value || "").replace(/\D/g, "");
+        if (n.length < 7) {
+          st(status, "Enter a theater phone number (7+ digits).", true);
+          return;
+        }
+        try {
+          localStorage.setItem(PHONE, JSON.stringify({ last4: n.slice(-4), ts: Date.now() }));
+        } catch (e1) {}
+        st(status, "SMS code accepted (theater) · ···" + n.slice(-4));
+      });
+    }
+    if (install) {
+      install.addEventListener("click", function () {
+        var ph = null;
+        try { ph = localStorage.getItem(PHONE); } catch (e2) {}
+        if (!ph) {
+          st(status, "Verify a phone number first.", true);
+          return;
+        }
+        try {
+          localStorage.setItem(INST, "1");
+          if (!localStorage.getItem("itt13-wa-chats")) {
+            localStorage.setItem("itt13-wa-chats", JSON.stringify([
+              { who: "You", text: "Hey — still on WhatsApp in 2013?", ts: Date.now() - 60000 }
+            ]));
+          }
+        } catch (e3) {}
+        st(status, "Installed · chats seeded · open chat list");
+        try {
+          if (window.ITT && ITT._immersionApi && ITT._immersionApi.markTourUsed) {
+            ITT._immersionApi.markTourUsed();
+          }
+        } catch (e4) {}
+      });
+    }
   });
-});
+})();
 </script>
 </body>
 </html>

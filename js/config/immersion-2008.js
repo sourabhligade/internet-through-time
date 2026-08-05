@@ -11,6 +11,7 @@
     year: "2008",
     storagePrefix: "itt08",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -66,6 +67,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "App Store", href: "sites/appstore/index.html" },
       { label: "iPhone 3G", href: "sites/iphone/index.html" },
       { label: "Chrome", href: "sites/chrome/index.html" },

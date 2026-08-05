@@ -25,8 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships (hub open 1994–2013 — DISK-TRUTH)
-KNOWN_YEARS = [str(y) for y in range(1994, 2014)]  # 1994–2013
+# Years the museum ships (hub open 1994–2014 — DISK-TRUTH)
+KNOWN_YEARS = [str(y) for y in range(1994, 2015)]  # 1994–2014
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {

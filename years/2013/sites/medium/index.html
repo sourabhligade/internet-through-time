@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Medium — 2013 long-form residual</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="medium-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -32,20 +32,17 @@
  </p>
  <p class="meta" style="color:#888"> · no real Medium CDN</p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-medium-drafts";
-  var btn = document.querySelector("[data-medium-publish]");
-  var st = document.querySelector("[data-medium-status]");
-  if (btn) btn.addEventListener("click", function () {
-    var t = (document.querySelector("[data-medium-draft]") || {}).value || "";
-    var list = [];
-    try { list = JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) {}
-    list.unshift({ text: String(t).slice(0, 2000), ts: Date.now() });
-    try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 20))); } catch (e2) {}
-    if (st) st.textContent = "Draft published (theater) · " + KEY;
-  });
-});
-</script>
+
+<div style="margin:12px 0;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px">
+ <b>Multi-step REAL — Medium 2013 seed</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Publishing platform seed literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real Medium account</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="medium" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-medium</code></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

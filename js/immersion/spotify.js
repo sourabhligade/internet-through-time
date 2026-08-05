@@ -112,8 +112,8 @@
         } else if (ITT._immersionApi && ITT._immersionApi.showFlash) {
           ITT._immersionApi.showFlash("Spotify invite accepted — free tier (this browser).");
         }
-        if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
-          ITT._immersionApi.markTourProgress();
+        if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
+          (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
         }
       });
     }

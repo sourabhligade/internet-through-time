@@ -11,6 +11,7 @@
     year: "2001",
     storagePrefix: "itt01",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -38,6 +39,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Wikipedia", href: "sites/wikipedia/index.html" },
       { label: "iPod", href: "sites/apple/ipod.html" },
       { label: "About 2001", href: "pages/about.html" }

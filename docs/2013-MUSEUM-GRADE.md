@@ -1,7 +1,7 @@
 # 2013 — Museum grade status card
 
 **Date:** 2026-08-02  
-**Status:** **Museum-ready · L3 densify** · hub **1994–2013** · `years/2013/` · `itt13`  
+**Status:** **Museum-ready · L3 densify** · hub unlocked · `years/2013/` · `itt13` · promote confirmed 2026-08-05 (A–F + DISK-TRUTH aligned)  
 **Plan:** [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md)
 
 | Layer | Status | Notes |

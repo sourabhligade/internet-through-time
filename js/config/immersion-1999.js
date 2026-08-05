@@ -11,6 +11,7 @@
     year: "1999",
     storagePrefix: "itt99",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -35,6 +36,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Napster", href: "sites/napster/index.html" },
       { label: "Google", href: "sites/google/index.html" },
       { label: "About 1999", href: "pages/about.html" }

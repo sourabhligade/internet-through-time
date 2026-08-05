@@ -84,3 +84,194 @@ test.describe('2007 densify — P0 year truth', () => {
     await expect(page.locator('body')).toContainText(/2007|Watch Now|seed/i);
   });
 });
+
+test.describe('2007 densify — museum-perfect REAL multipage', () => {
+  test('Beacon multi-check → itt07-beacon-ack', async ({ page }) => {
+    await page.goto('/years/2007/sites/facebook/beacon.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-beacon-ack');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.locator('[data-itt-real-save]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt07-beacon-ack'))).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''), {
+        timeout: 10000
+      })
+      .toMatch(/multiStep|beacon|checks/i);
+    expect(await page.evaluate(() => localStorage.getItem('itt06-beacon-ack'))).toBeNull();
+  });
+
+  test('iPhone specs literacy → itt07-iphone-specs-ack', async ({ page }) => {
+    await page.goto('/years/2007/sites/iphone/specs.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-iphone-specs-ack');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-iphone-specs-ack') || ''), {
+        timeout: 10000
+      })
+      .toBeTruthy();
+  });
+
+  test('Netflix queue REAL + empty blocked + Watch Now literacy', async ({ page }) => {
+    await page.goto('/years/2007/sites/netflix/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-netflix-queue');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-netflix-queue-form]', { timeout: 20000 });
+    await page.fill('[data-netflix-q], [name="q"]', '');
+    await page.locator('[data-netflix-queue-form] input[type="submit"], [data-netflix-queue-form] button[type="submit"]').first().click();
+    await page.waitForTimeout(400);
+    const empty = await page.evaluate(() => localStorage.getItem('itt07-netflix-queue'));
+    expect(!empty || empty === '[]').toBeTruthy();
+    await page.fill('[data-netflix-q], [name="q"]', 'Amélie densify');
+    await page.locator('[data-netflix-queue-form] input[type="submit"], [data-netflix-queue-form] button[type="submit"]').first().click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-netflix-queue') || ''), {
+        timeout: 10000
+      })
+      .toMatch(/Amélie densify/);
+    await page.goto('/years/2007/sites/netflix/watchnow.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-netflix-watchnow');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-netflix-watchnow-ack]', { timeout: 20000 });
+    await page.locator('[data-netflix-wn-1]').check();
+    await page.locator('[data-netflix-wn-2]').check();
+    await page.locator('[data-netflix-watchnow-ack]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-netflix-watchnow') || ''), {
+        timeout: 10000
+      })
+      .toMatch(/watchNowSeed|dvdPrimary/i);
+  });
+
+  test('FriendFeed ≥2 sources → itt07-friendfeed-sources', async ({ page }) => {
+    await page.goto('/years/2007/sites/friendfeed/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-friendfeed-sources');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-ff-source]', { timeout: 20000 });
+    await page.locator('[data-ff-source="twitter"]').check();
+    await page.locator('[data-ff-save-form]').evaluate((f) => f.requestSubmit ? f.requestSubmit() : f.submit());
+    await page.waitForTimeout(400);
+    expect(await page.evaluate(() => localStorage.getItem('itt07-friendfeed-sources'))).toBeFalsy();
+    await page.locator('[data-ff-source="flickr"]').check();
+    await page.locator('[data-ff-save-form] button[type="submit"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-friendfeed-sources') || ''), {
+        timeout: 10000
+      })
+      .toMatch(/twitter|flickr/i);
+  });
+
+  test('OpenSocial literacy → itt07-opensocial-ack', async ({ page }) => {
+    await page.goto('/years/2007/sites/opensocial/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-opensocial-ack');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-opensocial-ack') || ''), {
+        timeout: 10000
+      })
+      .toBeTruthy();
+  });
+
+  test('Tumblr publish → itt07-tumblr-posts', async ({ page }) => {
+    await page.goto('/years/2007/sites/tumblr/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-tumblr-posts');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-tumblr-compose]', { timeout: 20000 });
+    const body = 'tumble densify ' + Date.now();
+    await page.fill('[data-tumblr-compose] textarea[name="body"]', body);
+    await page.locator('[data-tumblr-compose] button[type="submit"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-tumblr-posts') || ''), {
+        timeout: 10000
+      })
+      .toContain(body);
+  });
+
+  test('Kindle literacy → itt07-kindle-ack', async ({ page }) => {
+    await page.goto('/years/2007/sites/amazon/kindle.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt07-kindle-ack');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-kindle-ack') || ''), {
+        timeout: 10000
+      })
+      .toBeTruthy();
+  });
+
+  test('Home links Beacon · FriendFeed · Watch Now · specs', async ({ page }) => {
+    await page.goto('/years/2007/pages/home.html');
+    await expect(page.locator('a[href*="beacon"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="friendfeed"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="watchnow"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="specs"]').first()).toBeVisible();
+  });
+
+  test('Maps about densified Street View thesis', async ({ page }) => {
+    await page.goto('/years/2007/sites/maps/about.html');
+    await expect(page.locator('body')).toContainText(/Street View|May 29/i);
+    await expect(page.locator('body')).toContainText(/San Francisco|Denver/i);
+  });
+});

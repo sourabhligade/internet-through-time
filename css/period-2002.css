@@ -1,6 +1,7 @@
 /* 2002 document styles — Windows XP · IE 6 · Wikipedia · iPod · post-crash rebuild
    Year delta: @import period-1999 (2000 wiped) (smile / densify grammar). Only 2002-specific rules below. */
 @import url("period-1999.css");
+@import url("period-xp-ui.css");
 
 /* —— Wikipedia densify shell —— */
 .wiki-shell {
@@ -176,3 +177,46 @@ a.fs-btn:hover { background: #ff8533; }
   --itt02-xp: #0a246a;
 }
 
+/* —— 2002 UI robust densify —— */
+.friendster-shell {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  border: 1px solid #cc5200;
+  background: #fff;
+  font-family: Verdana, Arial, sans-serif;
+}
+.friendster-header {
+  background: #ff6600 !important;
+  padding: 8px 12px !important;
+  color: #fff !important;
+}
+.friendster-shell .fs-btn,
+.friendster-shell a.fs-btn {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 3px 8px;
+  background: #fff5eb;
+  border: 1px solid #ff6600;
+  color: #c40;
+  text-decoration: none;
+  font-size: 11px;
+}
+.friendster-shell .fs-btn:hover { background: #ffe0cc; }
+.friendster-shell .itt-fs-btns input {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  margin: 2px 4px 2px 0;
+  padding: 3px 8px;
+  border: 1px solid #ff6600;
+  background: #fff5eb;
+  color: #c40;
+  cursor: pointer;
+}
+.kazaa-shell {
+  max-width: 640px;
+  margin: 12px auto;
+  border: 1px solid #336;
+  padding: 12px;
+  background: #f4f4ff;
+  font-family: Tahoma, Arial, sans-serif;
+}

@@ -2,46 +2,26 @@
 <html lang="en" data-itt-year="2013">
 <head>
 <meta charset="utf-8">
-<title>Google Glass — Explorer culture · 2013</title>
+<title>Google Glass Explorer — 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
 </head>
-<body class="glass-shell">
+<body>
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="glass-hero">
- <p style="font-size:11px;text-align:left">
-  <a href="../../pages/home.html">Start</a> · <a href="../google/index.html">Google</a> · <a href="../snowden/index.html">Privacy 2013</a>
- </p>
- <h1>Google Glass</h1>
- <p style="color:#5f6368;font-weight:300;font-size:16px">Explorer Edition · wearable HUD · not mass default</p>
- <div class="glass-prism" title="RECON accent bar — not a product photo"></div>
- <ul class="glass-cmds">
-  <li>ok glass, take a picture</li>
-  <li>ok glass, record a video</li>
-  <li>ok glass, google…</li>
-  <li>ok glass, get directions to…</li>
- </ul>
- <div class="itt13-honesty" style="text-align:left">
-  <b>2013 honesty:</b> Explorer program residual · street “Glasshole” backlash in press ·
-  no real AR stack · failed-final RECON (no inventing product photography as brand art).
+<div style="max-width:520px;margin:16px auto;font-family:Arial,sans-serif;padding:12px">
+ <p style="font-size:11px"><a href="../../pages/home.html">Start</a></p>
+ <h1 style="font-size:22px">Google Glass · Explorer culture</h1>
+ <p style="font-size:13px">2013 Explorer program residual · street “Glasshole” backlash in press · no real AR stack.</p>
+ <div style="background:#f5f5f5;border:1px solid #ccc;padding:10px;font-size:12px">
+  <b>Multi-step REAL (both required)</b><br>
+  <label style="display:block;margin:4px 0"><input type="checkbox" data-glass-explorer> Explorer program — invite / $1500 class lore</label>
+  <label style="display:block;margin:4px 0"><input type="checkbox" data-glass-backlash> Street backlash / privacy press (“Glasshole”)</label>
  </div>
- <p style="margin-top:20px">
-  <button type="button" class="glass-btn" data-glass-ack>Note Glass Explorer culture (save)</button>
+ <p style="margin-top:12px">
+  <button type="button" class="glass-btn" data-glass-ack>Save Glass literacy (REAL)</button>
   <span class="itt13-status" data-glass-status style="display:block;margin-top:8px"></span>
  </p>
- 
+ <p style="font-size:11px;color:#666">One-click mock removed · key <code>itt13-glass</code></p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-glass";
-  var btn = document.querySelector("[data-glass-ack]");
-  var st = document.querySelector("[data-glass-status]");
-  if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ explorer: true, year: 2013, ts: Date.now() })); } catch (e) {}
-    var msg = "Glass Explorer noted · not mass default · " + KEY;
-    if (st) st.textContent = msg;
-  });
-});
-</script>
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@
     year: "2013",
     storagePrefix: "itt13",
     features: {
+      year2013extras: true,
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -88,6 +90,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Vine", href: "sites/vine/index.html" },
       { label: "IG Video", href: "sites/instagram/video.html" },
       { label: "Stories", href: "sites/snapchat/story.html" },

@@ -41,6 +41,7 @@
       actionFeedback: function () {},
       resolveStatusNode: function () { return null; },
       markTourProgress: function () {},
+      markTourUsed: function () {},
       renderCounter: function () {},
       renderTour: function () {},
       renderActivity: function () {},

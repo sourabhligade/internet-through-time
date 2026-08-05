@@ -12,14 +12,17 @@
  <div id="st" style="font-size:12px;color:#9f9;margin-top:8px"></div>
  
 </div>
-<script>
-(function(){
-  var KEY="itt13-uber";
-  document.getElementById("uber-city").onclick=function(){
-    localStorage.setItem(KEY, JSON.stringify({city:"San Francisco",kind:"black-car",confirmed:true,ts:Date.now()}));
-    document.getElementById("st").textContent="Saved · SF black-car only · "+KEY;
-  };
-})();
-</script>
+
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Uber SF residual</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> SF black-car residual</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real dispatch</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="uber-sf" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-uber-sf</code></p>
+</div>
 <script src="../../../../js/immersion-2013.js"></script>
 </body></html>

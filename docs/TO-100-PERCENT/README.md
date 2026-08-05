@@ -1,16 +1,16 @@
 # TO 100% — Implementation plans by year
 
 **Created:** 2026-07-27  
-**Updated:** 2026-08-02 — hub **1994–2013** MVP live · **2014+** locked  
+**Updated:** 2026-08-05 — hub **1994–2013** playable
+**Canonical ship truth:** [`../DISK-TRUTH.md`](../DISK-TRUTH.md) · residual: [`../NON-DONE.md`](../NON-DONE.md)  
 **Purpose:** One detailed, research-backed todo plan **per year** so we can implement **one year at a time** to strict 100% completion.  
-**Rule:** Follow sources already in repo research MDs + CAPTURE-LOGs. **Do not invent brand pixels.** If harvest fails → log `[failed]` and keep honest RECON.
+**Rule:** Follow sources already in repo research MDs + CAPTURE-LOGs. **Do not invent brand pixels.** If harvest fails → log `[failed]` / `[failed-final]` and keep honest RECON.
 
 ### Active program: 2011–2013 → 100%
 
-**Master step plan:** [`PLAN-2011-2012-2013-TO-100.md`](PLAN-2011-2012-2013-TO-100.md)  
-
-Linear goals **G0.1 → G5.3**: baseline → 2013 museum-ready → 2013 densify → 2011 L3 → 2012 L3 → cross-year close.  
-Use that file as the single implementer checklist; per-year `YEAR-201x.md` remain residual detail.
+**Master step plan (2011–13):** [`PLAN-2011-2012-2013-TO-100.md`](PLAN-2011-2012-2013-TO-100.md)  
+**Late residual map:** [`../LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](../LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md)  
+**No-mock gates:** `npm run test:e2e:no-mock` · `npm run test:e2e:museum-grade`
 
 ## What “100%” means (this folder)
 
@@ -24,9 +24,7 @@ Use that file as the single implementer checklist; per-year `YEAR-201x.md` remai
 
 Ship bar (**museum-ready**) is **true** for **1994–2012** hub — see [`MUSEUM-READY-BAR-1994-2012.md`](../MUSEUM-READY-BAR-1994-2012.md).  
 **2011–2012** elevated 2026-08-02 (densify + trail e2e · minute research · asset honesty packs).  
-**2013** is **MVP + honesty** on hub (not full museum-ready until Pass 1 of the 2011–2013 plan).  
 **Forever residual:** perfect WA brand stills (do not invent).  
-**2014+** is hub-locked until research freeze + implement.
 
 **Current research snapshot:** [`RESEARCH-100-ALL-YEARS-2026-08-01.md`](RESEARCH-100-ALL-YEARS-2026-08-01.md) · DISK-TRUTH · year master bibles  
 
@@ -131,10 +129,10 @@ Older matrix: [`VERIFICATION-2026-07-28.md`](VERIFICATION-2026-07-28.md) (hub th
 
 | Year | Status | Notes |
 |------|--------|-------|
-| 1994–2010 | **100% content** | Optional forever pixels only |
-| **2011+** | **Not on disk** | Reverted 2026-08-02 · re-research before ship |
+| 1994–2010 | **100% content** / museum densify | Optional forever pixels only |
+| 2011–2012 | **Museum-ready** | Residual L4 WA only |
 
-Hub open **1994–2010**. No freehand “% complete” scores — use labels in research freeze §0.
+Hub open **1994–2013**. No freehand “% complete” scores — use labels in DISK-TRUTH.
 
 ## Re-verify log
 

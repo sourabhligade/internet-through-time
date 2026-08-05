@@ -10,6 +10,7 @@
     year: "2003",
     storagePrefix: "itt03",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -43,6 +44,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "MySpace", href: "sites/myspace/index.html" },
       { label: "iTunes Store", href: "sites/itunes/index.html" },
       { label: "About 2003", href: "pages/about.html" }

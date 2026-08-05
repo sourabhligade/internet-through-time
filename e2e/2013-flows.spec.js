@@ -48,6 +48,13 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText('672,985,183');
     await clearKeys(page, ['itt13-thesis-ack']);
     await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-thesis-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
     await page.locator('[data-thesis-ack]').click();
     await expectStorageTruthy(page, 'itt13-thesis-ack');
   });
@@ -86,7 +93,14 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/iphone/ios7.html');
     await clearKeys(page, ['itt13-ios7']);
     await page.reload();
-    await page.locator('[data-ios7-ack]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="ios7"]').click();
     await expectStorageTruthy(page, 'itt13-ios7');
   });
 
@@ -94,22 +108,51 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/iphone/touchid.html');
     await clearKeys(page, ['itt13-touchid', 'itt13-iphone5s', 'itt13-iphone5c']);
     await page.reload();
-    await page.locator('[data-touchid-enroll]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="touchid"]').click();
     await expectStorageTruthy(page, 'itt13-touchid');
     await page.goto('/years/2013/sites/iphone/index.html');
-    await page.locator('[data-iphone5s-claim]').click();
+    await page.waitForTimeout(400);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="iphone5s"]').click();
     await expectStorageTruthy(page, 'itt13-iphone5s');
+
     await page.goto('/years/2013/sites/iphone/5c.html');
-    await page.locator('[data-5c-ack]').click();
+    await page.waitForTimeout(400);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="iphone5c"]').click();
     await expectStorageTruthy(page, 'itt13-iphone5c');
   });
 
   test('H Win8.1 Start tour', async ({ page }) => {
     await page.goto('/years/2013/sites/windows81/index.html');
-    await clearKeys(page, ['itt13-win81-tour']);
+    await clearKeys(page, ['itt13-win81', 'itt13-win81-tour']);
     await page.reload();
-    await page.locator('[data-win81-start]').click();
-    await expectStorageTruthy(page, 'itt13-win81-tour');
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="win81"]').click();
+    await expectStorageTruthy(page, 'itt13-win81');
   });
 
   test('I Chrome download theater', async ({ page }) => {
@@ -137,9 +180,14 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/ps4/index.html');
     await clearKeys(page, ['itt13-ps4', 'itt13-xbox']);
     await page.reload();
+    await page.waitForTimeout(500);
+    await page.locator('[data-ps4-share]').check();
     await page.locator('[data-ps4-ack]').click();
     await expectStorageTruthy(page, 'itt13-ps4');
     await page.goto('/years/2013/sites/xboxone/index.html');
+    await page.waitForTimeout(400);
+    await page.locator('[data-xbox-drm]').check();
+    await page.locator('[data-xbox-kinect]').check();
     await page.locator('[data-xbox-ack]').click();
     await expectStorageTruthy(page, 'itt13-xbox');
   });
@@ -148,16 +196,27 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/facebook/home.html');
     await clearKeys(page, ['itt13-fb-home']);
     await page.reload();
-    await page.locator('[data-fb-home-install]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="fb-home"]').click();
     await expectStorageTruthy(page, 'itt13-fb-home');
   });
 
   test('M Bitcoin news note', async ({ page }) => {
-    await page.goto('/years/2013/pages/about.html');
+    await page.goto('/years/2013/sites/bitcoin/index.html');
     await expect(page.locator('body')).toContainText(/Bitcoin|Silk Road/i);
-    await clearKeys(page, ['itt13-btc-note']);
+    await clearKeys(page, ['itt13-btc-note', 'itt13-btc-room']);
     await page.reload();
-    await page.locator('[data-btc-note]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-btc-news]').check();
+    await page.locator('[data-btc-nomarket]').check();
+    await page.locator('[data-btc-room-ack]').click();
+    await expectStorageTruthy(page, 'itt13-btc-room');
     await expectStorageTruthy(page, 'itt13-btc-note');
   });
 
@@ -181,9 +240,16 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/iPad Air|October 22|A7|iOS 7/i);
     await clearKeys(page, ['itt13-ipadair']);
     await page.reload();
-    await page.locator('[data-ipadair-ack]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="ipadair"]').click();
     const raw = await expectStorageTruthy(page, 'itt13-ipadair');
-    expect(raw).toMatch(/ipad-air|2013-10-22|ipadair/i);
+    expect(raw).toMatch(/multiStep|ipadair|checks/i);
   });
 
   test('P Spotify residual invite storage', async ({ page }) => {
@@ -236,9 +302,17 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/UberX|2013/i);
     await clearKeys(page, ['itt13-uber']);
     await page.reload();
+    await page.waitForTimeout(500);
     await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="uber"]').click();
     const raw = await expectStorageTruthy(page, 'itt13-uber');
-    expect(raw).toMatch(/uberx|UberX|true/i);
+    expect(raw).toMatch(/multiStep|uber|checks/i);
   });
 
   test('S ban literacy', async ({ page }) => {

@@ -3,12 +3,12 @@ const { test, expect } = require('@playwright/test');
 
 const OPEN = [
   '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
-  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013',
+  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
 ];
 const LOCKED = [];
 
 test.describe('hub + year shells', () => {
-  test('hub lists 1994–2013 as available', async ({ page }) => {
+  test('hub lists 1994–2014 as available', async ({ page }) => {
     await page.goto('/');
     for (const y of OPEN) {
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`)).toBeVisible();
@@ -21,8 +21,12 @@ test.describe('hub + year shells', () => {
 
   test('hub how-to card + era jump chips (UX U1)', async ({ page }) => {
     await page.goto('/');
+    // How-to is collapsible for first-run clarity — open then assert content
+    const howSummary = page.locator('.how-quick-summary, details.how-quick-details summary').first();
+    await expect(howSummary).toBeVisible();
+    await howSummary.click();
     await expect(page.locator('.how-quick')).toBeVisible();
-    await expect(page.locator('.how-quick')).toContainText(/How to navigate|Enter a year|Starting Point|Year menu/i);
+    await expect(page.locator('.how-quick')).toContainText(/Enter a year|Starting Point|Year menu/i);
     await expect(page.locator('a.era-jump-chip[href="#era-1994-1999"]')).toBeVisible();
     await expect(page.locator('a.era-jump-chip[href="#era-2000-2005"]')).toBeVisible();
     await expect(page.locator('a.era-jump-chip[href="#era-2006-2010"]')).toBeVisible();
@@ -50,13 +54,17 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2011')).toBeVisible();
     await expect(page.locator('.y2012')).toBeVisible();
     await expect(page.locator('.y2013')).toBeVisible();
-    await expect(page.locator('body')).toContainText(/20 years open|1994–2013/i);
-    await expect(page.locator('a.start-btn[href*="years/2007"]')).toBeVisible();
+    await expect(page.locator('.y2014')).toBeVisible();
+    await expect(page.locator('body')).toContainText(/21 years open|1994–2014/i);
+    // Primary first-run CTAs (not a wall of every year)
+    await expect(page.locator('a.start-btn.start-primary[href*="years/1994"]')).toBeVisible();
+    await expect(page.locator('a.start-btn[href="#directory"], a.start-btn[href*="#directory"]')).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="games"]')).toBeVisible();
+    // Signature jump subset still present
+    await expect(page.locator('a.start-btn[href*="years/1998"]')).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2005"]')).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2008"]')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/2009"]')).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2010"]')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/2011"]')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/2012"]')).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2013"]')).toBeVisible();
   });
 

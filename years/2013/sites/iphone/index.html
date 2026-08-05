@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>iPhone 5s — 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -29,23 +29,19 @@
  <p style="font-size:11px;color:#666">Apple Newsroom 2013-09-16</p>
 </td></tr>
 </table>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-iphone5s";
-  var btn = document.querySelector("[data-iphone5s-claim]");
-  var st = document.querySelector("[data-iphone5s-status]");
-  try { if (localStorage.getItem(KEY) && st) st.textContent = "Noted · " + KEY; } catch (e) {}
-  if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ interested: true, model: "iPhone 5s", ts: Date.now() })); } catch (e2) {}
-    var msg = "Noted · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "5s" });
-      }
-    } catch (e3) {}
-  });
-});
-</script>
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — iPhone 5s interest</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> 5s / Touch ID product interest</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real Apple Store order</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="iphone5s" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-iphone5s</code></p>
+</div>
+
+
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

@@ -78,7 +78,18 @@
         form.querySelector('[name="q"], [data-netflix-q]') ||
         form.querySelector('input[type="text"]');
       var title = input && input.value ? String(input.value).replace(/^\s+|\s+$/g, "") : "";
-      if (!title) title = "Untitled DVD";
+      if (!title || title.length < 2) {
+        var stEmpty = doc.querySelector("[data-netflix-status]");
+        var msgEmpty = "Enter a title first (empty queue add blocked — REAL gate).";
+        if (stEmpty) {
+          stEmpty.style.display = "block";
+          stEmpty.textContent = msgEmpty;
+        }
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msgEmpty, { doc: doc, status: stEmpty, kind: "netflix-queue" });
+        }
+        return;
+      }
       var list = load();
       list.unshift({ title: title, ts: Date.now() });
       save(list.slice(0, 40));

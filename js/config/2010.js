@@ -54,6 +54,7 @@
       "pages/error/404.html": "http://museum.local/pages/error/404.html",
       "pages/error/unreachable.html": "http://museum.local/pages/error/unreachable.html",
       "pages/home.html": "http://museum.local/pages/home.html",
+      "pages/map.html": "http://museum.local/years/2010/map/",
       "pages/whats-new.html": "http://museum.local/pages/whats-new.html",
       "sites/adsense/index.html": "http://www.adsense.com/",
       "sites/altavista/about.html": "http://www.altavista.com/about.html",
@@ -128,6 +129,12 @@
       "sites/daypop/index.html": "http://www.daypop.com/",
       "sites/delicious/about.html": "http://www.delicious.com/about.html",
       "sites/delicious/index.html": "http://www.delicious.com/",
+      "sites/cablegate/press.html": "http://wikileaks.org/cablegate/press.html",
+      "sites/cablegate/index.html": "http://wikileaks.org/cablegate/",
+      "sites/groupon/index.html": "http://www.groupon.com/",
+      "sites/quora/index.html": "http://www.quora.com/",
+      "sites/digg/exodus.html": "http://digg.com/exodus",
+      "sites/digg/v4.html": "http://digg.com/news",
       "sites/digg/about.html": "http://www.digg.com/about.html",
       "sites/digg/index.html": "http://www.digg.com/",
       "sites/digg/submit.html": "http://www.digg.com/submit.html",
@@ -406,6 +413,18 @@
     
     },
     titleMap: {
+      "sites/quora/index.html": "Quora — 2010",
+
+      "sites/groupon/index.html": "Groupon — daily deals 2010",
+
+      "sites/digg/exodus.html": "Digg exodus — toward Reddit",
+
+      "sites/digg/v4.html": "Digg v4 — August 2010",
+
+      "sites/cablegate/press.html": "Cablegate press alliance — 2010",
+
+      "sites/cablegate/index.html": "Cablegate — WikiLeaks culture 2010",
+
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
       "sites/milliondollar/about.html": "About Million Dollar Homepage",
@@ -530,6 +549,7 @@
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
       "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/map.html": "2010 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
       "sites/altavista/index.html": "AltaVista",
@@ -695,6 +715,7 @@
       { re: /home\.microsoft|starting.?point/i, path: "pages/home.html" }
     ],
     dirSiteKeys: [
+      "cablegate", "groupon", "quora", "instagram", "ipad", "iphone", "appstore", "foursquare", "farmville",
       "twitter", "facebook", "youtube", "digg", "docs", "aws", "myspace", "google", "maps", "reddit",
       "gmail", "flickr", "firefox", "delicious", "feedburner", "bloglines", "itunes", "wordpress",
       "linkedin", "adsense", "amazon", "yahoo", "ebay", "blogger", "friendster", "cnn", "wikipedia",

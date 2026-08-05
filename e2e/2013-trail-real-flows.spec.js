@@ -43,19 +43,45 @@ test.describe('2013 trail — flat phone + privacy', () => {
     await page.goto('/years/2013/sites/iphone/ios7.html');
     await clearKeys(page, ['itt13-ios7', 'itt13-touchid', 'itt13-snowden-ack', 'itt13-thesis-ack']);
     await page.reload();
-    await page.locator('[data-ios7-ack]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="ios7"]').click();
     await requireKey(page, 'itt13-ios7');
 
     await page.goto('/years/2013/sites/iphone/touchid.html');
-    await page.locator('[data-touchid-enroll]').click();
+    await page.waitForTimeout(400);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="touchid"]').click();
     await requireKey(page, 'itt13-touchid');
 
     await page.goto('/years/2013/sites/snowden/index.html');
-    await page.locator('[data-snowden-card]').evaluateAll((els) => els.forEach((e) => { e.checked = true; e.dispatchEvent(new Event('change', { bubbles: true })); }));
+    await page.locator('[data-snowden-card]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
     await page.locator('[data-snowden-ack]').click();
     await requireKey(page, 'itt13-snowden-ack');
 
     await page.goto('/years/2013/pages/about.html');
+    await page.waitForTimeout(400);
+    await page.locator('[data-thesis-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
     await page.locator('[data-thesis-ack]').click();
     await requireKey(page, 'itt13-thesis-ack');
   });
@@ -79,7 +105,14 @@ test.describe('2013 trail — public web + tablet', () => {
     await requireKey(page, 'itt13-healthcare-ack');
 
     await page.goto('/years/2013/sites/ipad/air.html');
-    await page.locator('[data-ipadair-ack]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="ipadair"]').click();
     await requireKey(page, 'itt13-ipadair');
   });
 
@@ -117,7 +150,15 @@ test.describe('2013 trail — continuity residual N–R', () => {
     await requireKey(page, 'itt13-netflix-stream');
 
     await page.goto('/years/2013/sites/uber/index.html');
+    await page.waitForTimeout(400);
     await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="uber"]').click();
     await requireKey(page, 'itt13-uber');
   });
 });

@@ -11,6 +11,7 @@
     year: "2010",
     storagePrefix: "itt10",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -73,6 +74,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "iPad", href: "sites/ipad/index.html" },
       { label: "iPhone 4", href: "sites/iphone/index.html" },
       { label: "Instagram", href: "sites/instagram/index.html" },

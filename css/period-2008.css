@@ -99,3 +99,62 @@ body.chrome-shell {
   --itt08-hulu: #66aa33;
 }
 
+/* —— 2008 UI robust densify —— */
+.as-shell {
+  max-width: 720px !important;
+  margin: 12px auto !important;
+  border: 1px solid #bbb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+.as-card {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.as-shell [data-appstore-catalog] button,
+.as-shell button[data-appstore-install],
+.as-shell .as-install {
+  background: #007aff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.as-shell [data-appstore-catalog] button:hover {
+  background: #0066d6;
+}
+.chrome-shell .ch-btn,
+.chrome-shell button[data-chrome-download],
+button[data-chrome-download],
+button[data-chrome-prefer] {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  padding: 8px 16px;
+  margin: 4px 6px 4px 0;
+  border: 1px solid #4d90fe;
+  background: #4d90fe;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.chrome-shell button[data-chrome-prefer],
+button[data-chrome-prefer] {
+  background: #f5f5f5;
+  color: #222;
+  border-color: #ccc;
+}
+.chrome-dl {
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.hulu-shell {
+  max-width: 720px;
+  margin: 12px auto;
+  border: 1px solid #6c3;
+  padding: 12px;
+  background: #fff;
+}

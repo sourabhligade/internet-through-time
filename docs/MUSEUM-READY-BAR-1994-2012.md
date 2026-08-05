@@ -1,7 +1,8 @@
-# Museum-ready bar — 1994–2013 (ship definition)
+# Museum-ready bar — 1994–2012 (ship definition; residual apply through 2016)
 
-**Date:** 2026-08-02  
-**Purpose:** One bar so every hub year can claim **museum-ready** without inventing pixels.
+**Date:** 2026-08-02 · **Update:** 2026-08-05 — hub open **1994–2016**; **museum-ready claim extends through 2016** (A–F; CAPTURE failed-final OK).  
+**Purpose:** One bar so every hub year can claim **museum-ready** without inventing pixels.  
+**Assessment (current → next · year scorecard):** [`MUSEUM-READY-ASSESSMENT-1994-2016.md`](MUSEUM-READY-ASSESSMENT-1994-2016.md)
 
 ## Required layers (all must pass)
 
@@ -28,8 +29,10 @@
 - Full OS shell variants (Win8 immersive mode)  
 - Live third-party APIs  
 
-## Status map (2026-08-02 L3 densify pass)
+## Status map (2026-08-05)
 
-All hub years **1994–2013** are **museum-ready** under this bar.  
-**2011–2013** L3 densify: CAPTURE H11/H12/H13 P0 rows **failed-final** honesty (no invented pixels) · 2013 HealthCare.gov + iPad Air · continuity year-voice scrub.  
-**2014+** not on disk.
+All hub years **1994–2016** are **museum-ready** under this bar (layers A–F).  
+**2011–2013** L3 densify: CAPTURE failed-final honesty · 2013 HealthCare.gov + iPad Air.  
+**2014–2016** promote 2026-08-05: densify packs green · CAPTURE H14–H16 failed-final · museum-grade cards live.  
+**L4 forever:** perfect WA brand stills · never invent pixels.  
+**2017+** not on disk.

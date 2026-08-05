@@ -29,6 +29,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -89,7 +90,7 @@ function initGuestbook(root) {
         notice.innerHTML = "Thanks, <b>" + escapeHtml(entry.name) + "</b> — your entry was added.";
       }
       showFlash("Thanks, <b>" + escapeHtml(entry.name) + "</b> — your guestbook entry was added.");
-      markTourProgress();
+      markTourUsed();
       try {
         if (history.replaceState) history.replaceState(null, "", location.pathname);
       } catch (err) { /* */ }
@@ -120,7 +121,7 @@ function initGuestbook(root) {
           notice.innerHTML = "Thanks, <b>" + escapeHtml(entry2.name) + "</b>! Your entry is saved.";
         }
         showFlash("Thanks, <b>" + escapeHtml(entry2.name) + "</b> — your guestbook entry was added.");
-        markTourProgress();
+        markTourUsed();
         render();
       }
     });
@@ -279,7 +280,7 @@ function initBabelFish() {
           escapeHtml(out).replace(/\n/g, "<br>") +
           "</font>";
         showFlash("Babel Fish translated (" + escapeHtml(lp.replace("_", " → ")) + ").");
-        markTourProgress();
+        markTourUsed();
       });
     })(forms[i]);
   }
@@ -355,7 +356,7 @@ function initYahooMail() {
           "<font size=\"1\">Free Email for Everyone · museum reconstruction · no real accounts</font>" +
           "</font>";
         showFlash("Welcome, <b>" + escapeHtml(login) + "@yahoo.com</b>");
-        markTourProgress();
+        markTourUsed();
       });
     })(forms[i]);
   }

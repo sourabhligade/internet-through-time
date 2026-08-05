@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Facebook Home — April 2013 flop</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="fbhome-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -19,22 +19,19 @@
  </p>
  <p style="font-size:11px"> · still <b>Like only</b> — no Reactions</p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-fb-home";
-  var btn = document.querySelector("[data-fb-home-install]");
-  var st = document.querySelector("[data-fb-home-status]");
-  if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ installed: true, flop: true, ts: Date.now() })); } catch (e) {}
-    var msg = "Home installed (theater) · flop honesty · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "fb-home" });
-      }
-    } catch (e2) {}
-  });
-});
-</script>
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Facebook Home flop</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Home Android shell flop literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real Android install</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="fb-home" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-fb-home</code></p>
+</div>
+
+
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

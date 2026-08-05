@@ -11,10 +11,12 @@
     year: "1997",
     storagePrefix: "itt97",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
-      hotmail: true
+      hotmail: true,
+      icq: true
     },
     navSubtitle: "IE 4.0 · 56k",
     nav: [
@@ -70,6 +72,7 @@
       }
     ],
     footerNav: [
+      { label: "Flow map", href: "pages/map.html" },
       {
         label: "Starting Point",
         href: "pages/home.html"

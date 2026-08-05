@@ -40,7 +40,14 @@ test.describe('2013 real flows (storage required)', () => {
     await page.goto('/years/2013/sites/iphone/5c.html');
     await clearKeys(page, ['itt13-iphone5c']);
     await page.reload();
-    await page.locator('[data-5c-ack]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="iphone5c"]').click();
     await expectStorageTruthy(page, 'itt13-iphone5c');
   });
 
@@ -73,7 +80,14 @@ test.describe('2013 real flows (storage required)', () => {
     await expect(page.locator('body')).toContainText(/Facebook Home|launcher|HTC|flop/i);
     await clearKeys(page, ['itt13-fb-home']);
     await page.reload();
-    await page.locator('[data-fb-home-install]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="fb-home"]').click();
     await expectStorageTruthy(page, 'itt13-fb-home');
   });
 
@@ -93,7 +107,14 @@ test.describe('2013 real flows (storage required)', () => {
     await page.goto('/years/2013/sites/ipad/air.html');
     await clearKeys(page, ['itt13-ipadair']);
     await page.reload();
-    await page.locator('[data-ipadair-ack]').click();
+    await page.waitForTimeout(500);
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="ipadair"]').click();
     await expectStorageTruthy(page, 'itt13-ipadair');
   });
 
@@ -101,9 +122,17 @@ test.describe('2013 real flows (storage required)', () => {
     await page.goto('/years/2013/sites/uber/index.html');
     await clearKeys(page, ['itt13-uber']);
     await page.reload();
+    await page.waitForTimeout(500);
     await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
+    await page.locator('[data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+        e.dispatchEvent(new Event('change', { bubbles: true }));
+      })
+    );
+    await page.locator('[data-itt-real-save][data-storage-key="uber"]').click();
     const raw = await expectStorageTruthy(page, 'itt13-uber');
-    expect(raw).toMatch(/uberx|true/i);
+    expect(raw).toMatch(/multiStep|uber|checks/i);
   });
 
   test('Spotify invite writes itt13-spotify*', async ({ page }) => {

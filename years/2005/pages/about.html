@@ -118,6 +118,17 @@
   <a href="whats-new.html">What’s new</a>
  </p>
 </div>
+
+<!-- REAL-flow system: thesis literacy (no soft mock) -->
+<div class="itt-real-thesis" data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+ <b>Year thesis · REAL literacy</b> (this browser only · multi-step required)
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> I understand this year&rsquo;s period products and hard bans (no anachronism as default)</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-2"> Progress is private <code>localStorage</code> theater — no real accounts or network calls</label>
+ <button type="button" data-itt-real-save data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
+ <p data-itt-action-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
+ <p style="font-size:11px;color:#666;margin:4px 0 0">Writes year-prefixed <code>*-thesis-ack</code> only after both checks.</p>
+</div>
+
 <script src="../../../js/immersion-2005.js"></script>
 </body>
 </html>

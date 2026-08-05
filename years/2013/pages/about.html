@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <title>About the Web in 2013</title>
 <link rel="stylesheet" href="../../../css/period-2013.css">
+
+<!-- REAL-flow system: thesis literacy (no soft mock) -->
+<div class="itt-real-thesis" data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+ <b>Year thesis · REAL literacy</b> (this browser only · multi-step required)
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> I understand this year&rsquo;s period products and hard bans (no anachronism as default)</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-2"> Progress is private <code>localStorage</code> theater — no real accounts or network calls</label>
+ <button type="button" data-itt-real-save data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
+ <p data-itt-action-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
+ <p style="font-size:11px;color:#666;margin:4px 0 0">Writes year-prefixed <code>*-thesis-ack</code> only after both checks.</p>
+</div>
+
 <script src="../../../js/immersion-2013.js" defer></script>
 </head>
 <body bgcolor="#ffffff" text="#000000" link="#0000ee" vlink="#551a8b">
@@ -72,48 +83,49 @@
  <p>Default early–mid: <b>Windows 7</b> residual · <b>Chrome</b> #1 narrative (StatCounter class).
  Late product: <b>Windows 8.1</b> · IE residual. Broadband. Storage <code>itt13</code>.</p>
 
- <p style="margin-top:14px;border-top:1px solid #ccc;padding-top:10px">
-  <button type="button" data-thesis-ack style="font-size:12px">I understand the 2013 thesis (save)</button>
-  <span data-thesis-status style="font-size:11px;color:#060;margin-left:8px"></span>
- </p>
+ <div style="margin-top:14px;border-top:1px solid #ccc;padding-top:10px;font-size:12px">
+  <b>Thesis REAL (both required)</b><br>
+  <label style="display:block;margin:4px 0"><input type="checkbox" data-thesis-req> Short-video · flat UI · privacy press define 2013</label>
+  <label style="display:block;margin:4px 0"><input type="checkbox" data-thesis-req> localStorage theater only — no real accounts</label>
+  <p style="margin-top:8px">
+   <button type="button" data-thesis-ack style="font-size:12px">Save thesis (REAL)</button>
+   <span data-thesis-status style="font-size:11px;color:#060;margin-left:8px"></span>
+  </p>
+ </div>
  <script>
  (function () {
    var KEY = "itt13-thesis-ack";
-   var BTC = "itt13-btc-note";
    function boot() {
      var btn = document.querySelector("[data-thesis-ack]");
      var st = document.querySelector("[data-thesis-status]");
-     if (btn) {
-       try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
-       btn.addEventListener("click", function () {
-         try {
-           localStorage.setItem(KEY, JSON.stringify({ ack: true, thesis: "short-video-flat-privacy", ts: Date.now() }));
-         } catch (e2) {}
-         if (st) st.textContent = "Saved · " + KEY;
-         try {
-           if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-             ITT._immersionApi.actionFeedback("Thesis saved · " + KEY, { status: st, kind: "thesis" });
-           }
-         } catch (e3) {}
-       });
-     }
-     var btcBtn = document.querySelector("[data-btc-note]");
-     var btcSt = document.querySelector("[data-btc-status]");
-     if (btcBtn) {
-       try { if (localStorage.getItem(BTC) && btcSt) btcSt.textContent = "Saved · " + BTC; } catch (e4) {}
-       btcBtn.addEventListener("click", function () {
-         try {
-           localStorage.setItem(BTC, JSON.stringify({ newsOnly: true, silkRoad: true, ts: Date.now() }));
-         } catch (e5) {}
-         var msg = "News literacy saved · no market UI · " + BTC;
-         if (btcSt) btcSt.textContent = msg;
-         try {
-           if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-             ITT._immersionApi.actionFeedback(msg, { status: btcSt, kind: "btc-note" });
-           }
-         } catch (e6) {}
-       });
-     }
+     if (!btn) return;
+     try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
+     btn.addEventListener("click", function () {
+       var boxes = document.querySelectorAll("[data-thesis-req]");
+       var n = 0;
+       for (var i = 0; i < boxes.length; i++) if (boxes[i].checked) n++;
+       if (n < 2) {
+         if (st) { st.textContent = "Check both thesis boxes first (not mock)."; st.style.color = "#a00"; }
+         return;
+       }
+       try {
+         localStorage.setItem(KEY, JSON.stringify({
+           ack: true,
+           thesis: "short-video-flat-privacy",
+           multiStep: true,
+           ts: Date.now()
+         }));
+       } catch (e2) {}
+       if (st) { st.textContent = "Saved REAL · " + KEY; st.style.color = "#060"; }
+       try {
+         if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+           ITT._immersionApi.actionFeedback("Thesis saved · " + KEY, { status: st, kind: "thesis" });
+         }
+         if (window.ITT && ITT._immersionApi && ITT._immersionApi.markTourUsed) {
+           ITT._immersionApi.markTourUsed();
+         }
+       } catch (e3) {}
+     });
    }
    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
    else boot();

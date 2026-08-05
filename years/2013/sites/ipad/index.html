@@ -45,22 +45,18 @@
   mini Retina residual.
  </div>
 </div>
-<script>
-(function(){
-  var KEY="itt13-ipad-history";
-  function boot(){
-    var btn=document.querySelector("[data-ipad-claim]");
-    var st=document.querySelector("[data-ipad-status]");
-    if(!btn)return;
-    try{if(localStorage.getItem(KEY)&&st)st.textContent="Noted · "+KEY;}catch(e){}
-    btn.addEventListener("click",function(){
-      try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPad mini",priceFrom:329,ts:Date.now()}));}catch(e2){}
-      if(st)st.textContent="Noted · iPad mini · $329+ · "+KEY;
-    });
-  }
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
-})();
-</script>
+
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — iPad mini interest</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> iPad mini product interest</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real purchase</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="ipadmini" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-ipadmini</code></p>
+</div>
 <script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

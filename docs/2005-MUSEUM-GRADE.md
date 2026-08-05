@@ -1,13 +1,14 @@
 # 2005 — Museum grade status
 
-**Date:** 2026-07-31  
-**Status:** **Museum-ready** · was: **100% museum complete** + residual closed 2026-07-30 + **Phase 15/16 implement pass 2026-07-31** (thin densify · MDH · Memeorandum · Skype) · hub **unlocked**  
+**Date:** 2026-08-05  
+**Status:** **Museum-ready** · residual closed 2026-07-30 · Phase 15/16 densify 2026-07-31 · **implement polish 2026-08-05** (storage-key voice · iTunes podcasts multipage · P2 about densify · authenticity 74/74 · core e2e green) · hub **unlocked**  
 
 **Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2005/` live · **~266 HTML · ~75 rooms** · urlMap complete · P0 YouTube · Maps · Reddit · Digg · logos **WA**
 
 | Companion | Role |
 |-----------|------|
+| [`2005-MASTER-BIBLE-RESEARCH-GOALS-PHASES-ROI.md`](2005-MASTER-BIBLE-RESEARCH-GOALS-PHASES-ROI.md) | **Master bible — research · goals · phases · steps · ROI (2026-08-05)** |
 | [`2005-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2005-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md) | **Goals · step phases · how-to · period user flows** |
 | [`TO-100-PERCENT/YEAR-2005.md`](TO-100-PERCENT/YEAR-2005.md) | Full phase plan |
 | [`2005-RESEARCH.md`](2005-RESEARCH.md) | Thesis · bans |
@@ -36,7 +37,7 @@ Live: **YouTube** · **Google Maps** · **Reddit** · **Digg rise** · MySpace N
 | Hub | **Available** |
 | urlMap | Complete for content HTML |
 | P0 modules | youtube · maps · reddit · digg · podcasts |
-| e2e | `2005-mvp` · `2005-buttons` · `2005-live-flows` · **`2005-flows`** · **`2005-youtube`** · **`2005-real-flows`** |
+| e2e | `2005-mvp` · `2005-buttons` · `2005-live-flows` · **`2005-flows`** · **`2005-youtube`** · **`2005-real-flows`** · **`2005-trail-real-flows`** · **`2005-mega-real-flows`** (boom-day multi-product) · densify |
 | Phase 9 P0 logos | **WA / WA-CONTINUITY** (READMEs honest) |
 
 ## Bans enforced

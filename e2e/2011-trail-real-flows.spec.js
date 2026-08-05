@@ -56,7 +56,7 @@ test.describe('2011 trail 2 — Social redesign', () => {
 });
 
 test.describe('2011 trail 3 — Google+ challenger', () => {
-  test('Circles add → Hangout mock', async ({ page }) => {
+  test('Circles add → Hangout real session', async ({ page }) => {
     await page.goto('/years/2011/sites/googleplus/circles.html');
     await clearKeys(page, ['itt11-gplus-circles', 'itt11-gplus-hangout']);
     await page.reload();
@@ -68,7 +68,9 @@ test.describe('2011 trail 3 — Google+ challenger', () => {
     await page.goto('/years/2011/sites/googleplus/hangouts.html');
     await page.waitForSelector('[data-gplus-hangout-start]', { timeout: 20000 });
     await page.locator('[data-gplus-hangout-start]').click();
-    await requireKey(page, 'itt11-gplus-hangout');
+    const hang = await requireKey(page, 'itt11-gplus-hangout');
+    expect(hang || '').toMatch(/circle|tiles|session|Friends/i);
+    await expect(page.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
   });
 });
 

@@ -217,6 +217,21 @@
       saveJSON(tourStateKey(), map);
     }
 
+    /**
+     * Tour state: legacy boolean true = fully used (backward compatible).
+     * Object form: { visited: true, used?: true }.
+     * Visit alone only marks visited; product actions call markTourUsed.
+     */
+    function tourStepUsed(v) {
+      if (v === true) return true;
+      return !!(v && typeof v === "object" && v.used);
+    }
+    function tourStepVisited(v) {
+      if (v === true) return true;
+      return !!(v && typeof v === "object" && (v.visited || v.used));
+    }
+
+    /** Mark matching tour steps as visited only (pathname match). */
     function markTourProgress() {
       var steps = config.tour || [];
       if (!steps.length) return;
@@ -226,13 +241,46 @@
       for (var i = 0; i < steps.length; i++) {
         var s = steps[i];
         if (!s.id || !s.match) continue;
-        if (path.indexOf(s.match) !== -1) {
-          if (!done[s.id]) {
-            done[s.id] = true;
-            changed = true;
-            /* Quiet progress — no flash on mere visit (tour table updates on Starting Point).
-               Action flows (cart, bid, mail) still flash from their own handlers. */
-          }
+        if (path.indexOf(s.match) === -1) continue;
+        var cur = done[s.id];
+        if (tour === true || tourStepUsed(cur)) continue; /* already fully used */
+        if (!cur) {
+          done[s.id] = { visited: true };
+          changed = true;
+        } else if (typeof cur === "object" && !cur.visited) {
+          cur.visited = true;
+          done[s.id] = cur;
+          changed = true;
+        }
+      }
+      if (changed) setTourDone(done);
+    }
+
+    /**
+     * Mark tour step(s) as used after a real product action (cart, post, bid…).
+     * @param {string} [stepId] optional tour step id; else match current path
+     */
+    function markTourUsed(stepId) {
+      var steps = config.tour || [];
+      if (!steps.length && !stepId) return;
+      var done = getTourDone();
+      var changed = false;
+      function setUsed(id) {
+        if (!id) return;
+        var prev = done[id];
+        if (prev === true || tourStepUsed(prev)) return;
+        done[id] = { visited: true, used: true, ts: Date.now() };
+        changed = true;
+      }
+      if (stepId) {
+        setUsed(String(stepId));
+      } else {
+        var path = location.pathname || "";
+        var j;
+        for (j = 0; j < steps.length; j++) {
+          var st = steps[j];
+          if (!st.id || !st.match) continue;
+          if (path.indexOf(st.match) !== -1) setUsed(st.id);
         }
       }
       if (changed) setTourDone(done);
@@ -251,33 +299,42 @@
       var rows = "";
       for (var i = 0; i < steps.length; i++) {
         var s = steps[i];
-        var ok = !!done[s.id];
-        if (ok) nDone++;
-        /* Period checklist: asterisk, not a modern checkmark glyph */
-        var mark = ok ? "*" : String(i + 1);
-        var bg = ok ? "#E8FFE8" : "#F0F0F0";
+        var entry = done[s.id];
+        var used = tourStepUsed(entry);
+        var visited = tourStepVisited(entry);
+        if (used) nDone++;
+        /* Period checklist: * used · ~ visited only · number not started */
+        var mark = used ? "*" : visited ? "~" : String(i + 1);
+        var bg = used ? "#E8FFE8" : visited ? "#FFFFEE" : "#F0F0F0";
+        var labelCell;
+        if (used) {
+          labelCell =
+            "<font color=\"#006600\"><b>" + escapeHtml(s.label) + "</b></font> — used";
+        } else if (visited) {
+          labelCell =
+            '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a> — visited · try an action";
+        } else {
+          labelCell =
+            '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a>" +
+            (s.hint ? " — " + s.hint : "");
+        }
         rows +=
           '<tr bgcolor="' + bg + '">' +
           '<td width="8%" align="center"><font size="2"><b>' + mark + "</b></font></td>" +
-          "<td><font size=\"2\">" +
-          (ok
-            ? "<font color=\"#006600\"><b>" + escapeHtml(s.label) + "</b></font> — visited"
-            : '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a>" +
-              (s.hint ? " — " + s.hint : "")) +
-          "</font></td></tr>";
+          "<td><font size=\"2\">" + labelCell + "</font></td></tr>";
       }
       var allDone = nDone === steps.length && steps.length > 0;
       host.innerHTML =
         '<table width="100%" border="1" cellpadding="6" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#808080" class="itt-tour-table">' +
         '<tr bgcolor="#000080"><td colspan="2"><font color="#FFFF00" size="2"><b>Places to try</b></font> ' +
-        '<font color="#AACCFF" size="1">(' + nDone + "/" + steps.length + ")</font></td></tr>" +
+        '<font color="#AACCFF" size="1">(' + nDone + "/" + steps.length + " used)</font></td></tr>" +
         rows +
         (allDone
           ? '<tr bgcolor="#FFFFCC"><td colspan="2"><font size="2"><b>Tour complete!</b> ' +
             escapeHtml(config.tourCompleteHint || "Try the Location bar — type a site name and press Enter. Or open Bookmarks / Favorites.") +
             "</font></td></tr>"
           : '<tr bgcolor="#FFFFEE"><td colspan="2"><font size="1" color="#333333">' +
-            "Click a link below, explore the site, then come back here — visited places light up." +
+            "Visit a site, then do a real action (search, cart, post…) — only actions mark a step used." +
             "</font></td></tr>") +
         "</table>";
       host.style.display = "block";
@@ -548,6 +605,9 @@
     api.actionFeedback = actionFeedback;
     api.resolveStatusNode = resolveStatusNode;
     api.markTourProgress = markTourProgress;
+    api.markTourUsed = markTourUsed;
+    api.tourStepUsed = tourStepUsed;
+    api.tourStepVisited = tourStepVisited;
     api.renderCounter = renderCounter;
     api.renderTour = renderTour;
     api.renderActivity = renderActivity;

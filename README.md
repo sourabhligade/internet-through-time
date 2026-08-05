@@ -90,13 +90,16 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2010/` | iPad · iPhone 4 · Instagram · Foursquare · Open Graph · **ship** |
 | `/years/2011/` | Spotify US · Timeline · Google+ · iPhone 4S/Siri · Qwikster · **museum-ready** |
 | `/years/2012/` | Instagram Android · FB IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome · **museum-ready** |
+| `/years/2013/` | Vine · IG Video · Snap Stories · iOS 7 · Snowden · **MVP** |
+| `/years/2014/` | WhatsApp deal · Heartbleed · iPhone 6 · 1B sites · Ice Bucket · Win10 TP · **MVP** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Full inventory** (every site, feature, test, asset, and deploy detail): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
+**Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
+**Full inventory** (may lag disk): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
 
 **Every source, artifact & image provenance** (full inventory): [`docs/MASTER-PROVENANCE.md`](docs/MASTER-PROVENANCE.md).  
 **External bibliography + link audit:** [`docs/SOURCES.md`](docs/SOURCES.md) · [`docs/SOURCE-AUDIT.md`](docs/SOURCE-AUDIT.md).  
-**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md).
+**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md) (prefer DISK-TRUTH when they disagree).
 
 ## Architecture (keep this clean)
 

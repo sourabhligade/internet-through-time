@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Internet Through Time</title>
   <meta property="og:title" content="The Internet Through Time">
-  <meta property="og:description" content="Museum of the live Web, 1994–2013. Period browsers, real product flows, localStorage-only theater — not a retro skin pack.">
+  <meta property="og:description" content="Museum of the live Web, 1994–2014. Period browsers, real product flows, localStorage-only theater — not a retro skin pack.">
   <meta property="og:type" content="website">
-  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2012. Open a year: desktop, browser chrome, sites, and flows reconstructed from archives — not a modern redesign.">
+  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2013. Open a year: desktop, browser chrome, sites, and product flows reconstructed from archives — not a modern redesign.">
   <link rel="stylesheet" href="css/hub.css">
   <link rel="stylesheet" href="css/period-announce.css">
   <link rel="icon" href="favicon.gif" type="image/gif">
@@ -22,114 +22,115 @@
       <div class="hub-header-body">
         <h1>The Internet Through Time</h1>
         <p class="tagline">
-          A year-by-year museum of how the live Web actually looked and worked —
-          period desktop, browser chrome, signature sites, and product flows you can click through.
-          <em>Historical reconstruction from archives — not a modern redesign, and not a wallpaper pack.</em>
+          Open a year. Get that year’s desktop, browser chrome, and signature product flows —
+          reconstructed from archives, not a retro skin pack.
         </p>
         <p class="hub-stats" aria-label="Museum coverage">
-          <b>20 years open</b> · 1994–2013 · each card skinned like that era’s shell
-        </p>
-        <p class="hub-stats hub-stat-muted" aria-label="Scale arc">
-          Scale arc (order of magnitude): ~10k sites in late 1994 → ~17M (2000) → ~65M (2005) → ~122M (2007) → ~172M (2008) → ~238M (2009) → ~207M/255M (2010) → ~346M/555M (2011 dual-cite) → ~697M/634M (2012 dual-cite)
-          · Internet Live Stats / period sources, cited inside each year
+          <b>21 years open</b> · 1994–2014 · progress stays in this browser only
         </p>
 
-        <div class="start-path" role="navigation" aria-label="Start paths">
-          <a class="start-btn start-primary" href="years/1994/">Begin with 1994</a>
-          <a class="start-btn" href="years/1998/">1998 · Google!</a>
-          <a class="start-btn" href="years/2005/">2005 · YouTube · Maps</a>
-          <a class="start-btn" href="years/2007/">2007 · iPhone · open Gmail</a>
-          <a class="start-btn" href="years/2008/">2008 · App Store · Chrome</a>
-          <a class="start-btn" href="years/2009/">2009 · 3GS · Like · FarmVille</a>
-          <a class="start-btn" href="years/2010/">2010 · iPad · Instagram</a>
-          <a class="start-btn" href="years/2011/">2011 · Spotify US · Timeline · Siri</a>
-          <a class="start-btn" href="years/2012/">2012 · Instagram Android · FB IPO · iPhone 5</a>
-          <a class="start-btn" href="years/2013/">2013 · Vine · iOS 7 · Stories · Snowden</a>
-          <a class="start-btn" href="games/index.html">Period web games →</a>
-          <a class="start-btn" href="#directory">Browse the directory ↓</a>
+        <!-- Primary first-run path: one clear row -->
+        <div class="start-primary-row" role="navigation" aria-label="Primary start">
+          <a class="start-btn start-primary" id="begin-1994" href="years/1994/">Begin with 1994</a>
           <span id="resume-wrap" class="resume-wrap hidden">
             <a id="resume-link" class="start-btn start-resume" href="#">Continue where you left off</a>
+            <span id="resume-sub" class="resume-sub hidden" aria-hidden="true"></span>
           </span>
+          <a class="start-btn" href="#directory">Browse all years ↓</a>
+          <a class="start-btn" href="games/index.html">Period web games →</a>
         </div>
         <p class="start-hint">
-          First visit? Start in <b>1994</b> and walk forward — or jump to a signature year.
-          Inside each year: <b>Starting Point</b> is the year map; <b>← Year menu</b> (or window ×) returns here.
-          Progress stays in this browser only (<code>localStorage</code>).
+          First visit? Start in <b>1994</b> and walk forward.
+          Inside a year: <b>Starting Point</b> = year map · <b>← Year menu</b> (or ×) returns here.
         </p>
+
+        <!-- Path of the day: one curated trail (~5 min) -->
+        <div class="path-of-week" id="path-of-week" role="region" aria-label="Suggested trail">
+          <span class="path-of-week-badge">Tonight’s trail</span>
+          <div class="path-of-week-body">
+            <a id="path-week-link" class="path-of-week-title" href="years/2005/">2005 · YouTube → Maps</a>
+            <p id="path-week-blurb" class="path-of-week-blurb">Broadcast Yourself, then slippy maps — about five minutes of real clicks.</p>
+          </div>
+        </div>
+
+        <!-- Secondary: fewer signature jumps -->
+        <div class="start-signatures" role="navigation" aria-label="Signature years">
+          <span class="start-signatures-label">Or jump to a signature year:</span>
+          <div class="start-path start-path-signatures">
+            <a class="start-btn" href="years/1998/">1998 · Google</a>
+            <a class="start-btn" href="years/2005/">2005 · YouTube</a>
+            <a class="start-btn" href="years/2008/">2008 · App Store</a>
+            <a class="start-btn" href="years/2010/">2010 · iPad · IG</a>
+            <a class="start-btn" href="years/2013/">2013 · Vine · iOS 7</a>
+            <a class="start-btn" href="years/2014/">2014 · WhatsApp · 1B</a>
+
+
+
+          </div>
+        </div>
+
+        <details class="hub-details-scale">
+          <summary>Scale arc &amp; sources (optional)</summary>
+          <p class="hub-stats hub-stat-muted" aria-label="Scale arc">
+            Order of magnitude: ~10k sites late 1994 → ~17M (2000) → ~65M (2005) → ~122M (2007) → ~172M (2008) → ~238M (2009) → ~207M/255M (2010) → ~346M/555M (2011 dual-cite) → ~697M/634M (2012 dual-cite) → ~673M/861M (2013 dual-cite).
+            Internet Live Stats / period sources, cited inside each year.
+          </p>
+        </details>
       </div>
     </header>
 
-    <p class="mobile-notice">Best on a desktop browser — just like the 1990s and early-2000s web. Phones work, but the shells are built for larger screens.</p>
+    <p class="mobile-notice">Best on a desktop browser — shells are built for larger screens (phones work).</p>
 
-    <div class="ann-ticker" aria-label="Museum news ticker">
-      <span class="ann-ticker-label">NEWS</span>
-      <div class="ann-ticker-inner">
-        <div class="ann-ticker-track">
-          ★ 20 years open · 1994–2013 ★
-          NEW: Period web games wing — Flash portals · Club Penguin · museum arcade ★
-          2007: iPhone Safari · open Gmail · Street View · Facebook Platform ★
-          2008: App Store · iPhone 3G · Chrome · Android G1 · Hulu ★
-          2009: iPhone 3GS · Like · FarmVille · Bing · Windows 7 ★
-          2010: iPad · Instagram · iPhone 4 · Open Graph ★
-          2011: Spotify US · Timeline · Google+ · Siri · Qwikster ★
-          2012: Instagram Android · FB IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome ★
-          2013: Vine · iOS 7 · Snapchat Stories · Snowden · 5s/5c · Win8.1 ★
-          Progress stays in this browser only (localStorage) ★
-          <a href="games/index.html">Enter games wing</a> ★
-          <a href="games/announcements.html">Site announcements (period UI)</a> ★
-        </div>
-      </div>
-    </div>
-
-    <div class="hub-ann-strip">
+    <!-- Single announcement surface (ticker + games combined) -->
+    <div class="hub-ann-strip hub-ann-strip-solo" role="region" aria-label="Museum news">
       <span class="ann-badge ann-badge-new">New</span>
-      <span class="ann-badge ann-badge-hot">Hot</span>
-      <b>Site announcement:</b>
-      After-school internet is open —
-      <a href="games/index.html">Web Games wing</a>
-      (Miniclip / Newgrounds / Kongregate culture · playable arcade) ·
-      <a href="games/announcements.html">read the yellow news board »</a>
-      <span style="color:#666;font-size:11px"> · mid-2000s announce style, not modern banners</span>
+      <b>21 years open · 1994–2014.</b>
+      Games wing live —
+      <a href="games/index.html">period web games</a>
+      (Miniclip / Newgrounds / Kongregate culture · arcade) ·
+      <a href="games/announcements.html">news board »</a>
+      <span class="hub-ann-extra"> · App Store · iPad · Spotify US · Vine · WhatsApp · Watch · Win10</span>
     </div>
 
-    <section class="hub-thesis" aria-label="What this is">
-      <h2 class="visually-hidden">What this museum is</h2>
-      <ul class="thesis-list">
-        <li><b>One year at a time.</b> Opening 2005 does not give you 2007’s iPhone or open Gmail. Products appear only when history says they should.</li>
-        <li><b>Real flows, private theater.</b> Carts, mail, uploads, queues, and tour checks use <code>localStorage</code> in your browser — nothing is sent to a server.</li>
-        <li><b>Sources over vibes.</b> Layouts, chrome, and copy track Wayback captures, period docs, and research notes in the repo — not “retro aesthetic.”</li>
-      </ul>
+    <!-- Compact thesis: one line + expand -->
+    <section class="hub-thesis hub-thesis-compact" aria-label="What this is">
+      <p class="thesis-lead">
+        <b>One year at a time</b> · real product flows in private <code>localStorage</code> theater ·
+        sources over vibes.
+        <a href="#about">About / legal ↓</a>
+      </p>
     </section>
 
-    <section class="how-quick" aria-label="How to navigate this museum">
-      <h2 class="how-quick-title">How to navigate (read once)</h2>
-      <ol class="how-quick-list">
-        <li>
-          <b>1 · Enter a year</b> —
-          <a href="years/1994/">Begin 1994</a>, a signature year above, a card below, or
-          <b>Continue where you left off</b> when it appears.
-          Optional side path: <a href="games/index.html">period web games</a>.
-        </li>
-        <li>
-          <b>2 · Inside a year — two different “homes”</b>
-          <ul class="how-nav-map">
-            <li><b>Starting Point</b> = that year’s map (trails, About, tour). Use the yellow <b>Starting Point</b> directory button, toolbar <b>Home</b>, or the sticky <b>← Starting Point</b> bar on site pages.</li>
-            <li><b>Year menu</b> = this lobby (all years). Use top strip <b>← Year menu</b>, window <b>×</b>, or File → Exit.</li>
-          </ul>
-        </li>
-        <li>
-          <b>3 · Explore sites</b> —
-          follow numbered trails on Starting Point, or the directory bar (Instagram, Yahoo, …).
-          Back / Forward work like a real browser. Progress stays in <em>this</em> browser only.
-        </li>
-      </ol>
-      <p class="how-nav-cheat" aria-label="Cheat sheet">
-        <span class="how-nav-pill"><b>Lost on a site?</b> bottom bar → Starting Point</span>
-        <span class="how-nav-pill"><b>Leave the year?</b> ← Year menu or ×</span>
-        <span class="how-nav-pill"><b>Come back tomorrow?</b> Continue where you left off</span>
-      </p>
-      <p class="how-quick-more"><a href="#how">Full how-to</a> · <a href="#compare">Compare years</a> · <a href="#directory">Directory ↓</a></p>
-    </section>
+    <details class="how-quick-details" id="how-quick">
+      <summary class="how-quick-summary">How to navigate (read once)</summary>
+      <section class="how-quick" aria-label="How to navigate this museum">
+        <ol class="how-quick-list">
+          <li>
+            <b>1 · Enter a year</b> —
+            <a href="years/1994/">Begin 1994</a>, a signature year, a card below, or
+            <b>Continue …</b> when it appears.
+            Side path: <a href="games/index.html">period web games</a>.
+          </li>
+          <li>
+            <b>2 · Two different “homes”</b>
+            <ul class="how-nav-map">
+              <li><b>Starting Point</b> = that year’s map (trails, About, tour). Yellow directory button, toolbar Home, or sticky <b>← Starting Point</b>.</li>
+              <li><b>Year menu</b> = this lobby. Top strip <b>← Year menu</b>, window <b>×</b>, or File → Exit.</li>
+            </ul>
+          </li>
+          <li>
+            <b>3 · Explore</b> —
+            numbered trails on Starting Point or the directory bar. Back/Forward work like a real browser.
+          </li>
+        </ol>
+        <p class="how-nav-cheat" aria-label="Cheat sheet">
+          <span class="how-nav-pill"><b>Lost on a site?</b> bottom bar → Starting Point</span>
+          <span class="how-nav-pill"><b>Leave the year?</b> ← Year menu or ×</span>
+          <span class="how-nav-pill"><b>Come back later?</b> Continue …</span>
+        </p>
+        <p class="how-quick-more"><a href="#how">Full how-to</a> · <a href="#compare">Compare years</a> · <a href="#directory">Directory ↓</a></p>
+      </section>
+    </details>
 
     <div id="directory" class="year-section-title">Directory of years — each card matches that era’s browser / product UI</div>
     <nav class="era-jump" aria-label="Jump to era">
@@ -139,6 +140,9 @@
       <a class="era-jump-chip" href="#era-2011">2011</a>
       <a class="era-jump-chip" href="#era-2012">2012</a>
       <a class="era-jump-chip" href="#era-2013">2013</a>
+
+
+
       <a class="era-jump-chip" href="games/index.html">Games wing →</a>
     </nav>
     <hr class="rainbow-hr" aria-hidden="true">
@@ -353,8 +357,10 @@
       <a class="year-card available y2009" href="years/2009/" data-year="2009">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Social · apps daily</p>
-          <p class="year">2009</p>
+          <div class="year-row">
+            <p class="year">2009</p>
+            <span class="era-chip">3GS · Like · FarmVille</span>
+          </div>
           <p class="label">iPhone 3GS · Facebook Like · FarmVille · Bing · Windows 7 · Twitter mainstream</p>
           <p class="scale">238,027,855 sites · ~1.77B users · IE 8</p>
           <p class="meta">Enter immersion</p>
@@ -362,14 +368,18 @@
       </a>
 
       <a class="year-card available y2010" href="years/2010/" data-year="2010">
+        <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <div class="motif" aria-hidden="true"></div>
-          <p class="year">2010</p>
-          <p class="tag">iPad · Instagram · iPhone 4</p>
-          <p class="desc">Tablet + filters · Open Graph · Foursquare peak · still mostly PC</p>
+          <div class="year-row">
+            <p class="year">2010</p>
+            <span class="era-chip">iPad · Instagram · iPhone 4</span>
+          </div>
+          <p class="label">Tablet + filters · Open Graph · Foursquare peak · still mostly PC</p>
+          <p class="scale">~207M June / ~255M Dec sites · ~2B users</p>
+          <p class="meta">Enter immersion</p>
         </div>
       </a>
-</div>
+    </div>
 
     <p class="era-heading" id="era-2011">2011 · Streaming, Timeline, Siri</p>
     <p class="era-note">Spotify US · Facebook Timeline · Google+ · iPhone 4S/Siri · Netflix/Qwikster · still mostly PC.</p>
@@ -407,7 +417,6 @@
 
     <hr class="rainbow-hr" aria-hidden="true">
 
-    <section class="
     <p class="era-heading" id="era-2013">2013 · Short video · flat design · privacy mass story</p>
     <p class="era-note">Vine · Instagram Video · Snapchat Stories · iOS 7 · iPhone 5s/5c · Win8.1 · Snowden/PRISM · PS4/Xbox One.</p>
     <div class="year-grid">
@@ -425,7 +434,31 @@
       </a>
     </div>
 
-compare" id="compare">
+    <hr class="rainbow-hr" aria-hidden="true">
+
+
+
+
+    <p class="era-heading" id="era-2014">2014 · Platform money · bigger phones · open-web panic</p>
+    <p class="era-note">WhatsApp deal · Heartbleed · iPhone 6 · 1B websites · Ice Bucket · Serial · Win10 TP only.</p>
+    <div class="year-grid">
+      <a class="year-card available y2014" href="years/2014/" data-year="2014">
+        <div class="motif" aria-hidden="true"></div>
+        <div class="year-card-inner">
+          <div class="year-row">
+            <p class="year">2014</p>
+            <span class="era-chip">WhatsApp · Heartbleed · iPhone 6</span>
+          </div>
+          <p class="label">$19B chat, SSL panic, phablets, and the first billion-site web — virality goes industrial.</p>
+          <p class="scale">Live Stats June 968,882,453 · ~2.93B users · 1B first crossed Sep 2014</p>
+          <p class="meta">Enter immersion</p>
+        </div>
+      </a>
+    </div>
+
+    <hr class="rainbow-hr" aria-hidden="true">
+
+<section class="compare" id="compare">
       <h2>How each year is different</h2>
       <p class="compare-intro">
         Same museum, different defaults: OS shell, browser, how you find things, what “commerce” and “social” mean.
@@ -598,26 +631,131 @@ compare" id="compare">
 
     <footer class="hub-footer">
       The Internet Through Time · Museum-style web history ·
-      <a href="#directory">Years 1994–2013</a> ·
+      <a href="#directory">Years 1994–2014</a> ·
       <a href="games/index.html">Web games wing</a> ·
       <a href="#compare">Compare</a> ·
       <a href="#how">How to use</a> ·
       <a href="#about">About / legal</a>
-      · 2014+ planned
+      · 2015+ planned
     </footer>
   </div>
   <script>
   (function () {
+    "use strict";
+    /* Signature blurbs for smarter Continue */
+    var YEAR_HINT = {
+      "1994": "Mosaic · Yahoo @ Stanford",
+      "1995": "Win95 · Amazon · AuctionWeb",
+      "1996": "Space Jam · HoTMaiL",
+      "1997": "eBay · IE4 war",
+      "1998": "Google! · portals",
+      "1999": "Napster · Y2K",
+      "2000": "Bubble · smile Amazon",
+      "2001": "Wikipedia · iPod · XP",
+      "2002": "Friendster · broadband",
+      "2003": "MySpace · iTunes Store",
+      "2004": "Thefacebook · Gmail · Firefox",
+      "2005": "YouTube · Maps · Reddit",
+      "2006": "Twitter · News Feed",
+      "2007": "iPhone · open Gmail · Street View",
+      "2008": "App Store · Chrome · G1",
+      "2009": "Like · FarmVille · Bing · 3GS",
+      "2010": "iPad · Instagram · iPhone 4",
+      "2011": "Spotify US · Timeline · Siri",
+      "2012": "IG Android · FB IPO · iPhone 5",
+      "2013": "Vine · Stories · iOS 7 · Snowden",
+    };
+
+    /* Curated short trails — rotate by day-of-year */
+    var TRAILS = [
+      { year: "1994", href: "years/1994/", title: "1994 · Directory Web", blurb: "Yahoo at Stanford → CERN → personal pages. The public Web’s first mass year." },
+      { year: "1996", href: "years/1996/", title: "1996 · Space Jam + free email", blurb: "Cinematic promo site energy, then HoTMaiL theater — about five minutes." },
+      { year: "1998", href: "years/1998/", title: "1998 · Sparse Google", blurb: "Leave the portal density and feel I’m Feeling Lucky." },
+      { year: "2001", href: "years/2001/", title: "2001 · Wikipedia + iPod", blurb: "Encyclopedia anyone can edit, and a pocket hard drive that changed music." },
+      { year: "2004", href: "years/2004/", title: "2004 · Thefacebook + Gmail", blurb: "College graph + 1GB invite lore. Two rooms that rewired social and mail." },
+      { year: "2005", href: "years/2005/", title: "2005 · YouTube → Maps", blurb: "Broadcast Yourself, then slippy maps — classic Web 2.0 hour." },
+      { year: "2007", href: "years/2007/", title: "2007 · iPhone + open Gmail", blurb: "Phone as real browser, Gmail for everyone, Street View shock." },
+      { year: "2008", href: "years/2008/", title: "2008 · App Store + Chrome", blurb: "Apps as distribution, multi-process browser, Android G1 residual." },
+      { year: "2010", href: "years/2010/", title: "2010 · iPad + Instagram", blurb: "Tablet web and filter photos — iOS-only Instagram honesty." },
+      { year: "2011", href: "years/2011/", title: "2011 · Spotify US + Timeline", blurb: "Streaming free tier, life-story Facebook, Siri on 4S." },
+      { year: "2012", href: "years/2012/", title: "2012 · IG Android + IPO", blurb: "Photos go Android, Facebook goes public, SOPA blackout residual." },
+      { year: "2013", href: "years/2013/", title: "2013 · Vine + iOS 7", blurb: "Six-second loops, flat phones overnight, Stories for 24 hours." }
+    ];
+
+    function prefixFor(year) {
+      var n = parseInt(year, 10);
+      if (isNaN(n)) return "";
+      var two = String(n % 100);
+      if (two.length < 2) two = "0" + two;
+      return "itt" + two;
+    }
+
+    function yearHasProgress(year) {
+      var pre = prefixFor(year);
+      if (!pre) return false;
+      try {
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i) || "";
+          if (k.indexOf(pre + "-") === 0 || k === pre) return true;
+        }
+      } catch (e) { /* private mode */ }
+      return false;
+    }
+
+    /* —— Resume / Continue —— */
     try {
       var y = localStorage.getItem("itt-last-year");
       var wrap = document.getElementById("resume-wrap");
       var link = document.getElementById("resume-link");
-      if (wrap && link && /^(199[4-9]|200[0-9]|201[0-3])$/.test(y)) {
+      var sub = document.getElementById("resume-sub");
+      var begin = document.getElementById("begin-1994");
+      if (wrap && link && /^(199[4-9]|200[0-9]|201[0-6])$/.test(y)) {
         link.href = "years/" + y + "/";
-        link.textContent = "Continue " + y + " »";
+        var hint = YEAR_HINT[y] || "";
+        link.textContent = hint ? ("Continue " + y + " · " + hint) : ("Continue " + y + " »");
+        link.setAttribute("title", "Reopen " + y + (hint ? " — " + hint : ""));
+        if (sub) {
+          sub.textContent = "Last year in this browser";
+          sub.classList.remove("hidden");
+        }
         wrap.classList.remove("hidden");
+        if (begin) begin.classList.add("start-primary-soft");
       }
-    } catch (e) {}
+    } catch (eResume) { /* */ }
+
+    /* —— Path of the day —— */
+    try {
+      var now = new Date();
+      var start = new Date(now.getFullYear(), 0, 0);
+      var day = Math.floor((now - start) / 86400000);
+      var trail = TRAILS[day % TRAILS.length];
+      var tLink = document.getElementById("path-week-link");
+      var tBlurb = document.getElementById("path-week-blurb");
+      if (trail && tLink) {
+        tLink.href = trail.href;
+        tLink.textContent = trail.title;
+      }
+      if (trail && tBlurb) tBlurb.textContent = trail.blurb;
+    } catch (eTrail) { /* */ }
+
+    /* —— Progress dots on year cards —— */
+    try {
+      var cards = document.querySelectorAll("a.year-card.available[data-year]");
+      for (var c = 0; c < cards.length; c++) {
+        var card = cards[c];
+        var yy = card.getAttribute("data-year");
+        if (!yearHasProgress(yy)) continue;
+        card.classList.add("year-visited");
+        var row = card.querySelector(".year-row");
+        if (row && !row.querySelector(".year-progress-dot")) {
+          var dot = document.createElement("span");
+          dot.className = "year-progress-dot";
+          dot.title = "You’ve used this year in this browser";
+          dot.setAttribute("aria-label", "Visited " + yy);
+          row.appendChild(dot);
+        }
+      }
+    } catch (eProg) { /* */ }
   })();
   </script>
 </body>

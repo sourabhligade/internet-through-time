@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>iPhone 5c — colorful · September 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -19,28 +19,19 @@
   <div style="flex:1;height:52px;background:#5ac8fa;border-radius:10px" title="blue"></div>
   <div style="flex:1;height:52px;background:#fff;border:1px solid #c7c7cc;border-radius:10px" title="white"></div>
  </div>
- <p>
-  <button type="button" class="ios7-btn" data-5c-ack style="background:#ff3b30">Save 5c interest (theater)</button>
-  <span class="itt13-status" data-5c-status style="display:inline;margin-left:8px"></span>
- </p>
  <p class="itt13-ban"> · CSS color swatches only · not inventing product photography</p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-iphone5c";
-  var btn = document.querySelector("[data-5c-ack]");
-  var st = document.querySelector("[data-5c-status]");
-  if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ model: "5c", ts: Date.now() })); } catch (e) {}
-    var msg = "5c saved · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "5c" });
-      }
-    } catch (e2) {}
-  });
-});
-</script>
+
+<div style="margin:12px 0;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px">
+ <b>Multi-step REAL — iPhone 5c</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Color plastic 5c product literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real store / payment</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="iphone5c" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-iphone5c</code></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

@@ -239,14 +239,22 @@
       if (qu && ui) ui.value = qu;
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var title = (form.querySelector('[name="title"]') || {}).value || "untitled";
+        var title = (form.querySelector('[name="title"]') || {}).value || "";
         var url = (form.querySelector('[name="url"]') || {}).value || "";
-        title = String(title).replace(/^\s+|\s+$/g, "") || "untitled";
+        title = String(title).replace(/^\s+|\s+$/g, "");
+        var st = doc.querySelector("[data-reddit-status]");
+        /* REAL gate: blank title is not a mock "untitled" success */
+        if (!title) {
+          if (st) {
+            st.setAttribute("data-allow-html", "1");
+            st.innerHTML = "Enter a title to submit a link.";
+          }
+          return;
+        }
         var list = seed();
         list.unshift({ id: uid(), title: title, url: url, score: 1, ts: Date.now() });
         save(list.slice(0, 50));
         saveSort("newest");
-        var st = doc.querySelector("[data-reddit-status]");
         if (st) {
           st.setAttribute("data-allow-html", "1");
           st.innerHTML =

@@ -180,14 +180,18 @@ test.describe('2011 flows A–T (real only)', () => {
     expect(raw).toMatch(/Coworkers/i);
   });
 
-  test('I Google+ Hangout mock', async ({ page }) => {
+  test('I Google+ Hangout real session storage', async ({ page }) => {
     await page.goto('/years/2011/sites/googleplus/hangouts.html');
     await clearKeys(page, ['itt11-gplus-hangout']);
     await page.reload();
     await page.waitForSelector('[data-gplus-hangout-start]', { timeout: 20000 });
     await page.locator('[data-gplus-hangout-start]').click();
-    await expect(page.locator('[data-gplus-hangout]')).toContainText(/Hangout|mock/i);
-    await expectStorageTruthy(page, 'itt11-gplus-hangout');
+    await expect(page.locator('[data-gplus-hangout]')).toContainText(/Hangout started|circle|people/i, {
+      timeout: 8000,
+    });
+    await expect(page.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
+    const raw = await expectStorageTruthy(page, 'itt11-gplus-hangout');
+    expect(raw || '').toMatch(/circle|tiles|started|session/i);
   });
 
   test('J Google+ +1 toggle', async ({ page }) => {

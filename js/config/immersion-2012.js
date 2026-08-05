@@ -11,6 +11,7 @@
     year: "2012",
     storagePrefix: "itt12",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -82,6 +83,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Instagram", href: "sites/instagram/index.html" },
       { label: "FB IPO", href: "sites/facebook/ipo.html" },
       { label: "Pinterest", href: "sites/pinterest/index.html" },

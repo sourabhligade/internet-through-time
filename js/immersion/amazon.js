@@ -20,6 +20,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -68,7 +69,7 @@ function initAmazonAdd() {
       } else {
         showFlash(msg);
       }
-      markTourProgress();
+      markTourUsed();
     });
   }
   updateCartBadges();
@@ -364,7 +365,7 @@ function initEyesSubscribe() {
       " profile(s) stored in this browser · free personal notification service, 1995.</font>" +
       "</font></td></tr></table>";
     showFlash("Eyes & Editors: subscription recorded for <b>" + escapeHtml(email) + "</b>.");
-    markTourProgress();
+    markTourUsed();
   });
 }
 

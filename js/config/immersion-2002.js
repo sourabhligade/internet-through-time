@@ -11,6 +11,7 @@
     year: "2002",
     storagePrefix: "itt02",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -36,6 +37,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Friendster", href: "sites/friendster/index.html" },
       { label: "KaZaA", href: "sites/kazaa/index.html" },
       { label: "About 2002", href: "pages/about.html" }

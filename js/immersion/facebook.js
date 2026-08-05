@@ -461,8 +461,8 @@
           tlStatus.innerHTML =
             "Timeline enabled · life story profile · Wall effectively retired (Sep 22, 2011 F8 class).";
         }
-        if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
-          ITT._immersionApi.markTourProgress();
+        if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
+          (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
         }
         if (ITT._immersionApi && ITT._immersionApi.showFlash) {
           ITT._immersionApi.showFlash("Facebook Timeline on (this browser).");

@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Core shell flows for every exhibit year 1994–2012.
+ * Core shell flows for every exhibit year 1994–2013.
  * Covers: boot · home content · dirbar · home button · start menu · location Go.
  */
 const { test, expect } = require('@playwright/test');

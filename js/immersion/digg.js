@@ -391,9 +391,17 @@
         ev.preventDefault();
         var title =
           ((form.querySelector('[name="title"]') || form.elements.title || {}).value) ||
-          "untitled";
+          "";
         var url =
           ((form.querySelector('[name="url"]') || form.elements.url || {}).value) || "";
+        title = String(title).replace(/^\s+|\s+$/g, "");
+        var st =
+          doc.querySelector("[data-digg-status]") || doc.getElementById("digg-status");
+        /* REAL gate: no blank / untitled mock submits */
+        if (!title) {
+          if (st) st.innerHTML = "Enter a title to digg a story.";
+          return;
+        }
         var list = seed();
         list.unshift({
           id: "d" + Date.now(),
@@ -404,8 +412,6 @@
           ts: Date.now()
         });
         save(ensureIds(list.slice(0, 40)));
-        var st =
-          doc.querySelector("[data-digg-status]") || doc.getElementById("digg-status");
         if (st) {
           st.innerHTML =
             "Submitted — now on the digg list (" +

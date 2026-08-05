@@ -15,9 +15,11 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | 2010 | 206,956,723 | −13% | playable (methodology dip honesty) |
 | 2011 | **346,004,403** | +67% | playable MVP (2026-08-02) |
 | **2012** | **697,089,489** | **+101%** | playable MVP (2026-08-02) |
-| **2013** | **672,985,183** | −3% | **research freeze draft** (2026-08-02) · not on disk |
-| 2014 | **968,882,453** | +44% | horizon — Live Stats June |
-| 2015 | **863,105,652** | −11% | horizon — Live Stats June |
+| **2013** | **672,985,183** | −3% | playable (hub 1994–2013) |
+| **2014** | **968,882,453** | **+44%** | **MVP live** (2026-08-06) · hub unlocked · `itt14` · 1B milestone Sep 2014 |
+| **2015** | **863,105,652** | **−11%** | not scaffolded on this branch · 1B fluctuation honesty (for later years) |
+| **2016** | **1,045,534,808** | **+21%** | not scaffolded on this branch · 1B restabilized Mar 2016 class |
+| **2017** | **1,766,926,408** | **+69%** | not scaffolded on this branch · hostname explosion honesty |
 
 ## Websites (Pingdom / Netcraft — December class)
 
@@ -27,7 +29,10 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | 2011 | **555 million** (+300M in year) | [Pingdom 2011](https://www.pingdom.com/blog/internet-2011-in-numbers/) |
 | **2012** | **634 million** (+51M) | [Pingdom 2012](https://www.pingdom.com/blog/internet-2012-in-numbers/) |
 | **2013** | **~861 million** (Dec survey class) · calendar growth ~630M→~850M+ hostnames | Netcraft Dec 2013 · Live Stats “curious facts” · [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| 2014+ | re-verify | Netcraft / Live Stats |
+| **2014** | **1B first crossed Sep 2014** (NetCraft Oct 2014 survey class) · June Live Stats **968,882,453** | Live Stats · NetCraft · [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
+| **2015** | June Live Stats **863,105,652 (−11%)** · 1B **dipped after 2014** · restabilized **Mar 2016 class** (Live Stats honesty) · re-verify Dec NetCraft before implement | Live Stats · NetCraft class |
+| **2016** | June Live Stats **1,045,534,808 (+21%)** · 1B **restabilized Mar 2016** · Jan~900M→Dec~1.7B hostnames · active ~170M class | Live Stats · NetCraft class |
+| **2017** | June Live Stats **1,766,926,408 (+69%)** · huge hostname jump · 2018 dips to 1.630B (−8%) · users cell blank | Live Stats · NetCraft class |
 
 ## Internet users (class)
 
@@ -37,6 +42,10 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | 2011 | ~2.1B (Pingdom) · ~2.28B (Live Stats) | dual |
 | **2012** | **2.4 billion** | Pingdom 2012 |
 | **2013** | **~2.76 billion** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
+| **2014** | **2,925,249,355** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
+| **2015** | **3,185,996,155** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
+| **2016** | **~3.4B class** (ITU; Live Stats June users cell blank in 2026 harvest — re-verify) | ITU WTI class · Live Stats |
+| **2017** | **~3.5–3.6B class** (ITU; Live Stats June users cell blank — re-verify before About invent) | ITU WTI class · Live Stats |
 
 ## Social milestones (museum spine)
 

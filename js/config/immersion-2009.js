@@ -11,6 +11,7 @@
     year: "2009",
     storagePrefix: "itt09",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -71,6 +72,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "App Store", href: "sites/appstore/index.html" },
       { label: "iPhone 3GS", href: "sites/iphone/index.html" },
       { label: "FarmVille", href: "sites/farmville/index.html" },

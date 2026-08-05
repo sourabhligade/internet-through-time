@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Facebook IPO — May 18, 2012</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body bgcolor="#e7ebf2">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -25,22 +25,20 @@
    <li>Later months: stock sinks well below $38 (not “always up” honesty)</li>
   </ul>
   <p style="font-size:12px">Same year: Instagram buy Apr 9 · <b>1 billion</b> MAU Oct · Timeline residual · <b>Like</b> only (no Reactions).</p>
-  <p><button type="button" data-fb-ipo-ack>I was there (save theater)</button>
-  <span data-fb-ipo-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
   <p style="font-size:11px;color:#666">Investopedia · DealBook · CNBC · educational · no real trading</p>
  </div>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  var btn=document.querySelector("[data-fb-ipo-ack]");
-  var st=document.querySelector("[data-fb-ipo-status]");
-  var KEY="itt13-fb-ipo-ack";
-  try{if(localStorage.getItem(KEY)&&st)st.textContent="Saved · "+KEY;}catch(e){}
-  if(btn)btn.addEventListener("click",function(){
-    try{localStorage.setItem(KEY,JSON.stringify({price:38,date:"2012-05-18",ts:Date.now()}));}catch(e2){}
-    if(st)st.textContent="Saved · $38 · "+KEY;
-  });
-});
-</script>
+
+<div style="margin:12px 0;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px">
+ <b>Multi-step REAL — Facebook IPO literacy</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> IPO day culture (May 18 2012 residual into 2013 memory)</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> This is theater — not brokerage / real shares</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="fb-ipo" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-fb-ipo</code></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

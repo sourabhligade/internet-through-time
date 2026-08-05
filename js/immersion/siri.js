@@ -97,8 +97,8 @@
           "</div>" +
           (log.innerHTML || "");
       }
-      if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
-        ITT._immersionApi.markTourProgress();
+      if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
+        (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
       }
       if (ITT._immersionApi && ITT._immersionApi.showFlash) {
         ITT._immersionApi.showFlash("Siri: " + esc(a).slice(0, 80));

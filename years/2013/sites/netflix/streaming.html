@@ -11,16 +11,18 @@
  <span data-netflix-stream-status style="font-size:12px;color:#8c8;margin-left:8px"></span>
  
 </div>
-<script>
-(function(){
-  function skey(){ try{ if(window.ITT&&ITT.util&&ITT.util.immersionStorageKey) return ITT.util.immersionStorageKey("netflix","itt13"); }catch(e){} return "itt13-netflix"; }
-  var b=document.querySelector("[data-netflix-stream]"); var st=document.querySelector("[data-netflix-stream-status]");
-  if(b) b.onclick=function(){
-    localStorage.setItem(skey(), JSON.stringify({streaming:true,year:2010,discsStill:true,ts:Date.now()}));
-    if(st) st.textContent="Streaming theater · discs still real · "+skey();
-  };
-})();
-</script>
+
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Netflix streaming residual</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Streaming + discs residual literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real Netflix account</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="netflix-stream" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-netflix-stream</code></p>
+</div>
 <script src="../../../../js/immersion-2013.js"></script>
 <p style="font-size:12px;font-family:Arial">May 2011 class: Netflix ~<b>30%</b> of peak North American downstream traffic (Sandvine/TechCrunch class — label source).</p>
 <p><a href="pricing-2011.html">2011 pricing →</a> · <a href="qwikster.html">Qwikster exhibit →</a></p>

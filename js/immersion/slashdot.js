@@ -21,6 +21,7 @@
       var showFlash = api.showFlash;
       var actionFeedback = api.actionFeedback || showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -87,7 +88,7 @@ function initSlashdotComments() {
       paint(comments);
       form.reset();
       actionFeedback("Comment posted.");
-      markTourProgress();
+      markTourUsed();
     };
   }
 }

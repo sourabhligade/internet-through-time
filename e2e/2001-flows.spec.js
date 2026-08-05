@@ -110,6 +110,34 @@ test.describe('2001 hard flows', () => {
     }
   });
 
+  test('Blogger post → view storage (itt01-blog) when hooks present', async ({ page }) => {
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt01-blog');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goInFrame(page, 'sites/blogger/edit.html');
+    await waitForImmersion(page, '2001');
+    const frame = contentFrame(page);
+    const form = frame.locator('form[data-blogger-post]');
+    if ((await form.count()) === 0) {
+      await expect(frame.locator('body')).toContainText(/Blogger|blog|Pyra|publish/i, {
+        timeout: 10000,
+      });
+      return;
+    }
+    const title = 'blog01 ' + Date.now();
+    await expect(form.locator('input[name="title"]')).toBeVisible({ timeout: 10000 });
+    await form.locator('input[name="title"]').fill(title);
+    await form.locator('textarea[name="body"]').fill('wiki era post body');
+    await form.locator('input[type="submit"], button[type="submit"]').first().click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt01-blog')), { timeout: 10000 })
+      .toMatch(new RegExp(title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  });
+
   test('Movable Type product page not empty', async ({ page }) => {
     await goInFrame(page, 'sites/movabletype/index.html');
     await waitForImmersion(page, '2001');

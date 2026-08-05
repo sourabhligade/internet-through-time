@@ -97,12 +97,235 @@ body {
 }
 
 /* —— Start path (first-visit CTAs) —— */
+/* Primary row: Begin / Continue / Directory / Games */
+.start-primary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 8px;
+  align-items: center;
+}
+
+.start-primary-row .start-btn.start-primary {
+  font-size: 12px;
+  padding: 6px 14px;
+}
+
+/* When resume is present, Begin is secondary-but-still-clear */
+.start-btn.start-primary.start-primary-soft {
+  background: #c0c0c0;
+  color: #000;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  font-weight: bold;
+}
+
+.start-btn.start-primary.start-primary-soft:hover,
+.start-btn.start-primary.start-primary-soft:focus {
+  background: #d4d0c8;
+  color: #000;
+}
+
+.resume-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  max-width: 100%;
+}
+
+.resume-wrap .start-resume {
+  max-width: min(420px, 100%);
+  white-space: normal;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.resume-sub {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #666;
+  padding-left: 2px;
+}
+
+.resume-sub.hidden { display: none; }
+
+/* Path of the day */
+.path-of-week {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 12px 0 8px;
+  padding: 8px 10px;
+  background: #ffffee;
+  border: 1px solid #cc0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.path-of-week-badge {
+  flex: 0 0 auto;
+  font-size: 9px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: #000080;
+  color: #fff;
+  padding: 3px 6px;
+  line-height: 1.3;
+}
+
+.path-of-week-body { min-width: 0; flex: 1; }
+
+.path-of-week-title {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000080;
+  text-decoration: none;
+  margin: 0 0 2px;
+}
+
+.path-of-week-title:hover,
+.path-of-week-title:focus {
+  text-decoration: underline;
+  outline: 1px dotted #000;
+}
+
+.path-of-week-blurb {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Year visited progress dot */
+.year-row {
+  position: relative;
+}
+
+.year-progress-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: #008000;
+  border: 1px solid #004000;
+  vertical-align: middle;
+  box-shadow: 0 0 0 1px #fff;
+  flex-shrink: 0;
+}
+
+.year-card.year-visited .meta::after {
+  content: " · visited";
+  color: #060;
+  font-weight: normal;
+}
+
+.start-signatures {
+  margin: 10px 0 4px;
+  padding-top: 8px;
+  border-top: 1px solid #dfdfdf;
+}
+
+.start-signatures-label {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
 .start-path {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 12px 0 6px;
+  margin: 0;
   align-items: center;
+}
+
+.start-path-signatures .start-btn {
+  font-size: 10px;
+  padding: 3px 8px;
+}
+
+/* Collapsed scale / how-to — keep above-the-fold quiet */
+.hub-details-scale {
+  margin: 10px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #555;
+}
+
+.hub-details-scale summary {
+  cursor: pointer;
+  color: #000080;
+  list-style-position: outside;
+}
+
+.hub-details-scale summary:hover {
+  text-decoration: underline;
+}
+
+.hub-details-scale[open] summary {
+  margin-bottom: 4px;
+}
+
+.hub-details-scale .hub-stats {
+  margin: 4px 0 0;
+}
+
+.how-quick-details {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.how-quick-summary {
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000080;
+  list-style-position: outside;
+}
+
+.how-quick-summary:hover {
+  background: #f0f0f0;
+}
+
+.how-quick-details[open] .how-quick-summary {
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.how-quick-details .how-quick {
+  border: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.hub-thesis-compact {
+  padding: 8px 12px;
+}
+
+.hub-thesis-compact .thesis-lead {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #222;
+}
+
+.hub-thesis-compact .thesis-lead a {
+  color: #000080;
+}
+
+.hub-thesis-compact code {
+  font-size: 11px;
 }
 
 .start-btn {
@@ -1269,6 +1492,50 @@ body {
   .year-card-inner { padding-right: 52px; }
   .year-card.available::before { font-size: 8px; }
   .y2007 .motif { opacity: 0.35; }
+
+  /* First-run primary CTAs full width on phones */
+  .start-primary-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .start-primary-row .start-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .resume-wrap {
+    width: 100%;
+    align-items: stretch;
+  }
+  .resume-wrap .start-resume {
+    max-width: none;
+    text-align: center;
+  }
+  .resume-sub {
+    text-align: center;
+    width: 100%;
+  }
+  .path-of-week {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .start-path-signatures {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .start-path-signatures .start-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .hub-ann-extra { display: none; }
 }
 
 /* 2013 card skin — Vine green / iOS blue */
@@ -1277,3 +1544,11 @@ body {
 .year-card.y2013 .year { color: #007aff; }
 .year-card.y2013 .era-chip { background: #00bf8f; color: #fff; }
 .year-card.y2013 .motif { background: linear-gradient(135deg, #00bf8f, #007aff); }
+
+.year-card.y2014 { border-color: #25d366 #404040 #404040 #c00; }
+.year-card.y2014 .year-card-inner { background: linear-gradient(180deg, #e8ffe8 0%, #fff5f5 45%, #f5f5f7 100%); }
+.year-card.y2014 .year { color: #075e54; }
+.year-card.y2014 .era-chip { background: #075e54; color: #fff; }
+.year-card.y2014 .motif { background: linear-gradient(135deg, #25d366, #c00 55%, #0078d7); }
+
+

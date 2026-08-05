@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Yahoo + Tumblr — May 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="yahoo-deal">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -17,21 +17,24 @@
   Museum honesty: deal lore only · no real M&amp;A filing UI · Tumblr product still reblog culture in 2013 · Yahoo purple on this page only.
  </div>
  <p>
-  <button type="button" data-tumblr-yahoo-ack style="padding:8px 12px;cursor:pointer;font-family:Arial,sans-serif">I understand the Yahoo–Tumblr deal (save)</button>
+  
   <span data-tumblr-yahoo-status style="margin-left:8px;font-size:11px;color:#cfc"></span>
  </p>
  
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-tumblr-yahoo";
-  var btn = document.querySelector("[data-tumblr-yahoo-ack]");
-  var st = document.querySelector("[data-tumblr-yahoo-status]");
-  if (btn) btn.addEventListener("click", function () {
-    try { localStorage.setItem(KEY, JSON.stringify({ deal: "yahoo-tumblr", approx: "1.1B", ts: Date.now() })); } catch (e) {}
-    if (st) st.textContent = "Saved · " + KEY;
-  });
-});
-</script>
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Yahoo–Tumblr deal</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Yahoo acquisition literacy (~$1.1B class)</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real deal paperwork</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="tumblr-yahoo" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-tumblr-yahoo</code></p>
+</div>
+
+
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

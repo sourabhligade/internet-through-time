@@ -49,6 +49,7 @@
       "pages/error/404.html": "http://home.microsoft.com/intl/web2000/error/404.html",
       "pages/error/unreachable.html": "http://home.microsoft.com/intl/web2000/error/unreachable.html",
       "pages/home.html": "http://home.microsoft.com/intl/web2000/home.html",
+      "pages/map.html": "http://museum.local/years/2000/map/",
       "pages/whats-new.html": "http://home.microsoft.com/intl/web2000/whats-new.html",
       "sites/altavista/about.html": "http://www.altavista.com/about.html",
       "sites/altavista/babelfish.html": "http://www.altavista.com/babelfish.html",

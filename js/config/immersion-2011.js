@@ -11,6 +11,7 @@
     year: "2011",
     storagePrefix: "itt11",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -78,6 +79,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Spotify US", href: "sites/spotify/index.html" },
       { label: "Timeline", href: "sites/facebook/timeline.html" },
       { label: "Google+", href: "sites/googleplus/index.html" },

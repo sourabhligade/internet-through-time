@@ -29,6 +29,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 

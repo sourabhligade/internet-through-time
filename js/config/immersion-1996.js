@@ -11,6 +11,7 @@
     year: "1996",
     storagePrefix: "itt96",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -61,6 +62,7 @@
       }
     ],
     footerNav: [
+      { label: "Flow map", href: "pages/map.html" },
       {
         label: "Starting Point",
         href: "pages/home.html"

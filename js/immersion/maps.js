@@ -8,8 +8,16 @@
 
   function stateKey() {
     return ITT.util && ITT.util.immersionStorageKey
-      ? ITT.util.immersionStorageKey("maps-state", "itt05")
-      : "itt05-maps-state";
+      ? ITT.util.immersionStorageKey("maps-state", "itt07")
+      : (function () {
+          var y =
+            (ITT._immersionYear && String(ITT._immersionYear)) ||
+            (typeof document !== "undefined" &&
+              document.documentElement &&
+              document.documentElement.getAttribute("data-itt-year")) ||
+            "2007";
+          return "itt" + String(y).slice(2) + "-maps-state";
+        })();
   }
 
   function loadState() {

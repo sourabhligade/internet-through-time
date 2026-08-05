@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>iOS 7 — flat redesign · September 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
+
 </head>
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -33,41 +33,19 @@
   <label style="display:block;margin:3px 0"><input type="checkbox" data-ios7-change="skeuo"> Leather/linen skeuomorphism gone</label>
   <label style="display:block;margin:3px 0"><input type="checkbox" data-ios7-change="still6"> Still on iOS 6 a while (honest)</label>
  </div>
- <p style="margin-top:14px">
-  <button type="button" class="ios7-btn" data-ios7-ack>I upgraded to iOS 7 (save)</button>
-  <span class="itt13-status" data-ios7-status style="display:inline;margin-left:8px"></span>
- </p>
  <p class="itt13-ban"> · not iOS 8 · not iPhone 6</p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-ios7";
-  var btn = document.querySelector("[data-ios7-ack]");
-  var st = document.querySelector("[data-ios7-status]");
-  try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
-  if (btn) btn.addEventListener("click", function () {
-    var changes = {};
-    var boxes = document.querySelectorAll("[data-ios7-change]");
-    for (var i = 0; i < boxes.length; i++) {
-      changes[boxes[i].getAttribute("data-ios7-change")] = !!boxes[i].checked;
-    }
-    try {
-      localStorage.setItem(KEY, JSON.stringify({
-        flat: true,
-        date: "2013-09-18",
-        changes: changes,
-        ts: Date.now()
-      }));
-    } catch (e2) {}
-    var msg = "iOS 7 upgrade · flat design · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "ios7" });
-      }
-    } catch (e3) {}
-  });
-});
-</script>
+
+<div style="margin:12px 0;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px">
+ <b>Multi-step REAL — iOS 7 flat redesign</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Flat UI / translucency redesign literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real iOS download / Apple ID</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="ios7" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-ios7</code></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

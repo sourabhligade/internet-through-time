@@ -11,6 +11,7 @@
     year: "2007",
     storagePrefix: "itt07",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -46,7 +47,9 @@
       docs: true,
       aws: true,
       reader: true,
-      iphone: true
+      iphone: true,
+      netflix: true,
+      year2007extras: true
     },
     navSubtitle: "XP · IE · iPhone · Gmail open · Street View · Facebook Platform",
     nav: [
@@ -61,6 +64,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "iPhone", href: "sites/iphone/index.html" },
       { label: "Gmail", href: "sites/gmail/index.html" },
       { label: "Street View", href: "sites/maps/streetview.html" },

@@ -10,6 +10,7 @@
     year: "2004",
     storagePrefix: "itt04",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -44,6 +45,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Gmail", href: "sites/gmail/index.html" },
       { label: "Flickr", href: "sites/flickr/index.html" },
       { label: "Web 2.0 Conf", href: "sites/web20conference/index.html" },

@@ -1159,3 +1159,5 @@ body[bgcolor="#ffffff"] form[data-google-search] input[type="submit"] {
   --itt04-ff: #ff6600;
 }
 
+/* Starting Point inherits period-xp-ui via 2002→2003 chain (chips · window · trails). */
+.itt-start-title { /* year accent already on body.year-chip */ }

@@ -1,7 +1,10 @@
 // @ts-check
 /**
  * 2005 real localStorage flows — no soft mocks.
- * Covers: boot (no race), YouTube, Maps, Reddit, Digg dig/bury/submit, bans.
+ * Covers: boot (no race), YouTube, Maps, Reddit, Digg dig/bury/submit, bans,
+ * podcasts, delicious, housingmaps, gmail, facebook, flickr, itunes, blogger,
+ * bloglines, technorati, shell paths.
+ * Companion mega trails: e2e/2005-mega-real-flows.spec.js · e2e/2005-trail-real-flows.spec.js
  * storagePrefix itt05 · digg year-aware itt05-digg-links.
  */
 const { test, expect } = require('@playwright/test');
@@ -597,5 +600,63 @@ test.describe('2005 real flows — year shell', () => {
     const fb = await contentFrame(page).locator('body').innerText();
     expect(fb).toMatch(/August 2005|high school|not.*open|News Feed/i);
     expect(fb.toLowerCase()).not.toMatch(/open to everyone in 2005/);
+  });
+
+  test('shell YouTube upload → list shows title (hard real)', async ({ page }) => {
+    await clearItt05(page, ['itt05-yt']);
+    const title = 'ShellYT ' + Date.now();
+    await goInFrame(page, 'sites/youtube/upload.html');
+    await waitForImmersion(page, '2005');
+    const frame = contentFrame(page);
+    await frame.locator('[data-yt-upload] [name="title"]').fill(title);
+    await frame.locator('[data-yt-upload] button[type="submit"]').first().click();
+    await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload|list|videos|saved/i, {
+      timeout: 10000,
+    });
+    expect(await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'))).toContain(title);
+    await goInFrame(page, 'sites/youtube/index.html');
+    await waitForImmersion(page, '2005');
+    await expect(contentFrame(page).locator('[data-yt-list]')).toContainText(title, {
+      timeout: 15000,
+    });
+  });
+
+  test('shell Amazon add-to-cart mutates itt05-amazon-cart', async ({ page }) => {
+    await clearItt05(page, ['itt05-amazon']);
+    await goInFrame(page, 'sites/amazon/index.html');
+    await waitForImmersion(page, '2005');
+    const frame = contentFrame(page);
+    await frame.locator('[data-add-cart]').first().click();
+    await expect(frame.locator('body')).toContainText(/Added|cart|Shopping/i, { timeout: 8000 });
+    const raw = await page.evaluate(() => localStorage.getItem('itt05-amazon-cart'));
+    expect(raw && raw.length > 4).toBeTruthy();
+  });
+
+  test('shell iTunes podcasts.html subscribe real', async ({ page }) => {
+    await clearItt05(page, ['itt05-pod']);
+    await goInFrame(page, 'sites/itunes/podcasts.html');
+    await waitForImmersion(page, '2005');
+    const frame = contentFrame(page);
+    await frame.locator('[data-pod-sub="Adam Curry Daily Source Code"]').click();
+    await expect(frame.locator('[data-pod-status]')).toContainText(/Subscribed|Adam Curry/i, {
+      timeout: 8000,
+    });
+    expect(await page.evaluate(() => localStorage.getItem('itt05-pod-subs'))).toContain(
+      'Adam Curry Daily Source Code'
+    );
+  });
+
+  test('shell HousingMaps filter real', async ({ page }) => {
+    await clearItt05(page, ['itt05-housing']);
+    await goInFrame(page, 'sites/housingmaps/index.html');
+    await waitForImmersion(page, '2005');
+    const frame = contentFrame(page);
+    await frame.locator('[name="city"]').selectOption('Austin');
+    await frame.locator('[name="kind"]').selectOption('rent');
+    await frame.locator('[data-hm-filter] button[type="submit"]').click();
+    await expect(frame.locator('[data-hm-status]')).toContainText(/Austin/i, { timeout: 8000 });
+    expect(await page.evaluate(() => localStorage.getItem('itt05-housingmaps') || '')).toMatch(
+      /Austin/
+    );
   });
 });

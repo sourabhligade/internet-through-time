@@ -170,16 +170,21 @@
         if (ev.stopPropagation) ev.stopPropagation();
         var titleInput = form.querySelector('[name="title"]');
         var descInput = form.querySelector('[name="desc"]');
-        var title = (titleInput && titleInput.value) || "Untitled";
+        var title = (titleInput && titleInput.value) || "";
         var desc = (descInput && descInput.value) || "";
-        title = String(title).replace(/^\s+|\s+$/g, "") || "Untitled";
+        title = String(title).replace(/^\s+|\s+$/g, "");
+        var st = doc.querySelector("[data-yt-upload-status]");
+        /* REAL gate: empty title must not invent "Untitled" mock success */
+        if (!title) {
+          if (st) st.innerHTML = "Enter a title to upload (no blank clips).";
+          return false;
+        }
         var cur = load() || seed();
         cur.unshift({ title: title, desc: desc, id: "u" + Date.now(), ts: Date.now() });
         save(cur.slice(0, 40));
         views = loadViews();
         if (!views[title]) views[title] = 1;
         saveViews(views);
-        var st = doc.querySelector("[data-yt-upload-status]");
         if (st) {
           var shareUrl = "http://www.youtube.com/watch?v=" + encodeURIComponent(title);
           st.innerHTML =

@@ -1,6 +1,7 @@
 # 2005 Research Dossier — The Internet Through Time
 
 **Status:** **`years/2005/` live** · hub **unlocked** · YouTube · Maps · Reddit · Digg · **research gather 2026-07-30** · **fresh deep web re-pass 2026-07-31**  
+**Master bible (research · goals · phases · steps · ROI · 2026-08-05):** [`2005-MASTER-BIBLE-RESEARCH-GOALS-PHASES-ROI.md`](2005-MASTER-BIBLE-RESEARCH-GOALS-PHASES-ROI.md)  
 **Ship note:** [`docs/2005-MUSEUM-GRADE.md`](2005-MUSEUM-GRADE.md)  
 **Fresh deep research (2026-07-31 web re-visit · minute timeline · full source index):** [`2005-DEEP-RESEARCH-FRESH-2026-07-31.md`](2005-DEEP-RESEARCH-FRESH-2026-07-31.md)  
 **Goals · phases · how-to · period user flows (canonical playbook):** [`2005-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2005-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md)  

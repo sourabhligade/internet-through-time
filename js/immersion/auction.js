@@ -18,6 +18,7 @@
       var showFlash = api.showFlash;
       var actionFeedback = api.actionFeedback || showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
 
       function initAuction() {
         var root = document.querySelector("[data-auction-id]");
@@ -91,7 +92,7 @@
             amount: high.amount,
             bidder: high.bidder
           });
-          markTourProgress();
+          markTourUsed();
           form.reset();
           return false;
         }

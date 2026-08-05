@@ -95,4 +95,49 @@ test.describe('2000 hard flows', () => {
     expect(t).toMatch(/RIAA|copyright|2000|injunction/i);
     expect(t).not.toMatch(/Museum:\s/i);
   });
+
+  test('Amazon cart page lists items after add (itt00 isolation)', async ({ page }) => {
+    await page.evaluate(() => {
+      try {
+        Object.keys(localStorage)
+          .filter((k) => k.indexOf('itt00') === 0 || k.indexOf('itt99') === 0)
+          .forEach((k) => localStorage.removeItem(k));
+      } catch (e) {
+        /* */
+      }
+    });
+    await goInFrame(page, 'sites/amazon/music.html');
+    await waitForImmersion(page, '2000');
+    let frame = contentFrame(page);
+    await frame.locator('[data-add-cart]').first().click({ force: true });
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt00-amazon-cart')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt99-amazon-cart'))).toBeNull();
+    await goInFrame(page, 'sites/amazon/cart.html');
+    await waitForImmersion(page, '2000');
+    frame = contentFrame(page);
+    await expect(frame.locator('[data-cart-list]').first()).toContainText(/\$|item|Music|CD|Remove|OK Computer|Radiohead/i, {
+      timeout: 10000,
+    });
+  });
+
+  test('Google search form submits with q', async ({ page }) => {
+    await goInFrame(page, 'sites/google/index.html');
+    await waitForImmersion(page, '2000');
+    const frame = contentFrame(page);
+    const q = frame.locator('input[name="q"], input[type="text"]').first();
+    await expect(q).toBeVisible({ timeout: 10000 });
+    await q.fill('amazon');
+    const form = frame.locator('form[data-google-search], form').first();
+    await form.evaluate((f) => {
+      /** @type {HTMLFormElement} */ (f).submit();
+    });
+    await page.waitForTimeout(500);
+    const src = (await page.locator('#content').getAttribute('src')) || '';
+    const body = await contentFrame(page).locator('body').innerText();
+    expect(src + body).toMatch(/amazon|search|result|Google/i);
+  });
 });

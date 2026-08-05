@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Year → next-year handoff flows (1994→1995 … 2011→2012).
+ * Year → next-year handoff flows (1994→1995 … 2012→2013).
  *
  * For each consecutive pair:
  *  1. Boot year N · signature product interaction · year-native storage key
@@ -161,9 +161,15 @@ const SIGNATURE = {
   },
   '2007': {
     path: 'sites/iphone/index.html',
-    keySuffix: '',
+    keySuffix: 'iphone-history',
     body: /iPhone|Apple|Safari/i,
-    act: async () => {},
+    act: async (page) => {
+      const frame = contentFrame(page);
+      const form = frame.locator('[data-iphone-browse]');
+      await expect(form).toBeVisible({ timeout: 20000 });
+      await form.locator('[name="url"]').fill('http://maps.google.com/handoff-2007');
+      await form.locator('button[type="submit"]').click();
+    },
   },
   '2008': {
     path: 'sites/appstore/index.html',
@@ -219,6 +225,17 @@ const SIGNATURE = {
       await install.click();
     },
   },
+  '2013': {
+    path: 'sites/whatsapp/index.html',
+    keySuffix: 'wa-installed',
+    body: /WhatsApp|verify|install/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-wa13-phone]').fill('5559876543');
+      await frame.locator('[data-wa13-verify]').click();
+      await frame.locator('[data-wa13-install]').click();
+    },
+  },
 };
 
 const YEARS = [
@@ -241,6 +258,7 @@ const YEARS = [
   '2010',
   '2011',
   '2012',
+  '2013',
 ];
 
 /**
@@ -349,7 +367,7 @@ test.describe('year handoff N → N+1', () => {
   }
 });
 
-test.describe('year chain: walk 1994 → 2012 via hub cards', () => {
+test.describe('year chain: walk 1994 → 2013 via hub cards', () => {
   test('hub cards open each year shell in order (smoke chain)', async ({ page }) => {
     await page.goto('/');
     for (const year of YEARS) {

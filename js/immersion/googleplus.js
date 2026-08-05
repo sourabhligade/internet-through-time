@@ -78,8 +78,8 @@
         nameIn.value = "";
         renderCircles();
         setStatus("Circle <b>" + esc(n) + "</b> saved.");
-        if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
-          ITT._immersionApi.markTourProgress();
+        if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
+          (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
         }
       });
     }
@@ -136,8 +136,8 @@
             flash: true
           });
         }
-        if (ITT._immersionApi && ITT._immersionApi.markTourProgress) {
-          ITT._immersionApi.markTourProgress();
+        if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
+          (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
         }
       });
     }

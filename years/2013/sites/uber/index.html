@@ -27,39 +27,18 @@
  <div data-uber-status id="uber-st" style="font-size:12px;color:#9f9;margin-top:8px"></div>
  <p style="font-size:11px;color:#666"> · SF-class expansion story · not mass global 2020s Uber</p>
 </div>
-<script>
-(function(){
-  var KEY="itt13-uber";
-  function boot(){
-    var st=document.querySelector("[data-uber-status]")||document.getElementById("uber-st");
-    function save(kind){
-      var payload={requested:true,city:"San Francisco",kind:kind,cheaper:kind==="uberx",ts:Date.now()};
-      try{localStorage.setItem(KEY,JSON.stringify(payload));}catch(e){}
-      var msg=kind==="uberx"
-        ?"UberX request noted · ~35% cheaper class · "+KEY
-        :"Black car request noted · premium · "+KEY;
-      if(st) st.textContent=msg;
-      try{
-        if(window.ITT&&ITT._immersionApi&&ITT._immersionApi.actionFeedback){
-          ITT._immersionApi.actionFeedback(msg,{doc:document,status:st,kind:"uber"});
-        }
-      }catch(eFb){}
-    }
-    var b=document.getElementById("uber-black");
-    var x=document.getElementById("uber-x");
-    if(b)b.addEventListener("click",function(){save("black");});
-    if(x)x.addEventListener("click",function(){save("uberx");});
-    try{
-      var raw=localStorage.getItem(KEY);
-      if(raw&&st){
-        var o=JSON.parse(raw);
-        st.textContent="Last: "+(o.kind||"?")+" · "+KEY;
-      }
-    }catch(e2){}
-  }
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
-})();
-</script>
+
+
+<div style="margin:12px;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px" data-itt-no-mock>
+ <b>Multi-step REAL — Uber residual</b>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Black-car / SF residual literacy</label>
+  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real ride / payment</label>
+ <p style="margin-top:8px">
+  <button type="button" data-itt-real-save data-storage-key="uber" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
+  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
+ </p>
+ <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt13-uber</code></p>
+</div>
 <script src="../../../../js/immersion-2013.js"></script>
 </body>
 </html>

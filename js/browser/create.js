@@ -574,8 +574,16 @@
         }
         var s = doc.createElement("script");
         s.setAttribute("data-itt-immersion", "1");
-        var root = yearRoot();
-        var siteRoot = root.replace(new RegExp("years\\/" + YEAR + "\\/?$"), "");
+        /* yearRoot lives on BrowserNavigate — bare yearRoot() was undefined (latent inject bug) */
+        var root = (Nav && Nav.yearRoot) ? Nav.yearRoot(YEAR) : (U.yearRootPath ? U.yearRootPath(YEAR) : ("/years/" + YEAR + "/"));
+        var siteRoot = String(root).replace(new RegExp("years\\/" + YEAR + "\\/?$"), "");
+        if (!siteRoot || siteRoot === root) {
+          try {
+            siteRoot = String(root).replace(new RegExp("years\\/" + YEAR + "\\/?.*$"), "");
+          } catch (eRoot) {
+            siteRoot = "/";
+          }
+        }
         s.src = siteRoot + IMMERSION_SCRIPT;
         (doc.body || doc.documentElement).appendChild(s);
       } catch (e) { /* */ }
@@ -889,7 +897,13 @@
      * ============================================================ */
     function openDialog(id) {
       closeMenus();
-      if (backdrop) backdrop.classList.remove("hidden");
+      if (backdrop) {
+        backdrop.classList.remove("hidden");
+        try {
+          backdrop.style.display = "";
+          backdrop.style.pointerEvents = "";
+        } catch (eOp) { /* */ }
+      }
       var el = document.getElementById(id);
       if (el) {
         el.classList.remove("hidden");
@@ -920,13 +934,30 @@
     function closeAllDialogs() {
       var dialogs = document.querySelectorAll(".dialog");
       for (var i = 0; i < dialogs.length; i++) dialogs[i].classList.add("hidden");
-      if (backdrop) backdrop.classList.add("hidden");
+      if (backdrop) {
+        backdrop.classList.add("hidden");
+        try {
+          backdrop.style.display = "none";
+          backdrop.style.pointerEvents = "none";
+        } catch (eBd) { /* */ }
+      }
     }
 
     /** Drop orphan backdrop (no open dialog) — was blocking dirbar/buttons */
     function ensureBackdropSane() {
       try {
-        if (backdrop && !anyDialogOpen()) backdrop.classList.add("hidden");
+        if (backdrop && !anyDialogOpen()) {
+          backdrop.classList.add("hidden");
+          try {
+            backdrop.style.display = "none";
+            backdrop.style.pointerEvents = "none";
+          } catch (eSt) { /* */ }
+        } else if (backdrop && anyDialogOpen()) {
+          try {
+            backdrop.style.display = "";
+            backdrop.style.pointerEvents = "";
+          } catch (eSt2) { /* */ }
+        }
       } catch (eBg) { /* */ }
     }
 
@@ -1697,6 +1728,14 @@
       dirBtns[d].addEventListener("click", function (ev) {
         try {
           closeAllDialogs();
+          ensureBackdropSane();
+          if (backdrop) {
+            backdrop.classList.add("hidden");
+            try {
+              backdrop.style.display = "none";
+              backdrop.style.pointerEvents = "none";
+            } catch (ePe) { /* */ }
+          }
         } catch (eDir) { /* */ }
         var go = ev.currentTarget.getAttribute("data-go");
         if (go) navigate(go);
@@ -1819,7 +1858,7 @@
         "2010": "iPad · Instagram · Foursquare",
         "2011": "Spotify · Timeline · Siri",
         "2012": "Instagram · FB IPO · Pinterest",
-        "2013": "Vine · IG Video · Stories · iOS 7"
+        "2013": "Vine · IG Video · Stories · iOS 7",
       };
       var locTips = {
         "1994": "yahoo or whitehouse",
@@ -1841,7 +1880,7 @@
         "2010": "instagram or ipad",
         "2011": "spotify or siri",
         "2012": "instagram or pinterest",
-        "2013": "vine or snowden"
+        "2013": "vine or snowden",
       };
       var dirHint = dirExamples[YEAR] || "directory buttons on the bar";
       var locTip = locTips[YEAR] || "a site name from this year";

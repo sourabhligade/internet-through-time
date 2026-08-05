@@ -1,8 +1,10 @@
 # 2007 — Museum-grade status
 
-**Status:** **Museum-ready** · was: **Densify implement landed** (2026-07-31) · hub **1994–2007**  
+**Status:** **Museum-ready** · was: **Densify implement landed** (2026-07-31) · hub **1994–2007** · content **~98%**  
 
-**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
+**Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).  
+**Perfect residual map (2026-08-06):** [`2007-MUSEUM-PERFECT-RESEARCH-AND-BUILD-MAP.md`](2007-MUSEUM-PERFECT-RESEARCH-AND-BUILD-MAP.md) — full disk map · web sources · CAPTURE C07 · waves 1–5.  
+**Implement bible (2026-08-06):** [`2007-MUSEUM-GRADE-IMPLEMENT-BIBLE.md`](2007-MUSEUM-GRADE-IMPLEMENT-BIBLE.md) — phases 0–25 · ROI · REAL flow contracts · minute how-to · templates · e2e · copy kits (**no mocks**).  
 **Disk:** `years/2007/` · `itt07` · iPhone history/presets · Gmail open copy · Street View turns · Platform remove · Beacon · trails e2e  
 **Shell:** XP + IE · Vista retail optional · iPhone product room (no App Store)  
 **Deep research:** [`2007-DEEP-RESEARCH-FRESH-2026-07-31.md`](2007-DEEP-RESEARCH-FRESH-2026-07-31.md) · dossier [`2007-RESEARCH.md`](2007-RESEARCH.md)  
@@ -76,9 +78,31 @@ Chrome · App Store · Android mass phones · modern iOS/X · Gmail invite-only 
 | Wikipedia footer | Mid-decade mass encyclopedia (not “2003 densify”) |
 | KaZaA | Endgame residual (not peak-2003 only) |
 
-## Residual optional
+## Museum-perfect implement pass (2026-08-06)
 
-FriendFeed / OpenSocial rooms · WA pixel crops (iPhone product still / pegman) · deeper Tumblr dash · remaining &lt;1.5k thin stubs
+| Item | Status |
+|------|--------|
+| `year-2007-extras.js` generic REAL multi-check | **Done** |
+| Beacon multipage REAL `itt07-beacon-ack` | **Done** `sites/facebook/beacon.html` |
+| iPhone specs REAL `itt07-iphone-specs-ack` | **Done** `sites/iphone/specs.html` |
+| Netflix empty-blocked queue + Watch Now literacy | **Done** · `watchnow.html` · `itt07-netflix-watchnow` |
+| FriendFeed REAL ≥2 sources | **Done** `itt07-friendfeed-sources` |
+| OpenSocial REAL literacy | **Done** `itt07-opensocial-ack` |
+| Tumblr publish REAL | **Done** `itt07-tumblr-posts` |
+| Kindle REAL literacy | **Done** `itt07-kindle-ack` |
+| Maps about + Twitter profile densify | **Done** |
+| maps.js year-aware maps-state prefix | **Done** |
+| Home trails wired to new rooms | **Done** |
+| e2e densify museum-perfect suite | **Done** · full 2007 pack **81 passed** (2026-08-06 improve) |
+| Flow S Beacon REAL + isolation | **Done** in `2007-flows` |
+| Trail D includes Beacon · Trail F FriendFeed→OpenSocial | **Done** |
+| flow-maps 2007 full tree (Beacon · Specs · FF · OS · Netflix · Tumblr · Kindle) | **Done** |
+| Handoff 2007 writes `itt07-iphone-history` | **Done** (2006→2007 · 2007→2008 green) |
+| Digg/Docs/Reader about densify · digg storage label | **Done** |
+
+## Residual optional (L4 forever)
+
+WA pixel crops (iPhone product still / pegman / Twitter sparse) — CAPTURE C07-* · never invent · does not block A–F.
 
 ## Gates
 
@@ -87,4 +111,5 @@ python3 scripts/test-authenticity.py
 python3 scripts/smoke-production.py
 npx playwright test e2e/2007-*.spec.js e2e/hub-years.spec.js --workers=1
 # includes: mvp · real-flows · densify · trail · flows A–T
+# 2026-08-06: 79 passed (mvp+densify+flows+real+trail)
 ```

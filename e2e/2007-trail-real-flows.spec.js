@@ -91,9 +91,9 @@ test.describe('2007 trail C — Maps on the street', () => {
 });
 
 test.describe('2007 trail D — Platforms & status', () => {
-  test('FB Platform add+remove → Twitter compose', async ({ page }) => {
+  test('FB Platform add+remove → Beacon REAL → Twitter compose', async ({ page }) => {
     await page.goto('/years/2007/sites/facebook/platform.html');
-    await clearKeys(page, ['itt07-fb-apps', 'itt07-tweets']);
+    await clearKeys(page, ['itt07-fb-apps', 'itt07-tweets', 'itt07-beacon-ack']);
     await page.reload();
     await page.waitForSelector('[data-fb-app-add]', { timeout: 20000 });
     await page.selectOption('[name="app"]', { label: 'SuperPoke!' }).catch(async () => {
@@ -111,6 +111,18 @@ test.describe('2007 trail D — Platforms & status', () => {
       await page.waitForTimeout(200);
     }
 
+    // Beacon multipage REAL (home trail Platforms & status)
+    await page.goto('/years/2007/sites/facebook/beacon.html');
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+
     await page.goto('/years/2007/sites/twitter/index.html');
     await page.waitForSelector('[data-twitter-compose]', { timeout: 20000 });
     const msg = 'sxsw trail ' + Date.now();
@@ -123,6 +135,34 @@ test.describe('2007 trail D — Platforms & status', () => {
     await page.goto('/years/2007/sites/twitter/profile.html');
     await page.waitForSelector('[data-twitter-timeline]', { timeout: 15000 });
     await expect(page.locator('[data-twitter-timeline]')).toContainText(msg);
+  });
+});
+
+test.describe('2007 trail F — Culture edges REAL', () => {
+  test('FriendFeed sources → OpenSocial literacy', async ({ page }) => {
+    await page.goto('/years/2007/sites/friendfeed/index.html');
+    await clearKeys(page, ['itt07-friendfeed-sources', 'itt07-opensocial-ack']);
+    await page.reload();
+    await page.waitForSelector('[data-ff-source]', { timeout: 20000 });
+    await page.locator('[data-ff-source="twitter"]').check();
+    await page.locator('[data-ff-source="digg"]').check();
+    await page.locator('[data-ff-save-form] button[type="submit"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-friendfeed-sources') || ''), {
+        timeout: 10000,
+      })
+      .toMatch(/twitter|digg/i);
+
+    await page.goto('/years/2007/sites/opensocial/index.html');
+    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-opensocial-ack') || ''), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
   });
 });
 

@@ -77,3 +77,7 @@ NOTES.local.md
 
 # Wayback CDX probe leftovers
 cdx_*.json
+
+# Local generate output / scratch
+dev/
+

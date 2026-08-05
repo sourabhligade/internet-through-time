@@ -29,11 +29,23 @@ Digg · MySpace · Flickr · Docs · AWS · Reader · Reddit · Maps base · Net
 
 ## Residual R-list
 
-| ID | Item |
-|----|------|
-| R1 | Gmail invite-era compose/inbox copy |
-| R2 | iPhone dedicated product assets (uses apple/ipod recon) |
-| R3 | Trail + densify e2e files missing |
-| R4 | Beacon honesty missing on FB about |
-| R5 | Continuity about pages 2006 paste |
-| R6 | Optional Tumblr / Kindle / Hulu / Netflix Watch Now |
+| ID | Item | Status 2026-08-06 |
+|----|------|-------------------|
+| R1 | Gmail invite-era compose/inbox copy | **Closed** — open-default |
+| R2 | iPhone dedicated product assets | **[~]** L4 CAPTURE C07-01 |
+| R3 | Trail + densify e2e files missing | **Closed** |
+| R4 | Beacon honesty missing on FB about | **Closed** — multipage REAL `beacon.html` |
+| R5 | Continuity about pages 2006 paste | **Partial** — signature scrubbed |
+| R6 | Tumblr / Kindle / Netflix Watch Now | **Closed REAL** — FriendFeed + OpenSocial too |
+
+## New REAL keys (museum-perfect)
+
+| Key | Room |
+|-----|------|
+| `itt07-beacon-ack` | facebook/beacon.html |
+| `itt07-iphone-specs-ack` | iphone/specs.html |
+| `itt07-netflix-watchnow` | netflix/watchnow.html |
+| `itt07-friendfeed-sources` | friendfeed/index.html |
+| `itt07-opensocial-ack` | opensocial/index.html |
+| `itt07-tumblr-posts` | tumblr/index.html |
+| `itt07-kindle-ack` | amazon/kindle.html |

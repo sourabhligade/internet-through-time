@@ -10,6 +10,7 @@
     year: "2005",
     storagePrefix: "itt05",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -55,6 +56,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "YouTube", href: "sites/youtube/index.html" },
       { label: "Maps", href: "sites/maps/index.html" },
       { label: "HousingMaps", href: "sites/housingmaps/index.html" },
