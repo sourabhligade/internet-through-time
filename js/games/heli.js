@@ -51,6 +51,11 @@
       window.ITTGames.addScore("heli", sc, "Pilot");
       window.ITTGames.renderBoard(boardEl, "heli");
     }
+    try {
+      if (typeof window.ITTYearGameOnScore === "function") {
+        window.ITTYearGameOnScore("heli", sc);
+      }
+    } catch (eY) { /* */ }
   }
 
   function tick() {
@@ -141,16 +146,25 @@
   canvas.addEventListener("mouseleave", onUp);
   canvas.addEventListener("touchstart", onDown, { passive: false });
   canvas.addEventListener("touchend", onUp);
-  document.addEventListener("keydown", function (e) {
+  function keyDown(e) {
     if (e.code === "Space" || e.key === " ") {
-      e.preventDefault();
+      if (e.preventDefault) e.preventDefault();
       if (!running) reset();
       hold = true;
+      return true;
     }
-  });
-  document.addEventListener("keyup", function (e) {
+    return false;
+  }
+  function keyUp(e) {
     if (e.code === "Space" || e.key === " ") hold = false;
-  });
+  }
+  document.addEventListener("keydown", keyDown, true);
+  document.addEventListener("keyup", keyUp, true);
+  window.addEventListener("keydown", keyDown, true);
+  window.addEventListener("keyup", keyUp, true);
+  if (window.ITT && ITT.YearGame && ITT.YearGame.focusHost) {
+    ITT.YearGame.focusHost("[data-year-game]");
+  }
 
   var startBtn = document.getElementById("play-start");
   if (startBtn) {

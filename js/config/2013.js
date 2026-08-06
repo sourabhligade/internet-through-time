@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/2013/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2013/playable/game.html",
       "sites/netflix/qwikster.html": "http://www.qwikster.com/",
       "sites/netflix/pricing-2011.html": "http://www.netflix.com/pricing",
       "sites/iphone/icloud.html": "http://www.apple.com/icloud/",

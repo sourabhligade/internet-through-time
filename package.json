@@ -15,6 +15,7 @@
     "test:e2e:real-gates": "playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1",
     "check": "python3 scripts/smoke-production.py && python3 scripts/audit-internal-links.py && python3 scripts/test-authenticity.py && python3 scripts/test-pipeline.py",
     "check:years": "python3 scripts/check-all-years.py",
+    "inspect:ui": "node scripts/ui-inspect-all-years.mjs",
     "check:years:http": "python3 scripts/check-all-years.py --http http://127.0.0.1:8080",
     "test:e2e:years": "playwright test e2e/all-years-smoke.spec.js --workers=1",
     "test:e2e:2006": "playwright test e2e/2006-mvp.spec.js e2e/2006-real-flows.spec.js e2e/2006-densify.spec.js e2e/2006-flows.spec.js e2e/2006-trail-real-flows.spec.js --workers=1",
@@ -46,7 +47,9 @@
     "perf": "python3 scripts/measure-perf.py",
     "atlas:flow": "python3 scripts/generate-flow-atlas.py",
     "github:ready": "bash scripts/github-ready.sh",
-    "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-real-flows.spec.js e2e/2014-flows.spec.js e2e/2014-shell-honesty.spec.js --workers=1"
+    "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-real-flows.spec.js e2e/2014-flows.spec.js e2e/2014-shell-honesty.spec.js --workers=1",
+    "test:e2e:2017": "playwright test e2e/2017-real-flows.spec.js --workers=1",
+    "test:e2e:progress": "playwright test e2e/museum-progress.spec.js --workers=1"
   },
   "engines": {
     "node": ">=18"

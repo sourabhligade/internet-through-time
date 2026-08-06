@@ -165,6 +165,18 @@
           feedback("Saved REAL · " + full, st);
           markUsed(btn.getAttribute("data-tour-id") || undefined);
           try {
+            var MP = ITT.MuseumProgress;
+            if (MP && typeof MP.stamp === "function") {
+              MP.stamp(yearOf(), String(suffix || "real"), {
+                label: String(suffix || "real"),
+                href: location.pathname || ""
+              });
+              if (typeof MP.injectTrailBar === "function") MP.injectTrailBar(document);
+            }
+          } catch (ePass) {
+            /* */
+          }
+          try {
             btn.setAttribute("data-itt-real-done", "1");
           } catch (eD) { /* */ }
         });

@@ -1949,6 +1949,18 @@
       }
       // Coach after chrome is ready
       window.setTimeout(maybeFirstRunCoach, 600);
+      /* First-night trail: open signature room for this year when active */
+      window.setTimeout(function () {
+        try {
+          if (ITT.MuseumProgress && typeof ITT.MuseumProgress.maybeOpenTrailRoom === "function") {
+            ITT.MuseumProgress.maybeOpenTrailRoom(function (path) {
+              navigate(path, { instant: true });
+            });
+          }
+        } catch (eTrail) {
+          /* */
+        }
+      }, 200);
     }
 
     function hideOverlay() {

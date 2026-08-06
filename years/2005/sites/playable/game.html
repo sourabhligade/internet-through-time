@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2005">
+<head>
+<meta charset="utf-8">
+<title>HoverChop — 2005 year game</title>
+<link rel="stylesheet" href="../../../../css/period-2005-lite.css">
+<link rel="stylesheet" href="../../../../css/year-game-ui.css">
+<link rel="stylesheet" href="../../../../css/games.css">
+<style>
+.itt-year-game { max-width: 520px; margin: 0 auto; padding: 12px; font-family: Tahoma, Arial, sans-serif; font-size: 13px; }
+.itt-year-game h1 { font-size: 20px; color: #0a246a; margin: 0 0 6px; }
+.itt-year-game .honesty { font-size: 11px; color: #444; background: #ffc; border: 1px solid #cc0; padding: 6px 8px; margin: 8px 0; }
+.play-stage canvas { display: block; max-width: 100%; border: 2px solid #333; background: #0a1628; cursor: pointer; }
+</style>
+</head>
+<body class="yg-body yg-year-2005" bgcolor="#f0f0f0">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="itt-year-game yg-shell" data-year-game data-year="2005" data-game-id="heli">
+  <h1>HoverChop · 2005</h1>
+  <p style="margin:0 0 8px">Museum original · helicopter-genre (hold mouse or Space to climb). Mid-2000s portal casual class.</p>
+  <p class="honesty yg-honesty">Inspired by mid-2000s Helicopter Flash games · <b>not</b> a commercial title · scores stay in this browser (<code>itt05-game-heli</code>).</p>
+  <div class="play-hud" style="margin:8px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+    <button type="button" id="play-start">Start / Retry</button>
+    <span>Score: <b id="play-score" data-game-score>0</b></span>
+    <span>Best: <b data-game-best>0</b></span>
+  </div>
+  <p id="play-status" class="yg-status" data-itt-action-status style="font-size:12px;color:#333" class="yg-status">Click the game or Start, then hold to climb</p>
+  <div class="play-stage">
+    <canvas id="game-canvas" width="480" height="320" data-game="heli"></canvas>
+  </div>
+  <div class="scoreboard" id="score-board" style="margin-top:10px;font-size:12px"></div>
+  <p style="font-size:11px;margin-top:12px">
+    <a href="index.html">← Playables</a> ·
+    <a href="../../pages/home.html">Starting Point 2005</a> ·
+    <a href="../../../../games/play/heli.html">Games wing copy</a>
+  </p>
+</div>
+<script src="../../../../js/games/scores.js"></script>
+<script src="../../../../js/games/year-game-boot.js"></script>
+<script>
+(function () {
+  if (window.ITT && ITT.YearGame) {
+    var b = document.querySelector("[data-game-best]");
+    if (b) b.textContent = String(ITT.YearGame.loadBest("heli", "2005"));
+  }
+})();
+</script>
+<script src="../../../../js/games/heli.js"></script>
+<script src="../../../../js/immersion-2005.js" defer></script>
+</body>
+</html>

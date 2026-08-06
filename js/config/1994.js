@@ -45,6 +45,8 @@
       connectBusyChance: 0.16
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1994/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1994/playable/game.html",
       "sites/exploratorium/perception.html": "http://www.exploratorium.edu/perception/",
       "sites/exploratorium/about.html": "http://www.exploratorium.edu/about/",
       "sites/weblouvre/collections.html": "http://mistral.culture.fr/louvre/collections/",

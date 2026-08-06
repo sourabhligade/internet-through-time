@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1999/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1999/playable/game.html",
       "sites/msngaming/about.html": "http://www.zone.com/about.html",
       "sites/matrix/story.html": "http://www.whatisthematrix.com/story.html",
       "sites/mynetscape/channels.html": "http://my.netscape.com/channels.html",

@@ -1,0 +1,46 @@
+2016 deep research visit log — 2026-08-06
+==========================================
+Purpose: Multi-source harvest for museum year 2016 research freeze.
+No years/2016 scaffold. Planned prefix itt16. Clone from years/2015/.
+
+SCALE
+- Live Stats June 2016: 1,045,534,808 (+21%)
+- 1B restabilized Mar 2016; ~900M Jan → ~1.7B Dec hostnames class
+- Users ~3.4B ITU class (Live Stats June users often blank)
+
+P0 SPINE
+- Instagram Stories Aug 2 2016 (TC, BBC)
+- Pokémon GO Jul 6 2016 US/AU/NZ (Wikipedia, TC)
+- Facebook Reactions Feb 24 2016 (FB Newsroom) Love Haha Wow Sad Angry + Like
+- iPhone 7 Sep 7 2016 no 3.5mm jack
+- AirPods Dec 13 2016 order $159 (Apple Newsroom)
+- Vine Oct 27 2016 app discontinue announce; offline Jan 2017 class
+- WhatsApp E2E default Apr 5 2016 (WhatsApp blog, EFF)
+
+P1
+- Messenger bots F8 Apr 12 2016
+- Oculus Rift CV1 Mar 28 2016 ~$599
+- MS × LinkedIn Jun 13 2016 $26.2B
+- Win10 free upgrade ends Jul 29 2016
+- Google Allo Sep 21 2016
+- Musical.ly residual (not TikTok brand)
+
+HARD BANS
+- Meta branding 2021
+- TikTok mass West brand as 2016 default
+- Face ID / iPhone X 2017
+- Official Pokémon sprites
+- Reels
+- Chromium Edge as 2016 product
+
+OUTPUT DOCS
+- docs/2016-READ-FIRST.md
+- docs/2016-RESEARCH.md
+- docs/2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md
+- docs/2016-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md
+- docs/2016-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md
+- docs/2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+- docs/2016-IMPLEMENTATION-PHASES-STEP-BY-STEP.md
+- docs/2016-MUSEUM-GRADE.md
+- docs/references/2016/CAPTURE-LOG.md
+- docs/references/2016/ARTIFACTS-MAP.md

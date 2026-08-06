@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1998/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1998/playable/game.html",
       "sites/hotmail/compose.html": "http://www.hotmail.com/compose",
       "sites/hotmail/read.html": "http://www.hotmail.com/read",
       "sites/larrypage/research.html": "http://www-cad.stanford.edu/~page/research.html",

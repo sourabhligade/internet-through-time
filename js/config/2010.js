@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/2010/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2010/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://museum.local/pages/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",

@@ -243,7 +243,7 @@
         if (!s.id || !s.match) continue;
         if (path.indexOf(s.match) === -1) continue;
         var cur = done[s.id];
-        if (tour === true || tourStepUsed(cur)) continue; /* already fully used */
+        if (cur === true || tourStepUsed(cur)) continue; /* already fully used */
         if (!cur) {
           done[s.id] = { visited: true };
           changed = true;
@@ -265,8 +265,10 @@
       if (!steps.length && !stepId) return;
       var done = getTourDone();
       var changed = false;
+      var stampedIds = [];
       function setUsed(id) {
         if (!id) return;
+        stampedIds.push(String(id));
         var prev = done[id];
         if (prev === true || tourStepUsed(prev)) return;
         done[id] = { visited: true, used: true, ts: Date.now() };
@@ -282,8 +284,32 @@
           if (!st.id || !st.match) continue;
           if (path.indexOf(st.match) !== -1) setUsed(st.id);
         }
+        /* REAL action on a room with no matching tour id still stamps passport */
+        if (!stampedIds.length) {
+          var rough =
+            path.replace(/.*\/sites\//, "").replace(/\/[^/]*$/, "").replace(/\//g, "-") || "real";
+          stampedIds.push(rough.slice(0, 32));
+        }
       }
       if (changed) setTourDone(done);
+      /* Passport stamps (hub passport book) — always on REAL product action */
+      try {
+        var MP =
+          (typeof window !== "undefined" && window.ITT && window.ITT.MuseumProgress) ||
+          ITT.MuseumProgress;
+        if (MP && typeof MP.stamp === "function") {
+          var si;
+          for (si = 0; si < stampedIds.length; si++) {
+            MP.stamp(YEAR, stampedIds[si], {
+              label: stampedIds[si],
+              href: (location.pathname || "").split("/").slice(-2).join("/")
+            });
+          }
+          if (typeof MP.injectTrailBar === "function") MP.injectTrailBar(document);
+        }
+      } catch (ePass) {
+        /* */
+      }
     }
 
     function renderTour(root) {
@@ -463,38 +489,92 @@
           var item = config.nav[i];
           var on = active(item.match || item.href);
           var homeCls = isHomeNavItem(item) ? " itt-nav-start" : "";
+          if (i > 0) {
+            links.push('<span class="itt-nav-sep" aria-hidden="true">·</span>');
+          }
           /* Site directory strip — wayfinding only, not a museum badge */
           links.push(
-            '<a class="itt-nav' + homeCls + on + '" href="' + R(item.href) + '">' +
-              '<font color="' + (on || homeCls ? "#FFFFFF" : "#FFFF99") + '">' +
+            '<a class="itt-nav' +
+              homeCls +
+              on +
+              '" href="' +
+              R(item.href) +
+              '">' +
+              '<font color="' +
+              (on || homeCls ? "#FFFFFF" : "#FFFF99") +
+              '">' +
               (homeCls ? "<b>" + escapeHtml(item.label) + "</b>" : escapeHtml(item.label)) +
               "</font></a>"
           );
         }
         var bar = document.createElement("div");
         bar.id = "itt-exhibit-nav";
-        /* Right side: ALWAYS a clear path back to Starting Point (subtitle is secondary) */
-        var right =
-          '<a class="itt-nav-home" href="' + homeHref + '" title="Back to this year\'s Starting Point">' +
-          '<font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b>← Starting Point</b></font></a>';
+        /* Home alone on the right; subtitle on its own row (prevents nowrap overflow) */
+        var homeLink =
+          '<a class="itt-nav-home" href="' +
+          homeHref +
+          '" title="Back to this year\'s Starting Point">' +
+          '<font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b>← Start</b></font></a>';
+        var subLine = "";
         if (config.navSubtitle) {
-          right +=
-            ' <font color="#99CCFF" face="Arial, Helvetica, sans-serif" size="1"> · ' +
+          subLine =
+            '<div class="itt-nav-sub" style="font:10px/1.3 Arial,Helvetica,sans-serif;color:#99CCFF;' +
+            'padding:0 6px 4px;background:#000080">' +
             escapeHtml(config.navSubtitle) +
-            "</font>";
+            "</div>";
         }
         bar.innerHTML =
-          '<table width="100%" cellpadding="3" cellspacing="0" border="0" bgcolor="#000080">' +
-          "<tr><td>" +
-          '<font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">' +
-          links.join(" &nbsp;|&nbsp; ") +
-          "</font></td>" +
-          '<td align="right" nowrap class="itt-nav-home-cell">' +
-          right +
-          "</td></tr></table>";
+          '<table width="100%" cellpadding="4" cellspacing="0" border="0" bgcolor="#000080" class="itt-nav-table">' +
+          "<tr>" +
+          '<td class="itt-nav-links-cell" style="vertical-align:middle">' +
+          '<div class="itt-nav-linkrow">' +
+          links.join("") +
+          "</div></td>" +
+          '<td align="right" class="itt-nav-home-cell" style="vertical-align:middle">' +
+          homeLink +
+          "</td></tr></table>" +
+          subLine;
+        /* Soft wrap long year navs inside narrow iframe */
+        if (!document.getElementById("itt-nav-overflow-css")) {
+          var navCss = document.createElement("style");
+          navCss.id = "itt-nav-overflow-css";
+          navCss.type = "text/css";
+          navCss.appendChild(
+            document.createTextNode(
+              "#itt-exhibit-nav{max-width:100%;overflow:hidden;box-sizing:border-box}" +
+                "#itt-exhibit-nav .itt-nav-table{table-layout:fixed;width:100%;max-width:100%}" +
+                "#itt-exhibit-nav .itt-nav-links-cell{overflow:hidden;width:auto}" +
+                "#itt-exhibit-nav .itt-nav-links-cell .itt-nav-linkrow{" +
+                "display:flex;flex-wrap:wrap;gap:2px 8px;align-items:center;" +
+                "line-height:1.4;font:12px/1.4 Arial,Helvetica,sans-serif}" +
+                "#itt-exhibit-nav a.itt-nav{white-space:nowrap;text-decoration:none}" +
+                "#itt-exhibit-nav .itt-nav-sep{opacity:0.45;user-select:none}" +
+                "#itt-exhibit-nav .itt-nav-home-cell{width:4.5em;white-space:nowrap}" +
+                "#itt-exhibit-nav .itt-nav-sub{" +
+                "box-sizing:border-box;white-space:nowrap;overflow:hidden;" +
+                "text-overflow:ellipsis;max-width:100%}"
+            )
+          );
+          (document.head || document.documentElement).appendChild(navCss);
+        }
+        try {
+          bar.style.maxWidth = "100%";
+          bar.style.overflow = "hidden";
+          bar.style.boxSizing = "border-box";
+        } catch (eBar) {
+          /* */
+        }
         var slot = document.getElementById("itt-nav-slot");
         if (slot) {
           slot.innerHTML = "";
+          try {
+            slot.style.maxWidth = "100%";
+            slot.style.overflow = "hidden";
+            slot.style.boxSizing = "border-box";
+            slot.style.width = "100%";
+          } catch (eSlot) {
+            /* */
+          }
           slot.appendChild(bar);
           slot.setAttribute("aria-hidden", "false");
         } else if (document.body.firstChild) {
@@ -535,6 +615,8 @@
               "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
               "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
               "body.has-itt-wayfind{padding-bottom:56px !important;}" +
+              "html,body{max-width:100%;overflow-x:hidden;}" +
+              ".itt-nav-slot{max-width:100%;width:100%;box-sizing:border-box;overflow:hidden;margin-left:0;margin-right:0;}" +
               "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
                 "background:#000060;text-decoration:none !important;}" +
               "#itt-exhibit-nav a.itt-nav-home:hover{background:#0000aa;}"
@@ -626,6 +708,15 @@
       var escapeHtml = api.escapeHtml;
       if (config.features && (config.features.nav || config.features.museumBar)) {
         api.injectNav();
+      }
+      /* First-night trail strip + passport wiring */
+      try {
+        var MP0 = ITT.MuseumProgress;
+        if (MP0 && typeof MP0.injectTrailBar === "function") {
+          MP0.injectTrailBar(document);
+        }
+      } catch (eNight) {
+        /* */
       }
       api.markTourProgress();
       var counters = document.querySelectorAll(".hit-counter");

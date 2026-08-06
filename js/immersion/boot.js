@@ -149,6 +149,12 @@
     }
     /* shared first — nav / flash / tour */
     add("immersion/shared.js");
+    add("immersion/real-flow.js");
+    /* Year extras must not sit in deferred rest — product rooms need them on first paint */
+    var yi;
+    for (yi = 0; yi < all.length; yi++) {
+      if (/immersion\/year-\d{4}-extras\.js$/.test(all[yi])) add(all[yi]);
+    }
     var h;
     for (h = 0; h < hints.length; h++) {
       var key = hints[h][0];
@@ -236,6 +242,13 @@
     var chain = needUtil ? loadScript(base + "lib/util.js") : Promise.resolve();
 
     chain
+      .then(function () {
+        /* Passport + first-night (shared with hub / year shell) */
+        if (!(ITT.MuseumProgress && ITT.MuseumProgress.stamp)) {
+          return loadScript(base + "museum-progress.js");
+        }
+        return Promise.resolve();
+      })
       .then(function () {
         return loadScript(base + "immersion/registry.js");
       })

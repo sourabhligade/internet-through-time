@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2017">
+<head>
+<meta charset="utf-8">
+<title>iOS 5 — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2017.css">
+<script src="../../../../js/immersion-2017.js" defer></script>
+</head>
+<body bgcolor="#f2f2f2">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12" bgcolor="#ffffff" style="margin:16px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;border:1px solid #ccc">
+<tr><td>
+ <p><a href="index.html">← iPhone 4S</a> · <a href="siri.html">Siri</a> · <a href="icloud.html">iCloud</a></p>
+ <h1 style="font-size:18px">iOS 5</h1>
+ <p>Free software update <b>October 12, 2011</b> via iTunes · <b>200+ new features</b> (Apple claim).</p>
+ <ul>
+  <li><b>Notification Center</b> — pull down to see alerts without interruption</li>
+  <li><b>iMessage</b> — blue bubbles between iOS 5 devices vs green SMS</li>
+  <li>Twitter integration · camera from lock screen · PC-free setup class story</li>
+  <li>Pairs with <b>iCloud</b> for Photo Stream &amp; documents</li>
+ </ul>
+ <p style="font-size:11px;color:#666">Also free for iPhone 4 and 3GS class · Apple Newsroom Oct 4 2011</p>
+ <div style="background:#f8f8f8;border:1px solid #ccc;padding:10px;margin-top:12px">
+  <b>iMessage theater</b> (blue bubbles · this browser only)
+  <p style="margin:8px 0">
+   <input data-imessage-text size="36" placeholder="iMessage…" style="padding:4px">
+   <button type="button" data-imessage-send>Send (blue)</button>
+  </p>
+  <div data-imessage-thread style="font-size:12px;min-height:40px"></div>
+  <div data-imessage-status style="font-size:11px;color:#060;margin-top:6px"></div>
+ </div>
+ <script>
+ (function () {
+   var KEY = "itt17-imessage";
+   function boot() {
+     var btn = document.querySelector("[data-imessage-send]");
+     var input = document.querySelector("[data-imessage-text]");
+     var thread = document.querySelector("[data-imessage-thread]");
+     var st = document.querySelector("[data-imessage-status]");
+     if (!btn) return;
+     function load() {
+       try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
+     }
+     function render() {
+       var rows = load();
+       if (thread) {
+         thread.innerHTML = rows.map(function (r) {
+           return "<div style='background:#34b7f1;color:#fff;display:inline-block;padding:6px 10px;border-radius:12px;margin:4px 0'>" +
+             String(r.text || "").replace(/</g, "&lt;") + "</div><br>";
+         }).join("");
+       }
+     }
+     render();
+     btn.addEventListener("click", function () {
+       var t = input && input.value ? String(input.value).replace(/^\s+|\s+$/g, "") : "";
+       if (!t) return;
+       var rows = load();
+       rows.push({ text: t, ts: Date.now(), bubble: "blue" });
+       try { localStorage.setItem(KEY, JSON.stringify(rows.slice(-20))); } catch (e2) { /* */ }
+       if (input) input.value = "";
+       render();
+       if (st) st.textContent = "iMessage sent · " + KEY;
+     });
+   }
+   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+   else boot();
+ })();
+ </script>
+</td></tr>
+</table>
+</body>
+</html>
+

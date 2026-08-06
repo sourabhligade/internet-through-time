@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Google Friend Connect — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2017.css">
+<style>
+.gfc{font-family:Arial,Helvetica,sans-serif;max-width:640px;margin:16px auto;padding:14px;background:#fff;border:1px solid #c5d7ef}
+.gfc h1{font-size:18px;color:#1a0dab;margin:0 0 8px}
+.gfc-note{background:#fff8dc;border:1px solid #e6c200;padding:10px;font-size:12px;margin:12px 0;line-height:1.45}
+.gfc-box{border:1px solid #7baaf7;background:#e8f0fe;padding:12px;margin:12px 0;font-size:13px}
+</style>
+</head>
+<body bgcolor="#f5f5f5">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="gfc">
+ <p style="font-size:12px">
+  <a href="../../pages/home.html">Starting Point</a> ·
+  <a href="about.html">About Friend Connect</a> ·
+  <a href="../facebook/connect.html">Facebook Connect</a> ·
+  <a href="../programmableweb/index.html">Programmable Web</a>
+ </p>
+ <h1>Google Friend Connect</h1>
+ <p style="font-size:13px;color:#444;margin:0 0 8px">
+  Add social to any site · OpenSocial gadgets · public class <b>December 4, 2009</b> ·
+  Google’s answer energy to “Log in with Facebook.”
+ </p>
+
+ <div class="gfc-note">
+  <b>2009 honesty:</b> Friend Connect lets webmasters paste snippets so visitors bring friends /
+  activities without building a full social network. It rides <b>OpenSocial</b> (gadgets across
+  networks). Facebook had already pushed back on some Friend Connect uses earlier in 2009 —
+  the story is <b>competing social identity stacks</b>, not one winner yet.
+ </div>
+
+ <div class="gfc-box">
+  <b>Your blog (museum partner stub)</b><br>
+  <font size="2" color="#555">Add a members gadget · visitors sign in with a Google/OpenSocial identity (theater).</font>
+  <label style="display:block;margin:8px 0;font-size:12px">
+   <input type="checkbox" data-gfc-opensocial> OpenSocial gadget stack literacy (required)
+  </label>
+  <p style="margin:10px 0 4px">
+   <button type="button" data-gfc-enable style="background:#4d90fe;color:#fff;border:1px solid #3079ed;padding:6px 12px;font-size:12px;cursor:pointer">
+    Enable Friend Connect (REAL)
+   </button>
+   <button type="button" data-gfc-disable style="margin-left:6px;font-size:12px">Remove</button>
+  </p>
+  <div data-gfc-status style="font-size:12px;color:#060;min-height:1.2em"></div>
+ </div>
+
+ <p style="font-size:12px">
+  Compare: <a href="../facebook/connect.html"><b>Facebook Connect</b></a> (graph follows you) ·
+  <a href="../facebook/platform.html">Facebook Platform apps</a> (inside Facebook) ·
+  OpenSocial = portable gadgets (Friend Connect is the easy paste path).
+ </p>
+ <p style="font-size:11px;color:#666"> · localStorage only · no real OAuth</p>
+</div>
+<script>
+(function () {
+  function key() {
+    try {
+      if (window.ITT && ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("friendconnect", "itt17");
+      }
+    } catch (e) {}
+    return "itt17-friendconnect";
+  }
+  function boot() {
+    var on = document.querySelector("[data-gfc-enable]");
+    var off = document.querySelector("[data-gfc-disable]");
+    var st = document.querySelector("[data-gfc-status]");
+    function show() {
+      try {
+        var raw = localStorage.getItem(key());
+        if (raw && st) {
+          st.textContent = "Friend Connect enabled (theater) · OpenSocial gadget class · " + key();
+        } else if (st) st.textContent = "";
+      } catch (e) {}
+    }
+    show();
+    if (on) {
+      on.addEventListener("click", function () {
+        var lit = document.querySelector("[data-gfc-opensocial]");
+        if (lit && !lit.checked) {
+          if (st) st.textContent = "Check OpenSocial gadget literacy first (not mock).";
+          return;
+        }
+        localStorage.setItem(key(), JSON.stringify({
+          enabled: true,
+          stack: "opensocial",
+          multiStep: true,
+          ts: Date.now()
+        }));
+        show();
+      });
+    }
+    if (off) {
+      off.addEventListener("click", function () {
+        localStorage.removeItem(key());
+        if (st) st.textContent = "Removed from site (theater)";
+      });
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+<script src="../../../../js/immersion-2017.js"></script>
+</body></html>

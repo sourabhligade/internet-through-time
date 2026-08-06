@@ -44,6 +44,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/2000/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2000/playable/game.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2000/about.html",
       "pages/cool.html": "http://home.microsoft.com/intl/web2000/cool.html",
       "pages/error/404.html": "http://home.microsoft.com/intl/web2000/error/404.html",

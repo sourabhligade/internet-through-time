@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/2001/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2001/playable/game.html",
       "sites/wikipedia/welcome.html": "http://www.wikipedia.org/wiki/Welcome,_newcomers",
       "sites/encarta/index.html": "http://encarta.msn.com/",
       "sites/loudcloud/index.html": "http://www.loudcloud.com/",

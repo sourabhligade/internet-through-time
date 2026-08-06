@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/hulu/index.html": "http://www.hulu.com/",
+      "sites/playable/game.html": "http://museum.local/years/2007/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2007/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",

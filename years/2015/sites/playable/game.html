@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2015">
+<head>
+<meta charset="utf-8">
+<title>Blob Rush — 2015</title>
+<link rel="stylesheet" href="../../../../css/period-2015.css">
+<link rel="stylesheet" href="../../../../css/year-game-ui.css">
+<style>
+.itt-year-game { max-width: 420px; margin: 0 auto; padding: 12px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #e8eefc; }
+.yg-shell { background: #12182a; border: 1px solid #3a4a7a; border-radius: 6px; }
+.honesty { font-size: 11px; background: #1a2238; border: 1px solid #4a6abf; padding: 6px; margin: 8px 0; color: #bcd; }
+#game-canvas { display: block; width: 100%; max-width: 400px; height: auto; background: #0b1020; border: 1px solid #334; cursor: crosshair; touch-action: none; }
+.yg-body { background: #0a0e18; margin: 0; padding: 12px; }
+button[data-game-start] { background: #3cf; color: #042; border: none; padding: 8px 14px; font-weight: bold; cursor: pointer; border-radius: 4px; }
+</style>
+</head>
+<body class="yg-body yg-year-2015" bgcolor="#0a0e18">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="itt-year-game yg-shell" data-year-game data-year="2015" data-game-id="blobrush" tabindex="0">
+  <h1 style="margin:0 0 6px;color:#3cf">Blob Rush — 2015</h1>
+  <p style="margin:0;color:#9ab">Move · eat smaller cells · avoid bigger ones · grow your mass.</p>
+  <p class="honesty yg-honesty">Inspired by <b>2015 agar.io-class</b> browser mania · museum title <b>Blob Rush</b> · key <code>itt15-game-blobrush</code></p>
+  <p>
+    <button type="button" data-game-start>New Game</button>
+    Mass <b data-game-score>0</b> · Best <b data-game-best>0</b>
+  </p>
+  <canvas id="game-canvas" width="400" height="320" aria-label="Blob Rush arena"></canvas>
+  <p data-itt-action-status style="margin-top:8px;color:#9ab;min-height:1.3em">Mouse / touch aim · WASD · Space restarts</p>
+  <p style="font-size:11px;color:#789">
+    <a href="index.html" style="color:#8cf">← Playables</a> ·
+    <a href="../../pages/home.html" style="color:#8cf">Starting Point</a>
+  </p>
+</div>
+<script src="../../../../js/games/year-game-boot.js"></script>
+<script src="../../../../js/games/year-2015-blobrush.js"></script>
+<script src="../../../../js/immersion-2015.js" defer></script>
+</body>
+</html>

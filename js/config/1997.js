@@ -47,6 +47,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1997/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1997/playable/game.html",
       "sites/altavista/about.html": "http://www.altavista.com/about.html",
       "sites/icq/about.html": "http://www.icq.com/about.html",
       "sites/pointcast/about.html": "http://www.pointcast.com/about.html",

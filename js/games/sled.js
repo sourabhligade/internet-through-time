@@ -127,6 +127,11 @@
       window.ITTGames.addScore("sled", sc, "Rider");
       window.ITTGames.renderBoard(boardEl, "sled");
     }
+    try {
+      if (typeof window.ITTYearGameOnScore === "function") {
+        window.ITTYearGameOnScore("sled", sc);
+      }
+    } catch (eY) { /* */ }
   }
 
   function draw() {

@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/2009/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2009/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "sites/friendfeed/index.html": "http://www.friendfeed.com/",
       "sites/ubercab/index.html": "http://www.ubercab.com/",

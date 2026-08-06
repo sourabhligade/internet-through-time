@@ -17,9 +17,9 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2012** | **697,089,489** | **+101%** | playable MVP (2026-08-02) |
 | **2013** | **672,985,183** | −3% | playable (hub 1994–2013) |
 | **2014** | **968,882,453** | **+44%** | **MVP live** (2026-08-06) · hub unlocked · `itt14` · 1B milestone Sep 2014 |
-| **2015** | **863,105,652** | **−11%** | not scaffolded on this branch · 1B fluctuation honesty (for later years) |
-| **2016** | **1,045,534,808** | **+21%** | not scaffolded on this branch · 1B restabilized Mar 2016 class |
-| **2017** | **1,766,926,408** | **+69%** | not scaffolded on this branch · hostname explosion honesty |
+| **2015** | **863,105,652** | **−11%** | **MVP live** (2026-08-06) · hub unlocked · `itt15` · 1B dip honesty |
+| **2016** | **1,045,534,808** | **+21%** | **MVP live** (2026-08-06) · hub unlocked · `itt16` · 1B restabilized Mar 2016 |
+| **2017** | **1,766,926,408** | **+69%** | **MVP live** (2026-08-06) · hub unlocked · `itt17` · complex REAL rooms · hostname explosion honesty |
 
 ## Websites (Pingdom / Netcraft — December class)
 

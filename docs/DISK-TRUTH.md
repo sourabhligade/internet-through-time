@@ -1,8 +1,11 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-06 · **Ship update:** hub **1994–2014** playable · **2014 MVP live** · **2015+ not on disk**  
-**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md)  
+**Date:** 2026-08-06 · **Ship update:** hub **1994–2017** playable · **2017 MVP live** (complex REAL rooms)  
+**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · **[`2017-READ-FIRST.md`](2017-READ-FIRST.md)**  
 **2014:** MVP live · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
+**2015:** **MVP live** · `years/2015/` · prefix **`itt15`** · [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md)  
+**2016:** **MVP live** · `years/2016/` · prefix **`itt16`** · [`2016-MUSEUM-GRADE.md`](2016-MUSEUM-GRADE.md)  
+**2017:** **MVP live** · `years/2017/` · prefix **`itt17`** · complex Netflix/Discord/AMP REAL · [`2017-MUSEUM-GRADE.md`](2017-MUSEUM-GRADE.md)  
 **Purpose:** Single source of truth for what is **playable on disk** vs research-only.
 
 **Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)  
@@ -29,10 +32,10 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2014** |
-| Hub locked | **2015+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2014/` |
-| Period CSS | `css/period-1995.css` … `period-2014.css` |
+| Hub open years | **1994–2017** |
+| Hub locked | **2018+** (not scaffolded) |
+| Year trees | `years/1994/` … `years/2017/` |
+| Period CSS | `css/period-1995.css` … `period-2017.css` |
 | **2010** | **Museum-ready** · playable · see section below |
 | **2011** | **Museum-ready** · playable · see section below |
 | **2012** | **Museum-ready** · playable · see section below |

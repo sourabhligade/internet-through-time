@@ -153,6 +153,31 @@ def check_files() -> None:
         "assets/period/2002/amazon/logo-smile.gif",
         "assets/period/2003/myspace/logo.gif",
         "assets/period/2003/itunes/logo.gif",
+        # 2013–2017 MVP shells + signature rooms
+        "years/2013/index.html",
+        "years/2014/index.html",
+        "years/2015/index.html",
+        "years/2016/index.html",
+        "years/2017/index.html",
+        "years/2015/pages/home.html",
+        "years/2016/pages/home.html",
+        "years/2017/pages/home.html",
+        "years/2017/sites/iphone/x.html",
+        "years/2017/sites/fortnite/index.html",
+        "years/2017/sites/netflix/modern.html",
+        "js/config/2015.js",
+        "js/config/2016.js",
+        "js/config/2017.js",
+        "js/immersion-2015.js",
+        "js/immersion-2016.js",
+        "js/immersion-2017.js",
+        "js/museum-progress.js",
+        "js/immersion/year-2015-extras.js",
+        "js/immersion/year-2016-extras.js",
+        "js/immersion/year-2017-extras.js",
+        "css/period-2015.css",
+        "css/period-2016.css",
+        "css/period-2017.css",
     ]
     for rel in required:
         if (ROOT / rel).exists():
@@ -209,7 +234,11 @@ def check_urlmaps() -> None:
     import json
     import subprocess
 
-    for year in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010"):
+    for year in (
+        "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
+        "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013",
+        "2014", "2015", "2016", "2017",
+    ):
         code = f"""
 const fs=require("fs");const vm=require("vm");
 const ctx={{window:{{}},console}};ctx.window=ctx;vm.createContext(ctx);

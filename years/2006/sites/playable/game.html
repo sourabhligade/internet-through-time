@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2006">
+<head>
+<meta charset="utf-8">
+<title>TrailSled — 2006 year game</title>
+<link rel="stylesheet" href="../../../../css/period-2006-lite.css">
+<link rel="stylesheet" href="../../../../css/year-game-ui.css">
+<link rel="stylesheet" href="../../../../css/games.css">
+<style>
+.itt-year-game { max-width: 560px; margin: 0 auto; padding: 12px; font-family: Tahoma, Arial, sans-serif; font-size: 13px; }
+.itt-year-game h1 { font-size: 20px; color: #0a246a; margin: 0 0 6px; }
+.itt-year-game .honesty { font-size: 11px; color: #444; background: #ffc; border: 1px solid #cc0; padding: 6px 8px; margin: 8px 0; }
+.play-stage canvas { display: block; max-width: 100%; border: 2px solid #333; background: #dce8f5; cursor: crosshair; }
+</style>
+</head>
+<body class="yg-body yg-year-2006" bgcolor="#f0f0f0">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="itt-year-game yg-shell" data-year-game data-year="2006" data-game-id="sled">
+  <h1>TrailSled · 2006</h1>
+  <p style="margin:0 0 8px">Museum original · draw-track sandbox (Line Rider–class). Click points, then Ride.</p>
+  <p class="honesty yg-honesty">Inspired by <b>2006</b> Line Rider viral culture · Kongregate launches this year · <b>not</b> Line Rider · key <code>itt06-game-sled</code>.</p>
+  <div class="play-hud" style="margin:8px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+    <button type="button" id="play-start">Ride</button>
+    <button type="button" id="play-clear">Clear track</button>
+    <span>Distance: <b id="play-score" data-game-score>0</b></span>
+    <span>Best: <b data-game-best>0</b></span>
+  </div>
+  <p id="play-status" class="yg-status" data-itt-action-status style="font-size:12px;color:#333" class="yg-status">Click canvas to draw · then Ride</p>
+  <div class="play-stage">
+    <canvas id="game-canvas" width="520" height="340" data-game="sled"></canvas>
+  </div>
+  <div class="scoreboard" id="score-board" style="margin-top:10px;font-size:12px"></div>
+  <p style="font-size:11px;margin-top:12px">
+    <a href="index.html">← Playables</a> ·
+    <a href="../../pages/home.html">Starting Point 2006</a> ·
+    <a href="../../../../games/play/sled.html">Games wing copy</a> ·
+    <a href="../../../../games/portals/kongregate/index.html">Kongregate culture</a>
+  </p>
+</div>
+<script src="../../../../js/games/scores.js"></script>
+<script src="../../../../js/games/year-game-boot.js"></script>
+<script>
+(function () {
+  if (window.ITT && ITT.YearGame) {
+    var b = document.querySelector("[data-game-best]");
+    if (b) b.textContent = String(ITT.YearGame.loadBest("sled", "2006"));
+  }
+})();
+</script>
+<script src="../../../../js/games/sled.js"></script>
+<script src="../../../../js/immersion-2006.js" defer></script>
+</body>
+</html>

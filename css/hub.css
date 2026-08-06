@@ -104,6 +104,11 @@ body {
   gap: 8px;
   margin: 14px 0 8px;
   align-items: center;
+  max-width: 100%;
+}
+.start-primary-row .start-btn {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .start-primary-row .start-btn.start-primary {
@@ -1552,3 +1557,103 @@ body {
 .year-card.y2014 .motif { background: linear-gradient(135deg, #25d366, #c00 55%, #0078d7); }
 
 
+
+/* —— Passport + first night —— */
+.hub-passport-link {
+  color: #000080;
+  font-weight: bold;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.passport-anchor { scroll-margin-top: 12px; }
+.itt-passport-root {
+  margin: 14px 0 18px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.passport-panel { padding: 12px 14px 14px; background: #ffffff; border-top: 1px solid #808080; }
+.passport-head h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: #000080;
+}
+.passport-meta { margin: 0 0 10px; color: #333; font-size: 11px; }
+.passport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.passport-year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 4px;
+  background: #e8e8e8;
+  border: 1px solid #808080;
+  text-decoration: none;
+  color: #000;
+  font-size: 11px;
+}
+.passport-year:hover { background: #fff8dc; border-color: #000080; }
+.passport-year.has-stamps {
+  background: #1a237e;
+  color: #fff;
+  border-color: #00bcd4;
+}
+.passport-year .py { font-weight: bold; }
+.passport-year .ps { font-size: 10px; opacity: 0.9; }
+.passport-year .ps.empty { opacity: 0.4; }
+.first-night-card {
+  padding: 10px 12px;
+  background: #e3f2fd;
+  border: 1px solid #1565c0;
+  line-height: 1.45;
+}
+.first-night-card .start-btn {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 6px;
+}
+.year-card.year-stamped .year-progress-dot {
+  background: #1a237e;
+  color: #ffeb3b;
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: 8px;
+  min-width: auto;
+}
+
+/* 2017 primary start */
+#begin-2017,
+#begin-2017-tour {
+  background: #1a237e;
+  color: #fff;
+  border-color: #00bcd4 #000 #000 #00bcd4;
+}
+#begin-2017:hover,
+#begin-2017-tour:hover {
+  background: #283593;
+}
+button.start-btn {
+  cursor: pointer;
+  font: inherit;
+}
+.year-2017-start-card {
+  background: #111 !important;
+  color: #f5f5f7 !important;
+  border-color: #e50914 !important;
+  margin-bottom: 10px;
+}
+.year-2017-start-card .start-btn {
+  color: #000;
+}
+.passport-year-2017 {
+  outline: 2px solid #e50914;
+}

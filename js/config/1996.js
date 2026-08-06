@@ -46,6 +46,8 @@
       connectBusyChance: 0.13
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1996/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1996/playable/game.html",
       "sites/yahoo/Reference/Dictionaries/index.html": "http://www.yahoo.com/Reference/Dictionaries/index.html",
       "sites/yahoo/Reference/Phone_Numbers/index.html": "http://www.yahoo.com/Reference/Phone_Numbers/index.html",
       "sites/yahoo/Reference/Libraries/index.html": "http://www.yahoo.com/Reference/Libraries/index.html",

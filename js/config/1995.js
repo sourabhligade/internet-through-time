@@ -46,6 +46,8 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1995/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1995/playable/game.html",
       "sites/hotwired/index.html": "http://www.hotwired.com/",
       "sites/amazon/eyes.html": "http://www.amazon.com/eyes",
       "sites/microsoft/index.html": "http://www.microsoft.com/",

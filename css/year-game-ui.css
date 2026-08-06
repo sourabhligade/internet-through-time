@@ -1,0 +1,646 @@
+/**
+ * Year game UI — shared polish for years/YYYY/sites/playable/game.html
+ * Era tokens via body.yg-year-YYYY or [data-itt-year]
+ */
+
+/* ——— base shell ——— */
+html.yg-page,
+body.yg-body {
+  margin: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+body.yg-body *,
+body.yg-body *::before,
+body.yg-body *::after {
+  box-sizing: border-box;
+}
+
+.yg-shell,
+[data-year-game].yg-shell,
+[data-year-game] {
+  --yg-accent: #0a246a;
+  --yg-accent2: #3b5998;
+  --yg-panel: #f4f4f8;
+  --yg-panel-border: #808080;
+  --yg-ink: #111;
+  --yg-muted: #555;
+  --yg-warn-bg: #ffffcc;
+  --yg-warn-border: #cc0;
+  --yg-hud-bg: #e8e8f0;
+  --yg-btn: #0a246a;
+  --yg-btn-ink: #fff;
+  --yg-stage-bg: #fff;
+  --yg-radius: 0;
+  --yg-font: Tahoma, "MS Sans Serif", Arial, Helvetica, sans-serif;
+  --yg-title-size: 20px;
+  --yg-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+  max-width: 560px !important;
+  margin: 10px auto 24px !important;
+  padding: 0 !important;
+  font-family: var(--yg-font) !important;
+  font-size: 13px !important;
+  color: var(--yg-ink) !important;
+  background: var(--yg-panel) !important;
+  border: 2px solid var(--yg-panel-border) !important;
+  box-shadow: var(--yg-shadow) !important;
+  outline: none;
+}
+
+/* era themes */
+body.yg-year-1994,
+html[data-itt-year="1994"] body {
+  background: #808080 !important;
+}
+body.yg-year-1994 .yg-shell,
+html[data-itt-year="1994"] [data-year-game] {
+  --yg-accent: #000080;
+  --yg-panel: #c0c0c0;
+  --yg-font: "Times New Roman", Times, serif;
+  --yg-btn: #000080;
+}
+
+body.yg-year-1995,
+html[data-itt-year="1995"] body {
+  background: #008080 !important;
+}
+body.yg-year-1995 .yg-shell,
+html[data-itt-year="1995"] [data-year-game] {
+  --yg-accent: #000080;
+  --yg-panel: #c0c0c0;
+  --yg-btn: #000080;
+  --yg-font: Tahoma, "MS Sans Serif", Arial, sans-serif;
+}
+
+body.yg-year-1996,
+html[data-itt-year="1996"] body {
+  background: #000022 !important;
+}
+body.yg-year-1996 .yg-shell,
+html[data-itt-year="1996"] [data-year-game] {
+  --yg-accent: #ffcc00;
+  --yg-panel: #0a0a33;
+  --yg-ink: #f0f0ff;
+  --yg-muted: #aab;
+  --yg-warn-bg: #221100;
+  --yg-warn-border: #fc0;
+  --yg-hud-bg: #151545;
+  --yg-btn: #3366cc;
+  --yg-stage-bg: #000033;
+}
+
+body.yg-year-1997,
+html[data-itt-year="1997"] body {
+  background: #008080 !important;
+}
+body.yg-year-1997 .yg-shell,
+html[data-itt-year="1997"] [data-year-game] {
+  --yg-accent: #000080;
+  --yg-panel: #c0c0c0;
+  --yg-btn: #000080;
+}
+
+body.yg-year-1998,
+html[data-itt-year="1998"] body {
+  background: #000 !important;
+}
+body.yg-year-1998 .yg-shell,
+html[data-itt-year="1998"] [data-year-game] {
+  --yg-accent: #00ff00;
+  --yg-panel: #111;
+  --yg-ink: #00ff66;
+  --yg-muted: #8c8;
+  --yg-warn-bg: #001a00;
+  --yg-warn-border: #0f0;
+  --yg-hud-bg: #0a0a0a;
+  --yg-btn: #003300;
+  --yg-btn-ink: #0f0;
+  --yg-stage-bg: #000;
+  --yg-font: "Courier New", Consolas, monospace;
+}
+
+body.yg-year-1999,
+html[data-itt-year="1999"] body {
+  background: #e8e0ff !important;
+}
+body.yg-year-1999 .yg-shell,
+html[data-itt-year="1999"] [data-year-game] {
+  --yg-accent: #6633cc;
+  --yg-panel: #f8f4ff;
+  --yg-btn: #6633cc;
+  --yg-warn-bg: #efe8ff;
+  --yg-warn-border: #96c;
+}
+
+body.yg-year-2000,
+html[data-itt-year="2000"] body {
+  background: #1a0000 !important;
+}
+body.yg-year-2000 .yg-shell,
+html[data-itt-year="2000"] [data-year-game] {
+  --yg-accent: #ff6600;
+  --yg-panel: #0d0d0d;
+  --yg-ink: #ffcc66;
+  --yg-muted: #c96;
+  --yg-warn-bg: #220800;
+  --yg-warn-border: #f60;
+  --yg-hud-bg: #1a0a00;
+  --yg-btn: #cc3300;
+  --yg-stage-bg: #111;
+  --yg-font: Verdana, Arial, sans-serif;
+}
+
+body.yg-year-2001,
+body.yg-year-2002,
+body.yg-year-2003,
+body.yg-year-2004,
+html[data-itt-year="2001"] body,
+html[data-itt-year="2002"] body,
+html[data-itt-year="2003"] body,
+html[data-itt-year="2004"] body {
+  background: #3a6ea5 !important;
+}
+body.yg-year-2001 .yg-shell,
+body.yg-year-2002 .yg-shell,
+body.yg-year-2003 .yg-shell,
+body.yg-year-2004 .yg-shell,
+html[data-itt-year="2001"] [data-year-game],
+html[data-itt-year="2002"] [data-year-game],
+html[data-itt-year="2003"] [data-year-game],
+html[data-itt-year="2004"] [data-year-game] {
+  --yg-accent: #0a246a;
+  --yg-panel: #ece9d8;
+  --yg-btn: #0a246a;
+  --yg-font: Tahoma, Arial, sans-serif;
+  --yg-shadow: 3px 3px 0 #0a246a;
+}
+
+body.yg-year-2005,
+body.yg-year-2006,
+html[data-itt-year="2005"] body,
+html[data-itt-year="2006"] body {
+  background: #dce6f0 !important;
+}
+body.yg-year-2005 .yg-shell,
+body.yg-year-2006 .yg-shell,
+html[data-itt-year="2005"] [data-year-game],
+html[data-itt-year="2006"] [data-year-game] {
+  --yg-accent: #0a246a;
+  --yg-panel: #f0f4fa;
+  --yg-btn: #06c;
+  --yg-radius: 2px;
+}
+
+body.yg-year-2007,
+html[data-itt-year="2007"] body {
+  background: #1a1a22 !important;
+}
+body.yg-year-2007 .yg-shell,
+html[data-itt-year="2007"] [data-year-game] {
+  --yg-accent: #0f0;
+  --yg-panel: #12121a;
+  --yg-ink: #e0ffe0;
+  --yg-muted: #8a8;
+  --yg-warn-bg: #1a2010;
+  --yg-warn-border: #6a6;
+  --yg-hud-bg: #0a0a12;
+  --yg-btn: #163;
+  --yg-btn-ink: #cfc;
+  --yg-stage-bg: #0a0a10;
+  --yg-font: Consolas, "Courier New", monospace;
+}
+
+body.yg-year-2008,
+html[data-itt-year="2008"] body {
+  background: #e8eef5 !important;
+}
+body.yg-year-2008 .yg-shell,
+html[data-itt-year="2008"] [data-year-game] {
+  --yg-accent: #007aff;
+  --yg-panel: #f7f7f7;
+  --yg-btn: #007aff;
+  --yg-radius: 10px;
+  --yg-font: Helvetica, Arial, sans-serif;
+  --yg-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+body.yg-year-2009,
+html[data-itt-year="2009"] body {
+  background: #dfe6f0 !important;
+}
+body.yg-year-2009 .yg-shell,
+html[data-itt-year="2009"] [data-year-game] {
+  --yg-accent: #3b5998;
+  --yg-panel: #fff;
+  --yg-btn: #3b5998;
+  --yg-warn-bg: #eceff5;
+  --yg-warn-border: #3b5998;
+  --yg-radius: 3px;
+  --yg-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+body.yg-year-2010,
+html[data-itt-year="2010"] body {
+  background: #eef2f6 !important;
+}
+body.yg-year-2010 .yg-shell,
+html[data-itt-year="2010"] [data-year-game] {
+  --yg-accent: #2e7d32;
+  --yg-panel: #fafafa;
+  --yg-btn: #2e7d32;
+  --yg-radius: 6px;
+  --yg-font: "Segoe UI", Arial, sans-serif;
+  --yg-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.yg-year-2011,
+html[data-itt-year="2011"] body {
+  background: #f0f0f5 !important;
+}
+body.yg-year-2011 .yg-shell,
+html[data-itt-year="2011"] [data-year-game] {
+  --yg-accent: #5856d6;
+  --yg-panel: #fff;
+  --yg-btn: #5856d6;
+  --yg-radius: 8px;
+  --yg-font: "Segoe UI", Arial, sans-serif;
+  --yg-shadow: 0 2px 10px rgba(88, 86, 214, 0.15);
+}
+
+body.yg-year-2012,
+html[data-itt-year="2012"] body {
+  background: #faf5f7 !important;
+}
+body.yg-year-2012 .yg-shell,
+html[data-itt-year="2012"] [data-year-game] {
+  --yg-accent: #c2185b;
+  --yg-panel: #fff;
+  --yg-btn: #c2185b;
+  --yg-warn-bg: #fce4ec;
+  --yg-warn-border: #c2185b;
+  --yg-radius: 10px;
+  --yg-font: Helvetica, Arial, sans-serif;
+  --yg-shadow: 0 2px 12px rgba(194, 24, 91, 0.12);
+}
+
+body.yg-year-2013,
+html[data-itt-year="2013"] body {
+  background: #f2f2f7 !important;
+}
+body.yg-year-2013 .yg-shell,
+html[data-itt-year="2013"] [data-year-game] {
+  --yg-accent: #007aff;
+  --yg-panel: #fff;
+  --yg-btn: #007aff;
+  --yg-radius: 12px;
+  --yg-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --yg-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body.yg-year-2014,
+html[data-itt-year="2014"] body {
+  background: #faf8ef !important;
+}
+body.yg-year-2014 .yg-shell,
+html[data-itt-year="2014"] [data-year-game] {
+  --yg-accent: #776e65;
+  --yg-panel: #faf8ef;
+  --yg-btn: #8f7a66;
+  --yg-btn-ink: #f9f6f2;
+  --yg-radius: 6px;
+  --yg-font: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  --yg-shadow: 0 2px 8px rgba(119, 110, 101, 0.15);
+}
+
+/* ——— chrome pieces ——— */
+.yg-top,
+[data-year-game] > h1:first-of-type {
+  display: block !important;
+  margin: 0 !important;
+  padding: 12px 14px !important;
+  background: var(--yg-accent) !important;
+  color: #fff !important;
+  font-size: var(--yg-title-size) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  border-radius: var(--yg-radius) var(--yg-radius) 0 0;
+  border: 0 !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.yg-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-right: 8px;
+  padding: 2px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.yg-body-inner,
+[data-year-game] {
+  /* content padding via children */
+}
+
+[data-year-game] > *:not(h1):not(script) {
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+[data-year-game] > h1 + *,
+[data-year-game] > .yg-top + * {
+  margin-top: 12px;
+}
+
+[data-year-game] > *:last-child {
+  margin-bottom: 14px;
+}
+
+.yg-lead,
+[data-year-game] > p:not(.honesty):not(.yg-honesty):not([data-itt-action-status]):not(.yg-status):not(.yg-nav):not(.yg-foot) {
+  line-height: 1.45;
+  color: var(--yg-ink);
+}
+
+.yg-honesty,
+.honesty {
+  font-size: 11px !important;
+  line-height: 1.4;
+  background: var(--yg-warn-bg) !important;
+  border: 1px solid var(--yg-warn-border) !important;
+  color: var(--yg-ink) !important;
+  padding: 8px 10px !important;
+  margin: 10px 14px !important;
+  border-radius: var(--yg-radius);
+}
+
+.yg-honesty a,
+.honesty a {
+  color: var(--yg-accent2, var(--yg-accent));
+  font-weight: 600;
+}
+
+.yg-hud,
+.itt-hotlist-hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  background: var(--yg-hud-bg);
+  border: 1px solid var(--yg-panel-border);
+  padding: 8px 10px;
+  margin: 10px 14px !important;
+  border-radius: var(--yg-radius);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.yg-hud b,
+.itt-hotlist-hud b {
+  color: var(--yg-accent);
+  font-size: 14px;
+}
+
+/* buttons */
+.yg-shell button,
+[data-year-game] button,
+[data-year-game] input[type="submit"] {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 12px;
+  margin: 2px 3px 2px 0;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: var(--yg-radius);
+  background: var(--yg-btn);
+  color: var(--yg-btn-ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: filter 0.1s ease, transform 0.05s ease;
+}
+
+.yg-shell button:hover,
+[data-year-game] button:hover {
+  filter: brightness(1.08);
+}
+
+.yg-shell button:active,
+[data-year-game] button:active {
+  transform: translateY(1px);
+}
+
+.yg-shell button:disabled,
+[data-year-game] button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: none;
+}
+
+/* secondary / chip buttons for seeds etc */
+[data-year-game] button[data-seed],
+[data-year-game] button[data-place],
+[data-year-game] button[data-gag],
+[data-year-game] button[data-rate],
+[data-year-game] button[data-dir],
+[data-year-game] button[data-tf-dir] {
+  min-width: 36px;
+  min-height: 32px;
+}
+
+[data-year-game] button[data-dir],
+[data-year-game] button[data-tf-dir] {
+  width: 40px;
+  height: 36px;
+  font-size: 14px;
+  padding: 4px;
+}
+
+/* stage / playfield */
+.yg-stage,
+.itt-hotlist-field,
+[data-game-field],
+[data-checkers-board],
+[data-c4-board],
+[data-room],
+[data-plots],
+[data-app-grid],
+[data-tf-board],
+[data-whack-field],
+[data-cards] {
+  margin: 10px 14px !important;
+}
+
+.itt-hotlist-field {
+  min-height: 220px;
+  background: var(--yg-stage-bg);
+  border: 2px solid var(--yg-panel-border);
+  border-color: #808080 #fff #fff #808080;
+  padding: 8px;
+  border-radius: var(--yg-radius);
+}
+
+[data-game-field] {
+  border-radius: var(--yg-radius);
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* canvas */
+[data-year-game] canvas {
+  display: block;
+  max-width: 100%;
+  margin: 10px auto !important;
+  border: 2px solid var(--yg-panel-border);
+  border-radius: var(--yg-radius);
+  background: var(--yg-stage-bg);
+  box-shadow: var(--yg-shadow);
+}
+
+/* status */
+.yg-status,
+[data-itt-action-status],
+#play-status {
+  min-height: 1.4em;
+  font-size: 12px !important;
+  line-height: 1.4;
+  padding: 8px 10px !important;
+  margin: 10px 14px !important;
+  background: var(--yg-hud-bg);
+  border-left: 4px solid var(--yg-accent);
+  border-radius: 0 var(--yg-radius) var(--yg-radius) 0;
+  color: var(--yg-ink);
+}
+
+/* footer nav */
+.yg-nav,
+.yg-foot,
+[data-year-game] > p:last-of-type {
+  font-size: 11px !important;
+  padding: 10px 14px 14px !important;
+  margin: 0 !important;
+  border-top: 1px solid var(--yg-panel-border);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-year-game] > p:last-of-type a,
+.yg-nav a {
+  color: var(--yg-accent);
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+[data-year-game] > p:last-of-type a:hover,
+.yg-nav a:hover {
+  text-decoration: underline;
+}
+
+/* d-pad cluster */
+[data-dpad] {
+  text-align: center;
+  margin: 12px 14px !important;
+  padding: 10px;
+  background: var(--yg-hud-bg);
+  border: 1px solid var(--yg-panel-border);
+  border-radius: var(--yg-radius);
+}
+
+[data-dpad] > div {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+/* lobby pre / ascii */
+pre.lobby,
+[data-lobby-log],
+[data-level],
+[data-log] {
+  background: #0a0a0a !important;
+  color: #0f0 !important;
+  border: 1px solid #333;
+  border-radius: var(--yg-radius);
+  padding: 10px 12px !important;
+  margin: 10px 14px !important;
+  font-size: 12px;
+  line-height: 1.35;
+  overflow: auto;
+}
+
+/* pet meters */
+.meters {
+  background: var(--yg-hud-bg) !important;
+  border: 1px solid var(--yg-panel-border) !important;
+  border-radius: var(--yg-radius);
+  padding: 12px !important;
+  margin: 10px 14px !important;
+}
+
+/* applet chrome */
+.applet-frame {
+  background: #c0c0c0 !important;
+  border: 2px inset #808080 !important;
+  padding: 12px !important;
+  margin: 10px 14px !important;
+  border-radius: 0;
+}
+
+/* scoreboard under canvas games */
+.scoreboard,
+#score-board {
+  margin: 8px 14px 12px !important;
+  font-size: 12px;
+  color: var(--yg-muted);
+}
+
+/* inputs */
+[data-year-game] input[type="text"],
+[data-year-game] input:not([type]) {
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid var(--yg-panel-border);
+  border-radius: var(--yg-radius);
+  background: #fff;
+  color: #111;
+}
+
+/* rack tiles already styled in JS; soft override */
+[data-rack] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  margin: 8px 14px !important;
+  background: var(--yg-hud-bg);
+  border: 1px dashed var(--yg-panel-border);
+  border-radius: var(--yg-radius);
+  min-height: 52px;
+}
+
+/* playable focus ring */
+[data-year-game]:focus {
+  box-shadow: var(--yg-shadow), 0 0 0 3px rgba(10, 36, 106, 0.25);
+}
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .yg-shell button,
+  [data-year-game] button {
+    transition: none;
+  }
+}
+
+/* slightly wider on larger iframe */
+@media (min-width: 640px) {
+  .yg-shell,
+  [data-year-game] {
+    max-width: 580px;
+  }
+}

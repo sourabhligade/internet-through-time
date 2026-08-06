@@ -2639,7 +2639,7 @@
         "label": "P1 densify",
         "do": "Platform + dev",
         "sites": [
-          { "name": "Messenger bots", "href": "sites/messenger/index.html", "do": "F8 bots" },
+          { "name": "Messenger Platform", "href": "sites/messenger/index.html", "do": "F8 2015 business · mass bots 2016" },
           { "name": "Swift OSS", "href": "sites/swift/index.html", "do": "Dec 3" },
           { "name": "Snap Discover", "href": "sites/snapchat/discover.html", "do": "Jan 27 grid" },
           { "name": "Discord", "href": "sites/discord/index.html", "do": "Gamer seed" },
@@ -2818,23 +2818,30 @@
         ]
       },
       {
-      {
         "label": "Modern websites 2017",
         "do": "Streaming · creator · chat · AMP",
         "sites": [
           { "name": "Modern web lobby", "href": "sites/modern/index.html", "do": "Cards · mobile-first literacy", "steps": ["3 boxes", "Save"] },
-          { "name": "Netflix", "href": "sites/netflix/modern.html", "do": "Queue tiles", "steps": ["Add title", "Save"] },
-          { "name": "Spotify", "href": "sites/spotify/modern.html", "do": "Play free-tier residual" },
-          { "name": "YouTube", "href": "sites/youtube/modern.html", "do": "Watch theater" },
-          { "name": "Medium", "href": "sites/medium/modern.html", "do": "Draft · clap" },
-          { "name": "Discord", "href": "sites/discord/modern.html", "do": "Send message" },
-          { "name": "AMP news", "href": "sites/amp/index.html", "do": "Mobile lightning literacy" }
+          { "name": "Netflix", "href": "sites/netflix/modern.html", "do": "Browse → detail → My List", "steps": ["Pick title", "Add list", "Save"] },
+          { "name": "Spotify", "href": "sites/spotify/modern.html", "do": "Search → play free-tier residual", "steps": ["Search", "Play", "Save"] },
+          { "name": "YouTube", "href": "sites/youtube/modern.html", "do": "Search → watch → related", "steps": ["Search", "Watch", "Save"] },
+          { "name": "Medium", "href": "sites/medium/modern.html", "do": "Draft → clap theater", "steps": ["Draft", "Clap", "Save"] },
+          { "name": "Discord", "href": "sites/discord/modern.html", "do": "Server → channel → message · Nitro literacy", "steps": ["Pick channel", "Send", "Nitro note", "Save"] },
+          { "name": "AMP news", "href": "sites/amp/index.html", "do": "Lightning load literacy · not Instant Articles", "steps": ["Open AMP", "Compare weight", "Save"] }
         ]
       },
+      {
+        "label": "Breach literacy",
+        "do": "Consumer data trust",
+        "sites": [
+          { "name": "Equifax 2017", "href": "sites/equifax/index.html", "do": "Sep disclose · ~147M class", "steps": ["Date", "Scale", "What stolen", "Save"] }
+        ]
+      },
+      {
         "label": "Desktop residual",
         "do": "Still Chrome habit",
         "sites": [
-          { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "Residual" },
+          { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "Mass default residual" },
           { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Habit browser" }
         ]
       }

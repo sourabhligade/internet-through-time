@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Google News (2007)</title>
+<link rel="stylesheet" href="../../../../css/period-2016.css">
+<style>
+.gn-tab { margin-right: 10px; font-size: 13px; cursor: pointer; color: #00c; text-decoration: underline; background:none; border:0; padding:0; font-family:Arial,sans-serif; }
+.gn-tab.active { font-weight: bold; color: #000; text-decoration: none; cursor: default; }
+.gn-panel { display: none; }
+.gn-panel.active { display: block; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="720" align="center" cellpadding="8" style="font-family:Arial,sans-serif;font-size:13px">
+<tr><td>
+ <img src="../../../../assets/period/2007/googlenews/logo.gif" width="24" height="24" alt="">
+ <b style="font-size:18px">Google News</b>
+ <p>Search and browse thousands of continuously updated news sources.
+ Stories are grouped automatically into clusters. Still the algorithm-as-editor product —
+ next to the <b>blogosphere</b> and the <b>vote front pages</b>.</p>
+ <p id="gn-tabs">
+ <button type="button" class="gn-tab active" data-gn-tab="top">Top Stories</button>
+ <button type="button" class="gn-tab" data-gn-tab="world">World</button>
+ <button type="button" class="gn-tab" data-gn-tab="us">U.S.</button>
+ <button type="button" class="gn-tab" data-gn-tab="biz">Business</button>
+ <button type="button" class="gn-tab" data-gn-tab="tech">Sci/Tech</button>
+ </p>
+ <form data-google-search action="../google/search.html" method="get" style="margin:8px 0">
+ <input name="q" size="40" placeholder="Search news…">
+ <input type="submit" value="Search News">
+ </form>
+ <hr>
+ <div class="gn-panel active" data-gn-panel="top">
+ <h3 style="margin-bottom:4px">Top Stories <font size="1" color="#666">(museum seed · 2007 energy)</font></h3>
+ <ul>
+ <li><b>Web 2.0 boom / Valley M&amp;A returns</b> — Flickr, MySpace, Skype deal chatter</li>
+ <li><b>Always-on broadband</b> — video upload and podcasts enter mainstream wire copy</li>
+ <li><b>Tech IPO / Google afterlife</b> — post-IPO product expansion (Maps, more)</li>
+ <li><b>International wires</b> — auto-clustered world desks</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="world">
+ <h3>World</h3>
+ <ul>
+ <li>Multi-source international clusters (wires, not blogs)</li>
+ <li>Markets and diplomacy desks auto-grouped</li>
+ <li>Regional politics and cabinet coverage</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="us">
+ <h3>U.S.</h3>
+ <ul>
+ <li>Domestic politics and campaign-cycle wires</li>
+ <li>Business + tech cross-clusters</li>
+ <li>Culture desk: media, gadgets, internet use</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="biz">
+ <h3>Business</h3>
+ <ul>
+ <li>News Corp → Intermix / MySpace $580M (Jul 18 energy)</li>
+ <li>eBay → Skype ~$2.6B (Sep 12 energy)</li>
+ <li>Yahoo acquires Flickr / later del.icio.us (tag buys)</li>
+ <li>Startup raises tracked on blogs before wires catch up</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="tech">
+ <h3>Sci/Tech</h3>
+ <ul>
+ <li><a href="../maps/index.html">Google Maps</a> public · Ajax named · mashups</li>
+ <li><a href="../youtube/index.html">YouTube</a> beta · Flash video culture</li>
+ <li><a href="../firefox/index.html">Firefox</a> vs IE 6 share arguments</li>
+ <li><a href="../itunes/index.html">iTunes podcasts</a> · Diggnation-class shows</li>
+ </ul>
+ </div>
+ <div style="font-size:12px;background:#ffffcc;border:1px solid #cc0;padding:8px;margin:12px 0">
+  <b>News vs blog vs votes (2007)</b> —
+  <b>Google News</b> (wires, clusters) ·
+  <a href="../daypop/index.html">Daypop</a> / <a href="../technorati/index.html">Technorati</a> (blog pulse) ·
+  <a href="../digg/index.html">Digg</a> / <a href="../reddit/index.html">Reddit</a> (crowd) ·
+  <a href="../slashdot/index.html">Slashdot</a> (nerd editorial) ·
+  <a href="../cnn/index.html">CNN</a>
+ </div>
+ <p style="font-size:11px;color:#444">
+ Reconstruction — sample clusters only.
+ <a href="../google/index.html">← Google Web</a> ·
+ <a href="../../pages/home.html">2007 Start</a>
+ </p>
+</td></tr>
+</table>
+<script>
+(function(){
+ var tabs = document.querySelectorAll("[data-gn-tab]");
+ var panels = document.querySelectorAll("[data-gn-panel]");
+ for (var i = 0; i < tabs.length; i++) {
+ tabs[i].addEventListener("click", function () {
+ var id = this.getAttribute("data-gn-tab");
+ for (var j = 0; j < tabs.length; j++) tabs[j].classList.remove("active");
+ this.classList.add("active");
+ for (var k = 0; k < panels.length; k++) {
+ panels[k].classList.toggle("active", panels[k].getAttribute("data-gn-panel") === id);
+ }
+ });
+ }
+})();
+</script>
+<script src="../../../../js/immersion-2016.js"></script>
+</body>
+</html>

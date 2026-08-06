@@ -1,0 +1,149 @@
+/* 2017 period — deltas on 2016 */
+@import url("period-2016.css");
+
+/* Nav / trail overflow fixes (dense year · narrow shell iframe).
+   data-itt-year lives on <html> in immersion pages, not always on <body>. */
+html[data-itt-year="2017"],
+html[data-itt-year="2017"] body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+html[data-itt-year="2017"] body {
+  margin: 0;
+  padding: 0 0 52px; /* room for sticky wayfind */
+}
+html[data-itt-year="2017"] #itt-exhibit-nav,
+body.year-2017 #itt-exhibit-nav {
+  max-width: 100%;
+  overflow: hidden;
+}
+html[data-itt-year="2017"] #itt-first-night-bar,
+body.year-2017 #itt-first-night-bar {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+html[data-itt-year="2017"] table {
+  max-width: 100%;
+}
+html[data-itt-year="2017"] #itt-wayfind {
+  max-width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+/* period-1995 chain uses -8px nav margins for edge-to-edge; with body margin 0 that overflows */
+html[data-itt-year="2017"] .itt-nav-slot {
+  margin: 0 0 8px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body.year-2017 .faceid-panel {
+  background: #111;
+  color: #f5f5f7;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 12px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+body.year-2017 .notch-bar {
+  height: 18px;
+  background: #000;
+  border-radius: 10px 10px 0 0;
+  margin: -4px -4px 10px;
+  position: relative;
+}
+body.year-2017 .notch-bar::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 10px;
+  background: #1a1a1a;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+}
+body.year-2017 .fortnite-drop {
+  background: #1a237e;
+  color: #fff;
+  border: 2px solid #00bcd4;
+  padding: 12px;
+}
+body.year-2017 .crypto-warn {
+  background: #fff8e1;
+  border: 2px solid #f9a825;
+  padding: 10px;
+}
+body.year-2017 .wannacry-panel {
+  background: #1b1b1b;
+  color: #c8e6c9;
+  border: 2px solid #c62828;
+  padding: 12px;
+  font-family: Consolas, monospace;
+}
+body.year-2017 .twitter-composer {
+  border: 1px solid #1da1f2;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+}
+body.year-2017 .metoo-careful {
+  background: #fafafa;
+  border-left: 4px solid #6a1b9a;
+  padding: 12px;
+}
+body.year-2017 .netflix-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+body.year-2017 .netflix-tile {
+  width: 100px;
+  height: 56px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+body.year-2017 .netflix-tile.is-selected {
+  border-color: #e50914;
+}
+body.year-2017 .discord-chat {
+  background: #36393f;
+  color: #dcddde;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 120px;
+  font-size: 13px;
+}
+body.year-2017 .amp-bolt {
+  background: #fff;
+  border: 1px solid #005af0;
+  padding: 10px;
+}
+body.year-2017 .equifax-alert {
+  background: #ffebee;
+  border: 1px solid #c62828;
+  padding: 10px;
+}
+body.year-2017 .spotify-green {
+  background: #1db954;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  padding: 8px 14px;
+}
+body.year-2017 .yt-watch {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 12px;
+}
