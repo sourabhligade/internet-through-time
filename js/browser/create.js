@@ -887,6 +887,26 @@
            progressive-image drip (that used to keep .loading + dead links). */
         setLoading(false);
         applyProgressiveImages(doc);
+        /* Year games (Box Shift, etc.) need iframe focus for Arrow/WASD */
+        try {
+          var clean = path.split("?")[0];
+          if (/playable\/game\.html$/i.test(clean) || doc.querySelector("[data-year-game]")) {
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+              } catch (eF) { /* */ }
+            }, 80);
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+                var gh = doc.querySelector("[data-year-game]");
+                if (gh && gh.focus) gh.focus();
+              } catch (eF2) { /* */ }
+            }, 500);
+          }
+        } catch (eGameFocus) { /* */ }
       } catch (err) {
         finishDocumentLoad(0);
       }
@@ -1827,9 +1847,22 @@
       try {
         if (sessionStorage.getItem(key) === "1") return;
         if (localStorage.getItem(key) === "1") return;
+        /* UX strip coach (js/ux/shell-coach.js) already dismissed */
+        if (localStorage.getItem("itt-ux-coach-seen-" + YEAR) === "1") return;
       } catch (e) {
         return;
       }
+      /* Prefer non-blocking strip when UX pack is on — skip modal wall */
+      try {
+        if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("shellCoach") && ITT.UX.ShellCoach) {
+          if (typeof ITT.UX.ShellCoach.boot === "function") {
+            ITT.UX.ShellCoach.boot(YEAR);
+          }
+          /* Strip will mark its own key; also mark legacy so we don't double later */
+          return;
+        }
+      } catch (eUx) { /* fall through to legacy modal */ }
+
       var browserLabel = "Netscape";
       if (TITLE_SUFFIX && /Internet Explorer/i.test(TITLE_SUFFIX)) browserLabel = "Internet Explorer";
       else if (config.connectBrowserLine && /Internet Explorer/i.test(config.connectBrowserLine)) {
@@ -2078,6 +2111,15 @@
       if (overlay) overlay.classList.remove("hidden");
     }
 
+    function focusContent() {
+      try {
+        if (iframe) {
+          iframe.focus();
+          if (iframe.contentWindow) iframe.contentWindow.focus();
+        }
+      } catch (eFc) { /* */ }
+    }
+
     // Expose for immersion iframe / debugging
     var api = {
       year: YEAR,
@@ -2089,7 +2131,8 @@
       perf: PERF,
       getPrefs: function () { return prefs; },
       setSecureMode: setSecureMode,
-      maybePhoneEvent: maybePhoneEvent
+      maybePhoneEvent: maybePhoneEvent,
+      focusContent: focusContent
     };
     ITT.activeBrowser = api;
     return api;

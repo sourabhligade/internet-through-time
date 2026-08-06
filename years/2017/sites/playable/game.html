@@ -2,22 +2,35 @@
 <html lang="en" data-itt-year="2017">
 <head>
 <meta charset="utf-8">
-<title>Year playable — 2017</title>
+<title>Storm Scan — 2017</title>
 <link rel="stylesheet" href="../../../../css/period-2017.css">
-<link rel="stylesheet" href="../../../../css/year-playable.css">
+<link rel="stylesheet" href="../../../../css/year-game-ui.css">
 </head>
-<body bgcolor="#f0f0f0" style="margin:0;padding:12px;font-family:Arial,sans-serif">
+<body class="yg-body yg-year-2017" bgcolor="#111">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p style="font-size:12px;max-width:560px;margin:0 auto 8px">
- <a href="../../pages/home.html">Starting Point 2017</a> ·
- <a href="index.html">Playables lobby</a>
-</p>
-<div style="max-width:560px;margin:0 auto;padding:12px;background:#fff;border:1px solid #ccc">
- <h1 style="font-size:18px">2017 playables</h1>
- <p>Full signature year game for 2017 is residual densify (Stories / PoGO culture toys below).
- 2015 Blob Rush remains on the prior year.</p>
- <div data-year-playable data-year="2017"></div>
+<div class="itt-year-game yg-shell" data-year-game data-year="2017" data-game-id="stormscan" tabindex="0" style="color:#eee">
+  <h1>Storm Scan · 2017</h1>
+  <p style="margin:0 0 8px">Multi-step: fill the <b>Face ID scan</b> bar <i>and</i> clear storm nodes. Educational theater only.</p>
+  <p class="honesty yg-honesty">No real biometrics · no Fortnite skins · key <code>itt17-game-stormscan</code></p>
+  <div class="play-hud" style="margin:8px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+    <button type="button" data-game-start>Start</button>
+    <button type="button" data-scan-click style="padding:8px 12px;background:#2997ff;color:#000;border:none;font-weight:bold">Look / scan</button>
+    <span><b data-game-score>0</b></span>
+    <span>Best: <b data-game-best>0</b></span>
+  </div>
+  <div style="height:18px;background:#333;border:1px solid #555;margin:8px 0">
+    <div data-scan-fill style="height:100%;width:0%;background:#69f0ae"></div>
+  </div>
+  <p data-itt-action-status class="yg-status" style="font-size:12px;min-height:1.2em;color:#b9f6ca">Press Start</p>
+  <div data-game-field style="position:relative;height:200px;background:#1a1a2e;border:1px solid #7c4dff;margin:8px 0"></div>
+  <p style="font-size:11px;margin-top:12px;color:#888">
+    <a href="index.html" style="color:#81d4fa">← Playables</a> ·
+    <a href="../../pages/home.html" style="color:#81d4fa">Starting Point 2017</a> ·
+    <a href="../iphone/x.html" style="color:#81d4fa">Face ID room</a>
+  </p>
 </div>
-<script src="../../../../js/immersion-2017.js"></script>
+<script src="../../../../js/games/year-game-boot.js"></script>
+<script src="../../../../js/games/year-2017-stormscan.js"></script>
+<script src="../../../../js/immersion-2017.js" defer></script>
 </body>
 </html>

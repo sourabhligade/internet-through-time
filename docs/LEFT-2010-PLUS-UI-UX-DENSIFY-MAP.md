@@ -1,9 +1,10 @@
 # What’s left — 2010 → future years · UI/UX · densify map
 
-**Date:** 2026-08-03  
+**Date:** 2026-08-03 · **Updated:** 2026-08-06  
 **Purpose:** One **goal-oriented map** of residual work for **2010 and later years**, where **UI/UX can still improve**, and **under-covered period sites / culture rooms** worth building — with **artifacts, sources, and step-by-step goals**.  
 **Not an implement pass.** This freezes “what’s open” so you can pick work deliberately.  
-**Canonical ship truth:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · scale: [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) · hub UX plan: [`UI-UX-IMPROVEMENT-PLAN.md`](UI-UX-IMPROVEMENT-PLAN.md)
+**Canonical ship truth:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · scale: [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) · hub UX plan: [`UI-UX-IMPROVEMENT-PLAN.md`](UI-UX-IMPROVEMENT-PLAN.md)  
+**All-years implementable backlog (1994–2018):** [`YEAR-IMPROVEMENTS-RESEARCH-IMPLEMENTABLE-2026-08-06.md`](YEAR-IMPROVEMENTS-RESEARCH-IMPLEMENTABLE-2026-08-06.md)
 
 **Legal / product rules (always)**
 
@@ -23,18 +24,21 @@
 | **2011** | **Museum-ready** | `itt11` | Full | CAPTURE pixels · light continuity voice · densify residual |
 | **2012** | **Museum-ready** | `itt12` | Full | CAPTURE pixels · optional Win8 immersive · forest voice |
 | **2013** | **Museum-ready** (2026-08-05) | `itt13` | Full + shell-honesty | L4 WA stills · multipage polish |
-| **2014** | **Museum-ready** (2026-08-05) | `itt14` | **Richest** late pack | L4 CAPTURE stills · Gamergate careful · clone scrub |
-| **2015** | **Museum-ready** (2026-08-05) | `itt15` | Full pack + Discover/Discord multi-step densify | L4 WA stills · shell-honesty optional |
-| **2016** | **Museum-ready** (2026-08-05) | `itt16` | Full mid pack + densify | L4 CAPTURE · Musical.ly/Allo/VR deepen · election optional |
-| **2017+** | **Not on disk · hub locked** | — | — | Full research freeze → scaffold → MVP (see §6) |
+| **2014** | **MVP live** | `itt14` | Full ideal pack (2026-08-07) | L4 CAPTURE · densify gems (Secret/Yik Yak) |
+| **2015** | **MVP live** | `itt15` | Full ideal pack (2026-08-07) | L4 WA stills · Discover/Discord deepen |
+| **2016** | **MVP live** | `itt16` | Full ideal pack (2026-08-07) | Musical.ly/Allo/VR densify residual |
+| **2017** | **MVP live** | `itt17` | Full ideal pack (2026-08-07) | L4 pixels · complex modern deepen |
+| **2018** | **MVP live** | `itt18` | Full ideal pack (2026-08-07) | CMP multipage · L4 logos |
+| **2019+** | **Not on disk · hub locked** | — | — | Full research freeze first |
 
-**Honesty note:** [`NON-DONE.md`](NON-DONE.md) still says “2014+ not started” in places — **stale**. Trust **DISK-TRUTH** for hub **1994–2016** playable.
+**Honesty note:** Trust **DISK-TRUTH** for hub **1994–2018** playable. Prefer [`YEAR-IMPROVEMENTS-RESEARCH-IMPLEMENTABLE-2026-08-06.md`](YEAR-IMPROVEMENTS-RESEARCH-IMPLEMENTABLE-2026-08-06.md) for ordered implement work.
 
 ```
 Ship spine today
-  Hub unlock …… 1994 ──► 2016   │  2017+ locked
-  Museum-ready … 2010–2012      │  MVP: 2013–2016
-  Full e2e ideal  2010–2014     │  2015 pack thin · 2016 mid
+  Hub unlock …… 1994 ──► 2018   │  2019+ locked
+  Museum-ready … 1994–2013      │  MVP residual: 2014–2018 content gems
+  Full e2e ideal  1994–2018     │  packs shipped 2026-08-07 (W2 closed)
+  P0 next ……… densify gems · U6 density · optional 2019 freeze
 ```
 
 ---

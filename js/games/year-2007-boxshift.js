@@ -340,13 +340,23 @@
       }
     });
 
-  // resume last level
+  // resume: next uncleared level (not past end)
   var prog = loadProgress();
-  if (prog.maxLevelCleared > 0) level = Math.min(prog.maxLevelCleared, LEVELS.length - 1);
+  if (prog && prog.maxLevelCleared > 0) {
+    level = Math.min(Math.max(0, prog.maxLevelCleared), LEVELS.length - 1);
+  }
 
   parse(LEVELS[level]);
   render();
   if (statusEl)
     statusEl.textContent =
-      "Arrows move · R restart · N/P level · A/C portals · o+D button door · push B to G";
+      "Click board for focus · arrows / WASD / D-pad · R restart · N next · push B onto G";
+
+  /* Extra focus steal — shell parent often keeps keyboard after navigate */
+  if (YG && YG.focusHost) {
+    YG.focusHost("[data-year-game]");
+    setTimeout(function () {
+      if (YG && YG.focusHost) YG.focusHost("[data-year-game]");
+    }, 600);
+  }
 })();

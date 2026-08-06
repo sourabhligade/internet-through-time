@@ -1,13 +1,13 @@
 # Non-done map — Internet Through Time
 
 **Date:** 2026-08-03  
-**Updated:** 2026-08-03 — hub **1994–2016** playable · residual map [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md).  
+**Updated:** 2026-08-06 — hub **1994–2018** playable · **2018 MVP live** · residual map [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md).  
 **Purpose:** Single checklist of what is **still open** vs playable ship.  
-**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2016** + games wing.  
-**Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md)
+**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2018** + games wing.  
+**Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md)
 
 **Ship truth (do not re-open as “unbuilt”):**  
-All years **1994–2016** are on disk and hub-unlocked. Residual below is polish, densify, forever optional, and **2017+** locked until research freeze.
+All years **1994–2018** are on disk and hub-unlocked. Residual below is polish, densify, forever optional, and **2019+** locked until research freeze.
 
 ---
 
@@ -113,7 +113,7 @@ Does **not** block visitor-facing flows.
 | **N25** | TO-100 plan checkbox hygiene | `[ ]` | `PLAN-2011-2012-2013-TO-100.md` still has unchecked phase boxes while baseline table says ~L3 for 2011–13 |
 | **N26** | Museum bar file naming | `[ ]` | `MUSEUM-READY-BAR-1994-2012.md` body claims through 2013 — rename/extend honesty |
 | **N27** | Git / branch hygiene | `[ ]` | Branch name lags (`…1994-2008…`); hub WIP uncommitted; commit/push only when asked |
-| **N28** | **2017+** not started | `[ ]` | Hub locked by design until research freeze + implement · **2014–2016 MVP live** |
+| **N28** | **2019+** not started | `[ ]` | Hub locked by design until research freeze + implement · **2014–2018 MVP live** |
 
 ---
 
@@ -140,10 +140,12 @@ Do **not** treat as backlog unless product scope changes:
 | **2007–2010** | Done | L4 WA pixels; light continuity voice (**N8**) |
 | **2011–2012** | ~L3 | L4 WA only |
 | **2013** | MVP ~L3 | L4 WA; guided-flow parity residual |
-| **2014** | MVP live | CAPTURE · densify gems (Secret/Yik Yak/Ello) · clone scrub |
-| **2015** | MVP live | e2e pack parity · densify · guided flows residual |
-| **2016** | MVP live | CAPTURE · densify suite · selective polish |
-| **2017+** | Not started | Research freeze + implement (**N28**) |
+| **2014** | MVP live | CAPTURE · densify gems (Secret/Yik Yak/Ello) · **e2e ideal pack closed 2026-08-07** |
+| **2015** | MVP live | densify gems residual · **full e2e pack shipped 2026-08-07** |
+| **2016** | MVP live | CAPTURE · selective densify gems · **full e2e pack shipped 2026-08-07** |
+| **2017** | MVP live | L4 pixels residual · **e2e pack expand shipped 2026-08-07** |
+| **2018** | MVP live | L4 logos · CMP multipage optional · **e2e pack expand shipped 2026-08-07** |
+| **2019+** | Not started | Research freeze + implement (**N28**) |
 | **Hub / games** | Live | Commit hub polish when asked; games wing done |
 
 ---

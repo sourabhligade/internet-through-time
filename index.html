@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Internet Through Time</title>
   <meta property="og:title" content="The Internet Through Time">
-  <meta property="og:description" content="Museum of the live Web, 1994–2017. Period browsers, real product flows, localStorage-only theater — not a retro skin pack.">
+  <meta property="og:description" content="Museum of the live Web, 1994–2018. Period browsers, real product flows, localStorage-only theater — not a retro skin pack.">
   <meta property="og:type" content="website">
-  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2017. Open a year: desktop, browser chrome, sites, and product flows reconstructed from archives — not a modern redesign.">
+  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2018. Open a year: desktop, browser chrome, sites, and product flows reconstructed from archives — not a modern redesign.">
   <link rel="stylesheet" href="css/hub.css">
   <link rel="stylesheet" href="css/period-announce.css">
+  <link rel="stylesheet" href="css/ux-museum.css">
   <link rel="icon" href="favicon.gif" type="image/gif">
 </head>
 <body>
@@ -26,27 +27,38 @@
           reconstructed from archives, not a retro skin pack.
         </p>
         <p class="hub-stats" aria-label="Museum coverage">
-          <b>24 years open</b> · 1994–2017 · progress stays in this browser only
+          <b>25 years open</b> · 1994–2018 · progress stays in this browser only
           · <a href="#passport" class="hub-passport-link">Passport stamps</a>
         </p>
 
-        <!-- Primary first-run path: one clear row -->
+        <!-- U1-S1: one solid primary FTUE path (see docs/UX-IMPROVEMENT-PHASES-…) -->
         <div class="start-primary-row" role="navigation" aria-label="Primary start">
-          <a class="start-btn start-primary" id="begin-2017" href="/years/2017/?trail=2017-start&amp;room=pages%2Fabout.html">Start 2017 · Face ID</a>
-          <button type="button" class="start-btn start-primary" id="begin-2017-tour" data-itt-hub-2017-start>2017 guided tour →</button>
-          <span id="resume-wrap" class="resume-wrap hidden">
-            <a id="resume-link" class="start-btn start-resume" href="#">Continue where you left off</a>
-            <span id="resume-sub" class="resume-sub hidden" aria-hidden="true"></span>
-          </span>
-          <a class="start-btn" id="begin-1994" href="years/1994/">Or begin 1994 →</a>
-          <a class="start-btn" href="#directory">Browse all years ↓</a>
-          <a class="start-btn" href="games/index.html">Period web games →</a>
+          <p class="start-ftue-label">Start here (about 15–20 minutes)</p>
+          <div class="start-ftue-primary">
+            <button type="button" class="start-btn start-primary" id="begin-first-night" data-itt-night-start>
+              Start first night →
+            </button>
+            <span id="resume-wrap" class="resume-wrap hidden">
+              <a id="resume-link" class="start-btn start-resume" href="#">Continue where you left off</a>
+              <span id="resume-sub" class="resume-sub hidden" aria-hidden="true"></span>
+            </span>
+          </div>
+          <div class="start-ftue-secondary">
+            <button type="button" class="start-btn" id="begin-2018-tour" data-itt-hub-2018-start>2018 tour · GDPR</button>
+            <a class="start-btn" id="begin-2018" href="/years/2018/?trail=2018-start&amp;room=pages%2Fabout.html">Open 2018</a>
+            <button type="button" class="start-btn" id="begin-2017-tour" data-itt-hub-2017-start>2017 tour</button>
+            <a class="start-btn" id="begin-2017" href="/years/2017/?trail=2017-start&amp;room=pages%2Fabout.html">Open 2017</a>
+            <a class="start-btn" id="begin-1994" href="years/1994/">Begin 1994 →</a>
+            <a class="start-btn" href="#directory">Browse all years ↓</a>
+            <a class="start-btn" href="games/index.html">Period web games →</a>
+          </div>
         </div>
         <p class="start-hint">
-          <b>Newest year:</b> Start in <b>2017</b> (Face ID · free Fortnite · complex web) or take the
-          <b>2017 guided tour</b>. Classic path: begin in <b>1994</b> and walk forward.
-          Inside a year: <b>Starting Point</b> = year map · <b>← Year menu</b> returns here.
+          <b>First night</b> walks 1994 → Google → YouTube → Instagram → Stories → <b>2018 GDPR</b>.
+          Or jump to a year below. Inside a year: <b>Starting Point</b> = year map · <b>← Year menu</b> returns here.
+          Progress (passport) stays in this browser only.
         </p>
+
 
         <!-- Path of the day: one curated trail (~5 min) -->
         <div class="path-of-week" id="path-of-week" role="region" aria-label="Suggested trail">
@@ -74,6 +86,7 @@
             <a class="start-btn" href="years/2015/">2015 · Watch · Win10</a>
             <a class="start-btn" href="years/2016/">2016 · Stories · PoGO</a>
             <a class="start-btn" href="years/2017/">2017 · Face ID · Fortnite</a>
+            <a class="start-btn" href="years/2018/">2018 · GDPR · TikTok</a>
           </div>
         </div>
 
@@ -92,12 +105,12 @@
     <!-- Single announcement surface (ticker + games combined) -->
     <div class="hub-ann-strip hub-ann-strip-solo" role="region" aria-label="Museum news">
       <span class="ann-badge ann-badge-new">New</span>
-      <b>24 years open · 1994–2017.</b>
+      <b>25 years open · 1994–2018.</b>
       Games wing live —
       <a href="games/index.html">period web games</a>
       (Miniclip / Newgrounds / Kongregate culture · arcade) ·
       <a href="games/announcements.html">news board »</a>
-      <span class="hub-ann-extra"> · Face ID · free Fortnite BR · 280 · complex modern web</span>
+      <span class="hub-ann-extra"> · GDPR · TikTok · IGTV · platform trust · −8% hostnames</span>
     </div>
 
     <!-- Compact thesis: one line + expand -->
@@ -523,6 +536,25 @@
 
     <hr class="rainbow-hr" aria-hidden="true">
 
+    <p class="era-heading" id="era-2018">2018 · GDPR · TikTok · platform trust</p>
+    <p class="era-note">GDPR consent UI · Cambridge Analytica / Congress careful literacy · TikTok mass merge · IGTV · hostname −8% · complex Netflix/Discord densify.</p>
+    <div class="year-grid">
+      <a class="year-card available y2018" href="years/2018/" data-year="2018">
+        <div class="motif" aria-hidden="true"></div>
+        <div class="year-card-inner">
+          <div class="year-row">
+            <p class="year">2018</p>
+            <span class="era-chip">GDPR · TikTok · trust</span>
+          </div>
+          <p class="label">Consent banners go global, platforms face Congress, and short video industrializes under the TikTok name — while hostnames cool after 2017’s boom.</p>
+          <p class="scale">Live Stats June 1,630,322,579 (−8%) · ITU ~3.9B / 51.2% · still not Meta / Reels / COVID</p>
+          <p class="meta">Enter immersion</p>
+        </div>
+      </a>
+    </div>
+
+    <hr class="rainbow-hr" aria-hidden="true">
+
 <section class="compare" id="compare">
       <h2>How each year is different</h2>
       <p class="compare-intro">
@@ -696,12 +728,12 @@
 
     <footer class="hub-footer">
       The Internet Through Time · Museum-style web history ·
-      <a href="#directory">Years 1994–2017</a> ·
+      <a href="#directory">Years 1994–2018</a> ·
       <a href="games/index.html">Web games wing</a> ·
       <a href="#compare">Compare</a> ·
       <a href="#how">How to use</a> ·
       <a href="#about">About / legal</a>
-      · 2017+ planned
+      · 2019+ planned
     </footer>
   </div>
   <script src="js/museum-progress.js"></script>
@@ -733,7 +765,8 @@
       "2014": "WhatsApp · Heartbleed · iPhone 6 · 1B",
       "2015": "Watch ships · free Win10 · Periscope · Music",
       "2016": "Stories · Pokémon GO · Reactions · Vine",
-      "2017": "Face ID · Fortnite free BR · 280 · complex web"
+      "2017": "Face ID · Fortnite free BR · 280 · complex web",
+      "2018": "GDPR · TikTok · platform trust · IGTV · −8%"
     };
 
     /* Curated short trails — rotate by day-of-year */
@@ -779,7 +812,7 @@
       var link = document.getElementById("resume-link");
       var sub = document.getElementById("resume-sub");
       var begin = document.getElementById("begin-1994");
-      if (wrap && link && /^(199[4-9]|200[0-9]|201[0-7])$/.test(y)) {
+      if (wrap && link && /^(199[4-9]|200[0-9]|201[0-8])$/.test(y)) {
         link.href = "years/" + y + "/";
         var hint = YEAR_HINT[y] || "";
         link.textContent = hint ? ("Continue " + y + " · " + hint) : ("Continue " + y + " »");
@@ -805,6 +838,23 @@
       var passRoot = document.getElementById("itt-passport-root");
       if (passRoot && window.ITT && ITT.MuseumProgress && ITT.MuseumProgress.renderHubPassport) {
         ITT.MuseumProgress.renderHubPassport(passRoot);
+      }
+      /* U1 primary: first night */
+      var hubNight = document.getElementById("begin-first-night");
+      if (hubNight && window.ITT && ITT.MuseumProgress && ITT.MuseumProgress.startFirstNight) {
+        hubNight.addEventListener("click", function () {
+          ITT.MuseumProgress.startFirstNight();
+          var fn = ITT.MuseumProgress.FIRST_NIGHT;
+          location.href = ITT.MuseumProgress.stepHref(fn[0], "first-night");
+        });
+      }
+      var hub2018 = document.getElementById("begin-2018-tour");
+      if (hub2018 && window.ITT && ITT.MuseumProgress && ITT.MuseumProgress.start2018) {
+        hub2018.addEventListener("click", function () {
+          ITT.MuseumProgress.start2018();
+          var steps18 = ITT.MuseumProgress.YEAR_2018_START;
+          location.href = ITT.MuseumProgress.stepHref(steps18[0], "2018-start");
+        });
       }
       var hub2017 = document.getElementById("begin-2017-tour");
       if (hub2017 && window.ITT && ITT.MuseumProgress && ITT.MuseumProgress.start2017) {

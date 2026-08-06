@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2018">
+<head>
+<meta charset="utf-8">
+<title>Instagram Video — 15 seconds · June 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2018.css">
+<script src="../../../../js/immersion-2018.js" defer></script>
+</head>
+<body class="igv-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="igv-wrap">
+ <div class="igv-nav">
+  <a href="index.html">← Instagram</a> · <a href="about.html">About</a> · <a href="../../pages/home.html">Start</a>
+ </div>
+ <div style="padding:12px 12px 0;font-size:12px;color:#555">
+  <b>June 20, 2013</b> — share up to <b>15 seconds</b> of video with filters. Competes with Vine’s 6s loops.
+ </div>
+ <div class="igv-filters">
+  <button type="button" data-igv-filter="Normal" class="is-on">Normal</button>
+  <button type="button" data-igv-filter="Cinema">Cinema</button>
+  <button type="button" data-igv-filter="Memo">Memo</button>
+  <button type="button" data-igv-filter="Neon">Neon</button>
+ </div>
+ <div class="igv-stage">
+  <div>▶ Video theater</div>
+  <div class="igv-chip"><span data-igv-filter-label>Normal</span> · max <b>15s</b></div>
+ </div>
+ <div class="igv-compose">
+  <input type="text" data-igv-caption placeholder="Write a caption…">
+  <button type="button" class="igv-share" data-igv-share>Share</button>
+ </div>
+ <div style="padding:0 12px 12px">
+  <div class="itt18-status" data-igv-status style="color:#060"></div>
+  <p class="itt18-ban">No Stories · no Reels · no Meta branding</p>
+ </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt18-ig-video";
+  var filter = "Normal";
+  var fl = document.querySelector("[data-igv-filter-label]");
+  var st = document.querySelector("[data-igv-status]");
+  var nodes = document.querySelectorAll("[data-igv-filter]");
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].addEventListener("click", function (ev) {
+      filter = ev.currentTarget.getAttribute("data-igv-filter") || "Normal";
+      if (fl) fl.textContent = filter;
+      for (var j = 0; j < nodes.length; j++) nodes[j].classList.remove("is-on");
+      ev.currentTarget.classList.add("is-on");
+    });
+  }
+  var share = document.querySelector("[data-igv-share]");
+  if (share) {
+    share.addEventListener("click", function () {
+      var cap = (document.querySelector("[data-igv-caption]") || {}).value || "";
+      var payload = { filter: filter, caption: cap, maxSec: 15, ts: Date.now() };
+      try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e) {}
+      var msg = "Shared video · 15s · " + filter + " · " + KEY;
+      if (st) st.textContent = msg;
+      try {
+        if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { status: st, kind: "ig-video" });
+        }
+      } catch (e2) {}
+    });
+  }
+});
+</script>
+</body>
+</html>

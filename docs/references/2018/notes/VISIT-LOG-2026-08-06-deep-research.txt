@@ -1,0 +1,86 @@
+2018 deep research visit log — 2026-08-06 (expanded multi-source)
+==================================================================
+Purpose: Multi-source harvest for museum year 2018 research freeze.
+Complex product websites with REAL multi-step flows.
+No years/2018 scaffold. Planned prefix itt18. Clone from years/2017/.
+
+SCALE
+- Live Stats June 2018: 1,630,322,579 (−8%)  [H18-01 primary]
+- Prior 2017: 1,766,926,408 (+69%) hostname boom then cooldown
+- Users: ITU end-2018 ~3.9 billion · 51.2% of world  [H18-09]
+- Live Stats June users cell often blank — do not invent; label ITU
+
+P0 SPINE (primary multi-source visits)
+- GDPR applies 25 May 2018
+  * EUR-Lex "GDPR applies from 25 May 2018"
+  * EUR-Lex GDPR summary "has applied since 25 May 2018"
+  * gdpr-info.eu / gdpr.eu overview (consent clear affirmative action class)
+- Cambridge Analytica / Facebook
+  * Guardian 17 Mar 2018 (~50M profiles harvested class)
+  * NYT 17 Mar 2018 simultaneous
+  * CNBC timeline: 50M → as many as 87M; Congress arc
+  * Congress.gov Senate hearing LC64510 (Apr 10 class, 87M in transcript)
+  * Careful framing: third-party app / friends API — not "hack only"
+- Zuckerberg Congress Apr 10–11 2018 (Senate joint + House)
+- TikTok musical.ly unite Aug 2 2018
+  * PRIMARY OPEN: newsroom.tiktok.com/en-us/musical-ly-and
+  * Unified app named TikTok; accounts/content/fans migrate
+  * For You feed + community feed; reaction; filters; 2h wellbeing
+  * Alex Zhu: musical.ly 100M MAU class
+  * Secondary: Variety, Hollywood Reporter (Musical.ly ends; migrate)
+  * Prior: ByteDance acquired Musical.ly Nov 2017 (2017 residual)
+- IGTV Jun 20 2018
+  * PRIMARY OPEN: techcrunch.com/2018/06/20/igtv/ (Constine)
+  * Up to 1 hour vertical; standalone app + TV button above Stories
+  * Channels; Browse; no ads at launch class; Systrom quote
+  * IG ~1B MAU narrative same window
+- Complex modern densify: Netflix My List, Spotify free, Discord+Nitro,
+  YouTube watch, Twitter 280 residual (from 2017 parent pattern)
+
+P1
+- iPhone XS/XR/Max Sep 12 2018 (CNBC): ~$749 / ~$999 / ~$1,099
+  Face ID residual densify (not new)
+- Google+ consumer sunset announce Oct 8 2018; offline Apr 2 2019 dual-date
+- Fortnite free BR residual (launched 2017; 2018 seasons densify)
+- Crypto winter literacy (not advice)
+- Discord Nitro: Early Supporter badge class before Oct 10 2018
+
+HARD BANS
+- Meta branding 2021
+- Reels 2020
+- COVID 2020
+- ChatGPT 2022+
+- Threads 2023
+- TikTok as if still only Musical.ly brand after Aug 2
+- Face ID as brand-new 2018 product (residual from 2017)
+- Real tracking / political targeting tools
+- Invent official brand logo pixels
+
+COMPLEX PRODUCT REAL FLOWS (UI mapped — see 2018-GOALS Parts 5–6)
+- GDPR: banner → manage prefs → rights literacy → save (itt18-gdpr)
+- Trust/CA: timeline → 3 literacy → careful → save (itt18-ca)
+- TikTok: merge honesty → clip → save (itt18-tiktok)
+- IGTV: channel → watch → date honesty → save (itt18-igtv)
+- Netflix: browse → My List → save (itt18-netflix)
+- Spotify / Discord / YouTube / Twitter: multi-step incomplete no write
+- State machines documented in GOALS Part 6
+
+FLOW MAP
+- ITT.flowMaps["2018"] drafted in js/config/flow-maps.js
+
+OUTPUT DOCS
+- docs/2018-READ-FIRST.md
+- docs/2018-RESEARCH.md
+- docs/2018-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md
+- docs/2018-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md
+- docs/2018-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md
+- docs/2018-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md  (full UI wireframes)
+- docs/2018-IMPLEMENTATION-PHASES-STEP-BY-STEP.md
+- docs/2018-MUSEUM-GRADE.md
+- docs/references/2018/CAPTURE-LOG.md
+- docs/references/2018/ARTIFACTS-MAP.md
+- docs/references/SCALE-LEDGER.md (2018 freeze row)
+- docs/DISK-TRUTH.md (2018 research freeze note)
+
+NEXT
+- Scaffold only when user says implement (clone years/2017 → years/2018, itt18)

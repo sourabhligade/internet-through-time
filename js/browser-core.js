@@ -23,7 +23,12 @@
     "browser/connect.js",
     "browser/load-theater.js",
     "browser/create.js",
-    "browser/year-boot.js"
+    "browser/year-boot.js",
+    /* UX pack (U1 shell coach · honesty chip) — remove these lines to disable */
+    "ux/flags.js",
+    "ux/copy-bank.js",
+    "ux/shell-coach.js",
+    "ux/boot-shell.js"
   ];
   for (var i = 0; i < parts.length; i++) {
     document.write('<script src="' + base + parts[i] + bust + '"><\/script>');

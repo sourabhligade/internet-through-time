@@ -147,9 +147,21 @@
   };
 
   /**
-   * Keyboard games run inside the year-shell iframe. Parent chrome often has focus,
-   * so Arrow/WASD never reach document listeners. Call this once per game page:
-   * makes host focusable, focuses it, re-focuses on pointer down.
+   * True when this document is the year content iframe (parent shell has chrome).
+   */
+  function inShellIframe() {
+    try {
+      return window.parent && window.parent !== window;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /**
+   * Keyboard games run inside the year-shell iframe. Parent chrome often keeps focus,
+   * so Arrow/WASD never reach iframe listeners — and host.focus() inside an unfocused
+   * iframe is a no-op. Fix: focus the iframe window first, then the host; also forward
+   * game keys from the parent document while a year-game page is open.
    */
   function focusHost(sel) {
     try {
@@ -160,47 +172,112 @@
       if (!host) return;
       if (!host.hasAttribute("tabindex")) host.setAttribute("tabindex", "0");
       host.style.outline = host.style.outline || "none";
-      try {
-        host.focus({ preventScroll: true });
-      } catch (e1) {
-        try {
-          host.focus();
-        } catch (e2) { /* */ }
-      }
-      if (host.getAttribute("data-itt-focus-bound") === "1") return;
-      host.setAttribute("data-itt-focus-bound", "1");
+
       function refocus() {
         try {
-          host.focus({ preventScroll: true });
-        } catch (e3) {
+          /* Must focus the iframe window before elements inside it can receive focus */
           try {
-            host.focus();
-          } catch (e4) { /* */ }
-        }
+            window.focus();
+          } catch (eW) { /* */ }
+          try {
+            if (document.body) document.body.focus();
+          } catch (eB) { /* */ }
+          try {
+            host.focus({ preventScroll: true });
+          } catch (e3) {
+            try {
+              host.focus();
+            } catch (e4) { /* */ }
+          }
+          /* Ask parent shell to hand focus to the content iframe */
+          try {
+            if (inShellIframe() && window.parent && window.parent.document) {
+              var ifr = window.parent.document.getElementById("content");
+              if (ifr) {
+                try {
+                  ifr.focus();
+                } catch (eI) { /* */ }
+                try {
+                  if (window.parent.ITT && window.parent.ITT.activeBrowser &&
+                      typeof window.parent.ITT.activeBrowser.focusContent === "function") {
+                    window.parent.ITT.activeBrowser.focusContent();
+                  }
+                } catch (eAB) { /* */ }
+              }
+            }
+          } catch (eP) { /* */ }
+        } catch (eR) { /* */ }
       }
+
+      refocus();
+      if (host.getAttribute("data-itt-focus-bound") === "1") return;
+      host.setAttribute("data-itt-focus-bound", "1");
       host.addEventListener("mousedown", refocus);
       host.addEventListener("touchstart", refocus, { passive: true });
       host.addEventListener("click", refocus);
-      // Also try once after immersion injects nav
-      setTimeout(refocus, 300);
-      setTimeout(refocus, 1000);
+      /* Immersion injects nav late; re-steal focus a few times */
+      setTimeout(refocus, 100);
+      setTimeout(refocus, 400);
+      setTimeout(refocus, 1200);
     } catch (e) { /* */ }
   }
 
   /**
-   * Bind keydown that works even if focus drifts; still prefers host focus.
-   * handler(e) — return true if handled.
+   * Bind keydown that works even if focus is stuck on parent shell chrome.
+   * handler(e) — return true if handled (then we preventDefault).
    */
   function onKeys(handler) {
     function wrap(e) {
       try {
+        /* Ignore pure browser chrome shortcuts on parent (ctrl/meta) */
+        if (e && (e.ctrlKey || e.metaKey || e.altKey)) return;
+        /* If typing in an input/textarea, don't steal */
+        var t = e && e.target;
+        if (t) {
+          var tag = (t.tagName || "").toLowerCase();
+          if (tag === "input" || tag === "textarea" || tag === "select" || t.isContentEditable) {
+            return;
+          }
+        }
         if (handler(e)) {
           if (e.preventDefault) e.preventDefault();
+          if (e.stopPropagation) e.stopPropagation();
         }
       } catch (err) { /* */ }
     }
     document.addEventListener("keydown", wrap, true);
     window.addEventListener("keydown", wrap, true);
+    /*
+     * Parent shell often keeps focus after navigate — Arrow/WASD never reach the iframe.
+     * Install one parent-level delegate that calls the current game page's handler.
+     */
+    try {
+      if (inShellIframe() && window.parent && window.parent.document) {
+        var P = window.parent;
+        P.__ittYearGameKeyHandler = wrap;
+        if (!P.__ittYearGameKeyBound) {
+          P.__ittYearGameKeyBound = true;
+          P.document.addEventListener(
+            "keydown",
+            function (e) {
+              try {
+                if (typeof P.__ittYearGameKeyHandler === "function") {
+                  P.__ittYearGameKeyHandler(e);
+                }
+              } catch (eH) { /* */ }
+            },
+            true
+          );
+        }
+        function clearParentHandler() {
+          try {
+            if (P.__ittYearGameKeyHandler === wrap) P.__ittYearGameKeyHandler = null;
+          } catch (eC) { /* */ }
+        }
+        window.addEventListener("pagehide", clearParentHandler);
+        window.addEventListener("unload", clearParentHandler);
+      }
+    } catch (ePar) { /* */ }
   }
 
   global.ITT = global.ITT || {};

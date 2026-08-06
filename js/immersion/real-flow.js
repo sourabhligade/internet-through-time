@@ -134,11 +134,18 @@
             btn.getAttribute("data-requires") || btn.getAttribute("data-req") || "[data-req]";
           var n = countChecked(doc, reqSel);
           if (n < min) {
-            feedback(
-              "REAL gate: complete at least " + min + " checks first (not a soft mock).",
-              st,
-              { error: true }
-            );
+            /* U2: era copy + pulse missing checkbox (js/ux/real-coach.js) */
+            var yInc = yearOf();
+            var msgInc =
+              ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+                ? ITT.UX.RealCoach.messageIncomplete(yInc, n, min)
+                : "REAL gate: complete at least " + min + " checks first (not a soft mock).";
+            try {
+              if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach) {
+                ITT.UX.RealCoach.pulseMissing(doc, reqSel);
+              }
+            } catch (ePulse) { /* */ }
+            feedback(msgInc, st, { error: true });
             return;
           }
           var field = btn.getAttribute("data-require-field");
@@ -147,7 +154,12 @@
             var fe = doc.querySelector(field);
             fieldVal = fe && fe.value != null ? String(fe.value).replace(/^\s+|\s+$/g, "") : "";
             if (fieldVal.length < 2) {
-              feedback("REAL gate: fill the required field first.", st, { error: true });
+              var yFld = yearOf();
+              var msgFld =
+                ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+                  ? ITT.UX.RealCoach.messageField(yFld)
+                  : "REAL gate: fill the required field first.";
+              feedback(msgFld, st, { error: true });
               return;
             }
           }
@@ -162,7 +174,12 @@
             ts: Date.now()
           };
           saveJSON(full, payload);
-          feedback("Saved REAL · " + full, st);
+          var yOk = yearOf();
+          var msgOk =
+            ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+              ? ITT.UX.RealCoach.messageSuccess(yOk, full)
+              : "Saved REAL · " + full;
+          feedback(msgOk, st);
           markUsed(btn.getAttribute("data-tour-id") || undefined);
           try {
             var MP = ITT.MuseumProgress;

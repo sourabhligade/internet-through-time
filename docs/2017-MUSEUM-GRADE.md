@@ -13,7 +13,7 @@
 | Bans | **[x]** | Meta · TikTok mass · Reels · PoC · trade · ripped Epic |
 | Flow map | **[x]** | `ITT.flowMaps["2017"]` |
 | Hub unlock | **[x]** | 24 years open |
-| e2e dedicated pack | **[ ]** | residual |
+| e2e dedicated pack | **[x]** | mvp · real · flows · densify · trail · shell · 2026-08-07 |
 | Pixel harvest | **[~]** | CSS reconstruction · brand invent banned |
 
 **Visitor path:** Hub → 2017 → Starting Point → P0 tour + complex modern rooms → `itt17-*` writes only on complete multi-step.

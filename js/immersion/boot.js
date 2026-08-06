@@ -250,6 +250,19 @@
         return Promise.resolve();
       })
       .then(function () {
+        /* UX pack for content pages — easy remove: delete this block */
+        return loadAll(base, [
+          "ux/flags.js",
+          "ux/copy-bank.js",
+          "ux/real-coach.js",
+          "ux/here-strip.js",
+          "ux/year-meter.js",
+          "ux/boot-content.js"
+        ]).catch(function () {
+          /* UX optional — immersion still works without it */
+        });
+      })
+      .then(function () {
         return loadScript(base + "immersion/registry.js");
       })
       .then(function () {
@@ -270,6 +283,11 @@
           return loadScript(base + "immersion/create.js");
         }).then(function () {
           bootCreate();
+          try {
+            if (ITT.UX && typeof ITT.UX.bootContent === "function") {
+              ITT.UX.bootContent(document);
+            }
+          } catch (eUxBoot) { /* */ }
           /* Defer the rest so YouTube/Maps/etc. paint and wire immediately */
           if (split.rest && split.rest.length) {
             var loadRest = function () {

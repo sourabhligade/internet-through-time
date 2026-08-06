@@ -2849,5 +2849,126 @@
     "year": "2017"
   };
 
+  ITT.flowMaps["2018"] = {
+    "thesis": "GDPR consent UI, platform trust (CA/Congress careful), TikTok mass merge, IGTV vertical long-form, hostname cooldown −8%.",
+    "shell": "Windows 10 mass default · Chrome habit · Edge residual · iOS 12 autumn",
+    "how": [
+      "GDPR: May 25 · cookie banner → manage preferences → save",
+      "Trust: Mar–Apr CA literacy · Congress · careful only",
+      "TikTok: Aug 2 musical.ly merge · For You silhouette theater",
+      "IGTV: Jun 20 · vertical up to 1 hour · channel → watch"
+    ],
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "2018 lobby",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "Chips · trails · kit" },
+          { "name": "About 2018", "href": "pages/about.html", "do": "1.63B · −8% · ITU ~3.9B · bans" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "This UX tree" }
+        ]
+      },
+      {
+        "label": "Consent as UI",
+        "do": "GDPR cookie walls industrialize",
+        "sites": [
+          {
+            "name": "GDPR consent",
+            "href": "sites/gdpr/index.html",
+            "do": "May 25 · manage preferences",
+            "steps": ["Banner", "Manage prefs", "Rights literacy", "Save"]
+          }
+        ]
+      },
+      {
+        "label": "Platform accountability",
+        "do": "Careful educational framing",
+        "sites": [
+          {
+            "name": "Trust / CA literacy",
+            "href": "sites/trust/index.html",
+            "do": "Mar 17 · Apr 10–11 · ~87M class",
+            "steps": ["Timeline", "3 literacy checks", "Careful ack", "Save"]
+          }
+        ]
+      },
+      {
+        "label": "Short video industrial",
+        "do": "TikTok mass + IGTV long vertical",
+        "sites": [
+          {
+            "name": "TikTok",
+            "href": "sites/tiktok/index.html",
+            "do": "Aug 2 merge · not Musical.ly brand",
+            "steps": ["Merge honesty", "Open clip", "Like residual", "Save"]
+          },
+          {
+            "name": "IGTV",
+            "href": "sites/instagram/igtv.html",
+            "do": "Jun 20 · ≤1 hour vertical",
+            "steps": ["Pick channel", "Watch segment", "Date honesty", "Save"]
+          }
+        ]
+      },
+      {
+        "label": "Modern websites 2018",
+        "do": "Streaming · chat · composer densify",
+        "sites": [
+          { "name": "Modern web lobby", "href": "sites/modern/index.html", "do": "Cards · 2018 residual", "steps": ["Open cards", "Save"] },
+          { "name": "Netflix", "href": "sites/netflix/modern.html", "do": "Browse → detail → My List", "steps": ["Pick title", "Add list", "Save"] },
+          { "name": "Spotify", "href": "sites/spotify/modern.html", "do": "Search → free-tier residual", "steps": ["Search", "Play", "Free honesty", "Save"] },
+          { "name": "YouTube", "href": "sites/youtube/modern.html", "do": "Search → watch → related", "steps": ["Search", "Watch", "Save"] },
+          { "name": "Discord", "href": "sites/discord/modern.html", "do": "Channel → message · Nitro residual", "steps": ["Pick channel", "Send", "Nitro note", "Save"] },
+          { "name": "Twitter 280 residual", "href": "sites/twitter/composer.html", "do": "280 composer residual", "steps": ["Type past 140", "Tweet theater", "Save"] }
+        ]
+      },
+      {
+        "label": "Phone autumn residual",
+        "do": "XS · XR · Face ID residual",
+        "sites": [
+          {
+            "name": "iPhone XS / XR",
+            "href": "sites/iphone/xs.html",
+            "do": "Sep 12 · $749 / $999 / $1099",
+            "steps": ["Price tiers", "Face ID residual", "Save"]
+          }
+        ]
+      },
+      {
+        "label": "Social orphan",
+        "do": "Google+ consumer sunset",
+        "sites": [
+          {
+            "name": "Google+ sunset",
+            "href": "sites/googleplus/sunset.html",
+            "do": "Oct 8 2018 · offline Apr 2 2019",
+            "steps": ["Announce date", "Offline date", "Save"]
+          }
+        ]
+      },
+      {
+        "label": "Desktop residual",
+        "do": "Still Chrome habit · REAL multi-step",
+        "sites": [
+          { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "Mass residual REAL", "steps": ["Mass OS", "Free upgrade ended", "Edge residual", "Save"] },
+          { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Habit browser REAL", "steps": ["Habit", "Edge residual", "Win10 mass", "Save"] },
+          { "name": "Edge residual", "href": "sites/edge/index.html", "do": "EdgeHTML not Chromium", "steps": ["Ships residual", "Not Chromium", "Prefer", "Save"] }
+        ]
+      },
+      {
+        "label": "Residual densify REAL",
+        "do": "Prior-year products · multi-step only",
+        "sites": [
+          { "name": "Musical.ly → TikTok reverse", "href": "sites/musically/index.html", "do": "Reverse 2017 residual", "steps": ["Acquire", "Merge", "Brand", "Save"] },
+          { "name": "AMP residual", "href": "sites/amp/index.html", "do": "Lightning literacy", "steps": ["Open AMP", "Not IA", "Save"] },
+          { "name": "Medium residual", "href": "sites/medium/modern.html", "do": "Draft / clap", "steps": ["Draft", "Clap", "Save"] },
+          { "name": "Crypto winter", "href": "sites/crypto/index.html", "do": "Not advice · winter", "steps": ["Not advice", "Winter", "No trade", "Save"] },
+          { "name": "Fortnite residual", "href": "sites/fortnite/index.html", "do": "Free BR residual", "steps": ["Free ack", "Drop", "Save"] }
+        ]
+      }
+    ],
+    "year": "2018"
+  };
+
 
 })(typeof window !== "undefined" ? window : this);

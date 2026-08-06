@@ -34,6 +34,9 @@ const GAMES = [
   { year: '2013', prefix: 'itt13', gameId: 'pipehop', key: 'itt13-game-pipehop', kind: 'score-end' },
   { year: '2014', prefix: 'itt14', gameId: 'tilefold', key: 'itt14-game-tilefold', kind: 'score-end' },
   { year: '2015', prefix: 'itt15', gameId: 'blobrush', key: 'itt15-game-blobrush', kind: 'score-end' },
+  { year: '2016', prefix: 'itt16', gameId: 'gymrush', key: 'itt16-game-gymrush', kind: 'score-end' },
+  { year: '2017', prefix: 'itt17', gameId: 'stormscan', key: 'itt17-game-stormscan', kind: 'progress' },
+  { year: '2018', prefix: 'itt18', gameId: 'consentdash', key: 'itt18-game-consentdash', kind: 'literacy' },
 ];
 
 /**

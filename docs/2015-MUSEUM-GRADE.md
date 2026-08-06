@@ -13,7 +13,7 @@
 | P0 REAL | Watch · Win10/Edge · Periscope · Music · Photos · blockers | **[x]** |
 | Hard bans | Stories · Reactions · mass bots · CV1 ship · Pokémon GO | **[x]** (copy) |
 | P1 densify | Discord · Discover · Echo · LE · Swift · FB Live celebs · Peach · 6s | **[x]** |
-| e2e | flows + real packs | **[ ]** residual |
+| e2e | full pack (mvp · real · flows · densify · trail · shell) | **[x]** 2026-08-07 |
 | Hub unlock | 1994–2015 | **[x]** |
 | Pixel harvest | CAPTURE H15-30+ | **[~]** RECON text UI |
 

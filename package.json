@@ -1,7 +1,7 @@
 {
   "name": "internet-through-time",
   "private": true,
-  "description": "Museum static site \u2014 historical web reconstruction year by year (no build for deploy)",
+  "description": "Museum static site — historical web reconstruction year by year (no build for deploy)",
   "license": "MIT",
   "scripts": {
     "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
@@ -47,9 +47,13 @@
     "perf": "python3 scripts/measure-perf.py",
     "atlas:flow": "python3 scripts/generate-flow-atlas.py",
     "github:ready": "bash scripts/github-ready.sh",
-    "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-real-flows.spec.js e2e/2014-flows.spec.js e2e/2014-shell-honesty.spec.js --workers=1",
-    "test:e2e:2017": "playwright test e2e/2017-real-flows.spec.js --workers=1",
-    "test:e2e:progress": "playwright test e2e/museum-progress.spec.js --workers=1"
+    "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-real-flows.spec.js e2e/2014-flows.spec.js e2e/2014-densify.spec.js e2e/2014-trail-real-flows.spec.js e2e/2014-shell-honesty.spec.js --workers=1",
+    "test:e2e:2015": "playwright test e2e/2015-mvp.spec.js e2e/2015-real-flows.spec.js e2e/2015-flows.spec.js e2e/2015-densify.spec.js e2e/2015-trail-real-flows.spec.js e2e/2015-shell-honesty.spec.js --workers=1",
+    "test:e2e:2016": "playwright test e2e/2016-mvp.spec.js e2e/2016-real-flows.spec.js e2e/2016-flows.spec.js e2e/2016-densify.spec.js e2e/2016-trail-real-flows.spec.js e2e/2016-shell-honesty.spec.js --workers=1",
+    "test:e2e:2017": "playwright test e2e/2017-mvp.spec.js e2e/2017-real-flows.spec.js e2e/2017-flows.spec.js e2e/2017-densify.spec.js e2e/2017-trail-real-flows.spec.js e2e/2017-shell-honesty.spec.js --workers=1",
+    "test:e2e:progress": "playwright test e2e/museum-progress.spec.js e2e/year-start-trails.spec.js e2e/shell-honesty-2014-2018.spec.js --workers=1",
+    "test:e2e:ux": "playwright test e2e/ux-pack.spec.js e2e/museum-progress.spec.js e2e/year-start-trails.spec.js e2e/shell-honesty-2014-2018.spec.js --workers=1",
+    "test:e2e:2018": "playwright test e2e/2018-mvp.spec.js e2e/2018-real-flows.spec.js e2e/2018-flows.spec.js e2e/2018-densify.spec.js e2e/2018-trail-real-flows.spec.js e2e/2018-shell-honesty.spec.js --workers=1"
   },
   "engines": {
     "node": ">=18"

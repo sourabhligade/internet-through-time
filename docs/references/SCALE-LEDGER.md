@@ -20,6 +20,7 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2015** | **863,105,652** | **−11%** | **MVP live** (2026-08-06) · hub unlocked · `itt15` · 1B dip honesty |
 | **2016** | **1,045,534,808** | **+21%** | **MVP live** (2026-08-06) · hub unlocked · `itt16` · 1B restabilized Mar 2016 |
 | **2017** | **1,766,926,408** | **+69%** | **MVP live** (2026-08-06) · hub unlocked · `itt17` · complex REAL rooms · hostname explosion honesty |
+| **2018** | **1,630,322,579** | **−8%** | **MVP live** (2026-08-06) · hub unlocked · `itt18` · GDPR/TikTok/IGTV/trust · complex densify |
 
 ## Websites (Pingdom / Netcraft — December class)
 
@@ -33,6 +34,7 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2015** | June Live Stats **863,105,652 (−11%)** · 1B **dipped after 2014** · restabilized **Mar 2016 class** (Live Stats honesty) · re-verify Dec NetCraft before implement | Live Stats · NetCraft class |
 | **2016** | June Live Stats **1,045,534,808 (+21%)** · 1B **restabilized Mar 2016** · Jan~900M→Dec~1.7B hostnames · active ~170M class | Live Stats · NetCraft class |
 | **2017** | June Live Stats **1,766,926,408 (+69%)** · huge hostname jump · 2018 dips to 1.630B (−8%) · users cell blank | Live Stats · NetCraft class |
+| **2018** | June Live Stats **1,630,322,579 (−8%)** · post-2017 boom cooldown · users cell often blank — use ITU | Live Stats · NetCraft class |
 
 ## Internet users (class)
 
@@ -46,6 +48,7 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2015** | **3,185,996,155** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
 | **2016** | **~3.4B class** (ITU; Live Stats June users cell blank in 2026 harvest — re-verify) | ITU WTI class · Live Stats |
 | **2017** | **~3.5–3.6B class** (ITU; Live Stats June users cell blank — re-verify before About invent) | ITU WTI class · Live Stats |
+| **2018** | **~3.9B · 51.2%** of world (ITU end-2018 estimate class) · Live Stats June users cell often blank | [ITU PR 2018-PR40](https://www.itu.int/en/mediacentre/Pages/2018-PR40.aspx) |
 
 ## Social milestones (museum spine)
 

@@ -13,7 +13,7 @@
 | P0 REAL | Stories · PoGO · Reactions · 7/AirPods · Vine dual · WA E2E | **[x]** |
 | Hard bans | Meta · TikTok brand · Face ID · official Pokémon art | **[x]** (copy) |
 | P1 densify | bots · Rift · LinkedIn · Allo · Musical.ly · Win10 end | **[x]** |
-| e2e | dedicated 2016 packs | **[ ]** residual |
+| e2e | full pack (mvp · real · flows · densify · trail · shell) | **[x]** 2026-08-07 |
 | Hub unlock | 1994–2016 | **[x]** |
 | Pixel harvest | CAPTURE H16-20+ | **[~]** RECON |
 

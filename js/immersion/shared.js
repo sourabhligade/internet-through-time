@@ -693,7 +693,15 @@
     api.renderCounter = renderCounter;
     api.renderTour = renderTour;
     api.renderActivity = renderActivity;
-    api.injectNav = injectNav;
+    api.injectNav = function () {
+      injectNav();
+      /* UX pack hooks — safe no-ops if js/ux not loaded */
+      try {
+        if (ITT.UX && typeof ITT.UX.bootContent === "function") {
+          ITT.UX.bootContent(document);
+        }
+      } catch (eUx) { /* */ }
+    };
     api.ensureFlashHost = ensureFlashHost;
   };
 

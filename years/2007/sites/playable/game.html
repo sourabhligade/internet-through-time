@@ -1,35 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" data-itt-year="2007">
+<html lang="en" data-itt-room="game" data-itt-year="2007">
 <head>
 <meta charset="utf-8">
 <title>Box Shift — 2007</title>
 <link rel="stylesheet" href="../../../../css/period-2007-lite.css">
 <link rel="stylesheet" href="../../../../css/year-game-ui.css">
-<style>.itt-year-game{max-width:400px;margin:0 auto;padding:10px;font-family:Consolas,monospace;font-size:14px}
-.honesty{font-size:11px;font-family:Tahoma,Arial,sans-serif;background:#ffc;border:1px solid #808080;padding:6px;margin:8px 0}
-pre{background:#111;color:#0f0;padding:10px;line-height:1.2}</style>
+<style>
+.itt-year-game { max-width: 440px; margin: 0 auto; padding: 12px; font-family: Consolas, "Courier New", monospace; font-size: 14px; color: #e0ffe0; }
+.itt-year-game h1 { font-family: Tahoma, Arial, sans-serif; font-size: 18px; color: #9f9; margin: 0 0 8px; }
+.honesty { font-size: 11px; font-family: Tahoma, Arial, sans-serif; background: #1a2010; border: 1px solid #6a6; color: #cfc; padding: 8px; margin: 8px 0; line-height: 1.4; }
+.yg-tip { font-size: 12px; font-family: Tahoma, Arial, sans-serif; background: #0a246a; color: #fff; padding: 8px 10px; margin: 8px 0; border: 1px solid #3a6ea5; }
+pre[data-level] {
+  background: #0a0a10 !important;
+  color: #0f0 !important;
+  padding: 12px 14px !important;
+  line-height: 1.25 !important;
+  font-size: 16px !important;
+  letter-spacing: 0.08em;
+  border: 2px solid #0f0;
+  min-height: 4.5em;
+  margin: 10px 0;
+  white-space: pre;
+}
+[data-dpad] button {
+  min-width: 48px;
+  min-height: 40px;
+  margin: 3px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #163;
+  color: #cfc;
+  border: 2px solid #3a6;
+  font-family: Tahoma, Arial, sans-serif;
+}
+[data-dpad] button:active { background: #0f0; color: #000; }
+.yg-legend { font-size: 11px; font-family: Tahoma, Arial, sans-serif; color: #8a8; margin: 6px 0; line-height: 1.45; }
+</style>
 </head>
-<body class="yg-body yg-year-2007" bgcolor="#222">
+<body class="yg-body yg-year-2007" bgcolor="#1a1a22">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2007" data-game-id="boxshift" style="color:#eee">
-  <h1 style="font-family:Tahoma,Arial,sans-serif">Box Shift — 2007</h1>
-  <p class="honesty yg-honesty" style="font-family:Tahoma,Arial,sans-serif">Portal-puzzle class · <b>7 levels</b> · A/C teleporters · o button + D door · museum original · key <code>itt07-game-boxshift</code></p>
-  <p style="font-family:Tahoma,Arial,sans-serif">
+<div class="itt-year-game yg-shell" data-year-game data-year="2007" data-game-id="boxshift" tabindex="0">
+  <h1>Box Shift — 2007</h1>
+  <p class="honesty yg-honesty">Portal-puzzle class · <b>7 levels</b> · museum original (not a licensed title) · scores in this browser only · key <code>itt07-game-boxshift</code></p>
+  <p class="yg-tip"><b>How to play:</b> Click this panel (or any D-pad button) so the game has focus, then use <b>arrow keys</b> / <b>WASD</b> or the D-pad. Push <b>B</b> onto <b>G</b>.</p>
+  <p style="font-family:Tahoma,Arial,sans-serif;font-size:13px">
     Level <b data-level-num>1</b> · Moves <b data-moves>0</b>
     · <button type="button" data-restart>Restart (R)</button>
     · <button type="button" data-next>Next (N)</button>
   </p>
-  <pre data-level></pre>
-  <div data-dpad style="font-family:Tahoma,Arial,sans-serif;margin:8px 0">
-    <div style="margin-left:40px"><button type="button" data-dir="up">▲</button></div>
+  <pre data-level aria-label="Puzzle grid"></pre>
+  <div data-dpad style="font-family:Tahoma,Arial,sans-serif;margin:10px 0;user-select:none">
+    <div style="margin-left:54px"><button type="button" data-dir="up" aria-label="Up">▲</button></div>
     <div>
-      <button type="button" data-dir="left">◀</button>
-      <button type="button" data-dir="down">▼</button>
-      <button type="button" data-dir="right">▶</button>
+      <button type="button" data-dir="left" aria-label="Left">◀</button>
+      <button type="button" data-dir="down" aria-label="Down">▼</button>
+      <button type="button" data-dir="right" aria-label="Right">▶</button>
     </div>
   </div>
-  <p data-itt-action-status style="font-family:Tahoma,Arial,sans-serif;font-size:12px">Arrows / D-pad · R restart · N/P levels · push B onto G</p>
-  <p style="font-size:11px;font-family:Tahoma,Arial,sans-serif"><a href="index.html" style="color:#9cf">← Playables</a></p>
+  <p class="yg-legend">
+    <b>#</b> wall · <b>@</b> you · <b>B</b> box · <b>G</b> goal · <b>*</b> box on goal<br>
+    <b>A</b>/<b>C</b> portals · <b>o</b> button · <b>D</b> door (needs box on o) · <b>R</b> restart · <b>N</b>/<b>P</b> level
+  </p>
+  <p data-itt-action-status style="font-family:Tahoma,Arial,sans-serif;font-size:12px;min-height:1.3em;color:#9f9">Click the board, then arrows / D-pad · push B to G</p>
+  <p style="font-size:11px;font-family:Tahoma,Arial,sans-serif;margin-top:12px">
+    <a href="index.html" style="color:#9cf">← Playables</a> ·
+    <a href="../../pages/home.html" style="color:#9cf">Starting Point 2007</a>
+  </p>
 </div>
 <script src="../../../../js/games/year-game-boot.js"></script>
 <script src="../../../../js/games/year-2007-boxshift.js"></script>

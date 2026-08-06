@@ -25,10 +25,31 @@ test.describe('Museum passport + first night', () => {
     await page.goto('/');
     await expect(page.locator('#itt-passport-root')).toBeVisible();
     await expect(page.locator('#itt-passport-root')).toContainText(/Passport stamps/i);
-    await expect(page.locator('[data-itt-night-start]')).toBeVisible();
+    await expect(page.locator('#begin-first-night, [data-itt-night-start]').first()).toBeVisible();
     await expect(page.locator('[data-itt-2017-start], #begin-2017-tour').first()).toBeVisible();
+    await expect(page.locator('[data-itt-2018-start], #begin-2018-tour').first()).toBeVisible();
     await expect(page.locator('#begin-2017')).toBeVisible();
-    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(24);
+    await expect(page.locator('#begin-2018')).toBeVisible();
+    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(25);
+  });
+
+  test('2018 guided tour starts at About', async ({ page }) => {
+    await clearMuseum(page);
+    await page.goto('/');
+    await page.locator('[data-itt-2018-start]').click();
+    await expect(page).toHaveURL(/years\/2018/);
+    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
+    expect(night).toMatch(/2018-start/);
+    expect(night).toMatch(/"active":\s*true/);
+  });
+
+  test('year chip deep-link starts 2005 tour', async ({ page }) => {
+    await clearMuseum(page);
+    await page.goto('/');
+    await page.locator('[data-itt-year-tour="2005"]').click();
+    await expect(page).toHaveURL(/years\/2005/);
+    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
+    expect(night).toMatch(/2005-start/);
   });
 
   test('2017 guided tour starts at About', async ({ page }) => {
@@ -44,7 +65,7 @@ test.describe('Museum passport + first night', () => {
   test('first night start writes state and opens 1994 trail URL', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-night-start]').click();
+    await page.locator('#begin-first-night, [data-itt-night-start]').first().click();
     await expect(page).toHaveURL(/years\/1994/);
     const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
     expect(night).toBeTruthy();
