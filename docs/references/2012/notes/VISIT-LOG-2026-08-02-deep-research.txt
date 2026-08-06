@@ -1,0 +1,68 @@
+# 2012 deep research visit log — 2026-08-02
+
+Session: museum research freeze for year 2012 (no implement / no scaffold).
+Method: read 2011 RESEARCH/deep harvest hard-ban handoffs + SCALE-LEDGER 2012 rows;
+web search + full page opens of primary sources; UI sources WDM/Version Museum.
+
+## Visited / used (primary)
+
+SCALE & MACRO
+- https://www.pingdom.com/blog/internet-2012-in-numbers/  (opened: websites 634M, users 2.4B, email, social, Tumblr, Reddit, page weight)
+- https://www.internetlivestats.com/total-number-of-websites/  (June 2012 = 697,089,489 from SCALE-LEDGER / Live Stats table)
+- https://cybercultural.com/p/internet-2012/  (opened full: visual web, Instagram, Pinterest, YouTube creators, Reddit, Gangnam Style, Web 2.0 end)
+
+FACEBOOK / INSTAGRAM
+- https://dealbook.nytimes.com/2012/04/09/facebook-buys-instagram-for-1-billion/
+- https://techcrunch.com/2012/04/09/facebook-to-acquire-instagram-for-1-billion/
+- https://techcrunch.com/2012/04/03/instagram-android-demum/  (Android)
+- https://www.investopedia.com/ask/answers/111015/when-did-facebook-go-public.asp  (IPO May 18)
+- https://www.theguardian.com/technology/2012/oct/04/facebook-hits-billion-users-a-month  (1B)
+- https://www.webdesignmuseum.org/gallery/facebook-in-2012
+- https://www.versionmuseum.com/history-of/facebook-website  (Chair ad 2012)
+
+APPLE
+- https://www.apple.com/newsroom/2012/09/12Apple-Introduces-iPhone-5/
+- https://www.apple.com/newsroom/2012/10/23Apple-Introduces-iPad-mini/
+
+MICROSOFT / BROWSERS
+- https://news.microsoft.com/source/2012/10/25/windows-8-arrives/
+- Wikipedia Browser wars (Chrome overtake May 2012 StatCounter)
+- Wikipedia Windows 8
+
+OTHER
+- Wikipedia Uber (UberX Jul 2012)
+- Wikipedia Timeline of Snapchat
+- TechCrunch Pinterest 10M uniques Feb 2012
+- SCALE-LEDGER.md 2012 rows
+- docs/2011-RESEARCH.md hard bans pointing to 2012
+
+## Outputs written
+
+- docs/2012-RESEARCH.md
+- docs/2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md
+- docs/2012-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+- docs/2012-MUSEUM-GRADE.md
+- docs/references/2012/ARTIFACTS-MAP.md
+- docs/references/2012/CAPTURE-LOG.md
+- docs/references/2012/harvest/HARVEST-QUEUE-2012.md
+- this visit log
+- assets/period/2012/ (empty scaffold)
+- DISK-TRUTH.md 2012 research section
+
+## Not done this session
+
+- years/2012 HTML scaffold
+- actual WA image downloads
+- hub unlock
+- immersion code
+
+---
+## 2026-08-02 minute-detail improve pass
+- Pingdom 2012; Live Stats 697,089,489
+- Facebook IPO May 18 $38 Nasdaq delay open $42 close $38.23 — Investopedia/DealBook/CNBC
+- Instagram Android Apr 3 1M+/day; FB acquire Apr 9 $1B — Meta newsroom/Wikipedia
+- iPhone 5 Sep 12/21 $199/$299/$399 >5M weekend — Apple Newsroom
+- StatCounter Chrome overtake IE May 2012 class; Jul Chrome ~33.8%
+- Windows 8 Oct 26; iPad mini Nov 2 $329 ladder; UberX Jul ~35% cheaper
+- Wrote docs/2012-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md
+- Densified years/2012 About, IPO, IG Android, Chrome, iPhone prices, home

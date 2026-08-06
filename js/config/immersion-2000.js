@@ -11,6 +11,7 @@
     year: "2000",
     storagePrefix: "itt00",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -21,7 +22,7 @@
       napster: true,
       blogger: true
     },
-    navSubtitle: "IE 5.5 · Win98/ME · 56k · crash year",
+    navSubtitle: "IE 5.5 · Win98 SE · 56k · crash year",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "Amazon", href: "sites/amazon/index.html", match: "/amazon/" },
@@ -30,12 +31,11 @@
       { label: "Google", href: "sites/google/index.html", match: "/google/" },
       { label: "Yahoo!", href: "sites/yahoo/index.html", match: "/yahoo/" },
       { label: "eBay", href: "sites/ebay/index.html", match: "/ebay/" },
-      { label: "Flash", href: "sites/macromedia/index.html", match: "/macromedia/" },
-      { label: "CNN", href: "sites/cnn/index.html", match: "/cnn/" },
-      { label: "MetaFilter", href: "sites/metafilter/index.html", match: "/metafilter/" }
+      { label: "CNN", href: "sites/cnn/index.html", match: "/cnn/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Amazon smile", href: "sites/amazon/index.html" },
       { label: "Napster", href: "sites/napster/index.html" },
       { label: "About 2000", href: "pages/about.html" }
@@ -46,101 +46,121 @@
         label: "Amazon smile",
         href: "sites/amazon/index.html",
         match: "/amazon/",
-        hint: "see the A-to-Z smile · open zShops/Marketplace · Add to Cart",
-        doneMessage: "Amazon — smile logo arrives; tabs everywhere."
+        hint: "see the smile logo · browse tabs · Add to Cart",
+        doneMessage: "Amazon smile — first correct year for the A→Z arrow."
       },
       {
         id: "napster",
         label: "Napster",
         href: "sites/napster/index.html",
         match: "/napster/",
-        hint: "download theater · search for a song title",
-        doneMessage: "Napster — monster year under legal fire."
+        hint: "download Beta 5a · search theater",
+        doneMessage: "Napster — music at Internet speed (P2P · legal war)."
       },
       {
         id: "pets",
         label: "Pets.com",
         href: "sites/pets/index.html",
         match: "/pets/",
-        hint: "sock puppet · shop sample · crash story",
-        doneMessage: "Pets.com — Super Bowl fame, Nov 2000 shutdown."
+        hint: "sock puppet · Super Bowl · Nov shutdown",
+        doneMessage: "Pets.com — crash mascot of 2000."
       },
       {
         id: "google",
-        label: "Google search",
+        label: "Google",
         href: "sites/google/index.html",
         match: "/google/",
-        hint: "type a word → Google Search (or I'm Feeling Lucky)",
-        doneMessage: "Google — quality search, still not every home page."
+        hint: "sparse search still rising",
+        doneMessage: "Google — quality search, portals still huge."
       },
       {
         id: "yahoo",
-        label: "Yahoo! portal",
+        label: "Yahoo!",
         href: "sites/yahoo/index.html",
         match: "/yahoo/",
-        hint: "dense portal still rules everyday web",
-        doneMessage: "Yahoo! — Y2K-era portal density."
+        hint: "Y2K-era portal density",
+        doneMessage: "Yahoo! — still the front door."
       },
       {
-        id: "ebay",
-        label: "eBay bid",
-        href: "sites/ebay/index.html",
-        match: "/ebay/",
-        hint: "open an item · place a bid · My eBay",
-        doneMessage: "eBay — multicolor marketplace continues."
+        id: "paypal",
+        label: "PayPal / X.com",
+        href: "sites/paypal/index.html",
+        match: "/paypal/",
+        hint: "March 2000 merger story",
+        doneMessage: "PayPal lineage — X.com + Confinity merge."
       }
     ],
-    tourCompleteHint: "Type amazon, napster, or pets in the Address bar — or open Favorites.",
+    tourCompleteHint: "Type napster or google in the Address bar — or open Favorites.",
     activityGuestbooks: ["area51-9277", "sunset-4100"],
-    searchEmptyHint: "Try: <i>amazon</i>, <i>napster</i>, <i>pets</i>, <i>google</i>, <i>yahoo</i>, <i>ebay</i>.",
+    searchEmptyHint: "Try: <i>napster</i>, <i>google</i>, <i>blogger</i>, <i>yahoo</i>, <i>ebay</i>.",
     catalog: [
-      { title: "Amazon.com", path: "sites/amazon/index.html", kw: "amazon smile marketplace tabs books music", blurb: "Everything from A to Z." },
-      { title: "Napster", path: "sites/napster/index.html", kw: "napster mp3 p2p music riaa fanning", blurb: "Music at Internet speed." },
-      { title: "Pets.com", path: "sites/pets/index.html", kw: "pets sock puppet super bowl crash", blurb: "Dot-bomb mascot." },
-      { title: "Google", path: "sites/google/index.html", kw: "google search pagerank", blurb: "Sparse quality search." },
-      { title: "Yahoo!", path: "sites/yahoo/index.html", kw: "yahoo portal directory mail", blurb: "Still the starting point." },
+      { title: "Napster", path: "sites/napster/index.html", kw: "napster mp3 p2p music share fanning", blurb: "Peer-to-peer music search." },
+      { title: "Google", path: "sites/google/index.html", kw: "google search pagerank funded", blurb: "Best search experience — still sparse." },
+      { title: "Blogger", path: "sites/blogger/index.html", kw: "blogger blog weblog pyra publish", blurb: "Automated weblog publishing." },
+      { title: "Yahoo!", path: "sites/yahoo/index.html", kw: "yahoo portal directory mail geocities", blurb: "Still the starting point." },
+      { title: "Amazon.com", path: "sites/amazon/index.html", kw: "amazon books toys electronics zshops", blurb: "Earth's Biggest Selection." },
       { title: "eBay", path: "sites/ebay/index.html", kw: "ebay auction bid marketplace", blurb: "Personal trading community." },
-      { title: "PayPal", path: "sites/paypal/index.html", kw: "paypal x.com confinity money", blurb: "Email money / merger era." },
-      { title: "Blogger", path: "sites/blogger/index.html", kw: "blogger blog weblog pyra", blurb: "Automated weblogs." },
-      { title: "Flash 5", path: "sites/macromedia/index.html", kw: "flash macromedia actionscript splash", blurb: "Motion design cool factor." },
-      { title: "Gnutella", path: "sites/gnutella/index.html", kw: "gnutella p2p nullsoft frankel", blurb: "Decentralized file sharing." },
-      { title: "Startup Failures", path: "sites/startupfailures/index.html", kw: "startup failure crash nasdaq pets", blurb: "Dot-com wreckage catalog." },
-      { title: "CNN.com", path: "sites/cnn/index.html", kw: "cnn news aol time warner nasdaq", blurb: "News of the crash year." },
-      { title: "MetaFilter", path: "sites/metafilter/index.html", kw: "metafilter mefi community weblog", blurb: "Conversational social news." },
-      { title: "Homestar Runner", path: "sites/homestar/index.html", kw: "homestar runner strong bad flash toons", blurb: "Web-native Flash cartoons." },
-      { title: "CamWorld", path: "sites/camworld/index.html", kw: "camworld weblog cameron barrett blog", blurb: "Weblog pioneer culture." },
-      { title: "kottke.org", path: "sites/kottke/index.html", kw: "kottke blog weblog design links", blurb: "Linkblog / personal weblog." },
-      { title: "Netscape 6", path: "sites/netscape/netscape6.html", kw: "netscape 6 gecko sidebar aim", blurb: "Open-source consumer browser." }
+      { title: "Yahoo! GeoCities", path: "sites/geocities/index.html", kw: "geocities yahoo homestead free homepage", blurb: "Free home pages under Yahoo!." },
+      { title: "Ask Jeeves", path: "sites/askjeeves/index.html", kw: "ask jeeves question natural language", blurb: "Just type a question." },
+      { title: "CNN.com", path: "sites/cnn/index.html", kw: "cnn news y2k antitrust", blurb: "News on the web." },
+      { title: "AltaVista", path: "sites/altavista/index.html", kw: "altavista search portal", blurb: "Dense search / portal hybrid." },
+      { title: "Slashdot", path: "sites/slashdot/index.html", kw: "slashdot nerds linux yro", blurb: "News for Nerds." },
+      { title: "PayPal", path: "sites/paypal/index.html", kw: "paypal confinity palm email money", blurb: "Instant money — Palm or email." },
+      { title: "Y2K FAQ", path: "sites/y2k/index.html", kw: "y2k millennium bug year 2000", blurb: "Will the computers stop?" },
+      { title: "Starting Point", path: "pages/home.html", kw: "home start 2000", blurb: "2000 immersion home." },
+      { title: "Hampster Dance", path: "sites/hampsterdance/index.html", kw: "hampster dance viral meme gif", blurb: "Early viral meme page." },
+      { title: "Zombo.com", path: "sites/zombo/index.html", kw: "zombo anything flash absurd", blurb: "You can do anything." },
+      { title: "MSN Gaming Zone", path: "sites/msngaming/index.html", kw: "msn gaming zone multiplayer cards games", blurb: "Free online multiplayer lobbies." },
+      { title: "The Matrix", path: "sites/matrix/index.html", kw: "matrix movie promo whatisthematrix 2000", blurb: "Movie marketing meets the Web." },
+      { title: "My Netscape / RSS", path: "sites/mynetscape/index.html", kw: "my netscape rss 0.90 channels feed", blurb: "Personalized portal + RSS 0.90." },
+      { title: "Flash 4 culture", path: "sites/flash4/index.html", kw: "flash 4 macromedia skip intro motion", blurb: "Motion design and skip-intro culture." },
     ],
     books: [
-      { id: "tuesdays", title: "Tuesdays with Morrie", author: "Mitch Albom", price: "12.95", path: "sites/amazon/book-tuesdays.html" },
-      { id: "harry-cos", title: "Harry Potter and the Chamber of Secrets", author: "J. K. Rowling", price: "17.95", path: "sites/amazon/book-harry-cos.html" },
-      { id: "matrix-dvd", title: "The Matrix (DVD)", author: "Warner Bros.", price: "24.99", path: "sites/amazon/dvd-matrix.html", cat: "dvd" },
-      { id: "palm-v", title: "Palm V Organizer", author: "3Com", price: "299.00", path: "sites/amazon/electronics-palm-v.html", cat: "electronics" },
-      { id: "furby", title: "Furby", author: "Tiger Electronics", price: "29.99", path: "sites/amazon/toy-furby.html", cat: "toys" },
-      { id: "ok-computer", title: "OK Computer", author: "Radiohead", price: "13.99", path: "sites/amazon/cd-ok-computer.html", cat: "music" }
-    ],
-    napsterCatalog: [
-      { artist: "Metallica", title: "Enter Sandman", users: "2,401", time: "5:31", bitrate: "128" },
-      { artist: "Dr. Dre", title: "Still D.R.E.", users: "1,882", time: "4:30", bitrate: "128" },
-      { artist: "Eminem", title: "The Real Slim Shady", users: "3,104", time: "4:44", bitrate: "160" },
-      { artist: "Britney Spears", title: "Oops!...I Did It Again", users: "2,790", time: "3:31", bitrate: "128" },
-      { artist: "NSYNC", title: "Bye Bye Bye", users: "2,210", time: "3:20", bitrate: "128" },
-      { artist: "Radiohead", title: "Idioteque", users: "940", time: "5:09", bitrate: "192" },
-      { artist: "Madonna", title: "Music", users: "1,550", time: "3:44", bitrate: "128" },
-      { artist: "U2", title: "Beautiful Day", users: "1,120", time: "4:06", bitrate: "160" }
+      { id: "being-digital", title: "Being Digital", author: "Nicholas Negroponte", price: 10.36, cat: "computers", format: "Paperback", file: "book-being-digital.html", blurb: "Bits vs atoms." },
+      { id: "microserfs", title: "Microserfs", author: "Douglas Coupland", price: 10.40, cat: "fiction", format: "Paperback", file: "book-microserfs.html", blurb: "Life at Microsoft." },
+      { id: "contact", title: "Contact", author: "Carl Sagan", price: 6.99, cat: "sf", format: "Paperback", file: "book-contact.html", blurb: "Are we alone?" },
+      { id: "dove", title: "Dove", author: "Robin Lee Graham", price: 5.99, cat: "adventure", format: "Paperback", file: "book-dove.html", blurb: "Sails around the world." },
+      { id: "tuesdays", title: "Tuesdays with Morrie", author: "Mitch Albom", price: 11.20, cat: "nonfiction", format: "Hardcover", file: "book-tuesdays.html", blurb: "Hot book, 2000." },
+      { id: "harry-cos", title: "Harry Potter and the Chamber of Secrets", author: "J. K. Rowling", price: 12.99, cat: "fiction", format: "Hardcover", file: "book-harry-cos.html", blurb: "100 Hot Books." },
+      { id: "ok-computer", title: "OK Computer", author: "Radiohead", price: 13.49, cat: "music", format: "Audio CD", file: "cd-ok-computer.html", blurb: "Essential CD." },
+      { id: "homogenic", title: "Homogenic", author: "Björk", price: 13.99, cat: "music", format: "Audio CD", file: "cd-homogenic.html", blurb: "Art-pop CD." },
+      { id: "ray-of-light", title: "Ray of Light", author: "Madonna", price: 14.49, cat: "music", format: "Audio CD", file: "cd-ray-of-light.html", blurb: "1998 smash still selling." },
+      { id: "miseducation", title: "The Miseducation of Lauryn Hill", author: "Lauryn Hill", price: 13.99, cat: "music", format: "Audio CD", file: "cd-the-miseducation.html", blurb: "Debut album." },
+      { id: "matrix-dvd", title: "The Matrix", author: "Warner Bros.", price: 19.99, cat: "dvd", format: "DVD", file: "dvd-matrix.html", blurb: "DVD top seller." },
+      { id: "palm-v", title: "Palm V Organizer", author: "3Com", price: 449.00, cat: "electronics", format: "Hardware", file: "electronics-palm-v.html", blurb: "Search of the Day." },
+      { id: "furby", title: "Furby", author: "Tiger Electronics", price: 29.99, cat: "toys", format: "Toy", file: "toy-furby.html", blurb: "Hot toy aisle." }
     ],
     googleCatalog: [
-      { title: "Napster - music at Internet speed", url: "http://www.napster.com/", path: "sites/napster/index.html", snippet: "Download Napster. Find MP3s. Largest online music community." },
-      { title: "Amazon.com - Earth's Biggest Selection", url: "http://www.amazon.com/", path: "sites/amazon/index.html", snippet: "Books, music, DVD, toys, electronics — everything A to Z." },
-      { title: "Pets.com - Because Pets Can't Drive", url: "http://www.pets.com/", path: "sites/pets/index.html", snippet: "Pet supplies online. Famous sock puppet." },
-      { title: "Yahoo!", url: "http://www.yahoo.com/", path: "sites/yahoo/index.html", snippet: "The Web's starting point. Directory, mail, news." },
-      { title: "eBay - The World's Online Marketplace", url: "http://www.ebay.com/", path: "sites/ebay/index.html", snippet: "Buy and sell practically anything." },
-      { title: "PayPal / X.com", url: "http://www.paypal.com/", path: "sites/paypal/index.html", snippet: "Send money by email. Merger of Confinity and X.com." },
-      { title: "Blogger", url: "http://www.blogger.com/", path: "sites/blogger/index.html", snippet: "Push-button publishing for the people." },
-      { title: "Gnutella", url: "http://gnutella.wego.com/", path: "sites/gnutella/index.html", snippet: "Decentralized peer-to-peer file sharing." },
-      { title: "CNN.com", url: "http://www.cnn.com/", path: "sites/cnn/index.html", snippet: "News — markets, AOL Time Warner, technology." },
-      { title: "Macromedia Flash", url: "http://www.macromedia.com/", path: "sites/macromedia/index.html", snippet: "Flash 5 and ActionScript for the Web." }
+      { title: "Yahoo!", path: "sites/yahoo/index.html", displayUrl: "www.yahoo.com", kw: "yahoo portal directory search web mail", snippet: "The Web's most popular guide. Directory, mail, news, Messenger, and more." },
+      { title: "Amazon.com — Earth's Biggest Selection", path: "sites/amazon/index.html", displayUrl: "www.amazon.com", kw: "amazon books music toys electronics dvd shop", snippet: "Books, music, toys, electronics, auctions, and zShops." },
+      { title: "eBay — Your Personal Trading Community", path: "sites/ebay/index.html", displayUrl: "www.ebay.com", kw: "ebay auction bid sell buy marketplace", snippet: "Millions of items. Person-to-person trading worldwide." },
+      { title: "Napster — Music at Internet Speed", path: "sites/napster/index.html", displayUrl: "www.napster.com", kw: "napster mp3 music p2p share download", snippet: "Find and share MP3 music with other Napster users." },
+      { title: "Blogger", path: "sites/blogger/index.html", displayUrl: "www.blogger.com", kw: "blogger blog weblog publish pyra", snippet: "Push-button publishing for your weblog. Free." },
+      { title: "Yahoo! GeoCities", path: "sites/geocities/index.html", displayUrl: "www.geocities.com", kw: "geocities free homepage homestead yahoo", snippet: "Build a free home page — now part of Yahoo!." },
+      { title: "CNN.com", path: "sites/cnn/index.html", displayUrl: "www.cnn.com", kw: "cnn news world headlines y2k", snippet: "Breaking news and information from CNN." },
+      { title: "Ask Jeeves", path: "sites/askjeeves/index.html", displayUrl: "www.askjeeves.com", kw: "ask jeeves question answer butler", snippet: "Just type a question and click Ask!" },
+      { title: "AltaVista", path: "sites/altavista/index.html", displayUrl: "www.altavista.com", kw: "altavista search engine images video", snippet: "Search the Web, images, video, and more." },
+      { title: "Slashdot: News for Nerds", path: "sites/slashdot/index.html", displayUrl: "slashdot.org", kw: "slashdot linux open source nerds news", snippet: "News for Nerds. Stuff that Matters." },
+      { title: "Excite", path: "sites/excite/index.html", displayUrl: "www.excite.com", kw: "excite portal personalize search", snippet: "Search, news, stocks, chat — your starting point." },
+      { title: "Microsoft Internet Explorer 5", path: "sites/microsoft/ie5.html", displayUrl: "www.microsoft.com/windows/ie/", kw: "microsoft ie5 internet explorer browser", snippet: "The Web the way you want it. Free download." },
+      { title: "PayPal", path: "sites/paypal/index.html", displayUrl: "www.paypal.com", kw: "paypal confinity money palm email", snippet: "Instant money. Anytime. Anywhere." },
+      { title: "Y2K Information Center", path: "sites/y2k/index.html", displayUrl: "www.year2000.com", kw: "y2k year 2000 millennium bug", snippet: "Will computers survive midnight, December 31?" },
+      { title: "The Hampster Dance", path: "sites/hampsterdance/index.html", displayUrl: "www.hampsterdance.com", kw: "hampster dance meme gif viral", snippet: "Hampster hampster hampster dance." },
+      { title: "ZOMBO.COM", path: "sites/zombo/index.html", displayUrl: "www.zombo.com", kw: "zombo anything at all", snippet: "Welcome. This is ZomboCom. Anything at all." }
+    ],
+    napsterCatalog: [
+      { artist: "Nine Inch Nails", title: "The Day the World Went Away", users: 42, size: "4:03", bitrate: "128" },
+      { artist: "Limp Bizkit", title: "Nookie", users: 87, size: "4:49", bitrate: "128" },
+      { artist: "Radiohead", title: "Karma Police", users: 61, size: "4:21", bitrate: "160" },
+      { artist: "Madonna", title: "Ray of Light", users: 33, size: "5:20", bitrate: "128" },
+      { artist: "Lauryn Hill", title: "Doo Wop (That Thing)", users: 55, size: "5:20", bitrate: "128" },
+      { artist: "David Bowie", title: "Thursday's Child", users: 12, time: "5:24", bitrate: "128" },
+      { artist: "Metallica", title: "Enter Sandman", users: 104, time: "5:31", bitrate: "192" },
+      { artist: "Beck", title: "Loser", users: 28, time: "3:55", bitrate: "128" },
+      { artist: "The Offspring", title: "Pretty Fly (For a White Guy)", users: 71, time: "3:08", bitrate: "128" },
+      { artist: "Blink-182", title: "What's My Age Again?", users: 49, time: "2:28", bitrate: "128" },
+      { artist: "Eminem", title: "My Name Is", users: 93, time: "4:28", bitrate: "128" },
+      { artist: "TLC", title: "No Scrubs", users: 38, time: "3:34", bitrate: "128" }
     ]
   };
 })(typeof window !== "undefined" ? window : this);

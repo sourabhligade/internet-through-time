@@ -1,0 +1,73 @@
+2017 deep research visit log — 2026-08-06
+==========================================
+Purpose: Multi-source harvest for museum year 2017 research freeze.
+Complex product websites with REAL multi-step flows.
+No years/2017 scaffold. Planned prefix itt17. Clone from years/2016/.
+
+SCALE
+- Live Stats June 2017: 1,766,926,408 (+69%) [visited internetlivestats.com]
+- 2018 honesty: 1,630,322,579 (−8%)
+- Users ~3.5–3.6B ITU class (Live Stats June users blank)
+
+P0 SPINE (primary visits)
+- iPhone X / Face ID Sep 12 2017 Apple Newsroom; pre-order Oct 27; stores Nov 3; $999
+  https://www.apple.com/newsroom/2017/09/the-future-is-here-iphone-x/
+- Fortnite BR free Sep 26 2017 (announce Sep 12 PS Blog / Xbox Wire)
+  https://blog.playstation.com/2017/09/12/fortnite-battle-royale-launches-september-26/
+  https://news.xbox.com/en-us/2017/09/12/fortnite-battle-royale-september-26-xbox-one/
+- Bitcoin peak Dec 17 2017 CoinDesk BPI ~$19,783.21 near $20k (not advice)
+- WannaCry May 12 2017 CISA TA17-132A + Cloudflare learning (no exploit PoC)
+  https://www.cisa.gov/news-events/alerts/2017/05/12/indicators-associated-wannacry-ransomware
+- Twitter 280 Nov 7 2017 official blog; CJK remain 140
+  https://blog.x.com/en_us/topics/product/2017/tweetingmadeeasier
+- Vine offline Jan 17 2017 (Fortune, Variety, CBS); dual-date with Oct 27 2016 announce
+- #MeToo Oct 15 2017 Milano viral; Tarana Burke origin credit (careful educational)
+
+P1
+- Equifax Sep 7 2017 disclose; ~147M class (FTC settlement page)
+- Discord Nitro Jan 2017; Discord 2017 recap (search, video, screenshare ships)
+  https://discord.com/blog/discord-did-things-in-2017
+- PUBG Steam Early Access Mar 23 2017 (paid BR residual next to free Fortnite)
+- Musical.ly acquired by ByteDance Nov 2017; TikTok mass merge brand Aug 2018
+- AMP May 2017 class: ~900k domains / 2B+ pages (publisher mobile web)
+
+COMPLEX PRODUCT REAL FLOWS (new visit mapping — multi-step incomplete no write)
+- Netflix modern: browse rows → title detail → My List → save (itt17-netflix)
+- Spotify modern: search → free-tier play residual → save (itt17-spotify)
+- YouTube modern: search → watch → related rail → save (itt17-youtube)
+- Discord modern: server → channel → message + Nitro literacy (itt17-discord)
+- Medium modern: draft/clap theater (itt17-medium)
+- AMP news: lightning open → weight literacy vs full mobile (itt17-amp)
+- Twitter 280: composer type past 140 → send theater (itt17-twitter280)
+- iPhone X: notch → Face ID steps → price → store date (itt17-faceid)
+- Fortnite: free ack → drop → Victory Royale silhouette theater (itt17-fortnite)
+
+HARD BANS
+- Meta branding 2021
+- TikTok mass West brand as 2017 default (seed only; Musical.ly residual)
+- Reels
+- Face ID as 2016 product
+- Real crypto trade / deposit / live wallet
+- WannaCry exploit PoC / ransomware payload
+- Official Fortnite / PUBG / Epic ripped assets
+- #MeToo as joke or trauma spectacle
+- Vine still uploading after Jan 17 2017
+- Phishing-looking Equifax "were you breached" lookup
+- Chromium Edge as 2017 Edge product
+
+FLOW-MAPS
+- ITT.flowMaps["2017"] present; fixed double-brace syntax on Modern websites branch
+- Added Equifax branch + richer REAL steps for modern product rooms
+
+OUTPUT DOCS
+- docs/2017-READ-FIRST.md
+- docs/2017-RESEARCH.md
+- docs/2017-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md
+- docs/2017-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md
+- docs/2017-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md
+- docs/2017-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+- docs/2017-IMPLEMENTATION-PHASES-STEP-BY-STEP.md
+- docs/2017-MUSEUM-GRADE.md
+- docs/references/2017/CAPTURE-LOG.md
+- docs/references/2017/ARTIFACTS-MAP.md
+- docs/references/2017/notes/VISIT-LOG-2026-08-06-deep-research.txt

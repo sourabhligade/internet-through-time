@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013">
+<head>
+<meta charset="utf-8">
+<title>Pipe Hop — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013-lite.css">
+<link rel="stylesheet" href="../../../../css/year-game-ui.css">
+<style>
+.itt-year-game { max-width: 360px; margin: 0 auto; padding: 12px; font-family: -apple-system, Arial, sans-serif; font-size: 13px; }
+.honesty { font-size: 11px; background: #e8f4ff; border: 1px solid #07c; padding: 6px; margin: 8px 0; }
+canvas { display: block; border-radius: 8px; border: 1px solid #ccc; max-width: 100%; }
+</style>
+</head>
+<body class="yg-body yg-year-2013" bgcolor="#f7f7f7">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="itt-year-game yg-shell" data-year-game data-year="2013" data-game-id="pipehop">
+  <h1 style="margin:0 0 6px">Pipe Hop — 2013</h1>
+  <p style="margin:0"><b>Complex:</b> difficulty ramps (speed + tighter gaps) · bronze/silver/gold medals · best save.</p>
+  <p class="honesty yg-honesty">Flappy-class · museum original · key <code>itt13-game-pipehop</code></p>
+  <p>
+    <button type="button" id="play-start">Start / Flap</button>
+    Score <b id="play-score">0</b> · Best <b data-game-best>0</b> · Medal <b data-medal>—</b>
+  </p>
+  <p id="play-status" data-itt-action-status style="font-size:12px" class="yg-status">Tap to start</p>
+  <canvas id="game-canvas" width="320" height="480"></canvas>
+  <p style="font-size:11px;margin-top:8px"><a href="index.html">← Playables</a> · <a href="../../pages/home.html">Starting Point</a></p>
+</div>
+<script src="../../../../js/games/year-game-boot.js"></script>
+<script src="../../../../js/games/year-2013-pipehop.js"></script>
+<script src="../../../../js/immersion-2013.js" defer></script>
+</body>
+</html>

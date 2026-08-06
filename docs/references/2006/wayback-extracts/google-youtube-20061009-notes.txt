@@ -1,0 +1,12 @@
+# Google To Acquire YouTube for $1.65 Billion in Stock
+# Source: https://www.sec.gov/Archives/edgar/data/1288776/000119312506206884/dex991.htm
+# Visited: 2026-07-30
+
+MOUNTAIN VIEW, Calif., October 9, 2006 - Google Inc. announced it has agreed to
+acquire YouTube for $1.65 billion in a stock-for-stock transaction.
+Following the acquisition, YouTube will operate independently to preserve its
+successful brand and passionate community.
+
+Exhibit use:
+- years/2006 YouTube about: ownership flip date Oct 9 announce / Nov 13 close (wiki)
+- BAN: do not claim Google owned YouTube in early 2006

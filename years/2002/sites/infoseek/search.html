@@ -24,12 +24,12 @@
 </ul>
 <script>
 (function(){
-  var m = location.search.match(/[?&]q=([^&]*)/);
-  if (m) {
-    var q = decodeURIComponent(m[1].replace(/\+/g,' '));
-    var el = document.getElementById('q');
-    if (el) el.value = q;
-  }
+ var m = location.search.match(/[?&]q=([^&]*)/);
+ if (m) {
+ var q = decodeURIComponent(m[1].replace(/\+/g,' '));
+ var el = document.getElementById('q');
+ if (el) el.value = q;
+ }
 })();
 </script>
 </font>

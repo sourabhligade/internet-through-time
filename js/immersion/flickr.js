@@ -1,62 +1,128 @@
 /**
- * Immersion: Flickr 2004 — photo stream tags theater
+ * Flickr immersion — photostream + upload (localStorage)
+ * Year-aware: 2005 → itt05-flickr-stream (migrates itt04) · else itt04-flickr-stream
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-  ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
-  ITT.ImmersionFeatures.push({
-    id: "flickr",
-    needs: function (cfg) { return cfg.features && cfg.features.flickr; },
-    init: function (api) {
-      var loadJSON = api.loadJSON, saveJSON = api.saveJSON, storageKey = api.storageKey;
-      var escapeHtml = api.escapeHtml, showFlash = api.showFlash, markTourProgress = api.markTourProgress;
-      var KEY = storageKey("flickr-photos");
 
-      function seed() {
-        return [
-          { title: "Golden Gate fog", tags: "sf fog travel" },
-          { title: "Office whiteboard", tags: "work funny" },
-          { title: "Weekend hike", tags: "outdoors friends" }
-        ];
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
       }
-      function getPhotos() {
-        var p = loadJSON(KEY, null);
-        if (!p) { p = seed(); saveJSON(KEY, p); }
-        return p;
-      }
+    } catch (eIttFb) { /* */ }
+  }
 
-      function paint() {
-        var host = document.querySelector("[data-flickr-stream]");
-        if (!host) return;
-        var photos = getPhotos();
-        var html = '<table class="fl04-grid" width="100%"><tr>';
-        for (var i = 0; i < photos.length; i++) {
-          if (i && i % 4 === 0) html += "</tr><tr>";
-          html += '<td><span class="fl04-thumb" title="' + escapeHtml(photos[i].title) + '"></span><br>' +
-            '<font size="1">' + escapeHtml(photos[i].title) + '<br><i>' +
-            escapeHtml(photos[i].tags) + '</i></font></td>';
-        }
-        html += "</tr></table>";
-        host.innerHTML = html;
-      }
 
-      var form = document.querySelector("[data-flickr-upload]");
-      if (form) {
-        form.addEventListener("submit", function (ev) {
-          ev.preventDefault();
-          var title = (form.querySelector('[name="title"]') || {}).value || "Untitled";
-          var tags = (form.querySelector('[name="tags"]') || {}).value || "tags";
-          var photos = getPhotos();
-          photos.unshift({ title: title, tags: tags });
-          saveJSON(KEY, photos);
-          showFlash("Photo 'uploaded' (no real file — tags + stream only).");
-          markTourProgress();
-          paint();
-          form.reset();
-        });
-      }
-      paint();
+  function year() {
+    return String(
+      ITT._immersionYear ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        "2004"
+    );
+  }
+  function KEY() {
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("flickr-stream", "itt04");
     }
-  });
+    var y = year();
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-flickr-stream";
+    return "itt04-flickr-stream";
+  }
+  function load() {
+    try {
+      var k = KEY();
+      var raw = localStorage.getItem(k);
+      if (!raw && k === "itt05-flickr-stream") {
+        raw = localStorage.getItem("itt04-flickr-stream");
+        if (raw) localStorage.setItem(k, raw);
+      }
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+  function save(list) {
+    localStorage.setItem(KEY(), JSON.stringify(list));
+  }
+  function esc(s) {
+    return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function seed() {
+    var list = load();
+    if (list && list.length) return list;
+    list = [
+      { title: "ETech demo", tags: "conference,2004", note: "Feb 10 launch vibes" },
+      { title: "Pink & blue", tags: "flickr,design", note: "Ludicorp chrome" },
+      { title: "Tagged cat", tags: "cat,cute,folksonomy", note: "Tags arrive mid-2004" }
+    ];
+    save(list);
+    return list;
+  }
+  function render(doc) {
+    var el = doc.querySelector("[data-flickr-stream]");
+    if (!el) return;
+    var list = seed();
+    el.innerHTML =
+      list
+        .map(function (p) {
+          return (
+            "<div class='flickr-thumb' title='" +
+            esc(p.tags) +
+            "'>" +
+            esc(p.title) +
+            (p.tags ? "<br><font color='#ff0084' size='1'>" + esc(p.tags) + "</font>" : "") +
+            "</div>"
+          );
+        })
+        .join("") + "<div style='clear:both'></div>";
+  }
+  function boot(doc) {
+    doc = doc || document;
+    render(doc);
+    var form = doc.querySelector("[data-flickr-upload]");
+    if (form) {
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var title = (form.querySelector('[name="title"]') || {}).value || "Untitled";
+        var tags = (form.querySelector('[name="tags"]') || {}).value || "";
+        var list = seed();
+        list.unshift({ title: title, tags: tags, note: "just uploaded" });
+        save(list.slice(0, 40));
+        var st = doc.querySelector("[data-flickr-status]");
+        if (st) {
+          var photoUrl = "http://www.flickr.com/photos/you/" + encodeURIComponent(title);
+          st.innerHTML =
+            "Uploaded to your photostream (no image file stored). " +
+            '<a href="index.html">Photostream</a> · ' +
+            '<a href="../delicious/index.html?url=' +
+            encodeURIComponent(photoUrl) +
+            "&title=" +
+            encodeURIComponent(title) +
+            "&tags=" +
+            encodeURIComponent((tags || "photos flickr").replace(/,/g, " ")) +
+            '">Tag on del.icio.us</a> · ' +
+            '<a href="../digg/submit.html?title=' +
+            encodeURIComponent(title) +
+            "&url=" +
+            encodeURIComponent(photoUrl) +
+            '">Digg this</a>';
+          ittFeedback("Uploaded: " + title, st);
+        }
+        form.reset();
+        render(doc);
+      });
+    }
+  }
+  function register() {
+    if (!ITT.ImmersionFeatures || !ITT.ImmersionFeatures.registerLocal) {
+      setTimeout(register, 20);
+      return;
+    }
+    ITT.ImmersionFeatures.registerLocal({ id: "flickr", boot: boot });
+  }
+  register();
 })(typeof window !== "undefined" ? window : this);

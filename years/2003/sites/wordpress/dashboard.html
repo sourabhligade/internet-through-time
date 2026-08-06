@@ -1,32 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>WordPress Dashboard</title>
-<link rel="stylesheet" href="../../../../css/period-2003.css"></head>
-<body bgcolor="#e5e5e5" link="#21759b" class="wp-body">
-<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="100%" cellpadding="8" bgcolor="#21759b"><tr>
- <td><font face="Arial" color="#fff" size="2"><b>Dashboard</b></font></td>
- <td align="right"><font face="Arial" size="2">
- <a href="post.html"><font color="#cde">Write</font></a> ·
- <a href="view.html"><font color="#cde">View site</font></a> ·
- <a href="index.html"><font color="#cde">Home</font></a>
- </font></td>
-</tr></table>
-<table width="640" align="center" cellpadding="14" bgcolor="#fff" style="margin-top:14px;border:1px solid #aaa">
-<tr><td>
- <font face="Arial" size="2">
- <h2 style="margin-top:0;color:#21759b">Your blog at a glance</h2>
- <div data-wp-dash style="padding:10px;background:#f0f7fa;border:1px solid #b3d4e0;margin-bottom:12px"></div>
- <b>Quick draft</b>
- <form data-wp-new style="margin-top:8px">
- Title: <input name="title" size="36" class="field9x"><br><br>
- Body:<br><textarea name="body" rows="5" cols="55" class="field9x"></textarea><br><br>
- <input type="submit" value="Publish" class="btn9x">
- </form>
- <hr>
- <b>Recent posts</b>
- <div data-wp-posts style="margin-top:8px"></div>
- </font>
-</td></tr>
-</table>
+<html lang="en"><head><meta charset="utf-8">
+<title>WordPress Dashboard — 2003</title>
+<link rel="stylesheet" href="../../../../css/period-2003.css">
+</head>
+<body class="wp-shell">
+<div class="wp-dash">
+ <img src="../../../../assets/period/2003/wordpress/w.gif" alt="" height="20"> <b>Dashboard</b> (0.7-era)
+ · <a href="blog.html">View site</a> · <a href="index.html">About WP</a> · <a href="install.html">Install</a>
+</div>
+<form data-wp-publish style="margin:16px 0">
+ <b>Write a post</b><br>
+ Title<br><input name="title" size="50" value="Hello world!"><br><br>
+ Body<br><textarea name="body" rows="6" cols="60">Welcome to WordPress. This is your first post (this browser only).</textarea><br><br>
+ <button type="submit">Publish</button>
+ <span data-wp-status style="color:green;font-size:12px"></span>
+</form>
+<div data-wp-posts></div>
 <script src="../../../../js/immersion-2003.js"></script>
 </body></html>

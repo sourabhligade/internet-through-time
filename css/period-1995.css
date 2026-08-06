@@ -140,10 +140,94 @@ blink { animation: blink 1s step-end infinite; }
 #itt-exhibit-nav a:link,
 #itt-exhibit-nav a:visited { text-decoration: none; }
 #itt-exhibit-nav a:hover font { color: #FFFFFF !important; text-decoration: underline; }
+/* Clear home exit on every site page */
+#itt-exhibit-nav a.itt-nav-home,
+#itt-exhibit-nav a.itt-nav-start {
+  white-space: nowrap;
+}
+#itt-exhibit-nav a.itt-nav-home {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #99ccff;
+  background: #000060;
+  text-decoration: none !important;
+}
+#itt-exhibit-nav a.itt-nav-home:hover {
+  background: #0000aa;
+}
+#itt-exhibit-nav td.itt-nav-home-cell {
+  padding-left: 8px;
+}
 #itt-exhibit-foot {
   clear: both;
   margin-top: 1.5em;
+  padding-bottom: 3em; /* room above sticky wayfind */
   font-family: "Times New Roman", Times, serif;
+}
+#itt-exhibit-foot a.itt-foot-home {
+  color: #000080;
+  font-size: 1.05em;
+}
+
+/* Sticky wayfind — always-visible path back to year landing.
+ * pointer-events:none on the bar so form submits / buttons under the strip
+ * still receive clicks; only the links are clickable (Pass 1 flow fix 2026-08). */
+#itt-wayfind {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 10px;
+  padding: 7px 12px;
+  background: #000080;
+  color: #fff;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  border-top: 2px solid #99ccff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+#itt-wayfind a {
+  color: #ffff99;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 2px 6px;
+  pointer-events: auto;
+}
+#itt-wayfind a.itt-wayfind-home {
+  color: #fff;
+  background: #000060;
+  border: 1px solid #99ccff;
+  text-decoration: none;
+  padding: 3px 10px;
+}
+#itt-wayfind a.itt-wayfind-home:hover,
+#itt-wayfind a.itt-wayfind-home:focus {
+  background: #0000aa;
+  color: #fff;
+  outline: none;
+}
+#itt-wayfind a:hover,
+#itt-wayfind a:focus {
+  color: #fff;
+}
+#itt-wayfind .itt-wayfind-sep {
+  color: #99ccff;
+  opacity: 0.8;
+}
+body.has-itt-wayfind {
+  /* Clearance so last form controls are not under the sticky strip */
+  padding-bottom: 56px !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  #itt-wayfind {
+    box-shadow: none;
+  }
 }
 
 /* Cleaner content rhythm */
@@ -154,7 +238,12 @@ body {
 /* Museum UX helpers (shell content pages) */
 .itt-nav-slot {
   min-height: 28px;
-  margin: -8px -8px 8px -8px;
+  /* Edge-to-edge navy without horizontal overflow in narrow iframes */
+  margin: 0 0 8px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 body > .itt-nav-slot:empty {
   /* reserve height before JS injects nav — reduces layout jump */
@@ -171,6 +260,24 @@ body > .itt-nav-slot:empty {
   margin: 0 0 8px 0;
 }
 .itt-flash a { color: #0000ee; }
+
+/* Action feedback — status lines after Like / pin / cart / share */
+.itt-status-pulse,
+[data-itt-feedback="1"] {
+  outline: 1px solid #006600;
+  background: #eeffee;
+  padding: 2px 4px;
+}
+@keyframes itt-status-flash {
+  0% { background: #ffff99; }
+  100% { background: #eeffee; }
+}
+.itt-status-pulse {
+  animation: itt-status-flash 0.8s ease-out 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .itt-status-pulse { animation: none; }
+}
 .itt-tour-table {
   margin: 0.5em 0 1em;
 }
@@ -261,3 +368,11 @@ input[type="button"]:active {
 input:focus, textarea:focus, select:focus {
   outline: 1px dotted #000;
 }
+
+/* ITT feel tokens 1995 — Win95 commerce */
+:root {
+  --itt95-win: #c0c0c0;
+  --itt95-link: #0000ee;
+  --itt95-amazon: #000080;
+}
+

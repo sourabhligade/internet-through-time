@@ -1,0 +1,89 @@
+/* 2010 document styles — Win7 · IE 8 · iPad · iPhone 4 · Instagram · Foursquare
+   Year delta: @import period-2009 then 2010 product grammar. */
+@import url("period-2009.css");
+
+body.year-2010 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #39c;
+}
+
+/* iPad product (Mar 2010) */
+.ipad-shell {
+  font-family: "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+  background: #f5f5f5;
+  color: #111;
+  font-size: 13px;
+}
+.ipad-shell .ipad-hero {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  margin: 12px auto;
+  max-width: 720px;
+}
+
+/* Instagram 2010 (Oct — iOS only) */
+.instagram-shell,
+.ig-shell {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #fafafa;
+  color: #262626;
+  font-size: 13px;
+}
+.instagram-shell .ig-frame {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  max-width: 480px;
+  margin: 12px auto;
+  padding: 0 0 12px;
+}
+.instagram-shell .ig-filter-bar {
+  background: #3f729b;
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+/* iPhone 4 / FaceTime / Antenna */
+.iphone-shell.y2010,
+.iphone4-shell {
+  font-family: "Lucida Grande", Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Foursquare growth 2010 */
+.foursquare-shell .fsq-mayor {
+  background: #ff0;
+  color: #000;
+  padding: 4px 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* FarmVille peak */
+.farmville-shell .fv-peak {
+  border: 2px dashed #060;
+  background: #dfd;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+/* Open Graph residual on Facebook */
+.fb-og-badge {
+  font-size: 11px;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+  margin-top: 6px;
+}
+
+/* ITT feel tokens 2010 — iPad · IG · Retina */
+:root {
+  --itt10-ig: #517fa4;
+  --itt10-ipad: #7d7e80;
+  --itt10-fb: #3b5998;
+  --itt10-4sq: #0d9488;
+}
+

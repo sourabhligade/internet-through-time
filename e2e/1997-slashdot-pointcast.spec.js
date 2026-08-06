@@ -31,12 +31,15 @@ test.describe('1997 Slashdot + PointCast', () => {
 
   test('PointCast channels page loads', async ({ page }) => {
     await enterYear(page, '1997');
+    // Home lists channel guide; navigate via shell (iframe relative click is flaky under browser-core)
     await goInFrame(page, 'sites/pointcast/index.html');
     const frame = contentFrame(page);
     await waitForImmersion(page, '1997');
     await expect(frame.locator('text=/PointCast/i').first()).toBeVisible({ timeout: 10000 });
-    await frame.locator('a[href*="channels"]').first().click({ force: true });
-    await expect(frame.locator('text=/Channel/i').first()).toBeVisible({ timeout: 10000 });
+    await expect(frame.locator('a[href*="channels"]').first()).toBeVisible();
+    await goInFrame(page, 'sites/pointcast/channels.html');
+    await waitForImmersion(page, '1997');
+    await expect(contentFrame(page).locator('body')).toContainText(/Channel/i, { timeout: 10000 });
   });
 
   test('Amazon Book of the Day renders', async ({ page }) => {

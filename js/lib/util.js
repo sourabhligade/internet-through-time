@@ -223,6 +223,46 @@
     }
   }
 
+  /**
+   * Active immersion year (iframe pages set ITT._immersionYear; shell may use data-itt-year).
+   */
+  function immersionYear(fallback) {
+    try {
+      if (ITT._immersionYear) return String(ITT._immersionYear);
+    } catch (e0) { /* */ }
+    try {
+      if (typeof document !== "undefined" && document.documentElement) {
+        var dy = document.documentElement.getAttribute("data-itt-year");
+        if (dy) return String(dy);
+      }
+    } catch (e1) { /* */ }
+    try {
+      var path = (typeof location !== "undefined" && location.pathname) || "";
+      var m = path.match(/\/years\/(\d{4})\//);
+      if (m) return m[1];
+    } catch (e2) { /* */ }
+    return fallback != null ? String(fallback) : "";
+  }
+
+  /**
+   * Config storagePrefix for current year (e.g. itt05). Prefer immersion config over inventing keys.
+   */
+  function immersionStoragePrefix(fallback) {
+    var y = immersionYear("");
+    try {
+      if (y && ITT.immersionConfigs && ITT.immersionConfigs[y] && ITT.immersionConfigs[y].storagePrefix) {
+        return String(ITT.immersionConfigs[y].storagePrefix);
+      }
+    } catch (e) { /* */ }
+    if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2);
+    return fallback != null ? String(fallback) : "itt";
+  }
+
+  /** Build a namespaced localStorage key: prefix + "-" + suffix */
+  function immersionStorageKey(suffix, fallbackPrefix) {
+    return immersionStoragePrefix(fallbackPrefix) + "-" + String(suffix || "");
+  }
+
   ITT.util = {
     escapeHtml: escapeHtml,
     queryParam: queryParam,
@@ -236,6 +276,9 @@
     yearRootPath: yearRootPath,
     resolveRelativePath: resolveRelativePath,
     normalizeYearPath: normalizeYearPath,
-    hostFromUrl: hostFromUrl
+    hostFromUrl: hostFromUrl,
+    immersionYear: immersionYear,
+    immersionStoragePrefix: immersionStoragePrefix,
+    immersionStorageKey: immersionStorageKey
   };
 })(typeof window !== "undefined" ? window : this);

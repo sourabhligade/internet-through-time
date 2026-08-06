@@ -5,6 +5,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
   ITT.ImmersionFeatures.push({
     id: "guestbook-search",
@@ -20,6 +29,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -79,8 +89,8 @@ function initGuestbook(root) {
         notice.style.display = "block";
         notice.innerHTML = "Thanks, <b>" + escapeHtml(entry.name) + "</b> — your entry was added.";
       }
-      showFlash("✓ Guestbook signed as <b>" + escapeHtml(entry.name) + "</b>.");
-      markTourProgress();
+      showFlash("Thanks, <b>" + escapeHtml(entry.name) + "</b> — your guestbook entry was added.");
+      markTourUsed();
       try {
         if (history.replaceState) history.replaceState(null, "", location.pathname);
       } catch (err) { /* */ }
@@ -110,8 +120,8 @@ function initGuestbook(root) {
           notice.style.display = "block";
           notice.innerHTML = "Thanks, <b>" + escapeHtml(entry2.name) + "</b>! Your entry is saved.";
         }
-        showFlash("✓ Guestbook signed as <b>" + escapeHtml(entry2.name) + "</b> — reload keeps your entry.");
-        markTourProgress();
+        showFlash("Thanks, <b>" + escapeHtml(entry2.name) + "</b> — your guestbook entry was added.");
+        markTourUsed();
         render();
       }
     });
@@ -266,11 +276,11 @@ function initBabelFish() {
         }
         host.innerHTML =
           "<font face=\"Arial, Helvetica, sans-serif\" size=\"2\">" +
-          "<b>Babel Fish says:</b> <font size=\"1\" color=\"#666\">(museum theater — not live SYSTRAN)</font><br><br>" +
+          "<b>Babel Fish says:</b> <font size=\"1\" color=\"#666\">(demo translation)</font><br><br>" +
           escapeHtml(out).replace(/\n/g, "<br>") +
           "</font>";
         showFlash("Babel Fish translated (" + escapeHtml(lp.replace("_", " → ")) + ").");
-        markTourProgress();
+        markTourUsed();
       });
     })(forms[i]);
   }
@@ -322,7 +332,7 @@ function initYahooMail() {
         var login = ((form.querySelector('[name="login"]') || {}).value || "").trim();
         var pass = ((form.querySelector('[name="passwd"]') || {}).value || "").trim();
         if (!login) {
-          showFlash("Enter a Yahoo! ID to sign in (theater).");
+          showFlash("Please enter a Yahoo! ID.");
           return;
         }
         var user = { id: login, at: new Date().toLocaleString() };
@@ -345,8 +355,8 @@ function initYahooMail() {
           "</ul>" +
           "<font size=\"1\">Free Email for Everyone · museum reconstruction · no real accounts</font>" +
           "</font>";
-        showFlash("Signed in to Yahoo! Mail as <b>" + escapeHtml(login) + "</b> (local only).");
-        markTourProgress();
+        showFlash("Welcome, <b>" + escapeHtml(login) + "@yahoo.com</b>");
+        markTourUsed();
       });
     })(forms[i]);
   }

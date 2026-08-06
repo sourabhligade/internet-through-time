@@ -1,0 +1,162 @@
+SOURCE: https://web.archive.org/web/20021114161556id_/http://www.yahoo.com/
+FINAL: https://web.archive.org/web/20021114161556id_/http://www.yahoo.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-yahoo
+ROLE: Yahoo portal
+TITLE: Yahoo!
+BYTES: 31524
+ERROR: 
+
+KEY FACTS / TEXT:
+Yahoo!
+Build your Web Presence - get a domain , get custom email , build a site , or open an online store
+• advanced search • most popular
+New! Yahoo! Shopping Deal Center - New deals every day
+Shop
+Auctions ,
+Autos ,
+Classifieds ,
+Real Estate ,
+Shopping ,
+Travel
+Find
+Careers ,
+Maps ,
+People Search ,
+Personals ,
+Yellow Pages
+Connect
+Chat ,
+GeoCities ,
+Greetings ,
+Groups ,
+Mail ,
+Messenger ,
+Mobile
+Organize
+Addresses ,
+Briefcase ,
+Calendar ,
+My Yahoo! ,
+PayDirect ,
+Photos
+Fun
+Games ,
+Horoscopes ,
+Kids ,
+Movies ,
+Music ,
+TV
+Info
+Finance ,
+Health ,
+News ,
+Sports ,
+Weather
+More Yahoo!...
+Web Site Directory - Sites organized by subject Suggest your site
+Business & Economy
+B2B , Finance , Shopping , Jobs ...
+Computers & Internet
+Internet , WWW , Software , Games ...
+News & Media
+Newspapers , TV , Radio ...
+Entertainment
+Movies , Humor , Music ...
+Recreation & Sports
+Sports , Travel , Autos , Outdoors ...
+Health
+Diseases , Drugs , Fitness , Medicine ...
+Government
+Elections , Military , Law , Taxes ...
+Regional
+Countries , Regions , US States ...
+Society & Culture
+People , Environment , Religion ...
+Education
+College and University , K-12 ...
+Arts & Humanities
+Photography , History , Literature ...
+Science
+Animals , Astronomy , Engineering ...
+Social Science
+Languages , Archaeology , Psychology ...
+Reference
+Phone Numbers , Dictionaries , Quotations ...
+Buzz Index - Yahoo! Picks - New Additions - Full Coverage
+Personal Assistant Sign In Sign up to personalize Yahoo! - learn more
+In The News
+•   FBI warns of terror threat to hospitals •   China to get new leadership as Jiang retires •   Bush takes on Christian right over Islam •   JDL chief Rubin dies after jail suicide try •   Data on 17,000 nursing homes goes online •   Michael Jackson testifies in Calif. trial •   Markets :  S&P 500 1.4%   ·   Nasdaq 1.9%
+News - Photos - Weather - Sports - Stocks
+Marketplace
+•   Y! Store - build an online store in 10 minutes
+•   SBC Yahoo! DSL - only $39.95/mo for first 12 months •   Free online credit report - check your score now •   Yahoo! Web Hosting - Hosting solutions for small businesses
+Shopping - Auctions - Classifieds - Travel
+Entertainment
+•   Entertainment Tonight on Yahoo! Friends Flashback: Watch classic behind-the-scenes 'Friends' clips from the ET video vault.
+Movies - Music - TV - Horoscopes - Games
+Local Yahoo!s
+Europe
+Asia Pacific
+Americas
+•  Catalan
+•  Denmark
+•  France
+•  Germany
+•  Italy
+•  Norway
+•  Spain
+•  Sweden
+•  UK & Ireland
+•  Asia
+•  Australia & NZ
+•  China
+•  Hong Kong
+•  India
+•  Japan
+•  Korea
+•  Singapore
+•  Taiwan
+•  Argentina
+•  Brazil
+•  Canada
+•  Mexico
+•  U.S. in Chinese
+•  U.S. in Spanish
+U.S. Cities:    Atlanta - Boston - Chicago - Dallas/FW - LA - NYC - SF Bay - Wash. DC - more...
+More Yahoo!
+Guides
+Small Business
+Enterprise
+Personal Finance
+• Advice
+• Education
+• Health
+• Lottery
+• Members
+• Pets
+• Yahooligans!
+• Domain Registration
+• Sell on Yahoo!
+• Small Biz Center
+• Store Building
+• new! Web Hosting
+• Enterprise Solutions
+• Webcasting
+• NetRoadshow
+• Portal Solutions
+• Resumix
+• Banking
+• Bill Pay
+• Money Manager
+• Insurance
+• Loans
+• Taxes
+Even More Yahoo!...
+Access Yahoo! via:    PDAs - Web-enabled Phones - Voice (1-800-My-Yahoo)
+All of Yahoo! Shopping News Stories News Photos Dictionary Thesaurus Yellow Pages    •  advanced search •  most popular
+How to Suggest a Site - Company Info - Copyright Policy - Terms of Service - Jobs - Advertise with Us Copyright © 2002 Yahoo! Inc. All rights reserved. updated Privacy Policy
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

@@ -701,13 +701,15 @@ html, body {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: transparent;
+  /* Slight dim so users notice the Welcome alert; click dismisses (see create.js) */
+  background: rgba(0, 0, 0, 0.18);
   z-index: 200;
-  cursor: default;
+  cursor: pointer;
 }
 
 .modal-backdrop.hidden {
-  display: none;
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .dialog {
@@ -963,10 +965,12 @@ html, body {
   cursor: wait;
 }
 
+/* Dim only — never block clicks. Progressive-image theater used to set
+   pointer-events:none for the whole transfer, so links felt dead. */
 .browser.loading .content-frame iframe {
-  opacity: 0.62;
-  filter: grayscale(0.12);
-  pointer-events: none;
+  opacity: 0.85;
+  filter: grayscale(0.06);
+  pointer-events: auto;
   transition: opacity 0.08s linear;
 }
 

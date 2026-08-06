@@ -20,6 +20,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -55,16 +56,20 @@ function initAmazonAdd() {
       cart.push(item);
       setCart(cart);
       updateCartBadges();
-      var msg = "* Added <b>" + escapeHtml(item.title) + "</b> — " +
+      var msg = "Added <b>" + escapeHtml(item.title) + "</b> to your Shopping Cart. " +
         '<a href="' + bookHref("cart.html") + '"><b>View cart</b></a> · ' +
-        '<a href="' + bookHref("checkout.html") + '">Checkout</a>';
+        '<a href="' + bookHref("checkout.html") + '">Proceed to checkout</a>';
       var note = document.getElementById("cart-flash");
       if (note) {
         note.style.display = "block";
         note.innerHTML = msg;
       }
-      showFlash(msg);
-      markTourProgress();
+      if (api.actionFeedback) {
+        api.actionFeedback(msg, { kind: "amazon-cart", statusSelector: "#cart-flash, [data-cart-flash]" });
+      } else {
+        showFlash(msg);
+      }
+      markTourUsed();
     });
   }
   updateCartBadges();
@@ -360,7 +365,7 @@ function initEyesSubscribe() {
       " profile(s) stored in this browser · free personal notification service, 1995.</font>" +
       "</font></td></tr></table>";
     showFlash("Eyes & Editors: subscription recorded for <b>" + escapeHtml(email) + "</b>.");
-    markTourProgress();
+    markTourUsed();
   });
 }
 

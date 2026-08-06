@@ -1,0 +1,88 @@
+# 2002 visit pass — 2026-07-26
+# Mode: same pipeline as 2001 deep research (live + Wayback id_)
+# Disk truth: years/2002/ and assets/period/2002/ WIPED — research only
+
+## Live narrative (re-confirmed)
+- cybercultural.com/p/internet-2002/ — [visited]
+  Pew always-on; MTV tables+plugins; Wired CSS Oct; blogosphere; KaZaA/Morpheus/Grokster;
+  iPod gen2; last.fm seed; IE6 ~90%; Mozilla 1.0; Phoenix 0.1
+- cybercultural.com/p/blogs-rss-2002/ — [visited]
+  Daypop 6300→7500; Blogdex redesign; Technorati Cosmos EOY; Google News beta (no blogs);
+  RSS 2.0 Sep; TrackBack Jun + Pingback; Plasticbag design
+- cybercultural.com/p/ipod-2002/ — [visited]
+  Gen2 touch wheel; MusicMatch Windows; 20GB; label courtship; no Music Store
+- pewresearch.org/.../main-report-the-broadband-difference/ — [visited]
+  21% of internet users / 24M adults / 12% of all adults; was 6% Jun 2000;
+  71% cable / 27% DSL / 2% sat; 82% vs 58% online typical day; Excite@Home Feb 2002
+- stopdesign.com/journal/2002/10/11/finally-were-live.html — [visited]
+  Wired live ~10pm PDT; strict XHTML 1.0; entirely CSS presentation
+- internetlivestats.com/total-number-of-websites/ — [visited]
+  2002: 38,760,373 sites · 662,663,600 users
+- en.wikipedia.org/wiki/Friendster — [visited]
+  Founded 2002 (Abrams); mass public often Mar 2003; Circle of Friends
+- theregister.com/2002/03/15/old_morpheus_still_works/ — [visited]
+  Morpheus → Gnutella; FastTrack license terminated; spyware accusations
+
+## Wayback product bodies (this pass + re-confirm)
+
+### Google 20021111080812 — [wa-visited]
+Tabs: Web · Images · Groups · Directory · News-New!
+©2002 · searching 3,083,324,652 pages
+
+### Google News 20020930111024 — [wa-visited]
+News BETA · 4,000 sources · auto clusters · Top Stories / World / U.S. / Business / Sci/Tech
+
+### Blogger 20021202091911 — [wa-visited]
+Still Pyra Labs ©2000–2002 · redesign contest · Blog*Spot Plus · bSTATS · Pro
+NOT Google-owned (acquisition Feb 2003)
+
+### MTV 20020808174847 — [wa-visited]
+Bands · TRL · VMA 2002 · Music Videos · Broadband Zone · Radio · Community
+Tables + image buttons · Osbournes-era shows
+
+### Mozilla 20020606030900 — [wa-visited]
+Mozilla 1.0 Released Jun 5 · suite (browser+mail+chat) · Gecko
+"Stick a fork in it. It's done."
+
+### Yahoo 20021114161556 — [wa-visited]
+Dense portal · Shop/Find/Connect/Organize · In The News 2002 rails
+SBC Yahoo! DSL $39.95 ad (broadband marketing)
+
+### MT TrackBack 20020701050155 — [wa-visited]
+Peer-to-peer blog conversations · popup listing · CSS .trackback-* · HTTP GET ping
+
+### Movable Type features 20021029153007 — [wa-visited] RECONFIRM
+Download Version 2.5 · Six Apart ©2001-2002
+TrackBack peer-to-peer · MySQL/Berkeley DB · XML-RPC Blogger/MetaWeblog APIs
+Multiple weblogs/authors · categories · comments · IP ban · templates · RSS
+Import from Blogger/GreyMatter/NewsPro · weblogs.com pings
+
+### Amazon 20021015071523 — [wa-visited] RECONFIRM
+Title: Amazon.com--Earth's Biggest Selection
+Multi-store rails: Books/Music/DVD · Electronics · Toys · Home · Gift/Wedding
+Hello. personalized recommendations · Top Sellers (Trivial Pursuit 20th, Linksys wireless
+router, Star Wars Episode II DVD, Spider-Man DVD, Forty Licks)
+©1996-2002 Amazon.com · International: CA/UK/DE/JP/FR
+Smile era continuity (Version Museum)
+
+### Wikipedia EN ~20021010 (redirect from 20020802 class) — [wa-visited] RECONFIRM
+Main Page · collaborative encyclopedia from scratch · started Jan 2001
+~52,364 English articles (growth densify from 2001)
+Anyone can edit without login · GFDL · category schemes · multi-language list
+NOT modern Vector skin
+
+### KaZaA 20020820 class — [wa-partial / empty body]
+No content found on id_ body — use Cybercultural + prior extract + RECON marketing
+~100M downloads by Aug 2002 (internet-2002)
+
+### Wired redesign PR 20021013195949 — [wa-failed this pass]
+id_ returned IA chrome only (JS required) — use StopDesign live + prior wired-redesign-pr extract
+
+## Scaffold rule (post-wipe)
+DO NOT git checkout old years/2002 content as gold.
+Scaffold from shipped years/2001/ shell + continuity logos.
+New rooms: friendster · kazaa · wired · googlenews · daypop · technorati · phoenix
+Modules: friendster.js · kazaa.js · TrackBack theater
+
+## Research sufficient for scaffold
+All P0 room kits have extract-backed copy. Pixel harvest is Phase 0/9.

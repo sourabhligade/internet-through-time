@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2016">
+<head>
+<meta charset="utf-8">
+<title>Vine — Camera</title>
+<link rel="stylesheet" href="../../../../css/period-2016.css">
+<script src="../../../../js/immersion-2016.js" defer></script>
+</head>
+<body class="vine-app">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="vine-topbar">
+  <a href="index.html" style="color:#fffc00;text-decoration:none">← Home</a>
+  <span>Camera</span>
+  <span></span>
+</div>
+<div class="vine-progress" data-vine-progress><div data-vine-bar></div></div>
+<div class="vine-camera">
+  <p class="vine-camera-hint">Hold to record · up to <b>6 seconds</b></p>
+  <button type="button" class="vine-hold" data-vine-hold aria-label="Hold to record">Hold</button>
+  <p style="margin-top:16px">
+    <input type="text" data-vine-caption class="vine-caption" placeholder="Add a caption…" maxlength="120">
+  </p>
+  <p><button type="button" class="vine-cta" data-vine-post>Post</button></p>
+  <div class="itt16-status" data-vine-status style="min-height:1.2em;margin-top:10px;color:#8f8"></div>
+  <p style="font-size:11px;color:#666;margin-top:20px"><a href="index.html">Back to feed</a></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt16-vine-posts";
+  var hold = document.querySelector("[data-vine-hold]");
+  var bar = document.querySelector("[data-vine-bar]");
+  var st = document.querySelector("[data-vine-status]");
+  var post = document.querySelector("[data-vine-post]");
+  var cap = document.querySelector("[data-vine-caption]");
+  var secs = 0;
+  var timer = null;
+  var holding = false;
+  var MAX = 6;
+  function setBar(s) {
+    secs = Math.min(MAX, s);
+    if (bar) bar.style.width = (secs / MAX * 100) + "%";
+  }
+  function startHold(ev) {
+    if (holding) return;
+    holding = true;
+    if (ev && ev.preventDefault) ev.preventDefault();
+    if (timer) clearInterval(timer);
+    setBar(0);
+    var t0 = Date.now();
+    timer = setInterval(function () {
+      setBar((Date.now() - t0) / 1000);
+      if (secs >= MAX) endHold();
+    }, 50);
+  }
+  function endHold() {
+    if (!holding && !timer) return;
+    holding = false;
+    if (timer) clearInterval(timer);
+    timer = null;
+    if (st) st.textContent = "Ready · ~" + secs.toFixed(1) + "s";
+  }
+  if (hold) {
+    if (window.PointerEvent) {
+      hold.addEventListener("pointerdown", startHold);
+      hold.addEventListener("pointerup", endHold);
+      hold.addEventListener("pointercancel", endHold);
+      hold.addEventListener("pointerleave", endHold);
+    } else {
+      hold.addEventListener("mousedown", startHold);
+      hold.addEventListener("mouseup", endHold);
+      hold.addEventListener("mouseleave", endHold);
+      hold.addEventListener("touchstart", startHold, { passive: false });
+      hold.addEventListener("touchend", endHold);
+    }
+  }
+  if (post) {
+    post.addEventListener("click", function () {
+      if (secs < 0.3) secs = 3;
+      var list = [];
+      try { list = JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) {}
+      var caption = (cap && cap.value) || "untitled";
+      list.unshift({
+        caption: caption,
+        secs: Math.min(MAX, Math.round(secs) || 6),
+        ts: Date.now()
+      });
+      try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 40))); } catch (e2) {}
+      var msg = "Posted · " + (Math.min(MAX, Math.round(secs) || 6)) + "s loop";
+      if (st) st.textContent = msg;
+      try {
+        if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { status: st, kind: "vine" });
+        }
+      } catch (e3) {}
+      setTimeout(function () { location.href = "index.html"; }, 450);
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Always-on broadband — 2001</title>
+<link rel="stylesheet" href="../../../../css/period-2001.css">
+</head>
+<body bgcolor="#e8eef8" text="#000" link="#003399">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12" bgcolor="#ffffff" style="margin:16px auto;border:1px solid #669">
+<tr><td>
+ <font face="Arial,Helvetica,sans-serif" size="2">
+ <h1 style="font-size:18px;color:#036">Always-on Internet</h1>
+ <p style="background:#ffc;border:1px solid #cc0;padding:8px">
+ <b>Always-on is spreading.</b> Dial-up is still common. Cable and DSL keep the line up all day —
+ no modem scream every time you check mail.
+ </p>
+ <p>Compare plans available in many U.S. markets this year:</p>
+ <table width="100%" border="1" cellpadding="6" cellspacing="0" bordercolor="#99a">
+ <tr bgcolor="#cdf"><td><b>Plan</b></td><td><b>Pitch</b></td><td><b>Typical speed</b></td></tr>
+ <tr><td>56k dial-up</td><td>Pay per hour · free evenings</td><td>~5 KB/s · busy signals</td></tr>
+ <tr><td>DSL 384k</td><td>Phone line + modem brick</td><td>~40 KB/s · always-on</td></tr>
+ <tr><td>Cable 1 Mbps</td><td>Shared neighborhood pipe</td><td>~100 KB/s · peaks &amp; valleys</td></tr>
+ </table>
+ <p style="margin-top:12px">
+ <button type="button" id="speed-check">Run speed check</button>
+ <span id="speed-out" style="margin-left:8px;color:#060;font-size:11px"></span>
+ </p>
+ <p>
+ <a href="plans.html">Plan details</a> ·
+ <a href="speed.html">What broadband feels like</a> ·
+ <a href="../microsoft/xp.html">Windows XP</a> ·
+ <a href="../../pages/home.html">← 2001 Start</a>
+ </p>
+ </font>
+</td></tr></table>
+<script>
+(function(){
+ var b=document.getElementById('speed-check');
+ var o=document.getElementById('speed-out');
+ if(b&&o) b.onclick=function(){
+ o.textContent='Testing…';
+ setTimeout(function(){ o.textContent='~420 kbps down / ~90 kbps up (cable sample — evening load).'; }, 900);
+ };
+})();
+</script>
+<script src="../../../../js/immersion-2001.js"></script>
+</body></html>

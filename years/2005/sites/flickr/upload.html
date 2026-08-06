@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Flickr — upload.html</title>
+<title>Flickr — Upload</title>
 <link rel="stylesheet" href="../../../../css/period-2005.css">
-
 </head>
-<body bgcolor="#ffffff" text="#000000" link="#0000cc" vlink="#551a8b">
+<body class="flickr-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="fl04-wrap"><div class="fl04-top"><b>flickr</b> upload</div>
-        <form data-flickr-upload class="gm04-compose"><font size="2">
-        Title <input name="title" size="40"><br><br>
-        Tags <input name="tags" size="40"><br><br>
-        <textarea name="desc" rows="3" cols="40"></textarea><br><br>
-        <input type="submit" value="Upload (theater)"></font></form>
-        <p><a href="index.html">« Home</a></p></div>
+<div class="flickr-header">
+ <b style="color:#ff0084">flickr</b>
+ · <a href="index.html" style="color:#fff">Photostream</a>
+ · <a href="explore.html" style="color:#fff">Explore</a>
+ · <a href="groups.html" style="color:#fff">Groups</a>
+ · <a href="tags.html" style="color:#fff">Tags</a>
+ · <a href="upload.html" style="color:#fff">Upload</a>
+ · <a href="about.html" style="color:#fff">About</a>
+</div>
+<div style="padding:14px;max-width:640px;font-size:13px">
+
+ <h1 style="font-size:18px">Upload</h1>
+ <p><b>Mar 20 2005:</b> Yahoo acquires Ludicorp / Flickr — still the photo site with tags &amp; groups,
+ not a Yahoo Photos clone.</p>
+ <form data-flickr-upload style="background:#f5f5f5;border:1px solid #ccc;padding:12px">
+ Title<br><input name="title" size="42" value="My photo"><br><br>
+ Tags (comma separated)<br><input name="tags" size="42" value="2005, flickr, yahoo"><br><br>
+ Description<br><textarea name="desc" rows="3" cols="42">Pocket digicam · share with contacts.</textarea><br><br>
+ <button type="submit">Upload</button>
+ </form>
+ <p data-flickr-status style="font-size:12px;color:#060"></p>
+ <p style="font-size:11px;color:#666">No binary stored — title/tags join your photostream in this browser.</p>
+ <h3>Your stream</h3>
+ <div class="flickr-stream" data-flickr-stream></div>
+
+</div>
 <script src="../../../../js/immersion-2005.js"></script>
 </body></html>

@@ -1,0 +1,26 @@
+# Facebook open registration — Sep 26, 2006
+# Source: https://about.fb.com/news/2006/09/facebook-expansion-enables-more-people-to-connect-with-friends-in-a-trusted-environment/
+# Visited: 2026-07-31
+
+LOCKED FACTS:
+- Date: September 26, 2006
+- Anyone can join with valid email (not only school/work network emails)
+- Age: at least 13
+- Join one of more than 500 regional networks
+- Previously required .edu / .com / .org / .gov / .mil class email
+- Still must prove affiliation to access existing college/work networks
+- Mobile phone validation mentioned for account verify
+- Profiles accessible to same network + confirmed friends
+- New privacy controls: block network search · prevent message/poke/add · control search photo
+
+COPY BANK:
+- "expanded to enable everyone to connect with their friends"
+- "regional networks"
+- "valid email address"
+- "13 years of age" / at least 13
+- industry-leading privacy controls
+
+EXHIBIT:
+- P0 Facebook about + open room
+- BAN: campus-only as product truth AFTER this date
+- Pre-Sep 26: still gated narrative on about timeline

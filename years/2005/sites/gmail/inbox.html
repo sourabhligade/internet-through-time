@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Gmail - Inbox</title>
+<title>Gmail — Inbox</title>
 <link rel="stylesheet" href="../../../../css/period-2005.css">
 </head>
-<body bgcolor="#ffffff">
+<body class="gmail-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="gm04-wrap">
-  <img src="../../../../assets/period/2004/gmail/logo-wa.gif" width="143" height="59" alt="Gmail" border="0" align="absmiddle"> <div class="gm04-logo" style="font-size:18px"><span class="c1">G</span><span class="c2">mail</span></div>
-  <div class="gm04-nav">
-    <a href="compose.html">Compose Mail</a> ·
-    <a href="inbox.html">Inbox</a> ·
-    <a href="index.html">Sign out</a> ·
-    <input size="24" data-gmail-q placeholder="Search mail">
-    <input type="button" value="Search Mail" data-gmail-search>
-  </div>
-  <p><font size="2"><b>Inbox</b> — Search, don't sort. About a gigabyte free.</font></p>
-  <div data-gmail-list></div>
+<div class="gmail-header">
+ <b>Gmail</b> — <span data-gmail-user></span>
+ · <a href="compose.html">Compose</a>
+ · <a href="invite.html">Invites</a>
+ · <a href="about.html">About</a>
+ · <a href="index.html">Sign out</a>
+ · <a href="../../pages/home.html">Start</a>
+</div>
+<div class="gmail-layout">
+ <div class="gmail-labels">
+ <b>Mail</b><br>
+ <a href="inbox.html">Inbox</a><br>
+ Starred<br>
+ <a href="compose.html">Compose</a><br>
+ Sent Mail<br>
+ Drafts<br>
+ All Mail<br>
+ Spam<br>
+ Trash<br>
+ <br><b>Labels</b><br>
+ <font color="#06c">Personal</font><br>
+ <font color="#090">Work</font><br>
+ <font color="#c60">Travel</font><br>
+ <br><a href="invite.html"><b>Invitations</b></a>
+ </div>
+ <div class="gmail-main">
+ <div style="margin-bottom:8px">
+ <b>Search mail:</b>
+ <input size="32" placeholder="search your gigabyte…" name="q" data-gmail-q>
+ <button type="button" data-gmail-search>Search Mail</button>
+ <font size="1" color="#666"> “Search, don’t sort.”</font>
+ </div>
+ <div class="gmail-note">
+ Storage pitch: <b>1 gigabyte</b> free (period coverage). Built so you rarely delete.
+ Conversation-style list below (invite-era beta).
+ </div>
+ <div style="font-size:11px;margin:6px 0;color:#666">
+ Select: All · None · Read · Unread · Starred · Unstarred
+ &nbsp;·&nbsp; More actions ▾ &nbsp;·&nbsp; Refresh
+ </div>
+ <div data-gmail-list></div>
+ <p style="font-size:11px;margin-top:12px"><a href="compose.html">Compose mail</a> · <a href="about.html">About Gmail 2004</a></p>
+ </div>
 </div>
 <script src="../../../../js/immersion-2005.js"></script>
 </body></html>

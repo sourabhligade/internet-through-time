@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2013"><head><meta charset="utf-8"><title>Apple Maps — iOS 6 honesty</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css"><script src="../../../../js/immersion-2013.js" defer></script></head>
+<body bgcolor="#e8f5e9"><div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12" bgcolor="#fff" style="margin:16px auto;font-family:Helvetica,Arial;font-size:13px;border:1px solid #8bc34a"><tr><td>
+<p><a href="index.html">← iPhone 5</a> · <a href="ios6.html">iOS 6</a></p>
+<h1 style="font-size:18px;color:#4caf50">Maps</h1>
+<div class="maps-warn">
+ <b>Period honesty:</b> Apple Maps launches with iOS 6 and is widely criticized — missing transit, odd satellite, wrong places.
+ Tim Cook later apologizes. Museum theater — not live routing.
+</div>
+<p>
+ <input data-maps-q size="30" placeholder="Search place…" style="padding:6px">
+ <button type="button" data-maps-search>Search (theater)</button>
+</p>
+<div data-maps-out style="font-size:12px;min-height:40px;background:#f5f5f5;padding:8px;margin-top:8px"></div>
+<div data-maps-status style="font-size:11px;color:#060;margin-top:6px"></div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var KEY="itt13-maps-note";
+  var btn=document.querySelector("[data-maps-search]");
+  var q=document.querySelector("[data-maps-q]");
+  var out=document.querySelector("[data-maps-out]");
+  var st=document.querySelector("[data-maps-status]");
+  if(btn)btn.addEventListener("click",function(){
+    var term=(q&&q.value)||"somewhere";
+    var funny=["Might be a park… or a parking lot.","Turn-by-turn says go straight into a lake (theater).","Public transit: not available (2012 honesty).","3D flyover looks great; the label might be wrong."];
+    var msg=funny[Math.floor(Math.random()*funny.length)];
+    if(out)out.innerHTML="<b>"+String(term).replace(/</g,"&lt;")+"</b><br>"+msg;
+    try{localStorage.setItem(KEY,JSON.stringify({q:term,note:msg,ts:Date.now()}));}catch(e){}
+    if(st)st.textContent="Saved · "+KEY;
+  });
+});
+</script>
+</td></tr></table></body></html>

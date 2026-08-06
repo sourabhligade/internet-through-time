@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kongregate — 2006–2007 portal reconstruction</title>
+  <link rel="stylesheet" href="../../../css/games.css">
+  <link rel="stylesheet" href="../../../css/period-announce.css">
+</head>
+<body>
+  <div class="games-wrap">
+    <header class="games-top">
+      <div class="games-brand">WEB GAMES</div>
+      <a href="../../index.html">Lobby</a>
+      <a href="../../portals.html">Portals</a>
+      <a href="../../play/index.html">Play</a>
+      <a href="../../../index.html">Hub</a>
+    </header>
+    <div class="portal-chrome">
+      <div class="portal-bar kong">Kongregate <span style="font-weight:normal;font-size:11px">· badges &amp; high scores</span></div>
+      <div class="portal-body">
+        <p class="games-ok" style="margin-top:0">
+          <b>Launch:</b> October 10, 2006 (alpha class) · public growth through <b>2007</b>.
+          Badges, chat, developer uploads — Flash portal becomes “social.”
+        </p>
+        <div class="flash-banner">Badge theater · high scores in this browser only (itt-games-scores)</div>
+        <p style="font-size:12px">Earn a “museum badge” by posting a score in any arcade game:</p>
+        <ul class="game-list">
+          <li><span class="gname">HoverChop</span><span class="gmeta">badge: First Flight</span><a class="btn-play" href="../../play/heli.html">Play</a></li>
+          <li><span class="gname">TrailSled</span><span class="gmeta">badge: Track Layer</span><a class="btn-play" href="../../play/sled.html">Play</a></li>
+          <li><span class="gname">Balloon Blox</span><span class="gmeta">badge: Pop Cadet</span><a class="btn-play" href="../../play/blox.html">Play</a></li>
+        </ul>
+        <div id="badge-status" class="scoreboard" style="margin-top:10px"></div>
+        <p style="font-size:11px;color:#666">Not the modern Kongregate app · educational reconstruction only.</p>
+      </div>
+    </div>
+    <p style="font-size:12px"><a href="../../portals.html">← All portals</a></p>
+  </div>
+  <script src="../../../js/games/scores.js"></script>
+  <script>
+  if (window.ITTGames) {
+    ITTGames.setLastPortal("kongregate");
+    var el = document.getElementById("badge-status");
+    var games = ["heli", "sled", "blox"];
+    var names = { heli: "First Flight", sled: "Track Layer", blox: "Pop Cadet" };
+    var html = "<b>Your badges (this browser)</b><ul style='margin:6px 0 0 18px'>";
+    var any = false;
+    games.forEach(function (g) {
+      var s = ITTGames.getScores(g);
+      if (s.length) {
+        any = true;
+        html += "<li>★ " + names[g] + " — best " + s[0].score + "</li>";
+      }
+    });
+    html += "</ul>";
+    if (!any) html = "<b>Your badges</b><p style='margin:4px 0 0;color:#666'>None yet — play a game to earn one.</p>";
+    el.innerHTML = html;
+  }
+  </script>
+  <script src="../../../js/games/shell.js"></script>
+</body>
+</html>

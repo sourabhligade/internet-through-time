@@ -1,0 +1,14 @@
+SOURCE: https://www.apple.com/newsroom/2005/06/30iTunes-Podcast-Subscriptions-Top-One-Million-in-First-Two-Days/
+FETCHED: 2026-07-30 web-expand pass
+---
+PRESS RELEASE June 30, 2005
+iTunes Podcast Subscriptions Top One Million in First Two Days
+
+CUPERTINO—June 30, 2005—Apple announced that in just two days iTunes customers have subscribed to more than one million Podcasts from the new iTunes Podcast Directory. iTunes 4.9 has discover/subscribe/manage/listen built in; new episodes auto-delivered to computer and iPod.
+
+Quotes:
+- Adam Curry (PodShow): "listeners are voting with their ears" · subscriptions dramatically increased · predicts tens of millions of new listeners
+- August Trometer (iPodderX): "Apple is like the Starbucks of Podcasting"
+- Will Lewis (KCRW): "propelled Podcasting into the mainstream" · servers swamped · downloads increased tenfold
+
+Features reconfirmed: Auto-Sync to iPod · Podcast menu · bookmarking · color Podcast artwork.

@@ -1,0 +1,23 @@
+SOURCE: https://web.archive.org/web/20011217201553id_/http://www.wikipedia.com/
+STATUS: [wa-visited] 2026-07-26 deep research pass (GOOD late-year body; replaces failed .org Dec extract)
+TITLE: Wikipedia: The Free Encyclopedia
+ROLE: P0 Wikipedia densify late 2001
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Branding: "Wikipedia: The Free Encyclopedia"
+- GFDL / open content / free content copy on home
+- Current events link: "2001 U.S. Attack on Afghanistan" + More current events
+- Expanded language list vs Jul: +Arabic, Danish, Dutch, Hungarian, Polish, Simplified English
+- Receive an article a day! (subscribe.cgi)
+- How to edit a page · Brilliant prose · Tarballs · meta.wikipedia.com · Wikipedia Chat
+- Press links: NYT Dec 9 2001 · NYT Sep 20 2001 · Technology Review
+- Still UseModWiki CGI (wiki.cgi)
+- Search Wikipedia field
+
+BUILD IMPLICATIONS:
+- Home densify can add current-events rail carefully (museum: educational, not gore)
+- Article-a-day / random / index as secondary pages
+- Prefer Jul for pure "birth" grammar; Dec.com for growth densify
+
+BAN: Modern Vector; mobile; Wikidata; Wikipedia Foundation fundraising chrome

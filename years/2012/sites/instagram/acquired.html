@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2012">
+<head>
+<meta charset="utf-8">
+<title>Facebook acquires Instagram — April 9, 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css">
+<script src="../../../../js/immersion-2012.js" defer></script>
+</head>
+<body bgcolor="#fafafa">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="ig-2012">
+ <p style="font-size:11px"><a href="index.html">← Instagram</a> · <a href="android.html">Android</a></p>
+ <h1 style="font-size:18px">Facebook acquires Instagram</h1>
+ <p><b>April 9, 2012</b> — days after Android launch. Consideration ~<b>$1 billion</b> cash + stock.
+ Period promise: Instagram remains an <b>independently branded standalone app</b>.</p>
+ <div class="ig-warn"><b>Still separate:</b> Not buried into Facebook Photos. Not “Meta.” Not Stories.</div>
+ <p><button type="button" data-ig-acquired-ack>Mark April 9, 2012</button>
+ <span data-ig-acquired-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
+ <p style="font-size:11px;color:#666">DealBook · TechCrunch · ~$1B cash + stock class</p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var btn = document.querySelector("[data-ig-acquired-ack]");
+  var st = document.querySelector("[data-ig-acquired-status]");
+  var KEY = "itt12-ig-owned";
+  try { if(localStorage.getItem(KEY)&&st) st.textContent="Saved · April 9, 2012"; } catch(e){}
+  if(btn) btn.addEventListener("click", function(){
+    try { localStorage.setItem(KEY, JSON.stringify({owned:true, buyer:"Facebook", price:"~$1B", ts:Date.now()})); } catch(e2){}
+    if(st) st.textContent="Saved · April 9, 2012 · ~$1B";
+  });
+});
+</script>
+</body>
+</html>

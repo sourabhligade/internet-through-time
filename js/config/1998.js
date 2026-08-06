@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1998/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1998/playable/game.html",
       "sites/hotmail/compose.html": "http://www.hotmail.com/compose",
       "sites/hotmail/read.html": "http://www.hotmail.com/read",
       "sites/larrypage/research.html": "http://www-cad.stanford.edu/~page/research.html",
@@ -92,6 +94,7 @@
       "pages/error/404.html": "http://home.microsoft.com/intl/web1998/error/404.html",
       "pages/error/unreachable.html": "http://home.microsoft.com/intl/web1998/error/unreachable.html",
       "pages/home.html": "http://home.microsoft.com/intl/web1998/",
+      "pages/map.html": "http://museum.local/years/1998/map/",
       "pages/whats-new.html": "http://home.microsoft.com/intl/web1998/whats-new.html",
       "sites/altavista/babelfish.html": "http://www.altavista.com/babelfish.html",
       "sites/altavista/index.html": "http://www.altavista.com/",
@@ -211,6 +214,7 @@
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
       "pages/home.html": "Welcome to the World Wide Web \u2014 1998",
+      "pages/map.html": "1998 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
       "sites/altavista/index.html": "AltaVista",
@@ -296,6 +300,12 @@
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web1998/",
     locationHints: [
+      { re: /bowienet/i, path: "sites/bowienet/index.html" },
+      { re: /gamespot/i, path: "sites/gamespot/index.html" },
+      { re: /infoseek/i, path: "sites/infoseek/index.html" },
+      { re: /mozilla/i, path: "sites/mozilla/index.html" },
+      { re: /netscape/i, path: "sites/netscape/index.html" },
+      { re: /you'?ve.?got.?mail|ygm/i, path: "sites/youvegotmail/index.html" },
       { re: /valve|halflife|half-life/i, path: "sites/valve/index.html" },
       { re: /winfiles|shareware/i, path: "sites/winfiles/index.html" },
       { re: /larry|page/i, path: "sites/larrypage/index.html" },

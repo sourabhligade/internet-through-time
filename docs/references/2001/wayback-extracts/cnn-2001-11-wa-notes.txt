@@ -1,0 +1,19 @@
+SOURCE: https://web.archive.org/web/20011114235658id_/http://www8.cnn.com/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: CNN.com
+ROLE: P0 news — careful post-9/11 framing
+YEAR TARGET: 2001
+
+KEY FACTS (14 Nov 2001):
+- Nav: MAIN PAGE · WORLD · U.S. · WEATHER · BUSINESS · SPORTS · POLITICS · LAW · SCI-TECH · SPACE · HEALTH · ENTERTAINMENT · TRAVEL · EDUCATION · CAREER · IN-DEPTH
+- Breaking: Western aid workers held by Taliban flown to Pakistan
+- Lead: Northern Alliance / White House on Afghanistan / al Qaeda pursuit "may still last years"
+- Specials: trade.center · war maps · Flight 587 · military trials debate
+- Business: HP-Compaq merger · markets
+- Entertainment: Harry Potter rollout
+- Footer: © 2001 Cable News Network · An AOL Time Warner Company
+
+BUILD / CARE:
+- Educational reconstruction; no sensational gallery of tragedy
+- Tech/business secondary rails OK
+- CDX-verify every CNN URL (wrong-year redirects known)

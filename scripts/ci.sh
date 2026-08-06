@@ -15,6 +15,9 @@ python3 scripts/test-authenticity.py
 echo "==> Static: pipeline"
 python3 scripts/test-pipeline.py
 
+echo "==> Static: all-years health matrix"
+python3 scripts/check-all-years.py
+
 echo "==> Static: HTTP smoke (ephemeral server)"
 python3 -m http.server 8080 --bind 127.0.0.1 >/tmp/itt-ci-http.log 2>&1 &
 SERVER_PID=$!
@@ -38,6 +41,10 @@ fi
 # Playwright starts its own webServer when BASE_URL is unset
 unset BASE_URL || true
 export CI="${CI:-1}"
+# Fast multi-year + per-scenario real-flow gates first
+echo "==> E2E: cross-year + scenario real flows (fast gate)"
+npx playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1
+echo "==> E2E: full suite"
 npx playwright test
 
 echo "==> CI OK"

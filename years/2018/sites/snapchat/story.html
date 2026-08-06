@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2018">
+<head>
+<meta charset="utf-8">
+<title>Snapchat Stories — October 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2018.css">
+<script src="../../../../js/immersion-2018.js" defer></script>
+</head>
+<body class="snap-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<p style="font-size:11px"><a href="index.html">← Snapchat</a> · <a href="../../pages/home.html">Start</a></p>
+<h1 style="font-size:22px;color:#fff;margin:8px 0">My Story</h1>
+<p style="color:#aaa;font-size:12px">
+ <b style="color:#fffc00">October 3, 2013</b> — Snapchat Stories: chain snaps for <b style="color:#fffc00">24 hours</b>, unlimited rewatches until they expire.
+ Not Instagram Stories (2018). Classic timer snaps still core.
+</p>
+<div class="snap-cam">📷 camera · add to Story</div>
+<div class="snap-story-rail" data-snap-story-rail>My Story · empty · add a snap</div>
+<p>
+ <button type="button" class="snap-cta" data-snap-story-add>Add snap to My Story</button>
+</p>
+<div class="itt18-status" data-snap-story-status></div>
+<p class="itt18-ban" style="color:#555">24h Story · not Instagram Stories (that’s 2018)</p>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt18-snap-story";
+  var rail = document.querySelector("[data-snap-story-rail]");
+  var st = document.querySelector("[data-snap-story-status]");
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
+  }
+  function render() {
+    var list = load();
+    if (!rail) return;
+    if (!list.length) {
+      rail.textContent = "My Story · empty · add a snap";
+      return;
+    }
+    rail.innerHTML = "My Story · " + list.length + " snap(s) · 24h theater · latest " +
+      new Date(list[0].ts).toLocaleTimeString();
+  }
+  render();
+  var btn = document.querySelector("[data-snap-story-add]");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var list = load();
+      list.unshift({ kind: "snap", hours: 24, ts: Date.now() });
+      try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 24))); } catch (e) {}
+      render();
+      var msg = "Added to My Story · 24h";
+      if (st) st.textContent = msg;
+      try {
+        if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(msg, { status: st, kind: "snap-story" });
+        }
+      } catch (e2) {}
+    });
+  }
+});
+</script>
+</body>
+</html>

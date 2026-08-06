@@ -6,17 +6,51 @@
 <p><a href="index.html"><img src="../../../../assets/period/1995/auctionweb/logo.gif" width="200" height="36" border="0" alt="AuctionWeb"></a></p>
 <h2>Current listings</h2>
 <p><font size="2">Person-to-person. You arrange payment and shipping with the other party.</font></p>
-<table border="1" cellpadding="4" cellspacing="0" width="95%">
+<form action="list.html" method="get">
+Find: <input type="text" name="q" size="24" id="aw-q"> <input type="submit" value="Search">
+<a href="list.html">Show all</a>
+</form>
+<p id="aw-filter-note" style="display:none"><font size="2"></font></p>
+<table border="1" cellpadding="4" cellspacing="0" width="95%" id="aw-table">
 <tr bgcolor="#E0E0E0"><th align="left">Item</th><th>Opens</th><th>Bids</th><th>Time left</th></tr>
-<tr><td><a href="item-laser.html">Broken laser pointer</a></td><td align="right">$5.00</td><td align="center">7</td><td>2d 4h</td></tr>
-<tr><td><a href="item-modem.html">US Robotics Sportster 28.8 modem (used)</a></td><td align="right">$40.00</td><td align="center">3</td><td>1d 12h</td></tr>
-<tr><td><a href="item-bean.html">Pez Dispenser Collection (12 pcs)</a></td><td align="right">$8.00</td><td align="center">11</td><td>5d 1h</td></tr>
-<tr><td><a href="item-disk.html">Blank 3.5" HD floppies (box of 50)</a></td><td align="right">$12.00</td><td align="center">2</td><td>3d 8h</td></tr>
-<tr><td><a href="item-netscape.html">Netscape Navigator 2.0 CD (OEM, sealed)</a></td><td align="right">$15.00</td><td align="center">4</td><td>6d 0h</td></tr>
-<tr><td><a href="item-modem.html">External 14.4 modem + cable</a></td><td align="right">$18.00</td><td align="center">1</td><td>4d 2h</td></tr>
-<tr><td><a href="item-disk.html">Vintage PC game floppies (lot)</a></td><td align="right">$6.00</td><td align="center">5</td><td>0d 18h</td></tr>
-<tr><td><a href="item-bean.html">Beanie Babies — early set (5)</a></td><td align="right">$25.00</td><td align="center">9</td><td>2d 9h</td></tr>
+<tr data-aw-item data-aw-text="broken laser pointer collectibles"><td><a href="item-laser.html">Broken laser pointer</a></td><td align="right">$5.00</td><td align="center">7</td><td>2d 4h</td></tr>
+<tr data-aw-item data-aw-text="us robotics sportster modem computers"><td><a href="item-modem.html">US Robotics Sportster 28.8 modem (used)</a></td><td align="right">$40.00</td><td align="center">3</td><td>1d 12h</td></tr>
+<tr data-aw-item data-aw-text="pez dispenser collection toys"><td><a href="item-bean.html">Pez Dispenser Collection (12 pcs)</a></td><td align="right">$8.00</td><td align="center">11</td><td>5d 1h</td></tr>
+<tr data-aw-item data-aw-text="blank floppy disks computers"><td><a href="item-disk.html">Blank 3.5&quot; HD floppies (box of 50)</a></td><td align="right">$12.00</td><td align="center">2</td><td>3d 8h</td></tr>
+<tr data-aw-item data-aw-text="netscape navigator cd software browser"><td><a href="item-netscape.html">Netscape Navigator 2.0 CD (OEM, sealed)</a></td><td align="right">$15.00</td><td align="center">4</td><td>6d 0h</td></tr>
+<tr data-aw-item data-aw-text="external modem cable computers"><td><a href="item-modem.html">External 14.4 modem + cable</a></td><td align="right">$18.00</td><td align="center">1</td><td>4d 2h</td></tr>
+<tr data-aw-item data-aw-text="vintage pc game floppies"><td><a href="item-disk.html">Vintage PC game floppies (lot)</a></td><td align="right">$6.00</td><td align="center">5</td><td>0d 18h</td></tr>
+<tr data-aw-item data-aw-text="beanie babies toys"><td><a href="item-bean.html">Beanie Babies — early set (5)</a></td><td align="right">$25.00</td><td align="center">9</td><td>2d 9h</td></tr>
 </table>
 <p><font size="2"><a href="index.html">Home</a> · <a href="about.html">About</a></font></p>
+<script>
+(function () {
+ function qs(n) {
+ try {
+ var m = (location.search || "").match(new RegExp("[?&]" + n + "=([^&]*)"));
+ return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+ } catch (e) { return ""; }
+ }
+ var q = (qs("q") || "").toLowerCase().trim();
+ var inp = document.getElementById("aw-q");
+ if (inp && q) inp.value = q;
+ if (!q) return;
+ var rows = document.querySelectorAll("[data-aw-item]");
+ var shown = 0;
+ for (var i = 0; i < rows.length; i++) {
+ var hay = (rows[i].getAttribute("data-aw-text") || rows[i].textContent || "").toLowerCase();
+ var ok = hay.indexOf(q) !== -1;
+ rows[i].style.display = ok ? "" : "none";
+ if (ok) shown++;
+ }
+ var note = document.getElementById("aw-filter-note");
+ if (note) {
+ note.style.display = "block";
+ note.innerHTML = shown
+ ? "<font size=\"2\"><b>" + shown + "</b> listing(s) match <tt>" + q.replace(/</g, "") + "</tt>.</font>"
+ : "<font size=\"2\">No listings match <tt>" + q.replace(/</g, "") + "</tt>. <a href=\"list.html\">Show all</a></font>";
+ }
+})();
+</script>
 <script src="../../../../js/immersion-1995.js"></script>
 </body></html>

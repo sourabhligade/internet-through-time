@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1999/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1999/playable/game.html",
       "sites/msngaming/about.html": "http://www.zone.com/about.html",
       "sites/matrix/story.html": "http://www.whatisthematrix.com/story.html",
       "sites/mynetscape/channels.html": "http://my.netscape.com/channels.html",
@@ -100,6 +102,7 @@
       "sites/napster/index.html": "http://www.napster.com/",
       "sites/napster/search.html": "http://www.napster.com/search.html",
       "sites/paypal/index.html": "http://www.paypal.com/",
+      "sites/paypal/send.html": "http://www.paypal.com/send/",
       "sites/y2k/index.html": "http://www.year2000.com/",
 
       "sites/cnn/world.html": "http://www.cnn.com/",
@@ -110,6 +113,7 @@
       "pages/error/404.html": "http://home.microsoft.com/intl/web1999/error/404.html",
       "pages/error/unreachable.html": "http://home.microsoft.com/intl/web1999/error/unreachable.html",
       "pages/home.html": "http://home.microsoft.com/intl/web1999/",
+      "pages/map.html": "http://museum.local/years/1999/map/",
       "pages/whats-new.html": "http://home.microsoft.com/intl/web1999/whats-new.html",
       "sites/altavista/babelfish.html": "http://www.altavista.com/babelfish.html",
       "sites/altavista/index.html": "http://www.altavista.com/",
@@ -245,6 +249,7 @@
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
       "pages/home.html": "Welcome to the World Wide Web \u2014 1999",
+      "pages/map.html": "1999 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
       "sites/altavista/index.html": "AltaVista",
@@ -331,7 +336,14 @@
     ],
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web1999/",
+      "sites/napster/client.html": "http://www.napster.com/client.html",
+      "sites/napster/legal.html": "http://www.napster.com/legal.html",
     locationHints: [
+      { re: /bowienet/i, path: "sites/bowienet/index.html" },
+      { re: /gamespot/i, path: "sites/gamespot/index.html" },
+      { re: /infoseek/i, path: "sites/infoseek/index.html" },
+      { re: /netscape/i, path: "sites/netscape/index.html" },
+      { re: /you'?ve.?got.?mail|ygm/i, path: "sites/youvegotmail/index.html" },
       { re: /zone|gaming/i, path: "sites/msngaming/index.html" },
       { re: /matrix/i, path: "sites/matrix/index.html" },
       { re: /my.?netscape|rss/i, path: "sites/mynetscape/index.html" },

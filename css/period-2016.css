@@ -1,0 +1,8 @@
+/* 2016 period — deltas on 2015 */
+@import url("period-2015.css");
+
+body.year-2016 .stories-tray { background: #000; color: #fff; }
+body.year-2016 .pogo-badge { background: #3d7dca; color: #ffcb05; font-weight: bold; padding: 2px 8px; }
+body.year-2016 .reaction-bar { display: flex; gap: 8px; flex-wrap: wrap; }
+body.year-2016 .jack-alert { background: #fff3cd; border: 2px solid #c90; padding: 10px; }
+body.year-2016 .e2e-lock { background: #e8f5e9; border: 1px solid #2e7d32; }

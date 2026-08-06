@@ -14,8 +14,10 @@
       var escapeHtml = api.escapeHtml;
       var qs = api.qs;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var storageKey = api.storageKey;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
       var R = api.R;
 
       function catalog() {
@@ -88,8 +90,8 @@
             saveLibrary(lib);
             btn.disabled = true;
             btn.textContent = "Done";
-            showFlash("Download complete: " + artist + " — " + title + " (simulated)");
-            markTourProgress("napster");
+            actionFeedback("Download complete: " + artist + " — " + title + " (simulated)");
+            markTourUsed("napster");
             renderLibrary();
           });
         }
@@ -129,7 +131,7 @@
             location.href = base + (v ? ("?q=" + encodeURIComponent(v)) : "");
           });
         }
-        markTourProgress("napster");
+        markTourUsed("napster");
         renderLibrary();
       }
 
@@ -140,8 +142,8 @@
           try {
             localStorage.setItem(storageKey("napster-installed"), "1");
           } catch (e) {}
-          showFlash("Napster 2.0 Beta installed (simulation). Open Search.");
-          markTourProgress("napster");
+          actionFeedback("Napster 2.0 Beta installed (simulation). Open Search.");
+          markTourUsed("napster");
           var go = document.getElementById("napster-after-install");
           if (go) go.style.display = "block";
         });

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Wave funeral — Aug 2010</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css"></head>
+<body bgcolor="#f1f1f1" link="#00a">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;background:#fff;border:1px solid #c66;padding:16px;font-family:Arial,sans-serif;font-size:13px">
+ <p style="font-size:12px"><a href="index.html">← Wave</a> · <a href="about.html">About</a></p>
+ <h1 style="color:#800;font-weight:normal">August 4, 2010 · development ends</h1>
+ <p>Public in May · funeral in August. Same calendar year. Tech press “email killer” hype collapses into a museum honesty room.</p>
+ <button type="button" data-wave-funeral>Note Wave funeral (theater)</button>
+ <div data-wave-status style="font-size:12px;color:#060;margin-top:8px"></div>
+ 
+</div>
+<script>
+(function(){
+  var KEY="itt10-wave";
+  var b=document.querySelector("[data-wave-funeral]");
+  var st=document.querySelector("[data-wave-status]");
+  if(b) b.onclick=function(){
+    localStorage.setItem(KEY, JSON.stringify({funeral:true,public:"2010-05-19",ended:"2010-08-04",ts:Date.now()}));
+    if(st) st.textContent="Noted · public then dead · "+KEY;
+  };
+})();
+</script>
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

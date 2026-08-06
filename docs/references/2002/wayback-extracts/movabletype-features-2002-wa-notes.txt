@@ -1,0 +1,74 @@
+SOURCE: https://web.archive.org/web/20021029153007id_/http://www.movabletype.org/features.shtml
+FINAL: https://web.archive.org/web/20021029153007id_/http://www.movabletype.org/features.shtml
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-mt-features
+ROLE: MT TrackBack features
+TITLE: movabletype.org : Features
+BYTES: 8802
+ERROR: 
+
+KEY FACTS / TEXT:
+movabletype.org : Features
+Download Version 2.5
+Donate | Donor List
+Sign up for an installation
+About
+Features
+Requirements
+Legal
+Screenshots
+Testimonials
+FAQ
+Contact Us
+Resources
+Documentation
+Support Forum
+TrackBack Weblog
+Default Templates
+Default Styles
+External Resources
+Subscribe to MT-Users to receive important notices and info about new MT releases.
+Download
+Support Forum
+Donate
+FAQ
+Features
+Since its first release in October 2001, Movable Type has grown to be a full-featured and robust system which is constantly updated and integrated with the day's latest advances in personal publishing. Movable Type's greatest strength lies in its flexibility — a larger feature due to these components:
+Flexible data storage — The system supports both MySQL and Berkeley DB for your data storage, with plans to support for PostgreSQL and Oracle in the future. Berkeley DB is available on almost all systems with Perl installed.
+XML-RPC API — implements the Blogger and MetaWeblog XML-RPC APIs, allowing you to use existing client tools (BlogBuddy, Bloggar, BlogApp, etc) to manage your blog.
+Extensible, library-driven code — if you have experience programming in Perl, you can write custom dynamic applications using the Movable Type libraries.
+Elegant, intuitive interface — View some sample screenshots .
+TrackBack — Movable Type's TrackBack system allows peer-to-peer communication and conversations between weblogs. For more information on TrackBack, see this document .
+Support — The support forums are staffed by both a dedicated set of Movable Type users and the creators of the software, allowing you fast access to answers from expert users of the system.
+Import data — allows you to import your entries and comments from other content management systems (Blogger, GreyMatter, NewsPro), then manage those posts through Movable Type.
+Multiple output templates — enables one-click publishing to multiple destinations and formats: XML RSS headlines from your site, HTML indexes, etc.
+Support for multiple weblogs/journals — one Movable Type installation can support as many blogs as you wish.
+Support for multiple authors — register multiple authors, and set their access levels using Movable Type's role-based permissions system.
+Entry categorization — group your entries into categories for your own reference, for archiving purposes, and for display in your blog. You can assign multiple categories to a single entry (for example, if an entry about a book you read belongs in both "Reading List" and "Daily Activities").
+Search and replace — save time by performing a global search and replace on all of your entries; use the search feature to look up a particular entry.
+Multiple archiving options — create monthly, weekly, and daily archives of your content; individual pages for each entry; and archives by category. Archive file names are fully customizable, and you can associate multiple archive templates with each archive type, allowing you to create, for example, several versions of your archives: printer-friendly, PDA, normal, etc.
+Built-in comment system — allow your visitors to post comments on your entries and engage in conversations. Movable Type supports comments either inline in your blog, or in popup windows; it also allows you to selectively exclude commenting on certain posts.
+Comment IP Banning — lock out unwanted visitors from commenting on your site by banning their IP addresses.
+Email notification system — maintain lists of users to whom notification messages can be sent when you post a new entry.
+Integration of file and image uploads — upload files and images into any of your blog directories, then seamlessly integrate them into new posts.
+Thumbnail creation — automatically create thumbnails from uploaded images.
+Bookmarklets — post to your site from anywhere on the web, without entering the Movable Type system.
+Template-based site customization — combine Movable Type's template tags with standard HTML (or whatever markup language you choose) to build and customize your site.
+Pre-date or post-date entries — Movable Type allows you to override an entry's date stamp.
+Delete entries — Movable Type allows for true entry deletion, allowing you to clean out old or unwanted entries.
+Hold/Release status — allow for content editorial and approval by setting entries to "Hold", then let an editor approve by marking "Release", at which point the entries will be published on your site.
+Publicity and notification — sends XML-RPC pings to weblogs.com and the movabletype.org Recently Updated List.
+Mail this entry — allow visitors to your site to mail your entries to friends, driving traffic to your site.
+Copyright © 2001-2002 Six Apart, LLC
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.
+
+## 2026-07-26 re-visit (id_ 20021029153007)
+Download Version 2.5 · Six Apart, LLC ©2001-2002
+TrackBack peer-to-peer conversations between weblogs
+Flexible storage MySQL + Berkeley DB · XML-RPC Blogger/MetaWeblog APIs
+Multiple weblogs · multiple authors · categories · comments · IP ban
+Multiple output templates · RSS · import Blogger/GreyMatter/NewsPro
+weblogs.com + MT Recently Updated pings

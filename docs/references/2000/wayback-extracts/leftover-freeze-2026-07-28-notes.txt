@@ -1,0 +1,39 @@
+2000 leftover research freeze — 2026-07-28
+==========================================
+Purpose: document residual only after museum densify DONE.
+
+Disk: 161 HTML · 39 rooms · 68 period assets · 3 e2e · hub unlocked.
+
+Already closed (not leftover):
+- Amazon smile pack, Google logo-wa-2000, Napster pack
+- Yahoo logo-sm-wa (20000920), Pets banner-wa (associates 20000831)
+- Homestar / CamWorld / kottke / PayPal rooms
+- eBay multipage densify; logo WA failed-final
+
+Open implement tickets (see TO-100-PERCENT/RESEARCH-FREEZE-2000.md):
+B1 Slashdot Jun 2000 densify or CAPTURE close
+B2 Blogger 2000 Pyra densify (pre-Google)
+B3 Tour-adjacent thin densify only
+B7 ASSETS.md refresh · B8 ARTIFACTS.md stale wipe header
+
+Optional forever pixels:
+- IE5.5 evolt toolbar (WDM IE5.5 2000)
+- Yahoo main33 full Y2K frame (Version Museum Y2K Yahoo 2000)
+- CNN homepage crop near 20000310
+- Napster client chrome
+- Pets wordmark (beyond banner)
+
+Bans unchanged: pre-smile Amazon, XP/IE6, Wikipedia 2001+, streaming Napster, iTunes Store as 2000 product.
+
+External re-confirmed:
+- versionmuseum.com/history-of/yahoo-website — section "Y2K Yahoo! Homepage (2000)"
+- webdesignmuseum.org/gallery/yahoo-in-2000
+- webdesignmuseum.org/software/internet-explorer-5-5-in-2000
+
+CDX this freeze:
+- slashdot.org Jun 2000 HTML OK: 20000620041447 (primary seed) + nearby Jun 9–21 stamps
+- yahoo main33 / ebaystatic / blogger / cnn CDX: WA 503 or empty this pass — retry at implement
+
+Doc fixes this freeze:
+- ARTIFACTS.md header no longer claims wiped
+- ASSETS.md notes logo-sm-wa + pets banner-wa + ebay failed-final

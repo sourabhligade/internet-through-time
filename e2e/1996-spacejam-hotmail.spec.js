@@ -36,7 +36,7 @@ test.describe('1996 Space Jam + HoTMaiL polish', () => {
 
     await frame.locator('input[name="login"]').fill('playwright');
     await frame.locator('input[name="pass"]').fill('x');
-    await frame.locator('form[data-hotmail-login] input[type="submit"]').click({ force: true });
+    await frame.locator('form[data-hotmail-login] input[type="submit"], form[data-hotmail-login] input[type="image"]').click({ force: true });
 
     await expect(frame.locator('[data-hotmail-inbox] tr').first()).toBeVisible({ timeout: 20000 });
     const rows = await frame.locator('[data-hotmail-inbox] tr').count();

@@ -1,0 +1,29 @@
+SOURCE: https://web.archive.org/web/20010727112808id_/http://www.wikipedia.org/
+STATUS: [wa-visited] 2026-07-26 deep research pass (reconfirm + full grammar)
+TITLE: Wikipedia: HomePage
+ROLE: P0 Wikipedia — UseMod grammar gold (prefer THIS over Dec 2001)
+YEAR TARGET: 2001
+
+KEY FACTS (body text):
+- Nav bar: HomePage | RecentChanges | Preferences | Random Page
+- Exact line: "*You* can edit this page right now! It's a free, community project"
+- Edit text of this page | View other revisions
+- Last edited July 27, 2001 2:17 am (diff)
+- Search field present
+- Today is Friday, July 27, 2001, servertime (Pacific Standard Time)
+- UseModWiki CGI paths: /wiki.cgi?action=edit&id=HomePage · action=history · action=random · action=editprefs
+- Category laundry lists (science, social science, arts, applied): Astronomy… Biology… Computing… Literature… Music…
+- About Wikipedia category schemes / LoC / Dewey
+- International Wikipedias: Catalan, Chinese, German, Esperanto, French, Hebrew, Italian, Japanese, Portuguese, Russian, Spanish, Swedish (*.wikipedia.com subdomains)
+- GNU Free Documentation License
+- Welcome newcomers · Wikipedia FAQ · Wikipedia and Nupedia · Sandbox · Mailing list
+- NOT modern Vector skin; NOT left logo stack as primary identity
+
+BUILD IMPLICATIONS:
+- Multi-page room: HomePage, Welcome newcomers, sample article, edit/preview theater, history, languages, Nupedia relation
+- CSS: plain wiki links, minimal chrome, table or simple CSS — never MediaWiki Vector
+- Immersion: localStorage edit/preview/history; “edit this page right now” CTA
+
+FAILS TO AVOID:
+- wikipedia.org Dec 2001 prior extract captured modern Internet Archive chrome — DO NOT USE that file for layout
+- Better late-year body: wikipedia.com 20011217 (see wikipedia-2001-12-com-wa-notes.txt)

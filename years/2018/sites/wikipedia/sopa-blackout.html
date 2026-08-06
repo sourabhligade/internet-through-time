@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2018">
+<head>
+<meta charset="utf-8">
+<title>Wikipedia blackout — January 18, 2012 (SOPA/PIPA)</title>
+<link rel="stylesheet" href="../../../../css/period-2018.css">
+<script src="../../../../js/immersion-2018.js" defer></script>
+<style>
+.sopa-shell { max-width: 640px; margin: 24px auto; font-family: Georgia, "Times New Roman", serif; }
+.sopa-black {
+  background: #111; color: #eee; padding: 28px 24px; border: 4px solid #000;
+  text-align: center;
+}
+.sopa-black h1 { font-size: 28px; font-weight: normal; margin: 0 0 12px; letter-spacing: 0.02em; }
+.sopa-black p { font-size: 14px; line-height: 1.5; margin: 10px 0; color: #ccc; }
+.sopa-black a { color: #9cf; }
+.sopa-ctx {
+  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333;
+  margin-top: 16px; padding: 12px; background: #fff8dc; border: 1px solid #cc0;
+}
+.sopa-ctx a { color: #00c; }
+</style>
+</head>
+<body bgcolor="#222222" text="#eeeeee" link="#99ccff" vlink="#cc99ff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="sopa-shell">
+  <div class="sopa-black" data-sopa-blackout>
+    <p style="font-size:11px;color:#888;margin:0 0 16px;letter-spacing:0.08em">
+      ENGLISH WIKIPEDIA · JANUARY 18, 2013 · 24 HOURS
+    </p>
+    <h1>Imagine a World<br>Without Free Knowledge</h1>
+    <p>
+      For 24 hours, English Wikipedia went <b>dark</b> to protest
+      <b>SOPA</b> (Stop Online Piracy Act) and <b>PIPA</b> (PROTECT IP Act) —
+      US bills that free-culture and open-web advocates said could break the web.
+    </p>
+    <p style="font-size:13px">
+      Sister protests: Reddit “blackout” energy · Google homepage black bar ·
+      other sites dimmed or explained. Museum theater only — no live protest API.
+    </p>
+    <p style="margin-top:18px">
+      <button type="button" data-sopa-ack
+        style="font-size:13px;padding:10px 16px;background:#eee;color:#111;border:0;cursor:pointer">
+        I saw the blackout (save theater)
+      </button>
+    </p>
+    <p data-sopa-status style="font-size:12px;color:#8f8;min-height:1.2em"></p>
+    <p style="font-size:11px;color:#666;margin-top:8px">
+ · not inventing Wikimedia logo art
+    </p>
+  </div>
+
+  <div class="sopa-ctx">
+    <b>Why this room exists (2012 open-web politics)</b>
+    <ul style="margin:8px 0 0 18px;padding:0">
+      <li><b>Jan 18, 2012</b> — English Wikipedia blackout ~24h (primary culture spine)</li>
+      <li>Bills targeted “rogue” foreign sites; critics feared over-broad DNS / liability harm</li>
+      <li>Fits 2012 thesis: apps rise <i>and</i> the open web still fights for itself</li>
+      <li><b>Not</b> Snowden (2013) · <b>not</b> EU DSA class · period SOPA/PIPA only</li>
+    </ul>
+    <p style="margin:10px 0 0">
+      <a href="index.html">← Wikipedia home (museum)</a> ·
+      <a href="../reddit/index.html">Reddit 2012</a> ·
+      <a href="../reddit/ama.html">Obama AMA</a> ·
+      <a href="../../pages/about.html">About 2013</a> ·
+      <a href="../../pages/home.html">Starting Point</a>
+    </p>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt18-sopa-ack";
+  var btn = document.querySelector("[data-sopa-ack]");
+  var st = document.querySelector("[data-sopa-status]");
+  function show() {
+    try {
+      if (localStorage.getItem(KEY) && st) st.textContent = "Saved · blackout witnessed · " + KEY;
+    } catch (e) {}
+  }
+  show();
+  if (btn) {
+    btn.addEventListener("click", function () {
+      try {
+        localStorage.setItem(
+          KEY,
+          JSON.stringify({
+            event: "wikipedia-blackout",
+            date: "2012-01-18",
+            bills: ["SOPA", "PIPA"],
+            hours: 24,
+            ts: Date.now()
+          })
+        );
+      } catch (e2) {}
+      if (st) st.textContent = "Saved · Jan 18 blackout · " + KEY;
+    });
+  }
+});
+</script>
+</body>
+</html>

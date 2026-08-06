@@ -1,0 +1,12 @@
+# Twitter / Twttr 2006
+# Sources: Wikipedia History of Twitter; History.com Jul 15; WDM Twitter 2006
+# Visited: 2026-07-30
+
+- Mar 21, 2006: Jack Dorsey first post "just setting up my twttr"
+- Jul 15, 2006: full version introduced publicly
+- 140-character SMS-oriented design
+- Odeo side project; Obvious Corp Oct 2006 class; spin-out 2007
+- WDM: https://www.webdesignmuseum.org/gallery/twitter-2006
+
+Exhibit: P0 twitter rooms · data-twitter-compose · itt06-tweets
+BAN: modern X branding / algorithmic For You

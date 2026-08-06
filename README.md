@@ -77,18 +77,29 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/1997/` | IE4 · Win95 · eBay · Amazon IPO · Slashdot · HotBot · Think Different |
 | `/years/1998/` | Win98 · IE4 · portals · Google! · Amazon Music · eBay IPO · Mozilla |
 | `/years/1999/` | Win98 SE · IE5 · Napster · Blogger · Google funded · Y2K · multi-cat Amazon · **museum grade** |
-| `/years/2000/` | Win98/ME · IE5.5 · Amazon smile · Napster · Pets.com · Flash 5 · **museum densify** |
-| `/years/2001/` | Windows XP · IE6 · Wikipedia · iPod · post-crash rebuild |
-| `/years/2002/` | XP · IE6 · Friendster · KaZaA · blogosphere · Wired CSS · broadband |
-| `/years/2003/` | XP · IE6 · MySpace · iTunes Store · WordPress · LinkedIn · social web |
-| `/years/2004/` | XP · IE6 · Firefox 1.0 · Gmail · Flickr · Thefacebook · Google IPO · **MVP unlock** |
-| `/years/2005/` | XP · IE6 · YouTube · Google Maps · Reddit · Digg · Ajax · **MVP unlock** |
+| `/years/2000/` | IE 5.5 · Win98 · Amazon **smile** · Napster · Pets.com · crash year · **museum densify** |
+| `/years/2001/` | XP · IE6 · Wikipedia · iPod · broadband · **museum densify** |
+| `/years/2002/` | XP · IE6 · Friendster · KaZaA · Wired · **full year densify** |
+| `/years/2003/` | XP · IE6 · MySpace · iTunes Store · WordPress · LinkedIn · AdSense · Bloglines · **museum densify** |
+| `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
+| `/years/2005/` | YouTube · Maps · Reddit · Digg · **museum densify** |
+| `/years/2006/` | Twitter · Facebook open · Digg peak · Docs · AWS · **museum densify** |
+| `/years/2007/` | iPhone Safari · open Gmail · Street View · Facebook Platform · **museum densify** |
+| `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
+| `/years/2009/` | iPhone 3GS · Like · FarmVille · Bing · Windows 7 · **ship** |
+| `/years/2010/` | iPad · iPhone 4 · Instagram · Foursquare · Open Graph · **ship** |
+| `/years/2011/` | Spotify US · Timeline · Google+ · iPhone 4S/Siri · Qwikster · **museum-ready** |
+| `/years/2012/` | Instagram Android · FB IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome · **museum-ready** |
+| `/years/2013/` | Vine · IG Video · Snap Stories · iOS 7 · Snowden · **MVP** |
+| `/years/2014/` | WhatsApp deal · Heartbleed · iPhone 6 · 1B sites · Ice Bucket · Win10 TP · **MVP** |
+| `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Full inventory** (every site, feature, test, asset, and deploy detail): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
+**Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
+**Full inventory** (may lag disk): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
 
 **Every source, artifact & image provenance** (full inventory): [`docs/MASTER-PROVENANCE.md`](docs/MASTER-PROVENANCE.md).  
 **External bibliography + link audit:** [`docs/SOURCES.md`](docs/SOURCES.md) · [`docs/SOURCE-AUDIT.md`](docs/SOURCE-AUDIT.md).  
-**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md).
+**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md) (prefer DISK-TRUTH when they disagree).
 
 ## Architecture (keep this clean)
 

@@ -1,0 +1,17 @@
+TITLE: YouTube - Broadcast Yourself.
+CAPTURE: https://web.archive.org/web/20050815011340/http://www.youtube.com/
+DATE_CLASS: mid-2005 (Aug 15, 2005)
+STATUS: re-opened 2026-07-30 deep research pass
+
+Upload, tag and share your videos worldwide!
+Sign Up | Log In | Help
+Home | Watch Videos | Upload Videos | Invite Friends
+What's New | About Us | Help | Developers | Terms of Use | Privacy Policy
+Copyright © 2005 YouTube, LLC™
+
+UI NOTES:
+- NO dating-site "I'm a Male/Female seeking" fields (pivot complete)
+- Nav: Home · Watch Videos · Upload Videos · Invite Friends
+- Slogan frame: Broadcast Yourself. + "Upload, tag and share your videos worldwide!"
+- LLC trademark footer
+- Still independent company (Google purchase is Nov 2006 — ban)

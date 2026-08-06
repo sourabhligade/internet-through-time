@@ -1,0 +1,13 @@
+SOURCE: Wikipedia Reddit · Sequoia Crucible Moments podcast · Quartz IPO history
+FETCHED: 2026-07-30 web-expand pass
+---
+- Steve Huffman + Alexis Ohanian (UVA roommates) · spring break lecture by Paul Graham Boston
+- Pitched YC (first class); original pitch My Mobile Menu (SMS food) → pivoted to Reddit
+- YC check ~$12,000 class (Sequoia podcast Botha)
+- Huffman coded Common Lisp; launched June 23, 2005 (Medford MA class / SF later)
+- Name: "I read it on Reddit"
+- Early: founders posted as fake users to solve empty-room problem (founders later admitted)
+- Aaron Swartz joined ~November 2005
+- Condé Nast acquisition Oct 31 2006 — BAN for 2005 year
+
+EXHIBIT: Reddit about — Jun 23 2005 · YC first batch · boosts language · sparse front page.

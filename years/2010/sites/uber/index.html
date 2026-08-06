@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Uber — SF 2010</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css"></head>
+<body bgcolor="#111">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:520px;margin:24px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;background:#1a1a1a;color:#eee;padding:20px">
+ <p style="font-size:12px"><a href="about.html" style="color:#fd8">About</a> · <a href="sf.html" style="color:#fd8">SF only</a> · <a href="../../pages/home.html" style="color:#fd8">Start</a></p>
+ <h1 style="font-weight:300;color:#fff">Uber · San Francisco 2010</h1>
+ <p style="background:#332200;border:1px solid #996;padding:10px;font-size:12px;color:#fd8">
+  <b>2010 honesty:</b> Founded 2009 as <b>UberCab</b>. SF <b>black-car</b> service culture 2010. Renamed <b>Uber</b> ~Oct 2010.
+  <b>Not</b> UberX · <b>not</b> every city · <b>not</b> mass ride-hail as later years. Educational theater only — no real dispatch.
+ </p>
+ <p style="font-size:12px;color:#aaa">Seed of 2010s on-demand cars · still a luxury black-car story this year.</p>
+ <button type="button" id="uber-req">Request black car (theater)</button>
+ <div id="uber-st" style="font-size:12px;color:#9f9;margin-top:8px"></div>
+ 
+</div>
+<script>(function(){var KEY="itt10-uber";document.getElementById("uber-req").onclick=function(){localStorage.setItem(KEY,JSON.stringify({requested:true,city:"San Francisco",kind:"black-car",ts:Date.now()}));document.getElementById("uber-st").textContent="Request noted · SF black-car · "+KEY+" · not UberX mass.";};})();</script>
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

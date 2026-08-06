@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2018">
+<head>
+<meta charset="utf-8">
+<title>Instagram — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2018.css">
+<script src="../../../../js/immersion-2018.js" defer></script>
+</head>
+<body bgcolor="#fafafa">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="ig-2012">
+ <div class="ig-bar">INSTAGRAM</div>
+ <p style="font-size:11px;margin:8px 0">
+  <a href="../../pages/home.html">Start</a> ·
+  <a href="android.html">Android</a> ·
+  <a href="acquired.html">FB acquisition</a> ·
+  <a href="about.html">About</a>
+ </p>
+ <div class="ig-warn">
+  <b>2012:</b> iOS <b>and</b> Android (Apr 3) · Facebook buys Instagram Apr 9 (~$1B) but app stays <b>standalone</b>.
+  No Stories · no Reels · no Meta branding.
+ </div>
+ <div class="ig-card">
+  <b>Platform</b>
+  <p>
+   <button type="button" data-ig-platform="ios">iOS</button>
+   <button type="button" data-ig-platform="android">Android</button>
+   <span data-ig-platform-status style="font-size:11px;color:#060;margin-left:8px"></span>
+  </p>
+  <p><b>Filters</b></p>
+  <span class="ig-filter" data-ig-filter="Normal">Normal</span>
+  <span class="ig-filter" data-ig-filter="Earlybird">Earlybird</span>
+  <span class="ig-filter" data-ig-filter="X-Pro II">X-Pro II</span>
+  <span class="ig-filter" data-ig-filter="Valencia">Valencia</span>
+  <span class="ig-filter" data-ig-filter="Toaster">Toaster</span>
+  <p style="margin-top:10px"><input data-ig-caption size="28" placeholder="Write a caption…" style="width:90%;padding:6px"></p>
+  <button type="button" data-ig-share style="background:#3897f0;color:#fff;border:0;padding:8px 16px">Share</button>
+  <div data-ig-status style="font-size:11px;color:#060;margin-top:8px"></div>
+  <div data-ig-feed style="min-height:60px;margin-top:12px"></div>
+ </div>
+ <p style="font-size:10px;color:#888">localStorage theater · educational only</p>
+</div>
+<script>
+(function(){
+  function key(k){ return "itt18-"+k; }
+  document.addEventListener("DOMContentLoaded", function(){
+    var st = document.querySelector("[data-ig-platform-status]");
+    var btns = document.querySelectorAll("[data-ig-platform]");
+    for (var i=0;i<btns.length;i++){
+      btns[i].addEventListener("click", function(ev){
+        var p = ev.currentTarget.getAttribute("data-ig-platform")||"ios";
+        try { localStorage.setItem(key("ig-platform"), p); } catch(e){}
+        if (st) st.textContent = "Platform: "+p+" · "+key("ig-platform");
+      });
+    }
+    try {
+      var cur = localStorage.getItem(key("ig-platform"));
+      if (cur && st) st.textContent = "Platform: "+cur;
+    } catch(e2){}
+  });
+})();
+</script>
+</body>
+</html>

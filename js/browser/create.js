@@ -3,7 +3,7 @@
  * Part of SRP split under js/browser/ (see docs/SRP-SPLIT-PLAN.md)
  *
  * Usage: ITT.Browser.create(ITT.configs["1995"]);
- * Depends on: js/lib/util.js (+ optional BrowserConnect / BrowserLoadTheater installers)
+ * Depends on: js/lib/util.js + browser/navigate.js (+ BrowserConnect / BrowserLoadTheater)
  * Config shape: js/config/<year>.js
  */
 (function (global) {
@@ -13,6 +13,10 @@
   var U = ITT.util;
   if (!U) {
     throw new Error("ITT.util missing — load js/lib/util.js before browser-core.js");
+  }
+  var Nav = ITT.BrowserNavigate;
+  if (!Nav) {
+    throw new Error("ITT.BrowserNavigate missing — load js/browser/navigate.js before browser/create.js");
   }
 
   /**
@@ -29,9 +33,7 @@
     var BM_KEY = config.bookmarksKey || ("itt-" + YEAR + "-bookmarks");
     var CONNECTED_KEY = config.connectedKey || ("itt-" + YEAR + "-connected");
     var URL_MAP = config.urlMap || {};
-    var TITLE_MAP = config.titleMap || {};
     var DEFAULT_BOOKMARKS = (config.defaultBookmarks || []).slice();
-    var URL_PREFIXES = config.urlPrefixes || [];
     var FALLBACK_BASE = config.fallbackUrlBase || ("http://home.nerf.edu/web" + YEAR + "/");
     var TITLE_SUFFIX = config.browserTitleSuffix || " - Netscape";
     var DIR_KEYS = config.dirSiteKeys || [];
@@ -232,27 +234,14 @@
     }
 
     /* ============================================================
-     * Path / URL helpers
+     * Path / URL helpers — pure logic in browser/navigate.js (SRP)
      * ============================================================ */
     function normalizePath(path) {
-      return U.normalizeYearPath(path, YEAR, HOME);
-    }
-
-    function yearRoot() {
-      return U.yearRootPath(YEAR);
+      return Nav.normalizePath(path, YEAR, HOME);
     }
 
     function absContentUrl(relPath) {
-      relPath = normalizePath(relPath || HOME);
-      var q = "";
-      var qi = relPath.indexOf("?");
-      if (qi !== -1) {
-        q = relPath.slice(qi);
-        relPath = relPath.slice(0, qi);
-      }
-      if (relPath.indexOf("pages/sites/") === 0) relPath = relPath.slice("pages/".length);
-      if (relPath.indexOf("sites/pages/") === 0) relPath = relPath.slice("sites/".length);
-      return yearRoot() + relPath.replace(/^\//, "") + q;
+      return Nav.absContentUrl(YEAR, relPath, HOME);
     }
 
     function pathFromIframe() {
@@ -268,52 +257,15 @@
     }
 
     function resolveHref(href, currentPath) {
-      if (!href) return null;
-      // Same-origin absolute URLs (immersion R() now emits /years/YYYY/sites/…)
-      try {
-        if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
-          var absU = new URL(href, window.location.href);
-          if (absU.origin === window.location.origin) {
-            href = absU.pathname + absU.search + absU.hash;
-          } else {
-            return { external: true, href: href };
-          }
-        }
-      } catch (eAbs) { /* keep href */ }
-      var marker = "/years/" + YEAR + "/";
-      var mi = href.indexOf(marker);
-      if (mi !== -1) {
-        return { external: false, path: normalizePath(href.slice(mi + marker.length)) };
-      }
-      var resolved = U.resolveRelativePath(href, currentPath);
-      if (resolved && !resolved.external && resolved.path) {
-        resolved.path = normalizePath(resolved.path);
-      }
-      return resolved;
+      return Nav.resolveHref(href, currentPath, YEAR, HOME);
     }
 
     function displayUrl(path) {
-      var clean = normalizePath(path).split("?")[0];
-      if (URL_MAP[clean]) return URL_MAP[clean];
-
-      if (typeof config.displayUrlExtras === "function") {
-        var extra = config.displayUrlExtras(clean);
-        if (extra) return extra;
-      }
-
-      for (var i = 0; i < URL_PREFIXES.length; i++) {
-        var rule = URL_PREFIXES[i];
-        if (clean.indexOf(rule.prefix) === 0) {
-          var rest = clean.slice(rule.prefix.length);
-          if (rule.stripIndex) rest = rest.replace(/\/index\.html$/, "/").replace(/^index\.html$/, "");
-          return rule.base + rest;
-        }
-      }
-      return FALLBACK_BASE + clean;
+      return Nav.displayUrl(path, config);
     }
 
     function hostFromDisplayUrl(url) {
-      return U.hostFromUrl(url);
+      return Nav.hostFromDisplayUrl(url);
     }
 
     function brokenImageUrl() {
@@ -337,13 +289,7 @@
     }
 
     function displayTitle(path) {
-      var clean = normalizePath(path).split("?")[0];
-      if (TITLE_MAP[clean]) return TITLE_MAP[clean] + TITLE_SUFFIX;
-      var parts = clean.split("/");
-      var last = parts[parts.length - 1].replace(".html", "").replace(/_/g, " ");
-      if (last === "index" && parts.length > 1) last = parts[parts.length - 2].replace(/_/g, " ");
-      if (clean.indexOf("sites/yahoo/") === 0) return "Yahoo! - " + last + TITLE_SUFFIX;
-      return last.charAt(0).toUpperCase() + last.slice(1) + TITLE_SUFFIX;
+      return Nav.displayTitle(path, config);
     }
 
     function currentPath() {
@@ -426,13 +372,14 @@
      * ============================================================ */
     function navigate(path, options) {
       options = options || {};
-      path = normalizePath(path);
-      // Defense: never load the bogus pages/sites/* join (year-root hrefs from pages/*)
-      if (path.indexOf("pages/sites/") === 0) {
-        path = path.slice("pages/".length);
-      }
-      if (path.indexOf("sites/pages/") === 0) {
-        path = path.slice("sites/".length);
+      path = Nav.sanitizeNavPath(path, YEAR, HOME);
+      /* Drop any stuck Welcome/alert modal so iframe links stay clickable */
+      try {
+        closeAllDialogs();
+      } catch (eNavDlg) {
+        try {
+          ensureBackdropSane();
+        } catch (e2) { /* */ }
       }
       clearLoadTimers();
       var gen = ++loadGen;
@@ -580,38 +527,26 @@
     function openLocationString(val) {
       val = (val || "").trim();
       if (!val) return;
-      var lower = val.toLowerCase();
       lastAttemptedUrl = val;
 
-      for (var k in URL_MAP) {
-        if (Object.prototype.hasOwnProperty.call(URL_MAP, k)) {
-          var mapped = URL_MAP[k].toLowerCase();
-          if (mapped === lower || lower.indexOf(mapped) === 0) {
-            navigate(k);
-            return;
-          }
-        }
-      }
+      var match = Nav.matchOpenLocation(val, URL_MAP, LOCATION_HINTS);
+      if (!match) return;
 
-      for (var h = 0; h < LOCATION_HINTS.length; h++) {
-        var hint = LOCATION_HINTS[h];
-        if (hint.re && hint.re.test(val)) {
-          navigate(hint.path);
-          return;
-        }
+      if (match.path) {
+        navigate(match.path);
+        return;
       }
-
-      if (lower.indexOf("gopher:") === 0 || lower.indexOf("ftp:") === 0) {
+      if (match.protocolHelper) {
         showAlert(
           "Netscape",
-          "Netscape needs a helper application to handle this URL:\n" + val +
+          "Netscape needs a helper application to handle this URL:\n" + match.val +
             "\n\nGopher and FTP were common in this era but are not mirrored in this exhibit."
         );
         setStatus("No helper application for this protocol.");
         return;
       }
 
-      sessionStorage.setItem("itt-last-url", val);
+      sessionStorage.setItem("itt-last-url", match.val || val);
       navigate("pages/error/unreachable.html");
       setStatus("Unable to locate the server.");
     }
@@ -621,14 +556,54 @@
      * ============================================================ */
     function ensureImmersion(doc) {
       try {
-        if (!doc || doc.querySelector("script[data-itt-immersion]")) return;
+        if (!doc) return;
+        /* Already injected by shell */
+        if (doc.querySelector("script[data-itt-immersion]")) return;
+        /* Content page already loads immersion-YYYY.js — do not double-boot
+           (double load was racing form bind / registerLocal once-guards). */
+        try {
+          if (doc.documentElement && doc.documentElement.getAttribute("data-itt-immersion-booted")) return;
+        } catch (eBoot) { /* */ }
+        var existing = doc.getElementsByTagName("script");
+        var si;
+        for (si = 0; si < existing.length; si++) {
+          var es = existing[si].getAttribute("src") || "";
+          if (/immersion(-\d{4})?\.js(\?|$)/.test(es) || /\/immersion\/boot\.js(\?|$)/.test(es)) {
+            return;
+          }
+        }
         var s = doc.createElement("script");
         s.setAttribute("data-itt-immersion", "1");
-        var root = yearRoot();
-        var siteRoot = root.replace(new RegExp("years\\/" + YEAR + "\\/?$"), "");
+        /* yearRoot lives on BrowserNavigate — bare yearRoot() was undefined (latent inject bug) */
+        var root = (Nav && Nav.yearRoot) ? Nav.yearRoot(YEAR) : (U.yearRootPath ? U.yearRootPath(YEAR) : ("/years/" + YEAR + "/"));
+        var siteRoot = String(root).replace(new RegExp("years\\/" + YEAR + "\\/?$"), "");
+        if (!siteRoot || siteRoot === root) {
+          try {
+            siteRoot = String(root).replace(new RegExp("years\\/" + YEAR + "\\/?.*$"), "");
+          } catch (eRoot) {
+            siteRoot = "/";
+          }
+        }
         s.src = siteRoot + IMMERSION_SCRIPT;
         (doc.body || doc.documentElement).appendChild(s);
       } catch (e) { /* */ }
+    }
+
+    /**
+     * Forms owned by immersion modules — never chrome-navigate them.
+     * Heuristic: any data-* form attr except navigational search (data-google-search)
+     * is a local theater. Chrome still handles plain action= HTML search forms.
+     */
+    function formHasImmersionSubmitHandler(form) {
+      if (!form || !form.attributes) return false;
+      /* Google search: chrome may append ?q= — module also preventDefaults; either path OK */
+      if (form.hasAttribute("data-google-search")) return false;
+      var attrs = form.attributes;
+      for (var i = 0; i < attrs.length; i++) {
+        var name = attrs[i].name || "";
+        if (name.indexOf("data-") === 0) return true;
+      }
+      return false;
     }
 
     function wireDocument(doc, path) {
@@ -674,6 +649,38 @@
           openMailDialog(href.replace(/^mailto:/i, ""), "From Web page");
           return;
         }
+        /* Museum hub / games wing escapes: iframe sandbox blocks target=_top
+         * (no allow-top-navigation). Parent chrome navigates the top window. */
+        var tgt = (linkEl.getAttribute("target") || "").toLowerCase();
+        if (tgt === "_top" || tgt === "_parent") {
+          e.preventDefault();
+          e.stopPropagation();
+          var absTop = "";
+          try {
+            absTop = linkEl.href || "";
+          } catch (errTop) {
+            absTop = "";
+          }
+          if (!absTop) {
+            try {
+              var base = (iframe.contentWindow && iframe.contentWindow.location &&
+                iframe.contentWindow.location.href) || window.location.href;
+              absTop = new URL(href, base).href;
+            } catch (errUrl) {
+              absTop = href;
+            }
+          }
+          try {
+            (window.top || window).location.href = absTop;
+          } catch (errNav) {
+            window.location.href = absTop;
+          }
+          return;
+        }
+        if (tgt === "_blank") {
+          /* allow-popups is on shell sandbox — let default / open */
+          return;
+        }
         var livePath = pathFromIframe() || path;
         var resolved = resolveHref(href, livePath);
         if (!resolved) return;
@@ -692,8 +699,17 @@
       doc.addEventListener("submit", function (e) {
         var form = e.target;
         if (!form || form.tagName !== "FORM") return;
+        /*
+         * Immersion theater forms bind their own submit handlers (login, upload,
+         * digg, reddit, etc.). Do not chrome-navigate those — that was wiping
+         * status text / double-handling and felt like “dead buttons”.
+         * If immersion already preventDefault'd, never steal the submit.
+         * Navigational search forms keep data-google-search / plain action=.
+         */
+        if (e.defaultPrevented) return;
+        if (formHasImmersionSubmitHandler(form)) return;
         var action = form.getAttribute("action");
-        if (!action) return;
+        if (!action || action === "#" || action.indexOf("javascript:") === 0) return;
         e.preventDefault();
         var livePath = pathFromIframe() || path;
         var resolved = resolveHref(action, livePath);
@@ -867,7 +883,30 @@
         }
         wireDocument(doc, path.split("?")[0]);
         ensureImmersion(doc);
+        /* Unlock clicks as soon as the document is wired — do not wait for
+           progressive-image drip (that used to keep .loading + dead links). */
+        setLoading(false);
         applyProgressiveImages(doc);
+        /* Year games (Box Shift, etc.) need iframe focus for Arrow/WASD */
+        try {
+          var clean = path.split("?")[0];
+          if (/playable\/game\.html$/i.test(clean) || doc.querySelector("[data-year-game]")) {
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+              } catch (eF) { /* */ }
+            }, 80);
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+                var gh = doc.querySelector("[data-year-game]");
+                if (gh && gh.focus) gh.focus();
+              } catch (eF2) { /* */ }
+            }, 500);
+          }
+        } catch (eGameFocus) { /* */ }
       } catch (err) {
         finishDocumentLoad(0);
       }
@@ -878,7 +917,13 @@
      * ============================================================ */
     function openDialog(id) {
       closeMenus();
-      if (backdrop) backdrop.classList.remove("hidden");
+      if (backdrop) {
+        backdrop.classList.remove("hidden");
+        try {
+          backdrop.style.display = "";
+          backdrop.style.pointerEvents = "";
+        } catch (eOp) { /* */ }
+      }
       var el = document.getElementById(id);
       if (el) {
         el.classList.remove("hidden");
@@ -892,18 +937,48 @@
       }
     }
 
+    function anyDialogOpen() {
+      var dialogs = document.querySelectorAll(".dialog");
+      for (var i = 0; i < dialogs.length; i++) {
+        if (!dialogs[i].classList.contains("hidden")) return true;
+      }
+      return false;
+    }
+
     function closeDialog(id) {
       var el = document.getElementById(id);
       if (el) el.classList.add("hidden");
-      if (!document.querySelector(".dialog:not(.hidden)")) {
-        if (backdrop) backdrop.classList.add("hidden");
-      }
+      if (!anyDialogOpen() && backdrop) backdrop.classList.add("hidden");
     }
 
     function closeAllDialogs() {
       var dialogs = document.querySelectorAll(".dialog");
       for (var i = 0; i < dialogs.length; i++) dialogs[i].classList.add("hidden");
-      if (backdrop) backdrop.classList.add("hidden");
+      if (backdrop) {
+        backdrop.classList.add("hidden");
+        try {
+          backdrop.style.display = "none";
+          backdrop.style.pointerEvents = "none";
+        } catch (eBd) { /* */ }
+      }
+    }
+
+    /** Drop orphan backdrop (no open dialog) — was blocking dirbar/buttons */
+    function ensureBackdropSane() {
+      try {
+        if (backdrop && !anyDialogOpen()) {
+          backdrop.classList.add("hidden");
+          try {
+            backdrop.style.display = "none";
+            backdrop.style.pointerEvents = "none";
+          } catch (eSt) { /* */ }
+        } else if (backdrop && anyDialogOpen()) {
+          try {
+            backdrop.style.display = "";
+            backdrop.style.pointerEvents = "";
+          } catch (eSt2) { /* */ }
+        }
+      } catch (eBg) { /* */ }
     }
 
     function showAlert(title, msg) {
@@ -1345,7 +1420,16 @@
         closeDialog(closeId);
         return;
       }
+      /* Click dimmed backdrop → dismiss (stuck Welcome alert was blocking iframe links) */
+      if (e.target === backdrop || (e.target && e.target.id === "modal-backdrop")) {
+        closeAllDialogs();
+      }
     });
+    if (backdrop) {
+      backdrop.addEventListener("click", function () {
+        closeAllDialogs();
+      });
+    }
 
     // Menubar — match Netscape: click label to open; click item to run
     var menubar = document.getElementById("menubar");
@@ -1514,6 +1598,87 @@
     if (btnBack) btnBack.addEventListener("click", goBack);
     if (btnForward) btnForward.addEventListener("click", goForward);
     on("btn-home", "click", goHome);
+    /* Make Home affordance read as year landing (Starting Point) */
+    (function labelHomeAffordances() {
+      var homeBtn = byId("btn-home");
+      if (homeBtn) {
+        homeBtn.setAttribute("title", "Starting Point — year home");
+        var hl = homeBtn.querySelector(".btn-label");
+        if (hl && /home/i.test(hl.textContent || "")) hl.textContent = "Home";
+      }
+      var closeBtn = byId("btn-close");
+      if (closeBtn) {
+        closeBtn.setAttribute("title", "Exit to year menu");
+        closeBtn.setAttribute("aria-label", "Exit to year menu");
+      }
+      var exitBar = byId("exit-bar");
+      if (exitBar) {
+        var exitA = exitBar.querySelector("a");
+        if (exitA) {
+          /* Keep title="Exit" for a11y + e2e; clarify label for visitors */
+          if (!exitA.getAttribute("title")) exitA.setAttribute("title", "Exit");
+          exitA.setAttribute("aria-label", "Exit to year menu");
+          var et = (exitA.textContent || "").trim();
+          if (/^←\s*Exit$/i.test(et) || /^Exit$/i.test(et)) {
+            exitA.textContent = "← Year menu";
+          }
+        }
+      }
+      var dirStart = document.querySelector('.dir-btn[data-go*="pages/home"], .dir-btn[data-go$="home.html"]');
+      if (dirStart) {
+        dirStart.setAttribute("title", "Starting Point — year landing");
+        if (/^start$/i.test((dirStart.textContent || "").trim())) {
+          dirStart.textContent = "Starting Point";
+        }
+      }
+    })();
+
+    /* Always-visible shell nav legend — visitors learn Starting Point vs Year menu */
+    (function injectShellNavLegend() {
+      if (document.getElementById("itt-shell-nav-legend")) return;
+      var exitBar = byId("exit-bar");
+      var legend = document.createElement("div");
+      legend.id = "itt-shell-nav-legend";
+      legend.className = "shell-nav-legend";
+      legend.setAttribute("role", "navigation");
+      legend.setAttribute("aria-label", "How to navigate this year");
+      var hubHref = "../../index.html";
+      try {
+        var yi = (location.pathname || "").indexOf("/years/");
+        if (yi !== -1) hubHref = location.pathname.slice(0, yi) + "/index.html";
+      } catch (eH) { /* */ }
+      legend.innerHTML =
+        '<span class="shell-nav-label">Navigate:</span> ' +
+        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-start" title="Year map — trails and About">' +
+        "Starting Point</button>" +
+        '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
+        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-back" title="Previous page in this year">Back</button>' +
+        '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
+        '<a class="shell-nav-exit" href="' + hubHref + '" title="Exit">← Year menu</a>' +
+        '<span class="shell-nav-hint">Lost? Starting Point = year map · Year menu = all years</span>';
+      if (exitBar && exitBar.parentNode) {
+        if (exitBar.nextSibling) {
+          exitBar.parentNode.insertBefore(legend, exitBar.nextSibling);
+        } else {
+          exitBar.parentNode.appendChild(legend);
+        }
+      } else {
+        var desk = document.querySelector(".desktop");
+        if (desk) desk.insertBefore(legend, desk.firstChild);
+      }
+      var goStart = document.getElementById("itt-shell-goto-start");
+      if (goStart) {
+        goStart.addEventListener("click", function () {
+          goHome();
+        });
+      }
+      var goBackBtn = document.getElementById("itt-shell-goto-back");
+      if (goBackBtn) {
+        goBackBtn.addEventListener("click", function () {
+          goBack();
+        });
+      }
+    })();
     on("btn-reload", "click", reload);
     on("btn-stop", "click", stopLoad);
     on("btn-images", "click", function () { runCommand("view-images"); });
@@ -1581,9 +1746,36 @@
     var dirBtns = document.querySelectorAll(".dir-btn");
     for (var d = 0; d < dirBtns.length; d++) {
       dirBtns[d].addEventListener("click", function (ev) {
+        try {
+          closeAllDialogs();
+          ensureBackdropSane();
+          if (backdrop) {
+            backdrop.classList.add("hidden");
+            try {
+              backdrop.style.display = "none";
+              backdrop.style.pointerEvents = "none";
+            } catch (ePe) { /* */ }
+          }
+        } catch (eDir) { /* */ }
         var go = ev.currentTarget.getAttribute("data-go");
         if (go) navigate(go);
       });
+    }
+    /* Any toolbar click dismisses stuck Welcome so chrome never feels dead */
+    var toolbarEl = document.getElementById("toolbar");
+    if (toolbarEl) {
+      toolbarEl.addEventListener("click", function () {
+        try {
+          var alertEl = document.getElementById("dlg-alert");
+          var titleEl = document.getElementById("dlg-alert-title");
+          var titleText = titleEl ? titleEl.textContent || "" : "";
+          if (alertEl && !alertEl.classList.contains("hidden") && titleText.indexOf("Welcome") === 0) {
+            closeAllDialogs();
+          } else {
+            ensureBackdropSane();
+          }
+        } catch (eTb) { /* */ }
+      }, true);
     }
 
     document.addEventListener("keydown", function (e) {
@@ -1655,21 +1847,112 @@
       try {
         if (sessionStorage.getItem(key) === "1") return;
         if (localStorage.getItem(key) === "1") return;
+        /* UX strip coach (js/ux/shell-coach.js) already dismissed */
+        if (localStorage.getItem("itt-ux-coach-seen-" + YEAR) === "1") return;
       } catch (e) {
         return;
       }
+      /* Prefer non-blocking strip when UX pack is on — skip modal wall */
+      try {
+        if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("shellCoach") && ITT.UX.ShellCoach) {
+          if (typeof ITT.UX.ShellCoach.boot === "function") {
+            ITT.UX.ShellCoach.boot(YEAR);
+          }
+          /* Strip will mark its own key; also mark legacy so we don't double later */
+          return;
+        }
+      } catch (eUx) { /* fall through to legacy modal */ }
+
+      var browserLabel = "Netscape";
+      if (TITLE_SUFFIX && /Internet Explorer/i.test(TITLE_SUFFIX)) browserLabel = "Internet Explorer";
+      else if (config.connectBrowserLine && /Internet Explorer/i.test(config.connectBrowserLine)) {
+        browserLabel = "Internet Explorer";
+      } else if (YEAR === "2001" || YEAR === "2002" || YEAR === "2003" || YEAR === "2004" || YEAR === "2005") {
+        browserLabel = "Internet Explorer";
+      }
+      /* Year-correct coach tips — never cite anachronistic brands (no Gmail in 1994). */
+      var dirExamples = {
+        "1994": "Yahoo! · White House · IUMA",
+        "1995": "Yahoo · Amazon · AltaVista",
+        "1996": "Space Jam · HoTMaiL · Yahoo",
+        "1997": "Yahoo · eBay · Slashdot",
+        "1998": "Google · Amazon · eBay",
+        "1999": "Napster · Google · Blogger",
+        "2000": "Amazon · Napster · Pets.com",
+        "2001": "Wikipedia · Google · iPod",
+        "2002": "Friendster · KaZaA · Google",
+        "2003": "MySpace · iTunes · WordPress",
+        "2004": "Gmail · Flickr · Firefox",
+        "2005": "YouTube · Maps · Reddit",
+        "2006": "Twitter · YouTube · Facebook",
+        "2007": "iPhone · Gmail · Street View",
+        "2008": "App Store · Chrome · Android",
+        "2009": "Like · FarmVille · Bing",
+        "2010": "iPad · Instagram · Foursquare",
+        "2011": "Spotify · Timeline · Siri",
+        "2012": "Instagram · FB IPO · Pinterest",
+        "2013": "Vine · IG Video · Stories · iOS 7",
+      };
+      var locTips = {
+        "1994": "yahoo or whitehouse",
+        "1995": "amazon or yahoo",
+        "1996": "hotmail or spacejam",
+        "1997": "ebay or slashdot",
+        "1998": "google or amazon",
+        "1999": "napster or google",
+        "2000": "napster or amazon",
+        "2001": "wikipedia or google",
+        "2002": "friendster or kazaa",
+        "2003": "myspace or itunes",
+        "2004": "gmail or flickr",
+        "2005": "youtube or reddit",
+        "2006": "twitter or youtube",
+        "2007": "iphone or gmail",
+        "2008": "chrome or appstore",
+        "2009": "facebook or farmville",
+        "2010": "instagram or ipad",
+        "2011": "spotify or siri",
+        "2012": "instagram or pinterest",
+        "2013": "vine or snowden",
+      };
+      var dirHint = dirExamples[YEAR] || "directory buttons on the bar";
+      var locTip = locTips[YEAR] || "a site name from this year";
       var msg =
-        "You are inside a reconstructed Netscape window for " + YEAR + ".\n\n" +
-        "• Links open inside this window (not a new browser tab)\n" +
-        "• Use Back, directory buttons, or the blue bar on pages to navigate\n" +
-        "• Follow the ★ Suggested tour on the Starting Point page\n" +
-        "• Exit (top of the desktop) returns to the year menu\n\n" +
-        "Tip: in Location, try typing yahoo and press Enter.";
-      showAlert("Welcome — " + YEAR, msg);
+        "You are inside a reconstructed " + browserLabel + " window for " + YEAR + ".\n\n" +
+        "HOW TO NAVIGATE\n" +
+        "• Starting Point = this year’s map (trails, About). Use the Starting Point button, toolbar Home, or the sticky bar on site pages.\n" +
+        "• Year menu = leave this year back to the museum lobby. Use ← Year menu (top) or window ×.\n" +
+        "• Directory bar: " + dirHint + "\n" +
+        "• Links open inside this window (not a new browser tab). Use Back to go previous.\n\n" +
+        "Tip: in Location, type " + locTip + " and press Enter.\n" +
+        "Click OK (or wait) so the page stays clickable.";
+      showAlert("Welcome — " + YEAR + " · how to navigate", msg);
+      /* Non-blocking coach: full-screen backdrop was intercepting dirbar/toolbar/iframe
+         clicks so “buttons felt dead” until OK. Keep the dialog, drop the dimmer. */
+      try {
+        if (backdrop) backdrop.classList.add("hidden");
+      } catch (eBd) { /* */ }
       try {
         localStorage.setItem(key, "1");
         sessionStorage.setItem(key, "1");
       } catch (e2) { /* */ }
+      /* Auto-dismiss Welcome — coach only, not other alerts */
+      window.setTimeout(function () {
+        try {
+          var alertEl = document.getElementById("dlg-alert");
+          if (alertEl && !alertEl.classList.contains("hidden")) {
+            var titleEl = document.getElementById("dlg-alert-title");
+            var titleText = titleEl ? titleEl.textContent || "" : "";
+            if (titleText.indexOf("Welcome") === 0) closeAllDialogs();
+          }
+          ensureBackdropSane();
+        } catch (eAuto) { /* */ }
+      }, 4000);
+      window.setTimeout(function () {
+        try {
+          ensureBackdropSane();
+        } catch (e2) { /* */ }
+      }, 5500);
     }
 
     function seedHistory() {
@@ -1699,6 +1982,18 @@
       }
       // Coach after chrome is ready
       window.setTimeout(maybeFirstRunCoach, 600);
+      /* First-night trail: open signature room for this year when active */
+      window.setTimeout(function () {
+        try {
+          if (ITT.MuseumProgress && typeof ITT.MuseumProgress.maybeOpenTrailRoom === "function") {
+            ITT.MuseumProgress.maybeOpenTrailRoom(function (path) {
+              navigate(path, { instant: true });
+            });
+          }
+        } catch (eTrail) {
+          /* */
+        }
+      }, 200);
     }
 
     function hideOverlay() {
@@ -1715,7 +2010,11 @@
       var lines = connectSequence(Math.random() < PERF.connectBusyChance);
       // Estimate total connect duration for modem sound
       var estMs = lines.length * PERF.connectLineMs + PERF.connectEndMs;
-      playModemSound(estMs);
+      // Broadband / always-on years: no modem screech (still show status lines)
+      var cMode = String(config.connectMode || "dialup").toLowerCase();
+      if (cMode !== "broadband" && cMode !== "always-on" && cMode !== "always_on") {
+        playModemSound(estMs);
+      }
       var i = 0;
       function next() {
         if (i < lines.length) {
@@ -1812,6 +2111,15 @@
       if (overlay) overlay.classList.remove("hidden");
     }
 
+    function focusContent() {
+      try {
+        if (iframe) {
+          iframe.focus();
+          if (iframe.contentWindow) iframe.contentWindow.focus();
+        }
+      } catch (eFc) { /* */ }
+    }
+
     // Expose for immersion iframe / debugging
     var api = {
       year: YEAR,
@@ -1823,7 +2131,8 @@
       perf: PERF,
       getPrefs: function () { return prefs; },
       setSecureMode: setSecureMode,
-      maybePhoneEvent: maybePhoneEvent
+      maybePhoneEvent: maybePhoneEvent,
+      focusContent: focusContent
     };
     ITT.activeBrowser = api;
     return api;

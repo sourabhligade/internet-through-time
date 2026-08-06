@@ -1,3 +1,1 @@
-RECONSTRUCTION ONLY — solid-color GIF placeholder for layout.
-NOT a harvested period logo. Replace with dated WA/WDM crop and log in CAPTURE-LOG.
-See docs/INCOMPLETE-YEARS-RESEARCH.md and docs/references/*/ASSETS.md.
+facebook/thefacebook 2004: WA harvest 2026-07-27 — web.archive.org/web/20040212031928id_/http://www.thefacebook.com/images/logo-left.jpg (JPEG→GIF via sips for logo.gif). Also logo-left-wa.jpg + logo-right-wa.jpg originals. logo-recon.gif residual.

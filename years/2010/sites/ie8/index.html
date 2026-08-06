@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Internet Explorer 8 — 2010</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css">
+<style>
+.ie{font-family:Tahoma,Arial,sans-serif;max-width:680px;margin:16px auto;background:#fff;border:2px solid #0a246a}
+.ie-bar{background:#0a246a;color:#fff;padding:10px 14px;font-size:14px;font-weight:bold}
+.ie-body{padding:14px 16px;font-size:13px;line-height:1.45}
+.ie-note{background:#fff8dc;border:1px solid #cc0;padding:8px;font-size:12px;margin:10px 0}
+</style>
+</head>
+<body bgcolor="#ece9d8">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="ie">
+ <div class="ie-bar">Windows Internet Explorer 8</div>
+ <div class="ie-body">
+  <p style="font-size:12px;margin:0 0 10px">
+   <a href="../../pages/home.html">Starting Point</a> ·
+   <a href="../windows7/index.html">Windows 7</a> ·
+   <a href="../firefox/index.html">Firefox</a> ·
+   <a href="../chrome/index.html">Chrome</a>
+  </p>
+  <h1 style="font-size:18px;color:#0a246a;margin:0 0 8px">Internet Explorer 8</h1>
+  <p><b>Final release: March 19, 2009.</b> Microsoft’s mass-browser update for XP, Vista, and (later) Windows 7.
+  Better tab isolation lore · Accelerators · Compatibility View for sites that still expect IE 7 quirks.</p>
+
+  <div class="ie-note">
+   <b>2009 honesty:</b> Museum shell default for this year is <b>Windows XP + IE 8</b> (after March).
+   Early-year residual <b>IE 7</b> is still true for many PCs. IE 8 becomes the browser story of
+   <a href="../windows7/index.html">Windows 7</a> after <b>Oct 22</b> — but XP + IE 8 is the honest mass path most of the year.
+   Chrome and Firefox are real product rooms; they are <b>not</b> forced as sole shell.
+  </div>
+
+  <h2 style="font-size:14px">Period features people talked about</h2>
+  <ul style="font-size:12px">
+   <li>Tab isolation (one bad tab less likely to kill the whole browser — period marketing)</li>
+   <li>Accelerators (right-click map / blog / search shortcuts)</li>
+   <li>InPrivate browsing</li>
+   <li>Compatibility View toolbar button for broken enterprise / old sites</li>
+  </ul>
+
+  <p style="font-size:12px">
+   <b>Trail:</b>
+   <b>IE 8</b> →
+   <a href="../windows7/index.html">Windows 7 Oct 22</a> →
+   still mostly a PC for work, Gmail, Facebook, YouTube
+  </p>
+  <p style="font-size:11px;color:#666">Educational reconstruction · shell chrome from XP/IE continuity packs.</p>
+ </div>
+</div>
+
+ <p style="margin-top:12px">
+  <button type="button" data-shell-prefer="ie8">Use as preferred browser (local theater)</button>
+  <span data-shell-status style="font-size:12px;color:#060;margin-left:8px"></span>
+ </p>
+ 
+<script>
+(function(){
+  var KEY="itt10-shell-pref";
+  function boot(){
+    var btns=document.querySelectorAll("[data-shell-prefer]");
+    var st=document.querySelector("[data-shell-status]");
+    try{ var raw=localStorage.getItem(KEY); if(raw&&st) st.textContent="Preferred: "+JSON.parse(raw).id+" · "+KEY; }catch(e){}
+    for(var i=0;i<btns.length;i++){
+      btns[i].addEventListener("click", function(ev){
+        var id=ev.currentTarget.getAttribute("data-shell-prefer");
+        try{ localStorage.setItem(KEY, JSON.stringify({id:id,ts:Date.now()})); }catch(e){}
+        if(st) st.textContent="Preferred: "+id+" · "+KEY;
+      });
+    }
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+</script>
+
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

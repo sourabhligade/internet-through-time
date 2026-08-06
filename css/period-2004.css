@@ -1,179 +1,1163 @@
-/* 2004 document styles — Firefox 1.0 · Gmail · Flickr · Thefacebook
-   Year delta: @import period-2003. Only 2004-specific rules below. */
+/* 2004 document styles — XP · IE6 · period product UI
+   Grammar from WA harvests (gmail #C3D9FF · flickr pink/blue · thefacebook #3B5998 · digg seed)
+   Prefer table/float layouts over modern flex (IE6-era exhibit). */
 @import url("period-2003.css");
 
-/* Gmail 2004 — sparse webmail */
-.gm04-wrap {
-  max-width: 720px;
-  margin: 12px auto;
-  font-family: Arial, Helvetica, sans-serif;
+body.year-2004 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #ff6600;
+}
+
+/* ------------------------------------------------------------------ */
+/* Gmail 2004 — harvest: arial · #C3D9FF bubble · form-noindent       */
+/* ------------------------------------------------------------------ */
+.gmail-shell {
+  font-family: arial, sans-serif;
   font-size: 13px;
+  background: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
 }
-.gm04-logo {
-  font-size: 28px;
+.gmail-shell a { color: #0000cc; }
+.gmail-shell a:visited { color: #551a8b; }
+.gmail-header {
+  background: #c3d9ff;
+  border-bottom: 1px solid #6b90da;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.gmail-header a { color: #0000cc; margin: 0 4px; }
+.gmail-header img { vertical-align: middle; margin-right: 6px; }
+.gmail-gb {
+  color: #c00;
+  font-size: 24px;
   font-weight: bold;
-  color: #1a73e8;
   letter-spacing: -1px;
+  vertical-align: middle;
 }
-.gm04-logo span.c1 { color: #4285f4; }
-.gm04-logo span.c2 { color: #ea4335; }
-.gm04-logo span.c3 { color: #fbbc05; }
-.gm04-logo span.c4 { color: #34a853; }
-.gm04-nav {
+/* Welcome bubble (period corner-soft look via border) */
+.gmail-bubble {
+  background: #c3d9ff;
+  border: 1px solid #6b90da;
+  padding: 4px 10px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+.gmail-login-box {
+  max-width: 520px;
+  margin: 18px auto;
+  border: 1px solid #c3d9ff;
+  background: #ffffff;
+  padding: 14px 16px 18px;
+}
+.gmail-login-box h1 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+.gmail-login-box input[type="text"],
+.gmail-login-box input[type="password"],
+.gmail-login-box input:not([type]) {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  border: 1px solid #7f9db9;
+  padding: 2px 3px;
+}
+.gmail-login-box button,
+.gmail-shell input[type="submit"],
+.gmail-shell button {
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #808080;
+  background: #f0f0f0;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.gmail-login-box button:active,
+.gmail-shell button:active {
+  background: #e0e0e0;
+}
+.gmail-layout {
+  width: 100%;
+  border-collapse: collapse;
+  display: table;
+}
+.gmail-labels {
+  display: table-cell;
+  width: 150px;
+  vertical-align: top;
+  background: #ffffff;
+  padding: 10px 8px;
+  border-right: 1px solid #c3d9ff;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #000;
+}
+.gmail-labels a { color: #0000cc; text-decoration: none; }
+.gmail-labels a:hover { text-decoration: underline; }
+.gmail-labels b { color: #000; }
+.gmail-main {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px 12px;
+  background: #ffffff;
+}
+.gmail-row {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 5px 4px;
+  font-size: 12px;
+  background: #ffffff;
+}
+.gmail-row:hover { background: #ffffcc; }
+.gmail-note {
+  background: #ffffcc;
+  border: 1px solid #f0c36d;
+  padding: 8px 10px;
+  font-size: 11px;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.gmail-searchbar {
   background: #e8eef7;
   border: 1px solid #c3d9ff;
-  padding: 6px 10px;
-  margin: 8px 0;
-}
-.gm04-list { width: 100%; border-collapse: collapse; }
-.gm04-list td {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 4px 6px;
+  padding: 6px 8px;
+  margin-bottom: 8px;
   font-size: 12px;
 }
-.gm04-unread { font-weight: bold; }
-.gm04-compose {
-  background: #f5f5f5;
-  border: 1px solid #ccc;
-  padding: 10px;
+.gmail-searchbar input {
+  border: 1px solid #7f9db9;
+  font-size: 12px;
+  padding: 2px;
+}
+.gmail-toolbar {
+  font-size: 11px;
+  color: #666;
+  margin: 4px 0 8px;
+  border-bottom: 1px solid #c3d9ff;
+  padding-bottom: 4px;
+}
+.gmail-compose-form {
+  background: #ffffff;
+  border: 1px solid #c3d9ff;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+.gmail-compose-form label {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  margin-top: 6px;
+}
+.gmail-compose-form input,
+.gmail-compose-form textarea {
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #7f9db9;
+  width: 95%;
+  padding: 3px;
+  margin-top: 2px;
+}
+.gmail-compose-form textarea { height: 160px; }
+.gmail-compose-form .gmail-compose-actions {
   margin-top: 10px;
 }
-.gm04-wrap .gm04-compose input[type="submit"] { font-weight: bold; }
-
-/* Gmail 2004 toolbar — plain gray widgets (not blue “app chips”) */
-.gm04-nav input[type="button"],
-.gm04-nav input[type="submit"],
-.gm04-btn {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 11px !important;
-  color: #000 !important;
-  background: #f5f5f5 !important;
-  border: 1px solid #aaa !important;
-  padding: 1px 8px !important;
-  margin-left: 2px !important;
-  cursor: default !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  font-weight: normal !important;
+.gmail-compose-form button {
+  margin-right: 6px;
+  background: #c3d9ff;
+  border: 1px solid #6b90da;
+  font-weight: bold;
+  padding: 3px 12px;
 }
-.gm04-nav input[type="button"]:active,
-.gm04-btn:active {
-  border-color: #666 !important;
-  background: #e8e8e8 !important;
+.gmail-row b { color: #000; }
+.gmail-row .gmail-from { width: 140px; display: inline-block; overflow: hidden; }
+.gmail-row .gmail-subj { color: #0000cc; }
+
+/* Digg dig box (seed UI) */
+.digg-item .digg-score {
+  float: left;
+  width: 48px;
+  text-align: center;
+  margin-right: 10px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 4px 2px;
+  font-size: 11px;
+}
+.digg-item .digg-score b {
+  display: block;
+  font-size: 16px;
+  color: #090;
+  line-height: 1.1;
+}
+.digg-item .digg-body { overflow: hidden; }
+.digg-item .heading { font-size: 13px; color: #000382; }
+
+/* Thefacebook profile photo */
+.fb-photo {
+  width: 120px;
+  height: 140px;
+  background: #d9dfea;
+  border: 1px solid #8ea7c5;
+  text-align: center;
+  line-height: 140px;
+  font-size: 11px;
+  color: #3b5998;
+  margin-bottom: 6px;
+}
+.fb-side {
+  background: #d9dfea;
+  border: 1px solid #8ea7c5;
+  padding: 8px;
+  width: 150px;
+  vertical-align: top;
+}
+.fb-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 8px 0;
+}
+.fb-info-table th {
+  text-align: left;
+  background: #d9dfea;
+  color: #3b5998;
+  padding: 4px 6px;
+  width: 90px;
+  font-weight: bold;
+  border: 1px solid #8ea7c5;
+}
+.fb-info-table td {
+  padding: 4px 6px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+}
+.fb-edit-box {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-top: 8px;
 }
 
-/* Firefox 2004 product pages — download is a normal form button, orange is brand text only */
-.ff04-wrap input[type="button"],
-.ff04-wrap input[type="submit"],
-.ff04-wrap button {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 12px !important;
-  color: #000 !important;
-  background: #ece9d8 !important;
-  border-top: 1px solid #fff !important;
-  border-left: 1px solid #fff !important;
-  border-right: 1px solid #716f64 !important;
-  border-bottom: 1px solid #716f64 !important;
-  padding: 3px 14px !important;
-  cursor: default !important;
-  border-radius: 0 !important;
-  font-weight: normal !important;
+/* Google 2004 sparse center */
+.google-2004-home {
+  font-family: arial, sans-serif;
+  text-align: center;
+  padding-top: 60px;
+}
+.google-2004-home form input[type="text"],
+.google-2004-home form input[name="q"] {
+  font-size: 16px;
+  padding: 2px;
+  width: 320px;
+  border: 1px solid #7f9db9;
+}
+.google-2004-footer {
+  font-family: arial, sans-serif;
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  margin-top: 40px;
+  padding: 8px;
 }
 
-/* Thefacebook 2004 — simple campus form buttons */
-.fb04-wrap input[type="submit"],
-.fb04-wrap input[type="button"],
-.fb04-wrap button {
-  font-family: "Lucida Grande", Arial, sans-serif !important;
-  font-size: 11px !important;
-  background: #3b5998 !important;
-  color: #fff !important;
-  border: 1px solid #0e1f5b !important;
-  padding: 2px 10px !important;
-  cursor: default !important;
-  border-radius: 0 !important;
-  font-weight: normal !important;
+/* ------------------------------------------------------------------ */
+/* Flickr 2004 beta — #0063dc blue · #ff0084 pink · centered 600px   */
+/* ------------------------------------------------------------------ */
+.flickr-shell {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-size: 13px;
+  margin: 0;
+  padding: 0 0 24px 0;
 }
-
-/* Flickr 2004 — photo pink/blue */
-.fl04-wrap {
-  max-width: 780px;
-  margin: 10px auto;
+.flickr-shell a { color: #0063dc; }
+.flickr-header {
+  background: #0063dc;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-bottom: 3px solid #ff0084;
+}
+.flickr-header a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+}
+.flickr-header a:hover { color: #ff0084; text-decoration: underline; }
+.flickr-header a.flickr-nav-on,
+.flickr-header a[style*="ff0084"] { color: #ff0084; }
+.flickr-header img { vertical-align: middle; margin-right: 6px; }
+.flickr-pink { color: #ff0084; font-weight: bold; }
+.flickr-blue { color: #0063dc; font-weight: bold; }
+.flickr-shell h1 {
+  font-size: 20px;
+  color: #0063dc;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+.flickr-shell h3 {
+  color: #ff0084;
+  font-size: 14px;
+  margin: 14px 0 6px 0;
+}
+.flickr-body {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 14px 12px;
+}
+.flickr-dots {
+  border: 0;
+  border-top: 1px dotted #999;
+  height: 0;
+  margin: 8px 0;
+}
+.flickr-stream {
+  margin: 10px 0;
+  overflow: hidden; /* clear floats */
+}
+.flickr-thumb {
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin: 0 8px 10px 0;
+  background: #eeeeee;
+  border: 1px solid #999999;
+  font-size: 10px;
+  text-align: center;
+  color: #333;
+  line-height: 1.2;
+  padding-top: 28px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.flickr-note {
+  background: #eef4ff;
+  border: 1px solid #99bbdd;
+  padding: 8px 10px;
+  font-size: 11px;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.flickr-shell form {
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+  padding: 12px;
+}
+.flickr-shell input,
+.flickr-shell button {
   font-family: Arial, sans-serif;
   font-size: 12px;
 }
-.fl04-top {
+.flickr-shell button {
   background: #0063dc;
   color: #fff;
-  padding: 8px 12px;
-}
-.fl04-top a { color: #ff0084; margin-left: 8px; }
-.fl04-pink { color: #ff0084; font-weight: bold; }
-.fl04-grid td {
-  padding: 6px;
-  text-align: center;
-  vertical-align: top;
-}
-.fl04-thumb {
-  width: 75px;
-  height: 75px;
-  background: #ddd;
-  border: 1px solid #999;
-  display: inline-block;
+  border: 1px solid #003399;
+  padding: 3px 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Thefacebook 2004 — Harvard blue */
-.fb04-wrap {
+/* ------------------------------------------------------------------ */
+/* Thefacebook 2004 — #3B5998 · #D9DFEA · Tahoma                      */
+/* ------------------------------------------------------------------ */
+.fb-shell {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  background: #3b5998;
+  color: #000000;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+.fb-shell a { color: #3b5998; }
+.fb-shell a:hover { color: #538adc; }
+.fb-card {
   max-width: 760px;
-  margin: 10px auto;
-  font-family: "Lucida Grande", Arial, sans-serif;
+  margin: 14px auto;
+  background: #ffffff;
+  border: 1px solid #0e1f5b;
+}
+.fb-top {
+  background: #3b5998;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.fb-top a { color: #d9dfea; text-decoration: none; margin: 0 4px; font-weight: normal; }
+.fb-top a:hover { color: #ffffff; text-decoration: underline; }
+.fb-body {
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.45;
+  background: #ffffff;
+}
+.fb-body h1, .fb-body h2 {
+  font-size: 16px;
+  color: #3b5998;
+  margin: 0 0 8px 0;
+}
+.fb-side,
+.fb-body td[style*="background:#eee"],
+.fb-login-box {
+  background: #d9dfea !important;
+  border: 1px solid #8ea7c5 !important;
+  padding: 10px !important;
+}
+.fb-note {
+  background: #fff9db;
+  border: 1px solid #e2c822;
+  padding: 7px 9px;
+  font-size: 11px;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.fb-shell input,
+.fb-shell button {
+  font-family: Tahoma, Arial, sans-serif;
   font-size: 11px;
 }
-.fb04-header {
+.fb-shell button {
   background: #3b5998;
   color: #fff;
-  padding: 6px 10px;
+  border: 1px solid #0e1f5b;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
-.fb04-header a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 10px;
+.fb-shell ul { margin: 6px 0 6px 18px; padding: 0; }
+.fb-shell li { margin: 2px 0; }
+
+/* ------------------------------------------------------------------ */
+/* Firefox 1.0 product — mozilla.org cream · orange CTA               */
+/* ------------------------------------------------------------------ */
+.ff-shell {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: #f9f7f2;
+  color: #000000;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 12px 16px 24px;
+  font-size: 13px;
+  line-height: 1.45;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
-.fb04-login {
-  background: #eceff5;
-  border: 1px solid #d8dfea;
-  padding: 12px;
-  width: 320px;
+.ff-shell a { color: #039; }
+.ff-shell h1 {
+  font-size: 18px;
+  color: #333;
+  margin: 8px 0;
 }
-.fb04-login input { margin-top: 2px; }
-.fb04-profile {
-  border: 1px solid #d8dfea;
+.ff-hero {
+  background: #ffffff;
+  border: 1px solid #c4c4b8;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.ff-hero p { margin: 6px 0; }
+.ff-btn {
+  background: #e86500;
+  color: #ffffff !important;
+  border: 1px solid #a04000;
+  padding: 6px 16px;
+  font-weight: bold;
+  text-decoration: none !important;
+  display: inline-block;
+  font-size: 13px;
+  font-family: Verdana, Arial, sans-serif;
+}
+.ff-btn:hover { background: #f07820; }
+.ff-note {
+  font-size: 11px;
+  color: #444;
+  margin-top: 12px;
+  background: #fff8e0;
+  border: 1px solid #cc9;
+  padding: 8px 10px;
+  line-height: 1.4;
+}
+.ff-shell ul {
   background: #fff;
-  padding: 8px;
+  border: 1px solid #ddd;
+  padding: 10px 10px 10px 28px;
+  margin: 10px 0;
 }
-.fb04-sidebar {
-  background: #f7f7f7;
-  border: 1px solid #d8dfea;
-  padding: 8px;
-  width: 180px;
+.ff-shell table {
+  font-size: 12px;
 }
 
-/* Firefox 1.0 product */
-.ff04-wrap {
+/* ------------------------------------------------------------------ */
+/* Digg seed Dec 2004 — harvest digg.css · green dig buttons          */
+/* ------------------------------------------------------------------ */
+.digg-shell {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-size: 12px;
+  margin: 0;
+  padding: 0 0 20px 0;
+  text-align: left;
+}
+.digg-shell a { color: #000382; }
+.digg-shell a:visited { color: #000382; }
+.digg-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+.digg-titlebar {
+  background: #000000;
+  color: #ffffff;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.digg-titlebar a { color: #ffffff; text-decoration: none; margin: 0 4px; }
+.digg-titlebar a:hover { text-decoration: underline; }
+.digg-titlebar .digg-brand {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  float: left;
+}
+.digg-titlebar .digg-nav {
+  float: right;
+  font-size: 11px;
+}
+.digg-belbar {
+  background: #e6e6e6;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 10px;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.digg-belbar a { color: #000; margin-right: 8px; }
+.digg-content {
   max-width: 700px;
-  margin: 12px auto;
+  margin: 0 auto;
+  padding: 8px 10px;
+  text-align: left;
+}
+.digg-item,
+.digg-shell .digg-item {
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 0;
+  text-align: left;
+  line-height: 1.4;
+}
+.digg-shell button[data-digg-up],
+.digg-shell button[data-digg-bury] {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  margin-right: 3px;
+  cursor: pointer;
+  border: 1px solid #080;
+  background: #0a0;
+  color: #fff;
+}
+.digg-shell button[data-digg-bury] {
+  border-color: #800;
+  background: #a00;
+}
+.digg-shell [data-digg-count] {
+  color: #090;
+  font-weight: bold;
+}
+.digg-honesty {
+  background: #ffffcc;
+  border: 1px solid #cccc00;
+  padding: 8px;
+  font-size: 11px;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.digg-shell form {
+  background: #f8f8f8;
+  border: 1px solid #cccccc;
+  padding: 12px;
+}
+.digg-shell input,
+.digg-shell button[type="submit"] {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+}
+.digg-shell button[type="submit"] {
+  background: #333;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 4px 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* Continuity polish for 2004 surfaces                                */
+/* ------------------------------------------------------------------ */
+.bloglines-shell {
+  font-family: Verdana, Arial, sans-serif;
+  background: #ffffff;
+  color: #000;
+  font-size: 12px;
+}
+.bloglines-shell form {
+  background: #f5f8fc;
+  border: 1px solid #99ccff;
+  padding: 10px;
+}
+.bloglines-shell button {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  border: 1px solid #369;
+  background: #e8f0ff;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+/* MySpace 2004 still blue header (from 2003) + table profile feel */
+.myspace-shell table {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+}
+.myspace-shell input[type="submit"],
+.myspace-shell button {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  border: 1px solid #003399;
+  background: #d5e8ff;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+/* LinkedIn 2004 */
+.li-shell .li-header {
+  background: #006699;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.li-shell button {
   font-family: Arial, sans-serif;
+  font-size: 11px;
+  border: 1px solid #069;
+  background: #e8f4ff;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.li-card {
+  border: 1px solid #99bbcc;
+  padding: 8px;
+  margin: 6px 0;
+  background: #f4f8fc;
+}
+
+/* Google sparse 2004 homepage helpers */
+body[bgcolor="#ffffff"] form[data-google-search] input {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+body[bgcolor="#ffffff"] form[data-google-search] input[type="submit"] {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  border: 1px solid #808080;
+  background: #f0f0f0;
+  padding: 2px 8px;
+}
+
+/* Web 2.0 conf culture room */
+.web20-shell {
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 680px;
+  margin: 16px auto;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #000;
+  background: #fff;
+}
+
+/* ================================================================
+   New 2004 rooms — SHARED CHROME (aligned) + brand colors
+   Pattern: body.X-shell > .X-top (logo · full nav · 2004 Start) > .X-body (680px card)
+   Craigslist keeps two-column hub; subpages use .cl-simple card.
+   ================================================================ */
+
+/* Shared shell frame */
+.orkut-shell,
+.lj-shell,
+.yelp-shell,
+.imdb-shell,
+.bbc-shell,
+.skype-shell,
+.tech-shell,
+.cl-shell,
+.wow-shell {
+  margin: 0;
+  padding: 0 0 28px 0;
+  min-height: 100%;
+  line-height: 1.45;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.orkut-shell *,
+.lj-shell *,
+.yelp-shell *,
+.imdb-shell *,
+.bbc-shell *,
+.skype-shell *,
+.tech-shell *,
+.cl-shell *,
+.wow-shell * {
+  box-sizing: border-box;
+}
+
+/* Shared top bar geometry — full width masthead */
+.orkut-top,
+.lj-top,
+.yelp-top,
+.imdb-top,
+.bbc-top,
+.skype-top,
+.tech-top,
+.wow-top {
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-bottom: 2px solid #000;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: normal;
+}
+.orkut-top a,
+.lj-top a,
+.yelp-top a,
+.imdb-top a,
+.bbc-top a,
+.skype-top a,
+.tech-top a,
+.wow-top a {
+  margin: 0 4px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 12px;
+}
+.orkut-top a:hover,
+.lj-top a:hover,
+.yelp-top a:hover,
+.imdb-top a:hover,
+.bbc-top a:hover,
+.skype-top a:hover,
+.tech-top a:hover,
+.wow-top a:hover {
+  text-decoration: underline;
+}
+/* Current page label inside top nav */
+.orkut-top > b:not([class]),
+.lj-top > b:not([class]),
+.yelp-top > b:not([class]),
+.imdb-top > b:not([class]),
+.bbc-top > b:not([class]),
+.skype-top > b:not([class]),
+.tech-top > b:not([class]),
+.wow-top > b:not([class]) {
+  margin: 0 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.orkut-logo,
+.lj-logo,
+.yelp-logo,
+.imdb-logo,
+.bbc-logo,
+.skype-logo,
+.tech-logo,
+.wow-logo,
+.cl-logo {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-right: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Shared content card — centered 680px column */
+.orkut-body,
+.lj-body,
+.yelp-body,
+.imdb-body,
+.bbc-body,
+.skype-body,
+.tech-body,
+.cl-simple,
+.wow-body {
+  max-width: 680px;
+  width: 100%;
+  margin: 14px auto 0;
+  padding: 14px 16px 18px;
+  background: #ffffff;
+  border: 1px solid #999999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.orkut-body h1,
+.lj-body h1,
+.yelp-body h1,
+.imdb-body h1,
+.bbc-body h1,
+.skype-body h1,
+.tech-body h1,
+.cl-simple h1,
+.wow-body h1 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  line-height: 1.25;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.orkut-body h2,
+.orkut-body h3,
+.lj-body h2,
+.lj-body h3,
+.imdb-body h3,
+.bbc-body h2,
+.bbc-body h3,
+.tech-body h2,
+.tech-body h3,
+.cl-simple h3,
+.yelp-body h2,
+.skype-body h2 {
+  font-size: 14px;
+  margin: 12px 0 6px 0;
+  font-weight: bold;
+}
+.orkut-body p,
+.lj-body p,
+.yelp-body p,
+.imdb-body p,
+.bbc-body p,
+.skype-body p,
+.tech-body p,
+.cl-simple p,
+.wow-body p {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.orkut-body ul,
+.lj-body ul,
+.yelp-body ul,
+.imdb-body ul,
+.bbc-body ul,
+.skype-body ul,
+.tech-body ul,
+.cl-simple ul,
+.wow-body ul,
+.orkut-body ol,
+.tech-body ol {
+  margin: 6px 0 10px 1.2em;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Shared honesty / note box */
+.orkut-note,
+.yelp-note,
+.skype-note,
+.wow-note,
+.digg-honesty {
+  background: #ffffcc;
+  border: 1px solid #cccc00;
+  padding: 8px 10px;
+  font-size: 11px;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+/* Shared form chrome */
+.orkut-form,
+.lj-form,
+.cl-form,
+.tech-form,
+.imdb-search {
+  background: #f5f5f5;
+  border: 1px solid #999999;
+  padding: 10px 12px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+.orkut-shell input,
+.lj-shell input,
+.lj-shell textarea,
+.cl-shell input,
+.cl-shell textarea,
+.cl-shell select,
+.tech-shell input,
+.imdb-shell input,
+.yelp-shell input,
+.bbc-shell input,
+.skype-shell input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border: 1px solid #7f9db9;
+  padding: 2px 4px;
+  margin: 2px 0;
+}
+.orkut-shell button,
+.lj-shell button,
+.cl-shell button,
+.tech-shell button,
+.imdb-shell input[type="submit"],
+.yelp-shell button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border: 1px solid #666666;
+  background: #e8e8e8;
+  padding: 3px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.orkut-shell button:active,
+.lj-shell button:active,
+.cl-shell button:active,
+.tech-shell button:active {
+  background: #d0d0d0;
+}
+
+/* Footer-ish meta lines inside body */
+.orkut-body > p:last-child,
+.lj-body > p:last-child,
+.yelp-body > p:last-child,
+.imdb-body > p:last-child,
+.bbc-body > p:last-child,
+.skype-body > p:last-child,
+.tech-body > p:last-child,
+.cl-simple > p:last-child,
+.wow-body > p:last-child {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 11px;
+}
+
+/* ---- Brand colors only (layout already shared) ---- */
+
+/* Orkut — soft green Google-social */
+.orkut-shell { font-family: Arial, Helvetica, sans-serif; background: #dfeadf; color: #000; }
+.orkut-top { background: #c8dcc8; color: #003300; border-bottom-color: #669966; }
+.orkut-top a { color: #006600; }
+.orkut-logo { color: #006600; }
+.orkut-body { border-color: #88aa88; }
+.orkut-side {
+  background: #f0f6f0;
+  border: 1px solid #99bb99;
+  padding: 10px;
+  font-size: 12px;
+  vertical-align: top;
+}
+.orkut-friend {
+  border: 1px solid #cccccc;
+  padding: 6px 8px;
+  margin: 4px 0;
+  background: #fafafa;
+  font-size: 12px;
+}
+.orkut-shell button {
+  border-color: #006600;
+  background: #d0ecc0;
+  color: #003300;
+}
+
+/* LiveJournal — indigo blog */
+.lj-shell { font-family: Verdana, Arial, sans-serif; background: #e4e8f5; color: #000; }
+.lj-top { background: #336699; color: #ffffff; border-bottom-color: #224466; }
+.lj-top a { color: #cce0ff; }
+.lj-logo { color: #ffffff; }
+.lj-body { border-color: #99aacc; }
+.lj-post {
+  border-bottom: 1px solid #cccccc;
+  margin: 10px 0;
+  padding-bottom: 8px;
+}
+.lj-shell button {
+  border-color: #336699;
+  background: #dde8ff;
+  color: #123;
+}
+
+/* Yelp — red local reviews */
+.yelp-shell { font-family: Arial, Helvetica, sans-serif; background: #f5f5f5; color: #000; }
+.yelp-top { background: #c41200; color: #ffffff; border-bottom-color: #8a0c00; }
+.yelp-top a { color: #ffffff; }
+.yelp-logo { color: #ffffff; }
+.yelp-body { border-color: #cc6666; }
+.yelp-note {
+  background: #fff8f0;
+  border-color: #e08000;
+}
+
+/* craigslist — classic plain hub (keep two-column) */
+.cl-shell { font-family: arial, sans-serif; background: #ffffff; color: #000; }
+.cl-shell a { color: #0000ee; }
+.cl-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 14px auto 0;
+  border: 1px solid #999999;
+  background: #ffffff;
+  border-collapse: collapse;
+}
+.cl-side {
+  width: 150px;
+  vertical-align: top;
+  padding: 12px 10px;
+  background: #eeeeee;
+  border-right: 1px solid #cccccc;
+  font-size: 12px;
+}
+.cl-logo { color: #0000ee; font-size: 16px; }
+.cl-city { font-size: 12px; font-weight: bold; margin: 8px 0; line-height: 1.3; }
+.cl-main { vertical-align: top; padding: 12px 14px; font-size: 12px; }
+.cl-simple { margin-top: 12px; }
+.cl-row {
+  border-bottom: 1px solid #dddddd;
+  padding: 6px 0;
+  font-size: 12px;
+}
+.cl-shell button {
+  border-color: #666666;
+  background: #eeeeee;
+}
+
+/* IMDb — yellow brand field */
+.imdb-shell { font-family: Verdana, Arial, sans-serif; background: #f5f5a0; color: #000; }
+.imdb-top { background: #000000; color: #f5c518; border-bottom-color: #f5c518; }
+.imdb-top a { color: #ffffff; }
+.imdb-logo {
+  color: #000000;
+  background: #f5c518;
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+.imdb-body { border-color: #999999; }
+.imdb-search { background: #eeeeee; border: 1px solid #999999; }
+.imdb-info {
+  font-size: 12px;
+  border: 1px solid #cccccc;
+  margin: 8px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+.imdb-info td { padding: 4px 6px; border: 1px solid #e0e0e0; }
+
+/* BBC News — black masthead · red badge */
+.bbc-shell { font-family: Verdana, Arial, sans-serif; background: #e8e8e8; color: #000; }
+.bbc-top { background: #000000; color: #ffffff; border-bottom-color: #990000; }
+.bbc-top a { color: #ffffff; }
+.bbc-logo {
+  color: #ffffff;
+  background: #990000;
+  padding: 2px 8px;
   font-size: 13px;
 }
-.ff04-hero {
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 16px;
-  text-align: center;
+.bbc-body { border-color: #999999; }
+.bbc-body h1 {
+  border-bottom: 3px solid #990000;
+  padding-bottom: 4px;
+  color: #000000;
 }
-.ff04-orange { color: #e66000; font-weight: bold; }
-.ff04-wrap table th { background: #f5f5f5; }
+.bbc-side {
+  background: #f0f0f0;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 11px;
+  vertical-align: top;
+}
+.bbc-shell a { color: #0000ee; }
 
-.ff04-wordmark { margin: 4px 0 8px; }
-.ff04-wordmark td { vertical-align: middle; }
-.ff04-orange { color: #ff6600; }
+/* Skype — cyan VoIP */
+.skype-shell { font-family: Arial, Helvetica, sans-serif; background: #d6eef8; color: #000; }
+.skype-top { background: #00aff0; color: #ffffff; border-bottom-color: #0077a3; }
+.skype-top a { color: #ffffff; }
+.skype-logo { color: #ffffff; }
+.skype-body { border-color: #00aff0; }
+.skype-btn {
+  background: #00aff0;
+  color: #ffffff !important;
+  border: 1px solid #0077a3;
+  padding: 6px 16px;
+  font-weight: bold;
+  text-decoration: none !important;
+  display: inline-block;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.skype-btn:hover { background: #33c0f5; }
+
+/* World of Warcraft — dark fantasy culture (same chrome geometry) */
+.wow-shell {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #1a1208;
+  color: #f0e0c0;
+  font-size: 13px;
+}
+.wow-top {
+  background: #0d0a05;
+  border-bottom-color: #c9a227;
+  color: #e8c66a;
+}
+.wow-top a { color: #e8c66a; }
+.wow-logo {
+  color: #e8c66a;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.wow-body {
+  background: #24180c;
+  border-color: #c9a227;
+  color: #f0e0c0;
+  font-size: 13px;
+}
+.wow-body h1 {
+  color: #e8c66a;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.wow-body p { color: #f0e0c0; font-size: 13px; }
+.wow-note {
+  background: #2a1c0c;
+  border-color: #c9a227;
+  color: #f0e0c0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wow-shell a { color: #e8c66a; }
+.wow-shell ul { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #f0e0c0; }
+
+/* Technorati — green blogosphere */
+.tech-shell { font-family: Verdana, Arial, sans-serif; background: #eef6ee; color: #000; }
+.tech-top { background: #009900; color: #ffffff; border-bottom-color: #006600; }
+.tech-top a { color: #ffffff; }
+.tech-logo { color: #ffffff; }
+.tech-body { border-color: #66aa66; }
+.tech-form {
+  background: #f5fff5;
+  border-color: #009900;
+}
+.tech-shell button {
+  border-color: #006600;
+  background: #ccffcc;
+  color: #003300;
+}
+
+/* ITT feel tokens 2004 — Thefacebook · Gmail · Firefox */
+:root {
+  --itt04-fb: #3b5998;
+  --itt04-gmail: #c3d9ff;
+  --itt04-ff: #ff6600;
+}
+
+/* Starting Point inherits period-xp-ui via 2002→2003 chain (chips · window · trails). */
+.itt-start-title { /* year accent already on body.year-chip */ }

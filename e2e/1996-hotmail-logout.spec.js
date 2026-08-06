@@ -11,7 +11,7 @@ test.describe('1996 HoTMaiL logout', () => {
 
     await frame.locator('input[name="login"]').fill('logoutuser');
     await frame.locator('input[name="pass"]').fill('secret');
-    await frame.locator('form[data-hotmail-login] input[type="submit"]').click({ force: true });
+    await frame.locator('form[data-hotmail-login] input[type="submit"], form[data-hotmail-login] input[type="image"]').click({ force: true });
 
     await expect.poll(async () => {
       return page.evaluate(() => {

@@ -1,4 +1,7 @@
-# Fake / Theater Buttons Audit — All Years (1994–2005)
+# Fake / Theater Buttons Audit — All Years (1994–2002 (was 1994–2005 pre-delete))
+
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). F1/F2 densify shipped. Residual = true WA/IE6 pixels · platform debt · git Track E. Canonical: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
 
 **Date:** 2026-07-24 (live-flow pass)  
 **Scope:** Every year shell + content HTML under `years/1994`–`years/2005`  

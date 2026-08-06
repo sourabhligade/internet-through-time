@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2010">
+<head>
+<meta charset="utf-8">
+<title>About the Web in 2010</title>
+<link rel="stylesheet" href="../../../css/period-2010.css">
+</head>
+<body bgcolor="#ffffff" link="#0000cc">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:680px;margin:16px auto;font-family:Verdana,Arial,sans-serif;font-size:13px;line-height:1.45">
+ <h1 style="font-size:20px">About 2010</h1>
+ <p><b>2010 is when the tablet and camera-phone app web arrive.</b>
+ The <b>iPad</b> invents a device category. The <b>iPhone 4</b> brings Retina, FaceTime, and Antennagate.
+ <b>Instagram</b> (Oct 6, <b>iOS only</b>) invents filter-native photo sharing.
+ <b>Facebook</b> hits ~600 million people, ships <b>Open Graph</b> external Like buttons, and becomes a Hollywood story.
+ <b>Foursquare</b> check-in culture peaks. <b>FarmVille</b> peaks near 80M+ MAU.
+ Desktop Web is still how most people live.</p>
+ <p style="background:#fff8dc;border:1px solid #cc0;padding:8px;font-size:12px">
+ <b>Scale (dual-cite):</b>
+ Internet Live Stats June class: <b>206,956,723</b> websites (−13% vs 2009 — Netcraft methodology / inactive dip · <b>label the source</b>) ·
+ users ~<b>2.05B</b> (Live Stats year).
+ Pingdom end-2010 class: ~<b>255 million</b> websites · ~<b>1.97B</b> users mid-year · Facebook ~<b>600M</b> · YouTube ~<b>2B</b> videos/day.
+ Shell here: <b>Windows 7 + IE 8</b> mass path; IE 9 is a <b>Sep beta</b> product room; Chrome is a product room, not forced sole shell.
+ </p>
+ <h2 style="font-size:15px">Signature products</h2>
+ <ul>
+  <li><a href="../sites/ipad/index.html"><b>iPad</b></a> — Jan 27 announce · late Mar ship · $499+</li>
+  <li><a href="../sites/iphone/index.html"><b>iPhone 4</b></a> — Jun 24 · $199/$299 · Retina · FaceTime · Antennagate</li>
+  <li><a href="../sites/instagram/index.html"><b>Instagram</b></a> — Oct 6 · iOS-only · filters · ~1M by year-end</li>
+  <li><a href="../sites/appstore/index.html"><b>App Store</b></a> — 225k+ apps · 5B+ downloads class</li>
+  <li><a href="../sites/facebook/index.html"><b>Facebook</b></a> — Open Graph · Places · 500–600M</li>
+  <li><a href="../sites/foursquare/index.html"><b>Foursquare</b></a> · <a href="../sites/farmville/index.html"><b>FarmVille peak</b></a></li>
+  <li><a href="../sites/pinterest/index.html"><b>Pinterest</b></a> · <a href="../sites/uber/index.html"><b>Uber SF</b></a> · <a href="../sites/wave/index.html"><b>Wave funeral</b></a></li>
+  <li><a href="../sites/spotify/index.html"><b>Spotify Europe</b></a> — still <b>not US public</b></li>
+ </ul>
+ <h2 style="font-size:15px">Anachronism bans</h2>
+ <ul>
+  <li><b>Spotify US</b> public (2011)</li>
+  <li>Snapchat · TikTok · Instagram Stories / Reels</li>
+  <li>Instagram <b>Android</b> as 2010 default (2012)</li>
+  <li><b>UberX</b> / every-city mass (2012+)</li>
+  <li>Facebook Reactions (2016)</li>
+  <li>Wave as stable everyday email all year</li>
+ </ul>
+ <p style="margin:12px 0">
+ <button type="button" data-thesis-ack>I get 2010 (save thesis flag)</button>
+ <span data-thesis-status style="font-size:12px;color:#060;margin-left:8px"></span>
+</p>
+<script>
+(function(){
+  var KEY="itt10-thesis-ack";
+  function boot(){
+    var b=document.querySelector("[data-thesis-ack]");
+    var st=document.querySelector("[data-thesis-status]");
+    if(!b) return;
+    try{ if(localStorage.getItem(KEY) && st) st.textContent="Saved · "+KEY; }catch(e){}
+    b.addEventListener("click", function(){
+      try{ localStorage.setItem(KEY, JSON.stringify({ack:true,ts:Date.now(),thesis:"tablet+apps+pc"})); }catch(e){}
+      if(st) st.textContent="Saved · "+KEY;
+    });
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+</script>
+<p style="font-size:12px;color:#444">Storage: <code>itt10-*</code> · see <code>docs/2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md</code>.</p>
+ <p><a href="home.html">← Starting Point</a> · <a href="whats-new.html">What’s New</a> · <a href="cool.html">Cool Sites</a></p>
+</div>
+
+<!-- REAL-flow system: thesis literacy (no soft mock) -->
+<div class="itt-real-thesis" data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+ <b>Year thesis · REAL literacy</b> (this browser only · multi-step required)
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> I understand this year&rsquo;s period products and hard bans (no anachronism as default)</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-2"> Progress is private <code>localStorage</code> theater — no real accounts or network calls</label>
+ <button type="button" data-itt-real-save data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
+ <p data-itt-action-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
+ <p style="font-size:11px;color:#666;margin:4px 0 0">Writes year-prefixed <code>*-thesis-ack</code> only after both checks.</p>
+</div>
+
+<script src="../../../js/immersion-2010.js"></script>
+</body>
+</html>

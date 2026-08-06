@@ -1,0 +1,42 @@
+# 2005 full artifact revisit + web expand — visit log
+# Date: 2026-07-30 (session pass after prior gather)
+# Mode: re-inventory every on-disk extract · re-open live primaries · web search beyond MD stack
+
+## On-disk extract inventory (re-listed)
+COUNT: 46 under docs/references/2005/wayback-extracts/
+CLASSES: youtube (early/mid/late) · reddit · digg · maps · delicious · facebook · thefacebook · flickr · google · gmail · housingmaps · techcrunch · apple itunes · cybercultural · livestats · wdm · m&a notes
+
+## Live HTTP re-opens this pass (2026-07-30)
+| URL | HTTP | Notes |
+|-----|------|-------|
+| https://cybercultural.com/p/internet-2005/ | 200 | Thesis reconfirm · M&A · Ajax · IE/Firefox · blogs |
+| https://cybercultural.com/p/top-10-web20-moments-2005/ | 200 | Original Dec 2005 ranking · HousingMaps/iTunes updates |
+| https://www.apple.com/newsroom/2005/06/28Apple-Takes-Podcasting-Mainstream/ | 200 | 3,000+ free pods · Jobs quote · iTunes 4.9 |
+| https://www.apple.com/newsroom/2005/06/30iTunes-Podcast-Subscriptions-Top-One-Million-in-First-Two-Days/ | 200 | >1M subs in two days · Curry · KCRW 10× traffic |
+| https://blog.flickr.net/en/2005/03/20/yahoo-actually-does-acquire-flickr/ | 200 | Mar 20 · not suits · not Yahoo Photos · API open |
+| https://techcrunch.com/2005/12/09/yahoo-acquires-delicious/ | 200 | ~300k users · fraternal twin Flickr |
+| https://blog.google/products-and-platforms/products/maps/look-back-15-years-mapping-world/ | 200 | Feb 8 2005 · Earth mid-2005 · API mid-2005 · Transit Portland Dec · Street View May 29 2007 BAN |
+| https://www.sec.gov/Archives/edgar/data/1308161/000118143105040705/rrd86058_6819.htm | cited | News Corp Intermix $580M Jul 18 2005 |
+| https://www.internetlivestats.com/total-number-of-websites/ | prior 200 + extract | 64,780,617 websites · 1.027B users 2005 |
+
+## Web search topics this pass (beyond prior MDs)
+- Google Maps Feb 8 2005 launch + 15yr blog + original Google Blog
+- HousingMaps Rademacher April 2005 pre-API mashup (Google Code Featured Apr 13 2005)
+- Reddit Jun 23 2005 YC first batch Huffman/Ohanian Common Lisp
+- Flickr Yahoo Mar 20 2005 Ludicorp $22–25M class
+- MySpace News Corp Intermix $580M Jul 18 2005 ~16M monthly users
+- iTunes podcasts Jun 28 / 1M Jun 30 Apple PR
+- Ajax Garrett Feb 18 2005 essay PDF
+- del.icio.us Yahoo Dec 9 2005 TC
+- Firefox Pew ~8% Aug 2005 · IE still dominant
+- Web 2.0 Conference Oct 2005 sold-out #1 moment (MacManus)
+
+## Disk rooms / pixels (truth)
+- years/2005/sites/: 72 rooms class (youtube maps reddit digg facebook flickr delicious housingmaps techcrunch itunes …)
+- assets/period/2005/: 46 brand folders · chrome XP IE6
+- e2e: 2005-mvp · buttons · live-flows · flows · youtube · real-flows + cross-year/scenario gates
+
+## Gaps / optional forever (not blocking)
+- WDM galleries often Cloudflare 403 — prior crops retained
+- Live HousingMaps product may be defunct; use historical about + extract
+- Google owns YouTube Oct 2006 · open Facebook Sep 2006 · Twitter · Chrome · iPhone · Street View = BANS

@@ -1,0 +1,54 @@
+SOURCE PASS: 2026-07-25 densify pass 4 (research + MD only)
+STATUS: [visited] primaries + new WA continuity bodies
+
+PEW (reconfirm):
+- May 2002: 21% of internet users, 24M adults, 12% of all American adults home broadband
+- Jun 2000 baseline: 6% of internet users
+- Among broadband: 71% cable, 27% DSL, 2% satellite/fixed wireless
+- Always-on information appliance framing
+- Typical day online: 82% broadband vs 58% dial-up
+- Excite@Home shut Feb 2002
+
+GOOGLE WA 20021111:
+- Tabs: Web, Images, Groups, Directory, News-New!
+- ©2002 Google — Searching 3,083,324,652 web pages
+- Sparse UI continues
+
+AMAZON WA 20021015:
+- Title: Earth's Biggest Selection
+- Dense tab grid: Books, Music, DVD, Music Downloads, Auctions, zShops, many beta stores
+- Smile logo era continues (continuity from 2000)
+
+YAHOO WA 20021114:
+- Portal blocks Shop / Find / Connect / Organize
+- GeoCities, Messenger, PayDirect, My Yahoo still central
+
+WIKIPEDIA EN WA 20020802:
+- "already have 35688 articles"
+- GNU Free Documentation License
+- Multi-language list; UseMod-era chrome
+
+MTV WA 20020808:
+- Search Bands / Videos / Members
+- Radio MTV.com, Music Videos, community
+- Tables + image buttons culture (Cybercultural)
+
+MOZILLA WA 20020606:
+- Org home: Download, Bugzilla, Roadmap, Get the Source
+- Suite era around Mozilla 1.0 (Jun 5)
+
+GOOGLE NEWS WA 20020930:
+- BETA branding
+- Shared Google chrome tabs
+
+CNN / EBAY:
+- Year-correct rails for news + marketplace continuity
+
+FAILED:
+- apple.com/ipod multiple timestamps connection refused → Cybercultural ipod-2002
+- daypop.com home → use about extract + narrative Top 40
+
+DISK TRUTH:
+- years/2002 absent
+- assets/period/2002 absent
+- research ready for scaffold after 2001 green

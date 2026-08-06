@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2018">
+<head>
+<meta charset="utf-8">
+<title>iCloud — 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2018.css">
+<script src="../../../../js/immersion-2018.js" defer></script>
+</head>
+<body bgcolor="#e8f0ff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12" bgcolor="#ffffff" style="margin:16px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;border:1px solid #8eb4d6">
+<tr><td>
+ <p><a href="index.html">← iPhone 4S</a> · <a href="ios5.html">iOS 5</a> · <a href="siri.html">Siri</a></p>
+ <h1 style="font-size:18px;color:#1a6fb5">iCloud</h1>
+ <p>Free cloud services with iOS 5 / iPhone 4S launch — store content and push it to iPhone, iPad, iPod touch, Mac, or PC.</p>
+ <ul>
+  <li><b>Photo Stream</b> — shoot on phone → appears on other devices</li>
+  <li><b>Documents in the Cloud</b></li>
+  <li><b>iTunes in the Cloud</b></li>
+ </ul>
+ <div style="background:#f5f5f5;border:1px solid #ccc;padding:10px;margin:10px 0">
+  <b>Photo Stream theater</b>
+  <p style="font-size:12px;color:#555">Shoot on phone → appears on iPad / Mac (museum list · this browser only)</p>
+  <p>
+   <button type="button" data-icloud-push data-photo="Beach walk">Push “Beach walk”</button>
+   <button type="button" data-icloud-push data-photo="Dinner">Push “Dinner”</button>
+   <button type="button" data-icloud-push data-photo="Screenshot">Push “Screenshot”</button>
+  </p>
+  <div data-icloud-stream style="font-size:12px;min-height:36px"></div>
+  <div data-icloud-status style="font-size:11px;color:#060;margin-top:6px"></div>
+ </div>
+ <p style="font-size:11px;color:#666">Not modern iCloud+ branding · Apple Newsroom 2011-10-04</p>
+ <script>
+ (function () {
+   var KEY = "itt18-icloud-stream";
+   function boot() {
+     var btns = document.querySelectorAll("[data-icloud-push]");
+     var stream = document.querySelector("[data-icloud-stream]");
+     var st = document.querySelector("[data-icloud-status]");
+     function load() {
+       try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
+     }
+     function render() {
+       var rows = load();
+       if (stream) {
+         stream.innerHTML = rows.length
+           ? rows.map(function (r) { return "📷 " + String(r).replace(/</g, "&lt;"); }).join(" · ")
+           : "<span style='color:#888'>Stream empty — push a photo.</span>";
+       }
+     }
+     render();
+     for (var i = 0; i < btns.length; i++) {
+       btns[i].addEventListener("click", function (ev) {
+         var name = ev.currentTarget.getAttribute("data-photo") || "Photo";
+         var rows = load();
+         rows.unshift(name);
+         try { localStorage.setItem(KEY, JSON.stringify(rows.slice(0, 12))); } catch (e2) { /* */ }
+         render();
+         if (st) st.textContent = "Pushed to Photo Stream · " + KEY;
+       });
+     }
+   }
+   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+   else boot();
+ })();
+ </script>
+</td></tr>
+</table>
+</body>
+</html>
+

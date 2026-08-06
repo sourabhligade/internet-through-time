@@ -1,0 +1,238 @@
+SOURCE: https://web.archive.org/web/20240101000000id_/https://www.webdesignmuseum.org/gallery/year-2002
+FINAL: https://web.archive.org/web/20231231065830id_/https://www.webdesignmuseum.org/gallery/year-2002
+STATUS: [visited] 2026-07-25 project-stack visit (retry)
+ROLE: brand shortlist
+TITLE: Gallery &#x2d; Web Design Museum
+BYTES: 90443
+
+KEY FACTS / TEXT:
+Gallery - Web Design Museum
+Menu
+Websites
+Galleries
+Early Websites
+Web Design in the 90s
+Golden Age of Web Design
+CSS Layout Pioneers
+All Websites
+Flash Websites
+Flash Websites in the 90s
+Flash Websites in the early 00s
+Flash Websites in the mid 00s
+All Flash Websites
+Exhibitions
+2Advanced Studios
+Search Engines in the 90s
+Y2K Aesthetic in Web Design
+Bad and Ugly Websites
+Web Design Quizzes
+All Exhibitions
+Web Design History
+1990–1994
+1995–1997
+1998–2002
+2003–2008
+2009–present
+All Years
+Apps
+iPhone
+Android Phone
+Apple Watch
+All Apps
+Software
+Graphics
+Web Browsers
+Development
+Multimedia
+All Software
+Gallery of Web Design History
+Browse through the gallery of old web sites and discover the forgotten trends in web design.
+Gallery
+Early Websites
+Web Design in the 90s
+Golden Age of Web Design
+CSS Layout Pioneers
+All Websites
+Filtered (394)
+Filters
+Reset all
+×
+2002
+×
+Years
+1991   ( 2 )
+1992   ( 4 )
+1993   ( 6 )
+1994   ( 43 )
+1995   ( 97 )
+1996   ( 284 )
+1997   ( 152 )
+1998   ( 121 )
+1999   ( 156 )
+2000   ( 280 )
+2001   ( 304 )
+2002   ( 394 )
+2003   ( 328 )
+2004   ( 204 )
+2005   ( 183 )
+2006   ( 190 )
+2007   ( 109 )
+2008   ( 108 )
+Categories
+Games & Entertainment   ( 30 )
+Technology   ( 58 )
+Design Agency   ( 50 )
+Design & Art   ( 111 )
+Portfolio   ( 49 )
+Automotive   ( 9 )
+Bad & Ugly websites   ( 3 )
+Blogging   ( 6 )
+Business   ( 14 )
+Children   ( 3 )
+Corporate   ( 4 )
+Culture   ( 5 )
+E-commerce   ( 18 )
+Fashion   ( 7 )
+Film & TV   ( 26 )
+Flash   ( 117 )
+Food & Drink   ( 7 )
+Government & Politic   ( 1 )
+Industry   ( 1 )
+Institution   ( 1 )
+Hotel & Restaurant   ( 3 )
+Magazine   ( 20 )
+Music   ( 33 )
+Personal   ( 15 )
+Photography   ( 12 )
+Portal   ( 44 )
+Other   ( 1 )
+Social   ( 11 )
+Sports   ( 14 )
+Travel   ( 3 )
+See more
+See less
+Graphic styles
+Creative   ( 70 )
+Futuristic   ( 31 )
+Illustration   ( 34 )
+Pixel Design   ( 33 )
+Dark   ( 21 )
+00s   ( 124 )
+3 Column Layout   ( 36 )
+Black and White   ( 8 )
+Clean   ( 50 )
+Collage   ( 26 )
+Colorful   ( 12 )
+Corporate   ( 12 )
+Funny   ( 4 )
+Gradients   ( 5 )
+Grunge   ( 14 )
+Hand-drawn   ( 1 )
+Icons   ( 3 )
+Iframes   ( 19 )
+Minimal   ( 28 )
+Ornamental   ( 3 )
+Paper   ( 2 )
+Pattern   ( 8 )
+Photography   ( 21 )
+Retro   ( 4 )
+Techno   ( 27 )
+Texture   ( 6 )
+Typography   ( 10 )
+Unusual Navigation   ( 21 )
+Video   ( 1 )
+Vintage   ( 1 )
+Y2K Aesthetic   ( 15 )
+See more
+See less
+Show ( 394 )
+Cancel
+Most popular
+Recently added
+Oldest to newest
+Newest to oldest
+Reset all
+×
+2002
+×
+Netflix
+2002
+Wired News
+2002
+Steam
+2002
+Conspiracy Games
+2002
+Cubadust
+2002
+Neostream Interactive
+2002
+depthCORE
+2002
+SpaceX
+2002
+Chapter3
+2002
+Christina Aguilera
+2002
+Douglas Arthur
+2002
+Xeo Freestyle Design
+2002
+Sixstation
+2002
+Desktop Imperium
+2002
+Urbandesktop
+2002
+mjau-mjau
+2002
+Grand Theft Auto Vice City
+2002
+Surfstation
+2002
+The Zelda Universe
+2002
+Webagent 007
+2002
+Posts navigation
+1
+2
+…
+20
+Next
+Support us
+Websites
+Early Websites
+Web Design in the 90s
+Golden Age of Web Design
+CSS Layout Pioneers
+Flash Websites
+Web Design History
+All Websites
+Apps
+iPhone
+Android Phone
+Apple Watch
+All Apps
+Software
+Graphics
+Web Browsers
+Development
+Multimedia
+All Software
+Web Design Museum
+About us
+Contact
+Exhibitions
+Quizzes
+Privacy & Terms
+RSS
+SEND US A TIP ABOUT AN OLD WEBSITE, APP OR SOFTWARE
+Do you know of an interesting old website, app or software that we should exhibit at the Museum? Send us their names or links at Archive.org.
+Open form
+Copyright © 2023 Web Design Museum.org . All rights reserved.
+All screenshots © of their respective owners.
+
+BUILD NOTES:
+From SOURCES.md / REBUILD-ARTIFACT-MAP chrome family.

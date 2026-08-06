@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear, contentFrame, waitForImmersion } = require('./helpers');
+const { enterYear, contentFrame, waitForImmersion, goInFrame } = require('./helpers');
 
 const HOME_LINKS = [
   'Napster',
@@ -49,6 +49,8 @@ test.describe('1999 Starting Point links', () => {
 
   test('exhibit nav bar links work', async ({ page }) => {
     await enterYear(page, '1999');
+    // Navy strip only on site pages (home skips to avoid triple-nav)
+    await goInFrame(page, 'sites/yahoo/index.html');
     await waitForImmersion(page, '1999');
     const frame = contentFrame(page);
     const nav = frame.locator('#itt-exhibit-nav a');
@@ -56,12 +58,12 @@ test.describe('1999 Starting Point links', () => {
     expect(n).toBeGreaterThan(0);
     const failures = [];
     for (let i = 0; i < n; i++) {
-      await enterYear(page, '1999');
+      await goInFrame(page, 'sites/yahoo/index.html');
       await waitForImmersion(page, '1999');
       const f = contentFrame(page);
       const a = f.locator('#itt-exhibit-nav a').nth(i);
       const text = (await a.innerText()).trim();
-      if (/exit|^start$/i.test(text)) continue;
+      if (/exit|^home$|^start$/i.test(text)) continue;
       await a.click();
       await page.waitForTimeout(700);
       const body = await contentFrame(page).locator('body').innerText();

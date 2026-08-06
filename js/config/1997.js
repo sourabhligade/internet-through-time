@@ -47,11 +47,16 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1997/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1997/playable/game.html",
       "sites/altavista/about.html": "http://www.altavista.com/about.html",
       "sites/icq/about.html": "http://www.icq.com/about.html",
       "sites/pointcast/about.html": "http://www.pointcast.com/about.html",
       "sites/microsoft/about.html": "http://www.microsoft.com/about.html",
+      "sites/netscape/index.html": "http://home.netscape.com/",
+      "sites/netscape/about.html": "http://home.netscape.com/comprod/about_company.html",
       "pages/home.html": "http://home.microsoft.com/intl/web1997/",
+      "pages/map.html": "http://museum.local/years/1997/map/",
       "pages/about.html": "http://home.microsoft.com/intl/web1997/about.html",
       "pages/cool.html": "http://home.microsoft.com/intl/web1997/whats-cool.html",
       "pages/whats-new.html": "http://home.microsoft.com/intl/web1997/whats-new.html",
@@ -99,7 +104,15 @@
       "sites/hotbot/search.html": "http://www.hotbot.com/default.asp",
       "sites/pointcast/index.html": "http://www.pointcast.com/",
       "sites/icq/index.html": "http://www.icq.com/",
+      "sites/icq/register.html": "http://www.icq.com/register",
+      "sites/icq/buddylist.html": "http://www.icq.com/buddies",
+      "sites/icq/message.html": "http://www.icq.com/message",
       "sites/icq/aim.html": "http://www.aol.com/aim/",
+      "sites/hotmail/index.html": "http://www.hotmail.com/",
+      "sites/hotmail/inbox.html": "http://www.hotmail.com/cgi-bin/inbox",
+      "sites/hotmail/compose.html": "http://www.hotmail.com/cgi-bin/compose",
+      "sites/hotmail/read.html": "http://www.hotmail.com/cgi-bin/read",
+      "sites/amazon/ipo.html": "http://www.amazon.com/ipo.html",
       "sites/cnn/showbiz.html": "http://www.cnn.com/SHOWBIZ/",
       "sites/cnn/tech.html": "http://www.cnn.com/TECH/",
       "sites/pointcast/channels.html": "http://www.pointcast.com/channels/",
@@ -120,6 +133,7 @@
       "sites/pointcast/about.html": "About",
       "sites/microsoft/about.html": "About",
       "pages/home.html": "Welcome to the World Wide Web — 1997",
+      "pages/map.html": "1997 — UX flow map",
       "pages/about.html": "About 1997",
       "pages/cool.html": "What's Cool — 1997",
       "pages/whats-new.html": "What's New — 1997",
@@ -149,6 +163,10 @@
       "sites/yahoo/computers.html": "Yahoo! Computers and Internet",
       "sites/yahoo/news.html": "Yahoo! Daily News",
       "sites/yahoo/mail.html": "Yahoo! Mail",
+      "sites/hotmail/index.html": "HoTMaiL - FREE Web-Based Email",
+      "sites/hotmail/inbox.html": "HoTMaiL Inbox",
+      "sites/hotmail/compose.html": "HoTMaiL Compose",
+      "sites/hotmail/read.html": "HoTMaiL Read",
       "sites/yahoo/recreation.html": "Yahoo! - Recreation & Sports",
       "sites/yahoo/reference.html": "Yahoo! - Reference",
       "sites/yahoo/regional.html": "Yahoo! - Regional",
@@ -232,6 +250,10 @@
         base: "http://www.amazon.com/"
       },
       {
+        prefix: "sites/hotmail/",
+        base: "http://www.hotmail.com/"
+      },
+      {
         prefix: "sites/cnn/",
         base: "http://www.cnn.com/"
       },
@@ -276,8 +298,11 @@
     fallbackUrlBase: "http://home.microsoft.com/intl/web1997/",
     displayUrlExtras: null,
     locationHints: [
+      { re: /icq/i, path: "sites/icq/index.html" },
+      { re: /pointcast/i, path: "sites/pointcast/index.html" },
       { re: /ebay/i, path: "sites/ebay/index.html" },
       { re: /amazon/i, path: "sites/amazon/index.html" },
+      { re: /hotmail/i, path: "sites/hotmail/index.html" },
       { re: /cnn/i, path: "sites/cnn/index.html" },
       { re: /yahoo/i, path: "sites/yahoo/index.html" },
       { re: /geocit/i, path: "sites/geocities/index.html" },
@@ -292,6 +317,7 @@
     dirSiteKeys: [
       "ebay",
       "amazon",
+      "hotmail",
       "cnn",
       "yahoo",
       "geocities",

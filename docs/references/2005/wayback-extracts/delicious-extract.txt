@@ -1,3 +1,13 @@
-TITLE: (none)
-HTML_LEN: 430
-Due to the power outage earlier in the week, we appear a number of continued hiccups. We've taken everything offline to properly rebuild and restore everything. I apologize and hope to have this resolved as soon as possible. Thank you for your continued patience. Updates will be posted on our blog as we have them.
+TITLE: del.icio.us
+CAPTURE: https://web.archive.org/web/20050916215933/http://del.icio.us/
+DATE_CLASS: Sep 16, 2005 (pre-Yahoo Dec 2005 acquisition)
+STATUS: re-opened 2026-07-30 deep research pass (replaces prior outage-only extract)
+
+most active tags: software · web · blog · design · reference · programming · tools · music · ajax · howto · news · linux · css · blogs · search · art · google · webdesign · javascript · development · java · tutorial · politics · mac · games · fun · photography · internet · technology · windows · opensource · free · video · humor · security · osx · business · flash · tech · cool · toread · shopping · webdev · funny · php · productivity · ruby · web2.0 · firefox · rss
+
+product blurb:
+"del.icio.us is a social bookmarks manager. It allows you to easily add web pages you like to your personal collection of links, to categorize those sites with keywords, and to share your collection not only among your own browsers and machines, but also with others."
+bookmarklet workflow · view by keyword · see who else bookmarked · subscribe to others' links
+post grammar: TITLE to tag1 tag2 by USER ... and N other people · Just posted
+
+M&A: Yahoo acquires del.icio.us December 2005 (Cybercultural Top-10 #4)

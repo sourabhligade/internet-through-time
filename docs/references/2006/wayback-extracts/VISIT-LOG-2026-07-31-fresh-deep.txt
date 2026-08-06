@@ -1,0 +1,34 @@
+# 2006 fresh deep research visit log
+# Date: 2026-07-31
+# Purpose: Re-verify primaries for 2006-DEEP-RESEARCH-FRESH-2026-07-31.md
+
+## HTTP / content re-opens
+
+| Source | URL | Result |
+|--------|-----|--------|
+| Cybercultural Internet 2006 | https://cybercultural.com/p/internet-2006/ | HTTP 200 · full narrative re-read |
+| Live Stats websites | https://www.internetlivestats.com/total-number-of-websites/ | HTTP 200 · 2006 row 85,507,314 · +32% · users 1,160,335,280 · Twttr mark |
+| Google YouTube PR (SEC) | https://www.sec.gov/Archives/edgar/data/1288776/000119312506206884/dex991.htm | HTTP 200 · Oct 9 2006 · $1.65B stock · operate independently |
+| Facebook Expansion | https://about.fb.com/news/2006/09/facebook-expansion-enables-more-people-to-connect-with-friends-in-a-trusted-environment/ | HTTP 200 · Sep 26 2006 · 13+ · regional networks · email |
+| Facebook Feed privacy | https://about.fb.com/news/2006/09/facebook-launches-additional-privacy-controls-for-news-feed-and-mini-feed/ | HTTP 200 · Sep 8 2006 (body thin in crawl; date locked) |
+| History.com Twitter | https://www.history.com/this-day-in-history/july-15/twitter-launches | HTTP 200 · Jul 15 public · Mar 21 first tweet |
+| Amazon S3 press | https://press.aboutamazon.com/2006/3/amazon-web-services-launches | HTTP 200 · Mar 14 2006 |
+| AWS 8yr blog | https://aws.amazon.com/blogs/aws/eight-years-and-counting-of-cloud-computing/ | HTTP 200 · S3 Mar 14 |
+| TechCrunch Docs | https://techcrunch.com/2006/10/10/google-docs-spreadsheets-launches/ | HTTP 200 · Oct 10 Docs & Spreadsheets |
+| IE7 Microsoft | https://news.microsoft.com/source/2006/10/18/microsoft-releases-windows-internet-explorer-7-for-windows-xp/ | HTTP 200 · Oct 18 |
+| WDM IE7 | https://www.webdesignmuseum.org/software/internet-explorer-7-0-in-2006 | HTTP 200 · Oct 18 |
+| Wikipedia | Twitter · Facebook · YouTube · Docs · IE7 · Vista · Reader | fact reconfirm |
+
+## Not bulk-harvested this pass (still CAPTURE queued)
+
+- twitter.com WA 2006 HTML body
+- facebook.com WA Feed HTML
+- youtube.com WA mid/late 2006
+- digg.com WA 2006
+- docs.google.com / reader.google.com WA
+
+## Outputs written
+
+- docs/2006-DEEP-RESEARCH-FRESH-2026-07-31.md
+- docs/2006-IMPLEMENT-PHASES-CLEAR-2026-07-31.md
+- updates to 2006-RESEARCH.md · 2006-MUSEUM-GRADE.md · CAPTURE-LOG.md

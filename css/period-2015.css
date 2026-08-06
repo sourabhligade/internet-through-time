@@ -1,0 +1,8 @@
+/* 2015 period — deltas on 2014 */
+@import url("period-2014.css");
+
+body.year-2015 .win10-free { background: #0078d7; color: #fff; }
+body.year-2015 .live-badge { background: #e0245e; color: #fff; font-weight: bold; padding: 2px 8px; border-radius: 3px; }
+body.year-2015 .watch-ship { border: 2px solid #111; background: #f5f5f7; }
+body.year-2015 .photos-unlimited { background: #e8f0fe; border: 1px solid #1a73e8; }
+body.year-2015 .music-trial { background: #fa233b; color: #fff; }

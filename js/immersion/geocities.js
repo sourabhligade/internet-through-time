@@ -5,6 +5,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
   ITT.ImmersionFeatures.push({
     id: "geocities",
@@ -20,6 +29,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -142,7 +152,7 @@ function initHomestead() {
       created: new Date().toLocaleString()
     };
     saveJSON(storageKey("homestead"), hs);
-    showFlash("✓ Homestead filed: <b>" + escapeHtml(neighborhood) + "/" + escapeHtml(number) + "</b>");
+    showFlash("Homestead claimed: <b>" + escapeHtml(neighborhood) + "/" + escapeHtml(number) + "</b>");
     location.href = R("sites/geocities/my-homestead.html");
   };
 }

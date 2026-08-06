@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Watch Instantly — 2011</title>
+<link rel="stylesheet" href="../../../../css/period-2011.css"></head>
+<body bgcolor="#000" text="#eee" link="#e50914">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;font-family:Arial,sans-serif;font-size:13px;padding:16px">
+ <p style="font-size:12px"><a href="index.html">← Netflix</a> · <a href="about.html">About</a> · <a href="queue.html">Queue</a></p>
+ <h1 style="color:#e50914;font-size:18px">Watch Instantly densifies</h1>
+ <p>Electronic delivery grows for many disc plan members. Catalog online still thinner than the red-envelope library. <b>No real streams.</b></p>
+ <button type="button" data-netflix-stream>Play stream (theater)</button>
+ <span data-netflix-stream-status style="font-size:12px;color:#8c8;margin-left:8px"></span>
+ 
+</div>
+<script>
+(function(){
+  function skey(){ try{ if(window.ITT&&ITT.util&&ITT.util.immersionStorageKey) return ITT.util.immersionStorageKey("netflix","itt11"); }catch(e){} return "itt11-netflix"; }
+  var b=document.querySelector("[data-netflix-stream]"); var st=document.querySelector("[data-netflix-stream-status]");
+  if(b) b.onclick=function(){
+    localStorage.setItem(skey(), JSON.stringify({streaming:true,year:2010,discsStill:true,ts:Date.now()}));
+    if(st) st.textContent="Streaming theater · discs still real · "+skey();
+  };
+})();
+</script>
+<script src="../../../../js/immersion-2011.js"></script>
+<p style="font-size:12px;font-family:Arial">May 2011 class: Netflix ~<b>30%</b> of peak North American downstream traffic (Sandvine/TechCrunch class — label source).</p>
+<p><a href="pricing-2011.html">2011 pricing →</a> · <a href="qwikster.html">Qwikster exhibit →</a></p>
+</body></html>

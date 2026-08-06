@@ -10,8 +10,8 @@
 |-------|--------|--------|
 | **Phase 1 Immersion** | **Done** | `js/immersion/{shared,guestbook-search,amazon,auction,hotmail,geocities,slashdot,media-1994,plugin,create}.js`; boots load sequentially; `immersion-core.js` is a shim |
 | **Phase 2 Browser connect + load-theater** | **Partial** | `browser/connect.js` owns modem sound + sequence; `browser/load-theater.js` owns step/batch/delay math; progressive loop + chrome still in `browser/create.js` |
-| **Phase 3 Navigate + chrome-ui** | **Deferred** | Still inside `browser/create.js` (~1.7k); year shells still load via `browser-core.js` document.write shim |
-| **Phase 4–5 Cleanup** | **Partial** | Smoke/auth/e2e/README updated; full navigate extract still open |
+| **Phase 3 Navigate + chrome-ui** | **Partial** | `browser/navigate.js` required by create (no fallbacks); `create.js` owns history + iframe + chrome-ui. `registerLocal` used by digg/reddit/youtube/maps/podcasts + 2003–2005 page-boot modules (adsense, flickr, gmail, friendster, …). chrome-ui extract still open |
+| **Phase 4–5 Cleanup** | **Partial** | Smoke/auth/e2e/README updated; chrome-ui extract still open |
 | **1998 immersion modules** | **Done** | `google.js`, `excite.js`, `yahoo.js` registered via `immersion-1998.js` FEATURES; no inline page scripts for personalize |
 
 ---

@@ -1,0 +1,14 @@
+SOURCE: https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf
+HTTP: 200
+BYTES: 105336
+FETCHED: 2026-07-30
+STATUS: PDF retrieved (binary not stored in git text extract)
+KNOWN FACTS FROM PRIOR FULL READ + PDF size confirm:
+- Jesse James Garrett, Adaptive Path, February 18, 2005
+- Ajax = Asynchronous JavaScript + XML (umbrella name)
+- Cites Google Suggest + Google Maps as examples
+- Also mentions Orkut, Gmail, Google Groups, Flickr Ajax features, Amazon A9
+- Stack: XHTML/CSS, DOM, XML/XSLT, XMLHttpRequest, JavaScript
+- Classic web model = full page reload per action; Ajax = engine intermediary
+- 'Not a technology you download'
+- PDF size this pass: 105336 bytes

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2014">
+<head>
+<meta charset="utf-8">
+<title>Snowden / PRISM — June 2013 · open-web privacy</title>
+<link rel="stylesheet" href="../../../../css/period-2014.css">
+<script src="../../../../js/immersion-2014.js" defer></script>
+</head>
+<body class="news-2013">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<p class="kicker" style="font-family:Arial,sans-serif">
+ <a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About 2013</a> ·
+ <a href="../healthcare/index.html">HealthCare.gov</a> · <a href="../glass/index.html">Glass</a>
+</p>
+<p class="kicker">CULTURE ROOM · PUBLIC NEWS FRAMING ONLY · MULTI-STEP LITERACY</p>
+<h1>June 2013 — the stack is watched</h1>
+<p>On <b>June 5–6, 2013</b>, reporting in <i>The Guardian</i> and <i>The Washington Post</i> brought mass surveillance programs into public view — including telephony metadata collection and the internet program known as <b>PRISM</b>.</p>
+<div class="rules">
+ <b>Educational rules</b>
+ <ul style="margin:6px 0 0 18px">
+  <li>Public journalism sources only — no classified dump gallery</li>
+  <li>No exploit how-tos · no doxxing</li>
+ </ul>
+</div>
+<div style="margin:14px 0;padding:10px;border:1px solid #666;background:#f8f8f0;font-family:Arial,sans-serif;font-size:13px">
+ <b>Step 1 — Read the spine (check each card)</b>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="metadata"> June 5: telephony metadata order becomes public news</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="prism"> June 6: PRISM slides / company names in press</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="encryption"> Encryption &amp; “who can read mail” becomes front-page talk</label>
+ <p style="font-size:11px;color:#444">Cards read: <span data-snowden-progress>0</span> / 3</p>
+</div>
+<p style="margin-top:14px">
+ <button type="button" data-snowden-ack disabled>I understand PRISM became public news in June 2013 (save)</button>
+ <span class="itt14-status" data-snowden-status style="display:inline;margin-left:8px;color:#060"></span>
+</p>
+<p style="font-size:11px;color:#666;font-family:Arial,sans-serif"> · multi-step literacy · Guardian · Washington Post</p>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt14-snowden-ack";
+  var btn = document.querySelector("[data-snowden-ack]");
+  var st = document.querySelector("[data-snowden-status]");
+  var prog = document.querySelector("[data-snowden-progress]");
+  var cards = document.querySelectorAll("[data-snowden-card]");
+  function readCards() {
+    var o = {};
+    var n = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var id = cards[i].getAttribute("data-snowden-card");
+      o[id] = !!cards[i].checked;
+      if (cards[i].checked) n++;
+    }
+    if (prog) prog.textContent = String(n);
+    if (btn) btn.disabled = n < 3;
+    return { cards: o, count: n };
+  }
+  try {
+    var prev = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (prev && prev.cards) {
+      for (var j = 0; j < cards.length; j++) {
+        var cid = cards[j].getAttribute("data-snowden-card");
+        if (prev.cards[cid]) cards[j].checked = true;
+      }
+    }
+    if (prev && st) st.textContent = "Saved · " + KEY;
+  } catch (e) {}
+  readCards();
+  for (var k = 0; k < cards.length; k++) {
+    cards[k].addEventListener("change", readCards);
+  }
+  if (btn) btn.addEventListener("click", function () {
+    var state = readCards();
+    if (state.count < 3) {
+      if (st) st.textContent = "Check all three cards first.";
+      return;
+    }
+    var payload = {
+      event: "prism-public",
+      date: "2013-06",
+      cards: state.cards,
+      literacy: true,
+      ts: Date.now()
+    };
+    try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e2) {}
+    var msg = "Saved · privacy literacy · " + state.count + " cards · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "snowden" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
+</body>
+</html>

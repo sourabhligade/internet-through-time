@@ -1,0 +1,57 @@
+2013 deep research visit log — 2026-08-02
+============================================
+Method: web_search + browse of primary URLs; cross-check against museum 2012 bans (reverse list).
+No year scaffold. Research pack only.
+
+SCALE
+- internetlivestats.com/total-number-of-websites/
+  June 2013 websites 672,985,183 (−3% YoY)
+  June 2013 users 2,756,198,420
+  Note: 2013 calendar growth ~630M→850M+ hostnames; ~180M active class
+- Netcraft Dec 2013 class ~861M sites (survey tables / secondary)
+- census.gov ACS-28 2013 computer/internet use
+- pewresearch.org Instagram Vine short-read 2013-06-20
+
+SOCIAL / VIDEO
+- techcrunch.com Vine launch 2013-01-24
+- en.wikipedia.org/wiki/Vine_(service)
+- techcrunch.com Instagram video 2013-06-20
+- techcrunch.com Snapchat Stories 2013-10-03
+- theverge.com Snapchat Stories 2013-10-03
+- en.wikipedia.org/wiki/Timeline_of_Snapchat
+- nytimes.com Vine odyssey 2016 (growth class)
+
+APPLE / MS
+- apple.com/newsroom 2013-09-16 iPhone 5s 5c
+- en.wikipedia.org/wiki/IPhone_5s
+- en.wikipedia.org/wiki/IOS_7
+- en.wikipedia.org/wiki/IPad_Mini_2
+- news.microsoft.com Windows 8.1 available 2013-10-17
+- en.wikipedia.org/wiki/Windows_8.1
+
+PRIVACY
+- theguardian.com PRISM 2013-06-06
+- washingtonpost.com PRISM class
+- en.wikipedia.org/wiki/PRISM
+- en.wikipedia.org/wiki/Snowden_disclosures
+- aclu.org NSA documents list
+
+LIVING ROOM / FLOP / CRYPTO
+- en.wikipedia.org/wiki/PlayStation_4
+- news.xbox.com Xbox One launch Nov 22 2013
+- techcrunch.com Facebook Home 2013-04-04
+- en.wikipedia.org/wiki/Facebook_Home
+- theguardian.com Bitcoin Silk Road 2013-10-03
+- bbc.com Bitcoin Silk Road
+
+BROWSER
+- gs.statcounter.com browser market share (2013 filter)
+- Wikipedia usage share — Chrome overtakes IE era residual
+
+OUTPUTS WRITTEN
+- docs/2013-READ-FIRST.md
+- docs/2013-RESEARCH.md
+- docs/2013-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md
+- docs/references/2013/*
+- docs/TO-100-PERCENT/YEAR-2013.md
+- SCALE-LEDGER + DISK-TRUTH research row updates

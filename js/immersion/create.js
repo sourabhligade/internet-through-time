@@ -38,7 +38,10 @@
       },
       // filled by ImmersionInstallShared
       showFlash: function () {},
+      actionFeedback: function () {},
+      resolveStatusNode: function () { return null; },
       markTourProgress: function () {},
+      markTourUsed: function () {},
       renderCounter: function () {},
       renderTour: function () {},
       renderActivity: function () {},
@@ -48,10 +51,14 @@
     if (typeof ITT.ImmersionInstallShared === "function") {
       ITT.ImmersionInstallShared(api);
     }
+    /* expose for deferred feature scripts loaded after first create (page-priority boot) */
+    ITT._immersionApi = api;
 
     function boot() {
       var features = ITT.ImmersionFeatures || [];
-      for (var i = 0; i < features.length; i++) {
+      var start = typeof ITT._immersionFeaturesInited === "number" ? ITT._immersionFeaturesInited : 0;
+      var i;
+      for (i = start; i < features.length; i++) {
         var f = features[i];
         try {
           if (f.needs && !f.needs(config)) continue;
@@ -60,6 +67,7 @@
           console.error("ITT immersion feature failed:", f.id, err);
         }
       }
+      ITT._immersionFeaturesInited = features.length;
     }
 
     if (document.readyState === "loading") {
@@ -73,6 +81,7 @@
       R: api.R,
       boot: boot,
       showFlash: function (h, o) { return api.showFlash(h, o); },
+      actionFeedback: function (h, o) { return api.actionFeedback(h, o); },
       renderTour: function (r) { return api.renderTour(r); }
     };
   }

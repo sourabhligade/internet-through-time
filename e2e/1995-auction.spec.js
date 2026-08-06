@@ -14,30 +14,27 @@ test.describe('1995 AuctionWeb', () => {
     });
 
     const form = frame.locator('form[data-bid-form]');
-    if (await form.count()) {
-      await form.locator('input[name="bidder"]').fill('e2e-bidder');
-      const bidInput = form.locator('input[name="bid"]');
-      // Ensure bid is above opening
-      await bidInput.fill('50.00');
-      await form.locator('input[type="submit"], button[type="submit"]').first().click({ force: true });
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('input[name="bidder"]').fill('e2e-bidder');
+    await form.locator('input[name="bid"]').fill('50.00');
+    await form.locator('input[type="submit"], button[type="submit"]').first().click({ force: true });
 
-      await expect.poll(async () => {
-        return page.evaluate(() => {
-          const keys = Object.keys(localStorage).filter((k) => k.indexOf('itt95') === 0 && k.indexOf('bid') !== -1);
-          return keys.some((k) => {
-            try {
-              const v = localStorage.getItem(k) || '';
-              return v.indexOf('e2e-bidder') !== -1 || v.indexOf('50') !== -1;
-            } catch (e) {
-              return false;
-            }
-          });
+    await expect(frame.locator('[data-high-bid]')).toContainText('50', { timeout: 10000 });
+    await expect(frame.locator('[data-high-bidder]')).toContainText('e2e-bidder');
+
+    await expect.poll(async () => {
+      return page.evaluate(() => {
+        const keys = Object.keys(localStorage).filter((k) => k.indexOf('itt95') === 0 && k.indexOf('bid') !== -1);
+        return keys.some((k) => {
+          try {
+            const v = localStorage.getItem(k) || '';
+            return v.indexOf('e2e-bidder') !== -1 || v.indexOf('50') !== -1;
+          } catch (e) {
+            return false;
+          }
         });
-      }, { timeout: 10000 }).toBeTruthy();
-    } else {
-      // Fallback: page still documents laser pointer lore
-      await expect(frame.locator('body')).toContainText(/laser|bid|AuctionWeb/i);
-    }
+      });
+    }, { timeout: 10000 }).toBeTruthy();
   });
 
   test('AuctionWeb home is not named eBay', async ({ page }) => {

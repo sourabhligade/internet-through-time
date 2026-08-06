@@ -1,18 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>About 2003</title>
-<link rel="stylesheet" href="../../../css/period-2003.css"></head>
-<body bgcolor="#ffffff" link="#0000cc">
+<html lang="en" data-itt-year="2003">
+<head>
+<meta charset="utf-8">
+<title>About the Web in 2003</title>
+<link rel="stylesheet" href="../../../css/period-2003.css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000cc">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:680px;margin:16px auto;font-family:Arial;font-size:13px;padding:0 12px">
-<h2>About this year</h2>
-<p><b>2003</b> is when the social web goes mainstream: MySpace (August), LinkedIn (May),
-WordPress (May), and Apple’s iTunes Music Store (April 28 — 99¢ a song). Friendster still
-leads the friend graph. Broadband is always-on. IE 6 on Windows XP is the default browser.</p>
-<p><b>In this immersion:</b> customize a MySpace profile, buy a 99¢ track,
-publish a WordPress post, add LinkedIn connections. Profile, cart, and tour progress use browser localStorage only — nothing is uploaded.</p>
-<p>Research: <code>docs/2003-RESEARCH.md</code> · phases: <code>docs/2003-IMPLEMENTATION-PHASES.md</code>.</p>
-<p>No real audio, payments, or P2P transfers. Pets.com and Y2K appear as archives; Napster is aftermath pointing to KaZaA and iTunes.</p>
-<p><a href="home.html">« Starting Point</a></p>
+<table width="680" align="center" cellpadding="12"><tr><td>
+<font face="Arial,Helvetica" size="2">
+<h1 style="font-size:20px">About 2003 — social + 99¢ + self-host + pro network</h1>
+<p>
+Post-crash optimism: blogging goes mainstream, Google buys <b>Blogger</b> (Feb),
+launches <b>AdSense</b> self-serve (Jun 18), and professional blogs find a business model.
+</p>
+<ul>
+<li><b>Friendster</b> public mass (~3M fall) — still the bigger graph</li>
+<li><b>MySpace</b> launches August 2003 — HTML-custom profiles; ~100k by October (seed, not king)</li>
+<li><b>iTunes Music Store</b> Apr 28 — 99¢ AAC songs, Mac/US first, Windows Oct; 25M songs sold by Dec 15</li>
+<li><b>WordPress 0.7</b> May 27 — b2/cafelog fork, self-hosted PHP/MySQL</li>
+<li><b>LinkedIn</b> May 5 — professional network (founded Dec 2002)</li>
+</ul>
+<p>
+Scale (Internet Live Stats, June 2003): <b>40,912,332</b> websites · <b>~778,555,680</b> users.
+</p>
+<p style="background:#f5f5f5;padding:8px;border:1px solid #ccc">
+<b>Honesty:</b> MySpace launch date sources differ (Aug 1 wiki vs Aug 15 narrative) — we label August 2003.
+No Facebook product room (Thefacebook is 2004). No Gmail, YouTube, or Firefox 1.0 as defaults
+(2003 browser side path is <b>Firebird</b>; Phoenix 0.1 was 2002). Friendster founded <b>2002</b>, mass public <b>2003</b>.
+iTunes Store is paid download + DRM, not Spotify-style streaming.
+RSS: desktop readers plus browser <a href="../sites/bloglines/index.html">Bloglines</a>.
+</p>
+<p style="font-size:11px;color:#444">
+<b>Footnote:</b> In late 2003 a Harvard student project called <i>Facemash</i> appeared — it is <b>not</b> Facebook / Thefacebook
+(that product room belongs in <b>2004</b>). This exhibit does not reconstruct Facemash.
+</p>
+<p>
+<a href="home.html">Starting Point</a> ·
+<a href="../sites/myspace/index.html">MySpace</a> ·
+<a href="../sites/itunes/index.html">iTunes Store</a> ·
+<a href="../sites/wordpress/index.html">WordPress</a> ·
+<a href="../sites/linkedin/index.html">LinkedIn</a> ·
+<a href="../sites/bloglines/index.html">Bloglines</a>
+</p>
+</font>
+</td></tr></table>
+
+<!-- REAL-flow system: thesis literacy (no soft mock) -->
+<div class="itt-real-thesis" data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+ <b>Year thesis · REAL literacy</b> (this browser only · multi-step required)
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> I understand this year&rsquo;s period products and hard bans (no anachronism as default)</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-2"> Progress is private <code>localStorage</code> theater — no real accounts or network calls</label>
+ <button type="button" data-itt-real-save data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
+ <p data-itt-action-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
+ <p style="font-size:11px;color:#666;margin:4px 0 0">Writes year-prefixed <code>*-thesis-ack</code> only after both checks.</p>
 </div>
+
+<script src="../../../js/config/immersion-2003.js"></script>
 <script src="../../../js/immersion-2003.js"></script>
-</body></html>
+</body>
+</html>

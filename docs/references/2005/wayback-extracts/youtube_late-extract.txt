@@ -1,3 +1,18 @@
-TITLE: (none)
-HTML_LEN: 0
-(empty)
+TITLE: YouTube - Broadcast Yourself.
+CAPTURE: https://web.archive.org/web/20051201042652/http://www.youtube.com/
+DATE_CLASS: late-2005 (Dec 1, 2005)
+STATUS: re-opened 2026-07-30 deep research pass (replaces prior empty extract)
+
+Upload, tag and share your videos worldwide!
+Sign Up | Log In | Help
+Home | Videos | Channels | Friends | Upload
+What's New | About Us | Help | Developers | Terms of Use | Privacy Policy | Jobs
+Copyright © 2005 YouTube, Inc.™
+
+UI NOTES:
+- Channels + Friends nav added vs mid-year
+- "Videos" (not only "Watch Videos")
+- Jobs link present
+- Inc.™ in footer (was LLC earlier)
+- Still "Broadcast Yourself." product framing
+- Sequoia $3.5M Nov 2005 class (wiki History of YouTube) — independent growth story

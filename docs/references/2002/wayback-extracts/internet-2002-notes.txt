@@ -1,23 +1,62 @@
 SOURCE: https://cybercultural.com/p/internet-2002/
-STATUS: [visited] 2026-07-23 (reconfirm)
+FINAL: https://cybercultural.com/p/internet-2002/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: cybercultural-internet-2002
+ROLE: narrative spine
+TITLE: What the Internet Was Like in 2002 | Cybercultural
+BYTES: 29761
+ERROR: 
 
-KEY FACTS:
-- Pew Jun 2002 broadband 21% / 24M (matches Pew primary)
-- MTV.com Aug 8 2002: tables + image buttons; RealPlayer/WMP streams; Shockwave microsites (Osbournes)
-- MTV community profiles ≈ proto-MySpace (lists of bands/shows, not friend graph) — Friendster is separate product
-- KaZaA Aug 2002: ~100 million downloads; FastTrack; Estonian/Tallinn lineage → later Skype
-- Morpheus kicked from FastTrack Feb 2002 → Gnutella; spyware accusations; Grokster
-- iPod gen 2 Aug 2002; labels courtship for future iTunes Store (not yet)
-- last.fm + Audioscrobbler 2002 launches
-- IE6 ~90% + other IE ~5%; no IE7 until 2006
-- Mozilla 1.0 Jun 5 2002 suite (browser+mail+chat)
-- Phoenix 0.1 Sep 23 2002 → Firefox lineage
+KEY FACTS / TEXT:
+What the Internet Was Like in 2002 | Cybercultural
+Skip to content
+Cybercultural
+Home
+Explore
+Pre-web
+Dot-com
+Web 2.0
+2010s
+By Year
+Seasons
+Notes
+Book
+About
+Search
+Subscribe
+Menu
+What the Internet Was Like in 2002
+With Flash websites and CSS designs, the broadband-fueled 2002 internet is full of creativity. Meanwhile, online music is the wild west and the blogosphere points the way to a more social web.
+By Richard MacManus |
+December 2, 2025
+| Tags:  Dot-com , Yearly Reviews , 2002
+KaZaA , one of many P2P file sharing services in 2002.
+In June 2002, Pew Research Center released a report on broadband uptake . It stated that 21% of all Internet users in America — 24 million adults — now had broadband in the home, up from just 6% two years ago. Of course, broadband penetration would continue to trend upward over the coming years. But even in 2002, Pew claimed that the internet had morphed from a "sometimes" tool for communication and finding information to an "always-on information appliance."
+This change in the character of the internet around 2002 led to the other trends we'll look at in this post: more interactive websites, more online music choices, more socializing on the web.
+A BBC report in January 2002 about broadband.
+Web Design: Flash to CSS
+One website that illustrates well the shift to a broadband sensibility in 2002 was MTV.com. Unlike some multimedia-heavy websites from that year, it didn't rely too heavily on Flash technology. If anything, it was a traditional HTML portal that made extensive use of tables and image buttons for layout.
+The site was rich in streaming media, though — including on-demand music videos, radio streams, and broadband-only content. This was typically delivered via RealPlayer and Windows Media plugins, rather than Flash.
+MTV homepage, 8 August 2002 .
+However, Flash and Shockwave — two popular multimedia technologies from Macromedia — were used heavily for MTV's tv show microsites and its interactive promos. One example was an interactive microsite for The Osbournes, built using Shockwave:
+The Osbournes website in 2002
+MTV also had community member profiles, which in hindsight looks like a prototype for MySpace (which would launch the following year). Only instead of blogs, it was message boards; and the emphasis was on collecting lists of bands and MTV shows, rather than collecting friends. But if you squint, you can see social networks taking shape.
+An MTV community member, June 2002 . Note that this person is already castigating MTV for not playing enough music!
+It wasn't all about multimedia on the web in 2002. Web standards were also becoming increasingly popular with web designers; and in particular the "tableless CSS" design. Wired launched a big CSS-based redesign in October 2002 . Blogger Adrian Holovaty wrote:
+"In a tremendous win for Web standards and modern Web technologies such as XHTML, the site now uses an all-CSS layout. The site's announcement says it "may be the first major, heavily trafficked, constantly updated site to adopt [Web standards]." [...] the site's reliance on style sheets opens the door to many innovations -- such as dynamic text resizing, which the site has already implemented."
+Lead designer Douglas Bowman noted that all pages now "rely entirely on CSS for every design, format, and presentation detail."
+Wired's 2002 CSS redesign; image via Doug Bowman's StopDesign.
+Blogosphere Rises
+Speaking of beautiful web designs, over 2002 blogging became a thriving ecosystem of colourful personal sites that interconnected to each other via RSS, trackback and blogrolls.
+Blogging software by this time was both sophisticated and relatively easy to use. In its version 2.51 , Movable Type had multiple template options, entry categorization, built-in comments, a new feature called "trackback," and more. The original mainstream blog platform, Blogger, was also still going strong . Other blog software options included Radio Userland, LiveJournal and Xanga.
+Tom Coates' PlasticBag was one of the more visually impressive blogs of this era.
+In an influential article on Microcontent News , John Hiler popularized the notion of a "blogosphere," which he defined as an "emerging media ecosystem."
+Hiler gave the credit for coining the word to William Quick , who first used it at the end of 2001. In fact it was Brad Graham who coined blogosphere , albeit jokingly, in September 1999. In any case, Hiler was the one who positioned blogs in the larger media ecosystem:
+"The word was meant as a clever pun combining "Blog" with "logos", a Greek word meaning logic and reason. And while bloggers do often use logic in dissecting arguments, I love the word Blogosphere because it happens to capture another truth: the Blogosphere is a biosphere of its own, a Media Ecosystem that lives and breathes just like any other biological system."
+John Hiler's blogosphere diagram.
+Post-Napster P2P Chaos
+Napster was effectively cancelled in 2001 due to lawsuits from the record industry. But by 
 
-WA TARGETS NAMED IN ESSAY:
-- MTV homepage 8 Aug 2002
-- Wired redesign announcement WA 20021013195949
-- MT features 20021207200657
-- Blogger 20021202091911
-- Microcontent blogosphere 20020604065327
-- Register Morpheus Mar 15 2002: https://www.theregister.com/2002/03/15/old_morpheus_still_works/
-- MozillaZine Mozilla 1.0: https://www.mozillazine.org/articles/article2278.html
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

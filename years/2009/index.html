@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Internet Explorer 8.0 — 2009</title>
+ <link rel="icon" href="../../favicon.gif" type="image/gif">
+ <base href="./">
+ <link rel="stylesheet" href="../../css/win95-netscape.css">
+ <link rel="stylesheet" href="../../css/ie5-overrides.css">
+</head>
+<body class="year-2009 os-winxp browser-ie8" data-itt-year="2009">
+ <a class="skip-to-content" href="#content">Skip to page content</a>
+ <div class="connect-overlay" id="connect-overlay" role="dialog">
+ <div class="connect-box">
+ <h2>Network Connections</h2>
+ <pre id="connect-log">Initializing network adapter...</pre>
+ <button type="button" id="connect-btn">Connect (always-on broadband)</button>
+ <button type="button" class="skip" id="skip-connect">Skip connect</button>
+ <p style="margin:8px 0 0;font-size:10px;color:#333;max-width:280px">
+ 2009 thesis: social mainstream + apps daily · still mostly PC.
+ iPhone 3GS · Like · FarmVille · Bing · Windows 7.
+ </p>
+ </div>
+ </div>
+
+ <div class="modal-backdrop hidden" id="modal-backdrop"></div>
+
+ <div class="dialog hidden" id="dlg-open-location">
+ <div class="dialog-titlebar"><span>Open Location</span>
+ <button type="button" class="dialog-x" data-close="dlg-open-location">×</button>
+ </div>
+ <div class="dialog-body">
+ <p>Open Location in Internet Explorer:</p>
+ <input type="text" id="dlg-ol-input" class="dialog-input" spellcheck="false" placeholder="http://">
+ <div class="dialog-btns">
+ <button type="button" id="dlg-ol-ok">Open</button>
+ <button type="button" data-close="dlg-open-location">Cancel</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="dialog hidden" id="dlg-find">
+ <div class="dialog-titlebar"><span>Find</span>
+ <button type="button" class="dialog-x" data-close="dlg-find">×</button>
+ </div>
+ <div class="dialog-body">
+ <p>Find what:</p>
+ <input type="text" id="dlg-find-input" class="dialog-input">
+ <label class="dialog-check"><input type="checkbox" id="dlg-find-case"> Match case</label>
+ <div class="dialog-btns">
+ <button type="button" id="dlg-find-ok">Find Next</button>
+ <button type="button" data-close="dlg-find">Cancel</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="dialog dialog-wide hidden" id="dlg-source">
+ <div class="dialog-titlebar"><span>Document Source</span>
+ <button type="button" class="dialog-x" data-close="dlg-source">×</button>
+ </div>
+ <div class="dialog-body">
+ <pre class="source-view" id="dlg-source-text"></pre>
+ <div class="dialog-btns">
+ <button type="button" id="dlg-source-save">Save As...</button>
+ <button type="button" data-close="dlg-source">Close</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="dialog hidden" id="dlg-info">
+ <div class="dialog-titlebar"><span>Document Information</span>
+ <button type="button" class="dialog-x" data-close="dlg-info">×</button>
+ </div>
+ <div class="dialog-body">
+ <table class="info-table" id="dlg-info-table"></table>
+ <div class="dialog-btns"><button type="button" data-close="dlg-info">OK</button></div>
+ </div>
+ </div>
+
+ <div class="dialog dialog-wide hidden" id="dlg-bookmarks">
+ <div class="dialog-titlebar"><span>Favorites</span>
+ <button type="button" class="dialog-x" data-close="dlg-bookmarks">×</button>
+ </div>
+ <div class="dialog-body">
+ <select id="dlg-bm-list" class="bm-list" size="12"></select>
+ <div class="dialog-btns">
+ <button type="button" id="dlg-bm-go">Go To</button>
+ <button type="button" id="dlg-bm-remove">Remove</button>
+ <button type="button" data-close="dlg-bookmarks">Close</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="dialog dialog-wide hidden" id="dlg-prefs">
+ <div class="dialog-titlebar"><span>Preferences</span>
+ <button type="button" class="dialog-x" data-close="dlg-prefs">×</button>
+ </div>
+ <div class="dialog-body">
+ <fieldset>
+ <legend>Styles</legend>
+ <label>Underline links: <input type="checkbox" id="pref-underline" checked></label><br>
+ <label>Followed link expires (days): <input type="number" id="pref-expire" value="30" class="dialog-num"></label>
+ </fieldset>
+ <fieldset>
+ <legend>Images / Network</legend>
+ <label><input type="checkbox" id="pref-autoload" checked> Automatically load images</label><br>
+ <label>Simulated modem:
+ <select id="pref-modem">
+ <option value="0">None (instant)</option>
+ <option value="30">56k (faster)</option>
+ <option value="50">56k (default)</option>
+ <option value="90">28.8 kbps (slow)</option>
+ <option value="160">14.4 kbps</option>
+ </select>
+ </label>
+ </fieldset>
+ <fieldset>
+ <legend>Home page</legend>
+ <label>Location: <input type="text" id="pref-home" class="dialog-input" value="http://home.microsoft.com/intl/web2009/"></label>
+ </fieldset>
+ <fieldset>
+ <legend>Show / Hide</legend>
+ <label><input type="checkbox" id="pref-toolbar" checked> Show Toolbar</label><br>
+ <label><input type="checkbox" id="pref-location" checked> Show Location</label><br>
+ <label><input type="checkbox" id="pref-dirbar" checked> Show Directory Buttons</label><br>
+ <label><input type="checkbox" id="pref-desktopicons" checked> Show Desktop Icons</label>
+ </fieldset>
+ <fieldset>
+ <legend>Desktop</legend>
+ <label>Background:
+ <select id="pref-desktop">
+ <option value="#008080">Teal (Windows 98)</option>
+ <option value="#000000" selected>Black</option>
+ </select>
+ </label>
+ </fieldset>
+ <div class="dialog-btns">
+ <button type="button" id="dlg-prefs-ok">OK</button>
+ <button type="button" data-close="dlg-prefs">Cancel</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="dialog hidden" id="dlg-about">
+ <div class="dialog-titlebar"><span>About Internet Explorer</span>
+ <button type="button" class="dialog-x" data-close="dlg-about">×</button>
+ </div>
+ <div class="dialog-body about-body">
+ <p><b>Microsoft Internet Explorer</b></p>
+ <p>Version 7.0<br>Copyright © 1995–2009 Microsoft Corporation</p>
+ <p>Educational historical Web exhibit.</p>
+ <p>Supports Dynamic HTML, CSS, ActiveX, channels, and 56k modems.</p>
+ <div class="dialog-btns"><button type="button" data-close="dlg-about">OK</button></div>
+ </div>
+ </div>
+
+ <div class="dialog hidden" id="dlg-mail">
+ <div class="dialog-titlebar"><span>Mail Document</span>
+ <button type="button" class="dialog-x" data-close="dlg-mail">×</button>
+ </div>
+ <div class="dialog-body">
+ <p>Mail this document's URL to:</p>
+ <input type="text" id="dlg-mail-to" class="dialog-input" placeholder="friend@aol.com">
+ <p>Subject:</p>
+ <input type="text" id="dlg-mail-subj" class="dialog-input">
+ <p>Message:</p>
+ <textarea id="dlg-mail-body" class="dialog-textarea" rows="4"></textarea>
+ <div class="dialog-btns">
+ <button type="button" id="dlg-mail-send">Send Mail</button>
+ <button type="button" data-close="dlg-mail">Cancel</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="dialog hidden" id="dlg-alert">
+ <div class="dialog-titlebar"><span id="dlg-alert-title">Internet Explorer</span>
+ <button type="button" class="dialog-x" data-close="dlg-alert">×</button>
+ </div>
+ <div class="dialog-body">
+ <p id="dlg-alert-msg"></p>
+ <div class="dialog-btns"><button type="button" data-close="dlg-alert" id="dlg-alert-ok">OK</button></div>
+ </div>
+ </div>
+
+ <div class="dialog hidden" id="dlg-desktop-icon">
+ <div class="dialog-titlebar"><span id="dlg-desktop-title">My Computer</span>
+ <button type="button" class="dialog-x" data-close="dlg-desktop-icon">×</button>
+ </div>
+ <div class="dialog-body">
+ <p id="dlg-desktop-msg"></p>
+ <div class="dialog-btns"><button type="button" data-close="dlg-desktop-icon">OK</button></div>
+ </div>
+ </div>
+
+ <div class="desktop browser-max">
+ <div class="exit-bar" id="exit-bar">
+ <span class="year-label">2009 · Windows XP · Internet Explorer 8</span>
+ <a href="../../index.html" title="Exit">← Exit</a>
+ </div>
+
+ <div class="desktop-icons" id="desktop-icons">
+ <div class="desk-icon" data-icon="mypc" title="My Computer"><span class="desk-glyph desk-pc"></span><span class="desk-label">My Computer</span></div>
+ <div class="desk-icon" data-icon="net" title="Network Neighborhood"><span class="desk-glyph desk-net"></span><span class="desk-label">Network<br>Neighborhood</span></div>
+ <div class="desk-icon" data-icon="inbox" title="Inbox"><span class="desk-glyph desk-mail"></span><span class="desk-label">Inbox</span></div>
+ <div class="desk-icon" data-icon="bin" title="Recycle Bin"><span class="desk-glyph desk-bin"></span><span class="desk-label">Recycle Bin</span></div>
+ </div>
+
+ <div class="browser maximized" id="browser" role="application" aria-label="Internet Explorer 8">
+ <div class="titlebar" id="titlebar">
+ <span class="icon" aria-hidden="true">e</span>
+ <span class="title" id="window-title">Welcome to the World Wide Web — Microsoft Internet Explorer</span>
+ <div class="win-btns">
+ <button type="button" class="win-btn" id="btn-min" title="Minimize">_</button>
+ <button type="button" class="win-btn" id="btn-max" title="Maximize">□</button>
+ <button type="button" class="win-btn" id="btn-close" aria-label="Close" title="Close">×</button>
+ </div>
+ </div>
+
+ <div class="menubar" id="menubar" role="menubar">
+ <div class="menu-root" data-menu="file">
+ <button type="button" class="menu-item"><u>F</u>ile</button>
+ <div class="menu-dropdown" role="menu" hidden>
+ <button type="button" role="menuitem" data-cmd="file-open-loc">Open Location... <span class="accel">Ctrl+L</span></button>
+ <button type="button" role="menuitem" data-cmd="file-open-file">Open File...</button>
+ <button type="button" role="menuitem" data-cmd="file-save">Save As...</button>
+ <div class="menu-sep"></div>
+ <button type="button" role="menuitem" data-cmd="file-mail">Mail Document...</button>
+ <button type="button" role="menuitem" data-cmd="file-print">Print...</button>
+ <div class="menu-sep"></div>
+ <button type="button" role="menuitem" data-cmd="file-exit">Exit</button>
+ </div>
+ </div>
+ <div class="menu-root" data-menu="edit">
+ <button type="button" class="menu-item"><u>E</u>dit</button>
+ <div class="menu-dropdown" role="menu" hidden>
+ <button type="button" role="menuitem" data-cmd="edit-find">Find... <span class="accel">Ctrl+F</span></button>
+ <button type="button" role="menuitem" data-cmd="edit-find-again">Find Again</button>
+ </div>
+ </div>
+ <div class="menu-root" data-menu="view">
+ <button type="button" class="menu-item"><u>V</u>iew</button>
+ <div class="menu-dropdown" role="menu" hidden>
+ <button type="button" role="menuitem" data-cmd="view-reload">Reload</button>
+ <button type="button" role="menuitem" data-cmd="view-images">Load Images</button>
+ <button type="button" role="menuitem" data-cmd="view-source">Document Source</button>
+ <button type="button" role="menuitem" data-cmd="view-info">Document Info</button>
+ <button type="button" role="menuitem" data-cmd="view-stop">Stop Loading</button>
+ </div>
+ </div>
+ <div class="menu-root" data-menu="go">
+ <button type="button" class="menu-item"><u>G</u>o</button>
+ <div class="menu-dropdown" role="menu" hidden id="menu-go-dropdown">
+ <button type="button" role="menuitem" data-cmd="go-back">Back</button>
+ <button type="button" role="menuitem" data-cmd="go-forward">Forward</button>
+ <button type="button" role="menuitem" data-cmd="go-home">Home</button>
+ <div class="menu-sep"></div>
+ </div>
+ </div>
+ <div class="menu-root" data-menu="bookmarks">
+ <button type="button" class="menu-item"><u>F</u>avorites</button>
+ <div class="menu-dropdown" role="menu" hidden id="menu-bm-dropdown">
+ <button type="button" role="menuitem" data-cmd="bm-add">Add to Favorites</button>
+ <button type="button" role="menuitem" data-cmd="bm-view">Organize Favorites...</button>
+ <div class="menu-sep" id="bm-sep"></div>
+ </div>
+ </div>
+ <div class="menu-root" data-menu="help">
+ <button type="button" class="menu-item"><u>H</u>elp</button>
+ <div class="menu-dropdown" role="menu" hidden>
+ <button type="button" role="menuitem" data-cmd="help-about">About Internet Explorer...</button>
+ <button type="button" role="menuitem" data-cmd="help-exhibit">About this room</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="toolbar" id="toolbar" role="toolbar" aria-label="Internet Explorer toolbar">
+ <button type="button" class="btn btn-img" id="btn-back" title="Back" disabled>
+ <img src="../../assets/period/2007/chrome/btn-back.gif" width="28" height="28" alt="">
+ <span class="btn-label">Back</span>
+ </button>
+ <button type="button" class="btn btn-img" id="btn-forward" title="Forward" disabled>
+ <img src="../../assets/period/2007/chrome/btn-forward.gif" width="28" height="28" alt="">
+ <span class="btn-label">Forward</span>
+ </button>
+ <button type="button" class="btn btn-img" id="btn-stop" title="Stop">
+ <img src="../../assets/period/2007/chrome/btn-stop.gif" width="28" height="28" alt="">
+ <span class="btn-label">Stop</span>
+ </button>
+ <button type="button" class="btn btn-img" id="btn-reload" title="Refresh">
+ <img src="../../assets/period/2007/chrome/btn-reload.gif" width="28" height="28" alt="">
+ <span class="btn-label">Refresh</span>
+ </button>
+ <button type="button" class="btn btn-img" id="btn-home" title="Home">
+ <img src="../../assets/period/2007/chrome/btn-home.gif" width="28" height="28" alt="">
+ <span class="btn-label">Home</span>
+ </button>
+ <div class="separator" aria-hidden="true"></div>
+ <button type="button" class="btn btn-img" id="btn-search" title="Search the Web">
+ <img src="../../assets/period/2007/chrome/btn-search.gif" width="28" height="28" alt="">
+ <span class="btn-label">Search</span>
+ </button>
+ <button type="button" class="btn btn-img" id="btn-favorites" title="Favorites">
+ <img src="../../assets/period/2007/chrome/btn-favorites.gif" width="28" height="28" alt="">
+ <span class="btn-label">Favorites</span>
+ </button>
+ <button type="button" class="btn btn-img" id="btn-history" title="History">
+ <img src="../../assets/period/2007/chrome/btn-history.gif" width="28" height="28" alt="">
+ <span class="btn-label">History</span>
+ </button>
+ <div class="separator" aria-hidden="true"></div>
+ <button type="button" class="btn btn-img" id="btn-mail" title="Mail">
+ <img src="../../assets/period/2007/chrome/btn-mail.gif" width="28" height="28" alt="">
+ <span class="btn-label">Mail</span>
+ </button>
+ <div class="throbber idle" id="throbber" title="Internet Explorer">
+ <img src="../../assets/period/2007/chrome/throbber.gif" alt="" width="30" height="30">
+ </div>
+ </div>
+
+ <div class="locationbar" id="locationbar">
+ <label for="location">Address</label>
+ <input type="text" id="location" value="http://home.microsoft.com/intl/web2009/" spellcheck="false" autocomplete="off">
+ <button type="button" class="btn-go" id="btn-go" title="Go to the Address">Go</button>
+ </div>
+
+ <div class="dirbar" id="dirbar">
+ <button type="button" class="dir-btn" data-go="pages/home.html">Start</button>
+ <button type="button" class="dir-btn" data-go="sites/appstore/index.html">App Store</button>
+ <button type="button" class="dir-btn" data-go="sites/iphone/index.html">iPhone 3GS</button>
+ <button type="button" class="dir-btn" data-go="sites/facebook/index.html">Facebook</button>
+ <button type="button" class="dir-btn" data-go="sites/farmville/index.html">FarmVille</button>
+ <button type="button" class="dir-btn" data-go="sites/bing/index.html">Bing</button>
+ <button type="button" class="dir-btn" data-go="sites/twitter/index.html">Twitter</button>
+ <button type="button" class="dir-btn" data-go="sites/youtube/index.html">YouTube</button>
+</div>
+
+ <div class="content-frame">
+ <iframe id="content" tabindex="-1" title="Web page content" src="pages/home.html"
+ sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"></iframe>
+ </div>
+
+ <div class="statusbar">
+ <div class="status-text" id="status">Document: Done</div>
+ <div class="status-done" id="status-done">Document: Done</div>
+ </div>
+ </div>
+
+ <button type="button" class="task-icon hidden" id="task-icon" title="Restore Internet Explorer">
+ <span>e</span> Internet Explorer
+ </button>
+ </div>
+
+ <div class="win95-taskbar" id="taskbar">
+ <button type="button" class="win95-start" id="btn-start" title="Start" style="padding:0;border:0;background:transparent">
+ <img src="../../assets/period/2007/xp/start-recon.gif" width="54" height="22" alt="Start">
+ </button>
+ <button type="button" class="win95-task-btn" id="task-ie">Internet Explorer</button>
+ <div class="win95-tray"><span id="tray-clock">12:00 PM</span></div>
+ <div class="win95-start-menu hidden" id="start-menu">
+ <div class="start-menu-banner">
+ <span class="start-banner-text">Windows<b>XP</b></span>
+ </div>
+ <div class="start-menu-items">
+ <button type="button" class="start-menu-item" data-start-cmd="programs">📂 Programs</button>
+ <button type="button" class="start-menu-item" data-start-cmd="favorites">📄 Favorites</button>
+ <button type="button" class="start-menu-item" data-start-cmd="settings">⚙️ Settings</button>
+ <button type="button" class="start-menu-item" data-start-cmd="find">🔍 Find</button>
+ <button type="button" class="start-menu-item" data-start-cmd="help">❓ Help</button>
+ <button type="button" class="start-menu-item" data-start-cmd="run">▶️ Run...</button>
+ <div class="start-menu-sep"></div>
+ <button type="button" class="start-menu-item" data-start-cmd="shutdown">🔌 Shut Down...</button>
+ </div>
+ </div>
+ </div>
+
+ <input type="file" id="file-open-input" accept=".html,.htm,.txt,text/html,text/plain" hidden>
+ <script src="../../js/lib/util.js?v=20260724bg"></script>
+ <script src="../../js/browser-core.js?v=20260724bg"></script>
+ <script src="../../js/config/2009.js?v=20260724bg"></script>
+ <script src="../../js/browser-2009.js?v=20260724bg"></script>
+ <script>
+ (function () {
+ var el = document.getElementById("tray-clock");
+ function tick() {
+ var d = new Date();
+ var h = d.getHours(), m = d.getMinutes();
+ var am = h < 12;
+ var h12 = h % 12; if (!h12) h12 = 12;
+ el.textContent = h12 + ":" + (m < 10 ? "0" : "") + m + (am ? " AM" : " PM");
+ }
+ tick();
+ setInterval(tick, 15000);
+ var startMenu = document.getElementById("start-menu");
+ document.getElementById("btn-start").addEventListener("click", function (e) {
+ e.stopPropagation();
+ startMenu.classList.toggle("hidden");
+ });
+ document.addEventListener("click", function () {
+ startMenu.classList.add("hidden");
+ });
+ startMenu.addEventListener("click", function (e) {
+ e.stopPropagation();
+ var t = e.target.closest ? e.target.closest("[data-start-cmd]") : null;
+ if (!t) return;
+ var cmd = t.getAttribute("data-start-cmd");
+ startMenu.classList.add("hidden");
+ function openDlg(id) {
+ var bd = document.getElementById("modal-backdrop");
+ var dialogs = document.querySelectorAll(".dialog");
+ for (var i = 0; i < dialogs.length; i++) dialogs[i].classList.add("hidden");
+ var d = document.getElementById(id);
+ if (d) {
+ d.classList.remove("hidden");
+ if (bd) bd.classList.remove("hidden");
+ }
+ }
+ function closeDlg(id) {
+ var d = document.getElementById(id);
+ if (d) d.classList.add("hidden");
+ if (!document.querySelector(".dialog:not(.hidden)")) {
+ var bd = document.getElementById("modal-backdrop");
+ if (bd) bd.classList.add("hidden");
+ }
+ }
+ function go(path) {
+ var f = document.getElementById("content");
+ if (f) f.src = path;
+ var loc = document.getElementById("location");
+ if (loc) loc.value = "http://museum/" + path;
+ }
+ if (cmd === "programs") {
+ go("pages/home.html");
+ } else if (cmd === "favorites") {
+ var b = document.querySelector('[data-cmd="bm-view"]');
+ if (b) b.click();
+ else openDlg("dlg-bookmarks");
+ } else if (cmd === "settings") {
+ openDlg("dlg-prefs");
+ } else if (cmd === "find") {
+ openDlg("dlg-find");
+ } else if (cmd === "help") {
+ openDlg("dlg-about");
+ var ta = document.getElementById("dlg-about");
+ /* about dialog already period-correct via engine */
+ } else if (cmd === "run") {
+ openDlg("dlg-open-location");
+ var ol = document.getElementById("dlg-ol-input");
+ if (ol) { ol.value = "http://"; ol.focus(); }
+ } else if (cmd === "shutdown") {
+ if (window.confirm("Shut down Windows XP immersion and return to the museum hub?")) {
+ location.href = "../../index.html";
+ }
+ }
+ });
+ var iconMsgs = {
+ mypc: { title: "My Computer", msg: "💾 (A:) 3½ Floppy\n💿 (C:) Local Disk\n💿 (D:) CD-ROM Drive\n🖨️ Printers\n⚙️ Control Panel\n\nFree space on (C:): 1.2 GB" },
+ net: { title: "Network Neighborhood", msg: "🖥️ Searching for computers...\n\nNo other computers found.\n\nTip: Try Dial-Up Networking to connect to the Internet." },
+ inbox: { title: "Inbox - Microsoft Exchange", msg: "📧 You've Got Mail!\n\n1 unread message:\n━━━━━━━━━━━━━━━\nFrom: webmaster@geocities.com\nSubject: Welcome to the always-on web!\nDate: October 2004\n━━━━━━━━━━━━━━━\n\n\"Welcome to your new neighborhood!\"" },
+ bin: { title: "Recycle Bin", msg: "🗑️ Recycle Bin is empty.\n\n0 objects" }
+ };
+ var deskIcons = document.querySelectorAll("[data-icon]");
+ for (var di = 0; di < deskIcons.length; di++) {
+ deskIcons[di].addEventListener("dblclick", function () {
+ var info = iconMsgs[this.getAttribute("data-icon")];
+ if (info) {
+ document.getElementById("dlg-desktop-title").textContent = info.title;
+ document.getElementById("dlg-desktop-msg").textContent = info.msg;
+ document.getElementById("dlg-desktop-icon").classList.remove("hidden");
+ }
+ });
+ }
+ document.querySelector(".desktop").classList.add("browser-max");
+ })();
+ </script>
+</body>
+</html>

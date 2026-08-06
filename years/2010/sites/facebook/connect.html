@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Facebook Connect — 2010</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css">
+</head>
+<body class="fb-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="fb-card" style="max-width:560px;margin:16px auto">
+ <div class="fb-top">facebook · connect</div>
+ <div class="fb-body" style="font-size:13px;line-height:1.45;padding:12px">
+  <h1 style="font-size:16px">Facebook Connect</h1>
+  <p style="font-size:12px;color:#555">
+   2009 ritual: “Log in with Facebook” on a third-party site · your graph follows you · partner gets identity.
+  </p>
+  <div style="background:#e8f0fe;border:1px solid #3b5998;padding:12px;margin:12px 0">
+   <b>Partner site (museum stub)</b><br>
+   <font size="2">Example blog / Hulu-class partner · wants your Facebook identity.</font><br><br>
+   <button type="button" data-fb-connect style="background:#3b5998;color:#fff;border:0;padding:8px 14px;font-size:13px;cursor:pointer">
+    Connect with Facebook
+   </button>
+   <div data-fb-connect-status style="font-size:12px;color:#060;margin-top:8px"></div>
+  </div>
+  <p style="font-size:12px">
+   Continuity: <a href="platform.html">Platform apps</a> ·
+   <a href="about.html">Beacon residual</a> ·
+   <a href="feed.html">Feed</a> ·
+   rival stack: <a href="../friendconnect/index.html"><b>Google Friend Connect</b></a> (OpenSocial · Dec 2009)
+  </p>
+  <p style="font-size:11px;color:#666"> · local flag only · no OAuth network</p>
+ </div>
+</div>
+<script>
+(function () {
+  function key() {
+    try {
+      if (window.ITT && ITT.util && ITT.util.immersionStorageKey) {
+        return ITT.util.immersionStorageKey("fb-connect", "itt10");
+      }
+    } catch (e) {}
+    return "itt10-fb-connect";
+  }
+  function boot() {
+    var btn = document.querySelector("[data-fb-connect]");
+    var st = document.querySelector("[data-fb-connect-status]");
+    if (!btn) return;
+    try {
+      var raw = localStorage.getItem(key());
+      if (raw && st) st.textContent = "Connected (theater) · " + key();
+    } catch (e) {}
+    btn.addEventListener("click", function () {
+      localStorage.setItem(key(), JSON.stringify({ connected: true, ts: Date.now() }));
+      if (st) st.textContent = "Approved · graph follows you (theater) · " + key();
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

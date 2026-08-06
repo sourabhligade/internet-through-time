@@ -1,0 +1,56 @@
+SOURCE: https://cybercultural.com/p/internet-2001/
+FINAL: https://cybercultural.com/p/internet-2001/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: cybercultural-internet-2001
+ROLE: handoff from 2001
+TITLE: What the Internet Was Like in 2001 | Cybercultural
+BYTES: 30067
+ERROR: 
+
+KEY FACTS / TEXT:
+What the Internet Was Like in 2001 | Cybercultural
+Skip to content
+Cybercultural
+Home
+Explore
+Pre-web
+Dot-com
+Web 2.0
+2010s
+By Year
+Seasons
+Notes
+Book
+About
+Search
+Subscribe
+Menu
+What the Internet Was Like in 2001
+Even in the middle of the dot-com bust in 2001, there are rays of hope: Wikipedia and the Wayback Machine launch, digital music turns legit with iTunes and the iPod, and blogging goes mainstream.
+By Richard MacManus |
+November 5, 2025
+| Tags:  Dot-com , Yearly Reviews , 2001
+Apple iTunes, the Rip Mix Burn advert, 2001; via YouTube (video embedded below).
+The year 2001 began with optimism — in January, Wikipedia debuted and Apple launched iTunes. But by year’s end the mood had shifted. The dot-com crash had drained Silicon Valley’s exuberance, Napster was being dismantled in court, and the new wave of post-9/11 “warblogs” made the internet feel solemn and overly serious. Meanwhile, Microsoft continued its dominance over the web with the release of Internet Explorer 6.
+Despite the doom and gloom, 2001 was also a year in which the web continued to mature. It gained a memory through Wikipedia and the Wayback Machine, discovered new voices through blogs and communities like MetaFilter, and began to legitmately shake up the cultural industries with iTunes and the iPod.
+Apple iTunes and Rip Mix Burn advert 2001
+Wikipedia and Wayback
+Wikipedia launched on January 15 as a side project of Nupedia, an encyclopedia which required scholars to submit articles for expert review. Wikipedia, by contrast, was wide open: anyone could edit. Inspired by Ward Cunningham's WikiWikiWeb software, Wikipedia published a thousand articles in its first month; by the end of the year, more than 20,000. By comparison, Nupedia had published fewer than 24 articles in the year before Wikipedia launched.
+Wikipedia homepage, 17 May 2001.
+Larry Sanger, one of the co-founders of Wikipedia alongside Jimmy Wales, later wrote that the initial idea "was that the wiki would be set up as part of Nupedia; it was to be a way for the public to develop a stream of content that could be fed into the Nupedia process." But Wikipedia soon became the main project and "Nupedia withered due to neglect." Key to Wikipedia's momentum — and subsequent success — was its lack of hierarchical structure; but as Sanger pointed out, this had good and bad implications:
+"...this provisional "hands off" management policy had the effect of creating a difficult-to-change tradition, the tradition of making the project extremely tolerant of disruptive (uncooperative, "trolling") behavior. And as it turned out, particularly with the large waves of new contributors from the summer and fall of 2001, the project became very resistant to any changes in this policy."
+Somehow, despite the chaos and occassional bad behaviour of participants, Wikipedia quickly established itself as the web's encyclopedia.
+Wikipedia's "welcome, newcomers" page, 6 April 2001. Note that Nupedia was being promoted at this point as the "much more rigorous and serious" project.
+Nine months after Wikipedia's launch, another tool for memory arrived: the Wayback Machine, launched publicly by the Internet Archive in October 2001 . It was a kind of time travel for websites: you entered a URL and an earlier version would display. The Wayback Machine wasn’t perfect: broken images, missing scripts, frames gone askew. Nevertheless, it gave the web a sense of permanence, even as so many dot-coms were disappearing .
+Wayback Machine soon after its public launch in October 2001.
+IE6 and Microsoft's Web Power
+When Internet Explorer 6 (IE6) was released in August 2001, it was bundled with Microsoft's latest operating system, Windows XP. By this point, IE was by far the most dominant browser — Netscape was now in the single figures in market share and the debut of Mozilla's open source Firefox browser was still a few years away.
+At first glance, IE6 didn't seem that impressive. Paul Thurrott's contemporary review put it plainly:
+"When compared to previous IE versions, IE 6 doesn't offer many new features, aside from an XP-like user interface, some digital media-related improvements, and support for Platform for Privacy Preferences (P3P) technologies that, as far as I can tell, isn't even used by very many Web sites anyway."
+IE6 webpage, September 2001 .
+But compared to its competitors — which included the open source Mozilla 0.9.4 — IE6 was more stable (less crashes) and faster. More than anything, IE was the browser that most websites were developed for. As Thurrott put it:
+"IE 6 comes up a winner primarily because of its sheer ubiquitousness. When you browse the Web, you transparently understand that virtually every site on the Web is going to display properly with this browser, because Web developers simply can't ignore the market leader. For the bullet point crowd, Microsoft says that it supports a variety of Web standards, including Dynamic HTML (DHTML), CSS Level 1, HTML Document Object Model (DOM) Level 1, XM
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

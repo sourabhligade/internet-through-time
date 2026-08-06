@@ -1,9 +1,7 @@
-MySpace 2003 assets — authenticity
-
-Pages use HTML/CSS reconstruction of the 2003–04 emblem (gray head / yellow body / arrows).
-Orphan non-authentic files (blue pill logo, letter-T Tom) moved to _nonauthentic_do_not_use/.
-
-When WA/WDM crops exist, place:
-  logo.gif  — real 2003 wordmark/emblem
-  tom.gif   — Tom Anderson photo crop
-and wire <img> tags in years/2003/sites/myspace/*.html
+MySpace 2003 logo/header: WA harvest 2026-07-27
+  logo-wa.gif = header_43.gif from WA 20031008115927
+    http://www.myspace.com/images/header_43.gif (208×55)
+  banner-wa.gif = index_01.gif from WA ~20031015
+    http://www.myspace.com/images/index_01.gif (764×69)
+  sign-up-wa.gif · login-wa.gif same home capture
+Tom + friend1–8 remain RECON/schematic (no period Tom photo recovered).

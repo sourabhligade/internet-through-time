@@ -1,0 +1,100 @@
+SOURCE: https://web.archive.org/web/20020930111024id_/http://news.google.com/
+FINAL: https://web.archive.org/web/20020930111024id_/http://news.google.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-googlenews
+ROLE: Google News beta
+TITLE: Google News
+BYTES: 60321
+ERROR: 
+
+KEY FACTS / TEXT:
+Google News
+News
+BETA
+Web
+Images
+Groups
+Directory
+News
+Search and browse 4,000 continuously updated news sources
+> Top Stories     World     U.S.     Business     Sci/Tech     Sports     Entertainment     Health
+About Google News
+Top Stories
+Auto-generated
+Naples Daily News
+Montgomerie finds his moment of greatness as a leader
+Guardian - 10 hours ago
+Destiny does not come alike to all men. For most of the world's best golfers the four major tournaments provide the measurement of their greatness. For Colin Montgomerie something happened yesterday to suggest that his stature may one day be assessed by a ...
+Ernie and Co take on Ryder Cup champs  Independent Online
+Risky lineup surges to victory over Americans  San Francisco Chronicle
+Winnipeg Sun  - BBC  - Calgary Sun  - Boston Herald  - and 450 related »
+Channel News Asia
+Koizumi sacks financial services minister in Cabinet reshuffle
+Mainichi Shimbun - 3 hours ago
+Prime Minister Junichiro Koizumi reshuffled his Cabinet on Monday, sacking Financial Services Minister Hakuo Yanagisawa and replacing six other ministers.
+World / Nation Briefs  Newsday
+Hoping to bolster reform plans, Japanese PM reshuffles Cabinet  Ha'aretz
+Minneapolis Star Tribune  - Channel News Asia  - BBC  - Toronto Globe and Mail  - and 177 related »
+Economic woe puts German banks in firing line
+Forbes - and 732 related »
+Soot Emissions Could Be Cause of China's Weather Woes
+Scientific American - and 9 related »
+King of Kansas
+Toronto Sun - and 111 related »
+Reese's pieces
+Guardian - and 89 related »
+Smallpox vaccine: Theres enough
+MSNBC - and 49 related »
+In the News
+World Bank   US Grand Prix   World Trade Center   Champions Trophy   Bruce Kimm   West Africa   Edwina Currie   Reese Witherspoon   Santa Cruz Mountains   San Diego
+World »
+Gulf Daily News
+Israel ends its siege of Arafat's compound
+International Herald Tribune - 12 hours ago
+RAMALLAH, West Bank A beaming Yassar Arafat, surrounded by a swarm of euphoric Palestinian government employees, emerged briefly from the last standing building in his pulverized government compound here Sunday as Israel ended a 10-day siege ...
+Sharon criticised after troops leave Arafat's HQ  Ireland Online
+Israel Ends 10-Day Siege  Hartford Courant
+Edmonton Sun  - Ha'aretz  - Boston Globe  - Dispatch Online  - and 990 related »
+Channel News Asia
+China sentences man to death in poisoning
+United Press International - 30 minutes ago
+China sentenced to death a man who placed rat poison in the food a competitor's breakfast shop, killing 38 people and making 300 others ill, according to the official People's Daily newspaper.
+Snack shop owner sentenced to death for lethal competition  ABC Online
+Man on trial for 'mass poisoning'  News Interactive
+CNN  - ABC News  - Channel News Asia  - Ananova  - and 30 related »
+Military.com
+UN-Iraq to Discuss Return of Weapons Inspectors
+Voice of America - 2 hours ago
+Top United Nations weapons experts are meeting with Iraqi officials in Viennatoday Monday for talks on the return of arms inspectors to Iraq after a four-year absence.
+Battle of the Iraq resolutions  BBC
+Reuters World News Digest at 1000 GMT, Sep 30  Reuters
+Boston Globe  - Iraq Daily  - Boulder Daily Camera  - GoMemphis.com  - and 520 related »
+U.S. »
+Daily Telegraph
+For Giuliani, Few Shades of Gray
+New York Times - 3 hours ago
+IT is the certainty that is so striking. In his new book, "Leadership," Rudolph W. Giuliani sounds so free of self-doubt that despite the book's mild tone, it will remind readers of the willful years of the Giuliani mayoralty, when there were few ...
+WTC firefighters who died wouldn't leave, Giuliani says  Toronto Globe and Mail
+Hot Buttons: Talk show topics  United Press International
+Daily Telegraph  - Penn Live  - Calgary Sun  - IrishExaminer.com  - and 49 related »
+Man With Box Cutters Is Arrested at Atlantic City
+New York Times - 5 hours ago
+A 21-year-old student from Bulgaria who had worked the summer in New Jersey was arrested at Atlantic City International Airport yesterday after federal screeners examining his backpack found a small pair of scissors embedded in a bar of soap and two ...
+Bulgarian man arrested with box cutters at New Jersey airport  Channel News Asia
+Student arrested in at NJ airport  Fort Wayne News Sentinel
+Newsday  - Edmonton Sun  - London Free Press  - DailyStar.com  - and 139 related »
+Patsy Mink, Veteran Hawaii Congresswoman, Dies at 74
+New York Times - 3 hours ago
+Representative Patsy T. Mink, a liberal Democrat from Hawaii who was likely to be elected to a 13th term in November, died Saturday at the Straub Clinic and Hospital in Honolulu. She was 74. The cause was viral pneumonia brought on by chickenpox ...
+Late congresswoman to remain on ballot  Boston Globe
+Life and Legacy of Patsy Mink  KHNL-TV/KHBC/KOGG
+Voice of America  - Daily Oklahoman  - United Press International  - Charlotte Observer  - and 209 related »
+Business »
+BBC
+Economic woe puts German banks in firing line
+Forbes - 4 hours ago
+Worry over
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

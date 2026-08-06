@@ -1,0 +1,28 @@
+# 2006 research open visit log — 2026-07-30
+
+## Mode
+Research freeze only. No years/2006 code. No pixel pack.
+
+## Visited live
+1. cybercultural.com/p/internet-2006/ — full re-read
+2. internetlivestats.com/total-number-of-websites/ — 85,507,314
+3. webdesignmuseum.org/gallery/twitter-2006
+4. webdesignmuseum.org/gallery/youtube-2006
+5. webdesignmuseum.org/years/2006
+6. sec.gov Google YouTube PR Oct 9 2006
+7. aws.amazon.com S3 history / origins
+8. about.fb.com News Feed privacy Sep 8 2006
+9. Wikipedia: Twitter history, Facebook Feed, YouTube history, Google Docs, IE7, Vista, Google Reader, Gmail history, Time You
+10. ricmac.org 2006 web technology trends (period blogger review)
+
+## Docs written
+- docs/2006-RESEARCH.md
+- docs/2006-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md
+- docs/2006-MUSEUM-GRADE.md
+- docs/TO-100-PERCENT/YEAR-2006.md
+- docs/references/2006/* scaffold
+
+## Not done
+- Bulk Wayback HTML dumps
+- assets/period/2006/
+- years/2006/

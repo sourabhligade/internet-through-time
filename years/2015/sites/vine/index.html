@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2015">
+<head>
+<meta charset="utf-8">
+<title>Vine</title>
+<link rel="stylesheet" href="../../../../css/period-2015.css">
+<script src="../../../../js/immersion-2015.js" defer></script>
+</head>
+<body class="vine-app">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="vine-topbar">
+  <span>Vine</span>
+  <span class="vine-topbar-actions">
+    <a href="record.html">Record</a>
+  </span>
+</div>
+<nav class="vine-tabs" aria-label="Vine">
+  <a href="index.html" class="is-on">Home</a>
+  <a href="index.html#explore">Explore</a>
+  <a href="record.html">Camera</a>
+  <a href="android.html">Activity</a>
+  <a href="about.html">Profile</a>
+</nav>
+<div class="vine-feed" style="padding:0 0 24px">
+  <p class="vine-tagline">Make a scene · 6 seconds · loops forever</p>
+  <div data-vine-list></div>
+  <p class="vine-empty-cta"><a href="record.html" class="vine-cta">Record a Vine</a></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt15-vine-posts";
+  var el = document.querySelector("[data-vine-list]");
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
+  }
+  function render() {
+    if (!el) return;
+    var list = load();
+    if (!list.length) {
+      el.innerHTML =
+        "<div class='vine-card'>" +
+        "<div class='vine-card-loop vine-loop-anim'>No vines yet</div>" +
+        "<div class='vine-card-meta'>Hold on Camera to capture 6 seconds</div></div>";
+      return;
+    }
+    el.innerHTML = list.slice(0, 20).map(function (v, i) {
+      var cap = String(v.caption || "untitled").replace(/</g, "&lt;");
+      var s = v.secs || 6;
+      return (
+        "<article class='vine-card' data-vine-item>" +
+        "<div class='vine-card-loop vine-loop-anim' style='animation-delay:" + (i * 0.15) + "s'>" +
+        "<span class='vine-play'>▶</span> " + s + "s loop</div>" +
+        "<div class='vine-card-meta'><b>you</b> · " + cap + "</div>" +
+        "<div class='vine-card-actions'>Revine · Comment · Share</div>" +
+        "</article>"
+      );
+    }).join("");
+  }
+  render();
+});
+</script>
+</body>
+</html>

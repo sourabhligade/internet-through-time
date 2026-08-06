@@ -1,0 +1,7 @@
+SOURCE: https://web.archive.org/web/20051001010702id_/http://maps.google.com/
+FINAL: https://web.archive.org/web/20051001010702id_/http://maps.google.com/
+HTTP: 200
+FETCHED: 2026-07-30 (deep research pass)
+BYTES_RAW: 19340
+---
+Google Maps Maps Local Search Directions What e.g., pizza Where e.g., Poughkeepsie, NY Start address End address Help Maps

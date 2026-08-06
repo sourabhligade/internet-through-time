@@ -14,8 +14,10 @@
       var escapeHtml = api.escapeHtml;
       var qs = api.qs;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var R = api.R;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
 
       function catalog() {
         return config.googleCatalog || [];
@@ -81,7 +83,7 @@
               );
               if (isLucky) {
                 goLucky(q);
-                markTourProgress();
+                markTourUsed();
                 return;
               }
               location.href = searchHref(q);
@@ -93,7 +95,7 @@
                 ev.preventDefault();
                 var input = f.querySelector('input[name="q"]') || f.querySelector('input[type="text"]');
                 goLucky(input ? input.value : "");
-                markTourProgress();
+                markTourUsed();
               });
             }
           })(forms[i]);
@@ -153,7 +155,7 @@
           }
         }
         host.innerHTML = html;
-        markTourProgress();
+        markTourUsed();
       }
 
       initForms();

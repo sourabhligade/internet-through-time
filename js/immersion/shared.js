@@ -68,12 +68,14 @@
       var era = periodEra();
       var face = periodFace();
       var titleBg = periodTitleBg();
-      var dismiss = '<a href="#" id="itt-flash-dismiss"><font size="1" color="#0000ee">[dismiss]</font></a>';
-      if (era === "early") {
+      /* Period system note — never brand the flash as "Internet Through Time" on content pages */
+      var dismiss = '<a href="#" id="itt-flash-dismiss"><font size="1" color="#0000ee">[OK]</font></a>';
+      if (era === "early" || era === "nav") {
+        /* 1994–97: yellow browser/system note (no museum title bar) */
         el.innerHTML =
-          '<table width="100%" cellpadding="4" cellspacing="0" border="1" bordercolor="#808080" bgcolor="#FFFFCC">' +
-          "<tr><td><font face=\"" + face + "\" size=\"2\">" + html + " &nbsp; " + dismiss +
-          "</font></td></tr></table>";
+          '<table width="100%" cellpadding="4" cellspacing="0" border="1" bordercolor="#808080" bgcolor="#FFFFCC" class="itt-flash-period">' +
+          "<tr><td><font face=\"" + face + "\" size=\"2\" color=\"#000000\">" + html +
+          " &nbsp; " + dismiss + "</font></td></tr></table>";
       } else if (era === "web2") {
         /* XP info bar — not a soft Material toast */
         el.innerHTML =
@@ -81,11 +83,13 @@
           '<tr><td style="padding:6px 8px;font-family:Tahoma,Arial,sans-serif;font-size:11px;color:#000">' +
           html + " &nbsp; " + dismiss + "</td></tr></table>";
       } else {
-        /* Win9x / IE dialog strip */
+        /* Win9x / IE status strip — period product title, not museum name */
+        var y = parseInt(YEAR, 10) || 1999;
+        var flashTitle = y <= 1998 ? "Netscape" : y <= 2001 ? "Microsoft Internet Explorer" : "Message";
         el.innerHTML =
           '<table width="100%" cellpadding="0" cellspacing="0" border="0" class="itt-flash-win" style="border:2px solid;border-color:#fff #808080 #808080 #fff;background:#c0c0c0">' +
           '<tr bgcolor="' + titleBg + '"><td style="padding:2px 6px"><font face="' + face +
-          '" size="1" color="#ffffff"><b>Internet Through Time</b></font></td>' +
+          '" size="1" color="#ffffff"><b>' + flashTitle + "</b></font></td>" +
           '<td align="right" style="padding:2px 4px">' + dismiss + "</td></tr>" +
           '<tr><td colspan="2" style="padding:8px;background:#c0c0c0"><font face="' + face +
           '" size="2" color="#000">' + html + "</font></td></tr></table>";
@@ -107,9 +111,98 @@
       }
     }
 
+    /**
+     * Action feedback kit — every signature click must *feel* saved.
+     * 1) period flash bar  2) nearest status node  3) aria-live region
+     * opts: { status, statusSelector, flash:bool, ms, doc, kind }
+     */
+    function stripHtml(s) {
+      return String(s || "")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/\s+/g, " ")
+        .replace(/^\s+|\s+$/g, "");
+    }
+
+    function ensureActionLive(doc) {
+      doc = doc || document;
+      var live = doc.getElementById("itt-action-live");
+      if (live) return live;
+      live = doc.createElement("div");
+      live.id = "itt-action-live";
+      live.className = "itt-action-live";
+      live.setAttribute("role", "status");
+      live.setAttribute("aria-live", "polite");
+      live.setAttribute("aria-atomic", "true");
+      /* Visually minimal — screen readers + optional CSS highlight */
+      live.style.cssText =
+        "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;";
+      if (doc.body) doc.body.appendChild(live);
+      return live;
+    }
+
+    function resolveStatusNode(doc, opts) {
+      opts = opts || {};
+      doc = doc || document;
+      if (opts.status && opts.status.nodeType === 1) return opts.status;
+      if (opts.statusSelector) {
+        var bySel = doc.querySelector(opts.statusSelector);
+        if (bySel) return bySel;
+      }
+      var defaults = [
+        "[data-itt-action-status]",
+        "[data-fb-like-status]",
+        "[data-fb-feed-status]",
+        "[data-fb-save-status]",
+        "[data-ig-status]",
+        "[data-pin-status]",
+        "[data-yt-status]",
+        "[data-spotify-status]",
+        "[data-snap-status]",
+        "[data-uber-status]",
+        "[data-maps-status]",
+        "[data-cart-flash]",
+        "#cart-flash"
+      ];
+      var i;
+      for (i = 0; i < defaults.length; i++) {
+        var n = doc.querySelector(defaults[i]);
+        if (n) return n;
+      }
+      return null;
+    }
+
+    function actionFeedback(message, opts) {
+      opts = opts || {};
+      var doc = opts.doc || document;
+      var html = String(message || "Saved (this browser only).");
+      var plain = stripHtml(html);
+      var st = resolveStatusNode(doc, opts);
+      if (st) {
+        /* Prefer text for status lines (safe); allow HTML if data-allow-html=1 */
+        if (st.getAttribute("data-allow-html") === "1") st.innerHTML = html;
+        else st.textContent = plain;
+        st.setAttribute("data-itt-feedback", "1");
+        st.className = (st.className || "").replace(/\bitt-status-pulse\b/g, "") + " itt-status-pulse";
+      }
+      try {
+        var live = ensureActionLive(doc);
+        live.textContent = plain;
+      } catch (eLive) { /* */ }
+      if (opts.flash !== false) {
+        showFlash(html, { ms: opts.ms != null ? opts.ms : 5500 });
+      }
+      try {
+        api.lastActionFeedback = { message: plain, kind: opts.kind || "", ts: Date.now() };
+        if (typeof ITT !== "undefined") ITT.lastActionFeedback = api.lastActionFeedback;
+      } catch (eLast) { /* */ }
+      return plain;
+    }
+
     api.periodEra = periodEra;
     api.periodFace = periodFace;
     api.periodTitleBg = periodTitleBg;
+    api.actionFeedback = actionFeedback;
+    api.resolveStatusNode = resolveStatusNode;
 
     /* ---------- UX: guided tour ---------- */
     function tourStateKey() {
@@ -124,6 +217,21 @@
       saveJSON(tourStateKey(), map);
     }
 
+    /**
+     * Tour state: legacy boolean true = fully used (backward compatible).
+     * Object form: { visited: true, used?: true }.
+     * Visit alone only marks visited; product actions call markTourUsed.
+     */
+    function tourStepUsed(v) {
+      if (v === true) return true;
+      return !!(v && typeof v === "object" && v.used);
+    }
+    function tourStepVisited(v) {
+      if (v === true) return true;
+      return !!(v && typeof v === "object" && (v.visited || v.used));
+    }
+
+    /** Mark matching tour steps as visited only (pathname match). */
     function markTourProgress() {
       var steps = config.tour || [];
       if (!steps.length) return;
@@ -133,17 +241,75 @@
       for (var i = 0; i < steps.length; i++) {
         var s = steps[i];
         if (!s.id || !s.match) continue;
-        if (path.indexOf(s.match) !== -1) {
-          if (!done[s.id]) {
-            done[s.id] = true;
-            changed = true;
-            if (s.doneMessage) {
-              showFlash("✓ Tour: " + escapeHtml(s.doneMessage));
-            }
-          }
+        if (path.indexOf(s.match) === -1) continue;
+        var cur = done[s.id];
+        if (cur === true || tourStepUsed(cur)) continue; /* already fully used */
+        if (!cur) {
+          done[s.id] = { visited: true };
+          changed = true;
+        } else if (typeof cur === "object" && !cur.visited) {
+          cur.visited = true;
+          done[s.id] = cur;
+          changed = true;
         }
       }
       if (changed) setTourDone(done);
+    }
+
+    /**
+     * Mark tour step(s) as used after a real product action (cart, post, bid…).
+     * @param {string} [stepId] optional tour step id; else match current path
+     */
+    function markTourUsed(stepId) {
+      var steps = config.tour || [];
+      if (!steps.length && !stepId) return;
+      var done = getTourDone();
+      var changed = false;
+      var stampedIds = [];
+      function setUsed(id) {
+        if (!id) return;
+        stampedIds.push(String(id));
+        var prev = done[id];
+        if (prev === true || tourStepUsed(prev)) return;
+        done[id] = { visited: true, used: true, ts: Date.now() };
+        changed = true;
+      }
+      if (stepId) {
+        setUsed(String(stepId));
+      } else {
+        var path = location.pathname || "";
+        var j;
+        for (j = 0; j < steps.length; j++) {
+          var st = steps[j];
+          if (!st.id || !st.match) continue;
+          if (path.indexOf(st.match) !== -1) setUsed(st.id);
+        }
+        /* REAL action on a room with no matching tour id still stamps passport */
+        if (!stampedIds.length) {
+          var rough =
+            path.replace(/.*\/sites\//, "").replace(/\/[^/]*$/, "").replace(/\//g, "-") || "real";
+          stampedIds.push(rough.slice(0, 32));
+        }
+      }
+      if (changed) setTourDone(done);
+      /* Passport stamps (hub passport book) — always on REAL product action */
+      try {
+        var MP =
+          (typeof window !== "undefined" && window.ITT && window.ITT.MuseumProgress) ||
+          ITT.MuseumProgress;
+        if (MP && typeof MP.stamp === "function") {
+          var si;
+          for (si = 0; si < stampedIds.length; si++) {
+            MP.stamp(YEAR, stampedIds[si], {
+              label: stampedIds[si],
+              href: (location.pathname || "").split("/").slice(-2).join("/")
+            });
+          }
+          if (typeof MP.injectTrailBar === "function") MP.injectTrailBar(document);
+        }
+      } catch (ePass) {
+        /* */
+      }
     }
 
     function renderTour(root) {
@@ -159,31 +325,43 @@
       var rows = "";
       for (var i = 0; i < steps.length; i++) {
         var s = steps[i];
-        var ok = !!done[s.id];
-        if (ok) nDone++;
-        var mark = ok ? "✓" : String(i + 1);
-        var bg = ok ? "#E8FFE8" : "#E0E0E0";
+        var entry = done[s.id];
+        var used = tourStepUsed(entry);
+        var visited = tourStepVisited(entry);
+        if (used) nDone++;
+        /* Period checklist: * used · ~ visited only · number not started */
+        var mark = used ? "*" : visited ? "~" : String(i + 1);
+        var bg = used ? "#E8FFE8" : visited ? "#FFFFEE" : "#F0F0F0";
+        var labelCell;
+        if (used) {
+          labelCell =
+            "<font color=\"#006600\"><b>" + escapeHtml(s.label) + "</b></font> — used";
+        } else if (visited) {
+          labelCell =
+            '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a> — visited · try an action";
+        } else {
+          labelCell =
+            '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a>" +
+            (s.hint ? " — " + s.hint : "");
+        }
         rows +=
           '<tr bgcolor="' + bg + '">' +
-          '<td width="8%" align="center"><font size="3"><b>' + mark + "</b></font></td>" +
-          "<td>" +
-          (ok
-            ? "<font color=\"#006600\"><b>" + escapeHtml(s.label) + "</b></font> — done"
-            : '<a href="' + R(s.href) + '"><b>' + escapeHtml(s.label) + "</b></a>" +
-              (s.hint ? " — " + s.hint : "")) +
-          "</td></tr>";
+          '<td width="8%" align="center"><font size="2"><b>' + mark + "</b></font></td>" +
+          "<td><font size=\"2\">" + labelCell + "</font></td></tr>";
       }
       var allDone = nDone === steps.length && steps.length > 0;
       host.innerHTML =
-        '<table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#808080" class="itt-tour-table">' +
-        '<tr bgcolor="#000080"><td colspan="2"><font color="#FFFF00"><b>★ Suggested tour</b></font> ' +
-        '<font color="#AACCFF" size="2">(' + nDone + "/" + steps.length + " complete)</font></td></tr>" +
+        '<table width="100%" border="1" cellpadding="6" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#808080" class="itt-tour-table">' +
+        '<tr bgcolor="#000080"><td colspan="2"><font color="#FFFF00" size="2"><b>Places to try</b></font> ' +
+        '<font color="#AACCFF" size="1">(' + nDone + "/" + steps.length + " used)</font></td></tr>" +
         rows +
         (allDone
           ? '<tr bgcolor="#FFFFCC"><td colspan="2"><font size="2"><b>Tour complete!</b> ' +
-            escapeHtml(config.tourCompleteHint || "Try the Location bar — type a site name and press Enter. Or open Favorites.") +
+            escapeHtml(config.tourCompleteHint || "Try the Location bar — type a site name and press Enter. Or open Bookmarks / Favorites.") +
             "</font></td></tr>"
-          : "") +
+          : '<tr bgcolor="#FFFFEE"><td colspan="2"><font size="1" color="#333333">' +
+            "Visit a site, then do a real action (search, cart, post…) — only actions mark a step used." +
+            "</font></td></tr>") +
         "</table>";
       host.style.display = "block";
     }
@@ -239,11 +417,11 @@
       }
       if (!lines.length) {
         host.innerHTML =
-          '<font size="2" color="#666666"><i>No activity yet — complete a tour step to leave a trail here.</i></font>';
+          '<font size="2" color="#666666"><i>No activity yet — cart, bids, and guestbooks show up here.</i></font>';
         return;
       }
       host.innerHTML =
-        "<b>Your activity this session</b><ul><li>" + lines.join("</li><li>") + "</li></ul>";
+        "<b>This session</b><ul><li>" + lines.join("</li><li>") + "</li></ul>";
     }
 
     /* ---------- Hit counters ---------- */
@@ -287,70 +465,243 @@
       if (!config.nav || !config.nav.length) return;
       if (document.getElementById("itt-exhibit-nav")) return;
       var here = location.pathname || "";
+      /* Starting Point already has dirbar + destinations + tour —
+         skip the navy strip on home for all years (avoids triple-nav).
+         Site pages still get the wayfinding bar. */
+      var onHome = here.indexOf("/pages/home") !== -1;
+      var skipBar = onHome;
+      var homeHref = R("pages/home.html");
+
       function active(frag) {
         return here.indexOf(frag) !== -1 ? " itt-nav-on" : "";
       }
-      var links = [];
-      for (var i = 0; i < config.nav.length; i++) {
-        var item = config.nav[i];
-        links.push(
-          '<a class="itt-nav' + active(item.match || item.href) + '" href="' +
-            R(item.href) + '"><font color="#FFFF99">' + escapeHtml(item.label) + "</font></a>"
-        );
+
+      function isHomeNavItem(item) {
+        if (!item) return false;
+        var h = String(item.href || "");
+        var lab = String(item.label || "").toLowerCase();
+        return h.indexOf("pages/home") !== -1 || lab === "start" || lab === "home" || lab.indexOf("starting") !== -1;
       }
-      var bar = document.createElement("div");
-      bar.id = "itt-exhibit-nav";
-      bar.innerHTML =
-        '<table width="100%" cellpadding="3" cellspacing="0" border="0" bgcolor="#000080">' +
-        "<tr><td>" +
-        '<font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">' +
-        "<b>" + escapeHtml(YEAR) + "</b>&nbsp;" +
-        links.join(" · ") +
-        "</font></td>" +
-        '<td align="right" nowrap><font face="Arial" size="1" color="#99CCFF">' +
-        escapeHtml(config.navSubtitle || "") +
-        ' · <a href="' + R("pages/home.html") + '"><font color="#FFFFFF"><b>Start</b></font></a>' +
-        ' · <a href="#" id="itt-exit-link"><font color="#FFCCCC">Exit</font></a>' +
-        "</font></td></tr></table>";
-      var slot = document.getElementById("itt-nav-slot");
-      if (slot) {
-        slot.innerHTML = "";
-        slot.appendChild(bar);
-        slot.setAttribute("aria-hidden", "false");
-      } else if (document.body.firstChild) {
-        document.body.insertBefore(bar, document.body.firstChild);
+
+      if (!skipBar) {
+        var links = [];
+        for (var i = 0; i < config.nav.length; i++) {
+          var item = config.nav[i];
+          var on = active(item.match || item.href);
+          var homeCls = isHomeNavItem(item) ? " itt-nav-start" : "";
+          if (i > 0) {
+            links.push('<span class="itt-nav-sep" aria-hidden="true">·</span>');
+          }
+          /* Site directory strip — wayfinding only, not a museum badge */
+          links.push(
+            '<a class="itt-nav' +
+              homeCls +
+              on +
+              '" href="' +
+              R(item.href) +
+              '">' +
+              '<font color="' +
+              (on || homeCls ? "#FFFFFF" : "#FFFF99") +
+              '">' +
+              (homeCls ? "<b>" + escapeHtml(item.label) + "</b>" : escapeHtml(item.label)) +
+              "</font></a>"
+          );
+        }
+        var bar = document.createElement("div");
+        bar.id = "itt-exhibit-nav";
+        /* Home alone on the right; subtitle on its own row (prevents nowrap overflow) */
+        var homeLink =
+          '<a class="itt-nav-home" href="' +
+          homeHref +
+          '" title="Back to this year\'s Starting Point">' +
+          '<font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b>← Start</b></font></a>';
+        var subLine = "";
+        if (config.navSubtitle) {
+          subLine =
+            '<div class="itt-nav-sub" style="font:10px/1.3 Arial,Helvetica,sans-serif;color:#99CCFF;' +
+            'padding:0 6px 4px;background:#000080">' +
+            escapeHtml(config.navSubtitle) +
+            "</div>";
+        }
+        bar.innerHTML =
+          '<table width="100%" cellpadding="4" cellspacing="0" border="0" bgcolor="#000080" class="itt-nav-table">' +
+          "<tr>" +
+          '<td class="itt-nav-links-cell" style="vertical-align:middle">' +
+          '<div class="itt-nav-linkrow">' +
+          links.join("") +
+          "</div></td>" +
+          '<td align="right" class="itt-nav-home-cell" style="vertical-align:middle">' +
+          homeLink +
+          "</td></tr></table>" +
+          subLine;
+        /* Soft wrap long year navs inside narrow iframe */
+        if (!document.getElementById("itt-nav-overflow-css")) {
+          var navCss = document.createElement("style");
+          navCss.id = "itt-nav-overflow-css";
+          navCss.type = "text/css";
+          navCss.appendChild(
+            document.createTextNode(
+              "#itt-exhibit-nav{max-width:100%;overflow:hidden;box-sizing:border-box}" +
+                "#itt-exhibit-nav .itt-nav-table{table-layout:fixed;width:100%;max-width:100%}" +
+                "#itt-exhibit-nav .itt-nav-links-cell{overflow:hidden;width:auto}" +
+                "#itt-exhibit-nav .itt-nav-links-cell .itt-nav-linkrow{" +
+                "display:flex;flex-wrap:wrap;gap:2px 8px;align-items:center;" +
+                "line-height:1.4;font:12px/1.4 Arial,Helvetica,sans-serif}" +
+                "#itt-exhibit-nav a.itt-nav{white-space:nowrap;text-decoration:none}" +
+                "#itt-exhibit-nav .itt-nav-sep{opacity:0.45;user-select:none}" +
+                "#itt-exhibit-nav .itt-nav-home-cell{width:4.5em;white-space:nowrap}" +
+                "#itt-exhibit-nav .itt-nav-sub{" +
+                "box-sizing:border-box;white-space:nowrap;overflow:hidden;" +
+                "text-overflow:ellipsis;max-width:100%}"
+            )
+          );
+          (document.head || document.documentElement).appendChild(navCss);
+        }
+        try {
+          bar.style.maxWidth = "100%";
+          bar.style.overflow = "hidden";
+          bar.style.boxSizing = "border-box";
+        } catch (eBar) {
+          /* */
+        }
+        var slot = document.getElementById("itt-nav-slot");
+        if (slot) {
+          slot.innerHTML = "";
+          try {
+            slot.style.maxWidth = "100%";
+            slot.style.overflow = "hidden";
+            slot.style.boxSizing = "border-box";
+            slot.style.width = "100%";
+          } catch (eSlot) {
+            /* */
+          }
+          slot.appendChild(bar);
+          slot.setAttribute("aria-hidden", "false");
+        } else if (document.body.firstChild) {
+          document.body.insertBefore(bar, document.body.firstChild);
+        } else {
+          document.body.appendChild(bar);
+        }
       } else {
-        document.body.appendChild(bar);
+        /* Collapse reserved navy slot on Starting Point */
+        var emptySlot = document.getElementById("itt-nav-slot");
+        if (emptySlot) {
+          emptySlot.style.minHeight = "0";
+          emptySlot.style.margin = "0";
+          emptySlot.style.background = "transparent";
+          emptySlot.setAttribute("aria-hidden", "true");
+        }
       }
-      var exitA = document.getElementById("itt-exit-link");
-      if (exitA) {
-        exitA.onclick = function (e) {
-          e.preventDefault();
-          var path = location.pathname || "";
-          var yi = path.indexOf("/years/");
-          window.top.location.href = yi !== -1 ? path.slice(0, yi) + "/index.html" : "../../index.html";
-        };
+
+      /* Sticky wayfind: always reachable exit to year landing (not on Starting Point) */
+      if (!onHome && !document.getElementById("itt-wayfind")) {
+        /* Inline CSS so 1994 Mosaic + every year get the bar (not only period-1995 chain) */
+        if (!document.getElementById("itt-wayfind-css")) {
+          var st = document.createElement("style");
+          st.id = "itt-wayfind-css";
+          st.type = "text/css";
+          st.appendChild(
+            document.createTextNode(
+              /* pointer-events:none on bar so bid/checkout submits under the strip still work;
+               * only anchors capture clicks (flow masterpiece Pass 1). */
+              "#itt-wayfind{position:fixed;left:0;right:0;bottom:0;z-index:9999;" +
+                "display:block;text-align:center;padding:7px 12px;background:#000080;color:#fff;" +
+                "font-family:Arial,Helvetica,sans-serif;font-size:12px;border-top:2px solid #99ccff;" +
+                "pointer-events:none;}" +
+              "#itt-wayfind a{color:#ffff99;font-weight:bold;text-decoration:underline;margin:0 4px;" +
+                "pointer-events:auto;}" +
+              "#itt-wayfind a.itt-wayfind-home{color:#fff;background:#000060;border:1px solid #99ccff;" +
+                "text-decoration:none;padding:3px 10px;display:inline-block;}" +
+              "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
+              "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
+              "body.has-itt-wayfind{padding-bottom:56px !important;}" +
+              "html,body{max-width:100%;overflow-x:hidden;}" +
+              ".itt-nav-slot{max-width:100%;width:100%;box-sizing:border-box;overflow:hidden;margin-left:0;margin-right:0;}" +
+              "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
+                "background:#000060;text-decoration:none !important;}" +
+              "#itt-exhibit-nav a.itt-nav-home:hover{background:#0000aa;}"
+            )
+          );
+          (document.head || document.documentElement).appendChild(st);
+        }
+        var way = document.createElement("div");
+        way.id = "itt-wayfind";
+        way.setAttribute("role", "navigation");
+        way.setAttribute("aria-label", "Back to Starting Point");
+        var wayInner =
+          '<a class="itt-wayfind-home" href="' + homeHref + '">← Starting Point</a>' +
+          '<span class="itt-wayfind-sep" aria-hidden="true"> · </span>' +
+          '<a class="itt-wayfind-top" href="#itt-exhibit-nav">Top of page</a>';
+        try {
+          if (window.self === window.top) {
+            var y0 = (location.pathname || "").indexOf("/years/");
+            var hub0 = y0 !== -1 ? location.pathname.slice(0, y0) + "/index.html" : "../../../index.html";
+            wayInner +=
+              '<span class="itt-wayfind-sep" aria-hidden="true"> · </span>' +
+              '<a class="itt-wayfind-hub" href="' + hub0 + '">Year menu</a>';
+          }
+        } catch (eWay) { /* */ }
+        way.innerHTML = wayInner;
+        document.body.appendChild(way);
+        /* Room for sticky bar so last content is not covered */
+        try {
+          document.body.className = (document.body.className || "") + " has-itt-wayfind";
+        } catch (eCls) { /* */ }
       }
 
       if (config.footerNav && config.footerNav.length && !document.getElementById("itt-exhibit-foot")) {
         var foot = document.createElement("div");
         foot.id = "itt-exhibit-foot";
         var fl = [];
+        /* Lead with Starting Point so visitors never hunt for it */
+        fl.push(
+          '<a class="itt-foot-home" href="' + homeHref + '"><b>← Starting Point</b></a>'
+        );
         for (var f = 0; f < config.footerNav.length; f++) {
-          fl.push('<a href="' + R(config.footerNav[f].href) + '">' + escapeHtml(config.footerNav[f].label) + "</a>");
+          var flab = config.footerNav[f].label || "";
+          var fhref = config.footerNav[f].href || "";
+          /* Skip duplicate Starting Point / Start entries from config */
+          if (/starting point|^start$|^home$/i.test(flab) || String(fhref).indexOf("pages/home") !== -1) {
+            continue;
+          }
+          fl.push('<a href="' + R(fhref) + '">' + escapeHtml(flab) + "</a>");
         }
-        foot.innerHTML = '<hr><p align="center"><font size="2">' + fl.join(" · ") + "</font></p>";
+        /* Standalone (not inside desktop iframe): offer return to year menu / hub */
+        try {
+          if (window.self === window.top) {
+            var yi = (location.pathname || "").indexOf("/years/");
+            var hub = yi !== -1 ? location.pathname.slice(0, yi) + "/index.html" : "../../../index.html";
+            fl.push('<a href="' + hub + '" id="itt-year-menu-link"><b>Year menu</b></a>');
+          }
+        } catch (eTop) { /* */ }
+        foot.innerHTML =
+          '<hr><p align="center" class="itt-exhibit-foot-line"><font size="2">' +
+          fl.join(" · ") +
+          "</font></p>";
         document.body.appendChild(foot);
       }
     }
 
 
     api.showFlash = showFlash;
+    api.actionFeedback = actionFeedback;
+    api.resolveStatusNode = resolveStatusNode;
     api.markTourProgress = markTourProgress;
+    api.markTourUsed = markTourUsed;
+    api.tourStepUsed = tourStepUsed;
+    api.tourStepVisited = tourStepVisited;
     api.renderCounter = renderCounter;
     api.renderTour = renderTour;
     api.renderActivity = renderActivity;
-    api.injectNav = injectNav;
+    api.injectNav = function () {
+      injectNav();
+      /* UX pack hooks — safe no-ops if js/ux not loaded */
+      try {
+        if (ITT.UX && typeof ITT.UX.bootContent === "function") {
+          ITT.UX.bootContent(document);
+        }
+      } catch (eUx) { /* */ }
+    };
     api.ensureFlashHost = ensureFlashHost;
   };
 
@@ -365,6 +716,15 @@
       var escapeHtml = api.escapeHtml;
       if (config.features && (config.features.nav || config.features.museumBar)) {
         api.injectNav();
+      }
+      /* First-night trail strip + passport wiring */
+      try {
+        var MP0 = ITT.MuseumProgress;
+        if (MP0 && typeof MP0.injectTrailBar === "function") {
+          MP0.injectTrailBar(document);
+        }
+      } catch (eNight) {
+        /* */
       }
       api.markTourProgress();
       var counters = document.querySelectorAll(".hit-counter");
@@ -436,7 +796,7 @@
             '<tr><td style="padding:10px 12px;background:#ffffff">' +
             '<font face="Tahoma,Arial,sans-serif" size="2" color="#000">' + bodyHtml + "</font></td></tr>" +
             '<tr bgcolor="#ece9d8"><td style="padding:6px 8px;text-align:right;border-top:1px solid #aca899">' +
-            '<font size="1" color="#666">Windows XP · File Download (exhibit)</font></td></tr></table>'
+            '<font size="1" color="#666">File Download</font></td></tr></table>'
           );
         }
         /* win9x / nav / ie6 — File Download dialog grammar */
@@ -569,7 +929,7 @@
           (era === "win9x" || era === "ie6"
             ? "<b>Saving:</b> " + escapeHtml(file) + " from the Internet<br>" +
               "<font size=\"1\">" + escapeHtml(product) + " · " + sizeMb + " MB class · " + escapeHtml(speedLine) + "</font><br><br>" +
-              "Estimated time left: ~" + estMin + " min (sped up for exhibit)<br><br>" +
+              "Estimated time left: ~" + estMin + " min<br><br>" +
               '<div data-itt-dl-blocks>' + graphicBar(0) + "</div>"
             : era === "web2"
             ? "Getting <b>" + escapeHtml(file) + "</b>…<br>" +
@@ -721,7 +1081,7 @@
         if (el.getAttribute("data-itt-download") != null) return;
         var msg = el.getAttribute("data-itt-theater") ||
           (el.form && el.form.getAttribute("data-itt-theater")) ||
-          "Done (museum theater).";
+          "Done.";
         var panelSel = el.getAttribute("data-itt-panel") ||
           (el.form && el.form.getAttribute("data-itt-panel"));
         if (panelSel) {

@@ -1,0 +1,18 @@
+SOURCE: https://web.archive.org/web/200209* / http://www.apple.com/ipod/
+STATUS: [wa-failed] 2026-07-25 densify pass 4 — connection refused on multiple timestamps
+ROLE: Apple iPod gen 2 product page
+YEAR TARGET: 2002
+
+FALLBACK NARRATIVE (Cybercultural ipod-2002, visited 2026-07-25):
+- Gen 1 sold ~125k by EOY 2001
+- Mar 2002: 10GB model (~2,000 songs)
+- Aug 2002: 2nd generation — touch wheel (not mechanical), max storage 20GB
+- Windows support via MusicMatch Jukebox (not full iTunes for Windows as primary story)
+- Label courtship for future store; Pressplay + MusicNet failures
+- Jobs: people want to own music not rent (streaming rejected narrative)
+- FairPlay DRM lore is Store-era — do not center in 2002 product room
+- ANACHRONISM: no iTunes Music Store (Apr 2003)
+
+BUILD NOTES:
+Product room: gen2 specs, touch wheel callout, MusicMatch Windows path, "no store yet" honesty strip.
+Reuse 2001 iPod chrome densify; retarget copy only.

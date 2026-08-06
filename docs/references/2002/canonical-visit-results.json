@@ -1,0 +1,302 @@
+[
+  {
+    "slug": "cybercultural-internet-2002",
+    "url": "https://cybercultural.com/p/internet-2002/",
+    "role": "narrative spine",
+    "file": "internet-2002-notes.txt",
+    "status": "visited",
+    "bytes": 29761,
+    "title": "What the Internet Was Like in 2002 | Cybercultural",
+    "error": ""
+  },
+  {
+    "slug": "cybercultural-blogs-rss-2002",
+    "url": "https://cybercultural.com/p/blogs-rss-2002/",
+    "role": "blogosphere/TrackBack/Daypop",
+    "file": "blogs-rss-2002-notes.txt",
+    "status": "visited",
+    "bytes": 31035,
+    "title": "How the Blogosphere Takes Shape in 2002, Along With RSS 2.0 | Cybercultural",
+    "error": ""
+  },
+  {
+    "slug": "cybercultural-ipod-2002",
+    "url": "https://cybercultural.com/p/ipod-2002/",
+    "role": "iPod gen2 / no Store",
+    "file": "ipod-2002-notes.txt",
+    "status": "visited",
+    "bytes": 24450,
+    "title": "2002: The Second iPod and Steve Jobs on Music Streaming | Cybercultural",
+    "error": ""
+  },
+  {
+    "slug": "cybercultural-internet-2001",
+    "url": "https://cybercultural.com/p/internet-2001/",
+    "role": "handoff from 2001",
+    "file": "internet-2001-handoff-notes.txt",
+    "status": "visited",
+    "bytes": 30067,
+    "title": "What the Internet Was Like in 2001 | Cybercultural",
+    "error": ""
+  },
+  {
+    "slug": "pew-broadband",
+    "url": "https://www.pewresearch.org/internet/2002/06/23/main-report-the-broadband-difference/",
+    "role": "always-on stats",
+    "file": "pew-broadband-2002-notes.txt",
+    "status": "visited",
+    "bytes": 512896,
+    "title": "Main Report: The Broadband Difference | Pew Research Center",
+    "error": ""
+  },
+  {
+    "slug": "stopdesign-wired",
+    "url": "https://stopdesign.com/journal/2002/10/11/finally-were-live.html",
+    "role": "Wired CSS launch",
+    "file": "stopdesign-wired-notes.txt",
+    "status": "visited",
+    "bytes": 32499,
+    "title": "Finally, we&#039;re live | Stopdesign",
+    "error": ""
+  },
+  {
+    "slug": "wdm-year-2002",
+    "url": "https://www.webdesignmuseum.org/gallery/year-2002",
+    "role": "brand shortlist",
+    "file": "wdm-year-2002-notes.txt",
+    "status": "fail",
+    "bytes": 0,
+    "title": "",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "slug": "live-stats",
+    "url": "https://www.internetlivestats.com/total-number-of-websites/",
+    "role": "scale",
+    "file": "live-stats-2002-notes.txt",
+    "status": "visited",
+    "bytes": 27407,
+    "title": "Total number of Websites - Internet Live Stats",
+    "error": ""
+  },
+  {
+    "slug": "versionmuseum-amazon",
+    "url": "https://www.versionmuseum.com/history-of/amazon-website",
+    "role": "smile chronology",
+    "file": "versionmuseum-amazon-notes.txt",
+    "status": "visited",
+    "bytes": 56040,
+    "title": "31 Years of Amazon.com Website Design History - 34 Images - Version Museum",
+    "error": ""
+  },
+  {
+    "slug": "versionmuseum-yahoo",
+    "url": "https://www.versionmuseum.com/history-of/yahoo-website",
+    "role": "portal frames",
+    "file": "versionmuseum-yahoo-notes.txt",
+    "status": "visited",
+    "bytes": 33434,
+    "title": "32 Years of Yahoo.com Website Design History - 20 Images - Version Museum",
+    "error": ""
+  },
+  {
+    "slug": "guidebook-xp",
+    "url": "https://guidebookgallery.org/screenshots/winxp",
+    "role": "Luna chrome",
+    "file": "guidebook-xp-notes.txt",
+    "status": "fail",
+    "bytes": 0,
+    "title": "",
+    "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+    "slug": "evolt-browsers",
+    "url": "https://browsers.evolt.org/",
+    "role": "IE6/Mozilla installs path",
+    "file": "evolt-browsers-notes.txt",
+    "status": "visited",
+    "bytes": 21813,
+    "title": "browsers.evolt.org",
+    "error": ""
+  },
+  {
+    "slug": "wiki-friendster",
+    "url": "https://en.wikipedia.org/wiki/Friendster",
+    "role": "founding vs mass public",
+    "file": "friendster-wiki-notes.txt",
+    "status": "visited",
+    "bytes": 272388,
+    "title": "Friendster - Wikipedia",
+    "error": ""
+  },
+  {
+    "slug": "register-morpheus",
+    "url": "https://www.theregister.com/2002/03/15/old_morpheus_still_works/",
+    "role": "KaZaA/Morpheus chaos",
+    "file": "register-morpheus-2002-notes.txt",
+    "status": "visited",
+    "bytes": 158164,
+    "title": "Old Morpheus still works for unhacked users",
+    "error": ""
+  },
+  {
+    "slug": "wa-blogger",
+    "url": "https://web.archive.org/web/20021202091911id_/http://www.blogger.com/",
+    "role": "Blogger Pyra Dec 2002",
+    "file": "blogger-2002-12-wa-notes.txt",
+    "status": "visited",
+    "bytes": 25037,
+    "title": "BLOGGER",
+    "error": ""
+  },
+  {
+    "slug": "wa-mt-features",
+    "url": "https://web.archive.org/web/20021029153007id_/http://www.movabletype.org/features.shtml",
+    "role": "MT TrackBack features",
+    "file": "movabletype-features-2002-wa-notes.txt",
+    "status": "visited",
+    "bytes": 8802,
+    "title": "movabletype.org : Features",
+    "error": ""
+  },
+  {
+    "slug": "wa-mt-trackback",
+    "url": "https://web.archive.org/web/20020701050155id_/http://www.movabletype.org/docs/mtmanual_trackback.html",
+    "role": "TrackBack manual",
+    "file": "mt-trackback-manual-2002-wa-notes.txt",
+    "status": "visited",
+    "bytes": 17680,
+    "title": "TRACKBACK",
+    "error": ""
+  },
+  {
+    "slug": "wa-hiler",
+    "url": "https://web.archive.org/web/20020604065327id_/http://www.microcontentnews.com/articles/blogosphere.htm",
+    "role": "blogosphere word",
+    "file": "blogosphere-hiler-2002-wa-notes.txt",
+    "status": "visited",
+    "bytes": 58987,
+    "title": "Blogosphere: the emerging Media Ecosystem - How Weblogs and Journalists work together to Report, Filter and Break the News - Microcontent News, a Corante.com Microblog",
+    "error": ""
+  },
+  {
+    "slug": "wa-daypop-about",
+    "url": "https://web.archive.org/web/20020204141118id_/http://www.daypop.com/about.htm",
+    "role": "Daypop about",
+    "file": "daypop-about-2002-02-wa-notes.txt",
+    "status": "visited",
+    "bytes": 5861,
+    "title": "Daypop - About",
+    "error": ""
+  },
+  {
+    "slug": "wa-wired-pr",
+    "url": "https://web.archive.org/web/20021013195949id_/http://www.wired.com/news/culture/0,1284,55675,00.html",
+    "role": "Wired redesign PR",
+    "file": "wired-redesign-pr-2002-10-wa-notes.txt",
+    "status": "visited",
+    "bytes": 18391,
+    "title": "Wired News: Wired News: A Site for Your Eyes",
+    "error": ""
+  },
+  {
+    "slug": "wa-kazaa",
+    "url": "https://web.archive.org/web/20020820084135id_/http://www.kazaa.com/",
+    "role": "KaZaA marketing",
+    "file": "kazaa-2002-08-wa-notes.txt",
+    "status": "visited",
+    "bytes": 943,
+    "title": "(no title)",
+    "error": ""
+  },
+  {
+    "slug": "wa-mtv",
+    "url": "https://web.archive.org/web/20020808174847id_/http://www.mtv.com/",
+    "role": "MTV broadband portal",
+    "file": "mtv-2002-08-wa-notes.txt",
+    "status": "visited",
+    "bytes": 64924,
+    "title": "MTV.com - Home",
+    "error": ""
+  },
+  {
+    "slug": "wa-google",
+    "url": "https://web.archive.org/web/20021111080812id_/http://www.google.com/",
+    "role": "Google sparse + News-New!",
+    "file": "google-2002-11-wa-notes.txt",
+    "status": "visited",
+    "bytes": 2532,
+    "title": "Google",
+    "error": ""
+  },
+  {
+    "slug": "wa-amazon",
+    "url": "https://web.archive.org/web/20021015071523id_/http://www.amazon.com/exec/obidos/subst/home/home.html",
+    "role": "Amazon smile densify",
+    "file": "amazon-2002-10-wa-notes.txt",
+    "status": "visited",
+    "bytes": 41329,
+    "title": "Amazon.com--Earth's Biggest Selection",
+    "error": ""
+  },
+  {
+    "slug": "wa-yahoo",
+    "url": "https://web.archive.org/web/20021114161556id_/http://www.yahoo.com/",
+    "role": "Yahoo portal",
+    "file": "yahoo-2002-11-wa-notes.txt",
+    "status": "visited",
+    "bytes": 31524,
+    "title": "Yahoo!",
+    "error": ""
+  },
+  {
+    "slug": "wa-wikipedia",
+    "url": "https://web.archive.org/web/20020802160522id_/http://www.wikipedia.com/wiki/Main_Page",
+    "role": "Wikipedia densify",
+    "file": "wikipedia-en-2002-08-wa-notes.txt",
+    "status": "visited",
+    "bytes": 24627,
+    "title": "Main Page",
+    "error": ""
+  },
+  {
+    "slug": "wa-mozilla",
+    "url": "https://web.archive.org/web/20020606030900id_/http://www.mozilla.org/",
+    "role": "Mozilla 1.0 era",
+    "file": "mozilla-2002-06-wa-notes.txt",
+    "status": "visited",
+    "bytes": 11899,
+    "title": "mozilla.org",
+    "error": ""
+  },
+  {
+    "slug": "wa-googlenews",
+    "url": "https://web.archive.org/web/20020930111024id_/http://news.google.com/",
+    "role": "Google News beta",
+    "file": "googlenews-2002-09-wa-notes.txt",
+    "status": "visited",
+    "bytes": 60321,
+    "title": "Google News",
+    "error": ""
+  },
+  {
+    "slug": "wa-cnn",
+    "url": "https://web.archive.org/web/20021114161952id_/http://www.cnn.com/",
+    "role": "CNN year rails",
+    "file": "cnn-2002-11-wa-notes.txt",
+    "status": "visited",
+    "bytes": 51575,
+    "title": "CNN.com",
+    "error": ""
+  },
+  {
+    "slug": "wa-ebay",
+    "url": "https://web.archive.org/web/20021015084941id_/http://www.ebay.com/",
+    "role": "eBay continuity",
+    "file": "ebay-2002-10-wa-notes.txt",
+    "status": "visited",
+    "bytes": 51028,
+    "title": "eBay - The World's Online Marketplace",
+    "error": ""
+  }
+]

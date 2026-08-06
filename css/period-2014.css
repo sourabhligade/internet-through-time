@@ -1,0 +1,8 @@
+/* 2014 period — deltas on 2013 */
+@import url("period-2013.css");
+
+/* WhatsApp green product rooms */
+.wa-shell, .itt-whatsapp { --wa-green: #34b7f1; }
+body.year-2014 .wa-header { background: #075e54; color: #fff; }
+body.year-2014 .hb-alert { border: 2px solid #c00; background: #fff5f5; }
+body.year-2014 .ib-bucket { background: #e8f4ff; border: 1px solid #39c; }

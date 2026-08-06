@@ -1,0 +1,13 @@
+SOURCE: https://www.sec.gov/Archives/edgar/data/1308161/000118143105040705/rrd86058_6819.htm
+Also: LA Times July 19 2005 · Wikipedia Myspace
+FETCHED: 2026-07-30 web-expand pass
+---
+Los Angeles, CA, July 18, 2005 — News Corporation signed definitive agreement to acquire Intermix Media, Inc. for approximately $580 million in cash ($12 per common share).
+
+- Acquisition includes MySpace.com — "world's fastest-growing social networking portal"
+- Intermix exercised option to acquire remaining 47% of MySpace it did not already own
+- MySpace + Intermix's 30+ sites join newly formed Fox Interactive Media
+- LA Times: Murdoch deal continues old-media rush for web ad dollars; expected close Q4; Chernin: triple web traffic into top-5 class from ~40s
+- Period scale claim: ~16 million monthly users at acquisition (Wikipedia class)
+
+EXHIBIT: MySpace about — July 18/19 2005 News Corp / Intermix $580M · Fox Interactive Media · still mass social.

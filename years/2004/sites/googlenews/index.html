@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Google News — BETA</title>
+<link rel="stylesheet" href="../../../../css/period-2004.css">
+<style>
+.gn-tab { margin-right: 10px; font-size: 13px; cursor: pointer; color: #00c; text-decoration: underline; background:none; border:0; padding:0; font-family:Arial,sans-serif; }
+.gn-tab.active { font-weight: bold; color: #000; text-decoration: none; cursor: default; }
+.gn-panel { display: none; }
+.gn-panel.active { display: block; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="720" align="center" cellpadding="8" style="font-family:Arial,sans-serif;font-size:13px">
+<tr><td>
+ <img src="../../../../assets/period/2004/googlenews/logo.gif" width="24" height="24" alt="">
+ <b style="font-size:18px">Google News</b> <font color="#c00"><b>BETA</b></font>
+ <p>Search and browse <b>4,000</b> continuously updated news sources. Stories are grouped automatically into clusters.</p>
+ <p id="gn-tabs">
+ <button type="button" class="gn-tab active" data-gn-tab="top">Top Stories</button>
+ <button type="button" class="gn-tab" data-gn-tab="world">World</button>
+ <button type="button" class="gn-tab" data-gn-tab="us">U.S.</button>
+ <button type="button" class="gn-tab" data-gn-tab="biz">Business</button>
+ <button type="button" class="gn-tab" data-gn-tab="tech">Sci/Tech</button>
+ </p>
+ <form data-google-search action="../google/search.html" method="get" style="margin:8px 0">
+ <input name="q" size="40" placeholder="Search news…">
+ <input type="submit" value="Search News">
+ </form>
+ <hr>
+ <div class="gn-panel active" data-gn-panel="top">
+ <h3 style="margin-bottom:4px">Top Stories <font size="1" color="#666">(sample Sep 2003 era)</font></h3>
+ <ul>
+ <li><b>Israel ends siege of Arafat compound</b> — cluster of international wires</li>
+ <li><b>UN–Iraq weapons inspectors talks</b> — diplomacy desk</li>
+ <li><b>Ryder Cup / sports wires</b> — auto-clustered sports</li>
+ <li><b>Cabinet reshuffles &amp; markets</b> — business/world mix</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="world">
+ <h3>World</h3>
+ <ul>
+ <li>Middle East compound siege ends — multi-source cluster</li>
+ <li>European markets react to bank concerns</li>
+ <li>Asia: cabinet reshuffles and regional politics</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="us">
+ <h3>U.S.</h3>
+ <ul>
+ <li>Airport security / box-cutter arrests still in news cycles</li>
+ <li>Congress and campaign coverage</li>
+ <li>Giuliani book / leadership commentary clusters</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="biz">
+ <h3>Business</h3>
+ <ul>
+ <li>German banks under pressure — market wires</li>
+ <li>Tech spending still cautious post-bust</li>
+ <li>Broadband providers restructure after Excite@Home</li>
+ </ul>
+ </div>
+ <div class="gn-panel" data-gn-panel="tech">
+ <h3>Sci/Tech</h3>
+ <ul>
+ <li>Google News BETA itself is the story</li>
+ <li>P2P: KaZaA / Morpheus FastTrack chaos</li>
+ <li>Mozilla 1.0 · Phoenix 0.1 · IE6 monopoly sleep</li>
+ <li>Wired News all-CSS redesign (Oct)</li>
+ </ul>
+ </div>
+ <p style="font-size:11px;color:#444">
+ In 2003 Google News was not treating blogs as mainstream journalism sources.
+ <a href="../google/index.html">← Google Web</a>
+ </p>
+</td></tr>
+</table>
+<script>
+(function(){
+ var tabs = document.querySelectorAll("[data-gn-tab]");
+ var panels = document.querySelectorAll("[data-gn-panel]");
+ for (var i = 0; i < tabs.length; i++) {
+ tabs[i].addEventListener("click", function () {
+ var id = this.getAttribute("data-gn-tab");
+ for (var j = 0; j < tabs.length; j++) tabs[j].classList.remove("active");
+ this.classList.add("active");
+ for (var k = 0; k < panels.length; k++) {
+ panels[k].classList.toggle("active", panels[k].getAttribute("data-gn-panel") === id);
+ }
+ });
+ }
+})();
+</script>
+<script src="../../../../js/immersion-2004.js"></script>
+</body>
+</html>

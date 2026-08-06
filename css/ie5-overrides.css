@@ -587,3 +587,331 @@ body.browser-ie5 .dialog-x:active {
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
+
+/* ============================================================
+   Windows XP + IE 6 chrome (years 2001–2002)
+   Body: class="os-winxp browser-ie6 year-200x"
+   Note: period-2002.css lives in the iframe only — shell needs these rules.
+   ============================================================ */
+body.os-winxp,
+body.browser-ie6 {
+  --xp-face: #ece9d8;
+  --xp-hi: #ffffff;
+  --xp-lo: #aca899;
+  --xp-dk: #716f64;
+  --xp-blue: #0a246a;
+  --xp-blue-mid: #3a6ea5;
+  --xp-blue-lite: #a6caf0;
+  --xp-task: #245edc;
+  --xp-task2: #1941a5;
+}
+
+/* XP desktop “space” — soft Bliss-class sky → hills (no hard blue banding at viewport edges) */
+body.os-winxp .desktop {
+  background-color: #3a7bd5;
+  background-image:
+    /* soft green hills near bottom — wider, softer falloff */
+    radial-gradient(ellipse 140% 70% at 50% 108%, #5a9c4a 0%, #3d7a38 28%, rgba(45, 107, 48, 0.55) 48%, transparent 68%),
+    /* gentle side vignette so edges don’t look like flat blue bars */
+    radial-gradient(ellipse 90% 100% at 50% 40%, transparent 55%, rgba(10, 36, 106, 0.18) 100%),
+    /* sky: light horizon blue → mid Luna blue → deep (smooth stops) */
+    linear-gradient(
+      180deg,
+      #9ec9f5 0%,
+      #6eaaea 22%,
+      #4589d8 48%,
+      #2f6fc4 72%,
+      #2459a8 100%
+    );
+}
+
+/* IE6 window chrome — Luna silver face + authentic blue outer frame (not gray bevel) */
+body.browser-ie6 .browser {
+  background: var(--xp-face);
+  /* Outer Luna blue frame */
+  border-top: 3px solid #0a246a;
+  border-left: 3px solid #0a246a;
+  border-right: 3px solid #08205a;
+  border-bottom: 3px solid #061a4a;
+  /* Inner highlight/shadow so the blue edge has depth, not a flat slab */
+  box-shadow:
+    inset 1px 1px 0 rgba(166, 202, 240, 0.85),
+    inset -1px -1px 0 rgba(8, 32, 90, 0.45),
+    1px 1px 0 rgba(0, 0, 40, 0.25);
+}
+/* Maximized: thinner blue edge (XP flush-to-taskbar look) */
+body.os-winxp .desktop.browser-max .browser.maximized,
+body.browser-ie6 .browser.maximized {
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  box-shadow:
+    inset 1px 0 0 rgba(166, 202, 240, 0.55),
+    inset -1px 0 0 rgba(8, 32, 90, 0.35);
+}
+body.browser-ie6 .titlebar {
+  /* Luna titlebar: bright top lip → saturated mid → slightly cooler base */
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 38%),
+    linear-gradient(180deg, #1a4fa8 0%, #2b6fd4 42%, #245edc 70%, #1e4fb8 100%);
+  border-bottom: 1px solid #061a4a;
+  min-height: 26px;
+  height: auto;
+  padding: 2px 3px;
+  /* soft top edge light so the blue bar doesn’t read as a hard clip */
+  box-shadow: inset 0 1px 0 rgba(180, 210, 255, 0.55);
+}
+body.browser-ie6 .titlebar .title {
+  color: #fff;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 40, 0.45);
+}
+/* Caption buttons sit cleanly on the blue title edge */
+body.browser-ie6 .titlebar .win-btn {
+  width: 21px;
+  height: 21px;
+  margin-left: 2px;
+  border-radius: 3px;
+  border: 1px solid #061a4a;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 45%, transparent 100%),
+    linear-gradient(180deg, #3d7ee8 0%, #245edc 55%, #1a48b0 100%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  line-height: 18px;
+}
+body.browser-ie6 .titlebar .win-btn:hover {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, transparent 50%),
+    linear-gradient(180deg, #5a9af5 0%, #2d6de0 60%, #1e4fb8 100%);
+}
+body.browser-ie6 .titlebar .win-btn#btn-close,
+body.browser-ie6 .titlebar .win-btn[aria-label="Close"] {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, transparent 45%),
+    linear-gradient(180deg, #e07070 0%, #c42b2b 55%, #9a1a1a 100%);
+  border-color: #5a1010;
+}
+body.browser-ie6 .titlebar .icon {
+  background: linear-gradient(180deg, #4a8af0, #1a4bb8);
+  border: 1px solid #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #0a246a;
+}
+body.browser-ie6 .menubar,
+body.browser-ie6 .toolbar,
+body.browser-ie6 .locationbar,
+body.browser-ie6 .dirbar,
+body.browser-ie6 .statusbar {
+  background: var(--xp-face);
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 11px;
+}
+/* Soft join between silver chrome and content — avoids a hard blue “gap” line */
+body.browser-ie6 .content-frame {
+  border-top: 1px solid var(--xp-lo);
+  background: #fff;
+}
+body.browser-ie6 .toolbar {
+  border-bottom: 1px solid var(--xp-lo);
+}
+body.browser-ie6 .statusbar {
+  display: flex;
+  align-items: stretch;
+  gap: 3px;
+  border-top: 1px solid var(--xp-hi);
+  padding: 2px 3px;
+  min-height: 20px;
+}
+body.browser-ie6 .statusbar .status-text,
+body.browser-ie6 .statusbar .status-done {
+  border-top: 1px solid var(--xp-lo);
+  border-left: 1px solid var(--xp-lo);
+  border-right: 1px solid var(--xp-hi);
+  border-bottom: 1px solid var(--xp-hi);
+  padding: 1px 6px;
+  background: var(--xp-face);
+}
+body.browser-ie6 .statusbar .status-text { flex: 1; }
+body.browser-ie6 .statusbar .status-done {
+  flex: 0 0 auto;
+  min-width: 110px;
+  text-align: center;
+}
+
+/* Luna taskbar — soft blue edge at top (meets desktop/window without a hard cut) */
+body.os-winxp .win95-taskbar,
+body.year-2001 .win95-taskbar,
+body.year-2002 .win95-taskbar,
+body.year-2003 .win95-taskbar,
+body.year-2004 .win95-taskbar,
+body.year-2005 .win95-taskbar {
+  background-color: var(--xp-task);
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 22%),
+    linear-gradient(180deg, #4a8af0 0%, #2d6de0 38%, #245edc 62%, #1a48b0 100%);
+  border-top: 1px solid #8eb8ff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 -1px 0 rgba(8, 32, 90, 0.2);
+  height: 30px;
+  padding: 2px 4px;
+  align-items: center;
+  color: #fff;
+}
+body.year-2002 .win95-taskbar {
+  background-image:
+    url("../assets/period/2002/xp/taskbar.gif"),
+    linear-gradient(180deg, #3f7ef0 0%, #245edc 40%, #1a4bb8 100%);
+  background-repeat: repeat-x, no-repeat;
+  background-size: auto 100%, 100% 100%;
+}
+body.os-winxp .win95-task-btn,
+body.year-2001 .win95-task-btn,
+body.year-2002 .win95-task-btn,
+body.year-2003 .win95-task-btn,
+body.year-2004 .win95-task-btn,
+body.year-2005 .win95-task-btn {
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  height: 22px;
+  padding: 0 10px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, #5a91f0 0%, #245edc 55%, #1a4bb8 100%);
+  border: 1px solid #0a246a;
+  border-radius: 3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 40, 0.15);
+}
+body.os-winxp .win95-task-btn:active,
+body.os-winxp .win95-task-btn.active,
+body.year-2002 .win95-task-btn:active,
+body.year-2005 .win95-task-btn:active {
+  background: linear-gradient(180deg, #1a4bb8 0%, #245edc 100%);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+body.os-winxp .win95-tray,
+body.year-2001 .win95-tray,
+body.year-2002 .win95-tray,
+body.year-2003 .win95-tray,
+body.year-2004 .win95-tray,
+body.year-2005 .win95-tray {
+  border: 1px solid #0a246a;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, transparent 40%),
+    linear-gradient(180deg, #3f7ef0, #1a4bb8);
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 11px;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+body.os-winxp .start-menu-banner,
+body.year-2001 .start-menu-banner,
+body.year-2002 .start-menu-banner,
+body.year-2003 .start-menu-banner,
+body.year-2004 .start-menu-banner,
+body.year-2005 .start-menu-banner {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, transparent 35%),
+    linear-gradient(180deg, #0a246a 0%, #245edc 55%, #3a6ea5 100%);
+}
+body.os-winxp .start-banner-text {
+  color: #fff;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+body.os-winxp .start-menu-item:hover {
+  background: #316ac5;
+  color: #fff;
+}
+
+/* Dialogs / connect on IE6 — Luna blue title edge matches shell */
+body.browser-ie6 .dialog-titlebar {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
+    linear-gradient(90deg, #0a246a, #245edc 55%, #6ea6ef);
+  color: #fff;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: inset 0 1px 0 rgba(180, 210, 255, 0.45);
+}
+body.browser-ie6 .dialog,
+body.browser-ie6 .connect-box {
+  background: var(--xp-face);
+  /* thin blue outer frame + silver inner bevel */
+  border: 2px solid #0a246a;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.9),
+    inset -1px -1px 0 rgba(113, 111, 100, 0.65),
+    2px 2px 0 rgba(0, 0, 40, 0.2);
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+}
+body.browser-ie6 .connect-box h2 {
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, transparent 45%),
+    linear-gradient(90deg, #0a246a, #245edc 60%, #6ea6ef);
+  color: #fff;
+  margin: -8px -10px 10px;
+  padding: 4px 8px;
+}
+body.browser-ie6 .dialog-btns button,
+body.browser-ie6 .connect-box button {
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  min-width: 72px;
+  height: 24px;
+  background: var(--xp-face);
+  border-top: 1px solid var(--xp-hi);
+  border-left: 1px solid var(--xp-hi);
+  border-right: 1px solid var(--xp-dk);
+  border-bottom: 1px solid var(--xp-dk);
+  border-radius: 0;
+  cursor: default;
+}
+body.browser-ie6 .dialog-btns button:hover,
+body.browser-ie6 .connect-box button:hover {
+  background: #f5f4ec;
+}
+
+body.os-winxp .exit-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    linear-gradient(90deg, #0a246a, #245edc 70%, #3a6ea5);
+  color: #fff;
+  border-bottom: 1px solid #061a4a;
+  box-shadow: inset 0 1px 0 rgba(180, 210, 255, 0.35);
+  padding: 3px 10px;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  min-height: 22px;
+}
+body.os-winxp .exit-bar a {
+  color: #ffe566;
+  text-decoration: none;
+  padding: 1px 8px;
+}
+body.os-winxp .exit-bar a:hover {
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.08);
+}

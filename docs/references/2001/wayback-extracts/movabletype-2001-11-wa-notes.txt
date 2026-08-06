@@ -1,0 +1,20 @@
+SOURCE: https://web.archive.org/web/20011202193043id_/http://movabletype.org/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: MOVABLE TYPE :: Personal Publishing System
+ROLE: P1 Movable Type professionalization (launch Oct 8 2001)
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Product: Personal Publishing System by Ben & Mena Trott
+- Nov 5 2001: Version 1.2 released — export, image popup templates, link templates to files, Greymatter import, Recently Updated List, weblogs.com XML-RPC ping, perl 5.004 support
+- Roadmap toward 1.3: Blogger API XML-RPC, search/replace, multi-author reassign, security
+- Donations via PayPal / Amazon gift certificates → license keys
+- Spotlight sites; support forums (Ikonboard); donor list
+- Feature wishlist visible: SOAP, blog cloning, multiple categories, FTP, email posting…
+
+BUILD:
+- Product room + features list + download/donate theater (local)
+- Full TrackBack peer-ping is 2002 differentiator — 2001 = install/pro templates/RSS OOTB story
+- Static HTML generation claim on labels
+
+NARRATIVE: blogs-rss-2001 · MetaFilter praise · Mena was Blogger user

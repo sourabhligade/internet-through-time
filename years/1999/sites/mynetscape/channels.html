@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>My Netscape — channels</title>
+<title>My Netscape — Channels</title>
 <link rel="stylesheet" href="../../../../css/period-1999.css">
 </head>
-<body bgcolor="#FFFFFF">
+<body bgcolor="#ffffff" link="#0000cc">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <table width="640" align="center" cellpadding="12"><tr><td>
 <font face="Arial" size="2">
-<h1 style="font-size:16px">Add a channel</h1>
-<p>Paste a channel URL, preview headlines, pin the module to My Netscape.
-In the real product this required a Netscape account; here it is documentary UI.</p>
-<form onsubmit="alert('Exhibit: channel would be saved to My Netscape layout.');return false;">
-Channel URL: <input size="40" value="http://example.com/netscape.rdf">
-<input type="submit" value="Preview" class="btn9x">
+<h1 style="font-size:18px;color:#003366">My Netscape — Add Channel</h1>
+<p>Subscribe a channel (RDF / early RSS) to your My Netscape layout — 1999 portal personalization.</p>
+<form data-myns-channel style="padding:10px;background:#f0f4ff;border:1px solid #99a">
+ Channel URL:<br>
+ <input name="url" size="48" class="field9x" value="http://example.com/netscape.rdf"><br><br>
+ Title (optional):<br>
+ <input name="title" size="32" class="field9x" value="My channel"><br><br>
+ <input type="submit" value="Add channel" class="btn9x">
 </form>
+<div data-myns-list style="margin-top:12px"></div>
 <p><a href="index.html">« My Netscape</a> · <a href="rss.html">RSS 0.90</a></p>
-</font></td></tr></table>
+</font>
+</td></tr></table>
 <script src="../../../../js/immersion-1999.js"></script>
 </body></html>

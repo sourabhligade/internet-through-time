@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>last.fm / Audioscrobbler seed — 2003</title>
+<link rel="stylesheet" href="../../../../css/period-2004.css">
+</head>
+<body bgcolor="#ffffff" text="#000" link="#d51007">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="600" align="center" cellpadding="14"><tr><td>
+<img src="../../../../assets/period/2004/lastfm/logo.gif" alt="last.fm" height="32"><br><br>
+<font face="Arial" size="2">
+<h1 style="font-size:18px;color:#d51007">Social music seed · 2003</h1>
+<p><b>last.fm</b> and <b>Audioscrobbler</b> start in the early 2000s music-social story (scrobbling what you play so charts and “similar artists” emerge). Cybercultural places this seed in the 2003 music ecosystem alongside iPod gen 2 and P2P chaos.</p>
+<form data-lastfm-scrobble style="background:#fff0f0;border:1px solid #d51007;padding:10px">
+ Track you just “played”:<br>
+ <input name="track" size="40" value="The White Stripes — Fell in Love With a Girl"><br><br>
+ <button type="submit">Scrobble (theater)</button>
+</form>
+<div data-lastfm-status style="margin-top:8px;font-size:12px;color:#060"></div>
+<ul data-lastfm-recent style="font-size:12px"></ul>
+<p style="font-size:11px;color:#666">Museum only — no real audio. Later last.fm brand merges / evolves; this is the <b>seed</b> room.</p>
+<p><a href="../kazaa/index.html">KaZaA wild west</a> · <a href="../apple/ipod.html">iPod gen 2</a></p>
+</font>
+</td></tr></table>
+<script>
+(function(){
+ var form = document.querySelector("[data-lastfm-scrobble]");
+ if (!form) return;
+ var key = "itt02-lastfm-recent";
+ function load(){ try { return JSON.parse(localStorage.getItem(key)||"[]"); } catch(e){ return []; } }
+ function save(a){ localStorage.setItem(key, JSON.stringify(a)); }
+ function paint(){
+ var ul = document.querySelector("[data-lastfm-recent]");
+ if (!ul) return;
+ ul.innerHTML = "";
+ load().forEach(function(t){
+ var li = document.createElement("li");
+ li.textContent = t;
+ ul.appendChild(li);
+ });
+ }
+ paint();
+ form.addEventListener("submit", function(ev){
+ ev.preventDefault();
+ var track = (form.querySelector('[name="track"]')||{}).value || "Unknown track";
+ var list = load();
+ list.unshift(new Date().toLocaleTimeString() + " · " + track);
+ if (list.length > 12) list = list.slice(0,12);
+ save(list);
+ paint();
+ var st = document.querySelector("[data-lastfm-status]");
+ if (st) st.textContent = "Scrobbled (local): " + track;
+ });
+})();
+</script>
+<script src="../../../../js/immersion-2004.js"></script>
+</body></html>

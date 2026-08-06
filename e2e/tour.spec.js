@@ -9,6 +9,7 @@ const TOUR_1998 = [
   { id: 'amazon', path: 'sites/amazon/music.html' },
   { id: 'ebay', path: 'sites/ebay/index.html' },
   { id: 'excite', path: 'sites/excite/index.html' },
+  { id: 'hotmail', path: 'sites/hotmail/index.html' },
 ];
 
 test.describe('guided tour', () => {
@@ -37,8 +38,10 @@ test.describe('guided tour', () => {
     await waitForImmersion(page, '1998');
     const frame = contentFrame(page);
     await expect(frame.locator('[data-itt-tour]')).toBeVisible({ timeout: 15000 });
-    await expect(frame.locator('[data-itt-tour]')).toContainText(/5\/5|Tour complete/i, {
-      timeout: 15000,
-    });
+    const n = TOUR_1998.length;
+    await expect(frame.locator('[data-itt-tour]')).toContainText(
+      new RegExp(n + '\\/' + n + '|Tour complete', 'i'),
+      { timeout: 15000 }
+    );
   });
 });

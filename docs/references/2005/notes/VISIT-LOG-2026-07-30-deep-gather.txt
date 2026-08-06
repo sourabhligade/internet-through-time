@@ -1,0 +1,19 @@
+OK cybercultural-internet-2005.txt HTTP200 text=8723 raw=26444
+OK cybercultural-top10-web20-2005.txt HTTP200 text=5680 raw=22483
+OK livestats-websites.txt HTTP200 text=6291 raw=27407
+OK apple-itunes-podcasts-20050628.txt HTTP200 text=5090 raw=123472
+OK youtube_apr2005-wa.txt HTTP200 text=680 raw=11918
+OK youtube_aug2005-wa.txt HTTP200 text=3644 raw=38164
+OK youtube_dec2005-wa.txt HTTP200 text=3325 raw=47744
+OK reddit_jul2005-wa.txt HTTP200 text=5306 raw=42820
+OK techcrunch_jun2005-wa.txt HTTP200 text=12000 raw=38445
+OK digg_oct2005-wa.txt HTTP200 text=6642 raw=26619
+OK maps_oct2005-wa.txt HTTP200 text=122 raw=19340
+OK delicious_sep2005-wa.txt HTTP200 text=10000 raw=53263
+OK facebook_sep2005-wa.txt HTTP200 text=1081 raw=14378
+OK thefacebook_may2005-wa.txt HTTP200 text=2000 raw=18328
+OK flickr_apr2005-wa.txt HTTP200 text=983 raw=20388
+OK myspace_aug2005-wa.txt HTTP200 text=1764 raw=23191
+OK housingmaps_2005-wa.txt HTTP200 text=1605 raw=35839
+OK google_jun2005-wa.txt HTTP200 text=882 raw=13217
+FAIL gmail_2005-wa.txt https://web.archive.org/web/20050615000000/http://gmail.google.com/ :: <urlopen error [Errno 61] Connection refused>

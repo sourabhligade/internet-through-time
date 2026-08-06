@@ -1,0 +1,19 @@
+# Facebook News Feed privacy controls — Sep 8, 2006
+# Source: https://about.fb.com/news/2006/09/facebook-launches-additional-privacy-controls-for-news-feed-and-mini-feed/
+# Visited: 2026-07-31 (title/date confirmed; page body may be thin in modern crawl)
+
+LOCKED FACTS:
+- News Feed / Mini-Feed launched ~Sep 5–6 2006 (Wikipedia Feed: Sep 6)
+- Additional privacy controls announced Sep 8 2006 after user backlash
+- Product pair: News Feed + Mini-Feed
+
+COPY BANK:
+- News Feed
+- Mini-Feed
+- privacy controls
+- backlash / privacy revolt (period press language)
+
+EXHIBIT:
+- Facebook feed room honesty blurb
+- Privacy note under feed list
+- Not modern Reactions UI

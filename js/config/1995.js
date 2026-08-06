@@ -46,10 +46,16 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/playable/index.html": "http://museum.local/years/1995/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1995/playable/game.html",
       "sites/hotwired/index.html": "http://www.hotwired.com/",
       "sites/amazon/eyes.html": "http://www.amazon.com/eyes",
       "sites/microsoft/index.html": "http://www.microsoft.com/",
+      "sites/microsoft/plus.html": "http://www.microsoft.com/windows/plus/",
+      "sites/microsoft/ie.html": "http://www.microsoft.com/ie/",
       "sites/netscape/index.html": "http://home.netscape.com/",
+      "sites/netscape/features.html": "http://home.netscape.com/comprod/products/navigator/version_2.0/",
+      "sites/netscape/download.html": "http://home.netscape.com/download/",
       "sites/whitehouse/index.html": "http://www.whitehouse.gov/",
 
       "sites/yahoo/Reference/Dictionaries/index.html": "http://www.yahoo.com/Reference/Dictionaries/index.html",
@@ -130,6 +136,7 @@
       "sites/hotwired/agent.html": "http://www.hotwired.com/agent.html",
       "sites/hotwired/coin.html": "http://www.hotwired.com/coin.html",
       "pages/home.html": "http://home.nerf.edu/web1995/",
+      "pages/map.html": "http://museum.local/years/1995/map/",
       "pages/about.html": "http://home.nerf.edu/web1995/about.html",
       "pages/cool.html": "http://home.netscape.com/home/whats-cool.html",
       "pages/whats-new.html": "http://home.netscape.com/home/whats-new.html",
@@ -256,6 +263,7 @@
       "sites/hotwired/agent.html": "Agent",
       "sites/hotwired/coin.html": "Coin",
       "pages/home.html": "Welcome to the World Wide Web — 1995",
+      "pages/map.html": "1995 — UX flow map",
       "pages/about.html": "About / Sources — 1995",
       "pages/cool.html": "What's Cool!",
       "pages/whats-new.html": "What's New!",

@@ -16,12 +16,19 @@
   var bust = "";
   var qi = src.indexOf("?");
   if (qi !== -1) bust = src.slice(qi);
-  // Order: optional extract modules first, then create (full controller for now)
+  // Order: pure helpers first, then create (wires + chrome/history)
   var parts = [
+    "museum-progress.js",
+    "browser/navigate.js",
     "browser/connect.js",
     "browser/load-theater.js",
     "browser/create.js",
-    "browser/year-boot.js"
+    "browser/year-boot.js",
+    /* UX pack (U1 shell coach · honesty chip) — remove these lines to disable */
+    "ux/flags.js",
+    "ux/copy-bank.js",
+    "ux/shell-coach.js",
+    "ux/boot-shell.js"
   ];
   for (var i = 0; i < parts.length; i++) {
     document.write('<script src="' + base + parts[i] + bust + '"><\/script>');

@@ -2,76 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Wired News</title>
+<title>Wired News — A Site for Your Eyes (2002 CSS)</title>
 <link rel="stylesheet" href="../../../../css/period-2002.css">
 <style>
-/* 2002 standards beat: layout driven by CSS, not nested tables alone */
-.wn-wrap{max-width:720px;margin:0 auto;font-family:Georgia,"Times New Roman",serif;color:#222}
-.wn-top{background:#000;color:#fff;padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
-.wn-top a{color:#f00;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;margin-left:12px}
-.wn-hero{padding:16px 14px;border-bottom:1px solid #ccc}
-.wn-hero h1{font-size:28px;font-weight:normal;margin:0 0 8px;letter-spacing:-0.5px}
-.wn-grid{display:block;padding:12px 14px}
-.wn-col{float:left;width:62%}
-.wn-rail{float:right;width:34%;background:#f5f5f5;padding:10px;font-family:Arial,sans-serif;font-size:12px}
-.wn-story{margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid #eee;font-size:14px;line-height:1.45}
-.wn-story h2{font-size:18px;margin:0 0 4px;font-weight:normal}
-.wn-story h2 a{color:#c00;text-decoration:none}
-.wn-meta{font-family:Arial,sans-serif;font-size:11px;color:#666}
-.wn-foot{clear:both;padding:12px 14px;font-family:Arial,sans-serif;font-size:11px;color:#666;border-top:1px solid #ccc}
+.wired-css-shell { max-width: 680px; margin: 16px auto; font-family: Georgia, serif; color: #222; }
+.wired-css-shell header { border-bottom: 3px solid #c00; padding-bottom: 8px; margin-bottom: 16px; }
+.wired-css-shell h1 { font-size: 1.6em; margin: 0; letter-spacing: -0.02em; }
+.wired-css-shell .tag { font-family: Arial, sans-serif; font-size: 11px; color: #c00; text-transform: uppercase; }
+.wired-css-shell .lede { font-size: 1.1em; line-height: 1.45; }
+.wired-css-shell .meta { font-family: Arial, sans-serif; font-size: 11px; color: #666; }
+.wired-css-shell article { margin: 16px 0; padding-bottom: 12px; border-bottom: 1px solid #ddd; }
+.wired-css-shell aside { font-family: Arial, sans-serif; font-size: 12px; background: #f4f4f4; padding: 10px; margin: 16px 0; }
 </style>
 </head>
 <body bgcolor="#ffffff">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="wn-wrap">
-  <div class="wn-top">
-    <img src="../../../../assets/period/2002/wired/logo.gif" width="120" height="36" alt="WIRED">
-    <div>
-      <a href="index.html">News</a>
-      <a href="standards.html">Standards</a>
-      <a href="../cnn/index.html">More news</a>
-    </div>
-  </div>
-  <div class="wn-hero">
-    <div class="wn-meta">October 2002 · CSS redesign live</div>
-    <h1>A site for your eyes</h1>
-    <p style="margin:0;font-size:15px;color:#444">
-      Wired News relaunches with strict XHTML and <b>CSS for every design detail</b> —
-      a beacon for web standards on a high-traffic daily news site.
-    </p>
-  </div>
-  <div class="wn-grid">
-    <div class="wn-col">
-      <div class="wn-story">
-        <h2><a href="standards.html">Why CSS layout matters</a></h2>
-        <div class="wn-meta">Design · Douglas Bowman / Stopdesign</div>
-        <p>Millions of pageviews. Thousands of articles converted. Tables no longer own presentation.</p>
-      </div>
-      <div class="wn-story">
-        <h2><a href="../kazaa/index.html">P2P still the music wild west</a></h2>
-        <div class="wn-meta">Culture</div>
-        <p>KaZaA downloads climb while labels prepare for a legal jukebox future.</p>
-      </div>
-      <div class="wn-story">
-        <h2><a href="../friendster/index.html">Friendster maps the social graph</a></h2>
-        <div class="wn-meta">Social</div>
-        <p>Profiles and friends-of-friends — a dress rehearsal for MySpace.</p>
-      </div>
-    </div>
-    <div class="wn-rail">
-      <b>Also on Wired</b>
-      <ul style="margin:8px 0;padding-left:16px">
-        <li><a href="../google/index.html">Google still sparse</a></li>
-        <li><a href="../mozilla/index.html">Mozilla 1.0 ships</a></li>
-        <li><a href="../phoenix/index.html">Phoenix 0.1</a></li>
-        <li><a href="../mtv/index.html">MTV broadband</a></li>
-      </ul>
-      <p style="margin-top:12px;color:#666">This page uses CSS layout as the exhibit lesson — contrast with table portals.</p>
-    </div>
-    <div style="clear:both"></div>
-  </div>
-  <div class="wn-foot">©2002 Wired Digital of the CSS redesign moment</div>
+<div class="wired-css-shell">
+ <header>
+ <img src="../../../../assets/period/2002/wired/logo.gif" width="48" height="20" alt="" style="vertical-align:middle">
+ <span class="tag">Wired News · October 2002 redesign</span>
+ <h1>Wired News</h1>
+ <p class="meta">All presentation driven by CSS · strict XHTML 1.0 era</p>
+ </header>
+ <p class="meta">Blogosphere neighbors: <a href="../daypop/index.html">Daypop</a> · <a href="../technorati/index.html">Technorati</a> · <a href="../blogger/index.html">Blogger</a></p>
+
+ <aside>
+ <b>Finally, we’re live.</b> Douglas Bowman (StopDesign): the redesign launched around
+ <b>10pm PDT</b> the night before the Oct 11 2002 post. Markup follows strict XHTML 1.0;
+ pages “rely entirely on CSS for every design, format, and presentation detail.”
+ A heavily trafficked news site as a standards beacon — same year MTV still ships tables + plugins.
+ </aside>
+
+ <article>
+ <span class="tag">Culture</span>
+ <h2 style="font-size:1.2em;margin:4px 0"><a href="about.html" style="color:inherit">A Site for Your Eyes</a></h2>
+ <p class="lede">Wired News’s October 2002 redesign was not just a facelift — it was a public proof that
+ tableless CSS could carry millions of pageviews on a daily content site.</p>
+ <p class="meta">Contemporary framing via Wired PR / StopDesign · museum reconstruction</p>
+ </article>
+
+ <article>
+ <span class="tag">Standards</span>
+ <h2 style="font-size:1.2em;margin:4px 0"><a href="about.html" style="color:inherit">Why designers cared</a></h2>
+ <p>Adrian Holovaty called it a “tremendous win for Web standards.” Dynamic text resizing and cleaner separation of content and presentation entered mainstream news design conversation.</p>
+ </article>
+
+ <p class="meta"><a href="about.html">About this redesign exhibit</a> ·
+ Contrast: <a href="../mtv/index.html">MTV Broadband Zone (tables + plugins)</a></p>
 </div>
+<script src="../../../../js/config/immersion-2002.js"></script>
 <script src="../../../../js/immersion-2002.js"></script>
 </body>
 </html>

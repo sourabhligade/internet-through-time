@@ -1,0 +1,298 @@
+/**
+ * 2005 product-room lite CSS — no 1995–2004 @import chain.
+ * Use on signature pages (YouTube, Maps, Reddit, Digg, …) for snappy navigations.
+ * Full shell / densify rooms keep period-2005.css.
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+}
+a { color: #03c; }
+.itt-nav-slot { min-height: 0; }
+
+/* YouTube */
+.yt-shell { font-family: Arial, Helvetica, sans-serif; background: #fff; color: #333; font-size: 13px; }
+.yt-header { background: #fff; border-bottom: 1px solid #ccc; padding: 8px 12px; }
+.yt-header a { color: #03c; }
+.yt-note { background: #ffffcc; border: 1px solid #cc0; padding: 8px; font-size: 12px; margin: 8px 0; }
+.yt-thumb {
+  width: 120px;
+  height: 90px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #000;
+}
+.yt-thumb:hover { background: #444; }
+.yt-thumb-play {
+  display: block;
+  font-size: 22px;
+  line-height: 58px;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+}
+.yt-thumb-label {
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.75);
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 3px 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.yt-cell {
+  display: inline-block;
+  width: 128px;
+  margin: 0 10px 14px 0;
+  vertical-align: top;
+  font-size: 11px;
+}
+.yt-cell-meta { margin-top: 4px; line-height: 1.3; color: #444; }
+.yt-cell-title { color: #03c; text-decoration: none; font-weight: bold; font-size: 12px; }
+.yt-cell-title:hover { text-decoration: underline; }
+.yt-cell-desc { color: #666; font-size: 10px; margin-top: 2px; }
+.yt-cell-views { color: #888; font-size: 10px; margin-top: 2px; }
+.yt-wrap { max-width: 760px; margin: 0 auto; padding: 10px 12px; }
+.yt-tag { color: #666; font-size: 12px; margin: 6px 0 12px; }
+.yt-grid { margin: 8px 0 16px; }
+.yt-meta { font-size: 12px; color: #444; line-height: 1.45; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 12px; }
+.yt-navright { float: right; font-size: 12px; padding-top: 8px; }
+.yt-box { border: 1px solid #ccc; padding: 12px; background: #fafafa; }
+.yt-search-bar {
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  margin: 0 0 12px;
+  font-size: 12px;
+}
+.yt-player {
+  background: #000;
+  color: #ccc;
+  height: 280px;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #333;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+.yt-player-stage {
+  height: 258px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.yt-player-big { font-size: 36px; line-height: 1; margin-bottom: 8px; color: #fff; }
+.yt-player-caption { font-size: 12px; color: #ddd; }
+.yt-player-bar {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 18px;
+  background: #222;
+  border-top: 1px solid #444;
+  text-align: left;
+}
+.yt-player-bar-fill {
+  height: 100%;
+  background: #c00;
+  width: 0;
+  transition: width 0.12s linear;
+}
+.yt-player-bar-label {
+  position: absolute;
+  right: 6px;
+  top: 1px;
+  font-size: 10px;
+  color: #ccc;
+  font-family: monospace;
+}
+.yt-watch-layout { display: table; width: 100%; table-layout: fixed; }
+.yt-watch-main { display: table-cell; width: 68%; vertical-align: top; padding-right: 12px; }
+.yt-watch-side { display: table-cell; width: 32%; vertical-align: top; font-size: 12px; border-left: 1px solid #ddd; padding-left: 10px; }
+.yt-controls { margin: 6px 0 0; font-size: 12px; }
+.yt-related { font-size: 12px; margin-top: 0; border-top: none; padding-top: 0; }
+
+/* Maps / Reddit / Digg / TC / HousingMaps */
+.maps-shell { font-family: Arial, sans-serif; background: #e5e3df; }
+.maps-chrome { background: #fff; border: 1px solid #999; padding: 8px; max-width: 780px; margin: 12px auto; }
+.maps-canvas {
+  height: 340px;
+  background: #c5d0b0;
+  border: 1px solid #666;
+  position: relative;
+  overflow: hidden;
+  cursor: move;
+}
+.maps-controls {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #fff;
+  border: 1px solid #666;
+  padding: 4px;
+  font-size: 11px;
+  z-index: 4;
+}
+.maps-controls button {
+  min-width: 22px;
+  margin: 1px;
+  cursor: pointer;
+}
+.maps-pin {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  background: #c00;
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+.maps-result-list { margin: 6px 0 4px 1.2em; padding: 0; font-size: 12px; line-height: 1.45; }
+.maps-layout { display: table; width: 100%; }
+.maps-main { display: table-cell; width: 72%; vertical-align: top; }
+.maps-side { display: table-cell; width: 28%; vertical-align: top; padding-left: 10px; font-size: 12px; }
+.reddit-shell { font-family: verdana, arial, sans-serif; font-size: 12px; background: #fff; }
+.reddit-header { background: #cee3f8; padding: 6px 8px; border-bottom: 1px solid #5f99cf; }
+.reddit-mode-hint { font-size: 11px; color: #888; margin: 0 0 6px; }
+.reddit-row {
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+}
+.reddit-vote {
+  display: table-cell;
+  width: 36px;
+  vertical-align: top;
+  text-align: center;
+}
+.reddit-arrow {
+  border: 0;
+  background: transparent;
+  color: #c6c6c6;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+  line-height: 1;
+}
+.reddit-arrow:hover { color: #ff4500; }
+.reddit-score {
+  color: #c6c6c6;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.reddit-body { display: table-cell; vertical-align: top; padding-left: 6px; }
+.reddit-title { color: #0000ff; font-weight: bold; text-decoration: none; }
+.reddit-title:visited { color: #551a8b; }
+.reddit-domain { color: #888; font-size: 10px; }
+.reddit-meta { color: #888; font-size: 10px; margin-top: 2px; }
+.reddit-inline-boost {
+  border: 0;
+  background: none;
+  color: #369;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0;
+  text-decoration: underline;
+}
+.digg-shell { font-family: Arial, sans-serif; font-size: 13px; }
+.digg-item { border-bottom: 1px solid #ddd; padding: 10px 0; overflow: hidden; }
+.digg-score {
+  float: left;
+  width: 70px;
+  text-align: center;
+  margin-right: 10px;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  padding: 6px 4px;
+}
+.digg-count-wrap { margin-bottom: 4px; }
+.digg-count-wrap b { display: block; font-size: 18px; color: #000382; line-height: 1.1; }
+.digg-count-label { font-size: 10px; color: #666; }
+.digg-btn-up, .digg-shell button[data-digg-up] {
+  display: block;
+  width: 100%;
+  margin: 2px 0;
+  font-size: 11px;
+  background: #e8e8ff;
+  border: 1px solid #99a;
+  cursor: pointer;
+}
+.digg-btn-bury, .digg-shell button[data-digg-bury] {
+  display: block;
+  width: 100%;
+  margin: 2px 0;
+  font-size: 10px;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: #666;
+}
+.digg-body { overflow: hidden; }
+.digg-title, .digg-item .heading { font-size: 14px; color: #000382; text-decoration: none; font-weight: bold; }
+.digg-meta { font-size: 11px; color: #666; margin: 3px 0 6px; }
+.digg-comments { font-size: 11px; margin: 4px 0; }
+.digg-comment-form { margin-top: 4px; font-size: 11px; }
+.digg-clear { clear: both; }
+.tc-shell { font-family: Georgia, serif; max-width: 640px; margin: 12px auto; font-size: 14px; }
+.hm-shell { font-family: Arial, sans-serif; background: #eef; padding: 12px; }
+.hm-map {
+  height: 220px;
+  background: #c5d0b0;
+  border: 1px solid #666;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.hm-pin { position: absolute; z-index: 2; max-width: 140px; }
+.hm-pin-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #c00;
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+  vertical-align: middle;
+}
+.hm-pin-label {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #333;
+  padding: 2px 4px;
+  font-size: 10px;
+  margin-left: 4px;
+  vertical-align: middle;
+  max-width: 120px;
+  line-height: 1.2;
+}
+.hm-empty {
+  padding: 12px;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #666;
+  margin: 20px;
+}

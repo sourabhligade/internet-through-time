@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>About 1997</title>
+<html lang="en" data-itt-year="1997"><head><meta charset="utf-8"><title>About 1997</title>
 <link rel="stylesheet" href="../../../css/period-1997.css"></head>
 <body bgcolor="#FFFFFF">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
@@ -33,6 +33,17 @@ Slashdot launches, Apple "Think Different," 56k modems.</p>
 <p><b>Sources:</b> Web Design Museum, Cybercultural, W3C, company histories,
 Wayback Machine. Period screens and trademarks are shown for historical context.</p>
 <p><a href="home.html">Starting Point</a></p>
+
+<!-- REAL-flow system: thesis literacy (no soft mock) -->
+<div class="itt-real-thesis" data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+ <b>Year thesis · REAL literacy</b> (this browser only · multi-step required)
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> I understand this year&rsquo;s period products and hard bans (no anachronism as default)</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-2"> Progress is private <code>localStorage</code> theater — no real accounts or network calls</label>
+ <button type="button" data-itt-real-save data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
+ <p data-itt-action-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
+ <p style="font-size:11px;color:#666;margin:4px 0 0">Writes year-prefixed <code>*-thesis-ack</code> only after both checks.</p>
+</div>
+
 <script src="../../../js/immersion-1997.js"></script>
 <p class="legal-blurb">
 <strong>Period screens and trademarks are shown for historical context.</strong> Trademarks (Microsoft, Internet Explorer, eBay, Amazon, Yahoo!, Apple, etc.)

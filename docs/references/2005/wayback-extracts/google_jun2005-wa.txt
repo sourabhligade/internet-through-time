@@ -1,0 +1,7 @@
+SOURCE: https://web.archive.org/web/20050615000000/http://www.google.com/
+FINAL: https://web.archive.org/web/20050615085330/http://www.google.com/
+HTTP: 200
+FETCHED: 2026-07-30 (deep research pass)
+BYTES_RAW: 13217
+---
+Google May JUN Jul 15 2004 2005 2006 success fail About this capture COLLECTED BY Collection: Institut national de l?audiovisuel Crawl data from Institut national de l?audiovisuel in France. This data is currently not publicly accessible. from Wikipedia : The Institut national de l'audiovisuel (or INA, French for National Audiovisual Institute), is a repository of all French radio and television audiovisual archives. Since 2006, it has allowed free online consultation on a website called ina.fr with a search tool indexing 100,000 archives of historical programs, for a total of 20,000 hours. TIMESTAMPS The Wayback Machine - https://web.archive.org/web/20050615085330/http://www.google.com:80/ Web Images Groups News Froogle Local more &raquo; Advanced Search Preferences Language Tools Advertising Programs - About Google &copy;2005 Google - Searching 8,058,044,651 web pages

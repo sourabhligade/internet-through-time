@@ -1,0 +1,23 @@
+# Google Docs & Spreadsheets — Oct 10, 2006
+# Sources:
+#   https://techcrunch.com/2006/10/10/google-docs-spreadsheets-launches/
+#   Wikipedia Google Docs / Writely
+# Visited: 2026-07-31
+
+LOCKED FACTS:
+- Oct 10, 2006: Docs & Spreadsheets live at docs.google.com
+- Integrates Writely + Google Spreadsheets into one control panel
+- Writely acquired by Google Mar 9, 2006 (class)
+- Writely brand ditched as Docs branding lands
+- Shot across Microsoft Office bow (period press)
+
+COPY BANK:
+- Google Docs & Spreadsheets
+- docs.google.com
+- collaborative online documents
+- Writely
+
+EXHIBIT:
+- sites/docs or googledocs room
+- itt06-docs localStorage theater
+- Link from Google home / Amazon AWS contrast (consumer office vs developer cloud)

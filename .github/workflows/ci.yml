@@ -50,6 +50,46 @@ jobs:
       - name: HTTP smoke
         run: python3 scripts/smoke-production.py --base http://127.0.0.1:8080
 
+  e2e-cross-year:
+    name: Playwright cross-year real flows (fast gate)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Cross-year + scenario real flows
+        run: npx playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1
+        env:
+          CI: true
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-cross-year
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+
   e2e:
     name: Playwright e2e
     runs-on: ubuntu-latest

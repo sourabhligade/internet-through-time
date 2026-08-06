@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Netflix — DVDs + streaming (2009)</title>
+<link rel="stylesheet" href="../../../../css/period-2009.css">
+</head>
+<body bgcolor="#000000" text="#ffffff" link="#e50914" vlink="#ff6666">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="16" bgcolor="#111"><tr><td>
+<img src="../../../../assets/period/2007/netflix/logo.gif" alt="Netflix" height="36"><br><br>
+<font face="Arial" size="2">
+<h1 style="font-size:18px;color:#e50914">DVDs by mail · Watch Instantly densifies</h1>
+<p>In <b>2009</b> Netflix is still a <b>red-envelope</b> company — and streaming becomes
+“included” for many disc subscribers (unlimited streaming class, Jan densify).
+Not yet a streaming-only identity.</p>
+<p style="background:#222;padding:10px;border:1px solid #fc0;font-size:12px">
+ <b>2009 honesty:</b> queue discs online · mail · <b>plus</b> Watch Instantly / electronic delivery grows.
+ Catalog online still thinner than the disc library. <b>Ban:</b> Netflix as disc-free-only product.
+</p>
+<form data-netflix-queue-form style="margin:12px 0">
+ Search titles: <input name="q" size="30" value="The Dark Knight" data-netflix-q>
+ <input type="submit" value="Add to Queue">
+</form>
+<div data-netflix-status style="display:none;background:#1a1a1a;padding:8px;border:1px solid #e50914;font-size:12px;margin:8px 0"></div>
+<p style="font-size:12px;color:#ccc;margin:8px 0 4px"><b>Your queue</b> <font color="#888">(this browser · localStorage)</font></p>
+<div data-netflix-queue style="background:#0a0a0a;padding:8px;border:1px solid #333;min-height:40px"></div>
+<p style="font-size:12px;margin-top:12px">
+ <button type="button" id="stream-seed" data-netflix-stream style="background:#e50914;color:#fff;border:0;padding:6px 12px">Watch Instantly (theater)</button>
+ <span id="stream-status" style="font-size:11px;color:#8c8;margin-left:8px"></span>
+</p>
+<p style="font-size:11px;color:#888">
+ · DVD mail primary · streaming densify · compare <a href="../hulu/index.html">Hulu</a>
+</p>
+<p><a href="../../pages/home.html">← Starting Point 2009</a></p>
+</font>
+</td></tr></table>
+<script>
+document.getElementById("stream-seed") && document.getElementById("stream-seed").addEventListener("click", function () {
+  var el = document.getElementById("stream-status");
+  if (el) el.textContent = "Streaming seed · ad-free for subscribers class · catalog limited vs discs · theater only";
+});
+</script>
+<script src="../../../../js/immersion-2009.js"></script>
+</body></html>

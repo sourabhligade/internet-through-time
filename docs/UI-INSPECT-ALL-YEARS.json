@@ -1,0 +1,2443 @@
+{
+  "date": "2026-08-06T08:21:41.228Z",
+  "base": "http://127.0.0.1:8877",
+  "viewport": {
+    "width": 1024,
+    "height": 720
+  },
+  "years": {
+    "1994": {
+      "shell": {
+        "year": "1994",
+        "iframeOk": true,
+        "iframePath": "/years/1994/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "",
+          "bodyClass": ""
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1994",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 1994",
+            "bodyTextLen": 2220,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1994",
+            "hasNav": true,
+            "navHeight": 45,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About This Exhibit",
+            "bodyTextLen": 2635,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1994",
+            "hasNav": true,
+            "navHeight": 45,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "1994 — UX flow map",
+            "bodyTextLen": 2106,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "1995": {
+      "shell": {
+        "year": "1995",
+        "iframeOk": true,
+        "iframePath": "/years/1995/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "",
+          "bodyClass": ""
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1995",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 1995",
+            "bodyTextLen": 2040,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1995",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About / Sources — 1995",
+            "bodyTextLen": 1382,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1995",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "1995 — UX flow map",
+            "bodyTextLen": 1638,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "1996": {
+      "shell": {
+        "year": "1996",
+        "iframeOk": true,
+        "iframePath": "/years/1996/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "",
+          "bodyClass": ""
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1996",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 1996",
+            "bodyTextLen": 2243,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1996",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About 1996",
+            "bodyTextLen": 1250,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1996",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "1996 — UX flow map",
+            "bodyTextLen": 1549,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "1997": {
+      "shell": {
+        "year": "1997",
+        "iframeOk": true,
+        "iframePath": "/years/1997/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "",
+          "bodyClass": ""
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1997",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 1997",
+            "bodyTextLen": 2322,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1997",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 11,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About 1997",
+            "bodyTextLen": 1997,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1997",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 11,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "1997 — UX flow map",
+            "bodyTextLen": 1647,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "1998": {
+      "shell": {
+        "year": "1998",
+        "iframeOk": true,
+        "iframePath": "/years/1998/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "1998",
+          "bodyClass": "year-1998 os-win98 browser-ie4"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1998",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 1998",
+            "bodyTextLen": 2611,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1998",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 11,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About 1998 — Internet Through Time",
+            "bodyTextLen": 2001,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1998",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 11,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "1998 — UX flow map",
+            "bodyTextLen": 1548,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/google/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 11,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Google!",
+            "bodyTextLen": 503,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "1999": {
+      "shell": {
+        "year": "1999",
+        "iframeOk": true,
+        "iframePath": "/years/1999/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "1999",
+          "bodyClass": "year-1999 os-win98 browser-ie5"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1999",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 1999",
+            "bodyTextLen": 2400,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1999",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About 1999 — Internet Through Time",
+            "bodyTextLen": 1239,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "1999",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "1999 — UX flow map",
+            "bodyTextLen": 1622,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2000": {
+      "shell": {
+        "year": "2000",
+        "iframeOk": true,
+        "iframePath": "/years/2000/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2000",
+          "bodyClass": "year-2000 os-win98 browser-ie5"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2000",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2000",
+            "bodyTextLen": 2087,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2000",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2000",
+            "bodyTextLen": 1581,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2000",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2000 — UX flow map",
+            "bodyTextLen": 1678,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2001": {
+      "shell": {
+        "year": "2001",
+        "iframeOk": true,
+        "iframePath": "/years/2001/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2001",
+          "bodyClass": "year-2001 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2001",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": false,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2001",
+            "bodyTextLen": 1348,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2001",
+            "hasNav": true,
+            "navHeight": 61,
+            "navLinks": 13,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About 2001 — Internet Through Time",
+            "bodyTextLen": 1402,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2001",
+            "hasNav": true,
+            "navHeight": 61,
+            "navLinks": 13,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2001 — UX flow map",
+            "bodyTextLen": 1662,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2002": {
+      "shell": {
+        "year": "2002",
+        "iframeOk": true,
+        "iframePath": "/years/2002/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2002",
+          "bodyClass": "year-2002 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2002",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": false,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2002",
+            "bodyTextLen": 1175,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2002",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About 2002 — Always-on & the blogosphere",
+            "bodyTextLen": 2180,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2002",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2002 — UX flow map",
+            "bodyTextLen": 1524,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2003": {
+      "shell": {
+        "year": "2003",
+        "iframeOk": true,
+        "iframePath": "/years/2003/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2003",
+          "bodyClass": "year-2003 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2003",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": false,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2003",
+            "bodyTextLen": 1158,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2003",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2003",
+            "bodyTextLen": 1885,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2003",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2003 — UX flow map",
+            "bodyTextLen": 1576,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2004": {
+      "shell": {
+        "year": "2004",
+        "iframeOk": true,
+        "iframePath": "/years/2004/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2004",
+          "bodyClass": "year-2004 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2004",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2004",
+            "bodyTextLen": 2624,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2004",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2004",
+            "bodyTextLen": 1927,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2004",
+            "hasNav": true,
+            "navHeight": 47,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2004 — UX flow map",
+            "bodyTextLen": 1590,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2005": {
+      "shell": {
+        "year": "2005",
+        "iframeOk": true,
+        "iframePath": "/years/2005/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2005",
+          "bodyClass": "year-2005 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2005",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2005",
+            "bodyTextLen": 2722,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2005",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2005",
+            "bodyTextLen": 3897,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2005",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2005 — UX flow map",
+            "bodyTextLen": 2281,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/youtube/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "",
+            "hasNav": true,
+            "navHeight": 44,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "YouTube - Broadcast Yourself.",
+            "bodyTextLen": 1466,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2006": {
+      "shell": {
+        "year": "2006",
+        "iframeOk": true,
+        "iframePath": "/years/2006/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2006",
+          "bodyClass": "year-2006 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2006",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2006",
+            "bodyTextLen": 2653,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2006",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2006",
+            "bodyTextLen": 3478,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2006",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2006 — UX flow map",
+            "bodyTextLen": 1801,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2007": {
+      "shell": {
+        "year": "2007",
+        "iframeOk": true,
+        "iframePath": "/years/2007/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2007",
+          "bodyClass": "year-2007 os-winxp browser-ie6"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2007",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2007",
+            "bodyTextLen": 2466,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2007",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2007",
+            "bodyTextLen": 4267,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2007",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2007 — UX flow map",
+            "bodyTextLen": 2976,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/iphone/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Apple iPhone — 2007",
+            "bodyTextLen": 1336,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2008": {
+      "shell": {
+        "year": "2008",
+        "iframeOk": true,
+        "iframePath": "/years/2008/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2008",
+          "bodyClass": "year-2008 os-winxp browser-ie7"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2008",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2008",
+            "bodyTextLen": 2549,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2008",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2008",
+            "bodyTextLen": 4125,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2008",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2008 — UX flow map",
+            "bodyTextLen": 1672,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2009": {
+      "shell": {
+        "year": "2009",
+        "iframeOk": true,
+        "iframePath": "/years/2009/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2009",
+          "bodyClass": "year-2009 os-winxp browser-ie8"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2009",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2009",
+            "bodyTextLen": 2520,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2009",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2009",
+            "bodyTextLen": 3625,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2009",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2009 — UX flow map",
+            "bodyTextLen": 1668,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2010": {
+      "shell": {
+        "year": "2010",
+        "iframeOk": true,
+        "iframePath": "/years/2010/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2010",
+          "bodyClass": "year-2010 os-win7 browser-ie8"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2010",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Welcome to the World Wide Web — 2010",
+            "bodyTextLen": 2386,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2010",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2010",
+            "bodyTextLen": 2214,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2010",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2010 — UX flow map",
+            "bodyTextLen": 1690,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/instagram/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2010",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Instagram",
+            "bodyTextLen": 582,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2011": {
+      "shell": {
+        "year": "2011",
+        "iframeOk": true,
+        "iframePath": "/years/2011/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2011",
+          "bodyClass": "year-2011 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2011",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "2011 — on the web",
+            "bodyTextLen": 1476,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2011",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2011",
+            "bodyTextLen": 3141,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2011",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2011 — UX flow map",
+            "bodyTextLen": 1605,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2012": {
+      "shell": {
+        "year": "2012",
+        "iframeOk": true,
+        "iframePath": "/years/2012/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2012",
+          "bodyClass": "year-2012 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2012",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "2012 — on the web",
+            "bodyTextLen": 1380,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2012",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2012",
+            "bodyTextLen": 3139,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2012",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2012 — UX flow map",
+            "bodyTextLen": 1664,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2013": {
+      "shell": {
+        "year": "2013",
+        "iframeOk": true,
+        "iframePath": "/years/2013/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2013",
+          "bodyClass": "year-2013 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2013",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "2013 — on the web",
+            "bodyTextLen": 1641,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2013",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2013",
+            "bodyTextLen": 3186,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2013",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2013 — UX flow map",
+            "bodyTextLen": 1997,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/vine/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2013",
+            "hasNav": true,
+            "navHeight": 61,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Vine",
+            "bodyTextLen": 458,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2014": {
+      "shell": {
+        "year": "2014",
+        "iframeOk": true,
+        "iframePath": "/years/2014/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2014",
+          "bodyClass": "year-2014 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2014",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Starting Point — 2014",
+            "bodyTextLen": 2080,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2014",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2014",
+            "bodyTextLen": 2868,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2014",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2014 — UX flow map",
+            "bodyTextLen": 2931,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/whatsapp/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2014",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 9,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "WhatsApp — 2014",
+            "bodyTextLen": 756,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2015": {
+      "shell": {
+        "year": "2015",
+        "iframeOk": true,
+        "iframePath": "/years/2015/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2015",
+          "bodyClass": "year-2015 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2015",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Starting Point — 2015",
+            "bodyTextLen": 2267,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2015",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2015",
+            "bodyTextLen": 2845,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2015",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2015 — UX flow map",
+            "bodyTextLen": 1947,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/apple/watch.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2015",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Apple Watch — ships April 24, 2015",
+            "bodyTextLen": 903,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2016": {
+      "shell": {
+        "year": "2016",
+        "iframeOk": true,
+        "iframePath": "/years/2016/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2016",
+          "bodyClass": "year-2016 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2016",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Starting Point — 2016",
+            "bodyTextLen": 1731,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2016",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2016",
+            "bodyTextLen": 1778,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2016",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2016 — UX flow map",
+            "bodyTextLen": 2343,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/instagram/stories.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2016",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 10,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Instagram Stories — Aug 2 2016",
+            "bodyTextLen": 667,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    },
+    "2017": {
+      "shell": {
+        "year": "2017",
+        "iframeOk": true,
+        "iframePath": "/years/2017/pages/home.html",
+        "chrome": {
+          "hasContent": true,
+          "hasLocation": true,
+          "hasTitle": true,
+          "bodyYear": "2017",
+          "bodyClass": "year-2017 os-win7 browser-ie9"
+        },
+        "issues": []
+      },
+      "pages": {
+        "home": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2017",
+            "hasNav": false,
+            "navHeight": 0,
+            "navLinks": 0,
+            "hasSlot": true,
+            "hasWayfind": false,
+            "hasFoot": true,
+            "hasTour": true,
+            "hasNightBar": false,
+            "title": "Starting Point — 2017",
+            "bodyTextLen": 2471,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "about": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2017",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "About the Web in 2017",
+            "bodyTextLen": 1720,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "map": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2017",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "2017 — UX flow map",
+            "bodyTextLen": 2512,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/iphone/x.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2017",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "iPhone X · Face ID — 2017",
+            "bodyTextLen": 672,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/netflix/modern.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2017",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Netflix modern — My List REAL",
+            "bodyTextLen": 569,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        },
+        "sites/fortnite/index.html": {
+          "status": 200,
+          "metrics": {
+            "yearAttr": "2017",
+            "hasNav": true,
+            "navHeight": 46,
+            "navLinks": 8,
+            "hasSlot": true,
+            "hasWayfind": true,
+            "hasFoot": true,
+            "hasTour": false,
+            "hasNightBar": false,
+            "title": "Fortnite Battle Royale free — Sep 26 2017",
+            "bodyTextLen": 817,
+            "overflow": {
+              "clientW": 720,
+              "scrollW": 720,
+              "overflow": false,
+              "overflowPx": 0,
+              "culprits": []
+            }
+          },
+          "issueCount": 0
+        }
+      },
+      "issues": []
+    }
+  },
+  "summary": {
+    "years": 24,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 0,
+    "clean": 24
+  }
+}

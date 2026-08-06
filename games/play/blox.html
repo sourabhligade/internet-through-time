@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Balloon Blox — museum game</title>
+  <link rel="stylesheet" href="../../css/games.css">
+  <link rel="stylesheet" href="../../css/period-announce.css">
+</head>
+<body>
+  <div class="games-wrap">
+    <header class="games-top">
+      <div class="games-brand">WEB GAMES</div>
+      <a href="../index.html">Lobby</a>
+      <a href="index.html">Arcade</a>
+      <a href="../../index.html">Hub</a>
+    </header>
+    <section class="games-panel">
+      <h1>Balloon Blox</h1>
+      <p style="font-size:12px;margin:0 0 8px">Museum original · tower-defense seed genre. Click balloons; towers help. Not Bloons.</p>
+      <div class="play-hud">
+        <button type="button" id="play-start">Start</button>
+        <span>Score: <b id="play-score">0</b></span>
+        <span id="play-status" style="color:#444">Press Start</span>
+      </div>
+      <div class="play-stage">
+        <canvas id="game-canvas" width="480" height="300" data-game="blox"></canvas>
+      </div>
+      <div class="scoreboard" id="score-board"></div>
+      <p style="font-size:11px"><a href="index.html">← Arcade</a> · <a href="../portals/coolmath/index.html">School-portal culture</a></p>
+    </section>
+  </div>
+  <script src="../../js/games/scores.js"></script>
+  <script src="../../js/games/blox.js"></script>
+  <script src="../../js/games/shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2012"><head><meta charset="utf-8"><title>Lightning connector — 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css"><script src="../../../../js/immersion-2012.js" defer></script></head>
+<body bgcolor="#f2f2f2"><div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12" bgcolor="#fff" style="margin:16px auto;font-family:Helvetica,Arial;font-size:13px;border:1px solid #ccc"><tr><td>
+<p><a href="index.html">← iPhone 5</a></p>
+<h1 style="font-size:18px">Lightning</h1>
+<p>The 30-pin dock connector (since 2003) is replaced by <b>Lightning</b> — smaller, reversible, all-digital. Adapters available for old docks and car kits. Period culture: “new cables for everything.”</p>
+<div style="background:#fafafa;border:1px solid #ddd;padding:10px;margin:10px 0;font-size:12px">
+ <b>What broke in your bag? (saved with ack)</b><br>
+ <label style="display:block;margin:4px 0"><input type="checkbox" data-lightning-need="dock"> Old 30-pin dock / speaker</label>
+ <label style="display:block;margin:4px 0"><input type="checkbox" data-lightning-need="car"> Car kit</label>
+ <label style="display:block;margin:4px 0"><input type="checkbox" data-lightning-need="cable"> Every cable I own</label>
+ <label style="display:block;margin:4px 0"><input type="checkbox" data-lightning-need="adapter"> I bought the adapter</label>
+</div>
+<p>
+ <button type="button" data-lightning-ack>I need a new cable (save)</button>
+ <span data-lightning-status style="font-size:11px;color:#060;margin-left:8px"></span>
+</p>
+<p style="font-size:11px;color:#666">Sep 12, 2012 · Lightning replaces 30-pin</p>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt12-lightning";
+  var btn = document.querySelector("[data-lightning-ack]");
+  var st = document.querySelector("[data-lightning-status]");
+  try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · Lightning"; } catch (e) {}
+  if (btn) btn.addEventListener("click", function () {
+    var needs = {};
+    var boxes = document.querySelectorAll("[data-lightning-need]");
+    for (var i = 0; i < boxes.length; i++) {
+      needs[boxes[i].getAttribute("data-lightning-need")] = !!boxes[i].checked;
+    }
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        connector: "Lightning",
+        replaced: "30-pin",
+        needs: needs,
+        ts: Date.now()
+      }));
+    } catch (e2) {}
+    var msg = "Saved · Lightning · adapters needed";
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "lightning" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
+</td></tr></table></body></html>

@@ -1,9 +1,10 @@
 # 1998 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · **deep visit + re-verify 2026-07-22** · ready for implementation planning  
+**Status:** Research complete · **deep visit + re-verify 2026-07-22** · **pair audit 2026-07-29**  
 **Deep research (every URL visited + recheck §12):** [`docs/1998-DEEP-RESEARCH-2026-07-22.md`](1998-DEEP-RESEARCH-2026-07-22.md)  
+**Pair audit + residual (1998–1999):** [`docs/1998-1999-DEEP-RESEARCH-AUDIT-2026-07-29.md`](1998-1999-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
 **Code phases (detailed build order):** [`docs/1998-IMPLEMENTATION-PHASES.md`](1998-IMPLEMENTATION-PHASES.md)  
-**Implementation status:** **Museum-grade ship 2026-07-23** — see `docs/1998-MUSEUM-GRADE.md`.  
+**Implementation status:** **Museum-grade ship 2026-07-23** — residual densify after TO-100: see pair audit — `docs/1998-MUSEUM-GRADE.md`.  
 **Target immersion:** Mid–late 1998 (Windows 98 · portal TV ads · Google soft launch · open web / Mozilla · Amazon expands beyond books)  
 **Prior year:** 1997 (IE4 · eBay rebrand · Slashdot · PointCast · Amazon IPO · 56k)  
 **Sources method:** Same stack as `docs/SOURCES.md` — Web Design Museum · Cybercultural · Version Museum · Wayback (rich by 1998) · company histories  

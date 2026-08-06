@@ -1,0 +1,16 @@
+SOURCE: https://blog.flickr.net/en/2005/03/20/yahoo-actually-does-acquire-flickr/
+FETCHED: 2026-07-30 web-expand pass
+---
+March 20, 2005 — Flickr Blog: "Yahoo actually does acquire Flickr"
+
+Yahoo has made a definitive agreement to acquire Flickr and Ludicorp.
+
+Community Q&A (period voice):
+- Flickr continues path to Flickr 1.0 and beyond; same management/team; preserve community and flavor
+- Not becoming "a bunch of suits"; Ludicrew DNA stays
+- Not becoming Yahoo Photos; Yahoo Photos and Flickr remain separate for foreseeable future
+- Yahoo ID optional later; existing login continues
+- Flickr API remains open
+- Free accounts get more storage/uploads; pro cheaper too
+
+WSJ / secondary: acquisition reportedly ~$22–25 million (Delaney, WSJ March 20 2005 class).

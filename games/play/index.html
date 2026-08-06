@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Museum arcade — playable period genres</title>
+  <link rel="stylesheet" href="../../css/games.css">
+  <link rel="stylesheet" href="../../css/period-announce.css">
+</head>
+<body>
+  <div class="games-wrap">
+    <header class="games-top">
+      <div class="games-brand">WEB GAMES <span>arcade</span></div>
+      <a href="../index.html">Lobby</a>
+      <a href="../announcements.html">News</a>
+      <a href="../portals.html">Portals</a>
+      <a href="../worlds.html">Worlds</a>
+      <a href="index.html">Play</a>
+      <a href="../about.html">About</a>
+      <a href="../../index.html">Hub</a>
+    </header>
+    <div class="ann-ticker" aria-label="Arcade ticker">
+      <span class="ann-ticker-label">ARCADE</span>
+      <div class="ann-ticker-inner">
+        <div class="ann-ticker-track">
+          ★ FREE online games (museum originals) ★ High scores this browser only ★
+          No plugin install required for these three ★ Flash portals were the real 2000s ritual ★
+        </div>
+      </div>
+    </div>
+    <section class="games-panel">
+      <h1><span class="ann-badge ann-badge-free">Free</span> Museum arcade</h1>
+      <p class="games-thesis">
+        Three <b>original</b> browser games in mid-2000s genres.
+        High scores save in this browser only (<code>itt-games-scores</code>).
+        Not commercial Flash rips — inspired by the <i>feel</i> of Helicopter / Line Rider / tower-defense seeds.
+      </p>
+      <div class="games-grid">
+        <a class="games-card" href="heli.html">
+          <span class="era">twitch</span>
+          <span class="ann-badge ann-badge-hot">Hot</span>
+          <p class="title">HoverChop</p>
+          <p class="blurb">Hold to climb, release to fall — tunnel helicopter genre.</p>
+        </a>
+        <a class="games-card" href="sled.html">
+          <span class="era">sandbox</span>
+          <span class="ann-badge ann-badge-new">New</span>
+          <p class="title">TrailSled</p>
+          <p class="blurb">Click to draw a track, then ride — draw-sled genre.</p>
+        </a>
+        <a class="games-card" href="blox.html">
+          <span class="era">strategy</span>
+          <span class="ann-badge ann-badge-upd">Play</span>
+          <p class="title">Balloon Blox</p>
+          <p class="blurb">Click balloons · towers fire — defense seed genre.</p>
+        </a>
+      </div>
+      <div class="scoreboard" id="all-scores"></div>
+    </section>
+    <footer class="games-foot"><a href="../index.html">← Lobby</a></footer>
+  </div>
+  <script src="../../js/games/scores.js"></script>
+  <script>
+  (function () {
+    var el = document.getElementById("all-scores");
+    if (!window.ITTGames || !el) return;
+    var ids = [
+      { id: "heli", label: "HoverChop" },
+      { id: "sled", label: "TrailSled" },
+      { id: "blox", label: "Balloon Blox" }
+    ];
+    var html = "<b>High scores (this browser)</b>";
+    ids.forEach(function (g) {
+      var s = ITTGames.getScores(g.id);
+      html += "<div style='margin-top:8px'><b>" + g.label + "</b>";
+      if (!s.length) html += " — nothing here yet · play a round above";
+      else html += "<ol style='margin:2px 0 0 18px'>" + s.map(function (x) {
+        return "<li>" + x.score + " · " + x.name + "</li>";
+      }).join("") + "</ol>";
+      html += "</div>";
+    });
+    el.innerHTML = html;
+  })();
+  </script>
+  <script src="../../js/games/shell.js"></script>
+</body>
+</html>

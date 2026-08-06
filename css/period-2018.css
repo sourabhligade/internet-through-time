@@ -1,0 +1,171 @@
+/* 2018 period — deltas on 2017 */
+@import url("period-2017.css");
+
+html[data-itt-year="2018"],
+html[data-itt-year="2018"] body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+html[data-itt-year="2018"] body {
+  margin: 0;
+  padding: 0 0 52px;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav,
+body.year-2018 #itt-exhibit-nav {
+  max-width: 100%;
+  overflow: hidden;
+}
+html[data-itt-year="2018"] #itt-wayfind {
+  max-width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+html[data-itt-year="2018"] .itt-nav-slot {
+  margin: 0 0 8px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* GDPR consent theater */
+.itt18-cookie-banner {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a237e;
+  color: #e8eaf6;
+  padding: 14px 16px;
+  border-top: 3px solid #3949ab;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  z-index: 20;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+}
+.itt18-cookie-banner button {
+  margin: 4px 6px 4px 0;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.itt18-cmp-panel {
+  display: none;
+  margin-top: 10px;
+  padding: 12px;
+  background: #e8eaf6;
+  color: #111;
+  border-radius: 6px;
+}
+.itt18-cmp-panel.is-open { display: block; }
+.itt18-cookie-dim { opacity: 0.45; pointer-events: none; }
+
+/* Trust careful */
+.itt18-careful-banner {
+  background: #fff8e1;
+  border: 2px solid #f9a825;
+  color: #333;
+  padding: 10px 12px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  margin: 8px 0;
+}
+.itt18-trust-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+.itt18-trust-card {
+  flex: 1 1 140px;
+  min-width: 120px;
+  border: 1px solid #666;
+  background: #fafafa;
+  padding: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.itt18-trust-card.is-open { border-color: #1565c0; background: #e3f2fd; }
+
+/* TikTok phone frame silhouette */
+.itt18-phone-frame {
+  width: 280px;
+  max-width: 100%;
+  margin: 12px auto;
+  background: #000;
+  color: #fff;
+  border-radius: 24px;
+  padding: 16px 12px 24px;
+  border: 3px solid #333;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+.itt18-fyp-row { display: flex; gap: 8px; margin: 10px 0; }
+.itt18-fyp-card {
+  flex: 1;
+  aspect-ratio: 9/16;
+  background: linear-gradient(160deg, #222 0%, #111 60%, #1a1a2e 100%);
+  border: 1px solid #444;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 6px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 10px;
+}
+.itt18-fyp-card.is-playing { outline: 2px solid #69f0ae; color: #fff; }
+.itt18-merge-banner {
+  background: #111;
+  border: 1px solid #69f0ae;
+  color: #b9f6ca;
+  padding: 8px;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+/* IGTV vertical player */
+.itt18-vertical-9x16 {
+  width: 180px;
+  height: 320px;
+  max-width: 45vw;
+  background: #111;
+  border: 2px solid #e1306c;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  margin: 8px 0;
+}
+.itt18-igtv-player .progress {
+  height: 4px;
+  background: #333;
+  margin-top: 6px;
+  width: 180px;
+  max-width: 45vw;
+}
+.itt18-igtv-player .progress > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #e1306c;
+  transition: width 0.8s linear;
+}
+.itt18-igtv-player.is-playing .progress > span { width: 70%; }
+
+/* XS price cards */
+.itt18-tier-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.itt18-tier {
+  flex: 1 1 140px;
+  border: 1px solid #999;
+  padding: 12px;
+  background: #f5f5f7;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+.itt18-tier.is-selected { border-color: #0071e3; box-shadow: 0 0 0 2px #0071e3; }

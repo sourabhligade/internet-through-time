@@ -1,0 +1,10 @@
+TITLE: Google Maps
+CAPTURE: https://web.archive.org/web/20051001010702/http://maps.google.com/
+DATE_CLASS: Oct 1, 2005
+STATUS: re-opened 2026-07-30
+
+Maps tab present
+"JavaScript must be enabled in order for you to use Google Maps. However, it seems JavaScript is either disabled or not supported by your browser. To view Google Maps, enable JavaScript by changing your browser options, and then try again."
+(Matches maps-extract.txt form labels from prior harvest: Maps · Local Search · Directions · What/Where · Start/End address)
+Ajax poster child — Jesse James Garrett essay Feb 18 2005 cites Maps + Suggest
+HousingMaps (Paul Rademacher, ~Apr 2005) first famous mashup overlaying Craigslist on Maps pre-API

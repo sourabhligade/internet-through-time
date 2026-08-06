@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Google Maps</title>
+<title>Google Maps (2005)</title>
 <link rel="stylesheet" href="../../../../css/period-2005.css">
 </head>
-<body bgcolor="#ffffff">
+<body class="maps-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="gm05-wrap">
-  <div class="gm05-bar">
-    <img src="../../../../assets/period/2005/maps/logo-wa.gif" width="48" height="16" alt="" border="0" align="absmiddle"> <b style="color:#1a64c8;font-size:18px">Google</b>
-    <span style="color:#c8392b;font-size:18px">Maps</span>
-    &nbsp; <font size="2">
-    <a href="index.html">Maps</a> ·
-    <a href="index.html">Local Search</a> ·
-    <a href="index.html">Directions</a> ·
-    <a href="about.html">About / Ajax</a> ·
-    <a href="mashups.html">Mashups</a> ·
-    <a href="../google/index.html">Google Home</a>
-    </font>
-  </div>
-  <form data-maps-search class="gm05-search">
-    <font size="2">
-    <b>What</b> <input name="what" size="16" value="pizza" placeholder="e.g. pizza">
-    <b>Where</b> <input name="q" size="24" value="San Francisco" placeholder="e.g. Poughkeepsie, NY">
-    <input type="submit" value="Search Maps">
-    &nbsp; <label><input type="checkbox" data-maps-sat> Satellite</label>
-    </font>
-  </form>
-  <div class="gm05-stage">
-    <div class="gm05-map" data-maps-canvas title="Drag to pan (theater)">
-      <div class="gm05-map-inner" data-maps-inner>
-        <div class="gm05-label" data-maps-label>San Francisco Bay Area</div>
-        <div class="gm05-roads"></div>
-      </div>
+
+<div class="maps-chrome">
+ <p>
+  <img src="../../../../assets/period/2005/maps/logo.gif" alt="Google" height="40">
+  <b> Maps</b>
+  · <a href="index.html">Maps</a>
+  · <a href="index.html">Local Search</a>
+  · <a href="index.html">Directions</a>
+  · <a href="about.html">About Ajax</a>
+  · <a href="mashups.html">Mashups</a>
+  · <a href="../../pages/home.html">Start</a>
+ </p>
+ <p style="font-size:11px;color:#333;margin:4px 0 8px">
+  <b>February 8, 2005</b> public Maps — drag, zoom, Local Search. JavaScript must be enabled.
+  Official Maps API June 2005. No Street View in this year (2007).
+ </p>
+ <form data-maps-search action="#" style="margin:8px 0;font-size:13px">
+  <label><b>What</b> <input name="what" size="18" placeholder="e.g., pizza" value="pizza"></label>
+  &nbsp;
+  <label><b>Where</b> <input name="where" size="22" placeholder="e.g., Poughkeepsie, NY" value="San Francisco, CA"></label>
+  &nbsp;
+  <button type="submit">Search Maps</button>
+ </form>
+ <form data-maps-directions action="#" style="margin:0 0 10px;font-size:12px;background:#f8f8f8;border:1px solid #ccc;padding:8px">
+  <b>Directions</b>
+  &nbsp; <label>Start <input name="start" size="18" value="Ferry Building, SF"></label>
+  &nbsp; <label>End <input name="end" size="18" value="Golden Gate Bridge"></label>
+  &nbsp; <button type="submit">Get Directions</button>
+ </form>
+ <div class="maps-layout">
+  <div class="maps-main">
+   <div class="maps-canvas" data-maps-canvas>
+    <div class="maps-controls">
+     <button type="button" data-maps-zoom="in">+</button>
+     <button type="button" data-maps-zoom="out">−</button><br>
+     <button type="button" data-maps-pan="n">N</button>
+     <button type="button" data-maps-pan="s">S</button>
+     <button type="button" data-maps-pan="w">W</button>
+     <button type="button" data-maps-pan="e">E</button>
     </div>
-    <div class="gm05-ctrl">
-      <font size="1">
-      <b>Map</b> / Satellite<br>
-      <button type="button" data-maps-zoom="in">+</button>
-      <button type="button" data-maps-zoom="out">−</button>
-      <br>Drag the map<br>
-      <span style="color:#666">No live tiles · Feb 2005 launch</span>
-      </font>
+    <div style="position:absolute;bottom:8px;left:8px;right:8px;background:rgba(255,255,255,0.9);padding:6px;font-size:12px;z-index:3" data-maps-status>
+     Drag the map · zoom +/− · Feb 8 2005 Maps
     </div>
+   </div>
   </div>
-  <p><font size="1" color="#666">
-  Draggable map · Local Search · Directions era begins ·
-  <a href="about.html">Ajax &amp; mashups</a>.
-  <b>Street View is not 2005</b> as a default product.
-  </font></p>
+  <div class="maps-side">
+   <div data-maps-results style="background:#fafafa;border:1px solid #ccc;padding:8px;min-height:120px;margin-bottom:8px"></div>
+   <div data-maps-history style="font-size:11px;padding:6px;background:#f5f5f5;border:1px solid #ccc"></div>
+  </div>
+ </div>
+ <div style="font-size:12px;background:#f8f8ff;border:1px solid #99a;padding:8px;margin:12px 0">
+  <b>Map the rest of 2005</b>
+  <ul style="margin:4px 0 0 16px;line-height:1.45">
+   <li><a href="../housingmaps/index.html"><b>HousingMaps</b></a> — Craigslist pins · pre-API mashup (~Apr)</li>
+   <li><a href="mashups.html">Mashups / API culture</a> · <a href="about.html">Ajax essay (Feb 18)</a></li>
+   <li><a href="../google/index.html">Google home</a> · Local tab energy · <a href="../gmail/index.html">Gmail</a> (Ajax sibling)</li>
+   <li><a href="../techcrunch/index.html">TechCrunch</a> · <a href="../web20conference/index.html">Web 2.0 Conf</a></li>
+   <li><a href="../youtube/index.html">YouTube</a> · <a href="../reddit/index.html">Reddit</a> — same always-on year</li>
+  </ul>
+ </div>
 </div>
+
 <script src="../../../../js/immersion-2005.js"></script>
 </body></html>

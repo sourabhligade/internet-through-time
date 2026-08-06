@@ -1,6 +1,7 @@
 /* 2001 document styles — Windows XP · IE 6 · Wikipedia · iPod · post-crash rebuild
-   Year delta: @import period-2000 (smile / densify grammar). Only 2001-specific rules below. */
-@import url("period-2000.css");
+   Year delta: @import period-1999 (2000 wiped) (smile / densify grammar). Only 2001-specific rules below. */
+@import url("period-1999.css");
+@import url("period-xp-ui.css");
 
 /* —— Wikipedia densify shell —— */
 .wiki-shell {
@@ -119,4 +120,52 @@ table.wiki-cols { width: 100%; border-collapse: collapse; }
   margin: 40px auto;
   text-align: center;
   font-family: Arial, sans-serif;
+}
+
+/* ITT feel tokens 2001 — XP · Wikipedia · iPod */
+:root {
+  --itt01-xp-blue: #0a246a;
+  --itt01-wiki: #000000;
+}
+
+/* —— 2001 UI robust densify —— */
+.wiki-shell, .um {
+  max-width: 760px;
+  margin: 10px auto;
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  background: #fff;
+  box-shadow: 1px 1px 0 #ccc;
+}
+.wiki-bar, .um-nav {
+  background: #f0f0f0 !important;
+  border: 1px solid #999 !important;
+  padding: 6px 8px !important;
+  margin-bottom: 10px !important;
+}
+.wiki-bar a, .um-nav a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 2px 0;
+}
+.broadband-shell, .bb-shell {
+  max-width: 640px;
+  margin: 12px auto;
+  border: 1px solid #0a246a;
+  background: #fff;
+  padding: 12px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+#speed-check, .bb-shell button {
+  font-family: Tahoma, Arial, sans-serif;
+  padding: 4px 14px;
+}
+#speed-out {
+  margin-top: 8px;
+  padding: 8px;
+  background: #e8ffe8;
+  border: 1px solid #6a6;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  min-height: 1.5em;
 }

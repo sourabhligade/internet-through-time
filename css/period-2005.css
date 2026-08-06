@@ -1,252 +1,56 @@
-/* 2005 document styles — YouTube · Google Maps · Reddit · Digg · Ajax boom
-   Year delta: @import period-2004 (Gmail/Flickr/Facebook/Firefox stay there).
-   Only 2005-specific rules below. */
+/* 2005 document styles — XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0
+   Year delta: @import period-2004 + product polish lite. */
 @import url("period-2004.css");
+@import url("period-2005-lite.css");
 
-/* YouTube 2005 */
-.yt05-wrap {
-  max-width: 780px;
-  margin: 10px auto;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-}
-.yt05-top {
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  padding: 8px 0 10px;
-  margin-bottom: 10px;
-}
-.yt05-top a { margin-right: 12px; font-size: 12px; }
-.yt05-logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-  margin-right: 16px;
-}
-.yt05-logo span { color: #c00; }
-.yt05-tag { color: #333; margin: 0 0 12px; }
-.yt05-side {
-  background: #f7f7f7;
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-.yt05-thumb {
-  width: 80px;
-  height: 60px;
-  background: #222;
-  border: 1px solid #000;
-}
-.yt05-player {
-  width: 100%;
-  max-width: 480px;
-  height: 280px;
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding-top: 100px;
-  border: 2px solid #444;
-  margin-bottom: 10px;
-}
-.yt05-playbtn {
-  font-size: 48px;
-  color: #c00;
-  margin-bottom: 8px;
-}
-.yt05-form {
-  background: #f5f5f5;
-  border: 1px solid #ccc;
-  padding: 12px;
-}
-.yt05-list td { vertical-align: top; }
-
-/* YouTube 2005 — sparse top-bar login (not a modern red CTA pill) */
-.yt05-user {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #333;
-}
-.yt05-user a { color: #03c; margin: 0 2px; }
-.yt05-user-name { color: #333; font-weight: bold; }
-.yt05-field {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 11px !important;
-  border: 1px solid #999 !important;
-  padding: 1px 3px !important;
-  background: #fff !important;
-  border-radius: 0 !important;
-}
-.yt05-login,
-.yt05-wrap input[type="submit"],
-.yt05-wrap input[type="button"],
-.yt05-form input[type="submit"],
-.yt05-form input[type="button"] {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 11px !important;
-  color: #000 !important;
-  background: #f0f0f0 !important;
-  border: 1px solid #666 !important;
-  padding: 1px 10px !important;
-  cursor: default !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  font-weight: normal !important;
-}
-.yt05-login:active,
-.yt05-wrap input[type="submit"]:active,
-.yt05-wrap input[type="button"]:active {
-  background: #e0e0e0 !important;
+body.year-2005 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #ff6600;
 }
 
-/* Digg / Reddit 2005 — plain form buttons */
-.dg05-wrap input[type="submit"],
-.dg05-wrap input[type="button"],
-.rd05-wrap input[type="submit"],
-.rd05-wrap input[type="button"],
-[data-digg-submit] input[type="submit"],
-[data-reddit-submit] input[type="submit"] {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 12px !important;
-  background: #eee !important;
-  color: #000 !important;
-  border: 1px solid #999 !important;
-  padding: 2px 10px !important;
-  cursor: default !important;
-  border-radius: 0 !important;
+/* Gmail 2004 recon */
+.gmail-shell { font-family: Arial, Helvetica, sans-serif; font-size: 13px; background: #fff; color: #000; }
+.gmail-header { background: #c3d9ff; border-bottom: 1px solid #6b90da; padding: 8px 12px; }
+.gmail-login-box { max-width: 420px; margin: 24px auto; border: 1px solid #c3d9ff; padding: 16px; background: #fff; }
+.gmail-gb { color: #c00; font-size: 28px; font-weight: bold; letter-spacing: -1px; }
+.gmail-layout { display: table; width: 100%; }
+.gmail-labels { display: table-cell; width: 140px; vertical-align: top; background: #fff; padding: 8px; border-right: 1px solid #c3d9ff; font-size: 12px; }
+.gmail-main { display: table-cell; vertical-align: top; padding: 8px; }
+.gmail-row { border-bottom: 1px solid #e0e0e0; padding: 4px 0; font-size: 12px; }
+.gmail-note { background: #ffffcc; border: 1px solid #cc9900; padding: 8px; font-size: 11px; margin: 8px 0; }
+
+/* Flickr 2004 recon pink/blue */
+.flickr-shell { font-family: Arial, Helvetica, sans-serif; background: #fff; color: #000; }
+.flickr-header { background: #0063dc; color: #fff; padding: 10px 14px; }
+.flickr-header a { color: #ff0084; }
+.flickr-pink { color: #ff0084; font-weight: bold; }
+.flickr-stream { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.flickr-thumb { width: 100px; height: 75px; background: #ddd; border: 1px solid #999; font-size: 10px; text-align: center; line-height: 75px; color: #666; }
+.flickr-note { background: #eef; border: 1px solid #99c; padding: 8px; font-size: 11px; }
+
+/* Thefacebook 2004 Harvard blue */
+.fb-shell { font-family: Tahoma, Arial, sans-serif; background: #3b5998; color: #000; min-height: 100vh; }
+.fb-card { max-width: 700px; margin: 16px auto; background: #fff; border: 1px solid #0a246a; }
+.fb-top { background: #3b5998; color: #fff; padding: 10px 14px; font-weight: bold; }
+.fb-body { padding: 12px; font-size: 12px; }
+.fb-side { background: #eee; padding: 8px; width: 160px; vertical-align: top; }
+.fb-note { background: #ffffcc; border: 1px solid #cc0; padding: 6px; font-size: 11px; margin: 8px 0; }
+
+/* Firefox 1.0 product */
+.ff-shell { font-family: Verdana, Arial, sans-serif; background: #f9f7f2; color: #000; max-width: 720px; margin: 12px auto; padding: 12px; }
+.ff-hero { background: #efefef; border: 1px solid #ccc; padding: 12px; }
+.ff-btn { background: #e86500; color: #fff; border: 1px solid #c40; padding: 6px 14px; font-weight: bold; text-decoration: none; display: inline-block; }
+.ff-note { font-size: 11px; color: #444; margin-top: 10px; }
+
+/* Digg shell width for densify pages (lite also defines digg-item layout) */
+.digg-shell { max-width: 720px; margin: 12px auto; }
+
+/* ITT feel tokens 2005 — YouTube · Maps · Reddit */
+:root {
+  --itt05-yt: #ff0000;
+  --itt05-maps: #4c8bf5;
+  --itt05-reddit: #ff4500;
 }
 
-/* Google Maps 2005 */
-.gm05-wrap {
-  max-width: 820px;
-  margin: 8px auto;
-  font-family: Arial, sans-serif;
-}
-.gm05-bar {
-  padding: 6px 0;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 8px;
-}
-.gm05-search { margin: 8px 0; }
-.gm05-stage { position: relative; border: 1px solid #999; }
-.gm05-map {
-  height: 360px;
-  overflow: hidden;
-  background: #c6d8b0;
-  cursor: grab;
-  position: relative;
-}
-.gm05-map.gm05-sat { background: #3a4a3a; }
-.gm05-map-inner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 800px;
-  height: 800px;
-  margin: -400px 0 0 -400px;
-}
-.gm05-roads {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(#fff 1px, transparent 1px) 0 0 / 40px 40px,
-    linear-gradient(90deg, #fff 1px, transparent 1px) 0 0 / 40px 40px,
-    linear-gradient(#e8d4a8 2px, transparent 2px) 0 0 / 120px 120px,
-    linear-gradient(90deg, #e8d4a8 2px, transparent 2px) 0 0 / 120px 120px;
-  opacity: 0.85;
-}
-.gm05-sat .gm05-roads { opacity: 0.35; filter: grayscale(0.4); }
-.gm05-label {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border: 1px solid #333;
-  padding: 4px 8px;
-  font-size: 12px;
-  z-index: 2;
-  white-space: nowrap;
-}
-.gm05-ctrl {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  background: #fff;
-  border: 1px solid #666;
-  padding: 6px;
-  z-index: 3;
-}
-
-/* Reddit 2005 */
-.rd05-wrap {
-  max-width: 720px;
-  margin: 10px auto;
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-}
-.rd05-top {
-  border-bottom: 1px solid #5f99cf;
-  padding-bottom: 6px;
-  margin-bottom: 8px;
-}
-.rd05-top a { margin-right: 10px; }
-.rd05-word { color: #ff4500; font-size: 18px; }
-.rd05-boost { color: #888; font-size: 11px; }
-.rd05-boost a {
-  color: #ff4500;
-  text-decoration: none;
-  font-size: 14px;
-}
-.rd05-list td { vertical-align: top; }
-
-/* Digg 2005 */
-.dg05-wrap {
-  max-width: 760px;
-  margin: 10px auto;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-}
-.dg05-top {
-  background: #1b5790;
-  color: #fff;
-  padding: 8px 12px;
-  margin-bottom: 10px;
-}
-.dg05-top a {
-  color: #fff;
-  margin-right: 12px;
-  font-size: 12px;
-}
-.dg05-logo {
-  font-weight: bold;
-  font-size: 22px;
-  color: #fff;
-  background: #000;
-  padding: 2px 8px;
-  margin-right: 10px;
-}
-.dg05-row {
-  display: flex;
-  gap: 12px;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-.dg05-count {
-  min-width: 56px;
-  text-align: center;
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 6px;
-}
-.dg05-body { flex: 1; }
-
-/* TechCrunch / iTunes podcasts light helpers */
-.tc05 {
-  max-width: 720px;
-  margin: 10px auto;
-  font-family: Georgia, serif;
-  font-size: 14px;
-}
-.it05-row button {
-  margin-left: 8px;
-  font-size: 11px;
-}
+/* Starting Point inherits period-xp-ui via 2002→2003 chain (chips · window · trails). */
+.itt-start-title { /* year accent already on body.year-chip */ }

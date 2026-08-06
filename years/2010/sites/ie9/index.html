@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Internet Explorer 9 Beta — 2010</title>
+<link rel="stylesheet" href="../../../../css/period-2010.css"></head>
+<body bgcolor="#ece9d8">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:640px;margin:16px auto;font-family:Tahoma,Arial,sans-serif;font-size:13px;background:#fff;border:2px solid #0a246a;padding:16px">
+ <p style="font-size:12px"><a href="about.html">About IE 9 beta</a> · <a href="../ie8/index.html">IE 8 default</a></p>
+ <h1 style="color:#0a246a;font-size:18px">Internet Explorer 9 — Public Beta</h1>
+ <p><b>Sep 15, 2010</b> public beta (Wikipedia IE9 class). Hardware-accelerated web curiosity · not the mass default client yet.</p>
+ <p style="background:#fff8dc;border:1px solid #cc0;padding:8px;font-size:12px"><b>Shell honesty:</b> This museum year defaults to <b>Windows 7 + Internet Explorer 8</b>. IE9 beta is a product room — same pattern as Chrome.</p>
+ <p><a href="../ie8/index.html">IE 8</a> · <a href="../windows7/index.html">Windows 7</a> · <a href="../chrome/index.html">Chrome</a></p>
+</div>
+
+ <p style="margin-top:12px">
+  <button type="button" data-shell-prefer="ie9-beta">Use as preferred browser (local theater)</button>
+  <span data-shell-status style="font-size:12px;color:#060;margin-left:8px"></span>
+ </p>
+ 
+<script>
+(function(){
+  var KEY="itt10-shell-pref";
+  function boot(){
+    var btns=document.querySelectorAll("[data-shell-prefer]");
+    var st=document.querySelector("[data-shell-status]");
+    try{ var raw=localStorage.getItem(KEY); if(raw&&st) st.textContent="Preferred: "+JSON.parse(raw).id+" · "+KEY; }catch(e){}
+    for(var i=0;i<btns.length;i++){
+      btns[i].addEventListener("click", function(ev){
+        var id=ev.currentTarget.getAttribute("data-shell-prefer");
+        try{ localStorage.setItem(KEY, JSON.stringify({id:id,ts:Date.now()})); }catch(e){}
+        if(st) st.textContent="Preferred: "+id+" · "+KEY;
+      });
+    }
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+</script>
+
+<script src="../../../../js/immersion-2010.js"></script>
+</body></html>

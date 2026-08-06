@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>Macromedia — Flash 5</title>
+<title>Macromedia Flash 5 — 2000</title>
 <link rel="stylesheet" href="../../../../css/period-2000.css">
 </head>
-<body bgcolor="#1e1e1e" text="#eee" link="#6cf" vlink="#a9f">
+<body class="flash5-shell" bgcolor="#000000" text="#ffffff" link="#66ccff">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="100%" cellpadding="8" bgcolor="#c00">
-<tr><td><font face="Arial" size="4" color="#fff"><b>Macromedia</b></font>
-<font face="Arial" size="2" color="#fcc"> · Flash 5 · Dreamweaver · 2000</font></td>
-<td align="right"><font size="1"><a href="../../pages/home.html"><font color="#FC0">Home</font></a></font></td>
-</tr></table>
-<table width="720" align="center" cellpadding="12" bgcolor="#2a2a2a" style="margin-top:8px">
-<tr><td>
-<font face="Arial" size="2">
-<p>Flash 5 (2000) deepens ActionScript; designers ship full sites as SWF shells.
-Dreamweaver fights FrontPage for professional HTML. The plugin wars continue —
-“You need Flash Player” is a cultural password.</p>
-<table width="100%" cellpadding="8" bgcolor="#333" style="border:1px solid #555">
-<tr><td>
-<ul>
-<li><a href="flash5.html">Flash 5 product notes</a></li>
-<li><a href="dreamweaver.html">Dreamweaver</a></li>
-<li><a href="about.html">About Macromedia web</a></li>
-</ul>
-</td></tr></table>
-<p><a href="../homestar/index.html">Homestar (Flash cartoons)</a> ·
-<a href="../gnutella/index.html">Gnutella</a> (different kind of cool)</p>
-</font>
-</td></tr></table>
+<div style="max-width:640px;margin:16px auto;font-family:Verdana,Arial,sans-serif;font-size:12px">
+ <img src="../../../../assets/period/2000/flash/loading.gif" height="24" alt="">
+ <h1 style="font-size:18px">Macromedia Flash 5</h1>
+ <p><b>August 2000</b> — Flash 5 ships with <b>ActionScript</b>. Splash pages and “skip intro” culture peak.
+ Homestar Runner launches Jan 1 2000. Agency sites define “cool” with full-screen intros.</p>
+ <p>
+ <button type="button" id="skip-intro-btn">Skip intro</button>
+ · <a href="about.html">About Flash 5</a>
+ · <a href="../flash4/index.html">Flash 4 culture</a>
+ </p>
+ <div id="intro" style="border:1px solid #666;padding:20px;margin:12px 0;background:#111">
+ <p style="font-size:11px;color:#aaa">[Flash intro theater — no real SWF malware]</p>
+ <p style="font-size:14px">Loading experience… please wait…</p>
+ <img src="../../../../assets/period/2000/flash/loading.gif" alt="loading">
+ <p style="font-size:11px;color:#888">56k users: this is why Skip Intro existed.</p>
+ </div>
+ <div id="site-main" style="display:none;border:1px solid #444;padding:16px;background:#0a0a12">
+ <p><b>Welcome to the site proper.</b> (Post-intro content — period reconstruction.)</p>
+ <p>Product pitch: design motion for the web · ActionScript interactivity · player ubiquity.</p>
+ </div>
+ <p style="font-size:11px"><a href="../../pages/home.html">&larr; 2000 Start</a></p>
+</div>
+<script>
+(function(){
+ var b=document.getElementById('skip-intro-btn');
+ if(b) b.onclick=function(){
+ var i=document.getElementById('intro'); if(i) i.style.display='none';
+ var m=document.getElementById('site-main'); if(m) m.style.display='block';
+ };
+})();
+</script>
 <script src="../../../../js/immersion-2000.js"></script>
 </body></html>
