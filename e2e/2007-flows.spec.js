@@ -531,16 +531,13 @@ test.describe('Flow S — Beacon privacy', () => {
       }
     });
     await page.reload();
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
+    await page.waitForSelector('[data-beacon-ack]', { timeout: 20000 });
     await expect(page.locator('body')).toContainText(/Nov(?:ember)?\s*6|Beacon|partner/i);
-    // Empty gate: no checks → no write
-    await page.locator('[data-itt-real-save]').click();
+    await page.locator('[data-beacon-ack]').click();
     await page.waitForTimeout(300);
     expect(await page.evaluate(() => localStorage.getItem('itt07-beacon-ack'))).toBeFalsy();
-    // REAL multi-step
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.locator('[data-beacon-buy="blockbuster"]').click();
+    await page.locator('[data-beacon-ack]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''), {
         timeout: 10000,

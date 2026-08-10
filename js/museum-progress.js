@@ -3,13 +3,13 @@
  * localStorage only. No network. Educational theater.
  *
  * Keys:
- *   itt-passport       { version, stamps: { "2017": { faceid: { label, ts, href } } } }
+ *   itt-passport       { version, stamps: { "2013": { vine: { label, ts, href } } } }
  *   itt-first-night    { active, trail, step, completed, finished, startedAt }
  *   itt-last-year      (existing)
  *
  * Trails:
- *   first-night        1994 → 1998 → 2005 → 2010 → 2016 → 2018
- *   YYYY-start         short in-year tour for every shipped year 1994–2018
+ *   first-night        1994 → 1998 → 2005 → 2010 → 2013
+ *   YYYY-start         short in-year tour for every shipped year 1994–2016
  */
 (function (global) {
   "use strict";
@@ -19,7 +19,7 @@
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
 
-  /** First night · ~20 min signature arc (1994 → 2018) */
+  /** First night · signature arc (1994 → 2013) */
   var FIRST_NIGHT = [
     {
       id: "fn-1994",
@@ -57,22 +57,13 @@
       match: "/instagram/"
     },
     {
-      id: "fn-2016",
-      year: "2016",
-      path: "sites/instagram/stories.html",
-      title: "2016 · Instagram Stories",
-      blurb: "Write a Story · confirm 24h · Add to Story (REAL multi-step).",
+      id: "fn-2013",
+      year: "2013",
+      path: "sites/vine/record.html",
+      title: "2013 · Vine",
+      blurb: "Hold six seconds · post a loop (REAL multi-step).",
       mode: "stamp",
-      stampIds: ["stories", "ig-stories", "ig"]
-    },
-    {
-      id: "fn-2018",
-      year: "2018",
-      path: "sites/gdpr/index.html",
-      title: "2018 · GDPR consent",
-      blurb: "Manage preferences · rights literacy · Save (REAL multi-step).",
-      mode: "stamp",
-      stampIds: ["gdpr", "consent", "cookie"]
+      stampIds: ["vine", "vine-posts"]
     }
   ];
 
@@ -183,82 +174,15 @@
       { path: "sites/vine/index.html", label: "Vine", blurb: "Six-second loops.", match: "/vine/" },
       { path: "sites/snapchat/story.html", label: "Snap Stories", blurb: "Ephemeral stories · 24h theater.", match: "/story" }),
     "2014": yearVisitTour("2014",
-      { path: "sites/whatsapp/index.html", label: "WhatsApp", blurb: "Deal + chat theater.", match: "/whatsapp/" },
-      { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "TLS panic literacy · patch culture.", match: "/heartbleed/" }),
+      { path: "sites/whatsapp/index.html", label: "WhatsApp", blurb: "Deal + chat REAL · $19B class.", match: "/whatsapp/" },
+      { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "CVE-2014-0160 · rotate theater.", match: "/heartbleed/" }),
     "2015": yearVisitTour("2015",
-      { path: "sites/windows10/index.html", label: "Windows 10", blurb: "Free upgrade year · Edge residual.", match: "/windows10/" },
-      { path: "sites/apple/watch.html", label: "Apple Watch", blurb: "Wrist computer launch.", match: "/watch" }),
+      { path: "sites/apple/watch.html", label: "Apple Watch", blurb: "Ships Apr 24 · Sport from $349.", match: "/watch" },
+      { path: "sites/windows10/index.html", label: "Win10 free", blurb: "Jul 29 upgrade · Edge.", match: "/windows10/" }),
     "2016": yearVisitTour("2016",
-      { path: "sites/instagram/stories.html", label: "IG Stories", blurb: "Stories productize ephemeral · REAL multi-step.", match: "/stories", mode: "stamp", stampIds: ["stories", "ig-stories", "ig"] },
-      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "AR outdoor game culture.", match: "/pokemongo/" }),
-    "2017": [
-      {
-        id: "y17-about",
-        year: "2017",
-        path: "pages/about.html",
-        title: "2017 · About scale",
-        blurb: "1.77B sites · +69% · hard bans. Check thesis literacy, then continue.",
-        mode: "visit",
-        match: "/about"
-      },
-      {
-        id: "y17-faceid",
-        year: "2017",
-        path: "sites/iphone/x.html",
-        title: "2017 · Face ID",
-        blurb: "Notch · look to unlock · $999 · Nov 3 stores.",
-        mode: "stamp",
-        stampIds: ["faceid", "iphonex", "iphone"]
-      },
-      {
-        id: "y17-fortnite",
-        year: "2017",
-        path: "sites/fortnite/index.html",
-        title: "2017 · Fortnite free BR",
-        blurb: "Free ack · drop · Victory Royale (silhouette only).",
-        mode: "stamp",
-        stampIds: ["fortnite", "fn"]
-      },
-      {
-        id: "y17-netflix",
-        year: "2017",
-        path: "sites/netflix/modern.html",
-        title: "2017 · Netflix My List",
-        blurb: "Pick a title → Add to My List → Save (complex REAL).",
-        mode: "stamp",
-        stampIds: ["netflix"]
-      },
-      {
-        id: "y17-discord",
-        year: "2017",
-        path: "sites/discord/modern.html",
-        title: "2017 · Discord + Nitro",
-        blurb: "Send a channel message · Nitro literacy · Save.",
-        mode: "stamp",
-        stampIds: ["discord", "nitro"]
-      }
-    ],
-    "2018": yearVisitTour("2018",
-      {
-        path: "sites/gdpr/index.html",
-        label: "GDPR consent",
-        blurb: "Manage preferences · rights · Save (REAL multi-step).",
-        match: "/gdpr/",
-        mode: "stamp",
-        stampIds: ["gdpr", "consent", "cookie"]
-      },
-      {
-        path: "sites/tiktok/index.html",
-        label: "TikTok merge",
-        blurb: "Musical.ly → TikTok Aug 2 · For You theater.",
-        match: "/tiktok/",
-        mode: "stamp",
-        stampIds: ["tiktok", "tt", "musical"]
-      })
+      { path: "sites/instagram/stories.html", label: "Stories", blurb: "Aug 2 · 24h · not Reels.", match: "/instagram/stories" },
+      { path: "sites/pogo/index.html", label: "Pokémon GO", blurb: "Jul 6 · no sprites · no GPS.", match: "/pogo/" })
   };
-
-  var YEAR_2017_START = YEAR_STARTS["2017"];
-  var YEAR_2018_START = YEAR_STARTS["2018"];
 
   var TRAILS = {
     "first-night": {
@@ -272,7 +196,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2018; y++) {
+    for (y = 1994; y <= 2016; y++) {
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -437,17 +361,7 @@
     return startTrail("first-night");
   }
 
-  /** Guided 2017 in-year start (About → Face ID → Fortnite → Netflix → Discord) */
-  function start2017() {
-    return startTrail("2017-start");
-  }
-
-  /** Guided 2018 in-year start (About → GDPR → TikTok) */
-  function start2018() {
-    return startTrail("2018-start");
-  }
-
-  /** Start any shipped year tour (1994–2018) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2013) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -637,8 +551,8 @@
     bar.id = "itt-first-night-bar";
     bar.setAttribute("role", "region");
     bar.setAttribute("aria-label", meta.label + " trail");
-    var accent = n.trail === "2017-start" ? "#e50914" : "#00bcd4";
-    var bg = n.trail === "2017-start" ? "#111" : "#1a237e";
+    var accent = "#00bcd4";
+    var bg = "#1a237e";
     bar.style.cssText =
       "position:sticky;top:0;z-index:9998;background:" +
       bg +
@@ -727,7 +641,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2018; y++) years.push(String(y));
+    for (y = 1994; y <= 2016; y++) years.push(String(y));
     var total = totalStamps();
     var nYears = yearsStamped().length;
     var night = getNight();
@@ -747,8 +661,6 @@
       var yy = years[i];
       var c = yearStampCount(yy);
       var cls = c > 0 ? "passport-year has-stamps" : "passport-year";
-      if (yy === "2017") cls += " passport-year-2017";
-      if (yy === "2018") cls += " passport-year-2018";
       html +=
         '<a role="listitem" class="' +
         cls +
@@ -776,21 +688,11 @@
     }
     html += "</div>";
 
-    /* 2018 start — newest year primary */
-    html += '<div class="first-night-card year-2018-start-card">';
+    html += '<div class="first-night-card year-2016-start-card">';
     html +=
-      "<b>2018 start</b> — guided tour of the newest year: " +
-      "About → GDPR consent → TikTok merge." +
-      '<br><button type="button" data-itt-2018-start class="start-btn start-primary">Start 2018 tour →</button>' +
-      ' <a class="start-btn" href="/years/2018/">Open 2018 shell</a>';
-    html += "</div>";
-
-    /* 2017 start — Face ID era */
-    html += '<div class="first-night-card year-2017-start-card">';
-    html +=
-      "<b>2017 start</b> — About → Face ID → Fortnite free BR → Netflix → Discord + Nitro." +
-      '<br><button type="button" data-itt-2017-start class="start-btn">Start 2017 tour →</button>' +
-      ' <a class="start-btn" href="/years/2017/">Open 2017 shell</a>';
+      "<b>2016 start</b> — newest shipped year: Instagram Stories + Pokémon GO." +
+      '<br><a class="start-btn start-primary" href="/years/2016/?trail=2016-start">Start 2016 tour →</a>' +
+      ' <a class="start-btn" href="/years/2016/">Open 2016 shell</a>';
     html += "</div>";
 
     /* Per-year tour hint */
@@ -804,7 +706,7 @@
     html += '<div class="first-night-card">';
     if (night.finished && night.trail === "first-night") {
       html +=
-        "<b>First night complete</b> — you walked 1994→2018. " +
+        "<b>First night complete</b> — you walked 1994→2013. " +
         '<button type="button" data-itt-night-restart class="start-btn">Replay first night</button>';
     } else if (night.active && !night.finished) {
       var st = activeSteps(night)[night.step] || activeSteps(night)[0];
@@ -825,26 +727,12 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2005 YouTube → 2010 Instagram → 2016 Stories → 2018 GDPR." +
+        "1994 → 1998 Google → 2005 YouTube → 2010 Instagram → 2013 Vine." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
     }
     html += "</div></div>";
     root.innerHTML = html;
 
-    var y18 = root.querySelector("[data-itt-2018-start]");
-    if (y18) {
-      y18.addEventListener("click", function () {
-        start2018();
-        location.href = stepHref(YEAR_2018_START[0], "2018-start");
-      });
-    }
-    var y17 = root.querySelector("[data-itt-2017-start]");
-    if (y17) {
-      y17.addEventListener("click", function () {
-        start2017();
-        location.href = stepHref(YEAR_2017_START[0], "2017-start");
-      });
-    }
     var startBtn = root.querySelector("[data-itt-night-start], [data-itt-night-restart]");
     if (startBtn) {
       startBtn.addEventListener("click", function () {
@@ -879,8 +767,6 @@
     NIGHT_KEY: NIGHT_KEY,
     FIRST_NIGHT: FIRST_NIGHT,
     YEAR_STARTS: YEAR_STARTS,
-    YEAR_2017_START: YEAR_2017_START,
-    YEAR_2018_START: YEAR_2018_START,
     TRAILS: TRAILS,
     getPassport: getPassport,
     stamp: stamp,
@@ -891,8 +777,6 @@
     getNight: getNight,
     startTrail: startTrail,
     startFirstNight: startFirstNight,
-    start2017: start2017,
-    start2018: start2018,
     startYear: startYear,
     yearStartSteps: yearStartSteps,
     clearFirstNight: clearFirstNight,

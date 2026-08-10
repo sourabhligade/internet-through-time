@@ -19,6 +19,16 @@
   function save(obj) {
     localStorage.setItem(storageKey(), JSON.stringify(obj));
   }
+  function checksOk(doc) {
+    var reqs = doc.querySelectorAll("[data-chrome-req]");
+    var i;
+    if (!reqs.length) return true;
+    for (i = 0; i < reqs.length; i++) {
+      if (!reqs[i].checked) return false;
+    }
+    return true;
+  }
+
   function boot(doc) {
     doc = doc || document;
     if (!doc.querySelector("[data-chrome-download], [data-chrome-status], [data-chrome-prefer]")) return;
@@ -35,10 +45,20 @@
       dl.setAttribute("data-bound", "1");
       dl.addEventListener("click", function (ev) {
         ev.preventDefault();
+        if (!checksOk(doc)) {
+          var need = "Check the Chrome literacy boxes first.";
+          if (st) st.textContent = need;
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback(need, { doc: doc, status: st, kind: "chrome-block" });
+          }
+          return;
+        }
         var o = load() || {};
         o.downloaded = true;
         o.ts = Date.now();
         o.platform = "Windows";
+        o.multiStep = true;
+        o.real = true;
         save(o);
         var yLabel = "";
         try {
@@ -63,9 +83,19 @@
       pref.setAttribute("data-bound", "1");
       pref.addEventListener("click", function (ev) {
         ev.preventDefault();
+        if (!checksOk(doc)) {
+          var needP = "Check the Chrome literacy boxes first.";
+          if (st) st.textContent = needP;
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback(needP, { doc: doc, status: st, kind: "chrome-block" });
+          }
+          return;
+        }
         var o = load() || {};
         o.preferred = true;
         o.ts = Date.now();
+        o.multiStep = true;
+        o.real = true;
         save(o);
         var msg = "Set as preferred (local only · museum shell still IE) · " + storageKey();
         if (st) st.textContent = msg;

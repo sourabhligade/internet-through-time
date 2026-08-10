@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/xanga/index.html": "http://museum.local/years/2002/xanga/",
+      "sites/deviantart/index.html": "http://museum.local/years/2002/deviantart/",
+      "sites/somethingawful/index.html": "http://museum.local/years/2002/somethingawful/",
+      "sites/livejournal/index.html": "http://museum.local/years/2002/livejournal/",
+
       "sites/playable/index.html": "http://museum.local/years/2002/playable/",
       "sites/playable/game.html": "http://museum.local/years/2002/playable/game.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2002/about.html",
@@ -243,8 +248,11 @@
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/index.html",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/index.html"
-    },
+      "sites/zombo/index.html": "http://www.zombo.com/index.html",
+      "sites/stumbleupon/about.html": "http://www.stumbleupon.com/about.html",
+      "sites/stumbleupon/history.html": "http://www.stumbleupon.com/history.html",
+      "sites/stumbleupon/index.html": "http://www.stumbleupon.com/",
+},
     titleMap: {
       "sites/netcenter/about.html": "About",
       "sites/y2k/about.html": "About",

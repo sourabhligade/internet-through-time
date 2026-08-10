@@ -25,8 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships (hub open 1994–2015 — DISK-TRUTH)
-KNOWN_YEARS = [str(y) for y in range(1994, 2018)]  # 1994–2017
+# Years the museum ships (hub open 1994–2016 — DISK-TRUTH)
+KNOWN_YEARS = [str(y) for y in range(1994, 2017)]  # 1994–2016
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -134,9 +134,9 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/whatsapp/index.html",
         "sites/heartbleed/index.html",
         "sites/iphone/index.html",
-        "sites/icebucket/index.html",
-        "sites/billion/index.html",
         "sites/windows10/index.html",
+        "sites/cardboard/index.html",
+        "sites/playable/game.html",
         "sites/chrome/index.html",
     ],
     "2015": [
@@ -148,37 +148,41 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/periscope/index.html",
         "sites/applemusic/index.html",
         "sites/googlephotos/index.html",
-        "sites/ios9/blockers.html",
-        "sites/chrome/index.html",
+        "sites/whatsapp/web.html",
+        "sites/playable/game.html",
+        "sites/privacy/ashleymadison.html",
+        "sites/reactnative/index.html",
+        "sites/youtube/red.html",
+        "sites/facebook/instant.html",
+        "sites/twitter/moments.html",
+        "sites/fcc/index.html",
+        "sites/amp/index.html",
     ],
     "2016": [
         "pages/home.html",
         "pages/about.html",
         "sites/instagram/stories.html",
-        "sites/pokemongo/index.html",
+        "sites/pogo/index.html",
         "sites/facebook/reactions.html",
-        "sites/iphone/jack.html",
+        "sites/whatsapp/e2e.html",
+        "sites/iphone/7.html",
         "sites/airpods/index.html",
         "sites/vine/goodbye.html",
-        "sites/whatsapp/security.html",
+        "sites/windows10/index.html",
         "sites/chrome/index.html",
-    ],
-    "2017": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/iphone/x.html",
-        "sites/fortnite/index.html",
-        "sites/crypto/index.html",
-        "sites/wannacry/index.html",
-        "sites/twitter/composer.html",
-        "sites/vine/offline.html",
-        "sites/metoo/index.html",
-        "sites/netflix/modern.html",
-        "sites/discord/modern.html",
-        "sites/amp/index.html",
-        "sites/spotify/modern.html",
-        "sites/youtube/modern.html",
-        "sites/chrome/index.html",
+        "sites/playable/game.html",
+        "sites/messenger/bots.html",
+        "sites/oculus/cv1.html",
+        "sites/linkedin/deal.html",
+        "sites/allo/index.html",
+        "sites/musically/index.html",
+        "sites/instagram/live.html",
+        "sites/amp/serp.html",
+        "sites/facebook/live.html",
+        "sites/dyn/index.html",
+        "sites/pixel/index.html",
+        "sites/home/index.html",
+        "sites/snapchat/spectacles.html",
     ],
 }
 

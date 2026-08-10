@@ -132,6 +132,19 @@ test.describe('games wing', () => {
     await expect(page.locator('body')).toContainText('HoverChop');
     await expect(page.locator('body')).toContainText('TrailSled');
     await expect(page.locator('body')).toContainText('Balloon Blox');
+    await expect(page.locator('body')).toContainText('Loop Six');
+  });
+
+  test('Loop Six arcade page boots', async ({ page }) => {
+    await page.goto('/games/play/loop.html');
+    await expect(page.locator('#game-canvas')).toBeVisible();
+    await expect(page.locator('#play-start')).toBeVisible();
+    await page.locator('#play-start').click();
+    await page.evaluate(() => {
+      if (window.ITTGames) window.ITTGames.addScore('loopsix', 120, 'Looper');
+    });
+    const raw = await page.evaluate(() => localStorage.getItem('itt-games-scores'));
+    expect(raw).toMatch(/loopsix/);
   });
 
   test('every portal and world page returns content', async ({ page }) => {

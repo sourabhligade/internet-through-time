@@ -34,28 +34,29 @@
   function save(list) {
     localStorage.setItem(storageKey(), JSON.stringify(list));
   }
+  var SEED = [
+    {
+      text: "just setting up my twttr",
+      who: "jack",
+      ts: Date.UTC(2006, 2, 21, 20, 50, 0)
+    },
+    {
+      text: "waiting for the public launch energy — 140 chars or less",
+      who: "biz",
+      ts: Date.now() - 86400000 * 3
+    },
+    {
+      text: "SMS tweets from a flip phone. Desktop is fat laptop + IE6.",
+      who: "ev",
+      ts: Date.now() - 86400000
+    }
+  ];
+
   function seed() {
     var list = load();
     if (list && list.length) return list;
-    list = [
-      {
-        text: "just setting up my twttr",
-        who: "jack",
-        ts: Date.UTC(2006, 2, 21, 20, 50, 0)
-      },
-      {
-        text: "waiting for the public launch energy — 140 chars or less",
-        who: "you",
-        ts: Date.now() - 86400000 * 3
-      },
-      {
-        text: "SMS tweets from a flip phone. Desktop is fat laptop + IE6.",
-        who: "biz",
-        ts: Date.now() - 86400000
-      }
-    ];
-    save(list);
-    return list;
+    /* Display-only until the visitor posts — incomplete never writes. */
+    return SEED.slice();
   }
   function fmtWhen(ts) {
     try {
@@ -142,7 +143,8 @@
           if (st) st.textContent = "Too long — " + MAX + " character limit (SMS era).";
           return;
         }
-        var list = load() || seed();
+        var list = load();
+        if (!list || !list.length) list = SEED.slice();
         list.unshift({
           text: text,
           who: (whoEl && whoEl.value) || "you",

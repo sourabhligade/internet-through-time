@@ -4,8 +4,8 @@ const { test, expect } = require('@playwright/test');
 test.describe('2003 MVP — MySpace · Store · WP · LinkedIn · museum densify', () => {
   test('hub opens 2003', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card[data-year="2003"], a[href*="years/2003"]')).toBeVisible();
-    await page.click('a[href="years/2003/"], a[href*="years/2003/"]');
+    await expect(page.locator('a.year-card.available[data-year=\"2003\"]').first()).toBeVisible();
+    await page.locator('a.year-card.available[data-year="2003"]').first().click();
     await expect(page).toHaveURL(/2003/);
   });
 

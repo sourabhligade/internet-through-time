@@ -190,6 +190,9 @@
     }
     removeRow(id);
     paintHud();
+    if (score >= 3 && YG && YG.showHook) {
+      YG.showHook("../csotd/index.html", "Cool Site of the Day", "That bookmark energy lived here:");
+    }
   }
 
   function endRun(reason) {

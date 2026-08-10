@@ -101,6 +101,12 @@
     if (inviteBtn) {
       inviteBtn.addEventListener("click", function (ev) {
         ev.preventDefault();
+        var ack = doc.querySelector("[data-spotify-ack]");
+        var noStream = doc.querySelector("[data-spotify-no-stream]");
+        if ((ack && !ack.checked) || (noStream && !noStream.checked)) {
+          setStatus("Confirm residual + no-stream first (not a soft mock).");
+          return;
+        }
         saveJSON(key("spotify-invited"), true);
         if (state().plan === "none") saveJSON(key("spotify-plan"), "free");
         setStatus("Invite accepted · free ad-supported listening unlocked (museum theater).");

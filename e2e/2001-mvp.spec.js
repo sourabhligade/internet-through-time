@@ -5,7 +5,7 @@ const { enterYear, contentFrame } = require('./helpers');
 test.describe('2001 full year — MVP + densify', () => {
   test('hub opens 2001', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a[href*="years/2001"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[data-year=\"2001\"], a[href*=\"years/2001/\"]').first()).toBeVisible();
   });
 
   test('shell boots year-2001 XP/IE6', async ({ page }) => {

@@ -75,7 +75,8 @@
       win81: true,
       snowden: true,
       uberX: true,
-      win8: true
+      win8: true,
+      yearTruePacks: true
     },
     navSubtitle: "Win7 · Chrome · Vine · iOS 7 · Stories · 5s",
     nav: [

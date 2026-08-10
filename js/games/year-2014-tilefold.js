@@ -1,320 +1,161 @@
 /**
- * Tile Fold — 2014 museum year game (2048-class merge).
+ * Tile Fold — 2014 museum year game (2048-class merge, original).
+ * Gold band = reach 128 (museum-short). Writes best via YearGame; complete key itt14-game-tilefold.
  */
 (function () {
   "use strict";
   var YG = (window.ITT && ITT.YearGame) || null;
-  var host = document.querySelector('[data-year-game][data-game-id="tilefold"]');
-  if (!host) return;
-
-  var boardEl = host.querySelector("[data-tf-board]");
-  var scoreEl = host.querySelector("[data-game-score]");
-  var bestEl = host.querySelector("[data-game-best]");
-  var statusEl = host.querySelector("[data-itt-action-status]");
-  var newBtn = host.querySelector("[data-game-start]");
-
-  var grid = [];
+  var canvas = document.getElementById("game-canvas");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var N = 4;
+  var SIZE = 320;
+  var PAD = 8;
+  var CELL = (SIZE - PAD * (N + 1)) / N;
+  var board = [];
   var score = 0;
   var won = false;
-  var over = false;
+  var dead = false;
+  var scoreEl = document.getElementById("play-score");
+  var bestEl = document.querySelector("[data-game-best]");
+  var statusEl = document.getElementById("play-status");
+  var startBtn = document.getElementById("play-start");
 
+  function paintBest() {
+    if (bestEl) bestEl.textContent = String(YG ? YG.loadBest("tilefold", "2014") : 0);
+  }
   function setStatus(m) {
-    if (YG) YG.setStatus(statusEl, m);
-    else if (statusEl) statusEl.textContent = m;
+    if (statusEl) statusEl.textContent = m;
   }
-
-  function emptyGrid() {
-    var g = [];
-    for (var r = 0; r < 4; r++) {
-      g[r] = [0, 0, 0, 0];
-    }
-    return g;
+  function empty() {
+    var i, j, o = [];
+    for (i = 0; i < N; i++) for (j = 0; j < N; j++) if (!board[i][j]) o.push([i, j]);
+    return o;
   }
-
-  function empties(g) {
-    var list = [];
-    for (var r = 0; r < 4; r++)
-      for (var c = 0; c < 4; c++) if (!g[r][c]) list.push({ r: r, c: c });
-    return list;
-  }
-
-  function spawn(g) {
-    var e = empties(g);
+  function spawn() {
+    var e = empty();
     if (!e.length) return;
-    var cell = e[Math.floor(Math.random() * e.length)];
-    g[cell.r][cell.c] = Math.random() < 0.9 ? 2 : 4;
+    var p = e[Math.floor(Math.random() * e.length)];
+    board[p[0]][p[1]] = Math.random() < 0.9 ? 2 : 4;
   }
-
-  function slideRowRight(row) {
-    var arr = row.filter(function (x) {
-      return x !== 0;
-    });
-    var gained = 0;
+  function reset() {
     var i;
-    for (i = arr.length - 1; i > 0; i--) {
-      if (arr[i] === arr[i - 1]) {
-        arr[i] *= 2;
-        gained += arr[i];
-        arr[i - 1] = 0;
-        i--;
-      }
-    }
-    arr = arr.filter(function (x) {
-      return x !== 0;
-    });
-    while (arr.length < 4) arr.unshift(0);
-    return { row: arr, gained: gained };
-  }
-
-  function rotateCW(g) {
-    var n = emptyGrid();
-    for (var r = 0; r < 4; r++)
-      for (var c = 0; c < 4; c++) n[c][3 - r] = g[r][c];
-    return n;
-  }
-
-  function moveDir(dir) {
-    // 0 right, 1 down, 2 left, 3 up — rotate to right
-    var g = grid;
-    var k;
-    for (k = 0; k < dir; k++) g = rotateCW(g);
-    var moved = false;
-    var gained = 0;
-    var r;
-    for (r = 0; r < 4; r++) {
-      var before = g[r].slice();
-      var res = slideRowRight(g[r]);
-      g[r] = res.row;
-      gained += res.gained;
-      for (var c = 0; c < 4; c++) if (before[c] !== g[r][c]) moved = true;
-    }
-    for (k = 0; k < (4 - dir) % 4; k++) g = rotateCW(g);
-    // fix: rotate back dir times inverse = (4-dir)%4 already above for non-zero
-    // When dir=0, no rotate back needed — loop 0 times OK
-    // When dir=1 (down): we rotated CW once to make down→right, then need 3 CW = 1 CCW
-    // Actually after processing we did (4-dir)%4 CW which for dir=1 is 3 — correct restore
-    if (!moved) return false;
-    grid = g;
-    score += gained;
-    spawn(grid);
-    if (scoreEl) scoreEl.textContent = String(score);
-    checkWinLose();
-    saveBest();
-    render();
-    return true;
-  }
-
-  // Recalculate rotate-back more carefully
-  function move(dirName) {
-    if (over) return;
-    var map = { right: 0, down: 1, left: 2, up: 3 };
-    var dir = map[dirName];
-    if (dir == null) return;
-
-    var g = grid.map(function (row) {
-      return row.slice();
-    });
-    var rot;
-    for (rot = 0; rot < dir; rot++) g = rotateCW(g);
-
-    var moved = false;
-    var gained = 0;
-    for (var r = 0; r < 4; r++) {
-      var before = g[r].join(",");
-      var res = slideRowRight(g[r]);
-      g[r] = res.row;
-      gained += res.gained;
-      if (g[r].join(",") !== before) moved = true;
-    }
-
-    for (rot = 0; rot < (4 - (dir % 4)) % 4; rot++) g = rotateCW(g);
-
-    if (!moved) return;
-    grid = g;
-    score += gained;
-    spawn(grid);
-    if (scoreEl) scoreEl.textContent = String(score);
-    checkWinLose();
-    saveBest();
-    render();
-  }
-
-  function canMove() {
-    if (empties(grid).length) return true;
-    var r, c;
-    for (r = 0; r < 4; r++)
-      for (c = 0; c < 4; c++) {
-        var v = grid[r][c];
-        if (c < 3 && grid[r][c + 1] === v) return true;
-        if (r < 3 && grid[r + 1][c] === v) return true;
-      }
-    return false;
-  }
-
-  function checkWinLose() {
-    var r, c;
-    for (r = 0; r < 4; r++)
-      for (c = 0; c < 4; c++) {
-        if (grid[r][c] >= 2048 && !won) {
-          won = true;
-          setStatus("You made 2048! Keep going or New Game.");
-          if (YG) {
-            var prev = YG.loadJSON(YG.storageKey("tilefold", "2014"), {}) || {};
-            prev.wins = (prev.wins || 0) + 1;
-            prev.bestTile = Math.max(prev.bestTile || 0, 2048);
-            prev.bestScore = Math.max(prev.bestScore || 0, score);
-            prev.best = prev.bestScore;
-            prev.gameId = "tilefold";
-            prev.year = "2014";
-            prev.real = true;
-            prev.ts = Date.now();
-            YG.saveJSON(YG.storageKey("tilefold", "2014"), prev);
-          }
-        }
-      }
-    if (!canMove()) {
-      over = true;
-      setStatus("Game over · score " + score);
-    }
-  }
-
-  function saveBest() {
-    if (!YG) return;
-    var key = YG.storageKey("tilefold", "2014");
-    var prev = YG.loadJSON(key, null) || {};
-    var best = Math.max(prev.bestScore || prev.best || 0, score);
-    var bestTile = prev.bestTile || 2;
-    for (var r = 0; r < 4; r++)
-      for (var c = 0; c < 4; c++) bestTile = Math.max(bestTile, grid[r][c]);
-    YG.saveJSON(key, {
-      gameId: "tilefold",
-      year: "2014",
-      best: best,
-      bestScore: best,
-      bestTile: bestTile,
-      wins: prev.wins || 0,
-      last: score,
-      ts: Date.now(),
-      real: true
-    });
-    if (bestEl) bestEl.textContent = String(best);
-  }
-
-  function color(v) {
-    var map = {
-      0: "#cdc1b4",
-      2: "#eee4da",
-      4: "#ede0c8",
-      8: "#f2b179",
-      16: "#f59563",
-      32: "#f67c5f",
-      64: "#f65e3b",
-      128: "#edcf72",
-      256: "#edcc61",
-      512: "#edc850",
-      1024: "#edc53f",
-      2048: "#edc22e"
-    };
-    return map[v] || "#3c3a32";
-  }
-
-  function render() {
-    if (!boardEl) return;
-    boardEl.innerHTML = "";
-    boardEl.style.cssText =
-      "display:grid;grid-template-columns:repeat(4,70px);grid-template-rows:repeat(4,70px);gap:8px;background:#bbada0;padding:8px;width:fit-content;border-radius:6px";
-    for (var r = 0; r < 4; r++) {
-      for (var c = 0; c < 4; c++) {
-        var v = grid[r][c];
-        var cell = document.createElement("div");
-        cell.style.cssText =
-          "width:70px;height:70px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:" +
-          (v >= 1000 ? "18" : "24") +
-          "px;font-weight:bold;background:" +
-          color(v) +
-          ";color:" +
-          (v <= 4 ? "#776e65" : "#f9f6f2");
-        cell.textContent = v ? String(v) : "";
-        boardEl.appendChild(cell);
-      }
-    }
-  }
-
-  function newGame() {
-    grid = emptyGrid();
+    board = [];
+    for (i = 0; i < N; i++) board.push([0, 0, 0, 0]);
     score = 0;
     won = false;
-    over = false;
-    spawn(grid);
-    spawn(grid);
+    dead = false;
+    spawn();
+    spawn();
     if (scoreEl) scoreEl.textContent = "0";
-    if (bestEl) bestEl.textContent = String(YG ? YG.loadBest("tilefold", "2014") : 0);
-    setStatus("Arrow keys or WASD to slide");
-    render();
+    setStatus("Arrows / WASD to fold. Reach 128 for gold band.");
+    draw();
   }
-
-  if (YG && YG.focusHost) YG.focusHost("[data-year-game]");
-  function onKey(e) {
-    var k = e.key;
-    if (k === "ArrowRight" || k === "d" || k === "D") {
-      move("right");
-      return true;
+  function slide(row) {
+    var a = row.filter(function (x) { return x; });
+    var i, out = [];
+    for (i = 0; i < a.length; i++) {
+      if (a[i] && a[i] === a[i + 1]) {
+        out.push(a[i] * 2);
+        score += a[i] * 2;
+        i++;
+      } else out.push(a[i]);
     }
-    if (k === "ArrowLeft" || k === "a" || k === "A") {
-      move("left");
-      return true;
-    }
-    if (k === "ArrowUp" || k === "w" || k === "W") {
-      move("up");
-      return true;
-    }
-    if (k === "ArrowDown" || k === "s" || k === "S") {
-      move("down");
-      return true;
-    }
-    if (k === "r" || k === "R") {
-      newGame();
-      return true;
-    }
-    return false;
+    while (out.length < N) out.push(0);
+    return out;
   }
-  if (YG && YG.onKeys) YG.onKeys(onKey);
-  else document.addEventListener("keydown", function (e) { if (onKey(e)) e.preventDefault(); }, true);
-
-  // swipe
-  var sx = 0;
-  var sy = 0;
-  if (boardEl) {
-    boardEl.addEventListener(
-      "touchstart",
-      function (e) {
-        if (e.touches[0]) {
-          sx = e.touches[0].clientX;
-          sy = e.touches[0].clientY;
-        }
-      },
-      { passive: true }
-    );
-    boardEl.addEventListener(
-      "touchend",
-      function (e) {
-        if (!e.changedTouches[0]) return;
-        var dx = e.changedTouches[0].clientX - sx;
-        var dy = e.changedTouches[0].clientY - sy;
-        if (Math.abs(dx) < 24 && Math.abs(dy) < 24) return;
-        if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? "right" : "left");
-        else move(dy > 0 ? "down" : "up");
-      },
-      { passive: true }
-    );
+  function rotate(cw) {
+    var i, j, n = [];
+    for (i = 0; i < N; i++) {
+      n[i] = [];
+      for (j = 0; j < N; j++) n[i][j] = cw ? board[N - 1 - j][i] : board[j][N - 1 - i];
+    }
+    board = n;
   }
-
-  if (newBtn) newBtn.addEventListener("click", newGame);
-  host.querySelectorAll("[data-tf-dir]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      move(btn.getAttribute("data-tf-dir"));
-      if (YG && YG.focusHost) YG.focusHost("[data-year-game]");
-    });
+  function move(dir) {
+    if (won || dead) return;
+    var old = JSON.stringify(board);
+    var k;
+    if (dir === "left") {
+      for (k = 0; k < N; k++) board[k] = slide(board[k]);
+    } else if (dir === "right") {
+      for (k = 0; k < N; k++) board[k] = slide(board[k].slice().reverse()).reverse();
+    } else if (dir === "up") {
+      rotate(false); for (k = 0; k < N; k++) board[k] = slide(board[k]); rotate(true);
+    } else if (dir === "down") {
+      rotate(true); for (k = 0; k < N; k++) board[k] = slide(board[k]); rotate(false);
+    }
+    if (JSON.stringify(board) === old) return;
+    spawn();
+    if (scoreEl) scoreEl.textContent = String(score);
+    var r, c, has128 = false, hasEmpty = false;
+    for (r = 0; r < N; r++) for (c = 0; c < N; c++) {
+      if (board[r][c] >= 128) has128 = true;
+      if (!board[r][c]) hasEmpty = true;
+    }
+    if (has128 && !won) {
+      won = true;
+      setStatus("Gold band · 128 folded · R to retry");
+      if (YG && YG.flash) YG.flash();
+      if (YG && YG.beep) YG.beep();
+      if (YG) {
+        var b = YG.saveBest("tilefold", score, { year: "2014", merge: { gold: true } });
+        if (bestEl) bestEl.textContent = String(b.best);
+      }
+    } else if (!hasEmpty && !won) {
+      dead = true;
+      setStatus("Board full · score " + score + " · not gold · R retry");
+      if (score > 0 && YG) {
+        var bd = YG.saveBest("tilefold", score, { year: "2014", merge: { gold: false } });
+        if (bestEl) bestEl.textContent = String(bd.best);
+      }
+    }
+    draw();
+  }
+  var COLORS = {
+    0: "#cdc1b4", 2: "#eee4da", 4: "#ede0c8", 8: "#f2b179", 16: "#f59563",
+    32: "#f67c5f", 64: "#f65e3b", 128: "#edcf72", 256: "#edcc61"
+  };
+  function draw() {
+    ctx.fillStyle = "#bbada0";
+    ctx.fillRect(0, 0, SIZE, SIZE);
+    var r, c, v, x, y;
+    for (r = 0; r < N; r++) for (c = 0; c < N; c++) {
+      v = board[r][c];
+      x = PAD + c * (CELL + PAD);
+      y = PAD + r * (CELL + PAD);
+      ctx.fillStyle = COLORS[v] || "#3c3a32";
+      ctx.fillRect(x, y, CELL, CELL);
+      if (v) {
+        ctx.fillStyle = v <= 4 ? "#776e65" : "#f9f6f2";
+        ctx.font = (v >= 100 ? "20px" : "28px") + " bold Clear Sans, Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(String(v), x + CELL / 2, y + CELL / 2);
+      }
+    }
+  }
+  function onKey(ev) {
+    var m = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down",
+      a: "left", d: "right", w: "up", s: "down", A: "left", D: "right", W: "up", S: "down" };
+    if (ev.key === "r" || ev.key === "R") { reset(); return; }
+    if (m[ev.key]) { ev.preventDefault(); move(m[ev.key]); }
+  }
+  document.addEventListener("keydown", onKey);
+  if (startBtn) startBtn.addEventListener("click", reset);
+  var sx = 0, sy = 0;
+  canvas.addEventListener("touchstart", function (e) {
+    if (!e.touches[0]) return;
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+  }, { passive: true });
+  canvas.addEventListener("touchend", function (e) {
+    var t = e.changedTouches[0];
+    if (!t) return;
+    var dx = t.clientX - sx, dy = t.clientY - sy;
+    if (Math.abs(dx) + Math.abs(dy) < 16) return;
+    if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? "right" : "left");
+    else move(dy > 0 ? "down" : "up");
   });
-  newGame();
+  paintBest();
+  reset();
 })();

@@ -198,8 +198,13 @@
     var add = doc.querySelector("[data-fb-add]");
     if (add) {
       add.addEventListener("click", function () {
-        var who = window.prompt("Add friend (name)", "Friend");
-        if (!who) return;
+        var inp = doc.querySelector("[data-fb-add-name]");
+        var who = inp && inp.value != null ? String(inp.value).replace(/^\s+|\s+$/g, "") : "";
+        var st = doc.querySelector("[data-fb-add-status]");
+        if (who.length < 2) {
+          if (st) st.textContent = "Type a classmate name (min 2). Empty does not add.";
+          return;
+        }
         p.friends = p.friends || [];
         p.friends.unshift(who);
         p.friends = p.friends.slice(0, 20);
@@ -209,7 +214,7 @@
             return "<li>" + esc(f) + "</li>";
           }).join("");
         }
-        var st = doc.querySelector("[data-fb-add-status]");
+        if (inp) inp.value = "";
         if (st) st.textContent = "Added " + who + " to your friends.";
       });
     }
@@ -323,12 +328,14 @@
     }
 
 
-    /* 2009 Like button theater */
+    /* Like button theater — year-aware (2009 launch; 2010+ residual rooms use ittYY-fb-likes) */
     function likesKey() {
+      var y = year();
+      var fb = y && /^\d{4}$/.test(y) ? "itt" + String(y).slice(2) : "itt09";
       if (ITT.util && ITT.util.immersionStorageKey) {
-        return ITT.util.immersionStorageKey("fb-likes", "itt09");
+        return ITT.util.immersionStorageKey("fb-likes", fb);
       }
-      return "itt09-fb-likes";
+      return fb + "-fb-likes";
     }
     function loadLikes() {
       try { return JSON.parse(localStorage.getItem(likesKey()) || "{}") || {}; }

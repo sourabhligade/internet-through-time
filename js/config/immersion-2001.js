@@ -20,11 +20,13 @@
       excite: true,
       yahoo: true,
       napster: true,
-      blogger: true
+      blogger: true,
+      msn: true
     },
     navSubtitle: "IE 6 · Windows XP · broadband rising",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
+      { label: "MSN", href: "sites/msn/index.html", match: "/msn/" },
       { label: "Wikipedia", href: "sites/wikipedia/index.html", match: "/wikipedia/" },
       { label: "iPod", href: "sites/apple/ipod.html", match: "/ipod/" },
       { label: "iTunes", href: "sites/apple/itunes.html", match: "/itunes" },
@@ -45,6 +47,14 @@
       { label: "About 2001", href: "pages/about.html" }
     ],
     tour: [
+      {
+        id: "msn",
+        label: "MSN Messenger",
+        href: "sites/msn/index.html",
+        match: "/msn/",
+        hint: "sign on · open a contact · nudge",
+        doneMessage: "MSN — Hotmail-linked presence theater."
+      },
       {
         id: "wikipedia",
         label: "Wikipedia",
@@ -106,6 +116,7 @@
     activityGuestbooks: ["area51-9277", "sunset-4100"],
     searchEmptyHint: "Try: <i>wikipedia</i>, <i>ipod</i>, <i>itunes</i>, <i>google</i>, <i>amazon</i>, <i>blogger</i>.",
     catalog: [
+      { title: "MSN Messenger", path: "sites/msn/index.html", kw: "msn messenger hotmail nudge chat passport", blurb: "Hotmail-linked IM · nudge culture." },
       { title: "Wikipedia", path: "sites/wikipedia/index.html", kw: "wikipedia wiki encyclopedia free edit", blurb: "Anyone can edit." },
       { title: "Apple iPod", path: "sites/apple/ipod.html", kw: "ipod apple 1000 songs jukebox", blurb: "1,000 songs in your pocket." },
       { title: "Amazon.com", path: "sites/amazon/index.html", kw: "amazon smile marketplace tabs books music", blurb: "Everything from A to Z." },
@@ -154,6 +165,7 @@
       { artist: "U2", title: "Beautiful Day", users: "1,120", time: "4:06", bitrate: "160" }
     ],
     googleCatalog: [
+      { title: "MSN Messenger", url: "http://messenger.msn.com/", path: "sites/msn/index.html", snippet: "Sign in with a Hotmail-like handle. Nudge your contacts." },
       { title: "Wikipedia, the free encyclopedia", url: "http://www.wikipedia.org/", path: "sites/wikipedia/index.html", snippet: "Anyone can edit. Free collaborative encyclopedia." },
       { title: "Apple - iPod", url: "http://www.apple.com/ipod/", path: "sites/apple/ipod.html", snippet: "1,000 songs in your pocket. FireWire. Mac-first." },
       { title: "Napster - music at Internet speed", url: "http://www.napster.com/", path: "sites/napster/index.html", snippet: "Download Napster. Find MP3s. Largest online music community." },

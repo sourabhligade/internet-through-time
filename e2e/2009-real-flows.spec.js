@@ -112,6 +112,12 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-chrome');
     await page.reload();
     await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await requireKey(page, 'itt09-chrome');
   });
 

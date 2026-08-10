@@ -5,6 +5,11 @@
  * Kill connect overlay + modal backdrop that intercept clicks.
  * @param {import('@playwright/test').Page} page
  */
+/**
+ * Safety net for leftover dialogs. Product shells should not need this after
+ * skip (see hideOverlay / maybePhoneEvent in js/browser/create.js). Overlay
+ * honesty specs must NOT call this.
+ */
 async function killOverlays(page) {
   await page.evaluate(() => {
     const kill = (el) => {
@@ -34,7 +39,7 @@ async function enterYear(page, year) {
     const alert = page.locator('#dlg-alert:not(.hidden)');
     if (await alert.isVisible().catch(() => false)) {
       await page.locator('#dlg-alert-ok, [data-close="dlg-alert"]').first().click();
-      await page.waitForTimeout(100);
+      await alert.waitFor({ state: 'hidden', timeout: 2000 }).catch(() => {});
     } else break;
   }
   await killOverlays(page);
@@ -145,26 +150,57 @@ async function clickAllDirbar(page, opts) {
   }
   /** @type {string[]} */
   const fails = [];
+
+  function iframeMatchesTarget(target) {
+    try {
+      const f = document.getElementById('content');
+      if (!f) return false;
+      const src = (f.getAttribute('src') || '') + '';
+      let path = '';
+      try {
+        const loc = f.contentWindow && f.contentWindow.location;
+        if (loc) path = (loc.pathname || '') + (loc.search || '');
+      } catch (ePath) {
+        /* */
+      }
+      const hay = src + ' ' + path;
+      if (!target) return hay.length > 1;
+      if (hay.indexOf(target) !== -1) return true;
+      const brand = target.indexOf('sites/') === 0 ? target.split('/')[1] : target.split('/').pop();
+      return !!(brand && hay.indexOf(brand) !== -1);
+    } catch (e) {
+      return false;
+    }
+  }
+
   for (let i = 0; i < n; i++) {
     await killOverlays(page);
+    await page
+      .waitForFunction(
+        () => {
+          const b = document.getElementById('browser');
+          return !b || !b.classList.contains('loading');
+        },
+        null,
+        { timeout: 8000 }
+      )
+      .catch(() => {});
     const btn = buttons.nth(i);
     const go = (await btn.getAttribute('data-go')) || '';
     const label = ((await btn.innerText()) || '').trim() || go;
     await btn.click({ force: true });
-    // wait for src change (modem delay may apply)
-    try {
-      await page.waitForFunction(
-        (target) => {
-          const f = document.getElementById('content');
-          const src = (f && f.getAttribute('src')) || '';
-          if (!target) return src.length > 0;
-          const brand = target.indexOf('sites/') === 0 ? target.split('/')[1] : target.split('/').pop();
-          return src.indexOf(target) !== -1 || (brand && src.indexOf(brand) !== -1);
-        },
-        go,
-        { timeout: 12000 }
-      );
-    } catch (e) {
+    // wait for src / iframe path (modem delay may apply)
+    let ok = false;
+    for (let attempt = 0; attempt < 2 && !ok; attempt++) {
+      try {
+        await page.waitForFunction(iframeMatchesTarget, go, { timeout: 12000 });
+        ok = true;
+      } catch (e) {
+        await killOverlays(page);
+        await btn.click({ force: true });
+      }
+    }
+    if (!ok) {
       const src = (await page.locator('#content').getAttribute('src')) || '';
       fails.push(`${label} go=${go} src=${src}`);
     }
@@ -187,21 +223,75 @@ async function exerciseStartMenu(page) {
   await killOverlays(page);
   await start.click({ force: true });
   await page.locator('[data-start-cmd="settings"]').click({ force: true });
-  await page.waitForTimeout(200);
-  const prefsOpen = await page.evaluate(() => {
-    const d = document.getElementById('dlg-prefs');
-    return !!(d && !d.classList.contains('hidden'));
-  });
+  const prefsOpen = await page
+    .locator('#dlg-prefs:not(.hidden)')
+    .waitFor({ state: 'visible', timeout: 3000 })
+    .then(() => true)
+    .catch(() => false);
   await killOverlays(page);
   await start.click({ force: true });
   await page.locator('[data-start-cmd="run"]').click({ force: true });
-  await page.waitForTimeout(200);
-  const runOpen = await page.evaluate(() => {
-    const d = document.getElementById('dlg-open-location');
-    return !!(d && !d.classList.contains('hidden'));
-  });
+  const runOpen = await page
+    .locator('#dlg-open-location:not(.hidden)')
+    .waitFor({ state: 'visible', timeout: 3000 })
+    .then(() => true)
+    .catch(() => false);
   await killOverlays(page);
   return { skipped: false, prefsOpen, runOpen };
+}
+
+/**
+ * Poll localStorage until a key is truthy. Prefer this over waitForTimeout + getItem.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} key
+ * @param {{ timeout?: number }} [opts]
+ */
+async function waitKey(page, key, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 8000;
+  await expect
+    .poll(async () => page.evaluate((k) => localStorage.getItem(k), key), { timeout })
+    .toBeTruthy();
+  return page.evaluate((k) => localStorage.getItem(k), key);
+}
+
+/**
+ * Poll #content src until it matches. Prefer this over waitForTimeout + getAttribute.
+ * @param {import('@playwright/test').Page} page
+ * @param {RegExp|string} re
+ * @param {{ timeout?: number }} [opts]
+ */
+/**
+ * Wait until iframe YearGame API is bound (avoids sleep-then-evaluate races).
+ * @param {import('@playwright/test').Page} page
+ * @param {{ timeout?: number }} [opts]
+ */
+async function waitYearGame(page, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 10000;
+  await expect
+    .poll(
+      async () =>
+        page.evaluate(() => {
+          try {
+            const w = document.getElementById('content') && document.getElementById('content').contentWindow;
+            return !!(w && w.ITT && w.ITT.YearGame && typeof w.ITT.YearGame.saveBest === 'function');
+          } catch (e) {
+            return false;
+          }
+        }),
+      { timeout }
+    )
+    .toBeTruthy();
+}
+
+async function waitContentSrc(page, re, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 8000;
+  await expect
+    .poll(async () => (await page.locator('#content').getAttribute('src')) || '', { timeout })
+    .toMatch(re);
+  return page.locator('#content').getAttribute('src');
 }
 
 module.exports = {
@@ -213,4 +303,7 @@ module.exports = {
   killOverlays,
   clickAllDirbar,
   exerciseStartMenu,
+  waitKey,
+  waitContentSrc,
+  waitYearGame,
 };

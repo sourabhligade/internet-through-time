@@ -18,10 +18,37 @@ async function expectStorageTruthy(page, key) {
 }
 
 test.describe('2013 real flows (storage required)', () => {
+  test('Vine hold incomplete blocked; post writes itt13-vine', async ({ page }) => {
+    await page.goto('/years/2013/sites/vine/record.html');
+    await clearKeys(page, ['itt13-vine', 'itt13-vine-list']);
+    await page.reload();
+    const post = page.locator('[data-vine-post]');
+    if ((await post.count()) === 0) test.skip();
+    await post.click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt13-vine'))).toBeFalsy();
+  });
+
+  test('Slack fillGo empty blocked; join writes itt13-slack', async ({ page }) => {
+    await page.goto('/years/2013/sites/slack/index.html');
+    await clearKeys(page, ['itt13-slack']);
+    await page.reload();
+    await page.locator('[data-pack-go]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt13-slack'))).toBeFalsy();
+    await page.fill('[data-pack-q]', 'museum-hq');
+    await page.locator('[data-pack-go]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-slack')))
+      .toBeTruthy();
+  });
+
   test('IG video share storage', async ({ page }) => {
     await page.goto('/years/2013/sites/instagram/video.html');
     await clearKeys(page, ['itt13-ig-video']);
     await page.reload();
+    await page.locator('[data-igv-share]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt13-ig-video'))).toBeFalsy();
     await page.locator('[data-igv-filter="Cinema"]').click();
     await page.locator('[data-igv-share]').click();
     const raw = await expectStorageTruthy(page, 'itt13-ig-video');
@@ -33,7 +60,12 @@ test.describe('2013 real flows (storage required)', () => {
     await clearKeys(page, ['itt13-snap-story']);
     await page.reload();
     await page.locator('[data-snap-story-add]').click();
-    await expectStorageTruthy(page, 'itt13-snap-story');
+    expect(await page.evaluate(() => localStorage.getItem('itt13-snap-story'))).toBeFalsy();
+    await page.locator('[data-snap-not-ig]').check();
+    await page.locator('[data-snap-story-add]').click();
+    const raw = await expectStorageTruthy(page, 'itt13-snap-story');
+    expect(raw).toMatch(/expires|24/);
+    await expect(page.locator('body')).toContainText(/24h/i);
   });
 
   test('5c ack storage', async ({ page }) => {
@@ -41,28 +73,30 @@ test.describe('2013 real flows (storage required)', () => {
     await clearKeys(page, ['itt13-iphone5c']);
     await page.reload();
     await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="iphone5c"]').click();
+    await expect(page.locator('[data-5c-claim]')).toBeDisabled();
+    expect(await page.evaluate(() => localStorage.getItem('itt13-iphone5c'))).toBeFalsy();
+    await page.locator('[data-5c-color]').first().click();
+    await page.locator('[data-5c-claim]').click();
     await expectStorageTruthy(page, 'itt13-iphone5c');
   });
 
-  test('Chrome download + prefer storage', async ({ page }) => {
+  test('Chrome three checks write itt13-chrome; one-click gone', async ({ page }) => {
     await page.goto('/years/2013/sites/chrome/index.html');
     await expect(page.locator('body')).toContainText(/Chrome|browser|download|StatCounter/i);
     await expect(page.locator('body')).toContainText(/2013/);
     await clearKeys(page, ['itt13-chrome']);
     await page.reload();
     await page.waitForTimeout(600);
-    await page.locator('[data-chrome-download]').click();
-    await expectStorageTruthy(page, 'itt13-chrome');
-    await page.locator('[data-chrome-prefer]').click();
+    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
+    await page.locator('[data-chrome13-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt13-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome13-habit]').check();
+    await page.locator('[data-chrome13-not-edge]').check();
+    await page.locator('[data-chrome13-dl]').check();
+    await page.locator('[data-chrome13-save]').click();
     const raw = await expectStorageTruthy(page, 'itt13-chrome');
-    expect(raw).toMatch(/preferred|true/i);
+    expect(raw).toMatch(/habit|downloaded|real/i);
   });
 
   test('Snap index send + Stories link', async ({ page }) => {
@@ -71,6 +105,7 @@ test.describe('2013 real flows (storage required)', () => {
     await page.reload();
     await page.waitForTimeout(600);
     await expect(page.locator('a[href*="story"]').first()).toBeVisible();
+    await page.locator('[data-snap-not-stories]').check();
     await page.locator('[data-snap-send]').click();
     await expectStorageTruthy(page, 'itt13-snap-count');
   });
@@ -81,13 +116,8 @@ test.describe('2013 real flows (storage required)', () => {
     await clearKeys(page, ['itt13-fb-home']);
     await page.reload();
     await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="fb-home"]').click();
+    await page.locator('[data-fb-home-install]').click();
+    await page.locator('[data-fb-home-flop]').click();
     await expectStorageTruthy(page, 'itt13-fb-home');
   });
 
@@ -95,6 +125,7 @@ test.describe('2013 real flows (storage required)', () => {
     await page.goto('/years/2013/sites/healthcare/index.html');
     await clearKeys(page, ['itt13-healthcare-ack']);
     await page.reload();
+    await page.locator('[data-hc-email]').fill('you@example.com');
     await page.locator('[data-hc-try="1"]').click().catch(() => {});
     await page.waitForTimeout(700);
     await page.locator('[data-hc-try="2"]').click().catch(() => {});
@@ -108,13 +139,9 @@ test.describe('2013 real flows (storage required)', () => {
     await clearKeys(page, ['itt13-ipadair']);
     await page.reload();
     await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="ipadair"]').click();
+    await page.locator('[data-air-cfg="cellular"]').click();
+    await page.locator('[data-air-mini]').click();
+    await page.locator('[data-ipadair-claim]').click();
     await expectStorageTruthy(page, 'itt13-ipadair');
   });
 
@@ -124,13 +151,7 @@ test.describe('2013 real flows (storage required)', () => {
     await page.reload();
     await page.waitForTimeout(500);
     await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="uber"]').click();
+    await page.locator('[data-uber-confirm]').click();
     const raw = await expectStorageTruthy(page, 'itt13-uber');
     expect(raw).toMatch(/multiStep|uber|checks/i);
   });
@@ -148,6 +169,8 @@ test.describe('2013 real flows (storage required)', () => {
     });
     await page.reload();
     await page.waitForTimeout(500);
+    await page.locator('[data-spotify-ack]').check();
+    await page.locator('[data-spotify-no-stream]').check();
     await page.locator('[data-spotify-invite]').first().click();
     const n = await page.evaluate(() => {
       let c = 0;

@@ -19,7 +19,7 @@
     /** Always-on broadband minority thesis (Pew ~21%) — not pure dial-up ritual */
     connectMode: "broadband",
     connectSpeedLine: "Connected · always-on broadband (museum)",
-    connectBrowserLine: "Starting Internet Explorer 6.0...",
+    connectBrowserLine: "Starting Internet Explorer 7.0...",
     defaultPrefs: {
       underline: true,
       expireDays: 30,
@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/evernote/index.html": "http://museum.local/years/2008/evernote/",
+      "sites/groupon/index.html": "http://museum.local/years/2008/groupon/",
+      "sites/airbnb/index.html": "http://museum.local/years/2008/airbnb/",
+      "sites/spotifyseed/index.html": "http://museum.local/years/2008/spotifyseed/",
+
       "sites/playable/index.html": "http://museum.local/years/2008/playable/",
       "sites/playable/game.html": "http://museum.local/years/2008/playable/game.html",
       "index.html": "http://museum.local/index.html",
@@ -362,7 +367,12 @@
       "sites/facebook/connect.html": "http://www.facebook.com/connect/",
       "sites/hulu/about.html": "http://www.hulu.com/about/",
       "sites/hulu/index.html": "http://www.hulu.com/",
-    },
+          "sites/github/about.html": "http://github.com/about.html",
+      "sites/github/index.html": "http://github.com/",
+      "sites/github/repo.html": "http://github.com/repo.html",
+      "sites/github/issue.html": "http://github.com/issues",
+      "sites/github/fork.html": "http://github.com/museum/hello-web/fork",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -483,11 +493,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2008",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2008",
       "pages/map.html": "2008 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",

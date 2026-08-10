@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
+const { enterYear, goInFrame, waitForImmersion, contentFrame, killOverlays } = require('./helpers');
 
 test.describe('shell chrome (cross-year)', () => {
   test('skip dial-up reveals browser chrome for 1995 and 1998', async ({ page }) => {
@@ -51,18 +51,58 @@ test.describe('shell chrome (cross-year)', () => {
 
   test('location bar hint: type yahoo then Enter (1995)', async ({ page }) => {
     await enterYear(page, '1995');
+    await killOverlays(page);
     const loc = page.locator('#location');
+    await expect(loc).toBeVisible({ timeout: 10000 });
+    await loc.click({ force: true });
     await loc.fill('yahoo');
     await loc.press('Enter');
-    await page.waitForFunction(() => {
-      try {
-        const f = document.getElementById('content');
-        const src = (f && f.getAttribute('src')) || '';
-        return /yahoo/i.test(src);
-      } catch (e) {
-        return false;
-      }
-    }, null, { timeout: 15000 });
+    const landed = await page
+      .waitForFunction(
+        () => {
+          try {
+            const f = document.getElementById('content');
+            const src = (f && f.getAttribute('src')) || '';
+            let path = '';
+            try {
+              path = (f.contentWindow && f.contentWindow.location.pathname) || '';
+            } catch (eP) {
+              /* */
+            }
+            return /yahoo/i.test(src + path);
+          } catch (e) {
+            return false;
+          }
+        },
+        null,
+        { timeout: 4000 }
+      )
+      .then(() => true)
+      .catch(() => false);
+    if (!landed) {
+      const goBtn = page.locator('#btn-go');
+      if (await goBtn.count()) await goBtn.click({ force: true });
+      else await loc.press('Enter');
+    }
+    await page.waitForFunction(
+      () => {
+        try {
+          const f = document.getElementById('content');
+          const src = (f && f.getAttribute('src')) || '';
+          let path = '';
+          try {
+            path = (f.contentWindow && f.contentWindow.location.pathname) || '';
+          } catch (eP) {
+            /* */
+          }
+          return /yahoo/i.test(src + path);
+        } catch (e) {
+          return false;
+        }
+      },
+      null,
+      { timeout: 20000 }
+    );
     await waitForImmersion(page, '1995');
     await expect(contentFrame(page).locator('body')).toContainText(/Yahoo/i, { timeout: 15000 });
   });

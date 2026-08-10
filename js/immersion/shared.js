@@ -176,7 +176,8 @@
       var doc = opts.doc || document;
       var html = String(message || "Saved (this browser only).");
       var plain = stripHtml(html);
-      var st = resolveStatusNode(doc, opts);
+      /* status: false skips product status lines (e.g. maps HTML with handoff links) */
+      var st = opts.status === false ? null : resolveStatusNode(doc, opts);
       if (st) {
         /* Prefer text for status lines (safe); allow HTML if data-allow-html=1 */
         if (st.getAttribute("data-allow-html") === "1") st.innerHTML = html;
@@ -1041,6 +1042,75 @@
             api.markTourProgress();
           });
         })(wikiBtns[wi]);
+      }
+
+      /* 2001 Wikipedia Save — preview never writes; empty save never writes.
+         Do not bind later years (2010+ uses itt10-wiki-edit inline). */
+      if (String(YEAR) === "2001") {
+        var wikiSaves = document.querySelectorAll("[data-wiki-save]");
+        var wsi;
+        for (wsi = 0; wsi < wikiSaves.length; wsi++) {
+          (function (btn) {
+            stylePeriodButton(btn);
+            btn.addEventListener("click", function (ev) {
+              ev.preventDefault();
+              var form = btn.form || (btn.closest && btn.closest("form"));
+              var ta = form
+                ? form.querySelector("textarea[name='text'], textarea")
+                : document.querySelector("textarea");
+              var summaryEl = form ? form.querySelector('[name="summary"]') : null;
+              var summary = summaryEl ? String(summaryEl.value || "") : "";
+              var raw = ta ? String(ta.value || "").replace(/^\s+|\s+$/g, "") : "";
+              var st = document.querySelector("[data-wiki-save-status], [data-itt-action-status]");
+              if (!raw) {
+                if (st) st.textContent = "Type something first — empty save is not a page.";
+                api.actionFeedback("Type something first.", { status: st, flash: false });
+                return;
+              }
+              var pages = loadJSON(storageKey("wiki-pages"), []) || [];
+              if (!Array.isArray(pages)) pages = [];
+              var titleEl = document.querySelector(".wiki-h1");
+              var title = (titleEl && titleEl.textContent) || "Wikipedia";
+              pages.unshift({
+                title: title,
+                body: raw,
+                summary: summary,
+                ts: Date.now(),
+                multiStep: true,
+                real: true,
+                year: "2001"
+              });
+              saveJSON(storageKey("wiki-pages"), pages.slice(0, 20));
+              api.markTourUsed();
+              if (st) st.textContent = "Saved · open History to see this edit.";
+              api.actionFeedback("Saved locally · open History.", { status: st, flash: true });
+            });
+          })(wikiSaves[wsi]);
+        }
+        var histHost = document.querySelector("[data-wiki-history]");
+        if (histHost) {
+          var savedPages = loadJSON(storageKey("wiki-pages"), []) || [];
+          if (Array.isArray(savedPages) && savedPages.length) {
+            histHost.innerHTML = savedPages
+              .slice(0, 12)
+              .map(function (p) {
+                var d = "";
+                try {
+                  d = p.ts ? new Date(p.ts).toISOString().slice(0, 10) : "2001";
+                } catch (eD) {
+                  d = "2001";
+                }
+                return (
+                  "<tr><td>" +
+                  escapeHtml(d) +
+                  "</td><td>you</td><td>" +
+                  escapeHtml(p.summary || p.title || "edit") +
+                  "</td></tr>"
+                );
+              })
+              .join("");
+          }
+        }
       }
 
       /* TrackBack — blog admin grammar */

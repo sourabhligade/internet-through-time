@@ -68,6 +68,19 @@ test.describe('1995 SSL checkout ritual', () => {
     expect(state.orders[0].name).toMatch(/Test Buyer/i);
   });
 
+  test('cart → checkout → SSL → thanks trail links exist', async ({ page }) => {
+    await page.goto('/years/1995/sites/amazon/cart.html');
+    await expect(page.locator('a[href="checkout.html"]').first()).toBeVisible();
+    await expect(page.locator('a[href="ssl-checkout.html"]').first()).toBeVisible();
+    await page.goto('/years/1995/sites/amazon/checkout.html');
+    await expect(page.locator('a[href="ssl-checkout.html"]')).toBeVisible();
+    await page.goto('/years/1995/sites/amazon/ssl-checkout.html');
+    await expect(page.locator('a[href="order-thanks.html"]')).toBeVisible();
+    await expect(page.locator('form[data-ssl-form]')).toBeVisible();
+    await page.locator('form[data-ssl-form] button[type="submit"]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt95-ssl-checkout'))).toBeFalsy();
+  });
+
   test('add-to-cart uses period input control', async ({ page }) => {
     await enterYear(page, '1995');
     await goInFrame(page, 'sites/amazon/book-neuromancer.html');

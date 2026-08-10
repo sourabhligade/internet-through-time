@@ -110,7 +110,8 @@
             "&url=" +
             encodeURIComponent(photoUrl) +
             '">Digg this</a>';
-          ittFeedback("Uploaded: " + title, st);
+          /* Flash only — do not stomp status HTML (delicious handoff link). */
+          ittFeedback("Uploaded: " + title, null);
         }
         form.reset();
         render(doc);

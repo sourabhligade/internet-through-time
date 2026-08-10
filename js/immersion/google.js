@@ -59,7 +59,28 @@
       }
 
       function goLucky(q) {
-        var show = rank(q || "yahoo");
+        q = String(q || "").replace(/^\s+|\s+$/g, "");
+        if (!q) {
+          actionFeedback("Type a query first (Lucky does not guess).", { error: true, flash: true });
+          return;
+        }
+        try {
+          var pfx = (config && config.storagePrefix) || "itt98";
+          var lk = ITT.util && ITT.util.immersionStorageKey
+            ? ITT.util.immersionStorageKey("lucky", pfx)
+            : pfx + "-lucky";
+          var destShow = rank(q);
+          var destHref = destShow.length ? entryHref(destShow[0].e) : searchHref(q);
+          localStorage.setItem(lk, JSON.stringify({
+            q: q,
+            dest: destHref,
+            multiStep: true,
+            real: true,
+            year: String((config && config.year) || "1998"),
+            ts: Date.now()
+          }));
+        } catch (eLk) { /* */ }
+        var show = rank(q);
         if (show.length) {
           location.href = entryHref(show[0].e);
         } else {

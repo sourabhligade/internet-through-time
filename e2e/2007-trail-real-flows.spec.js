@@ -113,10 +113,9 @@ test.describe('2007 trail D — Platforms & status', () => {
 
     // Beacon multipage REAL (home trail Platforms & status)
     await page.goto('/years/2007/sites/facebook/beacon.html');
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-beacon-ack]', { timeout: 20000 });
+    await page.locator('[data-beacon-buy="blockbuster"]').click();
+    await page.locator('[data-beacon-ack]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''), {
         timeout: 10000,
@@ -154,10 +153,9 @@ test.describe('2007 trail F — Culture edges REAL', () => {
       .toMatch(/twitter|digg/i);
 
     await page.goto('/years/2007/sites/opensocial/index.html');
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-os-install]', { timeout: 20000 });
+    await page.locator('[data-os-net="myspace"]').click();
+    await page.locator('[data-os-install]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-opensocial-ack') || ''), {
         timeout: 10000,

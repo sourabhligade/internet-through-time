@@ -49,6 +49,9 @@ test.describe('2008 trail 2 — Browser wars 2.0', () => {
     await clearKeys(page, ['itt08-chrome']);
     await page.reload();
     await page.waitForSelector('[data-chrome-download]', { timeout: 20000 });
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
     await page.locator('[data-chrome-download]').click();
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|itt08|Windows/i, {
       timeout: 8000,

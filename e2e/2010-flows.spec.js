@@ -125,8 +125,9 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.goto('/years/2010/sites/facebook/places.html');
     await clearKeys(page, ['itt10-fb-places']);
     await page.reload();
-    await page.locator('#pl').click();
-    await expect(page.locator('#st')).toContainText(/Checked in|itt10-fb-places/i);
+    await page.waitForSelector('[data-fb-place]', { timeout: 20000 });
+    await page.locator('[data-fb-place]').first().click();
+    await expect(page.locator('[data-fb-places-status]')).toContainText(/Checked in|Coffee|Airport|itt10-fb-places/i);
     await expectStorageTruthy(page, 'itt10-fb-places');
   });
 
@@ -417,6 +418,9 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-chrome']);
     await page.reload();
     await page.waitForSelector('[data-chrome-download]', { timeout: 15000 });
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
     await page.locator('[data-chrome-download]').click();
     await expectStorageTruthy(page, 'itt10-chrome');
   });

@@ -68,8 +68,10 @@
     running = false;
     dead = true;
     var med = medalFor(score);
-    setStatus("Bonk! Score " + score + " · " + med + " — tap to retry");
+    setStatus("Bonk! Score " + score + " · " + med + " — tap / R to retry");
     if (medalEl) medalEl.textContent = med;
+    if (YG && YG.flash) YG.flash();
+    if (YG && YG.beep) YG.beep();
     if (YG && score > 0) {
       var b = YG.saveBest("pipehop", score, { year: "2013", merge: { medal: med } });
       if (bestEl) bestEl.textContent = String(b.best);
@@ -77,6 +79,7 @@
   }
 
   function flap() {
+    if (YG && YG.isPaused && YG.isPaused()) return;
     if (dead || ready) {
       reset();
       vy = -5.2;
@@ -86,7 +89,8 @@
   }
 
   function tick() {
-    if (running) {
+    var paused = YG && YG.isPaused && YG.isPaused();
+    if (running && !paused) {
       frame++;
       vy += 0.35;
       y += vy;
@@ -140,6 +144,16 @@
       ctx.font = "bold 16px Arial";
       ctx.textAlign = "center";
       ctx.fillText("Tap to start", W / 2, H / 2);
+      ctx.textAlign = "left";
+    } else if (dead) {
+      ctx.fillStyle = "rgba(140,0,0,0.38)";
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 20px Arial";
+      ctx.textAlign = "center";
+      ctx.fillText("BONK", W / 2, H / 2 - 8);
+      ctx.font = "13px Arial";
+      ctx.fillText("Tap / R to retry", W / 2, H / 2 + 16);
       ctx.textAlign = "left";
     }
   }

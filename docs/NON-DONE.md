@@ -1,13 +1,23 @@
 # Non-done map — Internet Through Time
 
 **Date:** 2026-08-03  
-**Updated:** 2026-08-06 — hub **1994–2018** playable · **2018 MVP live** · residual map [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md).  
+**Updated:** 2026-08-07 — one-thing-per-year **[x]** · residual implement bible.
+**★ Residual after one-thing:** [`RESEARCH-RESIDUAL-FLOW-IMPROVEMENTS-IMPLEMENTATION-PHASES-2026-08-07.md`](RESEARCH-RESIDUAL-FLOW-IMPROVEMENTS-IMPLEMENTATION-PHASES-2026-08-07.md).  
+**★ Complex product machines (next bar · 1994–2020):** [`COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md`](COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md).  
+**★ Older years gold deepen (implement bible · W1–W11 · 1994–2012):** [`OLDER-YEARS-GOLD-MACHINES-GOALS-PHASES-STEPS.md`](OLDER-YEARS-GOLD-MACHINES-GOALS-PHASES-STEPS.md) · research freeze **[x]** · implement **[x]** 2026-08-08.  
+**★ Remaining early-year element map:** [`REMAINING-EARLY-YEAR-GOLD-ELEMENT-PHASES.md`](REMAINING-EARLY-YEAR-GOLD-ELEMENT-PHASES.md) · map **[x]** · implement **[x]**.  
+**★ Museum-grade A gap map (2026-08-10 · what each year lacks vs gold A):** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md).  
+**★ Cross-year leftover execute (2026-08-10 · hub 1994–2015):** [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md).  
+**★ Per-year status (real vs leftover mock · 2026-08-08 · historical; hub later reverted to 1994–2015):** [`YEAR-STATUS-AUDIT-2026-08-08.md`](YEAR-STATUS-AUDIT-2026-08-08.md).  
+**★ 2017–2019 complete-to-ready freeze:** [`2017-2019-COMPLETE-TO-READY-DEEP-RESEARCH-2026-08-08.md`](2017-2019-COMPLETE-TO-READY-DEEP-RESEARCH-2026-08-08.md)  
+**★ How to implement (minute C0–C8):** [`2017-2019-COMPLETE-TO-READY-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2017-2019-COMPLETE-TO-READY-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) · **[x]** landed 2026-08-08.  
+**★ Clone forest 2013–2020 strip:** **[x]** 2026-08-08 · 2013 keeps year-true iOS7/Vine/UberX · 2014 keeps YikYak/Secret/Ello · 2020 keeps year-true P0 quizzes.  
 **Purpose:** Single checklist of what is **still open** vs playable ship.  
-**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2018** + games wing.  
-**Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md)
+**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2016** + games wing. **2017+ not on disk.**  
+**Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md`](MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md) (per-year authenticity % · what to do) · [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) (year rooms) · [`GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) · [`GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (games densify G0–G11) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md)
 
 **Ship truth (do not re-open as “unbuilt”):**  
-All years **1994–2018** are on disk and hub-unlocked. Residual below is polish, densify, forever optional, and **2019+** locked until research freeze.
+All years **1994–2016** are on disk and hub-unlocked. **2017+ is not playable.** Residual below is polish for open years; later-year notes are research-only. Execute leftover: [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md).
 
 ---
 
@@ -113,7 +123,8 @@ Does **not** block visitor-facing flows.
 | **N25** | TO-100 plan checkbox hygiene | `[ ]` | `PLAN-2011-2012-2013-TO-100.md` still has unchecked phase boxes while baseline table says ~L3 for 2011–13 |
 | **N26** | Museum bar file naming | `[ ]` | `MUSEUM-READY-BAR-1994-2012.md` body claims through 2013 — rename/extend honesty |
 | **N27** | Git / branch hygiene | `[ ]` | Branch name lags (`…1994-2008…`); hub WIP uncommitted; commit/push only when asked |
-| **N28** | **2019+** not started | `[ ]` | Hub locked by design until research freeze + implement · **2014–2018 MVP live** |
+| **N28** | **2019** museum-ready · polish closed | `[x]` | 2026-08-07 · Disney+/Marshmello/G+/FTC · multipage modern · forest · `test:e2e:2019` |
+| **N29** | **2020** museum-ready residual closed | `[x]` | 2026-08-07 · Zoom · Reels · CCPA · Edge stable · TikTok EO · `test:e2e:2020` · grade: [`2020-MUSEUM-GRADE.md`](2020-MUSEUM-GRADE.md) |
 
 ---
 
@@ -139,13 +150,10 @@ Do **not** treat as backlog unless product scope changes:
 | **2006** | Done | L4 pixels only (flows + trail + Digg signature landed) |
 | **2007–2010** | Done | L4 WA pixels; light continuity voice (**N8**) |
 | **2011–2012** | ~L3 | L4 WA only |
-| **2013** | MVP ~L3 | L4 WA; guided-flow parity residual |
-| **2014** | MVP live | CAPTURE · densify gems (Secret/Yik Yak/Ello) · **e2e ideal pack closed 2026-08-07** |
-| **2015** | MVP live | densify gems residual · **full e2e pack shipped 2026-08-07** |
-| **2016** | MVP live | CAPTURE · selective densify gems · **full e2e pack shipped 2026-08-07** |
-| **2017** | MVP live | L4 pixels residual · **e2e pack expand shipped 2026-08-07** |
-| **2018** | MVP live | L4 logos · CMP multipage optional · **e2e pack expand shipped 2026-08-07** |
-| **2019+** | Not started | Research freeze + implement (**N28**) |
+| **2013** | MVP ~L3 | Forest “2009 honesty” scrubbed 2026-08-10 · L4 WA |
+| **2014** | museum-ready A–F | Forest still large · 0 brand pixels (failed-final) · Twitch gold-lite |
+| **2015** | Lean A–F | Pixels C · Watch/Music/WA Web failed-final · e2e 148 |
+| **2016** | Lean MVP + densify 16-D1–D6 | Pixels C failed-final · e2e pack · **2017+ still do not scaffold** |
 | **Hub / games** | Live | Commit hub polish when asked; games wing done |
 
 ---
@@ -177,9 +185,9 @@ Do **not** treat as backlog unless product scope changes:
 
 ## 10. One-line status
 
-**Done:** **23-year** museum playable (1994–2016) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 residual · 2014–2016 MVP.
+**Done:** **23-year** museum playable (**1994–2016**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2015/2016 lean rebuilds.
 
-**Not done:** Doc honesty residual (**N24–N26**) · architecture (**N20–N23**) · L4 pixels (**N14–N19**) · densify/UX residual per leftover map · optional 2002–04 trail packs · **2017+**.
+**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · 2013/2014 forest still large · **2017+ not on disk**.
 
 ---
 

@@ -42,12 +42,14 @@ test.describe('2012 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-ig-android-install]', { timeout: 20000 });
+    await page.locator('[data-ig-android-date]').check();
+    await page.locator('[data-ig-android-not-stories]').check();
     await page.locator('[data-ig-android-install]').click();
     await expect(page.locator('[data-ig-android-status]')).toContainText(/Installed|android/i, {
       timeout: 8000,
     });
     const raw = await page.evaluate(() => localStorage.getItem('itt12-ig-android'));
-    expect(raw).toBe('1');
+    expect(raw).toMatch(/android|2012-04-03|multiStep/);
   });
 
   test('Facebook IPO $38 ack', async ({ page }) => {
@@ -61,6 +63,8 @@ test.describe('2012 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-fb-ipo-ack]', { timeout: 20000 });
+    await page.locator('[data-ipo-fact="price38"]').check();
+    await page.locator('[data-ipo-fact="nasdaq"]').check();
     await page.locator('[data-fb-ipo-ack]').click();
     await expect(page.locator('[data-fb-ipo-status]')).toContainText(/\$38|Saved/i, {
       timeout: 8000,
@@ -111,7 +115,9 @@ test.describe('2012 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-win8-tile]', { timeout: 20000 });
-    await page.locator('[data-win8-tile]').first().click();
+    await page.locator('[data-win8-not-jan]').check();
+    await page.locator('[data-win8-tile]').nth(0).click();
+    await page.locator('[data-win8-tile]').nth(1).click();
     await expect(page.locator('[data-win8-status]')).toContainText(/Opened|theater/i, {
       timeout: 8000,
     });

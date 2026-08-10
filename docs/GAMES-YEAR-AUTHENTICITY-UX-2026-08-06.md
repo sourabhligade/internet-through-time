@@ -93,11 +93,15 @@ Progress rail on lobby: `○ ○ ○` → `● ● ●` with count **n/3**.
 ## e2e
 
 ```bash
-npx playwright test e2e/year-games.spec.js e2e/year-games-real.spec.js --workers=1
-# or year-games flows packs if present
+# Full matrix: load · real storage · flows · a11y (every year 1994–2018)
+npm run test:e2e:year-games
+# A11y + primary flow only:
+npm run test:e2e:year-games-a11y
 ```
 
-New coverage: 2016 Gym Rush · 2017 incomplete · 2018 Consent incomplete/complete.
+Coverage: all year `game.html` loads · REAL incomplete/complete · full flow matrix ·
+**a11y shell** (region, tabindex, aria-label, live status, focus, primary CTA) ·
+playable lobby smoke · 2016 Gym Rush · 2017 incomplete · 2018 Consent incomplete/complete.
 
 ---
 
@@ -108,12 +112,24 @@ New coverage: 2016 Gym Rush · 2017 incomplete · 2018 Consent incomplete/comple
 - Full 3D/WebGL remakes (out of scope)  
 - Games wing SWF rips (never)
 
+## Source expansion research (2026-08-07)
+
+**Research-only map** (Flashpoint · IA Flash · viral launches · FarmVille freemium · portal histories → densify info/UX on games we already ship):
+
+→ [`GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md)  
+→ **Phases:** [`GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (G0–G11)
+
+Sister (product years, not games): [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md)
+
 ---
 
 ## Implement follow-ups (optional)
 
-| ID | Item |
-|----|------|
-| G-LBL | Add `labels:[]` to remaining targets toys (1997 ICQ, 2006 Digg, …) |
-| G-HOME | Ensure every home playable strip lists current toy titles from GAMES |
-| G-WING | Cross-link games wing ↔ year game.html more clearly |
+| ID | Item | Status |
+|----|------|--------|
+| G-LBL | Add `labels:[]` to remaining targets toys | **[x]** batch 2026-08-07 |
+| G-HOME | Ensure every home playable strip lists current toy titles from GAMES | residual |
+| G-WING | Cross-link games wing ↔ year game.html more clearly | residual · wing About densify **[x]** |
+| G-INSPIRE | Inspiration strips all game.html | **[x]** 2026-08-07 |
+| G-2009 | Freemium literacy gate | **[x]** |
+| G-2018 | Consent Dash product GDPR parity | **[x]** |

@@ -57,7 +57,9 @@
     running = false;
     dead = true;
     var sc = Math.floor(dist / 10);
-    setStatus("Crashed into a splash! Score " + sc + " — Start to retry");
+    setStatus("Crashed into a splash! Score " + sc + " — tap / Start / R to retry");
+    if (YG && YG.flash) YG.flash();
+    if (YG && YG.beep) YG.beep();
     if (YG && sc > 0) {
       var b = YG.saveBest("skipintro", sc, { year: "1998" });
       if (bestEl) bestEl.textContent = String(b.best);
@@ -68,6 +70,7 @@
   }
 
   function jump() {
+    if (YG && YG.isPaused && YG.isPaused()) return;
     if (!running) {
       reset();
       return;
@@ -79,7 +82,8 @@
   }
 
   function tick() {
-    if (running) {
+    var paused = YG && YG.isPaused && YG.isPaused();
+    if (running && !paused) {
       frame++;
       speed = 3.2 + Math.floor(dist / 400) * 0.15;
       dist += speed;
@@ -171,6 +175,17 @@
       ctx.font = "bold 14px monospace";
       ctx.textAlign = "center";
       ctx.fillText("Start / Space to run", W / 2, H / 2);
+      ctx.textAlign = "left";
+    } else if (dead) {
+      ctx.fillStyle = "rgba(120,0,0,0.45)";
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#f66";
+      ctx.font = "bold 16px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("SPLASH CRASH", W / 2, H / 2 - 8);
+      ctx.fillStyle = "#0f0";
+      ctx.font = "12px monospace";
+      ctx.fillText("Tap / R to retry", W / 2, H / 2 + 14);
       ctx.textAlign = "left";
     }
   }

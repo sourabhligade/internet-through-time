@@ -60,8 +60,25 @@
     return "Saved · " + key;
   }
 
+  function pulseEl(el, ms) {
+    if (!el) return null;
+    try {
+      el.classList.add("itt-ux-need-attention");
+      window.setTimeout(function () {
+        try {
+          el.classList.remove("itt-ux-need-attention");
+        } catch (e) { /* */ }
+      }, ms || 2200);
+      try {
+        if (el.scrollIntoView) el.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      } catch (e2) { /* */ }
+    } catch (e3) { /* */ }
+    return el;
+  }
+
   UX.RealCoach = {
     pulseMissing: pulseMissing,
+    pulseEl: pulseEl,
     messageIncomplete: messageIncomplete,
     messageField: messageField,
     messageSuccess: messageSuccess

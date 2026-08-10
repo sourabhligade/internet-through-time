@@ -12,30 +12,22 @@
   <p style="font-size:12px;color:#555">
    <b>Nov 6, 2007:</b> Facebook launches Beacon with partner sites (eBay, Blockbuster class lore).
    Actions off Facebook can surface in friends’ <b>News Feeds</b>. Privacy backlash is immediate
-   (MoveOn petition class · Christmas-spoiler lore). This room is literacy theater only —
-   no real partner tracking.
+   (MoveOn petition class · Christmas-spoiler lore). Theater only — no real partner tracking.
   </p>
-  <div style="background:#fee;border:1px solid #c66;padding:10px;font-size:12px;margin:12px 0">
-   <b>REAL multi-step gate</b> — check both boxes, then save. Soft one-click is blocked.
-   <form style="margin:10px 0 0" onsubmit="return false">
-    <label style="display:block;margin:6px 0">
-     <input type="checkbox" data-req data-req-id="beacon-1">
-     Partner sites could publish what I bought/rented into my friends’ Feed
-    </label>
-    <label style="display:block;margin:6px 0">
-     <input type="checkbox" data-req data-req-id="beacon-2">
-     Nov 2007 privacy surprise was real — Platform opened the graph; Beacon weaponized off-site actions
-    </label>
-    <button type="button"
-      data-itt-real-save
-      data-storage-key="beacon-ack"
-      data-requires="[data-req]"
-      data-min-req="2"
-      data-tour-id="facebook"
-      style="margin-top:8px">Save Beacon literacy (this browser)</button>
-    <p data-itt-action-status style="min-height:1.2em;font-size:12px;color:#060;margin:8px 0 0"></p>
-   </form>
-   <p style="font-size:11px;color:#666;margin:8px 0 0">Writes <code>itt07-beacon-ack</code> only after ≥2 checks.</p>
+  <div style="background:#f7f7f7;border:1px solid #ccc;padding:10px;font-size:12px;margin:12px 0">
+   <b>Partner site theater</b> — buy/rent off Facebook, then watch it leak into Feed.
+   <p style="margin:10px 0 6px">
+    <button type="button" data-beacon-buy="blockbuster" style="padding:8px 12px;cursor:pointer;margin-right:8px">Rent at Blockbuster</button>
+    <button type="button" data-beacon-buy="ebay" style="padding:8px 12px;cursor:pointer">Buy on eBay</button>
+   </p>
+   <div data-beacon-feed style="background:#fff;border:1px solid #9cf;padding:10px;min-height:2.4em;color:#333">
+    News Feed is quiet — purchase something on a partner site.
+   </div>
+   <p style="margin:10px 0 0">
+    <button type="button" data-beacon-ack style="padding:8px 12px;cursor:pointer">Save this Feed leak (this browser)</button>
+    <span data-beacon-status data-itt-action-status style="margin-left:8px;color:#060"></span>
+   </p>
+   <p style="font-size:11px;color:#666;margin:8px 0 0">Writes <code>itt07-beacon-ack</code> only after a partner purchase + save.</p>
   </div>
   <p style="font-size:12px">
    <a href="platform.html"><b>← Platform apps</b></a> ·

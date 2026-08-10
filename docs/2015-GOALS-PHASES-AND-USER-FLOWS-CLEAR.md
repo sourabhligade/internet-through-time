@@ -9,15 +9,13 @@
 4. **Storage · anti-goals · done**
 
 > **Start here:** [`2015-READ-FIRST.md`](2015-READ-FIRST.md)  
-> **★ Research detail in phases (R0–R18 · all facts/sources):**  
-> **[`2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)**  
-> **★ Execute code steps (implement 0–13):**  
-> **[`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)**  
-> **Master bible (goals · numbers · flow tables):**  
-> [`2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
-> Deep harvest: [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md)
+> **★ From-scratch execute (goals · phases · minute steps S0–S14):**  
+> **[`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)**  
+> **Research + artifacts:** [`2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md)  
+> Historical clone path (do not `cp 2014` again): [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)
 
-**Disk truth:** Hub **1994–2014** · **2015 research-only** · planned **`itt15`**.  
+**Disk truth:** Hub **1994–2015** · `years/2015/` **MVP live** · prefix **`itt15`**.  
+**Execute:** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (R–13 **[x]** · leftover L0–L6).  
 **Legal:** localStorage theater only · never invent brand pixels.
 
 ---
@@ -49,23 +47,25 @@ Wearables ship · free OS upgrade · phone livestream · streaming war · unlimi
 
 | Phase | Name | Status |
 |------:|------|--------|
-| **R** | Research freeze | **[x]** 2026-08-06 |
-| **0** | Capture prep & assets | **[ ]** |
-| **1** | Inventory parent 2014 | **[ ]** |
-| **2** | Scaffold from 2014 · `itt15` | **[ ]** |
-| **3** | Shell labels · dirbar | **[ ]** |
-| **4** | Home / About / map / tour | **[ ]** |
-| **5a–5e** | Watch · Win10/Edge · Live · Music · Photos/blockers | **[ ]** *parallel-ok* |
-| **6** | Chrome + scale densify | **[ ]** |
-| **7** | Continuity scrub | **[ ]** |
-| **8** | Immersion + REAL wiring | **[ ]** |
-| **9** | P1 densify | **[ ]** |
-| **10** | Trails · flow map | **[ ]** |
-| **11** | e2e packs | **[ ]** |
-| **12** | Pixel harvest | **[~]** |
-| **13** | Hub unlock + docs | **[ ]** |
+| **R** | Research freeze | **[x]** 2026-08-06 + 08-09 |
+| **0** | Capture prep & assets | **[~]** leftover L4 |
+| **1** | Inventory parent 2014 | **[x]** |
+| **2** | Scaffold from 2014 · `itt15` | **[x]** |
+| **3** | Shell labels · dirbar | **[x]** |
+| **4** | Home / About / map / tour | **[x]** |
+| **5a–5f** | Watch · Win10/Edge · Live · Music · Photos/blockers · **WA Web** | **[x]** *parallel-ok* |
+| **6** | Chrome + scale densify | **[x]** |
+| **7** | Continuity scrub | **[x]** leftover L1 |
+| **8** | Immersion + REAL wiring | **[x]** |
+| **9** | P1 densify | **[x]** AM + RN rooms |
+| **10** | Blob Rush + playables | **[x]** leftover L2 restored |
+| **11** | Trails · flow map | **[x]** |
+| **12** | e2e packs | **[x]** `npm run test:e2e:2015` |
+| **13** | Hub unlock + docs | **[x]** 1994–2015 |
+| **14** | Pixel harvest | **[~]** leftover L4 |
 
-**Order:** R→0→1→2→3→4 → (5a–5e parallel) → 6→7→8→9→10→11→13.  
+**Order (historical):** R→0→1→2→3→4 → (5a–5f parallel) → 6→7→8→9→10→11→12→13.  
+**MVP ship = done.** Leftover **L0–L6** in the execute file.  
 **Full minute steps:** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)
 
 ### Scaffold cheat sheet
@@ -101,6 +101,8 @@ Wearables ship · free OS upgrade · phone livestream · streaming war · unlimi
 | **N–R** | P1 densify | Discord · Discover · Echo · LE · Swift |
 | **S** | Messenger Platform | business not bots |
 | **T** | Exit | hub · no foreign keys |
+| **U** | WhatsApp Web | `itt15-wa-web` |
+| **V** | Blob Rush | `itt15-game-blobrush` |
 
 ---
 
@@ -119,4 +121,6 @@ Prefix **`itt15` only**. See master bible § Part 1B + harvest §9.
 
 ## Done when
 
-Hub unlocks 2015 · P0 REAL green · e2e green · About scale correct · hard bans hold.
+**MVP (now):** Hub unlocks 2015 · P0 REAL green · e2e green · About scale correct · hard bans hold.
+
+**Museum-ready leftover:** IMPLEMENTATION Part 2 **L0–L6** (voice scrub · restore Blob Rush JS · optional AM/RN · pixels).

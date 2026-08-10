@@ -209,6 +209,182 @@
     });
   }
 
+  function bootIphoneSpecs(doc) {
+    doc = doc || document;
+    var ack = doc.querySelector("[data-iphone-specs-ack]");
+    var safari = doc.querySelector("[data-iphone-safari]");
+    var desk = doc.querySelector("[data-iphone-desktop]");
+    if (!ack && !safari) return;
+    var st = doc.querySelector("[data-iphone-specs-status], [data-itt-action-status]");
+    var k = key("iphone-specs-ack");
+    var opened = { safari: false, desktop: false };
+    var prev = loadJSON(k);
+    if (prev) {
+      opened.safari = true;
+      opened.desktop = true;
+      feedback("iPhone 2007 specs pinned · " + k, st);
+    }
+    if (safari) {
+      safari.addEventListener("click", function () {
+        opened.safari = true;
+        feedback("Safari theater open · no App Store grid.", st);
+      });
+    }
+    if (desk) {
+      desk.addEventListener("click", function () {
+        opened.desktop = true;
+        feedback("Desktop site in a tiny Safari window (honesty).", st);
+      });
+    }
+    if (ack) {
+      ack.addEventListener("click", function () {
+        if (!(opened.safari && opened.desktop)) {
+          feedback("Open Safari and a desktop site first.", st, { error: true });
+          return;
+        }
+        saveJSON(k, {
+          multiStep: true,
+          real: true,
+          safariOnly: true,
+          noAppStore: true,
+          year: "2007",
+          ts: Date.now()
+        });
+        feedback("iPhone 2007 specs pinned · " + k, st);
+        markUsed("iphone");
+      });
+    }
+  }
+
+  function bootKindle(doc) {
+    doc = doc || document;
+    var order = doc.querySelector("[data-kindle-order]");
+    var whisper = doc.querySelector("[data-kindle-whisper]");
+    if (!order && !whisper) return;
+    var st = doc.querySelector("[data-kindle-status]");
+    var k = key("kindle-ack");
+    var heard = false;
+    var prev = loadJSON(k);
+    if (prev) {
+      heard = true;
+      if (whisper) whisper.setAttribute("data-ott-done", "1");
+      feedback("Kindle order queued · sold-out theater · " + k, st);
+    }
+    if (whisper) {
+      whisper.addEventListener("click", function () {
+        heard = true;
+        whisper.setAttribute("data-ott-done", "1");
+        feedback("Whispernet on — books over the air (theater).", st);
+      });
+    }
+    if (order) {
+      order.addEventListener("click", function () {
+        if (!heard) {
+          feedback("Turn on Whispernet first (empty $399 click does not write).", st, { error: true });
+          return;
+        }
+        saveJSON(k, {
+          multiStep: true,
+          price: 399,
+          whispernet: true,
+          soldOutLore: true,
+          year: "2007",
+          ts: Date.now()
+        });
+        feedback("Kindle $399 order queued · sold out in hours (theater) · " + k, st);
+        markUsed();
+      });
+    }
+  }
+
+  function bootBeacon(doc) {
+    doc = doc || document;
+    var buys = doc.querySelectorAll("[data-beacon-buy]");
+    var ack = doc.querySelector("[data-beacon-ack]");
+    if (!buys.length && !ack) return;
+    var feed = doc.querySelector("[data-beacon-feed]");
+    var st = doc.querySelector("[data-beacon-status], [data-itt-action-status]");
+    var k = key("beacon-ack");
+    var purchase = null;
+    var labels = { blockbuster: "rented Superbad at Blockbuster", ebay: "bought a camera on eBay" };
+    var prev = loadJSON(k);
+    function showFeed(kind) {
+      if (!feed) return;
+      feed.textContent =
+        "News Feed · " + (labels[kind] || "partner action") + " — friends can see this (Beacon leak theater).";
+    }
+    if (prev) {
+      purchase = prev.partner || "blockbuster";
+      showFeed(purchase);
+      feedback("Beacon leak saved · " + k, st);
+    }
+    var i;
+    for (i = 0; i < buys.length; i++) {
+      buys[i].addEventListener("click", function () {
+        purchase = this.getAttribute("data-beacon-buy") || "blockbuster";
+        showFeed(purchase);
+        feedback("Partner action posted to Feed (theater · not tracking).", st);
+      });
+    }
+    if (ack) {
+      ack.addEventListener("click", function () {
+        if (!purchase) {
+          feedback("Buy/rent on a partner site first — empty save does not write.", st, { error: true });
+          return;
+        }
+        saveJSON(k, {
+          multiStep: true,
+          beacon: true,
+          partner: purchase,
+          feedLeak: true,
+          year: "2007",
+          ts: Date.now()
+        });
+        feedback("Beacon leak saved · " + k, st);
+        markUsed("facebook");
+      });
+    }
+  }
+
+  function bootOpenSocial(doc) {
+    doc = doc || document;
+    var nets = doc.querySelectorAll("[data-os-net]");
+    var install = doc.querySelector("[data-os-install]");
+    if (!nets.length && !install) return;
+    var st = doc.querySelector("[data-os-status]");
+    var k = key("opensocial-ack");
+    var host = "";
+    var prev = loadJSON(k);
+    if (prev) {
+      host = prev.network || "myspace";
+      feedback("Gadget installed on " + host + " · " + k, st);
+    }
+    var i;
+    for (i = 0; i < nets.length; i++) {
+      nets[i].addEventListener("click", function () {
+        host = this.getAttribute("data-os-net") || "";
+        feedback("Host container: " + host, st);
+      });
+    }
+    if (install) {
+      install.addEventListener("click", function () {
+        if (!host) {
+          feedback("Pick a host network first (empty install does not write).", st, { error: true });
+          return;
+        }
+        saveJSON(k, {
+          multiStep: true,
+          network: host,
+          gadget: true,
+          year: "2007",
+          ts: Date.now()
+        });
+        feedback("Gadget installed on " + host + " · " + k, st);
+        markUsed();
+      });
+    }
+  }
+
   function bootNetflixWatchNow(doc) {
     doc = doc || document;
     var btn = doc.querySelector("[data-netflix-watchnow-ack]");
@@ -241,6 +417,10 @@
     bootFriendFeed(doc);
     bootTumblr(doc);
     bootNetflixWatchNow(doc);
+    bootKindle(doc);
+    bootBeacon(doc);
+    bootOpenSocial(doc);
+    bootIphoneSpecs(doc);
   }
 
   var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);

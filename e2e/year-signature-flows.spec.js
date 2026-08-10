@@ -511,6 +511,9 @@ test.describe('year-signature 2008', () => {
     await expect(frame.locator('body')).toContainText(/Chrome|beta|download/i, { timeout: 15000 });
     const dl = frame.locator('[data-chrome-download]');
     await expect(dl).toBeVisible({ timeout: 10000 });
+    await frame.locator('[data-chrome-req]').nth(0).check({ force: true });
+    await frame.locator('[data-chrome-req]').nth(1).check({ force: true });
+    await frame.locator('[data-chrome-req]').nth(2).check({ force: true });
     await dl.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-chrome')), {
@@ -577,6 +580,7 @@ test.describe('year-signature 2010', () => {
     await expect(frame.locator('body')).toContainText(/Instagram|filter|iOS/i, { timeout: 15000 });
     const share = frame.locator('[data-ig-share]');
     await expect(share).toBeVisible({ timeout: 10000 });
+    await frame.locator('[data-ig-filter]').nth(1).click();
     await share.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt10-ig-posts')), { timeout: 8000 })
@@ -653,11 +657,15 @@ test.describe('year-signature 2013', () => {
     await expect(frame.locator('body')).toContainText(/Hold|6 second|Vine/i, { timeout: 15000 });
     const hold = frame.locator('[data-vine-hold]');
     await expect(hold).toBeVisible({ timeout: 10000 });
+    await hold.dispatchEvent('pointerdown');
     await hold.dispatchEvent('mousedown');
-    await page.waitForTimeout(350);
+    await page.waitForTimeout(500);
     await hold.dispatchEvent('mouseup');
+    await hold.dispatchEvent('pointerup');
+    await expect(frame.locator('[data-vine-status]')).toContainText(/Ready/i, { timeout: 5000 });
+    await killOverlays(page);
     await frame.locator('[data-vine-caption]').fill('sig vine ' + Date.now());
-    await frame.locator('[data-vine-post]').click();
+    await frame.locator('[data-vine-post]').click({ force: true });
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt13-vine-posts')), {
         timeout: 10000,
@@ -679,10 +687,272 @@ test.describe('year-signature 2013', () => {
     await expect(frame.locator('body')).toContainText(/Story|Snapchat|24/i, { timeout: 15000 });
     const add = frame.locator('[data-snap-story-add]');
     await expect(add).toBeVisible({ timeout: 10000 });
+    await frame.locator('[data-snap-not-ig]').check({ force: true });
     await add.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt13-snap-story')), {
         timeout: 8000,
+      })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2014', () => {
+  test('WhatsApp name → install → itt14-wa-install', async ({ page }) => {
+    await enterYear(page, '2014');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt14-wa-install');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2014', 'sites/whatsapp/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/WhatsApp/i, { timeout: 15000 });
+    await frame.locator('[data-wa-install]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-wa-install'))).toBeFalsy();
+    await frame.locator('[data-wa-name]').fill('sig wa 2014');
+    await frame.locator('[data-wa-install]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt14-wa-install')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('Heartbleed rotate ≥2 → itt14-heartbleed-rotate', async ({ page }) => {
+    await enterYear(page, '2014');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt14-heartbleed-rotate');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2014', 'sites/heartbleed/rotate.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Heartbleed|password/i, { timeout: 15000 });
+    await frame.locator('[data-req]').first().check({ force: true });
+    await frame.locator('[data-itt-real-save]').click({ force: true });
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-heartbleed-rotate'))).toBeFalsy();
+    await frame.locator('[data-req]').nth(1).check({ force: true });
+    await frame.locator('[data-itt-real-save]').click({ force: true });
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt14-heartbleed-rotate')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('Chrome three checks write itt14-chrome; one-click gone', async ({ page }) => {
+    await enterYear(page, '2014');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt14-chrome');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2014', 'sites/chrome/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-chrome-download]')).toHaveCount(0);
+    await frame.locator('[data-chrome14-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-chrome'))).toBeFalsy();
+    await frame.locator('[data-chrome14-habit]').check({ force: true });
+    await frame.locator('[data-chrome14-not-edge]').check({ force: true });
+    await frame.locator('[data-chrome14-dl]').check({ force: true });
+    await frame.locator('[data-chrome14-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt14-chrome')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('Cardboard incomplete blocked; two checks write itt14-cardboard', async ({ page }) => {
+    await enterYear(page, '2014');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt14-cardboard');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2014', 'sites/cardboard/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Cardboard/i, { timeout: 15000 });
+    await frame.locator('[data-itt-real-save]').click({ force: true });
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-cardboard'))).toBeFalsy();
+    await frame.locator('[data-req]').nth(0).check({ force: true });
+    await frame.locator('[data-req]').nth(1).check({ force: true });
+    await frame.locator('[data-itt-real-save]').click({ force: true });
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt14-cardboard')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2015', () => {
+  test('Watch incomplete blocked; shipped writes itt15-watch', async ({ page }) => {
+    await enterYear(page, '2015');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt15-watch');
+        localStorage.removeItem('itt14-watch');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2015', 'sites/apple/watch.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Apple Watch/i, { timeout: 15000 });
+    await frame.locator('[data-watch-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt15-watch'))).toBeFalsy();
+    await frame.locator('[data-watch-shipped]').check({ force: true });
+    await frame.locator('[data-watch-no-store]').check({ force: true });
+    await frame.locator('[data-watch-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt15-watch')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt14-watch'))).toBeFalsy();
+  });
+
+  test('Periscope empty title blocked; Go LIVE writes itt15-periscope', async ({ page }) => {
+    await enterYear(page, '2015');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt15-periscope');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2015', 'sites/periscope/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-peri-live]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-peri-live]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt15-periscope'))).toBeFalsy();
+    await frame.locator('[data-peri-title]').fill('sig live 2015');
+    await frame.locator('[data-peri-live]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt15-periscope')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2016', () => {
+  test('Stories incomplete blocked; add writes itt16-ig-stories', async ({ page }) => {
+    await enterYear(page, '2016');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt16-ig-stories');
+        localStorage.removeItem('itt15-watch');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2016', 'sites/instagram/stories.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Instagram Stories/i, { timeout: 15000 });
+    await frame.locator('[data-ig-stories-add]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-ig-stories'))).toBeFalsy();
+    await frame.locator('[data-ig-stories-caption]').fill('coffee');
+    await frame.locator('[data-ig-stories-24h]').check({ force: true });
+    await frame.locator('[data-ig-stories-not-reels]').check({ force: true });
+    await frame.locator('[data-ig-stories-add]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-ig-stories')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt15-watch'))).toBeFalsy();
+  });
+
+  test('Reactions empty pick blocked; Love writes itt16-reactions', async ({ page }) => {
+    await enterYear(page, '2016');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt16-reactions');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2016', 'sites/facebook/reactions.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-reactions-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-reactions-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-reactions'))).toBeFalsy();
+    await frame.locator('[data-reaction="love"]').click();
+    await frame.locator('[data-reaction-not-dislike]').check({ force: true });
+    await frame.locator('[data-reactions-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-reactions')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('Live incomplete blocked; three checks write itt16-ig-live', async ({ page }) => {
+    await enterYear(page, '2016');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt16-ig-live');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2016', 'sites/instagram/live.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-ig-live-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-ig-live-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-ig-live'))).toBeFalsy();
+    await frame.locator('[data-ig-live-date]').check({ force: true });
+    await frame.locator('[data-ig-live-gone]').check({ force: true });
+    await frame.locator('[data-ig-live-not-reels]').check({ force: true });
+    await frame.locator('[data-ig-live-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-ig-live')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('AMP-SERP incomplete blocked; two checks write itt16-amp-serp', async ({ page }) => {
+    await enterYear(page, '2016');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt16-amp-serp');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2016', 'sites/amp/serp.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-amp-serp-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-amp-serp-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-amp-serp'))).toBeFalsy();
+    await frame.locator('[data-amp-serp-date]').check({ force: true });
+    await frame.locator('[data-amp-serp-not-2015]').check({ force: true });
+    await frame.locator('[data-amp-serp-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-amp-serp')), {
+        timeout: 10000,
       })
       .toBeTruthy();
   });

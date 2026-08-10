@@ -34,14 +34,23 @@
       var parentBrowser = api.parentBrowser;
 
 function initWebring() {
-  var ring = config.webring || [
+  var ring = (config.webring || [
     { label: "Hollywood/1234", href: "sites/geocities/Hollywood/1234/index.html" },
     { label: "RodeoDrive/88", href: "sites/geocities/RodeoDrive/88/index.html" },
     { label: "SiliconValley/42", href: "sites/geocities/SiliconValley/42/index.html" },
     { label: "SunsetStrip/101", href: "sites/geocities/SunsetStrip/101/index.html" },
     { label: "WallStreet/7", href: "sites/geocities/WallStreet/7/index.html" },
     { label: "Area51/51", href: "sites/geocities/Area51/51/index.html" }
-  ];
+  ]).slice();
+  var mine = loadJSON(storageKey("homestead"), null);
+  if (mine && (mine.title || mine.hood || mine.neighborhood)) {
+    var hood = mine.neighborhood || mine.hood || "Hollywood";
+    var num = mine.number || "1";
+    ring.unshift({
+      label: hood + "/" + num + " (yours)",
+      href: "sites/geocities/my-homestead.html"
+    });
+  }
   if (!ring.length) return;
   var path = location.pathname || "";
   var idx = 0;
@@ -66,7 +75,9 @@ function initWebring() {
   if (el) {
     el.innerHTML =
       '<center><font size="2" face="Arial, Helvetica, sans-serif">' +
-      "<b>Webring</b> · " +
+      "<b>Webring</b> · now: " +
+      escapeHtml(ring[idx].label) +
+      " · " +
       '<a href="' + hrefFor(prev) + '">&lt;&lt; Prev</a> · ' +
       '<a href="' + hrefFor(rnd) + '">Random</a> · ' +
       '<a href="' + hrefFor(next) + '">Next &gt;&gt;</a> · ' +
@@ -100,9 +111,14 @@ function initHomestead() {
       view.innerHTML = '<p><i>No homestead yet.</i> <a href="' +
         R("sites/geocities/homestead.html") + '">File a free claim</a>.</p>';
     } else {
+      var consGif = existing.construction
+        ? '<p><img src="../../../../assets/period/1995/geocities/icons/under-construction.gif" width="80" height="32" border="0" alt="Under Construction"></p>'
+        : "";
       view.innerHTML =
+        consGif +
         "<h2>" + escapeHtml(existing.title || "My Homepage") + "</h2>" +
-        "<p><font size=\"2\">" + escapeHtml(existing.neighborhood || "") + "/" +
+        "<p data-homestead-addr><font size=\"2\"><b>Street:</b> " +
+        escapeHtml(existing.neighborhood || existing.hood || "") + " / " +
         escapeHtml(String(existing.number || "")) + "</font></p>" +
         "<p>" + escapeHtml(existing.about || "") + "</p>" +
         "<p><b>Cool links:</b></p><ul>" +
@@ -130,12 +146,23 @@ function initHomestead() {
     if (title) title.value = existing.title || "";
     if (about) about.value = existing.about || "";
   }
-  form.onsubmit = function (e) {
+  var st = document.querySelector("[data-homestead-status]");
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var neighborhood = ((form.querySelector('[name="neighborhood"]') || {}).value || "Hollywood").trim();
-    var number = ((form.querySelector('[name="number"]') || {}).value || String(1000 + Math.floor(Math.random() * 8000))).trim();
-    var titleV = ((form.querySelector('[name="title"]') || {}).value || "My Homepage").trim();
+    var neighborhood = ((form.querySelector('[name="neighborhood"]') || {}).value || "").trim();
+    var number = ((form.querySelector('[name="number"]') || {}).value || "").trim();
+    var titleV = ((form.querySelector('[name="title"]') || {}).value || "").trim();
     var aboutV = ((form.querySelector('[name="about"]') || {}).value || "").trim();
+    if (!neighborhood) neighborhood = "Hollywood";
+    if (titleV.length < 2) {
+      if (st) {
+        st.textContent = "Give your page a title (2+ characters). Empty claim does not write.";
+        st.style.color = "#ff6";
+      }
+      ittFeedback("Title required — empty claim does not write.", st);
+      return;
+    }
+    if (!number) number = String(1000 + Math.floor(Math.random() * 8000));
     var l1 = ((form.querySelector('[name="link1"]') || {}).value || "").trim();
     var l2 = ((form.querySelector('[name="link2"]') || {}).value || "").trim();
     var l3 = ((form.querySelector('[name="link3"]') || {}).value || "").trim();
@@ -143,18 +170,32 @@ function initHomestead() {
     if (l1) links.push({ label: l1, url: l1.indexOf("http") === 0 ? l1 : R("sites/yahoo/index.html") });
     if (l2) links.push({ label: l2, url: l2.indexOf("http") === 0 ? l2 : R("sites/amazon/index.html") });
     if (l3) links.push({ label: l3, url: l3.indexOf("http") === 0 ? l3 : R("pages/home.html") });
+    var cons = form.querySelector('[name="construction"], [data-homestead-construction]');
     var hs = {
       neighborhood: neighborhood,
+      hood: neighborhood,
       number: number,
       title: titleV,
       about: aboutV || "This is my free GeoCities homepage!",
       links: links,
-      created: new Date().toLocaleString()
+      construction: !!(cons && cons.checked),
+      multiStep: true,
+      real: true,
+      year: "1995",
+      created: new Date().toLocaleString(),
+      ts: Date.now()
     };
     saveJSON(storageKey("homestead"), hs);
+    if (st) {
+      st.textContent = "Homestead claimed · " + neighborhood + "/" + number;
+      st.style.color = "#9f9";
+    }
     showFlash("Homestead claimed: <b>" + escapeHtml(neighborhood) + "/" + escapeHtml(number) + "</b>");
+    try {
+      if (typeof markTourUsed === "function") markTourUsed();
+    } catch (eM) { /* */ }
     location.href = R("sites/geocities/my-homestead.html");
-  };
+  });
 }
 
       initWebring();

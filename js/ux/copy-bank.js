@@ -147,6 +147,13 @@
       var b = UX.Copy.forYear(year);
       return b.incomplete(have, min);
     },
+    acceptAll: function (year) {
+      var y = parseInt(year, 10) || 2013;
+      if (y >= 2018) {
+        return "Accept all is what people clicked in 2018. The museum stamp is Manage → preferences → Save.";
+      }
+      return "That path is period-true but does not earn the REAL badge. Finish the full steps.";
+    },
     incompleteField: function (year) {
       return UX.Copy.forYear(year).incompleteField;
     },

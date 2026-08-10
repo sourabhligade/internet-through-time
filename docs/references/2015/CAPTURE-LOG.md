@@ -30,11 +30,25 @@
 | H15-21 | Messenger bots era | TechCrunch 2016-04-12 | Mass bots = **2016** not 2015 · **[x]** |
 | H15-22 | Scale ledger alignment | docs/references/SCALE-LEDGER.md | 2015 row matches Live Stats · **[x]** |
 
+## Re-verify + densify (2026-08-10)
+
+See [`../../2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](../../2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md) §9.
+
+| ID | Target | Result |
+|----|--------|--------|
+| H15-23 | WA Web TNW 2015-01-21 | Jan 21 · phone-nearby · **[x]** |
+| H15-40 | YouTube Red TC 2015-10-21 | $9.99 · Oct 28 US · `youtube/red.html` · `itt15-ytred` **[x]** |
+| H15-41 | Twitter Moments TC 2015-10-06 | Project Lightning · `twitter/moments.html` · `itt15-moments` **[x]** |
+| H15-42 | Instant Articles May 12–13 | NYT/BuzzFeed/BBC · `facebook/instant.html` · `itt15-instant` **[x]** |
+| H15-43 | AMP Google blog 2015-10-07 | announce only · SERP Feb 2016 · `amp/` · `itt15-amp-ack` **[x]** |
+| H15-44 | FCC Title II Feb 26 | 3–2 vote · `fcc/` · `itt15-title2` **[x]** |
+| H15-45–48 | Stories / Reactions / E2E / CV1 retail | **2016 bans confirmed** |
+
 ## Pixel harvest (implement phase)
 
 | ID | Asset | Planned method | Status |
 |----|-------|----------------|--------|
-| H15-30 | Win10 Start / Edge chrome | blogs.windows.com · WA 2015 | **[ ]** |
+| H15-30 | Win10 Start / Edge chrome | blogs.windows.com · WA 2015 | **[ ]** dirs ready · no file |
 | H15-31 | Periscope LIVE marketing | WA periscope.tv 2015 | **[ ]** |
 | H15-32 | Apple Watch product stills | Apple Newsroom press kit | **[ ]** |
 | H15-33 | Apple Music / Beats 1 | Newsroom · WA music.apple.com 2015 | **[ ]** |
@@ -45,19 +59,45 @@
 | H15-38 | Echo cylinder still | Amazon press | **[ ]** |
 | H15-39 | iOS 9 blockers Settings | period RECON | **[ ]** |
 
-## Asset folders (create on implement)
+## Asset folders
+
+**[x]** 2026-08-09 leftover L4 — honesty dirs + READMEs only (no invented pixels).
 
 ```
-assets/period/2015/apple/
-assets/period/2015/windows10/
-assets/period/2015/edge/
-assets/period/2015/periscope/
-assets/period/2015/applemusic/
-assets/period/2015/googlephotos/
-assets/period/2015/discord/
-assets/period/2015/letsencrypt/
-assets/period/2015/echo/
-assets/period/2015/chrome/
+assets/period/2015/README-PIXELS.txt
+assets/period/2015/{apple,windows10,edge,periscope,applemusic,googlephotos,discord,letsencrypt,echo,chrome}/README-AUTHENTICITY.txt
 ```
 
-Fill only with provenanced files; update this log.
+Fill only with provenanced files; update this log. Failed-final RECON is honest.
+
+---
+
+## From-scratch harvest 2026-08-10
+
+Full map: [`../../2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](../../2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md). Primaries re-opened. Stills **found, not downloaded**.
+
+| ID | Asset | Source | Result |
+|----|-------|--------|--------|
+| H15-50 | Periscope launch homepage | https://web.archive.org/web/20150326153619/https://www.periscope.tv/ | **[x]** splash-bg + social-og + favicon saved 2026-08-10 |
+| H15-51 | Periscope pre-launch | https://web.archive.org/web/20150324014833/https://www.periscope.tv/ | **found** · **[ ]** |
+| H15-52 | Periscope CDX Mar–Jun 2015 | cdx `url=periscope.tv&from=201503&to=201506` | **15+ 200s confirmed** |
+| H15-53 | Discord 2015 site | https://www.webdesignmuseum.org/gallery/discord-in-2015 | **found** WDM · **[ ] crop** |
+| H15-54 | YouTube 2015 | https://www.webdesignmuseum.org/gallery/youtube-2015 | **found** WDM · **[ ] crop** |
+| H15-55 | Google 2015 | https://www.webdesignmuseum.org/gallery/google-2015 | **found** WDM · **[ ] crop** |
+| H15-56 | Google Mobile 2015 | https://www.webdesignmuseum.org/gallery/google-mobile-in-2015 | **found** WDM · **[ ] crop** |
+| H15-57 | Microsoft Edge 2015 | https://www.webdesignmuseum.org/web-design-history/microsoft-edge-2015 | **found** WDM · **[ ] crop** |
+| H15-58 | Apple Watch apps | https://www.webdesignmuseum.org/apple-watch | **found** WDM · **[ ] crop** |
+| H15-59 | Win10 splash 2015 | https://www.versionmuseum.com/history-of/microsoft-windows | **[x]** title-screen-vm-2015.png |
+| H15-60 | Win10 desktop 2015 | https://www.versionmuseum.com/history-of/microsoft-windows | **[x]** desktop-vm-2015.jpg |
+| H15-62 | Watch Newsroom stills | apple.com/newsroom/2015/03/09… | live page only modern `apple-logo-og` · **failed-final** (not used) |
+| H15-63 | Music Newsroom stills | apple.com/newsroom/2015/06/08… | **failed-final** this pass |
+| H15-64 | Echo press photo | Amazon Press 2015-06-23 + Business Wire | **[~]** |
+| H15-65 | 6s Newsroom | apple.com/newsroom/2015/09/09… | **[~]** |
+| H15-70 | apple.com/watch CDX | WA 20150424161844 | HTML **[x]** · og_tab.jpg id_/im_ **failed-final** (HTML interstitial) |
+| H15-71 | apple.com/music CDX | WA 20150701022618 | HTML **[x]** · og_image.jpg id_/im_ **failed-final** |
+| H15-72 | photos.google.com CDX | WA 20150528174034 | HTML **[x]** · no isolated still saved |
+| H15-73 | discordapp.com / WDM | webdesignmuseum.org/gallery/discord-in-2015 | **[~]** WDM 403 class this pass |
+| H15-74 | web.whatsapp.com CDX | WA 20150121213654 | HTML **[x]** · favicon id_/im_ **failed-final** |
+| H15-75–78 | Win10 / Edge / LE / iOS 9 CDX | CDX queue | **[~]** rooms remain RECON |
+
+Re-opened this pass (facts, no new file): H15-01 Live Stats · H15-02 Watch PR · H15-03 Win10 · H15-04 Music · H15-05 Photos Verge · H15-06 Periscope Guardian · H15-07 Echo · H15-23 TNW WA Web · H15-13 FB Live · H15-16 Pew · H15-40 YouTube Red · AMP Google blog · Snap Discover TC.

@@ -48,6 +48,10 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/wolframalpha/index.html": "http://museum.local/years/2009/wolframalpha/",
+      "sites/vevo/index.html": "http://museum.local/years/2009/vevo/",
+      "sites/foursquarecheckin/index.html": "http://museum.local/years/2009/foursquarecheckin/",
+
       "sites/playable/index.html": "http://museum.local/years/2009/playable/",
       "sites/playable/game.html": "http://museum.local/years/2009/playable/game.html",
       "index.html": "http://museum.local/index.html",
@@ -375,8 +379,11 @@
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/"
-    },
+      "sites/zombo/index.html": "http://www.zombo.com/",
+          "sites/stackoverflow/about.html": "http://stackoverflow.com/about.html",
+      "sites/stackoverflow/index.html": "http://stackoverflow.com/",
+      "sites/stackoverflow/question.html": "http://stackoverflow.com/question.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -497,11 +504,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2009",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2009",
       "pages/map.html": "2009 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",

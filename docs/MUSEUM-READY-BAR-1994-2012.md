@@ -31,8 +31,8 @@
 
 ## Status map (2026-08-05)
 
-All hub years **1994–2016** are **museum-ready** under this bar (layers A–F).  
+All hub years **1994–2015** are **museum-ready** under this bar (layers A–F).  
 **2011–2013** L3 densify: CAPTURE failed-final honesty · 2013 HealthCare.gov + iPad Air.  
-**2014–2016** promote 2026-08-05: densify packs green · CAPTURE H14–H16 failed-final · museum-grade cards live.  
+**2014–2015** leftover-closed 2026-08-10 (Chrome REAL · year-voice · games bible).  
 **L4 forever:** perfect WA brand stills · never invent pixels.  
-**2017+** not on disk.
+**2016** lean on disk (hub 1994–2016). **2017+** not on disk.

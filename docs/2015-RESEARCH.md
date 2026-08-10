@@ -1,17 +1,19 @@
 # 2015 Research Dossier — The Internet Through Time
 
-**Status:** Research freeze **[x]** 2026-08-06 · scaffold **[ ]** · hub locked at **2014** · planned prefix **`itt15`**  
+**Status:** Research freeze **[x]** 2026-08-06 · scaffold **[x]** · hub **1994–2015** · prefix **`itt15`** · MVP live  
+**★ Execute leftover:** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) Part 2 L0–L6  
 **★ READ FIRST:** [`2015-READ-FIRST.md`](2015-READ-FIRST.md)  
 **★ Research detail step-by-step phases (R0–R18):** [`2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)  
 **★ Step-by-step implement (execute this):** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)  
 **★ Master bible (goals · numbers · flows A–T):** [`2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
 **★ Clear playbook twin:** [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
-**★ Deep web harvest:** [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md)  
+**★ Deep web harvest (first):** [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md)  
+**★ Live-year re-verify + densify map (2026-08-10):** [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md)  
 **Capture / artifacts:** [`references/2015/`](references/2015/)  
 **Parent:** 2014 **MVP live** ([`2014-READ-FIRST.md`](2014-READ-FIRST.md) · `years/2014/`)  
 **Scale ledger:** [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md)  
 **Flow map stub:** `js/config/flow-maps.js` → `ITT.flowMaps["2015"]`  
-**Proposed prefix:** **`itt15`**
+**Prefix:** **`itt15`** (live)
 
 ---
 

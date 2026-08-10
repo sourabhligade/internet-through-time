@@ -52,7 +52,8 @@
       chromeBrowser: true,
       android: true,
       hulu: true,
-      netflix: true
+      netflix: true,
+      github: true
     },
     navSubtitle: "XP · IE 7 · App Store · iPhone 3G · Chrome · Android G1",
     nav: [
@@ -62,6 +63,7 @@
       { label: "Chrome", href: "sites/chrome/index.html", match: "/chrome/" },
       { label: "Android", href: "sites/android/index.html", match: "/android/" },
       { label: "Hulu", href: "sites/hulu/index.html", match: "/hulu/" },
+      { label: "GitHub", href: "sites/github/index.html", match: "/github/" },
       { label: "Facebook", href: "sites/facebook/index.html", match: "/facebook/" },
       { label: "YouTube", href: "sites/youtube/index.html", match: "/youtube/" }
     ],

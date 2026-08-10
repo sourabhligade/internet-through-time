@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Year → next-year handoff flows (1994→1995 … 2012→2013).
+ * Year → next-year handoff flows (1994→1995 … 2015→2016).
  *
  * For each consecutive pair:
  *  1. Boot year N · signature product interaction · year-native storage key
@@ -200,6 +200,7 @@ const SIGNATURE = {
       const frame = contentFrame(page);
       const share = frame.locator('[data-ig-share]');
       await expect(share).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-ig-filter]').nth(1).click();
       await share.click();
     },
   },
@@ -236,6 +237,39 @@ const SIGNATURE = {
       await frame.locator('[data-wa13-install]').click();
     },
   },
+  '2014': {
+    path: 'sites/whatsapp/index.html',
+    keySuffix: 'wa-install',
+    body: /WhatsApp|Install|450/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-wa-name]').fill('handoff residual');
+      await frame.locator('[data-wa-install]').click();
+    },
+  },
+  '2015': {
+    path: 'sites/apple/watch.html',
+    keySuffix: 'watch',
+    body: /Apple Watch/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-watch-shipped]').check({ force: true });
+      await frame.locator('[data-watch-no-store]').check({ force: true });
+      await frame.locator('[data-watch-save]').click();
+    },
+  },
+  '2016': {
+    path: 'sites/instagram/stories.html',
+    keySuffix: 'ig-stories',
+    body: /Instagram Stories/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-ig-stories-caption]').fill('coffee');
+      await frame.locator('[data-ig-stories-24h]').check({ force: true });
+      await frame.locator('[data-ig-stories-not-reels]').check({ force: true });
+      await frame.locator('[data-ig-stories-add]').click();
+    },
+  },
 };
 
 const YEARS = [
@@ -259,6 +293,9 @@ const YEARS = [
   '2011',
   '2012',
   '2013',
+  '2014',
+  '2015',
+  '2016',
 ];
 
 /**

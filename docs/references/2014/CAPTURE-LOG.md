@@ -1,42 +1,26 @@
-# 2014 capture log
+# 2014 CAPTURE-LOG
 
-**Date opened:** 2026-08-06  
-**Rule:** Never invent brand pixels. Log every asset attempt: source URL · date · method · result (OK / failed-final / deferred).
+**Date:** 2026-08-09  
+**Rule:** Dated source or **failed-final RECON**. Never invent brand pixels.
 
-## Research-only (no pixel files yet)
+| ID | Asset | Source | Date seen | Status |
+|----|-------|--------|-----------|--------|
+| H14-01 | Live Stats June 2014 table | internetlivestats.com | 2026-08-09 | **cited** · screenshot at implement |
+| H14-02 | WhatsApp deal PR | about.fb.com/news/2014/02/… | 2026-08-09 | **cited live** |
+| H14-03 | WhatsApp close 8-K | SEC EDGAR | 2026-08-09 | **cited live** |
+| H14-04 | Heartbleed.com + CISA | heartbleed.com · cisa.gov | 2026-08-09 | **cited live** |
+| H14-05 | iPhone 6 Newsroom | apple.com/newsroom/2014/09/09… | 2026-08-09 | **cited live** |
+| H14-06 | Apple Pay PR | apple.com/newsroom/2014/09/09…Pay | 2026-08-09 | **cited live** |
+| H14-07 | Win10 TP PR | news.microsoft.com/source/2014/09/30/… | 2026-08-09 | **cited live** |
+| H14-08 | Twitch Amazon PR | press.aboutamazon.com/2014/8/… | 2026-08-09 | **cited live** |
+| H14-09 | Oculus FB PR | about.fb.com/news/2014/03/… | 2026-08-09 | **cited live** |
+| H14-10 | ALS Ice Bucket | als.org/ibc | 2026-08-09 | **cited live** |
+| H14-11 | Pew smartphone | pewresearch.org 2015-04-01 | 2026-08-09 | **cited live** |
+| H14-17 | WhatsApp.com 2014 WA | web.archive.org | 2026-08-10 | **failed-final** · room is RECON/text · no invented logo |
+| H14-18 | Material guidelines 2014 | archive | 2026-08-10 | **failed-final** · literacy room only |
+| H14-19 | Win10 TP screens | Insider blog | 2026-08-10 | **failed-final** · TP honesty is copy, not a fake splash |
+| H14-20 | Serial 2014 landing | serialpodcast.org WA | 2026-08-10 | **failed-final** · no invented wordmark |
+| H14-21 | heartbleed.com logo | heartbleed.com CC0 | 2026-08-09 | **[~]** failed-final RECON text on `heartbleed/index.html` · CC0 rights waived · no invented PNG |
+| H14-22 | Apple product stills | Newsroom | 2026-08-10 | **failed-final** · live Newsroom is modern chrome · not used |
 
-| ID | Target | Source | Result |
-|----|--------|--------|--------|
-| H14-01 | Live Stats 2014 row | https://www.internetlivestats.com/total-number-of-websites/ | Cited in freeze docs · **[x]** |
-| H14-02 | WhatsApp deal PR | SEC exhibit 2014-02-19 | Cited · **[x]** |
-| H14-03 | Heartbleed primary | https://www.heartbleed.com/ · CISA | Cited · **[x]** |
-| H14-04 | Apple Newsroom iPhone 6 | apple.com/newsroom 2014-09-09 | Cited · **[x]** |
-| H14-05 | Win10 TP PR | Microsoft Source 2014-09-30 | Cited · **[x]** |
-| H14-06 | Twitch Amazon PR | press.aboutamazon.com 2014-08-25 | Cited · **[x]** |
-| H14-07 | Oculus FB PR | about.fb.com 2014-03-25 | Cited · **[x]** |
-| H14-08 | Ice Bucket official | als.org | Cited · **[x]** |
-| H14-09–13 | Serial · Alibaba · Echo · Material · Ringer | various | Cited in deep harvest · **[x]** |
-
-## Pixel harvest (implement phase)
-
-| ID | Asset | Planned method | Status |
-|----|-------|----------------|--------|
-| H14-14 | WhatsApp 2014 marketing chrome | Wayback | **[ ]** |
-| H14-15 | Material Design early guidelines | material.io / archive | **[ ]** |
-| H14-16 | Win10 TP screenshots | blogs.windows.com | **[ ]** |
-| H14-17 | Serial 2014 landing | serialpodcast.org archive | **[ ]** |
-| H14-18 | Heartbleed logo | heartbleed.com RECON | **[ ]** |
-| H14-19 | iPhone 6 product stills | Apple Newsroom / press | **[ ]** |
-| H14-20 | Ice Bucket still (non-celebrity generic) | ALS.org / public domain class | **[ ]** |
-
-## Asset folders on disk (empty placeholders)
-
-```
-assets/period/2014/apple/
-assets/period/2014/chrome/
-assets/period/2014/heartbleed/
-assets/period/2014/whatsapp/
-assets/period/2014/windows10/
-```
-
-Fill only with provenanced files; update this log.
+Failed-final is allowed for Layer C. Do not block MVP on perfect WA logos.

@@ -1,10 +1,11 @@
 # 2015 — READ FIRST (research freeze entry map)
 
-**Date:** 2026-08-06  
-**Purpose:** **Single entry document** for museum year **2015**. Read before densifying, scaffolding, harvesting pixels, or writing tests.  
-**Disk truth today:** Hub **1994–2015** playable · **`years/2015/` MVP live** · prefix **`itt15`**  
-**Shell (draft):** Win7 residual early · **Windows 10 free-upgrade product** (Jul 29+) · Chrome habit · **Edge** ships with Win10  
-**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) · grade card later as `2015-MUSEUM-GRADE.md`  
+**Date:** 2026-08-10 (lean from-scratch rebuild)  
+**Purpose:** **Single entry document** for museum year **2015**. Read before scaffolding, harvesting pixels, or writing tests.  
+**Disk truth today:** Hub **1994–2015** playable · `years/2015/` **lean rebuild (~67 HTML)** · prefix **`itt15`** · 2014 forest pruned · one-thing **Watch ships**  
+**Shell:** Win7 residual early · **Windows 10 free-upgrade product** (Jul 29+) · Chrome habit · **Edge** ships with Win10  
+**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) · [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md)  
+**Execute:** **[`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)** (S0–S14)  
 **Legal:** Educational reconstruction only. **localStorage theater only.** **Never invent brand pixels.**
 
 ---
@@ -15,16 +16,19 @@
 |--------------|---------|
 | Orientation only | §1–6 · stop |
 | **Research detail in phases (R0–R18)** | **[`2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)** ← full research write-up |
-| **Implement step-by-step** | **[`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)** ← execute code |
+| **Implement from scratch (goals · phases · minute steps)** | **[`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)** ← **★ execute this** (lean rebuild · S0–S14) |
+| **Implement / leftover (historical clone path)** | [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (MVP [x] · leftover L0–L6 — do **not** `cp 2014` again) |
 | Goals / flows map | [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · master bible |
 | Implement / scaffold map | Reading order §10 · **[`2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)** |
 | Scale numbers | §2 · [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) |
-| UI / harvest | **[`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md)** · CAPTURE-LOG |
+| UI / harvest | [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md) (first pack) · **★ live-year re-verify [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md)** · **★ from-scratch + artifacts [`2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md)** · CAPTURE-LOG |
 | Continuity from 2014 | §12 · reverse 2014 hard bans carefully |
 
-**Scaffold:** not live — research freeze first. Clone **`years/2014/`** when implementing.  
+**Scaffold (done 2026-08-10):** lean rebuild in `years/2015/` (not another `cp years/2014`). One-thing locked: **Apple Watch shipped** (not Win10 nag, not Discord plaque).  
+**Do not scaffold 2016 until executing** [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md). **Do not scaffold 2017+.** 2015 clone backup: `/tmp/itt-2015-clone-backup-2026-08-10`.  
 **Do not** invent Instagram Stories, Facebook Reactions, Messenger mass bots (2016 F8), Oculus CV1 retail ship, TikTok/Reels, Meta branding.  
-**Do not** treat Windows 10 free-upgrade as already over (ends **Jul 29 2016**).
+**Do not** treat Windows 10 free-upgrade as already over (ends **Jul 29 2016**).  
+**Do not** treat Watch as announce-only (that was 2014).
 
 ---
 
@@ -85,6 +89,7 @@
 | **Jun 21–22 2015** | **Taylor Swift** open letter → Apple **pays royalties during free trial** |
 | **Jun 23 / Jul 14 2015** | **Amazon Echo** open to all customers / mass ship (**$179.99** class) |
 | **Jun 30 2015** | **Apple Music** + Beats 1 live |
+| **Oct 21 / 28 2015** | **YouTube Red** announce / US live · **$9.99** ($12.99 iOS IAP) · **not** Premium 2018 |
 
 ### Privacy / mobile autumn
 | When | What |
@@ -97,9 +102,13 @@
 | When | What |
 |------|------|
 | **Jan 27 2015** | **Snapchat Discover** media grid (CNN, Vice, ESPN class) |
+| **Feb 26 2015** | **FCC Title II / Open Internet** vote **3–2** · order Mar 12 · effective Jun 12 — **not** 2017 repeal |
 | **Mar 25–26 2015** | F8 · **React Native** open-source (iOS first) · Messenger **Platform for businesses** (not mass bots) |
+| **May 12–13 2015** | **Facebook Instant Articles** · NYT / BuzzFeed / BBC / Guardian class · in-app · iPhone first · **not** AMP |
 | **May 6 2015** | Oculus announces **Rift CV1 ships Q1 2016** (pre-ship honesty all year) |
 | **Jul–Aug 2015** | **Ashley Madison** Impact Team breach / data dump culture (privacy literacy · careful) |
+| **Oct 6 2015** | **Twitter Moments** (Project Lightning) · curated “the day’s biggest” |
+| **Oct 7 2015** | **AMP Project announced** (GitHub spec) · **not in Google SERP until Feb 2016** |
 | **Dec 3 2015** | **Let's Encrypt** public beta · **Swift open source** same day class |
 | **Dec 31 2015 / early 2016** | **Peach** (Dom Hofmann / Vine founder) · Magic Words · late-year densify |
 
@@ -110,15 +119,24 @@ WhatsApp residual · Chrome #1 habit · Instagram (still **no Stories**) · Vine
 
 ## 4. P0 / P1 products (museum spine draft)
 
+### One-thing (gold machine)
+**Apple Watch ships** — collection + size + band + **shipped Apr 24 honesty** · key `itt15-watch`  
+Incomplete (no shipped check / missing picks) **never writes**. Reverse of 2014 announce-only.
+
+**Why not Win10 as one-thing:** free upgrade is the desktop story (P0) but a nag/honesty machine, not the year’s emotional gold.  
+**Why not Discord:** May 13 seed — P1 densify (same reason Slack was not 2014 one-thing).  
+**WhatsApp Web (Jan 21 2015)** is P0 messaging upgrade of 2014’s one-thing — QR theater · phone must stay nearby · **not** default E2E.
+
 ### P0
-1. **Apple Watch** — face · band · size · collection · **shipped honesty** (Apr 24 · Sport $349+)  
-2. **Windows 10 free upgrade** — honesty boxes · Start menu return · free for Win7/8.1 · **not** upgrade-ended  
-3. **Microsoft Edge** — ships with Win10 · prefer theater · Chrome still habit  
-4. **Periscope** (+ Meerkat war context) — title · Go LIVE · local list grows  
-5. **Apple Music** — trial · Beats 1 · Swift royalty honesty · Spotify residual  
-6. **Google Photos** — backup on · unlimited HQ honesty  
-7. **iOS 9 content blockers** — Settings → Safari checklist  
-8. **Scale / About** — 863M · −11% · 1B dip honesty  
+1. **Apple Watch** — one-thing · face · band · size · Sport **$349/$399** · steel from **$549** · Edition from **$10,000** · **ships Apr 24**  
+2. **Windows 10 free upgrade** — Jul 29 · Win7/8.1 · free offer **until Jul 29 2016** · GWX product · **not** upgrade-ended  
+3. **Microsoft Edge** — ships with Win10 · EdgeHTML · not Chromium Edge (2020)  
+4. **WhatsApp Web** — **Jan 21 2015** · QR link-a-phone · residual 2014 deal  
+5. **Periscope** (+ Meerkat war) — title · Go LIVE · local list  
+6. **Apple Music** — Jun 30 · 3-mo trial · Beats 1 · Swift royalty honesty  
+7. **Google Photos** — May 28 I/O · unlimited HQ (16MP/1080p class)  
+8. **iOS 9 content blockers** — Sep 16 · Safari checklist  
+9. **Scale / About** — **863,105,652 (−11%)** · **3,185,996,155** · 1B dip honesty  
 
 ### P1
 - Facebook Live (celebs-only 2015 honesty)  
@@ -133,6 +151,11 @@ WhatsApp residual · Chrome #1 habit · Instagram (still **no Stories**) · Vine
 - Oculus CV1 **pre-ship** (ships 2016)  
 - Peach Magic Words (year-end)  
 - Ashley Madison privacy literacy (careful educational)  
+- YouTube Red (Oct 28 · $9.99 · not Premium 2018)  
+- Facebook Instant Articles (May 12–13 · in-app partners)  
+- Twitter Moments (Oct 6 · Project Lightning)  
+- FCC Title II / Open Internet (Feb 26 · 3–2 · not 2017 repeal)  
+- AMP Project announce (Oct 7 · not SERP yet)  
 
 ### Continuity from 2014
 WhatsApp residual · Vine residual · Snap Stories residual · IG residual (**no IG Stories**) · Chrome #1 · Spotify · Netflix · Uber · Gmail · Twitter · Heartbleed residual · Win7 residual early · Win10 now **retail free upgrade** (reverse 2014 TP-only ban carefully)
@@ -171,32 +194,37 @@ WhatsApp residual · Vine residual · Snap Stories residual · IG residual (**no
 
 ---
 
-## 7. On-disk map (planned — not live)
+## 7. On-disk map (**MVP live**)
 
 ```
-years/2015/                    # NOT YET — research only
+years/2015/                    # LIVE · lean rebuild (~67 HTML) · not a 2014 forest
   pages/home · about · map · whats-new
   sites/apple/watch.html · windows10/ · edge/ · chrome/
+  sites/whatsapp/web.html      # Jan 21 QR theater
   sites/periscope/ · meerkat/ · fblive/
   sites/applemusic/ · spotify/
   sites/googlephotos/ · ios9/blockers.html
   sites/discord/ · snapchat/discover.html · echo/
   sites/letsencrypt/ · swift/ · messenger/ · oculus/cv1.html
-  sites/peach/ · iphone/6s.html (P1)
+  sites/peach/ · iphone/6s.html
+  sites/playable/game.html     # Blob Rush (agar.io-class · split)
+  sites/playable/index.html    # Go LIVE · Close the rings · 3 months free
+  sites/privacy/ashleymadison.html · sites/reactnative/
 js/config/2015.js · immersion-2015.js · browser-2015.js
+js/immersion/year-2015-extras.js
+js/games/year-2015-blobrush.js
 css/period-2015.css
-assets/period/2015/
 docs/references/2015/
+e2e/2015-*.spec.js             # npm run test:e2e:2015
+assets/period/2015/            # honesty dirs · no invented pixels
 ```
 
-**Already on disk (stubs only, not playable year):**
-- `js/config/flow-maps.js` → `ITT.flowMaps["2015"]` thesis tree  
-- `docs/references/2015/` (this research pack)  
-- SCALE-LEDGER 2015 row  
+**Hub:** 1994–2015 · 22 years · `index.html` 2015 card · museum-progress `2015-start`.  
+**Leftover open:** Layer C dated stills only (H15-30+).  
 
 ---
 
-## 8. Storage keys (planned)
+## 8. Storage keys (live)
 
 | Key pattern | Flow |
 |-------------|------|
@@ -208,19 +236,22 @@ docs/references/2015/
 | `itt15-music*` · `itt15-beats1` | Apple Music trial |
 | `itt15-photos*` | Google Photos backup |
 | `itt15-blockers*` | iOS 9 content blockers |
+| `itt15-wa-web` | WhatsApp Web QR (phone nearby + not-E2E) |
 | `itt15-discord*` · `itt15-snap-discover*` | P1 multi-step |
 | `itt15-echo*` · `itt15-le*` · `itt15-swift*` | Ambient / open web |
 | `itt15-peach*` | Year-end densify |
+| `itt15-game-blobrush` | Blob Rush year game |
 
 ---
 
-## 9. REAL multi-step signatures (draft)
+## 9. REAL multi-step signatures (live)
 
 | Room | Min steps | Storage proof |
 |------|-----------|---------------|
 | Watch | Face → band → size/collection → confirm shipped | `itt15-watch` |
-| Win10 | Honesty checks (free · Win7/8.1 · not ended) → upgrade theater | `itt15-win10` |
-| Edge | Download/prefer | `itt15-edge` |
+| Win10 | Honesty checks (free · Jul 29 · not ended) → upgrade theater | `itt15-win10` |
+| Edge | Ships-with-Win10 + not Chromium → prefer | `itt15-edge` |
+| WhatsApp Web | Phone nearby + not-E2E → link | `itt15-wa-web` |
 | Periscope | Title → Go LIVE → list grows | `itt15-periscope` |
 | Apple Music | Trial start · Beats 1 · royalty note optional | `itt15-music` |
 | Google Photos | Toggle backup · HQ honesty | `itt15-photos` |
@@ -234,7 +265,7 @@ docs/references/2015/
 
 1. **This file**  
 2. **[`2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)** — research R0–R18 in detail  
-3. [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) — code phases 0–13  
+3. **[`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)** — **★ code phases R–13 + leftover L0–L6**  
 4. [`2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
 5. [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
 6. [`2015-RESEARCH.md`](2015-RESEARCH.md)  
@@ -276,10 +307,13 @@ docs/references/2015/
 
 | Item | Status |
 |------|--------|
-| Research freeze | **[x]** 2026-08-06 (this pack) |
-| Scaffold `years/2015/` | **[x]** MVP live |
+| Research freeze | **[x]** 2026-08-06 pack recovered + 2026-08-09 web re-check (Watch $349 · Win10 Jul 29 · WA Web Jan 21 · Live Stats 863,105,652) |
+| Scaffold `years/2015/` | **[x]** cloned live 2014 + P0 overlay |
 | Hub unlock 2015 | **[x]** 1994–2015 |
-| e2e packs | **[ ]** residual |
-| Pixel harvest | **[~]** RECON text UI |
+| e2e packs | **[x]** `npm run test:e2e:2015` |
+| Pixel harvest | **[~]** RECON / failed-final |
+| Phase map (execute) | **[x]** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) |
+| Leftover L0–L3 · L5–L6 | **[x]** voice · Blob Rush JS · AM/RN · tests · grade |
+| Pixel harvest L4 | **[~]** honesty dirs only |
 
-**MVP live.** Densify residuals / e2e via [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md).
+**Next:** optional dated stills (H15-30+) if you want Layer C pixels. Do **not** re-scaffold. One-thing = **Watch ships**.

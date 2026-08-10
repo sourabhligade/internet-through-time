@@ -96,6 +96,10 @@
         feedback("Confirm: shipped April 24, 2015.", st, { error: true });
         return;
       }
+      if (!checked(doc, "[data-watch-no-store]")) {
+        feedback("Confirm: no real Watch store in this exhibit.", st, { error: true });
+        return;
+      }
       var face = val(doc, "[data-watch-face]") || "sport";
       var band = val(doc, "[data-watch-band]") || "sport-band";
       var size = val(doc, "[data-watch-size]") || "38";
@@ -107,6 +111,8 @@
         collection: collection,
         shipped: "2015-04-24",
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       saveRaw(key("watch-shipped"), "1");
@@ -137,6 +143,8 @@
         notEndedIn2015: true,
         startMenu: checked(doc, "[data-win10-start]"),
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("Win10 free upgrade honesty · " + key("win10"), st);
@@ -160,6 +168,8 @@
         engine: "EdgeHTML",
         notChromium: true,
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("Edge preferred (theater) · " + key("edge"), st);
@@ -200,7 +210,7 @@
       if (!Array.isArray(arr)) arr = [];
       arr.push({ title: title, hearts: 3 + Math.floor(Math.random() * 40), ts: Date.now() });
       saveJSON(kList, arr);
-      saveJSON(key("periscope"), { live: true, title: title, multiStep: true, ts: Date.now() });
+      saveJSON(key("periscope"), { live: true, title: title, multiStep: true, real: true, year: "2015", ts: Date.now() });
       render();
       feedback("You are LIVE (theater) · " + key("periscope"), st);
       markUsed();
@@ -218,7 +228,7 @@
         feedback("Check SXSW + graph-block literacy.", st, { error: true });
         return;
       }
-      saveJSON(key("meerkat"), { sxsw: true, graphBlock: true, multiStep: true, ts: Date.now() });
+      saveJSON(key("meerkat"), { sxsw: true, graphBlock: true, multiStep: true, real: true, year: "2015", ts: Date.now() });
       feedback("Meerkat war literacy · " + key("meerkat"), st);
       markUsed();
     });
@@ -239,6 +249,8 @@
         celebsOnly: true,
         date: "2015-08-05",
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("FB Live 2015 honesty · " + key("fblive"), st);
@@ -257,6 +269,10 @@
         feedback("Start the free trial checkbox first.", st, { error: true });
         return;
       }
+      if (!checked(doc, "[data-music-not-pay]")) {
+        feedback("Confirm this is theater — no real Apple Music payment.", st, { error: true });
+        return;
+      }
       saveJSON(key("music"), {
         trial: true,
         beats1: checked(doc, "[data-music-beats1]"),
@@ -264,6 +280,8 @@
         launch: "2015-06-30",
         price: 9.99,
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       if (checked(doc, "[data-music-beats1]")) saveRaw(key("beats1"), "1");
@@ -293,6 +311,8 @@
         originalNotUnlimited: true,
         launch: "2015-05-28",
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("Google Photos backup on · " + key("photos"), st);
@@ -321,6 +341,8 @@
         apps: apps,
         path: "Settings → Safari → Content Blockers",
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("Content blockers enabled (theater) · " + key("blockers"), st);
@@ -350,6 +372,8 @@
         channel: channel,
         launch: "2015-05-13",
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("Discord server created (theater) · " + key("discord"), st);
@@ -407,6 +431,8 @@
         open: "2015-06-23",
         ship: "2015-07-14",
         multiStep: true,
+        real: true,
+        year: "2015",
         ts: Date.now()
       });
       feedback("Echo mass setup (theater) · " + key("echo"), st);
@@ -486,8 +512,8 @@
     if (!btn) return;
     var st = doc.querySelector("[data-oculus-cv1-status]");
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-oculus-preship]")) {
-        feedback("Confirm Q1 2016 ship / pre-ship honesty.", st, { error: true });
+      if (!checked(doc, "[data-oculus-preship]") || !checked(doc, "[data-oculus-not-unbox]")) {
+        feedback("Confirm Q1 2016 ship + no 2015 unbox.", st, { error: true });
         return;
       }
       saveJSON(key("oculus-cv1"), {
@@ -548,6 +574,175 @@
     });
   }
 
+  /* ——— Ashley Madison privacy literacy (no dump) ——— */
+  function bootAmLiteracy(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-am-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-am-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-am-breach]") || !checked(doc, "[data-am-no-dump]")) {
+        feedback("Both honesty checks required (breach real · no dump).", st, { error: true });
+        return;
+      }
+      saveJSON(key("am-literacy"), {
+        breachReal: true,
+        noDump: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Privacy literacy saved · " + key("am-literacy"), st);
+      markUsed();
+    });
+  }
+
+  /* ——— React Native F8 2015 ——— */
+  function bootReactNative(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-rn-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-rn-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-rn-f8]") || !checked(doc, "[data-rn-ios]")) {
+        feedback("Confirm F8 2015 + iOS-first honesty.", st, { error: true });
+        return;
+      }
+      saveJSON(key("rn"), {
+        f8: "2015-03-26",
+        iosFirst: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("React Native literacy · " + key("rn"), st);
+      markUsed();
+    });
+  }
+
+  function bootYtRed(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-ytred-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ytred-status]");
+    btn.addEventListener("click", function () {
+      if (
+        !checked(doc, "[data-ytred-price]") ||
+        !checked(doc, "[data-ytred-all]") ||
+        !checked(doc, "[data-ytred-ios]")
+      ) {
+        feedback("Check $9.99 · all-YouTube · iOS IAP honesty.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ytred"), {
+        price: 9.99,
+        allYoutube: true,
+        iosIap: 12.99,
+        live: "2015-10-28",
+        notPremium2018: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("YouTube Red theater · " + key("ytred"), st);
+      markUsed();
+    });
+  }
+
+  function bootInstant(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-ia-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ia-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-ia-inapp]") || !checked(doc, "[data-ia-partners]") || !checked(doc, "[data-ia-not-amp]")) {
+        feedback("Check in-app · partners · not-AMP.", st, { error: true });
+        return;
+      }
+      saveJSON(key("instant"), {
+        inApp: true,
+        partners: true,
+        notAmp: true,
+        launched: "2015-05-13",
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Instant Article theater · " + key("instant"), st);
+      markUsed();
+    });
+  }
+
+  function bootMoments(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-mom-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-mom-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-mom-date]") || !checked(doc, "[data-mom-curated]")) {
+        feedback("Check Oct 6 + curated tab.", st, { error: true });
+        return;
+      }
+      saveJSON(key("moments"), {
+        date: "2015-10-06",
+        lightning: true,
+        curated: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Moment opened (theater) · " + key("moments"), st);
+      markUsed();
+    });
+  }
+
+  function bootTitle2(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-t2-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-t2-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-t2-vote]") || !checked(doc, "[data-t2-32]") || !checked(doc, "[data-t2-not17]")) {
+        feedback("Check vote · 3–2 · not-2017.", st, { error: true });
+        return;
+      }
+      saveJSON(key("title2"), {
+        vote: "2015-02-26",
+        threeTwo: true,
+        not2017: true,
+        literacy: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Title II literacy · " + key("title2"), st);
+      markUsed();
+    });
+  }
+
+  function bootAmp(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-amp-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-amp-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-amp-announce]") || !checked(doc, "[data-amp-notserp]")) {
+        feedback("Check announce · not-in-SERP-yet.", st, { error: true });
+        return;
+      }
+      saveJSON(key("amp-ack"), {
+        announce: "2015-10-07",
+        notSerp: true,
+        serp: "2016-02",
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("AMP literacy · " + key("amp-ack"), st);
+      markUsed();
+    });
+  }
+
   /* ——— WhatsApp residual (verify → install → chat) ——— */
   function bootWhatsApp(doc) {
     doc = doc || document;
@@ -586,13 +781,26 @@
     }
     if (install) {
       install.addEventListener("click", function () {
-        if (!localStorage.getItem(kPhone)) {
+        var name = val(doc, "[data-wa-name]");
+        if (verify && !localStorage.getItem(kPhone)) {
           st("Verify a phone number first.", true);
           return;
         }
-        saveJSON(kInst, { installed: true, multiStep: true, real: true, residual2015: true, ts: Date.now() });
+        if (!verify && name.length < 1) {
+          st("Enter a display name first.", true);
+          return;
+        }
+        saveJSON(kInst, {
+          installed: true,
+          name: name || "",
+          multiStep: true,
+          real: true,
+          residual2015: true,
+          year: "2015",
+          ts: Date.now()
+        });
         saveRaw(key("wa-installed"), "1");
-        st("WhatsApp installed · open chats · " + kInst);
+        st("WhatsApp residual installed · 2015 verb is Web · " + kInst);
         markUsed();
       });
     }
@@ -739,9 +947,26 @@
     }
   }
 
+  function bootWaWeb(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-wa-web-link]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-wa-web-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-wa-web-phone]") || !checked(doc, "[data-wa-web-not-e2e]")) {
+        feedback("Phone nearby + E2E-is-2016 honesty required.", st, { error: true });
+        return;
+      }
+      saveJSON(key("wa-web"), { linked: true, phoneNearby: true, notE2E: true, real: true, year: "2015", ts: Date.now() });
+      feedback("Linked (theater) · " + key("wa-web"), st);
+      markUsed();
+    });
+  }
+
   function bootAll(doc) {
     doc = doc || document;
     bootWhatsApp(doc);
+    bootWaWeb(doc);
     bootChrome15(doc);
     bootSpotify15(doc);
     bootWatch(doc);
@@ -762,6 +987,13 @@
     bootOculusCv1(doc);
     bootPeach(doc);
     boot6s(doc);
+    bootAmLiteracy(doc);
+    bootReactNative(doc);
+    bootYtRed(doc);
+    bootInstant(doc);
+    bootMoments(doc);
+    bootTitle2(doc);
+    bootAmp(doc);
     restoreStatuses(doc);
   }
 

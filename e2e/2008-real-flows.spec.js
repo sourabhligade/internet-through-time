@@ -44,6 +44,12 @@ test.describe('2008 real flows', () => {
     await page.reload();
     await page.waitForSelector('[data-chrome-download]', { timeout: 20000 });
     await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt08-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await page.locator('[data-chrome-prefer]').click();
     const raw = await page.evaluate(() => localStorage.getItem('itt08-chrome'));
     expect(raw || '').toContain('downloaded');

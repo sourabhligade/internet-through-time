@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" data-itt-year="2010"><head><meta charset="utf-8">
-<title>Groupon — daily deals 2010</title>
+<html lang="en" data-itt-year="2010">
+<head>
+<meta charset="utf-8">
+<title>Groupon · today's deal · 2010</title>
 <link rel="stylesheet" href="../../../../css/period-2010.css">
+<style>
+.gp10 { max-width: 640px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif; }
+.gp10-deal { background: #53a318; color: #fff; border-radius: 4px; padding: 16px; margin: 12px 0; }
+.gp10-ban { background: #fff5f5; border: 1px solid #c00; padding: 8px; font-size: 12px; color: #222; }
+.gp10 input, .gp10 select { padding: 6px 8px; font-size: 13px; }
+.gp10-buy { background: #fff; color: #53a318; border: none; padding: 10px 16px; font-weight: bold; cursor: pointer; }
+.gp10-list { background: #fff; border: 1px solid #ccc; padding: 10px 14px; font-size: 13px; }
+</style>
 </head>
-<body style="font-family:Arial,sans-serif;max-width:600px;margin:16px auto;padding:12px;background:#fff;color:#333">
+<body bgcolor="#f6f6f6" text="#222" link="#53a318" vlink="#53a318">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p style="font-size:12px"><a href="../../pages/home.html">Start</a> ·
- <a href="../quora/index.html">Quora</a> ·
- <a href="../amazon/index.html">Amazon</a></p>
-<div style="background:#53a318;color:#fff;padding:12px 16px;margin:0 0 12px">
- <b style="font-size:22px">Groupon</b>
- <span style="font-size:12px;margin-left:8px">daily deals · 2010 explosion</span>
+<div class="gp10" style="padding:14px">
+ <p style="font-size:12px">
+  <a href="../../pages/home.html">← Home 2010</a> ·
+  <a href="deal.html">Deal densify</a> ·
+  <a href="about.html">About · ban IPO-as-2010</a>
+ </p>
+ <h1 style="color:#53a318;margin:8px 0">Groupon</h1>
+ <p style="font-size:13px;color:#444;max-width:38em">
+  One city · one deal · tip / buy theater. <b>Ban:</b> do not treat <b>IPO 2011</b> as the 2010 default story.
+ </p>
+ <p class="gp10-ban"><b>Year-true ban:</b> IPO is 2011 residual — this room stays 2010 daily-deal mass culture.</p>
+
+ <p>
+  <label>Your city
+   <input type="text" data-groupon-city placeholder="Chicago" autocomplete="off">
+  </label>
+ </p>
+
+ <div class="gp10-deal">
+  <div style="font-size:11px;opacity:0.9">TODAY'S DEAL · daily deal culture 2010</div>
+  <h2 data-groupon-title style="margin:8px 0;font-size:20px">$20 for $40 pizza / spa / theater</h2>
+  <p style="margin:0;font-size:12px">If it tips, the deal is on. Theater only — no real merchant.</p>
+  <p style="margin:12px 0 0">
+   <button type="button" data-groupon-buy class="gp10-buy">Buy</button>
+   <a href="deal.html" style="margin-left:12px;color:#fff;font-size:12px">Deal detail →</a>
+  </p>
+ </div>
+ <p data-groupon-status style="font-size:12px;color:#060;min-height:1.2em"></p>
+ <div>
+  <b style="font-size:12px">My Groupons (this browser)</b>
+  <ul data-groupon-list class="gp10-list"></ul>
+ </div>
+ <p style="font-size:11px;color:#666">Empty city does not write · keys <code>itt10-groupon-deals</code> · <code>itt10-groupon</code></p>
 </div>
-<p>Local deals at 50%+ off — restaurants, spas, skydiving — if enough people buy.
- 2010 is explosive growth culture; <b>IPO is 2011</b> (banned on this page as a claim of “already public”).</p>
-<p style="background:#ffc;border:1px solid #cc0;padding:8px;font-size:12px">
- Educational coupon theater · prices are not real offers · <code>itt10-groupon-deals</code>.
-</p>
-<div style="border:2px solid #53a318;padding:12px;margin:12px 0">
- <b data-groupon-title>Half off dinner for two</b>
- <div style="font-size:24px;color:#53a318;margin:6px 0">$20 <span style="font-size:14px;text-decoration:line-through;color:#999">$40</span></div>
- <p style="font-size:12px;color:#666">Museum sample deal · not a live merchant.</p>
-</div>
-<p><label>City <input data-groupon-city size="16" value="Chicago" style="padding:4px"></label></p>
-<p>
- <button type="button" data-groupon-buy style="padding:10px 18px;background:#53a318;color:#fff;border:0;cursor:pointer;font-weight:bold">Buy! (theater)</button>
- <span data-groupon-status style="margin-left:8px;font-size:12px"></span>
-</p>
-<ul data-groupon-list style="font-size:13px"></ul>
-<script src="../../../../js/immersion-2010.js"></script>
-</body></html>
+<script src="../../../../js/immersion-2010.js" defer></script>
+</body>
+</html>

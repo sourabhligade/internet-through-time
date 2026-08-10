@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, waitContentSrc } = require('./helpers');
 
 test.describe('2002 full button/link re-verify', () => {
   test('shell Start menu commands open live dialogs', async ({ page }) => {
@@ -24,8 +24,7 @@ test.describe('2002 full button/link re-verify', () => {
     }
     await page.click('#btn-start');
     await page.click('[data-start-cmd="programs"]');
-    await page.waitForTimeout(200);
-    expect(await page.locator('#content').getAttribute('src')).toMatch(/home/);
+    await waitContentSrc(page, /home/);
   });
 
   test('shell dirbar each target loads', async ({ page }) => {
@@ -47,8 +46,7 @@ test.describe('2002 full button/link re-verify', () => {
         document.querySelectorAll('.dialog').forEach((d) => d.classList.add('hidden'));
       });
       await page.locator(`#dirbar .dir-btn[data-go="${go}"]`).click({ force: true });
-      await page.waitForTimeout(400);
-      const src = await page.locator('#content').getAttribute('src');
+      const src = await waitContentSrc(page, reSrc);
       expect(src, go + ' -> ' + src).toMatch(reSrc);
     }
   });
@@ -57,23 +55,19 @@ test.describe('2002 full button/link re-verify', () => {
     await enterYear(page, '2002');
     await page.fill('#location', 'http://www.google.com/');
     await page.click('#btn-go');
-    await page.waitForTimeout(400);
-    let src = await page.locator('#content').getAttribute('src');
-    expect(src).toMatch(/google/i);
+    await waitContentSrc(page, /google/i);
     await page.click('#btn-home');
-    await page.waitForTimeout(300);
-    src = await page.locator('#content').getAttribute('src');
-    expect(src).toMatch(/home\.html/);
+    await waitContentSrc(page, /home\.html/);
   });
 
   test('Friendster profile save + friends add', async ({ page }) => {
     await page.goto('/years/2002/sites/friendster/profile.html');
-    await page.waitForTimeout(500);
+    await expect(page.locator('[name="name"]')).toBeVisible({ timeout: 8000 });
     await page.fill('[name="name"]', 'Audit User');
     await page.click('[data-friendster-profile-form] button[type="submit"]');
     await expect(page.locator('[data-friendster-status]')).toContainText(/saved/i);
     await page.goto('/years/2002/sites/friendster/friends.html');
-    await page.waitForTimeout(400);
+    await expect(page.locator('[name="fname"]')).toBeVisible({ timeout: 8000 });
     await page.fill('[name="fname"]', 'New Friend');
     await page.click('[data-friendster-add-form] button[type="submit"]');
     await expect(page.locator('[data-friendster-friends]')).toContainText(/New Friend/);
@@ -81,11 +75,11 @@ test.describe('2002 full button/link re-verify', () => {
 
   test('KaZaA download + search', async ({ page }) => {
     await page.goto('/years/2002/sites/kazaa/index.html');
-    await page.waitForTimeout(500);
+    await expect(page.locator('[data-itt-download]')).toBeVisible({ timeout: 8000 });
     await page.click('[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
     await page.goto('/years/2002/sites/kazaa/client.html');
-    await page.waitForTimeout(500);
+    await expect(page.locator('[data-kazaa-q], [name="q"]').first()).toBeVisible({ timeout: 8000 });
     await page.fill('[data-kazaa-q], [name="q"]', 'mp3');
     await page.locator('[data-kazaa-search] button[type="submit"]').click();
     await expect(page.locator('[data-kazaa-results]')).toContainText(/File|simulated|Museum/i, { timeout: 5000 });
@@ -93,7 +87,7 @@ test.describe('2002 full button/link re-verify', () => {
 
   test('TrackBack form live', async ({ page }) => {
     await page.goto('/years/2002/sites/movabletype/trackback.html');
-    await page.waitForTimeout(400);
+    await expect(page.locator('[data-trackback-form]')).toBeVisible({ timeout: 8000 });
     await page.click('[data-trackback-form] button[type="submit"]');
     await expect(
       page.locator('[data-trackback-status], #tb-out, .itt-live-host, [data-itt-live-status]').first()
@@ -102,53 +96,49 @@ test.describe('2002 full button/link re-verify', () => {
 
   test('Blogger enter navigates to edit', async ({ page }) => {
     await page.goto('/years/2002/sites/blogger/index.html');
-    await page.waitForTimeout(400);
     const enter = page.locator('form[data-blogger-title] input[type="submit"], input[type="submit"][value="enter"]');
     await expect(enter.first()).toBeVisible({ timeout: 5000 });
     await enter.first().click();
-    await page.waitForTimeout(500);
-    // either navigated or blogger.js rewrote location
-    const ok = /edit\.html/.test(page.url()) || await page.locator('textarea, [data-blogger-post]').count();
-    expect(ok, 'blogger enter should reach edit UI').toBeTruthy();
+    await expect
+      .poll(async () => /edit\.html/.test(page.url()) || (await page.locator('textarea, [data-blogger-post]').count()) > 0, {
+        timeout: 8000,
+      })
+      .toBeTruthy();
   });
 
   test('Google search form', async ({ page }) => {
     await page.goto('/years/2002/sites/google/index.html');
-    await page.waitForTimeout(500);
+    await expect(page.locator('input[name="q"]')).toBeVisible({ timeout: 8000 });
     await page.fill('input[name="q"]', 'broadband');
     await page.locator('form').filter({ has: page.locator('input[name="q"]') }).locator('input[type="submit"]').first().click();
-    await page.waitForTimeout(500);
-    expect(page.url()).toMatch(/search/);
+    await expect(page).toHaveURL(/search/, { timeout: 8000 });
   });
 
   test('Amazon add to cart + checkout link', async ({ page }) => {
     await page.goto('/years/2002/sites/amazon/book-contact.html');
-    await page.waitForTimeout(600);
+    await expect(page.locator('[data-add-cart]')).toBeVisible({ timeout: 8000 });
     await page.click('[data-add-cart]');
-    await page.waitForTimeout(300);
     await page.goto('/years/2002/sites/amazon/cart.html');
-    await page.waitForTimeout(600);
-    await expect(page.locator('[data-cart-list]').first()).toContainText(/Contact|Remove|\$/i);
+    await expect(page.locator('[data-cart-list]').first()).toContainText(/Contact|Remove|\$/i, { timeout: 8000 });
     await page.locator('a[href="checkout.html"]').first().click();
     await expect(page).toHaveURL(/checkout\.html/);
   });
 
   test('eBay place bid updates high bid', async ({ page }) => {
     await page.goto('/years/2002/sites/ebay/item-laptop.html');
-    await page.waitForTimeout(800);
+    await expect(page.locator('[name="bid"]')).toBeVisible({ timeout: 8000 });
     await page.fill('[name="bid"]', '999');
     const bidder = page.locator('[name="bidder"]');
     if (await bidder.count()) await bidder.fill('auditor');
     await page.click('form[data-bid-form] input[type="submit"]');
-    await page.waitForTimeout(500);
+    await expect(page.locator('[data-high-bid]')).toContainText(/999|9/, { timeout: 8000 });
     const after = await page.locator('[data-high-bid]').innerText();
     expect(after.replace(/[^0-9.]/g, '')).toMatch(/999|9/);
   });
 
   test('Wikipedia edit page has live controls', async ({ page }) => {
     await page.goto('/years/2002/sites/wikipedia/edit.html');
-    await page.waitForTimeout(500);
-    await expect(page.locator('textarea').first()).toBeVisible();
+    await expect(page.locator('textarea').first()).toBeVisible({ timeout: 8000 });
     const prev = page.locator('[data-wiki-preview]');
     if (await prev.count()) {
       await page.locator('textarea').first().fill("'''Hello''' wiki");
@@ -167,7 +157,7 @@ test.describe('2002 full button/link re-verify', () => {
     await expect(page).toHaveURL(/videos\.html/);
 
     await page.goto('/years/2002/sites/phoenix/index.html');
-    await page.waitForTimeout(500);
+    await expect(page.locator('[data-itt-download]')).toBeVisible({ timeout: 8000 });
     await page.click('[data-itt-download]');
     await expect(page.locator('.itt-live-host').first()).toBeVisible({ timeout: 8000 });
 

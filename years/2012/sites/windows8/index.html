@@ -14,6 +14,7 @@
  <div class="tile photos" data-win8-tile="Photos">Photos</div>
  <div class="tile desktop" data-win8-tile="Desktop">Desktop<br><span style="font-size:11px;font-weight:normal">classic apps still live here</span></div>
 </div>
+<label style="display:block;margin:10px 0;font-size:12px"><input type="checkbox" data-win8-not-jan> Oct 26 2012 product — <b>not</b> January mass default (Win7 residual)</label>
 <p data-win8-status style="font-size:12px;margin-top:12px"></p>
 <p style="font-size:11px;opacity:0.7">Microsoft PR · tile theater · educational</p>
 <script>
@@ -23,10 +24,15 @@ document.addEventListener("DOMContentLoaded",function(){
   var tiles=document.querySelectorAll("[data-win8-tile]");
   function load(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")||[];}catch(e){return[];}}
   function save(list){try{localStorage.setItem(KEY,JSON.stringify(list.slice(0,20)));}catch(e){}}
+  var hon=document.querySelector("[data-win8-not-jan]");
+  var opened=[];
   for(var i=0;i<tiles.length;i++){
     tiles[i].addEventListener("click",function(ev){
       var name=ev.currentTarget.getAttribute("data-win8-tile")||"Tile";
-      var list=load(); list.unshift({tile:name,ts:Date.now()}); save(list);
+      if(opened.indexOf(name)<0) opened.push(name);
+      if(!hon||!hon.checked){if(st)st.textContent="Confirm not-January-mass first.";return;}
+      if(opened.length<2){if(st)st.textContent="Opened "+name+" · tap another tile." ;return;}
+      var list=load(); list.unshift({tile:name,tiles:opened.slice(0,8),real:true,multiStep:true,ts:Date.now()}); save(list);
       if(st) st.textContent="Opened "+name+" (theater) · "+KEY;
     });
   }

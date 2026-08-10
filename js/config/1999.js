@@ -45,6 +45,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/yahoomessenger/index.html": "http://museum.local/years/1999/yahoomessenger/",
+      "sites/etrade/index.html": "http://museum.local/years/1999/etrade/",
+      "sites/webvan/index.html": "http://museum.local/years/1999/webvan/",
+      "sites/boocom/index.html": "http://museum.local/years/1999/boocom/",
+
       "sites/playable/index.html": "http://museum.local/years/1999/playable/",
       "sites/playable/game.html": "http://museum.local/years/1999/playable/game.html",
       "sites/msngaming/about.html": "http://www.zone.com/about.html",
@@ -96,6 +101,7 @@
       "sites/blogger/edit.html": "http://www.blogger.com/edit.pyra",
       "sites/blogger/index.html": "http://www.blogger.com/",
       "sites/blogger/view.html": "http://www.blogger.com/view.pyra",
+      "sites/blogger/post.html": "http://www.blogger.com/post.pyra",
       "sites/microsoft/ie5.html": "http://www.microsoft.com/windows/ie/",
       "sites/napster/about.html": "http://www.napster.com/company.html",
       "sites/napster/download.html": "http://www.napster.com/download.html",
@@ -184,8 +190,13 @@
       "sites/yahoo/social_science.html": "http://www.yahoo.com/social_science.html",
       "sites/yahoo/society.html": "http://www.yahoo.com/society.html",
       "sites/yahoo/whats-cool.html": "http://www.yahoo.com/whats-cool.html",
-      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html"
-    },
+      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html",
+          "sites/aim/about.html": "http://www.aol.com/aim/about.html",
+      "sites/aim/away.html": "http://www.aol.com/aim/away.html",
+      "sites/aim/im.html": "http://www.aol.com/aim/im.html",
+      "sites/aim/index.html": "http://www.aol.com/aim/",
+      "sites/aim/profile.html": "http://museum.local/years/1999/sites/aim/profile.html",
+},
     titleMap: {
       "sites/msngaming/about.html": "About",
       "sites/matrix/story.html": "Story",
@@ -233,6 +244,7 @@
       "sites/blogger/edit.html": "Blogger - Post",
       "sites/blogger/index.html": "Blogger",
       "sites/blogger/view.html": "My Weblog",
+      "sites/blogger/post.html": "Weblog post",
       "sites/microsoft/ie5.html": "Internet Explorer 5",
       "sites/napster/about.html": "About Napster",
       "sites/napster/download.html": "Download Napster",

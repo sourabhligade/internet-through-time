@@ -55,6 +55,22 @@
           el.style.display = hide ? "none" : "";
           state[id] = !hide;
           saveJSON(key, state);
+          var onCount = 0;
+          var k;
+          for (k in state) {
+            if (Object.prototype.hasOwnProperty.call(state, k) && state[k] !== false) onCount++;
+          }
+          if (onCount >= 2) {
+            try {
+              saveJSON(storageKey("myportal"), {
+                multiStep: true,
+                real: true,
+                skin: "yahoo",
+                modules: state,
+                ts: Date.now()
+              });
+            } catch (eP) { /* */ }
+          }
           markTourUsed();
           if (showFlash) {
             showFlash(

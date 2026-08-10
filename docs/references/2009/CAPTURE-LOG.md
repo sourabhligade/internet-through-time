@@ -101,3 +101,7 @@ Pass log: [`wayback-extracts/HARVEST-100-PASS-2026-08-01.txt`](wayback-extracts/
 | Product chips on Starting Points | 2004–2010 |
 | Period CSS feel tokens | all years 1994–2013 |
 
+
+| Status | Product | Note | Method | Date |
+|--------|---------|------|--------|------|
+| H | stackoverflow | residual multipage REAL densify | educational RECON | 2026-08-07 |

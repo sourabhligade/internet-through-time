@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/formspring/index.html": "http://museum.local/years/2010/formspring/",
+      "sites/grooveshark/index.html": "http://museum.local/years/2010/grooveshark/",
+      "sites/path/index.html": "http://museum.local/years/2010/path/",
+      "sites/colorapp/index.html": "http://museum.local/years/2010/colorapp/",
+
       "sites/playable/index.html": "http://museum.local/years/2010/playable/",
       "sites/playable/game.html": "http://museum.local/years/2010/playable/game.html",
       "index.html": "http://museum.local/index.html",
@@ -408,12 +413,19 @@
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/"
+      "sites/zombo/index.html": "http://www.zombo.com/",
     
     
     
     
-    },
+          "sites/imgur/about.html": "http://imgur.com/about.html",
+      "sites/imgur/album.html": "http://imgur.com/album.html",
+      "sites/imgur/index.html": "http://imgur.com/",
+      "sites/cablegate/about.html": "http://museum.local/years/2010/sites/cablegate/about.html",
+      "sites/cablegate/literacy.html": "http://museum.local/years/2010/sites/cablegate/literacy.html",
+      "sites/groupon/about.html": "http://museum.local/years/2010/sites/groupon/about.html",
+      "sites/groupon/deal.html": "http://museum.local/years/2010/sites/groupon/deal.html",
+},
     titleMap: {
       "sites/quora/index.html": "Quora — 2010",
 
@@ -546,11 +558,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2010",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2010",
       "pages/map.html": "2010 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",

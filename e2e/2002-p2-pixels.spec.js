@@ -47,7 +47,7 @@ test.describe('2002 Phase 9 pixels + P2 rooms', () => {
   test('home links to P2 rooms', async ({ page }) => {
     await page.goto('/years/2002/pages/home.html');
     for (const slug of ['netflix', 'steam', 'lastfm', 'isp']) {
-      await expect(page.locator(`a[href*="${slug}"]`)).toBeVisible();
+      await expect(page.locator(`a[href*="${slug}"]`).first()).toBeVisible();
     }
   });
 });

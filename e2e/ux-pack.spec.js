@@ -11,8 +11,8 @@ test.describe("UX pack U1 hub", () => {
     await page.goto("/index.html");
     await expect(page.locator("#begin-first-night")).toBeVisible();
     await expect(page.locator("#begin-first-night")).toHaveClass(/start-primary/);
-    /* Secondary tours are not both solid primary */
-    const primaries = page.locator(".start-primary-row .start-btn.start-primary");
+    /* Secondary year jumps are not solid primary */
+    const primaries = page.locator(".start-path .start-btn.start-primary");
     await expect(primaries).toHaveCount(1);
   });
 
@@ -61,22 +61,17 @@ test.describe("UX pack U2 real coach", () => {
   test("incomplete REAL pulses and does not write", async ({ page }) => {
     await page.goto("/index.html");
     await page.evaluate(() => localStorage.removeItem("itt-ux-off"));
-    await page.goto("/years/2018/sites/gdpr/index.html");
+    await page.goto("/years/2013/sites/vine/record.html");
     await page.waitForTimeout(1500);
-    /* GDPR uses year extras not only data-itt-real-save — try real-save if present */
-    const realBtn = page.locator("[data-itt-real-save]");
-    if ((await realBtn.count()) > 0) {
-      await realBtn.first().click();
+    await page.evaluate(() => localStorage.removeItem("itt13-vine-posts"));
+    const post = page.locator("[data-vine-post]");
+    if ((await post.count()) > 0) {
+      await post.first().click();
       await page.waitForTimeout(200);
+      expect(await page.evaluate(() => localStorage.getItem("itt13-vine-posts"))).toBeFalsy();
       const pulse = await page.locator(".itt-ux-need-attention").count();
-      /* pulse optional if no data-req; still no throw */
       expect(pulse).toBeGreaterThanOrEqual(0);
     }
-    /* Consent dash incomplete path still no key */
-    await page.goto("/years/2018/sites/playable/game.html");
-    await page.waitForTimeout(800);
-    await page.locator("[data-cd-save]").click({ force: true }).catch(() => {});
-    expect(await page.evaluate(() => localStorage.getItem("itt18-game-consentdash"))).toBeFalsy();
   });
 });
 

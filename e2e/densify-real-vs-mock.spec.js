@@ -66,11 +66,11 @@ test.describe('2010 culture densify REAL vs mock gates', () => {
     await clearKeys(page, ['itt10-cablegate-ack']);
     await page.reload();
     await waitFeat(page, 'year2010extras');
-    await page.locator('[data-cablegate-1]').check();
+    await page.locator('[data-cablegate-1]').click();
     await page.locator('[data-cablegate-ack]').click();
     await page.waitForTimeout(300);
     expect(await getKey(page, 'itt10-cablegate-ack')).toBeFalsy();
-    await page.locator('[data-cablegate-2]').check();
+    await page.locator('[data-cablegate-2]').click();
     await page.locator('[data-cablegate-ack]').click();
     await requireKey(page, 'itt10-cablegate-ack');
   });
@@ -80,11 +80,11 @@ test.describe('2010 culture densify REAL vs mock gates', () => {
     await clearKeys(page, ['itt10-digg-v4']);
     await page.reload();
     await waitFeat(page, 'year2010extras');
-    await page.locator('[data-diggv4-algo]').check();
+    await page.locator('[data-diggv4-algo]').click();
     await page.locator('[data-diggv4-ack]').click();
     await page.waitForTimeout(300);
     expect(await getKey(page, 'itt10-digg-v4')).toBeFalsy();
-    await page.locator('[data-diggv4-power]').check();
+    await page.locator('[data-diggv4-power]').click();
     await page.locator('[data-diggv4-ack]').click();
     await requireKey(page, 'itt10-digg-v4');
   });
@@ -121,8 +121,8 @@ test.describe('densify prefix isolation (no cross-year bleed)', () => {
     await clearKeys(page, ['itt10-cablegate-ack', 'itt09-cablegate-ack', 'itt11-cablegate-ack']);
     await page.reload();
     await waitFeat(page, 'year2010extras');
-    await page.locator('[data-cablegate-1]').check();
-    await page.locator('[data-cablegate-2]').check();
+    await page.locator('[data-cablegate-1]').click();
+    await page.locator('[data-cablegate-2]').click();
     await page.locator('[data-cablegate-ack]').click();
     await requireKey(page, 'itt10-cablegate-ack');
     expect(await getKey(page, 'itt09-cablegate-ack')).toBeFalsy();
@@ -194,8 +194,67 @@ test.describe('2005 signature REAL vs mock gates', () => {
   });
 });
 
+test.describe('2016 densify REAL vs mock gates', () => {
+  test('IG Live one check never writes; three checks REAL', async ({ page }) => {
+    await page.goto('/years/2016/sites/instagram/live.html');
+    await clearKeys(page, ['itt16-ig-live']);
+    await page.reload();
+    await waitFeat(page, 'year2016extras');
+    await page.locator('[data-ig-live-date]').check();
+    await page.locator('[data-ig-live-save]').click();
+    await page.waitForTimeout(200);
+    expect(await getKey(page, 'itt16-ig-live')).toBeFalsy();
+    await page.locator('[data-ig-live-gone]').check();
+    await page.locator('[data-ig-live-not-reels]').check();
+    await page.locator('[data-ig-live-save]').click();
+    const raw = await requireKey(page, 'itt16-ig-live');
+    expect(raw).toMatch(/multiStep|"year":"2016"|2016-11-21/);
+  });
+
+  test('Dyn incomplete IoT check never writes', async ({ page }) => {
+    await page.goto('/years/2016/sites/dyn/index.html');
+    await clearKeys(page, ['itt16-dyn']);
+    await page.reload();
+    await waitFeat(page, 'year2016extras');
+    await page.locator('[data-dyn-date]').check();
+    await page.locator('[data-dyn-save]').click();
+    await page.waitForTimeout(200);
+    expect(await getKey(page, 'itt16-dyn')).toBeFalsy();
+    await page.locator('[data-dyn-iot]').check();
+    await page.locator('[data-dyn-save]').click();
+    const raw = await requireKey(page, 'itt16-dyn');
+    expect(raw).toMatch(/noPayload|2016-10-21|multiStep/);
+  });
+
+  test('Google Home missing price never writes', async ({ page }) => {
+    await page.goto('/years/2016/sites/home/index.html');
+    await clearKeys(page, ['itt16-home']);
+    await page.reload();
+    await waitFeat(page, 'year2016extras');
+    await page.locator('[data-ghome-ship]').check();
+    await page.locator('[data-ghome-not-echo]').check();
+    await page.locator('[data-ghome-save]').click();
+    await page.waitForTimeout(200);
+    expect(await getKey(page, 'itt16-home')).toBeFalsy();
+    await page.locator('[data-ghome-price]').check();
+    await page.locator('[data-ghome-save]').click();
+    const raw = await requireKey(page, 'itt16-home');
+    expect(raw).toMatch(/129|2016-11-04|multiStep/);
+  });
+});
+
 test.describe('densify home links are real paths (not mock #)', () => {
 
+
+  test('2016 home densify hrefs resolve', async ({ page }) => {
+    await page.goto('/years/2016/pages/home.html');
+    for (const h of ['instagram/live', 'amp/serp', 'facebook/live', 'dyn', 'pixel', 'home/index', 'spectacles']) {
+      const a = page.locator(`a[href*="${h}"]`).first();
+      await expect(a, h).toBeVisible();
+      const href = await a.getAttribute('href');
+      expect(href, h).not.toMatch(/^#/);
+    }
+  });
 
   test('2010 home culture densify hrefs resolve', async ({ page }) => {
     await page.goto('/years/2010/pages/home.html');

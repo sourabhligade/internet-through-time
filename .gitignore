@@ -55,6 +55,7 @@ test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
+_pages_publish/
 
 # Local CI / server scratch
 /tmp-itt-*

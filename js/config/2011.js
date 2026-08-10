@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/duckduckgo/index.html": "http://museum.local/years/2011/duckduckgo/",
+      "sites/turntable/index.html": "http://museum.local/years/2011/turntable/",
+      "sites/twitch/index.html": "http://museum.local/years/2011/twitch/",
+      "sites/path/index.html": "http://museum.local/years/2011/path/",
+
       "sites/playable/index.html": "http://museum.local/years/2011/playable/",
       "sites/playable/game.html": "http://museum.local/years/2011/playable/game.html",
       "sites/netflix/qwikster.html": "http://www.qwikster.com/",
@@ -417,12 +422,16 @@
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/"
+      "sites/zombo/index.html": "http://www.zombo.com/",
     
     
     
     
-    },
+          "sites/airbnb/about.html": "http://www.airbnb.com/about.html",
+      "sites/airbnb/index.html": "http://www.airbnb.com/",
+      "sites/airbnb/listing.html": "http://www.airbnb.com/listing.html",
+      "sites/airbnb/request.html": "http://www.airbnb.com/request.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -543,11 +552,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2011",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2011",
       "pages/map.html": "2011 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
@@ -628,7 +637,7 @@
       "sites/friendconnect/about.html": "About Friend Connect"
     },
     defaultBookmarks: [
-      { title: "Starting Point 2010", path: "pages/home.html" },
+      { title: "Starting Point 2011", path: "pages/home.html" },
       { title: "Twitter", path: "sites/twitter/index.html" },
       { title: "Facebook", path: "sites/facebook/index.html" },
       { title: "YouTube", path: "sites/youtube/index.html" },

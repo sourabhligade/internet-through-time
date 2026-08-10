@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/etsy/index.html": "http://museum.local/years/2007/etsy/",
+      "sites/googletranslate/index.html": "http://museum.local/years/2007/googletranslate/",
+      "sites/kindle/index.html": "http://museum.local/years/2007/kindle/",
+      "sites/iphoneweb/index.html": "http://museum.local/years/2007/iphoneweb/",
+
       "sites/hulu/index.html": "http://www.hulu.com/",
       "sites/playable/game.html": "http://museum.local/years/2007/playable/game.html",
       "index.html": "http://museum.local/index.html",
@@ -352,8 +357,11 @@
       "sites/programmableweb/about.html": "http://www.programmableweb.com/about",
       "sites/programmableweb/index.html": "http://www.programmableweb.com/",
       "sites/googlevideo/about.html": "http://video.google.com/about.html",
-      "sites/googlevideo/index.html": "http://video.google.com/"
-    },
+      "sites/googlevideo/index.html": "http://video.google.com/",
+          "sites/flashplayer/about.html": "http://www.adobe.com/products/flashplayer/about.html",
+      "sites/flashplayer/index.html": "http://www.adobe.com/products/flashplayer/",
+      "sites/flashplayer/settings.html": "http://www.adobe.com/products/flashplayer/settings.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -487,11 +495,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2007",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2007",
       "pages/map.html": "2007 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",

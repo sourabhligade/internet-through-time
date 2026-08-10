@@ -16,6 +16,7 @@
 | NN2 chrome / Win95 Start | **`[recon-win95-3d]`** — optional evolt/GUIdebook forever |
 | Amazon / Yahoo logos | **`[recon-first-pass]`** — optional WDM crop forever |
 | GeoCities icons | **`[recon]`** kit — optional early dump upgrade |
+| GeoCities homestead publish | **Live 2026-08-08** — empty title blocked · `itt95-homestead` typed blob · `my-homestead.html` restores visitor title (W1 gold) |
 
 ---
 

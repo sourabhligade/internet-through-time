@@ -300,10 +300,12 @@
         /* pin-ish pan shift for feedback */
         pan.x += 1;
         paint();
+        /* Do not pass status: paint() already wrote Local Search + HousingMaps HTML;
+           actionFeedback would wipe the housingmaps link with plain text. */
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback("Maps search · “" + label + "” · this browser only", {
             doc: doc,
-            status: status,
+            status: false,
             kind: "maps-search",
             flash: true
           });

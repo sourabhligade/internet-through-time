@@ -2,62 +2,29 @@
 <html lang="en" data-itt-year="2016">
 <head>
 <meta charset="utf-8">
-<title>Vine</title>
+<title>Vine — 2016</title>
 <link rel="stylesheet" href="../../../../css/period-2016.css">
-<script src="../../../../js/immersion-2016.js" defer></script>
 </head>
-<body class="vine-app">
+<body bgcolor="#ffffff" text="#000000" link="#0000ee" vlink="#551a8b">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="vine-topbar">
-  <span>Vine</span>
-  <span class="vine-topbar-actions">
-    <a href="record.html">Record</a>
-  </span>
+
+<div style="max-width:640px;margin:16px auto;font-family:Arial,sans-serif;font-size:13px">
+<p><a href="../../pages/home.html">← Starting Point</a></p>
+<h1>Vine</h1>
+<p>Still looping in October. The 2016 room is <a href="goodbye.html"><b>goodbye dual-date</b></a>.</p>
+<div class="itt16-real" data-itt-real-panel>
+ <b>REAL loop literacy</b> — incomplete never writes
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req> Vine is still looping in October 2016</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req> Announce Oct 27 ≠ archive class Jan 17 2017</label>
+ <p><button type="button" data-itt-real-save data-storage-key="vine-loop" data-min-req="2" data-requires="[data-req]">Save loop literacy</button></p>
+ <p data-itt-action-status style="min-height:1.2em;color:#060;margin:6px 0 0"></p>
+ <p style="font-size:11px;color:#555;margin:4px 0 0">Writes <code>itt16-vine-loop</code> after both checks.</p>
 </div>
-<nav class="vine-tabs" aria-label="Vine">
-  <a href="index.html" class="is-on">Home</a>
-  <a href="index.html#explore">Explore</a>
-  <a href="record.html">Camera</a>
-  <a href="android.html">Activity</a>
-  <a href="about.html">Profile</a>
-</nav>
-<div class="vine-feed" style="padding:0 0 24px">
-  <p class="vine-tagline">Make a scene · 6 seconds · loops forever</p>
-  <div data-vine-list></div>
-  <p class="vine-empty-cta"><a href="record.html" class="vine-cta">Record a Vine</a></p>
+<p class="itt16-next" data-next-flow hidden>
+ <b>Next:</b> <a href="goodbye.html">Vine is dying · dual-date</a>
+</p>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt16-vine-posts";
-  var el = document.querySelector("[data-vine-list]");
-  function load() {
-    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
-  }
-  function render() {
-    if (!el) return;
-    var list = load();
-    if (!list.length) {
-      el.innerHTML =
-        "<div class='vine-card'>" +
-        "<div class='vine-card-loop vine-loop-anim'>No vines yet</div>" +
-        "<div class='vine-card-meta'>Hold on Camera to capture 6 seconds</div></div>";
-      return;
-    }
-    el.innerHTML = list.slice(0, 20).map(function (v, i) {
-      var cap = String(v.caption || "untitled").replace(/</g, "&lt;");
-      var s = v.secs || 6;
-      return (
-        "<article class='vine-card' data-vine-item>" +
-        "<div class='vine-card-loop vine-loop-anim' style='animation-delay:" + (i * 0.15) + "s'>" +
-        "<span class='vine-play'>▶</span> " + s + "s loop</div>" +
-        "<div class='vine-card-meta'><b>you</b> · " + cap + "</div>" +
-        "<div class='vine-card-actions'>Revine · Comment · Share</div>" +
-        "</article>"
-      );
-    }).join("");
-  }
-  render();
-});
-</script>
+
+<script src="../../../../js/immersion-2016.js" defer></script>
 </body>
 </html>

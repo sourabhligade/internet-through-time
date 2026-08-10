@@ -91,7 +91,9 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2011/` | Spotify US · Timeline · Google+ · iPhone 4S/Siri · Qwikster · **museum-ready** |
 | `/years/2012/` | Instagram Android · FB IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome · **museum-ready** |
 | `/years/2013/` | Vine · IG Video · Snap Stories · iOS 7 · Snowden · **MVP** |
-| `/years/2014/` | WhatsApp deal · Heartbleed · iPhone 6 · 1B sites · Ice Bucket · Win10 TP · **MVP** |
+| `/years/2014/` | WhatsApp deal · Heartbleed · iPhone 6 · 1B sites · Tile Fold · **museum-ready A–F** |
+| `/years/2015/` | Watch ships · Win10 free · Periscope · Music · Photos · Blob Rush · **lean year** |
+| `/years/2016/` | Stories · Pokémon GO · Reactions · WA E2E · Gym Rush · **lean year** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  

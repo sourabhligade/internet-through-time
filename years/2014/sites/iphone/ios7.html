@@ -4,24 +4,50 @@
 <meta charset="utf-8">
 <title>iOS 7 — flat redesign · September 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2014.css">
+<link rel="stylesheet" href="../../../../css/phone-frame.css">
 
 </head>
 <body class="ios7-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div style="max-width:400px;margin:16px auto;padding:12px">
+<div class="itt-phone itt-phone-4" style="margin:16px auto">
+<div class="itt-phone-status"><span>LTE</span><span>9:41 AM</span><span>100%</span></div>
+<div class="itt-phone-screen" style="padding:12px;background:#efeff4">
  <div class="ios7-statusbar">Carrier · 9:41 AM · iOS 7</div>
  <p style="font-size:11px;font-weight:400">
   <a href="index.html">← iPhone</a> · <a href="touchid.html">Touch ID</a> · <a href="../../pages/home.html">Start</a>
  </p>
  <h1 style="font-size:28px;margin:8px 0">iOS 7</h1>
+ <p style="font-size:12px;background:#fff3cd;border:1px solid #c90;padding:8px;font-weight:400">
+  <b>Residual · Sep 2013.</b> Flat redesign already shipped last year.
+  This museum year is <a href="ios8.html"><b>iOS 8</b></a> (free update <b>17 Sep 2014</b>) on
+  <a href="index.html">iPhone 6 / 6 Plus</a>.
+ </p>
  <p style="font-size:14px;font-weight:400;color:#3c3c43">
   Unveiled <b>June 10, 2013</b> · public <b>September 18, 2013</b>.
-  Flat icons · translucency · layering · parallax — end of default leather/linen skeuomorphism.
+  Flat icons · translucency · layering · parallax — linen dies overnight.
  </p>
- <div class="ios7-springboard" aria-hidden="true">
-  <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
-  <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+ <div class="ios7-compare">
+  <button type="button" class="ios7-era skeuo" data-ios7-tile="before" data-ios7-before>
+   <span class="ios7-era-label">iOS 6 residual</span>
+   linen · leather · gloss
+  </button>
+  <button type="button" class="ios7-era flat" data-ios7-tile="after" data-ios7-after>
+   <span class="ios7-era-label">iOS 7 overnight</span>
+   Helvetica thin · flat
+  </button>
  </div>
+ <div class="ios7-springboard">
+  <button type="button" class="tile" data-ios7-tile="phone" title="Phone"></button>
+  <button type="button" class="tile" data-ios7-tile="mail" title="Mail"></button>
+  <button type="button" class="tile" data-ios7-tile="safari" title="Safari"></button>
+  <button type="button" class="tile" data-ios7-tile="music" title="Music"></button>
+  <button type="button" class="tile" data-ios7-tile="messages" title="Messages"></button>
+  <button type="button" class="tile" data-ios7-tile="calendar" title="Calendar"></button>
+  <button type="button" class="tile" data-ios7-tile="photos" title="Photos"></button>
+  <button type="button" class="tile" data-ios7-tile="camera" title="Camera"></button>
+ </div>
+ <p data-ios7-status class="itt14-status" style="font-size:12px;color:#060"></p>
+ <p style="font-size:11px;color:#8e8e93">Tap two flat tiles, then mark one change · incomplete does not write · <code>itt14-ios7</code></p>
  <div class="ios7-card">
   Museum springboard theater — flat tiles only (failed-final RECON). Not inventing Apple app glyphs.
   Dual honesty: many phones still on iOS 6 until upgrade night.
@@ -35,17 +61,9 @@
  </div>
  <p class="itt14-ban"> · not iOS 8 · not iPhone 6</p>
 </div>
-
-<div style="margin:12px 0;padding:10px;border:1px solid #888;background:#f8f8f0;font-family:Arial,sans-serif;max-width:520px">
- <b>Multi-step REAL — iOS 7 flat redesign</b>
-  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> Flat UI / translucency redesign literacy</label>
-  <label style="display:block;margin:4px 0;font-size:12px"><input type="checkbox" data-req> No real iOS download / Apple ID</label>
- <p style="margin-top:8px">
-  <button type="button" data-itt-real-save data-storage-key="ios7" data-min-checks="2" data-req="[data-req]">Save (REAL)</button>
-  <span data-itt-real-status style="font-size:12px;margin-left:8px"></span>
- </p>
- <p style="font-size:11px;color:#666">Both checks required · incomplete writes nothing · <code>itt14-ios7</code></p>
+<div class="itt-phone-home" aria-hidden="true"></div>
 </div>
+
 <script src="../../../../js/immersion-2014.js"></script>
 </body>
 </html>

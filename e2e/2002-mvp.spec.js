@@ -5,7 +5,7 @@ const { enterYear } = require('./helpers');
 test.describe('2002 MVP — always-on · Friendster · KaZaA · TrackBack · Wired', () => {
   test('hub opens 2002', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a[href*="years/2002"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[data-year=\"2002\"], a[href*=\"years/2002/\"]').first()).toBeVisible();
   });
 
   test('shell boots year-2002 XP/IE6', async ({ page }) => {

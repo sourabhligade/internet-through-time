@@ -1,45 +1,41 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require("@playwright/test");
 
-test.describe('2014 densify', () => {
-  test('about dual-cite scale visible', async ({ page }) => {
-    await page.goto('/years/2014/pages/about.html');
-    await expect(page.locator('body')).toContainText('968,882,453');
-    await expect(page.locator('body')).toContainText('2,925,249,355');
-    await expect(page.locator('body')).toContainText(/1 billion|Sep 2014/i);
+test.describe("2014 densify", () => {
+  test("one-thing is WhatsApp", async ({ page }) => {
+    await page.goto("/years/2014/pages/home.html");
+    await expect(page.locator('[data-ott-one-thing="2014"]')).toHaveAttribute("href", /whatsapp/);
   });
 
-  test('home has guided trail links', async ({ page }) => {
-    await page.goto('/years/2014/pages/home.html');
-    const links = page.locator('a[href*="sites/"]');
-    await expect(links.first()).toBeVisible();
-    expect(await links.count()).toBeGreaterThanOrEqual(4);
-    await expect(page.locator('body')).toContainText(/WhatsApp|Heartbleed|iPhone 6|Ice Bucket/i);
-  });
-
-  test('hard bans listed', async ({ page }) => {
-    await page.goto('/years/2014/pages/about.html');
-    await expect(page.locator('body')).toContainText(/Stories|TikTok|Reactions|Meta/i);
-  });
-
-  test('Serial · Twitch densify rooms load', async ({ page }) => {
-    const resS = await page.goto('/years/2014/sites/serial/index.html');
-    expect(resS && resS.ok()).toBeTruthy();
-    await expect(page.locator('body')).toContainText(/Serial/i);
-
-    const resT = await page.goto('/years/2014/sites/twitch/index.html');
-    if (resT && resT.ok()) {
-      await expect(page.locator('body')).toContainText(/Twitch|stream/i);
+  test("P1 rooms load", async ({ page }) => {
+    for (const p of [
+      "/years/2014/sites/twitch/index.html",
+      "/years/2014/sites/oculus/index.html",
+      "/years/2014/sites/alibaba/index.html",
+      "/years/2014/sites/echo/index.html",
+      "/years/2014/sites/material/index.html",
+      "/years/2014/sites/serial/index.html",
+      "/years/2014/sites/cardboard/index.html",
+      "/years/2014/sites/secret/index.html",
+      "/years/2014/sites/yikyak/index.html",
+      "/years/2014/sites/ello/index.html",
+      "/years/2014/sites/musically/index.html",
+    ]) {
+      const res = await page.goto(p);
+      expect(res && res.ok()).toBeTruthy();
+      await expect(page.locator("body")).not.toBeEmpty();
     }
   });
 
-  test('Watch is pre-ship 2015 honesty', async ({ page }) => {
-    await page.goto('/years/2014/sites/apple/watch.html');
-    await expect(page.locator('body')).toContainText(/ships 2015|2015/i);
-  });
-
-  test('Win10 is Technical Preview only', async ({ page }) => {
-    await page.goto('/years/2014/sites/windows10/index.html');
-    await expect(page.locator('body')).toContainText(/Technical Preview|Insider/i);
+  test("home residual pack is after guided", async ({ page }) => {
+    await page.goto("/years/2014/pages/home.html");
+    const first = await page.evaluate(() => {
+      const el = document.querySelector("[data-ott-one-thing], .ott-guided, .itt-year-true-pack");
+      if (!el) return "missing";
+      if (el.hasAttribute("data-ott-one-thing") || el.querySelector("[data-ott-one-thing]")) return "one";
+      if (el.classList.contains("ott-guided")) return "guided";
+      return "pack";
+    });
+    expect(first).not.toBe("pack");
   });
 });

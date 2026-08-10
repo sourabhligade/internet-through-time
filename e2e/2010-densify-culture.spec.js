@@ -43,8 +43,8 @@ test.describe('2010 culture densify', () => {
     await clearKeys(page, ['itt10-cablegate-ack']);
     await page.reload();
     await waitExtras(page);
-    await page.locator('[data-cablegate-1]').check();
-    await page.locator('[data-cablegate-2]').check();
+    await page.locator('[data-cablegate-1]').click();
+    await page.locator('[data-cablegate-2]').click();
     await page.locator('[data-cablegate-ack]').click();
     await requireKey(page, 'itt10-cablegate-ack');
   });
@@ -54,8 +54,8 @@ test.describe('2010 culture densify', () => {
     await clearKeys(page, ['itt10-digg-v4']);
     await page.reload();
     await waitExtras(page);
-    await page.locator('[data-diggv4-algo]').check();
-    await page.locator('[data-diggv4-power]').check();
+    await page.locator('[data-diggv4-algo]').click();
+    await page.locator('[data-diggv4-power]').click();
     await page.locator('[data-diggv4-ack]').click();
     await requireKey(page, 'itt10-digg-v4');
   });

@@ -129,7 +129,9 @@
     riding = false;
     var sc = Math.floor(maxX);
     stars = sc > 400 ? 3 : sc > 250 ? 2 : sc > 100 ? 1 : 0;
-    setStatus("Run over · distance " + sc + " · stars " + stars + "/3");
+    setStatus("Run over · distance " + sc + " · stars " + stars + "/3 · Ride / R to retry");
+    if (YG && YG.flash) YG.flash();
+    if (YG && YG.beep) YG.beep();
     if (YG && sc > 0) {
       var blob = YG.saveBest("ragtrail", sc, {
         year: "2010",
@@ -141,7 +143,8 @@
   }
 
   function tick() {
-    if (riding && ball && ball.alive) {
+    var paused = YG && YG.isPaused && YG.isPaused();
+    if (riding && ball && ball.alive && !paused) {
       ball.frames++;
       ball.vy += 0.28;
       ball.vx *= 0.999;

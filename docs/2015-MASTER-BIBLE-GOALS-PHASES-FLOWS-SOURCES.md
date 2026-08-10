@@ -2,8 +2,9 @@
 
 **Date:** 2026-08-06  
 **Purpose:** **Minute-detail map** to build museum year **2015** from research freeze through hub unlock: overall goals, locked numbers, **phased work**, **user flows A–T**, gates, and sources.  
-**Disk truth now:** Hub **1994–2014** museum playable · **2015 research-only** · **no `years/2015/`** · planned prefix **`itt15`**.  
-**Clone source:** live **`years/2014/`** (not 2013).  
+**Disk truth now:** Hub **1994–2015** museum playable · `years/2015/` **MVP live** · prefix **`itt15`**.  
+**Clone source (historical):** live **`years/2014/`** (not 2013).  
+**Execute:** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) — phases R–13 **[x]** · leftover **L0–L6**.  
 **Legal:** Educational reconstruction only. **localStorage theater only** — no real Watch checkout, Win10 upgrades, Apple Music billing, livestream servers, ACME certs, or payments. **Never invent brand pixels.** Git only if asked.
 
 **Status marks:** **[x]** done · **[ ]** open · **[~]** optional forever  
@@ -156,23 +157,25 @@ Hub → open 2015 (after unlock)
 
 | Phase | Name | Status |
 |------:|------|--------|
-| **R** | Research freeze | **[x]** 2026-08-06 |
-| **0** | Capture prep & asset folders | **[ ]** |
-| **1** | Inventory parent 2014 | **[ ]** |
-| **2** | Scaffold from 2014 · `itt15` | **[ ]** |
-| **3** | Shell labels · dirbar · Win10 product | **[ ]** |
-| **4** | Home / About / map / tour | **[ ]** |
-| **5a–5e** | Watch · Win10/Edge · Live · Music · Photos/blockers | **[ ]** *parallel-ok* |
-| **6** | Chrome residual + scale room densify | **[ ]** |
-| **7** | Continuity scrub (Stories ban · reverse 2014 pre-ship) | **[ ]** |
-| **8** | Immersion + REAL wiring | **[ ]** |
-| **9** | P1 densify | **[ ]** |
-| **10** | Trails · flow map copy | **[ ]** |
-| **11** | e2e packs | **[ ]** |
-| **12** | Pixel harvest | **[~]** |
-| **13** | Hub unlock + docs | **[ ]** |
+| **R** | Research freeze | **[x]** 2026-08-06 + 08-09 |
+| **0** | Capture prep & asset folders | **[~]** leftover L4 |
+| **1** | Inventory parent 2014 | **[x]** |
+| **2** | Scaffold from 2014 · `itt15` | **[x]** |
+| **3** | Shell labels · dirbar · Win10 product | **[x]** |
+| **4** | Home / About / map / tour | **[x]** |
+| **5a–5f** | Watch · Win10/Edge · Live · Music · Photos/blockers · WA Web | **[x]** *parallel-ok* |
+| **6** | Chrome residual + scale room densify | **[x]** |
+| **7** | Continuity scrub (Stories ban · reverse 2014 pre-ship) | **[~]** leftover L1 |
+| **8** | Immersion + REAL wiring | **[x]** |
+| **9** | P1 densify | **[x]** · L3 AM/RN open |
+| **10** | Blob Rush + playables | **[~]** leftover L2 |
+| **11** | Trails · flow map copy | **[x]** |
+| **12** | e2e packs | **[x]** |
+| **13** | Hub unlock + docs | **[x]** |
+| **14** | Pixel harvest | **[~]** leftover L4 |
 
-**Order:** R→0→1→2→3→4 → (5a–5e parallel) → 6→7→8→9→10→11→13.  
+**Order (historical):** R→0→1→2→3→4 → (5a–5f parallel) → 6→7→8→9→10→11→12→13.  
+**MVP ship = done.** Do not re-scaffold. Leftover **L0–L6** in the execute file.  
 **Full minute steps:** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)
 
 ### Scaffold cheat sheet

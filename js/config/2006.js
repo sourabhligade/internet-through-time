@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/meebo/index.html": "http://museum.local/years/2006/meebo/",
+      "sites/huffpost/index.html": "http://museum.local/years/2006/huffpost/",
+      "sites/wikileaks/index.html": "http://museum.local/years/2006/wikileaks/",
+      "sites/youtubeembed/index.html": "http://museum.local/years/2006/youtubeembed/",
+
       "sites/playable/index.html": "http://museum.local/years/2006/playable/",
       "sites/playable/game.html": "http://museum.local/years/2006/playable/game.html",
       "index.html": "http://museum.local/index.html",
@@ -338,8 +343,9 @@
       "sites/programmableweb/about.html": "http://www.programmableweb.com/about",
       "sites/programmableweb/index.html": "http://www.programmableweb.com/",
       "sites/googlevideo/about.html": "http://video.google.com/about.html",
-      "sites/googlevideo/index.html": "http://video.google.com/"
-    },
+      "sites/googlevideo/index.html": "http://video.google.com/",
+          "sites/time-you/literacy.html": "http://www.time.com/time/magazine/article/literacy.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -460,11 +466,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2006",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2006",
       "pages/map.html": "2006 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",

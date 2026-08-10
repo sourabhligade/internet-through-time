@@ -47,6 +47,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/aim/index.html": "http://museum.local/years/1997/aim/",
+      "sites/winamp/index.html": "http://museum.local/years/1997/winamp/",
+      "sites/javaplugin/index.html": "http://museum.local/years/1997/javaplugin/",
+      "sites/scripting/index.html": "http://museum.local/years/1997/scripting/",
+
       "sites/playable/index.html": "http://museum.local/years/1997/playable/",
       "sites/playable/game.html": "http://museum.local/years/1997/playable/game.html",
       "sites/altavista/about.html": "http://www.altavista.com/about.html",

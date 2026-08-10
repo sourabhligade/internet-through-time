@@ -4,23 +4,33 @@
 <meta charset="utf-8">
 <title>Snapchat Stories — October 2013</title>
 <link rel="stylesheet" href="../../../../css/period-2014.css">
+<link rel="stylesheet" href="../../../../css/phone-frame.css">
 <script src="../../../../js/immersion-2014.js" defer></script>
 </head>
 <body class="snap-shell">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <p style="font-size:11px"><a href="index.html">← Snapchat</a> · <a href="../../pages/home.html">Start</a></p>
-<h1 style="font-size:22px;color:#fff;margin:8px 0">My Story</h1>
-<p style="color:#aaa;font-size:12px">
- <b style="color:#fffc00">October 3, 2013</b> — Snapchat Stories: chain snaps for <b style="color:#fffc00">24 hours</b>, unlimited rewatches until they expire.
- Not Instagram Stories (2016). Classic timer snaps still core.
+<div class="itt-phone itt-phone-4">
+<div class="itt-phone-status"><span>LTE</span><span>9:41 PM</span><span>87%</span></div>
+<div class="itt-phone-screen" style="background:#000;color:#fff;padding:10px">
+<h1 style="font-size:20px;color:#fffc00;margin:4px 0 8px">My Story</h1>
+<p style="color:#aaa;font-size:11px;margin:0 0 8px">
+ <b style="color:#fffc00">October 3, 2013</b> — chain snaps for <b style="color:#fffc00">24 hours</b>.
+ Not Instagram Stories (2016).
 </p>
 <div class="snap-cam">📷 camera · add to Story</div>
 <div class="snap-story-rail" data-snap-story-rail>My Story · empty · add a snap</div>
+<p style="font-size:11px;margin:10px 0">
+ <label><input type="checkbox" data-snap-not-ig> Not Instagram Stories (that’s 2016)</label>
+</p>
 <p>
  <button type="button" class="snap-cta" data-snap-story-add>Add snap to My Story</button>
 </p>
 <div class="itt14-status" data-snap-story-status></div>
-<p class="itt14-ban" style="color:#555">24h Story · not Instagram Stories (that’s 2016)</p>
+<p class="itt14-ban" style="color:#555;font-size:10px">24h Story · unlimited rewatches until expiry</p>
+</div>
+<div class="itt-phone-home" aria-hidden="true"></div>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var KEY = "itt14-snap-story";
@@ -36,18 +46,31 @@ document.addEventListener("DOMContentLoaded", function () {
       rail.textContent = "My Story · empty · add a snap";
       return;
     }
-    rail.innerHTML = "My Story · " + list.length + " snap(s) · 24h theater · latest " +
-      new Date(list[0].ts).toLocaleTimeString();
+    var now = Date.now();
+    var bits = list.slice(0, 8).map(function (s) {
+      var exp = s.expires || (s.ts + 86400000);
+      var left = exp - now;
+      if (left <= 0) return "<div data-snap-expired>expired · 24h residual (museum clock)</div>";
+      var h = Math.max(0, Math.floor(left / 3600000));
+      return "<div>snap · ~" + h + "h left · 24h residual</div>";
+    });
+    rail.innerHTML = "My Story · " + list.length + " snap(s) · 24h theater<br>" + bits.join("");
   }
   render();
   var btn = document.querySelector("[data-snap-story-add]");
   if (btn) {
     btn.addEventListener("click", function () {
+      var ack = document.querySelector("[data-snap-not-ig]");
+      if (!ack || !ack.checked) {
+        if (st) st.textContent = "Check: not Instagram Stories (2016) first.";
+        return;
+      }
       var list = load();
-      list.unshift({ kind: "snap", hours: 24, ts: Date.now() });
+      var ts = Date.now();
+      list.unshift({ kind: "snap", hours: 24, ts: ts, expires: ts + 86400000, multiStep: true });
       try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 24))); } catch (e) {}
       render();
-      var msg = "Added to My Story · 24h";
+      var msg = "Added to My Story · 24h residual";
       if (st) st.textContent = msg;
       try {
         if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en" data-itt-year="2011"><head><meta charset="utf-8">
 <title>Netflix — DVDs + streaming (2011 residual · Qwikster year)</title>
 <link rel="stylesheet" href="../../../../css/period-2011.css">
 </head>
@@ -8,7 +8,7 @@
 <table width="640" align="center" cellpadding="16" bgcolor="#111"><tr><td>
 <img src="../../../../assets/period/2010/netflix/logo-continuity.gif" alt="Netflix" height="36"><br><br>
 <font face="Arial" size="2">
-<p style="font-size:12px"><a href="about.html">About</a> · <a href="queue.html">Queue</a> · <a href="streaming.html">Streaming</a> · <a href="../../pages/home.html">Start</a></p>
+<p style="font-size:12px"><a href="about.html">About</a> · <a href="queue.html">Queue</a> · <a href="streaming.html">Streaming</a> · <a href="qwikster.html"><b>Qwikster split</b></a> · <a href="../../pages/home.html">Start</a></p>
 <h1 style="font-size:18px;color:#e50914">DVDs by mail · Watch Instantly densifies</h1>
 <p>In <b>2011</b> Netflix is still a <b>red-envelope + streaming</b> company — and streaming becomes
 “included” for many disc subscribers (unlimited streaming class, Jan densify).
@@ -36,6 +36,7 @@ Not yet a streaming-only identity.</p>
 </td></tr></table>
 <script>
 (function () {
+  try { sessionStorage.setItem("itt11-netflix-visited", "1"); } catch (eN) { /* */ }
   var KEY = "itt11-netflix-stream";
   var btn = document.getElementById("stream-seed");
   var el = document.getElementById("stream-status");

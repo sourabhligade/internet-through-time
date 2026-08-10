@@ -3,7 +3,7 @@
  * 2013 flows A–T — real localStorage (itt13)
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, waitKey } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -16,7 +16,7 @@ async function clearKeys(page, keys) {
 }
 
 async function expectStorageTruthy(page, key) {
-  const raw = await page.evaluate((k) => localStorage.getItem(k), key);
+  const raw = await waitKey(page, key, { timeout: 10000 });
   expect(raw, `missing ${key}`).toBeTruthy();
   return raw || '';
 }
@@ -48,7 +48,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText('672,985,183');
     await clearKeys(page, ['itt13-thesis-ack']);
     await page.reload();
-    await page.waitForTimeout(400);
+    await expect(page.locator('[data-thesis-req]').first()).toBeVisible({ timeout: 10000 });
     await page.locator('[data-thesis-req]').evaluateAll((els) =>
       els.forEach((e) => {
         e.checked = true;
@@ -64,7 +64,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await clearKeys(page, ['itt13-vine-posts']);
     await page.reload();
     await page.locator('[data-vine-hold]').dispatchEvent('mousedown');
-    await page.waitForTimeout(350);
+    await page.waitForTimeout(350); // product timer: Vine hold-to-record
     await page.locator('[data-vine-hold]').dispatchEvent('mouseup');
     await page.locator('[data-vine-post]').click();
     const raw = await expectStorageTruthy(page, 'itt13-vine-posts');
@@ -75,6 +75,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/instagram/video.html');
     await clearKeys(page, ['itt13-ig-video']);
     await page.reload();
+    await page.locator('[data-igv-filter="Cinema"]').click();
     await page.locator('[data-igv-share]').click();
     const raw = await expectStorageTruthy(page, 'itt13-ig-video');
     expect(raw).toMatch(/15|filter|Normal|Cinema/i);
@@ -84,6 +85,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/snapchat/story.html');
     await clearKeys(page, ['itt13-snap-story']);
     await page.reload();
+    await page.locator('[data-snap-not-ig]').check();
     await page.locator('[data-snap-story-add]').click();
     const raw = await expectStorageTruthy(page, 'itt13-snap-story');
     expect(raw).toMatch(/24|snap/i);
@@ -93,14 +95,13 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/iphone/ios7.html');
     await clearKeys(page, ['itt13-ios7']);
     await page.reload();
-    await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="ios7"]').click();
+    await expect(page.locator('[data-ios7-tile]').first()).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('[data-ios7-before]')).toBeVisible();
+    await expect(page.locator('[data-ios7-after]')).toBeVisible();
+    await page.locator('[data-ios7-tile]').nth(0).click();
+    await page.locator('[data-ios7-tile]').nth(1).click();
+    expect(await page.evaluate(() => localStorage.getItem('itt13-ios7'))).toBeFalsy();
+    await page.locator('[data-ios7-change]').first().check();
     await expectStorageTruthy(page, 'itt13-ios7');
   });
 
@@ -108,35 +109,20 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/iphone/touchid.html');
     await clearKeys(page, ['itt13-touchid', 'itt13-iphone5s', 'itt13-iphone5c']);
     await page.reload();
-    await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="touchid"]').click();
+    await expect(page.locator('[data-touchid-enroll]')).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-touchid-enroll]').click();
+    await page.locator('[data-touchid-unlock]').click();
     await expectStorageTruthy(page, 'itt13-touchid');
     await page.goto('/years/2013/sites/iphone/index.html');
-    await page.waitForTimeout(400);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="iphone5s"]').click();
+    await expect(page.locator('[data-5s-color]').first()).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-5s-color]').first().click();
+    await page.locator('[data-iphone5s-claim]').click();
     await expectStorageTruthy(page, 'itt13-iphone5s');
 
     await page.goto('/years/2013/sites/iphone/5c.html');
-    await page.waitForTimeout(400);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="iphone5c"]').click();
+    await expect(page.locator('[data-5c-color]').first()).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-5c-color]').first().click();
+    await page.locator('[data-5c-claim]').click();
     await expectStorageTruthy(page, 'itt13-iphone5c');
   });
 
@@ -144,14 +130,13 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/windows81/index.html');
     await clearKeys(page, ['itt13-win81', 'itt13-win81-tour']);
     await page.reload();
-    await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="win81"]').click();
+    await expect(page.locator('[data-win81-tile]').first()).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('[data-win81-lost]')).toBeVisible();
+    await expect(page.locator('[data-win81-start]')).toBeDisabled();
+    await page.locator('[data-win81-tile]').nth(0).click();
+    await page.locator('[data-win81-tile]').nth(1).click();
+    await expect(page.locator('[data-win81-start]')).toBeVisible();
+    await page.locator('[data-win81-start]').click();
     await expectStorageTruthy(page, 'itt13-win81');
   });
 
@@ -161,10 +146,17 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/2013/);
     await clearKeys(page, ['itt13-chrome']);
     await page.reload();
-    await page.waitForTimeout(600);
-    await page.locator('[data-chrome-download]').click();
+    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
+    await expect(page.locator('[data-chrome13-save]')).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-chrome13-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt13-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome13-habit]').check();
+    await page.locator('[data-chrome13-not-edge]').check();
+    await page.locator('[data-chrome13-dl]').check();
+    await page.locator('[data-chrome13-save]').click();
     const raw = await expectStorageTruthy(page, 'itt13-chrome');
-    expect(raw).toMatch(/download|true|platform/i);
+    expect(raw).toMatch(/habit|downloaded|real/i);
   });
 
   test('J Snowden ack', async ({ page }) => {
@@ -180,12 +172,12 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/ps4/index.html');
     await clearKeys(page, ['itt13-ps4', 'itt13-xbox']);
     await page.reload();
-    await page.waitForTimeout(500);
+    await expect(page.locator('[data-ps4-share]')).toBeVisible({ timeout: 10000 });
     await page.locator('[data-ps4-share]').check();
     await page.locator('[data-ps4-ack]').click();
     await expectStorageTruthy(page, 'itt13-ps4');
     await page.goto('/years/2013/sites/xboxone/index.html');
-    await page.waitForTimeout(400);
+    await expect(page.locator('[data-xbox-drm]')).toBeVisible({ timeout: 10000 });
     await page.locator('[data-xbox-drm]').check();
     await page.locator('[data-xbox-kinect]').check();
     await page.locator('[data-xbox-ack]').click();
@@ -196,14 +188,9 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.goto('/years/2013/sites/facebook/home.html');
     await clearKeys(page, ['itt13-fb-home']);
     await page.reload();
-    await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="fb-home"]').click();
+    await expect(page.locator('[data-fb-home-install]')).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-fb-home-install]').click();
+    await page.locator('[data-fb-home-flop]').click();
     await expectStorageTruthy(page, 'itt13-fb-home');
   });
 
@@ -212,7 +199,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/Bitcoin|Silk Road/i);
     await clearKeys(page, ['itt13-btc-note', 'itt13-btc-room']);
     await page.reload();
-    await page.waitForTimeout(500);
+    await expect(page.locator('[data-btc-news]')).toBeVisible({ timeout: 10000 });
     await page.locator('[data-btc-news]').check();
     await page.locator('[data-btc-nomarket]').check();
     await page.locator('[data-btc-room-ack]').click();
@@ -226,10 +213,10 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/no real enrollment|educational|PII/i);
     await clearKeys(page, ['itt13-healthcare-ack']);
     await page.reload();
+    await page.locator('[data-hc-email]').fill('you@example.com');
     await page.locator('[data-hc-try="1"]').click().catch(() => {});
-    await page.waitForTimeout(700);
     await page.locator('[data-hc-try="2"]').click().catch(() => {});
-    await page.waitForTimeout(800);
+    await expect(page.locator('[data-healthcare-ack]')).toBeVisible({ timeout: 10000 });
     await page.locator('[data-healthcare-ack]').click();
     const raw = await expectStorageTruthy(page, 'itt13-healthcare-ack');
     expect(raw).toMatch(/healthcare|newsOnly|2013/i);
@@ -240,14 +227,10 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/iPad Air|October 22|A7|iOS 7/i);
     await clearKeys(page, ['itt13-ipadair']);
     await page.reload();
-    await page.waitForTimeout(500);
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="ipadair"]').click();
+    await expect(page.locator('[data-air-cfg="cellular"]')).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-air-cfg="cellular"]').click();
+    await page.locator('[data-air-mini]').click();
+    await page.locator('[data-ipadair-claim]').click();
     const raw = await expectStorageTruthy(page, 'itt13-ipadair');
     expect(raw).toMatch(/multiStep|ipadair|checks/i);
   });
@@ -257,9 +240,10 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/2013/);
     await clearKeys(page, ['itt13-spotify-invite', 'itt13-spotify', 'itt13-spotify-us']);
     await page.reload();
-    await page.waitForTimeout(500);
     const invite = page.locator('[data-spotify-invite]').first();
     await expect(invite).toBeVisible();
+    await page.locator('[data-spotify-ack]').check();
+    await page.locator('[data-spotify-no-stream]').check();
     await invite.click();
     const keys = await page.evaluate(() => {
       const o = {};
@@ -277,7 +261,6 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/2013/);
     await clearKeys(page, ['itt13-netflix-stream', 'itt13-netflix-queue']);
     await page.reload();
-    await page.waitForTimeout(400);
     const streamBtn = page.locator('#stream-seed, [data-netflix-stream]').first();
     if (await streamBtn.count()) {
       await streamBtn.click();
@@ -302,15 +285,9 @@ test.describe('2013 flows A–T (real storage)', () => {
     await expect(page.locator('body')).toContainText(/UberX|2013/i);
     await clearKeys(page, ['itt13-uber']);
     await page.reload();
-    await page.waitForTimeout(500);
+    await expect(page.locator('#uber-x, [data-uber-kind="uberx"]').first()).toBeVisible({ timeout: 10000 });
     await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
-    await page.locator('[data-req]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-itt-real-save][data-storage-key="uber"]').click();
+    await page.locator('[data-uber-confirm]').click();
     const raw = await expectStorageTruthy(page, 'itt13-uber');
     expect(raw).toMatch(/multiStep|uber|checks/i);
   });
@@ -323,7 +300,6 @@ test.describe('2013 flows A–T (real storage)', () => {
 
   test('T Exit → hub resume 2013', async ({ page }) => {
     await enterYear(page, '2013');
-    await page.waitForTimeout(200);
     expect(await page.evaluate(() => localStorage.getItem('itt-last-year'))).toBe('2013');
     await expect(page.locator('#exit-bar a[title="Exit"], #exit-bar a').first()).toHaveAttribute(
       'href',

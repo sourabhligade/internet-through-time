@@ -108,6 +108,9 @@
       hits += 1;
       paint();
       setStatus("Nice hop! combo " + combo);
+      if (hits >= 3 && YG && YG.showHook) {
+        YG.showHook("../spacejam/index.html", "Space Jam portal", "1996 hub energy continues at:");
+      }
       if (hits >= 20) endRun();
       else nextTarget();
     } else {

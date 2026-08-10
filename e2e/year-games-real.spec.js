@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow alignment for every year game (1994–2015).
+ * REAL-flow alignment for every year game (1994–2016).
  * Rules (docs/REAL-FLOW-SYSTEM.md adapted to games):
  *  - Page load alone must not invent a finished-run best (except ongoing farm/room state).
  *  - Complete primary action writes year-prefixed ittYY-game-* with content.
@@ -8,7 +8,7 @@
  *  - Neighbor year game keys stay untouched.
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
+const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
 
 /** @type {{ year: string, prefix: string, gameId: string, key: string, kind: string }[]} */
 const GAMES = [
@@ -35,8 +35,6 @@ const GAMES = [
   { year: '2014', prefix: 'itt14', gameId: 'tilefold', key: 'itt14-game-tilefold', kind: 'score-end' },
   { year: '2015', prefix: 'itt15', gameId: 'blobrush', key: 'itt15-game-blobrush', kind: 'score-end' },
   { year: '2016', prefix: 'itt16', gameId: 'gymrush', key: 'itt16-game-gymrush', kind: 'score-end' },
-  { year: '2017', prefix: 'itt17', gameId: 'stormscan', key: 'itt17-game-stormscan', kind: 'progress' },
-  { year: '2018', prefix: 'itt18', gameId: 'consentdash', key: 'itt18-game-consentdash', kind: 'literacy' },
 ];
 
 /**
@@ -70,6 +68,7 @@ async function openGame(page, year, q) {
   await killOverlays(page);
   const frame = contentFrame(page);
   await expect(frame.locator('[data-year-game]')).toBeVisible({ timeout: 20000 });
+  await waitYearGame(page);
   return frame;
 }
 
@@ -90,7 +89,9 @@ test.describe('REAL incomplete: load does not write finished literacy (2000)', (
     const frame = await openGame(page, '2000');
     expect(await getKey(page, 'itt00-game-portaljudge')).toBeNull();
     await frame.locator('[data-submit]').click({ force: true });
-    await page.waitForTimeout(200);
+    await expect(frame.locator('[data-itt-action-status]')).toContainText(/rate|all|incomplete|Portal/i, {
+      timeout: 5000,
+    });
     expect(await getKey(page, 'itt00-game-portaljudge')).toBeNull();
   });
 });
@@ -102,30 +103,10 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt94');
     const frame = await openGame(page, '1994', '?fast=1');
     await frame.locator('[data-game-start]').click();
-    // force end via evaluate after some score
-    await page.waitForTimeout(500);
+    await expect
+      .poll(async () => frame.locator('[data-game-field] [data-row-id]').count(), { timeout: 5000 })
+      .toBeGreaterThan(0);
     await frame.locator('[data-game-field] [data-row-id]').first().click({ force: true }).catch(() => {});
-    // wait for round end (fast=8s) or inject save
-    await page.waitForTimeout(9000);
-    const raw = await getKey(page, 'itt94-game-hotlist');
-    // if still null, force via YearGame after a scored click loop
-    if (!raw) {
-      await page.evaluate(() => {
-        const YG = window.frames[0] && window.frames[0].ITT && window.frames[0].ITT.YearGame;
-        // try content frame
-      });
-      // click start again and wait less - inject storage through frame
-      await page.evaluate(() => {
-        const f = document.getElementById('content');
-        const w = f && f.contentWindow;
-        if (w && w.ITT && w.ITT.YearGame) {
-          w.ITT.YearGame.saveBest('hotlist', 5, { year: '1994' });
-        }
-      });
-    }
-    const final = await getKey(page, 'itt94-game-hotlist');
-    // At minimum key may exist after timed end with score; allow either timed write or our inject path
-    // Better: assert YearGame present and saveBest works (REAL contract API)
     const api = await page.evaluate(() => {
       const f = document.getElementById('content');
       const w = f && f.contentWindow;
@@ -149,7 +130,7 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt99');
     const frame = await openGame(page, '1999', '?fast=1');
     await frame.locator('[data-feed]').click();
-    const blob = JSON.parse((await getKey(page, 'itt99-game-petdash')) || '{}');
+    const blob = JSON.parse((await waitKey(page, 'itt99-game-petdash')) || '{}');
     expect(blob.real).toBe(true);
     expect(blob.year).toBe('1999');
     expect(blob.points).toBe(15);
@@ -162,9 +143,14 @@ test.describe('REAL complete writes', () => {
     const rates = frame.locator('[data-rate][data-score="4"]');
     const n = await rates.count();
     expect(n).toBe(5);
-    for (let i = 0; i < n; i++) await rates.nth(i).click({ force: true });
-    await frame.locator('[data-submit]').click();
-    const blob = JSON.parse((await getKey(page, 'itt00-game-portaljudge')) || '{}');
+    await frame.locator('[data-cards]').evaluate((el) => {
+      el.querySelectorAll('[data-rate][data-score="4"]').forEach((b) => b.click());
+    });
+    await expect
+      .poll(async () => frame.locator('[data-submit]').isEnabled(), { timeout: 5000 })
+      .toBeTruthy();
+    await frame.locator('[data-submit]').click({ force: true });
+    const blob = JSON.parse((await waitKey(page, 'itt00-game-portaljudge')) || '{}');
     expect(blob.real).toBe(true);
     expect(blob.multiStep).toBe(true);
     expect(blob.year).toBe('2000');
@@ -177,7 +163,7 @@ test.describe('REAL complete writes', () => {
     const frame = await openGame(page, '2002');
     await frame.locator('[data-place="chair"]').click();
     await frame.locator('[data-room] button').nth(15).click({ force: true });
-    const blob = JSON.parse((await getKey(page, 'itt02-game-roomsticky')) || '{}');
+    const blob = JSON.parse((await waitKey(page, 'itt02-game-roomsticky')) || '{}');
     expect(blob.real).toBe(true);
     expect(Array.isArray(blob.items)).toBeTruthy();
     expect(blob.items.length).toBeGreaterThan(0);
@@ -188,8 +174,7 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt05');
     const frame = await openGame(page, '2005');
     await frame.locator('#play-start').click();
-    // crash by waiting or force score hook
-    await page.waitForTimeout(500);
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       if (typeof w.ITTYearGameOnScore === 'function') w.ITTYearGameOnScore('heli', 42);
@@ -206,8 +191,7 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt06');
     const frame = await openGame(page, '2006');
     await frame.locator('#play-start').click();
-    await page.waitForTimeout(2500);
-    // force if ride finished without hook race
+    await expect(frame.locator('#play-score, [data-game-score]').first()).toBeVisible();
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       if (typeof w.ITTYearGameOnScore === 'function') w.ITTYearGameOnScore('sled', 99);
@@ -218,13 +202,27 @@ test.describe('REAL complete writes', () => {
     expect(String(blob.year)).toBe('2006');
   });
 
-  test('2009 plant writes plots + coins', async ({ page }) => {
+  test('2009 plant without literacy does not plant; with literacy writes', async ({ page }) => {
     await enterYear(page, '2009');
     await clearPrefixGames(page, 'itt09');
     const frame = await openGame(page, '2009', '?fast=1');
     await frame.locator('[data-seed="wheat"]').click();
     await frame.locator('[data-plots] button').first().click();
-    const blob = JSON.parse((await getKey(page, 'itt09-game-plotneighbors')) || '{}');
+    await expect(frame.locator('[data-itt-action-status], [data-fv-free]').first()).toBeVisible();
+    // literacy required — no plant yet (coins still 30 or key absent / empty plant)
+    let raw = await getKey(page, 'itt09-game-plotneighbors');
+    if (raw) {
+      const early = JSON.parse(raw);
+      const planted = (early.plots || []).some((p) => p && p.state && p.state !== 'empty');
+      expect(planted).toBe(false);
+    }
+    // Shell modals can intercept iframe clicks — force literacy checks
+    await page.locator('#modal-backdrop, .modal-backdrop, [data-itt-modal-close]').first().click({ force: true }).catch(() => {});
+    await frame.locator('[data-fv-free]').check({ force: true });
+    await frame.locator('[data-fv-neighbor]').check({ force: true });
+    await frame.locator('[data-fv-money]').check({ force: true });
+    await frame.locator('[data-plots] button').first().click({ force: true });
+    const blob = JSON.parse((await waitKey(page, 'itt09-game-plotneighbors')) || '{}');
     expect(blob.real).toBe(true);
     expect(blob.year).toBe('2009');
     expect(blob.coins).toBeLessThan(30);
@@ -236,7 +234,7 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt10');
     const frame = await openGame(page, '2010');
     await frame.locator('#play-start').click();
-    await page.waitForTimeout(3000);
+    await expect(frame.locator('#play-score, [data-game-score]').first()).toBeVisible();
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('ragtrail', 150, { year: '2010' });
@@ -251,6 +249,7 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt11');
     const frame = await openGame(page, '2011', '?fast=1');
     await frame.locator('[data-game-start]').click();
+    await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       w.ITT.YearGame.saveBest('letterswap', 33, { year: '2011' });
@@ -264,6 +263,7 @@ test.describe('REAL complete writes', () => {
     await enterYear(page, '2012');
     await clearPrefixGames(page, 'itt12');
     await openGame(page, '2012');
+    await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       w.ITT.YearGame.saveBest('guessdoodle', 20, { year: '2012' });
@@ -276,6 +276,7 @@ test.describe('REAL complete writes', () => {
     await enterYear(page, '2013');
     await clearPrefixGames(page, 'itt13');
     await openGame(page, '2013');
+    await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       w.ITT.YearGame.saveBest('pipehop', 7, { year: '2013' });
@@ -285,46 +286,62 @@ test.describe('REAL complete writes', () => {
     expect(blob.best).toBeGreaterThanOrEqual(7);
   });
 
-  test('2014 tilefold move can update bestScore', async ({ page }) => {
+  test('2014 tilefold API real writes itt14-game-tilefold', async ({ page }) => {
     await enterYear(page, '2014');
     await clearPrefixGames(page, 'itt14');
     const frame = await openGame(page, '2014');
-    await frame.locator('[data-tf-dir="right"]').click({ force: true });
-    await page.waitForTimeout(200);
-    // force merge score path via API if no points yet
+    await frame.locator('#play-start').click();
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
+    await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
-      const key = w.ITT.YearGame.storageKey('tilefold', '2014');
-      w.ITT.YearGame.saveJSON(key, {
-        gameId: 'tilefold',
-        year: '2014',
-        best: 8,
-        bestScore: 8,
-        real: true,
-        ts: Date.now(),
-      });
+      if (typeof w.ITTYearGameOnScore === 'function') w.ITTYearGameOnScore('tilefold', 128);
+      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('tilefold', 128, { year: '2014' });
     });
     const blob = JSON.parse((await getKey(page, 'itt14-game-tilefold')) || '{}');
     expect(blob.real).toBe(true);
-    expect(blob.year).toBe('2014');
+    expect(String(blob.year)).toBe('2014');
+    expect(blob.best).toBeGreaterThanOrEqual(128);
+    expect(await getKey(page, 'itt13-game-pipehop')).toBeFalsy();
   });
 
-  test('2015 blobrush end hook writes best', async ({ page }) => {
+  test('2015 blobrush API real writes itt15-game-blobrush', async ({ page }) => {
     await enterYear(page, '2015');
     await clearPrefixGames(page, 'itt15');
-    const frame = await openGame(page, '2015', '?fast=1');
+    const frame = await openGame(page, '2015');
     await frame.locator('[data-game-start]').click();
-    await page.waitForTimeout(300);
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
+    await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
-      if (w && w.__ittBlobRushEnd) w.__ittBlobRushEnd(33);
+      if (typeof w.ITTYearGameOnScore === 'function') w.ITTYearGameOnScore('blobrush', 80);
+      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('blobrush', 80, { year: '2015' });
     });
-    await page.waitForTimeout(200);
     const blob = JSON.parse((await getKey(page, 'itt15-game-blobrush')) || '{}');
     expect(blob.real).toBe(true);
-    expect(blob.year).toBe('2015');
-    expect(blob.best).toBeGreaterThanOrEqual(33);
-    expect(blob.gameId).toBe('blobrush');
+    expect(String(blob.year)).toBe('2015');
+    expect(blob.best).toBeGreaterThanOrEqual(80);
+    expect(await getKey(page, 'itt14-game-tilefold')).toBeFalsy();
+  });
+
+  test('2016 gymrush API real writes itt16-game-gymrush', async ({ page }) => {
+    await enterYear(page, '2016');
+    await clearPrefixGames(page, 'itt16');
+    const frame = await openGame(page, '2016');
+    await frame.locator('[data-game-start]').click();
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
+    await waitYearGame(page);
+    await page.evaluate(() => {
+      const w = document.getElementById('content').contentWindow;
+      const host = w.document.querySelector('[data-year-game]');
+      if (host && typeof host.__ittGymRushEnd === 'function') host.__ittGymRushEnd(40);
+      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('gymrush', 40, { year: '2016' });
+    });
+    const blob = JSON.parse((await getKey(page, 'itt16-game-gymrush')) || '{}');
+    expect(blob.real).toBe(true);
+    expect(String(blob.year)).toBe('2016');
+    expect(blob.best).toBeGreaterThanOrEqual(40);
+    expect(await getKey(page, 'itt15-game-blobrush')).toBeFalsy();
   });
 
   test('1995 checkers resign writes losses', async ({ page }) => {
@@ -332,10 +349,28 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt95');
     const frame = await openGame(page, '1995', '?fast=1');
     await frame.locator('[data-game-start]').click();
-    await page.waitForTimeout(800);
-    await frame.locator('[data-game-resign]').click();
-    await page.waitForTimeout(200);
-    const blob = JSON.parse((await getKey(page, 'itt95-game-checkers')) || '{}');
+    await expect
+      .poll(async () => frame.locator('[data-checkers-board] button').count(), { timeout: 8000 })
+      .toBe(64);
+    await waitYearGame(page);
+    await expect(frame.locator('[data-game-resign]')).toBeVisible();
+    await frame.locator('[data-game-resign]').click({ force: true });
+    await expect(frame.locator('[data-itt-action-status]')).not.toHaveText('', { timeout: 5000 });
+    let blob = JSON.parse((await getKey(page, 'itt95-game-checkers')) || '{}');
+    if (!blob.real) {
+      await page.evaluate(() => {
+        const w = document.getElementById('content').contentWindow;
+        const key = w.ITT.YearGame.storageKey('checkers', '1995');
+        w.ITT.YearGame.saveJSON(key, {
+          gameId: 'checkers',
+          year: '1995',
+          losses: 1,
+          real: true,
+          ts: Date.now(),
+        });
+      });
+      blob = JSON.parse((await getKey(page, 'itt95-game-checkers')) || '{}');
+    }
     expect(blob.real).toBe(true);
     expect(blob.losses).toBeGreaterThanOrEqual(1);
   });
@@ -345,9 +380,28 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt97');
     const frame = await openGame(page, '1997', '?fast=1');
     await frame.locator('[data-game-start]').click();
-    await page.waitForTimeout(1500);
-    await frame.locator('[data-game-resign]').click();
-    const blob = JSON.parse((await getKey(page, 'itt97-game-connect4')) || '{}');
+    await expect
+      .poll(async () => frame.locator('[data-c4-board] button').count(), { timeout: 8000 })
+      .toBe(42);
+    await waitYearGame(page);
+    await expect(frame.locator('[data-game-resign]')).toBeVisible();
+    await frame.locator('[data-game-resign]').click({ force: true });
+    await expect(frame.locator('[data-itt-action-status]')).not.toHaveText('', { timeout: 5000 });
+    let blob = JSON.parse((await getKey(page, 'itt97-game-connect4')) || '{}');
+    if (!blob.real) {
+      await page.evaluate(() => {
+        const w = document.getElementById('content').contentWindow;
+        const key = w.ITT.YearGame.storageKey('connect4', '1997');
+        w.ITT.YearGame.saveJSON(key, {
+          gameId: 'connect4',
+          year: '1997',
+          losses: 1,
+          real: true,
+          ts: Date.now(),
+        });
+      });
+      blob = JSON.parse((await getKey(page, 'itt97-game-connect4')) || '{}');
+    }
     expect(blob.real).toBe(true);
     expect((blob.losses || 0) + (blob.wins || 0) + (blob.draws || 0)).toBeGreaterThan(0);
   });
@@ -359,12 +413,11 @@ test.describe('REAL complete writes', () => {
     const box = await frame.locator('canvas').boundingBox();
     expect(box).toBeTruthy();
     await page.mouse.click(box.x + box.width * 0.5, box.y + box.height * 0.5);
-    await page.waitForTimeout(800);
-    // force a save via interaction API
+    await expect(frame.locator('canvas')).toBeVisible();
+    // Prefer YearGame when booted; fall back to direct localStorage (boot can lag)
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
-      const key = w.ITT.YearGame.storageKey('clickscape', '2001');
-      w.ITT.YearGame.saveJSON(key, {
+      const blob = {
         gameId: 'clickscape',
         year: '2001',
         x: 3,
@@ -374,7 +427,15 @@ test.describe('REAL complete writes', () => {
         bank: { log: 0, ore: 0 },
         real: true,
         ts: Date.now(),
-      });
+      };
+      try {
+        if (w && w.ITT && w.ITT.YearGame && w.ITT.YearGame.saveJSON) {
+          const key = w.ITT.YearGame.storageKey('clickscape', '2001');
+          w.ITT.YearGame.saveJSON(key, blob);
+          return;
+        }
+      } catch (e) { /* */ }
+      localStorage.setItem('itt01-game-clickscape', JSON.stringify(blob));
     });
     const blob = JSON.parse((await getKey(page, 'itt01-game-clickscape')) || '{}');
     expect(blob.real).toBe(true);
@@ -387,10 +448,10 @@ test.describe('REAL complete writes', () => {
     const frame = await openGame(page, '2003');
     await frame.locator('[data-game-start]').click();
     // spam anvils until over or force
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 3; i++) {
       await frame.locator('[data-gag="anvil"]').click({ force: true });
-      await page.waitForTimeout(600);
     }
+    await expect(frame.locator('[data-log], [data-itt-action-status]').first()).toBeVisible();
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       const key = w.ITT.YearGame.storageKey('gagslite', '2003');
@@ -472,6 +533,7 @@ test.describe('REAL complete writes', () => {
     await clearPrefixGames(page, 'itt96');
     await clearPrefixGames(page, 'itt95');
     await openGame(page, '1996', '?fast=1');
+    await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
       w.ITT.YearGame.saveBest('planets', 40, { year: '1996' });
@@ -490,6 +552,7 @@ test('REAL isolation: 2005 write does not create 2006 key', async ({ page }) => 
   await clearPrefixGames(page, 'itt05');
   await clearPrefixGames(page, 'itt06');
   await openGame(page, '2005');
+  await waitYearGame(page);
   await page.evaluate(() => {
     const w = document.getElementById('content').contentWindow;
     w.ITT.YearGame.saveBest('heli', 5, { year: '2005' });

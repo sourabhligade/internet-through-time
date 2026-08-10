@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/utorrent/index.html": "http://museum.local/years/2005/utorrent/",
+      "sites/googleearth/index.html": "http://museum.local/years/2005/googleearth/",
+      "sites/kayak/index.html": "http://museum.local/years/2005/kayak/",
+      "sites/secondlife/index.html": "http://museum.local/years/2005/secondlife/",
+
       "sites/playable/index.html": "http://museum.local/years/2005/playable/",
       "sites/playable/game.html": "http://museum.local/years/2005/playable/game.html",
       "index.html": "http://museum.local/index.html",
@@ -323,8 +328,13 @@
       "sites/programmableweb/about.html": "http://www.programmableweb.com/about",
       "sites/programmableweb/index.html": "http://www.programmableweb.com/",
       "sites/googlevideo/about.html": "http://video.google.com/about.html",
-      "sites/googlevideo/index.html": "http://video.google.com/"
-    },
+      "sites/googlevideo/index.html": "http://video.google.com/",
+          "sites/pandora/about.html": "http://www.pandora.com/about.html",
+      "sites/pandora/index.html": "http://www.pandora.com/",
+      "sites/pandora/station.html": "http://www.pandora.com/station.html",
+      "sites/pandora/genome.html": "http://museum.local/years/2005/sites/pandora/genome.html",
+      "sites/pandora/player.html": "http://museum.local/years/2005/sites/pandora/player.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -445,11 +455,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2005",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2005",
       "pages/map.html": "2005 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",

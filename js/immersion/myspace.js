@@ -109,6 +109,32 @@
     if (h) h.textContent = p.headline;
     if (a) a.textContent = p.about;
     if (m) m.textContent = p.mood;
+    var hot = doc.querySelector("[data-pb-hotlinks]");
+    if (hot) {
+      var links = p.hotlinks || [];
+      if (!links.length) {
+        hot.innerHTML = "<font size='1' color='#666'>No Photobucket hotlink applied yet.</font>";
+      } else {
+        hot.innerHTML = links
+          .map(function (h) {
+            var src = "http://i.photobucket.residual/img/" + (h.file || "pic.jpg");
+            return (
+              "<div style='margin:6px 0;padding:6px;background:#fff;border:1px dashed #99c;font-size:11px'>" +
+              "<b>Hotlink residual</b> · " +
+              esc(h.title || h.file) +
+              "<br><img data-pb-img alt=\"" +
+              esc(h.title || h.file) +
+              "\" src=\"" +
+              esc(src) +
+              "\" width=\"80\" height=\"60\" style=\"background:#ccc;border:1px solid #333;vertical-align:middle\"> " +
+              "<code>" +
+              esc(h.code || "") +
+              "</code></div>"
+            );
+          })
+          .join("");
+      }
+    }
     var list = doc.querySelector("[data-myspace-comments]");
     if (list) {
       var comments = loadComments();
@@ -219,6 +245,46 @@
           });
         }
         iform.reset();
+        render(doc);
+      });
+    }
+    var applyPb = doc.querySelector("[data-pb-apply]");
+    if (applyPb) {
+      applyPb.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var albumKey =
+          ITT.util && ITT.util.immersionStorageKey
+            ? ITT.util.immersionStorageKey("photobucket-album", "itt03")
+            : "itt03-photobucket-album";
+        var album = null;
+        try {
+          album = JSON.parse(localStorage.getItem(albumKey) || "null");
+        } catch (eA) {
+          album = null;
+        }
+        var st = doc.querySelector("[data-pb-apply-status]");
+        if (!album || !album.items || !album.items.length) {
+          if (st) st.textContent = "Upload on Photobucket first.";
+          return;
+        }
+        var item = album.items[0];
+        var prof = loadProfile() || {
+          display: "You",
+          headline: "New MySpace user",
+          about: "Edit your profile — HTML vibes welcome.",
+          mood: ":-)"
+        };
+        prof.hotlinks = [item].concat(prof.hotlinks || []).slice(0, 8);
+        saveProfile(prof);
+        if (st) st.textContent = "Hotlink applied · " + (item.title || item.file);
+        try {
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback("Photobucket hotlink on profile (theater).", {
+              status: st,
+              kind: "pb-hotlink"
+            });
+          }
+        } catch (eFb) { /* */ }
         render(doc);
       });
     }

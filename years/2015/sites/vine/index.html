@@ -2,62 +2,29 @@
 <html lang="en" data-itt-year="2015">
 <head>
 <meta charset="utf-8">
-<title>Vine</title>
+<title>Vine residual — 2015</title>
 <link rel="stylesheet" href="../../../../css/period-2015.css">
 <script src="../../../../js/immersion-2015.js" defer></script>
 </head>
-<body class="vine-app">
+<body bgcolor="#00bf8f" text="#000">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="vine-topbar">
-  <span>Vine</span>
-  <span class="vine-topbar-actions">
-    <a href="record.html">Record</a>
-  </span>
-</div>
-<nav class="vine-tabs" aria-label="Vine">
-  <a href="index.html" class="is-on">Home</a>
-  <a href="index.html#explore">Explore</a>
-  <a href="record.html">Camera</a>
-  <a href="android.html">Activity</a>
-  <a href="about.html">Profile</a>
-</nav>
-<div class="vine-feed" style="padding:0 0 24px">
-  <p class="vine-tagline">Make a scene · 6 seconds · loops forever</p>
-  <div data-vine-list></div>
-  <p class="vine-empty-cta"><a href="record.html" class="vine-cta">Record a Vine</a></p>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt15-vine-posts";
-  var el = document.querySelector("[data-vine-list]");
-  function load() {
-    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
-  }
-  function render() {
-    if (!el) return;
-    var list = load();
-    if (!list.length) {
-      el.innerHTML =
-        "<div class='vine-card'>" +
-        "<div class='vine-card-loop vine-loop-anim'>No vines yet</div>" +
-        "<div class='vine-card-meta'>Hold on Camera to capture 6 seconds</div></div>";
-      return;
-    }
-    el.innerHTML = list.slice(0, 20).map(function (v, i) {
-      var cap = String(v.caption || "untitled").replace(/</g, "&lt;");
-      var s = v.secs || 6;
-      return (
-        "<article class='vine-card' data-vine-item>" +
-        "<div class='vine-card-loop vine-loop-anim' style='animation-delay:" + (i * 0.15) + "s'>" +
-        "<span class='vine-play'>▶</span> " + s + "s loop</div>" +
-        "<div class='vine-card-meta'><b>you</b> · " + cap + "</div>" +
-        "<div class='vine-card-actions'>Revine · Comment · Share</div>" +
-        "</article>"
-      );
-    }).join("");
-  }
-  render();
-});
-</script>
+<table width="520" align="center" cellpadding="12"><tr><td style="font-family:Arial,sans-serif;background:#fff">
+ <p><a href="../../pages/home.html">← Starting Point</a></p>
+ <div style="padding:8px;border:1px solid #080;background:#e8ffe8;font-size:12px">
+  <b>Residual.</b> Six-second loops still exist. 2015 live-video story is
+  <a href="../periscope/index.html">Periscope</a>, not a new Vine.
+ </div>
+ <h1>Vine</h1>
+ <p>Twitter-owned · 6 seconds · still around in 2015 while Periscope is the new LIVE verb.</p>
+ <p><a href="../periscope/index.html">Go LIVE on Periscope</a> · <a href="../meerkat/index.html">Meerkat war</a></p>
+ <div data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-size:12px">
+  <b>REAL residual literacy</b> — incomplete never writes
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-req> Vine 6-second loops still exist in 2015</label>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-req> 2015 live-video verb is Periscope — not a new Vine</label>
+  <p><button type="button" data-itt-real-save data-storage-key="vine-residual" data-min-req="2" data-requires="[data-req]">Save Vine residual</button></p>
+  <p data-itt-action-status style="min-height:1.2em;color:#060;margin:6px 0 0"></p>
+  <p style="font-size:11px;color:#555;margin:4px 0 0">Writes <code>itt15-vine-residual</code>.</p>
+ </div>
+</td></tr></table>
 </body>
 </html>

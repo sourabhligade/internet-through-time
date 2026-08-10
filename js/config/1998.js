@@ -45,6 +45,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/goto/index.html": "http://museum.local/years/1998/goto/",
+      "sites/mp3com/index.html": "http://museum.local/years/1998/mp3com/",
+      "sites/realplayer/index.html": "http://museum.local/years/1998/realplayer/",
+      "sites/winamp/index.html": "http://museum.local/years/1998/winamp/",
+
       "sites/playable/index.html": "http://museum.local/years/1998/playable/",
       "sites/playable/game.html": "http://museum.local/years/1998/playable/game.html",
       "sites/hotmail/compose.html": "http://www.hotmail.com/compose",
@@ -165,8 +170,9 @@
       "sites/yahoo/social_science.html": "http://www.yahoo.com/social_science.html",
       "sites/yahoo/society.html": "http://www.yahoo.com/society.html",
       "sites/yahoo/whats-cool.html": "http://www.yahoo.com/whats-cool.html",
-      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html"
-    },
+      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html",
+          "sites/google/lucky.html": "http://museum.local/years/1998/google/lucky.html",
+},
     titleMap: {
       "sites/hotmail/compose.html": "Compose",
       "sites/hotmail/read.html": "Read",

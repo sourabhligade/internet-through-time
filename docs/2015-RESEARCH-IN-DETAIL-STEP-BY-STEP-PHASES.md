@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-06  
 **Purpose:** Write down **all 2015 research** as an ordered **phase-by-phase** playbook: what was researched, what facts locked, sources visited, museum mapping, and which implement phase consumes each result.  
-**Status:** Research freeze **[x]** · scaffold **[ ]** · hub **1994–2014** · prefix planned **`itt15`**.  
+**Status:** Research freeze **[x]** · scaffold **[x]** · hub **1994–2015** · prefix **`itt15`** · MVP live.  
+**Code execute (not this file):** [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) — leftover **L0–L6**.  
 **Legal:** Educational reconstruction only. localStorage theater only. Never invent brand pixels. Git only if asked.
 
 ---

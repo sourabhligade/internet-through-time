@@ -168,6 +168,12 @@ test.describe('Flow E — Chrome', () => {
     ]);
     await expect(page.locator('body')).toContainText(/Windows|Sep|multi-process|omnibox/i);
     await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt08-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|itt08|Windows/i, {
       timeout: 8000,
     });

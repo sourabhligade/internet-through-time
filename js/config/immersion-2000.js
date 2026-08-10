@@ -20,13 +20,15 @@
       excite: true,
       yahoo: true,
       napster: true,
-      blogger: true
+      blogger: true,
+      mapquest: true
     },
     navSubtitle: "IE 5.5 · Win98 SE · 56k · crash year",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "Amazon", href: "sites/amazon/index.html", match: "/amazon/" },
       { label: "Napster", href: "sites/napster/index.html", match: "/napster/" },
+      { label: "MapQuest", href: "sites/mapquest/index.html", match: "/mapquest/" },
       { label: "Pets.com", href: "sites/pets/index.html", match: "/pets/" },
       { label: "Google", href: "sites/google/index.html", match: "/google/" },
       { label: "Yahoo!", href: "sites/yahoo/index.html", match: "/yahoo/" },

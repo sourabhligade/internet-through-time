@@ -14,7 +14,7 @@
 <div class="hc-body">
  <p style="font-size:11px">
   <a href="../../pages/home.html">← Starting Point</a> ·
-  <a href="../../pages/about.html">About 2013</a> ·
+  <a href="../../pages/about.html">About 2014</a> ·
   <a href="../snowden/index.html">Snowden / PRISM</a>
  </p>
  <p style="font-size:11px;letter-spacing:0.05em;color:#5b616b">CULTURE / PUBLIC POLICY WEB · ENROLLMENT FAILURE THEATER</p>
@@ -74,6 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var try2 = document.querySelector('[data-hc-try="2"]');
   var ack = document.querySelector("[data-healthcare-ack]");
   if (try1) try1.addEventListener("click", function () {
+    var email = ((document.querySelector("[data-hc-email]") || {}).value || "").trim();
+    if (!email || email.indexOf("@") < 1) {
+      if (st) st.textContent = "Enter an email first (theater · no PII sent).";
+      return;
+    }
     var err = document.querySelector('[data-hc-err="1"]');
     if (err) err.style.display = "block";
     setTimeout(function () { showStep(2); }, 600);

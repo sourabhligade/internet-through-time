@@ -63,10 +63,12 @@
     doc = doc || document;
     if (!doc.querySelector("[data-ig-share], [data-ig-filter]")) return;
     var selected = "Normal";
+    var filterPicked = false;
     var filterBtns = doc.querySelectorAll("[data-ig-filter]");
     var i;
     for (i = 0; i < filterBtns.length; i++) {
       filterBtns[i].addEventListener("click", function (ev) {
+        filterPicked = true;
         selected = ev.currentTarget.getAttribute("data-ig-filter") || "Normal";
         var st = doc.querySelector("[data-ig-status]");
         if (st) {
@@ -78,6 +80,22 @@
     var share = doc.querySelector("[data-ig-share]");
     if (share) {
       share.addEventListener("click", function () {
+        var st0 = doc.querySelector("[data-ig-status]");
+        if (!filterPicked) {
+          if (st0) {
+            st0.setAttribute("data-locked", "1");
+            st0.textContent = "Pick a filter first (iOS camera ritual).";
+          }
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback("Pick a filter first.", {
+              doc: doc,
+              status: st0,
+              kind: "ig-share",
+              flash: false
+            });
+          }
+          return;
+        }
         var capEl = doc.querySelector("[data-ig-caption]");
         var caption = capEl ? capEl.value : "";
         var list = load();

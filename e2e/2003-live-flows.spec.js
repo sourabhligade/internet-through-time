@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, clickAllDirbar, killOverlays } = require('./helpers');
 const fs = require('fs');
 const path = require('path');
 
@@ -122,15 +122,9 @@ test.describe('2003 live flows — real links & buttons', () => {
 
   test('dirbar signature targets', async ({ page }) => {
     await enterYear(page, '2003');
-    const targets = await page.$$eval('#dirbar .dir-btn[data-go]', (bs) => bs.map((b) => b.getAttribute('data-go')));
-    expect(targets.length).toBeGreaterThan(5);
-    for (const go of targets.slice(0, 8)) {
-      await page.locator(`#dirbar .dir-btn[data-go="${go}"]`).click({ force: true });
-      await page.waitForTimeout(400);
-      const src = await page.locator('#content').getAttribute('src');
-      const leaf = (go || '').split('/').pop() || '';
-      expect(src, go).toMatch(new RegExp(leaf.replace('.', '\\.') + '|' + (go || '').split('/')[1] || 'home', 'i'));
-    }
+    await killOverlays(page);
+    const fails = await clickAllDirbar(page, { min: 6 });
+    expect(fails, fails.join('\n')).toEqual([]);
   });
 
   test('Start menu Settings/Run live', async ({ page }) => {

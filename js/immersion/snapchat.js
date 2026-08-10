@@ -24,6 +24,12 @@
 
     send.addEventListener("click", function (ev) {
       ev.preventDefault();
+      var gate =
+        doc.querySelector("[data-snap-not-stories]") || doc.querySelector("[data-snap-not-ig]");
+      if (gate && !gate.checked) {
+        if (status) status.textContent = "Confirm this is not Stories / not IG Stories first.";
+        return;
+      }
       var secs = timer ? parseInt(timer.value, 10) || 5 : 5;
       secs = Math.max(1, Math.min(10, secs));
       var n = 0;

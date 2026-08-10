@@ -1,52 +1,102 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require("@playwright/test");
 
-test.describe('2015 densify', () => {
-  test('about dual-cite scale visible', async ({ page }) => {
-    await page.goto('/years/2015/pages/about.html');
-    await expect(page.locator('body')).toContainText('863,105,652');
-    await expect(page.locator('body')).toContainText(/−11%|-11%/);
-    await expect(page.locator('body')).toContainText('3,185,996,155');
+test.describe("2015 densify", () => {
+  test("one-thing is Watch", async ({ page }) => {
+    await page.goto("/years/2015/pages/home.html");
+    await expect(page.locator('[data-ott-one-thing="2015"]')).toHaveAttribute("href", /watch/);
   });
 
-  test('home has guided trail links (≥3 product rooms)', async ({ page }) => {
-    await page.goto('/years/2015/pages/home.html');
-    const links = page.locator('a[href*="sites/"]');
-    await expect(links.first()).toBeVisible();
-    expect(await links.count()).toBeGreaterThanOrEqual(6);
-    await expect(page.locator('body')).toContainText(/Watch|Windows 10|Periscope|Apple Music/i);
+  test("P0 rooms load", async ({ page }) => {
+    for (const p of [
+      "/years/2015/sites/edge/index.html",
+      "/years/2015/sites/periscope/index.html",
+      "/years/2015/sites/applemusic/index.html",
+      "/years/2015/sites/googlephotos/index.html",
+      "/years/2015/sites/ios9/blockers.html",
+      "/years/2015/sites/discord/index.html",
+      "/years/2015/sites/whatsapp/web.html",
+      "/years/2015/sites/privacy/ashleymadison.html",
+      "/years/2015/sites/reactnative/index.html",
+      "/years/2015/sites/playable/game.html",
+    ]) {
+      const res = await page.goto(p);
+      expect(res && res.ok(), p).toBeTruthy();
+    }
   });
 
-  test('hard bans listed (no Stories / Reactions / PoGO / Meta as 2015 defaults)', async ({
-    page,
-  }) => {
-    await page.goto('/years/2015/pages/about.html');
-    const text = await page.locator('body').innerText();
-    expect(text).toMatch(/Stories/i);
-    expect(text).toMatch(/Reactions|Meta|Pokémon GO|TikTok/i);
+  test("P1 densify rooms load", async ({ page }) => {
+    for (const p of [
+      "/years/2015/sites/meerkat/index.html",
+      "/years/2015/sites/fblive/index.html",
+      "/years/2015/sites/echo/index.html",
+      "/years/2015/sites/letsencrypt/index.html",
+      "/years/2015/sites/swift/index.html",
+      "/years/2015/sites/snapchat/discover.html",
+      "/years/2015/sites/messenger/index.html",
+      "/years/2015/sites/oculus/cv1.html",
+      "/years/2015/sites/peach/index.html",
+      "/years/2015/sites/iphone/6s.html",
+      "/years/2015/sites/youtube/red.html",
+      "/years/2015/sites/facebook/instant.html",
+      "/years/2015/sites/twitter/moments.html",
+      "/years/2015/sites/fcc/index.html",
+      "/years/2015/sites/amp/index.html",
+    ]) {
+      const res = await page.goto(p);
+      expect(res && res.ok(), p).toBeTruthy();
+      await expect(page.locator("body")).not.toBeEmpty();
+    }
   });
 
-  test('Discord / Discover densify rooms load', async ({ page }) => {
-    const resD = await page.goto('/years/2015/sites/discord/index.html');
-    expect(resD && resD.ok()).toBeTruthy();
-    await expect(page.locator('body')).toContainText(/Discord/i);
-
-    const resS = await page.goto('/years/2015/sites/snapchat/discover.html');
-    expect(resS && resS.ok()).toBeTruthy();
-    await expect(page.locator('body')).toContainText(/Discover/i);
+  test("2014 leftover rooms load with Residual 2014 chip", async ({ page }) => {
+    for (const p of [
+      "/years/2015/sites/heartbleed/index.html",
+      "/years/2015/sites/twitch/index.html",
+      "/years/2015/sites/alibaba/index.html",
+      "/years/2015/sites/material/index.html",
+      "/years/2015/sites/billion/index.html",
+      "/years/2015/sites/iphone/bendgate.html",
+    ]) {
+      const res = await page.goto(p);
+      expect(res && res.ok(), p).toBeTruthy();
+      await expect(page.locator("body")).toContainText(/Residual 2014/i);
+    }
   });
 
-  test('Echo mass + Let\'s Encrypt rooms load', async ({ page }) => {
-    await page.goto('/years/2015/sites/echo/index.html');
-    await expect(page.locator('body')).toContainText(/Echo|Alexa/i);
-    await page.goto('/years/2015/sites/letsencrypt/index.html');
-    await expect(page.locator('body')).toContainText(/Let.?s Encrypt|HTTPS|free cert/i);
+  test("playable lobby is 2015 toys not Vine 2013", async ({ page }) => {
+    await page.goto("/years/2015/sites/playable/index.html");
+    await expect(page.locator("[data-year-playable]")).toBeVisible({ timeout: 15000 });
+    const text = await page.locator("body").innerText();
+    expect(text).toMatch(/Go LIVE|Close the rings|3 months free/i);
+    expect(text).not.toMatch(/Vine 6-second hold/i);
+    await expect(page.locator("a[href*='game.html']").first()).toBeVisible();
   });
 
-  test('IG residual has no Stories tray as 2015 product', async ({ page }) => {
-    await page.goto('/years/2015/sites/instagram/index.html');
-    const text = await page.locator('body').innerText();
-    // May mention Stories as ban/future, but must not claim Aug 2016 launch as shipped
-    expect(text).not.toMatch(/Aug(?:ust)?\s*2,?\s*2016.*shipped|Stories launched here in 2015/i);
+  test("2015 loop.html is residual honesty (no itt13 write)", async ({ page }) => {
+    await page.goto("/years/2015/sites/playable/loop.html");
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem("itt13-game-loopsix");
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await expect(page.locator("body")).toContainText(/Loop Six lives in 2013|2013/i);
+    await expect(page.locator("[data-game-start], #play-start")).toHaveCount(0);
+    expect(await page.evaluate(() => localStorage.getItem("itt13-game-loopsix"))).toBeFalsy();
+  });
+
+  test("home residual pack is after guided", async ({ page }) => {
+    await page.goto("/years/2015/pages/home.html");
+    const first = await page.evaluate(() => {
+      const el = document.querySelector("[data-ott-one-thing], .ott-guided, .itt-year-true-pack");
+      if (!el) return "missing";
+      if (el.hasAttribute("data-ott-one-thing") || el.querySelector("[data-ott-one-thing]")) return "one";
+      if (el.classList.contains("ott-guided")) return "guided";
+      return "pack";
+    });
+    expect(first).not.toBe("pack");
   });
 });

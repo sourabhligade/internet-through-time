@@ -62,6 +62,11 @@ test.describe('2011 real flows', () => {
     await page.reload();
     await expect(page.locator('body')).toContainText(/Qwikster/i);
     await expect(page.locator('body')).toContainText(/reverse|cancelled|October/i);
+    await page.locator('[data-qwikster-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt11-qwikster'))).toBeFalsy();
+    await page.goto('/years/2011/sites/netflix/index.html');
+    await page.goto('/years/2011/sites/netflix/qwikster.html');
     await page.locator('[data-qw-event="hike"]').check();
     await page.locator('[data-qw-event="reverse"]').check();
     await page.locator('[data-qwikster-save]').click();
@@ -77,6 +82,28 @@ test.describe('2011 real flows', () => {
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
     await page.locator('[data-snap-send]').click();
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 5000 });
+  });
+
+  test('Chrome three checks write itt11-chrome', async ({ page }) => {
+    await page.goto('/years/2011/sites/chrome/index.html');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt11-chrome');
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt11-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt11-chrome')), { timeout: 8000 })
+      .toBeTruthy();
   });
 
   test('trail: home → Timeline via shell', async ({ page }) => {

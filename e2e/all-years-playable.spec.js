@@ -109,18 +109,18 @@ const GAMES = {
   ],
   '2014': [
     { type: 'targets' },
+    { type: 'type', phrase: 'I nominate you' },
     { type: 'meter' },
-    { type: 'type', phrase: 'ice bucket challenge' },
   ],
   '2015': [
-    { type: 'meter' },
+    { type: 'hold', holdMs: 2000 },
     { type: 'targets' },
-    { type: 'type', phrase: ':fire:' },
+    { type: 'type', phrase: 'three months free' },
   ],
   '2016': [
-    { type: 'targets' },
     { type: 'hold', holdMs: 2000 },
-    { type: 'type', phrase: 'going live' },
+    { type: 'targets' },
+    { type: 'type', phrase: 'go outside' },
   ],
 };
 
@@ -223,7 +223,7 @@ for (const year of Object.keys(GAMES)) {
 }
 
 test('home pages link three playables for sample years', async ({ page }) => {
-  for (const y of ['1994', '2000', '2005', '2010', '2015', '2016']) {
+  for (const y of ['1994', '2000', '2005', '2010', '2013', '2015', '2016']) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator('a[href*="playable"][href*="g=1"]').first()).toBeVisible({
       timeout: 10000,

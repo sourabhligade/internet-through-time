@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * All-years signature REAL gates (1994–2013).
+ * All-years signature REAL gates (1994–2016).
  * One thesis interaction per year that MUST mutate year-prefixed localStorage
  * (or multi-step DOM state). Page-load-only is a failure.
  *
@@ -101,7 +101,6 @@ test.describe('all-years signature REAL · early web', () => {
     await form.locator('input[type="image"], input[type="submit"], button[type="submit"]').first().click({
       force: true,
     });
-    await page.waitForTimeout(900);
     await expect(frame.locator('body')).toContainText(/Inbox|Compose|Folders|New Mail/i, {
       timeout: 15000,
     });
@@ -134,7 +133,6 @@ test.describe('all-years signature REAL · early web', () => {
     await frame.locator('input[type="submit"], button[type="submit"], input[name="btnG"]').first().click({
       force: true,
     });
-    await page.waitForTimeout(600);
     await expect(frame.locator('body')).toContainText(/museum|result|Google|Search/i, {
       timeout: 15000,
     });
@@ -148,17 +146,13 @@ test.describe('all-years signature REAL · early web', () => {
     // login / title path varies — try publish form if present
     if (await frame.locator('[data-blogger-title]').count()) {
       await frame.locator('[data-blogger-title] [name="blogtitle"]').fill('sig99');
-      await Promise.all([
-        page.waitForTimeout(500),
-        frame.locator('[data-blogger-title] input[type="submit"]').click({ force: true }),
-      ]);
+      await frame.locator('[data-blogger-title] input[type="submit"]').click({ force: true });
     }
     if (await frame.locator('[data-blogger-post]').count()) {
       const title = 'Sig99Post ' + Date.now();
       await frame.locator('[data-blogger-post] [name="title"]').fill(title);
       await frame.locator('[data-blogger-post] [name="body"]').fill('body');
       await frame.locator('[data-blogger-post] input[type="submit"]').click({ force: true });
-      await page.waitForTimeout(500);
       await requireKey(page, 'itt99-blog', new RegExp(title));
     } else {
       // fallback: napster theater
@@ -171,7 +165,6 @@ test.describe('all-years signature REAL · early web', () => {
       if (await f.locator('[data-napster-search], form[data-napster]').count()) {
         await f.locator('input[name="q"], input[type="text"]').first().fill('beatles');
         await f.locator('button, input[type="submit"]').first().click({ force: true });
-        await page.waitForTimeout(400);
       }
       await requireAnyPrefix(page, 'itt99').catch(async () => {
         // napster may be DOM-only in some pages — require interactive element at least
@@ -210,7 +203,6 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     if (await q.count()) {
       await q.fill('Internet');
       await frame.locator('input[type="submit"], button').first().click({ force: true });
-      await page.waitForTimeout(500);
     }
     await expect(frame.locator('body')).toContainText(/Wikipedia|Internet|article|encyclopedia/i);
   });
@@ -237,7 +229,6 @@ test.describe('all-years signature REAL · 2000s boom', () => {
       await form.locator('[name="who"]').fill('Real03');
       await form.locator('[name="text"]').fill('comment ' + Date.now());
       await form.locator('input[type="submit"], button[type="submit"]').first().click();
-      await page.waitForTimeout(400);
       await requireAnyPrefix(page, 'itt03-myspace');
     } else {
       // iTunes buy if MySpace form missing
@@ -265,7 +256,6 @@ test.describe('all-years signature REAL · 2000s boom', () => {
       await form.locator('input[type="password"]').first().fill('secret');
     }
     await form.locator('input[type="submit"], button[type="submit"]').first().click();
-    await page.waitForTimeout(700);
     await requireKey(page, 'itt04-gmail', /you@college|college\.edu/i);
   });
 
@@ -295,7 +285,6 @@ test.describe('all-years signature REAL · late web', () => {
       const text = 'AllYear tweet ' + Date.now();
       await form.locator('textarea, input[name="status"], [name="text"]').first().fill(text);
       await form.locator('button[type="submit"], input[type="submit"]').first().click();
-      await page.waitForTimeout(500);
       await requireAnyPrefix(page, 'itt06', text.slice(0, 10));
     } else {
       // digg as 2006 signature fallback
@@ -319,7 +308,6 @@ test.describe('all-years signature REAL · late web', () => {
       if (await f2.locator('form[data-gmail-login]').count()) {
         await f2.locator('form[data-gmail-login] input[type="text"], form[data-gmail-login] [name="email"]').first().fill('open@example.com');
         await f2.locator('form[data-gmail-login] button, form[data-gmail-login] input[type="submit"]').first().click();
-        await page.waitForTimeout(500);
       }
       await requireAnyPrefix(page, 'itt07');
     } else {
@@ -337,7 +325,6 @@ test.describe('all-years signature REAL · late web', () => {
     const btn = frame.locator('[data-appstore-install], [data-app-install], button:has-text("Install"), input[value*="Install"]').first();
     if (await btn.count()) {
       await btn.click({ force: true });
-      await page.waitForTimeout(400);
       await requireAnyPrefix(page, 'itt08');
     } else {
       await goImmersion(page, '2008', 'sites/chrome/index.html');
@@ -355,7 +342,6 @@ test.describe('all-years signature REAL · late web', () => {
     const like = frame.locator('[data-fb-like], [data-like], button:has-text("Like")').first();
     if (await like.count()) {
       await like.click({ force: true });
-      await page.waitForTimeout(400);
       await requireAnyPrefix(page, 'itt09');
     } else {
       await goImmersion(page, '2009', 'sites/bing/index.html');
@@ -364,7 +350,6 @@ test.describe('all-years signature REAL · late web', () => {
       if (await q.count()) {
         await q.fill('web');
         await f2.locator('input[type="submit"], button').first().click({ force: true });
-        await page.waitForTimeout(400);
       }
       await expect(f2.locator('body')).toContainText(/Bing|search|results|web/i, { timeout: 15000 });
     }
@@ -378,7 +363,6 @@ test.describe('all-years signature REAL · late web', () => {
     if (await frame.locator('[data-ig-like], [data-ig-post], [data-instagram]').count()) {
       const el = frame.locator('[data-ig-like], [data-ig-post] button, [data-ig-post]').first();
       await el.click({ force: true });
-      await page.waitForTimeout(400);
       await requireAnyPrefix(page, 'itt10');
     } else {
       await goImmersion(page, '2010', 'sites/ipad/index.html');
@@ -393,9 +377,10 @@ test.describe('all-years signature REAL · late web', () => {
     await clearPrefix(page, 'itt11');
     await goImmersion(page, '2011', 'sites/googleplus/hangouts.html');
     const frame = contentFrame(page);
-    if (await frame.locator('[data-gplus-hangout-start]').count()) {
-      await frame.locator('[data-gplus-hangout-start]').click();
-      await page.waitForTimeout(400);
+    await expect(frame.locator('body')).toBeVisible({ timeout: 15000 });
+    const hangStart = frame.locator('[data-gplus-hangout-start]');
+    if (await hangStart.count()) {
+      await hangStart.click({ force: true });
       await requireKey(page, 'itt11-gplus-hangout');
       await expect(frame.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
     } else {
@@ -414,7 +399,6 @@ test.describe('all-years signature REAL · late web', () => {
     if (await frame.locator('[data-ig-android], [data-itt-real-save], [data-ig-follow]').count()) {
       const el = frame.locator('[data-ig-android], [data-itt-real-save], [data-ig-follow]').first();
       await el.click({ force: true });
-      await page.waitForTimeout(400);
       await requireAnyPrefix(page, 'itt12');
     } else {
       await goImmersion(page, '2012', 'sites/facebook/ipo.html');
@@ -432,7 +416,6 @@ test.describe('all-years signature REAL · late web', () => {
     if (await frame.locator('[data-wa13-phone]').count()) {
       await frame.locator('[data-wa13-phone]').fill('5551234567');
       await frame.locator('[data-wa13-verify]').click();
-      await page.waitForTimeout(300);
       await frame.locator('[data-wa13-install]').click();
       await requireAnyPrefix(page, 'itt13-wa');
     } else {
@@ -440,7 +423,6 @@ test.describe('all-years signature REAL · late web', () => {
       const f2 = contentFrame(page);
       if (await f2.locator('[data-vine-post], [data-vine-record]').count()) {
         await f2.locator('[data-vine-post], [data-vine-record]').first().click({ force: true });
-        await page.waitForTimeout(400);
         await requireAnyPrefix(page, 'itt13');
       } else {
         await expect(f2.locator('body')).toContainText(/Vine|6.?second|loop/i, { timeout: 15000 });
@@ -448,6 +430,48 @@ test.describe('all-years signature REAL · late web', () => {
     }
   });
 
+  test('2014 WhatsApp install real write', async ({ page }) => {
+    await enterYear(page, '2014');
+    await clearPrefix(page, 'itt14');
+    await goImmersion(page, '2014', 'sites/whatsapp/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-wa-install]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-wa-install]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-wa-install'))).toBeFalsy();
+    await frame.locator('[data-wa-name]').fill('sig 2014');
+    await frame.locator('[data-wa-install]').click();
+    await requireAnyPrefix(page, 'itt14-wa');
+  });
 
+  test('2015 Watch shipped real write', async ({ page }) => {
+    await enterYear(page, '2015');
+    await clearPrefix(page, 'itt15');
+    await goImmersion(page, '2015', 'sites/apple/watch.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-watch-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-watch-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt15-watch'))).toBeFalsy();
+    await frame.locator('[data-watch-shipped]').check({ force: true });
+    await frame.locator('[data-watch-no-store]').check({ force: true });
+    await frame.locator('[data-watch-save]').click();
+    await requireKey(page, 'itt15-watch', /multiStep|2015-04-24|shipped/i);
+  });
 
+  test('2016 Stories add real write', async ({ page }) => {
+    await enterYear(page, '2016');
+    await clearPrefix(page, 'itt16');
+    await goImmersion(page, '2016', 'sites/instagram/stories.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-ig-stories-add]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-ig-stories-add]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-ig-stories'))).toBeFalsy();
+    await frame.locator('[data-ig-stories-24h]').check({ force: true });
+    await frame.locator('[data-ig-stories-not-reels]').check({ force: true });
+    await frame.locator('[data-ig-stories-caption]').fill('sig 2016');
+    await frame.locator('[data-ig-stories-add]').click();
+    await requireKey(page, 'itt16-ig-stories', /multiStep|sig 2016|2016-08-02/i);
+  });
 });

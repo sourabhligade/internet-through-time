@@ -8,11 +8,11 @@
   if (!host) return;
 
   var CROPS = {
-    wheat: { cost: 5, grow: 12000, sell: 9, label: "Wheat", unlock: 0 },
-    corn: { cost: 12, grow: 25000, sell: 22, label: "Corn", unlock: 3 },
-    berry: { cost: 20, grow: 40000, sell: 40, label: "Berry", unlock: 8 },
-    pumpkin: { cost: 35, grow: 55000, sell: 70, label: "Pumpkin", unlock: 15 },
-    goldrose: { cost: 60, grow: 70000, sell: 130, label: "Gold Rose", unlock: 25 }
+    wheat: { cost: 5, grow: 4000, sell: 9, label: "Wheat", unlock: 0 },
+    corn: { cost: 12, grow: 7000, sell: 22, label: "Corn", unlock: 3 },
+    berry: { cost: 20, grow: 10000, sell: 40, label: "Berry", unlock: 8 },
+    pumpkin: { cost: 35, grow: 13000, sell: 70, label: "Pumpkin", unlock: 15 },
+    goldrose: { cost: 60, grow: 16000, sell: 130, label: "Gold Rose", unlock: 25 }
   };
   var FAST = YG && YG.isFast();
 
@@ -47,7 +47,7 @@
   }
   function hydrate(p) {
     var now = Date.now();
-    var wilt = FAST ? 8000 : 60000;
+    var wilt = FAST ? 8000 : 18000;
     p.plots.forEach(function (pl) {
       if (pl.state === "growing" && now >= pl.readyAt) pl.state = "ready";
       if (pl.state === "ready" && now >= pl.readyAt + wilt) pl.state = "wilted";
@@ -106,6 +106,15 @@
     });
   }
 
+  function literacyOk() {
+    var a = host.querySelector("[data-fv-free]");
+    var b = host.querySelector("[data-fv-neighbor]");
+    var c = host.querySelector("[data-fv-money]");
+    /* If literacy panel missing (old markup), allow play */
+    if (!a && !b && !c) return true;
+    return !!(a && a.checked && b && b.checked && c && c.checked);
+  }
+
   function onPlot(i) {
     state = load();
     var pl = state.plots[i];
@@ -128,6 +137,10 @@
       return;
     }
     if (pl.state === "empty") {
+      if (!literacyOk()) {
+        setStatus("Check freemium literacy (3 boxes) before planting — not Zynga · no real money");
+        return;
+      }
       if (!unlocked(seed, state)) {
         setStatus("Crop locked — harvest more first");
         return;
@@ -144,7 +157,11 @@
       var grow = FAST ? Math.max(1500, Math.floor(c.grow / 10)) : c.grow;
       pl.readyAt = now + grow;
       save(state);
-      setStatus("Planted " + c.label);
+      var secs = Math.max(1, Math.round(grow / 1000));
+      setStatus("Planted " + c.label + " · harvest when gold (~" + secs + "s). Neighbor can finish one plot.");
+      if (YG && YG.showHook) {
+        YG.showHook("../farmville/index.html", "FarmVille residual", "Same ritual, product room:");
+      }
     }
   }
 
@@ -157,9 +174,13 @@
   var helpBtn = host.querySelector("[data-neighbor]");
   if (helpBtn) {
     helpBtn.addEventListener("click", function () {
+      if (!literacyOk()) {
+        setStatus("Check freemium literacy before neighbor help");
+        return;
+      }
       state = load();
       var now = Date.now();
-      if (now - (state.lastNeighbor || 0) < (FAST ? 5000 : 120000)) {
+      if (now - (state.lastNeighbor || 0) < (FAST ? 5000 : 25000)) {
         setStatus("Neighbor busy — try later");
         return;
       }
@@ -183,5 +204,14 @@
     paint(state);
   }, 500);
   paint(state);
+  if (!host.querySelector("[data-yg-ritual]")) {
+    var ritual = document.createElement("p");
+    ritual.className = "yg-ritual";
+    ritual.setAttribute("data-yg-ritual", "1");
+    ritual.textContent = "Farm ritual: pick seed → plant empty → wait (gold) → harvest · neighbor skips one wait · wilt if you leave it.";
+    var plots = host.querySelector("[data-plots]");
+    if (plots && plots.parentNode) plots.parentNode.insertBefore(ritual, plots);
+    else host.appendChild(ritual);
+  }
   setStatus("Pick a seed · plant empty plots · harvest when READY");
 })();

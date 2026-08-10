@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Passport stamps + first-night trail (hub + 2017 Face ID REAL)
+ * Passport stamps + first-night trail (hub + 2013 Vine + 2014 WhatsApp)
  */
 const { test, expect } = require('@playwright/test');
 
@@ -11,7 +11,7 @@ async function clearMuseum(page) {
       localStorage.removeItem('itt-passport');
       localStorage.removeItem('itt-first-night');
       Object.keys(localStorage)
-        .filter((k) => k.startsWith('itt17-'))
+        .filter((k) => k.startsWith('itt13-') || k.startsWith('itt14-'))
         .forEach((k) => localStorage.removeItem(k));
     } catch (e) {
       /* */
@@ -26,20 +26,30 @@ test.describe('Museum passport + first night', () => {
     await expect(page.locator('#itt-passport-root')).toBeVisible();
     await expect(page.locator('#itt-passport-root')).toContainText(/Passport stamps/i);
     await expect(page.locator('#begin-first-night, [data-itt-night-start]').first()).toBeVisible();
-    await expect(page.locator('[data-itt-2017-start], #begin-2017-tour').first()).toBeVisible();
-    await expect(page.locator('[data-itt-2018-start], #begin-2018-tour').first()).toBeVisible();
-    await expect(page.locator('#begin-2017')).toBeVisible();
-    await expect(page.locator('#begin-2018')).toBeVisible();
-    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(25);
+    await expect(page.locator('a.year-card.available.y2013[href*="years/2013"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available.y2014[href*="years/2014"]')).toBeVisible();
+    await expect(page.locator('[data-itt-year-tour="2013"]')).toBeVisible();
+    await expect(page.locator('[data-itt-year-tour="2014"]')).toBeVisible();
+    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(23);
   });
 
-  test('2018 guided tour starts at About', async ({ page }) => {
+  test('2013 passport chip starts 2013-start trail', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-2018-start]').click();
-    await expect(page).toHaveURL(/years\/2018/);
+    await page.locator('[data-itt-year-tour="2013"]').click();
+    await expect(page).toHaveURL(/years\/2013/);
     const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2018-start/);
+    expect(night).toMatch(/2013-start/);
+    expect(night).toMatch(/"active":\s*true/);
+  });
+
+  test('2014 passport chip starts 2014-start trail', async ({ page }) => {
+    await clearMuseum(page);
+    await page.goto('/');
+    await page.locator('[data-itt-year-tour="2014"]').click();
+    await expect(page).toHaveURL(/years\/2014/);
+    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
+    expect(night).toMatch(/2014-start/);
     expect(night).toMatch(/"active":\s*true/);
   });
 
@@ -52,16 +62,6 @@ test.describe('Museum passport + first night', () => {
     expect(night).toMatch(/2005-start/);
   });
 
-  test('2017 guided tour starts at About', async ({ page }) => {
-    await clearMuseum(page);
-    await page.goto('/');
-    await page.locator('#begin-2017-tour').click();
-    await expect(page).toHaveURL(/years\/2017/);
-    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2017-start/);
-    expect(night).toMatch(/"active":\s*true/);
-  });
-
   test('first night start writes state and opens 1994 trail URL', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
@@ -71,38 +71,6 @@ test.describe('Museum passport + first night', () => {
     expect(night).toBeTruthy();
     expect(night).toMatch(/"active":\s*true/);
     expect(night).toMatch(/"step":\s*0/);
-  });
-
-  test('Face ID REAL stamps passport for 2017', async ({ page }) => {
-    await clearMuseum(page);
-    await page.goto('/years/2017/sites/iphone/x.html');
-    await page.waitForFunction(
-      () =>
-        document.documentElement.getAttribute('data-itt-feat-year2017extras') === '1' ||
-        document.documentElement.getAttribute('data-itt-immersion-booted') === '2017',
-      null,
-      { timeout: 20000 }
-    );
-    await page.waitForTimeout(400);
-    await page.locator('[data-faceid-notch], [data-faceid-look], [data-faceid-price], [data-faceid-store]').evaluateAll((els) =>
-      els.forEach((e) => {
-        e.checked = true;
-        e.dispatchEvent(new Event('change', { bubbles: true }));
-      })
-    );
-    await page.locator('[data-faceid-save]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt17-faceid')), { timeout: 8000 })
-      .toBeTruthy();
-    await expect
-      .poll(async () => {
-        const raw = await page.evaluate(() => localStorage.getItem('itt-passport'));
-        return raw && /2017/.test(raw) && /faceid|iphone/i.test(raw);
-      }, { timeout: 8000 })
-      .toBeTruthy();
-
-    await page.goto('/');
-    await expect(page.locator('.passport-year.has-stamps')).toContainText('2017');
   });
 
   test('visit continue advances first-night step', async ({ page }) => {

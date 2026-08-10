@@ -27,14 +27,20 @@ test.describe('2012 trail 6 — Open web + culture', () => {
     await page.goto('/years/2012/sites/wikipedia/sopa-blackout.html');
     await clearKeys(page, ['itt12-sopa-ack', 'itt12-reddit-ama', 'itt12-yt-gangnam']);
     await page.reload();
+    await page.locator('[data-sopa-fact="wiki"]').check();
+    await page.locator('[data-sopa-fact="bills"]').check();
     await page.locator('[data-sopa-ack]').click();
     await requireKey(page, 'itt12-sopa-ack');
 
     await page.goto('/years/2012/sites/reddit/ama.html');
+    await page.locator('[data-ama-date]').check();
+    await page.locator('[data-ama-not-app]').check();
     await page.locator('[data-reddit-ama-ack]').click();
     await requireKey(page, 'itt12-reddit-ama');
 
     await page.goto('/years/2012/sites/youtube/about.html');
+    await page.locator('[data-yt-gangnam-date]').check();
+    await page.locator('[data-yt-gangnam-no-cdn]').check();
     await page.locator('[data-yt-gangnam-ack]').click();
     await requireKey(page, 'itt12-yt-gangnam');
   });
@@ -45,10 +51,14 @@ test.describe('2012 trail 1 — App-first photos', () => {
     await page.goto('/years/2012/sites/instagram/android.html');
     await clearKeys(page, ['itt12-ig-android', 'itt12-ig-owned', 'itt12-ig-posts', 'itt12-ig-platform']);
     await page.reload();
+    await page.locator('[data-ig-android-date]').check();
+    await page.locator('[data-ig-android-not-stories]').check();
     await page.locator('[data-ig-android-install]').click();
     await requireKey(page, 'itt12-ig-android');
 
     await page.goto('/years/2012/sites/instagram/acquired.html');
+    await page.locator('[data-ig-acq-date]').check();
+    await page.locator('[data-ig-acq-standalone]').check();
     await page.locator('[data-ig-acquired-ack]').click();
     await requireKey(page, 'itt12-ig-owned');
 
@@ -76,10 +86,14 @@ test.describe('2012 trail 2 — Social goes public', () => {
     await page.goto('/years/2012/sites/facebook/ipo.html');
     await clearKeys(page, ['itt12-fb-ipo-ack', 'itt12-fb-1b-ack']);
     await page.reload();
+    await page.locator('[data-ipo-fact="price38"]').check();
+    await page.locator('[data-ipo-fact="nasdaq"]').check();
     await page.locator('[data-fb-ipo-ack]').click();
     await requireKey(page, 'itt12-fb-ipo-ack');
 
     await page.goto('/years/2012/sites/facebook/about.html');
+    await page.locator('[data-fb-1b-oct]').check();
+    await page.locator('[data-fb-1b-like]').check();
     await page.locator('[data-fb-1b-ack]').click();
     await requireKey(page, 'itt12-fb-1b-ack');
   });
@@ -122,10 +136,14 @@ test.describe('2012 trail 4 — Apple autumn', () => {
     await page.goto('/years/2012/sites/iphone/index.html');
     await clearKeys(page, ['itt12-iphone5', 'itt12-lightning', 'itt12-maps-note']);
     await page.reload();
+    await page.locator('[data-iphone5-lightning]').check();
+    await page.locator('[data-iphone5-not-6]').check();
     await page.locator('[data-iphone5-claim]').click();
     await requireKey(page, 'itt12-iphone5');
 
     await page.goto('/years/2012/sites/iphone/lightning.html');
+    await page.locator('[data-lightning-need="dock"]').check();
+    await page.locator('[data-lightning-need="cable"]').check();
     await page.locator('[data-lightning-ack]').click();
     await requireKey(page, 'itt12-lightning');
 
@@ -154,6 +172,9 @@ test.describe('2012 trail 5 — Desktop reimagined', () => {
       null,
       { timeout: 25000 }
     );
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
     await page.locator('[data-chrome-download]').click();
     await expect
       .poll(async () => {
@@ -166,7 +187,9 @@ test.describe('2012 trail 5 — Desktop reimagined', () => {
     await page.goto('/years/2012/sites/windows8/index.html');
     await clearKeys(page, ['itt12-win8-tour']);
     await page.reload();
-    await page.locator('[data-win8-tile]').first().click();
+    await page.locator('[data-win8-not-jan]').check();
+    await page.locator('[data-win8-tile]').nth(0).click();
+    await page.locator('[data-win8-tile]').nth(1).click();
     await requireKey(page, 'itt12-win8-tour');
   });
 });

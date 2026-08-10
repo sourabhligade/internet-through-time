@@ -35,6 +35,7 @@
       facebook: true,
       flickr: true,
       youtube: true,
+      pandora: true,
       maps: true,
       reddit: true,
       digg: true,
@@ -50,6 +51,7 @@
       { label: "Maps", href: "sites/maps/index.html", match: "/maps/" },
       { label: "Reddit", href: "sites/reddit/index.html", match: "/reddit/" },
       { label: "Digg", href: "sites/digg/index.html", match: "/digg/" },
+      { label: "Pandora", href: "sites/pandora/index.html", match: "/pandora/" },
       { label: "Gmail", href: "sites/gmail/index.html", match: "/gmail/" },
       { label: "Flickr", href: "sites/flickr/index.html", match: "/flickr/" },
       { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" }
@@ -61,6 +63,7 @@
       { label: "Maps", href: "sites/maps/index.html" },
       { label: "HousingMaps", href: "sites/housingmaps/index.html" },
       { label: "del.icio.us", href: "sites/delicious/index.html" },
+      { label: "Pandora", href: "sites/pandora/index.html" },
       { label: "Web 2.0 Conf", href: "sites/web20conference/index.html" },
       { label: "About 2005", href: "pages/about.html" }
     ],

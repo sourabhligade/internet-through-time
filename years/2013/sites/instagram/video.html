@@ -16,14 +16,14 @@
   <b>June 20, 2013</b> — share up to <b>15 seconds</b> of video with filters. Competes with Vine’s 6s loops.
  </div>
  <div class="igv-filters">
-  <button type="button" data-igv-filter="Normal" class="is-on">Normal</button>
+  <button type="button" data-igv-filter="Normal">Normal</button>
   <button type="button" data-igv-filter="Cinema">Cinema</button>
   <button type="button" data-igv-filter="Memo">Memo</button>
   <button type="button" data-igv-filter="Neon">Neon</button>
  </div>
  <div class="igv-stage">
   <div>▶ Video theater</div>
-  <div class="igv-chip"><span data-igv-filter-label>Normal</span> · max <b>15s</b></div>
+  <div class="igv-chip"><span data-igv-filter-label>—</span> · max <b>15s</b></div>
  </div>
  <div class="igv-compose">
   <input type="text" data-igv-caption placeholder="Write a caption…">
@@ -37,11 +37,12 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var KEY = "itt13-ig-video";
-  var filter = "Normal";
+  var filter = "";
   var fl = document.querySelector("[data-igv-filter-label]");
   var st = document.querySelector("[data-igv-status]");
   var nodes = document.querySelectorAll("[data-igv-filter]");
   for (var i = 0; i < nodes.length; i++) {
+    nodes[i].classList.remove("is-on");
     nodes[i].addEventListener("click", function (ev) {
       filter = ev.currentTarget.getAttribute("data-igv-filter") || "Normal";
       if (fl) fl.textContent = filter;
@@ -52,8 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var share = document.querySelector("[data-igv-share]");
   if (share) {
     share.addEventListener("click", function () {
+      if (!filter) {
+        if (st) st.textContent = "Pick a filter first (15s video · not a 6s Vine).";
+        return;
+      }
       var cap = (document.querySelector("[data-igv-caption]") || {}).value || "";
-      var payload = { filter: filter, caption: cap, maxSec: 15, ts: Date.now() };
+      var payload = { filter: filter, caption: cap, maxSec: 15, year: "2013", multiStep: true, ts: Date.now() };
       try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e) {}
       var msg = "Shared video · 15s · " + filter + " · " + KEY;
       if (st) st.textContent = msg;

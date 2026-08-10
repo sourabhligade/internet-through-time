@@ -1,8 +1,8 @@
 # Games per year — implementation bibles
 
 **Date:** 2026-08-06  
-**Purpose:** One detailed build bible **per museum year** (1994–2015): which game, how it works minute-by-minute, goals, phases, files, acceptance.  
-**Companion research:** [`../GAMES-PERIOD-RESEARCH-2026-07-31.md`](../GAMES-PERIOD-RESEARCH-2026-07-31.md) · live wing [`../../games/`](../../games/)  
+**Purpose:** One detailed build bible **per museum year** (1994–2014): which game, how it works minute-by-minute, goals, phases, files, acceptance.  
+**Companion research:** [`../GAMES-PERIOD-RESEARCH-2026-07-31.md`](../GAMES-PERIOD-RESEARCH-2026-07-31.md) · live wing [`../../games/`](../../games/) · **source expansion (research freeze):** [`../GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](../GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md)  
 **Legal (all years):** Museum-**original** HTML/JS only · **no** ripped commercial `.swf` · original names/art · label period **inspiration** on About copy.
 
 ## Index
@@ -29,8 +29,9 @@
 | 2011 | Letter Swap | Social word game | M | [YEAR-2011.md](YEAR-2011.md) |
 | 2012 | Guess Doodle | Draw Something class | M | [YEAR-2012.md](YEAR-2012.md) |
 | 2013 | Pipe Hop | Flappy-class one-tap | S–M | [YEAR-2013.md](YEAR-2013.md) |
-| 2014 | Tile Fold | 2048-class merge | M | [YEAR-2014.md](YEAR-2014.md) |
-| 2015 | Blob Rush | agar.io-class arena | M | [YEAR-2015.md](YEAR-2015.md) |
+| 2014 | Tile Fold | 2048-class merge | S–M | [YEAR-2014.md](YEAR-2014.md) |
+| 2015 | Blob Rush | agar.io-class arena | S–M | [YEAR-2015.md](YEAR-2015.md) |
+| 2016 | Gym Rush | Pokémon GO–class map (no sprites) | M | [YEAR-2016.md](YEAR-2016.md) |
 
 ## Shared integration (every year)
 
@@ -69,7 +70,7 @@ npx playwright test e2e/year-games.spec.js --workers=1
 
 1. **Scaffold all** `game.html` stubs + boot (all years, theater shell).  
 2. **Wire existing:** 2005 HoverChop · 2006 TrailSled · optional Blox→2004.  
-3. **Viral pack:** 2009 · 2013 · 2014 · 1999.  
+3. **Viral pack:** 2009 · 2013 · 1999.  
 4. **Early pack:** 1994 · 1995 · 1997 · 1998.  
 5. **Fill remaining** by effort ascending.
 
@@ -85,7 +86,7 @@ npx playwright test e2e/year-games.spec.js --workers=1
 
 ## Implementation status (2026-08-06)
 
-**All 21 years ship a playable `years/YYYY/sites/playable/game.html`.**
+**All 23 open years (1994–2016) ship a playable `years/YYYY/sites/playable/game.html`.**
 
 | Year | Game | Module | Storage key |
 |------|------|--------|-------------|
@@ -110,6 +111,7 @@ npx playwright test e2e/year-games.spec.js --workers=1
 | 2012 | Guess Doodle | `year-2012-guessdoodle.js` | `itt12-game-guessdoodle` |
 | 2013 | Pipe Hop | `year-2013-pipehop.js` | `itt13-game-pipehop` |
 | 2014 | Tile Fold | `year-2014-tilefold.js` | `itt14-game-tilefold` |
+| 2015 | Blob Rush | `year-2015-blobrush.js` | `itt15-game-blobrush` |
 
 Shared: `js/games/year-game-boot.js` · e2e `e2e/year-games.spec.js` + `e2e/year-games-flows.spec.js`.
 

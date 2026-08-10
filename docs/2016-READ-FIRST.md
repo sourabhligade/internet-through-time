@@ -1,97 +1,123 @@
-# 2016 — READ FIRST (research freeze entry map)
+# 2016 — READ FIRST (research freeze · lean implement)
 
-**Date:** 2026-08-06  
-**Purpose:** **Single entry document** for museum year **2016**. Read before densifying, scaffolding, harvesting pixels, or writing tests.  
-**Disk truth today:** Hub **1994–2016** playable · **`years/2016/` MVP live** · prefix **`itt16`**  
-**Shell (draft):** Win10 free-upgrade **end class** (ends Jul 29) · Chrome habit · Edge residual · Win7 residual early  
-**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) · grade card later as `2016-MUSEUM-GRADE.md`  
-**Legal:** Educational reconstruction only. **localStorage theater only.** **Never invent brand pixels.** No real GPS, Pokémon assets, payments, or exploit PoCs.
+**Date:** 2026-08-10  
+**Purpose:** Single entry for museum year **2016**. Read before scaffolding, harvesting pixels, or writing tests.  
+**Disk truth today:** Hub **1994–2016** playable · **`years/2016/` lean MVP live** · prefix **`itt16`**  
+**Parent:** Live lean **2015** (`years/2015/` ~67 HTML · one-thing Watch ships).  
+**Execute:** [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) (S0–S14)  
+**Research + artifacts:** [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md)  
+**Legal:** Educational reconstruction. **localStorage theater only.** **Never invent brand pixels.** No real GPS, Nintendo/Pokémon sprites, payments, bot servers, or exploits. **Git only if asked.**
 
 ---
 
-## 0. How to use this file
+## 0. How to use
 
 | If you need… | Do this |
 |--------------|---------|
-| Orientation only | §1–6 · stop |
-| **Research detail phases** | **[`2016-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2016-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)** |
-| **Implement step-by-step** | **[`2016-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2016-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)** |
-| Goals / flows | [`2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · master bible |
-| Scale numbers | §2 · [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) |
-| Harvest / kits | [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md) |
-| Continuity from 2015 | §12 · reverse 2015 hard bans carefully |
+| Orientation | §1–6 · stop |
+| Facts + first freeze | [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md) |
+| **Deep harvest (beyond first MD)** | [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md) · facts + 16-D map |
+| **Implement densify (minute steps)** | **[`2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md`](2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md)** ← ★ execute D0–D14 |
+| **Implement (lean year, already done)** | [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) S0–S14 **[x]** · S15 = densify file |
+| Game | [`GAMES-PER-YEAR/YEAR-2016.md`](GAMES-PER-YEAR/YEAR-2016.md) Gym Rush |
+| Engine | [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`REAL-FLOW-SYSTEM.md`](REAL-FLOW-SYSTEM.md) |
+| Parent year | [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · live `years/2015/` |
+| Scale | [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) |
 
-**Scaffold:** not live — research freeze first. Clone **`years/2015/`** when implementing.  
-**Do not** invent TikTok mass West brand as 2016 default · Meta branding · Face ID · AirPods Pro · Instagram Reels.
+**Do not** `git checkout HEAD -- years/2016` (that is a **2015/2014 clone forest**, 400+ HTML).  
+**Do not** `cp -R years/2015 years/2016`. Build a **lean year** (~40–70 HTML) like 2015.  
+**Do not** scaffold **2017+** in the same pass.
+
+**One-thing locked:** **Instagram Stories (Aug 2)** — not Musical.ly, not Pokémon GO (that is the year **game**), not Vine death.
 
 ---
 
-## 1. One-line thesis (locked draft)
+## 1. One-line thesis (locked)
 
-**2016 is when ephemeral Stories, outdoor AR, multi-emoji feed emotion, and trust defaults remake “being online”:** **Instagram Stories** (Aug 2) industrializes Snapchat’s 24h format; **Pokémon GO** (Jul 6) puts AR on sidewalks; **Facebook Reactions** (Feb 24) end pure Like; **iPhone 7** kills the headphone jack and **AirPods** ship Dec 13; **Vine** is announced dead (Oct 27, offline later 2017); **WhatsApp default E2E** (Apr 5); **Messenger mass bots** (F8 Apr 12); **Oculus Rift CV1** ships (Mar 28); **Windows 10 free upgrade ends** (Jul 29) — while **TikTok brand mass**, **Meta**, **Face ID / iPhone X**, and **Stories-as-only-format forever** do not yet define the year.
+**2016 is when the feed learns 24 hours, the sidewalk becomes a game board, and chats encrypt by default:** **Instagram Stories** (Aug 2) industrializes Snapchat’s ephemeral format; **Pokémon GO** (Jul 6) puts AR on the street; **Facebook Reactions** (Feb 24) end the pure Like; **WhatsApp default E2E** (Apr 5) covers a billion chats; **iPhone 7** kills the headphone jack (Sep 7) and **AirPods** finally order (Dec 13, $159); **Vine** is announced dead (Oct 27; app/offline class **Jan 17 2017**); **Windows 10 free upgrade ends** (Jul 29); hostname count **restabilizes above 1B in March** and June Live Stats hits **1,045,534,808 (+21%)** — while **TikTok brand mass, Meta, Face ID / iPhone X, Reels, and GDPR** are not this year’s defaults.
 
 ### Mood (period voice)
 
-> Add to Story · go outside for a Gym · Love / Angry on the post · no headphone jack · AirPods delayed then Dec · Vine is dying · your chats are E2E by default · catch ’em all · free Win10 window closing · still not TikTok.
+> Add to Story · Snap still exists · go outside for a Gym · Love / Angry on the post · chats are E2E now · no headphone jack · AirPods delayed then December · Vine is dying · free Win10 window closed · still not TikTok.
 
 ---
 
-## 2. Scale (dual-cite — do not invent / do not blend)
+## 2. Scale (locked — Live Stats re-opened 2026-08-10)
 
 | Label | Number | Source |
 |-------|-------:|--------|
-| Live Stats **June 2016** websites | **1,045,534,808** (**+21%** vs 2015 June) | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| 1B honesty | First crossed Sep 2014 · dipped · **restabilized above 1B Mar 2016** | Live Stats narrative |
-| 2016 hostnames arc | ~900M Jan → ~1.7B Dec class (Live Stats curious facts) | Live Stats |
-| Active sites class | ~170M class throughout 2016 | Live Stats |
-| Internet users | **~3.4B class** (ITU; Live Stats June users cell often blank — dual-label) | ITU / Live Stats |
-| Storage prefix | **`itt16`** (planned) | — |
+| Live Stats **June 2016** websites | **1,045,534,808** | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
+| YoY vs June 2015 | **+21%** (from **863,105,652**) | same table |
+| 1B honesty | First crossed **Sep 2014** · dipped · **restabilized above 1B Mar 2016** | Live Stats prose |
+| 2016 hostname arc | **~900M Jan → ~1.7B Dec** | Live Stats “During 2016…” |
+| Active sites class | **~170M** stable through 2016 | Live Stats note |
+| Users (websites table June cell) | **blank** | Live Stats websites table |
+| Users (users table) | **3,424,971,237 (46.1%)** · +7.5% vs 2015 **3,185,996,155** | [Live Stats Internet Users](https://www.internetlivestats.com/internet-users/) · *July 1 2016 estimate |
+| Users (ITU late-year class) | **~47% / ~3.5B** | ITU FF 2016 · WaPo 2016-11-22 |
+| US smartphones | **~72% spring · 77% November** | [Pew Mobile Fact Sheet](https://www.pewresearch.org/internet/fact-sheet/mobile/) |
+| Prefix | **`itt16`** | — |
 
-**About rule:** Always label **Live Stats June 1,045,534,808 (+21%)** and **1B restabilized Mar 2016**. Never invent a single unlabeled “sites” number. Users ~3.4B labeled ITU class if Live Stats blank.
+**About rule:** Dual-cite **1,045,534,808 (+21%)** and **1B restabilized Mar 2016**. Users: paste **3,424,971,237 (46.1%)** labeled Live Stats July-1 estimate — **not** the blank June websites-table cell. ITU ~47% is the late-year class. Never blend ~170M active into the hostname total.
 
 ---
 
 ## 3. Locked spine (minute calendar)
 
-| When | What |
-|------|------|
-| **Feb 24 2016** | Facebook **Reactions** global (Like + Love Haha Wow Sad Angry) |
-| **Mar 28 2016** | **Oculus Rift CV1** consumer ship (~$599) |
-| **Apr 5 2016** | **WhatsApp** default **end-to-end encryption** complete rollout announce |
-| **Apr 12 2016** | F8 · **Messenger bots** mass platform |
-| **Jun 13 2016** | Microsoft to acquire **LinkedIn** ~$26.2B |
-| **Jul 6 2016** | **Pokémon GO** launches US / AU / NZ class |
-| **Jul 29 2016** | **Windows 10 free upgrade ends** (general public) |
-| **Aug 2 2016** | **Instagram Stories** launch |
-| **Sep 7 2016** | **iPhone 7 / 7 Plus** · no 3.5mm jack · AirPods announced |
-| **Sep 21 2016** | **Google Allo** launch |
-| **Oct 27 2016** | **Vine** discontinue app announce (offline later Jan 2017) |
-| **Dec 13 2016** | **AirPods** available to order / ship class |
+| When | What | Exhibit |
+|------|------|---------|
+| **Feb 24 2016** | Facebook **Reactions** global (Like + Love Haha Wow Sad Angry). IE/ES tests late 2015 only. | P0 Reactions |
+| **Mar 2016** | slither.io class (.io wave after 2015 agar.io) · **1B hostnames restabilize** | Game literacy / About |
+| **Mar 28 2016** | **Oculus Rift CV1** consumer ship (~$599) | P1 reverse 2015 pre-ship |
+| **Apr 5 2016** | **WhatsApp** default **E2E** complete (Signal Protocol · 1B users class) | P0 WA E2E |
+| **Apr 12 2016** | F8 · **Messenger bots** mass platform | P1 reverse 2015 “business only” |
+| **Jun 13 2016** | Microsoft to acquire **LinkedIn** ~**$26.2B** | P1 deal |
+| **Jul 6 2016** | **Pokémon GO** US / AU / NZ | P0 culture · year **game** Gym Rush |
+| **Jul 29 2016** | **Windows 10 free upgrade ends** (general public) | Desktop honesty |
+| **Aug 2 2016** | **Instagram Stories** launch (iOS + Android, global roll-out weeks) | **One-thing** |
+| **Sep 7 2016** | **iPhone 7 / 7 Plus** · no 3.5 mm jack · Lightning adapter · AirPods announced (then delayed) | P0 hardware |
+| **Sep 21 2016** | **Google Allo** | P1 |
+| **Oct 27 2016** | **Vine** Medium: discontinue mobile app “coming months” · **nothing happens today** | P0 dual-date |
+| **Dec 13 2016** | **AirPods** order on Apple.com · **$159** · stores next week class | P0 AirPods |
+| **Jan 17 2017** | Vine app → Vine Camera / archive class (not a 2016 “already gone” story) | Honesty on Vine room |
 
-### Continuity densify
-Snapchat Stories residual · Apple Music · Google Photos · Periscope residual · Chrome · Edge · Watch residual · Musical.ly (not TikTok brand) · Win10 Anniversary class
+### Continuity (chips, not forest)
+
+2015 Watch residual · Win10 mass (offer over) · Edge residual · Chrome habit · Apple Music · Google Photos · Periscope residual · Snapchat Stories residual · Musical.ly (not TikTok brand) · Discord residual.
 
 ---
 
-## 4. P0 / P1 products
+## 4. One-thing + P0 / P1
+
+### One-thing (gold machine)
+
+**Instagram Stories** — caption / add → 24h honesty → tray grows · key **`itt16-ig-stories`**  
+Incomplete (no add, no 24h check) **never writes**.
+
+**Why Stories, not Musical.ly:** Musical.ly is real 2016 teen culture and **P1 densify** (pre-TikTok brand honesty). It is not the year’s public-web gold. 2015 taught: one-thing = the product that remade daily use (Watch ships), not the densest leftover plaque.  
+**Why Stories, not Pokémon GO:** PoGO is the year’s **street** bomb and the **year game** (Gym Rush silhouette). Same split as 2015 Watch (product) vs Blob Rush (agar.io game).  
+**Why not Vine death:** endings are P0 literacy, not the gold machine.
 
 ### P0
-1. **Instagram Stories** — text → add 24h · Snap still competes  
-2. **Pokémon GO** — location honesty · team · catch · battery (no official sprites)  
-3. **Facebook Reactions** — pick of 6  
-4. **iPhone 7 jack literacy** · **AirPods** Dec ship honesty  
-5. **Vine goodbye** — announce ≠ offline dual date  
-6. **WhatsApp E2E default**  
-7. **About scale** — 1.05B · +21% · 1B restabilized  
+
+1. **Instagram Stories** — one-thing · 24h · Snap still competes  
+2. **Pokémon GO** — location honesty · team · catch theater · battery · **silhouettes only** · `itt16-pogo`  
+3. **Facebook Reactions** — pick of 6 · `itt16-reactions`  
+4. **WhatsApp default E2E** — Apr 5 · 1B class · `itt16-wa-e2e`  
+5. **iPhone 7 jack literacy** + **AirPods Dec 13 $159** · `itt16-iphone7` · `itt16-airpods`  
+6. **Vine goodbye** — Oct 27 announce ≠ Jan 17 2017 offline · `itt16-vine`  
+7. **Win10 free upgrade ended** Jul 29 · `itt16-win10-end`  
+8. **About scale** — 1,045,534,808 (+21%) · 1B restabilized Mar 2016  
 
 ### P1
-- Messenger bots (F8 2016 — reverse 2015 ban carefully)  
-- Oculus Rift CV1 ship (reverse 2015 pre-ship)  
-- Microsoft × LinkedIn  
-- Win10 free upgrade end · Anniversary  
-- Google Allo  
-- Musical.ly (not TikTok)  
-- Chrome / Edge residual  
+
+- Messenger bots (F8 Apr 12)  
+- Oculus Rift CV1 **ships** Mar 28 ~$599  
+- Microsoft × LinkedIn $26.2B  
+- Google Allo (Sep 21)  
+- **Musical.ly** lip-sync + not-TikTok honesty (`itt16-musical`)  
+- Chrome residual 3-check  
+- Snapchat Stories residual (still competes)  
+- Google Home / Pixel densify optional  
 
 ---
 
@@ -100,14 +126,16 @@ Snapchat Stories residual · Apple Music · Google Photos · Periscope residual 
 | Ban | Correct era |
 |-----|-------------|
 | **Meta** branding | 2021 |
-| **TikTok** mass West brand as year default | Later (Musical.ly exists; rebrand later) |
+| **TikTok** mass West brand as year default | Later (Musical.ly exists; ByteDance merge **2018** class) |
 | Instagram / YT **Reels** | Later |
-| **Face ID** / iPhone X | **2017** |
-| AirPods **Pro** / spatial | Later |
-| Vine **fully offline** as Oct 27 only story | Announce Oct 27 2016 · upload end / offline **2017** class |
-| WhatsApp E2E as “always was 2014” | Default complete **2016** |
-| Pokémon GO with **official Nintendo sprites** as free assets | Use silhouettes / generic AR theater |
-| Stories as if Snapchat never competed | Snap residual still strong |
+| **Face ID** / iPhone X | **Sep 2017** |
+| AirPods **Pro** | Later |
+| Vine **already fully offline** on Oct 27 | Announce Oct 27 2016 · app/archive class **Jan 17 2017** |
+| WhatsApp E2E as “always was 2015” | Default complete **Apr 5 2016** |
+| Official **Pokémon / Nintendo sprites** as free assets | Silhouettes / generic AR only |
+| Stories as if **Snapchat died** | Snap residual still strong |
+| GDPR / IGTV / Twitter 280 | **2018 / 2017** |
+| Chromium Edge as 2016 Edge | 2020 |
 
 ---
 
@@ -115,37 +143,46 @@ Snapchat Stories residual · Apple Music · Google Photos · Periscope residual 
 
 | Layer | Museum default |
 |-------|----------------|
-| OS | **Windows 10** mass product · free-upgrade window **ends Jul 29** |
-| OS residual | Win7 early residual declining |
-| Browser | **Chrome habit** · **Edge** residual · IE residual decline |
-| Mobile | iPhone 6s residual early · **7 / no jack** late · Android multiphone |
-| Storage | **`itt16-*`** only |
+| OS | **Windows 10** mass · free-upgrade **window closed Jul 29** |
+| OS residual | Win7 declining |
+| Browser | **Chrome habit** · Edge residual · IE decline |
+| Mobile | 6s residual early · **iPhone 7 / no jack** late · Android multiphone |
+| Storage | **`itt16-*`** only (+ global `itt-last-year`) |
 
 ---
 
 ## 7. Storage keys (planned)
 
-| Pattern | Flow |
-|---------|------|
-| `itt16-thesis-ack` | About |
-| `itt16-ig-stories` | Instagram Stories |
-| `itt16-pogo` | Pokémon GO multi-step |
+| Key | Flow |
+|-----|------|
+| `itt16-thesis-ack` | About REAL |
+| `itt16-ig-stories` | Stories one-thing |
+| `itt16-pogo` | Pokémon GO literacy |
 | `itt16-reactions` | FB Reactions |
+| `itt16-wa-e2e` | WhatsApp E2E default |
 | `itt16-iphone7` · `itt16-airpods` | Jack + buds |
-| `itt16-vine` | Vine dual-date goodbye |
-| `itt16-wa-e2e` | WhatsApp E2E |
-| `itt16-bots` · `itt16-rift` · `itt16-linkedin` | P1 |
+| `itt16-vine` | Dual-date goodbye |
+| `itt16-win10-end` | Free upgrade ended |
+| `itt16-bots` · `itt16-rift` · `itt16-linkedin` · `itt16-allo` · `itt16-musical` | P1 |
+| `itt16-game-gymrush` | Gym Rush |
+| `itt16-playable` · `-2` · `-3` | Toys |
 
 ---
 
-## 8. Reading order
+## 8. REAL multi-step signatures (planned)
 
-1. **This file**  
-2. [`2016-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2016-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)  
-3. [`2016-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2016-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)  
-4. Master bible · clear goals · deep harvest · CAPTURE  
-5. Parent: [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · `years/2015/`  
-6. `js/config/flow-maps.js` → `ITT.flowMaps["2016"]`
+| Room | Min steps | Proof |
+|------|-----------|-------|
+| Stories | 24h check + add | `itt16-ig-stories` |
+| PoGO | Location honesty + team + catch | `itt16-pogo` |
+| Reactions | Pick one of 6 | `itt16-reactions` |
+| WA E2E | What E2E means + default-now | `itt16-wa-e2e` |
+| iPhone 7 | Jack gone + adapter + not Face ID | `itt16-iphone7` |
+| AirPods | $159 + Dec 13 + not Pro | `itt16-airpods` |
+| Vine | Oct 27 ≠ Jan 2017 | `itt16-vine` |
+| Thesis | ≥2 About checks | `itt16-thesis-ack` |
+
+Incomplete **never writes**.
 
 ---
 
@@ -158,8 +195,10 @@ Snapchat Stories residual · Apple Music · Google Photos · Periscope residual 
 | Messenger mass bots banned | **F8 Apr 12** |
 | Oculus CV1 pre-ship | **Ships Mar 28** |
 | Win10 free upgrade open | **Ends Jul 29** |
-| WhatsApp E2E not default story | **Default Apr 5** |
-| Still ban Meta · TikTok brand · Face ID | **Still ban** |
+| WhatsApp E2E not default | **Default Apr 5** |
+| Pokémon GO banned | **Jul 6** (silhouettes) |
+| AMP not in SERP | AMP in Search **2016** (announce was Oct 2015) |
+| Still ban Meta · TikTok brand · Face ID · Reels | **Still ban** |
 
 ---
 
@@ -167,9 +206,13 @@ Snapchat Stories residual · Apple Music · Google Photos · Periscope residual 
 
 | Item | Status |
 |------|--------|
-| Research freeze | **[x]** 2026-08-06 |
-| Scaffold `years/2016/` | **[x]** MVP live |
+| Research freeze | **[x]** 2026-08-10 (this file + artifact bible) |
+| Deep harvest beyond first MD | **[x]** [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md) |
+| Implement bible S0–S14 | **[x]** executed (lean MVP) |
+| Scaffold `years/2016/` | **[x]** lean ~37 HTML |
 | Hub unlock 2016 | **[x]** 1994–2016 |
-| e2e dedicated packs | **[ ]** residual |
+| Pixel harvest | **[~]** failed-final dirs · Layer C |
+| Densify 16-D1–D6 | **[x]** Live · AMP-SERP · FB Live · Dyn · Pixel/Home · Spectacles |
+| Old HEAD forest `years/2016/` | **Do not restore** (clone junk) |
 
-**MVP live.** Densify / e2e via implement step-by-step.
+**Next:** densify D0–D12 **[x]** on disk. Optional D13 pixels / D14 P2 only if asked. One-thing stays **Instagram Stories**.

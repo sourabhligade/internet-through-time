@@ -17,6 +17,10 @@
 **Master bible:** [`2013-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2013-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
 **Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) (claim extended to **2013**)
 
+**Museum-grade lift 2026-08-09:** home P0-first (Slack residual demoted) · IE9/Chrome About (not IE7/2009) · Medium REAL `itt13-medium-draft` · IG Video requires filter · Stories phone + not-IG gate · HealthCare.gov email · Telegram chat theater · FB Home flop steps.
+
+**Next leftover (same class 2014 I1–I2):** [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md) **X1–X3** — Win7 “shell default for 2012” · IE8 2009 copy · Chrome still one-click.
+
 ## Residual forever (optional L4)
 
 - Perfect WA brand stills for Vine/IG/Snap/iOS (retry only if dated source found)  

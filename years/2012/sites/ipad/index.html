@@ -35,6 +35,8 @@
  <div class="card">
   <p class="price">From $329</p>
   <p style="font-size:13px">16GB Wi-Fi · US SRP class · Apple Newsroom autumn 2012</p>
+  <label style="display:block;margin:8px 0;font-size:12px"><input type="checkbox" data-ipad-price> Wi-Fi from <b>$329</b> (16GB) — Nov 2 2012</label>
+  <label style="display:block;margin:8px 0;font-size:12px"><input type="checkbox" data-ipad-not-retina> Non-Retina 7.9″ — not 2013 mini Retina</label>
   <button type="button" data-ipad-claim>I’m interested (theater)</button>
   <div data-ipad-status style="font-size:12px;color:#060;margin-top:8px"></div>
   
@@ -55,7 +57,10 @@
     if(!btn)return;
     try{if(localStorage.getItem(KEY)&&st)st.textContent="Noted · "+KEY;}catch(e){}
     btn.addEventListener("click",function(){
-      try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPad mini",priceFrom:329,ts:Date.now()}));}catch(e2){}
+      var p=document.querySelector("[data-ipad-price]");
+      var r=document.querySelector("[data-ipad-not-retina]");
+      if(!p||!p.checked||!r||!r.checked){if(st)st.textContent="Confirm $329 + not-Retina first.";return;}
+      try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPad mini",priceFrom:329,notRetina:true,real:true,multiStep:true,ts:Date.now()}));}catch(e2){}
       if(st)st.textContent="Noted · iPad mini · $329+ · "+KEY;
     });
   }

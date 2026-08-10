@@ -132,7 +132,16 @@
       ["googleplus", "immersion/googleplus.js"],
       ["snapchat", "immersion/snapchat.js"],
       ["siri", "immersion/siri.js"],
-      ["icq", "immersion/icq.js"]
+      ["icq", "immersion/icq.js"],
+      ["aim", "immersion/aim.js"],
+      ["mapquest", "immersion/mapquest.js"],
+      ["photobucket", "immersion/photobucket.js"],
+      ["pandora", "immersion/pandora.js"],
+      ["github", "immersion/github.js"],
+      ["msn", "immersion/msn.js"],
+      ["slack", "immersion/slack.js"],
+      ["imgur", "immersion/imgur.js"],
+      ["oneThingMachines", "immersion/one-thing-machines.js"]
     ];
     var priority = [];
     var seen = {};
@@ -155,6 +164,7 @@
     for (yi = 0; yi < all.length; yi++) {
       if (/immersion\/year-\d{4}-extras\.js$/.test(all[yi])) add(all[yi]);
     }
+    add("immersion/one-thing-machines.js");
     var h;
     for (h = 0; h < hints.length; h++) {
       var key = hints[h][0];

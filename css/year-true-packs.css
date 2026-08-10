@@ -1,0 +1,39 @@
+/* Year-true product chrome — not worksheet plaques */
+.ytp { font-family: Arial, Helvetica, sans-serif; font-size: 13px; max-width: 42em; }
+.ytp-brand { font-size: 22px; font-weight: 800; margin: 0 0 8px; letter-spacing: 0.02em; }
+.ytp-bar { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; align-items: center; }
+.ytp-bar input[type="text"] { padding: 8px 10px; min-width: 220px; border: 2px inset #ccc; font-size: 14px; }
+.ytp-bar button, .ytp button { padding: 8px 14px; font-weight: bold; cursor: pointer; }
+.ytp-stage { min-height: 4.5em; margin: 10px 0; padding: 10px 12px; border: 1px solid #bbb; background: #fafafa; }
+.ytp-status { min-height: 1.2em; margin: 6px 0 0; font-size: 12px; color: #060; }
+.ytp-home { font-size: 12px; margin: 0 0 10px; }
+.ytp-hit { display: block; padding: 6px 0; border-bottom: 1px dotted #ccc; }
+.ytp-hit b { color: #00c; }
+.ytp-im { background: #d4d0c8; border: 2px solid #808080; padding: 12px; }
+.ytp-im .ytp-brand { font-size: 16px; }
+.ytp-buddies { background: #fff; border: 2px inset #808080; padding: 8px; min-height: 72px; }
+.ytp-player { background: #1b1b1b; color: #ddd; padding: 14px; border: 2px solid #444; }
+.ytp-player .ytp-brand { color: #9f9; }
+.ytp-player .ytp-stage { background: #111; border-color: #333; color: #9f9; font-family: "Courier New", monospace; }
+.ytp-player button { background: #333; color: #fff; border: 1px solid #666; }
+.ytp-board { background: #0079bf; color: #fff; padding: 12px; border-radius: 6px; }
+.ytp-cols { display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0; }
+.ytp-col { flex: 1 1 140px; background: #ebecf0; color: #172b4d; border-radius: 4px; padding: 8px; min-height: 90px; }
+.ytp-col b { display: block; margin-bottom: 6px; font-size: 12px; }
+.ytp-card { background: #fff; border-radius: 3px; padding: 6px 8px; margin: 4px 0; box-shadow: 0 1px 0 rgba(9,30,66,.25); font-size: 12px; }
+.ytp-shop { background: #fff; border: 1px solid #ddd; padding: 12px; }
+.ytp-tiles { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.ytp-tile { border: 1px solid #ccc; padding: 10px; min-width: 100px; cursor: pointer; background: #fff; text-align: left; }
+.ytp-tile.is-on { outline: 2px solid #111; }
+.ytp-feed { background: #e9ebee; padding: 12px; }
+.ytp-post { background: #fff; border: 1px solid #ddd; padding: 8px 10px; margin: 6px 0; }
+.ytp-map { background: #c5d8c5; border: 2px solid #385; padding: 12px; min-height: 140px; position: relative; }
+.ytp-pin { display: inline-block; background: #c00; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+.ytp-game { background: #0b1020; color: #cde; padding: 14px; min-height: 140px; }
+.ytp-sil { width: 36px; height: 48px; display: inline-block; background: #456; border-radius: 18px 18px 8px 8px; margin-right: 6px; }
+.ytp-plugin { background: #ece9d8; border: 2px outset #fff; padding: 12px; }
+.ytp-plugin .ytp-stage { background: #fff; font-family: Tahoma, sans-serif; font-size: 12px; }
+.ytp-call { background: #202124; color: #e8eaed; padding: 14px; border-radius: 8px; }
+.ytp-call button { background: #1a73e8; color: #fff; border: none; border-radius: 20px; }
+.ytp-note { background: #fffde7; border: 1px solid #f9a825; padding: 12px; }
+.ytp-note .ytp-stage { background: #fff9c4; border-color: #fbc02d; }

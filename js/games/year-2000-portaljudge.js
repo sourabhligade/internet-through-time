@@ -70,17 +70,27 @@
       div.innerHTML = html;
       listEl.appendChild(div);
     });
-    listEl.querySelectorAll("[data-rate]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var id = btn.getAttribute("data-rate");
-        var sc = parseInt(btn.getAttribute("data-score"), 10);
+    if (listEl.getAttribute("data-pj-bound") !== "1") {
+      listEl.setAttribute("data-pj-bound", "1");
+      listEl.addEventListener("click", function (e) {
+        var t = e && e.target;
+        while (t && t !== listEl && !(t.getAttribute && t.getAttribute("data-rate"))) {
+          t = t.parentNode;
+        }
+        if (!t || t === listEl) return;
+        var id = t.getAttribute("data-rate");
+        var sc = parseInt(t.getAttribute("data-score"), 10);
+        if (!id || isNaN(sc)) return;
         ratings[id] = sc;
         var sp = listEl.querySelector('[data-chosen="' + id + '"]');
         if (sp) sp.textContent = "→ " + sc;
-        if (submitBtn) submitBtn.disabled = !allRated();
+        if (submitBtn) {
+          submitBtn.disabled = !allRated();
+          if (!submitBtn.disabled) submitBtn.removeAttribute("disabled");
+        }
         setStatus(allRated() ? "All rated — submit ballot" : "Rate all five (not a soft mock)");
       });
-    });
+    }
   }
 
   if (submitBtn) {

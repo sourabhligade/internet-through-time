@@ -26,6 +26,7 @@
       friendster: true,
       kazaa: true,
       myspace: true,
+      photobucket: true,
       itunes: true,
       wordpress: true,
       linkedin: true,
@@ -36,6 +37,7 @@
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" },
+      { label: "Photobucket", href: "sites/photobucket/index.html", match: "/photobucket/" },
       { label: "iTunes", href: "sites/itunes/index.html", match: "/itunes/" },
       { label: "WordPress", href: "sites/wordpress/index.html", match: "/wordpress/" },
       { label: "LinkedIn", href: "sites/linkedin/index.html", match: "/linkedin/" },

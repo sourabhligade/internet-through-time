@@ -16,7 +16,8 @@
       amazon: true,
       auction: true,
       hotmail: true,
-      yahoo: true
+      yahoo: true,
+      excite: true
     },
     navSubtitle: "Netscape 3.0 · 28.8k",
     nav: [

@@ -16,16 +16,18 @@ button[data-game-start] { background: #3cf; color: #042; border: none; padding: 
 </head>
 <body class="yg-body yg-year-2015" bgcolor="#0a0e18">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2015" data-game-id="blobrush" tabindex="0">
+<div class="itt-year-game yg-shell" data-year-game data-year="2015" data-game-id="blobrush" data-yg-goal="Eat smaller cells. Split with Space. Hit mass 80." data-yg-next-href="../apple/watch.html" data-yg-next-label="Apple Watch ships" tabindex="0">
   <h1 style="margin:0 0 6px;color:#3cf">Blob Rush — 2015</h1>
-  <p style="margin:0;color:#9ab">Move · eat smaller cells · avoid bigger ones · grow your mass.</p>
-  <p class="honesty yg-honesty">Inspired by <b>2015 agar.io-class</b> browser mania · museum title <b>Blob Rush</b> · key <code>itt15-game-blobrush</code></p>
+  <p style="margin:0;color:#9ab">Move · eat smaller cells · <b>Space splits</b> (mass 16+) · avoid bigger ones.</p>
+  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1">Inspired by <b>2015 agar.io-class</b> browser mania · museum title <b>Blob Rush</b> · not agar.io · no Miniclip art. Browser class <b>28 Apr 2015</b> · Miniclip mobile <b>Jul 7–8</b> · <b>.io wave starts here</b> · <b>slither.io is 2016</b>. Gold band mass <b>80</b> · death still writes best · key <code>itt15-game-blobrush</code></p>
   <p>
     <button type="button" data-game-start>New Game</button>
+    <button type="button" data-blob-split>Split</button>
     Mass <b data-game-score>0</b> · Best <b data-game-best>0</b>
   </p>
   <canvas id="game-canvas" width="400" height="320" aria-label="Blob Rush arena"></canvas>
-  <p data-itt-action-status style="margin-top:8px;color:#9ab;min-height:1.3em">Mouse / touch aim · WASD · Space restarts</p>
+  <ol data-blob-board aria-label="Arena nicks" style="margin:8px 0 0;padding-left:1.3em;font-size:11px;color:#9ab;min-height:5.5em"></ol>
+  <p data-itt-action-status style="margin-top:8px;color:#9ab;min-height:1.3em">Mouse / touch aim · WASD · Space splits · P pauses</p>
   <p style="font-size:11px;color:#789">
     <a href="index.html" style="color:#8cf">← Playables</a> ·
     <a href="../../pages/home.html" style="color:#8cf">Starting Point</a>

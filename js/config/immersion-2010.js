@@ -59,7 +59,9 @@
       kickstarter: true,
       wave: true,
       instagram: true,
-      pinterest: true
+      pinterest: true,
+      imgur: true,
+      year2010extras: true
     },
     navSubtitle: "Win7 · IE 8 · iPad · iPhone 4 · Instagram · Facebook",
     nav: [
@@ -67,6 +69,7 @@
       { label: "iPad", href: "sites/ipad/index.html", match: "/ipad/" },
       { label: "iPhone", href: "sites/iphone/index.html", match: "/iphone/" },
       { label: "Instagram", href: "sites/instagram/index.html", match: "/instagram/" },
+      { label: "Imgur", href: "sites/imgur/index.html", match: "/imgur/" },
       { label: "Facebook", href: "sites/facebook/index.html", match: "/facebook/" },
       { label: "App Store", href: "sites/appstore/index.html", match: "/appstore/" },
       { label: "Foursquare", href: "sites/foursquare/index.html", match: "/foursquare/" },
@@ -114,6 +117,14 @@
         match: "/instagram/",
         hint: "Oct 6 · iOS-only · filters",
         doneMessage: "Square photos + filters."
+      },
+      {
+        id: "imgur",
+        label: "Imgur",
+        href: "sites/imgur/index.html",
+        match: "/imgur/",
+        hint: "host a meme · submit to Reddit",
+        doneMessage: "Imgur → Reddit viral loop theater."
       },
       {
         id: "facebook",

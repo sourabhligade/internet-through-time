@@ -948,7 +948,13 @@
     function closeDialog(id) {
       var el = document.getElementById(id);
       if (el) el.classList.add("hidden");
-      if (!anyDialogOpen() && backdrop) backdrop.classList.add("hidden");
+      if (!anyDialogOpen() && backdrop) {
+        backdrop.classList.add("hidden");
+        try {
+          backdrop.style.display = "none";
+          backdrop.style.pointerEvents = "none";
+        } catch (eCd) { /* */ }
+      }
     }
 
     function closeAllDialogs() {
@@ -1947,7 +1953,7 @@
           }
           ensureBackdropSane();
         } catch (eAuto) { /* */ }
-      }, 4000);
+      }, 1800);
       window.setTimeout(function () {
         try {
           ensureBackdropSane();
@@ -1998,8 +2004,17 @@
 
     function hideOverlay() {
       stopModemSound();
-      if (overlay) overlay.classList.add("hidden");
+      if (overlay) {
+        overlay.classList.add("hidden");
+        try {
+          overlay.style.display = "none";
+          overlay.style.pointerEvents = "none";
+        } catch (eOv) { /* */ }
+      }
       try { sessionStorage.setItem(CONNECTED_KEY, "1"); } catch (e) { /* */ }
+      try {
+        ensureBackdropSane();
+      } catch (eBd) { /* */ }
       seedHistory();
     }
 
@@ -2096,6 +2111,10 @@
         if (localStorage.getItem(PHONE_MUTE_KEY) === "1") return;
         if (prefs && prefs.phoneEvents === false) return;
       } catch (e0) { /* */ }
+      /* Still on the modem screen — do not cover Skip / Connect */
+      try {
+        if (overlay && !overlay.classList.contains("hidden")) return;
+      } catch (eOv) { /* */ }
       if (Math.random() > 0.022) return; // ~2.2% — rare household drama, once/session
       var kinds = [
         "Someone picked up another extension.\n\nNO CARRIER\n\nClick Connect to redial.",
@@ -2104,11 +2123,11 @@
       ];
       var msg = kinds[Math.floor(Math.random() * kinds.length)];
       try {
-        sessionStorage.removeItem(CONNECTED_KEY);
         sessionStorage.setItem(PHONE_MUTE_KEY, "1"); // never chain-interrupt the same visit
       } catch (e1) { /* */ }
+      /* Do not drop CONNECTED_KEY or revive the modem overlay — that undoes Skip
+         and leaves #dlg-alert / #connect-overlay intercepting iframe clicks. */
       showAlert("Modem", msg);
-      if (overlay) overlay.classList.remove("hidden");
     }
 
     function focusContent() {

@@ -156,13 +156,101 @@
 .yp-progress-dots { font-size: 14px; letter-spacing: 0.15em; color: var(--yp-accent, #333); }
 .yp-progress-count { font-weight: 700; }
 .yp-progress-done { color: #060; font-weight: 700; }
-.yp-howto {
-  font-size: 12px;
+.yp-howto,
+.yp-goal {
+  font-size: 13px;
   margin: 0 0 10px;
-  padding: 6px 8px;
+  padding: 8px 10px;
   background: #ffffe8;
-  border: 1px solid #cc0;
+  border-left: 4px solid var(--yp-accent, #333);
+  border-top: 1px solid #cc0;
+  border-right: 1px solid #cc0;
+  border-bottom: 1px solid #cc0;
   line-height: 1.4;
+  font-weight: 600;
+}
+.yp-goal b {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  margin-right: 6px;
+  color: var(--yp-accent, #333);
+}
+.yp-chrome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px;
+}
+.yp-chrome-keys {
+  font-size: 10px;
+  color: #666;
+}
+.yp-honesty {
+  font-size: 11px;
+  color: #555;
+  margin: 10px 0 0;
+}
+.yp-btn.retry {
+  animation: yp-retry-pulse 1s ease-in-out infinite;
+}
+.yp-fail .yp-status {
+  background: #ffe8e8;
+  border-left: 4px solid #c00;
+  padding: 8px 10px;
+  font-weight: 700;
+  color: #a00 !important;
+}
+.yp-overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  padding: 16px;
+}
+.yp-overlay.is-open {
+  display: flex;
+}
+.yp-overlay[hidden] {
+  display: none !important;
+}
+.yp-shell {
+  position: relative;
+}
+.yp-overlay-card {
+  max-width: 22em;
+  background: #fff;
+  border: 2px solid var(--yp-accent, #333);
+  padding: 14px 16px;
+}
+.yp-overlay-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: var(--yp-accent, #333);
+}
+.yp-overlay-body {
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+@keyframes yp-retry-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .yp-btn.retry {
+    animation: none;
+  }
 }
 .yp-flow {
   font-size: 11px;

@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/trello/index.html": "http://museum.local/years/2012/trello/",
+      "sites/googledrive/index.html": "http://museum.local/years/2012/googledrive/",
+      "sites/waze/index.html": "http://museum.local/years/2012/waze/",
+      "sites/lyft/index.html": "http://museum.local/years/2012/lyft/",
+
       "sites/playable/index.html": "http://museum.local/years/2012/playable/",
       "sites/playable/game.html": "http://museum.local/years/2012/playable/game.html",
       "sites/netflix/qwikster.html": "http://www.qwikster.com/",
@@ -425,16 +430,20 @@
       "sites/youtube/channels.html": "http://www.youtube.com/channels.html",
       "sites/youtube/index.html": "http://www.youtube.com/",
       "sites/youtube/upload.html": "http://www.youtube.com/upload.html",
+      "sites/youtube/gangnam.html": "http://www.youtube.com/watch?v=gangnam-residual",
       "sites/youtube/watch.html": "http://www.youtube.com/watch.html",
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/"
+      "sites/zombo/index.html": "http://www.zombo.com/",
     
     
     
     
-    },
+          "sites/soundcloud/about.html": "http://soundcloud.com/about.html",
+      "sites/soundcloud/index.html": "http://soundcloud.com/",
+      "sites/soundcloud/track.html": "http://soundcloud.com/track.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
@@ -557,11 +566,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2012",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2012",
       "pages/map.html": "2012 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
@@ -642,7 +651,7 @@
       "sites/friendconnect/about.html": "About Friend Connect"
     },
     defaultBookmarks: [
-      { title: "Starting Point 2010", path: "pages/home.html" },
+      { title: "Starting Point 2012", path: "pages/home.html" },
       { title: "Twitter", path: "sites/twitter/index.html" },
       { title: "Facebook", path: "sites/facebook/index.html" },
       { title: "YouTube", path: "sites/youtube/index.html" },

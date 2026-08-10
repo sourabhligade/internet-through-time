@@ -1,1 +1,1 @@
-Pending harvest. Text wordmarks OK until CAPTURE-LOG row.
+pending harvest · no invented logo · RECON/text until CAPTURE

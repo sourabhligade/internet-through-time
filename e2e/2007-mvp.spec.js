@@ -33,6 +33,7 @@ test.describe('2007 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-iphone-browse]', { timeout: 20000 });
+    await expect(page.locator('.itt-phone')).toBeVisible();
     await expect(page.locator('body')).toContainText(/no App Store|App Store/i);
     await page.fill('[name="url"]', 'http://www.google.com/');
     await page.locator('[data-iphone-browse] button[type="submit"]').click();

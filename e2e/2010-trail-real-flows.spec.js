@@ -91,7 +91,8 @@ test.describe('2010 trail 4 — Social web', () => {
     await requireKey(page, 'itt10-fb-culture');
 
     await page.goto('/years/2010/sites/facebook/places.html');
-    await page.locator('#pl').click();
+    await page.waitForSelector('[data-fb-place]', { timeout: 20000 });
+    await page.locator('[data-fb-place]').first().click();
     await requireKey(page, 'itt10-fb-places');
   });
 });

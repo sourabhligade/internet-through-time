@@ -81,6 +81,16 @@ test.describe('2010 real flows', () => {
     expect(raw).toMatch(/Toaster|real 2010/i);
   });
 
+  test('Open Graph Like on CNN news residual', async ({ page }) => {
+    await page.goto('/years/2010/sites/cnn/index.html');
+    await clearKeys(page, 'itt10-fb-likes');
+    await page.reload();
+    await expect(page.locator('body')).toContainText(/Open Graph/i);
+    await page.locator('[data-fb-like="cnn-og-2010"]').click();
+    await requireKey(page, 'itt10-fb-likes');
+    expect(await page.evaluate(() => localStorage.getItem('itt09-fb-likes'))).toBeFalsy();
+  });
+
   test('Facebook Like count + storage', async ({ page }) => {
     await page.goto('/years/2010/sites/facebook/feed.html');
     await clearKeys(page, 'itt10-fb-likes');
@@ -140,6 +150,12 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/chrome/index.html');
     await clearKeys(page, 'itt10-chrome');
     await page.reload();
+    await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
     await page.locator('[data-chrome-download]').click();
     await page.locator('[data-chrome-prefer]').click();
     const raw = await requireKey(page, 'itt10-chrome');
