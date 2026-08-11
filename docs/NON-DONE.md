@@ -6,18 +6,20 @@
 **★ Complex product machines (next bar · 1994–2020):** [`COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md`](COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md).  
 **★ Older years gold deepen (implement bible · W1–W11 · 1994–2012):** [`OLDER-YEARS-GOLD-MACHINES-GOALS-PHASES-STEPS.md`](OLDER-YEARS-GOLD-MACHINES-GOALS-PHASES-STEPS.md) · research freeze **[x]** · implement **[x]** 2026-08-08.  
 **★ Remaining early-year element map:** [`REMAINING-EARLY-YEAR-GOLD-ELEMENT-PHASES.md`](REMAINING-EARLY-YEAR-GOLD-ELEMENT-PHASES.md) · map **[x]** · implement **[x]**.  
-**★ Museum-grade A gap map (2026-08-10 · what each year lacks vs gold A):** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md).  
+**★ Museum-grade A gap map (2026-08-10 · what each year lacks vs gold A):** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md)  
+**★ 2014–2016 → A (execute · P0–P16):** [`2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md).  
+**★ Hub scan + improve program (S0–S16 · 2013 lean next):** [`HUB-SCAN-AND-IMPROVE-PROGRAM-1994-2016.md`](HUB-SCAN-AND-IMPROVE-PROGRAM-1994-2016.md).  
 **★ Cross-year leftover execute (2026-08-10 · hub 1994–2015):** [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md).  
 **★ Per-year status (real vs leftover mock · 2026-08-08 · historical; hub later reverted to 1994–2015):** [`YEAR-STATUS-AUDIT-2026-08-08.md`](YEAR-STATUS-AUDIT-2026-08-08.md).  
-**★ 2017–2019 complete-to-ready freeze:** [`2017-2019-COMPLETE-TO-READY-DEEP-RESEARCH-2026-08-08.md`](2017-2019-COMPLETE-TO-READY-DEEP-RESEARCH-2026-08-08.md)  
-**★ How to implement (minute C0–C8):** [`2017-2019-COMPLETE-TO-READY-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2017-2019-COMPLETE-TO-READY-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) · **[x]** landed 2026-08-08.  
+**★ 2017–2019 complete-to-ready freeze:** paths named below **are not on this disk** (404). Do not implement from them.  
+**★ 2019 from-scratch research freeze (2026-08-11):** [`2019-READ-FIRST.md`](2019-READ-FIRST.md) · [`2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · [`2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) · [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · **S0 [x] · do not scaffold until asked.**  
 **★ Clone forest 2013–2020 strip:** **[x]** 2026-08-08 · 2013 keeps year-true iOS7/Vine/UberX · 2014 keeps YikYak/Secret/Ello · 2020 keeps year-true P0 quizzes.  
 **Purpose:** Single checklist of what is **still open** vs playable ship.  
-**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2016** + games wing. **2017+ not on disk.**  
+**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2020** + games wing. **2021+ not on disk.**  
 **Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md`](MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md) (per-year authenticity % · what to do) · [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) (year rooms) · [`GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) · [`GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (games densify G0–G11) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md)
 
 **Ship truth (do not re-open as “unbuilt”):**  
-All years **1994–2016** are on disk and hub-unlocked. **2017+ is not playable.** Residual below is polish for open years; later-year notes are research-only. Execute leftover: [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md).
+All years **1994–2020** are on disk and hub-unlocked. **2021+ is not playable.** Residual below is polish for open years. Execute leftover: [`2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md`](2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md). · 2018 from-scratch: [`2018-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2018-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md). · 2019: [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md). · 2020: [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md).
 
 ---
 
@@ -106,7 +108,7 @@ Ideal late pack: `mvp` · `flows` · `real-flows` · `densify` · `trail-real-fl
 
 | ID | Item | Status | Notes |
 |----|------|--------|-------|
-| **N20** | Split `js/browser/create.js` (~2k LOC) | `[ ]` | SRP Phase 3: navigate + chrome-ui (navigate partially extracted) |
+| **N20** | Split `js/browser/create.js` (~2k LOC) | `[~]` | chrome-ui extracted 2026-08-11 (`js/browser/chrome-ui.js`). create.js still ~1.4k (navigate + connect + load). |
 | **N21** | Period CSS year-delta composition | `[ ]` | Prefer `@import` prior + deltas only; many bulk forks remain |
 | **N22** | `scripts/new-year.py` scaffolding | `[ ]` | Documented aspirational in ARCHITECTURE |
 | **N23** | Legacy `document.write` browser-core loader | `[~]` | Works; cleanup optional |
@@ -119,12 +121,12 @@ Does **not** block visitor-facing flows.
 
 | ID | Item | Status | Notes |
 |----|------|--------|-------|
-| **N24** | Docs drift vs disk | `[ ]` | Older `PROJECT-INVENTORY`, `LEFT-OUT`, `LEFT-TO-DO`, parts of FLOW scorecard still claim thin 1998–2003 or hub ≤2005 |
-| **N25** | TO-100 plan checkbox hygiene | `[ ]` | `PLAN-2011-2012-2013-TO-100.md` still has unchecked phase boxes while baseline table says ~L3 for 2011–13 |
-| **N26** | Museum bar file naming | `[ ]` | `MUSEUM-READY-BAR-1994-2012.md` body claims through 2013 — rename/extend honesty |
+| **N24** | Docs drift vs disk | `[x]` | 2026-08-10 · DISK-TRUTH + HUB-SCAN are canonical; older PROJECT-INVENTORY / LEFT-OUT / LEFT-TO-DO remain archival |
+| **N25** | TO-100 plan checkbox hygiene | `[x]` | 2026-08-10 · 2011–13 forests pruned (46/47/49 HTML); leftover boxes in old TO-100 plans are historical |
+| **N26** | Museum bar file naming | `[x]` | 2026-08-10 · DISK-TRUTH now lists 2011–13 as lean museum-ready; `MUSEUM-READY-BAR-1994-2012.md` title is historical |
 | **N27** | Git / branch hygiene | `[ ]` | Branch name lags (`…1994-2008…`); hub WIP uncommitted; commit/push only when asked |
-| **N28** | **2019** museum-ready · polish closed | `[x]` | 2026-08-07 · Disney+/Marshmello/G+/FTC · multipage modern · forest · `test:e2e:2019` |
-| **N29** | **2020** museum-ready residual closed | `[x]` | 2026-08-07 · Zoom · Reels · CCPA · Edge stable · TikTok EO · `test:e2e:2020` · grade: [`2020-MUSEUM-GRADE.md`](2020-MUSEUM-GRADE.md) |
+| **N28** | **2019** museum-ready · polish closed | `[x]` | Lean from-scratch **A−** on hub 1994–2019. One-thing Disney+ Continue · Continue Row. |
+| **N29** | **2020** museum-ready residual closed | `[x]` | **2026-08-11** — lean from-scratch **A−** on hub 1994–2020. One-thing Zoom join→mute→chat→leave · Sus Vote. S1–S15 on disk. |
 
 ---
 
@@ -149,11 +151,15 @@ Do **not** treat as backlog unless product scope changes:
 | **2002–2005** | Done | Optional trail/densify suite shape; L4 pixels |
 | **2006** | Done | L4 pixels only (flows + trail + Digg signature landed) |
 | **2007–2010** | Done | L4 WA pixels; light continuity voice (**N8**) |
-| **2011–2012** | ~L3 | L4 WA only |
-| **2013** | MVP ~L3 | Forest “2009 honesty” scrubbed 2026-08-10 · L4 WA |
-| **2014** | museum-ready A–F | Forest still large · 0 brand pixels (failed-final) · Twitch gold-lite |
-| **2015** | Lean A–F | Pixels C · Watch/Music/WA Web failed-final · e2e 148 |
-| **2016** | Lean MVP + densify 16-D1–D6 | Pixels C failed-final · e2e pack · **2017+ still do not scaffold** |
+| **2011–2012** | Lean museum-ready | Forest pruned 2026-08-10 · L4 WA only |
+| **2013** | Lean museum-ready A− | Forest pruned 49 HTML · L4 WA |
+| **2014** | **Museum-grade A** | Lean 43 HTML · L4 stills · I8 optional |
+| **2015** | Lean A− | Layer C failed-final closed · WDM crops L4 |
+| **2016** | **Museum-ready A−** | Layer C failed-final closed |
+| **2017** | Lean A | Playables year-true · L4 art parked |
+| **2018** | Lean A− | GDPR Manage path · L4 art parked |
+| **2019** | Lean A− | Disney+ trial-trap · Continue Row · L4 art parked |
+| **2020** | Lean A− | Zoom one-thing · Reels 15s · Flash EOL · S15 rooms · L4 official art parked |
 | **Hub / games** | Live | Commit hub polish when asked; games wing done |
 
 ---
@@ -166,12 +172,13 @@ Do **not** treat as backlog unless product scope changes:
 3. [x] N3 year-signature 2013
 4. [x] N4 2006-flows + trail
 5. [x] N5–N7 2000/2001 trails + deepen + signature thicken
-6. N24–N26 Doc honesty pass (FLOW scorecard · TO-100 checkboxes · bar rename)
-7. Execute [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) waves (2015 parity → densify gems → …)
-8. N20–N21 Architecture only if scaling years again
-9. N14–N19 Forever optional only
-10. N28  **2017+** only after explicit research freeze
-11. Optional: trail packs for 2002–2004
+6. **Execute [`2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md)** (2014 lean first · then 2015/16 pixels · 2016 promote)
+7. N24–N26 Doc honesty pass (FLOW scorecard · TO-100 checkboxes · bar rename)
+8. Execute [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) waves only if still open after #6
+9. N20–N21 Architecture only if scaling years again
+10. N14–N19 Forever optional only
+11. N28 **2017+** only after explicit research freeze
+12. Optional: trail packs for 2002–2004
 ```
 
 ### Acceptance when a residual closes
@@ -185,9 +192,9 @@ Do **not** treat as backlog unless product scope changes:
 
 ## 10. One-line status
 
-**Done:** **23-year** museum playable (**1994–2016**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2015/2016 lean rebuilds.
+**Done:** **27-year** museum playable (**1994–2020**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2011–20 lean years.
 
-**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · 2013/2014 forest still large · **2017+ not on disk**.
+**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2021+ not on disk**.
 
 ---
 

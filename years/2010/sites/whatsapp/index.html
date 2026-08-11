@@ -20,20 +20,9 @@
 <script src="../../../../js/immersion-2010.js"></script>
 
 <p style="max-width:480px;margin:12px auto;font-family:Helvetica,Arial,sans-serif">
- <button type="button" data-wa-seed>Note WhatsApp 2010 seed (theater)</button>
- <span data-wa-status style="font-size:12px;color:#060"></span>
- <br>
+ <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-wa-seed-date> 2009 App Store seed · still small in 2010</label>
+ <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-wa-not-sms> Not the global SMS replacement yet</label>
+ <button type="button" data-wa-seed>Note WhatsApp 2010 seed</button>
+ <span data-wa-status data-itt-action-status style="font-size:12px;color:#060"></span>
 </p>
-<script>
-(function(){
-  var KEY="itt10-whatsapp-seed";
-  var b=document.querySelector("[data-wa-seed]");
-  if(!b) return;
-  b.addEventListener("click", function(){
-    try{ localStorage.setItem(KEY, JSON.stringify({seed:true,year:2010,ts:Date.now()})); }catch(e){}
-    var st=document.querySelector("[data-wa-status]");
-    if(st) st.textContent="Saved · "+KEY+" · not mass SMS killer yet";
-  });
-})();
-</script>
 </body></html>

@@ -15,9 +15,8 @@ const THINGS = [
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
     },
     complete: async (page) => {
-      await page.evaluate(() => {
-        sessionStorage.setItem("itt94-csotd-wandered", "1");
-      });
+      await page.locator("[data-csotd-link]").click();
+      await page.goto("/years/1994/sites/csotd/index.html");
       await page.fill("[name='gbname']", "Glenn residual");
       await page.fill("[name='gbnote']", "Modem worthy.");
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
@@ -121,6 +120,7 @@ const THINGS = [
     complete: async (page) => {
       await page.locator("[data-su-interest='tech']").check();
       await page.locator("[data-su-stumble]").click();
+      await page.locator("[data-su-stumble]").click();
     },
   },
   {
@@ -200,15 +200,13 @@ const THINGS = [
   },
   {
     year: "2009",
-    path: "/years/2009/sites/stackoverflow/index.html",
-    key: "itt09-stackoverflow",
+    path: "/years/2009/sites/facebook/feed.html",
+    key: "itt09-fb-likes",
     incomplete: async (page) => {
-      await page.locator("form[data-so-ask] button[type='submit']").click();
+      await page.locator("form[data-fb-status-post] button[type='submit']").click();
     },
     complete: async (page) => {
-      await page.fill("[name='title']", "How do I center a div residual");
-      await page.fill("[name='body']", "Steps to reproduce residual");
-      await page.locator("form[data-so-ask] button[type='submit']").click();
+      await page.locator("[data-fb-like]").first().click();
     },
   },
   {
@@ -304,6 +302,76 @@ const THINGS = [
       await page.locator("[data-ig-stories-add]").click();
     },
   },
+  {
+    year: "2017",
+    path: "/years/2017/sites/iphone/x.html",
+    key: "itt17-faceid",
+    incomplete: async (page) => {
+      await page.locator("[data-faceid-save]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-faceid-no-home]").check();
+      await page.locator("[data-faceid-not-touch]").check();
+      await page.locator("[data-faceid-not-xs]").check();
+      await page.locator("[data-faceid-save]").click();
+    },
+  },
+  {
+    year: "2018",
+    path: "/years/2018/sites/gdpr/index.html",
+    key: "itt18-gdpr",
+    incomplete: async (page) => {
+      await page.locator("[data-gdpr-accept-all]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-gdpr-manage]").click();
+      await page.locator("[data-gdpr-art15]").check();
+      await page.locator("[data-gdpr-art17]").check();
+      await page.locator("[data-gdpr-date]").check();
+      await page.locator("[data-gdpr-save]").click();
+    },
+  },
+  {
+    year: "2019",
+    path: "/years/2019/sites/disneyplus/index.html",
+    key: "itt19-disneyplus",
+    incomplete: async (page) => {
+      await page.locator("[data-dplus-trial]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-profile="adult-1"]').click();
+      await page.locator('[data-title="mando"]').click();
+      await page.locator("[data-add-continue]").click();
+      await page.locator('[data-title="lion-king"]').click();
+      await page.locator("[data-add-continue]").click();
+      await page.locator("[data-dplus-date]").check();
+      await page.locator("[data-dplus-not-trial]").check();
+      await page.locator("[data-dplus-kids]").check();
+      await page.locator("[data-dplus-save]").click();
+    },
+  },
+  {
+    year: "2020",
+    path: "/years/2020/sites/zoom/index.html",
+    key: "itt20-zoom",
+    incomplete: async (page) => {
+      await page.locator("[data-zoom-join]").click();
+    },
+    complete: async (page) => {
+      await page.locator("#itt20-code").fill("84739258101");
+      await page.locator("[data-zoom-join]").click();
+      await page.waitForURL(/join\.html/);
+      await page.locator("[data-admit]").click();
+      await page.waitForURL(/meeting\.html/);
+      await page.locator("[name='line']").fill("can you see my screen");
+      await page.locator("[data-chat]").evaluate((f) => f.requestSubmit());
+      await page.locator("[data-leave]").click();
+      await page.waitForURL(/recap\.html/);
+      await page.locator("[data-zoom-part]").check();
+      await page.locator("[data-zoom-not-live]").check();
+      await page.locator("[data-zoom-save]").click();
+    },
+  },
 ];
 
 test.describe("One-thing per year — load + REAL gate", () => {
@@ -347,9 +415,9 @@ test.describe("One-thing per year — load + REAL gate", () => {
     await expect(page.locator("#ott-guided-2013 a[href*=\"vine\"]").first()).toBeVisible();
   });
 
-  test("1994–2016 homes lead with one-thing then guided, residual later", async ({ page }) => {
+  test("1994–2020 homes lead with one-thing then guided, residual later", async ({ page }) => {
     const years = [];
-    for (let y = 1994; y <= 2016; y++) years.push(String(y));
+    for (let y = 1994; y <= 2020; y++) years.push(String(y));
     for (const y of years) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();

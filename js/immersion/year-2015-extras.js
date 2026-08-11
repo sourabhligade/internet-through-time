@@ -5,85 +5,21 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-
-  function U() {
-    return ITT.util || {};
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2015");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2015 — load year-extras-kit.js first");
+    return;
   }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2015";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) {
-      /* */
-    }
-    return "itt15";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = opts.error ? "#a00" : "#060";
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3200 });
-      }
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveJSON(k, v) {
-    try {
-      localStorage.setItem(k, JSON.stringify(v));
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveRaw(k, v) {
-    try {
-      localStorage.setItem(k, v);
-    } catch (e) {
-      /* */
-    }
-  }
-  function loadJSON(k, fb) {
-    try {
-      var r = localStorage.getItem(k);
-      if (!r) return fb;
-      return JSON.parse(r);
-    } catch (e) {
-      return fb;
-    }
-  }
-  function markUsed() {
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-    } catch (e) {
-      /* */
-    }
-  }
-  function checked(doc, sel) {
-    var el = doc.querySelector(sel);
-    return !!(el && el.checked);
-  }
-  function countChecked(doc, sel) {
-    var nodes = doc.querySelectorAll(sel);
-    var n = 0;
-    var i;
-    for (i = 0; i < nodes.length; i++) if (nodes[i].checked) n++;
-    return n;
-  }
-  function val(doc, sel) {
-    var el = doc.querySelector(sel);
-    return el ? String(el.value || "").trim() : "";
-  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
   /* ——— Apple Watch shipped ——— */
   function bootWatch(doc) {
@@ -377,6 +313,48 @@
         ts: Date.now()
       });
       feedback("Discord server created (theater) · " + key("discord"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  function bootDiscordChannel(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-discord-send]");
+    var sv = loadJSON(key("discord"), null);
+    var echoS = doc.querySelector("[data-discord-sv-echo]");
+    var echoC = doc.querySelector("[data-discord-ch-echo]");
+    var thread = doc.querySelector("[data-discord-thread]");
+    var st = doc.querySelector("[data-discord-msg-status]");
+    if (echoS) echoS.textContent = sv && sv.server ? sv.server : "join first";
+    if (echoC) echoC.textContent = sv && sv.channel ? String(sv.channel).replace(/^#/, "") : "general";
+    function render() {
+      if (!thread) return;
+      var list = loadJSON(key("discord-msgs"), []);
+      if (!Array.isArray(list)) list = [];
+      thread.innerHTML = list.length
+        ? list.map(function (m) { return "<div>" + (m.text || "") + "</div>"; }).join("")
+        : "<div style='color:#99aab5'>No messages yet.</div>";
+    }
+    render();
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      sv = loadJSON(key("discord"), null);
+      if (!sv || !sv.server) {
+        feedback("Create a server first.", st, { error: true });
+        return;
+      }
+      var text = val(doc, "[data-discord-msg]");
+      if (text.length < 1) {
+        feedback("Type a message.", st, { error: true });
+        return;
+      }
+      var list = loadJSON(key("discord-msgs"), []);
+      if (!Array.isArray(list)) list = [];
+      list.push({ text: text, channel: sv.channel || "general", multiStep: true, real: true, year: "2015", ts: Date.now() });
+      saveJSON(key("discord-msgs"), list);
+      render();
+      feedback("Sent · " + key("discord-msgs"), st);
       markUsed();
     });
   }
@@ -979,6 +957,7 @@
     bootPhotos(doc);
     bootBlockers(doc);
     bootDiscord(doc);
+    bootDiscordChannel(doc);
     bootDiscover(doc);
     bootEcho(doc);
     bootLE(doc);

@@ -1,112 +1,79 @@
 /**
  * 2016 REAL product theaters — multi-step localStorage only (itt16-*)
- * Stories · PoGO · Reactions · WA E2E · iPhone 7 · AirPods · Vine · Win10 end · Chrome · P1
+ * Stories machine (feed · add · watch) · PoGO · Reactions · WA E2E · iPhone 7 · AirPods · Vine · Win10 end · Chrome · P1
  * Densify: IG Live · AMP-SERP · FB Live · Dyn · Pixel · Home · Spectacles
+ * P2: FBI letter · Free Basics · Marketplace · Duo · Teams · AlphaGo · LE · Yahoo
+ * Leftover: Workplace · iOS 10 · Nougat · Note 7 · Mario Run
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2016");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2016 — load year-extras-kit.js first");
+    return;
+  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
-  function U() {
-    return ITT.util || {};
+  /* ——— Instagram Stories machine (feed · add · watch) ——— */
+  function storyList() {
+    var arr = loadJSON(key("ig-stories-list"), []);
+    return Array.isArray(arr) ? arr : [];
   }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2016";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) {
-      /* */
-    }
-    return "itt16";
+
+  function lastStory() {
+    return loadJSON(key("ig-stories"), null);
   }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = opts.error ? "#a00" : "#060";
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3200 });
-      }
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveJSON(k, v) {
-    try {
-      localStorage.setItem(k, JSON.stringify(v));
-    } catch (e) {
-      /* */
-    }
-  }
-  function loadJSON(k, fb) {
-    try {
-      var r = localStorage.getItem(k);
-      if (!r) return fb;
-      return JSON.parse(r);
-    } catch (e) {
-      return fb;
-    }
-  }
-  function markUsed() {
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-    } catch (e) {
-      /* */
-    }
-  }
-  function showNext(doc) {
-    doc = doc || document;
-    var els = doc.querySelectorAll("[data-next-flow]");
+
+  function renderStoriesTray(list) {
+    if (!list) return;
+    var arr = storyList();
+    list.innerHTML = "";
     var i;
-    for (i = 0; i < els.length; i++) {
-      els[i].removeAttribute("hidden");
-      els[i].style.display = "";
+    for (i = arr.length - 1; i >= 0; i--) {
+      var d = document.createElement("div");
+      d.style.cssText = "display:inline-block;margin:4px;text-align:center;font-size:11px;width:64px";
+      d.innerHTML =
+        '<span class="stories-ring is-yours" style="width:48px;height:48px;display:block;margin:0 auto"></span>' +
+        (arr[i].caption || "story");
+      list.appendChild(d);
     }
   }
-  function checked(doc, sel) {
-    var el = doc.querySelector(sel);
-    return !!(el && el.checked);
-  }
-  function val(doc, sel) {
-    var el = doc.querySelector(sel);
-    return el ? String(el.value || "").trim() : "";
+
+  function bootStoriesTray(doc) {
+    doc = doc || document;
+    var rec = lastStory();
+    renderStoriesTray(doc.querySelector("[data-ig-stories-list]"));
+    var empty = doc.querySelector("[data-ig-empty]");
+    var has = doc.querySelector("[data-ig-has-story]");
+    if (empty) empty.hidden = !!rec;
+    if (has) has.hidden = !rec;
+    var rings = doc.querySelectorAll("[data-ig-ring]");
+    var i;
+    for (i = 0; i < rings.length; i++) {
+      rings[i].className = rec ? "stories-ring is-yours" : "stories-ring is-empty";
+    }
+    var echo = doc.querySelector("[data-ig-stories-echo]");
+    if (echo) echo.textContent = rec && rec.caption ? rec.caption : "";
   }
 
-  /* ——— Instagram Stories (one-thing) ——— */
   function bootStories(doc) {
     doc = doc || document;
     var btn = doc.querySelector("[data-ig-stories-add]");
     if (!btn) return;
     var st = doc.querySelector("[data-ig-stories-status]");
-    var list = doc.querySelector("[data-ig-stories-list]");
     var kList = key("ig-stories-list");
-
-    function render() {
-      if (!list) return;
-      var arr = loadJSON(kList, []);
-      if (!Array.isArray(arr)) arr = [];
-      list.innerHTML = "";
-      var i;
-      for (i = arr.length - 1; i >= 0; i--) {
-        var d = doc.createElement("div");
-        d.style.cssText = "display:inline-block;margin:4px;text-align:center;font-size:11px;width:64px";
-        d.innerHTML =
-          '<span class="stories-ring" style="width:48px;height:48px;display:block;margin:0 auto"></span>' +
-          (arr[i].caption || "story");
-        list.appendChild(d);
-      }
-    }
-    render();
-    var prev = loadJSON(key("ig-stories"), null);
+    bootStoriesTray(doc);
+    var prev = lastStory();
     if (prev && st) feedback("Story saved · " + key("ig-stories"), st);
 
     btn.addEventListener("click", function () {
@@ -129,12 +96,49 @@
         ts: Date.now()
       };
       saveJSON(key("ig-stories"), rec);
-      var arr = loadJSON(kList, []);
-      if (!Array.isArray(arr)) arr = [];
+      var arr = storyList();
       arr.push({ caption: caption, ts: Date.now() });
       saveJSON(kList, arr);
-      render();
+      bootStoriesTray(doc);
       feedback("Added to Story (theater) · " + key("ig-stories"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  function bootStoriesWatch(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-ig-stories-watch]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ig-stories-status]");
+    var rec = lastStory();
+    var cap = doc.querySelector("[data-ig-watch-caption]");
+    if (cap) cap.textContent = rec && rec.caption ? rec.caption : "(empty ring — add first)";
+    bootStoriesTray(doc);
+    var prev = loadJSON(key("ig-stories-watch"), null);
+    if (prev && st) feedback("Watched · " + key("ig-stories-watch"), st);
+
+    btn.addEventListener("click", function () {
+      rec = lastStory();
+      if (!rec || !rec.caption) {
+        feedback("Add a Story first — the ring is empty.", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-ig-watch-24h]") || !checked(doc, "[data-ig-watch-not-post]")) {
+        feedback("Confirm 24 hours + this is not a permanent feed post.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ig-stories-watch"), {
+        caption: rec.caption,
+        watched: true,
+        hours: 24,
+        launched: "2016-08-02",
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Watched (theater) · " + key("ig-stories-watch"), st);
       markUsed();
       showNext(doc);
     });
@@ -169,6 +173,63 @@
         ts: Date.now()
       });
       feedback("Caught (silhouette theater) · team " + team + " · " + key("pogo"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  function bootPogoMap(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-pogo-stop-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-pogo-stop-status]");
+    var picked = "";
+    var lit = loadJSON(key("pogo"), null);
+    var echo = doc.querySelector("[data-pogo-team-echo]");
+    if (echo) echo.textContent = lit && lit.team ? lit.team : "(catch a silhouette first)";
+    var prev = loadJSON(key("pogo-stop"), null);
+    if (prev && prev.stop) {
+      picked = prev.stop;
+      var old = doc.querySelector("[data-pogo-stop='" + picked + "']");
+      if (old) old.setAttribute("aria-pressed", "true");
+    }
+    var stops = doc.querySelectorAll("[data-pogo-stop]");
+    var i;
+    for (i = 0; i < stops.length; i++) {
+      stops[i].addEventListener("click", function () {
+        picked = this.getAttribute("data-pogo-stop") || "";
+        var all = doc.querySelectorAll("[data-pogo-stop]");
+        var j;
+        for (j = 0; j < all.length; j++) {
+          all[j].setAttribute("aria-pressed", all[j] === this ? "true" : "false");
+        }
+      });
+    }
+    btn.addEventListener("click", function () {
+      lit = loadJSON(key("pogo"), null);
+      if (!lit) {
+        feedback("Do the sidewalk literacy first (no GPS · no official art).", st, { error: true });
+        return;
+      }
+      if (!picked) {
+        feedback("Tap a stop or gym silhouette.", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-pogo-stop-nogps]")) {
+        feedback("Confirm this map is theater — no real GPS.", st, { error: true });
+        return;
+      }
+      saveJSON(key("pogo-stop"), {
+        stop: picked,
+        team: lit.team || "valor",
+        launch: "2016-07-06",
+        noGps: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Stop logged · " + picked + " · " + key("pogo-stop"), st);
       markUsed();
       showNext(doc);
     });
@@ -229,6 +290,18 @@
     });
   }
 
+  function bootReactionsEcho(doc) {
+    doc = doc || document;
+    if (doc.querySelector("[data-reactions-save]")) return;
+    var onPost = doc.querySelector("[data-reaction-on-post]");
+    if (!onPost) return;
+    var prev = loadJSON(key("reactions"), null);
+    if (prev && prev.face) {
+      onPost.textContent = "You reacted: " + prev.face;
+      showNext(doc);
+    }
+  }
+
   /* ——— WhatsApp E2E ——— */
   function bootWaE2e(doc) {
     doc = doc || document;
@@ -253,6 +326,53 @@
       var lock = doc.querySelector("[data-wa-lock]");
       if (lock) lock.textContent = "🔒 Messages and calls are end-to-end encrypted. WhatsApp cannot read them.";
       feedback("E2E literacy saved · " + key("wa-e2e"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  function bootWaChat(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-wa-chat-send]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-wa-chat-status]");
+    var lock = doc.querySelector("[data-wa-lock]");
+    var thread = doc.querySelector("[data-wa-chat-thread]");
+    var e2e = loadJSON(key("wa-e2e"), null);
+    if (lock && e2e) {
+      lock.textContent = "🔒 Messages and calls are end-to-end encrypted. WhatsApp cannot read them.";
+    }
+    var prev = loadJSON(key("wa-chat"), null);
+    if (thread && prev && prev.text) {
+      thread.textContent = prev.text;
+    }
+    btn.addEventListener("click", function () {
+      e2e = loadJSON(key("wa-e2e"), null);
+      if (!e2e) {
+        feedback("Lock the chat first (Apr 5 E2E literacy).", st, { error: true });
+        return;
+      }
+      var text = val(doc, "[data-wa-chat-text]");
+      if (text.length < 2) {
+        feedback("Type a message (2+ chars).", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-wa-chat-lock]")) {
+        feedback("Confirm WhatsApp cannot read this.", st, { error: true });
+        return;
+      }
+      saveJSON(key("wa-chat"), {
+        text: text,
+        locked: true,
+        date: "2016-04-05",
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      if (thread) thread.textContent = text;
+      if (lock) lock.textContent = "🔒 Messages and calls are end-to-end encrypted. WhatsApp cannot read them.";
+      feedback("Sent (theater) · " + key("wa-chat"), st);
       markUsed();
       showNext(doc);
     });
@@ -284,6 +404,36 @@
         ts: Date.now()
       });
       feedback("iPhone 7 literacy · " + key("iphone7"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  function bootDongle(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-dongle-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-dongle-status]");
+    btn.addEventListener("click", function () {
+      if (!loadJSON(key("iphone7"), null)) {
+        feedback("Do iPhone 7 jack literacy first.", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-dongle-price]") || !checked(doc, "[data-dongle-wired]")) {
+        feedback("Confirm $9 Lightning adapter + wired headphones still work.", st, { error: true });
+        return;
+      }
+      saveJSON(key("dongle"), {
+        price: 9,
+        lightning: true,
+        wiredStillWorks: true,
+        announce: "2016-09-07",
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Dongle literacy · " + key("dongle"), st);
       markUsed();
       showNext(doc);
     });
@@ -369,6 +519,48 @@
         feedback("Hold culture still works until you ack the goodbye.", st);
       });
     }
+  }
+
+  function bootVineClip(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-vine-clip-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-vine-clip-status]");
+    var echo = doc.querySelector("[data-vine-clip-echo]");
+    var prev = loadJSON(key("vine-clip"), null);
+    if (echo) echo.textContent = prev && prev.caption ? prev.caption : "(no loop yet)";
+    if (loadJSON(key("vine"), null)) {
+      btn.disabled = true;
+      if (st && !st.textContent) feedback("Goodbye acked — no new loops.", st, { error: true });
+    }
+    btn.addEventListener("click", function () {
+      if (loadJSON(key("vine"), null)) {
+        feedback("App is winding down — no new loops after Oct 27 ack.", st, { error: true });
+        return;
+      }
+      var caption = val(doc, "[data-vine-clip-caption]");
+      if (caption.length < 2) {
+        feedback("Type a 6-second caption (2+ chars).", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-vine-clip-six]")) {
+        feedback("Confirm loops are six seconds.", st, { error: true });
+        return;
+      }
+      saveJSON(key("vine-clip"), {
+        caption: caption,
+        seconds: 6,
+        looping: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      if (echo) echo.textContent = caption;
+      feedback("Loop posted (theater) · " + key("vine-clip"), st);
+      markUsed();
+      showNext(doc);
+    });
   }
 
   /* ——— Win10 free upgrade ended ——— */
@@ -778,6 +970,222 @@
     });
   }
 
+  /* ——— Apple vs FBI letter Feb 16 ——— */
+  function bootFbiLetter(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-fbi-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-fbi-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-fbi-backdoor]") || !checked(doc, "[data-fbi-not-crime]")) {
+        feedback("Confirm new-iOS backdoor + this is not a crime exhibit.", st, { error: true });
+        return;
+      }
+      saveJSON(key("fbi-letter"), {
+        date: "2016-02-16",
+        backdoor: true,
+        notCrimeExhibit: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Letter literacy · " + key("fbi-letter"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Free Basics / TRAI Feb 8 ——— */
+  function bootFreeBasics(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-freebasics-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-freebasics-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-fb-trai-date]") || !checked(doc, "[data-fb-trai-not-wall]")) {
+        feedback("Confirm Feb 8 TRAI + same bits, same price.", st, { error: true });
+        return;
+      }
+      saveJSON(key("freebasics"), {
+        date: "2016-02-08",
+        withdraw: "2016-02-11",
+        notWalledGarden: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Free Basics literacy · " + key("freebasics"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Marketplace Oct 3 ——— */
+  function bootMarketplace(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-mp-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-mp-status]");
+    btn.addEventListener("click", function () {
+      var title = val(doc, "[data-mp-title]");
+      var price = val(doc, "[data-mp-price]");
+      if (title.length < 2 || !price || !checked(doc, "[data-mp-no-pay]")) {
+        feedback("Type a title + price and confirm Facebook does not take payment.", st, { error: true });
+        return;
+      }
+      saveJSON(key("marketplace"), {
+        date: "2016-10-03",
+        title: title,
+        noPayment: true,
+        countries: "US-UK-AU-NZ",
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Marketplace listing theater · " + key("marketplace"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Google Duo Aug 16 ——— */
+  function bootDuo(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-duo-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-duo-status]");
+    btn.addEventListener("click", function () {
+      if (
+        !checked(doc, "[data-duo-phone]") ||
+        !checked(doc, "[data-duo-knock]") ||
+        !checked(doc, "[data-duo-not-meet]")
+      ) {
+        feedback("Confirm phone number + Knock Knock + not Meet.", st, { error: true });
+        return;
+      }
+      saveJSON(key("duo"), {
+        date: "2016-08-16",
+        phoneId: true,
+        knockKnock: true,
+        e2e: true,
+        notMeet: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Duo literacy · " + key("duo"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Teams preview Nov 2 ——— */
+  function bootTeamsPreview(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-teams-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-teams-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-teams-preview]") || !checked(doc, "[data-teams-ga]")) {
+        feedback("Confirm Office 365 preview + GA is 2017.", st, { error: true });
+        return;
+      }
+      saveJSON(key("teams-preview"), {
+        preview: true,
+        date: "2016-11-02",
+        ga: "2017-03-14",
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Teams preview literacy · " + key("teams-preview"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— AlphaGo Mar 9–15 ——— */
+  function bootAlphago(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-ag-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ag-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-ag-score]") || !checked(doc, "[data-ag-stream]")) {
+        feedback("Confirm 4–1 (Lee game 4) + livestream, not AGI.", st, { error: true });
+        return;
+      }
+      saveJSON(key("alphago"), {
+        score: "4-1",
+        livestream: true,
+        date: "2016-03-15",
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("AlphaGo literacy · " + key("alphago"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Let’s Encrypt 2016 production ——— */
+  function bootLetsencrypt(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-le-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-le-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-le-prod]") || !checked(doc, "[data-le-90]")) {
+        feedback("Confirm Apr 12 production + 90-day certs.", st, { error: true });
+        return;
+      }
+      saveJSON(key("letsencrypt"), {
+        prod: "2016-04-12",
+        days: 90,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Let’s Encrypt literacy · " + key("letsencrypt"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Yahoo two notices ——— */
+  function bootYahooBreach(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-yh-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-yh-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-yh-two]") || !checked(doc, "[data-yh-not-3b]")) {
+        feedback("Confirm two notices + 2016 is not 3 billion.", st, { error: true });
+        return;
+      }
+      saveJSON(key("yahoo-breach"), {
+        sep22: true,
+        dec14: true,
+        not3b: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Yahoo notices literacy · " + key("yahoo-breach"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
   /* ——— musical.ly not TikTok ——— */
   function bootMusical(doc) {
     doc = doc || document;
@@ -809,16 +1217,152 @@
     });
   }
 
+  /* ——— Workplace Oct 10 ——— */
+  function bootWorkplace(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-wp-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-wp-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-wp-work]") || !checked(doc, "[data-wp-not-feed]")) {
+        feedback("Confirm at-work + not the personal feed.", st, { error: true });
+        return;
+      }
+      saveJSON(key("workplace"), {
+        date: "2016-10-10",
+        atWork: true,
+        notPersonalFeed: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Workplace literacy · " + key("workplace"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— iOS 10 Sep 13 ——— */
+  function bootIos10(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-ios10-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ios10-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-ios10-stickers]") || !checked(doc, "[data-ios10-not-face]")) {
+        feedback("Confirm stickers + not Face ID.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ios10"), {
+        date: "2016-09-13",
+        stickers: true,
+        notFaceId: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("iOS 10 literacy · " + key("ios10"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Nougat Aug 22 ——— */
+  function bootNougat(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-nougat-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-nougat-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-nougat-date]") || !checked(doc, "[data-nougat-split]")) {
+        feedback("Confirm Aug 22 OTA + multi-window.", st, { error: true });
+        return;
+      }
+      saveJSON(key("nougat"), {
+        date: "2016-08-22",
+        multiWindow: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Nougat literacy · " + key("nougat"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Note 7 recall literacy ——— */
+  function bootNote7(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-note7-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-note7-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-note7-down]") || !checked(doc, "[data-note7-replace]")) {
+        feedback("Confirm power down + replacements recalled.", st, { error: true });
+        return;
+      }
+      saveJSON(key("note7"), {
+        cpsc: "2016-09-15",
+        expand: "2016-10-13",
+        powerDown: true,
+        replacementsRecalled: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Note7 recall literacy · " + key("note7"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  /* ——— Super Mario Run Dec 15 ——— */
+  function bootMarioRun(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-mario-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-mario-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-mario-date]") || !checked(doc, "[data-mario-price]")) {
+        feedback("Confirm Dec 15 iOS + $9.99 one-time.", st, { error: true });
+        return;
+      }
+      saveJSON(key("mario-run"), {
+        date: "2016-12-15",
+        price: 9.99,
+        iosFirst: true,
+        noOfficialArt: true,
+        multiStep: true,
+        real: true,
+        year: "2016",
+        ts: Date.now()
+      });
+      feedback("Mario Run literacy · " + key("mario-run"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
   function restoreStatuses(doc) {
     doc = doc || document;
     var map = [
       ["ig-stories", "[data-ig-stories-status]", "Stories saved"],
+      ["ig-stories-watch", "[data-ig-watch-status]", "Watched"],
       ["pogo", "[data-pogo-status]", "PoGO literacy saved"],
+      ["pogo-stop", "[data-pogo-stop-status]", "Stop logged"],
       ["reactions", "[data-reactions-status]", "Reaction saved"],
       ["wa-e2e", "[data-wa-e2e-status]", "WA E2E saved"],
+      ["wa-chat", "[data-wa-chat-status]", "Chat sent"],
       ["iphone7", "[data-iphone7-status]", "iPhone 7 saved"],
+      ["dongle", "[data-dongle-status]", "Dongle saved"],
       ["airpods", "[data-airpods-status]", "AirPods saved"],
       ["vine", "[data-vine-status]", "Vine dual-date saved"],
+      ["vine-clip", "[data-vine-clip-status]", "Loop posted"],
       ["win10-end", "[data-win10-end-status]", "Win10 end saved"],
       ["chrome", "[data-chrome16-status], [data-chrome-status]", "Chrome saved"],
       ["bots", "[data-bots-status]", "Bots saved"],
@@ -832,7 +1376,20 @@
       ["dyn", "[data-dyn-status]", "Dyn literacy saved"],
       ["pixel", "[data-pixel-status]", "Pixel saved"],
       ["home", "[data-ghome-status]", "Google Home saved"],
-      ["spectacles", "[data-spec-status]", "Spectacles saved"]
+      ["spectacles", "[data-spec-status]", "Spectacles saved"],
+      ["fbi-letter", "[data-fbi-status]", "Letter literacy saved"],
+      ["freebasics", "[data-freebasics-status]", "Free Basics literacy saved"],
+      ["marketplace", "[data-mp-status]", "Marketplace saved"],
+      ["duo", "[data-duo-status]", "Duo literacy saved"],
+      ["teams-preview", "[data-teams-status]", "Teams preview saved"],
+      ["alphago", "[data-ag-status]", "AlphaGo literacy saved"],
+      ["letsencrypt", "[data-le-status]", "Let’s Encrypt saved"],
+      ["yahoo-breach", "[data-yh-status]", "Yahoo notices saved"],
+      ["workplace", "[data-wp-status]", "Workplace literacy saved"],
+      ["ios10", "[data-ios10-status]", "iOS 10 saved"],
+      ["nougat", "[data-nougat-status]", "Nougat saved"],
+      ["note7", "[data-note7-status]", "Note7 recall saved"],
+      ["mario-run", "[data-mario-status]", "Mario Run saved"]
     ];
     var i;
     var any = false;
@@ -874,13 +1431,20 @@
 
   function bootAll(doc) {
     doc = doc || document;
+    bootStoriesTray(doc);
     bootStories(doc);
+    bootStoriesWatch(doc);
     bootPogo(doc);
+    bootPogoMap(doc);
     bootReactions(doc);
+    bootReactionsEcho(doc);
     bootWaE2e(doc);
+    bootWaChat(doc);
     bootIphone7(doc);
+    bootDongle(doc);
     bootAirpods(doc);
     bootVine(doc);
+    bootVineClip(doc);
     bootWin10End(doc);
     bootChrome16(doc);
     bootBots(doc);
@@ -895,6 +1459,19 @@
     bootPixel(doc);
     bootGhome(doc);
     bootSpectacles(doc);
+    bootFbiLetter(doc);
+    bootFreeBasics(doc);
+    bootMarketplace(doc);
+    bootDuo(doc);
+    bootTeamsPreview(doc);
+    bootAlphago(doc);
+    bootLetsencrypt(doc);
+    bootYahooBreach(doc);
+    bootWorkplace(doc);
+    bootIos10(doc);
+    bootNougat(doc);
+    bootNote7(doc);
+    bootMarioRun(doc);
     restoreStatuses(doc);
     bootResidualNext(doc);
   }

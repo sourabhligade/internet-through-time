@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow alignment for every year game (1994–2016).
+ * REAL-flow alignment for every year game (1994–2018).
  * Rules (docs/REAL-FLOW-SYSTEM.md adapted to games):
  *  - Page load alone must not invent a finished-run best (except ongoing farm/room state).
  *  - Complete primary action writes year-prefixed ittYY-game-* with content.
@@ -35,6 +35,10 @@ const GAMES = [
   { year: '2014', prefix: 'itt14', gameId: 'tilefold', key: 'itt14-game-tilefold', kind: 'score-end' },
   { year: '2015', prefix: 'itt15', gameId: 'blobrush', key: 'itt15-game-blobrush', kind: 'score-end' },
   { year: '2016', prefix: 'itt16', gameId: 'gymrush', key: 'itt16-game-gymrush', kind: 'score-end' },
+  { year: '2017', prefix: 'itt17', gameId: 'stormcircle', key: 'itt17-game-stormcircle', kind: 'score-end' },
+  { year: '2018', prefix: 'itt18', gameId: 'consentdash', key: 'itt18-game-consentdash', kind: 'score-end' },
+  { year: '2019', prefix: 'itt19', gameId: 'continuerow', key: 'itt19-game-continuerow', kind: 'score-end' },
+  { year: '2020', prefix: 'itt20', gameId: 'among', key: 'itt20-game-among', kind: 'score-end' },
 ];
 
 /**
@@ -342,6 +346,46 @@ test.describe('REAL complete writes', () => {
     expect(String(blob.year)).toBe('2016');
     expect(blob.best).toBeGreaterThanOrEqual(40);
     expect(await getKey(page, 'itt15-game-blobrush')).toBeFalsy();
+  });
+
+  test('2017 stormcircle API real writes itt17-game-stormcircle', async ({ page }) => {
+    await enterYear(page, '2017');
+    await clearPrefixGames(page, 'itt17');
+    const frame = await openGame(page, '2017');
+    await frame.locator('[data-game-start]').click();
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
+    await waitYearGame(page);
+    await page.evaluate(() => {
+      const w = document.getElementById('content').contentWindow;
+      const host = w.document.querySelector('[data-year-game]');
+      if (host && typeof host.__ittStormCircleEnd === 'function') host.__ittStormCircleEnd(40);
+      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('stormcircle', 40, { year: '2017' });
+    });
+    const blob = JSON.parse((await getKey(page, 'itt17-game-stormcircle')) || '{}');
+    expect(blob.real).toBe(true);
+    expect(String(blob.year)).toBe('2017');
+    expect(blob.best).toBeGreaterThanOrEqual(40);
+    expect(await getKey(page, 'itt16-game-gymrush')).toBeFalsy();
+  });
+
+  test('2018 consentdash API real writes itt18-game-consentdash', async ({ page }) => {
+    await enterYear(page, '2018');
+    await clearPrefixGames(page, 'itt18');
+    const frame = await openGame(page, '2018');
+    await frame.locator('[data-game-start]').click();
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
+    await waitYearGame(page);
+    await page.evaluate(() => {
+      const w = document.getElementById('content').contentWindow;
+      const host = w.document.querySelector('[data-year-game]');
+      if (host && typeof host.__ittConsentDashEnd === 'function') host.__ittConsentDashEnd(40);
+      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('consentdash', 40, { year: '2018' });
+    });
+    const blob = JSON.parse((await getKey(page, 'itt18-game-consentdash')) || '{}');
+    expect(blob.real).toBe(true);
+    expect(String(blob.year)).toBe('2018');
+    expect(blob.best).toBeGreaterThanOrEqual(40);
+    expect(await getKey(page, 'itt17-game-stormcircle')).toBeFalsy();
   });
 
   test('1995 checkers resign writes losses', async ({ page }) => {

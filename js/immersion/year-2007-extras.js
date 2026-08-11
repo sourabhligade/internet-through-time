@@ -6,64 +6,21 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-
-  function U() {
-    return ITT.util || {};
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2007");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2007 — load year-extras-kit.js first");
+    return;
   }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2007";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) { /* */ }
-    return "itt07";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      try {
-        st.style.color = opts.error ? "#900" : "#060";
-      } catch (eC) { /* */ }
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3500 });
-      }
-    } catch (e) { /* */ }
-  }
-  function saveJSON(k, v) {
-    localStorage.setItem(k, JSON.stringify(v));
-  }
-  function loadJSON(k) {
-    try {
-      return JSON.parse(localStorage.getItem(k) || "null");
-    } catch (e) {
-      return null;
-    }
-  }
-  function countChecked(doc, sel) {
-    var nodes = doc.querySelectorAll(sel);
-    var n = 0;
-    var i;
-    for (i = 0; i < nodes.length; i++) {
-      if (nodes[i].checked) n++;
-    }
-    return n;
-  }
-  function markUsed(stepId) {
-    try {
-      if (ITT._immersionApi && typeof ITT._immersionApi.markTourUsed === "function") {
-        ITT._immersionApi.markTourUsed(stepId || undefined);
-      }
-    } catch (e) { /* */ }
-  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
   /** Generic multi-checkbox gate: button[data-itt-real-save] */
   function bootGenericReal(doc) {

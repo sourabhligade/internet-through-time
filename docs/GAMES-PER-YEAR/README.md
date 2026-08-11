@@ -32,6 +32,10 @@
 | 2014 | Tile Fold | 2048-class merge | S–M | [YEAR-2014.md](YEAR-2014.md) |
 | 2015 | Blob Rush | agar.io-class arena | S–M | [YEAR-2015.md](YEAR-2015.md) |
 | 2016 | Gym Rush | Pokémon GO–class map (no sprites) | M | [YEAR-2016.md](YEAR-2016.md) |
+| 2017 | Storm Circle | Fortnite BR–class storm | M | [YEAR-2017.md](YEAR-2017.md) |
+| 2018 | Consent Dash | GDPR CMP Manage path | M | [YEAR-2018.md](YEAR-2018.md) |
+| 2019 | Continue Row | Disney+ Who’s Watching + continue | M | [YEAR-2019.md](YEAR-2019.md) |
+| 2020 | Sus Vote | Among Us–class vote (no sprites) | M | [YEAR-2020.md](YEAR-2020.md) |
 
 ## Shared integration (every year)
 
@@ -86,7 +90,7 @@ npx playwright test e2e/year-games.spec.js --workers=1
 
 ## Implementation status (2026-08-06)
 
-**All 23 open years (1994–2016) ship a playable `years/YYYY/sites/playable/game.html`.**
+**All 27 open years (1994–2020) ship a playable `years/YYYY/sites/playable/game.html`.**
 
 | Year | Game | Module | Storage key |
 |------|------|--------|-------------|

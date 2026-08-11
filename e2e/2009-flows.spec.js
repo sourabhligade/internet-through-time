@@ -130,6 +130,8 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-wave']);
     await page.reload();
     await page.waitForSelector('[data-wave-invite]', { timeout: 20000 });
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
     await page.locator('[data-wave-invite]').click();
     await expect(page.locator('[data-wave-status]')).toContainText(/invite|itt09|2010/i, { timeout: 8000 });
     expect(await page.evaluate(() => localStorage.getItem('itt09-wave'))).toMatch(/invited|true/i);

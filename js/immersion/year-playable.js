@@ -702,6 +702,122 @@
         seconds: 14,
         accent: "#3d5a3d"
       }
+    ],
+    "2017": [
+      {
+        id: "1",
+        type: "hold",
+        title: "Face ID gaze",
+        blurb: "Hold to unlock — iPhone X Sep 12 theater. No home button. Not Touch ID. Not XS.",
+        holdMs: 2000,
+        accent: "#5e35b1"
+      },
+      {
+        id: "2",
+        type: "targets",
+        title: "Storm drop",
+        blurb: "Tap Storm · Loot · Zone · 100. Fortnite BR Sep 26 class — no official art.",
+        goal: 8,
+        seconds: 12,
+        accent: "#1565c0",
+        labels: ["Storm", "Loot", "Zone", "100", "Victory"]
+      },
+      {
+        id: "3",
+        type: "type",
+        title: "two hundred eighty",
+        blurb: "Type the tweet length. Twitter 280 Nov 7 2017 — not 140.",
+        phrase: "two hundred eighty",
+        seconds: 16,
+        accent: "#1da1f2"
+      }
+    ],
+    "2018": [
+      {
+        id: "1",
+        type: "targets",
+        title: "Cookie banner slap",
+        blurb: "Tap Manage · Access · Erase · Port. Accept All is the trap — GDPR 25 May 2018.",
+        goal: 8,
+        seconds: 12,
+        accent: "#1565c0",
+        labels: ["Manage", "Access", "Erase", "Port"]
+      },
+      {
+        id: "2",
+        type: "hold",
+        title: "For You scroll",
+        blurb: "Hold to scroll a For You page — TikTok Aug 2 2018 merge theater. Not Reels.",
+        holdMs: 2000,
+        accent: "#111111"
+      },
+      {
+        id: "3",
+        type: "type",
+        title: "i want to be forgotten",
+        blurb: "Type the erasure line. Art. 17 voice · not a real deletion · not legal advice.",
+        phrase: "i want to be forgotten",
+        seconds: 18,
+        accent: "#1565c0"
+      }
+    ],
+    "2019": [
+      {
+        id: "1",
+        type: "targets",
+        title: "Who's watching",
+        blurb: "Tap Adult · Kids · Add. Start trial is the trap — Disney+ 12 Nov 2019.",
+        goal: 8,
+        seconds: 12,
+        accent: "#0f0f0f",
+        labels: ["Adult", "Kids", "Add"]
+      },
+      {
+        id: "2",
+        type: "hold",
+        title: "Continue-row scroll",
+        blurb: "Hold to scroll Continue Watching. Same profile, same row after reload.",
+        holdMs: 2000,
+        accent: "#111111"
+      },
+      {
+        id: "3",
+        type: "type",
+        title: "who's watching",
+        blurb: "Type the grid line. Not a subscription. Not Consent Dash.",
+        phrase: "who's watching",
+        seconds: 18,
+        accent: "#0f0f0f"
+      }
+    ],
+    "2020": [
+      {
+        id: "1",
+        type: "targets",
+        title: "Pick a color",
+        blurb: "Tap Red · Blue · Lime. Mute-all is the Zoom toy — this is Sus Vote.",
+        goal: 8,
+        seconds: 12,
+        accent: "#0b1020",
+        labels: ["Red", "Blue", "Lime"]
+      },
+      {
+        id: "2",
+        type: "hold",
+        title: "Task bar",
+        blurb: "Hold ~2s. Fake tasks. Emergency meeting next.",
+        holdMs: 2000,
+        accent: "#1565c0"
+      },
+      {
+        id: "3",
+        type: "type",
+        title: "red is sus",
+        blurb: "Type the emergency line. Not Consent Dash. Not Mute-all-as-game.",
+        phrase: "red is sus",
+        seconds: 18,
+        accent: "#c62828"
+      }
     ]
   };
 

@@ -52,6 +52,68 @@ test.describe("2016 REAL flows", () => {
     });
   });
 
+  test("Stories add then reload feed shows caption", async ({ page }) => {
+    await page.goto("/years/2016/sites/instagram/stories.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-ig-stories");
+      localStorage.removeItem("itt16-ig-stories-list");
+    });
+    await page.reload();
+    await page.locator("[data-ig-stories-caption]").fill("coffee");
+    await page.locator("[data-ig-stories-24h]").check();
+    await page.locator("[data-ig-stories-not-reels]").check();
+    await page.locator("[data-ig-stories-add]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-ig-stories"))).toBeTruthy();
+    await page.goto("/years/2016/sites/instagram/index.html");
+    await page
+      .waitForFunction(
+        () => document.documentElement.getAttribute("data-itt-feat-year2016extras") === "1",
+        null,
+        { timeout: 15000 }
+      )
+      .catch(() => {});
+    await expect(page.locator("[data-ig-has-story]")).toBeVisible();
+    await expect(page.locator("[data-ig-stories-echo]")).toContainText("coffee");
+    await expect(page.locator("[data-ig-stories-list]")).toContainText("coffee");
+  });
+
+  test("Watch without a story never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/instagram/watch.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-ig-stories");
+      localStorage.removeItem("itt16-ig-stories-watch");
+    });
+    await page.reload();
+    await page.locator("[data-ig-watch-24h]").check();
+    await page.locator("[data-ig-watch-not-post]").check();
+    await page.locator("[data-ig-stories-watch]").click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem("itt16-ig-stories-watch"))).toBeFalsy();
+  });
+
+  test("Watch after add writes itt16-ig-stories-watch", async ({ page }) => {
+    await page.goto("/years/2016/sites/instagram/stories.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-ig-stories");
+      localStorage.removeItem("itt16-ig-stories-watch");
+    });
+    await page.reload();
+    await page.locator("[data-ig-stories-caption]").fill("sunset");
+    await page.locator("[data-ig-stories-24h]").check();
+    await page.locator("[data-ig-stories-not-reels]").check();
+    await page.locator("[data-ig-stories-add]").click();
+    await page.goto("/years/2016/sites/instagram/watch.html");
+    await assertBlockedThenWrites(page, {
+      path: "sites/instagram/watch.html",
+      key: "itt16-ig-stories-watch",
+      save: "[data-ig-stories-watch]",
+      checks: ["[data-ig-watch-24h]", "[data-ig-watch-not-post]"],
+    });
+    const raw = await page.evaluate(() => localStorage.getItem("itt16-ig-stories-watch"));
+    expect(raw).toMatch(/sunset/);
+    expect(raw).toMatch(/"year":"2016"/);
+  });
+
   test("Stories checks without caption never write", async ({ page }) => {
     await page.goto("/years/2016/sites/instagram/stories.html");
     await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
@@ -61,6 +123,30 @@ test.describe("2016 REAL flows", () => {
     await page.locator("[data-ig-stories-add]").click();
     await page.waitForTimeout(120);
     expect(await page.evaluate(() => localStorage.getItem("itt16-ig-stories"))).toBeFalsy();
+  });
+
+  test("PoGO map needs literacy then stop", async ({ page }) => {
+    await page.goto("/years/2016/sites/pogo/map.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-pogo");
+      localStorage.removeItem("itt16-pogo-stop");
+    });
+    await page.reload();
+    await page.locator("[data-pogo-stop='park']").click();
+    await page.locator("[data-pogo-stop-nogps]").check();
+    await page.locator("[data-pogo-stop-save]").click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem("itt16-pogo-stop"))).toBeFalsy();
+    await page.goto("/years/2016/sites/pogo/index.html");
+    await page.locator("[data-pogo-location]").check();
+    await page.locator("[data-pogo-no-art]").check();
+    await page.locator("[data-pogo-outside]").check();
+    await page.locator("[data-pogo-catch]").click();
+    await page.goto("/years/2016/sites/pogo/map.html");
+    await page.locator("[data-pogo-stop='park']").click();
+    await page.locator("[data-pogo-stop-nogps]").check();
+    await page.locator("[data-pogo-stop-save]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-pogo-stop"))).toBeTruthy();
   });
 
   test("PoGO needs location + no-art", async ({ page }) => {
@@ -86,6 +172,98 @@ test.describe("2016 REAL flows", () => {
     await page.locator("[data-reaction-not-dislike]").check();
     await page.locator("[data-reactions-save]").click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-reactions"))).toBeTruthy();
+  });
+
+  test("Reactions persist on feed after pick", async ({ page }) => {
+    await page.goto("/years/2016/sites/facebook/reactions.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-reactions"));
+    await page.reload();
+    await page.locator('[data-reaction="love"]').click();
+    await page.locator("[data-reaction-not-dislike]").check();
+    await page.locator("[data-reactions-save]").click();
+    await page.goto("/years/2016/sites/facebook/index.html");
+    await page
+      .waitForFunction(
+        () => document.documentElement.getAttribute("data-itt-feat-year2016extras") === "1",
+        null,
+        { timeout: 15000 }
+      )
+      .catch(() => {});
+    await expect(page.locator("[data-reaction-on-post]")).toContainText(/love/i);
+    await page.goto("/years/2016/sites/facebook/post.html");
+    await expect(page.locator("[data-reaction-on-post]")).toContainText(/love/i);
+  });
+
+  test("WA chat needs E2E then message", async ({ page }) => {
+    await page.goto("/years/2016/sites/whatsapp/chat.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-wa-e2e");
+      localStorage.removeItem("itt16-wa-chat");
+    });
+    await page.reload();
+    await page.locator("[data-wa-chat-text]").fill("see you");
+    await page.locator("[data-wa-chat-lock]").check();
+    await page.locator("[data-wa-chat-send]").click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem("itt16-wa-chat"))).toBeFalsy();
+    await page.goto("/years/2016/sites/whatsapp/e2e.html");
+    await page.locator("[data-wa-e2e-meaning]").check();
+    await page.locator("[data-wa-e2e-date]").check();
+    await page.locator("[data-wa-e2e-save]").click();
+    await page.goto("/years/2016/sites/whatsapp/chat.html");
+    await page.locator("[data-wa-chat-text]").fill("see you");
+    await page.locator("[data-wa-chat-lock]").check();
+    await page.locator("[data-wa-chat-send]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-wa-chat"))).toBeTruthy();
+  });
+
+  test("Dongle needs iPhone 7 literacy", async ({ page }) => {
+    await page.goto("/years/2016/sites/iphone/dongle.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-iphone7");
+      localStorage.removeItem("itt16-dongle");
+    });
+    await page.reload();
+    await page.locator("[data-dongle-price]").check();
+    await page.locator("[data-dongle-wired]").check();
+    await page.locator("[data-dongle-save]").click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem("itt16-dongle"))).toBeFalsy();
+    await page.goto("/years/2016/sites/iphone/7.html");
+    await page.locator("[data-iphone7-jack]").check();
+    await page.locator("[data-iphone7-adapter]").check();
+    await page.locator("[data-iphone7-not-x]").check();
+    await page.locator("[data-iphone7-save]").click();
+    await page.goto("/years/2016/sites/iphone/dongle.html");
+    await page.locator("[data-dongle-price]").check();
+    await page.locator("[data-dongle-wired]").check();
+    await page.locator("[data-dongle-save]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-dongle"))).toBeTruthy();
+  });
+
+  test("Vine clip incomplete then writes; goodbye blocks new loops", async ({ page }) => {
+    await page.goto("/years/2016/sites/vine/loop.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-vine");
+      localStorage.removeItem("itt16-vine-clip");
+    });
+    await page.reload();
+    await page.locator("[data-vine-clip-six]").check();
+    await page.locator("[data-vine-clip-save]").click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem("itt16-vine-clip"))).toBeFalsy();
+    await page.locator("[data-vine-clip-caption]").fill("cat loop");
+    await page.locator("[data-vine-clip-save]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-vine-clip"))).toBeTruthy();
+    await page.goto("/years/2016/sites/vine/goodbye.html");
+    await page.locator("[data-vine-announce]").check();
+    await page.locator("[data-vine-not-gone]").check();
+    await page.locator("[data-vine-save]").click();
+    await page.goto("/years/2016/sites/vine/loop.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-vine-clip"));
+    await page.reload();
+    await expect(page.locator("[data-vine-clip-save]")).toBeDisabled();
+    expect(await page.evaluate(() => localStorage.getItem("itt16-vine-clip"))).toBeFalsy();
   });
 
   test("WA E2E two checks", async ({ page }) => {
@@ -257,6 +435,164 @@ test.describe("2016 REAL flows", () => {
     await page.locator("[data-ig-live-save]").click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-ig-live"))).toBeTruthy();
     expect(await page.evaluate(() => localStorage.getItem("itt15-watch"))).toBe('{"keep":1}');
+  });
+
+  test("P2 letter two checks", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/apple/letter.html",
+      key: "itt16-fbi-letter",
+      save: "[data-fbi-save]",
+      checks: ["[data-fbi-backdoor]", "[data-fbi-not-crime]"],
+    });
+  });
+
+  test("P2 Free Basics two checks", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/freebasics/index.html",
+      key: "itt16-freebasics",
+      save: "[data-freebasics-save]",
+      checks: ["[data-fb-trai-date]", "[data-fb-trai-not-wall]"],
+    });
+  });
+
+  test("P2 Marketplace title + price + no-pay", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/facebook/marketplace.html",
+      key: "itt16-marketplace",
+      save: "[data-mp-save]",
+      fills: [
+        ["[data-mp-title]", "desk lamp"],
+        ["[data-mp-price]", "12"],
+      ],
+      checks: ["[data-mp-no-pay]"],
+    });
+  });
+
+  test("P2 Duo three checks", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/duo/index.html",
+      key: "itt16-duo",
+      save: "[data-duo-save]",
+      checks: ["[data-duo-phone]", "[data-duo-knock]", "[data-duo-not-meet]"],
+    });
+  });
+
+  test("P2 Teams preview + GA 2017", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/teams/index.html",
+      key: "itt16-teams-preview",
+      save: "[data-teams-save]",
+      checks: ["[data-teams-preview]", "[data-teams-ga]"],
+    });
+  });
+
+  test("P2 AlphaGo 4-1 + livestream", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/alphago/index.html",
+      key: "itt16-alphago",
+      save: "[data-ag-save]",
+      checks: ["[data-ag-score]", "[data-ag-stream]"],
+    });
+  });
+
+  test("P2 Let’s Encrypt prod + 90 days", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/letsencrypt/index.html",
+      key: "itt16-letsencrypt",
+      save: "[data-le-save]",
+      checks: ["[data-le-prod]", "[data-le-90]"],
+    });
+  });
+
+  test("P2 Yahoo two notices + not 3B", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/yahoo-breach/index.html",
+      key: "itt16-yahoo-breach",
+      save: "[data-yh-save]",
+      checks: ["[data-yh-two]", "[data-yh-not-3b]"],
+    });
+  });
+
+  test("P2 leftover Workplace", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/workplace/index.html",
+      key: "itt16-workplace",
+      save: "[data-wp-save]",
+      checks: ["[data-wp-work]", "[data-wp-not-feed]"],
+    });
+  });
+
+  test("P2 leftover iOS 10", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/iphone/ios10.html",
+      key: "itt16-ios10",
+      save: "[data-ios10-save]",
+      checks: ["[data-ios10-stickers]", "[data-ios10-not-face]"],
+    });
+  });
+
+  test("P2 leftover Nougat", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/android/nougat.html",
+      key: "itt16-nougat",
+      save: "[data-nougat-save]",
+      checks: ["[data-nougat-date]", "[data-nougat-split]"],
+    });
+  });
+
+  test("P2 leftover Note 7", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/note7/index.html",
+      key: "itt16-note7",
+      save: "[data-note7-save]",
+      checks: ["[data-note7-down]", "[data-note7-replace]"],
+    });
+  });
+
+  test("P2 leftover Mario Run", async ({ page }) => {
+    await assertBlockedThenWrites(page, {
+      path: "sites/mariorun/index.html",
+      key: "itt16-mario-run",
+      save: "[data-mario-save]",
+      checks: ["[data-mario-date]", "[data-mario-price]"],
+    });
+  });
+
+  test("leftover Workplace reload + isolation vs itt15", async ({ page }) => {
+    await page.goto("/years/2016/sites/workplace/index.html");
+    await page.evaluate(() => {
+      localStorage.setItem("itt15-watch", '{"keep":1}');
+      localStorage.removeItem("itt16-workplace");
+      localStorage.removeItem("itt16-ig-stories");
+    });
+    await page.reload();
+    await page.locator("[data-wp-save]").click();
+    expect(await page.evaluate(() => localStorage.getItem("itt16-workplace"))).toBeFalsy();
+    await page.locator("[data-wp-work]").check();
+    await page.locator("[data-wp-not-feed]").check();
+    await page.locator("[data-wp-save]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-workplace"))).toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem("itt15-watch"))).toBe('{"keep":1}');
+    expect(await page.evaluate(() => localStorage.getItem("itt16-ig-stories"))).toBeFalsy();
+    await page.reload();
+    await expect(page.locator("[data-wp-status]")).toContainText(/Workplace/i);
+    await expect(page.locator("[data-next-flow]")).toBeVisible();
+    await expect(page.locator("[data-next-flow] a[href*='stories']")).toBeVisible();
+  });
+
+  test("P2 letter isolation vs itt15 + Stories", async ({ page }) => {
+    await page.goto("/years/2016/sites/apple/letter.html");
+    await page.evaluate(() => {
+      localStorage.setItem("itt15-watch", '{"keep":1}');
+      localStorage.removeItem("itt16-fbi-letter");
+      localStorage.removeItem("itt16-ig-stories");
+    });
+    await page.locator("[data-fbi-backdoor]").check();
+    await page.locator("[data-fbi-not-crime]").check();
+    await page.locator("[data-fbi-save]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-fbi-letter"))).toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem("itt15-watch"))).toBe('{"keep":1}');
+    expect(await page.evaluate(() => localStorage.getItem("itt16-ig-stories"))).toBeFalsy();
   });
 
   test("musical.ly caption + not TikTok", async ({ page }) => {

@@ -454,15 +454,38 @@
     var tlEnable = doc.querySelector("[data-fb-timeline-enable]");
     var tlStatus = doc.querySelector("[data-fb-timeline-status]");
     if (tlEnable) {
+      function tlChecked(sel) {
+        var el = doc.querySelector(sel);
+        return !!(el && el.checked);
+      }
       try {
-        if (localStorage.getItem(tlKey()) === "1" && tlStatus) {
+        var rawTl = localStorage.getItem(tlKey());
+        if (rawTl && rawTl !== "1" && tlStatus) {
           tlStatus.innerHTML = "Timeline <b>on</b> for this profile (museum · this browser).";
+        } else if (rawTl === "1" && tlStatus) {
+          tlStatus.innerHTML = "Old one-click flag — turn on again with both checks.";
         }
       } catch (eTl) { /* */ }
       tlEnable.addEventListener("click", function (ev) {
         ev.preventDefault();
+        if (!tlChecked("[data-fb-tl-f8]") || !tlChecked("[data-fb-tl-not-stories]")) {
+          if (tlStatus) {
+            tlStatus.innerHTML = "Confirm F8 Sep 22 2011 + not Instagram Stories.";
+          }
+          return;
+        }
         try {
-          localStorage.setItem(tlKey(), "1");
+          localStorage.setItem(
+            tlKey(),
+            JSON.stringify({
+              f8: "2011-09-22",
+              notStories: true,
+              multiStep: true,
+              real: true,
+              year: "2011",
+              ts: Date.now()
+            })
+          );
         } catch (e2) { /* */ }
         if (tlStatus) {
           tlStatus.innerHTML =

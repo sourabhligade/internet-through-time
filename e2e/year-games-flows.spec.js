@@ -332,6 +332,66 @@ test.describe('year game flows — full matrix', () => {
     await expect(frame.locator('[data-itt-action-status]')).toContainText(/score|gold|Gym|Battery|test end/i);
   });
 
+  test('2017 Storm Circle: start → canvas + status', async ({ page }) => {
+    const frame = await openGame(page, '2017');
+    await frame.locator('[data-game-start]').click();
+    await expect(frame.locator('#game-canvas')).toBeVisible();
+    await frame.locator('#game-canvas').click({ force: true });
+    await expect(frame.locator('[data-itt-action-status], [data-game-score]').first()).toBeVisible({
+      timeout: 5000,
+    });
+    await expect(frame.locator('body')).toContainText(/Storm Circle|Sep 26 2017|no official/i);
+  });
+
+  test('2018 Consent Dash: start → canvas + status', async ({ page }) => {
+    const frame = await openGame(page, '2018');
+    await frame.locator('[data-game-start]').click();
+    await expect(frame.locator('#game-canvas')).toBeVisible();
+    await frame.locator('#game-canvas').click({ force: true });
+    await expect(frame.locator('[data-itt-action-status], [data-game-score]').first()).toBeVisible({
+      timeout: 5000,
+    });
+    await expect(frame.locator('body')).toContainText(/Consent Dash|25 May|Manage/i);
+  });
+
+  test('2018 Consent Dash end API + pause honors YearGame', async ({ page }) => {
+    const frame = await openGame(page, '2018', '?fast=1');
+    await frame.locator('[data-game-start]').click();
+    await page.waitForTimeout(200);
+    const endOk = await page.evaluate(() => {
+      try {
+        const w = document.getElementById('content') && document.getElementById('content').contentWindow;
+        const host = w && w.document.querySelector('[data-year-game]');
+        if (!host || typeof host.__ittConsentDashEnd !== 'function') return false;
+        host.__ittConsentDashEnd(40);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    });
+    expect(endOk).toBeTruthy();
+    await expect(frame.locator('[data-itt-action-status]').first()).toContainText(/score|gold|Manage|test end/i);
+  });
+
+  test('2017 Storm Circle end API + pause honors YearGame', async ({ page }) => {
+    const frame = await openGame(page, '2017', '?fast=1');
+    await frame.locator('[data-game-start]').click();
+    await page.waitForTimeout(200);
+    const endOk = await page.evaluate(() => {
+      try {
+        const w = document.getElementById('content') && document.getElementById('content').contentWindow;
+        const host = w && w.document.querySelector('[data-year-game]');
+        if (!host || typeof host.__ittStormCircleEnd !== 'function') return false;
+        host.__ittStormCircleEnd(40);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    });
+    expect(endOk).toBeTruthy();
+    await expect(frame.locator('[data-itt-action-status]').first()).toContainText(/score|gold|Storm|Battery|test end/i);
+  });
+
   test('1995 Checkers: start → select piece → destinations marked', async ({ page }) => {
     const frame = await openGame(page, '1995', '?fast=1', 'itt95');
     await frame.locator('[data-game-start]').click();

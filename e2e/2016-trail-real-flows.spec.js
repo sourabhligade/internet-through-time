@@ -12,10 +12,35 @@ test.describe("2016 trail REAL", () => {
     await page.locator("[data-ig-stories-not-reels]").check();
     await page.locator("[data-ig-stories-add]").click();
     await expect(page.locator("[data-next-flow]")).toBeVisible();
+    await expect(page.locator("[data-next-flow] a[href*='watch']")).toBeVisible();
     await expect(page.locator("[data-next-flow] a[href*='live']")).toBeVisible();
     await page.locator("[data-next-flow] a[href*='live']").click();
     await expect(page).toHaveURL(/instagram\/live/);
     await expect(page.locator("body")).toContainText(/Nov(?:ember)?\s*21/i);
+  });
+
+  test("Stories machine feed → add → watch", async ({ page }) => {
+    await page.goto("/years/2016/sites/instagram/index.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt16-ig-stories");
+      localStorage.removeItem("itt16-ig-stories-list");
+      localStorage.removeItem("itt16-ig-stories-watch");
+    });
+    await page.reload();
+    await expect(page.locator("[data-ig-empty]")).toBeVisible();
+    await page.locator("a[href='stories.html']").first().click();
+    await page.locator("[data-ig-stories-caption]").fill("coffee");
+    await page.locator("[data-ig-stories-24h]").check();
+    await page.locator("[data-ig-stories-not-reels]").check();
+    await page.locator("[data-ig-stories-add]").click();
+    await page.locator("[data-next-flow] a[href*='watch']").click();
+    await expect(page).toHaveURL(/instagram\/watch/);
+    await expect(page.locator("[data-ig-watch-caption]")).toContainText("coffee");
+    await page.locator("[data-ig-watch-24h]").check();
+    await page.locator("[data-ig-watch-not-post]").check();
+    await page.locator("[data-ig-stories-watch]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt16-ig-stories-watch"))).toBeTruthy();
+    await expect(page.locator("[data-next-flow] a[href*='snapchat']")).toBeVisible();
   });
 
   test("Pixel complete next-flow to Google Home", async ({ page }) => {

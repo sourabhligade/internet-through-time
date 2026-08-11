@@ -3,21 +3,25 @@ const { test, expect } = require("@playwright/test");
 const { waitKey } = require("./helpers");
 
 test.describe("Per-year guided start trails", () => {
-  test("hub registers 23 year chips and trail map has every YYYY-start", async ({ page }) => {
+  test("hub registers 26 year chips and trail map has every YYYY-start", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator(".passport-grid .passport-year")).toHaveCount(23);
+    await expect(page.locator(".passport-grid .passport-year")).toHaveCount(26);
     const trails = await page.evaluate(() => {
       const T = (window.ITT && ITT.MuseumProgress && ITT.MuseumProgress.TRAILS) || {};
       const ids = Object.keys(T).filter((k) => /-start$/.test(k)).sort();
       return ids;
     });
-    expect(trails.length).toBe(23);
+    expect(trails.length).toBe(26);
     expect(trails[0]).toBe("1994-start");
     expect(trails).toContain("2013-start");
     expect(trails).toContain("2014-start");
     expect(trails).toContain("2015-start");
     expect(trails).toContain("2016-start");
-    expect(trails[trails.length - 1]).toBe("2016-start");
+    expect(trails).toContain("2017-start");
+    expect(trails).toContain("2018-start");
+    expect(trails).toContain("2019-start");
+    expect(trails).toContain("2020-start");
+    expect(trails[trails.length - 1]).toBe("2020-start");
   });
 
   test("deep link ?trail=2010-start writes night state", async ({ page }) => {
@@ -45,7 +49,7 @@ test.describe("Per-year guided start trails", () => {
   });
 
   test("every year home has a numbered ott-guided P0 trail", async ({ page }) => {
-    for (let y = 1994; y <= 2016; y++) {
+    for (let y = 1994; y <= 2020; y++) {
       await page.goto(`/years/${y}/pages/home.html`);
       const rail = page.locator(`#ott-guided-${y}`);
       await expect(rail).toBeVisible();

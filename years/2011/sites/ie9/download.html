@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var st = document.querySelector("[data-ie9-status]");
   function show() {
     try {
-      if (localStorage.getItem("itt11-ie9") === "1" && st) {
+      if (localStorage.getItem("itt11-ie9") && st) {
         st.innerHTML = "IE 9 marked <b>installed</b> (this browser only · museum theater).";
       }
     } catch (e) {}
@@ -20,7 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btn) {
     btn.addEventListener("click", function (ev) {
       ev.preventDefault();
-      try { localStorage.setItem("itt11-ie9", "1"); } catch (e2) {}
+      var os = document.querySelector("[data-ie9-os]");
+      var ch = document.querySelector("[data-ie9-not-chrome]");
+      if (!os || !os.checked || !ch || !ch.checked) {
+        if (st) st.textContent = "Confirm Vista/7 + not Chrome-default first.";
+        return;
+      }
+      try {
+        localStorage.setItem("itt11-ie9", JSON.stringify({
+          installed: true, real: true, multiStep: true, year: "2011", os: "vista-7", ts: Date.now()
+        }));
+      } catch (e2) {}
       show();
       if (st) st.innerHTML = "Download complete · IE 9 ready · no real installer ran.";
     });
@@ -35,7 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
  <h1>Download Internet Explorer 9</h1>
  <div class="ie9-dl">
   <p>Free upgrade for Windows Vista and Windows 7.</p>
-  <p><a href="#" data-ie9-download style="background:#1a6fb5;color:#fff;padding:8px 16px;text-decoration:none;font-weight:bold">Download now (theater)</a></p>
+  <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-ie9-os> Vista / Windows 7 — not Windows 8</label>
+  <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-ie9-not-chrome> Not the mass Chrome default yet</label>
+  <p><a href="#" data-ie9-download style="background:#1a6fb5;color:#fff;padding:8px 16px;text-decoration:none;font-weight:bold">Download now</a></p>
   <p data-ie9-status style="font-size:12px;margin-top:10px"></p>
  </div>
  <p style="font-size:11px;color:#666">No real binary</p>

@@ -79,14 +79,14 @@ Full map: [`../../2015-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](../..
 | ID | Asset | Source | Result |
 |----|-------|--------|--------|
 | H15-50 | Periscope launch homepage | https://web.archive.org/web/20150326153619/https://www.periscope.tv/ | **[x]** splash-bg + social-og + favicon saved 2026-08-10 |
-| H15-51 | Periscope pre-launch | https://web.archive.org/web/20150324014833/https://www.periscope.tv/ | **found** · **[ ]** |
+| H15-51 | Periscope pre-launch | https://web.archive.org/web/20150324014833/https://www.periscope.tv/ | **[~]** optional · launch still already **[x]** |
 | H15-52 | Periscope CDX Mar–Jun 2015 | cdx `url=periscope.tv&from=201503&to=201506` | **15+ 200s confirmed** |
-| H15-53 | Discord 2015 site | https://www.webdesignmuseum.org/gallery/discord-in-2015 | **found** WDM · **[ ] crop** |
-| H15-54 | YouTube 2015 | https://www.webdesignmuseum.org/gallery/youtube-2015 | **found** WDM · **[ ] crop** |
-| H15-55 | Google 2015 | https://www.webdesignmuseum.org/gallery/google-2015 | **found** WDM · **[ ] crop** |
-| H15-56 | Google Mobile 2015 | https://www.webdesignmuseum.org/gallery/google-mobile-in-2015 | **found** WDM · **[ ] crop** |
-| H15-57 | Microsoft Edge 2015 | https://www.webdesignmuseum.org/web-design-history/microsoft-edge-2015 | **found** WDM · **[ ] crop** |
-| H15-58 | Apple Watch apps | https://www.webdesignmuseum.org/apple-watch | **found** WDM · **[ ] crop** |
+| H15-53 | Discord 2015 site | https://www.webdesignmuseum.org/gallery/discord-in-2015 | **[~]** L4 crop · 403 class last pass |
+| H15-54 | YouTube 2015 | https://www.webdesignmuseum.org/gallery/youtube-2015 | **[~]** L4 crop |
+| H15-55 | Google 2015 | https://www.webdesignmuseum.org/gallery/google-2015 | **[~]** L4 crop |
+| H15-56 | Google Mobile 2015 | https://www.webdesignmuseum.org/gallery/google-mobile-in-2015 | **[~]** L4 crop |
+| H15-57 | Microsoft Edge 2015 | https://www.webdesignmuseum.org/web-design-history/microsoft-edge-2015 | **[~]** L4 crop · room RECON + honesty |
+| H15-58 | Apple Watch apps | https://www.webdesignmuseum.org/apple-watch | **failed-final** 2026-08-10 · Watch room honesty strip · no invented logo |
 | H15-59 | Win10 splash 2015 | https://www.versionmuseum.com/history-of/microsoft-windows | **[x]** title-screen-vm-2015.png |
 | H15-60 | Win10 desktop 2015 | https://www.versionmuseum.com/history-of/microsoft-windows | **[x]** desktop-vm-2015.jpg |
 | H15-62 | Watch Newsroom stills | apple.com/newsroom/2015/03/09… | live page only modern `apple-logo-og` · **failed-final** (not used) |

@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every year 1994–2016 has 3 REAL playable toys (sites/playable).
+ * Every year 1994–2018 has 3 REAL playable toys (sites/playable).
  * Completing a run MUST write ittYY-playable | ittYY-playable-2 | ittYY-playable-3
  */
 const { test, expect } = require('@playwright/test');
@@ -122,6 +122,26 @@ const GAMES = {
     { type: 'targets' },
     { type: 'type', phrase: 'go outside' },
   ],
+  '2017': [
+    { type: 'hold', holdMs: 2000 },
+    { type: 'targets' },
+    { type: 'type', phrase: 'two hundred eighty' },
+  ],
+  '2018': [
+    { type: 'targets' },
+    { type: 'hold', holdMs: 2000 },
+    { type: 'type', phrase: 'i want to be forgotten' },
+  ],
+  '2019': [
+    { type: 'targets' },
+    { type: 'hold', holdMs: 2000 },
+    { type: 'type', phrase: "who's watching" },
+  ],
+  '2020': [
+    { type: 'targets' },
+    { type: 'hold', holdMs: 2000 },
+    { type: 'type', phrase: 'red is sus' },
+  ],
 };
 
 function prefix(year) {
@@ -223,7 +243,7 @@ for (const year of Object.keys(GAMES)) {
 }
 
 test('home pages link three playables for sample years', async ({ page }) => {
-  for (const y of ['1994', '2000', '2005', '2010', '2013', '2015', '2016']) {
+  for (const y of ['1994', '2000', '2005', '2010', '2013', '2015', '2016', '2017', '2018']) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator('a[href*="playable"][href*="g=1"]').first()).toBeVisible({
       timeout: 10000,

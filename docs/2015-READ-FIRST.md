@@ -17,6 +17,7 @@
 | Orientation only | §1–6 · stop |
 | **Research detail in phases (R0–R18)** | **[`2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md`](2015-RESEARCH-IN-DETAIL-STEP-BY-STEP-PHASES.md)** ← full research write-up |
 | **Implement from scratch (goals · phases · minute steps)** | **[`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)** ← **★ execute this** (lean rebuild · S0–S14) |
+| **★ Layer C / museum-grade A leftover** | [`2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md) **P8–P10** |
 | **Implement / leftover (historical clone path)** | [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (MVP [x] · leftover L0–L6 — do **not** `cp 2014` again) |
 | Goals / flows map | [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · master bible |
 | Implement / scaffold map | Reading order §10 · **[`2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)** |

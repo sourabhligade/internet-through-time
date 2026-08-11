@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2017">
+<head>
+<meta charset="utf-8">
+<title>Storm Circle — 2017</title>
+<link rel="stylesheet" href="../../../../css/period-2017.css">
+<link rel="stylesheet" href="../../../../css/year-game-ui.css">
+<style>
+.itt-year-game { max-width: 420px; margin: 0 auto; padding: 12px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #e8eefc; }
+.yg-shell { background: #1a1228; border: 1px solid #5e35b1; border-radius: 6px; }
+.honesty { font-size: 11px; background: #120a1a; border: 1px solid #7e57c2; padding: 6px; margin: 8px 0; color: #cdb; }
+#game-canvas { display: block; width: 100%; max-width: 400px; height: auto; background: #1b2838; border: 1px solid #334; cursor: pointer; touch-action: none; }
+.yg-body { background: #0a0612; margin: 0; padding: 12px; }
+button[data-game-start] { background: #7e57c2; color: #fff; border: none; padding: 8px 14px; font-weight: bold; cursor: pointer; border-radius: 4px; }
+</style>
+</head>
+<body class="yg-body yg-year-2017" bgcolor="#0a0612">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="itt-year-game yg-shell" data-year-game data-year="2017" data-game-id="stormcircle" data-yg-goal="Loot silhouettes. Stay inside the storm." data-yg-next-href="../iphone/x.html" data-yg-next-label="iPhone X / Face ID" tabindex="0">
+  <h1 style="margin:0 0 6px;color:#ce93d8">Storm Circle — 2017</h1>
+  <p style="margin:0;color:#9ab">Walk · tap gray loot · stay inside the shrinking storm. Year one-thing is still <a href="../iphone/x.html" style="color:#ce93d8">Face ID</a>.</p>
+  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1">Inspired by <b>Fortnite Battle Royale Sep 26 2017</b> · 100 players · free · museum title <b>Storm Circle</b> · <b>no official Epic art</b> · not on Switch this year · gold after loot + storm · death still writes best · key <code>itt17-game-stormcircle</code></p>
+  <div class="itt17-real honesty" data-itt-real-panel style="margin:8px 0">
+   <b>REAL map literacy</b> — incomplete never writes · play still starts without this
+   <label style="display:block;margin:4px 0"><input type="checkbox" data-req> This map does <b>not</b> start a real match</label>
+   <label style="display:block;margin:4px 0"><input type="checkbox" data-req> <b>No official Fortnite art</b> — silhouettes only</label>
+   <p><button type="button" data-itt-real-save data-storage-key="stormcircle-lit" data-min-req="2" data-requires="[data-req]">Save Storm Circle literacy</button></p>
+   <p data-itt-action-status style="min-height:1.1em;margin:4px 0 0;color:#ce93d8"></p>
+   <p style="font-size:10px;color:#789;margin:4px 0 0">Writes <code>itt17-stormcircle-lit</code>. Score key is <code>itt17-game-stormcircle</code> after a run with score&gt;0.</p>
+  </div>
+  <p>
+    <button type="button" data-game-start>New Game</button>
+    Score <b data-game-score>0</b> · Best <b data-game-best>0</b>
+  </p>
+  <canvas id="game-canvas" width="400" height="320" aria-label="Storm Circle map"></canvas>
+  <p data-itt-action-status style="margin-top:8px;color:#9ab;min-height:1.3em">WASD or tap · Space near loot · P pauses</p>
+  <p style="font-size:11px;color:#789">
+    <a href="index.html" style="color:#ce93d8">← Playables</a> ·
+    <a href="../../pages/home.html" style="color:#ce93d8">Starting Point</a> ·
+    <a href="../fortnite/index.html" style="color:#ce93d8">Fortnite literacy</a>
+  </p>
+</div>
+<script src="../../../../js/games/year-game-boot.js"></script>
+<script src="../../../../js/games/year-2017-stormcircle.js"></script>
+<script src="../../../../js/immersion-2017.js" defer></script>
+</body>
+</html>

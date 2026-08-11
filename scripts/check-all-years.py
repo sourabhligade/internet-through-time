@@ -25,8 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships (hub open 1994–2016 — DISK-TRUTH)
-KNOWN_YEARS = [str(y) for y in range(1994, 2017)]  # 1994–2016
+# Years the museum ships (hub open 1994–2020 — DISK-TRUTH)
+KNOWN_YEARS = [str(y) for y in range(1994, 2021)]  # 1994–2020
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -183,6 +183,69 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/pixel/index.html",
         "sites/home/index.html",
         "sites/snapchat/spectacles.html",
+    ],
+    "2017": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/iphone/x.html",
+        "sites/fortnite/index.html",
+        "sites/twitter/280.html",
+        "sites/wannacry/index.html",
+        "sites/vine/gone.html",
+        "sites/teams/index.html",
+        "sites/equifax/index.html",
+        "sites/windows10/index.html",
+        "sites/chrome/index.html",
+        "sites/playable/game.html",
+        "sites/musically/index.html",
+        "sites/switch/index.html",
+        "sites/yahoo-3b/index.html",
+        "sites/netneutrality/index.html",
+    ],
+    "2018": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/gdpr/index.html",
+        "sites/gdpr/manage.html",
+        "sites/gdpr/rights.html",
+        "sites/tiktok/fyp.html",
+        "sites/trust/index.html",
+        "sites/instagram/igtv.html",
+        "sites/spectre/index.html",
+        "sites/homepod/index.html",
+        "sites/chrome/index.html",
+        "sites/chrome/not-secure.html",
+        "sites/windows10/index.html",
+        "sites/playable/game.html",
+        "sites/youtube/premium.html",
+        "sites/fortnite/switch.html",
+        "sites/musically/index.html",
+    ],
+    "2019": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/disneyplus/index.html",
+        "sites/disneyplus/home.html",
+        "sites/fortnite/marshmello.html",
+        "sites/appletv/index.html",
+        "sites/googleplus/funeral.html",
+        "sites/ftc/index.html",
+        "sites/playable/game.html",
+        "sites/chrome/index.html",
+        "sites/windows10/index.html",
+    ],
+    "2020": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/zoom/index.html",
+        "sites/zoom/meeting.html",
+        "sites/zoom/recap.html",
+        "sites/instagram/reels.html",
+        "sites/ccpa/index.html",
+        "sites/flash/eol.html",
+        "sites/playable/game.html",
+        "sites/chrome/index.html",
+        "sites/windows10/index.html",
     ],
 }
 

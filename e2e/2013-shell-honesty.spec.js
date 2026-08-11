@@ -170,11 +170,12 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
     expect(raw).toMatch(/habit|downloaded|real/i);
   });
 
-  test('Win7 residual is 2013 voice not shell default for 2012', async ({ page }) => {
-    await page.goto('/years/2013/sites/windows7/index.html');
-    await expect(page.locator('body')).toContainText(/residual 2013|Mass residual 2013/i);
+  test('Win7 clone room is gone (lean 2013)', async ({ page }) => {
+    const w7 = await page.goto('/years/2013/sites/windows7/index.html');
+    expect(w7 && w7.status()).toBe(404);
+    await page.goto('/years/2013/pages/home.html');
+    await expect(page.locator('body')).toContainText(/This year is lean/i);
     await expect(page.locator('body')).not.toContainText('shell default for 2012');
-    await expect(page.locator('body')).toContainText('About 2013');
   });
 
   test('Vine pointer/touch hold path posts', async ({ page }) => {

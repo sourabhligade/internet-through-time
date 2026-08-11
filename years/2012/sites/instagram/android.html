@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var btn = document.querySelector("[data-ig-android-install]");
   var st = document.querySelector("[data-ig-android-status]");
   var KEY = "itt12-ig-android";
-  function show(){ try { if(localStorage.getItem(KEY)==="1"&&st) st.textContent="Installed Apr 3 2012 theater"; } catch(e){} }
+  function show(){ try { if(localStorage.getItem(KEY)&&st) st.textContent="Installed Apr 3 2012 theater"; } catch(e){} }
   show();
   if(btn) btn.addEventListener("click", function(){
     var d=document.querySelector("[data-ig-android-date]");

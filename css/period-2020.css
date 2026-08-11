@@ -1,0 +1,41 @@
+/* 2020 period — deltas on 2019 */
+@import url("period-2019.css");
+
+.itt20-gallery { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.itt20-gallery figure {
+  width: 140px; min-height: 88px; margin: 0; padding: 10px 8px;
+  background: #1a1a2e; color: #eee; border: 1px solid #333; font: 12px Arial, sans-serif; text-align: center;
+}
+.itt20-gallery figure.muted { outline: 2px solid #c62828; }
+.itt20-gallery figure[data-self] { background: #263238; }
+.itt20-wait {
+  background: #111; color: #eee; border: 1px solid #444; padding: 16px; margin: 12px 0; min-height: 80px;
+}
+.itt20-mute[aria-pressed="true"] { background: #c62828; color: #fff; }
+.itt20-video[aria-pressed="true"] { background: #1565c0; color: #fff; }
+.itt20-join {
+  background: #0b5cff; color: #fff; border: 0; padding: 10px 18px; font: bold 14px Arial, sans-serif;
+  border-radius: 4px; cursor: pointer;
+}
+.itt20-bar { height: 8px; background: #ddd; margin: 10px 0; }
+.itt20-bar > span { display: block; height: 100%; background: #e1306c; width: 0; }
+.itt20-island {
+  height: 110px; background: linear-gradient(#87ceeb 42%, #2e7d32 42%, #1b5e20 100%);
+  border: 1px solid #333; margin: 12px 0; position: relative;
+}
+.itt20-island::after { content: "Deserted island"; position: absolute; bottom: 8px; left: 10px; color: #fff; font: bold 12px Arial, sans-serif; text-shadow: 0 1px 2px #000; }
+.itt20-sky {
+  height: 120px; background: linear-gradient(#0d1b2a 0%, #1b4965 55%, #62b6cb 100%);
+  border: 1px solid #333; margin: 12px 0; position: relative;
+}
+.itt20-sky::after { content: "Astronomical"; position: absolute; bottom: 8px; left: 10px; color: #fff; font: bold 12px Arial, sans-serif; }
+.itt20-tomb { background: #111; color: #eee; padding: 12px; border-left: 4px solid #ff9800; }
+.itt20-ad-slot { background: #fff3e0; border: 1px dashed #e65100; padding: 10px; margin: 8px 0; }
+.itt20-pick {
+  display: inline-block; margin: 4px 6px 4px 0; padding: 8px 12px;
+  border: 2px solid #333; background: #f5f5f5; cursor: pointer; font: 13px Arial, sans-serif;
+}
+.itt20-pick.on { background: #111; color: #fff; border-color: #0b5cff; }
+.itt20-sold { background: #111; color: #eee; padding: 12px; border-left: 4px solid #c62828; margin: 8px 0; }
+.itt20-bean { width: 56px; height: 72px; border: 0; border-radius: 28px 28px 16px 16px; color: #fff; font: bold 11px Arial, sans-serif; cursor: pointer; }
+.year-2020 .dirbar .dir-btn { font-size: 11px; }

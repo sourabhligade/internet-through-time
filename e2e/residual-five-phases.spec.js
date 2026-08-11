@@ -176,7 +176,8 @@ test.describe("Residual Phase 4 — culture densify gems", () => {
 
 test.describe("Residual Phase 5 — forest + about axis", () => {
   test("continuity forest chip on sample Amazon + Yahoo rooms", async ({ page }) => {
-    for (const y of ["2008", "2010", "2013"]) {
+    /* Lean 2011–2013 stripped the Amazon/Yahoo clone forest. Chip lives on home. */
+    for (const y of ["2008", "2010"]) {
       await page.goto(`/years/${y}/sites/amazon/index.html`);
       await expect(
         page.locator("[data-itt-continuity-archive], [data-itt-forest], .itt-continuity-chip, .itt18-continuity-archive").first()
@@ -186,6 +187,10 @@ test.describe("Residual Phase 5 — forest + about axis", () => {
         page.locator("[data-itt-continuity-archive], [data-itt-forest], .itt-continuity-chip, .itt18-continuity-archive").first()
       ).toBeVisible({ timeout: 10000 });
     }
+    await page.goto("/years/2013/pages/home.html");
+    await expect(
+      page.locator("[data-itt-continuity-archive], [data-itt-forest], .itt-continuity-chip").first()
+    ).toBeVisible({ timeout: 10000 });
   });
 
   test("About third-axis strip 2010–2013 sample", async ({ page }) => {

@@ -6,7 +6,12 @@
 **Purpose:** One detailed, research-backed todo plan **per year** so we can implement **one year at a time** to strict 100% completion.  
 **Rule:** Follow sources already in repo research MDs + CAPTURE-LOGs. **Do not invent brand pixels.** If harvest fails → log `[failed]` / `[failed-final]` and keep honest RECON.
 
-### Active program: 2011–2013 → 100%
+### Active program: 2014–2016 → museum-grade A
+
+**Execute:** [`../2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](../2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md) (P0–P16 · 2014 lean forest · 2015/16 pixels · 2016 promote · 2017+ do not scaffold)  
+**Next hub program:** [`../HUB-SCAN-AND-IMPROVE-PROGRAM-1994-2016.md`](../HUB-SCAN-AND-IMPROVE-PROGRAM-1994-2016.md) (S0–S16 · 2013→2011 lean · 2002/2009 chips)
+
+### Historical program: 2011–2013 → 100%
 
 **Master step plan (2011–13):** [`PLAN-2011-2012-2013-TO-100.md`](PLAN-2011-2012-2013-TO-100.md)  
 **Late residual map:** [`../LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](../LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md)  

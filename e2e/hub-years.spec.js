@@ -3,12 +3,12 @@ const { test, expect } = require('@playwright/test');
 
 const OPEN = [
   '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
-  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016',
+  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020',
 ];
 const LOCKED = [];
 
 test.describe('hub + year shells', () => {
-  test('hub lists 1994–2016 as available', async ({ page }) => {
+  test('hub lists 1994–2020 as available', async ({ page }) => {
     await page.goto('/');
     for (const y of OPEN) {
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`)).toBeVisible();
@@ -53,7 +53,8 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2014')).toBeVisible();
     await expect(page.locator('.y2015')).toBeVisible();
     await expect(page.locator('.y2016')).toBeVisible();
-    await expect(page.locator('body')).toContainText(/23 years open|1994–2016|1994–2015/i);
+    await expect(page.locator('.y2017')).toBeVisible();
+    await expect(page.locator('body')).toContainText(/27 years open|1994–2020/i);
     await expect(page.locator('a.start-btn[href*="years/2007"]').first()).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2008"]').first()).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2009"]').first()).toBeVisible();

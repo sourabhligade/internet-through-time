@@ -25,14 +25,33 @@
     doc = doc || document;
     var btn = doc.querySelector("[data-wave-invite]");
     if (!btn) return;
+    var st = doc.querySelector("[data-wave-status]");
+    try {
+      var prev = localStorage.getItem(storageKey());
+      if (prev && st) st.textContent = "Invite saved · " + storageKey();
+    } catch (e0) { /* */ }
     btn.addEventListener("click", function () {
+      var io = doc.querySelector("[data-wave-io]");
+      var notMail = doc.querySelector("[data-wave-not-email]");
+      if (!io || !io.checked || !notMail || !notMail.checked) {
+        if (st) st.textContent = "Confirm I/O demo lore + not daily email first.";
+        ittFeedback(st ? st.textContent : "Tick both checks first.", st);
+        return;
+      }
       localStorage.setItem(
         storageKey(),
-        JSON.stringify({ invited: true, ts: Date.now(), note: "I/O demo lore · not daily email" })
+        JSON.stringify({
+          invited: true,
+          real: true,
+          multiStep: true,
+          ioDemo: true,
+          notDailyEmail: true,
+          ts: Date.now(),
+          note: "I/O demo lore · not daily email"
+        })
       );
-      var st = doc.querySelector("[data-wave-status]");
       if (st) {
-        st.textContent ="Invite requested (theater) · " + storageKey() + " · public mass is 2010, not 2009 daily driver."
+        st.textContent = "Invite requested · " + storageKey() + " · public mass is 2010, not 2009 daily driver.";
         ittFeedback(st.textContent, st);
       }
     });

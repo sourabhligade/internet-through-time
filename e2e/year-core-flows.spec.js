@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Core shell flows for every exhibit year 1994–2013.
+ * Core shell flows for every exhibit year 1994–2018.
  * Covers: boot · home content · dirbar · home button · start menu · location Go.
  */
 const { test, expect } = require('@playwright/test');
@@ -16,7 +16,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005',
-  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016',
+  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -44,6 +44,10 @@ const LOCATION_HINT = {
   '2014': { type: 'whatsapp', re: /whatsapp/i },
   '2015': { type: 'watch', re: /watch/i },
   '2016': { type: 'stories', re: /stories|instagram/i },
+  '2017': { type: 'faceid', re: /iphone\/x|face.?id/i },
+  '2018': { type: 'gdpr', re: /gdpr|cookie|consent|25 may/i },
+  '2019': { type: 'disneyplus', re: /disney|who's watching|whos watching/i },
+  '2020': { type: 'zoom', re: /zoom|muted|meeting/i },
 };
 
 for (const year of YEARS) {

@@ -30,7 +30,7 @@ test.describe('Museum passport + first night', () => {
     await expect(page.locator('a.year-card.available.y2014[href*="years/2014"]')).toBeVisible();
     await expect(page.locator('[data-itt-year-tour="2013"]')).toBeVisible();
     await expect(page.locator('[data-itt-year-tour="2014"]')).toBeVisible();
-    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(23);
+    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(26);
   });
 
   test('2013 passport chip starts 2013-start trail', async ({ page }) => {

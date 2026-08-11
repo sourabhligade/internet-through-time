@@ -4,7 +4,10 @@ const { test, expect } = require("@playwright/test");
 test.describe("2009 Stack Overflow accept persist", () => {
   test("accept + score survive reload", async ({ page }) => {
     await page.goto("/years/2009/sites/stackoverflow/question.html");
-    await page.evaluate(() => localStorage.removeItem("itt09-stackoverflow"));
+    await page.evaluate(() => {
+      localStorage.removeItem("itt09-stackoverflow");
+      localStorage.removeItem("itt09-so-accepted");
+    });
     await page.reload();
     await page.waitForTimeout(500);
 
@@ -15,6 +18,9 @@ test.describe("2009 Stack Overflow accept persist", () => {
       .toMatch(/"accepted"\s*:\s*"a"/);
     await expect(page.locator("[data-so-score]")).toHaveText("4");
     await expect(page.locator("[data-so-accepted-flag]")).toContainText(/a/i);
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem("itt09-so-accepted")))
+      .toMatch(/"id"\s*:\s*"a"/);
     await page.reload();
     await page.waitForTimeout(400);
     await expect(page.locator("[data-so-score]")).toHaveText("4");

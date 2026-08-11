@@ -11,25 +11,11 @@
   <p><b>Open Graph</b> / external Like plugins · <b>Places</b> · ~500M mid-year · ~<b>600M</b> end-year · <i>The Social Network</i> (Oct). Beacon remains dead (2009).</p>
   <p style="background:#fee;border:1px solid #c66;padding:8px;font-size:12px"><b>Ban:</b> Reactions · Reels · Stories.</p>
   <p>
-  <button type="button" data-fb-culture>Note Social Network film (theater)</button>
-  <span data-fb-culture-status style="font-size:12px;color:#060;margin-left:8px"></span>
+  <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-fb-film> <i>The Social Network</i> is October 2010</label>
+  <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-fb-no-reels> Not Reactions · Reels · Stories</label>
+  <button type="button" data-fb-culture>Note Social Network film</button>
+  <span data-fb-culture-status data-itt-action-status style="font-size:12px;color:#060;margin-left:8px"></span>
  </p>
- <p style="font-size:12px"> · </p>
-<script>
-(function(){
-  var KEY="itt10-fb-culture";
-  function boot(){
-    var b=document.querySelector("[data-fb-culture]");
-    var st=document.querySelector("[data-fb-culture-status]");
-    if(!b) return;
-    b.addEventListener("click", function(){
-      try{ localStorage.setItem(KEY, JSON.stringify({film:true,year:2010,ts:Date.now()})); }catch(e){}
-      if(st) st.textContent="Noted · "+KEY;
-    });
-  }
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot); else boot();
-})();
-</script>
  </div>
 </div>
 <script src="../../../../js/immersion-2010.js"></script>

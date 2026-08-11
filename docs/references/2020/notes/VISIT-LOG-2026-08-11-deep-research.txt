@@ -1,0 +1,61 @@
+2020 deep-research visit log — 2026-08-11
+=========================================
+Purpose: freeze facts for museum year 2020. No years/2020 scaffold.
+
+OPENED / REOPENED
+- Zoom Yuan 2020-04-01  https://www.zoom.com/en/blog/a-message-to-our-users/
+  10M Dec 2019 daily meeting participants → 200M March; 90k schools / 20 countries;
+  Zoombombing 20 Mar; FB SDK removed 27 Mar; privacy policy 29 Mar; feature freeze 1 Apr;
+  K-12 waiting room default; encryption clarification same day.
+- Zoom Yuan 2021-03-17  https://www.zoom.com/en/blog/reflecting-looking-ahead/
+  Staff WFH 2020-03-03 (2,500 → 4,400+); April average 300M daily meeting participants;
+  30x in three months; 125k school domains / 25 countries a year later.
+- BI / CNBC / CNET on the 22 Apr blog edit: "300M Daily Users" → "daily meeting participants".
+- WHO Tedros 2020-03-11  who.int speech
+  "We have therefore made the assessment that COVID-19 can be characterized as a pandemic."
+  118,000 cases / 114 countries / 4,291 deaths that briefing. NOT a museum dashboard.
+- Instagram Reels 2020-08-05  about.instagram.com
+  15-second multi-clip; Explore; audio / AR / timer / align / speed; 50+ countries (press).
+- UCSB EO 13942 2020-08-06 (FR 11 Aug). Twin WeChat EO same day. App did not vanish.
+- Adobe Flash EOL page (updated 2021-01-13): support ended 2020-12-31; brick 2021-01-12;
+  announced July 2017.
+- Edge blog 2020-01-15: Edge 79 stable; replaces legacy Edge on consumer Win10 over months;
+  enterprise/education not auto-upgraded.
+- oag.ca.gov CCPA: in force 2020-01-01; AG enforcement 2020-07-01; regs 2020-08-14.
+- Netcraft Jan 2020 survey: 1,295,973,827 sites / ~189M active.
+- Siteefy compilation: Jan 2020 1,030,111,000 total / 189,021,000 active (18.35%).
+- Live Stats June table: still ends 2018. Do not invent 2019 or 2020 June cells.
+- ITU FF 2021 recap (PR WAF-blocked this agent): 2020 +10.2% (largest in a decade);
+  2021 ~4.9B / 63%; 2.9B offline. Reopen PDF before About lock.
+- Almanac 2020 page-weight: mobile p50 ~1,915 KB; images 916 / JS 411.
+- SteamDB Among Us: 447,476 peak 2020-09-26.
+- Shacknews / InnerSloth tweet: 3 million players all platforms that weekend.
+- NPR / Variety Astronomical: 12.3M concurrent 2020-04-23.
+- Google Meet Keyword 2020-04-29: free for everyone, rolling weeks.
+- VentureBeat Teams: 75M DAU 2020-04-29 (44M mid-March); 200M meeting participants / 4.1B minutes.
+- CNBC / Business Wire HBO Max 2020-05-27 $14.99.
+- Apple Newsroom iPhone 12 2020-10-13 (5G, MagSafe) · M1 2020-11-10.
+- Twitter Fleets blog 2020-11-17 · goodbye 2021-08-03.
+- Variety / CNBC Quibi wind-down 2020-10-21 (launched Apr 6).
+- Apple+Google EN partner 2020-04-10 · API 2020-05-20.
+- CNBC / Guardian Epic v Apple 2020-08-13.
+- about.fb.com WhatsApp 2B 2020-02-12.
+
+NOT OPENED (WAF / paywall / parked)
+- ITU PR HTML + FF 2021 PDF (WAF). Use UN News + ITU hub until PDF reopens.
+- DataReportal Oct 2020 PDF — third label only (~4.66B / 59% class). Reopen before About invent.
+- FederalRegister.gov HTML (bot wall) — used UCSB / GovInfo citations.
+- Zoom 22 Apr 2020 "90-day security plan" original vs edited — cited via BI/Verge/CNET.
+
+SECOND PASS — 100+ catalog
+- Wrote docs/2020-SOURCES-100-PLUS-2026-08-11.md (128 URLs).
+- OPEN this pass: Zoom 5.0 22 Apr · FBI Boston 30 Mar · Pew 53% 30 Apr · DataReportal Digital 2020 Jan · YouTube Shorts India 14 Sep · iOS 14 16 Sep.
+- New locks: waiting room + password default · AES-256-GCM · 11-digit IDs · Pew homework gap · DataReportal 4.54B / TikTok 800M (500M CN) · Shorts 15s India-only · ATT "early next year" · PS5 $399/$499 · Xbox 10 Nov · Mixer 22 Jul · Peacock 15 Jul · Discord 100→140M.
+
+DO NOT
+- mkdir years/2020
+- unlock hub
+- invent June Live Stats 2020
+- write 300M unique users
+- ship a case-count dashboard
+- restore other-branch 2020 clone forest

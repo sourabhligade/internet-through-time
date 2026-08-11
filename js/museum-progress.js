@@ -9,7 +9,7 @@
  *
  * Trails:
  *   first-night        1994 → 1998 → 2005 → 2010 → 2013
- *   YYYY-start         short in-year tour for every shipped year 1994–2016
+ *   YYYY-start         short in-year tour for every shipped year 1994–2020
  */
 (function (global) {
   "use strict";
@@ -181,7 +181,19 @@
       { path: "sites/windows10/index.html", label: "Win10 free", blurb: "Jul 29 upgrade · Edge.", match: "/windows10/" }),
     "2016": yearVisitTour("2016",
       { path: "sites/instagram/stories.html", label: "Stories", blurb: "Aug 2 · 24h · not Reels.", match: "/instagram/stories" },
-      { path: "sites/pogo/index.html", label: "Pokémon GO", blurb: "Jul 6 · no sprites · no GPS.", match: "/pogo/" })
+      { path: "sites/pogo/index.html", label: "Pokémon GO", blurb: "Jul 6 · no sprites · no GPS.", match: "/pogo/" }),
+    "2017": yearVisitTour("2017",
+      { path: "sites/iphone/x.html", label: "Face ID", blurb: "Sep 12 · no home button · not XS.", match: "/iphone/x" },
+      { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Sep 26 · free · 100 · no official art.", match: "/fortnite/" }),
+    "2018": yearVisitTour("2018",
+      { path: "sites/gdpr/index.html", label: "GDPR", blurb: "25 May · Manage is the save.", match: "/gdpr" },
+      { path: "sites/tiktok/fyp.html", label: "TikTok FYP", blurb: "Aug 2 merge · reorder.", match: "/tiktok" }),
+    "2019": yearVisitTour("2019",
+      { path: "sites/disneyplus/index.html", label: "Disney+", blurb: "Nov 12 · Who’s watching.", match: "/disneyplus" },
+      { path: "sites/fortnite/marshmello.html", label: "Marshmello", blurb: "Feb 2 · 10.7M.", match: "/marshmello" }),
+    "2020": yearVisitTour("2020",
+      { path: "sites/zoom/index.html", label: "Zoom", blurb: "Join · mute · chat · leave.", match: "/zoom" },
+      { path: "sites/instagram/reels.html", label: "Reels", blurb: "Aug 5 · 15 seconds.", match: "/reels" })
   };
 
   var TRAILS = {
@@ -196,7 +208,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2016; y++) {
+    for (y = 1994; y <= 2020; y++) {
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -361,7 +373,7 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2013) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2020) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -641,7 +653,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2016; y++) years.push(String(y));
+    for (y = 1994; y <= 2020; y++) years.push(String(y));
     var total = totalStamps();
     var nYears = yearsStamped().length;
     var night = getNight();
@@ -688,11 +700,11 @@
     }
     html += "</div>";
 
-    html += '<div class="first-night-card year-2016-start-card">';
+    html += '<div class="first-night-card year-2018-start-card">';
     html +=
-      "<b>2016 start</b> — newest shipped year: Instagram Stories + Pokémon GO." +
-      '<br><a class="start-btn start-primary" href="/years/2016/?trail=2016-start">Start 2016 tour →</a>' +
-      ' <a class="start-btn" href="/years/2016/">Open 2016 shell</a>';
+      "<b>2020 start</b> — newest shipped year: Zoom mute + Reels 15s." +
+      '<br><a class="start-btn start-primary" href="/years/2020/?trail=2020-start">Start 2020 tour →</a>' +
+      ' <a class="start-btn" href="/years/2020/">Open 2020 shell</a>';
     html += "</div>";
 
     /* Per-year tour hint */

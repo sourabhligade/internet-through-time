@@ -799,15 +799,20 @@ def test_1998_cdnow_mozilla_icq() -> None:
 
 
 def test_link_audit_covers_late_years() -> None:
-    """audit-internal-links.py must walk 1998–2004 (LEFT-OUT P0 + 2004 unlock)."""
+    """audit-internal-links.py must walk every shipped year via SHIP_YEARS."""
     s = read(ROOT / "scripts/audit-internal-links.py")
-    # Require audit coverage for years that exist on disk
-    for y in ("1998", "1999", "2001", "2002", "2003"):
-        if not (ROOT / "years" / y).is_dir():
-            continue
-        if y not in s:
-            fail("link-audit-years", f"audit script missing year {y}")
-            return
+    if "SHIP_YEARS" not in s:
+        fail("link-audit-years", "audit script should import SHIP_YEARS")
+        return
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from itt_gate import SHIP_YEARS  # noqa: E402
+
+    need = {"1998", "1999", "2001", "2002", "2003", "2018"}
+    shipped = set(SHIP_YEARS)
+    missing = sorted(y for y in need if (ROOT / "years" / y).is_dir() and y not in shipped)
+    if missing:
+        fail("link-audit-years", f"SHIP_YEARS missing {missing}")
+        return
     ok("link-audit-years")
 
 
@@ -2008,6 +2013,7 @@ def test_immersion_registry_complete() -> None:
     for year in (
         "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
         "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010",
+        "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018",
     ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
         if not (ROOT / "years" / year).is_dir():

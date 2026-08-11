@@ -1,7 +1,7 @@
 # Museum-grade gap map — what each year lacks to become **A**
 
 **Date:** 2026-08-10  
-**Hub:** playable **1994–2016** (23 years) · **2017+ not on disk · do not scaffold**  
+**Hub:** playable **1994–2018** (25 years) · **2019+ not on disk · do not scaffold**  
 **Git only if asked.**  
 **Do not invent brand pixels.** Failed-final RECON / continuity label is legal.
 
@@ -31,7 +31,7 @@ This is **not** the A–F ship checkbox. All 23 years already claim **museum-rea
 | Bar | Meaning | Who has it |
 |-----|---------|------------|
 | **Museum-ready (A–F)** | Thesis + P0 rooms + honest pixels (WA **or** failed-final) + CAPTURE + e2e + `ittYY` prefix | **All 1994–2016** |
-| **Museum-grade A** | One-thing **is** a gold product machine · leftover is **only L4 pixels** · forest does not drown the year | **1995 · 1996 · 1997 · 2005** |
+| **Museum-grade A** | One-thing **is** a gold product machine · leftover is **only L4 pixels** · forest does not drown the year | **1995 · 1996 · 1997 · 2005 · 2014 · 2016** |
 
 **Gold product** = multipage or multipath · incomplete **never writes** · reload persist · period costume (not a checkbox plaque).
 
@@ -60,13 +60,15 @@ This is **not** the A–F ship checkbox. All 23 years already claim **museum-rea
 | 2008 | 323 | **A−** | GitHub issue `itt08-github` | Mass year is App Store |
 | 2009 | 334 | **B+** | SO ask `itt09-stackoverflow` | Mass year is Like + FarmVille |
 | 2010 | 372 | **A−** | Imgur → Reddit `itt10-imgur` | Tablet / iOS IG is the mass object |
-| 2011 | 378 | **A−** | Airbnb 3-step `itt11-airbnb` | Forest 378 **labeled** |
-| 2012 | 390 | **A−** | SoundCloud comment `itt12-soundcloud` | Forest 390 **labeled** |
-| 2013 | 412 | **A−** | Vine 6s `itt13-vine-posts` | Forest 412 labeled |
-| 2014 | 432 | **B+** | WhatsApp install `itt14-wa-install` | Forest 432 **labeled** (lean still required for A) |
-| 2015 | 67 | **A−** | Watch ships `itt15-watch` | Pixels C · hardware literacy |
-| 2016 | 44 | **A−** | IG Stories `itt16-ig-stories` | Pixels C only |
-| 2017+ | 0 | — | — | No year on disk |
+| 2011 | 46 | **A−** | Airbnb 3-step `itt11-airbnb` | Lean · registry slim 2026-08-11 |
+| 2012 | 47 | **A−** | SoundCloud comment `itt12-soundcloud` | Lean · registry slim 2026-08-11 |
+| 2013 | 49 | **A−** | Vine 6s `itt13-vine-posts` | Lean · registry slim 2026-08-11 |
+| 2014 | 43 | **A** | WhatsApp install `itt14-wa-install` | Lean prune 2026-08-10 · L4 stills only |
+| 2015 | 67 | **A−** | Watch ships `itt15-watch` | Pixels C closed failed-final + honesty |
+| 2016 | 58 | **A** | IG Stories machine `itt16-ig-stories` | — (L4 stills · leftover rooms optional) |
+| 2017 | 43 | **A−** | Face ID `itt17-faceid` | Playables year-true · L4 art |
+| 2018 | 48 | **A−** | GDPR `itt18-gdpr` | Manage path · L4 art |
+| 2019+ | 0 | — | — | No year on disk |
 
 **Live one-things that drifted from Aug 8 docs (trust disk):**
 
@@ -84,10 +86,10 @@ This is **not** the A–F ship checkbox. All 23 years already claim **museum-rea
 | Class | Years | Fix |
 |-------|-------|-----|
 | **Wrong chip** | 1994 · 1998 · 2001 · 2002 · 2006 · 2007 · 2009 | Product exists; star on home is the weak ritual |
-| **Forest drowns thesis** | 2011 · 2012 · 2013 · **2014** | Machines exist; 378–432 continuity clones |
+| **Forest drowns thesis** | 2006–2010 (still fat) | 2011–14 forests **pruned** |
 | **Honest leftover** | 2000 · 2003 · 2004 · 2008 · 2010 · 2015 · 2016 | Costume / pixels / second gold — do not rebuild the year |
 
-**Already A — do not reopen:** 1995 · 1996 · 1997 · 2005.
+**Already A — do not reopen:** 1995 · 1996 · 1997 · 2005 · **2014** (lean 2026-08-10).
 
 ---
 
@@ -656,9 +658,9 @@ Pixels harvested **or** you accept A−. Product bar is already A−.
 
 ---
 
-## 2017+ — no year
+## 2019+ — no year
 
-Not a gap. **Do not scaffold.** Hub is 1994–2016.
+Not a gap. **Do not scaffold.** Hub is 1994–2018.
 
 ---
 

@@ -73,6 +73,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.reload();
     await expect(page.locator('body')).toContainText(/\$499|Jan 27|iPad/i);
     await page.waitForSelector('[data-ipad-claim]', { timeout: 15000 });
+    await page.locator('[data-ipad-date]').check();
+    await page.locator('[data-ipad-not-os]').check();
     await page.locator('[data-ipad-claim]').click();
     await expect(page.locator('[data-ipad-status]')).toContainText(/itt10-ipad|Noted|Saved/i);
     await expectStorageTruthy(page, 'itt10-ipad-history');
@@ -219,8 +221,10 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-uber']);
     await page.reload();
     await expect(page.locator('body')).toContainText(/black.car|San Francisco|not.*UberX/i);
+    await page.locator('[data-uber-not-x]').check();
+    await page.locator('[data-uber-sf]').check();
     await page.locator('#uber-req').click();
-    await expect(page.locator('#uber-st')).toContainText(/itt10-uber|black-car/i);
+    await expect(page.locator('#uber-st')).toContainText(/itt10-uber|black-car|Saved/i);
     const raw = await expectStorageTruthy(page, 'itt10-uber');
     expect(raw).toMatch(/San Francisco|black-car|requested/i);
   });
@@ -231,6 +235,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-wave']);
     await page.reload();
     await page.waitForSelector('[data-wave-invite]', { timeout: 15000 });
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
     await page.locator('[data-wave-invite]').click();
     await expect(page.locator('[data-wave-status]')).toContainText(/itt10-wave|invite|2010/i);
     await expectStorageTruthy(page, 'itt10-wave');
@@ -337,6 +343,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-whatsapp-seed']);
     await page.reload();
     await page.waitForSelector('[data-wa-seed]', { timeout: 15000 });
+    await page.locator('[data-wa-seed-date]').check();
+    await page.locator('[data-wa-not-sms]').check();
     await page.locator('[data-wa-seed]').click();
     await expectStorageTruthy(page, 'itt10-whatsapp-seed');
   });
@@ -379,6 +387,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-fb-culture']);
     await page.reload();
     await page.waitForSelector('[data-fb-culture]', { timeout: 15000 });
+    await page.locator('[data-fb-film]').check();
+    await page.locator('[data-fb-no-reels]').check();
     await page.locator('[data-fb-culture]').click();
     const raw = await expectStorageTruthy(page, 'itt10-fb-culture');
     expect(raw).toMatch(/film|2010|true/i);

@@ -12,8 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Hub-open years on disk (1994–2016). Keep smoke / check-all-years / ci in sync.
-SHIP_YEARS: list[str] = [str(y) for y in range(1994, 2017)]
+# Hub-open years on disk (1994–2020). Keep smoke / check-all-years / ci in sync.
+SHIP_YEARS: list[str] = [str(y) for y in range(1994, 2021)]
 
 _URLMAP_START = re.compile(r"\burlMap\s*:\s*\{")
 _URLMAP_KEY = re.compile(r'^\s*"([^"]+)"\s*:', re.M)

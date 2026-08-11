@@ -21,23 +21,20 @@ test.describe("2014 shell honesty", () => {
     await expect(page.locator("body")).toContainText(/Windows/i);
   });
 
-  test("Win7 residual is 2014 voice not Mass PC year 2013", async ({ page }) => {
-    await page.goto("/years/2014/sites/windows7/index.html");
-    await expect(page.locator("body")).toContainText(/residual 2014|Mass residual 2014/i);
+  test("Win7 / IE8 clone rooms are gone (lean 2014)", async ({ page }) => {
+    const w7 = await page.goto("/years/2014/sites/windows7/index.html");
+    expect(w7 && w7.status()).toBe(404);
+    const ie8 = await page.goto("/years/2014/sites/ie8/index.html");
+    expect(ie8 && ie8.status()).toBe(404);
+    await page.goto("/years/2014/pages/home.html");
+    await expect(page.locator("body")).toContainText(/This year is lean/i);
     await expect(page.locator("body")).not.toContainText("Mass PC year 2013");
-    await expect(page.locator("body")).toContainText("About 2014");
   });
 
-  test("IE8 room is 2009 archive not 2014 XP shell", async ({ page }) => {
-    await page.goto("/years/2014/sites/ie8/index.html");
-    await expect(page.locator("body")).toContainText(/archive residual|2014 residual/i);
-    await expect(page.locator("body")).not.toContainText("Windows XP + IE 9");
-    await expect(page.locator("body")).toContainText(/IE 11|Chrome|Technical Preview/i);
-  });
-
-  test("iOS 7 is 2013 residual under iOS 8", async ({ page }) => {
-    await page.goto("/years/2014/sites/iphone/ios7.html");
-    await expect(page.locator("body")).toContainText(/2013 residual|Residual · Sep 2013/i);
+  test("iOS 7 clone is gone · iOS 8 year-true remains", async ({ page }) => {
+    const ios7 = await page.goto("/years/2014/sites/iphone/ios7.html");
+    expect(ios7 && ios7.status()).toBe(404);
+    await page.goto("/years/2014/sites/iphone/ios8.html");
     await expect(page.locator("body")).toContainText(/iOS 8/i);
   });
 });

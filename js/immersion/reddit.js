@@ -237,6 +237,20 @@
       var ui = form.querySelector('[name="url"]');
       if (qt && ti) ti.value = qt;
       if (qu && ui) ui.value = qu;
+      if (!qu && ui && (!ui.value || ui.value === "http://")) {
+        try {
+          var igKey =
+            U().immersionStorageKey
+              ? U().immersionStorageKey("imgur-album", "itt10")
+              : "itt10-imgur-album";
+          var ig = JSON.parse(localStorage.getItem(igKey) || "null");
+          var item = ig && ig.items && ig.items[0];
+          if (item && item.url) {
+            ui.value = item.url;
+            if (ti && !ti.value && item.title) ti.value = item.title;
+          }
+        } catch (eIg) { /* */ }
+      }
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         var title = (form.querySelector('[name="title"]') || {}).value || "";
@@ -251,9 +265,44 @@
           }
           return;
         }
+        url = String(url).replace(/^\s+|\s+$/g, "");
+        var yearNow =
+          (typeof document !== "undefined" &&
+            document.documentElement &&
+            document.documentElement.getAttribute("data-itt-year")) ||
+          (ITT._immersionYear && String(ITT._immersionYear)) ||
+          "";
+        if (yearNow === "2010") {
+          if (!url || url === "http://" || url === "https://" || !/^https?:\/\//i.test(url)) {
+            if (st) {
+              st.setAttribute("data-allow-html", "1");
+              st.innerHTML = "Paste a link (Imgur direct URL on this trail). Incomplete never writes.";
+            }
+            return;
+          }
+        }
         var list = seed();
         list.unshift({ id: uid(), title: title, url: url, score: 1, ts: Date.now() });
         save(list.slice(0, 50));
+        try {
+          var y = yearNow;
+          if (y === "2010") {
+            var sumKey = U().immersionStorageKey
+              ? U().immersionStorageKey("reddit", "itt10")
+              : "itt10-reddit";
+            localStorage.setItem(
+              sumKey,
+              JSON.stringify({
+                title: title,
+                url: url,
+                multiStep: true,
+                real: true,
+                year: "2010",
+                ts: Date.now()
+              })
+            );
+          }
+        } catch (eSum) { /* */ }
         saveSort("newest");
         if (st) {
           st.setAttribute("data-allow-html", "1");

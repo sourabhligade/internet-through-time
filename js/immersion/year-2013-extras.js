@@ -5,70 +5,21 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-
-  function U() {
-    return ITT.util || {};
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2013");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2013 — load year-extras-kit.js first");
+    return;
   }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2013";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) {
-      /* */
-    }
-    return "itt13";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = opts.error ? "#a00" : "#060";
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3200 });
-      }
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveJSON(k, v) {
-    localStorage.setItem(k, JSON.stringify(v));
-  }
-  function loadJSON(k, fb) {
-    try {
-      var raw = localStorage.getItem(k);
-      if (!raw) return fb;
-      return JSON.parse(raw);
-    } catch (e) {
-      return fb;
-    }
-  }
-  function markUsed() {
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-    } catch (e) {
-      /* */
-    }
-  }
-  function checked(doc, sel) {
-    var el = doc.querySelector(sel);
-    return !!(el && el.checked);
-  }
-  function countChecked(doc, sel) {
-    var nodes = doc.querySelectorAll(sel);
-    var n = 0;
-    var i;
-    for (i = 0; i < nodes.length; i++) if (nodes[i].checked) n++;
-    return n;
-  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
   function bootChrome13(doc) {
     doc = doc || document;

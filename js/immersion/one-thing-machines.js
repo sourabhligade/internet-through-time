@@ -389,12 +389,14 @@
     var hist = doc.querySelector("[data-su-history]");
     var key = sk("stumble");
     var CARDS = [
+      { t: "Friendster", href: "../friendster/index.html", tag: "funny" },
+      { t: "Wired", href: "../wired/index.html", tag: "news" },
+      { t: "Google News", href: "../googlenews/index.html", tag: "news" },
+      { t: "Daypop", href: "../daypop/index.html", tag: "news" },
+      { t: "Wikipedia", href: "../wikipedia/index.html", tag: "tech" },
       { t: "Slashdot", href: "../slashdot/index.html", tag: "tech" },
-      { t: "Wired residual", href: "../wired/index.html", tag: "news" },
-      { t: "Google residual", href: "../google/index.html", tag: "tech" },
-      { t: "Friendster residual", href: "../friendster/index.html", tag: "funny" },
-      { t: "Kazaa residual", href: "../kazaa/index.html", tag: "music" },
-      { t: "Blogosphere residual", href: "../blogger/index.html", tag: "news" }
+      { t: "Google", href: "../google/index.html", tag: "tech" },
+      { t: "Kazaa", href: "../kazaa/index.html", tag: "music" }
     ];
     var saved = loadJSON(key, null) || {};
     var n = saved.n || 0;
@@ -427,22 +429,13 @@
         var pool = [];
         for (i = 0; i < CARDS.length; i++) {
           if (down.indexOf(CARDS[i].t) !== -1) continue;
-          if (ints.indexOf(CARDS[i].tag) !== -1 || ints.length) pool.push(CARDS[i]);
+          if (ints.indexOf(CARDS[i].tag) !== -1) pool.push(CARDS[i]);
         }
         if (!pool.length) pool = CARDS.slice();
         var hit = pool[n % pool.length];
         n += 1;
         var seen = saved.seen || [];
         seen.unshift(hit.t);
-        saved = blob({
-          interests: ints,
-          last: hit.t,
-          n: n,
-          down: down,
-          seen: seen.slice(0, 20)
-        });
-        saveJSON(key, saved);
-        stamp();
         if (card) {
           card.innerHTML =
             "Stumbled: <a href='" +
@@ -451,12 +444,28 @@
             esc(hit.t) +
             "</b></a> · filtered by " +
             esc(ints.join(", ")) +
-            ' · <button type="button" data-su-down="' +
+            ' · <button type="button" data-su-up="' +
+            esc(hit.t) +
+            '">Thumb up</button> · <button type="button" data-su-down="' +
             esc(hit.t) +
             '">Thumb down</button>';
+          var ub = card.querySelector("[data-su-up]");
           var db = card.querySelector("[data-su-down]");
+          if (ub) {
+            ub.addEventListener("click", function () {
+              var up = saved.up || [];
+              if (up.indexOf(hit.t) === -1) up.unshift(hit.t);
+              saved.up = up.slice(0, 12);
+              saveJSON(key, saved);
+              feedback("Thumbed up · this card stays in the rotation.", st);
+            });
+          }
           if (db) {
             db.addEventListener("click", function () {
+              if (n < 2) {
+                feedback("Thumb down after 2+ stumbles (habit first).", st, true);
+                return;
+              }
               if (down.indexOf(hit.t) === -1) down.push(hit.t);
               saved.down = down;
               saveJSON(key, saved);
@@ -464,8 +473,22 @@
             });
           }
         }
+        if (n < 2) {
+          feedback("Stumble again to keep a habit (2+ writes itt02-stumble).", st, true);
+          return;
+        }
+        saved = blob({
+          interests: ints,
+          last: hit.t,
+          n: n,
+          down: down,
+          seen: seen.slice(0, 20),
+          multiStep: true
+        });
+        saveJSON(key, saved);
+        stamp();
         renderHist();
-        feedback("Stumble saved (museum rooms only).", st);
+        feedback("Stumble habit saved (museum rooms only · 2+).", st);
       });
     }
   }
@@ -687,6 +710,13 @@
         state.ts = Date.now();
         if (!state.questions) state.questions = [];
         saveJSON(key, state);
+        saveJSON(sk("so-accepted"), {
+          id: accepted,
+          multiStep: true,
+          real: true,
+          year: "2009",
+          ts: Date.now()
+        });
         paint();
         feedback("Accepted answer residual: " + accepted + " · persists in this browser", st);
       });
@@ -820,7 +850,8 @@
           for (i = 0; i < ls.length; i++) {
             ls[i].addEventListener("click", function () {
               listing = this.getAttribute("data-abnb-listing") || "";
-              feedback("Selected " + listing + " · request to book.", st);
+              saveJSON(key, blob({ city: city, listing: listing, requested: false, pickOnly: true }));
+              feedback("Selected " + listing + " · open listing or request to book.", st);
             });
           }
         }

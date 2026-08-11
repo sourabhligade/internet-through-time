@@ -5,48 +5,21 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-
-  function U() {
-    return ITT.util || {};
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2014");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2014 — load year-extras-kit.js first");
+    return;
   }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2014";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) { /* */ }
-    return "itt14";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = opts.error ? "#a00" : "#060";
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3200 });
-      }
-    } catch (e) { /* */ }
-  }
-  function saveJSON(k, v) {
-    localStorage.setItem(k, JSON.stringify(v));
-  }
-  function loadJSON(k, fb) {
-    try {
-      var raw = localStorage.getItem(k);
-      if (!raw) return fb;
-      return JSON.parse(raw);
-    } catch (e) {
-      return fb;
-    }
-  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
   function bootWhatsApp(doc) {
     doc = doc || document;
@@ -272,15 +245,6 @@
     });
   }
 
-  function checked(doc, sel) {
-    var el = doc.querySelector(sel);
-    return !!(el && el.checked);
-  }
-  function val(doc, sel) {
-    var el = doc.querySelector(sel);
-    return el ? String(el.value || "").trim() : "";
-  }
-
   function bootChrome14(doc) {
     doc = doc || document;
     var btn = doc.querySelector("[data-chrome14-save]");
@@ -325,9 +289,51 @@
         notOneThing: true,
         multiStep: true,
         real: true,
+        year: "2014",
         ts: Date.now()
       });
       feedback("Slack public (theater) · " + key("slack"), st);
+      markUsed();
+      showNext(doc);
+    });
+  }
+
+  function bootSlackChannel(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-slack14-send]");
+    var echo = doc.querySelector("[data-slack14-ws-echo]");
+    var thread = doc.querySelector("[data-slack14-thread]");
+    var st = doc.querySelector("[data-slack14-msg-status]");
+    var ws = loadJSON(key("slack"), null);
+    if (echo) echo.textContent = ws && ws.workspace ? ws.workspace : "join first";
+    function render() {
+      if (!thread) return;
+      var list = loadJSON(key("slack-msgs"), []);
+      if (!Array.isArray(list)) list = [];
+      thread.innerHTML = list.length
+        ? list.map(function (m) { return "<div>" + (m.text || "") + "</div>"; }).join("")
+        : "<div style='opacity:.6'>No messages yet.</div>";
+    }
+    render();
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      ws = loadJSON(key("slack"), null);
+      if (!ws || !ws.workspace) {
+        feedback("Join a workspace first.", st, { error: true });
+        return;
+      }
+      var text = val(doc, "[data-slack14-msg]");
+      if (text.length < 1) {
+        feedback("Type a message.", st, { error: true });
+        return;
+      }
+      var list = loadJSON(key("slack-msgs"), []);
+      if (!Array.isArray(list)) list = [];
+      list.push({ text: text, channel: "general", multiStep: true, real: true, year: "2014", ts: Date.now() });
+      saveJSON(key("slack-msgs"), list);
+      render();
+      feedback("Sent · " + key("slack-msgs"), st);
+      markUsed();
     });
   }
 
@@ -445,6 +451,7 @@
     bootSerial(doc);
     bootChrome14(doc);
     bootSlack(doc);
+    bootSlackChannel(doc);
     bootSecret(doc);
     bootYikYak(doc);
     bootEllo(doc);

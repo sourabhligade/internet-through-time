@@ -474,4 +474,36 @@ test.describe('all-years signature REAL · late web', () => {
     await frame.locator('[data-ig-stories-add]').click();
     await requireKey(page, 'itt16-ig-stories', /multiStep|sig 2016|2016-08-02/i);
   });
+
+  test('2017 Face ID real write', async ({ page }) => {
+    await enterYear(page, '2017');
+    await clearPrefix(page, 'itt17');
+    await goImmersion(page, '2017', 'sites/iphone/x.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-faceid-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-faceid-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt17-faceid'))).toBeFalsy();
+    await frame.locator('[data-faceid-no-home]').check({ force: true });
+    await frame.locator('[data-faceid-not-touch]').check({ force: true });
+    await frame.locator('[data-faceid-not-xs]').check({ force: true });
+    await frame.locator('[data-faceid-save]').click();
+    await requireKey(page, 'itt17-faceid', /multiStep|2017-09-12|noHomeButton/i);
+  });
+
+  test('2018 GDPR real write', async ({ page }) => {
+    await enterYear(page, '2018');
+    await clearPrefix(page, 'itt18');
+    await goImmersion(page, '2018', 'sites/gdpr/rights.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-gdpr-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-gdpr-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
+    await frame.locator('[data-gdpr-art15]').check({ force: true });
+    await frame.locator('[data-gdpr-art17]').check({ force: true });
+    await frame.locator('[data-gdpr-date]').check({ force: true });
+    await frame.locator('[data-gdpr-save]').click();
+    await requireKey(page, 'itt18-gdpr', /multiStep|2018-05-25|manage/i);
+  });
 });

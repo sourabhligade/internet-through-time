@@ -5,66 +5,21 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
-
-  function U() {
-    return ITT.util || {};
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear((ITT._immersionYear && String(ITT._immersionYear)) || (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "");
+  if (!YX) {
+    console.error("ITT.YearExtras missing — load year-extras-kit.js first");
+    return;
   }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) {
-      /* */
-    }
-    return "itt";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = opts.error ? "#a00" : "#060";
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 2800 });
-      }
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveJSON(k, v) {
-    try {
-      localStorage.setItem(k, JSON.stringify(v));
-    } catch (e) {
-      /* */
-    }
-  }
-  function loadJSON(k) {
-    try {
-      var r = localStorage.getItem(k);
-      if (!r) return null;
-      return JSON.parse(r);
-    } catch (e) {
-      return null;
-    }
-  }
-  function markUsed() {
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-    } catch (e) {
-      /* */
-    }
-  }
-  function val(el) {
-    return el ? String(el.value || "").trim() : "";
-  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
   function persist(id, extra, st, okMsg) {
     var payload = { multiStep: true, real: true, pack: id, ts: Date.now() };

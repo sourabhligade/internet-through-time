@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
-/** Skip describes that target years not present on disk (hub is 1994–2016). */
+/** Skip describes that target years not present on disk (hub is 1994–2018). */
 function yearOnDisk(year) {
   try {
     return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
@@ -330,6 +330,94 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
   });
 });
 
+test.describe('NO-MOCK · 2017 Face ID + Fortnite + 280', () => {
+  test.skip(!yearOnDisk(2017), 'years/2017 not on disk — hub open 1994–2018');
+
+  test('Face ID: empty save blocked; three checks write', async ({ page }) => {
+    await page.goto('/years/2017/sites/iphone/x.html');
+    await clearPrefix(page, 'itt17-faceid');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-faceid-save]').click();
+    expect(await getKey(page, 'itt17-faceid')).toBeNull();
+    await page.locator('[data-faceid-no-home]').check();
+    await page.locator('[data-faceid-not-touch]').check();
+    await page.locator('[data-faceid-not-xs]').check();
+    await page.locator('[data-faceid-save]').click();
+    await expect.poll(async () => getKey(page, 'itt17-faceid')).toBeTruthy();
+    expect(await getKey(page, 'itt17-faceid')).toMatch(/multiStep|2017-09-12|noHomeButton/);
+  });
+
+  test('Fortnite incomplete blocked', async ({ page }) => {
+    await page.goto('/years/2017/sites/fortnite/index.html');
+    await clearPrefix(page, 'itt17-fortnite');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-fn-save]').click();
+    expect(await getKey(page, 'itt17-fortnite')).toBeNull();
+    await page.locator('[data-fn-date]').check();
+    await page.locator('[data-fn-free]').check();
+    await page.locator('[data-fn-no-art]').check();
+    await page.locator('[data-fn-save]').click();
+    await expect.poll(async () => getKey(page, 'itt17-fortnite')).toBeTruthy();
+  });
+
+  test('Twitter 280 short compose blocked; 141+ writes', async ({ page }) => {
+    await page.goto('/years/2017/sites/twitter/280.html');
+    await clearPrefix(page, 'itt17-twitter280');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.fill('[data-tw280-text]', 'too short');
+    await page.locator('[data-tw280-date]').check();
+    await page.locator('[data-tw280-not-x]').check();
+    await page.locator('[data-tw280-save]').click();
+    expect(await getKey(page, 'itt17-twitter280')).toBeNull();
+    await page.fill(
+      '[data-tw280-text]',
+      'This museum tweet is longer than one hundred and forty characters on purpose so last year’s wall would have failed it — keep typing until we clearly pass one-four-one.'
+    );
+    await page.locator('[data-tw280-save]').click();
+    await expect.poll(async () => getKey(page, 'itt17-twitter280'), { timeout: 10000 }).toBeTruthy();
+  });
+});
+
+test.describe('NO-MOCK · 2018 GDPR + hearing', () => {
+  test.skip(!yearOnDisk(2018), 'years/2018 not on disk — hub open 1994–2018');
+
+  test('Accept All blocked; Manage rights write itt18-gdpr', async ({ page }) => {
+    await page.goto('/years/2018/sites/gdpr/index.html');
+    await clearPrefix(page, 'itt18-gdpr');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-gdpr-accept-all]').click();
+    expect(await getKey(page, 'itt18-gdpr')).toBeNull();
+    await page.goto('/years/2018/sites/gdpr/rights.html');
+    await page.reload();
+    await page.locator('[data-gdpr-save]').click();
+    expect(await getKey(page, 'itt18-gdpr')).toBeNull();
+    await page.locator('[data-gdpr-art15]').check();
+    await page.locator('[data-gdpr-art17]').check();
+    await page.locator('[data-gdpr-date]').check();
+    await page.locator('[data-gdpr-save]').click();
+    await expect.poll(async () => getKey(page, 'itt18-gdpr')).toBeTruthy();
+    expect(await getKey(page, 'itt18-gdpr')).toMatch(/multiStep|2018-05-25|manage/);
+  });
+
+  test('Hearing three checks write itt18-ca', async ({ page }) => {
+    await page.goto('/years/2018/sites/trust/index.html');
+    await clearPrefix(page, 'itt18-ca');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-ca-save]').click();
+    expect(await getKey(page, 'itt18-ca')).toBeNull();
+    await page.locator('[data-ca-quiz]').check();
+    await page.locator('[data-ca-press]').check();
+    await page.locator('[data-ca-hearing]').check();
+    await page.locator('[data-ca-save]').click();
+    await expect.poll(async () => getKey(page, 'itt18-ca')).toBeTruthy();
+  });
+});
+
 test.describe('NO-MOCK · 1997 ICQ', () => {
   test('register empty blocked; message empty blocked', async ({ page }) => {
     await page.goto('/years/1997/sites/icq/register.html');
@@ -506,25 +594,12 @@ test.describe('NO-MOCK · converted residual rooms require two checks', () => {
     await expect.poll(async () => getKey(page, 'itt13-fb-home'), { timeout: 10000 }).toBeTruthy();
   });
 
-  test('2013 Instagram Android / Wave funeral are continuity archives (no itt13 write)', async ({ page }) => {
-    await page.goto('/years/2013/sites/instagram/android.html');
-    await page.evaluate(() => {
-      localStorage.removeItem('itt13-ig-android');
-      localStorage.removeItem('itt13-wave-funeral');
-    });
-    await page.reload();
-    await wait2013Real(page);
-    await expect(page.locator('body')).toContainText(/Continuity archive/i);
-    if (await page.locator('[data-ig-android-install]').count()) {
-      await page.locator('[data-ig-android-install]').click();
-    }
-    expect(await getKey(page, 'itt13-ig-android')).toBeFalsy();
-    await page.goto('/years/2013/sites/wave/funeral.html');
-    await wait2013Real(page);
-    await expect(page.locator('body')).toContainText(/Continuity archive/i);
-    if (await page.locator('[data-wave-funeral]').count()) {
-      await page.locator('[data-wave-funeral]').click();
-    }
-    expect(await getKey(page, 'itt13-wave-funeral')).toBeFalsy();
+  test('2013 Instagram Android / Wave funeral clone rooms are gone (lean)', async ({ page }) => {
+    const ig = await page.goto('/years/2013/sites/instagram/android.html');
+    expect(ig && ig.status()).toBe(404);
+    const wave = await page.goto('/years/2013/sites/wave/funeral.html');
+    expect(wave && wave.status()).toBe(404);
+    await page.goto('/years/2013/pages/home.html');
+    await expect(page.locator('body')).toContainText(/This year is lean/i);
   });
 });

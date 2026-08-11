@@ -130,6 +130,30 @@ test.describe("2015 REAL flows", () => {
     });
   });
 
+  test("Discord #channel needs server; message reloads", async ({ page }) => {
+    await page.goto("/years/2015/sites/discord/channel.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt15-discord");
+      localStorage.removeItem("itt15-discord-msgs");
+    });
+    await page.reload();
+    await page.locator("[data-discord-msg]").fill("gg");
+    await page.locator("[data-discord-send]").click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem("itt15-discord-msgs"))).toBeFalsy();
+    await page.goto("/years/2015/sites/discord/index.html");
+    await page.fill("[data-discord-server]", "LAN party");
+    await page.fill("[data-discord-channel]", "#general");
+    await page.locator("[data-discord-gamer]").check();
+    await page.locator("[data-discord-save]").click();
+    await page.goto("/years/2015/sites/discord/channel.html");
+    await page.locator("[data-discord-msg]").fill("gg");
+    await page.locator("[data-discord-send]").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt15-discord-msgs"))).toMatch(/gg/);
+    await page.reload();
+    await expect(page.locator("[data-discord-thread]")).toContainText("gg");
+  });
+
   test("Discover needs ≥2 publisher tiles", async ({ page }) => {
     await page.goto("/years/2015/sites/snapchat/discover.html");
     await page.evaluate(() => localStorage.removeItem("itt15-snap-discover"));

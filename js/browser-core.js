@@ -22,6 +22,7 @@
     "browser/navigate.js",
     "browser/connect.js",
     "browser/load-theater.js",
+    "browser/chrome-ui.js",
     "browser/create.js",
     "browser/year-boot.js",
     /* UX pack (U1 shell coach · honesty chip) — remove these lines to disable */

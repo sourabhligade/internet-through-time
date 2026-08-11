@@ -1,7 +1,7 @@
 # 2014 — Museum grade card
 
-**Date:** 2026-08-09  
-**Status:** **museum-ready A–F** (2026-08-09 improve I1–I7 · I9) · hub **1994–2015** · prefix **`itt14`**  
+**Date:** 2026-08-10  
+**Status:** **Museum-grade A** · lean forest prune 2026-08-10 (**43 HTML**) · backup `/tmp/itt-2014-clone-backup-20260810` · hub **1994–2016** · prefix **`itt14`**  
 **Entry:** [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · harvest [`2014-DEEP-RESEARCH-WEB-HARVEST-2026-08-09.md`](2014-DEEP-RESEARCH-WEB-HARVEST-2026-08-09.md) · bible [`2014-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2014-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)
 
 ## Grade (MVP 2026-08-09)
@@ -15,7 +15,7 @@
 | e2e | **A** | `npm run test:e2e:2014` |
 | Hub | **unlocked** | 1994–2014 · 21 chips |
 
-**Overall:** museum-ready A–F (I1–I7 + I9–I10 **[x]**). Residual: WA brand stills · I3b/I8 optional · L4 forest voice.
+**Overall:** **Museum-grade A** (I1–I7 + I9–I10 **[x]** · lean prune P0–P6 **[x]** · I3b Flappy literacy **[x]**). Residual: I8 Hyperlapse/Imgur/Pandora optional · L4 stills (failed-final). **Forest gone.**
 
 **Improve execute (shipped):** [`2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md`](2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md). C-ids/facts: [`2014-COMPLETE-TO-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-COMPLETE-TO-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md).
 

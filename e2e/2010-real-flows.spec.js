@@ -64,6 +64,11 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-ipad-history');
     await page.reload();
     await page.locator('[data-ipad-claim]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-ipad-history'))).toBeFalsy();
+    await page.locator('[data-ipad-date]').check();
+    await page.locator('[data-ipad-not-os]').check();
+    await page.locator('[data-ipad-claim]').click();
     await requireKey(page, 'itt10-ipad-history');
   });
 
@@ -86,6 +91,13 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-fb-likes');
     await page.reload();
     await expect(page.locator('body')).toContainText(/Open Graph/i);
+    await page.waitForFunction(
+      () =>
+        document.documentElement.getAttribute('data-itt-immersion-booted') === '2010' ||
+        !!document.querySelector('[data-fb-like][data-like-bound="1"]'),
+      null,
+      { timeout: 15000 }
+    );
     await page.locator('[data-fb-like="cnn-og-2010"]').click();
     await requireKey(page, 'itt10-fb-likes');
     expect(await page.evaluate(() => localStorage.getItem('itt09-fb-likes'))).toBeFalsy();
@@ -236,6 +248,11 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-uber');
     await page.reload();
     await page.locator('#uber-req').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-uber'))).toBeFalsy();
+    await page.locator('[data-uber-not-x]').check();
+    await page.locator('[data-uber-sf]').check();
+    await page.locator('#uber-req').click();
     const raw = await requireKey(page, 'itt10-uber');
     expect(raw).toMatch(/black-car|San Francisco/i);
   });
@@ -244,6 +261,11 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/wave/index.html');
     await clearKeys(page, 'itt10-wave');
     await page.reload();
+    await page.locator('[data-wave-invite]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-wave'))).toBeFalsy();
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
     await page.locator('[data-wave-invite]').click();
     await requireKey(page, 'itt10-wave');
   });

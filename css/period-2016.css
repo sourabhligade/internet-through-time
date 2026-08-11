@@ -12,6 +12,10 @@ body.year-2016 .stories-ring,
   border: 3px solid #c13584;
   background: linear-gradient(135deg, #fccc63, #f77737, #c13584);
 }
+.stories-ring.is-empty {
+  border-color: #dbdbdb;
+  background: #efefef;
+}
 body.year-2016 .reaction-row button,
 .reaction-row button {
   margin: 2px;

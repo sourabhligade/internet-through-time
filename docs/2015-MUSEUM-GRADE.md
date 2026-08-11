@@ -1,7 +1,7 @@
 # 2015 — Museum grade card
 
 **Date:** 2026-08-09  
-**Status:** **museum-ready A–F** (pixels stay **C** / failed-final) · hub **1994–2015** · prefix **`itt15`**  
+**Status:** **Museum-ready A–F · museum-grade A−** (Layer C closed 2026-08-10 — WA and/or failed-final honesty) · hub **1994–2016** · prefix **`itt15`**  
 **Clone source:** `years/2014/` · one-thing **Watch ships**
 
 | Dimension | Target | Status |
@@ -17,7 +17,7 @@
 | Year-voice leftover | windows7 2013 copy / About 2014 labels | **[x]** scrubbed |
 | e2e | `npm run test:e2e:2015` | **[x]** |
 | Hub unlock | 1994–2015 | **[x]** |
-| Pixel harvest | CAPTURE H15-50/59/60 | **[~]** Periscope WA + Win10 VM landed · Watch/Music/Echo/WDM still failed-final |
+| Pixel harvest | CAPTURE H15-50/59/60 · P0 stills | **[x]** Periscope WA + Win10 VM · Watch/Music/WA Web **failed-final** + room honesty · WDM crops L4 **[~]** |
 
 **Entry:** [`2015-READ-FIRST.md`](2015-READ-FIRST.md)  
 **From-scratch execute:** [`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) (S0–S14)  

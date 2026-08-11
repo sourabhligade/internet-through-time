@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every year 1994–2016.
+ * REAL-flow system gate — every year 1994–2018.
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -34,6 +34,10 @@ const YEARS = [
   '2014',
   '2015',
   '2016',
+  '2017',
+  '2018',
+  '2019',
+  '2020',
 ];
 
 /** @param {string} year */
@@ -132,8 +136,8 @@ for (const year of YEARS) {
       await page.waitForTimeout(250);
       expect(await getKey(page, key), `${year}: one check must not write`).toBeFalsy();
 
-      // Complete
-      await boxes.nth(1).check();
+      // Complete — tick every remaining required box (2020 About is min=3)
+      for (let i = 1; i < n; i++) await boxes.nth(i).check();
       await btn.click();
       await expect
         .poll(async () => getKey(page, key), {

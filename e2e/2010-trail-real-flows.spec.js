@@ -87,6 +87,8 @@ test.describe('2010 trail 4 — Social web', () => {
 
     await page.goto('/years/2010/sites/facebook/about.html');
     await expect(page.locator('body')).toContainText(/Open Graph|600/i);
+    await page.locator('[data-fb-film]').check();
+    await page.locator('[data-fb-no-reels]').check();
     await page.locator('[data-fb-culture]').click();
     await requireKey(page, 'itt10-fb-culture');
 
@@ -146,10 +148,14 @@ test.describe('2010 trail 7 — Seeds of later', () => {
     await requireKey(page, 'itt10-pin');
 
     await page.goto('/years/2010/sites/uber/index.html');
+    await page.locator('[data-uber-not-x]').check();
+    await page.locator('[data-uber-sf]').check();
     await page.locator('#uber-req').click();
     await requireKey(page, 'itt10-uber');
 
     await page.goto('/years/2010/sites/wave/index.html');
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
     await page.locator('[data-wave-invite]').click();
     await requireKey(page, 'itt10-wave');
   });

@@ -50,6 +50,9 @@
       "sites/webvan/index.html": "http://museum.local/years/1999/webvan/",
       "sites/boocom/index.html": "http://museum.local/years/1999/boocom/",
 
+      "sites/sourceforge/index.html": "http://sourceforge.net/",
+      "sites/sourceforge/project.html": "http://sourceforge.net/projects/",
+      "sites/sourceforge/about.html": "http://sourceforge.net/about.html",
       "sites/playable/index.html": "http://museum.local/years/1999/playable/",
       "sites/playable/game.html": "http://museum.local/years/1999/playable/game.html",
       "sites/msngaming/about.html": "http://www.zone.com/about.html",
@@ -198,6 +201,9 @@
       "sites/aim/profile.html": "http://museum.local/years/1999/sites/aim/profile.html",
 },
     titleMap: {
+      "sites/sourceforge/index.html": "SourceForge.net — 1999",
+      "sites/sourceforge/project.html": "SourceForge project",
+      "sites/sourceforge/about.html": "About SourceForge",
       "sites/msngaming/about.html": "About",
       "sites/matrix/story.html": "Story",
       "sites/mynetscape/channels.html": "Channels",
@@ -344,7 +350,8 @@
       { title: "eBay", path: "sites/ebay/index.html" },
       { title: "Yahoo! GeoCities", path: "sites/geocities/index.html" },
       { title: "CNN.com", path: "sites/cnn/index.html" },
-      { title: "Ask Jeeves", path: "sites/askjeeves/index.html" }
+      { title: "Ask Jeeves", path: "sites/askjeeves/index.html" },
+      { title: "SourceForge", path: "sites/sourceforge/index.html" }
     ],
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web1999/",
@@ -361,6 +368,7 @@
       { re: /my.?netscape|rss/i, path: "sites/mynetscape/index.html" },
       { re: /flash.?4/i, path: "sites/flash4/index.html" },
 
+      { re: /sourceforge|sf\.net|cvs/i, path: "sites/sourceforge/index.html" },
       { re: /icq/i, path: "sites/icq/index.html" },
       { re: /napster|mp3/i, path: "sites/napster/index.html" },
       { re: /google/i, path: "sites/google/index.html" },

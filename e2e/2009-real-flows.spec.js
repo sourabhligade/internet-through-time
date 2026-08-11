@@ -43,11 +43,15 @@ test.describe('2009 real flows', () => {
 
   test('Facebook Like → itt09-fb-likes', async ({ page }) => {
     await page.goto('/years/2009/sites/facebook/feed.html');
-    await clearKeys(page, 'itt09-fb-likes');
+    await clearKeys(page, ['itt09-fb-likes', 'itt08-apps', 'itt10-imgur']);
     await page.reload();
     await page.waitForSelector('[data-fb-like]', { timeout: 20000 });
+    await page.locator('form[data-fb-status-post] button[type="submit"]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-fb-likes'))).toBeFalsy();
     await page.locator('[data-fb-like]').first().click();
     await requireKey(page, 'itt09-fb-likes');
+    expect(await page.evaluate(() => localStorage.getItem('itt08-apps') || localStorage.getItem('itt10-imgur'))).toBeFalsy();
   });
 
   test('FarmVille plant → itt09-farm', async ({ page }) => {
@@ -103,6 +107,11 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/wave/index.html');
     await clearKeys(page, 'itt09-wave');
     await page.reload();
+    await page.locator('[data-wave-invite]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-wave'))).toBeFalsy();
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
     await page.locator('[data-wave-invite]').click();
     await requireKey(page, 'itt09-wave');
   });

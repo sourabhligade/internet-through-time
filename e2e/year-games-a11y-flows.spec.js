@@ -1,13 +1,13 @@
 // @ts-check
 /**
- * Every year game 1994–2016: load flow + basic interactivity + accessibility smoke.
+ * Every year game 1994–2018: load flow + basic interactivity + accessibility smoke.
  * Runs inside year shell iframe (enterYear + goImmersion).
  */
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
 const YEARS = [];
-for (let y = 1994; y <= 2016; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2020; y++) YEARS.push(String(y));
 
 /** @type {Record<string, { id: string, primary: string, flow: 'click-start'|'click-primary'|'canvas'|'literacy'|'plant'|'grid' }>} */
 const FLOW = {
@@ -34,6 +34,10 @@ const FLOW = {
   '2014': { id: 'tilefold', primary: '#play-start', flow: 'click-start' },
   '2015': { id: 'blobrush', primary: '[data-game-start]', flow: 'click-start' },
   '2016': { id: 'gymrush', primary: '[data-game-start]', flow: 'click-start' },
+  '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
+  '2018': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
+  '2019': { id: 'continuerow', primary: '[data-game-start]', flow: 'click-start' },
+  '2020': { id: 'among', primary: '[data-game-start]', flow: 'click-start' },
 };
 
 /**
@@ -201,7 +205,7 @@ test.describe('Year games — keyboard / focus affordances', () => {
 });
 
 test.describe('Playables lobby a11y smoke (sample years)', () => {
-  for (const year of ['1994', '2005', '2010', '2013', '2015', '2016']) {
+  for (const year of ['1994', '2005', '2010', '2013', '2015', '2016', '2017', '2018']) {
     test(`${year} playable lobby has heading and toys`, async ({ page }) => {
       await enterYear(page, year);
       await goImmersion(page, year, 'sites/playable/index.html');

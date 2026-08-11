@@ -633,12 +633,14 @@ test.describe('year-signature 2012', () => {
     });
     const install = frame.locator('[data-ig-android-install]');
     await expect(install).toBeVisible({ timeout: 10000 });
+    await frame.locator('[data-ig-android-date]').check();
+    await frame.locator('[data-ig-android-not-stories]').check();
     await install.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt12-ig-android')), {
         timeout: 8000,
       })
-      .toBe('1');
+      .toMatch(/android|2012-04-03|multiStep/i);
   });
 });
 
@@ -657,11 +659,13 @@ test.describe('year-signature 2013', () => {
     await expect(frame.locator('body')).toContainText(/Hold|6 second|Vine/i, { timeout: 15000 });
     const hold = frame.locator('[data-vine-hold]');
     await expect(hold).toBeVisible({ timeout: 10000 });
-    await hold.dispatchEvent('pointerdown');
-    await hold.dispatchEvent('mousedown');
-    await page.waitForTimeout(500);
-    await hold.dispatchEvent('mouseup');
-    await hold.dispatchEvent('pointerup');
+    await hold.evaluate((el) => {
+      el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerId: 1 }));
+    });
+    await page.waitForTimeout(700);
+    await hold.evaluate((el) => {
+      el.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, pointerId: 1 }));
+    });
     await expect(frame.locator('[data-vine-status]')).toContainText(/Ready/i, { timeout: 5000 });
     await killOverlays(page);
     await frame.locator('[data-vine-caption]').fill('sig vine ' + Date.now());
@@ -955,6 +959,204 @@ test.describe('year-signature 2016', () => {
         timeout: 10000,
       })
       .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2017', () => {
+  test('Face ID incomplete blocked; three checks write itt17-faceid', async ({ page }) => {
+    await enterYear(page, '2017');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt17-faceid');
+        localStorage.removeItem('itt16-ig-stories');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2017', 'sites/iphone/x.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('body')).toContainText(/Face ID/i, { timeout: 15000 });
+    await frame.locator('[data-faceid-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt17-faceid'))).toBeFalsy();
+    await frame.locator('[data-faceid-no-home]').check({ force: true });
+    await frame.locator('[data-faceid-not-touch]').check({ force: true });
+    await frame.locator('[data-faceid-not-xs]').check({ force: true });
+    await frame.locator('[data-faceid-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt17-faceid')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt16-ig-stories'))).toBeFalsy();
+  });
+
+  test('Fortnite empty save blocked; three checks write itt17-fortnite', async ({ page }) => {
+    await enterYear(page, '2017');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt17-fortnite');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2017', 'sites/fortnite/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-fn-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-fn-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt17-fortnite'))).toBeFalsy();
+    await frame.locator('[data-fn-date]').check({ force: true });
+    await frame.locator('[data-fn-free]').check({ force: true });
+    await frame.locator('[data-fn-no-art]').check({ force: true });
+    await frame.locator('[data-fn-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt17-fortnite')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+
+  test('Twitter 280 short text blocked; 141+ writes itt17-twitter280', async ({ page }) => {
+    await enterYear(page, '2017');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt17-twitter280');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2017', 'sites/twitter/280.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-tw280-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-tw280-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt17-twitter280'))).toBeFalsy();
+    await frame.locator('[data-tw280-text]').fill(
+      'This museum tweet is longer than one hundred and forty characters on purpose so last year’s wall would have failed it — keep typing until we clearly pass one-four-one.'
+    );
+    await frame.locator('[data-tw280-date]').check({ force: true });
+    await frame.locator('[data-tw280-not-x]').check({ force: true });
+    await frame.locator('[data-tw280-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt17-twitter280')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2018', () => {
+  test('GDPR incomplete blocked; three checks write itt18-gdpr', async ({ page }) => {
+    await enterYear(page, '2018');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt18-gdpr');
+        localStorage.removeItem('itt17-faceid');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2018', 'sites/gdpr/rights.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-gdpr-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-gdpr-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
+    await frame.locator('[data-gdpr-art15]').check({ force: true });
+    await frame.locator('[data-gdpr-art17]').check({ force: true });
+    await frame.locator('[data-gdpr-date]').check({ force: true });
+    await frame.locator('[data-gdpr-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt18-gdpr')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt17-faceid'))).toBeFalsy();
+  });
+
+  test('Accept All on banner does not write itt18-gdpr', async ({ page }) => {
+    await page.goto('/years/2018/sites/gdpr/index.html');
+    await page.evaluate(() => localStorage.removeItem('itt18-gdpr'));
+    await page.reload();
+    await page.locator('[data-gdpr-accept-all]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
+  });
+});
+
+test.describe('year-signature 2019', () => {
+  test('Disney+ trial blocked; continue writes itt19-disneyplus', async ({ page }) => {
+    await enterYear(page, '2019');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt19-disneyplus');
+        localStorage.removeItem('itt18-gdpr');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2019', 'sites/disneyplus/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-dplus-trial]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-dplus-trial]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt19-disneyplus'))).toBeFalsy();
+    await frame.locator('[data-profile="adult-1"]').click();
+    await frame.locator('[data-title="mando"]').click();
+    await frame.locator('[data-add-continue]').click();
+    await frame.locator('[data-title="lion-king"]').click();
+    await frame.locator('[data-add-continue]').click();
+    await frame.locator('[data-dplus-date]').check({ force: true });
+    await frame.locator('[data-dplus-not-trial]').check({ force: true });
+    await frame.locator('[data-dplus-kids]').check({ force: true });
+    await frame.locator('[data-dplus-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt19-disneyplus')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
+  });
+});
+
+test.describe('year-signature 2020', () => {
+  test('Zoom join blocked; recap writes itt20-zoom', async ({ page }) => {
+    await enterYear(page, '2020');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt20-zoom');
+        localStorage.removeItem('itt19-disneyplus');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2020', 'sites/zoom/index.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('[data-zoom-join]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-zoom-join]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt20-zoom'))).toBeFalsy();
+    await frame.locator('#itt20-code').fill('84739258101');
+    await frame.locator('[data-zoom-join]').click();
+    await page.waitForTimeout(400);
+    await contentFrame(page).locator('[data-admit]').click();
+    await page.waitForTimeout(400);
+    const meet = contentFrame(page);
+    await meet.locator("[name='line']").fill('can you see my screen');
+    await meet.locator('[data-chat]').evaluate((f) => f.requestSubmit());
+    await meet.locator('[data-leave]').click();
+    await page.waitForTimeout(400);
+    const recap = contentFrame(page);
+    await recap.locator('[data-zoom-part]').check({ force: true });
+    await recap.locator('[data-zoom-not-live]').check({ force: true });
+    await recap.locator('[data-zoom-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt20-zoom')), {
+        timeout: 10000,
+      })
+      .toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem('itt19-disneyplus'))).toBeFalsy();
   });
 });
 

@@ -8,7 +8,7 @@ test.describe("2016 densify", () => {
     await expect(page.locator("[data-itt-journeys] ol li")).toHaveCount(6);
   });
 
-  test("Stories complete reveals next-flow to PoGO", async ({ page }) => {
+  test("Stories complete reveals next-flow to watch + Snap", async ({ page }) => {
     await page.goto("/years/2016/sites/instagram/stories.html");
     await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
     await page.reload();
@@ -18,7 +18,8 @@ test.describe("2016 densify", () => {
     await page.locator("[data-ig-stories-not-reels]").check();
     await page.locator("[data-ig-stories-add]").click();
     await expect(page.locator("[data-next-flow]")).toBeVisible();
-    await expect(page.locator("[data-next-flow] a[href*='pogo']")).toBeVisible();
+    await expect(page.locator("[data-next-flow] a[href*='watch']")).toBeVisible();
+    await expect(page.locator("[data-next-flow] a[href*='snapchat']")).toBeVisible();
   });
 
   test("About users digit is Live Stats users table", async ({ page }) => {
@@ -33,6 +34,37 @@ test.describe("2016 densify", () => {
     const text = await page.locator("body").innerText();
     expect(text).toMatch(/Live Nov 21|AMP in Search|Dyn \/ Mirai/i);
     await expect(page.locator("#ott-guided-2016 ol li")).toHaveCount(6);
+  });
+
+  test("L0 VR shelf copy on CV1, Pixel, what’s-new — no new theater", async ({ page }) => {
+    await page.goto("/years/2016/sites/oculus/cv1.html");
+    await expect(page.locator("body")).toContainText(/\$399/);
+    await expect(page.locator("body")).toContainText(/PlayStation VR|PSVR/i);
+    await expect(page.locator("body")).toContainText(/not Quest/i);
+    await expect(page.locator("body")).toContainText(/Not Vision Pro/i);
+    expect(await page.locator("[data-psvr-save], [data-daydream-save]").count()).toBe(0);
+
+    await page.goto("/years/2016/sites/pixel/index.html");
+    await expect(page.locator("body")).toContainText(/Daydream/i);
+    await expect(page.locator("body")).toContainText(/\$79/);
+    await expect(page.locator("body")).toContainText(/not Cardboard/i);
+
+    await page.goto("/years/2016/pages/whats-new.html");
+    await expect(page.locator("body")).toContainText(/Oct 13/);
+    await expect(page.locator("body")).toContainText(/\$399/);
+    await expect(page.locator("body")).toContainText(/Nov 10/);
+    await expect(page.locator("body")).toContainText(/\$79/);
+  });
+
+  test("leftover P2 chips exist and guided stays 6", async ({ page }) => {
+    await page.goto("/years/2016/pages/home.html");
+    await expect(page.locator("#ott-guided-2016 ol li")).toHaveCount(6);
+    await expect(page.locator("a[href*='workplace']")).toBeVisible();
+    await expect(page.locator("a[href*='ios10']")).toBeVisible();
+    await expect(page.locator("a[href*='nougat']")).toBeVisible();
+    await expect(page.locator("a[href*='note7']")).toBeVisible();
+    await expect(page.locator("a[href*='mariorun']")).toBeVisible();
+    await expect(page.locator('[data-ott-one-thing="2016"]')).toHaveAttribute("href", /stories/);
   });
 
   test("one-thing is Stories not Musical.ly", async ({ page }) => {

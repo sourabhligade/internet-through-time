@@ -98,14 +98,19 @@
       if (linkEl) {
         linkEl.textContent = it ? it.url : "(upload first)";
       }
-      var redditA = doc.querySelector("[data-ig-reddit]");
-      if (redditA && it) {
-        redditA.href =
-          "../reddit/submit.html?title=" +
-          encodeURIComponent(it.title) +
-          "&url=" +
-          encodeURIComponent(it.url);
+      var redditAs = doc.querySelectorAll("[data-ig-reddit]");
+      var ri;
+      for (ri = 0; ri < redditAs.length; ri++) {
+        if (it) {
+          redditAs[ri].href =
+            "../reddit/submit.html?title=" +
+            encodeURIComponent(it.title) +
+            "&url=" +
+            encodeURIComponent(it.url);
+        }
       }
+      var next = doc.querySelector("[data-next-flow]");
+      if (next) next.hidden = !it;
     }
 
     render();

@@ -1,8 +1,8 @@
 # 2016 — READ FIRST (research freeze · lean implement)
 
-**Date:** 2026-08-10  
+**Date:** 2026-08-10 · **detail freeze addendum 2026-08-11**  
 **Purpose:** Single entry for museum year **2016**. Read before scaffolding, harvesting pixels, or writing tests.  
-**Disk truth today:** Hub **1994–2016** playable · **`years/2016/` lean MVP live** · prefix **`itt16`**  
+**Disk truth today:** Hub **1994–2019** playable · **`years/2016/` lean museum-grade A (~58 HTML)** · prefix **`itt16`**  
 **Parent:** Live lean **2015** (`years/2015/` ~67 HTML · one-thing Watch ships).  
 **Execute:** [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) (S0–S14)  
 **Research + artifacts:** [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md)  
@@ -16,9 +16,16 @@
 |--------------|---------|
 | Orientation | §1–6 · stop |
 | Facts + first freeze | [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md) |
-| **Deep harvest (beyond first MD)** | [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md) · facts + 16-D map |
-| **Implement densify (minute steps)** | **[`2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md`](2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md)** ← ★ execute D0–D14 |
+| **Deep harvest (beyond first MD)** | [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md) · P0/P1 + D1–D20 names |
+| **New-source harvest (2026-08-11)** | [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md) · Apple/FBI · TRAI · Marketplace · Duo · Teams · AlphaGo · LE · Yahoo |
+| **★ Detail freeze (2026-08-11)** | [`2016-DEEP-RESEARCH-DETAIL-PASS-2026-08-11.md`](2016-DEEP-RESEARCH-DETAIL-PASS-2026-08-11.md) ← disk inventory · live re-verify · leftover kits · do-not-rebuild |
+| **Leftover implement map** | [`2016-LEFTOVER-IMPLEMENTATION-PHASES.md`](2016-LEFTOVER-IMPLEMENTATION-PHASES.md) ← optional rooms L0–L6 |
+| **★ To A (Stories machine)** | [`2016-TO-A-LEFTOVER-MAP.md`](2016-TO-A-LEFTOVER-MAP.md) ← feed → add → watch |
+| **This session recap** | [`SESSION-2026-08-11-WHAT-WAS-DONE.md`](SESSION-2026-08-11-WHAT-WAS-DONE.md) |
+| **Implement densify D1–D6** | [`2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md`](2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md) **[x]** |
+| **Implement P2 (new rooms)** | **[`2016-P2-DENSIFY-IMPLEMENTATION-PHASES.md`](2016-P2-DENSIFY-IMPLEMENTATION-PHASES.md)** ← ★ minute steps P2-0–P2-14 |
 | **Implement (lean year, already done)** | [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) S0–S14 **[x]** · S15 = densify file |
+| **★ Promote + pixels → museum-grade A** | [`2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md) **P11–P13** |
 | Game | [`GAMES-PER-YEAR/YEAR-2016.md`](GAMES-PER-YEAR/YEAR-2016.md) Gym Rush |
 | Engine | [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`REAL-FLOW-SYSTEM.md`](REAL-FLOW-SYSTEM.md) |
 | Parent year | [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · live `years/2015/` |
@@ -65,19 +72,28 @@
 
 | When | What | Exhibit |
 |------|------|---------|
+| **Feb 1 2016** | WhatsApp **1 billion** monthly users (then E2E Apr 5) | Copy on WA E2E |
+| **Feb 8 2016** | TRAI bans differential pricing · Free Basics withdraws India **Feb 11** | P2 `freebasics/` |
+| **Feb 16 2016** | Cook customer letter · Apple vs FBI (encryption, not a crime exhibit) | P2 `apple/letter.html` |
 | **Feb 24 2016** | Facebook **Reactions** global (Like + Love Haha Wow Sad Angry). IE/ES tests late 2015 only. | P0 Reactions |
 | **Mar 2016** | slither.io class (.io wave after 2015 agar.io) · **1B hostnames restabilize** | Game literacy / About |
+| **Mar 9–15 2016** | AlphaGo vs Lee Sedol **4–1** · livestream class | P2 `alphago/` |
 | **Mar 28 2016** | **Oculus Rift CV1** consumer ship (~$599) | P1 reverse 2015 pre-ship |
 | **Apr 5 2016** | **WhatsApp** default **E2E** complete (Signal Protocol · 1B users class) | P0 WA E2E |
-| **Apr 12 2016** | F8 · **Messenger bots** mass platform | P1 reverse 2015 “business only” |
+| **Apr 12 2016** | F8 · **Messenger bots** mass platform · Let’s Encrypt **production** (public beta ends) | P1 bots · P2 LE |
 | **Jun 13 2016** | Microsoft to acquire **LinkedIn** ~**$26.2B** | P1 deal |
 | **Jul 6 2016** | **Pokémon GO** US / AU / NZ | P0 culture · year **game** Gym Rush |
 | **Jul 29 2016** | **Windows 10 free upgrade ends** (general public) | Desktop honesty |
 | **Aug 2 2016** | **Instagram Stories** launch (iOS + Android, global roll-out weeks) | **One-thing** |
+| **Aug 16 2016** | **Google Duo** · phone # · Knock Knock · E2E (not Meet) | P2 `duo/` |
 | **Sep 7 2016** | **iPhone 7 / 7 Plus** · no 3.5 mm jack · Lightning adapter · AirPods announced (then delayed) | P0 hardware |
 | **Sep 21 2016** | **Google Allo** | P1 |
+| **Sep 22 2016** | Yahoo discloses **500 million** (theft was **2014**) | P2 `yahoo-breach/` |
+| **Oct 3 2016** | **Marketplace** · 450M Groups · 18+ · US/UK/AU/NZ · no payment | P2 `facebook/marketplace.html` |
 | **Oct 27 2016** | **Vine** Medium: discontinue mobile app “coming months” · **nothing happens today** | P0 dual-date |
+| **Nov 2 2016** | **Microsoft Teams preview** · GA **Mar 14 2017** | P2 `teams/` |
 | **Dec 13 2016** | **AirPods** order on Apple.com · **$159** · stores next week class | P0 AirPods |
+| **Dec 14 2016** | Yahoo discloses **1 billion** (theft **Aug 2013**) · **not 3B** | P2 `yahoo-breach/` |
 | **Jan 17 2017** | Vine app → Vine Camera / archive class (not a 2016 “already gone” story) | Honesty on Vine room |
 
 ### Continuity (chips, not forest)
@@ -156,7 +172,13 @@ Incomplete (no add, no 24h check) **never writes**.
 | Key | Flow |
 |-----|------|
 | `itt16-thesis-ack` | About REAL |
-| `itt16-ig-stories` | Stories one-thing |
+| `itt16-ig-stories` | Stories one-thing (add) |
+| `itt16-ig-stories-list` · `itt16-ig-stories-watch` | Tray persist · watch |
+| `itt16-pogo` · `itt16-pogo-stop` | Go outside machine |
+| `itt16-reactions` | Feel the post (echo on feed) |
+| `itt16-wa-e2e` · `itt16-wa-chat` | Lock then send |
+| `itt16-iphone7` · `itt16-dongle` · `itt16-airpods` | No jack machine |
+| `itt16-vine-clip` · `itt16-vine` | Loop then goodbye |
 | `itt16-pogo` | Pokémon GO literacy |
 | `itt16-reactions` | FB Reactions |
 | `itt16-wa-e2e` | WhatsApp E2E default |

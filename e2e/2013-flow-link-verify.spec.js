@@ -89,9 +89,10 @@ test.describe("2013 dirbar + iframe trails", () => {
 });
 
 test.describe("2013 leftover clone voice", () => {
-  test("Twitter residual is continuity archive not 2009 product", async ({ page }) => {
-    await page.goto("/years/2013/sites/twitter/index.html");
-    await expect(page.locator("body")).toContainText(/Continuity archive/i);
-    await expect(page.locator("body")).not.toContainText("2009 honesty");
+  test("Twitter clone room is gone (lean 2013)", async ({ page }) => {
+    const res = await page.goto("/years/2013/sites/twitter/index.html");
+    expect(res && res.status()).toBe(404);
+    await page.goto("/years/2013/pages/home.html");
+    await expect(page.locator("body")).toContainText(/This year is lean/i);
   });
 });

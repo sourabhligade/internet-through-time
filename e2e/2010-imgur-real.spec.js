@@ -42,5 +42,36 @@ test.describe("2010 Imgur → Reddit real loop", () => {
 
     await page.locator("form[data-reddit-submit] button[type='submit']").click();
     await expect(page.locator("[data-reddit-status]")).toContainText(/Submitted/i);
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem("itt10-reddit")))
+      .toMatch(/imgur\.residual/i);
+    await page.goto("/years/2010/sites/reddit/index.html");
+    await page.locator("[data-reddit-sort='newest']").first().click();
+    await expect(page.locator("[data-reddit-list]")).toContainText(/imgur\.residual/i);
+    await page.reload();
+    await page.locator("[data-reddit-sort='newest']").first().click();
+    await expect(page.locator("[data-reddit-list]")).toContainText(/imgur\.residual/i);
+    const blob = await page.evaluate(() => localStorage.getItem("itt10-reddit"));
+    expect(blob).toMatch(/"real":\s*true/);
+    expect(blob).toMatch(/"year":\s*"2010"/);
+    expect(await page.evaluate(() => localStorage.getItem("itt11-airbnb") || "")).not.toMatch(/imgur/);
+  });
+
+  test("empty reddit submit never writes itt10-reddit", async ({ page }) => {
+    await page.goto("/years/2010/sites/reddit/submit.html");
+    await page.evaluate(() => {
+      Object.keys(localStorage)
+        .filter((k) => k.startsWith("itt10-reddit"))
+        .forEach((k) => localStorage.removeItem(k));
+      localStorage.setItem("itt11-airbnb", '{"keep":1}');
+    });
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator("form[data-reddit-submit] button[type='submit']").click();
+    expect(await page.evaluate(() => localStorage.getItem("itt10-reddit"))).toBeNull();
+    await page.fill("form[data-reddit-submit] [name='title']", "no url post");
+    await page.locator("form[data-reddit-submit] button[type='submit']").click();
+    expect(await page.evaluate(() => localStorage.getItem("itt10-reddit"))).toBeNull();
+    expect(await page.evaluate(() => localStorage.getItem("itt11-airbnb"))).toBe('{"keep":1}');
   });
 });

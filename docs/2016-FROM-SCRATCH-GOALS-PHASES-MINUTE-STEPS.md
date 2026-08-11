@@ -145,7 +145,7 @@ Guided home 6: About · Stories · PoGO · Reactions · WA E2E · Vine/AirPods.
 
 **Order:** S0 → S1 → S2 → S3 → S4 → (S5a–S5f + S6 *parallel-ok*) → S8 → S7 + S9 + S10 → S11 → S12 → S13.  
 **MVP ship** = S2–S6 + S8 + S11–S13 + S5a green. **[x]**  
-**Museum-ready** = MVP + S7 + S9 + S10 + S14 (or failed-final). **[~]**  
+**Museum-ready** = MVP + S7 + S9 + S10 + S14 (or failed-final). **[x]** 2026-08-10 (H16-20–24 failed-final + honesty)  
 **Deeper 2016** = S15 after [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md).
 
 ---

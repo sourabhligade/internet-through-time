@@ -1520,8 +1520,8 @@ No `itt18-*` writes from 2019 extras. Title/chrome say 2019.
 ## 2020 — Remote · Reels · CCPA live · Edge stable
 
 **Prefix:** `itt20` · **Thesis:** Video meetings mass · Reels vs TikTok · privacy statute live · Chromium Edge  
-**Complex status:** `[ ]` **← suggested #9 for newest year**  
-**Debt:** same 2018 clone class as 2019 + flow-map `name` vs `label`.
+**Complex status:** `[x]` lean from-scratch 2026-08-11  
+**Debt:** none on this branch (not a 2018 clone). Flow-maps use `label`.
 
 ### Goal
 
@@ -1612,7 +1612,7 @@ Do **not** start these as year work. Separate user ask.
 | 2017 | Modern list persist | `[ ]` | `[ ]` | `[ ]` | |
 | 2018 | GDPR gate + FYP | `[ ]` | `[ ]` | `[ ]` | |
 | 2019 | Disney+ continue | `[ ]` | `[ ]` | `[ ]` | kill 2018 clone debt |
-| 2020 | Zoom meeting | `[ ]` | `[ ]` | `[ ]` | kill 2018 clone debt |
+| 2020 | Zoom meeting | `[x]` | `[x]` | `[x]` | lean from-scratch 2026-08-11 |
 
 One-thing foundation remains **[x]** — this table is the **complex bar only**.
 

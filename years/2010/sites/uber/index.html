@@ -11,10 +11,10 @@
   <b>Not</b> UberX · <b>not</b> every city · <b>not</b> mass ride-hail as later years. Educational theater only — no real dispatch.
  </p>
  <p style="font-size:12px;color:#aaa">Seed of 2010s on-demand cars · still a luxury black-car story this year.</p>
- <button type="button" id="uber-req">Request black car (theater)</button>
- <div id="uber-st" style="font-size:12px;color:#9f9;margin-top:8px"></div>
- 
+ <label style="display:block;font-size:12px;color:#fd8;margin:6px 0"><input type="checkbox" data-uber-not-x> Black-car only · not UberX</label>
+ <label style="display:block;font-size:12px;color:#fd8;margin:6px 0"><input type="checkbox" data-uber-sf> SF only · no real dispatch</label>
+ <button type="button" id="uber-req" data-uber-kind="black">Request black car</button>
+ <div id="uber-st" data-uber-status style="font-size:12px;color:#9f9;margin-top:8px"></div>
 </div>
-<script>(function(){var KEY="itt10-uber";document.getElementById("uber-req").onclick=function(){localStorage.setItem(KEY,JSON.stringify({requested:true,city:"San Francisco",kind:"black-car",ts:Date.now()}));document.getElementById("uber-st").textContent="Request noted · SF black-car · "+KEY+" · not UberX mass.";};})();</script>
 <script src="../../../../js/immersion-2010.js"></script>
 </body></html>
