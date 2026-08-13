@@ -16,6 +16,10 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "scripts") not in sys.path:
+    sys.path.insert(0, str(ROOT / "scripts"))
+from itt_gate import SHIP_YEARS  # noqa: E402
+
 FAILS: list[str] = []
 
 
@@ -36,6 +40,8 @@ def check_files() -> None:
         "404.html",
         "js/lib/util.js",
         "js/browser-core.js",
+        "js/browser/chrome-ui.js",
+        "js/browser/navigate.js",
         "js/immersion-core.js",
         "js/immersion/create.js",
         "js/immersion/shared.js",
@@ -147,6 +153,36 @@ def check_files() -> None:
         "years/2012/sites/chrome/index.html",
         "js/config/2012.js",
         "js/immersion-2012.js",
+        "years/2013/index.html",
+        "years/2014/index.html",
+        "years/2015/index.html",
+        "years/2016/index.html",
+        "years/2016/pages/home.html",
+        "years/2016/pages/about.html",
+        "years/2016/sites/instagram/stories.html",
+        "years/2016/sites/pogo/index.html",
+        "years/2016/sites/playable/game.html",
+        "js/config/2016.js",
+        "js/immersion-2016.js",
+        "years/2017/index.html",
+        "years/2017/pages/home.html",
+        "years/2017/sites/iphone/x.html",
+        "years/2017/sites/playable/game.html",
+        "js/config/2017.js",
+        "js/immersion-2017.js",
+        "years/2018/index.html",
+        "years/2018/pages/home.html",
+        "years/2018/sites/gdpr/index.html",
+        "years/2018/sites/gdpr/manage.html",
+        "years/2018/sites/playable/game.html",
+        "js/config/2018.js",
+        "js/immersion-2018.js",
+        "years/2019/index.html",
+        "years/2019/pages/home.html",
+        "years/2019/sites/disneyplus/index.html",
+        "years/2019/sites/playable/game.html",
+        "js/config/2019.js",
+        "js/immersion-2019.js",
         "js/immersion/spotify.js",
         "js/immersion/googleplus.js",
         "assets/period/2001/amazon/logo-smile.gif",
@@ -209,7 +245,7 @@ def check_urlmaps() -> None:
     import json
     import subprocess
 
-    for year in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010"):
+    for year in SHIP_YEARS:
         code = f"""
 const fs=require("fs");const vm=require("vm");
 const ctx={{window:{{}},console}};ctx.window=ctx;vm.createContext(ctx);
@@ -277,6 +313,19 @@ def check_http(base: str) -> None:
         "/years/2012/pages/home.html",
         "/years/2012/sites/instagram/android.html",
         "/years/2012/sites/facebook/ipo.html",
+        "/years/2013/",
+        "/years/2014/",
+        "/years/2015/",
+        "/years/2016/",
+        "/years/2016/pages/home.html",
+        "/years/2016/sites/instagram/stories.html",
+        "/years/2017/",
+        "/years/2017/sites/iphone/x.html",
+        "/years/2018/",
+        "/years/2018/sites/gdpr/index.html",
+        "/years/2018/sites/gdpr/manage.html",
+        "/years/2019/",
+        "/years/2019/sites/disneyplus/index.html",
         "/js/browser-core.js",
         "/js/immersion-core.js",
         "/js/config/1995.js",

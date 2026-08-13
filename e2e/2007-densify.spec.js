@@ -104,12 +104,11 @@ test.describe('2007 densify — museum-perfect REAL multipage', () => {
       }
     });
     await page.reload();
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-beacon-ack]', { timeout: 20000 });
+    await page.locator('[data-beacon-ack]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt07-beacon-ack'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.locator('[data-beacon-buy="blockbuster"]').click();
+    await page.locator('[data-beacon-ack]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''), {
         timeout: 10000
@@ -128,10 +127,12 @@ test.describe('2007 densify — museum-perfect REAL multipage', () => {
       }
     });
     await page.reload();
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-iphone-specs-ack]', { timeout: 20000 });
+    await page.locator('[data-iphone-specs-ack]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt07-iphone-specs-ack'))).toBeFalsy();
+    await page.locator('[data-iphone-safari]').click();
+    await page.locator('[data-iphone-desktop]').click();
+    await page.locator('[data-iphone-specs-ack]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-iphone-specs-ack') || ''), {
         timeout: 10000
@@ -216,10 +217,11 @@ test.describe('2007 densify — museum-perfect REAL multipage', () => {
       }
     });
     await page.reload();
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-os-install]', { timeout: 20000 });
+    await page.locator('[data-os-install]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt07-opensocial-ack'))).toBeFalsy();
+    await page.locator('[data-os-net="myspace"]').click();
+    await page.locator('[data-os-install]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-opensocial-ack') || ''), {
         timeout: 10000
@@ -258,10 +260,11 @@ test.describe('2007 densify — museum-perfect REAL multipage', () => {
       }
     });
     await page.reload();
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-kindle-order]', { timeout: 20000 });
+    await page.locator('[data-kindle-order]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt07-kindle-ack'))).toBeFalsy();
+    await page.locator('[data-kindle-whisper]').click();
+    await page.locator('[data-kindle-order]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-kindle-ack') || ''), {
         timeout: 10000

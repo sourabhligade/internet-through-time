@@ -239,11 +239,11 @@ npx playwright test e2e/2013-*.spec.js --workers=1
 - [ ] Owner accepts this freeze for implement  
 
 ### Implement (museum-ready)
-- [ ] M1 guided flows + dead buttons  
-- [ ] M2 CAPTURE H13  
-- [ ] M3 ≥3 gems  
-- [ ] M4 continuity badges  
-- [ ] M5 e2e green + DISK-TRUTH promote  
+- [x] M1 guided flows + dead buttons  
+- [x] M2 CAPTURE H13  
+- [x] M3 ≥3 gems  
+- [x] M4 continuity badges  
+- [x] M5 e2e green + DISK-TRUTH promote  
 
 ---
 

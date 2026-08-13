@@ -1,8 +1,335 @@
-/* 2014 period — deltas on 2013 */
-@import url("period-2013.css");
+/* 2014+ period kit — self-contained.
+   Do NOT @import period-2013.css (that daisy-chains 2012→…→1995).
+   Portal / residual product skins that 2014–17 still use are inlined here. */
 
-/* WhatsApp green product rooms */
-.wa-shell, .itt-whatsapp { --wa-green: #34b7f1; }
-body.year-2014 .wa-header { background: #075e54; color: #fff; }
-body.year-2014 .hb-alert { border: 2px solid #c00; background: #fff5f5; }
-body.year-2014 .ib-bucket { background: #e8f4ff; border: 1px solid #39c; }
+/* —— Nav slot (was period-1995) —— */
+.itt-nav-slot {
+  min-height: 28px;
+  margin: 0 0 8px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body > .itt-nav-slot:empty {
+  background: #000080;
+  min-height: 28px;
+}
+#itt-exhibit-nav,
+#itt-exhibit-nav table { margin: 0; }
+
+/* —— Portal base (was period-2011) —— */
+.portal-shell {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+.portal-sub { margin: 4px 0 0; color: #888; font-size: 13px; }
+.portal-scale { color: #666; font-size: 11px; align-self: flex-end; }
+.portal-lede { font-size: 15px; color: #ccc; margin: 0 0 16px; line-height: 1.45; }
+.portal-apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.portal-app {
+  display: block;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 14px 12px;
+  text-decoration: none;
+  color: #eee;
+  min-height: 72px;
+}
+.portal-app b { display: block; font-size: 15px; margin-bottom: 4px; }
+.portal-app span { font-size: 11px; color: #888; }
+.portal-trails h2 { font-size: 14px; color: #25d366; margin: 18px 0 8px; }
+.portal-trails ol { margin: 0; padding-left: 20px; color: #bbb; font-size: 13px; line-height: 1.6; }
+.portal-trails a { color: #25d366; }
+.portal-bans {
+  margin-top: 16px;
+  font-size: 11px;
+  color: #a66;
+  background: #1a1010;
+  border: 1px solid #633;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+.portal-foot { margin-top: 18px; font-size: 12px; color: #666; }
+.portal-foot a { color: #888; }
+
+/* —— 2013 portal overlay (2014 home still uses these class names) —— */
+body.portal-2014,
+body.portal-2013 {
+  margin: 0;
+  background: #0a0a0a;
+  color: #eee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.portal-shell-2013 { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+.portal-head-2013 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 3px solid #25d366;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.portal-head-2013 h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #25d366;
+}
+.portal-2014 .portal-sub,
+.portal-2013 .portal-sub { color: #888; font-size: 13px; margin: 4px 0 0; }
+.portal-2014 .portal-scale,
+.portal-2013 .portal-scale { color: #555; font-size: 11px; }
+.portal-2014 .portal-lede,
+.portal-2013 .portal-lede { font-size: 17px; color: #ddd; line-height: 1.5; max-width: 36em; }
+.portal-2014 .ott-guided a:hover,
+.portal-2013 .ott-guided a:hover { text-decoration: underline; }
+.portal-apps-2013 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.portal-apps-2013 .portal-app {
+  background: #141414;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #eee;
+}
+.portal-app.vine { border-color: #25d366; }
+.portal-app.vine b { color: #25d366; }
+.portal-app.snap { border-color: #c62828; }
+.portal-app.snap b { color: #ef9a9a; }
+.portal-app.igv b { color: #3897f0; }
+.portal-app.ios b { color: #007aff; }
+.portal-2014 .portal-trails h2,
+.portal-2013 .portal-trails h2 { color: #25d366; font-weight: 400; font-size: 14px; }
+.portal-2014 .portal-trails a,
+.portal-2013 .portal-trails a { color: #80deea; }
+.portal-2014 .portal-bans,
+.portal-2013 .portal-bans {
+  background: #1a1010;
+  border-color: #844;
+  color: #c88;
+}
+.portal-2014 .portal-foot a,
+.portal-2013 .portal-foot a { color: #888; }
+
+/* —— Residual product skins still linked from 2014–16 rooms —— */
+.igv-shell {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #262626;
+  font-size: 13px;
+}
+.igv-shell a { color: #003569; }
+.igv-wrap {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  min-height: 80vh;
+}
+.igv-nav { border-bottom: 1px solid #dbdbdb; padding: 10px 12px; font-size: 12px; background: #fff; }
+.igv-filters { display: flex; gap: 6px; flex-wrap: wrap; padding: 10px 12px; }
+.igv-filters button {
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.igv-filters button.is-on,
+.igv-filters button:focus { border-color: #3897f0; color: #3897f0; font-weight: 600; }
+.igv-stage {
+  background: #222;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+}
+.igv-chip {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin-top: 8px;
+}
+.igv-share {
+  background: #3897f0;
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.igv-compose {
+  padding: 12px;
+  border-top: 1px solid #efefef;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.igv-compose input {
+  flex: 1;
+  border: 1px solid #dbdbdb;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.snap-shell {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #fffc00;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 90vh;
+  padding: 12px 14px 24px;
+  font-size: 13px;
+}
+.snap-shell a { color: #fff; }
+.snap-shell a.snap-cta,
+.snap-cta {
+  background: #fffc00;
+  color: #000 !important;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+.snap-story-rail {
+  background: #111;
+  color: #fffc00;
+  padding: 12px;
+  font-size: 12px;
+  border: 1px solid #333;
+  min-height: 56px;
+  margin: 12px 0;
+}
+.snap-cam {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+.ch-2013 {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 680px;
+  margin: 24px auto;
+  padding: 16px;
+  color: #222;
+  background: #fff;
+}
+.ch-2013 h1 { font-weight: normal; font-size: 28px; color: #444; }
+.ch-btn {
+  background: #4d90fe;
+  color: #fff;
+  border: 1px solid #3079ed;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-family: inherit;
+}
+
+.news-2013 {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f4f1ea;
+  color: #111;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.news-2013 h1 { font-weight: normal; font-size: 24px; }
+.news-2013 .kicker {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #666;
+}
+.news-2013 .rules {
+  background: #fff;
+  border: 1px solid #999;
+  padding: 12px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.vine-app {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #000;
+  min-height: 100vh;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+.vine-app a { color: #fffc00; }
+.vine-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #00bf8f;
+  padding: 10px 12px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.vine-topbar-actions a { color: #fffc00; font-size: 12px; text-decoration: none; }
+.vine-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  border-bottom: 1px solid #222;
+  font-size: 11px;
+  padding: 8px 0;
+}
+.vine-tabs a { color: #888; text-decoration: none; }
+.vine-tabs a.is-on { color: #fffc00; }
+.vine-tagline { color: #00bf8f; padding: 12px; }
+.vine-empty-cta { text-align: center; padding: 8px; }
+.vine-cta {
+  display: inline-block;
+  background: #fffc00;
+  color: #000 !important;
+  border: 0;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 2014 product tokens */
+.wa-green { color: #075e54; }
+.hb-alert { background: #fff3cd; border: 1px solid #c19c00; }

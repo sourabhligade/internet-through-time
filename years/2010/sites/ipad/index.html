@@ -26,13 +26,11 @@
   See <a href="prices.html">full price table</a> · <a href="apps.html">apps &amp; iBooks</a>.
  </div>
  <div class="card">
-  <button type="button" data-ipad-claim>I’m interested (theater)</button>
-  <div data-ipad-status style="font-size:12px;color:#060;margin-top:8px"></div>
-  
+  <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-ipad-date> Jan 27 announce · Wi-Fi late March · 3G April</label>
+  <label style="display:block;font-size:12px;margin:6px 0"><input type="checkbox" data-ipad-not-os> Not iPadOS · not “replaced every PC”</label>
+  <button type="button" data-ipad-claim>I’m interested</button>
+  <div data-ipad-status data-itt-action-status style="font-size:12px;color:#060;margin-top:8px"></div>
  </div>
 </div>
-<script>
-(function(){var KEY="itt10-ipad-history";function boot(){var btn=document.querySelector("[data-ipad-claim]");var st=document.querySelector("[data-ipad-status]");if(!btn)return;btn.addEventListener("click",function(){try{localStorage.setItem(KEY,JSON.stringify({interested:true,ts:Date.now()}));}catch(e){}if(st)st.textContent="Noted (theater) · "+KEY;});}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();})();
-</script>
 <script src="../../../../js/immersion-2010.js"></script>
 </body></html>

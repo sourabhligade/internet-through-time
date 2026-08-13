@@ -32,6 +32,9 @@ jobs:
       - name: Pipeline invariants
         run: python3 scripts/test-pipeline.py
 
+      - name: All-years health matrix
+        run: python3 scripts/check-all-years.py
+
       - name: Start static server
         run: |
           python3 -m http.server 8080 --bind 127.0.0.1 > /tmp/itt-http.log 2>&1 &
@@ -74,6 +77,11 @@ jobs:
 
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
+
+      - name: OSS visitor gate
+        run: node scripts/oss-visitor-gate.mjs
+        env:
+          CI: true
 
       - name: Cross-year + scenario real flows
         run: npx playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1

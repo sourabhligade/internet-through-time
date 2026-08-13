@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Year → next-year handoff flows (1994→1995 … 2012→2013).
+ * Year → next-year handoff flows (1994→1995 … 2016→2017).
  *
  * For each consecutive pair:
  *  1. Boot year N · signature product interaction · year-native storage key
@@ -208,6 +208,7 @@ const SIGNATURE = {
       const frame = contentFrame(page);
       const share = frame.locator('[data-ig-share]');
       await expect(share).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-ig-filter]').nth(1).click();
       await share.click();
     },
   },
@@ -244,6 +245,102 @@ const SIGNATURE = {
       await frame.locator('[data-wa13-install]').click();
     },
   },
+  '2014': {
+    path: 'sites/whatsapp/index.html',
+    keySuffix: 'wa-install',
+    body: /WhatsApp|Install|450/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-wa-name]').fill('handoff residual');
+      await frame.locator('[data-wa-install]').click();
+    },
+  },
+  '2015': {
+    path: 'sites/apple/watch.html',
+    keySuffix: 'watch',
+    body: /Apple Watch/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-watch-shipped]').check({ force: true });
+      await frame.locator('[data-watch-no-store]').check({ force: true });
+      await frame.locator('[data-watch-save]').click();
+    },
+  },
+  '2016': {
+    path: 'sites/instagram/stories.html',
+    keySuffix: 'ig-stories',
+    body: /Instagram Stories/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-ig-stories-caption]').fill('coffee');
+      await frame.locator('[data-ig-stories-24h]').check({ force: true });
+      await frame.locator('[data-ig-stories-not-reels]').check({ force: true });
+      await frame.locator('[data-ig-stories-add]').click();
+    },
+  },
+  '2017': {
+    path: 'sites/iphone/x.html',
+    keySuffix: 'faceid',
+    body: /Face ID/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-faceid-no-home]').check({ force: true });
+      await frame.locator('[data-faceid-not-touch]').check({ force: true });
+      await frame.locator('[data-faceid-not-xs]').check({ force: true });
+      await frame.locator('[data-faceid-save]').click();
+    },
+  },
+  '2018': {
+    path: 'sites/gdpr/rights.html',
+    keySuffix: 'gdpr',
+    body: /25 May|GDPR|Art\. 15/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-gdpr-art15]').check({ force: true });
+      await frame.locator('[data-gdpr-art17]').check({ force: true });
+      await frame.locator('[data-gdpr-date]').check({ force: true });
+      await frame.locator('[data-gdpr-save]').click();
+    },
+  },
+  '2019': {
+    path: 'sites/disneyplus/index.html',
+    keySuffix: 'disneyplus',
+    body: /Who.s watching|Disney\+/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-profile="adult-1"]').click();
+      await frame.locator('[data-title="mando"]').click();
+      await frame.locator('[data-add-continue]').click();
+      await frame.locator('[data-title="lion-king"]').click();
+      await frame.locator('[data-add-continue]').click();
+      await frame.locator('[data-dplus-date]').check({ force: true });
+      await frame.locator('[data-dplus-not-trial]').check({ force: true });
+      await frame.locator('[data-dplus-kids]').check({ force: true });
+      await frame.locator('[data-dplus-save]').click();
+    },
+  },
+  '2020': {
+    path: 'sites/zoom/index.html',
+    keySuffix: 'zoom',
+    body: /Join a Meeting|muted|participants/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('#itt20-code').fill('84739258101');
+      await frame.locator('[data-zoom-join]').click();
+      await page.waitForTimeout(400);
+      await contentFrame(page).locator('[data-admit]').click();
+      await page.waitForTimeout(400);
+      const meet = contentFrame(page);
+      await meet.locator("[name='line']").fill('can you see my screen');
+      await meet.locator('[data-chat]').evaluate((f) => f.requestSubmit());
+      await meet.locator('[data-leave]').click();
+      await page.waitForTimeout(400);
+      const recap = contentFrame(page);
+      await recap.locator('[data-zoom-part]').check({ force: true });
+      await recap.locator('[data-zoom-not-live]').check({ force: true });
+      await recap.locator('[data-zoom-save]').click();
+    },
+  },
 };
 
 const YEARS = [
@@ -267,6 +364,13 @@ const YEARS = [
   '2011',
   '2012',
   '2013',
+  '2014',
+  '2015',
+  '2016',
+  '2017',
+  '2018',
+  '2019',
+  '2020',
 ];
 
 /**

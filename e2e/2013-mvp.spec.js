@@ -27,13 +27,19 @@ test.describe('2013 MVP', () => {
     await page.goto('/years/2013/sites/vine/record.html');
     await page.evaluate(() => localStorage.removeItem('itt13-vine-posts'));
     await page.reload();
+    await expect(page.locator('.itt-phone')).toBeVisible();
     await page.locator('[data-vine-hold]').dispatchEvent('mousedown');
     await page.waitForTimeout(400);
     await page.locator('[data-vine-hold]').dispatchEvent('mouseup');
+    await page.locator('[data-vine-caption]').fill('mvp vine residual');
     await page.locator('[data-vine-post]').click();
     const raw = await page.evaluate(() => localStorage.getItem('itt13-vine-posts'));
     expect(raw).toBeTruthy();
-    expect(raw).toMatch(/caption|secs|untitled/i);
+    expect(raw).toMatch(/caption|secs|untitled|mvp vine residual/i);
+    await page.goto('/years/2013/sites/vine/index.html');
+    await expect(page.locator('.itt-phone')).toBeVisible();
+    await expect(page.locator('[data-vine-list]')).toContainText(/mvp vine residual/i);
+    await expect(page.locator('.vine-loop-anim').first()).toBeVisible();
   });
 
   test('shell dirbar has Vine', async ({ page }) => {

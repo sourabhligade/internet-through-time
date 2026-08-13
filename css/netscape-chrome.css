@@ -735,7 +735,14 @@ html, body {
 }
 
 .dialog.hidden {
-  display: none;
+  display: none !important;
+  pointer-events: none !important;
+}
+
+#modal-backdrop.hidden,
+#connect-overlay.hidden {
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .dialog-titlebar {

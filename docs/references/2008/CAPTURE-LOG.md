@@ -58,3 +58,7 @@ Shell buttons: `assets/period/2007/chrome/` · XP start recon — honest IE/XP m
 | Product chips on Starting Points | 2004–2010 |
 | Period CSS feel tokens | all years 1994–2013 |
 
+
+| Status | Product | Note | Method | Date |
+|--------|---------|------|--------|------|
+| H | github | residual multipage REAL densify | educational RECON | 2026-08-07 |

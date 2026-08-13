@@ -46,15 +46,27 @@
     running = false;
     dead = true;
     var sc = Math.floor(dist);
-    if (statusEl) statusEl.textContent = "Crashed! Score " + sc + " — click Start or the game to retry";
+    if (statusEl) statusEl.textContent = "Crashed! Score " + sc + " — tap / Start / R to retry";
+    try {
+      if (window.ITT && ITT.YearGame) {
+        if (ITT.YearGame.flash) ITT.YearGame.flash();
+        if (ITT.YearGame.beep) ITT.YearGame.beep();
+      }
+    } catch (eF) { /* */ }
     if (window.ITTGames) {
       window.ITTGames.addScore("heli", sc, "Pilot");
       window.ITTGames.renderBoard(boardEl, "heli");
     }
+    try {
+      if (typeof window.ITTYearGameOnScore === "function") {
+        window.ITTYearGameOnScore("heli", sc);
+      }
+    } catch (eY) { /* */ }
   }
 
   function tick() {
-    if (running) {
+    var paused = window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused();
+    if (running && !paused) {
       vy += hold ? -0.42 : 0.48;
       vy = Math.max(-7, Math.min(7, vy));
       y += vy;
@@ -121,11 +133,21 @@
       ctx.fillText("Click here or press Start", W / 2, H / 2 - 8);
       ctx.font = "12px Tahoma,Arial,sans-serif";
       ctx.fillText("Hold mouse / Space to climb", W / 2, H / 2 + 14);
+    } else if (dead) {
+      ctx.fillStyle = "rgba(140,0,0,0.38)";
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 18px Tahoma,Arial,sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("CRASHED", W / 2, H / 2 - 10);
+      ctx.font = "13px Tahoma,Arial,sans-serif";
+      ctx.fillText("Tap / Start / R to retry", W / 2, H / 2 + 14);
     }
   }
 
   function onDown(e) {
     if (e && e.preventDefault) e.preventDefault();
+    if (window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused()) return;
     if (!running) {
       reset();
     }
@@ -141,16 +163,26 @@
   canvas.addEventListener("mouseleave", onUp);
   canvas.addEventListener("touchstart", onDown, { passive: false });
   canvas.addEventListener("touchend", onUp);
-  document.addEventListener("keydown", function (e) {
+  function keyDown(e) {
     if (e.code === "Space" || e.key === " ") {
-      e.preventDefault();
+      if (e.preventDefault) e.preventDefault();
+      if (window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused()) return true;
       if (!running) reset();
       hold = true;
+      return true;
     }
-  });
-  document.addEventListener("keyup", function (e) {
+    return false;
+  }
+  function keyUp(e) {
     if (e.code === "Space" || e.key === " ") hold = false;
-  });
+  }
+  document.addEventListener("keydown", keyDown, true);
+  document.addEventListener("keyup", keyUp, true);
+  window.addEventListener("keydown", keyDown, true);
+  window.addEventListener("keyup", keyUp, true);
+  if (window.ITT && ITT.YearGame && ITT.YearGame.focusHost) {
+    ITT.YearGame.focusHost("[data-year-game]");
+  }
 
   var startBtn = document.getElementById("play-start");
   if (startBtn) {

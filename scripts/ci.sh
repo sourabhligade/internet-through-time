@@ -42,6 +42,8 @@ fi
 unset BASE_URL || true
 export CI="${CI:-1}"
 # Fast multi-year + per-scenario real-flow gates first
+echo "==> E2E: OSS visitor gate"
+node scripts/oss-visitor-gate.mjs
 echo "==> E2E: cross-year + scenario real flows (fast gate)"
 npx playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1
 echo "==> E2E: full suite"

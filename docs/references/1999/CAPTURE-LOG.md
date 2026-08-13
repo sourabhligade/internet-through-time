@@ -109,3 +109,7 @@ HTML rebuilt to match harvested wayback-extracts grammar (Yahoo 600px + #dcdcdc 
 - Start menu data-start-cmd live
 - e2e/1999-buttons.spec.js
 - Napster legal.html + client.html
+
+| Status | Product | Note | Method | Date |
+|--------|---------|------|--------|------|
+| H | aim | residual multipage REAL densify | educational RECON | 2026-08-07 |

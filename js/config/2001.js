@@ -45,6 +45,13 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/runescape/index.html": "http://museum.local/years/2001/runescape/",
+      "sites/habbo/index.html": "http://museum.local/years/2001/habbo/",
+      "sites/limewire/index.html": "http://museum.local/years/2001/limewire/",
+      "sites/itunesstoreban/index.html": "http://museum.local/years/2001/itunesstoreban/",
+
+      "sites/playable/index.html": "http://museum.local/years/2001/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2001/playable/game.html",
       "sites/wikipedia/welcome.html": "http://www.wikipedia.org/wiki/Welcome,_newcomers",
       "sites/encarta/index.html": "http://encarta.msn.com/",
       "sites/loudcloud/index.html": "http://www.loudcloud.com/",
@@ -224,8 +231,12 @@
       "sites/yahoo/social_science.html": "http://www.yahoo.com/social_science.html",
       "sites/yahoo/society.html": "http://www.yahoo.com/society.html",
       "sites/yahoo/whats-cool.html": "http://www.yahoo.com/whats-cool.html",
-      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html"
-    },
+      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html",
+          "sites/msn/about.html": "http://messenger.msn.com/about.html",
+      "sites/msn/chat.html": "http://messenger.msn.com/chat.html",
+      "sites/msn/index.html": "http://messenger.msn.com/",
+      "sites/msn/wlive.html": "http://museum.local/years/2001/sites/msn/wlive.html",
+},
     titleMap: {
       "sites/netcenter/about.html": "About",
       "sites/y2k/about.html": "About",

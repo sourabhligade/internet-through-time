@@ -1,0 +1,220 @@
+/**
+ * Museum UX pack — U1–U6 chrome
+ * Loaded only when ITT.UX.ensureCss runs (shell coach / content boot).
+ * Remove entire UX look: delete this file + js/ux/ loads.
+ */
+
+/* —— U1 shell coach strip —— */
+.itt-ux-shell-coach {
+  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif;
+  font-size: 12px;
+  background: #ffffcc;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  color: #000;
+  margin: 0 0 4px;
+  padding: 0;
+  z-index: 40;
+  position: relative;
+}
+.itt-ux-shell-coach-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 10px;
+}
+.itt-ux-shell-coach-text {
+  margin: 0;
+  flex: 1 1 220px;
+  line-height: 1.35;
+}
+.itt-ux-shell-coach-actions {
+  flex: 0 0 auto;
+}
+.itt-ux-btn {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 12px;
+  cursor: pointer;
+  background: #000080;
+  color: #fff;
+  border: 2px solid;
+  border-color: #fff #000 #000 #fff;
+}
+.itt-ux-btn.secondary {
+  background: #c0c0c0;
+  color: #000;
+  border-color: #fff #808080 #808080 #fff;
+  font-weight: normal;
+}
+.itt-ux-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* Pulse Exit when “Show Exit” */
+#exit-bar.itt-ux-pulse-exit {
+  outline: 3px solid #ff0;
+  outline-offset: 2px;
+  animation: itt-ux-pulse 0.6s ease-in-out 3;
+}
+@keyframes itt-ux-pulse {
+  0%,
+  100% {
+    outline-color: #ff0;
+  }
+  50% {
+    outline-color: #f80;
+  }
+}
+
+/* U1-S3 honesty chip */
+.itt-ux-honesty-chip {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 1px 6px;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 10px;
+  color: #333;
+  background: #e8e8e8;
+  border: 1px solid #808080;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.exit-bar .itt-ux-honesty-chip {
+  float: right;
+  margin: 2px 4px 0 0;
+}
+
+/* U2 incomplete pulse */
+.itt-ux-need-attention {
+  outline: 2px solid #c00 !important;
+  outline-offset: 2px;
+  background-color: #ffe0e0 !important;
+  transition: outline 0.2s ease;
+}
+
+/* U4 you-are-here */
+.itt-ux-here-strip {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.35;
+  padding: 4px 8px;
+  background: #f0f0f8;
+  border-bottom: 1px solid #808080;
+  color: #222;
+}
+.itt-ux-here-label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 9px;
+  color: #555;
+  font-weight: bold;
+  margin-right: 4px;
+}
+.itt-ux-here-tour {
+  color: #000080;
+}
+
+/* U6 room chip */
+.itt-ux-room-chip {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 50;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 8px;
+  background: #000080;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 0 #000;
+  pointer-events: none;
+}
+.itt-ux-room-continuity {
+  background: #666;
+}
+.itt-ux-room-thin {
+  background: #806000;
+}
+.itt-ux-room-playable,
+.itt-ux-room-game {
+  background: #060;
+}
+.itt-ux-room-tour {
+  background: #603;
+}
+
+/* U5 year meter */
+.itt-ux-year-meter {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  padding: 6px 10px;
+  margin: 0 0 8px;
+  background: #ffffe8;
+  border: 1px solid #cc0;
+  color: #222;
+  line-height: 1.4;
+}
+.itt-ux-meter-title {
+  font-weight: bold;
+  margin-right: 6px;
+}
+.itt-ux-meter-dot {
+  margin: 0 1px;
+  color: #888;
+}
+.itt-ux-meter-dot.on {
+  color: #060;
+}
+.itt-ux-meter-count {
+  margin-left: 6px;
+}
+.itt-ux-meter-note {
+  display: block;
+  font-size: 10px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Hub U1 primary hierarchy */
+.hub .start-primary-row .start-btn.start-primary {
+  font-size: 14px;
+  padding: 8px 14px;
+}
+.hub .start-primary-row .start-btn:not(.start-primary):not(.start-resume) {
+  opacity: 0.95;
+}
+.hub .start-ftue-primary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.hub .start-ftue-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: 4px;
+}
+.hub .start-ftue-label {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #333;
+  width: 100%;
+  margin: 0 0 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #exit-bar.itt-ux-pulse-exit {
+    animation: none;
+  }
+  .itt-ux-need-attention {
+    transition: none;
+  }
+}

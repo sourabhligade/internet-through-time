@@ -4,8 +4,6 @@
  * Every interactive action must mutate itt10-* keys and/or DOM after click.
  */
 const { test, expect } = require('@playwright/test');
-const { completeRealGate, twoStepClick, checkAllReq } = require('./helpers');
-
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -38,7 +36,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-appstore-install]');
+    await page.locator('[data-appstore-install]').first().click();
     await expect(page.locator('[data-appstore-apps]')).toContainText(
       /Koi|Monkey|Convert|Facebook|Shazam|NYTimes|Camera|Google|Twitter|Pandora|name/i,
       { timeout: 8000 }
@@ -66,6 +64,11 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-ipad-history');
     await page.reload();
     await page.locator('[data-ipad-claim]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-ipad-history'))).toBeFalsy();
+    await page.locator('[data-ipad-date]').check();
+    await page.locator('[data-ipad-not-os]').check();
+    await page.locator('[data-ipad-claim]').click();
     await requireKey(page, 'itt10-ipad-history');
   });
 
@@ -81,6 +84,23 @@ test.describe('2010 real flows', () => {
     });
     const raw = await requireKey(page, 'itt10-ig-posts');
     expect(raw).toMatch(/Toaster|real 2010/i);
+  });
+
+  test('Open Graph Like on CNN news residual', async ({ page }) => {
+    await page.goto('/years/2010/sites/cnn/index.html');
+    await clearKeys(page, 'itt10-fb-likes');
+    await page.reload();
+    await expect(page.locator('body')).toContainText(/Open Graph/i);
+    await page.waitForFunction(
+      () =>
+        document.documentElement.getAttribute('data-itt-immersion-booted') === '2010' ||
+        !!document.querySelector('[data-fb-like][data-like-bound="1"]'),
+      null,
+      { timeout: 15000 }
+    );
+    await page.locator('[data-fb-like="cnn-og-2010"]').click();
+    await requireKey(page, 'itt10-fb-likes');
+    expect(await page.evaluate(() => localStorage.getItem('itt09-fb-likes'))).toBeFalsy();
   });
 
   test('Facebook Like count + storage', async ({ page }) => {
@@ -131,7 +151,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, ['itt10-android-apps', 'itt10-android']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-android-install]');
+    await page.locator('[data-android-install]').first().click();
     const raw = await page.evaluate(
       () => localStorage.getItem('itt10-android-apps') || localStorage.getItem('itt10-android')
     );
@@ -142,7 +162,13 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/chrome/index.html');
     await clearKeys(page, 'itt10-chrome');
     await page.reload();
-    await completeRealGate(page, '[data-chrome-download]');
+    await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await page.locator('[data-chrome-prefer]').click();
     const raw = await requireKey(page, 'itt10-chrome');
     expect(raw).toMatch(/download|prefer|true/i);
@@ -222,6 +248,11 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-uber');
     await page.reload();
     await page.locator('#uber-req').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-uber'))).toBeFalsy();
+    await page.locator('[data-uber-not-x]').check();
+    await page.locator('[data-uber-sf]').check();
+    await page.locator('#uber-req').click();
     const raw = await requireKey(page, 'itt10-uber');
     expect(raw).toMatch(/black-car|San Francisco/i);
   });
@@ -230,7 +261,12 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/wave/index.html');
     await clearKeys(page, 'itt10-wave');
     await page.reload();
-    await completeRealGate(page, '[data-wave-invite]');
+    await page.locator('[data-wave-invite]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt10-wave'))).toBeFalsy();
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
+    await page.locator('[data-wave-invite]').click();
     await requireKey(page, 'itt10-wave');
   });
 

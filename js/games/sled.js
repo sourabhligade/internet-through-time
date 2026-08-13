@@ -89,7 +89,8 @@
   }
 
   function tick() {
-    if (riding && sled) {
+    var paused = window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused();
+    if (riding && sled && !paused) {
       // Follow polyline segments with gravity assist
       var i = sled.seg;
       if (i >= points.length - 1) {
@@ -122,11 +123,22 @@
     if (!riding) return;
     riding = false;
     var sc = sled ? Math.floor(sled.dist) : 0;
-    if (statusEl) statusEl.textContent = "Run finished · distance " + sc + " · Clear or Ride again";
+    if (statusEl) statusEl.textContent = "Run finished · distance " + sc + " · Ride / R to retry";
+    try {
+      if (window.ITT && ITT.YearGame) {
+        if (ITT.YearGame.flash) ITT.YearGame.flash();
+        if (ITT.YearGame.beep) ITT.YearGame.beep();
+      }
+    } catch (eF) { /* */ }
     if (window.ITTGames) {
       window.ITTGames.addScore("sled", sc, "Rider");
       window.ITTGames.renderBoard(boardEl, "sled");
     }
+    try {
+      if (typeof window.ITTYearGameOnScore === "function") {
+        window.ITTYearGameOnScore("sled", sc);
+      }
+    } catch (eY) { /* */ }
   }
 
   function draw() {

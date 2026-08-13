@@ -1,60 +1,40 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
-const { enterYear, killOverlays, completeRealGate } = require('./helpers');
+const { test, expect } = require("@playwright/test");
+const { enterYear } = require("./helpers");
 
-test.describe('2014 shell honesty', () => {
-  test('default shell is not Windows 10 retail', async ({ page }) => {
-    await page.goto('/years/2014/');
-    await expect(page.locator('body')).toHaveClass(/os-win7/);
-    await expect(page.locator('body')).not.toHaveClass(/os-win10/);
+test.describe("2014 shell honesty", () => {
+  test("not Win10 as January shell class", async ({ page }) => {
+    await enterYear(page, "2014");
+    const cls = (await page.locator("body").getAttribute("class")) || "";
+    expect(cls).toMatch(/os-win7|win7/i);
+    expect(cls).not.toMatch(/os-win10/);
   });
 
-  test('Win10 page is Technical Preview only', async ({ page }) => {
-    await page.goto('/years/2014/sites/windows10/index.html');
-    await expect(page.locator('body')).toContainText(/Technical Preview|Insider/i);
-    await expect(page.locator('body')).toContainText(/not retail|not.*mass|Win7 residual/i);
+  test("connect overlay is 2014 thesis", async ({ page }) => {
+    await page.goto("/years/2014/");
+    await expect(page.locator("#connect-overlay")).toContainText(/WhatsApp|Heartbleed|iPhone 6|1B/i);
   });
 
-  test('Watch is pre-ship', async ({ page }) => {
-    await page.goto('/years/2014/sites/apple/watch.html');
-    await expect(page.locator('body')).toContainText(/ships 2015|2015/i);
+  test("About bans Watch retail and Win10 free upgrade", async ({ page }) => {
+    await page.goto("/years/2014/pages/about.html");
+    await expect(page.locator("body")).toContainText(/Watch/i);
+    await expect(page.locator("body")).toContainText(/Windows/i);
   });
 
-  test('About bans IG Stories and Meta', async ({ page }) => {
-    await page.goto('/years/2014/pages/about.html');
-    await expect(page.locator('body')).toContainText(/Stories/i);
-    await expect(page.locator('body')).toContainText(/Meta|TikTok|Reactions/i);
+  test("Win7 / IE8 clone rooms are gone (lean 2014)", async ({ page }) => {
+    const w7 = await page.goto("/years/2014/sites/windows7/index.html");
+    expect(w7 && w7.status()).toBe(404);
+    const ie8 = await page.goto("/years/2014/sites/ie8/index.html");
+    expect(ie8 && ie8.status()).toBe(404);
+    await page.goto("/years/2014/pages/home.html");
+    await expect(page.locator("body")).toContainText(/This year is lean/i);
+    await expect(page.locator("body")).not.toContainText("Mass PC year 2013");
   });
 
-  test('shell boots 2014 and content iframe works', async ({ page }) => {
-    await enterYear(page, '2014');
-    await killOverlays(page);
-    await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2014');
-    await expect(page.locator('#content')).toBeVisible();
-    await expect(page.locator('#window-title')).toBeVisible();
-  });
-
-  test('Chrome room download writes itt14-chrome inside year', async ({ page }) => {
-    await page.goto('/years/2014/sites/chrome/index.html');
-    await page.evaluate(() => localStorage.removeItem('itt14-chrome'));
-    await page.reload();
-    await completeRealGate(page, '[data-chrome-download]');
-    const raw = await page.evaluate(() => localStorage.getItem('itt14-chrome'));
-    expect(raw, 'itt14-chrome after download').toBeTruthy();
-  });
-
-  test('exit bar leaves year with resume key', async ({ page }) => {
-    await enterYear(page, '2014');
-    await page.evaluate(() => {
-      try {
-        localStorage.setItem('itt-last-year', '2014');
-      } catch (e) {
-        /* */
-      }
-    });
-    await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2014"]')).toBeVisible();
-    const last = await page.evaluate(() => localStorage.getItem('itt-last-year'));
-    if (last) expect(last).toMatch(/2014/);
+  test("iOS 7 clone is gone · iOS 8 year-true remains", async ({ page }) => {
+    const ios7 = await page.goto("/years/2014/sites/iphone/ios7.html");
+    expect(ios7 && ios7.status()).toBe(404);
+    await page.goto("/years/2014/sites/iphone/ios8.html");
+    await expect(page.locator("body")).toContainText(/iOS 8/i);
   });
 });

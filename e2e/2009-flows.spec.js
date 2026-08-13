@@ -4,8 +4,7 @@
  * docs/2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
  */
 const { test, expect } = require('@playwright/test');
-
-const { enterYear, checkAllReq, twoStepClick, completeRealGate } = require('./helpers');
+const { enterYear } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -36,8 +35,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-appstore-install]');
+    await page.locator('[data-appstore-install]').first().click();
     expect(await page.evaluate(() => localStorage.getItem('itt09-apps'))).toBeTruthy();
   });
 
@@ -60,7 +58,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-farm']);
     await page.reload();
     await page.waitForSelector('[data-farm-plant]', { timeout: 20000 });
-    await twoStepClick(page, '[data-farm-plant="strawberry"]');
+    await page.locator('[data-farm-plant="strawberry"]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt09-farm'))).toMatch(/strawberry/i);
   });
 
@@ -85,7 +83,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-4sq']);
     await page.reload();
     await page.waitForSelector('[data-4sq-checkin]', { timeout: 20000 });
-    await twoStepClick(page, '[data-4sq-checkin]');
+    await page.locator('[data-4sq-checkin]').first().click();
     expect(await page.evaluate(() => localStorage.getItem('itt09-4sq'))).toBeTruthy();
   });
 
@@ -132,10 +130,11 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-wave']);
     await page.reload();
     await page.waitForSelector('[data-wave-invite]', { timeout: 20000 });
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-wave-invite]');
-    await expect(page.locator('[data-wave-status]')).toContainText(/invite|itt09|2010|confirm|Saved|REAL/i, { timeout: 8000 });
-    expect(await page.evaluate(() => localStorage.getItem('itt09-wave'))).toMatch(/invited|true|real|multiStep/i);
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
+    await page.locator('[data-wave-invite]').click();
+    await expect(page.locator('[data-wave-status]')).toContainText(/invite|itt09|2010/i, { timeout: 8000 });
+    expect(await page.evaluate(() => localStorage.getItem('itt09-wave'))).toMatch(/invited|true/i);
   });
 
   test('K Chrome multi-OS late-year honesty', async ({ page }) => {

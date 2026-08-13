@@ -1,35 +1,26 @@
 # 2014 — Museum grade card
 
-**Date:** 2026-08-13  
-**Status:** **Museum-ready · L3 densify** · hub **1994–2014** · prefix **`itt14`**  
-**Entry:** [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · parity map [`2014-PARITY-AND-2015-FREEZE-PHASE-MAP.md`](2014-PARITY-AND-2015-FREEZE-PHASE-MAP.md)
+**Date:** 2026-08-10  
+**Status:** **Museum-grade A** · lean forest prune 2026-08-10 (**43 HTML**) · backup `/tmp/itt-2014-clone-backup-20260810` · hub **1994–2016** · prefix **`itt14`**  
+**Entry:** [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · harvest [`2014-DEEP-RESEARCH-WEB-HARVEST-2026-08-09.md`](2014-DEEP-RESEARCH-WEB-HARVEST-2026-08-09.md) · bible [`2014-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2014-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)
 
-## Grade (L3 densify)
+## Grade (MVP 2026-08-09)
 
 | Layer | Score | Notes |
 |-------|------:|-------|
-| Thesis / scale | **A** | Dual-cite 968,882,453 · 1B Sep · bans |
-| P0 WhatsApp | **A** | Install · chat · deal honesty · multipage |
-| P0 Heartbleed | **A** | ≥2 rotate · incomplete blocked |
-| P0 iPhone 6 autumn | **A** | Prices · Pay · Bendgate · Watch pre-ship |
-| P0 Ice Bucket / Serial / 1B | **A−** | REAL multipage |
-| Desktop honesty | **A** | Win7 shell · Win10 TP only |
-| Densify gems | **A−** | Secret · Yik Yak · Ello · Hyperlapse |
-| Continuity scrub | **B+** | Clone residual forever L4 |
-| Pixels | **C** | RECON / CAPTURE open H14-14… |
-| e2e | **A** | mvp · densify · flows · real · trail · shell-honesty |
+| Thesis / scale | **A** | Dual-cite 968,882,453 · 1B Sep · bans · REAL thesis |
+| P0 WhatsApp / Heartbleed / iPhone 6 | **A−** | REAL gates · text/RECON chrome |
+| Desktop honesty | **A** | Win7 shell · Win10 TP only · US IE plurality |
+| Pixels | **C** | H14-21 Heartbleed CC0 failed-final RECON · Chrome 2013 continuity token |
+| e2e | **A** | `npm run test:e2e:2014` |
+| Hub | **unlocked** | 1994–2014 · 21 chips |
 
-**Overall:** **Museum-ready · L3 densify** (~96–98% content). Residual: perfect WA brand stills · deeper Material UI multipage · optional Gamergate literacy.
+**Overall:** **Museum-grade A** (I1–I7 + I9–I10 **[x]** · lean prune P0–P6 **[x]** · I3b Flappy literacy **[x]**). Residual: I8 Hyperlapse/Imgur/Pandora optional · L4 stills (failed-final). **Forest gone.**
 
-## Gates
+**Improve execute (shipped):** [`2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md`](2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md). C-ids/facts: [`2014-COMPLETE-TO-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-COMPLETE-TO-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md).
 
-```bash
-python3 scripts/check-all-years.py   # 2014 pass
-npm run test:e2e:2014
-```
-
-## Residual forever (L4)
+## Residual forever (after ship)
 
 - Perfect WhatsApp / Apple / Material WA stills  
-- Full continuity forest year-voice on every Amazon/Yahoo clone  
-- Gamergate careful educational room (optional)  
+- I3b Flappy-flood room · I8 Hyperlapse/Imgur/Pandora · I7e GamerGate plaque  
+- Full Metro immersive shell · live APIs (forbidden)

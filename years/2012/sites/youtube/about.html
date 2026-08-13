@@ -8,8 +8,8 @@
 <body class="yt-shell" bgcolor="#ffffff">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <div class="yt-header">
- <a href="index.html"><img src="../../../../assets/period/2007/youtube/logo.gif" alt="YouTube" height="32" border="0" style="vertical-align:middle"></a>
- · About · <a href="index.html">Videos</a> · <a href="upload.html">Upload</a> · <a href="channels.html">Channels</a>
+ <a href="../../pages/home.html"><img src="../../../../assets/period/2007/youtube/logo.gif" alt="YouTube" height="32" border="0" style="vertical-align:middle"></a>
+ · About · <a href="../../pages/home.html">Videos</a> · <a href="../../pages/home.html">Upload</a> · <a href="../../pages/home.html">Channels</a>
 </div>
 <div style="max-width:600px;margin:0 auto;padding:14px;font-family:Arial,sans-serif;font-size:13px;line-height:1.45">
  <h1 style="font-size:18px;font-weight:normal">About YouTube (2012)</h1>
@@ -17,6 +17,8 @@
  <div style="background:#e8f0fe;border:1px solid #06c;padding:8px;font-size:12px;margin:10px 0">
   <b>Gangnam Style:</b> PSY’s “Gangnam Style” released <b>July 15, 2012</b> class · becomes first YouTube video to hit
   <b>1 billion</b> views (<b>December 2012</b> class). Global meme + horse dance — museum culture note, not an official pixel pack.
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-yt-gangnam-date> Jul 15 2012 release · 1B views class Dec 2012</label>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-yt-gangnam-no-cdn> No official video stream / no music CDN here</label>
   <p style="margin:8px 0 0">
    <button type="button" data-yt-gangnam-ack>I watched Gangnam Style (save theater)</button>
    <span data-yt-gangnam-status style="color:#060;margin-left:8px;font-size:11px"></span>
@@ -31,8 +33,14 @@
    var st = document.querySelector("[data-yt-gangnam-status]");
    try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
    if (btn) btn.addEventListener("click", function () {
+     var d = document.querySelector("[data-yt-gangnam-date]");
+     var n = document.querySelector("[data-yt-gangnam-no-cdn]");
+     if (!d || !d.checked || !n || !n.checked) {
+       if (st) st.textContent = "Check date + no-CDN first.";
+       return;
+     }
      try {
-       localStorage.setItem(KEY, JSON.stringify({ title: "Gangnam Style", viewsClass: "1B-dec-2012", ts: Date.now() }));
+       localStorage.setItem(KEY, JSON.stringify({ title: "Gangnam Style", viewsClass: "1B-dec-2012", real: true, multiStep: true, ts: Date.now() }));
      } catch (e2) {}
      if (st) st.textContent = "Saved · 1B class · " + KEY;
    });
@@ -42,8 +50,8 @@
   Not YouTube Shorts · not modern algorithmic home as sole framing · not inventing channel art.
  </p>
  <p>
-  <a href="index.html">Videos</a> ·
-  <a href="upload.html">Upload</a> ·
+  <a href="../../pages/home.html">Videos</a> ·
+  <a href="../../pages/home.html">Upload</a> ·
   <a href="../../pages/home.html">Start</a>
  </p>
 </div>

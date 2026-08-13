@@ -135,6 +135,7 @@ test.describe('Action feedback kit', () => {
   test('UberX request status feedback (2012)', async ({ page }) => {
     await page.goto('/years/2012/sites/uber/index.html');
     await page.waitForSelector('[data-uber-kind="uberx"], #uber-x', { timeout: 10000 });
+    await page.locator('[data-uber-not-auto]').check();
     await page.locator('[data-uber-kind="uberx"], #uber-x').first().click();
     await expect(page.locator('[data-uber-status], #uber-st')).toContainText(/UberX|selected|REAL|35%|itt12-uber/i, {
       timeout: 5000,

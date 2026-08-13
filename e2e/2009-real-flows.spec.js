@@ -4,22 +4,6 @@
  * Every interactive action must mutate itt09-* keys and/or DOM after click.
  */
 const { test, expect } = require('@playwright/test');
-const { completeRealGate, killOverlays } = require('./helpers');
-
-
-async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-appstore-check], [data-android-check], [data-wave-check]') {
-  const loc = page.locator(sel);
-  const n = await loc.count();
-  for (let i = 0; i < n; i++) {
-    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
-  }
-}
-async function twoStepClick(page, selector) {
-  const el = page.locator(selector).first();
-  await el.click();
-  await page.waitForTimeout(150);
-  await el.click();
-}
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -52,26 +36,29 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-appstore-install]');
+    await page.locator('[data-appstore-install]').first().click();
     const after = JSON.parse((await requireKey(page, 'itt09-apps')) || '[]');
     expect(Array.isArray(after) ? after.length : 1).toBeGreaterThan(0);
   });
 
   test('Facebook Like → itt09-fb-likes', async ({ page }) => {
     await page.goto('/years/2009/sites/facebook/feed.html');
-    await clearKeys(page, 'itt09-fb-likes');
+    await clearKeys(page, ['itt09-fb-likes', 'itt08-apps', 'itt10-imgur']);
     await page.reload();
     await page.waitForSelector('[data-fb-like]', { timeout: 20000 });
+    await page.locator('form[data-fb-status-post] button[type="submit"]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-fb-likes'))).toBeFalsy();
     await page.locator('[data-fb-like]').first().click();
     await requireKey(page, 'itt09-fb-likes');
+    expect(await page.evaluate(() => localStorage.getItem('itt08-apps') || localStorage.getItem('itt10-imgur'))).toBeFalsy();
   });
 
   test('FarmVille plant → itt09-farm', async ({ page }) => {
     await page.goto('/years/2009/sites/farmville/index.html');
     await clearKeys(page, 'itt09-farm');
     await page.reload();
-    await twoStepClick(page, '[data-farm-plant="strawberry"]');
+    await page.locator('[data-farm-plant="strawberry"]').click();
     const raw = await requireKey(page, 'itt09-farm');
     expect(raw).toMatch(/strawberry/i);
   });
@@ -103,7 +90,7 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/foursquare/index.html');
     await clearKeys(page, 'itt09-4sq');
     await page.reload();
-    await twoStepClick(page, '[data-4sq-checkin]');
+    await page.locator('[data-4sq-checkin]').first().click();
     await requireKey(page, 'itt09-4sq');
   });
 
@@ -120,8 +107,12 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/wave/index.html');
     await clearKeys(page, 'itt09-wave');
     await page.reload();
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-wave-invite]');
+    await page.locator('[data-wave-invite]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-wave'))).toBeFalsy();
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
+    await page.locator('[data-wave-invite]').click();
     await requireKey(page, 'itt09-wave');
   });
 
@@ -129,8 +120,13 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/chrome/index.html');
     await clearKeys(page, 'itt09-chrome');
     await page.reload();
-    await checkAllReq(page);
-    await completeRealGate(page, '[data-chrome-download]');
+    await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await requireKey(page, 'itt09-chrome');
   });
 
@@ -139,8 +135,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, ['itt09-android-apps', 'itt09-android']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-android-install]');
+    await page.locator('[data-android-install]').first().click();
     const raw = await page.evaluate(
       () => localStorage.getItem('itt09-android-apps') || localStorage.getItem('itt09-android')
     );
@@ -168,7 +163,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-hulu');
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await twoStepClick(page, '[data-hulu-play]');
+    await page.locator('[data-hulu-play]').first().click();
     await requireKey(page, 'itt09-hulu');
   });
 

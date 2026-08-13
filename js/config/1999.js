@@ -45,6 +45,16 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/yahoomessenger/index.html": "http://museum.local/years/1999/yahoomessenger/",
+      "sites/etrade/index.html": "http://museum.local/years/1999/etrade/",
+      "sites/webvan/index.html": "http://museum.local/years/1999/webvan/",
+      "sites/boocom/index.html": "http://museum.local/years/1999/boocom/",
+
+      "sites/sourceforge/index.html": "http://sourceforge.net/",
+      "sites/sourceforge/project.html": "http://sourceforge.net/projects/",
+      "sites/sourceforge/about.html": "http://sourceforge.net/about.html",
+      "sites/playable/index.html": "http://museum.local/years/1999/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1999/playable/game.html",
       "sites/msngaming/about.html": "http://www.zone.com/about.html",
       "sites/matrix/story.html": "http://www.whatisthematrix.com/story.html",
       "sites/mynetscape/channels.html": "http://my.netscape.com/channels.html",
@@ -94,6 +104,7 @@
       "sites/blogger/edit.html": "http://www.blogger.com/edit.pyra",
       "sites/blogger/index.html": "http://www.blogger.com/",
       "sites/blogger/view.html": "http://www.blogger.com/view.pyra",
+      "sites/blogger/post.html": "http://www.blogger.com/post.pyra",
       "sites/microsoft/ie5.html": "http://www.microsoft.com/windows/ie/",
       "sites/napster/about.html": "http://www.napster.com/company.html",
       "sites/napster/download.html": "http://www.napster.com/download.html",
@@ -182,9 +193,17 @@
       "sites/yahoo/social_science.html": "http://www.yahoo.com/social_science.html",
       "sites/yahoo/society.html": "http://www.yahoo.com/society.html",
       "sites/yahoo/whats-cool.html": "http://www.yahoo.com/whats-cool.html",
-      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html"
-    },
+      "sites/yahoo/whats-new.html": "http://www.yahoo.com/whats-new.html",
+          "sites/aim/about.html": "http://www.aol.com/aim/about.html",
+      "sites/aim/away.html": "http://www.aol.com/aim/away.html",
+      "sites/aim/im.html": "http://www.aol.com/aim/im.html",
+      "sites/aim/index.html": "http://www.aol.com/aim/",
+      "sites/aim/profile.html": "http://museum.local/years/1999/sites/aim/profile.html",
+},
     titleMap: {
+      "sites/sourceforge/index.html": "SourceForge.net — 1999",
+      "sites/sourceforge/project.html": "SourceForge project",
+      "sites/sourceforge/about.html": "About SourceForge",
       "sites/msngaming/about.html": "About",
       "sites/matrix/story.html": "Story",
       "sites/mynetscape/channels.html": "Channels",
@@ -231,6 +250,7 @@
       "sites/blogger/edit.html": "Blogger - Post",
       "sites/blogger/index.html": "Blogger",
       "sites/blogger/view.html": "My Weblog",
+      "sites/blogger/post.html": "Weblog post",
       "sites/microsoft/ie5.html": "Internet Explorer 5",
       "sites/napster/about.html": "About Napster",
       "sites/napster/download.html": "Download Napster",
@@ -330,7 +350,8 @@
       { title: "eBay", path: "sites/ebay/index.html" },
       { title: "Yahoo! GeoCities", path: "sites/geocities/index.html" },
       { title: "CNN.com", path: "sites/cnn/index.html" },
-      { title: "Ask Jeeves", path: "sites/askjeeves/index.html" }
+      { title: "Ask Jeeves", path: "sites/askjeeves/index.html" },
+      { title: "SourceForge", path: "sites/sourceforge/index.html" }
     ],
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web1999/",
@@ -347,6 +368,7 @@
       { re: /my.?netscape|rss/i, path: "sites/mynetscape/index.html" },
       { re: /flash.?4/i, path: "sites/flash4/index.html" },
 
+      { re: /sourceforge|sf\.net|cvs/i, path: "sites/sourceforge/index.html" },
       { re: /icq/i, path: "sites/icq/index.html" },
       { re: /napster|mp3/i, path: "sites/napster/index.html" },
       { re: /google/i, path: "sites/google/index.html" },

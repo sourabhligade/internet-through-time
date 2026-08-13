@@ -1,697 +1,475 @@
 /**
- * 2014 REAL product/culture theaters — multi-step localStorage only (itt14-*)
- * WhatsApp · Heartbleed · iPhone 6 · Ice Bucket · Serial · 1B · Win10 TP · empire P1
+ * 2014 REAL theaters — WhatsApp · Heartbleed helpers · iPhone 6 · Ice Bucket · Win10 TP · Echo · Serial
+ * Incomplete paths must not write. Prefix itt14- via storagePrefix.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2014");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2014 — load year-extras-kit.js first");
+    return;
+  }
+  var prefix = YX.prefix;
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var loadJSON = YX.loadJSON;
+  var markUsed = YX.markUsed;
+  var showNext = YX.showNext;
+  var checked = YX.checked;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
-  function U() {
-    return ITT.util || {};
-  }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2014";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) {
-      /* */
-    }
-    return "itt14";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = opts.error ? "#a00" : "#060";
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3200 });
-      }
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveJSON(k, v) {
-    try {
-      localStorage.setItem(k, JSON.stringify(v));
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveRaw(k, v) {
-    try {
-      localStorage.setItem(k, v);
-    } catch (e) {
-      /* */
-    }
-  }
-  function loadJSON(k, fb) {
-    try {
-      var r = localStorage.getItem(k);
-      if (!r) return fb;
-      return JSON.parse(r);
-    } catch (e) {
-      return fb;
-    }
-  }
-  function markUsed() {
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-    } catch (e) {
-      /* */
-    }
-  }
-  function checked(doc, sel) {
-    var el = doc.querySelector(sel);
-    return !!(el && el.checked);
-  }
-  function countChecked(doc, sel) {
-    var nodes = doc.querySelectorAll(sel);
-    var n = 0;
-    var i;
-    for (i = 0; i < nodes.length; i++) if (nodes[i].checked) n++;
-    return n;
-  }
-
-  /* ——— WhatsApp install + chat ——— */
   function bootWhatsApp(doc) {
     doc = doc || document;
-    var phoneIn = doc.querySelector("[data-wa14-phone], [data-wa-phone]");
-    var verify = doc.querySelector("[data-wa14-verify], [data-wa-verify]");
-    var install = doc.querySelector("[data-wa14-install], [data-wa-install]");
-    var status = doc.querySelector("[data-wa14-status], [data-wa-status]");
-    var send = doc.querySelector("[data-wa14-send], [data-wa-send]");
-    var msgIn = doc.querySelector("[data-wa14-msg], [data-wa-msg]");
-    var list = doc.querySelector("[data-wa14-list], [data-wa-list]");
-    var kPhone = key("wa-phone");
-    var kInst = key("wa-install");
-    var kMsgs = key("wa-msgs");
-
-    function st(msg, err) {
-      feedback(msg, status, { error: !!err });
-    }
-
-    if (verify) {
-      verify.addEventListener("click", function () {
-        var n = ((phoneIn && phoneIn.value) || "").replace(/\D/g, "");
-        if (n.length < 7) {
-          st("Enter a theater phone number (7+ digits).", true);
+    var installBtn = doc.querySelector("[data-wa-install]");
+    var status = doc.querySelector("[data-wa-status]");
+    var nameIn = doc.querySelector("[data-wa-name]");
+    var INST = key("wa-install");
+    if (installBtn) {
+      try {
+        if (localStorage.getItem(INST)) feedback("Already installed · open chats", status);
+      } catch (e0) {}
+      installBtn.addEventListener("click", function () {
+        var name = (nameIn && nameIn.value || "").trim();
+        if (name.length < 1) {
+          feedback("Enter a display name first.", status, { error: true });
           return;
         }
-        saveJSON(kPhone, { last4: n.slice(-4), ts: Date.now() });
-        st("SMS code accepted (theater) · ···" + n.slice(-4));
+        saveJSON(INST, { name: name, real: true, ts: Date.now() });
+        feedback("Installed · " + INST, status);
+        try {
+          if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
+        } catch (e1) {}
       });
     }
-    if (install) {
-      install.addEventListener("click", function () {
-        if (!localStorage.getItem(kPhone)) {
-          st("Verify a phone number first.", true);
-          return;
-        }
-        saveJSON(kInst, { installed: true, multiStep: true, ts: Date.now() });
-        saveRaw(key("wa-installed"), "1");
-        st("WhatsApp installed · open chats · " + kInst);
-        markUsed();
-      });
-    }
-    function renderMsgs() {
-      if (!list) return;
-      var arr = loadJSON(kMsgs, []);
-      if (!Array.isArray(arr)) arr = [];
-      list.innerHTML = "";
-      var i;
-      for (i = 0; i < arr.length; i++) {
-        var li = doc.createElement("div");
-        li.style.cssText = "padding:6px 8px;margin:4px 0;background:#dcf8c6;border-radius:4px;font-size:13px";
-        li.textContent = arr[i].text || arr[i];
-        list.appendChild(li);
-      }
-    }
-    if (send) {
-      renderMsgs();
-      send.addEventListener("click", function () {
-        if (!localStorage.getItem(kInst) && !localStorage.getItem(key("wa-installed"))) {
-          st("Install WhatsApp first (index).", true);
-          return;
-        }
-        var text = ((msgIn && msgIn.value) || "").trim();
-        if (text.length < 1) {
-          st("Type a message first.", true);
-          return;
-        }
-        var arr = loadJSON(kMsgs, []);
-        if (!Array.isArray(arr)) arr = [];
-        arr.push({ text: text, ts: Date.now() });
-        saveJSON(kMsgs, arr);
-        if (msgIn) msgIn.value = "";
-        renderMsgs();
-        st("Message saved · " + kMsgs + " (" + arr.length + ")");
-        markUsed();
-      });
-    } else if (list) {
-      renderMsgs();
-    }
-  }
 
-  /* ——— Heartbleed: ≥2 services ——— */
-  function bootHeartbleed(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-hb-rotate], [data-heartbleed-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-hb-status], [data-heartbleed-status]");
-    btn.addEventListener("click", function () {
-      var n = countChecked(doc, "[data-hb-service]");
-      if (n < 2) {
-        feedback("Select at least 2 services to rotate (theater).", st, { error: true });
+    var form = doc.querySelector("[data-wa-send]");
+    if (!form) return;
+    var CHATS = key("wa-msgs");
+    var chatSt = doc.querySelector("[data-wa-chat-status]");
+    function render() {
+      var list = loadJSON(CHATS, []);
+      if (!Array.isArray(list)) list = [];
+      var el = doc.querySelector("[data-wa-list]");
+      if (!el) return;
+      if (!list.length) {
+        el.innerHTML = "<p style='font-size:12px;color:#555'>No messages yet.</p>";
         return;
       }
-      if (!checked(doc, "[data-hb-cve]") && !checked(doc, "[data-req][data-req-id='hb-1']")) {
-        /* allow either literacy checkbox style */
-        var lit = countChecked(doc, "[data-hb-lit], [data-req]");
-        if (lit < 1) {
-          feedback("Confirm you understand CVE-2014-0160 first.", st, { error: true });
-          return;
-        }
+      el.innerHTML = list.slice().reverse().map(function (m) {
+        return "<div style='background:#dcf8c6;margin:4px 0;padding:6px 8px;border-radius:4px;font-size:12px'><b>" +
+          String(m.who || "").replace(/</g, "") + ":</b> " +
+          String(m.text || "").replace(/</g, "&lt;") + "</div>";
+      }).join("");
+    }
+    render();
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var installed = false;
+      try { installed = !!localStorage.getItem(INST); } catch (e2) {}
+      if (!installed) {
+        feedback("Install WhatsApp first (home page).", chatSt, { error: true });
+        return;
       }
-      var services = [];
-      var nodes = doc.querySelectorAll("[data-hb-service]");
-      var i;
-      for (i = 0; i < nodes.length; i++) {
-        if (nodes[i].checked) services.push(nodes[i].getAttribute("data-hb-service") || nodes[i].value || "svc");
+      var textEl = form.querySelector("[data-wa-text], [name=text]");
+      var whoEl = form.querySelector("[data-wa-who], [name=who]");
+      var text = (textEl && textEl.value || "").trim();
+      if (!text) {
+        feedback("Type a message first (empty Send does not write).", chatSt, { error: true });
+        return;
       }
-      saveJSON(key("heartbleed"), {
-        cve: "CVE-2014-0160",
-        date: "2014-04-07",
-        services: services,
-        multiStep: true,
-        ts: Date.now()
-      });
-      saveRaw(key("heartbleed-rotate"), JSON.stringify(services));
-      feedback("Heartbleed literacy · rotated " + services.length + " · " + key("heartbleed"), st);
-      markUsed();
+      var list = loadJSON(CHATS, []);
+      if (!Array.isArray(list)) list = [];
+      list.push({ who: (whoEl && whoEl.value) || "You", text: text, ts: Date.now(), real: true });
+      saveJSON(CHATS, list);
+      if (textEl) textEl.value = "";
+      render();
+      feedback("Sent · " + CHATS, chatSt);
     });
   }
 
-  /* ——— iPhone 6 size pick (document click — survives late boot) ——— */
-  function bootIphone6(doc) {
+  function bootIphone(doc) {
     doc = doc || document;
-    if (doc.documentElement && doc.documentElement.getAttribute("data-itt-iphone6") === "1") {
-      return;
+    var btns = doc.querySelectorAll("[data-ip6-size]");
+    var st = doc.querySelector("[data-ip6-status]");
+    var i;
+    for (i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var size = this.getAttribute("data-ip6-size");
+        if (!size) return;
+        var hon = doc.querySelector("[data-ip6-not-x]");
+        if (!hon || !hon.checked) {
+          feedback("Confirm this is iPhone 6 / 6 Plus — not Face ID / not iPhone X.", st, { error: true });
+          return;
+        }
+        saveJSON(key("iphone6"), { size: size, notFaceId: true, real: true, multiStep: true, ts: Date.now() });
+        feedback("Chose iPhone " + (size === "6plus" ? "6 Plus" : "6") + " · " + key("iphone6"), st);
+      });
     }
-    try {
-      if (doc.documentElement) doc.documentElement.setAttribute("data-itt-iphone6", "1");
-    } catch (e0) {
-      /* */
+
+    var enroll = doc.querySelector("[data-pay-enroll]");
+    if (enroll) {
+      enroll.addEventListener("click", function () {
+        var nm = (doc.querySelector("[data-pay-name]") || {}).value || "";
+        nm = String(nm).trim();
+        var touch = !!(doc.querySelector("[data-pay-touch]") && doc.querySelector("[data-pay-touch]").checked);
+        var pst = doc.querySelector("[data-pay-status]");
+        if (!nm || !touch) {
+          feedback("Nickname + Touch ID ack required (October US Pay).", pst, { error: true });
+          return;
+        }
+        saveJSON(key("pay"), { nick: nm, touch: true, month: "October", real: true, ts: Date.now() });
+        feedback("Enrolled theater · " + key("pay"), pst);
+      });
     }
-    doc.addEventListener(
-      "click",
-      function (ev) {
-        var t = ev.target;
-        if (!t) return;
-        if (t.nodeType !== 1) t = t.parentElement;
-        if (!t || !t.closest) return;
-        var el = t.closest("[data-iphone6-pick]");
-        if (!el) return;
-        var st = doc.querySelector("[data-iphone6-status]");
-        var size = el.getAttribute("data-iphone6-pick") || "6";
-        var storage = el.getAttribute("data-storage") || "16";
-        var price = el.getAttribute("data-price") || "";
-        saveJSON(key("iphone6"), {
-          model: size === "plus" || size === "6plus" ? "iPhone 6 Plus" : "iPhone 6",
-          size: size,
-          storageGB: storage,
-          priceContract: price,
-          ship: "2014-09-19",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
+
+    var wsave = doc.querySelector("[data-watch-save]");
+    if (wsave) {
+      var face = "sport";
+      var faces = doc.querySelectorAll("[data-watch-face]");
+      for (i = 0; i < faces.length; i++) {
+        faces[i].addEventListener("click", function () {
+          face = this.getAttribute("data-watch-face") || "sport";
+          feedback("Face " + face + " (not saved until 2015 check)", doc.querySelector("[data-watch-status]"));
         });
-        feedback("Chose " + (size === "plus" ? "6 Plus" : "6") + " · " + key("iphone6"), st);
-        markUsed();
-      },
-      true
-    );
-  }
-
-  /* ——— Apple Pay enroll ——— */
-  function bootApplePay(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-pay-enroll]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-pay-status]");
-    var card = doc.querySelector("[data-pay-last4]");
-    btn.addEventListener("click", function () {
-      var last4 = ((card && card.value) || "").replace(/\D/g, "");
-      if (last4.length < 4) {
-        feedback("Enter last 4 digits (theater card).", st, { error: true });
-        return;
       }
-      if (!checked(doc, "[data-pay-touchid]")) {
-        feedback("Confirm Touch ID authorize (theater).", st, { error: true });
-        return;
-      }
-      saveJSON(key("pay"), {
-        enrolled: true,
-        last4: last4.slice(-4),
-        touchId: true,
-        multiStep: true,
-        ts: Date.now()
+      wsave.addEventListener("click", function () {
+        var hon = doc.querySelector("[data-watch-2015]");
+        var wst = doc.querySelector("[data-watch-status]");
+        if (!hon || !hon.checked) {
+          feedback("Check ships-2015 honesty first.", wst, { error: true });
+          return;
+        }
+        saveJSON(key("watch-announce"), { face: face, ships2015: true, real: true, ts: Date.now() });
+        feedback("Announce saved · ships 2015 · " + key("watch-announce"), wst);
       });
-      feedback("Apple Pay enrolled (theater) · " + key("pay"), st);
-      markUsed();
-    });
+    }
   }
 
-  /* ——— Bendgate literacy ——— */
-  function bootBendgate(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-bendgate-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-bendgate-status]");
-    btn.addEventListener("click", function () {
-      var n = countChecked(doc, "[data-bendgate-check], [data-req]");
-      if (n < 2) {
-        feedback("Check at least 2 literacy boxes.", st, { error: true });
-        return;
-      }
-      saveJSON(key("bendgate"), { literacy: true, multiStep: true, ts: Date.now() });
-      feedback("Bendgate literacy saved · " + key("bendgate"), st);
-      markUsed();
-    });
-  }
-
-  /* ——— Watch announce (pre-ship) ——— */
-  function bootWatch(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-watch-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-watch-status]");
-    var face = doc.querySelector("[data-watch-face]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-watch-preship]")) {
-        feedback("Confirm: announced 2014 · ships 2015.", st, { error: true });
-        return;
-      }
-      var f = (face && face.value) || "sport";
-      saveJSON(key("watch-announce"), {
-        face: f,
-        announced: "2014-09-09",
-        ships: "2015",
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("Watch announce saved (pre-ship) · " + key("watch-announce"), st);
-      markUsed();
-    });
-  }
-
-  /* ——— Ice Bucket ——— */
   function bootIceBucket(doc) {
     doc = doc || document;
     var btn = doc.querySelector("[data-ib-post]");
     if (!btn) return;
-    var st = doc.querySelector("[data-ib-status]");
-    var nameIn = doc.querySelector("[data-ib-name]");
-    var nom1 = doc.querySelector("[data-ib-nom1]");
-    var nom2 = doc.querySelector("[data-ib-nom2]");
-    var feed = doc.querySelector("[data-ib-feed]");
-    var kFeed = key("icebucket-feed");
-
+    var FEED = key("icebucket-posts");
     function render() {
-      if (!feed) return;
-      var arr = loadJSON(kFeed, []);
-      feed.innerHTML = "";
-      var i;
-      for (i = arr.length - 1; i >= 0; i--) {
-        var d = doc.createElement("div");
-        d.style.cssText = "padding:8px;margin:6px 0;border:1px solid #39c;background:#e8f4ff;font-size:13px";
-        d.textContent =
-          (arr[i].name || "?") +
-          " dumped ice · nominated " +
-          (arr[i].noms || []).join(", ");
-        feed.appendChild(d);
+      var list = loadJSON(FEED, []);
+      var el = doc.querySelector("[data-ib-feed]");
+      if (!el) return;
+      if (!list.length) {
+        el.textContent = "No local posts yet.";
+        return;
       }
+      el.innerHTML = list.slice().reverse().map(function (p) {
+        return "<div><b>" + String(p.name || "").replace(/</g, "") + "</b> nominates <i>" +
+          String(p.nom || "").replace(/</g, "") + "</i></div>";
+      }).join("");
     }
     render();
     btn.addEventListener("click", function () {
-      var name = ((nameIn && nameIn.value) || "").trim();
-      if (name.length < 2) {
-        feedback("Enter your name (2+ chars).", st, { error: true });
+      var name = ((doc.querySelector("[data-ib-name]") || {}).value || "").trim();
+      var nom = ((doc.querySelector("[data-ib-nom]") || {}).value || "").trim();
+      var st = doc.querySelector("[data-ib-status]");
+      if (!name) {
+        feedback("Name required (empty dump does not write).", st, { error: true });
         return;
       }
-      var noms = [];
-      var a = ((nom1 && nom1.value) || "").trim();
-      var b = ((nom2 && nom2.value) || "").trim();
-      if (a) noms.push(a);
-      if (b) noms.push(b);
-      if (noms.length < 1) {
-        feedback("Nominate at least one friend.", st, { error: true });
+      if (nom.length < 2) {
+        feedback("Nominate someone (2+ chars). Soft default is forbidden.", st, { error: true });
         return;
       }
-      var arr = loadJSON(kFeed, []);
-      if (!Array.isArray(arr)) arr = [];
-      arr.push({ name: name, noms: noms, ts: Date.now() });
-      saveJSON(kFeed, arr);
-      saveJSON(key("icebucket"), { posted: true, multiStep: true, ts: Date.now() });
+      var list = loadJSON(FEED, []);
+      if (!Array.isArray(list)) list = [];
+      list.push({ name: name, nom: nom, ts: Date.now(), real: true, multiStep: true });
+      saveJSON(FEED, list);
       render();
-      feedback("Ice Bucket challenge posted (local) · " + kFeed, st);
-      markUsed();
+      feedback("Posted local · " + FEED, st);
     });
   }
 
-  /* ——— Serial ——— */
+  function bootWin10(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-w10-try]");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var hon = doc.querySelector("[data-w10-honest]");
+      var st = doc.querySelector("[data-w10-status]");
+      if (!hon || !hon.checked) {
+        feedback("Check Insider / not-retail honesty first.", st, { error: true });
+        return;
+      }
+      var notFree = doc.querySelector("[data-w10-not-free]");
+      if (!notFree || !notFree.checked) {
+        feedback("Confirm this is not the 2015 free upgrade / not Edge.", st, { error: true });
+        return;
+      }
+      saveJSON(key("win10tp"), { insider: true, notRetail: true, notFreeUpgrade: true, real: true, multiStep: true, ts: Date.now() });
+      feedback("TP theater · " + key("win10tp"), st);
+    });
+  }
+
+  function bootEcho(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-echo-req]");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var hon = doc.querySelector("[data-echo-invite]");
+      var st = doc.querySelector("[data-echo-status]");
+      if (!hon || !hon.checked) {
+        feedback("Check invite / mass-2015 honesty first.", st, { error: true });
+        return;
+      }
+      var notMass = doc.querySelector("[data-echo-not-mass]");
+      if (!notMass || !notMass.checked) {
+        feedback("Confirm mass retail is 2015 — not this invite.", st, { error: true });
+        return;
+      }
+      saveJSON(key("echo"), { invite: true, mass2015: true, real: true, multiStep: true, ts: Date.now() });
+      feedback("Invitation requested (theater) · " + key("echo"), st);
+    });
+  }
+
   function bootSerial(doc) {
     doc = doc || document;
-    var btn = doc.querySelector("[data-serial-ack]");
+    var btn = doc.querySelector("[data-serial-heard]");
     if (!btn) return;
-    var st = doc.querySelector("[data-serial-status]");
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-serial-boom]")) {
-        feedback("Confirm podcast boom literacy first.", st, { error: true });
+      var st = doc.querySelector("[data-serial-status]");
+      if (!checked(doc, "[data-serial-oct]") || !checked(doc, "[data-serial-no-crime]")) {
+        feedback("Confirm Oct 3 2014 debut + no crime-scene UI.", st, { error: true });
         return;
       }
-      saveJSON(key("serial"), {
-        debut: "2014-10-03",
-        boom: true,
+      saveJSON(key("serial"), { heard: true, debut: "2014-10-03", noCrimeUi: true, real: true, multiStep: true, ts: Date.now() });
+      feedback("Marked heard · " + key("serial"), st);
+    });
+  }
+
+  function bootChrome14(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-chrome14-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-chrome14-status], [data-chrome-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-chrome14-habit]") || !checked(doc, "[data-chrome14-not-edge]") || !checked(doc, "[data-chrome14-dl]")) {
+        feedback("Check habit · not-Edge · download theater.", st, { error: true });
+        return;
+      }
+      saveJSON(key("chrome"), {
+        habit: true,
+        notEdge: true,
+        downloaded: true,
         multiStep: true,
+        real: true,
+        year: "2014",
         ts: Date.now()
       });
-      feedback("Serial culture note saved · " + key("serial"), st);
-      markUsed();
+      feedback("Chrome REAL · " + key("chrome"), st);
     });
   }
 
-  /* ——— 1B websites ——— */
-  function bootBillion(doc) {
+  function bootSlack(doc) {
     doc = doc || document;
-    var btn = doc.querySelector("[data-billion-ack]");
+    var btn = doc.querySelector("[data-slack14-save]");
     if (!btn) return;
-    var st = doc.querySelector("[data-billion-status]");
+    var st = doc.querySelector("[data-slack14-status]");
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-billion-june]") || !checked(doc, "[data-billion-sep]")) {
-        feedback("Check both June Live Stats + Sep 1B milestone.", st, { error: true });
+      var ws = val(doc, "[data-slack14-ws]");
+      if (ws.length < 2) {
+        feedback("Enter a workspace name (2+ chars).", st, { error: true });
         return;
       }
-      saveJSON(key("billion-ack"), {
-        june: 968882453,
-        sep1B: true,
+      if (!checked(doc, "[data-slack14-public]") || !checked(doc, "[data-slack14-not-ott]")) {
+        feedback("Check public-Feb-2014 + not-one-thing.", st, { error: true });
+        return;
+      }
+      saveJSON(key("slack"), {
+        workspace: ws,
+        public: "2014-02",
+        notOneThing: true,
         multiStep: true,
+        real: true,
+        year: "2014",
         ts: Date.now()
       });
-      feedback("1B dual-cite literacy · " + key("billion-ack"), st);
+      feedback("Slack public (theater) · " + key("slack"), st);
       markUsed();
+      showNext(doc);
     });
   }
 
-  /* ——— Win10 TP ——— */
-  function bootWin10tp(doc) {
+  function bootSlackChannel(doc) {
     doc = doc || document;
-    var btn = doc.querySelector("[data-win10tp-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-win10tp-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-win10tp-preview]") || !checked(doc, "[data-win10tp-not-retail]")) {
-        feedback("Confirm: Technical Preview only · not retail mass OS.", st, { error: true });
-        return;
-      }
-      saveJSON(key("win10tp"), {
-        announced: "2014-09-30",
-        technicalPreview: true,
-        notRetail: true,
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("Win10 TP honesty saved · " + key("win10tp"), st);
-      markUsed();
-    });
-  }
-
-  /* ——— P1 empire acks (literacy check required — no soft one-click) ——— */
-  function bootEmpireAck(doc, sel, suffix, payload) {
-    doc = doc || document;
-    var btn = doc.querySelector(sel);
-    if (!btn) return;
-    var st = doc.querySelector("[data-" + suffix + "-status]");
-    if (!st) st = doc.querySelector(sel.replace("ack", "status").replace("save", "status"));
-    btn.addEventListener("click", function () {
-      var need = doc.querySelectorAll("[data-req], [data-" + suffix + "-check]");
-      var n = 0;
-      var i;
-      for (i = 0; i < need.length; i++) if (need[i].checked) n++;
-      if (need.length >= 1 && n < Math.min(2, need.length)) {
-        feedback("REAL gate: complete literacy check(s) first.", st, { error: true });
-        return;
-      }
-      if (!need.length && btn.getAttribute("data-armed") !== "1") {
-        btn.setAttribute("data-armed", "1");
-        feedback("Confirm: educational deal note only — click again (REAL two-step).", st, {
-          error: true
-        });
-        return;
-      }
-      saveJSON(
-        key(suffix),
-        Object.assign({ multiStep: true, real: true, ts: Date.now() }, payload || {})
-      );
-      feedback(suffix + " saved · " + key(suffix), st);
-      markUsed();
-    });
-  }
-
-  /* ——— Densify gems: Secret · Yik Yak · Ello · Hyperlapse ——— */
-  function bootSecret(doc) {
-    doc = doc || document;
-    var form = doc.querySelector("[data-secret-compose]");
-    var feed = doc.querySelector("[data-secret-feed]");
-    var st = doc.querySelector("[data-secret-status]");
+    var btn = doc.querySelector("[data-slack14-send]");
+    var echo = doc.querySelector("[data-slack14-ws-echo]");
+    var thread = doc.querySelector("[data-slack14-thread]");
+    var st = doc.querySelector("[data-slack14-msg-status]");
+    var ws = loadJSON(key("slack"), null);
+    if (echo) echo.textContent = ws && ws.workspace ? ws.workspace : "join first";
     function render() {
-      if (!feed) return;
-      var list = loadJSON(key("secret-posts"), []) || [];
-      if (!list.length) {
-        feed.innerHTML = "<font color='#888' size='2'>No secrets yet — post anonymously (theater).</font>";
-        return;
-      }
-      feed.innerHTML = list
-        .map(function (p) {
-          return (
-            "<div style='border:1px solid #ddd;padding:10px;margin:6px 0;background:#fafafa;border-radius:8px;font-size:13px'>" +
-            "<b style='color:#666'>Anonymous</b><br>" +
-            String(p.text || "").replace(/</g, "&lt;") +
-            "</div>"
-          );
-        })
-        .join("");
+      if (!thread) return;
+      var list = loadJSON(key("slack-msgs"), []);
+      if (!Array.isArray(list)) list = [];
+      thread.innerHTML = list.length
+        ? list.map(function (m) { return "<div>" + (m.text || "") + "</div>"; }).join("")
+        : "<div style='opacity:.6'>No messages yet.</div>";
     }
     render();
-    if (!form || form.getAttribute("data-bound") === "1") return;
-    form.setAttribute("data-bound", "1");
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var ta = form.querySelector("[name=text], [data-secret-text]");
-      var text = ta && ta.value != null ? String(ta.value).replace(/^\s+|\s+$/g, "") : "";
-      if (text.length < 2) {
-        feedback("Write a secret (2+ chars).", st, { error: true });
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      ws = loadJSON(key("slack"), null);
+      if (!ws || !ws.workspace) {
+        feedback("Join a workspace first.", st, { error: true });
         return;
       }
-      if (!checked(doc, "[data-secret-ack]")) {
-        feedback("Confirm: no real Secret account / friends graph.", st, { error: true });
+      var text = val(doc, "[data-slack14-msg]");
+      if (text.length < 1) {
+        feedback("Type a message.", st, { error: true });
         return;
       }
-      var list = loadJSON(key("secret-posts"), []) || [];
-      list.unshift({ text: text.slice(0, 500), multiStep: true, real: true, ts: Date.now() });
-      saveJSON(key("secret-posts"), list.slice(0, 40));
-      if (ta) ta.value = "";
-      feedback("Posted anonymously (theater) · " + key("secret-posts"), st);
+      var list = loadJSON(key("slack-msgs"), []);
+      if (!Array.isArray(list)) list = [];
+      list.push({ text: text, channel: "general", multiStep: true, real: true, year: "2014", ts: Date.now() });
+      saveJSON(key("slack-msgs"), list);
       render();
+      feedback("Sent · " + key("slack-msgs"), st);
       markUsed();
+    });
+  }
+
+  function bootSecret(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-secret-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-secret-status]");
+    btn.addEventListener("click", function () {
+      var handle = val(doc, "[data-secret-name]");
+      var text = val(doc, "[data-secret-text]");
+      if (handle.length < 1 || text.length < 1) {
+        feedback("Handle and post text required.", st, { error: true });
+        return;
+      }
+      var list = loadJSON(key("secret-posts"), []);
+      if (!Array.isArray(list)) list = [];
+      list.push({ handle: handle, text: text, ts: Date.now(), real: true });
+      saveJSON(key("secret-posts"), list);
+      feedback("Posted (theater) · " + key("secret-posts"), st);
     });
   }
 
   function bootYikYak(doc) {
     doc = doc || document;
-    var form = doc.querySelector("[data-yikyak-compose]");
-    var feed = doc.querySelector("[data-yikyak-feed]");
-    var st = doc.querySelector("[data-yikyak-status]");
-    function render() {
-      if (!feed) return;
-      var list = loadJSON(key("yikyak-yaks"), []) || [];
-      if (!list.length) {
-        feed.innerHTML = "<font color='#888' size='2'>Herd is quiet — post a yak (theater · no real GPS).</font>";
+    var btn = doc.querySelector("[data-yy-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-yy-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-yy-honest]")) {
+        feedback("Harm-literacy check required.", st, { error: true });
         return;
       }
-      feed.innerHTML = list
-        .map(function (y, idx) {
-          return (
-            "<div style='border-bottom:1px solid #eee;padding:8px 0;font-size:13px' data-yak-id='" +
-            idx +
-            "'>" +
-            "<button type='button' data-yak-up='" +
-            idx +
-            "' style='font-size:11px'>▲ " +
-            (y.votes || 0) +
-            "</button> " +
-            String(y.text || "").replace(/</g, "&lt;") +
-            "</div>"
-          );
-        })
-        .join("");
-      var ups = feed.querySelectorAll("[data-yak-up]");
-      var j;
-      for (j = 0; j < ups.length; j++) {
-        ups[j].addEventListener("click", function (ev) {
-          var id = parseInt(ev.currentTarget.getAttribute("data-yak-up"), 10);
-          var list2 = loadJSON(key("yikyak-yaks"), []) || [];
-          if (list2[id]) {
-            list2[id].votes = (list2[id].votes || 0) + 1;
-            saveJSON(key("yikyak-yaks"), list2);
-            render();
-          }
-        });
-      }
-    }
-    render();
-    if (!form || form.getAttribute("data-bound") === "1") return;
-    form.setAttribute("data-bound", "1");
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var ta = form.querySelector("[name=text], [data-yikyak-text]");
-      var text = ta && ta.value != null ? String(ta.value).replace(/^\s+|\s+$/g, "") : "";
-      if (text.length < 2) {
-        feedback("Write a yak (2+ chars).", st, { error: true });
+      var text = val(doc, "[data-yy-text]");
+      if (text.length < 1) {
+        feedback("Type a yak first.", st, { error: true });
         return;
       }
-      if (!checked(doc, "[data-yikyak-lit]")) {
-        feedback("Confirm: no real GPS · educational campus theater.", st, { error: true });
+      if (/bomb|kill|nazi/i.test(text)) {
+        feedback("Threat-shaped text rejected (literacy, not a filter product).", st, { error: true });
         return;
       }
-      var list = loadJSON(key("yikyak-yaks"), []) || [];
-      list.unshift({ text: text.slice(0, 400), votes: 0, multiStep: true, real: true, ts: Date.now() });
-      saveJSON(key("yikyak-yaks"), list.slice(0, 50));
-      if (ta) ta.value = "";
-      feedback("Yak posted · herd theater · " + key("yikyak-yaks"), st);
-      render();
-      markUsed();
+      saveJSON(key("yikyak"), { text: text, honest: true, multiStep: true, real: true, ts: Date.now() });
+      feedback("Yak saved (theater) · " + key("yikyak"), st);
     });
   }
 
   function bootEllo(doc) {
     doc = doc || document;
-    var btn = doc.querySelector("[data-ello-save], [data-ello-ack]");
+    var btn = doc.querySelector("[data-ello-save]");
     if (!btn) return;
     var st = doc.querySelector("[data-ello-status]");
     btn.addEventListener("click", function () {
-      var n = countChecked(doc, "[data-req], [data-ello-check]");
-      if (n < 2) {
-        feedback("Check both Ello literacy boxes first.", st, { error: true });
+      if (!checked(doc, "[data-ello-manifesto]") || !checked(doc, "[data-ello-not-dead]")) {
+        feedback("Manifesto + not-dead-in-2014 checks required.", st, { error: true });
         return;
       }
-      saveJSON(key("ello-ack"), {
-        antiAds: true,
-        year: 2014,
-        multiStep: true,
-        real: true,
-        ts: Date.now()
-      });
-      feedback("Ello wave noted · " + key("ello-ack"), st);
-      markUsed();
+      saveJSON(key("ello"), { invite: true, manifesto: true, real: true, multiStep: true, ts: Date.now() });
+      feedback("Invite requested (theater) · " + key("ello"), st);
     });
   }
 
-  function bootHyperlapse(doc) {
+  function bootTwitch(doc) {
     doc = doc || document;
-    var btn = doc.querySelector("[data-hyperlapse-export]");
+    var btn = doc.querySelector("[data-twitch-save]");
     if (!btn) return;
-    var st = doc.querySelector("[data-hyperlapse-status]");
+    var st = doc.querySelector("[data-twitch-status], [data-itt-action-status]");
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-hyperlapse-clip]")) {
-        feedback("Pick a clip theater first.", st, { error: true });
+      var channel = val(doc, "[data-twitch-channel]");
+      if (channel.length < 2) {
+        feedback("Enter a channel name (2+ chars).", st, { error: true });
         return;
       }
-      if (!checked(doc, "[data-hyperlapse-ig]")) {
-        feedback("Confirm: export-to-IG residual · not Reels.", st, { error: true });
+      if (!checked(doc, "[data-twitch-live]") || !checked(doc, "[data-twitch-not-ott]")) {
+        feedback("Check live-not-VOD + not-one-thing.", st, { error: true });
         return;
       }
-      saveJSON(key("hyperlapse-export"), {
-        app: "Hyperlapse",
-        year: 2014,
+      saveJSON(key("twitch"), {
+        channel: channel,
+        liveNotVod: true,
+        notOtt: true,
+        deal: "2014-08-25",
+        cashM: 970,
         multiStep: true,
         real: true,
+        year: "2014",
         ts: Date.now()
       });
-      feedback("Hyperlapse export theater · " + key("hyperlapse-export"), st);
-      markUsed();
+      feedback("Channel live (theater) · " + key("twitch"), st);
     });
   }
 
-  function bootIos8(doc) {
+  function bootMusically(doc) {
     doc = doc || document;
-    var btn = doc.querySelector("[data-ios8-ack]");
+    var btn = doc.querySelector("[data-mly14-save]");
     if (!btn) return;
-    var st = doc.querySelector("[data-ios8-status]");
+    var st = doc.querySelector("[data-mly14-status]");
     btn.addEventListener("click", function () {
-      var n = countChecked(doc, "[data-req], [data-ios8-check]");
-      if (n < 2) {
-        feedback("REAL gate: complete both iOS 8 literacy checks first.", st, { error: true });
+      if (!checked(doc, "[data-mly14-seed]") || !checked(doc, "[data-mly14-not-tt]")) {
+        feedback("Check Musical.ly 2014 seed + not TikTok.", st, { error: true });
         return;
       }
-      saveJSON(key("ios8"), {
-        wwdc: true,
-        swift: true,
-        multiStep: true,
-        real: true,
-        ts: Date.now()
-      });
-      feedback("iOS 8 / Swift note · " + key("ios8"), st);
-      markUsed();
+      saveJSON(key("musically-ack"), { seed: true, notTikTok: true, multiStep: true, real: true, ts: Date.now() });
+      feedback("Musical.ly literacy · " + key("musically-ack"), st);
     });
   }
 
   function bootAll(doc) {
     doc = doc || document;
     bootWhatsApp(doc);
-    bootHeartbleed(doc);
-    bootIphone6(doc);
-    bootApplePay(doc);
-    bootBendgate(doc);
-    bootWatch(doc);
+    bootIphone(doc);
     bootIceBucket(doc);
+    bootWin10(doc);
+    bootEcho(doc);
     bootSerial(doc);
-    bootBillion(doc);
-    bootWin10tp(doc);
-    bootIos8(doc);
-    bootEmpireAck(doc, "[data-twitch-ack]", "twitch", { deal: "2014-08-25", price: 970e6 });
-    bootEmpireAck(doc, "[data-oculus-ack]", "oculus", { deal: "2014-03-25", price: 2e9 });
-    bootEmpireAck(doc, "[data-alibaba-ack]", "alibaba", { ipo: "2014-09-19" });
-    bootEmpireAck(doc, "[data-material-ack]", "material", { io: "2014-06-25" });
-    bootEmpireAck(doc, "[data-echo-ack]", "echo-announce", { announce: "2014-11-06", shipsMass: "2015" });
+    bootChrome14(doc);
+    bootSlack(doc);
+    bootSlackChannel(doc);
     bootSecret(doc);
     bootYikYak(doc);
     bootEllo(doc);
-    bootHyperlapse(doc);
+    bootTwitch(doc);
+    bootMusically(doc);
   }
 
-  var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);
-  if (typeof features.registerLocal === "function") {
-    features.registerLocal({
+  if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
+    ITT.ImmersionFeatures.registerLocal({
       id: "year2014extras",
-      featureKey: "year2014extras",
+      ns: "year2014extras",
       boot: bootAll
     });
   } else {
-    features.push({
-      id: "year2014extras",
-      needs: function (cfg) {
-        return !cfg.features || cfg.features.year2014extras !== false;
-      },
-      boot: bootAll
-    });
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () { bootAll(document); });
+    } else {
+      bootAll(document);
+    }
   }
 })(typeof window !== "undefined" ? window : this);

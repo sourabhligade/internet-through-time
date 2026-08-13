@@ -2,6 +2,25 @@
    Continuity pack; prefer year-delta composition over full forks. */
 @import url("period-1998.css");
 
+/* AIM 1999 client chrome (W2 gold) */
+.aim-client {
+  font-family: Tahoma, Arial, sans-serif;
+  background: #d4d0c8;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  box-shadow: 1px 1px 0 #000;
+}
+.aim-client-title {
+  background: linear-gradient(90deg, #0a246a 0%, #1084d0 55%, #0a246a 100%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 10px;
+  min-height: 22px;
+}
+.aim-client-body { padding: 10px; }
+.aim-you-row { background: #ffffcc; padding: 4px 6px; margin-bottom: 6px; font-size: 12px; }
+
 /* eBay (rebranded from AuctionWeb, Sep 1997) */
 .eb-bar {
   background: #EFEFEF;

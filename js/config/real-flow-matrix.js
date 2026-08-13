@@ -74,11 +74,11 @@
     {
       year: "1999",
       prefix: "itt99",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt99-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/aim/index.html",
+      kind: "product",
+      key: "itt99-aim",
+      hook: "form[data-aim-signon]",
+      complete: { action: "aim", expect: null }
     },
     {
       year: "2000",
@@ -92,11 +92,11 @@
     {
       year: "2001",
       prefix: "itt01",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt01-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/wikipedia/edit.html",
+      kind: "product",
+      key: "itt01-wiki-pages",
+      hook: "[data-wiki-save]",
+      complete: { action: "wiki", expect: null }
     },
     {
       year: "2002",
@@ -111,11 +111,11 @@
     {
       year: "2003",
       prefix: "itt03",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt03-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/photobucket/index.html",
+      kind: "product",
+      key: "itt03-photobucket",
+      hook: "form[data-pb-upload]",
+      complete: { action: "photobucket", expect: null }
     },
     {
       year: "2004",
@@ -148,28 +148,28 @@
       year: "2007",
       prefix: "itt07",
       path: "sites/facebook/beacon.html",
-      kind: "literacy",
+      kind: "product",
       key: "itt07-beacon-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      hook: "[data-beacon-ack]",
+      complete: { action: "beacon", expect: null }
     },
     {
       year: "2008",
       prefix: "itt08",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt08-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/github/issue.html",
+      kind: "product",
+      key: "itt08-github",
+      hook: "form[data-gh-issue-form]",
+      complete: { action: "github", expect: null }
     },
     {
       year: "2009",
       prefix: "itt09",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt09-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/stackoverflow/index.html",
+      kind: "product",
+      key: "itt09-stackoverflow",
+      hook: "[data-so-ask], form",
+      complete: { action: "so", expect: null }
     },
     {
       year: "2010",
@@ -183,29 +183,55 @@
     {
       year: "2011",
       prefix: "itt11",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt11-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/airbnb/index.html",
+      kind: "product",
+      key: "itt11-airbnb",
+      hook: "[data-abnb-search]",
+      complete: { action: "airbnb", expect: null }
     },
     {
       year: "2012",
       prefix: "itt12",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt12-thesis-ack",
-      hook: "[data-itt-real-save]",
-      complete: { action: "literacy", expect: "multiStep" }
+      path: "sites/soundcloud/index.html",
+      kind: "product",
+      key: "itt12-soundcloud",
+      hook: "[data-sc-play]",
+      complete: { action: "soundcloud", expect: null }
     },
     {
       year: "2013",
       prefix: "itt13",
-      path: "sites/xboxone/index.html",
+      path: "sites/vine/record.html",
+      kind: "product",
+      key: "itt13-vine-posts",
+      hook: "[data-vine-hold]",
+      complete: { action: "vine", expect: null }
+    },
+    {
+      year: "2014",
+      prefix: "itt14",
+      path: "pages/about.html",
       kind: "literacy",
-      key: "itt13-xbox",
-      hook: "[data-xbox-ack]",
-      complete: { action: "xbox", expect: null }
+      key: "itt14-thesis-ack",
+      complete: { action: "thesis", expect: null }
+    },
+    {
+      year: "2015",
+      prefix: "itt15",
+      path: "sites/apple/watch.html",
+      kind: "product",
+      key: "itt15-watch",
+      hook: "[data-watch-save]",
+      complete: { action: "watch", expect: null }
+    },
+    {
+      year: "2016",
+      prefix: "itt16",
+      path: "sites/instagram/stories.html",
+      kind: "product",
+      key: "itt16-ig-stories",
+      hook: "[data-ig-stories-add]",
+      complete: { action: "stories", expect: null }
     }
   ];
 })(typeof window !== "undefined" ? window : this);

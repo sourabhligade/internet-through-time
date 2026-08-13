@@ -46,6 +46,13 @@
       connectBusyChance: 0.13
     },
     urlMap: {
+      "sites/angelfire/index.html": "http://museum.local/years/1996/angelfire/",
+      "sites/aolportal/index.html": "http://museum.local/years/1996/aolportal/",
+      "sites/realplayer/index.html": "http://museum.local/years/1996/realplayer/",
+      "sites/theglobe/index.html": "http://museum.local/years/1996/theglobe/",
+
+      "sites/playable/index.html": "http://museum.local/years/1996/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1996/playable/game.html",
       "sites/yahoo/Reference/Dictionaries/index.html": "http://www.yahoo.com/Reference/Dictionaries/index.html",
       "sites/yahoo/Reference/Phone_Numbers/index.html": "http://www.yahoo.com/Reference/Phone_Numbers/index.html",
       "sites/yahoo/Reference/Libraries/index.html": "http://www.yahoo.com/Reference/Libraries/index.html",
@@ -141,14 +148,16 @@
       "sites/altavista/search.html": "http://www.altavista.digital.com/cgi-bin/query",
       "sites/excite/index.html": "http://www.excite.com/",
       "sites/excite/search.html": "http://www.excite.com/search.gw",
+      "sites/excite/my.html": "http://www.excite.com/my.html",
       "sites/cnn/index.html": "http://www.cnn.com/",
       "sites/cnn/world.html": "http://www.cnn.com/WORLD/",
       "sites/cnn/scitech.html": "http://www.cnn.com/TECH/",
       "sites/cnn/showbiz.html": "http://www.cnn.com/SHOWBIZ/",
       "sites/netscape/index.html": "http://home.netscape.com/",
       "sites/microsoft/index.html": "http://www.microsoft.com/ie/",
-      "sites/plugin/index.html": "http://www.futurewave.com/"
-    },
+      "sites/plugin/index.html": "http://www.futurewave.com/",
+          "sites/portals/wars.html": "http://www.yahoo.com/wars.html",
+},
     titleMap: {
       "sites/yahoo/Reference/Dictionaries/index.html": "Index",
       "sites/yahoo/Reference/Phone_Numbers/index.html": "Index",
@@ -233,6 +242,7 @@
       "sites/altavista/search.html": "AltaVista Results",
       "sites/excite/index.html": "Excite",
       "sites/excite/search.html": "Excite Search",
+      "sites/excite/my.html": "My Excite",
       "sites/cnn/index.html": "CNN Interactive",
       "sites/cnn/world.html": "CNN Interactive - World",
       "sites/cnn/scitech.html": "CNN Interactive - Sci-Tech",

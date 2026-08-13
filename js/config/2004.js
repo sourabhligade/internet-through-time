@@ -48,6 +48,13 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/basecamp/index.html": "http://museum.local/years/2004/basecamp/",
+      "sites/tinypic/index.html": "http://museum.local/years/2004/tinypic/",
+      "sites/orkutseed/index.html": "http://museum.local/years/2004/orkutseed/",
+      "sites/worldofwarcraft/index.html": "http://museum.local/years/2004/worldofwarcraft/",
+
+      "sites/playable/index.html": "http://museum.local/years/2004/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2004/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2004/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",

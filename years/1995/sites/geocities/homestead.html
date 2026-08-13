@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-itt-year="1995">
 <head>
 <meta charset="utf-8">
 <title>GeoCities — File Your Free Homestead Claim</title>
@@ -32,16 +32,19 @@
 <tr><td>Street number:</td>
 <td><input name="number" size="8" value="4521"> <font size="1">(or leave blank to auto-assign)</font></td></tr>
 <tr><td colspan="2"><font color="#FFFF00"><b>Step 2 — About your page</b></font></td></tr>
-<tr><td>Title:</td><td><input name="title" size="40" value="My Homepage"></td></tr>
+<tr><td>Title:</td><td><input name="title" id="ott-field" size="40" placeholder="My Homepage" autocomplete="off"></td></tr>
 <tr><td valign="top">About me:</td>
-<td><textarea name="about" rows="4" cols="40">Hi!!!! This is my free homepage on the World Wide Web.</textarea></td></tr>
+<td><textarea name="about" rows="4" cols="40" placeholder="Hi!!!! This is my free homepage on the World Wide Web."></textarea></td></tr>
 <tr><td colspan="2"><font color="#FFFF00"><b>Step 3 — Cool links (optional)</b></font></td></tr>
 <tr><td>Link 1:</td><td><input name="link1" size="40" value="Yahoo!"></td></tr>
 <tr><td>Link 2:</td><td><input name="link2" size="40" value="Amazon.com"></td></tr>
 <tr><td>Link 3:</td><td><input name="link3" size="40" value="Starting Point"></td></tr>
+<tr><td colspan="2"><label><input type="checkbox" name="construction" data-homestead-construction checked> Under construction gif</label></td></tr>
 <tr><td></td><td><input type="submit" value="Claim Homestead!"></td></tr>
 </table>
 </form>
+<p align="center" data-homestead-status style="font-size:12px;min-height:1.2em;color:#9f9"></p>
+<p align="center"><font size="1" color="#ccc">Empty title does not write · key <code>itt95-homestead</code></font></p>
 <p align="center"><font size="2">
 <a href="index.html">GeoCities home</a> ·
 <a href="my-homestead.html">View my homestead</a>

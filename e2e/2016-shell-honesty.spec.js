@@ -51,8 +51,8 @@ test.describe('2016 shell honesty', () => {
 
   test('hub has 2016 card', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2016"]')).toBeVisible();
-    await expect(page.locator('body')).toContainText(/1994–2016|1994-2016|1,045,534,808/i);
+    await expect(page.locator('a.year-card.available[href*="years/2016"]').first()).toBeVisible();
+    await expect(page.locator('body')).toContainText(/1994[–-]2020|1994[–-]2016|1,045,534,808/i);
   });
 
   test('musical.ly not TikTok product title', async ({ page }) => {

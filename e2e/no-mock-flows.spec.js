@@ -12,23 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
-/** Check all literacy boxes then optionally click save/download again for REAL multi-step */
-async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-uber-check], [data-gfc-opensocial], [data-gfc-noroauth], [data-fb-connect-check], [data-wave-check], [data-sopa-check], [data-sopa-fact], [data-ps4-check], [data-ps4-share], [data-snap-check], [data-android-check], [data-appstore-check]') {
-  const loc = page.locator(sel);
-  const n = await loc.count();
-  for (let i = 0; i < n; i++) {
-    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
-  }
-}
-async function twoStepClick(page, selector) {
-  const el = page.locator(selector).first();
-  await el.click();
-  await page.waitForTimeout(150);
-  await el.click();
-}
-
-
-/** Skip describes that target years not present on disk (hub is 1994–2013). */
+/** Skip describes that target years not present on disk (hub is 1994–2018). */
 function yearOnDisk(year) {
   try {
     return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
@@ -80,6 +64,21 @@ async function wait2013Real(page) {
   }
 }
 
+/** Wait for 2014 extras / immersion boot before clicking REAL gates */
+async function wait2014Real(page) {
+  await page.waitForFunction(
+    () => {
+      const d = document.documentElement;
+      return (
+        d.getAttribute('data-itt-immersion-booted') === '2014' ||
+        d.getAttribute('data-itt-feat-year2014extras') === '1'
+      );
+    },
+    null,
+    { timeout: 15000 }
+  );
+}
+
 test.describe('NO-MOCK · 2013 WhatsApp multi-step', () => {
   test('incomplete install writes nothing; full chain writes chats', async ({ page }) => {
     await page.goto('/years/2013/sites/whatsapp/index.html');
@@ -112,6 +111,81 @@ test.describe('NO-MOCK · 2013 WhatsApp multi-step', () => {
   });
 });
 
+test.describe('NO-MOCK · 2014 WhatsApp + Heartbleed', () => {
+  test('incomplete install / empty send write nothing; full chain writes msgs', async ({ page }) => {
+    await page.goto('/years/2014/sites/whatsapp/index.html');
+    await clearPrefix(page, 'itt14-wa');
+    await page.reload();
+    await wait2014Real(page);
+
+    await page.locator('[data-wa-install]').click();
+    expect(await getKey(page, 'itt14-wa-install')).toBeNull();
+
+    await page.fill('[data-wa-name]', 'no-mock residual');
+    await page.locator('[data-wa-install]').click();
+    await expect.poll(async () => getKey(page, 'itt14-wa-install')).toBeTruthy();
+
+    await page.goto('/years/2014/sites/whatsapp/chat.html');
+    await wait2014Real(page);
+    await page.locator('[data-wa-send-btn]').click();
+    const mid = await getKey(page, 'itt14-wa-msgs');
+    expect(mid && mid.includes('should-not')).toBeFalsy();
+
+    await page.fill('[data-wa-text]', 'real chat 2014');
+    await page.locator('[data-wa-send-btn]').click();
+    await expect
+      .poll(async () => {
+        const v = await getKey(page, 'itt14-wa-msgs');
+        return !!(v && v.includes('real chat 2014'));
+      })
+      .toBeTruthy();
+  });
+
+  test('Heartbleed rotate one check writes nothing; two writes', async ({ page }) => {
+    await page.goto('/years/2014/sites/heartbleed/rotate.html');
+    await clearPrefix(page, 'itt14-heartbleed');
+    await page.reload();
+    await wait2014Real(page);
+    await page.locator('[data-req]').first().check();
+    await page.locator('[data-itt-real-save]').click();
+    await page.waitForTimeout(150);
+    expect(await getKey(page, 'itt14-heartbleed-rotate')).toBeFalsy();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect.poll(async () => getKey(page, 'itt14-heartbleed-rotate')).toBeTruthy();
+  });
+
+  test('Chrome one-click gone; three checks required for itt14-chrome', async ({ page }) => {
+    await page.goto('/years/2014/sites/chrome/index.html');
+    await clearPrefix(page, 'itt14-chrome');
+    await page.reload();
+    await wait2014Real(page);
+    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
+    await page.locator('[data-chrome14-save]').click();
+    await page.waitForTimeout(120);
+    expect(await getKey(page, 'itt14-chrome')).toBeFalsy();
+    await page.locator('[data-chrome14-habit]').check();
+    await page.locator('[data-chrome14-not-edge]').check();
+    await page.locator('[data-chrome14-dl]').check();
+    await page.locator('[data-chrome14-save]').click();
+    await expect.poll(async () => getKey(page, 'itt14-chrome')).toBeTruthy();
+  });
+
+  test('Cardboard one check writes nothing; two writes itt14-cardboard', async ({ page }) => {
+    await page.goto('/years/2014/sites/cardboard/index.html');
+    await clearPrefix(page, 'itt14-cardboard');
+    await page.reload();
+    await wait2014Real(page);
+    await page.locator('[data-req]').first().check();
+    await page.locator('[data-itt-real-save]').click();
+    await page.waitForTimeout(120);
+    expect(await getKey(page, 'itt14-cardboard')).toBeFalsy();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect.poll(async () => getKey(page, 'itt14-cardboard')).toBeTruthy();
+  });
+});
+
 test.describe('NO-MOCK · 2013 soft rooms now gated', () => {
   test('Xbox One incomplete checkboxes write nothing', async ({ page }) => {
     await page.goto('/years/2013/sites/xboxone/index.html');
@@ -136,10 +210,6 @@ test.describe('NO-MOCK · 2013 soft rooms now gated', () => {
     await page.locator('[data-ps4-ack]').click();
     expect(await getKey(page, 'itt13-ps4')).toBeNull();
     await page.locator('[data-ps4-share]').check();
-    if ((await page.locator('[data-ps4-check]').count()) > 0) {
-      await page.locator('[data-ps4-check]').first().check();
-    }
-    await page.locator('[data-req]').evaluateAll((els) => els.forEach((e) => { e.checked = true; }));
     await page.locator('[data-ps4-ack]').click();
     await expect.poll(async () => getKey(page, 'itt13-ps4')).toBeTruthy();
   });
@@ -184,48 +254,41 @@ test.describe('NO-MOCK · 2013 soft rooms now gated', () => {
     await expect.poll(async () => getKey(page, 'itt13-btc-room')).toBeTruthy();
   });
 
-  test('iOS 7 REAL gate needs two checks', async ({ page }) => {
+  test('iOS 7 REAL gate needs two tiles then one change', async ({ page }) => {
     await page.goto('/years/2013/sites/iphone/ios7.html');
     await clearPrefix(page, 'itt13-ios7');
     await page.reload();
     await wait2013Real(page);
-    const save = page.locator('[data-itt-real-save]').first();
-    await expect(save).toBeVisible({ timeout: 10000 });
-    await save.click();
+    await expect(page.locator('[data-ios7-tile]').first()).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-ios7-tile]').nth(0).click();
+    await page.locator('[data-ios7-tile]').nth(1).click();
     expect(await getKey(page, 'itt13-ios7')).toBeNull();
-    const boxes = page.locator('[data-itt-real-save]').first().locator('xpath=ancestor::div[1]//input[@data-req]');
-    // fallback: page-level data-req in REAL panel only
-    const panelBoxes = page.locator('div:has([data-itt-real-save]) input[data-req]');
-    await expect(panelBoxes).toHaveCount(2, { timeout: 5000 });
-    await panelBoxes.nth(0).check();
-    await panelBoxes.nth(1).check();
-    await save.click();
+    await page.locator('[data-ios7-change]').first().check();
     await expect.poll(async () => getKey(page, 'itt13-ios7')).toBeTruthy();
   });
 });
 
 test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
-  test.skip(!yearOnDisk(2016), 'years/2016 not on disk — hub open 1994–2014 only');
+  test.skip(!yearOnDisk(2016), 'years/2016 not on disk — hub open 1994–2016');
 
   test('Musical.ly: empty and no-TikTok-gate blocked', async ({ page }) => {
-    await page.goto('/years/2016/sites/musically/record.html');
+    await page.goto('/years/2016/sites/musically/index.html');
     await clearPrefix(page, 'itt16-mly');
     await clearPrefix(page, 'itt16-musical');
     await page.reload();
-    await page.waitForTimeout(900);
-    await page.fill('[data-mly-caption]', 'x');
-    // no checkbox
-    await page.locator('form[data-mly-compose] button[type="submit"]').click();
-    expect(await getKey(page, 'itt16-mly-posts')).toBeNull();
+    await page.waitForTimeout(400);
+    await page.fill('[data-musical-caption]', 'x');
+    await page.locator('[data-musical-save]').click();
+    expect(await getKey(page, 'itt16-musical')).toBeNull();
     await page.locator('[data-musical-not-tiktok]').check();
-    await page.fill('[data-mly-caption]', '');
-    await page.locator('form[data-mly-compose] button[type="submit"]').click();
-    expect(await getKey(page, 'itt16-mly-posts')).toBeNull();
-    await page.fill('[data-mly-caption]', 'real clip');
-    await page.locator('form[data-mly-compose] button[type="submit"]').click();
+    await page.fill('[data-musical-caption]', '');
+    await page.locator('[data-musical-save]').click();
+    expect(await getKey(page, 'itt16-musical')).toBeNull();
+    await page.fill('[data-musical-caption]', 'real clip');
+    await page.locator('[data-musical-save]').click();
     await expect
       .poll(async () => {
-        const p = await getKey(page, 'itt16-mly-posts');
+        const p = await getKey(page, 'itt16-musical');
         return !!(p && p.includes('real clip'));
       }, { timeout: 10000 })
       .toBeTruthy();
@@ -235,12 +298,12 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
     await page.goto('/years/2016/sites/vine/goodbye.html');
     await clearPrefix(page, 'itt16-vine');
     await page.reload();
-    await page.waitForTimeout(900);
-    await page.locator('[data-vine-ack]').click();
+    await page.waitForTimeout(400);
+    await page.locator('[data-vine-save]').click();
     expect(await getKey(page, 'itt16-vine')).toBeNull();
     await page.locator('[data-vine-announce]').check();
-    await page.locator('[data-vine-offline]').check();
-    await page.locator('[data-vine-ack]').click();
+    await page.locator('[data-vine-not-gone]').check();
+    await page.locator('[data-vine-save]').click();
     await expect.poll(async () => getKey(page, 'itt16-vine')).toBeTruthy();
     expect(await getKey(page, 'itt16-vine')).toMatch(/multiStep|2016-10-27/);
   });
@@ -249,20 +312,14 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
     await page.goto('/years/2016/sites/instagram/stories.html');
     await clearPrefix(page, 'itt16-ig-stories');
     await page.reload();
-    await page.waitForTimeout(1000);
-    const add = page.locator('[data-ig-story-add]');
+    await page.waitForTimeout(400);
+    const add = page.locator('[data-ig-stories-add]');
     await expect(add).toBeVisible({ timeout: 10000 });
     await add.click();
-    // empty should not add usable story payload
-    const empty = await getKey(page, 'itt16-ig-stories');
-    // allow null or empty items array
-    if (empty) {
-      const parsed = JSON.parse(empty);
-      const items = parsed.items || parsed || [];
-      const arr = Array.isArray(items) ? items : [];
-      expect(arr.length === 0 || !arr.some((x) => x && (x.text || x.caption))).toBeTruthy();
-    }
-    await page.fill('[data-ig-story-text]', 'museum story real');
+    expect(await getKey(page, 'itt16-ig-stories')).toBeFalsy();
+    await page.fill('[data-ig-stories-caption]', 'museum story real');
+    await page.locator('[data-ig-stories-24h]').check();
+    await page.locator('[data-ig-stories-not-reels]').check();
     await add.click();
     await expect
       .poll(async () => {
@@ -270,6 +327,94 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
         return !!(raw && raw.includes('museum story real'));
       }, { timeout: 10000 })
       .toBeTruthy();
+  });
+});
+
+test.describe('NO-MOCK · 2017 Face ID + Fortnite + 280', () => {
+  test.skip(!yearOnDisk(2017), 'years/2017 not on disk — hub open 1994–2018');
+
+  test('Face ID: empty save blocked; three checks write', async ({ page }) => {
+    await page.goto('/years/2017/sites/iphone/x.html');
+    await clearPrefix(page, 'itt17-faceid');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-faceid-save]').click();
+    expect(await getKey(page, 'itt17-faceid')).toBeNull();
+    await page.locator('[data-faceid-no-home]').check();
+    await page.locator('[data-faceid-not-touch]').check();
+    await page.locator('[data-faceid-not-xs]').check();
+    await page.locator('[data-faceid-save]').click();
+    await expect.poll(async () => getKey(page, 'itt17-faceid')).toBeTruthy();
+    expect(await getKey(page, 'itt17-faceid')).toMatch(/multiStep|2017-09-12|noHomeButton/);
+  });
+
+  test('Fortnite incomplete blocked', async ({ page }) => {
+    await page.goto('/years/2017/sites/fortnite/index.html');
+    await clearPrefix(page, 'itt17-fortnite');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-fn-save]').click();
+    expect(await getKey(page, 'itt17-fortnite')).toBeNull();
+    await page.locator('[data-fn-date]').check();
+    await page.locator('[data-fn-free]').check();
+    await page.locator('[data-fn-no-art]').check();
+    await page.locator('[data-fn-save]').click();
+    await expect.poll(async () => getKey(page, 'itt17-fortnite')).toBeTruthy();
+  });
+
+  test('Twitter 280 short compose blocked; 141+ writes', async ({ page }) => {
+    await page.goto('/years/2017/sites/twitter/280.html');
+    await clearPrefix(page, 'itt17-twitter280');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.fill('[data-tw280-text]', 'too short');
+    await page.locator('[data-tw280-date]').check();
+    await page.locator('[data-tw280-not-x]').check();
+    await page.locator('[data-tw280-save]').click();
+    expect(await getKey(page, 'itt17-twitter280')).toBeNull();
+    await page.fill(
+      '[data-tw280-text]',
+      'This museum tweet is longer than one hundred and forty characters on purpose so last year’s wall would have failed it — keep typing until we clearly pass one-four-one.'
+    );
+    await page.locator('[data-tw280-save]').click();
+    await expect.poll(async () => getKey(page, 'itt17-twitter280'), { timeout: 10000 }).toBeTruthy();
+  });
+});
+
+test.describe('NO-MOCK · 2018 GDPR + hearing', () => {
+  test.skip(!yearOnDisk(2018), 'years/2018 not on disk — hub open 1994–2018');
+
+  test('Accept All blocked; Manage rights write itt18-gdpr', async ({ page }) => {
+    await page.goto('/years/2018/sites/gdpr/index.html');
+    await clearPrefix(page, 'itt18-gdpr');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-gdpr-accept-all]').click();
+    expect(await getKey(page, 'itt18-gdpr')).toBeNull();
+    await page.goto('/years/2018/sites/gdpr/rights.html');
+    await page.reload();
+    await page.locator('[data-gdpr-save]').click();
+    expect(await getKey(page, 'itt18-gdpr')).toBeNull();
+    await page.locator('[data-gdpr-art15]').check();
+    await page.locator('[data-gdpr-art17]').check();
+    await page.locator('[data-gdpr-date]').check();
+    await page.locator('[data-gdpr-save]').click();
+    await expect.poll(async () => getKey(page, 'itt18-gdpr')).toBeTruthy();
+    expect(await getKey(page, 'itt18-gdpr')).toMatch(/multiStep|2018-05-25|manage/);
+  });
+
+  test('Hearing three checks write itt18-ca', async ({ page }) => {
+    await page.goto('/years/2018/sites/trust/index.html');
+    await clearPrefix(page, 'itt18-ca');
+    await page.reload();
+    await page.waitForTimeout(400);
+    await page.locator('[data-ca-save]').click();
+    expect(await getKey(page, 'itt18-ca')).toBeNull();
+    await page.locator('[data-ca-quiz]').check();
+    await page.locator('[data-ca-press]').check();
+    await page.locator('[data-ca-hearing]').check();
+    await page.locator('[data-ca-save]').click();
+    await expect.poll(async () => getKey(page, 'itt18-ca')).toBeTruthy();
   });
 });
 
@@ -301,33 +446,81 @@ test.describe('NO-MOCK · 1997 ICQ', () => {
   });
 });
 
-test.describe('NO-MOCK · 2015 Periscope signature REAL', () => {
-  test.skip(!yearOnDisk(2015), 'years/2015 not on disk — hub open 1994–2014 only');
+test.describe('NO-MOCK · 2015 Watch + Periscope + Chrome REAL', () => {
+  test.skip(!yearOnDisk(2015), 'years/2015 not on disk');
 
-  test('empty title blocked; titled go-live writes itt15 storage', async ({ page }) => {
+  async function wait2015Real(page) {
+    await page.waitForFunction(
+      () => {
+        const d = document.documentElement;
+        return (
+          d.getAttribute('data-itt-immersion-booted') === '2015' ||
+          d.getAttribute('data-itt-feat-year2015extras') === '1'
+        );
+      },
+      null,
+      { timeout: 15000 }
+    );
+  }
+
+  test('Watch incomplete blocked; shipped writes itt15-watch', async ({ page }) => {
+    await page.goto('/years/2015/sites/apple/watch.html');
+    await clearPrefix(page, 'itt15-');
+    await page.reload();
+    await wait2015Real(page);
+    await page.locator('[data-watch-save]').click();
+    expect(await getKey(page, 'itt15-watch')).toBeNull();
+    await page.locator('[data-watch-shipped]').check();
+    await page.locator('[data-watch-no-store]').check();
+    await page.locator('[data-watch-save]').click();
+    await expect.poll(async () => getKey(page, 'itt15-watch')).toBeTruthy();
+    expect(await getKey(page, 'itt14-watch')).toBeNull();
+  });
+
+  test('empty title blocked; titled go-live writes itt15-periscope', async ({ page }) => {
     await page.goto('/years/2015/sites/periscope/index.html');
     await clearPrefix(page, 'itt15-');
     await page.reload();
-    await page.waitForTimeout(1000);
-    const go = page.locator('[data-live-go]');
+    await wait2015Real(page);
+    const go = page.locator('[data-peri-live]');
     await expect(go).toBeVisible({ timeout: 10000 });
     await go.click();
-    // soft-fail: no live list write without title
-    const before = await page.evaluate(() =>
-      Object.keys(localStorage).filter((k) => k.startsWith('itt15-') && /live|periscope/i.test(k))
-    );
-    // may be empty or unchanged
-    await page.fill('[data-live-title]', 'Museum downtown walk');
+    expect(await getKey(page, 'itt15-periscope')).toBeFalsy();
+    await page.fill('[data-peri-title]', 'Museum downtown walk');
     await go.click();
-    await expect
-      .poll(async () =>
-        page.evaluate(() =>
-          Object.keys(localStorage).some(
-            (k) => k.startsWith('itt15-') && localStorage.getItem(k) && /downtown|live|Museum/i.test(localStorage.getItem(k) || '')
-          )
-        )
-      , { timeout: 10000 })
-      .toBeTruthy();
+    await expect.poll(async () => getKey(page, 'itt15-periscope')).toBeTruthy();
+    const raw = (await getKey(page, 'itt15-periscope')) || '';
+    expect(raw).toMatch(/downtown|Museum|multiStep/i);
+  });
+
+  test('Chrome one-click gone; three checks write itt15-chrome', async ({ page }) => {
+    await page.goto('/years/2015/sites/chrome/index.html');
+    await clearPrefix(page, 'itt15-');
+    await page.reload();
+    await wait2015Real(page);
+    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
+    await page.locator('[data-chrome15-save]').click();
+    expect(await getKey(page, 'itt15-chrome')).toBeFalsy();
+    await page.locator('[data-chrome15-habit]').check();
+    await page.locator('[data-chrome15-edge]').check();
+    await page.locator('[data-chrome15-dl]').check();
+    await page.locator('[data-chrome15-save]').click();
+    await expect.poll(async () => getKey(page, 'itt15-chrome')).toBeTruthy();
+  });
+
+  test('Spotify invite mock gone; residual + plan write itt15-spotify', async ({ page }) => {
+    await page.goto('/years/2015/sites/spotify/index.html');
+    await clearPrefix(page, 'itt15-');
+    await page.reload();
+    await wait2015Real(page);
+    expect(await page.locator('[data-spotify-invite]').count()).toBe(0);
+    await page.locator('[data-spotify15-save]').click();
+    expect(await getKey(page, 'itt15-spotify')).toBeFalsy();
+    await page.locator('[data-spotify15-residual]').check();
+    await page.locator('[data-spotify15-war]').check();
+    await page.locator('[data-spotify15-plan][value="free"]').check();
+    await page.locator('[data-spotify15-save]').click();
+    await expect.poll(async () => getKey(page, 'itt15-spotify')).toBeTruthy();
   });
 });
 
@@ -376,33 +569,37 @@ test.describe('NO-MOCK · isolation hard', () => {
 });
 
 test.describe('NO-MOCK · converted residual rooms require two checks', () => {
-  const rooms = [
-    ['/years/2013/sites/instagram/android.html', 'itt13-ig-android'],
-    ['/years/2013/sites/windows81/index.html', 'itt13-win81'],
-    ['/years/2013/sites/facebook/home.html', 'itt13-fb-home'],
-    ['/years/2013/sites/wave/funeral.html', 'itt13-wave-funeral'],
-  ];
+  test('2013 Win8.1 incomplete (no Start) does not write; two tiles + Start does', async ({ page }) => {
+    await page.goto('/years/2013/sites/windows81/index.html');
+    await page.evaluate(() => localStorage.removeItem('itt13-win81'));
+    await page.reload();
+    await wait2013Real(page);
+    expect(await getKey(page, 'itt13-win81')).toBeFalsy();
+    await page.locator('[data-win81-tile]').nth(0).click();
+    expect(await getKey(page, 'itt13-win81')).toBeFalsy();
+    await page.locator('[data-win81-tile]').nth(1).click();
+    await page.locator('[data-win81-start]').click();
+    await expect.poll(async () => getKey(page, 'itt13-win81'), { timeout: 10000 }).toBeTruthy();
+  });
 
-  for (const [path, key] of rooms) {
-    test(`${path} incomplete blocked; dual-check writes ${key}`, async ({ page }) => {
-      await page.goto(path);
-      await page.evaluate((k) => localStorage.removeItem(k), key);
-      await page.reload();
-      await wait2013Real(page);
-      const save = page.locator('[data-itt-real-save]').first();
-      await expect(save).toBeVisible({ timeout: 15000 });
-      await save.click();
-      expect(await getKey(page, key)).toBeNull();
-      const boxes = page.locator('div:has([data-itt-real-save]) input[data-req]');
-      await expect(boxes.first()).toBeVisible({ timeout: 5000 });
-      const n = await boxes.count();
-      expect(n).toBeGreaterThanOrEqual(2);
-      await boxes.nth(0).check();
-      await boxes.nth(1).check();
-      await save.click();
-      await expect.poll(async () => getKey(page, key), { timeout: 10000 }).toBeTruthy();
-      const raw = await getKey(page, key);
-      expect(raw).toMatch(/multiStep|checks/);
-    });
-  }
+  test('2013 Facebook Home flop requires install then reviews', async ({ page }) => {
+    await page.goto('/years/2013/sites/facebook/home.html');
+    await page.evaluate(() => localStorage.removeItem('itt13-fb-home'));
+    await page.reload();
+    await wait2013Real(page);
+    await page.locator('[data-fb-home-flop]').click();
+    expect(await getKey(page, 'itt13-fb-home')).toBeFalsy();
+    await page.locator('[data-fb-home-install]').click();
+    await page.locator('[data-fb-home-flop]').click();
+    await expect.poll(async () => getKey(page, 'itt13-fb-home'), { timeout: 10000 }).toBeTruthy();
+  });
+
+  test('2013 Instagram Android / Wave funeral clone rooms are gone (lean)', async ({ page }) => {
+    const ig = await page.goto('/years/2013/sites/instagram/android.html');
+    expect(ig && ig.status()).toBe(404);
+    const wave = await page.goto('/years/2013/sites/wave/funeral.html');
+    expect(wave && wave.status()).toBe(404);
+    await page.goto('/years/2013/pages/home.html');
+    await expect(page.locator('body')).toContainText(/This year is lean/i);
+  });
 });

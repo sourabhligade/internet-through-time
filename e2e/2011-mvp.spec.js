@@ -47,13 +47,22 @@ test.describe('2011 MVP', () => {
 
   test('Facebook Timeline enable', async ({ page }) => {
     await page.goto('/years/2011/sites/facebook/timeline.html');
+    await page.evaluate(() => localStorage.removeItem('itt11-fb-timeline'));
+    await page.reload();
     await page.waitForSelector('[data-fb-timeline-enable]', { timeout: 20000 });
+    await page.locator('[data-fb-timeline-enable]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt11-fb-timeline'))).toBeFalsy();
+    await page.locator('[data-fb-tl-f8]').check();
+    await page.locator('[data-fb-tl-not-stories]').check();
     await page.locator('[data-fb-timeline-enable]').click();
     await expect(page.locator('[data-fb-timeline-status]')).toContainText(/Timeline/i, {
       timeout: 8000,
     });
     const raw = await page.evaluate(() => localStorage.getItem('itt11-fb-timeline'));
-    expect(raw).toBe('1');
+    expect(raw).not.toBe('1');
+    expect(raw).toMatch(/"year":"2011"/);
+    expect(raw).toMatch(/multiStep/);
   });
 
   test('Google+ Circles add', async ({ page }) => {
@@ -90,12 +99,14 @@ test.describe('2011 MVP', () => {
       }
     });
     await page.reload();
+    await page.locator('[data-ie9-os]').check();
+    await page.locator('[data-ie9-not-chrome]').check();
     await page.locator('[data-ie9-download]').click();
     await expect(page.locator('[data-ie9-status]')).toContainText(/installed|Download complete/i, {
       timeout: 5000,
     });
     const raw = await page.evaluate(() => localStorage.getItem('itt11-ie9'));
-    expect(raw).toBe('1');
+    expect(raw).toMatch(/installed|multiStep|real/i);
   });
 
   test('shell navigates to Spotify', async ({ page }) => {

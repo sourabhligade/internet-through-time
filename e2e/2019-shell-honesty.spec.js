@@ -51,8 +51,8 @@ test.describe('2019 shell honesty', () => {
 
   test('hub has 2019 card', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2019"]')).toBeVisible();
-    await expect(page.locator('body')).toContainText(/2019|1,630,322,579|4\.1B/i);
+    await expect(page.locator('a.year-card.available[href*="years/2019"]').first()).toBeVisible();
+    await expect(page.locator('body')).toContainText(/2019|1,630,322,579|4\.1B|3\.9B/i);
   });
 
   test('AirPods Pro not invent later Max as day-one', async ({ page }) => {

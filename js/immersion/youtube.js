@@ -176,7 +176,10 @@
         var st = doc.querySelector("[data-yt-upload-status]");
         /* REAL gate: empty title must not invent "Untitled" mock success */
         if (!title) {
-          if (st) st.innerHTML = "Enter a title to upload (no blank clips).";
+          if (st) {
+            st.innerHTML = "Enter a title to upload (no blank clips).";
+            st.classList.add("itt-ux-need-attention");
+          }
           return false;
         }
         var cur = load() || seed();

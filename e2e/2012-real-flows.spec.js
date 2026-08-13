@@ -3,7 +3,7 @@
  * 2012 real localStorage flows — no soft mocks
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, waitForImmersion, completeRealGate, twoStepClick, checkAllReq, killOverlays} = require('./helpers');
+const { enterYear, goInFrame, waitForImmersion } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -30,6 +30,8 @@ test.describe('2012 real flows (storage required)', () => {
     await page.goto('/years/2012/sites/instagram/acquired.html');
     await clearKeys(page, ['itt12-ig-owned']);
     await page.reload();
+    await page.locator('[data-ig-acq-date]').check();
+    await page.locator('[data-ig-acq-standalone]').check();
     await page.locator('[data-ig-acquired-ack]').click();
     await expect(page.locator('[data-ig-acquired-status]')).toContainText(/Saved|owned/i);
     const raw = await expectStorageTruthy(page, 'itt12-ig-owned');
@@ -72,6 +74,8 @@ test.describe('2012 real flows (storage required)', () => {
     await page.goto('/years/2012/sites/facebook/about.html');
     await clearKeys(page, ['itt12-fb-1b-ack']);
     await page.reload();
+    await page.locator('[data-fb-1b-oct]').check();
+    await page.locator('[data-fb-1b-like]').check();
     await page.locator('[data-fb-1b-ack]').click();
     await expectStorageTruthy(page, 'itt12-fb-1b-ack');
   });
@@ -94,6 +98,8 @@ test.describe('2012 real flows (storage required)', () => {
     await page.goto('/years/2012/sites/ipad/index.html');
     await clearKeys(page, ['itt12-ipad-history']);
     await page.reload();
+    await page.locator('[data-ipad-price]').check();
+    await page.locator('[data-ipad-not-retina]').check();
     await page.locator('[data-ipad-claim]').click();
     const raw = await expectStorageTruthy(page, 'itt12-ipad-history');
     expect(raw).toMatch(/mini|329|interested/i);
@@ -116,7 +122,10 @@ test.describe('2012 real flows (storage required)', () => {
       null,
       { timeout: 25000 }
     );
-    await completeRealGate(page, '[data-chrome-download]');
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|theater|Chrome/i, {
       timeout: 8000,
     });
@@ -133,6 +142,7 @@ test.describe('2012 real flows (storage required)', () => {
     await page.goto('/years/2012/sites/uber/index.html');
     await clearKeys(page, ['itt12-uber']);
     await page.reload();
+    await page.locator('[data-uber-not-auto]').check();
     await page.locator('#uber-x, [data-uber-kind="uberx"]').first().click();
     await expect(page.locator('[data-uber-status], #uber-st').first()).toContainText(
       /UberX|35%|itt12-uber/i
@@ -151,9 +161,38 @@ test.describe('2012 real flows (storage required)', () => {
       { timeout: 25000 }
     );
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await completeRealGate(page, '[data-snap-send]');
+    await page.locator('[data-snap-not-stories]').check();
+    await page.locator('[data-snap-send]').click();
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 5000 });
     expect(Number(await expectStorageTruthy(page, 'itt12-snap-count'))).toBeGreaterThan(0);
+  });
+
+  test('SOPA incomplete blocked; two facts write itt12-sopa-ack', async ({ page }) => {
+    await page.goto('/years/2012/sites/wikipedia/sopa-blackout.html');
+    await clearKeys(page, ['itt12-sopa-ack']);
+    await page.reload();
+    await page.locator('[data-sopa-ack]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-sopa-ack'))).toBeFalsy();
+    await page.locator('[data-sopa-fact="wiki"]').check();
+    await page.locator('[data-sopa-fact="bills"]').check();
+    await page.locator('[data-sopa-ack]').click();
+    await expectStorageTruthy(page, 'itt12-sopa-ack');
+  });
+
+  test('FB residual index REAL', async ({ page }) => {
+    await page.goto('/years/2012/sites/facebook/index.html');
+    await clearKeys(page, ['itt12-fb-index']);
+    await page.reload();
+    await page.locator('[data-itt-real-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-fb-index'))).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt12-fb-index')))
+      .toBeTruthy();
   });
 
   test('trail: home → IPO via shell', async ({ page }) => {

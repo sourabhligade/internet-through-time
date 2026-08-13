@@ -51,7 +51,7 @@ test.describe('2004 live flows', () => {
     await expect(page).toHaveURL(/profile\.html/, { timeout: 10000 });
     await page.goto('/years/2004/sites/facebook/friends.html');
     await page.waitForSelector('[data-fb-add]', { timeout: 15000 });
-    page.once('dialog', (d) => d.accept('Casey'));
+    await page.fill('[data-fb-add-name]', 'Casey');
     await page.locator('[data-fb-add]').click();
     await expect(page.locator('[data-fb-friends]')).toContainText('Casey', { timeout: 10000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt04-thefacebook'));

@@ -171,7 +171,7 @@ test.describe('2004 real flows — direct pages (no shell)', () => {
     await expect(page.locator('[data-fb-name]')).toContainText('Alex Undergrad');
     await expect(page.locator('[data-fb-status]')).toContainText('In section tomorrow');
 
-    page.once('dialog', (d) => d.accept('LabMate'));
+    await page.fill('[data-fb-add-name]', 'LabMate');
     await page.locator('[data-fb-add]').click();
     await expect(page.locator('[data-fb-friends]')).toContainText('LabMate', { timeout: 5000 });
 
@@ -335,7 +335,7 @@ test.describe('2004 real flows — year shell', () => {
 
     await goInFrame(page, 'sites/facebook/friends.html');
     await waitForImmersion(page, '2004');
-    page.once('dialog', (d) => d.accept('ShellFriend'));
+    await contentFrame(page).locator('[data-fb-add-name]').fill('ShellFriend');
     await contentFrame(page).locator('[data-fb-add]').click();
     await expect(contentFrame(page).locator('[data-fb-friends]')).toContainText('ShellFriend', {
       timeout: 10000,

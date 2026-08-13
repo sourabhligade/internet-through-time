@@ -48,6 +48,13 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/secondlife/index.html": "http://museum.local/years/2003/secondlife/",
+      "sites/skype/index.html": "http://museum.local/years/2003/skype/",
+      "sites/imageshack/index.html": "http://museum.local/years/2003/imageshack/",
+      "sites/delicious/index.html": "http://museum.local/years/2003/delicious/",
+
+      "sites/playable/index.html": "http://museum.local/years/2003/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2003/playable/game.html",
       "index.html": "http://museum.local/index.html",
 
       "sites/myspace/index.html": "http://www.myspace.com/",
@@ -266,8 +273,11 @@
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/index.html",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/index.html"
-    },
+      "sites/zombo/index.html": "http://www.zombo.com/index.html",
+          "sites/photobucket/about.html": "http://photobucket.com/about.html",
+      "sites/photobucket/codes.html": "http://photobucket.com/codes.html",
+      "sites/photobucket/index.html": "http://photobucket.com/",
+},
     titleMap: {
       "sites/netcenter/about.html": "About",
       "sites/y2k/about.html": "About",

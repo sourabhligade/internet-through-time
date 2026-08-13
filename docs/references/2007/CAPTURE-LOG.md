@@ -31,3 +31,4 @@ Optional-forever harvest cookbook + visit notes:
 - [`wayback-extracts/HARVEST-DENSIFY-QUEUE-2026-08-01.md`](wayback-extracts/HARVEST-DENSIFY-QUEUE-2026-08-01.md)
 
 **Board:** 2007 is **100% content**. Open CAPTURE rows above do **not** block ship — harvest only if explicitly polishing Layer C.
+| H | flashplayer | residual multipage REAL densify | educational RECON | 2026-08-07 |

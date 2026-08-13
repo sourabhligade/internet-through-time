@@ -7,7 +7,7 @@
  * No “mock-only” pass: empty storage after click fails.
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
+const { enterYear } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -73,6 +73,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.reload();
     await expect(page.locator('body')).toContainText(/\$499|Jan 27|iPad/i);
     await page.waitForSelector('[data-ipad-claim]', { timeout: 15000 });
+    await page.locator('[data-ipad-date]').check();
+    await page.locator('[data-ipad-not-os]').check();
     await page.locator('[data-ipad-claim]').click();
     await expect(page.locator('[data-ipad-status]')).toContainText(/itt10-ipad|Noted|Saved/i);
     await expectStorageTruthy(page, 'itt10-ipad-history');
@@ -86,7 +88,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-appstore-install]');
+    await page.locator('[data-appstore-install]').first().click();
     let raw = await expectStorageTruthy(page, 'itt10-apps');
     expect(raw).toMatch(/name|Koi|Monkey|Facebook|Twitter|Shazam|Pandora|id/i);
 
@@ -125,13 +127,9 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.goto('/years/2010/sites/facebook/places.html');
     await clearKeys(page, ['itt10-fb-places']);
     await page.reload();
-    const placeBtn = page.locator('[data-fb-place], #pl, [data-place-checkin]').first();
-    await expect(placeBtn).toBeVisible({ timeout: 15000 });
-    await placeBtn.click();
-    await expect(page.locator('[data-fb-places-status], #st, [data-fb-place-status]').first()).toContainText(
-      /Checked in|itt10-fb-places|Coffee|Airport|place/i,
-      { timeout: 8000 }
-    );
+    await page.waitForSelector('[data-fb-place]', { timeout: 20000 });
+    await page.locator('[data-fb-place]').first().click();
+    await expect(page.locator('[data-fb-places-status]')).toContainText(/Checked in|Coffee|Airport|itt10-fb-places/i);
     await expectStorageTruthy(page, 'itt10-fb-places');
   });
 
@@ -187,7 +185,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.goto('/years/2010/sites/android/market.html');
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-android-install]');
+    await page.locator('[data-android-install]').first().click();
     const raw = await page.evaluate(
       () => localStorage.getItem('itt10-android-apps') || localStorage.getItem('itt10-android')
     );
@@ -223,8 +221,10 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-uber']);
     await page.reload();
     await expect(page.locator('body')).toContainText(/black.car|San Francisco|not.*UberX/i);
+    await page.locator('[data-uber-not-x]').check();
+    await page.locator('[data-uber-sf]').check();
     await page.locator('#uber-req').click();
-    await expect(page.locator('#uber-st')).toContainText(/itt10-uber|black-car/i);
+    await expect(page.locator('#uber-st')).toContainText(/itt10-uber|black-car|Saved/i);
     const raw = await expectStorageTruthy(page, 'itt10-uber');
     expect(raw).toMatch(/San Francisco|black-car|requested/i);
   });
@@ -235,7 +235,9 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-wave']);
     await page.reload();
     await page.waitForSelector('[data-wave-invite]', { timeout: 15000 });
-    await completeRealGate(page, '[data-wave-invite]');
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
+    await page.locator('[data-wave-invite]').click();
     await expect(page.locator('[data-wave-status]')).toContainText(/itt10-wave|invite|2010/i);
     await expectStorageTruthy(page, 'itt10-wave');
   });
@@ -341,6 +343,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-whatsapp-seed']);
     await page.reload();
     await page.waitForSelector('[data-wa-seed]', { timeout: 15000 });
+    await page.locator('[data-wa-seed-date]').check();
+    await page.locator('[data-wa-not-sms]').check();
     await page.locator('[data-wa-seed]').click();
     await expectStorageTruthy(page, 'itt10-whatsapp-seed');
   });
@@ -350,12 +354,6 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-amazon-cart', 'itt10-cart']);
     await page.reload();
     await page.waitForSelector('[data-add-cart]', { timeout: 20000 });
-    await page.waitForFunction(() => {
-      try {
-        return !!(window.ITT && (ITT._immersionApi || ITT.ImmersionFeatures));
-      } catch (e) { return true; }
-    }, null, { timeout: 15000 }).catch(() => {});
-    await page.waitForTimeout(400);
     await page.locator('[data-add-cart]').first().click();
     const cart = await page.evaluate(() => {
       for (const k of ['itt10-amazon-cart', 'itt10-cart']) {
@@ -379,8 +377,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.waitForSelector('[data-wiki-save], textarea', { timeout: 20000 });
     const ta = page.locator('textarea').first();
     if (await ta.count()) await ta.fill('2010 museum wiki edit real');
-    // Inline script + shared.js may both stamp data-wiki-save — pick first visible control
-    await page.locator('[data-wiki-save]').first().click();
+    await page.locator('[data-wiki-save]').click();
     await expectStorageTruthy(page, 'itt10-wiki-edit');
   });
 
@@ -390,6 +387,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-fb-culture']);
     await page.reload();
     await page.waitForSelector('[data-fb-culture]', { timeout: 15000 });
+    await page.locator('[data-fb-film]').check();
+    await page.locator('[data-fb-no-reels]').check();
     await page.locator('[data-fb-culture]').click();
     const raw = await expectStorageTruthy(page, 'itt10-fb-culture');
     expect(raw).toMatch(/film|2010|true/i);
@@ -429,7 +428,10 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-chrome']);
     await page.reload();
     await page.waitForSelector('[data-chrome-download]', { timeout: 15000 });
-    await completeRealGate(page, '[data-chrome-download]');
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await expectStorageTruthy(page, 'itt10-chrome');
   });
 });

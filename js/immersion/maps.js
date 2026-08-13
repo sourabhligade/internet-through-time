@@ -174,8 +174,7 @@
             base +
             housingMapsLink();
         } else {
-          /* Always expose HousingMaps trail handoff (mashup era literacy) */
-          status.innerHTML = base + " · Feb 8 2005 Maps" + housingMapsLink();
+          status.textContent = base + " · Feb 8 2005 Maps";
         }
       }
       var canvas = doc.querySelector("[data-maps-canvas]");
@@ -301,10 +300,12 @@
         /* pin-ish pan shift for feedback */
         pan.x += 1;
         paint();
+        /* Do not pass status: paint() already wrote Local Search + HousingMaps HTML;
+           actionFeedback would wipe the housingmaps link with plain text. */
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-          /* flash only — do not pass status (would strip HousingMaps trail links) */
           ITT._immersionApi.actionFeedback("Maps search · “" + label + "” · this browser only", {
             doc: doc,
+            status: false,
             kind: "maps-search",
             flash: true
           });

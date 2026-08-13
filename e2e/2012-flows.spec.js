@@ -4,7 +4,7 @@
  * docs/2012-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md Part 4
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, killOverlays, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
+const { enterYear, killOverlays } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -112,9 +112,11 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await clearKeys(page, ['itt12-ig-android', 'itt12-ig-platform']);
     await page.reload();
     await page.waitForSelector('[data-ig-android-install]', { timeout: 20000 });
+    await page.locator('[data-ig-android-date]').check();
+    await page.locator('[data-ig-android-not-stories]').check();
     await page.locator('[data-ig-android-install]').click();
     await expect(page.locator('[data-ig-android-status]')).toContainText(/Installed|android/i);
-    expect(await expectStorageTruthy(page, 'itt12-ig-android')).toBe('1');
+    expect(await expectStorageTruthy(page, 'itt12-ig-android')).toMatch(/android|2012-04-03|multiStep/);
     expect(await expectStorageTruthy(page, 'itt12-ig-platform')).toMatch(/android/i);
   });
 
@@ -122,6 +124,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/instagram/acquired.html');
     await clearKeys(page, ['itt12-ig-owned']);
     await page.reload();
+    await page.locator('[data-ig-acq-date]').check();
+    await page.locator('[data-ig-acq-standalone]').check();
     await page.locator('[data-ig-acquired-ack]').click();
     await expect(page.locator('[data-ig-acquired-status]')).toContainText(/Saved/i);
     const raw = await expectStorageTruthy(page, 'itt12-ig-owned');
@@ -132,6 +136,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/facebook/ipo.html');
     await clearKeys(page, ['itt12-fb-ipo-ack']);
     await page.reload();
+    await page.locator('[data-ipo-fact="price38"]').check();
+    await page.locator('[data-ipo-fact="nasdaq"]').check();
     await page.locator('[data-fb-ipo-ack]').click();
     await expect(page.locator('[data-fb-ipo-status]')).toContainText(/38|Saved/i);
     const raw = await expectStorageTruthy(page, 'itt12-fb-ipo-ack');
@@ -142,6 +148,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/facebook/about.html');
     await clearKeys(page, ['itt12-fb-1b-ack']);
     await page.reload();
+    await page.locator('[data-fb-1b-oct]').check();
+    await page.locator('[data-fb-1b-like]').check();
     await page.locator('[data-fb-1b-ack]').click();
     await expectStorageTruthy(page, 'itt12-fb-1b-ack');
 
@@ -194,11 +202,15 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await clearKeys(page, ['itt12-iphone5', 'itt12-lightning']);
     await page.reload();
     await expect(page.locator('body')).toContainText(/iPhone 5|Lightning|September/i);
+    await page.locator('[data-iphone5-lightning]').check();
+    await page.locator('[data-iphone5-not-6]').check();
     await page.locator('[data-iphone5-claim]').click();
     const phone = await expectStorageTruthy(page, 'itt12-iphone5');
     expect(phone).toMatch(/iPhone 5|interested/i);
 
     await page.goto('/years/2012/sites/iphone/lightning.html');
+    await page.locator('[data-lightning-need="dock"]').check();
+    await page.locator('[data-lightning-need="cable"]').check();
     await page.locator('[data-lightning-ack]').click();
     const light = await expectStorageTruthy(page, 'itt12-lightning');
     expect(light).toMatch(/Lightning|30-pin/i);
@@ -224,6 +236,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/ipad/index.html');
     await clearKeys(page, ['itt12-ipad-history']);
     await page.reload();
+    await page.locator('[data-ipad-price]').check();
+    await page.locator('[data-ipad-not-retina]').check();
     await page.locator('[data-ipad-claim]').click();
     const raw = await expectStorageTruthy(page, 'itt12-ipad-history');
     expect(raw).toMatch(/mini|329|interested/i);
@@ -233,8 +247,10 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/windows8/index.html');
     await clearKeys(page, ['itt12-win8-tour']);
     await page.reload();
+    await page.locator('[data-win8-not-jan]').check();
     await page.locator('[data-win8-tile="Mail"]').click();
-    await expect(page.locator('[data-win8-status]')).toContainText(/Mail|Opened/i);
+    await page.locator('[data-win8-tile="Desktop"]').click();
+    await expect(page.locator('[data-win8-status]')).toContainText(/Mail|Opened|Desktop/i);
     const raw = await expectStorageTruthy(page, 'itt12-win8-tour');
     expect(raw).toMatch(/Mail/i);
   });
@@ -245,7 +261,10 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await clearKeyPattern(page, 'chrome');
     await page.reload();
     await waitImmersionYear(page, '2012');
-    await completeRealGate(page, '[data-chrome-download]');
+    await page.locator('[data-chrome-req]').nth(0).check();
+    await page.locator('[data-chrome-req]').nth(1).check();
+    await page.locator('[data-chrome-req]').nth(2).check();
+    await page.locator('[data-chrome-download]').click();
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|theater|Chrome|preferred/i, {
       timeout: 8000,
     });
@@ -257,6 +276,7 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/uber/index.html');
     await clearKeys(page, ['itt12-uber']);
     await page.reload();
+    await page.locator('[data-uber-not-auto]').check();
     await page.locator('#uber-x').click();
     await expect(page.locator('#uber-st, [data-uber-status]').first()).toContainText(/UberX|35%/i);
     const raw = await expectStorageTruthy(page, 'itt12-uber');
@@ -269,7 +289,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.reload();
     await waitImmersionYear(page, '2012');
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await completeRealGate(page, '[data-snap-send]');
+    await page.locator('[data-snap-not-stories]').check();
+    await page.locator('[data-snap-send]').click();
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 8000 });
     const raw = await expectStorageTruthy(page, 'itt12-snap-count');
     expect(Number(raw)).toBeGreaterThan(0);
@@ -282,6 +303,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await expect(page.locator('body')).toContainText(/1 billion|billion/i);
     await clearKeys(page, ['itt12-yt-gangnam']);
     await page.reload();
+    await page.locator('[data-yt-gangnam-date]').check();
+    await page.locator('[data-yt-gangnam-no-cdn]').check();
     await page.locator('[data-yt-gangnam-ack]').click();
     const raw = await expectStorageTruthy(page, 'itt12-yt-gangnam');
     expect(raw).toMatch(/Gangnam|1B/i);
@@ -317,6 +340,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/reddit/ama.html');
     await clearKeys(page, ['itt12-reddit-ama']);
     await page.reload();
+    await page.locator('[data-ama-date]').check();
+    await page.locator('[data-ama-not-app]').check();
     await page.locator('[data-reddit-ama-ack]').click();
     const ama = await expectStorageTruthy(page, 'itt12-reddit-ama');
     expect(ama).toMatch(/obama|2012|IAmA/i);
@@ -327,6 +352,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await expect(page.locator('body')).toContainText(/SOPA|PIPA|blackout/i);
     await clearKeys(page, ['itt12-sopa-ack']);
     await page.reload();
+    await page.locator('[data-sopa-fact="wiki"]').check();
+    await page.locator('[data-sopa-fact="bills"]').check();
     await page.locator('[data-sopa-ack]').click();
     const raw = await expectStorageTruthy(page, 'itt12-sopa-ack');
     expect(raw).toMatch(/wikipedia-blackout|SOPA|2012-01-18/i);

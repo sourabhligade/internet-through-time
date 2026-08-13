@@ -110,7 +110,7 @@
             "&url=" +
             encodeURIComponent(photoUrl) +
             '">Digg this</a>';
-          /* flash only — passing st would strip del.icio.us trail links via textContent */
+          /* Flash only — do not stomp status HTML (delicious handoff link). */
           ittFeedback("Uploaded: " + title, null);
         }
         form.reset();

@@ -12,8 +12,8 @@
 |----------|--------|
 | `chrome/btn-*.gif` + throbber | **`[wired-recon]`** — shell uses `period/1994/chrome/` |
 | Yahoo `logo.gif` / `logo-wa.gif` | **`[wa-wired]`** — `sites/yahoo/index.html` points at period pack |
-| FishCam `frame-0..3` + `data-fish-frame` | **`[wired-recon]`** |
-| CSotD `data-csotd*` | **`[wired]`** |
+| FishCam `frame-0..3` + `data-fish-frame` | **`[wired-recon]`** · timer cycle 2026-08-08 · reduce-motion still |
+| CSotD `data-csotd*` | **`[wired]`** · guestbook stamp (click ≠ write) 2026-08-08 |
 | WH `building-map.gif` + imagemap | **`[wired-recon]`** |
 | True evolt NN1 OEM toolbar | **`[open-optional]`** forever |
 | NARA photo WH map / real FishCam stills | **`[open-optional]`** |

@@ -12,8 +12,8 @@ async function twoStepClick(page, selector) {
 test.describe('2000 MVP — smile · Napster · Pets · crash', () => {
   test('hub opens 2000', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card[data-year="2000"], a[href*="years/2000"]')).toBeVisible();
-    await page.click('a[href="years/2000/"], a[href*="years/2000/"]');
+    await expect(page.locator('a.year-card.available[data-year=\"2000\"]').first()).toBeVisible();
+    await page.locator('a.year-card.available[data-year="2000"]').first().click();
     await expect(page).toHaveURL(/2000/);
   });
 

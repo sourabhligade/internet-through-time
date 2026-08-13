@@ -71,3 +71,9 @@
 | Product chips on Starting Points | 2004–2010 |
 | Period CSS feel tokens | all years 1994–2013 |
 
+
+| Status | Product | Note | Method | Date |
+|--------|---------|------|--------|------|
+| H | imgur | residual multipage REAL densify | educational RECON | 2026-08-07 |
+| H | cablegate | residual multipage REAL densify | educational RECON | 2026-08-07 |
+| H | groupon | residual multipage REAL densify | educational RECON | 2026-08-07 |

@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every year 1994–2014.
+ * REAL-flow system gate — every year 1994–2018.
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -40,6 +40,12 @@ const YEARS = [
   '2012',
   '2013',
   '2014',
+  '2015',
+  '2016',
+  '2017',
+  '2018',
+  '2019',
+  '2020',
 ];
 
 /** @param {string} year */
@@ -138,8 +144,8 @@ for (const year of YEARS) {
       await page.waitForTimeout(250);
       expect(await getKey(page, key), `${year}: one check must not write`).toBeFalsy();
 
-      // Complete
-      await boxes.nth(1).check();
+      // Complete — tick every remaining required box (2020 About is min=3)
+      for (let i = 1; i < n; i++) await boxes.nth(i).check();
       await btn.click();
       await expect
         .poll(async () => getKey(page, key), {
@@ -234,21 +240,65 @@ test.describe('REAL system product samples', () => {
       }
     });
     await page.reload();
-    await page.waitForSelector('[data-itt-real-save]', { timeout: 20000 });
-    await page
-      .waitForFunction(() => !!document.querySelector('[data-itt-real-save][data-itt-real-bound="1"]'), null, {
-        timeout: 10000,
-      })
-      .catch(() => {});
-    await page.locator('[data-itt-real-save]').click();
+    await page.waitForSelector('[data-beacon-ack]', { timeout: 20000 });
+    await page.locator('[data-beacon-ack]').click();
     await page.waitForTimeout(200);
     expect(await page.evaluate(() => localStorage.getItem('itt07-beacon-ack'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
+    await page.locator('[data-beacon-buy="ebay"]').click();
+    await page.locator('[data-beacon-ack]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''))
-      .toBeTruthy();
+      .toMatch(/ebay|multiStep|beacon/i);
+  });
+
+  test('1999 AIM empty sign-on blocked; SN writes itt99-aim', async ({ page }) => {
+    await page.goto('/years/1999/sites/aim/index.html');
+    await page.evaluate(() => localStorage.removeItem('itt99-aim'));
+    await page.reload();
+    await page.locator('form[data-aim-signon] button[type="submit"]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt99-aim'))).toBeFalsy();
+    await page.fill('#ott-field', 'realflow99');
+    await page.locator('form[data-aim-signon] button[type="submit"]').click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt99-aim'))).toBeTruthy();
+  });
+
+  test('2001 wiki preview no write; save writes itt01-wiki-pages', async ({ page }) => {
+    await page.goto('/years/2001/sites/wikipedia/edit.html');
+    await page.evaluate(() => localStorage.removeItem('itt01-wiki-pages'));
+    await page.reload();
+    await page.locator('[data-wiki-preview]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt01-wiki-pages'))).toBeFalsy();
+    await page.fill("textarea[name='text']", "'''REAL wiki residual'''");
+    await page.locator('[data-wiki-save]').click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt01-wiki-pages'))).toBeTruthy();
+  });
+
+  test('2008 GitHub empty issue blocked; titled+body writes', async ({ page }) => {
+    await page.goto('/years/2008/sites/github/issue.html');
+    await page.evaluate(() => {
+      Object.keys(localStorage)
+        .filter((k) => k.startsWith('itt08-github'))
+        .forEach((k) => localStorage.removeItem(k));
+    });
+    await page.reload();
+    await page.locator("form[data-gh-issue-form] button[type='submit']").click();
+    expect(await page.evaluate(() => localStorage.getItem('itt08-github'))).toBeFalsy();
+    await page.fill("[name='title']", "Cannot center logo residual");
+    await page.fill("[name='body']", "Steps to reproduce residual");
+    await page.locator("form[data-gh-issue-form] button[type='submit']").click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt08-github'))).toBeTruthy();
+  });
+
+  test('2012 SoundCloud comment without play blocked', async ({ page }) => {
+    await page.goto('/years/2012/sites/soundcloud/index.html');
+    await page.evaluate(() => localStorage.removeItem('itt12-soundcloud'));
+    await page.reload();
+    await page.locator('[data-sc-comment-btn]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt12-soundcloud'))).toBeFalsy();
+    await page.locator('[data-sc-play]').click();
+    await page.fill('[data-sc-text]', 'real waveform residual');
+    await page.locator('[data-sc-comment-btn]').click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-soundcloud'))).toMatch(/real waveform/);
   });
 
   test('2013 Xbox incomplete blocked', async ({ page }) => {

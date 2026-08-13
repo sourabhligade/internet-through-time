@@ -46,6 +46,13 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/classmates/index.html": "http://museum.local/years/1995/classmates/",
+      "sites/match/index.html": "http://museum.local/years/1995/match/",
+      "sites/tripod/index.html": "http://museum.local/years/1995/tripod/",
+      "sites/pathfinder/index.html": "http://museum.local/years/1995/pathfinder/",
+
+      "sites/playable/index.html": "http://museum.local/years/1995/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1995/playable/game.html",
       "sites/hotwired/index.html": "http://www.hotwired.com/",
       "sites/amazon/eyes.html": "http://www.amazon.com/eyes",
       "sites/microsoft/index.html": "http://www.microsoft.com/",
@@ -180,8 +187,9 @@
       "sites/geocities/SiliconValley/42/index.html": "http://www.geocities.com/SiliconValley/42/",
       "sites/altavista/index.html": "http://www.altavista.digital.com/",
       "sites/altavista/search.html": "http://www.altavista.digital.com/cgi-bin/query",
-      "sites/cnn/index.html": "http://www.cnn.com/"
-    },
+      "sites/cnn/index.html": "http://www.cnn.com/",
+          "sites/amazon/ssl-checkout.html": "http://museum.local/years/1995/amazon/ssl-checkout.html",
+},
     titleMap: {
       "sites/yahoo/Reference/Dictionaries/index.html": "Index",
       "sites/yahoo/Reference/Phone_Numbers/index.html": "Index",

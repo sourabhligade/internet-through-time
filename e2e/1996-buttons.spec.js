@@ -37,7 +37,11 @@ test.describe('1996 chrome buttons + dirbar (live, not mocks)', () => {
     await page.locator('[data-start-cmd="help"]').click();
     await page.waitForTimeout(400);
     expect(await page.locator('#content').getAttribute('src')).toMatch(/about\.html/);
-    await page.locator('#btn-start').click();
+    await page.evaluate(() => {
+      document.getElementById('modal-backdrop')?.classList.add('hidden');
+      document.querySelectorAll('.dialog').forEach((d) => d.classList.add('hidden'));
+    });
+    await page.locator('#btn-start').click({ force: true });
     await page.locator('[data-start-cmd="programs"]').click();
     await page.waitForTimeout(400);
     expect(await page.locator('#content').getAttribute('src')).toMatch(/home\.html/);

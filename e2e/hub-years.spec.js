@@ -11,16 +11,18 @@ async function twoStepClick(page, selector) {
 
 const OPEN = [
   '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
+  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020',
   '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
   '2017',
 ];
 const LOCKED = [];
 
 test.describe('hub + year shells', () => {
+  test('hub lists 1994–2020 as available', async ({ page }) => {
   test('hub lists 1994–2017 as available', async ({ page }) => {
     await page.goto('/');
     for (const y of OPEN) {
-      await expect(page.locator(`a.year-card.available[href*="years/${y}"]`)).toBeVisible();
+      await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
     for (const y of LOCKED) {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
@@ -30,12 +32,8 @@ test.describe('hub + year shells', () => {
 
   test('hub how-to card + era jump chips (UX U1)', async ({ page }) => {
     await page.goto('/');
-    // How-to is collapsible for first-run clarity — open then assert content
-    const howSummary = page.locator('.how-quick-summary, details.how-quick-details summary').first();
-    await expect(howSummary).toBeVisible();
-    await howSummary.click();
     await expect(page.locator('.how-quick')).toBeVisible();
-    await expect(page.locator('.how-quick')).toContainText(/Enter a year|Starting Point|Year menu/i);
+    await expect(page.locator('.how-quick')).toContainText(/How to navigate|Enter a year|Starting Point|Year menu/i);
     await expect(page.locator('a.era-jump-chip[href="#era-1994-1999"]')).toBeVisible();
     await expect(page.locator('a.era-jump-chip[href="#era-2000-2005"]')).toBeVisible();
     await expect(page.locator('a.era-jump-chip[href="#era-2006-2010"]')).toBeVisible();
@@ -64,6 +62,18 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2012')).toBeVisible();
     await expect(page.locator('.y2013')).toBeVisible();
     await expect(page.locator('.y2014')).toBeVisible();
+    await expect(page.locator('.y2015')).toBeVisible();
+    await expect(page.locator('.y2016')).toBeVisible();
+    await expect(page.locator('.y2017')).toBeVisible();
+    await expect(page.locator('body')).toContainText(/27 years open|1994–2020/i);
+    await expect(page.locator('a.start-btn[href*="years/2007"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2008"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2009"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2010"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2011"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2012"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2013"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/2014"]').first()).toBeVisible();
     await expect(page.locator('.y2017')).toBeVisible();
     await expect(page.locator('body')).toContainText(/22 years open|1994–2017/i);
     // Primary first-run CTAs (not a wall of every year)

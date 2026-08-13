@@ -238,7 +238,12 @@ body {
 /* Museum UX helpers (shell content pages) */
 .itt-nav-slot {
   min-height: 28px;
-  margin: -8px -8px 8px -8px;
+  /* Edge-to-edge navy without horizontal overflow in narrow iframes */
+  margin: 0 0 8px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 body > .itt-nav-slot:empty {
   /* reserve height before JS injects nav — reduces layout jump */

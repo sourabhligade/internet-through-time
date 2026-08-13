@@ -1,0 +1,54 @@
+LEAN-INVENTORY 2011 — 2026-08-10
+P0 HTML: 2011=378
+KEEP files: 46
+KEEP folders: airbnb android chrome duckduckgo facebook googleplus ie9 instagram ipad iphone netflix path playable snapchat spotify turntable twitch
+KILL folders: adsense altavista amazon apple appstore askjeeves aws bing blogdex blogger bloglines bowienet cnn daypop delicious digg dmoz docs dropbox ebay encarta excite farmville feedburner firefox flickr foursquare friendconnect friendfeed friendster gamespot geocities gmail gnutella google googlenews googlevideo hampsterdance hotbot housingmaps hulu icq ie8 infoseek isp itunes kazaa kickstarter lastfm linkedin loudcloud macromedia maps mashable memeorandum metafilter microsoft milliondollar moreover movabletype mozilla mtv myspace napster netcenter netscape paypal pets phoenix pinterest programmableweb reader reddit skype slashdot startupfailures steam techcrunch technorati time-you tumblr twitter uber ubercab wave wayback web20conference whatsapp wikipedia windows7 wired wordpress y2k yahoo youtube youvegotmail zombo
+BACKUP: /tmp/itt-2011-clone-backup-20260811
+
+=== KEEP files ===
+index.html
+pages/about.html
+pages/cool.html
+pages/error/404.html
+pages/error/unreachable.html
+pages/home.html
+pages/map.html
+pages/whats-new.html
+sites/airbnb/index.html
+sites/airbnb/listing.html
+sites/airbnb/request.html
+sites/android/index.html
+sites/chrome/about.html
+sites/chrome/index.html
+sites/duckduckgo/index.html
+sites/facebook/feed-about.html
+sites/facebook/feed.html
+sites/facebook/index.html
+sites/facebook/timeline.html
+sites/googleplus/about.html
+sites/googleplus/circles.html
+sites/googleplus/hangouts.html
+sites/googleplus/index.html
+sites/ie9/about.html
+sites/ie9/download.html
+sites/ie9/index.html
+sites/instagram/index.html
+sites/ipad/index.html
+sites/ipad/prices.html
+sites/iphone/icloud.html
+sites/iphone/index.html
+sites/iphone/ios5.html
+sites/iphone/siri.html
+sites/netflix/index.html
+sites/netflix/pricing-2011.html
+sites/netflix/qwikster.html
+sites/path/index.html
+sites/playable/game.html
+sites/playable/index.html
+sites/snapchat/index.html
+sites/spotify/about.html
+sites/spotify/index.html
+sites/spotify/plans.html
+sites/spotify/player.html
+sites/turntable/index.html
+sites/twitch/index.html

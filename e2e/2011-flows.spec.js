@@ -144,11 +144,17 @@ test.describe('2011 flows A–T (real only)', () => {
     await page.reload();
     await page.waitForSelector('[data-fb-timeline-enable]', { timeout: 20000 });
     await page.locator('[data-fb-timeline-enable]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt11-fb-timeline'))).toBeFalsy();
+    await page.locator('[data-fb-tl-f8]').check();
+    await page.locator('[data-fb-tl-not-stories]').check();
+    await page.locator('[data-fb-timeline-enable]').click();
     await expect(page.locator('[data-fb-timeline-status]')).toContainText(/Timeline/i, {
       timeout: 8000,
     });
     const raw = await expectStorageTruthy(page, 'itt11-fb-timeline');
-    expect(raw).toBe('1');
+    expect(raw).not.toBe('1');
+    expect(raw).toMatch(/"year":"2011"/);
   });
 
   test('G feed mode Top Stories / Most Recent', async ({ page }) => {
@@ -256,6 +262,8 @@ test.describe('2011 flows A–T (real only)', () => {
     await page.reload();
     await expect(page.locator('body')).toContainText(/iPad 2|iPad|\$499|Smart Cover|Mar/i);
     await page.waitForSelector('[data-ipad-claim]', { timeout: 15000 });
+    await page.locator('[data-ipad-date]').check();
+    await page.locator('[data-ipad-not-os]').check();
     await page.locator('[data-ipad-claim]').click();
     await expect(page.locator('[data-ipad-status]')).toContainText(/itt11-ipad|Noted|Saved/i);
     await expectStorageTruthy(page, 'itt11-ipad-history');
@@ -281,12 +289,14 @@ test.describe('2011 flows A–T (real only)', () => {
     await clearKeys(page, ['itt11-ie9']);
     await page.reload();
     await page.waitForSelector('[data-ie9-download]', { timeout: 15000 });
+    await page.locator('[data-ie9-os]').check();
+    await page.locator('[data-ie9-not-chrome]').check();
     await page.locator('[data-ie9-download]').click();
     await expect(page.locator('[data-ie9-status]')).toContainText(/installed|Download complete/i, {
       timeout: 5000,
     });
     const raw = await expectStorageTruthy(page, 'itt11-ie9');
-    expect(raw).toBe('1');
+    expect(raw).toMatch(/installed|multiStep|real/i);
   });
 
   test('R Instagram iOS-only + share', async ({ page }) => {

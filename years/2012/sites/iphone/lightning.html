@@ -27,8 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btn) btn.addEventListener("click", function () {
     var needs = {};
     var boxes = document.querySelectorAll("[data-lightning-need]");
+    var n = 0;
     for (var i = 0; i < boxes.length; i++) {
       needs[boxes[i].getAttribute("data-lightning-need")] = !!boxes[i].checked;
+      if (boxes[i].checked) n++;
+    }
+    if (n < 2) {
+      if (st) st.textContent = "Check at least 2 cable/dock facts first.";
+      return;
     }
     try {
       localStorage.setItem(KEY, JSON.stringify({

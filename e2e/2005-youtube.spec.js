@@ -60,6 +60,20 @@ test.describe('2005 YouTube hard suite', () => {
     expect(raw || '').toMatch(/Me at the zoo/);
   });
 
+  test('empty upload title writes nothing and shows status', async ({ page }) => {
+    await goInFrame(page, 'sites/youtube/upload.html');
+    await waitForImmersion(page, '2005');
+    const frame = contentFrame(page);
+    const before = await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'));
+    await frame.locator('[name="title"]').fill('');
+    await frame.locator('[data-yt-upload] button[type="submit"]').click();
+    await expect(frame.locator('[data-yt-upload-status]')).toContainText(/title|blank|Enter/i, {
+      timeout: 8000,
+    });
+    const after = await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'));
+    expect(after).toBe(before);
+  });
+
   test('upload with description persists in itt05-yt-uploads', async ({ page }) => {
     const title = 'Desc clip ' + Date.now();
     const desc = 'shot on a 2005 digicam';

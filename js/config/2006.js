@@ -48,6 +48,13 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/meebo/index.html": "http://museum.local/years/2006/meebo/",
+      "sites/huffpost/index.html": "http://museum.local/years/2006/huffpost/",
+      "sites/wikileaks/index.html": "http://museum.local/years/2006/wikileaks/",
+      "sites/youtubeembed/index.html": "http://museum.local/years/2006/youtubeembed/",
+
+      "sites/playable/index.html": "http://museum.local/years/2006/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2006/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2006/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
@@ -336,8 +343,9 @@
       "sites/programmableweb/about.html": "http://www.programmableweb.com/about",
       "sites/programmableweb/index.html": "http://www.programmableweb.com/",
       "sites/googlevideo/about.html": "http://video.google.com/about.html",
-      "sites/googlevideo/index.html": "http://video.google.com/"
-    },
+      "sites/googlevideo/index.html": "http://video.google.com/",
+          "sites/time-you/literacy.html": "http://www.time.com/time/magazine/article/literacy.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",

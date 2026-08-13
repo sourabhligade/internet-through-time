@@ -3,7 +3,8 @@
  * Part of SRP split under js/browser/ (see docs/SRP-SPLIT-PLAN.md)
  *
  * Usage: ITT.Browser.create(ITT.configs["1995"]);
- * Depends on: js/lib/util.js + browser/navigate.js (+ BrowserConnect / BrowserLoadTheater)
+ * Depends on: js/lib/util.js + browser/navigate.js + browser/chrome-ui.js
+ *   (+ BrowserConnect / BrowserLoadTheater)
  * Config shape: js/config/<year>.js
  */
 (function (global) {
@@ -17,6 +18,9 @@
   var Nav = ITT.BrowserNavigate;
   if (!Nav) {
     throw new Error("ITT.BrowserNavigate missing — load js/browser/navigate.js before browser/create.js");
+  }
+  if (!ITT.BrowserChrome || typeof ITT.BrowserChrome.attach !== "function") {
+    throw new Error("ITT.BrowserChrome missing — load js/browser/chrome-ui.js before browser/create.js");
   }
 
   /**
@@ -105,9 +109,6 @@
     var statusTimers = [];
     var imageRevealTimers = [];
     var loadStartedAt = 0;
-    var findLastQuery = "";
-    var findLastIndex = 0;
-    var clipboardText = "";
     var maximized = !!config.maximizedDefault;
     var lastAttemptedUrl = "";
     var ignoreIframeLoad = false;
@@ -155,6 +156,30 @@
     if (!iframe || !browserEl) {
       console.error("ITT.Browser: required chrome DOM missing");
       return null;
+    }
+
+    /* Chrome UI is attached after navigate exists. These stubs close over Chrome. */
+    var Chrome = null;
+    function renderBookmarkMenus() {
+      if (Chrome && Chrome.renderBookmarkMenus) Chrome.renderBookmarkMenus();
+    }
+    function renderGoHistory() {
+      if (Chrome && Chrome.renderGoHistory) Chrome.renderGoHistory();
+    }
+    function closeAllDialogs() {
+      if (Chrome && Chrome.closeAllDialogs) Chrome.closeAllDialogs();
+    }
+    function ensureBackdropSane() {
+      if (Chrome && Chrome.ensureBackdropSane) Chrome.ensureBackdropSane();
+    }
+    function showAlert(title, msg) {
+      if (Chrome && Chrome.showAlert) Chrome.showAlert(title, msg);
+    }
+    function closeMenus() {
+      if (Chrome && Chrome.closeMenus) Chrome.closeMenus();
+    }
+    function runCommand(cmd, el) {
+      if (Chrome && Chrome.runCommand) Chrome.runCommand(cmd, el);
     }
 
     /* ============================================================
@@ -887,784 +912,86 @@
            progressive-image drip (that used to keep .loading + dead links). */
         setLoading(false);
         applyProgressiveImages(doc);
+        /* Year games (Box Shift, etc.) need iframe focus for Arrow/WASD */
+        try {
+          var clean = path.split("?")[0];
+          if (/playable\/game\.html$/i.test(clean) || doc.querySelector("[data-year-game]")) {
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+              } catch (eF) { /* */ }
+            }, 80);
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+                var gh = doc.querySelector("[data-year-game]");
+                if (gh && gh.focus) gh.focus();
+              } catch (eF2) { /* */ }
+            }, 500);
+          }
+        } catch (eGameFocus) { /* */ }
       } catch (err) {
         finishDocumentLoad(0);
       }
     });
 
     /* ============================================================
-     * Dialogs
+     * Chrome UI (dialogs / menus / prefs / bookmarks) — js/browser/chrome-ui.js
      * ============================================================ */
-    function openDialog(id) {
-      closeMenus();
-      if (backdrop) {
-        backdrop.classList.remove("hidden");
-        try {
-          backdrop.style.display = "";
-          backdrop.style.pointerEvents = "";
-        } catch (eOp) { /* */ }
-      }
-      var el = document.getElementById(id);
-      if (el) {
-        el.classList.remove("hidden");
-        var focusable = el.querySelector("input:not([type=checkbox]):not([type=number]), textarea, select, button");
-        if (focusable) {
-          window.setTimeout(function () {
-            focusable.focus();
-            if (focusable.select) focusable.select();
-          }, 30);
-        }
-      }
-    }
+    Chrome = ITT.BrowserChrome.attach({
+      year: YEAR,
+      titleSuffix: TITLE_SUFFIX,
+      cmdPaths: CMD_PATHS,
+      getPrefs: function () { return prefs; },
+      savePrefs: savePrefs,
+      getImagesOn: function () { return imagesOn; },
+      setImagesOn: function (v) { imagesOn = !!v; },
+      getBookmarks: function () { return bookmarks; },
+      saveBookmarks: saveBookmarks,
+      currentPath: currentPath,
+      displayTitle: displayTitle,
+      displayUrl: displayUrl,
+      navigate: navigate,
+      goBack: goBack,
+      goForward: goForward,
+      goHome: goHome,
+      reload: reload,
+      stopLoad: stopLoad,
+      openLocationString: openLocationString,
+      wireDocument: wireDocument,
+      updateNavButtons: updateNavButtons,
+      getHistoryStack: function () { return historyStack; },
+      getHistoryIndex: function () { return historyIndex; },
+      setHistoryIndex: function (i) { historyIndex = i; },
+      iframe: iframe,
+      locationInput: locationInput,
+      windowTitle: windowTitle,
+      backdrop: backdrop,
+      browserEl: browserEl,
+      setStatus: setStatus,
+      escapeHtml: U.escapeHtml,
+      perf: PERF
+    });
+    Chrome.wire();
 
-    function anyDialogOpen() {
-      var dialogs = document.querySelectorAll(".dialog");
-      for (var i = 0; i < dialogs.length; i++) {
-        if (!dialogs[i].classList.contains("hidden")) return true;
-      }
-      return false;
-    }
-
-    function closeDialog(id) {
-      var el = document.getElementById(id);
-      if (el) el.classList.add("hidden");
-      if (!anyDialogOpen() && backdrop) backdrop.classList.add("hidden");
-    }
-
-    function closeAllDialogs() {
-      var dialogs = document.querySelectorAll(".dialog");
-      for (var i = 0; i < dialogs.length; i++) dialogs[i].classList.add("hidden");
-      if (backdrop) {
-        backdrop.classList.add("hidden");
-        try {
-          backdrop.style.display = "none";
-          backdrop.style.pointerEvents = "none";
-        } catch (eBd) { /* */ }
-      }
-    }
-
-    /** Drop orphan backdrop (no open dialog) — was blocking dirbar/buttons */
-    function ensureBackdropSane() {
-      try {
-        if (backdrop && !anyDialogOpen()) {
-          backdrop.classList.add("hidden");
-          try {
-            backdrop.style.display = "none";
-            backdrop.style.pointerEvents = "none";
-          } catch (eSt) { /* */ }
-        } else if (backdrop && anyDialogOpen()) {
-          try {
-            backdrop.style.display = "";
-            backdrop.style.pointerEvents = "";
-          } catch (eSt2) { /* */ }
-        }
-      } catch (eBg) { /* */ }
-    }
-
-    function showAlert(title, msg) {
-      var t = document.getElementById("dlg-alert-title");
-      var m = document.getElementById("dlg-alert-msg");
-      if (t) t.textContent = title || "Netscape";
-      if (m) m.textContent = msg || "";
-      openDialog("dlg-alert");
-    }
-
-    function doFind(again) {
-      var input = document.getElementById("dlg-find-input");
-      var caseEl = document.getElementById("dlg-find-case");
-      var q = again ? findLastQuery : (input && input.value) || "";
-      if (!q) return;
-      findLastQuery = q;
-      var matchCase = caseEl && caseEl.checked;
-      try {
-        var doc = iframe.contentDocument;
-        var body = doc.body;
-        var text = body.innerText || body.textContent || "";
-        var hay = matchCase ? text : text.toLowerCase();
-        var needle = matchCase ? q : q.toLowerCase();
-        var start = again ? findLastIndex + 1 : 0;
-        var idx = hay.indexOf(needle, start);
-        if (idx === -1 && start > 0) idx = hay.indexOf(needle, 0);
-        if (idx === -1) {
-          showAlert("Find", "Search string not found:\n" + q);
-          return;
-        }
-        findLastIndex = idx;
-        // best-effort highlight via selection
-        if (window.find) {
-          iframe.contentWindow.focus();
-          iframe.contentWindow.find(q, matchCase, false, true, false, false, false);
-        }
-        setStatus("Found: " + q);
-      } catch (e) {
-        showAlert("Find", "Could not search this document.");
-      }
-    }
-
-    function refreshBmDialog() {
-      var list = document.getElementById("dlg-bm-list");
-      if (!list) return;
-      list.innerHTML = "";
-      for (var i = 0; i < bookmarks.length; i++) {
-        var opt = document.createElement("option");
-        opt.value = bookmarks[i].path;
-        opt.textContent = bookmarks[i].title;
-        list.appendChild(opt);
-      }
-    }
-
-    function openMailDialog(to, subject) {
-      var toEl = document.getElementById("dlg-mail-to");
-      var subEl = document.getElementById("dlg-mail-subj");
-      var bodyEl = document.getElementById("dlg-mail-body");
-      if (toEl) toEl.value = to || "";
-      if (subEl) {
-        subEl.value = subject || (windowTitle
-          ? windowTitle.textContent.replace(/ - Netscape$/, "")
-          : "");
-      }
-      if (bodyEl) {
-        bodyEl.value = "\n\n--\nSent from Netscape Navigator (" + YEAR + " exhibit)";
-      }
-      openDialog("dlg-mail");
-    }
-
-    function closeMenus() {
-      var open = document.querySelectorAll(".menu-root.open");
-      for (var i = 0; i < open.length; i++) open[i].classList.remove("open");
-    }
-
-    function openMenu(root) {
-      closeMenus();
-      if (root) root.classList.add("open");
-    }
-
-    function renderGoHistory() {
-      var dd = document.getElementById("menu-go-dropdown");
-      if (!dd) return;
-      var old = dd.querySelectorAll("[data-hist]");
-      for (var i = 0; i < old.length; i++) old[i].remove();
-      var start = Math.max(0, historyStack.length - 10);
-      for (var h = historyStack.length - 1; h >= start; h--) {
-        var path = historyStack[h];
-        var b = document.createElement("button");
-        b.type = "button";
-        b.setAttribute("role", "menuitem");
-        b.setAttribute("data-hist", "1");
-        b.setAttribute("data-cmd", "go-hist");
-        b.setAttribute("data-path", path);
-        b.setAttribute("data-idx", String(h));
-        var label = displayTitle(path).replace(new RegExp(TITLE_SUFFIX.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$"), "");
-        label = (h === historyIndex ? "✓ " : "   ") + label;
-        b.textContent = label;
-        dd.appendChild(b);
-      }
-    }
-
-    function renderBookmarkMenus() {
-      var dd = document.getElementById("menu-bm-dropdown");
-      if (!dd) return;
-      var old = dd.querySelectorAll("[data-bm]");
-      for (var i = 0; i < old.length; i++) old[i].remove();
-      for (var b = 0; b < bookmarks.length; b++) {
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.setAttribute("role", "menuitem");
-        btn.setAttribute("data-bm", "1");
-        btn.setAttribute("data-cmd", "bm-open");
-        btn.setAttribute("data-path", bookmarks[b].path);
-        btn.textContent = bookmarks[b].title;
-        dd.appendChild(btn);
-      }
-    }
-
-    function addBookmark() {
-      var path = currentPath().split("?")[0];
-      var title = displayTitle(path).replace(new RegExp(TITLE_SUFFIX.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$"), "");
-      for (var i = 0; i < bookmarks.length; i++) {
-        if (bookmarks[i].path === path) {
-          showAlert("Bookmarks", "Already bookmarked:\n" + title);
-          return;
-        }
-      }
-      bookmarks.push({ title: title, path: path });
-      saveBookmarks();
-      setStatus("Bookmark added: " + title);
-      showAlert("Bookmarks", "Added to bookmarks:\n" + title + "\n" + displayUrl(path));
-    }
-
-    /* ============================================================
-     * Commands
-     * ============================================================ */
-    function runCommand(cmd, el) {
-      switch (cmd) {
-        case "file-new":
-          window.open(window.location.href, "_blank");
-          break;
-        case "file-open-file":
-          var foi = document.getElementById("file-open-input");
-          if (foi) foi.click();
-          break;
-        case "file-open-loc":
-          var oli = document.getElementById("dlg-ol-input");
-          if (oli && locationInput) oli.value = locationInput.value;
-          openDialog("dlg-open-location");
-          break;
-        case "file-save":
-          saveDocumentSource();
-          break;
-        case "file-mail":
-          openMailDialog("", "");
-          break;
-        case "file-print":
-          try {
-            iframe.contentWindow.focus();
-            iframe.contentWindow.print();
-          } catch (e) {
-            window.print();
-          }
-          break;
-        case "file-close":
-        case "file-exit":
-          window.location.href = "../../index.html";
-          break;
-        case "edit-cut":
-          doClipboard("cut");
-          break;
-        case "edit-copy":
-          doClipboard("copy");
-          break;
-        case "edit-paste":
-          doClipboard("paste");
-          break;
-        case "edit-find":
-          openDialog("dlg-find");
-          break;
-        case "edit-find-again":
-          if (findLastQuery) doFind(true);
-          else openDialog("dlg-find");
-          break;
-        case "edit-select-all":
-          try {
-            var doc = iframe.contentDocument;
-            var sel = doc.getSelection();
-            var range = doc.createRange();
-            range.selectNodeContents(doc.body);
-            sel.removeAllRanges();
-            sel.addRange(range);
-          } catch (e2) {
-            if (locationInput) locationInput.select();
-          }
-          break;
-        case "view-reload":
-          reload();
-          break;
-        case "view-images":
-          imagesOn = !imagesOn;
-          prefs.autoload = imagesOn;
-          savePrefs();
-          setStatus(imagesOn ? "Images will load." : "Images off.");
-          reload();
-          break;
-        case "view-source":
-          showSource();
-          break;
-        case "view-info":
-          showInfo();
-          break;
-        case "view-stop":
-        case "go-stop":
-          stopLoad();
-          break;
-        case "go-back":
-          goBack();
-          break;
-        case "go-forward":
-          goForward();
-          break;
-        case "go-home":
-          goHome();
-          break;
-        case "go-hist":
-          if (el) {
-            var idx = parseInt(el.getAttribute("data-idx"), 10);
-            if (!isNaN(idx)) {
-              historyIndex = idx;
-              updateNavButtons();
-              navigate(historyStack[historyIndex], { fromHistory: true });
-            }
-          }
-          break;
-        case "bm-add":
-          addBookmark();
-          break;
-        case "bm-view":
-          refreshBmDialog();
-          openDialog("dlg-bookmarks");
-          break;
-        case "bm-open":
-          if (el) navigate(el.getAttribute("data-path"));
-          break;
-        case "opt-prefs":
-          fillPrefsDialog();
-          openDialog("dlg-prefs");
-          break;
-        case "opt-toolbar":
-          prefs.showToolbar = !prefs.showToolbar;
-          savePrefs();
-          break;
-        case "opt-location":
-          prefs.showLocation = !prefs.showLocation;
-          savePrefs();
-          break;
-        case "opt-dirbar":
-          prefs.showDirbar = !prefs.showDirbar;
-          savePrefs();
-          break;
-        case "opt-autoload":
-          prefs.autoload = !prefs.autoload;
-          imagesOn = prefs.autoload;
-          savePrefs();
-          setStatus(imagesOn ? "Auto load images: On" : "Auto load images: Off");
-          break;
-        case "dir-welcome":
-          navigate("pages/home.html");
-          break;
-        case "dir-new":
-          navigate("pages/whats-new.html");
-          break;
-        case "dir-cool":
-          navigate("pages/cool.html");
-          break;
-        case "dir-handbook":
-          navigate(CMD_PATHS["dir-handbook"] || "pages/about.html");
-          break;
-        case "dir-search":
-          navigate(CMD_PATHS["dir-search"] || "pages/home.html");
-          break;
-        case "dir-directory":
-          navigate(CMD_PATHS["dir-directory"] || "sites/yahoo/index.html");
-          break;
-        case "dir-whitepages":
-          showAlert(
-            "Internet White Pages",
-            "Internet White Pages services (like Four11 / WhoWhere) were emerging in this era.\n\nThis exhibit does not mirror an external white-pages host."
-          );
-          break;
-        case "dir-about-net":
-          navigate("pages/about.html");
-          break;
-        case "help-about":
-          openDialog("dlg-about");
-          break;
-        case "help-handbook":
-          navigate(CMD_PATHS["help-handbook"] || "pages/about.html");
-          break;
-        case "help-faq":
-          navigate(CMD_PATHS["help-faq"] || "pages/about.html");
-          break;
-        case "help-support":
-          showAlert(
-            "How to Get Support",
-            "Netscape Communications Corporation\n\nIn this era, support was available via:\n• info@mcom.com\n• Handbook and FAQ on home.mcom.com\n• Usenet newsgroups\n\nThis reconstruction is an offline museum exhibit."
-          );
-          break;
-        case "help-feedback":
-          openMailDialog("info@mcom.com", "Netscape Feedback");
-          break;
-        case "help-exhibit":
-          navigate("pages/about.html");
-          break;
-        default:
-          setStatus("Command: " + cmd);
-      }
-    }
-
-    function fillPrefsDialog() {
-      setCheck("pref-underline", prefs.underline);
-      setVal("pref-expire", prefs.expireDays);
-      setCheck("pref-autoload", prefs.autoload);
-      setVal("pref-modem", String(prefs.modemDelay));
-      setVal("pref-home", prefs.homeUrl);
-      setCheck("pref-toolbar", prefs.showToolbar);
-      setCheck("pref-location", prefs.showLocation);
-      setCheck("pref-dirbar", prefs.showDirbar);
-      setCheck("pref-desktopicons", prefs.showDesktopIcons !== false);
-      setVal("pref-desktop", prefs.desktopBg || "#000000");
-    }
-
-    function setCheck(id, v) {
-      var el = document.getElementById(id);
-      if (el) el.checked = !!v;
-    }
-    function setVal(id, v) {
-      var el = document.getElementById(id);
-      if (el) el.value = v;
-    }
-
-    function doClipboard(op) {
-      try {
-        var doc = iframe.contentDocument;
-        var sel = doc.getSelection();
-        if (op === "copy" || op === "cut") {
-          clipboardText = sel ? sel.toString() : "";
-          if (!clipboardText && locationInput === document.activeElement) {
-            clipboardText = locationInput.value.substring(
-              locationInput.selectionStart,
-              locationInput.selectionEnd
-            );
-          }
-          if (navigator.clipboard && clipboardText) {
-            navigator.clipboard.writeText(clipboardText).catch(function () {});
-          }
-          if (op === "cut" && locationInput === document.activeElement) {
-            document.execCommand("cut");
-          }
-          setStatus(op === "cut" ? "Cut." : "Copied.");
-        } else if (op === "paste") {
-          if (locationInput === document.activeElement) {
-            document.execCommand("paste");
-          } else if (clipboardText) {
-            /* limited paste into content */
-            setStatus("Paste (clipboard ready).");
-          }
-        }
-      } catch (e) {
-        setStatus("Clipboard unavailable.");
-      }
-    }
-
-    function showSource() {
-      try {
-        var html = iframe.contentDocument.documentElement.outerHTML;
-        var pre = document.getElementById("dlg-source-text");
-        if (pre) pre.textContent = html;
-        openDialog("dlg-source");
-      } catch (e) {
-        showAlert("Document Source", "Could not read document source.");
-      }
-    }
-
-    function saveDocumentSource() {
-      try {
-        var html = iframe.contentDocument.documentElement.outerHTML;
-        var blob = new Blob([html], { type: "text/html" });
-        var a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = (currentPath().split("/").pop() || "document") + ".html";
-        a.click();
-        URL.revokeObjectURL(a.href);
-        setStatus("Saved document source.");
-      } catch (e) {
-        showAlert("Save", "Could not save document.");
-      }
-    }
-
-    function showInfo() {
-      var path = currentPath();
-      var table = document.getElementById("dlg-info-table");
-      if (!table) return;
-      var rows = [
-        ["URL", displayUrl(path)],
-        ["Local path", path],
-        ["Title", displayTitle(path)],
-        ["Year", YEAR],
-        ["Images", imagesOn ? "Auto load" : "Off"]
-      ];
-      table.innerHTML = "";
-      for (var i = 0; i < rows.length; i++) {
-        var tr = document.createElement("tr");
-        tr.innerHTML =
-          "<th>" + U.escapeHtml(rows[i][0]) + "</th><td>" + U.escapeHtml(rows[i][1]) + "</td>";
-        table.appendChild(tr);
-      }
-      openDialog("dlg-info");
-    }
-
-    /* ============================================================
-     * Event wiring
-     * ============================================================ */
     function byId(id) {
       return document.getElementById(id);
     }
-
     function on(id, event, fn) {
       var el = byId(id);
       if (el) el.addEventListener(event, fn);
     }
 
-    // Dialog close buttons (data-close on × / Cancel)
-    document.addEventListener("click", function (e) {
-      var closeId = e.target.getAttribute && e.target.getAttribute("data-close");
-      if (closeId) {
-        closeDialog(closeId);
-        return;
-      }
-      /* Click dimmed backdrop → dismiss (stuck Welcome alert was blocking iframe links) */
-      if (e.target === backdrop || (e.target && e.target.id === "modal-backdrop")) {
-        closeAllDialogs();
-      }
-    });
-    if (backdrop) {
-      backdrop.addEventListener("click", function () {
-        closeAllDialogs();
-      });
-    }
-
-    // Menubar — match Netscape: click label to open; click item to run
-    var menubar = document.getElementById("menubar");
-    var menuMode = false;
-    if (menubar) {
-      menubar.addEventListener("click", function (e) {
-        var btn = e.target.closest ? e.target.closest(".menu-item") : null;
-        if (btn && menubar.contains(btn)) {
-          e.stopPropagation();
-          var root = btn.parentNode;
-          if (root.classList.contains("open")) {
-            closeMenus();
-            menuMode = false;
-          } else {
-            if (root.getAttribute("data-menu") === "go") renderGoHistory();
-            if (root.getAttribute("data-menu") === "bookmarks") renderBookmarkMenus();
-            openMenu(root);
-            menuMode = true;
-          }
-          return;
-        }
-        var item = e.target.closest ? e.target.closest("[data-cmd]") : null;
-        if (item && !item.disabled && menubar.contains(item)) {
-          e.stopPropagation();
-          var cmd = item.getAttribute("data-cmd");
-          closeMenus();
-          menuMode = false;
-          runCommand(cmd, item);
-        }
-      });
-      menubar.addEventListener("mouseover", function (e) {
-        if (!menuMode) return;
-        var root = e.target.closest ? e.target.closest(".menu-root") : null;
-        if (root && !root.classList.contains("open")) {
-          if (root.getAttribute("data-menu") === "go") renderGoHistory();
-          if (root.getAttribute("data-menu") === "bookmarks") renderBookmarkMenus();
-          openMenu(root);
-        }
-      });
-    }
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest || !e.target.closest("#menubar")) {
-        closeMenus();
-        menuMode = false;
-      }
-      // Toolbar / dir buttons / non-menu commands with data-cmd
-      var cmdEl = e.target.closest ? e.target.closest("[data-cmd]") : null;
-      if (cmdEl && browserEl.contains(cmdEl) && !(menubar && menubar.contains(cmdEl))) {
-        var cmd = cmdEl.getAttribute("data-cmd");
-        if (cmd) {
-          e.preventDefault();
-          runCommand(cmd, cmdEl);
-        }
-      }
-    });
-
-    on("dlg-ol-ok", "click", function () {
-      var v = byId("dlg-ol-input");
-      closeDialog("dlg-open-location");
-      if (v) openLocationString(v.value);
-    });
-    on("dlg-ol-input", "keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        var btn = byId("dlg-ol-ok");
-        if (btn) btn.click();
-      }
-    });
-    on("dlg-find-ok", "click", function () {
-      doFind(false);
-    });
-    on("dlg-find-input", "keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        doFind(false);
-      }
-    });
-    on("dlg-source-save", "click", saveDocumentSource);
-    on("dlg-alert-ok", "click", function () {
-      closeDialog("dlg-alert");
-    });
-
-    on("dlg-bm-go", "click", function () {
-      var list = byId("dlg-bm-list");
-      if (list && list.value) {
-        closeDialog("dlg-bookmarks");
-        navigate(list.value);
-      }
-    });
-    on("dlg-bm-list", "dblclick", function () {
-      var go = byId("dlg-bm-go");
-      if (go) go.click();
-    });
-    on("dlg-bm-remove", "click", function () {
-      var list = byId("dlg-bm-list");
-      if (!list || list.selectedIndex < 0) return;
-      bookmarks.splice(list.selectedIndex, 1);
-      saveBookmarks();
-      refreshBmDialog();
-    });
-
-    on("dlg-prefs-ok", "click", function () {
-      var u = byId("pref-underline");
-      var ex = byId("pref-expire");
-      var al = byId("pref-autoload");
-      var md = byId("pref-modem");
-      var hm = byId("pref-home");
-      var tb = byId("pref-toolbar");
-      var loc = byId("pref-location");
-      var db = byId("pref-dirbar");
-      var di = byId("pref-desktopicons");
-      var dsk = byId("pref-desktop");
-      if (u) prefs.underline = u.checked;
-      if (ex) prefs.expireDays = parseInt(ex.value, 10) || 30;
-      if (al) prefs.autoload = al.checked;
-      if (md) prefs.modemDelay = parseInt(md.value, 10) || 0;
-      if (hm) prefs.homeUrl = (hm.value || "").trim() || prefs.homeUrl;
-      if (tb) prefs.showToolbar = tb.checked;
-      if (loc) prefs.showLocation = loc.checked;
-      if (db) prefs.showDirbar = db.checked;
-      if (di) prefs.showDesktopIcons = di.checked;
-      if (dsk) prefs.desktopBg = dsk.value;
-      imagesOn = !!prefs.autoload;
-      prefs.perfVersion = PERF.prefsPerfVersion;
-      savePrefs();
-      closeDialog("dlg-prefs");
-      setStatus("Preferences saved.");
-      showAlert("Preferences", "Preferences saved.\n\nModem delay, images, and chrome visibility now apply to this session.");
-    });
-
-    on("dlg-mail-send", "click", function () {
-      var to = (byId("dlg-mail-to") && byId("dlg-mail-to").value) || "";
-      closeDialog("dlg-mail");
-      showAlert(
-        "Mail",
-        "Message queued for delivery" + (to ? " to " + to.trim() : "") +
-          ".\n\n(This is an offline museum exhibit — no mail is sent.)"
-      );
-    });
-
-    var fileOpen = byId("file-open-input");
-    if (fileOpen) {
-      fileOpen.addEventListener("change", function (e) {
-        var file = e.target.files && e.target.files[0];
-        if (!file) return;
-        var reader = new FileReader();
-        reader.onload = function () {
-          try {
-            var doc = iframe.contentDocument;
-            doc.open();
-            doc.write(reader.result);
-            doc.close();
-            if (windowTitle) windowTitle.textContent = file.name + TITLE_SUFFIX;
-            if (locationInput) locationInput.value = "file:///" + file.name;
-            setStatus("Opened " + file.name);
-            wireDocument(doc, currentPath());
-          } catch (err) {
-            showAlert("Open File", "Could not open file:\n" + file.name);
-          }
-        };
-        reader.readAsText(file);
-        e.target.value = "";
-      });
-    }
-
+    /* ============================================================
+     * Shell nav (back / forward / home / location / dirbar)
+     * ============================================================ */
     if (btnBack) btnBack.addEventListener("click", goBack);
     if (btnForward) btnForward.addEventListener("click", goForward);
     on("btn-home", "click", goHome);
-    /* Make Home affordance read as year landing (Starting Point) */
-    (function labelHomeAffordances() {
-      var homeBtn = byId("btn-home");
-      if (homeBtn) {
-        homeBtn.setAttribute("title", "Starting Point — year home");
-        var hl = homeBtn.querySelector(".btn-label");
-        if (hl && /home/i.test(hl.textContent || "")) hl.textContent = "Home";
-      }
-      var closeBtn = byId("btn-close");
-      if (closeBtn) {
-        closeBtn.setAttribute("title", "Exit to year menu");
-        closeBtn.setAttribute("aria-label", "Exit to year menu");
-      }
-      var exitBar = byId("exit-bar");
-      if (exitBar) {
-        var exitA = exitBar.querySelector("a");
-        if (exitA) {
-          /* Keep title="Exit" for a11y + e2e; clarify label for visitors */
-          if (!exitA.getAttribute("title")) exitA.setAttribute("title", "Exit");
-          exitA.setAttribute("aria-label", "Exit to year menu");
-          var et = (exitA.textContent || "").trim();
-          if (/^←\s*Exit$/i.test(et) || /^Exit$/i.test(et)) {
-            exitA.textContent = "← Year menu";
-          }
-        }
-      }
-      var dirStart = document.querySelector('.dir-btn[data-go*="pages/home"], .dir-btn[data-go$="home.html"]');
-      if (dirStart) {
-        dirStart.setAttribute("title", "Starting Point — year landing");
-        if (/^start$/i.test((dirStart.textContent || "").trim())) {
-          dirStart.textContent = "Starting Point";
-        }
-      }
-    })();
-
-    /* Always-visible shell nav legend — visitors learn Starting Point vs Year menu */
-    (function injectShellNavLegend() {
-      if (document.getElementById("itt-shell-nav-legend")) return;
-      var exitBar = byId("exit-bar");
-      var legend = document.createElement("div");
-      legend.id = "itt-shell-nav-legend";
-      legend.className = "shell-nav-legend";
-      legend.setAttribute("role", "navigation");
-      legend.setAttribute("aria-label", "How to navigate this year");
-      var hubHref = "../../index.html";
-      try {
-        var yi = (location.pathname || "").indexOf("/years/");
-        if (yi !== -1) hubHref = location.pathname.slice(0, yi) + "/index.html";
-      } catch (eH) { /* */ }
-      legend.innerHTML =
-        '<span class="shell-nav-label">Navigate:</span> ' +
-        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-start" title="Year map — trails and About">' +
-        "Starting Point</button>" +
-        '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
-        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-back" title="Previous page in this year">Back</button>' +
-        '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
-        '<a class="shell-nav-exit" href="' + hubHref + '" title="Exit">← Year menu</a>' +
-        '<span class="shell-nav-hint">Lost? Starting Point = year map · Year menu = all years</span>';
-      if (exitBar && exitBar.parentNode) {
-        if (exitBar.nextSibling) {
-          exitBar.parentNode.insertBefore(legend, exitBar.nextSibling);
-        } else {
-          exitBar.parentNode.appendChild(legend);
-        }
-      } else {
-        var desk = document.querySelector(".desktop");
-        if (desk) desk.insertBefore(legend, desk.firstChild);
-      }
-      var goStart = document.getElementById("itt-shell-goto-start");
-      if (goStart) {
-        goStart.addEventListener("click", function () {
-          goHome();
-        });
-      }
-      var goBackBtn = document.getElementById("itt-shell-goto-back");
-      if (goBackBtn) {
-        goBackBtn.addEventListener("click", function () {
-          goBack();
-        });
-      }
-    })();
     on("btn-reload", "click", reload);
     on("btn-stop", "click", stopLoad);
-    on("btn-images", "click", function () { runCommand("view-images"); });
-    on("btn-open", "click", function () { runCommand("file-open-loc"); });
-    on("btn-find", "click", function () { runCommand("edit-find"); });
-    on("btn-close", "click", function () { runCommand("file-exit"); });
 
     on("btn-min", "click", function () {
       browserEl.classList.add("minimized");
@@ -1698,30 +1025,6 @@
         openLocationString(locationInput.value);
       });
     }
-    // Optional IE5-style toolbar extras (Favorites / Mail already have commands)
-    var btnFav = document.getElementById("btn-favorites");
-    if (btnFav) {
-      btnFav.addEventListener("click", function () { runCommand("bm-view"); });
-    }
-    var btnMailTb = document.getElementById("btn-mail");
-    if (btnMailTb) {
-      btnMailTb.addEventListener("click", function () { runCommand("file-mail"); });
-    }
-    var btnSearchTb = document.getElementById("btn-search");
-    if (btnSearchTb) {
-      btnSearchTb.addEventListener("click", function () {
-        if (locationInput) {
-          locationInput.focus();
-          locationInput.select();
-        }
-      });
-    }
-    var btnHist = document.getElementById("btn-history");
-    if (btnHist) {
-      btnHist.addEventListener("click", function () {
-        runCommand("go-back");
-      });
-    }
 
     var dirBtns = document.querySelectorAll(".dir-btn");
     for (var d = 0; d < dirBtns.length; d++) {
@@ -1741,44 +1044,6 @@
         if (go) navigate(go);
       });
     }
-    /* Any toolbar click dismisses stuck Welcome so chrome never feels dead */
-    var toolbarEl = document.getElementById("toolbar");
-    if (toolbarEl) {
-      toolbarEl.addEventListener("click", function () {
-        try {
-          var alertEl = document.getElementById("dlg-alert");
-          var titleEl = document.getElementById("dlg-alert-title");
-          var titleText = titleEl ? titleEl.textContent || "" : "";
-          if (alertEl && !alertEl.classList.contains("hidden") && titleText.indexOf("Welcome") === 0) {
-            closeAllDialogs();
-          } else {
-            ensureBackdropSane();
-          }
-        } catch (eTb) { /* */ }
-      }, true);
-    }
-
-    document.addEventListener("keydown", function (e) {
-      var mod = e.ctrlKey || e.metaKey;
-      if (e.key === "Escape") {
-        if (backdrop && !backdrop.classList.contains("hidden")) {
-          closeAllDialogs();
-          e.preventDefault();
-          return;
-        }
-        stopLoad();
-        closeMenus();
-      }
-      if (!mod) return;
-      var k = e.key.toLowerCase();
-      if (k === "l") { e.preventDefault(); runCommand("file-open-loc"); }
-      else if (k === "f") { e.preventDefault(); runCommand("edit-find"); }
-      else if (k === "g") { e.preventDefault(); runCommand("edit-find-again"); }
-      else if (k === "r") { e.preventDefault(); reload(); }
-      else if (k === "s") { e.preventDefault(); runCommand("file-save"); }
-      else if (k === "p") { e.preventDefault(); runCommand("file-print"); }
-      else if (k === "d") { e.preventDefault(); runCommand("bm-add"); }
-    });
 
     /* ============================================================
      * Modem sound (Web Audio API — no external files needed)
@@ -1827,9 +1092,22 @@
       try {
         if (sessionStorage.getItem(key) === "1") return;
         if (localStorage.getItem(key) === "1") return;
+        /* UX strip coach (js/ux/shell-coach.js) already dismissed */
+        if (localStorage.getItem("itt-ux-coach-seen-" + YEAR) === "1") return;
       } catch (e) {
         return;
       }
+      /* Prefer non-blocking strip when UX pack is on — skip modal wall */
+      try {
+        if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("shellCoach") && ITT.UX.ShellCoach) {
+          if (typeof ITT.UX.ShellCoach.boot === "function") {
+            ITT.UX.ShellCoach.boot(YEAR);
+          }
+          /* Strip will mark its own key; also mark legacy so we don't double later */
+          return;
+        }
+      } catch (eUx) { /* fall through to legacy modal */ }
+
       var browserLabel = "Netscape";
       if (TITLE_SUFFIX && /Internet Explorer/i.test(TITLE_SUFFIX)) browserLabel = "Internet Explorer";
       else if (config.connectBrowserLine && /Internet Explorer/i.test(config.connectBrowserLine)) {
@@ -1859,6 +1137,11 @@
         "2011": "Spotify · Timeline · Siri",
         "2012": "Instagram · FB IPO · Pinterest",
         "2013": "Vine · IG Video · Stories · iOS 7",
+        "2014": "WhatsApp · Heartbleed · iPhone 6",
+        "2015": "Watch · Win10 · Periscope",
+        "2016": "Stories · Pokémon GO · Reactions",
+        "2017": "Face ID · Fortnite · 280",
+        "2018": "GDPR · TikTok · hearing"
       };
       var locTips = {
         "1994": "yahoo or whitehouse",
@@ -1881,6 +1164,11 @@
         "2011": "spotify or siri",
         "2012": "instagram or pinterest",
         "2013": "vine or snowden",
+        "2014": "whatsapp or heartbleed",
+        "2015": "watch or windows10",
+        "2016": "stories or pogo",
+        "2017": "faceid or fortnite",
+        "2018": "gdpr or tiktok"
       };
       var dirHint = dirExamples[YEAR] || "directory buttons on the bar";
       var locTip = locTips[YEAR] || "a site name from this year";
@@ -1914,7 +1202,7 @@
           }
           ensureBackdropSane();
         } catch (eAuto) { /* */ }
-      }, 4000);
+      }, 1800);
       window.setTimeout(function () {
         try {
           ensureBackdropSane();
@@ -1949,12 +1237,33 @@
       }
       // Coach after chrome is ready
       window.setTimeout(maybeFirstRunCoach, 600);
+      /* First-night trail: open signature room for this year when active */
+      window.setTimeout(function () {
+        try {
+          if (ITT.MuseumProgress && typeof ITT.MuseumProgress.maybeOpenTrailRoom === "function") {
+            ITT.MuseumProgress.maybeOpenTrailRoom(function (path) {
+              navigate(path, { instant: true });
+            });
+          }
+        } catch (eTrail) {
+          /* */
+        }
+      }, 200);
     }
 
     function hideOverlay() {
       stopModemSound();
-      if (overlay) overlay.classList.add("hidden");
+      if (overlay) {
+        overlay.classList.add("hidden");
+        try {
+          overlay.style.display = "none";
+          overlay.style.pointerEvents = "none";
+        } catch (eOv) { /* */ }
+      }
       try { sessionStorage.setItem(CONNECTED_KEY, "1"); } catch (e) { /* */ }
+      try {
+        ensureBackdropSane();
+      } catch (eBd) { /* */ }
       seedHistory();
     }
 
@@ -2051,6 +1360,10 @@
         if (localStorage.getItem(PHONE_MUTE_KEY) === "1") return;
         if (prefs && prefs.phoneEvents === false) return;
       } catch (e0) { /* */ }
+      /* Still on the modem screen — do not cover Skip / Connect */
+      try {
+        if (overlay && !overlay.classList.contains("hidden")) return;
+      } catch (eOv) { /* */ }
       if (Math.random() > 0.022) return; // ~2.2% — rare household drama, once/session
       var kinds = [
         "Someone picked up another extension.\n\nNO CARRIER\n\nClick Connect to redial.",
@@ -2059,11 +1372,20 @@
       ];
       var msg = kinds[Math.floor(Math.random() * kinds.length)];
       try {
-        sessionStorage.removeItem(CONNECTED_KEY);
         sessionStorage.setItem(PHONE_MUTE_KEY, "1"); // never chain-interrupt the same visit
       } catch (e1) { /* */ }
+      /* Do not drop CONNECTED_KEY or revive the modem overlay — that undoes Skip
+         and leaves #dlg-alert / #connect-overlay intercepting iframe clicks. */
       showAlert("Modem", msg);
-      if (overlay) overlay.classList.remove("hidden");
+    }
+
+    function focusContent() {
+      try {
+        if (iframe) {
+          iframe.focus();
+          if (iframe.contentWindow) iframe.contentWindow.focus();
+        }
+      } catch (eFc) { /* */ }
     }
 
     // Expose for immersion iframe / debugging
@@ -2077,7 +1399,8 @@
       perf: PERF,
       getPrefs: function () { return prefs; },
       setSecureMode: setSecureMode,
-      maybePhoneEvent: maybePhoneEvent
+      maybePhoneEvent: maybePhoneEvent,
+      focusContent: focusContent
     };
     ITT.activeBrowser = api;
     return api;

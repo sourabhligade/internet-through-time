@@ -25,41 +25,33 @@
     doc = doc || document;
     var btn = doc.querySelector("[data-wave-invite]");
     if (!btn) return;
+    var st = doc.querySelector("[data-wave-status]");
+    try {
+      var prev = localStorage.getItem(storageKey());
+      if (prev && st) st.textContent = "Invite saved · " + storageKey();
+    } catch (e0) { /* */ }
     btn.addEventListener("click", function () {
-      var st = doc.querySelector("[data-wave-status]");
-      var checks = doc.querySelectorAll("[data-wave-check], [data-req]");
-      var n = 0;
-      var i;
-      for (i = 0; i < checks.length; i++) if (checks[i].checked) n++;
-      if (checks.length >= 1) {
-        if (n < Math.min(2, checks.length)) {
-          if (st) {
-            st.textContent = "REAL gate: complete Wave literacy checks first.";
-            ittFeedback(st.textContent, st);
-          }
-          return;
-        }
-      } else if (btn.getAttribute("data-wave-armed") !== "1") {
-        btn.setAttribute("data-wave-armed", "1");
-        if (st) {
-          st.textContent = "Confirm: invite theater only — click again (REAL two-step).";
-          ittFeedback(st.textContent, st);
-        }
+      var io = doc.querySelector("[data-wave-io]");
+      var notMail = doc.querySelector("[data-wave-not-email]");
+      if (!io || !io.checked || !notMail || !notMail.checked) {
+        if (st) st.textContent = "Confirm I/O demo lore + not daily email first.";
+        ittFeedback(st ? st.textContent : "Tick both checks first.", st);
         return;
       }
       localStorage.setItem(
         storageKey(),
         JSON.stringify({
           invited: true,
-          multiStep: true,
           real: true,
+          multiStep: true,
+          ioDemo: true,
+          notDailyEmail: true,
           ts: Date.now(),
           note: "I/O demo lore · not daily email"
         })
       );
       if (st) {
-        st.textContent =
-          "Invite requested · " + storageKey() + " · public mass is 2010, not 2009 daily driver.";
+        st.textContent = "Invite requested · " + storageKey() + " · public mass is 2010, not 2009 daily driver.";
         ittFeedback(st.textContent, st);
       }
     });

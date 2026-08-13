@@ -45,6 +45,8 @@ test.describe('2011 trail 2 — Social redesign', () => {
     await clearKeys(page, ['itt11-fb-timeline', 'itt11-fb-feed-mode']);
     await page.reload();
     await page.waitForSelector('[data-fb-timeline-enable]', { timeout: 20000 });
+    await page.locator('[data-fb-tl-f8]').check();
+    await page.locator('[data-fb-tl-not-stories]').check();
     await page.locator('[data-fb-timeline-enable]').click();
     await requireKey(page, 'itt11-fb-timeline');
 

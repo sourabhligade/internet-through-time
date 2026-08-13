@@ -65,8 +65,12 @@
             var msg = "Bid must be higher than $" + Number(high.amount).toFixed(2);
             if (actionFeedback) {
               actionFeedback(msg, { flash: true, kind: "warn" });
-            } else {
+            }
+            /* Period alert path (also lets e2e dialog listeners catch low-bid rejection) */
+            try {
               alert(msg);
+            } catch (eAlert) {
+              /* */
             }
             return false;
           }

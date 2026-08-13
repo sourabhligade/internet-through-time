@@ -9,8 +9,8 @@
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <div style="max-width:520px;margin:24px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;background:#1a1a1a;color:#eee;padding:20px">
  <p style="font-size:12px">
-  <a href="about.html" style="color:#fd8">About</a> ·
-  <a href="sf.html" style="color:#fd8">SF</a> ·
+  <a href="../../pages/home.html" style="color:#fd8">About</a> ·
+  <a href="../../pages/home.html" style="color:#fd8">SF</a> ·
   <a href="../../pages/home.html" style="color:#fd8">Start</a>
  </p>
  <h1 style="font-weight:300;color:#fff">Uber · 2012</h1>
@@ -19,6 +19,7 @@
   <b>July 2012</b> (SF lore) — roughly <b>~35% cheaper</b> than black car (period press class, not a live fare API).
   Still city-limited · not every city · not autonomous · educational theater only — no real dispatch.
  </p>
+ <label style="display:block;margin:8px 0;font-size:12px;color:#fd8"><input type="checkbox" data-uber-not-auto> Theater only — no real dispatch · not autonomous</label>
  <p style="font-size:12px;color:#aaa">Choose a ride class (theater):</p>
  <p>
   <button type="button" data-uber-kind="black" id="uber-black" style="margin-right:8px;padding:8px 12px">Request black car</button>
@@ -33,7 +34,9 @@
   function boot(){
     var st=document.querySelector("[data-uber-status]")||document.getElementById("uber-st");
     function save(kind){
-      var payload={requested:true,city:"San Francisco",kind:kind,cheaper:kind==="uberx",ts:Date.now()};
+      var hon=document.querySelector("[data-uber-not-auto]");
+      if(!hon||!hon.checked){if(st)st.textContent="Confirm no real dispatch first.";return;}
+      var payload={requested:true,city:"San Francisco",kind:kind,cheaper:kind==="uberx",real:true,multiStep:true,ts:Date.now()};
       try{localStorage.setItem(KEY,JSON.stringify(payload));}catch(e){}
       var msg=kind==="uberx"
         ?"UberX requested · ~35% less · SF class"

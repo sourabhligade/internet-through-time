@@ -46,18 +46,40 @@ function initFishCam(root) {
     });
   }
   var n = parseInt(localStorage.getItem(storageKey("fishcam-n")) || "0", 10) || 0;
-  var frame = frames[n % frames.length];
-  if (frame.src) img.src = frame.src;
-  localStorage.setItem(storageKey("fishcam-n"), String(n + 1));
-  if (label) {
-    label.textContent = "Frame " + ((n % frames.length) + 1) + " of " + frames.length +
-      " · " + frame.caption + " · Reload for next frame · " + new Date().toLocaleTimeString();
+  var reduce = false;
+  try {
+    reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  } catch (eRed) { /* */ }
+
+  function paint(idx) {
+    var frame = frames[idx % frames.length];
+    if (frame.src) img.src = frame.src;
+    img.setAttribute("data-fish-n", String(idx % frames.length));
+    if (label) {
+      label.textContent = "Frame " + ((idx % frames.length) + 1) + " of " + frames.length +
+        " · " + frame.caption +
+        (reduce ? " · Reload for next frame" : " · live stills") +
+        " · " + new Date().toLocaleTimeString();
+    }
+    var stamp = root.querySelector("[data-fish-time]");
+    if (stamp) {
+      var mins = 3 + (idx % 5);
+      stamp.textContent = "Last update: " + new Date().toLocaleTimeString() +
+        " · next capture in ~" + mins + " min";
+    }
   }
-  var stamp = root.querySelector("[data-fish-time]");
-  if (stamp) {
-    var mins = 3 + (n % 5);
-    stamp.textContent = "Last update: " + new Date().toLocaleTimeString() +
-      " · next capture in ~" + mins + " min";
+
+  function advance() {
+    n += 1;
+    try {
+      localStorage.setItem(storageKey("fishcam-n"), String(n));
+    } catch (eN) { /* */ }
+    paint(n);
+  }
+
+  paint(n);
+  if (!reduce && frames.length > 1) {
+    setInterval(advance, 8000);
   }
 }
 
@@ -75,7 +97,14 @@ function initCsotd(root) {
     { href: "../personal/messy.html", title: "A personal home page", blurb: "Anyone with an account can publish." }
   ];
   var day = Math.floor(Date.now() / 86400000);
-  var pick = picks[day % picks.length];
+  var hook = -1;
+  try {
+    var rawPick = qs ? qs("pick") : "";
+    if (rawPick !== "" && rawPick != null) hook = parseInt(rawPick, 10);
+  } catch (ePick) { /* */ }
+  if (isNaN(hook)) hook = -1;
+  var idx = hook >= 0 ? hook % picks.length : day % picks.length;
+  var pick = picks[idx];
   var link = host.querySelector("[data-csotd-link]");
   var blurb = host.querySelector("[data-csotd-blurb]");
   var stampEl = host.querySelector("[data-csotd-date]");

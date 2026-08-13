@@ -5,8 +5,6 @@
  * Home trails 1–7
  */
 const { test, expect } = require('@playwright/test');
-const { completeRealGate, twoStepClick, checkAllReq } = require('./helpers');
-
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -40,7 +38,7 @@ test.describe('2010 trail 1 — Tablet arrives', () => {
     await clearKeys(page, ['itt10-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-appstore-install]');
+    await page.locator('[data-appstore-install]').first().click();
     await requireKey(page, 'itt10-apps');
   });
 });
@@ -53,7 +51,7 @@ test.describe('2010 trail 2 — Phone leap', () => {
     await page.goto('/years/2010/sites/appstore/index.html');
     await clearKeys(page, ['itt10-apps', 'itt10-iphone-history']);
     await page.reload();
-    await completeRealGate(page, '[data-appstore-install]');
+    await page.locator('[data-appstore-install]').first().click();
     await requireKey(page, 'itt10-apps');
 
     await page.goto('/years/2010/sites/iphone/index.html');
@@ -89,11 +87,14 @@ test.describe('2010 trail 4 — Social web', () => {
 
     await page.goto('/years/2010/sites/facebook/about.html');
     await expect(page.locator('body')).toContainText(/Open Graph|600/i);
+    await page.locator('[data-fb-film]').check();
+    await page.locator('[data-fb-no-reels]').check();
     await page.locator('[data-fb-culture]').click();
     await requireKey(page, 'itt10-fb-culture');
 
     await page.goto('/years/2010/sites/facebook/places.html');
-    await page.locator('[data-fb-place], #pl, [data-place-checkin]').first().click();
+    await page.waitForSelector('[data-fb-place]', { timeout: 20000 });
+    await page.locator('[data-fb-place]').first().click();
     await requireKey(page, 'itt10-fb-places');
   });
 });
@@ -147,11 +148,15 @@ test.describe('2010 trail 7 — Seeds of later', () => {
     await requireKey(page, 'itt10-pin');
 
     await page.goto('/years/2010/sites/uber/index.html');
+    await page.locator('[data-uber-not-x]').check();
+    await page.locator('[data-uber-sf]').check();
     await page.locator('#uber-req').click();
     await requireKey(page, 'itt10-uber');
 
     await page.goto('/years/2010/sites/wave/index.html');
-    await completeRealGate(page, '[data-wave-invite]');
+    await page.locator('[data-wave-io]').check();
+    await page.locator('[data-wave-not-email]').check();
+    await page.locator('[data-wave-invite]').click();
     await requireKey(page, 'itt10-wave');
   });
 });

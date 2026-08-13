@@ -48,6 +48,12 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/wolframalpha/index.html": "http://museum.local/years/2009/wolframalpha/",
+      "sites/vevo/index.html": "http://museum.local/years/2009/vevo/",
+      "sites/foursquarecheckin/index.html": "http://museum.local/years/2009/foursquarecheckin/",
+
+      "sites/playable/index.html": "http://museum.local/years/2009/playable/",
+      "sites/playable/game.html": "http://museum.local/years/2009/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "sites/friendfeed/index.html": "http://www.friendfeed.com/",
       "sites/ubercab/index.html": "http://www.ubercab.com/",
@@ -373,8 +379,11 @@
       "sites/youvegotmail/about.html": "http://www.youvegotmail.com/about.html",
       "sites/youvegotmail/index.html": "http://www.youvegotmail.com/",
       "sites/zombo/about.html": "http://www.zombo.com/about.html",
-      "sites/zombo/index.html": "http://www.zombo.com/"
-    },
+      "sites/zombo/index.html": "http://www.zombo.com/",
+          "sites/stackoverflow/about.html": "http://stackoverflow.com/about.html",
+      "sites/stackoverflow/index.html": "http://stackoverflow.com/",
+      "sites/stackoverflow/question.html": "http://stackoverflow.com/question.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",

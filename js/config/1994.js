@@ -45,6 +45,13 @@
       connectBusyChance: 0.16
     },
     urlMap: {
+      "sites/webcrawler/index.html": "http://museum.local/years/1994/webcrawler/",
+      "sites/galaxy/index.html": "http://museum.local/years/1994/galaxy/",
+      "sites/gnn/index.html": "http://museum.local/years/1994/gnn/",
+      "sites/jumpstation/index.html": "http://museum.local/years/1994/jumpstation/",
+
+      "sites/playable/index.html": "http://museum.local/years/1994/playable/",
+      "sites/playable/game.html": "http://museum.local/years/1994/playable/game.html",
       "sites/exploratorium/perception.html": "http://www.exploratorium.edu/perception/",
       "sites/exploratorium/about.html": "http://www.exploratorium.edu/about/",
       "sites/weblouvre/collections.html": "http://mistral.culture.fr/louvre/collections/",
@@ -148,6 +155,8 @@
       "sites/whitehouse/map.html": "http://www.whitehouse.com/map.html",
       "sites/cern/about.html": "http://www.cern.com/about.html",
       "sites/csotd/about.html": "http://www.csotd.com/about.html",
+      "sites/csotd/guestbook.html": "http://cool.infi.net/guestbook.html",
+      "sites/csotd/archive.html": "http://cool.infi.net/archive.html",
       "sites/ncsa/docs.html": "http://www.ncsa.com/docs.html",
       "sites/ncsa/about.html": "http://www.ncsa.com/about.html",
       "sites/ncsa/starting-points.html": "http://www.ncsa.com/starting-points.html",
@@ -316,6 +325,8 @@
       "sites/whitehouse/map.html": "Map",
       "sites/cern/about.html": "About",
       "sites/csotd/about.html": "About",
+      "sites/csotd/guestbook.html": "CSotD Guestbook",
+      "sites/csotd/archive.html": "CSotD Archive",
       "sites/ncsa/docs.html": "Docs",
       "sites/ncsa/about.html": "About",
       "sites/ncsa/starting-points.html": "Starting Points",

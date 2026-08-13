@@ -14,7 +14,7 @@
   <b>reddit</b>
   · <a href="index.html">what's hot</a>
   · <a href="ama.html"><b>AMA</b></a>
-  · <a href="submit.html">submit</a>
+  · <a href="../../pages/home.html">submit</a>
   · <a href="about.html">about</a>
   · <a href="../../pages/home.html">start</a>
 </div>
@@ -43,6 +43,8 @@
       No inventing real answer transcripts pixel-for-pixel · educational reconstruction only.
     </p>
   </div>
+  <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-ama-date> Aug 29 2012 class — President AMA on r/IAmA</label>
+  <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-ama-not-app> Museum reconstruction — not the modern Reddit app</label>
   <p>
     <button type="button" data-reddit-ama-ack
       style="font-size:12px;padding:8px 12px;background:#5f99cf;color:#fff;border:0;cursor:pointer">
@@ -63,7 +65,7 @@
   <p style="font-size:12px">
     <a href="index.html">← what's hot</a> ·
     <a href="about.html">about 2012 reddit</a> ·
-    <a href="submit.html">submit</a> ·
+    <a href="../../pages/home.html">submit</a> ·
     <a href="../../pages/home.html">Starting Point</a>
   </p>
   <p style="font-size:11px;color:#666">
@@ -84,6 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
   show();
   if (btn) {
     btn.addEventListener("click", function () {
+      var d = document.querySelector("[data-ama-date]");
+      var n = document.querySelector("[data-ama-not-app]");
+      if (!d || !d.checked || !n || !n.checked) {
+        if (st) st.textContent = "Check date + not-modern-app first.";
+        return;
+      }
       try {
         localStorage.setItem(
           KEY,
@@ -91,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
             ama: "obama-2012",
             dateClass: "2012-08-29",
             sub: "IAmA",
+            real: true,
+            multiStep: true,
             ts: Date.now()
           })
         );

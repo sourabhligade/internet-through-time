@@ -48,6 +48,13 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/etsy/index.html": "http://museum.local/years/2007/etsy/",
+      "sites/googletranslate/index.html": "http://museum.local/years/2007/googletranslate/",
+      "sites/kindle/index.html": "http://museum.local/years/2007/kindle/",
+      "sites/iphoneweb/index.html": "http://museum.local/years/2007/iphoneweb/",
+
+      "sites/hulu/index.html": "http://www.hulu.com/",
+      "sites/playable/game.html": "http://museum.local/years/2007/playable/game.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2007/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
@@ -350,8 +357,11 @@
       "sites/programmableweb/about.html": "http://www.programmableweb.com/about",
       "sites/programmableweb/index.html": "http://www.programmableweb.com/",
       "sites/googlevideo/about.html": "http://video.google.com/about.html",
-      "sites/googlevideo/index.html": "http://video.google.com/"
-    },
+      "sites/googlevideo/index.html": "http://video.google.com/",
+          "sites/flashplayer/about.html": "http://www.adobe.com/products/flashplayer/about.html",
+      "sites/flashplayer/index.html": "http://www.adobe.com/products/flashplayer/",
+      "sites/flashplayer/settings.html": "http://www.adobe.com/products/flashplayer/settings.html",
+},
     titleMap: {
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",

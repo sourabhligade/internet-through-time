@@ -4,7 +4,7 @@
  * Catches scaffold residue (2004 titles, 2010 bookmarks, anti-Stories copy, Chrome-as-2012-only).
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, killOverlays, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
+const { enterYear, killOverlays } = require('./helpers');
 
 test.describe('2013 shell honesty (visitor-facing)', () => {
   test('config titleMap home/about are 2013 not 2004', async ({ page }) => {
@@ -74,10 +74,7 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
 
     for (const { label, re } of clicks) {
       await killOverlays(page);
-      await page
-        .locator('#dirbar .dir-btn', { hasText: new RegExp(`^${label.replace('.', '\\.')}$`) })
-        .first()
-        .click({ force: true });
+      await page.locator('#dirbar .dir-btn', { hasText: new RegExp(`^${label.replace('.', '\\.')}$`) }).first().click();
       await page.waitForTimeout(350);
       const title = (await page.locator('#window-title').textContent()) || '';
       expect(title, `dirbar ${label} title`).toMatch(re);
@@ -145,29 +142,40 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
     expect(body).toMatch(/Stories|My Story|Oct(ober)?\s*3/i);
     expect(body).not.toMatch(/still not Stories/i);
     await expect(page.locator('a[href*="story"]').first()).toBeVisible();
-    await completeRealGate(page, '[data-snap-send]');
+    await page.locator('[data-snap-not-stories]').check();
+    await page.locator('[data-snap-send]').click();
     await page.waitForTimeout(200);
     const snapCount = await page.evaluate(() => localStorage.getItem('itt13-snap-count'));
     expect(snapCount).toBeTruthy();
   });
 
-  test('Chrome room is 2013 + download writes itt13-chrome', async ({ page }) => {
+  test('Chrome room is 2013 + three checks write itt13-chrome', async ({ page }) => {
     await page.goto('/years/2013/sites/chrome/index.html');
     const body = await page.locator('body').innerText();
     expect(body).toMatch(/2013/);
     expect(body).toMatch(/Chrome/i);
+    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
     await page.evaluate(() => localStorage.removeItem('itt13-chrome'));
     await page.reload();
     await page.waitForTimeout(600);
-    await completeRealGate(page, '[data-chrome-download]');
-    await page.waitForTimeout(150);
+    await page.locator('[data-chrome13-save]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt13-chrome'))).toBeFalsy();
+    await page.locator('[data-chrome13-habit]').check();
+    await page.locator('[data-chrome13-not-edge]').check();
+    await page.locator('[data-chrome13-dl]').check();
+    await page.locator('[data-chrome13-save]').click();
     const raw = await page.evaluate(() => localStorage.getItem('itt13-chrome'));
-    expect(raw, 'itt13-chrome after download').toBeTruthy();
-    expect(raw).toMatch(/download|true|platform/i);
-    await page.locator('[data-chrome-prefer]').click();
-    await page.waitForTimeout(100);
-    const pref = await page.evaluate(() => localStorage.getItem('itt13-chrome'));
-    expect(pref).toMatch(/preferred|true/i);
+    expect(raw, 'itt13-chrome after three checks').toBeTruthy();
+    expect(raw).toMatch(/habit|downloaded|real/i);
+  });
+
+  test('Win7 clone room is gone (lean 2013)', async ({ page }) => {
+    const w7 = await page.goto('/years/2013/sites/windows7/index.html');
+    expect(w7 && w7.status()).toBe(404);
+    await page.goto('/years/2013/pages/home.html');
+    await expect(page.locator('body')).toContainText(/This year is lean/i);
+    await expect(page.locator('body')).not.toContainText('shell default for 2012');
   });
 
   test('Vine pointer/touch hold path posts', async ({ page }) => {

@@ -49,7 +49,13 @@
   function endGame() {
     if (!running) return;
     running = false;
-    if (statusEl) statusEl.textContent = "Game over · score " + score + " — press Start to retry";
+    if (statusEl) statusEl.textContent = "Game over · score " + score + " — tap / Start / R to retry";
+    try {
+      if (window.ITT && ITT.YearGame) {
+        if (ITT.YearGame.flash) ITT.YearGame.flash();
+        if (ITT.YearGame.beep) ITT.YearGame.beep();
+      }
+    } catch (eF) { /* */ }
     if (window.ITTGames) {
       window.ITTGames.addScore("blox", score, "Player");
       window.ITTGames.renderBoard(boardEl, "blox");
@@ -72,6 +78,7 @@
 
   function onClick(e) {
     if (e && e.preventDefault) e.preventDefault();
+    if (window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused()) return;
     if (!running) {
       reset();
       return;
@@ -93,7 +100,8 @@
   canvas.addEventListener("touchend", onClick, { passive: false });
 
   function tick() {
-    if (running) {
+    var paused = window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused();
+    if (running && !paused) {
       spawnTimer++;
       if (spawnTimer > Math.max(18, 48 - wave * 3)) {
         spawn();
@@ -212,6 +220,15 @@
       ctx.font = "bold 16px Tahoma,Arial,sans-serif";
       ctx.textAlign = "center";
       ctx.fillText("Click here or press Start", W / 2, H / 2);
+    } else if (!running && score > 0) {
+      ctx.fillStyle = "rgba(140,0,0,0.38)";
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 18px Tahoma,Arial,sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("GAME OVER", W / 2, H / 2 - 8);
+      ctx.font = "13px Tahoma,Arial,sans-serif";
+      ctx.fillText("Tap / Start / R to retry", W / 2, H / 2 + 14);
     }
   }
 

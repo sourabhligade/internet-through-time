@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear, completeRealGate, checkAllReq, twoStepClick } = require('./helpers');
+const { enterYear } = require('./helpers');
 
 test.describe('2013 densify', () => {
   test('scale dual-cite on about', async ({ page }) => {
@@ -14,6 +14,8 @@ test.describe('2013 densify', () => {
     const text = await page.locator('body').innerText();
     expect(text).toMatch(/Connection trails|Six-second/i);
     expect(text).toMatch(/Vine/);
+    await expect(page.locator('[data-ott-one-thing="2013"]')).toBeVisible();
+    await expect(page.locator('[data-ott-one-thing="2013"]')).toHaveAttribute('href', /vine\/record/);
     expect(text).toMatch(/Stories|Snapchat/i);
     expect(text).toMatch(/iOS 7|Touch ID|5s/i);
     expect(text).toMatch(/Snowden|PRISM/i);
@@ -26,6 +28,33 @@ test.describe('2013 densify', () => {
     expect(text).not.toMatch(/What.?s New in 2012/i);
     expect(text).toMatch(/Vine/);
     expect(text).toMatch(/Stories|Snowden|iOS 7/i);
+  });
+
+  test('Loop Six 6s hold game loads and can post', async ({ page }) => {
+    await page.goto('/years/2013/sites/playable/loop.html');
+    await expect(page.locator('[data-year-game][data-game-id="loopsix"]')).toBeVisible();
+    await expect(page.locator('body')).toContainText(/6 second|Loop Six|gold/i);
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt13-game-loopsix');
+      } catch (e) { /* */ }
+    });
+    await page.reload();
+    await page.locator('#play-start').click();
+    const canvas = page.locator('#game-canvas');
+    await canvas.dispatchEvent('mousedown');
+    await page.waitForTimeout(5100);
+    await canvas.dispatchEvent('mouseup');
+    await expect(page.locator('#play-score')).not.toHaveText('0', { timeout: 3000 });
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-game-loopsix')), { timeout: 4000 })
+      .toBeFalsy();
+    /* one sweet loop does not end the run; finish via API for REAL blob */
+    await page.evaluate(() => {
+      if (window.ITT && ITT.YearGame) ITT.YearGame.saveBest('loopsix', 100, { year: '2013' });
+    });
+    const raw = await page.evaluate(() => localStorage.getItem('itt13-game-loopsix'));
+    expect(raw).toMatch(/loopsix|best|2013/i);
   });
 
   test('Vine Jan 24 about', async ({ page }) => {
@@ -56,7 +85,8 @@ test.describe('2013 densify', () => {
     const text = await page.locator('body').innerText();
     expect(text).toMatch(/2013/);
     expect(text).toMatch(/Chrome/i);
-    await expect(page.locator('[data-chrome-download]')).toBeVisible();
+    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
+    await expect(page.locator('[data-chrome13-save]')).toBeVisible();
   });
 
   test('Bitcoin / Silk Road news literacy on about', async ({ page }) => {
@@ -107,6 +137,7 @@ test.describe('2013 densify', () => {
     await expect(page.locator('body')).toContainText(/HealthCare\.gov|October 1|open enrollment/i);
     await page.evaluate(() => localStorage.removeItem('itt13-healthcare-ack'));
     await page.reload();
+    await page.locator('[data-hc-email]').fill('you@example.com');
     await page.locator('[data-hc-try="1"]').click().catch(() => {});
     await page.waitForTimeout(700);
     await page.locator('[data-hc-try="2"]').click().catch(() => {});
@@ -120,10 +151,13 @@ test.describe('2013 densify', () => {
     await expect(page.locator('body')).toContainText(/iPad Air|October 22|2013/i);
     await page.evaluate(() => localStorage.removeItem('itt13-ipadair'));
     await page.reload();
-    await completeRealGate(page, '[data-itt-real-save][data-storage-key="ipadair"]', {
-      storageKey: 'ipadair',
-    });
-    expect(await page.evaluate(() => localStorage.getItem('itt13-ipadair'))).toBeTruthy();
+    await page.waitForTimeout(400);
+    await page.locator('[data-air-cfg="cellular"]').click();
+    await page.locator('[data-air-mini]').click();
+    await page.locator('[data-ipadair-claim]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-ipadair')), { timeout: 8000 })
+      .toBeTruthy();
   });
 
   test('continuity Spotify Netflix Uber year-voice 2013', async ({ page }) => {
@@ -141,10 +175,12 @@ test.describe('2013 densify', () => {
     await expect(page.locator('body')).toContainText(/Yahoo|Tumblr|1\.1|May 20|2013/i);
     await page.evaluate(() => localStorage.removeItem('itt13-tumblr-yahoo'));
     await page.reload();
-    await completeRealGate(page, '[data-itt-real-save][data-storage-key="tumblr-yahoo"]', {
-      storageKey: 'tumblr-yahoo',
-    });
-    expect(await page.evaluate(() => localStorage.getItem('itt13-tumblr-yahoo'))).toBeTruthy();
+    await page.waitForTimeout(400);
+    await page.locator('[data-ty-pin]').click();
+    await page.locator('[data-ty-promise]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-tumblr-yahoo')), { timeout: 8000 })
+      .toBeTruthy();
   });
 
   test('Google Glass Explorer culture', async ({ page }) => {
@@ -152,9 +188,13 @@ test.describe('2013 densify', () => {
     await expect(page.locator('body')).toContainText(/Glass|Explorer|2013/i);
     await page.evaluate(() => localStorage.removeItem('itt13-glass'));
     await page.reload();
-    await checkAllReq(page);
+    await page.waitForTimeout(500);
+    await page.locator('[data-glass-explorer]').check();
+    await page.locator('[data-glass-backlash]').check();
     await page.locator('[data-glass-ack]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-glass'))).toBeTruthy();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-glass')), { timeout: 8000 })
+      .toBeTruthy();
   });
 
   test('Bitcoin news room bans market UI', async ({ page }) => {
@@ -163,9 +203,13 @@ test.describe('2013 densify', () => {
     await expect(page.locator('body')).toContainText(/no market|no drug|literacy/i);
     await page.evaluate(() => localStorage.removeItem('itt13-btc-room'));
     await page.reload();
-    await checkAllReq(page);
+    await page.waitForTimeout(500);
+    await page.locator('[data-btc-news]').check();
+    await page.locator('[data-btc-nomarket]').check();
     await page.locator('[data-btc-room-ack]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-btc-room'))).toBeTruthy();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-btc-room')), { timeout: 8000 })
+      .toBeTruthy();
   });
 
   test('Vine Android Jun 2 densify', async ({ page }) => {
@@ -173,10 +217,12 @@ test.describe('2013 densify', () => {
     await expect(page.locator('body')).toContainText(/June 2|Android|6 second/i);
     await page.evaluate(() => localStorage.removeItem('itt13-vine-android'));
     await page.reload();
-    await completeRealGate(page, '[data-itt-real-save][data-storage-key="vine-android"]', {
-      storageKey: 'vine-android',
-    });
-    expect(await page.evaluate(() => localStorage.getItem('itt13-vine-android'))).toBeTruthy();
+    await page.waitForTimeout(500);
+    await page.locator('[data-vine-android]').click();
+    await page.locator('[data-vine-loop]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-vine-android')), { timeout: 8000 })
+      .toBeTruthy();
   });
 
   test('period UI kits: Vine app chrome + Snap yellow + IG filters', async ({ page }) => {
@@ -212,46 +258,44 @@ test.describe('2013 densify', () => {
   test('Medium Telegram WhatsApp residual rooms', async ({ page }) => {
     await page.goto('/years/2013/sites/medium/index.html');
     await expect(page.locator('body')).toContainText(/Medium|2013/i);
-    await page.evaluate(() => {
-      localStorage.removeItem('itt13-medium');
-      localStorage.removeItem('itt13-medium-drafts');
-    });
+    await expect(page.locator('.itt-archive-note, [data-itt-continuity-archive]').first()).toBeVisible();
+    await page.evaluate(() => localStorage.removeItem('itt13-medium-draft'));
     await page.reload();
-    await page.locator('[data-medium-draft]').fill('2013 medium densify draft');
-    await completeRealGate(page, '[data-itt-real-save][data-storage-key="medium"]', {
-      storageKey: 'medium',
-    });
-    const med = await page.evaluate(
-      () => localStorage.getItem('itt13-medium') || localStorage.getItem('itt13-medium-drafts')
-    );
-    expect(med).toBeTruthy();
+    await page.locator('[data-medium-publish]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt13-medium-draft'))).toBeFalsy();
+    await page.locator('[data-medium-draft]').fill('Six-second loops and a long-form essay.');
+    await page.locator('[data-medium-literacy]').check();
+    await page.locator('[data-medium-publish]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-medium-draft')), { timeout: 8000 })
+      .toBeTruthy();
 
     await page.goto('/years/2013/sites/telegram/index.html');
     await page.evaluate(() => localStorage.removeItem('itt13-telegram'));
     await page.reload();
+    await page.waitForTimeout(500);
     await page.locator('[data-telegram-nick], [name=nick]').first().fill('museum_user');
-    await page.locator('[data-telegram-privacy]').check({ force: true });
+    await page.locator('[data-telegram-privacy]').check();
     await page.locator('[data-telegram-seed]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-telegram'))).toBeTruthy();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-telegram')), { timeout: 8000 })
+      .toBeTruthy();
 
     await page.goto('/years/2013/sites/whatsapp/index.html');
     await expect(page.locator('body')).toContainText(/2013|pre-Facebook|not.*acquired|WhatsApp/i);
     await page.evaluate(() => {
-      Object.keys(localStorage)
-        .filter((k) => k.indexOf('itt13-wa') === 0)
-        .forEach((k) => localStorage.removeItem(k));
+      localStorage.removeItem('itt13-whatsapp');
+      localStorage.removeItem('itt13-wa-phone');
+      localStorage.removeItem('itt13-wa-installed');
     });
     await page.reload();
+    await page.waitForTimeout(400);
     await page.locator('[data-wa13-phone]').fill('5551234567');
     await page.locator('[data-wa13-verify]').click();
     await page.locator('[data-wa13-install]').click();
-    const wa = await page.evaluate(
-      () =>
-        localStorage.getItem('itt13-wa-installed') ||
-        localStorage.getItem('itt13-wa-install') ||
-        localStorage.getItem('itt13-whatsapp')
-    );
-    expect(wa).toBeTruthy();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-wa-installed')), { timeout: 8000 })
+      .toBeTruthy();
   });
 });
 

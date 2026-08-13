@@ -159,8 +159,7 @@
         "[data-spotify-status]",
         "[data-snap-status]",
         "[data-uber-status]",
-        /* do NOT include [data-maps-status] — Maps paints trail HTML (HousingMaps links)
-           and generic feedback would strip anchors via textContent */
+        "[data-maps-status]",
         "[data-cart-flash]",
         "#cart-flash"
       ];
@@ -177,12 +176,11 @@
       var doc = opts.doc || document;
       var html = String(message || "Saved (this browser only).");
       var plain = stripHtml(html);
-      var st = resolveStatusNode(doc, opts);
+      /* status: false skips product status lines (e.g. maps HTML with handoff links) */
+      var st = opts.status === false ? null : resolveStatusNode(doc, opts);
       if (st) {
-        /* Prefer text for status lines (safe); allow HTML if data-allow-html=1
-           or the message itself carries markup (trail handoff links). */
-        var msgHasHtml = /<[a-z][\s\S]*>/i.test(html);
-        if (st.getAttribute("data-allow-html") === "1" || msgHasHtml) st.innerHTML = html;
+        /* Prefer text for status lines (safe); allow HTML if data-allow-html=1 */
+        if (st.getAttribute("data-allow-html") === "1") st.innerHTML = html;
         else st.textContent = plain;
         st.setAttribute("data-itt-feedback", "1");
         st.className = (st.className || "").replace(/\bitt-status-pulse\b/g, "") + " itt-status-pulse";
@@ -268,8 +266,10 @@
       if (!steps.length && !stepId) return;
       var done = getTourDone();
       var changed = false;
+      var stampedIds = [];
       function setUsed(id) {
         if (!id) return;
+        stampedIds.push(String(id));
         var prev = done[id];
         if (prev === true || tourStepUsed(prev)) return;
         done[id] = { visited: true, used: true, ts: Date.now() };
@@ -285,8 +285,32 @@
           if (!st.id || !st.match) continue;
           if (path.indexOf(st.match) !== -1) setUsed(st.id);
         }
+        /* REAL action on a room with no matching tour id still stamps passport */
+        if (!stampedIds.length) {
+          var rough =
+            path.replace(/.*\/sites\//, "").replace(/\/[^/]*$/, "").replace(/\//g, "-") || "real";
+          stampedIds.push(rough.slice(0, 32));
+        }
       }
       if (changed) setTourDone(done);
+      /* Passport stamps (hub passport book) — always on REAL product action */
+      try {
+        var MP =
+          (typeof window !== "undefined" && window.ITT && window.ITT.MuseumProgress) ||
+          ITT.MuseumProgress;
+        if (MP && typeof MP.stamp === "function") {
+          var si;
+          for (si = 0; si < stampedIds.length; si++) {
+            MP.stamp(YEAR, stampedIds[si], {
+              label: stampedIds[si],
+              href: (location.pathname || "").split("/").slice(-2).join("/")
+            });
+          }
+          if (typeof MP.injectTrailBar === "function") MP.injectTrailBar(document);
+        }
+      } catch (ePass) {
+        /* */
+      }
     }
 
     function renderTour(root) {
@@ -466,38 +490,92 @@
           var item = config.nav[i];
           var on = active(item.match || item.href);
           var homeCls = isHomeNavItem(item) ? " itt-nav-start" : "";
+          if (i > 0) {
+            links.push('<span class="itt-nav-sep" aria-hidden="true">·</span>');
+          }
           /* Site directory strip — wayfinding only, not a museum badge */
           links.push(
-            '<a class="itt-nav' + homeCls + on + '" href="' + R(item.href) + '">' +
-              '<font color="' + (on || homeCls ? "#FFFFFF" : "#FFFF99") + '">' +
+            '<a class="itt-nav' +
+              homeCls +
+              on +
+              '" href="' +
+              R(item.href) +
+              '">' +
+              '<font color="' +
+              (on || homeCls ? "#FFFFFF" : "#FFFF99") +
+              '">' +
               (homeCls ? "<b>" + escapeHtml(item.label) + "</b>" : escapeHtml(item.label)) +
               "</font></a>"
           );
         }
         var bar = document.createElement("div");
         bar.id = "itt-exhibit-nav";
-        /* Right side: ALWAYS a clear path back to Starting Point (subtitle is secondary) */
-        var right =
-          '<a class="itt-nav-home" href="' + homeHref + '" title="Back to this year\'s Starting Point">' +
-          '<font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b>← Starting Point</b></font></a>';
+        /* Home alone on the right; subtitle on its own row (prevents nowrap overflow) */
+        var homeLink =
+          '<a class="itt-nav-home" href="' +
+          homeHref +
+          '" title="Back to this year\'s Starting Point">' +
+          '<font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b>← Start</b></font></a>';
+        var subLine = "";
         if (config.navSubtitle) {
-          right +=
-            ' <font color="#99CCFF" face="Arial, Helvetica, sans-serif" size="1"> · ' +
+          subLine =
+            '<div class="itt-nav-sub" style="font:10px/1.3 Arial,Helvetica,sans-serif;color:#99CCFF;' +
+            'padding:0 6px 4px;background:#000080">' +
             escapeHtml(config.navSubtitle) +
-            "</font>";
+            "</div>";
         }
         bar.innerHTML =
-          '<table width="100%" cellpadding="3" cellspacing="0" border="0" bgcolor="#000080">' +
-          "<tr><td>" +
-          '<font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">' +
-          links.join(" &nbsp;|&nbsp; ") +
-          "</font></td>" +
-          '<td align="right" nowrap class="itt-nav-home-cell">' +
-          right +
-          "</td></tr></table>";
+          '<table width="100%" cellpadding="4" cellspacing="0" border="0" bgcolor="#000080" class="itt-nav-table">' +
+          "<tr>" +
+          '<td class="itt-nav-links-cell" style="vertical-align:middle">' +
+          '<div class="itt-nav-linkrow">' +
+          links.join("") +
+          "</div></td>" +
+          '<td align="right" class="itt-nav-home-cell" style="vertical-align:middle">' +
+          homeLink +
+          "</td></tr></table>" +
+          subLine;
+        /* Soft wrap long year navs inside narrow iframe */
+        if (!document.getElementById("itt-nav-overflow-css")) {
+          var navCss = document.createElement("style");
+          navCss.id = "itt-nav-overflow-css";
+          navCss.type = "text/css";
+          navCss.appendChild(
+            document.createTextNode(
+              "#itt-exhibit-nav{max-width:100%;overflow:hidden;box-sizing:border-box}" +
+                "#itt-exhibit-nav .itt-nav-table{table-layout:fixed;width:100%;max-width:100%}" +
+                "#itt-exhibit-nav .itt-nav-links-cell{overflow:hidden;width:auto}" +
+                "#itt-exhibit-nav .itt-nav-links-cell .itt-nav-linkrow{" +
+                "display:flex;flex-wrap:wrap;gap:2px 8px;align-items:center;" +
+                "line-height:1.4;font:12px/1.4 Arial,Helvetica,sans-serif}" +
+                "#itt-exhibit-nav a.itt-nav{white-space:nowrap;text-decoration:none}" +
+                "#itt-exhibit-nav .itt-nav-sep{opacity:0.45;user-select:none}" +
+                "#itt-exhibit-nav .itt-nav-home-cell{width:4.5em;white-space:nowrap}" +
+                "#itt-exhibit-nav .itt-nav-sub{" +
+                "box-sizing:border-box;white-space:nowrap;overflow:hidden;" +
+                "text-overflow:ellipsis;max-width:100%}"
+            )
+          );
+          (document.head || document.documentElement).appendChild(navCss);
+        }
+        try {
+          bar.style.maxWidth = "100%";
+          bar.style.overflow = "hidden";
+          bar.style.boxSizing = "border-box";
+        } catch (eBar) {
+          /* */
+        }
         var slot = document.getElementById("itt-nav-slot");
         if (slot) {
           slot.innerHTML = "";
+          try {
+            slot.style.maxWidth = "100%";
+            slot.style.overflow = "hidden";
+            slot.style.boxSizing = "border-box";
+            slot.style.width = "100%";
+          } catch (eSlot) {
+            /* */
+          }
           slot.appendChild(bar);
           slot.setAttribute("aria-hidden", "false");
         } else if (document.body.firstChild) {
@@ -538,6 +616,8 @@
               "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
               "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
               "body.has-itt-wayfind{padding-bottom:56px !important;}" +
+              "html,body{max-width:100%;overflow-x:hidden;}" +
+              ".itt-nav-slot{max-width:100%;width:100%;box-sizing:border-box;overflow:hidden;margin-left:0;margin-right:0;}" +
               "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
                 "background:#000060;text-decoration:none !important;}" +
               "#itt-exhibit-nav a.itt-nav-home:hover{background:#0000aa;}"
@@ -614,7 +694,15 @@
     api.renderCounter = renderCounter;
     api.renderTour = renderTour;
     api.renderActivity = renderActivity;
-    api.injectNav = injectNav;
+    api.injectNav = function () {
+      injectNav();
+      /* UX pack hooks — safe no-ops if js/ux not loaded */
+      try {
+        if (ITT.UX && typeof ITT.UX.bootContent === "function") {
+          ITT.UX.bootContent(document);
+        }
+      } catch (eUx) { /* */ }
+    };
     api.ensureFlashHost = ensureFlashHost;
   };
 
@@ -629,6 +717,15 @@
       var escapeHtml = api.escapeHtml;
       if (config.features && (config.features.nav || config.features.museumBar)) {
         api.injectNav();
+      }
+      /* First-night trail strip + passport wiring */
+      try {
+        var MP0 = ITT.MuseumProgress;
+        if (MP0 && typeof MP0.injectTrailBar === "function") {
+          MP0.injectTrailBar(document);
+        }
+      } catch (eNight) {
+        /* */
       }
       api.markTourProgress();
       var counters = document.querySelectorAll(".hit-counter");
@@ -900,28 +997,6 @@
           }
           el.addEventListener("click", function (ev) {
             ev.preventDefault();
-            /* REAL multi-step: literacy checks if present, else two-click arm */
-            var checks = document.querySelectorAll("[data-dl-check], [data-itt-download-confirm]");
-            if (checks.length) {
-              var need = Math.min(2, checks.length);
-              var okN = 0;
-              var ci;
-              for (ci = 0; ci < checks.length; ci++) if (checks[ci].checked) okN++;
-              if (okN < need) {
-                api.showFlash("REAL gate: confirm download literacy (" + need + " check" + (need > 1 ? "s" : "") + ") first.");
-                return;
-              }
-            } else if (el.getAttribute("data-itt-dl-armed") !== "1") {
-              el.setAttribute("data-itt-dl-armed", "1");
-              api.showFlash("Confirm: no real installer — click download again (REAL two-step).");
-              var lab0 = el.tagName === "INPUT" ? el.value : el.textContent;
-              try {
-                if (el.tagName === "INPUT") el.value = "Click again to confirm";
-                else el.textContent = "Click again to confirm";
-                el.setAttribute("data-itt-dl-label0", lab0 || "");
-              } catch (eLab) { /* */ }
-              return;
-            }
             runDownload(el);
           });
         })(dls[di]);
@@ -969,126 +1044,72 @@
         })(wikiBtns[wi]);
       }
 
-      /* Wikipedia Save → year-scoped history (REAL, not soft GET) */
-      function wikiPagesKey() {
-        return storageKey("wiki-pages");
-      }
-      function loadWikiPages() {
-        var list = loadJSON(wikiPagesKey(), []);
-        return Array.isArray(list) ? list : [];
-      }
-      function saveWikiPages(list) {
-        saveJSON(wikiPagesKey(), list.slice(0, 40));
-      }
-      function bindWikiSave(btn) {
-        if (!btn || btn.getAttribute("data-wiki-save-bound") === "1") return;
-        btn.setAttribute("data-wiki-save-bound", "1");
-        stylePeriodButton(btn);
-        btn.addEventListener("click", function (ev) {
-          ev.preventDefault();
-          var form = btn.form || (btn.closest && btn.closest("form"));
-          var ta = form
-            ? form.querySelector("textarea[name='text'], textarea")
-            : document.querySelector("textarea[name='text'], textarea");
-          var sumEl = form ? form.querySelector('[name="summary"]') : null;
-          var body = ta ? String(ta.value || "").trim() : "";
-          var summary = sumEl ? String(sumEl.value || "").trim() : "";
-          var st =
-            document.querySelector("[data-wiki-save-status]") ||
-            (form && form.querySelector("[data-wiki-save-status]"));
-          if (body.length < 8) {
-            if (st) {
-              st.style.display = "block";
-              st.textContent = "Write more text before saving (REAL gate — not a soft mock).";
-            }
-            api.showFlash("Wikipedia Save needs body text first (not empty theater).");
-            return;
+      /* 2001 Wikipedia Save — preview never writes; empty save never writes.
+         Do not bind later years (2010+ uses itt10-wiki-edit inline). */
+      if (String(YEAR) === "2001") {
+        var wikiSaves = document.querySelectorAll("[data-wiki-save]");
+        var wsi;
+        for (wsi = 0; wsi < wikiSaves.length; wsi++) {
+          (function (btn) {
+            stylePeriodButton(btn);
+            btn.addEventListener("click", function (ev) {
+              ev.preventDefault();
+              var form = btn.form || (btn.closest && btn.closest("form"));
+              var ta = form
+                ? form.querySelector("textarea[name='text'], textarea")
+                : document.querySelector("textarea");
+              var summaryEl = form ? form.querySelector('[name="summary"]') : null;
+              var summary = summaryEl ? String(summaryEl.value || "") : "";
+              var raw = ta ? String(ta.value || "").replace(/^\s+|\s+$/g, "") : "";
+              var st = document.querySelector("[data-wiki-save-status], [data-itt-action-status]");
+              if (!raw) {
+                if (st) st.textContent = "Type something first — empty save is not a page.";
+                api.actionFeedback("Type something first.", { status: st, flash: false });
+                return;
+              }
+              var pages = loadJSON(storageKey("wiki-pages"), []) || [];
+              if (!Array.isArray(pages)) pages = [];
+              var titleEl = document.querySelector(".wiki-h1");
+              var title = (titleEl && titleEl.textContent) || "Wikipedia";
+              pages.unshift({
+                title: title,
+                body: raw,
+                summary: summary,
+                ts: Date.now(),
+                multiStep: true,
+                real: true,
+                year: "2001"
+              });
+              saveJSON(storageKey("wiki-pages"), pages.slice(0, 20));
+              api.markTourUsed();
+              if (st) st.textContent = "Saved · open History to see this edit.";
+              api.actionFeedback("Saved locally · open History.", { status: st, flash: true });
+            });
+          })(wikiSaves[wsi]);
+        }
+        var histHost = document.querySelector("[data-wiki-history]");
+        if (histHost) {
+          var savedPages = loadJSON(storageKey("wiki-pages"), []) || [];
+          if (Array.isArray(savedPages) && savedPages.length) {
+            histHost.innerHTML = savedPages
+              .slice(0, 12)
+              .map(function (p) {
+                var d = "";
+                try {
+                  d = p.ts ? new Date(p.ts).toISOString().slice(0, 10) : "2001";
+                } catch (eD) {
+                  d = "2001";
+                }
+                return (
+                  "<tr><td>" +
+                  escapeHtml(d) +
+                  "</td><td>you</td><td>" +
+                  escapeHtml(p.summary || p.title || "edit") +
+                  "</td></tr>"
+                );
+              })
+              .join("");
           }
-          var titleEl = document.querySelector(".wiki-h1, h1");
-          var title = titleEl
-            ? String(titleEl.textContent || "").replace(/^Editing\s+/i, "").trim()
-            : "Wikipedia";
-          if (!title) title = "Wikipedia";
-          var list = loadWikiPages();
-          list.unshift({
-            title: title,
-            summary: summary || "(no summary)",
-            body: body.slice(0, 4000),
-            ts: Date.now(),
-            at: new Date().toLocaleString()
-          });
-          saveWikiPages(list);
-          if (st) {
-            st.style.display = "block";
-            st.textContent =
-              "Saved in this browser · " + wikiPagesKey() + " (" + list.length + " revision" +
-              (list.length === 1 ? "" : "s") + ")";
-          }
-          api.showFlash(
-            "Page saved locally · open <b>Page history</b> to see your revision · key <code>" +
-              wikiPagesKey() +
-              "</code>"
-          );
-          api.markTourProgress();
-          api.markTourUsed && api.markTourUsed();
-        });
-      }
-      var wikiSaveBtns = document.querySelectorAll("[data-wiki-save]");
-      for (var ws = 0; ws < wikiSaveBtns.length; ws++) bindWikiSave(wikiSaveBtns[ws]);
-      /* Upgrade legacy theater submit → REAL save */
-      var wikiForms = document.querySelectorAll("form");
-      for (var wf = 0; wf < wikiForms.length; wf++) {
-        (function (form) {
-          var sub = form.querySelector('input[type="submit"], button[type="submit"]');
-          if (!sub) return;
-          var label = (sub.value || sub.textContent || "").toLowerCase();
-          if (label.indexOf("save page") === -1) return;
-          if (sub.getAttribute("data-wiki-save") === "1" || sub.getAttribute("data-wiki-save") === "true") {
-            bindWikiSave(sub);
-            return;
-          }
-          sub.setAttribute("data-wiki-save", "1");
-          if (sub.tagName === "INPUT") sub.value = "Save page";
-          else sub.textContent = "Save page";
-          form.setAttribute("action", "#");
-          form.setAttribute("method", "post");
-          form.addEventListener("submit", function (ev) {
-            ev.preventDefault();
-          });
-          if (!form.querySelector("[data-wiki-save-status]")) {
-            var st = document.createElement("p");
-            st.setAttribute("data-wiki-save-status", "1");
-            st.style.cssText = "font-size:12px;color:#060;margin:8px 0";
-            if (sub.parentNode) sub.parentNode.insertBefore(st, sub.nextSibling);
-            else form.appendChild(st);
-          }
-          bindWikiSave(sub);
-        })(wikiForms[wf]);
-      }
-      /* History list from local saves */
-      var histHost = document.querySelector("[data-wiki-history]");
-      if (histHost) {
-        var pages = loadWikiPages();
-        if (pages.length) {
-          var rows = "";
-          var hi;
-          for (hi = 0; hi < pages.length; hi++) {
-            var pg = pages[hi];
-            rows +=
-              "<tr><td>" +
-              escapeHtml(pg.at || String(pg.ts || "")) +
-              "</td><td>you (local)</td><td>" +
-              escapeHtml(pg.summary || "") +
-              "</td></tr>";
-          }
-          histHost.innerHTML =
-            '<p style="font-size:12px;color:#060"><b>Your local revisions</b> · ' +
-            escapeHtml(wikiPagesKey()) +
-            "</p>" +
-            '<table border="1" cellpadding="4" cellspacing="0" width="100%" style="border-collapse:collapse;font-size:12px;margin-bottom:12px">' +
-            '<tr bgcolor="#f0f0f0"><th>Date</th><th>User</th><th>Summary</th></tr>' +
-            rows +
-            "</table>";
         }
       }
 

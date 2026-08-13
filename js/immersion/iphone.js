@@ -171,8 +171,59 @@
       });
     }
   }
+  function ottKey() {
+    return U().immersionStorageKey
+      ? U().immersionStorageKey("iphone", "itt07")
+      : "itt07-iphone";
+  }
+
+  function bootOtt(doc) {
+    var host = doc.querySelector("[data-iphone-ott]");
+    if (!host || host.getAttribute("data-iphone-ott-bound") === "1") return;
+    host.setAttribute("data-iphone-ott-bound", "1");
+    var btn = host.querySelector("[data-iphone-ott-save]");
+    var st = host.querySelector("[data-iphone-ott-status], [data-itt-action-status]");
+    var key = ottKey();
+    function restore() {
+      try {
+        var raw = localStorage.getItem(key);
+        if (raw && st) st.textContent = "Saved in this browser · " + key;
+      } catch (eR) { /* */ }
+    }
+    restore();
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var shipped = host.querySelector("[data-iphone-ott-shipped]");
+      var nostore = host.querySelector("[data-iphone-ott-nostore]");
+      if (!(shipped && shipped.checked && nostore && nostore.checked)) {
+        if (st) {
+          st.textContent = "Check both: Jun 29 ship and no App Store. Incomplete does not write.";
+          st.style.color = "#fc6";
+        }
+        return;
+      }
+      var payload = {
+        multiStep: true,
+        real: true,
+        year: "2007",
+        shipped: "2007-06-29",
+        noAppStore: true,
+        ts: Date.now()
+      };
+      try {
+        localStorage.setItem(key, JSON.stringify(payload));
+      } catch (eS) { /* */ }
+      if (st) {
+        st.textContent = "Saved · Safari is the 2007 web · " + key;
+        st.style.color = "#6c6";
+      }
+      ittFeedback("Saved iPhone Safari year", st);
+    });
+  }
+
   function boot(doc) {
     doc = doc || document;
+    bootOtt(doc);
     if (!doc.querySelector("[data-iphone-browse], [data-iphone-screen], [data-iphone-history]")) {
       return;
     }

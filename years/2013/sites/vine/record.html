@@ -4,10 +4,14 @@
 <meta charset="utf-8">
 <title>Vine — Camera</title>
 <link rel="stylesheet" href="../../../../css/period-2013.css">
+<link rel="stylesheet" href="../../../../css/phone-frame.css">
 <script src="../../../../js/immersion-2013.js" defer></script>
 </head>
 <body class="vine-app">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="itt-phone itt-phone-4">
+<div class="itt-phone-status"><span>LTE</span><span>9:41 AM</span><span>100%</span></div>
+<div class="itt-phone-screen">
 <div class="vine-topbar">
   <a href="index.html" style="color:#fffc00;text-decoration:none">← Home</a>
   <span>Camera</span>
@@ -24,6 +28,9 @@
   <div class="itt13-status" data-vine-status style="min-height:1.2em;margin-top:10px;color:#8f8"></div>
   <p style="font-size:11px;color:#666;margin-top:20px"><a href="index.html">Back to feed</a></p>
 </div>
+</div>
+<div class="itt-phone-home" aria-hidden="true"></div>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var KEY = "itt13-vine-posts";
@@ -35,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var secs = 0;
   var timer = null;
   var holding = false;
+  var t0 = 0;
   var MAX = 6;
   function setBar(s) {
     secs = Math.min(MAX, s);
@@ -46,7 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ev && ev.preventDefault) ev.preventDefault();
     if (timer) clearInterval(timer);
     setBar(0);
-    var t0 = Date.now();
+    t0 = Date.now();
+    try {
+      if (ev && ev.currentTarget && ev.pointerId != null && ev.currentTarget.setPointerCapture) {
+        ev.currentTarget.setPointerCapture(ev.pointerId);
+      }
+    } catch (eCap) { /* */ }
     timer = setInterval(function () {
       setBar((Date.now() - t0) / 1000);
       if (secs >= MAX) endHold();
@@ -57,6 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
     holding = false;
     if (timer) clearInterval(timer);
     timer = null;
+    /* Snap to wall clock so a busy main thread (iframe boot, e2e load) still counts. */
+    if (t0) setBar((Date.now() - t0) / 1000);
+    if (secs < 0.3) {
+      if (st) st.textContent = "Hold to record · up to 6 seconds";
+      return;
+    }
     if (st) st.textContent = "Ready · ~" + secs.toFixed(1) + "s";
   }
   if (hold) {
@@ -64,18 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
       hold.addEventListener("pointerdown", startHold);
       hold.addEventListener("pointerup", endHold);
       hold.addEventListener("pointercancel", endHold);
-      hold.addEventListener("pointerleave", endHold);
-    } else {
-      hold.addEventListener("mousedown", startHold);
-      hold.addEventListener("mouseup", endHold);
-      hold.addEventListener("mouseleave", endHold);
-      hold.addEventListener("touchstart", startHold, { passive: false });
-      hold.addEventListener("touchend", endHold);
+      /* Do not end on pointerleave — synthetic e2e events leave immediately
+         and capture already delivers pointerup if the finger slides. */
     }
+    hold.addEventListener("mousedown", startHold);
+    hold.addEventListener("mouseup", endHold);
+    hold.addEventListener("mouseleave", endHold);
+    hold.addEventListener("touchstart", startHold, { passive: false });
+    hold.addEventListener("touchend", endHold);
   }
   if (post) {
     post.addEventListener("click", function () {
-      if (secs < 0.3) secs = 3;
+      if (secs < 0.3) {
+        if (st) st.textContent = "Hold to record first · up to 6 seconds";
+        return;
+      }
       var list = [];
       try { list = JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) {}
       var caption = (cap && cap.value) || "untitled";

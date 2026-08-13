@@ -5,6 +5,7 @@
   <title>HoverChop — museum game</title>
   <link rel="stylesheet" href="../../css/games.css">
   <link rel="stylesheet" href="../../css/period-announce.css">
+  <link rel="stylesheet" href="../../css/year-game-ui.css">
 </head>
 <body>
   <div class="games-wrap">
@@ -15,6 +16,7 @@
       <a href="../../index.html">Hub</a>
     </header>
     <section class="games-panel">
+      <div class="itt-year-game yg-shell" data-year-game data-year="2005" data-game-id="heli" data-yg-goal="Hold to climb. Release to fall. Don’t hit walls." data-yg-next-href="../../years/2005/sites/playable/game.html" data-yg-next-label="2005 year HoverChop">
       <h1>HoverChop</h1>
       <p style="font-size:12px;margin:0 0 8px">Museum original · helicopter-genre (hold mouse or space to climb). Not a commercial title.</p>
       <div class="flash-banner">Loading theater complete · HTML5 canvas (period games used Flash; we use JS for the museum)</div>
@@ -27,10 +29,12 @@
         <canvas id="game-canvas" width="480" height="320" data-game="heli"></canvas>
       </div>
       <div class="scoreboard" id="score-board"></div>
-      <p style="font-size:11px"><a href="index.html">← Arcade</a> · <a href="../portals/miniclip/index.html">Miniclip portal</a></p>
+      <p style="font-size:11px"><a href="index.html">← Arcade</a> · <a href="../portals/miniclip/index.html">Miniclip portal</a> · <a href="../../years/2005/sites/playable/game.html">2005 year game</a></p>
+      </div>
     </section>
   </div>
   <script src="../../js/games/scores.js"></script>
+  <script src="../../js/games/year-game-boot.js"></script>
   <script src="../../js/games/heli.js"></script>
   <script src="../../js/games/shell.js"></script>
 </body>

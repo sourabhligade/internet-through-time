@@ -25,9 +25,18 @@ test.describe('1996 Space Jam + HoTMaiL polish', () => {
     const count = await planets.count();
     expect(count).toBeGreaterThanOrEqual(6);
 
-    // Navigate to Jam Central
+    // Navigate to Jam Central — use the planet hub link, not year-nav */index.html
     await frame.locator('a[href*="jam.htm"]').first().click({ force: true });
     await expect(frame.locator('text=/Jam Central/i').first()).toBeVisible({ timeout: 15000 });
+    await expect(frame.locator('body')).toContainText(/no plugin required/i);
+    await frame.locator('a[href="../index.html"]').first().click({ force: true });
+    await expect(frame.locator('img[alt="Space Jam"]').first()).toBeVisible({ timeout: 10000 });
+    await frame.locator('a[href*="press.htm"]').first().click({ force: true });
+    await expect(frame.locator('body')).toContainText(/Press|press kit|no plugin required/i);
+    await frame.locator('a[href="../index.html"]').first().click({ force: true });
+    await expect(frame.locator('img[alt="Space Jam"]').first()).toBeVisible({ timeout: 10000 });
+    await frame.locator('a[href*="junior.htm"]').first().click({ force: true });
+    await expect(frame.locator('body')).toContainText(/Junior Jam|no plugin required/i);
   });
 
   test('HoTMaiL seed inbox has welcome messages after login', async ({ page }) => {

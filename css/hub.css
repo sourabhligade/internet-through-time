@@ -97,235 +97,12 @@ body {
 }
 
 /* —— Start path (first-visit CTAs) —— */
-/* Primary row: Begin / Continue / Directory / Games */
-.start-primary-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 14px 0 8px;
-  align-items: center;
-}
-
-.start-primary-row .start-btn.start-primary {
-  font-size: 12px;
-  padding: 6px 14px;
-}
-
-/* When resume is present, Begin is secondary-but-still-clear */
-.start-btn.start-primary.start-primary-soft {
-  background: #c0c0c0;
-  color: #000;
-  border-top-color: #ffffff;
-  border-left-color: #ffffff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
-  font-weight: bold;
-}
-
-.start-btn.start-primary.start-primary-soft:hover,
-.start-btn.start-primary.start-primary-soft:focus {
-  background: #d4d0c8;
-  color: #000;
-}
-
-.resume-wrap {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  max-width: 100%;
-}
-
-.resume-wrap .start-resume {
-  max-width: min(420px, 100%);
-  white-space: normal;
-  line-height: 1.25;
-  text-align: left;
-}
-
-.resume-sub {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  color: #666;
-  padding-left: 2px;
-}
-
-.resume-sub.hidden { display: none; }
-
-/* Path of the day */
-.path-of-week {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin: 12px 0 8px;
-  padding: 8px 10px;
-  background: #ffffee;
-  border: 1px solid #cc0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.path-of-week-badge {
-  flex: 0 0 auto;
-  font-size: 9px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  background: #000080;
-  color: #fff;
-  padding: 3px 6px;
-  line-height: 1.3;
-}
-
-.path-of-week-body { min-width: 0; flex: 1; }
-
-.path-of-week-title {
-  display: block;
-  font-size: 13px;
-  font-weight: bold;
-  color: #000080;
-  text-decoration: none;
-  margin: 0 0 2px;
-}
-
-.path-of-week-title:hover,
-.path-of-week-title:focus {
-  text-decoration: underline;
-  outline: 1px dotted #000;
-}
-
-.path-of-week-blurb {
-  margin: 0;
-  font-size: 11px;
-  line-height: 1.4;
-  color: #333;
-}
-
-/* Year visited progress dot */
-.year-row {
-  position: relative;
-}
-
-.year-progress-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-left: 6px;
-  border-radius: 50%;
-  background: #008000;
-  border: 1px solid #004000;
-  vertical-align: middle;
-  box-shadow: 0 0 0 1px #fff;
-  flex-shrink: 0;
-}
-
-.year-card.year-visited .meta::after {
-  content: " · visited";
-  color: #060;
-  font-weight: normal;
-}
-
-.start-signatures {
-  margin: 10px 0 4px;
-  padding-top: 8px;
-  border-top: 1px solid #dfdfdf;
-}
-
-.start-signatures-label {
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
 .start-path {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 0;
+  margin: 12px 0 6px;
   align-items: center;
-}
-
-.start-path-signatures .start-btn {
-  font-size: 10px;
-  padding: 3px 8px;
-}
-
-/* Collapsed scale / how-to — keep above-the-fold quiet */
-.hub-details-scale {
-  margin: 10px 0 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #555;
-}
-
-.hub-details-scale summary {
-  cursor: pointer;
-  color: #000080;
-  list-style-position: outside;
-}
-
-.hub-details-scale summary:hover {
-  text-decoration: underline;
-}
-
-.hub-details-scale[open] summary {
-  margin-bottom: 4px;
-}
-
-.hub-details-scale .hub-stats {
-  margin: 4px 0 0;
-}
-
-.how-quick-details {
-  background: #ffffff;
-  border: 2px solid;
-  border-color: #dfdfdf #404040 #404040 #dfdfdf;
-  margin: 0 0 12px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.how-quick-summary {
-  cursor: pointer;
-  padding: 8px 12px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #000080;
-  list-style-position: outside;
-}
-
-.how-quick-summary:hover {
-  background: #f0f0f0;
-}
-
-.how-quick-details[open] .how-quick-summary {
-  border-bottom: 1px solid #c0c0c0;
-}
-
-.how-quick-details .how-quick {
-  border: 0;
-  margin: 0;
-  box-shadow: none;
-}
-
-.hub-thesis-compact {
-  padding: 8px 12px;
-}
-
-.hub-thesis-compact .thesis-lead {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: 1.45;
-  color: #222;
-}
-
-.hub-thesis-compact .thesis-lead a {
-  color: #000080;
-}
-
-.hub-thesis-compact code {
-  font-size: 11px;
 }
 
 .start-btn {
@@ -1492,50 +1269,6 @@ body {
   .year-card-inner { padding-right: 52px; }
   .year-card.available::before { font-size: 8px; }
   .y2007 .motif { opacity: 0.35; }
-
-  /* First-run primary CTAs full width on phones */
-  .start-primary-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-  }
-  .start-primary-row .start-btn {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 10px 12px;
-    font-size: 13px;
-  }
-  .resume-wrap {
-    width: 100%;
-    align-items: stretch;
-  }
-  .resume-wrap .start-resume {
-    max-width: none;
-    text-align: center;
-  }
-  .resume-sub {
-    text-align: center;
-    width: 100%;
-  }
-  .path-of-week {
-    flex-direction: column;
-    gap: 6px;
-  }
-  .start-path-signatures {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .start-path-signatures .start-btn {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-  .hub-ann-extra { display: none; }
 }
 
 /* 2013 card skin — Vine green / iOS blue */
@@ -1544,13 +1277,22 @@ body {
 .year-card.y2013 .year { color: #007aff; }
 .year-card.y2013 .era-chip { background: #00bf8f; color: #fff; }
 .year-card.y2013 .motif { background: linear-gradient(135deg, #00bf8f, #007aff); }
-
-.year-card.y2014 { border-color: #25d366 #404040 #404040 #c00; }
-.year-card.y2014 .year-card-inner { background: linear-gradient(180deg, #e8ffe8 0%, #fff5f5 45%, #f5f5f7 100%); }
+.year-card.y2014 { border-color: #25d366 #404040 #404040 #25d366; }
+.year-card.y2014 .year-card-inner { background: linear-gradient(180deg, #e8f5e9 0%, #fff8e1 45%); }
 .year-card.y2014 .year { color: #075e54; }
-.year-card.y2014 .era-chip { background: #075e54; color: #fff; }
-.year-card.y2014 .motif { background: linear-gradient(135deg, #25d366, #c00 55%, #0078d7); }
+.year-card.y2014 .era-chip { background: #25d366; color: #073; }
+.year-card.y2014 .motif { background: linear-gradient(135deg, #25d366, #c62828); }
+.year-card.y2015 { border-color: #0078d7 #404040 #404040 #111; }
+.year-card.y2015 .year-card-inner { background: linear-gradient(180deg, #e3f2fd 0%, #fce4ec 55%); }
+.year-card.y2015 .year { color: #0d47a1; }
+.year-card.y2015 .era-chip { background: #0078d7; color: #fff; }
+.year-card.y2015 .motif { background: linear-gradient(135deg, #111, #0078d7); }
 
+.year-card.y2016 { border-color: #c13584 #404040 #404040 #111; }
+.year-card.y2016 .year-card-inner { background: linear-gradient(180deg, #fce4ec 0%, #e8f5e9 55%); }
+.year-card.y2016 .year { color: #880e4f; }
+.year-card.y2016 .era-chip { background: #c13584; color: #fff; }
+.year-card.y2016 .motif { background: linear-gradient(135deg, #c13584, #3d5a3d); }
 
 
 /* 2017 — notch / Fortnite purple / Twitter blue */
@@ -1559,3 +1301,97 @@ body {
 .year-card.y2017 .year { color: #1a1a2e; }
 .year-card.y2017 .era-chip { background: #5b4bff; color: #fff; }
 .year-card.y2017 .motif { background: linear-gradient(135deg, #1da1f2, #5b4bff 55%, #111); }
+.year-card.y2017 { border-color: #5e35b1 #404040 #404040 #111; }
+.year-card.y2017 .year-card-inner { background: linear-gradient(180deg, #f3e5f5 0%, #e8eaf6 55%); }
+.year-card.y2017 .year { color: #4a148c; }
+.year-card.y2017 .era-chip { background: #5e35b1; color: #fff; }
+.year-card.y2017 .motif { background: linear-gradient(135deg, #5e35b1, #111); }
+
+.year-card.y2018 { border-color: #1565c0 #404040 #404040 #111; }
+.year-card.y2018 .year-card-inner { background: linear-gradient(180deg, #e3f2fd 0%, #eceff1 55%); }
+.year-card.y2018 .year { color: #0d47a1; }
+.year-card.y2018 .era-chip { background: #1565c0; color: #fff; }
+.year-card.y2018 .motif { background: linear-gradient(135deg, #1565c0, #111); }
+.year-card.y2019 { border-color: #e50914 #404040 #404040 #111; }
+.year-card.y2019 .year-card-inner { background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 55%); color: #eee; }
+.year-card.y2019 .year { color: #fff; }
+.year-card.y2019 .era-chip { background: #e50914; color: #fff; }
+.year-card.y2019 .motif { background: linear-gradient(135deg, #e50914, #111); }
+.year-card.y2019 .label, .year-card.y2019 .scale { color: #ccc; }
+.year-card.y2020 { border-color: #0b5cff #404040 #404040 #111; }
+.year-card.y2020 .year-card-inner { background: linear-gradient(180deg, #0b1020 0%, #1a2332 55%); color: #eee; }
+.year-card.y2020 .year { color: #fff; }
+.year-card.y2020 .era-chip { background: #0b5cff; color: #fff; }
+.year-card.y2020 .motif { background: linear-gradient(135deg, #0b5cff, #c62828); }
+.year-card.y2020 .label, .year-card.y2020 .scale { color: #ccc; }
+
+/* —— Passport + first night (1994–2013) —— */
+.hub-passport-link {
+  color: #000080;
+  font-weight: bold;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.passport-anchor { scroll-margin-top: 12px; }
+.itt-passport-root {
+  margin: 14px 0 18px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.passport-panel { padding: 12px 14px 14px; background: #ffffff; border-top: 1px solid #808080; }
+.passport-head h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: #000080;
+}
+.passport-meta { margin: 0 0 10px; color: #333; font-size: 11px; }
+.passport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.passport-year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 4px;
+  background: #e8e8e8;
+  border: 1px solid #808080;
+  text-decoration: none;
+  color: #000;
+  font-size: 11px;
+}
+.passport-year:hover { background: #fff8dc; border-color: #000080; }
+.passport-year.has-stamps {
+  background: #1a237e;
+  color: #fff;
+  border-color: #00bcd4;
+}
+.passport-year .py { font-weight: bold; }
+.passport-year .ps { font-size: 10px; opacity: 0.9; }
+.passport-year .ps.empty { opacity: 0.4; }
+.first-night-card {
+  padding: 10px 12px;
+  background: #e3f2fd;
+  border: 1px solid #1565c0;
+  line-height: 1.45;
+}
+.first-night-card .start-btn {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 6px;
+}
+button.start-btn {
+  cursor: pointer;
+  font: inherit;
+}
+.year-2013-start-card {
+  margin-bottom: 10px;
+}

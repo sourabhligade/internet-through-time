@@ -103,4 +103,33 @@ test.describe('1997 ICQ real flows', () => {
     );
     expect(leak).toEqual([]);
   });
+
+  test("trail: ICQ register then bid laptop (itt97 isolated)", async ({ page }) => {
+    await page.goto("/years/1997/sites/icq/register.html");
+    await page.evaluate(() => {
+      Object.keys(localStorage)
+        .filter((k) => k.startsWith("itt96-") || k.startsWith("itt97-"))
+        .forEach((k) => localStorage.removeItem(k));
+    });
+    await page.reload();
+    await page.fill('form[data-icq-register] [name="nick"]', "AfterSchool");
+    await page.locator('form[data-icq-register] button[type="submit"]').click();
+    await expect
+      .poll(async () => page.evaluate(() => !!localStorage.getItem("itt97-icq-uin")))
+      .toBeTruthy();
+    await page.goto("/years/1997/sites/icq/index.html");
+    await expect(page.locator('a[href*="ebay/item-laptop"]')).toBeVisible();
+    await page.goto("/years/1997/sites/ebay/item-laptop.html");
+    await page.fill('form[data-bid-form] [name="bid"]', "510");
+    await page.locator('form[data-bid-form] input[type="submit"]').click();
+    await expect
+      .poll(async () =>
+        page.evaluate(() =>
+          Object.keys(localStorage).some((k) => k.indexOf("itt97") === 0 && k.indexOf("bid") !== -1 && (localStorage.getItem(k) || "").includes("510"))
+        )
+      )
+      .toBeTruthy();
+    const leak = await page.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith("itt96-")));
+    expect(leak).toEqual([]);
+  });
 });

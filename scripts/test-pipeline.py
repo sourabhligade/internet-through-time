@@ -44,6 +44,7 @@ def test_ci_workflow_exists() -> None:
         "npm ci",
         "playwright test",
         "playwright install",
+        "check-all-years.py",
     ]
     for needle in required:
         if needle not in s:
@@ -138,6 +139,25 @@ def test_e2e_suite_present() -> None:
     ok(f"e2e-suite ({len(specs)} specs)")
 
 
+def test_browser_srp_parts() -> None:
+    for rel in (
+        "js/browser/navigate.js",
+        "js/browser/connect.js",
+        "js/browser/load-theater.js",
+        "js/browser/chrome-ui.js",
+        "js/browser/create.js",
+        "js/browser/year-boot.js",
+    ):
+        if not (ROOT / rel).is_file():
+            fail("browser-srp", f"missing {rel}")
+            return
+    core = read(ROOT / "js/browser-core.js")
+    if "browser/chrome-ui.js" not in core:
+        fail("browser-srp", "browser-core.js must load chrome-ui.js")
+        return
+    ok("browser-srp-parts")
+
+
 def test_required_year_shells() -> None:
     for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002"):
         p = ROOT / "years" / y / "index.html"
@@ -185,6 +205,7 @@ def main() -> int:
         test_ci_sh_executable,
         test_playwright_config_ci,
         test_e2e_suite_present,
+        test_browser_srp_parts,
         test_required_year_shells,
         test_deploy_configs,
         test_gitignore_test_artifacts,

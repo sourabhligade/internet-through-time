@@ -132,7 +132,19 @@
       ["googleplus", "immersion/googleplus.js"],
       ["snapchat", "immersion/snapchat.js"],
       ["siri", "immersion/siri.js"],
-      ["icq", "immersion/icq.js"]
+      ["icq", "immersion/icq.js"],
+      ["aim", "immersion/aim.js"],
+      ["mapquest", "immersion/mapquest.js"],
+      ["photobucket", "immersion/photobucket.js"],
+      ["pandora", "immersion/pandora.js"],
+      ["github", "immersion/github.js"],
+      ["msn", "immersion/msn.js"],
+      ["slack", "immersion/slack.js"],
+      ["imgur", "immersion/imgur.js"],
+      ["cnn", "immersion/facebook.js"],
+      ["wave", "immersion/wave.js"],
+      ["sourceforge", "immersion/sourceforge.js"],
+      ["oneThingMachines", "immersion/one-thing-machines.js"]
     ];
     var priority = [];
     var seen = {};
@@ -150,12 +162,17 @@
     /* shared first — nav / flash / tour */
     add("immersion/shared.js");
     /* year extras (Stories/GO/REAL multipage) must boot with the page, not idle-deferred */
+    add("immersion/real-flow.js");
+    /* Kit before extras. Extras IIFEs bind ITT.YearExtras at parse time and
+       abort if the kit is missing — it must not sit in deferred rest. */
+    add("immersion/year-extras-kit.js");
     var yi;
     for (yi = 0; yi < all.length; yi++) {
       if (/immersion\/year-\d{4}-extras\.js$/.test(all[yi])) add(all[yi]);
     }
     /* real-flow gates used on About/product literacy panels */
     add("immersion/real-flow.js");
+    add("immersion/one-thing-machines.js");
     var h;
     for (h = 0; h < hints.length; h++) {
       var key = hints[h][0];
@@ -175,6 +192,14 @@
       path.indexOf("whitehouse") !== -1
     ) {
       add("immersion/guestbook-search.js");
+    }
+    /* 1994 media gold — CSotD ?pick= + FishCam timer must not wait on deferred rest */
+    if (
+      path.indexOf("/csotd") !== -1 ||
+      path.indexOf("/fishcam") !== -1 ||
+      path.indexOf("/iuma") !== -1
+    ) {
+      add("immersion/media-1994.js");
     }
     var rest = [];
     var j;
@@ -244,6 +269,26 @@
 
     chain
       .then(function () {
+        /* Passport + first-night (shared with hub / year shell) */
+        if (!(ITT.MuseumProgress && ITT.MuseumProgress.stamp)) {
+          return loadScript(base + "museum-progress.js");
+        }
+        return Promise.resolve();
+      })
+      .then(function () {
+        /* UX pack for content pages — easy remove: delete this block */
+        return loadAll(base, [
+          "ux/flags.js",
+          "ux/copy-bank.js",
+          "ux/real-coach.js",
+          "ux/here-strip.js",
+          "ux/year-meter.js",
+          "ux/boot-content.js"
+        ]).catch(function () {
+          /* UX optional — immersion still works without it */
+        });
+      })
+      .then(function () {
         return loadScript(base + "immersion/registry.js");
       })
       .then(function () {
@@ -252,6 +297,7 @@
         var split = splitFeaturesForPage(features);
         ITT._immersionFeatureSplit = split;
 
+        var KIT = "immersion/year-extras-kit.js";
         var phase1 = split.priority.slice();
         if (!(ITT.immersionConfigs && ITT.immersionConfigs[YEAR])) {
           var cfgFile =
@@ -260,30 +306,61 @@
           phase1.push("config/" + cfgFile);
         }
 
-        return loadAll(base, phase1).then(function () {
-          return loadScript(base + "immersion/create.js");
-        }).then(function () {
-          bootCreate();
-          /* Defer the rest so YouTube/Maps/etc. paint and wire immediately */
-          if (split.rest && split.rest.length) {
-            var loadRest = function () {
-              loadAll(base, split.rest)
-                .then(function () {
-                  bootLateFeatures();
-                })
-                .catch(function (err) {
-                  console.error("ITT immersion deferred features failed:", err);
-                });
-            };
-            if (typeof requestIdleCallback === "function") {
-              requestIdleCallback(function () {
-                loadRest();
-              }, { timeout: 1200 });
-            } else {
-              setTimeout(loadRest, 0);
-            }
+        /* loadAll is Promise.all + async scripts — extras can parse before the
+           kit even when both are in priority. Peel the kit out and load it
+           first so year extras / true-packs bind ITT.YearExtras. */
+        function withoutKit(list) {
+          var out = [];
+          var wi;
+          for (wi = 0; wi < (list || []).length; wi++) {
+            if (list[wi] !== KIT) out.push(list[wi]);
           }
-        });
+          return out;
+        }
+        var listedKit = false;
+        var fi;
+        for (fi = 0; fi < features.length; fi++) {
+          if (features[fi] === KIT) listedKit = true;
+        }
+        phase1 = withoutKit(phase1);
+        split.rest = withoutKit(split.rest);
+
+        function afterKit() {
+          return loadAll(base, phase1).then(function () {
+            return loadScript(base + "immersion/create.js");
+          }).then(function () {
+            bootCreate();
+            try {
+              if (ITT.UX && typeof ITT.UX.bootContent === "function") {
+                ITT.UX.bootContent(document);
+              }
+            } catch (eUxBoot) { /* */ }
+            /* Defer the rest so YouTube/Maps/etc. paint and wire immediately */
+            if (split.rest && split.rest.length) {
+              var loadRest = function () {
+                loadAll(base, split.rest)
+                  .then(function () {
+                    bootLateFeatures();
+                  })
+                  .catch(function (err) {
+                    console.error("ITT immersion deferred features failed:", err);
+                  });
+              };
+              if (typeof requestIdleCallback === "function") {
+                requestIdleCallback(function () {
+                  loadRest();
+                }, { timeout: 1200 });
+              } else {
+                setTimeout(loadRest, 0);
+              }
+            }
+          });
+        }
+
+        if (listedKit && !(ITT.YearExtras && ITT.YearExtras.forYear)) {
+          return loadScript(base + KIT).then(afterKit);
+        }
+        return afterKit();
       })
       .catch(function (err) {
         console.error("ITT immersion bootstrap failed:", err);

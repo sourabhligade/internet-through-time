@@ -145,11 +145,18 @@
             btn.getAttribute("data-requires") || btn.getAttribute("data-req") || "[data-req]";
           var n = countChecked(doc, reqSel);
           if (n < min) {
-            feedback(
-              "REAL gate: complete at least " + min + " checks first (not a soft mock).",
-              st,
-              { error: true }
-            );
+            /* U2: era copy + pulse missing checkbox (js/ux/real-coach.js) */
+            var yInc = yearOf();
+            var msgInc =
+              ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+                ? ITT.UX.RealCoach.messageIncomplete(yInc, n, min)
+                : "REAL gate: complete at least " + min + " checks first (not a soft mock).";
+            try {
+              if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach) {
+                ITT.UX.RealCoach.pulseMissing(doc, reqSel);
+              }
+            } catch (ePulse) { /* */ }
+            feedback(msgInc, st, { error: true });
             return;
           }
           var field = btn.getAttribute("data-require-field");
@@ -157,8 +164,32 @@
           if (field) {
             var fe = doc.querySelector(field);
             fieldVal = fe && fe.value != null ? String(fe.value).replace(/^\s+|\s+$/g, "") : "";
-            if (fieldVal.length < 2) {
-              feedback("REAL gate: fill the required field first.", st, { error: true });
+            var minLen = parseInt(btn.getAttribute("data-require-field-min") || "2", 10);
+            if (isNaN(minLen) || minLen < 1) minLen = 2;
+            if (fieldVal.length < minLen) {
+              var yFld = yearOf();
+              var msgFld =
+                ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+                  ? ITT.UX.RealCoach.messageField(yFld)
+                  : "REAL gate: fill the required field first.";
+              feedback(msgFld, st, { error: true });
+              return;
+            }
+          }
+          /* Multi-step product: require N clicks on [data-ott-click] (or custom sel) */
+          var clickSel = btn.getAttribute("data-click-sel") || "[data-ott-click]";
+          var minClicks = parseInt(btn.getAttribute("data-min-clicks") || "0", 10);
+          if (isNaN(minClicks)) minClicks = 0;
+          var clickCount = 0;
+          if (minClicks > 0) {
+            var clicked = doc.querySelectorAll(clickSel + ".is-done, " + clickSel + "[data-ott-done='1']");
+            clickCount = clicked.length;
+            if (clickCount < minClicks) {
+              feedback(
+                "REAL gate: complete at least " + minClicks + " interactive step(s) first (not a soft mock).",
+                st,
+                { error: true }
+              );
               return;
             }
           }
@@ -168,16 +199,43 @@
             multiStep: true,
             real: true,
             checks: n,
+            clicks: clickCount || undefined,
             year: yearOf(),
             note: fieldVal || undefined,
+            product: btn.getAttribute("data-ott-product") || undefined,
             ts: Date.now()
           };
           saveJSON(full, payload);
-          feedback("Saved REAL · " + full, st);
+          var yOk = yearOf();
+          var msgOk =
+            ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+              ? ITT.UX.RealCoach.messageSuccess(yOk, full)
+              : "Saved REAL · " + full;
+          feedback(msgOk, st);
           markUsed(btn.getAttribute("data-tour-id") || undefined);
+          try {
+            var MP = ITT.MuseumProgress;
+            if (MP && typeof MP.stamp === "function") {
+              MP.stamp(yearOf(), String(suffix || "real"), {
+                label: String(suffix || "real"),
+                href: location.pathname || ""
+              });
+              if (typeof MP.injectTrailBar === "function") MP.injectTrailBar(document);
+            }
+          } catch (ePass) {
+            /* */
+          }
           try {
             btn.setAttribute("data-itt-real-done", "1");
           } catch (eD) { /* */ }
+          try {
+            var nexts = doc.querySelectorAll("[data-next-flow]");
+            var ni;
+            for (ni = 0; ni < nexts.length; ni++) {
+              nexts[ni].removeAttribute("hidden");
+              nexts[ni].style.display = "";
+            }
+          } catch (eN) { /* */ }
         });
       })(btns[b]);
     }
@@ -253,8 +311,33 @@
     }
   }
 
+  /**
+   * One-thing / product multi-step: mark [data-ott-click] as done on click.
+   * Optional stage text: [data-ott-stage]
+   */
+  function bootOttClicks(doc) {
+    doc = doc || document;
+    var nodes = doc.querySelectorAll("[data-ott-click]");
+    var stage = doc.querySelector("[data-ott-stage]");
+    var i;
+    for (i = 0; i < nodes.length; i++) {
+      (function (el) {
+        if (el.getAttribute("data-ott-click-bound") === "1") return;
+        el.setAttribute("data-ott-click-bound", "1");
+        el.addEventListener("click", function (ev) {
+          if (ev && ev.preventDefault && el.tagName === "A") ev.preventDefault();
+          el.classList.add("is-done");
+          el.setAttribute("data-ott-done", "1");
+          var label = el.getAttribute("data-ott-click") || el.textContent || "step";
+          if (stage) stage.textContent = "Step done: " + String(label).replace(/^\s+|\s+$/g, "").slice(0, 80);
+        });
+      })(nodes[i]);
+    }
+  }
+
   function bootAll(doc) {
     doc = doc || document;
+    bootOttClicks(doc);
     bootRealSave(doc);
     bootRealForms(doc);
     try {

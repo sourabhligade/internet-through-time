@@ -59,7 +59,7 @@ test.describe('2015 shell honesty', () => {
       }
     });
     await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2015"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[href*="years/2015"]').first()).toBeVisible();
     const last = await page.evaluate(() => localStorage.getItem('itt-last-year'));
     if (last) expect(last).toMatch(/2015/);
   });

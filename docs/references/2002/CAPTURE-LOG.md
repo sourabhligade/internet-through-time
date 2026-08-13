@@ -110,3 +110,7 @@ Still optional: evolt IE6 OEM toolbar crops · true Friendster WA profile when C
 
 Open `[queued]` / unchecked residual rows closed to **honest final tags** (`[recon-final]` · `[guidebook]` · `[continuity]` · **optional forever**). Ship bar unchanged. No new invented pixels.
 
+
+| Status | Product | Note | Method | Date |
+|--------|---------|------|--------|------|
+| H | stumbleupon | residual multipage REAL densify | educational RECON | 2026-08-07 |

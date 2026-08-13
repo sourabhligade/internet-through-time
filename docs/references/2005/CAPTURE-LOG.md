@@ -213,3 +213,4 @@ Full write-up: [`docs/2005-WEB-EXPAND-RESEARCH-2026-07-30.md`](../../2005-WEB-EX
 | `milliondollarhomepage-2005-notes.txt` | MDH **Aug 26 2005** · $1,037,100 |
 
 **Extract total after expand:** **46** files in `wayback-extracts/`.
+| H | pandora | residual multipage REAL densify | educational RECON | 2026-08-07 |

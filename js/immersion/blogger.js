@@ -103,13 +103,21 @@
       var i;
       for (i = 0; i < posts.length; i++) {
         var p = posts[i];
+        if (!p.id) p.id = "p" + (p.at || i);
         h += "<div class=\"blog-post\">";
         h += "<p class=\"when\">" + esc(fmtTime(p.at)) + "</p>";
         if (p.title) {
           h +=
-            "<p><b><font face=\"Arial\" size=\"3\">" +
+            "<p><b><font face=\"Arial\" size=\"3\"><a href=\"post.html?id=" +
+            encodeURIComponent(p.id) +
+            "\">" +
             esc(p.title) +
-            "</font></b></p>";
+            "</a></font></b></p>";
+        } else {
+          h +=
+            "<p><font face=\"Arial\" size=\"2\"><a href=\"post.html?id=" +
+            encodeURIComponent(p.id) +
+            "\">Permalink</a></font></p>";
         }
         h +=
           "<p><font face=\"Arial\" size=\"2\">" +
@@ -209,11 +217,13 @@
         }
         var blog = loadBlog();
         blog.posts = blog.posts || [];
+        var at = Date.now();
         blog.posts.unshift({
+          id: "p" + at,
           title: title,
           body: body,
           link: link,
-          at: Date.now()
+          at: at
         });
         if (blog.posts.length > 40) blog.posts = blog.posts.slice(0, 40);
         saveBlog(blog);
@@ -228,6 +238,52 @@
     }
 
     renderView(doc);
+    renderPermalink(doc);
+  }
+
+  function renderPermalink(doc) {
+    var el = doc.querySelector("[data-blogger-post-view]");
+    if (!el) return;
+    var id = "";
+    try {
+      if (ITT.util && ITT.util.queryParam) id = ITT.util.queryParam("id") || "";
+      else if (global.location && global.location.search) {
+        var m = String(global.location.search).match(/[?&]id=([^&]+)/);
+        if (m) id = decodeURIComponent(m[1]);
+      }
+    } catch (eId) { /* */ }
+    var blog = loadBlog();
+    var posts = blog.posts || [];
+    var p = null;
+    var i;
+    for (i = 0; i < posts.length; i++) {
+      var pid = posts[i].id || ("p" + (posts[i].at || i));
+      if (String(pid) === String(id)) {
+        p = posts[i];
+        break;
+      }
+    }
+    if (!p) {
+      el.innerHTML =
+        "<p><font face=\"Arial\" size=\"2\"><i>Post not found.</i> <a href=\"view.html\">Back to weblog</a></font></p>";
+      return;
+    }
+    el.innerHTML =
+      "<h1><font face=\"Georgia, Times, serif\">" +
+      esc(p.title || "Untitled") +
+      "</font></h1>" +
+      "<p><font size=\"1\" color=\"#666\">" +
+      esc(fmtTime(p.at)) +
+      " · permalink " +
+      esc(p.id || id) +
+      "</font></p>" +
+      "<p><font face=\"Arial\" size=\"2\">" +
+      esc(p.body || "").replace(/\n/g, "<br>") +
+      "</font></p>" +
+      (p.link
+        ? "<p><font face=\"Arial\" size=\"2\"><a href=\"" + esc(p.link) + "\">" + esc(p.link) + "</a></font></p>"
+        : "") +
+      "<p><font face=\"Arial\" size=\"2\"><a href=\"view.html\">« Weblog</a></font></p>";
   }
   function register() {
     if (!ITT.ImmersionFeatures || !ITT.ImmersionFeatures.registerLocal) {
