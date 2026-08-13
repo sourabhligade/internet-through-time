@@ -78,7 +78,28 @@
       });
     }
   }
-  function install(doc, id) {
+  function install(doc, id, btnEl) {
+    var st = doc.querySelector("[data-appstore-status]");
+    var checks = doc.querySelectorAll("[data-appstore-check], [data-req]");
+    var cn = 0;
+    var ci;
+    for (ci = 0; ci < checks.length; ci++) if (checks[ci].checked) cn++;
+    if (checks.length >= 1) {
+      if (cn < Math.min(2, checks.length)) {
+        if (st) {
+          st.textContent = "REAL gate: complete App Store literacy checks first.";
+          ittFeedback(st.textContent, st);
+        }
+        return;
+      }
+    } else if (btnEl && btnEl.getAttribute("data-appstore-armed") !== "1") {
+      btnEl.setAttribute("data-appstore-armed", "1");
+      if (st) {
+        st.textContent = "Confirm: no real Apple ID — click install again (REAL two-step).";
+        ittFeedback(st.textContent, st);
+      }
+      return;
+    }
     var app = null;
     var i;
     for (i = 0; i < CATALOG.length; i++) {
@@ -96,7 +117,6 @@
       list.unshift({ id: app.id, name: app.name, price: app.price, cat: app.cat, ts: Date.now() });
       save(list.slice(0, 40));
     }
-    var st = doc.querySelector("[data-appstore-status]");
     if (st) {
       st.textContent = (exists ? "Already installed: " : "Installed: ") + app.name + " · " + storageKey();
       ittFeedback(st.textContent, st);
@@ -126,7 +146,11 @@
       if (installs[j].getAttribute("data-bound") === "1") continue;
       installs[j].setAttribute("data-bound", "1");
       installs[j].addEventListener("click", function (ev) {
-        install(doc, ev.currentTarget.getAttribute("data-appstore-install") || "app");
+        install(
+          doc,
+          ev.currentTarget.getAttribute("data-appstore-install") || "app",
+          ev.currentTarget
+        );
       });
     }
   }

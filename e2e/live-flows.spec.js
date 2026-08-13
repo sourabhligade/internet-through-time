@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const { checkAllReq, twoStepClick } = require('./helpers');
 
 /**
  * Live flows upgraded from flash-only theater (docs/FAKE-BUTTONS-AUDIT.md).
@@ -22,8 +23,9 @@ test.describe('Live flows — former theater CTAs', () => {
     await page.goto('/years/1998/sites/gamespot/downloads.html');
     await page.waitForTimeout(500);
     const btn = page.locator('[data-itt-download]');
-    await btn.click();
-    await expect(page.locator('[data-itt-live-status]')).toBeVisible({ timeout: 5000 });
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-itt-download]');
+    await expect(page.locator('[data-itt-live-status], .itt-live-host').first()).toBeVisible({ timeout: 5000 });
     await expect(page.locator('[data-itt-live-status]')).toContainText(/Download complete/i, {
       timeout: 20000,
     });

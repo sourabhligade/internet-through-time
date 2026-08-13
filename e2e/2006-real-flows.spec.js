@@ -5,6 +5,14 @@
  * storagePrefix itt06 · keys: tweets · fb-feed · yt-* · digg-* · docs · aws-buckets
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame, goInFrame, waitForImmersion } = require('./helpers');
 
 /**

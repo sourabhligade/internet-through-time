@@ -4,6 +4,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 /** Dismiss period welcome popup if present (blocks clicks otherwise). */
 async function dismissWelcome(page) {
   await page.evaluate(() => {

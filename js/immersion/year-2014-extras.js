@@ -200,15 +200,27 @@
     });
   }
 
-  /* ——— iPhone 6 size pick ——— */
+  /* ——— iPhone 6 size pick (document click — survives late boot) ——— */
   function bootIphone6(doc) {
     doc = doc || document;
-    var btns = doc.querySelectorAll("[data-iphone6-pick]");
-    var st = doc.querySelector("[data-iphone6-status]");
-    var i;
-    for (i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function (ev) {
-        var el = ev.currentTarget;
+    if (doc.documentElement && doc.documentElement.getAttribute("data-itt-iphone6") === "1") {
+      return;
+    }
+    try {
+      if (doc.documentElement) doc.documentElement.setAttribute("data-itt-iphone6", "1");
+    } catch (e0) {
+      /* */
+    }
+    doc.addEventListener(
+      "click",
+      function (ev) {
+        var t = ev.target;
+        if (!t) return;
+        if (t.nodeType !== 1) t = t.parentElement;
+        if (!t || !t.closest) return;
+        var el = t.closest("[data-iphone6-pick]");
+        if (!el) return;
+        var st = doc.querySelector("[data-iphone6-status]");
         var size = el.getAttribute("data-iphone6-pick") || "6";
         var storage = el.getAttribute("data-storage") || "16";
         var price = el.getAttribute("data-price") || "";
@@ -219,12 +231,14 @@
           priceContract: price,
           ship: "2014-09-19",
           multiStep: true,
+          real: true,
           ts: Date.now()
         });
         feedback("Chose " + (size === "plus" ? "6 Plus" : "6") + " · " + key("iphone6"), st);
         markUsed();
-      });
-    }
+      },
+      true
+    );
   }
 
   /* ——— Apple Pay enroll ——— */
@@ -420,16 +434,199 @@
     });
   }
 
-  /* ——— P1 empire acks ——— */
+  /* ——— P1 empire acks (literacy check required — no soft one-click) ——— */
   function bootEmpireAck(doc, sel, suffix, payload) {
     doc = doc || document;
     var btn = doc.querySelector(sel);
     if (!btn) return;
-    var st = doc.querySelector(sel.replace("save", "status").replace("ack", "status"));
-    if (!st) st = doc.querySelector("[data-" + suffix + "-status]");
+    var st = doc.querySelector("[data-" + suffix + "-status]");
+    if (!st) st = doc.querySelector(sel.replace("ack", "status").replace("save", "status"));
     btn.addEventListener("click", function () {
-      saveJSON(key(suffix), Object.assign({ multiStep: true, ts: Date.now() }, payload || {}));
+      var need = doc.querySelectorAll("[data-req], [data-" + suffix + "-check]");
+      var n = 0;
+      var i;
+      for (i = 0; i < need.length; i++) if (need[i].checked) n++;
+      if (need.length >= 1 && n < Math.min(2, need.length)) {
+        feedback("REAL gate: complete literacy check(s) first.", st, { error: true });
+        return;
+      }
+      if (!need.length && btn.getAttribute("data-armed") !== "1") {
+        btn.setAttribute("data-armed", "1");
+        feedback("Confirm: educational deal note only — click again (REAL two-step).", st, {
+          error: true
+        });
+        return;
+      }
+      saveJSON(
+        key(suffix),
+        Object.assign({ multiStep: true, real: true, ts: Date.now() }, payload || {})
+      );
       feedback(suffix + " saved · " + key(suffix), st);
+      markUsed();
+    });
+  }
+
+  /* ——— Densify gems: Secret · Yik Yak · Ello · Hyperlapse ——— */
+  function bootSecret(doc) {
+    doc = doc || document;
+    var form = doc.querySelector("[data-secret-compose]");
+    var feed = doc.querySelector("[data-secret-feed]");
+    var st = doc.querySelector("[data-secret-status]");
+    function render() {
+      if (!feed) return;
+      var list = loadJSON(key("secret-posts"), []) || [];
+      if (!list.length) {
+        feed.innerHTML = "<font color='#888' size='2'>No secrets yet — post anonymously (theater).</font>";
+        return;
+      }
+      feed.innerHTML = list
+        .map(function (p) {
+          return (
+            "<div style='border:1px solid #ddd;padding:10px;margin:6px 0;background:#fafafa;border-radius:8px;font-size:13px'>" +
+            "<b style='color:#666'>Anonymous</b><br>" +
+            String(p.text || "").replace(/</g, "&lt;") +
+            "</div>"
+          );
+        })
+        .join("");
+    }
+    render();
+    if (!form || form.getAttribute("data-bound") === "1") return;
+    form.setAttribute("data-bound", "1");
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var ta = form.querySelector("[name=text], [data-secret-text]");
+      var text = ta && ta.value != null ? String(ta.value).replace(/^\s+|\s+$/g, "") : "";
+      if (text.length < 2) {
+        feedback("Write a secret (2+ chars).", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-secret-ack]")) {
+        feedback("Confirm: no real Secret account / friends graph.", st, { error: true });
+        return;
+      }
+      var list = loadJSON(key("secret-posts"), []) || [];
+      list.unshift({ text: text.slice(0, 500), multiStep: true, real: true, ts: Date.now() });
+      saveJSON(key("secret-posts"), list.slice(0, 40));
+      if (ta) ta.value = "";
+      feedback("Posted anonymously (theater) · " + key("secret-posts"), st);
+      render();
+      markUsed();
+    });
+  }
+
+  function bootYikYak(doc) {
+    doc = doc || document;
+    var form = doc.querySelector("[data-yikyak-compose]");
+    var feed = doc.querySelector("[data-yikyak-feed]");
+    var st = doc.querySelector("[data-yikyak-status]");
+    function render() {
+      if (!feed) return;
+      var list = loadJSON(key("yikyak-yaks"), []) || [];
+      if (!list.length) {
+        feed.innerHTML = "<font color='#888' size='2'>Herd is quiet — post a yak (theater · no real GPS).</font>";
+        return;
+      }
+      feed.innerHTML = list
+        .map(function (y, idx) {
+          return (
+            "<div style='border-bottom:1px solid #eee;padding:8px 0;font-size:13px' data-yak-id='" +
+            idx +
+            "'>" +
+            "<button type='button' data-yak-up='" +
+            idx +
+            "' style='font-size:11px'>▲ " +
+            (y.votes || 0) +
+            "</button> " +
+            String(y.text || "").replace(/</g, "&lt;") +
+            "</div>"
+          );
+        })
+        .join("");
+      var ups = feed.querySelectorAll("[data-yak-up]");
+      var j;
+      for (j = 0; j < ups.length; j++) {
+        ups[j].addEventListener("click", function (ev) {
+          var id = parseInt(ev.currentTarget.getAttribute("data-yak-up"), 10);
+          var list2 = loadJSON(key("yikyak-yaks"), []) || [];
+          if (list2[id]) {
+            list2[id].votes = (list2[id].votes || 0) + 1;
+            saveJSON(key("yikyak-yaks"), list2);
+            render();
+          }
+        });
+      }
+    }
+    render();
+    if (!form || form.getAttribute("data-bound") === "1") return;
+    form.setAttribute("data-bound", "1");
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var ta = form.querySelector("[name=text], [data-yikyak-text]");
+      var text = ta && ta.value != null ? String(ta.value).replace(/^\s+|\s+$/g, "") : "";
+      if (text.length < 2) {
+        feedback("Write a yak (2+ chars).", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-yikyak-lit]")) {
+        feedback("Confirm: no real GPS · educational campus theater.", st, { error: true });
+        return;
+      }
+      var list = loadJSON(key("yikyak-yaks"), []) || [];
+      list.unshift({ text: text.slice(0, 400), votes: 0, multiStep: true, real: true, ts: Date.now() });
+      saveJSON(key("yikyak-yaks"), list.slice(0, 50));
+      if (ta) ta.value = "";
+      feedback("Yak posted · herd theater · " + key("yikyak-yaks"), st);
+      render();
+      markUsed();
+    });
+  }
+
+  function bootEllo(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-ello-save], [data-ello-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ello-status]");
+    btn.addEventListener("click", function () {
+      var n = countChecked(doc, "[data-req], [data-ello-check]");
+      if (n < 2) {
+        feedback("Check both Ello literacy boxes first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ello-ack"), {
+        antiAds: true,
+        year: 2014,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Ello wave noted · " + key("ello-ack"), st);
+      markUsed();
+    });
+  }
+
+  function bootHyperlapse(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-hyperlapse-export]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-hyperlapse-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-hyperlapse-clip]")) {
+        feedback("Pick a clip theater first.", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-hyperlapse-ig]")) {
+        feedback("Confirm: export-to-IG residual · not Reels.", st, { error: true });
+        return;
+      }
+      saveJSON(key("hyperlapse-export"), {
+        app: "Hyperlapse",
+        year: 2014,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Hyperlapse export theater · " + key("hyperlapse-export"), st);
       markUsed();
     });
   }
@@ -440,7 +637,18 @@
     if (!btn) return;
     var st = doc.querySelector("[data-ios8-status]");
     btn.addEventListener("click", function () {
-      saveJSON(key("ios8"), { wwdc: true, swift: true, multiStep: true, ts: Date.now() });
+      var n = countChecked(doc, "[data-req], [data-ios8-check]");
+      if (n < 2) {
+        feedback("REAL gate: complete both iOS 8 literacy checks first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ios8"), {
+        wwdc: true,
+        swift: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
       feedback("iOS 8 / Swift note · " + key("ios8"), st);
       markUsed();
     });
@@ -464,6 +672,10 @@
     bootEmpireAck(doc, "[data-alibaba-ack]", "alibaba", { ipo: "2014-09-19" });
     bootEmpireAck(doc, "[data-material-ack]", "material", { io: "2014-06-25" });
     bootEmpireAck(doc, "[data-echo-ack]", "echo-announce", { announce: "2014-11-06", shipsMass: "2015" });
+    bootSecret(doc);
+    bootYikYak(doc);
+    bootEllo(doc);
+    bootHyperlapse(doc);
   }
 
   var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);

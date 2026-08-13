@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, completeRealGate, twoStepClick} = require('./helpers');
 
 test.describe('2010 MVP', () => {
   test('shell boots 2010', async ({ page }) => {
@@ -35,8 +35,15 @@ test.describe('2010 MVP', () => {
     await page.reload();
     await page.waitForSelector('[data-appstore-catalog], [data-appstore-install]', { timeout: 20000 });
     await expect(page.locator('body')).toContainText(/225|5 billion|5B/i);
-    const btn = page.locator('[data-appstore-install]').first();
-    await btn.click();
+    await completeRealGate(page, '[data-appstore-install]');
+    await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt10|Confirm|REAL/i, {
+      timeout: 8000,
+    });
+    // status may still say Confirm if only one step fired — storage is the gate
+    const mid = await page.evaluate(() => localStorage.getItem('itt10-apps'));
+    if (!mid) {
+      await completeRealGate(page, '[data-appstore-install]');
+    }
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt10/i, {
       timeout: 8000,
     });

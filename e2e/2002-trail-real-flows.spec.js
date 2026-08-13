@@ -4,6 +4,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2002 trail real flows', () => {
   test('home → Friendster trail path exists', async ({ page }) => {
     await page.goto('/years/2002/pages/home.html');

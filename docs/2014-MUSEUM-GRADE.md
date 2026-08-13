@@ -1,24 +1,25 @@
 # 2014 — Museum grade card
 
-**Date:** 2026-08-06  
-**Status:** **MVP live** · hub **1994–2014** · prefix **`itt14`**  
-**Entry:** [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · steps [`2014-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2014-IMPLEMENTATION-PHASES-STEP-BY-STEP.md)
+**Date:** 2026-08-13  
+**Status:** **Museum-ready · L3 densify** · hub **1994–2014** · prefix **`itt14`**  
+**Entry:** [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · parity map [`2014-PARITY-AND-2015-FREEZE-PHASE-MAP.md`](2014-PARITY-AND-2015-FREEZE-PHASE-MAP.md)
 
-## Grade (MVP)
+## Grade (L3 densify)
 
 | Layer | Score | Notes |
 |-------|------:|-------|
 | Thesis / scale | **A** | Dual-cite 968,882,453 · 1B Sep · bans |
-| P0 WhatsApp | **A−** | Install · chat · deal honesty · text chrome |
-| P0 Heartbleed | **A** | ≥2 rotate · no exploit |
-| P0 iPhone 6 autumn | **A−** | Prices · Pay · Bendgate · Watch pre-ship |
-| P0 Ice Bucket / Serial | **B+** | Theater + literacy |
+| P0 WhatsApp | **A** | Install · chat · deal honesty · multipage |
+| P0 Heartbleed | **A** | ≥2 rotate · incomplete blocked |
+| P0 iPhone 6 autumn | **A** | Prices · Pay · Bendgate · Watch pre-ship |
+| P0 Ice Bucket / Serial / 1B | **A−** | REAL multipage |
 | Desktop honesty | **A** | Win7 shell · Win10 TP only |
-| Continuity scrub | **B** | Clone from 2013 · residual rooms still dense |
-| Pixels | **C** | Mostly RECON / text · CAPTURE residual |
-| e2e | **A** | `npm run test:e2e:2014` green |
+| Densify gems | **A−** | Secret · Yik Yak · Ello · Hyperlapse |
+| Continuity scrub | **B+** | Clone residual forever L4 |
+| Pixels | **C** | RECON / CAPTURE open H14-14… |
+| e2e | **A** | mvp · densify · flows · real · trail · shell-honesty |
 
-**Overall MVP:** ~**museum-ready MVP** (~90–94%). Residual: WA brand pixels · deeper Material UI · optional gems (Secret/Yik Yak).
+**Overall:** **Museum-ready · L3 densify** (~96–98% content). Residual: perfect WA brand stills · deeper Material UI multipage · optional Gamergate literacy.
 
 ## Gates
 
@@ -27,8 +28,8 @@ python3 scripts/check-all-years.py   # 2014 pass
 npm run test:e2e:2014
 ```
 
-## Residual forever
+## Residual forever (L4)
 
 - Perfect WhatsApp / Apple / Material WA stills  
-- Secret · Yik Yak · Ello densify  
-- Deeper 2013→2014 continuity copy scrub on every cloned room  
+- Full continuity forest year-voice on every Amazon/Yahoo clone  
+- Gamergate careful educational room (optional)  

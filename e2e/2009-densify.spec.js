@@ -4,6 +4,14 @@
  * docs/2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear } = require('./helpers');
 
 test.describe('2009 densify', () => {

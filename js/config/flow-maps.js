@@ -2570,6 +2570,36 @@
           { "name": "Netflix", "href": "sites/netflix/index.html", "do": "Streaming residual" },
           { "name": "Uber", "href": "sites/uber/index.html", "do": "Rideshare residual" }
         ]
+      },
+      {
+        "label": "Densify gems",
+        "do": "Under-known 2014 apps",
+        "sites": [
+          {
+            "name": "Secret",
+            "href": "sites/secret/index.html",
+            "do": "Anonymous friend-graph posts",
+            "steps": ["Compose text", "Confirm no real account", "Post · feed updates"]
+          },
+          {
+            "name": "Yik Yak",
+            "href": "sites/yikyak/herd.html",
+            "do": "Campus herd theater · no GPS",
+            "steps": ["Write yak", "Confirm no GPS literacy", "Post · upvote"]
+          },
+          {
+            "name": "Ello",
+            "href": "sites/ello/index.html",
+            "do": "Anti-ads invite wave",
+            "steps": ["Two literacy checks", "Join waitlist theater"]
+          },
+          {
+            "name": "Hyperlapse",
+            "href": "sites/hyperlapse/export.html",
+            "do": "IG time-lapse Aug 2014 · not Reels",
+            "steps": ["Pick clip", "Confirm IG residual", "Export"]
+          }
+        ]
       }
     ],
     "year": "2014"
@@ -2598,7 +2628,9 @@
         "label": "Wearable ships",
         "do": "On the wrist",
         "sites": [
-          { "name": "Apple Watch", "href": "sites/apple/watch.html", "do": "Face · band · shipped", "steps": ["Pick face", "Pick band", "Confirm shipped", "Save"] }
+          { "name": "Apple Watch", "href": "sites/apple/watch.html", "do": "Face · band · shipped", "steps": ["Pick face", "Pick band", "Confirm shipped", "Save"] },
+          { "name": "Faces", "href": "sites/apple/faces.html", "do": "Face catalog" },
+          { "name": "Pair", "href": "sites/apple/pair.html", "do": "Pair literacy" }
         ]
       },
       {
@@ -2606,7 +2638,10 @@
         "do": "Win10 + Edge",
         "sites": [
           { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "Free upgrade theater", "steps": ["Honesty boxes", "Upgrade"] },
+          { "name": "Upgrade path", "href": "sites/windows10/upgrade.html", "do": "Reserve narrative" },
+          { "name": "Win10 about", "href": "sites/windows10/about.html", "do": "Win7 residual honesty" },
           { "name": "Microsoft Edge", "href": "sites/edge/index.html", "do": "Download · prefer" },
+          { "name": "Edge about", "href": "sites/edge/about.html", "do": "Spartan · not Chromium" },
           { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Still habit" }
         ]
       },
@@ -2615,6 +2650,8 @@
         "do": "Apple Music",
         "sites": [
           { "name": "Apple Music", "href": "sites/applemusic/index.html", "do": "Trial · Beats 1" },
+          { "name": "Trial", "href": "sites/applemusic/trial.html", "do": "3-month class REAL" },
+          { "name": "Beats 1", "href": "sites/applemusic/beats1.html", "do": "Radio class" },
           { "name": "Spotify residual", "href": "sites/spotify/index.html", "do": "Continuity" }
         ]
       },
@@ -2623,8 +2660,11 @@
         "do": "Phone livestream",
         "sites": [
           { "name": "Periscope", "href": "sites/periscope/index.html", "do": "Go LIVE", "steps": ["Title", "Go live", "List grows"] },
+          { "name": "Periscope about", "href": "sites/periscope/about.html", "do": "Twitter class" },
           { "name": "Meerkat", "href": "sites/meerkat/index.html", "do": "SXSW peak" },
-          { "name": "Facebook Live", "href": "sites/fblive/index.html", "do": "Feed livestream" }
+          { "name": "Meerkat about", "href": "sites/meerkat/about.html", "do": "API cut literacy" },
+          { "name": "Facebook Live", "href": "sites/fblive/index.html", "do": "Feed livestream" },
+          { "name": "FB Live about", "href": "sites/fblive/about.html", "do": "Rollout seed" }
         ]
       },
       {
@@ -2632,19 +2672,21 @@
         "do": "iOS 9 · Photos",
         "sites": [
           { "name": "Content blockers", "href": "sites/ios9/blockers.html", "do": "Enable checklist" },
-          { "name": "Google Photos", "href": "sites/googlephotos/index.html", "do": "Backup on" }
+          { "name": "Blockers about", "href": "sites/ios9/about.html", "do": "Safari extension class" },
+          { "name": "Google Photos", "href": "sites/googlephotos/index.html", "do": "Backup on" },
+          { "name": "Photos library", "href": "sites/googlephotos/library.html", "do": "Library grid" }
         ]
       },
       {
-        "label": "P1 densify",
-        "do": "Platform + dev",
+        "label": "P1 densify gems",
+        "do": "Platform + culture",
         "sites": [
-          { "name": "Messenger bots", "href": "sites/messenger/index.html", "do": "F8 bots" },
-          { "name": "Swift OSS", "href": "sites/swift/index.html", "do": "Dec 3" },
           { "name": "Snap Discover", "href": "sites/snapchat/discover.html", "do": "Jan 27 grid" },
           { "name": "Discord", "href": "sites/discord/index.html", "do": "Gamer seed" },
-          { "name": "Oculus CV1", "href": "sites/oculus/cv1.html", "do": "Ship 2016" },
-          { "name": "Let's Encrypt", "href": "sites/letsencrypt/index.html", "do": "Free TLS" }
+          { "name": "Discord server", "href": "sites/discord/server.html", "do": "Channel theater" },
+          { "name": "Peach canvas", "href": "sites/peach/canvas.html", "do": "Magic words REAL" },
+          { "name": "Messenger bots", "href": "sites/messenger/bots.html", "do": "F8 bots" },
+          { "name": "Secret end", "href": "sites/secret/shutdown.html", "do": "2015 shutdown" }
         ]
       }
     ],
@@ -2840,6 +2882,74 @@
       }
     ],
     "year": "2017"
+  };
+
+
+
+  ITT.flowMaps["2019"] = {
+    "thesis": "Short-video mass, streaming stacks, games-as-service, cloud try — TikTok For You, Disney+, Apple Arcade, Apple TV+, AirPods Pro, iPhone 11, Stadia.",
+    "shell": "Windows 10 mass · Chrome habit · always-on broadband",
+    "how": [
+      "TikTok: caption + literacy → post For You",
+      "Disney+: plan + join · Watchlist multipage",
+      "Arcade: pick game · trial · play session",
+      "iPhone 11 color + literacy → AirPods Pro order/pair",
+      "Stadia: claim tier → stream title",
+      "Apple TV+: pick original → watch progress"
+    ],
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "2019 lobby",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "Trails · kit" },
+          { "name": "About 2019", "href": "pages/about.html", "do": "1.63B table end · ~4.1B users · bans" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "This UX tree" }
+        ]
+      },
+      {
+        "label": "Short video mass",
+        "do": "For You habit",
+        "sites": [
+          { "name": "TikTok For You", "href": "sites/tiktok/index.html", "do": "Caption · post", "steps": ["Caption", "Literacy", "Post"] },
+          { "name": "TikTok Create", "href": "sites/tiktok/create.html", "do": "Create surface" }
+        ]
+      },
+      {
+        "label": "Streaming stack",
+        "do": "Nov launches",
+        "sites": [
+          { "name": "Disney+", "href": "sites/disneyplus/index.html", "do": "Nov 12", "steps": ["Plan", "Join", "Watchlist"] },
+          { "name": "Apple TV+", "href": "sites/appletv/index.html", "do": "Nov 1", "steps": ["Original", "Watch"] }
+        ]
+      },
+      {
+        "label": "Games as service",
+        "do": "Arcade · cloud",
+        "sites": [
+          { "name": "Apple Arcade", "href": "sites/arcade/index.html", "do": "Sep 19", "steps": ["Pick", "Trial", "Play"] },
+          { "name": "Stadia", "href": "sites/stadia/index.html", "do": "Nov 19", "steps": ["Claim", "Stream"] }
+        ]
+      },
+      {
+        "label": "Autumn hardware",
+        "do": "Phone · buds",
+        "sites": [
+          { "name": "iPhone 11", "href": "sites/iphone/iphone11.html", "do": "Sep stores", "steps": ["Color", "Literacy", "Order"] },
+          { "name": "AirPods Pro", "href": "sites/airpodspro/index.html", "do": "Oct ANC", "steps": ["Order", "Pair"] }
+        ]
+      },
+      {
+        "label": "Continuity",
+        "do": "Still live",
+        "sites": [
+          { "name": "Netflix residual", "href": "sites/netflix/index.html", "do": "Streaming residual" },
+          { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Habit browser" },
+          { "name": "YouTube", "href": "sites/youtube/index.html", "do": "Video residual" }
+        ]
+      }
+    ],
+    "year": "2019"
   };
 
 

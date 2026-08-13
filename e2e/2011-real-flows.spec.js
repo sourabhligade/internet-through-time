@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, waitForImmersion } = require('./helpers');
+const { enterYear, goInFrame, waitForImmersion, completeRealGate, twoStepClick, checkAllReq, killOverlays} = require('./helpers');
 
 test.describe('2011 real flows', () => {
   test('Spotify free play shows ad theater', async ({ page }) => {
@@ -75,7 +75,7 @@ test.describe('2011 real flows', () => {
   test('Snapchat timer seed', async ({ page }) => {
     await page.goto('/years/2011/sites/snapchat/index.html');
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await page.locator('[data-snap-send]').click();
+    await completeRealGate(page, '[data-snap-send]');
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 5000 });
   });
 

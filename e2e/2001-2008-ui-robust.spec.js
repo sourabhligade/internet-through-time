@@ -4,6 +4,14 @@
  * XP window chrome · product chips · flow map tree
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame, goInFrame, waitForImmersion } = require('./helpers');
 
 const YEARS = ['2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008'];

@@ -3,7 +3,7 @@
  * 2012 real localStorage flows — no soft mocks
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, waitForImmersion } = require('./helpers');
+const { enterYear, goInFrame, waitForImmersion, completeRealGate, twoStepClick, checkAllReq, killOverlays} = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -116,7 +116,7 @@ test.describe('2012 real flows (storage required)', () => {
       null,
       { timeout: 25000 }
     );
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|theater|Chrome/i, {
       timeout: 8000,
     });
@@ -151,7 +151,7 @@ test.describe('2012 real flows (storage required)', () => {
       { timeout: 25000 }
     );
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await page.locator('[data-snap-send]').click();
+    await completeRealGate(page, '[data-snap-send]');
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 5000 });
     expect(Number(await expectStorageTruthy(page, 'itt12-snap-count'))).toBeGreaterThan(0);
   });

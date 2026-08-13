@@ -4,6 +4,14 @@
  * Static matrix: `npm run check:years` / `python3 scripts/check-all-years.py`
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame } = require('./helpers');
 const fs = require('fs');
 const path = require('path');

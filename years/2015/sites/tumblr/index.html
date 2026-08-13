@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2015">
+<head>
+<meta charset="utf-8">
+<title>Tumblr — 2013 · Yahoo acquisition</title>
+<link rel="stylesheet" href="../../../../css/period-2015.css">
+<script src="../../../../js/immersion-2015.js" defer></script>
+</head>
+<body class="tumblr-dash">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="tumblr-inner">
+ <p style="font-size:11px"><a href="../../pages/home.html">Start</a> · <a href="yahoo.html">Yahoo deal</a> · <a href="../twitter/index.html">Twitter</a></p>
+ <h1>tumblr.</h1>
+ <p style="font-size:14px;color:#cde;margin:0 0 12px">Follow the world’s creators.</p>
+ <div style="background:#2c3e50;border:1px solid #529ecc;padding:12px;margin:12px 0">
+  <b>May 20, 2013</b> — Yahoo announces it will acquire Tumblr for about <b>$1.1 billion</b> cash class.
+  Founder remains CEO class · “not screwing it up” press lore · still a <b>reblog</b> / dashboard culture product.
+ </div>
+ <div class="tumblr-types" aria-hidden="true">
+  <span>Text</span><span>Photo</span><span>Quote</span><span>Link</span><span>Chat</span><span>Audio</span><span>Video</span>
+ </div>
+ <div class="tumblr-compose">
+  <input type="text" data-tumblr-post placeholder="What are you doing?">
+  <button type="button" data-tumblr-post-btn>Post (theater)</button>
+ </div>
+ <div class="itt15-status" data-tumblr-status></div>
+ <p class="itt15-ban" style="color:#89a">
+   · not modern Tumblr rebrand ·
+  <a href="yahoo.html">Yahoo acquisition note →</a>
+ </p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var KEY = "itt15-tumblr-posts";
+  var btn = document.querySelector("[data-tumblr-post-btn]");
+  var st = document.querySelector("[data-tumblr-status]");
+  if (!btn) return;
+  btn.addEventListener("click", function () {
+    var cap = (document.querySelector("[data-tumblr-post]") || {}).value || "untitled";
+    var list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) {}
+    list.unshift({ text: String(cap).slice(0, 200), ts: Date.now(), yahoo: true });
+    try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 40))); } catch (e2) {}
+    var msg = "Posted (theater) · reblog culture residual · " + KEY;
+    if (st) st.textContent = msg;
+    try {
+      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "tumblr" });
+      }
+    } catch (e3) {}
+  });
+});
+</script>
+</body>
+</html>

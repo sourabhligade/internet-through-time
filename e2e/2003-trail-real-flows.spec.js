@@ -2,6 +2,14 @@
 /** 2003 trail real flows */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2003 trail real flows', () => {
   test('home → MySpace', async ({ page }) => {
     await page.goto('/years/2003/pages/home.html');

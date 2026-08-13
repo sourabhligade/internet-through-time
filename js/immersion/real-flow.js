@@ -63,6 +63,17 @@
       try {
         st.textContent = msg;
         st.style.color = opts.error ? "#900" : "#060";
+        try {
+          st.classList.remove("is-ok", "is-err");
+          st.removeAttribute("data-state");
+          if (opts.error) {
+            st.classList.add("is-err");
+            st.setAttribute("data-state", "err");
+          } else if (msg) {
+            st.classList.add("is-ok");
+            st.setAttribute("data-state", "ok");
+          }
+        } catch (eCls) { /* */ }
       } catch (e) { /* */ }
     }
     try {

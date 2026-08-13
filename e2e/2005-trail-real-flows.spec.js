@@ -5,6 +5,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 /**
  * @param {import('@playwright/test').Page} page
  * @param {string[]} keys
@@ -23,6 +31,7 @@ test.describe('2005 trail 1 — Ajax / maps (real)', () => {
     await clearKeys(page, ['itt05-maps-state', 'itt05-housingmaps']);
     await page.reload();
     await page.waitForSelector('[data-maps-status]', { timeout: 20000 });
+    await page.waitForFunction(() => document.documentElement.getAttribute('data-itt-immersion-booted') === '2005', null, { timeout: 20000 }).catch(() => {});
     await page.locator('[data-maps-zoom="in"]').click();
     await page.fill('[name="what"]', 'pizza');
     await page.fill('[name="where"]', 'Austin, TX');

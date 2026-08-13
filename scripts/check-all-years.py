@@ -25,8 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships (hub open 1994–2014 — DISK-TRUTH)
-KNOWN_YEARS = [str(y) for y in range(1994, 2015)]  # 1994–2014
+# Years the museum ships (hub open 1994–2016 + 2019 — DISK-TRUTH)
+KNOWN_YEARS = [str(y) for y in range(1994, 2017)] + ["2019"]  # 1994–2016 + 2019
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -127,6 +127,48 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/windows81/index.html",
         "sites/chrome/index.html",
         "sites/snowden/index.html",
+    ],
+    "2014": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/whatsapp/index.html",
+        "sites/heartbleed/index.html",
+        "sites/iphone/index.html",
+        "sites/billion/index.html",
+        "sites/windows10/index.html",
+        "sites/chrome/index.html",
+    ],
+    "2015": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/apple/watch.html",
+        "sites/windows10/index.html",
+        "sites/edge/index.html",
+        "sites/periscope/index.html",
+        "sites/applemusic/index.html",
+        "sites/googlephotos/index.html",
+    ],
+    "2016": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/instagram/stories.html",
+        "sites/pokemongo/index.html",
+        "sites/facebook/reactions.html",
+        "sites/iphone/jack.html",
+        "sites/airpods/index.html",
+        "sites/vine/goodbye.html",
+        "sites/whatsapp/security.html",
+    ],
+    "2019": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/tiktok/index.html",
+        "sites/disneyplus/index.html",
+        "sites/arcade/index.html",
+        "sites/appletv/index.html",
+        "sites/iphone/iphone11.html",
+        "sites/airpodspro/index.html",
+        "sites/stadia/index.html",
     ],
 }
 

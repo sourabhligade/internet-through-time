@@ -1,5 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear } = require('./helpers');
 
 test.describe('2002 live buttons (not mocks)', () => {
@@ -29,15 +37,14 @@ test.describe('2002 live buttons (not mocks)', () => {
   test('KaZaA download theater mutates status', async ({ page }) => {
     await page.goto('/years/2002/sites/kazaa/index.html');
     await page.waitForTimeout(600);
-    await page.click('[data-itt-download]');
-    // shared.js injects a live host panel and/or updates status
+    await twoStepClick(page, '[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
   });
 
   test('Phoenix download theater works', async ({ page }) => {
     await page.goto('/years/2002/sites/phoenix/index.html');
     await page.waitForTimeout(600);
-    await page.click('[data-itt-download]');
+    await twoStepClick(page, '[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
   });
 

@@ -46,7 +46,10 @@
     "perf": "python3 scripts/measure-perf.py",
     "atlas:flow": "python3 scripts/generate-flow-atlas.py",
     "github:ready": "bash scripts/github-ready.sh",
-    "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-real-flows.spec.js e2e/2014-flows.spec.js e2e/2014-shell-honesty.spec.js --workers=1"
+    "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-densify.spec.js e2e/2014-flows.spec.js e2e/2014-real-flows.spec.js e2e/2014-trail-real-flows.spec.js e2e/2014-shell-honesty.spec.js --workers=1",
+    "test:e2e:2015": "playwright test e2e/2015-mvp.spec.js e2e/2015-densify.spec.js e2e/2015-flows.spec.js e2e/2015-real-flows.spec.js e2e/2015-trail-real-flows.spec.js e2e/2015-shell-honesty.spec.js --workers=1",
+    "test:e2e:2016": "playwright test e2e/2016-mvp.spec.js e2e/2016-densify.spec.js e2e/2016-flows.spec.js e2e/2016-real-flows.spec.js e2e/2016-trail-real-flows.spec.js e2e/2016-shell-honesty.spec.js --workers=1",
+    "test:e2e:2019": "playwright test e2e/2019-mvp.spec.js e2e/2019-densify.spec.js e2e/2019-flows.spec.js e2e/2019-real-flows.spec.js e2e/2019-trail-real-flows.spec.js e2e/2019-shell-honesty.spec.js e2e/2019-all-flows-check.spec.js --workers=1"
   },
   "engines": {
     "node": ">=18"

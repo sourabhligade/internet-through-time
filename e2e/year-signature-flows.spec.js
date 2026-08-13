@@ -4,6 +4,21 @@
  * Runs inside the year shell so parent browser + iframe immersion both work.
  */
 const { test, expect } = require('@playwright/test');
+
+async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-uber-check], [data-gfc-opensocial], [data-gfc-noroauth], [data-fb-connect-check], [data-wave-check], [data-sopa-check], [data-sopa-fact], [data-ps4-check], [data-ps4-share], [data-snap-check], [data-android-check], [data-appstore-check], [data-lightning-check]') {
+  const loc = page.locator(sel);
+  const n = await loc.count();
+  for (let i = 0; i < n; i++) {
+    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
+  }
+}
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, goImmersion, goInFrame, contentFrame, killOverlays } = require('./helpers');
 
 test.describe('year-signature 1994', () => {
@@ -226,6 +241,17 @@ test.describe('year-signature 2000', () => {
 });
 
 test.describe('year-signature 2001', () => {
+  test('Wikipedia Save writes itt01-wiki-pages', async ({ page }) => {
+    await enterYear(page, '2001');
+    await page.evaluate(() => { try { localStorage.removeItem('itt01-wiki-pages'); } catch (e) {} });
+    await goImmersion(page, '2001', 'sites/wikipedia/edit.html');
+    const frame = contentFrame(page);
+    await expect(frame.locator('textarea').first()).toBeVisible({ timeout: 15000 });
+    await frame.locator('textarea').first().fill("'''Wikipedia''' saved by museum signature test.");
+    const save = frame.locator('[data-wiki-save], input[value*="Save page"]').first();
+    await save.click({ force: true });
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt01-wiki-pages')), { timeout: 12000 }).toBeTruthy();
+  });
   test('Wikipedia densify room', async ({ page }) => {
     await enterYear(page, '2001');
     await goImmersion(page, '2001', 'sites/wikipedia/index.html');
@@ -511,6 +537,11 @@ test.describe('year-signature 2008', () => {
     await expect(frame.locator('body')).toContainText(/Chrome|beta|download/i, { timeout: 15000 });
     const dl = frame.locator('[data-chrome-download]');
     await expect(dl).toBeVisible({ timeout: 10000 });
+    await frame.locator('[data-chrome-check], [data-req]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+      })
+    );
     await dl.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-chrome')), {
@@ -533,6 +564,12 @@ test.describe('year-signature 2008', () => {
     await expect(frame.locator('body')).toContainText(/App Store|app/i, { timeout: 15000 });
     const btn = frame.locator('[data-appstore-install]').first();
     await expect(btn).toBeVisible({ timeout: 10000 });
+    await frame.locator('[data-req], [data-appstore-check]').evaluateAll((els) =>
+      els.forEach((e) => {
+        e.checked = true;
+      })
+    );
+    await btn.click();
     await btn.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-apps')), { timeout: 8000 })
@@ -555,6 +592,7 @@ test.describe('year-signature 2009', () => {
     await expect(frame.locator('body')).toContainText(/FarmVille|plant|crop/i, { timeout: 15000 });
     const plant = frame.locator('[data-farm-plant]').first();
     await expect(plant).toBeVisible({ timeout: 10000 });
+    await plant.click();
     await plant.click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt09-farm')), { timeout: 8000 })

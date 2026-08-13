@@ -1,5 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 test.describe('1994 sites densify', () => {
   test('CERN + Yahoo Stanford', async ({ page }) => {
     await page.goto('/years/1994/sites/cern/index.html');

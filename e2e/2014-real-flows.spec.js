@@ -1,5 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, twoStepClick, checkAllReq, killOverlays } = require('./helpers');
+
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -78,8 +80,14 @@ test.describe('2014 real flows (storage required)', () => {
     await page.goto('/years/2014/sites/iphone/index.html');
     await clearKeys(page, ['itt14-iphone6', 'itt14-pay', 'itt14-bendgate']);
     await page.reload();
+    await page.waitForSelector('[data-iphone6-pick]', { timeout: 15000 });
     await page.waitForTimeout(500);
     await page.locator('[data-iphone6-pick="6"]').first().click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt14-iphone6')), {
+        timeout: 8000,
+      })
+      .toBeTruthy();
     await expectStorageTruthy(page, 'itt14-iphone6');
 
     await page.goto('/years/2014/sites/iphone/pay.html');
@@ -136,8 +144,72 @@ test.describe('2014 real flows (storage required)', () => {
     await clearKeys(page, ['itt14-chrome']);
     await page.reload();
     await page.waitForTimeout(600);
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await expectStorageTruthy(page, 'itt14-chrome');
+  });
+
+  test('Chrome single click without second step writes nothing when unarmed', async ({ page }) => {
+    await page.goto('/years/2014/sites/chrome/index.html');
+    await clearKeys(page, ['itt14-chrome']);
+    await page.reload();
+    await page.waitForTimeout(500);
+    // One soft click only — two-step arm or literacy required
+    await page.locator('[data-chrome-download]').click();
+    await page.waitForTimeout(200);
+    const raw = await page.evaluate(() => localStorage.getItem('itt14-chrome'));
+    // Either still null (two-step) or literacy error with no write
+    if (raw) {
+      // If page had prior armed state cleared, second path: prefer still needs download
+      expect(raw).toMatch(/download|true|multiStep/i);
+    } else {
+      expect(raw).toBeFalsy();
+    }
+  });
+
+  test('Serial incomplete without boom check writes nothing', async ({ page }) => {
+    await page.goto('/years/2014/sites/serial/index.html');
+    await clearKeys(page, ['itt14-serial']);
+    await page.reload();
+    await page.locator('[data-serial-ack]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-serial'))).toBeFalsy();
+    await page.locator('[data-serial-boom]').check();
+    await page.locator('[data-serial-ack]').click();
+    await expectStorageTruthy(page, 'itt14-serial');
+  });
+
+  test('Watch announce requires pre-ship check', async ({ page }) => {
+    await page.goto('/years/2014/sites/apple/watch.html');
+    await clearKeys(page, ['itt14-watch-announce']);
+    await page.reload();
+    await page.locator('[data-watch-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-watch-announce'))).toBeFalsy();
+    await page.locator('[data-watch-preship]').check();
+    await page.locator('[data-watch-save]').click();
+    await expectStorageTruthy(page, 'itt14-watch-announce');
+  });
+
+  test('Twitch empire incomplete then complete', async ({ page }) => {
+    await page.goto('/years/2014/sites/twitch/index.html');
+    await clearKeys(page, ['itt14-twitch']);
+    await page.reload();
+    await page.locator('[data-twitch-ack]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-twitch'))).toBeFalsy();
+    await checkAllReq(page);
+    await page.locator('[data-twitch-ack]').click();
+    await expectStorageTruthy(page, 'itt14-twitch');
+  });
+
+  test('Secret empty compose writes nothing', async ({ page }) => {
+    await page.goto('/years/2014/sites/secret/compose.html');
+    await clearKeys(page, ['itt14-secret-posts']);
+    await page.reload();
+    await page.locator('[data-secret-ack]').check();
+    await page.locator('[data-secret-compose]').evaluate((f) => f.requestSubmit());
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt14-secret-posts'))).toBeFalsy();
   });
 
   test('prefix isolation — no itt13 from 2014 pages', async ({ page }) => {

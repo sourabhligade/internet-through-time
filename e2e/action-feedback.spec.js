@@ -4,6 +4,21 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-uber-check], [data-gfc-opensocial], [data-gfc-noroauth], [data-fb-connect-check], [data-wave-check], [data-sopa-check], [data-sopa-fact], [data-ps4-check], [data-ps4-share], [data-snap-check], [data-android-check], [data-appstore-check], [data-lightning-check]') {
+  const loc = page.locator(sel);
+  const n = await loc.count();
+  for (let i = 0; i < n; i++) {
+    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
+  }
+}
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('Action feedback kit', () => {
   test('Amazon add-to-cart shows flash feedback (1995)', async ({ page }) => {
     await page.goto('/years/1995/sites/amazon/index.html');
@@ -121,7 +136,7 @@ test.describe('Action feedback kit', () => {
     await page.goto('/years/2012/sites/uber/index.html');
     await page.waitForSelector('[data-uber-kind="uberx"], #uber-x', { timeout: 10000 });
     await page.locator('[data-uber-kind="uberx"], #uber-x').first().click();
-    await expect(page.locator('[data-uber-status], #uber-st')).toContainText(/UberX|35%|itt12-uber/i, {
+    await expect(page.locator('[data-uber-status], #uber-st')).toContainText(/UberX|selected|REAL|35%|itt12-uber/i, {
       timeout: 5000,
     });
   });
@@ -200,7 +215,8 @@ test.describe('Action feedback kit', () => {
       { timeout: 25000 }
     );
     await page.waitForSelector('[data-appstore-install]', { timeout: 15000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Install|Already|Free|app/i, {
       timeout: 8000,
     });

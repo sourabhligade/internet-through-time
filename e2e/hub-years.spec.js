@@ -1,14 +1,23 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 const OPEN = [
   '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
   '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014',
+  '2017',
 ];
 const LOCKED = [];
 
 test.describe('hub + year shells', () => {
-  test('hub lists 1994–2014 as available', async ({ page }) => {
+  test('hub lists 1994–2017 as available', async ({ page }) => {
     await page.goto('/');
     for (const y of OPEN) {
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`)).toBeVisible();
@@ -55,7 +64,8 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2012')).toBeVisible();
     await expect(page.locator('.y2013')).toBeVisible();
     await expect(page.locator('.y2014')).toBeVisible();
-    await expect(page.locator('body')).toContainText(/21 years open|1994–2014/i);
+    await expect(page.locator('.y2017')).toBeVisible();
+    await expect(page.locator('body')).toContainText(/22 years open|1994–2017/i);
     // Primary first-run CTAs (not a wall of every year)
     await expect(page.locator('a.start-btn.start-primary[href*="years/1994"]')).toBeVisible();
     await expect(page.locator('a.start-btn[href="#directory"], a.start-btn[href*="#directory"]')).toBeVisible();

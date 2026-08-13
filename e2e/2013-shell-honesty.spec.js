@@ -4,7 +4,7 @@
  * Catches scaffold residue (2004 titles, 2010 bookmarks, anti-Stories copy, Chrome-as-2012-only).
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, killOverlays } = require('./helpers');
+const { enterYear, killOverlays, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
 
 test.describe('2013 shell honesty (visitor-facing)', () => {
   test('config titleMap home/about are 2013 not 2004', async ({ page }) => {
@@ -73,7 +73,11 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
     ];
 
     for (const { label, re } of clicks) {
-      await page.locator('#dirbar .dir-btn', { hasText: new RegExp(`^${label.replace('.', '\\.')}$`) }).first().click();
+      await killOverlays(page);
+      await page
+        .locator('#dirbar .dir-btn', { hasText: new RegExp(`^${label.replace('.', '\\.')}$`) })
+        .first()
+        .click({ force: true });
       await page.waitForTimeout(350);
       const title = (await page.locator('#window-title').textContent()) || '';
       expect(title, `dirbar ${label} title`).toMatch(re);
@@ -141,7 +145,7 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
     expect(body).toMatch(/Stories|My Story|Oct(ober)?\s*3/i);
     expect(body).not.toMatch(/still not Stories/i);
     await expect(page.locator('a[href*="story"]').first()).toBeVisible();
-    await page.locator('[data-snap-send]').click();
+    await completeRealGate(page, '[data-snap-send]');
     await page.waitForTimeout(200);
     const snapCount = await page.evaluate(() => localStorage.getItem('itt13-snap-count'));
     expect(snapCount).toBeTruthy();
@@ -155,7 +159,7 @@ test.describe('2013 shell honesty (visitor-facing)', () => {
     await page.evaluate(() => localStorage.removeItem('itt13-chrome'));
     await page.reload();
     await page.waitForTimeout(600);
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await page.waitForTimeout(150);
     const raw = await page.evaluate(() => localStorage.getItem('itt13-chrome'));
     expect(raw, 'itt13-chrome after download').toBeTruthy();

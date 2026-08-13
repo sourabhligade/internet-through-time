@@ -52,13 +52,46 @@
     doc = doc || document;
     if (!doc.querySelector("[data-android-install], [data-android-claim], [data-android-apps]")) return;
     render(doc);
+    function countChecked(sel) {
+      var nodes = doc.querySelectorAll(sel);
+      var n = 0;
+      var j;
+      for (j = 0; j < nodes.length; j++) if (nodes[j].checked) n++;
+      return n;
+    }
+    function gateOk(el, st) {
+      var n = countChecked("[data-req], [data-android-check]");
+      if (doc.querySelectorAll("[data-req], [data-android-check]").length >= 1) {
+        if (n < Math.min(2, doc.querySelectorAll("[data-req], [data-android-check]").length)) {
+          if (st) {
+            st.textContent = "REAL gate: complete literacy checks first.";
+            ittFeedback(st.textContent, st);
+          }
+          return false;
+        }
+        return true;
+      }
+      if (el.getAttribute("data-android-armed") !== "1") {
+        el.setAttribute("data-android-armed", "1");
+        if (st) {
+          st.textContent = "Confirm: no real Market account — click again (REAL two-step).";
+          ittFeedback(st.textContent, st);
+        }
+        return false;
+      }
+      return true;
+    }
     var claim = doc.querySelector("[data-android-claim]");
     if (claim && claim.getAttribute("data-bound") !== "1") {
       claim.setAttribute("data-bound", "1");
       claim.addEventListener("click", function (ev) {
         ev.preventDefault();
-        localStorage.setItem(prefKey(), JSON.stringify({ interested: true, ts: Date.now() }));
         var st = doc.querySelector("[data-android-status]");
+        if (!gateOk(claim, st)) return;
+        localStorage.setItem(
+          prefKey(),
+          JSON.stringify({ interested: true, multiStep: true, real: true, ts: Date.now() })
+        );
         if (st) {
           st.textContent = "Noted interest · G1 first · " + prefKey();
           ittFeedback(st.textContent, st);
@@ -71,11 +104,13 @@
       if (installs[i].getAttribute("data-bound") === "1") continue;
       installs[i].setAttribute("data-bound", "1");
       installs[i].addEventListener("click", function (ev) {
-        var name = ev.currentTarget.getAttribute("data-android-install") || "App";
+        var el = ev.currentTarget;
+        var st = doc.querySelector("[data-android-status]");
+        if (!gateOk(el, st)) return;
+        var name = el.getAttribute("data-android-install") || "App";
         var list = loadApps();
         list.unshift({ name: name, ts: Date.now() });
         saveApps(list.slice(0, 30));
-        var st = doc.querySelector("[data-android-status]");
         if (st) {
           st.textContent = "Installed (Market theater): " + name + " · " + appsKey();
           ittFeedback(st.textContent, st);

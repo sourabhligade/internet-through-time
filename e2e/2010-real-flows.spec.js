@@ -4,6 +4,8 @@
  * Every interactive action must mutate itt10-* keys and/or DOM after click.
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, twoStepClick, checkAllReq } = require('./helpers');
+
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -36,7 +38,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-apps]')).toContainText(
       /Koi|Monkey|Convert|Facebook|Shazam|NYTimes|Camera|Google|Twitter|Pandora|name/i,
       { timeout: 8000 }
@@ -129,7 +131,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, ['itt10-android-apps', 'itt10-android']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await page.locator('[data-android-install]').first().click();
+    await completeRealGate(page, '[data-android-install]');
     const raw = await page.evaluate(
       () => localStorage.getItem('itt10-android-apps') || localStorage.getItem('itt10-android')
     );
@@ -140,7 +142,7 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/chrome/index.html');
     await clearKeys(page, 'itt10-chrome');
     await page.reload();
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await page.locator('[data-chrome-prefer]').click();
     const raw = await requireKey(page, 'itt10-chrome');
     expect(raw).toMatch(/download|prefer|true/i);
@@ -228,7 +230,7 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/wave/index.html');
     await clearKeys(page, 'itt10-wave');
     await page.reload();
-    await page.locator('[data-wave-invite]').click();
+    await completeRealGate(page, '[data-wave-invite]');
     await requireKey(page, 'itt10-wave');
   });
 

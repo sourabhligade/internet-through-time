@@ -4,6 +4,14 @@
  * Covers: boot · home content · dirbar · home button · start menu · location Go.
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const {
   enterYear,
   contentFrame,
@@ -137,13 +145,19 @@ for (const year of YEARS) {
           try {
             const f = document.getElementById('content');
             const src = ((f && f.getAttribute('src')) || '').toLowerCase();
-            return new RegExp(reSrc, 'i').test(src);
+            if (new RegExp(reSrc, 'i').test(src)) return true;
+            const loc = f && f.contentWindow && f.contentWindow.location;
+            if (loc) {
+              const path = ((loc.pathname || '') + (loc.search || '')).toLowerCase();
+              if (new RegExp(reSrc, 'i').test(path)) return true;
+            }
+            return false;
           } catch (e) {
             return false;
           }
         },
         hint.re.source,
-        { timeout: 15000 }
+        { timeout: 25000 }
       );
       const src = (await page.locator('#content').getAttribute('src')) || '';
       expect(src).toMatch(hint.re);

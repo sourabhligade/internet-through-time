@@ -3,7 +3,7 @@
  * 2013 flows A–T — real localStorage (itt13)
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, completeRealGate, twoStepClick, checkAllReq } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -162,7 +162,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await clearKeys(page, ['itt13-chrome']);
     await page.reload();
     await page.waitForTimeout(600);
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     const raw = await expectStorageTruthy(page, 'itt13-chrome');
     expect(raw).toMatch(/download|true|platform/i);
   });

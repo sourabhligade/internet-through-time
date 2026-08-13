@@ -481,11 +481,11 @@
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
       "sites/youvegotmail/index.html": "You've Got Mail",
-      "pages/about.html": "About 2004",
+      "pages/about.html": "About 2008",
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2008",
       "pages/map.html": "2008 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
@@ -565,8 +565,13 @@
       "sites/friendconnect/index.html": "Google Friend Connect",
       "sites/friendconnect/about.html": "About Friend Connect"
     },
-    defaultBookmarks: [
+        defaultBookmarks: [
       { title: "Starting Point 2008", path: "pages/home.html" },
+      { title: "App Store", path: "sites/appstore/index.html" },
+      { title: "Chrome", path: "sites/chrome/index.html" },
+      { title: "Android G1", path: "sites/android/index.html" },
+      { title: "Hulu", path: "sites/hulu/index.html" },
+      { title: "About 2008", path: "pages/about.html" },
       { title: "Twitter", path: "sites/twitter/index.html" },
       { title: "Facebook", path: "sites/facebook/index.html" },
       { title: "YouTube", path: "sites/youtube/index.html" },
@@ -576,10 +581,7 @@
       { title: "MySpace", path: "sites/myspace/index.html" },
       { title: "Google", path: "sites/google/index.html" },
       { title: "Flickr", path: "sites/flickr/index.html" },
-      { title: "Gmail", path: "sites/gmail/index.html" },
-      { title: "Yahoo!", path: "sites/yahoo/index.html" },
-      { title: "Amazon.com", path: "sites/amazon/index.html" },
-      { title: "Wikipedia", path: "sites/wikipedia/index.html" }
+      { title: "Gmail", path: "sites/gmail/index.html" }
     ],
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web2008/",

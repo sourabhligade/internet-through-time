@@ -4,7 +4,7 @@
  * docs/2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md Part 4
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, waitForImmersion, killOverlays } = require('./helpers');
+const { enterYear, goInFrame, waitForImmersion, killOverlays, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -321,7 +321,7 @@ test.describe('2011 flows A–T (real only)', () => {
     await clearKeys(page, ['itt11-snap-count', 'itt11-snap-last-timer']);
     await page.reload();
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await page.locator('[data-snap-send]').click();
+    await completeRealGate(page, '[data-snap-send]');
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 5000 });
     const raw = await expectStorageTruthy(page, 'itt11-snap-count');
     expect(Number(raw)).toBeGreaterThan(0);

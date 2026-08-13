@@ -5,6 +5,14 @@
  * Extra real-flow coverage: e2e/2004-real-flows.spec.js
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame, waitForImmersion, goInFrame } = require('./helpers');
 
 async function clearItt04(page, prefixes) {

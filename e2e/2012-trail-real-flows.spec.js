@@ -4,6 +4,8 @@
  * Home connection trails
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, twoStepClick, checkAllReq, killOverlays } = require('./helpers');
+
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -154,7 +156,7 @@ test.describe('2012 trail 5 — Desktop reimagined', () => {
       null,
       { timeout: 25000 }
     );
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await expect
       .poll(async () => {
         return page.evaluate(() =>

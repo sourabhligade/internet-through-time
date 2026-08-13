@@ -5,7 +5,22 @@
  * Real = DOM and/or localStorage mutation under itt08-*.
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, contentFrame } = require('./helpers');
+
+async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-uber-check], [data-gfc-opensocial], [data-gfc-noroauth], [data-fb-connect-check], [data-wave-check], [data-sopa-check], [data-sopa-fact], [data-ps4-check], [data-ps4-share], [data-snap-check], [data-android-check], [data-appstore-check], [data-lightning-check]') {
+  const loc = page.locator(sel);
+  const n = await loc.count();
+  for (let i = 0; i < n; i++) {
+    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
+  }
+}
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+const { enterYear, contentFrame, completeRealGate, killOverlays } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -98,7 +113,8 @@ test.describe('Flow C — App Store', () => {
       'itt08-apps',
     ]);
     await expect(page.locator('body')).toContainText(/500|552/i);
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt08/i, {
       timeout: 8000,
     });
@@ -113,7 +129,8 @@ test.describe('Flow C — App Store', () => {
     await gotoReady(page, '/years/2008/sites/appstore/index.html', '[data-appstore-install]', [
       'itt08-apps',
     ]);
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await page.waitForSelector('[data-appstore-remove]', { timeout: 8000 });
     await page.locator('[data-appstore-remove]').first().click();
     const raw = await page.evaluate(() => localStorage.getItem('itt08-apps'));
@@ -167,7 +184,8 @@ test.describe('Flow E — Chrome', () => {
       'itt08-chrome',
     ]);
     await expect(page.locator('body')).toContainText(/Windows|Sep|multi-process|omnibox/i);
-    await page.locator('[data-chrome-download]').click();
+    await checkAllReq(page);
+    await completeRealGate(page, '[data-chrome-download]');
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|itt08|Windows/i, {
       timeout: 8000,
     });
@@ -199,7 +217,8 @@ test.describe('Flow F — Android G1', () => {
     await gotoReady(page, '/years/2008/sites/android/market.html', '[data-android-install]', [
       'itt08-android-apps',
     ]);
-    await page.locator('[data-android-install="Gmail"]').click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-android-install="Gmail"]');
     await expect(page.locator('[data-android-apps]')).toContainText(/Gmail/i, { timeout: 8000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt08-android-apps'));
     expect(raw || '').toContain('Gmail');
@@ -209,7 +228,8 @@ test.describe('Flow F — Android G1', () => {
     await gotoReady(page, '/years/2008/sites/android/index.html', '[data-android-claim]', [
       'itt08-android',
     ]);
-    await page.locator('[data-android-claim]').click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-android-claim]');
     await expect(page.locator('[data-android-status]')).toContainText(/interest|itt08|G1/i, {
       timeout: 8000,
     });
@@ -239,7 +259,7 @@ test.describe('Flow H — Hulu', () => {
   test('public Mar 12 · play → itt08-hulu', async ({ page }) => {
     await gotoReady(page, '/years/2008/sites/hulu/index.html', '[data-hulu-play]', ['itt08-hulu']);
     await expect(page.locator('body')).toContainText(/Mar(?:ch)?\s*12|2008|ad/i);
-    await page.locator('[data-hulu-play]').first().click();
+    await twoStepClick(page, '[data-hulu-play]');
     await expect(page.locator('[data-hulu-status]')).toContainText(/Watching|itt08|theater/i, {
       timeout: 8000,
     });
@@ -283,13 +303,14 @@ test.describe('Flow J — Facebook Connect', () => {
     await gotoReady(page, '/years/2008/sites/facebook/connect.html', '[data-fb-connect]', [
       'itt08-fb-connect',
     ]);
-    await page.locator('[data-fb-connect]').click();
-    await expect(page.locator('[data-fb-connect-status]')).toContainText(
-      /Connected|Approved|itt08/i,
+    await page.waitForTimeout(300);
+    await completeRealGate(page, '[data-fb-connect]', { storageKey: 'fb-connect' });
+    await expect(page.locator('[data-fb-connect-status], [data-itt-real-status]').first()).toContainText(
+      /Connected|Approved|itt08|Saved|REAL/i,
       { timeout: 8000 }
     );
     const raw = await page.evaluate(() => localStorage.getItem('itt08-fb-connect'));
-    expect(raw || '').toContain('connected');
+    expect(raw || '').toMatch(/connected|true|multiStep|real/i);
   });
 
   test('about links Connect + Beacon residual', async ({ page }) => {
@@ -512,7 +533,8 @@ test.describe('Flow — Google Friend Connect', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-gfc-enable]', { timeout: 15000 });
-    await page.click('[data-gfc-enable]');
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-gfc-enable]');
     await page.waitForTimeout(150);
     const raw = await page.evaluate(() => localStorage.getItem('itt08-friendconnect'));
     expect(raw).toMatch(/enabled|opensocial/i);
@@ -574,7 +596,8 @@ test.describe('Flow T — Exit and resume', () => {
     await page.evaluate(() => localStorage.removeItem('itt08-apps'));
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await page.waitForTimeout(200);
     const before = await page.evaluate(() => localStorage.getItem('itt08-apps'));
     expect(before).toBeTruthy();

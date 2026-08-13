@@ -26,6 +26,23 @@
       ev.preventDefault();
       var secs = timer ? parseInt(timer.value, 10) || 5 : 5;
       secs = Math.max(1, Math.min(10, secs));
+      /* REAL: require literacy checks if present, else two-step arm */
+      var checks = doc.querySelectorAll("[data-snap-check], [data-req]");
+      var cn = 0;
+      var ci;
+      for (ci = 0; ci < checks.length; ci++) if (checks[ci].checked) cn++;
+      if (checks.length >= 1) {
+        if (cn < Math.min(2, checks.length)) {
+          if (status) status.textContent = "REAL gate: complete Snap literacy checks first.";
+          return;
+        }
+      } else if (send.getAttribute("data-snap-armed") !== "1") {
+        send.setAttribute("data-snap-armed", "1");
+        if (status) {
+          status.textContent = "Confirm: no real Snapchat account — click Send again (REAL two-step).";
+        }
+        return;
+      }
       var n = 0;
       try {
         n = parseInt(localStorage.getItem(key("snap-count")) || "0", 10) || 0;

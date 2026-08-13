@@ -4,7 +4,7 @@
  * docs/2012-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md Part 4
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, killOverlays } = require('./helpers');
+const { enterYear, killOverlays, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -245,7 +245,7 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await clearKeyPattern(page, 'chrome');
     await page.reload();
     await waitImmersionYear(page, '2012');
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|theater|Chrome|preferred/i, {
       timeout: 8000,
     });
@@ -269,7 +269,7 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.reload();
     await waitImmersionYear(page, '2012');
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await page.locator('[data-snap-send]').click();
+    await completeRealGate(page, '[data-snap-send]');
     await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 8000 });
     const raw = await expectStorageTruthy(page, 'itt12-snap-count');
     expect(Number(raw)).toBeGreaterThan(0);

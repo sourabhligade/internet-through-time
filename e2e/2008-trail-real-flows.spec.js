@@ -5,6 +5,7 @@
  * docs/2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md Part 5
  */
 const { test, expect } = require('@playwright/test');
+const { checkAllReq, twoStepClick, completeRealGate, killOverlays} = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -30,7 +31,8 @@ test.describe('2008 trail 1 — Apps arrive', () => {
     await clearKeys(page, ['itt08-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt08/i, {
       timeout: 8000,
     });
@@ -49,7 +51,8 @@ test.describe('2008 trail 2 — Browser wars 2.0', () => {
     await clearKeys(page, ['itt08-chrome']);
     await page.reload();
     await page.waitForSelector('[data-chrome-download]', { timeout: 20000 });
-    await page.locator('[data-chrome-download]').click();
+    await checkAllReq(page);
+    await completeRealGate(page, '[data-chrome-download]');
     await expect(page.locator('[data-chrome-status]')).toContainText(/Download|itt08|Windows/i, {
       timeout: 8000,
     });
@@ -68,11 +71,12 @@ test.describe('2008 trail 3 — Android opens', () => {
     await clearKeys(page, ['itt08-android-apps']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
+    await checkAllReq(page);
     const mapsBtn = page.locator('[data-android-install="Google Maps"]');
     if (await mapsBtn.count()) {
-      await mapsBtn.click();
+      await twoStepClick(page, '[data-android-install="Google Maps"]');
     } else {
-      await page.locator('[data-android-install]').first().click();
+      await twoStepClick(page, '[data-android-install]');
     }
     await page.waitForTimeout(200);
     const raw = await page.evaluate(() => localStorage.getItem('itt08-android-apps'));
@@ -89,7 +93,7 @@ test.describe('2008 trail 4 — Stream night', () => {
     await clearKeys(page, ['itt08-hulu', 'itt08-netflix-queue', 'itt08-yt-uploads', 'itt08-yt-views']);
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await twoStepClick(page, '[data-hulu-play]');
     expect(await page.evaluate(() => localStorage.getItem('itt08-hulu'))).toBeTruthy();
 
     await page.goto('/years/2008/sites/netflix/index.html');
@@ -115,8 +119,14 @@ test.describe('2008 trail 5 — Login everywhere', () => {
     await clearKeys(page, ['itt08-fb-connect']);
     await page.reload();
     await page.waitForSelector('[data-fb-connect]', { timeout: 20000 });
-    await page.locator('[data-fb-connect]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt08-fb-connect'))).toContain('connected');
+    await page.waitForFunction(() => document.documentElement.getAttribute('data-itt-immersion-booted') === '2008' || document.documentElement.getAttribute('data-itt-fb-connect') === '1' || document.documentElement.getAttribute('data-itt-nomock-common') === '1', null, { timeout: 20000 }).catch(() => {});
+    await expect.poll(async () => {
+      await checkAllReq(page);
+      await page.locator('[data-fb-connect]').first().click({ force: true });
+      return page.evaluate(() => localStorage.getItem('itt08-fb-connect'));
+    }, { timeout: 12000, intervals: [200, 400, 800] }).toBeTruthy();
+    const fbC = await page.evaluate(() => localStorage.getItem('itt08-fb-connect'));
+    expect(fbC || '').toMatch(/connected|true|real/i);
 
     await page.goto('/years/2008/sites/facebook/feed.html');
     await expect(page.locator('body')).toContainText(/Feed|News|status|Facebook/i);

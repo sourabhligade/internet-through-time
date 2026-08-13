@@ -5,6 +5,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 /** @type {Record<string, Array<{type: string, phrase?: string, holdMs?: number}>>} */
 const GAMES = {
   '1994': [

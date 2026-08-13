@@ -3,6 +3,14 @@
  * 1999 hard signature flows — no soft mocks.
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame, waitForImmersion, goInFrame } = require('./helpers');
 
 test.describe('1999 hard flows', () => {

@@ -2,6 +2,14 @@
 /** 2003 densify — P0 multipage presence + Starting Point honesty */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2003 densify', () => {
   test('MySpace multipage', async ({ page }) => {
     await page.goto('/years/2003/sites/myspace/index.html');

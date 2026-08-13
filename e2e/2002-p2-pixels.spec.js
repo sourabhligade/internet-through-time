@@ -1,6 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2002 Phase 9 pixels + P2 rooms', () => {
   test('XP start recon asset loads', async ({ page }) => {
     const res = await page.request.get('/assets/period/2002/xp/start.gif');
@@ -26,7 +34,7 @@ test.describe('2002 Phase 9 pixels + P2 rooms', () => {
   test('Steam install theater', async ({ page }) => {
     await page.goto('/years/2002/sites/steam/index.html');
     await page.waitForTimeout(500);
-    await page.click('[data-itt-download]');
+    await twoStepClick(page, '[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
   });
 
@@ -40,7 +48,7 @@ test.describe('2002 Phase 9 pixels + P2 rooms', () => {
   test('ISP broadband landing', async ({ page }) => {
     await page.goto('/years/2002/sites/isp/index.html');
     await expect(page.getByText(/21%/)).toBeVisible();
-    await page.click('[data-itt-download]');
+    await twoStepClick(page, '[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
   });
 

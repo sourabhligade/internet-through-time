@@ -4,6 +4,22 @@
  * Every interactive action must mutate itt09-* keys and/or DOM after click.
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, killOverlays } = require('./helpers');
+
+
+async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-appstore-check], [data-android-check], [data-wave-check]') {
+  const loc = page.locator(sel);
+  const n = await loc.count();
+  for (let i = 0; i < n; i++) {
+    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
+  }
+}
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -36,7 +52,8 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     const after = JSON.parse((await requireKey(page, 'itt09-apps')) || '[]');
     expect(Array.isArray(after) ? after.length : 1).toBeGreaterThan(0);
   });
@@ -54,7 +71,7 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/farmville/index.html');
     await clearKeys(page, 'itt09-farm');
     await page.reload();
-    await page.locator('[data-farm-plant="strawberry"]').click();
+    await twoStepClick(page, '[data-farm-plant="strawberry"]');
     const raw = await requireKey(page, 'itt09-farm');
     expect(raw).toMatch(/strawberry/i);
   });
@@ -86,7 +103,7 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/foursquare/index.html');
     await clearKeys(page, 'itt09-4sq');
     await page.reload();
-    await page.locator('[data-4sq-checkin]').first().click();
+    await twoStepClick(page, '[data-4sq-checkin]');
     await requireKey(page, 'itt09-4sq');
   });
 
@@ -103,7 +120,8 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/wave/index.html');
     await clearKeys(page, 'itt09-wave');
     await page.reload();
-    await page.locator('[data-wave-invite]').click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-wave-invite]');
     await requireKey(page, 'itt09-wave');
   });
 
@@ -111,7 +129,8 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/chrome/index.html');
     await clearKeys(page, 'itt09-chrome');
     await page.reload();
-    await page.locator('[data-chrome-download]').click();
+    await checkAllReq(page);
+    await completeRealGate(page, '[data-chrome-download]');
     await requireKey(page, 'itt09-chrome');
   });
 
@@ -120,7 +139,8 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, ['itt09-android-apps', 'itt09-android']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await page.locator('[data-android-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-android-install]');
     const raw = await page.evaluate(
       () => localStorage.getItem('itt09-android-apps') || localStorage.getItem('itt09-android')
     );
@@ -148,7 +168,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-hulu');
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await twoStepClick(page, '[data-hulu-play]');
     await requireKey(page, 'itt09-hulu');
   });
 

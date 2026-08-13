@@ -7,7 +7,7 @@
  * No “mock-only” pass: empty storage after click fails.
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -86,7 +86,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     let raw = await expectStorageTruthy(page, 'itt10-apps');
     expect(raw).toMatch(/name|Koi|Monkey|Facebook|Twitter|Shazam|Pandora|id/i);
 
@@ -125,8 +125,13 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.goto('/years/2010/sites/facebook/places.html');
     await clearKeys(page, ['itt10-fb-places']);
     await page.reload();
-    await page.locator('#pl').click();
-    await expect(page.locator('#st')).toContainText(/Checked in|itt10-fb-places/i);
+    const placeBtn = page.locator('[data-fb-place], #pl, [data-place-checkin]').first();
+    await expect(placeBtn).toBeVisible({ timeout: 15000 });
+    await placeBtn.click();
+    await expect(page.locator('[data-fb-places-status], #st, [data-fb-place-status]').first()).toContainText(
+      /Checked in|itt10-fb-places|Coffee|Airport|place/i,
+      { timeout: 8000 }
+    );
     await expectStorageTruthy(page, 'itt10-fb-places');
   });
 
@@ -182,7 +187,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.goto('/years/2010/sites/android/market.html');
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await page.locator('[data-android-install]').first().click();
+    await completeRealGate(page, '[data-android-install]');
     const raw = await page.evaluate(
       () => localStorage.getItem('itt10-android-apps') || localStorage.getItem('itt10-android')
     );
@@ -230,7 +235,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-wave']);
     await page.reload();
     await page.waitForSelector('[data-wave-invite]', { timeout: 15000 });
-    await page.locator('[data-wave-invite]').click();
+    await completeRealGate(page, '[data-wave-invite]');
     await expect(page.locator('[data-wave-status]')).toContainText(/itt10-wave|invite|2010/i);
     await expectStorageTruthy(page, 'itt10-wave');
   });
@@ -345,6 +350,12 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-amazon-cart', 'itt10-cart']);
     await page.reload();
     await page.waitForSelector('[data-add-cart]', { timeout: 20000 });
+    await page.waitForFunction(() => {
+      try {
+        return !!(window.ITT && (ITT._immersionApi || ITT.ImmersionFeatures));
+      } catch (e) { return true; }
+    }, null, { timeout: 15000 }).catch(() => {});
+    await page.waitForTimeout(400);
     await page.locator('[data-add-cart]').first().click();
     const cart = await page.evaluate(() => {
       for (const k of ['itt10-amazon-cart', 'itt10-cart']) {
@@ -368,7 +379,8 @@ test.describe('2010 flows A–T (real only)', () => {
     await page.waitForSelector('[data-wiki-save], textarea', { timeout: 20000 });
     const ta = page.locator('textarea').first();
     if (await ta.count()) await ta.fill('2010 museum wiki edit real');
-    await page.locator('[data-wiki-save]').click();
+    // Inline script + shared.js may both stamp data-wiki-save — pick first visible control
+    await page.locator('[data-wiki-save]').first().click();
     await expectStorageTruthy(page, 'itt10-wiki-edit');
   });
 
@@ -417,7 +429,7 @@ test.describe('2010 flows A–T (real only)', () => {
     await clearKeys(page, ['itt10-chrome']);
     await page.reload();
     await page.waitForSelector('[data-chrome-download]', { timeout: 15000 });
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await expectStorageTruthy(page, 'itt10-chrome');
   });
 });

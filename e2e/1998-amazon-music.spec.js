@@ -1,6 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('1998 Amazon Music', () => {
   test('Music tab page loads and can add CD to cart', async ({ page }) => {
     // Direct content page: avoids shell iframe race on amazon feature boot

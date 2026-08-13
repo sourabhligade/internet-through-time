@@ -1,5 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear } = require('./helpers');
 
 test.describe('2001 every chrome button live', () => {
@@ -115,23 +123,56 @@ test.describe('2001 every chrome button live', () => {
   });
 
   test('content: wiki edit + google search + broadband speed', async ({ page }) => {
-    await page.locator('.dir-btn', { hasText: 'Wikipedia' }).click();
-    await page.waitForTimeout(1000);
+    test.setTimeout(90_000);
     const frame = page.frameLocator('#content');
-    await frame.locator('a[href="edit.html"]').first().click();
-    await page.waitForTimeout(800);
-    await expect(frame.locator('body')).toContainText(/edit|wiki|preview/i);
-    await page.locator('.dir-btn', { hasText: 'Google' }).click();
-    await page.waitForTimeout(900);
+    const clearChrome = async () => {
+      await page.evaluate(() => {
+        document.getElementById('modal-backdrop')?.classList.add('hidden');
+        document.querySelectorAll('.dialog').forEach((d) => d.classList.add('hidden'));
+      });
+    };
+
+    await clearChrome();
+    await page.locator('.dir-btn', { hasText: 'Wikipedia' }).click({ force: true });
+    await page.waitForFunction(() => {
+      try {
+        const s = document.getElementById('content')?.getAttribute('src') || '';
+        return /wiki/i.test(s);
+      } catch (e) {
+        return false;
+      }
+    }, null, { timeout: 15000 });
+    await frame.locator('a[href="edit.html"]').first().click({ force: true });
+    await expect(frame.locator('body')).toContainText(/edit|wiki|preview/i, { timeout: 15000 });
+
+    await clearChrome();
+    await page.locator('.dir-btn', { hasText: 'Google' }).click({ force: true });
+    await page.waitForFunction(() => {
+      try {
+        const s = document.getElementById('content')?.getAttribute('src') || '';
+        return /google/i.test(s);
+      } catch (e) {
+        return false;
+      }
+    }, null, { timeout: 15000 });
     await frame.locator('input[name="q"]').fill('wikipedia');
     await frame.locator('input[type="submit"]').first().click();
-    await page.waitForTimeout(900);
-    const src = await page.locator('#content').getAttribute('src');
-    expect(src || '').toMatch(/search|google/i);
-    await page.locator('.dir-btn', { hasText: 'Broadband' }).click();
-    await page.waitForTimeout(800);
-    await frame.locator('#speed-check').click();
-    await expect(frame.locator('#speed-out')).toContainText(/kbps|museum/i, { timeout: 3000 });
+    await expect
+      .poll(async () => (await page.locator('#content').getAttribute('src')) || '', { timeout: 15000 })
+      .toMatch(/search|google/i);
+
+    await clearChrome();
+    await page.locator('.dir-btn', { hasText: 'Broadband' }).click({ force: true });
+    await page.waitForFunction(() => {
+      try {
+        const s = document.getElementById('content')?.getAttribute('src') || '';
+        return /broadband|isp/i.test(s);
+      } catch (e) {
+        return false;
+      }
+    }, null, { timeout: 15000 });
+    await frame.locator('#speed-check').click({ force: true });
+    await expect(frame.locator('#speed-out')).toContainText(/kbps|museum/i, { timeout: 10000 });
   });
 
   test('chrome GIFs load 200 (toolbar icons)', async ({ page, request }) => {

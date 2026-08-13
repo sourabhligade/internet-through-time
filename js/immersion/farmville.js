@@ -77,11 +77,25 @@
     var i;
     for (i = 0; i < plantBtns.length; i++) {
       plantBtns[i].addEventListener("click", function (ev) {
-        var id = ev.currentTarget.getAttribute("data-farm-plant");
+        var el = ev.currentTarget;
+        var id = el.getAttribute("data-farm-plant");
+        if (!id) return;
+        var st = doc.querySelector("[data-farm-status]");
+        var RG = ITT.RealGate;
+        if (RG) {
+          if (
+            !RG.passGate(doc, el, st, {
+              checkSel: "[data-farm-check], [data-req]",
+              min: 1,
+              armMsg: "Confirm: no real Facebook FarmVille — click plant again (REAL two-step)."
+            })
+          ) {
+            return;
+          }
+        }
         var crop = CROPS[id] || { label: id, hours: 4 };
         var s = load();
         s.plots = s.plots || [];
-        /* Museum theater: short timers so harvest works in session (label keeps period hours) */
         /* Theater timer ~3s so harvest is playable; copy still shows period hours */
         var ms = 3000;
         s.plots.unshift({
@@ -93,6 +107,8 @@
         s.plots = s.plots.slice(0, 12);
         s.log = s.log || [];
         s.log.unshift("Planted " + crop.label + " (period " + crop.hours + "h lore · ~3s theater timer)");
+        s.multiStep = true;
+        s.real = true;
         save(s);
         render(doc);
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
@@ -102,8 +118,9 @@
             kind: "farm-plant"
           });
         }
-        /* auto-refresh when crops become READY */
-        setTimeout(function () { render(doc); }, ms + 50);
+        setTimeout(function () {
+          render(doc);
+        }, ms + 50);
       });
     }
     var harv = doc.querySelector("[data-farm-harvest]");

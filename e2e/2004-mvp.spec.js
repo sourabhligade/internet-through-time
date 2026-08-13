@@ -1,5 +1,13 @@
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2004 MVP', () => {
   test('hub opens 2004', async ({ page }) => {
     await page.goto('/');

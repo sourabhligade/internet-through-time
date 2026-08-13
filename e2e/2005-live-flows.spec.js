@@ -4,6 +4,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2005 live flows REAL', () => {
   test('youtube upload theater', async ({ page }) => {
     await page.goto('/years/2005/sites/youtube/upload.html');

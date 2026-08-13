@@ -3,6 +3,14 @@
  * 2003 hard signature flows — MySpace · iTunes · WordPress · LinkedIn · bans.
  */
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame, waitForImmersion, goInFrame } = require('./helpers');
 
 test.describe('2003 hard flows', () => {

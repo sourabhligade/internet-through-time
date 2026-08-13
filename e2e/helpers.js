@@ -5,6 +5,11 @@
  * Kill connect overlay + modal backdrop that intercept clicks.
  * @param {import('@playwright/test').Page} page
  */
+/**
+ * Safety net for leftover dialogs. Product shells should not need this after
+ * skip (see hideOverlay / maybePhoneEvent in js/browser/create.js). Overlay
+ * honesty specs must NOT call this.
+ */
 async function killOverlays(page) {
   await page.evaluate(() => {
     const kill = (el) => {
@@ -34,7 +39,7 @@ async function enterYear(page, year) {
     const alert = page.locator('#dlg-alert:not(.hidden)');
     if (await alert.isVisible().catch(() => false)) {
       await page.locator('#dlg-alert-ok, [data-close="dlg-alert"]').first().click();
-      await page.waitForTimeout(100);
+      await alert.waitFor({ state: 'hidden', timeout: 2000 }).catch(() => {});
     } else break;
   }
   await killOverlays(page);
@@ -145,26 +150,57 @@ async function clickAllDirbar(page, opts) {
   }
   /** @type {string[]} */
   const fails = [];
+
+  function iframeMatchesTarget(target) {
+    try {
+      const f = document.getElementById('content');
+      if (!f) return false;
+      const src = (f.getAttribute('src') || '') + '';
+      let path = '';
+      try {
+        const loc = f.contentWindow && f.contentWindow.location;
+        if (loc) path = (loc.pathname || '') + (loc.search || '');
+      } catch (ePath) {
+        /* */
+      }
+      const hay = src + ' ' + path;
+      if (!target) return hay.length > 1;
+      if (hay.indexOf(target) !== -1) return true;
+      const brand = target.indexOf('sites/') === 0 ? target.split('/')[1] : target.split('/').pop();
+      return !!(brand && hay.indexOf(brand) !== -1);
+    } catch (e) {
+      return false;
+    }
+  }
+
   for (let i = 0; i < n; i++) {
     await killOverlays(page);
+    await page
+      .waitForFunction(
+        () => {
+          const b = document.getElementById('browser');
+          return !b || !b.classList.contains('loading');
+        },
+        null,
+        { timeout: 8000 }
+      )
+      .catch(() => {});
     const btn = buttons.nth(i);
     const go = (await btn.getAttribute('data-go')) || '';
     const label = ((await btn.innerText()) || '').trim() || go;
     await btn.click({ force: true });
-    // wait for src change (modem delay may apply)
-    try {
-      await page.waitForFunction(
-        (target) => {
-          const f = document.getElementById('content');
-          const src = (f && f.getAttribute('src')) || '';
-          if (!target) return src.length > 0;
-          const brand = target.indexOf('sites/') === 0 ? target.split('/')[1] : target.split('/').pop();
-          return src.indexOf(target) !== -1 || (brand && src.indexOf(brand) !== -1);
-        },
-        go,
-        { timeout: 12000 }
-      );
-    } catch (e) {
+    // wait for src / iframe path (modem delay may apply)
+    let ok = false;
+    for (let attempt = 0; attempt < 2 && !ok; attempt++) {
+      try {
+        await page.waitForFunction(iframeMatchesTarget, go, { timeout: 12000 });
+        ok = true;
+      } catch (e) {
+        await killOverlays(page);
+        await btn.click({ force: true });
+      }
+    }
+    if (!ok) {
       const src = (await page.locator('#content').getAttribute('src')) || '';
       fails.push(`${label} go=${go} src=${src}`);
     }
@@ -187,21 +223,303 @@ async function exerciseStartMenu(page) {
   await killOverlays(page);
   await start.click({ force: true });
   await page.locator('[data-start-cmd="settings"]').click({ force: true });
-  await page.waitForTimeout(200);
-  const prefsOpen = await page.evaluate(() => {
-    const d = document.getElementById('dlg-prefs');
-    return !!(d && !d.classList.contains('hidden'));
-  });
+  const prefsOpen = await page
+    .locator('#dlg-prefs:not(.hidden)')
+    .waitFor({ state: 'visible', timeout: 3000 })
+    .then(() => true)
+    .catch(() => false);
   await killOverlays(page);
   await start.click({ force: true });
   await page.locator('[data-start-cmd="run"]').click({ force: true });
-  await page.waitForTimeout(200);
-  const runOpen = await page.evaluate(() => {
-    const d = document.getElementById('dlg-open-location');
-    return !!(d && !d.classList.contains('hidden'));
-  });
+  const runOpen = await page
+    .locator('#dlg-open-location:not(.hidden)')
+    .waitFor({ state: 'visible', timeout: 3000 })
+    .then(() => true)
+    .catch(() => false);
   await killOverlays(page);
   return { skipped: false, prefsOpen, runOpen };
+}
+
+/**
+ * Poll localStorage until a key is truthy. Prefer this over waitForTimeout + getItem.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} key
+ * @param {{ timeout?: number }} [opts]
+ */
+async function waitKey(page, key, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 8000;
+  await expect
+    .poll(async () => page.evaluate((k) => localStorage.getItem(k), key), { timeout })
+    .toBeTruthy();
+  return page.evaluate((k) => localStorage.getItem(k), key);
+}
+
+/**
+ * Poll #content src until it matches. Prefer this over waitForTimeout + getAttribute.
+ * @param {import('@playwright/test').Page} page
+ * @param {RegExp|string} re
+ * @param {{ timeout?: number }} [opts]
+ */
+/**
+ * Wait until iframe YearGame API is bound (avoids sleep-then-evaluate races).
+ * @param {import('@playwright/test').Page} page
+ * @param {{ timeout?: number }} [opts]
+ */
+async function waitYearGame(page, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 10000;
+  await expect
+    .poll(
+      async () =>
+        page.evaluate(() => {
+          try {
+            const w = document.getElementById('content') && document.getElementById('content').contentWindow;
+            return !!(w && w.ITT && w.ITT.YearGame && typeof w.ITT.YearGame.saveBest === 'function');
+          } catch (e) {
+            return false;
+          }
+        }),
+      { timeout }
+    )
+    .toBeTruthy();
+}
+
+async function waitContentSrc(page, re, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 8000;
+  await expect
+    .poll(async () => (await page.locator('#content').getAttribute('src')) || '', { timeout })
+    .toMatch(re);
+  return page.locator('#content').getAttribute('src');
+}
+
+
+/* --- storage / boot helpers (2014+ packs) --- */
+
+/**
+ * @param {import('@playwright/test').Page} page
+ * @param {string|string[]} keys
+ */
+async function clearKeys(page, keys) {
+  const list = Array.isArray(keys) ? keys : [keys];
+  await page.evaluate((ks) => {
+    ks.forEach((k) => {
+      try {
+        localStorage.removeItem(k);
+      } catch (e) {
+        /* */
+      }
+    });
+  }, list);
+}
+
+/**
+ * @param {import('@playwright/test').Page} page
+ * @param {string} key
+ * @param {{ timeout?: number }} [opts]
+ */
+async function requireKey(page, key, opts) {
+  const { expect } = require('@playwright/test');
+  const timeout = (opts && opts.timeout) || 10000;
+  await expect
+    .poll(async () => page.evaluate((k) => localStorage.getItem(k), key), {
+      timeout,
+      message: `missing ${key}`,
+    })
+    .toBeTruthy();
+  return (await page.evaluate((k) => localStorage.getItem(k), key)) || '';
+}
+
+/**
+ * @param {import('@playwright/test').Page} page
+ * @param {string} key
+ */
+async function assertNoKey(page, key) {
+  const { expect } = require('@playwright/test');
+  expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
+}
+
+/**
+ * Wait until immersion boot marker or year extras feature flag is set.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} year
+ * @param {{ extrasFlag?: string, timeout?: number }} [opts]
+ */
+async function waitBoot(page, year, opts) {
+  const y = String(year);
+  const timeout = (opts && opts.timeout) || 20000;
+  const extrasFlag = (opts && opts.extrasFlag) || `data-itt-feat-year${y}extras`;
+  await page
+    .waitForFunction(
+      ({ yearStr, flag }) => {
+        const root = document.documentElement;
+        return (
+          root.getAttribute('data-itt-immersion-booted') === yearStr ||
+          root.getAttribute(flag) === '1'
+        );
+      },
+      { yearStr: y, flag: extrasFlag },
+      { timeout }
+    )
+    .catch(() => {});
+}
+
+/**
+ * Double-click helper used by older packs (shell menus).
+ * @param {import('@playwright/test').Page} page
+ * @param {string} selector
+ */
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+/**
+ * Check all matching checkboxes.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} selector
+ */
+async function checkAll(page, selector) {
+  const loc = page.locator(selector);
+  const n = await loc.count();
+  if (!n) return 0;
+  await loc.evaluateAll((els) => {
+    els.forEach((e) => {
+      /** @type {HTMLInputElement} */ (e).checked = true;
+    });
+  });
+  return n;
+}
+
+/** Common REAL literacy checkbox selectors across year packs. */
+const REAL_CHECK_SEL = [
+  '[data-req]',
+  '[data-dl-check]',
+  '[data-itt-download-confirm]',
+  '[data-chrome-check]',
+  '[data-appstore-check]',
+  '[data-android-check]',
+  '[data-uber-check]',
+  '[data-gfc-opensocial]',
+  '[data-gfc-noroauth]',
+  '[data-fb-connect-check]',
+  '[data-wave-check]',
+  '[data-sopa-check]',
+  '[data-sopa-fact]',
+  '[data-ps4-check]',
+  '[data-ps4-share]',
+  '[data-snap-check]',
+  '[data-lightning-check]',
+  '[data-ipo-fact]',
+  '[data-glass-explorer]',
+  '[data-glass-backlash]',
+  '[data-btc-news]',
+  '[data-btc-nomarket]',
+  '[data-xbox-kinect]',
+  '[data-xbox-drm]',
+  '[data-telegram-privacy]',
+  '[data-thesis-req]',
+  '[data-healthcare-ack] ~ label input[type="checkbox"]',
+  'input[type="checkbox"][data-req]',
+].join(', ');
+
+/**
+ * Check every common REAL literacy box on the page.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} [extraSel]
+ */
+async function checkAllReq(page, extraSel) {
+  const sel = extraSel ? `${REAL_CHECK_SEL}, ${extraSel}` : REAL_CHECK_SEL;
+  return checkAll(page, sel);
+}
+
+/**
+ * Complete a REAL multipath action: literacy checks + two-step click when needed.
+ * Prefers data-itt-real-save when present for the given storage key.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} clickSelector
+ * @param {{ storageKey?: string, checkSel?: string, waitMs?: number }} [opts]
+ */
+async function completeRealGate(page, clickSelector, opts) {
+  opts = opts || {};
+  await checkAllReq(page, opts.checkSel);
+  let sel = clickSelector;
+  if (opts.storageKey) {
+    const real = page.locator(
+      `[data-itt-real-save][data-storage-key="${opts.storageKey}"]`
+    );
+    if ((await real.count()) > 0) sel = `[data-itt-real-save][data-storage-key="${opts.storageKey}"]`;
+  }
+  // Prefer real-save buttons already on page even without storageKey hint
+  if ((await page.locator(sel).count()) === 0) {
+    const anyReal = page.locator('[data-itt-real-save]').first();
+    if ((await anyReal.count()) > 0) {
+      await anyReal.click();
+      return;
+    }
+  }
+  const el = page.locator(sel).first();
+  await el.waitFor({ state: 'visible', timeout: opts.timeout || 15000 });
+  await el.click();
+  await page.waitForTimeout(opts.waitMs != null ? opts.waitMs : 120);
+  // Second click for two-step arms (no-op if already written / detached)
+  try {
+    if (await el.isVisible().catch(() => false)) await el.click({ timeout: 2000 });
+  } catch (e) {
+    /* already done */
+  }
+}
+
+/**
+ * Thesis literacy: REAL panel preferred over soft data-thesis-ack.
+ * @param {import('@playwright/test').Page} page
+ */
+async function completeThesis(page) {
+  await page.waitForSelector(
+    '[data-itt-real-save][data-storage-key="thesis-ack"], [data-thesis-ack]',
+    { timeout: 15000 }
+  );
+  // Wait for immersion / real-flow bind when present
+  await page
+    .waitForFunction(
+      () => {
+        const y =
+          document.documentElement.getAttribute('data-itt-year') ||
+          (document.body && document.body.getAttribute('data-itt-year')) ||
+          '';
+        const booted = document.documentElement.getAttribute('data-itt-immersion-booted');
+        const bound = document.querySelector(
+          '[data-itt-real-save][data-itt-real-bound="1"], [data-itt-real-save][data-real-bound="1"]'
+        );
+        return !y || booted === y || !!bound || !!window.ITT;
+      },
+      null,
+      { timeout: 15000 }
+    )
+    .catch(() => {});
+  await page.waitForTimeout(150);
+  await checkAllReq(page);
+  const real = page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]');
+  if ((await real.count()) > 0) {
+    await real.first().click();
+  } else {
+    await page.locator('[data-thesis-ack]').first().click();
+  }
+}
+
+/**
+ * Read data-itt-year from html or body.
+ * @param {import('@playwright/test').Page} page
+ */
+async function pageYear(page) {
+  return (
+    (await page.locator('html').getAttribute('data-itt-year')) ||
+    (await page.locator('body').getAttribute('data-itt-year')) ||
+    ''
+  );
 }
 
 module.exports = {
@@ -213,4 +531,18 @@ module.exports = {
   killOverlays,
   clickAllDirbar,
   exerciseStartMenu,
+  waitKey,
+  waitContentSrc,
+  waitYearGame,
+  clearKeys,
+  requireKey,
+  assertNoKey,
+  waitBoot,
+  twoStepClick,
+  checkAll,
+  checkAllReq,
+  completeRealGate,
+  completeThesis,
+  REAL_CHECK_SEL,
+  pageYear,
 };

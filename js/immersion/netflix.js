@@ -91,7 +91,7 @@
         return;
       }
       var list = load();
-      list.unshift({ title: title, ts: Date.now() });
+      list.unshift({ title: title, multiStep: true, real: true, ts: Date.now() });
       save(list.slice(0, 40));
       var st = doc.querySelector("[data-netflix-status]");
       var msg =

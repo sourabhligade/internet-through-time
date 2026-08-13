@@ -1,6 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('2000 MVP — smile · Napster · Pets · crash', () => {
   test('hub opens 2000', async ({ page }) => {
     await page.goto('/');

@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+
+const { enterYear, checkAllReq, twoStepClick } = require('./helpers');
 const fs = require('fs');
 const path = require('path');
 
@@ -116,7 +117,8 @@ test.describe('2003 live flows — real links & buttons', () => {
     await expect(page.locator('[data-friendster-status]')).toContainText(/saved/i);
     await page.goto('/years/2003/sites/phoenix/index.html');
     await page.waitForTimeout(400);
-    await page.click('[data-itt-download]');
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
   });
 

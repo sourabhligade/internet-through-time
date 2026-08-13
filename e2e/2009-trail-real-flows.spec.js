@@ -5,6 +5,20 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-appstore-check], [data-android-check], [data-wave-check]') {
+  const loc = page.locator(sel);
+  const n = await loc.count();
+  for (let i = 0; i < n; i++) {
+    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
+  }
+}
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 /**
  * @param {import('@playwright/test').Page} page
  * @param {string[]} keys
@@ -36,7 +50,8 @@ test.describe('2009 trail 1 — Apps every day', () => {
     await clearKeys(page, ['itt09-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await requireKey(page, 'itt09-apps');
   });
 });
@@ -51,7 +66,7 @@ test.describe('2009 trail 2 — Social mainstream', () => {
 
     await page.goto('/years/2009/sites/farmville/index.html');
     await page.reload();
-    await page.locator('[data-farm-plant]').first().click();
+    await twoStepClick(page, '[data-farm-plant]');
     await requireKey(page, 'itt09-farm');
   });
 });
@@ -108,7 +123,7 @@ test.describe('2009 trail 6 — Seeds of 2010s', () => {
     await page.goto('/years/2009/sites/foursquare/index.html');
     await clearKeys(page, ['itt09-4sq', 'itt09-ks']);
     await page.reload();
-    await page.locator('[data-4sq-checkin]').first().click();
+    await twoStepClick(page, '[data-4sq-checkin]');
     await requireKey(page, 'itt09-4sq');
 
     await page.goto('/years/2009/sites/kickstarter/index.html');

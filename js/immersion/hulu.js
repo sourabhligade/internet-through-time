@@ -54,11 +54,29 @@
       plays[i].setAttribute("data-bound", "1");
       plays[i].addEventListener("click", function (ev) {
         ev.preventDefault();
-        var title = ev.currentTarget.getAttribute("data-hulu-play") || "Episode";
-        var list = load();
-        list.unshift({ title: title, ts: Date.now() });
-        save(list.slice(0, 40));
+        var el = ev.currentTarget;
+        var title = (el.getAttribute("data-hulu-play") || "").replace(/^\s+|\s+$/g, "");
         var st = doc.querySelector("[data-hulu-status]");
+        if (!title || title.length < 2) {
+          if (st) st.textContent = "Pick an episode first (empty play blocked — REAL gate).";
+          ittFeedback("Pick an episode first.", st);
+          return;
+        }
+        var RG = ITT.RealGate;
+        if (RG) {
+          if (
+            !RG.passGate(doc, el, st, {
+              checkSel: "[data-hulu-check], [data-req]",
+              min: 1,
+              armMsg: "Confirm: no real Hulu stream — click play again (REAL two-step)."
+            })
+          ) {
+            return;
+          }
+        }
+        var list = load();
+        list.unshift({ title: title, multiStep: true, real: true, ts: Date.now() });
+        save(list.slice(0, 40));
         if (st) {
           st.textContent = "Watching (ad-supported theater): " + title + " · " + storageKey();
           ittFeedback(st.textContent, st);
@@ -66,7 +84,9 @@
         var screen = doc.querySelector("[data-hulu-screen]");
         if (screen) {
           screen.innerHTML =
-            "<b>" + esc(title) + "</b><br><font size='2' color='#666'>Full episode · ads · US public Mar 12, 2008 · no real stream.</font>";
+            "<b>" +
+            esc(title) +
+            "</b><br><font size='2' color='#666'>Full episode · ads · US public Mar 12, 2008 · no real stream.</font>";
         }
         render(doc);
       });

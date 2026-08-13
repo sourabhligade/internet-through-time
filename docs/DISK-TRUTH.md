@@ -1,8 +1,10 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-06 · **Ship update:** hub **1994–2014** playable · **2014 MVP live** · **2015+ not on disk**  
-**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md)  
-**2014:** MVP live · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
+**Date:** 2026-08-13 · **Ship update:** hub **1994–2016** playable · **2014–2016 museum-ready L3 densify**  
+**Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · master bible [`2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md`](2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md)  
+**2014:** L3 densify · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
+**2015:** L3 densify · [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) · `npm run test:e2e:2015`  
+**2016:** L3 densify · [`2016-MUSEUM-GRADE.md`](2016-MUSEUM-GRADE.md) · `npm run test:e2e:2016`  
 **Purpose:** Single source of truth for what is **playable on disk** vs research-only.
 
 **Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)  
@@ -29,10 +31,10 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2014** |
-| Hub locked | **2015+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2014/` |
-| Period CSS | `css/period-1995.css` … `period-2014.css` |
+| Hub open years | **1994–2016** |
+| Hub locked | **2017+** (not scaffolded) |
+| Year trees | `years/1994/` … `years/2016/` |
+| Period CSS | `css/period-1995.css` … `period-2016.css` |
 | **2010** | **Museum-ready** · playable · see section below |
 | **2011** | **Museum-ready** · playable · see section below |
 | **2012** | **Museum-ready** · playable · see section below |
@@ -53,7 +55,7 @@
 | Capture | [`references/2013/`](references/2013/) · honesty pack stub |
 | Residual | WA pixels · deeper densify |
 
-### 2014 (MVP live · playable)
+### 2014 (museum-ready · L3 densify · playable)
 
 | Item | Status |
 |------|--------|
@@ -63,8 +65,41 @@
 | Scale | Live Stats June **968,882,453** (+44%) · users **2,925,249,355** · **1B first crossed Sep 2014** |
 | P0 | WhatsApp deal+chat · Heartbleed · iPhone 6/6 Plus/Pay/Bendgate · Ice Bucket · 1B · Chrome · Win10 TP honesty |
 | P1 | Twitch · Oculus · Alibaba · Material · Serial · Echo announce |
-| Research | **[`2014-READ-FIRST.md`](2014-READ-FIRST.md)** · step-by-step · master bible · deep harvest |
-| e2e | `npm run test:e2e:2014` |
+| Densify gems | Secret · Yik Yak · Ello · Hyperlapse (2026-08-13) |
+| Research | **[`2014-READ-FIRST.md`](2014-READ-FIRST.md)** · parity map · step-by-step · master bible · deep harvest |
+| Museum grade | [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) — **Museum-ready · L3 densify** |
+| e2e | mvp · densify · flows · real · trail · shell-honesty · `npm run test:e2e:2014` |
+| Residual | L4 WA pixels · optional Gamergate literacy · continuity forest voice |
+
+### 2015 (museum-ready · L3 densify · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2015/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt15`** |
+| Scale | Live Stats June **863,105,652 (−11%)** · users **3,185,996,155** |
+| P0 | Apple Watch ship · Win10 free upgrade · Edge · Periscope/Meerkat/FB Live · Apple Music · iOS 9 blockers · Google Photos |
+| Densify gems | Peach · Discord · Snap Discover · Secret end · Messenger bots |
+| Research | **[`2015-READ-FIRST.md`](2015-READ-FIRST.md)** · goals · ARTIFACTS-MAP · CAPTURE-LOG |
+| Museum grade | [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) — **Museum-ready · L3 densify** |
+| e2e | mvp · densify · flows · real · trail · shell-honesty · `npm run test:e2e:2015` |
+| Residual | L4 brand pixels (H15 harvest) · clone-forest year-voice · optional careful literacy |
+
+### 2016 (museum-ready · L3 densify · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2016/` | **Live** |
+| Hub | **Unlocked** |
+| Prefix | **`itt16`** |
+| Scale | Live Stats June **1,045,534,808 (+21%)** · users **3,424,971,237** · 1B restabilized Mar 2016 |
+| P0 | IG Stories · Pokémon GO multipage · FB Reactions · iPhone 7 jack · AirPods · Vine goodbye · musical.ly · WhatsApp E2E |
+| P1 densify | Allo · Oculus Rift CV1 · MS×LinkedIn · Win10 free ends · Spectacles · Switch announce |
+| Research | **[`2016-READ-FIRST.md`](2016-READ-FIRST.md)** · master bible · harvest · ARTIFACTS-MAP · CAPTURE-LOG |
+| Museum grade | [`2016-MUSEUM-GRADE.md`](2016-MUSEUM-GRADE.md) — **Museum-ready · L3 densify** |
+| e2e | mvp · densify · flows · real · trail · shell-honesty · `npm run test:e2e:2016` |
+| Residual | L4 brand pixels (H16 harvest) · clone-forest voice · optional platform literacy |
 
 ### 2012 (museum-ready · playable)
 

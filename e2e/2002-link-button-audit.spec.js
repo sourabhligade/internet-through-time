@@ -1,5 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear } = require('./helpers');
 
 test.describe('2002 full button/link re-verify', () => {
@@ -82,7 +90,7 @@ test.describe('2002 full button/link re-verify', () => {
   test('KaZaA download + search', async ({ page }) => {
     await page.goto('/years/2002/sites/kazaa/index.html');
     await page.waitForTimeout(500);
-    await page.click('[data-itt-download]');
+    await twoStepClick(page, '[data-itt-download]');
     await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
     await page.goto('/years/2002/sites/kazaa/client.html');
     await page.waitForTimeout(500);
@@ -168,12 +176,20 @@ test.describe('2002 full button/link re-verify', () => {
 
     await page.goto('/years/2002/sites/phoenix/index.html');
     await page.waitForTimeout(500);
-    await page.click('[data-itt-download]');
-    await expect(page.locator('.itt-live-host').first()).toBeVisible({ timeout: 8000 });
+    await twoStepClick(page, '[data-itt-download]');
+    await expect(page.locator('.itt-live-host, [data-itt-live-status]').first()).toBeVisible({ timeout: 8000 });
 
     await page.goto('/years/2002/sites/daypop/index.html');
-    await page.click('a[href*="search.html"]');
-    await expect(page).toHaveURL(/search/);
+    // Daypop 2002: search form posts to top.html (blog ranking), not a separate search.html room
+    const daypopSearch = page.locator('a[href*="search.html"], a[href*="top.html"], form[data-search] button, form[data-search] input[type="submit"]').first();
+    await expect(daypopSearch).toBeVisible({ timeout: 8000 });
+    if (await page.locator('a[href*="top.html"]').count()) {
+      await page.locator('a[href*="top.html"]').first().click();
+      await expect(page).toHaveURL(/top\.html/);
+    } else {
+      await page.locator('form[data-search]').evaluate((f) => f.requestSubmit());
+      await expect(page).toHaveURL(/top\.html|daypop/i);
+    }
 
     await page.goto('/years/2002/sites/technorati/index.html');
     await page.click('[data-technorati-cosmos] button[type="submit"]');

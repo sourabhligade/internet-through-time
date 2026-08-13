@@ -253,6 +253,83 @@
     }
   }
 
+  /* Medium draft publish → medium-drafts (+ mirrors REAL literacy panel) */
+  function bootMedium(doc) {
+    doc = doc || document;
+    var pub = doc.querySelector("[data-medium-publish]");
+    if (!pub || pub.getAttribute("data-bound") === "1") return;
+    pub.setAttribute("data-bound", "1");
+    var st = doc.querySelector("[data-medium-status]");
+    pub.addEventListener("click", function (ev) {
+      if (ev && ev.preventDefault) ev.preventDefault();
+      var ta = doc.querySelector("[data-medium-draft]");
+      var body = ta && ta.value != null ? String(ta.value).replace(/^\s+|\s+$/g, "") : "";
+      if (body.length < 2) {
+        feedback("Write a short draft (2+ chars) before publish theater.", st, { error: true });
+        return;
+      }
+      if (pub.getAttribute("data-medium-armed") !== "1") {
+        pub.setAttribute("data-medium-armed", "1");
+        feedback("Confirm: no real Medium account — click Publish again (REAL two-step).", st, {
+          error: true
+        });
+        return;
+      }
+      var drafts = [];
+      try {
+        drafts = JSON.parse(localStorage.getItem(key("medium-drafts")) || "[]") || [];
+      } catch (e0) {
+        drafts = [];
+      }
+      if (!Array.isArray(drafts)) drafts = [];
+      drafts.unshift({ body: body.slice(0, 2000), multiStep: true, real: true, ts: Date.now() });
+      saveJSON(key("medium-drafts"), drafts.slice(0, 20));
+      saveJSON(key("medium"), {
+        published: true,
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Draft published (theater) · " + key("medium-drafts"), st);
+      markUsed();
+    });
+  }
+
+  /* Vine Android Get button → same storage as REAL panel (two-step) */
+  function bootVineAndroid(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-vine-android]");
+    if (!btn || btn.getAttribute("data-bound") === "1") return;
+    btn.setAttribute("data-bound", "1");
+    var st = doc.querySelector("[data-vine-android-status]");
+    btn.addEventListener("click", function (ev) {
+      if (ev && ev.preventDefault) ev.preventDefault();
+      var checks = doc.querySelectorAll("[data-req]");
+      var n = 0;
+      var i;
+      for (i = 0; i < checks.length; i++) if (checks[i].checked) n++;
+      if (checks.length >= 1) {
+        if (n < Math.min(2, checks.length)) {
+          feedback("REAL gate: complete Vine Android literacy checks first.", st, { error: true });
+          return;
+        }
+      } else if (btn.getAttribute("data-vine-armed") !== "1") {
+        btn.setAttribute("data-vine-armed", "1");
+        feedback("Confirm: no real Play Store — click again (REAL two-step).", st, { error: true });
+        return;
+      }
+      saveJSON(key("vine-android"), {
+        platform: "android",
+        launched: "2013-06-02",
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Vine for Android noted · " + key("vine-android"), st);
+      markUsed();
+    });
+  }
+
   /* Strip legacy one-click handlers that fire without gates (inline scripts still may run first).
      Pages updated to use extras only should remove inline setItem. */
 
@@ -263,6 +340,8 @@
     bootTelegram(doc);
     bootGlass(doc);
     bootBitcoin(doc);
+    bootMedium(doc);
+    bootVineAndroid(doc);
     bootGenericReal(doc);
   }
 

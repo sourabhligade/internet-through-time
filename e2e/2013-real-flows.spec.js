@@ -1,5 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, twoStepClick, checkAllReq, killOverlays } = require('./helpers');
+
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -58,7 +60,7 @@ test.describe('2013 real flows (storage required)', () => {
     await clearKeys(page, ['itt13-chrome']);
     await page.reload();
     await page.waitForTimeout(600);
-    await page.locator('[data-chrome-download]').click();
+    await completeRealGate(page, '[data-chrome-download]');
     await expectStorageTruthy(page, 'itt13-chrome');
     await page.locator('[data-chrome-prefer]').click();
     const raw = await expectStorageTruthy(page, 'itt13-chrome');
@@ -71,7 +73,7 @@ test.describe('2013 real flows (storage required)', () => {
     await page.reload();
     await page.waitForTimeout(600);
     await expect(page.locator('a[href*="story"]').first()).toBeVisible();
-    await page.locator('[data-snap-send]').click();
+    await completeRealGate(page, '[data-snap-send]');
     await expectStorageTruthy(page, 'itt13-snap-count');
   });
 

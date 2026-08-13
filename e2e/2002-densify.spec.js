@@ -4,6 +4,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 async function clearItt02(page) {
   await page.goto('/years/2002/pages/home.html');
   await page.evaluate(() => {

@@ -4,6 +4,14 @@
  */
 const { test, expect } = require('@playwright/test');
 
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 const YEARS = [
   {
     y: '1994',
@@ -47,7 +55,35 @@ const YEARS = [
   },
   {
     y: '2004',
-    must: [/Connection trails/i, /Firefox|Gmail/i, /Flickr|Thefacebook|facebook/i, /Starting Point/i],
+    must: [/Connection trails|REAL multipath/i, /Firefox|Gmail/i, /Flickr|Thefacebook|facebook/i, /Starting Point/i],
+  },
+  {
+    y: '2005',
+    must: [/Connection trails|REAL multipath/i, /YouTube|Digg|Flickr/i, /Starting Point|flow map/i],
+  },
+  {
+    y: '2008',
+    must: [/Connection trails|REAL multipath/i, /App Store|Chrome|Android/i],
+  },
+  {
+    y: '2010',
+    must: [/Connection trails|REAL multipath/i, /iPad|Instagram|Foursquare/i],
+  },
+  {
+    y: '2011',
+    must: [/Connection trails|REAL multipath/i, /Spotify|Timeline|Siri|Chrome/i],
+  },
+  {
+    y: '2012',
+    must: [/Connection trails|REAL multipath/i, /Instagram|IPO|SOPA|Chrome/i],
+  },
+  {
+    y: '2013',
+    must: [/Connection trails|REAL multipath|Guided multi-step/i, /Vine|Stories|iOS 7|Chrome/i],
+  },
+  {
+    y: '2014',
+    must: [/Connection trails|REAL multipath/i, /WhatsApp|Heartbleed|iPhone 6|Serial/i],
   },
 ];
 
@@ -59,9 +95,11 @@ test.describe('Early-year connection trails', () => {
       for (const re of row.must) {
         await expect(body).toContainText(re);
       }
-      // at least a few trail links into sites/
-      const trailLinks = page.locator('a[href*="../sites/"]');
-      expect(await trailLinks.count()).toBeGreaterThan(5);
+      // densify: many site links + multipath arrows
+      const trailLinks = page.locator('a[href*="../sites/"], a[href*="/sites/"]');
+      expect(await trailLinks.count()).toBeGreaterThan(8);
+      const text = await body.innerText();
+      expect(text).toMatch(/→|->/);
     });
   }
 });

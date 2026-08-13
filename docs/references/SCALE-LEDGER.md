@@ -17,9 +17,11 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2012** | **697,089,489** | **+101%** | playable MVP (2026-08-02) |
 | **2013** | **672,985,183** | −3% | playable (hub 1994–2013) |
 | **2014** | **968,882,453** | **+44%** | **MVP live** (2026-08-06) · hub unlocked · `itt14` · 1B milestone Sep 2014 |
-| **2015** | **863,105,652** | **−11%** | not scaffolded on this branch · 1B fluctuation honesty (for later years) |
-| **2016** | **1,045,534,808** | **+21%** | not scaffolded on this branch · 1B restabilized Mar 2016 class |
-| **2017** | **1,766,926,408** | **+69%** | not scaffolded on this branch · hostname explosion honesty |
+| **2015** | **863,105,652** | **−11%** | **MVP live** (2026-08-13) · hub unlocked · `itt15` · 1B fluctuation honesty |
+| **2016** | **1,045,534,808** | **+21%** | playable L3 · 1B restabilized Mar 2016 · users **3,424,971,237** |
+| **2017** | **1,766,926,408** | **+69%** | gap year on some branches · hostname explosion honesty |
+| **2018** | **1,630,322,579** | **−8%** | **last Live Stats June table year on page (visited 2026-08-13)** · no 2019 row |
+| **2019** | — (no June row) | — | **research freeze 2026-08-13** · do **not invent** websites count · dual-cite **2018 last row** + ITU users **~4.1B** · see `2019-READ-FIRST.md` |
 
 ## Websites (Pingdom / Netcraft — December class)
 
@@ -33,6 +35,8 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2015** | June Live Stats **863,105,652 (−11%)** · 1B **dipped after 2014** · restabilized **Mar 2016 class** (Live Stats honesty) · re-verify Dec NetCraft before implement | Live Stats · NetCraft class |
 | **2016** | June Live Stats **1,045,534,808 (+21%)** · 1B **restabilized Mar 2016** · Jan~900M→Dec~1.7B hostnames · active ~170M class | Live Stats · NetCraft class |
 | **2017** | June Live Stats **1,766,926,408 (+69%)** · huge hostname jump · 2018 dips to 1.630B (−8%) · users cell blank | Live Stats · NetCraft class |
+| **2018** | June Live Stats **1,630,322,579 (−8%)** · **last June table year** on Live Stats websites page (visited 2026-08-13) | Live Stats |
+| **2019** | **No Live Stats June websites row** · dual-cite with **2018 last row** honesty + ITU users ~4.1B · re-verify Netcraft Dec before invent | Live Stats · ITU |
 
 ## Internet users (class)
 
@@ -44,8 +48,9 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2013** | **~2.76 billion** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
 | **2014** | **2,925,249,355** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
 | **2015** | **3,185,996,155** (Live Stats June) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| **2016** | **~3.4B class** (ITU; Live Stats June users cell blank in 2026 harvest — re-verify) | ITU WTI class · Live Stats |
+| **2016** | **3,424,971,237** (Live Stats internet-users table · July 1 2016 estimate class · ITU elaboration) | [Live Stats — Internet Users](https://www.internetlivestats.com/internet-users/) · ITU |
 | **2017** | **~3.5–3.6B class** (ITU; Live Stats June users cell blank — re-verify before About invent) | ITU WTI class · Live Stats |
+| **2019** | **~4.1 billion** · **53.6%** penetration class · **+5.3%** vs 2018 | [ITU Facts and Figures 2019](https://www.itu.int/hub/publication/d-ind-ict_mdd-2019/) · [ITU PR 2019-PR19](https://www.itu.int/en/mediacentre/Pages/2019-PR19.aspx) |
 
 ## Social milestones (museum spine)
 

@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+
+const { checkAllReq, enterYear, twoStepClick } = require('./helpers');
 
 test.describe('2009 MVP', () => {
   test('shell boots 2009', async ({ page }) => {
@@ -34,8 +35,8 @@ test.describe('2009 MVP', () => {
     await page.reload();
     await page.waitForSelector('[data-appstore-catalog], [data-appstore-install]', { timeout: 20000 });
     await expect(page.locator('body')).toContainText(/50,?000|billion|1B/i);
-    const btn = page.locator('[data-appstore-install]').first();
-    await btn.click();
+    await checkAllReq(page);
+    await twoStepClick(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt09/i, {
       timeout: 8000,
     });
@@ -59,7 +60,7 @@ test.describe('2009 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-farm-plant]', { timeout: 20000 });
-    await page.locator('[data-farm-plant]').first().click();
+    await twoStepClick(page, '[data-farm-plant]');
     await expect(page.locator('[data-farm-status]')).toContainText(/itt09|Plots|Coins/i, { timeout: 8000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt09-farm'));
     expect(raw || '').toMatch(/strawberry|wheat|pumpkin|plots/i);

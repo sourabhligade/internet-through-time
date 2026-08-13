@@ -149,6 +149,13 @@
     }
     /* shared first — nav / flash / tour */
     add("immersion/shared.js");
+    /* year extras (Stories/GO/REAL multipage) must boot with the page, not idle-deferred */
+    var yi;
+    for (yi = 0; yi < all.length; yi++) {
+      if (/immersion\/year-\d{4}-extras\.js$/.test(all[yi])) add(all[yi]);
+    }
+    /* real-flow gates used on About/product literacy panels */
+    add("immersion/real-flow.js");
     var h;
     for (h = 0; h < hints.length; h++) {
       var key = hints[h][0];

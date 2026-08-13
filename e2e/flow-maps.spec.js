@@ -1,5 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, contentFrame, goInFrame, waitForImmersion } = require('./helpers');
 
 const SAMPLE = ['1994', '1995', '1998', '2005', '2008', '2013', '2014'];

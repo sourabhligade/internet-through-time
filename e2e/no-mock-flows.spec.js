@@ -12,6 +12,22 @@ const fs = require('fs');
 const path = require('path');
 const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
+/** Check all literacy boxes then optionally click save/download again for REAL multi-step */
+async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-uber-check], [data-gfc-opensocial], [data-gfc-noroauth], [data-fb-connect-check], [data-wave-check], [data-sopa-check], [data-sopa-fact], [data-ps4-check], [data-ps4-share], [data-snap-check], [data-android-check], [data-appstore-check]') {
+  const loc = page.locator(sel);
+  const n = await loc.count();
+  for (let i = 0; i < n; i++) {
+    try { await loc.nth(i).check({ force: true }); } catch (e) { /* */ }
+  }
+}
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 /** Skip describes that target years not present on disk (hub is 1994–2013). */
 function yearOnDisk(year) {
   try {
@@ -120,6 +136,10 @@ test.describe('NO-MOCK · 2013 soft rooms now gated', () => {
     await page.locator('[data-ps4-ack]').click();
     expect(await getKey(page, 'itt13-ps4')).toBeNull();
     await page.locator('[data-ps4-share]').check();
+    if ((await page.locator('[data-ps4-check]').count()) > 0) {
+      await page.locator('[data-ps4-check]').first().check();
+    }
+    await page.locator('[data-req]').evaluateAll((els) => els.forEach((e) => { e.checked = true; }));
     await page.locator('[data-ps4-ack]').click();
     await expect.poll(async () => getKey(page, 'itt13-ps4')).toBeTruthy();
   });

@@ -159,7 +159,8 @@
         "[data-spotify-status]",
         "[data-snap-status]",
         "[data-uber-status]",
-        "[data-maps-status]",
+        /* do NOT include [data-maps-status] — Maps paints trail HTML (HousingMaps links)
+           and generic feedback would strip anchors via textContent */
         "[data-cart-flash]",
         "#cart-flash"
       ];
@@ -178,8 +179,10 @@
       var plain = stripHtml(html);
       var st = resolveStatusNode(doc, opts);
       if (st) {
-        /* Prefer text for status lines (safe); allow HTML if data-allow-html=1 */
-        if (st.getAttribute("data-allow-html") === "1") st.innerHTML = html;
+        /* Prefer text for status lines (safe); allow HTML if data-allow-html=1
+           or the message itself carries markup (trail handoff links). */
+        var msgHasHtml = /<[a-z][\s\S]*>/i.test(html);
+        if (st.getAttribute("data-allow-html") === "1" || msgHasHtml) st.innerHTML = html;
         else st.textContent = plain;
         st.setAttribute("data-itt-feedback", "1");
         st.className = (st.className || "").replace(/\bitt-status-pulse\b/g, "") + " itt-status-pulse";
@@ -243,7 +246,7 @@
         if (!s.id || !s.match) continue;
         if (path.indexOf(s.match) === -1) continue;
         var cur = done[s.id];
-        if (tour === true || tourStepUsed(cur)) continue; /* already fully used */
+        if (cur === true || tourStepUsed(cur)) continue; /* already fully used */
         if (!cur) {
           done[s.id] = { visited: true };
           changed = true;
@@ -897,6 +900,28 @@
           }
           el.addEventListener("click", function (ev) {
             ev.preventDefault();
+            /* REAL multi-step: literacy checks if present, else two-click arm */
+            var checks = document.querySelectorAll("[data-dl-check], [data-itt-download-confirm]");
+            if (checks.length) {
+              var need = Math.min(2, checks.length);
+              var okN = 0;
+              var ci;
+              for (ci = 0; ci < checks.length; ci++) if (checks[ci].checked) okN++;
+              if (okN < need) {
+                api.showFlash("REAL gate: confirm download literacy (" + need + " check" + (need > 1 ? "s" : "") + ") first.");
+                return;
+              }
+            } else if (el.getAttribute("data-itt-dl-armed") !== "1") {
+              el.setAttribute("data-itt-dl-armed", "1");
+              api.showFlash("Confirm: no real installer — click download again (REAL two-step).");
+              var lab0 = el.tagName === "INPUT" ? el.value : el.textContent;
+              try {
+                if (el.tagName === "INPUT") el.value = "Click again to confirm";
+                else el.textContent = "Click again to confirm";
+                el.setAttribute("data-itt-dl-label0", lab0 || "");
+              } catch (eLab) { /* */ }
+              return;
+            }
             runDownload(el);
           });
         })(dls[di]);
@@ -942,6 +967,129 @@
             api.markTourProgress();
           });
         })(wikiBtns[wi]);
+      }
+
+      /* Wikipedia Save → year-scoped history (REAL, not soft GET) */
+      function wikiPagesKey() {
+        return storageKey("wiki-pages");
+      }
+      function loadWikiPages() {
+        var list = loadJSON(wikiPagesKey(), []);
+        return Array.isArray(list) ? list : [];
+      }
+      function saveWikiPages(list) {
+        saveJSON(wikiPagesKey(), list.slice(0, 40));
+      }
+      function bindWikiSave(btn) {
+        if (!btn || btn.getAttribute("data-wiki-save-bound") === "1") return;
+        btn.setAttribute("data-wiki-save-bound", "1");
+        stylePeriodButton(btn);
+        btn.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          var form = btn.form || (btn.closest && btn.closest("form"));
+          var ta = form
+            ? form.querySelector("textarea[name='text'], textarea")
+            : document.querySelector("textarea[name='text'], textarea");
+          var sumEl = form ? form.querySelector('[name="summary"]') : null;
+          var body = ta ? String(ta.value || "").trim() : "";
+          var summary = sumEl ? String(sumEl.value || "").trim() : "";
+          var st =
+            document.querySelector("[data-wiki-save-status]") ||
+            (form && form.querySelector("[data-wiki-save-status]"));
+          if (body.length < 8) {
+            if (st) {
+              st.style.display = "block";
+              st.textContent = "Write more text before saving (REAL gate — not a soft mock).";
+            }
+            api.showFlash("Wikipedia Save needs body text first (not empty theater).");
+            return;
+          }
+          var titleEl = document.querySelector(".wiki-h1, h1");
+          var title = titleEl
+            ? String(titleEl.textContent || "").replace(/^Editing\s+/i, "").trim()
+            : "Wikipedia";
+          if (!title) title = "Wikipedia";
+          var list = loadWikiPages();
+          list.unshift({
+            title: title,
+            summary: summary || "(no summary)",
+            body: body.slice(0, 4000),
+            ts: Date.now(),
+            at: new Date().toLocaleString()
+          });
+          saveWikiPages(list);
+          if (st) {
+            st.style.display = "block";
+            st.textContent =
+              "Saved in this browser · " + wikiPagesKey() + " (" + list.length + " revision" +
+              (list.length === 1 ? "" : "s") + ")";
+          }
+          api.showFlash(
+            "Page saved locally · open <b>Page history</b> to see your revision · key <code>" +
+              wikiPagesKey() +
+              "</code>"
+          );
+          api.markTourProgress();
+          api.markTourUsed && api.markTourUsed();
+        });
+      }
+      var wikiSaveBtns = document.querySelectorAll("[data-wiki-save]");
+      for (var ws = 0; ws < wikiSaveBtns.length; ws++) bindWikiSave(wikiSaveBtns[ws]);
+      /* Upgrade legacy theater submit → REAL save */
+      var wikiForms = document.querySelectorAll("form");
+      for (var wf = 0; wf < wikiForms.length; wf++) {
+        (function (form) {
+          var sub = form.querySelector('input[type="submit"], button[type="submit"]');
+          if (!sub) return;
+          var label = (sub.value || sub.textContent || "").toLowerCase();
+          if (label.indexOf("save page") === -1) return;
+          if (sub.getAttribute("data-wiki-save") === "1" || sub.getAttribute("data-wiki-save") === "true") {
+            bindWikiSave(sub);
+            return;
+          }
+          sub.setAttribute("data-wiki-save", "1");
+          if (sub.tagName === "INPUT") sub.value = "Save page";
+          else sub.textContent = "Save page";
+          form.setAttribute("action", "#");
+          form.setAttribute("method", "post");
+          form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+          });
+          if (!form.querySelector("[data-wiki-save-status]")) {
+            var st = document.createElement("p");
+            st.setAttribute("data-wiki-save-status", "1");
+            st.style.cssText = "font-size:12px;color:#060;margin:8px 0";
+            if (sub.parentNode) sub.parentNode.insertBefore(st, sub.nextSibling);
+            else form.appendChild(st);
+          }
+          bindWikiSave(sub);
+        })(wikiForms[wf]);
+      }
+      /* History list from local saves */
+      var histHost = document.querySelector("[data-wiki-history]");
+      if (histHost) {
+        var pages = loadWikiPages();
+        if (pages.length) {
+          var rows = "";
+          var hi;
+          for (hi = 0; hi < pages.length; hi++) {
+            var pg = pages[hi];
+            rows +=
+              "<tr><td>" +
+              escapeHtml(pg.at || String(pg.ts || "")) +
+              "</td><td>you (local)</td><td>" +
+              escapeHtml(pg.summary || "") +
+              "</td></tr>";
+          }
+          histHost.innerHTML =
+            '<p style="font-size:12px;color:#060"><b>Your local revisions</b> · ' +
+            escapeHtml(wikiPagesKey()) +
+            "</p>" +
+            '<table border="1" cellpadding="4" cellspacing="0" width="100%" style="border-collapse:collapse;font-size:12px;margin-bottom:12px">' +
+            '<tr bgcolor="#f0f0f0"><th>Date</th><th>User</th><th>Summary</th></tr>' +
+            rows +
+            "</table>";
+        }
       }
 
       /* TrackBack — blog admin grammar */

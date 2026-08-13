@@ -26,13 +26,40 @@
     var btn = doc.querySelector("[data-wave-invite]");
     if (!btn) return;
     btn.addEventListener("click", function () {
+      var st = doc.querySelector("[data-wave-status]");
+      var checks = doc.querySelectorAll("[data-wave-check], [data-req]");
+      var n = 0;
+      var i;
+      for (i = 0; i < checks.length; i++) if (checks[i].checked) n++;
+      if (checks.length >= 1) {
+        if (n < Math.min(2, checks.length)) {
+          if (st) {
+            st.textContent = "REAL gate: complete Wave literacy checks first.";
+            ittFeedback(st.textContent, st);
+          }
+          return;
+        }
+      } else if (btn.getAttribute("data-wave-armed") !== "1") {
+        btn.setAttribute("data-wave-armed", "1");
+        if (st) {
+          st.textContent = "Confirm: invite theater only — click again (REAL two-step).";
+          ittFeedback(st.textContent, st);
+        }
+        return;
+      }
       localStorage.setItem(
         storageKey(),
-        JSON.stringify({ invited: true, ts: Date.now(), note: "I/O demo lore · not daily email" })
+        JSON.stringify({
+          invited: true,
+          multiStep: true,
+          real: true,
+          ts: Date.now(),
+          note: "I/O demo lore · not daily email"
+        })
       );
-      var st = doc.querySelector("[data-wave-status]");
       if (st) {
-        st.textContent ="Invite requested (theater) · " + storageKey() + " · public mass is 2010, not 2009 daily driver."
+        st.textContent =
+          "Invite requested · " + storageKey() + " · public mass is 2010, not 2009 daily driver.";
         ittFeedback(st.textContent, st);
       }
     });
