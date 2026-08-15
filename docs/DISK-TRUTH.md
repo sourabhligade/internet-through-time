@@ -63,13 +63,13 @@
 
 | Item | Status |
 |------|--------|
-| `years/2016/` | **Live · lean · museum-ready A−** (~57 HTML · leftover L0–L6 2026-08-11 · no HEAD forest) |
+| `years/2016/` | **Live · from-scratch remake 2026-08-15** (**57 HTML** · cap 60 · backup `/tmp/itt-2016-forest-backup-20260814` do not restore) |
 | Hub | **Unlocked** |
 | Prefix | **`itt16`** |
 | Scale | Live Stats June **1,045,534,808 (+21%)** · 1B restabilized Mar 2016 · users **3,424,971,237 (46.1%)** |
 | P0 | Instagram Stories · PoGO literacy · Reactions · WA E2E · iPhone 7 · AirPods · Vine dual-date · Win10 free upgrade ended |
 | Densify | IG Live · AMP in SERP · FB Live everyone · Dyn/Mirai · Pixel · Google Home $129 · Spectacles |
-| P2 harvest | Cook letter · Free Basics/TRAI · Marketplace · Duo · Teams preview · AlphaGo · Let’s Encrypt · Yahoo 500M/1B (not 3B) · leftover Workplace / iOS 10 / Nougat / Note 7 / Mario Run |
+| P1 wired | Marketplace · Pixel · FB Live · AMP two-date · Dyn · Home $129 · Spectacles |
 | One-thing | Instagram Stories Aug 2 · `itt16-ig-stories` |
 | Game | Gym Rush (`itt16-game-gymrush`) · no official sprites |
 | Pixels | failed-final text-only · Chrome reuses 2013 WA still |

@@ -199,5 +199,5 @@ test.describe('2016 densify', () => {
   test('iphone index residual banner points to jack', async ({ page }) => {
     await page.goto('/years/2016/sites/iphone/index.html');
     await expect(page.locator('[data-itt-year-spine]')).toBeVisible();
-    await expect(page.locator('a[href*="jack"]')).toBeVisible();
+    await expect(page.locator('a[href*="jack"]').first()).toBeVisible();
   });

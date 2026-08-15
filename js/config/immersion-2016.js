@@ -1,7 +1,6 @@
 /**
- * Immersion config — 2016
- * Thesis: Instagram Stories · Pokémon GO · FB Reactions · iPhone 7 jack ·
- * AirPods · Vine end · WhatsApp E2E · +21% sites · bans TikTok brand/Meta/Reels
+ * Immersion config — 2016 (lean)
+ * Thesis: Stories · PoGO · Reactions · jack · AirPods · Vine · WA E2E
  */
 (function (global) {
   "use strict";
@@ -13,101 +12,34 @@
     storagePrefix: "itt16",
     features: {
       year2016extras: true,
+      yearplayable: true,
       flowMap: true,
       nav: true,
-      amazon: true,
-      auction: true,
-      geocities: true,
-      google: true,
-      excite: true,
-      yahoo: true,
-      napster: true,
-      blogger: true,
-      slashdot: true,
-      technorati: true,
-      plugin: true,
-      friendster: true,
-      kazaa: true,
-      myspace: true,
-      itunes: true,
-      wordpress: true,
-      linkedin: true,
-      adsense: true,
-      bloglines: true,
-      gmail: true,
-      facebook: true,
-      flickr: true,
-      youtube: true,
-      maps: true,
-      reddit: true,
-      digg: true,
-      podcasts: true,
-      delicious: true,
-      housingmaps: true,
-      feedburner: true,
-      twitter: true,
-      docs: true,
-      aws: true,
-      reader: true,
-      iphone: true,
-      appstore: true,
       chromeBrowser: true,
-      android: true,
-      hulu: true,
-      netflix: true,
-      farmville: true,
-      bing: true,
-      foursquare: true,
-      kickstarter: true,
-      wave: true,
-      instagram: true,
-      pinterest: true,
-      spotify: true,
-      googleplus: true,
-      snapchat: true,
-      siri: true,
-      timeline: true,
-      instagramAndroid: true,
-      instagramVideo: true,
-      snapchatStories: true,
-      vine: true,
-      ios7: true,
-      iphone5s: true,
-      iphone6: true,
-      applePay: true,
-      bendgate: true,
-      whatsapp: true,
-      heartbleed: true,
-      icebucket: true,
-      serialPodcast: true,
-      billionSites: true,
-      win10tp: true,
-      materialDesign: true,
-      win81: true,
-      snowden: true,
-      uberX: true,
-      win8: true
+      amazon: false,
+      auction: false,
+      geocities: false,
+      napster: false
     },
-    navSubtitle: "Win7 · Chrome · WhatsApp · Heartbleed · iPhone 6 · 1B",
+    navSubtitle: "Stories · PoGO · Reactions · 1.05B",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "WhatsApp", href: "sites/whatsapp/index.html", match: "/whatsapp/" },
-      { label: "Heartbleed", href: "sites/heartbleed/index.html", match: "/heartbleed/" },
-      { label: "iPhone 6", href: "sites/iphone/index.html", match: "/iphone/" },
-      { label: "Ice Bucket", href: "sites/icebucket/index.html", match: "/icebucket/" },
-      { label: "1B sites", href: "sites/billion/index.html", match: "/billion/" },
-      { label: "Chrome", href: "sites/chrome/index.html", match: "/chrome/" },
-      { label: "Win10 TP", href: "sites/windows10/index.html", match: "/windows10/" }
+      { label: "Stories", href: "sites/instagram/stories.html", match: "/stories" },
+      { label: "PoGO", href: "sites/pokemongo/index.html", match: "/pokemongo/" },
+      { label: "Reactions", href: "sites/facebook/reactions.html", match: "/reactions" },
+      { label: "Jack", href: "sites/iphone/jack.html", match: "/jack" },
+      { label: "AirPods", href: "sites/airpods/index.html", match: "/airpods/" },
+      { label: "Vine", href: "sites/vine/goodbye.html", match: "/vine/" },
+      { label: "Chrome", href: "sites/chrome/index.html", match: "/chrome/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "WhatsApp", href: "sites/whatsapp/index.html" },
-      { label: "Heartbleed", href: "sites/heartbleed/index.html" },
-      { label: "iPhone 6", href: "sites/iphone/index.html" },
-      { label: "Ice Bucket", href: "sites/icebucket/index.html" },
-      { label: "1B sites", href: "sites/billion/index.html" },
-      { label: "Serial", href: "sites/serial/index.html" },
+      { label: "Stories", href: "sites/instagram/stories.html" },
+      { label: "Pokémon GO", href: "sites/pokemongo/index.html" },
+      { label: "Reactions", href: "sites/facebook/reactions.html" },
+      { label: "Jack", href: "sites/iphone/jack.html" },
+      { label: "Vine goodbye", href: "sites/vine/goodbye.html" },
       { label: "What's New", href: "pages/whats-new.html" },
       { label: "About 2016", href: "pages/about.html" }
     ],
@@ -117,64 +49,56 @@
         label: "About 2016",
         href: "pages/about.html",
         match: "/about",
-        hint: "968M June · 1B Sep · bans",
-        doneMessage: "Platform money · bigger phones · open-web panic."
+        hint: "1.05B June · +21% · 1B restabilized",
+        doneMessage: "Stories · outdoor AR · beyond Like."
       },
       {
-        id: "whatsapp",
-        label: "WhatsApp",
-        href: "sites/whatsapp/index.html",
-        match: "/whatsapp/",
-        hint: "Feb 19 · ~$19B deal · chat",
-        doneMessage: "Messaging empire begins."
+        id: "stories",
+        label: "Instagram Stories",
+        href: "sites/instagram/stories.html",
+        match: "/stories",
+        hint: "Aug 2 · 24h",
+        doneMessage: "The Story format goes mass."
       },
       {
-        id: "heartbleed",
-        label: "Heartbleed",
-        href: "sites/heartbleed/index.html",
-        match: "/heartbleed/",
-        hint: "CVE-2016-0160 · rotate",
-        doneMessage: "Open-web SSL panic literacy."
+        id: "pogo",
+        label: "Pokémon GO",
+        href: "sites/pokemongo/index.html",
+        match: "/pokemongo/",
+        hint: "Jul 6 · outdoor AR",
+        doneMessage: "The sidewalk is the board."
       },
       {
-        id: "iphone6",
-        label: "iPhone 6",
-        href: "sites/iphone/index.html",
-        match: "/iphone/",
-        hint: "4.7 · 5.5 · Pay · Bendgate",
-        doneMessage: "Bigger phones become default."
+        id: "reactions",
+        label: "Reactions",
+        href: "sites/facebook/reactions.html",
+        match: "/reactions",
+        hint: "Feb 24 · Love Haha Wow Sad Angry",
+        doneMessage: "Like is no longer the only button."
       },
       {
-        id: "icebucket",
-        label: "Ice Bucket",
-        href: "sites/icebucket/index.html",
-        match: "/icebucket/",
-        hint: "Jul–Aug virality",
-        doneMessage: "Challenge culture industrially scales."
+        id: "jack",
+        label: "iPhone 7 jack",
+        href: "sites/iphone/jack.html",
+        match: "/jack",
+        hint: "Sep 7 · no headphone jack",
+        doneMessage: "Courage is a missing port."
       },
       {
-        id: "billion",
-        label: "1B websites",
-        href: "sites/billion/index.html",
-        match: "/billion/",
-        hint: "Sep 2016 milestone",
-        doneMessage: "The web first crosses one billion sites."
+        id: "vine",
+        label: "Vine goodbye",
+        href: "sites/vine/goodbye.html",
+        match: "/vine/",
+        hint: "Oct 27 wind-down",
+        doneMessage: "Six seconds starts to die."
       },
       {
         id: "chrome",
         label: "Chrome",
         href: "sites/chrome/index.html",
         match: "/chrome/",
-        hint: "desktop #1 residual",
-        doneMessage: "Chrome still leads the desktop story."
-      },
-      {
-        id: "win10tp",
-        label: "Win10 TP",
-        href: "sites/windows10/index.html",
-        match: "/windows10/",
-        hint: "Sep 30 · preview only",
-        doneMessage: "Technical Preview — not retail mass OS."
+        hint: "desktop habit",
+        doneMessage: "Chrome remains the habit browser."
       }
     ]
   };

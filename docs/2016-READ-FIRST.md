@@ -1,8 +1,22 @@
 # 2016 — READ FIRST (research freeze entry map)
 
-**Date:** 2026-08-13  
+**Date:** 2026-08-13 · **from-scratch freeze added 2026-08-15**  
 **Purpose:** Single entry document for museum year **2016**. Read before scaffolding, densifying, harvesting pixels, or writing tests.  
-**Disk truth:** Hub **1994–2016** playable · **`years/2016/` L3 densify live** · prefix **`itt16`**  
+**Disk truth:** Hub **1994–2016** playable · **`years/2016/` live · 57 HTML (cap 60)** · prefix **`itt16`** · gold **Instagram Stories**
+
+**From-scratch remake (2026-08-15) — do not scaffold or wipe until the user says implement:**
+
+| # | Doc | Role |
+|---|-----|------|
+| ★ | [`2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md`](2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md) | **Quality + working** — unique facts · live-room audit · kits that match running JS |
+| 1 | [`2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md`](2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md) | Execute goals — ROI · S0–S11 · how each machine works |
+| 2 | [`2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md) | 12 flows · walks · Next spine · links |
+| 3 | [`2016-FROM-SCRATCH-RESEARCH-MEGA-5X-2026-08-15.md`](2016-FROM-SCRATCH-RESEARCH-MEGA-5X-2026-08-15.md) | Calendar / extra-flow outline (not the quality pack) |
+| 4 | [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md) | First 2026-08-15 freeze (still valid) |
+| 5 | [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Older scaffold minutes (first build; remake reopens S0) |
+
+A remake means: **rewrite year-true rooms in place and prune toward 48–55 HTML (hard 60)**. **Do not** `cp -R` 2015. **Do not** restore `/tmp/itt-2016-forest-backup-*`. Gold stays **Instagram Stories**.  
+  
 **Shell honesty (draft):** **Windows 10 free-upgrade ends Jul 29** · Anniversary Update · Chrome habit · Edge residual (Spartan) · Win7 residual early still honest  
 **Companions:** [`2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md) · [`references/2016/`](references/2016/) · flow seed in `js/config/flow-maps.js` → `2016`  
 **Residual → damn museum:** [goals/phases/steps](2015-2016-2019-GOALS-PHASES-AND-STEPS-CLEAR.md) · [lag map](2015-2016-2019-MUSEUM-GRADE-LAG-MAP-AND-GAMES.md)

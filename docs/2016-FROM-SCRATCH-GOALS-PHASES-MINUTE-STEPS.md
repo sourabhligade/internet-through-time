@@ -1,13 +1,16 @@
 # 2016 from scratch — goals · phases · minute steps
 
-**Date:** 2026-08-10  
+**Date:** 2026-08-10 · **re-pointed 2026-08-15**  
 **Purpose:** Single **implement-from-this** file to build museum year **2016 as its own year**.  
-**Research freeze:** [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-10.md)  
+**Research freeze (this pass):** [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md)  
+**★ Quality + working kits:** [`2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md`](2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md)  
+**★ Execute goals (this remake):** [`2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md`](2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md)  
+**★ Map (12 flows):** [`2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md)  
 **Entry:** [`2016-READ-FIRST.md`](2016-READ-FIRST.md)  
 **Legal:** Educational · localStorage only · never invent brand pixels · no real GPS / Pokémon art / payments / bots / exploits. **Git only if asked.**
 
-**Disk now:** Hub **1994–2016**. `years/2016/` **lean MVP live** (~37 HTML). Parent pattern = live lean **2015**.  
-**Do not** `cp years/2015` and do not restore `HEAD:years/2016` forest.
+**Disk now:** Hub **1994–2016**. `years/2016/` **live · 103 HTML** (L3 densify). From-scratch remake = **in-place prune** to ~48–55 / hard 60. Parent pattern = live lean **2015** or current 2016.  
+**Do not** `cp years/2015` · do not restore `/tmp/itt-2016-forest-backup-*` · do not start S0 until the user says `implement 2016 from scratch`.
 
 ---
 

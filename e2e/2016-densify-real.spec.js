@@ -129,33 +129,6 @@ const DENSIFY = [
     next: /pixel|allo|home\.html/i,
   },
   {
-    id: "16-D6 Spectacles",
-    path: "sites/snapchat/spectacles.html",
-    key: "itt16-spectacles",
-    save: "[data-spec-save]",
-    checks: ["[data-spec-price]", "[data-spec-snapbot]", "[data-spec-still]"],
-    copy: [/\$129/, /Snapbot/i, /still competes/i],
-    next: /story\.html|stories/i,
-  },
-  {
-    id: "16-D21 letter",
-    path: "sites/apple/letter.html",
-    key: "itt16-fbi-letter",
-    save: "[data-fbi-save]",
-    checks: ["[data-fbi-backdoor]", "[data-fbi-not-crime]"],
-    copy: [/Feb(?:ruary)?\s*16/i, /backdoor/i, /encryption literacy/i],
-    next: /whatsapp\/e2e|about\.html/i,
-  },
-  {
-    id: "16-D22 Free Basics",
-    path: "sites/freebasics/index.html",
-    key: "itt16-freebasics",
-    save: "[data-freebasics-save]",
-    checks: ["[data-fb-trai-date]", "[data-fb-trai-not-wall]"],
-    copy: [/Feb(?:ruary)?\s*8/i, /same bits, same price/i, /still ran in other countries/i],
-    next: /dyn|letter|home\.html/i,
-  },
-  {
     id: "16-D8 Marketplace",
     path: "sites/facebook/marketplace.html",
     key: "itt16-marketplace",
@@ -167,96 +140,6 @@ const DENSIFY = [
     ],
     copy: [/Oct(?:ober)?\s*3/i, /450 million/i, /does not/i],
     next: /reactions|live/i,
-  },
-  {
-    id: "16-D7 Duo",
-    path: "sites/duo/index.html",
-    key: "itt16-duo",
-    save: "[data-duo-save]",
-    checks: ["[data-duo-phone]", "[data-duo-knock]", "[data-duo-not-meet]"],
-    copy: [/Aug(?:ust)?\s*16/i, /Knock Knock/i, /not Google Meet/i],
-    next: /allo|stories/i,
-  },
-  {
-    id: "16-D10 Teams",
-    path: "sites/teams/index.html",
-    key: "itt16-teams-preview",
-    save: "[data-teams-save]",
-    checks: ["[data-teams-preview]", "[data-teams-ga]"],
-    copy: [/PREVIEW/i, /Nov(?:ember)?\s*2/i, /2017/i],
-    next: /linkedin|home\.html/i,
-  },
-  {
-    id: "16-D12 AlphaGo",
-    path: "sites/alphago/index.html",
-    key: "itt16-alphago",
-    save: "[data-ag-save]",
-    checks: ["[data-ag-score]", "[data-ag-stream]"],
-    copy: [/4–1|4-1/, /Lee/, /livestream/i],
-    next: /about\.html|home\.html/i,
-  },
-  {
-    id: "16-D18 Let’s Encrypt",
-    path: "sites/letsencrypt/index.html",
-    key: "itt16-letsencrypt",
-    save: "[data-le-save]",
-    checks: ["[data-le-prod]", "[data-le-90]"],
-    copy: [/April 12|Apr 12/i, /90 days/i, /ordinary/i],
-    next: /whatsapp\/e2e|home\.html/i,
-  },
-  {
-    id: "16-D19 Yahoo",
-    path: "sites/yahoo-breach/index.html",
-    key: "itt16-yahoo-breach",
-    save: "[data-yh-save]",
-    checks: ["[data-yh-two]", "[data-yh-not-3b]"],
-    copy: [/Sep(?:tember)?\s*22/i, /Dec(?:ember)?\s*14/i, /not 2016 news/i],
-    next: /about\.html|home\.html/i,
-  },
-  {
-    id: "16-L1 Workplace",
-    path: "sites/workplace/index.html",
-    key: "itt16-workplace",
-    save: "[data-wp-save]",
-    checks: ["[data-wp-work]", "[data-wp-not-feed]"],
-    copy: [/Oct(?:ober)?\s*10/i, /at work/i, /not the/i],
-    next: /stories/i,
-  },
-  {
-    id: "16-L2 iOS 10",
-    path: "sites/iphone/ios10.html",
-    key: "itt16-ios10",
-    save: "[data-ios10-save]",
-    checks: ["[data-ios10-stickers]", "[data-ios10-not-face]"],
-    copy: [/Sep(?:tember)?\s*13/i, /sticker/i, /not Face ID/i],
-    next: /7\.html/i,
-  },
-  {
-    id: "16-L3 Nougat",
-    path: "sites/android/nougat.html",
-    key: "itt16-nougat",
-    save: "[data-nougat-save]",
-    checks: ["[data-nougat-date]", "[data-nougat-split]"],
-    copy: [/Aug(?:ust)?\s*22/i, /multi-window|split-screen/i],
-    next: /pixel/i,
-  },
-  {
-    id: "16-L4 Note 7",
-    path: "sites/note7/index.html",
-    key: "itt16-note7",
-    save: "[data-note7-save]",
-    checks: ["[data-note7-down]", "[data-note7-replace]"],
-    copy: [/CPSC/i, /power down/i, /replacement/i],
-    next: /7\.html|iphone/i,
-  },
-  {
-    id: "16-L5 Mario Run",
-    path: "sites/mariorun/index.html",
-    key: "itt16-mario-run",
-    save: "[data-mario-save]",
-    checks: ["[data-mario-date]", "[data-mario-price]"],
-    copy: [/Dec(?:ember)?\s*15/i, /\$9\.99/, /no official art/i],
-    next: /playable\/game|gym/i,
   },
 ];
 
@@ -351,20 +234,6 @@ test.describe("2016 densify copy honesty", () => {
     await expect(page.locator("body")).toContainText(/did not kill Snap/i);
   });
 
-  test("letter is encryption literacy not a crime exhibit", async ({ page }) => {
-    await page.goto("/years/2016/sites/apple/letter.html");
-    await expect(page.locator("body")).toContainText(/backdoor/i);
-    await expect(page.locator("body")).toContainText(/not a crime/i);
-    await expect(page.locator("body")).toContainText(/customer-letter/i);
-  });
-
-  test("Free Basics is not India banned Facebook", async ({ page }) => {
-    await page.goto("/years/2016/sites/freebasics/index.html");
-    await expect(page.locator("body")).toContainText(/same bits, same price/i);
-    await expect(page.locator("body")).toContainText(/still ran in other countries/i);
-    await expect(page.locator("body")).toContainText(/not.{0,8}India banned Facebook/i);
-  });
-
   test("Marketplace has no payment UI", async ({ page }) => {
     await page.goto("/years/2016/sites/facebook/marketplace.html");
     await expect(page.locator("body")).toContainText(/450 million/i);
@@ -372,43 +241,10 @@ test.describe("2016 densify copy honesty", () => {
     await expect(page.locator("input[type='password'], input[name*='card'], [data-checkout]")).toHaveCount(0);
   });
 
-  test("Duo is not Meet; Allo is not E2E default", async ({ page }) => {
-    await page.goto("/years/2016/sites/duo/index.html");
-    await expect(page.locator("body")).toContainText(/Knock Knock/i);
-    await expect(page.locator("body")).toContainText(/not Google Meet/i);
+  test("Allo is not E2E default", async ({ page }) => {
     await page.goto("/years/2016/sites/allo/index.html");
     await expect(page.locator("body")).toContainText(/not.{0,8}E2E default/i);
-    await expect(page.locator("a[href*='duo']").first()).toBeVisible();
-  });
-
-  test("Teams PREVIEW is visible; GA is 2017", async ({ page }) => {
-    await page.goto("/years/2016/sites/teams/index.html");
-    await expect(page.locator("body")).toContainText(/PREVIEW/i);
-    await expect(page.locator("body")).toContainText(/Mar(?:ch)?\s*14\s*2017|2017/i);
-    await expect(page.locator("body")).toContainText(/not 2020/i);
-  });
-
-  test("AlphaGo is 4–1 and Lee won game 4", async ({ page }) => {
-    await page.goto("/years/2016/sites/alphago/index.html");
-    await expect(page.locator("body")).toContainText(/4–1|4-1/);
-    await expect(page.locator("body")).toContainText(/Lee Sedol/);
-    await expect(page.locator("body")).toContainText(/game 4/i);
-    await expect(page.locator("body")).toContainText(/not.{0,6}AGI took the jobs/i);
-  });
-
-  test("Let’s Encrypt distinguishes 2015 beta from 2016 production", async ({ page }) => {
-    await page.goto("/years/2016/sites/letsencrypt/index.html");
-    await expect(page.locator("body")).toContainText(/April 12|Apr 12/i);
-    await expect(page.locator("body")).toContainText(/90 days/i);
-    await expect(page.locator("body")).toContainText(/2015/);
-  });
-
-  test("Yahoo two notices; not 3B", async ({ page }) => {
-    await page.goto("/years/2016/sites/yahoo-breach/index.html");
-    await expect(page.locator("body")).toContainText(/500 million/i);
-    await expect(page.locator("body")).toContainText(/1 billion/i);
-    await expect(page.locator("body")).toContainText(/not 2016 news/i);
-    await expect(page.locator("input[type='password']")).toHaveCount(0);
+    await expect(page.locator("body")).toContainText(/not Google Meet/i);
   });
 });
 
@@ -456,19 +292,7 @@ test.describe("2016 densify isolation + home chips", () => {
       "../sites/pixel/index.html",
       "../sites/home/index.html",
       "../sites/snapchat/spectacles.html",
-      "../sites/apple/letter.html",
-      "../sites/freebasics/index.html",
       "../sites/facebook/marketplace.html",
-      "../sites/duo/index.html",
-      "../sites/teams/index.html",
-      "../sites/alphago/index.html",
-      "../sites/letsencrypt/index.html",
-      "../sites/yahoo-breach/index.html",
-      "../sites/workplace/index.html",
-      "../sites/iphone/ios10.html",
-      "../sites/android/nougat.html",
-      "../sites/note7/index.html",
-      "../sites/mariorun/index.html",
     ];
     for (const h of hrefs) {
       const a = page.locator(`a[href="${h}"], a[href*="${h.replace("../", "")}"]`).first();

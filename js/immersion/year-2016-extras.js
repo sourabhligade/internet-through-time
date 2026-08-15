@@ -88,11 +88,13 @@
   }
   function revealNext(doc) {
     doc = doc || document;
-    var next = doc.querySelector("[data-itt16-next]");
-    if (next) {
-      next.hidden = false;
+    var nodes = doc.querySelectorAll("[data-itt16-next], [data-next-flow]");
+    var i;
+    for (i = 0; i < nodes.length; i++) {
+      nodes[i].hidden = false;
       try {
-        next.style.display = "";
+        nodes[i].removeAttribute("hidden");
+        nodes[i].style.display = "";
       } catch (e) {
         /* */
       }
@@ -615,6 +617,139 @@
     }
   }
 
+  function bootLiteracySave(doc, opts) {
+    doc = doc || document;
+    var btn = doc.querySelector(opts.btn);
+    if (!btn || btn.getAttribute("data-bound") === "1") return;
+    if (!doc.querySelector(opts.need)) return;
+    btn.setAttribute("data-bound", "1");
+    var st = doc.querySelector(opts.status);
+    if (loadJSON(key(opts.suffix), null)) revealNext(doc);
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, opts.checks) < opts.min) {
+        feedback(opts.block, st, { error: true });
+        return;
+      }
+      saveJSON(key(opts.suffix), opts.payload());
+      feedback(opts.ok, st);
+      revealNext(doc);
+      markUsed();
+    });
+  }
+
+  function bootIgLive(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-ig-live-save]",
+      need: "[data-ig-live-date]",
+      status: "[data-ig-live-status]",
+      checks: "[data-ig-live-date], [data-ig-live-gone], [data-ig-live-not-reels]",
+      min: 3,
+      suffix: "ig-live",
+      block: "Complete all three Live literacy checks first.",
+      ok: "Live started (theater) · disappears when you end",
+      payload: function () {
+        return {
+          live: true,
+          shipped: "2016-11-21",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootAmpSerp(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-amp-serp-save]",
+      need: "[data-amp-serp-date]",
+      status: "[data-amp-serp-status]",
+      checks: "[data-amp-serp-date], [data-amp-serp-not-2015]",
+      min: 2,
+      suffix: "amp-serp",
+      block: "Complete both AMP-in-Search checks first.",
+      ok: "AMP-in-Search literacy saved",
+      payload: function () {
+        return {
+          ampSerp: true,
+          shipped: "2016-02-24",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootDyn(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-dyn-save]",
+      need: "[data-dyn-date]",
+      status: "[data-dyn-status]",
+      checks: "[data-dyn-date], [data-dyn-iot]",
+      min: 2,
+      suffix: "dyn",
+      block: "Complete date + IoT honesty first.",
+      ok: "Dyn outage literacy saved · no payload",
+      payload: function () {
+        return {
+          outage: true,
+          noPayload: true,
+          shipped: "2016-10-21",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootGhome(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-ghome-save]",
+      need: "[data-ghome-price]",
+      status: "[data-ghome-status]",
+      checks: "[data-ghome-price], [data-ghome-ship], [data-ghome-not-echo]",
+      min: 3,
+      suffix: "home",
+      block: "Complete price + ship + Echo-rival checks first.",
+      ok: "Google Home literacy saved · $129",
+      payload: function () {
+        return {
+          price: 129,
+          shipped: "2016-11-04",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootIgFeed(doc) {
+    doc = doc || document;
+    var list = doc.querySelector("[data-ig-story-list]");
+    if (!list || doc.querySelector("[data-ig-story-add]")) return;
+    var items = loadJSON(key("ig-stories"), []) || [];
+    if (!Array.isArray(items) || !items.length) {
+      list.innerHTML = "<div class='item' style='color:#888'>No stories — add one. The ring stays empty.</div>";
+      return;
+    }
+    list.innerHTML = items
+      .map(function (it) {
+        return (
+          "<div class='item'><span class='itt16-story-ring'><span>You</span></span> " +
+          String(it.text || "").replace(/</g, "&lt;") +
+          " · <font color='#888'>24h</font></div>"
+        );
+      })
+      .join("");
+  }
+
   function bootAlloChips(doc) {
     doc = doc || document;
     var chips = doc.querySelectorAll("[data-allo-chip]");
@@ -627,9 +762,95 @@
     }
   }
 
+  function bootFbLive(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-fb-live-save]",
+      need: "[data-fb-live-everyone]",
+      status: "[data-fb-live-status]",
+      checks: "[data-fb-live-everyone], [data-fb-live-not-stream]",
+      min: 2,
+      suffix: "fb-live",
+      block: "Complete both Live literacy checks first.",
+      ok: "You’re live (theater) · not a real stream",
+      payload: function () {
+        return {
+          live: true,
+          everyone: true,
+          shipped: "2016-04-06",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootPixel(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-pixel-save]",
+      need: "[data-pixel-date]",
+      status: "[data-pixel-status]",
+      checks: "[data-pixel-date], [data-pixel-not-iphone]",
+      min: 2,
+      suffix: "pixel",
+      block: "Complete both Pixel literacy checks first.",
+      ok: "Pixel literacy saved · Oct 4",
+      payload: function () {
+        return {
+          pixel: true,
+          shipped: "2016-10-04",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootMarketplace(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-mp-save]");
+    if (!btn || btn.getAttribute("data-bound") === "1") return;
+    btn.setAttribute("data-bound", "1");
+    var st = doc.querySelector("[data-mp-status]");
+    if (loadJSON(key("marketplace"), null)) revealNext(doc);
+    btn.addEventListener("click", function () {
+      var titleEl = doc.querySelector("[data-mp-title]");
+      var priceEl = doc.querySelector("[data-mp-price]");
+      var title = titleEl && titleEl.value != null ? String(titleEl.value).replace(/^\s+|\s+$/g, "") : "";
+      var price = priceEl && priceEl.value != null ? String(priceEl.value).replace(/^\s+|\s+$/g, "") : "";
+      if (title.length < 2 || price.length < 1) {
+        feedback("REAL gate: title and price required (no empty listing).", st, { error: true });
+        return;
+      }
+      if (!checked(doc, "[data-mp-no-pay]")) {
+        feedback("Confirm Facebook does not take payment or ship the box.", st, { error: true });
+        return;
+      }
+      saveJSON(key("marketplace"), {
+        title: title.slice(0, 80),
+        price: price.slice(0, 20),
+        noPay: true,
+        countries: "US/UK/AU/NZ",
+        age18: true,
+        shipped: "2016-10-03",
+        year: "2016",
+        multiStep: true,
+        real: true,
+        ts: Date.now()
+      });
+      feedback("Listed (theater) · no payment · " + key("marketplace"), st);
+      revealNext(doc);
+      markUsed();
+    });
+  }
+
   function bootAll(doc) {
     doc = doc || document;
     bootIgStories(doc);
+    bootIgFeed(doc);
     bootPogo(doc);
     bootPogoSteps(doc);
     bootReactions(doc);
@@ -638,7 +859,14 @@
     bootSnapStory(doc);
     bootEdge(doc);
     bootHomeProgress(doc);
+    bootIgLive(doc);
+    bootAmpSerp(doc);
+    bootDyn(doc);
+    bootGhome(doc);
     bootAlloChips(doc);
+    bootFbLive(doc);
+    bootPixel(doc);
+    bootMarketplace(doc);
   }
 
   var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);

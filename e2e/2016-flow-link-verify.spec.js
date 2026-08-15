@@ -14,16 +14,11 @@ const FLOW_SITES = [
   "sites/instagram/watch.html",
   "sites/instagram/index.html",
   "sites/pogo/index.html",
-  "sites/pogo/map.html",
   "sites/facebook/reactions.html",
-  "sites/facebook/post.html",
   "sites/whatsapp/e2e.html",
-  "sites/whatsapp/chat.html",
   "sites/iphone/7.html",
-  "sites/iphone/dongle.html",
   "sites/airpods/index.html",
   "sites/vine/goodbye.html",
-  "sites/vine/loop.html",
   "sites/windows10/index.html",
   "sites/chrome/index.html",
   "sites/playable/game.html",
@@ -40,19 +35,7 @@ const FLOW_SITES = [
   "sites/pixel/index.html",
   "sites/home/index.html",
   "sites/snapchat/spectacles.html",
-  "sites/apple/letter.html",
-  "sites/freebasics/index.html",
   "sites/facebook/marketplace.html",
-  "sites/duo/index.html",
-  "sites/teams/index.html",
-  "sites/alphago/index.html",
-  "sites/letsencrypt/index.html",
-  "sites/yahoo-breach/index.html",
-  "sites/workplace/index.html",
-  "sites/iphone/ios10.html",
-  "sites/android/nougat.html",
-  "sites/note7/index.html",
-  "sites/mariorun/index.html",
 ];
 
 const HOME_HREFS = [
@@ -60,31 +43,16 @@ const HOME_HREFS = [
   "map.html",
   "whats-new.html",
   "../sites/instagram/stories.html",
-  "../sites/instagram/watch.html",
-  "../sites/instagram/index.html",
-  "../sites/pogo/index.html",
-  "../sites/pogo/map.html",
-  "../sites/facebook/index.html",
+  "../sites/pokemongo/index.html",
   "../sites/facebook/reactions.html",
-  "../sites/facebook/post.html",
-  "../sites/whatsapp/index.html",
-  "../sites/whatsapp/e2e.html",
-  "../sites/whatsapp/chat.html",
-  "../sites/vine/index.html",
+  "../sites/whatsapp/security.html",
   "../sites/vine/goodbye.html",
-  "../sites/vine/loop.html",
+  "../sites/iphone/jack.html",
   "../sites/airpods/index.html",
-  "../sites/iphone/7.html",
-  "../sites/iphone/dongle.html",
   "../sites/windows10/index.html",
-  "../sites/chrome/index.html",
   "../sites/playable/game.html",
-  "../sites/playable/index.html",
-  "../sites/messenger/bots.html",
-  "../sites/oculus/cv1.html",
   "../sites/linkedin/deal.html",
   "../sites/allo/index.html",
-  "../sites/musically/index.html",
   "../sites/instagram/live.html",
   "../sites/amp/serp.html",
   "../sites/facebook/live.html",
@@ -92,25 +60,7 @@ const HOME_HREFS = [
   "../sites/pixel/index.html",
   "../sites/home/index.html",
   "../sites/snapchat/spectacles.html",
-  "../sites/apple/letter.html",
-  "../sites/freebasics/index.html",
   "../sites/facebook/marketplace.html",
-  "../sites/duo/index.html",
-  "../sites/teams/index.html",
-  "../sites/alphago/index.html",
-  "../sites/letsencrypt/index.html",
-  "../sites/yahoo-breach/index.html",
-  "../sites/workplace/index.html",
-  "../sites/iphone/ios10.html",
-  "../sites/android/nougat.html",
-  "../sites/note7/index.html",
-  "../sites/mariorun/index.html",
-  "../sites/apple/watch.html",
-  "../sites/snapchat/story.html",
-  "../sites/googlephotos/index.html",
-  "../sites/periscope/index.html",
-  "../sites/discord/index.html",
-  "../sites/edge/index.html",
 ];
 
 test.describe("2016 flow-map + home links exist", () => {
@@ -137,11 +87,10 @@ test.describe("2016 flow-map + home links exist", () => {
     await expect(tree).toContainText(/Stories/i, { timeout: 10000 });
     await expect(tree).toContainText(/Pokémon|Pokemon|PoGO|Street/i);
     await expect(tree.locator("a[href*='stories']").first()).toBeVisible();
-    await expect(tree.locator("a[href*='e2e']").first()).toBeVisible();
-    await expect(tree).toContainText(/Live|AMP|Dyn|Pixel|Spectacles/i);
-    await expect(tree.locator("a[href*='live']").first()).toBeVisible();
-    await expect(tree.locator("a[href*='amp']").first()).toBeVisible();
-    await expect(tree.locator("a[href*='dyn']").first()).toBeVisible();
+    await expect(tree.locator("a[href*='reactions']").first()).toBeVisible();
+    await expect(tree).toContainText(/Vine|AirPods|jack/i);
+    await expect(tree.locator("a[href*='goodbye']").first()).toBeVisible();
+    await expect(tree.locator("a[href*='jack']").first()).toBeVisible();
   });
 });
 
@@ -149,11 +98,10 @@ test.describe("2016 dirbar + iframe trails", () => {
   test("dirbar buttons open P0 rooms", async ({ page }) => {
     await enterYear(page, "2016");
     const targets = [
-      ["Stories", /Instagram Stories|August 2|24 hours/i],
-      ["PoGO", /Pokémon|Pokemon|Jul(?:y)?\s*6|silhouette/i],
+      ["Stories", /Stories|August 2|24.?hour/i],
+      ["GO", /Pokémon|Pokemon|Jul(?:y)?\s*6|silhouette/i],
       ["Reactions", /Reaction|Feb(?:ruary)?\s*24/i],
-      ["WA E2E", /end-to-end|Apr(?:il)?\s*5|WhatsApp/i],
-      ["Vine", /Oct(?:ober)?\s*27|Vine/i],
+      ["iPhone 7", /jack|iPhone 7|Sep(?:tember)?\s*7/i],
       ["Chrome", /Chrome/i],
     ];
     for (const [label, re] of targets) {
@@ -165,8 +113,8 @@ test.describe("2016 dirbar + iframe trails", () => {
   test("iframe guided Stories → PoGO → Reactions", async ({ page }) => {
     await enterYear(page, "2016");
     await goInFrame(page, "sites/instagram/stories.html");
-    await expect(contentFrame(page).locator("body")).toContainText(/Instagram Stories/i);
-    await goInFrame(page, "sites/pogo/index.html");
+    await expect(contentFrame(page).locator("body")).toContainText(/Stories/i);
+    await goInFrame(page, "sites/pokemongo/index.html");
     await expect(contentFrame(page).locator("body")).toContainText(/Jul(?:y)?\s*6/i);
     await goInFrame(page, "sites/facebook/reactions.html");
     await expect(contentFrame(page).locator("body")).toContainText(/Reaction/i);
