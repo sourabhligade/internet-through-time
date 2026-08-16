@@ -375,6 +375,11 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.reload();
     await waitImmersionYear(page, '2012');
     await page.waitForSelector('[data-spotify-invite]', { timeout: 20000 });
+    const req = page.locator("[data-spotify-req]");
+    if (await req.count()) {
+      await req.nth(0).check();
+      if ((await req.count()) > 1) await req.nth(1).check();
+    }
     await page.locator('[data-spotify-invite]').click();
     await expect(page.locator('[data-spotify-status]')).toContainText(/Invite|free|plan/i, {
       timeout: 8000,

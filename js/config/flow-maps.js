@@ -3688,6 +3688,13 @@
     year: "2014",
     branches: [
       {
+        label: "Viral this year",
+        do: "k-loop or culture toy · incomplete never writes",
+        sites: [
+          { name: "Ice Bucket nominate-3", href: "sites/icebucket/index.html", do: "tag 3 → itt14-ice-nom3" }
+        ]
+      },
+      {
         label: "5× F1–F5 · 2014",
         do: "REAL leftover loops · incomplete never writes",
         sites: [
@@ -3791,18 +3798,6 @@
       "Go live (Periscope/Meerkat) · Music trial · iOS 9 blockers · Photos backup"
     ],
     "branches": [
-      {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "Ice Bucket nominate-3",
-            "href": "sites/icebucket/index.html",
-            "do": "tag 3 \u2192 itt14-ice-nom3"
-          }
-        ]
-      },
-
       {
         "label": "Viral this year",
         "do": "k-loop or culture toy · incomplete never writes",
@@ -4085,6 +4080,13 @@
     year: "2017",
     branches: [
       {
+        label: "Viral this year",
+        do: "k-loop or culture toy · incomplete never writes",
+        sites: [
+          { name: "distracted", href: "sites/distracted/index.html", do: "complete loop → itt17-distracted" }
+        ]
+      },
+      {
         label: "5× F1–F5 · 2017",
         do: "REAL leftover loops · incomplete never writes",
         sites: [
@@ -4190,6 +4192,13 @@
     ],
     year: "2018",
     branches: [
+      {
+        label: "Viral this year",
+        do: "k-loop or culture toy · incomplete never writes",
+        sites: [
+          { name: "yanny", href: "sites/yanny/index.html", do: "complete loop → itt18-yanny" }
+        ]
+      },
       {
         label: "5× F1–F5 · 2018",
         do: "REAL leftover loops · incomplete never writes",
@@ -4311,23 +4320,6 @@
             "name": "area51",
             "href": "sites/area51/index.html",
             "do": "complete loop \u2192 itt19-area51"
-          },
-          {
-            "name": "yanny",
-            "href": "sites/yanny/index.html",
-            "do": "complete loop \u2192 itt18-yanny"
-          }
-        ]
-      },
-
-      {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "distracted",
-            "href": "sites/distracted/index.html",
-            "do": "complete loop \u2192 itt17-distracted"
           }
         ]
       },

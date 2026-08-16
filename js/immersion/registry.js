@@ -566,6 +566,7 @@
       "immersion/googleplus.js",
       "immersion/snapchat.js",
       "immersion/youtube.js",
+      "immersion/instagram.js",
       "immersion/android.js",
       "immersion/one-thing-machines.js",
       "immersion/year-2011-extras.js"
@@ -585,6 +586,12 @@
       "immersion/chrome-browser.js",
       "immersion/instagram.js",
       "immersion/snapchat.js",
+      "immersion/facebook.js",
+      "immersion/pinterest.js",
+      "immersion/youtube.js",
+      "immersion/reddit.js",
+      "immersion/spotify.js",
+      "immersion/netflix.js",
       "immersion/one-thing-machines.js",
       "immersion/year-2012-extras.js"
     ],

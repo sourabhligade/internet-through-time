@@ -98,6 +98,11 @@ test.describe('2011 flows A–T (real only)', () => {
     await clearKeys(page, ['itt11-spotify-plan', 'itt11-spotify-invited']);
     await page.reload();
     await page.waitForSelector('[data-spotify-plan="premium"]', { timeout: 20000 });
+    const req = page.locator("[data-spotify-req]");
+    if (await req.count()) {
+      await req.nth(0).check();
+      if ((await req.count()) > 1) await req.nth(1).check();
+    }
     await page.locator('[data-spotify-plan="premium"]').click();
     await expect(page.locator('[data-spotify-status]')).toContainText(/premium/i, {
       timeout: 8000,
