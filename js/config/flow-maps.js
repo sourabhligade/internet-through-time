@@ -184,8 +184,19 @@
             "do": "University-style page · guestbook"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "1994"
   };
 
@@ -335,8 +346,19 @@
             "do": "Browser vendor page"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "1995"
   };
 
@@ -488,8 +510,19 @@
             "do": "Flash/plugin-era demo page"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "1996"
   };
 
@@ -661,8 +694,19 @@
             "do": "Browser product story"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "1997"
   };
 
@@ -822,8 +866,19 @@
             "do": "PC gaming web culture"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "1998"
   };
 
@@ -1005,8 +1060,19 @@
             "do": "Payments on the web seed"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "1999"
   };
 
@@ -1190,8 +1256,19 @@
             "do": "Publish continues"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2000"
   };
 
@@ -1369,8 +1446,19 @@
             "do": "Self-hosted weblog software"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2001"
   };
 
@@ -1524,8 +1612,19 @@
             "do": "Wiki densifies"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2002"
   };
 
@@ -1698,8 +1797,19 @@
             "do": "Search + ads engine"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2003"
   };
 
@@ -1854,8 +1964,19 @@
             "do": "Late-2004 seed honesty"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2004"
   };
 
@@ -2119,8 +2240,19 @@
             "do": "YouTube surge · Reddit post · Maps drag"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2005"
   };
 
@@ -2296,8 +2428,19 @@
             "do": "140 · Digg · YouTube buffer"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2006"
   };
 
@@ -2532,8 +2675,19 @@
             "do": "Nov 19 $399 literacy → itt07-kindle-ack"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2007"
   };
 
@@ -2711,8 +2865,19 @@
             "do": "Sync folder birthmark"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2008"
   };
 
@@ -2889,8 +3054,19 @@
             "do": "Crowdfunding seed"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2009"
   };
 
@@ -3056,8 +3232,19 @@
             "do": "Public then gone"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2010"
   };
 
@@ -3218,8 +3405,19 @@
             "do": "No Android default yet"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2011"
   };
 
@@ -3381,8 +3579,19 @@
             "do": "Rideshare expands"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2012"
   };
 
@@ -3672,8 +3881,19 @@
             "do": "Silk Road literacy · no market UI"
           }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2013"
   };
 
@@ -3785,8 +4005,15 @@
           { name: "Tile Fold", href: "sites/playable/game.html", do: "2048-class · itt14-game-tilefold" },
           { name: "Playable toys", href: "sites/playable/index.html", do: "3 toys · itt14-playable*" }
         ]
+      },
+      {
+        label: "Famous games",
+        do: "Two era-famous cabinets · incomplete never writes",
+        sites: [
+          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+        ]
       }
-    ]
+]
   };
 
   ITT.flowMaps["2015"] = {
@@ -3919,8 +4146,19 @@
           { "name": "Messenger bots", "href": "sites/messenger/bots.html", "do": "F8 bots" },
           { "name": "Secret end", "href": "sites/secret/shutdown.html", "do": "2015 shutdown" }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2015"
   };
 
@@ -4064,8 +4302,19 @@
           { "name": "Google Photos residual", "href": "/years/2015/sites/googlephotos/index.html", "do": "Backup 2015" },
           { "name": "Periscope residual", "href": "/years/2015/sites/periscope/index.html", "do": "Live 2015" }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2016"
   };
 
@@ -4178,8 +4427,15 @@
           { name: "KRACK", href: "sites/krack/index.html", do: "Oct 16 · no exploit" },
           { name: "Netflix My List", href: "sites/netflix/index.html", do: "queue · not one-thing" }
         ]
+      },
+      {
+        label: "Famous games",
+        do: "Two era-famous cabinets · incomplete never writes",
+        sites: [
+          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+        ]
       }
-    ]
+]
   };
 
   ITT.flowMaps["2018"] = {
@@ -4296,8 +4552,15 @@
           { name: "Consent Dash", href: "sites/playable/game.html", do: "itt18-game-consentdash" },
           { name: "Playables", href: "sites/playable/index.html", do: "Toys" }
         ]
+      },
+      {
+        label: "Famous games",
+        do: "Two era-famous cabinets · incomplete never writes",
+        sites: [
+          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+        ]
       }
-    ]
+]
   };
 
   ITT.flowMaps["2019"] = {
@@ -4414,8 +4677,19 @@
           { "name": "AirPods Pro", "href": "sites/airpodspro/index.html", "do": "Oct ANC · 2016 line continues" },
           { "name": "GDPR residual", "href": "sites/gdpr/residual.html", "do": "2018 door · CNIL is the 2019 receipt" }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2019"
   };
 
@@ -4518,8 +4792,15 @@
           { name: "Chrome habit", href: "sites/chrome/index.html", do: "still habit" },
           { name: "Win10", href: "sites/windows10/index.html", do: "still mass" }
         ]
+      },
+      {
+        label: "Famous games",
+        do: "Two era-famous cabinets · incomplete never writes",
+        sites: [
+          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+        ]
       }
-    ]
+]
   };
 
   ITT.flowMaps["2021"] = {
@@ -4612,8 +4893,15 @@
           { name: "Playables", href: "sites/playable/index.html", do: "Toys 1–15" },
           { name: "Five Letter", href: "sites/playable/game.html", do: "itt21-game-five" }
         ]
+      },
+      {
+        label: "Famous games",
+        do: "Two era-famous cabinets · incomplete never writes",
+        sites: [
+          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+        ]
       }
-    ]
+]
   };
 
 })(typeof window !== "undefined" ? window : this);

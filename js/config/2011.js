@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2011/sites/playable/famous.html",
+
       "sites/nyan/index.html": "http://museum.local/years/2011/sites/nyan/index.html",
 
       "sites/airbnb/search.html": "http://museum.local/years/2011/sites/airbnb/search.html",

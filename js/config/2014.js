@@ -46,6 +46,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2014/sites/playable/famous.html",
+
       "sites/whatsapp/ticks.html": "http://museum.local/years/2014/sites/whatsapp/ticks.html",
       "sites/whatsapp/fb.html": "http://museum.local/years/2014/sites/whatsapp/fb.html",
       "sites/icebucket/hold.html": "http://museum.local/years/2014/sites/icebucket/hold.html",

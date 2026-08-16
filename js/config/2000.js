@@ -44,6 +44,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2000/sites/playable/famous.html",
+
       "sites/paypal/refer.html": "http://museum.local/years/2000/sites/paypal/refer.html",
 
       "sites/ebay/dutch.html": "http://museum.local/years/2000/sites/ebay/dutch.html",

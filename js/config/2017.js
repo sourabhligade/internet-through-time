@@ -46,6 +46,8 @@
       connectBusyChance: 0.08
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2017/sites/playable/famous.html",
+
       "sites/distracted/index.html": "http://museum.local/years/2017/sites/distracted/index.html",
 
       "sites/iphone/faceid.html": "http://museum.local/years/2017/sites/iphone/faceid.html",

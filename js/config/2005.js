@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2005/sites/playable/famous.html",
+
       "sites/pandora/thumb.html": "http://museum.local/years/2005/sites/pandora/thumb.html",
       "sites/maps/drag.html": "http://museum.local/years/2005/sites/maps/drag.html",
       "sites/digg/bury.html": "http://museum.local/years/2005/sites/digg/bury.html",

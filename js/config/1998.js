@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/1998/sites/playable/famous.html",
+
       "sites/ayb/index.html": "http://museum.local/years/1998/sites/ayb/index.html",
 
       "sites/dmoz/submit.html": "http://museum.local/years/1998/sites/dmoz/submit.html",

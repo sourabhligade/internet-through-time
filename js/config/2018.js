@@ -46,6 +46,8 @@
       connectBusyChance: 0.08
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2018/sites/playable/famous.html",
+
       "sites/yanny/index.html": "http://museum.local/years/2018/sites/yanny/index.html",
 
       "sites/instagram/index.html": "http://museum.local/years/2018/sites/instagram/index.html",

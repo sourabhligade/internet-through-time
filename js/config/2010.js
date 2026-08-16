@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2010/sites/playable/famous.html",
+
       "sites/double-rainbow/index.html": "http://museum.local/years/2010/sites/double-rainbow/index.html",
 
       "sites/ask/index.html": "http://museum.local/years/2010/sites/ask/index.html",

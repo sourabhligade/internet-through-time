@@ -45,6 +45,8 @@
       connectBusyChance: 0.16
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/1994/sites/playable/famous.html",
+
       "sites/goodtimes/about.html": "http://museum.local/years/1994/sites/goodtimes/about.html",
 
       "sites/goodtimes/index.html": "http://museum.local/years/1994/sites/goodtimes/index.html",

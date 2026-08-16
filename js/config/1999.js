@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/1999/sites/playable/famous.html",
+
       "sites/blogger/publish.html": "http://museum.local/years/1999/sites/blogger/publish.html",
       "sites/y2k/clock.html": "http://museum.local/years/1999/sites/y2k/clock.html",
       "sites/ebay/watch.html": "http://museum.local/years/1999/sites/ebay/watch.html",

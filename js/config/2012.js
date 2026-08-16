@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2012/sites/playable/famous.html",
+
       "sites/gangnam/index.html": "http://museum.local/years/2012/sites/gangnam/index.html",
 
       "sites/soundcloud/upload.html": "http://museum.local/years/2012/sites/soundcloud/upload.html",

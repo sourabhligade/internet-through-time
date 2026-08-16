@@ -46,6 +46,8 @@
       connectBusyChance: 0.08
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2020/sites/playable/famous.html",
+
       "sites/zoom/mute.html": "http://museum.local/years/2020/sites/zoom/mute.html",
       "sites/zoom/leave.html": "http://museum.local/years/2020/sites/zoom/leave.html",
       "sites/clubhouse/room.html": "http://museum.local/years/2020/sites/clubhouse/room.html",

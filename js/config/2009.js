@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2009/sites/playable/famous.html",
+
       "sites/ask/index.html": "http://museum.local/years/2009/sites/ask/index.html",
 
       "sites/wolframalpha/index.html": "http://museum.local/years/2009/wolframalpha/",

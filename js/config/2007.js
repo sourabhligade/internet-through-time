@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2007/sites/playable/famous.html",
+
       "sites/rickroll/index.html": "http://museum.local/years/2007/sites/rickroll/index.html",
 
       "sites/iphone/safari.html": "http://museum.local/years/2007/sites/iphone/safari.html",

@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2019/sites/playable/famous.html",
+
       "sites/area51/index.html": "http://museum.local/years/2019/sites/area51/index.html",
 
       "sites/disneyplus/profile.html": "http://museum.local/years/2019/sites/disneyplus/profile.html",

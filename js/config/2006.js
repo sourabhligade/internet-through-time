@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2006/sites/playable/famous.html",
+
       "sites/twitter/tweet.html": "http://museum.local/years/2006/sites/twitter/tweet.html",
       "sites/google/docs.html": "http://museum.local/years/2006/sites/google/docs.html",
 

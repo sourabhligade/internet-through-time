@@ -47,6 +47,8 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2016/sites/playable/famous.html",
+
       "sites/instagram/story.html": "http://museum.local/years/2016/sites/instagram/story.html",
       "sites/pokemongo/stop.html": "http://museum.local/years/2016/sites/pokemongo/stop.html",
       "sites/dyn/outage.html": "http://museum.local/years/2016/sites/dyn/outage.html",

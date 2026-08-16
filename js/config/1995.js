@@ -46,6 +46,8 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/1995/sites/playable/famous.html",
+
       "sites/beanies/about.html": "http://museum.local/years/1995/sites/beanies/about.html",
 
       "sites/beanies/index.html": "http://museum.local/years/1995/sites/beanies/index.html",

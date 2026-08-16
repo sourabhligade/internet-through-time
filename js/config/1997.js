@@ -47,6 +47,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/1997/sites/playable/famous.html",
+
       "sites/dancing-baby/index.html": "http://museum.local/years/1997/sites/dancing-baby/index.html",
 
       "sites/icq/uin.html": "http://museum.local/years/1997/sites/icq/uin.html",

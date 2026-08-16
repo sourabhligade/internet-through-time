@@ -17,7 +17,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const YEARS = Array.from({ length: 2020 - 1994 + 1 }, (_, i) => String(1994 + i));
+const YEARS = Array.from({ length: 2021 - 1994 + 1 }, (_, i) => String(1994 + i));
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
 
 const fails = [];
@@ -149,7 +149,7 @@ try {
       if (!n) missing.push(y);
     }
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
-    else ok("hub-cards", `${YEARS.length} years 1994–2020`);
+    else ok("hub-cards", `${YEARS.length} years 1994–2021`);
     const motif2013 = await page.locator("a.year-card.available.y2013 .motif").count();
     if (!motif2013) fail("hub-2013-motif", "2013 card missing .motif");
     else ok("hub-2013-motif");
@@ -157,7 +157,7 @@ try {
     if (!motif2016) fail("hub-2016-motif", "2016 card missing .motif");
     else ok("hub-2016-motif");
     const copy = await page.locator("body").innerText();
-    if (!/27 years|1994\s*[–-]\s*2020/i.test(copy)) fail("hub-copy", "expected 27 years / 1994–2020");
+    if (!/28 years|1994\s*[–-]\s*2021/i.test(copy)) fail("hub-copy", "expected 28 years / 1994–2021");
     else ok("hub-copy");
     const era = await page.locator('a.era-jump-chip[href="#era-1994-1999"]').count();
     if (!era) fail("hub-era-chip", "missing 1994–1999 era jump");

@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2002/sites/playable/famous.html",
+
       "sites/friendster/testimonial.html": "http://museum.local/years/2002/sites/friendster/testimonial.html",
       "sites/kazaa/search.html": "http://museum.local/years/2002/sites/kazaa/search.html",
       "sites/googlenews/cluster.html": "http://museum.local/years/2002/sites/googlenews/cluster.html",

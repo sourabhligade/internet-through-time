@@ -48,6 +48,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2003/sites/playable/famous.html",
+
       "sites/badger/index.html": "http://museum.local/years/2003/sites/badger/index.html",
 
       "sites/photobucket/album.html": "http://museum.local/years/2003/sites/photobucket/album.html",

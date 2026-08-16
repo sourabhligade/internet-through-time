@@ -46,6 +46,8 @@
       connectBusyChance: 0.13
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/1996/sites/playable/famous.html",
+
       "sites/spacejam/jamcentral.html": "http://museum.local/years/1996/sites/spacejam/jamcentral.html",
       "sites/spacejam/lineup.html": "http://museum.local/years/1996/sites/spacejam/lineup.html",
       "sites/portals/excite.html": "http://museum.local/years/1996/sites/portals/excite.html",

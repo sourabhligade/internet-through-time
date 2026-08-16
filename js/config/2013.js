@@ -47,6 +47,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/famous.html": "http://museum.local/years/2013/sites/playable/famous.html",
+
       "sites/harlem/index.html": "http://museum.local/years/2013/sites/harlem/index.html",
 
       "sites/vine/revine.html": "http://museum.local/years/2013/sites/vine/revine.html",

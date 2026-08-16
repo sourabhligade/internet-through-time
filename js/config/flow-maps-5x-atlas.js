@@ -5053,7 +5053,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5230,7 +5230,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5647,7 +5647,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6004,7 +6004,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6426,7 +6426,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6658,7 +6658,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6950,7 +6950,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/index.html",
+      "href": "sites/apple/ipod/faq.html",
       "do": "Existing dest · leftover reuse"
     },
     {

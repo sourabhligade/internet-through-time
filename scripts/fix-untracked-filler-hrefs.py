@@ -139,9 +139,18 @@ def rewrite_atlas(tracked: set[str]) -> int:
         name = href.rsplit("/", 1)[-1].split("?")[0].lower()
         if name not in FILLER:
             return m.group(0)
-        n += 1
+        # Keep real product rooms (e.g. sites/apple/ipod/faq.html is tracked).
+        if any((ROOT / "years" / str(y) / href).is_file() for y in range(1994, 2022)):
+            return m.group(0)
         base = href.rsplit("/", 1)[0]
-        return f'"href": "{base}/index.html"'
+        idx = base + "/index.html"
+        parent = base + ".html"
+        n += 1
+        if any((ROOT / "years" / str(y) / idx).is_file() for y in range(1994, 2022)):
+            return f'"href": "{idx}"'
+        if any((ROOT / "years" / str(y) / parent).is_file() for y in range(1994, 2022)):
+            return f'"href": "{parent}"'
+        return f'"href": "{idx}"'
 
     new = re.sub(r'"href":\s*"(sites/[^"]+)"', repl_href, text)
     if n:
