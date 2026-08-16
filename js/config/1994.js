@@ -57,13 +57,6 @@
       "sites/yahoo/entertainment.html": "http://museum.local/years/1994/sites/yahoo/entertainment.html",
       "sites/fishcam/still.html": "http://museum.local/years/1994/sites/fishcam/still.html",
       "sites/webcrawler/search.html": "http://museum.local/years/1994/sites/webcrawler/search.html",
-      "sites/bbs/help.html": "http://museum.local/years/1994/sites/bbs/help.html",
-      "sites/bbs/faq.html": "http://museum.local/years/1994/sites/bbs/faq.html",
-      "sites/bbs/press.html": "http://museum.local/years/1994/sites/bbs/press.html",
-      "sites/bbs/legal.html": "http://museum.local/years/1994/sites/bbs/legal.html",
-      "sites/bbs/tips.html": "http://museum.local/years/1994/sites/bbs/tips.html",
-      "sites/bbs/status.html": "http://museum.local/years/1994/sites/bbs/status.html",
-      "sites/bbs/support.html": "http://museum.local/years/1994/sites/bbs/support.html",
 
       "sites/infoseek/index.html": "http://museum.local/years/1994/sites/infoseek/index.html",
 
@@ -260,13 +253,6 @@
       "sites/yahoo/entertainment.html": "Entertainment",
       "sites/fishcam/still.html": "Still",
       "sites/webcrawler/search.html": "Search",
-      "sites/bbs/help.html": "Help",
-      "sites/bbs/faq.html": "Faq",
-      "sites/bbs/press.html": "Press",
-      "sites/bbs/legal.html": "Legal",
-      "sites/bbs/tips.html": "Tips",
-      "sites/bbs/status.html": "Status",
-      "sites/bbs/support.html": "Support",
 
       "sites/exploratorium/perception.html": "Perception",
       "sites/exploratorium/about.html": "About",

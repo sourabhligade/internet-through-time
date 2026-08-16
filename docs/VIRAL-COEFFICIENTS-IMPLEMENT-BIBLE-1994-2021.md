@@ -204,7 +204,7 @@ Deepens that only add a block on an existing page skip (1) and (6) if no new fil
 | **V1** | Published k-loops | F96 · F00 · F08 · F09 · F14 | M | **Done** 2026-08-16 |
 | **V2** | Extreme culture toys | F94 · F97 · F07 · F11 · F12 · F13 · F15 | M | **Done** 2026-08-16 |
 | **V3** | Remaining culture | F95 · F98 · F01 · F02 · F03 · F10 · F17 · F18 · F19 | M | **Done** 2026-08-16 |
-| **V4** | Deepen-or-skip | F99 · F04 · F05 · F06 · F16 · F20 · F21 | S | **Skipped** (already enough) |
+| **V4** | Deepen-or-skip | F04 `.edu` · F05 YT URL done; F99/F06/F16/F20/F21 stay skip | S | **Done** 2026-08-16 (optional A only) |
 | **VG** | Gates | e2e + check-all-years + gold isolation | S | **Done** (viral-loops green · one-thing green · check-all-years 28/28) |
 
 **Order:** V0 → V1 → VG → V2 → VG → V3 → VG → V4 → VG.

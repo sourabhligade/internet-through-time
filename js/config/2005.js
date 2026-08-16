@@ -51,11 +51,6 @@
       "sites/pandora/thumb.html": "http://museum.local/years/2005/sites/pandora/thumb.html",
       "sites/maps/drag.html": "http://museum.local/years/2005/sites/maps/drag.html",
       "sites/digg/bury.html": "http://museum.local/years/2005/sites/digg/bury.html",
-      "sites/adsense/help.html": "http://museum.local/years/2005/sites/adsense/help.html",
-      "sites/adsense/faq.html": "http://museum.local/years/2005/sites/adsense/faq.html",
-      "sites/adsense/press.html": "http://museum.local/years/2005/sites/adsense/press.html",
-      "sites/adsense/legal.html": "http://museum.local/years/2005/sites/adsense/legal.html",
-      "sites/adsense/tips.html": "http://museum.local/years/2005/sites/adsense/tips.html",
 
       "sites/aol/index.html": "http://museum.local/years/2005/sites/aol/index.html",
 
@@ -365,11 +360,6 @@
       "sites/pandora/thumb.html": "Thumb",
       "sites/maps/drag.html": "Drag",
       "sites/digg/bury.html": "Bury",
-      "sites/adsense/help.html": "Help",
-      "sites/adsense/faq.html": "Faq",
-      "sites/adsense/press.html": "Press",
-      "sites/adsense/legal.html": "Legal",
-      "sites/adsense/tips.html": "Tips",
 
       "sites/playable/game.html": "HoverChop — 2005 year game",
       "sites/playable/game-2.html": "View surge \u2014 2005",

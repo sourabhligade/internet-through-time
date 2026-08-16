@@ -48,7 +48,6 @@
       "sites/ayb/index.html": "http://museum.local/years/2001/sites/ayb/index.html",
 
       "sites/wikipedia/preview.html": "http://museum.local/years/2001/sites/wikipedia/preview.html",
-      "sites/apple/faq.html": "http://museum.local/years/2001/sites/apple/faq.html",
       "sites/wayback/lookup.html": "http://museum.local/years/2001/sites/wayback/lookup.html",
       "sites/msn/hotmail.html": "http://museum.local/years/2001/sites/msn/hotmail.html",
       "sites/movabletype/publish.html": "http://museum.local/years/2001/sites/movabletype/publish.html",
@@ -259,7 +258,6 @@
 },
     titleMap: {
       "sites/wikipedia/preview.html": "Preview",
-      "sites/apple/faq.html": "Faq",
       "sites/wayback/lookup.html": "Lookup",
       "sites/msn/hotmail.html": "Hotmail",
       "sites/movabletype/publish.html": "Publish",

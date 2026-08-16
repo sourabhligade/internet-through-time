@@ -1713,6 +1713,17 @@
     ],
     "branches": [
       {
+        "label": "Viral this year",
+        "do": "k-loop or culture toy · incomplete never writes",
+        "sites": [
+          {
+            "name": "thefacebook .edu hop",
+            "href": "sites/facebook/invite.html",
+            "do": "3 campus emails → itt04-fb-edu"
+          }
+        ]
+      },
+      {
           "label": "5\u00d7 F1\u2013F5 \u00b7 2004",
           "do": "REAL leftover loops \u00b7 incomplete never writes",
           "sites": [
@@ -1857,6 +1868,17 @@
       "Reddit/Digg: submit and vote — counts change immediately"
     ],
     "branches": [
+      {
+        "label": "Viral this year",
+        "do": "k-loop or culture toy · incomplete never writes",
+        "sites": [
+          {
+            "name": "YouTube email this URL",
+            "href": "sites/youtube/watch.html",
+            "do": "share URL → itt05-yt-url"
+          }
+        ]
+      },
       {
           "label": "5\u00d7 F1\u2013F5 \u00b7 2005",
           "do": "REAL leftover loops \u00b7 incomplete never writes",

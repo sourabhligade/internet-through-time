@@ -274,12 +274,12 @@
     },
     {
       "name": "Help",
-      "href": "sites/iuma/help.html",
+      "href": "sites/iuma/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
       "name": "Legal",
-      "href": "sites/iuma/legal.html",
+      "href": "sites/iuma/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -449,37 +449,37 @@
     },
     {
       "name": "Help",
-      "href": "sites/bbs/help.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bbs/faq.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bbs/press.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bbs/legal.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bbs/tips.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bbs/status.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bbs/support.html",
+      "href": "sites/bbs/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -896,362 +896,362 @@
     },
     {
       "name": "Help",
-      "href": "sites/altavista/help.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/altavista/faq.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/altavista/press.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/altavista/legal.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/altavista/tips.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/altavista/status.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/altavista/support.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/altavista/privacy.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/altavista/terms.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/altavista/notes.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/altavista/blog.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/altavista/news.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amazon/help.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amazon/faq.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amazon/press.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amazon/legal.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amazon/tips.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amazon/status.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amazon/support.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amazon/privacy.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amazon/terms.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amazon/notes.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amazon/blog.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amazon/news.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aol/help.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aol/faq.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aol/press.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aol/legal.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aol/tips.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aol/status.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aol/support.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aol/privacy.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aol/terms.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aol/notes.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aol/blog.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aol/news.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/auctionweb/help.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/auctionweb/faq.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/auctionweb/press.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/auctionweb/legal.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/auctionweb/tips.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/auctionweb/status.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/auctionweb/support.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/auctionweb/privacy.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/auctionweb/terms.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/auctionweb/notes.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/auctionweb/blog.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/auctionweb/news.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/classmates/help.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/classmates/faq.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/classmates/press.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/classmates/legal.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/classmates/tips.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/classmates/status.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/classmates/support.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/classmates/privacy.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/classmates/terms.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/classmates/notes.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/classmates/blog.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/classmates/news.html",
+      "href": "sites/classmates/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cnn/help.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cnn/faq.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cnn/press.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cnn/legal.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cnn/tips.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/cnn/status.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/cnn/support.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/cnn/privacy.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/cnn/terms.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/cnn/notes.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/cnn/blog.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/cnn/news.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -1603,427 +1603,427 @@
     },
     {
       "name": "Help",
-      "href": "sites/altavista/help.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/altavista/faq.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/altavista/press.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/altavista/legal.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/altavista/tips.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/altavista/status.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/altavista/support.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/altavista/privacy.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/altavista/terms.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/altavista/notes.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/altavista/blog.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/altavista/news.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amazon/help.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amazon/faq.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amazon/press.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amazon/legal.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amazon/tips.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amazon/status.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amazon/support.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amazon/privacy.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amazon/terms.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amazon/notes.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amazon/blog.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amazon/news.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/angelfire/help.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/angelfire/faq.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/angelfire/press.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/angelfire/legal.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/angelfire/tips.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/angelfire/status.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/angelfire/support.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/angelfire/privacy.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/angelfire/terms.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/angelfire/notes.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/angelfire/blog.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/angelfire/news.html",
+      "href": "sites/angelfire/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aolportal/help.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aolportal/faq.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aolportal/press.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aolportal/legal.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aolportal/tips.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aolportal/status.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aolportal/support.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aolportal/privacy.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aolportal/terms.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aolportal/notes.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aolportal/blog.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aolportal/news.html",
+      "href": "sites/aolportal/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/auctionweb/help.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/auctionweb/faq.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/auctionweb/press.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/auctionweb/legal.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/auctionweb/tips.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/auctionweb/status.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/auctionweb/support.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/auctionweb/privacy.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/auctionweb/terms.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/auctionweb/notes.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/auctionweb/blog.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/auctionweb/news.html",
+      "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cnn/help.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cnn/faq.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cnn/press.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cnn/legal.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cnn/tips.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/cnn/status.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/cnn/support.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/cnn/privacy.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/cnn/terms.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/cnn/notes.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/cnn/blog.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/cnn/news.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/excite/help.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/excite/faq.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/excite/press.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/excite/legal.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/excite/tips.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/excite/status.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/excite/support.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/excite/privacy.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/excite/terms.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/excite/notes.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/excite/blog.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/excite/news.html",
+      "href": "sites/excite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/geocities/help.html",
+      "href": "sites/geocities/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -2265,7 +2265,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -2345,387 +2345,387 @@
     },
     {
       "name": "Help",
-      "href": "sites/aim/help.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aim/faq.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aim/press.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aim/legal.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aim/tips.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aim/status.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aim/support.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aim/privacy.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aim/terms.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aim/notes.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aim/blog.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aim/news.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/altavista/help.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/altavista/faq.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/altavista/press.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/altavista/legal.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/altavista/tips.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/altavista/status.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/altavista/support.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/altavista/privacy.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/altavista/terms.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/altavista/notes.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/altavista/blog.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/altavista/news.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amazon/help.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amazon/faq.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amazon/press.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amazon/legal.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amazon/tips.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amazon/status.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amazon/support.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amazon/privacy.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amazon/terms.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amazon/notes.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amazon/blog.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amazon/news.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aol/help.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aol/faq.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aol/press.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aol/legal.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aol/tips.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aol/status.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aol/support.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aol/privacy.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aol/terms.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aol/notes.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aol/blog.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aol/news.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple/tips.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple/status.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple/support.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple/privacy.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple/terms.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple/notes.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple/blog.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple/news.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bbc/help.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bbc/faq.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bbc/press.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bbc/legal.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bbc/tips.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bbc/status.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bbc/support.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bbc/privacy.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bbc/terms.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bbc/notes.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bbc/blog.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bbc/news.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cnn/help.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cnn/faq.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cnn/press.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cnn/legal.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cnn/tips.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -2967,7 +2967,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -3037,502 +3037,502 @@
     },
     {
       "name": "Help",
-      "href": "sites/altavista/help.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/altavista/faq.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/altavista/press.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/altavista/legal.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/altavista/tips.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/altavista/status.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/altavista/support.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/altavista/privacy.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/altavista/terms.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/altavista/notes.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/altavista/blog.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/altavista/news.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amazon/help.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amazon/faq.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amazon/press.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amazon/legal.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amazon/tips.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amazon/status.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amazon/support.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amazon/privacy.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amazon/terms.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amazon/notes.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amazon/blog.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amazon/news.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aol/help.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aol/faq.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aol/press.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aol/legal.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aol/tips.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aol/status.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aol/support.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aol/privacy.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aol/terms.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aol/notes.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aol/blog.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aol/news.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple/tips.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple/status.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple/support.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple/privacy.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple/terms.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple/notes.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple/blog.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple/news.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bbc/help.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bbc/faq.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bbc/press.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bbc/legal.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bbc/tips.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bbc/status.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bbc/support.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bbc/privacy.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bbc/terms.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bbc/notes.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bbc/blog.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bbc/news.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bowienet/help.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bowienet/faq.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bowienet/press.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bowienet/legal.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bowienet/tips.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bowienet/status.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bowienet/support.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bowienet/privacy.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bowienet/terms.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bowienet/notes.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bowienet/blog.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bowienet/news.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cdnow/help.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cdnow/faq.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cdnow/press.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cdnow/legal.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cdnow/tips.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/cdnow/status.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/cdnow/support.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/cdnow/privacy.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/cdnow/terms.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/cdnow/notes.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/cdnow/blog.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/cdnow/news.html",
+      "href": "sites/cdnow/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cnn/help.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cnn/faq.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cnn/press.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cnn/legal.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cnn/tips.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/cnn/status.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/cnn/support.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/cnn/privacy.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/cnn/terms.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/cnn/notes.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/cnn/blog.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/cnn/news.html",
+      "href": "sites/cnn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/dmoz/help.html",
+      "href": "sites/dmoz/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/dmoz/faq.html",
+      "href": "sites/dmoz/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/dmoz/press.html",
+      "href": "sites/dmoz/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/dmoz/legal.html",
+      "href": "sites/dmoz/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -3714,7 +3714,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -3784,407 +3784,407 @@
     },
     {
       "name": "Help",
-      "href": "sites/about/help.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/about/faq.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/about/press.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/about/legal.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/about/tips.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/about/status.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/about/support.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/about/privacy.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/about/terms.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/about/notes.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/about/blog.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/about/news.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aim/help.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aim/faq.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aim/press.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aim/legal.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aim/tips.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aim/status.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aim/support.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aim/privacy.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aim/terms.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aim/notes.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aim/blog.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aim/news.html",
+      "href": "sites/aim/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/altavista/help.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/altavista/faq.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/altavista/press.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/altavista/legal.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/altavista/tips.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/altavista/status.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/altavista/support.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/altavista/privacy.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/altavista/terms.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/altavista/notes.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/altavista/blog.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/altavista/news.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amazon/help.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amazon/faq.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amazon/press.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amazon/legal.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amazon/tips.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amazon/status.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amazon/support.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amazon/privacy.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amazon/terms.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amazon/notes.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amazon/blog.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amazon/news.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aol/help.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aol/faq.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aol/press.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aol/legal.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aol/tips.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aol/status.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aol/support.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aol/privacy.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aol/terms.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aol/notes.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aol/blog.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aol/news.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple/tips.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple/status.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple/support.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple/privacy.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple/terms.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple/notes.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple/blog.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple/news.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/askjeeves/help.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/askjeeves/faq.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/askjeeves/press.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/askjeeves/legal.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/askjeeves/tips.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/askjeeves/status.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/askjeeves/support.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/askjeeves/privacy.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/askjeeves/terms.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -4381,7 +4381,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -4446,487 +4446,487 @@
     },
     {
       "name": "Help",
-      "href": "sites/about/help.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/about/faq.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/about/press.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/about/legal.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/about/tips.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/about/status.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/about/support.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/about/privacy.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/about/terms.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/about/notes.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/about/blog.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/about/news.html",
+      "href": "sites/about/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/altavista/help.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/altavista/faq.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/altavista/press.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/altavista/legal.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/altavista/tips.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/altavista/status.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/altavista/support.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/altavista/privacy.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/altavista/terms.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/altavista/notes.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/altavista/blog.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/altavista/news.html",
+      "href": "sites/altavista/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amazon/help.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amazon/faq.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amazon/press.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amazon/legal.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amazon/tips.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amazon/status.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amazon/support.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amazon/privacy.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amazon/terms.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amazon/notes.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amazon/blog.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amazon/news.html",
+      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/aol/help.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/aol/faq.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/aol/press.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/aol/legal.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/aol/tips.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/aol/status.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/aol/support.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/aol/privacy.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/aol/terms.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/aol/notes.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/aol/blog.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/aol/news.html",
+      "href": "sites/aol/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple/tips.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple/status.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple/support.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple/privacy.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple/terms.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple/notes.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple/blog.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple/news.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/askjeeves/help.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/askjeeves/faq.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/askjeeves/press.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/askjeeves/legal.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/askjeeves/tips.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/askjeeves/status.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/askjeeves/support.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/askjeeves/privacy.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/askjeeves/terms.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/askjeeves/notes.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/askjeeves/blog.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/askjeeves/news.html",
+      "href": "sites/askjeeves/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bbc/help.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bbc/faq.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bbc/press.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bbc/legal.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bbc/tips.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bbc/status.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bbc/support.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bbc/privacy.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bbc/terms.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bbc/notes.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bbc/blog.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bbc/news.html",
+      "href": "sites/bbc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/blogger/help.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/blogger/faq.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/blogger/press.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/blogger/legal.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/blogger/tips.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/blogger/status.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/blogger/support.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/blogger/privacy.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/blogger/terms.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/blogger/notes.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/blogger/blog.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/blogger/news.html",
+      "href": "sites/blogger/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bowienet/help.html",
+      "href": "sites/bowienet/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -5053,7 +5053,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5093,7 +5093,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5153,7 +5153,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
@@ -5230,7 +5230,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5380,7 +5380,7 @@
     },
     {
       "name": "Legal",
-      "href": "sites/napster/legal.html",
+      "href": "sites/napster/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5420,7 +5420,7 @@
     },
     {
       "name": "Help",
-      "href": "sites/wikipedia/help.html",
+      "href": "sites/wikipedia/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5465,7 +5465,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5647,7 +5647,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5817,7 +5817,7 @@
     },
     {
       "name": "Legal",
-      "href": "sites/napster/legal.html",
+      "href": "sites/napster/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5857,7 +5857,7 @@
     },
     {
       "name": "Help",
-      "href": "sites/wikipedia/help.html",
+      "href": "sites/wikipedia/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -5912,7 +5912,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6004,7 +6004,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6079,7 +6079,7 @@
     },
     {
       "name": "Help",
-      "href": "sites/wikipedia/help.html",
+      "href": "sites/wikipedia/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6134,7 +6134,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6426,7 +6426,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6491,7 +6491,7 @@
     },
     {
       "name": "Help",
-      "href": "sites/wikipedia/help.html",
+      "href": "sites/wikipedia/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6546,7 +6546,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6626,27 +6626,27 @@
     },
     {
       "name": "Help",
-      "href": "sites/adsense/help.html",
+      "href": "sites/adsense/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/adsense/faq.html",
+      "href": "sites/adsense/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/adsense/press.html",
+      "href": "sites/adsense/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/adsense/legal.html",
+      "href": "sites/adsense/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/adsense/tips.html",
+      "href": "sites/adsense/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -6658,7 +6658,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6718,7 +6718,7 @@
     },
     {
       "name": "Help",
-      "href": "sites/wikipedia/help.html",
+      "href": "sites/wikipedia/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6773,7 +6773,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6950,7 +6950,7 @@
     },
     {
       "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
+      "href": "sites/apple/ipod/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -6985,7 +6985,7 @@
     },
     {
       "name": "Legal",
-      "href": "sites/napster/legal.html",
+      "href": "sites/napster/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -7025,7 +7025,7 @@
     },
     {
       "name": "Help",
-      "href": "sites/wikipedia/help.html",
+      "href": "sites/wikipedia/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -7080,7 +7080,7 @@
     },
     {
       "name": "News",
-      "href": "sites/yahoo/news.html",
+      "href": "sites/yahoo/index.html",
       "do": "Existing dest · leftover reuse"
     },
     {
@@ -7693,367 +7693,367 @@
     },
     {
       "name": "Help",
-      "href": "sites/airbnb/help.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airbnb/faq.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airbnb/press.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airbnb/legal.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airbnb/tips.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airbnb/status.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airbnb/support.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airbnb/privacy.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airbnb/terms.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airbnb/notes.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airbnb/blog.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airbnb/news.html",
+      "href": "sites/airbnb/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/android/help.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/android/faq.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/android/press.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/android/legal.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/android/tips.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/android/status.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/android/support.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/android/privacy.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/android/terms.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/android/notes.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/android/blog.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/android/news.html",
+      "href": "sites/android/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/color/help.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/color/faq.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/color/press.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/color/legal.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/color/tips.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/color/status.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/color/support.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/color/privacy.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/color/terms.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/color/notes.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/color/blog.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/color/news.html",
+      "href": "sites/color/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/coursera/help.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/coursera/faq.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/coursera/press.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/coursera/legal.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/coursera/tips.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/coursera/status.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/coursera/support.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/coursera/privacy.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/coursera/terms.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/coursera/notes.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/coursera/blog.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/coursera/news.html",
+      "href": "sites/coursera/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/duckduckgo/help.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/duckduckgo/faq.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/duckduckgo/press.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/duckduckgo/legal.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/duckduckgo/tips.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/duckduckgo/status.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/duckduckgo/support.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/duckduckgo/privacy.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/duckduckgo/terms.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/duckduckgo/notes.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/duckduckgo/blog.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/duckduckgo/news.html",
+      "href": "sites/duckduckgo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/evernote/help.html",
+      "href": "sites/evernote/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -8495,412 +8495,412 @@
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/drawsomething/help.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/drawsomething/faq.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/drawsomething/press.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/drawsomething/legal.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/drawsomething/tips.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/drawsomething/status.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/drawsomething/support.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/drawsomething/privacy.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/drawsomething/terms.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/drawsomething/notes.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/drawsomething/blog.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/drawsomething/news.html",
+      "href": "sites/drawsomething/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook/legal.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook/tips.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook/status.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook/support.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook/privacy.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook/terms.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook/notes.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook/blog.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook/news.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook-ipo/help.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook-ipo/faq.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook-ipo/press.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook-ipo/legal.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook-ipo/tips.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook-ipo/status.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook-ipo/support.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook-ipo/privacy.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook-ipo/terms.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook-ipo/notes.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook-ipo/blog.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook-ipo/news.html",
+      "href": "sites/facebook-ipo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/flappy-seed/help.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/flappy-seed/faq.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/flappy-seed/press.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/flappy-seed/legal.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/flappy-seed/tips.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/flappy-seed/status.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/flappy-seed/support.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/flappy-seed/privacy.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/flappy-seed/terms.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/flappy-seed/notes.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/flappy-seed/blog.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/flappy-seed/news.html",
+      "href": "sites/flappy-seed/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/google-now/help.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/google-now/faq.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/google-now/press.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/google-now/legal.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/google-now/tips.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/google-now/status.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/google-now/support.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/google-now/privacy.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/google-now/terms.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/google-now/notes.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/google-now/blog.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/google-now/news.html",
+      "href": "sites/google-now/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/googledrive/help.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/googledrive/faq.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/googledrive/press.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/googledrive/legal.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/googledrive/tips.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/googledrive/status.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/googledrive/support.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/googledrive/privacy.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/googledrive/terms.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/googledrive/notes.html",
+      "href": "sites/googledrive/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -9367,752 +9367,752 @@
     },
     {
       "name": "Help",
-      "href": "sites/bitcoin/help.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bitcoin/faq.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bitcoin/press.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bitcoin/legal.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bitcoin/tips.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bitcoin/status.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bitcoin/support.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bitcoin/privacy.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bitcoin/terms.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bitcoin/notes.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bitcoin/blog.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bitcoin/news.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bitcoin-2013/help.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bitcoin-2013/faq.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bitcoin-2013/press.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bitcoin-2013/legal.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bitcoin-2013/tips.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bitcoin-2013/status.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bitcoin-2013/support.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bitcoin-2013/privacy.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bitcoin-2013/terms.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bitcoin-2013/notes.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bitcoin-2013/blog.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bitcoin-2013/news.html",
+      "href": "sites/bitcoin-2013/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chromecast/help.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chromecast/faq.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chromecast/press.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chromecast/legal.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chromecast/tips.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chromecast/status.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chromecast/support.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chromecast/privacy.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chromecast/terms.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chromecast/notes.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chromecast/blog.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chromecast/news.html",
+      "href": "sites/chromecast/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/coursera-mooc/help.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/coursera-mooc/faq.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/coursera-mooc/press.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/coursera-mooc/legal.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/coursera-mooc/tips.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/coursera-mooc/status.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/coursera-mooc/support.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/coursera-mooc/privacy.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/coursera-mooc/terms.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/coursera-mooc/notes.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/coursera-mooc/blog.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/coursera-mooc/news.html",
+      "href": "sites/coursera-mooc/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook/legal.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook/tips.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook/status.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook/support.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook/privacy.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook/terms.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook/notes.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook/blog.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook/news.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/firefox-os/help.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/firefox-os/faq.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/firefox-os/press.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/firefox-os/legal.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/firefox-os/tips.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/firefox-os/status.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/firefox-os/support.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/firefox-os/privacy.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/firefox-os/terms.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/firefox-os/notes.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/firefox-os/blog.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/firefox-os/news.html",
+      "href": "sites/firefox-os/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/glass/help.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/glass/faq.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/glass/press.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/glass/legal.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/glass/tips.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/glass/status.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/glass/support.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/glass/privacy.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/glass/terms.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/glass/notes.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/glass/blog.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/glass/news.html",
+      "href": "sites/glass/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/google/help.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/google/faq.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/google/press.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/google/legal.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/google/tips.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/google/status.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/google/support.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/google/privacy.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/google/terms.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/google/notes.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/google/blog.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/google/news.html",
+      "href": "sites/google/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/google-hangouts/help.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/google-hangouts/faq.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/google-hangouts/press.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/google-hangouts/legal.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/google-hangouts/tips.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/google-hangouts/status.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/google-hangouts/support.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/google-hangouts/privacy.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/google-hangouts/terms.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/google-hangouts/notes.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/google-hangouts/blog.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/google-hangouts/news.html",
+      "href": "sites/google-hangouts/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/google-keep/help.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/google-keep/faq.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/google-keep/press.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/google-keep/legal.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/google-keep/tips.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/google-keep/status.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/google-keep/support.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/google-keep/privacy.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/google-keep/terms.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/google-keep/notes.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/google-keep/blog.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/google-keep/news.html",
+      "href": "sites/google-keep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/googlekeep/help.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/googlekeep/faq.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/googlekeep/press.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/googlekeep/legal.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/googlekeep/tips.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/googlekeep/status.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/googlekeep/support.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/googlekeep/privacy.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/googlekeep/terms.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/googlekeep/notes.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/googlekeep/blog.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/googlekeep/news.html",
+      "href": "sites/googlekeep/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/healthcare/help.html",
+      "href": "sites/healthcare/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/healthcare/faq.html",
+      "href": "sites/healthcare/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/healthcare/press.html",
+      "href": "sites/healthcare/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/healthcare/legal.html",
+      "href": "sites/healthcare/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/healthcare/tips.html",
+      "href": "sites/healthcare/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/healthcare/status.html",
+      "href": "sites/healthcare/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -10599,822 +10599,822 @@
     },
     {
       "name": "Help",
-      "href": "sites/airbnb-photo/help.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airbnb-photo/faq.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airbnb-photo/press.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airbnb-photo/legal.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airbnb-photo/tips.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airbnb-photo/status.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airbnb-photo/support.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airbnb-photo/privacy.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airbnb-photo/terms.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airbnb-photo/notes.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airbnb-photo/blog.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airbnb-photo/news.html",
+      "href": "sites/airbnb-photo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/alibaba/help.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/alibaba/faq.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/alibaba/press.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/alibaba/legal.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/alibaba/tips.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/alibaba/status.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/alibaba/support.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/alibaba/privacy.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/alibaba/terms.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/alibaba/notes.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/alibaba/blog.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/alibaba/news.html",
+      "href": "sites/alibaba/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/als/help.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/als/faq.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/als/press.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/als/legal.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/als/tips.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/als/status.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/als/support.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/als/privacy.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/als/terms.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/als/notes.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/als/blog.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/als/news.html",
+      "href": "sites/als/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/android-l/help.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/android-l/faq.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/android-l/press.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/android-l/legal.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/android-l/tips.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/android-l/status.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/android-l/support.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/android-l/privacy.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/android-l/terms.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/android-l/notes.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/android-l/blog.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/android-l/news.html",
+      "href": "sites/android-l/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple/tips.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple/status.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple/support.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple/privacy.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple/terms.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple/notes.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple/blog.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple/news.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple-pay/help.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple-pay/faq.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple-pay/press.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple-pay/legal.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple-pay/tips.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple-pay/status.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple-pay/support.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple-pay/privacy.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple-pay/terms.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple-pay/notes.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple-pay/blog.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple-pay/news.html",
+      "href": "sites/apple-pay/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/billion/help.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/billion/faq.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/billion/press.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/billion/legal.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/billion/tips.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/billion/status.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/billion/support.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/billion/privacy.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/billion/terms.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/billion/notes.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/billion/blog.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/billion/news.html",
+      "href": "sites/billion/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cardboard/help.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cardboard/faq.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cardboard/press.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cardboard/legal.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cardboard/tips.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/cardboard/status.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/cardboard/support.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/cardboard/privacy.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/cardboard/terms.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/cardboard/notes.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/cardboard/blog.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/cardboard/news.html",
+      "href": "sites/cardboard/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/ebay-paypal-split/help.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/ebay-paypal-split/faq.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/ebay-paypal-split/press.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/ebay-paypal-split/legal.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/ebay-paypal-split/tips.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/ebay-paypal-split/status.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/ebay-paypal-split/support.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/ebay-paypal-split/privacy.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/ebay-paypal-split/terms.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/ebay-paypal-split/notes.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/ebay-paypal-split/blog.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/ebay-paypal-split/news.html",
+      "href": "sites/ebay-paypal-split/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/echo/help.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/echo/faq.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/echo/press.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/echo/legal.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/echo/tips.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/echo/status.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/echo/support.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/echo/privacy.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/echo/terms.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/echo/notes.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/echo/blog.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/echo/news.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/ello/help.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/ello/faq.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/ello/press.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/ello/legal.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/ello/tips.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/ello/status.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/ello/support.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/ello/privacy.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/ello/terms.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/ello/notes.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/ello/blog.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/ello/news.html",
+      "href": "sites/ello/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook/legal.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook/tips.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook/status.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook/support.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook/privacy.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook/terms.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook/notes.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook/blog.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook/news.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook-paper/help.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook-paper/faq.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook-paper/press.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook-paper/legal.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook-paper/tips.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook-paper/status.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook-paper/support.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook-paper/privacy.html",
+      "href": "sites/facebook-paper/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -11941,322 +11941,322 @@
     },
     {
       "name": "Help",
-      "href": "sites/3d-touch/help.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/3d-touch/faq.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/3d-touch/press.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/3d-touch/legal.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/3d-touch/tips.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/3d-touch/status.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/3d-touch/support.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/3d-touch/privacy.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/3d-touch/terms.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/3d-touch/notes.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/3d-touch/blog.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/3d-touch/news.html",
+      "href": "sites/3d-touch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/adblock-ios/help.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/adblock-ios/faq.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/adblock-ios/press.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/adblock-ios/legal.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/adblock-ios/tips.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/adblock-ios/status.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/adblock-ios/support.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/adblock-ios/privacy.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/adblock-ios/terms.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/adblock-ios/notes.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/adblock-ios/blog.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/adblock-ios/news.html",
+      "href": "sites/adblock-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/agario/help.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/agario/faq.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/agario/press.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/agario/legal.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/agario/tips.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/agario/status.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/agario/support.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/agario/privacy.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/agario/terms.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/agario/notes.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/agario/blog.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/agario/news.html",
+      "href": "sites/agario/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amp/help.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amp/faq.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amp/press.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amp/legal.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amp/tips.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amp/status.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amp/support.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amp/privacy.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amp/terms.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amp/notes.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amp/blog.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amp/news.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amp-cache/help.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amp-cache/faq.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amp-cache/press.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amp-cache/legal.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amp-cache/tips.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amp-cache/status.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amp-cache/support.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amp-cache/privacy.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amp-cache/terms.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amp-cache/notes.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amp-cache/blog.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amp-cache/news.html",
+      "href": "sites/amp-cache/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -12703,542 +12703,542 @@
     },
     {
       "name": "Help",
-      "href": "sites/airpods/help.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airpods/faq.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airpods/press.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airpods/legal.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airpods/tips.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airpods/status.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airpods/support.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airpods/privacy.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airpods/terms.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airpods/notes.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airpods/blog.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airpods/news.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/airpods-wait/help.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airpods-wait/faq.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airpods-wait/press.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airpods-wait/legal.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airpods-wait/tips.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airpods-wait/status.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airpods-wait/support.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airpods-wait/privacy.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airpods-wait/terms.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airpods-wait/notes.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airpods-wait/blog.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airpods-wait/news.html",
+      "href": "sites/airpods-wait/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/alphago/help.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/alphago/faq.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/alphago/press.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/alphago/legal.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/alphago/tips.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/alphago/status.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/alphago/support.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/alphago/privacy.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/alphago/terms.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/alphago/notes.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/alphago/blog.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/alphago/news.html",
+      "href": "sites/alphago/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/amp/help.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/amp/faq.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/amp/press.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/amp/legal.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/amp/tips.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/amp/status.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/amp/support.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/amp/privacy.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/amp/terms.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/amp/notes.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/amp/blog.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/amp/news.html",
+      "href": "sites/amp/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/dyn/help.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/dyn/faq.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/dyn/press.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/dyn/legal.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/dyn/tips.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/dyn/status.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/dyn/support.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/dyn/privacy.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/dyn/terms.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/dyn/notes.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/dyn/blog.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/dyn/news.html",
+      "href": "sites/dyn/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/edge/help.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/edge/faq.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/edge/press.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/edge/legal.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/edge/tips.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/edge/status.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/edge/support.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/edge/privacy.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/edge/terms.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/edge/notes.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/edge/blog.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/edge/news.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook/legal.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook/tips.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook/status.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook/support.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook/privacy.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook/terms.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook/notes.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook/blog.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook/news.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/fb-live/help.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/fb-live/faq.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/fb-live/press.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/fb-live/legal.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/fb-live/tips.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/fb-live/status.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/fb-live/support.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/fb-live/privacy.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/fb-live/terms.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/fb-live/notes.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/fb-live/blog.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/fb-live/news.html",
+      "href": "sites/fb-live/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -13635,792 +13635,792 @@
     },
     {
       "name": "Help",
-      "href": "sites/airpods/help.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airpods/faq.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airpods/press.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airpods/legal.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airpods/tips.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airpods/status.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airpods/support.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airpods/privacy.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airpods/terms.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airpods/notes.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airpods/blog.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airpods/news.html",
+      "href": "sites/airpods/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/animoji/help.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/animoji/faq.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/animoji/press.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/animoji/legal.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/animoji/tips.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/animoji/status.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/animoji/support.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/animoji/privacy.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/animoji/terms.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/animoji/notes.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/animoji/blog.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/animoji/news.html",
+      "href": "sites/animoji/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/bitcoin/help.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/bitcoin/faq.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/bitcoin/press.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/bitcoin/legal.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/bitcoin/tips.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/bitcoin/status.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/bitcoin/support.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/bitcoin/privacy.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/bitcoin/terms.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/bitcoin/notes.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/bitcoin/blog.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/bitcoin/news.html",
+      "href": "sites/bitcoin/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome-flash-click/help.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome-flash-click/faq.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome-flash-click/press.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome-flash-click/legal.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome-flash-click/tips.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome-flash-click/status.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome-flash-click/support.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome-flash-click/privacy.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome-flash-click/terms.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome-flash-click/notes.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome-flash-click/blog.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome-flash-click/news.html",
+      "href": "sites/chrome-flash-click/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/credit-freeze/help.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/credit-freeze/faq.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/credit-freeze/press.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/credit-freeze/legal.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/credit-freeze/tips.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/credit-freeze/status.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/credit-freeze/support.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/credit-freeze/privacy.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/credit-freeze/terms.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/credit-freeze/notes.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/credit-freeze/blog.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/credit-freeze/news.html",
+      "href": "sites/credit-freeze/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/discord/help.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/discord/faq.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/discord/press.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/discord/legal.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/discord/tips.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/discord/status.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/discord/support.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/discord/privacy.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/discord/terms.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/discord/notes.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/discord/blog.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/discord/news.html",
+      "href": "sites/discord/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/echo/help.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/echo/faq.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/echo/press.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/echo/legal.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/echo/tips.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/echo/status.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/echo/support.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/echo/privacy.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/echo/terms.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/echo/notes.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/echo/blog.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/echo/news.html",
+      "href": "sites/echo/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/echo-show/help.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/echo-show/faq.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/echo-show/press.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/echo-show/legal.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/echo-show/tips.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/echo-show/status.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/echo-show/support.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/echo-show/privacy.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/echo-show/terms.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/echo-show/notes.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/echo-show/blog.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/echo-show/news.html",
+      "href": "sites/echo-show/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/equifax/help.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/equifax/faq.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/equifax/press.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/equifax/legal.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/equifax/tips.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/equifax/status.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/equifax/support.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/equifax/privacy.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/equifax/terms.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/equifax/notes.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/equifax/blog.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/equifax/news.html",
+      "href": "sites/equifax/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook/legal.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook/tips.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook/status.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook/support.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook/privacy.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook/terms.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook/notes.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook/blog.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook/news.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/flash/help.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/flash/faq.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/flash/press.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/flash/legal.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/flash/tips.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/flash/status.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/flash/support.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/flash/privacy.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/flash/terms.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/flash/notes.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/flash/blog.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/flash/news.html",
+      "href": "sites/flash/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/fortnite/help.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/fortnite/faq.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/fortnite/press.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/fortnite/legal.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/fortnite/tips.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/fortnite/status.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/fortnite/support.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/fortnite/privacy.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/fortnite/terms.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/fortnite/notes.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/fortnite/blog.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/fortnite/news.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/fortnite-br/help.html",
+      "href": "sites/fortnite-br/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/fortnite-br/faq.html",
+      "href": "sites/fortnite-br/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -14752,697 +14752,697 @@
     },
     {
       "name": "Help",
-      "href": "sites/apple-event-s/help.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple-event-s/faq.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple-event-s/press.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple-event-s/legal.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple-event-s/tips.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple-event-s/status.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple-event-s/support.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple-event-s/privacy.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple-event-s/terms.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple-event-s/notes.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple-event-s/blog.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple-event-s/news.html",
+      "href": "sites/apple-event-s/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/cambridge-analytica/help.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/cambridge-analytica/faq.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/cambridge-analytica/press.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/cambridge-analytica/legal.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/cambridge-analytica/tips.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/cambridge-analytica/status.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/cambridge-analytica/support.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/cambridge-analytica/privacy.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/cambridge-analytica/terms.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/cambridge-analytica/notes.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/cambridge-analytica/blog.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/cambridge-analytica/news.html",
+      "href": "sites/cambridge-analytica/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome-not-secure/help.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome-not-secure/faq.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome-not-secure/press.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome-not-secure/legal.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome-not-secure/tips.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome-not-secure/status.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome-not-secure/support.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome-not-secure/privacy.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome-not-secure/terms.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome-not-secure/notes.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome-not-secure/blog.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome-not-secure/news.html",
+      "href": "sites/chrome-not-secure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/craigslist/help.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/craigslist/faq.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/craigslist/press.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/craigslist/legal.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/craigslist/tips.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/craigslist/status.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/craigslist/support.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/craigslist/privacy.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/craigslist/terms.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/craigslist/notes.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/craigslist/blog.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/craigslist/news.html",
+      "href": "sites/craigslist/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/craigslist-personals/help.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/craigslist-personals/faq.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/craigslist-personals/press.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/craigslist-personals/legal.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/craigslist-personals/tips.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/craigslist-personals/status.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/craigslist-personals/support.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/craigslist-personals/privacy.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/craigslist-personals/terms.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/craigslist-personals/notes.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/craigslist-personals/blog.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/craigslist-personals/news.html",
+      "href": "sites/craigslist-personals/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/dropbox/help.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/dropbox/faq.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/dropbox/press.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/dropbox/legal.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/dropbox/tips.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/dropbox/status.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/dropbox/support.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/dropbox/privacy.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/dropbox/terms.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/dropbox/notes.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/dropbox/blog.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/dropbox/news.html",
+      "href": "sites/dropbox/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/edge/help.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/edge/faq.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/edge/press.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/edge/legal.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/edge/tips.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/edge/status.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/edge/support.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/edge/privacy.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/edge/terms.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/edge/notes.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/edge/blog.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/edge/news.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/facebook/legal.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/facebook/tips.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/facebook/status.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/facebook/support.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/facebook/privacy.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/facebook/terms.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/facebook/notes.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/facebook/blog.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/facebook/news.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/flickr/help.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/flickr/faq.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/flickr/press.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/flickr/legal.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/flickr/tips.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/flickr/status.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/flickr/support.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/flickr/privacy.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/flickr/terms.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/flickr/notes.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/flickr/blog.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/flickr/news.html",
+      "href": "sites/flickr/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/fortnite/help.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/fortnite/faq.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/fortnite/press.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/fortnite/legal.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/fortnite/tips.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/fortnite/status.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/fortnite/support.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/fortnite/privacy.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/fortnite/terms.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/fortnite/notes.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/fortnite/blog.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/fortnite/news.html",
+      "href": "sites/fortnite/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/fortnite-ios/help.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/fortnite-ios/faq.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/fortnite-ios/press.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/fortnite-ios/legal.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/fortnite-ios/tips.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/fortnite-ios/status.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/fortnite-ios/support.html",
+      "href": "sites/fortnite-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
@@ -15934,377 +15934,377 @@
     },
     {
       "name": "Help",
-      "href": "sites/airpods-pro/help.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airpods-pro/faq.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airpods-pro/press.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airpods-pro/legal.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airpods-pro/tips.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airpods-pro/status.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airpods-pro/support.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airpods-pro/privacy.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airpods-pro/terms.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airpods-pro/notes.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airpods-pro/blog.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airpods-pro/news.html",
+      "href": "sites/airpods-pro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/airpodspro/help.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/airpodspro/faq.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/airpodspro/press.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/airpodspro/legal.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/airpodspro/tips.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/airpodspro/status.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/airpodspro/support.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/airpodspro/privacy.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/airpodspro/terms.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/airpodspro/notes.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/airpodspro/blog.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/airpodspro/news.html",
+      "href": "sites/airpodspro/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple-tv-plus/help.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple-tv-plus/faq.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple-tv-plus/press.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple-tv-plus/legal.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple-tv-plus/tips.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple-tv-plus/status.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple-tv-plus/support.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple-tv-plus/privacy.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple-tv-plus/terms.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple-tv-plus/notes.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple-tv-plus/blog.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple-tv-plus/news.html",
+      "href": "sites/apple-tv-plus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/appletv/help.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/appletv/faq.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/appletv/press.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/appletv/legal.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/appletv/tips.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/appletv/status.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/appletv/support.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/appletv/privacy.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/appletv/terms.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/appletv/notes.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/appletv/blog.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/appletv/news.html",
+      "href": "sites/appletv/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/arcade/help.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/arcade/faq.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/arcade/press.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/arcade/legal.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/arcade/tips.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/arcade/status.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/arcade/support.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/arcade/privacy.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/arcade/terms.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/arcade/notes.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/arcade/blog.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/arcade/news.html",
+      "href": "sites/arcade/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/arcade-launch/help.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/arcade-launch/faq.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/arcade-launch/press.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/arcade-launch/legal.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/arcade-launch/tips.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/arcade-launch/status.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/arcade-launch/support.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/arcade-launch/privacy.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/arcade-launch/terms.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/arcade-launch/notes.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/arcade-launch/blog.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/arcade-launch/news.html",
+      "href": "sites/arcade-launch/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     }
   ],
@@ -16741,857 +16741,857 @@
     },
     {
       "name": "Help",
-      "href": "sites/acnh/help.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/acnh/faq.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/acnh/press.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/acnh/legal.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/acnh/tips.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/acnh/status.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/acnh/support.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/acnh/privacy.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/acnh/terms.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/acnh/notes.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/acnh/blog.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/acnh/news.html",
+      "href": "sites/acnh/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/among-us-room/help.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/among-us-room/faq.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/among-us-room/press.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/among-us-room/legal.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/among-us-room/tips.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/among-us-room/status.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/among-us-room/support.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/among-us-room/privacy.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/among-us-room/terms.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/among-us-room/notes.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/among-us-room/blog.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/among-us-room/news.html",
+      "href": "sites/among-us-room/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/apple/help.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/apple/faq.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/apple/press.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/apple/legal.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/apple/tips.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/apple/status.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/apple/support.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/apple/privacy.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/apple/terms.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/apple/notes.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/apple/blog.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/apple/news.html",
+      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/ccpa/help.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/ccpa/faq.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/ccpa/press.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/ccpa/legal.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/ccpa/tips.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/ccpa/status.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/ccpa/support.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/ccpa/privacy.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/ccpa/terms.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/ccpa/notes.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/ccpa/blog.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/ccpa/news.html",
+      "href": "sites/ccpa/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/ccpa-dns/help.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/ccpa-dns/faq.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/ccpa-dns/press.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/ccpa-dns/legal.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/ccpa-dns/tips.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/ccpa-dns/status.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/ccpa-dns/support.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/ccpa-dns/privacy.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/ccpa-dns/terms.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/ccpa-dns/notes.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/ccpa-dns/blog.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/ccpa-dns/news.html",
+      "href": "sites/ccpa-dns/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/chrome/help.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/chrome/faq.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/chrome/press.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/chrome/legal.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/chrome/tips.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/chrome/status.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/chrome/support.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/chrome/privacy.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/chrome/terms.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/chrome/notes.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/chrome/blog.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/chrome/news.html",
+      "href": "sites/chrome/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/clubhouse/help.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/clubhouse/faq.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/clubhouse/press.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/clubhouse/legal.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/clubhouse/tips.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/clubhouse/status.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/clubhouse/support.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/clubhouse/privacy.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/clubhouse/terms.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/clubhouse/notes.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/clubhouse/blog.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/clubhouse/news.html",
+      "href": "sites/clubhouse/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/clubhouse-ios/help.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/clubhouse-ios/faq.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/clubhouse-ios/press.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/clubhouse-ios/legal.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/clubhouse-ios/tips.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/clubhouse-ios/status.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/clubhouse-ios/support.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/clubhouse-ios/privacy.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/clubhouse-ios/terms.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/clubhouse-ios/notes.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/clubhouse-ios/blog.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/clubhouse-ios/news.html",
+      "href": "sites/clubhouse-ios/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/disneyplus/help.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/disneyplus/faq.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/disneyplus/press.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/disneyplus/legal.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/disneyplus/tips.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/disneyplus/status.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/disneyplus/support.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/disneyplus/privacy.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/disneyplus/terms.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/disneyplus/notes.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/disneyplus/blog.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/disneyplus/news.html",
+      "href": "sites/disneyplus/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/edge/help.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/edge/faq.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/edge/press.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/edge/legal.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/edge/tips.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/edge/status.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/edge/support.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/edge/privacy.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/edge/terms.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/edge/notes.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/edge/blog.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/edge/news.html",
+      "href": "sites/edge/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/epic/help.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/epic/faq.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/epic/press.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/epic/legal.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/epic/tips.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/epic/status.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/epic/support.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/epic/privacy.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/epic/terms.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/epic/notes.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/epic/blog.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/epic/news.html",
+      "href": "sites/epic/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/epic-apple/help.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/epic-apple/faq.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/epic-apple/press.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/epic-apple/legal.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/epic-apple/tips.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/epic-apple/status.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/epic-apple/support.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/epic-apple/privacy.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/epic-apple/terms.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/epic-apple/notes.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/epic-apple/blog.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/epic-apple/news.html",
+      "href": "sites/epic-apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/exposure/help.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/exposure/faq.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/exposure/press.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/exposure/legal.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/exposure/tips.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/exposure/status.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/exposure/support.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/exposure/privacy.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/exposure/terms.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/exposure/notes.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/exposure/blog.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/exposure/news.html",
+      "href": "sites/exposure/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/exposure-notif/help.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/exposure-notif/faq.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/exposure-notif/press.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Legal",
-      "href": "sites/exposure-notif/legal.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Tips",
-      "href": "sites/exposure-notif/tips.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Status",
-      "href": "sites/exposure-notif/status.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Support",
-      "href": "sites/exposure-notif/support.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Privacy",
-      "href": "sites/exposure-notif/privacy.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Terms",
-      "href": "sites/exposure-notif/terms.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Notes",
-      "href": "sites/exposure-notif/notes.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Blog",
-      "href": "sites/exposure-notif/blog.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "News",
-      "href": "sites/exposure-notif/news.html",
+      "href": "sites/exposure-notif/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Help",
-      "href": "sites/facebook/help.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Faq",
-      "href": "sites/facebook/faq.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     },
     {
       "name": "Press",
-      "href": "sites/facebook/press.html",
+      "href": "sites/facebook/index.html",
       "do": "Real dest · 5× densify"
     }
   ]

@@ -218,6 +218,38 @@ test.describe("viral loops V2 culture toys", () => {
   });
 });
 
+test.describe("viral loops V4 leftover", () => {
+  test("2004 facebook .edu hop needs 3 .edu; writes itt04-fb-edu", async ({ page }) => {
+    await page.goto("/years/2004/sites/facebook/invite.html");
+    await clearKey(page, "itt04-fb-edu");
+    await page.reload();
+    await page.fill('form[data-edu-hop] input[name="r1"]', "a@college.edu");
+    await page.fill('form[data-edu-hop] input[name="r2"]', "b@college.edu");
+    await page.fill('form[data-edu-hop] input[name="r3"]', "c@gmail.com");
+    await page.locator('form[data-edu-hop] [data-req]').check();
+    await page.locator('form[data-edu-hop] input[type="submit"]').click();
+    await page.waitForTimeout(150);
+    expect(await getKey(page, "itt04-fb-edu")).toBeFalsy();
+    await page.fill('form[data-edu-hop] input[name="r3"]', "c@college.edu");
+    await page.locator('form[data-edu-hop] input[type="submit"]').click();
+    await expect.poll(async () => getKey(page, "itt04-fb-edu")).toBeTruthy();
+  });
+
+  test("2005 YouTube URL share incomplete writes nothing; complete writes itt05-yt-url", async ({ page }) => {
+    await page.goto("/years/2005/sites/youtube/watch.html");
+    await clearKey(page, "itt05-yt-url");
+    await page.reload();
+    await page.locator('form[data-storage-key="yt-url"] input[type="submit"]').click();
+    await page.waitForTimeout(150);
+    expect(await getKey(page, "itt05-yt-url")).toBeFalsy();
+    await page.fill('form[data-storage-key="yt-url"] input[name="friend"]', "friend@example.com");
+    await page.locator('form[data-storage-key="yt-url"] [data-req]').nth(0).check();
+    await page.locator('form[data-storage-key="yt-url"] [data-req]').nth(1).check();
+    await page.locator('form[data-storage-key="yt-url"] input[type="submit"]').click();
+    await expect.poll(async () => getKey(page, "itt05-yt-url")).toBeTruthy();
+  });
+});
+
 test.describe("viral loops V3 remaining", () => {
   test("1995 Beanies 3 checks write nothing; 4 write itt95-beanie", async ({ page }) => {
     await page.goto("/years/1995/sites/beanies/index.html");
@@ -347,6 +379,8 @@ test.describe("viral chips reach 200", () => {
     "/years/2001/sites/ayb/index.html",
     "/years/2002/sites/friendster/index.html",
     "/years/2003/sites/badger/index.html",
+    "/years/2004/sites/facebook/invite.html",
+    "/years/2005/sites/youtube/watch.html",
     "/years/2007/sites/rickroll/index.html",
     "/years/2008/sites/dropbox/refer.html",
     "/years/2009/sites/farmville/index.html",
