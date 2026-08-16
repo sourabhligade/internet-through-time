@@ -27,9 +27,30 @@ function yy(year) {
 
 /** @param {string} year @param {string} suffix */
 function ittKey(year, suffix) {
-  // 1994 uses storagePrefix "itt" (legacy), not itt94
-  if (year === '1994') return 'itt-' + suffix;
   return 'itt' + yy(year) + '-' + suffix;
+}
+
+/**
+ * @param {import('@playwright/test').Page} page
+ * @param {import('@playwright/test').Locator} frame
+ * @param {string} sel
+ */
+async function twoStepInFrame(page, frame, sel) {
+  await page.waitForTimeout(450);
+  const boxes = frame.locator(
+    'input[type="checkbox"][data-req], [data-appstore-check], [data-farm-check], [data-4sq-check], [data-chrome-req], [data-itunes-req]'
+  );
+  const n = await boxes.count();
+  for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
+  const el = frame.locator(sel).first();
+  await el.waitFor({ state: 'visible', timeout: 15000 });
+  await el.click({ force: true });
+  await page.waitForTimeout(150);
+  try {
+    if (await el.isVisible()) await el.click({ force: true, timeout: 2000 });
+  } catch (e) {
+    /* already written */
+  }
 }
 
 /**
@@ -39,11 +60,24 @@ function ittKey(year, suffix) {
  */
 const SIGNATURE = {
   '1994': {
-    path: 'sites/yahoo/index.html',
-    keySuffix: '',
-    body: /Yahoo|directory|Search/i,
-    act: async () => {
-      /* browse-only thesis */
+    path: 'sites/csotd/index.html',
+    keySuffix: 'csotd',
+    body: /Cool Site|guestbook|modem/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await page.evaluate(() => {
+        try {
+          const f = document.getElementById('content');
+          const w = f && f.contentWindow;
+          if (w && w.sessionStorage) w.sessionStorage.setItem('itt94-csotd-wandered', '1');
+          sessionStorage.setItem('itt94-csotd-wandered', '1');
+        } catch (e) {
+          /* */
+        }
+      });
+      await frame.locator('[name="gbname"]').fill('Handoff residual');
+      await frame.locator('[name="gbnote"]').fill('Worth the modem.');
+      await frame.locator('form[data-csotd-gb] input[type="submit"]').click();
     },
   },
   '1995': {
@@ -64,40 +98,52 @@ const SIGNATURE = {
     act: async (page) => {
       const frame = contentFrame(page);
       const form = frame.locator('form[data-hotmail-login]');
-      if ((await form.count()) === 0) return;
+      await expect(form).toBeVisible({ timeout: 15000 });
       await form.locator('input[name="login"]').fill('museum');
       await form.locator('input[name="pass"], input[type="password"]').first().fill('pass');
-      await form.locator('input[type="image"], input[type="submit"], button[type="submit"]').first().click({ force: true });
+      await form.locator('input[type="image"], input[type="submit"], button[type="submit"]').first().click({
+        force: true,
+      });
     },
   },
   '1997': {
     path: 'sites/ebay/item-laptop.html',
-    keySuffix: '',
+    keySuffix: 'ebay',
     body: /eBay|Bid|Auction/i,
-    act: async () => {
-      /* form present is enough for handoff */
+    act: async (page) => {
+      const frame = contentFrame(page);
+      const form = frame.locator('form[data-bid-form]');
+      await expect(form).toBeVisible({ timeout: 15000 });
+      if (await form.locator('input[name="bidder"]').count()) {
+        await form.locator('input[name="bidder"]').fill('Handoff97');
+      }
+      await form.locator('input[name="bid"]').fill('520.00');
+      await form.locator('input[type="submit"]').click({ force: true });
     },
   },
   '1998': {
-    path: 'sites/google/index.html',
-    keySuffix: '',
-    body: /Google|Search/i,
+    path: 'sites/google/lucky.html',
+    keySuffix: 'lucky',
+    body: /Google|Lucky/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const form = frame.locator('form, [data-google-search]').first();
-      if ((await form.count()) === 0) return;
-      const q = form.locator('input[name="q"], input[type="text"]').first();
-      if (await q.count()) {
-        await q.fill('handoff');
-        await form.locator('input[type="submit"], button[type="submit"]').first().click().catch(() => {});
-      }
+      const form = frame.locator('form[data-google-search], form[data-google-lucky-page]');
+      await expect(form).toBeVisible({ timeout: 15000 });
+      await form.locator('input[name="q"]').fill('yahoo');
+      await form.locator('[data-google-lucky], input[name="btnI"]').first().click({ force: true });
     },
   },
   '1999': {
-    path: 'sites/napster/index.html',
-    keySuffix: '',
-    body: /Napster|download|share|music/i,
-    act: async () => {},
+    path: 'sites/aim/index.html',
+    keySuffix: 'aim',
+    body: /AIM|AOL Instant|screen name|Buddy/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      const form = frame.locator('form[data-aim-signon]');
+      await expect(form).toBeVisible({ timeout: 15000 });
+      await form.locator('[name="sn"]').fill('coolkid99');
+      await form.locator('button[type="submit"]').click();
+    },
   },
   '2000': {
     path: 'sites/amazon/music.html',
@@ -106,30 +152,44 @@ const SIGNATURE = {
     act: async (page) => {
       const frame = contentFrame(page);
       const add = frame.locator('[data-add-cart]').first();
-      if (await add.count()) await add.click({ force: true });
+      await expect(add).toBeVisible({ timeout: 15000 });
+      await add.click({ force: true });
     },
   },
   '2001': {
-    path: 'sites/wikipedia/index.html',
-    keySuffix: '',
-    body: /Wikipedia|Wiki|encyclopedia/i,
-    act: async () => {},
+    path: 'sites/wikipedia/edit.html',
+    keySuffix: 'wiki-pages',
+    body: /Wikipedia|edit|Save/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await expect(frame.locator('[data-wiki-save]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('textarea[name="text"]').fill("'''Wikipedia''' handoff 2001 residual");
+      await frame.locator('[data-wiki-save]').click();
+    },
   },
   '2002': {
-    path: 'sites/friendster/index.html',
+    path: 'sites/friendster/profile.html',
     keySuffix: 'friendster',
     body: /Friendster|profile|friend/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const save = frame.locator('[data-friendster-save], [data-fs-save], button').first();
-      if (await save.count()) await save.click().catch(() => {});
+      const form = frame.locator('[data-friendster-profile-form]');
+      await expect(form).toBeVisible({ timeout: 15000 });
+      await form.locator('input[name="name"], input[name="display"]').first().fill('Handoff02');
+      await form.locator('input[type="submit"], button[type="submit"]').first().click();
     },
   },
   '2003': {
-    path: 'sites/myspace/index.html',
-    keySuffix: 'myspace',
-    body: /MySpace|myspace|profile/i,
-    act: async () => {},
+    path: 'sites/photobucket/index.html',
+    keySuffix: 'photobucket',
+    body: /Photobucket|upload|album/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      const form = frame.locator('form[data-pb-upload]');
+      await expect(form).toBeVisible({ timeout: 15000 });
+      await form.locator('[name="file"]').fill('party-pic.jpg');
+      await form.locator('button[type="submit"], [data-ott-click="upload"]').first().click();
+    },
   },
   '2004': {
     path: 'sites/gmail/index.html',
@@ -138,21 +198,21 @@ const SIGNATURE = {
     act: async (page) => {
       const frame = contentFrame(page);
       const form = frame.locator('[data-gmail-login]');
-      if (await form.count()) {
-        await form.evaluate((f) => {
-          if (f.requestSubmit) f.requestSubmit();
-        });
-      }
+      await expect(form).toBeVisible({ timeout: 15000 });
+      await form.locator('input[name="email"], input[type="text"]').first().fill('you@college.edu');
+      await form.locator('input[type="password"], [name="pass"]').first().fill('secret');
+      await form.locator('input[type="submit"], button[type="submit"]').first().click();
     },
   },
   '2005': {
-    path: 'sites/youtube/index.html',
-    keySuffix: 'yt-views',
-    body: /YouTube|video/i,
+    path: 'sites/youtube/upload.html',
+    keySuffix: 'yt-uploads',
+    body: /YouTube|upload|video/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const like = frame.locator('[data-yt-like], [data-yt-view]').first();
-      if (await like.count()) await like.click().catch(() => {});
+      const title = 'HandoffYT ' + Date.now();
+      await frame.locator('[data-yt-upload] [name="title"]').fill(title);
+      await frame.locator('[data-yt-upload] button[type="submit"]').first().click();
     },
   },
   '2006': {
@@ -162,8 +222,8 @@ const SIGNATURE = {
     act: async (page) => {
       const frame = contentFrame(page);
       const form = frame.locator('[data-twitter-compose]');
-      if ((await form.count()) === 0) return;
-      await form.locator('[data-twitter-status], textarea').first().fill('handoff tweet 2006');
+      await expect(form).toBeVisible({ timeout: 15000 });
+      await form.locator('[data-twitter-status], textarea, [name="status"]').first().fill('handoff tweet 2006');
       await form.evaluate((f) => f.requestSubmit());
     },
   },
@@ -185,8 +245,7 @@ const SIGNATURE = {
     body: /App Store|app/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const btn = frame.locator('[data-appstore-install]').first();
-      if (await btn.count()) await btn.click();
+      await twoStepInFrame(page, frame, '[data-appstore-install]');
     },
   },
   '2009': {
@@ -195,9 +254,7 @@ const SIGNATURE = {
     body: /FarmVille|plant|crop/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const plant = frame.locator('[data-farm-plant]').first();
-      await expect(plant).toBeVisible({ timeout: 15000 });
-      await plant.click();
+      await twoStepInFrame(page, frame, '[data-farm-plant]');
     },
   },
   '2010': {
@@ -208,7 +265,8 @@ const SIGNATURE = {
       const frame = contentFrame(page);
       const share = frame.locator('[data-ig-share]');
       await expect(share).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-ig-filter]').nth(1).click();
+      await frame.locator('[data-ig-filter="Earlybird"]').click();
+      await frame.locator('[data-ig-caption]').fill('handoff 2010 square');
       await share.click();
     },
   },
@@ -218,9 +276,10 @@ const SIGNATURE = {
     body: /Spotify|United States|July 14/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const invite = frame.locator('[data-spotify-invite]');
-      await expect(invite).toBeVisible({ timeout: 15000 });
-      await invite.click();
+      await expect(frame.locator('[data-spotify-invite]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-spotify-ack]').check();
+      await frame.locator('[data-spotify-no-stream]').check();
+      await frame.locator('[data-spotify-invite]').click();
     },
   },
   '2012': {
@@ -231,6 +290,8 @@ const SIGNATURE = {
       const frame = contentFrame(page);
       const install = frame.locator('[data-ig-android-install]');
       await expect(install).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-ig-android-date]').check();
+      await frame.locator('[data-ig-android-not-stories]').check();
       await install.click();
     },
   },
@@ -262,20 +323,20 @@ const SIGNATURE = {
     act: async (page) => {
       const frame = contentFrame(page);
       await frame.locator('[data-watch-shipped]').check({ force: true });
-      await frame.locator('[data-watch-no-store]').check({ force: true });
-      await frame.locator('[data-watch-save]').click();
+      await frame.locator('[data-watch15-save]').click();
     },
   },
   '2016': {
     path: 'sites/instagram/stories.html',
     keySuffix: 'ig-stories',
-    body: /Instagram Stories/i,
+    body: /Stories/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await frame.locator('[data-ig-stories-caption]').fill('coffee');
-      await frame.locator('[data-ig-stories-24h]').check({ force: true });
-      await frame.locator('[data-ig-stories-not-reels]').check({ force: true });
-      await frame.locator('[data-ig-stories-add]').click();
+      await frame.locator('[data-ig-story-text]').fill('coffee');
+      const boxes = frame.locator('[data-req]');
+      const n = await boxes.count();
+      for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
+      await frame.locator('[data-ig-story-add]').click();
     },
   },
   '2017': {
@@ -303,20 +364,29 @@ const SIGNATURE = {
     },
   },
   '2019': {
-    path: 'sites/disneyplus/index.html',
+    path: 'sites/disneyplus/home.html',
     keySuffix: 'disneyplus',
-    body: /Who.s watching|Disney\+/i,
+    body: /Disney\+|\$6\.99|Nov(ember)?\s*12/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await frame.locator('[data-profile="adult-1"]').click();
-      await frame.locator('[data-title="mando"]').click();
-      await frame.locator('[data-add-continue]').click();
-      await frame.locator('[data-title="lion-king"]').click();
-      await frame.locator('[data-add-continue]').click();
-      await frame.locator('[data-dplus-date]').check({ force: true });
-      await frame.locator('[data-dplus-not-trial]').check({ force: true });
-      await frame.locator('[data-dplus-kids]').check({ force: true });
-      await frame.locator('[data-dplus-save]').click();
+      const continueUi = frame.locator('[data-profile="adult-1"]');
+      if ((await continueUi.count()) > 0) {
+        await continueUi.click();
+        await frame.locator('[data-title="mando"]').click();
+        await frame.locator('[data-add-continue]').click();
+        await frame.locator('[data-title="lion-king"]').click();
+        await frame.locator('[data-add-continue]').click();
+        await frame.locator('[data-dplus-date]').check({ force: true });
+        await frame.locator('[data-dplus-not-trial]').check({ force: true });
+        await frame.locator('[data-dplus-kids]').check({ force: true });
+        await frame.locator('[data-dplus-save]').click();
+        return;
+      }
+      await frame.locator('[data-dplus-plan]').selectOption('monthly');
+      const req = frame.locator('[data-req]');
+      const n = await req.count();
+      for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+      await frame.locator('[data-dplus-join]').click();
     },
   },
   '2020': {
@@ -386,28 +456,25 @@ async function runSignature(page, year) {
   const frame = contentFrame(page);
   await expect(frame.locator('body')).toContainText(sig.body, { timeout: 20000 });
   await sig.act(page);
-  if (sig.keySuffix) {
-    const key = ittKey(year, sig.keySuffix);
-    // Clear before act would wipe — re-act path already ran; poll for any year key write
-    await expect
-      .poll(
-        async () => {
-          const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-          // Also accept any key with year prefix that was written during act
-          if (raw) return raw;
-          return page.evaluate((y) => {
-            const pref = y === '1994' ? 'itt-' : 'itt' + String(y).slice(2) + '-';
-            for (let i = 0; i < localStorage.length; i++) {
-              const k = localStorage.key(i);
-              if (k && k.indexOf(pref) === 0 && localStorage.getItem(k)) return localStorage.getItem(k);
-            }
-            return null;
-          }, year);
-        },
-        { timeout: 8000 }
-      )
-      .toBeTruthy();
-  }
+  expect(sig.keySuffix, `${year} must have a REAL keySuffix`).toBeTruthy();
+  const key = ittKey(year, sig.keySuffix);
+  await expect
+    .poll(
+      async () => {
+        const raw = await page.evaluate((k) => localStorage.getItem(k), key);
+        if (raw) return raw;
+        return page.evaluate((y) => {
+          const pref = 'itt' + String(y).slice(2) + '-';
+          for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k && k.indexOf(pref) === 0 && localStorage.getItem(k)) return localStorage.getItem(k);
+          }
+          return null;
+        }, year);
+      },
+      { timeout: 12000, message: `${year} REAL write missing (${key})` }
+    )
+    .toBeTruthy();
   // Shell still identifies year
   const bodyYear = await page.locator('body').getAttribute('data-itt-year');
   if (bodyYear) expect(bodyYear).toBe(year);
@@ -434,7 +501,7 @@ test.describe('year handoff N → N+1', () => {
       });
 
       await runSignature(page, from);
-      const fromPref = from === '1994' ? 'itt' : 'itt' + yy(from);
+      const fromPref = 'itt' + yy(from);
       const fromKeys = await page.evaluate((pref) => {
         const out = [];
         for (let j = 0; j < localStorage.length; j++) {
@@ -445,7 +512,7 @@ test.describe('year handoff N → N+1', () => {
       }, fromPref);
 
       await runSignature(page, to);
-      const toPref = to === '1994' ? 'itt' : 'itt' + yy(to);
+      const toPref = 'itt' + yy(to);
       const toKeys = await page.evaluate((pref) => {
         const out = [];
         for (let j = 0; j < localStorage.length; j++) {
@@ -455,21 +522,15 @@ test.describe('year handoff N → N+1', () => {
         return out;
       }, toPref);
 
-      // Isolation: next year must not only write previous year's prefix
-      // (browse-only years may leave empty toKeys — still require boot OK above)
-      if (SIGNATURE[to].keySuffix) {
-        expect(toKeys.length, `${to} should write ${toPref}-* keys`).toBeGreaterThan(0);
-        for (const k of toKeys) {
-          expect(k.startsWith(toPref), `key ${k} should be ${toPref}-*`).toBeTruthy();
-          expect(k.startsWith(fromPref + '-') && fromPref !== toPref, `key ${k} leaked from ${from}`).toBeFalsy();
-        }
+      expect(toKeys.length, `${to} should write ${toPref}-* keys`).toBeGreaterThan(0);
+      for (const k of toKeys) {
+        expect(k.startsWith(toPref), `key ${k} should be ${toPref}-*`).toBeTruthy();
+        expect(k.startsWith(fromPref + '-') && fromPref !== toPref, `key ${k} leaked from ${from}`).toBeFalsy();
       }
 
-      // Previous year keys should still exist if they were written (same origin localStorage)
-      if (fromKeys.length && SIGNATURE[from].keySuffix) {
-        const still = await page.evaluate((ks) => ks.every((k) => !!localStorage.getItem(k)), fromKeys);
-        expect(still, `${from} keys should survive handoff to ${to}`).toBeTruthy();
-      }
+      expect(fromKeys.length, `${from} should have written ${fromPref}-*`).toBeGreaterThan(0);
+      const still = await page.evaluate((ks) => ks.every((k) => !!localStorage.getItem(k)), fromKeys);
+      expect(still, `${from} keys should survive handoff to ${to}`).toBeTruthy();
 
       // Hub still lists both years
       await page.goto('/');

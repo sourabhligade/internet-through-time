@@ -288,6 +288,86 @@
         render(doc);
       });
     }
+    var top8Form = doc.querySelector("[data-ms-top8]");
+    if (top8Form) {
+      var top8Key =
+        ITT.util && ITT.util.immersionStorageKey
+          ? ITT.util.immersionStorageKey("ms-top8", "itt03")
+          : "itt03-ms-top8";
+      var top8St = doc.querySelector("[data-ms-top8-status]");
+      var top8Slots = top8Form.querySelectorAll("[data-ms-top8-slot]");
+      function paintTop8(prev) {
+        if (!prev || !prev.slots) return;
+        for (var s = 0; s < top8Slots.length; s++) {
+          var want = prev.slots[s];
+          if (!want) continue;
+          var opts = top8Slots[s].options;
+          for (var o = 0; o < opts.length; o++) {
+            if (opts[o].value === want) {
+              top8Slots[s].selectedIndex = o;
+              break;
+            }
+          }
+        }
+      }
+      try {
+        var prevTop8 = JSON.parse(localStorage.getItem(top8Key) || "null");
+        if (prevTop8 && prevTop8.real) {
+          paintTop8(prevTop8);
+          if (top8St) top8St.textContent = "Saved · " + top8Key;
+          try {
+            if (ITT.YearExtras && ITT.YearExtras.forYear) ITT.YearExtras.forYear("2003").showNext(doc);
+          } catch (eN) { /* */ }
+        }
+      } catch (eP) { /* */ }
+      var saveTop8 = top8Form.querySelector("[data-ms-top8-save]");
+      if (saveTop8) {
+        saveTop8.addEventListener("click", function () {
+          var slots = [];
+          var seen = {};
+          for (var i = 0; i < top8Slots.length; i++) {
+            var v = String(top8Slots[i].value || "").trim();
+            if (!v || seen[v]) {
+              if (top8St) {
+                top8St.textContent = "Pick 8 different friends. Empty or duplicate slots do not write.";
+                top8St.style.color = "#a00";
+              }
+              return;
+            }
+            seen[v] = true;
+            slots.push(v);
+          }
+          if (slots.length !== 8) {
+            if (top8St) {
+              top8St.textContent = "Top 8 needs all 8 slots.";
+              top8St.style.color = "#a00";
+            }
+            return;
+          }
+          var blob = {
+            multiStep: true,
+            real: true,
+            year: year() || "2003",
+            ts: Date.now(),
+            slots: slots
+          };
+          try {
+            localStorage.setItem(top8Key, JSON.stringify(blob));
+          } catch (eW) { /* */ }
+          if (top8St) {
+            top8St.textContent = "Saved Top 8 · " + top8Key;
+            top8St.style.color = "#060";
+          }
+          try {
+            if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
+            if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+              ITT._immersionApi.actionFeedback("Top 8 saved · " + top8Key, { status: top8St, kind: "ms-top8" });
+            }
+            if (ITT.YearExtras && ITT.YearExtras.forYear) ITT.YearExtras.forYear("2003").showNext(doc);
+          } catch (eF) { /* */ }
+        });
+      }
+    }
     var btns = doc.querySelectorAll("[data-myspace-contact]");
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", function (ev) {
@@ -324,7 +404,7 @@
     doc = doc || document;
     if (
       !doc.querySelector(
-        "[data-myspace-root], [data-myspace-profile-form], [data-myspace-invite-form], [data-myspace-comment-form]"
+        "[data-myspace-root], [data-myspace-profile-form], [data-myspace-invite-form], [data-myspace-comment-form], [data-ms-top8]"
       )
     )
       return;

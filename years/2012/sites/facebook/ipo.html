@@ -33,7 +33,8 @@
   </div>
   <p><button type="button" data-fb-ipo-ack>Mark IPO day</button>
   <span data-fb-ipo-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
-  <p style="font-size:11px;color:#666">May 18, 2012 · $38 IPO · no real trading</p>
+  <p class="itt12-next" data-itt12-next data-next-flow data-next-when-key="itt12-fb-ipo-ack" hidden><b>Next:</b> <a href="../iphone/maps.html">Apple Maps flop · iOS 6</a></p>
+  <p style="font-size:11px;color:#666">May 18, 2012 · $38 IPO · 421,233,615 shares class · no real trading</p>
  </div>
 </div>
 <script>
@@ -48,12 +49,35 @@ document.addEventListener("DOMContentLoaded", function(){
     var n=0;
     for(var i=0;i<boxes.length;i++){facts[boxes[i].getAttribute("data-ipo-fact")]=!!boxes[i].checked;if(boxes[i].checked)n++;}
     if(n<2){if(st)st.textContent="Check at least 2 facts first.";return;}
-    try{localStorage.setItem(KEY,JSON.stringify({price:38,date:"2012-05-18",facts:facts,real:true,multiStep:true,ts:Date.now()}));}catch(e2){}
+    try{localStorage.setItem(KEY,JSON.stringify({price:38,date:"2012-05-18",facts:facts,real:true,multiStep:true,year:"2012",ts:Date.now()}));}catch(e2){}
     var msg="Saved · May 18 · $38";
     if(st)st.textContent=msg;
     try{if(window.ITT&&ITT._immersionApi&&ITT._immersionApi.actionFeedback)ITT._immersionApi.actionFeedback(msg,{status:st,kind:"ipo"});}catch(e3){}
+    try{if(window.ITT&&ITT.revealNextFlow)ITT.revealNextFlow(document);}catch(eN){}
   });
 });
 </script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="about.html">Facebook · about</a> ·
+ <a href="feed.html">Facebook · feed</a> ·
+ <a href="../pinterest/index.html">Pinterest</a> ·
+ <a href="../playable/index.html">Period playables</a> ·
+ <a href="../reddit/index.html">reddit</a> ·
+ <a href="../snapchat/index.html">Snapchat</a> ·
+ <a href="../soundcloud/index.html">SoundCloud</a> ·
+ <a href="../spotify/index.html">Spotify</a> ·
+ <a href="../trello/index.html">Trello</a> ·
+ <a href="../uber/index.html">Uber</a> ·
+ <a href="../waze/index.html">Waze</a> ·
+ <a href="../wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
+ <a href="../windows8/index.html">Windows 8</a> ·
+ <a href="../youtube/about.html">About YouTube</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body>
 </html>

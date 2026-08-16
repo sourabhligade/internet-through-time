@@ -30,4 +30,4 @@
   margin: 12px auto 0;
   background: #111;
 }
-.vine-app .itt-phone-screen { background: #000; color: #eee; }
+.vine-app .itt-phone-screen { background: #000; color: #eee; min-height: 360px; }

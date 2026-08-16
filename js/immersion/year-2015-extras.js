@@ -64,6 +64,11 @@
         /* */
       }
     }
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+    } catch (eN) {
+      /* */
+    }
   }
   function saveJSON(k, v) {
     try {
@@ -404,8 +409,81 @@
     });
   }
 
+  function bootDiscordLive(doc) {
+    doc = doc || document;
+    if (
+      !doc.querySelector("[data-discord-send]") &&
+      !doc.querySelector("[data-discord-server]") &&
+      !doc.querySelector("[data-discord-thread]")
+    ) {
+      return;
+    }
+    var st = doc.querySelector("[data-discord-msg-status], [data-dc15-status], [data-itt-action-status]");
+    var k = key("discord-msgs");
+    var state = loadJSON(k, null) || {};
+    var server = state.server || "";
+    try {
+      var sess = sessionStorage.getItem("itt15-discord-server");
+      if (sess) server = sess;
+    } catch (eS) { /* */ }
+    var msgs = Array.isArray(state.msgs) ? state.msgs : [];
+    var echo = doc.querySelector("[data-discord-sv-echo]");
+    if (echo) echo.textContent = server || "join first";
+    function render() {
+      var log = doc.querySelector("[data-discord-thread], [data-dc-log]");
+      if (!log) return;
+      log.innerHTML = msgs.length
+        ? msgs.map(function (m) {
+            return "<div>you: " + String(m || "").replace(/</g, "") + "</div>";
+          }).join("")
+        : "<div style='opacity:.6'>No messages yet.</div>";
+    }
+    render();
+    var picks = doc.querySelectorAll("[data-discord-server]");
+    var i;
+    for (i = 0; i < picks.length; i++) {
+      picks[i].addEventListener("click", function () {
+        server = this.getAttribute("data-discord-server") || "Gaming residual";
+        try {
+          sessionStorage.setItem("itt15-discord-server", server);
+        } catch (eW) { /* */ }
+        feedback("Server “" + server + "” · open #general.", st);
+      });
+    }
+    var send = doc.querySelector("[data-discord-send]");
+    if (send) {
+      send.addEventListener("click", function () {
+        if (!server) {
+          feedback("Pick a server first.", st, { error: true });
+          return;
+        }
+        var inp = doc.querySelector("[data-discord-msg], #ott-field, [name='msg']");
+        var text = inp && inp.value != null ? String(inp.value).replace(/^\s+|\s+$/g, "") : "";
+        if (text.length < 1) {
+          feedback("Type a message first.", st, { error: true });
+          return;
+        }
+        msgs.push(text);
+        msgs = msgs.slice(-40);
+        saveJSON(k, {
+          server: server,
+          msgs: msgs,
+          multiStep: true,
+          real: true,
+          year: "2015",
+          ts: Date.now()
+        });
+        if (inp) inp.value = "";
+        render();
+        feedback("Sent · " + k, st);
+        markUsed();
+      });
+    }
+  }
+
   function bootAll(doc) {
     doc = doc || document;
+    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
     bootWatch15(doc);
     bootWin10(doc);
     bootEdge(doc);
@@ -414,6 +492,7 @@
     bootGwx(doc);
     bootWatchPair(doc);
     bootHomeProgress(doc);
+    bootDiscordLive(doc);
   }
 
   var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);

@@ -82,3 +82,6 @@ cdx_*.json
 # Local generate output / scratch
 dev/
 
+
+# local one-off Playwright probes
+e2e/_tmp-*.spec.js

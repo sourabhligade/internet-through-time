@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2018">
+<head>
+<meta charset="utf-8">
+<title>Yanny vs Laurel — 2018</title>
+<link rel="stylesheet" href="../../../../css/period-2018.css">
+
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:42em;margin:16px auto;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.45">
+ <p style="font-size:12px"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/map.html">Year flow map</a></p>
+ <h1 style="font-size:22px;margin:0 0 8px">Yanny vs Laurel</h1>
+ <p>May 2018 audio-perception split. We do not host a WAV. Honesty: some heard Yanny, some Laurel.</p>
+ <p>
+  <button type="button" data-ott-click data-yan="y">I would have heard Yanny</button>
+  <button type="button" data-ott-click data-yan="l">I would have heard Laurel</button>
+ </p>
+ <p data-yan-pick style="font-size:12px;min-height:1.2em"></p>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req> May 2018 · this page has no audio</label>
+ <p><button type="button" data-itt-real-save data-storage-key="yanny" data-min-req="1" data-min-clicks="1">Save REAL</button></p>
+ <p data-itt-real-status></p>
+ <p data-next-flow hidden><b>Next:</b> <a href="../../pages/home.html">Starting Point</a></p>
+ <p style="font-size:11px;color:#555">key <code>itt18-yanny</code> · no fake spectrogram</p>
+ <script>
+ (function () {
+   var el = document.querySelector("[data-yan-pick]");
+   document.querySelectorAll("[data-yan]").forEach(function (b) {
+     b.addEventListener("click", function () {
+       if (el) el.textContent = b.getAttribute("data-yan") === "y" ? "Yanny (this browser)" : "Laurel (this browser)";
+     });
+   });
+ })();
+ </script>
+</div>
+<script src="../../../../js/immersion-2018.js"></script>
+</body>
+</html>

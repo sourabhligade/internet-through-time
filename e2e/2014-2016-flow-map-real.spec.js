@@ -26,6 +26,34 @@ for (const year of ["2014", "2015", "2016", "2017", "2018", "2019"]) {
         const body = (await page.locator("body").innerText()).toLowerCase();
         expect(body, href).not.toMatch(/\(mock\)/);
         expect(body, href).not.toMatch(/not wired|coming soon/);
+        const save = page.locator("[data-itt-real-save]").first();
+        if ((await save.count()) === 0) return;
+        const prefix = "itt" + year.slice(2) + "-";
+        const suffix = (await save.getAttribute("data-storage-key")) || "";
+        if (suffix) {
+          await page.evaluate((k) => localStorage.removeItem(k), prefix + suffix);
+        }
+        await save.click({ force: true });
+        await page.waitForTimeout(80);
+        if (suffix) {
+          expect(await page.evaluate((k) => localStorage.getItem(k), prefix + suffix), href).toBeFalsy();
+        }
+        const boxes = page.locator("[data-req]");
+        const n = await boxes.count();
+        for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
+        const field = await save.getAttribute("data-require-field");
+        if (field) {
+          const el = page.locator(field).first();
+          if (await el.count()) await el.fill("museum real");
+        }
+        await save.click({ force: true });
+        if (suffix) {
+          await expect
+            .poll(async () => page.evaluate((k) => localStorage.getItem(k), prefix + suffix), {
+              message: href + " REAL save",
+            })
+            .toBeTruthy();
+        }
       });
     }
   });

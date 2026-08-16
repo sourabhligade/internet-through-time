@@ -45,6 +45,32 @@
       connectBusyChance: 0.16
     },
     urlMap: {
+      "sites/goodtimes/about.html": "http://museum.local/years/1994/sites/goodtimes/about.html",
+
+      "sites/goodtimes/index.html": "http://museum.local/years/1994/sites/goodtimes/index.html",
+
+      "sites/iuma/listen.html": "http://museum.local/years/1994/sites/iuma/listen.html",
+      "sites/iuma/bands.html": "http://museum.local/years/1994/sites/iuma/bands.html",
+      "sites/cern/www.html": "http://museum.local/years/1994/sites/cern/www.html",
+      "sites/cern/line-mode.html": "http://museum.local/years/1994/sites/cern/line-mode.html",
+      "sites/yahoo/computers.html": "http://museum.local/years/1994/sites/yahoo/computers.html",
+      "sites/yahoo/entertainment.html": "http://museum.local/years/1994/sites/yahoo/entertainment.html",
+      "sites/fishcam/still.html": "http://museum.local/years/1994/sites/fishcam/still.html",
+      "sites/webcrawler/search.html": "http://museum.local/years/1994/sites/webcrawler/search.html",
+      "sites/bbs/help.html": "http://museum.local/years/1994/sites/bbs/help.html",
+      "sites/bbs/faq.html": "http://museum.local/years/1994/sites/bbs/faq.html",
+      "sites/bbs/press.html": "http://museum.local/years/1994/sites/bbs/press.html",
+      "sites/bbs/legal.html": "http://museum.local/years/1994/sites/bbs/legal.html",
+      "sites/bbs/tips.html": "http://museum.local/years/1994/sites/bbs/tips.html",
+      "sites/bbs/status.html": "http://museum.local/years/1994/sites/bbs/status.html",
+      "sites/bbs/support.html": "http://museum.local/years/1994/sites/bbs/support.html",
+
+      "sites/infoseek/index.html": "http://museum.local/years/1994/sites/infoseek/index.html",
+
+      "sites/bbs/index.html": "http://museum.local/years/1994/bbs/",
+      "sites/bbs/files.html": "http://museum.local/years/1994/bbs/files.html",
+      "sites/bbs/log.html": "http://museum.local/years/1994/bbs/log.html",
+      "sites/bbs/about.html": "http://museum.local/years/1994/bbs/about.html",
       "sites/webcrawler/index.html": "http://museum.local/years/1994/webcrawler/",
       "sites/galaxy/index.html": "http://museum.local/years/1994/galaxy/",
       "sites/gnn/index.html": "http://museum.local/years/1994/gnn/",
@@ -52,6 +78,10 @@
 
       "sites/playable/index.html": "http://museum.local/years/1994/playable/",
       "sites/playable/game.html": "http://museum.local/years/1994/playable/game.html",
+      "sites/playable/game-5.html": "http://museum.local/years/1994/playable/game-5.html",
+      "sites/playable/game-4.html": "http://museum.local/years/1994/playable/game-4.html",
+      "sites/playable/game-3.html": "http://museum.local/years/1994/playable/game-3.html",
+      "sites/playable/game-2.html": "http://museum.local/years/1994/playable/game-2.html",
       "sites/exploratorium/perception.html": "http://www.exploratorium.edu/perception/",
       "sites/exploratorium/about.html": "http://www.exploratorium.edu/about/",
       "sites/weblouvre/collections.html": "http://mistral.culture.fr/louvre/collections/",
@@ -222,6 +252,22 @@
     "sites/hotwired/ad-att.html": "http://www.hotwired.com/sponsors/att/"
   },
     titleMap: {
+      "sites/iuma/listen.html": "Listen",
+      "sites/iuma/bands.html": "Bands",
+      "sites/cern/www.html": "Www",
+      "sites/cern/line-mode.html": "Line mode",
+      "sites/yahoo/computers.html": "Computers",
+      "sites/yahoo/entertainment.html": "Entertainment",
+      "sites/fishcam/still.html": "Still",
+      "sites/webcrawler/search.html": "Search",
+      "sites/bbs/help.html": "Help",
+      "sites/bbs/faq.html": "Faq",
+      "sites/bbs/press.html": "Press",
+      "sites/bbs/legal.html": "Legal",
+      "sites/bbs/tips.html": "Tips",
+      "sites/bbs/status.html": "Status",
+      "sites/bbs/support.html": "Support",
+
       "sites/exploratorium/perception.html": "Perception",
       "sites/exploratorium/about.html": "About",
       "sites/weblouvre/collections.html": "Collections",

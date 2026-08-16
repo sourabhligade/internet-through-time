@@ -26,7 +26,7 @@
 <div class="sopa-shell">
   <div class="sopa-black" data-sopa-blackout>
     <p style="font-size:11px;color:#888;margin:0 0 16px;letter-spacing:0.08em">
-      ENGLISH WIKIPEDIA · JANUARY 18, 2012 · 24 HOURS
+      ENGLISH WIKIPEDIA · JANUARY 18, 2012 · 05:00 UTC · 24 HOURS
     </p>
     <h1>Imagine a World<br>Without Free Knowledge</h1>
     <p>
@@ -52,6 +52,7 @@
       </button>
     </p>
     <p data-sopa-status style="font-size:12px;color:#8f8;min-height:1.2em"></p>
+    <p class="itt12-next" data-itt12-next data-next-flow data-next-when-key="itt12-sopa-ack" hidden style="font-size:13px"><b>Next:</b> <a href="../soundcloud/index.html">★ SoundCloud timed comment</a></p>
     <p style="font-size:11px;color:#666;margin-top:8px">
  · not inventing Wikimedia logo art
     </p>
@@ -107,6 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
             bills: ["SOPA", "PIPA"],
             hours: 24,
             facts: facts,
+            real: true,
+            multiStep: true,
+            year: "2012",
             ts: Date.now()
           })
         );
@@ -118,9 +122,36 @@ document.addEventListener("DOMContentLoaded", function () {
           ITT._immersionApi.actionFeedback(msg, { status: st, kind: "sopa" });
         }
       } catch (e3) {}
+      try { if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN) {}
     });
   }
 });
 </script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="../waze/index.html">Waze</a> ·
+ <a href="../windows8/index.html">Windows 8</a> ·
+ <a href="../youtube/about.html">About YouTube</a> ·
+ <a href="../chrome/index.html">Google Chrome</a> ·
+ <a href="../facebook/index.html">Facebook</a> ·
+ <a href="../googledrive/index.html">Google Drive</a> ·
+ <a href="../instagram/index.html">Instagram</a> ·
+ <a href="../ipad/index.html">iPad mini</a> ·
+ <a href="../iphone/index.html">iPhone 5</a> ·
+ <a href="../lyft/index.html">Lyft</a> ·
+ <a href="../netflix/index.html">Netflix</a> ·
+ <a href="../pinterest/index.html">Pinterest</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
+
+
+<!-- ITT-POPULAR-PANEL:wiki:start -->
+<section class="itt-popular-panel" data-itt-popular="wiki" style="margin:12px 0;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:13px;max-width:46em"><b>Wikipedia 2012</b><p style="margin:6px 0;color:#444">Popular session · known destination · incomplete never writes</p><label style="display:block;margin:6px 0"><input type="checkbox" data-popular-req> Already on disk</label><label style="display:block;margin:6px 0"><input type="checkbox" data-popular-req> Continuity</label><p><button type="button" data-itt-popular-save data-storage-key="wiki" data-min-req="2" data-requires="[data-popular-req]">Save popular session</button></p><p data-itt-real-status class="itt-popular-status" style="min-height:1.2em"></p><p style="font-size:11px;color:#555">key <code>itt12-wiki</code></p><p class="itt-popular-next" data-next-flow hidden><b>Next:</b> <a href="../soundcloud/index.html">SoundCloud</a></p></section>
+<!-- ITT-POPULAR-PANEL:wiki:end -->
+
 </body>
 </html>

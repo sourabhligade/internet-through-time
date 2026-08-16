@@ -48,6 +48,18 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/badger/index.html": "http://museum.local/years/2003/sites/badger/index.html",
+
+      "sites/photobucket/album.html": "http://museum.local/years/2003/sites/photobucket/album.html",
+      "sites/itunes/song.html": "http://museum.local/years/2003/sites/itunes/song.html",
+      "sites/wordpress/publish.html": "http://museum.local/years/2003/sites/wordpress/publish.html",
+      "sites/myspace/top8.html": "http://museum.local/years/2003/sites/myspace/top8.html",
+
+      "sites/cnet/index.html": "http://museum.local/years/2003/sites/cnet/index.html",
+
+      "sites/walmart/index.html": "http://museum.local/years/2003/sites/walmart/index.html",
+
+      "sites/adsense/stats.html": "http://www.google.com/adsense/report",
       "sites/secondlife/index.html": "http://museum.local/years/2003/secondlife/",
       "sites/skype/index.html": "http://museum.local/years/2003/skype/",
       "sites/imageshack/index.html": "http://museum.local/years/2003/imageshack/",
@@ -55,6 +67,10 @@
 
       "sites/playable/index.html": "http://museum.local/years/2003/playable/",
       "sites/playable/game.html": "http://museum.local/years/2003/playable/game.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2003/playable/game-5.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2003/playable/game-4.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2003/playable/game-3.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2003/playable/game-2.html",
       "index.html": "http://museum.local/index.html",
 
       "sites/myspace/index.html": "http://www.myspace.com/",
@@ -220,6 +236,9 @@
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/netcenter/index.html": "http://www.netcenter.com/index.html",
       "sites/netflix/index.html": "http://www.netflix.com/",
+      "sites/netflix/genres.html": "http://www.netflix.com/BrowseGenres",
+      "sites/netflix/queue.html": "http://www.netflix.com/Queue",
+      "sites/netflix/about.html": "http://www.netflix.com/About",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/netscape/index.html": "http://www.netscape.com/index.html",
       "sites/netscape/netscape6.html": "http://www.netscape.com/netscape6.html",
@@ -277,8 +296,19 @@
           "sites/photobucket/about.html": "http://photobucket.com/about.html",
       "sites/photobucket/codes.html": "http://photobucket.com/codes.html",
       "sites/photobucket/index.html": "http://photobucket.com/",
+      "sites/zengarden/index.html": "http://museum.local/years/2003/zengarden/",
+      "sites/zengarden/about.html": "http://csszengarden.com/about.html",
 },
     titleMap: {
+      "sites/photobucket/album.html": "Photobucket album",
+      "sites/itunes/song.html": "iTunes song",
+      "sites/wordpress/publish.html": "WordPress publish",
+      "sites/myspace/top8.html": "MySpace Top 8",
+
+      "sites/netflix/genres.html": "Netflix Genres",
+      "sites/netflix/queue.html": "Netflix Queue",
+      "sites/netflix/about.html": "About Netflix",
+      "sites/adsense/stats.html": "AdSense reports",
       "sites/netcenter/about.html": "About",
       "sites/y2k/about.html": "About",
       "sites/metafilter/about.html": "About",
@@ -519,6 +549,6 @@
       "help-handbook": "pages/about.html",
       "help-faq": "pages/about.html"
     },
-    desktopAlert: "Decorative Windows 98 desktop icon.\nOnly Internet Explorer is functional in this exhibit."
+    desktopAlert: "Decorative Windows XP desktop icon.\nOnly Internet Explorer is functional in this exhibit."
   };
 })(typeof window !== "undefined" ? window : this);

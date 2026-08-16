@@ -208,6 +208,9 @@
     var el = doc.querySelector("[data-digg-list]");
     if (!el) return;
     var list = seed();
+    list = list.slice().sort(function (a, b) {
+      return (b.diggs || 0) - (a.diggs || 0);
+    });
     var comments = loadComments();
     el.innerHTML = list
       .map(function (row, idx) {
@@ -245,9 +248,13 @@
           "</b><span class='digg-count-label'>diggs</span></div>" +
           "<button type='button' class='digg-btn-up' data-digg-up='" +
           idx +
+          "' data-digg-sid='" +
+          esc(sid) +
           "'>digg it</button>" +
           "<button type='button' class='digg-btn-bury' data-digg-bury='" +
           idx +
+          "' data-digg-sid='" +
+          esc(sid) +
           "'>bury</button>" +
           "</div>" +
           "<div class='digg-body'>" +
@@ -283,16 +290,32 @@
       var i;
       for (i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function (ev) {
-          var idx = parseInt(ev.currentTarget.getAttribute(attr), 10);
+          var btn = ev.currentTarget;
+          var sid = btn.getAttribute("data-digg-sid");
           var list2 = seed();
-          if (list2[idx]) {
-            list2[idx].diggs = Math.max(0, (list2[idx].diggs || 0) + delta);
+          var row = null;
+          var j;
+          for (j = 0; j < list2.length; j++) {
+            if (String(list2[j].id || "") === String(sid || "")) {
+              row = list2[j];
+              break;
+            }
+          }
+          if (!row && sid == null) {
+            var idx = parseInt(btn.getAttribute(attr), 10);
+            row = list2[idx] || null;
+          }
+          if (row) {
+            row.diggs = Math.max(0, (row.diggs || 0) + delta);
+            list2.sort(function (a, b) {
+              return (b.diggs || 0) - (a.diggs || 0);
+            });
             save(list2);
             render(doc);
             var msg =
               (delta > 0 ? "Dugg" : "Buried") +
               " · " +
-              (list2[idx].title || "story") +
+              (row.title || "story") +
               " · this browser only";
             if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
               ITT._immersionApi.actionFeedback(msg, {
@@ -398,8 +421,13 @@
         var st =
           doc.querySelector("[data-digg-status]") || doc.getElementById("digg-status");
         /* REAL gate: no blank / untitled mock submits */
-        if (!title) {
-          if (st) st.innerHTML = "Enter a title to digg a story.";
+        if (title.length < 8) {
+          if (st) st.innerHTML = "Enter a title (8+). Empty submit does not write.";
+          return;
+        }
+        url = String(url || "").replace(/^\s+|\s+$/g, "");
+        if (url.length < 8 || url === "http://") {
+          if (st) st.innerHTML = "Enter a URL residual (8+). Empty submit does not write.";
           return;
         }
         var list = seed();
@@ -409,6 +437,9 @@
           url: url,
           diggs: 1,
           mine: true,
+          multiStep: true,
+          real: true,
+          year: year(),
           ts: Date.now()
         });
         save(ensureIds(list.slice(0, 40)));

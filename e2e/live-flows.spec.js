@@ -21,11 +21,25 @@ test.describe('Live flows — former theater CTAs', () => {
 
   test('1998 GameSpot download completes to Installed', async ({ page }) => {
     await page.goto('/years/1998/sites/gamespot/downloads.html');
-    await page.waitForTimeout(500);
+    await page.evaluate(() => {
+      try {
+        Object.keys(localStorage)
+          .filter((k) => k.indexOf('itt98-dl-') === 0)
+          .forEach((k) => localStorage.removeItem(k));
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForFunction(
+      () => document.documentElement.getAttribute('data-itt-immersion-booted') === '1998',
+      null,
+      { timeout: 20000 }
+    );
     const btn = page.locator('[data-itt-download]');
     await checkAllReq(page);
     await twoStepClick(page, '[data-itt-download]');
-    await expect(page.locator('[data-itt-live-status], .itt-live-host').first()).toBeVisible({ timeout: 5000 });
+    await expect(page.locator('[data-itt-live-status], .itt-live-host').first()).toBeVisible({ timeout: 8000 });
     await expect(page.locator('[data-itt-live-status]')).toContainText(/Download complete/i, {
       timeout: 20000,
     });

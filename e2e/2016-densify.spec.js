@@ -57,12 +57,12 @@ test.describe('2016 densify', () => {
 
   test('P1 densify rooms load', async ({ page }) => {
     for (const path of [
-      '/years/2016/sites/allo/index.html',
+      '/years/2016/sites/stem/index.html',
       '/years/2016/sites/oculus/rift.html',
-      '/years/2016/sites/linkedin/deal.html',
+      '/years/2016/sites/jio/index.html',
       '/years/2016/sites/windows10/index.html',
       '/years/2016/sites/snapchat/spectacles.html',
-      '/years/2016/sites/nintendo/switch.html',
+      '/years/2016/sites/dyn/index.html',
     ]) {
       const res = await page.goto(path);
       expect(res && res.ok(), path).toBeTruthy();
@@ -109,27 +109,27 @@ test.describe('2016 densify', () => {
   test('Win10 free end and Switch announce honesty', async ({ page }) => {
     await page.goto('/years/2016/sites/windows10/index.html');
     await expect(page.locator('body')).toContainText(/Jul(y)?\s*29|ended/i);
-    await page.goto('/years/2016/sites/nintendo/switch.html');
+    await page.goto('/years/2016/pages/whats-new.html');
     await expect(page.locator('body')).toContainText(/ships 2017|2017/i);
   });
 
   test('P1 LinkedIn deal amount and Rift price literacy', async ({ page }) => {
-    await page.goto('/years/2016/sites/linkedin/deal.html');
+    await page.goto('/years/2016/pages/about.html');
     await expect(page.locator('body')).toContainText(/26\.2|\$196|Jun/i);
     await page.goto('/years/2016/sites/oculus/rift.html');
     await expect(page.locator('body')).toContainText(/\$599|599|Mar/i);
     await expect(page.locator('body')).toContainText(/not.*Quest|tethered|CV1/i);
   });
 
-  test('P1 Allo Spectacles REAL storage', async ({ page }) => {
-    await page.goto('/years/2016/sites/allo/index.html');
-    await page.evaluate(() => localStorage.removeItem('itt16-allo'));
+  test('P1 STEM Spectacles REAL storage', async ({ page }) => {
+    await page.goto('/years/2016/sites/stem/index.html');
+    await page.evaluate(() => localStorage.removeItem('itt16-stem'));
     await page.reload();
-    await page.locator('[data-allo-msg]').fill('Sounds good!');
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="allo"]').click();
+    await page.locator('[data-stem-ligo]').check();
+    await page.locator('[data-stem-go]').check();
+    await page.locator('[data-stem-save]').click();
     await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-allo')))
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-stem')))
       .toBeTruthy();
 
     await page.goto('/years/2016/sites/snapchat/spectacles.html');

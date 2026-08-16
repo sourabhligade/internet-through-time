@@ -101,6 +101,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await expect(page.locator('body')).toContainText('697,089,489');
     await expect(page.locator('body')).toContainText(/634/);
     await page.waitForSelector('[data-thesis-ack]', { timeout: 15000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-thesis-ack]').click();
     await expect(page.locator('[data-thesis-status]')).toContainText(/Saved|itt12-thesis/i);
     const raw = await expectStorageTruthy(page, 'itt12-thesis-ack');
@@ -191,6 +193,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.reload();
     await waitImmersionYear(page, '2012');
     await page.waitForSelector('[data-pin-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-pin-save]').first().click();
     await expect(page.locator('[data-pin-status]')).toContainText(/pin|1|itt12/i, { timeout: 8000 });
     const hit = await expectAnyStorage(page, 'pin', 'dream|kitchen|pin|id');
@@ -220,6 +224,8 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
     await page.goto('/years/2012/sites/iphone/maps.html');
     await clearKeys(page, ['itt12-maps-note']);
     await page.reload();
+    await page.locator('[data-maps-dropped]').check();
+    await page.locator('[data-maps-apology]').check();
     await page.locator('[data-maps-q]').fill('Airport');
     await page.locator('[data-maps-search]').click();
     await expect(page.locator('[data-maps-out]')).toContainText(/Airport/i);
@@ -414,8 +420,10 @@ test.describe('2012 flows A–T (real only · no soft mocks)', () => {
       .toBeTruthy();
     await expectAnyStorage(page, 'netflix');
 
-    // stream seed real storage
+    // stream seed real storage — literacy first (residual-real / page gate)
     await clearKeys(page, ['itt12-netflix-stream']);
+    await page.locator('[data-nf-discs]').check();
+    await page.locator('[data-nf-notonly]').check();
     await page.locator('#stream-seed').click();
     const stream = await expectStorageTruthy(page, 'itt12-netflix-stream');
     expect(stream).toMatch(/streaming|2012/i);

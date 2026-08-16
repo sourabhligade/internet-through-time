@@ -14,7 +14,7 @@
 | P0 Reactions | **A** | pick emoji · incomplete blocked |
 | P0 jack / AirPods | **A** | Sep 7 / Dec 13 honesty |
 | P0 Vine / musical.ly / WA E2E | **A** | not TikTok brand · default E2E |
-| P1 densify | **A−** | Allo · Rift · LinkedIn · Win10 end · Spectacles · Switch announce |
+| P1 densify | **A−** | Rift · Win10 free-upgrade ended · Spectacles (Allo / LinkedIn / Switch are not live P1) |
 | Continuity scrub | **B+** | 2015 archive on home · clone forest residual |
 | Pixels | **C** | CAPTURE H16 open RECON |
 | e2e | **A** | mvp · densify · flows · real · trail · shell-honesty |

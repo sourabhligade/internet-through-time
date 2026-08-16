@@ -11,6 +11,9 @@ test.describe('2012 densify', () => {
     await expect(page.locator('body')).toContainText('697,089,489');
     await expect(page.locator('body')).toContainText(/634/);
     await expect(page.locator('body')).toContainText(/2\.4|billion|IPO|Instagram/i);
+    await expect(page.locator('body')).toContainText('2,518,453,530');
+    await expect(page.locator('body')).toContainText(/wildcard|cleanup|Netcraft/i);
+    await expect(page.locator('body')).toContainText(/SoundCloud/i);
   });
 
   test('hard bans Stories TikTok Meta Win8-as-only-shell', async ({ page }) => {

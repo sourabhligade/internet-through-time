@@ -91,6 +91,8 @@ test.describe('2012 MVP', () => {
       { timeout: 25000 }
     );
     await page.waitForSelector('[data-pin-save]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-pin-save]').first().click();
     await expect(page.locator('[data-pin-status]')).toContainText(/pin|1|itt12/i, {
       timeout: 8000,

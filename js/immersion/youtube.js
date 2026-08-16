@@ -34,6 +34,88 @@
       ? U().immersionStorageKey("yt-views", fb)
       : fb + "-yt-views";
   }
+  function didUploadKey() {
+    var fb = yearFallbackPrefix();
+    return U().immersionStorageKey
+      ? U().immersionStorageKey("yt-did-upload", fb)
+      : fb + "-yt-did-upload";
+  }
+  function yearNum() {
+    try {
+      var y =
+        (ITT._immersionYear && String(ITT._immersionYear)) ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        "";
+      if (/^\d{4}$/.test(y)) return parseInt(y, 10);
+    } catch (eY) { /* */ }
+    return 2005;
+  }
+  function markDidUpload(title) {
+    try {
+      localStorage.setItem(
+        didUploadKey(),
+        JSON.stringify({
+          title: title,
+          multiStep: true,
+          real: true,
+          year: String(yearNum()),
+          ts: Date.now()
+        })
+      );
+    } catch (eM) { /* */ }
+  }
+  function yearShareBits(title) {
+    var y = yearNum();
+    var shareUrl = "http://www.youtube.com/watch?v=" + encodeURIComponent(title || "Me at the zoo");
+    var bits = [];
+    if (y >= 2005 && y <= 2010) {
+      bits.push(
+        '<a href="../digg/submit.html?title=' +
+          encodeURIComponent(title) +
+          "&url=" +
+          encodeURIComponent(shareUrl) +
+          '">Digg it</a>'
+      );
+      bits.push(
+        '<a href="../reddit/submit.html?title=' +
+          encodeURIComponent(title) +
+          "&url=" +
+          encodeURIComponent(shareUrl) +
+          '">reddit</a>'
+      );
+    }
+    if (y === 2005 || y === 2006) {
+      bits.push(
+        '<a href="../delicious/index.html?url=' +
+          encodeURIComponent(shareUrl) +
+          "&title=" +
+          encodeURIComponent(title) +
+          '&tags=video+youtube">del.icio.us</a>'
+      );
+    }
+    if (y === 2011) {
+      bits.push('<a href="../googleplus/index.html">Google+</a>');
+      bits.push('<a href="../facebook/timeline.html">Timeline</a>');
+      bits.push('<a href="../netflix/index.html">Netflix / Qwikster</a>');
+    }
+    if (y === 2012) {
+      bits.push('<a href="about.html">Gangnam residual</a>');
+    }
+    if (y === 2014) {
+      bits.push('<a href="../whatsapp/index.html">WhatsApp</a>');
+      bits.push('<a href="../facebook/index.html">Facebook leftover</a>');
+    }
+    return bits;
+  }
+  function pointNextWatch(doc, title) {
+    var nodes = doc.querySelectorAll("[data-next-flow] a[href*='watch']");
+    var i;
+    for (i = 0; i < nodes.length; i++) {
+      nodes[i].setAttribute("href", watchHref(title));
+    }
+  }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);
     return String(s || "")
@@ -188,30 +270,26 @@
         views = loadViews();
         if (!views[title]) views[title] = 1;
         saveViews(views);
+        markDidUpload(title);
         if (st) {
-          var shareUrl = "http://www.youtube.com/watch?v=" + encodeURIComponent(title);
+          var extra = yearShareBits(title);
           st.innerHTML =
             "Upload complete — your video is on the list. " +
             '<a href="index.html">Videos</a> · ' +
             '<a href="' +
             watchHref(title) +
-            '"><b>Watch</b></a> · ' +
-            '<a href="../digg/submit.html?title=' +
-            encodeURIComponent(title) +
-            "&url=" +
-            encodeURIComponent(shareUrl) +
-            '">Digg it</a> · ' +
-            '<a href="../reddit/submit.html?title=' +
-            encodeURIComponent(title) +
-            "&url=" +
-            encodeURIComponent(shareUrl) +
-            '">reddit</a>';
+            '"><b>Watch</b></a>' +
+            (extra.length ? " · " + extra.join(" · ") : "");
         }
         form.reset();
         var homeList = doc.querySelector("[data-yt-list]");
         if (homeList) renderList(homeList, cur);
+        try {
+          pointNextWatch(doc, title);
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eNext) { /* */ }
         return false;
-      });
+      }, true);
     }
 
     /* Index search → watch ?v= (works inside year shell chrome, not only plain GET) */
@@ -396,30 +474,21 @@
       }
     }
 
-    /* Vote trail bridges — real submit handoff to Digg / Reddit */
+    /* Vote trail bridges — only rooms this year actually has */
     var bridges = doc.querySelector("[data-yt-share-bridges]");
     if (bridges) {
-      var shareUrl =
-        "http://www.youtube.com/watch?v=" + encodeURIComponent(watchTitle || "Me at the zoo");
       var shareTitle = watchTitle || "Me at the zoo";
-      bridges.innerHTML =
-        "<b>Share / vote this clip</b> — " +
-        '<a href="../digg/submit.html?title=' +
-        encodeURIComponent(shareTitle) +
-        "&url=" +
-        encodeURIComponent(shareUrl) +
-        '">Submit to Digg</a> · ' +
-        '<a href="../reddit/submit.html?title=' +
-        encodeURIComponent(shareTitle) +
-        "&url=" +
-        encodeURIComponent(shareUrl) +
-        '">Submit to Reddit</a> · ' +
-        '<a href="../delicious/index.html?url=' +
-        encodeURIComponent(shareUrl) +
-        "&title=" +
-        encodeURIComponent(shareTitle) +
-        '&tags=video+youtube">Save on del.icio.us</a>';
+      var extraB = yearShareBits(shareTitle);
+      bridges.innerHTML = extraB.length
+        ? "<b>Share this clip</b> — " + extraB.join(" · ")
+        : "";
     }
+
+    try {
+      var didRaw = localStorage.getItem(didUploadKey());
+      var did = didRaw ? JSON.parse(didRaw) : null;
+      if (did && did.title) pointNextWatch(doc, did.title);
+    } catch (eDid) { /* */ }
 
     /* channels: your uploads block */
     var ch = doc.querySelector("[data-yt-channel-mine]");

@@ -15,7 +15,12 @@ def main() -> int:
     errs = []
     if "residual-placard.js" not in reg:
         errs.append("registry missing residual-placard.js")
-    if "year-2017-extras.js" not in boot:
+    # Priority extras: either a literal year-2017 hint or the year-NNNN-extras regex
+    # already used by splitFeaturesForPage so Stories/GO/REAL multipage is not deferred.
+    extras_priority = "year-2017-extras.js" in boot or bool(
+        re.search(r"year-\\d\{4\}-extras", boot)
+    )
+    if not extras_priority:
         errs.append("boot.js missing 2017 extras priority hints")
     for rel in [
         "js/immersion/residual-placard.js",
@@ -26,6 +31,13 @@ def main() -> int:
             errs.append(f"missing {rel}")
     # every year list that has shared should have residual next (soft check)
     years = re.findall(r'"(\d{4})"\s*:\s*\[', reg)
+    from collections import Counter
+    dup = [y for y, n in Counter(years).items() if n > 1]
+    if dup:
+        errs.append("duplicate registry year keys (last write wins): " + ", ".join(dup))
+    for rel in set(re.findall(r'"(immersion/[^"]+\.js)"', reg)):
+        if not (ROOT / "js" / rel).is_file():
+            errs.append(f"registry lists missing file js/{rel}")
     for y in years:
         block_m = re.search(rf'"{y}"\s*:\s*\[([\s\S]*?)\]', reg)
         if not block_m:

@@ -272,24 +272,26 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
   test.skip(!yearOnDisk(2016), 'years/2016 not on disk — hub open 1994–2016');
 
   test('Musical.ly: empty and no-TikTok-gate blocked', async ({ page }) => {
-    await page.goto('/years/2016/sites/musically/index.html');
+    await page.goto('/years/2016/sites/musically/create.html');
     await clearPrefix(page, 'itt16-mly');
     await clearPrefix(page, 'itt16-musical');
     await page.reload();
     await page.waitForTimeout(400);
-    await page.fill('[data-musical-caption]', 'x');
-    await page.locator('[data-musical-save]').click();
-    expect(await getKey(page, 'itt16-musical')).toBeNull();
-    await page.locator('[data-musical-not-tiktok]').check();
-    await page.fill('[data-musical-caption]', '');
-    await page.locator('[data-musical-save]').click();
-    expect(await getKey(page, 'itt16-musical')).toBeNull();
-    await page.fill('[data-musical-caption]', 'real clip');
-    await page.locator('[data-musical-save]').click();
+    await page.fill('[data-mly-song]', 'x');
+    await page.locator('[data-mly-post]').click();
+    expect(await getKey(page, 'itt16-musically')).toBeNull();
+    const boxes = page.locator('[data-req]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check();
+    await page.fill('[data-mly-song]', '');
+    await page.locator('[data-mly-post]').click();
+    expect(await getKey(page, 'itt16-musically')).toBeNull();
+    await page.fill('[data-mly-song]', 'Cool for the Summer');
+    await page.locator('[data-mly-post]').click();
     await expect
       .poll(async () => {
-        const p = await getKey(page, 'itt16-musical');
-        return !!(p && p.includes('real clip'));
+        const p = await getKey(page, 'itt16-musically');
+        return !!(p && p.includes('Cool for the Summer'));
       }, { timeout: 10000 })
       .toBeTruthy();
   });
@@ -299,13 +301,13 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
     await clearPrefix(page, 'itt16-vine');
     await page.reload();
     await page.waitForTimeout(400);
-    await page.locator('[data-vine-save]').click();
-    expect(await getKey(page, 'itt16-vine')).toBeNull();
-    await page.locator('[data-vine-announce]').check();
-    await page.locator('[data-vine-not-gone]').check();
-    await page.locator('[data-vine-save]').click();
-    await expect.poll(async () => getKey(page, 'itt16-vine')).toBeTruthy();
-    expect(await getKey(page, 'itt16-vine')).toMatch(/multiStep|2016-10-27/);
+    await page.locator('[data-itt-real-save][data-storage-key="vine-end"]').click();
+    expect(await getKey(page, 'itt16-vine-end')).toBeNull();
+    const boxes = page.locator('[data-req]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check();
+    await page.locator('[data-itt-real-save][data-storage-key="vine-end"]').click();
+    await expect.poll(async () => getKey(page, 'itt16-vine-end')).toBeTruthy();
   });
 
   test('Instagram Stories empty publish blocked; text writes storage', async ({ page }) => {
@@ -313,13 +315,14 @@ test.describe('NO-MOCK · 2016 Musical.ly + Vine + Stories', () => {
     await clearPrefix(page, 'itt16-ig-stories');
     await page.reload();
     await page.waitForTimeout(400);
-    const add = page.locator('[data-ig-stories-add]');
+    const add = page.locator('[data-ig-story-add]');
     await expect(add).toBeVisible({ timeout: 10000 });
     await add.click();
     expect(await getKey(page, 'itt16-ig-stories')).toBeFalsy();
-    await page.fill('[data-ig-stories-caption]', 'museum story real');
-    await page.locator('[data-ig-stories-24h]').check();
-    await page.locator('[data-ig-stories-not-reels]').check();
+    await page.fill('[data-ig-story-text]', 'museum story real');
+    const boxes = page.locator('[data-req]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check();
     await add.click();
     await expect
       .poll(async () => {
@@ -468,11 +471,10 @@ test.describe('NO-MOCK · 2015 Watch + Periscope + Chrome REAL', () => {
     await clearPrefix(page, 'itt15-');
     await page.reload();
     await wait2015Real(page);
-    await page.locator('[data-watch-save]').click();
+    await page.locator('[data-watch15-save]').click();
     expect(await getKey(page, 'itt15-watch')).toBeNull();
     await page.locator('[data-watch-shipped]').check();
-    await page.locator('[data-watch-no-store]').check();
-    await page.locator('[data-watch-save]').click();
+    await page.locator('[data-watch15-save]').click();
     await expect.poll(async () => getKey(page, 'itt15-watch')).toBeTruthy();
     expect(await getKey(page, 'itt14-watch')).toBeNull();
   });
@@ -482,11 +484,14 @@ test.describe('NO-MOCK · 2015 Watch + Periscope + Chrome REAL', () => {
     await clearPrefix(page, 'itt15-');
     await page.reload();
     await wait2015Real(page);
-    const go = page.locator('[data-peri-live]');
+    const go = page.locator('[data-live-go]');
     await expect(go).toBeVisible({ timeout: 10000 });
     await go.click();
     expect(await getKey(page, 'itt15-periscope')).toBeFalsy();
-    await page.fill('[data-peri-title]', 'Museum downtown walk');
+    await page.fill('[data-live-title]', 'Museum downtown walk');
+    const boxes = page.locator('[data-req], [data-live-req]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check();
     await go.click();
     await expect.poll(async () => getKey(page, 'itt15-periscope')).toBeTruthy();
     const raw = (await getKey(page, 'itt15-periscope')) || '';
@@ -498,29 +503,19 @@ test.describe('NO-MOCK · 2015 Watch + Periscope + Chrome REAL', () => {
     await clearPrefix(page, 'itt15-');
     await page.reload();
     await wait2015Real(page);
-    expect(await page.locator('[data-chrome-download]').count()).toBe(0);
-    await page.locator('[data-chrome15-save]').click();
+    await expect(page.locator('[data-chrome-download]')).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-chrome-download]').click();
     expect(await getKey(page, 'itt15-chrome')).toBeFalsy();
-    await page.locator('[data-chrome15-habit]').check();
-    await page.locator('[data-chrome15-edge]').check();
-    await page.locator('[data-chrome15-dl]').check();
-    await page.locator('[data-chrome15-save]').click();
+    const boxes = page.locator('[data-chrome-req]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check();
+    await page.locator('[data-chrome-download]').click();
     await expect.poll(async () => getKey(page, 'itt15-chrome')).toBeTruthy();
   });
 
-  test('Spotify invite mock gone; residual + plan write itt15-spotify', async ({ page }) => {
-    await page.goto('/years/2015/sites/spotify/index.html');
-    await clearPrefix(page, 'itt15-');
-    await page.reload();
-    await wait2015Real(page);
-    expect(await page.locator('[data-spotify-invite]').count()).toBe(0);
-    await page.locator('[data-spotify15-save]').click();
-    expect(await getKey(page, 'itt15-spotify')).toBeFalsy();
-    await page.locator('[data-spotify15-residual]').check();
-    await page.locator('[data-spotify15-war]').check();
-    await page.locator('[data-spotify15-plan][value="free"]').check();
-    await page.locator('[data-spotify15-save]').click();
-    await expect.poll(async () => getKey(page, 'itt15-spotify')).toBeTruthy();
+  test('2015 Spotify clone room is gone (lean)', async ({ page }) => {
+    const res = await page.goto('/years/2015/sites/spotify/index.html');
+    expect(res && res.status()).toBe(404);
   });
 });
 

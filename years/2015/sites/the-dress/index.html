@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2015">
+<head>
+<meta charset="utf-8">
+<title>The Dress — 26 Feb 2015</title>
+<link rel="stylesheet" href="../../../../css/period-2015.css">
+
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:42em;margin:16px auto;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.45">
+ <p style="font-size:12px"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/map.html">Year flow map</a></p>
+ <h1 style="font-size:22px;margin:0 0 8px">The Dress</h1>
+ <p>26 February 2015: white-and-gold vs blue-and-black. A CSS swatch is the honest toy — not a rights-unclear photo.</p>
+ <div data-ott-click style="width:120px;height:160px;margin:12px 0;background:linear-gradient(180deg,#d8d0b8 0 40%,#3a4a6a 40% 100%);border:2px solid #333"></div>
+ <p>
+  <button type="button" data-ott-click data-dress="wg">White and gold</button>
+  <button type="button" data-ott-click data-dress="bb">Blue and black</button>
+ </p>
+ <p data-dress-tally style="font-size:12px;color:#444"></p>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req> 26 Feb 2015</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req> Lighting / retina · not a stolen JPEG</label>
+ <p><button type="button" data-itt-real-save data-storage-key="dress" data-min-req="2" data-min-clicks="1">Save REAL</button></p>
+ <p data-itt-real-status></p>
+ <p data-next-flow hidden><b>Next:</b> <a href="../../pages/home.html">Starting Point</a></p>
+ <p style="font-size:11px;color:#555">key <code>itt15-dress</code> · Left Shark is the runner-up</p>
+ <script>
+ (function () {
+   var n = { wg: 0, bb: 0 };
+   var t = document.querySelector("[data-dress-tally]");
+   document.querySelectorAll("[data-dress]").forEach(function (b) {
+     b.addEventListener("click", function () {
+       n[b.getAttribute("data-dress")]++;
+       if (t) t.textContent = "This browser: white-gold " + n.wg + " · blue-black " + n.bb;
+     });
+   });
+ })();
+ </script>
+</div>
+<script src="../../../../js/immersion-2015.js"></script>
+</body>
+</html>

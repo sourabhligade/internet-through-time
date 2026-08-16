@@ -4,7 +4,7 @@
  * docs/2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, completeRealGate, killOverlays } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -35,7 +35,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     expect(await page.evaluate(() => localStorage.getItem('itt09-apps'))).toBeTruthy();
   });
 
@@ -58,7 +58,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-farm']);
     await page.reload();
     await page.waitForSelector('[data-farm-plant]', { timeout: 20000 });
-    await page.locator('[data-farm-plant="strawberry"]').click();
+    await completeRealGate(page, '[data-farm-plant="strawberry"]');
     expect(await page.evaluate(() => localStorage.getItem('itt09-farm'))).toMatch(/strawberry/i);
   });
 
@@ -83,7 +83,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-4sq']);
     await page.reload();
     await page.waitForSelector('[data-4sq-checkin]', { timeout: 20000 });
-    await page.locator('[data-4sq-checkin]').first().click();
+    await completeRealGate(page, '[data-4sq-checkin]');
     expect(await page.evaluate(() => localStorage.getItem('itt09-4sq'))).toBeTruthy();
   });
 
@@ -92,7 +92,7 @@ test.describe('2009 flows', () => {
     await clearKeys(page, ['itt09-ks']);
     await page.reload();
     await page.waitForSelector('[data-ks-back]', { timeout: 20000 });
-    await page.locator('[data-ks-back]').first().click();
+    await completeRealGate(page, '[data-ks-back]');
     expect(await page.evaluate(() => localStorage.getItem('itt09-ks'))).toBeTruthy();
   });
 
@@ -117,6 +117,7 @@ test.describe('2009 flows', () => {
 
   test('Address bar routes iPhone and Windows 7 specifically', async ({ page }) => {
     await enterYear(page, '2009');
+    await killOverlays(page);
     await page.fill('#location', 'http://www.apple.com/iphone/');
     await page.press('#location', 'Enter');
     await expect(page.locator('#content')).toHaveAttribute('src', /iphone/i, { timeout: 10000 });

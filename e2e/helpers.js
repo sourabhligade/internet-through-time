@@ -95,6 +95,24 @@ async function goInFrame(page, relativePath, opts) {
     needle,
     { timeout: 20000 }
   );
+  /* src can flip before the iframe document finishes scripts (G1 iframe Manage race). */
+  await page.waitForFunction(
+    (n) => {
+      try {
+        const f = document.getElementById('content');
+        const doc = f && f.contentDocument;
+        if (!doc || doc.readyState === 'loading') return false;
+        const path = (doc.location && (doc.location.pathname + doc.location.search)) || '';
+        const src = (f.getAttribute('src') || '') + '';
+        if (path.indexOf(n) === -1 && src.indexOf(n) === -1) return false;
+        return !!(doc.body && doc.body.innerHTML.length > 20);
+      } catch (e) {
+        return false;
+      }
+    },
+    needle,
+    { timeout: 20000 }
+  );
 }
 
 /**
@@ -126,6 +144,7 @@ async function waitForImmersion(page, year) {
 async function goImmersion(page, year, relativePath) {
   await goInFrame(page, relativePath);
   await waitForImmersion(page, year);
+  await killOverlays(page);
 }
 
 /**
@@ -400,6 +419,18 @@ const REAL_CHECK_SEL = [
   '[data-dl-check]',
   '[data-itt-download-confirm]',
   '[data-chrome-check]',
+  '[data-chrome-req]',
+  '[data-hulu-check]',
+  '[data-itunes-req]',
+  '[data-lastfm-req]',
+  '[data-dropbox-req]',
+  '[data-spotify-req]',
+  '[data-spotify-ack]',
+  '[data-spotify-no-stream]',
+  '[data-spotify-invite-check]',
+  '[data-gfc-check]',
+  '[data-nf-req]',
+  '[data-ks-req]',
   '[data-appstore-check]',
   '[data-android-check]',
   '[data-uber-check]',
@@ -423,8 +454,25 @@ const REAL_CHECK_SEL = [
   '[data-telegram-privacy]',
   '[data-thesis-req]',
   '[data-healthcare-ack] ~ label input[type="checkbox"]',
+  '[data-farm-check]',
+  '[data-4sq-check]',
   'input[type="checkbox"][data-req]',
 ].join(', ');
+
+/**
+ * Fill Gmail theater login. Empty email/password never writes.
+ * @param {import('@playwright/test').Page} page
+ * @param {{ email?: string, pass?: string }} [creds]
+ */
+async function fillGmailLogin(page, creds) {
+  creds = creds || {};
+  const form = page.locator('[data-gmail-login]').first();
+  await form.waitFor({ state: 'visible', timeout: 20000 });
+  const email = form.locator('[name="email"]');
+  const pass = form.locator('[name="pass"], input[type="password"]');
+  if (await email.count()) await email.fill(creds.email || 'visitor@gmail.com');
+  if (await pass.count()) await pass.fill(creds.pass || 'museum');
+}
 
 /**
  * Check every common REAL literacy box on the page.
@@ -445,7 +493,13 @@ async function checkAllReq(page, extraSel) {
  */
 async function completeRealGate(page, clickSelector, opts) {
   opts = opts || {};
+  /* residual-real.js injects literacy boxes at 80ms and 400ms */
+  await page.waitForTimeout(opts.injectWaitMs != null ? opts.injectWaitMs : 450);
   await checkAllReq(page, opts.checkSel);
+  if ((await page.locator(REAL_CHECK_SEL).count()) === 0) {
+    await page.waitForTimeout(250);
+    await checkAllReq(page, opts.checkSel);
+  }
   let sel = clickSelector;
   if (opts.storageKey) {
     const real = page.locator(
@@ -543,6 +597,7 @@ module.exports = {
   checkAllReq,
   completeRealGate,
   completeThesis,
+  fillGmailLogin,
   REAL_CHECK_SEL,
   pageYear,
 };

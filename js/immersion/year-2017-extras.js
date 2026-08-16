@@ -616,6 +616,7 @@
 
   function bootAll(doc) {
     doc = doc || document;
+    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
     bootFaceId(doc);
     bootFortnite(doc);
     bootTwitter280(doc);

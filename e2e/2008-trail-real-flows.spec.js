@@ -5,6 +5,7 @@
  * docs/2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md Part 5
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -30,7 +31,7 @@ test.describe('2008 trail 1 — Apps arrive', () => {
     await clearKeys(page, ['itt08-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt08/i, {
       timeout: 8000,
     });
@@ -73,9 +74,9 @@ test.describe('2008 trail 3 — Android opens', () => {
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
     const mapsBtn = page.locator('[data-android-install="Google Maps"]');
     if (await mapsBtn.count()) {
-      await mapsBtn.click();
+      await completeRealGate(page, '[data-android-install="Google Maps"]');
     } else {
-      await page.locator('[data-android-install]').first().click();
+      await completeRealGate(page, '[data-android-install]');
     }
     await page.waitForTimeout(200);
     const raw = await page.evaluate(() => localStorage.getItem('itt08-android-apps'));
@@ -92,7 +93,7 @@ test.describe('2008 trail 4 — Stream night', () => {
     await clearKeys(page, ['itt08-hulu', 'itt08-netflix-queue', 'itt08-yt-uploads', 'itt08-yt-views']);
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await completeRealGate(page, '[data-hulu-play]');
     expect(await page.evaluate(() => localStorage.getItem('itt08-hulu'))).toBeTruthy();
 
     await page.goto('/years/2008/sites/netflix/index.html');
@@ -118,8 +119,10 @@ test.describe('2008 trail 5 — Login everywhere', () => {
     await clearKeys(page, ['itt08-fb-connect']);
     await page.reload();
     await page.waitForSelector('[data-fb-connect]', { timeout: 20000 });
-    await page.locator('[data-fb-connect]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt08-fb-connect'))).toContain('connected');
+    await completeRealGate(page, '[data-fb-connect]');
+    expect(await page.evaluate(() => localStorage.getItem('itt08-fb-connect'))).toMatch(
+      /connected|real|multiStep/i
+    );
 
     await page.goto('/years/2008/sites/facebook/feed.html');
     await expect(page.locator('body')).toContainText(/Feed|News|status|Facebook/i);

@@ -621,6 +621,7 @@
 
   function bootAll(doc) {
     doc = doc || document;
+    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
     bootZoomJoin(doc);
     bootZoomWait(doc);
     bootZoomMeeting(doc);

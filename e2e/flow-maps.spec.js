@@ -10,7 +10,7 @@ async function twoStepClick(page, selector) {
 
 const { enterYear, contentFrame, goInFrame, waitForImmersion } = require('./helpers');
 
-const SAMPLE = ['1994', '1995', '1998', '2005', '2008', '2013', '2014'];
+const SAMPLE = ['1994', '1995', '1998', '2005', '2008', '2011', '2012', '2013', '2014', '2019', '2020'];
 
 for (const year of SAMPLE) {
   test.describe(`flow map ${year}`, () => {

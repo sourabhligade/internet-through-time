@@ -37,6 +37,8 @@ test.describe('2011 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-spotify-invite]', { timeout: 20000 });
+    await page.locator('[data-spotify-ack]').check();
+    await page.locator('[data-spotify-no-stream]').check();
     await page.locator('[data-spotify-invite]').click();
     await expect(page.locator('[data-spotify-status]')).toContainText(/Invite|free|plan/i, {
       timeout: 8000,
@@ -115,5 +117,63 @@ test.describe('2011 MVP', () => {
     await waitForImmersion(page, '2011');
     const body = page.frameLocator('#content').locator('body');
     await expect(body).toContainText(/Spotify|July 14|United States/i);
+  });
+
+  test('home one-thing is Airbnb · guided list is 6', async ({ page }) => {
+    await page.goto('/years/2011/pages/home.html');
+    await expect(page.locator('[data-ott-one-thing]')).toHaveCount(1);
+    await expect(page.locator('[data-ott-one-thing]')).toHaveAttribute('href', /airbnb/i);
+    await expect(page.locator('#ott-guided-2011 ol > li')).toHaveCount(6);
+    await expect(page.locator('body')).toContainText(/Airbnb/i);
+    await expect(page.locator('body')).toContainText(/Instant Book|Not yet/i);
+  });
+
+  test('about names Airbnb gold + labeled dual-cite + 2012 bans', async ({ page }) => {
+    await page.goto('/years/2011/pages/about.html');
+    await expect(page.locator('body')).toContainText(/one-thing|Airbnb/i);
+    await expect(page.locator('body')).toContainText('346,004,403');
+    await expect(page.locator('body')).toContainText('555');
+    await expect(page.locator('body')).toContainText(/Live Stats/i);
+    await expect(page.locator('body')).toContainText(/Pingdom/i);
+    await expect(page.locator('body')).toContainText(/IPO|Instant Book|iPhone 5/i);
+  });
+
+  test('iPhone 4S room is Oct 2011 not iPhone 4 June 2010', async ({ page }) => {
+    await page.goto('/years/2011/sites/iphone/index.html');
+    await expect(page.locator('body')).toContainText(/Oct(ober)?\s*4|4 Oct|2011-10-04/i);
+    await expect(page.locator('body')).toContainText(/\$199/);
+    await expect(page.locator('body')).toContainText(/\$399|64/);
+    await expect(page.locator('body')).toContainText(/Siri/i);
+    await expect(page.locator('body')).not.toContainText(/Announced\s+Jun(e)?\s*7/i);
+  });
+
+  test('iPad 2 room is Mar 2011 not original iPad Jan 2010', async ({ page }) => {
+    await page.goto('/years/2011/sites/ipad/index.html');
+    await expect(page.locator('body')).toContainText(/Mar(ch)?\s*(2|11)|2 Mar|11 Mar/i);
+    await expect(page.locator('body')).toContainText(/\$499/);
+    await expect(page.locator('body')).toContainText(/Smart Cover/i);
+    await expect(page.locator('body')).not.toContainText(/Jan(uary)?\s*27,\s*2010/i);
+  });
+
+  test('Instagram is iOS-only · Twitch is Jun 2011 Justin.tv', async ({ page }) => {
+    await page.goto('/years/2011/sites/instagram/index.html');
+    await expect(page.locator('body')).toContainText(/iOS only|iOS-only/i);
+    await expect(page.locator('body')).toContainText(/no Android|does not own|not own/i);
+    await expect(page.locator('[data-ig-android], [data-ig-android-install]')).toHaveCount(0);
+
+    await page.goto('/years/2011/sites/twitch/index.html');
+    await expect(page.locator('body')).toContainText(/Jun(e)?\s*6|6 Jun/i);
+    await expect(page.locator('body')).toContainText(/Justin\.tv/i);
+    await expect(page.locator('body')).toContainText(/2014|Amazon/i);
+  });
+
+  test('YouTube residual is Google-owned Flash · not Gangnam', async ({ page }) => {
+    const res = await page.goto('/years/2011/sites/youtube/index.html');
+    expect(res && res.status()).toBe(200);
+    await expect(page.locator('body')).toContainText(/Google/i);
+    await expect(page.locator('body')).toContainText(/2006|owned/i);
+    await expect(page.locator('body')).toContainText(/not.*Gangnam|Gangnam.*2012/i);
+    await expect(page.locator('[data-yt-list], [data-yt-search]').first()).toBeVisible();
+    await expect(page.locator('a[href="upload.html"]').first()).toBeVisible();
   });
 });

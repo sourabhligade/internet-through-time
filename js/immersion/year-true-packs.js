@@ -29,6 +29,11 @@
     saveJSON(key(id), payload);
     feedback(okMsg || "Done.", st);
     markUsed();
+    try {
+      showNext(document);
+    } catch (eN) {
+      /* */
+    }
     return payload;
   }
 

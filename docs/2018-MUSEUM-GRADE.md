@@ -1,7 +1,7 @@
 # 2018 — Museum grade card
 
 **Date:** 2026-08-11  
-**Status:** **Museum-grade A−** · lean from-scratch (2017 pattern) · hub **1994–2018**  
+**Status:** **Museum-grade A−** · lean from-scratch (2017 pattern) · hub **1994–2020**  
 **Prefix:** `itt18` (reserved)  
 **One-thing:** GDPR CMP Manage path · 25 May (not TikTok, not Face ID, not IGTV)  
 **Game:** Consent Dash (CMP-class · parity with product Manage)
@@ -17,7 +17,7 @@
 | P2 harvest | **[x]** DBX · Oculus Go · TLS 1.3 · XS · Portal · Pixel 3 · Flickr 1000 · Edge announce |
 | Game | **[x]** Consent Dash |
 | e2e | **[x]** `test:e2e:2018` |
-| Hub unlock | **[x]** 1994–2018 · footer “2019+ not on disk” |
+| Hub unlock | **[x]** 1994–2020 · 2019 and 2020 ARE on disk |
 | Pixels | **[x]** failed-final text/CSS silhouettes |
 | HEAD forest | **Do not restore** |
 

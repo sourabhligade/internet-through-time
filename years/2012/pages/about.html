@@ -16,10 +16,10 @@
 
 <div class="itt-real-thesis" data-itt-real-panel style="margin:12px 0;padding:10px;border:1px solid #666;background:#fffff0;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
  <b>Year thesis · REAL literacy</b> (this browser only · multi-step required)
- <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> I understand this year&rsquo;s period products and hard bans (no anachronism as default)</label>
+ <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-1"> Gold is SoundCloud play → timed comment. Weather is IG Android · IPO · SOPA — no Stories / Reels / Reactions / Meta as default</label>
  <label style="display:block;margin:6px 0"><input type="checkbox" data-req data-req-id="thesis-2"> Progress is private <code>localStorage</code> theater — no real accounts or network calls</label>
- <button type="button" data-itt-real-save data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
- <p data-itt-action-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
+ <button type="button" data-itt-real-save data-thesis-ack data-storage-key="thesis-ack" data-min-req="2" data-requires="[data-req]">Save thesis literacy</button>
+ <p data-itt-action-status data-thesis-status style="min-height:1.2em;margin:6px 0 0;color:#060"></p>
  <p style="font-size:11px;color:#666;margin:4px 0 0">Writes year-prefixed <code>*-thesis-ack</code> only after both checks.</p>
 </div>
 
@@ -27,17 +27,23 @@
  <b>Third axis residual:</b> sites + users + <i>page weight / traffic culture</i> (HTTP Archive class lore) — late web is bits, not only hostnames.
 </p>
 
- <p><b>Thesis:</b> The internet pivots to <b>mobile + visual media</b> — apps become the default content format,
+ <p><b>Thesis:</b> The one-thing this year is <b>SoundCloud</b> — play a waveform, drop a <b>timed comment</b>.
+ Around that gold: the internet pivots to <b>mobile + visual media</b> — apps become the default content format,
  and the Web 2.0 cultural era quietly ends. Desktop still exists; Windows 8 is <b>late-year</b> and controversial
- (not January mass default). Mood: Android Instagram day · “FB bought IG for a billion?!” · IPO glitch · pin boards ·
+ (not January mass default). Mood: SoundCloud drop notes · Android Instagram day · “FB bought IG for a billion?!” · IPO glitch · pin boards ·
  Lightning cable rage · Apple Maps wrong turn · Metro tiles · Chrome #1 (StatCounter) · UberX cheaper · horse dance.</p>
 
  <h2 style="font-size:15px">Scale (dual-cite — always label the source)</h2>
  <table border="1" cellpadding="6" cellspacing="0" bordercolor="#999" width="100%">
  <tr bgcolor="#eef"><th align="left">Source</th><th align="left">Websites</th><th align="left">Users</th></tr>
- <tr><td>Internet Live Stats (June)</td><td><b>697,089,489</b> (+101% vs 2011)</td><td>label Live Stats year row if shown</td></tr>
- <tr><td>Pingdom / Netcraft (Dec 2012)</td><td><b>634 million</b> (+51M in year)</td><td><b>2.4 billion</b></td></tr>
+ <tr><td>Internet Live Stats (June)</td><td><b>697,089,489</b> (+101% vs 2011)</td><td><b>2,518,453,530</b> (Live Stats year row)</td></tr>
+ <tr><td>Pingdom / Netcraft (Dec 2012)</td><td><b>634 million</b> (+51M in year)</td><td><b>2.4 billion</b> (Pingdom)</td></tr>
  </table>
+ <p style="font-size:12px;background:#fff8dc;border:1px solid #c90;padding:8px;margin:10px 0">
+  <b>Why June &gt; December:</b> not a crash. Netcraft’s <b>August 2012 wildcard-hostname cleanup</b> dropped millions of auto-generated names.
+  Live Stats keeps the June peak (<b>697,089,489</b>, +101%). Pingdom/Netcraft December counts <b>~634 million</b> hostnames (+51M in-year after cleanup).
+  Always label the source — never blend the two into one unlabeled “650 million.”
+ </p>
  <p style="font-size:11px;color:#555">
   Facebook: <b>IPO May 18 $38</b> (~$16B raised · ~$104B valuation · Nasdaq open delayed ~30 min · day close ~$38.23) ·
   <b>1 billion MAU</b> (Oct · ~600M mobile class) · Instagram Android <b>Apr 3</b> (1M+ downloads day one) ·
@@ -80,32 +86,52 @@
  <p>Default early–mid: <b>Windows 7 + IE 9</b> residual · <b>Chrome rising</b> (StatCounter #1 class mid/late).
  Late product: <b>Windows 8 + IE 10</b>. Broadband. Storage <code>itt12</code>.</p>
 
- <p style="margin-top:14px;border-top:1px solid #ccc;padding-top:10px">
-  <button type="button" data-thesis-ack style="font-size:12px">I understand the 2012 thesis (save)</button>
-  <span data-thesis-status style="font-size:11px;color:#060;margin-left:8px"></span>
- </p>
- <script>
- (function () {
-   var KEY = "itt12-thesis-ack";
-   function boot() {
-     var btn = document.querySelector("[data-thesis-ack]");
-     var st = document.querySelector("[data-thesis-status]");
-     if (!btn) return;
-     try { if (localStorage.getItem(KEY) && st) st.textContent = "Saved · " + KEY; } catch (e) {}
-     btn.addEventListener("click", function () {
-       try {
-         localStorage.setItem(KEY, JSON.stringify({ ack: true, thesis: "mobile-visual-apps", ts: Date.now() }));
-       } catch (e2) {}
-       if (st) st.textContent = "Saved · " + KEY;
-     });
-   }
-   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
-   else boot();
- })();
- </script>
- <p style="font-size:11px;color:#666">Educational reconstruction. Trademarks belong to their owners.</p>
+ <p style="font-size:11px;color:#666">Educational reconstruction. Trademarks belong to their owners. Incomplete thesis writes nothing.</p>
  </font>
 </td></tr>
 </table>
+<!-- ITT-3X-LINKS:start -->
+<nav class="itt-3x-links" data-itt-3x-links data-itt-year="2012" style="margin:12px 0;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:11px;line-height:1.75;max-width:54em"><b>More rooms this year · 3×</b><p style="margin:4px 0 0;color:#444">Existing rooms only · no new forest · star unchanged</p><p style="margin:6px 0 0">
+ <a href="../sites/chrome/index.html">Google Chrome</a> ·
+ <a href="../sites/chrome/about.html">chrome · about</a> ·
+ <a href="../sites/facebook/index.html">Facebook</a> ·
+ <a href="../sites/facebook/about.html">facebook · about</a> ·
+ <a href="../sites/facebook/feed.html">facebook · feed</a> ·
+ <a href="../sites/googledrive/index.html">Google Drive</a> ·
+ <a href="../sites/instagram/index.html">Instagram</a> ·
+ <a href="../sites/instagram/acquired.html">instagram · acquired</a> ·
+ <a href="../sites/instagram/android.html">instagram · android</a> ·
+ <a href="../sites/ipad/index.html">iPad mini</a> ·
+ <a href="../sites/ipad/prices.html">ipad · prices</a> ·
+ <a href="../sites/iphone/index.html">iPhone 5</a> ·
+ <a href="../sites/iphone/lightning.html">iphone · lightning</a> ·
+ <a href="../sites/iphone/maps.html">iphone · maps</a> ·
+ <a href="../sites/lyft/index.html">Lyft</a> ·
+ <a href="../sites/netflix/index.html">Netflix</a> ·
+ <a href="../sites/pinterest/index.html">Pinterest</a> ·
+ <a href="../sites/pinterest/about.html">pinterest · about</a> ·
+ <a href="../sites/playable/index.html">Period playables</a> ·
+ <a href="../sites/playable/game.html">playable · game</a> ·
+ <a href="../sites/reddit/index.html">reddit</a> ·
+ <a href="../sites/reddit/about.html">reddit · about</a> ·
+ <a href="../sites/reddit/ama.html">reddit · ama</a> ·
+ <a href="../sites/snapchat/index.html">Snapchat</a> ·
+ <a href="../sites/soundcloud/index.html">SoundCloud</a> ·
+ <a href="../sites/soundcloud/about.html">soundcloud · about</a> ·
+ <a href="../sites/soundcloud/track.html">soundcloud · track</a> ·
+ <a href="../sites/spotify/index.html">Spotify</a> ·
+ <a href="../sites/trello/index.html">Trello</a> ·
+ <a href="../sites/uber/index.html">Uber</a> ·
+ <a href="../sites/waze/index.html">Waze</a> ·
+ <a href="../sites/wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
+ <a href="../sites/windows8/index.html">Windows 8</a> ·
+ <a href="../sites/windows8/about.html">windows8 · about</a> ·
+ <a href="../sites/youtube/about.html">About YouTube</a> ·
+ <a href="../sites/youtube/gangnam.html">youtube · gangnam</a> ·
+ <a href="../sites/youtube/watch.html">youtube · watch</a>
+</p>
+</nav>
+<!-- ITT-3X-LINKS:end -->
+
 </body>
 </html>

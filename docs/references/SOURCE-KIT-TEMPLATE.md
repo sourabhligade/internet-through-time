@@ -2,7 +2,8 @@
 
 **Year:** YYYY  
 **Last visit pass:** YYYY-MM-DD  
-**Companion:** [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](../SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md)
+**Companion:** [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](../SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md)  
+**URL gather (any year, 30–130 rows):** [`SOURCE-CATALOG.md`](SOURCE-CATALOG.md) · copy [`SOURCE-CATALOG-TEMPLATE.md`](SOURCE-CATALOG-TEMPLATE.md) → `YYYY/SOURCES.md`. This kit is **one sprint**, not the catalog.
 
 ## S1 Scale (common + expanded)
 

@@ -1,6 +1,7 @@
 # Non-done map — Internet Through Time
 
 **Date:** 2026-08-03  
+**Updated:** 2026-08-14 — leftover execute after the check is [`TO-100-LEFTOVER-TODO-EXECUTE-2026-08-14.md`](TO-100-LEFTOVER-TODO-EXECUTE-2026-08-14.md). Parent waves: [`TO-100-PERCENT-ALL-YEARS-PHASES-STEPS-ROI-2026-08-14.md`](TO-100-PERCENT-ALL-YEARS-PHASES-STEPS-ROI-2026-08-14.md) (W0–W7). **Next complex live UX (one new machine per year, not a second star):** [`COMPLEX-LIVE-UX-PER-YEAR-RESEARCH-2026-08-14.md`](COMPLEX-LIVE-UX-PER-YEAR-RESEARCH-2026-08-14.md). Do not treat older plans below as the active queue.  
 **Updated:** 2026-08-07 — one-thing-per-year **[x]** · residual implement bible.
 **★ Residual after one-thing:** [`RESEARCH-RESIDUAL-FLOW-IMPROVEMENTS-IMPLEMENTATION-PHASES-2026-08-07.md`](RESEARCH-RESIDUAL-FLOW-IMPROVEMENTS-IMPLEMENTATION-PHASES-2026-08-07.md).  
 **★ Complex product machines (next bar · 1994–2020):** [`COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md`](COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md).  
@@ -15,11 +16,11 @@
 **★ 2019 from-scratch research freeze (2026-08-11):** [`2019-READ-FIRST.md`](2019-READ-FIRST.md) · [`2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · [`2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) · [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · **S0 [x] · do not scaffold until asked.**  
 **★ Clone forest 2013–2020 strip:** **[x]** 2026-08-08 · 2013 keeps year-true iOS7/Vine/UberX · 2014 keeps YikYak/Secret/Ello · 2020 keeps year-true P0 quizzes.  
 **Purpose:** Single checklist of what is **still open** vs playable ship.  
-**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2020** + games wing. **2021+ not on disk.**  
+**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2021** + games wing. **2022+ not on disk.**  
 **Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md`](MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md) (per-year authenticity % · what to do) · [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) (year rooms) · [`GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) · [`GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (games densify G0–G11) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md)
 
 **Ship truth (do not re-open as “unbuilt”):**  
-All years **1994–2020** are on disk and hub-unlocked. **2021+ is not playable.** Residual below is polish for open years. Execute leftover: [`2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md`](2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md). · 2018 from-scratch: [`2018-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2018-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md). · 2019: [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md). · 2020: [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md).
+All years **1994–2021** are on disk and hub-unlocked. **2022+ is not playable.** 2021 leftover is S15 P2 (Clubhouse fade · Spaces · Shorts US · Squid Game chip) — do not dest-fill help/faq. Execute leftover: [`2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md`](2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md). · 2021: [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md).
 
 ---
 
@@ -154,11 +155,11 @@ Do **not** treat as backlog unless product scope changes:
 | **2011–2012** | Lean museum-ready | Forest pruned 2026-08-10 · L4 WA only |
 | **2013** | Lean museum-ready A− | Forest pruned 49 HTML · L4 WA |
 | **2014** | **Museum-grade A** | Lean 43 HTML · L4 stills · I8 optional |
-| **2015** | Lean A− | Layer C failed-final closed · WDM crops L4 |
-| **2016** | **Museum-ready A−** | Layer C failed-final closed |
+| **2015** | Lean A− · **95 HTML** · forest pruned | L4 pixels · backup `/tmp/itt-2015-forest-backup-20260814` |
+| **2016** | Lean A− · **51 HTML worktree** / 57 origin | L4 pixels · H0 commit-or-hold · backup `/tmp/itt-2016-forest-backup-20260814` |
 | **2017** | Lean A | Playables year-true · L4 art parked |
 | **2018** | Lean A− | GDPR Manage path · L4 art parked |
-| **2019** | Lean A− | Disney+ trial-trap · Continue Row · L4 art parked |
+| **2019** | Lean A− · **49 HTML** · 5× F1–F5 closed | Disney+ trial-trap · Continue Row · backup `/tmp/itt-2019-forest-backup-20260815` |
 | **2020** | Lean A− | Zoom one-thing · Reels 15s · Flash EOL · S15 rooms · L4 official art parked |
 | **Hub / games** | Live | Commit hub polish when asked; games wing done |
 
@@ -194,7 +195,7 @@ Do **not** treat as backlog unless product scope changes:
 
 **Done:** **27-year** museum playable (**1994–2020**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2011–20 lean years.
 
-**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2021+ not on disk**.
+**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2022+ not on disk**. 2021 A− on disk (ATT gold) · leftover S15 P2 only ([`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md)).
 
 ---
 

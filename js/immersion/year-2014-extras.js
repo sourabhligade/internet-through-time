@@ -29,7 +29,10 @@
     var INST = key("wa-install");
     if (installBtn) {
       try {
-        if (localStorage.getItem(INST)) feedback("Already installed · open chats", status);
+        if (localStorage.getItem(INST)) {
+          feedback("Already installed · open chats", status);
+          showNext(doc);
+        }
       } catch (e0) {}
       installBtn.addEventListener("click", function () {
         var name = (nameIn && nameIn.value || "").trim();
@@ -42,6 +45,7 @@
         try {
           if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
         } catch (e1) {}
+        showNext(doc);
       });
     }
 
@@ -87,6 +91,7 @@
       if (textEl) textEl.value = "";
       render();
       feedback("Sent · " + CHATS, chatSt);
+      showNext(doc);
     });
   }
 
@@ -169,22 +174,38 @@
     render();
     btn.addEventListener("click", function () {
       var name = ((doc.querySelector("[data-ib-name]") || {}).value || "").trim();
-      var nom = ((doc.querySelector("[data-ib-nom]") || {}).value || "").trim();
+      var n1 = ((doc.querySelector("[data-ib-nom], [data-ib-nom-1]") || {}).value || "").trim();
+      var n2 = ((doc.querySelector("[data-ib-nom-2]") || {}).value || "").trim();
+      var n3 = ((doc.querySelector("[data-ib-nom-3]") || {}).value || "").trim();
+      var noms = [];
+      if (n1.length >= 2) noms.push(n1);
+      if (n2.length >= 2) noms.push(n2);
+      if (n3.length >= 2) noms.push(n3);
       var st = doc.querySelector("[data-ib-status]");
       if (!name) {
         feedback("Name required (empty dump does not write).", st, { error: true });
         return;
       }
-      if (nom.length < 2) {
-        feedback("Nominate someone (2+ chars). Soft default is forbidden.", st, { error: true });
+      if (noms.length < 3) {
+        feedback("Nominate three friends — the tag is the loop. Incomplete never writes.", st, { error: true });
         return;
       }
+      var nom = noms.join(", ");
       var list = loadJSON(FEED, []);
       if (!Array.isArray(list)) list = [];
-      list.push({ name: name, nom: nom, ts: Date.now(), real: true, multiStep: true });
+      list.push({ name: name, nom: nom, noms: noms, ts: Date.now(), real: true, multiStep: true });
       saveJSON(FEED, list);
+      saveJSON(key("ice-nom3"), {
+        multiStep: true,
+        real: true,
+        year: "2014",
+        ts: Date.now(),
+        name: name,
+        noms: noms
+      });
       render();
-      feedback("Posted local · " + FEED, st);
+      feedback("Posted local · tagged 3 · " + key("ice-nom3"), st);
+      try { if (typeof showNext === "function") showNext(doc); } catch (eN) { /* */ }
     });
   }
 
@@ -441,9 +462,35 @@
     });
   }
 
+  function bootHyperlapse(doc) {
+    doc = doc || document;
+    var btn = doc.querySelector("[data-hyperlapse-export]");
+    if (!btn || btn.getAttribute("data-bound") === "1") return;
+    btn.setAttribute("data-bound", "1");
+    var st = doc.querySelector("[data-hyperlapse-status]");
+    btn.addEventListener("click", function () {
+      if (!checked(doc, "[data-hyperlapse-clip]") || !checked(doc, "[data-hyperlapse-ig]")) {
+        feedback("Select a clip and IG residual first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("hyperlapse"), {
+        clip: true,
+        ig: true,
+        multiStep: true,
+        real: true,
+        year: "2014",
+        ts: Date.now()
+      });
+      feedback("Exported Hyperlapse (theater) · " + key("hyperlapse"), st);
+      markUsed();
+    });
+  }
+
   function bootAll(doc) {
     doc = doc || document;
+    if (YX.isFillerPage && YX.isFillerPage(doc)) return;
     bootWhatsApp(doc);
+    bootHyperlapse(doc);
     bootIphone(doc);
     bootIceBucket(doc);
     bootWin10(doc);

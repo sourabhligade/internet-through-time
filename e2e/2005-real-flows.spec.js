@@ -374,6 +374,9 @@ test.describe('2005 real flows — direct pages (no shell)', () => {
     const title = 'RealTrack ' + Date.now();
     await page.fill('[data-itunes-buy] [name="title"]', title);
     await page.fill('[data-itunes-buy] [name="artist"]', 'Test Artist');
+    const reqs = page.locator('[data-itunes-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator('[data-itunes-buy] button[type="submit"]').first().click();
     await expect(page.locator('[data-itunes-status]')).toContainText(/Purchased|99/i, { timeout: 5000 });
     await expect(page.locator('[data-itunes-library]')).toContainText(title, { timeout: 5000 });

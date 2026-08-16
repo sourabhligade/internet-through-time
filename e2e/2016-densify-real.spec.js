@@ -108,7 +108,7 @@ const DENSIFY = [
     save: "[data-dyn-save]",
     checks: ["[data-dyn-date]", "[data-dyn-iot]"],
     copy: [/Oct(?:ober)?\s*21/i, /Mirai/i, /no attack code/i],
-    next: /vine|home\.html/i,
+    next: /stem|home\.html/i,
   },
   {
     id: "16-D5 Pixel",
@@ -117,7 +117,7 @@ const DENSIFY = [
     save: "[data-pixel-save]",
     checks: ["[data-pixel-date]", "[data-pixel-not-iphone]"],
     copy: [/Oct(?:ober)?\s*4/i, /not an iPhone/i],
-    next: /home\/index|allo/i,
+    next: /home\/index|home\.html/i,
   },
   {
     id: "16-D5 Home",
@@ -126,7 +126,7 @@ const DENSIFY = [
     save: "[data-ghome-save]",
     checks: ["[data-ghome-price]", "[data-ghome-ship]", "[data-ghome-not-echo]"],
     copy: [/\$129/, /Nov(?:ember)?\s*4/i, /Echo/i],
-    next: /pixel|allo|home\.html/i,
+    next: /pixel|home\.html/i,
   },
   {
     id: "16-D8 Marketplace",
@@ -241,10 +241,12 @@ test.describe("2016 densify copy honesty", () => {
     await expect(page.locator("input[type='password'], input[name*='card'], [data-checkout]")).toHaveCount(0);
   });
 
-  test("Allo is not E2E default", async ({ page }) => {
-    await page.goto("/years/2016/sites/allo/index.html");
-    await expect(page.locator("body")).toContainText(/not.{0,8}E2E default/i);
-    await expect(page.locator("body")).toContainText(/not Google Meet/i);
+  test("STEM is not Nobel and not Fan Hui as the 2016 match", async ({ page }) => {
+    await page.goto("/years/2016/sites/stem/index.html");
+    await expect(page.locator("body")).toContainText(/not.*Nobel|2017 Nobel/i);
+    await expect(page.locator("body")).toContainText(/Fan Hui/i);
+    await expect(page.locator("body")).toContainText(/2015/i);
+    await expect(page.locator("[data-stem-save]")).toBeVisible();
   });
 });
 

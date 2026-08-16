@@ -104,12 +104,25 @@
       if (l) l.value = p.location || "";
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
+        var status = form.querySelector("[data-friendster-status]");
+        var nameVal = n && n.value != null ? String(n.value).replace(/^\s+|\s+$/g, "") : "";
+        if (!nameVal) {
+          if (status) status.textContent = "Display name required — empty save writes nothing.";
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback("Type a display name first.", {
+              doc: doc,
+              status: status,
+              kind: "friendster-profile",
+              flash: false
+            });
+          }
+          return;
+        }
         saveProfile({
-          name: n ? n.value : "",
+          name: nameVal,
           about: a ? a.value : "",
           location: l ? l.value : ""
         });
-        var status = form.querySelector("[data-friendster-status]");
         var msg = "Profile saved (this browser only).";
         if (status) status.textContent = msg;
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {

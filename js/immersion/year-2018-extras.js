@@ -54,19 +54,11 @@
   function hasConsent() {
     var names = [key("gdpr"), "itt18-gdpr"];
     var ss = stores();
-    var i, j, s, raw, k;
+    var i, j, s;
     for (i = 0; i < ss.length; i++) {
       s = ss[i];
       for (j = 0; j < names.length; j++) {
         if (consentBlob(parseStore(s, names[j]))) return true;
-      }
-      try {
-        for (j = 0; j < s.length; j++) {
-          k = s.key(j);
-          if (k && /itt18-gdpr$/.test(k) && consentBlob(parseStore(s, k))) return true;
-        }
-      } catch (e2) {
-        /* */
       }
     }
     return false;
@@ -474,6 +466,12 @@
 
   function bootAll(doc) {
     doc = doc || document;
+    if (YX.isFillerPage && YX.isFillerPage(doc)) {
+      try {
+        doc.documentElement.setAttribute("data-itt-feat-year2018extras", "1");
+      } catch (eFill) { /* */ }
+      return;
+    }
     bootGdpr(doc);
     paintBannerSoon(doc);
     watchConsent(doc);

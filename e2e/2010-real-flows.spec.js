@@ -4,6 +4,7 @@
  * Every interactive action must mutate itt10-* keys and/or DOM after click.
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, fillGmailLogin } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -36,7 +37,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-apps]')).toContainText(
       /Koi|Monkey|Convert|Facebook|Shazam|NYTimes|Camera|Google|Twitter|Pandora|name/i,
       { timeout: 8000 }
@@ -131,7 +132,7 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/farmville/index.html');
     await clearKeys(page, 'itt10-farm');
     await page.reload();
-    await page.locator('[data-farm-plant="wheat"]').click();
+    await completeRealGate(page, '[data-farm-plant="wheat"]');
     const raw = await requireKey(page, 'itt10-farm');
     expect(raw).toMatch(/wheat/i);
     await expect(page.locator('[data-farm-status]')).toContainText(/itt10|Plots|Coins/i);
@@ -141,7 +142,7 @@ test.describe('2010 real flows', () => {
     await page.goto('/years/2010/sites/foursquare/index.html');
     await clearKeys(page, 'itt10-4sq');
     await page.reload();
-    await page.locator('[data-4sq-checkin]').first().click();
+    await completeRealGate(page, '[data-4sq-checkin]');
     await requireKey(page, 'itt10-4sq');
     await expect(page.locator('[data-4sq-list]')).toContainText(/Coffee|Dive|Airport|pts|check/i);
   });
@@ -151,7 +152,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, ['itt10-android-apps', 'itt10-android']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await page.locator('[data-android-install]').first().click();
+    await completeRealGate(page, '[data-android-install]');
     const raw = await page.evaluate(
       () => localStorage.getItem('itt10-android-apps') || localStorage.getItem('itt10-android')
     );
@@ -179,7 +180,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-hulu');
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await completeRealGate(page, '[data-hulu-play]');
     await requireKey(page, 'itt10-hulu');
   });
 
@@ -210,7 +211,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-spotify-eu');
     await page.reload();
     await page.locator('[data-spotify-invite]').fill('EURO-REAL');
-    await page.locator('[data-spotify-join]').click();
+    await completeRealGate(page, '[data-spotify-join]');
     await requireKey(page, 'itt10-spotify-eu');
   });
 
@@ -222,7 +223,7 @@ test.describe('2010 real flows', () => {
     if (await page.locator('[data-dropbox-name]').count()) {
       await page.locator('[data-dropbox-name]').fill('deck-2010.pdf');
     }
-    await page.locator('[data-dropbox-add]').click();
+    await completeRealGate(page, '[data-dropbox-add]');
     await requireKey(page, 'itt10-dropbox-files');
   });
 
@@ -231,7 +232,7 @@ test.describe('2010 real flows', () => {
     await clearKeys(page, 'itt10-ks');
     await page.reload();
     await page.waitForSelector('[data-ks-back]', { timeout: 20000 });
-    await page.locator('[data-ks-back]').first().click();
+    await completeRealGate(page, '[data-ks-back]');
     await requireKey(page, 'itt10-ks');
   });
 
@@ -280,6 +281,7 @@ test.describe('2010 real flows', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-gmail-login]', { timeout: 20000 });
+    await fillGmailLogin(page);
     await page.locator('[data-gmail-login]').evaluate((f) => f.requestSubmit());
     await expect(page.locator('[data-gmail-status]')).toContainText(/Signed|inbox|gmail/i, {
       timeout: 8000,

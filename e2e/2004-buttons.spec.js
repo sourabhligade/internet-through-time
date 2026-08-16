@@ -11,8 +11,8 @@ async function twoStepClick(page, selector) {
 test.describe('2004 museum buttons / multi-page', () => {
   test('thefacebook multi-page nav', async ({ page }) => {
     await page.goto('/years/2004/sites/facebook/index.html');
-    await expect(page.locator('a[href="friends.html"]')).toBeVisible();
-    await page.click('a[href="friends.html"]');
+    await expect(page.locator('a[href="friends.html"]').first()).toBeVisible();
+    await page.locator('a[href="friends.html"]').first().click();
     await expect(page).toHaveURL(/friends\.html/);
     await page.goto('/years/2004/sites/facebook/networks.html');
     await expect(page.locator('body')).toContainText('Harvard');

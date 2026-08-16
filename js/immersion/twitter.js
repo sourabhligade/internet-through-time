@@ -151,6 +151,11 @@
           ts: Date.now()
         });
         save(list.slice(0, 80));
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) {
+          /* */
+        }
         if (input) input.value = "";
         wireCounter(form, doc);
         renderTimeline(doc);

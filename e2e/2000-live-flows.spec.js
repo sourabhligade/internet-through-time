@@ -57,14 +57,24 @@ test.describe('2000 live flows — real links & buttons', () => {
 
   test('Amazon music add-to-cart is live', async ({ page }) => {
     await page.goto('/years/2000/sites/amazon/music.html');
-    await page.waitForTimeout(600);
+    await page.evaluate(() => localStorage.setItem('itt00-amazon-cart', '[]'));
+    await page.reload();
     await page.locator('[data-add-cart]').first().click();
-    await page.waitForTimeout(400);
+    await expect
+      .poll(async () =>
+        page.evaluate(() => {
+          try {
+            return JSON.parse(localStorage.getItem('itt00-amazon-cart') || '[]').length;
+          } catch (e) {
+            return 0;
+          }
+        })
+      )
+      .toBeGreaterThan(0);
     await page.goto('/years/2000/sites/amazon/cart.html');
-    await page.waitForTimeout(500);
     const body = await page.locator('body').innerText();
-    // cart should show item or non-empty cart UI after add
-    expect(body.toLowerCase()).toMatch(/cart|ok computer|radiohead|item|shopping|total|qty|quantity|empty|subtotal/i);
+    expect(body.toLowerCase()).toMatch(/cart|ok computer|radiohead|item|shopping|total|qty|quantity|subtotal/i);
+    expect(body.toLowerCase()).not.toMatch(/your cart is empty/);
   });
 
   test('Napster download path is live', async ({ page }) => {

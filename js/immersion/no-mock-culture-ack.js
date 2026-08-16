@@ -8,64 +8,74 @@
   var ITT = global.ITT || (global.ITT = {});
   var parts = ITT.NoMockParts || (ITT.NoMockParts = {});
 
-  /** @type {Array.<{sel:string, suffix:string, extra?:object, status?:string}>} */
+  /** @type {Array.<{sel:string, suffix:string, extra?:object, status?:string, checks?:string}>} */
   var ACKS = [
     {
       sel: "[data-ig-acquired-ack]",
       suffix: "ig-owned",
       status: "[data-ig-acquired-status]",
+      checks: "[data-ig-acq-date], [data-ig-acq-standalone], [data-req]",
       extra: { owned: true, buyer: "Facebook", price: "~$1B", ack: true }
     },
     {
       sel: "[data-fb-1b-ack]",
       suffix: "fb-1b-ack",
       status: "[data-fb-1b-status]",
+      checks: "[data-fb-1b-oct], [data-fb-1b-like], [data-req]",
       extra: { mau: 1000000000, ack: true }
     },
     {
       sel: "[data-fb-ipo-ack]",
       suffix: "fb-ipo-ack",
       status: "[data-fb-ipo-status]",
+      checks: "[data-ipo-fact], [data-req]",
       extra: { ack: true, price: 38, ticker: "FB", day: "2012-05-18" }
     },
     {
       sel: "[data-lightning-ack]",
       suffix: "lightning",
       status: "[data-lightning-status]",
+      checks: "[data-lightning-need], [data-req]",
       extra: { ack: true, connector: "Lightning", from: "30-pin" }
     },
     {
       sel: "[data-yt-gangnam-ack]",
       suffix: "yt-gangnam",
       status: "[data-yt-gangnam-status]",
+      checks: "[data-yt-gangnam-date], [data-yt-gangnam-no-cdn], [data-req]",
       extra: { ack: true }
     },
     {
       sel: "[data-thesis-ack]",
       suffix: "thesis-ack",
+      checks: "[data-req]",
       extra: { ack: true }
     },
     {
       sel: "[data-ipad-claim]",
       suffix: "ipad-history",
       status: "[data-ipad-status]",
+      checks: "[data-ipad-date], [data-ipad-not-os], [data-req]",
       extra: { interested: true, model: "iPad", ack: true }
     },
     {
       sel: "[data-android-claim]",
       suffix: "android",
       status: "[data-android-status]",
+      checks: "[data-req], [data-android-check]",
       extra: { interested: true, ack: true }
     },
     {
       sel: "[data-ie9-ack]",
       suffix: "ie9",
+      checks: "[data-req]",
       extra: { ack: true }
     },
     {
       sel: "[data-healthcare-ack]",
       suffix: "healthcare-ack",
       status: "[data-healthcare-status]",
+      checks: "[data-req]",
       extra: { event: "healthcare.gov", stress: true, ack: true }
     }
   ];
@@ -106,24 +116,15 @@
 
     var min = parseInt(btn.getAttribute("data-min-checks") || "2", 10);
     if (isNaN(min) || min < 1) min = 2;
-    var checkSel = "[data-req], [data-" + suffix + "-check]";
-    /* IPO facts count as literacy when present */
-    if (spec.sel === "[data-fb-ipo-ack]") {
-      checkSel += ", [data-ipo-fact]";
+    var checkSel =
+      spec.checks || ("[data-req], [data-" + suffix + "-check]");
+    /* Two-step click is a leftover mock. No boxes → never write. */
+    if (!doc.querySelectorAll(checkSel).length) {
+      G.feedback("REAL gate: literacy checks required (not a soft mock).", st, { error: true });
+      return;
     }
-    if (spec.sel === "[data-lightning-ack]") {
-      checkSel += ", [data-lightning-need]";
-    }
-
     if (!G.requireMinChecks(doc, checkSel, min, st)) {
-      if (!doc.querySelectorAll(checkSel).length) {
-        /* No literacy markup: two-step arm on the button itself */
-        if (!G.twoStepArm(btn, st, "Confirm: museum theater only — click again (REAL two-step).")) {
-          return;
-        }
-      } else {
-        return;
-      }
+      return;
     }
     var n = G.countChecked(doc, checkSel);
     var extra = Object.assign({ checks: n }, spec.extra || {});

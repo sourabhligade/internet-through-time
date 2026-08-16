@@ -1,7 +1,7 @@
 # 2017 — Museum grade card
 
 **Date:** 2026-08-11  
-**Status:** **Museum-grade A** · lean from-scratch (2016 pattern) · P2 harvest 2026-08-11 · hub **1994–2017**  
+**Status:** **Museum-grade A−** · lean from-scratch (2016 pattern) · P2 harvest 2026-08-11 · hub **1994–2017** · capture kit now created (`references/2017/CAPTURE-LOG.md` · `assets/period/2017/README-PIXELS.txt`); full **A** still waits L4 official art (failed-final is A-legal)  
 **Prefix:** `itt17`  
 **One-thing:** iPhone X / Face ID Sep 12 (not Fortnite, not Netflix My List)  
 **Game:** Storm Circle (Fortnite-class silhouette)

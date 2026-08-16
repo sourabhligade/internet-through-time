@@ -17,6 +17,7 @@ test.describe('2004 live flows', () => {
   test('gmail login to inbox compose path', async ({ page }) => {
     await page.goto('/years/2004/sites/gmail/index.html');
     await page.waitForSelector('[data-gmail-login]', { timeout: 15000 });
+    await page.fill('[data-gmail-login] [name="pass"]', 'secret');
     await page.locator('[data-gmail-login] button[type="submit"]').click();
     await expect(page).toHaveURL(/inbox\.html/, { timeout: 10000 });
     await expect(page.locator('[data-gmail-list]')).toBeVisible({ timeout: 10000 });
@@ -62,6 +63,7 @@ test.describe('2004 live flows', () => {
     await page.goto('/years/2004/sites/digg/submit.html');
     await page.waitForSelector('[data-digg-list], [data-digg-submit]', { timeout: 15000 });
     await page.fill('[name="title"]', 'Seed digg story');
+    await page.fill('[name="url"]', 'http://example.com/seed-digg');
     await page.locator('[data-digg-submit] button[type="submit"], #digg-submit button[type="submit"]').click();
     await expect(page.locator('[data-digg-status], #digg-status')).toContainText(/Submitted|digg list/i, {
       timeout: 10000,

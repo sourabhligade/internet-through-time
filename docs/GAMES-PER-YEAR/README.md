@@ -36,6 +36,7 @@
 | 2018 | Consent Dash | GDPR CMP Manage path | M | [YEAR-2018.md](YEAR-2018.md) |
 | 2019 | Continue Row | Disney+ Who’s Watching + continue | M | [YEAR-2019.md](YEAR-2019.md) |
 | 2020 | Sus Vote | Among Us–class vote (no sprites) | M | [YEAR-2020.md](YEAR-2020.md) |
+| 2021 | Five Letter | Wordle-class daily guess (no NYT art) | M | [YEAR-2021.md](YEAR-2021.md) · **research only** |
 
 ## Shared integration (every year)
 
@@ -105,8 +106,8 @@ npx playwright test e2e/year-games.spec.js --workers=1
 | 2002 | Room Sticky | `year-2002-roomsticky.js` | `itt02-game-roomsticky` |
 | 2003 | Gags Lite | `year-2003-gagslite.js` | `itt03-game-gagslite` |
 | 2004 | Cubicle Whack | `year-2004-cubewhack.js` | `itt04-game-cubewhack` |
-| 2005 | HoverChop | `heli.js` + boot | `itt05-game-heli` |
-| 2006 | TrailSled | `sled.js` + boot | `itt06-game-sled` |
+| 2005 | HoverChop | `year-2005-heli.js` | `itt05-game-heli` |
+| 2006 | TrailSled | `year-2006-sled.js` | `itt06-game-sled` |
 | 2007 | Box Shift | `year-2007-boxshift.js` | `itt07-game-boxshift` |
 | 2008 | Tap Grid Free | `year-2008-tapgrid.js` | `itt08-game-tapgrid` |
 | 2009 | Plot Neighbors | `year-2009-plotneighbors.js` | `itt09-game-plotneighbors` |

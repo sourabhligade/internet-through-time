@@ -7,6 +7,16 @@ const { test, expect } = require('@playwright/test');
 const { enterYear, killOverlays } = require('./helpers');
 
 test.describe('2013 shell honesty (visitor-facing)', () => {
+  test('Start banner is Windows 7 not XP; toolbar honesty line present', async ({ page }) => {
+    await page.goto('/years/2013/index.html');
+    await expect(page.locator('.start-banner-text')).toContainText(/Windows\s*7/i);
+    await expect(page.locator('.start-banner-text')).not.toContainText(/XP/);
+    await expect(page.locator('.itt-shell-honesty')).toContainText(/IE7 continuity|IE9/i);
+    const html = await page.content();
+    expect(html).toMatch(/Open Location in Internet Explorer 9/);
+    expect(html).not.toMatch(/Shut down Windows XP/);
+  });
+
   test('config titleMap home/about are 2013 not 2004', async ({ page }) => {
     await enterYear(page, '2013');
     const titles = await page.evaluate(() => {

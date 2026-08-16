@@ -1,7 +1,9 @@
 # TO 100% — Implementation plans by year
 
 **Created:** 2026-07-27  
-**Updated:** 2026-08-05 — hub **1994–2013** playable
+**Updated:** 2026-08-11 — hub **1994–2020** playable  
+**★ Active execute bible (all years, scoreboard bar, waves W0–W7):** [`../TO-100-PERCENT-ALL-YEARS-PHASES-STEPS-ROI-2026-08-14.md`](../TO-100-PERCENT-ALL-YEARS-PHASES-STEPS-ROI-2026-08-14.md)  
+**★ Next layer — complex live UX (one new use-loop per year):** [`../COMPLEX-LIVE-UX-PER-YEAR-RESEARCH-2026-08-14.md`](../COMPLEX-LIVE-UX-PER-YEAR-RESEARCH-2026-08-14.md)  
 **Canonical ship truth:** [`../DISK-TRUTH.md`](../DISK-TRUTH.md) · residual: [`../NON-DONE.md`](../NON-DONE.md)  
 **Purpose:** One detailed, research-backed todo plan **per year** so we can implement **one year at a time** to strict 100% completion.  
 **Rule:** Follow sources already in repo research MDs + CAPTURE-LOGs. **Do not invent brand pixels.** If harvest fails → log `[failed]` / `[failed-final]` and keep honest RECON.

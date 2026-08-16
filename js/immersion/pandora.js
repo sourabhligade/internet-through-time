@@ -77,6 +77,11 @@
       stn.ts = Date.now();
       saveJSON(key, stn);
       saveJSON(sum, stn);
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) {
+        /* */
+      }
     }
 
     function currentTrack() {

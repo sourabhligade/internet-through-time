@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-02  
 **Purpose:** **Single entry document** for museum year **2013**. Read before densifying, scaffolding, harvesting pixels, or writing tests.  
-**Disk truth today:** Hub **1994–2013** · **`years/2013/` live MVP** · storage **`itt13`**  
+**Disk truth today:** Hub **1994–2013** · **`years/2013/` live · 61 HTML** · storage **`itt13`**  
 **Shell:** dual honesty **Win7 residual + Win8.1 product** · Chrome dominant narrative  
 **Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) · grade [`2013-MUSEUM-GRADE.md`](2013-MUSEUM-GRADE.md)  
 **Legal:** Educational reconstruction only. **localStorage theater only.** **Never invent brand pixels.**
@@ -259,7 +259,7 @@ docs/references/2013/
 | Layer | Status |
 |-------|--------|
 | Research harvest | **[x]** 2026-08-02 |
-| Scaffold `years/2013/` | **[x]** live MVP |
+| Scaffold `years/2013/` | **[x]** live · 61 HTML |
 | e2e | **[x]** `npm run test:e2e:2013` |
 | Hub unlock | **[x]** 1994–2013 |
 

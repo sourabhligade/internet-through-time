@@ -299,6 +299,8 @@ test.describe("2014 REAL flows", () => {
     expect(await page.evaluate(() => localStorage.getItem("itt14-icebucket-posts"))).toBeFalsy();
     await page.fill("[data-ib-name]", "Pat");
     await page.fill("[data-ib-nom]", "Sam");
+    await page.fill("[data-ib-nom-2]", "Alex");
+    await page.fill("[data-ib-nom-3]", "Jordan");
     await page.locator("[data-ib-post]").click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt14-icebucket-posts"))).toBeTruthy();
   });
@@ -439,5 +441,47 @@ test.describe("2014 REAL flows", () => {
     await page.locator("[data-req]").nth(1).check();
     await page.locator("[data-itt-real-save]").click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt14-hb-intro"))).toBeTruthy();
+  });
+
+  test("YouTube leftover: empty upload never writes; title writes itt14-yt-did-upload", async ({ page }) => {
+    await page.goto("/years/2014/sites/youtube/index.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt14-yt-did-upload");
+      localStorage.removeItem("itt14-yt-uploads");
+    });
+    await page.reload();
+    await expect(page.locator("[data-yt-upload]")).toBeVisible({ timeout: 15000 });
+    await page.waitForFunction(() => {
+      const f = document.querySelector("[data-yt-upload]");
+      return !!(f && f.getAttribute("data-yt-bound") === "1");
+    }, null, { timeout: 15000 });
+    await page.locator('[data-yt-upload] button[type="submit"]').click();
+    expect(await page.evaluate(() => localStorage.getItem("itt14-yt-did-upload"))).toBeFalsy();
+    await page.fill('[data-yt-upload] [name="title"]', "2014 leftover clip");
+    await page.locator('[data-yt-upload] button[type="submit"]').click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt14-yt-did-upload"))).toMatch(/multiStep|real/i);
+  });
+
+  test("YouTube leftover popular: incomplete never writes; two checks write itt14-youtube", async ({ page }) => {
+    await page.goto("/years/2014/sites/youtube/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt14-youtube"));
+    await page.reload();
+    const save = page.locator('[data-itt-popular-save][data-storage-key="youtube"]');
+    await expect(save).toBeVisible({ timeout: 15000 });
+    await save.click();
+    expect(await page.evaluate(() => localStorage.getItem("itt14-youtube"))).toBeFalsy();
+    const boxes = page.locator("[data-popular-req]");
+    await boxes.nth(0).check({ force: true });
+    await boxes.nth(1).check({ force: true });
+    await save.click();
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt14-youtube"))).toMatch(/multiStep|real/i);
+    await expect(page.locator("[data-next-flow] a[href*='whatsapp']").first()).toBeVisible();
+  });
+
+  test("YouTube leftover watch page loads player", async ({ page }) => {
+    const res = await page.goto("/years/2014/sites/youtube/watch.html?v=Me%20at%20the%20zoo");
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.locator("[data-yt-player]")).toBeVisible();
+    await expect(page.locator("[data-yt-title]")).toContainText(/zoo|Me at/i);
   });
 });

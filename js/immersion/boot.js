@@ -144,7 +144,18 @@
       ["cnn", "immersion/facebook.js"],
       ["wave", "immersion/wave.js"],
       ["sourceforge", "immersion/sourceforge.js"],
-      ["oneThingMachines", "immersion/one-thing-machines.js"]
+      ["oneThingMachines", "immersion/one-thing-machines.js"],
+      ["bbs", "immersion/source-flows.js"],
+      ["zengarden", "immersion/source-flows.js"],
+      ["neocities", "immersion/source-flows.js"],
+      ["spacehey", "immersion/source-flows.js"],
+      ["textfiles", "immersion/source-flows.js"],
+      ["folklore", "immersion/source-flows.js"],
+      ["elon", "immersion/source-flows.js"],
+      ["macromedia", "immersion/plugin.js"],
+      ["flashplayer", "immersion/plugin.js"],
+      ["flash", "immersion/plugin.js"],
+      ["sourceforge", "immersion/sourceforge.js"]
     ];
     var priority = [];
     var seen = {};
@@ -159,20 +170,21 @@
         }
       }
     }
-    /* shared first — nav / flash / tour */
+    /* CORE first — honesty + 5× + packs must not wait 1.2s (that felt like mock). */
     add("immersion/shared.js");
-    /* year extras (Stories/GO/REAL multipage) must boot with the page, not idle-deferred */
+    add("immersion/residual-placard.js");
+    add("immersion/real-gate.js");
+    add("immersion/residual-real.js");
     add("immersion/real-flow.js");
-    /* Kit before extras. Extras IIFEs bind ITT.YearExtras at parse time and
-       abort if the kit is missing — it must not sit in deferred rest. */
     add("immersion/year-extras-kit.js");
+    add("immersion/year-5x-pack.js");
+    add("immersion/year-true-packs.js");
+    add("immersion/one-thing-machines.js");
+    add("immersion/source-flows.js");
     var yi;
     for (yi = 0; yi < all.length; yi++) {
       if (/immersion\/year-\d{4}-extras\.js$/.test(all[yi])) add(all[yi]);
     }
-    /* real-flow gates used on About/product literacy panels */
-    add("immersion/real-flow.js");
-    add("immersion/one-thing-machines.js");
     var h;
     for (h = 0; h < hints.length; h++) {
       var key = hints[h][0];
@@ -185,15 +197,40 @@
         if (key === "maps") add("immersion/housingmaps.js");
       }
     }
-    /* guestbook / search pages */
+    if (
+      path.indexOf("/macromedia") !== -1 ||
+      path.indexOf("/flash") !== -1 ||
+      path.indexOf("/plugin") !== -1
+    ) {
+      add("immersion/plugin.js");
+    }
+    if (
+      path.indexOf("/pages/") !== -1 ||
+      path.indexOf("/map.html") !== -1
+    ) {
+      add("immersion/flow-map.js");
+    }
+    if (path.indexOf("/playable") !== -1) {
+      add("immersion/year-playable.js");
+    }
     if (
       path.indexOf("guestbook") !== -1 ||
       path.indexOf("/search") !== -1 ||
-      path.indexOf("whitehouse") !== -1
+      path.indexOf("whitehouse") !== -1 ||
+      path.indexOf("/geocities/") !== -1 ||
+      path.indexOf("/personal/") !== -1
     ) {
       add("immersion/guestbook-search.js");
     }
-    /* 1994 media gold — CSotD ?pick= + FishCam timer must not wait on deferred rest */
+    try {
+      if (
+        typeof document !== "undefined" &&
+        document.querySelector &&
+        document.querySelector("[data-guestbook], form[data-gb-form], [data-search]")
+      ) {
+        add("immersion/guestbook-search.js");
+      }
+    } catch (eGb) { /* */ }
     if (
       path.indexOf("/csotd") !== -1 ||
       path.indexOf("/fishcam") !== -1 ||
@@ -201,16 +238,9 @@
     ) {
       add("immersion/media-1994.js");
     }
-    var rest = [];
-    var j;
-    for (j = 0; j < all.length; j++) {
-      if (!seen[all[j]]) rest.push(all[j]);
-    }
-    /* If nothing page-specific matched, keep full list as priority (home/about). */
-    if (priority.length <= 1 && rest.length) {
-      return { priority: all.slice(), rest: [] };
-    }
-    return { priority: priority, rest: rest };
+    /* Unused product engines stay off this page. A new iframe loads the
+       matching module on navigate — loading all 30 on YouTube is the 2005+ lag. */
+    return { priority: priority, rest: [] };
   }
 
   function loadAll(base, rels) {
@@ -292,6 +322,11 @@
         return loadScript(base + "immersion/registry.js");
       })
       .then(function () {
+        return loadScript(base + "immersion/layers.js").catch(function () {
+          /* layers.js is optional chrome; missing file must not kill boot */
+        });
+      })
+      .then(function () {
         var map = ITT.IMMERSION_FEATURES_BY_YEAR || {};
         var features = map[YEAR] || map["1995"] || [];
         var split = splitFeaturesForPage(features);
@@ -367,7 +402,11 @@
       });
   }
 
-  ITT.ImmersionBoot = { start: start, loadScript: loadScript };
+  ITT.ImmersionBoot = {
+    start: start,
+    loadScript: loadScript,
+    splitFeaturesForPage: splitFeaturesForPage
+  };
 
   // Auto-start when year already set (year stub loaded this file)
   if (ITT._immersionYear) {

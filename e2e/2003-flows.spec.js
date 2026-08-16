@@ -57,6 +57,9 @@ test.describe('2003 hard flows', () => {
     await waitForImmersion(page, '2003');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/99|Music Store|iTunes/i, { timeout: 15000 });
+    const reqs = frame.locator('[data-itunes-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await frame.locator('[data-itunes-buy] button[type="submit"]').first().click();
     await expect(frame.locator('[data-itunes-status]')).toContainText(/Purchased|99/i, { timeout: 10000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt03-itunes-library'));

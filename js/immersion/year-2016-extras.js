@@ -809,6 +809,111 @@
     });
   }
 
+  function playChirpTheater(st) {
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) {
+        feedback("Chirp played (theater · no Web Audio)", st);
+        return;
+      }
+      var ctx = new AC();
+      var osc = ctx.createOscillator();
+      var gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(80, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(420, ctx.currentTime + 0.85);
+      gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.9);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.92);
+      feedback("Chirp played (theater)", st);
+    } catch (e) {
+      feedback("Chirp played (theater)", st);
+    }
+  }
+
+  function bootStem(doc) {
+    doc = doc || document;
+    var chirp = doc.querySelector("[data-stem-chirp]");
+    if (chirp && chirp.getAttribute("data-bound") !== "1") {
+      chirp.setAttribute("data-bound", "1");
+      chirp.addEventListener("click", function () {
+        playChirpTheater(doc.querySelector("[data-stem-chirp-status]"));
+        chirp.classList.add("is-on");
+      });
+    }
+    bootLiteracySave(doc, {
+      btn: "[data-stem-save]",
+      need: "[data-stem-ligo]",
+      status: "[data-stem-status]",
+      checks: "[data-stem-ligo], [data-stem-go]",
+      min: 2,
+      suffix: "stem",
+      block: "Complete LIGO + AlphaGo honesty first.",
+      ok: "STEM literacy saved · 2016 homepage science",
+      payload: function () {
+        return {
+          ligo: true,
+          alphago: true,
+          shipped: "2016-02-11",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootJio(doc) {
+    bootLiteracySave(doc, {
+      btn: "[data-jio-save]",
+      need: "[data-jio-launch]",
+      status: "[data-jio-status]",
+      checks: "[data-jio-launch], [data-jio-data], [data-jio-lookback]",
+      min: 3,
+      suffix: "jio",
+      block: "Complete launch + data window + 100M lookback checks first.",
+      ok: "Jio Welcome Offer literacy saved · free through 31 Dec",
+      payload: function () {
+        return {
+          launch: "2016-09-05",
+          dataEnds: "2016-12-31",
+          lookback100m: "2017-02-21",
+          year: "2016",
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        };
+      }
+    });
+  }
+
+  function bootRevealExisting(doc) {
+    doc = doc || document;
+    if (!doc.querySelector("[data-itt16-next], [data-next-flow]")) return;
+    var pairs = [
+      { sel: '[data-storage-key="thesis-ack"]', suffix: "thesis-ack" },
+      { sel: '[data-storage-key="iphone7-jack"]', suffix: "iphone7-jack" },
+      { sel: '[data-storage-key="iphone7"]', suffix: "iphone7" },
+      { sel: '[data-storage-key="vine-end"]', suffix: "vine-end" },
+      { sel: '[data-storage-key="wa-e2e"]', suffix: "wa-e2e" },
+      { sel: '[data-storage-key="rift"]', suffix: "rift" },
+      { sel: "[data-ig-story-add]", suffix: "ig-stories" },
+      { sel: "[data-pogo-save]", suffix: "pogo" }
+    ];
+    var i;
+    for (i = 0; i < pairs.length; i++) {
+      if (doc.querySelector(pairs[i].sel) && loadJSON(key(pairs[i].suffix), null)) {
+        revealNext(doc);
+        return;
+      }
+    }
+  }
+
   function bootMarketplace(doc) {
     doc = doc || document;
     var btn = doc.querySelector("[data-mp-save]");
@@ -849,6 +954,7 @@
 
   function bootAll(doc) {
     doc = doc || document;
+    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
     bootIgStories(doc);
     bootIgFeed(doc);
     bootPogo(doc);
@@ -867,6 +973,9 @@
     bootFbLive(doc);
     bootPixel(doc);
     bootMarketplace(doc);
+    bootStem(doc);
+    bootJio(doc);
+    bootRevealExisting(doc);
   }
 
   var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);

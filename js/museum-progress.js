@@ -181,7 +181,7 @@
       { path: "sites/windows10/index.html", label: "Win10 free", blurb: "Jul 29 upgrade · Edge.", match: "/windows10/" }),
     "2016": yearVisitTour("2016",
       { path: "sites/instagram/stories.html", label: "Stories", blurb: "Aug 2 · 24h · not Reels.", match: "/instagram/stories" },
-      { path: "sites/pogo/index.html", label: "Pokémon GO", blurb: "Jul 6 · no sprites · no GPS.", match: "/pogo/" }),
+      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Jul 6 · no sprites · no GPS.", match: "/pokemongo/" }),
     "2017": yearVisitTour("2017",
       { path: "sites/iphone/x.html", label: "Face ID", blurb: "Sep 12 · no home button · not XS.", match: "/iphone/x" },
       { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Sep 26 · free · 100 · no official art.", match: "/fortnite/" }),
@@ -193,7 +193,10 @@
       { path: "sites/fortnite/marshmello.html", label: "Marshmello", blurb: "Feb 2 · 10.7M.", match: "/marshmello" }),
     "2020": yearVisitTour("2020",
       { path: "sites/zoom/index.html", label: "Zoom", blurb: "Join · mute · chat · leave.", match: "/zoom" },
-      { path: "sites/instagram/reels.html", label: "Reels", blurb: "Aug 5 · 15 seconds.", match: "/reels" })
+      { path: "sites/instagram/reels.html", label: "Reels", blurb: "Aug 5 · 15 seconds.", match: "/reels" }),
+    "2021": yearVisitTour("2021",
+      { path: "sites/att/index.html", label: "ATT", blurb: "26 Apr · Not to Track.", match: "/att" },
+      { path: "sites/signal/index.html", label: "Signal", blurb: "Jan exodus · Facebook-share scare.", match: "/signal" })
   };
 
   var TRAILS = {
@@ -208,7 +211,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2020; y++) {
+    for (y = 1994; y <= 2021; y++) {
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -653,7 +656,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2020; y++) years.push(String(y));
+    for (y = 1994; y <= 2021; y++) years.push(String(y));
     var total = totalStamps();
     var nYears = yearsStamped().length;
     var night = getNight();

@@ -3,7 +3,7 @@
 **Date:** 2026-08-13  
 **Purpose:** Single entry document for museum year **2019**. Read before densifying, harvesting pixels, rewriting rooms, or expanding tests.  
 **Process:** [`OPERATING-PROCESS.md`](OPERATING-PROCESS.md) §4 (new year pipeline).  
-**Disk truth (this branch):** `years/2019/` exists from prior scaffold · hub card unlocked · `itt19` prefix · **research freeze now re-locks thesis/scale/bans** — implementers re-align rooms to this pack, do not invent beyond it.  
+**Disk truth (this branch):** `years/2019/` **lean 52 HTML** (forest pruned 2026-08-15 · backup `/tmp/itt-2019-forest-backup-20260815`) · hub card unlocked · `itt19` prefix · 5× F1–F5 on keep-set · **research freeze now re-locks thesis/scale/bans** — implementers re-align rooms to this pack, do not invent beyond it.  
 **Shell honesty (locked):** Windows 10 mass default · Chrome habit · always-on broadband · no invent Win11 / Chromium-Edge-as-only-browser as 2019 exclusive story  
 **Companions:**  
 - [`2019-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md`](2019-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md) ← sources visited  

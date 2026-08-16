@@ -1,7 +1,6 @@
 /**
- * Immersion config — 2015
- * Thesis: Watch ships · Win10 free upgrade · Edge · go live · Apple Music ·
- * content blockers · Google Photos · site count −11% · bans Stories/Reactions
+ * Immersion config — 2015 (lean)
+ * Thesis: Watch ships · Win10 free · Edge · go live · Music · Photos
  */
 (function (global) {
   "use strict";
@@ -13,101 +12,35 @@
     storagePrefix: "itt15",
     features: {
       year2015extras: true,
+      yearplayable: true,
       flowMap: true,
       nav: true,
-      amazon: true,
-      auction: true,
-      geocities: true,
-      google: true,
-      excite: true,
-      yahoo: true,
-      napster: true,
-      blogger: true,
-      slashdot: true,
-      technorati: true,
-      plugin: true,
-      friendster: true,
-      kazaa: true,
-      myspace: true,
-      itunes: true,
-      wordpress: true,
-      linkedin: true,
-      adsense: true,
-      bloglines: true,
-      gmail: true,
-      facebook: true,
-      flickr: true,
-      youtube: true,
-      maps: true,
-      reddit: true,
-      digg: true,
-      podcasts: true,
-      delicious: true,
-      housingmaps: true,
-      feedburner: true,
-      twitter: true,
-      docs: true,
-      aws: true,
-      reader: true,
-      iphone: true,
-      appstore: true,
       chromeBrowser: true,
-      android: true,
-      hulu: true,
-      netflix: true,
-      farmville: true,
-      bing: true,
-      foursquare: true,
-      kickstarter: true,
-      wave: true,
-      instagram: true,
-      pinterest: true,
-      spotify: true,
-      googleplus: true,
       snapchat: true,
-      siri: true,
-      timeline: true,
-      instagramAndroid: true,
-      instagramVideo: true,
-      snapchatStories: true,
-      vine: true,
-      ios7: true,
-      iphone5s: true,
-      iphone6: true,
-      applePay: true,
-      bendgate: true,
-      whatsapp: true,
-      heartbleed: true,
-      icebucket: true,
-      serialPodcast: true,
-      billionSites: true,
-      win10tp: true,
-      materialDesign: true,
-      win81: true,
-      snowden: true,
-      uberX: true,
-      win8: true
+      amazon: false,
+      auction: false,
+      geocities: false,
+      napster: false
     },
-    navSubtitle: "Win7 · Chrome · WhatsApp · Heartbleed · iPhone 6 · 1B",
+    navSubtitle: "Watch ships · Win10 free · Edge · go live",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "WhatsApp", href: "sites/whatsapp/index.html", match: "/whatsapp/" },
-      { label: "Heartbleed", href: "sites/heartbleed/index.html", match: "/heartbleed/" },
-      { label: "iPhone 6", href: "sites/iphone/index.html", match: "/iphone/" },
-      { label: "Ice Bucket", href: "sites/icebucket/index.html", match: "/icebucket/" },
-      { label: "1B sites", href: "sites/billion/index.html", match: "/billion/" },
-      { label: "Chrome", href: "sites/chrome/index.html", match: "/chrome/" },
-      { label: "Win10 TP", href: "sites/windows10/index.html", match: "/windows10/" }
+      { label: "Watch", href: "sites/apple/watch.html", match: "/apple/watch" },
+      { label: "Win10", href: "sites/windows10/index.html", match: "/windows10/" },
+      { label: "Edge", href: "sites/edge/index.html", match: "/edge/" },
+      { label: "Periscope", href: "sites/periscope/index.html", match: "/periscope/" },
+      { label: "Music", href: "sites/applemusic/index.html", match: "/applemusic/" },
+      { label: "Photos", href: "sites/googlephotos/index.html", match: "/googlephotos/" },
+      { label: "Chrome", href: "sites/chrome/index.html", match: "/chrome/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "WhatsApp", href: "sites/whatsapp/index.html" },
-      { label: "Heartbleed", href: "sites/heartbleed/index.html" },
-      { label: "iPhone 6", href: "sites/iphone/index.html" },
-      { label: "Ice Bucket", href: "sites/icebucket/index.html" },
-      { label: "1B sites", href: "sites/billion/index.html" },
-      { label: "Serial", href: "sites/serial/index.html" },
+      { label: "Watch", href: "sites/apple/watch.html" },
+      { label: "Win10", href: "sites/windows10/index.html" },
+      { label: "Edge", href: "sites/edge/index.html" },
+      { label: "Periscope", href: "sites/periscope/index.html" },
+      { label: "Music", href: "sites/applemusic/index.html" },
       { label: "What's New", href: "pages/whats-new.html" },
       { label: "About 2015", href: "pages/about.html" }
     ],
@@ -117,64 +50,56 @@
         label: "About 2015",
         href: "pages/about.html",
         match: "/about",
-        hint: "968M June · 1B Sep · bans",
-        doneMessage: "Platform money · bigger phones · open-web panic."
+        hint: "863M June · −11% · 1B dip",
+        doneMessage: "Watch ships · free Win10 · go live."
       },
       {
-        id: "whatsapp",
-        label: "WhatsApp",
-        href: "sites/whatsapp/index.html",
-        match: "/whatsapp/",
-        hint: "Feb 19 · ~$19B deal · chat",
-        doneMessage: "Messaging empire begins."
+        id: "watch",
+        label: "Apple Watch",
+        href: "sites/apple/watch.html",
+        match: "/apple/watch",
+        hint: "Apr 24 · face · band · shipped",
+        doneMessage: "The wrist computer ships."
       },
       {
-        id: "heartbleed",
-        label: "Heartbleed",
-        href: "sites/heartbleed/index.html",
-        match: "/heartbleed/",
-        hint: "CVE-2015-0160 · rotate",
-        doneMessage: "Open-web SSL panic literacy."
+        id: "win10",
+        label: "Windows 10",
+        href: "sites/windows10/index.html",
+        match: "/windows10/",
+        hint: "Jul 29 · free upgrade · not TP",
+        doneMessage: "The last free Windows."
       },
       {
-        id: "iphone6",
-        label: "iPhone 6",
-        href: "sites/iphone/index.html",
-        match: "/iphone/",
-        hint: "4.7 · 5.5 · Pay · Bendgate",
-        doneMessage: "Bigger phones become default."
+        id: "edge",
+        label: "Edge",
+        href: "sites/edge/index.html",
+        match: "/edge/",
+        hint: "EdgeHTML · not Chromium",
+        doneMessage: "Spartan ships with Win10."
       },
       {
-        id: "icebucket",
-        label: "Ice Bucket",
-        href: "sites/icebucket/index.html",
-        match: "/icebucket/",
-        hint: "Jul–Aug virality",
-        doneMessage: "Challenge culture industrially scales."
+        id: "periscope",
+        label: "Periscope",
+        href: "sites/periscope/index.html",
+        match: "/periscope/",
+        hint: "Mar 26 · Go LIVE",
+        doneMessage: "Livestream from a phone."
       },
       {
-        id: "billion",
-        label: "1B websites",
-        href: "sites/billion/index.html",
-        match: "/billion/",
-        hint: "Sep 2015 milestone",
-        doneMessage: "The web first crosses one billion sites."
+        id: "music",
+        label: "Apple Music",
+        href: "sites/applemusic/index.html",
+        match: "/applemusic/",
+        hint: "Jun 30 · 3-mo trial · Beats 1",
+        doneMessage: "Streaming with a radio station."
       },
       {
         id: "chrome",
         label: "Chrome",
         href: "sites/chrome/index.html",
         match: "/chrome/",
-        hint: "desktop #1 residual",
-        doneMessage: "Chrome still leads the desktop story."
-      },
-      {
-        id: "win10tp",
-        label: "Win10 TP",
-        href: "sites/windows10/index.html",
-        match: "/windows10/",
-        hint: "Sep 30 · preview only",
-        doneMessage: "Technical Preview — not retail mass OS."
+        hint: "desktop habit",
+        doneMessage: "Chrome remains the habit browser."
       }
     ]
   };

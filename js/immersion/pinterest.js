@@ -49,6 +49,15 @@
     var i;
     for (i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", function (ev) {
+        var reqs = doc.querySelectorAll("[data-req]");
+        var cn = 0;
+        var ci;
+        for (ci = 0; ci < reqs.length; ci++) if (reqs[ci].checked) cn++;
+        if (reqs.length && cn < reqs.length) {
+          var st0 = doc.querySelector("[data-pin-status]");
+          if (st0) st0.textContent = "Confirm public-Aug + not-TikTok first (empty pin writes nothing).";
+          return;
+        }
         var id = ev.currentTarget.getAttribute("data-pin-save") || "pin";
         var list = load();
         list.unshift({ id: id, ts: Date.now() });
@@ -67,6 +76,9 @@
         } else if (ITT._immersionApi && ITT._immersionApi.showFlash) {
           ITT._immersionApi.showFlash(msg);
         }
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) { /* */ }
       });
     }
   }

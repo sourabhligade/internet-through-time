@@ -35,8 +35,19 @@ test.describe('2004 hard flows', () => {
     await goInFrame(page, 'sites/gmail/index.html');
     await waitForImmersion(page, '2004');
     const frame = contentFrame(page);
+    await frame.locator('[data-gmail-login] [name="email"]').fill('you@gmail.com');
+    await frame.locator('[data-gmail-login] [name="pass"]').fill('secret');
     await frame.locator('[data-gmail-login] button[type="submit"]').click();
-    await expect(frame.locator('[data-gmail-list]')).toBeVisible({ timeout: 10000 });
+    await page.waitForFunction(() => {
+      try {
+        const f = document.getElementById('content');
+        const p = (f && f.contentWindow && f.contentWindow.location.pathname) || '';
+        return /inbox\.html/.test(p);
+      } catch (e) {
+        return false;
+      }
+    }, null, { timeout: 15000 });
+    await expect(contentFrame(page).locator('[data-gmail-list]')).toBeVisible({ timeout: 10000 });
 
     const subject = 'HardFlow ' + Date.now();
     await goInFrame(page, 'sites/gmail/compose.html');
@@ -158,6 +169,7 @@ test.describe('2004 hard flows', () => {
     await waitForImmersion(page, '2004');
     const frame = contentFrame(page);
     await frame.locator('[data-digg-submit] [name="title"], #digg-submit [name="title"]').fill(title);
+    await frame.locator('[data-digg-submit] [name="url"], #digg-submit [name="url"]').fill('http://example.com/digg-flow');
     await frame.locator('[data-digg-submit] button[type="submit"], #digg-submit button[type="submit"]').click();
     await expect(frame.locator('[data-digg-status], #digg-status')).toContainText(/Submitted|digg list/i, {
       timeout: 10000,

@@ -1,0 +1,1352 @@
+[
+  {
+    "year": "1994",
+    "id": "F1",
+    "key": "itt94-infoseek",
+    "suffix": "infoseek",
+    "path": "/years/1994/sites/infoseek/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../yahoo/index.html"
+  },
+  {
+    "year": "1994",
+    "id": "F2",
+    "key": "itt94-yahoo-dir",
+    "suffix": "yahoo-dir",
+    "path": "/years/1994/sites/yahoo/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../webcrawler/index.html"
+  },
+  {
+    "year": "1994",
+    "id": "F3",
+    "key": "itt94-webcrawler",
+    "suffix": "webcrawler",
+    "path": "/years/1994/sites/webcrawler/index.html",
+    "kind": "reuse",
+    "field": "query",
+    "next": "../ncsa/index.html"
+  },
+  {
+    "year": "1994",
+    "id": "F4",
+    "key": "itt94-whatsnew",
+    "suffix": "whatsnew",
+    "path": "/years/1994/sites/ncsa/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../mcom/index.html"
+  },
+  {
+    "year": "1994",
+    "id": "F5",
+    "key": "itt94-nn-url",
+    "suffix": "nn-url",
+    "path": "/years/1994/sites/mcom/index.html",
+    "kind": "reuse",
+    "field": "url",
+    "next": "../csotd/index.html"
+  },
+  {
+    "year": "1995",
+    "id": "F1",
+    "key": "itt95-aol",
+    "suffix": "aol",
+    "path": "/years/1995/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../prodigy/index.html"
+  },
+  {
+    "year": "1995",
+    "id": "F2",
+    "key": "itt95-prodigy",
+    "suffix": "prodigy",
+    "path": "/years/1995/sites/prodigy/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../infoseek/index.html"
+  },
+  {
+    "year": "1995",
+    "id": "F3",
+    "key": "itt95-infoseek",
+    "suffix": "infoseek",
+    "path": "/years/1995/sites/infoseek/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../compuserve/index.html"
+  },
+  {
+    "year": "1995",
+    "id": "F4",
+    "key": "itt95-compuserve",
+    "suffix": "compuserve",
+    "path": "/years/1995/sites/compuserve/index.html",
+    "kind": "new",
+    "field": "go",
+    "next": "../yahoo/index.html"
+  },
+  {
+    "year": "1995",
+    "id": "F5",
+    "key": "itt95-yahoo",
+    "suffix": "yahoo",
+    "path": "/years/1995/sites/yahoo/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../amazon/ssl-checkout.html"
+  },
+  {
+    "year": "1996",
+    "id": "F1",
+    "key": "itt96-msn",
+    "suffix": "msn",
+    "path": "/years/1996/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../infoseek/index.html"
+  },
+  {
+    "year": "1996",
+    "id": "F2",
+    "key": "itt96-infoseek",
+    "suffix": "infoseek",
+    "path": "/years/1996/sites/infoseek/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../prodigy/index.html"
+  },
+  {
+    "year": "1996",
+    "id": "F3",
+    "key": "itt96-prodigy",
+    "suffix": "prodigy",
+    "path": "/years/1996/sites/prodigy/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../excite/index.html"
+  },
+  {
+    "year": "1996",
+    "id": "F4",
+    "key": "itt96-myexcite",
+    "suffix": "myexcite",
+    "path": "/years/1996/sites/excite/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../hotmail/index.html"
+  },
+  {
+    "year": "1996",
+    "id": "F5",
+    "key": "itt96-hotmail",
+    "suffix": "hotmail",
+    "path": "/years/1996/sites/hotmail/index.html",
+    "kind": "reuse",
+    "field": "to",
+    "next": "../portals/wars.html"
+  },
+  {
+    "year": "1997",
+    "id": "F1",
+    "key": "itt97-msn",
+    "suffix": "msn",
+    "path": "/years/1997/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../bbc/index.html"
+  },
+  {
+    "year": "1997",
+    "id": "F2",
+    "key": "itt97-bbc",
+    "suffix": "bbc",
+    "path": "/years/1997/sites/bbc/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "1997",
+    "id": "F3",
+    "key": "itt97-aol",
+    "suffix": "aol",
+    "path": "/years/1997/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../excite/index.html"
+  },
+  {
+    "year": "1997",
+    "id": "F4",
+    "key": "itt97-excite",
+    "suffix": "excite",
+    "path": "/years/1997/sites/excite/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../lycos/index.html"
+  },
+  {
+    "year": "1997",
+    "id": "F5",
+    "key": "itt97-lycos",
+    "suffix": "lycos",
+    "path": "/years/1997/sites/lycos/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../pointcast/index.html"
+  },
+  {
+    "year": "1998",
+    "id": "F1",
+    "key": "itt98-msn",
+    "suffix": "msn",
+    "path": "/years/1998/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../lycos/index.html"
+  },
+  {
+    "year": "1998",
+    "id": "F2",
+    "key": "itt98-lycos",
+    "suffix": "lycos",
+    "path": "/years/1998/sites/lycos/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "1998",
+    "id": "F3",
+    "key": "itt98-aol",
+    "suffix": "aol",
+    "path": "/years/1998/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../bbc/index.html"
+  },
+  {
+    "year": "1998",
+    "id": "F4",
+    "key": "itt98-bbc",
+    "suffix": "bbc",
+    "path": "/years/1998/sites/bbc/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../google/lucky.html"
+  },
+  {
+    "year": "1998",
+    "id": "F5",
+    "key": "itt98-lucky",
+    "suffix": "lucky",
+    "path": "/years/1998/sites/google/lucky.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "1999",
+    "id": "F1",
+    "key": "itt99-about",
+    "suffix": "about",
+    "path": "/years/1999/sites/about/index.html",
+    "kind": "new",
+    "field": "topic",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "1999",
+    "id": "F2",
+    "key": "itt99-aol",
+    "suffix": "aol",
+    "path": "/years/1999/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../msn/index.html"
+  },
+  {
+    "year": "1999",
+    "id": "F3",
+    "key": "itt99-msn",
+    "suffix": "msn",
+    "path": "/years/1999/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../aim/index.html"
+  },
+  {
+    "year": "1999",
+    "id": "F4",
+    "key": "itt99-napster",
+    "suffix": "napster",
+    "path": "/years/1999/sites/napster/index.html",
+    "kind": "reuse",
+    "field": "track",
+    "next": "../geocities/index.html"
+  },
+  {
+    "year": "1999",
+    "id": "F5",
+    "key": "itt99-geocities",
+    "suffix": "geocities",
+    "path": "/years/1999/sites/geocities/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../aim/index.html"
+  },
+  {
+    "year": "2000",
+    "id": "F1",
+    "key": "itt00-about",
+    "suffix": "about",
+    "path": "/years/2000/sites/about/index.html",
+    "kind": "new",
+    "field": "topic",
+    "next": "../bbc/index.html"
+  },
+  {
+    "year": "2000",
+    "id": "F2",
+    "key": "itt00-bbc",
+    "suffix": "bbc",
+    "path": "/years/2000/sites/bbc/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../msn/index.html"
+  },
+  {
+    "year": "2000",
+    "id": "F3",
+    "key": "itt00-msn",
+    "suffix": "msn",
+    "path": "/years/2000/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "2000",
+    "id": "F4",
+    "key": "itt00-aol",
+    "suffix": "aol",
+    "path": "/years/2000/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../mapquest/index.html"
+  },
+  {
+    "year": "2000",
+    "id": "F5",
+    "key": "itt00-mapquest",
+    "suffix": "mapquest",
+    "path": "/years/2000/sites/mapquest/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2001",
+    "id": "F1",
+    "key": "itt01-cnet",
+    "suffix": "cnet",
+    "path": "/years/2001/sites/cnet/index.html",
+    "kind": "new",
+    "field": "title",
+    "next": "../bbc/index.html"
+  },
+  {
+    "year": "2001",
+    "id": "F2",
+    "key": "itt01-bbc",
+    "suffix": "bbc",
+    "path": "/years/2001/sites/bbc/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../about/index.html"
+  },
+  {
+    "year": "2001",
+    "id": "F3",
+    "key": "itt01-about",
+    "suffix": "about",
+    "path": "/years/2001/sites/about/index.html",
+    "kind": "new",
+    "field": "topic",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "2001",
+    "id": "F4",
+    "key": "itt01-aol",
+    "suffix": "aol",
+    "path": "/years/2001/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../wikipedia/index.html"
+  },
+  {
+    "year": "2001",
+    "id": "F5",
+    "key": "itt01-wiki",
+    "suffix": "wiki",
+    "path": "/years/2001/sites/wikipedia/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2002",
+    "id": "F1",
+    "key": "itt02-msn",
+    "suffix": "msn",
+    "path": "/years/2002/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../bbc/index.html"
+  },
+  {
+    "year": "2002",
+    "id": "F2",
+    "key": "itt02-bbc",
+    "suffix": "bbc",
+    "path": "/years/2002/sites/bbc/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../about/index.html"
+  },
+  {
+    "year": "2002",
+    "id": "F3",
+    "key": "itt02-about",
+    "suffix": "about",
+    "path": "/years/2002/sites/about/index.html",
+    "kind": "new",
+    "field": "topic",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "2002",
+    "id": "F4",
+    "key": "itt02-aol",
+    "suffix": "aol",
+    "path": "/years/2002/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../googlenews/index.html"
+  },
+  {
+    "year": "2002",
+    "id": "F5",
+    "key": "itt02-gnews",
+    "suffix": "gnews",
+    "path": "/years/2002/sites/googlenews/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../stumbleupon/index.html"
+  },
+  {
+    "year": "2003",
+    "id": "F1",
+    "key": "itt03-walmart",
+    "suffix": "walmart",
+    "path": "/years/2003/sites/walmart/index.html",
+    "kind": "new",
+    "field": "sku",
+    "next": "../cnet/index.html"
+  },
+  {
+    "year": "2003",
+    "id": "F2",
+    "key": "itt03-cnet",
+    "suffix": "cnet",
+    "path": "/years/2003/sites/cnet/index.html",
+    "kind": "new",
+    "field": "title",
+    "next": "../itunes/index.html"
+  },
+  {
+    "year": "2003",
+    "id": "F3",
+    "key": "itt03-itunes",
+    "suffix": "itunes",
+    "path": "/years/2003/sites/itunes/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../myspace/index.html"
+  },
+  {
+    "year": "2003",
+    "id": "F4",
+    "key": "itt03-myspace",
+    "suffix": "myspace",
+    "path": "/years/2003/sites/myspace/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../photobucket/index.html"
+  },
+  {
+    "year": "2003",
+    "id": "F5",
+    "key": "itt03-photobucket",
+    "suffix": "photobucket",
+    "path": "/years/2003/sites/photobucket/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2004",
+    "id": "F1",
+    "key": "itt04-weather",
+    "suffix": "weather",
+    "path": "/years/2004/sites/weather/index.html",
+    "kind": "new",
+    "field": "zip",
+    "next": "../walmart/index.html"
+  },
+  {
+    "year": "2004",
+    "id": "F2",
+    "key": "itt04-walmart",
+    "suffix": "walmart",
+    "path": "/years/2004/sites/walmart/index.html",
+    "kind": "new",
+    "field": "sku",
+    "next": "../msn/index.html"
+  },
+  {
+    "year": "2004",
+    "id": "F3",
+    "key": "itt04-msn",
+    "suffix": "msn",
+    "path": "/years/2004/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "2004",
+    "id": "F4",
+    "key": "itt04-aol",
+    "suffix": "aol",
+    "path": "/years/2004/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../facebook/networks.html"
+  },
+  {
+    "year": "2004",
+    "id": "F5",
+    "key": "itt04-networks",
+    "suffix": "networks",
+    "path": "/years/2004/sites/facebook/networks.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2005",
+    "id": "F1",
+    "key": "itt05-ask",
+    "suffix": "ask",
+    "path": "/years/2005/sites/ask/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../youtube/index.html"
+  },
+  {
+    "year": "2005",
+    "id": "F2",
+    "key": "itt05-youtube",
+    "suffix": "youtube",
+    "path": "/years/2005/sites/youtube/index.html",
+    "kind": "reuse",
+    "field": "title",
+    "next": "../maps/index.html"
+  },
+  {
+    "year": "2005",
+    "id": "F3",
+    "key": "itt05-maps",
+    "suffix": "maps",
+    "path": "/years/2005/sites/maps/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../myspace/index.html"
+  },
+  {
+    "year": "2005",
+    "id": "F4",
+    "key": "itt05-aol",
+    "suffix": "aol",
+    "path": "/years/2005/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../pandora/index.html"
+  },
+  {
+    "year": "2005",
+    "id": "F5",
+    "key": "itt05-pandora",
+    "suffix": "pandora",
+    "path": "/years/2005/sites/pandora/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2006",
+    "id": "F1",
+    "key": "itt06-msn",
+    "suffix": "msn",
+    "path": "/years/2006/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../ask/index.html"
+  },
+  {
+    "year": "2006",
+    "id": "F2",
+    "key": "itt06-ask",
+    "suffix": "ask",
+    "path": "/years/2006/sites/ask/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../facebook/feed.html"
+  },
+  {
+    "year": "2006",
+    "id": "F3",
+    "key": "itt06-feed",
+    "suffix": "feed",
+    "path": "/years/2006/sites/facebook/feed.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../twitter/index.html"
+  },
+  {
+    "year": "2006",
+    "id": "F4",
+    "key": "itt06-aol",
+    "suffix": "aol",
+    "path": "/years/2006/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../twitter/index.html"
+  },
+  {
+    "year": "2006",
+    "id": "F5",
+    "key": "itt06-tweets",
+    "suffix": "tweets",
+    "path": "/years/2006/sites/twitter/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2007",
+    "id": "F1",
+    "key": "itt07-msn",
+    "suffix": "msn",
+    "path": "/years/2007/sites/msn/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../google/index.html"
+  },
+  {
+    "year": "2007",
+    "id": "F2",
+    "key": "itt07-google-q",
+    "suffix": "google-q",
+    "path": "/years/2007/sites/google/index.html",
+    "kind": "reuse",
+    "field": "query",
+    "next": "../ask/index.html"
+  },
+  {
+    "year": "2007",
+    "id": "F3",
+    "key": "itt07-ask",
+    "suffix": "ask",
+    "path": "/years/2007/sites/ask/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../aol/index.html"
+  },
+  {
+    "year": "2007",
+    "id": "F4",
+    "key": "itt07-aol",
+    "suffix": "aol",
+    "path": "/years/2007/sites/aol/index.html",
+    "kind": "new",
+    "field": "screen",
+    "next": "../iphone/index.html"
+  },
+  {
+    "year": "2007",
+    "id": "F5",
+    "key": "itt07-iphone",
+    "suffix": "iphone",
+    "path": "/years/2007/sites/iphone/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2008",
+    "id": "F1",
+    "key": "itt08-msn",
+    "suffix": "msn",
+    "path": "/years/2008/sites/msn/index.html",
+    "kind": "new",
+    "field": "channel",
+    "next": "../ask/index.html"
+  },
+  {
+    "year": "2008",
+    "id": "F2",
+    "key": "itt08-ask",
+    "suffix": "ask",
+    "path": "/years/2008/sites/ask/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../chrome/index.html"
+  },
+  {
+    "year": "2008",
+    "id": "F3",
+    "key": "itt08-chrome",
+    "suffix": "chrome",
+    "path": "/years/2008/sites/chrome/index.html",
+    "kind": "reuse",
+    "field": "url",
+    "next": "../appstore/index.html"
+  },
+  {
+    "year": "2008",
+    "id": "F4",
+    "key": "itt08-appstore",
+    "suffix": "appstore",
+    "path": "/years/2008/sites/appstore/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../github/index.html"
+  },
+  {
+    "year": "2008",
+    "id": "F5",
+    "key": "itt08-github",
+    "suffix": "github",
+    "path": "/years/2008/sites/github/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2009",
+    "id": "F1",
+    "key": "itt09-ask",
+    "suffix": "ask",
+    "path": "/years/2009/sites/ask/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../bing/index.html"
+  },
+  {
+    "year": "2009",
+    "id": "F2",
+    "key": "itt09-bing",
+    "suffix": "bing",
+    "path": "/years/2009/sites/bing/index.html",
+    "kind": "reuse",
+    "field": "query",
+    "next": "../facebook/index.html"
+  },
+  {
+    "year": "2009",
+    "id": "F3",
+    "key": "itt09-likes",
+    "suffix": "likes",
+    "path": "/years/2009/sites/facebook/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2009",
+    "id": "F4",
+    "key": "itt09-foursquare",
+    "suffix": "foursquare",
+    "path": "/years/2009/sites/foursquare/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../facebook/index.html"
+  },
+  {
+    "year": "2009",
+    "id": "F5",
+    "key": "itt09-so",
+    "suffix": "so",
+    "path": "/years/2009/sites/stackoverflow/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../facebook/index.html"
+  },
+  {
+    "year": "2010",
+    "id": "F1",
+    "key": "itt10-ask",
+    "suffix": "ask",
+    "path": "/years/2010/sites/ask/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../instagram/index.html"
+  },
+  {
+    "year": "2010",
+    "id": "F2",
+    "key": "itt10-ig",
+    "suffix": "ig",
+    "path": "/years/2010/sites/instagram/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2010",
+    "id": "F3",
+    "key": "itt10-imgur",
+    "suffix": "imgur",
+    "path": "/years/2010/sites/imgur/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2010",
+    "id": "F4",
+    "key": "itt10-facebook",
+    "suffix": "facebook",
+    "path": "/years/2010/sites/facebook/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../youtube/index.html"
+  },
+  {
+    "year": "2010",
+    "id": "F5",
+    "key": "itt10-youtube",
+    "suffix": "youtube",
+    "path": "/years/2010/sites/youtube/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../instagram/index.html"
+  },
+  {
+    "year": "2011",
+    "id": "F1",
+    "key": "itt11-tweets",
+    "suffix": "tweets",
+    "path": "/years/2011/sites/twitter/index.html",
+    "kind": "new",
+    "field": "tweet",
+    "next": "../groupon/index.html"
+  },
+  {
+    "year": "2011",
+    "id": "F2",
+    "key": "itt11-groupon",
+    "suffix": "groupon",
+    "path": "/years/2011/sites/groupon/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../tumblr/index.html"
+  },
+  {
+    "year": "2011",
+    "id": "F3",
+    "key": "itt11-tumblr",
+    "suffix": "tumblr",
+    "path": "/years/2011/sites/tumblr/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../airbnb/index.html"
+  },
+  {
+    "year": "2011",
+    "id": "F4",
+    "key": "itt11-wiki",
+    "suffix": "wiki",
+    "path": "/years/2011/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/airbnb/index.html"
+  },
+  {
+    "year": "2011",
+    "id": "F5",
+    "key": "itt11-airbnb",
+    "suffix": "airbnb",
+    "path": "/years/2011/sites/airbnb/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2012",
+    "id": "F1",
+    "key": "itt12-tweets",
+    "suffix": "tweets",
+    "path": "/years/2012/sites/twitter/index.html",
+    "kind": "new",
+    "field": "tweet",
+    "next": "../tumblr/index.html"
+  },
+  {
+    "year": "2012",
+    "id": "F2",
+    "key": "itt12-tumblr",
+    "suffix": "tumblr",
+    "path": "/years/2012/sites/tumblr/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../facebook/index.html"
+  },
+  {
+    "year": "2012",
+    "id": "F3",
+    "key": "itt12-fb-ipo",
+    "suffix": "fb-ipo",
+    "path": "/years/2012/sites/facebook/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../soundcloud/index.html"
+  },
+  {
+    "year": "2012",
+    "id": "F4",
+    "key": "itt12-wiki",
+    "suffix": "wiki",
+    "path": "/years/2012/sites/wikipedia/sopa-blackout.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../soundcloud/index.html"
+  },
+  {
+    "year": "2012",
+    "id": "F5",
+    "key": "itt12-soundcloud",
+    "suffix": "soundcloud",
+    "path": "/years/2012/sites/soundcloud/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2013",
+    "id": "F1",
+    "key": "itt13-tweets",
+    "suffix": "tweets",
+    "path": "/years/2013/sites/twitter/index.html",
+    "kind": "new",
+    "field": "tweet",
+    "next": "../vine/index.html"
+  },
+  {
+    "year": "2013",
+    "id": "F2",
+    "key": "itt13-google",
+    "suffix": "google",
+    "path": "/years/2013/sites/google/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../../pages/about.html"
+  },
+  {
+    "year": "2013",
+    "id": "F3",
+    "key": "itt13-wiki",
+    "suffix": "wiki",
+    "path": "/years/2013/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/vine/index.html"
+  },
+  {
+    "year": "2013",
+    "id": "F4",
+    "key": "itt13-vine",
+    "suffix": "vine",
+    "path": "/years/2013/sites/vine/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2013",
+    "id": "F5",
+    "key": "itt13-snap",
+    "suffix": "snap",
+    "path": "/years/2013/sites/snapchat/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../vine/index.html"
+  },
+  {
+    "year": "2014",
+    "id": "F1",
+    "key": "itt14-tweets",
+    "suffix": "tweets",
+    "path": "/years/2014/sites/twitter/index.html",
+    "kind": "new",
+    "field": "tweet",
+    "next": "../icebucket/index.html"
+  },
+  {
+    "year": "2014",
+    "id": "F2",
+    "key": "itt14-fb",
+    "suffix": "fb",
+    "path": "/years/2014/sites/facebook/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../youtube/index.html"
+  },
+  {
+    "year": "2014",
+    "id": "F3",
+    "key": "itt14-youtube",
+    "suffix": "youtube",
+    "path": "/years/2014/sites/youtube/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../whatsapp/index.html"
+  },
+  {
+    "year": "2014",
+    "id": "F4",
+    "key": "itt14-icebucket",
+    "suffix": "icebucket",
+    "path": "/years/2014/sites/icebucket/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../whatsapp/index.html"
+  },
+  {
+    "year": "2014",
+    "id": "F5",
+    "key": "itt14-wa",
+    "suffix": "wa",
+    "path": "/years/2014/sites/whatsapp/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2015",
+    "id": "F1",
+    "key": "itt15-ig",
+    "suffix": "ig",
+    "path": "/years/2015/sites/instagram/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../apple/watch.html"
+  },
+  {
+    "year": "2015",
+    "id": "F2",
+    "key": "itt15-google",
+    "suffix": "google",
+    "path": "/years/2015/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/apple/watch.html"
+  },
+  {
+    "year": "2015",
+    "id": "F3",
+    "key": "itt15-wiki",
+    "suffix": "wiki",
+    "path": "/years/2015/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/apple/watch.html"
+  },
+  {
+    "year": "2015",
+    "id": "F4",
+    "key": "itt15-tweets",
+    "suffix": "tweets",
+    "path": "/years/2015/sites/twitter/index.html",
+    "kind": "reuse",
+    "field": "tweet",
+    "next": "../apple/watch.html"
+  },
+  {
+    "year": "2015",
+    "id": "F5",
+    "key": "itt15-watch",
+    "suffix": "watch",
+    "path": "/years/2015/sites/apple/watch.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2016",
+    "id": "F1",
+    "key": "itt16-tweets",
+    "suffix": "tweets",
+    "path": "/years/2016/sites/twitter/index.html",
+    "kind": "new",
+    "field": "tweet",
+    "next": "../instagram/index.html"
+  },
+  {
+    "year": "2016",
+    "id": "F2",
+    "key": "itt16-youtube",
+    "suffix": "youtube",
+    "path": "/years/2016/sites/youtube/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../google/index.html"
+  },
+  {
+    "year": "2016",
+    "id": "F3",
+    "key": "itt16-google",
+    "suffix": "google",
+    "path": "/years/2016/sites/google/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../instagram/index.html"
+  },
+  {
+    "year": "2016",
+    "id": "F4",
+    "key": "itt16-stories",
+    "suffix": "stories",
+    "path": "/years/2016/sites/instagram/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2016",
+    "id": "F5",
+    "key": "itt16-pogo",
+    "suffix": "pogo",
+    "path": "/years/2016/sites/pokemongo/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../instagram/index.html"
+  },
+  {
+    "year": "2017",
+    "id": "F1",
+    "key": "itt17-google",
+    "suffix": "google",
+    "path": "/years/2017/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/iphone/index.html"
+  },
+  {
+    "year": "2017",
+    "id": "F2",
+    "key": "itt17-wiki",
+    "suffix": "wiki",
+    "path": "/years/2017/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/iphone/index.html"
+  },
+  {
+    "year": "2017",
+    "id": "F3",
+    "key": "itt17-amazon",
+    "suffix": "amazon",
+    "path": "/years/2017/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/iphone/index.html"
+  },
+  {
+    "year": "2017",
+    "id": "F4",
+    "key": "itt17-faceid",
+    "suffix": "faceid",
+    "path": "/years/2017/sites/iphone/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2017",
+    "id": "F5",
+    "key": "itt17-fortnite",
+    "suffix": "fortnite",
+    "path": "/years/2017/sites/fortnite/index.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../iphone/index.html"
+  },
+  {
+    "year": "2018",
+    "id": "F1",
+    "key": "itt18-google",
+    "suffix": "google",
+    "path": "/years/2018/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/gdpr/index.html"
+  },
+  {
+    "year": "2018",
+    "id": "F2",
+    "key": "itt18-wiki",
+    "suffix": "wiki",
+    "path": "/years/2018/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/gdpr/index.html"
+  },
+  {
+    "year": "2018",
+    "id": "F3",
+    "key": "itt18-amazon",
+    "suffix": "amazon",
+    "path": "/years/2018/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/gdpr/index.html"
+  },
+  {
+    "year": "2018",
+    "id": "F4",
+    "key": "itt18-gdpr",
+    "suffix": "gdpr",
+    "path": "/years/2018/sites/gdpr/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2018",
+    "id": "F5",
+    "key": "itt18-tiktok",
+    "suffix": "tiktok",
+    "path": "/years/2018/sites/tiktok/fyp.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../gdpr/index.html"
+  },
+  {
+    "year": "2019",
+    "id": "F1",
+    "key": "itt19-youtube",
+    "suffix": "youtube",
+    "path": "/years/2019/sites/youtube/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../instagram/index.html"
+  },
+  {
+    "year": "2019",
+    "id": "F2",
+    "key": "itt19-ig",
+    "suffix": "ig",
+    "path": "/years/2019/sites/instagram/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../twitter/index.html"
+  },
+  {
+    "year": "2019",
+    "id": "F3",
+    "key": "itt19-tweets",
+    "suffix": "tweets",
+    "path": "/years/2019/sites/twitter/index.html",
+    "kind": "new",
+    "field": "tweet",
+    "next": "../disneyplus/home.html"
+  },
+  {
+    "year": "2019",
+    "id": "F4",
+    "key": "itt19-wiki",
+    "suffix": "wiki",
+    "path": "/years/2019/pages/about.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../sites/disneyplus/home.html"
+  },
+  {
+    "year": "2019",
+    "id": "F5",
+    "key": "itt19-disneyplus",
+    "suffix": "disneyplus",
+    "path": "/years/2019/sites/disneyplus/home.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2020",
+    "id": "F1",
+    "key": "itt20-google",
+    "suffix": "google",
+    "path": "/years/2020/sites/google/index.html",
+    "kind": "new",
+    "field": "query",
+    "next": "../wikipedia/index.html"
+  },
+  {
+    "year": "2020",
+    "id": "F2",
+    "key": "itt20-wiki",
+    "suffix": "wiki",
+    "path": "/years/2020/sites/wikipedia/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../facebook/index.html"
+  },
+  {
+    "year": "2020",
+    "id": "F3",
+    "key": "itt20-fb",
+    "suffix": "fb",
+    "path": "/years/2020/sites/facebook/index.html",
+    "kind": "new",
+    "field": null,
+    "next": "../zoom/index.html"
+  },
+  {
+    "year": "2020",
+    "id": "F4",
+    "key": "itt20-zoom",
+    "suffix": "zoom",
+    "path": "/years/2020/sites/zoom/index.html",
+    "kind": "star",
+    "field": null,
+    "next": ""
+  },
+  {
+    "year": "2020",
+    "id": "F5",
+    "key": "itt20-reels",
+    "suffix": "reels",
+    "path": "/years/2020/sites/instagram/reels.html",
+    "kind": "reuse",
+    "field": null,
+    "next": "../zoom/index.html"
+  }
+]

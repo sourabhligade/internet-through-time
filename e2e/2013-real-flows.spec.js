@@ -18,15 +18,24 @@ async function expectStorageTruthy(page, key) {
 }
 
 test.describe('2013 real flows (storage required)', () => {
-  test('Vine hold incomplete blocked; post writes itt13-vine', async ({ page }) => {
+  test('Vine hold incomplete blocked; post writes itt13-vine-posts', async ({ page }) => {
     await page.goto('/years/2013/sites/vine/record.html');
-    await clearKeys(page, ['itt13-vine', 'itt13-vine-list']);
+    await clearKeys(page, ['itt13-vine', 'itt13-vine-list', 'itt13-vine-posts']);
     await page.reload();
     const post = page.locator('[data-vine-post]');
-    if ((await post.count()) === 0) test.skip();
+    await expect(post).toBeVisible({ timeout: 15000 });
     await post.click();
     await page.waitForTimeout(120);
-    expect(await page.evaluate(() => localStorage.getItem('itt13-vine'))).toBeFalsy();
+    expect(await page.evaluate(() => localStorage.getItem('itt13-vine-posts'))).toBeFalsy();
+    const hold = page.locator('[data-vine-hold]');
+    await hold.dispatchEvent('pointerdown');
+    await page.waitForTimeout(450);
+    await hold.dispatchEvent('pointerup');
+    await page.locator('[data-vine-caption]').fill('museum 6s loop');
+    await post.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt13-vine-posts')))
+      .toMatch(/museum 6s loop|multiStep|real/i);
   });
 
   test('Slack fillGo empty blocked; join writes itt13-slack', async ({ page }) => {
@@ -50,6 +59,7 @@ test.describe('2013 real flows (storage required)', () => {
     await page.locator('[data-igv-share]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt13-ig-video'))).toBeFalsy();
     await page.locator('[data-igv-filter="Cinema"]').click();
+    await page.locator('[data-igv-caption]').fill('15s cinema residual');
     await page.locator('[data-igv-share]').click();
     const raw = await expectStorageTruthy(page, 'itt13-ig-video');
     expect(raw).toMatch(/Cinema|15/i);
@@ -66,6 +76,8 @@ test.describe('2013 real flows (storage required)', () => {
     const raw = await expectStorageTruthy(page, 'itt13-snap-story');
     expect(raw).toMatch(/expires|24/);
     await expect(page.locator('body')).toContainText(/24h/i);
+    await page.locator('[data-snap-clock-24]').click();
+    await expect(page.locator('[data-snap-expired]')).toContainText(/expired/i);
   });
 
   test('5c ack storage', async ({ page }) => {
@@ -107,6 +119,7 @@ test.describe('2013 real flows (storage required)', () => {
     await expect(page.locator('a[href*="story"]').first()).toBeVisible();
     await page.locator('[data-snap-not-stories]').check();
     await page.locator('[data-snap-send]').click();
+    await page.locator('[data-snap-send]').click();
     await expectStorageTruthy(page, 'itt13-snap-count');
   });
 
@@ -126,10 +139,12 @@ test.describe('2013 real flows (storage required)', () => {
     await clearKeys(page, ['itt13-healthcare-ack']);
     await page.reload();
     await page.locator('[data-hc-email]').fill('you@example.com');
-    await page.locator('[data-hc-try="1"]').click().catch(() => {});
-    await page.waitForTimeout(700);
-    await page.locator('[data-hc-try="2"]').click().catch(() => {});
-    await page.waitForTimeout(800);
+    await page.locator('[data-hc-try="1"]').click();
+    await expect(page.locator('[data-hc-try="2"]')).toBeVisible({ timeout: 5000 });
+    await page.locator('[data-hc-try="2"]').click();
+    await expect(page.locator('[data-healthcare-ack]')).toBeVisible({ timeout: 5000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-healthcare-ack]').click();
     await expectStorageTruthy(page, 'itt13-healthcare-ack');
   });

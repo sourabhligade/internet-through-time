@@ -256,7 +256,7 @@ test.describe('densify home links are real paths (not mock #)', () => {
 
   test('2016 home densify hrefs resolve', async ({ page }) => {
     await page.goto('/years/2016/pages/home.html');
-    for (const h of ['instagram/live', 'amp/serp', 'facebook/live', 'dyn', 'pixel', 'home/index', 'spectacles']) {
+    for (const h of ['instagram/stories', 'pokemongo', 'facebook/reactions', 'iphone/jack', 'vine/goodbye', 'spectacles']) {
       const a = page.locator(`a[href*="${h}"]`).first();
       await expect(a, h).toBeVisible();
       const href = await a.getAttribute('href');

@@ -4,6 +4,7 @@
  * docs/2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md Part 5
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, fillGmailLogin } = require('./helpers');
 
 async function checkAllReq(page, sel = '[data-req], [data-chrome-check], [data-appstore-check], [data-android-check], [data-wave-check]') {
   const loc = page.locator(sel);
@@ -50,8 +51,7 @@ test.describe('2009 trail 1 — Apps every day', () => {
     await clearKeys(page, ['itt09-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-appstore-install]');
+    await completeRealGate(page, '[data-appstore-install]');
     await requireKey(page, 'itt09-apps');
   });
 });
@@ -111,6 +111,7 @@ test.describe('2009 trail 5 — PC not dead', () => {
       }
     });
     await page.reload();
+    await fillGmailLogin(page);
     await page.locator('[data-gmail-login]').evaluate((f) => f.requestSubmit());
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt09-gmail')), { timeout: 8000 })
@@ -123,12 +124,12 @@ test.describe('2009 trail 6 — Seeds of 2010s', () => {
     await page.goto('/years/2009/sites/foursquare/index.html');
     await clearKeys(page, ['itt09-4sq', 'itt09-ks']);
     await page.reload();
-    await twoStepClick(page, '[data-4sq-checkin]');
+    await completeRealGate(page, '[data-4sq-checkin]');
     await requireKey(page, 'itt09-4sq');
 
     await page.goto('/years/2009/sites/kickstarter/index.html');
     await page.reload();
-    await page.locator('[data-ks-back]').first().click();
+    await completeRealGate(page, '[data-ks-back]');
     await requireKey(page, 'itt09-ks');
   });
 });
@@ -143,7 +144,7 @@ test.describe('2009 trail 7 — Privacy + EU Spotify', () => {
     await clearKeys(page, ['itt09-spotify-eu']);
     await page.reload();
     await expect(page.locator('body')).toContainText(/Europe|not.*US|2011/i);
-    await page.locator('[data-spotify-join]').click();
+    await completeRealGate(page, '[data-spotify-join]');
     await requireKey(page, 'itt09-spotify-eu');
   });
 });

@@ -9,9 +9,18 @@
     return ITT.util || {};
   }
   function key(kind) {
-    if (U().immersionStorageKey) return U().immersionStorageKey(kind, "itt11");
-    var y = String(ITT._immersionYear || "2011");
-    return "itt" + y.slice(2) + "-" + kind;
+    var y = "";
+    try {
+      y =
+        (ITT._immersionYear && String(ITT._immersionYear)) ||
+        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
+        "";
+    } catch (eY) {
+      y = "";
+    }
+    var pfx = /^\d{4}$/.test(y) ? "itt" + y.slice(2) : "itt11";
+    if (U().immersionStorageKey) return U().immersionStorageKey(kind, pfx);
+    return pfx + "-" + kind;
   }
 
   function boot(doc) {
@@ -42,7 +51,7 @@
           if (status) status.textContent = "REAL gate: complete Snap literacy checks first.";
           return;
         }
-      } else if (send.getAttribute("data-snap-armed") !== "1") {
+      } else if (!gate && send.getAttribute("data-snap-armed") !== "1") {
         send.setAttribute("data-snap-armed", "1");
         if (status) {
           status.textContent = "Confirm: no real Snapchat account — click Send again (REAL two-step).";
@@ -73,6 +82,9 @@
             "<div style='padding:20px;color:#666;font-size:12px'>Snap expired · Picaboo→Snapchat 2011 seed · not mass default all year</div>";
         }, secs * 1000);
       }
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) { /* */ }
       var snapMsg = "Snap sent · " + secs + "s timer · this browser only";
       if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
         ITT._immersionApi.actionFeedback(snapMsg, {

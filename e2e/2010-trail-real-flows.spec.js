@@ -5,6 +5,7 @@
  * Home trails 1–7
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, fillGmailLogin } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -38,7 +39,7 @@ test.describe('2010 trail 1 — Tablet arrives', () => {
     await clearKeys(page, ['itt10-apps']);
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     await requireKey(page, 'itt10-apps');
   });
 });
@@ -51,7 +52,7 @@ test.describe('2010 trail 2 — Phone leap', () => {
     await page.goto('/years/2010/sites/appstore/index.html');
     await clearKeys(page, ['itt10-apps', 'itt10-iphone-history']);
     await page.reload();
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     await requireKey(page, 'itt10-apps');
 
     await page.goto('/years/2010/sites/iphone/index.html');
@@ -69,6 +70,7 @@ test.describe('2010 trail 3 — Filter social', () => {
     await clearKeys(page, ['itt10-ig-posts']);
     await page.reload();
     await page.locator('[data-ig-filter="Earlybird"]').click();
+    await page.locator('[data-ig-caption]').fill('handoff 2010 square');
     await page.locator('[data-ig-share]').click();
     await requireKey(page, 'itt10-ig-posts');
 
@@ -104,12 +106,12 @@ test.describe('2010 trail 5 — Check-in + farm', () => {
     await page.goto('/years/2010/sites/foursquare/index.html');
     await clearKeys(page, ['itt10-4sq', 'itt10-farm']);
     await page.reload();
-    await page.locator('[data-4sq-checkin]').first().click();
+    await completeRealGate(page, '[data-4sq-checkin]');
     await requireKey(page, 'itt10-4sq');
 
     await page.goto('/years/2010/sites/farmville/index.html');
     await expect(page.locator('body')).toContainText(/peak|84|March 2010/i);
-    await page.locator('[data-farm-plant="strawberry"]').click();
+    await completeRealGate(page, '[data-farm-plant="strawberry"]');
     await requireKey(page, 'itt10-farm');
   });
 });
@@ -127,6 +129,7 @@ test.describe('2010 trail 6 — Still PC / EU Spotify', () => {
 
     await page.goto('/years/2010/sites/gmail/index.html');
     await page.reload();
+    await fillGmailLogin(page);
     await page.locator('[data-gmail-login]').evaluate((f) => f.requestSubmit());
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt10-gmail')), { timeout: 8000 })
@@ -134,7 +137,7 @@ test.describe('2010 trail 6 — Still PC / EU Spotify', () => {
 
     await page.goto('/years/2010/sites/spotify/index.html');
     await expect(page.locator('body')).toContainText(/Europe|not.*US|2011/i);
-    await page.locator('[data-spotify-join]').click();
+    await completeRealGate(page, '[data-spotify-join]');
     await requireKey(page, 'itt10-spotify-eu');
   });
 });

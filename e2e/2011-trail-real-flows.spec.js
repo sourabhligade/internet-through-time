@@ -28,6 +28,8 @@ test.describe('2011 trail 1 — Streaming US', () => {
     await clearKeys(page, ['itt11-spotify-invited', 'itt11-spotify-plan']);
     await page.reload();
     await page.waitForSelector('[data-spotify-invite]', { timeout: 20000 });
+    await page.locator('[data-spotify-ack]').check();
+    await page.locator('[data-spotify-no-stream]').check();
     await page.locator('[data-spotify-invite]').click();
     await requireKey(page, 'itt11-spotify-invited');
 
@@ -69,6 +71,8 @@ test.describe('2011 trail 3 — Google+ challenger', () => {
 
     await page.goto('/years/2011/sites/googleplus/hangouts.html');
     await page.waitForSelector('[data-gplus-hangout-start]', { timeout: 20000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-gplus-hangout-start]').click();
     const hang = await requireKey(page, 'itt11-gplus-hangout');
     expect(hang || '').toMatch(/circle|tiles|session|Friends/i);
@@ -108,7 +112,9 @@ test.describe('2011 trail 6 — thesis ack', () => {
     await page.goto('/years/2011/pages/about.html');
     await clearKeys(page, ['itt11-thesis-ack']);
     await page.reload();
-    await page.locator('[data-thesis-ack]').click();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
     await requireKey(page, 'itt11-thesis-ack');
   });
 });

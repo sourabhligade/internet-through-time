@@ -79,6 +79,11 @@
             year: String((config && config.year) || "1998"),
             ts: Date.now()
           }));
+          try {
+            if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+          } catch (eN) {
+            /* */
+          }
         } catch (eLk) { /* */ }
         var show = rank(q);
         if (show.length) {

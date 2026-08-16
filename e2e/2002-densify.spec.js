@@ -59,12 +59,9 @@ test.describe('2002 densify', () => {
 
   test('Friendster profile write when hooks present', async ({ page }) => {
     await clearItt02(page);
-    await page.goto('/years/2002/sites/friendster/index.html');
+    await page.goto('/years/2002/sites/friendster/profile.html');
     const form = page.locator('[data-friendster-profile-form], form[data-friendster-profile-form]');
-    if ((await form.count()) === 0) {
-      test.skip();
-      return;
-    }
+    await expect(form).toBeVisible({ timeout: 15000 });
     if (await page.locator('[name="name"]').count()) {
       await page.fill('[name="name"]', 'Museum Test');
     }

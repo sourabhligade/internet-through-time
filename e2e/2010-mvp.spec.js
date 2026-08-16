@@ -93,7 +93,7 @@ test.describe('2010 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-farm-plant]', { timeout: 20000 });
-    await page.locator('[data-farm-plant]').first().click();
+    await completeRealGate(page, '[data-farm-plant]');
     const raw = await page.evaluate(() => localStorage.getItem('itt10-farm'));
     expect(raw || '').toMatch(/strawberry|wheat|pumpkin|plots/i);
   });

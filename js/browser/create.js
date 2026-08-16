@@ -593,6 +593,8 @@
         var si;
         for (si = 0; si < existing.length; si++) {
           var es = existing[si].getAttribute("src") || "";
+          /* config/immersion-YYYY.js is data only — it does not boot product JS */
+          if (/\/config\/immersion-\d{4}\.js(\?|$)/.test(es)) continue;
           if (/immersion(-\d{4})?\.js(\?|$)/.test(es) || /\/immersion\/boot\.js(\?|$)/.test(es)) {
             return;
           }
@@ -1403,6 +1405,9 @@
       focusContent: focusContent
     };
     ITT.activeBrowser = api;
+    try {
+      if (ITT.Layers && typeof ITT.Layers.bootShell === "function") ITT.Layers.bootShell(YEAR);
+    } catch (eL) { /* */ }
     return api;
   }
 

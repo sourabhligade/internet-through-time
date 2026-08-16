@@ -17,14 +17,12 @@
 <div class="ipad">
  <p style="font-size:12px">
   <a href="../../pages/home.html">Starting Point</a> ·
-  <a href="../../pages/home.html">About</a> ·
   <a href="prices.html">Prices</a> ·
-  <a href="../../pages/home.html">Apps</a> ·
   <a href="../iphone/index.html">iPhone 5</a> ·
-  <a href="../../pages/home.html">App Store</a>
+  <a href="../windows8/index.html">Windows 8</a>
  </p>
  <h1 style="font-weight:200;font-size:32px;margin:0">iPad mini</h1>
- <p style="color:#555">7.9-inch · just right · ships <b>November 2, 2012</b></p>
+ <p style="color:#555">7.9-inch · just right · announce <b>October 23</b> · ships <b>November 2, 2012</b></p>
  <div class="note">
   <b>2012 honesty:</b> Announced with iPad 4 / iOS 6 era autumn. Wi-Fi starts at <b>$329</b> (16GB) ·
   <b>$429</b> (32GB) · <b>$529</b> (64GB). Wi-Fi + Cellular higher. Non-Retina 7.9" display class · A5 ·
@@ -39,7 +37,7 @@
   <label style="display:block;margin:8px 0;font-size:12px"><input type="checkbox" data-ipad-not-retina> Non-Retina 7.9″ — not 2013 mini Retina</label>
   <button type="button" data-ipad-claim>I’m interested (theater)</button>
   <div data-ipad-status style="font-size:12px;color:#060;margin-top:8px"></div>
-  
+  <p class="itt12-next" data-next-flow data-next-when-key="itt12-ipad-history" hidden><b>Next:</b> <a href="../windows8/index.html">Windows 8 · Oct 26</a></p>
  </div>
  <div class="card" style="font-size:12px">
   <b>Also this autumn:</b> <a href="../iphone/index.html">iPhone 5</a> ·
@@ -62,11 +60,33 @@
       if(!p||!p.checked||!r||!r.checked){if(st)st.textContent="Confirm $329 + not-Retina first.";return;}
       try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPad mini",priceFrom:329,notRetina:true,real:true,multiStep:true,ts:Date.now()}));}catch(e2){}
       if(st)st.textContent="Noted · iPad mini · $329+ · "+KEY;
+      try{if(window.ITT&&ITT.revealNextFlow)ITT.revealNextFlow(document);}catch(eN){}
     });
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
 })();
 </script>
 <script src="../../../../js/immersion-2012.js"></script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="prices.html">iPad mini · prices</a> ·
+ <a href="../waze/index.html">Waze</a> ·
+ <a href="../wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
+ <a href="../windows8/index.html">Windows 8</a> ·
+ <a href="../youtube/about.html">About YouTube</a> ·
+ <a href="../chrome/index.html">Google Chrome</a> ·
+ <a href="../facebook/index.html">Facebook</a> ·
+ <a href="../googledrive/index.html">Google Drive</a> ·
+ <a href="../instagram/index.html">Instagram</a> ·
+ <a href="../iphone/index.html">iPhone 5</a> ·
+ <a href="../lyft/index.html">Lyft</a> ·
+ <a href="../netflix/index.html">Netflix</a> ·
+ <a href="../pinterest/index.html">Pinterest</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body>
 </html>

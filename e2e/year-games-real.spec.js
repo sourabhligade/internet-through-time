@@ -165,12 +165,29 @@ test.describe('REAL complete writes', () => {
     await enterYear(page, '2002');
     await clearPrefixGames(page, 'itt02');
     const frame = await openGame(page, '2002');
-    await frame.locator('[data-place="chair"]').click();
+    await expect(frame.locator('[data-place="chair"]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-place="chair"]').click({ force: true });
+    await expect(frame.locator('[data-room] button').first()).toBeVisible({ timeout: 10000 });
     await frame.locator('[data-room] button').nth(15).click({ force: true });
+    await frame.locator('[data-room] button').nth(22).click({ force: true });
     const blob = JSON.parse((await waitKey(page, 'itt02-game-roomsticky')) || '{}');
     expect(blob.real).toBe(true);
     expect(Array.isArray(blob.items)).toBeTruthy();
     expect(blob.items.length).toBeGreaterThan(0);
+  });
+
+  test('2005 load alone does not write itt05-game-heli', async ({ page }) => {
+    await enterYear(page, '2005');
+    await clearPrefixGames(page, 'itt05');
+    await openGame(page, '2005');
+    expect(await getKey(page, 'itt05-game-heli')).toBeNull();
+  });
+
+  test('2006 load alone does not write itt06-game-sled', async ({ page }) => {
+    await enterYear(page, '2006');
+    await clearPrefixGames(page, 'itt06');
+    await openGame(page, '2006');
+    expect(await getKey(page, 'itt06-game-sled')).toBeNull();
   });
 
   test('2005 heli crash path can write year best via hook', async ({ page }) => {
@@ -190,6 +207,21 @@ test.describe('REAL complete writes', () => {
     expect(blob.best).toBeGreaterThanOrEqual(42);
   });
 
+  test('2005 HoverChop start then crash writes itt05-game-heli', async ({ page }) => {
+    await enterYear(page, '2005');
+    await clearPrefixGames(page, 'itt05');
+    const frame = await openGame(page, '2005');
+    await frame.locator('#play-start').click();
+    await expect
+      .poll(async () => getKey(page, 'itt05-game-heli'), { timeout: 15000 })
+      .toBeTruthy();
+    const blob = JSON.parse((await getKey(page, 'itt05-game-heli')) || '{}');
+    expect(blob.real).toBe(true);
+    expect(blob.year).toBe('2005');
+    expect(blob.gameId).toBe('heli');
+    expect(blob.best).toBeGreaterThan(0);
+  });
+
   test('2006 sled finish writes year best', async ({ page }) => {
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');
@@ -204,6 +236,22 @@ test.describe('REAL complete writes', () => {
     const blob = JSON.parse((await getKey(page, 'itt06-game-sled')) || '{}');
     expect(blob.real).toBe(true);
     expect(String(blob.year)).toBe('2006');
+  });
+
+  test('2006 TrailSled Ride on demo ramp writes itt06-game-sled', async ({ page }) => {
+    await enterYear(page, '2006');
+    await clearPrefixGames(page, 'itt06');
+    const frame = await openGame(page, '2006');
+    expect(await getKey(page, 'itt06-game-sled')).toBeNull();
+    await frame.locator('#play-start').click();
+    await expect
+      .poll(async () => getKey(page, 'itt06-game-sled'), { timeout: 15000 })
+      .toBeTruthy();
+    const blob = JSON.parse((await getKey(page, 'itt06-game-sled')) || '{}');
+    expect(blob.real).toBe(true);
+    expect(blob.year).toBe('2006');
+    expect(blob.gameId).toBe('sled');
+    expect(blob.best).toBeGreaterThan(0);
   });
 
   test('2009 plant without literacy does not plant; with literacy writes', async ({ page }) => {

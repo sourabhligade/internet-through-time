@@ -9,8 +9,8 @@
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <div style="max-width:520px;margin:24px auto;font-family:Helvetica,Arial,sans-serif;font-size:13px;background:#1a1a1a;color:#eee;padding:20px">
  <p style="font-size:12px">
-  <a href="../../pages/home.html" style="color:#fd8">About</a> ·
-  <a href="../../pages/home.html" style="color:#fd8">SF</a> ·
+  <a href="../lyft/index.html" style="color:#fd8">Lyft</a> ·
+  <a href="../snapchat/index.html" style="color:#fd8">Snap Android</a> ·
   <a href="../../pages/home.html" style="color:#fd8">Start</a>
  </p>
  <h1 style="font-weight:300;color:#fff">Uber · 2012</h1>
@@ -19,14 +19,15 @@
   <b>July 2012</b> (SF lore) — roughly <b>~35% cheaper</b> than black car (period press class, not a live fare API).
   Still city-limited · not every city · not autonomous · educational theater only — no real dispatch.
  </p>
- <label style="display:block;margin:8px 0;font-size:12px;color:#fd8"><input type="checkbox" data-uber-not-auto> Theater only — no real dispatch · not autonomous</label>
+ <label style="display:block;margin:8px 0;font-size:12px;color:#fd8"><input type="checkbox" data-uber-not-auto> Theater only — no real dispatch · not autonomous · not 2014 every-city gig</label>
  <p style="font-size:12px;color:#aaa">Choose a ride class (theater):</p>
  <p>
   <button type="button" data-uber-kind="black" id="uber-black" style="margin-right:8px;padding:8px 12px">Request black car</button>
   <button type="button" data-uber-kind="uberx" id="uber-x" style="padding:8px 12px;background:#1db954;color:#fff;border:0">Request UberX (~35% less)</button>
  </p>
  <div data-uber-status id="uber-st" style="font-size:12px;color:#9f9;margin-top:8px"></div>
- <p style="font-size:11px;color:#666">SF-class expansion · UberX arrives · not mass global 2020s Uber</p>
+ <p class="itt12-next" data-next-flow data-next-when-key="itt12-uber" hidden><b>Next:</b> <a href="../soundcloud/index.html" style="color:#fd8">SoundCloud timed comment</a></p>
+ <p style="font-size:11px;color:#666">SF-class expansion · UberX arrives · ~35% cheaper · not mass global 2020s Uber</p>
 </div>
 <script>
 (function(){
@@ -47,6 +48,7 @@
           ITT._immersionApi.actionFeedback(msg,{doc:document,status:st,kind:"uber"});
         }
       }catch(eFb){}
+      try{if(window.ITT&&ITT.revealNextFlow)ITT.revealNextFlow(document);}catch(eN){}
     }
     var b=document.getElementById("uber-black");
     var x=document.getElementById("uber-x");
@@ -64,5 +66,25 @@
 })();
 </script>
 <script src="../../../../js/immersion-2012.js"></script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="../waze/index.html">Waze</a> ·
+ <a href="../wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
+ <a href="../windows8/index.html">Windows 8</a> ·
+ <a href="../youtube/about.html">About YouTube</a> ·
+ <a href="../chrome/index.html">Google Chrome</a> ·
+ <a href="../facebook/index.html">Facebook</a> ·
+ <a href="../googledrive/index.html">Google Drive</a> ·
+ <a href="../instagram/index.html">Instagram</a> ·
+ <a href="../ipad/index.html">iPad mini</a> ·
+ <a href="../iphone/index.html">iPhone 5</a> ·
+ <a href="../lyft/index.html">Lyft</a> ·
+ <a href="../netflix/index.html">Netflix</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body>
 </html>

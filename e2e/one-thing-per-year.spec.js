@@ -280,12 +280,11 @@ const THINGS = [
     path: "/years/2015/sites/apple/watch.html",
     key: "itt15-watch",
     incomplete: async (page) => {
-      await page.locator("[data-watch-save]").click();
+      await page.locator("[data-watch15-save]").click();
     },
     complete: async (page) => {
       await page.locator("[data-watch-shipped]").check();
-      await page.locator("[data-watch-no-store]").check();
-      await page.locator("[data-watch-save]").click();
+      await page.locator("[data-watch15-save]").click();
     },
   },
   {
@@ -293,13 +292,14 @@ const THINGS = [
     path: "/years/2016/sites/instagram/stories.html",
     key: "itt16-ig-stories",
     incomplete: async (page) => {
-      await page.locator("[data-ig-stories-add]").click();
+      await page.locator("[data-ig-story-add]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-ig-stories-caption]").fill("coffee");
-      await page.locator("[data-ig-stories-24h]").check();
-      await page.locator("[data-ig-stories-not-reels]").check();
-      await page.locator("[data-ig-stories-add]").click();
+      await page.locator("[data-ig-story-text]").fill("coffee");
+      const boxes = page.locator("[data-req]");
+      const n = await boxes.count();
+      for (let i = 0; i < n; i++) await boxes.nth(i).check();
+      await page.locator("[data-ig-story-add]").click();
     },
   },
   {
@@ -333,21 +333,34 @@ const THINGS = [
   },
   {
     year: "2019",
-    path: "/years/2019/sites/disneyplus/index.html",
+    path: "/years/2019/sites/disneyplus/home.html",
     key: "itt19-disneyplus",
     incomplete: async (page) => {
-      await page.locator("[data-dplus-trial]").click();
+      const trial = page.locator("[data-dplus-trial]");
+      if ((await trial.count()) > 0) {
+        await trial.click();
+        return;
+      }
+      await page.locator("[data-dplus-save]").click();
     },
     complete: async (page) => {
-      await page.locator('[data-profile="adult-1"]').click();
-      await page.locator('[data-title="mando"]').click();
-      await page.locator("[data-add-continue]").click();
-      await page.locator('[data-title="lion-king"]').click();
-      await page.locator("[data-add-continue]").click();
-      await page.locator("[data-dplus-date]").check();
-      await page.locator("[data-dplus-not-trial]").check();
-      await page.locator("[data-dplus-kids]").check();
-      await page.locator("[data-dplus-save]").click();
+      const continueUi = page.locator('[data-profile="adult-1"]');
+      if ((await continueUi.count()) > 0) {
+        await continueUi.click();
+        await page.locator('[data-title="mando"]').click();
+        await page.locator("[data-add-continue]").click();
+        await page.locator('[data-title="lion-king"]').click();
+        await page.locator("[data-add-continue]").click();
+        await page.locator("[data-dplus-date]").check();
+        await page.locator("[data-dplus-not-trial]").check();
+        await page.locator("[data-dplus-kids]").check();
+        await page.locator("[data-dplus-save]").click();
+        return;
+      }
+      await page.locator("[data-dplus-plan]").selectOption("monthly");
+      await page.locator("[data-req]").nth(0).check();
+      await page.locator("[data-req]").nth(1).check();
+      await page.locator("[data-dplus-join]").click();
     },
   },
   {
@@ -370,6 +383,20 @@ const THINGS = [
       await page.locator("[data-zoom-part]").check();
       await page.locator("[data-zoom-not-live]").check();
       await page.locator("[data-zoom-save]").click();
+    },
+  },
+  {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-att-allow]").click();
+    },
+    complete: async (page) => {
+      const n = await page.locator("[data-req]").count();
+      for (let i = 0; i < n; i++) await page.locator("[data-req]").nth(i).check();
+      await page.locator("[data-dest-field]").fill("not to track");
+      await page.locator("[data-itt-real-save]").click();
     },
   },
 ];
@@ -415,9 +442,9 @@ test.describe("One-thing per year — load + REAL gate", () => {
     await expect(page.locator("#ott-guided-2013 a[href*=\"vine\"]").first()).toBeVisible();
   });
 
-  test("1994–2020 homes lead with one-thing then guided, residual later", async ({ page }) => {
+  test("1994–2021 homes lead with one-thing then guided, residual later", async ({ page }) => {
     const years = [];
-    for (let y = 1994; y <= 2020; y++) years.push(String(y));
+    for (let y = 1994; y <= 2021; y++) years.push(String(y));
     for (const y of years) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();

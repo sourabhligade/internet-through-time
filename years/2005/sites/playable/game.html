@@ -17,12 +17,19 @@
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 <div class="itt-year-game yg-shell" data-year-game data-year="2005" data-game-id="heli" data-yg-goal="Hold to climb. Release to fall. Don't hit walls." data-yg-next-href="../youtube/index.html" data-yg-next-label="YouTube 2005">
   <h1>HoverChop · 2005</h1>
-  <p style="margin:0 0 8px">Museum original · helicopter-genre (hold mouse or Space to climb). Mid-2000s portal casual class.</p>
-  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>Helicopter-class</b> one-button flyer. Hold to rise, release to fall — mid-2000s portal loop (AddictingGames-era peers). Museum original · no commercial SWF. · key <code>itt05-game-heli</code></p>
+  <p style="margin:0 0 8px">2005 year game · helicopter-genre (hold mouse or Space to climb). School-computer / Miniclip-tab class.</p>
+  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>Helicopter-class</b> one-button flyer. AddictingGames <b>Helicopter Game listed 14 Nov 2004</b> — 2005 is the after-school peak. Hold to rise, release to fall. <b>Club Penguin 24 Oct 2005</b> is the kids-world parallel, not this craft. Museum original · no commercial SWF. · key <code>itt05-game-heli</code></p>
+  <ol class="yg-steps" data-yg-steps style="font-size:11px;margin:8px 0;padding-left:1.3em">
+    <li data-step="start">Start / click canvas</li>
+    <li data-step="fly">Hold to climb through gaps</li>
+    <li data-step="crash">Crash ends the run</li>
+    <li data-step="save">Score &gt; 0 writes <code>itt05-game-heli</code></li>
+  </ol>
   <div class="play-hud" style="margin:8px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
-    <button type="button" id="play-start">Start / Retry</button>
+    <button type="button" id="play-start" data-game-start>Start / Retry</button>
     <span>Score: <b id="play-score" data-game-score>0</b></span>
     <span>Best: <b data-game-best>0</b></span>
+    <span>Medal: <b data-medal>—</b></span>
   </div>
   <p id="play-status" class="yg-status" data-itt-action-status style="font-size:12px;color:#333" class="yg-status">Click the game or Start, then hold to climb</p>
   <div class="play-stage">
@@ -37,15 +44,7 @@
 </div>
 <script src="../../../../js/games/scores.js"></script>
 <script src="../../../../js/games/year-game-boot.js"></script>
-<script>
-(function () {
-  if (window.ITT && ITT.YearGame) {
-    var b = document.querySelector("[data-game-best]");
-    if (b) b.textContent = String(ITT.YearGame.loadBest("heli", "2005"));
-  }
-})();
-</script>
-<script src="../../../../js/games/heli.js"></script>
+<script src="../../../../js/games/year-2005-heli.js"></script>
 <script src="../../../../js/immersion-2005.js" defer></script>
 </body>
 </html>

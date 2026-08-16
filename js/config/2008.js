@@ -48,6 +48,12 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/dropbox/refer.html": "http://museum.local/years/2008/sites/dropbox/refer.html",
+
+      "sites/ask/index.html": "http://museum.local/years/2008/sites/ask/index.html",
+
+      "sites/msn/index.html": "http://museum.local/years/2008/sites/msn/index.html",
+
       "sites/evernote/index.html": "http://museum.local/years/2008/evernote/",
       "sites/groupon/index.html": "http://museum.local/years/2008/groupon/",
       "sites/airbnb/index.html": "http://museum.local/years/2008/airbnb/",
@@ -55,6 +61,10 @@
 
       "sites/playable/index.html": "http://museum.local/years/2008/playable/",
       "sites/playable/game.html": "http://museum.local/years/2008/playable/game.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2008/playable/game-2.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2008/playable/game-3.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2008/playable/game-4.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2008/playable/game-5.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2008/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
@@ -267,6 +277,9 @@
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/netcenter/index.html": "http://www.netcenter.com/",
       "sites/netflix/index.html": "http://www.netflix.com/",
+      "sites/netflix/genres.html": "http://www.netflix.com/BrowseGenres",
+      "sites/netflix/queue.html": "http://www.netflix.com/Queue",
+      "sites/netflix/about.html": "http://www.netflix.com/About",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/netscape/index.html": "http://www.netscape.com/",
       "sites/netscape/netscape6.html": "http://www.netscape.com/netscape6.html",
@@ -374,6 +387,9 @@
       "sites/github/fork.html": "http://github.com/museum/hello-web/fork",
 },
     titleMap: {
+      "sites/netflix/genres.html": "Netflix Genres",
+      "sites/netflix/queue.html": "Netflix Queue",
+      "sites/netflix/about.html": "About Netflix",
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
       "sites/milliondollar/about.html": "About Million Dollar Homepage",

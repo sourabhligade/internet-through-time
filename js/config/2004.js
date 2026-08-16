@@ -48,6 +48,20 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/facebook/poke.html": "http://museum.local/years/2004/sites/facebook/poke.html",
+      "sites/flickr/fave.html": "http://museum.local/years/2004/sites/flickr/fave.html",
+
+      "sites/aol/index.html": "http://museum.local/years/2004/sites/aol/index.html",
+
+      "sites/msn/index.html": "http://museum.local/years/2004/sites/msn/index.html",
+
+      "sites/walmart/index.html": "http://museum.local/years/2004/sites/walmart/index.html",
+
+      "sites/weather/index.html": "http://museum.local/years/2004/sites/weather/index.html",
+
+      "sites/adsense/stats.html": "http://www.google.com/adsense/report",
+      "sites/folklore/index.html": "http://www.folklore.org/",
+      "sites/folklore/about.html": "http://www.folklore.org/about.html",
       "sites/basecamp/index.html": "http://museum.local/years/2004/basecamp/",
       "sites/tinypic/index.html": "http://museum.local/years/2004/tinypic/",
       "sites/orkutseed/index.html": "http://museum.local/years/2004/orkutseed/",
@@ -55,6 +69,10 @@
 
       "sites/playable/index.html": "http://museum.local/years/2004/playable/",
       "sites/playable/game.html": "http://museum.local/years/2004/playable/game.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2004/playable/game-5.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2004/playable/game-4.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2004/playable/game-3.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2004/playable/game-2.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2004/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
@@ -238,6 +256,9 @@
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/netcenter/index.html": "http://www.netcenter.com/",
       "sites/netflix/index.html": "http://www.netflix.com/",
+      "sites/netflix/genres.html": "http://www.netflix.com/BrowseGenres",
+      "sites/netflix/queue.html": "http://www.netflix.com/Queue",
+      "sites/netflix/about.html": "http://www.netflix.com/About",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/netscape/index.html": "http://www.netscape.com/",
       "sites/netscape/netscape6.html": "http://www.netscape.com/netscape6.html",
@@ -334,6 +355,13 @@
       "sites/zombo/index.html": "http://www.zombo.com/"
     },
     titleMap: {
+      "sites/facebook/poke.html": "Poke",
+      "sites/flickr/fave.html": "Fave",
+
+      "sites/netflix/genres.html": "Netflix Genres",
+      "sites/netflix/queue.html": "Netflix Queue",
+      "sites/netflix/about.html": "About Netflix",
+      "sites/adsense/stats.html": "AdSense reports",
       "sites/orkut/index.html": "Orkut",
       "sites/orkut/friends.html": "Orkut Friends",
       "sites/orkut/profile.html": "Orkut Profile",

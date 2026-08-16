@@ -72,6 +72,11 @@
       }
     }
     saveJSON(sk("github"), blob);
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+    } catch (eN) {
+      /* */
+    }
   }
 
   function boot(doc) {

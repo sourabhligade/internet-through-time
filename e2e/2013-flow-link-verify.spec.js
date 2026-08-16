@@ -89,9 +89,12 @@ test.describe("2013 dirbar + iframe trails", () => {
 });
 
 test.describe("2013 leftover clone voice", () => {
-  test("Twitter clone room is gone (lean 2013)", async ({ page }) => {
+  test("Twitter is lean popular session, not a clone forest", async ({ page }) => {
     const res = await page.goto("/years/2013/sites/twitter/index.html");
-    expect(res && res.status()).toBe(404);
+    expect(res && res.status()).toBe(200);
+    await expect(page.locator("body")).toContainText(/top-10|popular session/i);
+    await expect(page.locator("[data-itt-popular='tweets']")).toBeVisible();
+    await expect(page.locator("body")).not.toContainText(/clone forest|timeline clone/i);
     await page.goto("/years/2013/pages/home.html");
     await expect(page.locator("body")).toContainText(/This year is lean/i);
   });

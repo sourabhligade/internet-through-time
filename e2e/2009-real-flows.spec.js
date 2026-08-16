@@ -4,6 +4,7 @@
  * Every interactive action must mutate itt09-* keys and/or DOM after click.
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate, fillGmailLogin } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -36,7 +37,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     const after = JSON.parse((await requireKey(page, 'itt09-apps')) || '[]');
     expect(Array.isArray(after) ? after.length : 1).toBeGreaterThan(0);
   });
@@ -58,7 +59,7 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/farmville/index.html');
     await clearKeys(page, 'itt09-farm');
     await page.reload();
-    await page.locator('[data-farm-plant="strawberry"]').click();
+    await completeRealGate(page, '[data-farm-plant="strawberry"]');
     const raw = await requireKey(page, 'itt09-farm');
     expect(raw).toMatch(/strawberry/i);
   });
@@ -90,7 +91,7 @@ test.describe('2009 real flows', () => {
     await page.goto('/years/2009/sites/foursquare/index.html');
     await clearKeys(page, 'itt09-4sq');
     await page.reload();
-    await page.locator('[data-4sq-checkin]').first().click();
+    await completeRealGate(page, '[data-4sq-checkin]');
     await requireKey(page, 'itt09-4sq');
   });
 
@@ -99,7 +100,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-ks');
     await page.reload();
     await page.waitForSelector('[data-ks-back]', { timeout: 20000 });
-    await page.locator('[data-ks-back]').first().click();
+    await completeRealGate(page, '[data-ks-back]');
     await requireKey(page, 'itt09-ks');
   });
 
@@ -135,7 +136,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, ['itt09-android-apps', 'itt09-android']);
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await page.locator('[data-android-install]').first().click();
+    await completeRealGate(page, '[data-android-install]');
     const raw = await page.evaluate(
       () => localStorage.getItem('itt09-android-apps') || localStorage.getItem('itt09-android')
     );
@@ -152,6 +153,7 @@ test.describe('2009 real flows', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-gmail-login]', { timeout: 20000 });
+    await fillGmailLogin(page);
     await page.locator('[data-gmail-login]').evaluate((f) => f.requestSubmit());
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt09-gmail')), { timeout: 8000 })
@@ -163,7 +165,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-hulu');
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await completeRealGate(page, '[data-hulu-play]');
     await requireKey(page, 'itt09-hulu');
   });
 
@@ -186,7 +188,7 @@ test.describe('2009 real flows', () => {
     if (await page.locator('[data-dropbox-name]').count()) {
       await page.locator('[data-dropbox-name]').fill('notes-2009.txt');
     }
-    await page.locator('[data-dropbox-add]').click();
+    await completeRealGate(page, '[data-dropbox-add]');
     await requireKey(page, 'itt09-dropbox-files');
   });
 
@@ -198,7 +200,7 @@ test.describe('2009 real flows', () => {
     if (await page.locator('[data-spotify-invite]').count()) {
       await page.locator('[data-spotify-invite]').fill('EURO-2009');
     }
-    await page.locator('[data-spotify-join]').click();
+    await completeRealGate(page, '[data-spotify-join]');
     await requireKey(page, 'itt09-spotify-eu');
   });
 
@@ -230,10 +232,7 @@ test.describe('2009 real flows', () => {
     await clearKeys(page, 'itt09-iphone-history');
     await page.reload();
     const browse = page.locator('[data-iphone-browse]');
-    if ((await browse.count()) === 0) {
-      test.skip(true, 'no iphone browse form on 2009 index');
-      return;
-    }
+    await expect(browse).toBeVisible({ timeout: 15000 });
     await page.fill('[name="url"]', 'http://www.apple.com/');
     await browse.evaluate((f) => {
       if (f.requestSubmit) f.requestSubmit();

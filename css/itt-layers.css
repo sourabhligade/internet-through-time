@@ -1,0 +1,294 @@
+/**
+ * Three museum layers: Machine (the PC) · Web (reconstructed sites) · Game (exhibit toys).
+ * Skinned by html[data-itt-layer-band] a–f. No official OS/browser logos.
+ */
+
+/* —— legend —— */
+.itt-layer-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  font: 11px/1.3 Tahoma, Arial, Helvetica, sans-serif;
+  padding: 4px 8px;
+  margin: 0;
+  z-index: 45;
+}
+.itt-layer-legend .itt-layer-kicker {
+  font-weight: 700;
+  margin-right: 4px;
+}
+.itt-layer-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  cursor: default;
+}
+a.itt-layer-chip,
+button.itt-layer-chip {
+  cursor: pointer;
+  font: inherit;
+}
+.itt-layer-chip.is-on {
+  font-weight: 700;
+}
+.itt-layer-note {
+  flex: 1 1 160px;
+  opacity: 0.85;
+  font-size: 10px;
+}
+
+/* band A/B — Win95 navy */
+html[data-itt-layer-band="a"] .itt-layer-legend,
+html[data-itt-layer-band="b"] .itt-layer-legend {
+  background: #000080;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+html[data-itt-layer-band="a"] .itt-layer-chip,
+html[data-itt-layer-band="b"] .itt-layer-chip {
+  border-color: #99ccff;
+  color: #ffffcc;
+  background: #000060;
+}
+html[data-itt-layer-band="a"] .itt-layer-chip.is-on,
+html[data-itt-layer-band="b"] .itt-layer-chip.is-on {
+  background: #0000aa;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* band C — IE5 / Win98 */
+html[data-itt-layer-band="c"] .itt-layer-legend {
+  background: #d4d0c8;
+  color: #000;
+  border-bottom: 1px solid #808080;
+}
+html[data-itt-layer-band="c"] .itt-layer-chip {
+  border-color: #808080 #fff #fff #808080;
+  background: #c0c0c0;
+}
+html[data-itt-layer-band="c"] .itt-layer-chip.is-on {
+  background: #000080;
+  color: #fff;
+  border-color: #000;
+}
+
+/* band D — XP Luna */
+html[data-itt-layer-band="d"] .itt-layer-legend {
+  background: linear-gradient(180deg, #3d7ee8, #245edc);
+  color: #fff;
+  font-family: Tahoma, sans-serif;
+}
+html[data-itt-layer-band="d"] .itt-layer-chip {
+  border-color: #8eb8ff;
+  background: rgba(0, 20, 80, 0.25);
+  color: #fff;
+  border-radius: 3px;
+}
+html[data-itt-layer-band="d"] .itt-layer-chip.is-on {
+  background: #0a246a;
+}
+
+/* band E — Win7 Aero-class */
+html[data-itt-layer-band="e"] .itt-layer-legend {
+  background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(180,210,230,0.2)), #1a3a4a;
+  color: #f4f8fb;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+html[data-itt-layer-band="e"] .itt-layer-chip {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+}
+html[data-itt-layer-band="e"] .itt-layer-chip.is-on {
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+}
+
+/* band F — Win10 residual */
+html[data-itt-layer-band="f"] .itt-layer-legend {
+  background: #1f1f1f;
+  color: #eee;
+  font-family: "Segoe UI", Arial, sans-serif;
+  border-bottom: 1px solid #333;
+}
+html[data-itt-layer-band="f"] .itt-layer-chip {
+  border-color: #555;
+  background: #2b2b2b;
+  border-radius: 0;
+}
+html[data-itt-layer-band="f"] .itt-layer-chip.is-on {
+  background: #0078d7;
+  border-color: #0078d7;
+  color: #fff;
+}
+
+/* shell: sit under exit bar */
+body[data-itt-layer="machine"] > .itt-layer-legend,
+.desktop > .itt-layer-legend,
+#exit-bar + .itt-layer-legend {
+  margin: 0;
+}
+
+/* —— wayfind reskin (overrides injected navy) —— */
+html[data-itt-layer-band="c"] #itt-wayfind {
+  background: #d4d0c8 !important;
+  color: #000 !important;
+  border-top: 2px solid #808080 !important;
+  font-family: Tahoma, Arial, sans-serif !important;
+}
+html[data-itt-layer-band="c"] #itt-wayfind a { color: #000080 !important; }
+html[data-itt-layer-band="c"] #itt-wayfind a.itt-wayfind-home {
+  background: #000080 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+
+html[data-itt-layer-band="d"] #itt-wayfind {
+  background: #245edc !important;
+  color: #fff !important;
+  border-top: 1px solid #8eb8ff !important;
+  font-family: Tahoma, sans-serif !important;
+}
+html[data-itt-layer-band="d"] #itt-wayfind a { color: #ffe566 !important; }
+html[data-itt-layer-band="d"] #itt-wayfind a.itt-wayfind-home {
+  background: #0a246a !important;
+  color: #fff !important;
+  border-color: #8eb8ff !important;
+}
+
+html[data-itt-layer-band="e"] #itt-wayfind {
+  background: #1a2a33 !important;
+  color: #e8eef2 !important;
+  border-top: 1px solid #5a8aa0 !important;
+  font-family: "Segoe UI", Tahoma, sans-serif !important;
+}
+html[data-itt-layer-band="e"] #itt-wayfind a { color: #9fd4f0 !important; }
+html[data-itt-layer-band="e"] #itt-wayfind a.itt-wayfind-home {
+  background: #2a5566 !important;
+  color: #fff !important;
+  border-color: #7ab !important;
+}
+
+html[data-itt-layer-band="f"] #itt-wayfind {
+  background: #1f1f1f !important;
+  color: #eee !important;
+  border-top: 1px solid #444 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+html[data-itt-layer-band="f"] #itt-wayfind a { color: #9cf !important; }
+html[data-itt-layer-band="f"] #itt-wayfind a.itt-wayfind-home {
+  background: #0078d7 !important;
+  color: #fff !important;
+  border-color: #0078d7 !important;
+}
+
+/* —— Starting Point assessor —— */
+.itt-layer-assess {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 52em;
+  margin: 10px auto 14px;
+  padding: 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.itt-la-col {
+  flex: 1 1 160px;
+  min-width: 150px;
+  padding: 8px 10px;
+  border: 1px solid #888;
+  background: #fafafa;
+  color: #111;
+}
+.itt-la-col h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+.itt-la-col p { margin: 0 0 6px; }
+.itt-la-col ul { margin: 0; padding-left: 1.2em; }
+.itt-la-col .itt-la-hint { font-size: 11px; color: #555; }
+html[data-itt-layer-band="a"] .itt-la-col,
+html[data-itt-layer-band="b"] .itt-la-col {
+  background: #c0c0c0;
+  border-color: #fff #808080 #808080 #fff;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+html[data-itt-layer-band="d"] .itt-la-col {
+  background: #ece9d8;
+  border-color: #003c74;
+  font-family: Tahoma, sans-serif;
+}
+html[data-itt-layer-band="e"] .itt-la-col {
+  background: #f3f7fa;
+  border-color: #7aa;
+  border-radius: 3px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+html[data-itt-layer-band="f"] .itt-la-col {
+  background: #f2f2f2;
+  border-color: #ccc;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+html[data-itt-year="2018"] .itt-la-col,
+html[data-itt-year="2019"] .itt-la-col,
+html[data-itt-year="2020"] .itt-la-col,
+html[data-itt-year="2021"] .itt-la-col {
+  background: #111;
+  color: #eee;
+  border-color: #444;
+}
+html[data-itt-year="2018"] .itt-la-col .itt-la-hint,
+html[data-itt-year="2019"] .itt-la-col .itt-la-hint,
+html[data-itt-year="2020"] .itt-la-col .itt-la-hint,
+html[data-itt-year="2021"] .itt-la-col .itt-la-hint { color: #aaa; }
+html[data-itt-year="2018"] .itt-la-col a,
+html[data-itt-year="2019"] .itt-la-col a,
+html[data-itt-year="2020"] .itt-la-col a,
+html[data-itt-year="2021"] .itt-la-col a { color: #90caf9; }
+
+/* —— game cabinet —— */
+[data-itt-layer="game"][data-year-game]::before,
+[data-itt-layer="game"][data-year-playable] .yp-kicker {
+  /* playable already has a kicker */
+}
+[data-year-game].itt-game-cabinet {
+  position: relative;
+}
+[data-year-game].itt-game-cabinet > .itt-game-mark {
+  display: block;
+  font: 10px/1.3 Tahoma, Arial, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  padding: 4px 8px;
+  background: #111;
+  color: #ffe566;
+}
+html[data-itt-layer-band="a"] [data-year-game].itt-game-cabinet,
+html[data-itt-layer-band="b"] [data-year-game].itt-game-cabinet {
+  border: 3px solid;
+  border-color: #fff #808080 #808080 #fff;
+  background: #c0c0c0;
+}
+html[data-itt-layer-band="c"] [data-year-game].itt-game-cabinet {
+  border: 2px inset #808080;
+}
+html[data-itt-layer-band="d"] [data-year-game].itt-game-cabinet {
+  border: 2px solid #003c74;
+  box-shadow: 2px 2px 0 #7a96df;
+}
+html[data-itt-layer-band="e"] [data-year-game].itt-game-cabinet {
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+html[data-itt-layer-band="f"] [data-year-game].itt-game-cabinet {
+  border: 1px solid #333;
+  background: #151515;
+}

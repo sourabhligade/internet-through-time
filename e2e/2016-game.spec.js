@@ -34,11 +34,11 @@ test.describe("2016 Gym Rush honesty + load", () => {
     await expect(page.locator("a[href*='g=1']").first()).toBeVisible();
     await expect(page.locator("a[href*='g=2']").first()).toBeVisible();
     await expect(page.locator("a[href*='g=3']").first()).toBeVisible();
-    await expect(page.locator("a[href*='loop.html']").first()).toBeVisible();
+    await expect(page.locator("a[href*='#slither'], a[href*='slither']").first()).toBeVisible();
   });
 
   test("PoGO literacy links Gym Rush", async ({ page }) => {
-    await page.goto("/years/2016/sites/pogo/index.html");
+    await page.goto("/years/2016/sites/pokemongo/index.html");
     await expect(page.locator("a[href*='game.html']").first()).toBeVisible();
     await page.locator("a[href*='game.html']").first().click();
     await expect(page.locator("[data-game-id='gymrush']")).toBeVisible();
@@ -144,7 +144,7 @@ test.describe("2016 Gym Rush play + pause", () => {
 
 test.describe("2016 slither strip + toys", () => {
   test("slither loop is literacy not the year game", async ({ page }) => {
-    await page.goto("/years/2016/sites/playable/loop.html");
+    await page.goto("/years/2016/sites/playable/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt16-slither-ack");
       localStorage.removeItem("itt13-game-loopsix");

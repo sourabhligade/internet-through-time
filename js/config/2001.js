@@ -45,6 +45,22 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/ayb/index.html": "http://museum.local/years/2001/sites/ayb/index.html",
+
+      "sites/wikipedia/preview.html": "http://museum.local/years/2001/sites/wikipedia/preview.html",
+      "sites/apple/faq.html": "http://museum.local/years/2001/sites/apple/faq.html",
+      "sites/wayback/lookup.html": "http://museum.local/years/2001/sites/wayback/lookup.html",
+      "sites/msn/hotmail.html": "http://museum.local/years/2001/sites/msn/hotmail.html",
+      "sites/movabletype/publish.html": "http://museum.local/years/2001/sites/movabletype/publish.html",
+
+      "sites/aol/index.html": "http://museum.local/years/2001/sites/aol/index.html",
+
+      "sites/about/index.html": "http://museum.local/years/2001/sites/about/index.html",
+
+      "sites/bbc/index.html": "http://museum.local/years/2001/sites/bbc/index.html",
+
+      "sites/cnet/index.html": "http://museum.local/years/2001/sites/cnet/index.html",
+
       "sites/runescape/index.html": "http://museum.local/years/2001/runescape/",
       "sites/habbo/index.html": "http://museum.local/years/2001/habbo/",
       "sites/limewire/index.html": "http://museum.local/years/2001/limewire/",
@@ -52,6 +68,10 @@
 
       "sites/playable/index.html": "http://museum.local/years/2001/playable/",
       "sites/playable/game.html": "http://museum.local/years/2001/playable/game.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2001/playable/game-5.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2001/playable/game-4.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2001/playable/game-3.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2001/playable/game-2.html",
       "sites/wikipedia/welcome.html": "http://www.wikipedia.org/wiki/Welcome,_newcomers",
       "sites/encarta/index.html": "http://encarta.msn.com/",
       "sites/loudcloud/index.html": "http://www.loudcloud.com/",
@@ -238,6 +258,12 @@
       "sites/msn/wlive.html": "http://museum.local/years/2001/sites/msn/wlive.html",
 },
     titleMap: {
+      "sites/wikipedia/preview.html": "Preview",
+      "sites/apple/faq.html": "Faq",
+      "sites/wayback/lookup.html": "Lookup",
+      "sites/msn/hotmail.html": "Hotmail",
+      "sites/movabletype/publish.html": "Publish",
+
       "sites/netcenter/about.html": "About",
       "sites/y2k/about.html": "About",
       "sites/metafilter/about.html": "About",

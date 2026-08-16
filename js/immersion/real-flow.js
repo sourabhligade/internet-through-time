@@ -127,7 +127,7 @@
    */
   function bootRealSave(doc) {
     doc = doc || document;
-    var btns = doc.querySelectorAll("[data-itt-real-save]");
+    var btns = doc.querySelectorAll("[data-itt-real-save], [data-itt-popular-save]");
     var b;
     for (b = 0; b < btns.length; b++) {
       (function (btn) {
@@ -295,17 +295,32 @@
             feedback("REAL gate: required fields empty — nothing saved.", st, { error: true });
             return;
           }
+          var minReq = parseInt(form.getAttribute("data-min-req") || "0", 10);
+          if (isNaN(minReq)) minReq = 0;
+          if (minReq > 0 && countChecked(form, "[data-req]") < minReq) {
+            feedback("REAL gate: complete at least " + minReq + " checks first (not a soft mock).", st, { error: true });
+            return;
+          }
           var suffix = form.getAttribute("data-storage-key") || "form-save";
           var full = storageKey(suffix);
           saveJSON(full, {
             multiStep: true,
             real: true,
             fields: fields,
+            checks: minReq ? countChecked(form, "[data-req]") : undefined,
             year: yearOf(),
             ts: Date.now()
           });
           feedback("Saved REAL · " + full, st);
           markUsed(form.getAttribute("data-tour-id") || undefined);
+          try {
+            var nexts = doc.querySelectorAll("[data-next-flow]");
+            var ni;
+            for (ni = 0; ni < nexts.length; ni++) {
+              nexts[ni].removeAttribute("hidden");
+              nexts[ni].style.display = "";
+            }
+          } catch (eN) { /* */ }
         });
       })(forms[i]);
     }

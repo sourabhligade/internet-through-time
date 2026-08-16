@@ -1,6 +1,6 @@
 /**
  * Immersion config — 2012
- * Thesis: Instagram Android + FB buy · IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome
+ * Thesis: SoundCloud timed comment · IG Android · IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome
  */
 (function (global) {
   "use strict";
@@ -70,9 +70,10 @@
       uberX: true,
       win8: true
     },
-    navSubtitle: "Win7 · Chrome/IE9 · Instagram · FB IPO · iPhone 5 · Pinterest",
+    navSubtitle: "Win7 · Chrome/IE9 · SoundCloud · Instagram · FB IPO · iPhone 5",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
+      { label: "SoundCloud", href: "sites/soundcloud/index.html", match: "/soundcloud/" },
       { label: "Instagram", href: "sites/instagram/index.html", match: "/instagram/" },
       { label: "Facebook", href: "sites/facebook/ipo.html", match: "/facebook/" },
       { label: "Pinterest", href: "sites/pinterest/index.html", match: "/pinterest/" },
@@ -84,6 +85,7 @@
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
+      { label: "SoundCloud", href: "sites/soundcloud/index.html" },
       { label: "Instagram", href: "sites/instagram/index.html" },
       { label: "FB IPO", href: "sites/facebook/ipo.html" },
       { label: "Pinterest", href: "sites/pinterest/index.html" },
@@ -94,12 +96,20 @@
     ],
     tour: [
       {
+        id: "soundcloud",
+        label: "SoundCloud timed comment",
+        href: "sites/soundcloud/index.html",
+        match: "/soundcloud/",
+        hint: "Play → comment at the playhead",
+        doneMessage: "Waveform residual · timed note saved."
+      },
+      {
         id: "about",
         label: "About 2012",
         href: "pages/about.html",
         match: "/about",
         hint: "visual web · apps · dual scale",
-        doneMessage: "Instagram Android · FB IPO · iPhone 5 · Chrome."
+        doneMessage: "SoundCloud gold · Instagram Android · FB IPO · iPhone 5 · Chrome."
       },
       {
         id: "instagram",

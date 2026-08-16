@@ -19,7 +19,7 @@
  <button type="button" class="skip" id="skip-connect">Skip connect</button>
  <p style="margin:8px 0 0;font-size:10px;color:#333;max-width:280px">
  2011 thesis: streaming + cloud + algorithmic social + Siri.
- Spotify US · Timeline · Google+ · iPhone 4S · Netflix/Qwikster.
+ Airbnb request · Spotify US · Timeline · Google+ · iPhone 4S · Netflix/Qwikster.
  </p>
  </div>
  </div>
@@ -31,7 +31,7 @@
  <button type="button" class="dialog-x" data-close="dlg-open-location">×</button>
  </div>
  <div class="dialog-body">
- <p>Open Location in Internet Explorer:</p>
+ <p>Open Location in Internet Explorer 9:</p>
  <input type="text" id="dlg-ol-input" class="dialog-input" spellcheck="false" placeholder="http://">
  <div class="dialog-btns">
  <button type="button" id="dlg-ol-ok">Open</button>
@@ -317,6 +317,7 @@
  <img src="../../assets/period/2007/chrome/throbber.gif" alt="" width="30" height="30">
  </div>
  </div>
+ <p class="itt-shell-honesty" style="margin:0;padding:2px 8px;font:11px Arial,sans-serif;color:#555">Toolbar bitmaps are IE7 continuity — shell class is IE9 / Windows 7.</p>
 
  <div class="locationbar" id="locationbar">
  <label for="location">Address</label>
@@ -326,6 +327,7 @@
 
  <div class="dirbar" id="dirbar">
  <button type="button" class="dir-btn" data-go="pages/home.html">Start</button>
+ <button type="button" class="dir-btn" data-go="sites/airbnb/index.html">Airbnb</button>
  <button type="button" class="dir-btn" data-go="sites/spotify/index.html">Spotify</button>
  <button type="button" class="dir-btn" data-go="sites/facebook/timeline.html">Timeline</button>
  <button type="button" class="dir-btn" data-go="sites/googleplus/index.html">Google+</button>
@@ -359,7 +361,7 @@
  <div class="win95-tray"><span id="tray-clock">12:00 PM</span></div>
  <div class="win95-start-menu hidden" id="start-menu">
  <div class="start-menu-banner">
- <span class="start-banner-text">Windows<b>XP</b></span>
+ <span class="start-banner-text">Windows<b>7</b></span>
  </div>
  <div class="start-menu-items">
  <button type="button" class="start-menu-item" data-start-cmd="programs">📂 Programs</button>
@@ -448,7 +450,7 @@
  var ol = document.getElementById("dlg-ol-input");
  if (ol) { ol.value = "http://"; ol.focus(); }
  } else if (cmd === "shutdown") {
- if (window.confirm("Shut down Windows XP immersion and return to the museum hub?")) {
+ if (window.confirm("Shut down Windows 7 immersion and return to the museum hub?")) {
  location.href = "../../index.html";
  }
  }

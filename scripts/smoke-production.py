@@ -160,7 +160,7 @@ def check_files() -> None:
         "years/2016/pages/home.html",
         "years/2016/pages/about.html",
         "years/2016/sites/instagram/stories.html",
-        "years/2016/sites/pogo/index.html",
+        "years/2016/sites/pokemongo/index.html",
         "years/2016/sites/playable/game.html",
         "js/config/2016.js",
         "js/immersion-2016.js",

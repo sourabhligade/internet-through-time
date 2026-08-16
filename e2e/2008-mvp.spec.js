@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
+const { enterYear, completeRealGate } = require('./helpers');
 
 test.describe('2008 MVP', () => {
   test('shell boots 2008', async ({ page }) => {
@@ -34,8 +34,7 @@ test.describe('2008 MVP', () => {
     await page.reload();
     await page.waitForSelector('[data-appstore-catalog], [data-appstore-install]', { timeout: 20000 });
     await expect(page.locator('body')).toContainText(/500|552/i);
-    const btn = page.locator('[data-appstore-install]').first();
-    await btn.click();
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt08/i, { timeout: 8000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt08-apps'));
     expect(raw || '').toMatch(/Koi|Monkey|Convert|Facebook|Shazam|name/i);
@@ -85,7 +84,7 @@ test.describe('2008 MVP', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await completeRealGate(page, '[data-hulu-play]');
     await expect(page.locator('[data-hulu-status]')).toContainText(/Watching|itt08|Office|theater/i, {
       timeout: 8000,
     });

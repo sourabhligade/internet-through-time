@@ -74,6 +74,11 @@ test.describe('2003 live flows — real links & buttons', () => {
 
   test('iTunes buy + library persist', async ({ page }) => {
     await page.goto('/years/2003/sites/itunes/index.html');
+    await page.waitForSelector('[data-itunes-buy]', { timeout: 20000 });
+    await page.waitForTimeout(450);
+    const reqs = page.locator('[data-itunes-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator('[data-itunes-buy] button[type="submit"]').first().click();
     await expect(page.locator('[data-itunes-status]')).toContainText(/Purchased|99/i);
     await page.goto('/years/2003/sites/itunes/library.html');

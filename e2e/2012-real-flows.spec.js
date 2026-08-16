@@ -84,6 +84,8 @@ test.describe('2012 real flows (storage required)', () => {
     await page.goto('/years/2012/sites/iphone/maps.html');
     await clearKeys(page, ['itt12-maps-note']);
     await page.reload();
+    await page.locator('[data-maps-dropped]').check();
+    await page.locator('[data-maps-apology]').check();
     await page.locator('[data-maps-q]').fill('Golden Gate');
     await page.locator('[data-maps-search]').click();
     await expect(page.locator('[data-maps-status]')).toContainText(/Saved|itt12-maps/i);
@@ -193,6 +195,96 @@ test.describe('2012 real flows (storage required)', () => {
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt12-fb-index')))
       .toBeTruthy();
+  });
+
+  test('Android install incomplete writes nothing', async ({ page }) => {
+    await page.goto('/years/2012/sites/instagram/android.html');
+    await clearKeys(page, ['itt12-ig-android']);
+    await page.reload();
+    await page.locator('[data-ig-android-install]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-ig-android'))).toBeFalsy();
+    await page.locator('[data-ig-android-date]').check();
+    await page.locator('[data-ig-android-not-stories]').check();
+    await page.locator('[data-ig-android-install]').click();
+    await expectStorageTruthy(page, 'itt12-ig-android');
+  });
+
+  test('IPO incomplete blocked; two facts write itt12-fb-ipo-ack', async ({ page }) => {
+    await page.goto('/years/2012/sites/facebook/ipo.html');
+    await clearKeys(page, ['itt12-fb-ipo-ack']);
+    await page.reload();
+    await page.locator('[data-fb-ipo-ack]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-fb-ipo-ack'))).toBeFalsy();
+    await page.locator('[data-ipo-fact="price38"]').check();
+    await page.locator('[data-ipo-fact="nasdaq"]').check();
+    await page.locator('[data-fb-ipo-ack]').click();
+    await expectStorageTruthy(page, 'itt12-fb-ipo-ack');
+  });
+
+  test('Maps empty search writes nothing', async ({ page }) => {
+    await page.goto('/years/2012/sites/iphone/maps.html');
+    await clearKeys(page, ['itt12-maps-note']);
+    await page.reload();
+    await page.locator('[data-maps-search]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-maps-note'))).toBeFalsy();
+  });
+
+  test('Pinterest pin without literacy writes nothing', async ({ page }) => {
+    await page.goto('/years/2012/sites/pinterest/index.html');
+    await page.evaluate(() => {
+      try {
+        Object.keys(localStorage)
+          .filter((k) => /pin/i.test(k))
+          .forEach((k) => localStorage.removeItem(k));
+      } catch (e) {
+        /* */
+      }
+    });
+    await page.reload();
+    await page.waitForFunction(
+      () => document.documentElement.getAttribute('data-itt-immersion-booted') === '2012',
+      null,
+      { timeout: 25000 }
+    );
+    await page.locator('[data-pin-save]').first().click();
+    await page.waitForTimeout(120);
+    const hit = await page.evaluate(() =>
+      Object.keys(localStorage).some((k) => {
+        const v = localStorage.getItem(k) || '';
+        return /pin/i.test(k) && v && v !== '[]' && v !== '{}';
+      })
+    );
+    expect(hit).toBeFalsy();
+  });
+
+  test('SoundCloud Next chip after REAL', async ({ page }) => {
+    await page.goto('/years/2012/sites/soundcloud/index.html');
+    await clearKeys(page, ['itt12-soundcloud']);
+    await page.reload();
+    await expect(page.locator('[data-next-flow]')).toBeHidden();
+    await page.locator('[data-sc-play]').click();
+    await page.fill('[data-sc-text]', 'drop at the drop');
+    await page.locator('[data-sc-comment-btn]').click();
+    await expect(page.locator('[data-next-flow]')).toBeVisible();
+    await expect(page.locator('[data-next-flow] a[href*="instagram/android"]')).toBeVisible();
+  });
+
+  test('About thesis incomplete writes nothing; Live Stats users number present', async ({ page }) => {
+    await page.goto('/years/2012/pages/about.html');
+    await clearKeys(page, ['itt12-thesis-ack']);
+    await page.reload();
+    await expect(page.locator('body')).toContainText('2,518,453,530');
+    await expect(page.locator('body')).toContainText(/wildcard|cleanup|Netcraft/i);
+    await page.locator('[data-thesis-ack]').click();
+    await page.waitForTimeout(120);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-thesis-ack'))).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-thesis-ack]').click();
+    await expectStorageTruthy(page, 'itt12-thesis-ack');
   });
 
   test('trail: home → IPO via shell', async ({ page }) => {

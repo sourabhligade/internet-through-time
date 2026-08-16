@@ -48,13 +48,27 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/double-rainbow/index.html": "http://museum.local/years/2010/sites/double-rainbow/index.html",
+
+      "sites/ask/index.html": "http://museum.local/years/2010/sites/ask/index.html",
+
       "sites/formspring/index.html": "http://museum.local/years/2010/formspring/",
       "sites/grooveshark/index.html": "http://museum.local/years/2010/grooveshark/",
       "sites/path/index.html": "http://museum.local/years/2010/path/",
       "sites/colorapp/index.html": "http://museum.local/years/2010/colorapp/",
 
       "sites/playable/index.html": "http://museum.local/years/2010/playable/",
+            "sites/playable/sling.html": "http://museum.local/years/2010/playable/sling.html",
+      "sites/playable/square.html": "http://museum.local/years/2010/playable/square.html",
+      "sites/playable/pad.html": "http://museum.local/years/2010/playable/pad.html",
+      "sites/playable/kinect.html": "http://museum.local/years/2010/playable/kinect.html",
+      "sites/playable/steps.html": "http://museum.local/years/2010/playable/steps.html",
+            "sites/playable/fruit.html": "http://museum.local/years/2010/playable/fruit.html",
       "sites/playable/game.html": "http://museum.local/years/2010/playable/game.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2010/playable/game-2.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2010/playable/game-3.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2010/playable/game-4.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2010/playable/game-5.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://museum.local/pages/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
@@ -644,19 +658,13 @@
     },
     defaultBookmarks: [
       { title: "Starting Point 2010", path: "pages/home.html" },
-      { title: "Twitter", path: "sites/twitter/index.html" },
+      { title: "Imgur", path: "sites/imgur/index.html" },
+      { title: "iPad", path: "sites/ipad/index.html" },
+      { title: "iPhone 4", path: "sites/iphone/index.html" },
+      { title: "Instagram", path: "sites/instagram/index.html" },
       { title: "Facebook", path: "sites/facebook/index.html" },
-      { title: "YouTube", path: "sites/youtube/index.html" },
-      { title: "Digg", path: "sites/digg/index.html" },
-      { title: "Google Docs", path: "sites/docs/index.html" },
-      { title: "AWS", path: "sites/aws/index.html" },
-      { title: "MySpace", path: "sites/myspace/index.html" },
-      { title: "Google", path: "sites/google/index.html" },
-      { title: "Flickr", path: "sites/flickr/index.html" },
-      { title: "Gmail", path: "sites/gmail/index.html" },
-      { title: "Yahoo!", path: "sites/yahoo/index.html" },
-      { title: "Amazon.com", path: "sites/amazon/index.html" },
-      { title: "Wikipedia", path: "sites/wikipedia/index.html" }
+      { title: "App Store", path: "sites/appstore/index.html" },
+      { title: "About 2010", path: "pages/about.html" }
     ],
 
     fallbackUrlBase: "http://home.microsoft.com/intl/web2010/",
@@ -670,6 +678,10 @@
       { re: /windows.?7|windows7/i, path: "sites/windows7/index.html" },
       { re: /internet.?explorer.?8|\bie8\b/i, path: "sites/ie8/index.html" },
       { re: /app\s*store|itunes.*app/i, path: "sites/appstore/index.html" },
+      { re: /imgur/i, path: "sites/imgur/index.html" },
+      { re: /cablegate|wikileaks/i, path: "sites/cablegate/index.html" },
+      { re: /groupon/i, path: "sites/groupon/index.html" },
+      { re: /\bie9\b|internet.?explorer.?9/i, path: "sites/ie9/index.html" },
       { re: /instagram|instagr\.am/i, path: "sites/instagram/index.html" },
       { re: /ipad|apple\.com\/ipad/i, path: "sites/ipad/index.html" },
       { re: /pinterest/i, path: "sites/pinterest/index.html" },
@@ -743,6 +755,6 @@
       "help-handbook": "pages/about.html",
       "help-faq": "pages/about.html"
     },
-    desktopAlert: "Decorative Windows XP desktop icon.\nOnly Internet Explorer is functional in this museum year."
+    desktopAlert: "Decorative Windows 7 desktop icon.\nInternet Explorer 8 is the mass browser in this museum year."
   };
 })(typeof window !== "undefined" ? window : this);

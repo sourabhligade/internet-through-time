@@ -32,4 +32,27 @@ test.describe("2004 thefacebook friends typed add", () => {
     await page.waitForTimeout(400);
     await expect(page.locator("[data-fb-friends]")).toContainText(/Roomie residual/i);
   });
+
+  test("campus poke/friend writes graph after join; empty name blocked", async ({ page }) => {
+    await page.goto("/years/2004/sites/facebook/networks.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt04-thefacebook-networks");
+      localStorage.removeItem("itt04-thefacebook-graph");
+    });
+    await page.reload();
+    await page.locator("[data-fb-join-btn]").click();
+    expect(await page.evaluate(() => localStorage.getItem("itt04-thefacebook-networks"))).toBeFalsy();
+    await page.locator("[data-fb-network='harvard']").click();
+    await page.fill("[data-fb-join-name]", "Mark residual");
+    await page.locator("[data-fb-join-btn]").click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem("itt04-thefacebook-networks") || ""))
+      .toMatch(/harvard/i);
+    await page.locator("[data-fb-poke]").first().click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem("itt04-thefacebook-graph") || ""))
+      .toMatch(/pokes/);
+    await page.reload();
+    await expect(page.locator("[data-fb-classmates]")).toContainText(/poked/i);
+  });
 });

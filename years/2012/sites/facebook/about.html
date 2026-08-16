@@ -13,12 +13,13 @@
  <div class="fb-panel">
   <p><a href="ipo.html">← IPO</a> · <a href="../../pages/home.html">Timeline</a> · <a href="feed.html">Feed</a></p>
   <h1 style="font-size:16px">One billion monthly active users</h1>
-  <p><b>October 2012</b> (Zuckerberg announcement class) — <b>1 billion</b> people use Facebook each month.
+  <p><b>October 4, 2012</b> (Zuckerberg announcement class) — <b>1 billion</b> people use Facebook each month.
   ~<b>600 million</b> mobile users class at the milestone. IPO was May 18 · Instagram bought April 9.</p>
   <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-fb-1b-oct> October 2012 — 1 billion MAU class</label>
   <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-fb-1b-like> Still <b>Like only</b> — not Reactions</label>
   <p><button type="button" data-fb-1b-ack>Mark 1B milestone (save)</button>
   <span data-fb-1b-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
+  <p class="itt12-next" data-next-flow data-next-when-key="itt12-fb-1b-ack" hidden><b>Next:</b> <a href="../iphone/index.html">iPhone 5 · Lightning · Maps</a></p>
   <p style="font-size:11px;color:#666">Guardian Oct 4 2012 · Pingdom · Like only (no Reactions)</p>
  </div>
 </div>
@@ -34,8 +35,31 @@ document.addEventListener("DOMContentLoaded", function(){
     if(!a||!a.checked||!b||!b.checked){if(st)st.textContent="Check Oct 2012 + Like-only first.";return;}
     try{localStorage.setItem(KEY,JSON.stringify({mau:1000000000,likeOnly:true,real:true,multiStep:true,ts:Date.now()}));}catch(e2){}
     if(st)st.textContent="Saved · 1B · "+KEY;
+    try{if(window.ITT&&ITT.revealNextFlow)ITT.revealNextFlow(document);}catch(eN){}
   });
 });
 </script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="feed.html">Facebook · feed</a> ·
+ <a href="ipo.html">Facebook · ipo</a> ·
+ <a href="../trello/index.html">Trello</a> ·
+ <a href="../uber/index.html">Uber</a> ·
+ <a href="../waze/index.html">Waze</a> ·
+ <a href="../wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
+ <a href="../windows8/index.html">Windows 8</a> ·
+ <a href="../youtube/about.html">About YouTube</a> ·
+ <a href="../chrome/index.html">Google Chrome</a> ·
+ <a href="../googledrive/index.html">Google Drive</a> ·
+ <a href="../instagram/index.html">Instagram</a> ·
+ <a href="../ipad/index.html">iPad mini</a> ·
+ <a href="../iphone/index.html">iPhone 5</a> ·
+ <a href="../lyft/index.html">Lyft</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body>
 </html>

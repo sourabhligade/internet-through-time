@@ -155,10 +155,46 @@
     var neigh = doc.querySelector("[data-farm-neighbor]");
     if (neigh) {
       neigh.addEventListener("click", function () {
+        var nomEls = doc.querySelectorAll("[data-fv-nom]");
+        var names = [];
+        var ni;
+        for (ni = 0; ni < nomEls.length; ni++) {
+          var nv = String(nomEls[ni].value || "").replace(/^\s+|\s+$/g, "");
+          if (nv) names.push(nv);
+        }
+        /* Viral gate only when the 2009 name fields exist. 2010 copy stays theater. */
+        if (nomEls.length && names.length < 2) {
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback("Name two neighbors first — invite is the loop.", {
+              doc: doc,
+              statusSelector: "[data-farm-status]",
+              kind: "farm-neighbor"
+            });
+          }
+          return;
+        }
         var s = load();
         s.log = s.log || [];
-        s.log.unshift("Asked neighbors to help water crops (feed spam theater)");
+        s.log.unshift(
+          names.length
+            ? "Asked " + names.join(" + ") + " to help water crops (feed spam theater)"
+            : "Asked neighbors to help water crops (feed spam theater)"
+        );
         save(s);
+        if (nomEls.length && names.length >= 2) {
+          var nk = U().immersionStorageKey
+            ? U().immersionStorageKey("fv-neighbor", "itt09")
+            : "itt09-fv-neighbor";
+          try {
+            localStorage.setItem(nk, JSON.stringify({
+              multiStep: true,
+              real: true,
+              year: "2009",
+              ts: Date.now(),
+              names: names.slice(0, 4)
+            }));
+          } catch (eNk) { /* */ }
+        }
         render(doc);
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback("Neighbor help asked · feed spam theater", {

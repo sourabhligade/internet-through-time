@@ -73,6 +73,7 @@ test.describe('2004 real flows — direct pages (no shell)', () => {
     await page.waitForSelector('[data-gmail-login]', { timeout: 20000 });
 
     await page.fill('[data-gmail-login] [name="email"]', 'tester@gmail.com');
+    await page.fill('[data-gmail-login] [name="pass"]', 'secret');
     await page.locator('[data-gmail-login] button[type="submit"]').click();
     await expect(page).toHaveURL(/inbox\.html/, { timeout: 10000 });
     await expect(page.locator('[data-gmail-list]')).toBeVisible({ timeout: 10000 });
@@ -278,6 +279,7 @@ test.describe('2004 real flows — year shell', () => {
     await waitForImmersion(page, '2004');
     const frame = contentFrame(page);
     await frame.locator('[data-gmail-login] [name="email"]').fill('shell@gmail.com');
+    await frame.locator('[data-gmail-login] [name="pass"]').fill('secret');
     await frame.locator('[data-gmail-login] button[type="submit"]').click();
     await expect(contentFrame(page).locator('[data-gmail-list]')).toBeVisible({ timeout: 15000 });
 
@@ -311,6 +313,7 @@ test.describe('2004 real flows — year shell', () => {
     await goInFrame(page, 'sites/digg/submit.html');
     await waitForImmersion(page, '2004');
     await contentFrame(page).locator('[name="title"]').fill(title);
+    await contentFrame(page).locator('[name="url"]').fill('http://example.com/shell-digg');
     await contentFrame(page).locator('[data-digg-submit] button[type="submit"]').click();
     await expect(contentFrame(page).locator('[data-digg-list]')).toContainText(title, {
       timeout: 10000,
@@ -493,6 +496,9 @@ test.describe('2004 real flows — continuity (itt04 only, no mocks)', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-itunes-buy]', { timeout: 20000 });
+    const reqs = page.locator('[data-itunes-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator('[data-itunes-buy] button[type="submit"], [data-itunes-buy] input[type="submit"]').first().click();
     await expect(page.locator('[data-itunes-status]')).toContainText(/Purchased|99/i, { timeout: 5000 });
     const lib = await page.evaluate(() => localStorage.getItem('itt04-itunes-library'));

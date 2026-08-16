@@ -60,26 +60,17 @@
       return n;
     }
     function gateOk(el, st) {
+      var boxes = doc.querySelectorAll("[data-req], [data-android-check]");
       var n = countChecked("[data-req], [data-android-check]");
-      if (doc.querySelectorAll("[data-req], [data-android-check]").length >= 1) {
-        if (n < Math.min(2, doc.querySelectorAll("[data-req], [data-android-check]").length)) {
-          if (st) {
-            st.textContent = "REAL gate: complete literacy checks first.";
-            ittFeedback(st.textContent, st);
-          }
-          return false;
-        }
-        return true;
-      }
-      if (el.getAttribute("data-android-armed") !== "1") {
-        el.setAttribute("data-android-armed", "1");
+      var need = Math.min(2, Math.max(boxes.length, 2));
+      if (boxes.length < 2 || n < 2) {
         if (st) {
-          st.textContent = "Confirm: no real Market account — click again (REAL two-step).";
+          st.textContent = "REAL gate: complete two literacy checks first (not a soft mock).";
           ittFeedback(st.textContent, st);
         }
         return false;
       }
-      return true;
+      return n >= need;
     }
     var claim = doc.querySelector("[data-android-claim]");
     if (claim && claim.getAttribute("data-bound") !== "1") {

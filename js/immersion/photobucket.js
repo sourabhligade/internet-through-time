@@ -74,6 +74,11 @@
         last: album.items[0] && album.items[0].file,
         ts: Date.now()
       });
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) {
+        /* */
+      }
     }
 
     function renderAlbum() {

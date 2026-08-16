@@ -237,18 +237,19 @@ test.describe("2017 densify next-flow + reload", () => {
       await page.evaluate((k) => localStorage.removeItem(k), spec.key);
       await page.reload();
       await waitFeat(page, "year2017extras");
-      await expect(page.locator("[data-next-flow]")).toBeHidden();
+      const next = page.locator("[data-next-flow]:not(.itt-popular-next)").first();
+      await expect(next).toBeHidden();
       for (const sel of spec.checks) await page.locator(sel).check();
       if (spec.fills) {
         for (const [sel, val] of spec.fills) await page.fill(sel, val);
       }
       await page.locator(spec.save).click();
-      await expect(page.locator("[data-next-flow]")).toBeVisible();
-      await expect(page.locator("[data-next-flow] a").first()).toHaveAttribute("href", spec.next);
+      await expect(next).toBeVisible();
+      await expect(next.locator("a").first()).toHaveAttribute("href", spec.next);
       await page.reload();
       await waitFeat(page, "year2017extras");
       await expect.poll(async () => getKey(page, spec.key)).toBeTruthy();
-      await expect(page.locator("[data-next-flow]")).toBeVisible();
+      await expect(page.locator("[data-next-flow]:not(.itt-popular-next)").first()).toBeVisible();
     });
   }
 });

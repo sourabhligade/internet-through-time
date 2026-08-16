@@ -55,11 +55,14 @@ test.describe('2011 flows A–T (real only)', () => {
     await expect(page.locator('body')).toContainText(/555/);
     await expect(page.locator('body')).toContainText(/Spotify|Timeline|Siri/i);
     await expect(page.locator('body')).toContainText(/Instagram.*Android|Android.*2012/i);
-    await page.waitForSelector('[data-thesis-ack]', { timeout: 15000 });
-    await page.locator('[data-thesis-ack]').click();
-    await expect(page.locator('[data-thesis-status]')).toContainText(/Saved|itt11-thesis/i);
+    await page.locator('[data-itt-real-save]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt11-thesis-ack'))).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-itt-real-save]').click();
+    await expect(page.locator('[data-itt-action-status]')).toContainText(/Saved|itt11-thesis/i);
     const raw = await expectStorageTruthy(page, 'itt11-thesis-ack');
-    expect(raw).toMatch(/streaming|ack|true|thesis/i);
+    expect(raw).toMatch(/multiStep|real|"year":"2011"|thesis/i);
   });
 
   test('C Spotify invite + free play ad theater', async ({ page }) => {
@@ -71,6 +74,10 @@ test.describe('2011 flows A–T (real only)', () => {
     ]);
     await page.reload();
     await page.waitForSelector('[data-spotify-invite]', { timeout: 20000 });
+    await page.locator('[data-spotify-invite]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt11-spotify-invited'))).toBeFalsy();
+    await page.locator('[data-spotify-ack]').check();
+    await page.locator('[data-spotify-no-stream]').check();
     await page.locator('[data-spotify-invite]').click();
     await expect(page.locator('[data-spotify-status]')).toContainText(/Invite|free/i, {
       timeout: 8000,
@@ -192,6 +199,10 @@ test.describe('2011 flows A–T (real only)', () => {
     await page.reload();
     await page.waitForSelector('[data-gplus-hangout-start]', { timeout: 20000 });
     await page.locator('[data-gplus-hangout-start]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt11-gplus-hangout'))).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
+    await page.locator('[data-gplus-hangout-start]').click();
     await expect(page.locator('[data-gplus-hangout]')).toContainText(/Hangout started|circle|people/i, {
       timeout: 8000,
     });
@@ -250,6 +261,10 @@ test.describe('2011 flows A–T (real only)', () => {
     await page.reload();
     await expect(page.locator('body')).toContainText(/iCloud|Photo Stream/i);
     await page.waitForSelector('[data-icloud-push]', { timeout: 15000 });
+    await page.locator('[data-icloud-push]').first().click();
+    expect(await page.evaluate(() => localStorage.getItem('itt11-icloud-stream'))).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-icloud-push]').first().click();
     await expect(page.locator('[data-icloud-stream]')).toContainText(/Beach|Dinner|Screenshot|📷/i);
     const raw = await expectStorageTruthy(page, 'itt11-icloud-stream');
@@ -313,7 +328,16 @@ test.describe('2011 flows A–T (real only)', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-ig-share]', { timeout: 20000 });
+    await page.locator('[data-ig-share]').click();
+    expect(
+      await page.evaluate(() => {
+        const keys = Object.keys(localStorage).filter((k) => /ig-posts/i.test(k));
+        return keys.map((k) => localStorage.getItem(k)).join('');
+      })
+    ).toBeFalsy();
     await page.locator('[data-ig-filter="Earlybird"]').click();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-ig-caption]').fill('square 2011');
     await page.locator('[data-ig-share]').click();
     await expect(page.locator('[data-ig-status]')).toContainText(/Shared|Earlybird|itt11|itt10/i, {

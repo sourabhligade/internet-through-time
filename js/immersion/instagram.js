@@ -81,6 +81,27 @@
     if (share) {
       share.addEventListener("click", function () {
         var st0 = doc.querySelector("[data-ig-status]");
+        var reqs = doc.querySelectorAll("[data-req]");
+        var cn = 0;
+        var ci;
+        for (ci = 0; ci < reqs.length; ci++) if (reqs[ci].checked) cn++;
+        if (reqs.length && cn < reqs.length) {
+          if (st0) {
+            st0.setAttribute("data-locked", "1");
+            var iyMsg = "";
+            try {
+              iyMsg =
+                (ITT._immersionYear && String(ITT._immersionYear)) ||
+                (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) ||
+                "";
+            } catch (eIY) { iyMsg = ""; }
+            st0.textContent =
+              iyMsg === "2012"
+                ? "Confirm Android exists now · Facebook does not own Instagram yet on Apr 3."
+                : "Confirm iOS-only · Facebook does not own Instagram yet.";
+          }
+          return;
+        }
         if (!filterPicked) {
           if (st0) {
             st0.setAttribute("data-locked", "1");
@@ -97,7 +118,14 @@
           return;
         }
         var capEl = doc.querySelector("[data-ig-caption]");
-        var caption = capEl ? capEl.value : "";
+        var caption = capEl ? String(capEl.value || "").replace(/^\s+|\s+$/g, "") : "";
+        if (caption.length < 2) {
+          if (st0) {
+            st0.setAttribute("data-locked", "1");
+            st0.textContent = "Write a caption first (empty share does not write).";
+          }
+          return;
+        }
         var list = load();
         list.unshift({ filter: selected, caption: caption, ts: Date.now() });
         save(list.slice(0, 40));
@@ -119,6 +147,9 @@
         } else if (ITT._immersionApi && ITT._immersionApi.showFlash) {
           ITT._immersionApi.showFlash(msg);
         }
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) { /* */ }
       });
     }
     render(doc);

@@ -1,6 +1,6 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-11 · **Ship update:** hub **1994–2020** playable · **2020 lean from-scratch** (Zoom join→mute→chat→leave) · **2021+ not on disk**  
+**Date:** 2026-08-16 · **Ship update:** hub **1994–2021** playable · **2021 lean from-scratch** (ATT Ask App Not to Track) · **2022+ not on disk**  
 **2020:** [`2020-READ-FIRST.md`](2020-READ-FIRST.md) · [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
 **Museum-grade A gap map:** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md)  
@@ -39,31 +39,31 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2020** |
-| Hub locked | **2021+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2020/` |
-| Period CSS | `css/period-1995.css` … `period-2020.css` |
+| Hub open years | **1994–2021** |
+| Hub locked | **2022+** (not scaffolded) |
+| Year trees | `years/1994/` … `years/2021/` |
+| Period CSS | `css/period-1995.css` … `period-2021.css` |
 | Hub open years | **1994–2016** |
 | Hub locked | **2017+** (not scaffolded) |
 | Year trees | `years/1994/` … `years/2016/` |
 | Period CSS | `css/period-1995.css` … `period-2016.css` |
 | **2010** | **Museum-ready** · playable · see section below |
-| **2011** | **Museum-ready** · lean 46 HTML · forest pruned 2026-08-10 · playable |
-| **2012** | **Museum-ready** · lean 47 HTML · forest pruned 2026-08-10 · playable |
-| **2013** | **Museum-ready A−** · lean 49 HTML · forest pruned 2026-08-10 · playable |
-| **2014** | **Museum-grade A** · lean 43 HTML · forest pruned 2026-08-10 · playable |
-| **2015** | **Museum-ready A−** · lean · Layer C failed-final closed · playable |
-| **2016** | **Museum-ready A−** · lean · promoted off MVP 2026-08-10 · playable |
+| **2011** | **Museum-ready** · lean 52 HTML · forest pruned 2026-08-10 · playable |
+| **2012** | **Museum-ready** · lean 49 HTML · forest pruned 2026-08-10 · playable |
+| **2013** | **Museum-ready A−** · lean 61 HTML · forest pruned 2026-08-10 · playable |
+| **2014** | **Museum-grade A** · lean 62 HTML · forest pruned 2026-08-10 · playable |
+| **2015** | **Museum-ready A−** · lean **95 HTML** · Layer C failed-final closed · playable |
+| **2016** | **Museum-ready A−** · lean **54 HTML** · playable |
 | **2017** | **Museum-grade A** · lean · P2 harvest 2026-08-11 · playable |
 | **2018** | **Museum-ready A−** · lean 48 HTML · GDPR one-thing · Consent Dash · playable |
-| **2019** | **Museum-ready A−** · lean from-scratch · Disney+ Who’s watching · Continue Row · playable |
+| **2019** | **Museum-ready A−** · lean **52 HTML** · forest pruned 2026-08-15 · Disney+ Who’s watching · Continue Row · playable |
 | **2020** | **Museum-ready A−** · lean from-scratch · Zoom join→mute→chat→leave · Reels 15s · Flash EOL · S15 rooms · Sus Vote · playable |
 
 ### 2016 (lean from-scratch · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2016/` | **Live · from-scratch remake 2026-08-15** (**57 HTML** · cap 60 · backup `/tmp/itt-2016-forest-backup-20260814` do not restore) |
+| `years/2016/` | **Live · from-scratch remake** (**51 HTML worktree** · origin `1bd50e7f` = 57 wiki remake · cap 60 · backup `/tmp/itt-2016-forest-backup-20260814` do not restore) |
 | Hub | **Unlocked** |
 | Prefix | **`itt16`** |
 | Scale | Live Stats June **1,045,534,808 (+21%)** · 1B restabilized Mar 2016 · users **3,424,971,237 (46.1%)** |
@@ -105,11 +105,26 @@
 | Research | **[`2018-READ-FIRST.md`](2018-READ-FIRST.md)** · grade [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md) |
 | e2e | `npm run test:e2e:2018` |
 
+### 2019 (lean after H1 prune · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2019/` | **Live · lean 49 HTML** (forest pruned 2026-08-15 · backup `/tmp/itt-2019-forest-backup-20260815` do not restore) |
+| Hub | **Unlocked** |
+| Prefix | **`itt19`** |
+| Scale | Live Stats table **ends 2018** at **1,630,322,579** · ITU users ~**4.1B / 53.6%** · no June 2019 websites digit |
+| P0 | Disney+ Who’s watching + Continue · trial trap never writes · TikTok FYP · Arcade · TV+ · Stadia · iPhone 11 |
+| One-thing | Disney+ Continue · `itt19-disneyplus` |
+| 5× | [`2019-5X-HARVEST.md`](2019-5X-HARVEST.md) · F1–F5 on keep-set · `e2e/2019-5x-live.spec.js` |
+| Game | Continue Row (`sites/playable/game.html`) |
+| Research | **[`2019-READ-FIRST.md`](2019-READ-FIRST.md)** |
+| e2e | `npm run test:e2e:2019` |
+
 ### 2015 (lean from-scratch rebuild · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2015/` | **Live · lean** (~67 HTML · forest pruned 2026-08-10) |
+| `years/2015/` | **Live · lean** (**95 HTML** · forest pruned · do not restore backup) |
 | Hub | **Unlocked** |
 | Prefix | **`itt15`** |
 | Scale | Live Stats June **863,105,652 (−11%)** · users **3,185,996,155** · 1B dip honesty |

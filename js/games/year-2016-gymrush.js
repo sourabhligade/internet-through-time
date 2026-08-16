@@ -220,7 +220,7 @@
     if (keys.r) player.x += sp;
     player.x = Math.max(10, Math.min(W - 10, player.x));
     player.y = Math.max(10, Math.min(H - 10, player.y));
-    battery -= (fast ? 0.012 : 0.028) * dt;
+    battery -= (fast ? 0.008 : 0.002) * dt;
     if (battery <= 0) {
       battery = 0;
       draw();
@@ -242,7 +242,47 @@
     }
   }
 
+  function ensureMapRun() {
+    if (!running || ended) {
+      if (raf) cancelAnimationFrame(raf);
+      reset();
+    }
+  }
+
+  function visitNearest() {
+    ensureMapRun();
+    if (!running || paused() || ended) return;
+    var i, best = -1, bd = 1e9, d;
+    for (i = 0; i < STOPS.length; i++) {
+      if (STOPS[i].taken) continue;
+      d = dist(player, STOPS[i]);
+      if (d < bd) {
+        bd = d;
+        best = i;
+      }
+    }
+    if (best < 0) {
+      player.x = gym.x;
+      player.y = gym.y;
+    } else {
+      player.x = STOPS[best].x;
+      player.y = STOPS[best].y;
+    }
+    tryVisit();
+    draw();
+  }
+
+  function challengeGym() {
+    ensureMapRun();
+    if (!running || paused() || ended) return;
+    player.x = gym.x;
+    player.y = gym.y;
+    tryVisit();
+    draw();
+  }
+
   canvas.addEventListener("click", function (e) {
+    ensureMapRun();
     if (!running || paused() || ended) return;
     var r = canvas.getBoundingClientRect();
     var sx = canvas.width / r.width;
@@ -278,10 +318,13 @@
       }
     });
   }
+  var visitBtn = host.querySelector("[data-gr-visit]");
+  var gymBtn = host.querySelector("[data-gr-gym]");
+  if (visitBtn) visitBtn.addEventListener("click", visitNearest);
+  if (gymBtn) gymBtn.addEventListener("click", challengeGym);
 
   paintBest();
-  draw();
-  setStatus("New Game · WASD or tap stops · Space near a node");
+  reset();
 
   host.__ittGymRushEnd = function (n) {
     score = n == null || n === "" ? 40 : Number(n);

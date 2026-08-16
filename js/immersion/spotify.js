@@ -110,6 +110,7 @@
         saveJSON(key("spotify-invited"), true);
         if (state().plan === "none") saveJSON(key("spotify-plan"), "free");
         setStatus("Invite accepted · free ad-supported listening unlocked (museum theater).");
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback(
             "Spotify invite accepted — free tier (this browser).",
@@ -129,9 +130,25 @@
         ev.preventDefault();
         var b = ev.currentTarget;
         var plan = b.getAttribute("data-spotify-plan") || "free";
+        var ack = doc.querySelector("[data-spotify-ack]");
+        var noStream = doc.querySelector("[data-spotify-no-stream]");
+        var reqs = doc.querySelectorAll("[data-spotify-req]");
+        var reqN = 0;
+        var ri;
+        for (ri = 0; ri < reqs.length; ri++) if (reqs[ri].checked) reqN++;
+        if ((ack && !ack.checked) || (noStream && !noStream.checked) || (reqs.length >= 2 && reqN < 2)) {
+          setStatus("Confirm residual + no-stream first (not a soft mock).");
+          return;
+        }
+        if (!ack && !noStream && reqs.length < 2 && b.getAttribute("data-rr-armed") !== "1") {
+          b.setAttribute("data-rr-armed", "1");
+          setStatus("Confirm: no real billing — click the plan again (REAL two-step).");
+          return;
+        }
         saveJSON(key("spotify-invited"), true);
         saveJSON(key("spotify-plan"), plan);
         setStatus("Plan set to <b>" + esc(plan) + "</b> · localStorage only · no real billing.");
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback("Spotify plan: " + esc(plan), {
             doc: doc,

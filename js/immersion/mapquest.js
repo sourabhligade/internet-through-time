@@ -183,6 +183,11 @@
         saveJSON(tripKey, blob);
         saveJSON(sumKey, blob);
         trip = blob;
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) {
+          /* */
+        }
         feedback("Directions generated · " + eta.miles + " mi · ~" + eta.mins + " min residual.", status);
         try {
           if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();

@@ -84,12 +84,12 @@
 
     function showNext(doc) {
       doc = doc || document;
-      var els = doc.querySelectorAll("[data-next-flow]");
-      var i;
-      for (i = 0; i < els.length; i++) {
-        els[i].removeAttribute("hidden");
-        els[i].style.display = "";
-      }
+      revealNextFlow(doc);
+    }
+
+    /** Dest-fill help/faq/legal pages — skip product bootAll (2018 lag). */
+    function isFillerPage(doc) {
+      return ITT.YearExtras.isFillerPage(doc);
     }
 
     function checked(doc, sel) {
@@ -206,11 +206,83 @@
       val: val,
       bootChecks: bootChecks,
       register: register,
+      isFillerPage: isFillerPage,
       year: fallbackYear
     };
   }
 
+  function isFillerPath(doc) {
+    try {
+      var win = (doc && doc.defaultView) || (typeof window !== "undefined" ? window : null);
+      var p = (win && win.location && win.location.pathname) || "";
+      return /\/(help|faq|legal|press|privacy|terms|support|blog|news|notes|tips|status)\.html$/.test(p);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function revealNextFlow(doc) {
+    doc = doc || document;
+    var els = doc.querySelectorAll("[data-next-flow]");
+    var i;
+    for (i = 0; i < els.length; i++) {
+      try {
+        els[i].removeAttribute("hidden");
+        els[i].style.display = "";
+      } catch (e) {
+        /* */
+      }
+    }
+  }
+
+  function bootRevealNext(doc) {
+    doc = doc || document;
+    var els = doc.querySelectorAll("[data-next-flow]");
+    var i;
+    var j;
+    var keys;
+    var hit;
+    for (i = 0; i < els.length; i++) {
+      keys = String(els[i].getAttribute("data-next-when-key") || "")
+        .split(/[\s,]+/)
+        .filter(Boolean);
+      if (!keys.length) continue;
+      hit = false;
+      for (j = 0; j < keys.length; j++) {
+        try {
+          if (localStorage.getItem(keys[j])) {
+            hit = true;
+            break;
+          }
+        } catch (eK) {
+          /* */
+        }
+      }
+      if (hit) {
+        try {
+          els[i].removeAttribute("hidden");
+          els[i].style.display = "";
+        } catch (eS) {
+          /* */
+        }
+      }
+    }
+  }
+
+  ITT.revealNextFlow = revealNextFlow;
+  ITT.bootRevealNext = bootRevealNext;
   ITT.YearExtras = {
-    forYear: forYear
+    forYear: forYear,
+    revealNextFlow: revealNextFlow,
+    bootRevealNext: bootRevealNext,
+    isFillerPage: isFillerPath
   };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      bootRevealNext(document);
+    });
+  } else {
+    bootRevealNext(document);
+  }
 })(typeof window !== "undefined" ? window : this);

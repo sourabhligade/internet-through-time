@@ -521,7 +521,10 @@ test.describe('2003 real flows', () => {
     });
     await page.reload();
     await page.waitForSelector('form[data-itunes-buy]', { timeout: 20000 });
-    await page.locator('form[data-itunes-buy] button[type="submit"]').click();
+    const reqs = page.locator('[data-itunes-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await page.locator('form[data-itunes-buy] button[type="submit"]').first().click();
     await expect
       .poll(async () =>
         page.evaluate(() =>

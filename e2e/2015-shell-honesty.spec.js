@@ -3,10 +3,11 @@ const { test, expect } = require('@playwright/test');
 const { enterYear, killOverlays } = require('./helpers');
 
 test.describe('2015 shell honesty', () => {
-  test('shell boots 2015 with Win7 residual class', async ({ page }) => {
+  test('shell boots 2015 with Win10 / Chrome class', async ({ page }) => {
     await page.goto('/years/2015/');
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2015');
-    await expect(page.locator('body')).toHaveClass(/os-win7/);
+    await expect(page.locator('body')).toHaveClass(/os-win10/);
+    await expect(page.locator('body')).toHaveClass(/browser-chrome/);
   });
 
   test('connect overlay is 2015 thesis not 2014 spine', async ({ page }) => {

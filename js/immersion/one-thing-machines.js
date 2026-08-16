@@ -40,6 +40,13 @@
       return false;
     }
   }
+  function revealNext(doc) {
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc || document);
+    } catch (e) {
+      /* */
+    }
+  }
   function esc(s) {
     return String(s || "")
       .replace(/&/g, "&amp;")
@@ -184,8 +191,10 @@
         if (noteEl) noteEl.value = "";
         renderList();
         feedback("Guestbook signed · today's cool site stamped (this browser).", st);
+        revealNext(doc);
       });
     }
+    if (saved) revealNext(doc);
   }
 
   function bootSsl(doc) {
@@ -205,7 +214,9 @@
       saveJSON(key, blob({ name: name, last4: card.slice(-4), city: city }));
       stamp();
       feedback("Order queued locally · padlock theater · no payment.", st);
+      revealNext(doc);
     });
+    if (loadJSON(key, null)) revealNext(doc);
   }
 
   var PORTAL_PROGRESS = "itt96-portal-progress";
@@ -229,6 +240,7 @@
     if (list.length >= 3) {
       saveJSON(sk("portal-wars"), blob({ visited: list.slice() }));
       stamp();
+      revealNext(document);
     }
     return list;
   }
@@ -257,12 +269,14 @@
       var list = markPortalVisit(id);
       if (list.length >= 3) {
         feedback("Portal trail complete (this browser).", st);
+        revealNext(doc);
       } else {
         feedback("Visited " + id + " · " + list.length + "/3", st);
       }
       render();
     }
     render();
+    if (loadJSON(key, null)) revealNext(doc);
     var btns = root.querySelectorAll("[data-portal]");
     var i;
     for (i = 0; i < btns.length; i++) {
@@ -378,8 +392,10 @@
         stamp();
         feedback("Push subscriptions saved locally.", st);
         render();
+        revealNext(doc);
       });
     }
+    if (loadJSON(key, null) && list.length >= 2) revealNext(doc);
   }
 
   function bootStumble(doc) {
@@ -396,11 +412,44 @@
       { t: "Wikipedia", href: "../wikipedia/index.html", tag: "tech" },
       { t: "Slashdot", href: "../slashdot/index.html", tag: "tech" },
       { t: "Google", href: "../google/index.html", tag: "tech" },
-      { t: "Kazaa", href: "../kazaa/index.html", tag: "music" }
+      { t: "Kazaa", href: "../kazaa/index.html", tag: "music" },
+      { t: "Netflix DVD", href: "../netflix/index.html", tag: "funny" },
+      { t: "Steam", href: "../steam/index.html", tag: "tech" },
+      { t: "last.fm", href: "../lastfm/index.html", tag: "music" }
     ];
     var saved = loadJSON(key, null) || {};
+    try {
+      var walkRaw = sessionStorage.getItem("itt02-stumble-walk");
+      if (walkRaw && !saved.n) {
+        var walk = JSON.parse(walkRaw);
+        if (walk && walk.seen) saved.seen = walk.seen;
+        if (walk && walk.n) saved.n = walk.n;
+        if (walk && walk.down) saved.down = walk.down;
+        if (walk && walk.up) saved.up = walk.up;
+      }
+    } catch (eW) { /* */ }
     var n = saved.n || 0;
     var down = saved.down || [];
+    var up = saved.up || [];
+    function persistWalk(seen, ints) {
+      try {
+        sessionStorage.setItem(
+          "itt02-stumble-walk",
+          JSON.stringify({ seen: (seen || []).slice(0, 20), n: n, down: down, up: up, ints: ints || [] })
+        );
+      } catch (eS) { /* */ }
+    }
+    function nextFrom(pool) {
+      var weighted = [];
+      var i;
+      var j;
+      for (i = 0; i < pool.length; i++) {
+        var w = up.indexOf(pool[i].t) !== -1 ? 3 : 1;
+        for (j = 0; j < w; j++) weighted.push(pool[i]);
+      }
+      if (!weighted.length) weighted = pool.slice();
+      return weighted[n % weighted.length];
+    }
     function renderHist() {
       if (!hist) return;
       var seen = saved.seen || [];
@@ -408,7 +457,11 @@
         ? seen
             .slice(0, 12)
             .map(function (t) {
-              return "<li>" + esc(t) + "</li>";
+              var title = typeof t === "string" ? t : t.t || "";
+              var href = typeof t === "string" ? "" : t.href || "";
+              return href
+                ? "<li><a href='" + esc(href) + "'>" + esc(title) + "</a></li>"
+                : "<li>" + esc(title) + "</li>";
             })
             .join("")
         : "<li>No stumbles yet.</li>";
@@ -432,10 +485,12 @@
           if (ints.indexOf(CARDS[i].tag) !== -1) pool.push(CARDS[i]);
         }
         if (!pool.length) pool = CARDS.slice();
-        var hit = pool[n % pool.length];
+        var hit = nextFrom(pool);
         n += 1;
         var seen = saved.seen || [];
-        seen.unshift(hit.t);
+        seen.unshift({ t: hit.t, href: hit.href });
+        saved.seen = seen.slice(0, 20);
+        saved.n = n;
         if (card) {
           card.innerHTML =
             "Stumbled: <a href='" +
@@ -453,11 +508,12 @@
           var db = card.querySelector("[data-su-down]");
           if (ub) {
             ub.addEventListener("click", function () {
-              var up = saved.up || [];
               if (up.indexOf(hit.t) === -1) up.unshift(hit.t);
-              saved.up = up.slice(0, 12);
-              saveJSON(key, saved);
-              feedback("Thumbed up · this card stays in the rotation.", st);
+              up = up.slice(0, 12);
+              saved.up = up;
+              persistWalk(saved.seen, saved.interests || ints);
+              if (saved.n >= 2) saveJSON(key, saved);
+              feedback("Thumbed up · next Stumble biases this card.", st);
             });
           }
           if (db) {
@@ -474,6 +530,7 @@
           }
         }
         if (n < 2) {
+          persistWalk(seen, ints);
           feedback("Stumble again to keep a habit (2+ writes itt02-stumble).", st, true);
           return;
         }
@@ -482,6 +539,7 @@
           last: hit.t,
           n: n,
           down: down,
+          up: up,
           seen: seen.slice(0, 20),
           multiStep: true
         });
@@ -489,8 +547,10 @@
         stamp();
         renderHist();
         feedback("Stumble habit saved (museum rooms only · 2+).", st);
+        revealNext(doc);
       });
     }
+    if (saved && saved.n >= 2) revealNext(doc);
   }
 
   function bootFbNet(doc) {
@@ -524,7 +584,9 @@
       saveJSON(key, blob({ network: net, name: name }));
       stamp();
       if (out) out.textContent = "Network: " + net + " · " + name;
+      if (typeof renderMates === "function") renderMates();
       feedback("Joined " + net + " (college-only theater).", st);
+      revealNext(doc);
     }
     if (form) {
       form.addEventListener("submit", function (ev) {
@@ -534,6 +596,7 @@
     }
     var joinBtn = doc.querySelector("[data-fb-join-btn]");
     if (joinBtn) joinBtn.addEventListener("click", joinNet);
+    if (saved) revealNext(doc);
 
     var wallKey = sk("thefacebook-wall");
     var wallList = doc.querySelector("[data-fb-wall-list]");
@@ -551,6 +614,72 @@
         : "";
     }
     renderWall();
+    var CLASSMATES = {
+      harvard: ["Roommate residual", "Section mate residual", "TA residual"],
+      stanford: ["Dorm residual", "Lab partner residual", "RA residual"]
+    };
+    var graphKey = sk("thefacebook-graph");
+    var graph = loadJSON(graphKey, null) || { pokes: [], friends: [] };
+    if (!graph.pokes) graph.pokes = [];
+    if (!graph.friends) graph.friends = [];
+    var matesEl = doc.querySelector("[data-fb-classmates]");
+    function renderMates() {
+      if (!matesEl) return;
+      var netName = (loadJSON(key, null) || {}).network || net;
+      var roster = CLASSMATES[netName] || CLASSMATES.harvard;
+      matesEl.innerHTML = roster
+        .map(function (who) {
+          var poked = graph.pokes.indexOf(who) !== -1;
+          var friended = graph.friends.indexOf(who) !== -1;
+          return (
+            "<div style='margin:6px 0'>" +
+            esc(who) +
+            " <button type='button' data-fb-poke='" +
+            esc(who) +
+            "' class='ott-btn'>Poke</button> " +
+            "<button type='button' data-fb-friend='" +
+            esc(who) +
+            "' class='ott-btn'>Friend</button>" +
+            (poked ? " <font size='1'>poked</font>" : "") +
+            (friended ? " <font size='1'>friended</font>" : "") +
+            "</div>"
+          );
+        })
+        .join("");
+      var pokes = matesEl.querySelectorAll("[data-fb-poke]");
+      var pi;
+      for (pi = 0; pi < pokes.length; pi++) {
+        pokes[pi].addEventListener("click", function () {
+          if (!loadJSON(key, null)) {
+            feedback("Join a network first.", st, true);
+            return;
+          }
+          var who = this.getAttribute("data-fb-poke") || "";
+          if (who && graph.pokes.indexOf(who) === -1) graph.pokes.unshift(who);
+          graph.pokes = graph.pokes.slice(0, 20);
+          saveJSON(graphKey, blob({ pokes: graph.pokes, friends: graph.friends, year: "2004" }));
+          renderMates();
+          feedback("Poked " + who + " · campus graph saved.", st);
+        });
+      }
+      var frs = matesEl.querySelectorAll("[data-fb-friend]");
+      var fi;
+      for (fi = 0; fi < frs.length; fi++) {
+        frs[fi].addEventListener("click", function () {
+          if (!loadJSON(key, null)) {
+            feedback("Join a network first.", st, true);
+            return;
+          }
+          var who = this.getAttribute("data-fb-friend") || "";
+          if (who && graph.friends.indexOf(who) === -1) graph.friends.unshift(who);
+          graph.friends = graph.friends.slice(0, 20);
+          saveJSON(graphKey, blob({ pokes: graph.pokes, friends: graph.friends, year: "2004" }));
+          renderMates();
+          feedback("Friended " + who + " · campus graph saved.", st);
+        });
+      }
+    }
+    renderMates();
     var wallBtn = doc.querySelector("[data-fb-wall-post]");
     if (wallBtn) {
       wallBtn.addEventListener("click", function () {
@@ -704,6 +833,7 @@
         state = loadJSON(key, null) || state || {};
         state.score = score;
         state.accepted = accepted;
+        state.acceptedId = accepted;
         state.multiStep = true;
         state.real = true;
         state.year = "2009";
@@ -712,6 +842,7 @@
         saveJSON(key, state);
         saveJSON(sk("so-accepted"), {
           id: accepted,
+          acceptedId: accepted,
           multiStep: true,
           real: true,
           year: "2009",
@@ -785,19 +916,33 @@
     var st = doc.querySelector("[data-abnb-status], [data-itt-action-status]");
     var results = doc.querySelector("[data-abnb-results]");
     var key = sk("airbnb");
+    var pickKey = "itt11-airbnb-pick";
     var city = "";
     var listing = "";
     var saved = loadJSON(key, null);
-    if (saved) {
+    if (saved && saved.requested) {
       city = saved.city || "";
       listing = saved.listing || "";
     }
+    try {
+      var pickRaw = sessionStorage.getItem(pickKey);
+      if (pickRaw) {
+        var pick = JSON.parse(pickRaw);
+        if (pick && pick.city) city = pick.city;
+        if (pick && pick.listing) listing = pick.listing;
+      }
+    } catch (eP) { /* */ }
     try {
       var qCity = U().queryParam ? U().queryParam("city") : "";
       var qList = U().queryParam ? U().queryParam("listing") : "";
       if (qCity) city = qCity;
       if (qList) listing = qList;
     } catch (eQ) { /* */ }
+    function setPick(c, l) {
+      try {
+        sessionStorage.setItem(pickKey, JSON.stringify({ city: c || "", listing: l || "" }));
+      } catch (eS) { /* */ }
+    }
 
     var listingPage = doc.querySelector("[data-abnb-listing-page]");
     if (listingPage) {
@@ -826,6 +971,7 @@
     if (results && saved && saved.listing) {
       results.textContent = "Last: " + (saved.listing || "") + " in " + (saved.city || "");
     }
+    if (saved && saved.requested) revealNext(doc);
     if (!doc.querySelector("[data-abnb-search]") && !doc.querySelector("[data-abnb-book]")) return;
 
     var search = doc.querySelector("[data-abnb-search]");
@@ -842,16 +988,16 @@
             "<p>Listings in <b>" +
             esc(city) +
             "</b></p>" +
-            "<p><button type='button' data-abnb-listing='Mission loft residual' class='ott-btn'>Mission loft residual</button> " +
-            "<button type='button' data-abnb-listing='SOMA couch residual' class='ott-btn'>SOMA couch residual</button></p>" +
+            "<p><button type='button' data-abnb-listing='Mission airbed residual' class='ott-btn'>Mission airbed residual</button> " +
+            "<button type='button' data-abnb-listing='SOMA spare room residual' class='ott-btn'>SOMA spare room residual</button></p>" +
             "<p><a href='listing.html'>Open listing page →</a></p>";
           var ls = results.querySelectorAll("[data-abnb-listing]");
           var i;
           for (i = 0; i < ls.length; i++) {
             ls[i].addEventListener("click", function () {
               listing = this.getAttribute("data-abnb-listing") || "";
-              saveJSON(key, blob({ city: city, listing: listing, requested: false, pickOnly: true }));
-              feedback("Selected " + listing + " · open listing or request to book.", st);
+              setPick(city, listing);
+              feedback("Selected " + listing + " · open listing, then request with a host message.", st);
             });
           }
         }
@@ -865,12 +1011,30 @@
           feedback("Search a city and pick a listing first.", st, true);
           return;
         }
-        saveJSON(key, blob({ city: city, listing: listing, requested: true }));
+        var noteEl = doc.querySelector("[data-abnb-note], [name='note']");
+        var note = trim(noteEl && noteEl.value);
+        if (reqPage && note.length < 2) {
+          feedback("Write a message to the host. Empty request is not a booking.", st, true);
+          return;
+        }
+        if (!reqPage && (!city || !listing)) {
+          feedback("Open the request page and write the host a message.", st, true);
+          try {
+            doc.defaultView.location.href = "request.html";
+          } catch (eGo) { /* */ }
+          return;
+        }
+        saveJSON(key, blob({ city: city, listing: listing, requested: true, note: note || "request residual", year: "2011" }));
         stamp();
         feedback("Request sent (no payment · this browser).", st);
+        revealNext(doc);
         if (listingPage) {
           var req2 = listingPage.querySelector("[data-abnb-requested]");
           if (req2) req2.textContent = "Request already sent (this browser).";
+        }
+        if (reqPage) {
+          var recap2 = reqPage.querySelector("[data-abnb-request-recap]");
+          if (recap2) recap2.textContent = "Requested: " + listing + " in " + city;
         }
       });
     }
@@ -920,6 +1084,7 @@
     }
     render();
     paintTime();
+    if (comments.length) revealNext(doc);
     if (scrub) {
       scrub.addEventListener("input", function () {
         t = parseInt(scrub.value, 10) || 0;
@@ -957,6 +1122,7 @@
       if (inp) inp.value = "";
       render();
       feedback("Comment saved locally at " + fmt(t) + ".", st);
+      revealNext(doc);
     }
     if (form) {
       form.addEventListener("submit", function (ev) {
@@ -1012,6 +1178,64 @@
     }
   }
 
+  function bootYahooWander(doc) {
+    var hub = doc.querySelector("[data-yahoo-hub]");
+    var st = doc.querySelector("[data-yahoo-wander-status], [data-itt-action-status]");
+    if (!hub && !st) return;
+    var sessKey = "itt94-yahoo-wander-seen";
+    var gold = sk("yahoo-wander");
+    function seen() {
+      try {
+        var raw = sessionStorage.getItem(sessKey);
+        var arr = raw ? JSON.parse(raw) : [];
+        return Array.isArray(arr) ? arr : [];
+      } catch (e) {
+        return [];
+      }
+    }
+    var arr = seen();
+    if (hub) {
+      var id = hub.getAttribute("data-yahoo-hub") || "";
+      if (id && arr.indexOf(id) === -1) arr.push(id);
+      try {
+        sessionStorage.setItem(sessKey, JSON.stringify(arr));
+      } catch (eS) { /* */ }
+      if (arr.length >= 3) {
+        saveJSON(gold, blob({ hubs: arr.slice(0, 8), year: "1994" }));
+        stamp();
+        feedback("Yahoo wander saved after 3 hubs · " + gold, st);
+      } else {
+        feedback("Hub “" + id + "” · " + arr.length + "/3 (writes after 3 distinct).", st, true);
+      }
+    }
+    var out = doc.querySelector("[data-yahoo-wander-status]");
+    if (out && !st) out.textContent = arr.length + "/3 hubs this session.";
+  }
+
+  function bootWhMap(doc) {
+    var map = doc.querySelector("map[name='whmap'][data-storage-key], map[name='whmap']");
+    if (!map) return;
+    var suffix = map.getAttribute("data-storage-key") || "wh-map";
+    var key = suffix.indexOf("itt94-") === 0 ? suffix : "itt94-" + suffix.replace(/^itt\d{0,2}-/, "");
+    var areas = map.querySelectorAll("area[href]");
+    if (!areas.length) return;
+    var i;
+    for (i = 0; i < areas.length; i++) {
+      (function (area) {
+        if (area.getAttribute("data-wh-map-bound") === "1") return;
+        area.setAttribute("data-wh-map-bound", "1");
+        area.addEventListener("click", function () {
+          var href = area.getAttribute("href") || "";
+          href = String(href).replace(/^\s+|\s+$/g, "");
+          if (!href || href === "#" || href.toLowerCase().indexOf("javascript:") === 0) return;
+          saveJSON(key, blob({ region: href, year: "1994" }));
+          stamp();
+          revealNext(doc);
+        });
+      })(areas[i]);
+    }
+  }
+
   function bootAll(doc) {
     doc = doc || document;
     bootCsotd(doc);
@@ -1027,6 +1251,8 @@
     bootAirbnb(doc);
     bootSoundcloud(doc);
     bootDiscord15(doc);
+    bootYahooWander(doc);
+    bootWhMap(doc);
   }
 
   var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);

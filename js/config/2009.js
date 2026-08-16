@@ -48,12 +48,18 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/ask/index.html": "http://museum.local/years/2009/sites/ask/index.html",
+
       "sites/wolframalpha/index.html": "http://museum.local/years/2009/wolframalpha/",
       "sites/vevo/index.html": "http://museum.local/years/2009/vevo/",
       "sites/foursquarecheckin/index.html": "http://museum.local/years/2009/foursquarecheckin/",
 
       "sites/playable/index.html": "http://museum.local/years/2009/playable/",
       "sites/playable/game.html": "http://museum.local/years/2009/playable/game.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2009/playable/game-2.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2009/playable/game-3.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2009/playable/game-4.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2009/playable/game-5.html",
       "index.html": "http://museum.local/index.html",
       "sites/friendfeed/index.html": "http://www.friendfeed.com/",
       "sites/ubercab/index.html": "http://www.ubercab.com/",
@@ -186,6 +192,7 @@
       "sites/flickr/upload.html": "http://www.flickr.com/upload.html",
       "sites/foursquare/about.html": "http://foursquare.com/about.html",
       "sites/foursquare/index.html": "http://foursquare.com/",
+      "sites/foursquare/venue.html": "http://foursquare.com/venue.html",
       "sites/friendconnect/about.html": "http://www.google.com/friendconnect/about",
       "sites/friendconnect/index.html": "http://www.google.com/friendconnect/",
       "sites/friendster/friends.html": "http://www.friendster.com/friends.html",
@@ -293,6 +300,9 @@
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/netcenter/index.html": "http://www.netcenter.com/",
       "sites/netflix/index.html": "http://www.netflix.com/",
+      "sites/netflix/genres.html": "http://www.netflix.com/BrowseGenres",
+      "sites/netflix/queue.html": "http://www.netflix.com/Queue",
+      "sites/netflix/about.html": "http://www.netflix.com/About",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/netscape/index.html": "http://www.netscape.com/",
       "sites/netscape/netscape6.html": "http://www.netscape.com/netscape6.html",
@@ -385,6 +395,9 @@
       "sites/stackoverflow/question.html": "http://stackoverflow.com/question.html",
 },
     titleMap: {
+      "sites/netflix/genres.html": "Netflix Genres",
+      "sites/netflix/queue.html": "Netflix Queue",
+      "sites/netflix/about.html": "About Netflix",
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
       "sites/milliondollar/about.html": "About Million Dollar Homepage",

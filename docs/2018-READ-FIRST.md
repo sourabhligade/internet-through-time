@@ -1,8 +1,8 @@
 # 2018 — READ FIRST (research freeze · lean implement)
 
 **Date:** 2026-08-11  
-**Purpose:** Single entry for museum year **2018**. Read before scaffolding, harvesting pixels, or writing tests.  
-**Disk truth today:** Hub **1994–2018** playable · **`years/2018/` lean from-scratch** · prefix **`itt18`**  
+**Purpose:** Single entry for museum year **2018**. Read before densifying, harvesting pixels, or writing tests.  
+**Disk truth today:** Hub **1994–2020** playable · **`years/2018/` live lean ~48 HTML** · prefix **`itt18`**  
 **Parent:** Live lean **2017** (Face ID one-thing · Storm Circle).  
 **Execute:** [`2018-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2018-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
 **Facts:** [`2018-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md`](2018-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md)  
@@ -131,4 +131,4 @@ CMP: **Accept All alone does not write `itt18-gdpr`.** Manage path does.
 
 ## 10. Do not do in this freeze
 
-Scaffold `years/2018/` before reading the from-scratch bible. Unlock hub 2018 before tests. Claim museum-grade A with L4 official art. Write `itt17-*` from 2018 pages. Promote IGTV or HomePod over the banner.
+Re-scaffold `years/2018/` — it is **live lean ~48 HTML**. Claim museum-grade A with L4 official art. Write `itt17-*` from 2018 pages. Promote IGTV or HomePod over the banner.

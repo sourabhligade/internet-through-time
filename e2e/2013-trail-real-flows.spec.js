@@ -34,6 +34,7 @@ test.describe('2013 trail — short video stack', () => {
 
     await page.goto('/years/2013/sites/instagram/video.html');
     await page.locator('[data-igv-filter="Cinema"]').click();
+    await page.locator('[data-igv-caption]').fill('15s cinema residual');
     await page.locator('[data-igv-share]').click();
     await requireKey(page, 'itt13-ig-video');
 
@@ -47,7 +48,7 @@ test.describe('2013 trail — short video stack', () => {
 test.describe('2013 trail — flat phone + privacy', () => {
   test('iOS 7 → Touch ID → Snowden → thesis', async ({ page }) => {
     await page.goto('/years/2013/sites/iphone/ios7.html');
-    await clearKeys(page, ['itt13-ios7', 'itt13-touchid', 'itt13-snowden-ack', 'itt13-thesis-ack']);
+    await clearKeys(page, ['itt13-ios7', 'itt13-touchid', 'itt13-snowden', 'itt13-snowden-ack', 'itt13-thesis-ack']);
     await page.reload();
     await page.waitForTimeout(500);
     await page.locator('[data-ios7-tile]').nth(0).click();
@@ -69,7 +70,7 @@ test.describe('2013 trail — flat phone + privacy', () => {
       })
     );
     await page.locator('[data-snowden-ack]').click();
-    await requireKey(page, 'itt13-snowden-ack');
+    await requireKey(page, 'itt13-snowden');
 
     await page.goto('/years/2013/pages/about.html');
     await page.waitForTimeout(400);
@@ -87,18 +88,20 @@ test.describe('2013 trail — flat phone + privacy', () => {
 test.describe('2013 trail — public web + tablet', () => {
   test('Snowden → HealthCare.gov → iPad Air', async ({ page }) => {
     await page.goto('/years/2013/sites/snowden/index.html');
-    await clearKeys(page, ['itt13-snowden-ack', 'itt13-healthcare-ack', 'itt13-ipadair']);
+    await clearKeys(page, ['itt13-snowden', 'itt13-snowden-ack', 'itt13-healthcare-ack', 'itt13-ipadair']);
     await page.reload();
     await page.locator('[data-snowden-card]').evaluateAll((els) => els.forEach((e) => { e.checked = true; e.dispatchEvent(new Event('change', { bubbles: true })); }));
     await page.locator('[data-snowden-ack]').click();
-    await requireKey(page, 'itt13-snowden-ack');
+    await requireKey(page, 'itt13-snowden');
 
     await page.goto('/years/2013/sites/healthcare/index.html');
     await page.locator('[data-hc-email]').fill('you@example.com');
-    await page.locator('[data-hc-try="1"]').click().catch(() => {});
-    await page.waitForTimeout(700);
-    await page.locator('[data-hc-try="2"]').click().catch(() => {});
-    await page.waitForTimeout(800);
+    await page.locator('[data-hc-try="1"]').click();
+    await expect(page.locator('[data-hc-try="2"]')).toBeVisible({ timeout: 5000 });
+    await page.locator('[data-hc-try="2"]').click();
+    await expect(page.locator('[data-healthcare-ack]')).toBeVisible({ timeout: 5000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-healthcare-ack]').click();
     await requireKey(page, 'itt13-healthcare-ack');
 
@@ -142,6 +145,8 @@ test.describe('2013 trail — continuity residual N–R', () => {
     await page.goto('/years/2013/sites/netflix/index.html');
     await page.reload();
     await page.waitForTimeout(300);
+    await page.locator('[data-nf-streamfirst]').check();
+    await page.locator('[data-nf-discs]').check();
     await page.locator('#stream-seed').click();
     await requireKey(page, 'itt13-netflix-stream');
 
@@ -225,9 +230,10 @@ test.describe('2013 trail — gems REAL', () => {
 
     await page.goto('/years/2013/sites/tinder/index.html');
     await page.waitForTimeout(400);
-    await page.locator('[data-pack-a]').click();
+    await page.locator('[data-tinder-swipe="left"]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt13-tinder'))).toBeFalsy();
-    await page.locator('[data-pack-b]').click();
+    await page.locator('[data-tinder-swipe="right"]').click();
+    await page.locator('[data-tinder-swipe="right"]').click();
     await requireKey(page, 'itt13-tinder');
   });
 });

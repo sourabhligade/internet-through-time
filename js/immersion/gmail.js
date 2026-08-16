@@ -116,9 +116,24 @@
     if (login) {
       login.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var email = (login.querySelector('[name="email"]') || {}).value || "you@gmail.com";
-        saveUser({ email: email, invited: true, ts: Date.now() });
+        var emailEl = login.querySelector('[name="email"]');
+        var passEl = login.querySelector('[name="pass"], input[type="password"]');
+        var email = emailEl && emailEl.value != null ? String(emailEl.value).replace(/^\s+|\s+$/g, "") : "";
+        var pass = passEl && passEl.value != null ? String(passEl.value) : "";
         var st = doc.querySelector("[data-gmail-status]");
+        if (!email || !pass) {
+          if (st) st.textContent = "Email and password required — empty sign-in writes nothing.";
+          if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+            ITT._immersionApi.actionFeedback("Type email and password first.", {
+              doc: doc,
+              status: st,
+              kind: "gmail-login",
+              flash: false
+            });
+          }
+          return;
+        }
+        saveUser({ email: email, invited: true, ts: Date.now() });
         var msg = "Signed in. Opening inbox…";
         if (st) st.textContent = msg;
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {

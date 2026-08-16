@@ -41,6 +41,8 @@
   <div data-hc-step="3" style="margin-top:10px;display:none">
    <p><b>Step 3 — Literacy complete</b></p>
    <p style="color:#2e8540">Front-end “it loads” ≠ end-to-end enrollment. Ticket <code data-hc-ticket>—</code></p>
+   <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-req> Oct 1 2013 launch failed under load</label>
+   <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-req> Front-end load ≠ enrollment · no PII</label>
    <button type="button" class="hc-btn" data-healthcare-ack>
     I understand HealthCare.gov as a 2013 public-web event (save)
    </button>
@@ -89,12 +91,23 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () { showStep(3); }, 700);
   });
   if (ack) ack.addEventListener("click", function () {
+    var reqs = document.querySelectorAll("[data-req]");
+    var n = 0;
+    var ri;
+    for (ri = 0; ri < reqs.length; ri++) if (reqs[ri].checked) n++;
+    if (n < 2) {
+      if (st) st.textContent = "REAL gate: two literacy checks first (not a soft mock).";
+      return;
+    }
     try {
       localStorage.setItem(KEY, JSON.stringify({
         event: "healthcare-gov-2013",
         newsOnly: true,
         ticket: ticket,
         steps: ["create-fail", "retry-fail", "literacy"],
+        multiStep: true,
+        real: true,
+        year: "2013",
         ts: Date.now()
       }));
     } catch (e2) {}
@@ -108,5 +121,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="../googlekeep/index.html">Google Keep</a> ·
+ <a href="../instagram/video.html">Instagram Video</a> ·
+ <a href="../ipad/air.html">iPad Air</a> ·
+ <a href="../iphone/index.html">iPhone 5s</a> ·
+ <a href="../medium/index.html">Medium</a> ·
+ <a href="../neocities/index.html">Neocities</a> ·
+ <a href="../netflix/index.html">Netflix</a> ·
+ <a href="../outlook/index.html">Outlook.com</a> ·
+ <a href="../playable/index.html">Period playables</a> ·
+ <a href="../ps4/index.html">PlayStation 4</a> ·
+ <a href="../slack/index.html">Slack</a> ·
+ <a href="../snapchat/index.html">Snapchat</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body>
 </html>

@@ -213,6 +213,11 @@
       try {
         localStorage.setItem(key, JSON.stringify(payload));
       } catch (eS) { /* */ }
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) {
+        /* */
+      }
       if (st) {
         st.textContent = "Saved · Safari is the 2007 web · " + key;
         st.style.color = "#6c6";

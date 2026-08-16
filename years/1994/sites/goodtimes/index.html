@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="1994">
+<head>
+<meta charset="utf-8">
+<title>Good Times — 1994 email hoax</title>
+<link rel="stylesheet" href="../../../../css/period-1994.css">
+
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="max-width:42em;margin:16px auto;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.45">
+ <p style="font-size:12px"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/map.html">Year flow map</a></p>
+ <h1 style="font-size:22px;margin:0 0 8px">Good Times</h1>
+ <p>First mass “forward this or your CPU dies” panic. Wikipedia: subject <b>Good Times</b>, claimed the mail would send your CPU into an “nth-complexity infinite binary loop.” There was no such virus. Forwarding <i>was</i> the loop.</p>
+ <form data-itt-real-form data-storage-key="goodtimes" data-require-name="n1 n2 n3 n4 n5">
+  <p style="background:#ffffcc;border:1px solid #990;padding:8px;font-family:Times,serif">
+   <b>Subject:</b> Good Times<br>
+   <b>Warning!!!!</b> If you receive an email with the subject “Good Times,” do not open it.
+   It will send your CPU into an nth-complexity infinite binary loop.
+  </p>
+  <p>Forward to five names (period handles). Delete writes nothing.</p>
+  <p>
+   <input name="n1" size="16"> <input name="n2" size="16"> <input name="n3" size="16"><br>
+   <input name="n4" size="16"> <input name="n5" size="16">
+  </p>
+  <p>
+   <input type="submit" value="Forward to 5">
+   <button type="button" data-gt-delete>Delete (trap)</button>
+  </p>
+  <p data-itt-real-status style="min-height:1.2em"></p>
+ </form>
+ <p data-next-flow hidden><b>Next:</b> <a href="../../pages/home.html">Starting Point</a> · <a href="about.html">About the hoax</a></p>
+ <p style="font-size:11px;color:#555">key <code>itt94-goodtimes</code> · not CSotD gold · not a real virus how-to</p>
+ <script>
+ (function () {
+   var b = document.querySelector("[data-gt-delete]");
+   if (!b) return;
+   b.addEventListener("click", function () {
+     var st = document.querySelector("[data-itt-real-status]");
+     if (st) st.textContent = "You forwarded nothing. The hoax dies if you do not send it.";
+   });
+ })();
+ </script>
+</div>
+<script src="../../../../js/immersion-1994.js"></script>
+</body>
+</html>

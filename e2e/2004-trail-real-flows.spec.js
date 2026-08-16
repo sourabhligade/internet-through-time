@@ -27,13 +27,9 @@ test.describe('2004 trail real flows', () => {
         .forEach((k) => localStorage.removeItem(k));
     });
     const form = page.locator('[data-gmail-login], form[data-gmail-login]');
-    if ((await form.count()) === 0) {
-      test.skip();
-      return;
-    }
-    if (await page.locator('input[name="email"], input[type="email"], input[name="user"]').count()) {
-      await page.locator('input[name="email"], input[type="email"], input[name="user"]').first().fill('museum@example.com');
-    }
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('input[name="email"], input[type="email"], input[name="user"]').first().fill('museum@example.com');
+    await form.locator('[name="pass"], input[type="password"]').first().fill('secret');
     await form.locator('button, input[type="submit"]').first().click();
     await expect
       .poll(async () => page.evaluate(() => Object.keys(localStorage).some((k) => k.startsWith('itt04-gmail'))))

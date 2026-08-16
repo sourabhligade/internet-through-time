@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2000">
+<head>
+<meta charset="utf-8">
+<title>PayPal — Refer a friend ($10 / $10)</title>
+<link rel="stylesheet" href="../../../../css/period-2000.css">
+</head>
+<body bgcolor="#003366" text="#000" link="#03c">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="560" align="center" cellpadding="16" bgcolor="#fff" style="margin-top:20px;border:2px solid #039">
+<tr><td>
+<font face="Arial" size="2">
+<p style="font-size:12px"><a href="index.html">« PayPal home</a> · <a href="send.html">Send Money</a> · <a href="../../pages/home.html">Starting Point</a></p>
+<h2 style="color:#039;margin-top:0">Refer a friend — $10 both sides</h2>
+<p>Late 1999–spring 2000: new customers got <b>$10</b> for joining; existing users got <b>$10</b> per friend.
+Peter Thiel: <b>1,000</b> mid-Nov 1999 → <b>12,000</b> end-Dec → <b>100,000</b> 3 Feb 2000 → <b>1,000,000</b> mid-Apr 2000 ·
+<b>7–10% compounding daily</b>. CAC ≈ $20 and they accepted it.</p>
+<p style="background:#fff8dc;border:1px solid #cc0;padding:8px;font-size:12px"><b>No real money.</b> Theater balances only. Incomplete never writes.</p>
+<form data-itt-real-form data-storage-key="paypal-ref" data-require-name="you friend" data-min-req="2">
+<p>Your name <input name="you" size="24" maxlength="40"></p>
+<p>Friend email <input name="friend" size="28" maxlength="60" placeholder="friend@example.com"></p>
+<label style="display:block;margin:6px 0"><input type="checkbox" data-req> You get $10 theater</label>
+<label style="display:block;margin:6px 0"><input type="checkbox" data-req> They get $10 theater · no real money moves</label>
+<p><input type="submit" value="Refer (theater)"></p>
+<p data-itt-real-status style="min-height:1.2em"></p>
+</form>
+<p data-paypal-bal style="font-size:12px;color:#060"></p>
+<p data-next-flow hidden><b>Next:</b> <a href="send.html">Send Money</a> · <a href="../../pages/home.html">Starting Point</a></p>
+<p style="font-size:11px;color:#666">key <code>itt00-paypal-ref</code> · Thiel CS183 / Startup Archive · not gold</p>
+</font>
+</td></tr>
+</table>
+<script src="../../../../js/immersion-2000.js"></script>
+<script>
+(function () {
+  function show() {
+    var el = document.querySelector("[data-paypal-bal]");
+    if (!el) return;
+    try {
+      if (localStorage.getItem("itt00-paypal-ref")) {
+        el.textContent = "Theater balances: you +$10 · friend +$10. No bank.";
+      }
+    } catch (e) { /* */ }
+  }
+  show();
+  document.addEventListener("submit", function () { setTimeout(show, 50); }, true);
+})();
+</script>
+</body>
+</html>

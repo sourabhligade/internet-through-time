@@ -26,6 +26,6 @@ test.describe("2001 Wikipedia Save REAL", () => {
       .poll(async () => page.evaluate(() => localStorage.getItem("itt01-wiki-pages")), { timeout: 8000 })
       .toBeTruthy();
     await page.goto("/years/2001/sites/wikipedia/history.html");
-    await expect(page.locator("[data-wiki-history]")).toContainText(/clarify intro residual|Editing Wikipedia/i);
+    await expect(page.locator("[data-wiki-history]").first()).toContainText(/clarify intro residual|Editing Wikipedia/i);
   });
 });

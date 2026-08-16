@@ -138,11 +138,42 @@
       function initDownloadPage() {
         var btn = document.getElementById("napster-install");
         if (!btn) return;
+        if (!document.querySelector("[data-nap-req]") && btn.parentNode) {
+          var wrap = document.createElement("div");
+          wrap.setAttribute("data-nap-req-panel", "1");
+          wrap.style.cssText = "margin:8px 0;font-size:12px";
+          wrap.innerHTML =
+            '<label style="display:block;margin:4px 0"><input type="checkbox" data-nap-req> Theater only — no real P2P files</label>' +
+            '<label style="display:block;margin:4px 0"><input type="checkbox" data-nap-req> This is not a live Napster network</label>';
+          btn.parentNode.insertBefore(wrap, btn);
+        }
         btn.addEventListener("click", function () {
+          var reqs = document.querySelectorAll("[data-nap-req]");
+          var n = 0;
+          var i;
+          for (i = 0; i < reqs.length; i++) if (reqs[i].checked) n++;
+          if (n < 2) {
+            actionFeedback("Check both honesty boxes first (incomplete does not write).");
+            return;
+          }
+          var y = "";
           try {
-            localStorage.setItem(storageKey("napster-installed"), "1");
+            y = String(ITT._immersionYear || "") ||
+              (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "";
+          } catch (eY) { /* */ }
+          try {
+            localStorage.setItem(
+              storageKey("napster-installed"),
+              JSON.stringify({
+                multiStep: true,
+                real: true,
+                theater: true,
+                year: y || undefined,
+                ts: Date.now()
+              })
+            );
           } catch (e) {}
-          actionFeedback("Napster 2.0 Beta installed (simulation). Open Search.");
+          actionFeedback("Napster installed (theater). Open Search.");
           markTourUsed("napster");
           var go = document.getElementById("napster-after-install");
           if (go) go.style.display = "block";

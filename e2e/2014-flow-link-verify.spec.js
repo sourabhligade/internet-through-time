@@ -23,6 +23,8 @@ const FLOW_SITES = [
   "sites/iphone/ios8.html",
   "sites/icebucket/index.html",
   "sites/serial/index.html",
+  "sites/youtube/index.html",
+  "sites/youtube/watch.html",
   "sites/chrome/index.html",
   "sites/windows10/index.html",
   "sites/twitch/index.html",
@@ -184,6 +186,8 @@ test.describe("2014 remaining REAL machines", () => {
     expect(await page.evaluate(() => localStorage.getItem("itt14-icebucket-posts"))).toBeFalsy();
     await page.fill("[data-ib-name]", "Pat residual");
     await page.fill("[data-ib-nom]", "Alex");
+    await page.fill("[data-ib-nom-2]", "Sam");
+    await page.fill("[data-ib-nom-3]", "Jordan");
     await page.locator("[data-ib-post]").click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt14-icebucket-posts"))).toBeTruthy();
   });

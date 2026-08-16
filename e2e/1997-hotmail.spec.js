@@ -52,12 +52,12 @@ test.describe('1997 HoTMaiL', () => {
   test('dirbar HoTMaiL reaches login', async ({ page }) => {
     await enterYear(page, '1997');
     const btn = page.locator('#dirbar .dir-btn', { hasText: /HoTMaiL/i });
-    if ((await btn.count()) === 0) {
-      test.skip();
-      return;
+    if ((await btn.count()) > 0) {
+      await btn.first().click({ force: true });
+      await page.waitForTimeout(900);
+    } else {
+      await goInFrame(page, 'sites/hotmail/index.html');
     }
-    await btn.first().click({ force: true });
-    await page.waitForTimeout(900);
     await waitForImmersion(page, '1997');
     await expect(contentFrame(page).locator('form[data-hotmail-login]')).toBeVisible({ timeout: 15000 });
     await expect(contentFrame(page).locator('body')).toContainText(/HoTMaiL|Sign|Login|Member/i);

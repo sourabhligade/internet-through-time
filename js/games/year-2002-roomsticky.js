@@ -12,7 +12,18 @@
       gameId: "roomsticky", year: "2002", ax: 1, ay: 1, items: [], notes: [], real: true
     };
   }
-  function save(s) { s.ts = Date.now(); s.real = true; if (YG) YG.saveJSON(key, s); }
+  function save(s) {
+    s.ts = Date.now();
+    s.real = true;
+    s.multiStep = true;
+    s.year = "2002";
+    s.gameId = "roomsticky";
+    var raw = JSON.stringify(s);
+    try {
+      localStorage.setItem(key, raw);
+    } catch (eS) { /* */ }
+    if (YG && typeof YG.saveJSON === "function") YG.saveJSON(key, s);
+  }
   var state = load();
   var placeId = "chair";
   var CATALOG = ["chair", "table", "plant", "lamp", "rug"];

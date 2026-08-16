@@ -85,7 +85,36 @@
       }
     }
     saveJSON(key, blob);
+    try {
+      if (sc > 0 && global.ITT && ITT.MuseumProgress && typeof ITT.MuseumProgress.stamp === "function") {
+        ITT.MuseumProgress.stamp(year, "game-" + gameId, {
+          label: extra.label || String(gameId),
+          href: extra.href || ""
+        });
+      }
+    } catch (eSt) { /* */ }
     return blob;
+  }
+
+  function markStep(id, host) {
+    host = host || (typeof document !== "undefined" && document.querySelector("[data-year-game]"));
+    if (!host || !id) return;
+    var li = host.querySelector('[data-yg-steps] [data-step="' + String(id).replace(/"/g, "") + '"]');
+    if (li) {
+      li.setAttribute("data-done", "1");
+      if (li.className.indexOf("is-done") === -1) li.className += " is-done";
+    }
+  }
+
+  function clearSteps(host) {
+    host = host || (typeof document !== "undefined" && document.querySelector("[data-year-game]"));
+    if (!host) return;
+    var lis = host.querySelectorAll("[data-yg-steps] [data-step]");
+    var i;
+    for (i = 0; i < lis.length; i++) {
+      lis[i].removeAttribute("data-done");
+      lis[i].className = String(lis[i].className || "").replace(/\bis-done\b/g, "").replace(/\s+/g, " ").trim();
+    }
   }
 
   function loadBest(gameId, year) {
@@ -700,7 +729,9 @@
     beep: beep,
     restart: restart,
     showHook: showHook,
-    installChrome: installChrome
+    installChrome: installChrome,
+    markStep: markStep,
+    clearSteps: clearSteps
   };
 
   /**
@@ -711,6 +742,8 @@
     if (!host) return;
     try {
       host.classList.add("yg-shell");
+      host.classList.add("itt-game-cabinet");
+      host.setAttribute("data-itt-layer", "game");
       if (!host.hasAttribute("tabindex")) host.setAttribute("tabindex", "0");
       var gid = host.getAttribute("data-game-id") || "game";
       var y =
@@ -834,5 +867,7 @@
     global.ITT.YearGame.setPaused = setPaused;
     global.ITT.YearGame.isPaused = isPaused;
     global.ITT.YearGame.isMuted = isMuted;
+    global.ITT.YearGame.markStep = markStep;
+    global.ITT.YearGame.clearSteps = clearSteps;
   }
 })(typeof window !== "undefined" ? window : this);

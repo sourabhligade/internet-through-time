@@ -6,18 +6,41 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
-  function storageKey() {
-    if (ITT.util && ITT.util.immersionStorageKey) {
-      return ITT.util.immersionStorageKey("netflix-queue", "itt02");
-    }
-    var y = String(
-      ITT._immersionYear ||
+  function yearPfx() {
+    var y = "";
+    try {
+      y =
+        (ITT._immersionYear && String(ITT._immersionYear)) ||
         (typeof document !== "undefined" &&
           document.documentElement &&
           document.documentElement.getAttribute("data-itt-year")) ||
-        "2002"
-    );
-    return "itt" + y.slice(2) + "-netflix-queue";
+        "";
+    } catch (eY) {
+      y = "";
+    }
+    if (!/^\d{4}$/.test(y)) {
+      try {
+        var m = (location.pathname || "").match(/\/years\/(\d{4})\//);
+        if (m) y = m[1];
+      } catch (eP) {
+        /* */
+      }
+    }
+    return /^\d{4}$/.test(y) ? "itt" + y.slice(2) : "itt02";
+  }
+  function storageKey() {
+    var pfx = yearPfx();
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("netflix-queue", pfx);
+    }
+    return pfx + "-netflix-queue";
+  }
+  function streamKey() {
+    var pfx = yearPfx();
+    if (ITT.util && ITT.util.immersionStorageKey) {
+      return ITT.util.immersionStorageKey("netflix-stream", pfx);
+    }
+    return pfx + "-netflix-stream";
   }
 
   function load() {
@@ -70,6 +93,54 @@
     if (!form && !doc.querySelector("[data-netflix-queue]")) return;
 
     renderQueue(doc);
+
+    var streamBtn = doc.querySelector("[data-netflix-stream], #stream-seed");
+    if (streamBtn && streamBtn.getAttribute("data-nf-stream-bound") !== "1") {
+      streamBtn.setAttribute("data-nf-stream-bound", "1");
+      streamBtn.addEventListener("click", function () {
+        var litSel =
+          "[data-nf-discs], [data-nf-qwikster], [data-nf-notonly], [data-nf-streamfirst], [data-nf-req]";
+        var lit = doc.querySelectorAll(litSel);
+        if (lit.length) {
+          var nLit = 0;
+          var li;
+          for (li = 0; li < lit.length; li++) if (lit[li].checked) nLit++;
+          if (nLit < Math.min(2, lit.length)) {
+            var blocked =
+              doc.getElementById("stream-status") ||
+              doc.querySelector("[data-netflix-stream-status], [data-netflix-status]");
+            if (blocked) {
+              blocked.style.display = "block";
+              blocked.textContent = "Confirm Netflix honesty first. Empty does not write.";
+            }
+            return;
+          }
+        }
+        var y = yearPfx().replace(/^itt/, "20");
+        if (y.length === 2) y = "20" + y;
+        var blob = JSON.stringify({
+          streaming: true,
+          year: y,
+          discsStill: true,
+          multiStep: true,
+          real: true,
+          ts: Date.now()
+        });
+        try {
+          localStorage.setItem(streamKey(), blob);
+          localStorage.setItem("itt" + String(y).slice(2) + "-netflix-stream", blob);
+        } catch (eS) {
+          /* */
+        }
+        var el =
+          doc.getElementById("stream-status") ||
+          doc.querySelector("[data-netflix-stream-status], [data-netflix-status]");
+        if (el) {
+          el.style.display = "block";
+          el.textContent = "Streaming seed · discs still real · " + streamKey();
+        }
+      });
+    }
 
     if (!form) return;
     form.addEventListener("submit", function (ev) {

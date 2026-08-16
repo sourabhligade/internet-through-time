@@ -48,6 +48,17 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/rickroll/index.html": "http://museum.local/years/2007/sites/rickroll/index.html",
+
+      "sites/iphone/safari.html": "http://museum.local/years/2007/sites/iphone/safari.html",
+      "sites/kindle/whisper.html": "http://museum.local/years/2007/sites/kindle/whisper.html",
+
+      "sites/aol/index.html": "http://museum.local/years/2007/sites/aol/index.html",
+
+      "sites/ask/index.html": "http://museum.local/years/2007/sites/ask/index.html",
+
+      "sites/msn/index.html": "http://museum.local/years/2007/sites/msn/index.html",
+
       "sites/etsy/index.html": "http://museum.local/years/2007/etsy/",
       "sites/googletranslate/index.html": "http://museum.local/years/2007/googletranslate/",
       "sites/kindle/index.html": "http://museum.local/years/2007/kindle/",
@@ -55,6 +66,10 @@
 
       "sites/hulu/index.html": "http://www.hulu.com/",
       "sites/playable/game.html": "http://museum.local/years/2007/playable/game.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2007/playable/game-2.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2007/playable/game-3.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2007/playable/game-4.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2007/playable/game-5.html",
       "index.html": "http://museum.local/index.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2007/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
@@ -268,6 +283,9 @@
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/netcenter/index.html": "http://www.netcenter.com/",
       "sites/netflix/index.html": "http://www.netflix.com/",
+      "sites/netflix/genres.html": "http://www.netflix.com/BrowseGenres",
+      "sites/netflix/queue.html": "http://www.netflix.com/Queue",
+      "sites/netflix/about.html": "http://www.netflix.com/About",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/netscape/index.html": "http://www.netscape.com/",
       "sites/netscape/netscape6.html": "http://www.netscape.com/netscape6.html",
@@ -363,6 +381,12 @@
       "sites/flashplayer/settings.html": "http://www.adobe.com/products/flashplayer/settings.html",
 },
     titleMap: {
+      "sites/iphone/safari.html": "Safari",
+      "sites/kindle/whisper.html": "Whisper",
+
+      "sites/netflix/genres.html": "Netflix Genres",
+      "sites/netflix/queue.html": "Netflix Queue",
+      "sites/netflix/about.html": "About Netflix",
       "sites/memeorandum/about.html": "About Memeorandum",
       "sites/memeorandum/index.html": "Memeorandum",
       "sites/milliondollar/about.html": "About Million Dollar Homepage",

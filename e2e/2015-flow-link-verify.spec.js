@@ -36,7 +36,6 @@ const FLOW_SITES = [
   "sites/iphone/6s.html",
   "sites/playable/game.html",
   "sites/playable/index.html",
-  "sites/windows7/index.html",
   "sites/youtube/red.html",
   "sites/facebook/instant.html",
   "sites/twitter/moments.html",
@@ -58,7 +57,6 @@ const HOME_HREFS = [
   "../sites/chrome/index.html",
   "../sites/meerkat/index.html",
   "../sites/fblive/index.html",
-  "../sites/spotify/index.html",
   "../sites/snapchat/discover.html",
   "../sites/discord/index.html",
   "../sites/discord/channel.html",
@@ -73,9 +71,7 @@ const HOME_HREFS = [
   "../sites/privacy/ashleymadison.html",
   "../sites/whatsapp/index.html",
   "../sites/whatsapp/web.html",
-  "../sites/vine/index.html",
   "../sites/snapchat/story.html",
-  "../sites/instagram/index.html",
   "../sites/playable/index.html",
   "../sites/playable/game.html",
   "../sites/youtube/red.html",
@@ -83,8 +79,6 @@ const HOME_HREFS = [
   "../sites/twitter/moments.html",
   "../sites/fcc/index.html",
   "../sites/amp/index.html",
-  "../sites/heartbleed/index.html",
-  "../sites/windows7/index.html",
 ];
 
 test.describe("2015 flow-map + home links exist", () => {
@@ -112,7 +106,7 @@ test.describe("2015 flow-map + home links exist", () => {
     await expect(tree).toContainText(/Win10|Windows 10|free/i);
     await expect(tree).toContainText(/Periscope/i);
     await expect(tree.locator("a[href*='watch']").first()).toBeVisible();
-    await expect(tree.locator("a[href*='web.html']").first()).toBeVisible();
+    await expect(tree.locator("a[href*='periscope']").first()).toBeVisible();
   });
 });
 
@@ -158,9 +152,10 @@ test.describe("2015 leftover + ban literacy pages", () => {
     await expect(page.locator("body")).toContainText(/iOS first/i);
   });
 
-  test("Instagram residual has no Stories tray product", async ({ page }) => {
-    await page.goto("/years/2015/sites/instagram/index.html");
+  test("About 2015 bans Stories as a 2015 product", async ({ page }) => {
+    await page.goto("/years/2015/pages/about.html");
     const body = (await page.locator("body").innerText()) || "";
+    expect(body).toMatch(/Stories/i);
     expect(body).not.toMatch(/Your story|Add to story|Stories tray/i);
   });
 

@@ -29,6 +29,7 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2018** | **1,630,322,579** | **−8%** | **MVP live** (2026-08-06) · hub unlocked · `itt18` · GDPR/TikTok/IGTV/trust · complex densify |
 | **2019** | **not on Live Stats public June table as of 2026-08-11 freeze** (table ends 2018) | — | **Research freeze only · not on disk** · Netcraft Jun 2019 **active ~186.7M** (Apache 54,879,492 = 29.39%) · `itt19` reserved · [`2019-READ-FIRST.md`](../2019-READ-FIRST.md) |
 | **2020** | **not on Live Stats public June table as of 2026-08-11 freeze** (table ends 2018) | — | **MVP live** (2026-08-11 lean) · hub 1994–2020 · `itt20` · Netcraft Jan 2020 **~189M active** · [`2020-READ-FIRST.md`](../2020-READ-FIRST.md) |
+| **2021** | **not on Live Stats public June table** (still ends 2018) | — | **research freeze 2026-08-16 · not on disk** · `itt21` reserved · Netcraft Jun 2021 **1,213,277,377** hostnames · **199,484,949** active · ITU **4.9B / 63%** · HA median **~1.9–2.2 MB** · [`../2021-READ-FIRST.md`](../2021-READ-FIRST.md) |
 
 ## Websites (Pingdom / Netcraft — December class)
 
@@ -66,6 +67,7 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2018** | **~3.9B · 51.2%** of world (ITU end-2018 estimate class) · Live Stats June users cell often blank | [ITU PR 2018-PR40](https://www.itu.int/en/mediacentre/Pages/2018-PR40.aspx) |
 | **2019** | **~4.1B** using the Internet · **+5.3%** vs 2018 · **just over 53%** of world (ITU Facts & Figures 2019) · COVID boost narrative is **2020–2021** (do not backdate) | [ITU FF 2019 PDF](https://www.itu.int/en/itu-d/statistics/documents/facts/factsfigures2019.pdf) · 2026-08-08 reconfirm |
 | **2020** | First pandemic year · ITU **+10.2%** users (largest increase in a decade) between **~4.1B (2019)** and **~4.9B / 63% (2021)** · DataReportal Oct 2020 class **~4.66B / ~59%** (third label) · Live Stats June users cell **does not exist** | [ITU FF 2021 recap](https://www.itu.int/itu-d/reports/statistics/facts-figures-2021/) · [UN News 1 Dec 2021](https://news.un.org/en/story/2021/12/1106862) · freeze [`../2020-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md`](../2020-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md) · reopen ITU PDF before About lock |
+| **2021** | ITU FF 2021 **~4.9B / 63%** · **+17% vs 2019** · **782M** came online · **2.9B** still offline (online = last 3 months) · DataReportal Jan **4.66B / 59.5%** (third label) · Live Stats June **does not exist** | [ITU FF 2021](https://www.itu.int/itu-d/reports/statistics/facts-figures-2021/) · [Digital 2021](https://datareportal.com/reports/digital-2021-global-overview-report) · freeze [`../2021-READ-FIRST.md`](../2021-READ-FIRST.md) |
 
 ## Social milestones (museum spine)
 

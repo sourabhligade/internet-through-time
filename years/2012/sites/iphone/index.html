@@ -13,13 +13,13 @@
  <p style="font-size:12px">
   <a href="../../pages/home.html">Start</a> ·
   <a href="lightning.html">Lightning</a> ·
-  <a href="../../pages/home.html">iOS 6</a> ·
+  <a href="maps.html">iOS 6 / Maps</a> ·
   <a href="maps.html">Maps</a> ·
   <a href="prices.html">Prices</a> ·
-  <a href="../../pages/home.html">About</a>
+  <a href="lightning.html">About Lightning</a>
  </p>
  <h1 style="font-size:20px">iPhone 5</h1>
- <p><b>September 12, 2012</b> announce · ship class <b>September 21</b>. Thinnest/lightest yet · <b>4-inch</b> taller Retina · <b>A6</b> · LTE · <b>Lightning</b> replaces 30-pin.</p>
+ <p><b>September 12, 2012</b> event · pre-order <b>September 14</b> (&gt;2M/24h) · ship <b>September 21</b> · contract <b>$199 / $299 / $399</b>. Thinnest/lightest yet · <b>4-inch</b> taller Retina · <b>A6</b> · LTE · <b>Lightning</b> replaces 30-pin. First weekend <b>&gt;5M</b> · <b>100M</b> iOS 6 updates class. 4S is 2011 residual — this year’s flagship is 5. Not 5s/5c.</p>
  <div class="iphone5-note">
   <b>Also:</b> iOS 6 with Apple Maps (controversy) · Passbook · Facebook integration · Siri languages densify.
   Residual: iPhone 4S still around.
@@ -28,7 +28,8 @@
  <label style="display:block;margin:8px 0;font-size:12px"><input type="checkbox" data-iphone5-not-6> This is iPhone 5 — <b>not iPhone 6 / not Face ID</b></label>
  <p><button type="button" data-iphone5-claim>I’m interested (theater)</button>
  <span data-iphone5-status style="font-size:11px;color:#060;margin-left:8px"></span></p>
- <p style="font-size:11px;color:#666">Apple Newsroom 2012-09-12</p>
+ <p class="itt12-next" data-next-flow data-next-when-key="itt12-iphone5" hidden><b>Next:</b> <a href="../ipad/index.html">iPad mini · $329+</a></p>
+ <p style="font-size:11px;color:#666">Apple Newsroom 2012-09-12 · 2012-09-24 weekend sales</p>
 </td></tr>
 </table>
 <script>
@@ -43,8 +44,32 @@ document.addEventListener("DOMContentLoaded",function(){
     if(!l||!l.checked||!n||!n.checked){if(st)st.textContent="Confirm Lightning + not-6 first.";return;}
     try{localStorage.setItem(KEY,JSON.stringify({interested:true,model:"iPhone 5",lightning:true,not6:true,real:true,multiStep:true,ts:Date.now()}));}catch(e2){}
     if(st)st.textContent="Noted · "+KEY;
+    try{if(window.ITT&&ITT.revealNextFlow)ITT.revealNextFlow(document);}catch(eN){}
   });
 });
 </script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="lightning.html">iPhone 5 · lightning</a> ·
+ <a href="maps.html">iPhone 5 · maps</a> ·
+ <a href="prices.html">iPhone 5 · prices</a> ·
+ <a href="../uber/index.html">Uber</a> ·
+ <a href="../waze/index.html">Waze</a> ·
+ <a href="../wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
+ <a href="../windows8/index.html">Windows 8</a> ·
+ <a href="../youtube/about.html">About YouTube</a> ·
+ <a href="../chrome/index.html">Google Chrome</a> ·
+ <a href="../facebook/index.html">Facebook</a> ·
+ <a href="../googledrive/index.html">Google Drive</a> ·
+ <a href="../instagram/index.html">Instagram</a> ·
+ <a href="../ipad/index.html">iPad mini</a> ·
+ <a href="../lyft/index.html">Lyft</a> ·
+ <a href="../netflix/index.html">Netflix</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body>
 </html>

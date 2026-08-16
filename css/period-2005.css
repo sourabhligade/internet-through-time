@@ -1,6 +1,8 @@
 /* 2005 document styles — XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0
-   Year delta: @import period-2004 + product polish lite. */
-@import url("period-2004.css");
+   Do NOT @import period-2004.css (that daisy-chains 2003→…→1995 and lags every 2005+ year).
+   Gmail/Flickr/thefacebook skins live in this file. */
+@import url("period-1999.css");
+@import url("period-xp-ui.css");
 @import url("period-2005-lite.css");
 
 body.year-2005 .itt-year-chip {

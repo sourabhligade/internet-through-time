@@ -1,9 +1,10 @@
 /**
- * Three playable period toys per year — REAL localStorage.
- * Keys: ittYY-playable, ittYY-playable-2, ittYY-playable-3
+ * Fifteen playable period toys per year — REAL localStorage.
+ * Keys: ittYY-playable, ittYY-playable-2 … ittYY-playable-15
+ * Passport set still stamps when the first 3 toys are won.
  * Games: meter | targets | type | hold
  * Mount: [data-year-playable] on years/YYYY/sites/playable/index.html
- * Optional: data-game="1|2|3" or ?g=1|2|3 deep-link
+ * Optional: data-game="1…15" or ?g=1…15 deep-link
  */
 (function (global) {
   "use strict";
@@ -42,6 +43,115 @@
         seconds: 22,
         accent: "#336699"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Yahoo 3-hub tap",
+        blurb: "Yahoo 3-hub tap · 1994 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Yahoo", "hub", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "NCSA Mosaic splash",
+        blurb: "NCSA Mosaic splash · 1994 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "IUMA band names",
+        blurb: "IUMA band names · 1994 museum toy · local only.",
+        phrase: "iuma band names",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "White House map click",
+        blurb: "White House map click · 1994 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "CERN http type",
+        blurb: "CERN http type · 1994 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["CERN", "http", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "What's New meter",
+        blurb: "What's New meter · 1994 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "FishCam reload type",
+        blurb: "FishCam reload type · 1994 museum toy · local only.",
+        phrase: "fishcam reload type",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "GNN home type",
+        blurb: "GNN home type · 1994 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "WebCrawler query",
+        blurb: "WebCrawler query · 1994 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["WebCrawler", "query", "Tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Mosaic throbber",
+        blurb: "Hold Mosaic throbber · 1994 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold 14.4 handshake",
+        blurb: "Hold 14.4 handshake · 1994 museum toy · local only.",
+        phrase: "hold 14.4 handshake",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold IUMA buffer",
+        blurb: "Hold IUMA buffer · 1994 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "1995": [
       {
@@ -70,6 +180,115 @@
         phrase: "Entertainment",
         seconds: 16,
         accent: "#7b0099"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "AuctionWeb bid tap",
+        blurb: "AuctionWeb bid tap · 1995 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["AuctionWeb", "bid", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "AltaVista +word",
+        blurb: "AltaVista +word · 1995 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "SSL lock meter",
+        blurb: "SSL lock meter · 1995 museum toy · local only.",
+        phrase: "ssl lock meter",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "GeoCities neighborhood tap",
+        blurb: "GeoCities neighborhood tap · 1995 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "AOL keyword type",
+        blurb: "AOL keyword type · 1995 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["AOL", "keyword", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Tripod guest type",
+        blurb: "Tripod guest type · 1995 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Pathfinder section tap",
+        blurb: "Pathfinder section tap · 1995 museum toy · local only.",
+        phrase: "pathfinder section",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Compuserve GO type",
+        blurb: "Compuserve GO type · 1995 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Match.com like tap",
+        blurb: "Match.com like tap · 1995 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Match", "com", "like", "tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Start menu",
+        blurb: "Hold Start menu · 1995 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold 28.8 bar",
+        blurb: "Hold 28.8 bar · 1995 museum toy · local only.",
+        phrase: "hold 28.8 bar",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold SSL padlock",
+        blurb: "Hold SSL padlock · 1995 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "1996": [
@@ -101,6 +320,115 @@
         seconds: 20,
         accent: "#006600"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Excite channel tap",
+        blurb: "Excite channel tap · 1996 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Excite", "channel", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "My Yahoo widget tap",
+        blurb: "My Yahoo widget tap · 1996 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "RealPlayer buffer meter",
+        blurb: "RealPlayer buffer meter · 1996 museum toy · local only.",
+        phrase: "realplayer buffer meter",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "theGlobe join tap",
+        blurb: "theGlobe join tap · 1996 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Angelfire page tap",
+        blurb: "Angelfire page tap · 1996 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Angelfire", "page", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "MSN.com type",
+        blurb: "MSN.com type · 1996 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Portal wars type",
+        blurb: "Portal wars type · 1996 museum toy · local only.",
+        phrase: "portal wars type",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "HoTMaiL address type",
+        blurb: "HoTMaiL address type · 1996 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Space Jam URL type",
+        blurb: "Space Jam URL type · 1996 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Space", "Jam", "URL", "type"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold RealPlayer",
+        blurb: "Hold RealPlayer · 1996 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Hotmail send",
+        blurb: "Hold Hotmail send · 1996 museum toy · local only.",
+        phrase: "hold hotmail send",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Jam splash",
+        blurb: "Hold Jam splash · 1996 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "1997": [
       {
@@ -130,6 +458,115 @@
         goal: 20,
         seconds: 12,
         accent: "#333399"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "eBay black word tap",
+        blurb: "eBay black word tap · 1997 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["eBay", "black", "word", "tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Slashdot +1 tap",
+        blurb: "Slashdot +1 tap · 1997 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Drudge headline tap",
+        blurb: "Drudge headline tap · 1997 museum toy · local only.",
+        phrase: "drudge headline",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Think Different type",
+        blurb: "Think Different type · 1997 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "HotBot query type",
+        blurb: "HotBot query type · 1997 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["HotBot", "query", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Winamp playlist tap",
+        blurb: "Winamp playlist tap · 1997 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "BBC News tap",
+        blurb: "BBC News tap · 1997 museum toy · local only.",
+        phrase: "bbc news",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "PointCast channel meter",
+        blurb: "PointCast channel meter · 1997 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "ICQ UIN type",
+        blurb: "ICQ UIN type · 1997 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["ICQ", "UIN", "type", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold PointCast",
+        blurb: "Hold PointCast · 1997 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold ICQ uh-oh",
+        blurb: "Hold ICQ uh-oh · 1997 museum toy · local only.",
+        phrase: "hold icq uh-oh",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold eBay bid",
+        blurb: "Hold eBay bid · 1997 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "1998": [
@@ -161,6 +598,115 @@
         seconds: 11,
         accent: "#003366"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Babel Fish pair tap",
+        blurb: "Babel Fish pair tap · 1998 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Babel", "Fish", "pair", "tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "GoTo bid meter",
+        blurb: "GoTo bid meter · 1998 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Mozilla lizard tap",
+        blurb: "Mozilla lizard tap · 1998 museum toy · local only.",
+        phrase: "mozilla lizard",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Amazon CD add tap",
+        blurb: "Amazon CD add tap · 1998 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "GameSpot demo tap",
+        blurb: "GameSpot demo tap · 1998 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["GameSpot", "demo", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "mp3.com song tap",
+        blurb: "mp3.com song tap · 1998 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Open Directory type",
+        blurb: "Open Directory type · 1998 museum toy · local only.",
+        phrase: "open directory type",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "google.stanford type",
+        blurb: "google.stanford type · 1998 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "CDNow cart type",
+        blurb: "CDNow cart type · 1998 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["CDNow", "cart", "type", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Skip Intro",
+        blurb: "Hold Skip Intro · 1998 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold 56k Google",
+        blurb: "Hold 56k Google · 1998 museum toy · local only.",
+        phrase: "hold 56k google",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Flash splash",
+        blurb: "Hold Flash splash · 1998 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "1999": [
       {
@@ -191,6 +737,115 @@
         seconds: 16,
         accent: "#ff6600"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Napster song tap",
+        blurb: "Napster song tap · 1999 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Napster", "song", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "PayPal $ meter",
+        blurb: "PayPal $ meter · 1999 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Y2K clock meter",
+        blurb: "Y2K clock meter · 1999 museum toy · local only.",
+        phrase: "y2k clock meter",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Ask Jeeves type",
+        blurb: "Ask Jeeves type · 1999 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Hampster dance tap",
+        blurb: "Hampster dance tap · 1999 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Hampster", "dance", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "SourceForge project tap",
+        blurb: "SourceForge project tap · 1999 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "AIM away type",
+        blurb: "AIM away type · 1999 museum toy · local only.",
+        phrase: "aim away type",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Boo.com splash tap",
+        blurb: "Boo.com splash tap · 1999 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Zombo type",
+        blurb: "Zombo type · 1999 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Zombo", "type", "Tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Napster search",
+        blurb: "Hold Napster search · 1999 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Y2K",
+        blurb: "Hold Y2K · 1999 museum toy · local only.",
+        phrase: "hold y2k",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold AIM buddy",
+        blurb: "Hold AIM buddy · 1999 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2000": [
       {
@@ -219,6 +874,115 @@
         blurb: "Type a sniper-style bid memo (no real money).",
         phrase: "proxy bid 12.50",
         seconds: 18,
+        accent: "#990000"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "MapQuest A-to-B tap",
+        blurb: "MapQuest A-to-B tap · 2000 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["MapQuest", "to", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "eBay Dutch qty tap",
+        blurb: "eBay Dutch qty tap · 2000 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Half.com price tap",
+        blurb: "Half.com price tap · 2000 museum toy · local only.",
+        phrase: "half.com price",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Expedia flight tap",
+        blurb: "Expedia flight tap · 2000 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Gnutella search type",
+        blurb: "Gnutella search type · 2000 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Gnutella", "search", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "LimeWire query type",
+        blurb: "LimeWire query type · 2000 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Kottke post tap",
+        blurb: "Kottke post tap · 2000 museum toy · local only.",
+        phrase: "kottke post",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Camworld reload tap",
+        blurb: "Camworld reload tap · 2000 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Homestar tap",
+        blurb: "Homestar tap · 2000 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Homestar", "tap", "Tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Flash %",
+        blurb: "Hold Flash % · 2000 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold MapQuest print",
+        blurb: "Hold MapQuest print · 2000 museum toy · local only.",
+        phrase: "hold mapquest print",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold 56k cart",
+        blurb: "Hold 56k cart · 2000 museum toy · local only.",
+        holdMs: 1750,
         accent: "#990000"
       }
     ],
@@ -251,6 +1015,115 @@
         accent: "#555",
         labels: ["Play", "Menu", "Next", "Shuffle", "Battery"]
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "MSN Messenger tap",
+        blurb: "MSN Messenger tap · 2001 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["MSN", "Messenger", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Code Red meter",
+        blurb: "Code Red meter · 2001 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Nimda patch tap",
+        blurb: "Nimda patch tap · 2001 museum toy · local only.",
+        phrase: "nimda patch",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Movable Type type",
+        blurb: "Movable Type type · 2001 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Wikipedia edit type",
+        blurb: "Wikipedia edit type · 2001 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Wikipedia", "edit", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "iTunes ban type",
+        blurb: "iTunes ban type · 2001 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Habbo room tap",
+        blurb: "Habbo room tap · 2001 museum toy · local only.",
+        phrase: "habbo room",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Broadband order tap",
+        blurb: "Broadband order tap · 2001 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Encarta search type",
+        blurb: "Encarta search type · 2001 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Encarta", "search", "type", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold wiki save",
+        blurb: "Hold wiki save · 2001 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold iPod click",
+        blurb: "Hold iPod click · 2001 museum toy · local only.",
+        phrase: "hold ipod click",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold WayBack",
+        blurb: "Hold WayBack · 2001 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2002": [
       {
@@ -281,6 +1154,115 @@
         seconds: 11,
         accent: "#00aa00"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Stumble tap",
+        blurb: "Stumble tap · 2002 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Stumble", "tap", "Tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Google News cluster tap",
+        blurb: "Google News cluster tap · 2002 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Last.fm scrobble type",
+        blurb: "Last.fm scrobble type · 2002 museum toy · local only.",
+        phrase: "last.fm scrobble type",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "LiveJournal post type",
+        blurb: "LiveJournal post type · 2002 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "DeviantArt fave tap",
+        blurb: "DeviantArt fave tap · 2002 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["DeviantArt", "fave", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Steam install tap",
+        blurb: "Steam install tap · 2002 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "SomethingAwful tap",
+        blurb: "SomethingAwful tap · 2002 museum toy · local only.",
+        phrase: "somethingawful",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Xanga post type",
+        blurb: "Xanga post type · 2002 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Phoenix download tap",
+        blurb: "Phoenix download tap · 2002 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Phoenix", "download", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Stumble",
+        blurb: "Hold Stumble · 2002 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold KaZaA",
+        blurb: "Hold KaZaA · 2002 museum toy · local only.",
+        phrase: "hold kazaa",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Netflix queue",
+        blurb: "Hold Netflix queue · 2002 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2003": [
       {
@@ -309,6 +1291,115 @@
         blurb: "Hold while the library “syncs.” Local theater only.",
         holdMs: 2000,
         accent: "#5555aa"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "WordPress title type",
+        blurb: "WordPress title type · 2003 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["WordPress", "title", "type", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "AdSense apply tap",
+        blurb: "AdSense apply tap · 2003 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Photobucket upload tap",
+        blurb: "Photobucket upload tap · 2003 museum toy · local only.",
+        phrase: "photobucket upload",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "MySpace comment type",
+        blurb: "MySpace comment type · 2003 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Skype call tap",
+        blurb: "Skype call tap · 2003 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Skype", "call", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Second Life TP tap",
+        blurb: "Second Life TP tap · 2003 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "ImageShack tap",
+        blurb: "ImageShack tap · 2003 museum toy · local only.",
+        phrase: "imageshack",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Zen Garden theme tap",
+        blurb: "Zen Garden theme tap · 2003 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Last.fm track type",
+        blurb: "Last.fm track type · 2003 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Last", "fm", "track", "type"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold iTunes buy",
+        blurb: "Hold iTunes buy · 2003 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold WP publish",
+        blurb: "Hold WP publish · 2003 museum toy · local only.",
+        phrase: "hold wp publish",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Top 8",
+        blurb: "Hold Top 8 · 2003 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2004": [
@@ -342,6 +1433,115 @@
         accent: "#ff0084",
         labels: ["Upload", "Tags", "Sets", "Explore", "Interesting"]
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Firefox download meter",
+        blurb: "Firefox download meter · 2004 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Firefox", "download", "meter", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "thefacebook poke tap",
+        blurb: "thefacebook poke tap · 2004 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Digg bury tap",
+        blurb: "Digg bury tap · 2004 museum toy · local only.",
+        phrase: "digg bury",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Orkut scrap type",
+        blurb: "Orkut scrap type · 2004 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Yelp review type",
+        blurb: "Yelp review type · 2004 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Yelp", "review", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "World of Warcraft login tap",
+        blurb: "World of Warcraft login tap · 2004 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Web 2.0 Conf tap",
+        blurb: "Web 2.0 Conf tap · 2004 museum toy · local only.",
+        phrase: "web 2.0 conf",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Folklore story tap",
+        blurb: "Folklore story tap · 2004 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Craigslist post type",
+        blurb: "Craigslist post type · 2004 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Craigslist", "post", "type", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Firefox",
+        blurb: "Hold Firefox · 2004 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold poke",
+        blurb: "Hold poke · 2004 museum toy · local only.",
+        phrase: "hold poke",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Gmail compose",
+        blurb: "Hold Gmail compose · 2004 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2005": [
       {
@@ -374,6 +1574,115 @@
         accent: "#109618",
         labels: ["Drag", "Zoom", "Satellite", "Traffic", "A-B"]
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Digg bury tap",
+        blurb: "Digg bury tap · 2005 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Digg", "bury", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Pandora thumb tap",
+        blurb: "Pandora thumb tap · 2005 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "HousingMaps pin tap",
+        blurb: "HousingMaps pin tap · 2005 museum toy · local only.",
+        phrase: "housingmaps pin",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Google Earth spin tap",
+        blurb: "Google Earth spin tap · 2005 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Kayak flight tap",
+        blurb: "Kayak flight tap · 2005 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Kayak", "flight", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "µTorrent add tap",
+        blurb: "µTorrent add tap · 2005 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "TechCrunch headline tap",
+        blurb: "TechCrunch headline tap · 2005 museum toy · local only.",
+        phrase: "techcrunch headline",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Mashable tap",
+        blurb: "Mashable tap · 2005 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "FeedBurner burn tap",
+        blurb: "FeedBurner burn tap · 2005 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["FeedBurner", "burn", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold HoverChop",
+        blurb: "Hold HoverChop · 2005 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold YouTube play",
+        blurb: "Hold YouTube play · 2005 museum toy · local only.",
+        phrase: "hold youtube play",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Pandora",
+        blurb: "Hold Pandora · 2005 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2006": [
       {
@@ -403,6 +1712,115 @@
         holdMs: 2200,
         accent: "#cc181e"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "News Feed story tap",
+        blurb: "News Feed story tap · 2006 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["News", "Feed", "story", "tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Docs new file tap",
+        blurb: "Docs new file tap · 2006 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "AWS console tap",
+        blurb: "AWS console tap · 2006 museum toy · local only.",
+        phrase: "aws console",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Reader subscribe tap",
+        blurb: "Reader subscribe tap · 2006 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Time You tap",
+        blurb: "Time You tap · 2006 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Time", "You", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Meebo IM type",
+        blurb: "Meebo IM type · 2006 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "HuffPost comment type",
+        blurb: "HuffPost comment type · 2006 museum toy · local only.",
+        phrase: "huffpost comment type",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "WikiLeaks tap",
+        blurb: "WikiLeaks tap · 2006 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Kong badge tap",
+        blurb: "Kong badge tap · 2006 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Kong", "badge", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold 140 send",
+        blurb: "Hold 140 send · 2006 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold TrailSled",
+        blurb: "Hold TrailSled · 2006 museum toy · local only.",
+        phrase: "hold trailsled",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Feed scroll",
+        blurb: "Hold Feed scroll · 2006 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2007": [
       {
@@ -430,6 +1848,115 @@
         phrase: "omw ttyl",
         seconds: 14,
         accent: "#34c759"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Beacon opt-out tap",
+        blurb: "Beacon opt-out tap · 2007 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Beacon", "opt", "out", "tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "iPhone web tap",
+        blurb: "iPhone web tap · 2007 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Hulu ep tap",
+        blurb: "Hulu ep tap · 2007 museum toy · local only.",
+        phrase: "hulu ep",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Tumblr post type",
+        blurb: "Tumblr post type · 2007 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Etsy favorite tap",
+        blurb: "Etsy favorite tap · 2007 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Etsy", "favorite", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "OpenSocial gadget tap",
+        blurb: "OpenSocial gadget tap · 2007 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "FriendFeed share tap",
+        blurb: "FriendFeed share tap · 2007 museum toy · local only.",
+        phrase: "friendfeed share",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Translate pair type",
+        blurb: "Translate pair type · 2007 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Flash nag tap",
+        blurb: "Flash nag tap · 2007 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Flash", "nag", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Safari",
+        blurb: "Hold Safari · 2007 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold pinch",
+        blurb: "Hold pinch · 2007 museum toy · local only.",
+        phrase: "hold pinch",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Kindle",
+        blurb: "Hold Kindle · 2007 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2008": [
@@ -463,6 +1990,115 @@
         accent: "#a4c639",
         labels: ["Search", "Free", "Paid", "Featured", "My apps"]
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "App Store 500 tap",
+        blurb: "App Store 500 tap · 2008 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["App", "Store", "500", "tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Hulu ad tap",
+        blurb: "Hulu ad tap · 2008 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Dropbox file type",
+        blurb: "Dropbox file type · 2008 museum toy · local only.",
+        phrase: "dropbox file type",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "GitHub issue type",
+        blurb: "GitHub issue type · 2008 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Groupon buy tap",
+        blurb: "Groupon buy tap · 2008 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Groupon", "buy", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Evernote clip type",
+        blurb: "Evernote clip type · 2008 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Spotify seed tap",
+        blurb: "Spotify seed tap · 2008 museum toy · local only.",
+        phrase: "spotify seed",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Android Market tap",
+        blurb: "Android Market tap · 2008 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Chrome omnibox type",
+        blurb: "Chrome omnibox type · 2008 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Chrome", "omnibox", "type", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold install",
+        blurb: "Hold install · 2008 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Chrome",
+        blurb: "Hold Chrome · 2008 museum toy · local only.",
+        phrase: "hold chrome",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Dropbox",
+        blurb: "Hold Dropbox · 2008 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2009": [
       {
@@ -493,6 +2129,115 @@
         seconds: 12,
         accent: "#f7931a"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Foursquare check-in tap",
+        blurb: "Foursquare check-in tap · 2009 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Foursquare", "check", "in", "tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "SO accept tap",
+        blurb: "SO accept tap · 2009 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Win7 start tap",
+        blurb: "Win7 start tap · 2009 museum toy · local only.",
+        phrase: "win7 start",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Kickstarter back tap",
+        blurb: "Kickstarter back tap · 2009 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Wolfram query type",
+        blurb: "Wolfram query type · 2009 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Wolfram", "query", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Wave blip type",
+        blurb: "Wave blip type · 2009 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "UberCab tap",
+        blurb: "UberCab tap · 2009 museum toy · local only.",
+        phrase: "ubercab",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Vevo play tap",
+        blurb: "Vevo play tap · 2009 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "IE8 tab tap",
+        blurb: "IE8 tab tap · 2009 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["IE8", "tab", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Like",
+        blurb: "Hold Like · 2009 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold harvest",
+        blurb: "Hold harvest · 2009 museum toy · local only.",
+        phrase: "hold harvest",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold mayor",
+        blurb: "Hold mayor · 2009 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2010": [
       {
@@ -522,6 +2267,115 @@
         seconds: 14,
         accent: "#e1306c",
         labels: ["Filter", "Like", "Caption", "#tag", "Share"]
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Imgur title type",
+        blurb: "Imgur title type · 2010 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Imgur", "title", "type", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "4sq check-in tap",
+        blurb: "4sq check-in tap · 2010 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Path post tap",
+        blurb: "Path post tap · 2010 museum toy · local only.",
+        phrase: "path post",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Quora answer type",
+        blurb: "Quora answer type · 2010 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Formspring ask type",
+        blurb: "Formspring ask type · 2010 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Formspring", "ask", "type", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Grooveshark play tap",
+        blurb: "Grooveshark play tap · 2010 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Color app tap",
+        blurb: "Color app tap · 2010 museum toy · local only.",
+        phrase: "color app",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Pinterest pin tap",
+        blurb: "Pinterest pin tap · 2010 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Cablegate fact tap",
+        blurb: "Cablegate fact tap · 2010 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Cablegate", "fact", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold filter",
+        blurb: "Hold filter · 2010 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold iPad",
+        blurb: "Hold iPad · 2010 museum toy · local only.",
+        phrase: "hold ipad",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Imgur",
+        blurb: "Hold Imgur · 2010 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2011": [
@@ -554,6 +2408,115 @@
         accent: "#fffc00",
         labels: ["1s", "3s", "5s", "10s", "∞"]
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Airbnb dates type",
+        blurb: "Airbnb dates type · 2011 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Airbnb", "dates", "type", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Snap send tap",
+        blurb: "Snap send tap · 2011 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Turntable DJ tap",
+        blurb: "Turntable DJ tap · 2011 museum toy · local only.",
+        phrase: "turntable dj",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Twitch follow tap",
+        blurb: "Twitch follow tap · 2011 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Google+ +1 tap",
+        blurb: "Google+ +1 tap · 2011 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Google+", "+1", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "IE9 download tap",
+        blurb: "IE9 download tap · 2011 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "DuckDuckGo bang type",
+        blurb: "DuckDuckGo bang type · 2011 museum toy · local only.",
+        phrase: "duckduckgo bang type",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Path moment tap",
+        blurb: "Path moment tap · 2011 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Groupon deal tap",
+        blurb: "Groupon deal tap · 2011 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Groupon", "deal", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Siri",
+        blurb: "Hold Siri · 2011 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Snap",
+        blurb: "Hold Snap · 2011 museum toy · local only.",
+        phrase: "hold snap",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Timeline",
+        blurb: "Hold Timeline · 2011 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2012": [
       {
@@ -585,6 +2548,115 @@
         seconds: 12,
         accent: "#1da1f2"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Draw guess type",
+        blurb: "Draw guess type · 2012 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Draw", "guess", "type", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "IG Android tap",
+        blurb: "IG Android tap · 2012 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "FB IPO meter",
+        blurb: "FB IPO meter · 2012 museum toy · local only.",
+        phrase: "fb ipo meter",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Trello card type",
+        blurb: "Trello card type · 2012 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Waze drive tap",
+        blurb: "Waze drive tap · 2012 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Waze", "drive", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Lyft request tap",
+        blurb: "Lyft request tap · 2012 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Windows 8 tile tap",
+        blurb: "Windows 8 tile tap · 2012 museum toy · local only.",
+        phrase: "windows 8 tile",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Drive file tap",
+        blurb: "Drive file tap · 2012 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Maps flop tap",
+        blurb: "Maps flop tap · 2012 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Maps", "flop", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold draw",
+        blurb: "Hold draw · 2012 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold SOPA",
+        blurb: "Hold SOPA · 2012 museum toy · local only.",
+        phrase: "hold sopa",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold tile",
+        blurb: "Hold tile · 2012 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2013": [
       {
@@ -613,6 +2685,115 @@
         phrase: "available",
         seconds: 12,
         accent: "#25d366"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "iOS 7 tile tap",
+        blurb: "iOS 7 tile tap · 2013 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["iOS", "tile", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Snowden fact tap",
+        blurb: "Snowden fact tap · 2013 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Bitcoin news tap",
+        blurb: "Bitcoin news tap · 2013 museum toy · local only.",
+        phrase: "bitcoin news",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Telegram chat type",
+        blurb: "Telegram chat type · 2013 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Xbox One tap",
+        blurb: "Xbox One tap · 2013 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Xbox", "One", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "PS4 share tap",
+        blurb: "PS4 share tap · 2013 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Healthcare.gov tap",
+        blurb: "Healthcare.gov tap · 2013 museum toy · local only.",
+        phrase: "healthcare.gov",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Google Keep note type",
+        blurb: "Google Keep note type · 2013 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Medium clap tap",
+        blurb: "Medium clap tap · 2013 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Medium", "clap", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Vine",
+        blurb: "Hold Vine · 2013 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Snap",
+        blurb: "Hold Snap · 2013 museum toy · local only.",
+        phrase: "hold snap",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold swipe",
+        blurb: "Hold swipe · 2013 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2014": [
@@ -644,6 +2825,115 @@
         seconds: 12,
         accent: "#2e7d32"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Ice Bucket hold",
+        blurb: "Ice Bucket hold · 2014 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Ice", "Bucket", "hold", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Heartbleed fact tap",
+        blurb: "Heartbleed fact tap · 2014 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Slack message type",
+        blurb: "Slack message type · 2014 museum toy · local only.",
+        phrase: "slack message type",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Twitch clip tap",
+        blurb: "Twitch clip tap · 2014 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Echo wake tap",
+        blurb: "Echo wake tap · 2014 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Echo", "wake", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "YikYak post type",
+        blurb: "YikYak post type · 2014 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Ello join tap",
+        blurb: "Ello join tap · 2014 museum toy · local only.",
+        phrase: "ello join",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Serial play tap",
+        blurb: "Serial play tap · 2014 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "1B sites meter",
+        blurb: "1B sites meter · 2014 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["1B", "sites", "meter", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold dump",
+        blurb: "Hold dump · 2014 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold flap",
+        blurb: "Hold flap · 2014 museum toy · local only.",
+        phrase: "hold flap",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold tick",
+        blurb: "Hold tick · 2014 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2015": [
       {
@@ -672,6 +2962,115 @@
         phrase: "three months free",
         seconds: 14,
         accent: "#fa233b"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Periscope title type",
+        blurb: "Periscope title type · 2015 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Periscope", "title", "type", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Apple Music tap",
+        blurb: "Apple Music tap · 2015 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Photos backup tap",
+        blurb: "Photos backup tap · 2015 museum toy · local only.",
+        phrase: "photos backup",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Discord join tap",
+        blurb: "Discord join tap · 2015 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Peach tap",
+        blurb: "Peach tap · 2015 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Peach", "tap", "Tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Meerkat live tap",
+        blurb: "Meerkat live tap · 2015 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "FB Live tap",
+        blurb: "FB Live tap · 2015 museum toy · local only.",
+        phrase: "fb live",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Let's Encrypt tap",
+        blurb: "Let's Encrypt tap · 2015 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Cortana type",
+        blurb: "Cortana type · 2015 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Cortana", "type", "Tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold live",
+        blurb: "Hold live · 2015 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Watch",
+        blurb: "Hold Watch · 2015 museum toy · local only.",
+        phrase: "hold watch",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold Music",
+        blurb: "Hold Music · 2015 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2016": [
@@ -702,6 +3101,115 @@
         seconds: 14,
         accent: "#3d5a3d"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Dyn fact tap",
+        blurb: "Dyn fact tap · 2016 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Dyn", "fact", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Jio offer tap",
+        blurb: "Jio offer tap · 2016 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "STEM kit tap",
+        blurb: "STEM kit tap · 2016 museum toy · local only.",
+        phrase: "stem kit",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Pixel tap",
+        blurb: "Pixel tap · 2016 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Home/Assistant tap",
+        blurb: "Home/Assistant tap · 2016 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Home", "Assistant", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Marketplace list type",
+        blurb: "Marketplace list type · 2016 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "AirPods pair tap",
+        blurb: "AirPods pair tap · 2016 museum toy · local only.",
+        phrase: "airpods pair",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Vine leftover tap",
+        blurb: "Vine leftover tap · 2016 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Pokéstop tap",
+        blurb: "Pokéstop tap · 2016 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Pok", "stop", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold story",
+        blurb: "Hold story · 2016 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold lip",
+        blurb: "Hold lip · 2016 museum toy · local only.",
+        phrase: "hold lip",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold gym",
+        blurb: "Hold gym · 2016 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2017": [
       {
@@ -730,6 +3238,115 @@
         phrase: "two hundred eighty",
         seconds: 16,
         accent: "#1da1f2"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "WannaCry tap",
+        blurb: "WannaCry tap · 2017 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["WannaCry", "tap", "Tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Vine goodbye tap",
+        blurb: "Vine goodbye tap · 2017 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Switch dock tap",
+        blurb: "Switch dock tap · 2017 museum toy · local only.",
+        phrase: "switch dock",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "NotPetya tap",
+        blurb: "NotPetya tap · 2017 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Equifax tap",
+        blurb: "Equifax tap · 2017 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["Equifax", "tap", "Tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Net neutrality tap",
+        blurb: "Net neutrality tap · 2017 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Animoji hold",
+        blurb: "Animoji hold · 2017 museum toy · local only.",
+        phrase: "animoji hold",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "KRACK fact tap",
+        blurb: "KRACK fact tap · 2017 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Yahoo 3B tap",
+        blurb: "Yahoo 3B tap · 2017 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Yahoo", "3B", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Face ID",
+        blurb: "Hold Face ID · 2017 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold 280",
+        blurb: "Hold 280 · 2017 museum toy · local only.",
+        phrase: "hold 280",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold storm",
+        blurb: "Hold storm · 2017 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2018": [
@@ -760,6 +3377,115 @@
         seconds: 18,
         accent: "#1565c0"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "IGTV title type",
+        blurb: "IGTV title type · 2018 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["IGTV", "title", "type", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Spectre fact tap",
+        blurb: "Spectre fact tap · 2018 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "TikTok FYP tap",
+        blurb: "TikTok FYP tap · 2018 museum toy · local only.",
+        phrase: "tiktok fyp",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "Hearing clip tap",
+        blurb: "Hearing clip tap · 2018 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "TLS 1.3 tap",
+        blurb: "TLS 1.3 tap · 2018 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["TLS", "tap", "Tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "HomePod tap",
+        blurb: "HomePod tap · 2018 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Fortnite season tap",
+        blurb: "Fortnite season tap · 2018 museum toy · local only.",
+        phrase: "fortnite season",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "G+ sunset tap",
+        blurb: "G+ sunset tap · 2018 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Craigslist post type",
+        blurb: "Craigslist post type · 2018 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Craigslist", "post", "type", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold FYP",
+        blurb: "Hold FYP · 2018 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Manage",
+        blurb: "Hold Manage · 2018 museum toy · local only.",
+        phrase: "hold manage",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold IGTV",
+        blurb: "Hold IGTV · 2018 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
     ],
     "2019": [
       {
@@ -788,6 +3514,115 @@
         phrase: "who's watching",
         seconds: 18,
         accent: "#0f0f0f"
+      }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Stadia fact tap",
+        blurb: "Stadia fact tap · 2019 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Stadia", "fact", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "TikTok swipe",
+        blurb: "TikTok swipe · 2019 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Apple TV+ tap",
+        blurb: "Apple TV+ tap · 2019 museum toy · local only.",
+        phrase: "apple tv+",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "iPhone 11 tap",
+        blurb: "iPhone 11 tap · 2019 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "AirPods Pro tap",
+        blurb: "AirPods Pro tap · 2019 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["AirPods", "Pro", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Libra fact tap",
+        blurb: "Libra fact tap · 2019 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "CNIL fine tap",
+        blurb: "CNIL fine tap · 2019 museum toy · local only.",
+        phrase: "cnil fine",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "FTC tap",
+        blurb: "FTC tap · 2019 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Inbox leftover tap",
+        blurb: "Inbox leftover tap · 2019 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Inbox", "leftover", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold Continue",
+        blurb: "Hold Continue · 2019 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Arcade",
+        blurb: "Hold Arcade · 2019 museum toy · local only.",
+        phrase: "hold arcade",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold FYP",
+        blurb: "Hold FYP · 2019 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
       }
     ],
     "2020": [
@@ -818,20 +3653,282 @@
         seconds: 18,
         accent: "#c62828"
       }
+    ,
+      {
+        id: "4",
+        type: "targets",
+        title: "Zoom mute tap",
+        blurb: "Zoom mute tap · 2020 museum toy · local only.",
+        goal: 14,
+        seconds: 13,
+        labels: ["Zoom", "mute", "tap", "Tap"],
+        accent: "#7b0099"
+      },
+      {
+        id: "5",
+        type: "meter",
+        title: "Reels 15s hold",
+        blurb: "Reels 15s hold · 2020 museum toy · local only.",
+        goal: 21,
+        seconds: 12,
+        accent: "#3366cc"
+      },
+      {
+        id: "6",
+        type: "type",
+        title: "Flash EOL type",
+        blurb: "Flash EOL type · 2020 museum toy · local only.",
+        phrase: "flash eol type",
+        seconds: 18,
+        accent: "#ff6600"
+      },
+      {
+        id: "7",
+        type: "hold",
+        title: "CCPA opt-out tap",
+        blurb: "CCPA opt-out tap · 2020 museum toy · local only.",
+        holdMs: 1650,
+        accent: "#008080"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "ACNH turnip tap",
+        blurb: "ACNH turnip tap · 2020 museum toy · local only.",
+        goal: 13,
+        seconds: 13,
+        labels: ["ACNH", "turnip", "tap", "Tap"],
+        accent: "#333399"
+      },
+      {
+        id: "9",
+        type: "meter",
+        title: "Quibi tap",
+        blurb: "Quibi tap · 2020 museum toy · local only.",
+        goal: 19,
+        seconds: 12,
+        accent: "#1565c0"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Clubhouse room tap",
+        blurb: "Clubhouse room tap · 2020 museum toy · local only.",
+        phrase: "clubhouse room",
+        seconds: 18,
+        accent: "#5e35b1"
+      },
+      {
+        id: "11",
+        type: "hold",
+        title: "Meet join tap",
+        blurb: "Meet join tap · 2020 museum toy · local only.",
+        holdMs: 1850,
+        accent: "#c62828"
+      },
+      {
+        id: "12",
+        type: "targets",
+        title: "Shop checkout tap",
+        blurb: "Shop checkout tap · 2020 museum toy · local only.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Shop", "checkout", "tap", "Tap"],
+        accent: "#0a246a"
+      },
+      {
+        id: "13",
+        type: "meter",
+        title: "Hold mute",
+        blurb: "Hold mute · 2020 museum toy · local only.",
+        goal: 17,
+        seconds: 12,
+        accent: "#003399"
+      },
+      {
+        id: "14",
+        type: "type",
+        title: "Hold Reels",
+        blurb: "Hold Reels · 2020 museum toy · local only.",
+        phrase: "hold reels",
+        seconds: 18,
+        accent: "#006600"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Hold vote",
+        blurb: "Hold vote · 2020 museum toy · local only.",
+        holdMs: 1750,
+        accent: "#990000"
+      }
+    ],
+    "2021": [
+      {
+        id: "1",
+        type: "type",
+        title: "Five letters",
+        blurb: "Type the museum word. Not today’s real Wordle.",
+        phrase: "trace",
+        seconds: 22,
+        accent: "#6aaa64"
+      },
+      {
+        id: "2",
+        type: "targets",
+        title: "Flip tiles",
+        blurb: "Green · yellow · gray theater.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Green", "Yellow", "Gray", "Enter"],
+        accent: "#c9b458"
+      },
+      {
+        id: "3",
+        type: "hold",
+        title: "Share grid",
+        blurb: "Hold to share a museum grid. No NYT.",
+        holdMs: 1650,
+        accent: "#787c7e"
+      },
+      {
+        id: "4",
+        type: "type",
+        title: "Allow is trap",
+        blurb: "Type the ATT line. Allow never writes.",
+        phrase: "allow is trap",
+        seconds: 18,
+        accent: "#007aff"
+      },
+      {
+        id: "5",
+        type: "targets",
+        title: "Sheet buttons",
+        blurb: "Allow is the period button. Not to Track is the save.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Allow", "Not to Track", "Settings"],
+        accent: "#007aff"
+      },
+      {
+        id: "6",
+        type: "hold",
+        title: "Leave WhatsApp",
+        blurb: "Hold to leave the share-with-Facebook sheet.",
+        holdMs: 1650,
+        accent: "#25d366"
+      },
+      {
+        id: "7",
+        type: "type",
+        title: "Company not app",
+        blurb: "Meta is the company. The app is still Facebook.",
+        phrase: "company not app",
+        seconds: 18,
+        accent: "#1877f2"
+      },
+      {
+        id: "8",
+        type: "targets",
+        title: "Win10 still mass",
+        blurb: "Win11 is residual. Win10 is still the mass OS.",
+        goal: 12,
+        seconds: 13,
+        labels: ["Win10", "Win11", "TPM"],
+        accent: "#0078d4"
+      },
+      {
+        id: "9",
+        type: "hold",
+        title: "Flash will not play",
+        blurb: "Hold on the brick. 12 Jan 2021.",
+        holdMs: 1650,
+        accent: "#c62828"
+      },
+      {
+        id: "10",
+        type: "type",
+        title: "Preview not GA",
+        blurb: "Copilot this year is a preview. GA is 2022.",
+        phrase: "preview not ga",
+        seconds: 18,
+        accent: "#24292f"
+      },
+      {
+        id: "11",
+        type: "targets",
+        title: "Thirteen prices",
+        blurb: "$799 · $699 · 13 mini.",
+        goal: 12,
+        seconds: 13,
+        labels: ["$799", "$699", "mini"],
+        accent: "#111"
+      },
+      {
+        id: "12",
+        type: "hold",
+        title: "Outage six hours",
+        blurb: "Hold through the 4 Oct dark window.",
+        holdMs: 1800,
+        accent: "#1877f2"
+      },
+      {
+        id: "13",
+        type: "type",
+        title: "Fleets gone",
+        blurb: "3 August 2021. Elon-close is next year.",
+        phrase: "fleets gone",
+        seconds: 16,
+        accent: "#1da1f2"
+      },
+      {
+        id: "14",
+        type: "meter",
+        title: "Log4j patch",
+        blurb: "December weather. CVE-2021-44228.",
+        goal: 20,
+        seconds: 12,
+        accent: "#333"
+      },
+      {
+        id: "15",
+        type: "hold",
+        title: "Ask first",
+        blurb: "Hold the ATT sheet. Passport toy.",
+        holdMs: 1650,
+        accent: "#007aff"
+      }
     ]
   };
 
-  function yearNow() {
+  function yearNow(host) {
     try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "";
-      if (/^\d{4}$/.test(y)) return y;
-    } catch (e) {
+      var m = (location.pathname || "").match(/\/years\/(\d{4})\//);
+      if (m) return m[1];
+    } catch (e0) {
       /* */
     }
-    return "2013";
+    try {
+      var htmlY =
+        document.documentElement && document.documentElement.getAttribute("data-itt-year");
+      if (htmlY && /^\d{4}$/.test(htmlY)) return htmlY;
+    } catch (e1) {
+      /* */
+    }
+    try {
+      if (ITT._immersionYear && /^\d{4}$/.test(String(ITT._immersionYear))) {
+        return String(ITT._immersionYear);
+      }
+    } catch (e2) {
+      /* */
+    }
+    try {
+      var hostY = host && host.getAttribute && host.getAttribute("data-year");
+      if (hostY && /^\d{4}$/.test(hostY)) return hostY;
+    } catch (e3) {
+      /* */
+    }
+    return "";
   }
   function prefix(y) {
     return "itt" + String(y).slice(2);
@@ -856,7 +3953,7 @@
   function queryGameSlot() {
     try {
       var q = (global.location && global.location.search) || "";
-      var m = /[?&]g=([123])/.exec(q);
+      var m = /[?&]g=(1[0-5]|[1-9])\b/.exec(q);
       if (m) return m[1];
     } catch (e) {
       /* */
@@ -938,8 +4035,8 @@
     if (n <= 1995) return "yp-era-early";
     if (n <= 1999) return "yp-era-nav";
     if (n <= 2003) return "yp-era-xp";
-    if (n <= 2009) return "yp-era-web2";
-    if (n <= 2013) return "yp-era-app";
+    if (n <= 2008) return "yp-era-web2";
+    if (n <= 2016) return "yp-era-app";
     return "yp-era-modern";
   }
 
@@ -963,7 +4060,7 @@
   function bootOneHost(host, doc) {
     if (!host || host.getAttribute("data-yp-booted") === "1") return;
     host.setAttribute("data-yp-booted", "1");
-    var y = host.getAttribute("data-year") || yearNow();
+    var y = yearNow(host) || host.getAttribute("data-year") || "";
     var list = gamesFor(y);
     var initial =
       host.getAttribute("data-game") || queryGameSlot() || (list[0] && list[0].id) || "1";
@@ -980,7 +4077,7 @@
         var links = nav.querySelectorAll('a[href*="g="]');
         var li;
         for (li = 0; li < links.length; li++) {
-          var hm = /[?&]g=([123])/.exec(links[li].getAttribute("href") || "");
+          var hm = /[?&]g=(1[0-5]|[1-9])\b/.exec(links[li].getAttribute("href") || "");
           if (!hm) continue;
           var named = pickGame(list, hm[1]);
           if (named && named.title) links[li].textContent = named.title;
@@ -1451,7 +4548,7 @@
       }
       stage.innerHTML = "";
       paintHud();
-      setStatus("Hit Play — " + cfg.title + " (" + cfg.id + " of 3 · " + y + ").");
+      start();
       try {
         if (global.history && global.history.replaceState) {
           var u = new URL(global.location.href);
@@ -1526,7 +4623,7 @@
       });
     }
     paintHud();
-    setStatus("Pick a title above, then hit Play — " + y + ".");
+    start();
   }
 
   function esc(s) {

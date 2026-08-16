@@ -48,6 +48,20 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/friendster/testimonial.html": "http://museum.local/years/2002/sites/friendster/testimonial.html",
+      "sites/kazaa/search.html": "http://museum.local/years/2002/sites/kazaa/search.html",
+      "sites/googlenews/cluster.html": "http://museum.local/years/2002/sites/googlenews/cluster.html",
+
+      "sites/aol/index.html": "http://museum.local/years/2002/sites/aol/index.html",
+
+      "sites/about/index.html": "http://museum.local/years/2002/sites/about/index.html",
+
+      "sites/bbc/index.html": "http://museum.local/years/2002/sites/bbc/index.html",
+
+      "sites/msn/index.html": "http://museum.local/years/2002/sites/msn/index.html",
+
+      "sites/daypop/top.html": "http://www.daypop.com/top/",
+      "sites/daypop/about.html": "http://www.daypop.com/about.html",
       "sites/xanga/index.html": "http://museum.local/years/2002/xanga/",
       "sites/deviantart/index.html": "http://museum.local/years/2002/deviantart/",
       "sites/somethingawful/index.html": "http://museum.local/years/2002/somethingawful/",
@@ -55,6 +69,10 @@
 
       "sites/playable/index.html": "http://museum.local/years/2002/playable/",
       "sites/playable/game.html": "http://museum.local/years/2002/playable/game.html",
+      "sites/playable/game-5.html": "http://museum.local/years/2002/playable/game-5.html",
+      "sites/playable/game-4.html": "http://museum.local/years/2002/playable/game-4.html",
+      "sites/playable/game-3.html": "http://museum.local/years/2002/playable/game-3.html",
+      "sites/playable/game-2.html": "http://museum.local/years/2002/playable/game-2.html",
       "pages/about.html": "http://home.microsoft.com/intl/web2002/about.html",
       "pages/cool.html": "http://museum.local/pages/cool.html",
       "pages/error/404.html": "http://museum.local/pages/error/404.html",
@@ -195,6 +213,9 @@
       "sites/netcenter/about.html": "http://www.netcenter.com/about.html",
       "sites/netcenter/index.html": "http://www.netcenter.com/index.html",
       "sites/netflix/index.html": "http://www.netflix.com/",
+      "sites/netflix/genres.html": "http://www.netflix.com/BrowseGenres",
+      "sites/netflix/queue.html": "http://www.netflix.com/Queue",
+      "sites/netflix/about.html": "http://www.netflix.com/About",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/netscape/index.html": "http://www.netscape.com/index.html",
       "sites/netscape/netscape6.html": "http://www.netscape.com/netscape6.html",
@@ -254,6 +275,15 @@
       "sites/stumbleupon/index.html": "http://www.stumbleupon.com/",
 },
     titleMap: {
+      "sites/friendster/testimonial.html": "Friendster testimonial",
+      "sites/kazaa/search.html": "KaZaA search",
+      "sites/googlenews/cluster.html": "Google News cluster",
+
+      "sites/daypop/top.html": "Daypop Top",
+      "sites/daypop/about.html": "About Daypop",
+      "sites/netflix/genres.html": "Netflix Genres",
+      "sites/netflix/queue.html": "Netflix Queue",
+      "sites/netflix/about.html": "About Netflix",
       "sites/netcenter/about.html": "About",
       "sites/y2k/about.html": "About",
       "sites/metafilter/about.html": "About",
@@ -483,6 +513,6 @@
       "help-handbook": "pages/about.html",
       "help-faq": "pages/about.html"
     },
-    desktopAlert: "Decorative Windows 98 desktop icon.\nOnly Internet Explorer is functional in this exhibit."
+    desktopAlert: "Decorative Windows XP desktop icon.\nOnly Internet Explorer is functional in this exhibit."
   };
 })(typeof window !== "undefined" ? window : this);

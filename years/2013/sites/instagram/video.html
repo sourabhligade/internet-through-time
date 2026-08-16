@@ -57,8 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (st) st.textContent = "Pick a filter first (15s video · not a 6s Vine).";
         return;
       }
-      var cap = (document.querySelector("[data-igv-caption]") || {}).value || "";
-      var payload = { filter: filter, caption: cap, maxSec: 15, year: "2013", multiStep: true, ts: Date.now() };
+      var cap = String((document.querySelector("[data-igv-caption]") || {}).value || "").trim();
+      if (cap.length < 2) {
+        if (st) st.textContent = "Caption required · incomplete never writes.";
+        return;
+      }
+      var payload = { filter: filter, caption: cap, maxSec: 15, year: "2013", multiStep: true, real: true, ts: Date.now() };
       try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e) {}
       var msg = "Shared video · 15s · " + filter + " · " + KEY;
       if (st) st.textContent = msg;
@@ -71,5 +75,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="../snowden/index.html">Snowden / PRISM</a> ·
+ <a href="../spotify/index.html">Spotify</a> ·
+ <a href="../telegram/index.html">Telegram</a> ·
+ <a href="../tinder/index.html">Tinder</a> ·
+ <a href="../tumblr/index.html">Tumblr</a> ·
+ <a href="../uber/index.html">Uber</a> ·
+ <a href="../vine/index.html">Vine</a> ·
+ <a href="../whatsapp/index.html">WhatsApp</a> ·
+ <a href="../windows81/index.html">Windows 8.1</a> ·
+ <a href="../xboxone/index.html">Xbox One</a> ·
+ <a href="../bitcoin/index.html">Bitcoin</a> ·
+ <a href="../chrome/index.html">Google Chrome</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
+
+<div class="itt-5x-loop" data-5x-loop data-5x-year="2013" data-5x-suffix="igvid" style="margin:12px 0;padding:10px;border:2px solid #f9a825;background:#fff8e1;font-family:Arial,sans-serif;font-size:13px;max-width:46em">
+<p style="margin:0 0 6px"><b>5× F3 IG Video 15s</b> · incomplete never writes · key <code>itt13-igvid</code></p>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="a"> 15s + not-Reels</label>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="b"> 20 Jun 2013</label>
+<p style="margin:8px 0 0"><button type="button" data-5x-save>Save 5× REAL</button> <span data-5x-status></span></p>
+<p data-5x-next hidden data-next-flow data-itt13-next data-next-when-key="itt13-igvid" style="margin:8px 0 0">Next: <a href="../iphone/index.html">next</a></p>
+</div>
+
 </body>
 </html>

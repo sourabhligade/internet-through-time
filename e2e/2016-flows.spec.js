@@ -132,20 +132,22 @@ test.describe('2016 flows A–T', () => {
     await expectStorageTruthy(page, 'itt16-pogo');
   });
 
-  test('M–O Allo LinkedIn Rift', async ({ page }) => {
-    await page.goto('/years/2016/sites/allo/index.html');
-    await clearKeys(page, ['itt16-allo', 'itt16-linkedin-deal', 'itt16-rift']);
+  test('M–O STEM Jio Rift', async ({ page }) => {
+    await page.goto('/years/2016/sites/stem/index.html');
+    await clearKeys(page, ['itt16-stem', 'itt16-jio', 'itt16-rift']);
     await page.reload();
-    await page.locator('[data-allo-msg]').fill('On my way');
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="allo"]').click();
-    await expectStorageTruthy(page, 'itt16-allo');
+    await page.locator('[data-stem-ligo]').check();
+    await page.locator('[data-stem-go]').check();
+    await page.locator('[data-stem-save]').click();
+    await expectStorageTruthy(page, 'itt16-stem');
 
-    await page.goto('/years/2016/sites/linkedin/deal.html');
+    await page.goto('/years/2016/sites/jio/index.html');
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="linkedin-deal"]').click();
-    await expectStorageTruthy(page, 'itt16-linkedin-deal');
+    await page.locator('[data-jio-launch]').check();
+    await page.locator('[data-jio-data]').check();
+    await page.locator('[data-jio-lookback]').check();
+    await page.locator('[data-jio-save]').click();
+    await expectStorageTruthy(page, 'itt16-jio');
 
     await page.goto('/years/2016/sites/oculus/rift.html');
     await page.reload();
@@ -154,18 +156,14 @@ test.describe('2016 flows A–T', () => {
     await expectStorageTruthy(page, 'itt16-rift');
   });
 
-  test('R–S Spectacles + Switch announce', async ({ page }) => {
+  test('R–S Spectacles residual', async ({ page }) => {
     await page.goto('/years/2016/sites/snapchat/spectacles.html');
-    await clearKeys(page, ['itt16-spectacles', 'itt16-switch-announce']);
+    await clearKeys(page, ['itt16-spectacles']);
     await page.reload();
     await checkAllReq(page);
     await page.locator('[data-itt-real-save][data-storage-key="spectacles"]').click();
     await expectStorageTruthy(page, 'itt16-spectacles');
-
-    await page.goto('/years/2016/sites/nintendo/switch.html');
-    await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="switch-announce"]').click();
-    await expectStorageTruthy(page, 'itt16-switch-announce');
+    await page.goto('/years/2016/pages/whats-new.html');
+    await expect(page.locator('body')).toContainText(/ships 2017/i);
   });
 });

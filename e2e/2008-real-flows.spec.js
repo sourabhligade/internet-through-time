@@ -4,6 +4,7 @@
  * Every interactive action must mutate itt08-* keys and DOM.
  */
 const { test, expect } = require('@playwright/test');
+const { completeRealGate } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -26,7 +27,7 @@ test.describe('2008 real flows', () => {
     await clearKeys(page, 'itt08-apps');
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await page.locator('[data-appstore-install]').first().click();
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-apps]')).toContainText(
       /Koi|Monkey|Convert|Facebook|Shazam|NYTimes|Camera|Google/i,
       { timeout: 8000 }
@@ -73,7 +74,7 @@ test.describe('2008 real flows', () => {
     await clearKeys(page, 'itt08-android-apps');
     await page.reload();
     await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await page.locator('[data-android-install="Gmail"]').click();
+    await completeRealGate(page, '[data-android-install="Gmail"]');
     await expect(page.locator('[data-android-apps]')).toContainText(/Gmail/i, { timeout: 8000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt08-android-apps'));
     expect(raw || '').toContain('Gmail');
@@ -84,7 +85,7 @@ test.describe('2008 real flows', () => {
     await clearKeys(page, 'itt08-hulu');
     await page.reload();
     await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await page.locator('[data-hulu-play]').first().click();
+    await completeRealGate(page, '[data-hulu-play]');
     const raw = await page.evaluate(() => localStorage.getItem('itt08-hulu'));
     expect(raw || '').toMatch(/Office|Rock|SNL|title/i);
   });
@@ -94,12 +95,12 @@ test.describe('2008 real flows', () => {
     await clearKeys(page, 'itt08-fb-connect');
     await page.reload();
     await page.waitForSelector('[data-fb-connect]', { timeout: 20000 });
-    await page.locator('[data-fb-connect]').click();
+    await completeRealGate(page, '[data-fb-connect]');
     await expect(page.locator('[data-fb-connect-status]')).toContainText(/Connected|Approved|itt08/i, {
       timeout: 8000,
     });
     const raw = await page.evaluate(() => localStorage.getItem('itt08-fb-connect'));
-    expect(raw || '').toContain('connected');
+    expect(raw || '').toMatch(/connected|multiStep|real/i);
   });
 
   test('Netflix queue mutates itt08-netflix-queue', async ({ page }) => {
@@ -162,7 +163,7 @@ test.describe('2008 real flows', () => {
     await page.reload();
     await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
     const before = await page.locator('[data-appstore-apps]').innerText();
-    await page.locator('[data-appstore-install]').nth(1).click();
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).not.toHaveText('', { timeout: 8000 });
     const after = await page.locator('[data-appstore-apps]').innerText();
     expect(after).not.toBe(before);

@@ -1,10 +1,20 @@
 # 2012 — READ FIRST (detailed entry map)
 
-**Date:** 2026-08-02  
+**Date:** 2026-08-02 · **from-scratch freeze added 2026-08-15**  
 **Purpose:** **Single entry document** for museum year **2012**. Read this **before** densifying, harvesting pixels, writing tests, editing product copy, or opening the master bible.  
 **Audience:** Implementers · densify editors · e2e authors · auditors · anyone opening the 2012 pack cold.  
-**Disk truth:** Hub **1994–2012** · **`years/2012/` live** · storage **`itt12`** · grade **museum-ready**  
-**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)  
+**Disk truth:** Hub **1994–2020** · **`years/2012/` live · lean 49 HTML** · storage **`itt12`** · gold **SoundCloud**  
+**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)
+
+**From-scratch remake (2026-08-15) — implemented in place (S0–S11). Do not wipe. Do not `cp -R` 2011. Do not restore `/tmp/itt-2012-clone-backup-*`.**
+
+| # | Doc | Role |
+|---|-----|------|
+| ★ | [`2012-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2012-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md) | One map — walks · rooms · S0–S11 · links |
+| 1 | [`2012-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2012-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Same phases, shorter |
+| 2 | [`2012-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2012-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md) | Fresh harvest + 180+ URLs |
+
+A remake means: **rewrite year-true rooms in place**. **Do not** `cp -R` 2011. **Do not** restore `/tmp/itt-2012-clone-backup-*`. Cap **~48–55 HTML**. Hard cap **60**. Gold stays **SoundCloud** timed comment.  
 **Legal:** Educational reconstruction only. **localStorage theater only.** **Never invent brand pixels.** Trademarks belong to their owners. No real Instagram/Facebook servers, Spotify streams, Netflix CDN, map tiles, OAuth, payments, ride-hail dispatch, or APK/IPA installs.
 
 ---

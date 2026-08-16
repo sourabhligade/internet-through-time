@@ -301,6 +301,11 @@
                 ts: Date.now()
               })
             );
+            try {
+              if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+            } catch (eN) {
+              /* */
+            }
           }
         } catch (eSum) { /* */ }
         saveSort("newest");

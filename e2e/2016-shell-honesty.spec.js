@@ -38,8 +38,9 @@ test.describe('2016 shell honesty', () => {
   });
 
   test('Switch is announce ships 2017', async ({ page }) => {
-    await page.goto('/years/2016/sites/nintendo/switch.html');
-    await expect(page.locator('body')).toContainText(/2017|announce|Oct/i);
+    await page.goto('/years/2016/pages/whats-new.html');
+    await expect(page.locator('body')).toContainText(/Switch/i);
+    await expect(page.locator('body')).toContainText(/ships 2017|2017/i);
   });
 
   test('shell content iframe works', async ({ page }) => {

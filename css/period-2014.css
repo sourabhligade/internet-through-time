@@ -68,7 +68,9 @@ body.portal-2013 {
   color: #eee;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.portal-shell-2014,
 .portal-shell-2013 { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+.portal-head-2014,
 .portal-head-2013 {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +80,7 @@ body.portal-2013 {
   padding-bottom: 12px;
   margin-bottom: 14px;
 }
+.portal-head-2014 h1,
 .portal-head-2013 h1 {
   margin: 0;
   font-size: 36px;

@@ -1020,15 +1020,18 @@ body {
 
 .legal-blurb { margin: 0 0 8px; }
 
-.hub-footer {
-  margin-top: 4px;
+.hub-socials {
+  margin: 10px 0 0;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: #000;
-  padding: 6px;
-  background: #c0c0c0;
+  padding: 6px 8px;
+  background: #d4d0c8;
   border: 1px solid #808080;
+}
+.hub-socials a {
+  color: #000080;
 }
 
 /* Soften hub-year hover — period skins own their hover colors */
@@ -1324,6 +1327,13 @@ body {
 .year-card.y2020 .era-chip { background: #0b5cff; color: #fff; }
 .year-card.y2020 .motif { background: linear-gradient(135deg, #0b5cff, #c62828); }
 .year-card.y2020 .label, .year-card.y2020 .scale { color: #ccc; }
+
+.year-card.y2021 { border-color: #007aff #404040 #404040 #111; }
+.year-card.y2021 .year-card-inner { background: linear-gradient(180deg, #f2f2f7 0%, #e5e5ea 55%); color: #111; }
+.year-card.y2021 .year { color: #111; }
+.year-card.y2021 .era-chip { background: #007aff; color: #fff; }
+.year-card.y2021 .motif { background: linear-gradient(135deg, #007aff, #25d366); }
+.year-card.y2021 .label, .year-card.y2021 .scale { color: #333; }
 
 /* —— Passport + first night (1994–2013) —— */
 .hub-passport-link {

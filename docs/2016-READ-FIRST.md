@@ -2,20 +2,22 @@
 
 **Date:** 2026-08-13 · **from-scratch freeze added 2026-08-15**  
 **Purpose:** Single entry document for museum year **2016**. Read before scaffolding, densifying, harvesting pixels, or writing tests.  
-**Disk truth:** Hub **1994–2016** playable · **`years/2016/` live · 57 HTML (cap 60)** · prefix **`itt16`** · gold **Instagram Stories**
+**Disk truth:** Hub **1994–2016** playable · **`years/2016/` live · 54 HTML (cap 60)** · prefix **`itt16`** · gold **Instagram Stories**
 
-**From-scratch remake (2026-08-15) — do not scaffold or wipe until the user says implement:**
+**From-scratch remake (2026-08-15 restart) — do not scaffold or wipe until the user says `implement 2016 from scratch`:**
 
 | # | Doc | Role |
 |---|-----|------|
-| ★ | [`2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md`](2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md) | **Quality + working** — unique facts · live-room audit · kits that match running JS |
+| ★ | [`2016-FROM-SCRATCH-NOSTALGIA-IMPACT-RESEARCH-2026-08-15.md`](2016-FROM-SCRATCH-NOSTALGIA-IMPACT-RESEARCH-2026-08-15.md) | **Restart ranking** — throw out the 57-page product wiki · Impact = N×R×V×Y · every disk room keep/cut · STEM + Jio + culture weather |
+| ★ implement | [`2016-FROM-SCRATCH-IMPLEMENT-BIBLE-PHASES-FLOWS-MINUTE-2026-08-15.md`](2016-FROM-SCRATCH-IMPLEMENT-BIBLE-PHASES-FLOWS-MINUTE-2026-08-15.md) | **Execute-from-this** — every flow · UI · selectors · payloads · Next spine · S0–S12 · do not start until `implement 2016 from scratch` |
+| 0 | [`2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md`](2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md) | Selectors / dead-button audit |
 | 1 | [`2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md`](2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md) | Execute goals — ROI · S0–S11 · how each machine works |
 | 2 | [`2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md) | 12 flows · walks · Next spine · links |
 | 3 | [`2016-FROM-SCRATCH-RESEARCH-MEGA-5X-2026-08-15.md`](2016-FROM-SCRATCH-RESEARCH-MEGA-5X-2026-08-15.md) | Calendar / extra-flow outline (not the quality pack) |
 | 4 | [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md) | First 2026-08-15 freeze (still valid) |
 | 5 | [`2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Older scaffold minutes (first build; remake reopens S0) |
 
-A remake means: **rewrite year-true rooms in place and prune toward 48–55 HTML (hard 60)**. **Do not** `cp -R` 2015. **Do not** restore `/tmp/itt-2016-forest-backup-*`. Gold stays **Instagram Stories**.  
+A remake means: **rewrite year-true rooms in place and prune toward 48–52 HTML (hard 60)**. **Cut** Allo / LinkedIn deal / Switch / bots / duplicate VR first. **Add** one STEM homepage room. Jio = access or About, not a 7th guided item. **Do not** `cp -R` 2015. **Do not** restore `/tmp/itt-2016-forest-backup-*`. Gold stays **Instagram Stories**. Game stays **Gym Rush**. Culture (Harambe / Stranger Things / Mannequin) is **what’s-new weather**, not rooms.  
   
 **Shell honesty (draft):** **Windows 10 free-upgrade ends Jul 29** · Anniversary Update · Chrome habit · Edge residual (Spartan) · Win7 residual early still honest  
 **Companions:** [`2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md) · [`references/2016/`](references/2016/) · flow seed in `js/config/flow-maps.js` → `2016`  
@@ -30,7 +32,7 @@ A remake means: **rewrite year-true rooms in place and prune toward 48–55 HTML
 |--------------|---------|
 | Orientation only | §1–6 · stop |
 | Goals / flows A–T | [`2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2016-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) |
-| **How to build (minute: flows · UI · artifacts)** | **[`2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md`](2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md)** ← implement from this |
+| **How to build (minute: every flow · UI · code · phases)** | **[`2016-FROM-SCRATCH-IMPLEMENT-BIBLE-PHASES-FLOWS-MINUTE-2026-08-15.md`](2016-FROM-SCRATCH-IMPLEMENT-BIBLE-PHASES-FLOWS-MINUTE-2026-08-15.md)** ← implement from this (respects the nostalgia freeze) |
 | **Post-L3 improvements (verify before code)** | **[`2016-IMPROVEMENT-PLAN-WAVE-DETAIL.md`](2016-IMPROVEMENT-PLAN-WAVE-DETAIL.md)** |
 | Source visits + citations | [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-13.md) |
 | Room → path map | [`references/2016/ARTIFACTS-MAP.md`](references/2016/ARTIFACTS-MAP.md) |

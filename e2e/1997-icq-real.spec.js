@@ -118,7 +118,7 @@ test.describe('1997 ICQ real flows', () => {
       .poll(async () => page.evaluate(() => !!localStorage.getItem("itt97-icq-uin")))
       .toBeTruthy();
     await page.goto("/years/1997/sites/icq/index.html");
-    await expect(page.locator('a[href*="ebay/item-laptop"]')).toBeVisible();
+    await expect(page.locator('a[href*="ebay/item-laptop"]').first()).toBeVisible();
     await page.goto("/years/1997/sites/ebay/item-laptop.html");
     await page.fill('form[data-bid-form] [name="bid"]', "510");
     await page.locator('form[data-bid-form] input[type="submit"]').click();

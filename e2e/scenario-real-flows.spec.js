@@ -9,6 +9,7 @@
  * docs/CROSS-YEAR-REAL-FLOWS-EXECUTION.md
  */
 const { test, expect } = require('@playwright/test');
+const { checkAllReq } = require('./helpers');
 
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
@@ -117,6 +118,9 @@ test.describe('scenario: itunes buy', () => {
       const title = `ScenarioTrack ${year} ${Date.now()}`;
       await page.fill('[data-itunes-buy] [name="title"]', title);
       await page.fill('[data-itunes-buy] [name="artist"]', 'Scenario Artist');
+      /* residual-real.js injects [data-itunes-req] at 80ms / 400ms and blocks buy until both are checked */
+      await page.waitForTimeout(450);
+      await checkAllReq(page, '[data-itunes-req]');
       await clickSubmit(page, '[data-itunes-buy]');
       await expect(page.locator('[data-itunes-status]')).toContainText(/Purchased|99/i, { timeout: 5000 });
       await expect(page.locator('[data-itunes-library]')).toContainText(title, { timeout: 5000 });
@@ -156,10 +160,7 @@ test.describe('scenario: linkedin', () => {
       const key = ittKey(year, 'li-connections');
       await gotoReady(page, `/years/${year}/sites/linkedin/index.html`, '[data-li-root], [data-li-name]', key);
       const btn = page.locator('[data-li-connect]').first();
-      if ((await btn.count()) === 0) {
-        test.skip();
-        return;
-      }
+      await expect(btn).toBeVisible({ timeout: 15000 });
       const who = (await btn.getAttribute('data-name')) || 'Connection';
       await btn.click();
       await page.waitForTimeout(300);

@@ -90,12 +90,78 @@
       html.push("</ul></li>");
     }
     html.push("</ul></section>");
+
+    var trails =
+      ITT.flowTrails && typeof ITT.flowTrails.boot !== "function" && ITT.flowTrails[y]
+        ? ITT.flowTrails[y]
+        : [];
+    if (trails.length) {
+      html.push('<section class="itt-fmap-tree" data-itt-ten-flows="1">');
+      html.push("<h2>Ten link-flows</h2>");
+      html.push('<p class="itt-fmap-legend">Visitor rituals on rooms that already exist. Gold is #1. Guided home stays 6.</p>');
+      html.push('<ol class="itt-fmap-steps">');
+      var ti;
+      var tr;
+      for (ti = 0; ti < trails.length; ti++) {
+        tr = trails[ti];
+        html.push("<li>");
+        if (tr.href) {
+          html.push('<a href="' + esc(R(tr.href)) + '"><b>' + esc(tr.name || "") + "</b></a>");
+        } else {
+          html.push("<b>" + esc(tr.name || "") + "</b>");
+        }
+        if (tr.nextLabel) html.push(" → " + esc(tr.nextLabel));
+        html.push("</li>");
+      }
+      html.push("</ol></section>");
+    }
+
     html.push('<footer class="itt-fmap-foot">');
     html.push('<a href="' + esc(R("pages/home.html")) + '">&larr; Starting Point</a> · ');
     html.push('<a href="' + esc(R("pages/about.html")) + '">About ' + esc(y) + "</a>");
     html.push('<p class="itt-fmap-note">All actions stay in this browser only · no real accounts or payments.</p>');
     html.push("</footer></div>");
     host.innerHTML = html.join("");
+  }
+
+  function jsRoot() {
+    var scripts = document.getElementsByTagName("script");
+    var i;
+    var src;
+    for (i = 0; i < scripts.length; i++) {
+      src = scripts[i].src || "";
+      if (/\/js\/(immersion\/|config\/)/.test(src)) {
+        return src.replace(/\/js\/(?:immersion|config)\/[^/]*$/, "/js/");
+      }
+    }
+    return "/js/";
+  }
+
+  function ensureTrails(cb) {
+    if (ITT.flowTrails) {
+      cb();
+      return;
+    }
+    var existing = document.querySelector('script[src*="config/flow-trails.js"]');
+    if (existing) {
+      existing.addEventListener("load", cb);
+      return;
+    }
+    var el = document.createElement("script");
+    el.src = jsRoot() + "config/flow-trails.js";
+    el.onload = function () {
+      if (ITT._flowTrails5x) {
+        cb();
+        return;
+      }
+      var extra = document.createElement("script");
+      extra.src = jsRoot() + "config/flow-trails-5x.js";
+      extra.onload = cb;
+      extra.onerror = cb;
+      (document.head || document.documentElement).appendChild(extra);
+    };
+    el.onerror = cb;
+    (document.head || document.documentElement).appendChild(el);
   }
 
   function boot(doc) {
@@ -111,7 +177,9 @@
         ". Ensure <code>js/config/flow-maps.js</code> is loaded.</p>";
       return;
     }
-    render(host, data);
+    ensureTrails(function () {
+      render(host, data);
+    });
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

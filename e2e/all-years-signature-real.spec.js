@@ -78,6 +78,27 @@ async function requireAnyPrefix(page, prefix, needle) {
 }
 
 test.describe('all-years signature REAL · early web', () => {
+  test('1994 CSotD guestbook → itt94-csotd', async ({ page }) => {
+    await enterYear(page, '1994');
+    await clearPrefix(page, 'itt94-csotd');
+    await goImmersion(page, '1994', 'sites/csotd/index.html');
+    const frame = contentFrame(page);
+    await page.evaluate(() => {
+      try {
+        const f = document.getElementById('content');
+        const w = f && f.contentWindow;
+        if (w && w.sessionStorage) w.sessionStorage.setItem('itt94-csotd-wandered', '1');
+        sessionStorage.setItem('itt94-csotd-wandered', '1');
+      } catch (e) {
+        /* */
+      }
+    });
+    await frame.locator('[name="gbname"]').fill('AllYear94');
+    await frame.locator('[name="gbnote"]').fill('Worth the modem.');
+    await frame.locator('form[data-csotd-gb] input[type="submit"]').click();
+    await requireKey(page, 'itt94-csotd', /AllYear94|multiStep/i);
+  });
+
   test('1995 Amazon cart → itt95-amazon-cart', async ({ page }) => {
     await enterYear(page, '1995');
     await page.evaluate(() => localStorage.setItem('itt95-amazon-cart', '[]'));
@@ -146,39 +167,19 @@ test.describe('all-years signature REAL · early web', () => {
     });
   });
 
-  test('1999 Blogger post → itt99-blog', async ({ page }) => {
+  test('1999 AIM sign-on → itt99-aim', async ({ page }) => {
     await enterYear(page, '1999');
-    await clearPrefix(page, 'itt99-blog');
-    await goImmersion(page, '1999', 'sites/blogger/index.html');
+    await clearPrefix(page, 'itt99-aim');
+    await goImmersion(page, '1999', 'sites/aim/index.html');
     const frame = contentFrame(page);
-    // login / title path varies — try publish form if present
-    if (await frame.locator('[data-blogger-title]').count()) {
-      await frame.locator('[data-blogger-title] [name="blogtitle"]').fill('sig99');
-      await frame.locator('[data-blogger-title] input[type="submit"]').click({ force: true });
-    }
-    if (await frame.locator('[data-blogger-post]').count()) {
-      const title = 'Sig99Post ' + Date.now();
-      await frame.locator('[data-blogger-post] [name="title"]').fill(title);
-      await frame.locator('[data-blogger-post] [name="body"]').fill('body');
-      await frame.locator('[data-blogger-post] input[type="submit"]').click({ force: true });
-      await requireKey(page, 'itt99-blog', new RegExp(title));
-    } else {
-      // fallback: napster theater
-      await goImmersion(page, '1999', 'sites/napster/index.html');
-      await expect(contentFrame(page).locator('body')).toContainText(/Napster|MP3|share/i, {
-        timeout: 15000,
-      });
-      // try search if present
-      const f = contentFrame(page);
-      if (await f.locator('[data-napster-search], form[data-napster]').count()) {
-        await f.locator('input[name="q"], input[type="text"]').first().fill('beatles');
-        await f.locator('button, input[type="submit"]').first().click({ force: true });
-      }
-      await requireAnyPrefix(page, 'itt99').catch(async () => {
-        // napster may be DOM-only in some pages — require interactive element at least
-        await expect(f.locator('body')).toContainText(/Napster/i);
-      });
-    }
+    const form = frame.locator('form[data-aim-signon]');
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('button[type="submit"]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt99-aim'))).toBeFalsy();
+    await form.locator('[name="sn"]').fill('coolkid99');
+    await form.locator('button[type="submit"]').click();
+    await requireAnyPrefix(page, 'itt99-aim');
   });
 });
 
@@ -202,17 +203,19 @@ test.describe('all-years signature REAL · 2000s boom', () => {
       .toBeGreaterThan(0);
   });
 
-  test('2001 Wikipedia search or article room interactive', async ({ page }) => {
+  test('2001 Wikipedia edit → itt01-wiki-pages', async ({ page }) => {
     await enterYear(page, '2001');
-    await goImmersion(page, '2001', 'sites/wikipedia/index.html');
+    await clearPrefix(page, 'itt01-wiki');
+    await goImmersion(page, '2001', 'sites/wikipedia/edit.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/Wikipedia|encyclopedia/i, { timeout: 15000 });
-    const q = frame.locator('input[name="search"], input[type="text"]').first();
-    if (await q.count()) {
-      await q.fill('Internet');
-      await frame.locator('input[type="submit"], button').first().click({ force: true });
-    }
-    await expect(frame.locator('body')).toContainText(/Wikipedia|Internet|article|encyclopedia/i);
+    await expect(frame.locator('[data-wiki-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('textarea[name="text"]').fill('');
+    await frame.locator('[data-wiki-save]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt01-wiki-pages'))).toBeFalsy();
+    await frame.locator('textarea[name="text"]').fill("'''Wikipedia''' anyone can edit · museum 2001");
+    await frame.locator('[data-wiki-save]').click();
+    await requireKey(page, 'itt01-wiki-pages');
   });
 
   test('2002 Friendster profile → itt02-friendster', async ({ page }) => {
@@ -227,29 +230,21 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     await requireAnyPrefix(page, 'itt02-friendster');
   });
 
-  test('2003 MySpace comment → itt03-myspace', async ({ page }) => {
+  test('2003 Photobucket upload → itt03-photobucket', async ({ page }) => {
     await enterYear(page, '2003');
-    await clearPrefix(page, 'itt03-myspace');
-    await goImmersion(page, '2003', 'sites/myspace/index.html');
+    await clearPrefix(page, 'itt03-photobucket');
+    await goImmersion(page, '2003', 'sites/photobucket/index.html');
     const frame = contentFrame(page);
-    const form = frame.locator('[data-myspace-comment-form]');
-    if (await form.count()) {
-      await form.locator('[name="who"]').fill('Real03');
-      await form.locator('[name="text"]').fill('comment ' + Date.now());
-      await form.locator('input[type="submit"], button[type="submit"]').first().click();
-      await requireAnyPrefix(page, 'itt03-myspace');
-    } else {
-      // iTunes buy if MySpace form missing
-      await goImmersion(page, '2003', 'sites/itunes/index.html');
-      const f2 = contentFrame(page);
-      if (await f2.locator('[data-itunes-buy]').count()) {
-        await f2.locator('[data-itunes-buy] [name="title"]').fill('Track03');
-        await f2.locator('[data-itunes-buy] button[type="submit"]').first().click();
-        await requireAnyPrefix(page, 'itt03');
-      } else {
-        await expect(f2.locator('body')).toContainText(/iTunes|99/i);
-      }
-    }
+    const form = frame.locator('form[data-pb-upload]');
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('button[type="submit"], [data-ott-click="upload"]').first().click();
+    await page.waitForTimeout(80);
+    expect(
+      await page.evaluate(() => localStorage.getItem('itt03-photobucket') || localStorage.getItem('itt03-photobucket-album'))
+    ).toBeFalsy();
+    await form.locator('[name="file"]').fill('party-pic.jpg');
+    await form.locator('button[type="submit"], [data-ott-click="upload"]').first().click();
+    await requireAnyPrefix(page, 'itt03-photobucket');
   });
 
   test('2004 Gmail login → itt04-gmail', async ({ page }) => {
@@ -260,9 +255,7 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     const form = frame.locator('form[data-gmail-login]');
     await expect(form).toBeVisible({ timeout: 10000 });
     await form.locator('input[name="email"], input[type="text"]').first().fill('you@college.edu');
-    if (await form.locator('input[type="password"]').count()) {
-      await form.locator('input[type="password"]').first().fill('secret');
-    }
+    await form.locator('input[type="password"], [name="pass"]').first().fill('secret');
     await form.locator('input[type="submit"], button[type="submit"]').first().click();
     await requireKey(page, 'itt04-gmail', /you@college|college\.edu/i);
   });
@@ -283,84 +276,75 @@ test.describe('all-years signature REAL · 2000s boom', () => {
 });
 
 test.describe('all-years signature REAL · late web', () => {
-  test('2006 Twitter post → itt06-twitter', async ({ page }) => {
+  test('2006 Twitter post → itt06-tweets', async ({ page }) => {
     await enterYear(page, '2006');
-    await clearPrefix(page, 'itt06-twitter');
+    await clearPrefix(page, 'itt06-tweets');
     await goImmersion(page, '2006', 'sites/twitter/index.html');
     const frame = contentFrame(page);
-    const form = frame.locator('[data-twitter-compose], form[data-twitter-post], [data-twttr-post]').first();
-    if (await form.count()) {
-      const text = 'AllYear tweet ' + Date.now();
-      await form.locator('textarea, input[name="status"], [name="text"]').first().fill(text);
-      await form.locator('button[type="submit"], input[type="submit"]').first().click();
-      await requireAnyPrefix(page, 'itt06', text.slice(0, 10));
-    } else {
-      // digg as 2006 signature fallback
-      await goImmersion(page, '2006', 'sites/digg/index.html');
-      const f2 = contentFrame(page);
-      await f2.locator('[data-digg-up]').first().click();
-      await requireAnyPrefix(page, 'itt06');
-    }
+    const form = frame.locator('form[data-twitter-compose]');
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('button[type="submit"]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt06-tweets'))).toBeFalsy();
+    const text = 'AllYear tweet ' + Date.now();
+    await form.locator('[name="status"]').fill(text);
+    await form.locator('button[type="submit"]').click();
+    await requireKey(page, 'itt06-tweets');
   });
 
-  test('2007 iPhone / Gmail open path writes storage', async ({ page }) => {
+  test('2007 Gmail open sign-in → itt07-gmail', async ({ page }) => {
     await enterYear(page, '2007');
-    await clearPrefix(page, 'itt07');
-    await goImmersion(page, '2007', 'sites/iphone/index.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/iPhone|Safari|multi-touch/i, { timeout: 15000 });
-    // Prefer Gmail open registration theater if present
+    await clearPrefix(page, 'itt07-gmail');
     await goImmersion(page, '2007', 'sites/gmail/index.html');
-    const f2 = contentFrame(page);
-    if (await f2.locator('form[data-gmail-login], [data-gmail-compose]').count()) {
-      if (await f2.locator('form[data-gmail-login]').count()) {
-        await f2.locator('form[data-gmail-login] input[type="text"], form[data-gmail-login] [name="email"]').first().fill('open@example.com');
-        await f2.locator('form[data-gmail-login] button, form[data-gmail-login] input[type="submit"]').first().click();
-      }
-      await requireAnyPrefix(page, 'itt07');
-    } else {
-      await requireAnyPrefix(page, 'itt07').catch(async () => {
-        await expect(frame.locator('body')).toContainText(/iPhone/i);
-      });
-    }
-  });
-
-  test('2008 App Store install theater → storage', async ({ page }) => {
-    await enterYear(page, '2008');
-    await clearPrefix(page, 'itt08');
-    await goImmersion(page, '2008', 'sites/appstore/index.html');
     const frame = contentFrame(page);
-    const btn = frame.locator('[data-appstore-install], [data-app-install], button:has-text("Install"), input[value*="Install"]').first();
-    if (await btn.count()) {
-      await btn.click({ force: true });
-      await requireAnyPrefix(page, 'itt08');
-    } else {
-      await goImmersion(page, '2008', 'sites/chrome/index.html');
-      await expect(contentFrame(page).locator('body')).toContainText(/Chrome|Google/i, {
-        timeout: 15000,
-      });
-    }
+    const form = frame.locator('form[data-gmail-login]');
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('[name="email"]').fill('');
+    await form.locator('[name="pass"]').fill('');
+    await form.locator('button[type="submit"]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt07-gmail'))).toBeFalsy();
+    await form.locator('[name="email"]').fill('open@example.com');
+    await form.locator('[name="pass"]').fill('secret');
+    await form.locator('button[type="submit"]').click();
+    await requireKey(page, 'itt07-gmail', /open@example/i);
   });
 
-  test('2009 Like / FarmVille / Bing one real write', async ({ page }) => {
+  test('2008 GitHub issue → itt08-github', async ({ page }) => {
+    await enterYear(page, '2008');
+    await clearPrefix(page, 'itt08-github');
+    await goImmersion(page, '2008', 'sites/github/issue.html');
+    const frame = contentFrame(page);
+    const form = frame.locator('form[data-gh-issue-form]');
+    await expect(form).toBeVisible({ timeout: 15000 });
+    await form.locator('button[type="submit"]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt08-github'))).toBeFalsy();
+    await form.locator('[name="title"]').fill('Cannot center logo residual');
+    await form.locator('[name="body"]').fill('Steps to reproduce residual');
+    await form.locator('button[type="submit"]').click();
+    await requireKey(page, 'itt08-github');
+  });
+
+  test('2009 Facebook Like + Stack Overflow ask', async ({ page }) => {
     await enterYear(page, '2009');
     await clearPrefix(page, 'itt09');
-    await goImmersion(page, '2009', 'sites/facebook/index.html');
+    await goImmersion(page, '2009', 'sites/facebook/feed.html');
     const frame = contentFrame(page);
-    const like = frame.locator('[data-fb-like], [data-like], button:has-text("Like")').first();
-    if (await like.count()) {
-      await like.click({ force: true });
-      await requireAnyPrefix(page, 'itt09');
-    } else {
-      await goImmersion(page, '2009', 'sites/bing/index.html');
-      const f2 = contentFrame(page);
-      const q = f2.locator('input[name="q"], input[type="text"]').first();
-      if (await q.count()) {
-        await q.fill('web');
-        await f2.locator('input[type="submit"], button').first().click({ force: true });
-      }
-      await expect(f2.locator('body')).toContainText(/Bing|search|results|web/i, { timeout: 15000 });
-    }
+    await expect(frame.locator('[data-fb-like]').first()).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-fb-like]').first().click();
+    await requireKey(page, 'itt09-fb-likes');
+    await goImmersion(page, '2009', 'sites/stackoverflow/index.html');
+    const so = contentFrame(page);
+    const ask = so.locator('form[data-so-ask]');
+    await expect(ask).toBeVisible({ timeout: 15000 });
+    await ask.locator('button[type="submit"]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt09-stackoverflow'))).toBeFalsy();
+    await ask.locator('[name="title"]').fill('How do I center a div residual?');
+    await ask.locator('[name="body"]').fill('Steps to reproduce residual');
+    await ask.locator('button[type="submit"]').click();
+    await requireKey(page, 'itt09-stackoverflow');
   });
 
   test('2010 Instagram / iPad real write', async ({ page }) => {
@@ -368,16 +352,11 @@ test.describe('all-years signature REAL · late web', () => {
     await clearPrefix(page, 'itt10');
     await goImmersion(page, '2010', 'sites/instagram/index.html');
     const frame = contentFrame(page);
-    if (await frame.locator('[data-ig-like], [data-ig-post], [data-instagram]').count()) {
-      const el = frame.locator('[data-ig-like], [data-ig-post] button, [data-ig-post]').first();
-      await el.click({ force: true });
-      await requireAnyPrefix(page, 'itt10');
-    } else {
-      await goImmersion(page, '2010', 'sites/ipad/index.html');
-      await expect(contentFrame(page).locator('body')).toContainText(/iPad|tablet|Apple/i, {
-        timeout: 15000,
-      });
-    }
+    await expect(frame.locator('[data-ig-share]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-ig-filter="X-Pro II"]').click();
+    await frame.locator('[data-ig-caption]').fill('museum 2010 square');
+    await frame.locator('[data-ig-share]').click();
+    await requireKey(page, 'itt10-ig-posts');
   });
 
   test('2011 Spotify / Hangout real write', async ({ page }) => {
@@ -385,57 +364,42 @@ test.describe('all-years signature REAL · late web', () => {
     await clearPrefix(page, 'itt11');
     await goImmersion(page, '2011', 'sites/googleplus/hangouts.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toBeVisible({ timeout: 15000 });
-    const hangStart = frame.locator('[data-gplus-hangout-start]');
-    if (await hangStart.count()) {
-      await hangStart.click({ force: true });
-      await requireKey(page, 'itt11-gplus-hangout');
-      await expect(frame.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
-    } else {
-      await goImmersion(page, '2011', 'sites/spotify/index.html');
-      await expect(contentFrame(page).locator('body')).toContainText(/Spotify|music|stream/i, {
-        timeout: 15000,
-      });
-    }
+    await expect(frame.locator('[data-gplus-hangout-start]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-req]').nth(0).check({ force: true });
+    await frame.locator('[data-req]').nth(1).check({ force: true });
+    await frame.locator('[data-gplus-hangout-start]').click();
+    await requireKey(page, 'itt11-gplus-hangout');
+    await expect(frame.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
   });
 
-  test('2012 Instagram Android / FB IPO path writes storage', async ({ page }) => {
+  test('2012 Instagram Android install REAL', async ({ page }) => {
     await enterYear(page, '2012');
-    await clearPrefix(page, 'itt12');
+    await clearPrefix(page, 'itt12-ig-android');
     await goImmersion(page, '2012', 'sites/instagram/android.html');
     const frame = contentFrame(page);
-    if (await frame.locator('[data-ig-android], [data-itt-real-save], [data-ig-follow]').count()) {
-      const el = frame.locator('[data-ig-android], [data-itt-real-save], [data-ig-follow]').first();
-      await el.click({ force: true });
-      await requireAnyPrefix(page, 'itt12');
-    } else {
-      await goImmersion(page, '2012', 'sites/facebook/ipo.html');
-      await expect(contentFrame(page).locator('body')).toContainText(/IPO|Facebook|billion|NASDAQ/i, {
-        timeout: 15000,
-      });
-    }
+    await expect(frame.locator('[data-ig-android-install]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-ig-android-install]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt12-ig-android'))).toBeFalsy();
+    await frame.locator('[data-ig-android-date]').check();
+    await frame.locator('[data-ig-android-not-stories]').check();
+    await frame.locator('[data-ig-android-install]').click();
+    await requireKey(page, 'itt12-ig-android');
   });
 
-  test('2013 Vine / WhatsApp real write', async ({ page }) => {
+  test('2013 WhatsApp install REAL', async ({ page }) => {
     await enterYear(page, '2013');
-    await clearPrefix(page, 'itt13');
+    await clearPrefix(page, 'itt13-wa');
     await goImmersion(page, '2013', 'sites/whatsapp/index.html');
     const frame = contentFrame(page);
-    if (await frame.locator('[data-wa13-phone]').count()) {
-      await frame.locator('[data-wa13-phone]').fill('5551234567');
-      await frame.locator('[data-wa13-verify]').click();
-      await frame.locator('[data-wa13-install]').click();
-      await requireAnyPrefix(page, 'itt13-wa');
-    } else {
-      await goImmersion(page, '2013', 'sites/vine/index.html');
-      const f2 = contentFrame(page);
-      if (await f2.locator('[data-vine-post], [data-vine-record]').count()) {
-        await f2.locator('[data-vine-post], [data-vine-record]').first().click({ force: true });
-        await requireAnyPrefix(page, 'itt13');
-      } else {
-        await expect(f2.locator('body')).toContainText(/Vine|6.?second|loop/i, { timeout: 15000 });
-      }
-    }
+    await expect(frame.locator('[data-wa13-install]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-wa13-install]').click();
+    await page.waitForTimeout(80);
+    expect(await page.evaluate(() => localStorage.getItem('itt13-wa-installed'))).toBeFalsy();
+    await frame.locator('[data-wa13-phone]').fill('5551234567');
+    await frame.locator('[data-wa13-verify]').click();
+    await frame.locator('[data-wa13-install]').click();
+    await requireAnyPrefix(page, 'itt13-wa');
   });
 
   test('2014 WhatsApp install real write', async ({ page }) => {
@@ -457,13 +421,12 @@ test.describe('all-years signature REAL · late web', () => {
     await clearPrefix(page, 'itt15');
     await goImmersion(page, '2015', 'sites/apple/watch.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('[data-watch-save]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-watch-save]').click();
+    await expect(frame.locator('[data-watch15-save]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-watch15-save]').click();
     await page.waitForTimeout(120);
     expect(await page.evaluate(() => localStorage.getItem('itt15-watch'))).toBeFalsy();
     await frame.locator('[data-watch-shipped]').check({ force: true });
-    await frame.locator('[data-watch-no-store]').check({ force: true });
-    await frame.locator('[data-watch-save]').click();
+    await frame.locator('[data-watch15-save]').click();
     await requireKey(page, 'itt15-watch', /multiStep|2015-04-24|shipped/i);
   });
 
@@ -472,14 +435,15 @@ test.describe('all-years signature REAL · late web', () => {
     await clearPrefix(page, 'itt16');
     await goImmersion(page, '2016', 'sites/instagram/stories.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('[data-ig-stories-add]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-ig-stories-add]').click();
+    await expect(frame.locator('[data-ig-story-add]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-ig-story-add]').click();
     await page.waitForTimeout(120);
     expect(await page.evaluate(() => localStorage.getItem('itt16-ig-stories'))).toBeFalsy();
-    await frame.locator('[data-ig-stories-24h]').check({ force: true });
-    await frame.locator('[data-ig-stories-not-reels]').check({ force: true });
-    await frame.locator('[data-ig-stories-caption]').fill('sig 2016');
-    await frame.locator('[data-ig-stories-add]').click();
+    await frame.locator('[data-ig-story-text]').fill('sig 2016');
+    const boxes = frame.locator('[data-req]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
+    await frame.locator('[data-ig-story-add]').click();
     await requireKey(page, 'itt16-ig-stories', /multiStep|sig 2016|2016-08-02/i);
   });
 
@@ -513,5 +477,46 @@ test.describe('all-years signature REAL · late web', () => {
     await frame.locator('[data-gdpr-date]').check({ force: true });
     await frame.locator('[data-gdpr-save]').click();
     await requireKey(page, 'itt18-gdpr', /multiStep|2018-05-25|manage/i);
+  });
+
+  test('2019 Disney+ continue REAL → itt19-disneyplus', async ({ page }) => {
+    await enterYear(page, '2019');
+    await clearPrefix(page, 'itt19-disneyplus');
+    await goImmersion(page, '2019', 'sites/disneyplus/home.html');
+    const frame = contentFrame(page);
+    const continueUi = frame.locator('[data-profile="adult-1"]');
+    await expect(continueUi).toBeVisible({ timeout: 15000 });
+    await continueUi.click();
+    await frame.locator('[data-title="mando"]').click();
+    await frame.locator('[data-add-continue]').click();
+    await frame.locator('[data-title="lion-king"]').click();
+    await frame.locator('[data-add-continue]').click();
+    await frame.locator('[data-dplus-date]').check({ force: true });
+    await frame.locator('[data-dplus-not-trial]').check({ force: true });
+    await frame.locator('[data-dplus-kids]').check({ force: true });
+    await frame.locator('[data-dplus-save]').click();
+    await requireKey(page, 'itt19-disneyplus', /multiStep|real|mando/i);
+  });
+
+  test('2020 Zoom join→leave REAL → itt20-zoom', async ({ page }) => {
+    await enterYear(page, '2020');
+    await clearPrefix(page, 'itt20-zoom');
+    await goImmersion(page, '2020', 'sites/zoom/index.html');
+    const frame = contentFrame(page);
+    await frame.locator('#itt20-code').fill('84739258101');
+    await frame.locator('[data-zoom-join]').click();
+    await page.waitForTimeout(400);
+    await contentFrame(page).locator('[data-admit]').click();
+    await page.waitForTimeout(400);
+    const meet = contentFrame(page);
+    await meet.locator("[name='line']").fill('can you see my screen');
+    await meet.locator('[data-chat]').evaluate((f) => f.requestSubmit());
+    await meet.locator('[data-leave]').click();
+    await page.waitForTimeout(400);
+    const recap = contentFrame(page);
+    await recap.locator('[data-zoom-part]').check({ force: true });
+    await recap.locator('[data-zoom-not-live]').check({ force: true });
+    await recap.locator('[data-zoom-save]').click();
+    await requireKey(page, 'itt20-zoom', /multiStep|real|84739258101/i);
   });
 });

@@ -19,12 +19,13 @@ const {
   clickAllDirbar,
   exerciseStartMenu,
   goInFrame,
+  waitForImmersion,
 } = require('./helpers');
 
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005',
-  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020',
+  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -50,18 +51,20 @@ const LOCATION_HINT = {
   '2012': { type: 'instagram', re: /instagram/i },
   '2013': { type: 'vine', re: /vine/i },
   '2014': { type: 'whatsapp', re: /whatsapp/i },
-  '2015': { type: 'watch', re: /watch/i },
+  '2015': { type: 'apple watch', re: /watch/i },
   '2016': { type: 'stories', re: /stories|instagram/i },
   '2017': { type: 'faceid', re: /iphone\/x|face.?id/i },
   '2018': { type: 'gdpr', re: /gdpr|cookie|consent|25 may/i },
   '2019': { type: 'disneyplus', re: /disney|who's watching|whos watching/i },
   '2020': { type: 'zoom', re: /zoom|muted|meeting/i },
+  '2021': { type: 'att', re: /att|not to track|track/i },
 };
 
 for (const year of YEARS) {
   test.describe(`year-core ${year}`, () => {
     test(`shell boots + home content + chrome visible`, async ({ page }) => {
       await enterYear(page, year);
+      await waitForImmersion(page, year);
       await expect(page.locator('#content')).toBeVisible();
       await expect(page.locator('#location')).toBeVisible();
       await expect(page.locator('#btn-home')).toBeVisible();
@@ -138,15 +141,17 @@ for (const year of YEARS) {
       test.skip(!hint, 'no location hint for year');
       await enterYear(page, year);
       await killOverlays(page);
+      await page.waitForFunction(
+        () => !!(window.ITT && ITT.activeBrowser && typeof ITT.activeBrowser.navigate === 'function'),
+        null,
+        { timeout: 15000 }
+      );
       const loc = page.locator('#location');
+      await loc.click({ force: true });
       await loc.fill(hint.type);
-      // Early years (NN) have no #btn-go — Enter is the period behavior
-      const hasGo = await page.locator('#btn-go').count();
-      if (hasGo) {
-        await page.locator('#btn-go').click({ force: true });
-      } else {
-        await loc.press('Enter');
-      }
+      // Enter is the period behavior. Do not also click Go after Enter —
+      // the bar is rewritten to a display URL and a second Go can remap.
+      await loc.press('Enter');
       await page.waitForFunction(
         (reSrc) => {
           try {

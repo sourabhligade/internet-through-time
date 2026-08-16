@@ -343,6 +343,11 @@
     }
     function saveLikes(map) {
       localStorage.setItem(likesKey(), JSON.stringify(map));
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+      } catch (eN) {
+        /* */
+      }
     }
     function renderLikes(doc) {
       var map = loadLikes();
@@ -496,6 +501,11 @@
         }
         if (ITT._immersionApi && ITT._immersionApi.showFlash) {
           ITT._immersionApi.showFlash("Facebook Timeline on (this browser).");
+        }
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) {
+          /* */
         }
       });
     }

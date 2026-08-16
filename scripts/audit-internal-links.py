@@ -12,6 +12,9 @@ def resolve(page: Path, href: str):
     href = unquote(href.split("#")[0].split("?")[0].strip())
     if not href or href.startswith(("http://", "https://", "mailto:", "javascript:", "data:")):
         return None
+    # Site-root absolute (how the static server + browser resolve it)
+    if href.startswith("/"):
+        return ROOT / href.lstrip("/")
     parts = list(page.parent.parts) + href.split("/")
     out = []
     for p in parts:

@@ -62,7 +62,16 @@
       } else {
         el.innerHTML = list
           .map(function (c) {
-            return "<div>📍 <b>" + esc(c.venue) + "</b> · +" + (c.points || 5) + " pts</div>";
+            return (
+              "<div>📍 <b>" +
+              esc(c.venue) +
+              "</b> · +" +
+              (c.points || 5) +
+              " pts" +
+              (c.shout ? " · “" + esc(c.shout) + "”" : "") +
+              (c.mayor ? " · mayor residual" : "") +
+              "</div>"
+            );
           })
           .join("");
       }
@@ -70,8 +79,19 @@
   }
   function boot(doc) {
     doc = doc || document;
-    if (!doc.querySelector("[data-4sq-checkin]")) return;
+    if (!doc.querySelector("[data-4sq-checkin]") && !doc.querySelector("[data-4sq-list]")) return;
     render(doc);
+    var lastEl = doc.querySelector("[data-4sq-last]");
+    if (lastEl) {
+      var rows = load();
+      if (rows[0]) {
+        lastEl.textContent =
+          "Last: " +
+          rows[0].venue +
+          (rows[0].shout ? " · “" + rows[0].shout + "”" : "") +
+          (rows[0].mayor ? " · mayor residual" : "");
+      }
+    }
     var btns = doc.querySelectorAll("[data-4sq-checkin]");
     var i;
     for (i = 0; i < btns.length; i++) {
@@ -97,16 +117,31 @@
           }
         }
         var list = load();
+        var shoutEl = doc.querySelector("[data-4sq-shout]");
+        var shout = shoutEl && shoutEl.value != null ? String(shoutEl.value).replace(/^\s+|\s+$/g, "") : "";
+        var yNow = String(
+          (ITT._immersionYear ||
+            (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) ||
+            "2009")
+        );
         list.unshift({
           venue: venue,
+          shout: shout,
           points: 5,
+          mayor: list.length === 0,
           multiStep: true,
           real: true,
+          year: yNow,
           ts: Date.now()
         });
         save(list.slice(0, 40));
         render(doc);
+        var last = doc.querySelector("[data-4sq-last]");
+        if (last) last.textContent = "Last: " + venue + (shout ? " · “" + shout + "”" : "") + (list.length === 1 ? " · mayor residual" : "");
         feedback("Checked in · " + venue + " · " + storageKey(), st);
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) { /* */ }
       });
     }
   }

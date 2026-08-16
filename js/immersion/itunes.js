@@ -72,10 +72,23 @@
       (function (form) {
         form.addEventListener("submit", function (ev) {
           ev.preventDefault();
-          var title = (form.querySelector('[name="title"]') || {}).value || "Demo Track";
-          var artist = (form.querySelector('[name="artist"]') || {}).value || "Various";
+          var title = ((form.querySelector('[name="title"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+          var artist = ((form.querySelector('[name="artist"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+          var st0 = doc.querySelector("[data-itunes-status]");
+          if (!title) {
+            if (st0) st0.textContent = "Need a track title (empty buy does not write).";
+            return;
+          }
           var lib = loadLib();
-          lib.unshift({ title: title, artist: artist, ts: Date.now() });
+          lib.unshift({
+            title: title,
+            artist: artist || "Various",
+            price: "0.99",
+            multiStep: true,
+            real: true,
+            year: year() || undefined,
+            ts: Date.now()
+          });
           saveLib(lib.slice(0, 30));
           var st = doc.querySelector("[data-itunes-status]");
           if (st) st.innerHTML = "<b>Purchased</b>: <i>" + title + "</i> for <span class='itunes-price'>99¢</span>. AAC + FairPlay DRM era — no real file, no real charge.";

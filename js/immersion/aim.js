@@ -82,6 +82,11 @@
       }
     }
     saveJSON(sk("aim"), blob);
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+    } catch (eN) {
+      /* */
+    }
   }
 
   function boot(doc) {

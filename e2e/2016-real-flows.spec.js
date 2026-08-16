@@ -180,25 +180,34 @@ test.describe('2016 real flows', () => {
     expect(raw).toMatch(/valor|Zubat|2016-07-06/i);
   });
 
-  test('P1 LinkedIn Rift Switch REAL', async ({ page }) => {
-    await page.goto('/years/2016/sites/linkedin/deal.html');
-    await clearKeys(page, ['itt16-linkedin-deal', 'itt16-rift', 'itt16-switch-announce']);
+  test('P1 STEM Jio Rift REAL', async ({ page }) => {
+    await page.goto('/years/2016/sites/stem/index.html');
+    await clearKeys(page, ['itt16-stem', 'itt16-jio', 'itt16-rift']);
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="linkedin-deal"]').click();
-    await expectKey(page, 'itt16-linkedin-deal');
+    await page.locator('[data-stem-ligo]').check();
+    await page.locator('[data-stem-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-stem'))).toBeFalsy();
+    await page.locator('[data-stem-go]').check();
+    await page.locator('[data-stem-save]').click();
+    await expectKey(page, 'itt16-stem');
+
+    await page.goto('/years/2016/sites/jio/index.html');
+    await page.reload();
+    await page.locator('[data-jio-launch]').check();
+    await page.locator('[data-jio-data]').check();
+    await page.locator('[data-jio-save]').click();
+    await page.waitForTimeout(150);
+    expect(await page.evaluate(() => localStorage.getItem('itt16-jio'))).toBeFalsy();
+    await page.locator('[data-jio-lookback]').check();
+    await page.locator('[data-jio-save]').click();
+    await expectKey(page, 'itt16-jio');
 
     await page.goto('/years/2016/sites/oculus/rift.html');
     await page.reload();
     await checkAllReq(page);
     await page.locator('[data-itt-real-save][data-storage-key="rift"]').click();
     await expectKey(page, 'itt16-rift');
-
-    await page.goto('/years/2016/sites/nintendo/switch.html');
-    await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="switch-announce"]').click();
-    await expectKey(page, 'itt16-switch-announce');
   });
 
   test('musical.ly empty song blocked', async ({ page }) => {
@@ -246,17 +255,17 @@ test.describe('2016 real flows', () => {
       .toMatch(/"paired"\s*:\s*true/);
   });
 
-  test('Allo empty message blocked then REAL', async ({ page }) => {
-    await page.goto('/years/2016/sites/allo/index.html');
-    await clearKeys(page, ['itt16-allo']);
+  test('STEM incomplete blocked then REAL', async ({ page }) => {
+    await page.goto('/years/2016/sites/stem/index.html');
+    await clearKeys(page, ['itt16-stem']);
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="allo"]').click();
+    await page.locator('[data-stem-ligo]').check();
+    await page.locator('[data-stem-save]').click();
     await page.waitForTimeout(150);
-    expect(await page.evaluate(() => localStorage.getItem('itt16-allo'))).toBeFalsy();
-    await page.locator('[data-allo-msg]').fill('Sounds good!');
-    await page.locator('[data-itt-real-save][data-storage-key="allo"]').click();
-    await expectKey(page, 'itt16-allo');
+    expect(await page.evaluate(() => localStorage.getItem('itt16-stem'))).toBeFalsy();
+    await page.locator('[data-stem-go]').check();
+    await page.locator('[data-stem-save]').click();
+    await expectKey(page, 'itt16-stem');
   });
 
   test('Edge download then prefer REAL', async ({ page }) => {

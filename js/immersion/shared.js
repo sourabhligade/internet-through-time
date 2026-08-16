@@ -903,10 +903,11 @@
           var prev = loadJSON(key, {}) || {};
           var pathHint = era === "web2" ? "C:\\Program Files\\" : "C:\\TEMP\\";
           panel.innerHTML = wrapDialog(
-            era === "web2" ? product : "File Download",
+            doneLabel(),
             "<b>" + escapeHtml(product) + "</b> is already on this PC.<br>" +
             "<font size=\"1\">" + escapeHtml(pathHint + file) +
-            (prev.at ? "<br>Completed: " + escapeHtml(prev.at) : "") +
+            "<br>Download complete" +
+            (prev.at ? " — " + escapeHtml(prev.at) : "") +
             (era === "early" ? "<br>Helper application ready." : "") +
             "</font>"
           );

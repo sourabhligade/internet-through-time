@@ -9,7 +9,7 @@
   function U() { return ITT.util || {}; }
   function storageKey() {
     return U().immersionStorageKey
-      ? U().immersionStorageKey("chrome", "itt08")
+      ? U().immersionStorageKey("chrome")
       : "itt08-chrome";
   }
   function load() {
@@ -22,7 +22,8 @@
   function checksOk(doc) {
     var reqs = doc.querySelectorAll("[data-chrome-req]");
     var i;
-    if (!reqs.length) return true;
+    /* No boxes = mock one-click. Never write. */
+    if (!reqs.length) return false;
     for (i = 0; i < reqs.length; i++) {
       if (!reqs[i].checked) return false;
     }
@@ -53,18 +54,19 @@
           }
           return;
         }
+        var yLabel = "";
+        try {
+          yLabel = String(ITT._immersionYear || "") ||
+            (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) || "";
+        } catch (eY) { /* */ }
         var o = load() || {};
         o.downloaded = true;
         o.ts = Date.now();
         o.platform = "Windows";
         o.multiStep = true;
         o.real = true;
+        o.year = yLabel || undefined;
         save(o);
-        var yLabel = "";
-        try {
-          yLabel = String(ITT._immersionYear || "") ||
-            (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) || "";
-        } catch (eY) { /* */ }
         var era =
           yLabel === "2008" || yLabel === "2009"
             ? "Windows beta/1.0 class"
@@ -76,6 +78,9 @@
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback(msg, { doc: doc, status: st, kind: "chrome-dl" });
         }
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) { /* */ }
       });
     }
     var pref = doc.querySelector("[data-chrome-prefer]");

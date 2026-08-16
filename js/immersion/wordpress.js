@@ -99,10 +99,10 @@
     var install = doc.querySelector("[data-wp-install]");
     if (install) {
       install.addEventListener("click", function () {
-        localStorage.setItem(installKey(), "1");
         var st = doc.querySelector("[data-wp-install-status]");
+        /* Download zip is theater — persist only after the 3-step install wizard. */
         if (st) {
-          st.textContent = "Download recorded: wordpress-0.7.zip (this browser only) — continue to install.";
+          st.textContent = "Download started (theater). Run the install wizard — this click does not write.";
           ittFeedback(st.textContent, st);
         }
       });
@@ -118,7 +118,20 @@
           var el = doc.querySelector('[data-wp-step="' + i + '"]');
           if (el) el.style.display = i === n ? "block" : "none";
         }
-        if (n === 3) localStorage.setItem(installKey(), "1");
+        if (n === 3) {
+          try {
+            localStorage.setItem(
+              installKey(),
+              JSON.stringify({
+                multiStep: true,
+                real: true,
+                steps: 3,
+                year: year() || undefined,
+                ts: Date.now()
+              })
+            );
+          } catch (eInst) { /* */ }
+        }
       }
       var nexts = doc.querySelectorAll("[data-wp-next]");
       for (var j = 0; j < nexts.length; j++) {

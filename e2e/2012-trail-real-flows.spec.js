@@ -120,6 +120,8 @@ test.describe('2012 trail 3 — Visual browser web', () => {
       null,
       { timeout: 25000 }
     );
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-pin-save]').first().click();
     await expect
       .poll(async () => {
@@ -148,6 +150,8 @@ test.describe('2012 trail 4 — Apple autumn', () => {
     await requireKey(page, 'itt12-lightning');
 
     await page.goto('/years/2012/sites/iphone/maps.html');
+    await page.locator('[data-maps-dropped]').check();
+    await page.locator('[data-maps-apology]').check();
     await page.locator('[data-maps-q]').fill('Trail Lake');
     await page.locator('[data-maps-search]').click();
     await requireKey(page, 'itt12-maps-note');
@@ -199,6 +203,8 @@ test.describe('2012 trail 6 — thesis ack', () => {
     await page.goto('/years/2012/pages/about.html');
     await clearKeys(page, ['itt12-thesis-ack']);
     await page.reload();
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-thesis-ack]').click();
     await requireKey(page, 'itt12-thesis-ack');
   });

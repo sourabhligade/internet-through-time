@@ -53,6 +53,11 @@ test.describe('2003 MVP — MySpace · Store · WP · LinkedIn · museum densify
     await page.goto('/years/2003/sites/itunes/index.html');
     await expect(page.locator('.itunes-price').first()).toBeVisible();
     await expect(page.getByText(/stream now|spotify/i)).toHaveCount(0);
+    await page.waitForSelector('[data-itunes-req], [data-itunes-buy]', { timeout: 20000 });
+    await page.waitForTimeout(450);
+    const reqs = page.locator('[data-itunes-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator('[data-itunes-buy] button[type="submit"]').first().click();
     await expect(page.locator('[data-itunes-status]')).toContainText(/Purchased|99/i);
   });

@@ -838,6 +838,21 @@ pre.lobby,
   border-radius: var(--yg-radius);
 }
 
+.yg-steps {
+  margin: 8px 0;
+  padding: 8px 8px 8px 28px;
+  font-size: 12px;
+  line-height: 1.45;
+  border: 1px solid #555;
+  background: rgba(0, 0, 0, 0.2);
+}
+.yg-steps [data-step] { opacity: 0.75; }
+.yg-steps [data-step].is-done,
+.yg-steps [data-step][data-done="1"] {
+  opacity: 1;
+  font-weight: bold;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-year-game].yg-just-hit canvas,
   [data-year-game].yg-just-hit [data-game-field],

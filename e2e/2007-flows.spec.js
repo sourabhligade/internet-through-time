@@ -148,6 +148,7 @@ test.describe('Flow D — Gmail open', () => {
   test('login → inbox region', async ({ page }) => {
     await gotoReady(page, '/years/2007/sites/gmail/index.html', '[data-gmail-login]', 'itt07-gmail');
     await page.fill('[data-gmail-login] [name="email"]', 'flowd@gmail.com');
+    await page.fill('[data-gmail-login] [name="pass"]', 'secret');
     await page.locator('[data-gmail-login] button[type="submit"]').click();
     await page.waitForURL(/inbox\.html/, { timeout: 10000 }).catch(() => null);
     await page.waitForTimeout(400);

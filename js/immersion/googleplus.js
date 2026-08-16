@@ -107,6 +107,14 @@
     if (hangoutBtn && hangoutOut) {
       hangoutBtn.addEventListener("click", function (ev) {
         ev.preventDefault();
+        var reqs = doc.querySelectorAll("[data-gplus-req], [data-req]");
+        var cn = 0;
+        var ci;
+        for (ci = 0; ci < reqs.length; ci++) if (reqs[ci].checked) cn++;
+        if (reqs.length && cn < reqs.length) {
+          setStatus("Confirm Hangout literacy first. Incomplete writes nothing.");
+          return;
+        }
         var circle =
           (document.querySelector("[data-gplus-circle].on, [data-gplus-circle-active]") &&
             (document.querySelector("[data-gplus-circle].on, [data-gplus-circle-active]")

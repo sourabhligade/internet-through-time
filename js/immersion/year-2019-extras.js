@@ -5,6 +5,8 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2019");
+  var bootChecks = YX && YX.bootChecks;
 
   function U() {
     return ITT.util || {};
@@ -93,6 +95,11 @@
         /* */
       }
     }
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+    } catch (eN) {
+      /* */
+    }
   }
 
   function bootTikTok(doc) {
@@ -163,10 +170,116 @@
     });
   }
 
+  function bootWhoWatching(doc) {
+    doc = doc || document;
+    var host = doc.querySelector("[data-whos-watching]");
+    if (!host) return;
+    var st = doc.querySelector("[data-dplus-status], [data-itt-action-status]");
+    var list = doc.querySelector("[data-continue-list]");
+    var state = loadJSON(key("disneyplus"), null) || {};
+    if (!state.continue) state.continue = [];
+    function render() {
+      if (!list) return;
+      if (!state.continue.length) {
+        list.innerHTML = "<li style='color:#888'>Continue empty — pick titles, then add.</li>";
+        return;
+      }
+      list.innerHTML = state.continue
+        .map(function (row) {
+          return "<li>" + String(row.title || row).replace(/</g, "&lt;") + " · " + String(row.profile || "adult") + "</li>";
+        })
+        .join("");
+    }
+    render();
+    if (state.profile) {
+      var on = host.querySelector('[data-profile="' + state.profile + '"]');
+      if (on) on.classList.add("is-active");
+    }
+    var avatars = host.querySelectorAll("[data-profile]");
+    var ai;
+    for (ai = 0; ai < avatars.length; ai++) {
+      avatars[ai].addEventListener("click", function () {
+        var j;
+        for (j = 0; j < avatars.length; j++) avatars[j].classList.remove("is-active");
+        this.classList.add("is-active");
+        state.profile = this.getAttribute("data-profile") || "adult-1";
+      });
+    }
+    var titles = doc.querySelectorAll("[data-title]");
+    var selected = "";
+    var ti;
+    for (ti = 0; ti < titles.length; ti++) {
+      titles[ti].addEventListener("click", function () {
+        var k;
+        for (k = 0; k < titles.length; k++) titles[k].style.outline = "";
+        this.style.outline = "2px solid #1a2a6c";
+        selected = this.getAttribute("data-title") || "";
+      });
+    }
+    var add = doc.querySelector("[data-add-continue]");
+    if (add && add.getAttribute("data-bound") !== "1") {
+      add.setAttribute("data-bound", "1");
+      add.addEventListener("click", function () {
+        if (!selected) {
+          feedback("Pick a title first.", st, { error: true });
+          return;
+        }
+        state.continue = state.continue || [];
+        state.continue.unshift({
+          title: selected,
+          profile: state.profile || "adult-1"
+        });
+        state.continue = state.continue.slice(0, 12);
+        render();
+        feedback("Added to Continue (not saved until Save profiles).", st);
+      });
+    }
+    var save = doc.querySelector("[data-dplus-save]");
+    if (save && save.getAttribute("data-ww-bound") !== "1") {
+      save.setAttribute("data-ww-bound", "1");
+      save.addEventListener("click", function () {
+        if (!state.profile) {
+          feedback("Pick Who’s watching first.", st, { error: true });
+          return;
+        }
+        if (!state.continue || state.continue.length < 2) {
+          feedback("Add two Continue titles first.", st, { error: true });
+          return;
+        }
+        if (countChecked(doc, "[data-req], [data-dplus-date]") < 2) {
+          feedback("Complete literacy checks first.", st, { error: true });
+          return;
+        }
+        saveJSON(key("disneyplus"), {
+          joined: true,
+          who: true,
+          profile: state.profile,
+          continue: state.continue,
+          multiStep: true,
+          real: true,
+          year: "2019",
+          launch: "2019-11-12",
+          ts: Date.now()
+        });
+        feedback("Profiles + Continue saved (theater)", st);
+        revealNext(doc);
+        markUsed();
+      });
+    }
+    if (state.who || state.joined) revealNext(doc);
+  }
+
   function bootDisneyPlus(doc) {
     doc = doc || document;
     var join = doc.querySelector("[data-dplus-join]");
     var st = doc.querySelector("[data-dplus-status]");
+    var trial = doc.querySelector("[data-dplus-trial]");
+    if (trial && trial.getAttribute("data-bound") !== "1") {
+      trial.setAttribute("data-bound", "1");
+      trial.addEventListener("click", function () {
+        feedback("Trial is the trap · Join + literacy writes. Empty trial does not save.", st, { error: true });
+      });
+    }
     if (join && join.getAttribute("data-bound") !== "1") {
       join.setAttribute("data-bound", "1");
       join.addEventListener("click", function () {
@@ -475,6 +588,39 @@
     }
   }
 
+  function bootLiteracyRooms(doc) {
+    var fn = bootChecks;
+    if (!fn) {
+      var yx = ITT.YearExtras && ITT.YearExtras.forYear("2019");
+      fn = yx && yx.bootChecks;
+    }
+    if (!fn) return;
+    fn(doc, "[data-ed-save]", "[data-ed-status]", ["[data-ed-announce]", "[data-ed-preview]", "[data-ed-ship]"], "edge", {
+      preview: true
+    });
+    fn(doc, "[data-inbox-save]", "[data-inbox-status]", ["[data-inbox-date]", "[data-inbox-gmail]"], "inbox", {
+      gone: "2019-04-02"
+    });
+    fn(doc, "[data-hw-save]", "[data-hw-status]", ["[data-hw-date]", "[data-hw-gms]"], "huawei", { gms: true });
+    fn(doc, "[data-ipados-save]", "[data-ipados-status]", ["[data-ipados-named]", "[data-ipados-ship]"], "ipados", {
+      named: "2019-06-03"
+    });
+    fn(doc, "[data-libra-save]", "[data-libra-status]", ["[data-libra-date]", "[data-libra-not-live]"], "libra", {
+      notLive: true
+    });
+    fn(doc, "[data-fnwc-save]", "[data-fnwc-status]", ["[data-fnwc-pool]", "[data-fnwc-bugha]"], "fn-wc", {
+      pool: 30
+    });
+    fn(doc, "[data-ios13-save]", "[data-ios13-status]", ["[data-ios13-date]", "[data-ios13-not-face]"], "ios13", {
+      notFaceId: true
+    });
+    fn(doc, "[data-mello-save]", "[data-mello-status]", ["[data-mello-date]", "[data-mello-not-travis]"], "marshmello", {
+      date: "2019-02-02",
+      viewersClass: "10.7M",
+      notTravis: true
+    });
+  }
+
   function bootHomeProgress(doc) {
     doc = doc || document;
     if (!doc.querySelector("[data-itt19-home-trails]")) return;
@@ -527,7 +673,9 @@
 
   function bootAll(doc) {
     doc = doc || document;
+    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
     bootTikTok(doc);
+    bootWhoWatching(doc);
     bootDisneyPlus(doc);
     bootArcade(doc);
     bootAppleTV(doc);
@@ -535,6 +683,7 @@
     bootStadia(doc);
     bootIphone11Reveal(doc);
     bootRealSaveReveal(doc);
+    bootLiteracyRooms(doc);
     bootHomeProgress(doc);
   }
 

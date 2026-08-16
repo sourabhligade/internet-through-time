@@ -1,6 +1,7 @@
 # 2011 Research Dossier — The Internet Through Time
 
-**Status:** Research freeze **[x]** · **MVP ship [x]** (2026-08-02) · hub **1994–2012** · `years/2011/` · `itt11`  
+**Status:** Research freeze **[x]** · **MVP ship [x]** (2026-08-02) · hub **1994–2020** · `years/2011/` · `itt11`  
+**★ From-scratch remake freeze (2026-08-15 · do not scaffold until asked):** [`2011-READ-FIRST.md`](2011-READ-FIRST.md) · [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · [`2011-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2011-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md)  
 **★ Minute-detail improve pack:** [`2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md`](2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md)  
 **★ Master bible (goals · phases how/why/what · flows · sources):** [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
 **★ Deep research (long harvest · kits · UI · Wayback):** [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md)  

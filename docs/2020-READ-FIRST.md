@@ -1,14 +1,14 @@
-# 2020 — READ FIRST (research freeze · do not scaffold yet)
+# 2020 — READ FIRST (research freeze · year is live)
 
 **Date:** 2026-08-11  
-**Purpose:** Single entry for museum year **2020**. Read before scaffolding, harvesting pixels, or writing tests.  
-**Disk truth today:** Hub **1994–2020** playable · **`years/2020/` lean MVP** · prefix **`itt20`**  
+**Purpose:** Single entry for museum year **2020**. Read before densifying, harvesting pixels, or writing tests.  
+**Disk truth today:** Hub **1994–2020** playable · **`years/2020/` live lean** · prefix **`itt20`** · year **is live**  
 **Parent:** Live lean **2019** (Disney+ Who’s Watching · Continue Row).  
-**Execute (do not start S2 until implement):** [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
+**Execute:** [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
 **Facts:** [`2020-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md`](2020-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md)  
 **100+ sources:** [`2020-SOURCES-100-PLUS-2026-08-11.md`](2020-SOURCES-100-PLUS-2026-08-11.md) (128 URLs · OPEN / SNIP / BLOCK)  
 **Capture:** [`references/2020/CAPTURE-LOG.md`](references/2020/CAPTURE-LOG.md) · visit log [`references/2020/notes/VISIT-LOG-2026-08-11-deep-research.txt`](references/2020/notes/VISIT-LOG-2026-08-11-deep-research.txt)  
-**Year game:** [`GAMES-PER-YEAR/YEAR-2020.md`](GAMES-PER-YEAR/YEAR-2020.md) (Among Us class · not on disk)  
+**Year game:** [`GAMES-PER-YEAR/YEAR-2020.md`](GAMES-PER-YEAR/YEAR-2020.md) (Among Us class · **on disk** `years/2020/sites/playable/game.html`)  
 **Complex gold:** [`COMPLEX-INTEGRATIONS-…1994-2020.md`](COMPLEX-INTEGRATIONS-PER-YEAR-GOALS-PHASES-STEPS-1994-2020.md) §2020  
 **Legal:** Educational reconstruction. **localStorage theater only.** **Never invent brand pixels.** No real Zoom/TikTok/Apple/Nintendo/Epic/Among Us art, no payments, no gore, no case-count dashboard as gold, no “you are in a live meeting.” **Git only if asked.**
 
@@ -147,4 +147,4 @@ Live Stats’ public June table **still ends at 2018**. Do **not** invent a June
 
 ## 8. Do not do in this freeze
 
-Scaffold `years/2020/` before an implement ask. Unlock the hub card. Claim museum-grade A with official Zoom/TikTok pixels. Write `itt19-*` from 2020 pages. Promote Reels or Among Us over mute. Ship a COVID death counter. Restore any old HEAD 2020 clone forest if one exists on another branch.
+Re-scaffold `years/2020/` — the year is **live**. Claim museum-grade A with official Zoom/TikTok pixels. Write `itt19-*` from 2020 pages. Promote Reels or Among Us over mute. Ship a COVID death counter. Restore any old HEAD 2020 clone forest if one exists on another branch.

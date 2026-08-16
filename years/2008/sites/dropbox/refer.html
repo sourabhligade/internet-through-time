@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="2008">
+<head>
+<meta charset="utf-8">
+<title>Dropbox — Refer a friend (+500 MB)</title>
+<link rel="stylesheet" href="../../../../css/period-2008.css">
+</head>
+<body bgcolor="#f0f0f0">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div style="font-family:Arial,Helvetica,sans-serif;max-width:620px;margin:16px auto;padding:16px;background:#fff;border:1px solid #7baaf7">
+ <p style="font-size:12px">
+  <a href="index.html">← Folder theater</a> ·
+  <a href="about.html">About</a> ·
+  <a href="../../pages/home.html">Starting Point</a>
+ </p>
+ <h1 style="font-size:22px;margin:0 0 8px;color:#1a73e8">Give 500 MB, get 500 MB</h1>
+ <p>2008–2010 loop: <b>+500 MB both sides</b>, cap <b>16 GB</b> on Basic.
+ <b>100,000</b> users Sep 2008 → <b>4 million</b> in ~15 months (<b>3,900%</b>).
+ April 2010: <b>2.8 million</b> invites · ~<b>35%</b> of daily signups from referrals.</p>
+ <p style="background:#e8f0fe;border:1px solid #7baaf7;padding:10px;font-size:12px">
+  <b>No real cloud.</b> Quota is localStorage theater. Folder toy on the other page stays.
+ </p>
+ <form data-itt-real-form data-storage-key="dbx-ref" data-require-name="friend" data-min-req="2">
+  <p>Friend email <input name="friend" size="28" maxlength="60" placeholder="friend@example.com"></p>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-req> +500 MB both sides</label>
+  <label style="display:block;margin:6px 0"><input type="checkbox" data-req> Cap 16 GB · no real Dropbox servers</label>
+  <p><button type="submit">Send invite (theater)</button></p>
+  <p data-itt-real-status style="min-height:1.2em"></p>
+ </form>
+ <p data-dbx-quota style="font-size:13px;color:#060"></p>
+ <p data-next-flow hidden><b>Next:</b> <a href="index.html">Your folder</a></p>
+ <p style="font-size:11px;color:#666">key <code>itt08-dbx-ref</code> · Houston / ReferralCandy · not gold</p>
+</div>
+<script src="../../../../js/immersion-2008.js"></script>
+<script>
+(function () {
+  function show() {
+    var el = document.querySelector("[data-dbx-quota]");
+    if (!el) return;
+    try {
+      el.textContent = localStorage.getItem("itt08-dbx-ref")
+        ? "Theater quota: 2.0 GB → 2.5 GB (2.0 + 0.5). Cap 16 GB."
+        : "Theater quota: 2.0 GB until a complete invite.";
+    } catch (e) { el.textContent = ""; }
+  }
+  show();
+  document.addEventListener("submit", function () { setTimeout(show, 50); }, true);
+})();
+</script>
+</body>
+</html>

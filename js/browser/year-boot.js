@@ -13,5 +13,33 @@
       return;
     }
     ITT.Browser.create(ITT.configs[year]);
+    function runLayers() {
+      try {
+        if (ITT.Layers && typeof ITT.Layers.bootShell === "function") ITT.Layers.bootShell(year);
+      } catch (eL) { /* */ }
+    }
+    if (ITT.Layers) {
+      runLayers();
+      return;
+    }
+    var src = "";
+    try {
+      var scripts = document.getElementsByTagName("script");
+      var i;
+      for (i = scripts.length - 1; i >= 0; i--) {
+        var s = scripts[i].src || "";
+        if (/\/js\/browser\//.test(s)) {
+          src = s.replace(/\/browser\/[^/?#]+(?:\?.*)?$/, "/immersion/layers.js");
+          break;
+        }
+      }
+    } catch (eS) {
+      src = "";
+    }
+    if (!src) src = "../../js/immersion/layers.js";
+    var el = document.createElement("script");
+    el.src = src;
+    el.onload = runLayers;
+    (document.head || document.documentElement).appendChild(el);
   };
 })(typeof window !== "undefined" ? window : this);

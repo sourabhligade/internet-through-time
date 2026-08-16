@@ -76,6 +76,7 @@ test.describe('2013 flows A–T (real storage)', () => {
     await clearKeys(page, ['itt13-ig-video']);
     await page.reload();
     await page.locator('[data-igv-filter="Cinema"]').click();
+    await page.locator('[data-igv-caption]').fill('15s cinema residual');
     await page.locator('[data-igv-share]').click();
     const raw = await expectStorageTruthy(page, 'itt13-ig-video');
     expect(raw).toMatch(/15|filter|Normal|Cinema/i);
@@ -161,11 +162,11 @@ test.describe('2013 flows A–T (real storage)', () => {
 
   test('J Snowden ack', async ({ page }) => {
     await page.goto('/years/2013/sites/snowden/index.html');
-    await clearKeys(page, ['itt13-snowden-ack']);
+    await clearKeys(page, ['itt13-snowden', 'itt13-snowden-ack']);
     await page.reload();
     await page.locator('[data-snowden-card]').evaluateAll((els) => els.forEach((e) => { e.checked = true; e.dispatchEvent(new Event('change', { bubbles: true })); }));
     await page.locator('[data-snowden-ack]').click();
-    await expectStorageTruthy(page, 'itt13-snowden-ack');
+    await expectStorageTruthy(page, 'itt13-snowden');
   });
 
   test('K PS4 / Xbox One acks', async ({ page }) => {
@@ -214,9 +215,12 @@ test.describe('2013 flows A–T (real storage)', () => {
     await clearKeys(page, ['itt13-healthcare-ack']);
     await page.reload();
     await page.locator('[data-hc-email]').fill('you@example.com');
-    await page.locator('[data-hc-try="1"]').click().catch(() => {});
-    await page.locator('[data-hc-try="2"]').click().catch(() => {});
-    await expect(page.locator('[data-healthcare-ack]')).toBeVisible({ timeout: 10000 });
+    await page.locator('[data-hc-try="1"]').click();
+    await expect(page.locator('[data-hc-try="2"]')).toBeVisible({ timeout: 5000 });
+    await page.locator('[data-hc-try="2"]').click();
+    await expect(page.locator('[data-healthcare-ack]')).toBeVisible({ timeout: 5000 });
+    await page.locator('[data-req]').nth(0).check();
+    await page.locator('[data-req]').nth(1).check();
     await page.locator('[data-healthcare-ack]').click();
     const raw = await expectStorageTruthy(page, 'itt13-healthcare-ack');
     expect(raw).toMatch(/healthcare|newsOnly|2013/i);
@@ -263,6 +267,12 @@ test.describe('2013 flows A–T (real storage)', () => {
     await page.reload();
     const streamBtn = page.locator('#stream-seed, [data-netflix-stream]').first();
     if (await streamBtn.count()) {
+      if (await page.locator('[data-nf-streamfirst]').count()) {
+        await page.locator('[data-nf-streamfirst]').check();
+      }
+      if (await page.locator('[data-nf-discs]').count()) {
+        await page.locator('[data-nf-discs]').check();
+      }
       await streamBtn.click();
       await expectStorageTruthy(page, 'itt13-netflix-stream');
     } else {

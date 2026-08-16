@@ -26,8 +26,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Years the museum ships (hub open 1994–2016 + 2019 — DISK-TRUTH)
-KNOWN_YEARS = [str(y) for y in range(1994, 2021)]  # 1994–2020
-# Years the museum ships (hub open 1994–2020 — DISK-TRUTH)
+KNOWN_YEARS = [str(y) for y in range(1994, 2022)]  # 1994–2021
+# Years the museum ships (hub open 1994–2021 — DISK-TRUTH)
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -171,7 +171,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/airpods/index.html",
         "sites/vine/goodbye.html",
         "sites/whatsapp/security.html",
-        "sites/pogo/index.html",
         "sites/facebook/reactions.html",
         "sites/whatsapp/e2e.html",
         "sites/iphone/7.html",
@@ -180,10 +179,9 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/windows10/index.html",
         "sites/chrome/index.html",
         "sites/playable/game.html",
-        "sites/messenger/bots.html",
-        "sites/oculus/cv1.html",
-        "sites/linkedin/deal.html",
-        "sites/allo/index.html",
+        "sites/stem/index.html",
+        "sites/jio/index.html",
+        "sites/oculus/rift.html",
         "sites/musically/index.html",
         "sites/instagram/live.html",
         "sites/amp/serp.html",
@@ -263,6 +261,20 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/chrome/index.html",
         "sites/windows10/index.html",
     ],
+    "2021": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/att/index.html",
+        "sites/signal/index.html",
+        "sites/meta/index.html",
+        "sites/flash/brick.html",
+        "sites/windows11/index.html",
+        "sites/playable/game.html",
+        "sites/chrome/index.html",
+        "sites/windows10/index.html",
+        "sites/outage/index.html",
+        "sites/copilot/index.html",
+    ],
 }
 
 # Optional research markers (year can be "research-only" without tree)
@@ -287,6 +299,30 @@ def registry_years() -> set[str]:
     reg = (ROOT / "js/immersion/registry.js").read_text(errors="ignore")
     # "1994": [  inside IMMERSION_FEATURES_BY_YEAR
     return set(re.findall(r'"(\d{4})"\s*:\s*\[', reg))
+
+
+def registry_duplicate_years() -> list[str]:
+    """Year keys that appear more than once (last-write-wins in JS)."""
+    reg = (ROOT / "js/immersion/registry.js").read_text(errors="ignore")
+    keys = re.findall(r'"(\d{4})"\s*:\s*\[', reg)
+    counts: dict[str, int] = {}
+    for k in keys:
+        counts[k] = counts.get(k, 0) + 1
+    return sorted(y for y, n in counts.items() if n > 1)
+
+
+def registry_missing_feature_files() -> list[str]:
+    """Listed immersion/*.js paths that do not exist on disk."""
+    reg = (ROOT / "js/immersion/registry.js").read_text(errors="ignore")
+    missing = []
+    seen = set()
+    for rel in re.findall(r'"(immersion/[^"]+\.js)"', reg):
+        if rel in seen:
+            continue
+        seen.add(rel)
+        if not (ROOT / "js" / rel).is_file():
+            missing.append(rel)
+    return missing
 
 
 def urlmap_keys(year: str) -> list[str] | None:
@@ -537,6 +573,16 @@ def main() -> int:
 
     # Exit code: fail if any on-disk year failed, or hub claims available without disk
     hard_fail = any(r["status"] == "fail" for r in results)
+    dups = registry_duplicate_years()
+    missing_feats = registry_missing_feature_files()
+    if dups:
+        print("\nRegistry FAIL: duplicate IMMERSION_FEATURES_BY_YEAR keys (last write wins):", ", ".join(dups))
+        hard_fail = True
+    if missing_feats:
+        print("\nRegistry FAIL: listed feature files missing:")
+        for rel in missing_feats:
+            print(f"  - js/{rel}")
+        hard_fail = True
     return 1 if hard_fail else 0
 
 

@@ -760,8 +760,143 @@
   /* Strip legacy one-click handlers that fire without gates (inline scripts still may run first).
      Pages updated to use extras only should remove inline setItem. */
 
+  function bootTinder(doc) {
+    doc = doc || document;
+    if (!doc.querySelector("[data-tinder-swipe]") && !doc.querySelector("[data-tinder-matches]")) return;
+    var st = doc.querySelector("[data-tinder-status], [data-itt-action-status]");
+    var card = doc.querySelector("[data-tinder-card]");
+    var DECK = [
+      { id: "a", name: "Alex residual" },
+      { id: "b", name: "Sam residual" },
+      { id: "c", name: "Jordan residual" },
+      { id: "d", name: "Riley residual" },
+      { id: "e", name: "Casey residual" },
+      { id: "f", name: "Morgan residual" }
+    ];
+    var k = key("tinder");
+    var saved = loadJSON(k, null) || {};
+    var n = saved.n || 0;
+    var likes = saved.likes || [];
+    function paint() {
+      if (!card) return;
+      if (n >= DECK.length) {
+        card.textContent = "Deck empty · open matches.";
+        return;
+      }
+      card.textContent = "● silhouette · " + DECK[n].name;
+    }
+    paint();
+    var box = doc.querySelector("[data-tinder-matches]");
+    if (box) {
+      box.innerHTML = likes.length
+        ? likes.map(function (m) { return "<div>" + (m.name || m) + "</div>"; }).join("")
+        : "<div style='opacity:.6'>No matches yet.</div>";
+    }
+    var btns = doc.querySelectorAll("[data-tinder-swipe]");
+    var i;
+    for (i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        if (n >= DECK.length) {
+          feedback("Deck empty.", st, { error: true });
+          return;
+        }
+        var dir = this.getAttribute("data-tinder-swipe");
+        var hit = DECK[n];
+        n += 1;
+        if (dir === "right") likes.push(hit);
+        if (n < 3) {
+          paint();
+          feedback("Swipe " + n + "/3 before a match can persist.", st, { error: true });
+          return;
+        }
+        saved = {
+          n: n,
+          likes: likes.slice(0, 12),
+          multiStep: true,
+          real: true,
+          year: "2013",
+          ts: Date.now()
+        };
+        saveJSON(k, saved);
+        paint();
+        feedback("Saved · " + k, st);
+        markUsed();
+        showNext(doc);
+      });
+    }
+  }
+
+  function bootVineRecord(doc) {
+    doc = doc || document;
+    var hold = doc.querySelector("[data-vine-hold]");
+    var post = doc.querySelector("[data-vine-post]");
+    var st = doc.querySelector("[data-vine-status]");
+    var cap = doc.querySelector("[data-vine-caption]");
+    if (!post || post.getAttribute("data-vine-extras-bound") === "1") return;
+    post.setAttribute("data-vine-extras-bound", "1");
+    function armHold() {
+      if (!hold) return;
+      hold.setAttribute("data-vine-held", "1");
+      setTimeout(function () {
+        hold.setAttribute("data-vine-recorded", "1");
+        if (st && !/Ready|Posted/i.test(st.textContent || "")) st.textContent = "Ready · hold captured";
+      }, 280);
+    }
+    function writeVine() {
+      var ready =
+        (hold && hold.getAttribute("data-vine-recorded") === "1") ||
+        (hold && hold.getAttribute("data-vine-held") === "1") ||
+        /Ready/i.test((st && st.textContent) || "");
+      if (!ready) {
+        if (st) st.textContent = "Hold to record first · up to 6 seconds";
+        return false;
+      }
+      var list = loadJSON(key("vine-posts"), []);
+      if (!Array.isArray(list)) list = [];
+      var caption = val(cap) || "untitled";
+      list.unshift({
+        caption: caption.slice(0, 120),
+        secs: 6,
+        ts: Date.now(),
+        multiStep: true,
+        real: true
+      });
+      saveJSON(key("vine-posts"), list.slice(0, 40));
+      try {
+        if (doc.defaultView && doc.defaultView.parent && doc.defaultView.parent.localStorage) {
+          doc.defaultView.parent.localStorage.setItem(key("vine-posts"), JSON.stringify(list.slice(0, 40)));
+        }
+      } catch (eP) { /* */ }
+      if (st) st.textContent = "Posted · 6s loop";
+      markUsed();
+      showNext(doc);
+      return true;
+    }
+    if (hold) {
+      hold.addEventListener("mousedown", armHold);
+      hold.addEventListener("pointerdown", armHold);
+      hold.addEventListener("touchstart", armHold, { passive: true });
+    }
+    post.addEventListener("click", function () {
+      writeVine();
+    });
+    doc.addEventListener(
+      "click",
+      function (ev) {
+        var t = ev.target;
+        if (!t) return;
+        if ((t.getAttribute && t.getAttribute("data-vine-post") != null) || (t.closest && t.closest("[data-vine-post]"))) {
+          writeVine();
+        }
+      },
+      true
+    );
+  }
+
   function bootAll(doc) {
     doc = doc || document;
+    if (YX.isFillerPage && YX.isFillerPage(doc)) return;
+    bootTinder(doc);
     bootXbox(doc);
     bootPs4(doc);
     bootTelegram(doc);
@@ -781,6 +916,7 @@
     bootMedium(doc);
     bootTelegramChat(doc);
     bootVineAndroid(doc);
+    bootVineRecord(doc);
     bootGenericReal(doc);
     bootChrome13(doc);
   }

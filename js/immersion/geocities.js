@@ -162,6 +162,14 @@ function initHomestead() {
       ittFeedback("Title required — empty claim does not write.", st);
       return;
     }
+    if (aboutV.length < 2) {
+      if (st) {
+        st.textContent = "Write an About blurb (2+ characters). Empty claim does not write.";
+        st.style.color = "#ff6";
+      }
+      ittFeedback("About required — empty claim does not write.", st);
+      return;
+    }
     if (!number) number = String(1000 + Math.floor(Math.random() * 8000));
     var l1 = ((form.querySelector('[name="link1"]') || {}).value || "").trim();
     var l2 = ((form.querySelector('[name="link2"]') || {}).value || "").trim();
@@ -176,7 +184,7 @@ function initHomestead() {
       hood: neighborhood,
       number: number,
       title: titleV,
-      about: aboutV || "This is my free GeoCities homepage!",
+      about: aboutV,
       links: links,
       construction: !!(cons && cons.checked),
       multiStep: true,
