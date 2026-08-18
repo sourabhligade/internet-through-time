@@ -1,200 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2013">
-<head>
-<meta charset="utf-8">
-<title>Vine — Camera</title>
-<link rel="stylesheet" href="../../../../css/period-2013.css">
-<link rel="stylesheet" href="../../../../css/phone-frame.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
-</head>
-<body class="vine-app">
+<head><meta charset="utf-8"><title>Vine — record 6 seconds · 24 Jan 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css"></head>
+<body bgcolor="#00bf8f" text="#111">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-phone itt-phone-4">
-<div class="itt-phone-status"><span>LTE</span><span>9:41 AM</span><span>100%</span></div>
-<div class="itt-phone-screen">
-<div class="vine-topbar">
-  <a href="index.html" style="color:#fffc00;text-decoration:none">← Home</a>
-  <span>Camera</span>
-  <span></span>
-</div>
-<div class="vine-progress" data-vine-progress><div data-vine-bar></div></div>
-<div class="vine-camera" style="padding:8px 12px">
-  <p class="vine-camera-hint" style="margin:4px 0 8px">Hold to record · up to <b>6 seconds</b></p>
-  <button type="button" class="vine-hold" data-vine-hold aria-label="Hold to record" style="width:72px;height:72px;margin:8px auto;font-size:12px">Hold</button>
-  <div class="itt13-status" data-vine-status style="min-height:1.2em;margin:6px 0;color:#8f8"></div>
-  <p style="margin:8px 0">
-    <input type="text" data-vine-caption class="vine-caption" placeholder="Add a caption…" maxlength="120">
-  </p>
-  <p style="margin:8px 0"><button type="button" class="vine-cta" data-vine-post>Post</button></p>
-  <p class="itt13-next" data-next-flow data-next-when-key="itt13-vine-posts" hidden><b>Next:</b> <a href="../instagram/video.html">IG Video · 15s</a></p>
-  <p style="font-size:11px;color:#666;margin-top:10px"><a href="index.html">Back to feed</a></p>
-</div>
-</div>
-<div class="itt-phone-home" aria-hidden="true"></div>
-</div>
-<script>
-(function () {
-  var KEY = "itt13-vine-posts";
-  var hold = document.querySelector("[data-vine-hold]");
-  var bar = document.querySelector("[data-vine-bar]");
-  var st = document.querySelector("[data-vine-status]");
-  var post = document.querySelector("[data-vine-post]");
-  var cap = document.querySelector("[data-vine-caption]");
-  var secs = 0;
-  var timer = null;
-  var holding = false;
-  var recorded = false;
-  var t0 = 0;
-  var posted = false;
-  var MAX = 6;
-  function setBar(s) {
-    secs = Math.min(MAX, s);
-    if (bar) bar.style.width = (secs / MAX * 100) + "%";
-  }
-  function markReady() {
-    recorded = true;
-    if (hold) {
-      hold.setAttribute("data-vine-held", "1");
-      hold.setAttribute("data-vine-recorded", "1");
-    }
-    if (st && !/Posted/i.test(st.textContent || "")) {
-      st.textContent = "Ready · ~" + Math.max(secs, 0.3).toFixed(1) + "s";
-    }
-  }
-  function startHold(ev) {
-    if (holding) return;
-    holding = true;
-    if (ev && ev.preventDefault) ev.preventDefault();
-    if (timer) clearInterval(timer);
-    setBar(0);
-    t0 = Date.now();
-    if (hold) hold.setAttribute("data-vine-held", "1");
-    try {
-      if (ev && ev.currentTarget && ev.pointerId != null && ev.currentTarget.setPointerCapture) {
-        ev.currentTarget.setPointerCapture(ev.pointerId);
-      }
-    } catch (eCap) { /* */ }
-    timer = setInterval(function () {
-      setBar((Date.now() - t0) / 1000);
-      if (secs >= 0.28) markReady();
-      if (secs >= MAX) endHold();
-    }, 50);
-    setTimeout(function () {
-      if (holding || (t0 && Date.now() - t0 >= 280)) markReady();
-    }, 280);
-  }
-  function endHold() {
-    if (!holding && !timer) return;
-    holding = false;
-    if (timer) clearInterval(timer);
-    timer = null;
-    if (t0) setBar((Date.now() - t0) / 1000);
-    if (secs < 0.3 && !recorded) {
-      if (st) st.textContent = "Hold to record · up to 6 seconds";
-      return;
-    }
-    markReady();
-  }
-  function writePost() {
-    if (posted) return true;
-    var ready =
-      recorded ||
-      secs >= 0.3 ||
-      (hold && hold.getAttribute("data-vine-recorded") === "1") ||
-      (hold && hold.getAttribute("data-vine-held") === "1") ||
-      /Ready/i.test((st && st.textContent) || "");
-    if (!ready) {
-      if (st) st.textContent = "Hold to record first · up to 6 seconds";
-      return false;
-    }
-    var list = [];
-    try {
-      list = JSON.parse(localStorage.getItem(KEY) || "[]") || [];
-    } catch (e) {
-      list = [];
-    }
-    if (!Array.isArray(list)) list = [];
-    var caption = (cap && cap.value) || "untitled";
-    var blob = [
-      {
-        caption: String(caption).slice(0, 120),
-        secs: Math.min(MAX, Math.round(secs) || 6),
-        ts: Date.now(),
-        multiStep: true,
-        real: true
-      }
-    ].concat(list).slice(0, 40);
-    var raw = JSON.stringify(blob);
-    try {
-      localStorage.setItem(KEY, raw);
-    } catch (e2) { /* */ }
-    try {
-      if (window.parent && window.parent !== window && window.parent.localStorage) {
-        window.parent.localStorage.setItem(KEY, raw);
-      }
-    } catch (eP) { /* */ }
-    posted = true;
-    var msg = "Posted · " + (Math.min(MAX, Math.round(secs) || 6)) + "s loop";
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document);
-    } catch (eNext) { /* */ }
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "vine" });
-      }
-    } catch (e3) { /* */ }
-    return true;
-  }
-  if (hold) {
-    if (window.PointerEvent) {
-      hold.addEventListener("pointerdown", startHold);
-      hold.addEventListener("pointerup", endHold);
-      hold.addEventListener("pointercancel", endHold);
-    }
-    hold.addEventListener("mousedown", startHold);
-    hold.addEventListener("mouseup", endHold);
-    hold.addEventListener("touchstart", startHold, { passive: false });
-    hold.addEventListener("touchend", endHold);
-  }
-  if (post) {
-    post.addEventListener("click", function (ev) {
-      if (writePost() && ev && ev.preventDefault) ev.preventDefault();
-    });
-  }
-  document.addEventListener(
-    "click",
-    function (ev) {
-      var t = ev.target;
-      if (!t) return;
-      if (t.getAttribute && t.getAttribute("data-vine-post") != null) writePost();
-      else if (t.closest && t.closest("[data-vine-post]")) writePost();
-    },
-    true
-  );
-})();
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="about.html">Vine · about</a> ·
- <a href="android.html">Vine · android</a> ·
- <a href="../neocities/index.html">Neocities</a> ·
- <a href="../netflix/index.html">Netflix</a> ·
- <a href="../outlook/index.html">Outlook.com</a> ·
- <a href="../playable/index.html">Period playables</a> ·
- <a href="../ps4/index.html">PlayStation 4</a> ·
- <a href="../slack/index.html">Slack</a> ·
- <a href="../snapchat/index.html">Snapchat</a> ·
- <a href="../snowden/index.html">Snowden / PRISM</a> ·
- <a href="../spotify/index.html">Spotify</a> ·
- <a href="../telegram/index.html">Telegram</a> ·
- <a href="../tinder/index.html">Tinder</a> ·
- <a href="../tumblr/index.html">Tumblr</a>
+<div class="vine-2013-shell">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html">Starting Point</a> · <a href="index.html">Feed</a> · <a href="../instagram/video.html">IG Video 15s</a></p>
+<h1>VINE</h1>
+<p>Twitter · iOS <b>24 Jan 2013</b> · Android <b>2 Jun</b> · Windows Phone <b>12 Nov</b>. Hold to record. <b>6 seconds</b>. Loops. Not a feed you scroll forever.</p>
+<p>Twitter bought Vine in October 2012 before launch (~$30M class). Separate service — you do not need a Twitter account to sign up. TechCrunch 24 Jan: App Store iPhone / iPod touch. NYT later: ~13 million regular users six months in.</p>
+<p class="itt-pixel-failed">[failed-final] Vine camera / wordmark · CDX 2013 harvest · never invent the glyph</p>
+<label style="display:block"><input type="checkbox" data-req data-vine-req> 6 seconds. Hold to record. It loops.</label>
+<label style="display:block"><input type="checkbox" data-req data-vine-req> Not TikTok. Not Reels. Not Instagram Stories.</label>
+<p>
+ <button type="button" data-vine-hold>Hold to record (theater)</button>
+ <span data-vine-timer>0.0s</span>
 </p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
-</body>
-</html>
+<p><input type="text" data-vine-caption placeholder="Caption (required)"></p>
+<p><button type="button" data-vine-post>Post Vine</button> <span data-vine-status></span></p>
+<div data-vine-feed></div>
+<p hidden data-next-flow data-next-when-key="itt13-vine-posts"><b>Next:</b> <a href="../instagram/video.html">Instagram Video is 15 seconds</a></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
+</body></html>

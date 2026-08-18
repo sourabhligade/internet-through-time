@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/dailymotion/index.html": "http://museum.local/years/2005/sites/dailymotion/index.html",
+      "sites/gaia/index.html": "http://museum.local/years/2005/sites/gaia/index.html",
+      "sites/vimeo/index.html": "http://museum.local/years/2005/sites/vimeo/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2005/sites/playable/famous.html",
 
       "sites/pandora/thumb.html": "http://museum.local/years/2005/sites/pandora/thumb.html",

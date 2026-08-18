@@ -111,6 +111,14 @@
     if (bankEl)
       bankEl.textContent =
         "🪵" + (s.bank.log || 0) + " ⛏" + (s.bank.ore || 0);
+    try {
+      host.setAttribute("data-cs-x", String(s.x));
+      host.setAttribute("data-cs-y", String(s.y));
+      host.setAttribute("data-cs-inv", String(invCount(s)));
+      host.setAttribute("data-cs-bank", String((s.bank && s.bank.log) || 0));
+    } catch (eH) {
+      /* */
+    }
   }
   function setStatus(m) {
     if (statusEl) statusEl.textContent = m;

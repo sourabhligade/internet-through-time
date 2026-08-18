@@ -2,41 +2,55 @@
 <html lang="en" data-itt-year="2016">
 <head>
 <meta charset="utf-8">
-<title>2016 — UX flow map</title>
+<title>2016 flow map</title>
 <link rel="stylesheet" href="../../../css/period-2016.css">
-<link rel="stylesheet" href="../../../css/flow-map.css">
-<script src="../../../js/config/flow-maps.js"></script>
-<script src="../../../js/config/flow-maps-3x.js"></script>
-<script src="../../../js/config/flow-maps-5x-atlas.js"></script>
 </head>
-<body bgcolor="#ffffff" text="#000000" link="#0000cc" vlink="#551a8b">
+<body bgcolor="#f2f2f2" text="#111">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p style="font-family:Arial,sans-serif;font-size:12px;margin:8px 12px">
- <a href="home.html"><b>&larr; Starting Point</b></a> · <a href="../sites/playable/famous.html"><b>Famous games</b></a> ·
- <a href="about.html">About 2016</a> ·
- <b>Flow map · 2016</b>
-</p>
-<div data-itt-flow-map style="padding:8px 12px 24px"></div>
-<script src="../../../js/immersion-2016.js"></script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2016" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="home.html">Starting Point</a> ·
- <a href="map.html">Year flow map</a> ·
- <a href="../sites/windows10/index.html">Windows 10</a> ·
- <a href="../sites/airpods/index.html">AirPods</a> ·
- <a href="../sites/amp/serp.html">AMP in Search</a> ·
- <a href="../sites/chrome/index.html">Google Chrome</a> ·
- <a href="../sites/dyn/index.html">Dyn / Mirai</a> ·
- <a href="../sites/edge/index.html">Microsoft Edge</a> ·
- <a href="../sites/facebook/index.html">Facebook 2016</a> ·
- <a href="../sites/home/index.html">Google Home</a> ·
- <a href="../sites/instagram/index.html">Instagram</a> ·
- <a href="../sites/iphone/index.html">iPhone 2016</a> ·
- <a href="../sites/jio/index.html">Jio Welcome Offer</a> ·
- <a href="../sites/musically/index.html">musical.ly</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
+<div style="max-width:720px;margin:16px auto;font-family:Segoe UI,Helvetica Neue,Arial,sans-serif;font-size:13px;line-height:1.5">
+<p class="crumb"><a href="home.html">← Starting Point</a> · <a href="about.html">About</a></p>
+<h1>2016 UX flow map</h1>
+<p>Stories at the top. Sidewalks full of phones. Five faces on Like. <b>Star = Instagram Stories</b> (not Pokémon GO). Guided list stays 6. Leftover 3× never steal the chip.</p>
 
+<p style="font-size:12px;background:#fff8dc;border:1px solid #c9a227;padding:8px 10px"><b>Mid-trail rule:</b> crumb <code>← last dest</code> is visible the moment you land. <b>Next</b> waits until this dest writes. Starting Point does not erase the trail.</p>
+
+<pre style="font-size:11px;background:#1a1a1a;color:#f8bbd0;padding:10px;overflow:auto">
+Starting Point
+ ├─ Guided 6 …… About → ★ Stories → GO → Reactions → E2E → this map
+ ├─ Official 10 … Stories → GO → Reactions → E2E → iPhone 7 → Vine
+ │                 → Spectacles → musical.ly → Win10 end → Gym Rush ──► Stories
+ ├─ Leftover 3× … Reddit → Netflix → YouTube → Starting Point
+ └─ Side ……… archive / AirPods / Dyn / famous  (rejoin official)
+</pre>
+
+<h2>Official 10</h2>
+<ol data-itt-ten-flows style="padding-left:1.3em">
+ <li>★ <a href="../sites/instagram/stories.html">Instagram Stories</a> — type a slide → Add. Empty never writes <code>itt16-ig-stories</code>. Next → GO. Also <a href="../sites/instagram/archive.html">Your story</a>.</li>
+ <li><a href="../sites/pokemongo/index.html">Pokémon GO leftover</a> — team + sidewalk honesty → Catch → <code>itt16-pogo</code>. Next → Reactions. Back → Stories.</li>
+ <li><a href="../sites/facebook/reactions.html">Reactions</a> — pick a face (Like-only never writes) → <code>itt16-fb-react</code>. Next → E2E. Back → GO.</li>
+ <li><a href="../sites/whatsapp/e2e.html">WhatsApp E2E</a> — two ticks → Open → <code>itt16-wa-e2e</code>. Next → iPhone 7. Back → Reactions.</li>
+ <li><a href="../sites/iphone/index.html">iPhone 7</a> — jack-gone + dongle → <code>itt16-iphone7</code>. Next → Vine. Optional <a href="../sites/iphone/airpods.html">AirPods leftover</a> rejoins Vine.</li>
+ <li><a href="../sites/vine/goodbye.html">Vine goodbye</a> — two ticks → <code>itt16-vine-end</code>. Next → Spectacles. Back → iPhone 7.</li>
+ <li><a href="../sites/snapchat/spectacles.html">Spectacles</a> — Snapbot honesty → Pair → <code>itt16-spectacles</code>. Next → musical.ly.</li>
+ <li><a href="../sites/musically/index.html">musical.ly</a> — caption → Post. Not TikTok. <code>itt16-musically</code>. Next → Win10 end.</li>
+ <li><a href="../sites/windows10/end.html">Win10 upgrade ends</a> — offer-ends + not-Chromium-Edge → <code>itt16-win10-end</code>. Next → Gym Rush. <a href="../sites/dyn/index.html">Dyn leftover</a> rejoins here.</li>
+ <li><a href="../sites/playable/game.html">Gym Rush</a> — first score writes <code>itt16-game-gymrush</code>. Next → Stories. <a href="../sites/playable/famous.html">Famous leftover</a>.</li>
+</ol>
+
+<h2>Leftover 3× — not the chip</h2>
+<p data-itt-pop3x="2016">Pick a row → tick honesty → go. Empty / no pick / no tick never writes.</p>
+<ol>
+ <li><a href="../sites/reddit/index.html">Reddit</a> — old reddit 2016 → <code>itt16-pop-reddit</code> → Netflix</li>
+ <li><a href="../sites/netflix/index.html">Netflix</a> — ST S1 / Crown / Black Mirror S3 · discs still mail → <code>itt16-pop-netflix</code> → YouTube</li>
+ <li><a href="../sites/youtube/index.html">YouTube</a> — not Shorts → <code>itt16-pop-youtube</code> → Starting Point</li>
+</ol>
+
+<p><a href="about.html">About</a> · <a href="home.html">Home</a> · <a href="whats-new.html">What's new</a></p>
+<div data-itt-flow-map></div>
+</div>
+<script src="../../../js/config/flow-maps.js"></script>
+<script src="../../../js/config/flow-maps-popular-3x.js"></script>
+<script src="../../../js/config/flow-trails.js"></script>
+<script src="../../../js/immersion-2016.js"></script>
 </body>
 </html>

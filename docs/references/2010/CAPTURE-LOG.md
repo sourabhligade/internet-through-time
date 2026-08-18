@@ -1,8 +1,8 @@
 # 2010 capture log
 
-**Updated:** 2026-08-01 **museum-ready elevate**  
-**Status:** Year live · densify multipage (incl. Uber/Wave/Netflix/Win7) · Layer C ([wa] + continuity + failed-final)  
-**Pixel harvest:** P0 executed · continuity packs wired 2026-08-01 elevate
+**Updated:** 2026-08-17 leftover lean tree  
+**Status:** Lean `years/2010/` (38 HTML). `assets/period/2010/` recreated empty. P0 stills **[failed-final]** this pass (folder was missing; no invented pixels).  
+**Pixel harvest:** rooms stamp `[failed-final]` · retry WA `im_` before claiming [wa]
 
 ## Full research
 

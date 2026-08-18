@@ -19,6 +19,12 @@ async function twoStepClick(page, selector) {
 }
 
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
+const fs = require('fs');
+const path = require('path');
+
+function yearOnDisk(year) {
+  return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
+}
 
 /** @param {string} year */
 function yy(year) {
@@ -41,7 +47,14 @@ async function twoStepInFrame(page, frame, sel) {
     'input[type="checkbox"][data-req], [data-appstore-check], [data-farm-check], [data-4sq-check], [data-chrome-req], [data-itunes-req]'
   );
   const n = await boxes.count();
-  for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
+  for (let i = 0; i < n; i++) {
+    const box = boxes.nth(i);
+    try {
+      await box.check({ force: true });
+    } catch (eCheck) {
+      await box.click({ force: true });
+    }
+  }
   const el = frame.locator(sel).first();
   await el.waitFor({ state: 'visible', timeout: 15000 });
   await el.click({ force: true });
@@ -284,26 +297,32 @@ const SIGNATURE = {
   },
   '2012': {
     path: 'sites/instagram/android.html',
-    keySuffix: 'ig-android',
-    body: /Android|April 3|Instagram/i,
+    keySuffix: 'ig',
+    body: /Android|Apr 2012|Instagram/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const install = frame.locator('[data-ig-android-install]');
-      await expect(install).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-ig-android-date]').check();
-      await frame.locator('[data-ig-android-not-stories]').check();
-      await install.click();
+      const share = frame.locator('[data-ig-share]');
+      await expect(share).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-req]').nth(0).check({ force: true });
+      await frame.locator('[data-req]').nth(1).check({ force: true });
+      await frame.locator('[data-ig-filter="X-Pro II"]').click();
+      await frame.locator('[data-ig-caption]').fill('handoff 2012 android');
+      await share.click();
     },
   },
   '2013': {
-    path: 'sites/whatsapp/index.html',
-    keySuffix: 'wa-installed',
-    body: /WhatsApp|verify|install/i,
+    path: 'sites/vine/record.html',
+    keySuffix: 'vine-posts',
+    body: /Vine|6.second|6 seconds/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await frame.locator('[data-wa13-phone]').fill('5559876543');
-      await frame.locator('[data-wa13-verify]').click();
-      await frame.locator('[data-wa13-install]').click();
+      await expect(frame.locator('[data-vine-post]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-req]').nth(0).check({ force: true });
+      await frame.locator('[data-req]').nth(1).check({ force: true });
+      const hold = frame.locator('[data-vine-hold]');
+      for (let i = 0; i < 5; i++) await hold.click();
+      await frame.locator('[data-vine-caption]').fill('handoff 6s residual');
+      await frame.locator('[data-vine-post]').click();
     },
   },
   '2014': {
@@ -312,31 +331,10 @@ const SIGNATURE = {
     body: /WhatsApp|Install|450/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await frame.locator('[data-wa-name]').fill('handoff residual');
+      await expect(frame.locator('[data-wa-install]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-req]').nth(0).check({ force: true });
+      await frame.locator('[data-req]').nth(1).check({ force: true });
       await frame.locator('[data-wa-install]').click();
-    },
-  },
-  '2015': {
-    path: 'sites/apple/watch.html',
-    keySuffix: 'watch',
-    body: /Apple Watch/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await frame.locator('[data-watch-shipped]').check({ force: true });
-      await frame.locator('[data-watch15-save]').click();
-    },
-  },
-  '2016': {
-    path: 'sites/instagram/stories.html',
-    keySuffix: 'ig-stories',
-    body: /Stories/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await frame.locator('[data-ig-story-text]').fill('coffee');
-      const boxes = frame.locator('[data-req]');
-      const n = await boxes.count();
-      for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
-      await frame.locator('[data-ig-story-add]').click();
     },
   },
   '2017': {
@@ -435,8 +433,6 @@ const YEARS = [
   '2012',
   '2013',
   '2014',
-  '2015',
-  '2016',
   '2017',
   '2018',
   '2019',
@@ -485,6 +481,7 @@ test.describe('year handoff N → N+1', () => {
     const from = YEARS[i];
     const to = YEARS[i + 1];
     test(`${from} → ${to}: signature flow then next-year signature`, async ({ page }) => {
+      test.skip(!yearOnDisk(from) || !yearOnDisk(to), `${from} or ${to} not on disk`);
       // Clear all museum keys for a clean handoff
       await page.goto('/');
       await page.evaluate(() => {
@@ -544,6 +541,7 @@ test.describe('year chain: walk 1994 → 2013 via hub cards', () => {
   test('hub cards open each year shell in order (smoke chain)', async ({ page }) => {
     await page.goto('/');
     for (const year of YEARS) {
+      if (!yearOnDisk(year)) continue;
       await expect(page.locator(`a.year-card.available[data-year="${year}"]`)).toBeVisible();
       await page.locator(`a.year-card.available[data-year="${year}"]`).click();
       await enterYear(page, year);

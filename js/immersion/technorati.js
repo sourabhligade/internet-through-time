@@ -60,6 +60,7 @@
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var url = (form.querySelector('[name="url"]') || {}).value || "http://example.com/";
+      if (/^\s*javascript:/i.test(url)) url = "http://example.com/";
       var box = doc.querySelector("[data-technorati-results]");
       var list = doc.querySelector("[data-technorati-list]");
       var st = doc.querySelector("[data-technorati-status]");
@@ -69,10 +70,11 @@
         localStorage.setItem(key(), JSON.stringify(rec));
       } catch (e) { /* */ }
       if (st) {
+        var ue = ITT.util && ITT.util.escapeHtml ? ITT.util.escapeHtml(url) : String(url || "").replace(/</g, "&lt;");
         st.innerHTML =
           hosts.length +
           " blogs linking to " +
-          url +
+          ue +
           " (this browser · Cosmos) · " +
           '<a href="../bloglines/reader.html?url=' +
           encodeURIComponent(url) +

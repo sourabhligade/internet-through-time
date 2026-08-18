@@ -85,15 +85,18 @@
         }
       }
       if (status) {
+        var he = function (s) {
+          return ITT.util && ITT.util.escapeHtml ? ITT.util.escapeHtml(s) : String(s || "").replace(/</g, "&lt;");
+        };
         status.innerHTML =
           "<b>" +
           filtered.length +
           "</b> listings · " +
-          (st.city || "all cities") +
+          he(st.city || "all cities") +
           " · " +
-          (st.kind || "any") +
+          he(st.kind || "any") +
           " · max $" +
-          (st.max || "—") +
+          he(st.max || "—") +
           " · sample pins (not live Craigslist)";
       }
       save(st);

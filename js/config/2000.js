@@ -44,6 +44,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/baidu/index.html": "http://museum.local/years/2000/sites/baidu/index.html",
+      "sites/everything2/index.html": "http://museum.local/years/2000/sites/everything2/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2000/sites/playable/famous.html",
 
       "sites/paypal/refer.html": "http://museum.local/years/2000/sites/paypal/refer.html",

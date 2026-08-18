@@ -1,72 +1,50 @@
-/* 2017 period — deltas on 2016 */
 @import url("period-2016.css");
 
-body.year-2017 .faceid-notch,
-.faceid-notch {
-  width: 220px;
-  height: 380px;
-  margin: 8px auto;
+.x17-shell {
+  max-width: 420px;
+  margin: 16px auto;
+  font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #f5f5f7;
   background: #111;
+  padding: 18px 16px 24px;
   border-radius: 28px;
   border: 2px solid #333;
-  position: relative;
 }
-body.year-2017 .faceid-notch::before,
-.faceid-notch::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 72px;
-  height: 14px;
+.x17-notch {
+  height: 18px;
+  margin: -8px auto 14px;
+  width: 42%;
   background: #000;
-  border-radius: 8px;
+  border-radius: 0 0 12px 12px;
 }
-body.year-2017 .storm-sil,
-.storm-sil {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #5e35b1;
-  opacity: 0.55;
+.x17-well {
+  min-height: 3em;
+  padding: 14px;
+  border-radius: 12px;
+  background: #1c1c1e;
+  border: 1px solid #3a3a3c;
+  color: #fff;
 }
-.itt17-real {
-  margin: 12px 0;
+.x17-unlock {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
   padding: 10px;
-  border: 1px solid #666;
-  background: #fffff0;
-  font-size: 12px;
-  max-width: 46em;
+  border: 0;
+  border-radius: 12px;
+  background: #5e35b1;
+  color: #fff;
+  font-weight: bold;
 }
-.itt17-next {
-  margin: 12px 0 0;
-  padding: 8px 10px;
-  background: #111;
-  color: #f5f5f7;
-  font-size: 12px;
-  border-radius: 4px;
+.tw17-count.over140 { color: #1da1f2; font-weight: bold; }
+.fn17-drop {
+  background: #1b2838;
+  color: #fff;
+  border: 1px solid #66c0f4;
+  padding: 10px 16px;
 }
-.itt17-next a { color: #ce93d8; }
-.itt17-trails { max-width: 46em; margin: 12px 0; font-size: 13px; }
-.itt17-trails h2 { font-size: 15px; color: #5e35b1; margin: 0 0 6px; }
-.itt17-trails ol { margin: 0; padding-left: 1.3em; line-height: 1.7; }
-.itt17-apps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0 14px;
+.year-2017.os-win10 {
+  --itt-desktop-bg: #0078d7;
 }
-.itt17-apps a {
-  display: inline-block;
-  min-width: 7.5em;
-  padding: 8px 10px;
-  border: 2px solid #5e35b1;
-  text-decoration: none;
-  color: #111;
-  background: #f3e5f5;
-  font-size: 12px;
-}
-.itt17-apps a b { display: block; font-size: 13px; }
-.itt17-apps a span { color: #555; font-size: 11px; }

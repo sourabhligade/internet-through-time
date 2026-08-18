@@ -1,164 +1,72 @@
-# 2015 — READ FIRST (research freeze entry map)
+# 2015 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-08-13  
-**Purpose:** Single entry document for museum year **2015**. Read before densifying, harvesting pixels, or writing tests.  
-**Disk truth:** Hub **1994–2015** playable · **`years/2015/`** densify live · storage **`itt15`**  
-**Shell honesty:** **Win7 residual** still mass early · **Win10 free upgrade** product room · **Edge** (Spartan) ships with Win10 · **Chrome habit** · not Chromium Edge era  
-**Bar:** [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) · phase map [`2014-PARITY-AND-2015-FREEZE-PHASE-MAP.md`](2014-PARITY-AND-2015-FREEZE-PHASE-MAP.md)  
-**Legal:** Educational reconstruction only. **localStorage theater only.** **Never invent brand pixels.**
+**Date:** 2026-08-18  
+**Disk truth:** Hub is **1994–2015**. `years/2015/` is the **lean from-scratch rebuild** (Periscope star). Not a restore of the deleted Watch-checkbox forest.  
+**Prefix:** `itt15`  
+**Clone shape from:** live `years/2014/` (lean door · ~22–40 HTML). **Do not** restore `/tmp` or git `years/2015/` leftovers.
 
----
+| Doc | Role |
+|-----|------|
+| **This file** | Thesis · star · do / do not |
+| [`2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Door already shipped — goals · flows A–T · phases 0–12 |
+| [`2015-FLOW-MAP.md`](2015-FLOW-MAP.md) | **Visitor map** — one picture · trail · A–T · Back |
+| [`2015-MUSEUM-GRADE-GOALS-PHASES-MINUTE-STEPS.md`](2015-MUSEUM-GRADE-GOALS-PHASES-MINUTE-STEPS.md) | Leftover playbook — goals · ROI · M0–M11 minute steps |
+| [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) | Audit · steal table · sources opened |
+| [`2015-RESEARCH.md`](2015-RESEARCH.md) | Locked facts · calendar · bans |
+| [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) | Short flows twin |
+| [`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Short phase list |
+| [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md) | Sources actually opened this pass |
+| Parent live year | `years/2014/` · WhatsApp · `itt14` |
 
-## 0. How to use this file
-
-| If you need… | Do this |
-|--------------|---------|
-| Orientation only | §1–6 · stop |
-| Goals / flows | [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) |
-| **Residual → damn museum (2015·16·19)** | [`2015-2016-2019-GOALS-PHASES-AND-STEPS-CLEAR.md`](2015-2016-2019-GOALS-PHASES-AND-STEPS-CLEAR.md) · [lag map](2015-2016-2019-MUSEUM-GRADE-LAG-MAP-AND-GAMES.md) |
-| Room → path map | [`references/2015/ARTIFACTS-MAP.md`](references/2015/ARTIFACTS-MAP.md) |
-| Pixel harvest | [`references/2015/CAPTURE-LOG.md`](references/2015/CAPTURE-LOG.md) |
-| Scale numbers | §2 · [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) |
-| Completion steps | [`2014-2015-COMPLETION-STEPS.md`](2014-2015-COMPLETION-STEPS.md) Track 1 |
-
-**Do not** invent Apple Watch / Edge / Periscope / Apple Music brand art.  
-**Do not** ship Instagram Stories / FB Reactions / TikTok as 2015 mass defaults.  
-**Do not** treat Edge as Chromium rebrand years.
+**Legal:** Educational reconstruction. `localStorage` theater only. Never invent brand pixels. No real livestream, Win10 installer, Apple Music billing, ACME certs, or Watch checkout.
 
 ---
 
-## 1. One-line thesis (locked)
+## Why the old 2015 was pulled
 
-**2015 is when wearables and “free OS” meet livestream and subscription music:** **Apple Watch ships** (Apr 24 class); **Windows 10 free upgrade** + **Microsoft Edge** (Spartan era); **Periscope / Meerkat / Facebook Live** industrialize phone livestream; **Apple Music** + Beats 1; **iOS 9 content blockers**; **Google Photos** free unlimited-class backup — while website counts **dip (−11%)** after the 1B first-cross, and **Instagram Stories / FB Reactions / TikTok / Meta branding** are **not** mass defaults yet.
+The previous year treated **Apple Watch** as the one-thing and then stacked Meerkat / Periscope / FB Live / Win10 / Edge / Music / Photos as **checkbox plaques**. Watch is hardware. A web museum cannot “put a watch on” with two ticks. The leftover forest felt like 2014 residue plus literacy cards.
 
-### Mood (period voice)
-
-> Watch on the wrist at last · free Windows 10 for eligible PCs · Edge next to the Start menu · go LIVE from SXSW · three months free Music · content blockers in Safari · unlimited Photos backup · site counts down after 1B · Secret shuts down · Discord in the gamer Discord · no Instagram Stories yet.
+This rebuild picks a **verb you can do in the frame**.
 
 ---
 
-## 2. Scale (dual-cite — do not invent / do not blend)
+## One-line thesis (locked)
 
-| Label | Number | Source |
-|-------|-------:|--------|
-| Live Stats **June 2015** websites | **863,105,652** (**−11%** vs 2014 June) | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| Live Stats June 2015 users | **3,185,996,155** | same table |
-| Prior year June websites | **968,882,453** (2014) | SCALE-LEDGER |
-| 1B first-cross honesty | Sep 2014 first cross · **2015 June dip** after cleanup / fluctuation | Live Stats narrative · Netcraft class |
+**2015 is when the phone goes live and the photo roll leaves the device — while Microsoft gives the desktop away and the hostname count dips after one billion.** Apple names **Periscope** iPhone App of the Year. Google Photos makes backup feel free. Windows 10 is a tray-icon upgrade, not the museum chrome. Instagram Stories, Facebook Reactions, Pokémon GO, and Chromium Edge do **not** exist yet.
 
-**About rule:** Dual-cite **863,105,652** and **3,185,996,155** with **−11%** labeled. Never blend into one unlabeled “sites” number. Note post-1B **dip honesty**.
+## Gold (pick one star)
 
----
+| Role | Product | Why |
+|------|---------|-----|
+| **Star / one-thing** | **Periscope · Go LIVE** | Mar 26 launch. Title required. Apple App of the Year (Dec 9). The 2015 verb. |
+| **P0 locker** | **Google Photos** May 28 | Unlimited “high quality” (~16MP / 1080p). Daily object. |
+| **P0 desktop** | **Windows 10 free upgrade** Jul 29 | Eligible Win7 / 8.1. **GWX** honesty. Edge ships *with* it (Spartan, not Chromium). |
+| **P0 music** | **Apple Music** Jun 30 | 3-month trial · $9.99 / $14.99 family · **Beats 1**. |
+| **P0 hardware leftover** | **Apple Watch** Apr 24 | Sport **$349 / $399**. Face + band + pair. **Not the star.** |
+| **P0 privacy / web** | **iOS 9 content blockers** Sep 16 · **Let's Encrypt** Dec 3 | Safari Settings → Content Blockers. Free HTTPS public beta. |
+| **P1** | Snap Discover Jan 27 · Discord May 13 · Echo mass $179.99 · WhatsApp Web Jan 21 (phone must stay on) · FCC Title II Feb 26 | Seeds. Not a second star. |
 
-## 3. Locked spine (minute calendar)
+## Do
 
-### Wearable ships
-| When | What |
-|------|------|
-| **Apr 24 2015 class** | **Apple Watch** retail ship · Sport / faces / bands · not 2014 announce-only |
+- Lean door. About + star + 3 P0 machines + labeled 2014 archive.  
+- Star, trail #1, and year-start land on **the same Periscope go-live room**.  
+- Empty live **title** never writes. Incomplete Win10 / Photos / Music never writes.  
+- Shell default: **Win7 residual + Chrome habit**. Win10 is a **product room**.  
+- Dual-cite scale: Live Stats June **863,105,652 (−11%)** and users **3,185,996,155**. Label the **1B Sep 2014 → dip → Mar 2016 restabilize**.  
+- Harvest pixels from Wayback `id_` or mark RECON / failed-final.
 
-### Free OS + browser
-| When | What |
-|------|------|
-| **Jul 29 2015 class** | **Windows 10** free upgrade window for eligible Win7/8.1 · Start menu returns · Continuum lore |
-| **2015 with Win10** | **Microsoft Edge** ships (Spartan / EdgeHTML era) · **not** Chromium Edge rebrand |
-| **All year** | **Win7 residual** still real for many PCs · museum shell may stay Win7-honest |
+## Do not
 
-### Livestream war
-| When | What |
-|------|------|
-| **Mar 2015 · SXSW** | **Meerkat** peak · Twitter API cut story soon after |
-| **Mar 26 2015 class** | **Periscope** (Twitter) launches · go LIVE title culture |
-| **2015–16 rollout** | **Facebook Live** seeds feed livestream (expand carefully) |
+- Restore the deleted `years/2015/` forest or make Watch the chip.  
+- Ship Instagram **Stories** (Aug 2016) or Facebook **Reactions** (Feb 24 2016 worldwide).  
+- Treat Facebook Live as a mass Go-LIVE button. **Aug 5 2015 = Mentions app, celebs only.**  
+- Treat Edge as Chromium. Treat WhatsApp as default **E2E** (2016).  
+- Treat Oculus CV1 as a 2015 buy (retail **Mar 2016**). Pokémon GO is 2016.  
+- Invent brand pixels. Add every Wikipedia-established-in-2015 name as a room.
 
-### Music + photos + privacy
-| When | What |
-|------|------|
-| **Jun 30 2015 class** | **Apple Music** · 3-month trial class · **Beats 1** radio |
-| **May 28 2015 class** | **Google Photos** free unlimited-class backup narrative |
-| **Sep 2015 · iOS 9** | **Content blockers** (Safari Content Blocker extension class) |
+## How to read
 
-### Platform / densify gems
-| When | What |
-|------|------|
-| **Jan 27 2015** | **Snapchat Discover** publisher tiles |
-| **2015** | **Discord** gamer voice/chat seed · **Peach** magic words · **Messenger bots** (F8) |
-| **2015** | **Secret** shuts down (epitaph · link 2014 compose residual) |
-
-### Hard bans (never 2015 product default)
-| Ban | Why |
-|-----|-----|
-| Instagram **Stories** | Mass 2016 |
-| Facebook **Reactions** | Mass 2016 |
-| **TikTok** mass West | Later |
-| **Meta** branding | Later |
-| **Chromium Edge** | Rebrand years later |
-| Invent brand pixels | Always |
-
----
-
-## 4. P0 / P1 products (museum spine)
-
-### P0
-1. **Apple Watch** — face · band · shipped Apr 24 honesty · multipage pair/faces  
-2. **Windows 10 free upgrade** — free year · Win7 residual honesty · multipage  
-3. **Microsoft Edge** — Spartan era · download + prefer · not Chromium  
-4. **Periscope / Meerkat / FB Live** — titled go-live REAL · empty title blocked  
-5. **Apple Music** — trial · Beats 1 · vs Spotify residual  
-6. **iOS 9 content blockers** — Safari extension class  
-7. **Google Photos** — free backup class · library multipage  
-
-### P1 densify gems
-Peach · Discord · Snap Discover · Secret end · Messenger bots · (optional careful Ashley Madison literacy ack only)
-
----
-
-## 5. Shell honesty
-
-| Layer | Honesty |
-|-------|---------|
-| Default shell class | **os-win7** residual still valid early 2015 |
-| Product rooms | Win10 free upgrade · Edge · Chrome habit |
-| Connect overlay | Watch · free Win10 · go live · Music · Photos — not 2014 WhatsApp/Heartbleed spine |
-| Storage prefix | **`itt15` only** · never write `itt14-*` from 2015 rooms |
-
----
-
-## 6. REAL rules (locked)
-
-- Incomplete checklists **block** localStorage write  
-- Empty livestream **title** blocks go-live  
-- Year prefix only: `itt15-*`  
-- Soft one-click acks still need literacy where product claims multi-step  
-
----
-
-## 7. Gates
-
-```bash
-python3 scripts/check-all-years.py
-npm run test:e2e:2015
-```
-
-**Packs:** mvp · densify · flows · real-flows · trail-real-flows · shell-honesty  
-
----
-
-## 8. Continuity from 2014
-
-| 2014 P0 | 2015 treatment |
-|---------|----------------|
-| WhatsApp deal / Heartbleed / iPhone 6 autumn | **Continuity archive** — not primary home spine |
-| Watch **announce** | Watch **shipped** |
-| Win10 **Technical Preview** | Win10 **free upgrade** product |
-| Secret compose | Secret **shutdown** epitaph + residual |
-
----
-
-## 9. Reading order for implementers
-
-1. This file (§1–6)  
-2. [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
-3. [`references/2015/ARTIFACTS-MAP.md`](references/2015/ARTIFACTS-MAP.md)  
-4. Code: `years/2015/pages/home.html` · `js/immersion/year-2015-extras.js` · `js/config/2015.js`  
-5. e2e: `e2e/2015-*.spec.js`  
+1. This file.  
+2. [`2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) — the full map.  
+3. [`2015-RESEARCH.md`](2015-RESEARCH.md) if you need a date or URL.  
+4. Implement only after you say so.

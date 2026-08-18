@@ -24,6 +24,15 @@
   function key(k) {
     return tag() + "-friendster-" + k;
   }
+  function esc(s) {
+    if (ITT.util && ITT.util.escapeHtml) return ITT.util.escapeHtml(s);
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
   function legacyKey(k) {
     return "itt02-friendster-" + k;
   }
@@ -87,7 +96,7 @@
     ul.innerHTML = "";
     list.forEach(function (f) {
       var li = document.createElement("li");
-      li.innerHTML = "<b>" + (f.name || "Friend") + "</b><br><span style='font-size:11px;color:#444'>" + (f.about || "") + "</span>";
+      li.innerHTML = "<b>" + esc(f.name || "Friend") + "</b><br><span style='font-size:11px;color:#444'>" + esc(f.about || "") + "</span>";
       ul.appendChild(li);
     });
   }
@@ -139,8 +148,13 @@
     if (addForm) {
       addForm.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var name = (addForm.querySelector('[name="fname"]') || {}).value || "Friend";
-        var about = (addForm.querySelector('[name="fabout"]') || {}).value || "";
+        var name = ((addForm.querySelector('[name="fname"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var about = ((addForm.querySelector('[name="fabout"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var st = addForm.querySelector("[data-friendster-status]") || doc.querySelector("[data-friendster-status]");
+        if (!name || !about) {
+          if (st) st.textContent = "Name + testimonial required. Empty never writes.";
+          return;
+        }
         var list = loadFriends();
         if (!list.length) list = defaultFriends();
         list.push({ name: name, about: about });

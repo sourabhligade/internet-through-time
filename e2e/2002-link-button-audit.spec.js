@@ -69,6 +69,7 @@ test.describe('2002 full button/link re-verify', () => {
     await page.goto('/years/2002/sites/friendster/friends.html');
     await expect(page.locator('[name="fname"]')).toBeVisible({ timeout: 8000 });
     await page.fill('[name="fname"]', 'New Friend');
+    await page.fill('[name="fabout"]', 'Met at a Friendster party residual');
     await page.click('[data-friendster-add-form] button[type="submit"]');
     await expect(page.locator('[data-friendster-friends]')).toContainText(/New Friend/);
   });
@@ -162,8 +163,8 @@ test.describe('2002 full button/link re-verify', () => {
     await expect(page.locator('.itt-live-host').first()).toBeVisible({ timeout: 8000 });
 
     await page.goto('/years/2002/sites/daypop/index.html');
-    await page.click('a[href*="search.html"]');
-    await expect(page).toHaveURL(/search/);
+    await page.locator('form[data-search] input[type="submit"]').click();
+    await expect(page).toHaveURL(/top\.html/);
 
     await page.goto('/years/2002/sites/technorati/index.html');
     await page.click('[data-technorati-cosmos] button[type="submit"]');

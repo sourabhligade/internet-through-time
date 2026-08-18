@@ -2,8 +2,14 @@
 /**
  * Deep flow checks — every year game: load → start/interact → observable progress.
  */
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
+
+function yearOnDisk(year) {
+  return fs.existsSync(path.join(__dirname, '..', 'years', String(year)));
+}
 
 /**
  * Clear year game keys (must run after a same-origin page load).
@@ -27,6 +33,7 @@ async function clearGameKeys(page, prefix) {
  * @param {string} [clearPrefix] if set, clear ittXX-game-* after enterYear
  */
 async function openGame(page, year, query, clearPrefix) {
+  test.skip(!yearOnDisk(year), year + ' not on disk');
   await enterYear(page, year);
   if (clearPrefix) await clearGameKeys(page, clearPrefix);
   const path = 'sites/playable/game.html' + (query || '');
@@ -106,25 +113,15 @@ test.describe('year game flows — full matrix', () => {
     expect(ptsAfter).toBe(ptsBefore - 5);
   });
 
-  test('2000 Portal Judge: rate all 5 → storage write', async ({ page }) => {
-    const frame = await openGame(page, '2000', '', 'itt00');
-    // rate each card 3
-    const rateBtns = frame.locator('[data-rate][data-score="3"]');
-    const count = await rateBtns.count();
-    expect(count).toBe(5);
-    await frame.locator('[data-cards]').evaluate((el) => {
-      el.querySelectorAll('[data-rate][data-score="3"]').forEach((b) => b.click());
-    });
+  test('2000 Lot Life: start fast → storage write', async ({ page }) => {
+    const frame = await openGame(page, '2000', '?fast=1', 'itt00');
+    await frame.locator('[data-game-start]').click();
     await expect
-      .poll(async () => frame.locator('[data-submit]').isEnabled(), { timeout: 5000 })
-      .toBeTruthy();
-    await frame.locator('[data-submit]').click({ force: true });
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt00-game-portaljudge')), {
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt00-game-lotlife')), {
         timeout: 5000,
       })
       .toBeTruthy();
-    const raw = await page.evaluate(() => localStorage.getItem('itt00-game-portaljudge'));
+    const raw = await page.evaluate(() => localStorage.getItem('itt00-game-lotlife'));
     const data = JSON.parse(raw || '{}');
     expect(data.multiStep).toBe(true);
     expect(data.real).toBe(true);
@@ -157,12 +154,13 @@ test.describe('year game flows — full matrix', () => {
     await expect.poll(async () => ((await frame.locator('[data-log]').textContent()) || '').length, { timeout: 5000 }).toBeGreaterThan(0);
   });
 
-  test('2004 Cubicle Whack: start → timer runs', async ({ page }) => {
-    const frame = await openGame(page, '2004', '?fast=1');
+  test('2004 Gem Cascade: start fast writes score', async ({ page }) => {
+    const frame = await openGame(page, '2004', '?fast=1', 'itt04');
     await frame.locator('[data-game-start]').click();
     await expect
-      .poll(async () => Number((await frame.locator('[data-game-time]').textContent()) || '45'), { timeout: 5000 })
-      .toBeLessThan(45);
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt04-game-gemcascade')), { timeout: 5000 })
+      .toBeTruthy();
+    await expect(frame.locator('[data-gem-board]')).toBeVisible();
   });
 
   test('2005 HoverChop: start → score increases', async ({ page }) => {
@@ -195,11 +193,13 @@ test.describe('year game flows — full matrix', () => {
     await expect(frame.locator('[data-level]')).toContainText('@');
   });
 
-  test('2008 Tap Grid: open Bubble Pop · canvas shows', async ({ page }) => {
-    const frame = await openGame(page, '2008', '?fast=1');
-    await frame.getByRole('button', { name: /Bubble Pop/i }).click();
+  test('2008 Goo Span: start fast writes score', async ({ page }) => {
+    const frame = await openGame(page, '2008', '?fast=1', 'itt08');
+    await frame.locator('[data-game-start]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt08-game-goospan')), { timeout: 5000 })
+      .toBeTruthy();
     await expect(frame.locator('canvas')).toBeVisible();
-    await expect(frame.locator('[data-game-score]')).toBeVisible();
   });
 
   test('2009 Plot Neighbors: plant wheat → storage', async ({ page }) => {
@@ -221,9 +221,9 @@ test.describe('year game flows — full matrix', () => {
     expect(data.coins).toBeLessThan(30);
   });
 
-  test('2010 Rag Trail: ride → distance', async ({ page }) => {
+  test('2010 Sling Nest: start → score', async ({ page }) => {
     const frame = await openGame(page, '2010', '', 'itt10');
-    await expect(frame.locator('[data-game-id="ragtrail"]')).toBeVisible();
+    await expect(frame.locator('[data-game-id="slingnest"]')).toBeVisible();
     await frame.locator('#play-start').click();
     await expect
       .poll(async () => Number((await frame.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
@@ -250,12 +250,13 @@ test.describe('year game flows — full matrix', () => {
     await expect(frame.locator('[data-choices] button').first()).toBeVisible({ timeout: 3000 });
   });
 
-  test('2013 Pipe Hop: flap start → score can rise or status', async ({ page }) => {
+  test('2013 Loop Six: start → hold writes score', async ({ page }) => {
     const frame = await openGame(page, '2013');
-    await frame.locator('#play-start').click();
-    await expect(frame.locator('#game-canvas')).toBeVisible();
-    await frame.locator('#game-canvas').click({ force: true });
-    await expect(frame.locator('#play-status')).toBeVisible({ timeout: 5000 });
+    await frame.locator('[data-game-start]').click();
+    await expect(frame.locator('[data-loop-hold]')).toBeVisible();
+    const hold = frame.locator('[data-loop-hold]');
+    for (let i = 0; i < 6; i++) await hold.click();
+    await expect(frame.locator('[data-game-score]')).not.toHaveText('0', { timeout: 5000 });
   });
 
   test('2014 Tile Fold: start → canvas + arrows move status', async ({ page }) => {

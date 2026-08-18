@@ -25,7 +25,7 @@
 (function(){
  var form = document.querySelector("[data-lastfm-scrobble]");
  if (!form) return;
- var key = "itt02-lastfm-recent";
+ var key = "itt04-lastfm-recent";
  function load(){ try { return JSON.parse(localStorage.getItem(key)||"[]"); } catch(e){ return []; } }
  function save(a){ localStorage.setItem(key, JSON.stringify(a)); }
  function paint(){

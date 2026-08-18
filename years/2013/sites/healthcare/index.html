@@ -1,145 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2013">
-<head>
-<meta charset="utf-8">
-<title>HealthCare.gov — October 2013 · public web event</title>
-<link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
-</head>
-<body class="hc-shell">
+<head><meta charset="utf-8"><title>HealthCare.gov — Oct 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css"></head>
+<body bgcolor="#112e51" text="#fff">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="hc-banner">
- HealthCare.gov <span>· Health Insurance Marketplace · educational museum</span>
+<div style="max-width:560px;margin:16px auto;font-family:Source Sans Pro,Arial,sans-serif;font-size:13px">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html" style="color:#9cf">Starting Point</a></p>
+<h1>HealthCare.gov</h1>
+<p>Open enrollment <b>1 Oct 2013</b>. The site does not hold. Error pages. Wait theater. Nightly news. This is launch-failure literacy — not a political ad, not a working marketplace. <a href="status.html" style="color:#9cf">Status / retry page</a> is the second beat.</p>
+<p class="itt-pixel-failed">[failed-final] .gov chrome · public press only</p>
+<label style="display:block"><input type="checkbox" data-req data-hc-req> Oct 2013 launch failed at scale</label>
+<label style="display:block"><input type="checkbox" data-req data-hc-req> This is a status / retry theater, not a real application</label>
+<p><button type="button" data-hc-retry>Apply (theater)</button> <span data-hc-status></span></p>
+<p hidden data-next-flow><b>Next:</b> <a href="../snowden/index.html" style="color:#9cf">June was already a news year</a></p>
 </div>
-<div class="hc-body">
- <p style="font-size:11px">
-  <a href="../../pages/home.html">← Starting Point</a> ·
-  <a href="../../pages/about.html">About 2013</a> ·
-  <a href="../snowden/index.html">Snowden / PRISM</a>
- </p>
- <p style="font-size:11px;letter-spacing:0.05em;color:#5b616b">CULTURE / PUBLIC POLICY WEB · ENROLLMENT FAILURE THEATER</p>
- <h1 style="font-size:22px;font-weight:600">HealthCare.gov</h1>
- <p style="color:#323a45">
-  <b>October 1, 2013</b> — federal marketplace launches. Within days, press documents <b>outages</b> and capacity failures.
- </p>
- <div class="itt13-honesty">
-  <b>Museum rules:</b> no real enrollment · no PII · this reconstruction intentionally fails then recovers as literacy theater.
- </div>
- <div style="border:1px solid #aeb0b5;padding:12px;margin:12px 0;background:#fff;font-size:13px" data-healthcare-wizard>
-  <b>Enrollment wizard (educational · broken on purpose)</b>
-  <div data-hc-step="1" style="margin-top:10px">
-   <p><b>Step 1 — Create account</b></p>
-   <p><input type="text" data-hc-email placeholder="you@example.com" size="28"></p>
-   <button type="button" class="hc-btn" data-hc-try="1">Create account</button>
-   <p data-hc-err="1" style="color:#a00;display:none">Error 503 · Capacity exceeded · try again later (press Oct 2013).</p>
-  </div>
-  <div data-hc-step="2" style="margin-top:10px;display:none">
-   <p><b>Step 2 — Retry after “war room”</b></p>
-   <button type="button" class="hc-btn" data-hc-try="2">Retry application</button>
-   <p data-hc-err="2" style="color:#a00;display:none">Still timing out · ticket queued · Nov capacity class.</p>
-  </div>
-  <div data-hc-step="3" style="margin-top:10px;display:none">
-   <p><b>Step 3 — Literacy complete</b></p>
-   <p style="color:#2e8540">Front-end “it loads” ≠ end-to-end enrollment. Ticket <code data-hc-ticket>—</code></p>
-   <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-req> Oct 1 2013 launch failed under load</label>
-   <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-req> Front-end load ≠ enrollment · no PII</label>
-   <button type="button" class="hc-btn" data-healthcare-ack>
-    I understand HealthCare.gov as a 2013 public-web event (save)
-   </button>
-  </div>
-  <span class="itt13-status" data-healthcare-status style="display:inline;margin-left:8px;color:#2e8540"></span>
- </div>
- <div class="hc-footer">
- · multi-step fail/retry theater · not a working exchange
- </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-healthcare-ack";
-  var st = document.querySelector("[data-healthcare-status]");
-  var ticket = "HC-" + String(Date.now()).slice(-8);
-  var tEl = document.querySelector("[data-hc-ticket]");
-  if (tEl) tEl.textContent = ticket;
-  function showStep(n) {
-    for (var i = 1; i <= 3; i++) {
-      var el = document.querySelector('[data-hc-step="' + i + '"]');
-      if (el) el.style.display = i === n ? "block" : "none";
-    }
-  }
-  try {
-    if (localStorage.getItem(KEY) && st) {
-      st.textContent = "Saved · " + KEY;
-      showStep(3);
-    }
-  } catch (e) {}
-  var try1 = document.querySelector('[data-hc-try="1"]');
-  var try2 = document.querySelector('[data-hc-try="2"]');
-  var ack = document.querySelector("[data-healthcare-ack]");
-  if (try1) try1.addEventListener("click", function () {
-    var email = ((document.querySelector("[data-hc-email]") || {}).value || "").trim();
-    if (!email || email.indexOf("@") < 1) {
-      if (st) st.textContent = "Enter an email first (theater · no PII sent).";
-      return;
-    }
-    var err = document.querySelector('[data-hc-err="1"]');
-    if (err) err.style.display = "block";
-    setTimeout(function () { showStep(2); }, 600);
-  });
-  if (try2) try2.addEventListener("click", function () {
-    var err = document.querySelector('[data-hc-err="2"]');
-    if (err) err.style.display = "block";
-    setTimeout(function () { showStep(3); }, 700);
-  });
-  if (ack) ack.addEventListener("click", function () {
-    var reqs = document.querySelectorAll("[data-req]");
-    var n = 0;
-    var ri;
-    for (ri = 0; ri < reqs.length; ri++) if (reqs[ri].checked) n++;
-    if (n < 2) {
-      if (st) st.textContent = "REAL gate: two literacy checks first (not a soft mock).";
-      return;
-    }
-    try {
-      localStorage.setItem(KEY, JSON.stringify({
-        event: "healthcare-gov-2013",
-        newsOnly: true,
-        ticket: ticket,
-        steps: ["create-fail", "retry-fail", "literacy"],
-        multiStep: true,
-        real: true,
-        year: "2013",
-        ts: Date.now()
-      }));
-    } catch (e2) {}
-    var msg = "Saved · public web literacy · ticket " + ticket;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "healthcare" });
-      }
-    } catch (e3) {}
-  });
-});
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="../googlekeep/index.html">Google Keep</a> ·
- <a href="../instagram/video.html">Instagram Video</a> ·
- <a href="../ipad/air.html">iPad Air</a> ·
- <a href="../iphone/index.html">iPhone 5s</a> ·
- <a href="../medium/index.html">Medium</a> ·
- <a href="../neocities/index.html">Neocities</a> ·
- <a href="../netflix/index.html">Netflix</a> ·
- <a href="../outlook/index.html">Outlook.com</a> ·
- <a href="../playable/index.html">Period playables</a> ·
- <a href="../ps4/index.html">PlayStation 4</a> ·
- <a href="../slack/index.html">Slack</a> ·
- <a href="../snapchat/index.html">Snapchat</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
-</body>
-</html>
+<script src="../../../../js/immersion-2013.js"></script>
+</body></html>

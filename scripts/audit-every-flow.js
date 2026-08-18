@@ -11,7 +11,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2021; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2009; y++) YEARS.push(String(y));
 
 const GOLD = {
   1994: { chip: "sites/csotd/index.html", key: "itt94-csotd" },
@@ -30,18 +30,6 @@ const GOLD = {
   2007: { chip: "sites/iphone/index.html", key: "itt07-iphone" },
   2008: { chip: "sites/github/issue.html", key: "itt08-github" },
   2009: { chip: "sites/facebook/feed.html", key: "itt09-fb-likes" },
-  2010: { chip: "sites/imgur/index.html", key: "itt10-imgur" },
-  2011: { chip: "sites/airbnb/index.html", key: "itt11-airbnb" },
-  2012: { chip: "sites/soundcloud/index.html", key: "itt12-soundcloud" },
-  2013: { chip: "sites/vine/record.html", key: "itt13-vine-posts" },
-  2014: { chip: "sites/whatsapp/index.html", key: "itt14-wa-install" },
-  2015: { chip: "sites/apple/watch.html", key: "itt15-watch" },
-  2016: { chip: "sites/instagram/stories.html", key: "itt16-ig-stories" },
-  2017: { chip: "sites/iphone/x.html", key: "itt17-faceid" },
-  2018: { chip: "sites/gdpr/index.html", key: "itt18-gdpr", writer: "sites/gdpr/manage.html" },
-  2019: { chip: "sites/disneyplus/home.html", key: "itt19-disneyplus" },
-  2020: { chip: "sites/zoom/index.html", key: "itt20-zoom", writer: "sites/zoom/recap.html" },
-  2021: { chip: "sites/att/index.html", key: "itt21-att" },
 };
 
 function exists(rel) {

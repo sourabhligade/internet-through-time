@@ -87,8 +87,13 @@
     if (form) {
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var title = (form.querySelector('[name="title"]') || {}).value || "Untitled";
-        var tags = (form.querySelector('[name="tags"]') || {}).value || "";
+        var title = ((form.querySelector('[name="title"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var tags = ((form.querySelector('[name="tags"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var st0 = doc.querySelector("[data-flickr-status]");
+        if (!title) {
+          if (st0) st0.textContent = "Title required. Empty upload never writes.";
+          return;
+        }
         var list = seed();
         list.unshift({ title: title, tags: tags, note: "just uploaded" });
         save(list.slice(0, 40));

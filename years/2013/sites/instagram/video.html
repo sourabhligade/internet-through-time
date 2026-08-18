@@ -1,108 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2013">
-<head>
-<meta charset="utf-8">
-<title>Instagram Video — 15 seconds · June 2013</title>
-<link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
-</head>
-<body class="igv-shell">
+<head><meta charset="utf-8"><title>Instagram Video — 20 Jun 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css"></head>
+<body bgcolor="#fafafa">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="igv-wrap">
- <div class="igv-nav">
-  <a href="video.html">Instagram Video</a> · <a href="../../pages/home.html">Start</a>
- </div>
- <div style="padding:12px 12px 0;font-size:12px;color:#555">
-  <b>June 20, 2013</b> — share up to <b>15 seconds</b> of video with filters. Competes with Vine’s 6s loops.
- </div>
- <div class="igv-filters">
-  <button type="button" data-igv-filter="Normal">Normal</button>
-  <button type="button" data-igv-filter="Cinema">Cinema</button>
-  <button type="button" data-igv-filter="Memo">Memo</button>
-  <button type="button" data-igv-filter="Neon">Neon</button>
- </div>
- <div class="igv-stage">
-  <div>▶ Video theater</div>
-  <div class="igv-chip"><span data-igv-filter-label>—</span> · max <b>15s</b></div>
- </div>
- <div class="igv-compose">
-  <input type="text" data-igv-caption placeholder="Write a caption…">
-  <button type="button" class="igv-share" data-igv-share>Share</button>
- </div>
- <div style="padding:0 12px 12px">
-  <div class="itt13-status" data-igv-status style="color:#060"></div>
-  <p class="itt13-ban">No Stories · no Reels · no Meta branding</p>
- </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-ig-video";
-  var filter = "";
-  var fl = document.querySelector("[data-igv-filter-label]");
-  var st = document.querySelector("[data-igv-status]");
-  var nodes = document.querySelectorAll("[data-igv-filter]");
-  for (var i = 0; i < nodes.length; i++) {
-    nodes[i].classList.remove("is-on");
-    nodes[i].addEventListener("click", function (ev) {
-      filter = ev.currentTarget.getAttribute("data-igv-filter") || "Normal";
-      if (fl) fl.textContent = filter;
-      for (var j = 0; j < nodes.length; j++) nodes[j].classList.remove("is-on");
-      ev.currentTarget.classList.add("is-on");
-    });
-  }
-  var share = document.querySelector("[data-igv-share]");
-  if (share) {
-    share.addEventListener("click", function () {
-      if (!filter) {
-        if (st) st.textContent = "Pick a filter first (15s video · not a 6s Vine).";
-        return;
-      }
-      var cap = String((document.querySelector("[data-igv-caption]") || {}).value || "").trim();
-      if (cap.length < 2) {
-        if (st) st.textContent = "Caption required · incomplete never writes.";
-        return;
-      }
-      var payload = { filter: filter, caption: cap, maxSec: 15, year: "2013", multiStep: true, real: true, ts: Date.now() };
-      try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e) {}
-      var msg = "Shared video · 15s · " + filter + " · " + KEY;
-      if (st) st.textContent = msg;
-      try {
-        if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-          ITT._immersionApi.actionFeedback(msg, { status: st, kind: "ig-video" });
-        }
-      } catch (e2) {}
-    });
-  }
-});
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="../snowden/index.html">Snowden / PRISM</a> ·
- <a href="../spotify/index.html">Spotify</a> ·
- <a href="../telegram/index.html">Telegram</a> ·
- <a href="../tinder/index.html">Tinder</a> ·
- <a href="../tumblr/index.html">Tumblr</a> ·
- <a href="../uber/index.html">Uber</a> ·
- <a href="../vine/index.html">Vine</a> ·
- <a href="../whatsapp/index.html">WhatsApp</a> ·
- <a href="../windows81/index.html">Windows 8.1</a> ·
- <a href="../xboxone/index.html">Xbox One</a> ·
- <a href="../bitcoin/index.html">Bitcoin</a> ·
- <a href="../chrome/index.html">Google Chrome</a>
+<div class="ig-2013-shell">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html">Starting Point</a> · <a href="../vine/record.html">Vine 6s</a></p>
+<h1>INSTAGRAM · Video</h1>
+<p>Facebook event · Menlo Park · <b>20 Jun 2013</b>. Systrom: “Video On Instagram.” <b>15 seconds</b>. <b>13</b> video filters built for motion (not the still-photo set). Cinema mode stabilization. ~<b>130 million</b> MAU class going in. Explicitly competing with Vine’s 6-second loop.</p>
+<p>Not Stories (2016). Not Reels. Not IGTV. Square-ish phone theater. Website is still marketing — compose lives on the phone. Pew 20 Jun 2013: short-form video is the year’s social story.</p>
+<p class="itt-pixel-failed">[failed-final] IG video filter strip · never invent the glyph</p>
+<label style="display:block"><input type="checkbox" data-req> 15 seconds — longer than Vine, not a minute</label>
+<label style="display:block"><input type="checkbox" data-req> Not Instagram Stories (that is 2016)</label>
+<p>
+ <button type="button" class="ig-filter" data-ig-filter="Normal">Normal</button>
+ <button type="button" class="ig-filter" data-ig-filter="Cinema">Cinema</button>
+ <button type="button" class="ig-filter" data-ig-filter="Lagoon">Lagoon</button>
+ <button type="button" class="ig-filter" data-ig-filter="Hold">Hold</button>
 </p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
+<p><input type="text" data-ig-caption placeholder="Caption (required)"></p>
+<p><button type="button" data-ig-share>Share 15s video</button> <span data-ig-status></span></p>
+<div data-ig-feed></div>
+<p hidden data-next-flow><b>Next:</b> <a href="../snapchat/story.html">Snapchat invents Stories in October</a></p>
+</div>
+<script src="../../../../js/immersion-2013.js"></script>
 
-
-<div class="itt-5x-loop" data-5x-loop data-5x-year="2013" data-5x-suffix="igvid" style="margin:12px 0;padding:10px;border:2px solid #f9a825;background:#fff8e1;font-family:Arial,sans-serif;font-size:13px;max-width:46em">
+<div class="itt-5x-loop" data-5x-loop data-5x-year="2013" data-5x-suffix="igvid" id="ott-5x-f-igvid" style="margin:12px 0;padding:10px;border:2px solid #f9a825;background:#fff8e1;font-family:Arial,sans-serif;font-size:13px;max-width:46em;color:#111">
 <p style="margin:0 0 6px"><b>5× F3 IG Video 15s</b> · incomplete never writes · key <code>itt13-igvid</code></p>
-<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="a"> 15s + not-Reels</label>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="a"> 15s + not Reels</label>
 <label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="b"> 20 Jun 2013</label>
 <p style="margin:8px 0 0"><button type="button" data-5x-save>Save 5× REAL</button> <span data-5x-status></span></p>
-<p data-5x-next hidden data-next-flow data-itt13-next data-next-when-key="itt13-igvid" style="margin:8px 0 0">Next: <a href="../iphone/index.html">next</a></p>
+<p data-5x-next hidden data-next-flow data-itt13-next data-next-when-key="itt13-igvid" style="margin:8px 0 0">Next: <a href="../iphone/ios7.html">iOS 7</a></p>
 </div>
-
-</body>
-</html>
+</body></html>

@@ -65,26 +65,6 @@ const YEARS = [
     y: '2008',
     must: [/Connection trails|REAL multipath/i, /App Store|Chrome|Android/i],
   },
-  {
-    y: '2010',
-    must: [/Connection trails|REAL multipath/i, /iPad|Instagram|Foursquare/i],
-  },
-  {
-    y: '2011',
-    must: [/Connection trails|REAL multipath/i, /Spotify|Timeline|Siri|Chrome/i],
-  },
-  {
-    y: '2012',
-    must: [/Connection trails|REAL multipath/i, /Instagram|IPO|SOPA|Chrome/i],
-  },
-  {
-    y: '2013',
-    must: [/Connection trails|REAL multipath|Guided multi-step/i, /Vine|Stories|iOS 7|Chrome/i],
-  },
-  {
-    y: '2014',
-    must: [/Connection trails|REAL multipath/i, /WhatsApp|Heartbleed|iPhone 6|Serial/i],
-  },
 ];
 
 test.describe('Early-year connection trails', () => {

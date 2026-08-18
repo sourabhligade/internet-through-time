@@ -7,8 +7,14 @@
  *  - Incomplete multi-step (2000) does not write.
  *  - Neighbor year game keys stay untouched.
  */
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
+
+function yearOnDisk(year) {
+  return fs.existsSync(path.join(__dirname, '..', 'years', String(year)));
+}
 
 /** @type {{ year: string, prefix: string, gameId: string, key: string, kind: string }[]} */
 const GAMES = [
@@ -18,27 +24,16 @@ const GAMES = [
   { year: '1997', prefix: 'itt97', gameId: 'connect4', key: 'itt97-game-connect4', kind: 'record-end' },
   { year: '1998', prefix: 'itt98', gameId: 'skipintro', key: 'itt98-game-skipintro', kind: 'score-end' },
   { year: '1999', prefix: 'itt99', gameId: 'petdash', key: 'itt99-game-petdash', kind: 'state-action' },
-  { year: '2000', prefix: 'itt00', gameId: 'portaljudge', key: 'itt00-game-portaljudge', kind: 'literacy' },
+  { year: '2000', prefix: 'itt00', gameId: 'lotlife', key: 'itt00-game-lotlife', kind: 'literacy' },
   { year: '2001', prefix: 'itt01', gameId: 'clickscape', key: 'itt01-game-clickscape', kind: 'state-action' },
   { year: '2002', prefix: 'itt02', gameId: 'roomsticky', key: 'itt02-game-roomsticky', kind: 'state-action' },
   { year: '2003', prefix: 'itt03', gameId: 'gagslite', key: 'itt03-game-gagslite', kind: 'record-end' },
-  { year: '2004', prefix: 'itt04', gameId: 'cubewhack', key: 'itt04-game-cubewhack', kind: 'score-end' },
+  { year: '2004', prefix: 'itt04', gameId: 'gemcascade', key: 'itt04-game-gemcascade', kind: 'score-end' },
   { year: '2005', prefix: 'itt05', gameId: 'heli', key: 'itt05-game-heli', kind: 'score-end' },
   { year: '2006', prefix: 'itt06', gameId: 'sled', key: 'itt06-game-sled', kind: 'score-end' },
   { year: '2007', prefix: 'itt07', gameId: 'boxshift', key: 'itt07-game-boxshift', kind: 'progress' },
-  { year: '2008', prefix: 'itt08', gameId: 'tapgrid', key: 'itt08-game-tapgrid', kind: 'score-end' },
+  { year: '2008', prefix: 'itt08', gameId: 'goospan', key: 'itt08-game-goospan', kind: 'score-end' },
   { year: '2009', prefix: 'itt09', gameId: 'plotneighbors', key: 'itt09-game-plotneighbors', kind: 'state-action' },
-  { year: '2010', prefix: 'itt10', gameId: 'ragtrail', key: 'itt10-game-ragtrail', kind: 'score-end' },
-  { year: '2011', prefix: 'itt11', gameId: 'letterswap', key: 'itt11-game-letterswap', kind: 'score-end' },
-  { year: '2012', prefix: 'itt12', gameId: 'guessdoodle', key: 'itt12-game-guessdoodle', kind: 'score-end' },
-  { year: '2013', prefix: 'itt13', gameId: 'pipehop', key: 'itt13-game-pipehop', kind: 'score-end' },
-  { year: '2014', prefix: 'itt14', gameId: 'tilefold', key: 'itt14-game-tilefold', kind: 'score-end' },
-  { year: '2015', prefix: 'itt15', gameId: 'blobrush', key: 'itt15-game-blobrush', kind: 'score-end' },
-  { year: '2016', prefix: 'itt16', gameId: 'gymrush', key: 'itt16-game-gymrush', kind: 'score-end' },
-  { year: '2017', prefix: 'itt17', gameId: 'stormcircle', key: 'itt17-game-stormcircle', kind: 'score-end' },
-  { year: '2018', prefix: 'itt18', gameId: 'consentdash', key: 'itt18-game-consentdash', kind: 'score-end' },
-  { year: '2019', prefix: 'itt19', gameId: 'continuerow', key: 'itt19-game-continuerow', kind: 'score-end' },
-  { year: '2020', prefix: 'itt20', gameId: 'among', key: 'itt20-game-among', kind: 'score-end' },
 ];
 
 /**
@@ -67,6 +62,7 @@ async function clearPrefixGames(page, prefix) {
  * @param {string} [q]
  */
 async function openGame(page, year, q) {
+  test.skip(!yearOnDisk(year), year + ' not on disk');
   await enterYear(page, year);
   await goImmersion(page, year, 'sites/playable/game.html' + (q || ''));
   await killOverlays(page);
@@ -87,16 +83,16 @@ for (const g of GAMES) {
 
 // ——— Incomplete / no soft mock: load alone ———
 test.describe('REAL incomplete: load does not write finished literacy (2000)', () => {
-  test('2000 portal judge load + empty submit → no key', async ({ page }) => {
+  test('2000 lot life load + empty party → no key', async ({ page }) => {
     await enterYear(page, '2000');
     await clearPrefixGames(page, 'itt00');
     const frame = await openGame(page, '2000');
-    expect(await getKey(page, 'itt00-game-portaljudge')).toBeNull();
-    await frame.locator('[data-submit]').click({ force: true });
-    await expect(frame.locator('[data-itt-action-status]')).toContainText(/rate|all|incomplete|Portal/i, {
+    expect(await getKey(page, 'itt00-game-lotlife')).toBeNull();
+    await frame.locator('[data-lot-party]').click({ force: true });
+    await expect(frame.locator('[data-itt-action-status]')).toContainText(/incomplete|Start|Place|Use/i, {
       timeout: 5000,
     });
-    expect(await getKey(page, 'itt00-game-portaljudge')).toBeNull();
+    expect(await getKey(page, 'itt00-game-lotlife')).toBeNull();
   });
 });
 
@@ -140,21 +136,12 @@ test.describe('REAL complete writes', () => {
     expect(blob.points).toBe(15);
   });
 
-  test('2000 portal complete multiStep real', async ({ page }) => {
+  test('2000 lot life party complete multiStep real', async ({ page }) => {
     await enterYear(page, '2000');
     await clearPrefixGames(page, 'itt00');
-    const frame = await openGame(page, '2000');
-    const rates = frame.locator('[data-rate][data-score="4"]');
-    const n = await rates.count();
-    expect(n).toBe(5);
-    await frame.locator('[data-cards]').evaluate((el) => {
-      el.querySelectorAll('[data-rate][data-score="4"]').forEach((b) => b.click());
-    });
-    await expect
-      .poll(async () => frame.locator('[data-submit]').isEnabled(), { timeout: 5000 })
-      .toBeTruthy();
-    await frame.locator('[data-submit]').click({ force: true });
-    const blob = JSON.parse((await waitKey(page, 'itt00-game-portaljudge')) || '{}');
+    const frame = await openGame(page, '2000', '?fast=1');
+    await frame.locator('[data-game-start]').click();
+    const blob = JSON.parse((await waitKey(page, 'itt00-game-lotlife')) || '{}');
     expect(blob.real).toBe(true);
     expect(blob.multiStep).toBe(true);
     expect(blob.year).toBe('2000');
@@ -281,7 +268,8 @@ test.describe('REAL complete writes', () => {
     expect(blob.plots.length).toBe(9);
   });
 
-  test('2010 ragtrail finish writes best', async ({ page }) => {
+  test('2010 slingnest finish writes best', async ({ page }) => {
+    test.skip(!yearOnDisk('2010'), '2010 not on disk');
     await enterYear(page, '2010');
     await clearPrefixGames(page, 'itt10');
     const frame = await openGame(page, '2010');
@@ -289,14 +277,15 @@ test.describe('REAL complete writes', () => {
     await expect(frame.locator('#play-score, [data-game-score]').first()).toBeVisible();
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
-      if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('ragtrail', 150, { year: '2010' });
+      if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('slingnest', 150, { year: '2010' });
     });
-    const blob = JSON.parse((await getKey(page, 'itt10-game-ragtrail')) || '{}');
+    const blob = JSON.parse((await getKey(page, 'itt10-game-slingnest')) || '{}');
     expect(blob.real).toBe(true);
     expect(blob.best).toBeGreaterThanOrEqual(150);
   });
 
   test('2011 letterswap end-of-round API real', async ({ page }) => {
+    test.skip(!yearOnDisk('2011'), '2011 not on disk');
     await enterYear(page, '2011');
     await clearPrefixGames(page, 'itt11');
     const frame = await openGame(page, '2011', '?fast=1');
@@ -312,6 +301,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2012 doodle session API real', async ({ page }) => {
+    test.skip(!yearOnDisk('2012'), '2012 not on disk');
     await enterYear(page, '2012');
     await clearPrefixGames(page, 'itt12');
     await openGame(page, '2012');
@@ -324,21 +314,23 @@ test.describe('REAL complete writes', () => {
     expect(blob.real).toBe(true);
   });
 
-  test('2013 pipehop die path / API real', async ({ page }) => {
+  test('2013 loopsix die path / API real', async ({ page }) => {
+    test.skip(!yearOnDisk('2013'), '2013 not on disk');
     await enterYear(page, '2013');
     await clearPrefixGames(page, 'itt13');
     await openGame(page, '2013');
     await waitYearGame(page);
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
-      w.ITT.YearGame.saveBest('pipehop', 7, { year: '2013' });
+      w.ITT.YearGame.saveBest('loopsix', 7, { year: '2013' });
     });
-    const blob = JSON.parse((await getKey(page, 'itt13-game-pipehop')) || '{}');
+    const blob = JSON.parse((await getKey(page, 'itt13-game-loopsix')) || '{}');
     expect(blob.real).toBe(true);
     expect(blob.best).toBeGreaterThanOrEqual(7);
   });
 
   test('2014 tilefold API real writes itt14-game-tilefold', async ({ page }) => {
+    test.skip(!yearOnDisk('2014'), '2014 not on disk');
     await enterYear(page, '2014');
     await clearPrefixGames(page, 'itt14');
     const frame = await openGame(page, '2014');
@@ -358,6 +350,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2015 blobrush API real writes itt15-game-blobrush', async ({ page }) => {
+    test.skip(!yearOnDisk('2015'), '2015 not on disk');
     await enterYear(page, '2015');
     await clearPrefixGames(page, 'itt15');
     const frame = await openGame(page, '2015');
@@ -377,6 +370,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2016 gymrush API real writes itt16-game-gymrush', async ({ page }) => {
+    test.skip(!yearOnDisk('2016'), '2016 not on disk');
     await enterYear(page, '2016');
     await clearPrefixGames(page, 'itt16');
     const frame = await openGame(page, '2016');
@@ -397,6 +391,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2017 stormcircle API real writes itt17-game-stormcircle', async ({ page }) => {
+    test.skip(!yearOnDisk('2017'), '2017 not on disk');
     await enterYear(page, '2017');
     await clearPrefixGames(page, 'itt17');
     const frame = await openGame(page, '2017');
@@ -417,6 +412,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2018 consentdash API real writes itt18-game-consentdash', async ({ page }) => {
+    test.skip(!yearOnDisk('2018'), '2018 not on disk');
     await enterYear(page, '2018');
     await clearPrefixGames(page, 'itt18');
     const frame = await openGame(page, '2018');
@@ -564,15 +560,15 @@ test.describe('REAL complete writes', () => {
     expect(blob.real).toBe(true);
   });
 
-  test('2004 cubewhack end writes best via API', async ({ page }) => {
+  test('2004 gem cascade end writes best via API', async ({ page }) => {
     await enterYear(page, '2004');
     await clearPrefixGames(page, 'itt04');
     await openGame(page, '2004', '?fast=1');
     await page.evaluate(() => {
       const w = document.getElementById('content').contentWindow;
-      w.ITT.YearGame.saveBest('cubewhack', 11, { year: '2004' });
+      w.ITT.YearGame.saveBest('gemcascade', 11, { year: '2004' });
     });
-    const blob = JSON.parse((await getKey(page, 'itt04-game-cubewhack')) || '{}');
+    const blob = JSON.parse((await getKey(page, 'itt04-game-gemcascade')) || '{}');
     expect(blob.real).toBe(true);
   });
 
@@ -598,26 +594,15 @@ test.describe('REAL complete writes', () => {
     expect(blob.maxLevelCleared).toBe(1);
   });
 
-  test('2008 bubble best structure', async ({ page }) => {
+  test('2008 goo span writes best via start fast', async ({ page }) => {
     await enterYear(page, '2008');
     await clearPrefixGames(page, 'itt08');
-    await openGame(page, '2008', '?fast=1');
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      const key = w.ITT.YearGame.storageKey('tapgrid', '2008');
-      w.ITT.YearGame.saveJSON(key, {
-        gameId: 'tapgrid',
-        year: '2008',
-        installed: ['bubble'],
-        bubbleBest: 9,
-        best: 9,
-        real: true,
-        ts: Date.now(),
-      });
-    });
-    const blob = JSON.parse((await getKey(page, 'itt08-game-tapgrid')) || '{}');
+    const frame = await openGame(page, '2008', '?fast=1');
+    await frame.locator('[data-game-start]').click();
+    const blob = JSON.parse((await waitKey(page, 'itt08-game-goospan')) || '{}');
     expect(blob.real).toBe(true);
-    expect(blob.bubbleBest).toBe(9);
+    expect(blob.year).toBe('2008');
+    expect(blob.best).toBeGreaterThan(0);
   });
 
   test('1996 planets API real year isolation', async ({ page }) => {

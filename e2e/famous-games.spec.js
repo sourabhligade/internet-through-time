@@ -1,9 +1,9 @@
 // @ts-check
-/** Famous arcade extras — two OSS-class games per year 1994–2021. */
+/** Famous arcade extras — two OSS-class games per year 1994–2009. */
 const { test, expect } = require("@playwright/test");
 
 const YEARS = [];
-for (let y = 1994; y <= 2021; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2009; y++) YEARS.push(String(y));
 
 const ENGINES = {
   1994: ["pong", "mines"],

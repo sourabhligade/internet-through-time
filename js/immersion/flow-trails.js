@@ -143,11 +143,28 @@
     return bag[y];
   }
 
+  function lockedTen(y) {
+    var all = trailsFor(y);
+    var out = [];
+    var i;
+    var n;
+    for (i = 0; i < all.length; i++) {
+      n = Number(all[i].n);
+      if (n >= 1 && n <= 10) out.push(all[i]);
+    }
+    out.sort(function (a, b) {
+      return Number(a.n) - Number(b.n);
+    });
+    return out.slice(0, 10);
+  }
+
+  ITT.lockedFlowTrails = lockedTen;
+
   function boot(doc) {
     doc = doc || document;
     if (skipPage()) return;
     var y = yearOf();
-    var trails = trailsFor(y);
+    var trails = lockedTen(y);
     if (!trails.length) return;
     paint(doc, trails);
   }

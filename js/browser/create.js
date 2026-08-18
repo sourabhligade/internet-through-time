@@ -673,7 +673,9 @@
         if (!href || href.charAt(0) === "#") return;
         if (href.indexOf("mailto:") === 0) {
           e.preventDefault();
-          openMailDialog(href.replace(/^mailto:/i, ""), "From Web page");
+          if (Chrome && Chrome.openMailDialog) {
+            Chrome.openMailDialog(href.replace(/^mailto:/i, ""), "From Web page");
+          }
           return;
         }
         /* Museum hub / games wing escapes: iframe sandbox blocks target=_top
@@ -1111,8 +1113,11 @@
       } catch (eUx) { /* fall through to legacy modal */ }
 
       var browserLabel = "Netscape";
-      if (TITLE_SUFFIX && /Internet Explorer/i.test(TITLE_SUFFIX)) browserLabel = "Internet Explorer";
-      else if (config.connectBrowserLine && /Internet Explorer/i.test(config.connectBrowserLine)) {
+      if (TITLE_SUFFIX && /Chrome/i.test(TITLE_SUFFIX)) browserLabel = "Chrome";
+      else if (TITLE_SUFFIX && /Internet Explorer/i.test(TITLE_SUFFIX)) browserLabel = "Internet Explorer";
+      else if (config.connectBrowserLine && /Chrome/i.test(config.connectBrowserLine)) {
+        browserLabel = "Chrome";
+      } else if (config.connectBrowserLine && /Internet Explorer/i.test(config.connectBrowserLine)) {
         browserLabel = "Internet Explorer";
       } else if (YEAR === "2001" || YEAR === "2002" || YEAR === "2003" || YEAR === "2004" || YEAR === "2005") {
         browserLabel = "Internet Explorer";
@@ -1134,16 +1139,18 @@
         "2006": "Twitter · YouTube · Facebook",
         "2007": "iPhone · Gmail · Street View",
         "2008": "App Store · Chrome · Android",
-        "2009": "Like · FarmVille · Bing",
-        "2010": "iPad · Instagram · Foursquare",
-        "2011": "Spotify · Timeline · Siri",
-        "2012": "Instagram · FB IPO · Pinterest",
-        "2013": "Vine · IG Video · Stories · iOS 7",
-        "2014": "WhatsApp · Heartbleed · iPhone 6",
-        "2015": "Watch · Win10 · Periscope",
-        "2016": "Stories · Pokémon GO · Reactions",
-        "2017": "Face ID · Fortnite · 280",
-        "2018": "GDPR · TikTok · hearing"
+        "2009": "Like · FarmVille · Bing"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
       };
       var locTips = {
         "1994": "yahoo or whitehouse",
@@ -1161,16 +1168,18 @@
         "2006": "twitter or youtube",
         "2007": "iphone or gmail",
         "2008": "chrome or appstore",
-        "2009": "facebook or farmville",
-        "2010": "instagram or ipad",
-        "2011": "spotify or siri",
-        "2012": "instagram or pinterest",
-        "2013": "vine or snowden",
-        "2014": "whatsapp or heartbleed",
-        "2015": "watch or windows10",
-        "2016": "stories or pogo",
-        "2017": "faceid or fortnite",
-        "2018": "gdpr or tiktok"
+        "2009": "facebook or farmville"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
       };
       var dirHint = dirExamples[YEAR] || "directory buttons on the bar";
       var locTip = locTips[YEAR] || "a site name from this year";

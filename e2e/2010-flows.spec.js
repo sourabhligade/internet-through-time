@@ -1,13 +1,10 @@
 // @ts-check
 /**
- * 2010 period flows A–T — REAL localStorage / DOM mutations only
- * docs/2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md Part 4
- *
- * Every test asserts a real state change (storage key or DOM after action).
- * No “mock-only” pass: empty storage after click fails.
+ * 2010 period flows A–T — every playbook session, incomplete never writes.
+ * docs/2010-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, completeRealGate, fillGmailLogin } = require('./helpers');
+const { enterYear, completeRealGate, twoStepClick } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -21,420 +18,336 @@ async function clearKeys(page, keys) {
   }, keys);
 }
 
-/** @param {import('@playwright/test').Page} page @param {string} key */
-async function expectStorageTruthy(page, key) {
-  const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-  expect(raw, `expected real localStorage for ${key}`).toBeTruthy();
-  expect(raw).not.toBe('[]');
-  expect(raw).not.toBe('{}');
-  expect(raw).not.toBe('null');
-  return raw;
+async function getKey(page, key) {
+  return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-test.describe('2010 flows A–T (real only)', () => {
-  test('A enter year — shell + content iframe real boot', async ({ page }) => {
-    await enterYear(page, '2010');
+test.describe('2010 flows A–T', () => {
+  test('A hub card → Win7 / IE8 shell → Starting Point', async ({ page }) => {
+    await page.goto('/');
+    const card = page.locator('a.year-card.available.y2010[href*="years/2010"]');
+    await expect(card).toBeVisible();
+    await card.click();
+    const skip = page.locator('#skip-connect');
+    if (await skip.isVisible().catch(() => false)) await skip.click();
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2010');
+    await expect(page.locator('body')).toHaveClass(/os-win7/);
+    await expect(page.locator('body')).toHaveClass(/browser-ie8/);
     await expect(page.locator('#content')).toBeVisible();
-    const bodyLen = await page.evaluate(() => {
-      try {
-        const f = document.getElementById('content');
-        return f && f.contentDocument && f.contentDocument.body
-          ? f.contentDocument.body.innerHTML.length
-          : 0;
-      } catch (e) {
-        return 0;
-      }
-    });
-    expect(bodyLen).toBeGreaterThan(50);
-    // Dirbar P0 real buttons
-    for (const label of ['iPad', 'iPhone 4', 'Instagram', 'Facebook', 'App Store', 'Foursquare']) {
-      await expect(page.locator(`.dir-btn:has-text("${label}")`).first()).toBeVisible();
-    }
+    const frame = page.frameLocator('#content');
+    await expect(frame.locator('body')).toContainText(/Instagram|Starting Point|2010/i);
   });
 
-  test('B thesis about — dual scale + real thesis ack storage', async ({ page }) => {
+  test('B about thesis literacy writes itt10-thesis-ack', async ({ page }) => {
     await page.goto('/years/2010/pages/about.html');
     await clearKeys(page, ['itt10-thesis-ack']);
     await page.reload();
-    await expect(page.locator('body')).toContainText('206,956,723');
-    await expect(page.locator('body')).toContainText(/iPad|Instagram|iPhone 4/i);
-    await expect(page.locator('body')).toContainText(/Spotify|Snapchat|UberX|Stories/i);
-    await expect(page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]')).toBeVisible({ timeout: 15000 });
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
+    await page.waitForSelector('[data-itt-real-save][data-storage-key="thesis-ack"]', { timeout: 20000 });
     await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
-    await expect(page.locator('[data-itt-action-status]')).toContainText(/Saved|itt10-thesis/i);
-    const raw = await expectStorageTruthy(page, 'itt10-thesis-ack');
-    expect(raw).toMatch(/ack|true|real|multiStep/i);
+    expect(await getKey(page, 'itt10-thesis-ack')).toBeFalsy();
+    const boxes = page.locator('[data-thesis-req]');
+    await expect(boxes).toHaveCount(2);
+    await boxes.nth(0).check();
+    await boxes.nth(1).check();
+    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
+    await expect.poll(() => getKey(page, 'itt10-thesis-ack')).toMatch(/real|true|multiStep/i);
+    await expect(page.locator('body')).toContainText('206,956,723');
+    await expect(page.locator('body')).toContainText(/iPad 2|Siri|Timeline/i);
   });
 
-  test('C iPad — claim mutates itt10-ipad-history', async ({ page }) => {
-    await page.goto('/years/2010/sites/ipad/index.html');
-    await clearKeys(page, ['itt10-ipad-history']);
-    await page.reload();
-    await expect(page.locator('body')).toContainText(/\$499|Jan 27|iPad/i);
-    await page.waitForSelector('[data-ipad-claim]', { timeout: 15000 });
-    await page.locator('[data-ipad-date]').check();
-    await page.locator('[data-ipad-not-os]').check();
-    await page.locator('[data-ipad-claim]').click();
-    await expect(page.locator('[data-ipad-status]')).toContainText(/itt10-ipad|Noted|Saved/i);
-    await expectStorageTruthy(page, 'itt10-ipad-history');
-  });
-
-  test('D iPhone 4 + App Store install/remove real list', async ({ page }) => {
-    await page.goto('/years/2010/sites/iphone/about.html');
-    await expect(page.locator('body')).toContainText(/\$199|\$299|FaceTime|Retina|Antennagate|Jun 24/i);
-
-    await page.goto('/years/2010/sites/appstore/index.html');
-    await clearKeys(page, ['itt10-apps']);
-    await page.reload();
-    await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-appstore-install]');
-    let raw = await expectStorageTruthy(page, 'itt10-apps');
-    expect(raw).toMatch(/name|Koi|Monkey|Facebook|Twitter|Shazam|Pandora|id/i);
-
-    // remove if hook exists
-    const remove = page.locator('[data-appstore-remove]').first();
-    if (await remove.isVisible().catch(() => false)) {
-      await remove.click();
-      raw = (await page.evaluate(() => localStorage.getItem('itt10-apps'))) || '[]';
-      // list may shrink but key still real
-      expect(raw).toBeTruthy();
-    }
-  });
-
-  test('E Instagram filter share → itt10-ig-posts', async ({ page }) => {
+  test('C Instagram empty caption blocked · filter+caption writes', async ({ page }) => {
     await page.goto('/years/2010/sites/instagram/index.html');
-    await clearKeys(page, ['itt10-ig-posts']);
+    await clearKeys(page, ['itt10-ig-posts', 'itt10-ig']);
     await page.reload();
-    await page.waitForSelector('[data-ig-share]', { timeout: 20000 });
-    await page.locator('[data-ig-filter="Earlybird"]').click();
-    await page.locator('[data-ig-caption]').fill('square photo 2010 real');
+    await page.waitForSelector('[data-ig-share]');
+    await page.locator('[data-ig-filter="X-Pro II"]').click();
     await page.locator('[data-ig-share]').click();
-    await expect(page.locator('[data-ig-status]')).toContainText(/Shared|itt10|Earlybird/i);
-    const raw = await expectStorageTruthy(page, 'itt10-ig-posts');
-    expect(raw).toMatch(/Earlybird|square photo 2010/i);
-    await expect(page.locator('[data-ig-feed]')).toContainText(/Earlybird|square photo/i);
+    expect(await getKey(page, 'itt10-ig-posts')).toBeFalsy();
+    await page.locator('[data-ig-caption]').fill('museum square');
+    await page.locator('[data-ig-share]').click();
+    await expect.poll(() => getKey(page, 'itt10-ig-posts')).toMatch(/X-Pro|museum square|filter/i);
+    await expect.poll(() => getKey(page, 'itt10-ig')).toBeTruthy();
   });
 
-  test('F Facebook Like + Places real storage', async ({ page }) => {
-    await page.goto('/years/2010/sites/facebook/feed.html');
-    await clearKeys(page, ['itt10-fb-likes']);
+  test('D iPad empty order blocked · capacity+radio writes itt10-ipad', async ({ page }) => {
+    await page.goto('/years/2010/sites/ipad/index.html');
+    await expect(page.locator('body')).toContainText(/\$499|no camera|iPad 2/i);
+    await page.goto('/years/2010/sites/ipad/order.html');
+    await clearKeys(page, ['itt10-ipad']);
     await page.reload();
-    await page.waitForSelector('[data-fb-like]', { timeout: 20000 });
-    await page.locator('[data-fb-like]').first().click();
-    await expectStorageTruthy(page, 'itt10-fb-likes');
-
-    await page.goto('/years/2010/sites/facebook/places.html');
-    await clearKeys(page, ['itt10-fb-places']);
-    await page.reload();
-    await page.waitForSelector('[data-fb-place]', { timeout: 20000 });
-    await page.locator('[data-fb-place]').first().click();
-    await expect(page.locator('[data-fb-places-status]')).toContainText(/Checked in|Coffee|Airport|itt10-fb-places/i);
-    await expectStorageTruthy(page, 'itt10-fb-places');
+    await page.locator('[data-ipad-order]').click();
+    expect(await getKey(page, 'itt10-ipad')).toBeFalsy();
+    await page.locator('[name="ipad-cap"][value="32GB"]').check();
+    await page.locator('[name="ipad-radio"][value="Wi-Fi + 3G"]').check();
+    await page.locator('[data-ipad-order]').click();
+    await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/32GB|3G|real/i);
   });
 
-  test('G Foursquare check-in → itt10-4sq', async ({ page }) => {
+  test('E iPhone 4 incomplete blocked · wifi+bumper writes itt10-iphone4', async ({ page }) => {
+    await page.goto('/years/2010/sites/iphone/index.html');
+    await clearKeys(page, ['itt10-iphone4']);
+    await page.reload();
+    await page.locator('[data-iphone4-ack]').click();
+    expect(await getKey(page, 'itt10-iphone4')).toBeFalsy();
+    await page.locator('[data-ft-wifi]').check();
+    await page.locator('[data-antenna-ack]').check();
+    await page.locator('[data-iphone4-ack]').click();
+    await expect.poll(() => getKey(page, 'itt10-iphone4')).toMatch(/wifi|antenna|real/i);
+  });
+
+  test('F Open Graph Like on CNN then IMDb writes itt10-fb-og', async ({ page }) => {
+    await page.goto('/years/2010/sites/facebook/cnn.html');
+    await clearKeys(page, ['itt10-fb-og', 'itt10-fb-og-partial']);
+    await page.reload();
+    await page.locator('[data-og-like="cnn"]').click();
+    expect(await getKey(page, 'itt10-fb-og')).toBeFalsy();
+    expect(await getKey(page, 'itt10-fb-og-partial')).toBeTruthy();
+    await page.goto('/years/2010/sites/facebook/imdb.html');
+    await page.waitForSelector('[data-og-like="imdb"]', { timeout: 15000 });
+    await page.locator('[data-og-like="imdb"]').click();
+    await expect.poll(() => getKey(page, 'itt10-fb-og')).toMatch(/cnn|imdb|real/i);
+  });
+
+  test('G FarmVille plant then harvest writes itt10-farm', async ({ page }) => {
+    await page.goto('/years/2010/sites/farmville/index.html');
+    await clearKeys(page, ['itt10-farm']);
+    await page.reload();
+    await page.locator('[data-farm-check]').check({ force: true });
+    await twoStepClick(page, '[data-farm-plant="wheat"]');
+    await expect.poll(() => getKey(page, 'itt10-farm')).toMatch(/wheat|plots/i);
+    await page.waitForTimeout(3200);
+    await page.locator('[data-farm-harvest]').click();
+    await expect.poll(async () => {
+      const raw = await getKey(page, 'itt10-farm');
+      return raw && /Harvested|coins/i.test(raw) ? raw : '';
+    }).toMatch(/Harvested|coins/i);
+  });
+
+  test('H Foursquare same cafe twice writes itt10-4sq', async ({ page }) => {
     await page.goto('/years/2010/sites/foursquare/index.html');
     await clearKeys(page, ['itt10-4sq']);
     await page.reload();
-    await page.waitForSelector('[data-4sq-checkin]', { timeout: 20000 });
-    await completeRealGate(page, '[data-4sq-checkin]');
-    const raw = await expectStorageTruthy(page, 'itt10-4sq');
-    expect(raw).toMatch(/Coffee|Dive|Airport|venue|points/i);
-    await expect(page.locator('[data-4sq-list]')).not.toBeEmpty();
+    const boxes = page.locator('[data-4sq-check]');
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check({ force: true });
+    await completeRealGate(page, '[data-4sq-checkin="Coffee House"]');
+    await page.locator('[data-4sq-checkin="Coffee House"]').click();
+    await expect.poll(() => getKey(page, 'itt10-4sq')).toMatch(/Coffee House/i);
+    const list = JSON.parse((await getKey(page, 'itt10-4sq')) || '[]');
+    expect(Array.isArray(list) ? list.length : 0).toBeGreaterThanOrEqual(2);
   });
 
-  test('H FarmVille plant + harvest real plots', async ({ page }) => {
-    await page.goto('/years/2010/sites/farmville/index.html');
-    await expect(page.locator('body')).toContainText(/peak|84|March 2010/i);
-    await clearKeys(page, ['itt10-farm']);
-    await page.reload();
-    await page.waitForSelector('[data-farm-plant="strawberry"]', { timeout: 20000 });
-    await completeRealGate(page, '[data-farm-plant="strawberry"]');
-    let raw = await expectStorageTruthy(page, 'itt10-farm');
-    expect(raw).toMatch(/strawberry/i);
-    await page.locator('[data-farm-harvest]').click();
-    // harvest may leave empty plots but coins/log still in storage
-    raw = await expectStorageTruthy(page, 'itt10-farm');
-    expect(raw).toMatch(/coin|plot|log|strawberry|Harvest|Planted/i);
-  });
-
-  test('I Win7 mass + IE shell prefer real storage', async ({ page }) => {
-    await page.goto('/years/2010/sites/windows7/index.html');
-    await expect(page.locator('body')).toContainText(/2010|mass|IE 8|Windows 7/i);
-
-    await page.goto('/years/2010/sites/ie8/index.html');
-    await clearKeys(page, ['itt10-shell-pref']);
-    await page.reload();
-    await page.waitForSelector('[data-shell-prefer="ie8"]', { timeout: 15000 });
-    await page.locator('[data-shell-prefer="ie8"]').click();
-    let raw = await expectStorageTruthy(page, 'itt10-shell-pref');
-    expect(raw).toMatch(/ie8/i);
-
-    await page.goto('/years/2010/sites/ie9/index.html');
-    await expect(page.locator('body')).toContainText(/Sep 15|beta|2010/i);
-    await page.locator('[data-shell-prefer="ie9-beta"]').click();
-    raw = await expectStorageTruthy(page, 'itt10-shell-pref');
-    expect(raw).toMatch(/ie9/i);
-  });
-
-  test('J Android Market install → itt10-android-apps', async ({ page }) => {
-    await page.goto('/years/2010/sites/android/index.html');
-    await expect(page.locator('body')).toContainText(/Nexus|Jan 5|2010/i);
-    await clearKeys(page, ['itt10-android', 'itt10-android-apps']);
-    await page.goto('/years/2010/sites/android/market.html');
-    await page.reload();
-    await page.waitForSelector('[data-android-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-android-install]');
-    const raw = await page.evaluate(
-      () => localStorage.getItem('itt10-android-apps') || localStorage.getItem('itt10-android')
-    );
-    expect(raw, 'android market must mutate storage').toBeTruthy();
-  });
-
-  test('K Twitter compose → itt10-tweets', async ({ page }) => {
-    await page.goto('/years/2010/sites/twitter/about.html');
-    await expect(page.locator('body')).toContainText(/New Twitter|redesign|2010|140/i);
-
+  test('I Twitter empty blocked · 140-char tweet writes itt10-tweets', async ({ page }) => {
     await page.goto('/years/2010/sites/twitter/index.html');
     await clearKeys(page, ['itt10-tweets']);
     await page.reload();
-    await page.waitForSelector('[data-twitter-compose]', { timeout: 20000 });
-    await page.locator('[data-twitter-status], textarea').first().fill('real 2010 flow tweet');
-    await page.locator('[data-twitter-compose]').evaluate((f) => f.requestSubmit());
-    const raw = await expectStorageTruthy(page, 'itt10-tweets');
-    expect(raw).toMatch(/real 2010 flow tweet/i);
+    await page.locator('[data-tw-2010]').click();
+    expect(await getKey(page, 'itt10-tweets')).toBeFalsy();
+    await page.locator('[data-tw-text]').fill('#sidibouzid 140 in 2010');
+    await page.locator('[data-tw-2010]').click();
+    await expect.poll(() => getKey(page, 'itt10-tweets')).toMatch(/sidibouzid|real/i);
   });
 
-  test('L Pinterest pin → itt10-pin', async ({ page }) => {
+  test('J YouTube play residual + 35h honesty leftover', async ({ page }) => {
+    await page.goto('/years/2010/sites/youtube/index.html');
+    await clearKeys(page, ['itt10-youtube', 'itt10-yt-views']);
+    await page.reload();
+    await expect(page.locator('body')).toContainText(/2 billion|35 hours|Broadcast Yourself/i);
+    await page.locator('[data-yt-player], [data-yt-play]').first().click();
+    await expect(page.locator('[data-yt-player], [data-yt-status]').first()).toBeVisible();
+    const share = page.locator('[data-yt-share-bridges] a');
+    await expect(share.first()).toBeVisible({ timeout: 15000 });
+    const hrefs = await share.evaluateAll((as) => as.map((a) => a.getAttribute('href') || ''));
+    expect(hrefs.length).toBeGreaterThan(0);
+    for (const h of hrefs) {
+      const url = new URL(h, page.url());
+      expect((await page.request.get(url.pathname)).status(), url.pathname).toBe(200);
+    }
+    const save = page.locator('[data-itt-popular-save][data-storage-key="youtube"]');
+    await save.click();
+    expect(await getKey(page, 'itt10-youtube')).toBeFalsy();
+    const req = page.locator('[data-popular-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+    await save.click();
+    await expect.poll(() => getKey(page, 'itt10-youtube')).toMatch(/real|true|multiStep/i);
+  });
+
+  test('K Imgur empty upload blocked · filename writes itt10-imgur', async ({ page }) => {
+    await page.goto('/years/2010/sites/imgur/index.html');
+    await clearKeys(page, ['itt10-imgur', 'itt10-imgur-album']);
+    await page.reload();
+    await page.locator('[data-ig-upload]').evaluate((f) => f.requestSubmit());
+    expect(await getKey(page, 'itt10-imgur')).toBeFalsy();
+    await page.locator('#ott-field').fill('reddit-dump.png');
+    await page.locator('[data-ig-upload]').evaluate((f) => f.requestSubmit());
+    await expect.poll(() => getKey(page, 'itt10-imgur')).toMatch(/reddit-dump|count|real/i);
+    await expect(page.locator('[data-ig-link]')).toContainText(/imgur/i);
+  });
+
+  test('L Pinterest pin 2 writes itt10-pin', async ({ page }) => {
     await page.goto('/years/2010/sites/pinterest/index.html');
     await clearKeys(page, ['itt10-pin']);
     await page.reload();
-    await page.waitForSelector('[data-pin-save]', { timeout: 20000 });
     await page.locator('[data-pin-save]').first().click();
-    const raw = await expectStorageTruthy(page, 'itt10-pin');
-    expect(raw).toMatch(/recipe|diy|travel|pin/i);
+    expect(await getKey(page, 'itt10-pin')).toBeFalsy();
+    const req = page.locator('[data-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+    await page.locator('[data-pin-save]').first().click();
+    await page.locator('[data-pin-save]').nth(1).click();
+    const raw = await expect.poll(() => getKey(page, 'itt10-pin')).toBeTruthy().then(() => getKey(page, 'itt10-pin'));
+    expect(raw).toMatch(/recipe|wedding|pin/i);
   });
 
-  test('M Uber SF request → itt10-uber', async ({ page }) => {
+  test('M UberCab NY refuses · SF writes itt10-uber', async ({ page }) => {
     await page.goto('/years/2010/sites/uber/index.html');
     await clearKeys(page, ['itt10-uber']);
     await page.reload();
-    await expect(page.locator('body')).toContainText(/black.car|San Francisco|not.*UberX/i);
-    await page.locator('[data-uber-not-x]').check();
-    await page.locator('[data-uber-sf]').check();
-    await page.locator('#uber-req').click();
-    await expect(page.locator('#uber-st')).toContainText(/itt10-uber|black-car|Saved/i);
-    const raw = await expectStorageTruthy(page, 'itt10-uber');
-    expect(raw).toMatch(/San Francisco|black-car|requested/i);
+    await page.locator('[data-uber-city]').fill('Chicago');
+    await page.locator('[data-uber-hail]').click();
+    expect(await getKey(page, 'itt10-uber')).toBeFalsy();
+    await expect(page.locator('[data-uber-status]')).toContainText(/SF-only|UberX/i);
+    await page.locator('[data-uber-city]').fill('sf');
+    await page.locator('[data-uber-hail]').click();
+    await expect.poll(() => getKey(page, 'itt10-uber')).toMatch(/Francisco|black-car|real/i);
   });
 
-  test('N Wave invite → itt10-wave + funeral copy', async ({ page }) => {
+  test('N Quora empty ask blocked · question writes itt10-quora', async ({ page }) => {
+    await page.goto('/years/2010/sites/quora/index.html');
+    await clearKeys(page, ['itt10-quora']);
+    await page.reload();
+    await page.locator('[data-quora-ask]').click();
+    expect(await getKey(page, 'itt10-quora')).toBeFalsy();
+    await page.locator('[data-quora-q]').fill('What is Open Graph?');
+    await page.locator('[data-quora-ask]').click();
+    await expect.poll(() => getKey(page, 'itt10-quora')).toMatch(/Open Graph|real/i);
+  });
+
+  test('O Groupon honesty required then one deal', async ({ page }) => {
+    await page.goto('/years/2010/sites/groupon/index.html');
+    await clearKeys(page, ['itt10-groupon']);
+    await page.reload();
+    await page.locator('[data-groupon-buy]').click();
+    expect(await getKey(page, 'itt10-groupon')).toBeFalsy();
+    const req = page.locator('[data-groupon-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check();
+    await page.locator('[data-groupon-buy]').click();
+    await expect.poll(() => getKey(page, 'itt10-groupon')).toMatch(/deal|pizza|real/i);
+  });
+
+  test('P Wave invite then funeral 4 Aug writes itt10-wave', async ({ page }) => {
     await page.goto('/years/2010/sites/wave/index.html');
-    await expect(page.locator('body')).toContainText(/May 19|Aug 4|stop development|public/i);
     await clearKeys(page, ['itt10-wave']);
     await page.reload();
-    await page.waitForSelector('[data-wave-invite]', { timeout: 15000 });
+    await page.locator('[data-wave-invite]').click();
+    expect(await getKey(page, 'itt10-wave')).toBeFalsy();
     await page.locator('[data-wave-io]').check();
     await page.locator('[data-wave-not-email]').check();
     await page.locator('[data-wave-invite]').click();
-    await expect(page.locator('[data-wave-status]')).toContainText(/itt10-wave|invite|2010/i);
-    await expectStorageTruthy(page, 'itt10-wave');
+    await expect.poll(() => getKey(page, 'itt10-wave')).toMatch(/invited|real/i);
+    await expect(page.locator('body')).toContainText(/4 Aug|August 2010/i);
   });
 
-  test('O continuity day stack — Gmail + Hulu + Netflix + Street View real storage', async ({
-    page,
-  }) => {
-    // Gmail: form login (real submit) then draft/send if available
-    await page.goto('/years/2010/sites/gmail/index.html');
-    await page.evaluate(() => {
-      for (let i = localStorage.length - 1; i >= 0; i--) {
-        const k = localStorage.key(i);
-        if (k && k.indexOf('itt10-gmail') === 0) localStorage.removeItem(k);
-      }
-    });
+  test('Q Digg v4 writes itt10-digg · Reddit next lives', async ({ page }) => {
+    await page.goto('/years/2010/sites/digg/index.html');
+    await clearKeys(page, ['itt10-digg']);
     await page.reload();
-    await page.waitForSelector('[data-gmail-login]', { timeout: 20000 });
-    await fillGmailLogin(page);
-    await page.locator('[data-gmail-login]').evaluate((f) => f.requestSubmit());
-    await expect(page.locator('[data-gmail-status]')).toContainText(/signed|gmail|itt10|you@/i, {
-      timeout: 8000,
+    await page.locator('[data-digg-v4]').click();
+    await expect.poll(() => getKey(page, 'itt10-digg')).toMatch(/v4|reddit|real/i);
+    const next = page.locator('[data-next-flow] a[href*="reddit"]');
+    await expect(next).toBeVisible();
+    const href = await next.getAttribute('href');
+    const dest = new URL(href || '', page.url());
+    expect((await page.request.get(dest.pathname)).status()).toBe(200);
+  });
+
+  test('R Cablegate literacy required then itt10-wl', async ({ page }) => {
+    await page.goto('/years/2010/sites/wikileaks/index.html');
+    await clearKeys(page, ['itt10-wl']);
+    await page.reload();
+    await page.locator('[data-wl-read]').click();
+    expect(await getKey(page, 'itt10-wl')).toBeFalsy();
+    await page.locator('[data-wl-ack]').check();
+    await page.locator('[data-wl-read]').click();
+    await expect.poll(() => getKey(page, 'itt10-wl')).toMatch(/cable|real/i);
+  });
+
+  test('S BrowserChoice empty blocked · pick writes itt10-ballot', async ({ page }) => {
+    await page.goto('/years/2010/sites/browserchoice/index.html');
+    await clearKeys(page, ['itt10-ballot']);
+    await page.reload();
+    await page.locator('[data-ballot-pick]').click();
+    expect(await getKey(page, 'itt10-ballot')).toBeFalsy();
+    await page.locator('[name="ballot"][value="Google Chrome"]').check();
+    await page.locator('[data-ballot-pick]').click();
+    await expect.poll(() => getKey(page, 'itt10-ballot')).toMatch(/Chrome|real/i);
+  });
+
+  test('T Sling Nest start scores · famous cabinets load', async ({ page }) => {
+    await page.goto('/years/2010/sites/playable/game.html');
+    await page.locator('#play-start').click();
+    await expect
+      .poll(async () => Number((await page.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
+      .toBeGreaterThan(0);
+    const famous = await page.request.get('/years/2010/sites/playable/famous.html');
+    expect(famous.status()).toBe(200);
+    await page.goto('/years/2010/sites/playable/famous.html');
+    await expect(page.locator('[data-game-id="snake"]')).toBeVisible();
+    await expect(page.locator('[data-game-id="breakout"]')).toBeVisible();
+  });
+});
+
+test.describe('2010 continuity + trails live', () => {
+  const rooms = [
+    '/years/2010/pages/home.html',
+    '/years/2010/pages/map.html',
+    '/years/2010/pages/whats-new.html',
+    '/years/2010/sites/ask/index.html',
+    '/years/2010/sites/google/index.html',
+    '/years/2010/sites/yahoo/index.html',
+    '/years/2010/sites/chrome/index.html',
+    '/years/2010/sites/ie9/index.html',
+    '/years/2010/sites/android/index.html',
+    '/years/2010/sites/windowsphone/index.html',
+    '/years/2010/sites/reddit/index.html',
+    '/years/2010/sites/reddit/submit.html',
+    '/years/2010/sites/ipad/safari.html',
+  ];
+
+  for (const path of rooms) {
+    test(`${path} is 200 and not empty`, async ({ page }) => {
+      const res = await page.goto(path);
+      expect(res && res.ok(), path).toBeTruthy();
+      await expect(page.locator('body')).not.toBeEmpty();
     });
-    let gmailAny = await page.evaluate(() => {
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i);
-        if (k && k.indexOf('itt10-gmail') === 0 && localStorage.getItem(k)) return true;
-      }
-      return false;
-    });
-    if (!gmailAny) {
-      await page.goto('/years/2010/sites/gmail/compose.html');
-      await page.reload();
-      await page.waitForSelector('[data-gmail-compose]', { timeout: 20000 });
-      await page.locator('[data-gmail-draft]').click();
-      gmailAny = await page.evaluate(() => {
-        for (let i = 0; i < localStorage.length; i++) {
-          const k = localStorage.key(i);
-          if (k && k.indexOf('itt10-gmail') === 0 && localStorage.getItem(k)) return true;
-        }
-        return false;
-      });
+  }
+
+  test('home guided trail targets are live', async ({ page }) => {
+    await page.goto('/years/2010/pages/home.html');
+    const hrefs = await page.locator('#ott-guided-2010 a[href]').evaluateAll((as) =>
+      as.map((a) => a.getAttribute('href'))
+    );
+    expect(hrefs.length).toBeGreaterThanOrEqual(5);
+    for (const href of hrefs) {
+      const dest = new URL(href || '', page.url());
+      expect((await page.request.get(dest.pathname)).status(), dest.pathname).toBe(200);
     }
-    expect(gmailAny, 'gmail must mutate itt10-gmail*').toBeTruthy();
-
-    await page.goto('/years/2010/sites/hulu/index.html');
-    await clearKeys(page, ['itt10-hulu']);
-    await page.reload();
-    await page.waitForSelector('[data-hulu-play]', { timeout: 20000 });
-    await completeRealGate(page, '[data-hulu-play]');
-    await expectStorageTruthy(page, 'itt10-hulu');
-
-    await page.goto('/years/2010/sites/netflix/index.html');
-    await clearKeys(page, ['itt10-netflix-queue']);
-    await page.reload();
-    await page.waitForSelector('[data-netflix-queue-form]', { timeout: 20000 });
-    await page.locator('[data-netflix-q]').fill('Inception');
-    await page.locator('[data-netflix-queue-form]').evaluate((f) => f.requestSubmit());
-    await expectStorageTruthy(page, 'itt10-netflix-queue');
-
-    await page.goto('/years/2010/sites/maps/streetview.html');
-    await clearKeys(page, ['itt10-streetview']);
-    await page.reload();
-    await page.waitForSelector('[data-sv-city], [data-sv-turn]', { timeout: 20000 });
-    if (await page.locator('[data-sv-city]').count()) {
-      await page.locator('[data-sv-city]').first().click();
-    } else {
-      await page.locator('[data-sv-turn]').first().click();
-    }
-    await expectStorageTruthy(page, 'itt10-streetview');
   });
 
-  test('P Spotify Europe join → itt10-spotify-eu (not US)', async ({ page }) => {
-    await page.goto('/years/2010/sites/spotify/index.html');
-    await expect(page.locator('body')).toContainText(/Europe|not.*US|2011/i);
-    await clearKeys(page, ['itt10-spotify-eu']);
+  test('5× F1 Ask leftover writes itt10-ask', async ({ page }) => {
+    await page.goto('/years/2010/sites/ask/index.html');
+    await clearKeys(page, ['itt10-ask']);
     await page.reload();
-    await page.waitForSelector('[data-spotify-join]', { timeout: 15000 });
-    await page.locator('[data-spotify-invite]').fill('EURO-2010');
-    await completeRealGate(page, '[data-spotify-join]');
-    await expect(page.locator('[data-spotify-status]')).toContainText(/Europe|itt10-spotify|EU/i);
-    const raw = await expectStorageTruthy(page, 'itt10-spotify-eu');
-    expect(raw).toMatch(/EU|EURO|europe|true|code/i);
-  });
-
-  test('Q Dropbox + Kickstarter + WhatsApp seed real storage', async ({ page }) => {
-    await page.goto('/years/2010/sites/dropbox/index.html');
-    await clearKeys(page, ['itt10-dropbox-files']);
-    await page.reload();
-    await page.waitForSelector('[data-dropbox-add]', { timeout: 20000 });
-    if (await page.locator('[data-dropbox-name]').count()) {
-      await page.locator('[data-dropbox-name]').fill('notes-2010.txt');
-    }
-    await completeRealGate(page, '[data-dropbox-add]');
-    await expectStorageTruthy(page, 'itt10-dropbox-files');
-
-    await page.goto('/years/2010/sites/kickstarter/index.html');
-    await clearKeys(page, ['itt10-ks']);
-    await page.reload();
-    await page.waitForSelector('[data-ks-back]', { timeout: 20000 });
-    await completeRealGate(page, '[data-ks-back]');
-    await expectStorageTruthy(page, 'itt10-ks');
-
-    await page.goto('/years/2010/sites/whatsapp/index.html');
-    await clearKeys(page, ['itt10-whatsapp-seed']);
-    await page.reload();
-    await page.waitForSelector('[data-wa-seed]', { timeout: 15000 });
-    await page.locator('[data-wa-seed-date]').check();
-    await page.locator('[data-wa-not-sms]').check();
-    await page.locator('[data-wa-seed]').click();
-    await expectStorageTruthy(page, 'itt10-whatsapp-seed');
-  });
-
-  test('R Amazon cart + Wikipedia edit real storage', async ({ page }) => {
-    await page.goto('/years/2010/sites/amazon/index.html');
-    await clearKeys(page, ['itt10-amazon-cart', 'itt10-cart']);
-    await page.reload();
-    await page.waitForSelector('[data-add-cart]', { timeout: 20000 });
-    await page.locator('[data-add-cart]').first().click();
-    const cart = await page.evaluate(() => {
-      for (const k of ['itt10-amazon-cart', 'itt10-cart']) {
-        const v = localStorage.getItem(k);
-        if (v) return v;
-      }
-      // scan
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i);
-        if (k && k.indexOf('itt10') === 0 && /cart/i.test(k) && localStorage.getItem(k)) {
-          return localStorage.getItem(k);
-        }
-      }
-      return null;
-    });
-    expect(cart, 'amazon cart must mutate itt10* cart key').toBeTruthy();
-
-    await page.goto('/years/2010/sites/wikipedia/edit.html');
-    await clearKeys(page, ['itt10-wiki-edit']);
-    await page.reload();
-    await page.waitForSelector('[data-wiki-save], textarea', { timeout: 20000 });
-    const ta = page.locator('textarea').first();
-    if (await ta.count()) await ta.fill('2010 museum wiki edit real');
-    await page.locator('[data-wiki-save]').click();
-    await expectStorageTruthy(page, 'itt10-wiki-edit');
-  });
-
-  test('S Social Network culture — film flag + Open Graph about', async ({ page }) => {
-    await page.goto('/years/2010/sites/facebook/about.html');
-    await expect(page.locator('body')).toContainText(/Open Graph|600|Places|Social Network/i);
-    await clearKeys(page, ['itt10-fb-culture']);
-    await page.reload();
-    await page.waitForSelector('[data-fb-culture]', { timeout: 15000 });
-    await page.locator('[data-fb-film]').check();
-    await page.locator('[data-fb-no-reels]').check();
-    await page.locator('[data-fb-culture]').click();
-    const raw = await expectStorageTruthy(page, 'itt10-fb-culture');
-    expect(raw).toMatch(/film|2010|true/i);
-  });
-
-  test('T exit + resume — prefs survive round trip', async ({ page }) => {
-    await enterYear(page, '2010');
-    // plant a known real key in shell context (same origin)
-    await page.evaluate(() => {
-      localStorage.setItem(
-        'itt10-resume-probe',
-        JSON.stringify({ year: 2010, ts: Date.now(), real: true })
-      );
-      try {
-        localStorage.setItem('itt-last-year', '2010');
-      } catch (e) {
-        /* */
-      }
-    });
-    await expectStorageTruthy(page, 'itt10-resume-probe');
-
-    // Exit to hub via real navigation
-    await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2010"]')).toBeVisible();
-
-    // Resume year — probe must still be there (same origin localStorage)
-    await enterYear(page, '2010');
-    const raw = await expectStorageTruthy(page, 'itt10-resume-probe');
-    expect(raw).toMatch(/real|2010/i);
-    const last = await page.evaluate(() => localStorage.getItem('itt-last-year'));
-    // last-year may be set by shell; if not, probe alone proves resume storage
-    if (last) expect(last).toMatch(/2010/);
-  });
-
-  test('Chrome product room real download flag (PC path companion)', async ({ page }) => {
-    await page.goto('/years/2010/sites/chrome/index.html');
-    await clearKeys(page, ['itt10-chrome']);
-    await page.reload();
-    await page.waitForSelector('[data-chrome-download]', { timeout: 15000 });
-    await page.locator('[data-chrome-req]').nth(0).check();
-    await page.locator('[data-chrome-req]').nth(1).check();
-    await page.locator('[data-chrome-req]').nth(2).check();
-    await page.locator('[data-chrome-download]').click();
-    await expectStorageTruthy(page, 'itt10-chrome');
+    const save = page.locator('[data-itt-popular-save][data-storage-key="ask"]');
+    await save.click();
+    expect(await getKey(page, 'itt10-ask')).toBeFalsy();
+    await page.locator('#pop-field').fill('instagram filter');
+    const req = page.locator('[data-popular-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+    await save.click();
+    await expect.poll(() => getKey(page, 'itt10-ask')).toMatch(/real|true|multiStep/i);
   });
 });

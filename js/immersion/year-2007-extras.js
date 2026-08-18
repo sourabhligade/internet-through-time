@@ -370,7 +370,7 @@
 
   function bootAll(doc) {
     doc = doc || document;
-    bootGenericReal(doc);
+    /* Generic [data-itt-real-save] is owned by real-flow.js (includes real: true). */
     bootFriendFeed(doc);
     bootTumblr(doc);
     bootNetflixWatchNow(doc);

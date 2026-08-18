@@ -1021,9 +1021,10 @@
               if (form && form.parentNode) form.parentNode.insertBefore(host, form.nextSibling);
               else document.body.appendChild(host);
             }
+            /* escapeHtml turns ' into &#39; — apply UseMod ''' / '' after escape */
             var html = escapeHtml(raw)
-              .replace(/'''([^']+)'''/g, "<b>$1</b>")
-              .replace(/''([^']+)''/g, "<i>$1</i>")
+              .replace(/(&#39;){3}(.+?)(&#39;){3}/g, "<b>$2</b>")
+              .replace(/(&#39;){2}(.+?)(&#39;){2}/g, "<i>$2</i>")
               .replace(/\n\n/g, "</p><p>")
               .replace(/\n/g, "<br>");
             host.style.display = "block";

@@ -1,6 +1,7 @@
 /**
- * 2010 densify extras — Cablegate · Digg v4 · Groupon · Quora (itt10-*)
- * Optional residual from LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md
+ * 2010 lean extras — iPad order · iPhone 4 FaceTime/bumper · Open Graph Like ×2
+ * UberCab SF · Ballot · Cablegate · Groupon · Quora · Digg v4 · Twitter 140
+ * Keys: itt10-* via YearExtras
  */
 (function (global) {
   "use strict";
@@ -10,259 +11,267 @@
     console.error("ITT.YearExtras missing for 2010 — load year-extras-kit.js first");
     return;
   }
-  var prefix = YX.prefix;
   var key = YX.key;
   var feedback = YX.feedback;
   var saveJSON = YX.saveJSON;
   var loadJSON = YX.loadJSON;
-  var markUsed = YX.markUsed;
-  var showNext = YX.showNext;
-  var checked = YX.checked;
   var countChecked = YX.countChecked;
   var val = YX.val;
 
-  function bootCablegate(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-cablegate-ack]");
-    var p1 = doc.querySelector("[data-cablegate-1]");
-    var p2 = doc.querySelector("[data-cablegate-2]");
-    if (!btn && !p1) return;
-    var st = doc.querySelector("[data-cablegate-status]");
-    var kAck = key("cablegate-ack");
-    var kLeft = key("cablegate");
-    var pinned = { press: false, nodump: false };
-    var prev = loadJSON(kAck, null) || loadJSON(kLeft, null);
-    function paint() {
-      if (p1) p1.setAttribute("data-ott-done", pinned.press ? "1" : "0");
-      if (p2) p2.setAttribute("data-ott-done", pinned.nodump ? "1" : "0");
-      if (prev && st) st.textContent = "Press pathway filed · no dump · " + kAck;
-    }
-    if (prev) {
-      pinned.press = true;
-      pinned.nodump = true;
-    }
-    paint();
-    function persist() {
-      if (!(pinned.press && pinned.nodump)) {
-        feedback("Pin a press package and stamp no-dump first.", st, { error: true });
-        return;
-      }
-      var payload = {
-        ok: true,
-        event: "Cablegate",
-        date: "2010-11-28",
-        press: true,
-        noDump: true,
-        multiStep: true,
-        ts: Date.now()
-      };
-      saveJSON(kAck, payload);
-      saveJSON(kLeft, payload);
-      prev = payload;
-      paint();
-      feedback("Cablegate press pathway saved · no cable bodies mirrored.", st);
-    }
-    if (p1) {
-      p1.addEventListener("click", function () {
-        pinned.press = true;
-        paint();
-        feedback("Guardian package pinned.", st);
-      });
-    }
-    if (p2) {
-      p2.addEventListener("click", function () {
-        pinned.nodump = true;
-        paint();
-        feedback("No-dump stamp applied.", st);
-      });
-    }
-    if (btn) btn.addEventListener("click", persist);
+  function blob(extra) {
+    var o = { multiStep: true, real: true, year: "2010", ts: Date.now() };
+    var k;
+    if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
+    return o;
   }
 
-  function bootDiggV4(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-diggv4-ack]");
-    var a = doc.querySelector("[data-diggv4-algo]");
-    var b = doc.querySelector("[data-diggv4-power]");
-    if (!btn && !a) return;
-    var st = doc.querySelector("[data-diggv4-status]");
-    var k = key("digg-v4");
-    var dug = { algo: false, power: false };
-    var prev = loadJSON(k, null);
-    function paint() {
-      if (a) a.setAttribute("data-ott-done", dug.algo ? "1" : "0");
-      if (b) b.setAttribute("data-ott-done", dug.power ? "1" : "0");
-      if (prev && st) st.textContent = "v4 front page pinned · " + k;
-    }
-    if (prev) {
-      dug.algo = true;
-      dug.power = true;
-    }
-    paint();
-    function persist() {
-      if (!(dug.algo && dug.power)) {
-        feedback("Digg both stories first (v4 front page is two steps).", st, { error: true });
+  function bootIpad(doc) {
+    var btn = doc.querySelector("[data-ipad-order]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ipad-status]");
+    btn.addEventListener("click", function () {
+      var cap = "";
+      var radio = "";
+      var caps = doc.querySelectorAll("[name='ipad-cap']");
+      var i;
+      for (i = 0; i < caps.length; i++) if (caps[i].checked) cap = caps[i].value;
+      var rads = doc.querySelectorAll("[name='ipad-radio']");
+      for (i = 0; i < rads.length; i++) if (rads[i].checked) radio = rads[i].value;
+      if (!cap || !radio) {
+        feedback("Pick capacity and Wi-Fi or 3G first. Empty order writes nothing.", st, { error: true });
         return;
       }
-      var payload = {
-        ok: true,
-        redesign: "2010-08-25",
-        stories: ["algo", "power"],
-        multiStep: true,
-        ts: Date.now()
-      };
-      saveJSON(k, payload);
-      prev = payload;
-      paint();
-      feedback("Digg v4 front page saved · exodus is multi-year.", st);
+      var k = key("ipad");
+      saveJSON(k, blob({ capacity: cap, radio: radio }));
+      feedback("Ordered iPad " + cap + " · " + radio, st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
+  function bootIphone4(doc) {
+    var btn = doc.querySelector("[data-iphone4-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-iphone4-status]");
+    btn.addEventListener("click", function () {
+      var wifi = doc.querySelector("[data-ft-wifi]");
+      var bump = doc.querySelector("[data-antenna-ack]");
+      if (!(wifi && wifi.checked)) {
+        feedback("Confirm FaceTime is Wi-Fi only in 2010 first.", st, { error: true });
+        return;
+      }
+      if (!(bump && bump.checked)) {
+        feedback("Read the 2 Jul bar-formula letter (or bumper) first.", st, { error: true });
+        return;
+      }
+      var k = key("iphone4");
+      saveJSON(k, blob({ facetime: "wifi", antenna: true }));
+      feedback("iPhone 4 literacy saved.", st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
+  function bootOg(doc) {
+    if (!doc.querySelector("[data-og-like]")) return;
+    var st = doc.querySelector("[data-og-status]");
+    var liked = loadJSON(key("fb-og"), null);
+    if (!liked || !liked.pages || liked.pages.length < 2) {
+      liked = loadJSON(key("fb-og-partial"), { pages: [] }) || { pages: [] };
     }
-    if (a) {
-      a.addEventListener("click", function () {
-        dug.algo = true;
+    if (!liked.pages) liked.pages = [];
+    function paint() {
+      if (st) {
+        st.textContent =
+          liked.pages.length +
+          " partner Like(s) · need 2 for Open Graph · " +
+          key("fb-og");
+      }
+    }
+    paint();
+    var btns = doc.querySelectorAll("[data-og-like]");
+    var i;
+    for (i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function (ev) {
+        var page = ev.currentTarget.getAttribute("data-og-like") || "page";
+        if (liked.pages.indexOf(page) === -1) liked.pages.push(page);
+        if (liked.pages.length < 2) {
+          saveJSON(key("fb-og-partial"), blob({ pages: liked.pages.slice() }));
+          feedback("Liked " + page + " · Like one more partner page (CNN + IMDb).", st);
+          paint();
+          return;
+        }
+        var k = key("fb-og");
+        saveJSON(k, blob({ pages: liked.pages.slice(0, 8) }));
+        try {
+          localStorage.removeItem(key("fb-og-partial"));
+        } catch (e) { /* */ }
+        feedback("Open Graph · two partner Likes · " + k, st);
         paint();
-        feedback("Dugg publisher story.", st);
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eN) { /* */ }
       });
     }
-    if (b) {
-      b.addEventListener("click", function () {
-        dug.power = true;
-        paint();
-        feedback("Dugg power-user story.", st);
-      });
-    }
-    if (btn) btn.addEventListener("click", persist);
+  }
+
+  function bootUber(doc) {
+    var btn = doc.querySelector("[data-uber-hail]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-uber-status]");
+    btn.addEventListener("click", function () {
+      var city = (val(doc, "[data-uber-city]") || "").replace(/^\s+|\s+$/g, "").toLowerCase();
+      if (!city) {
+        feedback("Type a city first.", st, { error: true });
+        return;
+      }
+      if (city.indexOf("san francisco") === -1 && city !== "sf") {
+        feedback("UberCab is SF-only in 2010. Other cities refuse. Not UberX.", st, { error: true });
+        return;
+      }
+      var k = key("uber");
+      saveJSON(k, blob({ city: "San Francisco", kind: "black-car" }));
+      feedback("Black car requested · SF", st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
+  function bootBallot(doc) {
+    var btn = doc.querySelector("[data-ballot-pick]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ballot-status]");
+    btn.addEventListener("click", function () {
+      var pick = "";
+      var els = doc.querySelectorAll("[name='ballot']");
+      var i;
+      for (i = 0; i < els.length; i++) if (els[i].checked) pick = els[i].value;
+      if (!pick) {
+        feedback("Pick a browser on the EU ballot first.", st, { error: true });
+        return;
+      }
+      var k = key("ballot");
+      saveJSON(k, blob({ browser: pick }));
+      feedback("BrowserChoice · " + pick, st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
+  function bootWl(doc) {
+    var btn = doc.querySelector("[data-wl-read]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-wl-status]");
+    btn.addEventListener("click", function () {
+      var box = doc.querySelector("[data-wl-ack]");
+      if (!(box && box.checked)) {
+        feedback("Confirm museum literacy (one labeled cable · no dump) first.", st, { error: true });
+        return;
+      }
+      var k = key("wl");
+      saveJSON(k, blob({ cable: "2010-11-28-class" }));
+      feedback("Cablegate literacy · " + k, st);
+    });
   }
 
   function bootGroupon(doc) {
-    doc = doc || document;
     var btn = doc.querySelector("[data-groupon-buy]");
     if (!btn) return;
     var st = doc.querySelector("[data-groupon-status]");
-    var listEl = doc.querySelector("[data-groupon-list]");
-    var cityEl = doc.querySelector("[data-groupon-city]");
-    var kDeals = key("groupon-deals");
-    var kLeft = key("groupon");
-    function render() {
-      if (!listEl) return;
-      var list = loadJSON(kDeals, []);
-      if (!Array.isArray(list) || !list.length) {
-        listEl.innerHTML = "<li>No deals bought yet (theater).</li>";
-        return;
-      }
-      listEl.innerHTML = list
-        .map(function (x) {
-          return "<li><b>" + (x.title || "Deal") + "</b> · " + (x.city || "") + "</li>";
-        })
-        .join("");
-      if (cityEl && list[0] && list[0].city && !cityEl.value) cityEl.value = list[0].city;
-    }
-    render();
     btn.addEventListener("click", function () {
-      var titleEl = doc.querySelector("[data-groupon-title]");
-      var city = ((cityEl && cityEl.value) || "").replace(/^\s+|\s+$/g, "");
-      if (city.length < 2) {
-        feedback("Pick a city first (empty buy does not write).", st, { error: true });
+      if (countChecked(doc, "[data-groupon-req]") < 2) {
+        feedback("Check both daily-deal honesty boxes first.", st, { error: true });
         return;
       }
-      var title = (titleEl && titleEl.textContent) || "Sample deal";
-      var list = loadJSON(kDeals, []);
-      if (!Array.isArray(list)) list = [];
-      list.unshift({ title: title, city: city, price: 20, ts: Date.now() });
-      list = list.slice(0, 20);
-      saveJSON(kDeals, list);
-      saveJSON(kLeft, { multiStep: true, city: city, title: title, ts: Date.now() });
-      render();
-      feedback("Deal saved for " + city + " (theater · not a real merchant).", st);
+      var k = key("groupon");
+      saveJSON(k, blob({ deal: "museum-pizza" }));
+      feedback("One deal · no real money · " + k, st);
     });
   }
 
   function bootQuora(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-quora-follow]");
+    var btn = doc.querySelector("[data-quora-ask]");
     if (!btn) return;
     var st = doc.querySelector("[data-quora-status]");
-    var listEl = doc.querySelector("[data-quora-list]");
-    var k = key("quora-follows");
-    function render() {
-      if (!listEl) return;
-      var list = loadJSON(k, []);
-      if (!list.length) {
-        listEl.innerHTML = "<li>No topics followed yet.</li>";
+    btn.addEventListener("click", function () {
+      var q = (val(doc, "[data-quora-q]") || "").replace(/^\s+|\s+$/g, "");
+      if (q.length < 4) {
+        feedback("Type a question first. Empty ask writes nothing.", st, { error: true });
         return;
       }
-      listEl.innerHTML = list.map(function (t) { return "<li>Following <b>" + t + "</b></li>"; }).join("");
-    }
-    render();
-    btn.addEventListener("click", function () {
-      var sel = doc.querySelector("[data-quora-topic]");
-      var topic = (sel && sel.value) || "Startups";
-      var list = loadJSON(k, []);
-      if (list.indexOf(topic) === -1) list.unshift(topic);
-      saveJSON(k, list.slice(0, 20));
-      render();
-      feedback("Following “" + topic + "” (theater).", st);
+      var k = key("quora");
+      saveJSON(k, blob({ q: q }));
+      feedback("Asked · " + k, st);
     });
   }
 
-  function bootIpad(doc) {
-    YX.bootChecks(doc, "[data-ipad-claim]", "[data-ipad-status]", [
-      "[data-ipad-date]",
-      "[data-ipad-not-os]"
-    ], "ipad-history", { interested: true, model: "iPad", priceFrom: 499, notIpadOS: true });
+  function bootDiggV4(doc) {
+    var btn = doc.querySelector("[data-digg-v4]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-digg-status]");
+    btn.addEventListener("click", function () {
+      var k = key("digg");
+      saveJSON(k, blob({ v4: true, next: "reddit" }));
+      feedback("Digg v4 · bury is gone · walk to Reddit · " + k, st);
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) { /* */ }
+    });
   }
 
-  function bootWaSeed(doc) {
-    YX.bootChecks(doc, "[data-wa-seed]", "[data-wa-status]", [
-      "[data-wa-seed-date]",
-      "[data-wa-not-sms]"
-    ], "whatsapp-seed", { seed: true, year: "2010", notMassSms: true });
+  function bootTweet(doc) {
+    var btn = doc.querySelector("[data-tw-2010]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-tw-status]");
+    btn.addEventListener("click", function () {
+      var mode = doc.querySelector("[data-tw-lurk]");
+      var text = (val(doc, "[data-tw-text]") || "").replace(/^\s+|\s+$/g, "");
+      if (mode && mode.checked) {
+        var k0 = key("tweets");
+        saveJSON(k0, blob({ lurk: true }));
+        feedback("Lurker path · you don’t have to tweet · " + k0, st);
+        return;
+      }
+      if (!text || text.length > 140) {
+        feedback("Type 1–140 characters, or check the lurker box.", st, { error: true });
+        return;
+      }
+      var k = key("tweets");
+      saveJSON(k, blob({ text: text, n: text.length }));
+      feedback("Tweeted " + text.length + " · " + k, st);
+    });
   }
 
-  function bootWaveFuneral(doc) {
-    YX.bootChecks(doc, "[data-wave-funeral]", "[data-wave-status]", [
-      "[data-wave-may]",
-      "[data-wave-aug]"
-    ], "wave-funeral", { funeral: true, public: "2010-05-19", ended: "2010-08-04" });
-  }
-
-  function bootFbCulture(doc) {
-    YX.bootChecks(doc, "[data-fb-culture]", "[data-fb-culture-status]", [
-      "[data-fb-film]",
-      "[data-fb-no-reels]"
-    ], "fb-culture", { film: true, year: "2010", noReels: true });
-  }
-
-  function bootUberSf(doc) {
-    YX.bootChecks(doc, "#uber-req, [data-uber-kind]", "[data-uber-status], #uber-st", [
-      "[data-uber-not-x]",
-      "[data-uber-sf]"
-    ], "uber", { requested: true, city: "San Francisco", kind: "black-car", notUberX: true });
+  function bootIgAlias(doc) {
+    /* Mirror instagram.js itt10-ig-posts onto research key itt10-ig */
+    if (!doc.querySelector("[data-ig-share]")) return;
+    var share = doc.querySelector("[data-ig-share]");
+    share.addEventListener("click", function () {
+      setTimeout(function () {
+        try {
+          var raw = localStorage.getItem(key("ig-posts"));
+          if (raw) localStorage.setItem(key("ig"), raw);
+        } catch (e) { /* */ }
+      }, 50);
+    });
   }
 
   function bootAll(doc) {
     doc = doc || document;
-    bootCablegate(doc);
-    bootDiggV4(doc);
+    bootIpad(doc);
+    bootIphone4(doc);
+    bootOg(doc);
+    bootUber(doc);
+    bootBallot(doc);
+    bootWl(doc);
     bootGroupon(doc);
     bootQuora(doc);
-    bootIpad(doc);
-    bootWaSeed(doc);
-    bootWaveFuneral(doc);
-    bootFbCulture(doc);
-    bootUberSf(doc);
+    bootDiggV4(doc);
+    bootTweet(doc);
+    bootIgAlias(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
-    ITT.ImmersionFeatures.registerLocal({
-      id: "year2010extras",
-      featureKey: "year2010extras",
-      boot: bootAll
-    });
+    ITT.ImmersionFeatures.registerLocal({ id: "year2010extras", featureKey: "oneThingMachines", boot: bootAll });
   } else {
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", function () {
-        bootAll(document);
-      });
+      document.addEventListener("DOMContentLoaded", function () { bootAll(document); });
     } else {
       bootAll(document);
     }

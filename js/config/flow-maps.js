@@ -3070,1838 +3070,405 @@
     "year": "2009"
   };
 
-  ITT.flowMaps["2010"] =   {
-    "thesis": "Tablet + filters — iPad, iPhone 4, Instagram, Open Graph, Foursquare peak.",
-    "shell": "Windows 7 · IE 8 · Chrome product room",
+  ITT.flowMaps["2010"] = {
+    "thesis": "Tablet + filter + Like on the open web — still mostly a laptop.",
+    "shell": "Windows 7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph",
     "how": [
-      "One-thing: Imgur filename upload → Reddit (empty never writes)",
-      "Instagram leftover: filter → share (iOS-only honesty)",
-      "iPad multipage · iPhone 4 Antennagate · Foursquare · Open Graph"
+      "Hub → 2010 → Win7 desktop → IE 8 → Starting Point",
+      "Instagram: filter then share (itt10-ig)",
+      "iPad order · iPhone 4 FaceTime Wi-Fi · Open Graph Like ×2"
     ],
     "branches": [
       {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "double-rainbow",
-            "href": "sites/double-rainbow/index.html",
-            "do": "complete loop \u2192 itt10-rainbow"
-          }
-        ]
+        "label": "★ Star",
+        "do": "iOS filter → share · incomplete never writes",
+        "sites": [{ "name": "Instagram", "href": "sites/instagram/index.html", "do": "Filter + caption → itt10-ig" }]
       },
-
       {
-        "label": "Leftover loops · reuse forest",
-        "do": "IG filter leftover → iPad → mayor → Open Graph → Wave funeral → Imgur star",
+        "label": "P0 machines",
+        "do": "iPad · iPhone 4 · Open Graph",
         "sites": [
-          { "name": "F1 Instagram", "href": "sites/instagram/index.html", "do": "Filter + caption → itt10-ig-posts", "steps": ["Pick filter", "Caption", "Share"] },
-          { "name": "F2 iPad", "href": "sites/ipad/index.html", "do": "2-check claim → itt10-ipad-history" },
-          { "name": "F3 Foursquare", "href": "sites/foursquare/index.html", "do": "Check-in → itt10-4sq" },
-          { "name": "F4 CNN Open Graph", "href": "sites/cnn/index.html", "do": "Like plugin → itt10-fb-likes" },
-          { "name": "F5 Wave funeral", "href": "sites/wave/funeral.html", "do": "May + Aug → itt10-wave-funeral" },
-          { "name": "Star Imgur", "href": "sites/imgur/index.html", "do": "Filename upload · empty never writes" }
+          { "name": "iPad order", "href": "sites/ipad/order.html", "do": "Capacity + radio → itt10-ipad" },
+          { "name": "iPhone 4", "href": "sites/iphone/index.html", "do": "FaceTime Wi-Fi + bumper → itt10-iphone4" },
+          { "name": "Open Graph", "href": "sites/facebook/index.html", "do": "Like ×2 → itt10-fb-og" }
         ]
       },
       {
-        "label": "Phase 2 · Imgur → Reddit",
-        "do": "Meme image pipeline residual",
+        "label": "5× F1–F5 · 2010",
+        "do": "REAL leftover loops · incomplete never writes",
         "sites": [
-          {
-            "name": "Imgur",
-            "href": "sites/imgur/index.html",
-            "do": "Upload · link residual"
-          },
-          {
-            "name": "Reddit",
-            "href": "sites/reddit/index.html",
-            "do": "Front page residual · Imgur trail"
-          }
-        ]
-      },
-      {
-        "label": "Phase 4 · densify gems 2010",
-        "do": "Cablegate · Digg v4 · Groupon",
-        "sites": [
-          { "name": "Cablegate literacy", "href": "sites/cablegate/index.html", "do": "Press pathway · no dump", "steps": ["Timeline", "No dump checks", "Save"] },
-          { "name": "Cablegate press", "href": "sites/cablegate/press.html", "do": "Alliance residual" },
-          { "name": "Cablegate literacy densify", "href": "sites/cablegate/literacy.html", "do": "Is / is not table" },
-          { "name": "Digg v4", "href": "sites/digg/v4.html", "do": "Redesign residual", "steps": ["View v4", "Exodus trail", "Save"] },
-          { "name": "Digg exodus", "href": "sites/digg/exodus.html", "do": "→ Reddit trail" },
-          { "name": "Groupon", "href": "sites/groupon/index.html", "do": "Daily deal · ban IPO-as-2010", "steps": ["Deal", "Buy residual", "Save"] },
-          { "name": "Groupon deal densify", "href": "sites/groupon/deal.html", "do": "Tip threshold lore" }
-        ]
-      },
-
-      {
-        "label": "Enter",
-        "do": "Tablet year lobby",
-        "sites": [
-          {
-            "name": "Starting Point",
-            "href": "pages/home.html",
-            "do": "iPad · IG · iPhone 4 chips"
-          },
-          {
-            "name": "About 2010",
-            "href": "pages/about.html",
-            "do": "Dual-cite scale · bans"
-          },
-          {
-            "name": "Year flow map",
-            "href": "pages/map.html",
-            "do": "This UX tree"
-          }
-        ]
-      },
-      {
-        "label": "Tablet arrives",
-        "do": "A third device class",
-        "sites": [
-          {
-            "name": "iPad",
-            "href": "sites/ipad/index.html",
-            "do": "Announce · prices · multipage"
-          },
-          {
-            "name": "App Store catalog",
-            "href": "sites/appstore/index.html",
-            "do": "225k / 5B honesty class"
-          }
-        ]
-      },
-      {
-        "label": "Phone cameras as social",
-        "do": "Filters go mainstream",
-        "sites": [
-          {
-            "name": "Instagram",
-            "href": "sites/instagram/index.html",
-            "do": "Share · filters · iOS-only",
-            "steps": [
-              "Pick filter energy",
-              "Share",
-              "Posts persist itt10-ig-posts"
-            ]
-          },
-          {
-            "name": "iPhone 4",
-            "href": "sites/iphone/index.html",
-            "do": "Retina · FaceTime · Antennagate"
-          }
-        ]
-      },
-      {
-        "label": "Social graph 2.0",
-        "do": "Open Graph · places · games peak",
-        "sites": [
-          {
-            "name": "Facebook",
-            "href": "sites/facebook/index.html",
-            "do": "Like · Places · Open Graph"
-          },
-          {
-            "name": "Foursquare",
-            "href": "sites/foursquare/index.html",
-            "do": "Check-in peak culture"
-          },
-          {
-            "name": "FarmVille",
-            "href": "sites/farmville/index.html",
-            "do": "Plant/share continuity"
-          }
-        ]
-      },
-      {
-        "label": "Also-ran seeds",
-        "do": "Future giants in embryo",
-        "sites": [
-          {
-            "name": "Pinterest",
-            "href": "sites/pinterest/index.html",
-            "do": "Pinboard seed"
-          },
-          {
-            "name": "Uber SF",
-            "href": "sites/uber/index.html",
-            "do": "Black car seed honesty"
-          },
-          {
-            "name": "Google Wave funeral",
-            "href": "sites/wave/index.html",
-            "do": "Public then gone"
-          }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
+          { "name": "F1 Ask.com", "href": "sites/ask/index.html", "do": "Query persist → itt10-ask" },
+          { "name": "F2 Instagram", "href": "sites/instagram/index.html", "do": "Star filter/share → itt10-ig" },
+          { "name": "F3 Imgur", "href": "sites/imgur/index.html", "do": "Upload residual → itt10-imgur" },
+          { "name": "F4 Facebook OG", "href": "sites/facebook/index.html", "do": "Like leftover → itt10-facebook" },
+          { "name": "F5 YouTube", "href": "sites/youtube/index.html", "do": "35h honesty → itt10-youtube" }
         ]
       }
-],
+    ],
     "year": "2010"
   };
 
-  ITT.flowMaps["2011"] =   {
-    "thesis": "Airbnb request is the one-thing — host accepts, not Instant Book. Spotify US, Timeline, and Siri are the year weather.",
-    "shell": "Windows 7 · IE 9 · Chrome product",
+  ITT.flowMaps["2013"] = {
+    "thesis": "Mobile default + privacy mass — Vine 6s, IG Video, Stories, iOS 7, Snowden.",
+    "shell": "Win7 · IE 9 · Chrome #1 narrative · Win8.1 late product",
     "how": [
-      "Airbnb: search city → listing → request (itt11-airbnb)",
-      "Timeline: two checks · JSON, not \"1\"",
-      "Spotify US is P1 invite theater · Siri on 4S only"
+      "Vine: hold 6s → caption → itt13-vine-posts",
+      "Stories: My Story 24h — not IG Stories",
+      "iOS 7 flat + Touch ID · Snowden dual-source"
     ],
     "branches": [
       {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
+        "label": "5\u00d7 F1\u2013F5 \u00b7 2013",
+        "do": "REAL leftover loops \u00b7 incomplete never writes",
         "sites": [
-          {
-            "name": "nyan",
-            "href": "sites/nyan/index.html",
-            "do": "complete loop \u2192 itt11-nyan"
-          }
-        ]
-      },
-
-      {
-        "label": "Leftover loops · lean reuse",
-        "do": "Spotify → Timeline → Siri → Qwikster → Airbnb star",
-        "sites": [
-          { "name": "F1 Spotify US", "href": "sites/spotify/index.html", "do": "Invite theater → itt11-spotify-invited" },
-          { "name": "F2 Timeline", "href": "sites/facebook/timeline.html", "do": "JSON → itt11-fb-timeline" },
-          { "name": "F3 Siri", "href": "sites/iphone/siri.html", "do": "Canned phrase → itt11-siri-history" },
-          { "name": "F4 Qwikster", "href": "sites/netflix/qwikster.html", "do": "Hike stayed → itt11-qwikster" },
-          { "name": "Star Airbnb", "href": "sites/airbnb/index.html", "do": "Request-to-book" }
+          { "name": "F1 Twitter", "href": "sites/twitter/index.html", "do": "140 leftover \u2192 itt13-tweets" },
+          { "name": "F2 Google", "href": "sites/google/index.html", "do": "Query \u2192 itt13-google" },
+          { "name": "F3 About", "href": "pages/about.html", "do": "Dual scale \u2192 itt13-wiki" },
+          { "name": "F4 Vine star", "href": "sites/vine/index.html", "do": "Feed \u00b7 record is the writer" },
+          { "name": "F5 Snap", "href": "sites/snapchat/index.html", "do": "Person snap \u2192 itt13-snap" }
         ]
       },
       {
-        "label": "Enter",
-        "do": "Streaming year lobby",
-        "sites": [
-          {
-            "name": "Starting Point",
-            "href": "pages/home.html",
-            "do": "Airbnb request · Timeline · Siri trails"
-          },
-          {
-            "name": "About 2011",
-            "href": "pages/about.html",
-            "do": "Dual-cite scale · hard bans"
-          },
-          {
-            "name": "Year flow map",
-            "href": "pages/map.html",
-            "do": "This UX tree"
-          }
-        ]
+        "label": "\u2605 Star",
+        "do": "Hold 6s \u00b7 incomplete never writes",
+        "sites": [{ "name": "Vine record", "href": "sites/vine/record.html", "do": "6s + caption \u2192 itt13-vine-posts" }]
       },
       {
-        "label": "Stay request",
-        "do": "Host accepts — not Instant Book",
+        "label": "P0 machines",
+        "do": "Video \u00b7 Stories \u00b7 flat \u00b7 civic",
         "sites": [
-          {
-            "name": "Airbnb search",
-            "href": "sites/airbnb/index.html",
-            "do": "City → listings",
-            "steps": [
-              "Search a city",
-              "Open a listing",
-              "Request to book"
-            ]
-          },
-          {
-            "name": "Listing",
-            "href": "sites/airbnb/listing.html",
-            "do": "Reload keeps the pick"
-          },
-          {
-            "name": "Request",
-            "href": "sites/airbnb/request.html",
-            "do": "Message host · no pay · itt11-airbnb"
-          }
-        ]
-      },
-      {
-        "label": "Music streaming US",
-        "do": "Invite culture · not the one-thing",
-        "sites": [
-          {
-            "name": "Spotify US",
-            "href": "sites/spotify/index.html",
-            "do": "Jul 14 · invite · plan theater"
-          }
-        ]
-      },
-      {
-        "label": "Algorithmic social",
-        "do": "Timeline · Google+",
-        "sites": [
-          {
-            "name": "Facebook Timeline",
-            "href": "sites/facebook/timeline.html",
-            "do": "F8 life story · JSON, not 1"
-          },
-          {
-            "name": "Google+",
-            "href": "sites/googleplus/index.html",
-            "do": "Circles · +1 · Hangouts"
-          },
-          {
-            "name": "Hangouts",
-            "href": "sites/googleplus/hangouts.html",
-            "do": "Start hangout · tiles · local only"
-          }
-        ]
-      },
-      {
-        "label": "Voice AI phone",
-        "do": "4S / Siri / iCloud",
-        "sites": [
-          {
-            "name": "iPhone 4S / Siri",
-            "href": "sites/iphone/index.html",
-            "do": "Siri · iOS 5 · iCloud honesty"
-          },
-          {
-            "name": "iPad 2",
-            "href": "sites/ipad/index.html",
-            "do": "Thinner tablet generation"
-          }
-        ]
-      },
-      {
-        "label": "Streaming drama",
-        "do": "Netflix stumbles",
-        "sites": [
-          {
-            "name": "YouTube residual",
-            "href": "sites/youtube/index.html",
-            "do": "Google-owned Flash · upload → watch → like",
-            "steps": [
-              "Search or pick a clip",
-              "Watch / like (itt11-yt-views)",
-              "Upload needs a title (itt11-yt-uploads)"
-            ]
-          },
-          {
-            "name": "Netflix / Qwikster",
-            "href": "sites/netflix/index.html",
-            "do": "Unbundle · Qwikster era"
-          },
-          {
-            "name": "IE 9",
-            "href": "sites/ie9/index.html",
-            "do": "Mar 14 browser product"
-          },
-          {
-            "name": "Instagram (still iOS)",
-            "href": "sites/instagram/index.html",
-            "do": "No Android default yet"
-          }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
+          { "name": "IG Video 15s", "href": "sites/instagram/video.html", "do": "Filter + 15s \u2192 itt13-ig-posts" },
+          { "name": "Snap Stories", "href": "sites/snapchat/story.html", "do": "24h \u2192 itt13-snap-story" },
+          { "name": "iOS 7 / Touch ID", "href": "sites/iphone/ios7.html", "do": "Tiles + CC \u2192 itt13-ios7" },
+          { "name": "Snowden", "href": "sites/snowden/index.html", "do": "Dual papers \u2192 itt13-snowden-ack" }
         ]
       }
-],
-    "year": "2011"
-  };
-
-  ITT.flowMaps["2012"] =   {
-    "thesis": "SoundCloud timed comment is the one-thing — play, then comment at a time. Visual apps, IPO, and SOPA are the year weather.",
-    "shell": "Windows 7 · Chrome/IE9 rising · Win8 product late",
-    "how": [
-      "SoundCloud: play → timed comment (itt12-soundcloud)",
-      "Instagram Android: Apr 3 install",
-      "Facebook IPO / 1B · SOPA blackout"
     ],
-    "branches": [
-      {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "gangnam",
-            "href": "sites/gangnam/index.html",
-            "do": "complete loop \u2192 itt12-gangnam"
-          }
-        ]
-      },
-
-      {
-        "label": "Leftover loops · lean reuse",
-        "do": "Pinterest → IG Android → IPO → Maps flop → SOPA → SoundCloud star",
-        "sites": [
-          { "name": "F1 Pinterest", "href": "sites/pinterest/index.html", "do": "Pin board → itt12-pin" },
-          { "name": "F2 IG Android", "href": "sites/instagram/android.html", "do": "Apr 3 install → itt12-ig-android" },
-          { "name": "F3 Facebook IPO", "href": "sites/facebook/ipo.html", "do": "$38 · Nasdaq → itt12-fb-ipo-ack" },
-          { "name": "F4 Maps flop", "href": "sites/iphone/maps.html", "do": "Honesty + search → itt12-maps-note" },
-          { "name": "F5 SOPA", "href": "sites/wikipedia/sopa-blackout.html", "do": "Jan 18 blackout → itt12-sopa-ack" },
-          { "name": "Star SoundCloud", "href": "sites/soundcloud/track.html", "do": "Timed comment" }
-        ]
-      },
-      {
-        "label": "Enter",
-        "do": "Mobile visual lobby",
-        "sites": [
-          {
-            "name": "Starting Point",
-            "href": "pages/home.html",
-            "do": "SoundCloud comment · IG Android · IPO"
-          },
-          {
-            "name": "About 2012",
-            "href": "pages/about.html",
-            "do": "Dual-cite · hard bans"
-          },
-          {
-            "name": "Year flow map",
-            "href": "pages/map.html",
-            "do": "This UX tree"
-          }
-        ]
-      },
-      {
-        "label": "Timed comment",
-        "do": "Play · comment at a time",
-        "sites": [
-          {
-            "name": "SoundCloud",
-            "href": "sites/soundcloud/index.html",
-            "do": "Waveform residual",
-            "steps": [
-              "Play",
-              "Type a comment",
-              "Post at the playhead"
-            ]
-          },
-          {
-            "name": "Track",
-            "href": "sites/soundcloud/track.html",
-            "do": "Same machine · timed comments"
-          }
-        ]
-      },
-      {
-        "label": "Visual apps win",
-        "do": "Photos leave the desktop",
-        "sites": [
-          {
-            "name": "Instagram Android",
-            "href": "sites/instagram/android.html",
-            "do": "Apr 3 · install · FB buy path"
-          },
-          {
-            "name": "Instagram",
-            "href": "sites/instagram/index.html",
-            "do": "Share · filters continuum"
-          },
-          {
-            "name": "Pinterest",
-            "href": "sites/pinterest/index.html",
-            "do": "Mass pinboards"
-          }
-        ]
-      },
-      {
-        "label": "Facebook as market",
-        "do": "IPO · one billion",
-        "sites": [
-          {
-            "name": "Facebook IPO",
-            "href": "sites/facebook/ipo.html",
-            "do": "May 18 · $38 · Nasdaq delay"
-          },
-          {
-            "name": "1B MAU",
-            "href": "sites/facebook/about.html",
-            "do": "Oct 4 · Like only"
-          },
-          {
-            "name": "SOPA blackout",
-            "href": "sites/wikipedia/sopa-blackout.html",
-            "do": "Jan 18 · 05:00 UTC · 24h"
-          },
-          {
-            "name": "Obama AMA",
-            "href": "sites/reddit/ama.html",
-            "do": "Aug 29 · load crisis"
-          }
-        ]
-      },
-      {
-        "label": "Phone hardware leap",
-        "do": "Lightning · Maps stumble",
-        "sites": [
-          {
-            "name": "iPhone 5",
-            "href": "sites/iphone/index.html",
-            "do": "Lightning · Maps controversy honesty"
-          },
-          {
-            "name": "iPad mini",
-            "href": "sites/ipad/index.html",
-            "do": "$329+ class"
-          }
-        ]
-      },
-      {
-        "label": "Desktop OS & browser war",
-        "do": "Win8 · Chrome tops IE",
-        "sites": [
-          {
-            "name": "Windows 8",
-            "href": "sites/windows8/index.html",
-            "do": "Oct 26 · Start screen product"
-          },
-          {
-            "name": "Chrome",
-            "href": "sites/chrome/index.html",
-            "do": "StatCounter dual-week honesty"
-          },
-          {
-            "name": "UberX seed",
-            "href": "sites/uber/index.html",
-            "do": "Rideshare expands"
-          }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
-        ]
-      }
-],
-    "year": "2012"
-  };
-
-  ITT.flowMaps["2013"] =   {
-    "thesis": "Short video · flat design · privacy mass story — Vine, Stories, iOS 7, Snowden.",
-    "shell": "Windows 7 · Chrome · mobile flat UI product rooms",
-    "how": [
-      "Vine: hold to record → caption → post → feed",
-      "Snapchat Stories · Instagram Video 15s",
-      "iOS 7 flat redesign · Snowden / PRISM literacy multi-step"
-    ],
-    "branches": [
-      {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "harlem",
-            "href": "sites/harlem/index.html",
-            "do": "complete loop \u2192 itt13-harlem"
-          }
-        ]
-      },
-
-      {
-          "label": "5\u00d7 F1\u2013F5 \u00b7 2013",
-          "do": "REAL leftover loops \u00b7 incomplete never writes",
-          "sites": [
-                    {
-                              "name": "F1 Tinder trail",
-                              "href": "sites/tinder/index.html",
-                              "do": "Swipe literacy \u2192 itt13-tinder"
-                    },
-                    {
-                              "name": "F2 Snap 24h",
-                              "href": "sites/snapchat/story.html",
-                              "do": "Oct 2013 Stories + 24h expire \u2192 itt13-snap-story"
-                    },
-                    {
-                              "name": "F3 IG Video 15s",
-                              "href": "sites/instagram/video.html",
-                              "do": "15s + not-Reels \u2192 itt13-igvid"
-                    },
-                    {
-                              "name": "F4 iOS 7 / Touch ID",
-                              "href": "sites/iphone/ios7.html",
-                              "do": "Flat UI + Touch ID 2-check \u2192 itt13-ios7"
-                    },
-                    {
-                              "name": "F5 Snowden Jun 2013",
-                              "href": "sites/snowden/index.html",
-                              "do": "Verizon + PRISM 2-check \u2192 itt13-snowden"
-                    },
-                    {
-                              "name": "Star Vine 6s",
-                              "href": "sites/vine/record.html",
-                              "do": "locked star \u00b7 empty never writes"
-                    }
-          ]
-},
-
-      {
-        "label": "Enter",
-        "do": "Short-video lobby",
-        "sites": [
-          {
-            "name": "Starting Point",
-            "href": "pages/home.html",
-            "do": "Vine · Stories · iOS 7 app grid"
-          },
-          {
-            "name": "About 2013",
-            "href": "pages/about.html",
-            "do": "Dual-cite · bans · Bitcoin note"
-          },
-          {
-            "name": "Year flow map",
-            "href": "pages/map.html",
-            "do": "This UX tree"
-          }
-        ]
-      },
-      {
-        "label": "Six-second loops",
-        "do": "Hold to record",
-        "sites": [
-          {
-            "name": "Vine",
-            "href": "sites/vine/index.html",
-            "do": "Feed of loops"
-          },
-          {
-            "name": "Record a Vine",
-            "href": "sites/vine/record.html",
-            "do": "Hold · caption · post",
-            "steps": [
-              "Hold record",
-              "Add caption",
-              "Post → feed list"
-            ]
-          },
-          {
-            "name": "Vine Android",
-            "href": "sites/vine/android.html",
-            "do": "Jun 2 platform expand"
-          }
-        ]
-      },
-      {
-        "label": "Stories & 15s video",
-        "do": "Ephemeral + longer clips",
-        "sites": [
-          {
-            "name": "Snapchat Stories",
-            "href": "sites/snapchat/story.html",
-            "do": "Add to My Story · 24h"
-          },
-          {
-            "name": "Snapchat",
-            "href": "sites/snapchat/index.html",
-            "do": "Send snap · Stories link"
-          },
-          {
-            "name": "Instagram Video",
-            "href": "sites/instagram/video.html",
-            "do": "15s · filters · share"
-          }
-        ]
-      },
-      {
-        "label": "Flat phones overnight",
-        "do": "iOS 7 · Touch ID",
-        "sites": [
-          {
-            "name": "iOS 7",
-            "href": "sites/iphone/ios7.html",
-            "do": "Flat redesign literacy"
-          },
-          {
-            "name": "Touch ID",
-            "href": "sites/iphone/touchid.html",
-            "do": "5s fingerprint theater"
-          },
-          {
-            "name": "iPhone 5c",
-            "href": "sites/iphone/5c.html",
-            "do": "Color plastics · gold lore"
-          },
-          {
-            "name": "iPad Air",
-            "href": "sites/ipad/air.html",
-            "do": "Oct 22 thinner iPad"
-          }
-        ]
-      },
-      {
-        "label": "Privacy hits the front page",
-        "do": "PRISM summer",
-        "sites": [
-          {
-            "name": "Snowden / PRISM",
-            "href": "sites/snowden/index.html",
-            "do": "Multi-card literacy → save"
-          },
-          {
-            "name": "HealthCare.gov",
-            "href": "sites/healthcare/index.html",
-            "do": "Launch · outage · retry theater"
-          }
-        ]
-      },
-      {
-        "label": "Desktop & consoles",
-        "do": "Chrome #1 · next gen boxes",
-        "sites": [
-          {
-            "name": "Chrome",
-            "href": "sites/chrome/index.html",
-            "do": "Desktop share story · download"
-          },
-          {
-            "name": "Windows 8.1",
-            "href": "sites/windows81/index.html",
-            "do": "Oct 17 Start button return lore"
-          },
-          {
-            "name": "PS4",
-            "href": "sites/ps4/index.html",
-            "do": "Share button · launch honesty"
-          },
-          {
-            "name": "Xbox One",
-            "href": "sites/xboxone/index.html",
-            "do": "Kinect-in-box · DRM controversy"
-          }
-        ]
-      },
-      {
-        "label": "Under-known gems",
-        "do": "Not the top-10 listicle",
-        "sites": [
-          {
-            "name": "Telegram seed",
-            "href": "sites/telegram/index.html",
-            "do": "Privacy + nick → itt13-telegram"
-          },
-          {
-            "name": "Telegram chat",
-            "href": "sites/telegram/chat.html",
-            "do": "Seed chat after profile"
-          },
-          {
-            "name": "Medium draft",
-            "href": "sites/medium/index.html",
-            "do": "12+ chars + literacy → itt13-medium-draft"
-          },
-          {
-            "name": "Yahoo × Tumblr",
-            "href": "sites/tumblr/yahoo.html",
-            "do": "Pin $1.1B + promise"
-          },
-          {
-            "name": "Facebook Home flop",
-            "href": "sites/facebook/home.html",
-            "do": "Install then read reviews"
-          },
-          {
-            "name": "WhatsApp (pre-FB)",
-            "href": "sites/whatsapp/index.html",
-            "do": "Verify phone → install → chat"
-          },
-          {
-            "name": "Glass Explorer",
-            "href": "sites/glass/index.html",
-            "do": "Explorer + backlash literacy"
-          }
-        ]
-      },
-      {
-        "label": "Year games",
-        "do": "Museum originals",
-        "sites": [
-          {
-            "name": "Pipe Hop",
-            "href": "sites/playable/game.html",
-            "do": "Flappy-class · itt13-game-pipehop"
-          },
-          {
-            "name": "Loop Six",
-            "href": "sites/playable/loop.html",
-            "do": "6s hold · gold band · itt13-game-loopsix"
-          },
-          {
-            "name": "Playable toys",
-            "href": "sites/playable/index.html",
-            "do": "Vine hold · Snap dots · WA status"
-          }
-        ]
-      },
-      {
-        "label": "Also 2013 residual",
-        "do": "Not the one-thing",
-        "sites": [
-          {
-            "name": "Slack seed",
-            "href": "sites/slack/index.html",
-            "do": "Join channel theater"
-          },
-          {
-            "name": "Tinder residual",
-            "href": "sites/tinder/index.html",
-            "do": "Swipe then match"
-          },
-          {
-            "name": "Outlook.com",
-            "href": "sites/outlook/index.html",
-            "do": "Hotmail successor sign-in"
-          },
-          {
-            "name": "Google Keep",
-            "href": "sites/googlekeep/index.html",
-            "do": "Color note save"
-          },
-          {
-            "name": "Bitcoin news",
-            "href": "sites/bitcoin/index.html",
-            "do": "Silk Road literacy · no market UI"
-          }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
-        ]
-      }
-],
     "year": "2013"
   };
 
   ITT.flowMaps["2014"] = {
-    thesis: "Platform capital · bigger phones · open-web panic — WhatsApp deal, Heartbleed, iPhone 6, 1B sites.",
-    shell: "Windows 7 residual · Chrome #1 global · US desktop IE plurality · Win10 TP late product only",
-    how: [
-      "WhatsApp: install → deal honesty → chat send",
-      "Heartbleed: CVE literacy → rotate ≥2 services",
-      "iPhone 6 / 6 Plus · Apple Pay October · Bendgate · Watch announce (ships 2015)"
-    ],
-    year: "2014",
-    branches: [
-      {
-        label: "Viral this year",
-        do: "k-loop or culture toy · incomplete never writes",
-        sites: [
-          { name: "Ice Bucket nominate-3", href: "sites/icebucket/index.html", do: "tag 3 → itt14-ice-nom3" }
-        ]
-      },
-      {
-        label: "5× F1–F5 · 2014",
-        do: "REAL leftover loops · incomplete never writes",
-        sites: [
-          { name: "F1 Twitch go-live", href: "sites/twitch/index.html", do: "Go-live literacy · channel + 2 checks → itt14-twitch" },
-          { name: "F2 Slack trail", href: "sites/slack/index.html", do: "Workspace pick → itt14-slack" },
-          { name: "F3 Heartbleed intro", href: "sites/heartbleed/index.html", do: "CVE literacy leftover → itt14-hb · rotate is rotate.html / itt14-heartbleed-rotate" },
-          { name: "F4 Ice Bucket", href: "sites/icebucket/index.html", do: "Share residual → itt14-ice" },
-          { name: "F5 iPhone 6 + 1B sites", href: "sites/billion/index.html", do: "6/6 Plus + Sep 1B websites → itt14-1b" },
-          { name: "Star WhatsApp", href: "sites/whatsapp/index.html", do: "locked star · empty never writes" }
-        ]
-      },
-      {
-        label: "Enter & orient",
-        do: "Thesis · dual-cite · bans",
-        sites: [
-          { name: "Starting Point", href: "pages/home.html", do: "One-thing WhatsApp · ott-guided 6" },
-          { name: "About 2014", href: "pages/about.html", do: "968,882,453 · 1B Sep · bans" },
-          { name: "Year flow map", href: "pages/map.html", do: "This UX tree" }
-        ]
-      },
-      {
-        label: "Messaging empire",
-        do: "Chat graph bought",
-        sites: [
-          { name: "WhatsApp install", href: "sites/whatsapp/index.html", do: "Name → install · itt14-wa-install" },
-          { name: "WhatsApp deal", href: "sites/whatsapp/about.html", do: "$16B+$3B / $19B · Oct 6 close" },
-          { name: "WhatsApp chat", href: "sites/whatsapp/chat.html", do: "Send local · itt14-wa-msgs" }
-        ]
-      },
-      {
-        label: "Open-web panic",
-        do: "Named SSL bug + 1B hosts",
-        sites: [
-          { name: "Heartbleed", href: "sites/heartbleed/index.html", do: "CVE-2014-0160 · no exploit" },
-          { name: "Rotate passwords", href: "sites/heartbleed/rotate.html", do: "≥2 services · itt14-heartbleed-rotate" },
-          { name: "1B websites", href: "sites/billion/index.html", do: "Dual-cite ack" }
-        ]
-      },
-      {
-        label: "Bigger phone",
-        do: "Phablet + Pay + Bendgate",
-        sites: [
-          { name: "iPhone 6 / 6 Plus", href: "sites/iphone/index.html", do: "Prices · size picker" },
-          { name: "Apple Pay", href: "sites/iphone/pay.html", do: "October US enroll" },
-          { name: "Bendgate", href: "sites/iphone/bendgate.html", do: "Literacy ≥2" },
-          { name: "Watch announce", href: "sites/apple/watch.html", do: "Ships 2015 banner" },
-          { name: "iOS 8", href: "sites/iphone/ios8.html", do: "Sep 17 free update" }
-        ]
-      },
-      {
-        label: "Virality",
-        do: "Challenge + podcast",
-        sites: [
-          { name: "Ice Bucket", href: "sites/icebucket/index.html", do: "Nominate · ALS" },
-          { name: "Serial", href: "sites/serial/index.html", do: "Oct 3 · TAL spin-off" },
-          { name: "YouTube leftover", href: "sites/youtube/index.html", do: "Mass #3 · empty upload never writes · itt14-youtube" }
-        ]
-      },
-      {
-        label: "Desktop honesty",
-        do: "Chrome global · IE US · TP only",
-        sites: [
-          { name: "Chrome", href: "sites/chrome/index.html", do: "Global #1 · US IE plurality" },
-          { name: "Windows 10 TP", href: "sites/windows10/index.html", do: "Insider · not retail" }
-        ]
-      },
-      {
-        label: "Empire P1",
-        do: "M&A + Material + Echo + Slack",
-        sites: [
-          { name: "Twitch", href: "sites/twitch/index.html", do: "$970M cash" },
-          { name: "Oculus", href: "sites/oculus/index.html", do: "~$2B + earn-out" },
-          { name: "Alibaba IPO", href: "sites/alibaba/index.html", do: "$68 · $21.8B→$25B" },
-          { name: "Echo invite", href: "sites/echo/index.html", do: "Nov 6 · mass 2015" },
-          { name: "Material Design", href: "sites/material/index.html", do: "I/O Jun 25 · Holo residual" },
-          { name: "Slack public", href: "sites/slack/index.html", do: "Preview 2013 · public Feb 2014 · itt14-slack" },
-          { name: "Slack #general", href: "sites/slack/channel.html", do: "messages persist · itt14-slack-msgs" },
-          { name: "Cardboard", href: "sites/cardboard/index.html", do: "I/O Jun 25 · itt14-cardboard" },
-          { name: "Secret", href: "sites/secret/index.html", do: "Jan 30 friend-graph" },
-          { name: "Yik Yak", href: "sites/yikyak/index.html", do: "2014 peak · harm literacy" },
-          { name: "Ello", href: "sites/ello/index.html", do: "You Are Not a Product" }
-        ]
-      },
-      {
-        label: "Year games",
-        do: "Museum originals",
-        sites: [
-          { name: "Tile Fold", href: "sites/playable/game.html", do: "2048-class · itt14-game-tilefold" },
-          { name: "Playable toys", href: "sites/playable/index.html", do: "3 toys · itt14-playable*" }
-        ]
-      },
-      {
-        label: "Famous games",
-        do: "Two era-famous cabinets · incomplete never writes",
-        sites: [
-          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
-        ]
-      }
-]
-  };
-
-  ITT.flowMaps["2015"] = {
-    "thesis": "Watch ships · free Win10 · go live · Apple Music · content blockers · Google Photos.",
-    "shell": "Windows 7 residual early · Windows 10 free-upgrade product · Chrome / Edge",
+    "thesis": "Messaging becomes the mass internet — 1 billion sites and leaky TLS.",
+    "shell": "Win7 residual · IE 9 · Chrome #1 narrative · Watch / Win10 not defaults",
     "how": [
-      "Apple Watch: face → band → shipped honesty (Apr 24)",
-      "Win10 free upgrade → Edge prefer",
-      "Go live (Periscope/Meerkat) · Music trial · iOS 9 blockers · Photos backup"
+      "WhatsApp: two deal notes → install → itt14-wa-install",
+      "Heartbleed: literacy + rotate — no exploit → itt14-heartbleed",
+      "Ice Bucket: nominate + summer note → itt14-icebucket"
     ],
     "branches": [
       {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
+        "label": "5\u00d7 F1\u2013F5 \u00b7 2014",
+        "do": "REAL leftover loops \u00b7 incomplete never writes",
         "sites": [
-          {
-            "name": "the-dress",
-            "href": "sites/the-dress/index.html",
-            "do": "complete loop \u2192 itt15-dress"
-          }
-        ]
-      },
-
-      {
-          "label": "5\u00d7 F1\u2013F5 \u00b7 2015",
-          "do": "REAL leftover loops \u00b7 incomplete never writes",
-          "sites": [
-                    {
-                              "name": "F1 Discord trail",
-                              "href": "sites/discord/index.html",
-                              "do": "Join theater \u2192 itt15-discord · chat leftover itt15-discord-msgs"
-                    },
-                    {
-                              "name": "F2 Win10 / GWX",
-                              "href": "sites/windows10/index.html",
-                              "do": "29 Jul 2015 free upgrade \u2192 itt15-win10"
-                    },
-                    {
-                              "name": "F3 Periscope / FB Live",
-                              "href": "sites/periscope/index.html",
-                              "do": "Go-live title \u2192 itt15-periscope \u00b7 5\u00d7 leftover is itt15-live"
-                    },
-                    {
-                              "name": "F4 Apple Music",
-                              "href": "sites/applemusic/index.html",
-                              "do": "Trial literacy \u2192 itt15-applemusic \u00b7 5\u00d7 leftover is itt15-music"
-                    },
-                    {
-                              "name": "F5 Photos + iOS 9 blockers",
-                              "href": "sites/googlephotos/index.html",
-                              "do": "Backup on \u2192 itt15-googlephotos \u00b7 5\u00d7 leftover is itt15-photos"
-                    },
-                    {
-                              "name": "Star Apple Watch",
-                              "href": "sites/apple/watch.html",
-                              "do": "locked star \u00b7 empty never writes"
-                    }
-          ]
-},
-
-      {
-        "label": "Enter",
-        "do": "2015 lobby",
-        "sites": [
-          { "name": "Starting Point", "href": "pages/home.html", "do": "Chips · trails · kit" },
-          { "name": "About 2015", "href": "pages/about.html", "do": "863M · −11% · bans" },
-          { "name": "Year flow map", "href": "pages/map.html", "do": "This UX tree" }
+          { "name": "F1 Twitter 140", "href": "sites/twitter/index.html", "do": "Still 140 \u2192 itt14-tweets" },
+          { "name": "F2 Facebook deal", "href": "sites/facebook/index.html", "do": "$16B / $19B leftover \u2192 itt14-fb" },
+          { "name": "F3 YouTube", "href": "sites/youtube/index.html", "do": "Residual player \u2192 itt14-youtube" },
+          { "name": "F4 Ice Bucket", "href": "sites/icebucket/index.html", "do": "Nominate leftover \u2192 itt14-icebucket" },
+          { "name": "F5 WhatsApp star", "href": "sites/whatsapp/index.html", "do": "Install \u2192 itt14-wa-install" }
         ]
       },
       {
-        "label": "Wearable ships",
-        "do": "On the wrist",
-        "sites": [
-          { "name": "Apple Watch", "href": "sites/apple/watch.html", "do": "Face · band · shipped", "steps": ["Pick face", "Pick band", "Confirm shipped", "Save"] },
-          { "name": "Faces", "href": "sites/apple/faces.html", "do": "Face catalog" },
-          { "name": "Pair", "href": "sites/apple/pair.html", "do": "Pair literacy" }
-        ]
+        "label": "\u2605 Star",
+        "do": "Two deal notes \u00b7 incomplete never writes",
+        "sites": [{ "name": "WhatsApp install", "href": "sites/whatsapp/index.html", "do": "16B+3B RSU \u2192 itt14-wa-install" }]
       },
       {
-        "label": "Free OS upgrade",
-        "do": "Win10 + Edge",
+        "label": "P0 machines",
+        "do": "TLS \u00b7 share loop \u00b7 bigger phone",
         "sites": [
-          { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "Free upgrade theater", "steps": ["Honesty boxes", "Upgrade"] },
-          { "name": "Upgrade path", "href": "sites/windows10/upgrade.html", "do": "Reserve narrative" },
-          { "name": "Win10 about", "href": "sites/windows10/about.html", "do": "Win7 residual honesty" },
-          { "name": "Microsoft Edge", "href": "sites/edge/index.html", "do": "Download · prefer" },
-          { "name": "Edge about", "href": "sites/edge/about.html", "do": "Spartan · not Chromium" },
-          { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Still habit" }
-        ]
-      },
-      {
-        "label": "Streaming war",
-        "do": "Apple Music",
-        "sites": [
-          { "name": "Apple Music", "href": "sites/applemusic/index.html", "do": "Trial · Beats 1" },
-          { "name": "Trial", "href": "sites/applemusic/trial.html", "do": "3-month class REAL" },
-          { "name": "Beats 1", "href": "sites/applemusic/beats1.html", "do": "Radio class" }
-        ]
-      },
-      {
-        "label": "Go live",
-        "do": "Phone livestream",
-        "sites": [
-          { "name": "Periscope", "href": "sites/periscope/index.html", "do": "Go LIVE", "steps": ["Title", "Go live", "List grows"] },
-          { "name": "Periscope about", "href": "sites/periscope/about.html", "do": "Twitter class" },
-          { "name": "Meerkat", "href": "sites/meerkat/index.html", "do": "SXSW peak" },
-          { "name": "Meerkat about", "href": "sites/meerkat/about.html", "do": "API cut literacy" },
-          { "name": "Facebook Live", "href": "sites/fblive/index.html", "do": "Feed livestream" },
-          { "name": "FB Live about", "href": "sites/fblive/about.html", "do": "Rollout seed" }
-        ]
-      },
-      {
-        "label": "Phone privacy + photos",
-        "do": "iOS 9 · Photos",
-        "sites": [
-          { "name": "Content blockers", "href": "sites/ios9/blockers.html", "do": "Enable checklist" },
-          { "name": "Blockers about", "href": "sites/ios9/about.html", "do": "Safari extension class" },
-          { "name": "Google Photos", "href": "sites/googlephotos/index.html", "do": "Backup on" },
-          { "name": "Photos library", "href": "sites/googlephotos/library.html", "do": "Library grid" }
-        ]
-      },
-      {
-        "label": "P1 densify gems",
-        "do": "Platform + culture",
-        "sites": [
-          { "name": "Snap Discover", "href": "sites/snapchat/discover.html", "do": "Jan 27 grid" },
-          { "name": "Discord", "href": "sites/discord/index.html", "do": "Gamer seed" },
-          { "name": "Discord server", "href": "sites/discord/server.html", "do": "Channel theater" },
-          { "name": "Peach canvas", "href": "sites/peach/canvas.html", "do": "Magic words REAL" },
-          { "name": "Messenger bots", "href": "sites/messenger/bots.html", "do": "F8 bots" },
-          { "name": "Secret end", "href": "sites/secret/shutdown.html", "do": "2015 shutdown" }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
+          { "name": "Heartbleed", "href": "sites/heartbleed/index.html", "do": "CVE-2014-0160 rotate \u2192 itt14-heartbleed" },
+          { "name": "Ice Bucket", "href": "sites/icebucket/index.html", "do": "Nominate \u2192 itt14-icebucket" },
+          { "name": "iPhone 6 / Pay", "href": "sites/iphone/index.html", "do": "6 or 6 Plus \u2192 itt14-iphone6" },
+          { "name": "Material", "href": "sites/material/index.html", "do": "I/O + Lollipop \u2192 itt14-material" }
         ]
       }
-],
-    "year": "2015"
+    ],
+    "year": "2014"
   };
 
   ITT.flowMaps["2016"] = {
-    "thesis": "Stories rings · sidewalk AR · hold Like · jack death · Vine funeral · WhatsApp lock.",
-    "shell": "Windows 10 free-upgrade end class · Chrome habit · Edge Spartan residual",
+    thesis: "The 24-hour Story jumps to the mass feed. Sidewalks fill. Like grows five faces.",
+    shell: "Win10 rising · Chrome habit · Edge Spartan residual",
+    year: "2016",
+    how: [
+      "Stories: type a slide → Add to Story → 24h rail → itt16-ig-stories",
+      "Next waits for the write. Crumb ← last dest is visible on land.",
+      "Leftover 3×: pick + honesty + go → itt16-pop-<slug>",
+      "Side leftovers (AirPods / Dyn / archive) rejoin the official trail."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays Stories. Incomplete never writes.",
+        sites: [
+          { name: "1 Instagram Stories", href: "sites/instagram/stories.html", do: "slide → itt16-ig-stories → GO" },
+          { name: "2 Pokémon GO leftover", href: "sites/pokemongo/index.html", do: "team + honesty → itt16-pogo → Reactions" },
+          { name: "3 Reactions", href: "sites/facebook/reactions.html", do: "face → itt16-fb-react → E2E" },
+          { name: "4 WhatsApp E2E", href: "sites/whatsapp/e2e.html", do: "default lock → itt16-wa-e2e → iPhone 7" },
+          { name: "5 iPhone 7", href: "sites/iphone/index.html", do: "jack + dongle → itt16-iphone7 → Vine" },
+          { name: "6 Vine goodbye", href: "sites/vine/goodbye.html", do: "wind-down → itt16-vine-end → Spectacles" },
+          { name: "7 Spectacles", href: "sites/snapchat/spectacles.html", do: "pair → itt16-spectacles → musical.ly" },
+          { name: "8 musical.ly", href: "sites/musically/index.html", do: "caption · not TikTok → itt16-musically → Win10 end" },
+          { name: "9 Win10 upgrade ends", href: "sites/windows10/end.html", do: "offer closed · not Chromium Edge → itt16-win10-end → Gym Rush" },
+          { name: "10 Gym Rush", href: "sites/playable/game.html", do: "score → itt16-game-gymrush → Stories" }
+        ]
+      },
+      {
+        label: "Side leftover · rejoin official",
+        do: "Never a second star",
+        sites: [
+          { name: "Your story", href: "sites/instagram/archive.html", do: "replay · no second writer" },
+          { name: "AirPods leftover", href: "sites/iphone/airpods.html", do: "orders Dec 13 → itt16-airpods → Vine" },
+          { name: "Dyn", href: "sites/dyn/index.html", do: "21 Oct literacy · no exploit → itt16-dyn → Win10 end" },
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Gym Rush" }
+        ]
+      }
+    ]
+  };
+
+
+  ITT.flowMaps["2015"] = {
+    "thesis": "The phone goes live and the photo roll leaves the device — while Microsoft gives the desktop away.",
+    "shell": "Win7 residual · IE 9 · Chrome habit · Win10 is a product room",
     "how": [
-      "Stories: write · 24h + not-Reels · Add",
-      "Pokémon GO: location → team → catch → battery",
-      "Reactions hold · jack $9 dongle · Vine nothing today · WA lock · Dyn Friday · STEM chirp"
+      "Periscope: title → Go LIVE → watch YOUR replay + tap hearts → itt15-periscope",
+      "Photos: pick still → Backup HQ/Original → search beach → itt15-googlephotos",
+      "Win10: GWX tray · two ticks + reserve (shell still Win7) → itt15-win10",
+      "Music: account + trial → Beats 1 desk (LA/NY/London) → itt15-applemusic",
+      "Back: product crumb + ← previous. Year menu = hub."
     ],
     "branches": [
       {
-          "label": "5\u00d7 F1\u2013F5 \u00b7 2016",
-          "do": "REAL leftover loops \u00b7 incomplete never writes",
-          "sites": [
-                    {
-                              "name": "F1 musical.ly",
-                              "href": "sites/musically/create.html",
-                              "do": "Sound \u2192 clip residual \u2192 itt16-musically"
-                    },
-                    {
-                              "name": "F2 Dyn",
-                              "href": "sites/dyn/index.html",
-                              "do": "21 Oct 2016 2-check \u2192 itt16-dyn"
-                    },
-                    {
-                              "name": "F3 STEM",
-                              "href": "sites/stem/index.html",
-                              "do": "Chirp or Game 4 \u2192 itt16-stem"
-                    },
-                    {
-                              "name": "F4 Jio",
-                              "href": "sites/jio/index.html",
-                              "do": "Welcome Offer through 31 Dec \u2192 itt16-jio"
-                    },
-                    {
-                              "name": "F5 Marketplace",
-                              "href": "sites/facebook/marketplace.html",
-                              "do": "No-pay local list \u2192 itt16-marketplace"
-                    },
-                    {
-                              "name": "Star IG Stories",
-                              "href": "sites/instagram/stories.html",
-                              "do": "locked star \u00b7 empty never writes"
-                    }
-          ]
-},
-
-      {
-        "label": "Enter",
-        "do": "2016 lobby",
+        "label": "★ Star · two paths",
+        "do": "Title required · empty never writes · reload keeps title",
         "sites": [
-          { "name": "Starting Point", "href": "pages/home.html", "do": "Chips · trails · kit" },
-          { "name": "About 2016", "href": "pages/about.html", "do": "1.05B · +21% · blank users cell" },
-          { "name": "What's New", "href": "pages/whats-new.html", "do": "Calendar + feed weather" },
-          { "name": "Year flow map", "href": "pages/map.html", "do": "This UX tree" }
+          { "name": "Periscope Go LIVE", "href": "sites/periscope/index.html", "do": "heartbeat theater → itt15-periscope" },
+          { "name": "Watch + hearts", "href": "sites/periscope/watch.html", "do": "your title · tap ♥ → itt15-peri-watch (not the star)" }
         ]
       },
       {
-        "label": "Stories war",
-        "do": "24h format industrializes",
+        "label": "P0 machines",
+        "do": "Locker · GWX · trial · crumbs stay in-product",
         "sites": [
-          { "name": "Instagram Stories", "href": "sites/instagram/stories.html", "do": "Aug 2 launch", "steps": ["Write", "Add to Story", "See list"] },
-          { "name": "Snapchat residual", "href": "sites/snapchat/story.html", "do": "Still competitive" }
+          { "name": "Google Photos", "href": "sites/googlephotos/index.html", "do": "pick ≥1 · HQ/Original → itt15-googlephotos" },
+          { "name": "Photos library", "href": "sites/googlephotos/library.html", "do": "search beach · empty never writes" },
+          { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "GWX reserve · Win7 residual → itt15-win10" },
+          { "name": "Win10 upgrade", "href": "sites/windows10/upgrade.html", "do": "Start menu · Spartan / not Chromium" },
+          { "name": "Apple Music", "href": "sites/applemusic/index.html", "do": "3-month trial → itt15-applemusic" },
+          { "name": "Beats 1", "href": "sites/applemusic/beats1.html", "do": "Zane / Ebro / Julie desks" }
         ]
       },
       {
-        "label": "Outdoor AR",
-        "do": "Phone leaves the couch",
+        "label": "Leftover · not the chip",
+        "do": "Literacy / one tap · Watch is leftover hardware",
         "sites": [
-          { "name": "Pokémon GO", "href": "sites/pokemongo/index.html", "do": "Jul 6 wave", "steps": ["Location honesty", "Team", "Catch", "Battery", "Save"] }
-        ]
-      },
-      {
-        "label": "Feed emotion",
-        "do": "Beyond Like",
-        "sites": [
-          { "name": "Facebook Reactions", "href": "sites/facebook/reactions.html", "do": "Feb 24 global", "steps": ["Open post", "Pick reaction"] }
-        ]
-      },
-      {
-        "label": "Phone autumn",
-        "do": "Jack death · wireless buds",
-        "sites": [
-          { "name": "iPhone 7 jack", "href": "sites/iphone/jack.html", "do": "Sep 7 · $29 / $9 / $649", "steps": ["3 literacy boxes", "Save"] },
-          { "name": "AirPods", "href": "sites/airpods/index.html", "do": "Orders Dec 13 · $159", "steps": ["Ship honesty", "Pair"] }
-        ]
-      },
-      {
-        "label": "Six-second end",
-        "do": "Vine dies · lip-sync rises",
-        "sites": [
-          { "name": "Vine goodbye", "href": "sites/vine/goodbye.html", "do": "Oct 27 · nothing today" },
-          { "name": "Musical.ly", "href": "sites/musically/create.html", "do": "Not TikTok brand" }
-        ]
-      },
-      {
-        "label": "Messaging trust",
-        "do": "E2E default",
-        "sites": [
-          { "name": "WhatsApp E2E", "href": "sites/whatsapp/security.html", "do": "Apr 5 public · 1B is Feb 1" }
-        ]
-      },
-      {
-        "label": "Friday down",
-        "do": "Refresh Netflix",
-        "sites": [
-          { "name": "Dyn / Mirai", "href": "sites/dyn/index.html", "do": "Oct 21 · no exploit" }
-        ]
-      },
-      {
-        "label": "Homepage science",
-        "do": "Chirp · Game 4",
-        "sites": [
-          { "name": "STEM 2016", "href": "sites/stem/index.html", "do": "LIGO + AlphaGo + Juno/Proxima chips" }
-        ]
-      },
-      {
-        "label": "Access",
-        "do": "4G felt free",
-        "sites": [
-          { "name": "Jio Welcome Offer", "href": "sites/jio/index.html", "do": "5 Sep–31 Dec · 100M is Feb 2017 lookback" }
-        ]
-      },
-      {
-        "label": "Desktop honesty",
-        "do": "Free upgrade closed",
-        "sites": [
-          { "name": "Windows 10", "href": "sites/windows10/index.html", "do": "Free upgrade ended 29 Jul" },
-          { "name": "Microsoft Edge", "href": "sites/edge/index.html", "do": "Spartan residual" },
-          { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Habit browser" }
-        ]
-      },
-      {
-        "label": "Continuity",
-        "do": "Still live from 2015",
-        "sites": [
-          { "name": "Apple Watch residual", "href": "/years/2015/sites/apple/watch.html", "do": "Shipped 2015" },
-          { "name": "Apple Music residual", "href": "/years/2015/sites/applemusic/index.html", "do": "Streaming 2015" },
-          { "name": "Google Photos residual", "href": "/years/2015/sites/googlephotos/index.html", "do": "Backup 2015" },
-          { "name": "Periscope residual", "href": "/years/2015/sites/periscope/index.html", "do": "Live 2015" }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
+          { "name": "Edge Spartan", "href": "sites/edge/index.html", "do": "not Chromium → itt15-edge" },
+          { "name": "Watch leftover", "href": "sites/apple/watch.html", "do": "ships 24 Apr → itt15-watch" },
+          { "name": "Discover", "href": "sites/snapchat/discover.html", "do": "24h edition → itt15-snap-discover" },
+          { "name": "Discord", "href": "sites/discord/index.html", "do": "named server → itt15-discord" },
+          { "name": "Let's Encrypt", "href": "sites/letsencrypt/index.html", "do": "hostname → itt15-le" },
+          { "name": "Blob Rush", "href": "sites/playable/game.html", "do": "agar-class · not slither → itt15-game-blobrush" }
         ]
       }
-],
-    "year": "2016"
+    ],
+    "year": "2015"
   };
 
+
+
+  ITT.flowMaps["2011"] = {
+  "thesis": "2011 lean door · leftover F-loops + locked star",
+  "shell": "Windows 7 · IE 9",
+  "how": [
+    "Star Google+ Circles",
+    "Leftover F1–F5",
+    "Atlas lists on-disk rooms"
+  ],
+  "branches": [
+    {
+      "label": "5× F1–F5 · 2011",
+      "do": "REAL leftover loops",
+      "sites": [
+        {
+          "name": "F1 Twitter 140",
+          "href": "sites/twitter/index.html",
+          "do": "Still 140 → itt11-tweets"
+        },
+        {
+          "name": "F2 Groupon",
+          "href": "sites/groupon/index.html",
+          "do": "One deal a day → itt11-groupon"
+        },
+        {
+          "name": "F3 Tumblr",
+          "href": "sites/tumblr/index.html",
+          "do": "Dashboard leftover → itt11-tumblr"
+        },
+        {
+          "name": "F4 About wiki",
+          "href": "pages/about.html",
+          "do": "Dual-cite scale → itt11-wiki"
+        },
+        {
+          "name": "F5 Timeline",
+          "href": "sites/facebook/timeline.html",
+          "do": "2011 leftover → itt11-timeline"
+        },
+        {
+          "name": "★ Google+ Circles",
+          "href": "sites/googleplus/index.html",
+          "do": "locked star"
+        }
+      ]
+    },
+    {
+      "label": "★ Star",
+      "do": "Locked lean star",
+      "sites": [
+        {
+          "name": "Google+ Circles",
+          "href": "sites/googleplus/index.html",
+          "do": "incomplete never writes"
+        }
+      ]
+    }
+  ],
+  "year": "2011"
+};
+
+  ITT.flowMaps["2012"] = {
+  "thesis": "2012 lean door · leftover F-loops + locked star",
+  "shell": "Windows 7 · IE 9",
+  "how": [
+    "Star Instagram Android",
+    "Leftover F1–F5",
+    "Atlas lists on-disk rooms"
+  ],
+  "branches": [
+    {
+      "label": "5× F1–F5 · 2012",
+      "do": "REAL leftover loops",
+      "sites": [
+        {
+          "name": "F1 Twitter 140",
+          "href": "sites/twitter/index.html",
+          "do": "Still 140 → itt12-tweets"
+        },
+        {
+          "name": "F2 Facebook IPO",
+          "href": "sites/facebook/ipo.html",
+          "do": "$38 · Nasdaq delay → itt12-fb-ipo"
+        },
+        {
+          "name": "F3 Facebook 1B",
+          "href": "sites/facebook/index.html",
+          "do": "1B MAU 4 Oct → itt12-facebook"
+        },
+        {
+          "name": "F4 SOPA black",
+          "href": "sites/wikipedia/index.html",
+          "do": "18 Jan 24h → itt12-wiki"
+        },
+        {
+          "name": "F5 Pinterest",
+          "href": "sites/pinterest/index.html",
+          "do": "Public board leftover → itt12-pin"
+        },
+        {
+          "name": "★ Instagram Android",
+          "href": "sites/instagram/android.html",
+          "do": "locked star"
+        }
+      ]
+    },
+    {
+      "label": "★ Star",
+      "do": "Locked lean star",
+      "sites": [
+        {
+          "name": "Instagram Android",
+          "href": "sites/instagram/android.html",
+          "do": "incomplete never writes"
+        }
+      ]
+    }
+  ],
+  "year": "2012"
+};
+
   ITT.flowMaps["2017"] = {
-    thesis: "Face ID · Fortnite BR · 280 · WannaCry · Vine gone · 1.77B.",
-    shell: "Windows 10 mass · free upgrade already ended · Chrome / Edge residual",
-    how: [
-      "iPhone X / Face ID: no home button · not Touch ID · not XS",
-      "Fortnite literacy → Storm Circle",
-      "Twitter 280 · WannaCry · Vine actually gone"
-    ],
+    thesis: "The face becomes the password. A free storm eats Saturday. Tweets get twice as long.",
+    shell: "Win10 mass · Chrome habit · EdgeHTML residual",
     year: "2017",
+    how: [
+      "Face ID: no Home + not XS → unlock → itt17-faceid",
+      "280: type past 140 → Tweet. Under 141 never writes.",
+      "Next waits for the write. Crumb ← last dest is visible on land.",
+      "Animoji leftover never writes the star key."
+    ],
     branches: [
       {
-        label: "Viral this year",
-        do: "k-loop or culture toy · incomplete never writes",
+        label: "★ Official 10",
+        do: "Star stays Face ID. Incomplete never writes.",
         sites: [
-          { name: "distracted", href: "sites/distracted/index.html", do: "complete loop → itt17-distracted" }
+          { name: "1 Face ID / iPhone X", href: "sites/iphone/x.html", do: "unlock → itt17-faceid → Fortnite" },
+          { name: "2 Fortnite BR leftover", href: "sites/fortnite/index.html", do: "100 + free · not Switch → itt17-fortnite → 280" },
+          { name: "3 Twitter 280", href: "sites/twitter/280.html", do: "past 140 → itt17-twitter-280 → Teams" },
+          { name: "4 Teams GA", href: "sites/teams/index.html", do: "preview-vs-GA + name → itt17-teams → Vine gone" },
+          { name: "5 Vine gone", href: "sites/vine/gone.html", do: "archive → itt17-vine-gone → Switch" },
+          { name: "6 Nintendo Switch", href: "sites/switch/index.html", do: "$299.99 buy this year → itt17-switch → WannaCry" },
+          { name: "7 WannaCry", href: "sites/wannacry/index.html", do: "literacy · no payload → itt17-wannacry → musical.ly" },
+          { name: "8 musical.ly", href: "sites/musically/index.html", do: "caption · merge is 2018 → itt17-musically → Equifax" },
+          { name: "9 Equifax freeze", href: "sites/equifax/index.html", do: "no SSN → itt17-equifax → Storm Circle" },
+          { name: "10 Storm Circle", href: "sites/playable/game.html", do: "score → itt17-game-stormcircle → Face ID" }
         ]
       },
       {
-        label: "5× F1–F5 · 2017",
-        do: "REAL leftover loops · incomplete never writes",
+        label: "Side leftover · rejoin official",
+        do: "Never a second star",
         sites: [
-          { name: "F1 Netflix My List", href: "sites/netflix/index.html", do: "incomplete never writes \u2192 itt17-nf-mylist" },
-          { name: "F2 Fortnite literacy", href: "sites/fortnite/index.html", do: "incomplete never writes \u2192 itt17-fn" },
-          { name: "F3 Twitter 280", href: "sites/twitter/280.html", do: "incomplete never writes \u2192 itt17-twitter280" },
-          { name: "F4 WannaCry", href: "sites/wannacry/index.html", do: "incomplete never writes \u2192 itt17-wc" },
-          { name: "F5 Vine gone", href: "sites/vine/gone.html", do: "incomplete never writes \u2192 itt17-vine-gone" },
-          { name: "Star Face ID", href: "sites/iphone/x.html", do: "locked star \u00b7 empty never writes" },
-        ]
-      },
-
-      {
-        label: "Enter & orient",
-        do: "Thesis · +69% · bans",
-        sites: [
-          { name: "Starting Point", href: "pages/home.html", do: "One-thing Face ID · ott-guided 6" },
-          { name: "About 2017", href: "pages/about.html", do: "1,766,926,408 · +69%" },
-          { name: "Year flow map", href: "pages/map.html", do: "This UX tree" },
-          { name: "What's New", href: "pages/whats-new.html", do: "Calendar spine" }
-        ]
-      },
-      {
-        label: "Face is the password",
-        do: "iPhone X",
-        sites: [
-          { name: "iPhone X / Face ID", href: "sites/iphone/x.html", do: "Sep 12 · Nov 3 ship · itt17-faceid" },
-          { name: "iPhone 8 residual", href: "sites/iphone/index.html", do: "Still has a home button" }
-        ]
-      },
-      {
-        label: "Free storm",
-        do: "Drop in",
-        sites: [
-          { name: "Fortnite BR", href: "sites/fortnite/index.html", do: "Sep 26 · free · 100 · itt17-fortnite" },
-          { name: "Storm Circle", href: "sites/playable/game.html", do: "itt17-game-stormcircle" },
-          { name: "Playables", href: "sites/playable/index.html", do: "Toys" }
-        ]
-      },
-      {
-        label: "Longer tweets",
-        do: "280",
-        sites: [
-          { name: "Twitter 280", href: "sites/twitter/280.html", do: "Nov 7 · itt17-twitter280" },
-          { name: "Twitter residual", href: "sites/twitter/index.html", do: "140 leftover" }
-        ]
-      },
-      {
-        label: "Trust & outage",
-        do: "WannaCry · Equifax · 3B",
-        sites: [
-          { name: "WannaCry", href: "sites/wannacry/index.html", do: "May 12 · no payload · itt17-wannacry" },
-          { name: "Equifax", href: "sites/equifax/index.html", do: "Sep 7 · no SSN · itt17-equifax" },
-          { name: "Yahoo 3B", href: "sites/yahoo-3b/index.html", do: "Oct 3 · not 2016 news" }
-        ]
-      },
-      {
-        label: "Endings & office",
-        do: "Vine gone · Teams GA",
-        sites: [
-          { name: "Vine gone", href: "sites/vine/gone.html", do: "Jan 17 · itt17-vine-gone" },
-          { name: "Teams GA", href: "sites/teams/index.html", do: "Mar 14 · 2016 was preview" }
-        ]
-      },
-      {
-        label: "P1 densify",
-        do: "Culture + policy",
-        sites: [
-          { name: "Switch", href: "sites/switch/index.html", do: "Mar 3 · not Fortnite yet" },
-          { name: "Bitcoin", href: "sites/bitcoin/index.html", do: "Dec ~$20k" },
-          { name: "Title II repeal", href: "sites/netneutrality/index.html", do: "Dec 14 · 3–2" },
-          { name: "musical.ly", href: "sites/musically/index.html", do: "Nov 9 · not TikTok" },
-          { name: "Snap redesign", href: "sites/snapchat/redesign.html", do: "Nov hated" },
-          { name: "Nitro", href: "sites/discord/nitro.html", do: "Jan 23" },
-          { name: "Facebook 2B", href: "sites/facebook/2b.html", do: "Jun 27 · not Meta" }
-        ]
-      },
-      {
-        label: "P2 harvest (not the one-thing)",
-        do: "IPO · live TV · counter screen · second outage · plugin death · OS vs face",
-        sites: [
-          { name: "Snap IPO", href: "sites/snapchat/ipo.html", do: "$17 · $24 · no vote" },
-          { name: "YouTube TV", href: "sites/youtube/tv.html", do: "Apr 5 · $35 · not Premium" },
-          { name: "Echo Show", href: "sites/echo/show.html", do: "Jun 28 · $229.99" },
-          { name: "NotPetya", href: "sites/notpetya/index.html", do: "Jun 27 · ≠ WannaCry" },
-          { name: "Flash EOL", href: "sites/flash/eol.html", do: "Jul 25 · dies 2020" },
-          { name: "iOS 11", href: "sites/ios11/index.html", do: "Sep 19 · not Face ID" },
-          { name: "Pixel 2", href: "sites/pixel/2.html", do: "Oct 4 / 19 · not X" },
-          { name: "KRACK", href: "sites/krack/index.html", do: "Oct 16 · no exploit" },
-          { name: "Netflix My List", href: "sites/netflix/index.html", do: "queue · not one-thing" }
-        ]
-      },
-      {
-        label: "Famous games",
-        do: "Two era-famous cabinets · incomplete never writes",
-        sites: [
-          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+          { name: "Animoji leftover", href: "sites/iphone/animoji.html", do: "needs Face ID → itt17-animoji → Fortnite" },
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Storm Circle" }
         ]
       }
-]
+    ]
   };
 
   ITT.flowMaps["2018"] = {
-    thesis: "GDPR · TikTok · hearing · IGTV · 1.63B hostnames · half the world.",
-    shell: "Windows 10 mass · Chrome 68 Not secure · EdgeHTML residual",
-    how: [
-      "GDPR: Accept All is the trap · Manage + rights write itt18-gdpr",
-      "TikTok FYP reorders from taps · Aug 2 merge",
-      "Hearing · IGTV · Spectre · HomePod"
-    ],
+    thesis: "The banner is the door. A quiz becomes a hearing. The loops change their name.",
+    shell: "Win10 mass · Chrome habit · EdgeHTML residual",
     year: "2018",
-    branches: [
-      {
-        label: "Viral this year",
-        do: "k-loop or culture toy · incomplete never writes",
-        sites: [
-          { name: "yanny", href: "sites/yanny/index.html", do: "complete loop → itt18-yanny" }
-        ]
-      },
-      {
-        label: "5× F1–F5 · 2018",
-        do: "REAL leftover loops · incomplete never writes",
-        sites: [
-          { name: "F1 TikTok FYP", href: "sites/tiktok/fyp.html", do: "incomplete never writes \u2192 itt18-tiktok-fyp" },
-          { name: "F2 Hearing", href: "sites/trust/index.html", do: "incomplete never writes \u2192 itt18-hearing" },
-          { name: "F3 IGTV", href: "sites/instagram/igtv.html", do: "incomplete never writes \u2192 itt18-igtv" },
-          { name: "F4 Chrome Not Secure", href: "sites/chrome/not-secure.html", do: "incomplete never writes \u2192 itt18-chrome68" },
-          { name: "F5 Spectre / HomePod", href: "sites/spectre/index.html", do: "incomplete never writes \u2192 itt18-spectre" },
-          { name: "Star GDPR Manage", href: "sites/gdpr/index.html", do: "locked star \u00b7 empty never writes" },
-        ]
-      },
-
-      {
-        label: "Enter & orient",
-        do: "Thesis · −8% hostnames · bans",
-        sites: [
-          { name: "Starting Point", href: "pages/home.html", do: "One-thing GDPR · ott-guided 6" },
-          { name: "About 2018", href: "pages/about.html", do: "1,630,322,579 · −8%" },
-          { name: "Year flow map", href: "pages/map.html", do: "This UX tree" },
-          { name: "What's New", href: "pages/whats-new.html", do: "Calendar spine" }
-        ]
-      },
-      {
-        label: "The banner is the door",
-        do: "GDPR Manage",
-        sites: [
-          { name: "Cookie banner", href: "sites/gdpr/index.html", do: "Accept All ≠ save" },
-          { name: "Manage", href: "sites/gdpr/manage.html", do: "Purpose toggles" },
-          { name: "Rights", href: "sites/gdpr/rights.html", do: "Art. 15/17 · 25 May · itt18-gdpr" },
-          { name: "EU geo-block", href: "sites/gdpr/blocked.html", do: "US newsrooms turned Europe off" }
-        ]
-      },
-      {
-        label: "The loops change name",
-        do: "TikTok",
-        sites: [
-          { name: "Merge honesty", href: "sites/tiktok/index.html", do: "Aug 2 · not 2017 acquire" },
-          { name: "For You", href: "sites/tiktok/fyp.html", do: "Reorder · itt18-tiktok-fyp" },
-          { name: "musical.ly residual", href: "sites/musically/index.html", do: "Trail from 2017" }
-        ]
-      },
-      {
-        label: "Quiz → hearing",
-        do: "Trust",
-        sites: [
-          { name: "Cambridge Analytica", href: "sites/trust/index.html", do: "17 Mar · 87M · itt18-ca" },
-          { name: "Senate hearing", href: "sites/trust/hearing.html", do: "Apr 10 quote" }
-        ]
-      },
-      {
-        label: "Vertical hour",
-        do: "IGTV",
-        sites: [
-          { name: "IGTV", href: "sites/instagram/igtv.html", do: "Jun 20 · not Reels · itt18-igtv" },
-          { name: "Stories residual", href: "sites/instagram/stories.html", do: "2016 leftover" }
-        ]
-      },
-      {
-        label: "CPU + kitchen",
-        do: "Spectre · HomePod · Chrome 68",
-        sites: [
-          { name: "Spectre", href: "sites/spectre/index.html", do: "Jan 3 · no exploit" },
-          { name: "HomePod", href: "sites/homepod/index.html", do: "Feb 9 · $349" },
-          { name: "Chrome 68", href: "sites/chrome/not-secure.html", do: "Not secure" },
-          { name: "Chrome habit", href: "sites/chrome/index.html", do: "Still #1 · EdgeHTML" }
-        ]
-      },
-      {
-        label: "P1 densify",
-        do: "Rename · Switch · $7.5B · listing · law · sunsets",
-        sites: [
-          { name: "YouTube Premium", href: "sites/youtube/premium.html", do: "$11.99 · not TV" },
-          { name: "Fortnite Switch", href: "sites/fortnite/switch.html", do: "Jun 12" },
-          { name: "GitHub", href: "sites/github/microsoft.html", do: "$7.5B · dual date" },
-          { name: "Spotify direct", href: "sites/spotify/direct.html", do: "Not a bank IPO" },
-          { name: "FOSTA / personals", href: "sites/craigslist/personals.html", do: "No ads reconstructed" },
-          { name: "Google+ sunset", href: "sites/googleplus/sunset.html", do: "Dies 2019" },
-          { name: "Tumblr ban", href: "sites/tumblr/ban.html", do: "Dec 17" },
-          { name: "iOS 12", href: "sites/ios12/index.html", do: "Screen Time · not Face ID" }
-        ]
-      },
-      {
-        label: "P2 harvest (not the one-thing)",
-        do: "IPO · Go · TLS · XS · Portal · Pixel · Flickr · Edge intent",
-        sites: [
-          { name: "Dropbox IPO", href: "sites/dropbox/ipo.html", do: "$21 · DBX" },
-          { name: "Oculus Go", href: "sites/oculus/go.html", do: "$199" },
-          { name: "TLS 1.3", href: "sites/tls13/index.html", do: "RFC 8446" },
-          { name: "iPhone XS / XR", href: "sites/iphone/xs.html", do: "Face ID not new" },
-          { name: "Portal", href: "sites/facebook/portal.html", do: "$199 / $349" },
-          { name: "Pixel 3", href: "sites/pixel/3.html", do: "not Pixel 2" },
-          { name: "Flickr 1000", href: "sites/flickr/1000.html", do: "enforce Jan 2019" },
-          { name: "Edge Chromium announce", href: "sites/edge/chromium.html", do: "not the default" },
-          { name: "Consent Dash", href: "sites/playable/game.html", do: "itt18-game-consentdash" },
-          { name: "Playables", href: "sites/playable/index.html", do: "Toys" }
-        ]
-      },
-      {
-        label: "Famous games",
-        do: "Two era-famous cabinets · incomplete never writes",
-        sites: [
-          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
-        ]
-      }
-]
-  };
-
-  ITT.flowMaps["2019"] = {
-    "thesis": "Short-video mass, streaming stacks, games-as-service, cloud try — TikTok For You, Disney+, Apple Arcade, Apple TV+, AirPods Pro, iPhone 11, Stadia.",
-    "shell": "Windows 10 mass · Chrome habit · always-on broadband",
-    "how": [
-      "TikTok: caption + literacy → post For You",
-      "Disney+: plan + join · Watchlist multipage",
-      "Arcade: pick game · trial · play session",
-      "iPhone 11 color + literacy → AirPods Pro order/pair",
-      "Stadia: claim tier → stream title",
-      "Apple TV+: pick original → watch progress"
-    ],
-    "branches": [
-      {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "area51",
-            "href": "sites/area51/index.html",
-            "do": "complete loop \u2192 itt19-area51"
-          }
-        ]
-      },
-
-      {
-        "label": "Leftover loops \u00b7 2019 extras (not 5\u00d7 pack)",
-        "do": "Writer keys live on extras rooms \u00b7 no data-5x overlay",
-        "sites": [
-          {
-            "name": "F1 TikTok For You",
-            "href": "sites/tiktok/index.html",
-            "do": "incomplete never writes \u2192 itt19-tiktok"
-          },
-          {
-            "name": "F2 Arcade",
-            "href": "sites/arcade/index.html",
-            "do": "incomplete never writes \u2192 itt19-arcade"
-          },
-          {
-            "name": "F3 TV+",
-            "href": "sites/appletv/index.html",
-            "do": "incomplete never writes \u2192 itt19-appletv"
-          },
-          {
-            "name": "F4 Stadia",
-            "href": "sites/stadia/index.html",
-            "do": "incomplete never writes \u2192 itt19-stadia"
-          },
-          {
-            "name": "F5 iPhone 11",
-            "href": "sites/iphone/iphone11.html",
-            "do": "incomplete never writes \u2192 itt19-iphone11"
-          },
-          {
-            "name": "Star Disney+ Continue",
-            "href": "sites/disneyplus/home.html",
-            "do": "locked star \u00b7 empty never writes"
-          }
-        ]
-      },
-
-      {
-        "label": "Enter",
-        "do": "2019 lobby",
-        "sites": [
-          { "name": "Starting Point", "href": "pages/home.html", "do": "Trails · kit" },
-          { "name": "About 2019", "href": "pages/about.html", "do": "1.63B table end · ~4.1B users · bans" },
-          { "name": "Year flow map", "href": "pages/map.html", "do": "This UX tree" }
-        ]
-      },
-      {
-        "label": "Short video mass",
-        "do": "For You habit",
-        "sites": [
-          { "name": "TikTok For You", "href": "sites/tiktok/index.html", "do": "Caption · post", "steps": ["Caption", "Literacy", "Post"] },
-          { "name": "TikTok Create", "href": "sites/tiktok/create.html", "do": "Create surface" }
-        ]
-      },
-      {
-        "label": "Streaming stack",
-        "do": "Nov launches",
-        "sites": [
-          { "name": "Disney+ trial trap", "href": "sites/disneyplus/index.html", "do": "Nov 12 · 7-day trial never writes" },
-          { "name": "Disney+ Who’s watching", "href": "sites/disneyplus/home.html", "do": "Continue is the save", "steps": ["Profile", "Two titles", "Save"] },
-          { "name": "Apple TV+", "href": "sites/appletv/index.html", "do": "Nov 1", "steps": ["Original", "Watch"] }
-        ]
-      },
-      {
-        "label": "Games as service",
-        "do": "Arcade · cloud",
-        "sites": [
-          { "name": "Apple Arcade", "href": "sites/arcade/index.html", "do": "Sep 19", "steps": ["Pick", "Trial", "Play"] },
-          { "name": "Stadia", "href": "sites/stadia/index.html", "do": "Nov 19", "steps": ["Claim", "Stream"] }
-        ]
-      },
-      {
-        "label": "Autumn hardware",
-        "do": "Phone · buds",
-        "sites": [
-          { "name": "iPhone 11", "href": "sites/iphone/iphone11.html", "do": "Sep stores", "steps": ["Color", "Literacy", "Order"] },
-          { "name": "AirPods Pro", "href": "sites/airpodspro/index.html", "do": "Oct ANC", "steps": ["Order", "Pair"] },
-          { "name": "Marshmello", "href": "sites/fortnite/marshmello.html", "do": "Feb 2 · 10.7M · not Travis" }
-        ]
-      },
-      {
-        "label": "Continuity",
-        "do": "Still live",
-        "sites": [
-          { "name": "Chrome", "href": "sites/chrome/index.html", "do": "Habit browser" },
-          { "name": "Windows 10 residual", "href": "sites/windows10/index.html", "do": "Free upgrade already ended 2016" },
-          { "name": "Edge preview", "href": "sites/edge/preview.html", "do": "Ships Jan 15 2020" },
-          { "name": "AirPods Pro", "href": "sites/airpodspro/index.html", "do": "Oct ANC · 2016 line continues" },
-          { "name": "GDPR residual", "href": "sites/gdpr/residual.html", "do": "2018 door · CNIL is the 2019 receipt" }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
-        ]
-      }
-],
-    "year": "2019"
-  };
-
-  ITT.flowMaps["2020"] = {
-    label: "2020 — You're muted",
-    thesis: "You’re muted. 300 million participants — not unique people. Reels is not Stories. Flash dies December 31.",
-    shell: "Windows 10 mass · Chrome habit · Chromium Edge 79 stable",
     how: [
-      "Zoom: Join is the trap · mute + chat + leave write itt20-zoom",
-      "Reels 15s · Aug 5 · not Stories",
-      "CCPA Do Not Sell · Flash EOL · Edge 79"
+      "GDPR: Accept All never writes · Manage + 2 ticks → Save → itt18-gdpr",
+      "TikTok leftover: tap two clips + merge honesty → itt18-tiktok-fyp",
+      "Next waits for the write. Crumb ← last dest is visible on land.",
+      "Reels / Meta / Chromium Edge-as-default / Marshmello are not this year."
     ],
-    year: "2020",
     branches: [
       {
-        label: "5× F1–F5 · 2020",
-        do: "REAL leftover loops · incomplete never writes",
+        label: "★ Official 10",
+        do: "Star stays GDPR Manage. Accept All never writes.",
         sites: [
-          { name: "F1 Quibi 6-min", href: "sites/quibi/index.html", do: "incomplete never writes \u2192 itt20-quibi" },
-          { name: "F2 Reels 15s", href: "sites/instagram/reels.html", do: "incomplete never writes \u2192 itt20-reels" },
-          { name: "F3 Flash EOL", href: "sites/flash/eol.html", do: "incomplete never writes \u2192 itt20-flash" },
-          { name: "F4 CCPA", href: "sites/ccpa/index.html", do: "incomplete never writes \u2192 itt20-ccpa-dns" },
-          { name: "F5 ACNH", href: "sites/acnh/island.html", do: "incomplete never writes \u2192 itt20-acnh" },
-          { name: "Star Zoom mute/leave", href: "sites/zoom/index.html", do: "locked star \u00b7 empty never writes" },
-        ]
-      },
-
-      {
-        label: "Enter & orient",
-        do: "Thesis · table ended · bans",
-        sites: [
-          { name: "Starting Point", href: "pages/home.html", do: "One-thing Zoom · ott-guided 6" },
-          { name: "About 2020", href: "pages/about.html", do: "table ended · 189M · +10.2%" },
-          { name: "Year flow map", href: "pages/map.html", do: "This UX tree" },
-          { name: "What's New", href: "pages/whats-new.html", do: "Calendar spine" }
+          { name: "1 GDPR banner", href: "sites/gdpr/index.html", do: "Manage → itt18-gdpr → TikTok" },
+          { name: "2 TikTok For You leftover", href: "sites/tiktok/fyp.html", do: "two taps + merge → itt18-tiktok-fyp → Hearing" },
+          { name: "3 Hearing", href: "sites/trust/index.html", do: "Apr 10 → itt18-hearing → IGTV" },
+          { name: "4 IGTV", href: "sites/instagram/igtv.html", do: "not Reels + title → itt18-igtv → Chrome 68" },
+          { name: "5 Chrome 68", href: "sites/chrome/not-secure.html", do: "Not secure · not Chromium Edge → itt18-not-secure → HomePod" },
+          { name: "6 HomePod", href: "sites/homepod/index.html", do: "$349 buy this year → itt18-homepod → Spectre" },
+          { name: "7 Spectre", href: "sites/spectre/index.html", do: "literacy · no exploit → itt18-spectre → Fortnite/Switch" },
+          { name: "8 Fortnite on Switch", href: "sites/fortnite/switch.html", do: "not Marshmello → itt18-fn-switch → GitHub" },
+          { name: "9 GitHub $7.5B", href: "sites/github/microsoft.html", do: "2008 was the issue dest → itt18-github → Consent Dash" },
+          { name: "10 Consent Dash", href: "sites/playable/game.html", do: "Manage is the save → itt18-game-consentdash → GDPR" }
         ]
       },
       {
-        label: "You're muted",
-        do: "Zoom meeting machine",
+        label: "Side leftover · rejoin official",
+        do: "Never a second star",
         sites: [
-          { name: "Join", href: "sites/zoom/index.html", do: "Join ≠ save" },
-          { name: "Waiting room", href: "sites/zoom/join.html", do: "Host admits" },
-          { name: "Meeting", href: "sites/zoom/meeting.html", do: "Mute persist · chat required" },
-          { name: "Recap", href: "sites/zoom/recap.html", do: "itt20-zoom" },
-          { name: "About Zoom", href: "sites/zoom/about.html", do: "10M → 300M participants" }
-        ]
-      },
-      {
-        label: "Short video + statute",
-        do: "Reels · CCPA · Flash · Edge",
-        sites: [
-          { name: "Reels", href: "sites/instagram/reels.html", do: "15s · Aug 5" },
-          { name: "CCPA", href: "sites/ccpa/index.html", do: "Do Not Sell" },
-          { name: "Shop slot", href: "sites/shop/index.html", do: "ad hides" },
-          { name: "Flash EOL", href: "sites/flash/eol.html", do: "31 Dec" },
-          { name: "Edge 79", href: "sites/edge/index.html", do: "15 Jan" }
-        ]
-      },
-      {
-        label: "P1 densify",
-        do: "Island · concert · rivals · stack · EO · hardware",
-        sites: [
-          { name: "ACNH", href: "sites/acnh/island.html", do: "20 Mar" },
-          { name: "Astronomical", href: "sites/fortnite/astronomical.html", do: "12.3M · not Marshmello" },
-          { name: "Meet / Teams", href: "sites/meet/index.html", do: "29 Apr" },
-          { name: "HBO Max", href: "sites/hbomax/index.html", do: "$14.99" },
-          { name: "TikTok EO", href: "sites/tiktok/eo.html", do: "app still works" },
-          { name: "Epic", href: "sites/epic/liberty.html", do: "13 Aug" },
-          { name: "iPhone 12", href: "sites/iphone/12.html", do: "5G" },
-          { name: "M1", href: "sites/apple/m1.html", do: "10 Nov" },
-          { name: "GAEN", href: "sites/exposure/index.html", do: "API" }
-        ]
-      },
-      {
-        label: "S15 densify",
-        do: "Funerals · waitlists · queues · not-2021",
-        sites: [
-          { name: "Mixer", href: "sites/mixer/index.html", do: "22 Jul · not Twitch" },
-          { name: "Peacock", href: "sites/peacock/index.html", do: "15 Jul · $4.99" },
-          { name: "PS5 queue", href: "sites/ps5/index.html", do: "Add to cart ≠ save" },
-          { name: "GPT-3", href: "sites/openai/gpt3.html", do: "waitlist · not ChatGPT" },
-          { name: "Shorts", href: "sites/youtube/shorts.html", do: "India · not Reels" },
-          { name: "Quest 2", href: "sites/quest2/index.html", do: "$299 · not Meta" },
-          { name: "iOS 14", href: "sites/ios14/index.html", do: "widgets · ATT 2021" },
-          { name: "Iowa app", href: "sites/iowa/index.html", do: "3 Feb · failed" },
-          { name: "Twitter hack", href: "sites/twitter/hack.html", do: "15 Jul · no wallet" },
-          { name: "Clubhouse", href: "sites/clubhouse/index.html", do: "invite · mass 2021" },
-          { name: "Schrems II", href: "sites/schrems/index.html", do: "Shield invalid" }
-        ]
-      },
-      {
-        label: "Play + residual",
-        do: "Sus Vote · chips last",
-        sites: [
-          { name: "Sus Vote", href: "sites/playable/game.html", do: "itt20-game-among" },
-          { name: "Playables", href: "sites/playable/index.html", do: "Toys" },
-          { name: "Disney+ residual", href: "sites/disneyplus/residual.html", do: "2019 launch" },
-          { name: "GDPR residual", href: "sites/gdpr/residual.html", do: "2018 door" },
-          { name: "Chrome habit", href: "sites/chrome/index.html", do: "still habit" },
-          { name: "Win10", href: "sites/windows10/index.html", do: "still mass" }
-        ]
-      },
-      {
-        label: "Famous games",
-        do: "Two era-famous cabinets · incomplete never writes",
-        sites: [
-          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
+          { name: "Manage replay", href: "sites/gdpr/manage.html", do: "replay · no second official write" },
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Consent Dash" }
         ]
       }
-]
+    ]
   };
-
-  ITT.flowMaps["2021"] = {
-    label: "2021 — The phone asks first",
-    thesis: "Allow Tracking is the trap. Ask App Not to Track is the save. WhatsApp bleeds to Signal. The company is Meta. The app is still Facebook.",
-    shell: "Windows 10 mass · Chrome habit · Win11 residual",
-    how: [
-      "ATT: Allow does not write · Not to Track + 26 Apr writes itt21-att",
-      "WhatsApp policy Accept is the scare · Signal is the save",
-      "Meta 28 Oct · app still Facebook · Flash brick 12 Jan · Win11 phased"
-    ],
-    year: "2021",
-    branches: [
-      {
-        label: "Enter & orient",
-        do: "Thesis · table ended · bans",
-        sites: [
-          { name: "Starting Point", href: "pages/home.html", do: "One-thing ATT · ott-guided 6" },
-          { name: "About 2021", href: "pages/about.html", do: "table ended · 199.5M · 4.9B" },
-          { name: "Year flow map", href: "pages/map.html", do: "This UX tree" },
-          { name: "What's New", href: "pages/whats-new.html", do: "Calendar spine" }
-        ]
-      },
-      {
-        label: "★ ATT",
-        do: "Ask App Not to Track · Allow is the trap",
-        sites: [
-          { name: "ATT sheet", href: "sites/att/index.html", do: "itt21-att · empty never writes" },
-          { name: "Allow literacy", href: "sites/att/allow.html", do: "no write" }
-        ]
-      },
-      {
-        label: "Signal trail",
-        do: "WhatsApp policy → Signal",
-        sites: [
-          { name: "WhatsApp lobby", href: "sites/whatsapp/index.html", do: "4 Jan" },
-          { name: "Policy sheet", href: "sites/whatsapp/policy.html", do: "Accept ≠ save" },
-          { name: "Signal", href: "sites/signal/index.html", do: "itt21-signal" },
-          { name: "About Signal", href: "sites/signal/about.html", do: "literacy" }
-        ]
-      },
-      {
-        label: "Meta · brick · 11",
-        do: "Company rename · Flash brick · Win11 residual",
-        sites: [
-          { name: "Meta", href: "sites/meta/index.html", do: "itt21-meta" },
-          { name: "That week", href: "sites/meta/about.html", do: "outage / Haugen literacy" },
-          { name: "Flash brick", href: "sites/flash/brick.html", do: "12 Jan" },
-          { name: "Win11", href: "sites/windows11/index.html", do: "phased 5 Oct" },
-          { name: "Win10 mass", href: "sites/windows10/index.html", do: "still mass" },
-          { name: "Chrome habit", href: "sites/chrome/index.html", do: "still habit" }
-        ]
-      },
-      {
-        label: "P1 densify",
-        do: "Outage · Fastly · Copilot preview · 13 · Epic · Haugen",
-        sites: [
-          { name: "Outage 4 Oct", href: "sites/outage/index.html", do: "6–7 h · 15:39 UTC" },
-          { name: "Fastly 8 Jun", href: "sites/fastly/index.html", do: "85% · ~49 min" },
-          { name: "Copilot preview", href: "sites/copilot/index.html", do: "29 Jun · not GA" },
-          { name: "DALL·E blog", href: "sites/dalle/index.html", do: "5 Jan · not ChatGPT" },
-          { name: "iPhone 13", href: "sites/iphone/13.html", do: "$799 / $699" },
-          { name: "iOS 15", href: "sites/ios15/index.html", do: "20 Sep" },
-          { name: "Android 12", href: "sites/android12/index.html", do: "4 Oct" },
-          { name: "Pixel 6", href: "sites/pixel/6.html", do: "19 Oct" },
-          { name: "Epic ruling", href: "sites/epic/ruling.html", do: "10 Sep split" },
-          { name: "Haugen week", href: "sites/haugen/index.html", do: "3 Oct / 5 Oct" },
-          { name: "Fleets gone", href: "sites/fleets/gone.html", do: "3 Aug" },
-          { name: "Roblox IPO", href: "sites/roblox/ipo.html", do: "10 Mar" },
-          { name: "Coinbase list", href: "sites/coinbase/list.html", do: "14 Apr" },
-          { name: "Log4j", href: "sites/log4j/index.html", do: "CVE-2021-44228" }
-        ]
-      },
-      {
-        label: "Residual last",
-        do: "Last-year plaques · no itt20 write",
-        sites: [
-          { name: "Zoom mute was 2020", href: "sites/residual/zoom.html", do: "no write" },
-          { name: "Reels 15s was 2020", href: "sites/residual/reels.html", do: "no write" },
-          { name: "GDPR was 2018", href: "sites/residual/gdpr.html", do: "no write" },
-          { name: "Stories was 2016", href: "sites/residual/stories.html", do: "no write" },
-          { name: "Face ID was 2017", href: "sites/residual/faceid.html", do: "no write" },
-          { name: "280 was 2017", href: "sites/residual/280.html", do: "no write" }
-        ]
-      },
-      {
-        label: "Play",
-        do: "Five Letter · toys",
-        sites: [
-          { name: "Playables", href: "sites/playable/index.html", do: "Toys 1–15" },
-          { name: "Five Letter", href: "sites/playable/game.html", do: "itt21-game-five" }
-        ]
-      },
-      {
-        label: "Famous games",
-        do: "Two era-famous cabinets · incomplete never writes",
-        sites: [
-          { name: "Famous games", href: "sites/playable/famous.html", do: "Play two era-famous cabinets" }
-        ]
-      }
-]
-  };
-
 })(typeof window !== "undefined" ? window : this);

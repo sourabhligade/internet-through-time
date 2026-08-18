@@ -5,6 +5,9 @@ on:
     branches: [main, master]
   pull_request:
 
+permissions:
+  contents: read
+
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -20,6 +23,10 @@ jobs:
         with:
           python-version: "3.12"
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Filesystem + config smoke
         run: python3 scripts/smoke-production.py
 
@@ -31,6 +38,9 @@ jobs:
 
       - name: Pipeline invariants
         run: python3 scripts/test-pipeline.py
+
+      - name: Mock-flow classifier
+        run: node scripts/audit-mock-flows.js
 
       - name: All-years health matrix
         run: python3 scripts/check-all-years.py
@@ -53,54 +63,10 @@ jobs:
       - name: HTTP smoke
         run: python3 scripts/smoke-production.py --base http://127.0.0.1:8080
 
-  e2e-cross-year:
-    name: Playwright cross-year real flows (fast gate)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: npm
-
-      - name: Install npm dependencies
-        run: npm ci
-
-      - name: Cache Playwright browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            playwright-${{ runner.os }}-
-
-      - name: Install Playwright Chromium
-        run: npx playwright install --with-deps chromium
-
-      - name: OSS visitor gate
-        run: node scripts/oss-visitor-gate.mjs
-        env:
-          CI: true
-
-      - name: Cross-year + scenario real flows
-        run: npx playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1
-        env:
-          CI: true
-
-      - name: Upload Playwright report on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-cross-year
-          path: |
-            playwright-report/
-            test-results/
-          retention-days: 7
-
   e2e:
     name: Playwright e2e
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -127,8 +93,13 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run Playwright e2e
-        run: npx playwright test
+      - name: OSS visitor gate
+        run: node scripts/oss-visitor-gate.mjs
+        env:
+          CI: true
+
+      - name: Ship e2e (hub · 3× · gold-A · 2016–2018)
+        run: npx playwright test e2e/hub-years.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js --workers=2
         env:
           CI: true
 

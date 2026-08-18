@@ -12,6 +12,7 @@ This is **not** the A–F ship checkbox. All 23 years already claim **museum-rea
 
 | Doc | Use |
 |-----|-----|
+| [`MUSEUM-GRADE-LANDING-MAP-1994-2012.md`](MUSEUM-GRADE-LANDING-MAP-1994-2012.md) | **Current** 1994–2012 % + leftover options · prefer over this scoreboard |
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | What is playable |
 | [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) | Official A–F ship bar (already claimed 1994–2016) |
 | [`NON-DONE.md`](NON-DONE.md) | Open residual |

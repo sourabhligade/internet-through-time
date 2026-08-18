@@ -1,22 +1,18 @@
-# 2011 — Museum grade status card
+# 2011 — Museum grade status
 
-**Date:** 2026-08-02  
-**Status:** **Museum-ready · L3 densify** · hub **1994–2013** · `years/2011/` · `itt11`  
-**Plan:** [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md)
+**Date:** 2026-08-17  
+**Status:** Lean leftover close · hub open · `years/2011/` · 28 HTML · `itt11`
 
-| Layer | Status | Notes |
-|-------|--------|-------|
-| **A Story** | **[x]** | Thesis · dual scale · bans · minute spine |
-| **B Densify** | **[x]** | P0 multipage · trails · residual year voice |
-| **C Pixels** | **[~]** | Continuity + **failed-final** H11 pack (`assets/period/2011/ASSETS.md`) — no invented brand art |
-| **D Provenance** | **[x]** | CAPTURE-LOG H11 resolved · minute research pack · master bible |
-| **E Gates** | **[x]** | mvp · densify · flows · real · trail · check-all-years · hub |
-| **F Hub unlock** | **[x]** | Card · resume · compare |
+| Layer | Status |
+|-------|--------|
+| **A. Story** | **Yes** — thesis · dual-cite · Pingdom social · bans table |
+| **B. Densify** | **Yes** — G+ pillars · Spotify SKUs · iPad 2 / Siri / Timeline · YT play · Netflix 30% · trails |
+| **C. Pixels** | **Closed honestly** — `[failed-final]` on P0 rooms · `assets/period/2011/` empty · never invented |
+| **D. Provenance** | CAPTURE-LOG + README-PIXELS |
+| **E. Gates** | `npm run test:e2e:2011` — mvp · flows · densify · trail |
+| **F. Isolation** | `itt11` |
+| Shell | Win7 + IE 9 |
 
-**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) (1994–**2013**)  
-**Minute research:** [`2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md`](2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md)
+**Leftover forever:** real Wayback `im_` stills. January IE8 dual skin. Twitch / Kindle Fire rooms.
 
-## Residual forever (optional L4)
-
-- Perfect WA brand stills for every P0 (retry only)  
-- densify essay rooms beyond spine  
+**Playbook:** [`2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md`](2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md)

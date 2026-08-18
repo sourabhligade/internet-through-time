@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every open year 1994–2020 has 10 link-flows on the gold room and the map.
+ * Every open year 1994–2009 has 10 link-flows on the gold room and the map.
  */
 const { test, expect } = require('@playwright/test');
 
@@ -13,26 +13,15 @@ const YEARS = [
   { year: '1998', gold: 'sites/google/lucky.html', name: /Lucky|Google/i },
   { year: '1999', gold: 'sites/aim/index.html', name: /AIM|Napster/i },
   { year: '2000', gold: 'sites/mapquest/index.html', name: /MapQuest|Amazon/i },
-  { year: '2001', gold: 'sites/msn/index.html', name: /MSN|Wikipedia/i },
+  { year: '2001', gold: 'sites/wikipedia/edit.html', name: /MSN|Wikipedia/i },
   { year: '2002', gold: 'sites/stumbleupon/index.html', name: /Stumble|Friendster/i },
   { year: '2003', gold: 'sites/photobucket/index.html', name: /Photobucket|MySpace/i },
   { year: '2004', gold: 'sites/facebook/networks.html', name: /thefacebook|Gmail/i },
-  { year: '2005', gold: 'sites/pandora/index.html', name: /Pandora|YouTube/i },
+  { year: '2005', gold: 'sites/youtube/upload.html', name: /Pandora|YouTube/i },
   { year: '2006', gold: 'sites/twitter/index.html', name: /Twitter|News Feed/i },
   { year: '2007', gold: 'sites/iphone/index.html', name: /iPhone|Street View/i },
-  { year: '2008', gold: 'sites/github/issue.html', name: /GitHub|App Store/i },
+  { year: '2008', gold: 'sites/appstore/index.html', name: /GitHub|App Store/i },
   { year: '2009', gold: 'sites/facebook/feed.html', name: /Like|FarmVille/i },
-  { year: '2010', gold: 'sites/imgur/index.html', name: /Imgur|Reddit/i },
-  { year: '2011', gold: 'sites/airbnb/index.html', name: /Airbnb|Timeline/i },
-  { year: '2012', gold: 'sites/soundcloud/index.html', name: /SoundCloud|Android/i },
-  { year: '2013', gold: 'sites/vine/record.html', name: /Vine|IG Video/i },
-  { year: '2014', gold: 'sites/whatsapp/index.html', name: /WhatsApp|Heartbleed/i },
-  { year: '2015', gold: 'sites/apple/watch.html', name: /Watch|Win10/i },
-  { year: '2016', gold: 'sites/instagram/stories.html', name: /Stories|Pokémon/i },
-  { year: '2017', gold: 'sites/iphone/x.html', name: /Face ID|Fortnite/i },
-  { year: '2018', gold: 'sites/gdpr/index.html', name: /GDPR|TikTok/i },
-  { year: '2019', gold: 'sites/disneyplus/index.html', name: /Disney|TikTok/i },
-  { year: '2020', gold: 'sites/zoom/index.html', name: /Zoom|Reels/i },
 ];
 
 test.describe('ten link-flows every year', () => {

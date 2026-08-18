@@ -35,17 +35,6 @@ const YEARS = [
   '2007',
   '2008',
   '2009',
-  '2010',
-  '2011',
-  '2012',
-  '2013',
-  '2014',
-  '2015',
-  '2016',
-  '2017',
-  '2018',
-  '2019',
-  '2020',
 ];
 
 /** @param {string} year */
@@ -158,7 +147,7 @@ for (const year of YEARS) {
 
       // Isolation: neighbor year prefix not used for this write
       const neighbor =
-        year === '1994' ? 'itt95-thesis-ack' : year === '2013' ? 'itt12-thesis-ack' : null;
+        year === '1994' ? 'itt95-thesis-ack' : null;
       if (neighbor) {
         // only assert we didn't write the wrong key for *this* action — neighbor may be null
         expect(await getKey(page, neighbor === key ? 'itt-never' : neighbor)).toBeFalsy();
@@ -289,31 +278,4 @@ test.describe('REAL system product samples', () => {
     await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt08-github'))).toBeTruthy();
   });
 
-  test('2012 SoundCloud comment without play blocked', async ({ page }) => {
-    await page.goto('/years/2012/sites/soundcloud/index.html');
-    await page.evaluate(() => localStorage.removeItem('itt12-soundcloud'));
-    await page.reload();
-    await page.locator('[data-sc-comment-btn]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-soundcloud'))).toBeFalsy();
-    await page.locator('[data-sc-play]').click();
-    await page.fill('[data-sc-text]', 'real waveform residual');
-    await page.locator('[data-sc-comment-btn]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-soundcloud'))).toMatch(/real waveform/);
-  });
-
-  test('2013 Xbox incomplete blocked', async ({ page }) => {
-    await page.goto('/years/2013/sites/xboxone/index.html');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt13-xbox');
-      } catch (e) {
-        /* */
-      }
-    });
-    await page.reload();
-    await page.waitForSelector('[data-xbox-ack]', { timeout: 20000 });
-    await page.locator('[data-xbox-ack]').click();
-    await page.waitForTimeout(300);
-    expect(await page.evaluate(() => localStorage.getItem('itt13-xbox'))).toBeFalsy();
-  });
 });

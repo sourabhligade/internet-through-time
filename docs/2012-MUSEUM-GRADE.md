@@ -1,29 +1,20 @@
-# 2012 — Museum grade status card
+# 2012 — Museum-grade bar
 
-**Date:** 2026-08-02  
-**Status:** **Museum-ready · L3 densify** · hub **1994–2013** · `years/2012/` · `itt12`  
-**Plan:** [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md)
+**Date:** 2026-08-17  
+**Disk:** `years/2012/` **live · lean** (30 HTML). One continuity still (`chrome/logo-cont-2009.jpg`). H12-01–04 `[failed-final]`.  
+**Leftover scan:** [`2012-MUSEUM-GRADE-LEFT.md`](2012-MUSEUM-GRADE-LEFT.md)  
+**Long dump (goals · phases · A–T · every URL):** [`2012-MUSEUM-GRADE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2012-MUSEUM-GRADE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md)  
+**Minute leftover:** [`2012-MUSEUM-GRADE-RESEARCH-IMPLEMENT-PHASES.md`](2012-MUSEUM-GRADE-RESEARCH-IMPLEMENT-PHASES.md)
 
-| Layer | Status | Notes |
-|-------|--------|-------|
-| **A Story** | **[x]** | Thesis · dual scale · bans · minute spine |
-| **B Densify** | **[x]** | P0 multipage · trails · residual year voice |
-| **C Pixels** | **[~]** | Continuity + **failed-final** H12 pack (`assets/period/2012/ASSETS.md`) — no invented brand art |
-| **D Provenance** | **[x]** | CAPTURE-LOG H12 resolved · minute research pack · master bible |
-| **E Gates** | **[x]** | mvp · densify · flows · real · trail · check-all-years · hub |
-| **F Hub unlock** | **[x]** | Card · resume · compare |
+| Gate | Research | Implement |
+|------|----------|-----------|
+| **A Story** | Thesis + bans + dual-cite locked | Home/About copy **[x]** |
+| **B Densify** | A–T + 6 trails mapped | Rooms + next-flow **[x]** · continuity chips **[x]** |
+| **C Pixels** | Queue + calendars locked · execute 2026-08-17 | H12-01–04 **[failed-final]** · H12-05 chrome **[continuity]** |
+| **D Provenance** | Primaries re-opened · visit log | About **[x]** · CAPTURE execute **[x]** |
+| **E Gates** | e2e plan in Phase 12 | mvp + flows + densify + trail **[x]** 31/31 |
+| **F Isolation** | `itt12` rule | No `itt11` writes **[x]** |
 
-**READ FIRST:** [`2012-READ-FIRST.md`](2012-READ-FIRST.md)  
-**Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) (1994–**2013**)  
-**Ultra-deep research:** [`2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md`](2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md)  
-**Minute research:** [`2012-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md`](2012-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md)
+**Feel % after leftover close:** ~80% required / ~75% feel. Layer C closed on **failed-final + one continuity still** (bar allows this). Perfect WA logos remain L4 forever.
 
-## Shipped densify (beyond MVP)
-
-- SOPA blackout multipage · Reddit Obama AMA · culture trail 6 on home  
-- Reddit/Wikipedia year-truth scrub (not 2007 Digg-king clone copy)
-
-## Residual forever (optional L4)
-
-- Perfect WA brand stills for every P0 (retry only)  
-- densify essay rooms beyond spine  
+Lean door + leftover L1–L5 executed 2026-08-17. **Museum-ready under A–F** (C = failed-final honesty, not invented marks).

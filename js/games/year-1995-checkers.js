@@ -91,6 +91,27 @@
     selected = null;
     chainFrom = null;
     moveCount = 0;
+    try {
+      var q = location.search || "";
+      try {
+        if ((!q || q === "?") && window.frameElement && frameElement.src) {
+          var src = String(frameElement.src);
+          var qi = src.indexOf("?");
+          if (qi >= 0) q = src.slice(qi);
+        }
+      } catch (eQ) {
+        /* */
+      }
+      if (/[?&]fixture=capture\b/.test(q)) {
+        /* Dark (5,2) can jump light (4,3) to (3,4). Quiet (4,1) must be refused. */
+        for (r = 0; r < 8; r++) for (c = 0; c < 8; c++) board[r][c] = 0;
+        board[5][2] = 1;
+        board[4][3] = -1;
+        board[1][6] = -1;
+      }
+    } catch (eF) {
+      /* */
+    }
   }
 
   /** dirs for piece */
@@ -263,6 +284,8 @@
           var key2 = rr + "," + cc;
           var isDest = !!destSet[key2];
           var isSel = selected && selected.r === rr && selected.c === cc;
+          cell.setAttribute("data-r", String(rr));
+          cell.setAttribute("data-c", String(cc));
           if (isDest) cell.setAttribute("data-dest", "1");
           if (isSel) cell.setAttribute("data-selected", "1");
           cell.style.cssText =
@@ -449,6 +472,11 @@
         clearInterval(iv);
         if (loadEl) loadEl.textContent = "Applet started · multi-jump enabled";
         state = "play";
+        try {
+          host.setAttribute("data-checkers-state", "play");
+        } catch (eS) {
+          /* */
+        }
         setStatus("Your move (dark) · captures mandatory · kings move both ways");
         if (startBtn) startBtn.disabled = false;
         render();

@@ -47,6 +47,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/mp3com/index.html": "http://museum.local/years/1997/sites/mp3com/index.html",
+      "sites/nytimes/index.html": "http://museum.local/years/1997/sites/nytimes/index.html",
+      "sites/zdnet/index.html": "http://museum.local/years/1997/sites/zdnet/index.html",
       "sites/playable/famous.html": "http://museum.local/years/1997/sites/playable/famous.html",
 
       "sites/dancing-baby/index.html": "http://museum.local/years/1997/sites/dancing-baby/index.html",

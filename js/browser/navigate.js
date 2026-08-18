@@ -141,13 +141,26 @@
     locationHints = locationHints || [];
 
     /* Prefer longest urlMap match so /iphone/ wins over apple.com/ and
-       /windows-7/ wins over microsoft.com/ (prefix collision). */
+       /windows-7/ wins over microsoft.com/ (prefix collision).
+       Host-root input (amazon.com or amazon.com/) also matches
+       the mapped …/index.html so address-bar Go does not miss the room. */
+    function stripIndexSlash(u) {
+      return String(u || "")
+        .replace(/\/index\.html$/i, "")
+        .replace(/\/+$/, "");
+    }
+    var lowerRoot = stripIndexSlash(lower);
     var bestPath = null;
     var bestLen = -1;
     for (var k in urlMap) {
       if (Object.prototype.hasOwnProperty.call(urlMap, k)) {
         var mapped = String(urlMap[k]).toLowerCase();
-        if (mapped === lower || lower.indexOf(mapped) === 0) {
+        var mappedRoot = stripIndexSlash(mapped);
+        if (
+          mapped === lower ||
+          lower.indexOf(mapped) === 0 ||
+          mappedRoot === lowerRoot
+        ) {
           if (mapped.length > bestLen) {
             bestLen = mapped.length;
             bestPath = k;

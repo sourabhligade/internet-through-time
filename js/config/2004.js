@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/odeo/index.html": "http://museum.local/years/2004/sites/odeo/index.html",
+      "sites/piczo/index.html": "http://museum.local/years/2004/sites/piczo/index.html",
+      "sites/tagged/index.html": "http://museum.local/years/2004/sites/tagged/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2004/sites/playable/famous.html",
 
       "sites/facebook/poke.html": "http://museum.local/years/2004/sites/facebook/poke.html",

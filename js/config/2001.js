@@ -45,6 +45,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/bittorrent/index.html": "http://museum.local/years/2001/sites/bittorrent/index.html",
+      "sites/itunes/index.html": "http://museum.local/years/2001/sites/itunes/index.html",
+      "sites/morpheus/index.html": "http://museum.local/years/2001/sites/morpheus/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2001/sites/playable/famous.html",
 
       "sites/ayb/index.html": "http://museum.local/years/2001/sites/ayb/index.html",

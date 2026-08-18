@@ -1,130 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2013">
-<head>
-<meta charset="utf-8">
-<title>Snowden / PRISM — June 2013 · open-web privacy</title>
-<link rel="stylesheet" href="../../../../css/period-2013.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
-</head>
-<body class="news-2013">
+<head><meta charset="utf-8"><title>Snowden / PRISM — June 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css"></head>
+<body bgcolor="#111" text="#ddd">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p class="kicker" style="font-family:Arial,sans-serif">
- <a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About 2013</a> ·
- <a href="../healthcare/index.html">HealthCare.gov</a> · <a href="../glass/index.html">Glass</a>
-</p>
-<p class="kicker">CULTURE ROOM · PUBLIC NEWS FRAMING ONLY · MULTI-STEP LITERACY</p>
-<h1>June 2013 — the stack is watched</h1>
-<p>On <b>June 5–6, 2013</b>, reporting in <i>The Guardian</i> and <i>The Washington Post</i> brought mass surveillance programs into public view — including telephony metadata collection and the internet program known as <b>PRISM</b>.</p>
-<div class="rules">
- <b>Educational rules</b>
- <ul style="margin:6px 0 0 18px">
-  <li>Public journalism sources only — no classified dump gallery</li>
-  <li>No exploit how-tos · no doxxing</li>
- </ul>
+<div style="max-width:640px;margin:16px auto;font-family:Georgia,serif;font-size:14px;line-height:1.45">
+<p class="crumb" style="font-size:12px;font-family:Arial,sans-serif"><a href="../../pages/home.html" style="color:#9cf">Starting Point</a></p>
+<h1>PRISM on the homepage</h1>
+<p>Guardian <b>6 Jun 2013</b> (Glenn Greenwald). Washington Post the same week. Edward Snowden. NSA. PRISM. This room is <b>news literacy</b> — dual sources, no document dump, no stolen-file theater, no doxx. <a href="prism.html">PRISM page two</a> is the program name without a leak archive.</p>
+<p class="itt-pixel-failed">[failed-final] RECON news layout · do not rip Guardian / WaPo mastheads</p>
+<label style="display:block"><input type="checkbox" data-req data-snowden-req> Two papers, same week — not one leak blog</label>
+<label style="display:block"><input type="checkbox" data-req data-snowden-req> This is literacy, not a dump of classified files</label>
+<p><button type="button" data-snowden-ack data-itt-real-save data-storage-key="snowden-ack" data-min-req="2" data-requires="[data-snowden-req]">I read the dual-source note</button>
+<span data-snowden-status data-itt-action-status></span></p>
+<p hidden data-next-flow><b>Next:</b> <a href="../telegram/index.html" style="color:#9cf">People started asking for “secure chat”</a></p>
+<p style="font-size:12px;font-family:Arial,sans-serif;color:#888">Also 2013: Lavabit closes. Encryption becomes dinner-table talk. Telegram public growth. WhatsApp is not end-to-end yet the way 2016 remembers it.</p>
 </div>
-<div style="margin:14px 0;padding:10px;border:1px solid #666;background:#f8f8f0;font-family:Arial,sans-serif;font-size:13px">
- <b>Step 1 — Read the spine (check each card)</b>
- <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="metadata"> June 5: telephony metadata order becomes public news</label>
- <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="prism"> June 6: PRISM slides / company names in press</label>
- <label style="display:block;margin:6px 0"><input type="checkbox" data-snowden-card="encryption"> Encryption &amp; “who can read mail” becomes front-page talk</label>
- <p style="font-size:11px;color:#444">Cards read: <span data-snowden-progress>0</span> / 3</p>
-</div>
-<p style="margin-top:14px">
- <button type="button" data-snowden-ack disabled>I understand PRISM became public news in June 2013 (save)</button>
- <span class="itt13-status" data-snowden-status style="display:inline;margin-left:8px;color:#060"></span>
-</p>
-<p hidden data-next-flow data-next-when-key="itt13-snowden" style="margin-top:10px">Next: <a href="../vine/record.html"><b>Vine 6s</b></a> — hold the record.</p>
-<p style="font-size:11px;color:#666;font-family:Arial,sans-serif"> · multi-step literacy · Guardian · Washington Post</p>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-snowden";
-  var btn = document.querySelector("[data-snowden-ack]");
-  var st = document.querySelector("[data-snowden-status]");
-  var prog = document.querySelector("[data-snowden-progress]");
-  var cards = document.querySelectorAll("[data-snowden-card]");
-  function readCards() {
-    var o = {};
-    var n = 0;
-    for (var i = 0; i < cards.length; i++) {
-      var id = cards[i].getAttribute("data-snowden-card");
-      o[id] = !!cards[i].checked;
-      if (cards[i].checked) n++;
-    }
-    if (prog) prog.textContent = String(n);
-    if (btn) btn.disabled = n < 3;
-    return { cards: o, count: n };
-  }
-  try {
-    var prev = JSON.parse(localStorage.getItem(KEY) || "null");
-    if (prev && prev.cards) {
-      for (var j = 0; j < cards.length; j++) {
-        var cid = cards[j].getAttribute("data-snowden-card");
-        if (prev.cards[cid]) cards[j].checked = true;
-      }
-    }
-    if (prev && st) st.textContent = "Saved · " + KEY;
-  } catch (e) {}
-  readCards();
-  for (var k = 0; k < cards.length; k++) {
-    cards[k].addEventListener("change", readCards);
-  }
-  if (btn) btn.addEventListener("click", function () {
-    var state = readCards();
-    if (state.count < 3) {
-      if (st) st.textContent = "Check all three cards first.";
-      return;
-    }
-    var payload = {
-      event: "prism-public",
-      date: "2013-06",
-      cards: state.cards,
-      literacy: true,
-      multiStep: true,
-      real: true,
-      year: "2013",
-      ts: Date.now()
-    };
-    try { localStorage.setItem(KEY, JSON.stringify(payload)); } catch (e2) {}
-    var msg = "Saved · privacy literacy · " + state.count + " cards · " + KEY;
-    if (st) st.textContent = msg;
-    try {
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { status: st, kind: "snowden" });
-      }
-      if (window.ITT && ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-      if (window.ITT && ITT.YearExtras && ITT.YearExtras.forYear) ITT.YearExtras.forYear("2013").showNext(document);
-    } catch (e3) {}
-  });
-});
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="../ipad/air.html">iPad Air</a> ·
- <a href="../iphone/index.html">iPhone 5s</a> ·
- <a href="../medium/index.html">Medium</a> ·
- <a href="../neocities/index.html">Neocities</a> ·
- <a href="../netflix/index.html">Netflix</a> ·
- <a href="../outlook/index.html">Outlook.com</a> ·
- <a href="../playable/index.html">Period playables</a> ·
- <a href="../ps4/index.html">PlayStation 4</a> ·
- <a href="../slack/index.html">Slack</a> ·
- <a href="../snapchat/index.html">Snapchat</a> ·
- <a href="../spotify/index.html">Spotify</a> ·
- <a href="../telegram/index.html">Telegram</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
+<script src="../../../../js/immersion-2013.js"></script>
 
-
-<div class="itt-5x-loop" data-5x-loop data-5x-year="2013" data-5x-suffix="snowden-5x" id="ott-5x-f-snowden" style="margin:12px 0;padding:10px;border:2px solid #f9a825;background:#fff8e1;font-family:Arial,sans-serif;font-size:13px;max-width:46em">
-<p style="margin:0 0 6px"><b>5× leftover · Snowden literacy</b> · does not replace the 3-card writer · key <code>itt13-snowden-5x</code></p>
-<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="a"> Verizon + PRISM leftover loop</label>
-<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="b"> The cards above write itt13-snowden</label>
+<div class="itt-5x-loop" data-5x-loop data-5x-year="2013" data-5x-suffix="snowden" id="ott-5x-f-snowden" style="margin:12px 0;padding:10px;border:2px solid #f9a825;background:#fff8e1;font-family:Arial,sans-serif;font-size:13px;max-width:46em;color:#111">
+<p style="margin:0 0 6px"><b>5× F5 Snowden Jun 2013</b> · incomplete never writes · key <code>itt13-snowden</code></p>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="a"> Two papers same week</label>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="b"> Next is Vine star</label>
 <p style="margin:8px 0 0"><button type="button" data-5x-save>Save 5× REAL</button> <span data-5x-status></span></p>
-<p data-5x-next hidden data-next-flow data-itt13-next data-next-when-key="itt13-snowden-5x" style="margin:8px 0 0">Next: <a href="../vine/record.html">vine</a></p>
+<p data-5x-next hidden data-next-flow data-itt13-next data-next-when-key="itt13-snowden" style="margin:8px 0 0">Next: <a href="../vine/record.html">Vine 6s</a></p>
 </div>
-
-</body>
-</html>
+</body></html>

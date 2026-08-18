@@ -9,24 +9,47 @@
 <body bgcolor="#ffffff" text="#000000" link="#0000cc" vlink="#0000cc">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
 
-<table width="720" align="center" cellpadding="12"><tr><td style="font-family:Arial,sans-serif;font-size:13px">
-<p><a href="../../pages/home.html">← Home</a> · <a href="directions.html">Directions</a> · <a href="print.html">Print residual</a> · <a href="about.html">About</a></p>
+<table width="720" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#003399">
+<tr><td style="padding:8px 12px">
+ <font face="Arial,Helvetica,sans-serif" color="#ffffff" size="5"><b>MapQuest</b></font>
+ <font face="Arial" color="#99ccff" size="3">.com</font>
+ <font face="Arial" color="#ffcc00" size="1"> · Get Directions · Maps · Driving</font>
+</td>
+<td align="right" style="padding:8px 12px">
+ <font face="Arial" size="1"><a href="../../pages/home.html"><font color="#ffcc00">Home</font></a>
+ · <a href="directions.html"><font color="#ffcc00">Directions</font></a>
+ · <a href="print.html"><font color="#ffcc00">Print</font></a>
+ · <a href="about.html"><font color="#ffcc00">About</font></a></font>
+</td></tr>
+</table>
+<table width="720" align="center" cellpadding="12" cellspacing="0" border="0" bgcolor="#ffffff"><tr><td style="font-family:Arial,sans-serif;font-size:13px">
 <p class="ott-trail-chip" data-ott-trail="mapquest-maps" style="font-size:12px;margin:8px 0;padding:6px 10px;background:#e3f2fd;border:1px solid #1565c0">
  <b>Trail:</b> Print directions residual → <a href="../../../2005/sites/maps/index.html">2005 Google Maps slippy residual</a>
  · what replaced MapQuest for many users</p>
-<h1 style="color:#c00">MapQuest<span style="color:#00c">.com</span></h1>
-<p>First commercial web mapping residual (1996). Print turn-by-turn before Google Maps (2005). <b>No live map tiles.</b></p>
+<p>Print turn-by-turn before Google Maps (2005). First commercial web mapping residual (1996). <b>No live map tiles.</b></p>
 <p data-mq-last style="font-size:12px;background:#f8f8f8;border:1px solid #ccc;padding:8px">No trip printed yet.</p>
 <p data-mq-eta style="font-size:12px;color:#060">Generate From + To for ETA.</p>
 
 <form data-mq-form>
-<p>From: <input type="text" id="ott-field" name="from" placeholder="123 Main St, Anytown" style="width:70%;padding:6px"></p>
-<p>To: <input type="text" id="mq-to" name="to" placeholder="456 Oak Ave" style="width:70%;padding:6px"></p>
-<p>
- <button type="submit" data-ott-click="get-dir" class="ott-btn">Get Directions</button>
- <a href="directions.html" data-ott-click="open-dir" class="ott-btn">Open steps →</a>
- <a href="print.html" data-ott-click="print" class="ott-btn">Print residual →</a>
-</p>
+<table width="100%" cellpadding="4" cellspacing="0" border="0" bgcolor="#e8eef7" style="border:1px solid #003399">
+<tr bgcolor="#003399"><td colspan="2"><font face="Arial" color="#ffffff" size="2"><b>Get Directions</b></font></td></tr>
+<tr>
+ <td width="80"><font face="Arial" size="2"><b>From:</b></font></td>
+ <td><input type="text" id="ott-field" name="from" placeholder="123 Main St, Anytown" size="48"></td>
+</tr>
+<tr>
+ <td><font face="Arial" size="2"><b>To:</b></font></td>
+ <td><input type="text" id="mq-to" name="to" placeholder="456 Oak Ave" size="48"></td>
+</tr>
+<tr>
+ <td></td>
+ <td>
+  <button type="submit" data-ott-click="get-dir">Get Directions</button>
+  &nbsp; <a href="directions.html" data-ott-click="open-dir">Open steps →</a>
+  &nbsp; <a href="print.html" data-ott-click="print">Print residual →</a>
+ </td>
+</tr>
+</table>
 </form>
 <p data-mq-status data-itt-action-status style="min-height:1.2em;color:#060"></p>
 <p style="font-size:11px;color:#666">Empty From/To does not write. Steps use <b>your</b> addresses. Key <code>itt00-mapquest-trip</code>.</p>

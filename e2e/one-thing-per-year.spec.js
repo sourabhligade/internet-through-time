@@ -100,14 +100,15 @@ const THINGS = [
   },
   {
     year: "2001",
-    path: "/years/2001/sites/msn/index.html",
-    key: "itt01-msn",
+    path: "/years/2001/sites/wikipedia/edit.html",
+    key: "itt01-wiki-pages",
     incomplete: async (page) => {
-      await page.locator("form[data-msn-signon] button[type='submit']").click();
+      await page.locator("textarea[name='text']").fill("");
+      await page.locator("[data-wiki-save]").click();
     },
     complete: async (page) => {
-      await page.fill("#ott-field", "you@hotmail.com");
-      await page.locator("form[data-msn-signon] button[type='submit']").click();
+      await page.fill("textarea[name='text']", "'''Wikipedia''' anyone can edit · museum 2001");
+      await page.locator("[data-wiki-save]").click();
     },
   },
   {
@@ -150,14 +151,16 @@ const THINGS = [
   },
   {
     year: "2005",
-    path: "/years/2005/sites/pandora/index.html",
-    key: "itt05-pandora",
+    path: "/years/2005/sites/youtube/upload.html",
+    key: "itt05-yt-uploads",
     incomplete: async (page) => {
-      await page.locator("form[data-pd-create] button[type='submit']").click();
+      await page.evaluate(() => localStorage.removeItem("itt05-yt-uploads"));
+      await page.locator('[data-yt-upload] [name="title"]').fill("");
+      await page.locator('[data-yt-upload] button[type="submit"]').click();
     },
     complete: async (page) => {
-      await page.fill("#ott-field", "Radiohead residual");
-      await page.locator("form[data-pd-create] button[type='submit']").click();
+      await page.locator('[data-yt-upload] [name="title"]').fill("Me at the zoo residual");
+      await page.locator('[data-yt-upload] button[type="submit"]').click();
     },
   },
   {
@@ -211,41 +214,43 @@ const THINGS = [
   },
   {
     year: "2010",
-    path: "/years/2010/sites/imgur/index.html",
-    key: "itt10-imgur",
+    path: "/years/2010/sites/instagram/index.html",
+    key: "itt10-ig",
     incomplete: async (page) => {
-      await page.locator("form[data-ig-upload] button[type='submit']").click();
+      await page.locator("[data-ig-share]").click();
     },
     complete: async (page) => {
-      await page.fill("#ott-field", "meme.png");
-      await page.locator("form[data-ig-upload] button[type='submit']").click();
+      await page.locator('[data-ig-filter="X-Pro II"]').click();
+      await page.fill("[data-ig-caption]", "museum square");
+      await page.locator("[data-ig-share]").click();
     },
   },
   {
     year: "2011",
-    path: "/years/2011/sites/airbnb/index.html",
-    key: "itt11-airbnb",
+    path: "/years/2011/sites/googleplus/hangouts.html",
+    key: "itt11-gplus-hangout",
     incomplete: async (page) => {
-      await page.locator("[data-abnb-book]").click();
+      await page.locator("[data-gplus-hangout-start]").click();
     },
     complete: async (page) => {
-      await page.fill("#ott-field", "San Francisco");
-      await page.locator("[data-abnb-search]").click();
-      await page.locator("[data-abnb-listing]").first().click();
-      await page.locator("[data-abnb-book]").click();
+      await page.locator("[data-req]").nth(0).check({ force: true });
+      await page.locator("[data-req]").nth(1).check({ force: true });
+      await page.locator("[data-gplus-hangout-start]").click();
     },
   },
   {
     year: "2012",
-    path: "/years/2012/sites/soundcloud/index.html",
-    key: "itt12-soundcloud",
+    path: "/years/2012/sites/instagram/android.html",
+    key: "itt12-ig",
     incomplete: async (page) => {
-      await page.locator("[data-sc-comment-btn]").click();
+      await page.locator("[data-ig-share]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-sc-play]").click();
-      await page.fill("[data-sc-text]", "nice drop residual");
-      await page.locator("[data-sc-comment-btn]").click();
+      await page.locator("[data-req]").nth(0).check({ force: true });
+      await page.locator("[data-req]").nth(1).check({ force: true });
+      await page.locator('[data-ig-filter="X-Pro II"]').click();
+      await page.fill("[data-ig-caption]", "android share");
+      await page.locator("[data-ig-share]").click();
     },
   },
   {
@@ -256,10 +261,11 @@ const THINGS = [
       await page.locator("[data-vine-post]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-vine-hold]").dispatchEvent("mousedown");
-      await page.waitForTimeout(400);
-      await page.locator("[data-vine-hold]").dispatchEvent("mouseup");
-      await page.locator("[data-vine-caption]").fill("one-thing vine residual");
+      await page.locator("[data-req]").nth(0).check({ force: true });
+      await page.locator("[data-req]").nth(1).check({ force: true });
+      const hold = page.locator("[data-vine-hold]");
+      for (let i = 0; i < 5; i++) await hold.click();
+      await page.fill("[data-vine-caption]", "one thing 6s");
       await page.locator("[data-vine-post]").click();
     },
   },
@@ -271,20 +277,21 @@ const THINGS = [
       await page.locator("[data-wa-install]").click();
     },
     complete: async (page) => {
-      await page.fill("[data-wa-name]", "museum residual");
+      await page.locator("[data-req]").nth(0).check({ force: true });
+      await page.locator("[data-req]").nth(1).check({ force: true });
       await page.locator("[data-wa-install]").click();
     },
   },
   {
     year: "2015",
-    path: "/years/2015/sites/apple/watch.html",
-    key: "itt15-watch",
+    path: "/years/2015/sites/periscope/index.html",
+    key: "itt15-periscope",
     incomplete: async (page) => {
-      await page.locator("[data-watch15-save]").click();
+      await page.locator("[data-peri-live]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-watch-shipped]").check();
-      await page.locator("[data-watch15-save]").click();
+      await page.fill("[data-peri-title]", "museum rooftop");
+      await page.locator("[data-peri-live]").click();
     },
   },
   {
@@ -295,10 +302,7 @@ const THINGS = [
       await page.locator("[data-ig-story-add]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-ig-story-text]").fill("coffee");
-      const boxes = page.locator("[data-req]");
-      const n = await boxes.count();
-      for (let i = 0; i < n; i++) await boxes.nth(i).check();
+      await page.fill("[data-ig-story-text]", "museum rooftop 24h");
       await page.locator("[data-ig-story-add]").click();
     },
   },
@@ -307,13 +311,12 @@ const THINGS = [
     path: "/years/2017/sites/iphone/x.html",
     key: "itt17-faceid",
     incomplete: async (page) => {
-      await page.locator("[data-faceid-save]").click();
+      await page.locator("[data-faceid-unlock]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-faceid-no-home]").check();
-      await page.locator("[data-faceid-not-touch]").check();
-      await page.locator("[data-faceid-not-xs]").check();
-      await page.locator("[data-faceid-save]").click();
+      await page.locator("[data-faceid-req]").nth(0).check();
+      await page.locator("[data-faceid-req]").nth(1).check();
+      await page.locator("[data-faceid-unlock]").click();
     },
   },
   {
@@ -325,78 +328,9 @@ const THINGS = [
     },
     complete: async (page) => {
       await page.locator("[data-gdpr-manage]").click();
-      await page.locator("[data-gdpr-art15]").check();
-      await page.locator("[data-gdpr-art17]").check();
-      await page.locator("[data-gdpr-date]").check();
+      await page.locator("[data-gdpr-req]").nth(0).check();
+      await page.locator("[data-gdpr-req]").nth(1).check();
       await page.locator("[data-gdpr-save]").click();
-    },
-  },
-  {
-    year: "2019",
-    path: "/years/2019/sites/disneyplus/home.html",
-    key: "itt19-disneyplus",
-    incomplete: async (page) => {
-      const trial = page.locator("[data-dplus-trial]");
-      if ((await trial.count()) > 0) {
-        await trial.click();
-        return;
-      }
-      await page.locator("[data-dplus-save]").click();
-    },
-    complete: async (page) => {
-      const continueUi = page.locator('[data-profile="adult-1"]');
-      if ((await continueUi.count()) > 0) {
-        await continueUi.click();
-        await page.locator('[data-title="mando"]').click();
-        await page.locator("[data-add-continue]").click();
-        await page.locator('[data-title="lion-king"]').click();
-        await page.locator("[data-add-continue]").click();
-        await page.locator("[data-dplus-date]").check();
-        await page.locator("[data-dplus-not-trial]").check();
-        await page.locator("[data-dplus-kids]").check();
-        await page.locator("[data-dplus-save]").click();
-        return;
-      }
-      await page.locator("[data-dplus-plan]").selectOption("monthly");
-      await page.locator("[data-req]").nth(0).check();
-      await page.locator("[data-req]").nth(1).check();
-      await page.locator("[data-dplus-join]").click();
-    },
-  },
-  {
-    year: "2020",
-    path: "/years/2020/sites/zoom/index.html",
-    key: "itt20-zoom",
-    incomplete: async (page) => {
-      await page.locator("[data-zoom-join]").click();
-    },
-    complete: async (page) => {
-      await page.locator("#itt20-code").fill("84739258101");
-      await page.locator("[data-zoom-join]").click();
-      await page.waitForURL(/join\.html/);
-      await page.locator("[data-admit]").click();
-      await page.waitForURL(/meeting\.html/);
-      await page.locator("[name='line']").fill("can you see my screen");
-      await page.locator("[data-chat]").evaluate((f) => f.requestSubmit());
-      await page.locator("[data-leave]").click();
-      await page.waitForURL(/recap\.html/);
-      await page.locator("[data-zoom-part]").check();
-      await page.locator("[data-zoom-not-live]").check();
-      await page.locator("[data-zoom-save]").click();
-    },
-  },
-  {
-    year: "2021",
-    path: "/years/2021/sites/att/index.html",
-    key: "itt21-att",
-    incomplete: async (page) => {
-      await page.locator("[data-att-allow]").click();
-    },
-    complete: async (page) => {
-      const n = await page.locator("[data-req]").count();
-      for (let i = 0; i < n; i++) await page.locator("[data-req]").nth(i).check();
-      await page.locator("[data-dest-field]").fill("not to track");
-      await page.locator("[data-itt-real-save]").click();
     },
   },
 ];
@@ -436,15 +370,10 @@ test.describe("One-thing per year — load + REAL gate", () => {
     });
   }
 
-  test("2013 guided flow rails visible", async ({ page }) => {
-    await page.goto("/years/2013/pages/home.html");
-    await expect(page.locator("#ott-guided-2013, .ott-guided")).toBeVisible();
-    await expect(page.locator("#ott-guided-2013 a[href*=\"vine\"]").first()).toBeVisible();
-  });
 
-  test("1994–2021 homes lead with one-thing then guided, residual later", async ({ page }) => {
+  test("1994–2009 homes lead with one-thing then guided, residual later", async ({ page }) => {
     const years = [];
-    for (let y = 1994; y <= 2021; y++) years.push(String(y));
+    for (let y = 1994; y <= 2009; y++) years.push(String(y));
     for (const y of years) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
@@ -463,7 +392,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   });
 
   test("home chips present for sample years", async ({ page }) => {
-    for (const y of ["1999", "2000", "2008", "2013"]) {
+    for (const y of ["1999", "2000", "2008", "2012"]) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
     }

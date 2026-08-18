@@ -1,7 +1,7 @@
 # Year games — authenticity & UX improvement pass
 
 **Date:** 2026-08-06  
-**Scope:** In-year **playables** (3 toys / year) + **full year game** (`sites/playable/game.html`) for **1994–2018**.  
+**Scope:** In-year **game cabinet** + **full year game** (`sites/playable/game.html`) for live years **1994–2009**. Toys (meter/targets/type/hold) were removed 2026-08-17.  
 **Legal:** Museum-original JS only · no ripped SWFs · no official brand game assets · localStorage theater only.
 
 ---
@@ -10,8 +10,8 @@
 
 | Layer | Path | Role |
 |-------|------|------|
-| **Playables lobby** | `years/YYYY/sites/playable/index.html` | 3 period toys via `data-year-playable` |
-| **Playable engine** | `js/immersion/year-playable.js` | meter / targets / type / hold + set progress |
+| **Playables lobby** | `years/YYYY/sites/playable/index.html` | Cabinet: featured year game + famous pair |
+| **Playable engine** | `js/immersion/year-playable.js` | Renders `[data-yp-cabinet]` from `js/config/year-playable.js` |
 | **Playable CSS** | `css/year-playable.css` | Era shells (early · nav · xp · web2 · app · modern) |
 | **Full year game** | `years/YYYY/sites/playable/game.html` | Signature game per year |
 | **Year game boot** | `js/games/year-game-boot.js` | Storage keys `ittYY-game-*` · focus |
@@ -23,15 +23,13 @@
 ## UX flow (visitor)
 
 ```
-Home → ▶ Playables strip
-  → Toy 1 Play → win ✓ (passport stamp playable-1)
-  → Toy 2 → Toy 3
-  → all 3 → ittYY-playable-set + passport playable-set
-  → Full year game → signature session → ittYY-game-<id>
+Home → ▶ Play this year’s game
+  → game.html signature session → ittYY-game-<id>
+  → Famous games (optional) → ittYY-game-<engine>
   → Back to Starting Point / year tour
 ```
 
-Progress rail on lobby: `○ ○ ○` → `● ● ●` with count **n/3**.
+Lobby is a **cabinet**, not a 3-toy rail. Year meter “Playable” lights from any `ittYY-game-*` save.
 
 ---
 
@@ -58,15 +56,15 @@ Progress rail on lobby: `○ ○ ○` → `● ● ●` with count **n/3**.
 | 1997 | connect4 | year-1997-connect4 | Casual Java/ActiveX era |
 | 1998 | skipintro | year-1998-skipintro | Skip intro culture |
 | 1999 | petdash | year-1999-petdash | Pet.com / Y2K play |
-| 2000 | portaljudge | year-2000-portaljudge | Flash portal voting literacy |
+| 2000 | lotlife | year-2000-lotlife | The Sims–class lot / needs |
 | 2001 | clickscape | year-2001-clickscape | Broadband / clicker |
 | 2002 | roomsticky | year-2002-roomsticky | Friendster room |
 | 2003 | gagslite | year-2003-gagslite | MySpace gags |
-| 2004 | cubewhack | year-2004-cubewhack | Flash cube era |
+| 2004 | gemcascade | year-2004-gemcascade | Bejeweled / PopCap match-3 |
 | 2005 | heli | heli.js | Helicopter Flash class |
 | 2006 | sled | sled.js | Trail sled casual |
 | 2007 | boxshift | year-2007-boxshift | iPhone-era puzzle |
-| 2008 | tapgrid | year-2008-tapgrid | App Store tap |
+| 2008 | goospan | year-2008-goospan | World of Goo span |
 | 2009 | plotneighbors | year-2009-plotneighbors | FarmVille plots |
 | 2010 | ragtrail | year-2010-ragtrail | iPad / app trail |
 | 2011 | letterswap | year-2011-letterswap | Word game class |

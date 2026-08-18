@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BIBLE = ROOT / "docs" / "5X-REAL-DEST-IMPLEMENT"
-YEARS = [str(y) for y in range(1994, 2021)]
+YEARS = [str(y) for y in range(1994, 2010)]
 
 STAR = {
     "1994": ("sites/csotd/index.html", "CSotD guestbook"),
@@ -185,15 +185,18 @@ def html_page(
     if writer_key:
         suffix = writer_key.replace(pref + "-", "", 1)
     if writer_key:
+        # Product form — never dest-field / "I read the period note" plaques.
         body = f"""
 <p>{escape(premise)}</p>
 <p class="honesty" style="font-size:11px;background:#ffffcc;border:1px solid #888;padding:6px">{escape(honesty)} · museum original · no commercial SWF · incomplete never writes · key <code>{escape(writer_key)}</code></p>
-<label style="display:block;margin:6px 0"><input type="checkbox" data-req> I read the {year} period note</label>
-<label style="display:block;margin:6px 0"><input type="checkbox" data-req> This is museum theater · no live account</label>
-<p><label>Note (required)<br>
-<input type="text" data-dest-field placeholder="type a short note" style="width:70%;padding:6px"></label></p>
-<p><button type="button" data-itt-real-save data-storage-key="{escape(suffix)}" data-min-req="2" data-require-field="[data-dest-field]" data-require-field-min="2">Save (local only)</button></p>
-<p data-itt-action-status style="min-height:1.2em;font-size:12px">Empty / one check never writes.</p>
+<form data-itt-real-form data-storage-key="{escape(suffix)}" data-require-name="what why">
+<p><label>What you did<br>
+<input type="text" name="what" placeholder="product action" style="width:70%;padding:6px"></label></p>
+<p><label>Why this year<br>
+<input type="text" name="why" placeholder="year-true reason" style="width:70%;padding:6px"></label></p>
+<p><button type="submit">Save this step</button></p>
+<p data-itt-action-status style="min-height:1.2em;font-size:12px">Both fields required. Empty never writes.</p>
+</form>
 """
     else:
         body = f"""
@@ -364,6 +367,7 @@ def write_one(year: str, slug: str, fn: str, title: str, premise: str, writer: s
 def main() -> int:
     atlas_new: dict[str, list[dict]] = {}
     print("== 5× real dests ==")
+    print("  dest-field / period-note plaques are banned — new rooms use product forms")
     for year in YEARS:
         if year in DONE:
             print(f"  {year} dests already at target — skip")

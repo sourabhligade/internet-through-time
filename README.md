@@ -87,18 +87,18 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2007/` | iPhone Safari · open Gmail · Street View · Facebook Platform · **museum densify** |
 | `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
 | `/years/2009/` | iPhone 3GS · Like · FarmVille · Bing · Windows 7 · **ship** |
-| `/years/2010/` | iPad · iPhone 4 · Instagram · Foursquare · Open Graph · **ship** |
-| `/years/2011/` | Spotify US · Timeline · Google+ · iPhone 4S/Siri · Qwikster · **museum-ready** |
-| `/years/2012/` | Instagram Android · FB IPO · 1B · Pinterest · iPhone 5 · Win8 · Chrome · **museum-ready** |
-| `/years/2013/` | Vine · IG Video · Snap Stories · iOS 7 · Snowden · **lean museum-ready A−** |
-| `/years/2014/` | WhatsApp deal · Heartbleed · iPhone 6 · 1B sites · Tile Fold · **museum-ready A** |
-| `/years/2015/` | Watch ships · Win10 free · Periscope · Music · Photos · Blob Rush · **lean year** |
-| `/years/2016/` | Stories · Pokémon GO · Reactions · WA E2E · Gym Rush · **lean year** |
-| `/years/2017/` | Face ID · Fortnite BR · 280 · WannaCry · Storm Circle · **lean year** |
-| `/years/2018/` | GDPR · TikTok FYP · hearing · Consent Dash · **lean year** |
-| `/years/2019/` | Disney+ Who’s watching · Continue Row · Marshmello · **lean year** |
-| `/years/2020/` | Zoom join→mute→chat→leave · Reels 15s · Flash EOL · Sus Vote · **lean year A−** |
+| `/years/2010/` | Win7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph · **lean** |
+| `/years/2011/` | Win7 · IE 9 · Google+ · Spotify US · Timeline · Siri · **lean** |
+| `/years/2012/` | Win7 · IE 9 · Instagram Android · $1B · Facebook IPO · iPhone 5 · **lean** |
+| `/years/2013/` | Vine · Stories · iOS 7 · Snowden · **lean** |
+| `/years/2014/` | WhatsApp · Heartbleed · Ice Bucket · **lean** |
+| `/years/2015/` | Periscope Go LIVE · Google Photos · Win10 free upgrade · Apple Music · **lean** |
+| `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
+| `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
+| `/years/2018/` | GDPR Manage · TikTok leftover · hearing · IGTV · **lean** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
+
+**2019+ are not on disk** — 2018 is the lean from-scratch rebuild (GDPR Manage star). Hub is **1994–2018** (25 years).
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Full inventory** (may lag disk): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).

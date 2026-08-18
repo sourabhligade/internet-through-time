@@ -1,69 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2012">
-<head>
-<meta charset="utf-8">
-<title>Instagram for Android — April 3, 2012</title>
-<link rel="stylesheet" href="../../../../css/period-2012.css">
-<script src="../../../../js/immersion-2012.js" defer></script>
-</head>
+<head><meta charset="utf-8"><title>Instagram for Android — 3 Apr 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css"></head>
 <body bgcolor="#fafafa">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="ig-2012">
- <p style="font-size:11px"><a href="index.html">← Instagram</a> · <a href="acquired.html">Acquisition →</a></p>
- <h1 style="font-size:18px">Instagram for Android</h1>
- <p><b>April 3, 2012</b> — finally on Google Play / Android Market era.
- Downloaded <b>more than one million times in less than one day</b> (period press / Wikipedia class).
- iOS had ~<b>30 million</b> users class before this day — the platform flip from 2011’s iOS-only ban.</p>
- <p style="font-size:12px;background:#fff8dc;border:1px solid #cc0;padding:8px">
-  <b>Six days later (Apr 9):</b> Facebook agrees to acquire Instagram for ~<b>$1 billion</b> cash+stock —
-  promise to keep it independently managed / standalone brand. <a href="acquired.html">Acquisition room →</a>
-  Still: square photos · filters · captions · <b>no Stories · no Reels · no Meta</b>.
- </p>
- <label style="display:block;margin:8px 0;font-size:12px"><input type="checkbox" data-ig-android-date> Apr 3 2012 — Android / Play-era install</label>
- <label style="display:block;margin:8px 0;font-size:12px"><input type="checkbox" data-ig-android-not-stories> Still square photos — <b>not Stories / not Reels</b></label>
- <p><button type="button" data-ig-android-install style="background:#a4c639;color:#fff;border:0;padding:8px 14px">Get Instagram</button>
- <a href="index.html" style="margin-left:10px;font-size:13px">Open feed →</a></p>
- <div data-ig-android-status style="font-size:12px;color:#060;margin-top:8px"></div>
- <p class="itt12-next" data-itt12-next data-next-flow data-next-when-key="itt12-ig-android" hidden><b>Next:</b> <a href="../facebook/ipo.html">Facebook IPO · May 18 · $38</a></p>
- <p style="font-size:11px;color:#666">Press day · April 3, 2012 · Google Play era install theater</p>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  var btn = document.querySelector("[data-ig-android-install]");
-  var st = document.querySelector("[data-ig-android-status]");
-  var KEY = "itt12-ig-android";
-  function show(){ try { if(localStorage.getItem(KEY)&&st) st.textContent="Installed Apr 3 2012 theater"; } catch(e){} }
-  show();
-  if(btn) btn.addEventListener("click", function(){
-    var d=document.querySelector("[data-ig-android-date]");
-    var n=document.querySelector("[data-ig-android-not-stories]");
-    if(!d||!d.checked||!n||!n.checked){if(st)st.textContent="Confirm Apr 3 + not Stories first.";return;}
-    try { localStorage.setItem(KEY,JSON.stringify({android:true,date:"2012-04-03",notStories:true,real:true,multiStep:true,year:"2012",ts:Date.now()})); localStorage.setItem("itt12-ig-platform","android"); } catch(e2){}
-    if(st) st.textContent="Installed Apr 3 2012 theater · standalone brand after $1B";
-    try { if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN) {}
-  });
-});
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="acquired.html">Instagram · acquired</a> ·
- <a href="../youtube/about.html">About YouTube</a> ·
- <a href="../chrome/index.html">Google Chrome</a> ·
- <a href="../facebook/index.html">Facebook</a> ·
- <a href="../googledrive/index.html">Google Drive</a> ·
- <a href="../ipad/index.html">iPad mini</a> ·
- <a href="../iphone/index.html">iPhone 5</a> ·
- <a href="../lyft/index.html">Lyft</a> ·
- <a href="../netflix/index.html">Netflix</a> ·
- <a href="../pinterest/index.html">Pinterest</a> ·
- <a href="../playable/index.html">Period playables</a> ·
- <a href="../reddit/index.html">reddit</a> ·
- <a href="../snapchat/index.html">Snapchat</a>
+<div class="ig-2012-shell">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html">Starting Point</a> · <a href="../../pages/about.html">About 2012</a> · <a href="acquired.html">$1B 9 Apr</a></p>
+<h1>INSTAGRAM</h1>
+<p>Android Market · <b>3 Apr 2012</b> · host <b>instagr.am</b>. Yesterday this was iPhone-only. TechCrunch: <b>30 million+</b> iOS users going in. CNET: <b>1 million</b> downloads in &lt;24h · Systrom <b>2,000/min</b> · pre-reg <b>430,000</b> (24 Mar).</p>
+<p>Same <b>13 people</b> built iOS and Android. Floor: <b>Android 2.2 Froyo</b> + OpenGL ES 2 (filters). “All the same exact filters.” <b>Lux</b> (sun) is on the compose step. Missing on v1: Tilt-Shift · Flickr · inline posting. Share also to Twitter / Facebook / Tumblr / Foursquare / email. Website is marketing — not a composer.</p>
+<p class="itt-pixel-failed">[failed-final] Play icon / instagr.am UI · CDX 503 this execute · never invent the glyph</p>
+<label style="display:block"><input type="checkbox" data-req> Android exists now (was iOS-only through 2011)</label>
+<label style="display:block"><input type="checkbox" data-req> Facebook does not own Instagram yet on Apr 3 (sale is Apr 9)</label>
+<p>
+ <button type="button" class="ig-filter" data-ig-filter="Normal">Normal</button>
+ <button type="button" class="ig-filter" data-ig-filter="X-Pro II">X-Pro II</button>
+ <button type="button" class="ig-filter" data-ig-filter="Lo-Fi">Lo-Fi</button>
+ <button type="button" class="ig-filter" data-ig-filter="Earlybird">Earlybird</button>
 </p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
-</body>
-</html>
+<p><input type="text" data-ig-caption placeholder="Caption (required)"></p>
+<p><button type="button" data-ig-share>Share</button> <span data-ig-status></span></p>
+<div data-ig-feed></div>
+<p hidden data-next-flow><b>Next:</b> <a href="acquired.html">Facebook bought Instagram for a billion</a></p>
+</div>
+<script src="../../../../js/immersion-2012.js"></script>
+</body></html>

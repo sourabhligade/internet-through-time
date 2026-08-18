@@ -79,6 +79,17 @@ NOTES.local.md
 # Wayback CDX probe leftovers
 cdx_*.json
 
+# Local harvest dumps (too large for git; keep on disk)
+docs/references/**/docs-urls-raw.tsv
+docs/references/**/corpus-*-unique-urls.txt
+docs/references/**/*-extlinks.tsv
+docs/references/**/*-cdx-originals.tsv
+docs/references/**/wikipedia-*-pages.tsv
+docs/references/**/wikipedia-*-established.tsv
+docs/FLOW-LIVE-TEST-RESULTS-*.json
+docs/FLOW-TRAIL-INJECT-RESULTS-*.json
+docs/references/5x-improve-corpus-*.txt
+
 # Local generate output / scratch
 dev/
 

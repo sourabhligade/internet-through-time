@@ -1,165 +1,57 @@
 // @ts-check
-/**
- * 2010 multi-step trails — real localStorage (itt10).
- * docs/2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md Part 5
- * Home trails 1–7
- */
 const { test, expect } = require('@playwright/test');
-const { completeRealGate, fillGmailLogin } = require('./helpers');
 
-/**
- * @param {import('@playwright/test').Page} page
- * @param {string[]} keys
- */
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
-    try {
-      ks.forEach((k) => localStorage.removeItem(k));
-    } catch (e) {
-      /* */
-    }
+    ks.forEach((k) => {
+      try { localStorage.removeItem(k); } catch (e) { /* */ }
+    });
   }, keys);
 }
-
-/** @param {import('@playwright/test').Page} page @param {string} key */
-async function requireKey(page, key) {
-  const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-  expect(raw, `trail missing ${key}`).toBeTruthy();
-  expect(raw).not.toBe('[]');
-  return raw || '';
+async function getKey(page, key) {
+  return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-test.describe('2010 trail 1 — Tablet arrives', () => {
-  test('iPad about → App Store install → itt10-apps', async ({ page }) => {
-    await page.goto('/years/2010/sites/ipad/about.html');
-    await expect(page.locator('body')).toContainText(/\$499|Jan 27|iPad/i);
-    await expect(page.locator('a[href*="appstore"]').first()).toBeVisible();
-
-    await page.goto('/years/2010/sites/appstore/index.html');
-    await clearKeys(page, ['itt10-apps']);
-    await page.reload();
-    await page.waitForSelector('[data-appstore-install]', { timeout: 20000 });
-    await completeRealGate(page, '[data-appstore-install]');
-    await requireKey(page, 'itt10-apps');
-  });
-});
-
-test.describe('2010 trail 2 — Phone leap', () => {
-  test('iPhone 4 about → App Store → Safari history', async ({ page }) => {
-    await page.goto('/years/2010/sites/iphone/about.html');
-    await expect(page.locator('body')).toContainText(/\$199|FaceTime|Retina|Jun 24/i);
-
-    await page.goto('/years/2010/sites/appstore/index.html');
-    await clearKeys(page, ['itt10-apps', 'itt10-iphone-history']);
-    await page.reload();
-    await completeRealGate(page, '[data-appstore-install]');
-    await requireKey(page, 'itt10-apps');
-
-    await page.goto('/years/2010/sites/iphone/index.html');
-    await page.reload();
-    await page.waitForSelector('[data-iphone-browse]', { timeout: 20000 });
-    await page.fill('[name="url"]', 'http://www.google.com/');
-    await page.locator('[data-iphone-browse] button[type="submit"]').click();
-    await requireKey(page, 'itt10-iphone-history');
-  });
-});
-
-test.describe('2010 trail 3 — Filter social', () => {
-  test('Instagram share → iOS-only about', async ({ page }) => {
+test.describe('2010 leftover trail', () => {
+  test('Instagram share reveals next iPhone 4', async ({ page }) => {
     await page.goto('/years/2010/sites/instagram/index.html');
-    await clearKeys(page, ['itt10-ig-posts']);
+    await clearKeys(page, ['itt10-ig', 'itt10-ig-posts']);
     await page.reload();
     await page.locator('[data-ig-filter="Earlybird"]').click();
-    await page.locator('[data-ig-caption]').fill('handoff 2010 square');
+    await page.locator('[data-ig-caption]').fill('dinner');
     await page.locator('[data-ig-share]').click();
-    await requireKey(page, 'itt10-ig-posts');
-
-    await page.goto('/years/2010/sites/instagram/about.html');
-    await expect(page.locator('body')).toContainText(/iOS only|iOS-only|Oct 6|not.*Android/i);
+    await expect.poll(() => getKey(page, 'itt10-ig-posts')).toBeTruthy();
+    await expect(page.locator('[data-next-flow] a[href*="iphone"]')).toBeVisible();
   });
-});
 
-test.describe('2010 trail 4 — Social web', () => {
-  test('Facebook Like → Open Graph about → Places', async ({ page }) => {
-    await page.goto('/years/2010/sites/facebook/feed.html');
-    await clearKeys(page, ['itt10-fb-likes', 'itt10-fb-places', 'itt10-fb-culture']);
+  test('iPhone 4 acks reveal next iPad', async ({ page }) => {
+    await page.goto('/years/2010/sites/iphone/index.html');
+    await clearKeys(page, ['itt10-iphone4']);
     await page.reload();
-    await page.locator('[data-fb-like]').first().click();
-    await requireKey(page, 'itt10-fb-likes');
-
-    await page.goto('/years/2010/sites/facebook/about.html');
-    await expect(page.locator('body')).toContainText(/Open Graph|600/i);
-    await page.locator('[data-fb-film]').check();
-    await page.locator('[data-fb-no-reels]').check();
-    await page.locator('[data-fb-culture]').click();
-    await requireKey(page, 'itt10-fb-culture');
-
-    await page.goto('/years/2010/sites/facebook/places.html');
-    await page.waitForSelector('[data-fb-place]', { timeout: 20000 });
-    await page.locator('[data-fb-place]').first().click();
-    await requireKey(page, 'itt10-fb-places');
+    await page.locator('[data-ft-wifi]').check();
+    await page.locator('[data-antenna-ack]').check();
+    await page.locator('[data-iphone4-ack]').click();
+    await expect.poll(() => getKey(page, 'itt10-iphone4')).toBeTruthy();
+    await expect(page.locator('[data-next-flow] a[href*="ipad"]')).toBeVisible();
   });
-});
 
-test.describe('2010 trail 5 — Check-in + farm', () => {
-  test('Foursquare → FarmVille peak both keys', async ({ page }) => {
-    await page.goto('/years/2010/sites/foursquare/index.html');
-    await clearKeys(page, ['itt10-4sq', 'itt10-farm']);
+  test('iPad order writes itt10-ipad', async ({ page }) => {
+    await page.goto('/years/2010/sites/ipad/order.html');
+    await clearKeys(page, ['itt10-ipad']);
     await page.reload();
-    await completeRealGate(page, '[data-4sq-checkin]');
-    await requireKey(page, 'itt10-4sq');
-
-    await page.goto('/years/2010/sites/farmville/index.html');
-    await expect(page.locator('body')).toContainText(/peak|84|March 2010/i);
-    await completeRealGate(page, '[data-farm-plant="strawberry"]');
-    await requireKey(page, 'itt10-farm');
+    await page.locator('[name="ipad-cap"][value="16GB"]').check();
+    await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
+    await page.locator('[data-ipad-order]').click();
+    await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/16GB|real/i);
   });
-});
 
-test.describe('2010 trail 6 — Still PC / EU Spotify', () => {
-  test('Win7 · Gmail · Spotify Europe three real keys', async ({ page }) => {
-    await page.goto('/years/2010/sites/windows7/index.html');
-    await expect(page.locator('body')).toContainText(/mass|2010|IE 8/i);
-
-    await page.goto('/years/2010/sites/ie8/index.html');
-    await clearKeys(page, ['itt10-shell-pref', 'itt10-gmail', 'itt10-spotify-eu']);
+  test('OG two Likes write itt10-fb-og', async ({ page }) => {
+    await page.goto('/years/2010/sites/facebook/index.html');
+    await clearKeys(page, ['itt10-fb-og', 'itt10-fb-og-partial']);
     await page.reload();
-    await page.locator('[data-shell-prefer="ie8"]').click();
-    await requireKey(page, 'itt10-shell-pref');
-
-    await page.goto('/years/2010/sites/gmail/index.html');
-    await page.reload();
-    await fillGmailLogin(page);
-    await page.locator('[data-gmail-login]').evaluate((f) => f.requestSubmit());
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt10-gmail')), { timeout: 8000 })
-      .toBeTruthy();
-
-    await page.goto('/years/2010/sites/spotify/index.html');
-    await expect(page.locator('body')).toContainText(/Europe|not.*US|2011/i);
-    await completeRealGate(page, '[data-spotify-join]');
-    await requireKey(page, 'itt10-spotify-eu');
-  });
-});
-
-test.describe('2010 trail 7 — Seeds of later', () => {
-  test('Pinterest · Uber · Wave three keys', async ({ page }) => {
-    await page.goto('/years/2010/sites/pinterest/index.html');
-    await clearKeys(page, ['itt10-pin', 'itt10-uber', 'itt10-wave']);
-    await page.reload();
-    await page.locator('[data-pin-save]').first().click();
-    await requireKey(page, 'itt10-pin');
-
-    await page.goto('/years/2010/sites/uber/index.html');
-    await page.locator('[data-uber-not-x]').check();
-    await page.locator('[data-uber-sf]').check();
-    await page.locator('#uber-req').click();
-    await requireKey(page, 'itt10-uber');
-
-    await page.goto('/years/2010/sites/wave/index.html');
-    await page.locator('[data-wave-io]').check();
-    await page.locator('[data-wave-not-email]').check();
-    await page.locator('[data-wave-invite]').click();
-    await requireKey(page, 'itt10-wave');
+    await page.locator('[data-og-like="cnn"]').click();
+    expect(await getKey(page, 'itt10-fb-og')).toBeFalsy();
+    await page.locator('[data-og-like="imdb"]').click();
+    await expect.poll(() => getKey(page, 'itt10-fb-og')).toBeTruthy();
   });
 });

@@ -1,997 +1,312 @@
 /**
- * 2016 REAL product theaters — multi-step localStorage only (itt16-*)
- * Stories · Pokémon GO · Reactions · jack · AirPods · Vine · musical.ly · WA E2E
+ * 2016 lean extras — Stories · GO · Reactions · E2E · leftover
+ * Keys: itt16-* via YearExtras
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+  var YX = ITT.YearExtras && ITT.YearExtras.forYear("2016");
+  if (!YX) {
+    console.error("ITT.YearExtras missing for 2016 — load year-extras-kit.js first");
+    return;
+  }
+  var key = YX.key;
+  var feedback = YX.feedback;
+  var saveJSON = YX.saveJSON;
+  var countChecked = YX.countChecked;
+  var val = YX.val;
 
-  function U() {
-    return ITT.util || {};
-  }
-  function prefix() {
-    try {
-      var y =
-        (ITT._immersionYear && String(ITT._immersionYear)) ||
-        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2016";
-      if (/^\d{4}$/.test(y)) return "itt" + y.slice(2);
-    } catch (e) {
-      /* */
-    }
-    return "itt16";
-  }
-  function key(suffix) {
-    var fb = prefix();
-    return U().immersionStorageKey ? U().immersionStorageKey(suffix, fb) : fb + "-" + suffix;
-  }
-  function feedback(msg, st, opts) {
-    opts = opts || {};
-    if (st) {
-      st.textContent = msg;
-      st.style.color = "";
-      try {
-        st.classList.remove("is-ok", "is-err");
-        st.removeAttribute("data-state");
-        if (opts.error) {
-          st.classList.add("is-err");
-          st.setAttribute("data-state", "err");
-        } else if (msg) {
-          st.classList.add("is-ok");
-          st.setAttribute("data-state", "ok");
-        }
-      } catch (e0) {
-        st.style.color = opts.error ? "#a00" : "#060";
-      }
-    }
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-        ITT._immersionApi.actionFeedback(msg, { flash: !opts.error, status: st, ms: 3200 });
-      }
-    } catch (e) {
-      /* */
-    }
-  }
-  function saveJSON(k, v) {
-    try {
-      localStorage.setItem(k, JSON.stringify(v));
-    } catch (e) {
-      /* */
-    }
-  }
-  function loadJSON(k, fallback) {
-    try {
-      var raw = localStorage.getItem(k);
-      if (!raw) return fallback;
-      return JSON.parse(raw);
-    } catch (e) {
-      return fallback;
-    }
-  }
-  function checked(doc, sel) {
-    var el = doc.querySelector(sel);
-    return !!(el && el.checked);
-  }
-  function countChecked(doc, sel) {
-    var nodes = doc.querySelectorAll(sel);
-    var n = 0;
-    var i;
-    for (i = 0; i < nodes.length; i++) if (nodes[i].checked) n++;
-    return n;
-  }
-  function markUsed() {
-    try {
-      if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
-    } catch (e) {
-      /* */
-    }
-  }
-  function revealNext(doc) {
-    doc = doc || document;
-    var nodes = doc.querySelectorAll("[data-itt16-next], [data-next-flow]");
-    var i;
-    for (i = 0; i < nodes.length; i++) {
-      nodes[i].hidden = false;
-      try {
-        nodes[i].removeAttribute("hidden");
-        nodes[i].style.display = "";
-      } catch (e) {
-        /* */
-      }
-    }
+  function blob(extra) {
+    var o = { multiStep: true, real: true, year: "2016", ts: Date.now() };
+    var k;
+    if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
+    return o;
   }
 
-  function bootIgStories(doc) {
-    doc = doc || document;
+  function reveal(doc) {
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+    } catch (eN) { /* */ }
+    try {
+      var prev = doc.querySelectorAll("[data-prev-flow]");
+      var p;
+      for (p = 0; p < prev.length; p++) {
+        prev[p].removeAttribute("hidden");
+        prev[p].style.display = "";
+      }
+    } catch (eP) { /* */ }
+  }
+
+  function paintRail(doc, text) {
+    var rail = doc.querySelector("[data-ig-story-rail]");
+    if (!rail) return;
+    rail.removeAttribute("hidden");
+    rail.style.display = "";
+    rail.textContent = "Your story · 24h · " + text;
+  }
+
+  function bootStories(doc) {
     var btn = doc.querySelector("[data-ig-story-add]");
-    if (!btn || btn.getAttribute("data-bound") === "1") return;
-    btn.setAttribute("data-bound", "1");
+    if (!btn) return;
     var st = doc.querySelector("[data-ig-story-status]");
-    var list = doc.querySelector("[data-ig-story-list]");
-    function render() {
-      if (!list) return;
-      var items = loadJSON(key("ig-stories"), []) || [];
-      if (!Array.isArray(items) || !items.length) {
-        list.innerHTML = "<div class='item' style='color:#888'>No stories yet.</div>";
-        return;
-      }
-      list.innerHTML = items
-        .map(function (it) {
-          return (
-            "<div class='item'><span class='itt16-story-ring'><span>You</span></span> " +
-            String(it.text || "").replace(/</g, "&lt;") +
-            " · <font color='#888'>just now</font></div>"
-          );
-        })
-        .join("");
+    var saved = YX.loadJSON(key("ig-stories"));
+    if (saved && saved.text) {
+      var inp = doc.querySelector("[data-ig-story-text]");
+      if (inp && !inp.value) inp.value = saved.text;
+      paintRail(doc, saved.text);
+      feedback("Still up · 24h · itt16-ig-stories", st);
+      reveal(doc);
     }
-    render();
     btn.addEventListener("click", function () {
-      var ta = doc.querySelector("[data-ig-story-text]");
-      var text = ta && ta.value != null ? String(ta.value).replace(/^\s+|\s+$/g, "") : "";
-      if (text.length < 2) {
-        feedback("REAL gate: write a story slide first (not empty).", st, { error: true });
+      var t = val(doc, "[data-ig-story-text]");
+      if (!t || t.replace(/^\s+|\s+$/g, "").length < 2) {
+        feedback("Type a slide first. Empty never writes.", st, { error: true });
         return;
       }
-      if (countChecked(doc, "[data-req]") < 2) {
-        feedback("Complete literacy checks first.", st, { error: true });
-        return;
-      }
-      var sticker = "";
-      var chip = doc.querySelector("[data-ig-sticker].is-on, [data-ig-sticker]:checked");
-      if (chip) sticker = chip.getAttribute("data-ig-sticker") || chip.value || "";
-      var items = loadJSON(key("ig-stories"), []) || [];
-      if (!Array.isArray(items)) items = [];
-      items.unshift({
-        text: text.slice(0, 200),
-        sticker: sticker || undefined,
-        multiStep: true,
-        real: true,
-        ts: Date.now()
-      });
-      saveJSON(key("ig-stories"), items.slice(0, 30));
-      if (ta) ta.value = "";
-      feedback("Added to Story (theater) · 24h class", st);
-      render();
-      revealNext(doc);
-      markUsed();
+      var clean = t.replace(/^\s+|\s+$/g, "").slice(0, 140);
+      saveJSON(key("ig-stories"), blob({ text: clean, hours: 24 }));
+      paintRail(doc, clean);
+      feedback("Added to Story · 24h · itt16-ig-stories", st);
+      reveal(doc);
     });
-    var chips = doc.querySelectorAll("[data-ig-sticker]");
-    var ci;
-    for (ci = 0; ci < chips.length; ci++) {
-      chips[ci].addEventListener("click", function () {
-        var j;
-        for (j = 0; j < chips.length; j++) chips[j].classList.remove("is-on");
-        this.classList.add("is-on");
-      });
+  }
+
+  function bootStoriesArchive(doc) {
+    var card = doc.querySelector("[data-ig-story-card]");
+    if (!card) return;
+    var saved = YX.loadJSON(key("ig-stories"));
+    if (saved && saved.text) {
+      card.textContent = saved.text;
+      card.removeAttribute("hidden");
+    } else {
+      card.textContent = "No story yet. Add a 24h slide first.";
     }
   }
 
   function bootPogo(doc) {
-    doc = doc || document;
-    /* team select */
+    var btn = doc.querySelector("[data-pogo-catch]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-pogo-status]");
+    var picked = "";
     var teams = doc.querySelectorAll("[data-pogo-team]");
-    var ti;
-    for (ti = 0; ti < teams.length; ti++) {
-      teams[ti].addEventListener("click", function () {
-        var j;
-        for (j = 0; j < teams.length; j++) teams[j].classList.remove("is-on");
-        this.classList.add("is-on");
-        var team = this.getAttribute("data-pogo-team") || "mystic";
-        saveJSON(key("pogo-team"), { team: team, multiStep: true, real: true, ts: Date.now() });
-        var st = doc.querySelector("[data-pogo-status]");
-        feedback("Team " + team + " chosen", st);
-      });
-    }
-    var contLoc = doc.querySelector("[data-pogo-continue-loc]");
-    if (contLoc && contLoc.getAttribute("data-bound") !== "1") {
-      contLoc.setAttribute("data-bound", "1");
-      contLoc.addEventListener("click", function () {
-        var st = doc.querySelector("[data-pogo-status]");
-        if (countChecked(doc, "[data-req], [data-pogo-loc]") < 2) {
-          feedback("Complete location honesty checks first.", st, { error: true });
-          return;
-        }
-        saveJSON(key("pogo-loc"), { locationOk: true, multiStep: true, real: true, ts: Date.now() });
-        feedback("Location literacy saved · pick a team", st);
-        var href = contLoc.getAttribute("data-href") || "team.html";
-        try {
-          location.href = href;
-        } catch (e) {
-          /* */
-        }
-      });
-    }
-    var contTeam = doc.querySelector("[data-pogo-continue-team]");
-    if (contTeam && contTeam.getAttribute("data-bound") !== "1") {
-      contTeam.setAttribute("data-bound", "1");
-      contTeam.addEventListener("click", function () {
-        var st = doc.querySelector("[data-pogo-status]");
-        var t = loadJSON(key("pogo-team"), null);
-        if (!t || !t.team) {
-          feedback("Pick Instinct, Mystic, or Valor first.", st, { error: true });
-          return;
-        }
-        feedback("Team locked · go catch", st);
-        try {
-          location.href = contTeam.getAttribute("data-href") || "catch.html";
-        } catch (e2) {
-          /* */
-        }
-      });
-    }
-    var catchBtn = doc.querySelector("[data-pogo-catch]");
-    if (catchBtn && catchBtn.getAttribute("data-bound") !== "1") {
-      catchBtn.setAttribute("data-bound", "1");
-      var list = doc.querySelector("[data-pogo-list]");
-      function renderCatches() {
-        if (!list) return;
-        var items = loadJSON(key("pogo-catches"), []) || [];
-        if (!Array.isArray(items) || !items.length) {
-          list.innerHTML = "<div class='item' style='color:#888'>No catches yet.</div>";
-          return;
-        }
-        list.innerHTML = items
-          .map(function (it) {
-            return (
-              "<div class='item'><b>Caught</b> · " +
-              String(it.species || "").replace(/</g, "&lt;") +
-              "</div>"
-            );
-          })
-          .join("");
-      }
-      renderCatches();
-      catchBtn.addEventListener("click", function () {
-        var st = doc.querySelector("[data-pogo-status]");
-        var spEl = doc.querySelector("[data-pogo-species]");
-        var species =
-          (spEl && spEl.value != null ? String(spEl.value).replace(/^\s+|\s+$/g, "") : "") ||
-          (doc.querySelector("[data-pogo-species-opt].is-on") &&
-            doc.querySelector("[data-pogo-species-opt].is-on").getAttribute("data-pogo-species-opt")) ||
-          "";
-        if (species.length < 2) {
-          feedback("Pick or type a species first.", st, { error: true });
-          return;
-        }
-        var items = loadJSON(key("pogo-catches"), []) || [];
-        if (!Array.isArray(items)) items = [];
-        items.unshift({ species: species.slice(0, 40), multiStep: true, real: true, ts: Date.now() });
-        saveJSON(key("pogo-catches"), items.slice(0, 40));
-        feedback("Caught " + species + " (theater)", st);
-        renderCatches();
-        markUsed();
-      });
-      var opts = doc.querySelectorAll("[data-pogo-species-opt]");
-      var oi;
-      for (oi = 0; oi < opts.length; oi++) {
-        opts[oi].addEventListener("click", function () {
-          var j;
-          for (j = 0; j < opts.length; j++) opts[j].classList.remove("is-on");
-          this.classList.add("is-on");
-          var sp = doc.querySelector("[data-pogo-species]");
-          if (sp) sp.value = this.getAttribute("data-pogo-species-opt") || "";
-        });
-      }
-    }
-    var saveAll = doc.querySelector("[data-pogo-save]");
-    if (saveAll && saveAll.getAttribute("data-bound") !== "1") {
-      saveAll.setAttribute("data-bound", "1");
-      saveAll.addEventListener("click", function () {
-        var st = doc.querySelector("[data-pogo-status]");
-        if (!checked(doc, "[data-pogo-battery]")) {
-          feedback("Confirm battery drain literacy first.", st, { error: true });
-          return;
-        }
-        var loc = loadJSON(key("pogo-loc"), null);
-        var team = loadJSON(key("pogo-team"), null);
-        var catches = loadJSON(key("pogo-catches"), []) || [];
-        if (!loc || !loc.locationOk) {
-          feedback("Complete location honesty on the map page first.", st, { error: true });
-          return;
-        }
-        if (!team || !team.team) {
-          feedback("Pick a team first.", st, { error: true });
-          return;
-        }
-        if (!Array.isArray(catches) || !catches.length) {
-          feedback("Catch at least one species first.", st, { error: true });
-          return;
-        }
-        saveJSON(key("pogo"), {
-          locationOk: true,
-          team: team.team,
-          catches: catches,
-          batteryOk: true,
-          multiStep: true,
-          real: true,
-          shipped: "2016-07-06",
-          ts: Date.now()
-        });
-        feedback("Adventure saved · " + key("pogo"), st);
-        revealNext(doc);
-        markUsed();
-      });
-    }
-  }
-
-  function bootReactions(doc) {
-    doc = doc || document;
-    if (doc.documentElement && doc.documentElement.getAttribute("data-itt16-react-bound") === "1") {
-      return;
-    }
-    if (doc.documentElement) doc.documentElement.setAttribute("data-itt16-react-bound", "1");
-
-    doc.addEventListener("click", function (ev) {
-      var t = ev.target;
-      if (!t || !t.closest) return;
-      var pick = t.closest("[data-fb-react]");
-      if (pick) {
-        var all = doc.querySelectorAll("[data-fb-react]");
-        var j;
-        for (j = 0; j < all.length; j++) all[j].classList.remove("is-on");
-        pick.classList.add("is-on");
-        var name = pick.getAttribute("data-fb-react") || "";
-        var saveBtn = doc.querySelector("[data-fb-react-save]");
-        if (saveBtn) {
-          try {
-            saveBtn.setAttribute("data-chosen", name);
-          } catch (e0) {
-            /* */
-          }
-        }
-        var st0 = doc.querySelector("[data-fb-react-status]");
-        if (st0) {
-          st0.textContent = "Selected: " + name;
-          st0.classList.remove("is-err", "is-ok");
-        }
-        return;
-      }
-      var save = t.closest("[data-fb-react-save]");
-      if (!save) return;
-      var st = doc.querySelector("[data-fb-react-status]");
-      var chosen =
-        save.getAttribute("data-chosen") ||
-        (doc.querySelector("[data-fb-react].is-on") &&
-          doc.querySelector("[data-fb-react].is-on").getAttribute("data-fb-react"));
-      if (!chosen) {
-        feedback("Pick a reaction first (Love / Haha / Wow / Sad / Angry / Like).", st, {
-          error: true
-        });
-        return;
-      }
-      var postEl = doc.querySelector("[data-fb-post]:checked") || doc.querySelector("[data-fb-post]");
-      var postId = postEl && postEl.getAttribute("data-fb-post") ? postEl.getAttribute("data-fb-post") : "sidewalk";
-      saveJSON(key("reactions"), {
-        reaction: chosen,
-        postId: postId,
-        multiStep: true,
-        real: true,
-        ts: Date.now()
-      });
-      feedback("You reacted: " + chosen + " on “" + postId + "” (theater)", st);
-      revealNext(doc);
-      markUsed();
-    });
-  }
-
-  function bootAirPods(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-airpods-save]");
-    if (btn && btn.getAttribute("data-bound") !== "1") {
-      btn.setAttribute("data-bound", "1");
-      var st = doc.querySelector("[data-airpods-status]");
-      btn.addEventListener("click", function () {
-        if (countChecked(doc, "[data-req], [data-airpods-check]") < 2) {
-          feedback("Complete AirPods honesty checks first.", st, { error: true });
-          return;
-        }
-        var prev = loadJSON(key("airpods"), {}) || {};
-        saveJSON(key("airpods"), {
-          ordered: true,
-          paired: !!(prev && prev.paired),
-          announce: "2016-09-07",
-          orders: "2016-12-13",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        });
-        feedback("AirPods order theater saved · Dec 13 class", st);
-        revealNext(doc);
-        markUsed();
-      });
-    }
-    var pairBtn = doc.querySelector("[data-airpods-pair]");
-    if (pairBtn && pairBtn.getAttribute("data-bound") !== "1") {
-      pairBtn.setAttribute("data-bound", "1");
-      var st2 = doc.querySelector("[data-airpods-status]");
-      pairBtn.addEventListener("click", function () {
-        if (!checked(doc, "[data-airpods-pair-case]") || !checked(doc, "[data-airpods-pair-lit]")) {
-          feedback("Complete case-open + literacy checks first.", st2, { error: true });
-          return;
-        }
-        var prev = loadJSON(key("airpods"), null);
-        if (!prev || !prev.ordered) {
-          feedback("REAL gate: save order theater on AirPods index first.", st2, { error: true });
-          return;
-        }
-        prev.paired = true;
-        prev.multiStep = true;
-        prev.real = true;
-        prev.ts = Date.now();
-        saveJSON(key("airpods"), prev);
-        feedback("AirPods paired (theater)", st2);
-        revealNext(doc);
-        markUsed();
-      });
-    }
-  }
-
-  function bootMusically(doc) {
-    doc = doc || document;
-    var list = doc.querySelector("[data-mly-list]");
-    function render() {
-      if (!list) return;
-      var items = loadJSON(key("musically"), []) || [];
-      if (!Array.isArray(items) || !items.length) {
-        list.innerHTML = "<div class='item' style='color:#aaa'>No posts yet.</div>";
-        return;
-      }
-      list.innerHTML = items
-        .map(function (it) {
-          return (
-            "<div class='item'><b>@museum</b> · ♪ " +
-            String(it.song || "").replace(/</g, "&lt;") +
-            " · ♡ theater</div>"
-          );
-        })
-        .join("");
-    }
-    render();
-    var btn = doc.querySelector("[data-mly-post]");
-    if (!btn || btn.getAttribute("data-bound") === "1") return;
-    btn.setAttribute("data-bound", "1");
-    var st = doc.querySelector("[data-mly-status]");
-    btn.addEventListener("click", function () {
-      var songEl = doc.querySelector("[data-mly-song]");
-      var song = songEl && songEl.value != null ? String(songEl.value).replace(/^\s+|\s+$/g, "") : "";
-      if (song.length < 2) {
-        feedback("REAL gate: enter a song title first.", st, { error: true });
-        return;
-      }
-      if (countChecked(doc, "[data-req]") < 2) {
-        feedback("Complete literacy checks (including not TikTok brand).", st, { error: true });
-        return;
-      }
-      var items = loadJSON(key("musically"), []) || [];
-      if (!Array.isArray(items)) items = [];
-      items.unshift({ song: song.slice(0, 80), multiStep: true, real: true, ts: Date.now() });
-      saveJSON(key("musically"), items.slice(0, 30));
-      if (songEl) songEl.value = "";
-      feedback("Posted to musical.ly theater", st);
-      render();
-      revealNext(doc);
-      markUsed();
-    });
-  }
-
-  function bootSnapStory(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-snap-story-add]");
-    if (!btn || btn.getAttribute("data-bound") === "1") return;
-    btn.setAttribute("data-bound", "1");
-    var st = doc.querySelector("[data-snap-story-status]");
-    var rail = doc.querySelector("[data-snap-story-rail]");
-    function render() {
-      if (!rail) return;
-      var items = loadJSON(key("snap-story"), []) || [];
-      if (!Array.isArray(items) || !items.length) {
-        rail.innerHTML = "<div class='item' style='color:#888'>My Story · empty · add a snap</div>";
-        return;
-      }
-      rail.innerHTML = items
-        .map(function (it) {
-          return (
-            "<div class='item'><b>Snap</b> · " +
-            String(it.caption || "").replace(/</g, "&lt;") +
-            " · 24h</div>"
-          );
-        })
-        .join("");
-    }
-    render();
-    btn.addEventListener("click", function () {
-      var capEl = doc.querySelector("[data-snap-caption]");
-      var cap = capEl && capEl.value != null ? String(capEl.value).replace(/^\s+|\s+$/g, "") : "";
-      if (cap.length < 2) {
-        feedback("REAL gate: enter a caption first (not a soft mock).", st, { error: true });
-        return;
-      }
-      if (countChecked(doc, "[data-req], [data-snap-req]") < 2) {
-        feedback("Complete competitor literacy checks first.", st, { error: true });
-        return;
-      }
-      var items = loadJSON(key("snap-story"), []) || [];
-      if (!Array.isArray(items)) items = [];
-      items.unshift({
-        caption: cap.slice(0, 80),
-        hours: 24,
-        multiStep: true,
-        real: true,
-        ts: Date.now()
-      });
-      saveJSON(key("snap-story"), items.slice(0, 24));
-      if (capEl) capEl.value = "";
-      feedback("Added to My Story · 24h theater", st);
-      render();
-      revealNext(doc);
-      markUsed();
-    });
-  }
-
-  function bootEdge(doc) {
-    doc = doc || document;
-    var st = doc.querySelector("[data-edge-status]");
-    var dl = doc.querySelector("[data-edge-download]");
-    var pref = doc.querySelector("[data-edge-prefer]");
-    if (dl && dl.getAttribute("data-bound") !== "1") {
-      dl.setAttribute("data-bound", "1");
-      dl.addEventListener("click", function () {
-        if (countChecked(doc, "[data-req]") < 2) {
-          feedback("Complete literacy checks first.", st, { error: true });
-          return;
-        }
-        saveJSON(key("edge"), {
-          downloaded: true,
-          preferred: false,
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        });
-        feedback("Edge downloaded (theater). Now prefer.", st);
-        markUsed();
-      });
-    }
-    if (pref && pref.getAttribute("data-bound") !== "1") {
-      pref.setAttribute("data-bound", "1");
-      pref.addEventListener("click", function () {
-        var raw = loadJSON(key("edge"), null);
-        if (!raw || !raw.downloaded) {
-          feedback("Download Edge first, then prefer.", st, { error: true });
-          return;
-        }
-        raw.preferred = true;
-        raw.ts = Date.now();
-        saveJSON(key("edge"), raw);
-        feedback("Edge preferred (local) · Spartan residual", st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootPogoSteps(doc) {
-    doc = doc || document;
-    var steps = doc.querySelector("[data-pogo-steps]");
-    if (!steps) return;
-    var loc = loadJSON(key("pogo-loc"), null);
-    var team = loadJSON(key("pogo-team"), null);
-    var catches = loadJSON(key("pogo-catches"), []) || [];
-    var full = loadJSON(key("pogo"), null);
-    function mark(sel, ok) {
-      var el = steps.querySelector(sel);
-      if (!el) return;
-      if (ok) el.classList.add("done");
-      else el.classList.remove("done");
-    }
-    mark('[data-step="loc"]', !!(loc && loc.locationOk));
-    mark('[data-step="team"]', !!(team && team.team));
-    mark('[data-step="catch"]', Array.isArray(catches) && catches.length > 0);
-    mark('[data-step="save"]', !!(full && full.real));
-  }
-
-  function bootHomeProgress(doc) {
-    doc = doc || document;
-    if (!doc.querySelector("[data-itt16-home-trails]")) return;
-    var cards = doc.querySelectorAll(".itt16-trail-card[data-trail-keys]");
     var i;
-    for (i = 0; i < cards.length; i++) {
-      var keys = String(cards[i].getAttribute("data-trail-keys") || "").split(",");
-      var ok = true;
-      var j;
-      for (j = 0; j < keys.length; j++) {
-        var k = keys[j].replace(/^\s+|\s+$/g, "");
-        if (!k) continue;
-        try {
-          if (!localStorage.getItem(k)) ok = false;
-        } catch (e) {
-          ok = false;
-        }
+    var saved = YX.loadJSON(key("pogo"));
+    if (saved && saved.team) {
+      picked = saved.team;
+      feedback("Team " + picked + " · itt16-pogo", st);
+      reveal(doc);
+    }
+    for (i = 0; i < teams.length; i++) {
+      teams[i].addEventListener("click", function () {
+        picked = this.getAttribute("data-pogo-team") || "";
+        var j;
+        for (j = 0; j < teams.length; j++) teams[j].className = teams[j].className.replace(/\bis-on\b/g, "");
+        this.className = (this.className + " is-on").replace(/\s+/g, " ");
+        if (st) st.textContent = "Team " + picked + " (pick honesty, then Catch).";
+      });
+    }
+    btn.addEventListener("click", function () {
+      var gps = doc.querySelector("[data-pogo-gps]");
+      if (!picked) {
+        feedback("Pick Valor, Mystic, or Instinct first. Empty never writes.", st, { error: true });
+        return;
       }
-      if (ok && keys.length) {
-        cards[i].classList.add("is-done");
-        var mark = cards[i].querySelector(".done-mark");
-        if (mark) {
-          mark.hidden = false;
-        }
+      if (!(gps && gps.checked)) {
+        feedback("Ack sidewalk AR / no live GPS first.", st, { error: true });
+        return;
       }
+      saveJSON(key("pogo"), blob({ team: picked, outdoor: true }));
+      feedback("Caught (theater) · " + picked + " · itt16-pogo", st);
+      reveal(doc);
+    });
+  }
+
+  function bootReact(doc) {
+    var faces = doc.querySelectorAll("[data-fb-react]");
+    if (!faces.length) return;
+    var st = doc.querySelector("[data-fb-react-status]");
+    var saved = YX.loadJSON(key("fb-react"));
+    if (saved && saved.face) {
+      feedback("Reacted · " + saved.face + " · itt16-fb-react", st);
+      reveal(doc);
+    }
+    var i;
+    for (i = 0; i < faces.length; i++) {
+      faces[i].addEventListener("click", function () {
+        var face = this.getAttribute("data-fb-react") || "";
+        if (!face) {
+          feedback("Pick a face. Tray-only never writes.", st, { error: true });
+          return;
+        }
+        saveJSON(key("fb-react"), blob({ face: face }));
+        feedback("Reacted · " + face + " · itt16-fb-react", st);
+        reveal(doc);
+      });
     }
   }
 
-  function bootLiteracySave(doc, opts) {
-    doc = doc || document;
-    var btn = doc.querySelector(opts.btn);
-    if (!btn || btn.getAttribute("data-bound") === "1") return;
-    if (!doc.querySelector(opts.need)) return;
-    btn.setAttribute("data-bound", "1");
-    var st = doc.querySelector(opts.status);
-    if (loadJSON(key(opts.suffix), null)) revealNext(doc);
+  function bootE2e(doc) {
+    var btn = doc.querySelector("[data-wa-e2e-open]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-wa-e2e-status]");
+    if (YX.loadJSON(key("wa-e2e"))) {
+      feedback("Lock on · itt16-wa-e2e", st);
+      reveal(doc);
+    }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, opts.checks) < opts.min) {
-        feedback(opts.block, st, { error: true });
+      if (countChecked(doc, "[data-wa-e2e-req], [data-req]") < 2) {
+        feedback("Tick both honesty notes. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key(opts.suffix), opts.payload());
-      feedback(opts.ok, st);
-      revealNext(doc);
-      markUsed();
+      saveJSON(key("wa-e2e"), blob({ e2e: "default" }));
+      feedback("Default E2E (theater) · itt16-wa-e2e", st);
+      reveal(doc);
     });
   }
 
-  function bootIgLive(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-ig-live-save]",
-      need: "[data-ig-live-date]",
-      status: "[data-ig-live-status]",
-      checks: "[data-ig-live-date], [data-ig-live-gone], [data-ig-live-not-reels]",
-      min: 3,
-      suffix: "ig-live",
-      block: "Complete all three Live literacy checks first.",
-      ok: "Live started (theater) · disappears when you end",
-      payload: function () {
-        return {
-          live: true,
-          shipped: "2016-11-21",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
+  function bootIphone7(doc) {
+    var btn = doc.querySelector("[data-iphone7-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-iphone7-status]");
+    if (YX.loadJSON(key("iphone7"))) {
+      feedback("Jack gone · itt16-iphone7", st);
+      reveal(doc);
+    }
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-iphone7-jack], [data-iphone7-dongle], [data-req]") < 2) {
+        feedback("Tick jack-gone and dongle. Incomplete never writes.", st, { error: true });
+        return;
       }
+      saveJSON(key("iphone7"), blob({ jack: false, dongle: true }));
+      feedback("Reserved (theater) · itt16-iphone7", st);
+      reveal(doc);
     });
   }
 
-  function bootAmpSerp(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-amp-serp-save]",
-      need: "[data-amp-serp-date]",
-      status: "[data-amp-serp-status]",
-      checks: "[data-amp-serp-date], [data-amp-serp-not-2015]",
-      min: 2,
-      suffix: "amp-serp",
-      block: "Complete both AMP-in-Search checks first.",
-      ok: "AMP-in-Search literacy saved",
-      payload: function () {
-        return {
-          ampSerp: true,
-          shipped: "2016-02-24",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
+  function bootAirpods(doc) {
+    var btn = doc.querySelector("[data-airpods-order]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-airpods-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-airpods-req], [data-req]") < 2) {
+        feedback("Announce Sep 7 · orders Dec 13. Tick both.", st, { error: true });
+        return;
       }
+      saveJSON(key("airpods"), blob({ order: "dec13" }));
+      feedback("Ordered (theater) · itt16-airpods", st);
+      reveal(doc);
+    });
+  }
+
+  function bootVineEnd(doc) {
+    var btn = doc.querySelector("[data-vine-end-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-vine-end-status]");
+    if (YX.loadJSON(key("vine-end"))) {
+      feedback("Noted · itt16-vine-end", st);
+      reveal(doc);
+    }
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-vine-end-req], [data-req]") < 2) {
+        feedback("Read both notes first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("vine-end"), blob({ announced: "2016-10-27" }));
+      feedback("Vine winds down · itt16-vine-end", st);
+      reveal(doc);
+    });
+  }
+
+  function bootSpec(doc) {
+    var btn = doc.querySelector("[data-spec-pair]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-spec-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-spec-req], [data-req]") < 1) {
+        feedback("Ack Snapbot / not every mall first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("spectacles"), blob({ pair: true, price: "129.99" }));
+      feedback("Paired (theater) · itt16-spectacles", st);
+      reveal(doc);
+    });
+  }
+
+  function bootMl(doc) {
+    var btn = doc.querySelector("[data-ml-post]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ml-status]");
+    btn.addEventListener("click", function () {
+      var cap = val(doc, "[data-ml-caption]");
+      if (!cap || cap.replace(/^\s+|\s+$/g, "").length < 2) {
+        feedback("Caption first. Empty never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("musically"), blob({ caption: cap.slice(0, 80) }));
+      feedback("Posted (theater) · not TikTok · itt16-musically", st);
+      reveal(doc);
+    });
+  }
+
+  function bootWin10End(doc) {
+    var btn = doc.querySelector("[data-win10-end-save]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-win10-end-status]");
+    if (YX.loadJSON(key("win10-end"))) {
+      feedback("Offer closed · itt16-win10-end", st);
+      reveal(doc);
+    }
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-win10-end-req], [data-req]") < 2) {
+        feedback("Tick offer-ends and Spartan-not-Chromium.", st, { error: true });
+        return;
+      }
+      saveJSON(key("win10-end"), blob({ ended: "2016-07-29" }));
+      feedback("Tray closed (theater) · itt16-win10-end", st);
+      reveal(doc);
     });
   }
 
   function bootDyn(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-dyn-save]",
-      need: "[data-dyn-date]",
-      status: "[data-dyn-status]",
-      checks: "[data-dyn-date], [data-dyn-iot]",
-      min: 2,
-      suffix: "dyn",
-      block: "Complete date + IoT honesty first.",
-      ok: "Dyn outage literacy saved · no payload",
-      payload: function () {
-        return {
-          outage: true,
-          noPayload: true,
-          shipped: "2016-10-21",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
-      }
-    });
-  }
-
-  function bootGhome(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-ghome-save]",
-      need: "[data-ghome-price]",
-      status: "[data-ghome-status]",
-      checks: "[data-ghome-price], [data-ghome-ship], [data-ghome-not-echo]",
-      min: 3,
-      suffix: "home",
-      block: "Complete price + ship + Echo-rival checks first.",
-      ok: "Google Home literacy saved · $129",
-      payload: function () {
-        return {
-          price: 129,
-          shipped: "2016-11-04",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
-      }
-    });
-  }
-
-  function bootIgFeed(doc) {
-    doc = doc || document;
-    var list = doc.querySelector("[data-ig-story-list]");
-    if (!list || doc.querySelector("[data-ig-story-add]")) return;
-    var items = loadJSON(key("ig-stories"), []) || [];
-    if (!Array.isArray(items) || !items.length) {
-      list.innerHTML = "<div class='item' style='color:#888'>No stories — add one. The ring stays empty.</div>";
-      return;
-    }
-    list.innerHTML = items
-      .map(function (it) {
-        return (
-          "<div class='item'><span class='itt16-story-ring'><span>You</span></span> " +
-          String(it.text || "").replace(/</g, "&lt;") +
-          " · <font color='#888'>24h</font></div>"
-        );
-      })
-      .join("");
-  }
-
-  function bootAlloChips(doc) {
-    doc = doc || document;
-    var chips = doc.querySelectorAll("[data-allo-chip]");
-    var i;
-    for (i = 0; i < chips.length; i++) {
-      chips[i].addEventListener("click", function () {
-        var msg = doc.querySelector("[data-allo-msg]");
-        if (msg) msg.value = this.getAttribute("data-allo-chip") || "";
-      });
-    }
-  }
-
-  function bootFbLive(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-fb-live-save]",
-      need: "[data-fb-live-everyone]",
-      status: "[data-fb-live-status]",
-      checks: "[data-fb-live-everyone], [data-fb-live-not-stream]",
-      min: 2,
-      suffix: "fb-live",
-      block: "Complete both Live literacy checks first.",
-      ok: "You’re live (theater) · not a real stream",
-      payload: function () {
-        return {
-          live: true,
-          everyone: true,
-          shipped: "2016-04-06",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
-      }
-    });
-  }
-
-  function bootPixel(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-pixel-save]",
-      need: "[data-pixel-date]",
-      status: "[data-pixel-status]",
-      checks: "[data-pixel-date], [data-pixel-not-iphone]",
-      min: 2,
-      suffix: "pixel",
-      block: "Complete both Pixel literacy checks first.",
-      ok: "Pixel literacy saved · Oct 4",
-      payload: function () {
-        return {
-          pixel: true,
-          shipped: "2016-10-04",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
-      }
-    });
-  }
-
-  function playChirpTheater(st) {
-    try {
-      var AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC) {
-        feedback("Chirp played (theater · no Web Audio)", st);
-        return;
-      }
-      var ctx = new AC();
-      var osc = ctx.createOscillator();
-      var gain = ctx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(80, ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(420, ctx.currentTime + 0.85);
-      gain.gain.setValueAtTime(0.0001, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.05);
-      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.9);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.92);
-      feedback("Chirp played (theater)", st);
-    } catch (e) {
-      feedback("Chirp played (theater)", st);
-    }
-  }
-
-  function bootStem(doc) {
-    doc = doc || document;
-    var chirp = doc.querySelector("[data-stem-chirp]");
-    if (chirp && chirp.getAttribute("data-bound") !== "1") {
-      chirp.setAttribute("data-bound", "1");
-      chirp.addEventListener("click", function () {
-        playChirpTheater(doc.querySelector("[data-stem-chirp-status]"));
-        chirp.classList.add("is-on");
-      });
-    }
-    bootLiteracySave(doc, {
-      btn: "[data-stem-save]",
-      need: "[data-stem-ligo]",
-      status: "[data-stem-status]",
-      checks: "[data-stem-ligo], [data-stem-go]",
-      min: 2,
-      suffix: "stem",
-      block: "Complete LIGO + AlphaGo honesty first.",
-      ok: "STEM literacy saved · 2016 homepage science",
-      payload: function () {
-        return {
-          ligo: true,
-          alphago: true,
-          shipped: "2016-02-11",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
-      }
-    });
-  }
-
-  function bootJio(doc) {
-    bootLiteracySave(doc, {
-      btn: "[data-jio-save]",
-      need: "[data-jio-launch]",
-      status: "[data-jio-status]",
-      checks: "[data-jio-launch], [data-jio-data], [data-jio-lookback]",
-      min: 3,
-      suffix: "jio",
-      block: "Complete launch + data window + 100M lookback checks first.",
-      ok: "Jio Welcome Offer literacy saved · free through 31 Dec",
-      payload: function () {
-        return {
-          launch: "2016-09-05",
-          dataEnds: "2016-12-31",
-          lookback100m: "2017-02-21",
-          year: "2016",
-          multiStep: true,
-          real: true,
-          ts: Date.now()
-        };
-      }
-    });
-  }
-
-  function bootRevealExisting(doc) {
-    doc = doc || document;
-    if (!doc.querySelector("[data-itt16-next], [data-next-flow]")) return;
-    var pairs = [
-      { sel: '[data-storage-key="thesis-ack"]', suffix: "thesis-ack" },
-      { sel: '[data-storage-key="iphone7-jack"]', suffix: "iphone7-jack" },
-      { sel: '[data-storage-key="iphone7"]', suffix: "iphone7" },
-      { sel: '[data-storage-key="vine-end"]', suffix: "vine-end" },
-      { sel: '[data-storage-key="wa-e2e"]', suffix: "wa-e2e" },
-      { sel: '[data-storage-key="rift"]', suffix: "rift" },
-      { sel: "[data-ig-story-add]", suffix: "ig-stories" },
-      { sel: "[data-pogo-save]", suffix: "pogo" }
-    ];
-    var i;
-    for (i = 0; i < pairs.length; i++) {
-      if (doc.querySelector(pairs[i].sel) && loadJSON(key(pairs[i].suffix), null)) {
-        revealNext(doc);
-        return;
-      }
-    }
-  }
-
-  function bootMarketplace(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-mp-save]");
-    if (!btn || btn.getAttribute("data-bound") === "1") return;
-    btn.setAttribute("data-bound", "1");
-    var st = doc.querySelector("[data-mp-status]");
-    if (loadJSON(key("marketplace"), null)) revealNext(doc);
+    var btn = doc.querySelector("[data-dyn-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-dyn-status]");
     btn.addEventListener("click", function () {
-      var titleEl = doc.querySelector("[data-mp-title]");
-      var priceEl = doc.querySelector("[data-mp-price]");
-      var title = titleEl && titleEl.value != null ? String(titleEl.value).replace(/^\s+|\s+$/g, "") : "";
-      var price = priceEl && priceEl.value != null ? String(priceEl.value).replace(/^\s+|\s+$/g, "") : "";
-      if (title.length < 2 || price.length < 1) {
-        feedback("REAL gate: title and price required (no empty listing).", st, { error: true });
+      if (countChecked(doc, "[data-dyn-req], [data-req]") < 2) {
+        feedback("Read both notes. No exploit on this page.", st, { error: true });
         return;
       }
-      if (!checked(doc, "[data-mp-no-pay]")) {
-        feedback("Confirm Facebook does not take payment or ship the box.", st, { error: true });
-        return;
-      }
-      saveJSON(key("marketplace"), {
-        title: title.slice(0, 80),
-        price: price.slice(0, 20),
-        noPay: true,
-        countries: "US/UK/AU/NZ",
-        age18: true,
-        shipped: "2016-10-03",
-        year: "2016",
-        multiStep: true,
-        real: true,
-        ts: Date.now()
-      });
-      feedback("Listed (theater) · no payment · " + key("marketplace"), st);
-      revealNext(doc);
-      markUsed();
+      saveJSON(key("dyn"), blob({ day: "2016-10-21" }));
+      feedback("I was there (literacy) · itt16-dyn", st);
+      reveal(doc);
     });
   }
 
-  function bootAll(doc) {
+  function boot(doc) {
     doc = doc || document;
-    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
-    bootIgStories(doc);
-    bootIgFeed(doc);
+    bootStories(doc);
+    bootStoriesArchive(doc);
     bootPogo(doc);
-    bootPogoSteps(doc);
-    bootReactions(doc);
-    bootAirPods(doc);
-    bootMusically(doc);
-    bootSnapStory(doc);
-    bootEdge(doc);
-    bootHomeProgress(doc);
-    bootIgLive(doc);
-    bootAmpSerp(doc);
+    bootReact(doc);
+    bootE2e(doc);
+    bootIphone7(doc);
+    bootAirpods(doc);
+    bootVineEnd(doc);
+    bootSpec(doc);
+    bootMl(doc);
+    bootWin10End(doc);
     bootDyn(doc);
-    bootGhome(doc);
-    bootAlloChips(doc);
-    bootFbLive(doc);
-    bootPixel(doc);
-    bootMarketplace(doc);
-    bootStem(doc);
-    bootJio(doc);
-    bootRevealExisting(doc);
   }
 
-  var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);
-  if (typeof features.registerLocal === "function") {
-    features.registerLocal({
-      id: "year2016extras",
-      featureKey: "year2016extras",
-      boot: bootAll
+  if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
+    ITT.ImmersionFeatures.registerLocal({
+      id: "year-2016-extras",
+      featureKey: "year2016Extras",
+      boot: boot
     });
+  } else if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { boot(document); });
   } else {
-    features.push({
-      id: "year2016extras",
-      needs: function (cfg) {
-        return !cfg.features || cfg.features.year2016extras !== false;
-      },
-      boot: bootAll
-    });
+    boot(document);
   }
 })(typeof window !== "undefined" ? window : this);

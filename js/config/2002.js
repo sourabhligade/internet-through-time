@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/fotolog/index.html": "http://museum.local/years/2002/sites/fotolog/index.html",
+      "sites/meetup/index.html": "http://museum.local/years/2002/sites/meetup/index.html",
+      "sites/typepad/index.html": "http://museum.local/years/2002/sites/typepad/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2002/sites/playable/famous.html",
 
       "sites/friendster/testimonial.html": "http://museum.local/years/2002/sites/friendster/testimonial.html",

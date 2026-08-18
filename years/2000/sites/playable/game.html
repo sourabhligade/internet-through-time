@@ -2,28 +2,55 @@
 <html lang="en" data-itt-year="2000">
 <head>
 <meta charset="utf-8">
-<title>Portal Judge — 2000</title>
+<title>Lot Life — 2000</title>
 <link rel="stylesheet" href="../../../../css/period-2000.css">
 <link rel="stylesheet" href="../../../../css/year-game-ui.css">
 <style>
-.itt-year-game { max-width: 480px; margin: 0 auto; padding: 10px; font-family: Verdana, Arial, sans-serif; font-size: 13px; background: #000; color: #fc6; }
-.honesty { font-size: 11px; border: 1px solid #c40; padding: 6px; margin: 8px 0; color: #fa0; }
+.itt-year-game { max-width: 520px; margin: 0 auto; padding: 10px; font-family: Verdana, Arial, sans-serif; font-size: 13px; background: #c5d6ef; color: #123; }
+.honesty { font-size: 11px; border: 1px solid #369; padding: 6px; margin: 8px 0; background: #eef4ff; }
+.lot-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; background: #9bbb7a; padding: 8px; border: 2px solid #5a7a3a; }
+.lot-grid button { min-height: 52px; font-size: 11px; background: #b7d08a; border: 1px solid #6a8a4a; cursor: pointer; }
+.lot-grid button[data-lot-has] { background: #fff8e1; font-weight: 700; }
+.lot-grid small { display: block; font-size: 9px; }
+.lot-need { display: flex; align-items: center; gap: 6px; font-size: 11px; margin: 3px 0; text-transform: capitalize; }
+.lot-need span { width: 58px; }
+.lot-need b { display: inline-block; height: 10px; background: #2e7d32; }
+.lot-need.is-mid b { background: #f9a825; }
+.lot-need.is-low b { background: #c62828; }
+.lot-need em { font-style: normal; width: 24px; }
+.lot-shop button { margin: 2px; }
 </style>
 </head>
-<body class="yg-body yg-year-2000" bgcolor="#111">
+<body class="yg-body yg-year-2000" bgcolor="#9bbb7a">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2000" data-game-id="portaljudge" data-yg-goal="Rate every card, then submit — incomplete never writes.">
-  <h1 style="color:#f60;margin:0 0 6px">Portal Judge — 2000</h1>
-  <p>Newgrounds Portal–class voting theater. Rate five fake Flash submissions.</p>
-  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>Newgrounds Portal–class</b> vote/judge culture. Newgrounds founded 1995-07-06; portal submission energy. Museum original · not NG software. · key <code>itt00-game-portaljudge</code></p>
-  <div data-cards></div>
-  <p><button type="button" data-submit disabled>Submit ballot</button></p>
-  <div data-result style="display:none;background:#220;border:1px solid #f60;padding:8px;margin:8px 0"></div>
-  <p data-itt-action-status style="font-size:12px">Rate each 0–5</p>
-  <p style="font-size:11px"><a href="index.html" style="color:#fc6">← Playables</a> · <a href="../../pages/home.html" style="color:#fc6">Starting Point</a></p>
+<div class="itt-year-game yg-shell" data-year-game data-year="2000" data-game-id="lotlife" data-yg-goal="Place furniture. Use it. Throw a party when every need is green." data-yg-next-href="../homestar/index.html" data-yg-next-label="Homestar Runner">
+  <h1 style="margin:0 0 6px">Lot Life — 2000</h1>
+  <p>Buy a fridge, TV, bed, and phone. Click pieces to refill Hunger, Fun, Energy, Social. Party when all bars are green.</p>
+  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>The Sims–class</b> dollhouse (4 Feb 2000). Museum original · not EA software · no brand sprites. · key <code>itt00-game-lotlife</code></p>
+  <ol class="yg-steps" data-yg-steps style="font-size:11px;margin:8px 0;padding-left:1.3em">
+    <li data-step="start">Start a lot</li>
+    <li data-step="place">Place at least 3 pieces</li>
+    <li data-step="use">Use two pieces</li>
+    <li data-step="save">Party writes <code>itt00-game-lotlife</code></li>
+  </ol>
+  <p>Score <b data-game-score>0</b> · Best <b data-game-best>0</b></p>
+  <div data-lot-needs></div>
+  <p class="lot-shop" data-lot-shop>
+    <button type="button" data-lot-buy="fridge">Fridge</button>
+    <button type="button" data-lot-buy="tv">TV</button>
+    <button type="button" data-lot-buy="bed">Bed</button>
+    <button type="button" data-lot-buy="phone">Phone</button>
+  </p>
+  <div class="lot-grid" data-lot-grid role="grid" aria-label="Lot tiles"></div>
+  <p style="margin:8px 0">
+    <button type="button" data-game-start>Start lot</button>
+    <button type="button" data-lot-party disabled>Throw party</button>
+  </p>
+  <p data-itt-action-status style="font-size:12px;min-height:1.2em">Start a lot. Incomplete never writes.</p>
+  <p style="font-size:11px"><a href="index.html">← Playables</a> · <a href="famous.html">Famous games</a> · <a href="../../pages/home.html">Starting Point</a></p>
 </div>
 <script src="../../../../js/games/year-game-boot.js"></script>
-<script src="../../../../js/games/year-2000-portaljudge.js"></script>
+<script src="../../../../js/games/year-2000-lotlife.js"></script>
 <script src="../../../../js/immersion-2000.js" defer></script>
 </body>
 </html>

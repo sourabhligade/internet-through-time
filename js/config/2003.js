@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/4chan/index.html": "http://museum.local/years/2003/sites/4chan/index.html",
+      "sites/hi5/index.html": "http://museum.local/years/2003/sites/hi5/index.html",
+      "sites/newgrounds/index.html": "http://museum.local/years/2003/sites/newgrounds/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2003/sites/playable/famous.html",
 
       "sites/badger/index.html": "http://museum.local/years/2003/sites/badger/index.html",

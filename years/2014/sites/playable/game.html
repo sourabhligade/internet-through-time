@@ -6,45 +6,25 @@
 <link rel="stylesheet" href="../../../../css/period-2014.css">
 <link rel="stylesheet" href="../../../../css/year-game-ui.css">
 </head>
-<body class="yg-body yg-year-2014" bgcolor="#faf8ef">
+<body bgcolor="#faf8ef" text="#111">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2014" data-game-id="tilefold" data-yg-goal="Fold tiles. Reach 128 for the gold band." data-yg-next-href="../whatsapp/index.html" data-yg-next-label="WhatsApp 2014">
-  <h1 style="margin:0 0 6px">Tile Fold — 2014</h1>
-  <p style="margin:0"><b>2048-class</b> merge · museum-original grid · gold band at 128.</p>
-  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>Threes → 1024 → 2048</b> lineage. Cirulli web <b>9 Mar 2014</b>. Not ripped 2048 · no Threes art. Flappy store-kill is Feb 10 literacy (2013 Pipe Hop). · key <code>itt14-game-tilefold</code></p>
-  <p>
-    <button type="button" id="play-start" data-game-start>New / Retry</button>
-    Score <b id="play-score" data-game-score>0</b> · Best <b data-game-best>0</b>
-  </p>
-  <p id="play-status" data-itt-action-status style="font-size:12px" class="yg-status">Arrows / WASD</p>
-  <canvas id="game-canvas" width="320" height="320"></canvas>
-  <p style="font-size:11px;margin-top:8px"><a href="index.html">← Playables</a> · <a href="../../pages/home.html">Starting Point</a></p>
+<div class="itt-year-game yg-shell" data-year-game data-year="2014" data-game-id="tilefold" style="max-width:420px;margin:12px auto;font-family:Tahoma,Arial,sans-serif">
+ <h1>Tile Fold — 2014</h1>
+ <p class="yg-honesty" data-yg-inspire>2048 <b>class</b> · Cirulli web <b>9 Mar 2014</b> after Threes. Museum original grid — not their source. Gold band at <b>128</b>.</p>
+ <p>Score <b data-game-score id="play-score">0</b> · Best <b data-game-best>0</b></p>
+ <p>
+  <button type="button" id="play-start" data-game-start>Start</button>
+  <button type="button" data-tile-dir="up">Up</button>
+  <button type="button" data-tile-dir="left">Left</button>
+  <button type="button" data-tile-dir="down">Down</button>
+  <button type="button" data-tile-dir="right">Right</button>
+ </p>
+ <div data-tile-board id="game-canvas" tabindex="0"></div>
+ <p data-itt-action-status id="play-status">Start. Incomplete never writes.</p>
+ <p style="font-size:11px"><a href="index.html">← Playables</a> · <a href="../../pages/home.html">Starting Point</a> · <a href="../whatsapp/index.html">WhatsApp</a></p>
 </div>
 <script src="../../../../js/games/year-game-boot.js"></script>
 <script src="../../../../js/games/year-2014-tilefold.js"></script>
 <script src="../../../../js/immersion-2014.js" defer></script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2014" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="bendtap.html">Period playables · bendtap</a> ·
- <a href="bleedkey.html">Period playables · bleedkey</a> ·
- <a href="bluetick.html">Period playables · bluetick</a> ·
- <a href="../icebucket/index.html">ALS Ice Bucket Challenge</a> ·
- <a href="../instagram/video.html">Instagram Video</a> ·
- <a href="../iphone/index.html">iPhone 6 and iPhone 6 Plus</a> ·
- <a href="../material/index.html">Material Design</a> ·
- <a href="../musically/index.html">Musical.ly</a> ·
- <a href="../oculus/index.html">Facebook to acquire Oculus</a> ·
- <a href="../secret/index.html">Secret</a> ·
- <a href="../serial/index.html">Serial</a> ·
- <a href="../slack/index.html">Slack</a> ·
- <a href="../snapchat/story.html">Snapchat Stories</a> ·
- <a href="../snowden/index.html">Snowden / PRISM</a> ·
- <a href="../twitch/index.html">Twitch</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
 </body>
 </html>

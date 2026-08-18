@@ -1,82 +1,69 @@
 // @ts-check
-/**
- * 2011 densify gates — scale, bans, P0 year-truth (museum-ready bar)
- */
 const { test, expect } = require('@playwright/test');
-const { enterYear } = require('./helpers');
 
-test.describe('2011 densify', () => {
-  test('scale dual-cite and thesis on about', async ({ page }) => {
+test.describe('2011 leftover densify copy', () => {
+  test('About social + bans', async ({ page }) => {
     await page.goto('/years/2011/pages/about.html');
-    await expect(page.locator('body')).toContainText('346,004,403');
-    await expect(page.locator('body')).toContainText(/555/);
-    await expect(page.locator('body')).toContainText(/2\.1|2\.28|800/);
-    await expect(page.locator('body')).toContainText(/Spotify|Timeline|Siri|Google\+/i);
+    await expect(page.locator('body')).toContainText('#egypt');
+    await expect(page.locator('body')).toContainText('800+ million');
+    await expect(page.locator('body')).toContainText('48 hours');
   });
 
-  test('hard bans include Instagram Android and UberX', async ({ page }) => {
-    await page.goto('/years/2011/pages/about.html');
-    await expect(page.locator('body')).toContainText(/Instagram.*Android|Android.*2012/i);
-    await expect(page.locator('body')).toContainText(/UberX|iPhone 5|Windows 8|Reactions|Stories/i);
-  });
-
-  test('home trails list P0 products', async ({ page }) => {
-    await page.goto('/years/2011/pages/home.html');
-    const text = await page.locator('body').innerText();
-    expect(text).toMatch(/346,004,403|555/);
-    expect(text).toMatch(/Spotify/);
-    expect(text).toMatch(/Timeline/);
-    expect(text).toMatch(/Google\+/);
-    expect(text).toMatch(/Siri|4S/);
-    expect(text).toMatch(/Qwikster|Netflix|iPad 2/i);
-  });
-
-  test('dirbar / nav P0 in shell', async ({ page }) => {
-    await enterYear(page, '2011');
-    for (const label of ['Spotify', 'Timeline', 'Google+', 'iPhone 4S']) {
-      await expect(page.locator('#dirbar .dir-btn, .itt-nav a, nav a', { hasText: label }).first()).toBeVisible({
-        timeout: 15000,
-      });
-    }
-  });
-
-  test('Spotify US prices and Jul 14', async ({ page }) => {
-    await page.goto('/years/2011/sites/spotify/index.html');
-    await expect(page.locator('body')).toContainText(/July 14|Jul 14/i);
-    await expect(page.locator('body')).toContainText(/4\.99|9\.99|invite/i);
-  });
-
-  test('Qwikster minute timeline', async ({ page }) => {
-    await page.goto('/years/2011/sites/netflix/qwikster.html');
-    await expect(page.locator('body')).toContainText(/Qwikster/i);
-    await expect(page.locator('body')).toContainText(/Jul|July|Sep|Oct|23|price/i);
-  });
-
-  test('Google+ field trial date', async ({ page }) => {
+  test('G+ four pillars + 10-step trail', async ({ page }) => {
     await page.goto('/years/2011/sites/googleplus/index.html');
-    await expect(page.locator('body')).toContainText(/June 28|Jun 28/i);
-    await expect(page.locator('body')).toContainText(/Circles|Hangouts|\+1/i);
+    await expect(page.locator('body')).toContainText('Circles');
+    await expect(page.locator('body')).toContainText('Sparks');
+    await expect(page.locator('body')).toContainText('Hangouts');
+    await expect(page.locator('body')).toContainText('Instant Upload');
+    await expect(page.locator('.itt-10-trail li')).toHaveCount(10);
   });
 
-  test('Siri Oct 4 · 4S only honesty', async ({ page }) => {
-    await page.goto('/years/2011/sites/iphone/siri.html');
-    await expect(page.locator('body')).toContainText(/Siri|Oct 4|4S/i);
-    await expect(page.locator('[data-siri-phrase], [data-siri-form]').first()).toBeVisible();
+  test('Spotify SKUs + 22 Sep + no Facebook', async ({ page }) => {
+    await page.goto('/years/2011/sites/spotify/index.html');
+    await expect(page.locator('body')).toContainText('$4.99');
+    await expect(page.locator('body')).toContainText('$9.99');
+    await expect(page.locator('body')).toContainText('22 Sep');
+    await expect(page.locator('body')).toContainText(/No Facebook/i);
   });
 
-  test('IE 9 Mar 14 product room', async ({ page }) => {
-    await page.goto('/years/2011/sites/ie9/index.html');
-    await expect(page.locator('body')).toContainText(/March 14|Mar 14|2011/i);
-    await expect(page.locator('body')).toContainText(/HTML5|IE 9|Internet Explorer 9/i);
+  test('iPad 2 Smart Cover + 3G', async ({ page }) => {
+    await page.goto('/years/2011/sites/ipad/index.html');
+    await expect(page.locator('body')).toContainText('Smart Cover');
+    await expect(page.locator('body')).toContainText('$39');
+    await expect(page.locator('body')).toContainText('$629');
   });
 
-  test('Android ICS densify Oct 19', async ({ page }) => {
-    await page.goto('/years/2011/sites/android/index.html');
-    await expect(page.locator('body')).toContainText(/Ice Cream|ICS|Galaxy Nexus|Oct 19/i);
+  test('4S langs + iCloud + leftover 4', async ({ page }) => {
+    await page.goto('/years/2011/sites/iphone/index.html');
+    await expect(page.locator('body')).toContainText('French');
+    await expect(page.locator('body')).toContainText('iCloud');
+    await expect(page.locator('body')).toContainText('$199');
   });
 
-  test('Instagram still iOS-only honesty', async ({ page }) => {
-    await page.goto('/years/2011/sites/instagram/index.html');
-    await expect(page.locator('body')).toContainText(/iOS|Android.*2012|not.*Android/i);
+  test('Timeline Cover + ticker', async ({ page }) => {
+    await page.goto('/years/2011/sites/facebook/timeline.html');
+    await expect(page.locator('body')).toContainText('Cover');
+    await expect(page.locator('body')).toContainText(/ticker/i);
+  });
+
+  test('Netflix 30% traffic + Qwikster', async ({ page }) => {
+    await page.goto('/years/2011/sites/netflix/index.html');
+    await expect(page.locator('body')).toContainText('30%');
+    await expect(page.locator('body')).toContainText('Qwikster');
+  });
+
+  test('YouTube 48 hours + play control', async ({ page }) => {
+    await page.goto('/years/2011/sites/youtube/index.html');
+    await expect(page.locator('body')).toContainText('48 hours');
+    await expect(page.locator('[data-yt-play]')).toBeVisible();
+    await page.locator('[data-yt-play]').click();
+    await expect(page.locator('[data-yt-share-bridges] a').first()).toBeVisible({ timeout: 15000 });
+    const hrefs = await page.locator('[data-yt-share-bridges] a').evaluateAll((as) =>
+      as.map((a) => a.getAttribute('href') || '')
+    );
+    for (const h of hrefs) {
+      const url = new URL(h, page.url());
+      expect((await page.request.get(url.pathname)).status(), url.pathname).toBe(200);
+    }
   });
 });

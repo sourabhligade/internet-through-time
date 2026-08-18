@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/grooveshark/index.html": "http://museum.local/years/2008/sites/grooveshark/index.html",
+      "sites/posterous/index.html": "http://museum.local/years/2008/sites/posterous/index.html",
+      "sites/stackoverflow/index.html": "http://museum.local/years/2008/sites/stackoverflow/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2008/sites/playable/famous.html",
 
       "sites/dropbox/refer.html": "http://museum.local/years/2008/sites/dropbox/refer.html",

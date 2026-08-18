@@ -2,9 +2,11 @@
 
 **Parent research:** [`../5X-MEASURABLE-LINKS-FLOWS-GAMES-1994-2020.md`](../5X-MEASURABLE-LINKS-FLOWS-GAMES-1994-2020.md)  
 **This folder:** how to **build** 5× links, flows, and games. Not leftover F1–F5 (already shipped).  
-**Status:** implemented 2026-08-16 · generator `scripts/build-5x-measurable.py` (P1–P5 all years).  
+**Status:** implemented 2026-08-16 · generator `scripts/build-5x-measurable.py` (P1–P5 **1994–2009**). Lean **2010–2013** 5× engine shipped 2026-08-17 (`scripts/itt-lean-5x-engine.py`) — 5 pack games + 50 trails + atlas of **on-disk rooms** (not pre-prune 90–230 dest forests). Toys stay retired. See [`../5X-FLAWS-AND-IMPROVE-SCOPE-1994-2013.md`](../5X-FLAWS-AND-IMPROVE-SCOPE-1994-2013.md).  
 **Check diagrams (every year, every flow):** [`FLOW-DIAGRAMS.md`](FLOW-DIAGRAMS.md)  
-**Dest gaps still open (2011–2020 worst · 1994–2007 home chips):** [`../5X-REAL-DEST-GAPS-2011-2020-AND-1994-2007.md`](../5X-REAL-DEST-GAPS-2011-2020-AND-1994-2007.md)
+**On-disk scan + minute phases every year 1994–2014:** [`../5X-FLOWS-LINKS-EVERY-ON-DISK-YEAR-1994-2014.md`](../5X-FLOWS-LINKS-EVERY-ON-DISK-YEAR-1994-2014.md)  
+**Dest gaps still open (2011–2020 worst · 1994–2007 home chips):** [`../5X-REAL-DEST-GAPS-2011-2020-AND-1994-2007.md`](../5X-REAL-DEST-GAPS-2011-2020-AND-1994-2007.md)  
+**Verify 1994–2013 research (steps):** [`../5X-RESEARCH-VERIFY-PHASES-1994-2013.md`](../5X-RESEARCH-VERIFY-PHASES-1994-2013.md)
 
 ## How to use
 
@@ -42,9 +44,9 @@
 | 2007 | iPhone Safari | 25→**125** | 63→**315** | 1→**5** + 3→**15** | [YEAR-2007.md](YEAR-2007.md) |
 | 2008 | GitHub issue | 15→**75** | 53→**265** | 1→**5** + 3→**15** | [YEAR-2008.md](YEAR-2008.md) |
 | 2009 | Facebook Like | 18→**90** | 58→**290** | 1→**5** + 3→**15** | [YEAR-2009.md](YEAR-2009.md) |
-| 2010 | Imgur | 24→**120** | 55→**275** | 1→**5** + 3→**15** | [YEAR-2010.md](YEAR-2010.md) |
-| 2011 | Airbnb request | 18→**90** | 29→**145** | 1→**5** + 3→**15** | [YEAR-2011.md](YEAR-2011.md) |
-| 2012 | SoundCloud | 18→**90** | 30→**150** | 1→**5** + 3→**15** | [YEAR-2012.md](YEAR-2012.md) |
+| 2010 | Instagram iOS | on-disk rooms | on-disk L1 | 1→**5** · toys retired | [YEAR-2010.md](YEAR-2010.md) |
+| 2011 | Google+ Circles | on-disk rooms | on-disk L1 | 1→**5** · toys retired | [YEAR-2011.md](YEAR-2011.md) |
+| 2012 | Instagram Android | on-disk rooms | on-disk L1 | 1→**5** · toys retired | [YEAR-2012.md](YEAR-2012.md) |
 | 2013 | Vine 6s | 34→**170** | 46→**230** | 1→**5** + 3→**15** | [YEAR-2013.md](YEAR-2013.md) |
 | 2014 | WhatsApp install | 32→**160** | 49→**245** | 1→**5** + 3→**15** | [YEAR-2014.md](YEAR-2014.md) |
 | 2015 | Apple Watch | 31→**155** | 36→**180** | 1→**5** + 3→**15** | [YEAR-2015.md](YEAR-2015.md) |

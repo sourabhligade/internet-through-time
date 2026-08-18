@@ -504,131 +504,19 @@
     "title": "Foursquare check-in"
   },
   {
-    "year": "2010",
-    "id": "formspring",
-    "path": "/years/2010/sites/formspring/index.html",
-    "key": "itt10-formspring",
-    "type": "twoClick",
-    "title": "Formspring residual"
-  },
-  {
-    "year": "2010",
-    "id": "grooveshark",
-    "path": "/years/2010/sites/grooveshark/index.html",
-    "key": "itt10-grooveshark",
-    "type": "fillGo",
-    "title": "Grooveshark residual"
-  },
-  {
-    "year": "2010",
-    "id": "path",
-    "path": "/years/2010/sites/path/index.html",
-    "key": "itt10-path",
-    "type": "twoClick",
-    "title": "Path residual"
-  },
-  {
-    "year": "2010",
-    "id": "colorapp",
-    "path": "/years/2010/sites/colorapp/index.html",
-    "key": "itt10-colorapp",
-    "type": "twoClick",
-    "title": "Color residual"
-  },
-  {
-    "year": "2011",
-    "id": "duckduckgo",
-    "path": "/years/2011/sites/duckduckgo/index.html",
-    "key": "itt11-duckduckgo",
-    "type": "fillGo",
-    "title": "DuckDuckGo residual"
-  },
-  {
-    "year": "2011",
-    "id": "turntable",
-    "path": "/years/2011/sites/turntable/index.html",
-    "key": "itt11-turntable",
-    "type": "twoClick",
-    "title": "turntable.fm residual"
-  },
-  {
-    "year": "2011",
-    "id": "twitch",
-    "path": "/years/2011/sites/twitch/index.html",
-    "key": "itt11-twitch",
-    "type": "twoClick",
-    "title": "Twitch / Justin.tv residual"
-  },
-  {
-    "year": "2011",
-    "id": "path",
-    "path": "/years/2011/sites/path/index.html",
-    "key": "itt11-path",
-    "type": "twoClick",
-    "title": "Path residual"
-  },
-  {
-    "year": "2012",
-    "id": "trello",
-    "path": "/years/2012/sites/trello/index.html",
-    "key": "itt12-trello",
-    "type": "twoClick",
-    "title": "Trello residual"
-  },
-  {
-    "year": "2012",
-    "id": "googledrive",
-    "path": "/years/2012/sites/googledrive/index.html",
-    "key": "itt12-googledrive",
-    "type": "twoClick",
-    "title": "Google Drive residual"
-  },
-  {
-    "year": "2012",
-    "id": "waze",
-    "path": "/years/2012/sites/waze/index.html",
-    "key": "itt12-waze",
-    "type": "twoClick",
-    "title": "Waze residual"
-  },
-  {
-    "year": "2012",
-    "id": "lyft",
-    "path": "/years/2012/sites/lyft/index.html",
-    "key": "itt12-lyft",
-    "type": "twoClick",
-    "title": "Lyft residual"
-  },
-  {
     "year": "2013",
-    "id": "slack",
-    "path": "/years/2013/sites/slack/index.html",
-    "key": "itt13-slack",
-    "type": "fillGo",
-    "title": "Slack residual"
-  },
-  {
-    "year": "2013",
-    "id": "tinder",
+    "id": "tinder13",
     "path": "/years/2013/sites/tinder/index.html",
-    "key": "itt13-tinder",
+    "key": "itt13-tinder13",
     "type": "twoClick",
-    "title": "Tinder residual"
+    "title": "Tinder leftover"
   },
   {
     "year": "2013",
-    "id": "outlook",
-    "path": "/years/2013/sites/outlook/index.html",
-    "key": "itt13-outlook",
-    "type": "fillGo",
-    "title": "Outlook.com residual"
-  },
-  {
-    "year": "2013",
-    "id": "googlekeep",
-    "path": "/years/2013/sites/googlekeep/index.html",
-    "key": "itt13-googlekeep",
-    "type": "fillGo",
-    "title": "Google Keep residual"
+    "id": "tumblrdash",
+    "path": "/years/2013/sites/tumblr/yahoo.html",
+    "key": "itt13-tumblrdash",
+    "type": "twoClick",
+    "title": "Tumblr dashboard"
   }
 ]

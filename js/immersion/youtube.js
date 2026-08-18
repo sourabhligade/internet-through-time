@@ -70,7 +70,7 @@
     var y = yearNum();
     var shareUrl = "http://www.youtube.com/watch?v=" + encodeURIComponent(title || "Me at the zoo");
     var bits = [];
-    if (y >= 2005 && y <= 2010) {
+    if (y >= 2005 && y <= 2009) {
       bits.push(
         '<a href="../digg/submit.html?title=' +
           encodeURIComponent(title) +
@@ -95,17 +95,50 @@
           '&tags=video+youtube">del.icio.us</a>'
       );
     }
+    if (y === 2010) {
+      bits.push('<a href="../digg/index.html">Digg v4 leftover</a>');
+      bits.push(
+        '<a href="../reddit/submit.html?title=' +
+          encodeURIComponent(title) +
+          "&url=" +
+          encodeURIComponent(shareUrl) +
+          '">reddit</a>'
+      );
+      bits.push('<a href="../instagram/index.html">Instagram iOS</a>');
+    }
     if (y === 2011) {
       bits.push('<a href="../googleplus/index.html">Google+</a>');
       bits.push('<a href="../facebook/timeline.html">Timeline</a>');
       bits.push('<a href="../netflix/index.html">Netflix / Qwikster</a>');
     }
     if (y === 2012) {
-      bits.push('<a href="about.html">Gangnam residual</a>');
+      bits.push('<a href="../instagram/android.html">Instagram Android</a>');
+      bits.push('<a href="../facebook/ipo.html">Facebook IPO</a>');
+      bits.push('<a href="../../pages/about.html">2012 about</a>');
+      bits.push('<a href="../reddit/index.html">reddit leftover</a>');
+    }
+    if (y === 2013) {
+      bits.push('<a href="../vine/record.html">Vine 6s</a>');
+      bits.push('<a href="../instagram/video.html">IG Video</a>');
+      bits.push('<a href="../../pages/about.html">2013 about</a>');
     }
     if (y === 2014) {
       bits.push('<a href="../whatsapp/index.html">WhatsApp</a>');
+      bits.push('<a href="../icebucket/index.html">Ice Bucket</a>');
       bits.push('<a href="../facebook/index.html">Facebook leftover</a>');
+      bits.push('<a href="../../pages/about.html">2014 about</a>');
+    }
+    if (y === 2015) {
+      bits.push('<a href="../apple/watch.html">Apple Watch</a>');
+      bits.push('<a href="../periscope/index.html">Periscope</a>');
+      bits.push('<a href="../windows10/index.html">Windows 10</a>');
+      bits.push('<a href="../../pages/about.html">2015 about</a>');
+    }
+    if (y === 2016) {
+      bits.push('<a href="../instagram/stories.html">IG Stories</a>');
+      bits.push('<a href="../pokemongo/index.html">Pokémon GO</a>');
+      bits.push('<a href="../dyn/index.html">Dyn</a>');
+      bits.push('<a href="../../pages/about.html">2016 about</a>');
     }
     return bits;
   }
@@ -444,6 +477,9 @@
           }
           var stP = doc.querySelector("[data-yt-status]");
           if (stP) stP.textContent = "Playing… (broadband / Flash lore)";
+          try {
+            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          } catch (eRev) { /* */ }
         } else {
           if (timer) {
             clearInterval(timer);
@@ -506,7 +542,7 @@
             "<div><a href='" +
             watchHref(mine[mi].title) +
             "'>" +
-            mine[mi].title +
+            (U().escapeHtml ? U().escapeHtml(mine[mi].title) : String(mine[mi].title || "").replace(/</g, "&lt;")) +
             "</a></div>";
         }
         ch.innerHTML = html;

@@ -769,339 +769,55 @@
       ]
     },
     {
+      "year": 2010,
+      "yy": "10",
+      "mode": "panel",
+      "star": "sites/instagram/index.html",
+      "flows": [
+        {"suffix": "ask", "room": "sites/ask/index.html", "next": "sites/facebook/index.html", "key": "itt10-ask", "ok": true, "checks": 2},
+        {"suffix": "facebook", "room": "sites/facebook/index.html", "next": "sites/youtube/index.html", "key": "itt10-facebook", "ok": true, "checks": 2},
+        {"suffix": "youtube", "room": "sites/youtube/index.html", "next": "sites/twitter/index.html", "key": "itt10-youtube", "ok": true, "checks": 2},
+        {"suffix": "tweets", "room": "sites/twitter/index.html", "next": "sites/foursquare/index.html", "key": "itt10-tweets", "ok": true, "checks": 2},
+        {"suffix": "4sq", "room": "sites/foursquare/index.html", "next": "sites/instagram/index.html", "key": "itt10-4sq", "ok": true, "checks": 2}
+      ]
+    },
+    {
+      "year": 2011,
+      "yy": "11",
+      "mode": "panel",
+      "star": "sites/googleplus/index.html",
+      "flows": [
+        {"suffix": "tweets", "room": "sites/twitter/index.html", "next": "sites/groupon/index.html", "key": "itt11-tweets", "ok": true, "checks": 2},
+        {"suffix": "groupon", "room": "sites/groupon/index.html", "next": "sites/tumblr/index.html", "key": "itt11-groupon", "ok": true, "checks": 2},
+        {"suffix": "tumblr", "room": "sites/tumblr/index.html", "next": "sites/instagram/index.html", "key": "itt11-tumblr", "ok": true, "checks": 2},
+        {"suffix": "ig", "room": "sites/instagram/index.html", "next": "sites/facebook/timeline.html", "key": "itt11-ig", "ok": true, "checks": 2},
+        {"suffix": "timeline", "room": "sites/facebook/timeline.html", "next": "sites/googleplus/index.html", "key": "itt11-timeline", "ok": true, "checks": 2}
+      ]
+    },
+    {
+      "year": 2012,
+      "yy": "12",
+      "mode": "panel",
+      "star": "sites/instagram/android.html",
+      "flows": [
+        {"suffix": "tweets", "room": "sites/twitter/index.html", "next": "sites/facebook/ipo.html", "key": "itt12-tweets", "ok": true, "checks": 2},
+        {"suffix": "fb-ipo", "room": "sites/facebook/ipo.html", "next": "sites/facebook/index.html", "key": "itt12-fb-ipo", "ok": true, "checks": 2},
+        {"suffix": "facebook", "room": "sites/facebook/index.html", "next": "sites/wikipedia/index.html", "key": "itt12-facebook", "ok": true, "checks": 2},
+        {"suffix": "wiki", "room": "sites/wikipedia/index.html", "next": "sites/pinterest/index.html", "key": "itt12-wiki", "ok": true, "checks": 2},
+        {"suffix": "pin", "room": "sites/pinterest/index.html", "next": "sites/instagram/android.html", "key": "itt12-pin", "ok": true, "checks": 2}
+      ]
+    },
+    {
       "year": 2013,
       "yy": "13",
       "mode": "panel",
       "star": "sites/vine/record.html",
       "flows": [
-        {
-          "suffix": "tinder",
-          "room": "sites/tinder/index.html",
-          "next": "sites/snapchat/index.html",
-          "key": "itt13-tinder",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "snap-story",
-          "room": "sites/snapchat/index.html",
-          "next": "sites/instagram/video.html",
-          "key": "itt13-snap-story",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "igvid",
-          "room": "sites/instagram/video.html",
-          "next": "sites/iphone/index.html",
-          "key": "itt13-igvid",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "ios7",
-          "room": "sites/iphone/index.html",
-          "next": "sites/snowden/index.html",
-          "key": "itt13-ios7",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "snowden-5x",
-          "room": "sites/snowden/index.html",
-          "next": "sites/vine/record.html",
-          "key": "itt13-snowden-5x",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2014,
-      "yy": "14",
-      "mode": "panel",
-      "star": "sites/whatsapp/index.html",
-      "flows": [
-        {
-          "suffix": "twitch",
-          "room": "sites/twitch/index.html",
-          "next": "sites/slack/index.html",
-          "key": "itt14-twitch",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "slack",
-          "room": "sites/slack/index.html",
-          "next": "sites/heartbleed/index.html",
-          "key": "itt14-slack",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "hb",
-          "room": "sites/heartbleed/index.html",
-          "next": "sites/icebucket/index.html",
-          "key": "itt14-hb",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "ice",
-          "room": "sites/icebucket/index.html",
-          "next": "sites/billion/index.html",
-          "key": "itt14-ice",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "1b",
-          "room": "sites/billion/index.html",
-          "next": "sites/whatsapp/index.html",
-          "key": "itt14-1b",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2015,
-      "yy": "15",
-      "mode": "panel",
-      "star": "sites/apple/watch.html",
-      "flows": [
-        {
-          "suffix": "discord",
-          "room": "sites/discord/index.html",
-          "next": "sites/windows10/index.html",
-          "key": "itt15-discord",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "win10",
-          "room": "sites/windows10/index.html",
-          "next": "sites/periscope/index.html",
-          "key": "itt15-win10",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "live",
-          "room": "sites/periscope/index.html",
-          "next": "sites/applemusic/index.html",
-          "key": "itt15-live",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "music",
-          "room": "sites/applemusic/index.html",
-          "next": "sites/googlephotos/index.html",
-          "key": "itt15-music",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "photos",
-          "room": "sites/googlephotos/index.html",
-          "next": "sites/apple/watch.html",
-          "key": "itt15-photos",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2016,
-      "yy": "16",
-      "mode": "panel",
-      "star": "sites/instagram/stories.html",
-      "flows": [
-        {
-          "suffix": "musically",
-          "room": "sites/musically/index.html",
-          "next": "sites/dyn/index.html",
-          "key": "itt16-musically",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "dyn",
-          "room": "sites/dyn/index.html",
-          "next": "sites/stem/index.html",
-          "key": "itt16-dyn",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "stem",
-          "room": "sites/stem/index.html",
-          "next": "sites/jio/index.html",
-          "key": "itt16-stem",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "jio",
-          "room": "sites/jio/index.html",
-          "next": "sites/facebook/index.html",
-          "key": "itt16-jio",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "mkt",
-          "room": "sites/facebook/index.html",
-          "next": "sites/instagram/stories.html",
-          "key": "itt16-mkt",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2017,
-      "yy": "17",
-      "mode": "panel",
-      "star": "sites/iphone/x.html",
-      "flows": [
-        {
-          "suffix": "netflix",
-          "room": "sites/netflix/index.html",
-          "next": "sites/fortnite/index.html",
-          "key": "itt17-netflix",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "fn",
-          "room": "sites/fortnite/index.html",
-          "next": "sites/twitter/index.html",
-          "key": "itt17-fn",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "280",
-          "room": "sites/twitter/index.html",
-          "next": "sites/wannacry/index.html",
-          "key": "itt17-280",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "wc",
-          "room": "sites/wannacry/index.html",
-          "next": "sites/vine/gone.html",
-          "key": "itt17-wc",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "vine-gone",
-          "room": "sites/vine/gone.html",
-          "next": "sites/iphone/x.html",
-          "key": "itt17-vine-gone",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2018,
-      "yy": "18",
-      "mode": "panel",
-      "star": "sites/gdpr/index.html",
-      "flows": [
-        {
-          "suffix": "tiktok-fyp",
-          "room": "sites/tiktok/index.html",
-          "next": "sites/trust/index.html",
-          "key": "itt18-tiktok-fyp",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "hearing",
-          "room": "sites/trust/index.html",
-          "next": "sites/instagram/igtv.html",
-          "key": "itt18-hearing",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "igtv",
-          "room": "sites/instagram/igtv.html",
-          "next": "sites/chrome/index.html",
-          "key": "itt18-igtv",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "notsec",
-          "room": "sites/chrome/index.html",
-          "next": "sites/spectre/index.html",
-          "key": "itt18-notsec",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "spectre",
-          "room": "sites/spectre/index.html",
-          "next": "sites/gdpr/index.html",
-          "key": "itt18-spectre",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2020,
-      "yy": "20",
-      "mode": "panel",
-      "star": "sites/zoom/index.html",
-      "flows": [
-        {
-          "suffix": "quibi",
-          "room": "sites/quibi/index.html",
-          "next": "sites/instagram/reels.html",
-          "key": "itt20-quibi",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "reels",
-          "room": "sites/instagram/reels.html",
-          "next": "sites/flash/eol.html",
-          "key": "itt20-reels",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "flash",
-          "room": "sites/flash/eol.html",
-          "next": "sites/ccpa/index.html",
-          "key": "itt20-flash",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "ccpa-dns",
-          "room": "sites/ccpa/index.html",
-          "next": "sites/acnh/island.html",
-          "key": "itt20-ccpa-dns",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "acnh",
-          "room": "sites/acnh/island.html",
-          "next": "sites/zoom/index.html",
-          "key": "itt20-acnh",
-          "ok": true,
-          "checks": 2
-        }
+        {"suffix": "tinder", "room": "sites/tinder/index.html", "next": "sites/snapchat/index.html", "key": "itt13-tinder", "ok": true, "checks": 2},
+        {"suffix": "snap-story", "room": "sites/snapchat/index.html", "next": "sites/instagram/video.html", "key": "itt13-snap-story", "ok": true, "checks": 2},
+        {"suffix": "igvid", "room": "sites/instagram/video.html", "next": "sites/iphone/ios7.html", "key": "itt13-igvid", "ok": true, "checks": 2},
+        {"suffix": "ios7", "room": "sites/iphone/ios7.html", "next": "sites/snowden/index.html", "key": "itt13-ios7", "ok": true, "checks": 2},
+        {"suffix": "snowden", "room": "sites/snowden/index.html", "next": "sites/vine/record.html", "key": "itt13-snowden", "ok": true, "checks": 2}
       ]
     }
   ],
@@ -1122,6 +838,9 @@
     "2007": "sites/iphone/index.html",
     "2008": "sites/github/issue.html",
     "2009": "sites/facebook/feed.html",
+    "2010": "sites/instagram/index.html",
+    "2011": "sites/googleplus/index.html",
+    "2012": "sites/instagram/android.html",
     "2013": "sites/vine/record.html",
     "2014": "sites/whatsapp/index.html",
     "2015": "sites/apple/watch.html",

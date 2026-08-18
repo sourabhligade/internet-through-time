@@ -1,59 +1,42 @@
 # 2012 capture log
 
-**Updated:** 2026-08-02 deep research  
-**Status:** Research freeze · **no year HTML on disk** · harvest **queued**  
-**Rules:** Year-correct CDX 2012 only · real GIF/JPEG/PNG · `[wa]` or `[failed-final]` · never invent brand pixels
+**Updated:** 2026-08-17 museum-grade leftover research  
+**Disk:** lean `years/2012/` **30 HTML** live · prefix `itt12`  
+**Stills:** `chrome/logo-cont-2009.jpg` **[continuity]** · H12-01–04 **[failed-final]** · no invented `[wa]`  
+**Rules:** Year-correct CDX 2012 only · real GIF/JPEG/PNG · `[wa]` or `[failed-final]` or labeled continuity · never invent brand pixels
 
-## Full research
+**Strike:** earlier rows that said “no year HTML on disk” (true 2026-08-02, false now).
 
-[`docs/2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](../../2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md)  
-[`docs/2012-RESEARCH.md`](../../2012-RESEARCH.md)  
-**Queue:** [`harvest/HARVEST-QUEUE-2012.md`](harvest/HARVEST-QUEUE-2012.md)  
-**Visit log:** [`notes/VISIT-LOG-2026-08-02-deep-research.txt`](notes/VISIT-LOG-2026-08-02-deep-research.txt)
+## Research
 
-## Harvest queue (execute in implement pass)
+- [`docs/2012-READ-FIRST.md`](../../2012-READ-FIRST.md)  
+- [`docs/2012-MUSEUM-GRADE-LEFT.md`](../../2012-MUSEUM-GRADE-LEFT.md)  
+- [`docs/2012-MUSEUM-GRADE-RESEARCH-IMPLEMENT-PHASES.md`](../../2012-MUSEUM-GRADE-RESEARCH-IMPLEMENT-PHASES.md)  
+- Queue: [`harvest/HARVEST-QUEUE-2012.md`](harvest/HARVEST-QUEUE-2012.md)  
+- Visit: [`notes/VISIT-LOG-MUSEUM-GRADE-2026-08-17.txt`](notes/VISIT-LOG-MUSEUM-GRADE-2026-08-17.txt)  
+- CDX this pass: [`notes/CDX-MUSEUM-GRADE-2026-08-17.tsv`](notes/CDX-MUSEUM-GRADE-2026-08-17.tsv) — **503 / timeout / 0 rows**
 
-| ID | Target | Suggested source | Dest | Status |
-|----|--------|------------------|------|--------|
-| H12-01 | Instagram logo / 2012 UI | WA instagr.am **201204** | `assets/period/2012/instagram/` | **failed-final** |
-| H12-02 | Facebook blue bar / Timeline 2012 | WDM · WA **201205–10** | `facebook/` | **failed-final** |
-| H12-03 | FB IPO / 1B culture still | press / WA | `facebook/ipo-wa.*` | **failed-final** |
-| H12-04 | Pinterest logo + grid | WA pinterest.com **201208** | `pinterest/` | **failed-final** |
-| H12-05 | iPhone 5 product hero | Apple Newsroom / WA | `iphone/` | **failed-final** |
-| H12-06 | Lightning cable / iOS 6 Maps | Apple / WA | `iphone/` | **failed-final** |
-| H12-07 | iPad mini hero | Apple Newsroom | `ipad/` | **failed-final** |
-| H12-08 | Windows 8 Start screen | Microsoft PR / WA | `windows8/` | **failed-final** |
-| H12-09 | Chrome 2012 chrome | WA google.com/chrome | `chrome/` | **failed-final** / continuity |
-| H12-10 | Snapchat 2012 ghost | sparse | `snapchat/` | **failed-final** |
-| cont | Gmail · Spotify · Netflix · YT | reuse 2009–11 packs | year-true | **continuity** |
+## Harvest status (lean tree)
 
-## Layer C acceptance (when year ships)
+| ID | Target | Dest | Status 2026-08-17 execute |
+|----|--------|------|---------------------------|
+| H12-01 | Instagram Android / instagr.am | `instagram/` | **[failed-final]** · CDX + `id_` 503 twice · room stamped |
+| H12-02 | iPhone 5 hero | `iphone/` | **[failed-final]** · CDX + `id_` 503 twice · room stamped |
+| H12-03 | iPad mini hero | `ipad/` | **[failed-final]** · CDX + `id_` 503 twice · room stamped |
+| H12-04 | Facebook chrome / IPO | `facebook/` | **[failed-final]** · CDX + `id_` 503 twice · room stamped |
+| H12-05 | Win8 Start **or** Chrome continuity | `chrome/logo-cont-2009.jpg` | **[continuity]** wired · 2009 `logo-sm-wa.jpg` · 4659 B JPEG |
+| H12-06 | Pinterest grid | `pinterest/` | P1 · **[failed-final]** OK |
+| H12-07 | Maps / Lightning | `iphone/` | P1 · copy densified · no still |
+| H12-08 | YouTube / Gangnam | `youtube/` | P1 · no ripped video |
+| H12-09 | SOPA | `wikipedia/` | P1 · 05:00 UTC kept |
+| H12-10…13 | Snap / UberX / Tinder / SoundCloud | — | **failed-final OK** |
+| cont | Gmail · Spotify · Netflix | chips on home/About | **[x]** labeled leftover · no new rooms |
 
-- [x] H12-01…H12-09 each `[wa]` or `[failed-final]`  
+## Layer C acceptance
+
+- [x] H12-01…H12-05 each `[wa]` or `[failed-final]` **or continuity** after execute  
 - [x] No invented pixels  
-- [x] Provenance in CAPTURE + HTML  
+- [x] CAPTURE matches this lean tree  
+- [x] README-PIXELS lists outcomes  
 
-## museum-ready elevate 2026-08-02
-
-| ID | Brand | Status | Notes |
-|----|-------|--------|-------|
-| H12-READY | year pack | failed-final / continuity | Museum-ready without inventing WA logos; ASSETS.md in assets/period/2012/ |
-
-## ROI implement pass 2026-08-03
-
-**Source:** [`UI-FEEL-ARTIFACT-ROI-MASTER-1994-2013.md`](../../UI-FEEL-ARTIFACT-ROI-MASTER-1994-2013.md)
-
-| Action | Result |
-|--------|--------|
-| Continuity asset copy from 2008 chrome/spotify | [continuity] labeled in ASSETS.md |
-| CDX WA harvest (Twitter 2009, Apple 2010–12, Spotify 2011) | [wa] files under `assets/period/YYYY/` |
-| Recon tokens | filter/color token text files (no invented logos) |
-| Voice strip product HTML | visitor-facing `ittXX-` codes removed (JS keys remain) |
-| Amazon catalog freeze soft | 2006–2013 |
-| Product chips on Starting Points | 2004–2010 |
-| Period CSS feel tokens | all years 1994–2013 |
-
-
-| Status | Product | Note | Method | Date |
-|--------|---------|------|--------|------|
-| H | soundcloud | residual multipage REAL densify | educational RECON | 2026-08-07 |
+Museum-ready may close C on **failed-final + continuity** when execute is logged. This execute is logged.

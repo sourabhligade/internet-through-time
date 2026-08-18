@@ -155,7 +155,7 @@
             "</div>" +
             "<div class='reddit-body'>" +
             "<a class='reddit-title' href='" +
-            esc(row.url || "#") +
+            esc(/^\s*javascript:/i.test(row.url || "") ? "#" : row.url || "#") +
             "'>" +
             esc(row.title) +
             "</a> " +
@@ -266,48 +266,9 @@
           return;
         }
         url = String(url).replace(/^\s+|\s+$/g, "");
-        var yearNow =
-          (typeof document !== "undefined" &&
-            document.documentElement &&
-            document.documentElement.getAttribute("data-itt-year")) ||
-          (ITT._immersionYear && String(ITT._immersionYear)) ||
-          "";
-        if (yearNow === "2010") {
-          if (!url || url === "http://" || url === "https://" || !/^https?:\/\//i.test(url)) {
-            if (st) {
-              st.setAttribute("data-allow-html", "1");
-              st.innerHTML = "Paste a link (Imgur direct URL on this trail). Incomplete never writes.";
-            }
-            return;
-          }
-        }
         var list = seed();
         list.unshift({ id: uid(), title: title, url: url, score: 1, ts: Date.now() });
         save(list.slice(0, 50));
-        try {
-          var y = yearNow;
-          if (y === "2010") {
-            var sumKey = U().immersionStorageKey
-              ? U().immersionStorageKey("reddit", "itt10")
-              : "itt10-reddit";
-            localStorage.setItem(
-              sumKey,
-              JSON.stringify({
-                title: title,
-                url: url,
-                multiStep: true,
-                real: true,
-                year: "2010",
-                ts: Date.now()
-              })
-            );
-            try {
-              if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
-            } catch (eN) {
-              /* */
-            }
-          }
-        } catch (eSum) { /* */ }
         saveSort("newest");
         if (st) {
           st.setAttribute("data-allow-html", "1");

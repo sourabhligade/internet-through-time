@@ -6,13 +6,18 @@
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const SAMPLE = ['1994', '2005', '2011', '2020'];
+const SAMPLE = ['1994', '2005', '2010', '2011', '2012', '2013', '2014'];
 
 const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },
   2005: { file: 'game-2.html', gid: 'ytsurge', key: 'itt05-game-ytsurge', need: 3 },
-  2011: { file: 'game-2.html', gid: 'siriline', key: 'itt11-game-siriline', need: 3 },
-  2020: { file: 'game-2.html', gid: 'breakout', key: 'itt20-game-breakout', need: 3 },
+  2010: { file: 'game-2.html', gid: 'igfilter', key: 'itt10-game-igfilter', need: 2 },
+  2011: { file: 'game-2.html', gid: 'siriline', key: 'itt11-game-siriline', need: 2 },
+  2012: { file: 'game-2.html', gid: 'pinboard', key: 'itt12-game-pinboard', need: 2 },
+  2013: { file: 'game-2.html', gid: 'vin6', key: 'itt13-game-vin6', need: 6 },
+  2014: { file: 'game-2.html', gid: 'icehold', key: 'itt14-game-icehold', need: 2 },
+  2015: { file: 'game-2.html', gid: 'watchface', key: 'itt15-game-watchface', need: 2 },
+  2016: { file: 'game-2.html', gid: 'story24', key: 'itt16-game-story24', need: 2 },
 };
 
 async function openPack(page, year, file) {
@@ -59,10 +64,11 @@ for (const year of SAMPLE) {
     expect(blob.gameId).toBe(p.gid);
   });
 
-  test(`5x toys ${year} g=15 host exists`, async ({ page }) => {
-    await page.goto(`/years/${year}/sites/playable/index.html?g=15`);
+  test(`5x cabinet ${year} hosts the year game`, async ({ page }) => {
+    await page.goto(`/years/${year}/sites/playable/index.html`);
     await expect(page.locator('[data-year-playable]')).toBeVisible({ timeout: 20000 });
-    await expect(page.locator('a[href*="g=15"], [data-yp-tab="15"]').first()).toBeVisible();
+    await expect(page.locator('[data-yp-cabinet], a[href="game.html"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="g=15"]')).toHaveCount(0);
   });
 
   test(`5x home atlas ${year} has chips`, async ({ page }) => {

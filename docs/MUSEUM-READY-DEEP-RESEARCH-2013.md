@@ -1,7 +1,7 @@
 # 2013 — Deep research: MVP → museum-ready
 
 **Date:** 2026-08-03  
-**Status on disk:** **MVP live** · hub unlocked · prefix **`itt13`** · ~120 site rooms  
+**Status on disk:** **Lean door live (2026-08-17)** · hub **1994–2013** · prefix **`itt13`** · **38 HTML**. Old ~120-room forest is **not** source of truth.  
 **Goal of this doc:** Extreme research map so **2013 can claim museum-ready** — goals, phases, success steps, sources, artifacts, ROI, what/how/why.  
 **Does not re-scaffold.** Builds on freeze docs + live tree + **new external harvest**.
 

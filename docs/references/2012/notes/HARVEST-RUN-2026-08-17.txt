@@ -1,0 +1,225 @@
+CAT Category:Internet properties established in 2012: 292
+CAT Category:Software companies established in 2012: 46
+CAT Category:Websites established in 2012: 0
+CAT Category:2012 software: 122
+CAT Category:2012 in the Internet: 0
+CAT Category:Mobile software: 242
+CAT Category:Social networking services: 145
+CAT Category:Video on demand services: 232
+CAT Category:Cloud computing providers: 298
+CAT Category:Online music stores: 33
+CAT FAIL Category:IOS software HTTP Error 429: Too Many Requests
+CAT Category:IOS software: 0
+CAT FAIL Category:Android (operating system) software HTTP Error 429: Too Many Requests
+CAT Category:Android (operating system) software: 0
+CAT FAIL Category:Companies that became defunct in 2012 HTTP Error 429: Too Many Requests
+CAT Category:Companies that became defunct in 2012: 0
+CAT FAIL Category:2012 mergers and acquisitions HTTP Error 429: Too Many Requests
+CAT Category:2012 mergers and acquisitions: 0
+CAT FAIL Category:Online companies established in 2011 HTTP Error 429: Too Many Requests
+CAT Category:Online companies established in 2011: 0
+CAT FAIL Category:Internet properties established in 2011 HTTP Error 429: Too Many Requests
+CAT Category:Internet properties established in 2011: 0
+CAT FAIL Category:Internet properties established in 2010 HTTP Error 429: Too Many Requests
+CAT Category:Internet properties established in 2010: 0
+CAT FAIL Category:2012 in science HTTP Error 429: Too Many Requests
+CAT Category:2012 in science: 0
+CAT FAIL Category:2012 in politics HTTP Error 429: Too Many Requests
+CAT Category:2012 in politics: 0
+CAT FAIL Category:Initial public offerings in 2012 HTTP Error 429: Too Many Requests
+CAT Category:Initial public offerings in 2012: 0
+CAT FAIL Category:Android Jelly Bean HTTP Error 429: Too Many Requests
+CAT Category:Android Jelly Bean: 0
+CAT FAIL Category:Windows 8 HTTP Error 429: Too Many Requests
+CAT Category:Windows 8: 0
+TITLES 1369
+EXTLINKS…
+EXT FAIL ['/mlp/', '1CAK'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Apple Maps', 'AppLovin'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Blue Apron', 'BongaCams'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Compare the Market Australia', 'Congress.gov'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Docomo Anime Store', 'Downdetector'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Evntlive', 'Experiment (website)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Gardenista', 'Ginga Scout'] HTTP Error 429: Too Many Requests
+EXT FAIL ['The Hawkeye Initiative', 'Highlight (application)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Kamcord', 'KingFut'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Mawdoo3', 'Medeo (app)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['My Old Man Said', 'Neon Alley'] HTTP Error 429: Too Many Requests
+EXT FAIL ['OpenAirplane', 'Ora TV'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Pheed', 'PicMonkey'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Quip (software)', 'R/dataisbeautiful'] HTTP Error 429: Too Many Requests
+EXT FAIL ['S Voice', 'SAP BTP'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Spacehive', 'Split My Fare'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Telasa', 'Tencent Dajia'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Tune.pk', 'Twistys'] HTTP Error 429: Too Many Requests
+EXT FAIL ['R/wallstreetbets', 'Wanderu Inc.'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Zumbl', '1QBit'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Fotor', 'G2 (company)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Paxata', 'PhotoAid'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Adobe Prelude', 'ADvantage Framework'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Doki (app)', 'Elm (programming language)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Huayra GNU/Linux', 'Internet Explorer 10'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Mail (Windows)', 'Microsoft Fresh Paint'] HTTP Error 429: Too Many Requests
+EXT FAIL ['OS X Mountain Lion', 'P (programming language)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Shadowsocks', 'Shumway (software)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['PayBox', 'Pepper (payment application)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Radio Service Software', 'RealCall'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Shadow Blade', 'SHAPE Services'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Spoiler Shield', 'Sports Tracker'] HTTP Error 429: Too Many Requests
+EXT FAIL ['UAProf', 'United States Department of State panic button software'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Wunderlist', 'XHTML Mobile Profile'] HTTP Error 429: Too Many Requests
+EXT FAIL ['List of virtual communities with more than 1 million users', 'Privacy concerns with social networking services'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Disqus', 'Distributed Social Networking Protocol'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Hornet (app)', 'Huddles (app)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Mastodon (social network)', 'Misskey'] HTTP Error 429: Too Many Requests
+EXT FAIL ['OpenDesktop.org', 'OpenSocial'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Slowly (app)', 'Social Reader'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Twine (social network)', 'Twister (software)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Zhura', 'Zorpia'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Ace Stream', 'Acorn DVD'] HTTP Error 429: Too Many Requests
+EXT FAIL ['BlackTV247', 'Blast TV'] HTTP Error 429: Too Many Requests
+EXT FAIL ['CloudLibrary', 'CONtv'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Eurocinema', 'EuroparlTV'] HTTP Error 429: Too Many Requests
+EXT FAIL ['GoDigital', 'GoDigital Media Group'] HTTP Error 429: Too Many Requests
+EXT FAIL ['ITVX', 'Ivi.ru'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Line TV', 'Lingopie'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Muziic', 'MX Player'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Night Flight Plus', 'Nightstream'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Porn Time', 'Qello'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Saina Play', 'SBS On Demand'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Tabii', 'TalkTalk TV'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Upstream PH', 'Veoh'] HTTP Error 429: Too Many Requests
+EXT FAIL ['VMX (streaming service)', 'VVVVID'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Amazon Elastic Compute Cloud', 'Amazon ElastiCache'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Azure Data Lake', 'Azure Stream Analytics'] HTTP Error 429: Too Many Requests
+EXT FAIL ['CallidusCloud', 'Canon IT Solutions'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Cloud Elements', 'Cloud28+'] HTTP Error 429: Too Many Requests
+EXT FAIL ['DataStax', 'DBGallery'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Enomaly', 'Enstratius'] HTTP Error 429: Too Many Requests
+EXT FAIL ['GitHub', 'Global Relay'] HTTP Error 429: Too Many Requests
+EXT FAIL ['HP Cloud Service Automation Software', 'HP Information Management Software'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Jelastic', 'Jobvite'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Logistaas', 'Lumen Technologies'] HTTP Error 429: Too Many Requests
+EXT FAIL ['MuleSoft', 'Nebula (company)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Oracle Corporation', 'Orbitera'] HTTP Error 429: Too Many Requests
+EXT FAIL ['PSSC Labs', 'QC Ware'] HTTP Error 429: Too Many Requests
+EXT FAIL ['SAP', 'SAP Cloud Infrastructure'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Skytap', 'SmartBear Software'] HTTP Error 429: Too Many Requests
+EXT FAIL ['SurveyMonkey', 'SynfiniWay'] HTTP Error 429: Too Many Requests
+EXT FAIL ['UKG', 'Ultimate Software'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Visual Risk', 'VMware'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Zetta (cloud backup)', 'Zettabox'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Timeline of social media', 'Facebook'] HTTP Error 429: Too Many Requests
+EXT FAIL ['OMGPop', 'Uber'] HTTP Error 429: Too Many Requests
+EXT FAIL ['WhatsApp', 'Dropbox (service)'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Internet Live Stats', 'Total number of websites'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Quora', 'Airbnb'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Samsung Galaxy S III', 'Retina Display'] HTTP Error 429: Too Many Requests
+EXT FAIL ['Siri', 'ICloud'] HTTP Error 429: Too Many Requests
+EXT ROWS 4647
+DOCS URLS…
+DOCS RAW 60919
+CDX…
+CDX FAIL instagram.com HTTPError
+  CDX instagram.com: 0
+CDX FAIL blog.instagram.com HTTPError
+  CDX blog.instagram.com: 0
+CDX FAIL www.facebook.com HTTPError
+  CDX www.facebook.com: 0
+CDX FAIL newsroom.fb.com HTTPError
+  CDX newsroom.fb.com: 0
+CDX FAIL investor.fb.com HTTPError
+  CDX investor.fb.com: 0
+CDX FAIL drive.google.com HTTPError
+  CDX drive.google.com: 0
+CDX FAIL www.google.com/drive/ HTTPError
+  CDX www.google.com/drive/: 0
+CDX FAIL www.google.com/now/ HTTPError
+  CDX www.google.com/now/: 0
+CDX FAIL www.android.com HTTPError
+  CDX www.android.com: 0
+CDX FAIL www.apple.com/iphone/ HTTPError
+  CDX www.apple.com/iphone/: 0
+CDX FAIL www.apple.com/ipad/ HTTPError
+  CDX www.apple.com/ipad/: 0
+CDX FAIL www.apple.com/ios/ HTTPError
+  CDX www.apple.com/ios/: 0
+CDX FAIL maps.apple.com TimeoutError
+  CDX maps.apple.com: 0
+CDX FAIL windows.microsoft.com TimeoutError
+  CDX windows.microsoft.com: 0
+CDX FAIL www.microsoft.com/surface/ HTTPError
+  CDX www.microsoft.com/surface/: 0
+CDX FAIL www.microsoft.com/en-us/windows/internet-explorer HTTPError
+  CDX www.microsoft.com/en-us/windows/internet-explorer: 0
+CDX FAIL www.amazon.com/kindle-fire TimeoutError
+  CDX www.amazon.com/kindle-fire: 0
+  CDX omgpop.com: 90
+CDX FAIL drawsomething.omgpop.com HTTPError
+  CDX drawsomething.omgpop.com: 0
+CDX FAIL gotinder.com HTTPError
+  CDX gotinder.com: 0
+CDX FAIL www.uber.com HTTPError
+  CDX www.uber.com: 0
+CDX FAIL www.youtube.com TimeoutError
+  CDX www.youtube.com: 0
+CDX FAIL www.wikipedia.org TimeoutError
+  CDX www.wikipedia.org: 0
+CDX FAIL en.wikipedia.org HTTPError
+  CDX en.wikipedia.org: 0
+CDX FAIL pinterest.com HTTPError
+  CDX pinterest.com: 0
+CDX FAIL www.snapchat.com HTTPError
+  CDX www.snapchat.com: 0
+CDX FAIL twitter.com HTTPError
+  CDX twitter.com: 0
+CDX FAIL plus.google.com HTTPError
+  CDX plus.google.com: 0
+CDX FAIL www.spotify.com HTTPError
+  CDX www.spotify.com: 0
+CDX FAIL www.netflix.com HTTPError
+  CDX www.netflix.com: 0
+CDX FAIL www.whatsapp.com HTTPError
+  CDX www.whatsapp.com: 0
+CDX FAIL www.dropbox.com HTTPError
+  CDX www.dropbox.com: 0
+CDX FAIL www.tumblr.com HTTPError
+  CDX www.tumblr.com: 0
+CDX FAIL www.linkedin.com HTTPError
+  CDX www.linkedin.com: 0
+CDX FAIL www.reddit.com HTTPError
+  CDX www.reddit.com: 0
+CDX FAIL www.twitch.tv HTTPError
+  CDX www.twitch.tv: 0
+CDX FAIL soundcloud.com HTTPError
+  CDX soundcloud.com: 0
+CDX FAIL www.theverge.com HTTPError
+  CDX www.theverge.com: 0
+CDX FAIL techcrunch.com HTTPError
+  CDX techcrunch.com: 0
+CDX FAIL www.wired.com HTTPError
+  CDX www.wired.com: 0
+CDX FAIL www.cnet.com TimeoutError
+  CDX www.cnet.com: 0
+CDX FAIL googleblog.blogspot.com HTTPError
+  CDX googleblog.blogspot.com: 0
+CDX FAIL www.pingdom.com TimeoutError
+  CDX www.pingdom.com: 0
+CDX FAIL www.apple.com/pr/ HTTPError
+  CDX www.apple.com/pr/: 0
+CDX FAIL developer.apple.com HTTPError
+  CDX developer.apple.com: 0
+CDX FAIL www.whitehouse.gov HTTPError
+  CDX www.whitehouse.gov: 0
+  CDX sopastrike.com: 90
+SUMMARY {
+  "date": "2026-08-17",
+  "categories": 22,
+  "category_rows": 1410,
+  "unique_wiki_pages": 1369,
+  "extlink_rows": 4647,
+  "docs_url_raw": 60919,
+  "cdx_rows": 180,
+  "unique_urls": 11700,
+  "note": "Stacked research corpus. Not rooms. Not 5k live GETs."
+}

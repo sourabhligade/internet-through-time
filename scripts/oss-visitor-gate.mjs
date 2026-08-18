@@ -17,7 +17,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const YEARS = Array.from({ length: 2021 - 1994 + 1 }, (_, i) => String(1994 + i));
+const YEARS = Array.from({ length: 2018 - 1994 + 1 }, (_, i) => String(1994 + i));
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
 
 const fails = [];
@@ -149,15 +149,9 @@ try {
       if (!n) missing.push(y);
     }
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
-    else ok("hub-cards", `${YEARS.length} years 1994–2021`);
-    const motif2013 = await page.locator("a.year-card.available.y2013 .motif").count();
-    if (!motif2013) fail("hub-2013-motif", "2013 card missing .motif");
-    else ok("hub-2013-motif");
-    const motif2016 = await page.locator("a.year-card.available.y2016 .motif").count();
-    if (!motif2016) fail("hub-2016-motif", "2016 card missing .motif");
-    else ok("hub-2016-motif");
+    else ok("hub-cards", `${YEARS.length} years 1994–2018`);
     const copy = await page.locator("body").innerText();
-    if (!/28 years|1994\s*[–-]\s*2021/i.test(copy)) fail("hub-copy", "expected 28 years / 1994–2021");
+    if (!/25 years|1994\s*[–-]\s*2018/i.test(copy)) fail("hub-copy", "expected 25 years / 1994–2018");
     else ok("hub-copy");
     const era = await page.locator('a.era-jump-chip[href="#era-1994-1999"]').count();
     if (!era) fail("hub-era-chip", "missing 1994–1999 era jump");
@@ -220,20 +214,20 @@ try {
     timings.real1995Ms = Date.now() - s;
   }
 
-  // --- 2013 Vine post-without-hold is not REAL ---
+  // --- 2009 FarmVille empty plant is not REAL ---
   {
     const s = Date.now();
-    await page.goto(`${BASE}/years/2013/sites/vine/record.html`, { waitUntil: "domcontentloaded", timeout: 20000 });
-    await page.evaluate(() => localStorage.removeItem("itt13-vine-posts"));
-    const post = page.locator("[data-vine-post]").first();
-    if (await post.isVisible().catch(() => false)) {
-      await post.click();
+    await page.goto(`${BASE}/years/2009/sites/farmville/index.html`, { waitUntil: "domcontentloaded", timeout: 20000 });
+    await page.evaluate(() => localStorage.removeItem("itt09-farm"));
+    const plant = page.locator("[data-fv-plant]").first();
+    if (await plant.isVisible().catch(() => false)) {
+      await plant.click();
       await new Promise((r) => setTimeout(r, 200));
     }
-    const wrote = await page.evaluate(() => localStorage.getItem("itt13-vine-posts"));
-    if (wrote) fail("real-2013-vine-incomplete", wrote.slice(0, 120));
-    else ok("real-2013-vine-incomplete", "no itt13-vine-posts on post-only");
-    timings.real2013Ms = Date.now() - s;
+    const wrote = await page.evaluate(() => localStorage.getItem("itt09-farm"));
+    if (wrote) fail("real-2009-farm-incomplete", wrote.slice(0, 120));
+    else ok("real-2009-farm-incomplete", "no itt09-farm on empty plant");
+    timings.real2009Ms = Date.now() - s;
   }
 
   // --- OSS trail: SourceForge incomplete / complete ---

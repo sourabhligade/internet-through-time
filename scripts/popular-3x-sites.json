@@ -1,0 +1,127 @@
+{
+  "1994": [
+    {"id": "pizzahut", "name": "Pizza Hut", "title": "Pizza Hut — order online", "why": "1994 online pizza order theater. First mass food-on-the-web memory.", "verb": "Type a pizza (required) then Order.", "ph": "pepperoni", "btn": "Order (theater)", "bg": "#c8102e", "fg": "#fff"},
+    {"id": "netmarket", "name": "NetMarket", "title": "NetMarket — first retail", "why": "Aug 1994 first secure retail class. St. Louis Cardinals CD.", "verb": "Name an item then Buy.", "ph": "Stagione CD", "btn": "Buy (theater)", "bg": "#003366", "fg": "#fff"},
+    {"id": "imdb", "name": "IMDb", "title": "Internet Movie Database", "why": "Cards / titles already a habit by 1994–95.", "verb": "Search a title.", "ph": "Pulp Fiction", "btn": "Search", "bg": "#f5c518", "fg": "#111"}
+  ],
+  "1995": [
+    {"id": "espn", "name": "ESPNet", "title": "ESPNet SportsZone", "why": "1995 sports web destination.", "verb": "Type a team then Get score.", "ph": "Bulls", "btn": "Get score", "bg": "#cc0000", "fg": "#fff"},
+    {"id": "cnet", "name": "CNET", "title": "CNET — 1995", "why": "Tech news mass in 1995.", "verb": "Open a headline.", "ph": "Windows 95 ships", "btn": "Read", "bg": "#e31937", "fg": "#fff"},
+    {"id": "salon", "name": "Salon", "title": "Salon — 1995", "why": "Web magazine launch year.", "verb": "Name an essay then Open.", "ph": "Table talk", "btn": "Open", "bg": "#111", "fg": "#fff"}
+  ],
+  "1996": [
+    {"id": "craigslist", "name": "Craigslist", "title": "craigslist — 1996", "why": "Craig Newmark list goes public on the web.", "verb": "City + one listing title.", "ph": "sf bay — bike", "btn": "Post (theater)", "bg": "#ffffcc", "fg": "#00e"},
+    {"id": "askjeeves", "name": "Ask Jeeves", "title": "Ask Jeeves", "why": "1996 natural-language ask.", "verb": "Ask a full question.", "ph": "What is a modem?", "btn": "Ask", "bg": "#fff", "fg": "#111"},
+    {"id": "mtv", "name": "MTV", "title": "mtv.com — 1996", "why": "Music television on the web.", "verb": "Name a video.", "ph": "Wannabe", "btn": "Play (theater)", "bg": "#000", "fg": "#fff"}
+  ],
+  "1997": [
+    {"id": "nytimes", "name": "NYTimes", "title": "NYTimes.com — 1997", "why": "Newspaper of record on the live web.", "verb": "Open a dated headline.", "ph": "Front page", "btn": "Read", "bg": "#fff", "fg": "#111"},
+    {"id": "mp3com", "name": "MP3.com", "title": "MP3.com — 1997", "why": "Legal-ish download destination before Napster mass.", "verb": "Name a track then Download theater.", "ph": "indie.mp3", "btn": "Download (theater)", "bg": "#003399", "fg": "#fff"},
+    {"id": "zdnet", "name": "ZDNet", "title": "ZDNet downloads", "why": "1997 shareware / driver habit.", "verb": "Name a file.", "ph": "winzip.exe", "btn": "Download (theater)", "bg": "#cc0000", "fg": "#fff"}
+  ],
+  "1998": [
+    {"id": "go", "name": "GO.com", "title": "GO Network — Disney 1998", "why": "Disney portal year.", "verb": "Pick a channel name.", "ph": "Sports", "btn": "Go", "bg": "#0066cc", "fg": "#fff"},
+    {"id": "snap", "name": "Snap", "title": "Snap.com — 1998", "why": "NBC portal / search rival.", "verb": "Search the portal.", "ph": "seinfeld", "btn": "Snap", "bg": "#ff6600", "fg": "#fff"},
+    {"id": "about", "name": "About", "title": "About.com / Mining Co", "why": "Guide sites peak late 90s.", "verb": "Name a topic guide.", "ph": "hobbies", "btn": "Open guide", "bg": "#cc0000", "fg": "#fff"}
+  ],
+  "1999": [
+    {"id": "livejournal", "name": "LiveJournal", "title": "LiveJournal — 1999", "why": "Diary culture before Blogger mass.", "verb": "Write an entry title.", "ph": "today", "btn": "Post", "bg": "#2040a0", "fg": "#fff"},
+    {"id": "neopets", "name": "Neopets", "title": "Neopets — 1999", "why": "Pet-site mania.", "verb": "Name a pet then Adopt (theater).", "ph": "Aisha", "btn": "Adopt (theater)", "bg": "#ffcc00", "fg": "#111"},
+    {"id": "egroups", "name": "eGroups", "title": "eGroups — 1999", "why": "Mailing-list web before Yahoo Groups rename.", "verb": "Name a list to join.", "ph": "vintage-computers", "btn": "Join (theater)", "bg": "#006633", "fg": "#fff"}
+  ],
+  "2000": [
+    {"id": "half", "name": "Half.com", "title": "Half.com — 2000", "why": "Used media marketplace; eBay buys it this era.", "verb": "Name a used CD/book.", "ph": "OK Computer", "btn": "Buy used (theater)", "bg": "#ff6600", "fg": "#fff"},
+    {"id": "baidu", "name": "Baidu", "title": "Baidu — 2000", "why": "Launched 2000. Chinese search habit begins.", "verb": "Type a query.", "ph": "互联网", "btn": "Baidu一下", "bg": "#2319dc", "fg": "#fff"},
+    {"id": "everything2", "name": "Everything2", "title": "Everything2 — 2000", "why": "Writeup culture / noder habit.", "verb": "Title a writeup.", "ph": "modem sounds", "btn": "Write", "bg": "#003366", "fg": "#fff"}
+  ],
+  "2001": [
+    {"id": "bittorrent", "name": "BitTorrent", "title": "BitTorrent — 2001", "why": "Protocol/client year. No real files.", "verb": "Name a .torrent (theater).", "ph": "debian.iso.torrent", "btn": "Get torrent (theater)", "bg": "#118811", "fg": "#fff"},
+    {"id": "itunes", "name": "iTunes", "title": "iTunes — 2001", "why": "Mac library before the Store (2003).", "verb": "Name a track in the library.", "ph": "Think Different", "btn": "Play (theater)", "bg": "#333", "fg": "#fff"},
+    {"id": "morpheus", "name": "Morpheus", "title": "Morpheus — 2001", "why": "P2P after Napster injunction. Scare only.", "verb": "Search a song title. No real share.", "ph": "mp3 query", "btn": "Search (no share)", "bg": "#222", "fg": "#9f9"}
+  ],
+  "2002": [
+    {"id": "meetup", "name": "Meetup", "title": "Meetup — 2002", "why": "Post-9/11 IRL organizing on the web.", "verb": "Name a meetup then RSVP.", "ph": "web standards", "btn": "RSVP (theater)", "bg": "#f64060", "fg": "#fff"},
+    {"id": "fotolog", "name": "Fotolog", "title": "Fotolog — 2002", "why": "One photo a day culture.", "verb": "Caption today’s still.", "ph": "roof", "btn": "Post", "bg": "#003399", "fg": "#fff"},
+    {"id": "typepad", "name": "TypePad", "title": "TypePad — 2003-class / 2002 Six Apart", "why": "Hosted blog product next to Movable Type.", "verb": "Title a post.", "ph": "hello", "btn": "Publish", "bg": "#36c", "fg": "#fff"}
+  ],
+  "2003": [
+    {"id": "4chan", "name": "4chan", "title": "4chan — 2003 literacy", "why": "Anonymous imageboard launch. Museum: rules card only.", "verb": "Type a board code (e.g. /mu/). No dumps.", "ph": "/mu/", "btn": "Open board (theater)", "bg": "#eed", "fg": "#800"},
+    {"id": "hi5", "name": "hi5", "title": "hi5 — 2003", "why": "Social graph outside the US college set.", "verb": "Add a friend name.", "ph": "roommate", "btn": "Add (theater)", "bg": "#00a651", "fg": "#fff"},
+    {"id": "newgrounds", "name": "Newgrounds", "title": "Newgrounds — Flash portal", "why": "Flash games/movies mass in this era.", "verb": "Name a submission.", "ph": "tank game", "btn": "Play (theater)", "bg": "#111", "fg": "#fc0"}
+  ],
+  "2004": [
+    {"id": "piczo", "name": "Piczo", "title": "Piczo — 2004", "why": "Decorate-your-page social for teens.", "verb": "Name a layout.", "ph": "sparkle", "btn": "Save layout", "bg": "#ff66aa", "fg": "#fff"},
+    {"id": "tagged", "name": "Tagged", "title": "Tagged — 2004", "why": "Meet / tag people social.", "verb": "Tag a name.", "ph": "classmate", "btn": "Tag", "bg": "#ff6600", "fg": "#fff"},
+    {"id": "odeo", "name": "Odeo", "title": "Odeo — 2004–05", "why": "Podcast directory (Twitter’s parent company).", "verb": "Name a podcast.", "ph": "IT Conversations", "btn": "Subscribe (theater)", "bg": "#333", "fg": "#fff"}
+  ],
+  "2005": [
+    {"id": "dailymotion", "name": "Dailymotion", "title": "Dailymotion — 2005", "why": "YouTube-class host, launched the same season.", "verb": "Title an upload.", "ph": "skate clip", "btn": "Upload (theater)", "bg": "#0066dc", "fg": "#fff"},
+    {"id": "vimeo", "name": "Vimeo", "title": "Vimeo — 2004–05", "why": "Creator video, not YouTube’s mass dump.", "verb": "Title a clip.", "ph": "short film", "btn": "Upload (theater)", "bg": "#1ab7ea", "fg": "#fff"},
+    {"id": "gaia", "name": "Gaia", "title": "Gaia Online — 2003–05 mass", "why": "Avatar / forums teen habit.", "verb": "Name an avatar.", "ph": "sparkle kid", "btn": "Save", "bg": "#2d5", "fg": "#111"}
+  ],
+  "2006": [
+    {"id": "bebo", "name": "Bebo", "title": "Bebo — 2005–06", "why": "Social network mass outside Facebook colleges.", "verb": "Name a profile.", "ph": "school", "btn": "Save", "bg": "#2d6cdf", "fg": "#fff"},
+    {"id": "slideshare", "name": "SlideShare", "title": "SlideShare — 2006", "why": "Decks on the web.", "verb": "Title a deck.", "ph": "startup deck", "btn": "Upload (theater)", "bg": "#f78", "fg": "#111"},
+    {"id": "newsvine", "name": "Newsvine", "title": "Newsvine — 2006", "why": "Seeded news + comments.", "verb": "Seed a headline.", "ph": "local vote", "btn": "Seed", "bg": "#3a3", "fg": "#fff"}
+  ],
+  "2007": [
+    {"id": "justintv", "name": "Justin.tv", "title": "Justin.tv — 2007", "why": "Lifecasting. Twitch’s parent.", "verb": "Name a stream.", "ph": "desk cam", "btn": "Go live (theater)", "bg": "#333", "fg": "#9cf"},
+    {"id": "ustream", "name": "Ustream", "title": "Ustream — 2007", "why": "Live events in the browser.", "verb": "Name an event.", "ph": "keynote", "btn": "Watch (theater)", "bg": "#09c", "fg": "#fff"},
+    {"id": "qik", "name": "Qik", "title": "Qik — 2007", "why": "Phone-to-web live video before Periscope.", "verb": "Name a clip.", "ph": "street", "btn": "Send (theater)", "bg": "#fc0", "fg": "#111"}
+  ],
+  "2008": [
+    {"id": "stackoverflow", "name": "Stack Overflow", "title": "Stack Overflow — Sep 2008", "why": "Programmer Q&A launch.", "verb": "Type a question title.", "ph": "how to center a div", "btn": "Ask (theater)", "bg": "#f48024", "fg": "#fff"},
+    {"id": "posterous", "name": "Posterous", "title": "Posterous — 2008", "why": "Email-to-blog. Dead later; alive this year.", "verb": "Title a post.", "ph": "photos from the show", "btn": "Publish", "bg": "#444", "fg": "#fff"},
+    {"id": "grooveshark", "name": "Grooveshark", "title": "Grooveshark — 2007–08", "why": "Search-and-play music habit (theater, no stream).", "verb": "Name a song.", "ph": "Kids", "btn": "Play (theater)", "bg": "#f77", "fg": "#111"}
+  ],
+  "2009": [
+    {"id": "omegle", "name": "Omegle", "title": "Omegle — 2009", "why": "Stranger text chat. No camera in this museum.", "verb": "Type a first line (text only).", "ph": "asl (don't)", "btn": "Send (text theater)", "bg": "#ffe", "fg": "#111"},
+    {"id": "chatroulette", "name": "Chatroulette", "title": "Chatroulette — 2009", "why": "Webcam roulette. Literacy only — no cam.", "verb": "Ack no-camera then Next (theater).", "ph": "no camera", "btn": "Next stranger (theater)", "bg": "#111", "fg": "#fff"},
+    {"id": "mafiawars", "name": "Mafia Wars", "title": "Mafia Wars — 2009", "why": "Zynga social game next to FarmVille.", "verb": "Name a job then Do job.", "ph": "street tax", "btn": "Do job (theater)", "bg": "#222", "fg": "#c00"}
+  ],
+  "2010": [
+    {"id": "netflix", "name": "Netflix", "title": "Netflix Watch Instantly — 2010", "why": "Streaming is the habit; discs still mail.", "verb": "Name a title then Play instantly.", "ph": "House of Cards? (2013). Try Lost.", "btn": "Play instantly (theater)", "bg": "#111", "fg": "#e50914"},
+    {"id": "tumblr", "name": "Tumblr", "title": "Tumblr — 2010 habit", "why": "Reblog dashboard mass around 2010.", "verb": "Caption a reblog.", "ph": "gif set", "btn": "Reblog", "bg": "#36465d", "fg": "#fff"},
+    {"id": "formspring", "name": "Formspring", "title": "Formspring — 2009–10", "why": "Anonymous Q&A before ask.fm.", "verb": "Answer one question.", "ph": "what is your url", "btn": "Answer", "bg": "#1abc9c", "fg": "#fff"}
+  ],
+  "2011": [
+    {"id": "icloud", "name": "iCloud", "title": "iCloud — 2011", "why": "MobileMe dies. iCloud is the locker.", "verb": "Name a device to sign in (theater).", "ph": "iPhone 4S", "btn": "Sign in (theater)", "bg": "#369", "fg": "#fff"},
+    {"id": "pinterest", "name": "Pinterest", "title": "Pinterest — 2011 breakout", "why": "Invite / board habit explodes 2011–12.", "verb": "Name a pin.", "ph": "kitchen tile", "btn": "Pin", "bg": "#bd081c", "fg": "#fff"},
+    {"id": "linkedin", "name": "LinkedIn", "title": "LinkedIn — 2011 IPO year", "why": "Professional graph goes public-company this year.", "verb": "Connect a name.", "ph": "recruiter", "btn": "Connect (theater)", "bg": "#0077b5", "fg": "#fff"}
+  ],
+  "2012": [
+    {"id": "medium", "name": "Medium", "title": "Medium — 2012", "why": "Ev Williams’s new writing place.", "verb": "Title a draft.", "ph": "why we ship", "btn": "Publish (theater)", "bg": "#00ab6c", "fg": "#fff"},
+    {"id": "path", "name": "Path", "title": "Path — 2012", "why": "50-friend social. Intimate, not Facebook.", "verb": "Post a moment.", "ph": "dinner", "btn": "Post", "bg": "#c33", "fg": "#fff"},
+    {"id": "flipboard", "name": "Flipboard", "title": "Flipboard — 2010–12 mass", "why": "Magazine swipe on the phone.", "verb": "Name a section.", "ph": "Tech", "btn": "Flip", "bg": "#e12828", "fg": "#fff"}
+  ],
+  "2013": [
+    {"id": "askfm", "name": "Ask.fm", "title": "Ask.fm — 2013 mass", "why": "Anonymous Q after Formspring.", "verb": "Answer one ask.", "ph": "why did you leave", "btn": "Answer", "bg": "#ee1a3b", "fg": "#fff"},
+    {"id": "whisper", "name": "Whisper", "title": "Whisper — 2012–13", "why": "Anonymous confession cards.", "verb": "Type a whisper.", "ph": "I still use IE", "btn": "Post (theater)", "bg": "#222", "fg": "#fff"},
+    {"id": "youtube", "name": "YouTube", "title": "YouTube — 2013 leftover", "why": "Still the mass video site. Lean year had no room.", "verb": "Title a watch.", "ph": "music video", "btn": "Watch (theater)", "bg": "#c00", "fg": "#fff"}
+  ],
+  "2014": [
+    {"id": "snapchat", "name": "Snapchat", "title": "Snapchat — 2014 leftover", "why": "Stories launched 2013; mass habit here. Not IG Stories (2016).", "verb": "Caption a snap (24h).", "ph": "behind the gym", "btn": "Send (theater)", "bg": "#fffc00", "fg": "#111"},
+    {"id": "instagram", "name": "Instagram", "title": "Instagram — 2014 leftover", "why": "Still the filter feed. No Stories.", "verb": "Caption + share leftover.", "ph": "weekend", "btn": "Share", "bg": "#3f729b", "fg": "#fff"},
+    {"id": "uber", "name": "Uber", "title": "Uber — 2014 leftover", "why": "Ride-hail mass. Not UberX-as-2012-only.", "verb": "Set a pickup then Request.", "ph": "airport", "btn": "Request (theater)", "bg": "#111", "fg": "#fff"}
+  ],
+  "2015": [
+    {"id": "instagram", "name": "Instagram", "title": "Instagram — 2015 leftover", "why": "Feed + ads begin. No Stories (Aug 2016).", "verb": "Caption a still. Not a Story.", "ph": "rooftop", "btn": "Share", "bg": "#3f729b", "fg": "#fff"},
+    {"id": "spotify", "name": "Spotify", "title": "Spotify — 2015 leftover", "why": "Streaming habit. Discover Weekly is this year.", "verb": "Name a track then Play.", "ph": "Hotline Bling", "btn": "Play (theater)", "bg": "#1db954", "fg": "#fff"},
+    {"id": "netflix", "name": "Netflix", "title": "Netflix — 2015 leftover", "why": "House of Cards / binge is the living-room web.", "verb": "Name a title then Play.", "ph": "House of Cards", "btn": "Play (theater)", "bg": "#111", "fg": "#e50914"}
+  ],
+  "2016": [
+    {"id": "reddit", "name": "Reddit", "title": "reddit — 2016 leftover", "why": "US Alexa-class front page. Still old reddit.", "verb": "Pick a row + honesty + Open.", "ph": "the front page", "btn": "Open (theater)", "bg": "#cee3f8", "fg": "#000"},
+    {"id": "netflix", "name": "Netflix", "title": "Netflix — 2016 leftover", "why": "Streaming habit. Stranger Things S1 is weather. Discs still mail.", "verb": "Pick a 2016 title + honesty + Play.", "ph": "Stranger Things", "btn": "Play (theater)", "bg": "#111", "fg": "#e50914"},
+    {"id": "youtube", "name": "YouTube", "title": "YouTube — 2016 leftover", "why": "Still the #2 site. Not Shorts.", "verb": "Pick a watch + honesty + Watch.", "ph": "music video", "btn": "Watch (theater)", "bg": "#fff", "fg": "#c00"}
+  ],
+  "2017": [
+    {"id": "reddit", "name": "Reddit", "title": "reddit — 2017 leftover", "why": "April 2017 Alexa world #8. Redesign is 2018.", "verb": "Pick a row + honesty + Open.", "ph": "the front page", "btn": "Open (theater)", "bg": "#cee3f8", "fg": "#000"},
+    {"id": "youtube", "name": "YouTube", "title": "YouTube — 2017 leftover", "why": "Still the #2 site. YouTube TV $35 is About weather.", "verb": "Pick a watch + honesty + Watch.", "ph": "music video", "btn": "Watch (theater)", "bg": "#fff", "fg": "#c00"},
+    {"id": "amazon", "name": "Amazon", "title": "Amazon — 2017 leftover", "why": "US Alexa extras. Whole Foods / Echo Show weather.", "verb": "Pick a catalog row + honesty + Search.", "ph": "Echo Show", "btn": "Search (theater)", "bg": "#fff", "fg": "#111"}
+  ],
+  "2018": [
+    {"id": "reddit", "name": "Reddit", "title": "reddit — 2018 leftover", "why": "Redesign lands April 2018. Old reddit still works.", "verb": "Pick old/new + honesty + Open.", "ph": "the front page", "btn": "Open (theater)", "bg": "#cee3f8", "fg": "#000"},
+    {"id": "youtube", "name": "YouTube", "title": "YouTube — 2018 leftover", "why": "Still the #2 site. Not Shorts. Not Reels.", "verb": "Pick a watch + honesty + Watch.", "ph": "music video", "btn": "Watch (theater)", "bg": "#fff", "fg": "#c00"},
+    {"id": "wikipedia", "name": "Wikipedia", "title": "Wikipedia — 2018 leftover", "why": "World Alexa-class encyclopedia. Not the 2001 edit star.", "verb": "Pick an article + honesty + Open.", "ph": "GDPR", "btn": "Open article (theater)", "bg": "#f8f9fa", "fg": "#202122"}
+  ]
+}

@@ -82,8 +82,13 @@
     if (form) {
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var title = (form.querySelector('[name="title"]') || {}).value || "Hello world";
-        var body = (form.querySelector('[name="body"]') || {}).value || "";
+        var title = ((form.querySelector('[name="title"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var body = ((form.querySelector('[name="body"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var st0 = doc.querySelector("[data-wp-status]");
+        if (!title || !body) {
+          if (st0) st0.textContent = "Title + body required. Empty never writes.";
+          return;
+        }
         var posts = loadPosts();
         posts.unshift({ title: title, body: body, date: new Date().toLocaleString() });
         savePosts(posts.slice(0, 40));

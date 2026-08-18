@@ -1,180 +1,108 @@
-# 2011 — Clear goals, step-by-step phases, how-to, and period user flows
+# 2011 — Clear goals, phases, and period user flows
 
-**Date:** 2026-08-02  
-**Purpose:** One **readable** playbook for building and verifying the **2011** museum year — same shape as 2009/2010 clear playbooks.
+**Date:** 2026-08-17  
+**Purpose:** Readable playbook. Companions: READ-FIRST · RESEARCH · harvest · from-scratch · master bible · long dump.  
+**Disk:** lean on disk 2026-08-17. Door `[x]`. Densify from opened sources `[x]`.
 
-1. **Goals** — what “done” means  
-2. **Phases** — ordered steps and **how each phase is achieved**  
-3. **User flows A–T** — each matches how people used the internet **in 2011**  
-4. **Trails · storage · definition of done · anti-goals · cheat sheets**
+# Part 1 — Goals
 
-> **For maximum detail** (minute how/why/what per phase · flows · every source):  
-> **[`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)**  
-> Kits · UI · Wayback: [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md) · short dossier [`2011-RESEARCH.md`](2011-RESEARCH.md)
+Build 2011 from scratch as a **lean museum year**: Win7+IE9, Google+ star, Spotify US + iPad 2 + Siri + Timeline, 2010 products that continue, Qwikster funeral, Snapchat seed, dual-cited scale, `itt11` REAL gates.
 
-**Disk truth today:** Research freeze · hub **1994–2010** · **2011 not scaffolded** · planned `itt11`.  
-**Legal:** Educational reconstruction only. Trademarks belong to their owners. Interactions are **localStorage theater** (no real Spotify streams, Netflix CDN, IPA/APK, OAuth, payments, live Google+, or Snapchat servers). **Never invent brand pixels.**
+Visitor outcome and locked facts: [`2011-RESEARCH.md`](2011-RESEARCH.md).
 
-| Companion docs | Role |
-|----------------|------|
-| [`2011-RESEARCH.md`](2011-RESEARCH.md) | Thesis · timeline · bans · scale |
-| [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md) | Long harvest · UI · sources |
-| [`references/2011/CAPTURE-LOG.md`](references/2011/CAPTURE-LOG.md) | Pixel harvest queue |
-| [`references/2011/ARTIFACTS-MAP.md`](references/2011/ARTIFACTS-MAP.md) | Planned paths |
-| Parent live year | `years/2010/` · `itt10` (clone source) |
+# Part 2 — Phases
 
-**Status marks**
+See [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) Phases 0–15. Do not skip the door (P1) or the star (P2).
 
-| Mark | Meaning |
-|------|---------|
-| **[x]** | Done (research) |
-| **[ ]** | Open implement work |
-| **[~]** | Optional forever (does not block MVP ship) |
+# Part 3 — User flows A–T (how people used 2011)
 
----
+Each flow is a **period session**, then the museum machine.
 
-# Part 1 — Overall goals
+### A — Open the year
+Hub year card → Win7 desktop → IE 9 chrome → Starting Point.  
+**How:** Phase 1 shell. January was still IE8 — honesty chip.
 
-## 1.1 One-line goal
+### B — Read the thesis
+About: 346,004,403 June · 555M Dec · “Circles + legal US streaming + a voice in the phone” · bans IG Android / Vine / iPhone 5 / Win8 / Stories / UberX / “G+ won.”  
+**How:** 2 literacy checks → optional `itt11-thesis-ack`.
 
-Build a **museum-grade 2011 Web immersion**: **Windows 7 + Internet Explorer 9** shell (IE 8 residual honest; Chrome product room), period sites, and **real local interactions** that recreate how people used the internet in calendar year **2011** — especially **Spotify US**, **Facebook Timeline + algorithmic feed start**, **Google+**, **iPhone 4S + Siri + iOS 5 + iCloud**, **iPad 2**, and **Netflix streaming/Qwikster drama** — while **Instagram stays iOS-only**, **Snapchat is a seed**, and most people still live on a **PC**.
+### C — ★ Google+ (the 2011 object)
+A friend finally sends an invite. You do not dump everyone in one “friend” bucket. College in one Circle, parents in another, boss in a third. Then you hang out — walk onto the porch, up to ten faces. It is a field trial. It does not replace Facebook.  
+**How:** field-trial ack · named circle · two Hangout checks · start. `itt11-gplus-hangout` / `itt11-gplus-circles`. No checks = no write.
 
-## 1.2 Visitor outcome (done = visitor can do this)
+### D — Spotify finally legal in the US
+Europe had this in 2008. America gets it 14 Jul. Desktop client, not a website radio. Free if you have an invite (ads). $4.99 kills the ads on the computer. $9.99 takes it to the phone. Facebook is **not** the door in July. 22 Sep at f8, the invite wall drops.  
+**How:** three SKUs visible · two honesty boxes · invite. `itt11-spotify-invited`. No stream.
 
-```
-Hub → open 2011
-  → Win7 desktop + IE 9 (Chrome product room · IE8 residual)
-  → Starting Point / About:
-        dual scale: Live Stats June 346,004,403 (+67%) · Pingdom Dec ~555M
-        users ~2.1B / ~2.28B (label source)
-        thesis: streaming + cloud + algorithmic social + Siri · Jobs dies Oct 5
-        hard bans: Instagram Android · FB owns IG · UberX · iPhone 5 · Win8 · Reactions
-  → Spotify US: Jul 14 · invite free · $4.99 / $9.99 · desktop stream theater
-  → Facebook: Timeline profile · 800M · Messenger thin · algorithmic feed honesty
-  → Google+: Circles · Hangouts · +1 · hype vs engagement honesty
-  → iPhone 4S: Siri · iMessage · iOS 5 Notification Center · iCloud · $199/$299/$399
-  → iPad 2: thinner · cameras · Smart Cover · $499+
-  → Netflix: peak traffic claim · price hike · Qwikster 23-day fiasco exhibit
-  → IE 9 product room · Android ICS / Galaxy Nexus densify
-  → Continuity: Instagram iOS · Twitter #egypt · YouTube · Gmail · Dropbox · Foursquare
-  → Seeds: Snapchat timer · WhatsApp scale note · Pinterest residual · Uber black-car
-  → Exit → hub resume · all state under itt11-* localStorage
-```
+### E — Unbox the iPad 2
+The first iPad had no camera. This one does: FaceTime on the front, 720p on the back, a Smart Cover that wakes it up. Still starts at $499. Ships 11 Mar.  
+**How:** capacity + radio + camera literacy → order. `itt11-ipad2`.
 
-## 1.3 Year thesis (copy must match)
+### F — Ask the phone
+14 Oct. iPhone 4S. Siri is a **beta**: English (US/UK/Australia), French, German. “Will I need an umbrella this weekend?” Jobs died the day after the announce. Not a shrine. Not on iPhone 4.  
+**How:** type a 2011-class phrase. `itt11-siri`. Empty does not write.
 
-**2011 is when streaming, cloud sync, algorithmic feeds, and voice assistants go mainstream:**
+### G — Rebuild Facebook as a memoir
+f8, 22 Sep. Your profile is no longer last week’s wall. It is the story of your life. A Cover photo goes on top. You don’t have to Like a song — you can just listen, and it ticks in the ticker. Graph Search is two years away.  
+**How:** Cover + two literacy checks. `itt11-timeline`.
 
-| Theme | Period truth | Primary |
-|-------|----------------|---------|
-| Music stream US | **Spotify** **Jul 14** | NPR · TechCrunch · Wired |
-| Social redesign | Facebook **Timeline** Sep 22 · algorithmic feed | Cybercultural · Version Museum |
-| Social challenger | **Google+** Jun 28 · Circles · Hangouts | Wikipedia · Guardian |
-| Phone AI | **Siri** on **iPhone 4S** Oct 4 · iOS 5 · iCloud | Apple Newsroom |
-| Tablet | **iPad 2** Mar 2/11 | Apple Newsroom |
-| Video stream drama | Netflix peak traffic · price · **Qwikster** | CNET · Cybercultural |
-| Browser | **IE 9** Mar 14 | Microsoft |
-| Founder culture | Jobs resigns Aug · **dies Oct 5** | Apple Board |
-| Mobile OS | Android **ICS** Oct 19 · Galaxy Nexus | Google Blog |
-| Ephemeral seed | **Snapchat** Sep (from Picaboo Jul) | Wikipedia |
+### H — Message an Airbnb host
+Not a hotel cart. Search a city, pick a listing, write the host a note. No payment.  
+**How:** city → listing → note. `itt11-airbnb`. Next: Timeline.
 
-## 1.4 Locked facts (do not invent)
+### I — Filter a photo (still iPhone only)
+Instagram launched 6 Oct 2010. 2011 is the habit year. Android is **3 Apr 2012**. Do not steal G+’s star.  
+**How:** museum photo → named filter → Share. `itt11-ig-posts`.
 
-See [`2011-RESEARCH.md`](2011-RESEARCH.md) scale table + [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md).
+### J — #egypt or lurk
+Twitter’s year-in-review #1 hashtag is **#egypt**. 250 million tweets a day by October. You still don’t have to tweet.  
+**How:** follow **or** 140 chars. `itt11-tweets`.
 
----
+### K — Today’s Groupon (IPO year)
+Daily deal, then a 4 Nov IPO.  
+**How:** honesty + one deal. `itt11-groupon`.
 
-# Part 2 — Phases (0–12)
+### L — Reblog on Tumblr
+39 million blogs by year end.  
+**How:** reblog leftover. `itt11-tumblr`.
 
-| Phase | Name | Status | How |
-|------:|------|--------|-----|
-| **0** | Research freeze | **[x]** | This pack · deep harvest · CAPTURE queue |
-| **1** | Scaffold year tree | **[ ]** | Clone `years/2010/` → `2011` · shell IE9 · data-itt-year |
-| **2** | Config + stubs + registry | **[ ]** | `config/2011.js` · immersion · browser · FEATURES_BY_YEAR |
-| **3** | Home + About | **[ ]** | Thesis · dual scale · bans · trails |
-| **4** | P0 Spotify US | **[ ]** | Multipage · free/Premium theater · `itt11-spotify` |
-| **5** | P0 Facebook Timeline | **[ ]** | Profile Timeline · feed about · messenger thin |
-| **6** | P0 Google+ | **[ ]** | Circles · Hangouts · +1 |
-| **7** | P0 iPhone 4S / Siri / iOS 5 / iCloud | **[ ]** | Multipage densify |
-| **8** | P0 iPad 2 + Netflix + IE9 | **[ ]** | Product rooms |
-| **9** | P1 densify | **[ ]** | Snapchat · ICS · Instagram · Twitter · WhatsApp |
-| **10** | Continuity pass | **[ ]** | Gmail YT Dropbox Hulu Foursquare Spotify EU residual |
-| **11** | Pixel harvest Layer C | **[ ]** | CAPTURE-LOG H11-* |
-| **12** | Gates + hub unlock | **[ ]** | smoke · e2e · DISK-TRUTH |
+### M — YouTube after dinner
+1 trillion playbacks in 2011. Upload rate is now **48 hours a minute** (it was 35 in 2010).  
+**How:** play residual + honesty.
 
-### Phase how-to (scaffold cheat)
+### N — Send a snap that dies
+Picaboo becomes Snapchat in September. The picture disappears. Not Stories. Not Instagram.  
+**How:** snap literacy. `itt11-snap`.
 
-```bash
-# After approval only — do not run until implement pass
-# 1) copy year tree structure from 2010
-# 2) replace year strings 2010→2011, itt10→itt11, IE 8→IE 9 default
-# 3) rewrite home/about from 2011-RESEARCH thesis
-# 4) add registry entry + immersion modules
-# 5) npm run check:years when server up
-```
+### O — Watch Netflix split, then reverse
+18 Sep: DVDs become Qwikster, streaming keeps Netflix, two sites, games by mail. 10 Oct: they take it back. About three weeks.  
+**How:** announce then reverse ack. `itt11-qwikster`. Funeral, not a store.
 
----
+### P — Try the new browser as a product
+IE 9 is the year shell. Chrome is a room you visit, not January.  
+**How:** product rooms.
 
-# Part 3 — User flows A–T (period)
+### Q — Android ICS
+Ice Cream Sandwich, 18 Oct. Instagram is still iOS.  
+**How:** honesty chip.
 
-| ID | Flow | Period truth | Museum theater |
-|----|------|--------------|----------------|
-| **A** | Enter 2011 shell | Win7 · IE9 · broadband | connect skip · desktop |
-| **B** | Read About / scale | Dual-cite websites | About page |
-| **C** | Beg Spotify invite / stream free | Jul 14 US · ads | playlist + ad flash · `itt11-spotify` |
-| **D** | Upgrade Premium story | $9.99 mobile sync class | plan picker theater |
-| **E** | Open Facebook feed | 800M · blue bar | feed room |
-| **F** | Switch profile to Timeline | Sep F8 | Timeline page · tour check |
-| **G** | Notice Top Stories vs Most Recent | Algorithmic feed start | honesty copy + toggle theater |
-| **H** | Join Google+ / make a Circle | Circles signature | drag/chip theater |
-| **I** | Start a Hangout | Multi video | mock tiles · no WebRTC live required |
-| **J** | +1 a post | Not Like | +1 button |
-| **K** | Ask Siri | 4S exclusive beta | phrase → canned answer |
-| **L** | Send iMessage | iOS 5 blue bubble | thread theater |
-| **M** | Browse iCloud Photo Stream | Oct | album push theater |
-| **N** | Shop iPad 2 | $499+ · Smart Cover | prices multipage |
-| **O** | Watch Netflix / see price shock | Jul hike | pricing page · queue |
-| **P** | Visit Qwikster exhibit | Sep–Oct fiasco | historical room · reversed |
-| **Q** | Download IE 9 | Mar 14 | product room |
-| **R** | Instagram filter (iOS only) | Still no Android | honesty banner |
-| **S** | Send a Snap | Seed late year | timer 1–10s theater |
-| **T** | Exit / resume | localStorage | hub continue 2011 |
+### R — Continuity
+Google and Yahoo still exist. They are chips, not forests.
 
-### Connection trails (home page)
+### S — 5× leftovers
+Twitter · Groupon · Tumblr · About wiki · Airbnb.  
+**How:** popular-flow pack.
 
-1. **Music liberates US** — Spotify about → free → Premium  
-2. **Social redesign war** — Google+ Circles → Facebook Timeline → feed honesty  
-3. **October Apple week** — 4S → Siri → iOS 5 → iCloud → Jobs memorial culture  
-4. **Streaming fights users** — Netflix traffic → pricing → Qwikster → reverse  
-5. **Still phone photos** — Instagram iOS → Snapchat seed → camera roll  
+### T — Letter Swap (leftover)
+Words-with-Friends-class rack. Museum original. Not the star.  
+**How:** playable leftover. `itt11-game-letterswap`.
 
----
+# Part 4 — Trails
 
-# Part 4 — Storage · anti-goals · done
+Star next-flow: Google+ Hangout → Spotify US → Timeline → Siri → iPad 2 → Airbnb.  
+5× F1–F5 (Twitter · Groupon · Tumblr · About · Airbnb) once rooms exist.  
+10-flow trail on the Google+ gold room.
 
-## Storage keys (planned)
+# Part 5 — Done
 
-`itt11-spotify*` · `itt11-fb*` · `itt11-gplus*` · `itt11-iphone*` · `itt11-ipad*` · `itt11-netflix*` · `itt11-snap` · `itt11-ig*` · `itt11-apps` · shell prefs `itt-2011-*`
-
-## Anti-goals
-
-- No real streams, OAuth, or installs  
-- No invented logos  
-- No 2012+ products as defaults  
-- No Material / iOS 7 flat as year default  
-- No mockery of Arab Spring victims in hashtag rooms  
-
-## Definition of MVP ship
-
-- [ ] Hub card unlocked  
-- [ ] Shell + home + about  
-- [ ] All P0 rooms multipage with live local flows  
-- [ ] Dual-cite scale on About  
-- [ ] Hard bans stated  
-- [ ] CAPTURE P0 each `[wa]` or `[failed-final]`  
-- [ ] e2e mvp + real-flows green  
-- [ ] DISK-TRUTH updated  
-
-## Research-only done (this pass)
-
-- [x] Thesis · scale · timeline · bans · P0/P1 kits · UI grammar · harvest queue · flows A–T · phases
+Hub opens · star writes · three P0 machines write · about bans · e2e · no 2012+ default.

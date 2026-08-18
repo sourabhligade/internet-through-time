@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Internet Explorer 9.0 / Chrome — 2012</title>
+ <title>Internet Explorer 9.0 — 2012</title>
  <link rel="icon" href="../../favicon.gif" type="image/gif">
  <base href="./">
  <link rel="stylesheet" href="../../css/win95-netscape.css">
@@ -18,8 +18,8 @@
  <button type="button" id="connect-btn">Connect (always-on broadband)</button>
  <button type="button" class="skip" id="skip-connect">Skip connect</button>
  <p style="margin:8px 0 0;font-size:10px;color:#333;max-width:280px">
- 2012 thesis: mobile + visual web · apps default.
- Instagram Android · FB IPO · iPhone 5 · Pinterest · Chrome · Win8.
+ 2012 thesis: visual + app-first · Web 2.0 culture ends · still mostly a laptop.
+ Instagram Android · $1B · IPO · Pinterest · iPhone 5.
  </p>
  </div>
  </div>
@@ -31,7 +31,7 @@
  <button type="button" class="dialog-x" data-close="dlg-open-location">×</button>
  </div>
  <div class="dialog-body">
- <p>Open Location in Internet Explorer 9:</p>
+ <p>Open Location in Internet Explorer:</p>
  <input type="text" id="dlg-ol-input" class="dialog-input" spellcheck="false" placeholder="http://">
  <div class="dialog-btns">
  <button type="button" id="dlg-ol-ok">Open</button>
@@ -148,9 +148,9 @@
  </div>
  <div class="dialog-body about-body">
  <p><b>Microsoft Internet Explorer</b></p>
- <p>Version 7.0<br>Copyright © 1995–2009 Microsoft Corporation</p>
+ <p>Version 9.0<br>Copyright © 1995–2012 Microsoft Corporation</p>
  <p>Educational historical Web exhibit.</p>
- <p>Windows 7 residual · Chrome / IE 9 · Win8 is a late product, not the January shell.</p>
+ <p>Always-on broadband · IE 9 · Windows 7 · Instagram Android · IPO · iPhone 5.</p>
  <div class="dialog-btns"><button type="button" data-close="dlg-about">OK</button></div>
  </div>
  </div>
@@ -195,7 +195,7 @@
 
  <div class="desktop browser-max">
  <div class="exit-bar" id="exit-bar">
- <span class="year-label">2012 · Windows 7 · Chrome / IE 9</span>
+ <span class="year-label">2012 · Windows 7 · Internet Explorer 9 · Win8 late product</span>
  <a href="../../index.html" title="Exit">← Exit</a>
  </div>
 
@@ -206,7 +206,7 @@
  <div class="desk-icon" data-icon="bin" title="Recycle Bin"><span class="desk-glyph desk-bin"></span><span class="desk-label">Recycle Bin</span></div>
  </div>
 
- <div class="browser maximized" id="browser" role="application" aria-label="Internet Explorer 9">
+ <div class="browser maximized" id="browser" role="application" aria-label="Internet Explorer 8">
  <div class="titlebar" id="titlebar">
  <span class="icon" aria-hidden="true">e</span>
  <span class="title" id="window-title">Welcome to the World Wide Web — Microsoft Internet Explorer</span>
@@ -317,7 +317,6 @@
  <img src="../../assets/period/2007/chrome/throbber.gif" alt="" width="30" height="30">
  </div>
  </div>
- <p class="itt-shell-honesty" style="margin:0;padding:2px 8px;font:11px Arial,sans-serif;color:#555">Toolbar bitmaps are IE7 continuity — shell class is IE9 / Windows 7.</p>
 
  <div class="locationbar" id="locationbar">
  <label for="location">Address</label>
@@ -327,13 +326,13 @@
 
  <div class="dirbar" id="dirbar">
  <button type="button" class="dir-btn" data-go="pages/home.html">Start</button>
- <button type="button" class="dir-btn" data-go="sites/instagram/index.html">Instagram</button>
- <button type="button" class="dir-btn" data-go="sites/facebook/ipo.html">FB IPO</button>
+ <button type="button" class="dir-btn" data-go="sites/instagram/android.html">Instagram</button>
+ <button type="button" class="dir-btn" data-go="sites/facebook/ipo.html">IPO</button>
  <button type="button" class="dir-btn" data-go="sites/pinterest/index.html">Pinterest</button>
  <button type="button" class="dir-btn" data-go="sites/iphone/index.html">iPhone 5</button>
- <button type="button" class="dir-btn" data-go="sites/ipad/index.html">iPad mini</button>
+ <button type="button" class="dir-btn" data-go="sites/windows8/index.html">Windows 8</button>
  <button type="button" class="dir-btn" data-go="sites/chrome/index.html">Chrome</button>
- <button type="button" class="dir-btn" data-go="sites/windows8/index.html">Win8</button>
+ <button type="button" class="dir-btn" data-go="sites/youtube/index.html">YouTube</button>
 </div>
 
  <div class="content-frame">
@@ -353,9 +352,7 @@
  </div>
 
  <div class="win95-taskbar" id="taskbar">
- <button type="button" class="win95-start" id="btn-start" title="Start" style="padding:0;border:0;background:transparent">
- <img src="../../assets/period/2007/xp/start-recon.gif" width="54" height="22" alt="Start">
- </button>
+ <button type="button" class="win95-start" id="btn-start" title="Start">Start</button>
  <button type="button" class="win95-task-btn" id="task-ie">Internet Explorer</button>
  <div class="win95-tray"><span id="tray-clock">12:00 PM</span></div>
  <div class="win95-start-menu hidden" id="start-menu">
@@ -457,7 +454,7 @@
  var iconMsgs = {
  mypc: { title: "My Computer", msg: "💾 (A:) 3½ Floppy\n💿 (C:) Local Disk\n💿 (D:) CD-ROM Drive\n🖨️ Printers\n⚙️ Control Panel\n\nFree space on (C:): 1.2 GB" },
  net: { title: "Network Neighborhood", msg: "🖥️ Searching for computers...\n\nNo other computers found.\n\nTip: Try Dial-Up Networking to connect to the Internet." },
- inbox: { title: "Windows Live Mail", msg: "📧 1 unread message:\n━━━━━━━━━━━━━━━\nFrom: museum@internetthroughtime\nSubject: Welcome to 2012\nDate: May 2012\n━━━━━━━━━━━━━━━\n\n\"IG Android · FB IPO · Pinterest · iPhone 5 — start at Starting Point.\"" },
+ inbox: { title: "Inbox - Microsoft Exchange", msg: "📧 You've Got Mail!\n\n1 unread message:\n━━━━━━━━━━━━━━━\nFrom: museum@internetthroughtime\nSubject: Welcome to 2012\nDate: April 2012\n━━━━━━━━━━━━━━━\n\n\"Instagram Android · Facebook $1B · IPO $38 — start at Starting Point.\"" },
  bin: { title: "Recycle Bin", msg: "🗑️ Recycle Bin is empty.\n\n0 objects" }
  };
  var deskIcons = document.querySelectorAll("[data-icon]");

@@ -41,9 +41,18 @@
   function U() {
     return ITT.util || {};
   }
+  function year() {
+    return String(
+      ITT._immersionYear ||
+        (typeof document !== "undefined" &&
+          document.documentElement &&
+          document.documentElement.getAttribute("data-itt-year")) ||
+        "2011"
+    );
+  }
   function key(kind) {
-    if (U().immersionStorageKey) return U().immersionStorageKey(kind, "itt11");
-    return "itt11-" + kind;
+    if (U().immersionStorageKey) return U().immersionStorageKey(kind);
+    return "itt" + year().slice(2) + "-" + kind;
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);

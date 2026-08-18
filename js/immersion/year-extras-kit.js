@@ -221,9 +221,8 @@
     }
   }
 
-  function revealNextFlow(doc) {
-    doc = doc || document;
-    var els = doc.querySelectorAll("[data-next-flow]");
+  function showEls(doc, sel) {
+    var els = doc.querySelectorAll(sel);
     var i;
     for (i = 0; i < els.length; i++) {
       try {
@@ -235,8 +234,15 @@
     }
   }
 
+  function revealNextFlow(doc) {
+    doc = doc || document;
+    showEls(doc, "[data-next-flow]");
+    showEls(doc, "[data-prev-flow]");
+  }
+
   function bootRevealNext(doc) {
     doc = doc || document;
+    showEls(doc, "[data-prev-flow]");
     var els = doc.querySelectorAll("[data-next-flow]");
     var i;
     var j;

@@ -140,15 +140,15 @@ def rewrite_atlas(tracked: set[str]) -> int:
         if name not in FILLER:
             return m.group(0)
         # Keep real product rooms (e.g. sites/apple/ipod/faq.html is tracked).
-        if any((ROOT / "years" / str(y) / href).is_file() for y in range(1994, 2022)):
+        if any((ROOT / "years" / str(y) / href).is_file() for y in range(1994, 2010)):
             return m.group(0)
         base = href.rsplit("/", 1)[0]
         idx = base + "/index.html"
         parent = base + ".html"
         n += 1
-        if any((ROOT / "years" / str(y) / idx).is_file() for y in range(1994, 2022)):
+        if any((ROOT / "years" / str(y) / idx).is_file() for y in range(1994, 2010)):
             return f'"href": "{idx}"'
-        if any((ROOT / "years" / str(y) / parent).is_file() for y in range(1994, 2022)):
+        if any((ROOT / "years" / str(y) / parent).is_file() for y in range(1994, 2010)):
             return f'"href": "{parent}"'
         return f'"href": "{idx}"'
 

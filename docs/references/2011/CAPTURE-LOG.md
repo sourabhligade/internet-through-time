@@ -1,7 +1,7 @@
 # 2011 capture log
 
 **Updated:** 2026-08-02 deep research  
-**Status:** Research freeze · **no year HTML on disk** · harvest **queued** (not executed)  
+**Status:** Lean year **on disk** (28 HTML) · harvest **queued** (execute leftover L2)  
 **Rules:** Year-correct CDX 2011 only · `file` must be real GIF/JPEG/PNG · log `[wa]` or `[failed-final]` · never invent brand pixels · continuity from 2010 OK when year-true
 
 ## Full research

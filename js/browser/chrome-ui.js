@@ -797,14 +797,21 @@
           var reader = new FileReader();
           reader.onload = function () {
             try {
-              var doc = ctx.iframe.contentDocument;
-              doc.open();
-              doc.write(reader.result);
-              doc.close();
+              var raw = String(reader.result || "");
+              if (/<\s*script/i.test(raw) || /\son\w+\s*=/i.test(raw)) {
+                showAlert(
+                  "Open File",
+                  "This exhibit opens files as text only.\nScripts and event handlers are not run."
+                );
+                ctx.setStatus("Open File: text only (script blocked).");
+                return;
+              }
+              var pre = document.getElementById("dlg-source-text");
+              if (pre) pre.textContent = raw;
+              openDialog("dlg-source");
               if (ctx.windowTitle) ctx.windowTitle.textContent = file.name + ctx.titleSuffix;
               if (ctx.locationInput) ctx.locationInput.value = "file:///" + file.name;
-              ctx.setStatus("Opened " + file.name);
-              if (ctx.wireDocument) ctx.wireDocument(doc, ctx.currentPath());
+              ctx.setStatus("Opened " + file.name + " as text");
             } catch (err) {
               showAlert("Open File", "Could not open file:\n" + file.name);
             }
@@ -931,6 +938,7 @@
       renderBookmarkMenus: renderBookmarkMenus,
       renderGoHistory: renderGoHistory,
       runCommand: runCommand,
+      openMailDialog: openMailDialog,
       wire: wire
     };
   }

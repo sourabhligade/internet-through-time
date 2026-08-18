@@ -38,12 +38,7 @@
         Same genres inside the year museum:
         <a href="../../years/2005/sites/playable/game.html"><b>2005 HoverChop</b></a> ·
         <a href="../../years/2006/sites/playable/game.html"><b>2006 TrailSled</b></a> ·
-        <a href="../../years/2004/sites/playable/game.html"><b>2004 Cubicle Whack</b></a> ·
-        <a href="../../years/2013/sites/playable/loop.html"><b>2013 Loop Six</b></a> ·
-        <a href="../../years/2015/sites/playable/game.html"><b>2015 Blob Rush</b></a> ·
-        <a href="../../years/2016/sites/playable/game.html"><b>2016 Gym Rush</b></a>
-        · <a href="../../years/2017/sites/playable/game.html"><b>2017 Storm Circle</b></a>
-        · <a href="../../years/2018/sites/playable/game.html"><b>2018 Consent Dash</b></a>
+        <a href="../../years/2004/sites/playable/game.html"><b>2004 Cubicle Whack</b></a>
       </p>
       <div class="games-grid">
         <a class="games-card" href="heli.html">
@@ -65,10 +60,10 @@
           <p class="blurb">Click balloons · towers fire — defense seed genre.</p>
         </a>
         <a class="games-card" href="loop.html">
-          <span class="era">2013</span>
-          <span class="ann-badge ann-badge-new">2013</span>
+          <span class="era">loop</span>
+          <span class="ann-badge ann-badge-new">New</span>
           <p class="title">Loop Six</p>
-          <p class="blurb">Hold 5–6 seconds · Vine-class loop · not Vine software.</p>
+          <p class="blurb">Hold 5–6 seconds · short-loop cabinet · museum original.</p>
         </a>
       </div>
       <div class="scoreboard" id="all-scores"></div>
@@ -92,7 +87,7 @@
       html += "<div style='margin-top:8px'><b>" + g.label + "</b>";
       if (!s.length) html += " — nothing here yet · play a round above";
       else html += "<ol style='margin:2px 0 0 18px'>" + s.map(function (x) {
-        return "<li>" + x.score + " · " + x.name + "</li>";
+        return "<li>" + x.score + " · " + String(x.name || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + "</li>";
       }).join("") + "</ol>";
       html += "</div>";
     });

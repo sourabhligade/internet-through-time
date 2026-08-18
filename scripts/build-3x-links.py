@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-YEARS = range(1994, 2021)
+YEARS = range(1994, 2010)
 
 MARK_LINKS = ("<!-- ITT-3X-LINKS:start -->", "<!-- ITT-3X-LINKS:end -->")
 MARK_ALSO = ("<!-- ITT-3X-ALSO:start -->", "<!-- ITT-3X-ALSO:end -->")

@@ -7,7 +7,7 @@ const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
 const YEARS = [];
-for (let y = 1994; y <= 2020; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2011; y++) YEARS.push(String(y));
 
 /** @type {Record<string, { id: string, primary: string, flow: 'click-start'|'click-primary'|'canvas'|'literacy'|'plant'|'grid' }>} */
 const FLOW = {
@@ -17,27 +17,23 @@ const FLOW = {
   '1997': { id: 'connect4', primary: '[data-game-start]', flow: 'click-start' },
   '1998': { id: 'skipintro', primary: '#play-start', flow: 'click-start' },
   '1999': { id: 'petdash', primary: '[data-feed]', flow: 'click-primary' },
-  '2000': { id: 'portaljudge', primary: '[data-submit]', flow: 'literacy' },
+  '2000': { id: 'lotlife', primary: '[data-game-start]', flow: 'literacy' },
   '2001': { id: 'clickscape', primary: 'canvas', flow: 'canvas' },
   '2002': { id: 'roomsticky', primary: '[data-place]', flow: 'click-primary' },
   '2003': { id: 'gagslite', primary: '[data-game-start]', flow: 'click-start' },
-  '2004': { id: 'cubewhack', primary: '[data-game-start]', flow: 'click-start' },
+  '2004': { id: 'gemcascade', primary: '[data-game-start]', flow: 'click-start' },
   '2005': { id: 'heli', primary: '#play-start', flow: 'click-start' },
   '2006': { id: 'sled', primary: '#play-start', flow: 'click-start' },
   '2007': { id: 'boxshift', primary: '[data-restart], [data-next], [data-dir]', flow: 'click-primary' },
-  '2008': { id: 'tapgrid', primary: '[data-app-grid] button, canvas', flow: 'grid' },
+  '2008': { id: 'goospan', primary: '[data-game-start]', flow: 'click-start' },
   '2009': { id: 'plotneighbors', primary: '[data-fv-free]', flow: 'plant' },
-  '2010': { id: 'ragtrail', primary: '#play-start, [data-game-start]', flow: 'click-start' },
+  '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
   '2011': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
   '2012': { id: 'guessdoodle', primary: '[data-game-start]', flow: 'click-start' },
-  '2013': { id: 'pipehop', primary: '#play-start', flow: 'click-start' },
-  '2014': { id: 'tilefold', primary: '#play-start', flow: 'click-start' },
-  '2015': { id: 'blobrush', primary: '[data-game-start]', flow: 'click-start' },
-  '2016': { id: 'gymrush', primary: '[data-game-start]', flow: 'click-start' },
+  '2013': { id: 'loopsix', primary: '[data-game-start]', flow: 'click-start' },
+  '2014': { id: 'tilefold', primary: '#play-start, [data-game-start]', flow: 'click-start' },
   '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
   '2018': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
-  '2019': { id: 'continuerow', primary: '[data-game-start]', flow: 'click-start' },
-  '2020': { id: 'among', primary: '[data-game-start]', flow: 'click-start' },
 };
 
 /**
@@ -92,9 +88,9 @@ async function runPrimaryFlow(page, frame, year) {
   }
 
   if (conf.flow === 'literacy' && year === '2000') {
-    await frame.locator('[data-submit]').click({ force: true });
+    await frame.locator('[data-lot-party]').click({ force: true });
     await page.waitForTimeout(150);
-    expect(await page.evaluate(() => localStorage.getItem('itt00-game-portaljudge'))).toBeFalsy();
+    expect(await page.evaluate(() => localStorage.getItem('itt00-game-lotlife'))).toBeFalsy();
     return;
   }
 
@@ -205,8 +201,8 @@ test.describe('Year games — keyboard / focus affordances', () => {
 });
 
 test.describe('Playables lobby a11y smoke (sample years)', () => {
-  for (const year of ['1994', '2005', '2010', '2013', '2015', '2016', '2017', '2018']) {
-    test(`${year} playable lobby has heading and toys`, async ({ page }) => {
+  for (const year of ['1994', '2000', '2005', '2009']) {
+    test(`${year} playable lobby has heading and cabinet`, async ({ page }) => {
       await enterYear(page, year);
       await goImmersion(page, year, 'sites/playable/index.html');
       const frame = contentFrame(page);

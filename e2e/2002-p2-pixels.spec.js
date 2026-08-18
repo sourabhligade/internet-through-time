@@ -40,7 +40,15 @@ test.describe('2002 Phase 9 pixels + P2 rooms', () => {
 
   test('last.fm scrobble theater', async ({ page }) => {
     await page.goto('/years/2002/sites/lastfm/index.html');
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(500);
+    const req = page.locator('[data-lastfm-req]');
+    if ((await req.count()) > 0) {
+      await req.evaluateAll((els) => {
+        els.forEach((e) => {
+          e.checked = true;
+        });
+      });
+    }
     await page.click('[data-lastfm-scrobble] button[type="submit"]');
     await expect(page.locator('[data-lastfm-status]')).toContainText(/Scrobbled/i);
   });

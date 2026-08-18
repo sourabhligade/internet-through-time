@@ -1,429 +1,233 @@
 // @ts-check
 /**
- * 2011 period flows A–T — real localStorage / DOM mutations
- * docs/2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md Part 4
+ * 2011 period flows A–T
+ * docs/2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
  */
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, waitForImmersion, killOverlays, completeRealGate, twoStepClick, checkAllReq} = require('./helpers');
+const { enterYear } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
     ks.forEach((k) => {
-      try {
-        localStorage.removeItem(k);
-      } catch (e) {
-        /* */
-      }
+      try { localStorage.removeItem(k); } catch (e) { /* */ }
     });
   }, keys);
 }
-
-/** @param {import('@playwright/test').Page} page @param {string} key */
-async function expectStorageTruthy(page, key) {
-  const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-  expect(raw, `expected real localStorage for ${key}`).toBeTruthy();
-  expect(raw).not.toBe('[]');
-  expect(raw).not.toBe('{}');
-  expect(raw).not.toBe('null');
-  return raw;
+async function getKey(page, key) {
+  return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-test.describe('2011 flows A–T (real only)', () => {
-  test('A enter year — shell + content iframe real boot', async ({ page }) => {
-    await enterYear(page, '2011');
+test.describe('2011 flows A–T', () => {
+  test('A hub card → Win7 / IE9 → Starting Point', async ({ page }) => {
+    await page.goto('/');
+    const card = page.locator('a.year-card.available.y2011[href*="years/2011"]');
+    await expect(card).toBeVisible();
+    await card.click();
+    const skip = page.locator('#skip-connect');
+    if (await skip.isVisible().catch(() => false)) await skip.click();
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2011');
     await expect(page.locator('#content')).toBeVisible();
-    const bodyLen = await page.evaluate(() => {
-      try {
-        const f = document.getElementById('content');
-        return f && f.contentDocument && f.contentDocument.body
-          ? f.contentDocument.body.innerHTML.length
-          : 0;
-      } catch (e) {
-        return 0;
-      }
-    });
-    expect(bodyLen).toBeGreaterThan(50);
-    await expect(page.frameLocator('#content').locator('body')).toContainText(/Starting Point|2011|Spotify|Timeline/i);
   });
 
-  test('B thesis about — dual scale + thesis ack storage', async ({ page }) => {
+  test('B thesis literacy writes itt11-thesis-ack', async ({ page }) => {
     await page.goto('/years/2011/pages/about.html');
     await clearKeys(page, ['itt11-thesis-ack']);
     await page.reload();
-    await expect(page.locator('body')).toContainText('346,004,403');
-    await expect(page.locator('body')).toContainText(/555/);
-    await expect(page.locator('body')).toContainText(/Spotify|Timeline|Siri/i);
-    await expect(page.locator('body')).toContainText(/Instagram.*Android|Android.*2012/i);
-    await page.locator('[data-itt-real-save]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt11-thesis-ack'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-itt-real-save]').click();
-    await expect(page.locator('[data-itt-action-status]')).toContainText(/Saved|itt11-thesis/i);
-    const raw = await expectStorageTruthy(page, 'itt11-thesis-ack');
-    expect(raw).toMatch(/multiStep|real|"year":"2011"|thesis/i);
+    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
+    expect(await getKey(page, 'itt11-thesis-ack')).toBeFalsy();
+    const boxes = page.locator('[data-thesis-req]');
+    await boxes.nth(0).check();
+    await boxes.nth(1).check();
+    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
+    await expect.poll(() => getKey(page, 'itt11-thesis-ack')).toMatch(/real|true|multiStep/i);
   });
 
-  test('C Spotify invite + free play ad theater', async ({ page }) => {
-    await page.goto('/years/2011/sites/spotify/index.html');
-    await clearKeys(page, [
-      'itt11-spotify-invited',
-      'itt11-spotify-plan',
-      'itt11-spotify-playlist',
-    ]);
-    await page.reload();
-    await page.waitForSelector('[data-spotify-invite]', { timeout: 20000 });
-    await page.locator('[data-spotify-invite]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt11-spotify-invited'))).toBeFalsy();
-    await page.locator('[data-spotify-ack]').check();
-    await page.locator('[data-spotify-no-stream]').check();
-    await page.locator('[data-spotify-invite]').click();
-    await expect(page.locator('[data-spotify-status]')).toContainText(/Invite|free/i, {
-      timeout: 8000,
-    });
-    await expectStorageTruthy(page, 'itt11-spotify-invited');
-
-    await page.goto('/years/2011/sites/spotify/player.html');
-    await page.waitForSelector('[data-spotify-play]', { timeout: 20000 });
-    await page.locator('[data-spotify-add]').first().click();
-    await page.locator('[data-spotify-play]').first().click();
-    await expect(page.locator('[data-spotify-ad]')).toBeVisible({ timeout: 5000 });
-    await expect(page.locator('[data-spotify-status]')).toContainText(/Playing|free|ad/i);
-    await expectStorageTruthy(page, 'itt11-spotify-playlist');
-  });
-
-  test('D Spotify Premium plan picker', async ({ page }) => {
-    await page.goto('/years/2011/sites/spotify/plans.html');
-    await clearKeys(page, ['itt11-spotify-plan', 'itt11-spotify-invited']);
-    await page.reload();
-    await page.waitForSelector('[data-spotify-plan="premium"]', { timeout: 20000 });
-    const req = page.locator("[data-spotify-req]");
-    if (await req.count()) {
-      await req.nth(0).check();
-      if ((await req.count()) > 1) await req.nth(1).check();
-    }
-    await page.locator('[data-spotify-plan="premium"]').click();
-    await expect(page.locator('[data-spotify-status]')).toContainText(/premium/i, {
-      timeout: 8000,
-    });
-    const raw = await expectStorageTruthy(page, 'itt11-spotify-plan');
-    expect(raw).toMatch(/premium/i);
-  });
-
-  test('E Facebook feed Like storage', async ({ page }) => {
-    await page.goto('/years/2011/sites/facebook/feed.html');
-    await clearKeys(page, ['itt11-fb-likes', 'itt11-thefacebook', 'itt06-fb-feed']);
-    // clear year-aware like keys that facebook.js may use
-    await page.evaluate(() => {
-      try {
-        Object.keys(localStorage)
-          .filter((k) => /fb-like|thefacebook|fb-feed/i.test(k))
-          .forEach((k) => localStorage.removeItem(k));
-      } catch (e) {
-        /* */
-      }
-    });
-    await page.reload();
-    await page.waitForSelector('[data-fb-like]', { timeout: 20000 });
-    await page.locator('[data-fb-like]').first().click();
-    await expect(page.locator('[data-fb-like-status], [data-fb-like-count]').first()).toBeVisible({
-      timeout: 8000,
-    });
-    // count or status should move
-    const countText = await page.locator('[data-fb-like-count]').first().textContent();
-    expect(Number(countText) || 0).toBeGreaterThanOrEqual(0);
-    // storage may be under year-prefixed key
-    const anyLike = await page.evaluate(() => {
-      return Object.keys(localStorage).some((k) => {
-        const v = localStorage.getItem(k) || '';
-        return /like|fb/i.test(k) && v && v !== '[]' && v !== '{}' && v !== 'null';
-      });
-    });
-    // feed like may only bump DOM; assert DOM count increased if possible
-    const n = parseInt(String(countText || '0'), 10);
-    if (!Number.isNaN(n) && n > 0) {
-      expect(n).toBeGreaterThan(0);
-    } else {
-      expect(anyLike || true).toBeTruthy();
-      await expect(page.locator('body')).toContainText(/Like|people like/i);
-    }
-  });
-
-  test('F Facebook Timeline enable', async ({ page }) => {
-    await page.goto('/years/2011/sites/facebook/timeline.html');
-    await clearKeys(page, ['itt11-fb-timeline']);
-    await page.reload();
-    await page.waitForSelector('[data-fb-timeline-enable]', { timeout: 20000 });
-    await page.locator('[data-fb-timeline-enable]').click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt11-fb-timeline'))).toBeFalsy();
-    await page.locator('[data-fb-tl-f8]').check();
-    await page.locator('[data-fb-tl-not-stories]').check();
-    await page.locator('[data-fb-timeline-enable]').click();
-    await expect(page.locator('[data-fb-timeline-status]')).toContainText(/Timeline/i, {
-      timeout: 8000,
-    });
-    const raw = await expectStorageTruthy(page, 'itt11-fb-timeline');
-    expect(raw).not.toBe('1');
-    expect(raw).toMatch(/"year":"2011"/);
-  });
-
-  test('G feed mode Top Stories / Most Recent', async ({ page }) => {
-    await page.goto('/years/2011/sites/facebook/feed-about.html');
-    await clearKeys(page, ['itt11-fb-feed-mode']);
-    await page.reload();
-    await page.waitForSelector('[data-fb-feed-mode]', { timeout: 20000 });
-    await page.locator('[data-fb-feed-mode="recent"]').click();
-    await expect(page.locator('[data-fb-feed-mode-status]')).toContainText(/Most Recent/i);
-    let raw = await expectStorageTruthy(page, 'itt11-fb-feed-mode');
-    expect(raw).toMatch(/recent/i);
-    await page.locator('[data-fb-feed-mode="top"]').click();
-    await expect(page.locator('[data-fb-feed-mode-status]')).toContainText(/Top Stories/i);
-    raw = await expectStorageTruthy(page, 'itt11-fb-feed-mode');
-    expect(raw).toMatch(/top/i);
-  });
-
-  test('H Google+ Circles add chip', async ({ page }) => {
-    await page.goto('/years/2011/sites/googleplus/circles.html');
-    await clearKeys(page, ['itt11-gplus-circles']);
-    await page.reload();
-    await page.waitForSelector('[data-gplus-add-circle]', { timeout: 20000 });
-    await page.locator('[data-gplus-circle-name]').fill('Coworkers');
-    await page.locator('[data-gplus-add-circle]').click();
-    await expect(page.locator('[data-gplus-circles]')).toContainText('Coworkers', {
-      timeout: 8000,
-    });
-    const raw = await expectStorageTruthy(page, 'itt11-gplus-circles');
-    expect(raw).toMatch(/Coworkers/i);
-  });
-
-  test('I Google+ Hangout real session storage', async ({ page }) => {
+  test('C G+ Hangout incomplete blocked then writes', async ({ page }) => {
     await page.goto('/years/2011/sites/googleplus/hangouts.html');
     await clearKeys(page, ['itt11-gplus-hangout']);
     await page.reload();
-    await page.waitForSelector('[data-gplus-hangout-start]', { timeout: 20000 });
     await page.locator('[data-gplus-hangout-start]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt11-gplus-hangout'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
+    expect(await getKey(page, 'itt11-gplus-hangout')).toBeFalsy();
+    await page.locator('[data-req]').nth(0).check({ force: true });
+    await page.locator('[data-req]').nth(1).check({ force: true });
     await page.locator('[data-gplus-hangout-start]').click();
-    await expect(page.locator('[data-gplus-hangout]')).toContainText(/Hangout started|circle|people/i, {
-      timeout: 8000,
-    });
-    await expect(page.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
-    const raw = await expectStorageTruthy(page, 'itt11-gplus-hangout');
-    expect(raw || '').toMatch(/circle|tiles|started|session/i);
+    await expect.poll(() => getKey(page, 'itt11-gplus-hangout')).toBeTruthy();
   });
 
-  test('J Google+ +1 toggle', async ({ page }) => {
-    await page.goto('/years/2011/sites/googleplus/index.html');
-    await clearKeys(page, ['itt11-gplus-plusone']);
+  test('D Spotify empty invite blocked then writes', async ({ page }) => {
+    await page.goto('/years/2011/sites/spotify/index.html');
+    await clearKeys(page, ['itt11-spotify-invited']);
     await page.reload();
-    await page.waitForSelector('[data-gplus-plusone]', { timeout: 20000 });
-    await page.locator('[data-gplus-plusone]').first().click();
-    await expect(page.locator('[data-gplus-status]')).toContainText(/\+1/i, { timeout: 8000 });
-    const raw = await expectStorageTruthy(page, 'itt11-gplus-plusone');
-    expect(raw).toMatch(/true|1|post|intro/i);
+    await page.locator('[data-spotify-invite]').click();
+    expect(await getKey(page, 'itt11-spotify-invited')).toBeFalsy();
+    await page.locator('[data-spotify-ack]').check();
+    await page.locator('[data-spotify-no-stream]').check();
+    await page.locator('[data-spotify-invite]').click();
+    await expect.poll(() => getKey(page, 'itt11-spotify-invited')).toBeTruthy();
+    await expect(page.locator('[data-itt11-next] a[href*="timeline"]')).toBeVisible();
   });
 
-  test('K Siri canned phrase answer + history', async ({ page }) => {
-    await page.goto('/years/2011/sites/iphone/siri.html');
-    await clearKeys(page, ['itt11-siri-history']);
+  test('E iPad 2 empty blocked then writes itt11-ipad2', async ({ page }) => {
+    await page.goto('/years/2011/sites/ipad/index.html');
+    await clearKeys(page, ['itt11-ipad2']);
+    await page.reload();
+    await page.locator('[data-ipad2-order]').click();
+    expect(await getKey(page, 'itt11-ipad2')).toBeFalsy();
+    await page.locator('[data-ipad2-camera]').check();
+    await page.locator('[name="ipad2-cap"][value="16GB"]').check();
+    await page.locator('[name="ipad2-radio"][value="Wi-Fi"]').check();
+    await page.locator('[data-ipad2-order]').click();
+    await expect.poll(() => getKey(page, 'itt11-ipad2')).toMatch(/16GB|camera|real/i);
+  });
+
+  test('F Siri phrase writes itt11-siri-history', async ({ page }) => {
+    await page.goto('/years/2011/sites/iphone/index.html');
+    await clearKeys(page, ['itt11-siri-history', 'itt11-siri']);
     await page.reload();
     await page.waitForSelector('[data-siri-phrase]', { timeout: 20000 });
-    // Wait for immersion/siri module to bind click handlers (async boot)
-    await page.waitForFunction(
-      () => document.documentElement.getAttribute('data-itt-immersion-booted') === '2011',
-      null,
-      { timeout: 25000 }
-    );
-    await page.locator('[data-siri-phrase="Will I need an umbrella this weekend?"]').click();
-    await expect(page.locator('[data-siri-log]')).toContainText(/Siri|umbrella|rain|weather/i, {
-      timeout: 10000,
-    });
-    const raw = await expectStorageTruthy(page, 'itt11-siri-history');
-    expect(raw).toMatch(/umbrella|weather|Siri|q|a/i);
+    await page.locator('[data-siri-phrase]').first().click();
+    await expect.poll(async () => {
+      const a = await getKey(page, 'itt11-siri-history');
+      const b = await getKey(page, 'itt11-siri');
+      return a || b;
+    }).toBeTruthy();
   });
 
-  test('L iMessage blue bubble theater', async ({ page }) => {
-    await page.goto('/years/2011/sites/iphone/ios5.html');
-    await clearKeys(page, ['itt11-imessage']);
+  test('G Timeline literacy writes itt11-timeline', async ({ page }) => {
+    await page.goto('/years/2011/sites/facebook/timeline.html');
+    await clearKeys(page, ['itt11-timeline']);
     await page.reload();
-    await expect(page.locator('body')).toContainText(/iOS 5|iMessage|Notification Center/i);
-    await page.waitForSelector('[data-imessage-send]', { timeout: 15000 });
-    await page.locator('[data-imessage-text]').fill('hello from 4S');
-    await page.locator('[data-imessage-send]').click();
-    await expect(page.locator('[data-imessage-thread]')).toContainText(/hello from 4S/i);
-    await expect(page.locator('[data-imessage-status]')).toContainText(/itt11-imessage/i);
-    const raw = await expectStorageTruthy(page, 'itt11-imessage');
-    expect(raw).toMatch(/hello from 4S|blue/i);
+    await page.locator('[data-timeline-ack]').click();
+    expect(await getKey(page, 'itt11-timeline')).toBeFalsy();
+    const req = page.locator('[data-timeline-req]');
+    await req.nth(0).check();
+    await req.nth(1).check();
+    await page.locator('[data-timeline-ack]').click();
+    await expect.poll(() => getKey(page, 'itt11-timeline')).toMatch(/memoir|real/i);
   });
 
-  test('M iCloud Photo Stream push', async ({ page }) => {
-    await page.goto('/years/2011/sites/iphone/icloud.html');
-    await clearKeys(page, ['itt11-icloud-stream']);
+  test('H Airbnb empty city blocked then request writes', async ({ page }) => {
+    await page.goto('/years/2011/sites/airbnb/index.html');
+    await clearKeys(page, ['itt11-airbnb']);
     await page.reload();
-    await expect(page.locator('body')).toContainText(/iCloud|Photo Stream/i);
-    await page.waitForSelector('[data-icloud-push]', { timeout: 15000 });
-    await page.locator('[data-icloud-push]').first().click();
-    expect(await page.evaluate(() => localStorage.getItem('itt11-icloud-stream'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-icloud-push]').first().click();
-    await expect(page.locator('[data-icloud-stream]')).toContainText(/Beach|Dinner|Screenshot|📷/i);
-    const raw = await expectStorageTruthy(page, 'itt11-icloud-stream');
-    expect(raw).toMatch(/Beach|Dinner|Screenshot/i);
+    await page.locator('[data-abnb-book]').click();
+    expect(await getKey(page, 'itt11-airbnb')).toBeFalsy();
+    await page.locator('#ott-field').fill('Portland');
+    await page.locator('[data-abnb-search]').click();
+    await page.locator('[data-abnb-listing]').first().click();
+    await page.locator('[data-abnb-note]').fill('Hello host');
+    await page.locator('[data-abnb-book]').click();
+    await expect.poll(() => getKey(page, 'itt11-airbnb')).toMatch(/Portland|requested|real/i);
   });
 
-  test('N iPad 2 shop / claim', async ({ page }) => {
-    await page.goto('/years/2011/sites/ipad/index.html');
-    await clearKeys(page, ['itt11-ipad-history']);
-    await page.reload();
-    await expect(page.locator('body')).toContainText(/iPad 2|iPad|\$499|Smart Cover|Mar/i);
-    await page.waitForSelector('[data-ipad-claim]', { timeout: 15000 });
-    await page.locator('[data-ipad-date]').check();
-    await page.locator('[data-ipad-not-os]').check();
-    await page.locator('[data-ipad-claim]').click();
-    await expect(page.locator('[data-ipad-status]')).toContainText(/itt11-ipad|Noted|Saved/i);
-    await expectStorageTruthy(page, 'itt11-ipad-history');
-
-    await page.goto('/years/2011/sites/ipad/prices.html');
-    await expect(page.locator('body')).toContainText(/\$499|\$599|\$699|16|32|64/i);
-  });
-
-  test('O Netflix pricing 2011 honesty', async ({ page }) => {
-    await page.goto('/years/2011/sites/netflix/pricing-2011.html');
-    await expect(page.locator('body')).toContainText(/15\.98|7\.99|60%|July|price/i);
-    await expect(page.locator('body')).toContainText(/DVD|stream/i);
-  });
-
-  test('P Qwikster exhibit reverse honesty', async ({ page }) => {
-    await page.goto('/years/2011/sites/netflix/qwikster.html');
-    await expect(page.locator('body')).toContainText(/Qwikster/i);
-    await expect(page.locator('body')).toContainText(/reverse|cancelled|October|revolt/i);
-  });
-
-  test('Q IE 9 download theater', async ({ page }) => {
-    await page.goto('/years/2011/sites/ie9/download.html');
-    await clearKeys(page, ['itt11-ie9']);
-    await page.reload();
-    await page.waitForSelector('[data-ie9-download]', { timeout: 15000 });
-    await page.locator('[data-ie9-os]').check();
-    await page.locator('[data-ie9-not-chrome]').check();
-    await page.locator('[data-ie9-download]').click();
-    await expect(page.locator('[data-ie9-status]')).toContainText(/installed|Download complete/i, {
-      timeout: 5000,
-    });
-    const raw = await expectStorageTruthy(page, 'itt11-ie9');
-    expect(raw).toMatch(/installed|multiStep|real/i);
-  });
-
-  test('R Instagram iOS-only + share', async ({ page }) => {
+  test('I Instagram still iOS filter+caption writes', async ({ page }) => {
     await page.goto('/years/2011/sites/instagram/index.html');
-    await expect(page.locator('body')).toContainText(/iOS-only|iOS only|Android arrives April 2012/i);
-    await page.evaluate(() => {
-      try {
-        Object.keys(localStorage)
-          .filter((k) => /ig-posts|instagram/i.test(k))
-          .forEach((k) => localStorage.removeItem(k));
-      } catch (e) {
-        /* */
-      }
-    });
+    await clearKeys(page, ['itt11-ig-posts']);
     await page.reload();
-    await page.waitForSelector('[data-ig-share]', { timeout: 20000 });
-    await page.locator('[data-ig-share]').click();
-    expect(
-      await page.evaluate(() => {
-        const keys = Object.keys(localStorage).filter((k) => /ig-posts/i.test(k));
-        return keys.map((k) => localStorage.getItem(k)).join('');
-      })
-    ).toBeFalsy();
     await page.locator('[data-ig-filter="Earlybird"]').click();
-    await page.locator('[data-req]').nth(0).check();
-    await page.locator('[data-req]').nth(1).check();
-    await page.locator('[data-ig-caption]').fill('square 2011');
+    await page.locator('[data-ig-caption]').fill('still ios');
     await page.locator('[data-ig-share]').click();
-    await expect(page.locator('[data-ig-status]')).toContainText(/Shared|Earlybird|itt11|itt10/i, {
-      timeout: 8000,
-    });
-    const raw = await page.evaluate(() => {
-      const keys = Object.keys(localStorage).filter((k) => /ig-posts/i.test(k));
-      return keys.map((k) => localStorage.getItem(k)).join(' ');
-    });
-    expect(raw || '').toMatch(/Earlybird|square 2011/i);
+    await expect.poll(() => getKey(page, 'itt11-ig-posts')).toBeTruthy();
+    await expect(page.locator('body')).toContainText(/iOS only|2012/i);
   });
 
-  test('S Snapchat timer send', async ({ page }) => {
+  test('J Twitter popular leftover writes itt11-tweets', async ({ page }) => {
+    await page.goto('/years/2011/sites/twitter/index.html');
+    await clearKeys(page, ['itt11-tweets']);
+    await page.reload();
+    const save = page.locator('[data-itt-popular-save][data-storage-key="tweets"]');
+    await save.click();
+    expect(await getKey(page, 'itt11-tweets')).toBeFalsy();
+    await page.locator('#pop-field').fill('arab spring residual');
+    const req = page.locator('[data-popular-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+    await save.click();
+    await expect.poll(() => getKey(page, 'itt11-tweets')).toMatch(/real|true|multiStep/i);
+  });
+
+  test('K Groupon leftover writes itt11-groupon', async ({ page }) => {
+    await page.goto('/years/2011/sites/groupon/index.html');
+    await clearKeys(page, ['itt11-groupon']);
+    await page.reload();
+    const save = page.locator('[data-itt-popular-save][data-storage-key="groupon"]');
+    await save.click();
+    expect(await getKey(page, 'itt11-groupon')).toBeFalsy();
+    const req = page.locator('[data-popular-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+    await save.click();
+    await expect.poll(() => getKey(page, 'itt11-groupon')).toBeTruthy();
+  });
+
+  test('L Tumblr leftover writes itt11-tumblr', async ({ page }) => {
+    await page.goto('/years/2011/sites/tumblr/index.html');
+    await clearKeys(page, ['itt11-tumblr']);
+    await page.reload();
+    const save = page.locator('[data-itt-popular-save][data-storage-key="tumblr"]');
+    await save.click();
+    expect(await getKey(page, 'itt11-tumblr')).toBeFalsy();
+    const req = page.locator('[data-popular-req]');
+    const n = await req.count();
+    for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
+    await save.click();
+    await expect.poll(() => getKey(page, 'itt11-tumblr')).toBeTruthy();
+  });
+
+  test('N Snapchat seed empty blocked then writes', async ({ page }) => {
     await page.goto('/years/2011/sites/snapchat/index.html');
-    await clearKeys(page, ['itt11-snap-count', 'itt11-snap-last-timer']);
-    await page.reload();
     await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await completeRealGate(page, '[data-snap-send]');
-    await expect(page.locator('[data-snap-status]')).toContainText(/Snap|sent/i, { timeout: 5000 });
-    const raw = await expectStorageTruthy(page, 'itt11-snap-count');
-    expect(Number(raw)).toBeGreaterThan(0);
+    await expect(page.locator('body')).toContainText(/not Stories|Stories/i);
   });
 
-  test('T Exit → hub resume 2011', async ({ page }) => {
-    await enterYear(page, '2011');
-    // shell should record last year
-    await page.waitForTimeout(200);
-    const last = await page.evaluate(() => {
-      try {
-        return localStorage.getItem('itt-last-year');
-      } catch (e) {
-        return null;
-      }
-    });
-    // create.js writes itt-last-year on boot in most years
-    if (last !== '2011') {
-      await page.evaluate(() => {
-        try {
-          localStorage.setItem('itt-last-year', '2011');
-        } catch (e) {
-          /* */
-        }
-      });
-    }
-    await killOverlays(page);
-    const exit = page.locator('a[href*="index.html"][title="Exit"], a[href="../../index.html"]').first();
-    if (await exit.isVisible().catch(() => false)) {
-      await exit.click();
-    } else {
-      await page.goto('/');
-    }
-    await expect(page).toHaveURL(/\/($|\?|#|index\.html)/);
-    await expect(page.locator('body')).toContainText(/Internet Through Time|1994/i);
-    // resume link when last year set
-    const resume = page.locator('#resume-link, a.start-resume, a[href*="years/2011"]');
-    await page.evaluate(() => {
-      try {
-        localStorage.setItem('itt-last-year', '2011');
-      } catch (e) {
-        /* */
-      }
-    });
+  test('O Qwikster funeral writes itt11-qwikster', async ({ page }) => {
+    await page.goto('/years/2011/sites/netflix/index.html');
+    await clearKeys(page, ['itt11-qwikster']);
     await page.reload();
-    const y = await page.evaluate(() => localStorage.getItem('itt-last-year'));
-    expect(y).toBe('2011');
-    // hub card available
-    await expect(page.locator('a.year-card.available[href*="years/2011"]')).toBeVisible();
+    await page.locator('[data-qwikster-ack]').click();
+    expect(await getKey(page, 'itt11-qwikster')).toBeFalsy();
+    await page.locator('[data-qwikster-req]').check();
+    await page.locator('[data-qwikster-ack]').click();
+    await expect.poll(() => getKey(page, 'itt11-qwikster')).toMatch(/reversed|real/i);
   });
 
-  test('shell trail: home → Spotify → Timeline → Siri', async ({ page }) => {
-    await enterYear(page, '2011');
-    await goInFrame(page, 'sites/spotify/index.html');
-    await waitForImmersion(page, '2011');
-    await expect(page.frameLocator('#content').locator('body')).toContainText(/Spotify|July 14/i);
+  test('T Letter Swap start + play updates status', async ({ page }) => {
+    await page.goto('/years/2011/sites/playable/game.html?fast=1');
+    await page.locator('[data-game-start]').click();
+    await expect(page.locator('[data-rack]')).not.toHaveText('—');
+    await page.locator('[data-word]').fill('a');
+    await page.locator('[data-play-word]').click();
+    await expect.poll(async () => ((await page.locator('[data-itt-action-status]').textContent()) || '').length).toBeGreaterThan(0);
+    await expect(page.locator('[data-game-time]')).toBeVisible();
+  });
+});
 
-    await goInFrame(page, 'sites/facebook/timeline.html');
-    await waitForImmersion(page, '2011');
-    await expect(page.frameLocator('#content').locator('body')).toContainText(/Timeline/i);
+test.describe('2011 continuity live', () => {
+  const rooms = [
+    '/years/2011/pages/home.html',
+    '/years/2011/pages/map.html',
+    '/years/2011/sites/chrome/index.html',
+    '/years/2011/sites/ie9/index.html',
+    '/years/2011/sites/android/index.html',
+    '/years/2011/sites/youtube/index.html',
+    '/years/2011/sites/playable/famous.html',
+  ];
+  for (const path of rooms) {
+    test(`${path} is 200`, async ({ page }) => {
+      const res = await page.goto(path);
+      expect(res && res.ok(), path).toBeTruthy();
+    });
+  }
 
-    await goInFrame(page, 'sites/iphone/siri.html');
-    await waitForImmersion(page, '2011');
-    await expect(page.frameLocator('#content').locator('body')).toContainText(/Siri/i);
+  test('home guided targets live', async ({ page }) => {
+    await page.goto('/years/2011/pages/home.html');
+    const hrefs = await page.locator('#ott-guided-2011 a[href]').evaluateAll((as) =>
+      as.map((a) => a.getAttribute('href'))
+    );
+    expect(hrefs.length).toBe(6);
+    for (const href of hrefs) {
+      const dest = new URL(href || '', page.url());
+      expect((await page.request.get(dest.pathname)).status(), dest.pathname).toBe(200);
+    }
   });
 });

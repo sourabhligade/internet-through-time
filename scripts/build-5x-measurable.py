@@ -21,7 +21,7 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-YEARS = [str(y) for y in range(1994, 2021)]
+YEARS = [str(y) for y in range(1994, 2010)]
 BIBLE = ROOT / "docs" / "5X-MEASURABLE-IMPLEMENT"
 
 TARGETS = {
@@ -844,8 +844,8 @@ def patch_home(year: str, dests: list[str], toys: list[dict], games: list[dict])
     if not path.exists():
         return
     html = path.read_text(encoding="utf-8")
-    # playable strip: add g=4–15 + games 2–5 if missing
-    if 'class="itt-5x-playables"' not in html and "data-itt-5x-playables" not in html:
+    # toys 4–15 retired — do not re-inject tap/hold chips
+    if False and 'class="itt-5x-playables"' not in html and "data-itt-5x-playables" not in html:
         toy_links = []
         for t in toys:
             toy_links.append(
@@ -948,7 +948,7 @@ def patch_playable_index(year: str, toys: list[dict], games: list[dict]) -> None
         + " · ".join(f'<a href="?g={t["id"]}">{escape(t["title"])}</a>' for t in toys)
         + "</span>"
     )
-    if "data-itt-5x-play" in html:
+    if False and "data-itt-5x-play" in html:
         html = re.sub(
             r'<span class="itt-5x-play"[^>]*>[\s\S]*?</span>',
             block,

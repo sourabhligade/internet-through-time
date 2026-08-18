@@ -111,7 +111,7 @@ function initHotmail() {
         actionFeedback("Enter a login name.");
         return;
       }
-      setHotmailUser({ login: login, pass: pass ? "set" : "" });
+      setHotmailUser({ login: login, pass: pass ? "set" : "", multiStep: true, real: true, ts: Date.now() });
       seedMail({ login: login });
       actionFeedback("Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
       markTourUsed();

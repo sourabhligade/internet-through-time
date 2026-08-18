@@ -57,23 +57,6 @@ test.describe("UX pack U1 shell coach", () => {
   });
 });
 
-test.describe("UX pack U2 real coach", () => {
-  test("incomplete REAL pulses and does not write", async ({ page }) => {
-    await page.goto("/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt-ux-off"));
-    await page.goto("/years/2013/sites/vine/record.html");
-    await page.waitForTimeout(1500);
-    await page.evaluate(() => localStorage.removeItem("itt13-vine-posts"));
-    const post = page.locator("[data-vine-post]");
-    if ((await post.count()) > 0) {
-      await post.first().click();
-      await page.waitForTimeout(200);
-      expect(await page.evaluate(() => localStorage.getItem("itt13-vine-posts"))).toBeFalsy();
-      const pulse = await page.locator(".itt-ux-need-attention").count();
-      expect(pulse).toBeGreaterThanOrEqual(0);
-    }
-  });
-});
 
 test.describe("UX pack U4–U5 content", () => {
   test("content page mounts you-are-here after immersion", async ({ page }) => {

@@ -907,44 +907,44 @@
     "path": "/years/2012/sites/twitter/index.html",
     "kind": "new",
     "field": "tweet",
-    "next": "../tumblr/index.html"
+    "next": "../facebook/ipo.html"
   },
   {
     "year": "2012",
     "id": "F2",
-    "key": "itt12-tumblr",
-    "suffix": "tumblr",
-    "path": "/years/2012/sites/tumblr/index.html",
-    "kind": "new",
+    "key": "itt12-fb-ipo",
+    "suffix": "fb-ipo",
+    "path": "/years/2012/sites/facebook/ipo.html",
+    "kind": "reuse",
     "field": null,
     "next": "../facebook/index.html"
   },
   {
     "year": "2012",
     "id": "F3",
-    "key": "itt12-fb-ipo",
-    "suffix": "fb-ipo",
+    "key": "itt12-facebook",
+    "suffix": "facebook",
     "path": "/years/2012/sites/facebook/index.html",
     "kind": "reuse",
     "field": null,
-    "next": "../soundcloud/index.html"
+    "next": "../wikipedia/index.html"
   },
   {
     "year": "2012",
     "id": "F4",
     "key": "itt12-wiki",
     "suffix": "wiki",
-    "path": "/years/2012/sites/wikipedia/sopa-blackout.html",
+    "path": "/years/2012/sites/wikipedia/index.html",
     "kind": "reuse",
     "field": null,
-    "next": "../soundcloud/index.html"
+    "next": "../instagram/android.html"
   },
   {
     "year": "2012",
     "id": "F5",
-    "key": "itt12-soundcloud",
-    "suffix": "soundcloud",
-    "path": "/years/2012/sites/soundcloud/index.html",
+    "key": "itt12-ig-android",
+    "suffix": "ig-android",
+    "path": "/years/2012/sites/instagram/android.html",
     "kind": "star",
     "field": null,
     "next": ""
@@ -1052,49 +1052,49 @@
   {
     "year": "2015",
     "id": "F1",
-    "key": "itt15-ig",
-    "suffix": "ig",
-    "path": "/years/2015/sites/instagram/index.html",
-    "kind": "new",
+    "key": "itt15-googlephotos",
+    "suffix": "googlephotos",
+    "path": "/years/2015/sites/googlephotos/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../apple/watch.html"
+    "next": "../windows10/index.html"
   },
   {
     "year": "2015",
     "id": "F2",
-    "key": "itt15-google",
-    "suffix": "google",
-    "path": "/years/2015/pages/about.html",
-    "kind": "reuse",
+    "key": "itt15-win10",
+    "suffix": "win10",
+    "path": "/years/2015/sites/windows10/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/apple/watch.html"
+    "next": "../applemusic/index.html"
   },
   {
     "year": "2015",
     "id": "F3",
-    "key": "itt15-wiki",
-    "suffix": "wiki",
-    "path": "/years/2015/pages/about.html",
-    "kind": "reuse",
+    "key": "itt15-applemusic",
+    "suffix": "applemusic",
+    "path": "/years/2015/sites/applemusic/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/apple/watch.html"
+    "next": "../edge/index.html"
   },
   {
     "year": "2015",
     "id": "F4",
-    "key": "itt15-tweets",
-    "suffix": "tweets",
-    "path": "/years/2015/sites/twitter/index.html",
-    "kind": "reuse",
-    "field": "tweet",
-    "next": "../apple/watch.html"
+    "key": "itt15-watch",
+    "suffix": "watch",
+    "path": "/years/2015/sites/apple/watch.html",
+    "kind": "star",
+    "field": null,
+    "next": "../snapchat/discover.html"
   },
   {
     "year": "2015",
     "id": "F5",
-    "key": "itt15-watch",
-    "suffix": "watch",
-    "path": "/years/2015/sites/apple/watch.html",
+    "key": "itt15-periscope",
+    "suffix": "periscope",
+    "path": "/years/2015/sites/periscope/index.html",
     "kind": "star",
     "field": null,
     "next": ""
@@ -1152,39 +1152,39 @@
   {
     "year": "2017",
     "id": "F1",
-    "key": "itt17-google",
-    "suffix": "google",
-    "path": "/years/2017/pages/about.html",
-    "kind": "reuse",
+    "key": "itt17-pop-reddit",
+    "suffix": "reddit",
+    "path": "/years/2017/sites/reddit/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/iphone/index.html"
+    "next": ""
   },
   {
     "year": "2017",
     "id": "F2",
-    "key": "itt17-wiki",
-    "suffix": "wiki",
-    "path": "/years/2017/pages/about.html",
-    "kind": "reuse",
+    "key": "itt17-pop-youtube",
+    "suffix": "youtube",
+    "path": "/years/2017/sites/youtube/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/iphone/index.html"
+    "next": ""
   },
   {
     "year": "2017",
     "id": "F3",
-    "key": "itt17-amazon",
+    "key": "itt17-pop-amazon",
     "suffix": "amazon",
-    "path": "/years/2017/pages/about.html",
-    "kind": "reuse",
+    "path": "/years/2017/sites/amazon/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/iphone/index.html"
+    "next": ""
   },
   {
     "year": "2017",
     "id": "F4",
     "key": "itt17-faceid",
     "suffix": "faceid",
-    "path": "/years/2017/sites/iphone/index.html",
+    "path": "/years/2017/sites/iphone/x.html",
     "kind": "star",
     "field": null,
     "next": ""
@@ -1195,39 +1195,39 @@
     "key": "itt17-fortnite",
     "suffix": "fortnite",
     "path": "/years/2017/sites/fortnite/index.html",
-    "kind": "reuse",
+    "kind": "star",
     "field": null,
-    "next": "../iphone/index.html"
+    "next": ""
   },
   {
     "year": "2018",
     "id": "F1",
-    "key": "itt18-google",
-    "suffix": "google",
-    "path": "/years/2018/pages/about.html",
-    "kind": "reuse",
+    "key": "itt18-pop-reddit",
+    "suffix": "reddit",
+    "path": "/years/2018/sites/reddit/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/gdpr/index.html"
+    "next": ""
   },
   {
     "year": "2018",
     "id": "F2",
-    "key": "itt18-wiki",
-    "suffix": "wiki",
-    "path": "/years/2018/pages/about.html",
-    "kind": "reuse",
+    "key": "itt18-pop-youtube",
+    "suffix": "youtube",
+    "path": "/years/2018/sites/youtube/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/gdpr/index.html"
+    "next": ""
   },
   {
     "year": "2018",
     "id": "F3",
-    "key": "itt18-amazon",
-    "suffix": "amazon",
-    "path": "/years/2018/pages/about.html",
-    "kind": "reuse",
+    "key": "itt18-pop-wikipedia",
+    "suffix": "wikipedia",
+    "path": "/years/2018/sites/wikipedia/index.html",
+    "kind": "star",
     "field": null,
-    "next": "../sites/gdpr/index.html"
+    "next": ""
   },
   {
     "year": "2018",
@@ -1242,12 +1242,12 @@
   {
     "year": "2018",
     "id": "F5",
-    "key": "itt18-tiktok",
+    "key": "itt18-tiktok-fyp",
     "suffix": "tiktok",
     "path": "/years/2018/sites/tiktok/fyp.html",
-    "kind": "reuse",
+    "kind": "star",
     "field": null,
-    "next": "../gdpr/index.html"
+    "next": ""
   },
   {
     "year": "2019",

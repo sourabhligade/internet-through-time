@@ -2,28 +2,36 @@
 <html lang="en" data-itt-year="2004">
 <head>
 <meta charset="utf-8">
-<title>Cubicle Whack — 2004</title>
+<title>Gem Cascade — 2004</title>
 <link rel="stylesheet" href="../../../../css/period-2004.css">
 <link rel="stylesheet" href="../../../../css/year-game-ui.css">
 <style>
-.itt-year-game { max-width: 360px; margin: 0 auto; padding: 10px; font-family: Tahoma, Arial, sans-serif; font-size: 12px; }
+.itt-year-game { max-width: 420px; margin: 0 auto; padding: 10px; font-family: Tahoma, Arial, sans-serif; font-size: 12px; }
 .honesty { font-size: 11px; background: #ffc; border: 1px solid #808080; padding: 6px; margin: 8px 0; }
+.gem-board { display: grid; grid-template-columns: repeat(8, 1fr); gap: 3px; background: #3e2723; padding: 6px; max-width: 360px; }
+.gem-cell { width: 100%; aspect-ratio: 1; border: 2px solid rgba(255,255,255,0.35); border-radius: 4px; cursor: pointer; padding: 0; }
+.gem-cell.is-on { outline: 3px solid #fff; }
 </style>
 </head>
 <body class="yg-body yg-year-2004" bgcolor="#ece9d8">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2004" data-game-id="cubewhack" data-yg-goal="Whack memos. Coffee is bonus. Avoid HR." data-yg-next-href="../facebook/index.html" data-yg-next-label="thefacebook 2004">
-  <h1>Cubicle Whack — 2004</h1>
-  <p>Click memos · coffee is bonus · avoid HR audits.</p>
-  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>Casual reaction / cubicle-whack class</b>. After-school Flash portal timing toys. Museum original · no SWF rip. · key <code>itt04-game-cubewhack</code></p>
-  <p>Score <b data-game-score>0</b> · Time <b data-game-time>45</b> · Best <b data-game-best>0</b></p>
+<div class="itt-year-game yg-shell" data-year-game data-year="2004" data-game-id="gemcascade" data-yg-goal="Swap neighbors. Match three. Ride the cascade." data-yg-next-href="../facebook/index.html" data-yg-next-label="thefacebook 2004">
+  <h1>Gem Cascade — 2004</h1>
+  <p>Click two adjacent gems. Three in a row clear. Cascades score more. 24 moves.</p>
+  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1"><b>Bejeweled / PopCap–class</b> match-3. Museum original · not PopCap software · no brand gems. · key <code>itt04-game-gemcascade</code></p>
+  <ol class="yg-steps" data-yg-steps style="font-size:11px;margin:8px 0;padding-left:1.3em">
+    <li data-step="start">Start</li>
+    <li data-step="match">Land a match</li>
+    <li data-step="save">Moves end writes <code>itt04-game-gemcascade</code></li>
+  </ol>
+  <p>Score <b data-game-score>0</b> · Moves <b data-gem-moves>24</b> · Best <b data-game-best>0</b></p>
   <p><button type="button" data-game-start>Start</button></p>
-  <div data-whack-field></div>
-  <p data-itt-action-status>Press Start</p>
-  <p style="font-size:11px"><a href="index.html">← Playables</a> · <a href="../../pages/home.html">Starting Point</a></p>
+  <div class="gem-board" data-gem-board role="grid" aria-label="Gem grid"></div>
+  <p data-itt-action-status>Start a cascade. Incomplete never writes.</p>
+  <p style="font-size:11px"><a href="index.html">← Playables</a> · <a href="famous.html">Famous games</a> · <a href="../../pages/home.html">Starting Point</a></p>
 </div>
 <script src="../../../../js/games/year-game-boot.js"></script>
-<script src="../../../../js/games/year-2004-cubewhack.js"></script>
+<script src="../../../../js/games/year-2004-gemcascade.js"></script>
 <script src="../../../../js/immersion-2004.js" defer></script>
 </body>
 </html>

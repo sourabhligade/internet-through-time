@@ -1,6 +1,6 @@
 /**
- * 2017 REAL product theaters — multi-step localStorage only (itt17-*)
- * Face ID · Fortnite · 280 · WannaCry · Vine gone · Teams GA · Equifax · P1 · P2
+ * 2017 lean extras — Face ID · Fortnite · 280 · Teams · leftover
+ * Keys: itt17-* via YearExtras
  */
 (function (global) {
   "use strict";
@@ -10,650 +10,304 @@
     console.error("ITT.YearExtras missing for 2017 — load year-extras-kit.js first");
     return;
   }
-  var prefix = YX.prefix;
   var key = YX.key;
   var feedback = YX.feedback;
   var saveJSON = YX.saveJSON;
-  var loadJSON = YX.loadJSON;
-  var markUsed = YX.markUsed;
-  var showNext = YX.showNext;
-  var checked = YX.checked;
   var countChecked = YX.countChecked;
   var val = YX.val;
-  var bootTwo = YX.bootChecks;
+
+  function blob(extra) {
+    var o = { multiStep: true, real: true, year: "2017", ts: Date.now() };
+    var k;
+    if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
+    return o;
+  }
+
+  function reveal(doc) {
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+    } catch (eN) { /* */ }
+    try {
+      var prev = doc.querySelectorAll("[data-prev-flow]");
+      var p;
+      for (p = 0; p < prev.length; p++) {
+        prev[p].removeAttribute("hidden");
+        prev[p].style.display = "";
+      }
+    } catch (eP) { /* */ }
+  }
+
+  function paintUnlock(doc) {
+    var well = doc.querySelector("[data-faceid-well]");
+    if (!well) return;
+    well.removeAttribute("hidden");
+    well.style.display = "";
+  }
 
   function bootFaceId(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-faceid-save]");
+    var btn = doc.querySelector("[data-faceid-unlock]");
     if (!btn) return;
     var st = doc.querySelector("[data-faceid-status]");
-    var prev = loadJSON(key("faceid"), null);
-    if (prev && st) feedback("Face ID literacy saved · " + key("faceid"), st);
+    var saved = YX.loadJSON(key("faceid"));
+    if (saved && saved.noHomeButton) {
+      paintUnlock(doc);
+      feedback("Still unlocked · itt17-faceid", st);
+      reveal(doc);
+    }
+    var look = doc.querySelector("[data-faceid-look]");
+    if (look) {
+      look.addEventListener("click", function () {
+        if (st) st.textContent = "Looking (theater). Tick both honesties, then Unlock.";
+      });
+    }
     btn.addEventListener("click", function () {
-      if (
-        !checked(doc, "[data-faceid-no-home]") ||
-        !checked(doc, "[data-faceid-not-touch]") ||
-        !checked(doc, "[data-faceid-not-xs]")
-      ) {
-        feedback("Confirm no home button · Face ID not Touch ID · not iPhone XS.", st, { error: true });
+      if (countChecked(doc, "[data-faceid-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("faceid"), {
-        announce: "2017-09-12",
-        ship: "2017-11-03",
-        noHomeButton: true,
-        notTouchId: true,
-        notXs: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
+      saveJSON(key("faceid"), blob({ noHomeButton: true, ship: "2017-11-03", price: 999 }));
+      paintUnlock(doc);
+      feedback("Unlocked (theater) · itt17-faceid", st);
+      reveal(doc);
+    });
+  }
+
+  function bootAnimoji(doc) {
+    var send = doc.querySelector("[data-animoji-send]");
+    if (!send) return;
+    var st = doc.querySelector("[data-animoji-status]");
+    var need = doc.querySelector("[data-animoji-need]");
+    var ready = doc.querySelector("[data-animoji-ready]");
+    var face = YX.loadJSON(key("faceid"));
+    if (!(face && face.noHomeButton)) {
+      if (need) need.removeAttribute("hidden");
+      if (ready) ready.setAttribute("hidden", "");
+      return;
+    }
+    if (need) need.setAttribute("hidden", "");
+    if (ready) ready.removeAttribute("hidden");
+    var picked = "";
+    var picks = doc.querySelectorAll("[data-animoji-pick]");
+    var i;
+    for (i = 0; i < picks.length; i++) {
+      picks[i].addEventListener("click", function () {
+        picked = this.getAttribute("data-animoji-pick") || "";
+        if (st) st.textContent = "Picked " + picked + " (text token, not Apple art).";
       });
-      feedback("Face ID literacy · " + key("faceid"), st);
-      markUsed();
-      showNext(doc);
+    }
+    send.addEventListener("click", function () {
+      if (!YX.loadJSON(key("faceid"))) {
+        feedback("Unlock Face ID first. Animoji never writes the official key.", st, { error: true });
+        return;
+      }
+      if (!picked) {
+        feedback("Pick a face class first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("animoji"), blob({ face: picked }));
+      feedback("Sent (theater) · leftover · itt17-animoji", st);
+      reveal(doc);
     });
   }
 
   function bootFortnite(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-fn-save]");
+    var btn = doc.querySelector("[data-fn-drop]");
     if (!btn) return;
     var st = doc.querySelector("[data-fn-status]");
+    if (YX.loadJSON(key("fortnite"))) {
+      feedback("Dropped (theater) · itt17-fortnite", st);
+      reveal(doc);
+    }
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-fn-date]") || !checked(doc, "[data-fn-free]") || !checked(doc, "[data-fn-no-art]")) {
-        feedback("Confirm Sep 26 · free BR · no official art.", st, { error: true });
+      if (countChecked(doc, "[data-fn-req]") < 2) {
+        feedback("Tick 100-player and free-not-Switch first. Empty never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("fortnite"), {
-        date: "2017-09-26",
-        free: true,
-        players: 100,
-        noOfficialArt: true,
-        notSwitch: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Fortnite literacy · " + key("fortnite"), st);
-      markUsed();
-      showNext(doc);
+      saveJSON(key("fortnite"), blob({ hundred: true, free: true, platforms: "pc-ps4-xbox" }));
+      feedback("Dropped (theater) · itt17-fortnite", st);
+      reveal(doc);
     });
   }
 
   function bootTwitter280(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-tw280-save]");
+    var btn = doc.querySelector("[data-tw-280-send]");
     if (!btn) return;
-    var st = doc.querySelector("[data-tw280-status]");
+    var st = doc.querySelector("[data-tw-280-status]");
+    var area = doc.querySelector("[data-tw-280-text]");
+    var count = doc.querySelector("[data-tw-280-count]");
+    function paintCount() {
+      var n = area && area.value ? area.value.length : 0;
+      if (count) {
+        count.textContent = n + " / 280";
+        count.className = n > 140 ? "tw17-count over140" : "tw17-count";
+      }
+    }
+    if (area) area.addEventListener("input", paintCount);
+    paintCount();
+    var saved = YX.loadJSON(key("twitter-280"));
+    if (saved && saved.len) {
+      if (area && !area.value) area.value = saved.text || "";
+      paintCount();
+      feedback("Posted · " + saved.len + " · itt17-twitter-280", st);
+      reveal(doc);
+    }
     btn.addEventListener("click", function () {
-      var text = val(doc, "[data-tw280-text]");
-      if (text.length < 141) {
-        feedback("Type 141+ characters — last year this would have failed.", st, { error: true });
+      var t = val(doc, "[data-tw-280-text]");
+      var clean = (t || "").replace(/^\s+|\s+$/g, "");
+      var len = clean.length;
+      if (!len) {
+        feedback("Type something first.", st, { error: true });
         return;
       }
-      if (!checked(doc, "[data-tw280-date]") || !checked(doc, "[data-tw280-not-x]")) {
-        feedback("Confirm Nov 7 280 + this is not the X brand.", st, { error: true });
+      if (len <= 140) {
+        feedback("That's still a 140-class tweet. The 2017 object is past 140. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("twitter280"), {
-        date: "2017-11-07",
-        chars: text.length,
-        notXBrand: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("280 literacy · " + key("twitter280"), st);
-      markUsed();
-      showNext(doc);
+      saveJSON(key("twitter-280"), blob({ len: len, text: clean.slice(0, 280) }));
+      feedback("Tweeted · " + len + " · itt17-twitter-280", st);
+      reveal(doc);
     });
   }
 
-  function bootWannaCry(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-wc-save]");
+  function bootTeams(doc) {
+    var btn = doc.querySelector("[data-teams-create]");
     if (!btn) return;
-    var st = doc.querySelector("[data-wc-status]");
+    var st = doc.querySelector("[data-teams-status]");
+    if (YX.loadJSON(key("teams"))) {
+      feedback("Team created (theater) · itt17-teams", st);
+      reveal(doc);
+    }
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-wc-date]") || !checked(doc, "[data-wc-no-payload]")) {
-        feedback("Confirm May 12 + this exhibit has no exploit.", st, { error: true });
+      var name = val(doc, "[data-teams-name]");
+      if (countChecked(doc, "[data-teams-req]") < 1) {
+        feedback("Ack preview-vs-GA first.", st, { error: true });
         return;
       }
-      saveJSON(key("wannacry"), {
-        date: "2017-05-12",
-        ransomware: true,
-        noPayload: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("WannaCry literacy · " + key("wannacry"), st);
-      markUsed();
-      showNext(doc);
+      if (!name || name.replace(/^\s+|\s+$/g, "").length < 2) {
+        feedback("Name the team first. Empty never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("teams"), blob({ name: name.slice(0, 40), ga: true, date: "2017-03-14" }));
+      feedback("Created (theater) · itt17-teams", st);
+      reveal(doc);
     });
   }
 
   function bootVineGone(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-vine-gone-save]");
+    var btn = doc.querySelector("[data-vine-gone-ack]");
     if (!btn) return;
     var st = doc.querySelector("[data-vine-gone-status]");
+    if (YX.loadJSON(key("vine-gone"))) {
+      feedback("Noted · itt17-vine-gone", st);
+      reveal(doc);
+    }
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-vine-gone-date]") || !checked(doc, "[data-vine-gone-not-2016]")) {
-        feedback("Confirm Jan 17 2017 offline + 2016 only announced it.", st, { error: true });
+      if (countChecked(doc, "[data-vine-gone-req]") < 2) {
+        feedback("Read both notes first.", st, { error: true });
         return;
       }
-      saveJSON(key("vine-gone"), {
-        date: "2017-01-17",
-        archive: true,
-        not2016Announce: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Vine-gone literacy · " + key("vine-gone"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootTeamsGa(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-teams-ga-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-teams-ga-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-teams-ga-date]") || !checked(doc, "[data-teams-ga-not-preview]")) {
-        feedback("Confirm Mar 14 GA + 2016 was only preview.", st, { error: true });
-        return;
-      }
-      saveJSON(key("teams-ga"), {
-        ga: "2017-03-14",
-        notPreview: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Teams GA literacy · " + key("teams-ga"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootEquifax(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-eq-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-eq-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-eq-date]") || !checked(doc, "[data-eq-no-ssn]")) {
-        feedback("Confirm Sep 7 + this exhibit stores no SSN.", st, { error: true });
-        return;
-      }
-      saveJSON(key("equifax"), {
-        date: "2017-09-07",
-        accounts: "143M-class",
-        noSsn: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Equifax literacy · " + key("equifax"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootWin10(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-win10-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-win10-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-win10-mass]") || !checked(doc, "[data-win10-ended-2016]")) {
-        feedback("Confirm still mass OS + free upgrade already ended in 2016.", st, { error: true });
-        return;
-      }
-      saveJSON(key("win10"), {
-        stillMass: true,
-        freeEnded: "2016-07-29",
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Win10 honesty · " + key("win10"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootChrome17(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-chrome17-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-chrome17-status], [data-chrome-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-chrome17-habit]") || !checked(doc, "[data-chrome17-edge]")) {
-        feedback("Confirm Chrome #1 + Edge is still EdgeHTML.", st, { error: true });
-        return;
-      }
-      saveJSON(key("chrome"), {
-        habit: true,
-        notChromiumEdge: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Chrome REAL · " + key("chrome"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootMusical(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-musical-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-musical-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-musical-date]") || !checked(doc, "[data-musical-not-tiktok]")) {
-        feedback("Confirm Nov 9 acquire + not TikTok US mass.", st, { error: true });
-        return;
-      }
-      saveJSON(key("musical"), {
-        acquire: "2017-11-09",
-        notTikTokBrand: true,
-        merge2018: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("musical.ly literacy · " + key("musical"), st);
-      markUsed();
-      showNext(doc);
+      saveJSON(key("vine-gone"), blob({ gone: "2017-01-17" }));
+      feedback("Vine is an archive · itt17-vine-gone", st);
+      reveal(doc);
     });
   }
 
   function bootSwitch(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-switch-save]");
+    var btn = doc.querySelector("[data-switch-reserve]");
     if (!btn) return;
     var st = doc.querySelector("[data-switch-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-switch-date]") || !checked(doc, "[data-switch-not-fn]")) {
-        feedback("Confirm Mar 3 + Fortnite is not on Switch this year.", st, { error: true });
-        return;
-      }
-      saveJSON(key("switch"), {
-        date: "2017-03-03",
-        hybrid: true,
-        notFortniteYet: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Switch literacy · " + key("switch"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootBitcoin(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-btc-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-btc-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-btc-ath]") || !checked(doc, "[data-btc-not-winter]")) {
-        feedback("Confirm Dec ~$20k class + this is not crypto winter.", st, { error: true });
-        return;
-      }
-      saveJSON(key("bitcoin"), {
-        date: "2017-12-17",
-        athClass: 20000,
-        notWinter: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Bitcoin literacy · " + key("bitcoin"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootYahoo3b(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-yh3b-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-yh3b-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-yh3b-date]") || !checked(doc, "[data-yh3b-not-2016]")) {
-        feedback("Confirm Oct 3 2017 is the 3B revision + 2016 was 500M/1B.", st, { error: true });
-        return;
-      }
-      saveJSON(key("yahoo-3b"), {
-        date: "2017-10-03",
-        accounts: "3B",
-        not2016News: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Yahoo 3B literacy · " + key("yahoo-3b"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootNn(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-nn-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-nn-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-nn-date]") || !checked(doc, "[data-nn-title2]")) {
-        feedback("Confirm Dec 14 FCC vote + Title II repeal.", st, { error: true });
-        return;
-      }
-      saveJSON(key("netneutrality"), {
-        date: "2017-12-14",
-        vote: "3-2",
-        title2Repeal: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Net-neutrality literacy · " + key("netneutrality"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootSnapRedesign(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-snap-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-snap-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-snap-date]") || !checked(doc, "[data-snap-hated]")) {
-        feedback("Confirm Nov 2017 redesign + people hated it.", st, { error: true });
-        return;
-      }
-      saveJSON(key("snap-redesign"), {
-        date: "2017-11-29",
-        hated: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Snap redesign literacy · " + key("snap-redesign"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootNitro(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-nitro-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-nitro-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-nitro-date]") || !checked(doc, "[data-nitro-not-store]")) {
-        feedback("Confirm Jan 23 Nitro + no real payment.", st, { error: true });
-        return;
-      }
-      saveJSON(key("nitro"), {
-        date: "2017-01-23",
-        noPayment: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Nitro literacy · " + key("nitro"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootFb2b(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-fb2b-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-fb2b-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-fb2b-date]") || !checked(doc, "[data-fb2b-not-meta]")) {
-        feedback("Confirm June 27 2B + not Meta branding.", st, { error: true });
-        return;
-      }
-      saveJSON(key("fb-2b"), {
-        date: "2017-06-27",
-        billion: 2,
-        notMeta: true,
-        multiStep: true,
-        real: true,
-        year: "2017",
-        ts: Date.now()
-      });
-      feedback("Facebook 2B literacy · " + key("fb-2b"), st);
-      markUsed();
-      showNext(doc);
-    });
-  }
-
-  function bootP2(doc) {
-    doc = doc || document;
-    bootTwo(doc, {
-      save: "[data-ipo-save]",
-      status: "[data-ipo-status]",
-      suffix: "snap-ipo",
-      checks: ["[data-ipo-price]", "[data-ipo-novote]"],
-      err: "Check $17/$24 · Class A no vote.",
-      okMsg: "Snap IPO literacy",
-      extra: { priced: 17, opened: 24, noVote: true }
-    });
-    bootTwo(doc, {
-      save: "[data-yttv-save]",
-      status: "[data-yttv-status]",
-      suffix: "yt-tv",
-      checks: ["[data-yttv-price]", "[data-yttv-not-prem]"],
-      err: "Check $35 · not Premium 2018.",
-      okMsg: "YouTube TV literacy",
-      extra: { price: 35, notPremium2018: true }
-    });
-    bootTwo(doc, {
-      save: "[data-echo-save]",
-      status: "[data-echo-status]",
-      suffix: "echo-show",
-      checks: ["[data-echo-date]", "[data-echo-screen]"],
-      err: "Check May 9 / Jun 28 · $229.99 · screen.",
-      okMsg: "Echo Show literacy",
-      extra: { price: 229.99, screen: true }
-    });
-    bootTwo(doc, {
-      save: "[data-np-save]",
-      status: "[data-np-status]",
-      suffix: "notpetya",
-      checks: ["[data-np-date]", "[data-np-not-wc]"],
-      err: "Check June 27 · not WannaCry · no payload.",
-      okMsg: "NotPetya literacy",
-      extra: { notWannaCry: true, noPayload: true }
-    });
-    bootTwo(doc, {
-      save: "[data-fl-save]",
-      status: "[data-fl-status]",
-      suffix: "flash-eol",
-      checks: ["[data-fl-date]", "[data-fl-2020]"],
-      err: "Check Jul 25 announce · dies end of 2020.",
-      okMsg: "Flash EOL literacy",
-      extra: { announced: "2017-07-25", dies: "2020-12-31" }
-    });
-    bootTwo(doc, {
-      save: "[data-ios11-save]",
-      status: "[data-ios11-status]",
-      suffix: "ios11",
-      checks: ["[data-ios11-date]", "[data-ios11-not-face]"],
-      err: "Check Sep 19 · Face ID is the phone.",
-      okMsg: "iOS 11 literacy",
-      extra: { notFaceId: true }
-    });
-    bootTwo(doc, {
-      save: "[data-px2-save]",
-      status: "[data-px2-status]",
-      suffix: "pixel2",
-      checks: ["[data-px2-date]", "[data-px2-not-x]"],
-      err: "Check Oct 4 / 19 · not iPhone X.",
-      okMsg: "Pixel 2 literacy",
-      extra: { notIphoneX: true, notPixel3: true }
-    });
-    bootTwo(doc, {
-      save: "[data-kr-save]",
-      status: "[data-kr-status]",
-      suffix: "krack",
-      checks: ["[data-kr-date]", "[data-kr-no-exploit]"],
-      err: "Check Oct 16 · no exploit kit.",
-      okMsg: "KRACK literacy",
-      extra: { noExploit: true }
-    });
-    bootTwo(doc, {
-      save: "[data-nf-save]",
-      status: "[data-nf-status]",
-      suffix: "nf-mylist",
-      checks: ["[data-nf-2016-dl]", "[data-nf-not-onething]"],
-      err: "Title + 2016 downloads + not one-thing.",
-      okMsg: "My List saved",
-      minLen: { sel: "[data-nf-title]", n: 2, err: "Type a title (2+ chars). Empty list does not write." },
-      extra: { downloads2016: true, notOneThing: true }
-    });
-  }
-
-  function restoreStatuses(doc) {
-    doc = doc || document;
-    var map = [
-      ["faceid", "[data-faceid-status]", "Face ID saved"],
-      ["fortnite", "[data-fn-status]", "Fortnite saved"],
-      ["twitter280", "[data-tw280-status]", "280 saved"],
-      ["wannacry", "[data-wc-status]", "WannaCry saved"],
-      ["vine-gone", "[data-vine-gone-status]", "Vine-gone saved"],
-      ["teams-ga", "[data-teams-ga-status]", "Teams GA saved"],
-      ["equifax", "[data-eq-status]", "Equifax saved"],
-      ["win10", "[data-win10-status]", "Win10 saved"],
-      ["chrome", "[data-chrome17-status], [data-chrome-status]", "Chrome saved"],
-      ["musical", "[data-musical-status]", "musical.ly saved"],
-      ["switch", "[data-switch-status]", "Switch saved"],
-      ["bitcoin", "[data-btc-status]", "Bitcoin saved"],
-      ["yahoo-3b", "[data-yh3b-status]", "Yahoo 3B saved"],
-      ["netneutrality", "[data-nn-status]", "NN repeal saved"],
-      ["snap-redesign", "[data-snap-status]", "Snap redesign saved"],
-      ["nitro", "[data-nitro-status]", "Nitro saved"],
-      ["fb-2b", "[data-fb2b-status]", "FB 2B saved"],
-      ["snap-ipo", "[data-ipo-status]", "Snap IPO saved"],
-      ["yt-tv", "[data-yttv-status]", "YouTube TV saved"],
-      ["echo-show", "[data-echo-status]", "Echo Show saved"],
-      ["notpetya", "[data-np-status]", "NotPetya saved"],
-      ["flash-eol", "[data-fl-status]", "Flash EOL saved"],
-      ["ios11", "[data-ios11-status]", "iOS 11 saved"],
-      ["pixel2", "[data-px2-status]", "Pixel 2 saved"],
-      ["krack", "[data-kr-status]", "KRACK saved"],
-      ["nf-mylist", "[data-nf-status]", "My List saved"]
-    ];
-    var i;
-    var any = false;
-    for (i = 0; i < map.length; i++) {
-      var blob = loadJSON(key(map[i][0]), null);
-      var el = doc.querySelector(map[i][1]);
-      if (blob) {
-        any = true;
-        if (el && !el.textContent) feedback(map[i][2] + " · " + key(map[i][0]), el);
-      }
+    if (YX.loadJSON(key("switch"))) {
+      feedback("Reserved (theater) · itt17-switch", st);
+      reveal(doc);
     }
-    if (any) showNext(doc);
-  }
-
-  function bootHomePress(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-home-press]");
-    if (!btn) return;
-    var note = doc.querySelector("[data-home-pressed]");
     btn.addEventListener("click", function () {
-      if (note) note.removeAttribute("hidden");
+      if (countChecked(doc, "[data-switch-req]") < 2) {
+        feedback("Tick buy-this-year and not-Fortnite first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("switch"), blob({ price: 299.99, date: "2017-03-03" }));
+      feedback("Reserved (theater) · itt17-switch", st);
+      reveal(doc);
     });
   }
 
-  function bootResidualNext(doc) {
-    doc = doc || document;
-    var btns = doc.querySelectorAll("[data-itt-real-save]");
-    var i;
-    for (i = 0; i < btns.length; i++) {
-      (function (btn) {
-        var suffix = btn.getAttribute("data-storage-key") || "";
-        if (suffix && loadJSON(key(suffix), null)) showNext(doc);
-        btn.addEventListener("click", function () {
-          setTimeout(function () {
-            var s = btn.getAttribute("data-storage-key") || "";
-            if (s && loadJSON(key(s), null)) showNext(doc);
-          }, 0);
-        });
-      })(btns[i]);
+  function bootWannaCry(doc) {
+    var btn = doc.querySelector("[data-wc-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-wc-status]");
+    if (YX.loadJSON(key("wannacry"))) {
+      feedback("Noted · itt17-wannacry", st);
+      reveal(doc);
     }
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-wc-req]") < 2) {
+        feedback("Read both notes. No exploit on this page.", st, { error: true });
+        return;
+      }
+      saveJSON(key("wannacry"), blob({ day: "2017-05-12" }));
+      feedback("I was there (literacy) · itt17-wannacry", st);
+      reveal(doc);
+    });
   }
 
-  function bootAll(doc) {
+  function bootEquifax(doc) {
+    var btn = doc.querySelector("[data-eq-freeze]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-eq-status]");
+    if (YX.loadJSON(key("equifax"))) {
+      feedback("Freeze noted · itt17-equifax", st);
+      reveal(doc);
+    }
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-eq-req]") < 2) {
+        feedback("Tick freeze-theater and no-SSN first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("equifax"), blob({ freeze: true, disclosed: "2017-09-07" }));
+      feedback("Freeze (theater) · no SSN · itt17-equifax", st);
+      reveal(doc);
+    });
+  }
+
+  function bootMl(doc) {
+    var btn = doc.querySelector("[data-ml-post]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ml-status]");
+    btn.addEventListener("click", function () {
+      var cap = val(doc, "[data-ml-caption]");
+      if (!cap || cap.replace(/^\s+|\s+$/g, "").length < 2) {
+        feedback("Caption first. Empty never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("musically"), blob({ caption: cap.slice(0, 80) }));
+      feedback("Posted (theater) · not TikTok · itt17-musically", st);
+      reveal(doc);
+    });
+  }
+
+  function boot(doc) {
     doc = doc || document;
-    if (ITT.YearExtras && ITT.YearExtras.isFillerPage && ITT.YearExtras.isFillerPage(doc)) return;
     bootFaceId(doc);
+    bootAnimoji(doc);
     bootFortnite(doc);
     bootTwitter280(doc);
-    bootWannaCry(doc);
+    bootTeams(doc);
     bootVineGone(doc);
-    bootTeamsGa(doc);
-    bootEquifax(doc);
-    bootWin10(doc);
-    bootChrome17(doc);
-    bootMusical(doc);
     bootSwitch(doc);
-    bootBitcoin(doc);
-    bootYahoo3b(doc);
-    bootNn(doc);
-    bootSnapRedesign(doc);
-    bootNitro(doc);
-    bootFb2b(doc);
-    bootP2(doc);
-    restoreStatuses(doc);
-    bootHomePress(doc);
-    bootResidualNext(doc);
+    bootWannaCry(doc);
+    bootEquifax(doc);
+    bootMl(doc);
   }
 
-  var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);
-  if (typeof features.registerLocal === "function") {
-    features.registerLocal({
-      id: "year2017extras",
-      featureKey: "year2017extras",
-      boot: bootAll
+  if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
+    ITT.ImmersionFeatures.registerLocal({
+      id: "year-2017-extras",
+      featureKey: "year2017Extras",
+      boot: boot
     });
+  } else if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { boot(document); });
   } else {
-    features.push({
-      id: "year2017extras",
-      needs: function (cfg) {
-        return !cfg.features || cfg.features.year2017extras !== false;
-      },
-      boot: bootAll
-    });
+    boot(document);
   }
 })(typeof window !== "undefined" ? window : this);

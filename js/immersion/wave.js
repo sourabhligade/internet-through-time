@@ -51,9 +51,10 @@
         })
       );
       if (st) {
-        st.textContent = "Invite requested · " + storageKey() + " · public mass is 2010, not 2009 daily driver.";
+        st.textContent = "Invite requested · public mass is 2010, not 2009 daily driver.";
         ittFeedback(st.textContent, st);
       }
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
   }
 

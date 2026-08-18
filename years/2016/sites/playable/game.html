@@ -5,65 +5,23 @@
 <title>Gym Rush — 2016</title>
 <link rel="stylesheet" href="../../../../css/period-2016.css">
 <link rel="stylesheet" href="../../../../css/year-game-ui.css">
-<style>
-.itt-year-game { max-width: 420px; margin: 0 auto; padding: 12px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #e8eefc; }
-.yg-shell { background: #1a2a1a; border: 1px solid #3a6a3a; border-radius: 6px; }
-.honesty { font-size: 11px; background: #122012; border: 1px solid #4a8a4a; padding: 6px; margin: 8px 0; color: #bcd; }
-#game-canvas { display: block; width: 100%; max-width: 400px; height: auto; background: #c8ddb0; border: 1px solid #334; cursor: pointer; touch-action: none; }
-.yg-body { background: #0a120a; margin: 0; padding: 12px; }
-button[data-game-start] { background: #3c6; color: #042; border: none; padding: 8px 14px; font-weight: bold; cursor: pointer; border-radius: 4px; }
-</style>
 </head>
-<body class="yg-body yg-year-2016" bgcolor="#0a120a">
+<body bgcolor="#111" text="#eee">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2016" data-game-id="gymrush" data-yg-goal="Visit stops. Challenge the gym silhouette." data-yg-next-href="../instagram/stories.html" data-yg-next-label="Instagram Stories" tabindex="0">
-  <h1 style="margin:0 0 6px;color:#8f8">Gym Rush — 2016</h1>
-  <p style="margin:0;color:#9ab">Walk · tap gray stops · challenge the gym after enough visits. Battery drains. Year one-thing is still <a href="../instagram/stories.html" style="color:#8f8">Instagram Stories</a>.</p>
-  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1">Inspired by <b>Pokémon GO Jul 6 2016</b> (US / AU / NZ) · servers melted · <b>500 million downloads by September 7</b> · museum title <b>Gym Rush</b> · <b>no official sprites</b> · <b>no real GPS</b> · <a href="index.html#slither" style="color:#8f8">slither.io</a> is also 2016 but <b>not this game</b> (2015 already claimed .io). Gold after stops + gym · death still writes best · key <code>itt16-game-gymrush</code></p>
-  <div class="itt16-real honesty" data-itt-real-panel style="margin:8px 0">
-   <b>REAL map literacy</b> — incomplete never writes · play still starts without this
-   <label style="display:block;margin:4px 0"><input type="checkbox" data-req> This map does <b>not</b> use real GPS</label>
-   <label style="display:block;margin:4px 0"><input type="checkbox" data-req> <b>No official Pokémon / Nintendo art</b> — silhouettes only</label>
-   <p><button type="button" data-itt-real-save data-storage-key="gymrush-lit" data-min-req="2" data-requires="[data-req]">Save Gym Rush literacy</button></p>
-   <p data-gymrush-lit-status style="min-height:1.1em;margin:4px 0 0;color:#8f8"></p>
-   <p style="font-size:10px;color:#789;margin:4px 0 0">Writes <code>itt16-gymrush-lit</code>. Score key is <code>itt16-game-gymrush</code> after a run with score&gt;0.</p>
-  </div>
-  <p>
-    <button type="button" data-game-start>New Game</button>
-    <button type="button" data-gr-visit style="background:#4a6a8a;color:#fff;border:none;padding:8px 12px;font-weight:bold;cursor:pointer;border-radius:4px">Visit nearest stop</button>
-    <button type="button" data-gr-gym style="background:#333;color:#eee;border:none;padding:8px 12px;font-weight:bold;cursor:pointer;border-radius:4px">Challenge gym</button>
-    Score <b data-game-score>0</b> · Best <b data-game-best>0</b>
-  </p>
-  <canvas id="game-canvas" width="400" height="320" aria-label="Gym Rush map"></canvas>
-  <p data-itt-action-status style="margin-top:8px;color:#9ab;min-height:1.3em">WASD or tap · Space near a node · P pauses</p>
-  <p style="font-size:11px;color:#789">
-    <a href="index.html" style="color:#8f8">← Playables</a> ·
-    <a href="../../pages/home.html" style="color:#8f8">Starting Point</a> ·
-    <a href="../pokemongo/index.html" style="color:#8f8">PoGO literacy</a>
-  </p>
+<div class="itt-year-game yg-shell" data-year-game data-year="2016" data-game-id="gymrush" style="max-width:440px;margin:12px auto;font-family:Tahoma,Arial,sans-serif">
+ <h1>Gym Rush — 2016</h1>
+ <p class="yg-honesty" data-yg-inspire>Pokémon GO <b>class</b> map walk. Museum original gyms — not their art. slither.io is <b>2016</b> but not this game. Star stays Stories.</p>
+ <p>Score <b data-game-score>0</b> · Best <b data-game-best>0</b></p>
+ <p><button type="button" data-game-start>New Game</button></p>
+ <canvas id="game-canvas" width="400" height="320" style="border:1px solid #444;background:#0b1a0b"></canvas>
+ <p data-itt-action-status>New Game. Incomplete never writes.</p>
+ <p class="crumb"><a href="../windows10/end.html">← Win10 end</a> · <a href="../../pages/home.html">Starting Point</a></p>
+ <p data-prev-flow><a href="../windows10/end.html">← Win10 end</a></p>
+ <p hidden data-next-flow data-next-when-key="itt16-game-gymrush"><b>Next:</b> <a href="../instagram/stories.html">Stories (the star)</a></p>
+ <p style="font-size:11px"><a href="index.html">← Playables</a> · <a href="famous.html">Famous leftover</a></p>
 </div>
 <script src="../../../../js/games/year-game-boot.js"></script>
 <script src="../../../../js/games/year-2016-gymrush.js"></script>
 <script src="../../../../js/immersion-2016.js" defer></script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2016" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="../chrome/index.html">Google Chrome</a> ·
- <a href="../dyn/index.html">Dyn / Mirai</a> ·
- <a href="../edge/index.html">Microsoft Edge</a> ·
- <a href="../facebook/index.html">Facebook 2016</a> ·
- <a href="../home/index.html">Google Home</a> ·
- <a href="../instagram/index.html">Instagram</a> ·
- <a href="../iphone/index.html">iPhone 2016</a> ·
- <a href="../jio/index.html">Jio Welcome Offer</a> ·
- <a href="../musically/index.html">musical.ly</a> ·
- <a href="../oculus/rift.html">Oculus Rift CV1</a> ·
- <a href="../pixel/index.html">Pixel</a> ·
- <a href="../pokemongo/index.html">Pokémon GO</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
 </body>
 </html>

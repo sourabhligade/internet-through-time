@@ -1,0 +1,70 @@
+2010 from-scratch research visit log
+Date: 2026-08-17
+Method: museum 10k stack (Wikipedia category + extlinks + Wayback CDX)
+        + live primary pages opened this session.
+Not 10,000 new rooms. Corpus files live in docs/references/2010/.
+
+OPENED THIS PASS (primary / used for locked facts)
+https://cybercultural.com/p/internet-2010/
+https://www.pingdom.com/blog/internet-2010-in-numbers/
+https://www.internetlivestats.com/total-number-of-websites/
+https://www.apple.com/newsroom/2010/01/27Apple-Launches-iPad/
+https://www.apple.com/newsroom/2010/04/05Apple-Sells-Over-300-000-iPads-First-Day/
+https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/
+https://www.apple.com/newsroom/2010/07/02Letter-from-Apple-Regarding-iPhone-4/
+https://techcrunch.com/2012/04/09/instagram-story-facebook-acquisition/
+https://www.cnet.com/culture/facebook-f8-one-graph-to-rule-them-all/
+https://googleblog.blogspot.com/2010/08/update-on-google-wave.html
+https://en.wikipedia.org/wiki/Instagram
+https://en.wikipedia.org/wiki/FarmVille
+https://en.wikipedia.org/wiki/Digg
+https://en.wikipedia.org/wiki/Google_Wave
+https://en.wikipedia.org/wiki/Uber
+https://en.wikipedia.org/wiki/History_of_Facebook
+https://www.britannica.com/money/Instagram
+https://www.investopedia.com/articles/personal-finance/111015/story-uber.asp
+https://www.forbes.com/sites/oliverchiang/2010/10/15/farmville-players-down-25-since-peak-now-below-60-million/
+https://www.wired.com/2010/04/adding-facebook-like-buttons-to-your-site-is-damn-easy/
+https://techcrunch.com/2010/10/06/instagram-launch/
+https://www.inc.com/30under30/2011/profile-kevin-systrom-mike-krieger-founders-instagram.html
+
+ALSO USED (search / secondary, not treated as pixel sources)
+Apple iPhone 4 sales 1.7M first weekend class
+Hosting.com June 2010 top-10 compilation (Yahoo #1) — signal only
+TechCrunch Instagram launch 2010-10-06 (via 2012 recap)
+Inc.com Systrom midnight App Store click
+Wired Like-button how-to 2010-04-21
+NBC / Gamasutra FarmVille 84M peak class
+Digital Trends / Wikipedia Angry Birds 36M Nov · 50M Dec 2010
+Rovio / App Annie “most downloaded game of 2010”
+
+CORPUS HARVEST (script)
+docs/references/harvest-10k/wikipedia-internet-properties-1994-2020.tsv
+  → 279 names year=2010 (pre-existing 10k pass)
+docs/references/2010/wikipedia-2010-established.tsv   (live category refetch)
+docs/references/2010/wikipedia-2010-extlinks.tsv      (citation URLs)
+docs/references/2010/wayback-2010-cdx-originals.tsv   (2010 unique originals)
+docs/references/2010/corpus-2010-summary.json
+
+REPO METHOD DOCS READ THIS PASS
+docs/MUSEUM-GRADE-10K-SOURCES-5X-FLOWS-1994-2020.md  (2010 section: wiki 283 / 279 harvested / pick IG or Imgur)
+docs/2009-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md
+docs/2009-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md
+docs/2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+docs/2009-RESEARCH.md
+docs/2008-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md
+docs/OPERATING-PROCESS.md
+docs/YEAR-TRUE-POPULAR-LINKS-AND-EXACT-FLOWS-1994-2020.md  (§2010)
+docs/ONE-THING-PER-YEAR-INTEGRATION-1994-2018.md          (old gold: Imgur)
+docs/DISK-TRUTH.md
+e2e/popular-flows.matrix.json 2010 F1–F5
+years/2009/ site list (108 rooms — clone shape, not forest)
+
+LOCKED DECISIONS
+Star = Instagram iOS (not Imgur, not iPad, not Ask)
+iPad = P0 hardware
+Open Graph Like ×2 = P0 desktop
+Shell = Win7 + IE8
+Scale = dual-cite 206,956,723 June AND 255M Dec
+Do not restore 115-room forest
+Do not implement until asked

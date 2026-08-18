@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/justintv/index.html": "http://museum.local/years/2007/sites/justintv/index.html",
+      "sites/qik/index.html": "http://museum.local/years/2007/sites/qik/index.html",
+      "sites/ustream/index.html": "http://museum.local/years/2007/sites/ustream/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2007/sites/playable/famous.html",
 
       "sites/rickroll/index.html": "http://museum.local/years/2007/sites/rickroll/index.html",

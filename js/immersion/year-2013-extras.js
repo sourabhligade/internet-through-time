@@ -1,6 +1,7 @@
 /**
- * 2013 REAL product/culture theaters — multi-step localStorage only (itt13-*)
- * No one-click mock success: empty / incomplete paths must not write "done".
+ * 2013 lean extras — Vine 6s · Stories · 5s · iOS 7 · Touch ID · 5c · Win8.1
+ * · Snowden · Healthcare · FB Home · Telegram · Medium · Tumblr · Air · Tinder
+ * Keys: itt13-* via YearExtras
  */
 (function (global) {
   "use strict";
@@ -10,933 +11,537 @@
     console.error("ITT.YearExtras missing for 2013 — load year-extras-kit.js first");
     return;
   }
-  var prefix = YX.prefix;
   var key = YX.key;
   var feedback = YX.feedback;
   var saveJSON = YX.saveJSON;
-  var loadJSON = YX.loadJSON;
-  var markUsed = YX.markUsed;
-  var showNext = YX.showNext;
-  var checked = YX.checked;
   var countChecked = YX.countChecked;
   var val = YX.val;
 
-  function bootChrome13(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-chrome13-save]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-chrome13-status], [data-chrome-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-chrome13-habit]") || !checked(doc, "[data-chrome13-not-edge]") || !checked(doc, "[data-chrome13-dl]")) {
-        feedback("Check habit · not-Edge · download theater.", st, { error: true });
-        return;
-      }
-      saveJSON(key("chrome"), {
-        habit: true,
-        notEdge: true,
-        downloaded: true,
-        multiStep: true,
-        real: true,
-        year: "2013",
-        ts: Date.now()
-      });
-      markUsed();
-      feedback("Chrome REAL · " + key("chrome"), st);
-    });
+  function blob(extra) {
+    var o = { multiStep: true, real: true, year: "2013", ts: Date.now() };
+    var k;
+    if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
+    return o;
   }
 
-  /* Xbox One: require DRM + Kinect literacy + side preference */
-  function bootXbox(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-xbox-ack]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-xbox-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-xbox-drm]") || !checked(doc, "[data-xbox-kinect]")) {
-        feedback("Check both DRM controversy + Kinect-in-box notes first.", st, { error: true });
-        return;
-      }
-      var pref = "xbox";
-      var radios = doc.querySelectorAll("[data-xbox-pref]");
-      var i;
-      for (i = 0; i < radios.length; i++) if (radios[i].checked) pref = radios[i].value;
-      saveJSON(key("xbox"), {
-        launch: "2013-11-22",
-        preference: pref,
-        drmControversy: true,
-        kinectInBox: true,
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("Xbox One multi-step saved · " + key("xbox"), st);
-      markUsed();
-    });
+  function reveal(doc) {
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+    } catch (eN) { /* */ }
   }
 
-  /* PS4: require Share button literacy */
-  function bootPs4(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-ps4-ack]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-ps4-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-ps4-share]")) {
-        feedback("Check DualShock 4 Share button culture first.", st, { error: true });
-        return;
-      }
-      var pref = "ps4";
-      var radios = doc.querySelectorAll("[data-ps4-pref]");
-      var i;
-      for (i = 0; i < radios.length; i++) if (radios[i].checked) pref = radios[i].value;
-      saveJSON(key("ps4"), {
-        launch: "2013-11-15",
-        preference: pref,
-        shareButton: true,
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("PS4 multi-step saved · " + key("ps4"), st);
-      markUsed();
-    });
+  function radio(doc, name) {
+    var els = doc.querySelectorAll("[name='" + name + "']");
+    var i;
+    for (i = 0; i < els.length; i++) if (els[i].checked) return els[i].value;
+    return "";
   }
 
-  /* Telegram: require privacy + nickname */
-  function bootTelegram(doc) {
-    doc = doc || document;
-    var form = doc.querySelector("form[data-telegram-form]");
-    var btn = doc.querySelector("[data-telegram-seed]");
-    var st = doc.querySelector("[data-telegram-status]");
+  function alias(fromSuffix, toSuffix) {
+    try {
+      var raw = localStorage.getItem(key(fromSuffix));
+      if (raw) localStorage.setItem(key(toSuffix), raw);
+    } catch (e) { /* */ }
+  }
 
-    function saveSeed(nick) {
-      if (!checked(doc, "[data-telegram-privacy]")) {
-        feedback("Confirm: no real MTProto / accounts (privacy theater).", st, { error: true });
-        return false;
+  function bootVine(doc) {
+    var post = doc.querySelector("[data-vine-post]");
+    if (!post) return;
+    var hold = doc.querySelector("[data-vine-hold]");
+    var timer = doc.querySelector("[data-vine-timer]");
+    var st = doc.querySelector("[data-vine-status]");
+    var held = 0;
+    var holding = false;
+    var tick = null;
+    if (hold) {
+      function startHold() {
+        if (holding) return;
+        holding = true;
+        tick = setInterval(function () {
+          held += 0.1;
+          if (held > 6) held = 6;
+          if (timer) timer.textContent = held.toFixed(1) + "s";
+        }, 100);
       }
-      nick = String(nick || "").trim();
-      if (nick.length < 2) {
-        feedback("Pick a display name (2+ chars).", st, { error: true });
-        return false;
+      function endHold() {
+        holding = false;
+        if (tick) clearInterval(tick);
+        tick = null;
       }
-      saveJSON(key("telegram"), {
-        seed: true,
-        year: 2013,
-        nick: nick,
-        privacyAck: true,
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("Telegram seed REAL · " + key("telegram"), st);
-      markUsed();
-      return true;
-    }
-
-    if (form) {
-      form.addEventListener("submit", function (ev) {
+      hold.addEventListener("mousedown", startHold);
+      hold.addEventListener("mouseup", endHold);
+      hold.addEventListener("mouseleave", endHold);
+      hold.addEventListener("touchstart", function (ev) {
         ev.preventDefault();
-        var nickEl = form.querySelector("[name=nick], [data-telegram-nick]");
-        saveSeed(nickEl && nickEl.value);
+        startHold();
       });
-    } else if (btn) {
-      btn.addEventListener("click", function () {
-        var nickEl = doc.querySelector("[data-telegram-nick], [name=nick]");
-        saveSeed(nickEl && nickEl.value);
+      hold.addEventListener("touchend", endHold);
+      hold.addEventListener("click", function () {
+        held = Math.min(6, held + 1.5);
+        if (timer) timer.textContent = held.toFixed(1) + "s";
       });
     }
-  }
-
-  /* Glass: require Explorer + backlash literacy */
-  function bootGlass(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-glass-ack]");
-    if (!btn) return;
-    var st = doc.querySelector("[data-glass-status]");
-    btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-glass-explorer]") || !checked(doc, "[data-glass-backlash]")) {
-        feedback("Check Explorer program + street backlash literacy first.", st, { error: true });
+    post.addEventListener("click", function () {
+      if (countChecked(doc, "[data-vine-req], [data-req]") < 2) {
+        feedback("Ack 6 seconds and not-TikTok first.", st, { error: true });
         return;
       }
-      saveJSON(key("glass"), {
-        explorer: true,
-        backlash: true,
-        year: 2013,
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("Glass multi-step saved · not mass default · " + key("glass"), st);
-      markUsed();
+      if (held < 5.5) {
+        feedback("Hold about 6 seconds first (theater).", st, { error: true });
+        return;
+      }
+      var cap = val(doc, "[data-vine-caption]");
+      if (!cap || cap.length < 2) {
+        feedback("Caption required.", st, { error: true });
+        return;
+      }
+      saveJSON(key("vine-posts"), blob({ seconds: 6, caption: cap, loop: true }));
+      alias("vine-posts", "vine");
+      feedback("Posted 6s loop.", st);
+      var feed = doc.querySelector("[data-vine-feed]");
+      if (feed) feed.textContent = "Loop · 6.0s · " + cap;
+      reveal(doc);
     });
   }
 
-  /* Bitcoin news room: require news-only + no market UI */
-  function bootBitcoin(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-btc-room-ack]");
+  function bootIgAlias(doc) {
+    if (!doc.querySelector("[data-ig-share]")) return;
+    var share = doc.querySelector("[data-ig-share]");
+    share.addEventListener("click", function () {
+      setTimeout(function () {
+        alias("ig-posts", "ig");
+        alias("ig-posts", "ig-video");
+        reveal(doc);
+      }, 60);
+    });
+  }
+
+  function bootStory(doc) {
+    var btn = doc.querySelector("[data-story-add]");
     if (!btn) return;
-    var st = doc.querySelector("[data-btc-room-status]");
+    var st = doc.querySelector("[data-story-status]");
     btn.addEventListener("click", function () {
-      if (!checked(doc, "[data-btc-news]") || !checked(doc, "[data-btc-nomarket]")) {
-        feedback("Check both: news literacy only + no market/wallet UI.", st, { error: true });
+      if (countChecked(doc, "[data-story-req], [data-req]") < 2) {
+        feedback("Ack 24h and not-IG-Stories first.", st, { error: true });
         return;
       }
-      saveJSON(key("btc-room"), {
-        newsOnly: true,
-        silkRoad: true,
-        noMarketUI: true,
-        multiStep: true,
-        ts: Date.now()
-      });
-      saveJSON(key("btc-note"), { newsOnly: true, from: "btc-room", ts: Date.now() });
-      feedback("Bitcoin news literacy REAL · " + key("btc-room"), st);
-      markUsed();
+      var text = val(doc, "[data-story-text]");
+      if (!text || text.length < 2) {
+        feedback("Add a moment first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("snap-story"), blob({ hours: 24, text: text, myStory: true }));
+      alias("snap-story", "snap");
+      feedback("On My Story · 24h.", st);
+      var rail = doc.querySelector("[data-story-rail]");
+      if (rail) rail.textContent = "My Story · " + text + " · expires in 24h";
+      reveal(doc);
+    });
+  }
+
+  function bootSnapAlias(doc) {
+    var send = doc.querySelector("[data-snap-send]");
+    if (!send) return;
+    send.addEventListener("click", function () {
+      var stories = doc.querySelector("[data-snap-not-stories]");
+      var lit = countChecked(doc, "[data-snap-check], [data-req]");
+      if (stories && !stories.checked) return;
+      if (doc.querySelector("[data-snap-check]") && lit < 1) return;
+      saveJSON(key("snap"), blob({ notIgStories: true, personSnap: true }));
+      reveal(doc);
+    });
+  }
+
+  function bootIphone5s(doc) {
+    var btn = doc.querySelector("[data-iphone5s-order]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-iphone5s-status]");
+    btn.addEventListener("click", function () {
+      var sku = radio(doc, "iphone5s-sku");
+      var touch = doc.querySelector("[data-iphone5s-touch]");
+      if (!sku) {
+        feedback("Pick 16 / 32 / 64 GB first.", st, { error: true });
+        return;
+      }
+      if (!(touch && touch.checked)) {
+        feedback("Confirm Touch ID is in the Home button first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("iphone5s"), blob({ sku: sku, touchid: true }));
+      feedback("Reserved iPhone 5s " + sku + ".", st);
+      reveal(doc);
     });
   }
 
   function bootIos7(doc) {
-    doc = doc || document;
     var tiles = doc.querySelectorAll("[data-ios7-tile]");
-    if (!tiles.length) return;
+    var cc = doc.querySelector("[data-ios7-cc]");
+    if (!tiles.length && !cc) return;
     var st = doc.querySelector("[data-ios7-status]");
-    var changes = doc.querySelectorAll("[data-ios7-change]");
-    var k = key("ios7");
-    var opened = [];
-    var prev = loadJSON(k, null);
-    function pickedChange() {
-      var j;
-      for (j = 0; j < changes.length; j++) {
-        if (changes[j].checked) return changes[j].getAttribute("data-ios7-change") || "flat";
-      }
-      return "";
+    var clicked = {};
+    var i;
+    function tileCount() {
+      var n = 0;
+      var k;
+      for (k in clicked) if (Object.prototype.hasOwnProperty.call(clicked, k)) n++;
+      return n;
     }
-    function persist() {
-      if (opened.length < 2) return;
-      var ch = pickedChange();
-      if (!ch) {
-        feedback("Tap two tiles · then mark one change below (flat / parallax / skeuo / still on 6).", st, {
-          error: true
-        });
+    for (i = 0; i < tiles.length; i++) {
+      tiles[i].addEventListener("click", function (ev) {
+        clicked[ev.currentTarget.getAttribute("data-ios7-tile") || "tile"] = true;
+        if (tileCount() < 2) {
+          feedback("Open one more flat icon.", st, { error: true });
+          return;
+        }
+        feedback("Two icons. Now Control Center.", st);
+      });
+    }
+    if (cc) {
+      cc.addEventListener("click", function () {
+        if (tileCount() < 2) {
+          feedback("Open two springboard tiles first.", st, { error: true });
+          return;
+        }
+        saveJSON(key("ios7"), blob({ tiles: tileCount(), controlCenter: true }));
+        feedback("iOS 7 flat · Control Center.", st);
+        reveal(doc);
+      });
+    }
+  }
+
+  function bootTouch(doc) {
+    var enroll = doc.querySelector("[data-touch-enroll]");
+    if (!enroll) return;
+    var st = doc.querySelector("[data-touch-status]");
+    var saw = { lift: false, rest: false };
+    var lift = doc.querySelector("[data-touch-lift]");
+    var rest = doc.querySelector("[data-touch-rest]");
+    if (lift) lift.addEventListener("click", function () {
+      saw.lift = true;
+      feedback("Lifted. Rest at another angle.", st);
+    });
+    if (rest) rest.addEventListener("click", function () {
+      saw.rest = true;
+      feedback("Rested. Finish enroll.", st);
+    });
+    enroll.addEventListener("click", function () {
+      if (countChecked(doc, "[data-touch-req], [data-req]") < 2) {
+        feedback("Ack fingerprint + passcode first.", st, { error: true });
         return;
       }
-      if (!prev) {
-        prev = { multiStep: true, tiles: opened.slice(0, 8), change: ch, flat: true, ts: Date.now() };
-        saveJSON(k, prev);
-        markUsed();
-      }
-      feedback("iOS 7 springboard pinned · " + k, st);
-    }
-    if (prev) {
-      opened = (prev.tiles || ["mail", "safari"]).slice();
-      feedback("iOS 7 springboard pinned · " + k, st);
-    }
-    var i;
-    for (i = 0; i < tiles.length; i++) {
-      tiles[i].addEventListener("click", function () {
-        var id = this.getAttribute("data-ios7-tile") || "tile";
-        if (opened.indexOf(id) === -1) opened.push(id);
-        this.setAttribute("data-ott-done", "1");
-        if (opened.length < 2) {
-          feedback("Opened " + id + " · tap another tile.", st);
-          return;
-        }
-        persist();
-      });
-    }
-    for (i = 0; i < changes.length; i++) {
-      changes[i].addEventListener("change", function () {
-        persist();
-      });
-    }
-  }
-
-  function bootTouchId(doc) {
-    doc = doc || document;
-    var en = doc.querySelector("[data-touchid-enroll]");
-    var un = doc.querySelector("[data-touchid-unlock]");
-    if (!en && !un) return;
-    var st = doc.querySelector("[data-touchid-status]");
-    var k = key("touchid");
-    var enrolled = false;
-    var prev = loadJSON(k, null);
-    if (prev) {
-      enrolled = true;
-      feedback("Touch ID unlocked · " + k, st);
-    }
-    if (en) {
-      en.addEventListener("click", function () {
-        enrolled = true;
-        feedback("Fingerprint enrolled (theater · no Secure Enclave).", st);
-      });
-    }
-    if (un) {
-      un.addEventListener("click", function () {
-        if (!enrolled) {
-          feedback("Enroll a fingerprint first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, enrolled: true, unlocked: true, model: "5s", ts: Date.now() });
-        feedback("Touch ID unlocked · " + k, st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootUber(doc) {
-    doc = doc || document;
-    var kinds = doc.querySelectorAll("[data-uber-kind]");
-    var confirm = doc.querySelector("[data-uber-confirm]");
-    if (!confirm && !kinds.length) return;
-    if (doc.querySelector("[data-uber-sf-confirm]")) return;
-    var st = doc.querySelector("[data-uber-status]");
-    var k = key("uber");
-    var kind = "";
-    var prev = loadJSON(k, null);
-    if (prev) {
-      kind = prev.kind || "uberx";
-      feedback("Ride requested · " + kind + " · " + k, st);
-    }
-    var i;
-    for (i = 0; i < kinds.length; i++) {
-      kinds[i].addEventListener("click", function () {
-        kind = this.getAttribute("data-uber-kind") || "uberx";
-        feedback("Selected " + kind + " · confirm to dispatch theater.", st);
-      });
-    }
-    if (confirm) {
-      confirm.addEventListener("click", function () {
-        if (!kind) {
-          feedback("Pick black car or UberX first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, uber: true, kind: kind, ts: Date.now() });
-        feedback("Ride requested · " + kind + " · no real dispatch · " + k, st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootUberSf(doc) {
-    doc = doc || document;
-    var map = doc.querySelector("[data-uber-sf-map]");
-    var confirm = doc.querySelector("[data-uber-sf-confirm]");
-    if (!confirm && !map) return;
-    var st = doc.querySelector("[data-uber-sf-status]");
-    var k = key("uber-sf");
-    var opened = false;
-    var prev = loadJSON(k, null);
-    if (prev) {
-      opened = true;
-      feedback("SF black-car coverage saved · " + k, st);
-    }
-    if (map) {
-      map.addEventListener("click", function () {
-        opened = true;
-        feedback("SF coverage open · confirm black-car.", st);
-      });
-    }
-    if (confirm) {
-      confirm.addEventListener("click", function () {
-        if (!opened) {
-          feedback("Open SF coverage first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, city: "San Francisco", kind: "black", ts: Date.now() });
-        feedback("SF black-car confirmed · " + k, st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootIphone5s(doc) {
-    doc = doc || document;
-    var colors = doc.querySelectorAll("[data-5s-color]");
-    var claim = doc.querySelector("[data-iphone5s-claim]");
-    if (!claim && !colors.length) return;
-    var st = doc.querySelector("[data-iphone5s-status]");
-    var k = key("iphone5s");
-    var color = "";
-    var prev = loadJSON(k, null);
-    if (prev) {
-      color = prev.color || "gold";
-      feedback("5s interest · " + color + " · " + k, st);
-    }
-    var i;
-    for (i = 0; i < colors.length; i++) {
-      colors[i].addEventListener("click", function () {
-        color = this.getAttribute("data-5s-color") || "gold";
-        feedback("Finish: " + color, st);
-      });
-    }
-    if (claim) {
-      claim.addEventListener("click", function () {
-        if (!color) {
-          feedback("Pick a finish first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, model: "5s", color: color, ts: Date.now() });
-        feedback("5s interest saved · " + color + " · " + k, st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootIphone5c(doc) {
-    doc = doc || document;
-    var colors = doc.querySelectorAll("[data-5c-color]");
-    var claim = doc.querySelector("[data-5c-claim]");
-    if (!claim && !colors.length) return;
-    var st = doc.querySelector("[data-5c-status]");
-    var k = key("iphone5c");
-    var color = "";
-    var prev = loadJSON(k, null);
-    if (claim && !prev) claim.disabled = true;
-    if (prev) {
-      color = prev.color || "blue";
-      if (claim) claim.disabled = false;
-      feedback("5c interest · " + color + " · " + k, st);
-    }
-    var i;
-    for (i = 0; i < colors.length; i++) {
-      colors[i].addEventListener("click", function () {
-        color = this.getAttribute("data-5c-color") || "blue";
-        if (claim) claim.disabled = false;
-        feedback("Color: " + color + " · claim to save.", st);
-      });
-    }
-    if (claim) {
-      claim.addEventListener("click", function () {
-        if (!color) {
-          feedback("Pick a 5c color first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, model: "5c", color: color, ts: Date.now() });
-        feedback("5c interest saved · " + color + " · " + k, st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootWin81(doc) {
-    doc = doc || document;
-    var tiles = doc.querySelectorAll("[data-win81-tile]");
-    var start = doc.querySelector("[data-win81-start]");
-    if (!start && !tiles.length) return;
-    var st = doc.querySelector("[data-win81-status]");
-    var k = key("win81");
-    var n = 0;
-    var prev = loadJSON(k, null);
-    var lost = doc.querySelector("[data-win81-lost]");
-    function revealStart() {
-      if (!start) return;
-      start.disabled = false;
-      if (start.hasAttribute("hidden")) start.removeAttribute("hidden");
-      if (lost) lost.style.display = "none";
-    }
-    if (start && !prev) start.disabled = true;
-    if (prev) {
-      n = 2;
-      revealStart();
-      feedback("Windows 8.1 Start tour saved · " + k, st);
-    }
-    var i;
-    for (i = 0; i < tiles.length; i++) {
-      tiles[i].addEventListener("click", function () {
-        n += 1;
-        this.setAttribute("data-ott-done", "1");
-        if (n >= 2) revealStart();
-        feedback("Tile open (" + n + ") · tap Start after two.", st);
-      });
-    }
-    if (start) {
-      start.addEventListener("click", function () {
-        if (n < 2) {
-          feedback("Open at least two tiles first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, startButton: true, tiles: n, ts: Date.now() });
-        feedback("Windows 8.1 Start tour saved · " + k, st);
-        markUsed();
-      });
-    }
-  }
-
-  function bootIpadAir(doc) {
-    doc = doc || document;
-    var claim = doc.querySelector("[data-ipadair-claim]");
-    if (!claim) return;
-    var st = doc.querySelector("[data-ipadair-status]");
-    var k = key("ipadair");
-    var cfg = "";
-    var mini = false;
-    var prev = loadJSON(k, null);
-    if (prev) {
-      cfg = prev.cfg || "wifi";
-      mini = !!prev.mini;
-      feedback("iPad Air interest · " + cfg + " · " + k, st);
-    }
-    var cfgs = doc.querySelectorAll("[data-air-cfg]");
-    var i;
-    for (i = 0; i < cfgs.length; i++) {
-      cfgs[i].addEventListener("click", function () {
-        cfg = this.getAttribute("data-air-cfg") || "wifi";
-        feedback("Config: " + cfg, st);
-      });
-    }
-    var miniBtn = doc.querySelector("[data-air-mini]");
-    if (miniBtn) {
-      miniBtn.addEventListener("click", function () {
-        mini = true;
-        feedback("Also looking at mini with Retina.", st);
-      });
-    }
-    claim.addEventListener("click", function () {
-      if (!cfg || !mini) {
-        feedback("Pick Wi‑Fi/Cellular and mini interest first.", st, { error: true });
+      if (!saw.lift || !saw.rest) {
+        feedback("Lift and rest first (several angles).", st, { error: true });
         return;
       }
-      saveJSON(k, { multiStep: true, ipadair: true, cfg: cfg, mini: true, ts: Date.now() });
-      feedback("iPad Air interest saved · " + cfg + " · " + k, st);
-      markUsed();
+      saveJSON(key("touchid"), blob({ enrolled: true }));
+      feedback("Touch ID enrolled (theater).", st);
+      reveal(doc);
     });
   }
 
-  function bootIpadMini(doc) {
-    doc = doc || document;
-    var claim = doc.querySelector("[data-ipad-claim]");
-    if (!claim) return;
-    var st = doc.querySelector("[data-ipad-status]");
-    var k = key("ipadmini");
-    var model = "";
-    var prev = loadJSON(k, null);
-    if (prev) {
-      model = prev.model || "mini";
-      feedback("iPad interest · " + model + " · " + k, st);
-    }
-    var picks = doc.querySelectorAll("[data-ipad-pick]");
+  function boot5c(doc) {
+    var colors = doc.querySelectorAll("[data-5c-color]");
+    var btn = doc.querySelector("[data-5c-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-5c-status]");
+    var picked = "";
     var i;
-    for (i = 0; i < picks.length; i++) {
-      picks[i].addEventListener("click", function () {
-        model = this.getAttribute("data-ipad-pick") || "mini";
-        feedback("Looking at " + model, st);
+    for (i = 0; i < colors.length; i++) {
+      colors[i].addEventListener("click", function (ev) {
+        picked = ev.currentTarget.getAttribute("data-5c-color") || "";
+        feedback("Color: " + picked, st);
       });
     }
-    claim.addEventListener("click", function () {
-      if (!model) {
-        feedback("Pick Air or mini first.", st, { error: true });
+    btn.addEventListener("click", function () {
+      if (!picked) {
+        feedback("Pick a plastic color first.", st, { error: true });
         return;
       }
-      saveJSON(k, { multiStep: true, model: model, ts: Date.now() });
-      feedback("iPad interest saved · " + model + " · " + k, st);
-      markUsed();
+      saveJSON(key("iphone5c"), blob({ color: picked }));
+      feedback("5c " + picked + ".", st);
+      reveal(doc);
+    });
+  }
+
+  function bootWin81(doc) {
+    var tiles = doc.querySelectorAll("[data-win81-tile]");
+    if (!tiles.length) return;
+    var st = doc.querySelector("[data-win81-status]");
+    var clicked = {};
+    var i;
+    for (i = 0; i < tiles.length; i++) {
+      tiles[i].addEventListener("click", function (ev) {
+        clicked[ev.currentTarget.getAttribute("data-win81-tile") || "tile"] = true;
+        var n = 0;
+        var k;
+        for (k in clicked) if (Object.prototype.hasOwnProperty.call(clicked, k)) n++;
+        if (n < 2) {
+          feedback("Open one more 8.1 tile (Start vs desktop).", st, { error: true });
+          return;
+        }
+        saveJSON(key("win81"), blob({ tiles: n }));
+        feedback("8.1 tour · " + n + " tiles.", st);
+        reveal(doc);
+      });
+    }
+  }
+
+  function bootSnowden(doc) {
+    var btn = doc.querySelector("[data-snowden-ack]");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      setTimeout(function () {
+        alias("snowden-ack", "snowden");
+        reveal(doc);
+      }, 40);
+    });
+  }
+
+  function bootHealthcare(doc) {
+    var btn = doc.querySelector("[data-hc-retry]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-hc-status]");
+    var tries = 0;
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-hc-req], [data-req]") < 2) {
+        feedback("Ack the Oct 2013 failure first.", st, { error: true });
+        return;
+      }
+      tries += 1;
+      if (tries < 2) {
+        feedback("Error. Try again (theater).", st, { error: true });
+        return;
+      }
+      saveJSON(key("healthcare"), blob({ retries: tries }));
+      feedback("Still down. Literacy saved.", st);
+      reveal(doc);
     });
   }
 
   function bootFbHome(doc) {
-    doc = doc || document;
-    var inst = doc.querySelector("[data-fb-home-install]");
-    var flop = doc.querySelector("[data-fb-home-flop]");
-    if (!inst && !flop) return;
-    var st = doc.querySelector("[data-fb-home-status]");
-    var k = key("fb-home");
-    var installed = false;
-    var prev = loadJSON(k, null);
-    if (prev) {
-      installed = true;
-      feedback("Facebook Home flop noted · " + k, st);
-    }
-    if (inst) {
-      inst.addEventListener("click", function () {
-        installed = true;
-        feedback("Home installed on lock screen (theater).", st);
-      });
-    }
-    if (flop) {
-      flop.addEventListener("click", function () {
-        if (!installed) {
-          feedback("Install Home first.", st, { error: true });
-          return;
-        }
-        saveJSON(k, { multiStep: true, installed: true, flop: true, ts: Date.now() });
-        feedback("Facebook Home flop noted · " + k, st);
-        markUsed();
-      });
-    }
+    var install = doc.querySelector("[data-fbhome-install]");
+    var regret = doc.querySelector("[data-fbhome-regret]");
+    if (!install || !regret) return;
+    var st = doc.querySelector("[data-fbhome-status]");
+    var sawInstall = false;
+    install.addEventListener("click", function () {
+      if (countChecked(doc, "[data-fbhome-req], [data-req]") < 2) {
+        feedback("Ack launcher + flop first.", st, { error: true });
+        return;
+      }
+      sawInstall = true;
+      feedback("Installed. Most people regretted it.", st);
+    });
+    regret.addEventListener("click", function () {
+      if (!sawInstall) {
+        feedback("Install first, then decide.", st, { error: true });
+        return;
+      }
+      saveJSON(key("fbhome-ack"), blob({ flop: true }));
+      feedback("Not for me · Home flop.", st);
+      reveal(doc);
+    });
+  }
+
+  function bootTelegram(doc) {
+    var btn = doc.querySelector("[data-tg-send]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-tg-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-tg-req], [data-req]") < 2) {
+        feedback("Ack post-Snowden + not-WhatsApp first.", st, { error: true });
+        return;
+      }
+      var msg = val(doc, "[data-tg-msg]");
+      if (!msg || msg.length < 2) {
+        feedback("Type a message first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("telegram-chat"), blob({ msg: msg }));
+      feedback("Sent (theater).", st);
+      var log = doc.querySelector("[data-tg-log]");
+      if (log) log.textContent = "you: " + msg;
+      reveal(doc);
+    });
   }
 
   function bootMedium(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-medium-publish]");
+    var btn = doc.querySelector("[data-med-publish]");
     if (!btn) return;
-    var st = doc.querySelector("[data-medium-status]");
-    var ta = doc.querySelector("[data-medium-draft]");
+    var st = doc.querySelector("[data-med-status]");
     btn.addEventListener("click", function () {
-      var body = ta && ta.value ? String(ta.value).trim() : "";
-      if (body.length < 12) {
-        feedback("Write a draft (12+ chars) first.", st, { error: true });
+      if (countChecked(doc, "[data-med-req], [data-req]") < 2) {
+        feedback("Ack essay + 2013 Medium first.", st, { error: true });
         return;
       }
-      if (!checked(doc, "[data-medium-literacy]")) {
-        feedback("Check 2013 seed literacy (no real CDN).", st, { error: true });
+      var draft = val(doc, "[data-med-draft]");
+      if (!draft || draft.length < 8) {
+        feedback("Write a few words first.", st, { error: true });
         return;
       }
-      saveJSON(key("medium-draft"), {
-        year: "2013",
-        title: body.slice(0, 48),
-        chars: body.length,
-        literacy: true,
-        multiStep: true,
-        ts: Date.now()
-      });
-      feedback("Published (theater) · " + key("medium-draft"), st);
-      markUsed();
+      saveJSON(key("medium-draft"), blob({ draft: draft.slice(0, 80) }));
+      feedback("Published (theater).", st);
+      reveal(doc);
     });
   }
 
-  function bootTelegramChat(doc) {
-    doc = doc || document;
-    var send = doc.querySelector("[data-telegram-send]");
-    if (!send) return;
-    var st = doc.querySelector("[data-telegram-chat-status]");
-    var log = doc.querySelector("[data-telegram-log]");
-    var kChat = key("telegram-chat");
-    var kSeed = key("telegram");
-    function render(list) {
-      if (!log) return;
-      if (!list.length) {
-        log.textContent = "No messages · seed a profile first, then send.";
+  function bootTumblr(doc) {
+    var btn = doc.querySelector("[data-tumblr-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-tumblr-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-tumblr-req], [data-req]") < 2) {
+        feedback("Ack the May deal first.", st, { error: true });
         return;
       }
-      log.innerHTML = list
-        .slice(0, 12)
-        .map(function (m) {
-          return "<div style='margin:4px 0;padding:6px 8px;background:#2b5278;border-radius:8px'>" +
-            String(m.text || "").replace(/</g, "&lt;") +
-            "</div>";
-        })
-        .join("");
-    }
-    var prev = loadJSON(kChat, { messages: [] });
-    render(prev.messages || []);
-    send.addEventListener("click", function () {
-      var seed = loadJSON(kSeed, null);
-      if (!seed || !seed.nick) {
-        feedback("Create a seed profile first (privacy + name).", st, { error: true });
-        return;
-      }
-      var inp = doc.querySelector("[data-telegram-msg]");
-      var text = inp && inp.value ? String(inp.value).trim() : "";
-      if (text.length < 2) {
-        feedback("Type a message (2+ chars).", st, { error: true });
-        return;
-      }
-      var list = (prev && prev.messages) || [];
-      list.unshift({ text: text, nick: seed.nick, ts: Date.now() });
-      prev = { year: "2013", nick: seed.nick, messages: list.slice(0, 40), multiStep: true, ts: Date.now() };
-      saveJSON(kChat, prev);
-      if (inp) inp.value = "";
-      render(prev.messages);
-      feedback("Sent (local only) · " + kChat, st);
-      markUsed();
+      saveJSON(key("tumblr-yahoo"), blob({ deal: "1.1B" }));
+      feedback("Yahoo × Tumblr literacy.", st);
+      reveal(doc);
     });
   }
 
-  function bootTumblrYahoo(doc) {
-    doc = doc || document;
-    var pin = doc.querySelector("[data-ty-pin]");
-    var promise = doc.querySelector("[data-ty-promise]");
-    if (!pin && !promise) return;
-    var st = doc.querySelector("[data-tumblr-yahoo-status]");
-    var k = key("tumblr-yahoo");
-    var state = { deal: false, promise: false };
-    var prev = loadJSON(k, null);
-    function persist() {
-      if (!(state.deal && state.promise)) return;
-      saveJSON(k, { multiStep: true, deal: "1.1B", promise: true, date: "2013-05-20", ts: Date.now() });
-      feedback("Yahoo–Tumblr deal pinned · " + k, st);
-      markUsed();
-    }
-    if (prev) {
-      state.deal = true;
-      state.promise = true;
-      feedback("Yahoo–Tumblr deal pinned · " + k, st);
-    }
-    if (pin) {
-      pin.addEventListener("click", function () {
-        state.deal = true;
-        feedback("Deal pinned · pin the Mayer promise too.", st);
-        persist();
-      });
-    }
-    if (promise) {
-      promise.addEventListener("click", function () {
-        state.promise = true;
-        feedback("Promise pinned.", st);
-        persist();
-      });
-    }
+  function bootAir(doc) {
+    var btn = doc.querySelector("[data-air-order]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-air-status]");
+    btn.addEventListener("click", function () {
+      var sku = radio(doc, "air-sku");
+      if (!sku) {
+        feedback("Pick a storage class first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ipadair"), blob({ sku: sku }));
+      feedback("Reserved iPad Air " + sku + ".", st);
+      reveal(doc);
+    });
   }
 
   function bootVineAndroid(doc) {
-    doc = doc || document;
-    var get = doc.querySelector("[data-vine-android]");
-    var loop = doc.querySelector("[data-vine-loop]");
-    if (!get && !loop) return;
-    var st = doc.querySelector("[data-vine-android-status]");
-    var k = key("vine-android");
-    var got = false;
-    var previewed = false;
-    var prev = loadJSON(k, null);
-    function persist() {
-      if (!(got && previewed)) return;
-      saveJSON(k, { multiStep: true, android: true, loop6s: true, date: "2013-06-02", ts: Date.now() });
-      feedback("Vine for Android saved · " + k, st);
-      markUsed();
-    }
-    if (prev) {
-      got = true;
-      previewed = true;
-      feedback("Vine for Android saved · " + k, st);
-    }
-    if (get) {
-      get.addEventListener("click", function () {
-        got = true;
-        feedback("Vine for Android queued · preview a 6s loop.", st);
-        persist();
-      });
-    }
-    if (loop) {
-      loop.addEventListener("click", function () {
-        previewed = true;
-        feedback("6s loop previewed.", st);
-        persist();
-      });
-    }
-  }
-
-  /* Generic multi-checkbox gate: button[data-itt-real-save] + data-req checkboxes */
-  function bootGenericReal(doc) {
-    doc = doc || document;
-    var btns = doc.querySelectorAll("[data-itt-real-save]");
-    var b;
-    for (b = 0; b < btns.length; b++) {
-      (function (btn) {
-        if (btn.getAttribute("data-itt-real-bound") === "1") return;
-        btn.setAttribute("data-itt-real-bound", "1");
-        btn.addEventListener("click", function () {
-          var st =
-            doc.querySelector(btn.getAttribute("data-status") || "[data-itt-real-status]") ||
-            btn.nextElementSibling;
-          var min = parseInt(btn.getAttribute("data-min-checks") || "2", 10);
-          var reqSel = btn.getAttribute("data-req") || "[data-req]";
-          var n = countChecked(doc, reqSel);
-          if (n < min) {
-            feedback("Complete at least " + min + " literacy checks first (not mock).", st, {
-              error: true
-            });
-            return;
-          }
-          var k = btn.getAttribute("data-storage-key") || "real-ack";
-          var field = btn.getAttribute("data-require-field");
-          var fieldVal = "";
-          if (field) {
-            var fe = doc.querySelector(field);
-            fieldVal = (fe && fe.value ? fe.value : "").trim();
-            if (fieldVal.length < 2) {
-              feedback("Fill the required field first.", st, { error: true });
-              return;
-            }
-          }
-          saveJSON(key(k), {
-            multiStep: true,
-            checks: n,
-            note: fieldVal || undefined,
-            ts: Date.now()
-          });
-          feedback("Saved REAL · " + key(k), st);
-          markUsed();
-        });
-      })(btns[b]);
-    }
-  }
-
-  /* Strip legacy one-click handlers that fire without gates (inline scripts still may run first).
-     Pages updated to use extras only should remove inline setItem. */
-
-  function bootTinder(doc) {
-    doc = doc || document;
-    if (!doc.querySelector("[data-tinder-swipe]") && !doc.querySelector("[data-tinder-matches]")) return;
-    var st = doc.querySelector("[data-tinder-status], [data-itt-action-status]");
-    var card = doc.querySelector("[data-tinder-card]");
-    var DECK = [
-      { id: "a", name: "Alex residual" },
-      { id: "b", name: "Sam residual" },
-      { id: "c", name: "Jordan residual" },
-      { id: "d", name: "Riley residual" },
-      { id: "e", name: "Casey residual" },
-      { id: "f", name: "Morgan residual" }
-    ];
-    var k = key("tinder");
-    var saved = loadJSON(k, null) || {};
-    var n = saved.n || 0;
-    var likes = saved.likes || [];
-    function paint() {
-      if (!card) return;
-      if (n >= DECK.length) {
-        card.textContent = "Deck empty · open matches.";
+    var btn = doc.querySelector("[data-vine-android]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-va-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-va-req], [data-req]") < 2) {
+        feedback("Ack Android date + still 6s first.", st, { error: true });
         return;
       }
-      card.textContent = "● silhouette · " + DECK[n].name;
-    }
-    paint();
-    var box = doc.querySelector("[data-tinder-matches]");
-    if (box) {
-      box.innerHTML = likes.length
-        ? likes.map(function (m) { return "<div>" + (m.name || m) + "</div>"; }).join("")
-        : "<div style='opacity:.6'>No matches yet.</div>";
-    }
-    var btns = doc.querySelectorAll("[data-tinder-swipe]");
-    var i;
-    for (i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function () {
-        if (n >= DECK.length) {
-          feedback("Deck empty.", st, { error: true });
-          return;
-        }
-        var dir = this.getAttribute("data-tinder-swipe");
-        var hit = DECK[n];
-        n += 1;
-        if (dir === "right") likes.push(hit);
-        if (n < 3) {
-          paint();
-          feedback("Swipe " + n + "/3 before a match can persist.", st, { error: true });
-          return;
-        }
-        saved = {
-          n: n,
-          likes: likes.slice(0, 12),
-          multiStep: true,
-          real: true,
-          year: "2013",
-          ts: Date.now()
-        };
-        saveJSON(k, saved);
-        paint();
-        feedback("Saved · " + k, st);
-        markUsed();
-        showNext(doc);
-      });
-    }
+      saveJSON(key("vine-android"), blob({ android: "2013-06-02" }));
+      feedback("Vine Android · 2 Jun.", st);
+      reveal(doc);
+    });
   }
 
-  function bootVineRecord(doc) {
-    doc = doc || document;
-    var hold = doc.querySelector("[data-vine-hold]");
-    var post = doc.querySelector("[data-vine-post]");
-    var st = doc.querySelector("[data-vine-status]");
-    var cap = doc.querySelector("[data-vine-caption]");
-    if (!post || post.getAttribute("data-vine-extras-bound") === "1") return;
-    post.setAttribute("data-vine-extras-bound", "1");
-    function armHold() {
-      if (!hold) return;
-      hold.setAttribute("data-vine-held", "1");
-      setTimeout(function () {
-        hold.setAttribute("data-vine-recorded", "1");
-        if (st && !/Ready|Posted/i.test(st.textContent || "")) st.textContent = "Ready · hold captured";
-      }, 280);
-    }
-    function writeVine() {
-      var ready =
-        (hold && hold.getAttribute("data-vine-recorded") === "1") ||
-        (hold && hold.getAttribute("data-vine-held") === "1") ||
-        /Ready/i.test((st && st.textContent) || "");
-      if (!ready) {
-        if (st) st.textContent = "Hold to record first · up to 6 seconds";
-        return false;
+  function bootPrism(doc) {
+    var btn = doc.querySelector("[data-prism-ack]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-prism-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-prism-req], [data-req]") < 2) {
+        feedback("Ack no-dump + dual papers first.", st, { error: true });
+        return;
       }
-      var list = loadJSON(key("vine-posts"), []);
-      if (!Array.isArray(list)) list = [];
-      var caption = val(cap) || "untitled";
-      list.unshift({
-        caption: caption.slice(0, 120),
-        secs: 6,
-        ts: Date.now(),
-        multiStep: true,
-        real: true
-      });
-      saveJSON(key("vine-posts"), list.slice(0, 40));
-      try {
-        if (doc.defaultView && doc.defaultView.parent && doc.defaultView.parent.localStorage) {
-          doc.defaultView.parent.localStorage.setItem(key("vine-posts"), JSON.stringify(list.slice(0, 40)));
-        }
-      } catch (eP) { /* */ }
-      if (st) st.textContent = "Posted · 6s loop";
-      markUsed();
-      showNext(doc);
-      return true;
-    }
-    if (hold) {
-      hold.addEventListener("mousedown", armHold);
-      hold.addEventListener("pointerdown", armHold);
-      hold.addEventListener("touchstart", armHold, { passive: true });
-    }
-    post.addEventListener("click", function () {
-      writeVine();
+      saveJSON(key("prism"), blob({ literacy: true }));
+      feedback("PRISM literacy.", st);
+      reveal(doc);
     });
-    doc.addEventListener(
-      "click",
-      function (ev) {
-        var t = ev.target;
-        if (!t) return;
-        if ((t.getAttribute && t.getAttribute("data-vine-post") != null) || (t.closest && t.closest("[data-vine-post]"))) {
-          writeVine();
-        }
-      },
-      true
-    );
+  }
+
+  function bootTumblrDash(doc) {
+    var btn = doc.querySelector("[data-tumblr-dash]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-tumblr-status]");
+    btn.addEventListener("click", function () {
+      if (countChecked(doc, "[data-tumblr-req], [data-req]") < 2) {
+        feedback("Ack dashboard + not Yahoo.com first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("tumblr-dash"), blob({ dashboard: true }));
+      feedback("Dashboard still Tumblr.", st);
+      reveal(doc);
+    });
+  }
+
+  function bootMini2(doc) {
+    var btn = doc.querySelector("[data-mini2-order]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-mini2-status]");
+    btn.addEventListener("click", function () {
+      var sku = radio(doc, "mini2-sku");
+      if (!sku) {
+        feedback("Pick a storage class first.", st, { error: true });
+        return;
+      }
+      saveJSON(key("ipadmini2"), blob({ sku: sku }));
+      feedback("Reserved mini Retina " + sku + ".", st);
+      reveal(doc);
+    });
+  }
+
+  function bootTinder(doc) {
+    var left = doc.querySelector("[data-tinder-left]");
+    var right = doc.querySelector("[data-tinder-right]");
+    if (!left || !right) return;
+    var st = doc.querySelector("[data-tinder-status]");
+    var saw = { l: false, r: false };
+    left.addEventListener("click", function () {
+      saw.l = true;
+      if (!saw.r) {
+        feedback("Swipe the other way too (double opt-in).", st, { error: true });
+        return;
+      }
+      saveJSON(key("tinder"), blob({ swipe: true }));
+      feedback("Match residual.", st);
+      reveal(doc);
+    });
+    right.addEventListener("click", function () {
+      saw.r = true;
+      if (!saw.l) {
+        feedback("Swipe the other way too (double opt-in).", st, { error: true });
+        return;
+      }
+      saveJSON(key("tinder"), blob({ swipe: true }));
+      feedback("Match residual.", st);
+      reveal(doc);
+    });
+  }
+
+  function bootAliases(doc) {
+    alias("thesis-ack", "thesis-ack");
+    alias("ig-posts", "ig");
+    alias("vine-posts", "vine");
   }
 
   function bootAll(doc) {
     doc = doc || document;
-    if (YX.isFillerPage && YX.isFillerPage(doc)) return;
-    bootTinder(doc);
-    bootXbox(doc);
-    bootPs4(doc);
-    bootTelegram(doc);
-    bootGlass(doc);
-    bootBitcoin(doc);
-    bootIos7(doc);
-    bootTouchId(doc);
-    bootUber(doc);
-    bootUberSf(doc);
-    bootIphone5s(doc);
-    bootIphone5c(doc);
-    bootWin81(doc);
-    bootIpadAir(doc);
-    bootIpadMini(doc);
-    bootFbHome(doc);
-    bootTumblrYahoo(doc);
-    bootMedium(doc);
-    bootTelegramChat(doc);
+    bootVine(doc);
     bootVineAndroid(doc);
-    bootVineRecord(doc);
-    bootGenericReal(doc);
-    bootChrome13(doc);
+    bootPrism(doc);
+    bootTumblrDash(doc);
+    bootMini2(doc);
+    bootIgAlias(doc);
+    bootStory(doc);
+    bootSnapAlias(doc);
+    bootIphone5s(doc);
+    bootIos7(doc);
+    bootTouch(doc);
+    boot5c(doc);
+    bootWin81(doc);
+    bootSnowden(doc);
+    bootHealthcare(doc);
+    bootFbHome(doc);
+    bootTelegram(doc);
+    bootMedium(doc);
+    bootTumblr(doc);
+    bootAir(doc);
+    bootTinder(doc);
+    bootAliases(doc);
   }
 
-  var features = ITT.ImmersionFeatures || (ITT.ImmersionFeatures = []);
-  if (typeof features.registerLocal === "function") {
-    features.registerLocal({
-      id: "year2013extras",
-      featureKey: "year2013extras",
-      boot: bootAll
-    });
+  if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
+    ITT.ImmersionFeatures.registerLocal({ id: "year2013extras", featureKey: "oneThingMachines", boot: bootAll });
+  } else if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { bootAll(document); });
   } else {
-    features.push({
-      id: "year2013extras",
-      needs: function () {
-        return true;
-      },
-      init: function () {
-        bootAll(document);
-      }
-    });
+    bootAll(document);
   }
 })(typeof window !== "undefined" ? window : this);

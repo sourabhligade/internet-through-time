@@ -1,78 +1,146 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
-const { enterYear, goInFrame, contentFrame } = require("./helpers");
+
+async function getKey(page, key) {
+  return page.evaluate((k) => localStorage.getItem(k), key);
+}
 
 test.describe("2017 flows", () => {
-  test("enter year", async ({ page }) => {
-    await enterYear(page, "2017");
-    await expect(page.locator("body")).toHaveAttribute("data-itt-year", "2017");
-  });
-
-  test("Face ID Sep 12 + no home button", async ({ page }) => {
+  test("Face ID empty never writes; ticks + unlock write", async ({ page }) => {
     await page.goto("/years/2017/sites/iphone/x.html");
-    await expect(page.locator("body")).toContainText(/Sep(?:tember)?\s*12/i);
-    await expect(page.locator("body")).toContainText(/no home button/i);
-    await expect(page.locator("[data-faceid-not-xs]")).toBeVisible();
+    await page.evaluate(() => localStorage.removeItem("itt17-faceid"));
+    await page.reload();
+    await page.locator("[data-faceid-unlock]").click();
+    expect(await getKey(page, "itt17-faceid")).toBeFalsy();
+    await page.locator("[data-faceid-req]").nth(0).check();
+    await page.locator("[data-faceid-req]").nth(1).check();
+    await page.locator("[data-faceid-unlock]").click();
+    await expect.poll(async () => getKey(page, "itt17-faceid"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test("iframe can open Face ID", async ({ page }) => {
-    await enterYear(page, "2017");
-    await goInFrame(page, "sites/iphone/x.html");
-    await expect(contentFrame(page).locator("body")).toContainText(/Face ID/i);
-  });
-
-  test("Fortnite Sep 26 + no official art", async ({ page }) => {
+  test("Fortnite incomplete never writes", async ({ page }) => {
     await page.goto("/years/2017/sites/fortnite/index.html");
-    await expect(page.locator("body")).toContainText(/Sep(?:tember)?\s*26/i);
-    await expect(page.locator("body")).toContainText(/no official/i);
-    await expect(page.locator("[data-fn-free]")).toBeVisible();
+    await page.evaluate(() => localStorage.removeItem("itt17-fortnite"));
+    await page.reload();
+    await page.locator("[data-fn-drop]").click();
+    expect(await getKey(page, "itt17-fortnite")).toBeFalsy();
+    await page.locator("[data-fn-req]").nth(0).check();
+    await page.locator("[data-fn-req]").nth(1).check();
+    await page.locator("[data-fn-drop]").click();
+    await expect.poll(async () => getKey(page, "itt17-fortnite"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test("home journeys list the six P0 trails", async ({ page }) => {
-    await page.goto("/years/2017/pages/home.html");
-    const j = page.locator("[data-itt-journeys]");
-    await expect(j).toBeVisible();
-    await expect(j).toContainText(/Unlock with a face|Drop in|Type past 140|Friday ransomware|Vine is an archive|Office is GA/i);
-    await expect(j.locator("a[href*='iphone/x']").first()).toBeVisible();
-    await expect(j.locator("a[href*='twitter/280']").first()).toBeVisible();
-  });
-
-  test("Twitter 280 Nov 7", async ({ page }) => {
+  test("280 under 140 never writes; past 140 writes", async ({ page }) => {
     await page.goto("/years/2017/sites/twitter/280.html");
-    await expect(page.locator("body")).toContainText(/Nov(?:ember)?\s*7/i);
-    await expect(page.locator("body")).toContainText(/280/);
-    await expect(page.locator("body")).toContainText(/not the X/i);
+    await page.evaluate(() => localStorage.removeItem("itt17-twitter-280"));
+    await page.reload();
+    await page.fill("[data-tw-280-text]", "still a 140 class tweet here");
+    await page.locator("[data-tw-280-send]").click();
+    expect(await getKey(page, "itt17-twitter-280")).toBeFalsy();
+    await page.fill(
+      "[data-tw-280-text]",
+      "this 2017 tweet finally has room to finish the sentence past one hundred forty characters on purpose — the 280 object is the extra space after the old SMS limit"
+    );
+    await page.locator("[data-tw-280-send]").click();
+    await expect.poll(async () => getKey(page, "itt17-twitter-280"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test("WannaCry May 12", async ({ page }) => {
-    await page.goto("/years/2017/sites/wannacry/index.html");
-    await expect(page.locator("body")).toContainText(/May\s*12/i);
-    await expect(page.locator("body")).toContainText(/no exploit|no attack code/i);
-  });
-
-  test("whats-new calendar has Face ID + Fortnite + 280", async ({ page }) => {
-    await page.goto("/years/2017/pages/whats-new.html");
-    await expect(page.locator("body")).toContainText(/Sep(?:tember)?\s*12/i);
-    await expect(page.locator("body")).toContainText(/Sep(?:tember)?\s*26/i);
-    await expect(page.locator("body")).toContainText(/Nov(?:ember)?\s*7/i);
-    await expect(page.locator("body")).toContainText(/Jan(?:uary)?\s*17/i);
-  });
-
-  test("Vine gone Jan 17 reverse of 2016", async ({ page }) => {
-    await page.goto("/years/2017/sites/vine/gone.html");
-    await expect(page.locator("body")).toContainText(/Jan(?:uary)?\s*17/i);
-    await expect(page.locator("body")).toContainText(/2016 only/i);
-  });
-
-  test("Teams GA Mar 14 not preview", async ({ page }) => {
+  test("Teams empty never writes", async ({ page }) => {
     await page.goto("/years/2017/sites/teams/index.html");
-    await expect(page.locator("body")).toContainText(/Mar(?:ch)?\s*14/i);
-    await expect(page.locator("body")).toContainText(/preview/i);
+    await page.evaluate(() => localStorage.removeItem("itt17-teams"));
+    await page.reload();
+    await page.locator("[data-teams-create]").click();
+    expect(await getKey(page, "itt17-teams")).toBeFalsy();
+    await page.locator("[data-teams-req]").check();
+    await page.fill("[data-teams-name]", "museum desk");
+    await page.locator("[data-teams-create]").click();
+    await expect.poll(async () => getKey(page, "itt17-teams"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test("Yahoo 3B Oct 3 is this year", async ({ page }) => {
-    await page.goto("/years/2017/sites/yahoo-3b/index.html");
-    await expect(page.locator("body")).toContainText(/Oct(?:ober)?\s*3/i);
-    await expect(page.locator("body")).toContainText(/3 billion/i);
+  test("Vine gone incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2017/sites/vine/gone.html");
+    await page.evaluate(() => localStorage.removeItem("itt17-vine-gone"));
+    await page.reload();
+    await page.locator("[data-vine-gone-ack]").click();
+    expect(await getKey(page, "itt17-vine-gone")).toBeFalsy();
+    await page.locator("[data-vine-gone-req]").nth(0).check();
+    await page.locator("[data-vine-gone-req]").nth(1).check();
+    await page.locator("[data-vine-gone-ack]").click();
+    await expect.poll(async () => getKey(page, "itt17-vine-gone"), { timeout: 8000 }).toBeTruthy();
+  });
+
+  test("Switch incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2017/sites/switch/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt17-switch"));
+    await page.reload();
+    await page.locator("[data-switch-reserve]").click();
+    expect(await getKey(page, "itt17-switch")).toBeFalsy();
+    await page.locator("[data-switch-req]").nth(0).check();
+    await page.locator("[data-switch-req]").nth(1).check();
+    await page.locator("[data-switch-reserve]").click();
+    await expect.poll(async () => getKey(page, "itt17-switch"), { timeout: 8000 }).toBeTruthy();
+  });
+
+  test("WannaCry incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2017/sites/wannacry/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt17-wannacry"));
+    await page.reload();
+    await page.locator("[data-wc-ack]").click();
+    expect(await getKey(page, "itt17-wannacry")).toBeFalsy();
+    await page.locator("[data-wc-req]").nth(0).check();
+    await page.locator("[data-wc-req]").nth(1).check();
+    await page.locator("[data-wc-ack]").click();
+    await expect.poll(async () => getKey(page, "itt17-wannacry"), { timeout: 8000 }).toBeTruthy();
+  });
+
+  test("musical.ly empty never writes", async ({ page }) => {
+    await page.goto("/years/2017/sites/musically/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt17-musically"));
+    await page.reload();
+    await page.locator("[data-ml-post]").click();
+    expect(await getKey(page, "itt17-musically")).toBeFalsy();
+    await page.fill("[data-ml-caption]", "not tiktok");
+    await page.locator("[data-ml-post]").click();
+    await expect.poll(async () => getKey(page, "itt17-musically"), { timeout: 8000 }).toBeTruthy();
+  });
+
+  test("Equifax incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2017/sites/equifax/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt17-equifax"));
+    await page.reload();
+    await page.locator("[data-eq-freeze]").click();
+    expect(await getKey(page, "itt17-equifax")).toBeFalsy();
+    await page.locator("[data-eq-req]").nth(0).check();
+    await page.locator("[data-eq-req]").nth(1).check();
+    await page.locator("[data-eq-freeze]").click();
+    await expect.poll(async () => getKey(page, "itt17-equifax"), { timeout: 8000 }).toBeTruthy();
+  });
+
+  test("3x Reddit empty / field-only never writes · complete Next", async ({ page }) => {
+    await page.goto("/years/2017/sites/reddit/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt17-pop-reddit"));
+    await page.reload();
+    await page.locator("[data-pop-go]").click();
+    expect(await getKey(page, "itt17-pop-reddit")).toBeFalsy();
+    await page.fill("[data-pop-field]", "front page");
+    await page.locator("[data-pop-go]").click();
+    expect(await getKey(page, "itt17-pop-reddit")).toBeFalsy();
+    await page.locator("[data-pop-pick]").first().click();
+    await page.locator("[data-pop-req]").check();
+    await page.fill("[data-pop-field]", "front page");
+    await page.locator("[data-pop-go]").click();
+    await expect.poll(async () => getKey(page, "itt17-pop-reddit"), { timeout: 8000 }).toBeTruthy();
+    await expect(page.locator('[data-next-flow] a[href*="youtube"]')).toBeVisible();
+  });
+
+  test("Animoji does not write without Face ID", async ({ page }) => {
+    await page.goto("/years/2017/sites/iphone/animoji.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt17-faceid");
+      localStorage.removeItem("itt17-animoji");
+    });
+    await page.reload();
+    await expect(page.locator("[data-animoji-need]")).toBeVisible();
+    expect(await getKey(page, "itt17-animoji")).toBeFalsy();
   });
 });

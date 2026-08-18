@@ -1,6 +1,5 @@
 /**
  * Immersion year stub — 2018
- * SRP: declare year only; shared loader is immersion/boot.js
  */
 (function () {
   "use strict";

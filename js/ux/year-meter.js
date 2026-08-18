@@ -50,15 +50,15 @@
 
   function hasPlayableWin(p) {
     try {
-      var keys = [p + "-playable", p + "-playable-2", p + "-playable-3", p + "-playable-set"];
       var i;
-      for (i = 0; i < keys.length; i++) {
-        var raw = localStorage.getItem(keys[i]);
+      for (i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (!k || k.indexOf(p + "-game-") !== 0) continue;
+        var raw = localStorage.getItem(k);
         if (!raw) continue;
-        if (keys[i].indexOf("set") !== -1) return true;
         try {
           var o = JSON.parse(raw);
-          if (o && (o.won || o.best > 0 || o.score > 0)) return true;
+          if (o && (o.won || o.best > 0 || o.score > 0 || o.real)) return true;
         } catch (eJ) {
           return true;
         }

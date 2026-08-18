@@ -3,13 +3,13 @@
  * localStorage only. No network. Educational theater.
  *
  * Keys:
- *   itt-passport       { version, stamps: { "2013": { vine: { label, ts, href } } } }
+ *   itt-passport       { version, stamps: { "2005": { youtube: { label, ts, href } } } }
  *   itt-first-night    { active, trail, step, completed, finished, startedAt }
  *   itt-last-year      (existing)
  *
  * Trails:
- *   first-night        1994 → 1998 → 2005 → 2010 → 2013
- *   YYYY-start         short in-year tour for every shipped year 1994–2020
+ *   first-night        1994 → 1998 → 2005 → 2007 → 2009
+ *   YYYY-start         short in-year tour for every shipped year 1994–2010
  */
 (function (global) {
   "use strict";
@@ -19,15 +19,16 @@
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
 
-  /** First night · signature arc (1994 → 2013) */
+  /** First night · signature arc (1994 → 2009) */
   var FIRST_NIGHT = [
     {
       id: "fn-1994",
       year: "1994",
-      path: "pages/home.html",
-      title: "1994 · Public Web",
-      blurb: "Starting Point — directories before Google. Look around, then continue.",
-      mode: "visit"
+      path: "sites/csotd/index.html",
+      title: "1994 · Cool Site of the Day",
+      blurb: "Sign the guestbook — directories before Google.",
+      mode: "visit",
+      match: "/csotd/"
     },
     {
       id: "fn-1998",
@@ -48,22 +49,22 @@
       stampIds: ["youtube", "yt", "watch", "like"]
     },
     {
-      id: "fn-2010",
-      year: "2010",
-      path: "sites/instagram/index.html",
-      title: "2010 · Instagram",
-      blurb: "iOS-only filters · early camera app web. Visit, then continue.",
+      id: "fn-2007",
+      year: "2007",
+      path: "sites/iphone/index.html",
+      title: "2007 · iPhone",
+      blurb: "Phone as a real browser — no App Store yet.",
       mode: "visit",
-      match: "/instagram/"
+      match: "/iphone/"
     },
     {
-      id: "fn-2013",
-      year: "2013",
-      path: "sites/vine/record.html",
-      title: "2013 · Vine",
-      blurb: "Hold six seconds · post a loop (REAL multi-step).",
+      id: "fn-2009",
+      year: "2009",
+      path: "sites/farmville/index.html",
+      title: "2009 · FarmVille",
+      blurb: "Social games peak · plant theater (REAL multi-step).",
       mode: "stamp",
-      stampIds: ["vine", "vine-posts"]
+      stampIds: ["farm", "farmville", "plant"]
     }
   ];
 
@@ -114,40 +115,40 @@
   /** Per-year short guided starts (every shipped year) */
   var YEAR_STARTS = {
     "1994": yearVisitTour("1994",
-      { path: "sites/yahoo/index.html", label: "Yahoo@Stanford", blurb: "Directory before search engines ruled.", match: "/yahoo/" },
-      { path: "pages/handbook.html", label: "Netscape handbook", blurb: "How Navigator menus felt in 1994." }),
+      { path: "sites/csotd/index.html", label: "Cool Site of the Day", blurb: "Sign the guestbook. The 1994 object.", match: "/csotd/" },
+      { path: "sites/yahoo/index.html", label: "Yahoo@Stanford", blurb: "Directory before search engines ruled.", match: "/yahoo/" }),
     "1995": yearVisitTour("1995",
-      { path: "sites/amazon/index.html", label: "Amazon books", blurb: "Earth’s biggest bookstore theater · cart REAL.", match: "/amazon/" },
+      { path: "sites/amazon/ssl-checkout.html", label: "SSL checkout", blurb: "Name + card + city. Commercial Web.", match: "/amazon/ssl-checkout" },
       { path: "sites/auctionweb/index.html", label: "AuctionWeb", blurb: "Pre-eBay auctions · bid theater.", match: "/auctionweb/" }),
     "1996": yearVisitTour("1996",
-      { path: "sites/hotmail/index.html", label: "HoTMaiL", blurb: "Free webmail that changed email.", match: "/hotmail/" },
-      { path: "sites/spacejam/index.html", label: "Space Jam", blurb: "1996 entertainment portal energy.", match: "/spacejam/" }),
+      { path: "sites/portals/wars.html", label: "Portal wars", blurb: "Yahoo · Excite · AltaVista. Hop all three.", match: "/portals/" },
+      { path: "sites/hotmail/index.html", label: "HoTMaiL", blurb: "Free webmail that changed email.", match: "/hotmail/" }),
     "1997": yearVisitTour("1997",
-      { path: "sites/ebay/index.html", label: "eBay", blurb: "Auction mass · bid theater.", match: "/ebay/" },
+      { path: "sites/pointcast/index.html", label: "PointCast", blurb: "Push channels · News + Weather.", match: "/pointcast/" },
       { path: "sites/icq/index.html", label: "ICQ", blurb: "Instant messaging culture · REAL multi-step.", match: "/icq/" }),
     "1998": yearVisitTour("1998",
-      { path: "sites/google/index.html", label: "Google", blurb: "Sparse search · I’m Feeling Lucky.", match: "/google/" },
-      { path: "sites/excite/index.html", label: "Excite", blurb: "Portal personalize theater.", match: "/excite/" }),
+      { path: "sites/google/lucky.html", label: "I'm Feeling Lucky", blurb: "Sparse search · the 1998 object.", match: "/google/lucky" },
+      { path: "sites/yahoo/index.html", label: "Yahoo packed", blurb: "Feel the portal still winning.", match: "/yahoo/" }),
     "1999": yearVisitTour("1999",
-      { path: "sites/napster/index.html", label: "Napster", blurb: "P2P scare · no real file share.", match: "/napster/" },
-      { path: "sites/blogger/index.html", label: "Blogger", blurb: "Push-button publishing.", match: "/blogger/" }),
+      { path: "sites/aim/index.html", label: "AIM", blurb: "Sign on. Buddy list culture.", match: "/aim/" },
+      { path: "sites/napster/index.html", label: "Napster", blurb: "P2P scare · no real file share.", match: "/napster/" }),
     "2000": yearVisitTour("2000",
-      { path: "sites/pets/index.html", label: "Pets.com", blurb: "Crash-year epitaph room.", match: "/pets/" },
-      { path: "sites/amazon/index.html", label: "Amazon smile", blurb: "Smile logo year · cart continuity.", match: "/amazon/" }),
+      { path: "sites/mapquest/index.html", label: "MapQuest", blurb: "From + to · print directions.", match: "/mapquest/" },
+      { path: "sites/pets/index.html", label: "Pets.com", blurb: "Crash-year epitaph room.", match: "/pets/" }),
     "2001": yearVisitTour("2001",
-      { path: "sites/wikipedia/index.html", label: "Wikipedia", blurb: "Anyone can edit · UseMod theater.", match: "/wikipedia/" },
+      { path: "sites/wikipedia/edit.html", label: "Wikipedia", blurb: "Anyone can edit · UseMod theater.", match: "/wikipedia/" },
       { path: "sites/apple/ipod.html", label: "iPod", blurb: "1,000 songs in your pocket.", match: "/ipod" }),
     "2002": yearVisitTour("2002",
-      { path: "sites/friendster/index.html", label: "Friendster", blurb: "Social network seed (mass often 2003).", match: "/friendster/" },
-      { path: "sites/kazaa/index.html", label: "KaZaA", blurb: "P2P client culture · no real files.", match: "/kazaa/" }),
+      { path: "sites/stumbleupon/index.html", label: "StumbleUpon", blurb: "Pick a topic. Stumble twice.", match: "/stumbleupon/" },
+      { path: "sites/friendster/index.html", label: "Friendster", blurb: "Social network seed (mass often 2003).", match: "/friendster/" }),
     "2003": yearVisitTour("2003",
       { path: "sites/myspace/index.html", label: "MySpace", blurb: "Social mass · profile theater.", match: "/myspace/" },
       { path: "sites/itunes/index.html", label: "iTunes Store", blurb: "99¢ downloads · FairPlay honesty.", match: "/itunes/" }),
     "2004": yearVisitTour("2004",
-      { path: "sites/gmail/index.html", label: "Gmail", blurb: "Invite-era gigabyte mail.", match: "/gmail/" },
-      { path: "sites/facebook/index.html", label: "thefacebook", blurb: "College network · not modern FB.", match: "/facebook/" }),
+      { path: "sites/facebook/networks.html", label: "thefacebook", blurb: "Join a college network. Not modern FB.", match: "/facebook/networks" },
+      { path: "sites/gmail/index.html", label: "Gmail", blurb: "Invite-era gigabyte mail.", match: "/gmail/" }),
     "2005": yearVisitTour("2005",
-      { path: "sites/youtube/index.html", label: "YouTube", blurb: "Broadcast Yourself · beta year.", match: "/youtube/" },
+      { path: "sites/youtube/upload.html", label: "YouTube", blurb: "Broadcast Yourself · beta year.", match: "/youtube/" },
       { path: "sites/maps/index.html", label: "Google Maps", blurb: "Ajax poster child · pan theater.", match: "/maps/" }),
     "2006": yearVisitTour("2006",
       { path: "sites/twitter/index.html", label: "Twitter", blurb: "What are you doing? · 140.", match: "/twitter/" },
@@ -159,44 +160,35 @@
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Apps economy begins.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome", blurb: "Browser reinvented · product room.", match: "/chrome/" }),
     "2009": yearVisitTour("2009",
-      { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Social games peak · plant theater.", match: "/farmville/" },
-      { path: "sites/bing/index.html", label: "Bing", blurb: "Search war · decision engine.", match: "/bing/" }),
+      { path: "sites/facebook/feed.html", label: "Facebook Like", blurb: "Like a story. The 2009 web object.", match: "/facebook/" },
+      { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Social games peak · plant theater.", match: "/farmville/" }),
     "2010": yearVisitTour("2010",
-      { path: "sites/ipad/index.html", label: "iPad", blurb: "Tablet web arrives.", match: "/ipad/" },
-      { path: "sites/instagram/index.html", label: "Instagram", blurb: "iOS-only filters · camera app web.", match: "/instagram/" }),
+      { path: "sites/instagram/index.html", label: "Instagram", blurb: "iOS filter → share. The 2010 object.", match: "/instagram/" },
+      { path: "sites/ipad/index.html", label: "iPad", blurb: "$499 · no camera · magazine Safari.", match: "/ipad/" }),
     "2011": yearVisitTour("2011",
-      { path: "sites/spotify/index.html", label: "Spotify US", blurb: "Streaming music lands in the US.", match: "/spotify/" },
-      { path: "sites/googleplus/index.html", label: "Google+", blurb: "Circles · Hangouts seed.", match: "/googleplus/" }),
+      { path: "sites/googleplus/hangouts.html", label: "Google+ Hangouts", blurb: "Circles · invite FOMO · start a hangout.", match: "/googleplus/" },
+      { path: "sites/spotify/index.html", label: "Spotify US", blurb: "14 Jul · invite-free theater.", match: "/spotify/" }),
     "2012": yearVisitTour("2012",
-      { path: "sites/instagram/index.html", label: "IG Android + buy", blurb: "Android + Facebook $1B story.", match: "/instagram/" },
-      { path: "sites/pinterest/index.html", label: "Pinterest", blurb: "Pin culture mass.", match: "/pinterest/" }),
+      { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "3 Apr filter leaves the iPhone.", match: "/instagram/" },
+      { path: "sites/facebook/ipo.html", label: "Facebook IPO", blurb: "$38 · Nasdaq delay · 1B later.", match: "/facebook/" }),
     "2013": yearVisitTour("2013",
-      { path: "sites/vine/index.html", label: "Vine", blurb: "Six-second loops.", match: "/vine/" },
-      { path: "sites/snapchat/story.html", label: "Snap Stories", blurb: "Ephemeral stories · 24h theater.", match: "/story" }),
+      { path: "sites/vine/record.html", label: "Vine 6s", blurb: "Hold to record. It loops.", match: "/vine/" },
+      { path: "sites/iphone/ios7.html", label: "iOS 7", blurb: "Every icon went flat overnight.", match: "/iphone/" }),
     "2014": yearVisitTour("2014",
-      { path: "sites/whatsapp/index.html", label: "WhatsApp", blurb: "Deal + chat REAL · $19B class.", match: "/whatsapp/" },
-      { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "CVE-2014-0160 · rotate theater.", match: "/heartbleed/" }),
+      { path: "sites/whatsapp/index.html", label: "WhatsApp", blurb: "Install. The $19B class deal.", match: "/whatsapp/" },
+      { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "Rotate. Do not exploit.", match: "/heartbleed/" }),
     "2015": yearVisitTour("2015",
-      { path: "sites/apple/watch.html", label: "Apple Watch", blurb: "Ships Apr 24 · Sport from $349.", match: "/watch" },
-      { path: "sites/windows10/index.html", label: "Win10 free", blurb: "Jul 29 upgrade · Edge.", match: "/windows10/" }),
+      { path: "sites/periscope/index.html", label: "Periscope", blurb: "Title. Go LIVE. App of the Year.", match: "/periscope/" },
+      { path: "sites/googlephotos/index.html", label: "Google Photos", blurb: "Unlimited high quality locker.", match: "/googlephotos/" }),
     "2016": yearVisitTour("2016",
-      { path: "sites/instagram/stories.html", label: "Stories", blurb: "Aug 2 · 24h · not Reels.", match: "/instagram/stories" },
-      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Jul 6 · no sprites · no GPS.", match: "/pokemongo/" }),
+      { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/" },
+      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Team. Sidewalk. Catch leftover.", match: "/pokemongo/" }),
     "2017": yearVisitTour("2017",
-      { path: "sites/iphone/x.html", label: "Face ID", blurb: "Sep 12 · no home button · not XS.", match: "/iphone/x" },
-      { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Sep 26 · free · 100 · no official art.", match: "/fortnite/" }),
+      { path: "sites/iphone/x.html", label: "Face ID / iPhone X", blurb: "No Home. Look. Swipe up.", match: "/iphone/x" },
+      { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Free. 100. Drop leftover.", match: "/fortnite/" }),
     "2018": yearVisitTour("2018",
-      { path: "sites/gdpr/index.html", label: "GDPR", blurb: "25 May · Manage is the save.", match: "/gdpr" },
-      { path: "sites/tiktok/fyp.html", label: "TikTok FYP", blurb: "Aug 2 merge · reorder.", match: "/tiktok" }),
-    "2019": yearVisitTour("2019",
-      { path: "sites/disneyplus/index.html", label: "Disney+", blurb: "Nov 12 · Who’s watching.", match: "/disneyplus" },
-      { path: "sites/fortnite/marshmello.html", label: "Marshmello", blurb: "Feb 2 · 10.7M.", match: "/marshmello" }),
-    "2020": yearVisitTour("2020",
-      { path: "sites/zoom/index.html", label: "Zoom", blurb: "Join · mute · chat · leave.", match: "/zoom" },
-      { path: "sites/instagram/reels.html", label: "Reels", blurb: "Aug 5 · 15 seconds.", match: "/reels" }),
-    "2021": yearVisitTour("2021",
-      { path: "sites/att/index.html", label: "ATT", blurb: "26 Apr · Not to Track.", match: "/att" },
-      { path: "sites/signal/index.html", label: "Signal", blurb: "Jan exodus · Facebook-share scare.", match: "/signal" })
+      { path: "sites/gdpr/index.html", label: "GDPR Manage", blurb: "Accept All never writes. Manage does.", match: "/gdpr/" },
+      { path: "sites/tiktok/fyp.html", label: "TikTok For You", blurb: "Aug 2 merge. Tap. Reorder.", match: "/tiktok/" }),
   };
 
   var TRAILS = {
@@ -211,7 +203,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2021; y++) {
+    for (y = 1994; y <= 2018; y++) {
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -656,7 +648,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2021; y++) years.push(String(y));
+    for (y = 1994; y <= 2018; y++) years.push(String(y));
     var total = totalStamps();
     var nYears = yearsStamped().length;
     var night = getNight();
@@ -703,11 +695,11 @@
     }
     html += "</div>";
 
-    html += '<div class="first-night-card year-2018-start-card">';
+    html += '<div class="first-night-card year-2009-start-card">';
     html +=
-      "<b>2020 start</b> — newest shipped year: Zoom mute + Reels 15s." +
-      '<br><a class="start-btn start-primary" href="/years/2020/?trail=2020-start">Start 2020 tour →</a>' +
-      ' <a class="start-btn" href="/years/2020/">Open 2020 shell</a>';
+      "<b>2009 start</b> — newest shipped year: FarmVille · Like · Bing · 3GS." +
+      '<br><a class="start-btn start-primary" href="/years/2009/?trail=2009-start">Start 2009 tour →</a>' +
+      ' <a class="start-btn" href="/years/2009/">Open 2009 shell</a>';
     html += "</div>";
 
     /* Per-year tour hint */
@@ -721,7 +713,7 @@
     html += '<div class="first-night-card">';
     if (night.finished && night.trail === "first-night") {
       html +=
-        "<b>First night complete</b> — you walked 1994→2013. " +
+        "<b>First night complete</b> — you walked 1994→2009. " +
         '<button type="button" data-itt-night-restart class="start-btn">Replay first night</button>';
     } else if (night.active && !night.finished) {
       var st = activeSteps(night)[night.step] || activeSteps(night)[0];
@@ -742,7 +734,7 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2005 YouTube → 2010 Instagram → 2013 Vine." +
+        "1994 → 1998 Google → 2005 YouTube → 2007 iPhone → 2009 FarmVille." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
     }
     html += "</div></div>";

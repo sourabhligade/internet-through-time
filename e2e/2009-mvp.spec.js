@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const { checkAllReq, enterYear, twoStepClick } = require('./helpers');
+const { completeRealGate, enterYear, twoStepClick } = require('./helpers');
 
 test.describe('2009 MVP', () => {
   test('shell boots 2009', async ({ page }) => {
@@ -35,8 +35,7 @@ test.describe('2009 MVP', () => {
     await page.reload();
     await page.waitForSelector('[data-appstore-catalog], [data-appstore-install]', { timeout: 20000 });
     await expect(page.locator('body')).toContainText(/50,?000|billion|1B/i);
-    await checkAllReq(page);
-    await twoStepClick(page, '[data-appstore-install]');
+    await completeRealGate(page, '[data-appstore-install]');
     await expect(page.locator('[data-appstore-status]')).toContainText(/Installed|Already|itt09/i, {
       timeout: 8000,
     });

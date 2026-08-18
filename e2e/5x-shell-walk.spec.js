@@ -4,7 +4,12 @@
  * Direct-URL 5× specs can pass while the shell walk is broken.
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
 const { enterYear, goInFrame, contentFrame, killOverlays } = require('./helpers');
+function yearOnDisk(year) {
+  return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
+}
 const matrix = require('./5x-recheck.matrix.json');
 
 async function iframeKey(page, key) {
@@ -89,6 +94,7 @@ const GOLD_WALKS = [
 
 for (const g of GOLD_WALKS) {
   test(`${g.year} shell gold F1 empty never writes · Next`, async ({ page }) => {
+    test.skip(!yearOnDisk(g.year), g.year + ' not on disk');
     await enterYear(page, g.year);
     await iframeClear(page, g.key);
     await goInFrame(page, g.room);

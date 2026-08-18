@@ -15,15 +15,15 @@
 | 1997 | Lobby Connect Four | Yahoo Games / ClassicGames | S–M | [YEAR-1997.md](YEAR-1997.md) |
 | 1998 | Skip-Intro Runner | Agency Flash culture | M | [YEAR-1998.md](YEAR-1998.md) |
 | 1999 | Pixel Pet Dash | Neopets-class pet + mini | M | [YEAR-1999.md](YEAR-1999.md) |
-| 2000 | Portal Judge | Newgrounds Portal culture | S | [YEAR-2000.md](YEAR-2000.md) |
+| 2000 | Lot Life | The Sims dollhouse / needs | M | [YEAR-2000.md](YEAR-2000.md) |
 | 2001 | Clickscape | RuneScape-class click grind | M | [YEAR-2001.md](YEAR-2001.md) |
 | 2002 | Room Sticky | Habbo-class room toy | M | [YEAR-2002.md](YEAR-2002.md) |
 | 2003 | Gags Lite | Kids MMO turn mini | M | [YEAR-2003.md](YEAR-2003.md) |
-| 2004 | Cubicle Whack | Casual reaction / “whack” | S–M | [YEAR-2004.md](YEAR-2004.md) |
+| 2004 | Gem Cascade | Bejeweled / PopCap match-3 | M | [YEAR-2004.md](YEAR-2004.md) |
 | 2005 | HoverChop (year wire) | Helicopter Flash class | S (exists) | [YEAR-2005.md](YEAR-2005.md) |
 | 2006 | TrailSled (year wire) | Line Rider class | S (exists) | [YEAR-2006.md](YEAR-2006.md) |
 | 2007 | Box Shift | Portal-puzzle class | M–L | [YEAR-2007.md](YEAR-2007.md) |
-| 2008 | Tap Grid Free | App Store free-game | M | [YEAR-2008.md](YEAR-2008.md) |
+| 2008 | Goo Span | World of Goo span | M | [YEAR-2008.md](YEAR-2008.md) |
 | 2009 | Plot Neighbors | FarmVille-class | M | [YEAR-2009.md](YEAR-2009.md) |
 | 2010 | Rag Trail | Physics / Happy Wheels class | M–L | [YEAR-2010.md](YEAR-2010.md) |
 | 2011 | Letter Swap | Social word game | M | [YEAR-2011.md](YEAR-2011.md) |
@@ -43,7 +43,7 @@
 ```
 years/YYYY/
   sites/playable/
-    index.html          # existing toys + link to game.html
+    index.html          # game cabinet (no toys) + link to game.html
     game.html           # YEAR GAME (this bible)
 js/games/
   scores.js             # shared high-score helper (exists)
@@ -101,15 +101,15 @@ npx playwright test e2e/year-games.spec.js --workers=1
 | 1997 | Lobby Connect Four | `year-1997-connect4.js` | `itt97-game-connect4` |
 | 1998 | Skip-Intro Runner | `year-1998-skipintro.js` | `itt98-game-skipintro` |
 | 1999 | Pixel Pet Dash | `year-1999-petdash.js` | `itt99-game-petdash` |
-| 2000 | Portal Judge | `year-2000-portaljudge.js` | `itt00-game-portaljudge` |
+| 2000 | Lot Life | `year-2000-lotlife.js` | `itt00-game-lotlife` |
 | 2001 | Clickscape | `year-2001-clickscape.js` | `itt01-game-clickscape` |
 | 2002 | Room Sticky | `year-2002-roomsticky.js` | `itt02-game-roomsticky` |
 | 2003 | Gags Lite | `year-2003-gagslite.js` | `itt03-game-gagslite` |
-| 2004 | Cubicle Whack | `year-2004-cubewhack.js` | `itt04-game-cubewhack` |
+| 2004 | Gem Cascade | `year-2004-gemcascade.js` | `itt04-game-gemcascade` |
 | 2005 | HoverChop | `year-2005-heli.js` | `itt05-game-heli` |
 | 2006 | TrailSled | `year-2006-sled.js` | `itt06-game-sled` |
 | 2007 | Box Shift | `year-2007-boxshift.js` | `itt07-game-boxshift` |
-| 2008 | Tap Grid Free | `year-2008-tapgrid.js` | `itt08-game-tapgrid` |
+| 2008 | Goo Span | `year-2008-goospan.js` | `itt08-game-goospan` |
 | 2009 | Plot Neighbors | `year-2009-plotneighbors.js` | `itt09-game-plotneighbors` |
 | 2010 | Rag Trail | `sled.js` themed | `itt10-game-sled` |
 | 2011 | Letter Swap | `year-2011-letterswap.js` | `itt11-game-letterswap` |
@@ -120,7 +120,7 @@ npx playwright test e2e/year-games.spec.js --workers=1
 
 Shared: `js/games/year-game-boot.js` · e2e `e2e/year-games.spec.js` + `e2e/year-games-flows.spec.js`.
 
-How to play: open a year → Starting Point / Playables → **▶ Full year game**.
+How to play: open a year → Starting Point → **▶ Play this year’s game**. Live years on this branch: **1994–2009**. Cabinet: `sites/playable/index.html`. Confirm + leftover tests: [`../GAMES-INTEGRATION-TODO-VERIFY-1994-2009.md`](../GAMES-INTEGRATION-TODO-VERIFY-1994-2009.md).
 
 ### Complexity upgrades (2026-08-06 pass 2)
 

@@ -71,7 +71,7 @@ say "-- project files --"
 for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.yml netlify.toml vercel.json playwright.config.js .gitignore .gitattributes robots.txt sitemap.txt index.html; do
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
-for y in $(seq 1994 2020); do
+for y in $(seq 1994 2018); do
   if [[ -f "years/$y/index.html" ]]; then ok "years/$y/index.html"; else bad "missing years/$y"; fi
 done
 
@@ -82,6 +82,8 @@ python3 scripts/smoke-production.py
 python3 scripts/audit-internal-links.py
 python3 scripts/test-authenticity.py
 python3 scripts/test-pipeline.py
+node scripts/audit-mock-flows.js
+python3 scripts/check-all-years.py
 
 # --- gh tooling ---
 say ""
@@ -119,5 +121,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 1994–2020: lean 2017–2020, leftover 2016 rooms, Imgur→Reddit"
+say "  Ship hub 1994–2018 lean: drop 2019+, 25 playable years"
 exit 0

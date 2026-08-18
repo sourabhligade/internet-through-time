@@ -1,112 +1,71 @@
-# 2011 READ-FIRST — from-scratch remake freeze
+# 2011 — READ FIRST
 
-**Date:** 2026-08-15  
-**Status:** Research freeze. **Do not scaffold or wipe `years/2011/` until the user says implement.**  
-**Git only if asked.**
+**Date:** 2026-08-17  
+**Status:** Research mapped in the same pack shape as 2010. Lean year **is on disk**. Corpus **10,320** unique URLs. Git only if asked. **Do not restore** any old 2011 forest.
 
-| # | Doc | Role |
-|---|-----|------|
-| 0 | **This file** | Locked facts · bans · room cap · gold |
-| **★** | [`2011-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2011-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md) | **One map — goals, walks, rooms, S0–S14, links** |
-| 1 | [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Same phases, shorter |
-| 2 | [`2011-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2011-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md) | Fresh harvest + implementable links |
-| 3 | [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) | 2026-08-02 parent (thesis still true) |
-| 4 | [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md) | Prior harvest |
-| 5 | [`DISK-TRUTH.md`](DISK-TRUTH.md) §2011 | Live lean 52 HTML |
+| Doc | Role |
+|-----|------|
+| **This file** | Entry · thesis · do / do not |
+| [`2011-RESEARCH.md`](2011-RESEARCH.md) | Short locked dossier |
+| [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md) | Long harvest · kits · Wayback · corpus |
+| [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Implement playbook · ROI · `[ ]` leftover |
+| [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) | One implementer bible |
+| [`2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) | Flows A–T short |
+| [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) | **Long dump:** goals · phases · flows · every visited URL extracted |
+| [`references/2011/`](references/2011/) | Wikipedia 2011 list · extlinks · CDX · visit log |
+| Parent live year | `years/2010/` · `itt10` |
 
----
-
-## Disk now (do not treat as unbuilt)
-
-`years/2011/` is **live, lean, 52 HTML**, forest pruned 2026-08-10. Prefix **`itt11`**. Shell **Win7 + IE 9**. One-thing **Airbnb** (`itt11-airbnb`). Guided home `<ol>` is **6**.
-
-A from-scratch remake means: **rewrite year-true rooms in place** (or rebuild lean into a new tree then swap). **Do not** `cp -R` 2010. **Do not** restore `/tmp/itt-2011-clone-backup-*`. Cap **~46–58 HTML**. Hard cap **60**.
+**Disk truth:** Hub lean cut is **1994–2011**. `years/2011/` is a **lean door** (~22 rooms), cloned from 2010. Prior thicker 2011 forests are **not** the source of truth.
 
 ---
 
-## Locked gold (never restar)
+## One-line thesis (locked)
 
-| | |
-|--|--|
-| **Product** | Airbnb request-to-book (not Instant Book) |
-| **Rooms** | `sites/airbnb/{index,listing,request}.html` |
-| **Key** | `itt11-airbnb` |
-| **Ritual** | City → listing → host message / request. Incomplete writes nothing. |
-| **Not gold** | Spotify US, Timeline, Siri, Google+, Qwikster (those are P0 residual) |
+**2011 is the year Google tries to rebuild Facebook as Circles, Spotify finally becomes legal in the United States, and the phone grows a voice** — Google+ field trial (28 Jun) · Spotify US invite-free (14 Jul) · iPad 2 camera (2 Mar) · Facebook Timeline (22 Sep) · iPhone 4S / Siri (14 Oct) — while most people still live on a **Windows 7 / IE 9** laptop.
 
----
+## Gold (pick one — do not advertise two stars)
 
-## Locked numbers (paste only these)
+| Role | Product | Why |
+|------|---------|-----|
+| **Star / one-thing** | **Google+** Circles / invite / Hangouts | Year-native. Field trial 28 Jun · public 20 Sep. Not “G+ won.” |
+| **P0 habit** | **Spotify US** 14 Jul | Free invite tier. EU was 2008. No stream. |
+| **P0 hardware** | **iPad 2** cameras · **iPhone 4S / Siri** | 2010 banned these. 2011 is when they ship. |
+| **P0 Facebook** | **Timeline** | Profile becomes a memoir. Not 2010 default. |
+| **Leftover gold** | **Airbnb** request | Search → pick → host note. `itt11-airbnb`. |
 
-| Fact | Value | Source |
-|------|------:|--------|
-| Live Stats June websites | **346,004,403** (+**67%**) | [Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| Live Stats users (year cell) | **2,282,955,130** | same table |
-| Pingdom Dec websites | **555 million** (+**300M** in year) | [Pingdom 2011](https://www.pingdom.com/blog/internet-2011-in-numbers/) |
-| Pingdom users | **2.1 billion** | Pingdom |
-| Facebook end-2011 | **800+ million** · +200M · 350M mobile login | Pingdom |
-| Twitter | 225M accounts · 100M active · 250M tweets/day (Oct) · **#egypt** #1 | Pingdom |
-| WhatsApp one-day (Oct) | **1 billion** messages | Pingdom / WhatsApp blog class |
-| Spotify US | **14 Jul 2011** · invite free · **$4.99** Unlimited · **$9.99** Premium | TechCrunch / NPR |
-| Google+ field trial | **28 Jun 2011** | Google Blog |
-| Timeline F8 | **22 Sep 2011** | ABC / F8 |
-| Algorithmic feed class | **~20 Sep 2011** Top Stories | Facebook blog WA |
-| iPad 2 announce / US | **2 Mar / 11 Mar** · **$499 / $599 / $699** Wi-Fi | Apple Newsroom |
-| IE 9 | **14 Mar 2011** | Microsoft / Wikipedia |
-| Qwikster announce / kill | **18 Sep / ~10 Oct 2011** | Hastings blog class |
-| iPhone 4S / iOS 5 / iCloud | **4 Oct** announce · iOS 5 **12 Oct** · ship **14 Oct** · **$199/$299/$399** | Apple Newsroom |
-| Siri launch languages | EN-US/UK/AU · FR · DE (beta) | Apple |
-| Jobs death | **5 Oct 2011** (day after 4S) | Apple Board |
-| ICS + Galaxy Nexus | **19 Oct 2011** | Google |
-| Snapchat | Picaboo **Jul** · rename **Sep** · **not mass** | BI / Fortune |
-| TwitchTV public beta | **6 Jun 2011** from Justin.tv gaming | TechCrunch / TNW |
-| Prefix | **`itt11`** | — |
+## Do
 
-Always **dual-cite** websites (Live Stats June + Pingdom Dec). Never blend into one unlabeled number.
+- Clone **shape** from `years/2010/` (lean door + gold + leftover), not a 100-room forest.
+- Prefix **`itt11`**. Incomplete REAL writes nothing.
+- Shell default: **Windows 7 + IE 9**. January IE8 honesty. Chrome is a **product room**.
+- Dual-cite scale: Live Stats June **346,004,403** sites · Pingdom Dec **555 million** sites · label the source.
+- Harvest pixels from Wayback `id_` or mark RECON. Never invent brand pixels.
 
----
+## Do not
 
-## Hard bans
+- Restore an old 2011 forest.
+- Ship Instagram **Android**, Stories, Reels, or a web composer as 2011 default.
+- Treat G+ as if it replaced Facebook.
+- Ship Vine, iPhone 5, Windows 8, Snapchat Stories, Graph Search, UberX mass.
+- Make Spotify US look like it always existed (EU was 2008).
+- Make July Spotify look like the 22 Sep Facebook-open day.
+- Put Siri on iPhone 4.
+- Add 1,388 Wikipedia-established names as rooms. Curate ~22 mass + chips.
 
-| Ban | Correct era |
-|-----|-------------|
-| Instagram **Android** | Apr 2012 |
-| Facebook **owns Instagram** | Apr 2012 |
-| Facebook **IPO** | May 2012 |
-| Instagram Stories / Reels / Meta | later |
-| Facebook Reactions | 2016 |
-| **UberX** / every-city mass | 2012+ (black-car residual OK) |
-| iPhone **5** / Lightning | 2012 |
-| Windows **8** as default shell | 2012 |
-| Snapchat as year-start mass teen default | seed mid/late 2011 only |
-| Google+ as “Facebook killer” success | hype then engagement fail |
-| TikTok | later |
-| Instant Book as Airbnb gold | later |
-| Chrome as **sole** shell | IE still large |
-| Restore 1995–2010 clone forest | lean year |
-| Second `data-ott-one-thing` | Airbnb only |
-| 7th guided `<li>` | stay at 6 |
-| Invented brand pixels | WA / Newsroom / failed-final |
+## Corpus (this pass)
 
----
+**10,320 unique URLs** stacked: 19 Wikipedia categories · 1,388 pages · 4,500 citation extlinks · 8,970 unique docs URLs · thin CDX (archive.org timeouts).  
+File: [`references/2011/corpus-2011-unique-urls.txt`](references/2011/corpus-2011-unique-urls.txt). **Not 10,320 rooms.**
 
-## Visitor walk (done)
+## How to read this pack (same order as 2010)
 
-```
-Hub → 2011 (broadband · IE 9)
-  → About: dual scale + thesis + bans
-  → ★ Airbnb: search city → listing → request → itt11-airbnb
-  → Next chip: Timeline (JSON, not "1")
-  → Spotify US invite / $4.99 / $9.99 theater
-  → Siri / iCloud / iPad 2
-  → Google+ Circles → Hangout
-  → Qwikster literacy (price hike remains)
-  → Snapchat seed (not Stories)
-  → Exit · itt11-* only
-```
+1. This file (do / do not).  
+2. [`2011-RESEARCH.md`](2011-RESEARCH.md) — locked numbers.  
+3. [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) — one page.  
+4. [`2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) — flows A–T in prose.  
+5. [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) — **verify every opened site** (V1–V12).  
+6. Harvest if you need kits / Wayback.
 
----
+## Next when you say densify / leftover implement
 
-## Say this to start build
-
-`implement 2011 from scratch` — then follow **S0** in [`2011-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2011-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md).
+Open [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) and tick the leftover `[ ]` against V1–V12.

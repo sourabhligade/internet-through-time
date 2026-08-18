@@ -1791,8 +1791,8 @@ def test_2010_signature() -> None:
         "years/2010/sites/ipad/index.html",
         "years/2010/sites/iphone/index.html",
         "years/2010/sites/instagram/index.html",
-        "years/2010/sites/appstore/index.html",
-        "years/2010/sites/facebook/feed.html",
+        "years/2010/sites/facebook/index.html",
+        "years/2010/sites/facebook/cnn.html",
         "years/2010/sites/farmville/index.html",
         "years/2010/sites/foursquare/index.html",
         "js/config/2010.js",
@@ -1824,12 +1824,9 @@ def test_2010_signature() -> None:
     if "Spotify" not in about and "Snapchat" not in about:
         fail("2010-signature", "bans")
         return
-    apps = read(ROOT / "years/2010/sites/appstore/index.html")
-    if "data-appstore-catalog" not in apps and "data-appstore-install" not in apps:
-        fail("2010-signature", "appstore hooks")
-        return
-    if "225" not in apps and "5 billion" not in apps.lower() and "5B" not in apps:
-        fail("2010-signature", "225k/5B honesty")
+    og = read(ROOT / "years/2010/sites/facebook/index.html")
+    if "Open Graph" not in og and "Like" not in og:
+        fail("2010-signature", "open graph room")
         return
     iphone = read(ROOT / "years/2010/sites/iphone/index.html")
     if "iPhone 4" not in iphone and "iPhone 4" not in read(ROOT / "years/2010/sites/iphone/about.html"):
@@ -1846,11 +1843,321 @@ def test_2010_signature() -> None:
     if "data-farm-plant" not in farm:
         fail("2010-signature", "farmville hooks")
         return
-    feed = read(ROOT / "years/2010/sites/facebook/feed.html")
-    if "data-fb-like" not in feed:
+    cnn = read(ROOT / "years/2010/sites/facebook/cnn.html")
+    if "data-og-like" not in og and "data-og-like" not in cnn and "data-fb-like" not in cnn:
         fail("2010-signature", "like hooks")
         return
     ok("2010-signature")
+
+
+def test_2013_signature() -> None:
+    if not (ROOT / "years/2013").exists():
+        ok("2013-signature-skip")
+        return
+    missing = []
+    for rel in (
+        "pages/home.html",
+        "pages/about.html",
+        "sites/vine/record.html",
+        "sites/instagram/video.html",
+        "sites/snapchat/story.html",
+        "sites/iphone/ios7.html",
+        "sites/snowden/index.html",
+    ):
+        if not (ROOT / "years/2013" / rel).is_file():
+            missing.append(rel)
+    if missing:
+        fail("2013-signature", "missing: " + ", ".join(missing))
+        return
+    shell = read(ROOT / "years/2013/index.html")
+    if 'data-itt-year="2013"' not in shell:
+        fail("2013-signature", "shell year")
+        return
+    if "itt13" not in read(ROOT / "js/config/immersion-2013.js"):
+        fail("2013-signature", "itt13")
+        return
+    about = read(ROOT / "years/2013/pages/about.html")
+    if "672,985,183" not in about:
+        fail("2013-signature", "scale")
+        return
+    if "Stories" not in about or "TikTok" not in about:
+        fail("2013-signature", "bans")
+        return
+    vine = read(ROOT / "years/2013/sites/vine/record.html")
+    if "data-vine-post" not in vine or "itt13-vine-posts" not in vine:
+        fail("2013-signature", "vine hooks")
+        return
+    ok("2013-signature")
+
+
+def test_2013_urlmap_complete() -> None:
+    if not (ROOT / "years/2013").exists():
+        ok("2013-urlmap-complete-skip")
+        return
+    root = ROOT / "years/2013"
+    cfg = read(ROOT / "js/config/2013.js")
+    missing = []
+    for pth in root.rglob("*.html"):
+        rel = str(pth.relative_to(root)).replace("\\", "/")
+        if f'"{rel}"' not in cfg:
+            missing.append(rel)
+    if missing:
+        fail("2013-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
+        return
+    ok("2013-urlmap-complete")
+
+
+def test_2014_signature() -> None:
+    if not (ROOT / "years/2014").exists():
+        ok("2014-signature-skip")
+        return
+    missing = []
+    for rel in (
+        "pages/home.html",
+        "pages/about.html",
+        "sites/whatsapp/index.html",
+        "sites/heartbleed/index.html",
+        "sites/icebucket/index.html",
+        "sites/iphone/index.html",
+        "sites/playable/game.html",
+    ):
+        if not (ROOT / "years/2014" / rel).is_file():
+            missing.append(rel)
+    if missing:
+        fail("2014-signature", "missing: " + ", ".join(missing))
+        return
+    shell = read(ROOT / "years/2014/index.html")
+    if 'data-itt-year="2014"' not in shell:
+        fail("2014-signature", "shell year")
+        return
+    if "itt14" not in read(ROOT / "js/config/2014.js"):
+        fail("2014-signature", "itt14")
+        return
+    about = read(ROOT / "years/2014/pages/about.html")
+    if "968,882,453" not in about:
+        fail("2014-signature", "scale")
+        return
+    if "Stories" not in about or "Watch" not in about:
+        fail("2014-signature", "bans")
+        return
+    wa = read(ROOT / "years/2014/sites/whatsapp/index.html")
+    if "data-wa-install" not in wa:
+        fail("2014-signature", "wa hooks")
+        return
+    hb = read(ROOT / "years/2014/sites/heartbleed/index.html")
+    if "exploit" not in hb.lower() or "data-hb-ack" not in hb:
+        fail("2014-signature", "heartbleed literacy")
+        return
+    ok("2014-signature")
+
+
+def test_2014_urlmap_complete() -> None:
+    if not (ROOT / "years/2014").exists():
+        ok("2014-urlmap-complete-skip")
+        return
+    root = ROOT / "years/2014"
+    cfg = read(ROOT / "js/config/2014.js")
+    missing = []
+    for pth in root.rglob("*.html"):
+        rel = str(pth.relative_to(root)).replace("\\", "/")
+        if f'"{rel}"' not in cfg:
+            missing.append(rel)
+    if missing:
+        fail("2014-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
+        return
+    ok("2014-urlmap-complete")
+
+
+def test_2015_signature() -> None:
+    if not (ROOT / "years/2015").exists():
+        ok("2015-signature-skip")
+        return
+    missing = []
+    for rel in (
+        "pages/home.html",
+        "pages/about.html",
+        "sites/apple/watch.html",
+        "sites/windows10/index.html",
+        "sites/periscope/index.html",
+        "sites/applemusic/index.html",
+        "sites/playable/game.html",
+    ):
+        if not (ROOT / "years/2015" / rel).is_file():
+            missing.append(rel)
+    if missing:
+        fail("2015-signature", "missing: " + ", ".join(missing))
+        return
+    shell = read(ROOT / "years/2015/index.html")
+    if 'data-itt-year="2015"' not in shell:
+        fail("2015-signature", "shell year")
+        return
+    if "itt15" not in read(ROOT / "js/config/2015.js"):
+        fail("2015-signature", "itt15")
+        return
+    about = read(ROOT / "years/2015/pages/about.html")
+    if "863,105,652" not in about:
+        fail("2015-signature", "scale")
+        return
+    if "Stories" not in about or "Watch" not in about:
+        fail("2015-signature", "bans")
+        return
+    watch = read(ROOT / "years/2015/sites/apple/watch.html")
+    if "data-watch15-save" not in watch or "data-watch-shipped" not in watch:
+        fail("2015-signature", "watch hooks")
+        return
+    ok("2015-signature")
+
+
+def test_2015_urlmap_complete() -> None:
+    if not (ROOT / "years/2015").exists():
+        ok("2015-urlmap-complete-skip")
+        return
+    root = ROOT / "years/2015"
+    cfg = read(ROOT / "js/config/2015.js")
+    missing = []
+    for pth in root.rglob("*.html"):
+        rel = str(pth.relative_to(root)).replace("\\", "/")
+        if f'"{rel}"' not in cfg:
+            missing.append(rel)
+    if missing:
+        fail("2015-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
+        return
+    ok("2015-urlmap-complete")
+
+
+def test_2016_signature() -> None:
+    if not (ROOT / "years/2016").exists():
+        ok("2016-signature-skip")
+        return
+    missing = []
+    for rel in (
+        "pages/home.html",
+        "pages/about.html",
+        "sites/instagram/stories.html",
+        "sites/pokemongo/index.html",
+        "sites/dyn/index.html",
+        "sites/facebook/reactions.html",
+        "sites/playable/game.html",
+    ):
+        if not (ROOT / "years/2016" / rel).is_file():
+            missing.append(rel)
+    if missing:
+        fail("2016-signature", "missing: " + ", ".join(missing))
+        return
+    shell = read(ROOT / "years/2016/index.html")
+    if 'data-itt-year="2016"' not in shell:
+        fail("2016-signature", "shell year")
+        return
+    if "itt16" not in read(ROOT / "js/config/2016.js"):
+        fail("2016-signature", "itt16")
+        return
+    about = read(ROOT / "years/2016/pages/about.html")
+    if "1,045,534,808" not in about:
+        fail("2016-signature", "scale")
+        return
+    if "Reels" not in about or "Stories" not in about:
+        fail("2016-signature", "bans")
+        return
+    stories = read(ROOT / "years/2016/sites/instagram/stories.html")
+    if "data-ig-story-add" not in stories or "data-ig-story-text" not in stories:
+        fail("2016-signature", "stories hooks")
+        return
+    ok("2016-signature")
+
+
+def test_2017_signature() -> None:
+    if not (ROOT / "years/2017").exists():
+        ok("2017-signature-skip")
+        return
+    missing = []
+    for rel in (
+        "pages/home.html",
+        "pages/about.html",
+        "sites/iphone/x.html",
+        "sites/fortnite/index.html",
+        "sites/twitter/280.html",
+        "sites/playable/game.html",
+    ):
+        if not (ROOT / "years/2017" / rel).is_file():
+            missing.append(rel)
+    if missing:
+        fail("2017-signature", "missing: " + ", ".join(missing))
+        return
+    shell = read(ROOT / "years/2017/index.html")
+    if 'data-itt-year="2017"' not in shell:
+        fail("2017-signature", "shell year")
+        return
+    if "itt17" not in read(ROOT / "js/config/2017.js"):
+        fail("2017-signature", "itt17")
+        return
+    about = read(ROOT / "years/2017/pages/about.html")
+    if "1,766,926,408" not in about:
+        fail("2017-signature", "scale")
+        return
+    if "Face ID" not in about or "TikTok" not in about:
+        fail("2017-signature", "bans")
+        return
+    face = read(ROOT / "years/2017/sites/iphone/x.html")
+    if "data-faceid-unlock" not in face or "data-faceid-req" not in face:
+        fail("2017-signature", "faceid hooks")
+        return
+    ok("2017-signature")
+
+
+def test_2018_signature() -> None:
+    if not (ROOT / "years/2018").exists():
+        ok("2018-signature-skip")
+        return
+    missing = []
+    for rel in (
+        "pages/home.html",
+        "pages/about.html",
+        "sites/gdpr/index.html",
+        "sites/tiktok/fyp.html",
+        "sites/trust/index.html",
+        "sites/playable/game.html",
+    ):
+        if not (ROOT / "years/2018" / rel).is_file():
+            missing.append(rel)
+    if missing:
+        fail("2018-signature", "missing: " + ", ".join(missing))
+        return
+    shell = read(ROOT / "years/2018/index.html")
+    if 'data-itt-year="2018"' not in shell:
+        fail("2018-signature", "shell year")
+        return
+    if "itt18" not in read(ROOT / "js/config/2018.js"):
+        fail("2018-signature", "itt18")
+        return
+    about = read(ROOT / "years/2018/pages/about.html")
+    if "1,630,322,579" not in about:
+        fail("2018-signature", "scale")
+        return
+    if "GDPR" not in about or "Reels" not in about:
+        fail("2018-signature", "bans")
+        return
+    banner = read(ROOT / "years/2018/sites/gdpr/index.html")
+    if "data-gdpr-accept-all" not in banner or "data-gdpr-save" not in banner:
+        fail("2018-signature", "gdpr hooks")
+        return
+    ok("2018-signature")
+
+
+def test_2016_urlmap_complete() -> None:
+    if not (ROOT / "years/2016").exists():
+        ok("2016-urlmap-complete-skip")
+        return
+    root = ROOT / "years/2016"
+    cfg = read(ROOT / "js/config/2016.js")
+    missing = []
+    for pth in root.rglob("*.html"):
+        rel = str(pth.relative_to(root)).replace("\\", "/")
+        if f'"{rel}"' not in cfg:
+            missing.append(rel)
+    if missing:
+        fail("2016-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
+        return
+    ok("2016-urlmap-complete")
 
 
 def test_2010_urlmap_complete() -> None:
@@ -2238,6 +2545,16 @@ def main() -> int:
         test_2010_signature,
         test_2010_urlmap_complete,
         test_2010_no_anachronism_products,
+        test_2013_signature,
+        test_2013_urlmap_complete,
+        test_2014_signature,
+        test_2014_urlmap_complete,
+        test_2015_signature,
+        test_2015_urlmap_complete,
+        test_2016_signature,
+        test_2016_urlmap_complete,
+        test_2017_signature,
+        test_2018_signature,
         test_immersion_registry_complete,
         test_year_stubs_use_shared_boot,
         test_p1_immersion_hooks,

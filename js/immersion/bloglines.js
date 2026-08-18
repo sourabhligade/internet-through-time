@@ -120,9 +120,10 @@
         save(feeds.slice(0, 40));
         var st = doc.querySelector("[data-bloglines-status]");
         if (st) {
+          var titleEsc = ITT.util && ITT.util.escapeHtml ? ITT.util.escapeHtml(title) : String(title || "").replace(/</g, "&lt;");
           st.innerHTML =
             "Subscribed: " +
-            title +
+            titleEsc +
             " (stored in this browser — no remote RSS fetch). " +
             '<a href="../technorati/index.html?url=' +
             encodeURIComponent(url) +

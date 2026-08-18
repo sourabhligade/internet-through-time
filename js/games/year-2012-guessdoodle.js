@@ -1,118 +1,142 @@
-/** Guess Doodle — 2012 solo practice */
+/**
+ * Guess Doodle — 2012 museum year game.
+ * Class: Draw Something (Feb 2012) / Zynga Mar. Museum original lines.
+ * Key: itt12-game-guessdoodle
+ * Incomplete (no Start / no correct guess) never writes.
+ */
 (function () {
   "use strict";
   var YG = (window.ITT && ITT.YearGame) || null;
   var host = document.querySelector('[data-year-game][data-game-id="guessdoodle"]');
   if (!host) return;
-  var canvas = host.querySelector("canvas");
-  var statusEl = host.querySelector("[data-itt-action-status]");
-  var promptEl = host.querySelector("[data-prompt]");
-  var choicesEl = host.querySelector("[data-choices]");
-  var scoreEl = host.querySelector("[data-game-score]");
-  var bestEl = host.querySelector("[data-game-best]");
-  var WORDS = ["cat", "house", "tree", "car", "sun", "fish", "phone", "pizza", "rocket", "star", "book", "dog"];
-  var ctx = canvas && canvas.getContext ? canvas.getContext("2d") : null;
-  var drawing = false, strokes = [], mode = "draw", prompt = "", score = 0, round = 0;
 
-  function clearCanvas() {
-    if (!ctx) return;
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  var startBtn = host.querySelector("[data-game-start]");
+  var scoreEl = host.querySelector("[data-game-score]");
+  var statusEl = host.querySelector("[data-itt-action-status]");
+  var canvas = host.querySelector("[data-doodle]");
+  var choicesEl = host.querySelector("[data-doodle-choices], [data-choices]");
+  var promptEl = host.querySelector("[data-prompt]");
+  var doneBtn = host.querySelector("[data-done]");
+  var running = false;
+  var score = 0;
+  var round = 0;
+  var answer = "";
+
+  /* Simple museum polylines — not OMGPop / Draw Something art. */
+  var DECK = [
+    { word: "CAT", path: "M20,80 L40,40 L60,80 M40,40 L40,20 M30,50 L50,50" },
+    { word: "SUN", path: "M70,50 m-18,0 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0 M70,20 L70,10 M70,80 L70,90 M40,50 L30,50 M100,50 L110,50" },
+    { word: "CUP", path: "M40,30 L40,80 L80,80 L80,30 M80,40 L100,45 L100,65 L80,70" },
+    { word: "BUS", path: "M20,50 L110,50 L110,80 L20,80 Z M30,80 L30,90 M100,80 L100,90 M30,50 L30,35 L70,35 L70,50" },
+    { word: "KEY", path: "M30,50 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 M42,50 L100,50 M90,50 L90,65 M80,50 L80,62" },
+    { word: "HAT", path: "M25,70 L115,70 M40,70 L50,30 L90,30 L100,70" }
+  ];
+  var FOILS = ["DOG", "MOON", "MUG", "CAR", "LOCK", "CAP", "TREE", "FISH", "BOOK", "STAR"];
+
+  function setStatus(m) {
+    if (YG && YG.setStatus) YG.setStatus(statusEl, m);
+    else if (statusEl) statusEl.textContent = m;
   }
-  function setStatus(m) { if (statusEl) statusEl.textContent = m; }
-  function pos(e) {
-    var r = canvas.getBoundingClientRect();
-    var x = e.clientX, y = e.clientY;
-    if (e.touches && e.touches[0]) { x = e.touches[0].clientX; y = e.touches[0].clientY; }
-    return { x: ((x - r.left) / r.width) * canvas.width, y: ((y - r.top) / r.height) * canvas.height };
+
+  function drawPath(d) {
+    if (!canvas) return;
+    canvas.innerHTML =
+      '<svg viewBox="0 0 140 100" width="280" height="200" aria-hidden="true">' +
+      '<rect width="140" height="100" fill="#fffef4" stroke="#333"/>' +
+      '<path d="' +
+      d +
+      '" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+      "</svg>";
   }
-  function startRound() {
-    prompt = WORDS[Math.floor(Math.random() * WORDS.length)];
-    mode = "draw";
-    strokes = [];
-    clearCanvas();
-    if (promptEl) promptEl.textContent = "Draw: " + prompt;
-    if (choicesEl) choicesEl.innerHTML = "";
-    setStatus("Draw the prompt · then Done");
-  }
-  function doneDraw() {
-    mode = "guess";
-    if (promptEl) promptEl.textContent = "What was it?";
-    var decoys = WORDS.filter(function (w) { return w !== prompt; });
-    while (decoys.length > 3) decoys.splice(Math.floor(Math.random() * decoys.length), 1);
-    var choices = [prompt].concat(decoys.slice(0, 3));
-    for (var i = choices.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var t = choices[i]; choices[i] = choices[j]; choices[j] = t;
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    var i;
+    var j;
+    var t;
+    for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      t = a[i];
+      a[i] = a[j];
+      a[j] = t;
     }
+    return a;
+  }
+
+  function deal() {
+    var card = DECK[round % DECK.length];
+    answer = card.word;
+    drawPath(card.path);
+    var opts = [card.word];
+    var i;
+    var foil;
+    var bag = shuffle(FOILS);
+    for (i = 0; i < bag.length && opts.length < 4; i++) {
+      foil = bag[i];
+      if (foil !== card.word && opts.indexOf(foil) === -1) opts.push(foil);
+    }
+    opts = shuffle(opts);
+    if (promptEl) promptEl.textContent = "Draw: a museum doodle (guess after Done).";
+    if (doneBtn) doneBtn.hidden = false;
     if (choicesEl) {
       choicesEl.innerHTML = "";
-      choices.forEach(function (w) {
+      choicesEl.hidden = true;
+      for (i = 0; i < opts.length; i++) {
         var b = document.createElement("button");
         b.type = "button";
-        b.textContent = w;
-        b.style.margin = "4px";
-        b.addEventListener("click", function () {
-          if (mode !== "guess") return;
-          if (w === prompt) {
-            score += 10;
-            setStatus("Correct! +" + 10);
-          } else {
-            setStatus("Nope — it was " + prompt);
-          }
-          if (scoreEl) scoreEl.textContent = String(score);
-          round++;
-          if (round >= 5) {
-            if (YG && score > 0) {
-              var blob = YG.saveBest("guessdoodle", score, { year: "2012" });
-              if (bestEl) bestEl.textContent = String(blob.best);
-            }
-            setStatus("Session over · score " + score + " · Start again");
-            mode = "idle";
-          } else startRound();
-        });
+        b.setAttribute("data-doodle-guess", opts[i]);
+        b.textContent = opts[i];
         choicesEl.appendChild(b);
-      });
+      }
+    }
+    setStatus("Guess the doodle.");
+  }
+
+  function start() {
+    running = true;
+    score = 0;
+    round = Math.floor(Math.random() * DECK.length);
+    if (scoreEl) scoreEl.textContent = "0";
+    deal();
+  }
+
+  function guess(word) {
+    if (!running) {
+      setStatus("Start first.");
+      return;
+    }
+    if (!word) return;
+    if (word === answer) {
+      score += 1;
+      if (scoreEl) scoreEl.textContent = String(score);
+      if (YG && YG.saveBest) YG.saveBest("guessdoodle", score, { year: "2012" });
+      setStatus("Yes · " + answer + " · score " + score);
+      round += 1;
+      deal();
+    } else {
+      setStatus("Not " + word + ".");
     }
   }
 
-  if (canvas && ctx) {
-    clearCanvas();
-    canvas.addEventListener("mousedown", function (e) {
-      if (mode !== "draw") return;
-      drawing = true;
-      strokes.push([pos(e)]);
-    });
-    canvas.addEventListener("mousemove", function (e) {
-      if (!drawing || mode !== "draw") return;
-      var p = pos(e);
-      var s = strokes[strokes.length - 1];
-      s.push(p);
-      ctx.strokeStyle = "#111";
-      ctx.lineWidth = 3;
-      ctx.lineCap = "round";
-      if (s.length >= 2) {
-        var a = s[s.length - 2], b = s[s.length - 1];
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
+  if (startBtn) startBtn.addEventListener("click", start);
+  if (doneBtn) {
+    doneBtn.addEventListener("click", function () {
+      if (!running) {
+        setStatus("Start first.");
+        return;
       }
+      if (choicesEl) choicesEl.hidden = false;
+      if (doneBtn) doneBtn.hidden = true;
+      setStatus("Guess the doodle.");
     });
-    canvas.addEventListener("mouseup", function () { drawing = false; });
-    canvas.addEventListener("mouseleave", function () { drawing = false; });
   }
-  var startBtn = host.querySelector("[data-game-start]");
-  var doneBtn = host.querySelector("[data-done]");
-  if (startBtn) startBtn.addEventListener("click", function () {
-    score = 0; round = 0;
-    if (scoreEl) scoreEl.textContent = "0";
-    if (bestEl) bestEl.textContent = String(YG ? YG.loadBest("guessdoodle", "2012") : 0);
-    startRound();
-  });
-  if (doneBtn) doneBtn.addEventListener("click", function () {
-    if (mode === "draw") doneDraw();
-  });
-  if (bestEl) bestEl.textContent = String(YG ? YG.loadBest("guessdoodle", "2012") : 0);
-  setStatus("Press Start · solo practice mode");
+  if (choicesEl) {
+    choicesEl.addEventListener("click", function (ev) {
+      var t = ev.target;
+      if (!t || !t.getAttribute) return;
+      var w = t.getAttribute("data-doodle-guess");
+      if (w) guess(w);
+    });
+  }
+  setStatus("Start to see a doodle. Incomplete never writes.");
 })();

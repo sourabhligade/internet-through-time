@@ -1,120 +1,122 @@
 # 2011 Research Dossier — The Internet Through Time
 
-**Status:** Research freeze **[x]** · **MVP ship [x]** (2026-08-02) · hub **1994–2020** · `years/2011/` · `itt11`  
-**★ From-scratch remake freeze (2026-08-15 · do not scaffold until asked):** [`2011-READ-FIRST.md`](2011-READ-FIRST.md) · [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · [`2011-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2011-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md)  
-**★ Minute-detail improve pack:** [`2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md`](2011-MINUTE-DETAIL-RESEARCH-AND-IMPROVE-2026-08-02.md)  
-**★ Master bible (goals · phases how/why/what · flows · sources):** [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
-**★ Deep research (long harvest · kits · UI · Wayback):** [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md)  
-**★ Goals · phases · flows A–T (shorter twin):** [`2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
-**Capture / artifacts:** [`references/2011/CAPTURE-LOG.md`](references/2011/CAPTURE-LOG.md) · [`ARTIFACTS-MAP.md`](references/2011/ARTIFACTS-MAP.md)  
-**Visit log:** [`references/2011/notes/VISIT-LOG-2026-08-02-deep-research.txt`](references/2011/notes/VISIT-LOG-2026-08-02-deep-research.txt)  
-**Parent:** 2010 **museum-ready** (iPad · iPhone 4 · Instagram iOS · Open Graph · Foursquare)  
-**Scale ledger:** [`references/SCALE-LEDGER.md`](references/SCALE-LEDGER.md) (2011 rows locked)
+**Status:** Research mapped **[x]** · lean year **on disk** · prefix **`itt11`**  
+**★ READ FIRST:** [`2011-READ-FIRST.md`](2011-READ-FIRST.md)  
+**★ Master bible:** [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)  
+**Deep harvest:** [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md)  
+**Long dump (every visited URL):** [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md)  
+**Parent:** 2010 live (`years/2010/` · `itt10`) — Instagram iOS · iPad 1 no camera · iPhone 4 / FaceTime / Antenna-gate · Open Graph Like · FarmVille peak  
+**Legal:** Educational reconstruction. localStorage only. Never invent brand pixels.
 
 ## One-line thesis
 
-**2011 is when streaming + cloud + algorithmic social + voice AI arrive as mass culture:** **Spotify US** finally launches (Jul 14); **Netflix** becomes peak NA streaming traffic then **Qwikster**-near-death; **Google+** challenges Facebook (Jun 28) and Facebook answers with **Timeline** + the start of the **algorithmic News Feed**; **iPhone 4S + Siri + iOS 5 + iCloud** (Oct 4) and **Steve Jobs dies** (Oct 5); **iPad 2** thins the tablet; **IE 9** ships (Mar 14); **Snapchat** (Picaboo → Snapchat, Jul–Sep) seeds ephemeral social; **Android** (Ice Cream Sandwich · Galaxy Nexus) unifies phone/tablet UI — while **Instagram is still iOS-only**, **UberX doesn’t exist**, **Facebook doesn’t own Instagram**, and most people still live on a **PC (Win7 + IE8/9 + rising Chrome)**.
+**2011 is the year Google tries to rebuild Facebook as Circles, Spotify finally becomes legal in the United States, and the phone grows a voice:** **Google+** field trial (28 Jun) with Circles / Hangouts; **Spotify US** (14 Jul) invite Free / $4.99 / $9.99; **iPad 2** cameras (2 Mar / 11 Mar); **Facebook Timeline** (22 Sep); **iPhone 4S / Siri** (14 Oct) — while most people still live on a **Windows 7 / IE 9** laptop, and Google+ does **not** replace Facebook.
 
-## Scale (locked — dual-cite)
+## Scale (locked — dual-cite, never blend unlabeled)
 
 | Fact | Value | Source |
 |------|------:|--------|
-| Websites (June, Live Stats) | **346,004,403** (**+67%** vs 2010) | [Live Stats websites](https://www.internetlivestats.com/total-number-of-websites/) |
-| Internet users (Live Stats year) | **2,282,955,130** (~**2.28B**) | [Live Stats users](https://www.internetlivestats.com/internet-users/) |
-| Websites Dec 2011 (Pingdom/Netcraft) | **555 million** (+**300M** in year) | [Pingdom Internet 2011 in numbers](https://www.pingdom.com/blog/internet-2011-in-numbers/) |
-| Internet users (Pingdom / IWS class) | **2.1 billion** | Pingdom 2011 |
-| Facebook end-year | **800+ million** · +**200M** in 2011 · **350M** mobile login | Pingdom 2011 · FB press stats class |
-| Twitter | **225M** accounts · **100M** active · **250M** tweets/day (Oct) · **#egypt** #1 hashtag | Pingdom 2011 |
-| WhatsApp | **1 billion** messages **in one day** (Oct 2011) | Pingdom · WhatsApp blog class |
-| Tumblr blogs | **39 million** end-2011 | Pingdom |
-| WordPress blogs | **70 million** end-2011 | Pingdom |
-| Email accounts | **3.146 billion** · spam **~71%** of traffic (Nov) | Pingdom / Radicati |
-| Mobile broadband subs | **1.2 billion** active class | ITU via Pingdom |
-| Storage prefix (planned) | **`itt11`** | — |
-| Shell default (planned) | **Win7 + IE 9** (IE 8 residual honest) · Chrome product room · XP residual thin | Research |
+| Websites (June, Live Stats / NetCraft class) | **346,004,403** (**+67%** vs 2010 June) | [Live Stats websites](https://www.internetlivestats.com/total-number-of-websites/) |
+| Internet users (Live Stats June class) | **2,282,955,130** (~**2.28B**) | Same table |
+| Users per website (June) | **6.6** | Same |
+| Websites (Dec, Pingdom / Netcraft) | **555 million** · **+300 million** in year | [Pingdom Internet 2011 in numbers](https://www.pingdom.com/blog/internet-2011-in-numbers/) (17 Jan 2012) |
+| Internet users (Pingdom, IWS) | **2.1 billion** | Pingdom |
+| Email accounts | **3.146 billion** · Hotmail **360M** · spam **71%** (Nov) | Pingdom |
+| Facebook end-2011 | **800+ million** · **+200 million** · **350M** mobile | Pingdom |
+| Twitter | **225M** accounts · **100M** active · **250M tweets/day** (Oct) · **#egypt** #1 | Pingdom |
+| YouTube | **1 trillion** playbacks · **48 hours** uploaded / minute | Pingdom |
+| Tumblr / WordPress | **39M** / **70M** blogs | Pingdom |
+| WhatsApp | **1 billion** messages in one day (Oct) | Pingdom |
+| Instagram 2011 | **14 million** accounts created · still **iOS only** | Pingdom · 2010 bible |
+| Storage prefix | **`itt11`** | Project |
+| Shell default | **Windows 7 + IE 9** | IE9 ships 14 Mar; January was still IE8 |
 
-## Locked timeline (build-relevant)
+**Exhibit rule:** About/home prefer Live Stats June **346,004,403** *and* Pingdom Dec **555 million**, each labeled. Do not invent a blended “450 million.”
+
+## Locked timeline (build + copy)
 
 | Date | Event | Exhibit |
 |------|-------|---------|
-| **Jan 2011 class** | Arab Spring / Egypt internet culture · #egypt year | Twitter culture · careful exhibit |
-| **Mar 2 / 11 2011** | **iPad 2** announce / US ship · thinner · cameras · Smart Cover · $499+ | **P0 iPad 2** |
-| **Mar 14 2011** | **Internet Explorer 9** global release | **P0 shell / product** |
-| **May 2011 class** | Netflix ~**30%** peak NA downstream traffic | Netflix densify |
-| **Jun 28 2011** | **Google+** limited launch (Circles · Hangouts · +1) | **P0 Google+** |
-| **Jul 12 2011** | Netflix **price unbundle** (~60% for DVD+stream) | Netflix honesty |
-| **Jul 14 2011** | **Spotify US** launch (invite free · $4.99 · $9.99 Premium) | **P0 Spotify US** |
-| **Jul 2011** | Picaboo (proto-Snapchat) App Store | Snapchat seed |
-| **Aug 2011** | Facebook Messenger mobile ships (class) | FB densify |
-| **Aug 24 2011** | Steve Jobs resigns as Apple CEO | Culture |
-| **Sep 18 2011 class** | Netflix **Qwikster** split announced | Netflix drama |
-| **Sep 20 2011 class** | Google+ opens wider / invite walls fall | Google+ |
-| **Sep 22 2011** | Facebook **Timeline** at F8 · algorithmic feed era begins | **P0 Facebook Timeline** |
-| **Sep 2011** | App relaunched as **Snapchat** | **P1 Snapchat seed** |
-| **Oct 4 2011** | **iPhone 4S · iOS 5 · iCloud · Siri** | **P0 iPhone 4S** |
-| **Oct 5 2011** | **Steve Jobs dies** | Culture spine |
-| **Oct 10 2011 class** | Netflix kills Qwikster; price hike remains | Netflix |
-| **Oct 14 2011** | iPhone 4S ships (first markets) | iPhone |
-| **Oct 19 2011** | **Galaxy Nexus + Android 4.0 Ice Cream Sandwich** | Android densify |
-| **Late 2011** | Instagram ~**15M** users class (still **iOS-only**) · Apple best iPhone app 2011 | Instagram densify |
-| **2012+** | Instagram Android · FB buys Instagram · UberX · FB IPO · iPhone 5 | **Hard bans** |
+| **2 Mar 2011** | **iPad 2** announced · cameras · Smart Cover · still $499/$599/$699 | `sites/ipad/` |
+| **11 Mar 2011** | iPad 2 US sale | iPad |
+| **14 Mar 2011** | **IE 9** global availability | shell + `sites/ie9/` |
+| **6 Jun 2011** | iOS 5 + iCloud preview · Justin.tv → **Twitch** | chips |
+| **28 Jun 2011** | **Google+ field trial** · Circles · Sparks · Hangouts · Instant Upload · invite only | **★ star** |
+| **~12 Jul 2011** | G+ ~**10 million** signups in two weeks | G+ placard |
+| **14 Jul 2011** | **Spotify United States** · Free invite · Unlimited $4.99 · Premium $9.99 · no Facebook · 15M songs | `sites/spotify/` |
+| **24 Aug 2011** | Jobs resigns as CEO | honesty |
+| **18 Sep 2011** | Netflix **Qwikster** announced (DVD split, games by mail) | `sites/netflix/` |
+| **20 Sep 2011** | Google+ **public** · Messenger name | G+ |
+| **22 Sep 2011** | Facebook **f8 Timeline** · Spotify **drops US invite wall** | `sites/facebook/timeline` · Spotify honesty |
+| **Sep 2011** | **Snapchat** (from Picaboo) · snaps, not Stories | `sites/snapchat/` |
+| **4 Oct 2011** | **iPhone 4S** · Siri beta · iOS 5 · iCloud · $199/$299/$399 | `sites/iphone/` |
+| **5 Oct 2011** | Steve Jobs dies | honesty, not spectacle |
+| **10 Oct 2011** | Qwikster **reversed** (~3 weeks) | funeral |
+| **14 Oct 2011** | 4S ships · Siri EN-US/UK/AU + FR + DE | Siri |
+| **18 Oct 2011** | Android **4.0 Ice Cream Sandwich** | `sites/android/` |
+| **4 Nov 2011** | Groupon IPO | leftover |
+| **15 Nov 2011** | Kindle Fire $199 | chip |
+| **18 Nov 2011** | Minecraft 1.0 | game leftover, not star |
+| **2012+ bans** | IG Android · Vine · iPhone 5 · Win8 · Stories · Graph Search · UberX | never default |
 
 ## P0 products (museum spine)
 
-1. **Spotify US** — Jul 14 · free invite / Unlimited $4.99 / Premium $9.99 · desktop-first free tier honesty  
-2. **Facebook Timeline + algorithmic feed start** — Sep F8 · 800M users · Messenger · Skype video class  
-3. **Google+** — Circles · Hangouts · +1 · invite culture · hype then plateau honesty  
-4. **iPhone 4S + Siri + iOS 5 + iCloud** — Oct 4 · $199/$299/$399 · iMessage · Notification Center  
-5. **iPad 2** — Mar · thinner/lighter · dual cameras · FaceTime · Smart Cover  
-6. **Netflix streaming pivot + Qwikster** — peak traffic · price hike · 23-day brand fiasco  
-7. **IE 9** — Mar 14 · HTML5 pitch · shell upgrade from IE8  
+1. **Google+ field trial** — 28 Jun · Circles vs “friend” paper · Hangouts up to 10 · Instant Upload · 10M/25M/40M/90M **signups**  
+2. **Spotify US** — 14 Jul · three SKUs · 15M songs · no Facebook until 22 Sep  
+3. **iPad 2** — 2 Mar / 11 Mar · cameras · Smart Cover $39/$69 · still $499 class  
+4. **iPhone 4S + Siri + iCloud** — 4 Oct / 14 Oct · beta languages · $199/$299/$399  
+5. **Facebook Timeline** — 22 Sep · memoir + Cover · Open Graph verbs  
+6. **Desktop mass** — Win7 + IE9 · YouTube 48h/min · Twitter #egypt  
+7. **Seeds / funerals** — Snapchat snaps · Qwikster 18 Sep/10 Oct · Airbnb leftover · Instagram still iOS
 
 ## Continuity from 2010
 
-iPad residual (original) → **iPad 2** · iPhone 4 residual → **4S** · Instagram still **iOS-only** grows hard · Open Graph / Like mature · Foursquare residual · FarmVille decline class · Pinterest still not mass · Uber still black-car expansion · Spotify **EU residual + US new** · Win7 mass · Chrome rising · Dropbox cloud habit · WhatsApp scale explosion  
+Instagram exists and is still **iOS only** · iPad gen-1 had **no camera** → 2011 adds cameras · iPhone 4 / FaceTime Wi-Fi / Antenna-gate are leftover hardware · Open Graph Like *on the web* is 2010 → 2011 puts **verbs** (listen/read/watch) and **Timeline** on the profile · FarmVille peak was 2010 · Spotify **EU** was 2008 → 2011 is the **US** · UberCab was SF-only 2010 (UberX still banned)
 
 ## Hard bans (never 2011 default)
 
 | Ban | Correct era |
 |-----|-------------|
-| Instagram **Android** mass | **Apr 2012** |
-| Facebook **owns Instagram** | Sale **Apr 2012** |
-| Instagram Stories / Reels | Later |
-| Facebook **Reactions** | **2016** |
-| **UberX** / every-city mass | **2012+** |
-| Snapchat as mass teen default (year-start) | **Seed mid/late 2011** only |
-| Google+ as “Facebook killer” success | Hype then engagement fail honesty |
-| iPhone **5** / Lightning | **2012** |
-| Windows **8** mass shell | **2012** |
-| Facebook **IPO** | **May 2012** |
-| TikTok | Later |
-| Chrome as sole shell all year | IE still large · dual story |
+| Instagram **Android** / web composer | **Apr 2012** Android |
+| Instagram Stories / Reels / video | **2016+** |
+| **Vine** | **2013** |
+| **iPhone 5** | **2012** |
+| **Windows 8** | **2012** |
+| Facebook **Graph Search** | **2013** |
+| Snapchat **Stories** | **2013** |
+| **UberX** mass / national | **2012+** |
+| G+ “won” / replaced Facebook | Never. Signups ≠ daily use |
+| Spotify US as 2008/2009 default | EU **2008** · US **14 Jul 2011** |
+| Spotify + Facebook as **July** default | Facebook door is **22 Sep** |
+| Siri on **iPhone 4** | 4S only, **beta** |
+| iPad 2 as “no camera” | That was **2010** |
+| Chrome / IE8 as **year-shell** default | IE9 + Win7; January IE8 is an honesty chip |
 
-## Shell (planned)
+## Shell (planned / on disk)
 
-- **Default:** Windows **7** + **Internet Explorer 9** (IE 8 residual honest; XP thin residual)  
-- **Product rooms:** Chrome · Firefox · IE9 download · iPad 2 · iPhone 4S · Android ICS  
-- **Mobile:** App Store densify · Spotify mobile Premium story · Snapchat iOS seed  
-- **Connect:** Broadband default  
+- **Default:** **Windows 7 + Internet Explorer 9**
+- **Honesty:** January 2011 was still IE8 — chip, not default chrome
+- **Product rooms:** Chrome · IE9 product page · Android ICS · iPhone 4S · iPad 2 Safari
+- **Phone:** exhibit as *second screen*. Desktop is still the mass session.
 
-## Primary sources (bookmark — visited 2026-08-02)
+## Primary sources (bookmark)
 
 | Topic | Primary |
 |-------|---------|
-| Scale | [Pingdom 2011](https://www.pingdom.com/blog/internet-2011-in-numbers/) · [Live Stats websites](https://www.internetlivestats.com/total-number-of-websites/) |
-| Culture spine | [Cybercultural Internet 2011](https://cybercultural.com/p/internet-2011/) |
-| iPhone 4S / iOS 5 / iCloud / Siri | [Apple Newsroom 2011-10-04](https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/) |
-| iPad 2 | [Apple Newsroom 2011-03-02](https://www.apple.com/newsroom/2011/03/02Apple-Launches-iPad-2/) |
-| Steve Jobs | [Apple Board statement 2011-10-05](https://www.apple.com/newsroom/2011/10/05Statement-by-Apples-Board-of-Directors/) |
-| Spotify US | [NPR 2011-07-14](https://www.npr.org/sections/therecord/2011/07/14/137842612/spotify-has-arrived-stateside-heres-what-you-need-to-know) · TechCrunch · Wired |
-| Google+ | Wikipedia · Guardian 2011-06-29 · Cybercultural |
-| Facebook Timeline | [Version Museum Facebook](https://www.versionmuseum.com/history-of/facebook-website) · [WDM Facebook 2011](https://www.webdesignmuseum.org/gallery/facebook-2011) · F8 Sep 22 lore |
-| Netflix / Qwikster | CNET lost-year · Yale SOM case lore · Oct 10 reverse |
-| IE 9 | [Microsoft 2011-03-14](https://news.microsoft.com/source/2011/03/14/microsoft-announces-global-availability-of-internet-explorer-9-2/) |
-| Android ICS | Google Blog · Galaxy Nexus Oct 19 |
-| Snapchat | Wikipedia Snapchat (Picaboo Jul → Snapchat Sep) |
-| Full harvest | [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-02.md) |
+| Year essay | [Cybercultural Internet 2011](https://cybercultural.com/p/internet-2011/) |
+| Scale Dec | [Pingdom 2011 in numbers](https://www.pingdom.com/blog/internet-2011-in-numbers/) |
+| Scale June | [Live Stats websites](https://www.internetlivestats.com/total-number-of-websites/) |
+| G+ field trial | [Google Blog 2011-06-28](https://googleblog.blogspot.com/2011/06/introducing-google-project-real-life.html) |
+| G+ day-after | [Guardian 2011-06-29](https://www.theguardian.com/technology/2011/jun/29/google-plus-facebook-social-networking) |
+| G+ signup curve | [TechCrunch 2018 recap, 2011 slice](https://techcrunch.com/2018/10/08/looking-back-at-google/) |
+| Spotify US | [TechCrunch 2011-07-14](https://techcrunch.com/2011/07/14/spotify-reveals-the-detail-behind-its-us-launch/) |
+| Spotify invite drop | [TechCrunch 2011-09-22](https://techcrunch.com/2011/09/22/spotify-is-no-longer-invite-only-in-the-us-and-users-get-their-first-six-months-of-service-free/) |
+| iPad 2 | [Apple 2011-03-02](https://www.apple.com/newsroom/2011/03/02Apple-Launches-iPad-2/) |
+| iPhone 4S / Siri | [Apple 2011-10-04](https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/) |
+| Timeline | [Guardian f8 liveblog](https://www.theguardian.com/technology/appsblog/2011/sep/22/facebook-f8-mark-zuckerberg-social-live) |
+| Qwikster | [TechCrunch 2011-09-18](https://techcrunch.com/2011/09/18/netflix-qwikster/) |
+| Corpus | [`references/2011/`](references/2011/) |
 
 ## Foundation rule
 
-No invented brand pixels. Educational reconstruction only. localStorage theater only. Git only if asked. **Do not scaffold `years/2011/` until research freeze + phase plan are accepted.**
+No invented brand pixels. Educational reconstruction only. localStorage theater only. Git only if asked. **Do not restore a forest.** Densify in place from V1–V12.

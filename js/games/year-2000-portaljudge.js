@@ -123,7 +123,7 @@
       if (resultEl) {
         resultEl.style.display = "block";
         resultEl.innerHTML =
-          "<b>Today's #1:</b> " + winner.title + " (" + best + "/5 blasts)";
+          "<b>Today's #1:</b> " + String(winner.title || "").replace(/</g, "&lt;") + " (" + best + "/5 blasts)";
       }
       setStatus("Ballot saved · itt00-game-portaljudge");
     });
@@ -134,7 +134,7 @@
     var prev = YG.loadJSON(YG.storageKey("portaljudge", "2000"), null);
     if (prev && prev.winnerTitle && resultEl) {
       resultEl.style.display = "block";
-      resultEl.innerHTML = "<b>Last crown:</b> " + prev.winnerTitle;
+      resultEl.innerHTML = "<b>Last crown:</b> " + String(prev.winnerTitle || "").replace(/</g, "&lt;");
     }
   }
 

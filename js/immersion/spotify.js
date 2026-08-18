@@ -19,7 +19,7 @@
     );
   }
   function key(kind) {
-    if (U().immersionStorageKey) return U().immersionStorageKey(kind, "itt11");
+    if (U().immersionStorageKey) return U().immersionStorageKey(kind);
     return "itt" + year().slice(2) + "-" + kind;
   }
   function esc(s) {

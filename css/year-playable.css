@@ -362,3 +362,21 @@
 .yp-shell.yp-era-modern code { color: #9cf; }
 
 body.yp-page { margin: 0; }
+
+
+/* Year game cabinet (toys removed) */
+a.yp-btn {
+  display: inline-block;
+  text-decoration: none;
+  margin: 4px 6px 4px 0;
+}
+.yp-cabinet .yp-why,
+.yp-cabinet .yp-era {
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0 0 10px;
+}
+.yp-cabinet .yp-hud {
+  font-size: 12px;
+  font-weight: 600;
+}

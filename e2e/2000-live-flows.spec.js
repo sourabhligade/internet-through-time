@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, checkAllReq, twoStepClick } = require('./helpers');
+const { enterYear, checkAllReq, twoStepClick, killOverlays } = require('./helpers');
 const fs = require('fs');
 const path = require('path');
 
@@ -166,9 +166,11 @@ test.describe('2000 live flows — real links & buttons', () => {
 
   test('location Go resolves Amazon', async ({ page }) => {
     await enterYear(page, '2000');
+    await killOverlays(page);
     await page.fill('#location', 'http://www.amazon.com/');
-    await page.click('#btn-go');
-    await page.waitForTimeout(500);
-    expect(await page.locator('#content').getAttribute('src')).toMatch(/amazon/i);
+    await page.locator('#btn-go').click({ force: true });
+    await expect
+      .poll(async () => page.locator('#content').getAttribute('src'), { timeout: 12000 })
+      .toMatch(/amazon/i);
   });
 });

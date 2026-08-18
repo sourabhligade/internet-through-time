@@ -2,101 +2,36 @@
 <html lang="en" data-itt-year="2011">
 <head>
 <meta charset="utf-8">
-<title>Instagram</title>
+<title>Instagram — still iOS 2011</title>
 <link rel="stylesheet" href="../../../../css/period-2011.css">
-<link rel="stylesheet" href="../../../../css/period-2012.css">
-<link rel="stylesheet" href="../../../../css/phone-frame.css">
-<script src="../../../../js/immersion-2011.js" defer></script>
-</head>
-<body class="ig-app-body">
-<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-phone ig-phone">
-  <div class="ig-status-fake">AT&amp;T · 9:41 AM · 100%</div>
-  <header class="ig-app-bar">
-    <span class="ig-cam">⊕</span>
-    <span class="ig-wordmark">Instagram</span>
-    <span class="ig-dm">✉</span>
-  </header>
-  <div class="ig-subnav">
-    <span style="color:#517fa4">iOS only · 2011 · no Android · Facebook does not own Instagram yet</span> ·
-    <a href="index.html">Filters</a> ·
-    <a href="../../pages/about.html">About 2011</a>
-  </div>
-  <div class="ig-compose-card">
-    <div class="ig-stage" data-ig-stage>
-      <div class="ig-stage-photo" data-ig-photo></div>
-      <div class="ig-stage-label"><span data-ig-filter-label>Normal</span></div>
-    </div>
-    <div class="ig-filters-row">
-      <button type="button" class="ig-f is-on" data-ig-filter="Normal">Normal</button>
-      <button type="button" class="ig-f" data-ig-filter="X-Pro II">X-Pro II</button>
-      <button type="button" class="ig-f" data-ig-filter="Earlybird">Earlybird</button>
-      <button type="button" class="ig-f" data-ig-filter="Toaster">Toaster</button>
-      <button type="button" class="ig-f" data-ig-filter="Brannan">Brannan</button>
-    </div>
-    <label style="display:block;margin:6px 8px;font-size:11px"><input type="checkbox" data-req> iOS-only in 2011 · Android is <b>3 Apr 2012</b></label>
-    <label style="display:block;margin:6px 8px;font-size:11px"><input type="checkbox" data-req> Facebook does <b>not</b> own Instagram yet (9 Apr 2012)</label>
-    <input type="text" data-ig-caption class="ig-caption" placeholder="Write a caption…">
-    <button type="button" data-ig-share class="ig-share-btn" style="background:#517fa4">Share</button>
-    <div data-ig-status class="ig-status"></div>
-  </div>
-  <div class="ig-feed-label">Feed</div>
-  <div data-ig-feed class="ig-feed"></div>
-  <nav class="ig-tabbar">
-    <span class="is-on">⌂</span><span>🔍</span><span>＋</span><span>♡</span><span>○</span>
-  </nav>
-  <div class="itt-phone-home" aria-hidden="true"></div>
-</div>
-<script>
-(function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    var filter = "Normal";
-    var photo = document.querySelector("[data-ig-photo]");
-    var flabel = document.querySelector("[data-ig-filter-label]");
-    var fbtns = document.querySelectorAll("[data-ig-filter]");
-    var FILTERS = {
-      Normal: "none",
-      "X-Pro II": "contrast(1.25) saturate(1.35) hue-rotate(-10deg)",
-      Earlybird: "sepia(0.45) contrast(1.1) brightness(1.05)",
-      Toaster: "sepia(0.35) contrast(1.3) brightness(0.95) saturate(1.4)",
-      Brannan: "sepia(0.3) contrast(1.2) brightness(1.05) saturate(0.9)"
-    };
-    function applyFilter(name) {
-      filter = name;
-      if (flabel) flabel.textContent = name;
-      if (photo) photo.style.filter = FILTERS[name] || "none";
-      for (var i = 0; i < fbtns.length; i++) {
-        fbtns[i].classList.toggle("is-on", fbtns[i].getAttribute("data-ig-filter") === name);
-      }
-    }
-    for (var i = 0; i < fbtns.length; i++) {
-      fbtns[i].addEventListener("click", function (ev) {
-        applyFilter(ev.currentTarget.getAttribute("data-ig-filter") || "Normal");
-      });
-    }
-    applyFilter("Normal");
-  });
-})();
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2011" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="../duckduckgo/index.html">DuckDuckGo</a> ·
- <a href="../facebook/index.html">Facebook</a> ·
- <a href="../googleplus/index.html">Google+</a> ·
- <a href="../ie9/index.html">Internet Explorer 9</a> ·
- <a href="../ipad/index.html">iPad 2</a> ·
- <a href="../iphone/index.html">Apple iPhone 4S</a> ·
- <a href="../netflix/index.html">Netflix</a> ·
- <a href="../path/index.html">Path</a> ·
- <a href="../playable/index.html">Period playables</a> ·
- <a href="../snapchat/index.html">Snapchat</a> ·
- <a href="../spotify/index.html">Spotify</a> ·
- <a href="../turntable/index.html">turntable.fm</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
 
+</head>
+<body bgcolor="#111111" text="#111111" link="#1b4f72" vlink="#551a8b">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+
+<div class="ig-2010-shell">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html">Starting Point</a> · <a href="../../pages/about.html">About 2011</a> · <a href="../../pages/map.html">Map</a></p>
+<h1>INSTAGRAM</h1>
+<p>Still <b>iOS only</b>. Android is <b>3 Apr 2012</b>. Pingdom: <b>14 million</b> accounts created in 2011. Do not steal Google+’s star.</p>
+<p class="itt-pixel-failed" style="color:#888">[failed-final] instagr.am UI · RECON squares only</p>
+<p style="display:flex;gap:8px;flex-wrap:wrap">
+ <span style="width:64px;height:64px;background:#543;color:#fd8;display:inline-block;text-align:center;line-height:64px;font-size:10px">dinner</span>
+ <span style="width:64px;height:64px;background:#345;color:#9cf;display:inline-block;text-align:center;line-height:64px;font-size:10px">harbor</span>
+ <span style="width:64px;height:64px;background:#353;color:#ada;display:inline-block;text-align:center;line-height:64px;font-size:10px">latte</span>
+</p>
+<div><button type="button" class="ig-filter" data-ig-filter="Normal">Normal</button> <button type="button" class="ig-filter" data-ig-filter="X-Pro II">X-Pro II</button> <button type="button" class="ig-filter" data-ig-filter="Lo-Fi">Lo-Fi</button> <button type="button" class="ig-filter" data-ig-filter="Earlybird">Earlybird</button> <button type="button" class="ig-filter" data-ig-filter="Nashville">Nashville</button> <button type="button" class="ig-filter" data-ig-filter="Inkwell">Inkwell</button></div>
+<p><input type="text" data-ig-caption placeholder="Caption"></p>
+<p><button type="button" data-ig-share>Share</button> <span data-ig-status></span></p>
+<div data-ig-feed></div>
+</div>
+
+<script src="../../../../js/immersion-2011.js"></script>
+<div class="itt-5x-loop" data-5x-loop data-5x-year="2011" data-5x-suffix="ig" id="ott-5x-f-ig" style="margin:12px 0;padding:10px;border:2px solid #f9a825;background:#fff8e1;font-family:Arial,sans-serif;font-size:13px;max-width:46em;color:#111">
+<p style="margin:0 0 6px"><b>5× F4 Instagram iOS</b> · incomplete never writes · key <code>itt11-ig</code></p>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="a"> Still iOS only in 2011</label>
+<label style="display:block;margin:4px 0"><input type="checkbox" data-5x-req="b"> Google+ stays the star</label>
+<p style="margin:8px 0 0"><button type="button" data-5x-save>Save 5× REAL</button> <span data-5x-status></span></p>
+<p data-5x-next hidden data-next-flow data-itt11-next data-next-when-key="itt11-ig" style="margin:8px 0 0">Next: <a href="../facebook/timeline.html">Timeline</a></p>
+</div>
 </body>
 </html>

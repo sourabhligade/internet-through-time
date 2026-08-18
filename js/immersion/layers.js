@@ -24,19 +24,9 @@
     "2007": { machine: "Windows XP · Internet Explorer 6/7", star: "iPhone", starHref: "sites/iphone/index.html", game: "Box Shift" },
     "2008": { machine: "Windows XP · Internet Explorer 7", star: "App Store / Chrome", starHref: "sites/appstore/index.html", game: "Tap Grid" },
     "2009": { machine: "Windows XP residual · IE8 (Win7 ships)", star: "FarmVille residual", starHref: "sites/farmville/index.html", game: "Plot Neighbors" },
-    "2010": { machine: "Windows 7 · Internet Explorer 8", star: "Instagram 2010", starHref: "sites/instagram/index.html", game: "Rag Trail" },
-    "2011": { machine: "Windows 7 · IE9 / Chrome rising", star: "Airbnb", starHref: "sites/airbnb/index.html", game: "Letter Swap" },
-    "2012": { machine: "Windows 7 · IE9", star: "Instagram 2012", starHref: "sites/instagram/index.html", game: "Guess Doodle" },
-    "2013": { machine: "Windows 7 residual · Win8.1 is a product room", star: "Vine", starHref: "sites/vine/index.html", game: "Pipe Hop" },
-    "2014": { machine: "Windows 7 · Chrome / IE11", star: "WhatsApp", starHref: "sites/whatsapp/index.html", game: "Tile Fold" },
-    "2015": { machine: "Windows 7 residual · Win10 ships", star: "Apple Watch", starHref: "sites/apple/watch.html", game: "Blob Rush" },
-    "2016": { machine: "Windows 7 residual · Chrome", star: "Instagram Stories", starHref: "sites/instagram/stories.html", game: "Gym Rush" },
-    "2017": { machine: "Windows 10 · Chrome", star: "Face ID / iPhone X", starHref: "sites/iphone/x.html", game: "Storm Circle" },
-    "2018": { machine: "Windows 10 · Chrome (EdgeHTML residual)", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "Consent Dash" },
-    "2019": { machine: "Windows 10 · Chrome", star: "Disney+", starHref: "sites/disneyplus/index.html", game: "Continue Row" },
-    "2020": { machine: "Windows 10 · Chrome", star: "Zoom", starHref: "sites/zoom/index.html", game: "Sus Vote" },
-    "2021": { machine: "Windows 10 · Chrome", star: "ATT", starHref: "sites/att/index.html", game: "Wordle" },
-    "2022": { machine: "Windows 10/11 · Chrome", star: "ChatGPT", starHref: "sites/chatgpt/index.html", game: "BeReal" }
+    "2010": { machine: "Windows 7 · Internet Explorer 8", star: "Instagram iOS", starHref: "sites/instagram/index.html", game: "Sling Nest" },
+    "2011": { machine: "Windows 7 · Internet Explorer 9", star: "Google+", starHref: "sites/googleplus/index.html", game: "Letter Swap" },
+    "2012": { machine: "Windows 7 · Internet Explorer 9", star: "Instagram Android", starHref: "sites/instagram/android.html", game: "Guess Doodle" }
   };
 
   function yearOf() {
@@ -64,8 +54,7 @@
     if (n <= 1997) return "b";
     if (n <= 2000) return "c";
     if (n <= 2008) return "d";
-    if (n <= 2014) return "e";
-    return "f";
+    return "e";
   }
 
   function cssHref() {

@@ -1,95 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2013">
-<head>
-<meta charset="utf-8">
-<title>Vine</title>
-<link rel="stylesheet" href="../../../../css/period-2013.css">
-<link rel="stylesheet" href="../../../../css/phone-frame.css">
-<script src="../../../../js/immersion-2013.js" defer></script>
-</head>
-<body class="vine-app">
+<head><meta charset="utf-8"><title>Vine — 6-second loops · 2013</title>
+<link rel="stylesheet" href="../../../../css/period-2013.css"></head>
+<body bgcolor="#111" text="#eee">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-phone itt-phone-4">
-<div class="itt-phone-status"><span>LTE</span><span>9:41 AM</span><span>100%</span></div>
-<div class="itt-phone-screen">
-<div class="vine-topbar">
-  <span>Vine</span>
-  <span class="vine-topbar-actions">
-    <a href="record.html">Record</a>
-  </span>
+<div class="vine-2013-shell" style="color:#eee">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html" style="color:#9fd">Starting Point</a> · <a href="record.html" style="color:#9fd">Record</a> · <a href="android.html" style="color:#9fd">Android 2 Jun</a></p>
+<h1>Vine</h1>
+<p>Feed of <b>6-second</b> loops. Square. Hold to record. Revine culture — you pass someone else’s loop. Embeds leak onto Twitter and blogs (the web card is leftover on Twitter). This is the 2013 star. Instagram Video (20 Jun) is the 15-second answer, not a replacement.</p>
+<p>iOS <b>24 Jan</b> · Android <b>2 Jun</b> · Windows Phone <b>12 Nov</b>. Twitter owned it before launch (~$30M, Oct 2012). Separate service — no Twitter account required. NYT class: ~<b>13 million</b> regular users six months in. Not TikTok infinite scroll. Not Reels.</p>
+<p class="itt-pixel-failed">[failed-final] Vine ghost / wordmark · never invent</p>
+<p><a href="record.html"><b>Record a 6-second Vine</b></a> · <a href="android.html" style="color:#9fd">Android ships 2 Jun</a></p>
+<div data-vine-feed style="margin:12px 0;padding:8px;border:1px solid #333">Open Record to post. Loops stay in this year only.</div>
+<p hidden data-next-flow><b>Next:</b> <a href="record.html" style="color:#9fd">Hold six seconds</a></p>
+<p><a href="../twitter/index.html" style="color:#9fd">Twitter leftover (still 140)</a></p>
 </div>
-<nav class="vine-tabs" aria-label="Vine">
-  <a href="index.html" class="is-on">Home</a>
-  <a href="index.html#explore">Explore</a>
-  <a href="record.html">Camera</a>
-  <a href="android.html">Activity</a>
-  <a href="about.html">Profile</a>
-</nav>
-<div class="vine-feed" style="padding:0 0 24px">
-  <p class="vine-tagline">Make a scene · 6 seconds · loops forever</p>
-  <div data-vine-list></div>
-  <p class="itt13-next" data-next-flow data-next-when-key="itt13-vine-posts" hidden><b>Next:</b> <a href="../snapchat/story.html">My Story · 24h</a></p>
-  <p class="vine-empty-cta"><a href="record.html" class="vine-cta">Record a Vine</a></p>
-  <p class="vine-empty-cta" style="font-size:11px"><a href="../playable/loop.html" style="color:#fffc00">Play Loop Six</a> · 6s hold arcade (museum original)</p>
-</div>
-</div>
-<div class="itt-phone-home" aria-hidden="true"></div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var KEY = "itt13-vine-posts";
-  var el = document.querySelector("[data-vine-list]");
-  function load() {
-    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; } catch (e) { return []; }
-  }
-  function render() {
-    if (!el) return;
-    var list = load();
-    if (!list.length) {
-      el.innerHTML =
-        "<div class='vine-card'>" +
-        "<div class='vine-card-loop vine-loop-anim'>No vines yet</div>" +
-        "<div class='vine-card-meta'>Hold on Camera to capture 6 seconds</div></div>";
-      return;
-    }
-    el.innerHTML = list.slice(0, 20).map(function (v, i) {
-      var cap = String(v.caption || "untitled").replace(/</g, "&lt;");
-      var s = v.secs || 6;
-      return (
-        "<article class='vine-card' data-vine-item>" +
-        "<div class='vine-card-loop vine-loop-anim' style='animation-delay:" + (i * 0.15) + "s'>" +
-        "<span class='vine-play'>▶</span> " + s + "s loop</div>" +
-        "<div class='vine-card-meta'><b>you</b> · " + cap + "</div>" +
-        "<div class='vine-card-actions'>Revine · Comment · Share</div>" +
-        "</article>"
-      );
-    }).join("");
-  }
-  render();
-});
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2013" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="about.html">Vine · about</a> ·
- <a href="android.html">Vine · android</a> ·
- <a href="record.html">Vine · record</a> ·
- <a href="../whatsapp/index.html">WhatsApp</a> ·
- <a href="../windows81/index.html">Windows 8.1</a> ·
- <a href="../xboxone/index.html">Xbox One</a> ·
- <a href="../bitcoin/index.html">Bitcoin</a> ·
- <a href="../chrome/index.html">Google Chrome</a> ·
- <a href="../facebook/home.html">Facebook Home</a> ·
- <a href="../glass/index.html">Google Glass Explorer</a> ·
- <a href="../googlekeep/index.html">Google Keep</a> ·
- <a href="../healthcare/index.html">HealthCare.gov</a> ·
- <a href="../instagram/video.html">Instagram Video</a> ·
- <a href="../ipad/air.html">iPad Air</a> ·
- <a href="../iphone/index.html">iPhone 5s</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
-</body>
-</html>
+<script src="../../../../js/immersion-2013.js"></script>
+</body></html>

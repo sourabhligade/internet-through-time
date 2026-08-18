@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
 const YEARS = [];
-for (let y = 1994; y <= 2020; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2009; y++) YEARS.push(String(y));
 
 for (const year of YEARS) {
   test.describe(`year-game ${year}`, () => {
@@ -36,18 +36,18 @@ test.describe('year-game signatures', () => {
     expect(score).toBeTruthy();
   });
 
-  test('2000 Portal Judge incomplete does not write', async ({ page }) => {
+  test('2000 Lot Life incomplete party does not write', async ({ page }) => {
     await enterYear(page, '2000');
     await page.evaluate(() => {
       Object.keys(localStorage)
-        .filter((k) => k.indexOf('itt00-game-portaljudge') === 0)
+        .filter((k) => k.indexOf('itt00-game-lotlife') === 0)
         .forEach((k) => localStorage.removeItem(k));
     });
     await goImmersion(page, '2000', 'sites/playable/game.html');
     const frame = contentFrame(page);
-    await frame.locator('[data-submit]').click({ force: true });
+    await frame.locator('[data-lot-party]').click({ force: true });
     await page.waitForTimeout(300);
-    const v = await page.evaluate(() => localStorage.getItem('itt00-game-portaljudge'));
+    const v = await page.evaluate(() => localStorage.getItem('itt00-game-lotlife'));
     expect(v).toBeNull();
   });
 

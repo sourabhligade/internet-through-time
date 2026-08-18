@@ -97,9 +97,6 @@
       if (y === "2007") status = "using Facebook Platform apps";
       else if (y === "2008") status = "using Facebook Connect";
       else if (y === "2009") status = "Liking everything · FarmVille later";
-      else if (y === "2010") status = "Open Graph · Like everywhere";
-      else if (y === "2011") status = "Timeline · real names era";
-      else if (y === "2012") status = "IPO year · 1B users";
       return {
         name: "You",
         school: "Regional network",
@@ -328,7 +325,7 @@
     }
 
 
-    /* Like button theater — year-aware (2009 launch; 2010+ residual rooms use ittYY-fb-likes) */
+    /* Like button theater — 2009 launch; year-prefixed ittYY-fb-likes */
     function likesKey() {
       var y = year();
       var fb = y && /^\d{4}$/.test(y) ? "itt" + String(y).slice(2) : "itt09";
@@ -442,97 +439,6 @@
           })
           .join("");
       }
-    }
-    /* 2011 Timeline + algorithmic feed theater */
-    function tlKey() {
-      if (ITT.util && ITT.util.immersionStorageKey) {
-        return ITT.util.immersionStorageKey("fb-timeline", "itt11");
-      }
-      return "itt" + year().slice(2) + "-fb-timeline";
-    }
-    function feedModeKey() {
-      if (ITT.util && ITT.util.immersionStorageKey) {
-        return ITT.util.immersionStorageKey("fb-feed-mode", "itt11");
-      }
-      return "itt" + year().slice(2) + "-fb-feed-mode";
-    }
-    var tlEnable = doc.querySelector("[data-fb-timeline-enable]");
-    var tlStatus = doc.querySelector("[data-fb-timeline-status]");
-    if (tlEnable) {
-      function tlChecked(sel) {
-        var el = doc.querySelector(sel);
-        return !!(el && el.checked);
-      }
-      try {
-        var rawTl = localStorage.getItem(tlKey());
-        if (rawTl && rawTl !== "1" && tlStatus) {
-          tlStatus.innerHTML = "Timeline <b>on</b> for this profile (museum · this browser).";
-        } else if (rawTl === "1" && tlStatus) {
-          tlStatus.innerHTML = "Old one-click flag — turn on again with both checks.";
-        }
-      } catch (eTl) { /* */ }
-      tlEnable.addEventListener("click", function (ev) {
-        ev.preventDefault();
-        if (!tlChecked("[data-fb-tl-f8]") || !tlChecked("[data-fb-tl-not-stories]")) {
-          if (tlStatus) {
-            tlStatus.innerHTML = "Confirm F8 Sep 22 2011 + not Instagram Stories.";
-          }
-          return;
-        }
-        try {
-          localStorage.setItem(
-            tlKey(),
-            JSON.stringify({
-              f8: "2011-09-22",
-              notStories: true,
-              multiStep: true,
-              real: true,
-              year: "2011",
-              ts: Date.now()
-            })
-          );
-        } catch (e2) { /* */ }
-        if (tlStatus) {
-          tlStatus.innerHTML =
-            "Timeline enabled · life story profile · Wall effectively retired (Sep 22, 2011 F8 class).";
-        }
-        if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
-          (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
-        }
-        if (ITT._immersionApi && ITT._immersionApi.showFlash) {
-          ITT._immersionApi.showFlash("Facebook Timeline on (this browser).");
-        }
-        try {
-          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
-        } catch (eN) {
-          /* */
-        }
-      });
-    }
-    var modeBtns = doc.querySelectorAll("[data-fb-feed-mode]");
-    var modeStatus = doc.querySelector("[data-fb-feed-mode-status]");
-    function showMode() {
-      var m = "top";
-      try {
-        m = localStorage.getItem(feedModeKey()) || "top";
-      } catch (eM) { /* */ }
-      if (modeStatus) {
-        modeStatus.innerHTML =
-          m === "recent"
-            ? "Feed mode: <b>Most Recent</b> (closer to chrono)."
-            : "Feed mode: <b>Top Stories</b> (algorithmic “personal newspaper” era begins).";
-      }
-    }
-    showMode();
-    for (var mi = 0; mi < modeBtns.length; mi++) {
-      modeBtns[mi].addEventListener("click", function (ev) {
-        ev.preventDefault();
-        var mode = ev.currentTarget.getAttribute("data-fb-feed-mode") || "top";
-        try {
-          localStorage.setItem(feedModeKey(), mode);
-        } catch (e3) { /* */ }
-        showMode();
-      });
     }
   }
   function register() {

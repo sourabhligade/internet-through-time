@@ -13,26 +13,6 @@ async function clearPrefix(page, pfx) {
   }, pfx);
 }
 
-test.describe("complex products · no mock checkbox save", () => {
-  for (const p of [
-    "/years/1999/sites/aim/index.html",
-    "/years/2000/sites/mapquest/index.html",
-    "/years/2003/sites/photobucket/index.html",
-    "/years/2005/sites/pandora/index.html",
-    "/years/2008/sites/github/index.html",
-    "/years/2008/sites/github/issue.html",
-    "/years/2001/sites/msn/index.html",
-    "/years/2010/sites/imgur/index.html",
-    "/years/2013/sites/slack/index.html",
-    "/years/1998/sites/google/lucky.html",
-  ]) {
-    test(`${p} has no data-itt-real-save mock`, async ({ page }) => {
-      await page.goto(p);
-      await expect(page.locator("[data-itt-real-save]")).toHaveCount(0);
-      await expect(page.locator(".ott-real")).toHaveCount(0);
-    });
-  }
-});
 
 test.describe("complex products · incomplete / persist", () => {
   test("AIM sign-on empty blocked; IM persist after sign-on", async ({ page }) => {

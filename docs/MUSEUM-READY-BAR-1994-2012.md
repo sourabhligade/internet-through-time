@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-02 · **Update:** 2026-08-05 — hub open **1994–2016**; **museum-ready claim extends through 2016** (A–F; CAPTURE failed-final OK).  
 **Purpose:** One bar so every hub year can claim **museum-ready** without inventing pixels.  
-**Assessment (current → next · year scorecard):** [`MUSEUM-READY-ASSESSMENT-1994-2016.md`](MUSEUM-READY-ASSESSMENT-1994-2016.md)
+**Assessment (current → next · year scorecard):** [`MUSEUM-READY-ASSESSMENT-1994-2016.md`](MUSEUM-READY-ASSESSMENT-1994-2016.md)  
+**Landing % / leftover options (disk 1994–2012):** [`MUSEUM-GRADE-LANDING-MAP-1994-2012.md`](MUSEUM-GRADE-LANDING-MAP-1994-2012.md) — prefer this over the 2016 assessment when they disagree.
 
 ## Required layers (all must pass)
 

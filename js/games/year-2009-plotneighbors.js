@@ -36,7 +36,12 @@
   function load() {
     var p = (YG && YG.loadJSON(key(), null)) || def();
     if (!p.plots || p.plots.length !== 9) p = def();
-    hydrate(p);
+    var changed = hydrate(p);
+    if (changed && YG && YG.saveJSON) {
+      p.ts = Date.now();
+      p.real = true;
+      YG.saveJSON(key(), p);
+    }
     return p;
   }
   function save(p) {
@@ -48,10 +53,18 @@
   function hydrate(p) {
     var now = Date.now();
     var wilt = FAST ? 8000 : 18000;
+    var changed = false;
     p.plots.forEach(function (pl) {
-      if (pl.state === "growing" && now >= pl.readyAt) pl.state = "ready";
-      if (pl.state === "ready" && now >= pl.readyAt + wilt) pl.state = "wilted";
+      if (pl.state === "growing" && now >= pl.readyAt) {
+        pl.state = "ready";
+        changed = true;
+      }
+      if (pl.state === "ready" && now >= pl.readyAt + wilt) {
+        pl.state = "wilted";
+        changed = true;
+      }
     });
+    return changed;
   }
 
   var stateEl = host.querySelector("[data-itt-action-status]");

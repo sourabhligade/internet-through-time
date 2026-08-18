@@ -15,9 +15,9 @@
 
   function R(path) {
     path = String(path || "");
-    if (ITT.util && typeof ITT.util.resolveYearPath === "function") {
+    if (ITT.util && typeof ITT.util.joinRoot === "function" && ITT._immersionYear) {
       try {
-        return ITT.util.resolveYearPath(path);
+        return ITT.util.joinRoot(ITT._immersionYear, path);
       } catch (e) { /* fall through */ }
     }
     /* pages/map.html → relative links */
@@ -92,9 +92,25 @@
     html.push("</ul></section>");
 
     var trails =
-      ITT.flowTrails && typeof ITT.flowTrails.boot !== "function" && ITT.flowTrails[y]
-        ? ITT.flowTrails[y]
-        : [];
+      typeof ITT.lockedFlowTrails === "function"
+        ? ITT.lockedFlowTrails(y)
+        : (function () {
+            var raw =
+              ITT.flowTrails && typeof ITT.flowTrails.boot !== "function" && ITT.flowTrails[y]
+                ? ITT.flowTrails[y]
+                : [];
+            var out = [];
+            var i;
+            var n;
+            for (i = 0; i < raw.length; i++) {
+              n = Number(raw[i].n);
+              if (n >= 1 && n <= 10) out.push(raw[i]);
+            }
+            out.sort(function (a, b) {
+              return Number(a.n) - Number(b.n);
+            });
+            return out.slice(0, 10);
+          })();
     if (trails.length) {
       html.push('<section class="itt-fmap-tree" data-itt-ten-flows="1">');
       html.push("<h2>Ten link-flows</h2>");

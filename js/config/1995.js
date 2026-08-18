@@ -46,6 +46,9 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/cnet/index.html": "http://museum.local/years/1995/sites/cnet/index.html",
+      "sites/espn/index.html": "http://museum.local/years/1995/sites/espn/index.html",
+      "sites/salon/index.html": "http://museum.local/years/1995/sites/salon/index.html",
       "sites/playable/famous.html": "http://museum.local/years/1995/sites/playable/famous.html",
 
       "sites/beanies/about.html": "http://museum.local/years/1995/sites/beanies/about.html",

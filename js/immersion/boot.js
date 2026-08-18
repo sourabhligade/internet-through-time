@@ -139,7 +139,7 @@
       ["pandora", "immersion/pandora.js"],
       ["github", "immersion/github.js"],
       ["msn", "immersion/msn.js"],
-      ["slack", "immersion/slack.js"],
+
       ["imgur", "immersion/imgur.js"],
       ["cnn", "immersion/facebook.js"],
       ["wave", "immersion/wave.js"],
@@ -176,10 +176,13 @@
     add("immersion/real-gate.js");
     add("immersion/residual-real.js");
     add("immersion/real-flow.js");
+    add("immersion/flow-trails.js");
     add("immersion/year-extras-kit.js");
     add("immersion/year-5x-pack.js");
     add("immersion/year-true-packs.js");
+    add("immersion/year-popular-3x.js");
     add("immersion/one-thing-machines.js");
+    add("immersion/official-dest-gold.js");
     add("immersion/source-flows.js");
     var yi;
     for (yi = 0; yi < all.length; yi++) {
@@ -360,8 +363,21 @@
         phase1 = withoutKit(phase1);
         split.rest = withoutKit(split.rest);
 
+        var PLAY_DATA = "config/year-playable.js";
+        var needPlayData = false;
+        var pi;
+        for (pi = 0; pi < phase1.length; pi++) {
+          if (phase1[pi] === "immersion/year-playable.js") needPlayData = true;
+        }
+
         function afterKit() {
-          return loadAll(base, phase1).then(function () {
+          var ready = Promise.resolve();
+          if (needPlayData && !ITT.yearPlayableGames) {
+            ready = loadScript(base + PLAY_DATA);
+          }
+          return ready.then(function () {
+            return loadAll(base, phase1);
+          }).then(function () {
             return loadScript(base + "immersion/create.js");
           }).then(function () {
             bootCreate();

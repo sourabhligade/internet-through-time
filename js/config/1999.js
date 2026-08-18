@@ -45,6 +45,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/egroups/index.html": "http://museum.local/years/1999/sites/egroups/index.html",
+      "sites/livejournal/index.html": "http://museum.local/years/1999/sites/livejournal/index.html",
+      "sites/neopets/index.html": "http://museum.local/years/1999/sites/neopets/index.html",
       "sites/playable/famous.html": "http://museum.local/years/1999/sites/playable/famous.html",
 
       "sites/blogger/publish.html": "http://museum.local/years/1999/sites/blogger/publish.html",

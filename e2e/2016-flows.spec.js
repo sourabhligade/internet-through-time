@@ -1,169 +1,139 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
-const { enterYear, checkAllReq } = require('./helpers');
+const { test, expect } = require("@playwright/test");
 
-async function clearKeys(page, keys) {
-  await page.evaluate((ks) => {
-    try {
-      ks.forEach((k) => localStorage.removeItem(k));
-    } catch (e) {
-      /* */
-    }
-  }, keys);
+async function getKey(page, key) {
+  return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-async function expectStorageTruthy(page, key) {
-  const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-  expect(raw, `missing ${key}`).toBeTruthy();
-  return raw || '';
-}
-
-test.describe('2016 flows A–T', () => {
-  test('A enter year — shell boot', async ({ page }) => {
-    await enterYear(page, '2016');
-    await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2016');
-    await expect(page.locator('#content')).toBeVisible();
+test.describe("2016 flows", () => {
+  test("Stories empty never writes; titled add writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/instagram/stories.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
+    await page.reload();
+    await page.locator("[data-ig-story-add]").click();
+    expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
+    await page.fill("[data-ig-story-text]", "museum rooftop 24h");
+    await page.locator("[data-ig-story-add]").click();
+    await expect.poll(async () => getKey(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('B thesis about REAL', async ({ page }) => {
-    await page.goto('/years/2016/pages/about.html');
-    await clearKeys(page, ['itt16-thesis-ack']);
+  test("GO incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/pokemongo/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-pogo"));
     await page.reload();
-    await expect(page.locator('body')).toContainText('1,045,534,808');
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
-    await expectStorageTruthy(page, 'itt16-thesis-ack');
+    await page.locator("[data-pogo-catch]").click();
+    expect(await getKey(page, "itt16-pogo")).toBeFalsy();
+    await page.locator('[data-pogo-team="valor"]').click();
+    await page.locator("[data-pogo-gps]").check();
+    await page.locator("[data-pogo-catch]").click();
+    await expect.poll(async () => getKey(page, "itt16-pogo"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('C Stories write', async ({ page }) => {
-    await page.goto('/years/2016/sites/instagram/stories.html');
-    await clearKeys(page, ['itt16-ig-stories']);
+  test("Reactions tray-only never writes; face writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/facebook/reactions.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-fb-react"));
     await page.reload();
-    await page.locator('[data-ig-story-text]').fill('flow story');
-    await checkAllReq(page);
-    await page.locator('[data-ig-story-add]').click();
-    await expectStorageTruthy(page, 'itt16-ig-stories');
+    expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
+    await page.locator('[data-fb-react="love"]').click();
+    await expect.poll(async () => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('G Reactions pick', async ({ page }) => {
-    await page.goto('/years/2016/sites/facebook/reactions.html');
-    await clearKeys(page, ['itt16-reactions']);
+  test("E2E one tick never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/whatsapp/e2e.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-wa-e2e"));
     await page.reload();
-    await page.waitForSelector('[data-fb-react-save]', { timeout: 10000 });
-    await page.waitForTimeout(400);
-    await page.locator('[data-fb-react="haha"]').click();
-    await page.locator('[data-fb-react-save]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt16-reactions')), {
-        timeout: 8000,
-      })
-      .toBeTruthy();
+    await page.locator("[data-wa-e2e-open]").click();
+    expect(await getKey(page, "itt16-wa-e2e")).toBeFalsy();
+    await page.locator("[data-wa-e2e-req]").nth(0).check();
+    await page.locator("[data-wa-e2e-req]").nth(1).check();
+    await page.locator("[data-wa-e2e-open]").click();
+    await expect.poll(async () => getKey(page, "itt16-wa-e2e"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('H–I jack + AirPods', async ({ page }) => {
-    await page.goto('/years/2016/sites/iphone/jack.html');
-    await clearKeys(page, ['itt16-iphone7-jack', 'itt16-airpods']);
+  test("iPhone 7 incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/iphone/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-iphone7"));
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="iphone7-jack"]').click();
-    await expectStorageTruthy(page, 'itt16-iphone7-jack');
-    await page.goto('/years/2016/sites/airpods/index.html');
-    await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-airpods-save]').click();
-    await expectStorageTruthy(page, 'itt16-airpods');
+    await page.locator("[data-iphone7-save]").click();
+    expect(await getKey(page, "itt16-iphone7")).toBeFalsy();
+    await page.locator("[data-iphone7-jack]").check();
+    await page.locator("[data-iphone7-dongle]").check();
+    await page.locator("[data-iphone7-save]").click();
+    await expect.poll(async () => getKey(page, "itt16-iphone7"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('J–K Vine + musical.ly', async ({ page }) => {
-    await page.goto('/years/2016/sites/vine/goodbye.html');
-    await clearKeys(page, ['itt16-vine-end', 'itt16-musically']);
+  test("Vine goodbye incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/vine/goodbye.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-vine-end"));
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="vine-end"]').click();
-    await expectStorageTruthy(page, 'itt16-vine-end');
-    await page.goto('/years/2016/sites/musically/create.html');
-    await page.reload();
-    await page.locator('[data-mly-song]').fill('Hotline Bling');
-    await checkAllReq(page);
-    await page.locator('[data-mly-post]').click();
-    await expectStorageTruthy(page, 'itt16-musically');
+    await page.locator("[data-vine-end-ack]").click();
+    expect(await getKey(page, "itt16-vine-end")).toBeFalsy();
+    await page.locator("[data-vine-end-req]").nth(0).check();
+    await page.locator("[data-vine-end-req]").nth(1).check();
+    await page.locator("[data-vine-end-ack]").click();
+    await expect.poll(async () => getKey(page, "itt16-vine-end"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('L WA E2E', async ({ page }) => {
-    await page.goto('/years/2016/sites/whatsapp/security.html');
-    await clearKeys(page, ['itt16-wa-e2e']);
+  test("Spectacles incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/snapchat/spectacles.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-spectacles"));
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="wa-e2e"]').click();
-    await expectStorageTruthy(page, 'itt16-wa-e2e');
+    await page.locator("[data-spec-pair]").click();
+    expect(await getKey(page, "itt16-spectacles")).toBeFalsy();
+    await page.locator("[data-spec-req]").check();
+    await page.locator("[data-spec-pair]").click();
+    await expect.poll(async () => getKey(page, "itt16-spectacles"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('P Win10 free end', async ({ page }) => {
-    await page.goto('/years/2016/sites/windows10/index.html');
-    await clearKeys(page, ['itt16-win10-end']);
+  test("musical.ly empty never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/musically/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-musically"));
     await page.reload();
-    await expect(page.locator('body')).toContainText(/Jul(y)?\s*29|ended|free upgrade/i);
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="win10-end"]').click();
-    await expectStorageTruthy(page, 'itt16-win10-end');
+    await page.locator("[data-ml-post]").click();
+    expect(await getKey(page, "itt16-musically")).toBeFalsy();
+    await page.fill("[data-ml-caption]", "not tiktok");
+    await page.locator("[data-ml-post]").click();
+    await expect.poll(async () => getKey(page, "itt16-musically"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('E–F Pokémon GO multipage storage', async ({ page }) => {
-    await clearKeys(page, [
-      'itt16-pogo',
-      'itt16-pogo-loc',
-      'itt16-pogo-team',
-      'itt16-pogo-catches',
-    ]);
-    await page.goto('/years/2016/sites/pokemongo/index.html');
+  test("Win10 end incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/windows10/end.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-win10-end"));
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-pogo-continue-loc]').click();
-    await page.waitForURL(/team\.html/);
-    await page.locator('[data-pogo-team="instinct"]').click();
-    await page.locator('[data-pogo-continue-team]').click();
-    await page.waitForURL(/catch\.html/);
-    await page.locator('[data-pogo-species]').fill('Pidgey');
-    await page.locator('[data-pogo-catch]').click();
-    await expectStorageTruthy(page, 'itt16-pogo-catches');
-    await page.goto('/years/2016/sites/pokemongo/battery.html');
-    await page.locator('[data-pogo-battery]').check();
-    await page.locator('[data-pogo-save]').click();
-    await expectStorageTruthy(page, 'itt16-pogo');
+    await page.locator("[data-win10-end-save]").click();
+    expect(await getKey(page, "itt16-win10-end")).toBeFalsy();
+    await page.locator("[data-win10-end-req]").nth(0).check();
+    await page.locator("[data-win10-end-req]").nth(1).check();
+    await page.locator("[data-win10-end-save]").click();
+    await expect.poll(async () => getKey(page, "itt16-win10-end"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('M–O STEM Jio Rift', async ({ page }) => {
-    await page.goto('/years/2016/sites/stem/index.html');
-    await clearKeys(page, ['itt16-stem', 'itt16-jio', 'itt16-rift']);
+  test("Dyn incomplete never writes", async ({ page }) => {
+    await page.goto("/years/2016/sites/dyn/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-dyn"));
     await page.reload();
-    await page.locator('[data-stem-ligo]').check();
-    await page.locator('[data-stem-go]').check();
-    await page.locator('[data-stem-save]').click();
-    await expectStorageTruthy(page, 'itt16-stem');
-
-    await page.goto('/years/2016/sites/jio/index.html');
-    await page.reload();
-    await page.locator('[data-jio-launch]').check();
-    await page.locator('[data-jio-data]').check();
-    await page.locator('[data-jio-lookback]').check();
-    await page.locator('[data-jio-save]').click();
-    await expectStorageTruthy(page, 'itt16-jio');
-
-    await page.goto('/years/2016/sites/oculus/rift.html');
-    await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="rift"]').click();
-    await expectStorageTruthy(page, 'itt16-rift');
+    await page.locator("[data-dyn-ack]").click();
+    expect(await getKey(page, "itt16-dyn")).toBeFalsy();
+    await page.locator("[data-dyn-req]").nth(0).check();
+    await page.locator("[data-dyn-req]").nth(1).check();
+    await page.locator("[data-dyn-ack]").click();
+    await expect.poll(async () => getKey(page, "itt16-dyn"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('R–S Spectacles residual', async ({ page }) => {
-    await page.goto('/years/2016/sites/snapchat/spectacles.html');
-    await clearKeys(page, ['itt16-spectacles']);
+  test("3x Reddit empty / field-only never writes · complete Next", async ({ page }) => {
+    await page.goto("/years/2016/sites/reddit/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-pop-reddit"));
     await page.reload();
-    await checkAllReq(page);
-    await page.locator('[data-itt-real-save][data-storage-key="spectacles"]').click();
-    await expectStorageTruthy(page, 'itt16-spectacles');
-    await page.goto('/years/2016/pages/whats-new.html');
-    await expect(page.locator('body')).toContainText(/ships 2017/i);
+    await page.locator("[data-pop-go]").click();
+    expect(await getKey(page, "itt16-pop-reddit")).toBeFalsy();
+    await page.fill("[data-pop-field]", "front page");
+    await page.locator("[data-pop-go]").click();
+    expect(await getKey(page, "itt16-pop-reddit")).toBeFalsy();
+    await page.locator("[data-pop-pick]").first().click();
+    await page.locator("[data-pop-req]").check();
+    await page.fill("[data-pop-field]", "front page");
+    await page.locator("[data-pop-go]").click();
+    await expect.poll(async () => getKey(page, "itt16-pop-reddit"), { timeout: 8000 }).toBeTruthy();
+    await expect(page.locator('[data-next-flow] a[href*="netflix"]')).toBeVisible();
   });
 });

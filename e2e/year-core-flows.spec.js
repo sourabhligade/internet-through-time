@@ -25,7 +25,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005',
-  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021',
+  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -46,18 +46,15 @@ const LOCATION_HINT = {
   /* Prefer keys that exist in each year's locationHints map */
   '2008': { type: 'iphone', re: /iphone/i },
   '2009': { type: 'bing', re: /bing/i },
-  '2010': { type: 'chrome', re: /chrome/i },
+  '2010': { type: 'instagram', re: /instagram/i },
   '2011': { type: 'spotify', re: /spotify/i },
   '2012': { type: 'instagram', re: /instagram/i },
   '2013': { type: 'vine', re: /vine/i },
   '2014': { type: 'whatsapp', re: /whatsapp/i },
-  '2015': { type: 'apple watch', re: /watch/i },
-  '2016': { type: 'stories', re: /stories|instagram/i },
-  '2017': { type: 'faceid', re: /iphone\/x|face.?id/i },
-  '2018': { type: 'gdpr', re: /gdpr|cookie|consent|25 may/i },
-  '2019': { type: 'disneyplus', re: /disney|who's watching|whos watching/i },
-  '2020': { type: 'zoom', re: /zoom|muted|meeting/i },
-  '2021': { type: 'att', re: /att|not to track|track/i },
+  '2015': { type: 'periscope', re: /periscope|live/i },
+  '2016': { type: 'stories', re: /stor(y|ies)|instagram/i },
+  '2017': { type: 'faceid', re: /face.?id|iphone.?x|animoji|no.?home/i },
+  '2018': { type: 'gdpr', re: /gdpr|cookie|consent|manage|banner/i },
 };
 
 for (const year of YEARS) {
@@ -121,7 +118,7 @@ for (const year of YEARS) {
 
     test(`Museum hub link leaves immersion (UX U2)`, async ({ page }) => {
       /* Spot-check a few years so suite stays fast; path is same pattern all years. */
-      test.skip(!['1995', '2005', '2010'].includes(year), 'spot-check only');
+      test.skip(!['1995', '2005', '2008'].includes(year), 'spot-check only');
       await enterYear(page, year);
       await killOverlays(page);
       const frame = contentFrame(page);

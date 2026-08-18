@@ -1,65 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2012">
-<head><meta charset="utf-8"><title>Windows 8 — 2012</title>
-<link rel="stylesheet" href="../../../../css/period-2012.css"><script src="../../../../js/immersion-2012.js" defer></script></head>
-<body class="win8-shell">
+<head><meta charset="utf-8"><title>Windows 8 — 26 Oct 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css"></head>
+<body bgcolor="#001940" text="#fff">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p style="font-size:12px"><a href="../../pages/home.html">Start (museum)</a> · <a href="about.html">About / IE 10</a> · <a href="../chrome/index.html">Chrome</a></p>
-<h1 style="font-size:22px;font-weight:normal">Start</h1>
-<p style="font-size:12px;opacity:0.9">Windows 8 retail GA <b>October 26, 2012</b> · Start screen · live tiles · not January mass default (Win7 residual honesty)</p>
-<div>
- <div class="tile mail" data-win8-tile="Mail">Mail</div>
- <div class="tile ie" data-win8-tile="Internet Explorer">Internet Explorer</div>
- <div class="tile store" data-win8-tile="Store">Store</div>
- <div class="tile photos" data-win8-tile="Photos">Photos</div>
- <div class="tile desktop" data-win8-tile="Desktop">Desktop<br><span style="font-size:11px;font-weight:normal">classic apps still live here</span></div>
-</div>
-<label style="display:block;margin:10px 0;font-size:12px"><input type="checkbox" data-win8-not-jan> Oct 26 2012 product — <b>not</b> January mass default (Win7 residual)</label>
-<p data-win8-status style="font-size:12px;margin-top:12px"></p>
-<p class="itt12-next" data-next-flow data-next-when-key="itt12-win8-tour" hidden><b>Next:</b> <a href="../chrome/index.html">Chrome vs IE · StatCounter</a></p>
-<p style="font-size:11px;opacity:0.7">Microsoft PR · tile theater · educational · not January mass OS</p>
-<script>
-document.addEventListener("DOMContentLoaded",function(){
-  var KEY="itt12-win8-tour";
-  var st=document.querySelector("[data-win8-status]");
-  var tiles=document.querySelectorAll("[data-win8-tile]");
-  function load(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")||[];}catch(e){return[];}}
-  function save(list){try{localStorage.setItem(KEY,JSON.stringify(list.slice(0,20)));}catch(e){}}
-  var hon=document.querySelector("[data-win8-not-jan]");
-  var opened=[];
-  for(var i=0;i<tiles.length;i++){
-    tiles[i].addEventListener("click",function(ev){
-      var name=ev.currentTarget.getAttribute("data-win8-tile")||"Tile";
-      if(opened.indexOf(name)<0) opened.push(name);
-      if(!hon||!hon.checked){if(st)st.textContent="Confirm not-January-mass first.";return;}
-      if(opened.length<2){if(st)st.textContent="Opened "+name+" · tap another tile." ;return;}
-      var list=load(); list.unshift({tile:name,tiles:opened.slice(0,8),real:true,multiStep:true,ts:Date.now()}); save(list);
-      if(st) st.textContent="Opened "+name+" (theater) · "+KEY;
-      try{if(window.ITT&&ITT.revealNextFlow)ITT.revealNextFlow(document);}catch(eN){}
-    });
-  }
-});
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="about.html">Windows 8 · about</a> ·
- <a href="../googledrive/index.html">Google Drive</a> ·
- <a href="../instagram/index.html">Instagram</a> ·
- <a href="../ipad/index.html">iPad mini</a> ·
- <a href="../iphone/index.html">iPhone 5</a> ·
- <a href="../lyft/index.html">Lyft</a> ·
- <a href="../netflix/index.html">Netflix</a> ·
- <a href="../pinterest/index.html">Pinterest</a> ·
- <a href="../playable/index.html">Period playables</a> ·
- <a href="../reddit/index.html">reddit</a> ·
- <a href="../snapchat/index.html">Snapchat</a> ·
- <a href="../soundcloud/index.html">SoundCloud</a> ·
- <a href="../spotify/index.html">Spotify</a>
+<div style="max-width:640px;margin:16px auto;font-family:Segoe UI,Arial,sans-serif;font-size:13px">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html" style="color:#9cf">Starting Point</a></p>
+<h1>Windows 8</h1>
+<p class="itt-pixel-failed">[failed-final] Start screen still · WA/CDX 503 twice · never invent Metro tiles as a logo</p>
+<p>Microsoft <b>25 Oct</b> · retail <b>Friday 26 Oct</b> 12:01 a.m. local · 140 markets · 37 languages. Start screen. Windows Store. <b>IE 10</b> desktop + touch. <b>SkyDrive</b>. <b>Windows RT</b> = ARM, Store + Office 2013 only. <b>1,000+</b> certified PCs and tablets including Surface.</p>
+<p>Upgrade XP/Vista/7 → 8 Pro <b>$39.99</b> through end of January. Eligible Win7 PCs 2 Jun 2012–31 Jan 2013 → <b>$14.99</b>.</p>
+<p><b>Honesty:</b> This year-shell is still <b>Windows 7</b>. “Where is Start?” is the late-year joke. Windows 8 is not January chrome.</p>
+<p>
+ <button type="button" class="win8-tile" style="background:#0072c6" data-win8-tile="mail">Mail</button>
+ <button type="button" class="win8-tile" style="background:#107c10" data-win8-tile="store">Store</button>
+ <button type="button" class="win8-tile" style="background:#d83b01" data-win8-tile="ie10">IE 10</button>
 </p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
-</body>
-</html>
+<p data-win8-status></p>
+<p hidden data-next-flow><b>Next:</b> <a href="../chrome/index.html" style="color:#9cf">Or switch to Chrome</a></p>
+</div>
+<script src="../../../../js/immersion-2012.js"></script>
+</body></html>

@@ -143,6 +143,9 @@
         s.log.unshift(hmsg);
         save(s);
         render(doc);
+        if (gained && ITT.revealNextFlow) {
+          try { ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+        }
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback(hmsg + " · this browser only", {
             doc: doc,

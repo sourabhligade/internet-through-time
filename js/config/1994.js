@@ -45,6 +45,9 @@
       connectBusyChance: 0.16
     },
     urlMap: {
+      "sites/imdb/index.html": "http://museum.local/years/1994/sites/imdb/index.html",
+      "sites/netmarket/index.html": "http://museum.local/years/1994/sites/netmarket/index.html",
+      "sites/pizzahut/index.html": "http://museum.local/years/1994/sites/pizzahut/index.html",
       "sites/playable/famous.html": "http://museum.local/years/1994/sites/playable/famous.html",
 
       "sites/goodtimes/about.html": "http://museum.local/years/1994/sites/goodtimes/about.html",

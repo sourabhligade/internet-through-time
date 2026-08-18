@@ -40,7 +40,7 @@ test.describe('2001 full year — MVP + densify', () => {
 
   test('iPod slogan + not store', async ({ page }) => {
     await page.goto('/years/2001/sites/apple/ipod.html');
-    await expect(page.getByText(/1,000 songs in your pocket/i)).toBeVisible();
+    await expect(page.getByText(/1,000 songs in your pocket/i).first()).toBeVisible();
     await expect(page.getByText(/not a music store|still in the future/i).first()).toBeVisible();
   });
 

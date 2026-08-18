@@ -1,124 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-itt-year="2012">
-<head>
-<meta charset="utf-8">
-<title>Instagram</title>
-<link rel="stylesheet" href="../../../../css/period-2012.css">
-<script src="../../../../js/immersion-2012.js" defer></script>
-</head>
-<body class="ig-app-body">
+<head><meta charset="utf-8"><title>Instagram — leftover iOS 2012</title>
+<link rel="stylesheet" href="../../../../css/period-2012.css"></head>
+<body bgcolor="#fafafa">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="ig-phone">
-  <div class="ig-status-fake">Carrier · 9:41 AM · 100%</div>
-  <header class="ig-app-bar">
-    <span class="ig-cam">⊕</span>
-    <span class="ig-wordmark">Instagram</span>
-    <span class="ig-dm">✉</span>
-  </header>
-  <div class="ig-subnav">
-    <a href="android.html">Android</a> ·
-    <a href="acquired.html">News</a> ·
-    <a href="index.html">Filters</a>
-    <span style="display:block;margin-top:4px;color:#8e8e8e">Square photos · filters · Android exists Apr 3 · FB does not own it yet on Apr 3 · no Stories · no Reels</span>
-  </div>
-  <div class="ig-compose-card">
-    <div class="ig-stage" data-ig-stage>
-      <div class="ig-stage-photo" data-ig-photo></div>
-      <div class="ig-stage-label"><span data-ig-filter-label>Normal</span></div>
-    </div>
-    <div class="ig-filters-row">
-      <button type="button" class="ig-f is-on" data-ig-filter="Normal">Normal</button>
-      <button type="button" class="ig-f" data-ig-filter="Earlybird">Earlybird</button>
-      <button type="button" class="ig-f" data-ig-filter="X-Pro II">X-Pro II</button>
-      <button type="button" class="ig-f" data-ig-filter="Valencia">Valencia</button>
-      <button type="button" class="ig-f" data-ig-filter="Toaster">Toaster</button>
-    </div>
-    <div class="ig-platform-row">
-      <button type="button" data-ig-platform="ios" class="ig-plat">iOS</button>
-      <button type="button" data-ig-platform="android" class="ig-plat">Android</button>
-      <span data-ig-platform-status class="ig-plat-st"></span>
-    </div>
-    <input type="text" data-ig-caption class="ig-caption" placeholder="Write a caption…">
-    <button type="button" data-ig-share class="ig-share-btn">Share</button>
-    <div data-ig-status class="ig-status"></div>
-    <p class="itt12-next" data-next-flow data-next-when-key="itt12-ig-posts" hidden style="font-size:12px;margin:8px 0"><b>Next:</b> <a href="acquired.html">Apr 9 · Facebook ~$1B</a></p>
-  </div>
-  <div class="ig-feed-label">Feed</div>
-  <div data-ig-feed class="ig-feed"></div>
-  <nav class="ig-tabbar">
-    <span class="is-on">⌂</span><span>🔍</span><span>＋</span><span>♡</span><span>○</span>
-  </nav>
+<div class="ig-2012-shell">
+<p class="crumb" style="font-size:12px"><a href="../../pages/home.html">Starting Point</a> · <a href="android.html">Android 3 Apr</a></p>
+<h1>INSTAGRAM</h1>
+<p>iOS leftover. The 2012 object is <a href="android.html"><b>Android 3 Apr</b></a> then the <a href="acquired.html">$1B sale</a>. Website is marketing — not a composer.</p>
+<p><a href="android.html">Open Android Market theater →</a></p>
 </div>
-<script>
-(function () {
-  function key(k) { return "itt12-" + k; }
-  document.addEventListener("DOMContentLoaded", function () {
-    var filter = "Normal";
-    var photo = document.querySelector("[data-ig-photo]");
-    var flabel = document.querySelector("[data-ig-filter-label]");
-    var fbtns = document.querySelectorAll("[data-ig-filter]");
-    var FILTERS = {
-      Normal: "none",
-      Earlybird: "sepia(0.45) contrast(1.1) brightness(1.05)",
-      "X-Pro II": "contrast(1.25) saturate(1.35) hue-rotate(-10deg)",
-      Valencia: "sepia(0.25) contrast(1.05) brightness(1.08) saturate(1.2)",
-      Toaster: "sepia(0.35) contrast(1.3) brightness(0.95) saturate(1.4)"
-    };
-    function applyFilter(name) {
-      filter = name;
-      if (flabel) flabel.textContent = name;
-      if (photo) photo.style.filter = FILTERS[name] || "none";
-      for (var i = 0; i < fbtns.length; i++) {
-        fbtns[i].classList.toggle("is-on", fbtns[i].getAttribute("data-ig-filter") === name);
-      }
-    }
-    for (var i = 0; i < fbtns.length; i++) {
-      fbtns[i].addEventListener("click", function (ev) {
-        applyFilter(ev.currentTarget.getAttribute("data-ig-filter") || "Normal");
-      });
-    }
-    applyFilter("Normal");
-
-    var st = document.querySelector("[data-ig-platform-status]");
-    var plats = document.querySelectorAll("[data-ig-platform]");
-    for (var p = 0; p < plats.length; p++) {
-      plats[p].addEventListener("click", function (ev) {
-        var plat = ev.currentTarget.getAttribute("data-ig-platform") || "ios";
-        try { localStorage.setItem(key("ig-platform"), plat); } catch (e) {}
-        if (st) st.textContent = plat === "android" ? "Android · Apr 3" : "iOS";
-        for (var j = 0; j < plats.length; j++) {
-          plats[j].classList.toggle("is-on", plats[j] === ev.currentTarget);
-        }
-      });
-    }
-    try {
-      var cur = localStorage.getItem(key("ig-platform"));
-      if (cur && st) st.textContent = cur === "android" ? "Android · Apr 3" : "iOS";
-    } catch (e2) {}
-  });
-})();
-</script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2012" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="acquired.html">Instagram · acquired</a> ·
- <a href="android.html">Instagram · android</a> ·
- <a href="../soundcloud/index.html">SoundCloud</a> ·
- <a href="../spotify/index.html">Spotify</a> ·
- <a href="../trello/index.html">Trello</a> ·
- <a href="../uber/index.html">Uber</a> ·
- <a href="../waze/index.html">Waze</a> ·
- <a href="../wikipedia/sopa-blackout.html">Wikipedia blackout</a> ·
- <a href="../windows8/index.html">Windows 8</a> ·
- <a href="../youtube/about.html">About YouTube</a> ·
- <a href="../chrome/index.html">Google Chrome</a> ·
- <a href="../facebook/index.html">Facebook</a> ·
- <a href="../googledrive/index.html">Google Drive</a> ·
- <a href="../ipad/index.html">iPad mini</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
-</body>
-</html>
+<script src="../../../../js/immersion-2012.js"></script>
+</body></html>

@@ -17,7 +17,7 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2012** | **697,089,489** | **+101%** | playable MVP (2026-08-02) |
 | **2013** | **672,985,183** | −3% | playable (hub 1994–2013) |
 | **2014** | **968,882,453** | **+44%** | **MVP live** (2026-08-06) · hub unlocked · `itt14` · 1B milestone Sep 2014 |
-| **2015** | **863,105,652** | **−11%** | **MVP live** (2026-08-13) · hub unlocked · `itt15` · 1B fluctuation honesty |
+| **2015** | **863,105,652** | **−11%** | **research freeze 2026-08-18** · **not on disk** · rebuild from [`2015-READ-FIRST.md`](../2015-READ-FIRST.md) · 1B dip honesty |
 | **2016** | **1,045,534,808** | **+21%** | playable L3 · 1B restabilized Mar 2016 · users **3,424,971,237** |
 | **2017** | **1,766,926,408** | **+69%** | gap year on some branches · hostname explosion honesty |
 | **2018** | **1,630,322,579** | **−8%** | **last Live Stats June table year on page (visited 2026-08-13)** · no 2019 row |

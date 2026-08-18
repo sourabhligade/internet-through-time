@@ -1,578 +1,723 @@
-# 2016 from scratch — goals · phases · minute steps
+# 2016 — From scratch: goals · phases · minute steps · ROI
 
-**Date:** 2026-08-10 · **re-pointed 2026-08-15**  
-**Purpose:** Single **implement-from-this** file to build museum year **2016 as its own year**.  
-**Research freeze (this pass):** [`2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md`](2016-FROM-SCRATCH-RESEARCH-AND-ARTIFACTS-2026-08-15.md)  
-**★ Quality + working kits:** [`2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md`](2016-FROM-SCRATCH-QUALITY-WORKING-KITS-2026-08-15.md)  
-**★ Execute goals (this remake):** [`2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md`](2016-FROM-SCRATCH-GOALS-ROI-PHASES-MINUTE-2026-08-15.md)  
-**★ Map (12 flows):** [`2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md`](2016-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-15.md)  
-**Entry:** [`2016-READ-FIRST.md`](2016-READ-FIRST.md)  
-**Legal:** Educational · localStorage only · never invent brand pixels · no real GPS / Pokémon art / payments / bots / exploits. **Git only if asked.**
+**Date:** 2026-08-18  
+**Status:** Lean door **on disk** (~25 HTML). Star = Instagram Stories. Verify: `npm run test:e2e:2016`.  
+**Prefix:** `itt16`  
+**Clone shape:** live `years/2015/` (~32 HTML · Periscope door).  
+**Do not** restore `git checkout HEAD -- years/2016` or `/tmp/itt-2016-forest-backup-*`.  
+**Git only if asked.**
 
-**Disk now:** Hub **1994–2016**. `years/2016/` **live · 103 HTML** (L3 densify). From-scratch remake = **in-place prune** to ~48–55 / hard 60. Parent pattern = live lean **2015** or current 2016.  
-**Do not** `cp years/2015` · do not restore `/tmp/itt-2016-forest-backup-*` · do not start S0 until the user says `implement 2016 from scratch`.
+Read first: [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · map [`2016-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2016-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) · ledger [`2016-RESEARCH.md`](2016-RESEARCH.md) · harvest [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md) · parent [`2015-READ-FIRST.md`](2015-READ-FIRST.md).
 
----
-
-## 0. How to use
-
-Every phase: **Goal · Why · Disk start · Files · Minute steps · Storage · Acceptance · Tests · Anti-patterns.**
-
-| # | Doc |
-|---|-----|
-| 0 | [`2016-READ-FIRST.md`](2016-READ-FIRST.md) |
-| **1** | **This file ★ execute** |
-| 2 | Research + artifacts |
-| 3 | [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`REAL-FLOW-SYSTEM.md`](REAL-FLOW-SYSTEM.md) |
-| 4 | [`GAMES-PER-YEAR/YEAR-2016.md`](GAMES-PER-YEAR/YEAR-2016.md) |
-| 5 | Live `years/2015/` as **pattern only** |
-
-### Hard rules
-
-1. **Lean new HTML** (~40–70). No 2015 clone forest.  
-2. Config + content only. No new browser engine.  
-3. Pages load **only** `js/immersion-2016.js` → `immersion/boot.js`.  
-4. Storage **`itt16-*`**. Incomplete **never writes**.  
-5. One-thing = **Instagram Stories Aug 2**. Not Musical.ly. Not PoGO (that is Gym Rush). Not Vine death.  
-6. Reverse 2015 bans carefully (Stories · Reactions · E2E · bots · CV1 ship · PoGO · Win10 offer over).  
-7. Keep banned: Meta · TikTok brand · Face ID · Reels · official Pokémon art · GDPR.  
-8. Home = one-thing → guided 6 → playables → residual chips **last**.  
-9. Continuity = **chips**.  
-10. Never invent pixels. WA / WDM / Version Museum / Newsroom / failed-final.  
-11. Do **not** scaffold 2017+ in this pass.  
-12. Git only if asked.
-
-### Locked numbers (paste only these)
-
-| Fact | Value |
-|------|------:|
-| Live Stats June sites | **1,045,534,808** (**+21%** vs 863,105,652) |
-| 1B | Restabilized **Mar 2016** (first crossed Sep 2014, then dipped) |
-| 2016 arc | ~**900M Jan → ~1.7B Dec** hostnames |
-| Active | ~**170M** all year |
-| Users | **3,424,971,237 (46.1%)** Live Stats users table · ITU ~47% late-year class |
-| Stories | **Aug 2 2016** |
-| Reactions | **Feb 24 2016** · Like + Love Haha Wow Sad Angry |
-| PoGO | **Jul 6 2016** US/AU/NZ |
-| WA E2E | **Apr 5 2016** · 1B users class |
-| Messenger bots | F8 **Apr 12 2016** |
-| CV1 | **Mar 28 2016** · ~**$599** |
-| Win10 free ends | **Jul 29 2016** |
-| iPhone 7 | **Sep 7 2016** · no 3.5 mm jack |
-| AirPods | **Dec 13 2016** order · **$159** |
-| Vine announce | **Oct 27 2016** · nothing today |
-| Vine app/archive | **Jan 17 2017** |
-| Prefix | **`itt16`** |
+Steal depth from: `years/2015/sites/periscope/` (title → Go LIVE) · `years/2014/sites/whatsapp/` (install → chat) · `years/2013/sites/vine/record.html` (hold → post) · `years/2010/sites/instagram/` (filter → share).
 
 ---
 
-# Part 1 — Goals
+## Goals
 
-## 1.1 One-line goal
+Build a **museum-grade 2016 Web immersion** from scratch, same bar as lean 2014 / 2015:
 
-Build a **lean museum-grade 2016**: Win10 mass (free-upgrade **closed**), Chrome habit, REAL theater for **Stories · PoGO literacy · Reactions · WA E2E · jack/AirPods · Vine dual-date · Win10 end**, P1 densify, Gym Rush, dual-cite **1.045B (+21%)**, hard 2017 wall — **without** a 2015 forest.
+- Hub card **2016** unlocks. Hub is **23 years (1994–2016)**.
+- Shell **Win10 rising + Chrome habit**. Win7 residual early is still honest. Edge on the desktop is **Spartan**, not Chromium.
+- Visitor completes the **Instagram Stories** star (type a 24h slide → Add to Story → rail → `itt16-ig-stories`).
+- Visitor completes **Pokémon GO** leftover (team + honesty + catch → `itt16-pogo`) — **not the chip**.
+- Visitor completes **Facebook Reactions** (hold Like → pick a face → `itt16-fb-react`).
+- Visitor completes **WhatsApp default E2E** (two ticks + open lock → `itt16-wa-e2e`).
+- About prints **1,045,534,808 (+21%)** and **3,424,971,237 (46.1%)**, labeled. 1B restabilized **Mar 2016**. Active ~170M.
+- Hard bans visible: no TikTok brand, no Reels, no Meta, no Chromium Edge, no Face ID / iPhone X, no Switch-as-buy, no Stories-as-checkbox, no PoGO-as-chip.
+- All writes `itt16-*`. Incomplete writes nothing. No `itt15-*` / `itt17-*` from 2016 pages.
+- Guided list `#ott-guided-2016` is **exactly 6** `<li>`.
+- Official dests are **product hooks**, not `data-5x-save` plaques.
+- **Lean:** ~32–40 HTML. Hard stop **50**. Not a 57-page wiki restore.
 
-## 1.2 Visitor outcome
+**Visitor outcome**
 
 ```
 Hub → 2016
-  → Win10 mass · free upgrade ended Jul 29 · Chrome · Edge residual
-  → Starting Point
-        ★ One-thing: Instagram Stories Aug 2
-        ▶ Guided 6
-        ▶ Gym Rush
-        residual last (Watch 2015 · Snap Stories · Musical.ly not TikTok)
-  → About: 1,045,534,808 (+21%) · 1B Mar · ~3.4B ITU · bans
-        REAL → itt16-thesis-ack
-  → Stories: 24h check → add → itt16-ig-stories
-  → PoGO literacy → itt16-pogo · Gym Rush game
-  → Reactions pick · WA E2E · jack + AirPods · Vine dual-date
-  → Exit · itt16-* only · itt-last-year=2016
+  → Win10-rising desktop + Chrome habit (Edge Spartan residual)
+  → About: 1,045,534,808 June (+21%) · 3,424,971,237 users · 1B restabilized Mar 2016 · bans
+  → ★ Instagram Stories: type a slide → Add to Story → 24h rail → replay
+        itt16-ig-stories
+  → Pokémon GO: team Valor/Mystic/Instinct + sidewalk honesty → Catch (theater)
+        itt16-pogo
+  → Facebook: hold Like → Love / Haha / Wow / Sad / Angry
+        itt16-fb-react
+  → WhatsApp: lock screen · default E2E for ~1B · Apr 5
+        itt16-wa-e2e
+  → iPhone 7: no jack + dongle · AirPods announce vs Dec 13 order
+        itt16-iphone7 · leftover itt16-airpods
+  → Vine goodbye Oct 27 · Spectacles Snapbot · musical.ly (not TikTok)
+        · Win10 free upgrade ends Jul 29 · Dyn/Mirai Oct 21
+  → 3× leftover: Reddit · Netflix · YouTube
+  → Gym Rush  itt16-game-gymrush
+  → IE Back / product crumb = last room · Year menu = hub
+  → Exit · itt16-* only
 ```
 
-## 1.3 Goal checklist
+**Gold product** (same landing-map rule as 1995 / 2014 / 2015):
 
-| ID | Goal | Done when |
-|----|------|-----------|
-| **G1** | Thesis | 1.045B · +21% · 1B Mar · bans |
-| **G2** | Lean tree | ~40–70 HTML · no Amazon CDs / Pets as P0 |
-| **G3** | One-thing Stories | Incomplete never writes `itt16-ig-stories` |
-| **G4** | P0 REAL | Stories · PoGO · Reactions · WA E2E · 7/AirPods · Vine · Win10 end |
-| **G5** | P1 | Bots · CV1 ship · LinkedIn · Allo · Musical.ly not-TikTok |
-| **G6** | Game | Gym Rush · `itt16-game-gymrush` · no official sprites |
-| **G7** | Isolation | Only `itt16-*` (+ `itt-last-year`) |
-| **G8** | Pixels | H16 harvested **or** failed-final |
-| **G9** | Gates | `check-all-years` · `test:e2e:2016` · hub 2016 |
-| **G10** | No 2017+ bleed | No Face ID · no 280 · no GDPR · no TikTok brand · no Reels |
-
-## 1.4 Flows A–F
-
-| ID | Period life | Path | Write |
-|----|-------------|------|-------|
-| **A** | Add to Story | home → `instagram/stories.html` → 24h + add | `itt16-ig-stories` |
-| **B** | Go outside | `pogo/` literacy → Gym Rush | `itt16-pogo` · game |
-| **C** | Feel the post | `facebook/reactions.html` → pick one | `itt16-reactions` |
-| **D** | Private chat | `whatsapp/e2e.html` → two checks | `itt16-wa-e2e` |
-| **E** | No jack | `iphone/7.html` → `airpods/` | `itt16-iphone7` · `itt16-airpods` |
-| **F** | Vine is dying | `vine/goodbye.html` → dual-date | `itt16-vine` |
-
-Guided home 6: About · Stories · PoGO · Reactions · WA E2E · Vine/AirPods.
+> multipage or multipath · incomplete never writes · reload persist · period costume (**not a checkbox plaque**)
 
 ---
 
-# Part 2 — Phase map
+## ROI (why this order)
 
-| Phase | Name | Est. | Status | Blocks |
-|-------|------|------|--------|--------|
-| **S0** | Research freeze | — | **[x]** 2026-08-10 | — |
-| **S1** | Do **not** restore HEAD forest | S | **[x]** lean new HTML | Safety |
-| **S2** | Lean scaffold (no `cp 2015`) | M | **[x]** | Boots |
-| **S3** | Shell · connect · dirbar | S–M | **[x]** | Voice |
-| **S4** | Home / About / map / whats-new | M | **[x]** | Thesis |
-| **S5a** | Stories REAL | M | **[x]** | **One-thing** |
-| **S5b** | PoGO literacy | M | **[x]** | Culture |
-| **S5c** | Reactions | S | **[x]** | Feed |
-| **S5d** | WA E2E | S–M | **[x]** | Trust |
-| **S5e** | iPhone 7 + AirPods | M | **[x]** | Hardware |
-| **S5f** | Vine dual-date + Win10 end | S–M | **[x]** | Honesty |
-| **S6** | Chrome 3-check | S | **[x]** | Habit |
-| **S7** | Continuity chips | S | **[x]** | Residual last |
-| **S8** | `year-2016-extras.js` | M | **[x]** | Wiring |
-| **S9** | P1 densify | M | **[x]** | Depth |
-| **S10** | Gym Rush + 3 toys | M | **[x]** | Game |
-| **S11** | flow-maps · trails · matrix | M | **[x]** | Journeys |
-| **S12** | e2e pack | M | **[x]** | Gates |
-| **S13** | Hub + check-all-years + docs | S | **[x]** | **Ship** |
-| **S14** | Pixel harvest H16-20+ | M | **[x]** failed-final | Layer C |
-| **S15** | Densify 16-D1–D6 (deep harvest) | M | **[x]** [`2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md`](2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md) | Depth |
-
-**Order:** S0 → S1 → S2 → S3 → S4 → (S5a–S5f + S6 *parallel-ok*) → S8 → S7 + S9 + S10 → S11 → S12 → S13.  
-**MVP ship** = S2–S6 + S8 + S11–S13 + S5a green. **[x]**  
-**Museum-ready** = MVP + S7 + S9 + S10 + S14 (or failed-final). **[x]** 2026-08-10 (H16-20–24 failed-final + honesty)  
-**Deeper 2016** = S15 after [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md).
+| Rank | Work | ROI | Why |
+|-----:|------|----:|-----|
+| 1 | Hub unlock + Win10/Chrome shell + about/home/map | 10 | Year does not exist without a door |
+| 2 | Instagram Stories star REAL (2-path) | 10 | The 2016 object people remember |
+| 3 | Pokémon GO leftover REAL | 9 | Summer sidewalks — not the chip |
+| 4 | Facebook Reactions REAL | 9 | Feed emotion industrializes |
+| 5 | WhatsApp default E2E | 9 | 2014 star grows a lock |
+| 6 | iPhone 7 jack + AirPods honesty | 8 | Hardware culture of the autumn |
+| 7 | Vine goodbye | 8 | 2013 star dies this year |
+| 8 | Win10 upgrade **ends** + Dyn literacy | 7 | Desktop + the day the web blinked |
+| 9 | Spectacles + musical.ly leftover | 6 | Snap hardware · lip-sync seed |
+| 10 | Official 10 + guided 6 + year-start | 8 | Same contract as 2015 |
+| 11 | Gym Rush + 3× Reddit/Netflix/YouTube | 5 | Game + popular leftover |
+| 12 | Pixel harvest or `[failed-final]` | 4 | After rooms exist |
+| 13 | e2e mvp + flows + trail-real | 9 | Door is not shipped without it |
 
 ---
 
-# Part 3 — Minute steps
+## Align these three pointers (do not drift)
 
-# Phase S0 — Research freeze **[x]**
-
-### Goal
-Facts locked. No invent.
-
-### Minute steps
-1. Confirm Live Stats **1,045,534,808 (+21%)**.  
-2. Confirm one-thing = **Stories Aug 2** (not Musical.ly, not PoGO).  
-3. Confirm Vine **Oct 27 ≠ Jan 17 2017**.  
-4. Confirm WA E2E **Apr 5** · Reactions **Feb 24** · AirPods **Dec 13 $159**.  
-5. Confirm bans (TikTok brand · Face ID · official sprites · Meta · Reels).
-
-### Acceptance
-- [x] READ-FIRST + research + this file on disk  
-
-### Anti-patterns
-Scaffold before freeze · restore HEAD forest · Musical.ly as one-thing without re-litigating.
-
----
-
-# Phase S1 — Do not restore the forest **[ ]**
-
-### Goal
-Worktree stays clean. Old `HEAD:years/2016` is reference-only.
-
-### Minute steps
-1. `test ! -d years/2016` (should be true on this branch).  
-2. Optional: `git show HEAD:docs/2016-READ-FIRST.md` for scraps.  
-3. **Do not** `git checkout HEAD -- years/2016 js/config/2016.js`.  
-4. Snapshot nothing unless you later create files.
-
-### Acceptance
-- [ ] No 400-HTML tree appears  
-- [ ] Implementer can name three HEAD rooms they will **not** copy (amazon CDs, altavista, napster)
-
----
-
-# Phase S2 — Lean scaffold **[ ]**
-
-### Goal
-Year boots: shell + empty-ish home + stubs. ~15–25 HTML first.
-
-### Files to create
 ```
-years/2016/index.html          # copy structure from years/2015/index.html; year strings + thesis line
-years/2016/pages/{home,about,map,whats-new,cool}.html
-years/2016/pages/error/{404,unreachable}.html
-js/config/2016.js              # storage-ready urlMap for rooms you actually create
-js/config/immersion-2016.js    # storagePrefix: "itt16" · features.year2016extras
-js/immersion-2016.js           # ITT._immersionYear = "2016"
-js/browser-2016.js             # bootBrowserYear("2016")
-css/period-2016.css            # @import period-2015.css + small deltas
-assets/period/2016/README-PIXELS.txt
-js/immersion/registry.js       # "2016": [shared, real-flow, flow-map, year-playable, year-2016-extras, …]
+hero  =  years/2016/sites/instagram/stories.html
+      =  home data-ott-one-thing="2016"
+      =  flowTrails["2016"][0].href
+      =  YEAR_STARTS["2016"] step 1   (step 0 is always About)
+key   =  itt16-ig-stories
 ```
 
-### Minute steps
-1. Copy **stubs** `immersion-2015.js` / `browser-2015.js` → 2016, change year only.  
-2. Write `config/2016.js` from 2015: year, prefsKey `itt-2016-*`, home, urlMap **only for files you add**.  
-3. Write `immersion-2016.js` config: nav Stories · PoGO · Reactions · WA E2E · Vine · Chrome.  
-4. Duplicate 2015 shell HTML; replace connect thesis; `data-itt-year="2016"`; `body` classes Win10.  
-5. Register year in `registry.js` (include `year-2016-extras.js` even if extras file is a stub bootAll).  
-6. Smoke: `python3 -m http.server 8080` → `/years/2016/` skip connect → iframe home.
+Guided `#ott-guided-2016` — **exactly 6**:
 
-### Acceptance
-- [ ] `/years/2016/` loads without console missing-config  
-- [ ] `data-itt-year="2016"` on shell  
-- [ ] Home visible in `#content`
+1. About 2016 → `about.html`  
+2. Instagram Stories → `sites/instagram/stories.html`  
+3. Pokémon GO → `sites/pokemongo/index.html`  
+4. Facebook Reactions → `sites/facebook/reactions.html`  
+5. WhatsApp E2E → `sites/whatsapp/e2e.html`  
+6. Year flow map → `map.html`  
 
-### Tests
+Atlas / 3× / leftover dump **below** the year banner. Star chip never changes when leftover rooms are added.
+
+---
+
+## Hard bans (repeat on About)
+
+| Ban | Why |
+|-----|-----|
+| TikTok brand as the room | 2016 product is **musical.ly** (merge 2018) |
+| Instagram Reels | Later |
+| Meta branding | 2021 |
+| Chromium Edge | Still Spartan / EdgeHTML |
+| Face ID / iPhone X / AirPods Pro | 2017+ |
+| Fortnite free BR | 2017 |
+| Nintendo Switch as a buy | Announce Oct 20 · ships Mar 2017 |
+| slither.io as the year game | Exists 2016 · game is **Gym Rush** |
+| Restore HEAD `years/2016/` | Clone forest |
+| PoGO / musical.ly as the chip | Wrong thesis |
+| Invented brand pixels | Always |
+| Nov 8 campaign dump | One line on what’s-new / About |
+
+---
+
+## Phases (minute steps)
+
+Do **one phase at a time**. Stop after S2 if Stories still feels like a plaque.
+
+### Phase S0 — Freeze · `[x]` this pack · ROI 10
+
+1. Recite without opening a file: star = **Instagram Stories**; June = **1,045,534,808 (+21%)**; users = **3,424,971,237**; bans = TikTok / Reels / Meta / Chromium Edge / Face ID / Switch-as-buy / PoGO-as-chip.  
+2. Confirm `years/2016/` is **missing**. Confirm `years/2015/` is the lean Periscope door (~32 HTML).  
+3. Confirm `DISK-TRUTH.md` 2016 row is **stale** (do not treat it as disk).  
+4. Do **not** `git checkout HEAD -- years/2016`. Do **not** restore `/tmp/itt-2016-forest-backup-*`.  
+5. Lock steal list: 2015 Periscope two pages · 2014 WA install+chat · 2013 Vine hold · 2010 IG required step.  
+6. Lock dual-cite URLs: Live Stats websites + Live Stats users (opened 2026-08-18).  
+7. User has **not** said implement. This file is the execute bible when they do.
+
+**Done when:** you can say why 2016 is Stories (not PoGO) in one sentence.
+
+---
+
+### Phase S1 — Year door · `[ ]` · ROI 10
+
+**Do not start until implement is said.**
+
+1. `cp -R years/2015 years/2016`.  
+2. Sweep every leftover string: `2015` → `2016`, `itt15` → `itt16`, Periscope → Stories, `data-ott-one-thing="2015"` → `"2016"`, year-label, og:description, exit-bar, 404 leftovers.  
+3. Add `js/config/2016.js` (clone 2015.js). Rooms + `urlMap` + `locationHints` for stories / pogo / reactions / e2e. `storagePrefix` implied `itt16`.  
+4. Stubs: `js/immersion-2016.js` · `js/browser-2016.js` (same pattern as 2015 stubs — load extras + period css).  
+5. `css/period-2016.css` — `@import url("period-2015.css");` then Stories rail / GO map / Reactions tray.  
+6. Registry: `EXTRA["2016"]` includes `immersion/year-2016-extras.js`.  
+7. `SHIP_YEARS` / `KNOWN_YEARS` → `range(1994, 2017)`.  
+8. Shell on `years/2016/index.html`: **os-win10 rising** (or Win7 residual + Win10 tray honesty). Dirbar: **Stories · GO · Reactions · E2E · About**. Year label **2016**.  
+9. `pages/home.html`: chip `sites/instagram/stories.html`. Guided **6**. Atlas `data-itt-pop3x` at **bottom**.  
+10. `pages/about.html`: dual-cite 1,045,534,808 (+21%) · 3,424,971,237 (46.1%) · 1B restabilized Mar 2016 · active ~170M · bans list · FCC/election **one line** max.  
+11. `pages/map.html`: include `flow-maps.js` + `flow-trails.js` + `flow-maps-popular-3x.js`.  
+12. Error pages: retarget any Periscope/Photos/WhatsApp-2014 leftovers to Stories / GO / E2E.  
+13. Hub `index.html`: 23 years open 1994–2016, start button, year card `y2016`, compare-2016 row, footer **2017+ not on disk**.  
+14. `css/hub.css` y2016 card styles (clone y2015).  
+15. `museum-progress.js` `YEAR_STARTS["2016"]` = About → stories → GO. Loop through 2016.  
+16. Smoke: python http.server → `/years/2016/` boots. Home chip is Stories.
+
+**Done when:** hub → 2016 boots. Home chip is Stories. No Periscope as the chip. No 2015 year-label.
+
+**Minute door checklist**
+
+1. Open `/years/2016/`. Desktop is not a 2015 copy with the wrong year stamp.  
+2. Open Starting Point. Count `#ott-guided-2016 li` = 6.  
+3. Chip href is `sites/instagram/stories.html`.  
+4. About shows both scale numbers and the word **Stories**.  
+5. View-source has **zero** `itt15-` and **zero** `data-ott-one-thing="2015"`.
+
+---
+
+### Phase S2 — Instagram Stories star · `[ ]` · ROI 10
+
+Steal: `years/2015/sites/periscope/index.html` + `watch.html` · `years/2010/sites/instagram/index.html`.
+
+**Files**
+
 ```
-# after S13: python3 scripts/check-all-years.py
+years/2016/sites/instagram/stories.html    compose + Add to Story
+years/2016/sites/instagram/archive.html    replay YOUR slides (24h rail)
+js/immersion/year-2016-extras.js           bootStories + restore
 ```
 
-### Anti-patterns
-Copying 2015 `urlMap` wholesale (broken links) · forking `create.js`.
+**Minute steps**
 
----
+1. `stories.html` period costume: dark top rail, circular add, “Your story” — **RECON CSS**, no invented IG glyph if pixel missing (`[failed-final]` ok).  
+2. Markup:
 
-# Phase S3 — Shell voice **[ ]**
-
-### Goal
-Connect overlay, window title, dirbar feel like 2016 desktop.
-
-### Minute steps
-1. Connect copy: “Stories · Pokémon GO · Reactions · 1.05B hostnames.”  
-2. Title: “Chrome / Edge — 2016” or Win10 product line.  
-3. Dirbar keys: Stories, PoGO, Reactions, WA E2E, Vine, Chrome.  
-4. `defaultPrefs.modemDelay` low (broadband).  
-5. No 2015 Watch as first dirbar button.
-
-### Acceptance
-- [ ] Skip connect reveals chrome  
-- [ ] Dirbar ≥5 year-true labels  
-
----
-
-# Phase S4 — Home / About / map / whats-new **[ ]**
-
-### Goal
-Thesis + guided 6 + residual last.
-
-### Home order (mandatory)
-1. `data-ott-one-thing="2016"` → `../sites/instagram/stories.html`  
-2. `#ott-guided-2016` ol **exactly 6** li + About link inside  
-3. Playables strip  
-4. P1 chips  
-5. Residual chips **last** (Watch 2015 · Snap · Musical.ly not TikTok · Photos)  
-6. Hard-ban box (Face ID · TikTok brand · Meta · Reels · sprites)
-
-### About
-- 1,045,534,808 · +21% · 1B Mar 2016 · ~3.4B ITU  
-- `[data-itt-real-save]` `data-storage-key="thesis-ack"` `data-min-req="2"`  
-- Bans listed  
-
-### Minute steps
-1. Write home from 2015 home **structure**, 2016 copy.  
-2. Write about with real-flow markup.  
-3. `map.html` host `[data-itt-flow-map]`.  
-4. `whats-new.html` calendar table from READ-FIRST §3.
-
-### Acceptance
-- [ ] Guided 6  
-- [ ] About incomplete click writes nothing  
-- [ ] Residual appears after guided in DOM  
-
-### Tests
-```
-npx playwright test e2e/2016-mvp.spec.js --workers=1   # after S12 exists
+```html
+<textarea data-ig-story-text maxlength="140" placeholder="What's happening — gone in 24h"></textarea>
+<button type="button" data-ig-story-add>Add to Story</button>
+<span data-ig-story-status></span>
+<div data-ig-story-rail hidden></div>
+<p hidden data-next-flow data-next-when-key="itt16-ig-stories">Next: Pokémon GO</p>
 ```
 
----
+3. Honesty on the page (museum voice, short): Aug 2 2016 · 24 hours · Systrom: Snapchat “deserve all the credit” · not Reels · not IG Stories 2018 stickers dump.  
+4. `bootStories(doc)` in extras:  
+   - `val` of `[data-ig-story-text]` stripped. If length &lt; 2 → feedback “Type a slide first. Empty never writes.” **return**.  
+   - Else `saveJSON(key("ig-stories"), blob({ text: t.slice(0, 140), hours: 24 }))`.  
+   - Paint rail. `reveal(doc)`.  
+5. Restore-on-load: if key exists, refill textarea + unhide rail + reveal Next.  
+6. `archive.html`: read `itt16-ig-stories`, show the text as a 24h card. Empty key → “No story yet.” No second writer.  
+7. Crumb: Starting Point · About · Archive. Archive crumb ← Stories.  
+8. Wire one-thing:
 
-# Phase S5a — Stories one-thing **[ ]**
+```
+year: "2016",
+path: "/years/2016/sites/instagram/stories.html",
+key: "itt16-ig-stories",
+incomplete: click [data-ig-story-add] with empty field
+complete: fill "museum rooftop 24h" → click add
+```
 
-### Goal
-`itt16-ig-stories` only after 24h check + add.
+9. `flowTrails["2016"][0]`:
 
-### Files
-`years/2016/sites/instagram/stories.html` · extras `bootStories`  
-`years/2016/sites/instagram/index.html` (feed residual → Stories)
+```
+n: 1, name: "Instagram Stories",
+href: "sites/instagram/stories.html",
+match: "/instagram/stories",
+whenKey: "itt16-ig-stories",
+nextHref: "sites/pokemongo/index.html",
+nextLabel: "Pokémon GO"
+```
 
-### Markup
-- `[data-ig-stories-24h]` checkbox  
-- `[data-ig-stories-not-reels]` checkbox  
-- `[data-ig-stories-caption]`  
-- `[data-ig-stories-add]`  
-- `[data-ig-stories-status]`  
-- Tray `[data-ig-stories-list]`
+10. `YEAR_STARTS["2016"]` step 1 = stories.  
+11. Home chip + guided #2 = same href.
 
-### Minute steps
-1. Copy period voice (not “museum Stories”). Honesty line: Aug 2 2016 · Snap still competes.  
-2. Wire extras: if !24h || !not-reels → error, return. Else save JSON `{ caption, multiStep, real, year:"2016", ts }`.  
-3. Reload hydrates list.  
-4. Isolation: do not write `itt15-*`.
+**Payload**
 
-### Acceptance
-- [ ] Bare add does not write  
-- [ ] Two checks + add writes `itt16-ig-stories`  
-- [ ] No “Your story” 2018+ chrome  
+```json
+{ "real": true, "multiStep": true, "year": "2016", "text": "museum rooftop 24h", "hours": 24, "ts": 0 }
+```
 
----
+**Done when:** empty add does not write. Titled add writes `itt16-ig-stories`. Reload still shows the slide. Chip / trail #1 / year-start agree.
 
-# Phase S5b — Pokémon GO literacy **[ ]**
+**Minute star checklist**
 
-### Goal
-`itt16-pogo` after location honesty + team + catch. **No sprites.**
-
-### Markup
-- `[data-pogo-location]` “This exhibit does not use real GPS”  
-- `[data-pogo-no-art]` “No official Pokémon art”  
-- `[data-pogo-team]` valor|mystic|instinct (generic names ok; do not draw official emblems)  
-- `[data-pogo-catch]`  
-Silhouettes only (CSS circles).
-
-### Acceptance
-- [ ] Incomplete never writes  
-- [ ] Body has no nintendo.com ripped img  
-
----
-
-# Phase S5c — Reactions **[ ]**
-
-### Goal
-Pick exactly one of 6 → `itt16-reactions`.
-
-### Minute steps
-1. Post theater + Like + Love Haha Wow Sad Angry.  
-2. Save requires a pick.  
-3. Copy: Feb 24 2016 global · not a Dislike button.
+1. Open `stories.html`. Click Add with empty field → status error → `localStorage.itt16-ig-stories` empty.  
+2. Type “museum rooftop 24h” → Add → key writes JSON with `real: true`.  
+3. Reload → rail still has the slide.  
+4. Open `archive.html` → same text.  
+5. Home chip still points here.
 
 ---
 
-# Phase S5d — WhatsApp E2E **[ ]**
+### Phase S3 — Pokémon GO leftover · `[ ]` · ROI 9
 
-### Goal
-Two literacy checks → `itt16-wa-e2e`.
+**Not the chip.** Steal: 2015 Watch leftover (required picks + one save).
 
-### Checks
-- What E2E means (WhatsApp cannot read)  
-- Default on latest clients **Apr 5 2016** · 2015 Web was not this story  
+**Files:** `years/2016/sites/pokemongo/index.html`
 
-Link from residual `whatsapp/index.html` → `e2e.html`.
+**Minute steps**
 
----
+1. Costume: map-colored well, three team buttons. No Niantic mark if pixel missing.  
+2. Markup:
 
-# Phase S5e — iPhone 7 + AirPods **[ ]**
+```html
+<button type="button" data-pogo-team="valor">Valor</button>
+<button type="button" data-pogo-team="mystic">Mystic</button>
+<button type="button" data-pogo-team="instinct">Instinct</button>
+<label><input type="checkbox" data-pogo-gps data-req> I know this is sidewalk AR — no live GPS in the museum</label>
+<button type="button" data-pogo-catch>Catch (theater)</button>
+```
 
-### iPhone 7
-Checks: jack gone · Lightning adapter in box · **not Face ID / not iPhone X**.  
-Key `itt16-iphone7`.
+3. Honesty: Jul 6 AU/NZ/US · Niantic · 500M downloads by Sep 7 · servers die · battery dies · **not the 2016 star**.  
+4. Incomplete: no team **or** gps unchecked → no write.  
+5. Complete: team + gps + Catch → `itt16-pogo` `{ team, outdoor: true }`.  
+6. Next whenKey `itt16-pogo` → Reactions. Prev → Stories.  
+7. e2e: incomplete no-write · complete writes.
 
-### AirPods
-Checks: **$159** · **Dec 13 2016** order · **not Pro**.  
-Key `itt16-airpods`. No real checkout.
-
----
-
-# Phase S5f — Vine + Win10 end **[ ]**
-
-### Vine
-Checks: announced **Oct 27 2016** · **not already offline** (Jan 17 2017).  
-After ack: hide/disable `[data-vine-post]` / hold so **new posts cannot write** `itt16-vine-posts`.  
-Key `itt16-vine`.
-
-### Win10
-Checks: free offer **started Jul 29 2015** · **ended Jul 29 2016** · Win10 still the mass OS.  
-Key `itt16-win10-end`.
+**Done when:** Catch with no team writes nothing. Team+honesty+Catch writes. Chip is still Stories.
 
 ---
 
-# Phase S6 — Chrome 3-check **[ ]**
+### Phase S4 — Facebook Reactions · `[ ]` · ROI 9
 
-Same pattern as 2008–2015: habit + not-Edge-default + download theater → `itt16-chrome`. Incomplete never writes.
+**Files:** `years/2016/sites/facebook/reactions.html`
 
----
+**Minute steps**
 
-# Phase S7 — Continuity chips **[ ]**
+1. One News Feed post (period costume, no Meta word). Like is still the easy tap.  
+2. Markup:
 
-Home residual only (not 80 rooms):  
-Watch 2015 · Snap Stories · Musical.ly (label not TikTok) · Photos · Periscope · Discord.  
-Period voice on product rooms; museum voice on chips.
+```html
+<button type="button" data-fb-like>Like</button>
+<div data-fb-react-tray>
+  <button type="button" data-fb-react="love">Love</button>
+  <button type="button" data-fb-react="haha">Haha</button>
+  <button type="button" data-fb-react="wow">Wow</button>
+  <button type="button" data-fb-react="sad">Sad</button>
+  <button type="button" data-fb-react="angry">Angry</button>
+</div>
+```
 
----
+3. Honesty: Feb 24 2016 worldwide · five faces + Like · hold on mobile / hover on desktop · **not** Care (2020) · not Reactions as a 2015 thing.  
+4. Opening the tray **never writes**.  
+5. Picking a face writes `itt16-fb-react` `{ face }`. Like-only may write a weaker leftover key `itt16-fb-like` — do **not** use that as the official whenKey.  
+6. Next → E2E.
 
-# Phase S8 — extras wiring **[ ]**
-
-### File
-`js/immersion/year-2016-extras.js` — copy **shape** of `year-2015-extras.js`:
-- `prefix()` → `itt16`  
-- `bootAll` lists every S5/S6/S9 boot  
-- `registerLocal({ id: "year2016extras", featureKey: "year2016extras" })`  
-- Every save: `multiStep: true, real: true, year: "2016"`  
-- Incomplete return **before** `saveJSON`
-
-### Acceptance
-- [ ] Standalone page `data-itt-feat-year2016extras="1"`  
-- [ ] Neighbor `itt15-*` untouched in e2e  
-
----
-
-# Phase S9 — P1 densify **[ ]**
-
-| Room | Gate | Key |
-|------|------|-----|
-| Messenger bots | F8 2016 + not 2015 business-only | `itt16-bots` |
-| Oculus CV1 | shipped Mar 28 + ~$599 | `itt16-rift` |
-| LinkedIn deal | $26.2B + Jun 13 | `itt16-linkedin` |
-| Allo | Sep 21 + smart reply theater | `itt16-allo` |
-| Musical.ly | caption + **not TikTok** | `itt16-musical` |
+**Done when:** tray open = no key. Face = key. About still bans “Reactions in 2015”.
 
 ---
 
-# Phase S10 — Gym Rush + 3 toys **[ ]**
+### Phase S5 — WhatsApp default E2E · `[ ]` · ROI 9
 
-### Year game
-`js/games/year-2016-gymrush.js` · `sites/playable/game.html`  
-See [`GAMES-PER-YEAR/YEAR-2016.md`](GAMES-PER-YEAR/YEAR-2016.md).  
-Honor `YearGame.isPaused`. No official art. Literacy: Jul 6 2016 · not GPS · slither.io is also 2016 but **not** this game (2015 already claimed .io).
+This is **not** a second WhatsApp star (2014 already is). This is the **lock screen**.
 
-### Toys (`year-playable.js` `"2016"` — do not fall back to 2015)
+**Files:** `years/2016/sites/whatsapp/e2e.html`
 
-| # | Type | Title | Writes |
-|---|------|-------|--------|
-| 1 | hold | **Add to Story** (~2s) | `itt16-playable` |
-| 2 | targets | **Reaction tap** Love/Haha/Wow/Sad/Angry | `itt16-playable-2` |
-| 3 | type | **catch them all** (generic phrase, not ™) | `itt16-playable-3` |
+**Minute steps**
 
-Phrase must match exactly. Avoid official Pokémon slogan if it creates TM risk — use `go outside` if needed.
+1. Green lock well. Cite Apr 5 blog · Jan / Brian · ~1B.  
+2. Two `data-wa-e2e-req`:  
+   - Default — you do nothing  
+   - Not a new chat app — 2014 was install+chat  
+3. `[data-wa-e2e-open]` writes `itt16-wa-e2e` only if both checked.  
+4. No real crypto. No QR dump.  
+5. Next → iPhone 7.
 
-`DEFAULT_GOALS["2016"]` + `DEFAULT_NEXT` → Stories.
-
----
-
-# Phase S11 — Maps · trails · matrix **[ ]**
-
-1. `ITT.flowMaps["2016"]` branches: Enter · Stories · Street AR · Feed emotion · Trust · Hardware · Goodbye.  
-2. `YEAR_STARTS["2016"]` in `museum-progress.js` (About + Stories + PoGO). Loop `for (y = 1994; y <= 2016)`.  
-3. `REAL_FLOW_MATRIX` row: year 2016 · path Stories · key `itt16-ig-stories` · hook `[data-ig-stories-add]`.  
-4. Passport grid will become **23** years — update `year-start-trails.spec.js` and `museum-progress.spec.js` counts (21→22 was 2015; now 23).
+**Done when:** one tick = no write. Two ticks + Open = write.
 
 ---
 
-# Phase S12 — e2e pack **[ ]**
+### Phase S6 — iPhone 7 + AirPods leftover · `[ ]` · ROI 8
 
-Create (mirror 2015 names):
+**Files**
+
+```
+years/2016/sites/iphone/index.html     jack / dongle
+years/2016/sites/iphone/airpods.html   announce vs order
+```
+
+**Minute steps**
+
+1. `index.html`: two reqs — no 3.5 mm · Lightning dongle in the box. `[data-iphone7-save]` → `itt16-iphone7`.  
+2. Honesty: Sep 7 · 7 / 7 Plus · Jet Black leftover one line. **Not** Face ID. **Not** X.  
+3. `airpods.html`: announce Sep 7 vs **orders Dec 13**. Two honesty ticks + Order (theater) → `itt16-airpods`. Empty never.  
+4. Official trail uses **iphone7**, not airpods.  
+5. Next → Vine goodbye.
+
+**Done when:** save without ticks writes nothing. AirPods page cannot be reached as the star.
+
+---
+
+### Phase S7 — Vine goodbye · `[ ]` · ROI 8
+
+**Files:** `years/2016/sites/vine/goodbye.html`
+
+**Minute steps**
+
+1. Quote the Oct 27 Medium line: discontinuing the mobile app “in the coming months” · website should keep loops.  
+2. Two reqs: announce is Oct 27 2016 · this is not the 2013 hold-to-record star.  
+3. `[data-vine-end-ack]` → `itt16-vine-end`.  
+4. Link back to 2013 Vine as **archive residual** only if year-lock allows a labeled “2013 leftover” line — do not load 2013 keys.  
+5. Next → Spectacles.
+
+**Done when:** ack without ticks writes nothing.
+
+---
+
+### Phase S8 — Spectacles + musical.ly leftover · `[ ]` · ROI 6
+
+**Files**
+
+```
+years/2016/sites/snapchat/spectacles.html
+years/2016/sites/musically/index.html
+```
+
+**Minute steps — Spectacles**
+
+1. $129.99 class · Snap Inc. camera company · Snapbot Nov 10 Venice. Unveil Sep 24.  
+2. `[data-spec-pair]` after one honesty tick (vending, not every mall) → `itt16-spectacles`.  
+3. Banner: **Stories this year is Instagram.** Snap invented the format in 2013.
+
+**Minute steps — musical.ly**
+
+1. Caption field + Post. Empty never writes.  
+2. Loud banner: **not TikTok**. Merge is 2018.  
+3. `itt16-musically` `{ caption }`.  
+4. Official trail can include this as stop 8.
+
+**Done when:** both write only when complete. No TikTok word as the product name.
+
+---
+
+### Phase S9 — Win10 upgrade ends + Dyn · `[ ]` · ROI 7
+
+**Files**
+
+```
+years/2016/sites/windows10/end.html
+years/2016/sites/dyn/index.html
+```
+
+**Minute steps — Win10**
+
+1. Jul 29 free upgrade **ends** for the general public. Anniversary Update class.  
+2. Two reqs: offer ends · Edge is still Spartan (not Chromium).  
+3. `[data-win10-end-save]` → `itt16-win10-end`.  
+4. Official trail stop 9.
+
+**Minute steps — Dyn**
+
+1. Oct 21. Mirai IoT. Twitter / Reddit / Spotify / GitHub / Netflix looked down.  
+2. Literacy only. **No exploit. No payload.**  
+3. Two reqs + `[data-dyn-ack]` → `itt16-dyn`.  
+4. Leftover atlas, not official #9 (Win10 end is the desktop stop).
+
+**Done when:** Dyn page has no “attack” button.
+
+---
+
+### Phase S10 — Official 10 + year-start + map · `[ ]` · ROI 8
+
+Edit **both** `js/config/flow-trails.js` and `scripts/build-flow-trails.py` (generator is stale on later years — still edit it so the next regen does not wipe 2016).
+
+| n | Name | href | whenKey |
+|--:|------|------|---------|
+| 1 | Instagram Stories | `sites/instagram/stories.html` | `itt16-ig-stories` |
+| 2 | Pokémon GO | `sites/pokemongo/index.html` | `itt16-pogo` |
+| 3 | Reactions | `sites/facebook/reactions.html` | `itt16-fb-react` |
+| 4 | WhatsApp E2E | `sites/whatsapp/e2e.html` | `itt16-wa-e2e` |
+| 5 | iPhone 7 | `sites/iphone/index.html` | `itt16-iphone7` |
+| 6 | Vine goodbye | `sites/vine/goodbye.html` | `itt16-vine-end` |
+| 7 | Spectacles | `sites/snapchat/spectacles.html` | `itt16-spectacles` |
+| 8 | musical.ly | `sites/musically/index.html` | `itt16-musically` |
+| 9 | Win10 upgrade ends | `sites/windows10/end.html` | `itt16-win10-end` |
+| 10 | Gym Rush | `sites/playable/game.html` | `itt16-game-gymrush` |
+
+**Minute steps**
+
+1. Each dest has `data-next-flow` + `data-next-when-key` matching the table.  
+2. `data-prev-flow` on stops 2–10 pointing at the previous href.  
+3. `flow-maps.js` 2016 thesis rewritten Stories-first.  
+4. `check-all-years.py` SIGNATURE includes 2016.  
+5. Guided stays **6**. Do not dump the official 10 onto the home chip list.  
+6. Map page lists official 10 as hrefs (test: official trail hrefs exist).
+
+**Done when:** `ITT.flowTrails["2016"].length === 10` and stop 1 is Stories.
+
+---
+
+### Phase S11 — 3× leftover popular + Gym Rush · `[ ]` · ROI 5
+
+**3×** (Alexa-class mass, not already on the official 10):
+
+| id | Site | Why 2016 | Key |
+|----|------|----------|-----|
+| reddit | Reddit | US Alexa top-3 class · The Front Page | `itt16-pop-reddit` |
+| netflix | Netflix | Streaming habit · Stranger Things weather | `itt16-pop-netflix` |
+| youtube | YouTube | Still the #2 site | `itt16-pop-youtube` |
+
+**Minute steps**
+
+1. Add three specs to `scripts/popular-3x-sites.json` under `"2016"`.  
+2. Run `python3 scripts/build-popular-3x-sites.py` **or** hand-write three rooms matching 2015 instagram/spotify/netflix leftover shape.  
+3. `data-pop-field` + `data-pop-go` + `data-pop-id`. Empty &lt; 2 chars never writes.  
+4. Home atlas `data-itt-pop3x` lists the three. **Not** the chip.  
+5. `js/config/2016.js` urlMap includes them.  
+6. Game: restore/port `js/games/year-2016-gymrush.js` if it exists on HEAD, else clone Blob Rush grammar → gyms, not slither. Key `itt16-game-gymrush`. Legal: no Niantic / Pokémon sprites.  
+7. `year-playable.js` 2016 = Gym Rush.
+
+**Done when:** 3/3 rooms exist. Popular-3x e2e path for 2016 writes `itt16-pop-reddit` after a typed query.
+
+---
+
+### Phase S12 — extras module (all writers) · `[ ]` · ROI 10
+
+**File:** `js/immersion/year-2016-extras.js`
+
+Clone `year-2015-extras.js` shape:
+
+```js
+var YX = ITT.YearExtras.forYear("2016");
+// key / feedback / saveJSON / loadJSON / val / countChecked
+function blob(extra) { return { multiStep: true, real: true, year: "2016", ts: Date.now(), ...extra }; }
+```
+
+Register with `ITT.ImmersionFeatures.registerLocal` (2014/2015 pattern — **not** `YearExtras.register`).
+
+**Boots to write**
+
+| fn | Selector | Incomplete | Key suffix |
+|----|----------|------------|------------|
+| `bootStories` | `[data-ig-story-add]` | empty text | `ig-stories` |
+| `bootPogo` | `[data-pogo-catch]` | no team or no gps | `pogo` |
+| `bootReact` | `[data-fb-react]` | tray only | `fb-react` |
+| `bootE2e` | `[data-wa-e2e-open]` | &lt;2 req | `wa-e2e` |
+| `bootIphone7` | `[data-iphone7-save]` | &lt;2 req | `iphone7` |
+| `bootAirpods` | `[data-airpods-order]` | &lt;2 req | `airpods` |
+| `bootVineEnd` | `[data-vine-end-ack]` | &lt;2 req | `vine-end` |
+| `bootSpec` | `[data-spec-pair]` | no honesty | `spectacles` |
+| `bootMl` | `[data-ml-post]` | empty caption | `musically` |
+| `bootWin10End` | `[data-win10-end-save]` | &lt;2 req | `win10-end` |
+| `bootDyn` | `[data-dyn-ack]` | &lt;2 req | `dyn` |
+
+Each boot: restore-on-load · `reveal(doc)` · also unhide `[data-prev-flow]`.
+
+`boot.js` already loads `year-*-extras.js` via the extras glob — confirm 2016 file is picked up. Add `add("immersion/year-2016-extras.js")` only if the glob misses it.
+
+**Done when:** every official whenKey has exactly one product writer (not a 5× plaque).
+
+---
+
+### Phase S13 — Hub · passport · compare · `[ ]` · ROI 8
+
+**Minute steps**
+
+1. `index.html` OPEN years 22 → **23**. Card `y2016`. Start button includes 2016.  
+2. Compare table: “Stories · sidewalks · five faces · Vine dies · WhatsApp lock · no TikTok.”  
+3. Follow-a-site: Instagram 2016 Stories (not 2010 filter).  
+4. Footer: **2017+ not on disk**.  
+5. `museum-progress.js` loops 1994–2016. Passport 23.  
+6. `e2e/hub-years.spec.js` OPEN add 2016 / 23 years / `y2016` visible / `y2017` 0.  
+7. `e2e/year-start-trails` 23 / 2016-start.  
+8. `e2e/year-core` YEARS + LOCATION_HINT 2016 stories.  
+9. README: 2016 on disk.  
+10. Rewrite `DISK-TRUTH.md` 2016 row: Stories star · ~32–40 HTML · **not** the stale 51/54 forest.
+
+**Done when:** hub shows 23 cards and 2016 starts on Stories.
+
+---
+
+### Phase S14 — e2e · `[ ]` · ROI 9
+
+**Files**
 
 ```
 e2e/2016-mvp.spec.js
 e2e/2016-flows.spec.js
-e2e/2016-real-flows.spec.js      # incomplete → complete every P0/P1 key
 e2e/2016-densify.spec.js
 e2e/2016-trail-real-flows.spec.js
-e2e/2016-shell-honesty.spec.js
-e2e/2016-flow-link-verify.spec.js
+package.json  "test:e2e:2016": "mvp + flows + densify + trail-real + one-thing -g 2016"
 ```
 
-`package.json`:
-```
-"test:e2e:2016": "playwright test e2e/2016-mvp.spec.js e2e/2016-densify.spec.js e2e/2016-flows.spec.js e2e/2016-real-flows.spec.js e2e/2016-trail-real-flows.spec.js e2e/2016-shell-honesty.spec.js e2e/2016-flow-link-verify.spec.js --workers=1"
-```
+**Minute cases (mvp)**
 
-Also extend: `one-thing-per-year` · `all-years-real-system` YEARS · `year-signature-flows` · `year-playable` 2016 · `year-games*` · `hub-years` · `KNOWN_YEARS` in check-all-years.
+1. Year boots. Home chip href contains `/instagram/stories`.  
+2. Guided `li` count === 6.  
+3. About contains `1,045,534,808` and `3,424,971,237`.  
+4. About contains Stories and does **not** contain TikTok as a product name (musical.ly ok).  
+5. Stories incomplete no-write · complete writes `itt16-ig-stories`.  
+6. Reload persist title/slide.
 
-### Acceptance
-```
-npm run test:e2e:2016
-npx playwright test e2e/one-thing-per-year.spec.js e2e/all-years-real-system.spec.js -g 2016
-```
+**Minute cases (flows)**
+
+1. GO incomplete / complete `itt16-pogo`.  
+2. Reactions tray-only no-write · face writes `itt16-fb-react`.  
+3. E2E one-tick no-write · two ticks write.  
+4. iPhone 7 · Vine · Win10 end same contract.  
+5. Official 10 hrefs exist (count `[data-itt-ten-flows] a` or trail table).  
+6. No second Stories writer on archive.
+
+**Minute cases (trail-real)**
+
+1. Walk stops 1–4 with whenKeys. Next hidden until write.  
+2. Prefix isolation: completing 2016 does not write `itt15-*` or `itt17-*`.
+
+**one-thing-per-year.spec.js** — add 2016 block (same shape as 2015 Periscope).
+
+**gold-a-leftover-pack.spec.js** — 2016 Stories `data-next-when-key`.
+
+**Done when:** `npm run test:e2e:2016` green.
 
 ---
 
-# Phase S13 — Hub + docs **[ ]**
+### Phase S15 — pixels · `[ ]` · ROI 4
 
-### Minute steps
-1. `index.html` year card `y2016` available · resume regex `201[0-6]`.  
-2. `scripts/check-all-years.py` `KNOWN_YEARS` through 2016 + signature rooms list.  
-3. `DISK-TRUTH.md` · `NON-DONE.md` · SCALE-LEDGER row: **MVP live** (only after tests green).  
-4. `css/hub.css` if 2016 chip needs color.  
-5. Do **not** unlock 2017.
+`assets/period/2016/{instagram,pokemongo,facebook,whatsapp,iphone,vine,snapchat,musically,windows10,dyn}/`
 
-### Acceptance
-- [ ] Hub shows 23 years 1994–2016  
-- [ ] `check-all-years.py` 2016 **pass**  
+Wayback `id_` or **[failed-final]** + CSS wordmark. Never invent the IG camera, Pokémon mark, Snap ghost, or musical.ly logo.
+
+CAPTURE queue: H16-01 = **Stories**, not PoGO, not Spectacles.
 
 ---
 
-# Phase S14 — Pixels **[x]** failed-final
+### Phase S16 — gates · `[ ]`
 
-### Minute steps
-1. Create `assets/period/2016/{instagram,pogo,facebook,whatsapp,vine,airpods}/README-AUTHENTICITY.txt`.  
-2. Try Wayback `im_` + Version Museum + Newsroom.  
-3. Log every fail in [`references/2016/CAPTURE-LOG.md`](references/2016/CAPTURE-LOG.md).  
-4. Never draw Pikachu or IG glyph.
-
-### Acceptance
-- [x] Used `<img>` are WA / WDM / Newsroom / failed-final RECON labeled (Chrome reuses 2013 WA still)
-
----
-
-# Phase S15 — Densify 16-D1–D6 **[x]**
-
-**★ Full minute bible:** [`2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md`](2016-DENSIFY-GOALS-PHASES-MINUTE-STEPS.md) (D0–D14).  
-**Research freeze:** [`2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md`](2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md) §4.  
-**Do not** steal one-thing. Lean chips or one HTML each.
-
-### Goal
-Ship the six highest-ROI 2016 products the first freeze never named.
-
-| ID | Room | Gate | Key |
-|----|------|------|-----|
-| 16-D1 | `sites/instagram/live.html` | Nov 21 + inside Stories + disappears when you end · not Reels | `itt16-ig-live` |
-| 16-D2 | `sites/amp/serp.html` | Feb 24 2016 **in Search** (2015 was announce only) | `itt16-amp-serp` |
-| 16-D3 | `sites/facebook/live.html` | Everyone (not 2015 celebs) · Apr 6 features | `itt16-fb-live` |
-| 16-D4 | `sites/dyn/index.html` | Oct 21 + Mirai IoT + not a payload | `itt16-dyn` |
-| 16-D5 | `sites/pixel/index.html` + `sites/home/index.html` | Pixel Oct 4 · Home **$129** ships Nov 4 | `itt16-pixel` · `itt16-home` |
-| 16-D6 | `sites/snapchat/spectacles.html` | $129 + Snapbot + Snap still competes | `itt16-spectacles` |
-
-Also paste About: **3,424,971,237 (46.1%)** · IG **500M Jun 21** · PoGO **500M DL Sep 7**.
-
-### Minute steps
-1. Do **not** `cp` 2015 AMP announce as if it were SERP.  
-2. Wire extras `bootAll` + incomplete never writes.  
-3. Home residual chips **after** guided 6.  
-4. e2e incomplete → complete each new key.  
-5. Skip 16-D7–D20 unless a later pass.
-
-### Acceptance
-- [ ] Each new key writes only after ≥2 checks  
-- [ ] Neighbor `itt15-*` untouched  
-- [ ] One-thing still Stories  
-
-### Anti-patterns
-Promoting Pixel/Home or Musical.ly over Stories · building a Dyn exploit · Nintendo Mario sprites · Teams as 2020 mass.
-
----
-
-# Part 4 — Copy bank (paste)
-
-**Home one-thing:** `★ One-thing · Instagram Stories Aug 2 REAL`  
-**Guided:** About 2016 · Stories 24h · Pokémon GO (no sprites) · Reactions · WhatsApp E2E · Vine is dying  
-**About scale:** `1,045,534,808 websites (Live Stats June, +21%) · 1B restabilized March 2016 · 3,424,971,237 people online (Live Stats July 1, 46.1%) · ITU late-year ~47%`  
-**Bans line:** `No TikTok brand · no Meta · no Face ID · no Reels · no official Pokémon art · Vine not already gone in October`  
-**Stories honesty:** `Launched August 2, 2016 · lasts 24 hours · Snapchat still competes · not Reels`  
-**Vine honesty:** `Announced October 27, 2016 — nothing happens today. App / archive class January 17, 2017.`  
-**AirPods:** `Order December 13, 2016 · $159 with case · not AirPods Pro`  
-**E2E:** `Default on latest WhatsApp clients April 5, 2016 · a billion users class · 2015 Web was QR, not this`
-
----
-
-# Part 5 — Tests cheat-sheet (after S12)
-
-```bash
+```
 python3 scripts/check-all-years.py
+node scripts/audit-all-year-flows.js
+npx playwright test e2e/one-thing-per-year.spec.js -g 2016
+npx playwright test e2e/2016-mvp.spec.js e2e/2016-flows.spec.js
 npm run test:e2e:2016
-npx playwright test e2e/one-thing-per-year.spec.js -g 2016 --workers=1
-npx playwright test e2e/all-years-real-system.spec.js -g 2016 --workers=1
-npx playwright test e2e/year-games-real.spec.js e2e/all-years-playable.spec.js -g 2016 --workers=1
 ```
 
-**MVP = S2–S6 + S8 + S11–S13 + Stories green. Do not claim museum-ready without S7/S9/S10/S14 (or failed-final).**
+**Ship when:** star writes, P0 write, About bans, no 2017 default, no invented logos, official dests are not 5× plaques, guided = 6, hub 23.
+
+---
+
+### Phase S17 — leftover gold polish (after door, optional) · `[ ]`
+
+Same bar as [`2015-MUSEUM-GRADE-GOALS-PHASES-MINUTE-STEPS.md`](2015-MUSEUM-GRADE-GOALS-PHASES-MINUTE-STEPS.md):
+
+1. Stories 2-path already required (archive). Deepen rail (expire copy, not a second write).  
+2. Product crumbs + ← previous on trail 1–4 (do not dump to Starting Point).  
+3. No `data-5x-save` on official dests.  
+4. GO gym page leftover only if S3 feels thin — do not grow past 50 HTML.
+
+---
+
+### Phase S18 — optional forever · `[~]`
+
+Google Allo · Oculus CV1 $599 · LinkedIn $26.2B literacy · Super Mario Run · Google Home / Pixel · FB Live residual · Periscope residual one-liner · Jio access one line on About · STEM (AlphaGo) one what’s-new line. **Not** a 7th guided item.
+
+---
+
+## extras selectors (do not rename)
+
+| Room | Selectors | Key |
+|------|-----------|-----|
+| Stories | `[data-ig-story-text]` `[data-ig-story-add]` `[data-ig-story-rail]` `[data-ig-story-status]` | `itt16-ig-stories` |
+| Stories replay | (read-only) | — |
+| GO | `[data-pogo-team]` `[data-pogo-gps]` `[data-pogo-catch]` | `itt16-pogo` |
+| Reactions | `[data-fb-react]` `[data-fb-like]` `[data-fb-react-tray]` | `itt16-fb-react` |
+| E2E | `[data-wa-e2e-req]` `[data-wa-e2e-open]` | `itt16-wa-e2e` |
+| iPhone 7 | `[data-iphone7-jack]` `[data-iphone7-dongle]` `[data-iphone7-save]` | `itt16-iphone7` |
+| AirPods | `[data-airpods-req]` `[data-airpods-order]` | `itt16-airpods` |
+| Vine | `[data-vine-end-req]` `[data-vine-end-ack]` | `itt16-vine-end` |
+| Spectacles | `[data-spec-pair]` | `itt16-spectacles` |
+| musical.ly | `[data-ml-caption]` `[data-ml-post]` | `itt16-musically` |
+| Win10 end | `[data-win10-end-req]` `[data-win10-end-save]` | `itt16-win10-end` |
+| Dyn | `[data-dyn-req]` `[data-dyn-ack]` | `itt16-dyn` |
+| Game | `[data-year-game]` | `itt16-game-gymrush` |
+| 3× | `[data-pop-field]` `[data-pop-go]` `[data-pop-id]` | `itt16-pop-<id>` |
+| Thesis | `[data-thesis-req]` `[data-itt-real-save]` | `itt16-thesis-ack` |
+
+Payload always `{ real: true, multiStep: true, year: "2016", ts }`.
+
+---
+
+## File list (target)
+
+```
+years/2016/index.html
+years/2016/pages/{home,about,map,whats-new}.html
+years/2016/pages/error/{404,unreachable}.html
+years/2016/sites/instagram/{stories,archive}.html
+years/2016/sites/pokemongo/index.html
+years/2016/sites/facebook/reactions.html
+years/2016/sites/whatsapp/e2e.html
+years/2016/sites/iphone/{index,airpods}.html
+years/2016/sites/vine/goodbye.html
+years/2016/sites/snapchat/spectacles.html
+years/2016/sites/musically/index.html
+years/2016/sites/windows10/end.html
+years/2016/sites/dyn/index.html
+years/2016/sites/{reddit,netflix,youtube}/index.html
+years/2016/sites/playable/{index,game,famous}.html
+js/config/2016.js
+js/immersion-2016.js
+js/browser-2016.js
+js/immersion/year-2016-extras.js
+js/games/year-2016-gymrush.js
+css/period-2016.css
+e2e/2016-{mvp,flows,densify,trail-real-flows}.spec.js
+```
+
+Expect **~35 HTML**. If you cross 50, stop adding rooms.
+
+---
+
+## Continuity from 2015
+
+| 2015 | 2016 treatment |
+|------|----------------|
+| Periscope star | Residual one-liner on About. Live is Stories. |
+| Win10 free upgrade | **Ends Jul 29.** New room. |
+| Edge Spartan | Residual. Not Chromium. |
+| Snap Discover | Residual. Stories war is IG. |
+| Watch / Music / Photos | Residual, not rooms. |
+| Blob Rush | New game **Gym Rush**. slither is banned as the year game. |
+| WhatsApp 2014 | Continuity: 2016 is the **lock**, not install+chat. |
+
+---
+
+## Definition of done (MVP door)
+
+- [ ] Hub 2016 opens (23 years)  
+- [ ] Win10 rising + Chrome habit  
+- [ ] Stories empty never writes · titled add writes `itt16-ig-stories` · reload persist  
+- [ ] Chip = trail #1 = year-start = Stories  
+- [ ] Guided 6  
+- [ ] GO · Reactions · E2E write only when complete  
+- [ ] About dual-cite + bans  
+- [ ] No TikTok / Reels / Meta / Chromium Edge / Face ID as defaults  
+- [ ] Official dests have named hooks — **no** `data-5x-save` on the official 10  
+- [ ] e2e mvp + flows + one-thing 2016 green  
+- [ ] HTML ≤ 50  
+
+Leftover pixels + S17 polish are **not** the door.
+
+---
+
+## Definition of done (museum-grade A leftover)
+
+- [ ] Stories is multipath (compose + archive of YOUR slide)  
+- [ ] Crumbs stay in-product · ← previous on trail 1–4  
+- [ ] Official PLAQUE count for 2016 = **0** (`audit-all-year-flows.js`)  
+- [ ] Densify + trail-real green  
+- [ ] Pixels WA or failed-final  
+
+---
+
+## How to execute (when you say implement)
+
+1. S0 already `[x]`.  
+2. S1 clone door. Sweep 2015 strings.  
+3. S2 star before anything else. one-thing test.  
+4. S3–S5 P0.  
+5. S6–S9 leftover.  
+6. S10–S12 trails + extras.  
+7. S13–S14 hub + e2e.  
+8. S15–S16 pixels + gates.  
+9. Stop. S17 only if the star still feels thin.
+
+**Do not start S1 until you say implement.**

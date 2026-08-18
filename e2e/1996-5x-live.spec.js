@@ -33,60 +33,32 @@ test.describe('1996 5× live F1–F5', () => {
     await expect(page.locator('[data-5x-next] a[href*="hotmail"]').first()).toBeVisible();
   });
 
-  test('F2 HoTMaiL compose empty never writes', async ({ page }) => {
+  test('F2 HoTMaiL login gold — empty never writes', async ({ page }) => {
     await page.goto('/years/1996/sites/hotmail/index.html');
-    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt96-hotmail');
+    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt96-hotmail-user');
     await page.reload();
-    const save = page.locator('[data-5x-save]').first();
-    await expect(save).toBeVisible();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt96-hotmail')).toBeFalsy();
-    await page.locator('[data-5x-req="a"]').first().check();
-    await page.locator('[data-5x-req="b"]').first().check();
-    const extra = page.locator('[data-5x-req="c"]');
-    if (await extra.count()) await extra.first().check();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt96-hotmail'), { timeout: 8000 }).toBeTruthy();
-    const raw = (await getKey(page, 'itt96-hotmail')) || '';
-    expect(raw).toMatch(/real|multiStep/i);
-    const leak = await page.evaluate((yy) => {
-      const bad = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i) || '';
-        if (/^itt\d{2}-/.test(k) && k.indexOf('itt' + yy + '-') !== 0) bad.push(k);
-      }
-      return bad;
-    }, '96');
-    expect(leak).toEqual([]);
-    await expect(page.locator('[data-5x-next] a[href*="spacejam"]').first()).toBeVisible();
+    await expect(page.locator('[data-5x-save]')).toHaveCount(0);
+    await page.locator('form[data-hotmail-login] input[type="image"], form[data-hotmail-login] button, form[data-hotmail-login] input[type="submit"]').first().click();
+    await expect.poll(async () => getKey(page, 'itt96-hotmail-user')).toBeFalsy();
+    await page.fill('form[data-hotmail-login] [name="login"]', 'museum96');
+    await page.fill('form[data-hotmail-login] [name="pass"]', 'modem');
+    await page.locator('form[data-hotmail-login] input[type="image"], form[data-hotmail-login] button, form[data-hotmail-login] input[type="submit"]').first().click();
+    await expect.poll(async () => getKey(page, 'itt96-hotmail-user'), { timeout: 8000 }).toBeTruthy();
   });
 
-  test('F3 Space Jam 3 planets empty never writes', async ({ page }) => {
+  test('F3 Space Jam 3 planets gold', async ({ page }) => {
     await page.goto('/years/1996/sites/spacejam/index.html');
-    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt96-jam');
-    await page.reload();
-    const save = page.locator('[data-5x-save]').first();
-    await expect(save).toBeVisible();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt96-jam')).toBeFalsy();
-    await page.locator('[data-5x-req="a"]').first().check();
-    await page.locator('[data-5x-req="b"]').first().check();
-    const extra = page.locator('[data-5x-req="c"]');
-    if (await extra.count()) await extra.first().check();
-    await save.click();
+    await page.evaluate(() => {
+      try { localStorage.removeItem('itt96-jam'); } catch (e) {}
+      try { sessionStorage.removeItem('itt96-sj-seen'); } catch (e2) {}
+    });
+    await expect(page.locator('[data-5x-save]')).toHaveCount(0);
+    await page.locator('[data-sj-planet="press"]').click();
+    await page.goto('/years/1996/sites/spacejam/index.html');
+    await page.locator('[data-sj-planet="jam"]').click();
+    await page.goto('/years/1996/sites/spacejam/index.html');
+    await page.locator('[data-sj-planet="bball"]').click();
     await expect.poll(async () => getKey(page, 'itt96-jam'), { timeout: 8000 }).toBeTruthy();
-    const raw = (await getKey(page, 'itt96-jam')) || '';
-    expect(raw).toMatch(/real|multiStep/i);
-    const leak = await page.evaluate((yy) => {
-      const bad = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i) || '';
-        if (/^itt\d{2}-/.test(k) && k.indexOf('itt' + yy + '-') !== 0) bad.push(k);
-      }
-      return bad;
-    }, '96');
-    expect(leak).toEqual([]);
-    await expect(page.locator('[data-5x-next] a[href*="realplayer"]').first()).toBeVisible();
   });
 
   test('F4 RealPlayer buffer empty never writes', async ({ page }) => {

@@ -1,7 +1,7 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-16 · **Ship update:** hub **1994–2021** playable · **2021 lean from-scratch** (ATT Ask App Not to Track) · **2022+ not on disk**  
-**2020:** [`2020-READ-FIRST.md`](2020-READ-FIRST.md) · [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
+**Date:** 2026-08-18 · **Ship update:** hub **1994–2018** playable (25 years) · **2019+ not on disk** · lean 2015 Periscope / 2016 Stories / 2017 Face ID / 2018 GDPR doors
+
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
 **Museum-grade A gap map:** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md)  
 **2014–2016 → A (execute):** [`2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md) (P0–P16 · 2014 lean · 2015/16 pixels · 2016 promote · 2017+ stop)  
@@ -10,12 +10,29 @@
 **Cross-year leftover execute:** [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md) (X1–X21 · 2013 Chrome/voice · 2015 clone-honest · 2008–2012 Chrome REAL)  
 **Date:** 2026-08-13 · **Ship update:** hub **1994–2016** playable · **2014–2016 museum-ready L3 densify**  
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · master bible [`2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md`](2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md)  
+**2011–2021 leftover → lean A (2026-08-17):** [`2011-2021-TO-MUSEUM-GRADE-GOALS-PHASES-STEPS-ROI-2026-08-16.md`](2011-2021-TO-MUSEUM-GRADE-GOALS-PHASES-STEPS-ROI-2026-08-16.md) **P1–P11 on disk**. Guided 2–3 are machines. Years stay **A−** where HTML exceeds lean cap (usually ≤70, 2021 ≤75). Real WA/Newsroom stills remain **[~]**. No invented brand pixels.
+
+| Year | Leftover phase | Gold | Guided 2–3 | Grade now |
+|------|----------------|------|------------|-----------|
+| 2011 | P6 invite / G+ / Qwikster | Airbnb `itt11-airbnb` | Airbnb · Spotify | **A−** (HTML over 60) |
+| 2012 | P5 pin / tile / Maps | IG Android `itt12-ig-android` | IG · IPO | **A−** (HTML over cap) |
+| 2013 | P7 iOS 7 flat 2-page | Vine `itt13-vine-posts` | Vine · iOS 7 | **A−** |
+| 2014 | lean door (25 HTML) | WhatsApp `itt14-wa-install` | WA · Heartbleed | **A−** |
+| 2015 | lean Periscope door | Periscope `itt15-periscope` | Periscope · Photos | **A−** |
+| 2016 | P4 L1–L4 | Stories `itt16-ig-stories` | Stories | **A−** |
+| 2017 | P9 parked `[~]` | Face ID `itt17-faceid` | Face ID · Fortnite | **A−** / docs A claim predates leftover |
+| 2018 | P3 S15 | GDPR `itt18-gdpr` | GDPR | **A−** |
+| 2019 | not on disk | — | — | **cut** |
+| 2020 | not on disk | — | — | **cut** |
+| 2021 | not on disk | — | — | **cut** |
+
 **2014:** L3 densify · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
 **2015:** L3 densify · [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) · `npm run test:e2e:2015`  
 **2016:** L3 densify · [`2016-MUSEUM-GRADE.md`](2016-MUSEUM-GRADE.md) · `npm run test:e2e:2016`  
 **Purpose:** Single source of truth for what is **playable on disk** vs research-only.
 
 **Bar:** [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md)  
+**Landing % / leftover options (1994–2012 disk):** [`MUSEUM-GRADE-LANDING-MAP-1994-2012.md`](MUSEUM-GRADE-LANDING-MAP-1994-2012.md)  
 **Completion pass:** immersion storage isolation · period CSS through 2012 · early shell `data-itt-year` · 2011–12 densify/trail elevate.  
 **2000–2002 deep-doc index:** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
 **Flow-layer research (earlier open years):** [`FLOW-IMPROVEMENTS-DEEP-RESEARCH-1994-2008.md`](FLOW-IMPROVEMENTS-DEEP-RESEARCH-1994-2008.md)  
@@ -39,25 +56,15 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2021** |
-| Hub locked | **2022+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2021/` |
-| Period CSS | `css/period-1995.css` … `period-2021.css` |
-| Hub open years | **1994–2016** |
-| Hub locked | **2017+** (not scaffolded) |
-| Year trees | `years/1994/` … `years/2016/` |
-| Period CSS | `css/period-1995.css` … `period-2016.css` |
-| **2010** | **Museum-ready** · playable · see section below |
-| **2011** | **Museum-ready** · lean 52 HTML · forest pruned 2026-08-10 · playable |
-| **2012** | **Museum-ready** · lean 49 HTML · forest pruned 2026-08-10 · playable |
-| **2013** | **Museum-ready A−** · lean 61 HTML · forest pruned 2026-08-10 · playable |
-| **2014** | **Museum-grade A** · lean 62 HTML · forest pruned 2026-08-10 · playable |
-| **2015** | **Museum-ready A−** · lean **95 HTML** · Layer C failed-final closed · playable |
-| **2016** | **Museum-ready A−** · lean **54 HTML** · playable |
-| **2017** | **Museum-grade A** · lean · P2 harvest 2026-08-11 · playable |
-| **2018** | **Museum-ready A−** · lean 48 HTML · GDPR one-thing · Consent Dash · playable |
-| **2019** | **Museum-ready A−** · lean **52 HTML** · forest pruned 2026-08-15 · Disney+ Who’s watching · Continue Row · playable |
-| **2020** | **Museum-ready A−** · lean from-scratch · Zoom join→mute→chat→leave · Reels 15s · Flash EOL · S15 rooms · Sus Vote · playable |
+| Hub open years | **1994–2012** (19 years) |
+| Hub locked | **2013+** (not on disk) |
+| Year trees | `years/1994/` … `years/2012/` |
+| Period CSS | `css/period-1995.css` … `period-2012.css` |
+| HTML on disk | 1994 193 · 1995 160 · 1996 114 · 1997 100 · 1998 140 · 1999 162 · 2000 185 · 2001 200 · 2002 221 · 2003 244 · 2004 300 · 2005 304 · 2006 309 · 2007 326 · 2008 334 · 2009 344 · **2010 38** (lean) · **2011 28** (lean) · **2012 30** (lean) · 2013+ **not on disk** |
+| **2010** | **Live · lean from-scratch** · ~22 rooms · star Instagram iOS · `itt10-*` · `e2e/2010-mvp.spec.js` |
+| **2011** | **Live · lean from-scratch** · Google+ star · Spotify US · `itt11-*` · `e2e/2011-mvp.spec.js` |
+| **2012** | **Live · lean from-scratch** · Instagram Android + $1B · IPO $38 · `itt12-*` · `e2e/2012-mvp.spec.js` |
+| **2013+** | **Not on disk** |
 
 ### 2016 (lean from-scratch · playable)
 
@@ -120,34 +127,61 @@
 | Research | **[`2019-READ-FIRST.md`](2019-READ-FIRST.md)** |
 | e2e | `npm run test:e2e:2019` |
 
+### 2020 (lean from-scratch · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2020/` | **Live · lean** (123 HTML) |
+| Hub | **Unlocked** |
+| Prefix | **`itt20`** |
+| P0 | Zoom join→mute→chat→leave · Reels 15s · Flash EOL · CCPA |
+| One-thing | Zoom mute · `itt20-zoom` |
+| Game | Sus Vote (`itt20-game-among`) |
+| Research | **[`2020-READ-FIRST.md`](2020-READ-FIRST.md)** |
+| e2e | `npm run test:e2e:2020` |
+
+### 2021 (lean from-scratch · playable)
+
+| Item | Status |
+|------|--------|
+| `years/2021/` | **Live · lean** (43 HTML) |
+| Hub | **Unlocked** |
+| Prefix | **`itt21`** |
+| P0 | ATT 26 Apr · WhatsApp → Signal · Meta 28 Oct (app still Facebook) · Flash brick |
+| One-thing | ATT Ask App Not to Track · `itt21-att` (Allow never writes) |
+| Game | Five Letter (`itt21-game-five`) |
+| Research | **[`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md)** |
+| e2e | `npm run test:e2e:2021` |
+
 ### 2015 (lean from-scratch rebuild · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2015/` | **Live · lean** (**95 HTML** · forest pruned · do not restore backup) |
-| Hub | **Unlocked** |
+| `years/2015/` | **Live · lean** (~29 HTML · Periscope star · do not restore Watch-checkbox forest) |
+| Hub | **Unlocked** · 22 years · 1994–2015 |
 | Prefix | **`itt15`** |
 | Scale | Live Stats June **863,105,652 (−11%)** · users **3,185,996,155** · 1B dip honesty |
-| P0 | Apple Watch ships · Win10 free upgrade · Edge · WhatsApp Web · Periscope · Apple Music · Google Photos · iOS 9 blockers |
-| One-thing | Watch shipped Apr 24 · `itt15-watch` |
+| P0 | Periscope Go LIVE · Google Photos locker · Win10 free upgrade · Apple Music trial |
+| One-thing | Periscope titled Go LIVE · `itt15-periscope` |
 | Pixels | Periscope WA 20150326 · Win10 Version Museum 2015 · Watch/Music/WA Web stills **failed-final** (Wayback HTML interstitial · no invented logos) |
 | Research | **[`2015-READ-FIRST.md`](2015-READ-FIRST.md)** · from-scratch [`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) |
 | Backup | `/tmp/itt-2015-clone-backup-2026-08-10` |
 | e2e | `npm run test:e2e:2015` |
 
-### 2014 (museum-ready A–F · playable)
+### 2014 (lean door · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2014/` | **Live · lean 43 HTML** (forest pruned 2026-08-10 · backup `/tmp/itt-2014-clone-backup-20260810`) |
-| Hub | **Unlocked** |
+| `years/2014/` | **Live · lean 25 HTML** (from-scratch 2026-08-17 · do **not** restore `/tmp/itt-2014-clone-backup-20260810`) |
+| Hub | **Unlocked** · 21 years · 1994–2014 |
 | Prefix | **`itt14`** |
 | Scale | Live Stats June **968,882,453** (+44%) · **1B first crossed Sep** · users **2,925,249,355** |
-| P0 | WhatsApp deal+chat · Heartbleed rotate · iPhone 6/6 Plus + Pay Oct + Bendgate + Watch announce · 1B · Ice Bucket · Win10 TP · Chrome 3-check REAL |
-| P1 | Twitch · Oculus · Alibaba · Echo invite · Material · Serial · Slack REAL · Cardboard |
-| P2 gems | Secret · Yik Yak · Ello · Musical.ly |
-| Game | Tile Fold (`itt14-game-tilefold`) · gold 128 · death-write score>0 |
-| Research | **[`2014-READ-FIRST.md`](2014-READ-FIRST.md)** · improve **I1–I10 [x]** |
+| Star | WhatsApp install `itt14-wa-install` (19 Feb · $16B newsroom / $19B press · 450M MAU) |
+| P0 | Heartbleed rotate literacy · Ice Bucket nominate · iPhone 6 / iOS 8 / Apple Pay |
+| Leftover | Material · Slack · Twitch · Facebook deal · Twitter 140 · YouTube · Chrome |
+| Game | Tile Fold (`itt14-game-tilefold`) · gold 128 · first merge writes |
+| Pixels | **failed-final** (P12 not shipped) |
+| Research | **[`2014-READ-FIRST.md`](2014-READ-FIRST.md)** · playbook [`2014-FROM-SCRATCH-RESEARCH-IMPLEMENT-PHASES.md`](2014-FROM-SCRATCH-RESEARCH-IMPLEMENT-PHASES.md) P2–P11 **[x]** |
 | e2e | `npm run test:e2e:2014` |
 
 ### 2013 (lean · museum-ready A− · playable)
@@ -165,79 +199,24 @@
 | Capture | [`references/2013/`](references/2013/) · honesty pack stub |
 | Residual | L4 WA pixels only · forest gone |
 
-### 2012 (lean · museum-ready · playable)
+### 2012 (lean · playable · **not** museum-ready)
 
 | Item | Status |
 |------|--------|
-| `years/2012/` | **Live · lean** (47 HTML · forest pruned 2026-08-10 · backup `/tmp/itt-2012-clone-backup-20260811`) |
-### 2014 (museum-ready · L3 densify · playable)
-
-| Item | Status |
-|------|--------|
-| `years/2014/` | **Live** |
-| Hub | **Unlocked** |
-| Prefix | **`itt14`** |
-| Scale | Live Stats June **968,882,453** (+44%) · users **2,925,249,355** · **1B first crossed Sep 2014** |
-| P0 | WhatsApp deal+chat · Heartbleed · iPhone 6/6 Plus/Pay/Bendgate · Ice Bucket · 1B · Chrome · Win10 TP honesty |
-| P1 | Twitch · Oculus · Alibaba · Material · Serial · Echo announce |
-| Densify gems | Secret · Yik Yak · Ello · Hyperlapse (2026-08-13) |
-| Research | **[`2014-READ-FIRST.md`](2014-READ-FIRST.md)** · parity map · step-by-step · master bible · deep harvest |
-| Museum grade | [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) — **Museum-ready · L3 densify** |
-| e2e | mvp · densify · flows · real · trail · shell-honesty · `npm run test:e2e:2014` |
-| Residual | L4 WA pixels · optional Gamergate literacy · continuity forest voice |
-
-### 2015 (museum-ready · L3 densify · playable)
-
-| Item | Status |
-|------|--------|
-| `years/2015/` | **Live** |
-| Hub | **Unlocked** |
-| Prefix | **`itt15`** |
-| Scale | Live Stats June **863,105,652 (−11%)** · users **3,185,996,155** |
-| P0 | Apple Watch ship · Win10 free upgrade · Edge · Periscope/Meerkat/FB Live · Apple Music · iOS 9 blockers · Google Photos |
-| Densify gems | Peach · Discord · Snap Discover · Secret end · Messenger bots |
-| Research | **[`2015-READ-FIRST.md`](2015-READ-FIRST.md)** · goals · ARTIFACTS-MAP · CAPTURE-LOG |
-| Museum grade | [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) — **Museum-ready · L3 densify** |
-| e2e | mvp · densify · flows · real · trail · shell-honesty · `npm run test:e2e:2015` |
-| Residual | L4 brand pixels (H15 harvest) · clone-forest year-voice · optional careful literacy |
-
-### 2016 (museum-ready · L3 densify · playable)
-
-| Item | Status |
-|------|--------|
-| `years/2016/` | **Live** |
-| Hub | **Unlocked** |
-| Prefix | **`itt16`** |
-| Scale | Live Stats June **1,045,534,808 (+21%)** · users **3,424,971,237** · 1B restabilized Mar 2016 |
-| P0 | IG Stories · Pokémon GO multipage · FB Reactions · iPhone 7 jack · AirPods · Vine goodbye · musical.ly · WhatsApp E2E |
-| P1 densify | Allo · Oculus Rift CV1 · MS×LinkedIn · Win10 free ends · Spectacles · Switch announce |
-| Research | **[`2016-READ-FIRST.md`](2016-READ-FIRST.md)** · master bible · harvest · ARTIFACTS-MAP · CAPTURE-LOG |
-| Museum grade | [`2016-MUSEUM-GRADE.md`](2016-MUSEUM-GRADE.md) — **Museum-ready · L3 densify** |
-| e2e | mvp · densify · flows · real · trail · shell-honesty · `npm run test:e2e:2016` |
-| Residual | L4 brand pixels (H16 harvest) · clone-forest voice · optional platform literacy |
-
-### 2012 (museum-ready · playable)
-
-| Item | Status |
-|------|--------|
-| `years/2012/` | **Live** |
+| `years/2012/` | **Live · lean** (**30 HTML** · do not restore `/tmp/itt-2012-clone-backup-20260811`) |
 | Hub | **Unlocked** |
 | Prefix | **`itt12`** |
-| Shell | Win7 + Chrome/IE9 rising · **Win8 + IE10** product late (not January-only mass) |
-| Scale | Live Stats June **697,089,489** (+101%) · Pingdom Dec **634M** · users ~**2.4B** |
-| P0 | **Instagram Android + FB $1B buy** · **Facebook IPO + 1B users** · **Pinterest mass** · **iPhone 5/Lightning/Maps** · **iPad mini** · **Win8** · **Chrome > IE** |
-| P1 | UberX · Snapchat densify · YouTube Gangnam · Reddit residual |
-| Research | **[`2012-READ-FIRST.md`](2012-READ-FIRST.md)** · RESEARCH · master bible · ultra-deep · minute pack |
-| Museum grade | [`2012-MUSEUM-GRADE.md`](2012-MUSEUM-GRADE.md) — **Museum-ready** |
-| e2e | mvp · densify · flows A–T · real · trail · hub-years |
-| Capture | CAPTURE-LOG · ASSETS honesty pack (continuity / failed-final) |
-| Residual forever | Perfect WA brand stills optional · forest gone |
+| P0 | Instagram Android + $1B · Facebook IPO $38 · Pinterest · iPhone 5 / Maps · leftover SoundCloud |
+| One-thing | Instagram Android · `itt12-ig` |
+| Research | **[`2012-READ-FIRST.md`](2012-READ-FIRST.md)** · leftover [`2012-MUSEUM-GRADE-LEFT.md`](2012-MUSEUM-GRADE-LEFT.md) |
+| e2e | `npm run test:e2e:2012` |
+| Layer C | H12-01–04 `[failed-final]` (WA 503) · H12-05 chrome `[continuity]` 2009 still |
 
 ### 2011 (lean · museum-ready · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2011/` | **Live · lean** (46 HTML · forest pruned 2026-08-10 · backup `/tmp/itt-2011-clone-backup-20260811`) |
+| `years/2011/` | **Live · lean** (**28 HTML**) |
 | Hub | **Unlocked** |
 | Prefix | **`itt11`** |
 | Shell | Win7 + **IE 9** · Chrome product · IE8 residual honest |
@@ -245,26 +224,26 @@
 | P0 | **Spotify US** · **Facebook Timeline** · **Google+** · **iPhone 4S/Siri/iOS 5/iCloud** · **iPad 2** · **Netflix/Qwikster** · **IE 9** |
 | P1 seeds | Snapchat · Instagram densify (still iOS-only) · Android ICS |
 | Research | [`2011-RESEARCH.md`](2011-RESEARCH.md) · master bible · minute pack |
-| Museum grade | [`2011-MUSEUM-GRADE.md`](2011-MUSEUM-GRADE.md) — **Museum-ready** |
-| e2e | mvp · densify · flows A–T · real · trail · hub-years |
+| Museum grade | leftover implement [`2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md`](2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md) |
+| e2e | `e2e/2011-mvp.spec.js` · `e2e/2011-flows.spec.js` · densify/trail |
 | Capture | CAPTURE-LOG · ASSETS honesty pack (continuity / failed-final) |
 | Residual forever | Perfect WA brand stills optional |
 
-### 2010 (museum-ready · playable)
+### 2010 (lean from-scratch · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2010/` | **Live** |
+| `years/2010/` | **Live · lean from-scratch** (~22 rooms). Do not restore the old 115-room forest. |
 | Hub | **Unlocked** |
 | Prefix | **`itt10`** |
-| Shell | Win7 + **IE 8** · IE9 beta product · Chrome product room |
-| Scale | Live Stats June **206,956,723** · Pingdom Dec **~255M** · users ~**2B** class |
-| P0 | **iPad** multipage · **iPhone 4** FaceTime/Antenna/iOS4 · **Instagram** · App Store catalog · Facebook Open Graph · Foursquare · FarmVille peak |
-| P1 seeds | Pinterest · Uber SF · Wave funeral · Nexus One · IE9 beta |
-| Research | [`2010-RESEARCH.md`](2010-RESEARCH.md) · [`2010-TO-100-PERCENT-STEP-BY-STEP-PLAN.md`](2010-TO-100-PERCENT-STEP-BY-STEP-PLAN.md) · master bible |
-| Museum grade | [`2010-MUSEUM-GRADE.md`](2010-MUSEUM-GRADE.md) — **Museum-ready** |
-| e2e | mvp · densify · flows · real · trail · hub-years |
-| Capture | [`references/2010/CAPTURE-LOG.md`](references/2010/CAPTURE-LOG.md) · [wa] iPad/FB/4sq · failed-final residual |
+| Shell | **Win7 + IE 8** · IE9 / Chrome product rooms |
+| Scale | Live Stats June **206,956,723** · Pingdom Dec **255 million** (dual-cite) · users ~**2.05B** / **1.97B** |
+| Star | **Instagram iOS** filter → share · `itt10-ig` / `itt10-ig-posts` |
+| P0 | iPad · iPhone 4 FaceTime/Antenna · Open Graph Like ×2 · FarmVille **peak** 83.76M |
+| Game | Sling Nest (`itt10-game-slingnest`) · museum pebble · not Rovio art |
+| Research | **[`2010-READ-FIRST.md`](2010-READ-FIRST.md)** · [`2010-RESEARCH.md`](2010-RESEARCH.md) · harvest [`2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md`](2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md) · from-scratch [`2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · bible [`2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) |
+| Corpus | [`references/2010/`](references/2010/) Wikipedia 2010 + extlinks + CDX |
+| e2e | `e2e/2010-mvp.spec.js` · `npm run test:e2e:2010` |
 
 ### 2009 (100% content · playable)
 
@@ -472,7 +451,7 @@ Plan: [`1996-1997-IMPLEMENTATION-PHASES.md`](1996-1997-IMPLEMENTATION-PHASES.md)
 
 ---
 
-**2026-08-09 revert (history):** years 2014–2020 were briefly removed, then **2014 MVP was rebuilt the same day**, then **2015 MVP** was cloned from live 2014 + overlay. **2026-08-10:** lean **2016** unlocked. **2026-08-11:** lean **2017** + **2018** on hub — then **2019** + **2020** lean from-scratch the same day. Playable **1994–2020**. **2021+ not on disk.** 2014 improve I1–I10: [`2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md`](2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md). Leftover 2015: [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) Part 2 **L0–L6**.
+**2026-08-09 revert (history):** years 2014–2020 were briefly removed, then **2014 MVP was rebuilt the same day**, then **2015 MVP** was cloned from live 2014 + overlay. **2026-08-10:** lean **2016** unlocked. **2026-08-11:** lean **2017** + **2018** on hub — then **2019** + **2020** lean from-scratch the same day. **2026-08-16:** hub **1994–2021**. **2022+ not on disk.** 2014 improve I1–I10: [`2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md`](2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md). Leftover 2015: [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) Part 2 **L0–L6**.
 
 **2026-08-09 feel-done residual:** Nostalgia F0–F3 + D8–D10 + D5 + T1 + T2 + T4 on disk — 2008–2013 year-labels, continuity archive chips, shared `css/phone-frame.css` bezels (2007 iPhone · 2010–11 IG · 2013 Vine/iOS7/Snap), IG share requires a filter click, 1996 portal wars land in rooms and write `itt96-portal-wars` only at 3 visits (session partials), 1995 cart→SSL→thanks trail links, 2001 Wikipedia Save → `itt01-wiki-pages`.
 

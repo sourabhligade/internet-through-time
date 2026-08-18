@@ -78,6 +78,7 @@
         nameIn.value = "";
         renderCircles();
         setStatus("Circle <b>" + esc(n) + "</b> saved.");
+        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
         if (ITT._immersionApi && (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)) {
           (ITT._immersionApi.markTourUsed || ITT._immersionApi.markTourProgress)();
         }
@@ -139,6 +140,9 @@
           "<p style='font-size:11px;color:#aaa'>Multi-person video in this browser only · no live camera · 2011 field-trial theater</p></div>";
         saveJSON(key("gplus-hangout"), session);
         setStatus("Hangout started with " + session.tiles.length + " people · saved.");
+        try {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+        } catch (eNext) { /* */ }
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
           ITT._immersionApi.actionFeedback("Hangout started · circle “" + session.circle + "”.", {
             flash: true

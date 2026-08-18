@@ -189,7 +189,6 @@ blink { animation: blink 1s step-end infinite; }
   font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
   font-size: 12px;
   border-top: 2px solid #99ccff;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
   pointer-events: none;
 }
 #itt-wayfind a {

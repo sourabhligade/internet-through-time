@@ -84,7 +84,12 @@
         if (Object.prototype.hasOwnProperty.call(extra.merge, k)) blob[k] = extra.merge[k];
       }
     }
+    if (extra.gold) blob.gold = true;
+    if (extra.label) blob.label = extra.label;
     saveJSON(key, blob);
+    try {
+      if (sc > 0 && global.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document);
+    } catch (eN) { /* */ }
     try {
       if (sc > 0 && global.ITT && ITT.MuseumProgress && typeof ITT.MuseumProgress.stamp === "function") {
         ITT.MuseumProgress.stamp(year, "game-" + gameId, {
@@ -123,20 +128,30 @@
     return prev && typeof prev.best === "number" ? prev.best : 0;
   }
 
-  function isFast() {
+  function locSearch() {
     try {
-      return /(?:\?|&)fast=1\b/.test(location.search || "");
-    } catch (e) {
-      return false;
+      if (location.search) return location.search;
+    } catch (e0) {
+      /* */
     }
+    try {
+      if (window.frameElement && frameElement.src) {
+        var src = String(frameElement.src);
+        var i = src.indexOf("?");
+        if (i >= 0) return src.slice(i);
+      }
+    } catch (e1) {
+      /* */
+    }
+    return "";
+  }
+
+  function isFast() {
+    return /(?:\?|&)fast=1\b/.test(locSearch());
   }
 
   function isTest() {
-    try {
-      return /(?:\?|&)test=1\b/.test(location.search || "");
-    } catch (e) {
-      return false;
-    }
+    return /(?:\?|&)test=1\b/.test(locSearch());
   }
 
   function setStatus(el, msg) {
@@ -322,23 +337,20 @@
     "1997": "Find a lobby. Get four in a row.",
     "1998": "Jump splash walls. Grab green SKIP pads.",
     "1999": "Keep the pet fed, happy, and clean.",
-    "2000": "Rate every card, then submit — incomplete never writes.",
+    "2000": "Place furniture. Use it. Throw a party when every need is green.",
     "2001": "Click to pathfind. Chop, mine, bank.",
     "2002": "Place stickers. Make the room yours.",
     "2003": "Start a gag fight. Land the bit.",
-    "2004": "Whack memos. Coffee is bonus. Avoid HR.",
+    "2004": "Swap neighbors. Match three. Ride the cascade.",
     "2005": "Hold to climb. Release to fall. Don’t hit walls.",
     "2006": "Draw a trail. Ride it without crashing.",
     "2007": "Push boxes. Reach the exit.",
-    "2008": "Open Bubble Pop Free. Tap the grid.",
+    "2008": "Stick goo. Build a span. Reach the pipe.",
     "2009": "Check literacy · plant · harvest before wilt.",
-    "2010": "Draw a track. Ride it. Stay on the line.",
-    "2011": "Swap letters. Make a word before time.",
-    "2012": "Sketch the prompt. Guess it.",
-    "2013": "Tap to flap. Don’t hit the pipes.",
-    "2014": "Fold tiles. Reach 128 for gold.",
-    "2015": "Eat smaller cells. Split with Space. Hit mass 80.",
-    "2016": "Visit stops. Challenge the gym silhouette."
+    "2010": "Fling the pebble. Hit the nest.",
+    "2011": "Deal a rack. Play a word.",
+    "2012": "Look at the doodle. Pick the word.",
+    "2013": "Hold the loop. Six seconds."
   };
 
   var DEFAULT_NEXT = {
@@ -348,18 +360,17 @@
     "1997": { href: "../icq/index.html", label: "ICQ 1997" },
     "1998": { href: "../google/index.html", label: "Google 1998" },
     "1999": { href: "../geocities/index.html", label: "GeoCities 1999" },
+    "2000": { href: "../homestar/index.html", label: "Homestar Runner" },
     "2004": { href: "../facebook/index.html", label: "thefacebook 2004" },
     "2005": { href: "../youtube/index.html", label: "YouTube 2005" },
     "2006": { href: "../youtube/index.html", label: "YouTube 2006" },
     "2007": { href: "../iphone/index.html", label: "iPhone 2007" },
     "2008": { href: "../appstore/index.html", label: "App Store 2008" },
     "2009": { href: "../farmville/index.html", label: "FarmVille residual" },
-    "2010": { href: "../instagram/index.html", label: "Instagram 2010" },
-    "2012": { href: "../instagram/index.html", label: "Instagram 2012" },
-    "2013": { href: "../vine/index.html", label: "Vine 2013" },
-    "2014": { href: "../whatsapp/index.html", label: "WhatsApp 2014" },
-    "2015": { href: "../apple/watch.html", label: "Apple Watch ships" },
-    "2016": { href: "../instagram/stories.html", label: "Instagram Stories" }
+    "2010": { href: "../instagram/index.html", label: "Instagram iOS" },
+    "2011": { href: "../googleplus/index.html", label: "Google+" },
+    "2012": { href: "../instagram/android.html", label: "Instagram Android" },
+    "2013": { href: "../vine/record.html", label: "Vine 6s" }
   };
 
   function isPaused() {

@@ -46,6 +46,10 @@
       connectBusyChance: 0.13
     },
     urlMap: {
+      "sites/askjeeves/index.html": "http://museum.local/years/1996/sites/askjeeves/index.html",
+      "sites/craigslist/index.html": "http://museum.local/years/1996/sites/craigslist/index.html",
+      "sites/mtv/index.html": "http://museum.local/years/1996/sites/mtv/index.html",
+      "sites/portals/index.html": "http://museum.local/years/1996/sites/portals/index.html",
       "sites/playable/famous.html": "http://museum.local/years/1996/sites/playable/famous.html",
 
       "sites/spacejam/jamcentral.html": "http://museum.local/years/1996/sites/spacejam/jamcentral.html",

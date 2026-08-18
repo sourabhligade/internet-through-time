@@ -16,11 +16,11 @@
 **★ 2019 from-scratch research freeze (2026-08-11):** [`2019-READ-FIRST.md`](2019-READ-FIRST.md) · [`2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · [`2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) · [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · **S0 [x] · do not scaffold until asked.**  
 **★ Clone forest 2013–2020 strip:** **[x]** 2026-08-08 · 2013 keeps year-true iOS7/Vine/UberX · 2014 keeps YikYak/Secret/Ello · 2020 keeps year-true P0 quizzes.  
 **Purpose:** Single checklist of what is **still open** vs playable ship.  
-**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2021** + games wing. **2022+ not on disk.**  
+**Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2009** + games wing. **2010+ not on disk.**  
 **Companions:** [`LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md`](LEFT-2010-PLUS-UI-UX-DENSIFY-MAP.md) · [`MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md`](MUSEUM-GRADE-AUTHENTICITY-IMPROVEMENTS-SCAN-1994-2018-2026-08-07.md) (per-year authenticity % · what to do) · [`SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) (year rooms) · [`GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md`](GAMES-SOURCE-EXPANSION-DEEP-RESEARCH-INFO-UX-1994-2018.md) · [`GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](GAMES-SOURCE-EXPANSION-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) (games densify G0–G11) · [`TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md`](TO-100-PERCENT/PLAN-2011-2012-2013-TO-100.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md)
 
 **Ship truth (do not re-open as “unbuilt”):**  
-All years **1994–2021** are on disk and hub-unlocked. **2022+ is not playable.** 2021 leftover is S15 P2 (Clubhouse fade · Spaces · Shorts US · Squid Game chip) — do not dest-fill help/faq. Execute leftover: [`2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md`](2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md). · 2021: [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md).
+All years **1994–2009** are on disk and hub-unlocked. **2010+ is not playable.** 2021 leftover is S15 P2 (Clubhouse fade · Spaces · Shorts US · Squid Game chip) — do not dest-fill help/faq. Execute leftover: [`2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md`](2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md). · 2021: [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md).
 
 ---
 
@@ -193,7 +193,7 @@ Do **not** treat as backlog unless product scope changes:
 
 ## 10. One-line status
 
-**Done:** **27-year** museum playable (**1994–2020**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2011–20 lean years.
+**Done:** **28-year** museum playable (**1994–2021**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2011–21 lean years.
 
 **Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2022+ not on disk**. 2021 A− on disk (ATT gold) · leftover S15 P2 only ([`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md)).
 

@@ -359,7 +359,7 @@ def main() -> None:
     n = 0
     maps = 0
     statics = 0
-    for year in range(1994, 2022):
+    for year in range(1994, 2010):
         dest_dir = ROOT / "years" / str(year) / "sites" / "playable"
         dest_dir.mkdir(parents=True, exist_ok=True)
         (dest_dir / "famous.html").write_text(page(year), encoding="utf-8")

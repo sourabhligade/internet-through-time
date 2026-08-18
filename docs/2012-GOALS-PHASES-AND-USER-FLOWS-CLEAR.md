@@ -1,150 +1,103 @@
-# 2012 — Clear goals, step-by-step phases, how-to, and period user flows
+# 2012 — Clear goals, phases, and user flows A–T
 
-**Date:** 2026-08-02  
-**Purpose:** Readable playbook for building museum year **2012**.
-
-1. **Goals** — what “done” means  
-2. **Phases** — ordered steps and how each is achieved  
-3. **User flows A–T** — how people used the internet in **2012**  
-4. **Storage · anti-goals · definition of done**
-
-> **Start here:** [`2012-READ-FIRST.md`](2012-READ-FIRST.md)  
-> **For maximum detail** (every locked number · minute how/why/what per phase · flows · sources):  
-> **[`2012-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2012-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md)**  
-> Ultra-deep: [`2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md`](2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md) · short dossier [`2012-RESEARCH.md`](2012-RESEARCH.md)
-
-**Disk truth today:** Hub **1994–2012** · **`years/2012/` live** · **museum-ready** · `itt12`.  
-**Legal:** Educational reconstruction only. **localStorage theater only.** Never invent brand pixels.
-
-| Companion | Role |
-|-----------|------|
-| [`2012-READ-FIRST.md`](2012-READ-FIRST.md) | **Entry map** |
-| [`2012-RESEARCH.md`](2012-RESEARCH.md) | Thesis · timeline · bans · scale |
-| [`2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md`](2012-DEEP-RESEARCH-FULL-PASS-2026-08-02.md) | Ultra-deep kits · UI · harvest |
-| [`references/2012/CAPTURE-LOG.md`](references/2012/CAPTURE-LOG.md) | Pixel queue |
-| Live year | `years/2012/` · parent continuity `years/2011/` |
+**Date:** 2026-08-17  
+**Status:** Lean year **on disk**. Prefix **`itt12`**.  
+**Start:** [`2012-READ-FIRST.md`](2012-READ-FIRST.md)  
+**Numbers:** [`2012-RESEARCH.md`](2012-RESEARCH.md)  
+**Minute how-to:** [`2012-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2012-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
+**Every visited URL:** [`2012-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2012-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md)
 
 ---
 
 # Part 1 — Goals
 
-## 1.1 One-line goal
+Build a **museum-grade 2012 Web immersion from scratch**: **Windows 7 + IE 9 / Chrome rising** shell, ~22 lean rooms (not a 286-page forest restore), and REAL multi-step localStorage flows that recreate how people used the internet in calendar **2012** — especially **Instagram Android + the $1B sale**, **Facebook IPO + 1B**, **Pinterest boards**, **iPhone 5 / Lightning / Maps**, **iPad mini**, and **Windows 8 as a late product** — while the mass session is still a **laptop**.
 
-Build a **museum-grade 2012 Web immersion**: dual-honest **Win7 + rising Chrome / IE9** shell with **Windows 8 + IE 10** as late-year product story, period sites, and real local interactions for **Instagram Android + Facebook acquisition**, **Facebook IPO + 1B users**, **Pinterest mass**, **iPhone 5 / Lightning / iOS 6 Maps**, **iPad mini**, **Chrome overtaking IE**, and **UberX / Snapchat densify** — while apps eat the open web and the visual web wins.
-
-## 1.2 Visitor outcome
+Visitor outcome:
 
 ```
-Hub → open 2012
-  → Win7 desktop + Chrome/IE9 (Win8 Start screen product room late)
-  → About: dual scale (Live Stats ~697M June · Pingdom ~634M Dec · users ~2.4B)
-        thesis: mobile + visual web · Web 2.0 era ends · apps default
-        bans: Stories · Reels · TikTok · iOS 7 flat · Reactions · Vine mass Jan
-  → Instagram: Android Apr 3 · FB buys Apr 9 · filters · itt12-ig*
-  → Facebook: IPO May 18 · 1B Oct · Timeline residual · itt12-fb*
-  → Pinterest: pin/repin · boards · mass open · itt12-pin*
-  → iPhone 5: Lightning · 4″ · iOS 6 Maps honesty · itt12-iphone*
-  → iPad mini: $329+ · small tablet
-  → Windows 8 / IE 10 / Chrome browser war
-  → UberX · Snapchat densify · YouTube Gangnam / creators
-  → Continuity: Spotify US · Netflix · Gmail · Twitter
-  → Exit · itt12-* only
+Hub → 2012
+  → Win7 desktop + IE9 (Chrome if you’re the office geek · Win8 is a late product room)
+  → About:
+        June Live Stats 697,089,489 sites (+101%) · 2,518,453,530 users
+        Dec Pingdom 634 million sites · +51 million · 2.4B users
+        FB 1B · Gmail 425M · Tumblr 87.8M · Reddit 37B views · spam 68.8%
+        thesis: visual + app-first · Web 2.0 culture ends
+        bans: Stories · Reels · Vine mass · iOS 7 · TikTok · Meta · Win8 as January
+  → ★ Instagram Android 3 Apr (1M day one) → FB $1B 9 Apr standalone promise → itt12-ig
+  → Facebook IPO 18 May $38 Nasdaq delay · 1B 4 Oct → itt12-fb-ipo
+  → Pinterest pin / board · public Aug → itt12-pin
+  → iPhone 5: 4″ · Lightning · $199/$299/$399 · Maps flop → itt12-iphone5
+  → iPad mini $329/$429/$529 · ships 2 Nov → itt12-ipadmini
+  → Windows 8 Start · IE 10 · Surface RT · 26 Oct → itt12-win8
+  → SOPA Wikipedia black 18 Jan · UberX 35% cheaper · Tinder swipe seed
+  → Google Drive 5 GB · Google Now · Gangnam 1B Dec
+  → SoundCloud leftover timed comment (not the star)
+  → Exit · all state itt12-*
 ```
-
-## 1.3 Year thesis (must match About)
-
-| Theme | Period truth |
-|-------|----------------|
-| App-first | Instagram is an app — website is marketing |
-| Visual web | Pinterest · Instagram · Reddit pics · YouTube |
-| Platform power | FB IPO · buys Instagram · 1B users |
-| Hardware | iPhone 5 Lightning · iPad mini · Win8 Metro |
-| Browser | Chrome #1 narrative (StatCounter) · IE falls |
-| Rides / ephemeral | UberX · Snapchat growth |
-| Culture | Gangnam Style 1B · Obama Reddit AMA · creator economy seed |
 
 ---
 
-# Part 2 — Phases (0–14)
+# Part 2 — Phases (research checklist)
 
 | Phase | Name | Status |
 |------:|------|--------|
-| **0** | Research freeze | **[x]** |
-| **1** | Inventory (no half tree) | **[x]** |
-| **2** | Scaffold from 2011 · `itt12` | **[x]** |
-| **3** | Home / About / tour | **[x]** |
-| **4** | Instagram Android + acquisition | **[x]** |
-| **5** | Facebook IPO + 1B | **[x]** |
-| **6** | Pinterest mass | **[x]** |
-| **7** | iPhone 5 + iOS 6 Maps + Lightning | **[x]** |
-| **8** | iPad mini + Win8/IE10 + Chrome war | **[x]** |
-| **9** | Shell polish dual OS honesty | **[x]** |
-| **10** | Continuity scrub (lift 2011 bans that reverse) | **[x]** |
-| **11** | P1: UberX · Snapchat · YouTube · Reddit AMA · SOPA | **[x]** |
-| **12** | Trails + e2e | **[x]** |
-| **13** | Pixel harvest Layer C | **[~]** honesty pack OK |
-| **14** | Hub unlock + DISK-TRUTH + READ FIRST | **[x]** |
+| 0 | Research freeze (this pack) | **[x]** |
+| 1 | Inventory 2011 parent · do not restore forest | **[x]** lean |
+| 2 | Scaffold from `years/2011/` · `itt12` | **[x]** |
+| 3 | Home / About / map / dual-cite | **[x]** |
+| 4 | Instagram Android + $1B acquisition REAL | **[x]** |
+| 5 | Facebook IPO + 1B | **[x]** |
+| 6 | Pinterest pin/repin | **[x]** |
+| 7 | iPhone 5 + Lightning + Maps honesty | **[x]** |
+| 8 | iPad mini + Win8/IE10 + Chrome war | **[x]** |
+| 9 | Shell dual-OS honesty | **[x]** |
+| 10 | Continuity scrub (2011 bans that reverse) | **[x]** chips on home/About |
+| 11 | P1: SOPA · UberX · Tinder · Drive · Now · Gangnam · SoundCloud leftover | **[x]** |
+| 12 | Trails + e2e | **[x]** |
+| 13 | Pixel harvest or failed-final | **[x]** execute · H12-01–04 failed-final · H12-05 continuity |
+| 14 | Hub unlock 2012 | **[x]** |
 
-**MVP ship** = phases **0–14**.  
-**Order:** 2→3 sequential · 4–8 parallel after 3 · 10 before year-truth claim · 12–14 ship.
-
-### Phase 2 scaffold — what to use
-
-| Item | Source |
-|------|--------|
-| Clone tree | `years/2011/` |
-| Prefix | `itt11` → `itt12` |
-| Shell scripts | `config/2012.js` · `browser-2012.js` · `immersion-2012.js` |
-| Engine | **Do not fork** `browser/create.js` |
-| CSS | `period-2012.css` `@import period-2011.css` + Metro/Instagram/Pinterest deltas |
+Museum-grade leftover (pixels · continuity · copy densify): [`2012-MUSEUM-GRADE-RESEARCH-IMPLEMENT-PHASES.md`](2012-MUSEUM-GRADE-RESEARCH-IMPLEMENT-PHASES.md).
 
 ---
 
-# Part 3 — User flows A–T
+# Part 3 — User flows A–T (period life)
 
-| ID | 2012 life | Museum theater |
-|----|-----------|----------------|
-| **A** | Open PC browser | Shell Win7 · skip connect |
-| **B** | Read state of the net | About dual-cite · thesis ack |
-| **C** | Install Instagram Android | Android install theater |
-| **D** | Learn FB bought Instagram | Acquisition page · standalone honesty |
-| **E** | Facebook IPO day culture | IPO room · $38 |
-| **F** | Timeline + 1B scale | Feed · 1B chip |
-| **G** | Pin wedding/recipe boards | Pinterest pin/repin |
-| **H** | Unbox iPhone 5 | Product · Lightning |
-| **I** | Get lost in Apple Maps | Maps honesty flow |
-| **J** | Browse on iPad mini | mini product |
-| **K** | Try Windows 8 Start screen | Metro tiles tour |
-| **L** | Switch to Chrome | Download/browser war |
-| **M** | Request UberX | Cheap ride theater |
-| **N** | Send snaps all day | Snapchat densify |
-| **O** | Watch Gangnam Style | YouTube culture |
-| **P** | Reddit pics / AMA | Reddit densify |
-| **Q** | Spotify residual | Continuity stream theater |
-| **R** | Netflix residual | Continuity |
-| **S** | Hard ban check | No Stories/Reels/TikTok |
-| **T** | Exit · resume 2012 | Hub |
+| ID | 2012 life | Museum theater | Key |
+|----|-----------|----------------|-----|
+| **A** | Boot the family laptop | Win7 + IE9 · skip connect · Chrome chip | shell |
+| **B** | “How big is the net now?” | About dual-cite · thesis ack | `itt12-thesis-ack` |
+| **C** | Finally Instagram on Android | Filter + caption · 1M day-one literacy | `itt12-ig` |
+| **D** | “Facebook bought Instagram for a billion?!” | Acquisition page · standalone promise · close 6 Sep | `itt12-ig-fb` |
+| **E** | IPO day · Nasdaq stuck | $38 · ~$16B · delay theater | `itt12-fb-ipo` |
+| **F** | Timeline leftover + 1B chip | Feed residual · Oct 1B | `itt12-fb` |
+| **G** | Pin a wedding / recipe board | Pin + board · public Aug honesty | `itt12-pin` |
+| **H** | Unbox iPhone 5 | 4″ · A6 · LTE · Lightning | `itt12-iphone5` |
+| **I** | Get lost in Apple Maps | Flyover tease · wrong-lake honesty | `itt12-maps` |
+| **J** | Browse on iPad mini | $329 · 2 Nov ship | `itt12-ipadmini` |
+| **K** | “Where is Start?” | Win8 tiles · IE10 dual | `itt12-win8` |
+| **L** | Switch the default to Chrome | StatCounter 32.4 vs 32.1 | `itt12-chrome` |
+| **M** | Request UberX | $5 + $3.25/mi · 35% cheaper · not national | `itt12-uberx` |
+| **N** | Send snaps all day | Growth densify · not Stories | `itt12-snap` |
+| **O** | Watch Gangnam Style | First 1B video Dec | youtube residual |
+| **P** | Reddit pics / Obama AMA | Picture-subreddit year · 30 Aug | `itt12-reddit` |
+| **Q** | Wikipedia is black | 18 Jan SOPA/PIPA 24h | `itt12-sopa` |
+| **R** | Drive / Now leftover | 5 GB · Jelly Bean | `itt12-drive` · `itt12-now` |
+| **S** | Tinder at a USC party | Swipe seed · not 2015 mass | `itt12-tinder` |
+| **T** | SoundCloud leftover / exit | Timed comment · hub | `itt12-soundcloud` |
+
+**Connection trails (guided multi-step)**
+
+1. SOPA black → IG Android → $1B sale  
+2. IPO $38 → 1B MAU → Timeline leftover  
+3. Pin board → IG filter → YouTube Gangnam  
+4. iPhone 5 → Lightning drawer → Maps flop → iPad mini  
+5. Chrome download → Win8 Start (late) → “I went back to Win7”  
+6. UberX SF → Tinder swipe → Snapchat (seeds, not 2014)
 
 ---
 
-# Part 4 — Storage · anti-goals · done
+# Part 4 — Anti-goals
 
-## Storage (planned)
-
-`itt12-ig*` · `itt12-fb*` · `itt12-pin*` · `itt12-iphone*` · `itt12-ipad*` · `itt12-win8*` · `itt12-uber*` · `itt12-snap*` · shell `itt-2012-*`
-
-## Anti-goals
-
-- Real streams / OAuth / payments / installs  
-- Invented logos  
-- iOS 7 flat as default  
-- Win8 as January-only mass shell  
-- Instagram Stories  
-
-## Research-only done (this pass)
-
-- [x] Thesis · scale · timeline · bans · P0/P1 · UI grammar · harvest queue · flows · phases  
-
-## MVP ship **[ ]**
-
-- [ ] Scaffold + P0 multipage + e2e + hub unlock  
+No real streams, OAuth, payments, APK/IPA, map tiles. No invented logos. No Stories. No Vine as January default. No Win8 as the only shell. Incomplete REAL writes nothing.

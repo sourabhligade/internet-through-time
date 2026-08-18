@@ -7,7 +7,7 @@
 
 This file is the **pairing source** — *what* and *why* for each year. The bible is *how*.
 
-Already on disk (do not replace): one signature year-game (`game.html`) + pack extras + 15 toys. This pack adds **two famous arcade extras** you can actually play.
+Already on disk (do not replace): one signature year-game (`game.html`) via the **game cabinet**. Toys 1–15 are retired. This pack adds **two famous arcade extras** you can actually play.
 
 | Year | Game A | Game B | Why these |
 |------|--------|--------|-----------|

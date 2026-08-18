@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/bebo/index.html": "http://museum.local/years/2006/sites/bebo/index.html",
+      "sites/newsvine/index.html": "http://museum.local/years/2006/sites/newsvine/index.html",
+      "sites/slideshare/index.html": "http://museum.local/years/2006/sites/slideshare/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2006/sites/playable/famous.html",
 
       "sites/twitter/tweet.html": "http://museum.local/years/2006/sites/twitter/tweet.html",

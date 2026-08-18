@@ -5,58 +5,24 @@
 <title>Blob Rush — 2015</title>
 <link rel="stylesheet" href="../../../../css/period-2015.css">
 <link rel="stylesheet" href="../../../../css/year-game-ui.css">
-<style>
-.itt-year-game { max-width: 420px; margin: 0 auto; padding: 12px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #e8eefc; }
-.yg-shell { background: #12182a; border: 1px solid #3a4a7a; border-radius: 6px; }
-.honesty { font-size: 11px; background: #1a2238; border: 1px solid #4a6abf; padding: 6px; margin: 8px 0; color: #bcd; }
-#game-canvas { display: block; width: 100%; max-width: 400px; height: auto; background: #0b1020; border: 1px solid #334; cursor: crosshair; touch-action: none; }
-.yg-body { background: #0a0e18; margin: 0; padding: 12px; }
-button[data-game-start] { background: #3cf; color: #042; border: none; padding: 8px 14px; font-weight: bold; cursor: pointer; border-radius: 4px; }
-</style>
 </head>
-<body class="yg-body yg-year-2015" bgcolor="#0a0e18">
+<body bgcolor="#111" text="#eee">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<div class="itt-year-game yg-shell" data-year-game data-year="2015" data-game-id="blobrush" data-yg-goal="Eat smaller cells. Split with Space. Hit mass 80." data-yg-next-href="../apple/watch.html" data-yg-next-label="Apple Watch ships" tabindex="0">
-  <h1 style="margin:0 0 6px;color:#3cf">Blob Rush — 2015</h1>
-  <p style="margin:0;color:#9ab">Move · eat smaller cells · <b>Space splits</b> (mass 16+) · avoid bigger ones.</p>
-  <p class="honesty yg-honesty yg-inspire" data-yg-inspire="1">Inspired by <b>2015 agar.io-class</b> browser mania · museum title <b>Blob Rush</b> · not agar.io · no Miniclip art. Browser class <b>28 Apr 2015</b> · Miniclip mobile <b>Jul 7–8</b> · <b>.io wave starts here</b> · <b>slither.io is 2016</b>. Gold band mass <b>80</b> · death still writes best · key <code>itt15-game-blobrush</code></p>
-  <p>
-    <button type="button" data-game-start>New Game</button>
-    <button type="button" data-blob-split>Split</button>
-    Mass <b data-game-score>0</b> · Best <b data-game-best>0</b>
-  </p>
-  <canvas id="game-canvas" width="400" height="320" aria-label="Blob Rush arena"></canvas>
-  <ol data-blob-board aria-label="Arena nicks" style="margin:8px 0 0;padding-left:1.3em;font-size:11px;color:#9ab;min-height:5.5em"></ol>
-  <p data-itt-action-status style="margin-top:8px;color:#9ab;min-height:1.3em">Mouse / touch aim · WASD · Space splits · P pauses</p>
-  <p style="font-size:11px;color:#789">
-    <a href="index.html" style="color:#8cf">← Playables</a> ·
-    <a href="../../pages/home.html" style="color:#8cf">Starting Point</a>
-  </p>
+<div class="itt-year-game yg-shell" data-year-game data-year="2015" data-game-id="blobrush" style="max-width:440px;margin:12px auto;font-family:Tahoma,Arial,sans-serif">
+ <h1>Blob Rush — 2015</h1>
+ <p class="yg-honesty" data-yg-inspire>agar.io <b>class</b> 2015 tab mania. Museum original cells — not their art. slither.io is <b>2016</b>. Gold band at mass <b>80</b>.</p>
+ <p>Score <b data-game-score>0</b> · Best <b data-game-best>0</b></p>
+ <p>
+  <button type="button" data-game-start>New Game</button>
+  <button type="button" data-blob-split>Split</button>
+ </p>
+ <canvas id="game-canvas" width="400" height="320" style="border:1px solid #444;background:#0b0b0b"></canvas>
+ <div data-blob-board style="font-size:11px;color:#aaa;margin-top:6px"></div>
+ <p data-itt-action-status>New Game. Incomplete never writes.</p>
+ <p style="font-size:11px"><a href="index.html">← Playables</a> · <a href="../../pages/home.html">Starting Point</a> · <a href="../periscope/index.html">Periscope</a></p>
 </div>
 <script src="../../../../js/games/year-game-boot.js"></script>
 <script src="../../../../js/games/year-2015-blobrush.js"></script>
 <script src="../../../../js/immersion-2015.js" defer></script>
-<!-- ITT-3X-ALSO:start -->
-<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2015" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
- <a href="../../pages/home.html">Starting Point</a> ·
- <a href="../../pages/map.html">Year flow map</a> ·
- <a href="faceround.html">2015 playables · faceround</a> ·
- <a href="livehold.html">2015 playables · livehold</a> ·
- <a href="../fblive/index.html">Facebook Live</a> ·
- <a href="../fcc/index.html">Open Internet / Title II</a> ·
- <a href="../googlephotos/index.html">Google Photos</a> ·
- <a href="../ios9/index.html">iOS 9</a> ·
- <a href="../iphone/index.html">iPhone 6s</a> ·
- <a href="../letsencrypt/index.html">Let&rsquo;s Encrypt</a> ·
- <a href="../meerkat/index.html">Meerkat</a> ·
- <a href="../messenger/index.html">Messenger</a> ·
- <a href="../oculus/index.html">Oculus → Facebook</a> ·
- <a href="../peach/index.html">Peach</a> ·
- <a href="../periscope/index.html">Periscope</a> ·
- <a href="../privacy/ashleymadison.html">Ashley Madison breach literacy</a>
-</p>
-</nav>
-<!-- ITT-3X-ALSO:end -->
-
 </body>
 </html>

@@ -1,161 +1,160 @@
 /**
- * Tile Fold — 2014 museum year game (2048-class merge, original).
- * Gold band = reach 128 (museum-short). Writes best via YearGame; complete key itt14-game-tilefold.
+ * Tile Fold — 2014 museum year game.
+ * Class: 2048 (Cirulli web 9 Mar 2014) after Threes. Museum original grid.
+ * Key: itt14-game-tilefold
+ * Incomplete (no Start / no merge) never writes.
  */
 (function () {
   "use strict";
   var YG = (window.ITT && ITT.YearGame) || null;
-  var canvas = document.getElementById("game-canvas");
-  if (!canvas || !canvas.getContext) return;
-  var ctx = canvas.getContext("2d");
-  var N = 4;
-  var SIZE = 320;
-  var PAD = 8;
-  var CELL = (SIZE - PAD * (N + 1)) / N;
-  var board = [];
-  var score = 0;
-  var won = false;
-  var dead = false;
-  var scoreEl = document.getElementById("play-score");
-  var bestEl = document.querySelector("[data-game-best]");
-  var statusEl = document.getElementById("play-status");
-  var startBtn = document.getElementById("play-start");
+  var host = document.querySelector('[data-year-game][data-game-id="tilefold"]');
+  if (!host) return;
 
-  function paintBest() {
-    if (bestEl) bestEl.textContent = String(YG ? YG.loadBest("tilefold", "2014") : 0);
-  }
+  var startBtn = host.querySelector("[data-game-start]");
+  var boardEl = host.querySelector("[data-tile-board]");
+  var scoreEl = host.querySelector("[data-game-score]");
+  var bestEl = host.querySelector("[data-game-best]");
+  var statusEl = host.querySelector("[data-itt-action-status]");
+  var dirs = host.querySelectorAll("[data-tile-dir]");
+  var running = false;
+  var wrote = false;
+  var score = 0;
+  var grid = [];
+
   function setStatus(m) {
-    if (statusEl) statusEl.textContent = m;
+    if (YG && YG.setStatus) YG.setStatus(statusEl, m);
+    else if (statusEl) statusEl.textContent = m;
   }
+
   function empty() {
-    var i, j, o = [];
-    for (i = 0; i < N; i++) for (j = 0; j < N; j++) if (!board[i][j]) o.push([i, j]);
-    return o;
+    var i;
+    var j;
+    var out = [];
+    for (i = 0; i < 4; i++) for (j = 0; j < 4; j++) if (!grid[i][j]) out.push([i, j]);
+    return out;
   }
+
   function spawn() {
     var e = empty();
     if (!e.length) return;
     var p = e[Math.floor(Math.random() * e.length)];
-    board[p[0]][p[1]] = Math.random() < 0.9 ? 2 : 4;
+    grid[p[0]][p[1]] = Math.random() < 0.9 ? 2 : 4;
   }
-  function reset() {
+
+  function paint() {
+    if (!boardEl) return;
+    var html = "";
     var i;
-    board = [];
-    for (i = 0; i < N; i++) board.push([0, 0, 0, 0]);
-    score = 0;
-    won = false;
-    dead = false;
-    spawn();
-    spawn();
-    if (scoreEl) scoreEl.textContent = "0";
-    setStatus("Arrows / WASD to fold. Reach 128 for gold band.");
-    draw();
+    var j;
+    var v;
+    for (i = 0; i < 4; i++) {
+      html += "<div>";
+      for (j = 0; j < 4; j++) {
+        v = grid[i][j];
+        html +=
+          '<span class="tf-cell" style="display:inline-block;width:56px;height:56px;line-height:56px;text-align:center;margin:2px;background:' +
+          (v ? "#f2b179" : "#cdc1b4") +
+          ';font-weight:bold">' +
+          (v || "") +
+          "</span>";
+      }
+      html += "</div>";
+    }
+    boardEl.innerHTML = html;
+    if (scoreEl) scoreEl.textContent = String(score);
+    if (bestEl && YG && YG.loadBest) bestEl.textContent = String(YG.loadBest("tilefold", "2014") || 0);
   }
-  function slide(row) {
-    var a = row.filter(function (x) { return x; });
-    var i, out = [];
+
+  function line(vals) {
+    var a = vals.filter(function (x) { return x; });
+    var i;
+    var merged = false;
+    var out = [];
     for (i = 0; i < a.length; i++) {
-      if (a[i] && a[i] === a[i + 1]) {
+      if (i < a.length - 1 && a[i] === a[i + 1]) {
         out.push(a[i] * 2);
         score += a[i] * 2;
+        merged = true;
         i++;
       } else out.push(a[i]);
     }
-    while (out.length < N) out.push(0);
-    return out;
+    while (out.length < 4) out.push(0);
+    var changed = false;
+    for (i = 0; i < 4; i++) if (out[i] !== vals[i]) changed = true;
+    return { line: out, changed: changed, merged: merged };
   }
-  function rotate(cw) {
-    var i, j, n = [];
-    for (i = 0; i < N; i++) {
-      n[i] = [];
-      for (j = 0; j < N; j++) n[i][j] = cw ? board[N - 1 - j][i] : board[j][N - 1 - i];
-    }
-    board = n;
-  }
+
   function move(dir) {
-    if (won || dead) return;
-    var old = JSON.stringify(board);
-    var k;
-    if (dir === "left") {
-      for (k = 0; k < N; k++) board[k] = slide(board[k]);
-    } else if (dir === "right") {
-      for (k = 0; k < N; k++) board[k] = slide(board[k].slice().reverse()).reverse();
-    } else if (dir === "up") {
-      rotate(false); for (k = 0; k < N; k++) board[k] = slide(board[k]); rotate(true);
-    } else if (dir === "down") {
-      rotate(true); for (k = 0; k < N; k++) board[k] = slide(board[k]); rotate(false);
+    if (!running) return;
+    var i;
+    var j;
+    var changed = false;
+    var merged = false;
+    var r;
+    if (dir === "left" || dir === "right") {
+      for (i = 0; i < 4; i++) {
+        var row = grid[i].slice();
+        if (dir === "right") row.reverse();
+        r = line(row);
+        if (dir === "right") r.line.reverse();
+        grid[i] = r.line;
+        if (r.changed) changed = true;
+        if (r.merged) merged = true;
+      }
+    } else {
+      for (j = 0; j < 4; j++) {
+        var col = [grid[0][j], grid[1][j], grid[2][j], grid[3][j]];
+        if (dir === "down") col.reverse();
+        r = line(col);
+        if (dir === "down") r.line.reverse();
+        for (i = 0; i < 4; i++) grid[i][j] = r.line[i];
+        if (r.changed) changed = true;
+        if (r.merged) merged = true;
+      }
     }
-    if (JSON.stringify(board) === old) return;
+    if (!changed) {
+      setStatus("No fold that way.");
+      return;
+    }
     spawn();
-    if (scoreEl) scoreEl.textContent = String(score);
-    var r, c, has128 = false, hasEmpty = false;
-    for (r = 0; r < N; r++) for (c = 0; c < N; c++) {
-      if (board[r][c] >= 128) has128 = true;
-      if (!board[r][c]) hasEmpty = true;
+    paint();
+    var max = 0;
+    for (i = 0; i < 4; i++) for (j = 0; j < 4; j++) if (grid[i][j] > max) max = grid[i][j];
+    if (merged && YG && YG.saveBest && !wrote) {
+      YG.saveBest("tilefold", score, { year: "2014", merge: { real: true, gold: max >= 128 } });
+      wrote = true;
+    } else if (merged && YG && YG.saveBest) {
+      YG.saveBest("tilefold", score, { year: "2014", merge: { real: true, gold: max >= 128 } });
     }
-    if (has128 && !won) {
-      won = true;
-      setStatus("Gold band · 128 folded · R to retry");
-      if (YG && YG.flash) YG.flash();
-      if (YG && YG.beep) YG.beep();
-      if (YG) {
-        var b = YG.saveBest("tilefold", score, { year: "2014", merge: { gold: true } });
-        if (bestEl) bestEl.textContent = String(b.best);
-      }
-    } else if (!hasEmpty && !won) {
-      dead = true;
-      setStatus("Board full · score " + score + " · not gold · R retry");
-      if (score > 0 && YG) {
-        var bd = YG.saveBest("tilefold", score, { year: "2014", merge: { gold: false } });
-        if (bestEl) bestEl.textContent = String(bd.best);
-      }
+    if (max >= 128) setStatus("Gold band · 128. Score " + score);
+    else setStatus(merged ? "Fold · " + score : "Moved.");
+  }
+
+  function start() {
+    running = true;
+    wrote = false;
+    score = 0;
+    grid = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+    spawn();
+    spawn();
+    paint();
+    setStatus("Fold tiles. First merge writes. Load never writes.");
+  }
+
+  if (startBtn) startBtn.addEventListener("click", start);
+  var di;
+  for (di = 0; di < dirs.length; di++) {
+    dirs[di].addEventListener("click", function () {
+      move(this.getAttribute("data-tile-dir"));
+    });
+  }
+  document.addEventListener("keydown", function (ev) {
+    var map = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down" };
+    if (map[ev.key]) {
+      ev.preventDefault();
+      move(map[ev.key]);
     }
-    draw();
-  }
-  var COLORS = {
-    0: "#cdc1b4", 2: "#eee4da", 4: "#ede0c8", 8: "#f2b179", 16: "#f59563",
-    32: "#f67c5f", 64: "#f65e3b", 128: "#edcf72", 256: "#edcc61"
-  };
-  function draw() {
-    ctx.fillStyle = "#bbada0";
-    ctx.fillRect(0, 0, SIZE, SIZE);
-    var r, c, v, x, y;
-    for (r = 0; r < N; r++) for (c = 0; c < N; c++) {
-      v = board[r][c];
-      x = PAD + c * (CELL + PAD);
-      y = PAD + r * (CELL + PAD);
-      ctx.fillStyle = COLORS[v] || "#3c3a32";
-      ctx.fillRect(x, y, CELL, CELL);
-      if (v) {
-        ctx.fillStyle = v <= 4 ? "#776e65" : "#f9f6f2";
-        ctx.font = (v >= 100 ? "20px" : "28px") + " bold Clear Sans, Arial";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText(String(v), x + CELL / 2, y + CELL / 2);
-      }
-    }
-  }
-  function onKey(ev) {
-    var m = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down",
-      a: "left", d: "right", w: "up", s: "down", A: "left", D: "right", W: "up", S: "down" };
-    if (ev.key === "r" || ev.key === "R") { reset(); return; }
-    if (m[ev.key]) { ev.preventDefault(); move(m[ev.key]); }
-  }
-  document.addEventListener("keydown", onKey);
-  if (startBtn) startBtn.addEventListener("click", reset);
-  var sx = 0, sy = 0;
-  canvas.addEventListener("touchstart", function (e) {
-    if (!e.touches[0]) return;
-    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
-  }, { passive: true });
-  canvas.addEventListener("touchend", function (e) {
-    var t = e.changedTouches[0];
-    if (!t) return;
-    var dx = t.clientX - sx, dy = t.clientY - sy;
-    if (Math.abs(dx) + Math.abs(dy) < 16) return;
-    if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? "right" : "left");
-    else move(dy > 0 ? "down" : "up");
   });
-  paintBest();
-  reset();
+  if (bestEl && YG && YG.loadBest) bestEl.textContent = String(YG.loadBest("tilefold", "2014") || 0);
+  setStatus("Start. Incomplete never writes.");
 })();

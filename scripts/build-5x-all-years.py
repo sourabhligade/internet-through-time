@@ -125,9 +125,9 @@ PACKS: dict[int, list[tuple]] = {
     ],
     2013: [
         ("tinder", "F1 Tinder trail", "Swipe literacy", "2013 Best New Startup class", ["sites/tinder/index.html"], ["sites/snapchat/index.html"]),
-        ("snap-story", "F2 Snap 24h", "Oct 2013 Stories + 24h expire", "Not Instagram Stories 2016", ["sites/snapchat/index.html"], ["sites/instagram/index.html"]),
-        ("igvid", "F3 IG Video 15s", "15s + not-Reels", "20 Jun 2013", ["sites/instagram/index.html"], ["sites/iphone/index.html"]),
-        ("ios7", "F4 iOS 7 / Touch ID", "Flat UI + Touch ID 2-check", "iPhone 5s", ["sites/iphone/index.html"], ["sites/snowden/index.html"]),
+        ("snap-story", "F2 Snap 24h", "Oct 2013 Stories + 24h expire", "Not Instagram Stories 2016", ["sites/snapchat/index.html"], ["sites/instagram/video.html"]),
+        ("igvid", "F3 IG Video 15s", "15s + not-Reels", "20 Jun 2013", ["sites/instagram/video.html"], ["sites/iphone/ios7.html"]),
+        ("ios7", "F4 iOS 7 / Touch ID", "Flat UI + Touch ID 2-check", "iPhone 5s", ["sites/iphone/ios7.html"], ["sites/snowden/index.html"]),
         ("snowden", "F5 Snowden Jun 2013", "Verizon + PRISM 2-check", "Next is Vine record star", ["sites/snowden/index.html"], ["sites/vine/record.html", "sites/vine/index.html"]),
     ],
     2014: [

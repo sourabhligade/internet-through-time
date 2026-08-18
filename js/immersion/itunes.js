@@ -59,8 +59,11 @@
       el.innerHTML = "<font size='2' color='#666'>Library empty — buy a 99¢ track.</font>";
       return;
     }
+    var ie = function (s) {
+      return ITT.util && ITT.util.escapeHtml ? ITT.util.escapeHtml(s) : String(s || "").replace(/</g, "&lt;");
+    };
     el.innerHTML = "<ul style='font-size:12px'>" + lib.map(function (t) {
-      return "<li><b>" + t.title + "</b> — " + t.artist + " <font color='#080'>$0.99</font></li>";
+      return "<li><b>" + ie(t.title) + "</b> — " + ie(t.artist) + " <font color='#080'>$0.99</font></li>";
     }).join("") + "</ul>";
   }
 
@@ -91,7 +94,10 @@
           });
           saveLib(lib.slice(0, 30));
           var st = doc.querySelector("[data-itunes-status]");
-          if (st) st.innerHTML = "<b>Purchased</b>: <i>" + title + "</i> for <span class='itunes-price'>99¢</span>. AAC + FairPlay DRM era — no real file, no real charge.";
+          if (st) {
+            var te = ITT.util && ITT.util.escapeHtml ? ITT.util.escapeHtml(title) : String(title || "").replace(/</g, "&lt;");
+            st.innerHTML = "<b>Purchased</b>: <i>" + te + "</i> for <span class='itunes-price'>99¢</span>. AAC + FairPlay DRM era — no real file, no real charge.";
+          }
           renderLib(doc);
         });
       })(forms[i]);

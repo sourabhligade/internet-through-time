@@ -171,67 +171,6 @@
       hook: "[data-so-ask], form",
       complete: { action: "so", expect: null }
     },
-    {
-      year: "2010",
-      prefix: "itt10",
-      path: "sites/cablegate/index.html",
-      kind: "literacy",
-      key: "itt10-cablegate-ack",
-      hook: "[data-cablegate-ack]",
-      complete: { action: "cablegate", expect: null }
-    },
-    {
-      year: "2011",
-      prefix: "itt11",
-      path: "sites/airbnb/index.html",
-      kind: "product",
-      key: "itt11-airbnb",
-      hook: "[data-abnb-search]",
-      complete: { action: "airbnb", expect: null }
-    },
-    {
-      year: "2012",
-      prefix: "itt12",
-      path: "sites/soundcloud/index.html",
-      kind: "product",
-      key: "itt12-soundcloud",
-      hook: "[data-sc-play]",
-      complete: { action: "soundcloud", expect: null }
-    },
-    {
-      year: "2013",
-      prefix: "itt13",
-      path: "sites/vine/record.html",
-      kind: "product",
-      key: "itt13-vine-posts",
-      hook: "[data-vine-hold]",
-      complete: { action: "vine", expect: null }
-    },
-    {
-      year: "2014",
-      prefix: "itt14",
-      path: "pages/about.html",
-      kind: "literacy",
-      key: "itt14-thesis-ack",
-      complete: { action: "thesis", expect: null }
-    },
-    {
-      year: "2015",
-      prefix: "itt15",
-      path: "sites/apple/watch.html",
-      kind: "product",
-      key: "itt15-watch",
-      hook: "[data-watch-save]",
-      complete: { action: "watch", expect: null }
-    },
-    {
-      year: "2016",
-      prefix: "itt16",
-      path: "sites/instagram/stories.html",
-      kind: "product",
-      key: "itt16-ig-stories",
-      hook: "[data-ig-stories-add]",
-      complete: { action: "stories", expect: null }
-    }
+                            
   ];
 })(typeof window !== "undefined" ? window : this);
