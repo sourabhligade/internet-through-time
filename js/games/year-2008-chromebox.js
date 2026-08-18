@@ -1,13 +1,34 @@
 /**
- * Chrome box — 2008 G2
- * Class: 3 checks
+ * Chrome box — 2008 leftover extra (minute).
  * Key: itt08-game-chromebox
- * Engine: year-pack-boot.js (taps + optional phrase + optional wait).
- * Incomplete never writes. Museum original · no commercial SWF.
+ * Kind: search. Incomplete never writes. Traps never write.
  */
 (function () {
   "use strict";
-  var host = document.querySelector('[data-year-game][data-game-id="chromebox"]');
-  if (!host) return;
-  host.setAttribute("data-5x-pack", "1");
+  var MX = window.ITT && ITT.YearExtraMinute;
+  if (!MX) return;
+  MX.mount({
+  "year": "2008",
+  "id": "chromebox",
+  "kind": "search",
+  "query": "chrome",
+  "queryLabel": "Omnibox",
+  "runLabel": "Go",
+  "submitLabel": "Submit",
+  "holdLabel": "Hold",
+  "holdMs": 1600,
+  "results": [
+    {
+      "label": "Google Chrome \u2014 a fresh take on the browser",
+      "role": "hit"
+    },
+    {
+      "label": "Download Internet Explorer 8",
+      "role": "decoy",
+      "trap": "Wrong browser"
+    }
+  ],
+  "startStatus": "One box. URL and search.",
+  "idleStatus": "Press Start. Incomplete never writes."
+});
 })();

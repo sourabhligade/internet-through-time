@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/tumblrlog/index.html": "http://museum.local/years/2007/sites/tumblrlog/index.html",
+      "sites/kindlestore/index.html": "http://museum.local/years/2007/sites/kindlestore/index.html",
+      "sites/iphonesafari/index.html": "http://museum.local/years/2007/sites/iphonesafari/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2007/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2007/sites/playable/extra-b.html",
       "sites/justintv/index.html": "http://museum.local/years/2007/sites/justintv/index.html",
       "sites/qik/index.html": "http://museum.local/years/2007/sites/qik/index.html",
       "sites/ustream/index.html": "http://museum.local/years/2007/sites/ustream/index.html",

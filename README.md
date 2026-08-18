@@ -101,6 +101,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 **2019+ are not on disk** — 2018 is the lean from-scratch rebuild (GDPR Manage star). Hub is **1994–2018** (25 years).
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
+**Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  
 **Full inventory** (may lag disk): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
 
 **Every source, artifact & image provenance** (full inventory): [`docs/MASTER-PROVENANCE.md`](docs/MASTER-PROVENANCE.md).  

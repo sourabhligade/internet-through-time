@@ -38,6 +38,16 @@ test.describe("2016 flows", () => {
     await expect.poll(async () => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
   });
 
+  test("Reactions Like writes (2016 extras — facebook.js is not on this year)", async ({ page }) => {
+    await page.goto("/years/2016/sites/facebook/reactions.html");
+    await page.evaluate(() => localStorage.removeItem("itt16-fb-react"));
+    await page.reload();
+    await page.locator("[data-fb-like]").click();
+    await expect.poll(async () => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
+    const blob = JSON.parse((await getKey(page, "itt16-fb-react")) || "{}");
+    expect(blob.face).toBe("like");
+  });
+
   test("E2E one tick never writes", async ({ page }) => {
     await page.goto("/years/2016/sites/whatsapp/e2e.html");
     await page.evaluate(() => localStorage.removeItem("itt16-wa-e2e"));

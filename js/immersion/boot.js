@@ -214,8 +214,20 @@
       add("immersion/flow-map.js");
     }
     if (path.indexOf("/playable") !== -1) {
+      add("config/year-extra-games.js");
       add("immersion/year-playable.js");
     }
+    /* Pets.com shop reuses Amazon cart hooks — load the engine off /amazon/. */
+    if (path.indexOf("/pets/") !== -1) add("immersion/amazon.js");
+    try {
+      if (
+        typeof document !== "undefined" &&
+        document.querySelector &&
+        document.querySelector("[data-add-cart]")
+      ) {
+        add("immersion/amazon.js");
+      }
+    } catch (eCart) { /* */ }
     if (
       path.indexOf("guestbook") !== -1 ||
       path.indexOf("/search") !== -1 ||

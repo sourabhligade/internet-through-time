@@ -17,7 +17,8 @@
       auction: true,
       hotmail: true,
       yahoo: true,
-      excite: true
+      excite: true,
+      officialDestGold: true
     },
     navSubtitle: "Netscape 3.0 · 28.8k",
     nav: [

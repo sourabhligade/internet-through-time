@@ -84,12 +84,21 @@
     var sessKey = prefix(year) + "-" + sessSuffix;
     function seen() {
       try {
-        var raw = sessionStorage.getItem(sessKey);
+        var raw = sessionStorage.getItem(sessKey) || localStorage.getItem(sessKey);
         var arr = raw ? JSON.parse(raw) : [];
         return Array.isArray(arr) ? arr : [];
       } catch (e) {
         return [];
       }
+    }
+    function persistSeen(list) {
+      var blob = JSON.stringify(list);
+      try {
+        sessionStorage.setItem(sessKey, blob);
+      } catch (eS) { /* */ }
+      try {
+        localStorage.setItem(sessKey, blob);
+      } catch (eL) { /* */ }
     }
     var arr = seen();
     var i;
@@ -101,12 +110,10 @@
         if (el.tagName === "A" || el.tagName === "AREA") {
           el.addEventListener("click", function () {
             if (id && arr.indexOf(id) === -1) arr.push(id);
-            try {
-              sessionStorage.setItem(sessKey, JSON.stringify(arr));
-            } catch (eS) { /* */ }
+            persistSeen(arr);
             var st = doc.querySelector("[data-official-status], [data-sj-status], [data-drudge-status]");
             if (arr.length >= need) {
-              saveGold(year, goldSuffix, { ids: arr.slice(0, 8) });
+              saveGold(yearOf(doc) || year, goldSuffix, { ids: arr.slice(0, 8) });
               feedback(need + " dests · saved", st);
             } else {
               feedback(arr.length + "/" + need + " (writes after " + need + ")", st, true);
@@ -120,11 +127,9 @@
       var lid = landed.getAttribute(attr) || "";
       if (lid && arr.indexOf(lid) === -1) {
         arr.push(lid);
-        try {
-          sessionStorage.setItem(sessKey, JSON.stringify(arr));
-        } catch (eL) { /* */ }
+        persistSeen(arr);
       }
-      if (arr.length >= need) saveGold(year, goldSuffix, { ids: arr.slice(0, 8) });
+      if (arr.length >= need) saveGold(yearOf(doc) || year, goldSuffix, { ids: arr.slice(0, 8) });
     }
   }
 

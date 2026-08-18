@@ -123,8 +123,18 @@
 
   function bootReact(doc) {
     var faces = doc.querySelectorAll("[data-fb-react]");
-    if (!faces.length) return;
+    var likeBtn = doc.querySelector("[data-fb-like]");
+    if (!faces.length && !likeBtn) return;
     var st = doc.querySelector("[data-fb-react-status]");
+    function apply(face) {
+      if (!face) {
+        feedback("Pick a face. Tray-only never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("fb-react"), blob({ face: face }));
+      feedback("Reacted · " + face + " · itt16-fb-react", st);
+      reveal(doc);
+    }
     var saved = YX.loadJSON(key("fb-react"));
     if (saved && saved.face) {
       feedback("Reacted · " + saved.face + " · itt16-fb-react", st);
@@ -133,14 +143,13 @@
     var i;
     for (i = 0; i < faces.length; i++) {
       faces[i].addEventListener("click", function () {
-        var face = this.getAttribute("data-fb-react") || "";
-        if (!face) {
-          feedback("Pick a face. Tray-only never writes.", st, { error: true });
-          return;
-        }
-        saveJSON(key("fb-react"), blob({ face: face }));
-        feedback("Reacted · " + face + " · itt16-fb-react", st);
-        reveal(doc);
+        apply(this.getAttribute("data-fb-react") || "");
+      });
+    }
+    if (likeBtn && likeBtn.getAttribute("data-fb-like-bound") !== "1") {
+      likeBtn.setAttribute("data-fb-like-bound", "1");
+      likeBtn.addEventListener("click", function () {
+        apply("like");
       });
     }
   }

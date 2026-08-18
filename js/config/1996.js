@@ -46,6 +46,11 @@
       connectBusyChance: 0.13
     },
     urlMap: {
+      "sites/totalny/index.html": "http://museum.local/years/1996/sites/totalny/index.html",
+      "sites/pathfinder/index.html": "http://museum.local/years/1996/sites/pathfinder/index.html",
+      "sites/hotbot/index.html": "http://museum.local/years/1996/sites/hotbot/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/1996/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/1996/sites/playable/extra-b.html",
       "sites/askjeeves/index.html": "http://museum.local/years/1996/sites/askjeeves/index.html",
       "sites/craigslist/index.html": "http://museum.local/years/1996/sites/craigslist/index.html",
       "sites/mtv/index.html": "http://museum.local/years/1996/sites/mtv/index.html",

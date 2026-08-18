@@ -83,8 +83,10 @@
     "immersion/year-5x-pack.js",
     "immersion/year-true-packs.js",
     "immersion/year-popular-3x.js",
+    "immersion/official-dest-gold.js",
     "immersion/flow-map.js",
     "immersion/year-playable.js",
+    "config/year-extra-games.js",
     "immersion/guestbook-search.js"
   ];
 

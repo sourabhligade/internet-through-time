@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
         urlMap: {
+      "sites/foursquaremayor/index.html": "http://museum.local/years/2009/sites/foursquaremayor/index.html",
+      "sites/uberblack/index.html": "http://museum.local/years/2009/sites/uberblack/index.html",
+      "sites/whatsappweb/index.html": "http://museum.local/years/2009/sites/whatsappweb/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2009/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2009/sites/playable/extra-b.html",
       "sites/chatroulette/index.html": "http://museum.local/years/2009/sites/chatroulette/index.html",
       "sites/mafiawars/index.html": "http://museum.local/years/2009/sites/mafiawars/index.html",
       "sites/omegle/index.html": "http://museum.local/years/2009/sites/omegle/index.html",

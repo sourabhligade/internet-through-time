@@ -40,7 +40,47 @@ function bookHref(file) {
   return R("sites/amazon/" + file);
 }
 
+function goCart() {
+  var rel = "sites/amazon/cart.html";
+  try {
+    var br = parentBrowser();
+    if (br && typeof br.navigate === "function") {
+      br.navigate(rel, { instant: true });
+      return;
+    }
+  } catch (eN) { /* */ }
+  try {
+    if (window.parent && window.parent !== window) {
+      var ifr = window.parent.document && window.parent.document.getElementById("content");
+      if (ifr) {
+        ifr.src = rel;
+        return;
+      }
+    }
+  } catch (eI) { /* */ }
+  location.href = bookHref("cart.html");
+}
+
+function ensureFlash() {
+  var note =
+    document.getElementById("cart-flash") ||
+    document.querySelector("[data-cart-flash], [data-itt-action-status]");
+  if (note) return note;
+  note = document.createElement("p");
+  note.id = "cart-flash";
+  note.setAttribute("data-cart-flash", "1");
+  note.setAttribute("data-itt-action-status", "1");
+  note.style.cssText =
+    "display:none;margin:8px 0;padding:8px;background:#ffffcc;border:1px solid #999;font-size:13px";
+  var host = document.querySelector("[data-add-cart]");
+  if (host && host.parentNode) host.parentNode.insertBefore(note, host.nextSibling);
+  else if (document.body) document.body.insertBefore(note, document.body.firstChild);
+  return note;
+}
+
 function initAmazonAdd() {
+  if (document.documentElement.getAttribute("data-amz-add") === "1") return;
+  document.documentElement.setAttribute("data-amz-add", "1");
   var btns = document.querySelectorAll("[data-add-cart]");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function (ev) {
@@ -53,23 +93,24 @@ function initAmazonAdd() {
         author: b.getAttribute("data-author") || ""
       };
       var cart = getCart();
+      if (!cart || !cart.length) cart = [];
       cart.push(item);
       setCart(cart);
       updateCartBadges();
-      var msg = "Added <b>" + escapeHtml(item.title) + "</b> to your Shopping Cart. " +
-        '<a href="' + bookHref("cart.html") + '"><b>View cart</b></a> · ' +
-        '<a href="' + bookHref("checkout.html") + '">Proceed to checkout</a>';
-      var note = document.getElementById("cart-flash");
+      var msg = "Added " + item.title + " · cart now " + cart.length + ". Opening cart…";
+      var note = ensureFlash();
       if (note) {
         note.style.display = "block";
-        note.innerHTML = msg;
+        note.textContent = msg;
       }
       if (api.actionFeedback) {
         api.actionFeedback(msg, { kind: "amazon-cart", statusSelector: "#cart-flash, [data-cart-flash]" });
-      } else {
+      } else if (showFlash) {
         showFlash(msg);
       }
       markTourUsed();
+      /* 1996 Amazon took you to the cart. Stay-on-page felt like a dead mock. */
+      setTimeout(goCart, 80);
     });
   }
   updateCartBadges();

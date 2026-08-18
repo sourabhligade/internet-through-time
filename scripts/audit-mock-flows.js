@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — years 1994–2009.
+ * Mock-flow classifier — years 1994–2018.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,7 +27,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2009; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2018; y++) YEARS.push(String(y));
 
 const argv = process.argv.slice(2);
 const WANT_JSON = argv.includes("--json");
@@ -61,6 +61,8 @@ const PRODUCT_HOOK = new RegExp(
     "data-appstore-",
     "data-android-",
     "data-chrome-",
+    "data-ns-",
+    "data-igtv-",
     "data-hulu-",
     "data-farm-",
     "data-4sq-",
@@ -117,6 +119,13 @@ const PRODUCT_HOOK = new RegExp(
     "data-folk-",
     "data-os-",
     "data-game-",
+    "data-pop-",
+    "data-ig-",
+    "data-fb-",
+    "data-gdpr-",
+    "data-faceid-",
+    "data-watch",
+    "data-peri-",
   ].join("|"),
   "i"
 );
@@ -291,7 +300,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 1994–2009");
+  console.log("audit-mock-flows — 1994–2018");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

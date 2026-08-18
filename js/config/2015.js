@@ -8,6 +8,10 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/meerkatlive/index.html",
+    "sites/applemusicsub/index.html",
+    "sites/win10get/index.html",
+
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",
@@ -34,6 +38,8 @@
     "sites/meerkat/index.html",
     "sites/fblive/index.html",
     "sites/playable/game.html",
+    "sites/playable/extra-b.html",
+    "sites/playable/extra-a.html",
     "sites/playable/famous.html",
     "sites/playable/index.html",
     "sites/instagram/index.html",

@@ -7,6 +7,7 @@
 **2014–2016 → A (execute):** [`2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md`](2014-2016-TO-100-PERCENT-MUSEUM-GRADE-IMPLEMENTATION-PHASES.md) (P0–P16 · 2014 lean · 2015/16 pixels · 2016 promote · 2017+ stop)  
 **2010–2020 flows to-do (verify + leftover phases):** [`2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md`](2010-2020-FLOWS-TODO-GOALS-PHASES-STEPS.md)  
 **Hub scan + next improve (S0–S16):** [`HUB-SCAN-AND-IMPROVE-PROGRAM-1994-2016.md`](HUB-SCAN-AND-IMPROVE-PROGRAM-1994-2016.md) (lacking years · incomplete flows · 2013→2011 lean)  
+**Capture-backed dest improve (execute):** [`CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md) (H1–H14 · dated captures · dest costume · no leftover strip 4)  
 **Cross-year leftover execute:** [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md) (X1–X21 · 2013 Chrome/voice · 2015 clone-honest · 2008–2012 Chrome REAL)  
 **Date:** 2026-08-13 · **Ship update:** hub **1994–2016** playable · **2014–2016 museum-ready L3 densify**  
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · master bible [`2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md`](2016-MASTER-BIBLE-FLOWS-ARTIFACTS-UI-UX.md)  
@@ -112,7 +113,11 @@
 | Research | **[`2018-READ-FIRST.md`](2018-READ-FIRST.md)** · grade [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md) |
 | e2e | `npm run test:e2e:2018` |
 
-### 2019 (lean after H1 prune · playable)
+### 2019–2021 — **not on this branch**
+
+On `museum/1994-2020-lean` the hub stops at **2018**. Tables below are leftover notes from earlier forests. Do **not** treat them as playable disk truth.
+
+### 2019 (lean after H1 prune · **not on this branch**)
 
 | Item | Status |
 |------|--------|

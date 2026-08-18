@@ -1,3 +1,14 @@
+/* H3 capture cite (also inherited by later period sheets that import this via 1996+) */
+.archive-residual[data-itt-capture-cite] {
+  margin: 14px auto;
+  max-width: 36em;
+  padding: 6px 8px;
+  border: 1px dashed #666688;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 /* 1995 document defaults — tables for layout, commercial web */
 html { background: #ffffff; }
 body {

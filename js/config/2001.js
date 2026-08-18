@@ -45,6 +45,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/moveon/index.html": "http://museum.local/years/2001/sites/moveon/index.html",
+      "sites/grok/index.html": "http://museum.local/years/2001/sites/grok/index.html",
+      "sites/appleimac/index.html": "http://museum.local/years/2001/sites/appleimac/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2001/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2001/sites/playable/extra-b.html",
       "sites/bittorrent/index.html": "http://museum.local/years/2001/sites/bittorrent/index.html",
       "sites/itunes/index.html": "http://museum.local/years/2001/sites/itunes/index.html",
       "sites/morpheus/index.html": "http://museum.local/years/2001/sites/morpheus/index.html",

@@ -69,6 +69,25 @@
     return "yp-era-web2";
   }
 
+  function extraLinks(y) {
+    var list = (ITT.yearExtraGames && ITT.yearExtraGames[y]) || [];
+    if (!list.length) return "";
+    var i;
+    var bits = [];
+    for (i = 0; i < list.length; i++) {
+      bits.push(
+        '<a class="yp-btn secondary" href="' +
+          esc(list[i].href || "extra-a.html") +
+          '">' +
+          esc(list[i].title || "Extra") +
+          "</a>"
+      );
+    }
+    return (
+      ' <span class="yp-extras">· extras ' + bits.join(" ") + "</span>"
+    );
+  }
+
   function renderCabinet(host, y, spec) {
     var best = loadBest(spec.key);
     var accent = spec.accent || "#333";
@@ -108,6 +127,7 @@
       '<a class="yp-btn secondary" href="famous.html">Famous games · ' +
       esc(spec.famous || "arcade pair") +
       "</a>" +
+      extraLinks(y) +
       "</p>" +
       '<p class="yp-honesty yp-best">Museum original · labeled inspiration · no ripped SWF · incomplete runs never write. Start from the game page.</p>' +
       '<p class="yp-foot">Educational reconstruction · scores stay in this browser only.</p>' +

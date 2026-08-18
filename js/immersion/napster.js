@@ -16,6 +16,7 @@
       var markTourProgress = api.markTourProgress;
       var markTourUsed = api.markTourUsed || api.markTourProgress;
       var storageKey = api.storageKey;
+      var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var actionFeedback = api.actionFeedback || showFlash;
       var R = api.R;
@@ -124,7 +125,15 @@
         if (form) {
           form.addEventListener("submit", function (ev) {
             ev.preventDefault();
-            var v = input ? input.value : "";
+            var v = input ? String(input.value || "").replace(/^\s+|\s+$/g, "") : "";
+            if (v.length >= 2) {
+              saveJSON(storageKey("napster"), {
+                real: true,
+                multiStep: true,
+                q: v.slice(0, 80),
+                ts: Date.now()
+              });
+            }
             var base = (location.pathname || "").indexOf("/napster/") !== -1
               ? "search.html"
               : R("sites/napster/search.html");

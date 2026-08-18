@@ -1,0 +1,81 @@
+/**
+ * Minute leftover extras — shared chrome around year-true playfields.
+ */
+.mx-shell {
+  max-width: 36em;
+  margin: 12px auto;
+  padding: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.mx-chrome {
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.mx-chrome-sub {
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+.mx-shell h1 {
+  font-size: 18px;
+  margin: 10px 10px 6px;
+}
+.mx-goal {
+  margin: 0 10px 8px;
+}
+.mx-shell .honesty {
+  margin: 8px 10px;
+  padding: 6px 8px;
+  font-size: 11px;
+  background: #ffffcc;
+  border: 1px solid #808080;
+}
+.mx-shell [data-yg-steps] {
+  font-size: 11px;
+  margin: 8px 10px;
+  padding-left: 1.4em;
+}
+.mx-hud {
+  margin: 0 10px 8px;
+  font-size: 12px;
+}
+.mx-field {
+  margin: 8px 10px;
+  padding: 10px;
+  min-height: 8em;
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+  background: #fff;
+}
+.mx-field button[data-mx-good],
+.mx-field button[data-mx-seq],
+.mx-field button[data-mx-hit] {
+  background: #e8f0ff;
+  border: 1px solid #336;
+}
+.mx-field button[data-mx-trap],
+.mx-field button[data-mx-decoy] {
+  background: #f4f4f4;
+  border: 1px solid #999;
+  color: #444;
+}
+.mx-field button[disabled] {
+  opacity: 0.55;
+}
+.mx-actions {
+  margin: 8px 10px;
+}
+.mx-nav {
+  margin: 10px;
+  font-size: 11px;
+}
+.mx-shell [data-itt-action-status] {
+  margin: 8px 10px;
+  min-height: 1.2em;
+  font-size: 12px;
+}

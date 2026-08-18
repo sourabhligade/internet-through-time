@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/fark/index.html": "http://museum.local/years/2002/sites/fark/index.html",
+      "sites/homestar/index.html": "http://museum.local/years/2002/sites/homestar/index.html",
+      "sites/blogspot/index.html": "http://museum.local/years/2002/sites/blogspot/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2002/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2002/sites/playable/extra-b.html",
       "sites/fotolog/index.html": "http://museum.local/years/2002/sites/fotolog/index.html",
       "sites/meetup/index.html": "http://museum.local/years/2002/sites/meetup/index.html",
       "sites/typepad/index.html": "http://museum.local/years/2002/sites/typepad/index.html",

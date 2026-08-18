@@ -1,13 +1,42 @@
 /**
- * View surge — 2005 G1
- * Class: YouTube promote
+ * YouTube surge — 2005 leftover extra (minute).
  * Key: itt05-game-ytsurge
- * Engine: year-pack-boot.js (taps + optional phrase + optional wait).
- * Incomplete never writes. Museum original · no commercial SWF.
+ * Kind: burst. Incomplete never writes. Traps never write.
  */
 (function () {
   "use strict";
-  var host = document.querySelector('[data-year-game][data-game-id="ytsurge"]');
-  if (!host) return;
-  host.setAttribute("data-5x-pack", "1");
+  var MX = window.ITT && ITT.YearExtraMinute;
+  if (!MX) return;
+  MX.mount({
+  "year": "2005",
+  "id": "ytsurge",
+  "kind": "burst",
+  "queryLabel": "Query",
+  "runLabel": "Search",
+  "submitLabel": "Submit",
+  "holdLabel": "Hold",
+  "holdMs": 1600,
+  "items": [
+    {
+      "id": "zoo",
+      "label": "\u25ba Me at the zoo (18s)"
+    },
+    {
+      "id": "dorm",
+      "label": "\u25ba Dorm guitar (0:41)"
+    },
+    {
+      "id": "cat",
+      "label": "\u25ba Cat falls off TV (0:09)"
+    },
+    {
+      "id": "ad",
+      "label": "Pre-roll: 30s car ad (skip)",
+      "role": "trap",
+      "trap": "Pre-roll"
+    }
+  ],
+  "startStatus": "Three plays. Skip the pre-roll.",
+  "idleStatus": "Press Start. Incomplete never writes."
+});
 })();

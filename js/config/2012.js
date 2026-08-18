@@ -8,6 +8,10 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/vinewait/index.html",
+    "sites/tinderswipe/index.html",
+    "sites/pinterestpublic/index.html",
+
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",
@@ -39,6 +43,8 @@
     "sites/playable/game-4.html",
     "sites/playable/game-5.html",
     "sites/playable/game.html",
+    "sites/playable/extra-b.html",
+    "sites/playable/extra-a.html",
     "sites/playable/famous.html",
     "sites/playable/index.html",
     "sites/medium/index.html",

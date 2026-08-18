@@ -46,6 +46,11 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/wsj/index.html": "http://museum.local/years/1995/sites/wsj/index.html",
+      "sites/timewarner/index.html": "http://museum.local/years/1995/sites/timewarner/index.html",
+      "sites/hotbot/index.html": "http://museum.local/years/1995/sites/hotbot/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/1995/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/1995/sites/playable/extra-b.html",
       "sites/cnet/index.html": "http://museum.local/years/1995/sites/cnet/index.html",
       "sites/espn/index.html": "http://museum.local/years/1995/sites/espn/index.html",
       "sites/salon/index.html": "http://museum.local/years/1995/sites/salon/index.html",

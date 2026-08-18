@@ -45,6 +45,11 @@
       connectBusyChance: 0.16
     },
     urlMap: {
+      "sites/prodigy/index.html": "http://museum.local/years/1994/sites/prodigy/index.html",
+      "sites/compuserve/index.html": "http://museum.local/years/1994/sites/compuserve/index.html",
+      "sites/pathfinder/index.html": "http://museum.local/years/1994/sites/pathfinder/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/1994/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/1994/sites/playable/extra-b.html",
       "sites/imdb/index.html": "http://museum.local/years/1994/sites/imdb/index.html",
       "sites/netmarket/index.html": "http://museum.local/years/1994/sites/netmarket/index.html",
       "sites/pizzahut/index.html": "http://museum.local/years/1994/sites/pizzahut/index.html",

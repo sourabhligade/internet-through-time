@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/redditfront/index.html": "http://museum.local/years/2005/sites/redditfront/index.html",
+      "sites/googleearthkml/index.html": "http://museum.local/years/2005/sites/googleearthkml/index.html",
+      "sites/kayakplus/index.html": "http://museum.local/years/2005/sites/kayakplus/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2005/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2005/sites/playable/extra-b.html",
       "sites/dailymotion/index.html": "http://museum.local/years/2005/sites/dailymotion/index.html",
       "sites/gaia/index.html": "http://museum.local/years/2005/sites/gaia/index.html",
       "sites/vimeo/index.html": "http://museum.local/years/2005/sites/vimeo/index.html",

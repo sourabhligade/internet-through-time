@@ -47,6 +47,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/newscom/index.html": "http://museum.local/years/1997/sites/newscom/index.html",
+      "sites/drudgereport/index.html": "http://museum.local/years/1997/sites/drudgereport/index.html",
+      "sites/hotwired/index.html": "http://museum.local/years/1997/sites/hotwired/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/1997/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/1997/sites/playable/extra-b.html",
       "sites/mp3com/index.html": "http://museum.local/years/1997/sites/mp3com/index.html",
       "sites/nytimes/index.html": "http://museum.local/years/1997/sites/nytimes/index.html",
       "sites/zdnet/index.html": "http://museum.local/years/1997/sites/zdnet/index.html",

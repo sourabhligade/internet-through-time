@@ -45,6 +45,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/theonion/index.html": "http://museum.local/years/1999/sites/theonion/index.html",
+      "sites/drkoop/index.html": "http://museum.local/years/1999/sites/drkoop/index.html",
+      "sites/sixdegrees/index.html": "http://museum.local/years/1999/sites/sixdegrees/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/1999/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/1999/sites/playable/extra-b.html",
       "sites/egroups/index.html": "http://museum.local/years/1999/sites/egroups/index.html",
       "sites/livejournal/index.html": "http://museum.local/years/1999/sites/livejournal/index.html",
       "sites/neopets/index.html": "http://museum.local/years/1999/sites/neopets/index.html",

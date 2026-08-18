@@ -1,5 +1,9 @@
 # 1996 capture log
 
+**Updated:** 2026-08-18 — H4 Space Jam re-verify + H5 Hotmail cite  
+`2026-08-18  spacejam  live=spacejam.com/1996  took=sitemap blurbs+jam-central copy+H3 chip  refused=new cmp forest,ripped MOV  dest=years/1996/sites/spacejam/`  
+`2026-08-18  hotmail  WA ts=19971210171246  took=Free-email-anywhere+H3 chip  refused=toolbar dump  dest=years/1996/sites/hotmail/  keys=itt96-hotmail-user,itt96-hotmail-mail`
+
 **Updated:** 2026-07-28 — TO-100 leftover implement pass  
 **Plan:** `docs/TO-100-PERCENT/YEAR-1996.md`
 

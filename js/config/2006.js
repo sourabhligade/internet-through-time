@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/twitterbird/index.html": "http://museum.local/years/2006/sites/twitterbird/index.html",
+      "sites/wikihow06/index.html": "http://museum.local/years/2006/sites/wikihow06/index.html",
+      "sites/diggv4/index.html": "http://museum.local/years/2006/sites/diggv4/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2006/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2006/sites/playable/extra-b.html",
       "sites/bebo/index.html": "http://museum.local/years/2006/sites/bebo/index.html",
       "sites/newsvine/index.html": "http://museum.local/years/2006/sites/newsvine/index.html",
       "sites/slideshare/index.html": "http://museum.local/years/2006/sites/slideshare/index.html",

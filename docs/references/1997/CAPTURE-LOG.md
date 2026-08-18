@@ -1,5 +1,8 @@
 # 1997 capture log
 
+**Updated:** 2026-08-18 — H6 ICQ cite  
+`2026-08-18  icq  WA ts=19971210072826  took=I-Seek-You voice+H3 chip  refused=new UIN key  dest=years/1997/sites/icq/  keys=itt97-icq-uin,itt97-icq-buddies,itt97-icq-messages`
+
 **Updated:** 2026-07-31 (pixel residual close)  
 **Disk:** `years/1997/` live · `assets/period/1997/` ~**36** files  
 

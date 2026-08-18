@@ -1,5 +1,8 @@
 # 1998 capture log
 
+**Updated:** 2026-08-18 — H7 Lucky cite  
+`2026-08-18  google  WA ts=19981202230410  took=H3 chip on index+lucky  refused=1999 extract  dest=years/1998/sites/google/  keys=itt98-lucky,itt98-google-q`
+
 **Updated:** 2026-07-27 (TO-100 year #5)
 
 ## TO-100 densify triage (Phase 0)

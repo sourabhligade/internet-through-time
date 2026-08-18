@@ -3,6 +3,16 @@
  * Use on signature pages (YouTube, Maps, Reddit, Digg, …) for snappy navigations.
  * Full shell / densify rooms keep period-2005.css.
  */
+.archive-residual[data-itt-capture-cite] {
+  margin: 14px auto;
+  max-width: 36em;
+  padding: 6px 8px;
+  border: 1px dashed #666688;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 html, body {
   margin: 0;
   padding: 0;

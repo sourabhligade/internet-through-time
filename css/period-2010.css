@@ -1,3 +1,13 @@
+.archive-residual[data-itt-capture-cite] {
+  margin: 14px auto;
+  max-width: 36em;
+  padding: 6px 8px;
+  border: 1px dashed #666688;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 /* 2010 document styles — Win7 first full year · IE 8 · iPad · iPhone 4 · Instagram · Open Graph */
 @import url("period-2009.css");
 

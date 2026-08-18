@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/evite/index.html": "http://museum.local/years/2003/sites/evite/index.html",
+      "sites/tribe/index.html": "http://museum.local/years/2003/sites/tribe/index.html",
+      "sites/secondlifegrid/index.html": "http://museum.local/years/2003/sites/secondlifegrid/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/2003/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/2003/sites/playable/extra-b.html",
       "sites/4chan/index.html": "http://museum.local/years/2003/sites/4chan/index.html",
       "sites/hi5/index.html": "http://museum.local/years/2003/sites/hi5/index.html",
       "sites/newgrounds/index.html": "http://museum.local/years/2003/sites/newgrounds/index.html",

@@ -45,6 +45,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/opendiary/index.html": "http://museum.local/years/1998/sites/opendiary/index.html",
+      "sites/icqweb/index.html": "http://museum.local/years/1998/sites/icqweb/index.html",
+      "sites/broadcastcom/index.html": "http://museum.local/years/1998/sites/broadcastcom/index.html",
+      "sites/playable/extra-a.html": "http://museum.local/years/1998/sites/playable/extra-a.html",
+      "sites/playable/extra-b.html": "http://museum.local/years/1998/sites/playable/extra-b.html",
       "sites/about/index.html": "http://museum.local/years/1998/sites/about/index.html",
       "sites/go/index.html": "http://museum.local/years/1998/sites/go/index.html",
       "sites/snap/index.html": "http://museum.local/years/1998/sites/snap/index.html",
