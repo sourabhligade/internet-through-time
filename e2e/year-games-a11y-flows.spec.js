@@ -6,8 +6,12 @@
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
+const WIPED = new Set(['2007', '2009', '2011', '2013', '2014']);
 const YEARS = [];
-for (let y = 1994; y <= 2011; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2011; y++) {
+  const s = String(y);
+  if (!WIPED.has(s)) YEARS.push(s);
+}
 
 /** @type {Record<string, { id: string, primary: string, flow: 'click-start'|'click-primary'|'canvas'|'literacy'|'plant'|'grid' }>} */
 const FLOW = {
@@ -29,9 +33,6 @@ const FLOW = {
   '2009': { id: 'plotneighbors', primary: '[data-fv-free]', flow: 'plant' },
   '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
   '2011': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
-  '2012': { id: 'guessdoodle', primary: '[data-game-start]', flow: 'click-start' },
-  '2013': { id: 'loopsix', primary: '[data-game-start]', flow: 'click-start' },
-  '2014': { id: 'tilefold', primary: '#play-start, [data-game-start]', flow: 'click-start' },
   '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
   '2018': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
 };
@@ -175,33 +176,10 @@ test.describe('Year games — keyboard / focus affordances', () => {
   });
 
 
-  test('2009 plant blocked without literacy then succeeds', async ({ page }) => {
-    await enterYear(page, '2009');
-    await page.evaluate(() => {
-      Object.keys(localStorage)
-        .filter((k) => k.indexOf('itt09-game-') === 0)
-        .forEach((k) => localStorage.removeItem(k));
-    });
-    await goImmersion(page, '2009', 'sites/playable/game.html?fast=1');
-    const frame = contentFrame(page);
-    await assertA11yShell(frame, '2009', 'plotneighbors');
-    await frame.locator('[data-plots] button').first().click({ force: true });
-    await page.waitForTimeout(150);
-    const early = await page.evaluate(() => localStorage.getItem('itt09-game-plotneighbors'));
-    if (early) {
-      const o = JSON.parse(early);
-      const planted = (o.plots || []).some((p) => p && p.state !== 'empty');
-      expect(planted).toBe(false);
-    }
-    await runPrimaryFlow(page, frame, '2009');
-    const blob = JSON.parse((await page.evaluate(() => localStorage.getItem('itt09-game-plotneighbors'))) || '{}');
-    expect(blob.real).toBe(true);
-    expect(blob.coins).toBeLessThan(30);
-  });
 });
 
 test.describe('Playables lobby a11y smoke (sample years)', () => {
-  for (const year of ['1994', '2000', '2005', '2009']) {
+  for (const year of ['1994', '2000', '2005', '2008']) {
     test(`${year} playable lobby has heading and cabinet`, async ({ page }) => {
       await enterYear(page, year);
       await goImmersion(page, year, 'sites/playable/index.html');

@@ -18,7 +18,8 @@ No invented brand pixels. Log every harvest attempt (OK / RECON / failed-final).
 | C07-05 | Gmail 2007 open signup chrome | WA gmail.com Feb–Jun 2007 | **open** | Open signup, not invite wall |
 | C07-06 | Vista product page chrome | Microsoft · GUIdebook | **open** | Shell stays XP default |
 | C07-07 | YouTube under Google 2007 | Continuity WA | **partial** | Logo pack exists |
-| C07-08 | Kindle optional | Amazon press Nov 19 | **optional** | Only if room added |
+| C07-08 | Kindle leftover room | Amazon press Nov 19 | **failed-final** | Room is RECON text · no invented device art · 2026-08-21 leftover densify |
+| C07-09 | Tumblr leftover room | Live Stats birthmark | **failed-final** | No official t mark on disk · RECON text |
 
 ## Extract notes
 

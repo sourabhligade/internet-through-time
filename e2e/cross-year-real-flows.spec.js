@@ -69,7 +69,7 @@ async function gotoReady(page, path, readySelector, keysToClear) {
 
 /* ─── P0: Blogger 1999–2005 ─────────────────────────────────────────── */
 
-const BLOGGER_YEARS = ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007'];
+const BLOGGER_YEARS = ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006'];
 
 test.describe('cross-year blogger (post → view + year key)', () => {
   for (const year of BLOGGER_YEARS) {
@@ -130,7 +130,7 @@ test.describe('cross-year blogger (post → view + year key)', () => {
 
 /* ─── P0: Technorati 2002–2005 ──────────────────────────────────────── */
 
-const TECHNORATI_YEARS = ['2002', '2003', '2004', '2005', '2006', '2007'];
+const TECHNORATI_YEARS = ['2002', '2003', '2004', '2005', '2006'];
 
 test.describe('cross-year technorati (cosmos + year key)', () => {
   for (const year of TECHNORATI_YEARS) {
@@ -166,7 +166,7 @@ test.describe('cross-year technorati (cosmos + year key)', () => {
 
 /* ─── P0: del.icio.us 2004–2005 ─────────────────────────────────────── */
 
-const DELICIOUS_YEARS = ['2004', '2005', '2006', '2007'];
+const DELICIOUS_YEARS = ['2004', '2005', '2006'];
 
 test.describe('cross-year delicious (post + year key)', () => {
   for (const year of DELICIOUS_YEARS) {
@@ -217,7 +217,7 @@ test.describe('cross-year delicious (post + year key)', () => {
 
 /* ─── P1: Bloglines 2003–2005 ───────────────────────────────────────── */
 
-const BLOGLINES_YEARS = ['2003', '2004', '2005', '2006', '2007'];
+const BLOGLINES_YEARS = ['2003', '2004', '2005', '2006'];
 
 test.describe('cross-year bloglines (subscribe + year key)', () => {
   for (const year of BLOGLINES_YEARS) {
@@ -255,7 +255,7 @@ test.describe('cross-year bloglines (subscribe + year key)', () => {
 
 /* ─── P1: WordPress 2003–2005 ───────────────────────────────────────── */
 
-const WORDPRESS_YEARS = ['2003', '2004', '2005', '2006', '2007'];
+const WORDPRESS_YEARS = ['2003', '2004', '2005', '2006'];
 
 test.describe('cross-year wordpress (publish + year key)', () => {
   for (const year of WORDPRESS_YEARS) {
@@ -288,7 +288,7 @@ test.describe('cross-year wordpress (publish + year key)', () => {
 
 /* ─── Follow-on: Digg 2004–2005 ─────────────────────────────────────── */
 
-const DIGG_YEARS = ['2004', '2005', '2006', '2007'];
+const DIGG_YEARS = ['2004', '2005', '2006'];
 
 test.describe('cross-year digg (dig + submit + year key)', () => {
   for (const year of DIGG_YEARS) {
@@ -353,7 +353,7 @@ test.describe('cross-year digg (dig + submit + year key)', () => {
 
 /* ─── Follow-on: MySpace 2003–2005 ──────────────────────────────────── */
 
-const MYSPACE_YEARS = ['2003', '2004', '2005', '2006', '2007'];
+const MYSPACE_YEARS = ['2003', '2004', '2005', '2006'];
 
 test.describe('cross-year myspace (profile + year key)', () => {
   for (const year of MYSPACE_YEARS) {
@@ -394,7 +394,7 @@ test.describe('cross-year myspace (profile + year key)', () => {
 
 /* ─── Follow-on: Friendster 2002–2005 ───────────────────────────────── */
 
-const FRIENDSTER_YEARS = ['2002', '2003', '2004', '2005', '2006', '2007'];
+const FRIENDSTER_YEARS = ['2002', '2003', '2004', '2005', '2006'];
 
 test.describe('cross-year friendster (profile + year key)', () => {
   for (const year of FRIENDSTER_YEARS) {

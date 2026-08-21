@@ -19,9 +19,7 @@ const YEARS = [
   { year: '2004', gold: 'sites/facebook/networks.html', name: /thefacebook|Gmail/i },
   { year: '2005', gold: 'sites/youtube/upload.html', name: /Pandora|YouTube/i },
   { year: '2006', gold: 'sites/twitter/index.html', name: /Twitter|News Feed/i },
-  { year: '2007', gold: 'sites/iphone/index.html', name: /iPhone|Street View/i },
   { year: '2008', gold: 'sites/appstore/index.html', name: /GitHub|App Store/i },
-  { year: '2009', gold: 'sites/facebook/feed.html', name: /Like|FarmVille/i },
 ];
 
 test.describe('ten link-flows every year', () => {

@@ -75,6 +75,13 @@
         var circles = loadJSON(key("gplus-circles"), ["Friends", "Family", "Acquaintances"]);
         circles.push(n);
         saveJSON(key("gplus-circles"), circles.slice(0, 24));
+        saveJSON(key("gplus-circles-ack"), {
+          multiStep: true,
+          real: true,
+          year: "2011",
+          name: n,
+          ts: Date.now()
+        });
         nameIn.value = "";
         renderCircles();
         setStatus("Circle <b>" + esc(n) + "</b> saved.");

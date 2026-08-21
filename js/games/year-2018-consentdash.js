@@ -19,6 +19,8 @@
   var bestEl = host.querySelector("[data-game-best]");
   var statusEls = host.querySelectorAll("[data-itt-action-status]");
   var startBtn = host.querySelector("[data-game-start]");
+  var manageBtn = host.querySelector("[data-cd-manage]");
+  var acceptBtn = host.querySelector("[data-cd-accept]");
 
   var fast = YG && YG.isFast && YG.isFast();
   var running = false;
@@ -142,14 +144,37 @@
     hit(mx, my);
   });
 
-  if (startBtn) {
-    startBtn.addEventListener("click", function () {
-      if (raf) cancelAnimationFrame(raf);
-      reset();
-      raf = requestAnimationFrame(tick);
-    });
+  function startRun() {
+    if (raf) cancelAnimationFrame(raf);
+    reset();
+    raf = requestAnimationFrame(tick);
   }
 
+  /* Visitor path: Manage is the save click. Works without New Game. */
+  function manageOnce() {
+    if (!running) startRun();
+    score += 10;
+    if (scoreEl) scoreEl.textContent = String(score);
+    setStatus("Manage +" + score);
+    if (score >= (fast ? 20 : 50)) endRun(score, true);
+  }
+
+  function acceptTrap() {
+    if (!running) startRun();
+    setStatus("Accept All — period trap. No points.");
+  }
+
+  if (startBtn) {
+    startBtn.addEventListener("click", startRun);
+  }
+  if (manageBtn) {
+    manageBtn.addEventListener("click", manageOnce);
+  }
+  if (acceptBtn) {
+    acceptBtn.addEventListener("click", acceptTrap);
+  }
+
+  host.__ittConsentDashManage = manageOnce;
   host.__ittConsentDashEnd = function (sc) {
     endRun(Number(sc) || 0, Number(sc) >= 20);
   };

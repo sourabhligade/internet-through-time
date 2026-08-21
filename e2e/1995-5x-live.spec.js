@@ -35,8 +35,15 @@ test.describe('1995 5× live F1–F5', () => {
 
   test('F2 AuctionWeb bid gold — empty never writes', async ({ page }) => {
     await page.goto('/years/1995/sites/auctionweb/item-laser.html');
-    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt95-aw-bid');
+    await page.evaluate(() => {
+      try {
+        Object.keys(localStorage)
+          .filter((k) => k.indexOf('itt95-bid') === 0 || k === 'itt95-aw-bid' || k.indexOf('itt95-auction') === 0)
+          .forEach((k) => localStorage.removeItem(k));
+      } catch (e) { /* */ }
+    });
     await page.reload();
+    await expect(page.locator('[data-auction-id][data-itt-auction-bound="1"]')).toBeVisible({ timeout: 15000 });
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
     await page.locator('form[data-bid-form] button[type="submit"], form[data-bid-form] input[type="submit"]').first().click();
     await expect.poll(async () => getKey(page, 'itt95-aw-bid')).toBeFalsy();

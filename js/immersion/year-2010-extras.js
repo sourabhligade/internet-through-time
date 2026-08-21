@@ -41,8 +41,9 @@
         feedback("Pick capacity and Wi-Fi or 3G first. Empty order writes nothing.", st, { error: true });
         return;
       }
-      var k = key("ipad");
-      saveJSON(k, blob({ capacity: cap, radio: radio }));
+      var payload = blob({ capacity: cap, radio: radio });
+      saveJSON(key("ipad"), payload);
+      saveJSON(key("ipad-order"), payload);
       feedback("Ordered iPad " + cap + " · " + radio, st);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
@@ -239,16 +240,124 @@
   }
 
   function bootIgAlias(doc) {
-    /* Mirror instagram.js itt10-ig-posts onto research key itt10-ig */
+    /* Mirror instagram.js itt10-ig-posts onto research key itt10-ig.
+       Second successful share writes itt10-ig-2. */
     if (!doc.querySelector("[data-ig-share]")) return;
     var share = doc.querySelector("[data-ig-share]");
+    var n = 0;
     share.addEventListener("click", function () {
+      var before = null;
+      try { before = localStorage.getItem(key("ig-posts")); } catch (e0) { /* */ }
       setTimeout(function () {
         try {
           var raw = localStorage.getItem(key("ig-posts"));
-          if (raw) localStorage.setItem(key("ig"), raw);
+          if (!raw) return;
+          localStorage.setItem(key("ig"), raw);
+          if (raw === before) return;
+          n += 1;
+          if (n >= 2) {
+            saveJSON(key("ig-2"), blob({ n: n, second: true }));
+            try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+          }
         } catch (e) { /* */ }
       }, 50);
+    });
+  }
+
+  function bootInstant(doc) {
+    if (!doc.querySelector("[data-gi-go], [data-gi-q]")) return;
+    var st = doc.querySelector("[data-gi-status]");
+    var list = doc.querySelector("[data-gi-results]");
+    var HINTS = [
+      { q: "ya", t: "Yahoo!" },
+      { q: "go", t: "Google Instant — 8 Sep 2010" },
+      { q: "tw", t: "Twitter" },
+      { q: "fa", t: "Facebook" },
+      { q: "yo", t: "YouTube" }
+    ];
+    function paint(q) {
+      if (!list) return;
+      list.innerHTML = "";
+      if (!q || q.length < 2) {
+        list.hidden = true;
+        return;
+      }
+      var i;
+      var n = 0;
+      for (i = 0; i < HINTS.length; i++) {
+        if (HINTS[i].q.indexOf(q.slice(0, 2).toLowerCase()) === 0 || q.toLowerCase().indexOf(HINTS[i].q) === 0) {
+          var li = doc.createElement("li");
+          li.textContent = HINTS[i].t;
+          list.appendChild(li);
+          n += 1;
+        }
+      }
+      if (!n) {
+        var li0 = doc.createElement("li");
+        li0.textContent = "Results for “" + q + "” · Instant theater";
+        list.appendChild(li0);
+      }
+      list.hidden = false;
+    }
+    var field = doc.querySelector("[data-gi-q]");
+    if (field) {
+      field.addEventListener("input", function () {
+        paint((field.value || "").replace(/^\s+|\s+$/g, ""));
+      });
+    }
+    var btn = doc.querySelector("[data-gi-go]");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var q = (val(doc, "[data-gi-q]") || "").replace(/^\s+|\s+$/g, "");
+      if (q.length < 2) {
+        feedback("Type 2+ characters first. Instant needs a prefix. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      paint(q);
+      saveJSON(key("instant"), blob({ q: q, instant: true }));
+      feedback("Instant · " + q + " · " + key("instant"), st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
+  function bootFacetimeDest(doc) {
+    var btn = doc.querySelector("[data-ft-call]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ft-status]");
+    btn.addEventListener("click", function () {
+      var wifi = doc.querySelector("[data-ft-wifi]");
+      if (!(wifi && wifi.checked)) {
+        feedback("Confirm FaceTime is Wi-Fi only in 2010 first. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      if (countChecked(doc, "[data-ft-req]") < 1) {
+        feedback("Tick leftover honesty first. Empty call writes nothing.", st, { error: true });
+        return;
+      }
+      saveJSON(key("facetime"), blob({ wifi: true, kind: "call-theater" }));
+      feedback("FaceTime (Wi-Fi) · leftover · " + key("facetime"), st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
+  function bootKickstarter(doc) {
+    var btn = doc.querySelector("[data-ks-go]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-ks-status]");
+    btn.addEventListener("click", function () {
+      var raw = (val(doc, "[data-ks-amt]") || "").replace(/^\s+|\s+$/g, "");
+      var amt = parseInt(raw, 10);
+      if (!raw || isNaN(amt) || amt < 1) {
+        feedback("Pledge at least $1. Empty / $0 never writes.", st, { error: true });
+        return;
+      }
+      if (countChecked(doc, "[data-ks-req]") < 1) {
+        feedback("Tick leftover honesty first. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("kickstarter"), blob({ usd: amt, theater: true }));
+      feedback("Backed $" + amt + " · theater · " + key("kickstarter"), st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
   }
 
@@ -265,6 +374,9 @@
     bootDiggV4(doc);
     bootTweet(doc);
     bootIgAlias(doc);
+    bootInstant(doc);
+    bootFacetimeDest(doc);
+    bootKickstarter(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

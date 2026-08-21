@@ -13,8 +13,8 @@ test.describe("layer split — shell is the machine", () => {
     await expect(page.locator("#itt-layer-legend")).toContainText(/Machine/i);
   });
 
-  test("2009 shell stamps machine", async ({ page }) => {
-    await enterYear(page, "2009");
+  test("2010 shell stamps machine", async ({ page }) => {
+    await enterYear(page, "2010");
     await expect(page.locator("body")).toHaveAttribute("data-itt-layer", "machine");
     await expect(page.locator("#itt-layer-legend .itt-layer-chip.is-on")).toContainText(/Machine/i);
   });
@@ -27,9 +27,9 @@ test.describe("layer split — shell is the machine", () => {
 });
 
 test.describe("layer split — web vs game", () => {
-  test("2009 Starting Point is web", async ({ page }) => {
-    await page.goto("/years/2009/pages/home.html");
-    await expect(page.locator("html")).toHaveAttribute("data-itt-immersion-booted", "2009");
+  test("2010 Starting Point is web", async ({ page }) => {
+    await page.goto("/years/2010/pages/home.html");
+    await expect(page.locator("html")).toHaveAttribute("data-itt-immersion-booted", "2010");
     await expect(page.locator("body")).toHaveAttribute("data-itt-layer", "web");
     await expect(page.locator("#itt-layer-legend")).toBeVisible();
   });

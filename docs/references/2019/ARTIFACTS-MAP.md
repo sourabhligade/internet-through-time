@@ -1,7 +1,8 @@
 # 2019 — Artifacts map (room → path → storage → source)
 
-**Date:** 2026-08-13  
-**Status:** Research freeze · paths target `years/2019/`  
+**Date:** 2026-08-13 · **updated 2026-08-20**  
+**Status:** Research freeze · `years/2019/` **not on this branch** · implement from [`../../2019-READ-FIRST.md`](../../2019-READ-FIRST.md)  
+**Paths target** `years/2019/` when S1 starts.  
 **Prefix:** `itt19`  
 **Base:** `years/2019/`
 

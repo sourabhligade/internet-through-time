@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+WIPED = {"2007", "2009", "2011", "2013", "2014"}
 
 
 def site(name, href, do, steps=None):
@@ -755,6 +756,8 @@ def write_flow_maps_js(maps: dict) -> None:
         "",
     ]
     for y in sorted(maps.keys()):
+        if y in WIPED:
+            continue
         data = dict(maps[y])
         data["year"] = y
         # compact JSON as JS object
@@ -989,8 +992,11 @@ a.itt-fmap-name { color: #0000cc; text-decoration: underline; }
 
 def write_map_pages() -> None:
     for y in range(1994, 2014):
+        if str(y) in WIPED:
+            continue
         ydir = ROOT / f"years/{y}/pages"
-        ydir.mkdir(parents=True, exist_ok=True)
+        if not ydir.is_dir():
+            continue
         if y == 1994:
             css = "../../../css/mosaic-defaults.css"
             bg = "#C0C0C0"
@@ -1045,6 +1051,8 @@ def patch_immersion_configs() -> None:
     import re
 
     for y in range(1994, 2014):
+        if str(y) in WIPED:
+            continue
         p = ROOT / f"js/config/immersion-{y}.js"
         s = p.read_text(encoding="utf-8")
         changed = False

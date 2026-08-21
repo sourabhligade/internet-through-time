@@ -1,0 +1,602 @@
+[
+  {
+    "year": "1994",
+    "role": "c",
+    "path": "/years/1994/sites/playable/extra-c.html",
+    "key": "itt94-game-gopherdig",
+    "id": "gopherdig",
+    "kind": "parlor",
+    "title": "Gopher Dig",
+    "next": "/years/1994/sites/playable/extra-d.html"
+  },
+  {
+    "year": "1994",
+    "role": "d",
+    "path": "/years/1994/sites/playable/extra-d.html",
+    "key": "itt94-game-hang144",
+    "id": "hang144",
+    "kind": "hold",
+    "title": "14.4 Hang",
+    "next": "/years/1994/sites/playable/extra-e.html"
+  },
+  {
+    "year": "1994",
+    "role": "e",
+    "path": "/years/1994/sites/playable/extra-e.html",
+    "key": "itt94-game-gbflood",
+    "id": "gbflood",
+    "kind": "draw",
+    "title": "Guestbook Flood",
+    "next": "/years/1994/sites/playable/game.html"
+  },
+  {
+    "year": "1995",
+    "role": "c",
+    "path": "/years/1995/sites/playable/extra-c.html",
+    "key": "itt95-game-appletload",
+    "id": "appletload",
+    "kind": "hold",
+    "title": "Applet Load",
+    "next": "/years/1995/sites/playable/extra-d.html"
+  },
+  {
+    "year": "1995",
+    "role": "d",
+    "path": "/years/1995/sites/playable/extra-d.html",
+    "key": "itt95-game-geoplot",
+    "id": "geoplot",
+    "kind": "place",
+    "title": "Homestead Plot",
+    "next": "/years/1995/sites/playable/extra-e.html"
+  },
+  {
+    "year": "1995",
+    "role": "e",
+    "path": "/years/1995/sites/playable/extra-e.html",
+    "key": "itt95-game-soldeal",
+    "id": "soldeal",
+    "kind": "parlor",
+    "title": "Win95 Sol Deal",
+    "next": "/years/1995/sites/playable/game.html"
+  },
+  {
+    "year": "1996",
+    "role": "c",
+    "path": "/years/1996/sites/playable/extra-c.html",
+    "key": "itt96-game-swbadge",
+    "id": "swbadge",
+    "kind": "hold",
+    "title": "Shockwave Badge",
+    "next": "/years/1996/sites/playable/extra-d.html"
+  },
+  {
+    "year": "1996",
+    "role": "d",
+    "path": "/years/1996/sites/playable/extra-d.html",
+    "key": "itt96-game-fsskip",
+    "id": "fsskip",
+    "kind": "dodge",
+    "title": "FutureSplash Skip",
+    "next": "/years/1996/sites/playable/extra-e.html"
+  },
+  {
+    "year": "1996",
+    "role": "e",
+    "path": "/years/1996/sites/playable/extra-e.html",
+    "key": "itt96-game-jamquiz",
+    "id": "jamquiz",
+    "kind": "quiz",
+    "title": "Jam Planet Quiz",
+    "next": "/years/1996/sites/playable/game.html"
+  },
+  {
+    "year": "1997",
+    "role": "c",
+    "path": "/years/1997/sites/playable/extra-c.html",
+    "key": "itt97-game-classiclobby",
+    "id": "classiclobby",
+    "kind": "parlor",
+    "title": "Classic Lobby",
+    "next": "/years/1997/sites/playable/extra-d.html"
+  },
+  {
+    "year": "1997",
+    "role": "d",
+    "path": "/years/1997/sites/playable/extra-d.html",
+    "key": "itt97-game-acroround",
+    "id": "acroround",
+    "kind": "draw",
+    "title": "Acro Round",
+    "next": "/years/1997/sites/playable/extra-e.html"
+  },
+  {
+    "year": "1997",
+    "role": "e",
+    "path": "/years/1997/sites/playable/extra-e.html",
+    "key": "itt97-game-zonespades",
+    "id": "zonespades",
+    "kind": "parlor",
+    "title": "Zone Spades",
+    "next": "/years/1997/sites/playable/game.html"
+  },
+  {
+    "year": "1998",
+    "role": "c",
+    "path": "/years/1998/sites/playable/extra-c.html",
+    "key": "itt98-game-yparlor",
+    "id": "yparlor",
+    "kind": "parlor",
+    "title": "Yahoo Parlor",
+    "next": "/years/1998/sites/playable/extra-d.html"
+  },
+  {
+    "year": "1998",
+    "role": "d",
+    "path": "/years/1998/sites/playable/extra-d.html",
+    "key": "itt98-game-jacknet",
+    "id": "jacknet",
+    "kind": "quiz",
+    "title": "Jack Netshow",
+    "next": "/years/1998/sites/playable/extra-e.html"
+  },
+  {
+    "year": "1998",
+    "role": "e",
+    "path": "/years/1998/sites/playable/extra-e.html",
+    "key": "itt98-game-bannerdodge",
+    "id": "bannerdodge",
+    "kind": "dodge",
+    "title": "Banner Dodge",
+    "next": "/years/1998/sites/playable/game.html"
+  },
+  {
+    "year": "1999",
+    "role": "c",
+    "path": "/years/1999/sites/playable/extra-c.html",
+    "key": "itt99-game-pogotile",
+    "id": "pogotile",
+    "kind": "match3",
+    "title": "Pogo Tile",
+    "next": "/years/1999/sites/playable/extra-d.html"
+  },
+  {
+    "year": "1999",
+    "role": "d",
+    "path": "/years/1999/sites/playable/extra-d.html",
+    "key": "itt99-game-picohall",
+    "id": "picohall",
+    "kind": "quiz",
+    "title": "Pico Hall",
+    "next": "/years/1999/sites/playable/extra-e.html"
+  },
+  {
+    "year": "1999",
+    "role": "e",
+    "path": "/years/1999/sites/playable/extra-e.html",
+    "key": "itt99-game-neostock",
+    "id": "neostock",
+    "kind": "idle",
+    "title": "Neopets Stock",
+    "next": "/years/1999/sites/playable/game.html"
+  },
+  {
+    "year": "2000",
+    "role": "c",
+    "path": "/years/2000/sites/playable/extra-c.html",
+    "key": "itt00-game-diamgrid",
+    "id": "diamgrid",
+    "kind": "match3",
+    "title": "Diamond Grid",
+    "next": "/years/2000/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2000",
+    "role": "d",
+    "path": "/years/2000/sites/playable/extra-d.html",
+    "key": "itt00-game-hsloop",
+    "id": "hsloop",
+    "kind": "quiz",
+    "title": "Homestar Loop",
+    "next": "/years/2000/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2000",
+    "role": "e",
+    "path": "/years/2000/sites/playable/extra-e.html",
+    "key": "itt00-game-ngjudge",
+    "id": "ngjudge",
+    "kind": "parlor",
+    "title": "Portal Judge",
+    "next": "/years/2000/sites/playable/game.html"
+  },
+  {
+    "year": "2001",
+    "role": "c",
+    "path": "/years/2001/sites/playable/extra-c.html",
+    "key": "itt01-game-minipitch",
+    "id": "minipitch",
+    "kind": "runner",
+    "title": "Miniclip Pitch",
+    "next": "/years/2001/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2001",
+    "role": "d",
+    "path": "/years/2001/sites/playable/extra-d.html",
+    "key": "itt01-game-appletslice",
+    "id": "appletslice",
+    "kind": "parlor",
+    "title": "Applet Slice",
+    "next": "/years/2001/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2001",
+    "role": "e",
+    "path": "/years/2001/sites/playable/extra-e.html",
+    "key": "itt01-game-redpatch",
+    "id": "redpatch",
+    "kind": "quiz",
+    "title": "Code Red Patch",
+    "next": "/years/2001/sites/playable/game.html"
+  },
+  {
+    "year": "2002",
+    "role": "c",
+    "path": "/years/2002/sites/playable/extra-c.html",
+    "key": "itt02-game-stickwalk",
+    "id": "stickwalk",
+    "kind": "runner",
+    "title": "Stick Walk",
+    "next": "/years/2002/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2002",
+    "role": "d",
+    "path": "/years/2002/sites/playable/extra-d.html",
+    "key": "itt02-game-growsprout",
+    "id": "growsprout",
+    "kind": "quiz",
+    "title": "GROW Sprout",
+    "next": "/years/2002/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2002",
+    "role": "e",
+    "path": "/years/2002/sites/playable/extra-e.html",
+    "key": "itt02-game-fleetnight",
+    "id": "fleetnight",
+    "kind": "idle",
+    "title": "Fleet Night",
+    "next": "/years/2002/sites/playable/game.html"
+  },
+  {
+    "year": "2003",
+    "role": "c",
+    "path": "/years/2003/sites/playable/extra-c.html",
+    "key": "itt03-game-kolturn",
+    "id": "kolturn",
+    "kind": "parlor",
+    "title": "KoL Turn",
+    "next": "/years/2003/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2003",
+    "role": "d",
+    "path": "/years/2003/sites/playable/extra-d.html",
+    "key": "itt03-game-pointclick",
+    "id": "pointclick",
+    "kind": "quiz",
+    "title": "Point Click",
+    "next": "/years/2003/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2003",
+    "role": "e",
+    "path": "/years/2003/sites/playable/extra-e.html",
+    "key": "itt03-game-gaghand",
+    "id": "gaghand",
+    "kind": "parlor",
+    "title": "Gag Hand",
+    "next": "/years/2003/sites/playable/game.html"
+  },
+  {
+    "year": "2004",
+    "role": "c",
+    "path": "/years/2004/sites/playable/extra-c.html",
+    "key": "itt04-game-ntight",
+    "id": "ntight",
+    "kind": "runner",
+    "title": "Tight Jump",
+    "next": "/years/2004/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2004",
+    "role": "d",
+    "path": "/years/2004/sites/playable/extra-d.html",
+    "key": "itt04-game-addictpick",
+    "id": "addictpick",
+    "kind": "parlor",
+    "title": "Addicting Pick",
+    "next": "/years/2004/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2004",
+    "role": "e",
+    "path": "/years/2004/sites/playable/extra-e.html",
+    "key": "itt04-game-puckslap",
+    "id": "puckslap",
+    "kind": "hold",
+    "title": "Puck Slap",
+    "next": "/years/2004/sites/playable/game.html"
+  },
+  {
+    "year": "2005",
+    "role": "c",
+    "path": "/years/2005/sites/playable/extra-c.html",
+    "key": "itt05-game-stickday",
+    "id": "stickday",
+    "kind": "parlor",
+    "title": "Stick Life Day",
+    "next": "/years/2005/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2005",
+    "role": "d",
+    "path": "/years/2005/sites/playable/extra-d.html",
+    "key": "itt05-game-carttime",
+    "id": "carttime",
+    "kind": "runner",
+    "title": "Cart Timing",
+    "next": "/years/2005/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2005",
+    "role": "e",
+    "path": "/years/2005/sites/playable/extra-e.html",
+    "key": "itt05-game-shaftdig",
+    "id": "shaftdig",
+    "kind": "idle",
+    "title": "Shaft Dig",
+    "next": "/years/2005/sites/playable/game.html"
+  },
+  {
+    "year": "2006",
+    "role": "c",
+    "path": "/years/2006/sites/playable/extra-c.html",
+    "key": "itt06-game-kongbadge2",
+    "id": "kongbadge2",
+    "kind": "parlor",
+    "title": "Kong Badge",
+    "next": "/years/2006/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2006",
+    "role": "d",
+    "path": "/years/2006/sites/playable/extra-d.html",
+    "key": "itt06-game-fancydash",
+    "id": "fancydash",
+    "kind": "runner",
+    "title": "Fancy Dash",
+    "next": "/years/2006/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2006",
+    "role": "e",
+    "path": "/years/2006/sites/playable/extra-e.html",
+    "key": "itt06-game-flowcell",
+    "id": "flowcell",
+    "kind": "dodge",
+    "title": "Flow Cell",
+    "next": "/years/2006/sites/playable/game.html"
+  },
+  {
+    "year": "2008",
+    "role": "c",
+    "path": "/years/2008/sites/playable/extra-c.html",
+    "key": "itt08-game-fourkey",
+    "id": "fourkey",
+    "kind": "runner",
+    "title": "Four Key Dash",
+    "next": "/years/2008/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2008",
+    "role": "d",
+    "path": "/years/2008/sites/playable/extra-d.html",
+    "key": "itt08-game-touchroom",
+    "id": "touchroom",
+    "kind": "parlor",
+    "title": "Touch Room",
+    "next": "/years/2008/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2008",
+    "role": "e",
+    "path": "/years/2008/sites/playable/extra-e.html",
+    "key": "itt08-game-burnrope",
+    "id": "burnrope",
+    "kind": "quiz",
+    "title": "Burn Rope",
+    "next": "/years/2008/sites/playable/game.html"
+  },
+  {
+    "year": "2010",
+    "role": "c",
+    "path": "/years/2010/sites/playable/extra-c.html",
+    "key": "itt10-game-raghill",
+    "id": "raghill",
+    "kind": "physics",
+    "title": "Rag Hill",
+    "next": "/years/2010/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2010",
+    "role": "d",
+    "path": "/years/2010/sites/playable/extra-d.html",
+    "key": "itt10-game-fourobj",
+    "id": "fourobj",
+    "kind": "quiz",
+    "title": "Four Objects",
+    "next": "/years/2010/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2010",
+    "role": "e",
+    "path": "/years/2010/sites/playable/extra-e.html",
+    "key": "itt10-game-filterhold",
+    "id": "filterhold",
+    "kind": "hold",
+    "title": "Filter Hold",
+    "next": "/years/2010/sites/playable/game.html"
+  },
+  {
+    "year": "2012",
+    "role": "c",
+    "path": "/years/2012/sites/playable/extra-c.html",
+    "key": "itt12-game-frogslice",
+    "id": "frogslice",
+    "kind": "quiz",
+    "title": "Frog Slice",
+    "next": "/years/2012/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2012",
+    "role": "d",
+    "path": "/years/2012/sites/playable/extra-d.html",
+    "key": "itt12-game-repubpress",
+    "id": "repubpress",
+    "kind": "quiz",
+    "title": "Republia Press",
+    "next": "/years/2012/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2012",
+    "role": "e",
+    "path": "/years/2012/sites/playable/extra-e.html",
+    "key": "itt12-game-strokeguess",
+    "id": "strokeguess",
+    "kind": "draw",
+    "title": "Stroke Guess",
+    "next": "/years/2012/sites/playable/game.html"
+  },
+  {
+    "year": "2015",
+    "role": "c",
+    "path": "/years/2015/sites/playable/extra-c.html",
+    "key": "itt15-game-splitdrill",
+    "id": "splitdrill",
+    "kind": "dodge",
+    "title": "Split Drill",
+    "next": "/years/2015/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2015",
+    "role": "d",
+    "path": "/years/2015/sites/playable/extra-d.html",
+    "key": "itt15-game-hearthold",
+    "id": "hearthold",
+    "kind": "hold",
+    "title": "Heart Hold",
+    "next": "/years/2015/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2015",
+    "role": "e",
+    "path": "/years/2015/sites/playable/extra-e.html",
+    "key": "itt15-game-traywhack",
+    "id": "traywhack",
+    "kind": "dodge",
+    "title": "Tray Whack",
+    "next": "/years/2015/sites/playable/game.html"
+  },
+  {
+    "year": "2016",
+    "role": "c",
+    "path": "/years/2016/sites/playable/extra-c.html",
+    "key": "itt16-game-coilsnake",
+    "id": "coilsnake",
+    "kind": "runner",
+    "title": "Coil Snake",
+    "next": "/years/2016/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2016",
+    "role": "d",
+    "path": "/years/2016/sites/playable/extra-d.html",
+    "key": "itt16-game-tankslice",
+    "id": "tankslice",
+    "kind": "parlor",
+    "title": "Tank Slice",
+    "next": "/years/2016/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2016",
+    "role": "e",
+    "path": "/years/2016/sites/playable/extra-e.html",
+    "key": "itt16-game-slideexpire",
+    "id": "slideexpire",
+    "kind": "hold",
+    "title": "Slide Expire",
+    "next": "/years/2016/sites/playable/game.html"
+  },
+  {
+    "year": "2017",
+    "role": "c",
+    "path": "/years/2017/sites/playable/extra-c.html",
+    "key": "itt17-game-clipdesk",
+    "id": "clipdesk",
+    "kind": "idle",
+    "title": "Clip Desk",
+    "next": "/years/2017/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2017",
+    "role": "d",
+    "path": "/years/2017/sites/playable/extra-d.html",
+    "key": "itt17-game-hintguess",
+    "id": "hintguess",
+    "kind": "draw",
+    "title": "Hint Guess",
+    "next": "/years/2017/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2017",
+    "role": "e",
+    "path": "/years/2017/sites/playable/extra-e.html",
+    "key": "itt17-game-pondtier",
+    "id": "pondtier",
+    "kind": "idle",
+    "title": "Pond Tier",
+    "next": "/years/2017/sites/playable/game.html"
+  },
+  {
+    "year": "2018",
+    "role": "c",
+    "path": "/years/2018/sites/playable/extra-c.html",
+    "key": "itt18-game-range15",
+    "id": "range15",
+    "kind": "runner",
+    "title": "Range 15",
+    "next": "/years/2018/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2018",
+    "role": "d",
+    "path": "/years/2018/sites/playable/extra-d.html",
+    "key": "itt18-game-driftcorner",
+    "id": "driftcorner",
+    "kind": "hold",
+    "title": "Drift Corner",
+    "next": "/years/2018/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2018",
+    "role": "e",
+    "path": "/years/2018/sites/playable/extra-e.html",
+    "key": "itt18-game-bannerfight",
+    "id": "bannerfight",
+    "kind": "quiz",
+    "title": "Banner Fight",
+    "next": "/years/2018/sites/playable/game.html"
+  }
+]

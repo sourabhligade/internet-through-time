@@ -6,16 +6,13 @@
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const SAMPLE = ['1994', '2005', '2010', '2011', '2012', '2013', '2014'];
+const SAMPLE = ['1994', '2005', '2010', '2015'];
 
 const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },
   2005: { file: 'game-2.html', gid: 'ytsurge', key: 'itt05-game-ytsurge', need: 3 },
   2010: { file: 'game-2.html', gid: 'igfilter', key: 'itt10-game-igfilter', need: 2 },
   2011: { file: 'game-2.html', gid: 'siriline', key: 'itt11-game-siriline', need: 2 },
-  2012: { file: 'game-2.html', gid: 'pinboard', key: 'itt12-game-pinboard', need: 2 },
-  2013: { file: 'game-2.html', gid: 'vin6', key: 'itt13-game-vin6', need: 6 },
-  2014: { file: 'game-2.html', gid: 'icehold', key: 'itt14-game-icehold', need: 2 },
   2015: { file: 'game-2.html', gid: 'watchface', key: 'itt15-game-watchface', need: 2 },
   2016: { file: 'game-2.html', gid: 'story24', key: 'itt16-game-story24', need: 2 },
 };

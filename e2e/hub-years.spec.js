@@ -3,12 +3,12 @@ const { test, expect } = require('@playwright/test');
 
 const OPEN = [
   '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
-  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018',
+  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2015', '2016', '2017', '2018', '2019', '2020',
 ];
-const LOCKED = [];
+const LOCKED = ['2014', '2021', '2022', '2023'];
 
 test.describe('hub + year shells', () => {
-  test('hub lists 1994–2018 as available', async ({ page }) => {
+  test('hub lists playable years; 2014 locked for rebuild', async ({ page }) => {
     await page.goto('/');
     for (const y of OPEN) {
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
@@ -17,9 +17,13 @@ test.describe('hub + year shells', () => {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
       await expect(page.locator(`.year-card.locked.y${y}`)).toBeVisible();
     }
-    await expect(page.locator('body')).toContainText(/25 years open|1994–2018/i);
+    await expect(page.locator('body')).toContainText(/26 years open|wiped/i);
     await expect(page.locator('a.year-card.available[href*="years/2018"]')).toBeVisible();
-    await expect(page.locator('a.year-card[href*="years/2019"]')).toHaveCount(0);
+    await expect(page.locator('a.year-card.available[href*="years/2019"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[href*="years/2020"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[href*="years/2021"]')).toHaveCount(0);
+    await expect(page.locator('a.year-card.available[href*="years/2022"]')).toHaveCount(0);
+    await expect(page.locator('a.year-card.available[href*="years/2023"]')).toHaveCount(0);
   });
 
   test('hub follow links are the real museum socials', async ({ page }) => {
@@ -55,19 +59,20 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y1994')).toBeVisible();
     await expect(page.locator('.y2005')).toBeVisible();
     await expect(page.locator('.y2006')).toBeVisible();
-    await expect(page.locator('.y2007')).toBeVisible();
+    await expect(page.locator('.y2007.available')).toBeVisible();
     await expect(page.locator('.y2008')).toBeVisible();
-    await expect(page.locator('.y2009')).toBeVisible();
+    await expect(page.locator('.y2009.available')).toBeVisible();
     await expect(page.locator('.y2010')).toBeVisible();
-    await expect(page.locator('.y2011')).toBeVisible();
-    await expect(page.locator('.y2012')).toBeVisible();
-    await expect(page.locator('.y2013')).toBeVisible();
-    await expect(page.locator('.y2014')).toBeVisible();
+    await expect(page.locator('.y2011.available')).toBeVisible();
+    await expect(page.locator('.y2012.available')).toBeVisible();
+    await expect(page.locator('.y2013.available')).toBeVisible();
+    await expect(page.locator('.y2014.locked')).toBeVisible();
     await expect(page.locator('.y2016')).toBeVisible();
     await expect(page.locator('.y2017')).toBeVisible();
     await expect(page.locator('.y2018')).toBeVisible();
-    await expect(page.locator('.y2019')).toHaveCount(0);
-    await expect(page.locator('body')).toContainText(/25 years open|1994–2018/i);
+    await expect(page.locator('.y2019.available')).toBeVisible();
+    await expect(page.locator('.y2020.available')).toBeVisible();
+    await expect(page.locator('body')).toContainText(/26 years open|wiped/i);
     await expect(page.locator('a.start-btn[href*="years/2007"]').first()).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2008"]').first()).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2009"]').first()).toBeVisible();
@@ -93,9 +98,9 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.follow-site')).toContainText(/Yahoo|Amazon|Google|Facebook|YouTube/);
     await expect(page.locator('.follow-site a[href*="years/1998/sites/google"]')).toBeVisible();
     await expect(page.locator('.follow-site a[href*="years/2005/sites/youtube"]')).toBeVisible();
-    await expect(page.locator('.compare-2011-2013')).toBeVisible();
-    await expect(page.locator('.compare-2011-2013')).toContainText('2013');
-    await expect(page.locator('.compare-2011-2013')).toContainText(/Vine|Stories|Snowden/i);
+    await expect(page.locator('.compare-2011')).toBeVisible();
+    await expect(page.locator('.compare-2011')).toContainText('2011');
+    await expect(page.locator('.compare-2011')).toContainText(/Google\+|Spotify|Siri/i);
   });
 
   for (const year of OPEN) {

@@ -295,46 +295,38 @@ const SIGNATURE = {
       await frame.locator('[data-spotify-invite]').click();
     },
   },
+
   '2012': {
     path: 'sites/instagram/android.html',
-    keySuffix: 'ig',
-    body: /Android|Apr 2012|Instagram/i,
+    keySuffix: 'ig-android',
+    body: /Instagram|Android|filter/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const share = frame.locator('[data-ig-share]');
-      await expect(share).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-req]').nth(0).check({ force: true });
-      await frame.locator('[data-req]').nth(1).check({ force: true });
-      await frame.locator('[data-ig-filter="X-Pro II"]').click();
-      await frame.locator('[data-ig-caption]').fill('handoff 2012 android');
-      await share.click();
+      await expect(frame.locator('[data-ig12-share]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-ig12-filter="X-Pro II"]').click();
+      await frame.locator('[data-ig12-share]').click();
     },
   },
-  '2013': {
-    path: 'sites/vine/record.html',
-    keySuffix: 'vine-posts',
-    body: /Vine|6.second|6 seconds/i,
+  '2015': {
+    path: 'sites/periscope/index.html',
+    keySuffix: 'periscope',
+    body: /Periscope|Go LIVE|live/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await expect(frame.locator('[data-vine-post]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-req]').nth(0).check({ force: true });
-      await frame.locator('[data-req]').nth(1).check({ force: true });
-      const hold = frame.locator('[data-vine-hold]');
-      for (let i = 0; i < 5; i++) await hold.click();
-      await frame.locator('[data-vine-caption]').fill('handoff 6s residual');
-      await frame.locator('[data-vine-post]').click();
+      await expect(frame.locator('[data-peri-live]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-peri-title]').fill('handoff rooftop');
+      await frame.locator('[data-peri-live]').click();
     },
   },
-  '2014': {
-    path: 'sites/whatsapp/index.html',
-    keySuffix: 'wa-install',
-    body: /WhatsApp|Install|450/i,
+  '2016': {
+    path: 'sites/instagram/stories.html',
+    keySuffix: 'ig-stories',
+    body: /Stor(y|ies)|24h|Instagram/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await expect(frame.locator('[data-wa-install]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-req]').nth(0).check({ force: true });
-      await frame.locator('[data-req]').nth(1).check({ force: true });
-      await frame.locator('[data-wa-install]').click();
+      await expect(frame.locator('[data-ig-story-add]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-ig-story-text]').fill('handoff 24h');
+      await frame.locator('[data-ig-story-add]').click();
     },
   },
   '2017': {
@@ -343,21 +335,23 @@ const SIGNATURE = {
     body: /Face ID/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await frame.locator('[data-faceid-no-home]').check({ force: true });
-      await frame.locator('[data-faceid-not-touch]').check({ force: true });
-      await frame.locator('[data-faceid-not-xs]').check({ force: true });
-      await frame.locator('[data-faceid-save]').click();
+      const reqs = frame.locator('[data-faceid-req]');
+      await expect(reqs.first()).toBeVisible({ timeout: 15000 });
+      await reqs.nth(0).check({ force: true });
+      await reqs.nth(1).check({ force: true });
+      await frame.locator('[data-faceid-unlock]').click();
     },
   },
   '2018': {
-    path: 'sites/gdpr/rights.html',
+    path: 'sites/gdpr/index.html',
     keySuffix: 'gdpr',
-    body: /25 May|GDPR|Art\. 15/i,
+    body: /25 May|GDPR|Manage|Accept All/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      await frame.locator('[data-gdpr-art15]').check({ force: true });
-      await frame.locator('[data-gdpr-art17]').check({ force: true });
-      await frame.locator('[data-gdpr-date]').check({ force: true });
+      await expect(frame.locator('[data-gdpr-manage]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-gdpr-manage]').click();
+      await frame.locator('[data-gdpr-req]').nth(0).check({ force: true });
+      await frame.locator('[data-gdpr-req]').nth(1).check({ force: true });
       await frame.locator('[data-gdpr-save]').click();
     },
   },
@@ -367,46 +361,15 @@ const SIGNATURE = {
     body: /Disney\+|\$6\.99|Nov(ember)?\s*12/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const continueUi = frame.locator('[data-profile="adult-1"]');
-      if ((await continueUi.count()) > 0) {
-        await continueUi.click();
-        await frame.locator('[data-title="mando"]').click();
-        await frame.locator('[data-add-continue]').click();
-        await frame.locator('[data-title="lion-king"]').click();
-        await frame.locator('[data-add-continue]').click();
-        await frame.locator('[data-dplus-date]').check({ force: true });
-        await frame.locator('[data-dplus-not-trial]').check({ force: true });
-        await frame.locator('[data-dplus-kids]').check({ force: true });
-        await frame.locator('[data-dplus-save]').click();
-        return;
-      }
-      await frame.locator('[data-dplus-plan]').selectOption('monthly');
-      const req = frame.locator('[data-req]');
-      const n = await req.count();
-      for (let i = 0; i < n; i++) await req.nth(i).check({ force: true });
-      await frame.locator('[data-dplus-join]').click();
-    },
-  },
-  '2020': {
-    path: 'sites/zoom/index.html',
-    keySuffix: 'zoom',
-    body: /Join a Meeting|muted|participants/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await frame.locator('#itt20-code').fill('84739258101');
-      await frame.locator('[data-zoom-join]').click();
-      await page.waitForTimeout(400);
-      await contentFrame(page).locator('[data-admit]').click();
-      await page.waitForTimeout(400);
-      const meet = contentFrame(page);
-      await meet.locator("[name='line']").fill('can you see my screen');
-      await meet.locator('[data-chat]').evaluate((f) => f.requestSubmit());
-      await meet.locator('[data-leave]').click();
-      await page.waitForTimeout(400);
-      const recap = contentFrame(page);
-      await recap.locator('[data-zoom-part]').check({ force: true });
-      await recap.locator('[data-zoom-not-live]').check({ force: true });
-      await recap.locator('[data-zoom-save]').click();
+      await expect(frame.locator('[data-dplus-continue]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-dplus-req]').nth(0).check({ force: true });
+      await frame.locator('[data-dplus-req]').nth(1).check({ force: true });
+      await frame.locator('[data-dplus-profile="adult"]').click();
+      await frame.locator('[data-dplus-add]').nth(0).click();
+      await frame.locator('[data-dplus-add]').nth(1).click();
+      await frame.locator('[data-dplus-profile="kids"]').click();
+      await frame.locator('[data-dplus-profile="adult"]').click();
+      await frame.locator('[data-dplus-continue]').click();
     },
   },
 };
@@ -425,18 +388,14 @@ const YEARS = [
   '2004',
   '2005',
   '2006',
-  '2007',
   '2008',
-  '2009',
   '2010',
-  '2011',
   '2012',
-  '2013',
-  '2014',
+  '2015',
+  '2016',
   '2017',
   '2018',
   '2019',
-  '2020',
 ];
 
 /**

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Museum atlas — The Internet Through Time</title>
+  <meta name="description" content="Floor plan of the museum: 21 years, one-thing golds, official trails, follow-a-site threads, first night.">
+  <link rel="stylesheet" href="../css/atlas.css">
+  <link rel="icon" href="../favicon.gif" type="image/gif">
+</head>
+<body>
+  <div class="atlas">
+    <div class="atlas-win">
+      <div class="atlas-bar">
+        <span>The Internet Through Time — museum atlas</span>
+        <span>_ □ ×</span>
+      </div>
+      <div class="atlas-body">
+        <nav class="atlas-nav" aria-label="Atlas sections">
+          <a href="../index.html">← Year menu</a>
+          <a href="#spine">Years</a>
+          <a href="#threads">Follow a site</a>
+          <a href="#trails">Tours</a>
+          <a href="#find">Find</a>
+          <a href="../games/index.html">Games wing</a>
+        </nav>
+        <h1>See the whole museum</h1>
+        <p class="lede">
+          Twenty-two frozen years (1994–2006, 2008, 2010, 2012, and 2015–2020). Opening 2005 does not give you the iPhone.
+          Each year has <b>one gold</b>, a short guided start, and a 10-stop official trail.
+          2007, 2009, 2011, and 2013–2014 are holes on this spine — 2020–2023 are wiped off the floor plan.
+        </p>
+        <p class="muted">
+          Click a year on the spine. Or pick a thread (Yahoo across time) or a tour (first night).
+          Progress stays in this browser only.
+        </p>
+
+        <h2 id="spine">Years — gold on each tick</h2>
+        <p class="muted">Open years are white. Wiped years are gray. Selected year opens below.</p>
+        <div id="atlas-spine" role="list" aria-label="Year spine 1994–2020"></div>
+        <div id="atlas-year" hidden></div>
+
+        <h2 id="threads">Follow a site through time</h2>
+        <p class="muted">Same brand, only rooms that exist on disk. Continuity clones stay in that year’s chrome.</p>
+        <div id="atlas-threads"></div>
+
+        <h2 id="trails">Tours (human paths)</h2>
+        <p class="muted">First night is the built-in walk. The others are curator threads, not leftover 5× farms.</p>
+        <div id="atlas-trails"></div>
+
+        <h2 id="find">Find a name</h2>
+        <p class="muted">Jumps to a real room. Not a search engine — a table of golds, official trail stops, and threads.</p>
+        <p><input type="search" id="atlas-find" placeholder="hotmail, napster, lucky, gdpr…" autocomplete="off"></p>
+        <div id="atlas-find-results"></div>
+
+        <p class="atlas-foot">
+          <a href="../index.html">Year menu</a> ·
+          <a href="../games/index.html">Games</a> ·
+          23 years playable · 2007 · 2009 · 2011 · 2013–2014 wiped
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/museum-progress.js"></script>
+  <script src="../js/config/flow-trails.js"></script>
+  <script src="../js/atlas-data.js"></script>
+  <script src="../js/atlas.js"></script>
+</body>
+</html>

@@ -98,7 +98,7 @@ test.describe('Year home densify · ≥20 links + REAL trails', () => {
 
       const body = await page.locator('body').innerText();
       expect(body).toMatch(
-        /Connection trails|REAL multipath|product trails|Guided multi-step|Try these/i
+        /Connection trails|REAL multipath|product trails|Guided multi-step|Guided flow|Try these/i
       );
       expect(body).toMatch(/→|->/);
 

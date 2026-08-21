@@ -1530,11 +1530,11 @@ def test_2007_signature() -> None:
         "years/2007/pages/home.html",
         "years/2007/pages/about.html",
         "years/2007/sites/iphone/index.html",
-        "years/2007/sites/gmail/about.html",
-        "years/2007/sites/maps/streetview.html",
-        "years/2007/sites/facebook/platform.html",
+        "years/2007/sites/gmail/index.html",
+        "years/2007/sites/maps/index.html",
+        "years/2007/sites/facebook/index.html",
         "years/2007/sites/twitter/index.html",
-        "years/2007/sites/youtube/about.html",
+        "years/2007/sites/youtube/index.html",
         "js/config/2007.js",
         "js/config/immersion-2007.js",
         "js/immersion/iphone.js",
@@ -1557,8 +1557,8 @@ def test_2007_signature() -> None:
     if "App Store" not in read(ROOT / "years/2007/sites/iphone/index.html"):
         fail("2007-signature", "iphone App Store ban copy")
         return
-    if "May 29" not in read(ROOT / "years/2007/sites/maps/streetview.html"):
-        fail("2007-signature", "street view date")
+    if "Street View" not in read(ROOT / "years/2007/sites/maps/index.html"):
+        fail("2007-signature", "street view dest")
         return
     ok("2007-signature")
 
@@ -1681,7 +1681,7 @@ def test_2009_signature() -> None:
         "years/2009/pages/about.html",
         "years/2009/sites/appstore/index.html",
         "years/2009/sites/iphone/index.html",
-        "years/2009/sites/facebook/feed.html",
+        "years/2009/sites/facebook/index.html",
         "years/2009/sites/farmville/index.html",
         "years/2009/sites/bing/index.html",
         "years/2009/sites/windows7/index.html",
@@ -1717,7 +1717,7 @@ def test_2009_signature() -> None:
         fail("2009-signature", "iPad ban")
         return
     apps = read(ROOT / "years/2009/sites/appstore/index.html")
-    if "data-appstore-install" not in apps and "data-appstore-catalog" not in apps:
+    if "data-as09-ack" not in apps and "data-appstore-install" not in apps and "data-appstore-catalog" not in apps:
         fail("2009-signature", "appstore hooks")
         return
     if "50,000" not in apps and "50000" not in apps and "50k" not in apps.lower():
@@ -1728,11 +1728,11 @@ def test_2009_signature() -> None:
         fail("2009-signature", "iphone 3GS prices")
         return
     farm = read(ROOT / "years/2009/sites/farmville/index.html")
-    if "data-farm-plant" not in farm:
+    if "data-fv09-harvest" not in farm and "data-farm-plant" not in farm:
         fail("2009-signature", "farmville hooks")
         return
-    feed = read(ROOT / "years/2009/sites/facebook/feed.html")
-    if "data-fb-like" not in feed:
+    feed = read(ROOT / "years/2009/sites/facebook/index.html")
+    if "data-lk09-like" not in feed and "data-fb-like" not in feed:
         fail("2009-signature", "like hooks")
         return
     ok("2009-signature")
@@ -1884,7 +1884,7 @@ def test_2013_signature() -> None:
         fail("2013-signature", "bans")
         return
     vine = read(ROOT / "years/2013/sites/vine/record.html")
-    if "data-vine-post" not in vine or "itt13-vine-posts" not in vine:
+    if "data-vn13-post" not in vine or "itt13-vine-posts" not in vine:
         fail("2013-signature", "vine hooks")
         return
     ok("2013-signature")

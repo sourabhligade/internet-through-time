@@ -1370,6 +1370,20 @@ body {
 .year-card.y2021 .motif { background: linear-gradient(135deg, #007aff, #25d366); }
 .year-card.y2021 .label, .year-card.y2021 .scale { color: #333; }
 
+.year-card.y2022 { border-color: #10a37f #404040 #404040 #111; }
+.year-card.y2022 .year-card-inner { background: linear-gradient(180deg, #111 0%, #1a2e28 55%); color: #eee; }
+.year-card.y2022 .year { color: #fff; }
+.year-card.y2022 .era-chip { background: #10a37f; color: #fff; }
+.year-card.y2022 .motif { background: linear-gradient(135deg, #10a37f, #555); }
+.year-card.y2022 .label, .year-card.y2022 .scale { color: #ccc; }
+
+.year-card.y2023 { border-color: #0e7a0d #404040 #404040 #111; }
+.year-card.y2023 .year-card-inner { background: linear-gradient(180deg, #0b1020 0%, #123 55%); color: #eee; }
+.year-card.y2023 .year { color: #fff; }
+.year-card.y2023 .era-chip { background: #0e7a0d; color: #fff; }
+.year-card.y2023 .motif { background: linear-gradient(135deg, #0e7a0d, #10a37f); }
+.year-card.y2023 .label, .year-card.y2023 .scale { color: #ccc; }
+
 /* —— Passport + first night (1994–2013) —— */
 .hub-passport-link {
   color: #000080;

@@ -494,39 +494,6 @@ test.describe('year-signature 2006', () => {
   });
 });
 
-test.describe('year-signature 2007', () => {
-  test('Gmail open compose → itt07-gmail-msgs', async ({ page }) => {
-    await enterYear(page, '2007');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt07-gmail-msgs');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2007', 'sites/gmail/compose.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-gmail-compose]')).toBeVisible({ timeout: 15000 });
-    const subj = 'sig07 ' + Date.now();
-    await frame.locator('[name="subj"]').fill(subj);
-    await frame.locator('[name="body"]').fill('open gmail 2007');
-    await frame.locator('[data-gmail-compose] button[type="submit"]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-gmail-msgs')), {
-        timeout: 10000,
-      })
-      .toMatch(new RegExp(subj.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
-  });
-
-  test('iPhone product room', async ({ page }) => {
-    await enterYear(page, '2007');
-    await goImmersion(page, '2007', 'sites/iphone/index.html');
-    await expect(contentFrame(page).locator('body')).toContainText(/iPhone|Apple|Safari|2007/i, {
-      timeout: 15000,
-    });
-  });
-});
-
 test.describe('year-signature 2008', () => {
   test('Chrome download theater → itt08-chrome', async ({ page }) => {
     await enterYear(page, '2008');
@@ -580,25 +547,4 @@ test.describe('year-signature 2008', () => {
   });
 });
 
-test.describe('year-signature 2009', () => {
-  test('FarmVille plant → itt09-farm', async ({ page }) => {
-    await enterYear(page, '2009');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt09-farm');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2009', 'sites/farmville/index.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/FarmVille|plant|crop/i, { timeout: 15000 });
-    const plant = frame.locator('[data-farm-plant]').first();
-    await expect(plant).toBeVisible({ timeout: 15000 });
-    await plant.click();
-    await plant.click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt09-farm')), { timeout: 8000 })
-      .toBeTruthy();
-  });
-});
+

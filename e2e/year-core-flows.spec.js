@@ -25,7 +25,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005',
-  '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018',
+  '2006', '2007', '2008', '2010', '2012', '2015', '2016', '2017', '2018', '2019',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -42,19 +42,18 @@ const LOCATION_HINT = {
   '2004': { type: 'gmail', re: /gmail|mail/i },
   '2005': { type: 'youtube', re: /youtube/i },
   '2006': { type: 'twitter', re: /twitter|twttr/i },
-  '2007': { type: 'iphone', re: /iphone|apple/i },
+  '2007': { type: 'iphone', re: /iphone/i },
+
   /* Prefer keys that exist in each year's locationHints map */
   '2008': { type: 'iphone', re: /iphone/i },
-  '2009': { type: 'bing', re: /bing/i },
+
   '2010': { type: 'instagram', re: /instagram/i },
-  '2011': { type: 'spotify', re: /spotify/i },
-  '2012': { type: 'instagram', re: /instagram/i },
-  '2013': { type: 'vine', re: /vine/i },
-  '2014': { type: 'whatsapp', re: /whatsapp/i },
+
   '2015': { type: 'periscope', re: /periscope|live/i },
   '2016': { type: 'stories', re: /stor(y|ies)|instagram/i },
   '2017': { type: 'faceid', re: /face.?id|iphone.?x|animoji|no.?home/i },
   '2018': { type: 'gdpr', re: /gdpr|cookie|consent|manage|banner/i },
+  '2019': { type: 'disneyplus', re: /disney|who's watching|continue|trial/i },
 };
 
 for (const year of YEARS) {

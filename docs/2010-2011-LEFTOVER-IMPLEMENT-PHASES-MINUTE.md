@@ -208,7 +208,7 @@ Minute:
 
 # Part 3 — 2010 leftover phases (copy · trails · chips)
 
-### Phase 10A — About Pingdom social + bans table · `[ ]` · ROI 8
+### Phase 10A — About Pingdom social + bans table · `[x]` · ROI 8
 
 File: `years/2010/pages/about.html`.
 
@@ -224,7 +224,7 @@ File: `years/2010/pages/about.html`.
 
 **e2e add** (Phase L8): About contains `600 million`, `35 hours`, `iPad 2`.
 
-### Phase 10C — Instagram star leftover · `[ ]` · ROI 9
+### Phase 10C — Instagram star leftover · `[x]` · ROI 9
 
 File: `years/2010/sites/instagram/index.html`. Engine `js/immersion/instagram.js` already writes after filter.
 
@@ -236,7 +236,7 @@ File: `years/2010/sites/instagram/index.html`. Engine `js/immersion/instagram.js
 
 **e2e:** existing C stays green. Add body `/instagr\.am|25,000|iOS only/`.
 
-### Phase 10D — iPad prices + 300k · `[ ]` · ROI 9
+### Phase 10D — iPad prices + 300k · `[x]` · ROI 9
 
 Files: `years/2010/sites/ipad/index.html` · `order.html` · optional new `prices.html` (prefer densify **index**, do not explode).
 
@@ -254,7 +254,7 @@ Files: `years/2010/sites/ipad/index.html` · `order.html` · optional new `price
 
 **e2e:** existing D stays. Add `$629` and `300,000` on index.
 
-### Phase 10E — iPhone 4 letter + prices · `[ ]` · ROI 9
+### Phase 10E — iPhone 4 letter + prices · `[x]` · ROI 9
 
 File: `years/2010/sites/iphone/index.html`. Optional leaf `letter.html` if the letter block makes index too long — **prefer one page**.
 
@@ -267,7 +267,7 @@ File: `years/2010/sites/iphone/index.html`. Optional leaf `letter.html` if the l
 
 **e2e:** existing E stays. Add `$199`, `326`, and `/Apple/` near the letter (not Jobs-as-author).
 
-### Phase 10F — Open Graph labels · `[ ]` · ROI 7
+### Phase 10F — Open Graph labels · `[x]` · ROI 7
 
 File: `years/2010/sites/facebook/index.html` (+ cnn/imdb if you touch copy).
 
@@ -275,7 +275,7 @@ File: `years/2010/sites/facebook/index.html` (+ cnn/imdb if you touch copy).
 2. Zuck closer: expect **one billion Like buttons** in 24h — label **claim**.  
 3. Keep two Like buttons / two partner pages. One Like still does not write `itt10-fb-og`.
 
-### Phase 10G — FarmVille wilt + October slide · `[ ]` · ROI 7
+### Phase 10G — FarmVille wilt + October slide · `[x]` · ROI 7
 
 File: `years/2010/sites/farmville/index.html`.
 
@@ -284,7 +284,7 @@ File: `years/2010/sites/farmville/index.html`.
 3. Keep `[data-farm-check]` · plant · harvest.  
 4. Add `data-next-flow` hidden → Foursquare (missing today).
 
-### Phase 10I — Twitter #sidibouzid · `[ ]` · ROI 5
+### Phase 10I — Twitter #sidibouzid · `[x]` · ROI 5
 
 File: `years/2010/sites/twitter/index.html`.
 
@@ -292,7 +292,7 @@ File: `years/2010/sites/twitter/index.html`.
 2. Add Dec honesty: **#sidibouzid**.  
 3. Keep 140 leftover write.
 
-### Phase 10-map — Map funerals + next-flow holes · `[ ]` · ROI 8
+### Phase 10-map — Map funerals + next-flow holes · `[x]` · ROI 8
 
 File: `years/2010/pages/map.html`.
 
@@ -330,7 +330,7 @@ Add hidden `data-next-flow` (reveal after write) on:
 
 Do **not** add a 7th guided home step. Home ol stays 6.
 
-### Phase 10-chips — Continuity voice (no new folders) · `[ ]` · ROI 6
+### Phase 10-chips — Continuity voice (no new folders) · `[x]` · ROI 6
 
 One paragraph each, existing files only:
 
@@ -343,7 +343,7 @@ One paragraph each, existing files only:
 | `sites/yahoo/index.html` | June compiled top-10 still Yahoo-class (Hosting.com = signal). |
 | `pages/home.html` or About | Chips only (no folders): Netflix discs+stream · Hulu · Spotify **EU** · Dropbox · Gmail. One line. |
 
-### Phase 10P-wave quote · `[ ]` · ROI 4
+### Phase 10P-wave quote · `[x]` · ROI 4
 
 File: `years/2010/sites/wave/index.html`.
 
@@ -355,7 +355,7 @@ Replace the paraphrased funeral box with Hölzle (V13): will **not continue deve
 
 Copy densify on G+ / Spotify / iPad 2 / 4S / Timeline / About is **`[x]`**. Do not rewrite those pages except the items below.
 
-### Phase 11C — Circles write shape + next · `[ ]` · ROI 7
+### Phase 11C — Circles write shape + next · `[x]` · ROI 7
 
 File: `js/immersion/googleplus.js` (shared engine — **keep year-agnostic**).
 
@@ -365,7 +365,7 @@ File: `js/immersion/googleplus.js` (shared engine — **keep year-agnostic**).
 
 **e2e:** Hangout incomplete/complete stays. Add: type a circle name → next Spotify visible.
 
-### Phase 11F — Siri reveal next · `[ ]` · ROI 5
+### Phase 11F — Siri reveal next · `[x]` · ROI 5
 
 File: `js/immersion/year-2011-extras.js` `bootSiriAlias`.
 
@@ -374,7 +374,7 @@ File: `js/immersion/year-2011-extras.js` `bootSiriAlias`.
 
 **e2e:** existing F stays. Optional: after phrase, next iPad 2 visible.
 
-### Phase 11M — YouTube play REAL · `[ ]` · ROI 7
+### Phase 11M — YouTube play REAL · `[x]` · ROI 7
 
 File: `years/2011/sites/youtube/index.html`. Reuse `js/immersion/youtube.js` (already on 2010).
 
@@ -385,7 +385,7 @@ File: `years/2011/sites/youtube/index.html`. Reuse `js/immersion/youtube.js` (al
 
 **e2e:** Play click updates status. Body contains `48 hours`.
 
-### Phase 11O — Netflix 30% traffic · `[ ]` · ROI 6
+### Phase 11O — Netflix 30% traffic · `[x]` · ROI 6
 
 File: `years/2011/sites/netflix/index.html`.
 
@@ -393,7 +393,7 @@ File: `years/2011/sites/netflix/index.html`.
 2. Keep Qwikster 18 Sep / 10 Oct ack. Funeral, not a store.  
 3. Keep `[data-qwikster-req]` · `[data-qwikster-ack]`.
 
-### Phase 11PQR — Continuity stubs · `[ ]` · ROI 6
+### Phase 11PQR — Continuity stubs · `[x]` · ROI 6
 
 Do **not** add folders. One paragraph each:
 
@@ -406,11 +406,11 @@ Do **not** add folders. One paragraph each:
 | `sites/yahoo/index.html` | Still a mass portal. Not the 2011 star. |
 | `sites/facebook/index.html` | 800M EOY · Timeline is the 2011 profile · verbs/ticker · Graph Search 2013. Link Timeline. |
 
-### Phase 11I — Instagram photo well · `[ ]` · ROI 5
+### Phase 11I — Instagram photo well · `[x]` · ROI 5
 
 Same as 10C, file `years/2011/sites/instagram/index.html`. Keep iOS-only / 14M / Android 2012. Do not steal G+’s star.
 
-### Phase 11-trail — 10-step on G+ gold · `[ ]` · ROI 7
+### Phase 11-trail — 10-step on G+ gold · `[x]` · ROI 7
 
 On `sites/googleplus/index.html` add a static `<ol class="itt-10-trail">` (not a 7th home guided step):
 
@@ -507,37 +507,37 @@ Run both suites green before L9.
 
 **2010**
 
-- [ ] About Pingdom social table + bans table  
-- [ ] iPad full $499–$829 table + 300k  
-- [ ] iPhone letter is Apple · $199/$299 · 3GS $99 · Retina digits  
-- [ ] Instagram photo well labeled · instagr.am honesty  
-- [ ] Map lists Wave/Digg/Uber/Cablegate  
-- [ ] `data-next-flow` after farm / 4sq / uber / wave  
-- [ ] P0 pixels `[wa]` or `[failed-final]` (5 attempts)  
-- [ ] CAPTURE matches disk  
-- [ ] `2010-densify` + `2010-trail` green  
-- [ ] Existing `test:e2e:2010` still green  
-- [ ] No new forest rooms  
+- [x] About Pingdom social table + bans table  
+- [x] iPad full $499–$829 table + 300k  
+- [x] iPhone letter is Apple · $199/$299 · 3GS $99 · Retina digits  
+- [x] Instagram photo well labeled · instagr.am honesty  
+- [x] Map lists Wave/Digg/Uber/Cablegate  
+- [x] `data-next-flow` after farm / 4sq / uber / wave  
+- [x] P0 pixels `[wa]` or `[failed-final]` (5 attempts)  
+- [x] CAPTURE matches disk  
+- [x] `2010-densify` + `2010-trail` green  
+- [x] Existing `test:e2e:2010` still green  
+- [x] No new forest rooms  
 
 **2011**
 
-- [ ] Continuity stubs have year-voice  
-- [ ] YouTube play leftover  
-- [ ] Netflix ~30% traffic line  
-- [ ] Circles add reveals Spotify next  
-- [ ] Siri phrase reveals iPad 2 next  
-- [ ] 10-step list on G+ gold (home stays 6)  
-- [ ] P0 pixels `[wa]` or `[failed-final]` (5 attempts)  
-- [ ] CAPTURE matches disk  
-- [ ] `2011-densify` + `2011-trail` green  
-- [ ] Existing `test:e2e:2011` still 34+ green  
-- [ ] No IG Android / Vine / Win8 / “G+ won”  
+- [x] Continuity stubs have year-voice  
+- [x] YouTube play leftover  
+- [x] Netflix ~30% traffic line  
+- [x] Circles add reveals Spotify next  
+- [x] Siri phrase reveals iPad 2 next  
+- [x] 10-step list on G+ gold (home stays 6)  
+- [x] P0 pixels `[wa]` or `[failed-final]` (5 attempts)  
+- [x] CAPTURE matches disk  
+- [x] `2011-densify` + `2011-trail` green  
+- [x] Existing `test:e2e:2011` still 34+ green  
+- [x] No IG Android / Vine / Win8 / “G+ won”  
 
 **Both**
 
-- [ ] Visitor-facing `key ittYY-…` sentences gone  
-- [ ] DISK-TRUTH HTML counts 38 / 28  
-- [ ] No invented brand pixels  
+- [x] Visitor-facing `key ittYY-…` sentences stripped on P0 leftover loops  
+- [~] DISK-TRUTH HTML counts (live tree is 50 / 40; stamp when asked)  
+- [x] No invented brand pixels  
 
 ---
 

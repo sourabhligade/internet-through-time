@@ -23,6 +23,7 @@ test.describe('2010 leftover densify copy', () => {
     await expect(page.locator('body')).toContainText('$499');
     await expect(page.locator('body')).toContainText('$629');
     await expect(page.locator('body')).toContainText('300,000');
+    await expect(page.locator('img[alt*="wa 2010"]')).toBeVisible();
   });
 
   test('iPhone 4 prices + Retina + Apple letter', async ({ page }) => {
@@ -38,6 +39,25 @@ test.describe('2010 leftover densify copy', () => {
     await expect(page.locator('body')).toContainText('83.76');
     await expect(page.locator('body')).toContainText('60 million');
     await expect(page.locator('body')).toContainText('2.5');
+  });
+
+  test('Instagram photo well is pickable RECON', async ({ page }) => {
+    await page.goto('/years/2010/sites/instagram/index.html');
+    await expect(page.locator('[data-ig-photo="dinner"]')).toBeVisible();
+    await expect(page.locator('body')).toContainText('RECON');
+  });
+
+  test('Foursquare continuity still is labeled', async ({ page }) => {
+    await page.goto('/years/2010/sites/foursquare/index.html');
+    await expect(page.locator('img[alt*="continuity"]')).toBeVisible();
+    await expect(page.locator('body')).toContainText('[continuity 2009]');
+  });
+
+  test('Nexus One 5 Jan + WP7 21 Oct', async ({ page }) => {
+    await page.goto('/years/2010/sites/android/index.html');
+    await expect(page.locator('body')).toContainText('5 Jan');
+    await page.goto('/years/2010/sites/windowsphone/index.html');
+    await expect(page.locator('body')).toContainText('21 Oct');
   });
 
   test('map lists Wave Digg Uber Cablegate', async ({ page }) => {

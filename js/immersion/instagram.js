@@ -51,6 +51,7 @@
               "<div class='feed-item'><b>" +
               esc(p.filter || "Normal") +
               "</b> · " +
+              (p.photo ? esc(p.photo) + " · " : "") +
               esc(p.caption || "(no caption)") +
               "</div>"
             );
@@ -64,8 +65,21 @@
     if (!doc.querySelector("[data-ig-share], [data-ig-filter]")) return;
     var selected = "Normal";
     var filterPicked = false;
+    var photoPicked = "";
     var filterBtns = doc.querySelectorAll("[data-ig-filter]");
+    var photoBtns = doc.querySelectorAll("[data-ig-photo]");
     var i;
+    var pi;
+    for (pi = 0; pi < photoBtns.length; pi++) {
+      photoBtns[pi].addEventListener("click", function (ev) {
+        photoPicked = ev.currentTarget.getAttribute("data-ig-photo") || "";
+        var stP = doc.querySelector("[data-ig-status]");
+        if (stP && !filterPicked) {
+          stP.setAttribute("data-locked", "1");
+          stP.textContent = "Still: " + photoPicked + " · pick a filter to share";
+        }
+      });
+    }
     for (i = 0; i < filterBtns.length; i++) {
       filterBtns[i].addEventListener("click", function (ev) {
         filterPicked = true;
@@ -127,7 +141,7 @@
           return;
         }
         var list = load();
-        list.unshift({ filter: selected, caption: caption, ts: Date.now() });
+        list.unshift({ filter: selected, caption: caption, photo: photoPicked || "", ts: Date.now() });
         save(list.slice(0, 40));
         var msg = "Shared · " + selected;
         render(doc);

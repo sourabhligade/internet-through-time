@@ -25,8 +25,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships (hub open 1994–2010 — DISK-TRUTH)
-KNOWN_YEARS = [str(y) for y in range(1994, 2019)]  # 1994–2018
+# Years the museum ships (2014 wiped for from-scratch rebuild)
+_WIPED = {"2014", "2021", "2022", "2023"}
+KNOWN_YEARS = [
+    str(y) for y in list(range(1994, 2014)) + list(range(2015, 2021)) if str(y) not in _WIPED
+]
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -54,8 +57,8 @@ SIGNATURE: dict[str, list[str]] = {
         "pages/home.html",
         "sites/iphone/index.html",
         "sites/gmail/index.html",
-        "sites/maps/streetview.html",
-        "sites/facebook/platform.html",
+        "sites/maps/index.html",
+        "sites/facebook/index.html",
     ],
     "2008": [
         "pages/home.html",
@@ -70,11 +73,11 @@ SIGNATURE: dict[str, list[str]] = {
     "2009": [
         "pages/home.html",
         "pages/about.html",
-        "sites/appstore/index.html",
-        "sites/iphone/index.html",
-        "sites/facebook/feed.html",
+        "sites/facebook/index.html",
         "sites/farmville/index.html",
         "sites/bing/index.html",
+        "sites/iphone/index.html",
+        "sites/appstore/index.html",
         "sites/windows7/index.html",
     ],
     "2010": [
@@ -95,32 +98,23 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/airbnb/index.html",
         "sites/iphone/index.html",
     ],
-    "2012": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/instagram/android.html",
-        "sites/instagram/acquired.html",
-        "sites/facebook/ipo.html",
-        "sites/pinterest/index.html",
-        "sites/iphone/index.html",
-    ],
     "2013": [
         "pages/home.html",
         "pages/about.html",
         "sites/vine/record.html",
-        "sites/vine/android.html",
-        "sites/instagram/video.html",
         "sites/snapchat/story.html",
         "sites/iphone/ios7.html",
-        "sites/snowden/index.html",
+        "sites/instagram/video.html",
+        "sites/playable/game.html",
     ],
-    "2014": [
+    "2012": [
         "pages/home.html",
         "pages/about.html",
-        "sites/whatsapp/index.html",
-        "sites/heartbleed/index.html",
-        "sites/icebucket/index.html",
-        "sites/iphone/index.html",
+        "sites/instagram/android.html",
+        "sites/facebook/ipo.html",
+        "sites/wikipedia/sopa.html",
+        "sites/pinterest/index.html",
+        "sites/iphone/maps.html",
         "sites/playable/game.html",
     ],
     "2015": [
@@ -157,6 +151,24 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/tiktok/fyp.html",
         "sites/trust/index.html",
         "sites/instagram/igtv.html",
+        "sites/playable/game.html",
+    ],
+    "2019": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/disneyplus/home.html",
+        "sites/tiktok/index.html",
+        "sites/arcade/index.html",
+        "sites/stadia/index.html",
+        "sites/playable/game.html",
+    ],
+    "2020": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/zoom/meeting.html",
+        "sites/reels/index.html",
+        "sites/openai/index.html",
+        "sites/flash/index.html",
         "sites/playable/game.html",
     ],
 }

@@ -1,0 +1,1194 @@
+{
+  "dests": [
+    {
+      "year": "1994",
+      "href": "sites/cern/index.html",
+      "key": "itt94-cern",
+      "suffix": "cern",
+      "needPick": "path",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "info.cern"
+    },
+    {
+      "year": "1994",
+      "href": "sites/nasa/index.html",
+      "key": "itt94-nasa",
+      "suffix": "nasa",
+      "needPick": "hubble",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1994",
+      "href": "sites/hotwired/index.html",
+      "key": "itt94-hotwired",
+      "suffix": "hotwired",
+      "needPick": "headline",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wired leftover"
+    },
+    {
+      "year": "1995",
+      "href": "sites/amazon/index.html",
+      "key": "itt95-amazon",
+      "suffix": "amazon",
+      "needPick": "book",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "a leftover book"
+    },
+    {
+      "year": "1995",
+      "href": "sites/yahoo/index.html",
+      "key": "itt95-yahoo",
+      "suffix": "yahoo",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1995",
+      "href": "sites/cnn/index.html",
+      "key": "itt95-cnn",
+      "suffix": "cnn",
+      "needPick": "1995",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1995",
+      "href": "sites/microsoft/index.html",
+      "key": "itt95-ms",
+      "suffix": "ms",
+      "needPick": "win95",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1995",
+      "href": "sites/classmates/index.html",
+      "key": "itt95-classmates",
+      "suffix": "classmates",
+      "needPick": "school",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "high school leftover"
+    },
+    {
+      "year": "1996",
+      "href": "sites/yahoo/my.html",
+      "key": "itt96-myyahoo",
+      "suffix": "myyahoo",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1996",
+      "href": "sites/geocities/index.html",
+      "key": "itt96-geocities",
+      "suffix": "geocities",
+      "needPick": "west",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1996",
+      "href": "sites/amazon/index.html",
+      "key": "itt96-amazon",
+      "suffix": "amazon",
+      "needPick": "book",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "a leftover book"
+    },
+    {
+      "year": "1996",
+      "href": "sites/auctionweb/index.html",
+      "key": "itt96-auctionweb",
+      "suffix": "auctionweb",
+      "needPick": "bid",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "laptop leftover"
+    },
+    {
+      "year": "1996",
+      "href": "sites/excite/index.html",
+      "key": "itt96-excite",
+      "suffix": "excite",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "1996",
+      "href": "sites/altavista/index.html",
+      "key": "itt96-av",
+      "suffix": "av",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "1997",
+      "href": "sites/ebay/item-laptop.html",
+      "key": "itt97-ebay",
+      "suffix": "ebay",
+      "needPick": "bid",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "12.00"
+    },
+    {
+      "year": "1997",
+      "href": "sites/hotmail/index.html",
+      "key": "itt97-hotmail",
+      "suffix": "hotmail",
+      "needPick": "compose",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover note"
+    },
+    {
+      "year": "1997",
+      "href": "sites/hotbot/index.html",
+      "key": "itt97-hotbot",
+      "suffix": "hotbot",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "1997",
+      "href": "sites/aim/index.html",
+      "key": "itt97-aim-seed",
+      "suffix": "aim-seed",
+      "needPick": "seed",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftovername"
+    },
+    {
+      "year": "1997",
+      "href": "sites/microsoft/index.html",
+      "key": "itt97-ms",
+      "suffix": "ms",
+      "needPick": "ie4",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1998",
+      "href": "sites/google/index.html",
+      "key": "itt98-google",
+      "suffix": "google",
+      "needPick": "search",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "museum leftover"
+    },
+    {
+      "year": "1998",
+      "href": "sites/yahoo/index.html",
+      "key": "itt98-yahoo",
+      "suffix": "yahoo",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1998",
+      "href": "sites/amazon/music.html",
+      "key": "itt98-amazon-music",
+      "suffix": "amazon-music",
+      "needPick": "cd",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover album"
+    },
+    {
+      "year": "1998",
+      "href": "sites/ebay/index.html",
+      "key": "itt98-ebay",
+      "suffix": "ebay",
+      "needPick": "bid",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover item"
+    },
+    {
+      "year": "1998",
+      "href": "sites/cdnow/index.html",
+      "key": "itt98-cdnow",
+      "suffix": "cdnow",
+      "needPick": "cd",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover cd"
+    },
+    {
+      "year": "1998",
+      "href": "sites/hotmail/index.html",
+      "key": "itt98-hotmail",
+      "suffix": "hotmail",
+      "needPick": "compose",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover note"
+    },
+    {
+      "year": "1998",
+      "href": "sites/mozilla/index.html",
+      "key": "itt98-mozilla",
+      "suffix": "mozilla",
+      "needPick": "mpl",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1998",
+      "href": "sites/slashdot/index.html",
+      "key": "itt98-slashdot",
+      "suffix": "slashdot",
+      "needPick": "c",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover comment"
+    },
+    {
+      "year": "1998",
+      "href": "sites/dmoz/index.html",
+      "key": "itt98-dmoz",
+      "suffix": "dmoz",
+      "needPick": "cat",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1999",
+      "href": "sites/google/index.html",
+      "key": "itt99-google",
+      "suffix": "google",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "1999",
+      "href": "sites/blogger/edit.html",
+      "key": "itt99-blogger",
+      "suffix": "blogger",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover post"
+    },
+    {
+      "year": "1999",
+      "href": "sites/sourceforge/index.html",
+      "key": "itt99-sf",
+      "suffix": "sf",
+      "needPick": "proj",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover project"
+    },
+    {
+      "year": "1999",
+      "href": "sites/amazon/index.html",
+      "key": "itt99-amazon",
+      "suffix": "amazon",
+      "needPick": "book",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover book"
+    },
+    {
+      "year": "1999",
+      "href": "sites/ebay/item-laptop.html",
+      "key": "itt99-ebay",
+      "suffix": "ebay",
+      "needPick": "bid",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "12.00"
+    },
+    {
+      "year": "1999",
+      "href": "sites/askjeeves/index.html",
+      "key": "itt99-jeeves",
+      "suffix": "jeeves",
+      "needPick": "ask",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "why leftover?"
+    },
+    {
+      "year": "2000",
+      "href": "sites/amazon/index.html",
+      "key": "itt00-amazon",
+      "suffix": "amazon",
+      "needPick": "book",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover book"
+    },
+    {
+      "year": "2000",
+      "href": "sites/ebay/item-laptop.html",
+      "key": "itt00-ebay",
+      "suffix": "ebay",
+      "needPick": "bid",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "12.00"
+    },
+    {
+      "year": "2000",
+      "href": "sites/gnutella/index.html",
+      "key": "itt00-gnutella",
+      "suffix": "gnutella",
+      "needPick": "share",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover.mp3"
+    },
+    {
+      "year": "2000",
+      "href": "sites/google/index.html",
+      "key": "itt00-google",
+      "suffix": "google",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "2000",
+      "href": "sites/cnn/index.html",
+      "key": "itt00-cnn",
+      "suffix": "cnn",
+      "needPick": "2000",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2000",
+      "href": "sites/y2k/index.html",
+      "key": "itt00-y2k",
+      "suffix": "y2k",
+      "needPick": "hang",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2001",
+      "href": "sites/apple/ipod.html",
+      "key": "itt01-ipod",
+      "suffix": "ipod",
+      "needPick": "399",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2001",
+      "href": "sites/apple/itunes.html",
+      "key": "itt01-itunes",
+      "suffix": "itunes",
+      "needPick": "lib",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover library"
+    },
+    {
+      "year": "2001",
+      "href": "sites/broadband/index.html",
+      "key": "itt01-broadband",
+      "suffix": "broadband",
+      "needPick": "on",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2001",
+      "href": "sites/microsoft/ie6.html",
+      "key": "itt01-ie6",
+      "suffix": "ie6",
+      "needPick": "ie6",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2001",
+      "href": "sites/wayback/index.html",
+      "key": "itt01-wayback",
+      "suffix": "wayback",
+      "needPick": "url",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "http://example.com"
+    },
+    {
+      "year": "2001",
+      "href": "sites/google/index.html",
+      "key": "itt01-google",
+      "suffix": "google",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "2001",
+      "href": "sites/blogger/index.html",
+      "key": "itt01-blogger",
+      "suffix": "blogger",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover post"
+    },
+    {
+      "year": "2001",
+      "href": "sites/movabletype/index.html",
+      "key": "itt01-mt",
+      "suffix": "mt",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover post"
+    },
+    {
+      "year": "2002",
+      "href": "sites/friendster/index.html",
+      "key": "itt02-friendster",
+      "suffix": "friendster",
+      "needPick": "note",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover note"
+    },
+    {
+      "year": "2002",
+      "href": "sites/kazaa/index.html",
+      "key": "itt02-kazaa",
+      "suffix": "kazaa",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover.mp3"
+    },
+    {
+      "year": "2002",
+      "href": "sites/blogger/index.html",
+      "key": "itt02-blogger",
+      "suffix": "blogger",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover post"
+    },
+    {
+      "year": "2002",
+      "href": "sites/googlenews/index.html",
+      "key": "itt02-gnews",
+      "suffix": "gnews",
+      "needPick": "h",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2002",
+      "href": "sites/wikipedia/index.html",
+      "key": "itt02-wiki",
+      "suffix": "wiki",
+      "needPick": "art",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover article"
+    },
+    {
+      "year": "2002",
+      "href": "sites/daypop/index.html",
+      "key": "itt02-daypop",
+      "suffix": "daypop",
+      "needPick": "link",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover link"
+    },
+    {
+      "year": "2002",
+      "href": "sites/wired/index.html",
+      "key": "itt02-wired",
+      "suffix": "wired",
+      "needPick": "redesign",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2002",
+      "href": "sites/google/index.html",
+      "key": "itt02-google",
+      "suffix": "google",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "2003",
+      "href": "sites/myspace/index.html",
+      "key": "itt03-myspace",
+      "suffix": "myspace",
+      "needPick": "tom",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover name"
+    },
+    {
+      "year": "2003",
+      "href": "sites/itunes/index.html",
+      "key": "itt03-itunes",
+      "suffix": "itunes",
+      "needPick": "track",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover track"
+    },
+    {
+      "year": "2003",
+      "href": "sites/wordpress/index.html",
+      "key": "itt03-wp",
+      "suffix": "wp",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover post"
+    },
+    {
+      "year": "2003",
+      "href": "sites/linkedin/index.html",
+      "key": "itt03-li",
+      "suffix": "li",
+      "needPick": "connect",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover name"
+    },
+    {
+      "year": "2003",
+      "href": "sites/friendster/index.html",
+      "key": "itt03-friendster",
+      "suffix": "friendster",
+      "needPick": "note",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover note"
+    },
+    {
+      "year": "2003",
+      "href": "sites/bloglines/index.html",
+      "key": "itt03-bloglines",
+      "suffix": "bloglines",
+      "needPick": "feed",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "http://leftover.example"
+    },
+    {
+      "year": "2003",
+      "href": "sites/adsense/index.html",
+      "key": "itt03-adsense",
+      "suffix": "adsense",
+      "needPick": "site",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover.site"
+    },
+    {
+      "year": "2003",
+      "href": "sites/blogger/index.html",
+      "key": "itt03-blogger",
+      "suffix": "blogger",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover post"
+    },
+    {
+      "year": "2003",
+      "href": "sites/google/index.html",
+      "key": "itt03-google",
+      "suffix": "google",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover query"
+    },
+    {
+      "year": "2004",
+      "href": "sites/gmail/index.html",
+      "key": "itt04-gmail",
+      "suffix": "gmail",
+      "needPick": "invite",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wait@museum"
+    },
+    {
+      "year": "2004",
+      "href": "sites/firefox/index.html",
+      "key": "itt04-fx",
+      "suffix": "fx",
+      "needPick": "fx",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2004",
+      "href": "sites/flickr/index.html",
+      "key": "itt04-flickr",
+      "suffix": "flickr",
+      "needPick": "photo",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover photo"
+    },
+    {
+      "year": "2004",
+      "href": "sites/delicious/index.html",
+      "key": "itt04-delicious",
+      "suffix": "delicious",
+      "needPick": "tag",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover"
+    },
+    {
+      "year": "2004",
+      "href": "sites/digg/index.html",
+      "key": "itt04-digg",
+      "suffix": "digg",
+      "needPick": "sub",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover link"
+    },
+    {
+      "year": "2004",
+      "href": "sites/facebook/friends.html",
+      "key": "itt04-fb-friends",
+      "suffix": "fb-friends",
+      "needPick": "add",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover name"
+    },
+    {
+      "year": "2004",
+      "href": "sites/facebook/profile.html",
+      "key": "itt04-fb-profile",
+      "suffix": "fb-profile",
+      "needPick": "about",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover about"
+    },
+    {
+      "year": "2004",
+      "href": "sites/facebook/invite.html",
+      "key": "itt04-fb-invite",
+      "suffix": "fb-invite",
+      "needPick": "invite",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wait@museum"
+    },
+    {
+      "year": "2004",
+      "href": "sites/web20conference/index.html",
+      "key": "itt04-web20",
+      "suffix": "web20",
+      "needPick": "sess",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2005",
+      "href": "sites/maps/index.html",
+      "key": "itt05-maps",
+      "suffix": "maps",
+      "needPick": "addr",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover street"
+    },
+    {
+      "year": "2005",
+      "href": "sites/housingmaps/index.html",
+      "key": "itt05-housingmaps",
+      "suffix": "housingmaps",
+      "needPick": "pin",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2005",
+      "href": "sites/digg/index.html",
+      "key": "itt05-digg",
+      "suffix": "digg",
+      "needPick": "digg",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2005",
+      "href": "sites/reddit/index.html",
+      "key": "itt05-reddit",
+      "suffix": "reddit",
+      "needPick": "sub",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover link"
+    },
+    {
+      "year": "2005",
+      "href": "sites/flickr/index.html",
+      "key": "itt05-flickr",
+      "suffix": "flickr",
+      "needPick": "photo",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover photo"
+    },
+    {
+      "year": "2005",
+      "href": "sites/itunes/index.html",
+      "key": "itt05-itunes",
+      "suffix": "itunes",
+      "needPick": "show",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover show"
+    },
+    {
+      "year": "2005",
+      "href": "sites/techcrunch/index.html",
+      "key": "itt05-techcrunch",
+      "suffix": "techcrunch",
+      "needPick": "post",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover startup"
+    },
+    {
+      "year": "2006",
+      "href": "sites/youtube/index.html",
+      "key": "itt06-yt",
+      "suffix": "yt",
+      "needPick": "watch",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2006",
+      "href": "sites/digg/index.html",
+      "key": "itt06-digg",
+      "suffix": "digg",
+      "needPick": "digg",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2006",
+      "href": "sites/reddit/index.html",
+      "key": "itt06-reddit",
+      "suffix": "reddit",
+      "needPick": "sub",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover link"
+    },
+    {
+      "year": "2006",
+      "href": "sites/docs/index.html",
+      "key": "itt06-docs",
+      "suffix": "docs",
+      "needPick": "doc",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover.doc"
+    },
+    {
+      "year": "2006",
+      "href": "sites/aws/index.html",
+      "key": "itt06-aws",
+      "suffix": "aws",
+      "needPick": "s3",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2006",
+      "href": "sites/reader/index.html",
+      "key": "itt06-reader",
+      "suffix": "reader",
+      "needPick": "feed",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "http://leftover.example"
+    },
+    {
+      "year": "2006",
+      "href": "sites/time-you/index.html",
+      "key": "itt06-time-you",
+      "suffix": "time-you",
+      "needPick": "you",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/appstore/index.html",
+      "key": "itt08-apps",
+      "suffix": "apps",
+      "needPick": "free",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/chrome/index.html",
+      "key": "itt08-chrome",
+      "suffix": "chrome",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/android/index.html",
+      "key": "itt08-android",
+      "suffix": "android",
+      "needPick": "g1",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/hulu/index.html",
+      "key": "itt08-hulu",
+      "suffix": "hulu",
+      "needPick": "play",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/facebook/index.html",
+      "key": "itt08-facebook",
+      "suffix": "facebook",
+      "needPick": "feed",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/twitter/index.html",
+      "key": "itt08-tweets",
+      "suffix": "tweets",
+      "needPick": "140",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover tweet"
+    },
+    {
+      "year": "2008",
+      "href": "sites/youtube/index.html",
+      "key": "itt08-yt",
+      "suffix": "yt",
+      "needPick": "watch",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2008",
+      "href": "sites/dropbox/index.html",
+      "key": "itt08-dropbox",
+      "suffix": "dropbox",
+      "needPick": "file",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover.txt"
+    },
+    {
+      "year": "2008",
+      "href": "sites/iphone/index.html",
+      "key": "itt08-iphone3g",
+      "suffix": "iphone3g",
+      "needPick": "3g",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2010",
+      "href": "sites/youtube/index.html",
+      "key": "itt10-yt",
+      "suffix": "yt",
+      "needPick": "watch",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2012",
+      "href": "sites/facebook/ipo.html",
+      "key": "itt12-fb-ipo",
+      "suffix": "fb-ipo",
+      "needPick": "38",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2012",
+      "href": "sites/facebook/index.html",
+      "key": "itt12-facebook",
+      "suffix": "facebook",
+      "needPick": "mau",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2012",
+      "href": "sites/iphone/maps.html",
+      "key": "itt12-maps",
+      "suffix": "maps",
+      "needPick": "flop",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2012",
+      "href": "sites/wikipedia/sopa.html",
+      "key": "itt12-sopa",
+      "suffix": "sopa",
+      "needPick": "blackout",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2013",
+      "href": "sites/iphone/ios7.html",
+      "key": "itt13-ios7",
+      "suffix": "ios7",
+      "needPick": "flat",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2013",
+      "href": "sites/iphone/touchid.html",
+      "key": "itt13-touchid",
+      "suffix": "touchid",
+      "needPick": "hold",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2013",
+      "href": "sites/snowden/index.html",
+      "key": "itt13-snowden-ack",
+      "suffix": "snowden-ack",
+      "needPick": "doc",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover doc"
+    },
+    {
+      "year": "2013",
+      "href": "sites/tumblr/index.html",
+      "key": "itt13-tumblr-yahoo",
+      "suffix": "tumblr-yahoo",
+      "needPick": "dash",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2013",
+      "href": "sites/windows81/index.html",
+      "key": "itt13-win81",
+      "suffix": "win81",
+      "needPick": "start",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2019",
+      "href": "sites/chrome/index.html",
+      "key": "itt19-chrome",
+      "suffix": "chrome",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "youtube.com"
+    },
+    {
+      "year": "2019",
+      "href": "sites/windows10/index.html",
+      "key": "itt19-win10",
+      "suffix": "win10",
+      "needPick": "stay",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2019",
+      "href": "sites/fortnite/marshmello.html",
+      "key": "itt19-marshmello",
+      "suffix": "marshmello",
+      "needPick": "ingame",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2007",
+      "href": "sites/youtube/index.html",
+      "key": "itt07-yt",
+      "suffix": "yt",
+      "needPick": "watch",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2007",
+      "href": "sites/myspace/index.html",
+      "key": "itt07-myspace",
+      "suffix": "myspace",
+      "needPick": "mass",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2007",
+      "href": "sites/digg/index.html",
+      "key": "itt07-digg",
+      "suffix": "digg",
+      "needPick": "digg",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2007",
+      "href": "sites/vista/index.html",
+      "key": "itt07-vista",
+      "suffix": "vista",
+      "needPick": "retail",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2009",
+      "href": "sites/windows7/index.html",
+      "key": "itt09-win7",
+      "suffix": "win7",
+      "needPick": "retail",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2011",
+      "href": "sites/facebook/index.html",
+      "key": "itt11-timeline",
+      "suffix": "timeline",
+      "needPick": "tl",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2011",
+      "href": "sites/instagram/index.html",
+      "key": "itt11-ig",
+      "suffix": "ig",
+      "needPick": "ios",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2011",
+      "href": "sites/qwikster/index.html",
+      "key": "itt11-qwikster",
+      "suffix": "qwikster",
+      "needPick": "funeral",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2013",
+      "href": "sites/instagram/video.html",
+      "key": "itt13-ig-posts",
+      "suffix": "ig-posts",
+      "needPick": "sec",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    }
+  ]
+}

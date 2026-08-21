@@ -52,9 +52,18 @@ test.describe('1994 5× live F1–F5', () => {
       keys.forEach((k) => { try { localStorage.removeItem(k); } catch (e) {} });
     }, ['itt94-wh-map', 'itt94-wh-map-5x']);
     await page.reload();
+    await expect(page.locator('map[data-wh-map-ready="1"]')).toBeAttached({ timeout: 15000 });
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
-    await page.locator('map[data-wh-map] area[href]').first().click({ force: true });
-    await expect.poll(async () => getKey(page, 'itt94-wh-map'), { timeout: 8000 }).toBeTruthy();
+    /* Imagemap click writes then follows the region href (same origin). */
+    await page.locator('img[usemap="#whmap"]').first().click();
+    await page.waitForURL(/whitehouse\/(president|executive|family|tours|publications|mail)\.html/, { timeout: 8000 });
+    await expect.poll(async () => {
+      try {
+        return await getKey(page, 'itt94-wh-map');
+      } catch (e) {
+        return null;
+      }
+    }, { timeout: 8000 }).toBeTruthy();
   });
 
   test('F4 Yahoo 3-hub gold writes after three dests', async ({ page }) => {

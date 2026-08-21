@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2003/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2003/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2003/sites/playable/extra-c.html",
       "sites/evite/index.html": "http://museum.local/years/2003/sites/evite/index.html",
       "sites/tribe/index.html": "http://museum.local/years/2003/sites/tribe/index.html",
       "sites/secondlifegrid/index.html": "http://museum.local/years/2003/sites/secondlifegrid/index.html",

@@ -8,7 +8,6 @@ const YEARS = [
   { year: '2004', os: /Windows XP/i, browser: /Internet Explorer 6/i },
   { year: '2005', os: /Windows XP/i, browser: /Internet Explorer 6/i },
   { year: '2006', os: /Windows XP/i, browser: /Internet Explorer 6/i },
-  { year: '2007', os: /Windows XP|Vista/i, browser: /Internet Explorer 7/i },
 ];
 
 test.describe('shell honesty 2002–2007', () => {

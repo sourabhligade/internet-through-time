@@ -1,7 +1,7 @@
 /**
  * Four REAL machines from unused external sources (textfiles culture,
  * CSS Zen Garden, Neocities, SpaceHey). Incomplete never writes.
- * Keys: itt94-bbs · itt03-zengarden · itt13-neocities · itt20-spacehey
+ * Keys: itt94-bbs · itt03-zengarden · itt13-neocities
  */
 (function (global) {
   "use strict";
@@ -280,90 +280,6 @@
     }
   }
 
-  /* 2020 — SpaceHey: name + mood, then add one friend */
-  function bootSpacehey(doc) {
-    var host = doc.querySelector("[data-shy]");
-    if (!host) return;
-    var st = host.querySelector("[data-itt-action-status]");
-    var form = host.querySelector("[data-shy-form]");
-    var addBtn = host.querySelector("[data-shy-add]");
-    var profile = host.querySelector("[data-shy-profile]");
-    var key = sk("spacehey");
-    var draftKey = "itt20-spacehey-draft";
-    var saved = loadJSON(key, null);
-
-    function readDraft() {
-      try {
-        var r = sessionStorage.getItem(draftKey);
-        return r ? JSON.parse(r) : null;
-      } catch (e) {
-        return null;
-      }
-    }
-    function writeDraft(d) {
-      try {
-        sessionStorage.setItem(draftKey, JSON.stringify(d));
-      } catch (e) { /* */ }
-    }
-
-    function paint(state) {
-      if (!profile || !state) return;
-      profile.removeAttribute("hidden");
-      profile.innerHTML =
-        "<b>" +
-        esc(state.displayName) +
-        "</b> is <i>" +
-        esc(state.mood) +
-        "</i>" +
-        (state.friend ? " · friends with " + esc(state.friend) : " · no friends yet");
-    }
-    if (saved) paint(saved);
-    else if (readDraft()) paint(readDraft());
-
-    if (form) {
-      form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        var displayName = trim((form.querySelector("[name='display']") || {}).value);
-        var moodEl = form.querySelector("[name='mood']:checked");
-        var mood = trim(moodEl && moodEl.value);
-        if (displayName.length < 2) {
-          feedback("Need a display name (min 2). Join is not the save.", st, true);
-          return;
-        }
-        if (!mood) {
-          feedback("Pick a mood. MySpace-shaped, not Instagram.", st, true);
-          return;
-        }
-        writeDraft({ displayName: displayName, mood: mood, joinedAt: Date.now() });
-        paint({ displayName: displayName, mood: mood });
-        feedback("Profile drafted. Add a friend to write itt20-spacehey.", st);
-      });
-    }
-
-    if (addBtn) {
-      addBtn.addEventListener("click", function () {
-        var d = readDraft() || saved;
-        if (!d || !d.displayName || !d.mood) {
-          feedback("Join with a name and mood first. Add-friend is the save.", st, true);
-          return;
-        }
-        var friend = addBtn.getAttribute("data-shy-friend") || "tibush";
-        var state = blob({
-          displayName: d.displayName,
-          mood: d.mood,
-          friend: friend,
-          launched: "2020-11-26",
-          year: "2020",
-          notMyspace: true
-        });
-        saveJSON(key, state);
-        stamp();
-        paint(state);
-        feedback("Friend added · itt20-spacehey (this browser).", st);
-      });
-    }
-  }
-
   /* 1998 — textfiles.com launch (May 1998). Archive of BBS files, not a BBS. */
   function bootTextfiles(doc) {
     var host = doc.querySelector("[data-tf]");
@@ -541,7 +457,6 @@
     bootBbs(doc);
     bootZen(doc);
     bootNeocities(doc);
-    bootSpacehey(doc);
     bootTextfiles(doc);
     bootFolklore(doc);
     bootElon(doc);

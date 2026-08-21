@@ -1219,21 +1219,40 @@
     var key = suffix.indexOf("itt94-") === 0 ? suffix : "itt94-" + suffix.replace(/^itt\d{0,2}-/, "");
     var areas = map.querySelectorAll("area[href]");
     if (!areas.length) return;
+    function writeRegion(href) {
+      href = String(href || "").replace(/^\s+|\s+$/g, "");
+      if (!href || href === "#" || href.toLowerCase().indexOf("javascript:") === 0) return false;
+      saveJSON(key, blob({ region: href, year: "1994" }));
+      stamp();
+      revealNext(doc);
+      return true;
+    }
     var i;
     for (i = 0; i < areas.length; i++) {
       (function (area) {
         if (area.getAttribute("data-wh-map-bound") === "1") return;
         area.setAttribute("data-wh-map-bound", "1");
-        area.addEventListener("click", function () {
-          var href = area.getAttribute("href") || "";
-          href = String(href).replace(/^\s+|\s+$/g, "");
-          if (!href || href === "#" || href.toLowerCase().indexOf("javascript:") === 0) return;
-          saveJSON(key, blob({ region: href, year: "1994" }));
-          stamp();
-          revealNext(doc);
-        });
+        function onRegion() {
+          writeRegion(area.getAttribute("href") || "");
+        }
+        area.addEventListener("mousedown", onRegion, true);
+        area.addEventListener("click", onRegion, true);
       })(areas[i]);
     }
+    /* Imagemap <area> has no box — also stamp when the pictured building is clicked. */
+    var img = doc.querySelector('img[usemap="#whmap"]');
+    if (img && img.getAttribute("data-wh-map-bound") !== "1") {
+      img.setAttribute("data-wh-map-bound", "1");
+      img.addEventListener(
+        "click",
+        function () {
+          var first = areas[0] && areas[0].getAttribute("href");
+          writeRegion(first || "president.html");
+        },
+        true
+      );
+    }
+    map.setAttribute("data-wh-map-ready", "1");
   }
 
   function bootAll(doc) {

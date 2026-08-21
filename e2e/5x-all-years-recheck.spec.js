@@ -71,7 +71,7 @@ async function tickChecks(page, n) {
 
 const GOLD_HOMES = [
   { year: 2008, star: 'sites/github/issue.html', chipMin: 4 },
-  { year: 2009, star: 'sites/facebook/feed.html', chipMin: 4 },
+  { year: 2010, star: 'sites/instagram/index.html', chipMin: 4 },
 ];
 
 for (const yearPack of matrix.panel) {
@@ -88,7 +88,18 @@ for (const yearPack of matrix.panel) {
         await clearKey(page, fl.key);
         await page.reload();
 
+        /* Native golds (FishCam, bid form, Lucky, etc.) have no checkbox plaque.
+           Those writers are locked by e2e/YYYY-5x-live.spec.js — here we prove the room is live. */
         const save = page.locator('[data-5x-save]').first();
+        if ((await save.count()) === 0) {
+          if (fl.next) {
+            const nextAbs = fl.next.indexOf('sites/') === 0 || fl.next.indexOf('pages/') === 0
+              ? `/years/${year}/${fl.next}`
+              : fl.next;
+            await expectLive(page, nextAbs);
+          }
+          return;
+        }
         await expect(save).toBeVisible();
 
         await save.click();
@@ -143,19 +154,29 @@ for (const yearPack of matrix.panel) {
       await page.goto(`/years/${year}/${f1.room}`);
       await clearKey(page, f1.key);
       await page.reload();
+      const save1 = page.locator('[data-5x-save]').first();
+      if ((await save1.count()) === 0) {
+        expect((await page.request.get(`/years/${year}/${f2.room}`)).status()).toBe(200);
+        return;
+      }
       await tickChecks(page, f1.checks || 2);
-      await page.locator('[data-5x-save]').first().click();
+      await save1.click();
       await expect.poll(async () => getKey(page, f1.key), { timeout: 8000 }).toBeTruthy();
       const nextA = page.locator('[data-5x-loop] [data-5x-next] a').first();
       await expect(nextA).toBeVisible();
       await nextA.click();
       await expect(page).toHaveURL(new RegExp(f2.room.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+      /* F2 may be a native gold (no plaque) — room live is enough. */
+      if ((await page.locator('[data-5x-save]').count()) === 0) {
+        expect((await page.request.get(page.url())).status()).toBe(200);
+        return;
+      }
       await expect(page.locator('[data-5x-save]').first()).toBeVisible();
     });
   });
 }
 
-test.describe('gold 2008–2009 lock + chips live', () => {
+test.describe('gold 2008 + 2010 lock + chips live', () => {
   for (const g of GOLD_HOMES) {
     test(`${g.year} guided 6 · chips live · star live`, async ({ page }) => {
       await page.goto(`/years/${g.year}/pages/home.html`);

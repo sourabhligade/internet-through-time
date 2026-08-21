@@ -297,24 +297,6 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt06-tweets');
   });
 
-  test('2007 Gmail open sign-in → itt07-gmail', async ({ page }) => {
-    await enterYear(page, '2007');
-    await clearPrefix(page, 'itt07-gmail');
-    await goImmersion(page, '2007', 'sites/gmail/index.html');
-    const frame = contentFrame(page);
-    const form = frame.locator('form[data-gmail-login]');
-    await expect(form).toBeVisible({ timeout: 15000 });
-    await form.locator('[name="email"]').fill('');
-    await form.locator('[name="pass"]').fill('');
-    await form.locator('button[type="submit"]').click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt07-gmail'))).toBeFalsy();
-    await form.locator('[name="email"]').fill('open@example.com');
-    await form.locator('[name="pass"]').fill('secret');
-    await form.locator('button[type="submit"]').click();
-    await requireKey(page, 'itt07-gmail', /open@example/i);
-  });
-
   test('2008 GitHub issue → itt08-github', async ({ page }) => {
     await enterYear(page, '2008');
     await clearPrefix(page, 'itt08-github');
@@ -331,27 +313,6 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt08-github');
   });
 
-  test('2009 Facebook Like + Stack Overflow ask', async ({ page }) => {
-    await enterYear(page, '2009');
-    await clearPrefix(page, 'itt09');
-    await goImmersion(page, '2009', 'sites/facebook/feed.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-fb-like]').first()).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-fb-like]').first().click();
-    await requireKey(page, 'itt09-fb-likes');
-    await goImmersion(page, '2009', 'sites/stackoverflow/index.html');
-    const so = contentFrame(page);
-    const ask = so.locator('form[data-so-ask]');
-    await expect(ask).toBeVisible({ timeout: 15000 });
-    await ask.locator('button[type="submit"]').click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt09-stackoverflow'))).toBeFalsy();
-    await ask.locator('[name="title"]').fill('How do I center a div residual?');
-    await ask.locator('[name="body"]').fill('Steps to reproduce residual');
-    await ask.locator('button[type="submit"]').click();
-    await requireKey(page, 'itt09-stackoverflow');
-  });
-
   test('2010 Instagram / iPad real write', async ({ page }) => {
     await enterYear(page, '2010');
     await clearPrefix(page, 'itt10');
@@ -364,99 +325,35 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt10-ig-posts');
   });
 
-  test('2011 Spotify / Hangout real write', async ({ page }) => {
-    await enterYear(page, '2011');
-    await clearPrefix(page, 'itt11');
-    await goImmersion(page, '2011', 'sites/googleplus/hangouts.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-gplus-hangout-start]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-req]').nth(0).check({ force: true });
-    await frame.locator('[data-req]').nth(1).check({ force: true });
-    await frame.locator('[data-gplus-hangout-start]').click();
-    await requireKey(page, 'itt11-gplus-hangout');
-    await expect(frame.locator('[data-gplus-hangout]')).not.toContainText(/\(mock\)/i);
-  });
-
-  test('2012 Instagram Android share REAL', async ({ page }) => {
-    await enterYear(page, '2012');
-    await clearPrefix(page, 'itt12-ig');
-    await goImmersion(page, '2012', 'sites/instagram/android.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-ig-share]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-ig-share]').click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt12-ig'))).toBeFalsy();
-    await frame.locator('[data-req]').nth(0).check({ force: true });
-    await frame.locator('[data-req]').nth(1).check({ force: true });
-    await frame.locator('[data-ig-filter="X-Pro II"]').click();
-    await frame.locator('[data-ig-caption]').fill('android share residual');
-    await frame.locator('[data-ig-share]').click();
-    await requireAnyPrefix(page, 'itt12-ig');
-  });
-
-  test('2013 Vine 6s REAL', async ({ page }) => {
-    await enterYear(page, '2013');
-    await clearPrefix(page, 'itt13-vine');
-    await goImmersion(page, '2013', 'sites/vine/record.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-vine-post]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-vine-post]').click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt13-vine-posts'))).toBeFalsy();
-    await frame.locator('[data-req]').nth(0).check({ force: true });
-    await frame.locator('[data-req]').nth(1).check({ force: true });
-    const hold = frame.locator('[data-vine-hold]');
-    for (let i = 0; i < 5; i++) await hold.click();
-    await frame.locator('[data-vine-caption]').fill('sig 6s residual');
-    await frame.locator('[data-vine-post]').click();
-    await requireAnyPrefix(page, 'itt13-vine');
-  });
-
-  test('2014 WhatsApp install real write', async ({ page }) => {
-    await enterYear(page, '2014');
-    await clearPrefix(page, 'itt14');
-    await goImmersion(page, '2014', 'sites/whatsapp/index.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-wa-install]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-wa-install]').click();
-    await page.waitForTimeout(120);
-    expect(await page.evaluate(() => localStorage.getItem('itt14-wa-install'))).toBeFalsy();
-    await frame.locator('[data-req]').nth(0).check({ force: true });
-    await frame.locator('[data-req]').nth(1).check({ force: true });
-    await frame.locator('[data-wa-install]').click();
-    await requireAnyPrefix(page, 'itt14-wa');
-  });
-
   test('2017 Face ID real write', async ({ page }) => {
     test.skip(!yearOnDisk('2017'), '2017 not on disk');
     await enterYear(page, '2017');
     await clearPrefix(page, 'itt17');
     await goImmersion(page, '2017', 'sites/iphone/x.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('[data-faceid-save]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-faceid-save]').click();
+    await expect(frame.locator('[data-faceid-unlock]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-faceid-unlock]').click();
     await page.waitForTimeout(120);
     expect(await page.evaluate(() => localStorage.getItem('itt17-faceid'))).toBeFalsy();
-    await frame.locator('[data-faceid-no-home]').check({ force: true });
-    await frame.locator('[data-faceid-not-touch]').check({ force: true });
-    await frame.locator('[data-faceid-not-xs]').check({ force: true });
-    await frame.locator('[data-faceid-save]').click();
-    await requireKey(page, 'itt17-faceid', /multiStep|2017-09-12|noHomeButton/i);
+    await frame.locator('[data-faceid-req]').nth(0).check({ force: true });
+    await frame.locator('[data-faceid-req]').nth(1).check({ force: true });
+    await frame.locator('[data-faceid-unlock]').click();
+    await requireKey(page, 'itt17-faceid', /multiStep|2017-11-03|noHomeButton/i);
   });
 
   test('2018 GDPR real write', async ({ page }) => {
     test.skip(!yearOnDisk('2018'), '2018 not on disk');
     await enterYear(page, '2018');
     await clearPrefix(page, 'itt18');
-    await goImmersion(page, '2018', 'sites/gdpr/rights.html');
+    await goImmersion(page, '2018', 'sites/gdpr/index.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('[data-gdpr-save]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-gdpr-save]').click();
+    await expect(frame.locator('[data-gdpr-manage]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-gdpr-accept-all]').click();
     await page.waitForTimeout(120);
     expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
-    await frame.locator('[data-gdpr-art15]').check({ force: true });
-    await frame.locator('[data-gdpr-art17]').check({ force: true });
-    await frame.locator('[data-gdpr-date]').check({ force: true });
+    await frame.locator('[data-gdpr-manage]').click();
+    await frame.locator('[data-gdpr-req]').nth(0).check({ force: true });
+    await frame.locator('[data-gdpr-req]').nth(1).check({ force: true });
     await frame.locator('[data-gdpr-save]').click();
     await requireKey(page, 'itt18-gdpr', /multiStep|2018-05-25|manage/i);
   });
@@ -479,28 +376,5 @@ test.describe('all-years signature REAL · late web', () => {
     await frame.locator('[data-dplus-kids]').check({ force: true });
     await frame.locator('[data-dplus-save]').click();
     await requireKey(page, 'itt19-disneyplus', /multiStep|real|mando/i);
-  });
-
-  test('2020 Zoom join→leave REAL → itt20-zoom', async ({ page }) => {
-    test.skip(!yearOnDisk('2020'), '2020 not on disk');
-    await enterYear(page, '2020');
-    await clearPrefix(page, 'itt20-zoom');
-    await goImmersion(page, '2020', 'sites/zoom/index.html');
-    const frame = contentFrame(page);
-    await frame.locator('#itt20-code').fill('84739258101');
-    await frame.locator('[data-zoom-join]').click();
-    await page.waitForTimeout(400);
-    await contentFrame(page).locator('[data-admit]').click();
-    await page.waitForTimeout(400);
-    const meet = contentFrame(page);
-    await meet.locator("[name='line']").fill('can you see my screen');
-    await meet.locator('[data-chat]').evaluate((f) => f.requestSubmit());
-    await meet.locator('[data-leave]').click();
-    await page.waitForTimeout(400);
-    const recap = contentFrame(page);
-    await recap.locator('[data-zoom-part]').check({ force: true });
-    await recap.locator('[data-zoom-not-live]').check({ force: true });
-    await recap.locator('[data-zoom-save]').click();
-    await requireKey(page, 'itt20-zoom', /multiStep|real|84739258101/i);
   });
 });

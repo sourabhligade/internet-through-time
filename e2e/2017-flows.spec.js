@@ -130,7 +130,7 @@ test.describe("2017 flows", () => {
     await page.fill("[data-pop-field]", "front page");
     await page.locator("[data-pop-go]").click();
     await expect.poll(async () => getKey(page, "itt17-pop-reddit"), { timeout: 8000 }).toBeTruthy();
-    await expect(page.locator('[data-next-flow] a[href*="youtube"]')).toBeVisible();
+    await expect(page.locator('[data-next-flow] a[href*="youtube"]').first()).toBeVisible();
   });
 
   test("Animoji does not write without Face ID", async ({ page }) => {

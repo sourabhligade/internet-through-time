@@ -44,7 +44,6 @@ STAR = {
     "2017": ("sites/iphone/x.html", "Face ID"),
     "2018": ("sites/gdpr/manage.html", "GDPR Manage"),
     "2019": ("sites/disneyplus/home.html", "Disney+ Continue"),
-    "2020": ("sites/zoom/index.html", "Zoom mute/leave"),
 }
 
 TARGETS = {
@@ -74,7 +73,6 @@ TARGETS = {
     "2017": (160, 225),
     "2018": (185, 205),
     "2019": (85, 145),
-    "2020": (205, 245),
 }
 
 DONE = {"2002", "2003", "2008", "2009", "2010"}

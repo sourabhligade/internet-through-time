@@ -13,7 +13,7 @@
 **★ Cross-year leftover execute (2026-08-10 · hub 1994–2015):** [`CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md`](CROSS-YEAR-IMPROVE-IMPLEMENTATION-PHASES.md).  
 **★ Per-year status (real vs leftover mock · 2026-08-08 · historical; hub later reverted to 1994–2015):** [`YEAR-STATUS-AUDIT-2026-08-08.md`](YEAR-STATUS-AUDIT-2026-08-08.md).  
 **★ 2017–2019 complete-to-ready freeze:** paths named below **are not on this disk** (404). Do not implement from them.  
-**★ 2019 from-scratch research freeze (2026-08-11):** [`2019-READ-FIRST.md`](2019-READ-FIRST.md) · [`2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2019-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) · [`2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2019-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) · [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · **S0 [x] · do not scaffold until asked.**  
+**★ 2019 lean door (2026-08-20):** [`2019-READ-FIRST.md`](2019-READ-FIRST.md) · execute [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) **S1–S16 on disk**. Star = Disney+ Continue. Game = Continue Row. Extra-c/d/e later. **2013–2014 stay wiped.**  
 **★ Clone forest 2013–2020 strip:** **[x]** 2026-08-08 · 2013 keeps year-true iOS7/Vine/UberX · 2014 keeps YikYak/Secret/Ello · 2020 keeps year-true P0 quizzes.  
 **Purpose:** Single checklist of what is **still open** vs playable ship.  
 **Canonical playable surface:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · hub **1994–2009** + games wing. **2010+ not on disk.**  
@@ -159,8 +159,8 @@ Do **not** treat as backlog unless product scope changes:
 | **2016** | Lean A− · **51 HTML worktree** / 57 origin | L4 pixels · H0 commit-or-hold · backup `/tmp/itt-2016-forest-backup-20260814` |
 | **2017** | Lean A | Playables year-true · L4 art parked |
 | **2018** | Lean A− | GDPR Manage path · L4 art parked |
-| **2019** | Lean A− · **49 HTML** · 5× F1–F5 closed | Disney+ trial-trap · Continue Row · backup `/tmp/itt-2019-forest-backup-20260815` |
-| **2020** | Lean A− | Zoom one-thing · Reels 15s · Flash EOL · S15 rooms · L4 official art parked |
+| **2019** | Lean A− · **27 HTML** · S1–S16 door | Disney+ trial-trap · Continue Row · do not restore forest backup |
+| **2020–2023** | **Wiped** | Not on disk · hub locked · do not restore as forests |
 | **Hub / games** | Live | Commit hub polish when asked; games wing done |
 
 ---
@@ -193,9 +193,9 @@ Do **not** treat as backlog unless product scope changes:
 
 ## 10. One-line status
 
-**Done:** **28-year** museum playable (**1994–2021**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · 2011–21 lean years.
+**Done:** **25-year** museum playable (**1994–2013 + 2015–2019**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · lean doors on 2007 / 2009 / 2011 / 2013.
 
-**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2022+ not on disk**. 2021 A− on disk (ATT gold) · leftover S15 P2 only ([`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md)).
+**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2014 · 2020–2023 wiped** · **2024+ not on disk**.
 
 ---
 

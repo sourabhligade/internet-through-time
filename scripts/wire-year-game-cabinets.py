@@ -7,7 +7,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-YEARS = [str(y) for y in range(1994, 2010)]
+WIPED = {"2007", "2009", "2011", "2013", "2014"}
+YEARS = [str(y) for y in range(1994, 2010) if str(y) not in WIPED]
 
 CABINETS = {
     "1994": {"title": "Hotlist Surfer", "key": "itt94-game-hotlist", "inspire": "Netscape hotlist"},

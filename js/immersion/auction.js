@@ -83,6 +83,21 @@
           if (history.length > 15) history = history.slice(0, 15);
           saveJSON(key, high);
           saveJSON(key + "-hist", history);
+          /* 1995 5× leftover gold is itt95-aw-bid (laser listing). Bid state stays ittYY-bid-<id>. */
+          try {
+            var leftover = storageKey("aw-bid");
+            if (id === "laser" && leftover && leftover.indexOf("itt95-") === 0) {
+              saveJSON(leftover, {
+                multiStep: true,
+                real: true,
+                amount: amt,
+                bidder: who,
+                id: id
+              });
+            }
+          } catch (eAw) {
+            /* */
+          }
           paint();
           /* Flash only — never write status into [data-high-bidder] (that cell is the bidder name). */
           var ok = "You are the high bidder at <b>$" + amt.toFixed(2) + "</b>.";

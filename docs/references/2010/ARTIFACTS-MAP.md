@@ -20,7 +20,10 @@
 | `sites/wave/` | Public May · death Aug | `itt10-wave` | Live |
 | Continuity | Gmail · YT · Hulu · Netflix · Spotify **EU** · Dropbox · Kickstarter · WhatsApp · Bing · Win7 · IE9 beta | registry 2010 list | Live |
 | `assets/period/2009/` + earlier | Continuity when year-true | OK to use | Live |
-| `assets/period/2010/*/` | Year-specific WA packs | dirs scaffolded | **empty · harvest queued** |
+| `assets/period/2010/ipad/hero-wa.jpg` | iPad 2010 still [wa 2010-05-19] | `sites/ipad/index.html` | **Live JPEG** |
+| `assets/period/2010/iphone/hero-4-wa.jpg` | Apps poster [wa 2010-08-07] · not product band | `sites/iphone/index.html` | **Live JPEG** |
+| `assets/period/2010/foursquare/logo-wa.png` | Continuity 2009 logo | `sites/foursquare/index.html` | **Live PNG** |
+| `assets/period/2010/instagram/` · `facebook/` | P0 dests | rooms | **failed-final** |
 
 ## Hard bans (artifact-level)
 

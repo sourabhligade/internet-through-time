@@ -8,8 +8,8 @@
  *   itt-last-year      (existing)
  *
  * Trails:
- *   first-night        1994 → 1998 → 2005 → 2007 → 2009
- *   YYYY-start         short in-year tour for every shipped year 1994–2010
+ *   first-night        1994 → 1998 → 2005 → 2008 → 2010
+ *   YYYY-start         short in-year tour for every shipped year
  */
 (function (global) {
   "use strict";
@@ -19,7 +19,7 @@
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
 
-  /** First night · signature arc (1994 → 2009) */
+  /** First night · signature arc (wiped years skipped) */
   var FIRST_NIGHT = [
     {
       id: "fn-1994",
@@ -49,22 +49,22 @@
       stampIds: ["youtube", "yt", "watch", "like"]
     },
     {
-      id: "fn-2007",
-      year: "2007",
-      path: "sites/iphone/index.html",
-      title: "2007 · iPhone",
-      blurb: "Phone as a real browser — no App Store yet.",
+      id: "fn-2008",
+      year: "2008",
+      path: "sites/appstore/index.html",
+      title: "2008 · App Store",
+      blurb: "Apps economy begins. Desktop still mass.",
       mode: "visit",
-      match: "/iphone/"
+      match: "/appstore/"
     },
     {
-      id: "fn-2009",
-      year: "2009",
-      path: "sites/farmville/index.html",
-      title: "2009 · FarmVille",
-      blurb: "Social games peak · plant theater (REAL multi-step).",
-      mode: "stamp",
-      stampIds: ["farm", "farmville", "plant"]
+      id: "fn-2010",
+      year: "2010",
+      path: "sites/instagram/index.html",
+      title: "2010 · Instagram",
+      blurb: "iOS filter → share. The 2010 object.",
+      mode: "visit",
+      match: "/instagram/"
     }
   ];
 
@@ -153,30 +153,15 @@
     "2006": yearVisitTour("2006",
       { path: "sites/twitter/index.html", label: "Twitter", blurb: "What are you doing? · 140.", match: "/twitter/" },
       { path: "sites/facebook/index.html", label: "Facebook open", blurb: "Beyond colleges · Feed era.", match: "/facebook/" }),
-    "2007": yearVisitTour("2007",
-      { path: "sites/iphone/index.html", label: "iPhone", blurb: "Phone as browser · no App Store yet.", match: "/iphone/" },
-      { path: "sites/gmail/index.html", label: "Gmail open", blurb: "Invites end · open signup story.", match: "/gmail/" }),
     "2008": yearVisitTour("2008",
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Apps economy begins.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome", blurb: "Browser reinvented · product room.", match: "/chrome/" }),
-    "2009": yearVisitTour("2009",
-      { path: "sites/facebook/feed.html", label: "Facebook Like", blurb: "Like a story. The 2009 web object.", match: "/facebook/" },
-      { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Social games peak · plant theater.", match: "/farmville/" }),
     "2010": yearVisitTour("2010",
       { path: "sites/instagram/index.html", label: "Instagram", blurb: "iOS filter → share. The 2010 object.", match: "/instagram/" },
       { path: "sites/ipad/index.html", label: "iPad", blurb: "$499 · no camera · magazine Safari.", match: "/ipad/" }),
-    "2011": yearVisitTour("2011",
-      { path: "sites/googleplus/hangouts.html", label: "Google+ Hangouts", blurb: "Circles · invite FOMO · start a hangout.", match: "/googleplus/" },
-      { path: "sites/spotify/index.html", label: "Spotify US", blurb: "14 Jul · invite-free theater.", match: "/spotify/" }),
     "2012": yearVisitTour("2012",
-      { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "3 Apr filter leaves the iPhone.", match: "/instagram/" },
-      { path: "sites/facebook/ipo.html", label: "Facebook IPO", blurb: "$38 · Nasdaq delay · 1B later.", match: "/facebook/" }),
-    "2013": yearVisitTour("2013",
-      { path: "sites/vine/record.html", label: "Vine 6s", blurb: "Hold to record. It loops.", match: "/vine/" },
-      { path: "sites/iphone/ios7.html", label: "iOS 7", blurb: "Every icon went flat overnight.", match: "/iphone/" }),
-    "2014": yearVisitTour("2014",
-      { path: "sites/whatsapp/index.html", label: "WhatsApp", blurb: "Install. The $19B class deal.", match: "/whatsapp/" },
-      { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "Rotate. Do not exploit.", match: "/heartbleed/" }),
+      { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "Named filter → share. The 2012 object.", match: "/instagram/android" },
+      { path: "sites/facebook/ipo.html", label: "Facebook IPO", blurb: "$38 · Nasdaq delay · 18 May.", match: "/facebook/ipo" }),
     "2015": yearVisitTour("2015",
       { path: "sites/periscope/index.html", label: "Periscope", blurb: "Title. Go LIVE. App of the Year.", match: "/periscope/" },
       { path: "sites/googlephotos/index.html", label: "Google Photos", blurb: "Unlimited high quality locker.", match: "/googlephotos/" }),
@@ -189,6 +174,12 @@
     "2018": yearVisitTour("2018",
       { path: "sites/gdpr/index.html", label: "GDPR Manage", blurb: "Accept All never writes. Manage does.", match: "/gdpr/" },
       { path: "sites/tiktok/fyp.html", label: "TikTok For You", blurb: "Aug 2 merge. Tap. Reorder.", match: "/tiktok/" }),
+    "2019": yearVisitTour("2019",
+      { path: "sites/disneyplus/home.html", label: "Disney+ Who’s watching", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
+      { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
+    "2020": yearVisitTour("2020",
+      { path: "sites/zoom/meeting.html", label: "Zoom mute → leave", blurb: "Join is the trap. Mute, chat, Leave.", match: "/zoom/" },
+      { path: "sites/reels/index.html", label: "Reels 15s", blurb: "5 Aug. Fifteen seconds. Not Stories.", match: "/reels/" }),
   };
 
   var TRAILS = {
@@ -203,7 +194,8 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2018; y++) {
+    for (y = 1994; y <= 2020; y++) {
+      if (y === 2014) continue;
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -368,7 +360,7 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2020) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2020, skip 2014) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -648,7 +640,10 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2018; y++) years.push(String(y));
+    for (y = 1994; y <= 2020; y++) {
+      if (y === 2014) continue;
+      years.push(String(y));
+    }
     var total = totalStamps();
     var nYears = yearsStamped().length;
     var night = getNight();
@@ -695,11 +690,11 @@
     }
     html += "</div>";
 
-    html += '<div class="first-night-card year-2009-start-card">';
+    html += '<div class="first-night-card year-2010-start-card">';
     html +=
-      "<b>2009 start</b> — newest shipped year: FarmVille · Like · Bing · 3GS." +
-      '<br><a class="start-btn start-primary" href="/years/2009/?trail=2009-start">Start 2009 tour →</a>' +
-      ' <a class="start-btn" href="/years/2009/">Open 2009 shell</a>';
+      "<b>2010 start</b> — tablet · filter · Like: Instagram iOS · iPad · Open Graph." +
+      '<br><a class="start-btn start-primary" href="/years/2010/?trail=2010-start">Start 2010 tour →</a>' +
+      ' <a class="start-btn" href="/years/2010/">Open 2010 shell</a>';
     html += "</div>";
 
     /* Per-year tour hint */
@@ -713,7 +708,7 @@
     html += '<div class="first-night-card">';
     if (night.finished && night.trail === "first-night") {
       html +=
-        "<b>First night complete</b> — you walked 1994→2009. " +
+        "<b>First night complete</b> — you walked 1994→2010. " +
         '<button type="button" data-itt-night-restart class="start-btn">Replay first night</button>';
     } else if (night.active && !night.finished) {
       var st = activeSteps(night)[night.step] || activeSteps(night)[0];
@@ -734,7 +729,7 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2005 YouTube → 2007 iPhone → 2009 FarmVille." +
+        "1994 → 1998 Google → 2005 YouTube → 2008 App Store → 2010 Instagram." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
     }
     html += "</div></div>";

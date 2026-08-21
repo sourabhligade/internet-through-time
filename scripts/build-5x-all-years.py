@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inject 5× REAL loops, home chips, flow-map branches, and live e2e for 1994–2020."""
+"""Inject 5× REAL loops, home chips, flow-map branches, and live e2e for 1994–2019."""
 from __future__ import annotations
 
 import json
@@ -165,13 +165,6 @@ PACKS: dict[int, list[tuple]] = {
         ("notsec", "F4 Chrome Not Secure", "Chrome 68 Jul 2018", "HTTP marked Not Secure", ["sites/chrome/index.html"], ["sites/spectre/index.html"]),
         ("spectre", "F5 Spectre / HomePod", "Jan 3 + HomePod Feb", "NO exploit", ["sites/spectre/index.html"], ["sites/gdpr/index.html"]),
     ],
-    2020: [
-        ("quibi-ep", "F1 Quibi 6-min", "Show → episode → gone", "Apr–Oct 2020", ["sites/quibi/index.html"], ["sites/instagram/index.html"]),
-        ("reels", "F2 Reels 15s", "5 Aug 2020", "Not Stories", ["sites/instagram/index.html"], ["sites/flash/index.html"]),
-        ("flash", "F3 Flash EOL", "31 Dec 2020 Adobe", "Literacy — no SWF", ["sites/flash/index.html"], ["sites/ccpa/index.html"]),
-        ("ccpa", "F4 CCPA", "1 Jan 2020", "Do Not Sell literacy", ["sites/ccpa/index.html"], ["sites/acnh/index.html"]),
-        ("acnh", "F5 ACNH", "20 Mar 2020 + Meet chip", "Next is Zoom star", ["sites/acnh/index.html"], ["sites/zoom/index.html"]),
-    ],
 }
 
 STARS = {
@@ -198,7 +191,6 @@ STARS = {
     2017: ("sites/iphone/x.html", "Face ID"),
     2018: ("sites/gdpr/index.html", "GDPR Manage"),
     2019: ("sites/disneyplus/home.html", "Disney+ Continue"),
-    2020: ("sites/zoom/index.html", "Zoom mute/leave"),
 }
 
 # Already have F-room machines; still need chips / maps where noted

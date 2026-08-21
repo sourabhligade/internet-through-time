@@ -148,7 +148,6 @@
       ["bbs", "immersion/source-flows.js"],
       ["zengarden", "immersion/source-flows.js"],
       ["neocities", "immersion/source-flows.js"],
-      ["spacehey", "immersion/source-flows.js"],
       ["textfiles", "immersion/source-flows.js"],
       ["folklore", "immersion/source-flows.js"],
       ["elon", "immersion/source-flows.js"],
@@ -181,6 +180,8 @@
     add("immersion/year-5x-pack.js");
     add("immersion/year-true-packs.js");
     add("immersion/year-popular-3x.js");
+    add("immersion/leftover-official.js");
+    add("immersion/year-4x-flows.js");
     add("immersion/one-thing-machines.js");
     add("immersion/official-dest-gold.js");
     add("immersion/source-flows.js");

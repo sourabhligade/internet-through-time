@@ -176,16 +176,62 @@ const THINGS = [
     },
   },
   {
+    year: "2009",
+    path: "/years/2009/sites/facebook/index.html",
+    key: "itt09-like",
+    incomplete: async (page) => {
+      await page.locator("[data-lk09-like]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-lk09-req]").nth(0).check();
+      await page.locator("[data-lk09-req]").nth(1).check();
+      await page.locator('[data-lk09-page="news"]').click();
+      await page.locator('[data-lk09-page="music"]').click();
+      await page.locator("[data-lk09-like]").click();
+    },
+  },
+  {
+    year: "2011",
+    path: "/years/2011/sites/googleplus/index.html",
+    key: "itt11-gplus",
+    incomplete: async (page) => {
+      await page.locator("[data-gp11-hangout]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-gp11-req]").nth(0).check();
+      await page.locator("[data-gp11-req]").nth(1).check();
+      await page.fill("[data-gp11-circle]", "Friends");
+      await page.locator('[data-gp11-person="ada"]').click();
+      await page.locator('[data-gp11-person="al"]').click();
+      await page.locator("[data-gp11-hangout]").click();
+    },
+  },
+  {
+    year: "2013",
+    path: "/years/2013/sites/vine/record.html",
+    key: "itt13-vine-posts",
+    incomplete: async (page) => {
+      await page.locator("[data-vn13-post]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-vn13-req]").nth(0).check();
+      await page.locator("[data-vn13-req]").nth(1).check();
+      await page.locator("[data-vn13-hold]").click();
+      await page.locator("[data-vn13-post]").click();
+    },
+  },
+  {
     year: "2007",
     path: "/years/2007/sites/iphone/index.html",
     key: "itt07-iphone",
     incomplete: async (page) => {
-      await page.locator("[data-iphone-ott-save]").click();
+      await page.locator("[data-ip07-safari]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-iphone-ott-shipped]").check();
-      await page.locator("[data-iphone-ott-nostore]").check();
-      await page.locator("[data-iphone-ott-save]").click();
+      await page.locator("[data-ip07-req]").nth(0).check();
+      await page.locator("[data-ip07-req]").nth(1).check();
+      await page.locator('[data-ip07-cap="4"]').click();
+      await page.locator("[data-ip07-safari]").click();
     },
   },
   {
@@ -202,17 +248,6 @@ const THINGS = [
     },
   },
   {
-    year: "2009",
-    path: "/years/2009/sites/facebook/feed.html",
-    key: "itt09-fb-likes",
-    incomplete: async (page) => {
-      await page.locator("form[data-fb-status-post] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-fb-like]").first().click();
-    },
-  },
-  {
     year: "2010",
     path: "/years/2010/sites/instagram/index.html",
     key: "itt10-ig",
@@ -226,60 +261,15 @@ const THINGS = [
     },
   },
   {
-    year: "2011",
-    path: "/years/2011/sites/googleplus/hangouts.html",
-    key: "itt11-gplus-hangout",
-    incomplete: async (page) => {
-      await page.locator("[data-gplus-hangout-start]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-req]").nth(0).check({ force: true });
-      await page.locator("[data-req]").nth(1).check({ force: true });
-      await page.locator("[data-gplus-hangout-start]").click();
-    },
-  },
-  {
     year: "2012",
     path: "/years/2012/sites/instagram/android.html",
-    key: "itt12-ig",
+    key: "itt12-ig-android",
     incomplete: async (page) => {
-      await page.locator("[data-ig-share]").click();
+      await page.locator("[data-ig12-share]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-req]").nth(0).check({ force: true });
-      await page.locator("[data-req]").nth(1).check({ force: true });
-      await page.locator('[data-ig-filter="X-Pro II"]').click();
-      await page.fill("[data-ig-caption]", "android share");
-      await page.locator("[data-ig-share]").click();
-    },
-  },
-  {
-    year: "2013",
-    path: "/years/2013/sites/vine/record.html",
-    key: "itt13-vine-posts",
-    incomplete: async (page) => {
-      await page.locator("[data-vine-post]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-req]").nth(0).check({ force: true });
-      await page.locator("[data-req]").nth(1).check({ force: true });
-      const hold = page.locator("[data-vine-hold]");
-      for (let i = 0; i < 5; i++) await hold.click();
-      await page.fill("[data-vine-caption]", "one thing 6s");
-      await page.locator("[data-vine-post]").click();
-    },
-  },
-  {
-    year: "2014",
-    path: "/years/2014/sites/whatsapp/index.html",
-    key: "itt14-wa-install",
-    incomplete: async (page) => {
-      await page.locator("[data-wa-install]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-req]").nth(0).check({ force: true });
-      await page.locator("[data-req]").nth(1).check({ force: true });
-      await page.locator("[data-wa-install]").click();
+      await page.locator('[data-ig12-filter="X-Pro II"]').click();
+      await page.locator("[data-ig12-share]").click();
     },
   },
   {
@@ -333,6 +323,40 @@ const THINGS = [
       await page.locator("[data-gdpr-save]").click();
     },
   },
+  {
+    year: "2019",
+    path: "/years/2019/sites/disneyplus/home.html",
+    key: "itt19-disneyplus",
+    incomplete: async (page) => {
+      await page.locator("[data-dplus-continue]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-dplus-req]").nth(0).check();
+      await page.locator("[data-dplus-req]").nth(1).check();
+      await page.locator('[data-dplus-profile="adult"]').click();
+      await page.locator("[data-dplus-add]").nth(0).click();
+      await page.locator("[data-dplus-add]").nth(1).click();
+      await page.locator('[data-dplus-profile="kids"]').click();
+      await page.locator('[data-dplus-profile="adult"]').click();
+      await page.locator("[data-dplus-continue]").click();
+    },
+  },
+  {
+    year: "2020",
+    path: "/years/2020/sites/zoom/meeting.html",
+    key: "itt20-zoom",
+    incomplete: async (page) => {
+      await page.locator("[data-zoom-leave]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-zoom-req]").nth(0).check();
+      await page.locator("[data-zoom-req]").nth(1).check();
+      await page.locator("[data-zoom-mute]").click();
+      await page.fill("[data-zoom-field]", "can you see my screen");
+      await page.locator("[data-zoom-send]").click();
+      await page.locator("[data-zoom-leave]").click();
+    },
+  },
 ];
 
 test.describe("One-thing per year — load + REAL gate", () => {
@@ -373,7 +397,9 @@ test.describe("One-thing per year — load + REAL gate", () => {
 
   test("1994–2009 homes lead with one-thing then guided, residual later", async ({ page }) => {
     const years = [];
-    for (let y = 1994; y <= 2009; y++) years.push(String(y));
+    for (let y = 1994; y <= 2009; y++) {
+      years.push(String(y));
+    }
     for (const y of years) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
@@ -392,7 +418,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   });
 
   test("home chips present for sample years", async ({ page }) => {
-    for (const y of ["1999", "2000", "2008", "2012"]) {
+    for (const y of ["1999", "2000", "2008", "2010", "2012"]) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
     }

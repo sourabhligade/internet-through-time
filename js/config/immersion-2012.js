@@ -1,6 +1,6 @@
 /**
  * Immersion config — 2012
- * Thesis: Instagram Android · $1B · IPO · Pinterest · iPhone 5
+ * Thesis: Instagram Android · Facebook IPO · SOPA · Chrome > IE · Win8 leftover
  */
 (function (global) {
   "use strict";
@@ -15,21 +15,19 @@
       nav: true,
       instagram: true,
       facebook: true,
-      pinterest: true,
-      snapchat: true,
       twitter: true,
       youtube: true,
-      chrome: true,
-      oneThingMachines: true
+      oneThingMachines: true,
+      yearPopular3x: true
     },
-    navSubtitle: "Win7 · IE 9 · Instagram Android · IPO · iPhone 5",
+    navSubtitle: "Win7 · IE 9 · Instagram Android · IPO · SOPA · Maps flop",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "Instagram", href: "sites/instagram/android.html", match: "/instagram/" },
-      { label: "IPO", href: "sites/facebook/ipo.html", match: "/facebook/" },
-      { label: "Pinterest", href: "sites/pinterest/index.html", match: "/pinterest/" },
-      { label: "iPhone 5", href: "sites/iphone/index.html", match: "/iphone/" },
-      { label: "Win8", href: "sites/windows8/index.html", match: "/windows8/" }
+      { label: "IG Android", href: "sites/instagram/android.html", match: "/instagram/android" },
+      { label: "IPO", href: "sites/facebook/ipo.html", match: "/facebook/ipo" },
+      { label: "SOPA", href: "sites/wikipedia/sopa.html", match: "/wikipedia/sopa" },
+      { label: "Maps", href: "sites/iphone/maps.html", match: "/iphone/maps" },
+      { label: "Pinterest", href: "sites/pinterest/index.html", match: "/pinterest/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },

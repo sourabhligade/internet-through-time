@@ -2,6 +2,7 @@
  * Popular leftover websites (3× per year) — product leftover, not the chip.
  * Rooms may add [data-pop-pick] + [data-pop-req]. Incomplete never writes.
  * Keys: ittYY-pop-<id>
+ * Third-trio dests may set data-pop-key="pop3-<slug>" → ittYY-pop3-<slug>.
  */
 (function (global) {
   "use strict";
@@ -72,26 +73,75 @@
     else if (st) st.textContent = msg;
   }
 
-  function boot(doc) {
-    doc = doc || document;
-    var btn = doc.querySelector("[data-pop-go]");
+  function scopeOf(btn) {
+    var n = btn;
+    while (n && n !== document && n !== document.documentElement) {
+      if (n.getAttribute && (n.getAttribute("data-pop-panel") === "1" || /\bitt-pop3\b/.test(n.className || ""))) {
+        return n;
+      }
+      n = n.parentNode;
+    }
+    return btn.ownerDocument || document;
+  }
+
+  function bootOne(btn) {
     if (!btn || btn.getAttribute("data-pop-bound") === "1") return;
     btn.setAttribute("data-pop-bound", "1");
+    var doc = btn.ownerDocument || document;
+    var root = scopeOf(btn);
     var year = yearOf(doc);
     var YX = ITT.YearExtras && ITT.YearExtras.forYear(year);
-    var st = doc.querySelector("[data-pop-status]");
-    var field = doc.querySelector("[data-pop-field]");
+    var st = root.querySelector("[data-pop-status]");
+    var field = root.querySelector("[data-pop-field]");
     var id = btn.getAttribute("data-pop-id") || "site";
-    var k = YX ? YX.key("pop-" + id) : prefix(year) + "-pop-" + id;
-    var picks = doc.querySelectorAll("[data-pop-pick]");
+    var keySuffix = btn.getAttribute("data-pop-key");
+    var k;
+    if (keySuffix) {
+      k = YX ? YX.key(keySuffix) : prefix(year) + "-" + keySuffix;
+    } else {
+      k = YX ? YX.key("pop-" + id) : prefix(year) + "-pop-" + id;
+    }
+    var picks = root.querySelectorAll("[data-pop-pick]");
     var saved = loadSaved(k);
     var i;
+
+    function markLocal(pid) {
+      var j;
+      var el;
+      for (j = 0; j < picks.length; j++) {
+        el = picks[j];
+        el.className = String(el.className || "").replace(/\bis-on\b/g, "").replace(/\s+/g, " ");
+        el.setAttribute("aria-pressed", "false");
+        if (pid && el.getAttribute("data-pop-pick") === pid) {
+          el.className = (el.className + " is-on").replace(/\s+/g, " ");
+          el.setAttribute("aria-pressed", "true");
+        }
+      }
+    }
+
+    function pickedLocal() {
+      var j;
+      for (j = 0; j < picks.length; j++) {
+        if (/\bis-on\b/.test(picks[j].className) || picks[j].getAttribute("aria-pressed") === "true") {
+          return picks[j].getAttribute("data-pop-pick") || "";
+        }
+      }
+      return "";
+    }
+
+    function reqLocal() {
+      var els = root.querySelectorAll("[data-pop-req]");
+      var n = 0;
+      var j;
+      for (j = 0; j < els.length; j++) if (els[j].checked) n++;
+      return { have: n, need: els.length };
+    }
 
     for (i = 0; i < picks.length; i++) {
       picks[i].addEventListener("click", function () {
         var pid = this.getAttribute("data-pop-pick") || "";
         var q = this.getAttribute("data-pop-q") || "";
-        markPick(doc, pid);
+        markLocal(pid);
         if (field && q && !String(field.value || "").replace(/^\s+|\s+$/g, "")) {
           field.value = q;
         }
@@ -101,7 +151,7 @@
 
     if (saved && saved.q) {
       if (field && !field.value) field.value = saved.q;
-      if (saved.picked) markPick(doc, saved.picked);
+      if (saved.picked) markLocal(saved.picked);
       say(YX, st, "Still open · " + k);
       try {
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
@@ -110,8 +160,8 @@
 
     btn.addEventListener("click", function () {
       var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
-      var picked = pickedOf(doc);
-      var reqs = reqCount(doc);
+      var picked = pickedLocal();
+      var reqs = reqLocal();
       if (v.length < 2) {
         say(YX, st, "Type something first. Empty never writes.", true);
         return;
@@ -142,6 +192,13 @@
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
       } catch (eN) { /* */ }
     });
+  }
+
+  function boot(doc) {
+    doc = doc || document;
+    var btns = doc.querySelectorAll("[data-pop-go]");
+    var i;
+    for (i = 0; i < btns.length; i++) bootOne(btns[i]);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

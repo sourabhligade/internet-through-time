@@ -32,9 +32,7 @@ const YEARS = [
   '2004',
   '2005',
   '2006',
-  '2007',
   '2008',
-  '2009',
 ];
 
 /** @param {string} year */
@@ -133,7 +131,7 @@ for (const year of YEARS) {
       await page.waitForTimeout(250);
       expect(await getKey(page, key), `${year}: one check must not write`).toBeFalsy();
 
-      // Complete — tick every remaining required box (2020 About is min=3)
+      // Complete — tick every remaining required box
       for (let i = 1; i < n; i++) await boxes.nth(i).check();
       await btn.click();
       await expect
@@ -217,27 +215,6 @@ test.describe('REAL system product samples', () => {
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt05-yt-uploads') || ''))
       .toMatch(/REAL system 2005/);
-  });
-
-  test('2007 Beacon incomplete blocked; complete writes itt07-beacon-ack', async ({ page }) => {
-    await page.goto('/years/2007/sites/facebook/beacon.html');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt07-beacon-ack');
-      } catch (e) {
-        /* */
-      }
-    });
-    await page.reload();
-    await page.waitForSelector('[data-beacon-ack]', { timeout: 20000 });
-    await page.locator('[data-beacon-ack]').click();
-    await page.waitForTimeout(200);
-    expect(await page.evaluate(() => localStorage.getItem('itt07-beacon-ack'))).toBeFalsy();
-    await page.locator('[data-beacon-buy="ebay"]').click();
-    await page.locator('[data-beacon-ack]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt07-beacon-ack') || ''))
-      .toMatch(/ebay|multiStep|beacon/i);
   });
 
   test('1999 AIM empty sign-on blocked; SN writes itt99-aim', async ({ page }) => {

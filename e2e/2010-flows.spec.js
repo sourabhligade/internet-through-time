@@ -351,3 +351,103 @@ test.describe('2010 continuity + trails live', () => {
     await expect.poll(() => getKey(page, 'itt10-ask')).toMatch(/real|true|multiStep/i);
   });
 });
+
+test.describe('2010 new leftover dests + existing-room flows', () => {
+  test('home leftover strip lists Instant · FaceTime · Kickstarter', async ({ page }) => {
+    await page.goto('/years/2010/pages/home.html');
+    const strip = page.locator('#ott-new-2010');
+    await expect(strip).toBeVisible();
+    await expect(strip.locator('a[href*="instant"]')).toBeVisible();
+    await expect(strip.locator('a[href*="facetime"]')).toBeVisible();
+    await expect(strip.locator('a[href*="kickstarter"]')).toBeVisible();
+    await expect(page.locator('#ott-guided-2010 li')).toHaveCount(6);
+  });
+
+  test('Instant 1 char blocked · 2+ writes itt10-instant', async ({ page }) => {
+    await page.goto('/years/2010/sites/instant/index.html');
+    await clearKeys(page, ['itt10-instant']);
+    await page.reload();
+    await page.waitForSelector('[data-gi-go]');
+    await page.locator('[data-gi-go]').click();
+    expect(await getKey(page, 'itt10-instant')).toBeFalsy();
+    await page.locator('[data-gi-q]').fill('y');
+    await page.locator('[data-gi-go]').click();
+    expect(await getKey(page, 'itt10-instant')).toBeFalsy();
+    await page.locator('[data-gi-q]').fill('ya');
+    await page.locator('[data-gi-go]').click();
+    await expect.poll(() => getKey(page, 'itt10-instant')).toMatch(/ya|instant|real/i);
+  });
+
+  test('FaceTime no Wi-Fi blocked · ticks + call writes itt10-facetime', async ({ page }) => {
+    await page.goto('/years/2010/sites/facetime/index.html');
+    await clearKeys(page, ['itt10-facetime']);
+    await page.reload();
+    await page.waitForSelector('[data-ft-call]');
+    await page.locator('[data-ft-call]').click();
+    expect(await getKey(page, 'itt10-facetime')).toBeFalsy();
+    await page.locator('[data-ft-wifi]').check();
+    await page.locator('[data-ft-call]').click();
+    expect(await getKey(page, 'itt10-facetime')).toBeFalsy();
+    await page.locator('[data-ft-req]').check();
+    await page.locator('[data-ft-call]').click();
+    await expect.poll(() => getKey(page, 'itt10-facetime')).toMatch(/wifi|facetime|real/i);
+  });
+
+  test('Kickstarter empty/$0 blocked · $1 + tick writes itt10-kickstarter', async ({ page }) => {
+    await page.goto('/years/2010/sites/kickstarter/index.html');
+    await clearKeys(page, ['itt10-kickstarter']);
+    await page.reload();
+    await page.waitForSelector('[data-ks-go]');
+    await page.locator('[data-ks-go]').click();
+    expect(await getKey(page, 'itt10-kickstarter')).toBeFalsy();
+    await page.locator('[data-ks-amt]').fill('0');
+    await page.locator('[data-ks-go]').click();
+    expect(await getKey(page, 'itt10-kickstarter')).toBeFalsy();
+    await page.locator('[data-ks-amt]').fill('1');
+    await page.locator('[data-ks-go]').click();
+    expect(await getKey(page, 'itt10-kickstarter')).toBeFalsy();
+    await page.locator('[data-ks-req]').check();
+    await page.locator('[data-ks-go]').click();
+    await expect.poll(() => getKey(page, 'itt10-kickstarter')).toMatch(/usd|1|real/i);
+  });
+
+  test('Instagram first share writes ig · second share writes itt10-ig-2', async ({ page }) => {
+    await page.goto('/years/2010/sites/instagram/index.html');
+    await clearKeys(page, ['itt10-ig-posts', 'itt10-ig', 'itt10-ig-2']);
+    await page.reload();
+    await page.waitForSelector('[data-ig-share]');
+    await page.locator('[data-ig-filter="X-Pro II"]').click();
+    await page.locator('[data-ig-caption]').fill('first square');
+    await page.locator('[data-ig-share]').click();
+    await expect.poll(() => getKey(page, 'itt10-ig')).toBeTruthy();
+    expect(await getKey(page, 'itt10-ig-2')).toBeFalsy();
+    await page.locator('[data-ig-caption]').fill('second square');
+    await page.locator('[data-ig-share]').click();
+    await expect.poll(() => getKey(page, 'itt10-ig-2')).toMatch(/second|"n":2|real/i);
+  });
+
+  test('iPad order writes itt10-ipad and itt10-ipad-order', async ({ page }) => {
+    await page.goto('/years/2010/sites/ipad/order.html');
+    await clearKeys(page, ['itt10-ipad', 'itt10-ipad-order']);
+    await page.reload();
+    await page.locator('[data-ipad-order]').click();
+    expect(await getKey(page, 'itt10-ipad-order')).toBeFalsy();
+    await page.locator('[name="ipad-cap"][value="16GB"]').check();
+    await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
+    await page.locator('[data-ipad-order]').click();
+    await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/16GB|Wi-Fi|real/i);
+    await expect.poll(() => getKey(page, 'itt10-ipad-order')).toMatch(/16GB|Wi-Fi|real/i);
+  });
+
+  for (const path of [
+    '/years/2010/sites/instant/index.html',
+    '/years/2010/sites/facetime/index.html',
+    '/years/2010/sites/kickstarter/index.html',
+  ]) {
+    test(`${path} is 200`, async ({ page }) => {
+      const res = await page.goto(path);
+      expect(res && res.ok(), path).toBeTruthy();
+      await expect(page.locator('html')).toHaveAttribute('data-itt-year', '2010');
+    });
+  }
+});

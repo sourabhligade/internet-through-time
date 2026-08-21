@@ -65,6 +65,104 @@
           ]
 },
 
+
+      {
+          "label": "4\u00d7 leftover \u00b7 1994",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    {
+                              "name": "N1 WebCrawler",
+                              "href": "sites/webcrawler/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-wc"
+                    },
+                    {
+                              "name": "N2 Lycos",
+                              "href": "sites/lycos/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-lycos"
+                    },
+                    {
+                              "name": "N3 Pizza Hut",
+                              "href": "sites/pizzahut/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-pizza"
+                    },
+                    {
+                              "name": "N4 NetMarket",
+                              "href": "sites/netmarket/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-netmarket"
+                    },
+                    {
+                              "name": "N5 IMDb",
+                              "href": "sites/imdb/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-imdb"
+                    },
+                    {
+                              "name": "N6 Personal guestbook",
+                              "href": "sites/personal/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-personal-gb"
+                    },
+                    {
+                              "name": "N7 HotWired banner",
+                              "href": "sites/hotwired/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-banner"
+                    },
+                    {
+                              "name": "N8 IUMA download",
+                              "href": "sites/iuma/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-iuma-dl"
+                    },
+                    {
+                              "name": "N9 JumpStation",
+                              "href": "sites/jumpstation/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-jump"
+                    },
+                    {
+                              "name": "N10 Galaxy",
+                              "href": "sites/galaxy/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-galaxy"
+                    },
+                    {
+                              "name": "N11 GNN",
+                              "href": "sites/gnn/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-gnn"
+                    },
+                    {
+                              "name": "N12 CompuServe",
+                              "href": "sites/compuserve/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-cis"
+                    },
+                    {
+                              "name": "N13 Prodigy",
+                              "href": "sites/prodigy/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-prodigy"
+                    },
+                    {
+                              "name": "N14 Pathfinder",
+                              "href": "sites/pathfinder/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-pathfinder"
+                    },
+                    {
+                              "name": "N15 NASA wait",
+                              "href": "sites/nasa/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-nasa"
+                    },
+                    {
+                              "name": "N16 View Source",
+                              "href": "pages/handbook.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-viewsrc"
+                    },
+                    {
+                              "name": "N17 Images-off",
+                              "href": "pages/handbook.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-img-off"
+                    },
+                    {
+                              "name": "N18 CERN",
+                              "href": "sites/cern/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt94-cern"
+                    }
+          ]
+},
+
       {
         "label": "Enter & orient",
         "do": "Learn the shell before surfing",
@@ -258,6 +356,104 @@
           ]
 },
 
+
+      {
+          "label": "4\u00d7 leftover \u00b7 1995",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    {
+                              "name": "N1 Amazon search",
+                              "href": "sites/amazon/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-amzn-q"
+                    },
+                    {
+                              "name": "N2 Amazon cart",
+                              "href": "sites/amazon/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-amzn-cart"
+                    },
+                    {
+                              "name": "N3 ESPN",
+                              "href": "sites/espn/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-espn"
+                    },
+                    {
+                              "name": "N4 CNET",
+                              "href": "sites/cnet/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-cnet"
+                    },
+                    {
+                              "name": "N5 Salon",
+                              "href": "sites/salon/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-salon"
+                    },
+                    {
+                              "name": "N6 Match",
+                              "href": "sites/match/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-match"
+                    },
+                    {
+                              "name": "N7 Classmates",
+                              "href": "sites/classmates/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-classmates"
+                    },
+                    {
+                              "name": "N8 Tripod",
+                              "href": "sites/tripod/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-tripod"
+                    },
+                    {
+                              "name": "N9 CNN",
+                              "href": "sites/cnn/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-cnn"
+                    },
+                    {
+                              "name": "N10 AOL keyword",
+                              "href": "sites/aol/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-aol"
+                    },
+                    {
+                              "name": "N11 Netscape download",
+                              "href": "sites/netscape/download.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-nn-dl"
+                    },
+                    {
+                              "name": "N12 IE1 literacy",
+                              "href": "sites/microsoft/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-ie1"
+                    },
+                    {
+                              "name": "N13 Infoseek",
+                              "href": "sites/infoseek/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-infoseek"
+                    },
+                    {
+                              "name": "N14 Yahoo.com",
+                              "href": "sites/yahoo/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-yahoo-com"
+                    },
+                    {
+                              "name": "N15 WSJ",
+                              "href": "sites/wsj/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-wsj"
+                    },
+                    {
+                              "name": "N16 Time Warner",
+                              "href": "sites/timewarner/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-tw"
+                    },
+                    {
+                              "name": "N17 White House 1995",
+                              "href": "sites/whitehouse/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-wh"
+                    },
+                    {
+                              "name": "N18 Webring",
+                              "href": "sites/geocities/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt95-webring"
+                    }
+          ]
+},
+
       {
         "label": "Enter",
         "do": "Orient in Win95 Netscape",
@@ -416,6 +612,104 @@
                               "name": "Star Portal wars",
                               "href": "sites/portals/wars.html",
                               "do": "locked star \u00b7 empty never writes"
+                    }
+          ]
+},
+
+
+      {
+          "label": "4\u00d7 leftover \u00b7 1996",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    {
+                              "name": "N1 Hotmail inbox",
+                              "href": "sites/hotmail/inbox.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-hotmail-inbox"
+                    },
+                    {
+                              "name": "N2 My Yahoo save",
+                              "href": "sites/yahoo/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-my-save"
+                    },
+                    {
+                              "name": "N3 Craigslist",
+                              "href": "sites/craigslist/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-cl"
+                    },
+                    {
+                              "name": "N4 Ask Jeeves",
+                              "href": "sites/askjeeves/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-jeeves"
+                    },
+                    {
+                              "name": "N5 MTV",
+                              "href": "sites/mtv/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-mtv"
+                    },
+                    {
+                              "name": "N6 Plugin nag",
+                              "href": "sites/plugin/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-plugin"
+                    },
+                    {
+                              "name": "N7 Netscape 3",
+                              "href": "sites/netscape/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-nn3"
+                    },
+                    {
+                              "name": "N8 MSN",
+                              "href": "sites/msn/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-msn"
+                    },
+                    {
+                              "name": "N9 CNN 1996",
+                              "href": "sites/cnn/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-cnn"
+                    },
+                    {
+                              "name": "N10 Angelfire",
+                              "href": "sites/angelfire/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-angel"
+                    },
+                    {
+                              "name": "N11 TheGlobe",
+                              "href": "sites/theglobe/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-globe"
+                    },
+                    {
+                              "name": "N12 TotalNY",
+                              "href": "sites/totalny/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-tny"
+                    },
+                    {
+                              "name": "N13 AuctionWeb",
+                              "href": "sites/auctionweb/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-aw"
+                    },
+                    {
+                              "name": "N14 AltaVista hop",
+                              "href": "sites/altavista/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-av"
+                    },
+                    {
+                              "name": "N15 Space Jam lineup",
+                              "href": "sites/spacejam/lineup.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-jam-line"
+                    },
+                    {
+                              "name": "N16 Jam Central",
+                              "href": "sites/spacejam/jamcentral.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-jam-central"
+                    },
+                    {
+                              "name": "N17 Pathfinder",
+                              "href": "sites/pathfinder/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-pf"
+                    },
+                    {
+                              "name": "N18 Infoseek",
+                              "href": "sites/infoseek/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt96-infoseek"
                     }
           ]
 },
@@ -580,6 +874,104 @@
                               "name": "Star PointCast",
                               "href": "sites/pointcast/index.html",
                               "do": "locked star \u00b7 empty never writes"
+                    }
+          ]
+},
+
+
+      {
+          "label": "4\u00d7 leftover \u00b7 1997",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    {
+                              "name": "N1 AIM birth",
+                              "href": "sites/aim/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-aim-birth"
+                    },
+                    {
+                              "name": "N2 ICQ message",
+                              "href": "sites/icq/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-icq-msg"
+                    },
+                    {
+                              "name": "N3 NYTimes",
+                              "href": "sites/nytimes/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-nyt"
+                    },
+                    {
+                              "name": "N4 MP3.com",
+                              "href": "sites/mp3com/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-mp3"
+                    },
+                    {
+                              "name": "N5 ZDNet",
+                              "href": "sites/zdnet/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-zdnet"
+                    },
+                    {
+                              "name": "N6 Winamp",
+                              "href": "sites/winamp/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-winamp"
+                    },
+                    {
+                              "name": "N7 Java nag",
+                              "href": "sites/javaplugin/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-java"
+                    },
+                    {
+                              "name": "N8 BBC",
+                              "href": "sites/bbc/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-bbc"
+                    },
+                    {
+                              "name": "N9 Scripting News",
+                              "href": "sites/scripting/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-scripting"
+                    },
+                    {
+                              "name": "N10 news.com",
+                              "href": "sites/newscom/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-newscom"
+                    },
+                    {
+                              "name": "N11 Amazon IPO",
+                              "href": "sites/amazon/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-amzn-ipo"
+                    },
+                    {
+                              "name": "N12 eBay rename",
+                              "href": "sites/ebay/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-ebay-name"
+                    },
+                    {
+                              "name": "N13 IE4 lawn",
+                              "href": "sites/microsoft/ie4.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-ie4"
+                    },
+                    {
+                              "name": "N14 AltaVista",
+                              "href": "sites/altavista/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-av"
+                    },
+                    {
+                              "name": "N15 GeoCities millionth",
+                              "href": "sites/geocities/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-gc-1m"
+                    },
+                    {
+                              "name": "N16 Hotmail 1997",
+                              "href": "sites/hotmail/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-hotmail"
+                    },
+                    {
+                              "name": "N17 Lycos",
+                              "href": "sites/lycos/index.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-lycos"
+                    },
+                    {
+                              "name": "N18 Drudge story",
+                              "href": "sites/drudge/story.html",
+                              "do": "4\u00d7 leftover \u2192 itt97-drudge-story"
                     }
           ]
 },
@@ -769,6 +1161,31 @@
 },
 
       {
+          "label": "4\u00d7 leftover \u00b7 1998",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    { "name": "N1 Query then Lucky", "href": "sites/google/index.html", "do": "4\u00d7 leftover \u2192 itt98-q-then-lucky" },
+                    { "name": "N2 Yahoo packed", "href": "sites/yahoo/index.html", "do": "4\u00d7 leftover \u2192 itt98-yahoo" },
+                    { "name": "N3 You've Got Mail", "href": "sites/youvegotmail/index.html", "do": "4\u00d7 leftover \u2192 itt98-ygm" },
+                    { "name": "N4 GO.com", "href": "sites/go/index.html", "do": "4\u00d7 leftover \u2192 itt98-go" },
+                    { "name": "N5 Snap", "href": "sites/snap/index.html", "do": "4\u00d7 leftover \u2192 itt98-snap" },
+                    { "name": "N6 About / Mining Co", "href": "sites/about/index.html", "do": "4\u00d7 leftover \u2192 itt98-about" },
+                    { "name": "N7 Valve", "href": "sites/valve/index.html", "do": "4\u00d7 leftover \u2192 itt98-valve" },
+                    { "name": "N8 GameSpot", "href": "sites/gamespot/index.html", "do": "4\u00d7 leftover \u2192 itt98-gamespot" },
+                    { "name": "N9 WinFiles", "href": "sites/winfiles/index.html", "do": "4\u00d7 leftover \u2192 itt98-winfiles" },
+                    { "name": "N10 Skip-intro", "href": "sites/hillmancurtis/index.html", "do": "4\u00d7 leftover \u2192 itt98-skip" },
+                    { "name": "N11 Larry Page", "href": "sites/larrypage/index.html", "do": "4\u00d7 leftover \u2192 itt98-larry" },
+                    { "name": "N12 Sergey Brin", "href": "sites/sergeybrin/index.html", "do": "4\u00d7 leftover \u2192 itt98-sergey" },
+                    { "name": "N13 Broadcast.com", "href": "sites/broadcastcom/index.html", "do": "4\u00d7 leftover \u2192 itt98-bcast" },
+                    { "name": "N14 Open Diary", "href": "sites/opendiary/index.html", "do": "4\u00d7 leftover \u2192 itt98-od" },
+                    { "name": "N15 ICQ web", "href": "sites/icqweb/index.html", "do": "4\u00d7 leftover \u2192 itt98-icqweb" },
+                    { "name": "N16 Netcenter", "href": "sites/netcenter/index.html", "do": "4\u00d7 leftover \u2192 itt98-netcenter" },
+                    { "name": "N17 eBay IPO", "href": "sites/ebay/index.html", "do": "4\u00d7 leftover \u2192 itt98-ebay-ipo" },
+                    { "name": "N18 Slashdot 1998", "href": "sites/slashdot/index.html", "do": "4\u00d7 leftover \u2192 itt98-slashdot" }
+          ]
+},
+
+      {
         "label": "Enter",
         "do": "Win98 IE4 room",
         "sites": [
@@ -925,6 +1342,31 @@
                               "href": "sites/aim/index.html",
                               "do": "locked star \u00b7 empty never writes"
                     }
+          ]
+},
+
+      {
+          "label": "4\u00d7 leftover \u00b7 1999",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    { "name": "N1 AIM away", "href": "sites/aim/away.html", "do": "4\u00d7 leftover \u2192 itt99-aim-away" },
+                    { "name": "N2 Napster RIAA Dec 6", "href": "sites/napster/legal.html", "do": "4\u00d7 leftover \u2192 itt99-riaa" },
+                    { "name": "N3 Blogger edit", "href": "sites/blogger/edit.html", "do": "4\u00d7 leftover \u2192 itt99-blog-edit" },
+                    { "name": "N4 LiveJournal", "href": "sites/livejournal/index.html", "do": "4\u00d7 leftover \u2192 itt99-lj" },
+                    { "name": "N5 Neopets", "href": "sites/neopets/index.html", "do": "4\u00d7 leftover \u2192 itt99-neo" },
+                    { "name": "N6 eGroups", "href": "sites/egroups/index.html", "do": "4\u00d7 leftover \u2192 itt99-egroups" },
+                    { "name": "N7 Yahoo Messenger", "href": "sites/yahoomessenger/index.html", "do": "4\u00d7 leftover \u2192 itt99-ym" },
+                    { "name": "N8 SixDegrees", "href": "sites/sixdegrees/index.html", "do": "4\u00d7 leftover \u2192 itt99-six" },
+                    { "name": "N9 The Onion", "href": "sites/theonion/index.html", "do": "4\u00d7 leftover \u2192 itt99-onion" },
+                    { "name": "N10 Dr. Koop", "href": "sites/drkoop/index.html", "do": "4\u00d7 leftover \u2192 itt99-koop" },
+                    { "name": "N11 PayPal ledger", "href": "sites/paypal/index.html", "do": "4\u00d7 leftover \u2192 itt99-pp-ledger" },
+                    { "name": "N12 GeoCities Yahoo buy", "href": "sites/geocities/index.html", "do": "4\u00d7 leftover \u2192 itt99-gc-yahoo" },
+                    { "name": "N13 Flash 4", "href": "sites/flash4/index.html", "do": "4\u00d7 leftover \u2192 itt99-flash4" },
+                    { "name": "N14 SourceForge", "href": "sites/sourceforge/index.html", "do": "4\u00d7 leftover \u2192 itt99-sf" },
+                    { "name": "N15 Hampsterdance", "href": "sites/hampsterdance/index.html", "do": "4\u00d7 leftover \u2192 itt99-hampster" },
+                    { "name": "N16 Zombo", "href": "sites/zombo/index.html", "do": "4\u00d7 leftover \u2192 itt99-zombo" },
+                    { "name": "N17 Webvan", "href": "sites/webvan/index.html", "do": "4\u00d7 leftover \u2192 itt99-webvan" },
+                    { "name": "N18 E-Trade", "href": "sites/etrade/index.html", "do": "4\u00d7 leftover \u2192 itt99-etrade" }
           ]
 },
 
@@ -1131,6 +1573,31 @@
                               "href": "sites/mapquest/index.html",
                               "do": "locked star \u00b7 empty never writes"
                     }
+          ]
+},
+
+      {
+          "label": "4\u00d7 leftover \u00b7 2000",
+          "do": "REAL leftover on existing rooms \u00b7 incomplete never writes",
+          "sites": [
+                    { "name": "N1 MapQuest steps", "href": "sites/mapquest/directions.html", "do": "4\u00d7 leftover \u2192 itt00-mq-steps" },
+                    { "name": "N2 MapQuest print", "href": "sites/mapquest/print.html", "do": "4\u00d7 leftover \u2192 itt00-mq-print" },
+                    { "name": "N3 Amazon smile tabs", "href": "sites/amazon/index.html", "do": "4\u00d7 leftover \u2192 itt00-smile-tab" },
+                    { "name": "N4 Pets goodbye", "href": "sites/pets/shutdown.html", "do": "4\u00d7 leftover \u2192 itt00-pets-end" },
+                    { "name": "N5 Startup Failures", "href": "sites/startupfailures/index.html", "do": "4\u00d7 leftover \u2192 itt00-fail" },
+                    { "name": "N6 Expedia", "href": "sites/expedia/index.html", "do": "4\u00d7 leftover \u2192 itt00-expedia" },
+                    { "name": "N7 Travelocity", "href": "sites/travelocity/index.html", "do": "4\u00d7 leftover \u2192 itt00-travel" },
+                    { "name": "N8 Half.com", "href": "sites/half/index.html", "do": "4\u00d7 leftover \u2192 itt00-half" },
+                    { "name": "N9 Baidu", "href": "sites/baidu/index.html", "do": "4\u00d7 leftover \u2192 itt00-baidu" },
+                    { "name": "N10 Everything2", "href": "sites/everything2/index.html", "do": "4\u00d7 leftover \u2192 itt00-e2" },
+                    { "name": "N11 Gnutella", "href": "sites/gnutella/index.html", "do": "4\u00d7 leftover \u2192 itt00-gnutella" },
+                    { "name": "N12 LimeWire seed", "href": "sites/limewire/index.html", "do": "4\u00d7 leftover \u2192 itt00-lw" },
+                    { "name": "N13 Homestar", "href": "sites/homestar/index.html", "do": "4\u00d7 leftover \u2192 itt00-homestar" },
+                    { "name": "N14 Camworld", "href": "sites/camworld/index.html", "do": "4\u00d7 leftover \u2192 itt00-cam" },
+                    { "name": "N15 iVillage", "href": "sites/ivillage/index.html", "do": "4\u00d7 leftover \u2192 itt00-ivi" },
+                    { "name": "N16 Women.com", "href": "sites/womencom/index.html", "do": "4\u00d7 leftover \u2192 itt00-women" },
+                    { "name": "N17 Flash 5", "href": "sites/macromedia/index.html", "do": "4\u00d7 leftover \u2192 itt00-flash5" },
+                    { "name": "N18 AOL–TW + NASDAQ", "href": "pages/about.html", "do": "4\u00d7 leftover \u2192 itt00-peak" }
           ]
 },
 
@@ -2444,254 +2911,7 @@
     "year": "2006"
   };
 
-  ITT.flowMaps["2007"] =   {
-    "thesis": "Phone as real browser — iPhone Safari (no App Store), open Gmail, Street View, FB Platform, Beacon privacy, SXSW Twitter.",
-    "shell": "Windows XP · IE · mobile Safari product story",
-    "how": [
-      "One-thing: iPhone Safari year — Jun 29 ship + no App Store → itt07-iphone (Flash nag is residual)",
-      "iPhone browse: Safari URL / presets → itt07-iphone-history (separate from one-thing)",
-      "Gmail open Feb 14 — login · compose · drafts (not invite gate)",
-      "Maps → Street View five cities · turn heading → itt07-streetview",
-      "FB Platform add/remove → Beacon REAL multi-check → Twitter 140",
-      "YouTube upload (Google-owned all year) → Digg; Netflix DVD queue primary"
-    ],
-    "branches": [
-      {
-        "label": "Viral this year",
-        "do": "k-loop or culture toy · incomplete never writes",
-        "sites": [
-          {
-            "name": "rickroll",
-            "href": "sites/rickroll/index.html",
-            "do": "complete loop \u2192 itt07-rick"
-          }
-        ]
-      },
-
-      {
-          "label": "5\u00d7 F1\u2013F5 \u00b7 2007",
-          "do": "REAL leftover loops \u00b7 incomplete never writes",
-          "sites": [
-                    {
-                              "name": "F1 Street View pano",
-                              "href": "sites/maps/streetview.html",
-                              "do": "Last pano persist \u2192 itt07-streetview"
-                    },
-                    {
-                              "name": "F2 Gmail open send",
-                              "href": "sites/gmail/index.html",
-                              "do": "No invite wall \u00b7 To not empty \u2192 itt07-gmail"
-                    },
-                    {
-                              "name": "F3 Platform app",
-                              "href": "sites/facebook/platform.html",
-                              "do": "Add residual persist \u2192 itt07-fb-apps"
-                    },
-                    {
-                              "name": "F4 Twitter SXSW",
-                              "href": "sites/twitter/index.html",
-                              "do": "Compose persist \u2192 itt07-tw"
-                    },
-                    {
-                              "name": "F5 Kindle literacy",
-                              "href": "sites/kindle/index.html",
-                              "do": "Nov 2007 2-check \u2192 itt07-kindle-ack"
-                    },
-                    {
-                              "name": "Star iPhone Safari",
-                              "href": "sites/iphone/index.html",
-                              "do": "locked star \u00b7 empty never writes"
-                    }
-          ]
-},
-
-      {
-        "label": "Enter",
-        "do": "Mobile web year",
-        "sites": [
-          {
-            "name": "Starting Point",
-            "href": "pages/home.html",
-            "do": "7 trails · chips · bans · scale 121,892,559"
-          },
-          {
-            "name": "About 2007",
-            "href": "pages/about.html",
-            "do": "Thesis · Tumblr birthmark · hard bans"
-          },
-          {
-            "name": "Year flow map",
-            "href": "pages/map.html",
-            "do": "This UX tree"
-          },
-          {
-            "name": "Playables",
-            "href": "sites/playable/index.html",
-            "do": "3 toys · itt07-playable*"
-          }
-        ]
-      },
-      {
-        "label": "Phone browser",
-        "do": "Three products · one device · no App Store",
-        "sites": [
-          {
-            "name": "iPhone about",
-            "href": "sites/iphone/about.html",
-            "do": "Jan 9 · Jun 29 · $499/$599 · Cingular"
-          },
-          {
-            "name": "iPhone specs",
-            "href": "sites/iphone/specs.html",
-            "do": "REAL literacy ≥2 checks → itt07-iphone-specs-ack",
-            "steps": [
-              "Check Safari-only honesty",
-              "Check price/ship facts",
-              "Save literacy"
-            ]
-          },
-          {
-            "name": "iPhone Safari",
-            "href": "sites/iphone/index.html",
-            "do": "Browse · presets · history → itt07-iphone-history",
-            "steps": [
-              "Open a URL",
-              "Use Maps/YouTube preset",
-              "Confirm history list"
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Open Google day",
-        "do": "Mail for everyone · maps on street",
-        "sites": [
-          {
-            "name": "Gmail (open)",
-            "href": "sites/gmail/index.html",
-            "do": "Login · compose · drafts · legacy invites"
-          },
-          {
-            "name": "Google Maps",
-            "href": "sites/maps/index.html",
-            "do": "Search → itt07-maps-state · Street View CTA"
-          },
-          {
-            "name": "Street View",
-            "href": "sites/maps/streetview.html",
-            "do": "Five cities · turn → itt07-streetview"
-          },
-          {
-            "name": "Docs",
-            "href": "sites/docs/edit.html",
-            "do": "Save → itt07-docs"
-          },
-          {
-            "name": "Reader",
-            "href": "sites/reader/index.html",
-            "do": "Subscribe → itt07-reader-subs"
-          }
-        ]
-      },
-      {
-        "label": "Platforms & status",
-        "do": "Apps on Facebook · Beacon · tweets · aggregators",
-        "sites": [
-          {
-            "name": "Facebook Platform",
-            "href": "sites/facebook/platform.html",
-            "do": "Add/remove SuperPoke-class → itt07-fb-apps"
-          },
-          {
-            "name": "Beacon REAL",
-            "href": "sites/facebook/beacon.html",
-            "do": "≥2 literacy checks → itt07-beacon-ack",
-            "steps": [
-              "Read partner-site publish honesty",
-              "Check both boxes",
-              "Save (empty blocked)"
-            ]
-          },
-          {
-            "name": "Twitter",
-            "href": "sites/twitter/index.html",
-            "do": "SXSW compose → profile · itt07-tweets"
-          },
-          {
-            "name": "FriendFeed",
-            "href": "sites/friendfeed/index.html",
-            "do": "≥2 sources → itt07-friendfeed-sources"
-          },
-          {
-            "name": "OpenSocial",
-            "href": "sites/opensocial/index.html",
-            "do": "Multi-network APIs · not Friend Connect mass → itt07-opensocial-ack"
-          }
-        ]
-      },
-      {
-        "label": "Video → votes",
-        "do": "Google-owned YouTube · Digg peak",
-        "sites": [
-          {
-            "name": "YouTube",
-            "href": "sites/youtube/upload.html",
-            "do": "Upload title → itt07-yt-uploads"
-          },
-          {
-            "name": "Digg",
-            "href": "sites/digg/index.html",
-            "do": "digg it → itt07-digg-links"
-          },
-          {
-            "name": "Reddit",
-            "href": "sites/reddit/index.html",
-            "do": "Boost theater under Digg mindshare"
-          }
-        ]
-      },
-      {
-        "label": "DVD & edges",
-        "do": "Netflix mail primary · culture seeds",
-        "sites": [
-          {
-            "name": "Netflix DVD queue",
-            "href": "sites/netflix/index.html",
-            "do": "Add title → itt07-netflix-queue (empty blocked)"
-          },
-          {
-            "name": "Watch Now seed",
-            "href": "sites/netflix/watchnow.html",
-            "do": "Literacy → itt07-netflix-watchnow"
-          },
-          {
-            "name": "Tumblr",
-            "href": "sites/tumblr/index.html",
-            "do": "Publish tumble → itt07-tumblr-posts"
-          },
-          {
-            "name": "Kindle",
-            "href": "sites/amazon/kindle.html",
-            "do": "Nov 19 $399 literacy → itt07-kindle-ack"
-          }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
-        ]
-      }
-],
-    "year": "2007"
-  };
-
-  ITT.flowMaps["2008"] =   {
+    ITT.flowMaps["2008"] =   {
     "thesis": "Apps + browser reinvention — App Store + iPhone 3G, Chrome, Android G1, Hulu.",
     "shell": "Windows XP · IE 7 · Chrome product room (not sole shell)",
     "how": [
@@ -2881,196 +3101,7 @@
     "year": "2008"
   };
 
-  ITT.flowMaps["2009"] =   {
-    "thesis": "Social & apps daily — 3GS, Like, FarmVille, Bing, Windows 7.",
-    "shell": "XP · IE 8 · Win7 product (Oct)",
-    "how": [
-      "Facebook Like button culture · Beacon end story",
-      "FarmVille: plant → plot state (itt09-farm)",
-      "Bing: decision-engine search theater"
-    ],
-    "branches": [
-      {
-          "label": "5\u00d7 F1\u2013F5 \u00b7 2009",
-          "do": "REAL leftover loops \u00b7 incomplete never writes",
-          "sites": [
-                    {
-                              "name": "F1 Foursquare check-in",
-                              "href": "sites/foursquare/index.html",
-                              "do": "Venue + shout \u2192 itt09-foursquare"
-                    },
-                    {
-                              "name": "F2 FarmVille leftover",
-                              "href": "sites/farmville/index.html",
-                              "do": "Neighbor literacy leftover \u2192 itt09-farm-5x · plant/harvest writes itt09-farm"
-                    },
-                    {
-                              "name": "F3 Bing catalog",
-                              "href": "sites/bing/index.html",
-                              "do": "Query persist \u2192 itt09-bing"
-                    },
-                    {
-                              "name": "F4 SO accept",
-                              "href": "sites/stackoverflow/index.html",
-                              "do": "Accepted-answer trail \u2192 itt09-so-accepted"
-                    },
-                    {
-                              "name": "F5 Win7 / IE8",
-                              "href": "sites/windows7/index.html",
-                              "do": "Two product hops \u2192 itt09-w7"
-                    },
-                    {
-                              "name": "Star Like",
-                              "href": "sites/facebook/feed.html",
-                              "do": "locked star \u00b7 empty never writes"
-                    }
-          ]
-},
-
-      {
-        "label": "Phase 2 · Answers trail",
-        "do": "Stack Overflow ← GitHub (2008)",
-        "sites": [
-          {
-            "name": "Stack Overflow",
-            "href": "sites/stackoverflow/index.html",
-            "do": "Q&A residual"
-          },
-          {
-            "name": "Question densify",
-            "href": "sites/stackoverflow/question.html",
-            "do": "Vote · accept residual"
-          }
-        ]
-      },
-
-      {
-        "label": "Enter",
-        "do": "Daily social lobby",
-        "sites": [
-          {
-            "name": "Starting Point",
-            "href": "pages/home.html",
-            "do": "3GS · Like · FarmVille chips"
-          },
-          {
-            "name": "About 2009",
-            "href": "pages/about.html",
-            "do": "Scale · IE8 · Win7"
-          },
-          {
-            "name": "Year flow map",
-            "href": "pages/map.html",
-            "do": "This UX tree"
-          }
-        ]
-      },
-      {
-        "label": "Phone + store scale",
-        "do": "Faster iPhone · huge catalog",
-        "sites": [
-          {
-            "name": "iPhone 3GS",
-            "href": "sites/iphone/index.html",
-            "do": "Video · copy/paste · prices"
-          },
-          {
-            "name": "App Store",
-            "href": "sites/appstore/index.html",
-            "do": "50k apps / 1B downloads honesty"
-          }
-        ]
-      },
-      {
-        "label": "Like economy",
-        "do": "One-click social proof",
-        "sites": [
-          {
-            "name": "Facebook",
-            "href": "sites/facebook/index.html",
-            "do": "Like · Beacon epitaph"
-          },
-          {
-            "name": "FarmVille",
-            "href": "sites/farmville/index.html",
-            "do": "Plant · harvest theater on FB"
-          },
-          {
-            "name": "Twitter",
-            "href": "sites/twitter/index.html",
-            "do": "Mainstream status updates"
-          }
-        ]
-      },
-      {
-        "label": "Search war",
-        "do": "Bing launches",
-        "sites": [
-          {
-            "name": "Bing",
-            "href": "sites/bing/index.html",
-            "do": "Decision engine search"
-          },
-          {
-            "name": "Google",
-            "href": "sites/google/index.html",
-            "do": "Default still Google for most"
-          }
-        ]
-      },
-      {
-        "label": "Desktop OS",
-        "do": "Windows 7 ships late year",
-        "sites": [
-          {
-            "name": "Windows 7",
-            "href": "sites/windows7/index.html",
-            "do": "Oct GA · not January default"
-          },
-          {
-            "name": "IE 8",
-            "href": "sites/ie8/index.html",
-            "do": "Mar 19 browser product"
-          },
-          {
-            "name": "Chrome",
-            "href": "sites/chrome/index.html",
-            "do": "Mac/Linux late continuity"
-          }
-        ]
-      },
-      {
-        "label": "Check-in seed",
-        "do": "Foursquare SXSW",
-        "sites": [
-          {
-            "name": "Foursquare",
-            "href": "sites/foursquare/index.html",
-            "do": "Check-in culture seed"
-          },
-          {
-            "name": "Kickstarter",
-            "href": "sites/kickstarter/index.html",
-            "do": "Crowdfunding seed"
-          }
-        ]
-      },
-      {
-        "label": "Famous games",
-        "do": "Two era-famous cabinets · incomplete never writes",
-        "sites": [
-          {
-            "name": "Famous games",
-            "href": "sites/playable/famous.html",
-            "do": "Play two era-famous cabinets"
-          }
-        ]
-      }
-],
-    "year": "2009"
-  };
-
-  ITT.flowMaps["2010"] = {
+    ITT.flowMaps["2010"] = {
     "thesis": "Tablet + filter + Like on the open web — still mostly a laptop.",
     "shell": "Windows 7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph",
     "how": [
@@ -3091,6 +3122,17 @@
           { "name": "iPad order", "href": "sites/ipad/order.html", "do": "Capacity + radio → itt10-ipad" },
           { "name": "iPhone 4", "href": "sites/iphone/index.html", "do": "FaceTime Wi-Fi + bumper → itt10-iphone4" },
           { "name": "Open Graph", "href": "sites/facebook/index.html", "do": "Like ×2 → itt10-fb-og" }
+        ]
+      },
+      {
+        "label": "New leftover · 2010",
+        "do": "REAL leftover · incomplete never writes · not the chip",
+        "sites": [
+          { "name": "Google Instant", "href": "sites/instant/index.html", "do": "Type 2+ chars → itt10-instant" },
+          { "name": "FaceTime Wi-Fi", "href": "sites/facetime/index.html", "do": "Wi-Fi tick + call theater → itt10-facetime" },
+          { "name": "Kickstarter", "href": "sites/kickstarter/index.html", "do": "Back $1 → itt10-kickstarter" },
+          { "name": "IG second share", "href": "sites/instagram/index.html", "do": "Share twice → itt10-ig-2" },
+          { "name": "iPad order radios", "href": "sites/ipad/order.html", "do": "Capacity + radio → itt10-ipad-order" }
         ]
       },
       {
@@ -3276,120 +3318,46 @@
 
 
 
-  ITT.flowMaps["2011"] = {
-  "thesis": "2011 lean door · leftover F-loops + locked star",
+    ITT.flowMaps["2012"] = {
+  "thesis": "The square photo leaves the iPhone. Facebook goes public. Wikipedia goes dark. Chrome passes IE.",
   "shell": "Windows 7 · IE 9",
   "how": [
-    "Star Google+ Circles",
-    "Leftover F1–F5",
-    "Atlas lists on-disk rooms"
+    "★ Instagram Android: named filter → share → itt12-ig-android",
+    "F1 Pinterest ≥2 pins → F2 IPO $38 + Nasdaq → F3 1B → F4 Maps flop → F5 SOPA → ★",
+    "3× Medium draft · Path moment · Flipboard ≥2 flips",
+    "18 leftover on those rooms + SoundCloud, Tinder, UberX, Win8, Chrome, AMA"
   ],
   "branches": [
     {
-      "label": "5× F1–F5 · 2011",
-      "do": "REAL leftover loops",
-      "sites": [
-        {
-          "name": "F1 Twitter 140",
-          "href": "sites/twitter/index.html",
-          "do": "Still 140 → itt11-tweets"
-        },
-        {
-          "name": "F2 Groupon",
-          "href": "sites/groupon/index.html",
-          "do": "One deal a day → itt11-groupon"
-        },
-        {
-          "name": "F3 Tumblr",
-          "href": "sites/tumblr/index.html",
-          "do": "Dashboard leftover → itt11-tumblr"
-        },
-        {
-          "name": "F4 About wiki",
-          "href": "pages/about.html",
-          "do": "Dual-cite scale → itt11-wiki"
-        },
-        {
-          "name": "F5 Timeline",
-          "href": "sites/facebook/timeline.html",
-          "do": "2011 leftover → itt11-timeline"
-        },
-        {
-          "name": "★ Google+ Circles",
-          "href": "sites/googleplus/index.html",
-          "do": "locked star"
-        }
-      ]
-    },
-    {
       "label": "★ Star",
-      "do": "Locked lean star",
-      "sites": [
-        {
-          "name": "Google+ Circles",
-          "href": "sites/googleplus/index.html",
-          "do": "incomplete never writes"
-        }
-      ]
-    }
-  ],
-  "year": "2011"
-};
-
-  ITT.flowMaps["2012"] = {
-  "thesis": "2012 lean door · leftover F-loops + locked star",
-  "shell": "Windows 7 · IE 9",
-  "how": [
-    "Star Instagram Android",
-    "Leftover F1–F5",
-    "Atlas lists on-disk rooms"
-  ],
-  "branches": [
-    {
-      "label": "5× F1–F5 · 2012",
-      "do": "REAL leftover loops",
-      "sites": [
-        {
-          "name": "F1 Twitter 140",
-          "href": "sites/twitter/index.html",
-          "do": "Still 140 → itt12-tweets"
-        },
-        {
-          "name": "F2 Facebook IPO",
-          "href": "sites/facebook/ipo.html",
-          "do": "$38 · Nasdaq delay → itt12-fb-ipo"
-        },
-        {
-          "name": "F3 Facebook 1B",
-          "href": "sites/facebook/index.html",
-          "do": "1B MAU 4 Oct → itt12-facebook"
-        },
-        {
-          "name": "F4 SOPA black",
-          "href": "sites/wikipedia/index.html",
-          "do": "18 Jan 24h → itt12-wiki"
-        },
-        {
-          "name": "F5 Pinterest",
-          "href": "sites/pinterest/index.html",
-          "do": "Public board leftover → itt12-pin"
-        },
-        {
-          "name": "★ Instagram Android",
-          "href": "sites/instagram/android.html",
-          "do": "locked star"
-        }
-      ]
-    },
-    {
-      "label": "★ Star",
-      "do": "Locked lean star",
+      "do": "Named 2012 filter then Share. No filter never writes.",
       "sites": [
         {
           "name": "Instagram Android",
           "href": "sites/instagram/android.html",
-          "do": "incomplete never writes"
+          "do": "filter → share → itt12-ig-android"
         }
+      ]
+    },
+    {
+      "label": "5× F1–F5 · 2012",
+      "do": "REAL leftover loops. Next toward the star.",
+      "sites": [
+        { "name": "F1 Pinterest", "href": "sites/pinterest/index.html", "do": "≥2 pins → itt12-pin" },
+        { "name": "F2 Facebook IPO", "href": "sites/facebook/ipo.html", "do": "$38 · Nasdaq → itt12-fb-ipo" },
+        { "name": "F3 Facebook 1B", "href": "sites/facebook/index.html", "do": "4 Oct 1B → itt12-facebook" },
+        { "name": "F4 Maps flop", "href": "sites/iphone/maps.html", "do": "no transit · bridges → itt12-maps" },
+        { "name": "F5 SOPA", "href": "sites/wikipedia/sopa.html", "do": "18 Jan 24h → itt12-sopa" },
+        { "name": "★ Instagram Android", "href": "sites/instagram/android.html", "do": "named filter → share" }
+      ]
+    },
+    {
+      "label": "3× popular",
+      "do": "Medium · Path · Flipboard. Empty never writes.",
+      "sites": [
+        { "name": "Medium", "href": "sites/medium/index.html", "do": "draft → itt12-pop-medium" },
+        { "name": "Path", "href": "sites/path/index.html", "do": "moment → itt12-pop-path" },
+        { "name": "Flipboard", "href": "sites/flipboard/index.html", "do": "≥2 flips → itt12-pop-flipboard" }
       ]
     }
   ],
@@ -3467,6 +3435,73 @@
         sites: [
           { name: "Manage replay", href: "sites/gdpr/manage.html", do: "replay · no second official write" },
           { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Consent Dash" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2019"] = {
+    thesis: "Who’s watching is the door. A 7-day trial is the trap. Continue is the save.",
+    shell: "Win10 mass · Chrome habit · Edge Chromium preview residual",
+    year: "2019",
+    how: [
+      "Disney+: trial never writes · Adult + Kids + two titles → Continue → itt19-disneyplus",
+      "TikTok leftover: caption + COPPA honesty → itt19-tiktok",
+      "Next waits for the write. Crumb ← last dest is visible on land.",
+      "Reels / Zoom / Chromium Edge-as-default / Travis Scott are not this year."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays Disney+ Who’s watching. Trial never writes.",
+        sites: [
+          { name: "1 Disney+ Who’s watching", href: "sites/disneyplus/home.html", do: "Continue → itt19-disneyplus → TikTok" },
+          { name: "2 TikTok For You leftover", href: "sites/tiktok/index.html", do: "caption + COPPA → itt19-tiktok → Arcade" },
+          { name: "3 Apple Arcade", href: "sites/arcade/index.html", do: "$4.99 pick → itt19-arcade → TV+" },
+          { name: "4 Apple TV+", href: "sites/appletv/index.html", do: "original → itt19-appletv → Stadia" },
+          { name: "5 Stadia", href: "sites/stadia/index.html", do: "Founder’s → itt19-stadia → iPhone 11" },
+          { name: "6 iPhone 11", href: "sites/iphone/iphone11.html", do: "color → itt19-iphone11 → AirPods Pro" },
+          { name: "7 AirPods Pro", href: "sites/airpodspro/index.html", do: "$249 ANC → itt19-airpods-pro → Chrome" },
+          { name: "8 Chrome habit", href: "sites/chrome/index.html", do: "preview Edge · not default → Chrome leftover" },
+          { name: "9 Windows 10 residual", href: "sites/windows10/index.html", do: "free upgrade ended 2016 → Continue Row" },
+          { name: "10 Continue Row", href: "sites/playable/game.html", do: "trial trap · Continue save → itt19-game-continuerow → Disney+" }
+        ]
+      },
+      {
+        label: "Side leftover · rejoin official",
+        do: "Never a second star",
+        sites: [
+          { name: "Join / trial trap", href: "sites/disneyplus/index.html", do: "trial never writes" },
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Continue Row" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2020"] = {
+    year: "2020",
+    thesis: "Join is not the save. Mute, chat, leave. 300 million daily meeting participants, not users.",
+    shell: "Windows 10 mass · Chrome habit · Chromium Edge 79 ships 15 Jan",
+    how: [
+      "Hub → 2020 → Starting Point",
+      "Join is the trap · mute + chat + leave writes itt20-zoom",
+      "Reels is 15 seconds · GPT-3 is a waitlist · Flash dies 31 Dec"
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays Zoom leave. Join never writes.",
+        sites: [
+          { name: "1 Zoom meeting", href: "sites/zoom/meeting.html", do: "mute + chat + leave → itt20-zoom" },
+          { name: "2 Reels 15s", href: "sites/reels/index.html", do: "5 Aug · 15 seconds → itt20-reels" },
+          { name: "3 GPT-3 waitlist", href: "sites/openai/index.html", do: "11 Jun · not ChatGPT → itt20-gpt3" },
+          { name: "4 Flash EOL", href: "sites/flash/index.html", do: "31 Dec → itt20-flash" },
+          { name: "5 TikTok EO", href: "sites/tiktok/index.html", do: "app still works → itt20-tiktok-eo" },
+          { name: "6 WTI −$37.63", href: "sites/markets/wti.html", do: "20 Apr literacy" },
+          { name: "7 Chromium Edge", href: "sites/edge/index.html", do: "15 Jan → itt20-edge" },
+          { name: "8 CCPA", href: "sites/ccpa/index.html", do: "Do Not Sell → itt20-ccpa" },
+          { name: "9 Chrome habit", href: "sites/chrome/index.html", do: "still the tab" },
+          { name: "10 Sus Vote", href: "sites/playable/game.html", do: "itt20-game-among" }
         ]
       }
     ]

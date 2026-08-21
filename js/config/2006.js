@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2006/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2006/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2006/sites/playable/extra-c.html",
       "sites/twitterbird/index.html": "http://museum.local/years/2006/sites/twitterbird/index.html",
       "sites/wikihow06/index.html": "http://museum.local/years/2006/sites/wikihow06/index.html",
       "sites/diggv4/index.html": "http://museum.local/years/2006/sites/diggv4/index.html",

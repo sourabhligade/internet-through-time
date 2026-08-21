@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const { twoStepClick } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -43,6 +44,19 @@ test.describe('2010 leftover trail', () => {
     await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
     await page.locator('[data-ipad-order]').click();
     await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/16GB|real/i);
+  });
+
+  test('Farm plant+harvest writes itt10-farm and next Foursquare', async ({ page }) => {
+    await page.goto('/years/2010/sites/farmville/index.html');
+    await clearKeys(page, ['itt10-farm']);
+    await page.reload();
+    await page.locator('[data-farm-check]').check();
+    await twoStepClick(page, '[data-farm-plant="strawberry"]');
+    await page.waitForTimeout(3500);
+    await page.locator('[data-farm-harvest]').click();
+    await expect.poll(() => getKey(page, 'itt10-farm')).toBeTruthy();
+    await expect(page.locator(':not([data-4x-panel]) > [data-next-flow] a[href*="foursquare"]')).toBeVisible();
+    await expect(page.locator('[data-4x-panel] [data-next-flow]')).toBeHidden();
   });
 
   test('OG two Likes write itt10-fb-og', async ({ page }) => {

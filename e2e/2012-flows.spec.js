@@ -1,177 +1,158 @@
 // @ts-check
-/**
- * 2012 flows A–T — incomplete blocked then REAL write
- */
 const { test, expect } = require('@playwright/test');
-const { enterYear, goInFrame, contentFrame } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
-    ks.forEach((k) => {
-      try {
-        localStorage.removeItem(k);
-      } catch (e) { /* */ }
-    });
+    ks.forEach((k) => { try { localStorage.removeItem(k); } catch (e) { /* */ } });
   }, keys);
 }
+async function getKey(page, key) {
+  return page.evaluate((k) => localStorage.getItem(k), key);
+}
 
-test.describe('2012 flows A–T', () => {
+test.describe('2012 flows', () => {
   test('A hub card → Win7 / IE9 → Starting Point', async ({ page }) => {
     await page.goto('/');
-    await page.locator('a.year-card.available[data-year="2012"]').click();
-    await expect(page).toHaveURL(/\/years\/2012/);
-    await enterYear(page, '2012');
-    await expect(contentFrame(page).locator('body')).toContainText(/Instagram Android|Starting Point|visual/i);
+    const card = page.locator('a.year-card.available.y2012[href*="years/2012"]');
+    await expect(card).toBeVisible();
+    await card.click();
+    const skip = page.locator('#skip-connect');
+    if (await skip.isVisible().catch(() => false)) await skip.click();
+    await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2012');
+    await expect(page.locator('#content')).toBeVisible();
   });
 
   test('B thesis literacy writes itt12-thesis-ack', async ({ page }) => {
     await page.goto('/years/2012/pages/about.html');
     await clearKeys(page, ['itt12-thesis-ack']);
     await page.reload();
-    await page.locator('[data-itt-real-save]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-thesis-ack'))).toBeFalsy();
-    await page.locator('[data-thesis-req]').nth(0).check({ force: true });
-    await page.locator('[data-thesis-req]').nth(1).check({ force: true });
-    await page.locator('[data-itt-real-save]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-thesis-ack'))).toBeTruthy();
+    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
+    expect(await getKey(page, 'itt12-thesis-ack')).toBeFalsy();
+    const boxes = page.locator('[data-thesis-req]');
+    await boxes.nth(0).check();
+    await boxes.nth(1).check();
+    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
+    await expect.poll(() => getKey(page, 'itt12-thesis-ack')).toMatch(/real|true|multiStep/i);
   });
 
-  test('I Maps flop writes itt12-maps', async ({ page }) => {
-    await page.goto('/years/2012/sites/iphone/maps.html');
-    await clearKeys(page, ['itt12-maps']);
+  test('C Pinterest two pins writes itt12-pin', async ({ page }) => {
+    await page.goto('/years/2012/sites/pinterest/index.html');
+    await clearKeys(page, ['itt12-pin']);
     await page.reload();
-    await page.locator('[data-maps-flop]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-maps'))).toBeFalsy();
-    await page.locator('[data-maps-req]').check({ force: true });
-    await page.locator('[data-maps-flop]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-maps'))).toMatch(/flop|real/i);
+    await page.locator('[data-pin-save]').click();
+    expect(await getKey(page, 'itt12-pin')).toBeFalsy();
+    await page.locator('[data-pin-tile="kitchen"]').click();
+    await page.locator('[data-pin-tile="wedding"]').click();
+    await page.locator('[data-pin-save]').click();
+    await expect.poll(() => getKey(page, 'itt12-pin')).toMatch(/pin|real/i);
   });
 
-  test('J iPad mini writes itt12-ipadmini', async ({ page }) => {
-    await page.goto('/years/2012/sites/ipad/index.html');
-    await clearKeys(page, ['itt12-ipadmini']);
+  test('D IPO two checks writes itt12-fb-ipo', async ({ page }) => {
+    await page.goto('/years/2012/sites/facebook/ipo.html');
+    await clearKeys(page, ['itt12-fb-ipo']);
     await page.reload();
-    await page.locator('[data-mini-order]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-ipadmini'))).toBeFalsy();
-    await page.locator('[name="mini-sku"]').first().check({ force: true });
-    await page.locator('[data-mini-order]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-ipadmini'))).toMatch(/329|real/i);
+    await page.locator('[data-ipo-ack]').click();
+    expect(await getKey(page, 'itt12-fb-ipo')).toBeFalsy();
+    await page.locator('[data-ipo-req]').nth(0).check();
+    await page.locator('[data-ipo-req]').nth(1).check();
+    await page.locator('[data-ipo-ack]').click();
+    await expect.poll(() => getKey(page, 'itt12-fb-ipo')).toMatch(/38|nasdaq|real/i);
   });
 
-  test('K Windows 8 two tiles write itt12-win8', async ({ page }) => {
-    await page.goto('/years/2012/sites/windows8/index.html');
-    await clearKeys(page, ['itt12-win8']);
+  test('E SOPA skip blocked then writes itt12-sopa', async ({ page }) => {
+    await page.goto('/years/2012/sites/wikipedia/sopa.html');
+    await clearKeys(page, ['itt12-sopa']);
     await page.reload();
-    await page.locator('[data-win8-tile]').nth(0).click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-win8'))).toBeFalsy();
-    await page.locator('[data-win8-tile]').nth(1).click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-win8'))).toMatch(/tiles|real/i);
+    await page.locator('[data-sopa-save]').click();
+    expect(await getKey(page, 'itt12-sopa')).toBeFalsy();
+    await page.locator('[data-sopa-req]').nth(0).check();
+    await page.locator('[data-sopa-req]').nth(1).check();
+    await page.locator('[data-sopa-save]').click();
+    await expect.poll(() => getKey(page, 'itt12-sopa')).toMatch(/blackout|sopa|real/i);
   });
 
-  test('L Chrome 3-check writes itt12-chrome', async ({ page }) => {
-    await page.goto('/years/2012/sites/chrome/index.html');
-    await clearKeys(page, ['itt12-chrome']);
+  test('F Medium empty blocked then writes itt12-pop-medium', async ({ page }) => {
+    await page.goto('/years/2012/sites/medium/index.html');
+    await clearKeys(page, ['itt12-pop-medium']);
     await page.reload();
-    await page.locator('[data-chrome-download]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-chrome'))).toBeFalsy();
-    const n = await page.locator('[data-chrome-req]').count();
-    for (let i = 0; i < n; i++) await page.locator('[data-chrome-req]').nth(i).check({ force: true });
-    await page.locator('[data-chrome-download]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-chrome'))).toBeTruthy();
+    await page.locator('[data-pop-go]').click();
+    expect(await getKey(page, 'itt12-pop-medium')).toBeFalsy();
+    await page.locator('[data-pop-field]').fill('museum draft');
+    await page.locator('[data-pop-req]').check();
+    await page.locator('[data-pop-go]').click();
+    await expect.poll(() => getKey(page, 'itt12-pop-medium')).toBeTruthy();
   });
 
-  test('M UberX SF writes itt12-uberx · NY refused', async ({ page }) => {
-    await page.goto('/years/2012/sites/uber/index.html');
-    await clearKeys(page, ['itt12-uberx']);
+  test('G Flipboard 0–1 blocked then writes itt12-pop-flipboard', async ({ page }) => {
+    await page.goto('/years/2012/sites/flipboard/index.html');
+    await clearKeys(page, ['itt12-pop-flipboard']);
     await page.reload();
-    await page.locator('[data-uberx-city]').fill('New York');
-    await page.locator('[name="uber-sku"][value="uberx"]').check({ force: true });
-    await page.locator('[data-uberx-go]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-uberx'))).toBeFalsy();
-    await page.locator('[data-uberx-city]').fill('San Francisco');
-    await page.locator('[data-uberx-go]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-uberx'))).toMatch(/uberx|3.25|real/i);
+    await page.locator('[data-flip-save]').click();
+    expect(await getKey(page, 'itt12-pop-flipboard')).toBeFalsy();
+    await page.locator('[data-flip-sec="news"]').click();
+    await page.locator('[data-flip-save]').click();
+    expect(await getKey(page, 'itt12-pop-flipboard')).toBeFalsy();
+    await page.locator('[data-flip-sec="tech"]').click();
+    await page.locator('[data-flip-save]').click();
+    await expect.poll(() => getKey(page, 'itt12-pop-flipboard')).toMatch(/flip|real/i);
   });
 
-  test('Q SOPA writes itt12-sopa', async ({ page }) => {
-    await page.goto('/years/2012/sites/wikipedia/index.html');
-    await clearKeys(page, ['itt12-sopa', 'itt12-sopa-ack']);
+  test('H $1B merge trap never writes; ticks write itt12-ig-fb', async ({ page }) => {
+    await page.goto('/years/2012/sites/instagram/acquired.html');
+    await clearKeys(page, ['itt12-ig-fb']);
     await page.reload();
-    await page.locator('[data-itt-real-save]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-sopa'))).toBeFalsy();
-    await page.locator('[data-sopa-check]').check({ force: true });
-    await page.locator('[data-sopa-fact]').check({ force: true });
-    await page.locator('[data-itt-real-save]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-sopa'))).toBeTruthy();
+    await page.locator('[data-ig-acq-merge]').click();
+    expect(await getKey(page, 'itt12-ig-fb')).toBeFalsy();
+    await page.locator('[data-ig-acq-ack]').click();
+    expect(await getKey(page, 'itt12-ig-fb')).toBeFalsy();
+    await page.locator('[data-ig-acq-req]').nth(0).check();
+    await page.locator('[data-ig-acq-req]').nth(1).check();
+    await page.locator('[data-ig-acq-ack]').click();
+    await expect.poll(() => getKey(page, 'itt12-ig-fb')).toBeTruthy();
   });
 
-  test('S Tinder two swipes write itt12-tinder', async ({ page }) => {
-    await page.goto('/years/2012/sites/tinder/index.html');
-    await clearKeys(page, ['itt12-tinder']);
-    await page.reload();
-    await page.locator('[data-tinder-left]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-tinder'))).toBeFalsy();
-    await page.locator('[data-tinder-right]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-tinder'))).toMatch(/swipe|real/i);
-  });
-
-  test('R Drive leftover writes itt12-drive', async ({ page }) => {
+  test('I Drive Dropbox trap never writes; Drive pick writes itt12-drive', async ({ page }) => {
     await page.goto('/years/2012/sites/googledrive/index.html');
     await clearKeys(page, ['itt12-drive']);
     await page.reload();
+    await page.locator('[data-drive-drop]').click();
+    expect(await getKey(page, 'itt12-drive')).toBeFalsy();
+    await page.locator('[data-drive-req]').nth(0).check();
+    await page.locator('[data-drive-req]').nth(1).check();
     await page.locator('[data-drive-ack]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-drive'))).toBeFalsy();
-    await page.locator('[data-drive-req]').check({ force: true });
+    expect(await getKey(page, 'itt12-drive')).toBeFalsy();
+    await page.locator('[data-drive-pick="dropbox"]').click();
     await page.locator('[data-drive-ack]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-drive'))).toBeTruthy();
+    expect(await getKey(page, 'itt12-drive')).toBeFalsy();
+    await page.locator('[data-drive-pick="drive"]').click();
+    await page.locator('[data-drive-ack]').click();
+    await expect.poll(() => getKey(page, 'itt12-drive')).toBeTruthy();
   });
 
-  test('T SoundCloud play then comment writes itt12-soundcloud', async ({ page }) => {
-    await page.goto('/years/2012/sites/soundcloud/index.html');
-    await clearKeys(page, ['itt12-soundcloud']);
+  test('J Vine wait 6s trap / empty never writes; wait writes itt12-pop-vinewait', async ({ page }) => {
+    await page.goto('/years/2012/sites/vinewait/index.html');
+    await clearKeys(page, ['itt12-pop-vinewait']);
     await page.reload();
-    await page.locator('[data-sc-comment-btn]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt12-soundcloud'))).toBeFalsy();
-    await page.locator('[data-sc-play]').click();
-    await page.locator('[data-sc-text]').fill('horse dance residual');
-    await page.locator('[data-sc-comment-btn]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-soundcloud'))).toMatch(/horse|comments|real/i);
+    await page.locator('[data-vn12-6]').click();
+    expect(await getKey(page, 'itt12-pop-vinewait')).toBeFalsy();
+    await page.locator('[data-pop-go]').click();
+    expect(await getKey(page, 'itt12-pop-vinewait')).toBeFalsy();
+    await page.locator('[data-pop-pick]').first().click();
+    await page.locator('[data-pop-req]').check();
+    await page.fill('[data-pop-field]', 'soon');
+    await page.locator('[data-pop-go]').click();
+    await expect.poll(() => getKey(page, 'itt12-pop-vinewait')).toBeTruthy();
   });
 
-  test('N Snapchat send writes year key when checks on', async ({ page }) => {
-    await page.goto('/years/2012/sites/snapchat/index.html');
-    await clearKeys(page, ['itt12-snap', 'itt12-snapchat', 'itt12-snap-count']);
+  test('K Win8 Start trap / one tile never writes; two tiles write itt12-win8-tiles', async ({ page }) => {
+    await page.goto('/years/2012/sites/windows8/index.html');
+    await clearKeys(page, ['itt12-win8-tiles']);
     await page.reload();
-    await page.waitForSelector('[data-snap-send]', { timeout: 20000 });
-    await page.locator('[data-snap-check]').check({ force: true });
-    await page.locator('[data-snap-not-stories]').check({ force: true });
-    await page.locator('[data-snap-send]').click();
-    await expect.poll(async () =>
-      page.evaluate(
-        () =>
-          localStorage.getItem('itt12-snap') ||
-          localStorage.getItem('itt12-snap-count') ||
-          localStorage.getItem('itt12-snapchat')
-      )
-    ).toBeTruthy();
-  });
-
-  test('home guided targets live', async ({ page }) => {
-    await page.goto('/years/2012/pages/home.html');
-    await expect(page.locator('body')).toContainText(/Connection trails|Guided multi-step/i);
-    const hrefs = ['instagram/android', 'instagram/acquired', 'facebook/ipo', 'iphone/index', 'pinterest'];
-    for (const h of hrefs) {
-      await expect(page.locator(`a[href*="${h}"]`).first()).toBeVisible();
-    }
-  });
-
-  test('no itt11 writes from 2012 pages', async ({ page }) => {
-    await page.goto('/years/2012/sites/instagram/android.html');
-    await page.locator('[data-req]').nth(0).check({ force: true });
-    await page.locator('[data-req]').nth(1).check({ force: true });
-    await page.locator('[data-ig-filter="Lo-Fi"]').click();
-    await page.locator('[data-ig-caption]').fill('iso');
-    await page.locator('[data-ig-share]').click();
-    expect(await page.evaluate(() => Object.keys(localStorage).some((k) => k.indexOf('itt11') === 0))).toBeFalsy();
+    await page.locator('[data-win8-start]').click();
+    expect(await getKey(page, 'itt12-win8-tiles')).toBeFalsy();
+    await page.locator('[data-win8-tile="mail"]').click();
+    expect(await getKey(page, 'itt12-win8-tiles')).toBeFalsy();
+    await page.locator('[data-win8-tile="photos"]').click();
+    await expect.poll(() => getKey(page, 'itt12-win8-tiles')).toBeTruthy();
   });
 });

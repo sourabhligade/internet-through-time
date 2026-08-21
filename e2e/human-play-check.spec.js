@@ -41,6 +41,8 @@ test.describe("human play — 2018 through year shell", () => {
   });
 
   test("shell: Emote Three tap without New Game", async ({ page }) => {
+    const dest = path.join(__dirname, "..", "years", "2018", "sites", "playable", "fortdance.html");
+    test.skip(!fs.existsSync(dest), "2018 fortdance.html not on disk (lean cabinet)");
     await enterYear(page, "2018");
     await page.evaluate(() => localStorage.removeItem("itt18-game-fortdance"));
     await goInFrame(page, "sites/playable/fortdance.html");

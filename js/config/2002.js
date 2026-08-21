@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2002/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2002/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2002/sites/playable/extra-c.html",
       "sites/fark/index.html": "http://museum.local/years/2002/sites/fark/index.html",
       "sites/homestar/index.html": "http://museum.local/years/2002/sites/homestar/index.html",
       "sites/blogspot/index.html": "http://museum.local/years/2002/sites/blogspot/index.html",

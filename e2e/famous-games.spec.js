@@ -3,7 +3,10 @@
 const { test, expect } = require("@playwright/test");
 
 const YEARS = [];
-for (let y = 1994; y <= 2009; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2019; y++) {
+  if (y === 2007 || y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
+  YEARS.push(String(y));
+}
 
 const ENGINES = {
   1994: ["pong", "mines"],
@@ -32,8 +35,6 @@ const ENGINES = {
   2017: ["snake", "tetris"],
   2018: ["memory", "pong"],
   2019: ["snake", "breakout"],
-  2020: ["breakout", "memory"],
-  2021: ["memory", "snake"],
 };
 
 function prefix(year) {

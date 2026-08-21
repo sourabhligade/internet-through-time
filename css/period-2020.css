@@ -1,0 +1,87 @@
+@import url("period-2019.css");
+
+.year-2020.os-win10 {
+  --itt-desktop-bg: #0078d7;
+}
+
+.z20-well {
+  max-width: 520px;
+  margin: 16px auto;
+  font-family: Segoe UI, Arial, sans-serif;
+  font-size: 13px;
+  background: #1a1a1a;
+  color: #eee;
+  padding: 16px;
+  border: 1px solid #333;
+}
+.z20-well a { color: #8ec8ff; }
+.z20-mute[aria-pressed="true"] {
+  background: #c0392b;
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  font-weight: bold;
+}
+.z20-mute {
+  background: #2c3e50;
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+}
+.z20-leave {
+  background: #922b21;
+  color: #fff;
+  border: 0;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+.z20-join {
+  background: #2e86c1;
+  color: #fff;
+  border: 0;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+.reels20-bar {
+  height: 6px;
+  background: #333;
+  margin: 10px 0;
+}
+.reels20-bar span {
+  display: block;
+  height: 100%;
+  width: 15%;
+  background: #f5a;
+}
+.itt-pixel-failed {
+  font-size: 11px;
+  background: #fff8dc;
+  color: #333;
+  border: 1px dashed #888;
+  padding: 6px 8px;
+}
+.trap-btn { background: #666; color: #fff; border: 0; padding: 6px 12px; }
+.save-btn { background: #111; color: #fff; border: 1px solid #2e86c1; padding: 8px 14px; font-weight: bold; }
+.pick20 {
+  background: #2c3e50;
+  color: #fff;
+  border: 1px solid #566;
+  padding: 6px 10px;
+  margin: 3px 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.pick20.is-on {
+  outline: 2px solid #2e86c1;
+  background: #1a5276;
+}
+.bean20 {
+  width: 36px;
+  height: 48px;
+  border-radius: 18px 18px 12px 12px;
+  border: 2px solid #222;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+}
+.bean20.is-on { outline: 3px solid #f1c40f; }

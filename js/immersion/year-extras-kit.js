@@ -234,9 +234,47 @@
     }
   }
 
+  function inside4x(el) {
+    try {
+      return !!(el.closest && el.closest("[data-4x-panel]"));
+    } catch (e) {
+      return false;
+    }
+  }
+
   function revealNextFlow(doc) {
     doc = doc || document;
-    showEls(doc, "[data-next-flow]");
+    var els = doc.querySelectorAll("[data-next-flow]");
+    var i;
+    var j;
+    var keys;
+    var hit;
+    for (i = 0; i < els.length; i++) {
+      if (inside4x(els[i])) continue;
+      keys = String(els[i].getAttribute("data-next-when-key") || "")
+        .split(/[\s,]+/)
+        .filter(Boolean);
+      if (keys.length) {
+        hit = false;
+        for (j = 0; j < keys.length; j++) {
+          try {
+            if (localStorage.getItem(keys[j])) {
+              hit = true;
+              break;
+            }
+          } catch (eK) {
+            /* */
+          }
+        }
+        if (!hit) continue;
+      }
+      try {
+        els[i].removeAttribute("hidden");
+        els[i].style.display = "";
+      } catch (eS) {
+        /* */
+      }
+    }
     showEls(doc, "[data-prev-flow]");
   }
 

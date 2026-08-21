@@ -1,6 +1,6 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-18 · **Ship update:** hub **1994–2018** playable (25 years) · **2019+ not on disk** · lean 2015 Periscope / 2016 Stories / 2017 Face ID / 2018 GDPR doors
+**Date:** 2026-08-21 · **Ship update:** hub **1994–2013 + 2015–2020** playable (**26 years**) · **2007 / 2009 / 2011 / 2013 / 2020 lean doors** · **2014 · 2021–2023 wiped** · **2024+ not on disk**
 
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
 **Museum-grade A gap map:** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md)  
@@ -23,9 +23,9 @@
 | 2016 | P4 L1–L4 | Stories `itt16-ig-stories` | Stories | **A−** |
 | 2017 | P9 parked `[~]` | Face ID `itt17-faceid` | Face ID · Fortnite | **A−** / docs A claim predates leftover |
 | 2018 | P3 S15 | GDPR `itt18-gdpr` | GDPR | **A−** |
-| 2019 | not on disk | — | — | **cut** |
-| 2020 | not on disk | — | — | **cut** |
-| 2021 | not on disk | — | — | **cut** |
+| 2019 | lean door | Disney+ Continue `itt19-disneyplus` | Disney+ · TikTok | **A−** |
+| 2020 | **wiped** | — | — | not on disk |
+| 2021 | **wiped** | — | — | not on disk |
 
 **2014:** L3 densify · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
 **2015:** L3 densify · [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) · `npm run test:e2e:2015`  
@@ -57,15 +57,15 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2012** (19 years) |
-| Hub locked | **2013+** (not on disk) |
-| Year trees | `years/1994/` … `years/2012/` |
-| Period CSS | `css/period-1995.css` … `period-2012.css` |
-| HTML on disk | 1994 193 · 1995 160 · 1996 114 · 1997 100 · 1998 140 · 1999 162 · 2000 185 · 2001 200 · 2002 221 · 2003 244 · 2004 300 · 2005 304 · 2006 309 · 2007 326 · 2008 334 · 2009 344 · **2010 38** (lean) · **2011 28** (lean) · **2012 30** (lean) · 2013+ **not on disk** |
+| Hub open years | **1994–2013 + 2015–2020** (26 years) |
+| Hub locked | **2014 · 2021–2023** (wiped) · **2024+** (not on disk) |
+| Year trees | `years/1994/` … `years/2013/` · `2015/` … `2020/` |
+| Period CSS | `css/period-1995.css` … `period-2019.css` (lean-door CSS stay as import bridges) |
+| HTML on disk | 1994–2013 live · **2007 / 2009 / 2011 / 2013 / 2020 lean doors** · **2014 wiped** · 2015–2019 live lean · **2021–2023 wiped** |
 | **2010** | **Live · lean from-scratch** · ~22 rooms · star Instagram iOS · `itt10-*` · `e2e/2010-mvp.spec.js` |
-| **2011** | **Live · lean from-scratch** · Google+ star · Spotify US · `itt11-*` · `e2e/2011-mvp.spec.js` |
+| **2011** | **Wiped** for from-scratch rebuild · research docs stay |
 | **2012** | **Live · lean from-scratch** · Instagram Android + $1B · IPO $38 · `itt12-*` · `e2e/2012-mvp.spec.js` |
-| **2013+** | **Not on disk** |
+| **2013+** | **2013 lean door** · **2014 wiped** · 2015–2020 live · **2021–2023 wiped** |
 
 ### 2016 (lean from-scratch · playable)
 
@@ -113,21 +113,28 @@
 | Research | **[`2018-READ-FIRST.md`](2018-READ-FIRST.md)** · grade [`2018-MUSEUM-GRADE.md`](2018-MUSEUM-GRADE.md) |
 | e2e | `npm run test:e2e:2018` |
 
-### 2019–2021 — **not on this branch**
+### 2019 — lean from-scratch door (this branch)
 
-On `museum/1994-2020-lean` the hub stops at **2018**. Tables below are leftover notes from earlier forests. Do **not** treat them as playable disk truth.
+Hub includes **2019**. Star = Disney+ Who’s watching · `itt19-disneyplus`. Trial never writes. Game = Continue Row. See [`2019-READ-FIRST.md`](2019-READ-FIRST.md).
 
-### 2019 (lean after H1 prune · **not on this branch**)
+### 2020 — lean from-scratch door (this branch)
+
+Hub includes **2020**. Star = Zoom mute → leave · `itt20-zoom`. Join never writes. Game = Sus Vote. See [`2020-READ-FIRST.md`](2020-READ-FIRST.md).
+
+### 2021–2023 — wiped
+
+**2021–2023 are not playable.** Hub cards locked. Research notebooks stay archival. Do not restore as forests.
+
+### 2019 leftover forest notes (do not restore)
 
 | Item | Status |
 |------|--------|
-| `years/2019/` | **Live · lean 49 HTML** (forest pruned 2026-08-15 · backup `/tmp/itt-2019-forest-backup-20260815` do not restore) |
+| `years/2019/` | **Live · lean 27 HTML** (from-scratch clone of 2018 · do not restore `/tmp/itt-2019-forest-backup-20260815`) |
 | Hub | **Unlocked** |
 | Prefix | **`itt19`** |
 | Scale | Live Stats table **ends 2018** at **1,630,322,579** · ITU users ~**4.1B / 53.6%** · no June 2019 websites digit |
 | P0 | Disney+ Who’s watching + Continue · trial trap never writes · TikTok FYP · Arcade · TV+ · Stadia · iPhone 11 |
 | One-thing | Disney+ Continue · `itt19-disneyplus` |
-| 5× | [`2019-5X-HARVEST.md`](2019-5X-HARVEST.md) · F1–F5 on keep-set · `e2e/2019-5x-live.spec.js` |
 | Game | Continue Row (`sites/playable/game.html`) |
 | Research | **[`2019-READ-FIRST.md`](2019-READ-FIRST.md)** |
 | e2e | `npm run test:e2e:2019` |
@@ -136,27 +143,22 @@ On `museum/1994-2020-lean` the hub stops at **2018**. Tables below are leftover 
 
 | Item | Status |
 |------|--------|
-| `years/2020/` | **Live · lean** (123 HTML) |
+| `years/2020/` | **Live · lean** (~37 HTML) |
 | Hub | **Unlocked** |
 | Prefix | **`itt20`** |
-| P0 | Zoom join→mute→chat→leave · Reels 15s · Flash EOL · CCPA |
+| P0 | Zoom mute→chat→leave · Reels 15s · GPT-3 waitlist · Flash EOL · TikTok EO · WTI |
 | One-thing | Zoom mute · `itt20-zoom` |
 | Game | Sus Vote (`itt20-game-among`) |
 | Research | **[`2020-READ-FIRST.md`](2020-READ-FIRST.md)** |
 | e2e | `npm run test:e2e:2020` |
 
-### 2021 (lean from-scratch · playable)
+### 2021 (wiped)
 
 | Item | Status |
 |------|--------|
-| `years/2021/` | **Live · lean** (43 HTML) |
-| Hub | **Unlocked** |
-| Prefix | **`itt21`** |
-| P0 | ATT 26 Apr · WhatsApp → Signal · Meta 28 Oct (app still Facebook) · Flash brick |
-| One-thing | ATT Ask App Not to Track · `itt21-att` (Allow never writes) |
-| Game | Five Letter (`itt21-game-five`) |
-| Research | **[`2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-LINKS-2026-08-16.md)** |
-| e2e | `npm run test:e2e:2021` |
+| `years/2021/` | **Wiped** — not on disk |
+| Hub | **Locked** |
+| Research | archival [`2021-READ-FIRST.md`](2021-READ-FIRST.md) · minute [`2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) |
 
 ### 2015 (lean from-scratch rebuild · playable)
 
@@ -217,22 +219,13 @@ On `museum/1994-2020-lean` the hub stops at **2018**. Tables below are leftover 
 | e2e | `npm run test:e2e:2012` |
 | Layer C | H12-01–04 `[failed-final]` (WA 503) · H12-05 chrome `[continuity]` 2009 still |
 
-### 2011 (lean · museum-ready · playable)
+### 2011 (wiped · rebuild from scratch)
 
 | Item | Status |
 |------|--------|
-| `years/2011/` | **Live · lean** (**28 HTML**) |
-| Hub | **Unlocked** |
-| Prefix | **`itt11`** |
-| Shell | Win7 + **IE 9** · Chrome product · IE8 residual honest |
-| Scale | Live Stats June **346,004,403** (+67%) · Pingdom Dec **555M** · users ~**2.1–2.28B** |
-| P0 | **Spotify US** · **Facebook Timeline** · **Google+** · **iPhone 4S/Siri/iOS 5/iCloud** · **iPad 2** · **Netflix/Qwikster** · **IE 9** |
-| P1 seeds | Snapchat · Instagram densify (still iOS-only) · Android ICS |
-| Research | [`2011-RESEARCH.md`](2011-RESEARCH.md) · master bible · minute pack |
-| Museum grade | leftover implement [`2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md`](2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md) |
-| e2e | `e2e/2011-mvp.spec.js` · `e2e/2011-flows.spec.js` · densify/trail |
-| Capture | CAPTURE-LOG · ASSETS honesty pack (continuity / failed-final) |
-| Residual forever | Perfect WA brand stills optional |
+| `years/2011/` | **Wiped** — not on disk |
+| Hub | **Locked** |
+| Research | [`2011-RESEARCH.md`](2011-RESEARCH.md) · master bible · minute pack stay |
 
 ### 2010 (lean from-scratch · playable)
 
@@ -249,25 +242,16 @@ On `museum/1994-2020-lean` the hub stops at **2018**. Tables below are leftover 
 | Research | **[`2010-READ-FIRST.md`](2010-READ-FIRST.md)** · [`2010-RESEARCH.md`](2010-RESEARCH.md) · harvest [`2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md`](2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md) · from-scratch [`2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) · bible [`2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) |
 | Corpus | [`references/2010/`](references/2010/) Wikipedia 2010 + extlinks + CDX |
 | e2e | `e2e/2010-mvp.spec.js` · `npm run test:e2e:2010` |
+| New leftover 2026-08-21 | Instant `itt10-instant` · FaceTime dest `itt10-facetime` · Kickstarter `itt10-kickstarter` · second IG share `itt10-ig-2` · iPad radios also write `itt10-ipad-order` · [`NEW-LINKS-FLOWS-EVERY-ON-DISK-YEAR-RESEARCH-GOALS-PHASES-MINUTE-2026-08-21.md`](NEW-LINKS-FLOWS-EVERY-ON-DISK-YEAR-RESEARCH-GOALS-PHASES-MINUTE-2026-08-21.md) |
 
-### 2009 (100% content · playable)
+### 2009 (wiped · rebuild from scratch)
 
 | Item | Status |
 |------|--------|
-| `years/2009/` | **Live** |
-| Hub | **Unlocked** |
-| Prefix | **`itt09`** |
-| Shell | XP + **IE 8** · Win7 product (Oct) · Chrome product room |
-| Scale | **238,027,855** sites · ~1.77B users (Live Stats) |
-| P0 | iPhone **3GS** · App Store 50k/1B · Facebook **Like** · **FarmVille** · **Bing** · Twitter · Win7/IE8 |
-| P1 seeds | Foursquare · Kickstarter · Wave · WhatsApp · FriendFeed epitaph · UberCab seed |
-| Continuity | Gmail · YT · Hulu · Netflix · Spotify **EU** · Dropbox · Android multiphone · Chrome Mac/Linux late |
-| Research | [`2009-RESEARCH.md`](2009-RESEARCH.md) · [`2009-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2009-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) · [`2009-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md`](2009-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md) |
-| Goals / phases / flows | [`2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) |
-| Museum grade | [`2009-MUSEUM-GRADE.md`](2009-MUSEUM-GRADE.md) — **100% content** |
-| e2e | `2009-mvp` · densify · flows · real · trail · hub-years |
-| Assets | `assets/period/2009/` [wa] iPhone · App Store · Bing · Win7 · Twitter · Chrome · **Foursquare** · FB/FV/KS failed-final RECON · continuity 2008 |
-| Capture | [`references/2009/CAPTURE-LOG.md`](references/2009/CAPTURE-LOG.md) · [`ARTIFACTS-MAP.md`](references/2009/ARTIFACTS-MAP.md) |
+| `years/2009/` | **Wiped** — not on disk |
+| Hub | **Locked** |
+| CSS | `css/period-2009.css` kept as import bridge (2010+ chain) |
+| Research | [`2009-RESEARCH.md`](2009-RESEARCH.md) · master bible · harvest stay |
 
 ### 2008 (museum-ready · densify + WA ship · playable)
 
@@ -307,25 +291,15 @@ On `museum/1994-2020-lean` the hub stops at **2018**. Tables below are leftover 
 | Museum grade | [`2006-MUSEUM-GRADE.md`](2006-MUSEUM-GRADE.md) — **100% complete** 2026-07-31 |
 | e2e | `2006-mvp` · `2006-real-flows` · `2006-densify` |
 
-### 2007 (museum densify + flows · relatable voice research)
+### 2007 (lean from-scratch door · 2026-08-21)
 
 | Item | Status |
 |------|--------|
-| `years/2007/` | **Live** |
-| Hub | **Unlocked** |
-| P0 | iPhone · Gmail open · Street View · Facebook Platform |
+| `years/2007/` | **Live lean** — XP + IE 7 · star iPhone Safari |
+| Hub | **Open** |
 | Prefix | `itt07` |
-| Scale | **121,892,559** sites (Live Stats) |
-| Deep research | [`2007-DEEP-RESEARCH-FRESH-2026-07-31.md`](2007-DEEP-RESEARCH-FRESH-2026-07-31.md) |
-| **Relatable / period voice** | [`2007-RELATABLE-CONTENT-AND-PERIOD-VOICE-2026-07-31.md`](2007-RELATABLE-CONTENT-AND-PERIOD-VOICE-2026-07-31.md) |
-| Goals / phases / flows (clear) | [`2007-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2007-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) |
-| Implement / flows (long) | [`2007-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md`](2007-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md) |
-| Connections | [`2007-CONNECTIONS-AND-TRAILS.md`](2007-CONNECTIONS-AND-TRAILS.md) |
-| Museum grade | [`2007-MUSEUM-GRADE.md`](2007-MUSEUM-GRADE.md) — densify + voice + P2 thin rooms |
-| P0 voice kits | iPhone · Gmail · Street View · FB/Platform · Twitter · YouTube · Vista |
-| P2 thin | `sites/tumblr/` · `sites/amazon/kindle.html` |
-| e2e | `2007-mvp` · `real-flows` · `densify` · `trail` · **`flows` A–T** · hub |
-| Residual | FriendFeed/OpenSocial · WA iPhone/pegman pixels |
+| Research | [`2007-READ-FIRST.md`](2007-READ-FIRST.md) · [`2007-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2007-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) |
+| Assets | `assets/period/2007/` chrome + logos — never invent brand pixels |
 
 
 

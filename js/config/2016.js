@@ -8,6 +8,9 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/extra-e.html",
+    "sites/playable/extra-d.html",
+    "sites/playable/extra-c.html",
     "sites/slack/index.html",
     "sites/fblive/index.html",
     "sites/moments/index.html",
@@ -25,7 +28,9 @@
     "sites/whatsapp/e2e.html",
     "sites/iphone/index.html",
     "sites/iphone/airpods.html",
+    "sites/vine/index.html",
     "sites/vine/goodbye.html",
+    "sites/snapchat/index.html",
     "sites/snapchat/spectacles.html",
     "sites/musically/index.html",
     "sites/windows10/end.html",

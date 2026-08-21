@@ -241,32 +241,6 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     await expect.poll(() => getKey(page, "itt10-ipad")).toMatch(/16GB|Wi-Fi|real/i);
   });
 
-  test("2011 Spotify 0-tick blocked · 2 ticks write", async ({ page }) => {
-    await page.goto("/years/2011/sites/spotify/index.html");
-    await chipOk(page);
-    await clearKeys(page, ["itt11-spotify-invited"]);
-    await page.reload();
-    await page.locator("[data-spotify-invite]").click();
-    expect(await getKey(page, "itt11-spotify-invited")).toBeFalsy();
-    await page.locator("[data-spotify-ack]").check();
-    await page.locator("[data-spotify-no-stream]").check();
-    await page.locator("[data-spotify-invite]").click();
-    await expect.poll(() => getKey(page, "itt11-spotify-invited")).toBeTruthy();
-  });
-
-  test("2012 IPO 0-tick blocked · 2 ticks write itt12-fb-ipo", async ({ page }) => {
-    await page.goto("/years/2012/sites/facebook/ipo.html");
-    await chipOk(page);
-    await clearKeys(page, ["itt12-fb-ipo"]);
-    await page.reload();
-    await page.locator("[data-fb-ipo-ack], [data-itt-real-save]").first().click();
-    expect(await getKey(page, "itt12-fb-ipo")).toBeFalsy();
-    await page.locator("[data-req]").nth(0).check();
-    await page.locator("[data-req]").nth(1).check();
-    await page.locator("[data-fb-ipo-ack], [data-itt-real-save]").first().click();
-    await expect.poll(() => getKey(page, "itt12-fb-ipo")).toBeTruthy();
-  });
-
   test("2016 Reactions tray-only never writes · Love writes · no Care", async ({ page }) => {
     await page.goto("/years/2016/sites/facebook/reactions.html");
     await chipOk(page);

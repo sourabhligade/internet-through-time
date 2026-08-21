@@ -1,7 +1,47 @@
-/* 2011 document styles — Win7 · IE 9 · Google+ · Spotify US · Siri */
+/* 2011 CSS bridge — year tree wiped. 2012 / 2015+ still import this. */
 @import url("period-2010.css");
 
 body.year-2011 .itt-year-chip {
   color: #dd4b39;
   border-bottom-color: #dd4b39;
 }
+
+.h11, .ab-lean, .pop-lean { max-width: 720px; margin: 12px auto; font-family: Segoe UI, Arial, sans-serif; font-size: 13px; }
+.lean-star { display: inline-block; padding: 5px 12px; background: #dd4b39; color: #fff; border-radius: 14px; text-decoration: none; font-weight: bold; }
+.ott-guided { margin: 12px 0; padding: 14px; background: #dd4b39; color: #fff; }
+.ott-guided ol { margin: 8px 0 0; padding-left: 1.3em; line-height: 1.7; }
+.ott-guided a { color: #ffe8e4; }
+.itt-5x-trails { padding: 10px; background: #fff8e1; border: 1px solid #f9a825; }
+.lean-card { border: 2px solid #dd4b39; }
+.itt-year-true-pack, .itt-pop3x, .itt-pop-more { font-size: 12px; margin: 10px 0; padding: 8px; border: 1px dashed #666; }
+.ab-scale { background: #fff8dc; border: 1px solid #cc0; padding: 8px; font-size: 12px; }
+.ab-bans { border-collapse: collapse; font-size: 12px; background: #fff; }
+.gp11 { max-width: 560px; margin: 16px auto; font-family: Arial, sans-serif; }
+.gp11-circle { min-height: 56px; border: 1px dashed #dd4b39; padding: 8px; margin: 8px 0; background: #fff; }
+.sp11, .sr11, .pd11, .ab11, .ig11, .qw11, .tw11 { max-width: 520px; margin: 16px auto; font-family: Arial, sans-serif; font-size: 13px; }
+.tl11 { max-width: 640px; margin: 0 auto; font-family: Tahoma, Arial, sans-serif; }
+.tl11-bar { background: #3b5998; color: #fff; padding: 8px 12px; }
+.tl11-cover { height: 80px; background: #8aa; color: #fff; padding: 12px; margin: 8px 0; }
+.crumb { font-size: 12px; }
+
+/* Third-trio leftover rooms — 2011 seeds */
+.sc11, .tb11, .yt11 { max-width: 560px; margin: 16px auto; font-family: Arial, sans-serif; font-size: 13px; }
+.sc11 a { color: #111; }
+.tb11 a { color: #9ab; }
+.yt11 a { color: #1a0dab; }
+.sc11-honest, .tb11-honest, .yt11-honest, .sc11 .pop-note, .tb11 .pop-note, .yt11 .pop-note {
+  font-size: 12px; padding: 8px; border: 1px solid #333; margin: 8px 0;
+}
+.sc11-ghost { width: 120px; height: 160px; background: #111; color: #fffc00; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 10px 0; font-size: 42px; font-weight: bold; }
+.tb11-dash { background: #2e3d52; padding: 10px; margin: 8px 0; }
+.tb11-post { background: #fff; color: #111; padding: 8px; margin-top: 8px; }
+.yt11-player { background: #000; color: #fff; height: 160px; position: relative; margin: 10px 0; }
+.yt11-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #c00; color: #fff; border: 0; padding: 8px 14px; }
+.yt11-time { position: absolute; bottom: 6px; left: 8px; font-size: 11px; color: #ccc; }
+.yt11-rel { font-size: 12px; color: #444; }
+.sc11 .pop-rows, .tb11 .pop-rows, .yt11 .pop-rows { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+.sc11 .pop-rows button { text-align: left; padding: 8px; background: #111; color: #fffc00; border: 1px solid #111; cursor: pointer; }
+.tb11 .pop-rows button { text-align: left; padding: 8px; background: #2e3d52; color: #fff; border: 1px solid #9ab; cursor: pointer; }
+.yt11 .pop-rows button { text-align: left; padding: 8px; background: #f1f1f1; border: 1px solid #ccc; cursor: pointer; }
+.sc11 .pop-rows button.is-on, .tb11 .pop-rows button.is-on, .yt11 .pop-rows button.is-on { outline: 2px solid #c00; }
+.pop-req { display: block; font-size: 12px; margin: 4px 0; }

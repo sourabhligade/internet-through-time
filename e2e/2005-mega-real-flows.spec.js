@@ -165,7 +165,7 @@ test.describe('2005 mega — commerce + social graph', () => {
     await page.reload();
     await page.waitForSelector('[data-add-cart]', { timeout: 20000 });
     await page.locator('[data-add-cart]').first().click();
-    await expect(page.locator('#cart-flash, [data-cart-flash], body')).toContainText(
+    await expect(page.locator('#cart-flash, [data-cart-flash]').first()).toContainText(
       /Added|cart|Shopping Cart/i,
       { timeout: 8000 }
     );

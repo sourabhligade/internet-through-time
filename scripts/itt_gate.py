@@ -12,8 +12,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Hub-open years on disk (1994–2018). 2019+ are not shipped.
-SHIP_YEARS: list[str] = [str(y) for y in range(1994, 2019)]
+# Hub-open years on disk. 2014 and 2021–2023 wiped.
+_WIPED = {"2014", "2021", "2022", "2023"}
+SHIP_YEARS: list[str] = [
+    str(y) for y in list(range(1994, 2014)) + list(range(2015, 2021)) if str(y) not in _WIPED
+]
 
 _URLMAP_START = re.compile(r"\burlMap\s*:\s*\{")
 _URLMAP_KEY = re.compile(r'^\s*"([^"]+)"\s*:', re.M)

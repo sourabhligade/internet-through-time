@@ -7,11 +7,7 @@ const { enterYear, killOverlays } = require("./helpers");
 
 const YEARS = [
   { year: "2008", re: /2008/, not: /2004 thesis|^2007 ·/ },
-  { year: "2009", re: /2009/, not: /2004 thesis|^2007 ·/ },
   { year: "2010", re: /2010/, not: /2004 thesis|^2007 ·/ },
-  { year: "2011", re: /2011/, not: /2004 thesis|^2007 ·/ },
-  { year: "2012", re: /2012/, not: /2004 thesis|^2007 ·/ },
-  { year: "2013", re: /2013/, not: /2004 thesis|^2007 ·/ },
 ];
 
 test.describe("shell honesty 2008–2013", () => {

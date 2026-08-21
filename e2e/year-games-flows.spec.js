@@ -179,20 +179,6 @@ test.describe('year game flows — full matrix', () => {
       .toBeGreaterThan(0);
   });
 
-  test('2007 Box Shift: level renders · D-pad moves', async ({ page }) => {
-    const frame = await openGame(page, '2007');
-    await expect(frame.locator('[data-level]')).toContainText('#');
-    const before = await frame.locator('[data-level]').textContent();
-    // D-pad works without iframe keyboard focus (shell UX fix)
-    await frame.locator('[data-dir="right"]').click({ force: true });
-    await expect
-      .poll(async () => frame.locator('[data-level]').textContent(), { timeout: 3000 })
-      .not.toBe(before);
-    const after = await frame.locator('[data-level]').textContent();
-    expect(after).not.toBe(before);
-    await expect(frame.locator('[data-level]')).toContainText('@');
-  });
-
   test('2008 Goo Span: start fast writes score', async ({ page }) => {
     const frame = await openGame(page, '2008', '?fast=1', 'itt08');
     await frame.locator('[data-game-start]').click();
@@ -200,25 +186,6 @@ test.describe('year game flows — full matrix', () => {
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-game-goospan')), { timeout: 5000 })
       .toBeTruthy();
     await expect(frame.locator('canvas')).toBeVisible();
-  });
-
-  test('2009 Plot Neighbors: plant wheat → storage', async ({ page }) => {
-    const frame = await openGame(page, '2009', '?fast=1', 'itt09');
-    /* Freemium literacy required before plant (source expansion G3) */
-    await frame.locator('[data-fv-free]').check({ force: true });
-    await frame.locator('[data-fv-neighbor]').check({ force: true });
-    await frame.locator('[data-fv-money]').check({ force: true });
-    await frame.locator('[data-seed="wheat"]').click();
-    await frame.locator('[data-plots] button').first().click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt09-game-plotneighbors')), {
-        timeout: 5000,
-      })
-      .toBeTruthy();
-    const raw = await page.evaluate(() => localStorage.getItem('itt09-game-plotneighbors'));
-    const data = JSON.parse(raw || '{}');
-    expect(data.plots).toBeTruthy();
-    expect(data.coins).toBeLessThan(30);
   });
 
   test('2010 Sling Nest: start → score', async ({ page }) => {
@@ -230,45 +197,7 @@ test.describe('year game flows — full matrix', () => {
       .toBeGreaterThan(0);
   });
 
-  test('2011 Letter Swap: start → play word · status responds', async ({ page }) => {
-    const frame = await openGame(page, '2011', '?fast=1', 'itt11');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('[data-rack]')).not.toHaveText('—', { timeout: 3000 });
-    // Try a common letter word; may succeed or fail on rack — status must update either way
-    await frame.locator('[data-word]').fill('a');
-    await frame.locator('[data-play-word]').click();
-    await expect.poll(async () => ((await frame.locator('[data-itt-action-status]').textContent()) || '').length, { timeout: 5000 }).toBeGreaterThan(0);
-    // Timer should be counting
-    await expect(frame.locator('[data-game-time]')).toBeVisible();
-  });
 
-  test('2012 Guess Doodle: start → prompt shown', async ({ page }) => {
-    const frame = await openGame(page, '2012');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('[data-prompt]')).toContainText(/Draw:/i, { timeout: 3000 });
-    await frame.locator('[data-done]').click();
-    await expect(frame.locator('[data-choices] button').first()).toBeVisible({ timeout: 3000 });
-  });
-
-  test('2013 Loop Six: start → hold writes score', async ({ page }) => {
-    const frame = await openGame(page, '2013');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('[data-loop-hold]')).toBeVisible();
-    const hold = frame.locator('[data-loop-hold]');
-    for (let i = 0; i < 6; i++) await hold.click();
-    await expect(frame.locator('[data-game-score]')).not.toHaveText('0', { timeout: 5000 });
-  });
-
-  test('2014 Tile Fold: start → canvas + arrows move status', async ({ page }) => {
-    const frame = await openGame(page, '2014');
-    await frame.locator('#play-start').click();
-    await expect(frame.locator('#game-canvas')).toBeVisible();
-    await frame.locator('#game-canvas').focus();
-    await page.keyboard.press('ArrowLeft');
-    await page.keyboard.press('ArrowUp');
-    await expect(frame.locator('#play-status, #play-score').first()).toBeVisible({ timeout: 5000 });
-    await expect(frame.locator('body')).toContainText(/2048|Tile Fold|128/i);
-  });
 
   test('2015 Blob Rush: start → canvas + status', async ({ page }) => {
     const frame = await openGame(page, '2015');

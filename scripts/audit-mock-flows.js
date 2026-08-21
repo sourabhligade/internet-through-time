@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — years 1994–2018.
+ * Mock-flow classifier — ship years 1994–2019 (2014 and 2020–2023 wiped).
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,7 +27,10 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2018; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2019; y++) {
+  if (y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
+  YEARS.push(String(y));
+}
 
 const argv = process.argv.slice(2);
 const WANT_JSON = argv.includes("--json");
@@ -43,9 +46,21 @@ const PRODUCT_HOOK = new RegExp(
     "data-req",
     "data-ott-",
     "data-5x-",
+    "data-4x-",
     "data-next-flow",
     "data-add-cart",
     "data-yt-",
+    "data-yt12-",
+    "data-ipo-",
+    "data-fb1b-",
+    "data-sopa-",
+    "data-flip-",
+    "data-tinder-",
+    "data-sc-",
+    "data-snap12-",
+    "data-tumblr-",
+    "data-pin-",
+    "data-ig12-",
     "data-digg",
     "data-reddit",
     "data-gmail",
@@ -126,6 +141,102 @@ const PRODUCT_HOOK = new RegExp(
     "data-faceid-",
     "data-watch",
     "data-peri-",
+    "data-og-like",
+    "data-pin-save",
+    "data-groupon-",
+    "data-ballot-",
+    "data-snap-",
+    "data-siri-",
+    "data-timeline-",
+    "data-qwikster-",
+    "data-gplus-",
+    "data-abnb-",
+    "data-tw-280",
+    "data-animoji-",
+    "data-ml-post",
+    "data-win10-",
+    "data-gp-",
+    "data-dc-join",
+    "data-lot-buy",
+    "data-lot-party",
+    "data-photo-pick",
+    "data-airpods-",
+    "data-iphone7-",
+    "data-faceid-",
+    "data-play-word",
+    "data-word",
+    "data-arc-",
+    "data-tt-",
+    "data-zoom-",
+    "data-copilot-",
+    "data-sig-",
+    "data-att-",
+    "data-ft-",
+    "data-gi-",
+    "data-ks-",
+    "data-w11-",
+    "data-hear-",
+    "data-gdpr-",
+    "data-dplus-",
+    "data-reels-",
+    "data-ccpa-",
+    "data-stadia-",
+    "data-ip11-",
+    "data-ip12-",
+    "data-tv-",
+    "data-ch-",
+    "data-w10-",
+    "data-meta-",
+    "data-medium-",
+    "data-path-",
+    "data-among-",
+    "data-five-",
+    "data-cr-",
+    "data-mm-",
+    "data-app-",
+    "data-ip07-",
+    "data-gm07-",
+    "data-sv07-",
+    "data-fb07-",
+    "data-tw07-",
+    "data-yt07-",
+    "data-ms07-",
+    "data-dg07-",
+    "data-vi07-",
+    "data-kd07-",
+    "data-tb07-",
+    "data-xa07-",
+    "data-xb07-",
+    "data-lk09-",
+    "data-fv09-",
+    "data-bg09-",
+    "data-ip09-",
+    "data-as09-",
+    "data-tw09-",
+    "data-fq09-",
+    "data-ks09-",
+    "data-w709-",
+    "data-gp11-",
+    "data-sp11-",
+    "data-sr11-",
+    "data-tl11-",
+    "data-pd11-",
+    "data-ab11-",
+    "data-ig11-",
+    "data-qw11-",
+    "data-tw11-",
+    "data-vn13-",
+    "data-ig13-",
+    "data-sn13-",
+    "data-io13-",
+    "data-td13-",
+    "data-sd13-",
+    "data-tg13-",
+    "data-tb13-",
+    "data-w813-",
+    "data-xa-",
+    "data-xb-",
+    "data-peg-",
   ].join("|"),
   "i"
 );
@@ -300,7 +411,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 1994–2018");
+  console.log("audit-mock-flows — 1994–2013 + 2015–2019");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

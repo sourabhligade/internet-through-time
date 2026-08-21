@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""3× discoverable internal links for every playable year (1994–2020).
+"""3× discoverable internal links for every playable year (1994–2019).
 
 Adds (or replaces) marked blocks:
   home / about / what's-new / cool  → full site-index + extra-page directory

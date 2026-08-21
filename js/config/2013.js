@@ -1,6 +1,5 @@
 /**
  * Year config — 2013 lean from-scratch
- * Data only. Behavior lives in browser-core.js.
  */
 (function (global) {
   "use strict";
@@ -8,56 +7,39 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
-    "sites/telegramchat/index.html",
-    "sites/askfmq/index.html",
-    "sites/ios7flat/index.html",
-
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",
     "pages/whats-new.html",
     "sites/vine/index.html",
     "sites/vine/record.html",
-    "sites/vine/android.html",
-    "sites/instagram/index.html",
-    "sites/instagram/video.html",
-    "sites/snapchat/index.html",
-    "sites/snapchat/story.html",
-    "sites/iphone/index.html",
-    "sites/iphone/ios7.html",
-    "sites/iphone/touchid.html",
-    "sites/iphone/5c.html",
-    "sites/windows81/index.html",
-    "sites/chrome/index.html",
-    "sites/snowden/index.html",
-    "sites/snowden/prism.html",
     "sites/healthcare/index.html",
     "sites/healthcare/status.html",
-    "sites/facebook/index.html",
-    "sites/telegram/index.html",
-    "sites/telegram/chat.html",
     "sites/medium/index.html",
+    "sites/chrome/index.html",
+    "sites/telegram/chat.html",
+    "sites/iphone/5c.html",
+    "sites/instagram/video.html",
+    "sites/snapchat/story.html",
+    "sites/iphone/ios7.html",
+    "sites/iphone/touchid.html",
+    "sites/snowden/index.html",
+    "sites/telegram/index.html",
     "sites/tumblr/index.html",
-    "sites/tumblr/yahoo.html",
-    "sites/ipad/index.html",
-    "sites/ipad/mini2.html",
-    "pages/error/404.html",
-    "pages/error/unreachable.html",
-    "sites/tinder/index.html",
+    "sites/windows81/index.html",
+    "sites/reddit/index.html",
+    "sites/facebook/index.html",
     "sites/twitter/index.html",
-    "sites/google/index.html",
-    "sites/playable/game-2.html",
-    "sites/playable/game-3.html",
-    "sites/playable/game-4.html",
-    "sites/playable/game-5.html",
-    "sites/playable/game.html",
-    "sites/playable/extra-b.html",
-    "sites/playable/extra-a.html",
-    "sites/playable/famous.html",
-    "sites/playable/index.html",
     "sites/askfm/index.html",
     "sites/whisper/index.html",
-    "sites/youtube/index.html"
+    "sites/youtube/index.html",
+    "sites/playable/game.html",
+    "sites/playable/index.html",
+    "sites/playable/famous.html",
+    "sites/playable/extra-a.html",
+    "sites/playable/extra-b.html",
+    "pages/error/404.html",
+    "pages/error/unreachable.html"
   ];
 
   var urlMap = {
@@ -97,7 +79,7 @@
       showLocation: true,
       showDirbar: true,
       showDesktopIcons: true,
-      desktopBg: "#0d3b2e"
+      desktopBg: "#165ca8"
     },
     perf: {
       navJitterMax: 50,
@@ -115,33 +97,21 @@
     urlMap: urlMap,
     bookmarks: [
       { title: "Starting Point", path: "pages/home.html" },
-      { title: "Vine 6s", path: "sites/vine/record.html" },
-      { title: "IG Video", path: "sites/instagram/video.html" },
-      { title: "Snap Stories", path: "sites/snapchat/story.html" },
-      { title: "iOS 7", path: "sites/iphone/ios7.html" }
+      { title: "Vine", path: "sites/vine/record.html" },
+      { title: "iOS 7", path: "sites/iphone/ios7.html" },
+      { title: "Stories", path: "sites/snapchat/story.html" }
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2013/",
     locationHints: [
       { re: /vine/i, path: "sites/vine/record.html" },
-      { re: /android/i, path: "sites/vine/android.html" },
-      { re: /instagram|instagr\.am/i, path: "sites/instagram/video.html" },
+      { re: /instagram|ig.?video/i, path: "sites/instagram/video.html" },
       { re: /snapchat|stories/i, path: "sites/snapchat/story.html" },
-      { re: /iphone|5s|touch.?id/i, path: "sites/iphone/index.html" },
       { re: /ios.?7/i, path: "sites/iphone/ios7.html" },
-      { re: /5c/i, path: "sites/iphone/5c.html" },
-      { re: /windows.?8|8\.1/i, path: "sites/windows81/index.html" },
-      { re: /chrome/i, path: "sites/chrome/index.html" },
-      { re: /snowden|prism|guardian/i, path: "sites/snowden/index.html" },
-      { re: /healthcare|obamacare/i, path: "sites/healthcare/index.html" },
+      { re: /touch.?id|5s/i, path: "sites/iphone/touchid.html" },
+      { re: /snowden/i, path: "sites/snowden/index.html" },
       { re: /telegram/i, path: "sites/telegram/index.html" },
-      { re: /medium/i, path: "sites/medium/index.html" },
       { re: /tumblr|yahoo/i, path: "sites/tumblr/index.html" },
-      { re: /mini/i, path: "sites/ipad/mini2.html" },
-      { re: /facebook|fb.?home/i, path: "sites/facebook/index.html" },
-      { re: /ipad|air/i, path: "sites/ipad/index.html" },
-      { re: /tinder/i, path: "sites/tinder/index.html" },
-      { re: /twitter/i, path: "sites/twitter/index.html" },
-      { re: /google/i, path: "sites/google/index.html" }
+      { re: /windows.?8|win8/i, path: "sites/windows81/index.html" }
     ]
   };
 })(typeof window !== "undefined" ? window : this);

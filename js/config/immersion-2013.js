@@ -1,6 +1,5 @@
 /**
  * Immersion config — 2013
- * Thesis: Vine 6s · IG Video · Snap Stories · iOS 7 · Snowden
  */
 (function (global) {
   "use strict";
@@ -13,28 +12,20 @@
     features: {
       flowMap: true,
       nav: true,
-      instagram: true,
-      facebook: true,
-      snapchat: true,
-      twitter: true,
-      chrome: true,
-      oneThingMachines: true,
-      yearTruePacks: true
+      oneThingMachines: true
     },
-    navSubtitle: "Win7 · IE 9 · Vine 6s · Stories · iOS 7",
+    navSubtitle: "Win7 · IE 9 · Vine 6s · iOS 7 · Stories",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "Vine", href: "sites/vine/record.html", match: "/vine/" },
-      { label: "IG Video", href: "sites/instagram/video.html", match: "/instagram/" },
+      { label: "iOS 7", href: "sites/iphone/ios7.html", match: "/ios7" },
       { label: "Stories", href: "sites/snapchat/story.html", match: "/snapchat/" },
-      { label: "iOS 7", href: "sites/iphone/ios7.html", match: "/iphone/" },
-      { label: "Win8.1", href: "sites/windows81/index.html", match: "/windows81/" }
+      { label: "IG Video", href: "sites/instagram/video.html", match: "/instagram/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "Vine 6s", href: "sites/vine/record.html" },
-      { label: "Stories", href: "sites/snapchat/story.html" },
+      { label: "Vine", href: "sites/vine/record.html" },
       { label: "About 2013", href: "pages/about.html" }
     ]
   };

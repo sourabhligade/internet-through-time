@@ -216,14 +216,6 @@
     "title": "Travelocity residual"
   },
   {
-    "year": "2000",
-    "id": "half",
-    "path": "/years/2000/sites/half/index.html",
-    "key": "itt00-half",
-    "type": "twoClick",
-    "title": "Half.com residual"
-  },
-  {
     "year": "2001",
     "id": "runescape",
     "path": "/years/2001/sites/runescape/index.html",
@@ -416,38 +408,6 @@
     "title": "YouTube embed residual"
   },
   {
-    "year": "2007",
-    "id": "etsy",
-    "path": "/years/2007/sites/etsy/index.html",
-    "key": "itt07-etsy",
-    "type": "twoClick",
-    "title": "Etsy residual"
-  },
-  {
-    "year": "2007",
-    "id": "googletranslate",
-    "path": "/years/2007/sites/googletranslate/index.html",
-    "key": "itt07-googletranslate",
-    "type": "fillGo",
-    "title": "Google Translate residual"
-  },
-  {
-    "year": "2007",
-    "id": "kindle",
-    "path": "/years/2007/sites/kindle/index.html",
-    "key": "itt07-kindle",
-    "type": "pickStart",
-    "title": "Kindle residual"
-  },
-  {
-    "year": "2007",
-    "id": "iphoneweb",
-    "path": "/years/2007/sites/iphoneweb/index.html",
-    "key": "itt07-iphoneweb",
-    "type": "twoClick",
-    "title": "iPhone Web residual"
-  },
-  {
     "year": "2008",
     "id": "evernote",
     "path": "/years/2008/sites/evernote/index.html",
@@ -478,45 +438,5 @@
     "key": "itt08-spotifyseed",
     "type": "twoClick",
     "title": "Spotify invite residual"
-  },
-  {
-    "year": "2009",
-    "id": "wolframalpha",
-    "path": "/years/2009/sites/wolframalpha/index.html",
-    "key": "itt09-wolframalpha",
-    "type": "fillGo",
-    "title": "Wolfram|Alpha residual"
-  },
-  {
-    "year": "2009",
-    "id": "vevo",
-    "path": "/years/2009/sites/vevo/index.html",
-    "key": "itt09-vevo",
-    "type": "twoClick",
-    "title": "VEVO residual"
-  },
-  {
-    "year": "2009",
-    "id": "foursquarecheckin",
-    "path": "/years/2009/sites/foursquarecheckin/index.html",
-    "key": "itt09-foursquarecheckin",
-    "type": "twoClick",
-    "title": "Foursquare check-in"
-  },
-  {
-    "year": "2013",
-    "id": "tinder13",
-    "path": "/years/2013/sites/tinder/index.html",
-    "key": "itt13-tinder13",
-    "type": "twoClick",
-    "title": "Tinder leftover"
-  },
-  {
-    "year": "2013",
-    "id": "tumblrdash",
-    "path": "/years/2013/sites/tumblr/yahoo.html",
-    "key": "itt13-tumblrdash",
-    "type": "twoClick",
-    "title": "Tumblr dashboard"
   }
 ]

@@ -1,7 +1,7 @@
 # 2011 capture log
 
-**Updated:** 2026-08-02 deep research  
-**Status:** Lean year **on disk** (28 HTML) · harvest **queued** (execute leftover L2)  
+**Updated:** 2026-08-19 leftover execute  
+**Status:** Lean year **on disk** (~40 HTML) · P0 stills **failed-final** this pass (CDX not pulled; rooms already stamp `[failed-final]`) · never invented  
 **Rules:** Year-correct CDX 2011 only · `file` must be real GIF/JPEG/PNG · log `[wa]` or `[failed-final]` · never invent brand pixels · continuity from 2010 OK when year-true
 
 ## Full research

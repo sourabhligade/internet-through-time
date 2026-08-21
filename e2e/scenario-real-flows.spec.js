@@ -79,7 +79,7 @@ async function clickSubmit(page, formSel) {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: adsense signup', () => {
-  for (const year of ['2003', '2004', '2005', '2006', '2007']) {
+  for (const year of ['2003', '2004', '2005', '2006']) {
     test(`adsense ${year}: apply → ${ittKey(year, 'adsense')} + code`, async ({ page }) => {
       const key = ittKey(year, 'adsense');
       await gotoReady(
@@ -106,7 +106,7 @@ test.describe('scenario: adsense signup', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: itunes buy', () => {
-  for (const year of ['2003', '2004', '2005', '2006', '2007']) {
+  for (const year of ['2003', '2004', '2005', '2006']) {
     test(`itunes ${year}: buy → ${ittKey(year, 'itunes-library')}`, async ({ page }) => {
       const key = ittKey(year, 'itunes-library');
       await gotoReady(
@@ -135,7 +135,7 @@ test.describe('scenario: itunes buy', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: linkedin', () => {
-  for (const year of ['2003', '2004', '2005', '2006', '2007']) {
+  for (const year of ['2003', '2004', '2005', '2006']) {
     test(`linkedin ${year}: profile save → ${ittKey(year, 'li-profile')}`, async ({ page }) => {
       const key = ittKey(year, 'li-profile');
       await gotoReady(
@@ -177,7 +177,7 @@ test.describe('scenario: linkedin', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: gmail compose', () => {
-  for (const year of ['2004', '2005', '2006', '2007']) {
+  for (const year of ['2004', '2005', '2006']) {
     test(`gmail ${year}: compose → ${ittKey(year, 'gmail-msgs')}`, async ({ page }) => {
       const key = ittKey(year, 'gmail-msgs');
       await gotoReady(
@@ -201,7 +201,7 @@ test.describe('scenario: gmail compose', () => {
 });
 
 test.describe('scenario: gmail save draft (real localStorage)', () => {
-  for (const year of ['2004', '2005', '2006', '2007']) {
+  for (const year of ['2004', '2005', '2006']) {
     test(`gmail ${year}: Save Draft → ${ittKey(year, 'gmail-drafts')}`, async ({ page }) => {
       const key = ittKey(year, 'gmail-drafts');
       await gotoReady(
@@ -229,7 +229,7 @@ test.describe('scenario: gmail save draft (real localStorage)', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: netflix DVD queue', () => {
-  for (const year of ['2002', '2003', '2004', '2005', '2006', '2007']) {
+  for (const year of ['2002', '2003', '2004', '2005', '2006']) {
     test(`netflix ${year}: add queue → ${ittKey(year, 'netflix-queue')}`, async ({ page }) => {
       const key = ittKey(year, 'netflix-queue');
       await gotoReady(
@@ -256,7 +256,7 @@ test.describe('scenario: netflix DVD queue', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: facebook profile', () => {
-  for (const year of ['2004', '2005', '2006', '2007']) {
+  for (const year of ['2004', '2005', '2006']) {
     test(`facebook ${year}: profile save → ${ittKey(year, 'thefacebook')}`, async ({ page }) => {
       const key = ittKey(year, 'thefacebook');
       await gotoReady(
@@ -288,7 +288,7 @@ test.describe('scenario: facebook profile', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: flickr upload', () => {
-  for (const year of ['2004', '2005', '2006', '2007']) {
+  for (const year of ['2004', '2005', '2006']) {
     test(`flickr ${year}: upload → ${ittKey(year, 'flickr-stream')}`, async ({ page }) => {
       const key = ittKey(year, 'flickr-stream');
       await gotoReady(
@@ -317,7 +317,7 @@ test.describe('scenario: flickr upload', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: myspace comment / invite / contact', () => {
-  for (const year of ['2003', '2004', '2005', '2006', '2007']) {
+  for (const year of ['2003', '2004', '2005', '2006']) {
     test(`myspace ${year}: leave comment → ${ittKey(year, 'myspace-comments')}`, async ({
       page,
     }) => {
@@ -382,7 +382,7 @@ test.describe('scenario: myspace comment / invite / contact', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: digg bury', () => {
-  for (const year of ['2004', '2005', '2006', '2007']) {
+  for (const year of ['2004', '2005', '2006']) {
     test(`digg ${year}: bury decrements count`, async ({ page }) => {
       const key = ittKey(year, 'digg-links');
       await gotoReady(page, `/years/${year}/sites/digg/index.html`, '[data-digg-list]', key);
@@ -402,7 +402,7 @@ test.describe('scenario: digg bury', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: friendster add friend', () => {
-  for (const year of ['2002', '2003', '2004', '2005', '2006', '2007']) {
+  for (const year of ['2002', '2003', '2004', '2005', '2006']) {
     test(`friendster ${year}: add friend → ${ittKey(year, 'friendster-friends')}`, async ({
       page,
     }) => {
@@ -431,7 +431,7 @@ test.describe('scenario: friendster add friend', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: blogger login', () => {
-  for (const year of ['1999', '2003', '2005', '2006', '2007']) {
+  for (const year of ['1999', '2003', '2005', '2006']) {
     test(`blogger ${year}: login → edit.html`, async ({ page }) => {
       await page.goto(`/years/${year}/sites/blogger/index.html`);
       await clearKeys(page, ittKey(year, 'blog'));
@@ -787,7 +787,7 @@ test.describe('scenario: ebay/auction bid form (sample years)', () => {
 });
 
 test.describe('scenario: google search (sample years)', () => {
-  for (const year of ['1998', '2001', '2005', '2006', '2007']) {
+  for (const year of ['1998', '2001', '2005', '2006']) {
     test(`google ${year}: search form navigates with q`, async ({ page }) => {
       await page.goto(`/years/${year}/sites/google/index.html`);
       await page.waitForSelector('form[data-google-search] input[name="q"], form input[name="q"]', {

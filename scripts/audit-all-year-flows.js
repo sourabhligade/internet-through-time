@@ -25,8 +25,11 @@ const ROOT = path.join(__dirname, "..");
 const WANT_JSON = process.argv.includes("--json");
 const WANT_MD = process.argv.includes("--md");
 
+const WIPED = new Set(["2014"]);
 const YEARS = [];
-for (let y = 1994; y <= 2018; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2019; y++) {
+  if (!WIPED.has(String(y))) YEARS.push(String(y));
+}
 
 const STARS = {
   1994: { name: "CSotD guestbook", href: "sites/csotd/index.html", key: "itt94-csotd" },
@@ -42,18 +45,18 @@ const STARS = {
   2004: { name: "thefacebook networks", href: "sites/facebook/networks.html", key: "itt04-thefacebook-networks" },
   2005: { name: "YouTube upload", href: "sites/youtube/upload.html", key: "itt05-yt-uploads" },
   2006: { name: "Twitter compose", href: "sites/twitter/index.html", key: "itt06-tweets" },
-  2007: { name: "iPhone shipped", href: "sites/iphone/index.html", key: "itt07-iphone" },
-  2008: { name: "GitHub issue", href: "sites/github/issue.html", key: "itt08-github" },
-  2009: { name: "Facebook Like", href: "sites/facebook/feed.html", key: "itt09-fb-likes" },
+  2007: { name: "iPhone Safari", href: "sites/iphone/index.html", key: "itt07-iphone" },
+  2008: { name: "App Store shelf", href: "sites/appstore/index.html", key: "itt08-apps" },
+  2009: { name: "Facebook Like", href: "sites/facebook/index.html", key: "itt09-like" },
   2010: { name: "Instagram filter+share", href: "sites/instagram/index.html", key: "itt10-ig" },
-  2011: { name: "G+ Hangouts", href: "sites/googleplus/hangouts.html", key: "itt11-gplus-hangout" },
-  2012: { name: "Instagram Android", href: "sites/instagram/android.html", key: "itt12-ig" },
+  2011: { name: "Google+", href: "sites/googleplus/index.html", key: "itt11-gplus" },
+  2012: { name: "Instagram Android", href: "sites/instagram/android.html", key: "itt12-ig-android" },
   2013: { name: "Vine 6s", href: "sites/vine/record.html", key: "itt13-vine-posts" },
-  2014: { name: "WhatsApp install", href: "sites/whatsapp/index.html", key: "itt14-wa-install" },
   2015: { name: "Periscope Go LIVE", href: "sites/periscope/index.html", key: "itt15-periscope" },
   2016: { name: "Instagram Stories", href: "sites/instagram/stories.html", key: "itt16-ig-stories" },
   2017: { name: "Face ID / iPhone X", href: "sites/iphone/x.html", key: "itt17-faceid" },
   2018: { name: "GDPR Manage", href: "sites/gdpr/index.html", key: "itt18-gdpr" },
+  2019: { name: "Disney+ Continue", href: "sites/disneyplus/home.html", key: "itt19-disneyplus" },
 };
 
 const PRODUCT_HOOK = new RegExp(
@@ -166,6 +169,57 @@ const PRODUCT_HOOK = new RegExp(
     "data-year-game",
     "data-pop-go",
     "data-pop-field",
+    "data-dplus-",
+    "data-tt-",
+    "data-arc-",
+    "data-tv-",
+    "data-stadia-",
+    "data-ip11-",
+    "data-ip12-",
+    "data-app-",
+    "data-ch-",
+    "data-w10-",
+    "data-w11-",
+    "data-zoom-",
+    "data-gpt-",
+    "data-wrd-",
+    "data-mj-",
+    "data-cga-",
+    "data-br-",
+    "data-bing-",
+    "data-th-",
+    "data-g4-",
+    "data-bard-",
+    "data-yg-",
+    "data-reels-",
+    "data-ccpa-",
+    "data-att-",
+    "data-sig-",
+    "data-copilot-",
+    "data-meta-",
+    "data-fb1b-",
+    "data-flip-",
+    "data-pin-",
+    "data-medium-",
+    "data-path-",
+    "data-among-",
+    "data-five-",
+    "data-cr-",
+    "data-mm-",
+    "data-ip07-",
+    "data-gm07-",
+    "data-sv07-",
+    "data-fb07-",
+    "data-tw07-",
+    "data-yt07-",
+    "data-ms07-",
+    "data-dg07-",
+    "data-vi07-",
+    "data-kd07-",
+    "data-tb07-",
+    "data-xa07-",
+    "data-xb07-",
+    "data-peg-",
   ].join("|"),
   "i"
 );
@@ -222,7 +276,7 @@ function classifyHtml(html, fileRel) {
 
   // named product = a specific data-* hook besides 5x / pack / pop
   const namedRe =
-    /data-(?:csotd|ssl-form|portal|pc-sub|google-lucky|aim-|mq-form|wiki-save|su-|pb-|fb-|yt-upload|twitter-compose|iphone-ott|gh-issue|ig-|gplus-|vine-|wa-|peri-|gp-|ipad-|ipad2-|iphone4-|og-like|siri|airbnb|abnb-|qwikster|snap-|story-|telegram|tg-|tumblr|win81|ios7|touchid|touch-|snowden|heartbleed|icebucket|ice-|applepay|pay-|material|slack|twitch|gwx|win10|am-|le-|echo|discord|edge|blockers|add-cart|bid-form|homestead|friendster|gmail|flickr|myspace|blogger|napster|itunes|appstore|android|chrome|farm-|4sq-|spotify-|netflix|dropbox|reddit|digg|linkedin|craigslist|iuma|webring|year-game|icq-|msn-|tw-|hb-|watch-|discover-|dc-|timeline-|iphone6-|siri-|av-search|ns-download|lycos-search|sj-planet|drudge-story|y2k-|td-|paypal-send|fish-|wh-map|hotmail-|yahoo-wander|sd-comment)[a-z0-9-]*/gi;
+    /data-(?:csotd|ssl-form|portal|pc-sub|google-lucky|aim-|mq-form|wiki-save|su-|pb-|fb-|yt-upload|twitter-compose|iphone-ott|gh-issue|ig12-|ig-|gplus-|vine-|wa-|peri-|gp-|ipad-|ipad2-|iphone4-|iphone7-|og-like|siri|airbnb|abnb-|qwikster|snap-|story-|telegram|tg-|tumblr|win81|ios7|touchid|touch-|snowden|heartbleed|icebucket|ice-|applepay|pay-|material|slack|twitch|gwx|win10|am-|le-|echo|discord|edge|blockers|add-cart|bid-form|homestead|friendster|gmail|flickr|myspace|blogger|napster|itunes|appstore|android|chrome|farm-|4sq-|spotify-|netflix|dropbox|reddit|digg|linkedin|craigslist|iuma|webring|year-game|icq-|msn-|tw-|hb-|watch-|discover-|dc-|timeline-|iphone6-|siri-|av-search|ns-download|lycos-search|sj-planet|drudge-story|y2k-|td-|paypal-send|fish-|wh-map|hotmail-|yahoo-wander|sd-comment|faceid-|gdpr-|ipo-|sopa-|4x-field|4x-hop|4x-go|4x-req|pogo-|igtv-|fyp-|hear-|ns-|hp-|sp-|fn-|wannacry|equifax|musically|airpods|ballot-|dyn-|react-|t280|teams|switch|maps-|sv-|ie6-|beacon-|flash|ip07-|gm07-|sv07-|fb07-|tw07-|yt07-|ms07-|dg07-|vi07-|kd07-|tb07-|xa07-|xb07-|lk09-|fv09-|bg09-|ip09-|as09-|tw09-|fq09-|ks09-|w709-|gp11-|sp11-|sr11-|tl11-|pd11-|ab11-|ig11-|qw11-|tw11-|vn13-|ig13-|sn13-|io13-|td13-|sd13-|tg13-|tb13-|w813-|xa-|xb-|peg-|dplus-|tt-|arc-|tv-|stadia-|ip11-|ip12-|app-|ch-|w10-|w11-|zoom-|reels-|ccpa-|att-|sig-|copilot-|meta-|fb1b-|flip-|pin-|medium-|path-|among-|five-|cr-|mm-|gpt-|wrd-|mj-|cga-|br-|bing-|th-|g4-|bard-|elon-|yg-|x-go|x-req|x-field|x-trap|prompt)[a-z0-9-]*/gi;
   const named = html.match(namedRe) || [];
   out.namedProduct = named.length > 0;
   out.namedHooks = Array.from(new Set(named)).slice(0, 8);
@@ -265,8 +319,8 @@ function gradePage(cls, whenKey) {
   if (cls.destField && !cls.namedProduct) return "PLAQUE";
   if (cls.plaque && cls.namedProduct) return "REAL+PLAQUE";
   if (cls.plaque && !cls.namedProduct) return "PLAQUE";
-  if (cls.pop3x) return "LEFTOVER";
-  if (cls.pack) return "LEFTOVER";
+  if (cls.pop3x && !cls.namedProduct) return "LEFTOVER";
+  if (cls.pack && !cls.namedProduct) return "LEFTOVER";
   if (cls.thesis && !cls.namedProduct) return "LITERACY";
   if (cls.namedProduct) return "REAL";
   if (cls.realSave && !cls.namedProduct) return "LITERACY";

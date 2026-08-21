@@ -2,6 +2,7 @@
 /**
  * Two leftover extra games per shipped year (extra-a / extra-b).
  * Minute machines: empty Finish never writes · year-true verbs write ittYY-game-*.
+ * Lean years (2012) have extra-c/d/e only — dest-missing extras skip, they are not invented.
  */
 const fs = require("fs");
 const path = require("path");
@@ -10,10 +11,17 @@ const { enterYear, goImmersion, contentFrame, killOverlays } = require("./helper
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2018; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2019; y++) {
+  if (y === 2007 || y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
+  YEARS.push(String(y));
+}
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "index.html"));
+}
+
+function extraOnDisk(year, file) {
+  return fs.existsSync(path.join(ROOT, "years", year, "sites", "playable", file));
 }
 
 function prefix(year) {
@@ -27,6 +35,10 @@ function prefix(year) {
  */
 async function openExtra(page, year, file) {
   test.skip(!yearOnDisk(year), year + " not on disk");
+  test.skip(
+    !extraOnDisk(year, file),
+    year + " " + file + " not on disk (lean — extra-c/d/e only)"
+  );
   await enterYear(page, year);
   await page.evaluate((p) => {
     Object.keys(localStorage)

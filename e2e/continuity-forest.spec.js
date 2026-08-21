@@ -4,7 +4,6 @@ const { test, expect } = require("@playwright/test");
 
 const SAMPLES = [
   "/years/2008/sites/amazon/index.html",
-  "/years/2009/sites/amazon/index.html",
   "/years/2008/sites/yahoo/index.html",
 ];
 

@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every popular-session flow 1994–2020: incomplete never writes · complete writes.
+ * Every popular-session flow 1994–2019: incomplete never writes · complete writes.
  * Stars: page loads as that year (machine already covered by one-thing).
  */
 const { test, expect } = require("@playwright/test");

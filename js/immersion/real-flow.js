@@ -232,6 +232,7 @@
             var nexts = doc.querySelectorAll("[data-next-flow]");
             var ni;
             for (ni = 0; ni < nexts.length; ni++) {
+              if (nexts[ni].closest && nexts[ni].closest("[data-4x-panel]")) continue;
               nexts[ni].removeAttribute("hidden");
               nexts[ni].style.display = "";
             }
@@ -317,6 +318,7 @@
             var nexts = doc.querySelectorAll("[data-next-flow]");
             var ni;
             for (ni = 0; ni < nexts.length; ni++) {
+              if (nexts[ni].closest && nexts[ni].closest("[data-4x-panel]")) continue;
               nexts[ni].removeAttribute("hidden");
               nexts[ni].style.display = "";
             }

@@ -45,6 +45,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2001/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2001/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2001/sites/playable/extra-c.html",
       "sites/moveon/index.html": "http://museum.local/years/2001/sites/moveon/index.html",
       "sites/grok/index.html": "http://museum.local/years/2001/sites/grok/index.html",
       "sites/appleimac/index.html": "http://museum.local/years/2001/sites/appleimac/index.html",

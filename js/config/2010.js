@@ -8,9 +8,15 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/extra-e.html",
+    "sites/playable/extra-d.html",
+    "sites/playable/extra-c.html",
     "sites/groupondeal/index.html",
     "sites/quorawait/index.html",
     "sites/instagramios/index.html",
+    "sites/instant/index.html",
+    "sites/facetime/index.html",
+    "sites/kickstarter/index.html",
 
     "pages/home.html",
     "pages/about.html",
@@ -123,6 +129,9 @@
     fallbackUrlBase: "http://home.microsoft.com/intl/web2010/",
     locationHints: [
       { re: /instagram|instagr\.am/i, path: "sites/instagram/index.html" },
+      { re: /instant/i, path: "sites/instant/index.html" },
+      { re: /facetime/i, path: "sites/facetime/index.html" },
+      { re: /kickstarter/i, path: "sites/kickstarter/index.html" },
       { re: /\bask(\.com)?\b/i, path: "sites/ask/index.html" },
       { re: /reddit/i, path: "sites/reddit/index.html" },
       { re: /ipad/i, path: "sites/ipad/index.html" },

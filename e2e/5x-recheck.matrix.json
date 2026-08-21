@@ -800,11 +800,11 @@
       "mode": "panel",
       "star": "sites/instagram/android.html",
       "flows": [
-        {"suffix": "tweets", "room": "sites/twitter/index.html", "next": "sites/facebook/ipo.html", "key": "itt12-tweets", "ok": true, "checks": 2},
+        {"suffix": "pin", "room": "sites/pinterest/index.html", "next": "sites/facebook/ipo.html", "key": "itt12-pin", "ok": true, "checks": 2},
         {"suffix": "fb-ipo", "room": "sites/facebook/ipo.html", "next": "sites/facebook/index.html", "key": "itt12-fb-ipo", "ok": true, "checks": 2},
-        {"suffix": "facebook", "room": "sites/facebook/index.html", "next": "sites/wikipedia/index.html", "key": "itt12-facebook", "ok": true, "checks": 2},
-        {"suffix": "wiki", "room": "sites/wikipedia/index.html", "next": "sites/pinterest/index.html", "key": "itt12-wiki", "ok": true, "checks": 2},
-        {"suffix": "pin", "room": "sites/pinterest/index.html", "next": "sites/instagram/android.html", "key": "itt12-pin", "ok": true, "checks": 2}
+        {"suffix": "facebook", "room": "sites/facebook/index.html", "next": "sites/iphone/maps.html", "key": "itt12-facebook", "ok": true, "checks": 2},
+        {"suffix": "maps", "room": "sites/iphone/maps.html", "next": "sites/wikipedia/sopa.html", "key": "itt12-maps", "ok": true, "checks": 2},
+        {"suffix": "sopa", "room": "sites/wikipedia/sopa.html", "next": "sites/instagram/android.html", "key": "itt12-sopa", "ok": true, "checks": 2}
       ]
     },
     {
@@ -847,7 +847,6 @@
     "2016": "sites/instagram/stories.html",
     "2017": "sites/iphone/x.html",
     "2018": "sites/gdpr/index.html",
-    "2019": "sites/disneyplus/home.html",
-    "2020": "sites/zoom/index.html"
+    "2019": "sites/disneyplus/home.html"
   }
 }

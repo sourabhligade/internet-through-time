@@ -5,9 +5,12 @@
  */
 const { test, expect } = require("@playwright/test");
 
+const WIPED = new Set(["2014"]);
+
 test.describe("3 more leftovers on home — every shipped year", () => {
   for (let y = 1994; y <= 2018; y++) {
     const year = String(y);
+    if (WIPED.has(year)) continue;
     test(`${year} home lists 3 more leftover doors`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
       const strip = page.locator(`[data-itt-pop-more="${year}"]`);

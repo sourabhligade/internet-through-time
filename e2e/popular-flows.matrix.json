@@ -650,56 +650,6 @@
     "next": ""
   },
   {
-    "year": "2007",
-    "id": "F1",
-    "key": "itt07-msn",
-    "suffix": "msn",
-    "path": "/years/2007/sites/msn/index.html",
-    "kind": "new",
-    "field": "query",
-    "next": "../google/index.html"
-  },
-  {
-    "year": "2007",
-    "id": "F2",
-    "key": "itt07-google-q",
-    "suffix": "google-q",
-    "path": "/years/2007/sites/google/index.html",
-    "kind": "reuse",
-    "field": "query",
-    "next": "../ask/index.html"
-  },
-  {
-    "year": "2007",
-    "id": "F3",
-    "key": "itt07-ask",
-    "suffix": "ask",
-    "path": "/years/2007/sites/ask/index.html",
-    "kind": "new",
-    "field": "query",
-    "next": "../aol/index.html"
-  },
-  {
-    "year": "2007",
-    "id": "F4",
-    "key": "itt07-aol",
-    "suffix": "aol",
-    "path": "/years/2007/sites/aol/index.html",
-    "kind": "new",
-    "field": "screen",
-    "next": "../iphone/index.html"
-  },
-  {
-    "year": "2007",
-    "id": "F5",
-    "key": "itt07-iphone",
-    "suffix": "iphone",
-    "path": "/years/2007/sites/iphone/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
     "year": "2008",
     "id": "F1",
     "key": "itt08-msn",
@@ -748,56 +698,6 @@
     "kind": "star",
     "field": null,
     "next": ""
-  },
-  {
-    "year": "2009",
-    "id": "F1",
-    "key": "itt09-ask",
-    "suffix": "ask",
-    "path": "/years/2009/sites/ask/index.html",
-    "kind": "new",
-    "field": "query",
-    "next": "../bing/index.html"
-  },
-  {
-    "year": "2009",
-    "id": "F2",
-    "key": "itt09-bing",
-    "suffix": "bing",
-    "path": "/years/2009/sites/bing/index.html",
-    "kind": "reuse",
-    "field": "query",
-    "next": "../facebook/index.html"
-  },
-  {
-    "year": "2009",
-    "id": "F3",
-    "key": "itt09-likes",
-    "suffix": "likes",
-    "path": "/years/2009/sites/facebook/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2009",
-    "id": "F4",
-    "key": "itt09-foursquare",
-    "suffix": "foursquare",
-    "path": "/years/2009/sites/foursquare/index.html",
-    "kind": "reuse",
-    "field": null,
-    "next": "../facebook/index.html"
-  },
-  {
-    "year": "2009",
-    "id": "F5",
-    "key": "itt09-so",
-    "suffix": "so",
-    "path": "/years/2009/sites/stackoverflow/index.html",
-    "kind": "reuse",
-    "field": null,
-    "next": "../facebook/index.html"
   },
   {
     "year": "2010",
@@ -850,63 +750,13 @@
     "next": "../instagram/index.html"
   },
   {
-    "year": "2011",
-    "id": "F1",
-    "key": "itt11-tweets",
-    "suffix": "tweets",
-    "path": "/years/2011/sites/twitter/index.html",
-    "kind": "new",
-    "field": "tweet",
-    "next": "../groupon/index.html"
-  },
-  {
-    "year": "2011",
-    "id": "F2",
-    "key": "itt11-groupon",
-    "suffix": "groupon",
-    "path": "/years/2011/sites/groupon/index.html",
-    "kind": "new",
-    "field": null,
-    "next": "../tumblr/index.html"
-  },
-  {
-    "year": "2011",
-    "id": "F3",
-    "key": "itt11-tumblr",
-    "suffix": "tumblr",
-    "path": "/years/2011/sites/tumblr/index.html",
-    "kind": "new",
-    "field": null,
-    "next": "../airbnb/index.html"
-  },
-  {
-    "year": "2011",
-    "id": "F4",
-    "key": "itt11-wiki",
-    "suffix": "wiki",
-    "path": "/years/2011/pages/about.html",
-    "kind": "reuse",
-    "field": null,
-    "next": "../sites/airbnb/index.html"
-  },
-  {
-    "year": "2011",
-    "id": "F5",
-    "key": "itt11-airbnb",
-    "suffix": "airbnb",
-    "path": "/years/2011/sites/airbnb/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
     "year": "2012",
     "id": "F1",
-    "key": "itt12-tweets",
-    "suffix": "tweets",
-    "path": "/years/2012/sites/twitter/index.html",
+    "key": "itt12-pin",
+    "suffix": "pin",
+    "path": "/years/2012/sites/pinterest/index.html",
     "kind": "new",
-    "field": "tweet",
+    "field": null,
     "next": "../facebook/ipo.html"
   },
   {
@@ -927,27 +777,27 @@
     "path": "/years/2012/sites/facebook/index.html",
     "kind": "reuse",
     "field": null,
-    "next": "../wikipedia/index.html"
+    "next": "../iphone/maps.html"
   },
   {
     "year": "2012",
     "id": "F4",
-    "key": "itt12-wiki",
-    "suffix": "wiki",
-    "path": "/years/2012/sites/wikipedia/index.html",
+    "key": "itt12-maps",
+    "suffix": "maps",
+    "path": "/years/2012/sites/iphone/maps.html",
     "kind": "reuse",
     "field": null,
-    "next": "../instagram/android.html"
+    "next": "../wikipedia/sopa.html"
   },
   {
     "year": "2012",
     "id": "F5",
-    "key": "itt12-ig-android",
-    "suffix": "ig-android",
-    "path": "/years/2012/sites/instagram/android.html",
-    "kind": "star",
+    "key": "itt12-sopa",
+    "suffix": "sopa",
+    "path": "/years/2012/sites/wikipedia/sopa.html",
+    "kind": "reuse",
     "field": null,
-    "next": ""
+    "next": "../instagram/android.html"
   },
   {
     "year": "2013",
@@ -1298,55 +1148,5 @@
     "kind": "star",
     "field": null,
     "next": ""
-  },
-  {
-    "year": "2020",
-    "id": "F1",
-    "key": "itt20-google",
-    "suffix": "google",
-    "path": "/years/2020/sites/google/index.html",
-    "kind": "new",
-    "field": "query",
-    "next": "../wikipedia/index.html"
-  },
-  {
-    "year": "2020",
-    "id": "F2",
-    "key": "itt20-wiki",
-    "suffix": "wiki",
-    "path": "/years/2020/sites/wikipedia/index.html",
-    "kind": "new",
-    "field": null,
-    "next": "../facebook/index.html"
-  },
-  {
-    "year": "2020",
-    "id": "F3",
-    "key": "itt20-fb",
-    "suffix": "fb",
-    "path": "/years/2020/sites/facebook/index.html",
-    "kind": "new",
-    "field": null,
-    "next": "../zoom/index.html"
-  },
-  {
-    "year": "2020",
-    "id": "F4",
-    "key": "itt20-zoom",
-    "suffix": "zoom",
-    "path": "/years/2020/sites/zoom/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2020",
-    "id": "F5",
-    "key": "itt20-reels",
-    "suffix": "reels",
-    "path": "/years/2020/sites/instagram/reels.html",
-    "kind": "reuse",
-    "field": null,
-    "next": "../zoom/index.html"
   }
 ]

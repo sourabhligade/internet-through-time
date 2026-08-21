@@ -164,18 +164,18 @@
       accent: "#37474f"
     },
     "2007": {
-      id: "boxshift",
-      title: "Box Shift",
+      id: "peg",
+      title: "Peg Walk",
       href: "game.html",
-      key: "itt07-game-boxshift",
-      inspire: "Portal (Oct 2007) + Portal: The Flash Version",
-      blurb: "Push boxes. Hit pads. Open doors. Reach the exit.",
-      why: "Portal rewired puzzle games in 2007. The Flash tribute followed immediately — this is the museum’s original box-and-pad cousin.",
-      era: "Halo 3 and CoD4 owned consoles. Club Penguin went to Disney. The browser still wanted a puzzle.",
-      famous: "Table Tennis + Brick Bat",
-      accent: "#ef6c00"
+      key: "itt07-game-peg",
+      inspire: "Street View (29 May 2007)",
+      blurb: "Walk two launch-city blocks. Not Google art.",
+      why: "2007 is when maps became a place you could stand. The star is still iPhone Safari.",
+      era: "XP + IE 7. iPhone ships late. Most people still click Digg from a laptop.",
+      famous: "Pocket Snake + Concentration",
+      accent: "#1565c0",
     },
-    "2008": {
+        "2008": {
       id: "goospan",
       title: "Goo Span",
       href: "game.html",
@@ -188,18 +188,18 @@
       accent: "#5d4037"
     },
     "2009": {
-      id: "plotneighbors",
+      id: "plot",
       title: "Plot Neighbors",
       href: "game.html",
-      key: "itt09-game-plotneighbors",
-      inspire: "FarmVille (June 2009)",
-      blurb: "Pass the literacy checks. Plant. Harvest before wilt. Ask a neighbor.",
-      why: "FarmVille made Facebook a game platform. Minecraft and League of Legends also began in 2009 — the viral web hit was a wilt timer.",
-      era: "Angry Birds landed in December. The feed was already a farm.",
-      famous: "Fall Blocks + Desk Mines",
-      accent: "#2e7d32"
+      key: "itt09-game-plot",
+      inspire: "FarmVille (19 Jun 2009)",
+      blurb: "Plant two leftover plots. Pay-to-skip never scores.",
+      why: "2009 is when farms nags the feed. The star is still Facebook Like.",
+      era: "XP + IE 8. Like. Bing. 3GS. Most people still live on a laptop.",
+      famous: "Pocket Snake + Concentration",
+      accent: "#689f38"
     },
-    "2010": {
+        "2010": {
       id: "slingnest",
       title: "Sling Nest",
       href: "game.html",
@@ -216,48 +216,36 @@
       title: "Letter Swap",
       href: "game.html",
       key: "itt11-game-letterswap",
-      inspire: "Words with Friends / rack-word phones",
-      blurb: "Deal a rack. Play a word. Beat the clock.",
-      why: "2011 phones were full of friend-rack word games. This is the museum’s original tiles — not Zynga art.",
-      era: "Spotify landed in the US. Siri talked back. The phone still wanted seven letters.",
-      famous: "Concentration + Table Tennis",
+      inspire: "Words-with-friends-class leftover — not Zynga art",
+      blurb: "Swap two leftover tiles. Zynga board never scores.",
+      why: "2011 leftover cabinet. The star is still Google+.",
+      era: "Win7 + IE 9. Circles. Spotify US. Siri.",
+      famous: "Pocket Snake + Concentration",
       accent: "#dd4b39"
     },
-    "2012": {
+        "2012": {
       id: "guessdoodle",
       title: "Guess Doodle",
       href: "game.html",
       key: "itt12-game-guessdoodle",
-      inspire: "Draw Something (Feb 2012) class — not OMGPop art",
-      blurb: "Look at the museum doodle. Pick the word. Incomplete never writes.",
-      why: "Draw Something was the 2012 phone parlor: pass a scribble, guess the word. Zynga bought OMGPop in March. This cabinet is original lines — not their marks.",
-      era: "Instagram hit Android. Facebook IPO’d. The phone still wanted a shared doodle.",
-      famous: "Fall Blocks + Concentration",
-      accent: "#15b7c7"
+      inspire: "Draw Something (6 Feb 2012) — OMGPOP class, not Zynga art",
+      blurb: "Start. Match the prompt. Incomplete never writes.",
+      why: "Draw Something ate February. This cabinet is original strokes — not their art.",
+      era: "The square photo leaves the iPhone. On the phone, a doodle still wins the leftover hour.",
+      famous: "Guess Doodle",
+      accent: "#125688"
     },
     "2013": {
       id: "loopsix",
       title: "Loop Six",
       href: "game.html",
       key: "itt13-game-loopsix",
-      inspire: "Vine (Jan 2013) 6-second hold class — not Vine software",
-      blurb: "Hold the loop for six seconds. Incomplete never writes.",
-      why: "Vine made the phone a six-second camera. This cabinet is a museum loop — not their marks, not Flappy as gold.",
-      era: "Stories lasted a day. Icons went flat. The homepage also said PRISM.",
-      famous: "Snake + Brick Bat",
+      inspire: "Vine-class leftover — six beats, not 15s",
+      blurb: "Loop two leftover beats. 15s never scores.",
+      why: "2013 leftover cabinet. The star is still Vine.",
+      era: "Win7 + IE 9. Six seconds. Flat phone. Stories last a day.",
+      famous: "Pocket Snake + Concentration",
       accent: "#00bf8f"
-    },
-    "2014": {
-      id: "tilefold",
-      title: "Tile Fold",
-      href: "game.html",
-      key: "itt14-game-tilefold",
-      inspire: "2048 (9 Mar 2014) class after Threes — not Cirulli source",
-      blurb: "Fold tiles. First merge writes. Incomplete never writes.",
-      why: "2048 was the 2014 browser parlor. This cabinet is a museum grid — not their code.",
-      era: "WhatsApp sold. Heartbleed leaked. The homepage still asked you to dump ice.",
-      famous: "Desk Mines + Pocket Snake",
-      accent: "#25d366"
     },
     "2015": {
       id: "blobrush",
@@ -306,6 +294,30 @@
       era: "Accept All is highlighted. Manage is the real click.",
       famous: "Consent Dash",
       accent: "#1565c0"
+    },
+    "2019": {
+      id: "continuerow",
+      title: "Continue Row",
+      href: "game.html",
+      key: "itt19-game-continuerow",
+      inspire: "Disney+ Who’s watching class — trial is the trap; no official art",
+      blurb: "Continue is the save. Incomplete never writes.",
+      why: "Who’s watching is the door. The star is still Disney+ Continue.",
+      era: "Trial is highlighted. Continue is the real click.",
+      famous: "Continue Row",
+      accent: "#e50914"
+    },
+    "2020": {
+      id: "among",
+      title: "Sus Vote",
+      href: "game.html",
+      key: "itt20-game-among",
+      inspire: "Among Us surge — 2018 game, 2020 Steam peak; no official art",
+      blurb: "Eject is the save. Incomplete never writes.",
+      why: "The meeting is the star. The game is a 2018 leftover that exploded in September.",
+      era: "Lockdown tab. Participants, not users.",
+      famous: "Brick Bat + Concentration",
+      accent: "#2e86c1"
     }
   };
 })(typeof window !== "undefined" ? window : this);

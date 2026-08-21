@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2004/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2004/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2004/sites/playable/extra-c.html",
       "sites/yelplocal/index.html": "http://museum.local/years/2004/sites/yelplocal/index.html",
       "sites/orkutcircle/index.html": "http://museum.local/years/2004/sites/orkutcircle/index.html",
       "sites/flickrpro/index.html": "http://museum.local/years/2004/sites/flickrpro/index.html",

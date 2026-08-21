@@ -44,6 +44,15 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2000/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2000/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2000/sites/playable/extra-c.html",
+      "sites/homestar/more.html": "http://museum.local/years/2000/sites/homestar/more.html",
+      "sites/travelocity/more.html": "http://museum.local/years/2000/sites/travelocity/more.html",
+      "sites/expedia/more.html": "http://museum.local/years/2000/sites/expedia/more.html",
+      "sites/everything2/more.html": "http://museum.local/years/2000/sites/everything2/more.html",
+      "sites/baidu/more.html": "http://museum.local/years/2000/sites/baidu/more.html",
+      "sites/half/more.html": "http://museum.local/years/2000/sites/half/more.html",
       "sites/ivillage/index.html": "http://museum.local/years/2000/sites/ivillage/index.html",
       "sites/womencom/index.html": "http://museum.local/years/2000/sites/womencom/index.html",
       "sites/napsterweb/index.html": "http://museum.local/years/2000/sites/napsterweb/index.html",

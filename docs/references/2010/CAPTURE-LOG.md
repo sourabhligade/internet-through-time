@@ -1,8 +1,7 @@
 # 2010 capture log
 
-**Updated:** 2026-08-17 leftover lean tree  
-**Status:** Lean `years/2010/` (38 HTML). `assets/period/2010/` recreated empty. P0 stills **[failed-final]** this pass (folder was missing; no invented pixels).  
-**Pixel harvest:** rooms stamp `[failed-final]` · retry WA `im_` before claiming [wa]
+**Updated:** 2026-08-19 leftover execute  
+**Status:** Lean `years/2010/` (~50 HTML). P0 stills harvested or stamped honest. Never invented brand pixels.
 
 ## Full research
 
@@ -15,15 +14,15 @@
 
 | ID | Target | Status | Dest / note |
 |----|--------|--------|-------------|
-| H10-01 | iPad product hero | **[wa]** | `assets/period/2010/ipad/hero-wa.jpg` · WA ~201005 · images.apple.com/ipad · 1120×480 |
-| H10-02 | iPad prices art | **[failed-final]** | CDX paths 404 this pass · prices table HTML densify |
-| H10-03 | iPhone 4 hero | **[failed-final]** | multiple WA 404 · RECON text shell |
-| H10-04 | FaceTime / Retina art | **[failed-final]** | WA 404 · multipage text densify |
-| H10-05 | Instagram 2010 UI | **[failed-final]** | WA 404/503 · RECON UI bar |
-| H10-06 | Instagram logo | **[failed-final]** | WA 404/503 · RECON |
-| H10-07 | Facebook 2010 chrome | **[wa]** | `facebook/logo-wa.png` · static.ak.fbcdn · + RECON blue bar wordmark |
-| H10-08 | App Store scale art | **[failed-final]** | WA 404 · catalog honesty multipage |
-| H10-09 | Foursquare logo | **[wa]** continuity | `foursquare/logo-wa.png` · copy from 2009 pack |
+| H10-01 | iPad product still | **[wa]** | `assets/period/2010/ipad/hero-wa.jpg` · WA 20100519231413 · `images.apple.com/ipad/3g/images/callout_1_20100510.jpg` · JPEG 352×200 · wired `sites/ipad/index.html` |
+| H10-02 | iPad prices art | **[failed-final]** | CDX callouts only · prices table is HTML |
+| H10-03 | iPhone 4 product hero | **[wa]** apps poster | `assets/period/2010/iphone/hero-4-wa.jpg` · WA 20100807002512 · `images.apple.com/iphone/apps-for-iphone/images/poster-behindtheapps-20100607.jpg` · JPEG 334×194 · Exif 2010-06-05 · **not** the stainless-band product shot · wired `sites/iphone/index.html` |
+| H10-04 | FaceTime / Retina art | **[failed-final]** | no year-correct still this pass · text densify |
+| H10-05 | Instagram 2010 UI | **[failed-final]** | CDX `instagr.am` empty this pass · RECON well |
+| H10-06 | Instagram logo | **[failed-final]** | same · RECON wordmark |
+| H10-07 | Facebook 2010 chrome | **[failed-final]** | dest `facebook/logo-wa.png` **not on disk** · room stamps failed-final |
+| H10-08 | App Store scale art | **[failed-final]** | no 2010 appstore folder on lean tree |
+| H10-09 | Foursquare logo | **[continuity 2009]** | `foursquare/logo-wa.png` copied from `assets/period/2009/foursquare/logo-wa.png` · wired |
 | cont | Gmail · YT · Hulu · Dropbox · Spotify EU · Chrome | **reuse 2008–09** | year-true |
 
 ## Wired into HTML

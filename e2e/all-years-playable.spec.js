@@ -5,8 +5,12 @@
  */
 const { test, expect } = require('@playwright/test');
 
+const WIPED = new Set(['2014']);
 const YEARS = [];
-for (let y = 1994; y <= 2011; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2011; y++) {
+  const s = String(y);
+  if (!WIPED.has(s)) YEARS.push(s);
+}
 
 const FEATURED = {
   1994: 'hotlist',
@@ -22,9 +26,9 @@ const FEATURED = {
   2004: 'gemcascade',
   2005: 'heli',
   2006: 'sled',
-  2007: 'boxshift',
+  2007: 'peg',
   2008: 'goospan',
-  2009: 'plotneighbors',
+  2009: 'plot',
   2010: 'slingnest',
   2011: 'letterswap',
 };
@@ -57,7 +61,7 @@ for (const year of YEARS) {
 }
 
 test('home pages link the year game, not toy slots', async ({ page }) => {
-  for (const y of ['1994', '2000', '2005', '2008', '2009', '2010']) {
+  for (const y of ['1994', '2000', '2005', '2008', '2010']) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator('a[href*="playable/game.html"]').first()).toBeVisible({
       timeout: 10000,

@@ -1,5 +1,6 @@
 /**
- * Two leftover extra games per shipped year (1994–2018).
+ * Leftover extra games per shipped year (1994–2018).
+ * A/B = original minute extras. C/D/E = 3-more REAL games pack.
  * Consumed by js/immersion/year-playable.js.
  */
 (function (global) {
@@ -188,21 +189,7 @@
       "key": "itt06-game-diggup"
     }
   ],
-  "2007": [
-    {
-      "id": "safurl",
-      "title": "Safari URL",
-      "href": "extra-a.html",
-      "key": "itt07-game-safurl"
-    },
-    {
-      "id": "svgrab",
-      "title": "Street View grab",
-      "href": "extra-b.html",
-      "key": "itt07-game-svgrab"
-    }
-  ],
-  "2008": [
+    "2008": [
     {
       "id": "storeget",
       "title": "App Store get",
@@ -216,21 +203,7 @@
       "key": "itt08-game-chromebox"
     }
   ],
-  "2009": [
-    {
-      "id": "likeburst",
-      "title": "Like burst",
-      "href": "extra-a.html",
-      "key": "itt09-game-likeburst"
-    },
-    {
-      "id": "farmwilt",
-      "title": "Farm wilt",
-      "href": "extra-b.html",
-      "key": "itt09-game-farmwilt"
-    }
-  ],
-  "2010": [
+    "2010": [
     {
       "id": "ogburst",
       "title": "Open Graph burst",
@@ -244,61 +217,7 @@
       "key": "itt10-game-ipadtilt"
     }
   ],
-  "2011": [
-    {
-      "id": "circladd",
-      "title": "Circles add",
-      "href": "extra-a.html",
-      "key": "itt11-game-circladd"
-    },
-    {
-      "id": "spotplay",
-      "title": "Spotify US play",
-      "href": "extra-b.html",
-      "key": "itt11-game-spotplay"
-    }
-  ],
-  "2012": [
-    {
-      "id": "andshare",
-      "title": "Android share",
-      "href": "extra-a.html",
-      "key": "itt12-game-andshare"
-    },
-    {
-      "id": "ipopin",
-      "title": "IPO pin",
-      "href": "extra-b.html",
-      "key": "itt12-game-ipopin"
-    }
-  ],
-  "2013": [
-    {
-      "id": "vinhold",
-      "title": "Vine hold",
-      "href": "extra-a.html",
-      "key": "itt13-game-vinhold"
-    },
-    {
-      "id": "snap24",
-      "title": "Story 24h",
-      "href": "extra-b.html",
-      "key": "itt13-game-snap24"
-    }
-  ],
-  "2014": [
-    {
-      "id": "wainstall2",
-      "title": "WA install tap",
-      "href": "extra-a.html",
-      "key": "itt14-game-wainstall2"
-    },
-    {
-      "id": "bleedack",
-      "title": "Heartbleed rotate",
-      "href": "extra-b.html",
-      "key": "itt14-game-bleedack"
-    }
+    "2012": [
   ],
   "2015": [
     {
@@ -355,6 +274,82 @@
       "href": "extra-b.html",
       "key": "itt18-game-fyptap"
     }
+  ],
+  "2019": [
+    {
+      "id": "whoswatch",
+      "title": "Who’s watch",
+      "href": "extra-a.html",
+      "key": "itt19-game-whoswatch"
+    },
+    {
+      "id": "trialtrap",
+      "title": "Trial trap",
+      "href": "extra-b.html",
+      "key": "itt19-game-trialtrap"
+    }
   ]
 };
+  /* ITT-3G:start */
+  ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'gopherdig',title:'Gopher Dig',href:"extra-c.html",key:"itt94-game-gopherdig"});
+  ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'hang144',title:'14.4 Hang',href:"extra-d.html",key:"itt94-game-hang144"});
+  ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'gbflood',title:'Guestbook Flood',href:"extra-e.html",key:"itt94-game-gbflood"});
+  ;(ITT.yearExtraGames['1995'] = ITT.yearExtraGames['1995'] || []).push({id:'appletload',title:'Applet Load',href:"extra-c.html",key:"itt95-game-appletload"});
+  ;(ITT.yearExtraGames['1995'] = ITT.yearExtraGames['1995'] || []).push({id:'geoplot',title:'Homestead Plot',href:"extra-d.html",key:"itt95-game-geoplot"});
+  ;(ITT.yearExtraGames['1995'] = ITT.yearExtraGames['1995'] || []).push({id:'soldeal',title:'Win95 Sol Deal',href:"extra-e.html",key:"itt95-game-soldeal"});
+  ;(ITT.yearExtraGames['1996'] = ITT.yearExtraGames['1996'] || []).push({id:'swbadge',title:'Shockwave Badge',href:"extra-c.html",key:"itt96-game-swbadge"});
+  ;(ITT.yearExtraGames['1996'] = ITT.yearExtraGames['1996'] || []).push({id:'fsskip',title:'FutureSplash Skip',href:"extra-d.html",key:"itt96-game-fsskip"});
+  ;(ITT.yearExtraGames['1996'] = ITT.yearExtraGames['1996'] || []).push({id:'jamquiz',title:'Jam Planet Quiz',href:"extra-e.html",key:"itt96-game-jamquiz"});
+  ;(ITT.yearExtraGames['1997'] = ITT.yearExtraGames['1997'] || []).push({id:'classiclobby',title:'Classic Lobby',href:"extra-c.html",key:"itt97-game-classiclobby"});
+  ;(ITT.yearExtraGames['1997'] = ITT.yearExtraGames['1997'] || []).push({id:'acroround',title:'Acro Round',href:"extra-d.html",key:"itt97-game-acroround"});
+  ;(ITT.yearExtraGames['1997'] = ITT.yearExtraGames['1997'] || []).push({id:'zonespades',title:'Zone Spades',href:"extra-e.html",key:"itt97-game-zonespades"});
+  ;(ITT.yearExtraGames['1998'] = ITT.yearExtraGames['1998'] || []).push({id:'yparlor',title:'Yahoo Parlor',href:"extra-c.html",key:"itt98-game-yparlor"});
+  ;(ITT.yearExtraGames['1998'] = ITT.yearExtraGames['1998'] || []).push({id:'jacknet',title:'Jack Netshow',href:"extra-d.html",key:"itt98-game-jacknet"});
+  ;(ITT.yearExtraGames['1998'] = ITT.yearExtraGames['1998'] || []).push({id:'bannerdodge',title:'Banner Dodge',href:"extra-e.html",key:"itt98-game-bannerdodge"});
+  ;(ITT.yearExtraGames['1999'] = ITT.yearExtraGames['1999'] || []).push({id:'pogotile',title:'Pogo Tile',href:"extra-c.html",key:"itt99-game-pogotile"});
+  ;(ITT.yearExtraGames['1999'] = ITT.yearExtraGames['1999'] || []).push({id:'picohall',title:'Pico Hall',href:"extra-d.html",key:"itt99-game-picohall"});
+  ;(ITT.yearExtraGames['1999'] = ITT.yearExtraGames['1999'] || []).push({id:'neostock',title:'Neopets Stock',href:"extra-e.html",key:"itt99-game-neostock"});
+  ;(ITT.yearExtraGames['2000'] = ITT.yearExtraGames['2000'] || []).push({id:'diamgrid',title:'Diamond Grid',href:"extra-c.html",key:"itt00-game-diamgrid"});
+  ;(ITT.yearExtraGames['2000'] = ITT.yearExtraGames['2000'] || []).push({id:'hsloop',title:'Homestar Loop',href:"extra-d.html",key:"itt00-game-hsloop"});
+  ;(ITT.yearExtraGames['2000'] = ITT.yearExtraGames['2000'] || []).push({id:'ngjudge',title:'Portal Judge',href:"extra-e.html",key:"itt00-game-ngjudge"});
+  ;(ITT.yearExtraGames['2001'] = ITT.yearExtraGames['2001'] || []).push({id:'minipitch',title:'Miniclip Pitch',href:"extra-c.html",key:"itt01-game-minipitch"});
+  ;(ITT.yearExtraGames['2001'] = ITT.yearExtraGames['2001'] || []).push({id:'appletslice',title:'Applet Slice',href:"extra-d.html",key:"itt01-game-appletslice"});
+  ;(ITT.yearExtraGames['2001'] = ITT.yearExtraGames['2001'] || []).push({id:'redpatch',title:'Code Red Patch',href:"extra-e.html",key:"itt01-game-redpatch"});
+  ;(ITT.yearExtraGames['2002'] = ITT.yearExtraGames['2002'] || []).push({id:'stickwalk',title:'Stick Walk',href:"extra-c.html",key:"itt02-game-stickwalk"});
+  ;(ITT.yearExtraGames['2002'] = ITT.yearExtraGames['2002'] || []).push({id:'growsprout',title:'GROW Sprout',href:"extra-d.html",key:"itt02-game-growsprout"});
+  ;(ITT.yearExtraGames['2002'] = ITT.yearExtraGames['2002'] || []).push({id:'fleetnight',title:'Fleet Night',href:"extra-e.html",key:"itt02-game-fleetnight"});
+  ;(ITT.yearExtraGames['2003'] = ITT.yearExtraGames['2003'] || []).push({id:'kolturn',title:'KoL Turn',href:"extra-c.html",key:"itt03-game-kolturn"});
+  ;(ITT.yearExtraGames['2003'] = ITT.yearExtraGames['2003'] || []).push({id:'pointclick',title:'Point Click',href:"extra-d.html",key:"itt03-game-pointclick"});
+  ;(ITT.yearExtraGames['2003'] = ITT.yearExtraGames['2003'] || []).push({id:'gaghand',title:'Gag Hand',href:"extra-e.html",key:"itt03-game-gaghand"});
+  ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'ntight',title:'Tight Jump',href:"extra-c.html",key:"itt04-game-ntight"});
+  ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'addictpick',title:'Addicting Pick',href:"extra-d.html",key:"itt04-game-addictpick"});
+  ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'puckslap',title:'Puck Slap',href:"extra-e.html",key:"itt04-game-puckslap"});
+  ;(ITT.yearExtraGames['2005'] = ITT.yearExtraGames['2005'] || []).push({id:'stickday',title:'Stick Life Day',href:"extra-c.html",key:"itt05-game-stickday"});
+  ;(ITT.yearExtraGames['2005'] = ITT.yearExtraGames['2005'] || []).push({id:'carttime',title:'Cart Timing',href:"extra-d.html",key:"itt05-game-carttime"});
+  ;(ITT.yearExtraGames['2005'] = ITT.yearExtraGames['2005'] || []).push({id:'shaftdig',title:'Shaft Dig',href:"extra-e.html",key:"itt05-game-shaftdig"});
+  ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'kongbadge2',title:'Kong Badge',href:"extra-c.html",key:"itt06-game-kongbadge2"});
+  ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'fancydash',title:'Fancy Dash',href:"extra-d.html",key:"itt06-game-fancydash"});
+  ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'flowcell',title:'Flow Cell',href:"extra-e.html",key:"itt06-game-flowcell"});
+        ;(ITT.yearExtraGames['2008'] = ITT.yearExtraGames['2008'] || []).push({id:'fourkey',title:'Four Key Dash',href:"extra-c.html",key:"itt08-game-fourkey"});
+  ;(ITT.yearExtraGames['2008'] = ITT.yearExtraGames['2008'] || []).push({id:'touchroom',title:'Touch Room',href:"extra-d.html",key:"itt08-game-touchroom"});
+  ;(ITT.yearExtraGames['2008'] = ITT.yearExtraGames['2008'] || []).push({id:'burnrope',title:'Burn Rope',href:"extra-e.html",key:"itt08-game-burnrope"});
+        ;(ITT.yearExtraGames['2010'] = ITT.yearExtraGames['2010'] || []).push({id:'raghill',title:'Rag Hill',href:"extra-c.html",key:"itt10-game-raghill"});
+  ;(ITT.yearExtraGames['2010'] = ITT.yearExtraGames['2010'] || []).push({id:'fourobj',title:'Four Objects',href:"extra-d.html",key:"itt10-game-fourobj"});
+  ;(ITT.yearExtraGames['2010'] = ITT.yearExtraGames['2010'] || []).push({id:'filterhold',title:'Filter Hold',href:"extra-e.html",key:"itt10-game-filterhold"});
+        ;(ITT.yearExtraGames['2012'] = ITT.yearExtraGames['2012'] || []).push({id:'frogslice',title:'Frog Slice',href:"extra-c.html",key:"itt12-game-frogslice"});
+  ;(ITT.yearExtraGames['2012'] = ITT.yearExtraGames['2012'] || []).push({id:'repubpress',title:'Republia Press',href:"extra-d.html",key:"itt12-game-repubpress"});
+  ;(ITT.yearExtraGames['2012'] = ITT.yearExtraGames['2012'] || []).push({id:'strokeguess',title:'Stroke Guess',href:"extra-e.html",key:"itt12-game-strokeguess"});
+  ;(ITT.yearExtraGames['2015'] = ITT.yearExtraGames['2015'] || []).push({id:'splitdrill',title:'Split Drill',href:"extra-c.html",key:"itt15-game-splitdrill"});
+  ;(ITT.yearExtraGames['2015'] = ITT.yearExtraGames['2015'] || []).push({id:'hearthold',title:'Heart Hold',href:"extra-d.html",key:"itt15-game-hearthold"});
+  ;(ITT.yearExtraGames['2015'] = ITT.yearExtraGames['2015'] || []).push({id:'traywhack',title:'Tray Whack',href:"extra-e.html",key:"itt15-game-traywhack"});
+  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'coilsnake',title:'Coil Snake',href:"extra-c.html",key:"itt16-game-coilsnake"});
+  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'tankslice',title:'Tank Slice',href:"extra-d.html",key:"itt16-game-tankslice"});
+  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'slideexpire',title:'Slide Expire',href:"extra-e.html",key:"itt16-game-slideexpire"});
+  ;(ITT.yearExtraGames['2017'] = ITT.yearExtraGames['2017'] || []).push({id:'clipdesk',title:'Clip Desk',href:"extra-c.html",key:"itt17-game-clipdesk"});
+  ;(ITT.yearExtraGames['2017'] = ITT.yearExtraGames['2017'] || []).push({id:'hintguess',title:'Hint Guess',href:"extra-d.html",key:"itt17-game-hintguess"});
+  ;(ITT.yearExtraGames['2017'] = ITT.yearExtraGames['2017'] || []).push({id:'pondtier',title:'Pond Tier',href:"extra-e.html",key:"itt17-game-pondtier"});
+  ;(ITT.yearExtraGames['2018'] = ITT.yearExtraGames['2018'] || []).push({id:'range15',title:'Range 15',href:"extra-c.html",key:"itt18-game-range15"});
+  ;(ITT.yearExtraGames['2018'] = ITT.yearExtraGames['2018'] || []).push({id:'driftcorner',title:'Drift Corner',href:"extra-d.html",key:"itt18-game-driftcorner"});
+  ;(ITT.yearExtraGames['2018'] = ITT.yearExtraGames['2018'] || []).push({id:'bannerfight',title:'Banner Fight',href:"extra-e.html",key:"itt18-game-bannerfight"});
+  /* ITT-3G:end */
 })(typeof window !== "undefined" ? window : this);

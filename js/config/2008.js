@@ -48,6 +48,9 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/2008/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/2008/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/2008/sites/playable/extra-c.html",
       "sites/spotifyeu/index.html": "http://museum.local/years/2008/sites/spotifyeu/index.html",
       "sites/dropboxfolder/index.html": "http://museum.local/years/2008/sites/dropboxfolder/index.html",
       "sites/huluwatch/index.html": "http://museum.local/years/2008/sites/huluwatch/index.html",

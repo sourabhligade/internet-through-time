@@ -113,14 +113,6 @@ FAMOUS = {
         ("snake", "Pocket Snake", "TikTok year — Snake is the anti-FYP toy."),
         ("breakout", "Brick Bat", "HTML5 arcade."),
     ],
-    2020: [
-        ("breakout", "Brick Bat", "Not Among Us (Sus Vote). Breakout is the other lockdown tab."),
-        ("memory", "Concentration", "Zoom-break pair games."),
-    ],
-    2021: [
-        ("memory", "Concentration", "Not Wordle (Five Letter). Pairs is the other daily."),
-        ("snake", "Pocket Snake", "Still the first thing anyone codes."),
-    ],
 }
 
 WHY_OSS = (

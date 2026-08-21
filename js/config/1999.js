@@ -45,6 +45,15 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/1999/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/1999/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/1999/sites/playable/extra-c.html",
+      "sites/yahoomessenger/more.html": "http://museum.local/years/1999/sites/yahoomessenger/more.html",
+      "sites/theonion/more.html": "http://museum.local/years/1999/sites/theonion/more.html",
+      "sites/etrade/more.html": "http://museum.local/years/1999/sites/etrade/more.html",
+      "sites/webvan/more.html": "http://museum.local/years/1999/sites/webvan/more.html",
+      "sites/egroups/more.html": "http://museum.local/years/1999/sites/egroups/more.html",
+      "sites/neopets/more.html": "http://museum.local/years/1999/sites/neopets/more.html",
       "sites/theonion/index.html": "http://museum.local/years/1999/sites/theonion/index.html",
       "sites/drkoop/index.html": "http://museum.local/years/1999/sites/drkoop/index.html",
       "sites/sixdegrees/index.html": "http://museum.local/years/1999/sites/sixdegrees/index.html",

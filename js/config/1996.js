@@ -46,6 +46,17 @@
       connectBusyChance: 0.13
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/1996/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/1996/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/1996/sites/playable/extra-c.html",
+      "sites/infoseek/more.html": "http://museum.local/years/1996/sites/infoseek/more.html",
+      "sites/angelfire/more.html": "http://museum.local/years/1996/sites/angelfire/more.html",
+      "sites/plugin/more.html": "http://museum.local/years/1996/sites/plugin/more.html",
+      "sites/msn/more.html": "http://museum.local/years/1996/sites/msn/more.html",
+      "sites/totalny/more.html": "http://museum.local/years/1996/sites/totalny/more.html",
+      "sites/theglobe/more.html": "http://museum.local/years/1996/sites/theglobe/more.html",
+      "sites/askjeeves/more.html": "http://museum.local/years/1996/sites/askjeeves/more.html",
+      "sites/mtv/more.html": "http://museum.local/years/1996/sites/mtv/more.html",
       "sites/totalny/index.html": "http://museum.local/years/1996/sites/totalny/index.html",
       "sites/pathfinder/index.html": "http://museum.local/years/1996/sites/pathfinder/index.html",
       "sites/hotbot/index.html": "http://museum.local/years/1996/sites/hotbot/index.html",

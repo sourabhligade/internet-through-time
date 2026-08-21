@@ -45,6 +45,16 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/extra-e.html": "http://museum.local/years/1998/sites/playable/extra-e.html",
+      "sites/playable/extra-d.html": "http://museum.local/years/1998/sites/playable/extra-d.html",
+      "sites/playable/extra-c.html": "http://museum.local/years/1998/sites/playable/extra-c.html",
+      "sites/winfiles/more.html": "http://museum.local/years/1998/sites/winfiles/more.html",
+      "sites/valve/more.html": "http://museum.local/years/1998/sites/valve/more.html",
+      "sites/icqweb/more.html": "http://museum.local/years/1998/sites/icqweb/more.html",
+      "sites/opendiary/more.html": "http://museum.local/years/1998/sites/opendiary/more.html",
+      "sites/about/more.html": "http://museum.local/years/1998/sites/about/more.html",
+      "sites/snap/more.html": "http://museum.local/years/1998/sites/snap/more.html",
+      "sites/go/more.html": "http://museum.local/years/1998/sites/go/more.html",
       "sites/opendiary/index.html": "http://museum.local/years/1998/sites/opendiary/index.html",
       "sites/icqweb/index.html": "http://museum.local/years/1998/sites/icqweb/index.html",
       "sites/broadcastcom/index.html": "http://museum.local/years/1998/sites/broadcastcom/index.html",

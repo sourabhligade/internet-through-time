@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Passport stamps + first-night trail (hub + 2007 iPhone + 2009 FarmVille)
+ * Passport stamps + first-night trail (hub + 1994 CSotD + 2008 App Store + 2010 Instagram)
  */
 const { test, expect } = require('@playwright/test');
 
@@ -26,31 +26,30 @@ test.describe('Museum passport + first night', () => {
     await expect(page.locator('#itt-passport-root')).toBeVisible();
     await expect(page.locator('#itt-passport-root')).toContainText(/Passport stamps/i);
     await expect(page.locator('#begin-first-night, [data-itt-night-start]').first()).toBeVisible();
-    await expect(page.locator('a.year-card.available.y2007[href*="years/2007"]')).toBeVisible();
-    await expect(page.locator('a.year-card.available.y2009[href*="years/2009"]')).toBeVisible();
-    await expect(page.locator('[data-itt-year-tour="2007"]')).toBeVisible();
-    await expect(page.locator('[data-itt-year-tour="2009"]')).toBeVisible();
-    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(23);
-    await expect(page.locator('[data-itt-year-tour="2009"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available.y2008[href*="years/2008"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available.y2010[href*="years/2010"]')).toBeVisible();
+    await expect(page.locator('[data-itt-year-tour="2008"]')).toBeVisible();
+    await expect(page.locator('[data-itt-year-tour="2010"]')).toBeVisible();
+    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(26);
   });
 
-  test('2007 passport chip starts 2007-start trail', async ({ page }) => {
+  test('2008 passport chip starts 2008-start trail', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2007"]').click();
-    await expect(page).toHaveURL(/years\/2007/);
+    await page.locator('[data-itt-year-tour="2008"]').click();
+    await expect(page).toHaveURL(/years\/2008/);
     const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2007-start/);
+    expect(night).toMatch(/2008-start/);
     expect(night).toMatch(/"active":\s*true/);
   });
 
-  test('2009 passport chip starts 2009-start trail', async ({ page }) => {
+  test('2010 passport chip starts 2010-start trail', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2009"]').click();
-    await expect(page).toHaveURL(/years\/2009/);
+    await page.locator('[data-itt-year-tour="2010"]').click();
+    await expect(page).toHaveURL(/years\/2010/);
     const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2009-start/);
+    expect(night).toMatch(/2010-start/);
     expect(night).toMatch(/"active":\s*true/);
   });
 

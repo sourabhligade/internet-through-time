@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build 5× measurable links / flows / games for 1994–2020.
+Build 5× measurable links / flows / games for 1994–2019.
 
 Implements docs/5X-MEASURABLE-IMPLEMENT/YEAR-YYYY.md P1–P5:
   P1  four pack year-games (game-2.html … game-5.html) + unique JS modules
@@ -51,7 +51,6 @@ TARGETS = {
     "2017": {"map": 160, "l1": 225},
     "2018": {"map": 185, "l1": 205},
     "2019": {"map": 85, "l1": 145},
-    "2020": {"map": 205, "l1": 245},
 }
 
 STAR = {
@@ -81,7 +80,6 @@ STAR = {
     "2017": ("sites/iphone/x.html", "Face ID", "itt17-faceid"),
     "2018": ("sites/gdpr/manage.html", "GDPR Manage", "itt18-gdpr"),
     "2019": ("sites/disneyplus/home.html", "Disney+ Continue", "itt19-disneyplus"),
-    "2020": ("sites/zoom/index.html", "Zoom mute/leave", "itt20-zoom"),
 }
 
 ACCENTS = [
@@ -982,13 +980,13 @@ def write_e2e() -> None:
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const SAMPLE = ['1994', '2005', '2011', '2020'];
+const SAMPLE = ['1994', '2005', '2011', '2015'];
 
 const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },
   2005: { file: 'game-2.html', gid: 'ytsurge', key: 'itt05-game-ytsurge', need: 3 },
   2011: { file: 'game-2.html', gid: 'siriline', key: 'itt11-game-siriline', need: 3 },
-  2020: { file: 'game-2.html', gid: 'breakout', key: 'itt20-game-breakout', need: 3 },
+  2015: { file: 'game-2.html', gid: 'watchface', key: 'itt15-game-watchface', need: 2 },
 };
 
 async function openPack(page, year, file) {

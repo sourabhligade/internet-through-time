@@ -1,128 +1,125 @@
 // @ts-check
-/**
- * 2013 flows — incomplete blocked then REAL write
- */
-const { test, expect } = require('@playwright/test');
-const { enterYear, contentFrame } = require('./helpers');
-
-async function clearKeys(page, keys) {
-  await page.evaluate((ks) => {
-    ks.forEach((k) => {
-      try {
-        localStorage.removeItem(k);
-      } catch (e) { /* */ }
-    });
-  }, keys);
+const { test, expect } = require("@playwright/test");
+async function getKey(page, k) {
+  return page.evaluate((key) => window.localStorage.getItem(key), k);
 }
-
-test.describe('2013 flows', () => {
-  test('A hub card → Win7 / IE9 → Starting Point', async ({ page }) => {
-    await page.goto('/');
-    await page.locator('a.year-card.available[data-year="2013"]').click();
-    await expect(page).toHaveURL(/\/years\/2013/);
-    await enterYear(page, '2013');
-    await expect(contentFrame(page).locator('body')).toContainText(/Vine|Starting Point|mobile/i);
+test.describe("2013 flows", () => {
+  test("About dual-cite + bans", async ({ page }) => {
+    await page.goto("/years/2013/pages/about.html");
+        await expect(page.locator("body")).toContainText("672,985,183");
+    await expect(page.locator("body")).toContainText("861 million");
+    await expect(page.locator("body")).toContainText("Stories");
+    await expect(page.locator("body")).toContainText("Vine");
   });
-
-  test('B thesis literacy writes itt13-thesis-ack', async ({ page }) => {
-    await page.goto('/years/2013/pages/about.html');
-    await clearKeys(page, ['itt13-thesis-ack']);
+  test("guided stays exactly 6", async ({ page }) => {
+    await page.goto("/years/2013/pages/home.html");
+    await expect(page.locator("#ott-guided-2013 ol > li")).toHaveCount(6);
+    await expect(page.locator('[data-ott-one-thing="2013"]')).toBeVisible();
+  });
+  test("star trap + empty never write; complete writes itt13-vine-posts", async ({ page }) => {
+    await page.goto("/years/2013/sites/vine/record.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-vine-posts"));
     await page.reload();
-    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-thesis-ack'))).toBeFalsy();
-    await page.locator('[data-thesis-req]').nth(0).check({ force: true });
-    await page.locator('[data-thesis-req]').nth(1).check({ force: true });
-    await page.locator('[data-itt-real-save][data-storage-key="thesis-ack"]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-thesis-ack'))).toBeTruthy();
+    await page.locator("[data-vn13-trap]").click();
+    await page.locator("[data-vn13-post]").click();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    await page.locator("[data-vn13-req]").nth(0).check();
+    await page.locator("[data-vn13-req]").nth(1).check();
+    await page.locator("[data-vn13-hold]").click();
+    await page.locator("[data-vn13-post]").click();
+    await expect.poll(() => getKey(page, "itt13-vine-posts")).toBeTruthy();
   });
-
-  test('I iOS 7 two tiles + CC write itt13-ios7', async ({ page }) => {
-    await page.goto('/years/2013/sites/iphone/ios7.html');
-    await clearKeys(page, ['itt13-ios7']);
+  test("Chrome IE trap / empty URL never writes; habit writes", async ({ page }) => {
+    await page.goto("/years/2013/sites/chrome/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-chrome"));
     await page.reload();
-    await page.locator('[data-ios7-cc]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-ios7'))).toBeFalsy();
-    await page.locator('[data-ios7-tile]').nth(0).click();
-    await page.locator('[data-ios7-tile]').nth(1).click();
-    await page.locator('[data-ios7-cc]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-ios7'))).toMatch(/tiles|real/i);
+    await page.locator("[data-ch13-ie]").click();
+    expect(await getKey(page, "itt13-chrome")).toBeFalsy();
+    await page.locator("[data-ch13-req]").nth(0).check();
+    await page.locator("[data-ch13-req]").nth(1).check();
+    await page.locator("[data-ch13-ack]").click();
+    expect(await getKey(page, "itt13-chrome")).toBeFalsy();
+    await page.locator('[data-ch13-pick="ie"]').click();
+    await page.locator("[data-ch13-ack]").click();
+    expect(await getKey(page, "itt13-chrome")).toBeFalsy();
+    await page.locator('[data-ch13-pick="habit"]').click();
+    await page.fill("[data-ch13-field]", "youtube.com");
+    await page.locator("[data-ch13-ack]").click();
+    await expect.poll(() => getKey(page, "itt13-chrome")).toBeTruthy();
   });
 
-  test('J Touch ID enroll writes itt13-touchid', async ({ page }) => {
-    await page.goto('/years/2013/sites/iphone/touchid.html');
-    await clearKeys(page, ['itt13-touchid']);
+  test("Telegram WhatsApp trap / empty never writes; send writes", async ({ page }) => {
+    await page.goto("/years/2013/sites/telegram/chat.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-telegram-chat"));
     await page.reload();
-    await page.locator('[data-touch-enroll]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-touchid'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check({ force: true });
-    await page.locator('[data-req]').nth(1).check({ force: true });
-    await page.locator('[data-touch-lift]').click();
-    await page.locator('[data-touch-rest]').click();
-    await page.locator('[data-touch-enroll]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-touchid'))).toMatch(/enroll|real/i);
+    await page.locator("[data-tg13-wa]").click();
+    expect(await getKey(page, "itt13-telegram-chat")).toBeFalsy();
+    await page.locator("[data-tg13-req]").nth(0).check();
+    await page.locator("[data-tg13-req]").nth(1).check();
+    await page.locator("[data-tg13-send]").click();
+    expect(await getKey(page, "itt13-telegram-chat")).toBeFalsy();
+    await page.fill("[data-tg13-msg]", "cloud leftover");
+    await page.locator("[data-tg13-send]").click();
+    await expect.poll(() => getKey(page, "itt13-telegram-chat")).toBeTruthy();
   });
 
-  test('K Windows 8.1 two tiles write itt13-win81', async ({ page }) => {
-    await page.goto('/years/2013/sites/windows81/index.html');
-    await clearKeys(page, ['itt13-win81']);
+  test("Medium tweet trap / empty never writes; publish writes", async ({ page }) => {
+    await page.goto("/years/2013/sites/medium/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-medium"));
     await page.reload();
-    await page.locator('[data-win81-tile]').nth(0).click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-win81'))).toBeFalsy();
-    await page.locator('[data-win81-tile]').nth(1).click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-win81'))).toMatch(/tiles|real/i);
+    await page.locator("[data-med13-tweet]").click();
+    expect(await getKey(page, "itt13-medium")).toBeFalsy();
+    await page.locator("[data-med13-req]").nth(0).check();
+    await page.locator("[data-med13-req]").nth(1).check();
+    await page.locator("[data-med13-publish]").click();
+    expect(await getKey(page, "itt13-medium")).toBeFalsy();
+    await page.fill("[data-med13-draft]", "a short leftover essay");
+    await page.locator("[data-med13-publish]").click();
+    await expect.poll(() => getKey(page, "itt13-medium")).toBeTruthy();
   });
 
-  test('L Chrome 3-check writes itt13-chrome', async ({ page }) => {
-    await page.goto('/years/2013/sites/chrome/index.html');
-    await clearKeys(page, ['itt13-chrome']);
+  test("HealthCare.gov Apply / Retry never writes; 503 ack writes", async ({ page }) => {
+    await page.goto("/years/2013/sites/healthcare/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-healthcare"));
     await page.reload();
-    await page.locator('[data-chrome-download]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-chrome'))).toBeFalsy();
-    const n = await page.locator('[data-chrome-req]').count();
-    for (let i = 0; i < n; i++) await page.locator('[data-chrome-req]').nth(i).check({ force: true });
-    await page.locator('[data-chrome-download]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-chrome'))).toBeTruthy();
+    await page.locator("[data-hc13-apply]").click();
+    expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
+    await page.goto("/years/2013/sites/healthcare/status.html");
+    await page.locator("[data-hc13-retry]").click();
+    expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
+    await page.locator("[data-hc13-req]").nth(0).check();
+    await page.locator("[data-hc13-req]").nth(1).check();
+    await page.locator("[data-hc13-ack]").click();
+    await expect.poll(() => getKey(page, "itt13-healthcare")).toBeTruthy();
   });
 
-  test('Q Snowden writes itt13-snowden-ack', async ({ page }) => {
-    await page.goto('/years/2013/sites/snowden/index.html');
-    await clearKeys(page, ['itt13-snowden', 'itt13-snowden-ack']);
+  test("iPhone 5c Face ID / no color never writes; color writes", async ({ page }) => {
+    await page.goto("/years/2013/sites/iphone/5c.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-iphone5c"));
     await page.reload();
-    await page.locator('[data-snowden-ack]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-snowden-ack'))).toBeFalsy();
-    await page.locator('[data-req]').nth(0).check({ force: true });
-    await page.locator('[data-req]').nth(1).check({ force: true });
-    await page.locator('[data-snowden-ack]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-snowden-ack'))).toBeTruthy();
+    await page.locator("[data-5c-face]").click();
+    expect(await getKey(page, "itt13-iphone5c")).toBeFalsy();
+    await page.locator("[data-5c-req]").nth(0).check();
+    await page.locator("[data-5c-req]").nth(1).check();
+    await page.locator("[data-5c-ack]").click();
+    expect(await getKey(page, "itt13-iphone5c")).toBeFalsy();
+    await page.locator('[data-5c-color="green"]').click();
+    await page.locator("[data-5c-ack]").click();
+    await expect.poll(() => getKey(page, "itt13-iphone5c")).toBeTruthy();
   });
 
-  test('S Tinder two swipes write itt13-tinder', async ({ page }) => {
-    await page.goto('/years/2013/sites/tinder/index.html');
-    await clearKeys(page, ['itt13-tinder']);
+  test("Snap Stories trap/empty never writes then save", async ({ page }) => {
+    await page.goto("/years/2013/sites/snapchat/story.html");
+    await page.evaluate(() => localStorage.removeItem("itt13-snap-story"));
     await page.reload();
-    await page.locator('[data-tinder-left]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt13-tinder'))).toBeFalsy();
-    await page.locator('[data-tinder-right]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt13-tinder'))).toMatch(/swipe|real/i);
-  });
-
-  test('home guided targets live', async ({ page }) => {
-    await page.goto('/years/2013/pages/home.html');
-    await expect(page.locator('body')).toContainText(/Connection trails|Guided multi-step/i);
-    const hrefs = ['vine/record', 'instagram/video', 'snapchat/story', 'iphone/ios7'];
-    for (const h of hrefs) {
-      await expect(page.locator(`a[href*="${h}"]`).first()).toBeVisible();
-    }
-  });
-
-  test('no itt12 writes from 2013 pages', async ({ page }) => {
-    await page.goto('/years/2013/sites/vine/record.html');
-    await page.locator('[data-req]').nth(0).check({ force: true });
-    await page.locator('[data-req]').nth(1).check({ force: true });
-    const hold = page.locator('[data-vine-hold]');
-    for (let i = 0; i < 5; i++) await hold.click();
-    await page.locator('[data-vine-caption]').fill('iso');
-    await page.locator('[data-vine-post]').click();
-    expect(await page.evaluate(() => Object.keys(localStorage).some((k) => k.indexOf('itt12') === 0))).toBeFalsy();
+    await page.locator("[data-sn13-ig]").click();
+    await page.locator("[data-sn13-post]").click();
+    expect(await getKey(page, "itt13-snap-story")).toBeFalsy();
+    await page.locator("[data-sn13-req]").nth(0).check();
+    await page.locator("[data-sn13-req]").nth(1).check();
+    await page.locator('[data-sn13-snap="one"]').click();
+    await page.locator('[data-sn13-snap="two"]').click();
+    await page.locator("[data-sn13-post]").click();
+    await expect.poll(() => getKey(page, "itt13-snap-story")).toBeTruthy();
   });
 });

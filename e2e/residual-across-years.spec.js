@@ -31,7 +31,7 @@ async function waitResidual(page) {
 }
 
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2019; y++) YEARS.push(String(y));
 
 test.describe("residual REAL across years", () => {
   for (const year of YEARS) {

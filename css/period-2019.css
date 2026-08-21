@@ -1,0 +1,38 @@
+@import url("period-2018.css");
+
+.year-2019.os-win10 {
+  --itt-desktop-bg: #0078d7;
+}
+
+.dplus19-grid {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+.dplus19-grid button {
+  min-width: 120px;
+  min-height: 88px;
+  background: #1a1a1a;
+  color: #f5f5f7;
+  border: 1px solid #444;
+  font-weight: bold;
+}
+.dplus19-grid button.is-on { outline: 2px solid #e50914; }
+.dplus19-grid button[data-dplus-profile="kids"] { background: #1b4f72; }
+.dplus19-trial {
+  background: #e50914;
+  color: #fff;
+  border: 0;
+  padding: 10px 18px;
+  font-weight: bold;
+}
+.dplus19-continue {
+  background: #111;
+  color: #fff;
+  border: 1px solid #e50914;
+  padding: 8px 14px;
+  font-weight: bold;
+}
+.dplus19-row { margin: 8px 0; font-size: 12px; color: #ccc; }
+.dplus19-kids-block { background: #0d2137; color: #9cf; padding: 8px; margin: 8px 0; font-size: 12px; }

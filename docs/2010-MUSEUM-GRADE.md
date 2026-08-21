@@ -7,7 +7,7 @@
 |-------|--------|
 | **A. Story** | **Yes** — thesis · dual-cite · Pingdom social · bans table |
 | **B. Densify** | **Yes** — star + P0 REAL · leftover trails · map writers |
-| **C. Pixels** | **Closed honestly** — `[failed-final]` on P0 rooms · `assets/period/2010/` empty · never invented |
+| **C. Pixels** | **Closed honestly** — iPad [wa] · iPhone apps poster [wa] · Foursquare [continuity 2009] · IG/FB [failed-final] · never invented |
 | **D. Provenance** | CAPTURE-LOG + README-PIXELS |
 | **E. Gates** | `npm run test:e2e:2010` — mvp · flows · densify · trail |
 | **F. Isolation** | `itt10` |

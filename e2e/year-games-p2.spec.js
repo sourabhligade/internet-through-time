@@ -19,9 +19,7 @@ const CABINETS = {
   2004: { title: 'Gem Cascade', id: 'gemcascade' },
   2005: { title: 'HoverChop', id: 'heli' },
   2006: { title: 'TrailSled', id: 'sled' },
-  2007: { title: 'Box Shift', id: 'boxshift' },
   2008: { title: 'Goo Span', id: 'goospan' },
-  2009: { title: 'Plot Neighbors', id: 'plotneighbors' },
 };
 
 for (const year of Object.keys(CABINETS)) {

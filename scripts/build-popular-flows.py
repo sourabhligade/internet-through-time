@@ -147,11 +147,6 @@ FLOWS = [
     (2019, "F3", "tweets", "sites/twitter/index.html", "new", "Twitter 2019", "tweet", "Mass leftover", "Disney+ is the star", "../disneyplus/home.html", "Disney+"),
     (2019, "F4", "wiki", "pages/about.html", "reuse", "Wikipedia chip 2019", None, "Continuity", "About", "../sites/disneyplus/home.html", "Disney+"),
     (2019, "F5", "disneyplus", "sites/disneyplus/home.html", "star", "Disney+ Continue (star)", None, "star", "star", "", ""),
-    (2020, "F1", "google", "sites/google/index.html", "new", "Google chip 2020", "query", "Mass #1 continuity", "Zoom is the star", "../wikipedia/index.html", "Wikipedia"),
-    (2020, "F2", "wiki", "sites/wikipedia/index.html", "new", "Wikipedia chip 2020", None, "Continuity", "One page", "../facebook/index.html", "Facebook"),
-    (2020, "F3", "fb", "sites/facebook/index.html", "new", "Facebook 2020 residual", None, "Not a 2006 feed rebuild", "Then Zoom", "../zoom/index.html", "Zoom"),
-    (2020, "F4", "zoom", "sites/zoom/index.html", "star", "Zoom (star)", None, "star", "star", "", ""),
-    (2020, "F5", "reels", "sites/instagram/reels.html", "reuse", "Reels 15s", None, "Aug 5 · not Stories", "Already on disk", "../zoom/index.html", "Zoom"),
 ]
 
 def pop_mark(key: str) -> tuple[str, str]:

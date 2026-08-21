@@ -89,7 +89,7 @@ for (const yearPack of matrix.panel) {
 const GOLD_WALKS = [
   { year: '2010', room: 'sites/instagram/index.html', empty: async (f) => f.locator('[data-ig-share]').click(), fill: async (f) => { await f.locator('[data-ig-filter="Earlybird"]').click(); await f.locator('[data-ig-caption]').fill('shell 5x'); }, save: '[data-ig-share]', key: 'itt10-ig-posts', nextFrag: 'ipad' },
   { year: '2011', room: 'sites/spotify/index.html', empty: async (f) => f.locator('[data-spotify-invite]').click(), fill: async (f) => { await f.locator('[data-spotify-ack]').check(); await f.locator('[data-spotify-no-stream]').check(); }, save: '[data-spotify-invite]', key: 'itt11-spotify-invited', nextFrag: 'timeline' },
-  { year: '2019', room: 'sites/tiktok/index.html', empty: async (f) => f.locator('[data-tt-post]').click(), fill: async (f) => { await f.locator('[data-tt-caption]').fill('shell fyp'); const req = f.locator('[data-req]'); const n = await req.count(); for (let i = 0; i < n; i++) await req.nth(i).check(); }, save: '[data-tt-post]', key: 'itt19-tiktok', nextFrag: 'arcade' },
+  { year: '2019', room: 'sites/tiktok/index.html', empty: async (f) => f.locator('[data-tt-post]').click(), fill: async (f) => { const req = f.locator('[data-tt-req]'); const n = await req.count(); for (let i = 0; i < n; i++) await req.nth(i).check(); await f.locator('[data-tt-caption]').fill('shell fyp'); await f.locator('[data-tt-post]').click(); await f.locator('[data-tt-caption]').fill('second leftover'); }, save: '[data-tt-post]', key: 'itt19-tiktok', nextFrag: 'arcade' },
 ];
 
 for (const g of GOLD_WALKS) {
