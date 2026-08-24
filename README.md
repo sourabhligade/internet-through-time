@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year.
+Historical reconstruction of the World Wide Web — year by year. Hub **28 years open** (1994–2024 minus 2005–2007 wiped). 2023 star = ChatGPT Plus $20. 2024 star = GPT-4o Talk.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -40,7 +40,7 @@ npm run check
 npm run github:ready
 ```
 
-CI on GitHub: `.github/workflows/ci.yml` (static job + e2e job on push/PR to `main`).
+CI on GitHub: `.github/workflows/ci.yml` (static job + a **named 9-file Playwright pack**, not the full `e2e/` tree). `npm test` is the full suite and is **not** what GitHub Actions runs.
 
 **Requirements for production:**
 - Single origin for hub + years (iframe + localStorage + script injection)
@@ -83,24 +83,29 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2002/` | XP · IE6 · Friendster · KaZaA · Wired · **full year densify** |
 | `/years/2003/` | XP · IE6 · MySpace · iTunes Store · WordPress · LinkedIn · AdSense · Bloglines · **museum densify** |
 | `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
-| `/years/2005/` | YouTube · Maps · Reddit · Digg · **museum densify** |
-| `/years/2006/` | Twitter · Facebook open · Digg peak · Docs · AWS · **museum densify** |
-| `/years/2007/` | Lean door — iPhone Safari (no App Store) |
+| `/years/2005/` | **Wiped** — rebuild later (not on disk) |
+| `/years/2006/` | **Wiped** — rebuild later (not on disk) |
+| `/years/2007/` | **Wiped** — rebuild later (not on disk) |
 | `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
 | `/years/2009/` | Lean door — Facebook Like · FarmVille · Bing · 3GS |
 | `/years/2010/` | Win7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph · **lean** |
 | `/years/2011/` | Lean door — Google+ · Spotify US · Siri · Timeline |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
 | `/years/2013/` | Lean door — Vine 6s · iOS 7 · Snapchat Stories |
+| `/years/2014/` | Lean door — WhatsApp Install · Heartbleed · Ice Bucket |
 | `/years/2015/` | Periscope Go LIVE · Google Photos · Win10 free upgrade · Apple Music · **lean** |
 | `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
 | `/years/2018/` | GDPR Manage · TikTok leftover · hearing · IGTV · **lean** |
 | `/years/2019/` | Disney+ Continue · TikTok leftover · Arcade · Stadia · **lean** |
 | `/years/2020/` | Zoom mute → leave · Reels 15s leftover · GPT-3 waitlist · Flash EOL · **lean** |
+| `/years/2021/` | ATT Ask App Not to Track · Signal leftover · Copilot waitlist · Meta rename · **lean** |
+| `/years/2022/` | ChatGPT Send · Twitter leftover · Wordle leftover · Stable Diffusion · **lean** |
+| `/years/2023/` | ChatGPT Plus $20 · GPT-4 leftover · Bard leftover · Threads · X · **lean** · 2× pack 1 |
+| `/years/2024/` | GPT-4o Talk · Gemini leftover · Claude 3.5 leftover · **lean** · 2× packs (36) |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**2014 · 2021–2023 are not on disk** — wiped for from-scratch rebuilds. **2007 / 2009 / 2011 / 2013 / 2020 are lean doors.** Hub is **1994–2013 + 2015–2020** (26 years). **2024+ are not on disk.**
+**2009 / 2011 / 2013–2024 are lean doors.** Hub is **28 years open** (1994–2024 minus **2005–2007 wiped for rebuild**). Museum ends **2024**. Plus / GPT-4 / Bing Chat / Threads / X are **2023**. GPT-4o Talk is **2024**.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

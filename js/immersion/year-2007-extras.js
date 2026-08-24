@@ -139,10 +139,6 @@
       });
     }
     save.addEventListener("click", function () {
-      if (countChecked(doc, "[data-ip07-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (!cap) {
         feedback("Pick 4GB or 8GB first. Empty never writes.", st, { error: true });
         return;

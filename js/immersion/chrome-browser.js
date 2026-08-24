@@ -83,6 +83,18 @@
         } catch (eN) { /* */ }
       });
     }
+    var mac = doc.querySelector("[data-chrome-mac]");
+    if (mac && mac.getAttribute("data-bound") !== "1") {
+      mac.setAttribute("data-bound", "1");
+      mac.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var needM = "Mac/Linux later. That download never writes.";
+        if (st) st.textContent = needM;
+        if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+          ITT._immersionApi.actionFeedback(needM, { doc: doc, status: st, kind: "chrome-mac-trap" });
+        }
+      });
+    }
     var pref = doc.querySelector("[data-chrome-prefer]");
     if (pref && pref.getAttribute("data-bound") !== "1") {
       pref.setAttribute("data-bound", "1");

@@ -156,6 +156,45 @@ body {
 
 .resume-wrap.hidden { display: none; }
 
+.start-or {
+  display: inline-block;
+  margin: 6px 8px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333;
+  font-weight: bold;
+}
+
+.start-jumps {
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 6px 8px;
+  border: 1px solid #808080;
+  background: #e8e8e8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.start-jumps > summary {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333;
+  list-style: disclosure-closed;
+}
+.start-jumps[open] > summary {
+  margin-bottom: 6px;
+}
+.start-jumps-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.start-jumps .start-btn {
+  font-size: 10px;
+  padding: 3px 8px;
+  background: #d4d0c8;
+}
+
 .start-hint {
   margin: 6px 0 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -1362,6 +1401,12 @@ body {
 .year-card.y2020 .era-chip { background: #0b5cff; color: #fff; }
 .year-card.y2020 .motif { background: linear-gradient(135deg, #0b5cff, #c62828); }
 .year-card.y2020 .label, .year-card.y2020 .scale { color: #ccc; }
+.year-card.y2021 { border-color: #007aff #404040 #404040 #111; }
+.year-card.y2021 .year-card-inner { background: linear-gradient(180deg, #f2f2f7 0%, #e5e5ea 55%); color: #111; }
+.year-card.y2021 .year { color: #111; }
+.year-card.y2021 .era-chip { background: #007aff; color: #fff; }
+.year-card.y2021 .motif { background: linear-gradient(135deg, #007aff, #5856d6); }
+.year-card.y2021 .label, .year-card.y2021 .scale { color: #333; }
 
 .year-card.y2021 { border-color: #007aff #404040 #404040 #111; }
 .year-card.y2021 .year-card-inner { background: linear-gradient(180deg, #f2f2f7 0%, #e5e5ea 55%); color: #111; }
@@ -1454,3 +1499,10 @@ button.start-btn {
 .year-2013-start-card {
   margin-bottom: 10px;
 }
+
+.year-card.y2024 { border-color: #0e7a0d #404040 #404040 #111; }
+.year-card.y2024 .year-card-inner { background: linear-gradient(180deg, #0b1020 0%, #142 55%); color: #eee; }
+.year-card.y2024 .year { color: #fff; }
+.year-card.y2024 .era-chip { background: #10a37f; color: #fff; }
+.year-card.y2024 .motif { background: linear-gradient(135deg, #10a37f, #0e7a0d); }
+.year-card.y2024 .label, .year-card.y2024 .scale { color: #ccc; }

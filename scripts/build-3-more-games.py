@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-WIPED = {"2007", "2009", "2011", "2013", "2014"}
+WIPED = set()
 
 # year, role, slug, title, kind, inspire, goods, traps, prompt, need, hold_ms
 GAMES: list[tuple] = []
@@ -230,6 +230,28 @@ G("2012", "e", "strokeguess", "Stroke Guess", "draw",
   "Draw Something 6 Feb 2012 class. Guess Doodle stays the draw gold.",
   "cat,house,star", "", "cat")
 
+# 2013
+G("2013", "c", "loopspare", "Loop Spare", "parlor",
+  "Vine-class leftover loop — not the 6s gold. No Vine art.",
+  "loop-a,loop-b,post", "fifteen")
+G("2013", "d", "storyhold", "Story Hold", "hold",
+  "Snapchat Stories 2013 24h leftover. Vine gold stays.",
+  "hold", "", "", 1, 2000)
+G("2013", "e", "flattap", "Flat Tap", "quiz",
+  "iOS 7 flatten leftover. Skeuomorph is the trap.",
+  "flat,swipe,home", "leather")
+
+# 2014
+G("2014", "c", "slackchan", "Slack Chan", "parlor",
+  "Slack Feb 2014 leftover channel. Tile Fold stays gold.",
+  "join,type,pin", "email-all")
+G("2014", "d", "icepour", "Ice Pour", "draw",
+  "Ice Bucket Jul 2014 leftover nominate. No celebrity stills.",
+  "name,pour,pass", "", "friend")
+G("2014", "e", "rotatels", "Rotate TLS", "quiz",
+  "Heartbleed Apr 2014 rotate leftover. Exploit is the trap.",
+  "revoke,reissue,rotate", "dump-mem")
+
 # 2015
 G("2015", "c", "splitdrill", "Split Drill", "dodge",
   "agar.io 28 Apr 2015 split drill. Blob Rush stays the arena gold.",
@@ -273,6 +295,50 @@ G("2018", "d", "driftcorner", "Drift Corner", "hold",
 G("2018", "e", "bannerfight", "Banner Fight", "quiz",
   "GDPR 25 May 2018 banner. Accept All is the trap. Consent Dash stays gold.",
   "manage,purpose-a,purpose-b", "accept-all")
+
+# 2019
+G("2019", "c", "rowextra", "Row Extra", "parlor",
+  "Disney+ Continue leftover row. Continue Row stays gold. No Disney art.",
+  "profile,row,continue", "free-trial")
+G("2019", "d", "stadiawait", "Stadia Wait", "hold",
+  "Stadia 2019 leftover stream wait. No live stream.",
+  "hold", "", "", 1, 2000)
+G("2019", "e", "arcadecard", "Arcade Card", "quiz",
+  "Apple Arcade 2019 leftover card. Paywall is the trap.",
+  "browse,save,play-one", "subscribe-all")
+
+# 2020
+G("2020", "c", "muteround", "Mute Round", "parlor",
+  "Zoom leftover mute-all. Sus Vote / Zoom gold stay.",
+  "mute,chat,leave", "join-only")
+G("2020", "d", "reel15", "Reel 15", "hold",
+  "Reels 5 Aug 2020 15s leftover. 24s is the trap.",
+  "hold", "", "", 1, 2000)
+G("2020", "e", "flashbrick", "Flash Brick", "quiz",
+  "Flash EOL 31 Dec 2020 leftover. Play SWF is the trap.",
+  "notice,uninstall,newgrounds", "play-swf")
+
+# 2021
+G("2021", "c", "sighandle", "Sig Handle", "parlor",
+  "Signal leftover handle. ATT gold stays. Empty never writes.",
+  "type,join,note", "mass-delete")
+G("2021", "d", "waitcop", "Wait Copilot", "quiz",
+  "Copilot 2021 waitlist leftover. Chat box is the trap (ChatGPT is 2022).",
+  "email,wait,preview", "open-chat")
+G("2021", "e", "metanote", "Meta Note", "quiz",
+  "Meta rename leftover. Consumer app is the trap.",
+  "company,app-stays,date", "meta-app")
+
+# 2022
+G("2022", "c", "wordguess", "Word Guess", "quiz",
+  "Wordle leftover Times-free. Prompt Box stays gold. No NYT tiles.",
+  "guess,check,next", "paywall")
+G("2022", "d", "mastoinst", "Masto Inst", "parlor",
+  "Mastodon leftover instance. X is the trap.",
+  "pick,join,toot", "open-x")
+G("2022", "e", "bereal2", "BeReal Two", "hold",
+  "BeReal leftover two-minute window. Filter pack is the trap.",
+  "hold", "", "", 1, 2000)
 
 ROLE_FILE = {"c": "extra-c.html", "d": "extra-d.html", "e": "extra-e.html"}
 NEXT_FILE = {"c": "extra-d.html", "d": "extra-e.html", "e": "game.html"}

@@ -36,10 +36,6 @@
     if (!btn) return;
     var st = doc.querySelector(stSel);
     btn.addEventListener("click", function () {
-      if (countChecked(doc, req) < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       saveJSON(key(suffix), blob(extra || {}));
       feedback("Saved · " + key(suffix), st);
       reveal(doc);
@@ -69,10 +65,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-lk09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (Object.keys(liked).length < 2) {
         feedback("Like two partner pages first. 0–1 never writes.", st, { error: true });
         return;
@@ -90,6 +82,8 @@
     var trap = doc.querySelector("[data-fv09-pay]");
     var field = doc.querySelector("[data-fv09-field]");
     var planted = {};
+    var readyAt = 0;
+    var GROW_MS = 3000;
     var i;
     var plots = doc.querySelectorAll("[data-fv09-plot]");
     for (i = 0; i < plots.length; i++) {
@@ -97,25 +91,31 @@
         var id = this.getAttribute("data-fv09-plot") || "";
         planted[id] = true;
         this.setAttribute("aria-pressed", "true");
-        if (field) field.textContent = Object.keys(planted).length + " plot(s) planted";
+        if (Object.keys(planted).length >= 2 && !readyAt) {
+          readyAt = Date.now() + GROW_MS;
+          if (field) field.textContent = "Growing… wait ~3s. Instant harvest never writes.";
+          if (st) st.textContent = "Crops in the ground. Instant harvest is the trap.";
+        } else if (field) {
+          field.textContent = Object.keys(planted).length + " plot(s) planted";
+        }
       });
     }
     if (trap) {
       trap.addEventListener("click", function () {
-        feedback("Pay-to-skip never writes. Plant and harvest.", st, { error: true });
+        feedback("Pay-to-skip never writes. Plant, wait, harvest.", st, { error: true });
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-fv09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (Object.keys(planted).length < 2) {
         feedback("Plant two plots first. 0–1 never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("farm"), blob({ plots: Object.keys(planted), date: "2009-06-19" }));
-      if (field) field.textContent = "Harvested leftover Flash field.";
+      if (!readyAt || Date.now() < readyAt) {
+        feedback("Still growing. Instant harvest never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("farm"), blob({ plots: Object.keys(planted), waited: true, date: "2009-06-19" }));
+      if (field) field.textContent = "Harvested leftover Flash field. Nag a neighbor next.";
       feedback("FarmVille · " + key("farm"), st);
       reveal(doc);
     });
@@ -133,10 +133,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-bg09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       var q = val(doc, "[data-bg09-q]");
       if (!q || q.length < 2) {
         feedback("Type a query first. Empty never writes.", st, { error: true });
@@ -173,10 +169,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-ip09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (!cap) {
         feedback("Pick 16GB or 32GB first. Empty never writes.", st, { error: true });
         return;
@@ -201,10 +193,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-as09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (Object.keys(apps).length < 2) {
         feedback("Install two leftover apps first. 0–1 never writes.", st, { error: true });
         return;
@@ -231,10 +219,6 @@
       paint();
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-tw09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       var t = val(doc, "[data-tw09-body]");
       if (!t || t.length < 2) {
         feedback("Empty tweet never writes.", st, { error: true });
@@ -265,10 +249,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-fq09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (!venue) {
         feedback("Pick a leftover venue first. Empty never writes.", st, { error: true });
         return;
@@ -290,10 +270,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-ks09-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       var note = val(doc, "[data-ks09-note]");
       if (!note || note.length < 2) {
         feedback("Type a leftover pledge first. Empty never writes.", st, { error: true });
@@ -372,9 +348,35 @@
     });
   }
 
+  function bootYt(doc) {
+    var btn = doc.querySelector("[data-yt09-watch]");
+    if (!btn) return;
+    var st = doc.querySelector("[data-yt09-status]");
+    var trap = doc.querySelector("[data-yt09-upload]");
+    var player = doc.querySelector("[data-yt09-player]");
+    var watched = "";
+    var clips = doc.querySelectorAll("[data-yt09-watch]");
+    var i;
+    for (i = 0; i < clips.length; i++) {
+      clips[i].addEventListener("click", function () {
+        watched = this.getAttribute("data-yt09-watch") || "clip";
+        if (player) player.textContent = "▶ Playing leftover · " + watched;
+        saveJSON(key("yt"), blob({ clip: watched, rank: 3, leftover: true }));
+        feedback("YouTube leftover · #3 visits · " + key("yt"), st);
+        reveal(doc);
+      });
+    }
+    if (trap) {
+      trap.addEventListener("click", function () {
+        feedback("Upload is the 2005 star. 2009 leftover never writes an upload.", st, { error: true });
+      });
+    }
+  }
+
   function bootAll(doc) {
     doc = doc || document;
     bootLike(doc);
+    bootYt(doc);
     bootFarm(doc);
     bootBing(doc);
     boot3gs(doc);

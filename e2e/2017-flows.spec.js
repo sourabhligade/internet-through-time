@@ -6,14 +6,13 @@ async function getKey(page, key) {
 }
 
 test.describe("2017 flows", () => {
-  test("Face ID empty never writes; ticks + unlock write", async ({ page }) => {
+  test("Face ID empty never writes; look + unlock write", async ({ page }) => {
     await page.goto("/years/2017/sites/iphone/x.html");
     await page.evaluate(() => localStorage.removeItem("itt17-faceid"));
     await page.reload();
     await page.locator("[data-faceid-unlock]").click();
     expect(await getKey(page, "itt17-faceid")).toBeFalsy();
-    await page.locator("[data-faceid-req]").nth(0).check();
-    await page.locator("[data-faceid-req]").nth(1).check();
+    await page.locator("[data-faceid-look]").click();
     await page.locator("[data-faceid-unlock]").click();
     await expect.poll(async () => getKey(page, "itt17-faceid"), { timeout: 8000 }).toBeTruthy();
   });
@@ -85,11 +84,9 @@ test.describe("2017 flows", () => {
     await page.goto("/years/2017/sites/wannacry/index.html");
     await page.evaluate(() => localStorage.removeItem("itt17-wannacry"));
     await page.reload();
-    await page.locator("[data-wc-ack]").click();
+    await page.locator("[data-wc-payload]").click();
     expect(await getKey(page, "itt17-wannacry")).toBeFalsy();
-    await page.locator("[data-wc-req]").nth(0).check();
-    await page.locator("[data-wc-req]").nth(1).check();
-    await page.locator("[data-wc-ack]").click();
+    await page.locator("[data-wc-patch]").click();
     await expect.poll(async () => getKey(page, "itt17-wannacry"), { timeout: 8000 }).toBeTruthy();
   });
 

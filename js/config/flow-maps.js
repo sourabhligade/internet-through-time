@@ -1366,7 +1366,8 @@
                     { "name": "N15 Hampsterdance", "href": "sites/hampsterdance/index.html", "do": "4\u00d7 leftover \u2192 itt99-hampster" },
                     { "name": "N16 Zombo", "href": "sites/zombo/index.html", "do": "4\u00d7 leftover \u2192 itt99-zombo" },
                     { "name": "N17 Webvan", "href": "sites/webvan/index.html", "do": "4\u00d7 leftover \u2192 itt99-webvan" },
-                    { "name": "N18 E-Trade", "href": "sites/etrade/index.html", "do": "4\u00d7 leftover \u2192 itt99-etrade" }
+                    { "name": "N18 E-Trade", "href": "sites/etrade/index.html", "do": "4\u00d7 leftover \u2192 itt99-etrade" },
+                    { "name": "N19 SETI@home", "href": "sites/seti/index.html", "do": "screensaver theater \u2192 itt99-seti" }
           ]
 },
 
@@ -2911,6 +2912,45 @@
     "year": "2006"
   };
 
+    ITT.flowMaps["2007"] = {
+    "thesis": "The phone becomes a real web browser you carry — most people still live on a laptop.",
+    "shell": "Windows XP · IE 7 · no App Store",
+    "how": [
+      "★ iPhone Safari: 320px glass · 980px table · pinch is the joke → itt07-iphone",
+      "F1 Street View pano → F2 Gmail open send → F3 Platform app → F4 Twitter SXSW → F5 Kindle → ★",
+      "Leftover 3× Justin.tv / Ustream / Qik share the lean doors"
+    ],
+    "branches": [
+      {
+        "label": "★ Star",
+        "do": "Safari on iPhone · no App Store",
+        "sites": [
+          { "name": "iPhone Safari", "href": "sites/iphone/index.html", "do": "320px glass → itt07-iphone" }
+        ]
+      },
+      {
+        "label": "5× F1–F5 · 2007",
+        "do": "REAL leftover loops · incomplete never writes",
+        "sites": [
+          { "name": "F1 Street View", "href": "sites/maps/index.html", "do": "pano → itt07-streetview" },
+          { "name": "F2 Gmail open", "href": "sites/gmail/index.html", "do": "no invite wall → itt07-gmail" },
+          { "name": "F3 Platform", "href": "sites/facebook/index.html", "do": "add residual → itt07-fb-app" },
+          { "name": "F4 Twitter SXSW", "href": "sites/twitter/index.html", "do": "compose → itt07-tw" },
+          { "name": "F5 Kindle", "href": "sites/kindle/index.html", "do": "Nov 2007 2-check → itt07-kindle-ack" }
+        ]
+      },
+      {
+        "label": "Year game",
+        "do": "Peg Walk leftover · gold is Safari",
+        "sites": [
+          { "name": "Peg Walk", "href": "sites/playable/game.html", "do": "year game" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet · gold is Safari" }
+        ]
+      }
+    ],
+    "year": "2007"
+  };
+
     ITT.flowMaps["2008"] =   {
     "thesis": "Apps + browser reinvention — App Store + iPhone 3G, Chrome, Android G1, Hulu.",
     "shell": "Windows XP · IE 7 · Chrome product room (not sole shell)",
@@ -3101,6 +3141,54 @@
     "year": "2008"
   };
 
+    ITT.flowMaps["2009"] = {
+    thesis: "The social web goes mainstream and apps become daily habit — most people still live on a laptop.",
+    shell: "Windows XP · IE 8 · Like is the verb",
+    year: "2009",
+    how: [
+      "★ Like: two partner pages then Like → itt09-like. Beacon never writes.",
+      "FarmVille leftover plant. Bing leftover query. 3GS leftover. Foursquare leftover.",
+      "Guided list stays 6. Star stays Facebook Like."
+    ],
+    branches: [
+      {
+        label: "★ Star",
+        do: "Like two partner pages. Beacon is the trap.",
+        sites: [
+          { name: "Facebook Like", href: "sites/facebook/index.html", do: "two pages → Like → itt09-like" }
+        ]
+      },
+      {
+        label: "5× F1–F5 · 2009",
+        do: "REAL leftover loops · incomplete never writes",
+        sites: [
+          { name: "F1 FarmVille", href: "sites/farmville/index.html", do: "plant leftover" },
+          { name: "F2 Bing", href: "sites/bing/index.html", do: "decision leftover" },
+          { name: "F3 3GS", href: "sites/iphone/index.html", do: "no iPad" },
+          { name: "F4 Foursquare", href: "sites/foursquare/index.html", do: "venue leftover" },
+          { name: "F5 Win7 leftover", href: "sites/windows7/index.html", do: "IE8 residual" }
+        ]
+      },
+      {
+        label: "Leftover 3×",
+        do: "Never a second star",
+        sites: [
+          { name: "Mafia Wars leftover", href: "sites/mafiawars/index.html", do: "job leftover" },
+          { name: "WhatsApp seed leftover", href: "sites/whatsapp/index.html", do: "SMS leftover" },
+          { name: "UberCab leftover", href: "sites/ubercab/index.html", do: "SF leftover" }
+        ]
+      },
+      {
+        label: "Year game",
+        do: "Plot Neighbors leftover · gold is Like",
+        sites: [
+          { name: "Plot Neighbors", href: "sites/playable/game.html", do: "year game" },
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Like" }
+        ]
+      }
+    ]
+  };
+
     ITT.flowMaps["2010"] = {
     "thesis": "Tablet + filter + Like on the open web — still mostly a laptop.",
     "shell": "Windows 7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph",
@@ -3150,6 +3238,44 @@
     "year": "2010"
   };
 
+    ITT.flowMaps["2011"] = {
+    thesis: "Circles, not a Facebook replacement. Spotify US. Siri. Timeline. Still a laptop.",
+    shell: "Windows 7 · IE 9 · Chrome is a product room",
+    year: "2011",
+    how: [
+      "★ Google+ Hangout: circle + two people → itt11-gplus",
+      "Spotify US invite leftover. Siri leftover. Timeline leftover.",
+      "Qwikster is a funeral leftover. Guided stays 6. Star stays G+."
+    ],
+    branches: [
+      {
+        label: "★ Star",
+        do: "Hangout after circle. Incomplete never writes.",
+        sites: [{ name: "Google+", href: "sites/googleplus/index.html", do: "circle + hangout → itt11-gplus" }]
+      },
+      {
+        label: "Official leftover",
+        do: "Not a second star",
+        sites: [
+          { name: "Spotify US", href: "sites/spotify/index.html", do: "invite leftover" },
+          { name: "Siri", href: "sites/iphone/index.html", do: "type leftover" },
+          { name: "Timeline", href: "sites/facebook/index.html", do: "cover leftover" },
+          { name: "iPad 2 leftover", href: "sites/ipad/index.html", do: "cameras leftover" },
+          { name: "Qwikster leftover", href: "sites/netflix/index.html", do: "funeral leftover" },
+          { name: "Airbnb leftover", href: "sites/airbnb/index.html", do: "pick leftover" }
+        ]
+      },
+      {
+        label: "Year game",
+        do: "Letter Swap leftover · gold is G+",
+        sites: [
+          { name: "Letter Swap", href: "sites/playable/game.html", do: "year game" },
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet" }
+        ]
+      }
+    ]
+  };
+
   ITT.flowMaps["2013"] = {
     "thesis": "Mobile default + privacy mass — Vine 6s, IG Video, Stories, iOS 7, Snowden.",
     "shell": "Win7 · IE 9 · Chrome #1 narrative · Win8.1 late product",
@@ -3164,10 +3290,10 @@
         "do": "REAL leftover loops \u00b7 incomplete never writes",
         "sites": [
           { "name": "F1 Twitter", "href": "sites/twitter/index.html", "do": "140 leftover \u2192 itt13-tweets" },
-          { "name": "F2 Google", "href": "sites/google/index.html", "do": "Query \u2192 itt13-google" },
+          { "name": "F2 Chrome leftover", "href": "sites/chrome/index.html", "do": "Habit leftover \u2192 itt13-chrome" },
           { "name": "F3 About", "href": "pages/about.html", "do": "Dual scale \u2192 itt13-wiki" },
-          { "name": "F4 Vine star", "href": "sites/vine/index.html", "do": "Feed \u00b7 record is the writer" },
-          { "name": "F5 Snap", "href": "sites/snapchat/index.html", "do": "Person snap \u2192 itt13-snap" }
+          { "name": "F4 Vine star", "href": "sites/vine/record.html", "do": "Hold 6s \u00b7 record is the writer" },
+          { "name": "F5 Snap Stories", "href": "sites/snapchat/story.html", "do": "24h \u2192 itt13-snap-story" }
         ]
       },
       {
@@ -3311,8 +3437,19 @@
           { "name": "Let's Encrypt", "href": "sites/letsencrypt/index.html", "do": "hostname → itt15-le" },
           { "name": "Blob Rush", "href": "sites/playable/game.html", "do": "agar-class · not slither → itt15-game-blobrush" }
         ]
+      },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
       }
-    ],
+],
     "year": "2015"
   };
 
@@ -3359,8 +3496,19 @@
         { "name": "Path", "href": "sites/path/index.html", "do": "moment → itt12-pop-path" },
         { "name": "Flipboard", "href": "sites/flipboard/index.html", "do": "≥2 flips → itt12-pop-flipboard" }
       ]
-    }
-  ],
+    },
+      {
+        "label": "Famous games",
+        "do": "Two era-famous cabinets · incomplete never writes",
+        "sites": [
+          {
+            "name": "Famous games",
+            "href": "sites/playable/famous.html",
+            "do": "Play two era-famous cabinets"
+          }
+        ]
+      }
+],
   "year": "2012"
 };
 
@@ -3502,6 +3650,64 @@
           { name: "8 CCPA", href: "sites/ccpa/index.html", do: "Do Not Sell → itt20-ccpa" },
           { name: "9 Chrome habit", href: "sites/chrome/index.html", do: "still the tab" },
           { name: "10 Sus Vote", href: "sites/playable/game.html", do: "itt20-game-among" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2021"] = {
+    year: "2021",
+    thesis: "Allow Tracking is the trap. Ask App Not to Track is the save. iOS 14.5 · 26 Apr.",
+    shell: "Windows 10 mass · Chrome habit · Win11 leftover after 5 Oct",
+    how: [
+      "Hub → 2021 → Starting Point",
+      "Allow is the trap · Ask + 2 ticks writes itt21-att",
+      "Signal · Copilot waitlist · Meta rename · Wordle is 90 users"
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays ATT Ask. Allow never writes.",
+        sites: [
+          { name: "1 ATT Ask", href: "sites/att/index.html", do: "Ask + 2 ticks → itt21-att" },
+          { name: "2 Signal leftover", href: "sites/signal/index.html", do: "15 May delay → itt21-signal" },
+          { name: "3 Copilot waitlist", href: "sites/copilot/index.html", do: "29 Jun · not ChatGPT → itt21-copilot" },
+          { name: "4 Meta rename", href: "sites/meta/index.html", do: "28 Oct · app still Facebook → itt21-meta" },
+          { name: "5 Windows 11 leftover", href: "sites/windows11/index.html", do: "24 Jun / 5 Oct → itt21-win11" },
+          { name: "6 Flash brick", href: "sites/flash/index.html", do: "12 Jan → itt21-flash-brick" },
+          { name: "7 Chrome habit", href: "sites/chrome/index.html", do: "still the tab → itt21-chrome" },
+          { name: "8 Win10 residual", href: "sites/windows10/index.html", do: "still mass → itt21-win10" },
+          { name: "9 Facebook leftover", href: "sites/facebook/index.html", do: "itt21-pop-facebook" },
+          { name: "10 Five Letter", href: "sites/playable/game.html", do: "itt21-game-five" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2022"] = {
+    year: "2022",
+    thesis: "Send is the save. Empty / Plus / GPT-4 / Bing Chat never write. ChatGPT · 30 Nov.",
+    shell: "Windows 10 mass · Chrome habit · Chrome 100 leftover",
+    how: [
+      "Hub → 2022 → Starting Point",
+      "Empty / Plus / GPT-4 never write · ticks + prompt + Send writes itt22-chatgpt",
+      "Twitter still Twitter · Wordle at the Times · Stable Diffusion 22 Aug"
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays ChatGPT Send. Empty never writes.",
+        sites: [
+          { name: "1 ChatGPT Send", href: "sites/chatgpt/index.html", do: "ticks + prompt → itt22-chatgpt" },
+          { name: "2 Twitter leftover", href: "sites/twitter/index.html", do: "$44B · still Twitter → itt22-twitter" },
+          { name: "3 Wordle leftover", href: "sites/wordle/index.html", do: "31 Jan · initially free → itt22-wordle" },
+          { name: "4 Stable Diffusion", href: "sites/stablediffusion/index.html", do: "22 Aug · OpenRAIL → itt22-sd" },
+          { name: "5 Mastodon leftover", href: "sites/mastodon/index.html", do: "1M MAU → itt22-mastodon" },
+          { name: "6 BeReal leftover", href: "sites/bereal/index.html", do: "two minutes → itt22-bereal" },
+          { name: "7 DALL·E 2 leftover", href: "sites/dalle2/index.html", do: "Apr preview → itt22-dalle2" },
+          { name: "8 Chrome habit", href: "sites/chrome/index.html", do: "Chrome 100 → itt22-chrome" },
+          { name: "9 Win10 residual", href: "sites/windows10/index.html", do: "still mass → itt22-win10" },
+          { name: "10 Prompt Box", href: "sites/playable/game.html", do: "itt22-game-prompt" }
         ]
       }
     ]

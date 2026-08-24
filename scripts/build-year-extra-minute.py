@@ -917,7 +917,7 @@ SPECS: list[dict] = [
         start_status="Share to IG. MMS is the old verb.",
         chrome="Android share — 2012 leftover",
         chrome_sub="Filter leaves iOS · no live upload",
-        bg="#222", bar="#3d8bfd", field_bg="#111",
+        bg="#222222", bar="#3d8bfd", field_bg="#111111",
     ),
     G(
         "2012", "b", "ipopin", "IPO pin", "pick",

@@ -177,7 +177,7 @@ TRAILS = {
         (10, "Box Shift", "sites/playable/game.html", "/playable/", "itt07-game-boxshift", "sites/iphone/index.html", "iPhone Safari"),
     ],
     "2008": [
-        (1, "App Store", "sites/appstore/index.html", "/appstore/", "", "sites/chrome/index.html", "Chrome"),
+        (1, "App Store", "sites/appstore/index.html", "/appstore/", "itt08-apps", "sites/chrome/index.html", "Chrome"),
         (2, "Chrome", "sites/chrome/index.html", "/chrome/", "", "sites/github/issue.html", "GitHub issue"),
         (3, "GitHub issue", "sites/github/issue.html", "/github/", "itt08-github", "sites/android/index.html", "Android G1"),
         (4, "Android G1", "sites/android/index.html", "/android/", "", "sites/hulu/index.html", "Hulu"),

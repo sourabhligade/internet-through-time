@@ -335,10 +335,8 @@ const SIGNATURE = {
     body: /Face ID/i,
     act: async (page) => {
       const frame = contentFrame(page);
-      const reqs = frame.locator('[data-faceid-req]');
-      await expect(reqs.first()).toBeVisible({ timeout: 15000 });
-      await reqs.nth(0).check({ force: true });
-      await reqs.nth(1).check({ force: true });
+      await expect(frame.locator('[data-faceid-look]')).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-faceid-look]').click();
       await frame.locator('[data-faceid-unlock]').click();
     },
   },
@@ -386,8 +384,6 @@ const YEARS = [
   '2002',
   '2003',
   '2004',
-  '2005',
-  '2006',
   '2008',
   '2010',
   '2012',

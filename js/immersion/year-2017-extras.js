@@ -55,14 +55,16 @@
       reveal(doc);
     }
     var look = doc.querySelector("[data-faceid-look]");
+    var looked = false;
     if (look) {
       look.addEventListener("click", function () {
-        if (st) st.textContent = "Looking (theater). Tick both honesties, then Unlock.";
+        looked = true;
+        if (st) st.textContent = "Looking (theater). Unlock to write.";
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-faceid-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+      if (!looked && look) {
+        feedback("Look first. Unlock alone never writes.", st, { error: true });
         return;
       }
       saveJSON(key("faceid"), blob({ noHomeButton: true, ship: "2017-11-03", price: 999 }));
@@ -233,21 +235,37 @@
 
   function bootWannaCry(doc) {
     var btn = doc.querySelector("[data-wc-ack]");
-    if (!btn) return;
+    var payload = doc.querySelector("[data-wc-payload]");
+    var patch = doc.querySelector("[data-wc-patch]");
     var st = doc.querySelector("[data-wc-status]");
     if (YX.loadJSON(key("wannacry"))) {
       feedback("Noted · itt17-wannacry", st);
       reveal(doc);
     }
-    btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-wc-req]") < 2) {
-        feedback("Read both notes. No exploit on this page.", st, { error: true });
-        return;
-      }
+    if (payload) {
+      payload.addEventListener("click", function () {
+        feedback("No payload on this page. Never writes.", st, { error: true });
+      });
+    }
+    function saveWc() {
       saveJSON(key("wannacry"), blob({ day: "2017-05-12" }));
       feedback("I was there (literacy) · itt17-wannacry", st);
       reveal(doc);
-    });
+    }
+    if (patch) {
+      patch.addEventListener("click", function () {
+        saveWc();
+      });
+    }
+    if (btn) {
+      btn.addEventListener("click", function () {
+        if (countChecked(doc, "[data-wc-req]") < 2) {
+          feedback("Read both notes. No exploit on this page.", st, { error: true });
+          return;
+        }
+        saveWc();
+      });
+    }
   }
 
   function bootEquifax(doc) {

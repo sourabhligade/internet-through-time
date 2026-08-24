@@ -2,7 +2,7 @@
 /**
  * Two leftover extra games per shipped year (extra-a / extra-b).
  * Minute machines: empty Finish never writes · year-true verbs write ittYY-game-*.
- * Lean years (2012) have extra-c/d/e only — dest-missing extras skip, they are not invented.
+ * 2012 extra-a/b are on disk (Android share · IPO pin). Dest-missing extras still skip.
  */
 const fs = require("fs");
 const path = require("path");
@@ -60,7 +60,9 @@ async function openExtra(page, year, file) {
 async function completeMinute(frame, page) {
   const host = frame.locator("[data-year-game][data-minute-extra]");
   const kind = (await host.getAttribute("data-mx-kind")) || "pick";
+  await killOverlays(page);
   await frame.locator("[data-game-start]").click();
+  await killOverlays(page);
 
   if (kind === "form") {
     const inputs = frame.locator("[data-mx-input]");
@@ -97,16 +99,23 @@ async function completeMinute(frame, page) {
     orders.sort((a, b) => a.o - b.o);
     for (const x of orders) await items.nth(x.i).click();
   } else {
+    await frame.locator("[data-mx-good]").first().waitFor({ timeout: 8000 });
     const goods = frame.locator("[data-mx-good]");
     const n = await goods.count();
-    for (let i = 0; i < n; i++) await goods.nth(i).click();
+    for (let i = 0; i < n; i++) {
+      await killOverlays(page);
+      await goods.nth(i).click({ force: true });
+    }
   }
 
   const confirmNeed = (await host.getAttribute("data-mx-confirm-need")) || "";
   if (confirmNeed) {
-    await frame.locator("[data-mx-confirm]").fill(confirmNeed);
+    const box = frame.locator("[data-mx-confirm]");
+    await box.fill(confirmNeed);
+    await box.dispatchEvent("input");
   }
-  await frame.locator("[data-mx-finish]").click();
+  await killOverlays(page);
+  await frame.locator("[data-mx-finish]").click({ force: true });
 }
 
 test.describe("year extra games — minute machines", () => {
@@ -139,7 +148,8 @@ test.describe("year extra games — minute machines", () => {
 
   test("2016 home lists both extras", async ({ page }) => {
     await page.goto("/years/2016/pages/home.html");
-    await expect(page.locator('a[href*="extra-a.html"]')).toBeVisible();
-    await expect(page.locator('a[href*="extra-b.html"]')).toBeVisible();
+    const extras = page.locator('[data-itt-year-extras="2016"]');
+    await expect(extras.locator('a[href*="extra-a.html"]')).toBeVisible();
+    await expect(extras.locator('a[href*="extra-b.html"]')).toBeVisible();
   });
 });

@@ -579,6 +579,35 @@
       "btn": "Open leftover"
     }
   ],
+  "2014": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover",
+      "why": "2014 leftover third trio. Not the chip.",
+      "verb": "Pick watch then go.",
+      "ph": "music video",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia leftover",
+      "why": "2014 leftover third trio. Not the chip.",
+      "verb": "Pick article then go.",
+      "ph": "whatsapp",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook leftover",
+      "why": "2014 leftover third trio. Not the chip.",
+      "verb": "Pick deal then go.",
+      "ph": "$19 billion",
+      "btn": "Open leftover"
+    }
+  ],
   "2015": [
     {
       "id": "discord",
@@ -750,6 +779,64 @@
       "why": "Apr–Oct 2020 leftover third trio. Not the chip.",
       "verb": "Pick episode then go.",
       "ph": "quibi",
+      "btn": "Open leftover"
+    }
+  ],
+  "2021": [
+    {
+      "id": "clubhouse",
+      "name": "Clubhouse",
+      "title": "Clubhouse leftover",
+      "why": "Invite leftover third trio. Not 2020 mass. Not the chip.",
+      "verb": "Pick invite then go.",
+      "ph": "invite",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "nft",
+      "name": "NFT literacy",
+      "title": "NFT leftover",
+      "why": "Beeple-class literacy. No mint. No wallet.",
+      "verb": "Pick leftover then go.",
+      "ph": "beeple",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "squid",
+      "name": "Squid Game",
+      "title": "Squid Game print leftover",
+      "why": "September 2021 print leftover. No Netflix dest.",
+      "verb": "Pick leftover then go.",
+      "ph": "squid game",
+      "btn": "Open leftover"
+    }
+  ],
+  "2022": [
+    {
+      "id": "tiktok",
+      "name": "TikTok leftover",
+      "title": "TikTok leftover",
+      "why": "Mass leftover. Not 2022-new. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "fyp leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney leftover",
+      "title": "Midjourney leftover",
+      "why": "Discord open beta 12 Jul 2022. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "/imagine leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "lensa",
+      "name": "Lensa leftover",
+      "title": "Lensa leftover",
+      "why": "Magic Avatars 28 Nov 2022. Prisma 2018 app. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "avatar leftover",
       "btn": "Open leftover"
     }
   ]

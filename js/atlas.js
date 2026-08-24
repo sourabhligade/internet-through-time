@@ -6,7 +6,7 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  for (y = 1994; y <= 2020; y++) YEARS_ALL.push(String(y));
+  for (y = 1994; y <= 2024; y++) YEARS_ALL.push(String(y));
 
   function $(id) {
     return document.getElementById(id);

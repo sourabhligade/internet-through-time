@@ -943,5 +943,75 @@
       "bg": "#e9ebee",
       "fg": "#111"
     }
+  ],
+  "2021": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube — 2021 leftover",
+      "why": "Still the leftover watch tab. Not Shorts-as-2021-new. Not Reels.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia — 2021 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "app tracking transparency",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook — 2021 leftover",
+      "why": "Hostname leftover. Company is Meta. App is still Facebook.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2021",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
+  ],
+  "2022": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube — 2022 leftover",
+      "why": "Still the leftover watch tab. Not Shorts-as-2022-new. Not the chip.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia — 2022 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "chatgpt",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook — 2022 leftover",
+      "why": "Hostname leftover. App is still Facebook. Threads is 2023.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2022",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
   ]
 }

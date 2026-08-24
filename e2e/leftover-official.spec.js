@@ -10,7 +10,9 @@ const { test, expect } = require("@playwright/test");
 const ROOT = path.join(__dirname, "..");
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
 /** @type {{ year: string, href: string, key: string, suffix: string, needPick: string, minPick: number, field: boolean, placeholder: string }[]} */
-const DESTS = MATRIX.dests;
+const DESTS = MATRIX.dests.filter((d) =>
+  fs.existsSync(path.join(ROOT, "years", d.year, "index.html"))
+);
 
 function neighborKeys(year, suffix) {
   const y = parseInt(year, 10);
@@ -112,12 +114,12 @@ test.describe("leftover official · disk + trail", () => {
     for (const block of years) {
       const ym = block.match(/"(\d{4})"/);
       const year = ym ? ym[1] : "";
-      if (!year || year === "2014" || Number(year) >= 2021) continue;
+      if (!year) continue;
       const keys = block.match(/"whenKey":\s*"([^"]*)"/g) || [];
       live += keys.length;
       empty += keys.filter((k) => /"whenKey":\s*""/.test(k)).length;
     }
-    expect(live, "live trail dests").toBeGreaterThanOrEqual(26 * 10);
+    expect(live, "live trail dests").toBeGreaterThanOrEqual(27 * 10);
     expect(empty, "empty live whenKeys").toBe(0);
   });
 

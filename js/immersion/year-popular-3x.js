@@ -170,6 +170,10 @@
         say(YX, st, "Pick a row first. Incomplete never writes.", true);
         return;
       }
+      if (picked === "trap") {
+        say(YX, st, "That pick is the trap. It never writes.", true);
+        return;
+      }
       if (reqs.need && reqs.have < reqs.need) {
         say(YX, st, "Tick the honesty notes first. Incomplete never writes.", true);
         return;
@@ -199,6 +203,15 @@
     var btns = doc.querySelectorAll("[data-pop-go]");
     var i;
     for (i = 0; i < btns.length; i++) bootOne(btns[i]);
+    var traps = doc.querySelectorAll("[data-pop3-trap]");
+    for (i = 0; i < traps.length; i++) {
+      if (traps[i].getAttribute("data-pop-trap-bound") === "1") continue;
+      traps[i].setAttribute("data-pop-trap-bound", "1");
+      traps[i].addEventListener("click", function () {
+        var st = (this.ownerDocument || document).querySelector("[data-pop-status]");
+        if (st) st.textContent = "Trap. That click never writes.";
+      });
+    }
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

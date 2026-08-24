@@ -148,7 +148,9 @@
       .slice(0, 30)
       .map(function (row) {
         return (
-          "<div class='fb-feed-item' style='border-bottom:1px solid #d8dfea;padding:8px 0;font-size:12px'>" +
+          "<div class='fb-feed-item' data-feed-story='" +
+          esc(row.who || "Someone") +
+          "' style='border-bottom:1px solid #d8dfea;padding:8px 0;font-size:12px;cursor:pointer'>" +
           "<b>" +
           esc(row.who || "Someone") +
           "</b> " +
@@ -266,6 +268,43 @@
         renderApps();
         var st = doc.querySelector("[data-fb-app-status]");
         if (st) st.textContent = "Added “" + name + "” (Platform theater · May 24, 2007).";
+      });
+    }
+
+    var feedHost = doc.querySelector("[data-fb-feed]");
+    if (feedHost && feedHost.getAttribute("data-feed-bound") !== "1") {
+      feedHost.setAttribute("data-feed-bound", "1");
+      feedHost.addEventListener("click", function (ev) {
+        var t = ev.target;
+        while (t && t !== feedHost && !(t.getAttribute && t.getAttribute("data-feed-story"))) {
+          t = t.parentNode;
+        }
+        if (!t || t === feedHost) return;
+        if (year() !== "2006") return;
+        var who = t.getAttribute("data-feed-story") || "story";
+        var feedKeyL = ITT.util && ITT.util.immersionStorageKey
+          ? ITT.util.immersionStorageKey("feed", "itt06")
+          : "itt06-feed";
+        try {
+          localStorage.setItem(feedKeyL, JSON.stringify({
+            multiStep: true,
+            real: true,
+            year: "2006",
+            ts: Date.now(),
+            story: String(who).slice(0, 40)
+          }));
+        } catch (eFeed) { /* */ }
+        var fst = doc.querySelector("[data-feed-status]");
+        if (fst) fst.textContent = "Story persist · itt06-feed";
+        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+      });
+    }
+    var hideFeed = doc.querySelector("[data-feed-hide]");
+    if (hideFeed && hideFeed.getAttribute("data-feed-hide-bound") !== "1") {
+      hideFeed.setAttribute("data-feed-hide-bound", "1");
+      hideFeed.addEventListener("click", function () {
+        var fst = doc.querySelector("[data-feed-status]");
+        if (fst) fst.textContent = "Hide never writes. Click one story.";
       });
     }
 

@@ -82,7 +82,13 @@ for (const yearPack of matrix.panel) {
       f2.room.replace(/^\//, ''),
       { timeout: 20000 }
     );
-    await expect(contentFrame(page).locator('[data-5x-save]').first()).toBeVisible({ timeout: 15000 });
+    /* Native gold F2 (FishCam, Hotmail, AuctionWeb…) has no checkbox plaque. */
+    const save2 = contentFrame(page).locator('[data-5x-save]').first();
+    if ((await save2.count()) === 0) {
+      await expect(contentFrame(page).locator('body')).toBeVisible();
+      return;
+    }
+    await expect(save2).toBeVisible({ timeout: 15000 });
   });
 }
 

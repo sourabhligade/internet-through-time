@@ -155,4 +155,20 @@ test.describe('2012 flows', () => {
     await page.locator('[data-win8-tile="photos"]').click();
     await expect.poll(() => getKey(page, 'itt12-win8-tiles')).toBeTruthy();
   });
+
+  test('second leftover 3× is Facebook 1B · Maps · SOPA and not the third trio', async ({ page }) => {
+    await page.goto('/years/2012/pages/home.html');
+    await expect(page.locator('#ott-guided-2012 ol > li')).toHaveCount(6);
+    await expect(page.locator('[data-ott-one-thing="2012"]')).toHaveAttribute('href', /instagram\/android/);
+    const more = page.locator('[data-itt-pop-more="2012"] a[href*="sites/"]');
+    const third = page.locator('[data-itt-pop-3x3="2012"] a[href*="sites/"]');
+    await expect(more).toHaveCount(3);
+    await expect(third).toHaveCount(3);
+    const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute('href') || ''));
+    const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute('href') || ''));
+    expect(moreH.join(' ')).toMatch(/facebook\/index/);
+    expect(moreH.join(' ')).toMatch(/iphone\/maps/);
+    expect(moreH.join(' ')).toMatch(/wikipedia\/sopa/);
+    for (const h of moreH) expect(thirdH).not.toContain(h);
+  });
 });

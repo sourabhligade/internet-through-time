@@ -3,8 +3,11 @@
  * 2× leftover dests — every N-flow on every ship year:
  * incomplete never writes, complete writes REAL ittYY-*.
  */
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
 const matrix = require('./2x-links.matrix.json');
+const ROOT = path.join(__dirname, '..');
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -83,6 +86,7 @@ for (const row of matrix) {
 }
 
 for (const year of Object.keys(byYear).sort()) {
+  if (!fs.existsSync(path.join(ROOT, 'years', year, 'index.html'))) continue;
   test.describe(`2× leftover ${year}`, () => {
     for (const fl of byYear[year]) {
       test(`${fl.key} incomplete then REAL`, async ({ page }) => {

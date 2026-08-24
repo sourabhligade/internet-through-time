@@ -83,6 +83,7 @@
     "immersion/year-5x-pack.js",
     "immersion/year-true-packs.js",
     "immersion/year-popular-3x.js",
+    "immersion/year-true-leftover.js",
     "immersion/leftover-official.js",
     "immersion/year-4x-flows.js",
     "immersion/official-dest-gold.js",
@@ -375,6 +376,7 @@
       "immersion/year-2009-extras.js",
       "immersion/farmville.js",
       "immersion/bing.js",
+      "immersion/appstore.js",
       "immersion/one-thing-machines.js"
     ],
         "2010": [
@@ -398,6 +400,7 @@
     ],
     "2011": [
       "immersion/year-2011-extras.js",
+      "immersion/spotify.js",
       "immersion/one-thing-machines.js"
     ],
         "2012": [
@@ -408,6 +411,10 @@
     ],
     "2013": [
       "immersion/year-2013-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2014": [
+      "immersion/year-2014-extras.js",
       "immersion/one-thing-machines.js"
     ],
     "2015": [
@@ -438,6 +445,26 @@
     "2020": [
       "immersion/no-mock-common.js",
       "immersion/year-2020-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2021": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2021-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2022": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2022-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2023": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2023-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2024": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2024-extras.js",
       "immersion/one-thing-machines.js"
     ]
   };

@@ -22,8 +22,40 @@
  <li>Nov 2000 &mdash; operations wind down</li>
  </ul>
  <p><a href="index.html">&larr; Pets.com home (peak era)</a> &middot; <a href="about.html">Timeline</a> &middot; <a href="shop.html">Shop</a></p>
+ <p>
+  <button type="button" data-pets-buy>Buy now (empty cart trap)</button>
+  <button type="button" data-pets-ack>Cease orders · 9 Nov 2000</button>
+  <span data-pets-status></span>
+ </p>
+ <p hidden data-next-flow data-next-when-key="itt00-pets"><b>Next:</b> <a href="../amazon/index.html">Amazon smile leftover</a></p>
 </div>
 <script src="../../../../js/immersion-2000.js"></script>
+<script>
+(function () {
+  function boot() {
+    var st = document.querySelector("[data-pets-status]");
+    var buy = document.querySelector("[data-pets-buy]");
+    var ack = document.querySelector("[data-pets-ack]");
+    if (buy) {
+      buy.addEventListener("click", function () {
+        if (st) st.textContent = "Empty cart. Buy-now never writes.";
+      });
+    }
+    if (ack) {
+      ack.addEventListener("click", function () {
+        var o = { multiStep: true, real: true, year: "2000", ts: Date.now(), end: "2000-11-09" };
+        try { localStorage.setItem("itt00-pets", JSON.stringify(o)); } catch (e) { /* */ }
+        if (st) st.textContent = "Shutdown leftover · itt00-pets";
+        var next = document.querySelector("[data-next-flow]");
+        if (next) next.hidden = false;
+        try { if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN) { /* */ }
+      });
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
 
 <!-- ITT-4X:pets-end:start -->
 <section class="itt-4x-panel itt-4x-product" data-4x-panel data-4x-kind="checks" data-4x-min="2" style="margin:12px 0;padding:12px;border:1px solid #333;font-family:inherit;font-size:13px;max-width:46em;background:#fff">
@@ -35,4 +67,35 @@
 <p hidden data-next-flow data-next-when-key="itt00-pets-end"><b>Next:</b> <a href="../startupfailures/index.html">Startup Failures</a></p>
 </section>
 <!-- ITT-4X:pets-end:end -->
+
+
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2000" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="about.html">Pets.com · about</a> ·
+ <a href="cart.html">Pets.com · cart</a> ·
+ <a href="shop.html">Pets.com · shop</a> ·
+ <a href="../dmoz/index.html">Open Directory Project (DMOZ)</a> ·
+ <a href="../ebay/index.html">eBay</a> ·
+ <a href="../everything2/index.html">Everything2</a> ·
+ <a href="../excite/index.html">Excite</a> ·
+ <a href="../expedia/index.html">Expedia</a> ·
+ <a href="../flash4/index.html">Flash 4</a> ·
+ <a href="../gamespot/index.html">GameSpot</a> ·
+ <a href="../geocities/index.html">Yahoo! GeoCities</a> ·
+ <a href="../gnutella/index.html">Gnutella</a> ·
+ <a href="../google/index.html">Google</a> ·
+ <a href="../half/index.html">Half.com</a> ·
+ <a href="../hampsterdance/index.html">Hampster Dance</a> ·
+ <a href="../homestar/index.html">Homestar Runner</a> ·
+ <a href="../hotbot/index.html">HotBot</a> ·
+ <a href="../icq/index.html">ICQ</a> ·
+ <a href="../infoseek/index.html">Infoseek</a> ·
+ <a href="../ivillage/index.html">iVillage</a> ·
+ <a href="../kottke/index.html">kottke.org</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
 </body></html>

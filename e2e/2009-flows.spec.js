@@ -11,10 +11,20 @@ test.describe("2009 flows", () => {
     await expect(page.locator("body")).toContainText("iPad");
     await expect(page.locator("body")).toContainText("Instagram");
   });
+  test("YouTube leftover watches without a quiz lock", async ({ page }) => {
+    await page.goto("/years/2009/sites/youtube/index.html");
+    await page.evaluate(() => localStorage.removeItem("itt09-yt"));
+    await page.reload();
+    await page.locator("[data-yt09-upload]").click();
+    expect(await getKey(page, "itt09-yt")).toBeFalsy();
+    await page.locator('[data-yt09-watch="charlie"]').click();
+    await expect.poll(() => getKey(page, "itt09-yt")).toBeTruthy();
+  });
   test("guided stays exactly 6", async ({ page }) => {
     await page.goto("/years/2009/pages/home.html");
     await expect(page.locator("#ott-guided-2009 ol > li")).toHaveCount(6);
     await expect(page.locator('[data-ott-one-thing="2009"]')).toBeVisible();
+    await expect(page.locator('a[href="../sites/youtube/index.html"]').first()).toBeVisible();
   });
   test("star trap + empty never write; complete writes itt09-like", async ({ page }) => {
     await page.goto("/years/2009/sites/facebook/index.html");
@@ -41,6 +51,9 @@ test.describe("2009 flows", () => {
     await page.locator("[data-fv09-req]").nth(1).check();
     await page.locator('[data-fv09-plot="a"]').click();
     await page.locator('[data-fv09-plot="b"]').click();
+    await page.locator("[data-fv09-harvest]").click();
+    expect(await getKey(page, "itt09-farm")).toBeFalsy();
+    await page.waitForTimeout(3100);
     await page.locator("[data-fv09-harvest]").click();
     await expect.poll(() => getKey(page, "itt09-farm")).toBeTruthy();
   });

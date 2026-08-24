@@ -1,10 +1,13 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
+const fs = require("fs");
+const path = require("path");
+const ROOT = path.join(__dirname, "..");
 const SHIP = [];
-for (let y = 1994; y <= 2020; y++) {
-  if (y === 2014) continue;
-  SHIP.push(String(y));
+for (let y = 1994; y <= 2022; y++) {
+  const year = String(y);
+  if (fs.existsSync(path.join(ROOT, "years", year, "index.html"))) SHIP.push(year);
 }
 
 async function tickAllReqs(page) {
@@ -42,6 +45,18 @@ test.describe("third leftover 3× — every shipped year", () => {
       const starHref = await star.getAttribute("href");
       const hrefs = await strip.locator("a[href*='sites/']").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
       expect(hrefs.some((h) => starHref && h && starHref.includes(h.replace("../", "")))).toBeFalsy();
+      const more = page.locator(`[data-itt-pop-more="${year}"]`);
+      await expect(more).toBeVisible();
+      const moreHrefs = await more.locator("a[href*='sites/']").evaluateAll((as) =>
+        as.map((a) => a.getAttribute("href"))
+      );
+      const slug = (h) => {
+        const m = String(h || "").match(/sites\/([^/]+)/);
+        return m ? m[1] : "";
+      };
+      const l3 = moreHrefs.map(slug).filter(Boolean);
+      const l4 = hrefs.map(slug).filter(Boolean);
+      expect(l3.filter((s) => l4.includes(s))).toEqual([]);
     });
   }
 });
@@ -50,12 +65,7 @@ test.describe("third leftover 3× writers — sample years", () => {
   test("1994 lycos empty never writes then leftover save", async ({ page }) => {
     await leftoverSave(page, "1994", "lycos", "itt94-pop3-lycos");
   });
-  test("2005 myspace empty never writes then leftover save", async ({ page }) => {
-    await leftoverSave(page, "2005", "myspace", "itt05-pop3-myspace");
-  });
-  test("2007 justin empty never writes then leftover save", async ({ page }) => {
-    await leftoverSave(page, "2007", "justin", "itt07-pop3-justin");
-  });
+
   test("2009 mafiawars empty never writes then leftover save", async ({ page }) => {
     await leftoverSave(page, "2009", "mafiawars", "itt09-pop3-mafiawars");
   });
@@ -77,16 +87,6 @@ test.describe("third leftover 3× writers — sample years", () => {
 });
 
 test.describe("third leftover 3× costume rooms", () => {
-  test("2007 justin trap never writes and named picks exist", async ({ page }) => {
-    await page.goto("/years/2007/sites/justin/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt07-pop3-justin"));
-    await page.reload();
-    await expect(page.locator("[data-pop3-costume]")).toBeVisible();
-    await expect(page.locator("[data-pop-pick]")).toHaveCount(3);
-    await page.locator("[data-jtv07-trap]").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt07-pop3-justin"))).toBeFalsy();
-    await expect(page.locator("[data-pop-status]")).toContainText(/never writes/i);
-  });
   test("2009 ubercab trap never writes", async ({ page }) => {
     await page.goto("/years/2009/sites/ubercab/index.html");
     await page.evaluate(() => localStorage.removeItem("itt09-pop3-ubercab"));

@@ -45,6 +45,7 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/seti/index.html": "http://setiathome.ssl.berkeley.edu/",
       "sites/playable/extra-e.html": "http://museum.local/years/1999/sites/playable/extra-e.html",
       "sites/playable/extra-d.html": "http://museum.local/years/1999/sites/playable/extra-d.html",
       "sites/playable/extra-c.html": "http://museum.local/years/1999/sites/playable/extra-c.html",
@@ -295,6 +296,7 @@
       "sites/napster/search.html": "Napster Search",
       "sites/paypal/index.html": "PayPal",
       "sites/y2k/index.html": "Y2K Information",
+      "sites/seti/index.html": "SETI@home",
 
       "sites/cnn/world.html": "World",
       "sites/bowienet/index.html": "BowieNet",
@@ -420,6 +422,7 @@
       { re: /ask|jeeves/i, path: "sites/askjeeves/index.html" },
       { re: /paypal|confinity/i, path: "sites/paypal/index.html" },
       { re: /y2k|year.?2000|millennium/i, path: "sites/y2k/index.html" },
+      { re: /seti|screensaver|berkeley/i, path: "sites/seti/index.html" },
       { re: /hampster|hamster/i, path: "sites/hampsterdance/index.html" },
       { re: /zombo/i, path: "sites/zombo/index.html" },
       { re: /dmoz|directory/i, path: "sites/dmoz/index.html" },
@@ -432,7 +435,7 @@
     ],
     dirSiteKeys: [
       "napster", "google", "blogger", "yahoo", "amazon", "ebay", "excite", "cnn",
-      "geocities", "askjeeves", "paypal", "y2k", "hotbot", "slashdot", "apple",
+      "geocities", "askjeeves", "paypal", "y2k", "seti", "hotbot", "slashdot", "apple",
       "microsoft", "altavista", "hampsterdance", "zombo"
     ],
     commands: {

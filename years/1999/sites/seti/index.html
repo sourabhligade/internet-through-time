@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-itt-year="1999">
+<head>
+<meta charset="utf-8">
+<title>SETI@home — screensaver leftover</title>
+<link rel="stylesheet" href="../../../../css/period-1999.css">
+</head>
+<body bgcolor="#c0c0c0" text="#000000" link="#0000ee" vlink="#551a8b">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="560" align="center" cellpadding="12" cellspacing="0" bgcolor="#e8e8e8" style="margin-top:16px;border:2px outset #fff">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px">
+<p><a href="../../pages/home.html">← Starting Point 1999</a> · <a href="../y2k/index.html">Y2K</a></p>
+<h1 style="font-size:18px;margin:0 0 8px">SETI@home leftover</h1>
+<p>17 May 1999. UC Berkeley. About 200,000 downloads in 48 hours. Your beige box looks for aliens while the screensaver runs. No live BOINC in this museum.</p>
+<p class="itt-pixel-failed">[failed-final] word SETI@home + date · no official mark</p>
+<p>17 May 1999 leftover — screensaver theater, not the AIM chip. No real work unit.</p>
+<p>
+ <button type="button" data-seti-signal>Found a signal (trap)</button>
+ <button type="button" data-seti-install>Install screensaver (theater)</button>
+</p>
+<p data-seti-status></p>
+<p hidden data-next-flow data-next-when-key="itt99-seti"><b>Next:</b> <a href="../y2k/index.html">Y2K clock leftover</a></p>
+</td></tr>
+</table>
+<script src="../../../../js/immersion-1999.js"></script>
+<script>
+(function () {
+  function boot() {
+    var st = document.querySelector("[data-seti-status]");
+    var trap = document.querySelector("[data-seti-signal]");
+    var go = document.querySelector("[data-seti-install]");
+    if (trap) {
+      trap.addEventListener("click", function () {
+        if (st) st.textContent = "No signal. That click never writes.";
+      });
+    }
+    if (go) {
+      go.addEventListener("click", function () {
+        var o = { multiStep: true, real: true, year: "1999", leftover: true, ts: Date.now(), theater: "screensaver" };
+        try { localStorage.setItem("itt99-seti", JSON.stringify(o)); } catch (e) { /* */ }
+        if (st) st.textContent = "Installed leftover · itt99-seti";
+        var next = document.querySelector("[data-next-flow]");
+        if (next) next.hidden = false;
+        try { if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN) { /* */ }
+      });
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+
+
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="1999" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="../geocities/index.html">Yahoo! GeoCities</a> ·
+ <a href="../google/index.html">Google</a> ·
+ <a href="../hampsterdance/index.html">Hampster Dance</a> ·
+ <a href="../hotbot/index.html">HotBot</a> ·
+ <a href="../icq/index.html">ICQ</a> ·
+ <a href="../infoseek/index.html">Infoseek</a> ·
+ <a href="../livejournal/index.html">LiveJournal</a> ·
+ <a href="../matrix/index.html">The Matrix</a> ·
+ <a href="../microsoft/index.html">Microsoft</a> ·
+ <a href="../msn/index.html">MSN.com 1999</a> ·
+ <a href="../msngaming/index.html">MSN Gaming Zone</a> ·
+ <a href="../mynetscape/index.html">My Netscape</a> ·
+ <a href="../napster/index.html">Napster</a> ·
+ <a href="../neopets/index.html">Neopets</a> ·
+ <a href="../netcenter/index.html">Netscape Netcenter</a> ·
+ <a href="../netscape/index.html">Netscape</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
+</body>
+</html>

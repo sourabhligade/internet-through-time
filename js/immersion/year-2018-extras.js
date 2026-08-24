@@ -65,8 +65,8 @@
       reveal(doc);
     }
     save.addEventListener("click", function () {
-      if (countChecked(doc, "[data-gdpr-req]") < 2) {
-        feedback("Open Manage and tick both honesties. Accept All never writes.", st, { error: true });
+      if (!panel || panel.hasAttribute("hidden")) {
+        feedback("Open Manage first. Accept All never writes.", st, { error: true });
         return;
       }
       saveJSON(key("gdpr"), blob({ managed: true, date: "2018-05-25" }));
@@ -113,10 +113,6 @@
         feedback("Tap two clips first. Empty never writes.", st, { error: true });
         return;
       }
-      if (countChecked(doc, "[data-fyp-req]") < 1) {
-        feedback("Ack the Aug 2 merge first.", st, { error: true });
-        return;
-      }
       saveJSON(key("tiktok-fyp"), blob({ taps: n, merge: "2018-08-02" }));
       feedback("For You learned (theater) · itt18-tiktok-fyp", st);
       reveal(doc);
@@ -132,10 +128,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-hear-req]") < 2) {
-        feedback("Tick both honesties first.", st, { error: true });
-        return;
-      }
       saveJSON(key("hearing"), blob({ date: "2018-04-10" }));
       feedback("Sat the hearing (theater) · itt18-hearing", st);
       reveal(doc);
@@ -151,10 +143,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-igtv-req]") < 1) {
-        feedback("Ack this is IGTV, not Reels.", st, { error: true });
-        return;
-      }
       var title = val(doc, "[data-igtv-title]");
       if (!title || title.replace(/^\s+|\s+$/g, "").length < 2) {
         feedback("Name the episode first. Empty never writes.", st, { error: true });
@@ -175,10 +163,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-ns-req]") < 2) {
-        feedback("Tick both honesties first.", st, { error: true });
-        return;
-      }
       saveJSON(key("not-secure"), blob({ chrome: 68 }));
       feedback("Not secure · itt18-not-secure", st);
       reveal(doc);
@@ -194,10 +178,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-hp-req]") < 2) {
-        feedback("Tick ship-this-year and $349 first.", st, { error: true });
-        return;
-      }
       saveJSON(key("homepod"), blob({ price: 349, date: "2018-02-09" }));
       feedback("Reserved (theater) · itt18-homepod", st);
       reveal(doc);
@@ -213,10 +193,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-sp-req]") < 2) {
-        feedback("Read both notes. No exploit on this page.", st, { error: true });
-        return;
-      }
       saveJSON(key("spectre"), blob({ day: "2018-01-03" }));
       feedback("I was there (literacy) · itt18-spectre", st);
       reveal(doc);
@@ -232,10 +208,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-fns-req]") < 2) {
-        feedback("Tick Switch-this-year and not-Marshmello first.", st, { error: true });
-        return;
-      }
       saveJSON(key("fn-switch"), blob({ date: "2018-06-12" }));
       feedback("Dropped on Switch (theater) · itt18-fn-switch", st);
       reveal(doc);
@@ -251,10 +223,6 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-gh-req]") < 2) {
-        feedback("Tick $7.5B and 2008-was-the-issue first.", st, { error: true });
-        return;
-      }
       saveJSON(key("github"), blob({ price: "7.5B", close: "2018-10-26" }));
       feedback("Noted · itt18-github", st);
       reveal(doc);

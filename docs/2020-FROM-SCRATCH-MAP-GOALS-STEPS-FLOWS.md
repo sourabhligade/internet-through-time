@@ -1,12 +1,15 @@
 # 2020 — from-scratch visitor map (goals · steps · flows)
 
-**Date:** 2026-08-21  
-**Status:** research freeze · **do not scaffold**  
+**Date:** 2026-08-21 · **door is on disk**  
+**Current walkable map (5k pass):** [`2020-5K-WEB-FLOW-MAP.md`](2020-5K-WEB-FLOW-MAP.md)  
+**Scale / mass / Phase A:** [`2020-FROM-SCRATCH-5K-WEB-RESEARCH-IMPLEMENT-BIBLE.md`](2020-FROM-SCRATCH-5K-WEB-RESEARCH-IMPLEMENT-BIBLE.md)  
 **Read first:** [`2020-READ-FIRST.md`](2020-READ-FIRST.md)  
-**Harvest:** [`2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md`](2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md)  
+**Harvest (2026-08-21):** [`2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md`](2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md)  
 **Prefix:** `itt20`  
 **HTML cap:** ~38–45 · hard stop **50**  
 **Guided:** exactly **6**
+
+This file is the **lean-size vs 2015–2019** lock. On scale, mass visits, and phases, the 5k map + bible win. Do not restore a forest.
 
 This map is sized to the **lean-door bar** (2015–2019 on disk), not the 2006/2008 forests.
 

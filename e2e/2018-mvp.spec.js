@@ -3,6 +3,12 @@ const { test, expect } = require("@playwright/test");
 const { enterYear, contentFrame } = require("./helpers");
 
 test.describe("2018 MVP", () => {
+  test("shell names Chrome habit, not Internet Explorer", async ({ page }) => {
+    await page.goto("/years/2018/");
+    await expect(page).toHaveTitle(/Chrome habit/);
+    await expect(page.locator("#task-ie")).toHaveText(/Chrome habit/);
+    await expect(page.locator("#window-title")).toContainText(/Chrome habit/);
+  });
   test("shell boots and home chip is GDPR Manage", async ({ page }) => {
     await enterYear(page, "2018");
     const frame = contentFrame(page);

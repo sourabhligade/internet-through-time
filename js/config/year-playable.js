@@ -247,6 +247,18 @@
       famous: "Pocket Snake + Concentration",
       accent: "#00bf8f"
     },
+    "2014": {
+      id: "tilefold",
+      title: "Tile Fold",
+      href: "game.html",
+      key: "itt14-game-tilefold",
+      inspire: "2014 leftover fold — not Flappy gold",
+      blurb: "Fold two leftover tiles. Flappy never writes.",
+      why: "2014 leftover cabinet. The star is still WhatsApp.",
+      era: "Win7 + IE 9. $19B chat. TLS bleeds. Ice in July.",
+      famous: "Pocket Snake + Concentration",
+      accent: "#25d366"
+    },
     "2015": {
       id: "blobrush",
       title: "Blob Rush",
@@ -318,6 +330,54 @@
       era: "Lockdown tab. Participants, not users.",
       famous: "Brick Bat + Concentration",
       accent: "#2e86c1"
+    },
+    "2021": {
+      id: "five",
+      title: "Five Letter",
+      href: "game.html",
+      key: "itt21-game-five",
+      inspire: "Wordle class — public Oct · 90 users 1 Nov · NYT 31 Jan 2022; no NYT tiles",
+      blurb: "Guess five. Incomplete never writes.",
+      why: "ATT is the door. The game is 90 users, not millions.",
+      era: "Allow is highlighted. Ask is the real click.",
+      famous: "Brick Bat + Concentration",
+      accent: "#007aff"
+    },
+    "2022": {
+      id: "prompt",
+      title: "Prompt Box",
+      href: "game.html",
+      key: "itt22-game-prompt",
+      inspire: "Theater prompt — not Five Letter · not NYT tiles · not a live model",
+      blurb: "Type a leftover prompt. Incomplete never writes.",
+      why: "ChatGPT is the door. The game is a theater box, not the Times grid.",
+      era: "Send is the save. Plus is next year.",
+      famous: "Brick Bat + Concentration",
+      accent: "#10a37f"
+    },
+    "2023": {
+      id: "subscribe",
+      title: "Subscribe Dash",
+      href: "game.html",
+      key: "itt23-game-subscribe",
+      inspire: "Theater subscribe — not a live checkout · Plus is the gold dest",
+      blurb: "Type twenty. Incomplete never writes.",
+      why: "Plus is the door. The game is a theater box, not Stripe.",
+      era: "Subscribe is the save. Gemini is next year.",
+      famous: "Brick Bat + Concentration",
+      accent: "#0e7a0d"
+    },
+    "2024": {
+      id: "omni",
+      title: "Omni Dash",
+      href: "game.html",
+      key: "itt24-game-omni",
+      inspire: "Theater omni — not a live model · 4o is the gold dest",
+      blurb: "Type omni. Incomplete never writes.",
+      why: "4o is the door. The game is a theater box.",
+      era: "Talk is the save. GPT-5 is next year.",
+      famous: "Brick Bat + Concentration",
+      accent: "#10a37f"
     }
   };
 })(typeof window !== "undefined" ? window : this);

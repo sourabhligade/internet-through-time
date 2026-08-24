@@ -1941,11 +1941,11 @@ def test_2014_signature() -> None:
         fail("2014-signature", "bans")
         return
     wa = read(ROOT / "years/2014/sites/whatsapp/index.html")
-    if "data-wa-install" not in wa:
+    if "data-wa14-install" not in wa:
         fail("2014-signature", "wa hooks")
         return
     hb = read(ROOT / "years/2014/sites/heartbleed/index.html")
-    if "exploit" not in hb.lower() or "data-hb-ack" not in hb:
+    if "exploit" not in hb.lower() or "data-hb14-rotate" not in hb:
         fail("2014-signature", "heartbleed literacy")
         return
     ok("2014-signature")
@@ -2209,11 +2209,13 @@ def test_2008_dirbar_and_modules() -> None:
         ok("2008-dirbar-modules-skip")
         return
     shell = read(ROOT / "years/2008/index.html")
+    ui = read(ROOT / "js/year-ui/years.js")
+    painted = shell + "\n" + ui
     for label in ("App Store", "Chrome", "Android", "Hulu"):
-        if label not in shell:
+        if label not in painted:
             fail("2008-dirbar", f"shell dirbar missing {label}")
             return
-    if 'data-go="sites/appstore/index.html"' not in shell:
+    if "sites/appstore/index.html" not in painted:
         fail("2008-dirbar", "appstore data-go")
         return
     reg = read(ROOT / "js/immersion/registry.js")

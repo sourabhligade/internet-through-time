@@ -1,0 +1,121 @@
+/**
+ * Chrome-habit museum chrome — 2015–2022.
+ * Layout still comes from win95-netscape.css. This file restyles the
+ * window so a 2015–2022 year does not read as Internet Explorer 5.
+ * Do not load ie5-overrides.css on these shells.
+ * No official Chrome / Edge pixels.
+ */
+.os-win10 {
+  --itt-desktop-bg: #0078d7;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.os-win10 .browser {
+  border: 1px solid #666;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  background: #fff;
+}
+
+.os-win10 .browser .titlebar,
+.os-win10 .titlebar {
+  background: linear-gradient(180deg, #f2f2f2 0%, #d6d6d6 100%) !important;
+  color: #222 !important;
+  border-bottom: 1px solid #bbb;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .titlebar .title,
+.os-win10 .titlebar .icon {
+  color: #222;
+}
+
+.os-win10 .win-btn {
+  background: #e8e8e8;
+  border: 1px solid #999;
+  color: #222;
+}
+
+.os-win10 .menubar,
+.os-win10 .toolbar,
+.os-win10 .locationbar,
+.os-win10 .dirbar,
+.os-win10 .statusbar {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f7f7;
+  border-color: #ccc;
+}
+
+.os-win10 .locationbar input,
+.os-win10 #location {
+  border: 1px solid #b0b0b0;
+  border-radius: 2px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .dialog {
+  border: 1px solid #777;
+  background: #f2f2f2;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .dialog-titlebar {
+  background: #0078d7;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .connect-box {
+  font-family: "Segoe UI", Arial, sans-serif;
+  border: 1px solid #666;
+}
+
+.os-win10 .exit-bar {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .win95-taskbar {
+  background: #0078d7;
+  border-top: 1px solid #5aa0e0;
+}
+
+/* Alias so late-year body class is honest even if a leftover IE class remains */
+.browser-chrome-habit .dialog-titlebar,
+.os-win10.browser-chrome-habit .dialog-titlebar {
+  background: #0078d7;
+  color: #fff;
+}
+
+.os-win10 .menubar a,
+.os-win10 .menubar button,
+.os-win10 .toolbar button {
+  font-family: "Segoe UI", Arial, sans-serif;
+  border-radius: 2px;
+}
+
+.os-win10 .locationbar {
+  background: #fff;
+}
+
+.os-win10 .dirbar {
+  background: #f0f0f0;
+}
+
+.os-win10 .connect-box h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.os-win10 .dialog-btns button,
+.os-win10 .connect-box button {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #e1e1e1;
+  border: 1px solid #adadad;
+  color: #111;
+  min-width: 5.5em;
+}
+
+.os-win10 .win95-start {
+  background: #0078d7;
+  border: 0;
+  color: #fff;
+}

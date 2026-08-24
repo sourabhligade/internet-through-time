@@ -1,0 +1,41 @@
+/* Period-plausible RECON frames. No official brand glyphs. */
+.itt-recon-gold {
+  margin: 8px 0 12px;
+  padding: 8px 10px;
+  border: 2px solid #333;
+  background: #e4e4e4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  max-width: 46em;
+  line-height: 1.4;
+}
+.itt-recon-gold b { display: block; margin-bottom: 2px; }
+.itt-recon-gold[data-recon="like"] { background: #3b5998; color: #fff; border-color: #1c335f; }
+.itt-recon-gold[data-recon="ig"] { background: #fafafa; color: #111; border-color: #111; }
+.itt-recon-gold[data-recon="gplus"] { background: #dd4b39; color: #fff; border-color: #8a2418; }
+.itt-recon-gold[data-recon="vine"] { background: #00bf8f; color: #062; border-color: #046; }
+.itt-recon-gold[data-recon="peri"] { background: #c62828; color: #fff; border-color: #4a0000; }
+.itt-recon-gold[data-recon="stories"] { background: #111; color: #fff; border: 3px solid #e1306c; }
+.itt-recon-gold[data-recon="faceid"] { background: #111; color: #eee; border-color: #666; border-radius: 18px; }
+.itt-recon-gold[data-recon="gdpr"] { background: #1565c0; color: #fff; border-color: #0d47a1; }
+.itt-recon-gold[data-recon="dplus"] { background: #0b1d36; color: #f4e4c1; border-color: #c9a227; }
+.itt-recon-gold[data-recon="zoom"] { background: #2d8cff; color: #fff; border-color: #0b5cad; }
+
+.itt-mass-honesty {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 10px 0;
+  padding: 8px 10px;
+  background: #fff8dc;
+  border: 1px solid #c90;
+  max-width: 48em;
+}
+.itt-continuity-note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  margin: 8px 0;
+  padding: 6px 8px;
+  background: #ffffcc;
+  border: 1px dashed #996;
+  max-width: 48em;
+}

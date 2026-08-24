@@ -117,10 +117,6 @@
 
       if (leave) {
         leave.addEventListener("click", function () {
-          if (countChecked(doc, "[data-zoom-req]") < 2) {
-            feedback("Tick both honesties first.", st, { error: true });
-            return;
-          }
           if (!muted && !(mute && mute.getAttribute("aria-pressed") === "true")) {
             feedback("Mute first. You’re the 2020 object.", st, { error: true });
             return;
@@ -178,10 +174,6 @@
         });
       }
       post.addEventListener("click", function () {
-        if (countChecked(doc, "[data-reels-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (!usedAudio) {
           feedback("Use Audio first. Incomplete never writes.", st, { error: true });
           return;
@@ -214,10 +206,6 @@
       }
       wait.addEventListener("click", function () {
         var em = val(email);
-        if (countChecked(doc, "[data-gpt-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (em.length < 2) {
           feedback("Need a waitlist address (min 2). Empty never writes.", st, { error: true });
           return;
@@ -260,10 +248,6 @@
         });
       }
       uninstall.addEventListener("click", function () {
-        if (countChecked(doc, "[data-flash-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "newgrounds") {
           feedback("Pick a leftover plugin site first. Incomplete never writes.", st, { error: true });
           return;
@@ -307,10 +291,6 @@
       }
       open.addEventListener("click", function () {
         var cap = val(doc.querySelector("[data-eo-caption]"));
-        if (countChecked(doc, "[data-eo-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "fyp") {
           feedback("Pick leftover FYP first. Incomplete never writes.", st, { error: true });
           return;
@@ -357,10 +337,6 @@
         });
       }
       ack.addEventListener("click", function () {
-        if (countChecked(doc, "[data-wti-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "may") {
           feedback("Pick the May 2020 contract first. Incomplete never writes.", st, { error: true });
           return;
@@ -397,10 +373,6 @@
         });
       }
       set.addEventListener("click", function () {
-        if (countChecked(doc, "[data-edge-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "79") {
           feedback("Pick Chromium Edge 79 first. Incomplete never writes.", st, { error: true });
           return;
@@ -443,10 +415,6 @@
         });
       }
       dns.addEventListener("click", function () {
-        if (countChecked(doc, "[data-ccpa-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "dns") {
           feedback("Pick Do Not Sell first. Incomplete never writes.", st, { error: true });
           return;
@@ -474,10 +442,6 @@
       }
       join.addEventListener("click", function () {
         var code = val(doc.querySelector("[data-meet-code]"));
-        if (countChecked(doc, "[data-meet-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (code.length < 2) {
           feedback("Type a leftover meeting code (min 2). Empty never writes.", st, { error: true });
           return;
@@ -521,10 +485,6 @@
       }
       ack.addEventListener("click", function () {
         var url = val(doc.querySelector("[data-ch-field]"));
-        if (countChecked(doc, "[data-ch-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "habit") {
           feedback("Pick the Chrome habit tab first. Incomplete never writes.", st, { error: true });
           return;
@@ -571,10 +531,6 @@
         });
       }
       ack.addEventListener("click", function () {
-        if (countChecked(doc, "[data-w10-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "stay") {
           feedback("Pick Stay on Win10 mass first. Incomplete never writes.", st, { error: true });
           return;
@@ -611,10 +567,6 @@
         });
       }
       save.addEventListener("click", function () {
-        if (countChecked(doc, "[data-mx-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "nowhere") {
           feedback("Pick Nowhere first. Incomplete never writes.", st, { error: true });
           return;
@@ -652,10 +604,6 @@
         });
       }
       save.addEventListener("click", function () {
-        if (countChecked(doc, "[data-tw-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (Object.keys(flags).length < 3) {
           feedback("Flag three leftover handles first. Incomplete never writes.", st, { error: true });
           return;
@@ -698,10 +646,6 @@
         });
       }
       watch.addEventListener("click", function () {
-        if (countChecked(doc, "[data-hbo-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "watchmen-class") {
           feedback("Pick the leftover title first. Incomplete never writes.", st, { error: true });
           return;
@@ -744,10 +688,6 @@
         });
       }
       watch.addEventListener("click", function () {
-        if (countChecked(doc, "[data-pk-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "office-class") {
           feedback("Pick the leftover title first. Incomplete never writes.", st, { error: true });
           return;
@@ -790,10 +730,6 @@
         });
       }
       save.addEventListener("click", function () {
-        if (countChecked(doc, "[data-epic-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (picked !== "sideload") {
           feedback("Pick sideload leftover first. Incomplete never writes.", st, { error: true });
           return;
@@ -821,10 +757,6 @@
       }
       add.addEventListener("click", function () {
         var name = val(doc.querySelector("[data-shy-name]"));
-        if (countChecked(doc, "[data-shy-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (name.length < 2) {
           feedback("Type a leftover name (min 2). Empty never writes.", st, { error: true });
           return;
@@ -882,10 +814,6 @@
       }
       btn.addEventListener("click", function () {
         var v = val(field);
-        if (countChecked(doc, "[data-extra-b-req]") < 1) {
-          feedback("Tick not-users first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (v.length < 2 || !/participant/i.test(v)) {
           feedback("Type participants (not users). Empty never writes.", st, { error: true });
           return;

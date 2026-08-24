@@ -390,6 +390,36 @@
     "next": "/years/2006/sites/playable/game.html"
   },
   {
+    "year": "2007",
+    "role": "c",
+    "path": "/years/2007/sites/playable/extra-c.html",
+    "key": "itt07-game-dartlane",
+    "id": "dartlane",
+    "kind": "place",
+    "title": "Dart Lane",
+    "next": "/years/2007/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2007",
+    "role": "d",
+    "path": "/years/2007/sites/playable/extra-d.html",
+    "key": "itt07-game-deskpath",
+    "id": "deskpath",
+    "kind": "place",
+    "title": "Desk Path",
+    "next": "/years/2007/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2007",
+    "role": "e",
+    "path": "/years/2007/sites/playable/extra-e.html",
+    "key": "itt07-game-trickcard",
+    "id": "trickcard",
+    "kind": "quiz",
+    "title": "Trick Card",
+    "next": "/years/2007/sites/playable/game.html"
+  },
+  {
     "year": "2008",
     "role": "c",
     "path": "/years/2008/sites/playable/extra-c.html",
@@ -418,6 +448,36 @@
     "kind": "quiz",
     "title": "Burn Rope",
     "next": "/years/2008/sites/playable/game.html"
+  },
+  {
+    "year": "2009",
+    "role": "c",
+    "path": "/years/2009/sites/playable/extra-c.html",
+    "key": "itt09-game-roofrun",
+    "id": "roofrun",
+    "kind": "runner",
+    "title": "Roof Run",
+    "next": "/years/2009/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2009",
+    "role": "d",
+    "path": "/years/2009/sites/playable/extra-d.html",
+    "key": "itt09-game-orclimb",
+    "id": "orclimb",
+    "kind": "runner",
+    "title": "Orpheus Climb",
+    "next": "/years/2009/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2009",
+    "role": "e",
+    "path": "/years/2009/sites/playable/extra-e.html",
+    "key": "itt09-game-wiltclock",
+    "id": "wiltclock",
+    "kind": "hold",
+    "title": "Wilt Clock",
+    "next": "/years/2009/sites/playable/game.html"
   },
   {
     "year": "2010",
@@ -450,6 +510,36 @@
     "next": "/years/2010/sites/playable/game.html"
   },
   {
+    "year": "2011",
+    "role": "c",
+    "path": "/years/2011/sites/playable/extra-c.html",
+    "key": "itt11-game-rushlane",
+    "id": "rushlane",
+    "kind": "place",
+    "title": "Rush Lane",
+    "next": "/years/2011/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2011",
+    "role": "d",
+    "path": "/years/2011/sites/playable/extra-d.html",
+    "key": "itt11-game-griphold",
+    "id": "griphold",
+    "kind": "hold",
+    "title": "Grip Hold",
+    "next": "/years/2011/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2011",
+    "role": "e",
+    "path": "/years/2011/sites/playable/extra-e.html",
+    "key": "itt11-game-spentweek",
+    "id": "spentweek",
+    "kind": "quiz",
+    "title": "Spent Week",
+    "next": "/years/2011/sites/playable/game.html"
+  },
+  {
     "year": "2012",
     "role": "c",
     "path": "/years/2012/sites/playable/extra-c.html",
@@ -478,6 +568,66 @@
     "kind": "draw",
     "title": "Stroke Guess",
     "next": "/years/2012/sites/playable/game.html"
+  },
+  {
+    "year": "2013",
+    "role": "c",
+    "path": "/years/2013/sites/playable/extra-c.html",
+    "key": "itt13-game-loopspare",
+    "id": "loopspare",
+    "kind": "parlor",
+    "title": "Loop Spare",
+    "next": "/years/2013/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2013",
+    "role": "d",
+    "path": "/years/2013/sites/playable/extra-d.html",
+    "key": "itt13-game-storyhold",
+    "id": "storyhold",
+    "kind": "hold",
+    "title": "Story Hold",
+    "next": "/years/2013/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2013",
+    "role": "e",
+    "path": "/years/2013/sites/playable/extra-e.html",
+    "key": "itt13-game-flattap",
+    "id": "flattap",
+    "kind": "quiz",
+    "title": "Flat Tap",
+    "next": "/years/2013/sites/playable/game.html"
+  },
+  {
+    "year": "2014",
+    "role": "c",
+    "path": "/years/2014/sites/playable/extra-c.html",
+    "key": "itt14-game-slackchan",
+    "id": "slackchan",
+    "kind": "parlor",
+    "title": "Slack Chan",
+    "next": "/years/2014/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2014",
+    "role": "d",
+    "path": "/years/2014/sites/playable/extra-d.html",
+    "key": "itt14-game-icepour",
+    "id": "icepour",
+    "kind": "draw",
+    "title": "Ice Pour",
+    "next": "/years/2014/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2014",
+    "role": "e",
+    "path": "/years/2014/sites/playable/extra-e.html",
+    "key": "itt14-game-rotatels",
+    "id": "rotatels",
+    "kind": "quiz",
+    "title": "Rotate TLS",
+    "next": "/years/2014/sites/playable/game.html"
   },
   {
     "year": "2015",
@@ -598,5 +748,185 @@
     "kind": "quiz",
     "title": "Banner Fight",
     "next": "/years/2018/sites/playable/game.html"
+  },
+  {
+    "year": "2019",
+    "role": "c",
+    "path": "/years/2019/sites/playable/extra-c.html",
+    "key": "itt19-game-rowextra",
+    "id": "rowextra",
+    "kind": "parlor",
+    "title": "Row Extra",
+    "next": "/years/2019/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2019",
+    "role": "d",
+    "path": "/years/2019/sites/playable/extra-d.html",
+    "key": "itt19-game-stadiawait",
+    "id": "stadiawait",
+    "kind": "hold",
+    "title": "Stadia Wait",
+    "next": "/years/2019/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2019",
+    "role": "e",
+    "path": "/years/2019/sites/playable/extra-e.html",
+    "key": "itt19-game-arcadecard",
+    "id": "arcadecard",
+    "kind": "quiz",
+    "title": "Arcade Card",
+    "next": "/years/2019/sites/playable/game.html"
+  },
+  {
+    "year": "2020",
+    "role": "c",
+    "path": "/years/2020/sites/playable/extra-c.html",
+    "key": "itt20-game-muteround",
+    "id": "muteround",
+    "kind": "parlor",
+    "title": "Mute Round",
+    "next": "/years/2020/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2020",
+    "role": "d",
+    "path": "/years/2020/sites/playable/extra-d.html",
+    "key": "itt20-game-reel15",
+    "id": "reel15",
+    "kind": "hold",
+    "title": "Reel 15",
+    "next": "/years/2020/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2020",
+    "role": "e",
+    "path": "/years/2020/sites/playable/extra-e.html",
+    "key": "itt20-game-flashbrick",
+    "id": "flashbrick",
+    "kind": "quiz",
+    "title": "Flash Brick",
+    "next": "/years/2020/sites/playable/game.html"
+  },
+  {
+    "year": "2021",
+    "role": "c",
+    "path": "/years/2021/sites/playable/extra-c.html",
+    "key": "itt21-game-sighandle",
+    "id": "sighandle",
+    "kind": "parlor",
+    "title": "Sig Handle",
+    "next": "/years/2021/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2021",
+    "role": "d",
+    "path": "/years/2021/sites/playable/extra-d.html",
+    "key": "itt21-game-waitcop",
+    "id": "waitcop",
+    "kind": "quiz",
+    "title": "Wait Copilot",
+    "next": "/years/2021/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2021",
+    "role": "e",
+    "path": "/years/2021/sites/playable/extra-e.html",
+    "key": "itt21-game-metanote",
+    "id": "metanote",
+    "kind": "quiz",
+    "title": "Meta Note",
+    "next": "/years/2021/sites/playable/game.html"
+  },
+  {
+    "year": "2022",
+    "role": "c",
+    "path": "/years/2022/sites/playable/extra-c.html",
+    "key": "itt22-game-wordguess",
+    "id": "wordguess",
+    "kind": "quiz",
+    "title": "Word Guess",
+    "next": "/years/2022/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2022",
+    "role": "d",
+    "path": "/years/2022/sites/playable/extra-d.html",
+    "key": "itt22-game-mastoinst",
+    "id": "mastoinst",
+    "kind": "parlor",
+    "title": "Masto Inst",
+    "next": "/years/2022/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2022",
+    "role": "e",
+    "path": "/years/2022/sites/playable/extra-e.html",
+    "key": "itt22-game-bereal2",
+    "id": "bereal2",
+    "kind": "hold",
+    "title": "BeReal Two",
+    "next": "/years/2022/sites/playable/game.html"
+  },
+  {
+    "year": "2023",
+    "role": "c",
+    "path": "/years/2023/sites/playable/extra-c.html",
+    "key": "itt23-game-pluswait",
+    "id": "pluswait",
+    "kind": "parlor",
+    "title": "Plus Wait",
+    "next": "/years/2023/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2023",
+    "role": "d",
+    "path": "/years/2023/sites/playable/extra-d.html",
+    "key": "itt23-game-bardask",
+    "id": "bardask",
+    "kind": "parlor",
+    "title": "Bard Ask",
+    "next": "/years/2023/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2023",
+    "role": "e",
+    "path": "/years/2023/sites/playable/extra-e.html",
+    "key": "itt23-game-xnote",
+    "id": "xnote",
+    "kind": "parlor",
+    "title": "X Note",
+    "next": "/years/2023/sites/playable/game.html"
+  },
+  {
+    "year": "2024",
+    "role": "c",
+    "path": "/years/2024/sites/playable/extra-c.html",
+    "key": "itt24-game-talkwait",
+    "id": "talkwait",
+    "kind": "parlor",
+    "title": "Talk Wait",
+    "next": "/years/2024/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2024",
+    "role": "d",
+    "path": "/years/2024/sites/playable/extra-d.html",
+    "key": "itt24-game-gemask",
+    "id": "gemask",
+    "kind": "parlor",
+    "title": "Gem Ask",
+    "next": "/years/2024/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2024",
+    "role": "e",
+    "path": "/years/2024/sites/playable/extra-e.html",
+    "key": "itt24-game-soranote",
+    "id": "soranote",
+    "kind": "parlor",
+    "title": "Sora Note",
+    "next": "/years/2024/sites/playable/game.html"
   }
 ]

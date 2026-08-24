@@ -972,6 +972,168 @@
     "nextLabel": "Twitter"
   },
   {
+    "year": "2007",
+    "path": "/years/2007/sites/iphone/index.html",
+    "key": "itt07-saf-ack",
+    "kind": "query",
+    "title": "iPhone Safari leftover (no Store)",
+    "next": "/years/2007/sites/gmail/index.html",
+    "nextLabel": "Gmail open"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/gmail/index.html",
+    "key": "itt07-gmail-open",
+    "kind": "query",
+    "title": "Gmail leftover open send",
+    "next": "/years/2007/sites/maps/index.html",
+    "nextLabel": "Street View"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/maps/index.html",
+    "key": "itt07-sv",
+    "kind": "hops",
+    "title": "Street View leftover turn",
+    "next": "/years/2007/sites/facebook/index.html",
+    "nextLabel": "Platform"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/facebook/index.html",
+    "key": "itt07-fb-app-lx",
+    "kind": "query",
+    "title": "Facebook Platform leftover app",
+    "next": "/years/2007/sites/twitter/index.html",
+    "nextLabel": "Twitter SXSW"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/twitter/index.html",
+    "key": "itt07-t-sxsw",
+    "kind": "query",
+    "title": "Twitter leftover 140",
+    "next": "/years/2007/sites/kindle/index.html",
+    "nextLabel": "Kindle"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/kindle/index.html",
+    "key": "itt07-kindle-lx",
+    "kind": "query",
+    "title": "Kindle leftover Whispernet",
+    "next": "/years/2007/sites/tumblr/index.html",
+    "nextLabel": "Tumblr"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/tumblr/index.html",
+    "key": "itt07-tumble",
+    "kind": "query",
+    "title": "Tumblr leftover tumble",
+    "next": "/years/2007/sites/friendfeed/index.html",
+    "nextLabel": "FriendFeed"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/friendfeed/index.html",
+    "key": "itt07-ff",
+    "kind": "hops",
+    "title": "FriendFeed leftover two sources",
+    "next": "/years/2007/sites/facebook/index.html",
+    "nextLabel": "Beacon"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/justin/index.html",
+    "key": "itt07-jtv",
+    "kind": "query",
+    "title": "Justin.tv leftover stream name",
+    "next": "/years/2007/sites/ustream/index.html",
+    "nextLabel": "Ustream"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/ustream/index.html",
+    "key": "itt07-ustream",
+    "kind": "query",
+    "title": "Ustream leftover event",
+    "next": "/years/2007/sites/qik/index.html",
+    "nextLabel": "Qik"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/qik/index.html",
+    "key": "itt07-qik",
+    "kind": "query",
+    "title": "Qik leftover clip",
+    "next": "/years/2007/sites/etsy/index.html",
+    "nextLabel": "Etsy"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/etsy/index.html",
+    "key": "itt07-etsy-lx",
+    "kind": "query",
+    "title": "Etsy leftover listing",
+    "next": "/years/2007/sites/youtube/index.html",
+    "nextLabel": "YouTube leftover"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/youtube/index.html",
+    "key": "itt07-nf-watch",
+    "kind": "query",
+    "title": "Netflix Watch Now leftover",
+    "next": "/years/2007/sites/ustream/index.html",
+    "nextLabel": "Ustream"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/ustream/index.html",
+    "key": "itt07-hulu-ack",
+    "kind": "query",
+    "title": "Hulu leftover literacy",
+    "next": "/years/2007/sites/iphone/index.html",
+    "nextLabel": "iPhone Safari"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/iphone/index.html",
+    "key": "itt07-iphone-specs",
+    "kind": "query",
+    "title": "iPhone specs leftover",
+    "next": "/years/2007/sites/facebook/index.html",
+    "nextLabel": "Facebook Platform"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/facebook/index.html",
+    "key": "itt07-os",
+    "kind": "query",
+    "title": "OpenSocial leftover",
+    "next": "/years/2007/sites/youtube/index.html",
+    "nextLabel": "YouTube leftover"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/youtube/index.html",
+    "key": "itt07-rick",
+    "kind": "query",
+    "title": "Rickroll leftover literacy",
+    "next": "/years/2007/sites/kindle/index.html",
+    "nextLabel": "Kindle"
+  },
+  {
+    "year": "2007",
+    "path": "/years/2007/sites/kindle/index.html",
+    "key": "itt07-kstore",
+    "kind": "query",
+    "title": "Kindle store leftover",
+    "next": "/years/2007/sites/iphone/index.html",
+    "nextLabel": "iPhone Safari"
+  },
+  {
     "year": "2008",
     "path": "/years/2008/sites/appstore/index.html",
     "key": "itt08-store",
@@ -1132,6 +1294,168 @@
     "title": "Dropbox leftover about",
     "next": "/years/2008/sites/appstore/about.html",
     "nextLabel": "App Store"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/facebook/feed.html",
+    "key": "itt09-like-2x",
+    "kind": "hops",
+    "title": "Facebook Like leftover \u00d72",
+    "next": "/years/2009/sites/farmville/index.html",
+    "nextLabel": "FarmVille"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/farmville/index.html",
+    "key": "itt09-farm-2x",
+    "kind": "query",
+    "title": "FarmVille leftover plant literacy",
+    "next": "/years/2009/sites/bing/index.html",
+    "nextLabel": "Bing"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/bing/index.html",
+    "key": "itt09-bing-q",
+    "kind": "query",
+    "title": "Bing leftover query",
+    "next": "/years/2009/sites/foursquare/index.html",
+    "nextLabel": "Foursquare"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/foursquare/index.html",
+    "key": "itt09-4sq-lx",
+    "kind": "query",
+    "title": "Foursquare leftover venue",
+    "next": "/years/2009/sites/kickstarter/index.html",
+    "nextLabel": "Kickstarter"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/kickstarter/index.html",
+    "key": "itt09-ks-lx",
+    "kind": "query",
+    "title": "Kickstarter leftover $amt theater",
+    "next": "/years/2009/sites/windows7/index.html",
+    "nextLabel": "Win7 leftover"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/windows7/index.html",
+    "key": "itt09-wave-lx",
+    "kind": "query",
+    "title": "Wave leftover invite",
+    "next": "/years/2009/sites/windows7/index.html",
+    "nextLabel": "Win7 leftover"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/mafiawars/index.html",
+    "key": "itt09-so-acc",
+    "kind": "hops",
+    "title": "SO leftover accept path",
+    "next": "/years/2009/sites/windows7/index.html",
+    "nextLabel": "Win7 leftover"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/windows7/index.html",
+    "key": "itt09-win7",
+    "kind": "query",
+    "title": "Win7 / IE8 leftover",
+    "next": "/years/2009/sites/omegle/index.html",
+    "nextLabel": "Omegle"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/omegle/index.html",
+    "key": "itt09-omegle",
+    "kind": "query",
+    "title": "Omegle leftover first line (text)",
+    "next": "/years/2009/sites/chatroulette/index.html",
+    "nextLabel": "Chatroulette"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/chatroulette/index.html",
+    "key": "itt09-cr",
+    "kind": "query",
+    "title": "Chatroulette leftover no-cam",
+    "next": "/years/2009/sites/mafiawars/index.html",
+    "nextLabel": "Mafia Wars"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/mafiawars/index.html",
+    "key": "itt09-mw",
+    "kind": "query",
+    "title": "Mafia Wars leftover job",
+    "next": "/years/2009/sites/wolframalpha/index.html",
+    "nextLabel": "Wolfram"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/wolframalpha/index.html",
+    "key": "itt09-wa",
+    "kind": "query",
+    "title": "Wolfram leftover query",
+    "next": "/years/2009/sites/whatsapp/index.html",
+    "nextLabel": "WhatsApp"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/whatsapp/index.html",
+    "key": "itt09-wa-ack",
+    "kind": "query",
+    "title": "WhatsApp leftover literacy",
+    "next": "/years/2009/sites/ubercab/index.html",
+    "nextLabel": "UberCab"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/ubercab/index.html",
+    "key": "itt09-uber-sf",
+    "kind": "query",
+    "title": "UberCab SF leftover",
+    "next": "/years/2009/sites/twitter/index.html",
+    "nextLabel": "Twitter"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/twitter/index.html",
+    "key": "itt09-t140",
+    "kind": "query",
+    "title": "Twitter leftover 140",
+    "next": "/years/2009/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/youtube/index.html",
+    "key": "itt09-yt",
+    "kind": "query",
+    "title": "YouTube leftover",
+    "next": "/years/2009/sites/facebook/index.html",
+    "nextLabel": "Like"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/youtube/index.html",
+    "key": "itt09-ie8",
+    "kind": "query",
+    "title": "IE8 leftover",
+    "next": "/years/2009/sites/windows7/index.html",
+    "nextLabel": "Win7 leftover"
+  },
+  {
+    "year": "2009",
+    "path": "/years/2009/sites/windows7/index.html",
+    "key": "itt09-chrome-lx",
+    "kind": "query",
+    "title": "Chrome leftover (product room)",
+    "next": "/years/2009/sites/facebook/index.html",
+    "nextLabel": "Like"
   },
   {
     "year": "2010",
@@ -1296,6 +1620,276 @@
     "nextLabel": "Instagram"
   },
   {
+    "year": "2011",
+    "path": "/years/2011/sites/googleplus/hangouts.html",
+    "key": "itt11-hang",
+    "kind": "query",
+    "title": "G+ Hangouts leftover literacy",
+    "next": "/years/2011/sites/googleplus/index.html",
+    "nextLabel": "Circles"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/googleplus/index.html",
+    "key": "itt11-circles",
+    "kind": "query",
+    "title": "G+ leftover circle name",
+    "next": "/years/2011/sites/spotify/index.html",
+    "nextLabel": "Spotify US"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/spotify/index.html",
+    "key": "itt11-spot-us",
+    "kind": "query",
+    "title": "Spotify US leftover invite",
+    "next": "/years/2011/sites/iphone/index.html",
+    "nextLabel": "Siri"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/iphone/index.html",
+    "key": "itt11-siri",
+    "kind": "query",
+    "title": "Siri leftover type/chip",
+    "next": "/years/2011/sites/facebook/index.html",
+    "nextLabel": "Timeline"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/facebook/index.html",
+    "key": "itt11-timeline-lx",
+    "kind": "query",
+    "title": "Timeline leftover two boxes",
+    "next": "/years/2011/sites/ipad/index.html",
+    "nextLabel": "iPad 2"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/ipad/index.html",
+    "key": "itt11-ipad2-lx",
+    "kind": "query",
+    "title": "iPad 2 leftover cameras",
+    "next": "/years/2011/sites/netflix/index.html",
+    "nextLabel": "Qwikster"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/netflix/index.html",
+    "key": "itt11-qwik",
+    "kind": "query",
+    "title": "Qwikster leftover reversed-split",
+    "next": "/years/2011/sites/snapchat/index.html",
+    "nextLabel": "Snapchat"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/snapchat/index.html",
+    "key": "itt11-snap",
+    "kind": "query",
+    "title": "Snapchat leftover not-Stories",
+    "next": "/years/2011/sites/instagram/index.html",
+    "nextLabel": "IG iOS"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/instagram/index.html",
+    "key": "itt11-ig",
+    "kind": "query",
+    "title": "Instagram iOS leftover",
+    "next": "/years/2011/sites/tumblr/index.html",
+    "nextLabel": "Tumblr"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/tumblr/index.html",
+    "key": "itt11-reblog",
+    "kind": "query",
+    "title": "Tumblr leftover reblog",
+    "next": "/years/2011/sites/airbnb/index.html",
+    "nextLabel": "Airbnb"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/airbnb/index.html",
+    "key": "itt11-air",
+    "kind": "query",
+    "title": "Airbnb leftover pick",
+    "next": "/years/2011/sites/twitter/index.html",
+    "nextLabel": "Twitter"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/twitter/index.html",
+    "key": "itt11-t140",
+    "kind": "query",
+    "title": "Twitter leftover 140",
+    "next": "/years/2011/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/youtube/index.html",
+    "key": "itt11-yt",
+    "kind": "query",
+    "title": "YouTube leftover",
+    "next": "/years/2011/sites/icloud/index.html",
+    "nextLabel": "iCloud"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/icloud/index.html",
+    "key": "itt11-icloud",
+    "kind": "query",
+    "title": "iCloud leftover",
+    "next": "/years/2011/sites/ie9/index.html",
+    "nextLabel": "IE9"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/ie9/index.html",
+    "key": "itt11-ie9",
+    "kind": "query",
+    "title": "IE9 leftover",
+    "next": "/years/2011/sites/linkedin/index.html",
+    "nextLabel": "LinkedIn"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/linkedin/index.html",
+    "key": "itt11-li",
+    "kind": "query",
+    "title": "LinkedIn leftover",
+    "next": "/years/2011/sites/pinterest/index.html",
+    "nextLabel": "Pinterest"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/pinterest/index.html",
+    "key": "itt11-pin-lx",
+    "kind": "hops",
+    "title": "Pinterest leftover two pins",
+    "next": "/years/2011/sites/snapghost/index.html",
+    "nextLabel": "Snap leftover"
+  },
+  {
+    "year": "2011",
+    "path": "/years/2011/sites/snapghost/index.html",
+    "key": "itt11-ghost",
+    "kind": "query",
+    "title": "Snap leftover ghost",
+    "next": "/years/2011/sites/googleplus/hangouts.html",
+    "nextLabel": "Hangouts"
+  },
+  {
+    "year": "2013",
+    "path": "/years/2013/sites/vine/record.html",
+    "key": "itt13-vn-lx",
+    "kind": "query",
+    "title": "Vine leftover second hold",
+    "next": "/years/2013/sites/instagram/video.html",
+    "nextLabel": "IG Video"
+  },
+  {
+    "year": "2013",
+    "path": "/years/2013/sites/iphone/ios7.html",
+    "key": "itt13-ios7-lx",
+    "kind": "query",
+    "title": "iOS 7 leftover flat note",
+    "next": "/years/2013/sites/snapchat/story.html",
+    "nextLabel": "Stories"
+  },
+  {
+    "year": "2013",
+    "path": "/years/2013/sites/snapchat/story.html",
+    "key": "itt13-st-lx",
+    "kind": "query",
+    "title": "Stories leftover 24h note",
+    "next": "/years/2013/sites/snowden/index.html",
+    "nextLabel": "Snowden"
+  },
+  {
+    "year": "2013",
+    "path": "/years/2013/sites/snowden/index.html",
+    "key": "itt13-sn-lx",
+    "kind": "query",
+    "title": "Snowden leftover literacy",
+    "next": "/years/2013/sites/telegram/index.html",
+    "nextLabel": "Telegram"
+  },
+  {
+    "year": "2013",
+    "path": "/years/2013/sites/telegram/index.html",
+    "key": "itt13-tg-lx",
+    "kind": "query",
+    "title": "Telegram leftover chat note",
+    "next": "/years/2013/sites/tumblr/index.html",
+    "nextLabel": "Tumblr"
+  },
+  {
+    "year": "2013",
+    "path": "/years/2013/sites/tumblr/index.html",
+    "key": "itt13-tb-lx",
+    "kind": "query",
+    "title": "Yahoo\u00d7Tumblr leftover note",
+    "next": "/years/2013/sites/vine/record.html",
+    "nextLabel": "Vine"
+  },
+  {
+    "year": "2014",
+    "path": "/years/2014/sites/whatsapp/index.html",
+    "key": "itt14-wa-lx",
+    "kind": "query",
+    "title": "WhatsApp leftover second note",
+    "next": "/years/2014/sites/heartbleed/index.html",
+    "nextLabel": "Heartbleed"
+  },
+  {
+    "year": "2014",
+    "path": "/years/2014/sites/heartbleed/index.html",
+    "key": "itt14-hb-lx",
+    "kind": "query",
+    "title": "Heartbleed leftover second rotate",
+    "next": "/years/2014/sites/icebucket/index.html",
+    "nextLabel": "Ice Bucket"
+  },
+  {
+    "year": "2014",
+    "path": "/years/2014/sites/icebucket/index.html",
+    "key": "itt14-ice-lx",
+    "kind": "query",
+    "title": "Ice Bucket leftover second name",
+    "next": "/years/2014/sites/iphone/index.html",
+    "nextLabel": "iPhone 6"
+  },
+  {
+    "year": "2014",
+    "path": "/years/2014/sites/iphone/index.html",
+    "key": "itt14-ip-lx",
+    "kind": "query",
+    "title": "iPhone 6 leftover second size",
+    "next": "/years/2014/sites/slack/index.html",
+    "nextLabel": "Slack"
+  },
+  {
+    "year": "2014",
+    "path": "/years/2014/sites/slack/index.html",
+    "key": "itt14-sl-lx",
+    "kind": "query",
+    "title": "Slack leftover second channel",
+    "next": "/years/2014/sites/twitch/index.html",
+    "nextLabel": "Twitch"
+  },
+  {
+    "year": "2014",
+    "path": "/years/2014/sites/twitch/index.html",
+    "key": "itt14-tw-lx",
+    "kind": "query",
+    "title": "Twitch leftover second stream",
+    "next": "/years/2014/sites/whatsapp/index.html",
+    "nextLabel": "WhatsApp"
+  },
+  {
     "year": "2015",
     "path": "/years/2015/sites/periscope/index.html",
     "key": "itt15-peri-title",
@@ -1456,6 +2050,168 @@
     "title": "Meerkat live leftover",
     "next": "/years/2015/sites/periscope/watch.html",
     "nextLabel": "Periscope watch"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/periscope/watch.html",
+    "key": "itt15-peri-w",
+    "kind": "query",
+    "title": "Periscope leftover watch title",
+    "next": "/years/2015/sites/googlephotos/library.html",
+    "nextLabel": "Photos library"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/googlephotos/library.html",
+    "key": "itt15-gp-lib",
+    "kind": "query",
+    "title": "Photos leftover library name",
+    "next": "/years/2015/sites/windows10/upgrade.html",
+    "nextLabel": "Win10 upgrade"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/windows10/upgrade.html",
+    "key": "itt15-w10-up",
+    "kind": "query",
+    "title": "Win10 leftover upgrade literacy",
+    "next": "/years/2015/sites/applemusic/beats1.html",
+    "nextLabel": "Beats 1"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/applemusic/beats1.html",
+    "key": "itt15-beats1",
+    "kind": "query",
+    "title": "Beats 1 leftover show",
+    "next": "/years/2015/sites/applemusicsub/index.html",
+    "nextLabel": "Apple Music sub"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/applemusicsub/index.html",
+    "key": "itt15-am-sub",
+    "kind": "query",
+    "title": "Apple Music leftover trial note",
+    "next": "/years/2015/sites/apple/faces.html",
+    "nextLabel": "Watch faces"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/apple/faces.html",
+    "key": "itt15-faces",
+    "kind": "query",
+    "title": "Watch leftover face name",
+    "next": "/years/2015/sites/apple/pair.html",
+    "nextLabel": "Watch pair"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/apple/pair.html",
+    "key": "itt15-pair",
+    "kind": "query",
+    "title": "Watch leftover pair literacy",
+    "next": "/years/2015/sites/snapchat/index.html",
+    "nextLabel": "Snapchat"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/snapchat/index.html",
+    "key": "itt15-snap-h",
+    "kind": "query",
+    "title": "Snapchat leftover story note",
+    "next": "/years/2015/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/extra-a.html",
+    "key": "itt15-xa",
+    "kind": "query",
+    "title": "2015 extra-a leftover",
+    "next": "/years/2015/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/extra-b.html",
+    "key": "itt15-xb",
+    "kind": "query",
+    "title": "2015 extra-b leftover",
+    "next": "/years/2015/sites/playable/extra-c.html",
+    "nextLabel": "Extra C"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/extra-c.html",
+    "key": "itt15-xc",
+    "kind": "query",
+    "title": "2015 extra-c leftover",
+    "next": "/years/2015/sites/playable/extra-d.html",
+    "nextLabel": "Extra D"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/extra-d.html",
+    "key": "itt15-xd",
+    "kind": "query",
+    "title": "2015 extra-d leftover",
+    "next": "/years/2015/sites/playable/extra-e.html",
+    "nextLabel": "Extra E"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/extra-e.html",
+    "key": "itt15-xe",
+    "kind": "query",
+    "title": "2015 extra-e leftover",
+    "next": "/years/2015/sites/playable/game-2.html",
+    "nextLabel": "Year game 2"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/game-2.html",
+    "key": "itt15-g2",
+    "kind": "query",
+    "title": "2015 second game leftover",
+    "next": "/years/2015/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/index.html",
+    "key": "itt15-cab",
+    "kind": "query",
+    "title": "2015 cabinet leftover",
+    "next": "/years/2015/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/playable/famous.html",
+    "key": "itt15-fam-2",
+    "kind": "query",
+    "title": "Famous leftover 2015 second",
+    "next": "/years/2015/sites/ios9/blockers.html",
+    "nextLabel": "iOS 9 blockers"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/ios9/blockers.html",
+    "key": "itt15-block-2",
+    "kind": "query",
+    "title": "iOS 9 leftover blocker name",
+    "next": "/years/2015/sites/letsencrypt/index.html",
+    "nextLabel": "Let's Encrypt"
+  },
+  {
+    "year": "2015",
+    "path": "/years/2015/sites/letsencrypt/index.html",
+    "key": "itt15-le-2",
+    "kind": "query",
+    "title": "Let's Encrypt leftover second domain",
+    "next": "/years/2015/sites/periscope/index.html",
+    "nextLabel": "Periscope"
   },
   {
     "year": "2016",
@@ -1620,6 +2376,168 @@
     "nextLabel": "Stories archive"
   },
   {
+    "year": "2016",
+    "path": "/years/2016/sites/instagram/archive.html",
+    "key": "itt16-ig-arch",
+    "kind": "query",
+    "title": "Stories leftover archive note",
+    "next": "/years/2016/sites/vine/index.html",
+    "nextLabel": "Vine"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/vine/index.html",
+    "key": "itt16-vine-h",
+    "kind": "query",
+    "title": "Vine leftover loop note",
+    "next": "/years/2016/sites/snapchat/index.html",
+    "nextLabel": "Snapchat"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/snapchat/index.html",
+    "key": "itt16-snap-h",
+    "kind": "query",
+    "title": "Snapchat leftover 2016 residual",
+    "next": "/years/2016/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/playable/extra-a.html",
+    "key": "itt16-xa",
+    "kind": "query",
+    "title": "2016 extra-a leftover",
+    "next": "/years/2016/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/playable/extra-b.html",
+    "key": "itt16-xb",
+    "kind": "query",
+    "title": "2016 extra-b leftover",
+    "next": "/years/2016/sites/playable/extra-c.html",
+    "nextLabel": "Extra C"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/playable/extra-c.html",
+    "key": "itt16-xc",
+    "kind": "query",
+    "title": "2016 extra-c leftover",
+    "next": "/years/2016/sites/playable/extra-d.html",
+    "nextLabel": "Extra D"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/playable/extra-d.html",
+    "key": "itt16-xd",
+    "kind": "query",
+    "title": "2016 extra-d leftover",
+    "next": "/years/2016/sites/playable/extra-e.html",
+    "nextLabel": "Extra E"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/playable/extra-e.html",
+    "key": "itt16-xe",
+    "kind": "query",
+    "title": "2016 extra-e leftover",
+    "next": "/years/2016/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/playable/index.html",
+    "key": "itt16-cab",
+    "kind": "query",
+    "title": "2016 cabinet leftover",
+    "next": "/years/2016/sites/facebook/reactions.html",
+    "nextLabel": "Reactions"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/facebook/reactions.html",
+    "key": "itt16-react-2",
+    "kind": "query",
+    "title": "Reactions leftover second face",
+    "next": "/years/2016/sites/pokemongo/index.html",
+    "nextLabel": "Pok\u00e9mon GO"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/pokemongo/index.html",
+    "key": "itt16-pogo-2",
+    "kind": "query",
+    "title": "GO leftover sidewalk note",
+    "next": "/years/2016/sites/musically/index.html",
+    "nextLabel": "musical.ly"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/musically/index.html",
+    "key": "itt16-mly-2",
+    "kind": "query",
+    "title": "musical.ly leftover second caption",
+    "next": "/years/2016/sites/slack/index.html",
+    "nextLabel": "Slack"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/slack/index.html",
+    "key": "itt16-slack-2",
+    "kind": "query",
+    "title": "Slack leftover channel",
+    "next": "/years/2016/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/youtube/index.html",
+    "key": "itt16-yt-2",
+    "kind": "query",
+    "title": "YouTube leftover second watch",
+    "next": "/years/2016/sites/netflix/index.html",
+    "nextLabel": "Netflix"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/netflix/index.html",
+    "key": "itt16-nf-2",
+    "kind": "query",
+    "title": "Netflix leftover second title",
+    "next": "/years/2016/sites/moments/index.html",
+    "nextLabel": "Moments"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/moments/index.html",
+    "key": "itt16-mom-2",
+    "kind": "query",
+    "title": "Moments leftover second album",
+    "next": "/years/2016/sites/whatsapp/e2e.html",
+    "nextLabel": "WhatsApp E2E"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/whatsapp/e2e.html",
+    "key": "itt16-wa-2",
+    "kind": "query",
+    "title": "WhatsApp leftover second lock",
+    "next": "/years/2016/sites/windows10/end.html",
+    "nextLabel": "Win10 end"
+  },
+  {
+    "year": "2016",
+    "path": "/years/2016/sites/windows10/end.html",
+    "key": "itt16-w10e-2",
+    "kind": "query",
+    "title": "Win10 leftover second note",
+    "next": "/years/2016/sites/instagram/stories.html",
+    "nextLabel": "Stories"
+  },
+  {
     "year": "2017",
     "path": "/years/2017/sites/iphone/x.html",
     "key": "itt17-faceid-2x",
@@ -1778,6 +2696,168 @@
     "key": "itt17-famous",
     "kind": "query",
     "title": "Famous leftover 2017",
+    "next": "/years/2017/sites/iphone/x.html",
+    "nextLabel": "Face ID"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/playable/extra-a.html",
+    "key": "itt17-xa",
+    "kind": "query",
+    "title": "2017 extra-a leftover",
+    "next": "/years/2017/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/playable/extra-b.html",
+    "key": "itt17-xb",
+    "kind": "query",
+    "title": "2017 extra-b leftover",
+    "next": "/years/2017/sites/playable/extra-c.html",
+    "nextLabel": "Extra C"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/playable/extra-c.html",
+    "key": "itt17-xc",
+    "kind": "query",
+    "title": "2017 extra-c leftover",
+    "next": "/years/2017/sites/playable/extra-d.html",
+    "nextLabel": "Extra D"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/playable/extra-d.html",
+    "key": "itt17-xd",
+    "kind": "query",
+    "title": "2017 extra-d leftover",
+    "next": "/years/2017/sites/playable/extra-e.html",
+    "nextLabel": "Extra E"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/playable/extra-e.html",
+    "key": "itt17-xe",
+    "kind": "query",
+    "title": "2017 extra-e leftover",
+    "next": "/years/2017/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/playable/index.html",
+    "key": "itt17-cab",
+    "kind": "query",
+    "title": "2017 cabinet leftover",
+    "next": "/years/2017/sites/fortnite/index.html",
+    "nextLabel": "Fortnite"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/fortnite/index.html",
+    "key": "itt17-fn-2",
+    "kind": "query",
+    "title": "Fortnite leftover second drop",
+    "next": "/years/2017/sites/amazon/index.html",
+    "nextLabel": "Amazon"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/amazon/index.html",
+    "key": "itt17-amzn-2",
+    "kind": "query",
+    "title": "Amazon leftover second search",
+    "next": "/years/2017/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/youtube/index.html",
+    "key": "itt17-yt-2",
+    "kind": "query",
+    "title": "YouTube leftover second watch",
+    "next": "/years/2017/sites/reddit/index.html",
+    "nextLabel": "Reddit"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/reddit/index.html",
+    "key": "itt17-reddit-2",
+    "kind": "query",
+    "title": "Reddit leftover second row",
+    "next": "/years/2017/sites/twitter/280.html",
+    "nextLabel": "Twitter 280"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/twitter/280.html",
+    "key": "itt17-t280-2",
+    "kind": "query",
+    "title": "Twitter leftover second 280",
+    "next": "/years/2017/sites/teams/index.html",
+    "nextLabel": "Teams"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/teams/index.html",
+    "key": "itt17-teams-2",
+    "kind": "query",
+    "title": "Teams leftover second name",
+    "next": "/years/2017/sites/wannacry/index.html",
+    "nextLabel": "WannaCry"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/wannacry/index.html",
+    "key": "itt17-wc-2",
+    "kind": "query",
+    "title": "WannaCry leftover second literacy",
+    "next": "/years/2017/sites/switch/index.html",
+    "nextLabel": "Switch"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/switch/index.html",
+    "key": "itt17-sw-2",
+    "kind": "query",
+    "title": "Switch leftover second reserve",
+    "next": "/years/2017/sites/musically/index.html",
+    "nextLabel": "musical.ly"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/musically/index.html",
+    "key": "itt17-mly-2",
+    "kind": "query",
+    "title": "musical.ly leftover second caption",
+    "next": "/years/2017/sites/snapipo/index.html",
+    "nextLabel": "Snap IPO"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/snapipo/index.html",
+    "key": "itt17-snap-2",
+    "kind": "query",
+    "title": "Snap IPO leftover second note",
+    "next": "/years/2017/sites/bitcoinath/index.html",
+    "nextLabel": "Bitcoin"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/bitcoinath/index.html",
+    "key": "itt17-btc-2",
+    "kind": "query",
+    "title": "Bitcoin leftover second note",
+    "next": "/years/2017/sites/echoshow/index.html",
+    "nextLabel": "Echo Show"
+  },
+  {
+    "year": "2017",
+    "path": "/years/2017/sites/echoshow/index.html",
+    "key": "itt17-show-2",
+    "kind": "query",
+    "title": "Echo Show leftover second note",
     "next": "/years/2017/sites/iphone/x.html",
     "nextLabel": "Face ID"
   },
@@ -1942,6 +3022,1194 @@
     "title": "Famous leftover 2018",
     "next": "/years/2018/sites/gdpr/manage.html",
     "nextLabel": "Manage"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/tiktok/index.html",
+    "key": "itt18-tt-h",
+    "kind": "query",
+    "title": "TikTok leftover home note",
+    "next": "/years/2018/sites/github/index.html",
+    "nextLabel": "GitHub"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/github/index.html",
+    "key": "itt18-gh-h",
+    "kind": "query",
+    "title": "GitHub leftover issue note",
+    "next": "/years/2018/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/playable/extra-a.html",
+    "key": "itt18-xa",
+    "kind": "query",
+    "title": "2018 extra-a leftover",
+    "next": "/years/2018/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/playable/extra-b.html",
+    "key": "itt18-xb",
+    "kind": "query",
+    "title": "2018 extra-b leftover",
+    "next": "/years/2018/sites/playable/extra-c.html",
+    "nextLabel": "Extra C"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/playable/extra-c.html",
+    "key": "itt18-xc",
+    "kind": "query",
+    "title": "2018 extra-c leftover",
+    "next": "/years/2018/sites/playable/extra-d.html",
+    "nextLabel": "Extra D"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/playable/extra-d.html",
+    "key": "itt18-xd",
+    "kind": "query",
+    "title": "2018 extra-d leftover",
+    "next": "/years/2018/sites/playable/extra-e.html",
+    "nextLabel": "Extra E"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/playable/extra-e.html",
+    "key": "itt18-xe",
+    "kind": "query",
+    "title": "2018 extra-e leftover",
+    "next": "/years/2018/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/playable/index.html",
+    "key": "itt18-cab",
+    "kind": "query",
+    "title": "2018 cabinet leftover",
+    "next": "/years/2018/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/youtube/index.html",
+    "key": "itt18-yt-2",
+    "kind": "query",
+    "title": "YouTube leftover second watch",
+    "next": "/years/2018/sites/wikipedia/index.html",
+    "nextLabel": "Wikipedia"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/wikipedia/index.html",
+    "key": "itt18-wiki-2",
+    "kind": "query",
+    "title": "Wikipedia leftover second article",
+    "next": "/years/2018/sites/reddit/index.html",
+    "nextLabel": "Reddit"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/reddit/index.html",
+    "key": "itt18-reddit-2",
+    "kind": "query",
+    "title": "Reddit leftover second row",
+    "next": "/years/2018/sites/discord/index.html",
+    "nextLabel": "Discord"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/discord/index.html",
+    "key": "itt18-dc-2",
+    "kind": "query",
+    "title": "Discord leftover second join",
+    "next": "/years/2018/sites/chrome/not-secure.html",
+    "nextLabel": "Not Secure"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/chrome/not-secure.html",
+    "key": "itt18-ns-2",
+    "kind": "query",
+    "title": "Chrome leftover second URL",
+    "next": "/years/2018/sites/instagram/igtv.html",
+    "nextLabel": "IGTV"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/instagram/igtv.html",
+    "key": "itt18-igtv-2",
+    "kind": "query",
+    "title": "IGTV leftover second title",
+    "next": "/years/2018/sites/trust/index.html",
+    "nextLabel": "Hearing"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/trust/index.html",
+    "key": "itt18-hear-2",
+    "kind": "query",
+    "title": "Hearing leftover second note",
+    "next": "/years/2018/sites/homepod/index.html",
+    "nextLabel": "HomePod"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/homepod/index.html",
+    "key": "itt18-hp-2",
+    "kind": "query",
+    "title": "HomePod leftover second reserve",
+    "next": "/years/2018/sites/spectre/index.html",
+    "nextLabel": "Spectre"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/spectre/index.html",
+    "key": "itt18-sp-2",
+    "kind": "query",
+    "title": "Spectre leftover second literacy",
+    "next": "/years/2018/sites/applemusic/index.html",
+    "nextLabel": "Apple Music"
+  },
+  {
+    "year": "2018",
+    "path": "/years/2018/sites/applemusic/index.html",
+    "key": "itt18-am-2",
+    "kind": "query",
+    "title": "Apple Music leftover second trial",
+    "next": "/years/2018/sites/gdpr/manage.html",
+    "nextLabel": "GDPR Manage"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/tiktok/index.html",
+    "key": "itt19-tt-lx",
+    "kind": "query",
+    "title": "TikTok leftover FYP (not the chip)",
+    "next": "/years/2019/sites/arcade/index.html",
+    "nextLabel": "Apple Arcade"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/arcade/index.html",
+    "key": "itt19-arcade-lx",
+    "kind": "query",
+    "title": "Arcade leftover pick",
+    "next": "/years/2019/sites/stadia/index.html",
+    "nextLabel": "Stadia"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/stadia/index.html",
+    "key": "itt19-stadia-lx",
+    "kind": "query",
+    "title": "Stadia leftover Founders",
+    "next": "/years/2019/sites/appletv/index.html",
+    "nextLabel": "Apple TV+"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/appletv/index.html",
+    "key": "itt19-tv-lx",
+    "kind": "query",
+    "title": "Apple TV+ leftover title",
+    "next": "/years/2019/sites/airpodspro/index.html",
+    "nextLabel": "AirPods Pro"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/airpodspro/index.html",
+    "key": "itt19-app-lx",
+    "kind": "query",
+    "title": "AirPods Pro leftover",
+    "next": "/years/2019/sites/iphone/iphone11.html",
+    "nextLabel": "iPhone 11"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/iphone/iphone11.html",
+    "key": "itt19-11-lx",
+    "kind": "query",
+    "title": "iPhone 11 leftover",
+    "next": "/years/2019/sites/edge/index.html",
+    "nextLabel": "Edge preview"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/edge/index.html",
+    "key": "itt19-edge-lx",
+    "kind": "query",
+    "title": "Edge Chromium leftover preview",
+    "next": "/years/2019/sites/chrome/index.html",
+    "nextLabel": "Chrome habit"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/chrome/index.html",
+    "key": "itt19-ch-lx",
+    "kind": "query",
+    "title": "Chrome leftover habit URL",
+    "next": "/years/2019/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/youtube/index.html",
+    "key": "itt19-yt-lx",
+    "kind": "query",
+    "title": "YouTube leftover watch",
+    "next": "/years/2019/sites/instagram/index.html",
+    "nextLabel": "Instagram"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/instagram/index.html",
+    "key": "itt19-ig-lx",
+    "kind": "query",
+    "title": "Instagram leftover hide-likes",
+    "next": "/years/2019/sites/wikipedia/index.html",
+    "nextLabel": "Wikipedia"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/wikipedia/index.html",
+    "key": "itt19-wiki-lx",
+    "kind": "query",
+    "title": "Wikipedia leftover article",
+    "next": "/years/2019/sites/windows10/index.html",
+    "nextLabel": "Win10 residual"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/windows10/index.html",
+    "key": "itt19-w10-lx",
+    "kind": "query",
+    "title": "Win10 leftover residual",
+    "next": "/years/2019/sites/instagram/index.html",
+    "nextLabel": "Instagram"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/instagram/index.html",
+    "key": "itt19-ig-fn",
+    "kind": "query",
+    "title": "Instagram leftover 2019 residual",
+    "next": "/years/2019/sites/playable/game.html",
+    "nextLabel": "Year game"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/game.html",
+    "key": "itt19-game-lx",
+    "kind": "query",
+    "title": "Continue Row leftover year game",
+    "next": "/years/2019/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/famous.html",
+    "key": "itt19-famous-lx",
+    "kind": "query",
+    "title": "Famous leftover 2019",
+    "next": "/years/2019/sites/playable/index.html",
+    "nextLabel": "Playable cabinet"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/index.html",
+    "key": "itt19-cab-lx",
+    "kind": "query",
+    "title": "Playable cabinet leftover",
+    "next": "/years/2019/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/extra-a.html",
+    "key": "itt19-xa-lx",
+    "kind": "query",
+    "title": "2019 extra-a leftover",
+    "next": "/years/2019/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/extra-b.html",
+    "key": "itt19-xb-lx",
+    "kind": "query",
+    "title": "2019 extra-b leftover",
+    "next": "/years/2019/sites/tiktok/index.html",
+    "nextLabel": "TikTok"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/disneyplus/about.html",
+    "key": "itt19-dplus-ab",
+    "kind": "query",
+    "title": "Disney+ leftover about note",
+    "next": "/years/2019/sites/disneyplus/index.html",
+    "nextLabel": "Disney+ door"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/disneyplus/index.html",
+    "key": "itt19-dplus-ix",
+    "kind": "query",
+    "title": "Disney+ leftover door note",
+    "next": "/years/2019/sites/fortnite/marshmello.html",
+    "nextLabel": "Marshmello"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/fortnite/marshmello.html",
+    "key": "itt19-marsh",
+    "kind": "query",
+    "title": "Fortnite leftover concert note",
+    "next": "/years/2019/sites/tiktok/index.html",
+    "nextLabel": "TikTok"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/tiktok/index.html",
+    "key": "itt19-tt-2",
+    "kind": "query",
+    "title": "TikTok leftover second sound",
+    "next": "/years/2019/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/youtube/index.html",
+    "key": "itt19-yt-2",
+    "kind": "query",
+    "title": "YouTube leftover second watch",
+    "next": "/years/2019/sites/wikipedia/index.html",
+    "nextLabel": "Wikipedia"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/wikipedia/index.html",
+    "key": "itt19-wiki-2",
+    "kind": "query",
+    "title": "Wikipedia leftover second article",
+    "next": "/years/2019/sites/chrome/index.html",
+    "nextLabel": "Chrome"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/chrome/index.html",
+    "key": "itt19-ch-2",
+    "kind": "query",
+    "title": "Chrome leftover second URL",
+    "next": "/years/2019/sites/arcade/index.html",
+    "nextLabel": "Arcade"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/arcade/index.html",
+    "key": "itt19-arcade-2",
+    "kind": "query",
+    "title": "Arcade leftover second title",
+    "next": "/years/2019/sites/stadia/index.html",
+    "nextLabel": "Stadia"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/stadia/index.html",
+    "key": "itt19-stadia-2",
+    "kind": "query",
+    "title": "Stadia leftover second note",
+    "next": "/years/2019/sites/appletv/index.html",
+    "nextLabel": "Apple TV+"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/appletv/index.html",
+    "key": "itt19-tv-2",
+    "kind": "query",
+    "title": "Apple TV+ leftover second title",
+    "next": "/years/2019/sites/airpodspro/index.html",
+    "nextLabel": "AirPods Pro"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/airpodspro/index.html",
+    "key": "itt19-app-2",
+    "kind": "query",
+    "title": "AirPods Pro leftover second note",
+    "next": "/years/2019/sites/iphone/iphone11.html",
+    "nextLabel": "iPhone 11"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/iphone/iphone11.html",
+    "key": "itt19-11-2",
+    "kind": "query",
+    "title": "iPhone 11 leftover second note",
+    "next": "/years/2019/sites/edge/index.html",
+    "nextLabel": "Edge"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/edge/index.html",
+    "key": "itt19-edge-2",
+    "kind": "query",
+    "title": "Edge leftover second note",
+    "next": "/years/2019/sites/windows10/index.html",
+    "nextLabel": "Win10"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/windows10/index.html",
+    "key": "itt19-w10-2",
+    "kind": "query",
+    "title": "Win10 leftover second residual",
+    "next": "/years/2019/sites/instagram/index.html",
+    "nextLabel": "Instagram"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/instagram/index.html",
+    "key": "itt19-ig-2",
+    "kind": "query",
+    "title": "Instagram leftover second hide-likes",
+    "next": "/years/2019/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/index.html",
+    "key": "itt19-cab-2",
+    "kind": "query",
+    "title": "2019 cabinet leftover second",
+    "next": "/years/2019/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/famous.html",
+    "key": "itt19-fam-2",
+    "kind": "query",
+    "title": "Famous leftover 2019 second",
+    "next": "/years/2019/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2019",
+    "path": "/years/2019/sites/playable/extra-a.html",
+    "key": "itt19-xa-2",
+    "kind": "query",
+    "title": "2019 extra-a leftover second",
+    "next": "/years/2019/sites/tiktok/index.html",
+    "nextLabel": "TikTok"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/reels/index.html",
+    "key": "itt20-reels-lx",
+    "kind": "query",
+    "title": "Reels leftover 15s (not Shorts)",
+    "next": "/years/2020/sites/openai/index.html",
+    "nextLabel": "GPT-3 waitlist"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/openai/index.html",
+    "key": "itt20-gpt-lx",
+    "kind": "query",
+    "title": "GPT-3 leftover waitlist (not ChatGPT)",
+    "next": "/years/2020/sites/flash/index.html",
+    "nextLabel": "Flash EOL"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/flash/index.html",
+    "key": "itt20-flash-lx",
+    "kind": "query",
+    "title": "Flash leftover EOL",
+    "next": "/years/2020/sites/meet/index.html",
+    "nextLabel": "Meet"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/meet/index.html",
+    "key": "itt20-meet-lx",
+    "kind": "query",
+    "title": "Meet leftover room name",
+    "next": "/years/2020/sites/mixer/index.html",
+    "nextLabel": "Mixer"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/mixer/index.html",
+    "key": "itt20-mixer-lx",
+    "kind": "query",
+    "title": "Mixer leftover shutdown",
+    "next": "/years/2020/sites/hbomax/index.html",
+    "nextLabel": "HBO Max"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/hbomax/index.html",
+    "key": "itt20-hbo-lx",
+    "kind": "query",
+    "title": "HBO Max leftover title",
+    "next": "/years/2020/sites/peacock/index.html",
+    "nextLabel": "Peacock"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/peacock/index.html",
+    "key": "itt20-pk-lx",
+    "kind": "query",
+    "title": "Peacock leftover title",
+    "next": "/years/2020/sites/ccpa/index.html",
+    "nextLabel": "CCPA"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/ccpa/index.html",
+    "key": "itt20-ccpa-lx",
+    "kind": "query",
+    "title": "CCPA leftover Do Not Sell",
+    "next": "/years/2020/sites/chrome/index.html",
+    "nextLabel": "Chrome"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/chrome/index.html",
+    "key": "itt20-ch-lx",
+    "kind": "query",
+    "title": "Chrome leftover habit URL",
+    "next": "/years/2020/sites/edge/index.html",
+    "nextLabel": "Edge 79"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/edge/index.html",
+    "key": "itt20-edge-lx",
+    "kind": "query",
+    "title": "Edge 79 leftover (not Legacy)",
+    "next": "/years/2020/sites/epic/index.html",
+    "nextLabel": "Epic"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/epic/index.html",
+    "key": "itt20-epic-lx",
+    "kind": "query",
+    "title": "Epic leftover sideload literacy",
+    "next": "/years/2020/sites/tiktok/index.html",
+    "nextLabel": "TikTok"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/tiktok/index.html",
+    "key": "itt20-tt-lx",
+    "kind": "query",
+    "title": "TikTok leftover caption",
+    "next": "/years/2020/sites/spacehey/index.html",
+    "nextLabel": "SpaceHey"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/spacehey/index.html",
+    "key": "itt20-shy-lx",
+    "kind": "query",
+    "title": "SpaceHey leftover add-friend",
+    "next": "/years/2020/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/youtube/index.html",
+    "key": "itt20-yt-lx",
+    "kind": "query",
+    "title": "YouTube leftover watch",
+    "next": "/years/2020/sites/wikipedia/index.html",
+    "nextLabel": "Wikipedia"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/wikipedia/index.html",
+    "key": "itt20-wiki-lx",
+    "kind": "query",
+    "title": "Wikipedia leftover article",
+    "next": "/years/2020/sites/facebook/index.html",
+    "nextLabel": "Facebook"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/facebook/index.html",
+    "key": "itt20-fb-lx",
+    "kind": "query",
+    "title": "Facebook leftover 2020 residual",
+    "next": "/years/2020/sites/playable/game.html",
+    "nextLabel": "Year game"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/playable/game.html",
+    "key": "itt20-game-lx",
+    "kind": "query",
+    "title": "2020 game leftover",
+    "next": "/years/2020/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/playable/famous.html",
+    "key": "itt20-famous-lx",
+    "kind": "query",
+    "title": "Famous leftover 2020",
+    "next": "/years/2020/sites/zoom/meeting.html",
+    "nextLabel": "Zoom"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/zoom/about.html",
+    "key": "itt20-zm-ab",
+    "kind": "query",
+    "title": "Zoom leftover about note",
+    "next": "/years/2020/sites/zoom/index.html",
+    "nextLabel": "Zoom door"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/zoom/index.html",
+    "key": "itt20-zm-ix",
+    "kind": "query",
+    "title": "Zoom leftover door note",
+    "next": "/years/2020/sites/zoom/recap.html",
+    "nextLabel": "Zoom recap"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/zoom/recap.html",
+    "key": "itt20-zm-rc",
+    "kind": "query",
+    "title": "Zoom leftover recap note",
+    "next": "/years/2020/sites/reels/about.html",
+    "nextLabel": "Reels about"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/reels/about.html",
+    "key": "itt20-reels-ab",
+    "kind": "query",
+    "title": "Reels leftover about note",
+    "next": "/years/2020/sites/reels/record.html",
+    "nextLabel": "Reels record"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/reels/record.html",
+    "key": "itt20-reels-rc",
+    "kind": "query",
+    "title": "Reels leftover record note",
+    "next": "/years/2020/sites/openai/wait.html",
+    "nextLabel": "GPT-3 wait"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/openai/wait.html",
+    "key": "itt20-gpt-w",
+    "kind": "query",
+    "title": "GPT-3 leftover waitlist note",
+    "next": "/years/2020/sites/flash/eol.html",
+    "nextLabel": "Flash EOL"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/flash/eol.html",
+    "key": "itt20-flash-eol",
+    "kind": "query",
+    "title": "Flash leftover EOL literacy",
+    "next": "/years/2020/sites/tiktok/eo.html",
+    "nextLabel": "TikTok EO"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/tiktok/eo.html",
+    "key": "itt20-tt-eo",
+    "kind": "query",
+    "title": "TikTok leftover EO note",
+    "next": "/years/2020/sites/twitter/hack.html",
+    "nextLabel": "Twitter hack"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/twitter/hack.html",
+    "key": "itt20-tw-hk",
+    "kind": "query",
+    "title": "Twitter leftover hack note",
+    "next": "/years/2020/sites/markets/wti.html",
+    "nextLabel": "WTI"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/markets/wti.html",
+    "key": "itt20-wti",
+    "kind": "query",
+    "title": "WTI leftover negative oil note",
+    "next": "/years/2020/sites/acnh/index.html",
+    "nextLabel": "ACNH"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/acnh/index.html",
+    "key": "itt20-acnh-2",
+    "kind": "query",
+    "title": "ACNH leftover second island",
+    "next": "/years/2020/sites/astro/index.html",
+    "nextLabel": "Astronomical"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/astro/index.html",
+    "key": "itt20-astro-2",
+    "kind": "query",
+    "title": "Astronomical leftover second note",
+    "next": "/years/2020/sites/quibi/index.html",
+    "nextLabel": "Quibi"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/quibi/index.html",
+    "key": "itt20-quibi-2",
+    "kind": "query",
+    "title": "Quibi leftover second title",
+    "next": "/years/2020/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/playable/extra-a.html",
+    "key": "itt20-xa",
+    "kind": "query",
+    "title": "2020 extra-a leftover",
+    "next": "/years/2020/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/playable/extra-b.html",
+    "key": "itt20-xb",
+    "kind": "query",
+    "title": "2020 extra-b leftover",
+    "next": "/years/2020/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/playable/index.html",
+    "key": "itt20-cab",
+    "kind": "query",
+    "title": "2020 cabinet leftover",
+    "next": "/years/2020/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/playable/famous.html",
+    "key": "itt20-fam-2",
+    "kind": "query",
+    "title": "Famous leftover 2020 second",
+    "next": "/years/2020/sites/hbomax/index.html",
+    "nextLabel": "HBO Max"
+  },
+  {
+    "year": "2020",
+    "path": "/years/2020/sites/hbomax/index.html",
+    "key": "itt20-hbo-2",
+    "kind": "query",
+    "title": "HBO Max leftover second title",
+    "next": "/years/2020/sites/zoom/meeting.html",
+    "nextLabel": "Zoom"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/signal/index.html",
+    "key": "itt21-sig-lx",
+    "kind": "query",
+    "title": "Signal leftover handle",
+    "next": "/years/2021/sites/copilot/index.html",
+    "nextLabel": "Copilot"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/copilot/index.html",
+    "key": "itt21-cop-lx",
+    "kind": "query",
+    "title": "Copilot leftover waitlist (not ChatGPT)",
+    "next": "/years/2021/sites/meta/index.html",
+    "nextLabel": "Meta"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/meta/index.html",
+    "key": "itt21-meta-lx",
+    "kind": "query",
+    "title": "Meta leftover rename",
+    "next": "/years/2021/sites/chrome/index.html",
+    "nextLabel": "Chrome"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/chrome/index.html",
+    "key": "itt21-ch-lx",
+    "kind": "query",
+    "title": "Chrome leftover habit URL",
+    "next": "/years/2021/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/youtube/index.html",
+    "key": "itt21-yt-lx",
+    "kind": "query",
+    "title": "YouTube leftover watch",
+    "next": "/years/2021/sites/wikipedia/index.html",
+    "nextLabel": "Wikipedia"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/wikipedia/index.html",
+    "key": "itt21-wiki-lx",
+    "kind": "query",
+    "title": "Wikipedia leftover article",
+    "next": "/years/2021/sites/facebook/index.html",
+    "nextLabel": "Facebook"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/facebook/index.html",
+    "key": "itt21-fb-lx",
+    "kind": "query",
+    "title": "Facebook leftover 2021 residual",
+    "next": "/years/2021/sites/flash/index.html",
+    "nextLabel": "Flash"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/flash/index.html",
+    "key": "itt21-flash-lx",
+    "kind": "query",
+    "title": "Flash leftover brick",
+    "next": "/years/2021/sites/windows10/index.html",
+    "nextLabel": "Win10"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/windows10/index.html",
+    "key": "itt21-w10-lx",
+    "kind": "query",
+    "title": "Win10 leftover mass residual",
+    "next": "/years/2021/sites/windows11/index.html",
+    "nextLabel": "Win11"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/windows11/index.html",
+    "key": "itt21-w11-lx",
+    "kind": "query",
+    "title": "Win11 leftover install literacy",
+    "next": "/years/2021/sites/clubhouse/index.html",
+    "nextLabel": "Clubhouse"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/clubhouse/index.html",
+    "key": "itt21-chouse-lx",
+    "kind": "query",
+    "title": "Clubhouse leftover room",
+    "next": "/years/2021/sites/nft/index.html",
+    "nextLabel": "NFT"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/nft/index.html",
+    "key": "itt21-nft-lx",
+    "kind": "query",
+    "title": "NFT leftover literacy",
+    "next": "/years/2021/sites/squid/index.html",
+    "nextLabel": "Squid"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/squid/index.html",
+    "key": "itt21-squid-lx",
+    "kind": "query",
+    "title": "Squid leftover chip note",
+    "next": "/years/2021/sites/playable/game.html",
+    "nextLabel": "Year game"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/game.html",
+    "key": "itt21-game-lx",
+    "kind": "query",
+    "title": "2021 game leftover",
+    "next": "/years/2021/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/famous.html",
+    "key": "itt21-famous-lx",
+    "kind": "query",
+    "title": "Famous leftover 2021",
+    "next": "/years/2021/sites/att/index.html",
+    "nextLabel": "ATT"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/att/index.html",
+    "key": "itt21-att-lx",
+    "kind": "query",
+    "title": "ATT leftover literacy note",
+    "next": "/years/2021/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/extra-a.html",
+    "key": "itt21-xa-lx",
+    "kind": "query",
+    "title": "2021 extra-a leftover",
+    "next": "/years/2021/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/extra-b.html",
+    "key": "itt21-xb-lx",
+    "kind": "query",
+    "title": "2021 extra-b leftover",
+    "next": "/years/2021/sites/signal/index.html",
+    "nextLabel": "Signal"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/signal/index.html",
+    "key": "itt21-sig-2",
+    "kind": "query",
+    "title": "Signal leftover second handle",
+    "next": "/years/2021/sites/copilot/index.html",
+    "nextLabel": "Copilot"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/copilot/index.html",
+    "key": "itt21-cop-2",
+    "kind": "query",
+    "title": "Copilot leftover second waitlist",
+    "next": "/years/2021/sites/meta/index.html",
+    "nextLabel": "Meta"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/meta/index.html",
+    "key": "itt21-meta-2",
+    "kind": "query",
+    "title": "Meta leftover second rename note",
+    "next": "/years/2021/sites/chrome/index.html",
+    "nextLabel": "Chrome"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/chrome/index.html",
+    "key": "itt21-ch-2",
+    "kind": "query",
+    "title": "Chrome leftover second URL",
+    "next": "/years/2021/sites/youtube/index.html",
+    "nextLabel": "YouTube"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/youtube/index.html",
+    "key": "itt21-yt-2",
+    "kind": "query",
+    "title": "YouTube leftover second watch",
+    "next": "/years/2021/sites/wikipedia/index.html",
+    "nextLabel": "Wikipedia"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/wikipedia/index.html",
+    "key": "itt21-wiki-2",
+    "kind": "query",
+    "title": "Wikipedia leftover second article",
+    "next": "/years/2021/sites/facebook/index.html",
+    "nextLabel": "Facebook"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/facebook/index.html",
+    "key": "itt21-fb-2",
+    "kind": "query",
+    "title": "Facebook leftover second residual",
+    "next": "/years/2021/sites/flash/index.html",
+    "nextLabel": "Flash"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/flash/index.html",
+    "key": "itt21-flash-2",
+    "kind": "query",
+    "title": "Flash leftover second brick note",
+    "next": "/years/2021/sites/windows10/index.html",
+    "nextLabel": "Win10"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/windows10/index.html",
+    "key": "itt21-w10-2",
+    "kind": "query",
+    "title": "Win10 leftover second residual",
+    "next": "/years/2021/sites/windows11/index.html",
+    "nextLabel": "Win11"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/windows11/index.html",
+    "key": "itt21-w11-2",
+    "kind": "query",
+    "title": "Win11 leftover second install",
+    "next": "/years/2021/sites/clubhouse/index.html",
+    "nextLabel": "Clubhouse"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/clubhouse/index.html",
+    "key": "itt21-chouse-2",
+    "kind": "query",
+    "title": "Clubhouse leftover second room",
+    "next": "/years/2021/sites/nft/index.html",
+    "nextLabel": "NFT"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/nft/index.html",
+    "key": "itt21-nft-2",
+    "kind": "query",
+    "title": "NFT leftover second literacy",
+    "next": "/years/2021/sites/squid/index.html",
+    "nextLabel": "Squid"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/squid/index.html",
+    "key": "itt21-squid-2",
+    "kind": "query",
+    "title": "Squid leftover second print",
+    "next": "/years/2021/sites/playable/index.html",
+    "nextLabel": "Cabinet"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/index.html",
+    "key": "itt21-cab-2",
+    "kind": "query",
+    "title": "2021 cabinet leftover second",
+    "next": "/years/2021/sites/playable/famous.html",
+    "nextLabel": "Famous"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/famous.html",
+    "key": "itt21-fam-2",
+    "kind": "query",
+    "title": "Famous leftover 2021 second",
+    "next": "/years/2021/sites/playable/game.html",
+    "nextLabel": "Year game"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/game.html",
+    "key": "itt21-game-2",
+    "kind": "query",
+    "title": "Five Letter leftover second note",
+    "next": "/years/2021/sites/playable/extra-a.html",
+    "nextLabel": "Extra A"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/extra-a.html",
+    "key": "itt21-xa-2",
+    "kind": "query",
+    "title": "2021 extra-a leftover second",
+    "next": "/years/2021/sites/playable/extra-b.html",
+    "nextLabel": "Extra B"
+  },
+  {
+    "year": "2021",
+    "path": "/years/2021/sites/playable/extra-b.html",
+    "key": "itt21-xb-2",
+    "kind": "query",
+    "title": "2021 extra-b leftover second",
+    "next": "/years/2021/sites/att/index.html",
+    "nextLabel": "ATT"
+  },
+  {
+    "year": "2022",
+    "path": "/years/2022/sites/twitter/index.html",
+    "key": "itt22-tw-lx",
+    "kind": "query",
+    "title": "Twitter leftover note",
+    "next": "/years/2022/sites/wordle/index.html",
+    "nextLabel": "Wordle"
+  },
+  {
+    "year": "2022",
+    "path": "/years/2022/sites/wordle/index.html",
+    "key": "itt22-wd-lx",
+    "kind": "query",
+    "title": "Wordle leftover guess",
+    "next": "/years/2022/sites/stablediffusion/index.html",
+    "nextLabel": "Stable Diffusion"
+  },
+  {
+    "year": "2022",
+    "path": "/years/2022/sites/stablediffusion/index.html",
+    "key": "itt22-sd-lx",
+    "kind": "query",
+    "title": "SD leftover prompt",
+    "next": "/years/2022/sites/mastodon/index.html",
+    "nextLabel": "Mastodon"
+  },
+  {
+    "year": "2022",
+    "path": "/years/2022/sites/mastodon/index.html",
+    "key": "itt22-md-lx",
+    "kind": "query",
+    "title": "Mastodon leftover instance",
+    "next": "/years/2022/sites/chrome/index.html",
+    "nextLabel": "Chrome"
+  },
+  {
+    "year": "2022",
+    "path": "/years/2022/sites/chrome/index.html",
+    "key": "itt22-ch-lx",
+    "kind": "query",
+    "title": "Chrome leftover habit",
+    "next": "/years/2022/sites/playable/game.html",
+    "nextLabel": "Prompt Box"
+  },
+  {
+    "year": "2022",
+    "path": "/years/2022/sites/playable/game.html",
+    "key": "itt22-game-lx",
+    "kind": "query",
+    "title": "Prompt Box leftover",
+    "next": "/years/2022/sites/chatgpt/index.html",
+    "nextLabel": "ChatGPT"
   },
   {
     "year": "1994",
@@ -2500,5 +4768,473 @@
     "title": "Lyft leftover",
     "next": "/years/2012/sites/instagram/android.html",
     "nextLabel": "IG Android"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/notebooklm/index.html",
+    "key": "itt24-nb-lx",
+    "kind": "query",
+    "title": "nb-lx",
+    "next": "/years/2024/sites/searchgpt/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/searchgpt/index.html",
+    "key": "itt24-sgpt-lx",
+    "kind": "query",
+    "title": "sgpt-lx",
+    "next": "/years/2024/sites/llama3/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/llama3/index.html",
+    "key": "itt24-llama-lx",
+    "kind": "checks",
+    "title": "llama-lx",
+    "next": "/years/2024/sites/grok/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/grok/index.html",
+    "key": "itt24-grok-lx",
+    "kind": "query",
+    "title": "grok-lx",
+    "next": "/years/2024/sites/rabbit/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/rabbit/index.html",
+    "key": "itt24-rabbit-lx",
+    "kind": "checks",
+    "title": "rabbit-lx",
+    "next": "/years/2024/sites/suno/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/suno/index.html",
+    "key": "itt24-suno-lx",
+    "kind": "query",
+    "title": "suno-lx",
+    "next": "/years/2024/sites/visionpro/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/visionpro/index.html",
+    "key": "itt24-vp-lx",
+    "kind": "checks",
+    "title": "vp-lx",
+    "next": "/years/2024/sites/perplexity/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/perplexity/index.html",
+    "key": "itt24-pplx-lx",
+    "kind": "query",
+    "title": "pplx-lx",
+    "next": "/years/2024/sites/voice/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/voice/index.html",
+    "key": "itt24-voice-lx",
+    "kind": "wait",
+    "title": "voice-lx",
+    "next": "/years/2024/sites/mini/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/mini/index.html",
+    "key": "itt24-mini-lx",
+    "kind": "query",
+    "title": "mini-lx",
+    "next": "/years/2024/sites/flux/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/flux/index.html",
+    "key": "itt24-flux-lx",
+    "kind": "query",
+    "title": "flux-lx",
+    "next": "/years/2024/sites/humane/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/humane/index.html",
+    "key": "itt24-pin-lx",
+    "kind": "checks",
+    "title": "pin-lx",
+    "next": "/years/2024/sites/gemini/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/gemini/index.html",
+    "key": "itt24-gem-lx",
+    "kind": "hops",
+    "title": "gem-lx",
+    "next": "/years/2024/sites/claude35/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/claude35/index.html",
+    "key": "itt24-c35-lx",
+    "kind": "query",
+    "title": "c35-lx",
+    "next": "/years/2024/sites/sora/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/sora/index.html",
+    "key": "itt24-sora-lx",
+    "kind": "checks",
+    "title": "sora-lx",
+    "next": "/years/2024/sites/appleintel/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/appleintel/index.html",
+    "key": "itt24-ai-lx",
+    "kind": "checks",
+    "title": "ai-lx",
+    "next": "/years/2024/sites/o1/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/o1/index.html",
+    "key": "itt24-o1-lx",
+    "kind": "query",
+    "title": "o1-lx",
+    "next": "/years/2024/sites/chatgpt/4o.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/chatgpt/4o.html",
+    "key": "itt24-4o-lx",
+    "kind": "query",
+    "title": "4o-lx",
+    "next": "/years/2024/sites/notebooklm/index.html"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/gptstore/index.html",
+    "key": "itt24-store-lx",
+    "kind": "query",
+    "title": "GPT Store leftover",
+    "next": "/years/2024/sites/memory/index.html",
+    "nextLabel": "Memory leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/memory/index.html",
+    "key": "itt24-mem-lx",
+    "kind": "query",
+    "title": "ChatGPT Memory leftover",
+    "next": "/years/2024/sites/claude3/index.html",
+    "nextLabel": "Claude 3 leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/claude3/index.html",
+    "key": "itt24-opus-lx",
+    "kind": "checks",
+    "title": "Claude 3 family leftover",
+    "next": "/years/2024/sites/devin/index.html",
+    "nextLabel": "Devin leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/devin/index.html",
+    "key": "itt24-devin-lx",
+    "kind": "checks",
+    "title": "Devin leftover",
+    "next": "/years/2024/sites/udio/index.html",
+    "nextLabel": "Udio leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/udio/index.html",
+    "key": "itt24-udio-lx",
+    "kind": "query",
+    "title": "Udio leftover",
+    "next": "/years/2024/sites/flash/index.html",
+    "nextLabel": "Flash leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/flash/index.html",
+    "key": "itt24-flash-lx",
+    "kind": "query",
+    "title": "Gemini 1.5 Flash leftover",
+    "next": "/years/2024/sites/astra/index.html",
+    "nextLabel": "Astra leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/astra/index.html",
+    "key": "itt24-astra-lx",
+    "kind": "checks",
+    "title": "Project Astra leftover",
+    "next": "/years/2024/sites/veo/index.html",
+    "nextLabel": "Veo leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/veo/index.html",
+    "key": "itt24-veo-lx",
+    "kind": "wait",
+    "title": "Veo leftover",
+    "next": "/years/2024/sites/recall/index.html",
+    "nextLabel": "Recall leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/recall/index.html",
+    "key": "itt24-recall-lx",
+    "kind": "checks",
+    "title": "Copilot+ Recall leftover",
+    "next": "/years/2024/sites/luma/index.html",
+    "nextLabel": "Luma leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/luma/index.html",
+    "key": "itt24-luma-lx",
+    "kind": "query",
+    "title": "Luma Dream Machine leftover",
+    "next": "/years/2024/sites/gen3/index.html",
+    "nextLabel": "Gen-3 leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/gen3/index.html",
+    "key": "itt24-gen3-lx",
+    "kind": "query",
+    "title": "Runway Gen-3 leftover",
+    "next": "/years/2024/sites/artifacts/index.html",
+    "nextLabel": "Artifacts leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/artifacts/index.html",
+    "key": "itt24-art-lx",
+    "kind": "hops",
+    "title": "Claude Artifacts leftover",
+    "next": "/years/2024/sites/llama31/index.html",
+    "nextLabel": "Llama 3.1 leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/llama31/index.html",
+    "key": "itt24-l31-lx",
+    "kind": "checks",
+    "title": "Llama 3.1 leftover",
+    "next": "/years/2024/sites/orion/index.html",
+    "nextLabel": "Orion leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/orion/index.html",
+    "key": "itt24-orion-lx",
+    "kind": "checks",
+    "title": "Meta Orion leftover",
+    "next": "/years/2024/sites/o1mini/index.html",
+    "nextLabel": "o1-mini leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/o1mini/index.html",
+    "key": "itt24-o1m-lx",
+    "kind": "query",
+    "title": "o1-mini leftover",
+    "next": "/years/2024/sites/canvas/index.html",
+    "nextLabel": "Canvas leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/canvas/index.html",
+    "key": "itt24-canvas-lx",
+    "kind": "query",
+    "title": "ChatGPT Canvas leftover",
+    "next": "/years/2024/sites/computeruse/index.html",
+    "nextLabel": "Computer Use leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/computeruse/index.html",
+    "key": "itt24-cu-lx",
+    "kind": "checks",
+    "title": "Computer Use leftover",
+    "next": "/years/2024/sites/chatgptsearch/index.html",
+    "nextLabel": "ChatGPT Search leftover"
+  },
+  {
+    "year": "2024",
+    "path": "/years/2024/sites/chatgptsearch/index.html",
+    "key": "itt24-csearch-lx",
+    "kind": "query",
+    "title": "ChatGPT Search leftover",
+    "next": "/years/2024/sites/gptstore/index.html",
+    "nextLabel": "GPT Store leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/plugins/index.html",
+    "key": "itt23-plug-lx",
+    "kind": "query",
+    "title": "ChatGPT plugins leftover",
+    "next": "/years/2023/sites/codeinterp/index.html",
+    "nextLabel": "Code Interpreter leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/codeinterp/index.html",
+    "key": "itt23-ada-lx",
+    "kind": "query",
+    "title": "Code Interpreter leftover",
+    "next": "/years/2023/sites/customgpts/index.html",
+    "nextLabel": "Custom GPTs leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/customgpts/index.html",
+    "key": "itt23-gpts-lx",
+    "kind": "query",
+    "title": "Custom GPTs leftover",
+    "next": "/years/2023/sites/llama2/index.html",
+    "nextLabel": "Llama 2 leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/llama2/index.html",
+    "key": "itt23-l2-lx",
+    "kind": "checks",
+    "title": "Llama 2 leftover",
+    "next": "/years/2023/sites/dalle3/index.html",
+    "nextLabel": "DALL\u00b7E 3 leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/dalle3/index.html",
+    "key": "itt23-d3-lx",
+    "kind": "query",
+    "title": "DALL\u00b7E 3 leftover",
+    "next": "/years/2023/sites/myai/index.html",
+    "nextLabel": "My AI leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/myai/index.html",
+    "key": "itt23-myai-lx",
+    "kind": "query",
+    "title": "Snapchat My AI leftover",
+    "next": "/years/2023/sites/firefly/index.html",
+    "nextLabel": "Firefly leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/firefly/index.html",
+    "key": "itt23-fly-lx",
+    "kind": "query",
+    "title": "Adobe Firefly leftover",
+    "next": "/years/2023/sites/m365copilot/index.html",
+    "nextLabel": "365 Copilot leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/m365copilot/index.html",
+    "key": "itt23-m365-lx",
+    "kind": "checks",
+    "title": "Microsoft 365 Copilot leftover",
+    "next": "/years/2023/sites/sge/index.html",
+    "nextLabel": "SGE leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/sge/index.html",
+    "key": "itt23-sge-lx",
+    "kind": "query",
+    "title": "Search Generative Experience leftover",
+    "next": "/years/2023/sites/chatgptios/index.html",
+    "nextLabel": "ChatGPT iOS leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/chatgptios/index.html",
+    "key": "itt23-ios-lx",
+    "kind": "checks",
+    "title": "ChatGPT iOS leftover",
+    "next": "/years/2023/sites/mixtral/index.html",
+    "nextLabel": "Mixtral leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/mixtral/index.html",
+    "key": "itt23-mix-lx",
+    "kind": "checks",
+    "title": "Mixtral leftover",
+    "next": "/years/2023/sites/grok23/index.html",
+    "nextLabel": "Grok announce leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/grok23/index.html",
+    "key": "itt23-grok23-lx",
+    "kind": "query",
+    "title": "Grok announce leftover",
+    "next": "/years/2023/sites/gemannounce/index.html",
+    "nextLabel": "Gemini announce leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/gemannounce/index.html",
+    "key": "itt23-gem23-lx",
+    "kind": "checks",
+    "title": "Gemini announce leftover",
+    "next": "/years/2023/sites/vpannounce/index.html",
+    "nextLabel": "Vision Pro announce leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/vpannounce/index.html",
+    "key": "itt23-vp23-lx",
+    "kind": "checks",
+    "title": "Vision Pro announce leftover",
+    "next": "/years/2023/sites/sdxl/index.html",
+    "nextLabel": "SDXL leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/sdxl/index.html",
+    "key": "itt23-sdxl-lx",
+    "kind": "query",
+    "title": "SDXL leftover",
+    "next": "/years/2023/sites/gen2/index.html",
+    "nextLabel": "Gen-2 leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/gen2/index.html",
+    "key": "itt23-gen2-lx",
+    "kind": "query",
+    "title": "Runway Gen-2 leftover",
+    "next": "/years/2023/sites/gpt4turbo/index.html",
+    "nextLabel": "GPT-4 Turbo leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/gpt4turbo/index.html",
+    "key": "itt23-turbo-lx",
+    "kind": "query",
+    "title": "GPT-4 Turbo leftover",
+    "next": "/years/2023/sites/nytvopenai/index.html",
+    "nextLabel": "NYT leftover"
+  },
+  {
+    "year": "2023",
+    "path": "/years/2023/sites/nytvopenai/index.html",
+    "key": "itt23-nyt-lx",
+    "kind": "checks",
+    "title": "NYT v OpenAI leftover",
+    "next": "/years/2023/sites/plugins/index.html",
+    "nextLabel": "Plugins leftover"
   }
 ]

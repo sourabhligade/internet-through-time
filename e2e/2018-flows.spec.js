@@ -6,17 +6,13 @@ async function getKey(page, key) {
 }
 
 test.describe("2018 flows", () => {
-  test("Accept All never writes; Manage + ticks write", async ({ page }) => {
+  test("Accept All never writes; Manage + Save write", async ({ page }) => {
     await page.goto("/years/2018/sites/gdpr/index.html");
     await page.evaluate(() => localStorage.removeItem("itt18-gdpr"));
     await page.reload();
     await page.locator("[data-gdpr-accept-all]").click();
     expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
     await page.locator("[data-gdpr-manage]").click();
-    await page.locator("[data-gdpr-save]").click();
-    expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
-    await page.locator("[data-gdpr-req]").nth(0).check();
-    await page.locator("[data-gdpr-req]").nth(1).check();
     await page.locator("[data-gdpr-save]").click();
     await expect.poll(async () => getKey(page, "itt18-gdpr"), { timeout: 8000 }).toBeTruthy();
   });
@@ -29,7 +25,6 @@ test.describe("2018 flows", () => {
     expect(await getKey(page, "itt18-tiktok-fyp")).toBeFalsy();
     await page.locator('[data-fyp-tap="lip"]').click();
     await page.locator('[data-fyp-tap="dance"]').click();
-    await page.locator("[data-fyp-req]").check();
     await page.locator("[data-fyp-learn]").click();
     await expect.poll(async () => getKey(page, "itt18-tiktok-fyp"), { timeout: 8000 }).toBeTruthy();
   });
@@ -38,10 +33,6 @@ test.describe("2018 flows", () => {
     await page.goto("/years/2018/sites/trust/index.html");
     await page.evaluate(() => localStorage.removeItem("itt18-hearing"));
     await page.reload();
-    await page.locator("[data-hear-sit]").click();
-    expect(await getKey(page, "itt18-hearing")).toBeFalsy();
-    await page.locator("[data-hear-req]").nth(0).check();
-    await page.locator("[data-hear-req]").nth(1).check();
     await page.locator("[data-hear-sit]").click();
     await expect.poll(async () => getKey(page, "itt18-hearing"), { timeout: 8000 }).toBeTruthy();
   });
@@ -52,7 +43,6 @@ test.describe("2018 flows", () => {
     await page.reload();
     await page.locator("[data-igtv-post]").click();
     expect(await getKey(page, "itt18-igtv")).toBeFalsy();
-    await page.locator("[data-igtv-req]").check();
     await page.fill("[data-igtv-title]", "rooftop longform");
     await page.locator("[data-igtv-post]").click();
     await expect.poll(async () => getKey(page, "itt18-igtv"), { timeout: 8000 }).toBeTruthy();
@@ -63,10 +53,6 @@ test.describe("2018 flows", () => {
     await page.evaluate(() => localStorage.removeItem("itt18-not-secure"));
     await page.reload();
     await page.locator("[data-ns-ack]").click();
-    expect(await getKey(page, "itt18-not-secure")).toBeFalsy();
-    await page.locator("[data-ns-req]").nth(0).check();
-    await page.locator("[data-ns-req]").nth(1).check();
-    await page.locator("[data-ns-ack]").click();
     await expect.poll(async () => getKey(page, "itt18-not-secure"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -74,10 +60,6 @@ test.describe("2018 flows", () => {
     await page.goto("/years/2018/sites/homepod/index.html");
     await page.evaluate(() => localStorage.removeItem("itt18-homepod"));
     await page.reload();
-    await page.locator("[data-hp-reserve]").click();
-    expect(await getKey(page, "itt18-homepod")).toBeFalsy();
-    await page.locator("[data-hp-req]").nth(0).check();
-    await page.locator("[data-hp-req]").nth(1).check();
     await page.locator("[data-hp-reserve]").click();
     await expect.poll(async () => getKey(page, "itt18-homepod"), { timeout: 8000 }).toBeTruthy();
   });
@@ -87,10 +69,6 @@ test.describe("2018 flows", () => {
     await page.evaluate(() => localStorage.removeItem("itt18-spectre"));
     await page.reload();
     await page.locator("[data-sp-ack]").click();
-    expect(await getKey(page, "itt18-spectre")).toBeFalsy();
-    await page.locator("[data-sp-req]").nth(0).check();
-    await page.locator("[data-sp-req]").nth(1).check();
-    await page.locator("[data-sp-ack]").click();
     await expect.poll(async () => getKey(page, "itt18-spectre"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -99,10 +77,6 @@ test.describe("2018 flows", () => {
     await page.evaluate(() => localStorage.removeItem("itt18-fn-switch"));
     await page.reload();
     await page.locator("[data-fns-drop]").click();
-    expect(await getKey(page, "itt18-fn-switch")).toBeFalsy();
-    await page.locator("[data-fns-req]").nth(0).check();
-    await page.locator("[data-fns-req]").nth(1).check();
-    await page.locator("[data-fns-drop]").click();
     await expect.poll(async () => getKey(page, "itt18-fn-switch"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -110,10 +84,6 @@ test.describe("2018 flows", () => {
     await page.goto("/years/2018/sites/github/microsoft.html");
     await page.evaluate(() => localStorage.removeItem("itt18-github"));
     await page.reload();
-    await page.locator("[data-gh-ack]").click();
-    expect(await getKey(page, "itt18-github")).toBeFalsy();
-    await page.locator("[data-gh-req]").nth(0).check();
-    await page.locator("[data-gh-req]").nth(1).check();
     await page.locator("[data-gh-ack]").click();
     await expect.poll(async () => getKey(page, "itt18-github"), { timeout: 8000 }).toBeTruthy();
   });

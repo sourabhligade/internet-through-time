@@ -78,10 +78,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-vn13-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       if (held < 1) {
         feedback("Hold a leftover loop first. Empty never writes.", st, { error: true });
         return;
@@ -257,10 +253,18 @@
     var apply = doc.querySelector("[data-hc13-apply]");
     var retry = doc.querySelector("[data-hc13-retry]");
     var ack = doc.querySelector("[data-hc13-ack]");
+    var fine = doc.querySelector("[data-hc13-fine]");
     var st = doc.querySelector("[data-hc13-status]");
+    if (fine) {
+      fine.addEventListener("click", function () {
+        feedback("A fine is not enrollment. Never writes.", st, { error: true });
+      });
+    }
     if (apply) {
       apply.addEventListener("click", function () {
-        feedback("The form is down. Apply never writes. Open leftover status.", st, { error: true });
+        saveJSON(key("healthcare"), blob({ down: true, date: "2013-10-01", enroll: true }));
+        feedback("503 leftover · " + key("healthcare"), st);
+        reveal(doc);
       });
     }
     if (retry) {

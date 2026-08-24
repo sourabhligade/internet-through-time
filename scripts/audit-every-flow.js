@@ -8,6 +8,8 @@
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
+const { loadYearStart, startBlob } = require("./year-start-data");
+const START = loadYearStart();
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
@@ -21,15 +23,15 @@ const GOLD = {
   1998: { chip: "sites/google/lucky.html", key: "itt98-lucky" },
   1999: { chip: "sites/aim/index.html", key: "itt99-aim" },
   2000: { chip: "sites/mapquest/index.html", key: "itt00-mapquest" },
-  2001: { chip: "sites/msn/index.html", key: "itt01-msn" },
+  2001: { chip: "sites/wikipedia/edit.html", key: "itt01-wiki-pages" },
   2002: { chip: "sites/stumbleupon/index.html", key: "itt02-stumble" },
   2003: { chip: "sites/photobucket/index.html", key: "itt03-photobucket" },
   2004: { chip: "sites/facebook/networks.html", key: "itt04-thefacebook-networks" },
-  2005: { chip: "sites/pandora/index.html", key: "itt05-pandora" },
+  2005: { chip: "sites/youtube/upload.html", key: "itt05-yt-uploads" },
   2006: { chip: "sites/twitter/index.html", key: "itt06-tweets" },
   2007: { chip: "sites/iphone/index.html", key: "itt07-iphone" },
   2008: { chip: "sites/github/issue.html", key: "itt08-github" },
-  2009: { chip: "sites/facebook/feed.html", key: "itt09-fb-likes" },
+  2009: { chip: "sites/facebook/index.html", key: "itt09-like" },
 };
 
 function exists(rel) {
@@ -87,13 +89,19 @@ for (const year of YEARS) {
     continue;
   }
   const home = read(homeRel);
+  const spec = START[year];
+  if (!spec) fail(year, "chip", "no YearUI.START");
+  else if ((spec.items || []).length !== 6) {
+    fail(year, "chip", "START items " + spec.items.length + " (want 6)");
+  }
+  if (!home.includes('id="itt-year-start"') || !home.includes("YearUI.paintStart")) {
+    fail(year, "chip", "home missing YearUI.paintStart mount");
+  }
   const gold = GOLD[year];
   if (gold) {
-    if (!home.includes('data-ott-one-thing="' + year + '"')) {
-      fail(year, "chip", "no data-ott-one-thing");
-    }
-    if (!home.includes(gold.chip)) {
-      fail(year, "chip", "home chip does not mention " + gold.chip);
+    const blob = home + "\n" + startBlob(spec);
+    if (!blob.includes(gold.chip)) {
+      fail(year, "chip", "home/start does not mention " + gold.chip);
     }
     const chipFile = "years/" + year + "/" + gold.chip;
     if (!exists(chipFile)) fail(year, "chip", "chip target missing " + gold.chip);

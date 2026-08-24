@@ -724,16 +724,8 @@
       "year": 2009,
       "yy": "09",
       "mode": "panel",
-      "star": "sites/facebook/feed.html",
+      "star": "sites/facebook/index.html",
       "flows": [
-        {
-          "suffix": "foursquare",
-          "room": "sites/foursquare/index.html",
-          "next": "sites/farmville/index.html",
-          "key": "itt09-foursquare",
-          "ok": true,
-          "checks": 2
-        },
         {
           "suffix": "farm-5x",
           "room": "sites/farmville/index.html",
@@ -745,23 +737,31 @@
         {
           "suffix": "bing",
           "room": "sites/bing/index.html",
-          "next": "sites/stackoverflow/index.html",
+          "next": "sites/iphone/index.html",
           "key": "itt09-bing",
           "ok": true,
           "checks": 2
         },
         {
-          "suffix": "so-accepted",
-          "room": "sites/stackoverflow/index.html",
+          "suffix": "iphone",
+          "room": "sites/iphone/index.html",
+          "next": "sites/foursquare/index.html",
+          "key": "itt09-iphone",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "foursquare",
+          "room": "sites/foursquare/index.html",
           "next": "sites/windows7/index.html",
-          "key": "itt09-so-accepted",
+          "key": "itt09-foursquare",
           "ok": true,
           "checks": 2
         },
         {
           "suffix": "w7",
           "room": "sites/windows7/index.html",
-          "next": "sites/facebook/feed.html",
+          "next": "sites/facebook/index.html",
           "key": "itt09-w7",
           "ok": true,
           "checks": 2
@@ -787,11 +787,11 @@
       "mode": "panel",
       "star": "sites/googleplus/index.html",
       "flows": [
-        {"suffix": "tweets", "room": "sites/twitter/index.html", "next": "sites/groupon/index.html", "key": "itt11-tweets", "ok": true, "checks": 2},
-        {"suffix": "groupon", "room": "sites/groupon/index.html", "next": "sites/tumblr/index.html", "key": "itt11-groupon", "ok": true, "checks": 2},
-        {"suffix": "tumblr", "room": "sites/tumblr/index.html", "next": "sites/instagram/index.html", "key": "itt11-tumblr", "ok": true, "checks": 2},
-        {"suffix": "ig", "room": "sites/instagram/index.html", "next": "sites/facebook/timeline.html", "key": "itt11-ig", "ok": true, "checks": 2},
-        {"suffix": "timeline", "room": "sites/facebook/timeline.html", "next": "sites/googleplus/index.html", "key": "itt11-timeline", "ok": true, "checks": 2}
+        {"suffix": "spotify", "room": "sites/spotify/index.html", "next": "sites/iphone/index.html", "key": "itt11-spotify", "ok": true, "checks": 2},
+        {"suffix": "siri", "room": "sites/iphone/index.html", "next": "sites/facebook/index.html", "key": "itt11-siri", "ok": true, "checks": 2},
+        {"suffix": "timeline", "room": "sites/facebook/index.html", "next": "sites/airbnb/index.html", "key": "itt11-timeline", "ok": true, "checks": 2},
+        {"suffix": "airbnb", "room": "sites/airbnb/index.html", "next": "sites/qwikster/index.html", "key": "itt11-airbnb", "ok": true, "checks": 2},
+        {"suffix": "qwikster", "room": "sites/qwikster/index.html", "next": "sites/googleplus/index.html", "key": "itt11-qwikster", "ok": true, "checks": 2}
       ]
     },
     {
@@ -813,11 +813,11 @@
       "mode": "panel",
       "star": "sites/vine/record.html",
       "flows": [
-        {"suffix": "tinder", "room": "sites/tinder/index.html", "next": "sites/snapchat/index.html", "key": "itt13-tinder", "ok": true, "checks": 2},
-        {"suffix": "snap-story", "room": "sites/snapchat/index.html", "next": "sites/instagram/video.html", "key": "itt13-snap-story", "ok": true, "checks": 2},
-        {"suffix": "igvid", "room": "sites/instagram/video.html", "next": "sites/iphone/ios7.html", "key": "itt13-igvid", "ok": true, "checks": 2},
-        {"suffix": "ios7", "room": "sites/iphone/ios7.html", "next": "sites/snowden/index.html", "key": "itt13-ios7", "ok": true, "checks": 2},
-        {"suffix": "snowden", "room": "sites/snowden/index.html", "next": "sites/vine/record.html", "key": "itt13-snowden", "ok": true, "checks": 2}
+        {"suffix": "ios7", "room": "sites/iphone/ios7.html", "next": "sites/snapchat/story.html", "key": "itt13-ios7", "ok": true, "checks": 2},
+        {"suffix": "snap-story", "room": "sites/snapchat/story.html", "next": "sites/instagram/video.html", "key": "itt13-snap-story", "ok": true, "checks": 2},
+        {"suffix": "igvid", "room": "sites/instagram/video.html", "next": "sites/snowden/index.html", "key": "itt13-igvid", "ok": true, "checks": 2},
+        {"suffix": "snowden", "room": "sites/snowden/index.html", "next": "sites/windows81/index.html", "key": "itt13-snowden", "ok": true, "checks": 2},
+        {"suffix": "win81", "room": "sites/windows81/index.html", "next": "sites/vine/record.html", "key": "itt13-win81", "ok": true, "checks": 2}
       ]
     }
   ],
@@ -837,7 +837,7 @@
     "2006": "sites/twitter/index.html",
     "2007": "sites/iphone/index.html",
     "2008": "sites/github/issue.html",
-    "2009": "sites/facebook/feed.html",
+    "2009": "sites/facebook/index.html",
     "2010": "sites/instagram/index.html",
     "2011": "sites/googleplus/index.html",
     "2012": "sites/instagram/android.html",

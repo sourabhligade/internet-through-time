@@ -159,6 +159,21 @@
         if (!list.length) list = defaultFriends();
         list.push({ name: name, about: about });
         saveFriends(list);
+        try {
+          var fsKey = ITT.util && ITT.util.immersionStorageKey
+            ? ITT.util.immersionStorageKey("fs", "itt02")
+            : "itt02-fs";
+          localStorage.setItem(fsKey, JSON.stringify({
+            multiStep: true,
+            real: true,
+            year: "2002",
+            ts: Date.now(),
+            friend: name.slice(0, 40),
+            note: about.slice(0, 80)
+          }));
+        } catch (eFs) { /* */ }
+        if (st) st.textContent = "Posted leftover · itt02-fs";
+        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
         renderFriends(doc);
         addForm.reset();
       });

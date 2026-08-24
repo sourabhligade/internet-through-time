@@ -9,7 +9,11 @@
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| [`2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md`](2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md) | **Harvest + visit log + 10k walk queue** |
+| [`2020-5K-WEB-FLOW-MAP.md`](2020-5K-WEB-FLOW-MAP.md) | **Walkable map** — visitor flow · writers · phases · refers the rest |
+| [`2020-3X-WRITE-OUT-GOALS-PHASES-FLOWS-MINUTE.md`](2020-3X-WRITE-OUT-GOALS-PHASES-FLOWS-MINUTE.md) | **3× written out** — every leftover trio · trap · save · cite |
+| [`2020-3X-DEEP-RESEARCH-HARVEST-2026-08-22.md`](2020-3X-DEEP-RESEARCH-HARVEST-2026-08-22.md) | **3× harvest** — SimilarWeb 50 · three leftover trios · opened primaries |
+| [`2020-FROM-SCRATCH-5K-WEB-RESEARCH-IMPLEMENT-BIBLE.md`](2020-FROM-SCRATCH-5K-WEB-RESEARCH-IMPLEMENT-BIBLE.md) | **2026-08-22 5k-web research + implement** — Netcraft January · mass visits · Discord growth · Phase A |
+| [`2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md`](2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-21.md) | Harvest + visit log + 10k walk queue |
 | [`2020-CHECK-EVERY-FLOW-MAP.md`](2020-CHECK-EVERY-FLOW-MAP.md) | **Visitor check walk** — trap · save · key · Next |
 | [`2020-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-STEPS-FLOWS-E2E-MINUTE.md`](2020-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-STEPS-FLOWS-E2E-MINUTE.md) | **Implementer map** — every flow look · markup · machine · e2e |
 | [`2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2020-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Older execute list (implementer map wins) |
@@ -41,6 +45,7 @@
 | Cite | Number |
 |------|--------|
 | Websites June (Live Stats) | **Table ends 2018** at **1,630,322,579**. **No June 2020 websites digit.** Opened 2026-08-21. |
+| Netcraft January (2026-08-22 open) | **Jan 2020:** 1,295,973,827 hostnames / 189M active. **Jan 2021:** 1,197,982,359 hostnames. **January**, never June. |
 | ITU people-online | Last clean pre-pandemic cell is still **ITU 2019 4.1B / 53.6%**. Facts and Figures **2021** looking back: **2020** internet-use grew **~10.2%** (largest annual jump in a decade). **2021** print is **4.9B / 63%**. Do **not** invent a 2020 websites cell or blend 4.9B into June 2020. |
 | Zoom April 2020 | **300 million daily meeting participants** — [Reuters 30 Apr 2020](https://www.reuters.com/article/business/zoom-says-it-has-300-million-daily-meeting-participants-not-users-idUSKBN22C1IE/) **opened**. **Not users.** A person can be counted more than once. Dec 2019 baseline **10 million** participants. |
 | Teams (pair, not the star) | Microsoft **75 million** daily *active users* + one April day **200 million** meeting participants (same Reuters). Different metric than Zoom’s 300M. |

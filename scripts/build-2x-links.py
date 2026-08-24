@@ -686,6 +686,395 @@ F("2018", "sites/playable/famous.html", "famous", "checks", "Famous leftover 201
   ["Famous leftover", "GDPR is the chip"], "sites/gdpr/manage.html", "Manage")
 
 # ---------------------------------------------------------------------------
+# 2019 — Disney+ star stays. 18 leftover writers on existing rooms.
+# ---------------------------------------------------------------------------
+F("2019", "sites/tiktok/index.html", "tt-lx", "query", "TikTok leftover FYP (not the chip)",
+  "sound", "sites/arcade/index.html", "Apple Arcade")
+F("2019", "sites/arcade/index.html", "arcade-lx", "checks", "Arcade leftover pick",
+  ["$4.99 leftover", "Not a free App Store game"], "sites/stadia/index.html", "Stadia")
+F("2019", "sites/stadia/index.html", "stadia-lx", "checks", "Stadia leftover Founders",
+  ["19 Nov leftover", "Not GeForce Now"], "sites/appletv/index.html", "Apple TV+")
+F("2019", "sites/appletv/index.html", "tv-lx", "query", "Apple TV+ leftover title",
+  "The Morning Show", "sites/airpodspro/index.html", "AirPods Pro")
+F("2019", "sites/airpodspro/index.html", "app-lx", "checks", "AirPods Pro leftover",
+  ["ANC leftover", "Not AirPods 1"], "sites/iphone/iphone11.html", "iPhone 11")
+F("2019", "sites/iphone/iphone11.html", "11-lx", "query", "iPhone 11 leftover",
+  "triple camera", "sites/edge/index.html", "Edge preview")
+F("2019", "sites/edge/index.html", "edge-lx", "checks", "Edge Chromium leftover preview",
+  ["Preview leftover", "Not default yet"], "sites/chrome/index.html", "Chrome habit")
+F("2019", "sites/chrome/index.html", "ch-lx", "query", "Chrome leftover habit URL",
+  "https://news.ycombinator.com", "sites/youtube/index.html", "YouTube")
+F("2019", "sites/youtube/index.html", "yt-lx", "query", "YouTube leftover watch",
+  "music video", "sites/instagram/index.html", "Instagram")
+F("2019", "sites/instagram/index.html", "ig-lx", "checks", "Instagram leftover hide-likes",
+  ["Hide likes leftover", "Not Reels"], "sites/wikipedia/index.html", "Wikipedia")
+F("2019", "sites/wikipedia/index.html", "wiki-lx", "query", "Wikipedia leftover article",
+  "Disney+", "sites/windows10/index.html", "Win10 residual")
+F("2019", "sites/windows10/index.html", "w10-lx", "checks", "Win10 leftover residual",
+  ["Still mass leftover", "Not Win11"], "sites/instagram/index.html", "Instagram")
+F("2019", "sites/instagram/index.html", "ig-fn", "query", "Instagram leftover 2019 residual",
+  "hide likes leftover", "sites/playable/game.html", "Year game")
+F("2019", "sites/playable/game.html", "game-lx", "checks", "Continue Row leftover year game",
+  ["Continue row leftover", "Trial is the trap"], "sites/playable/famous.html", "Famous")
+F("2019", "sites/playable/famous.html", "famous-lx", "checks", "Famous leftover 2019",
+  ["Famous leftover", "Disney+ is the chip"], "sites/playable/index.html", "Playable cabinet")
+F("2019", "sites/playable/index.html", "cab-lx", "query", "Playable cabinet leftover",
+  "cabinet leftover", "sites/playable/extra-a.html", "Extra A")
+F("2019", "sites/playable/extra-a.html", "xa-lx", "query", "2019 extra-a leftover",
+  "marshmello leftover", "sites/playable/extra-b.html", "Extra B")
+F("2019", "sites/playable/extra-b.html", "xb-lx", "checks", "2019 extra-b leftover",
+  ["Extra leftover", "Not the chip"], "sites/tiktok/index.html", "TikTok")
+
+# ---------------------------------------------------------------------------
+# 2020 — Zoom star stays. 18 leftover writers on existing rooms.
+# ---------------------------------------------------------------------------
+F("2020", "sites/reels/index.html", "reels-lx", "query", "Reels leftover 15s (not Shorts)",
+  "15 seconds", "sites/openai/index.html", "GPT-3 waitlist")
+F("2020", "sites/openai/index.html", "gpt-lx", "checks", "GPT-3 leftover waitlist (not ChatGPT)",
+  ["Waitlist leftover", "ChatGPT is 2022"], "sites/flash/index.html", "Flash EOL")
+F("2020", "sites/flash/index.html", "flash-lx", "checks", "Flash leftover EOL",
+  ["31 Dec leftover", "No SWF payload"], "sites/meet/index.html", "Meet")
+F("2020", "sites/meet/index.html", "meet-lx", "query", "Meet leftover room name",
+  "standup", "sites/mixer/index.html", "Mixer")
+F("2020", "sites/mixer/index.html", "mixer-lx", "checks", "Mixer leftover shutdown",
+  ["Mixer leftover", "Not Twitch"], "sites/hbomax/index.html", "HBO Max")
+F("2020", "sites/hbomax/index.html", "hbo-lx", "query", "HBO Max leftover title",
+  "The Sopranos", "sites/peacock/index.html", "Peacock")
+F("2020", "sites/peacock/index.html", "pk-lx", "query", "Peacock leftover title",
+  "The Office", "sites/ccpa/index.html", "CCPA")
+F("2020", "sites/ccpa/index.html", "ccpa-lx", "checks", "CCPA leftover Do Not Sell",
+  ["Do Not Sell leftover", "Accept All never writes here"], "sites/chrome/index.html", "Chrome")
+F("2020", "sites/chrome/index.html", "ch-lx", "query", "Chrome leftover habit URL",
+  "https://zoom.us", "sites/edge/index.html", "Edge 79")
+F("2020", "sites/edge/index.html", "edge-lx", "checks", "Edge 79 leftover (not Legacy)",
+  ["Edge 79 leftover", "Not IE"], "sites/epic/index.html", "Epic")
+F("2020", "sites/epic/index.html", "epic-lx", "checks", "Epic leftover sideload literacy",
+  ["Sideload leftover", "Not App Store"], "sites/tiktok/index.html", "TikTok")
+F("2020", "sites/tiktok/index.html", "tt-lx", "query", "TikTok leftover caption",
+  "fyp leftover", "sites/spacehey/index.html", "SpaceHey")
+F("2020", "sites/spacehey/index.html", "shy-lx", "query", "SpaceHey leftover add-friend",
+  "friend leftover", "sites/youtube/index.html", "YouTube")
+F("2020", "sites/youtube/index.html", "yt-lx", "query", "YouTube leftover watch",
+  "music video", "sites/wikipedia/index.html", "Wikipedia")
+F("2020", "sites/wikipedia/index.html", "wiki-lx", "query", "Wikipedia leftover article",
+  "covid-19 pandemic", "sites/facebook/index.html", "Facebook")
+F("2020", "sites/facebook/index.html", "fb-lx", "checks", "Facebook leftover 2020 residual",
+  ["Residual leftover", "Meta is 2021"], "sites/playable/game.html", "Year game")
+F("2020", "sites/playable/game.html", "game-lx", "checks", "2020 game leftover",
+  ["Game leftover", "Zoom is the chip"], "sites/playable/famous.html", "Famous")
+F("2020", "sites/playable/famous.html", "famous-lx", "checks", "Famous leftover 2020",
+  ["Famous leftover", "Not the chip"], "sites/zoom/meeting.html", "Zoom")
+
+# ---------------------------------------------------------------------------
+# 2021 — ATT star stays. 18 leftover writers on existing rooms.
+# ---------------------------------------------------------------------------
+F("2021", "sites/signal/index.html", "sig-lx", "query", "Signal leftover handle",
+  "museum", "sites/copilot/index.html", "Copilot")
+F("2021", "sites/copilot/index.html", "cop-lx", "checks", "Copilot leftover waitlist (not ChatGPT)",
+  ["Waitlist leftover", "ChatGPT is 2022"], "sites/meta/index.html", "Meta")
+F("2021", "sites/meta/index.html", "meta-lx", "checks", "Meta leftover rename",
+  ["Company leftover", "App still Facebook"], "sites/chrome/index.html", "Chrome")
+F("2021", "sites/chrome/index.html", "ch-lx", "query", "Chrome leftover habit URL",
+  "https://signal.org", "sites/youtube/index.html", "YouTube")
+F("2021", "sites/youtube/index.html", "yt-lx", "query", "YouTube leftover watch",
+  "music video", "sites/wikipedia/index.html", "Wikipedia")
+F("2021", "sites/wikipedia/index.html", "wiki-lx", "query", "Wikipedia leftover article",
+  "app tracking transparency", "sites/facebook/index.html", "Facebook")
+F("2021", "sites/facebook/index.html", "fb-lx", "checks", "Facebook leftover 2021 residual",
+  ["Hostname leftover", "Company is Meta"], "sites/flash/index.html", "Flash")
+F("2021", "sites/flash/index.html", "flash-lx", "checks", "Flash leftover brick",
+  ["Brick leftover", "No SWF"], "sites/windows10/index.html", "Win10")
+F("2021", "sites/windows10/index.html", "w10-lx", "checks", "Win10 leftover mass residual",
+  ["Still mass leftover", "Win11 is later"], "sites/windows11/index.html", "Win11")
+F("2021", "sites/windows11/index.html", "w11-lx", "checks", "Win11 leftover install literacy",
+  ["Leftover install", "Not gone from this year"], "sites/clubhouse/index.html", "Clubhouse")
+F("2021", "sites/clubhouse/index.html", "chouse-lx", "query", "Clubhouse leftover room",
+  "drop in leftover", "sites/nft/index.html", "NFT")
+F("2021", "sites/nft/index.html", "nft-lx", "checks", "NFT leftover literacy",
+  ["Theater leftover", "No wallet"], "sites/squid/index.html", "Squid")
+F("2021", "sites/squid/index.html", "squid-lx", "query", "Squid leftover chip note",
+  "not a token", "sites/playable/game.html", "Year game")
+F("2021", "sites/playable/game.html", "game-lx", "checks", "2021 game leftover",
+  ["Game leftover", "ATT is the chip"], "sites/playable/famous.html", "Famous")
+F("2021", "sites/playable/famous.html", "famous-lx", "checks", "Famous leftover 2021",
+  ["Famous leftover", "Not the chip"], "sites/att/index.html", "ATT")
+F("2021", "sites/att/index.html", "att-lx", "query", "ATT leftover literacy note",
+  "ask app not to track", "sites/playable/extra-a.html", "Extra A")
+F("2021", "sites/playable/extra-a.html", "xa-lx", "query", "2021 extra-a leftover",
+  "spaces leftover", "sites/playable/extra-b.html", "Extra B")
+F("2021", "sites/playable/extra-b.html", "xb-lx", "checks", "2021 extra-b leftover",
+  ["Extra leftover", "Not the chip"], "sites/signal/index.html", "Signal")
+
+# ---------------------------------------------------------------------------
+# 2015–2021 wave 2 — 2× the leftover writers (18 → 36). Existing HTML only.
+# ---------------------------------------------------------------------------
+# 2015
+F("2015", "sites/periscope/watch.html", "peri-w", "query", "Periscope leftover watch title",
+  "watch leftover", "sites/googlephotos/library.html", "Photos library")
+F("2015", "sites/googlephotos/library.html", "gp-lib", "query", "Photos leftover library name",
+  "backup leftover", "sites/windows10/upgrade.html", "Win10 upgrade")
+F("2015", "sites/windows10/upgrade.html", "w10-up", "checks", "Win10 leftover upgrade literacy",
+  ["Free upgrade leftover", "Not a new PC"], "sites/applemusic/beats1.html", "Beats 1")
+F("2015", "sites/applemusic/beats1.html", "beats1", "query", "Beats 1 leftover show",
+  "Zane Lowe leftover", "sites/applemusicsub/index.html", "Apple Music sub")
+F("2015", "sites/applemusicsub/index.html", "am-sub", "checks", "Apple Music leftover trial note",
+  ["Trial leftover", "Not a real card"], "sites/apple/faces.html", "Watch faces")
+F("2015", "sites/apple/faces.html", "faces", "query", "Watch leftover face name",
+  "modular leftover", "sites/apple/pair.html", "Watch pair")
+F("2015", "sites/apple/pair.html", "pair", "checks", "Watch leftover pair literacy",
+  ["Pair leftover", "Not the chip"], "sites/snapchat/index.html", "Snapchat")
+F("2015", "sites/snapchat/index.html", "snap-h", "query", "Snapchat leftover story note",
+  "discover leftover", "sites/playable/extra-a.html", "Extra A")
+F("2015", "sites/playable/extra-a.html", "xa", "query", "2015 extra-a leftover",
+  "surge leftover", "sites/playable/extra-b.html", "Extra B")
+F("2015", "sites/playable/extra-b.html", "xb", "query", "2015 extra-b leftover",
+  "maps leftover", "sites/playable/extra-c.html", "Extra C")
+F("2015", "sites/playable/extra-c.html", "xc", "query", "2015 extra-c leftover",
+  "extra leftover", "sites/playable/extra-d.html", "Extra D")
+F("2015", "sites/playable/extra-d.html", "xd", "query", "2015 extra-d leftover",
+  "extra leftover", "sites/playable/extra-e.html", "Extra E")
+F("2015", "sites/playable/extra-e.html", "xe", "query", "2015 extra-e leftover",
+  "extra leftover", "sites/playable/game-2.html", "Year game 2")
+F("2015", "sites/playable/game-2.html", "g2", "checks", "2015 second game leftover",
+  ["Game leftover", "Periscope is the chip"], "sites/playable/index.html", "Cabinet")
+F("2015", "sites/playable/index.html", "cab", "query", "2015 cabinet leftover",
+  "cabinet leftover", "sites/playable/famous.html", "Famous")
+F("2015", "sites/playable/famous.html", "fam-2", "checks", "Famous leftover 2015 second",
+  ["Famous leftover", "Not the chip"], "sites/ios9/blockers.html", "iOS 9 blockers")
+F("2015", "sites/ios9/blockers.html", "block-2", "query", "iOS 9 leftover blocker name",
+  "content blocker", "sites/letsencrypt/index.html", "Let's Encrypt")
+F("2015", "sites/letsencrypt/index.html", "le-2", "query", "Let's Encrypt leftover second domain",
+  "museum.test", "sites/periscope/index.html", "Periscope")
+
+# 2016
+F("2016", "sites/instagram/archive.html", "ig-arch", "query", "Stories leftover archive note",
+  "24h leftover", "sites/vine/index.html", "Vine")
+F("2016", "sites/vine/index.html", "vine-h", "query", "Vine leftover loop note",
+  "six seconds leftover", "sites/snapchat/index.html", "Snapchat")
+F("2016", "sites/snapchat/index.html", "snap-h", "query", "Snapchat leftover 2016 residual",
+  "spectacles leftover", "sites/playable/extra-a.html", "Extra A")
+F("2016", "sites/playable/extra-a.html", "xa", "query", "2016 extra-a leftover",
+  "extra leftover", "sites/playable/extra-b.html", "Extra B")
+F("2016", "sites/playable/extra-b.html", "xb", "query", "2016 extra-b leftover",
+  "extra leftover", "sites/playable/extra-c.html", "Extra C")
+F("2016", "sites/playable/extra-c.html", "xc", "query", "2016 extra-c leftover",
+  "extra leftover", "sites/playable/extra-d.html", "Extra D")
+F("2016", "sites/playable/extra-d.html", "xd", "query", "2016 extra-d leftover",
+  "extra leftover", "sites/playable/extra-e.html", "Extra E")
+F("2016", "sites/playable/extra-e.html", "xe", "query", "2016 extra-e leftover",
+  "extra leftover", "sites/playable/index.html", "Cabinet")
+F("2016", "sites/playable/index.html", "cab", "query", "2016 cabinet leftover",
+  "cabinet leftover", "sites/facebook/reactions.html", "Reactions")
+F("2016", "sites/facebook/reactions.html", "react-2", "query", "Reactions leftover second face",
+  "love leftover", "sites/pokemongo/index.html", "Pokémon GO")
+F("2016", "sites/pokemongo/index.html", "pogo-2", "query", "GO leftover sidewalk note",
+  "team leftover", "sites/musically/index.html", "musical.ly")
+F("2016", "sites/musically/index.html", "mly-2", "query", "musical.ly leftover second caption",
+  "not tiktok leftover", "sites/slack/index.html", "Slack")
+F("2016", "sites/slack/index.html", "slack-2", "query", "Slack leftover channel",
+  "general leftover", "sites/youtube/index.html", "YouTube")
+F("2016", "sites/youtube/index.html", "yt-2", "query", "YouTube leftover second watch",
+  "music leftover", "sites/netflix/index.html", "Netflix")
+F("2016", "sites/netflix/index.html", "nf-2", "query", "Netflix leftover second title",
+  "Stranger Things leftover", "sites/moments/index.html", "Moments")
+F("2016", "sites/moments/index.html", "mom-2", "query", "Moments leftover second album",
+  "album leftover", "sites/whatsapp/e2e.html", "WhatsApp E2E")
+F("2016", "sites/whatsapp/e2e.html", "wa-2", "checks", "WhatsApp leftover second lock",
+  ["E2E leftover", "Not the chip"], "sites/windows10/end.html", "Win10 end")
+F("2016", "sites/windows10/end.html", "w10e-2", "query", "Win10 leftover second note",
+  "anniversary leftover", "sites/instagram/stories.html", "Stories")
+
+# 2017
+F("2017", "sites/playable/extra-a.html", "xa", "query", "2017 extra-a leftover",
+  "extra leftover", "sites/playable/extra-b.html", "Extra B")
+F("2017", "sites/playable/extra-b.html", "xb", "query", "2017 extra-b leftover",
+  "extra leftover", "sites/playable/extra-c.html", "Extra C")
+F("2017", "sites/playable/extra-c.html", "xc", "query", "2017 extra-c leftover",
+  "extra leftover", "sites/playable/extra-d.html", "Extra D")
+F("2017", "sites/playable/extra-d.html", "xd", "query", "2017 extra-d leftover",
+  "extra leftover", "sites/playable/extra-e.html", "Extra E")
+F("2017", "sites/playable/extra-e.html", "xe", "query", "2017 extra-e leftover",
+  "extra leftover", "sites/playable/index.html", "Cabinet")
+F("2017", "sites/playable/index.html", "cab", "query", "2017 cabinet leftover",
+  "cabinet leftover", "sites/fortnite/index.html", "Fortnite")
+F("2017", "sites/fortnite/index.html", "fn-2", "query", "Fortnite leftover second drop",
+  "tilted leftover", "sites/amazon/index.html", "Amazon")
+F("2017", "sites/amazon/index.html", "amzn-2", "query", "Amazon leftover second search",
+  "Echo Show leftover", "sites/youtube/index.html", "YouTube")
+F("2017", "sites/youtube/index.html", "yt-2", "query", "YouTube leftover second watch",
+  "music leftover", "sites/reddit/index.html", "Reddit")
+F("2017", "sites/reddit/index.html", "reddit-2", "query", "Reddit leftover second row",
+  "front page leftover", "sites/twitter/280.html", "Twitter 280")
+F("2017", "sites/twitter/280.html", "t280-2", "query", "Twitter leftover second 280",
+  "xxxxxxxxxxxxxxxx leftover", "sites/teams/index.html", "Teams")
+F("2017", "sites/teams/index.html", "teams-2", "query", "Teams leftover second name",
+  "museum desk leftover", "sites/wannacry/index.html", "WannaCry")
+F("2017", "sites/wannacry/index.html", "wc-2", "query", "WannaCry leftover second literacy",
+  "patch leftover", "sites/switch/index.html", "Switch")
+F("2017", "sites/switch/index.html", "sw-2", "query", "Switch leftover second reserve",
+  "299 leftover", "sites/musically/index.html", "musical.ly")
+F("2017", "sites/musically/index.html", "mly-2", "query", "musical.ly leftover second caption",
+  "not tiktok leftover", "sites/snapipo/index.html", "Snap IPO")
+F("2017", "sites/snapipo/index.html", "snap-2", "query", "Snap IPO leftover second note",
+  "ipo leftover", "sites/bitcoinath/index.html", "Bitcoin")
+F("2017", "sites/bitcoinath/index.html", "btc-2", "query", "Bitcoin leftover second note",
+  "ath leftover", "sites/echoshow/index.html", "Echo Show")
+F("2017", "sites/echoshow/index.html", "show-2", "query", "Echo Show leftover second note",
+  "show leftover", "sites/iphone/x.html", "Face ID")
+
+# 2018
+F("2018", "sites/tiktok/index.html", "tt-h", "query", "TikTok leftover home note",
+  "fyp leftover", "sites/github/index.html", "GitHub")
+F("2018", "sites/github/index.html", "gh-h", "query", "GitHub leftover issue note",
+  "issue leftover", "sites/playable/extra-a.html", "Extra A")
+F("2018", "sites/playable/extra-a.html", "xa", "query", "2018 extra-a leftover",
+  "extra leftover", "sites/playable/extra-b.html", "Extra B")
+F("2018", "sites/playable/extra-b.html", "xb", "query", "2018 extra-b leftover",
+  "extra leftover", "sites/playable/extra-c.html", "Extra C")
+F("2018", "sites/playable/extra-c.html", "xc", "query", "2018 extra-c leftover",
+  "extra leftover", "sites/playable/extra-d.html", "Extra D")
+F("2018", "sites/playable/extra-d.html", "xd", "query", "2018 extra-d leftover",
+  "extra leftover", "sites/playable/extra-e.html", "Extra E")
+F("2018", "sites/playable/extra-e.html", "xe", "query", "2018 extra-e leftover",
+  "extra leftover", "sites/playable/index.html", "Cabinet")
+F("2018", "sites/playable/index.html", "cab", "query", "2018 cabinet leftover",
+  "cabinet leftover", "sites/youtube/index.html", "YouTube")
+F("2018", "sites/youtube/index.html", "yt-2", "query", "YouTube leftover second watch",
+  "music leftover", "sites/wikipedia/index.html", "Wikipedia")
+F("2018", "sites/wikipedia/index.html", "wiki-2", "query", "Wikipedia leftover second article",
+  "GDPR leftover", "sites/reddit/index.html", "Reddit")
+F("2018", "sites/reddit/index.html", "reddit-2", "query", "Reddit leftover second row",
+  "old reddit leftover", "sites/discord/index.html", "Discord")
+F("2018", "sites/discord/index.html", "dc-2", "query", "Discord leftover second join",
+  "server leftover", "sites/chrome/not-secure.html", "Not Secure")
+F("2018", "sites/chrome/not-secure.html", "ns-2", "query", "Chrome leftover second URL",
+  "http leftover", "sites/instagram/igtv.html", "IGTV")
+F("2018", "sites/instagram/igtv.html", "igtv-2", "query", "IGTV leftover second title",
+  "not reels leftover", "sites/trust/index.html", "Hearing")
+F("2018", "sites/trust/index.html", "hear-2", "query", "Hearing leftover second note",
+  "apr 10 leftover", "sites/homepod/index.html", "HomePod")
+F("2018", "sites/homepod/index.html", "hp-2", "query", "HomePod leftover second reserve",
+  "siri leftover", "sites/spectre/index.html", "Spectre")
+F("2018", "sites/spectre/index.html", "sp-2", "query", "Spectre leftover second literacy",
+  "patch leftover", "sites/applemusic/index.html", "Apple Music")
+F("2018", "sites/applemusic/index.html", "am-2", "query", "Apple Music leftover second trial",
+  "trial leftover", "sites/gdpr/manage.html", "GDPR Manage")
+
+# 2019
+F("2019", "sites/disneyplus/about.html", "dplus-ab", "query", "Disney+ leftover about note",
+  "fox close leftover", "sites/disneyplus/index.html", "Disney+ door")
+F("2019", "sites/disneyplus/index.html", "dplus-ix", "query", "Disney+ leftover door note",
+  "trial leftover", "sites/fortnite/marshmello.html", "Marshmello")
+F("2019", "sites/fortnite/marshmello.html", "marsh", "query", "Fortnite leftover concert note",
+  "marshmello leftover", "sites/tiktok/index.html", "TikTok")
+F("2019", "sites/tiktok/index.html", "tt-2", "query", "TikTok leftover second sound",
+  "sound leftover", "sites/youtube/index.html", "YouTube")
+F("2019", "sites/youtube/index.html", "yt-2", "query", "YouTube leftover second watch",
+  "music leftover", "sites/wikipedia/index.html", "Wikipedia")
+F("2019", "sites/wikipedia/index.html", "wiki-2", "query", "Wikipedia leftover second article",
+  "Disney+ leftover", "sites/chrome/index.html", "Chrome")
+F("2019", "sites/chrome/index.html", "ch-2", "query", "Chrome leftover second URL",
+  "https://news.ycombinator.com", "sites/arcade/index.html", "Arcade")
+F("2019", "sites/arcade/index.html", "arcade-2", "query", "Arcade leftover second title",
+  "oceanhorn leftover", "sites/stadia/index.html", "Stadia")
+F("2019", "sites/stadia/index.html", "stadia-2", "query", "Stadia leftover second note",
+  "founders leftover", "sites/appletv/index.html", "Apple TV+")
+F("2019", "sites/appletv/index.html", "tv-2", "query", "Apple TV+ leftover second title",
+  "The Morning Show leftover", "sites/airpodspro/index.html", "AirPods Pro")
+F("2019", "sites/airpodspro/index.html", "app-2", "query", "AirPods Pro leftover second note",
+  "anc leftover", "sites/iphone/iphone11.html", "iPhone 11")
+F("2019", "sites/iphone/iphone11.html", "11-2", "query", "iPhone 11 leftover second note",
+  "triple leftover", "sites/edge/index.html", "Edge")
+F("2019", "sites/edge/index.html", "edge-2", "query", "Edge leftover second note",
+  "preview leftover", "sites/windows10/index.html", "Win10")
+F("2019", "sites/windows10/index.html", "w10-2", "query", "Win10 leftover second residual",
+  "mass leftover", "sites/instagram/index.html", "Instagram")
+F("2019", "sites/instagram/index.html", "ig-2", "query", "Instagram leftover second hide-likes",
+  "hide likes leftover", "sites/playable/index.html", "Cabinet")
+F("2019", "sites/playable/index.html", "cab-2", "query", "2019 cabinet leftover second",
+  "cabinet leftover", "sites/playable/famous.html", "Famous")
+F("2019", "sites/playable/famous.html", "fam-2", "checks", "Famous leftover 2019 second",
+  ["Famous leftover", "Disney+ is the chip"], "sites/playable/extra-a.html", "Extra A")
+F("2019", "sites/playable/extra-a.html", "xa-2", "query", "2019 extra-a leftover second",
+  "marshmello leftover", "sites/tiktok/index.html", "TikTok")
+
+# 2020
+F("2020", "sites/zoom/about.html", "zm-ab", "query", "Zoom leftover about note",
+  "participants leftover", "sites/zoom/index.html", "Zoom door")
+F("2020", "sites/zoom/index.html", "zm-ix", "query", "Zoom leftover door note",
+  "join leftover", "sites/zoom/recap.html", "Zoom recap")
+F("2020", "sites/zoom/recap.html", "zm-rc", "query", "Zoom leftover recap note",
+  "leave leftover", "sites/reels/about.html", "Reels about")
+F("2020", "sites/reels/about.html", "reels-ab", "query", "Reels leftover about note",
+  "15s leftover", "sites/reels/record.html", "Reels record")
+F("2020", "sites/reels/record.html", "reels-rc", "query", "Reels leftover record note",
+  "audio leftover", "sites/openai/wait.html", "GPT-3 wait")
+F("2020", "sites/openai/wait.html", "gpt-w", "query", "GPT-3 leftover waitlist note",
+  "request access leftover", "sites/flash/eol.html", "Flash EOL")
+F("2020", "sites/flash/eol.html", "flash-eol", "checks", "Flash leftover EOL literacy",
+  ["31 Dec leftover", "No SWF"], "sites/tiktok/eo.html", "TikTok EO")
+F("2020", "sites/tiktok/eo.html", "tt-eo", "query", "TikTok leftover EO note",
+  "13942 leftover", "sites/twitter/hack.html", "Twitter hack")
+F("2020", "sites/twitter/hack.html", "tw-hk", "query", "Twitter leftover hack note",
+  "hack leftover", "sites/markets/wti.html", "WTI")
+F("2020", "sites/markets/wti.html", "wti", "query", "WTI leftover negative oil note",
+  "-37.63 leftover", "sites/acnh/index.html", "ACNH")
+F("2020", "sites/acnh/index.html", "acnh-2", "query", "ACNH leftover second island",
+  "island leftover", "sites/astro/index.html", "Astronomical")
+F("2020", "sites/astro/index.html", "astro-2", "query", "Astronomical leftover second note",
+  "12.3 leftover", "sites/quibi/index.html", "Quibi")
+F("2020", "sites/quibi/index.html", "quibi-2", "query", "Quibi leftover second title",
+  "quick bite leftover", "sites/playable/extra-a.html", "Extra A")
+F("2020", "sites/playable/extra-a.html", "xa", "query", "2020 extra-a leftover",
+  "mute leftover", "sites/playable/extra-b.html", "Extra B")
+F("2020", "sites/playable/extra-b.html", "xb", "query", "2020 extra-b leftover",
+  "participants leftover", "sites/playable/index.html", "Cabinet")
+F("2020", "sites/playable/index.html", "cab", "query", "2020 cabinet leftover",
+  "cabinet leftover", "sites/playable/famous.html", "Famous")
+F("2020", "sites/playable/famous.html", "fam-2", "checks", "Famous leftover 2020 second",
+  ["Famous leftover", "Zoom is the chip"], "sites/hbomax/index.html", "HBO Max")
+F("2020", "sites/hbomax/index.html", "hbo-2", "query", "HBO Max leftover second title",
+  "The Sopranos leftover", "sites/zoom/meeting.html", "Zoom")
+
+# 2021
+F("2021", "sites/signal/index.html", "sig-2", "query", "Signal leftover second handle",
+  "museum leftover", "sites/copilot/index.html", "Copilot")
+F("2021", "sites/copilot/index.html", "cop-2", "query", "Copilot leftover second waitlist",
+  "preview leftover", "sites/meta/index.html", "Meta")
+F("2021", "sites/meta/index.html", "meta-2", "query", "Meta leftover second rename note",
+  "company leftover", "sites/chrome/index.html", "Chrome")
+F("2021", "sites/chrome/index.html", "ch-2", "query", "Chrome leftover second URL",
+  "https://signal.org", "sites/youtube/index.html", "YouTube")
+F("2021", "sites/youtube/index.html", "yt-2", "query", "YouTube leftover second watch",
+  "music leftover", "sites/wikipedia/index.html", "Wikipedia")
+F("2021", "sites/wikipedia/index.html", "wiki-2", "query", "Wikipedia leftover second article",
+  "app tracking leftover", "sites/facebook/index.html", "Facebook")
+F("2021", "sites/facebook/index.html", "fb-2", "query", "Facebook leftover second residual",
+  "connect leftover", "sites/flash/index.html", "Flash")
+F("2021", "sites/flash/index.html", "flash-2", "query", "Flash leftover second brick note",
+  "12 jan leftover", "sites/windows10/index.html", "Win10")
+F("2021", "sites/windows10/index.html", "w10-2", "query", "Win10 leftover second residual",
+  "mass leftover", "sites/windows11/index.html", "Win11")
+F("2021", "sites/windows11/index.html", "w11-2", "query", "Win11 leftover second install",
+  "oct 5 leftover", "sites/clubhouse/index.html", "Clubhouse")
+F("2021", "sites/clubhouse/index.html", "chouse-2", "query", "Clubhouse leftover second room",
+  "drop in leftover", "sites/nft/index.html", "NFT")
+F("2021", "sites/nft/index.html", "nft-2", "query", "NFT leftover second literacy",
+  "theater leftover", "sites/squid/index.html", "Squid")
+F("2021", "sites/squid/index.html", "squid-2", "query", "Squid leftover second print",
+  "not a token leftover", "sites/playable/index.html", "Cabinet")
+F("2021", "sites/playable/index.html", "cab-2", "query", "2021 cabinet leftover second",
+  "cabinet leftover", "sites/playable/famous.html", "Famous")
+F("2021", "sites/playable/famous.html", "fam-2", "checks", "Famous leftover 2021 second",
+  ["Famous leftover", "ATT is the chip"], "sites/playable/game.html", "Year game")
+F("2021", "sites/playable/game.html", "game-2", "query", "Five Letter leftover second note",
+  "90 users leftover", "sites/playable/extra-a.html", "Extra A")
+F("2021", "sites/playable/extra-a.html", "xa-2", "query", "2021 extra-a leftover second",
+  "spaces leftover", "sites/playable/extra-b.html", "Extra B")
+F("2021", "sites/playable/extra-b.html", "xb-2", "query", "2021 extra-b leftover second",
+  "extra leftover", "sites/att/index.html", "ATT")
+
+# ---------------------------------------------------------------------------
 # Band A deepen — second dest on existing leftover rooms
 # ---------------------------------------------------------------------------
 DEEPEN: dict[str, list[tuple]] = {
@@ -793,6 +1182,9 @@ STARS = {
     "2016": ("sites/instagram/stories.html", "Stories"),
     "2017": ("sites/iphone/x.html", "Face ID"),
     "2018": ("sites/gdpr/manage.html", "GDPR Manage"),
+    "2019": ("sites/disneyplus/home.html", "Disney+ Who’s watching"),
+    "2020": ("sites/zoom/meeting.html", "Zoom mute → leave"),
+    "2021": ("sites/att/index.html", "Ask App Not to Track"),
 }
 
 PANEL_RE = re.compile(

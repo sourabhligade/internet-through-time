@@ -45,6 +45,7 @@ def test_ci_workflow_exists() -> None:
         "playwright test",
         "playwright install",
         "check-all-years.py",
+        "check-5x-contract.py",
     ]
     for needle in required:
         if needle not in s:
@@ -127,6 +128,20 @@ def test_playwright_config_ci() -> None:
     ok("playwright-config-ci")
 
 
+# Merge CI Playwright allowlist — not npm test / not the full e2e/ tree.
+CI_E2E_ALLOWLIST = (
+    "e2e/hub-years.spec.js",
+    "e2e/atlas.spec.js",
+    "e2e/3x-links.spec.js",
+    "e2e/all-years-smoke.spec.js",
+    "e2e/gold-a-leftover-pack.spec.js",
+    "e2e/popular-3x-sites.spec.js",
+    "e2e/one-thing-per-year.spec.js",
+    "e2e/2016-2018-3x-detail.spec.js",
+    "e2e/2016-2018-trail-chain.spec.js",
+)
+
+
 def test_e2e_suite_present() -> None:
     e2e = ROOT / "e2e"
     specs = list(e2e.glob("*.spec.js"))
@@ -137,6 +152,26 @@ def test_e2e_suite_present() -> None:
         fail("e2e-suite", "missing e2e/helpers.js")
         return
     ok(f"e2e-suite ({len(specs)} specs)")
+
+
+def test_ci_e2e_allowlist() -> None:
+    """CI runs a named 9-file visitor/gold pack, not `playwright test` of all e2e/."""
+    wf = read(ROOT / ".github/workflows/ci.yml")
+    sh = read(ROOT / "scripts/ci.sh")
+    missing = [rel for rel in CI_E2E_ALLOWLIST if rel not in wf or rel not in sh]
+    if missing:
+        fail("ci-e2e-allowlist", "ci.yml/ci.sh missing " + ", ".join(missing))
+        return
+    extra_hint = "This is a subset of e2e/; npm test runs the full tree"
+    if "ship pack" not in sh.lower() and "ship e2e" not in wf.lower():
+        fail("ci-e2e-allowlist", "ci.sh / ci.yml should label the pack as a ship subset")
+        return
+    for rel in CI_E2E_ALLOWLIST:
+        if not (ROOT / rel).is_file():
+            fail("ci-e2e-allowlist", f"missing {rel}")
+            return
+    _ = extra_hint
+    ok(f"ci-e2e-allowlist ({len(CI_E2E_ALLOWLIST)} files · not full npm test)")
 
 
 def test_browser_srp_parts() -> None:
@@ -205,6 +240,7 @@ def main() -> int:
         test_ci_sh_executable,
         test_playwright_config_ci,
         test_e2e_suite_present,
+        test_ci_e2e_allowlist,
         test_browser_srp_parts,
         test_required_year_shells,
         test_deploy_configs,

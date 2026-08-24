@@ -127,7 +127,7 @@ const YEARS = [
         key: "itt17-faceid",
         next: /fortnite/,
         complete: async (page) => {
-          await checkAll(page, "[data-faceid-req]");
+          await page.locator("[data-faceid-look]").click();
           await page.locator("[data-faceid-unlock]").click();
         },
       },

@@ -17,11 +17,11 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2014", "2021", "2022", "2023"]);
+const WIPED = new Set(["2005", "2006", "2007"]);
 const YEARS = [];
-for (let y = 1994; y <= 2020; y++) {
-  const s = String(y);
-  if (!WIPED.has(s)) YEARS.push(s);
+for (let y = 1994; y <= 2024; y++) {
+  if (WIPED.has(String(y))) continue;
+  YEARS.push(String(y));
 }
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
 
@@ -154,9 +154,9 @@ try {
       if (!n) missing.push(y);
     }
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
-    else ok("hub-cards", `${YEARS.length} playable years (2014 + 2021–2023 wiped)`);
+    else ok("hub-cards", `${YEARS.length} playable years (1994–2024 · 2005–2007 wiped)`);
     const copy = await page.locator("body").innerText();
-    if (!/23 years|2007|2013\s*[–-]\s*2014/i.test(copy)) fail("hub-copy", "expected 23 years / wiped rebuild");
+    if (!/28 years open/i.test(copy)) fail("hub-copy", "expected 28 years open");
     else ok("hub-copy");
     const era = await page.locator('a.era-jump-chip[href="#era-1994-1999"]').count();
     if (!era) fail("hub-era-chip", "missing 1994–1999 era jump");

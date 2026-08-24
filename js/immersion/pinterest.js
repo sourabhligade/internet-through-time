@@ -44,6 +44,8 @@
   function boot(doc) {
     doc = doc || document;
     if (!doc.querySelector("[data-pin-save]")) return;
+    /* 2012 leftover dest uses data-pin-tile + extras. This engine is 2010 pin theater. */
+    if (doc.querySelector("[data-pin-tile]")) return;
     render(doc);
     var btns = doc.querySelectorAll("[data-pin-save]");
     var i;

@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007, 2009, 2011, and 2013–2014 are gaps (wiped). Do not invent rooms.
+ * Museum ends 2024. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -9,13 +9,13 @@
 
   var OPEN = [
     "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-    "2002", "2003", "2004", "2005", "2006", "2008",
-    "2010", "2012", "2015", "2016", "2017", "2018", "2019", "2020"
+    "2002", "2003", "2004", "2008", "2009",
+    "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2007", "2009", "2011", "2013", "2014", "2021", "2022", "2023"],
+    gapYears: ["2005", "2006", "2007"],
 
     years: {
       "1994": {
@@ -129,8 +129,9 @@
         game: { label: "Gem Cascade", href: "years/2004/sites/playable/game.html" }
       },
       "2005": {
+        wiped: true,
         era: "YouTube · Maps · Ajax",
-        thesis: "Broadcast Yourself. Maps is the other hinge.",
+        thesis: "Off disk for a from-scratch rebuild.",
         gold: { label: "YouTube upload", href: "years/2005/sites/youtube/upload.html", key: "itt05-yt-uploads" },
         guided: [
           { label: "Google Maps", href: "years/2005/sites/maps/index.html" },
@@ -139,8 +140,9 @@
         game: { label: "HoverChop", href: "years/2005/sites/playable/game.html" }
       },
       "2006": {
+        wiped: true,
         era: "Twitter · Feed · open Facebook",
-        thesis: "140 characters. Still a laptop. No iPhone.",
+        thesis: "Off disk for a from-scratch rebuild.",
         gold: { label: "Twitter 140", href: "years/2006/sites/twitter/index.html", key: "itt06-tweets" },
         guided: [
           { label: "Facebook News Feed", href: "years/2006/sites/facebook/feed.html" },
@@ -161,7 +163,7 @@
       },
             "2010": {
         era: "iPad · Instagram iOS · Open Graph",
-        thesis: "Filter on iPhone only. Android is next year — and that year is wiped.",
+        thesis: "Filter on iPhone only. Android is next year.",
         gold: { label: "Instagram iOS filter+share", href: "years/2010/sites/instagram/index.html", key: "itt10-ig" },
         guided: [
           { label: "iPad", href: "years/2010/sites/ipad/index.html" },
@@ -179,11 +181,58 @@
         ],
         game: { label: "Guess Doodle", href: "years/2012/sites/playable/game.html" }
       },
-      "2007": { wiped: true, thesis: "Wiped for from-scratch rebuild." },
-      "2009": { wiped: true, thesis: "Wiped for from-scratch rebuild." },
-      "2011": { wiped: true, thesis: "Wiped for from-scratch rebuild." },
-      "2013": { wiped: true, thesis: "Wiped. Lean door was mock. Rebuild later." },
-      "2014": { wiped: true, thesis: "Wiped. Lean door was mock. Rebuild later." },
+      "2007": {
+        wiped: true,
+        era: "iPhone Safari · no App Store",
+        thesis: "Off disk for a from-scratch rebuild.",
+        gold: { label: "iPhone Safari", href: "years/2007/sites/iphone/index.html", key: "itt07-iphone" },
+        guided: [
+          { label: "Gmail open", href: "years/2007/sites/gmail/index.html" },
+          { label: "Street View", href: "years/2007/sites/maps/index.html" }
+        ],
+        game: { label: "Peg Walk", href: "years/2007/sites/playable/game.html" }
+      },
+      "2009": {
+        era: "Like · FarmVille · Bing",
+        thesis: "Social goes mainstream. XP + IE 8. No iPad.",
+        gold: { label: "Facebook Like", href: "years/2009/sites/facebook/index.html", key: "itt09-like" },
+        guided: [
+          { label: "FarmVille", href: "years/2009/sites/farmville/index.html" },
+          { label: "Bing", href: "years/2009/sites/bing/index.html" },
+          { label: "YouTube leftover #3", href: "years/2009/sites/youtube/index.html" }
+        ],
+        game: { label: "Plot Neighbors", href: "years/2009/sites/playable/game.html" }
+      },
+      "2011": {
+        era: "Google+ · Spotify US · Siri",
+        thesis: "Circles, legal US streaming, and a voice on the phone.",
+        gold: { label: "Google+", href: "years/2011/sites/googleplus/index.html", key: "itt11-gplus" },
+        guided: [
+          { label: "Spotify US", href: "years/2011/sites/spotify/index.html" },
+          { label: "Siri", href: "years/2011/sites/iphone/index.html" }
+        ],
+        game: { label: "Letter Swap", href: "years/2011/sites/playable/game.html" }
+      },
+      "2013": {
+        era: "Vine 6s · iOS 7 · Stories",
+        thesis: "The loop is six seconds. Stories here are Snapchat, not Instagram.",
+        gold: { label: "Vine 6s", href: "years/2013/sites/vine/record.html", key: "itt13-vine-posts" },
+        guided: [
+          { label: "iOS 7", href: "years/2013/sites/iphone/ios7.html" },
+          { label: "Snapchat Stories", href: "years/2013/sites/snapchat/story.html" }
+        ],
+        game: { label: "Year game", href: "years/2013/sites/playable/game.html" }
+      },
+      "2014": {
+        era: "WhatsApp · Heartbleed · Ice",
+        thesis: "Lean door. Messaging becomes the mass internet. $19B install is the gold.",
+        gold: { label: "WhatsApp Install", href: "years/2014/sites/whatsapp/index.html", key: "itt14-wa-install" },
+        guided: [
+          { label: "Heartbleed", href: "years/2014/sites/heartbleed/index.html" },
+          { label: "Ice Bucket", href: "years/2014/sites/icebucket/index.html" }
+        ],
+        game: { label: "Tile Fold", href: "years/2014/sites/playable/game.html" }
+      },
       "2015": {
         era: "Go LIVE · Photos locker · Win10",
         thesis: "Lean door. Periscope titled Go LIVE is the gold.",
@@ -244,9 +293,46 @@
         ],
         game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
       },
-      "2021": { wiped: true, thesis: "Wiped. Lean door was mock. Rebuild later." },
-      "2022": { wiped: true, thesis: "Wiped. Lean door was mock. Rebuild later." },
-      "2023": { wiped: true, thesis: "Wiped. Lean door was mock. Rebuild later." }
+      "2021": {
+        era: "Allow · Ask App Not to Track",
+        thesis: "Allow is the trap. Ask App Not to Track is the save. ChatGPT is 2022.",
+        gold: { label: "ATT Ask App Not to Track", href: "years/2021/sites/att/index.html", key: "itt21-att" },
+        guided: [
+          { label: "Signal leftover", href: "years/2021/sites/signal/index.html" },
+          { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" }
+        ],
+        game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
+      },
+      "2022": {
+        era: "Send · research preview",
+        thesis: "Send is the save. Empty / Plus / GPT-4 never write. X is 2023.",
+        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
+        guided: [
+          { label: "Twitter leftover", href: "years/2022/sites/twitter/index.html" },
+          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" }
+        ],
+        game: { label: "Prompt Box", href: "years/2022/sites/playable/game.html" }
+      },
+      "2023": {
+        era: "Win11 residual · Chrome habit · Plus $20",
+        thesis: "Subscribe is the save. Empty / stay free / GPT-4o / Gemini never write.",
+        gold: { label: "ChatGPT Plus $20", href: "years/2023/sites/chatgpt/plus.html", key: "itt23-chatgpt-plus" },
+        guided: [
+          { label: "GPT-4 leftover", href: "years/2023/sites/chatgpt/gpt4.html" },
+          { label: "Bing Chat leftover", href: "years/2023/sites/bing/chat.html" }
+        ],
+        game: { label: "Subscribe Dash", href: "years/2023/sites/playable/game.html" }
+      },
+      "2024": {
+        era: "Win11 residual · Chrome habit · GPT-4o",
+        thesis: "Talk is the save. Empty / GPT-5 / 4o-as-2023 never write.",
+        gold: { label: "GPT-4o Talk", href: "years/2024/sites/chatgpt/4o.html", key: "itt24-gpt4o" },
+        guided: [
+          { label: "Gemini leftover", href: "years/2024/sites/gemini/index.html" },
+          { label: "Claude 3.5 leftover", href: "years/2024/sites/claude35/index.html" }
+        ],
+        game: { label: "Omni Dash", href: "years/2024/sites/playable/game.html" }
+      }
     },
 
     threads: [
@@ -260,7 +346,6 @@
           { year: "1996", href: "years/1996/sites/yahoo/index.html", note: "My Yahoo" },
           { year: "1998", href: "years/1998/sites/yahoo/index.html", note: "still winning" },
           { year: "2000", href: "years/2000/sites/yahoo/index.html", note: "crash year" },
-          { year: "2005", href: "years/2005/sites/yahoo/index.html", note: "continuity" },
           { year: "2010", href: "years/2010/sites/yahoo/index.html", note: "lean leftover" },
         ]
       },
@@ -283,7 +368,6 @@
         stops: [
           { year: "1998", href: "years/1998/sites/google/lucky.html", note: "Lucky gold" },
           { year: "2001", href: "years/2001/sites/google/index.html", note: "default" },
-          { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps" },
           { year: "2008", href: "years/2008/sites/chrome/index.html", note: "Chrome" },
           { year: "2015", href: "years/2015/sites/googlephotos/index.html", note: "Photos locker" }
         ]
@@ -294,7 +378,6 @@
         blurb: "College wall → Feed → Like → Open Graph → Timeline.",
         stops: [
           { year: "2004", href: "years/2004/sites/facebook/networks.html", note: "thefacebook" },
-          { year: "2006", href: "years/2006/sites/facebook/feed.html", note: "News Feed" },
           { year: "2010", href: "years/2010/sites/facebook/index.html", note: "Open Graph" },
           { year: "2016", href: "years/2016/sites/facebook/reactions.html", note: "Reactions leftover" }
         ]
@@ -304,8 +387,7 @@
         label: "YouTube",
         blurb: "Independent upload → Google-owned → leftover lean rooms.",
         stops: [
-          { year: "2005", href: "years/2005/sites/youtube/upload.html", note: "upload gold" },
-          { year: "2006", href: "years/2006/sites/youtube/index.html", note: "deal late year" },
+          { year: "2009", href: "years/2009/sites/youtube/index.html", note: "lean leftover · June #3" },
           { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean leftover" },
           { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean leftover" },
           { year: "2018", href: "years/2018/sites/youtube/index.html", note: "lean leftover" }
@@ -330,16 +412,16 @@
           { year: "1994", href: "years/1994/sites/yahoo/index.html", note: "browse, don’t search" },
           { year: "1995", href: "years/1995/sites/altavista/index.html", note: "AltaVista" },
           { year: "1998", href: "years/1998/sites/google/lucky.html", note: "Lucky" },
-          { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps" },
         ]
       },
       {
         id: "phone",
         label: "Phone eats the web",
-        blurb: "Safari only → App Store → filter → Face ID. 2012–2014 missing.",
+        blurb: "Safari only → App Store → filter → WhatsApp install → Face ID.",
         stops: [
           { year: "2008", href: "years/2008/sites/appstore/index.html", note: "Store opens" },
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
+          { year: "2014", href: "years/2014/sites/whatsapp/index.html", note: "Install" },
           { year: "2017", href: "years/2017/sites/iphone/x.html", note: "Face ID" }
         ]
       },
@@ -366,7 +448,7 @@
         steps: [
           { year: "1994", label: "CSotD guestbook", href: "years/1994/sites/csotd/index.html" },
           { year: "1998", label: "Sparse Google", href: "years/1998/sites/google/index.html" },
-          { year: "2005", label: "YouTube", href: "years/2005/sites/youtube/watch.html" },
+          { year: "2004", label: "thefacebook", href: "years/2004/sites/facebook/networks.html" },
 
         ]
       },
@@ -378,7 +460,6 @@
           { year: "1994", label: "Yahoo directory", href: "years/1994/sites/yahoo/index.html" },
           { year: "1995", label: "AltaVista", href: "years/1995/sites/altavista/index.html" },
           { year: "1998", label: "I’m Feeling Lucky", href: "years/1998/sites/google/lucky.html" },
-          { year: "2005", label: "Google Maps", href: "years/2005/sites/maps/index.html" },
         ]
       },
       {
@@ -400,26 +481,25 @@
           { year: "1996", label: "HoTMaiL", href: "years/1996/sites/hotmail/index.html" },
           { year: "1997", label: "ICQ", href: "years/1997/sites/icq/index.html" },
           { year: "1999", label: "AIM", href: "years/1999/sites/aim/index.html" },
-          { year: "2004", label: "Gmail invite", href: "years/2004/sites/gmail/index.html" },
-          { year: "2006", label: "Twitter 140", href: "years/2006/sites/twitter/index.html" }
+          { year: "2004", label: "Gmail invite", href: "years/2004/sites/gmail/index.html" }
         ]
       },
       {
         id: "phone-trail",
         label: "Phone ate the web",
-        blurb: "Safari-only → Store → filter → Face ID. Gap where 2012–2014 should be.",
+        blurb: "Safari-only → Store → filter → WhatsApp install → Face ID.",
         steps: [
           { year: "2008", label: "App Store", href: "years/2008/sites/appstore/index.html" },
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
+          { year: "2014", label: "WhatsApp Install", href: "years/2014/sites/whatsapp/index.html" },
           { year: "2017", label: "Face ID", href: "years/2017/sites/iphone/x.html" }
         ]
       },
       {
         id: "broadcast",
         label: "Broadcast yourself",
-        blurb: "Upload → live → 24-hour slide. Vine’s year is wiped.",
+        blurb: "Upload → live → 24-hour slide. Vine is the 2013 gold.",
         steps: [
-          { year: "2005", label: "YouTube upload", href: "years/2005/sites/youtube/upload.html" },
           { year: "2015", label: "Periscope LIVE", href: "years/2015/sites/periscope/index.html" },
           { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" },
           { year: "2018", label: "IGTV leftover", href: "years/2018/sites/instagram/igtv.html" }
@@ -431,8 +511,8 @@
         blurb: "Separate Flash-portal lobby. Not ripped SWF.",
         steps: [
           { year: "", label: "Games lobby", href: "games/index.html" },
-          { year: "2005", label: "HoverChop (year cabinet)", href: "years/2005/sites/playable/game.html" },
-          { year: "2006", label: "TrailSled", href: "years/2006/sites/playable/game.html" }
+          { year: "", label: "HoverChop", href: "games/play/heli.html" },
+          { year: "", label: "TrailSled", href: "games/play/sled.html" }
         ]
       }
     ]

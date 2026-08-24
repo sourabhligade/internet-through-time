@@ -22,20 +22,21 @@ const GOLD = [
   { year: "2002", writer: "sites/stumbleupon/index.html", key: "itt02-stumble", nextNeedle: "friendster", chipHref: "sites/stumbleupon/index.html" },
   { year: "2003", writer: "sites/photobucket/index.html", key: "itt03-photobucket-album", nextNeedle: "myspace", chipHref: "sites/photobucket/index.html" },
   { year: "2004", writer: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", nextNeedle: "friends", chipHref: "sites/facebook/networks.html" },
-  { year: "2005", writer: "sites/pandora/index.html", key: "itt05-pandora", nextNeedle: "youtube", chipHref: "sites/pandora/index.html" },
-  { year: "2006", writer: "sites/twitter/index.html", key: "itt06-tweets", nextNeedle: "facebook/feed", chipHref: "sites/twitter/index.html" },
-  { year: "2007", writer: "sites/iphone/index.html", key: "itt07-iphone", nextNeedle: "gmail", chipHref: "sites/iphone/index.html" },
   { year: "2008", writer: "sites/github/issue.html", key: "itt08-github", nextNeedle: "appstore", chipHref: "sites/github/issue.html" },
   { year: "2009", writer: "sites/facebook/index.html", key: "itt09-like", nextNeedle: "farmville", chipHref: "sites/facebook/index.html" },
   { year: "2010", writer: "sites/imgur/index.html", key: "itt10-imgur", nextNeedle: "reddit", chipHref: "sites/imgur/index.html" },
   { year: "2011", writer: "sites/googleplus/index.html", key: "itt11-gplus", nextNeedle: "spotify", chipHref: "sites/googleplus/index.html" },
   { year: "2012", writer: "sites/instagram/android.html", key: "itt12-ig-android", nextNeedle: "pinterest", chipHref: "sites/instagram/android.html" },
-
+  { year: "2013", writer: "sites/vine/record.html", key: "itt13-vine-posts", nextNeedle: "instagram/video", chipHref: "sites/vine/record.html" },
+  { year: "2014", writer: "sites/whatsapp/index.html", key: "itt14-wa-install", nextNeedle: "chat", chipHref: "sites/whatsapp/index.html" },
   { year: "2015", writer: "sites/periscope/index.html", key: "itt15-periscope", nextNeedle: "watch.html", chipHref: "sites/periscope/index.html" },
   { year: "2016", writer: "sites/instagram/stories.html", key: "itt16-ig-stories", nextNeedle: "pokemongo", chipHref: "sites/instagram/stories.html" },
   { year: "2017", writer: "sites/iphone/x.html", key: "itt17-faceid", nextNeedle: "fortnite", chipHref: "sites/iphone/x.html" },
   { year: "2018", writer: "sites/gdpr/index.html", key: "itt18-gdpr", nextNeedle: "tiktok", chipHref: "sites/gdpr/index.html" },
   { year: "2019", writer: "sites/disneyplus/home.html", key: "itt19-disneyplus", nextNeedle: "tiktok", chipHref: "sites/disneyplus/home.html" },
+  { year: "2020", writer: "sites/zoom/meeting.html", key: "itt20-zoom", nextNeedle: "reels", chipHref: "sites/zoom/meeting.html" },
+  { year: "2021", writer: "sites/att/index.html", key: "itt21-att", nextNeedle: "signal", chipHref: "sites/att/index.html" },
+  { year: "2022", writer: "sites/chatgpt/index.html", key: "itt22-chatgpt", nextNeedle: "twitter", chipHref: "sites/chatgpt/index.html" },
 ];
 
 function yearFile(year, rel) {
@@ -48,16 +49,11 @@ test.describe("Gold-A leftover · home chip + writer + next dest live", () => {
       test.skip(!fs.existsSync(yearFile(g.year, "pages/home.html")), g.year + " not on disk");
       expect(fs.existsSync(yearFile(g.year, g.writer)), g.writer).toBe(true);
 
-      const homeRes = await page.request.get(`/years/${g.year}/pages/home.html`);
-      expect(homeRes.status(), "home").toBe(200);
-      const homeHtml = await homeRes.text();
-      expect(homeHtml).toMatch(new RegExp('data-ott-one-thing="' + g.year + '"'));
-      expect(homeHtml).toMatch(new RegExp(g.chipHref.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-      expect(homeHtml).toMatch(new RegExp('id="ott-guided-' + g.year + '"[\\s\\S]*?<ol[\\s\\S]*?</ol>'));
-      const guided = homeHtml.match(new RegExp('id="ott-guided-' + g.year + '"[\\s\\S]*?<ol([\\s\\S]*?)</ol>'));
-      expect(guided, "guided ol").toBeTruthy();
-      const lis = (guided && guided[1].match(/<li\b/g)) || [];
-      expect(lis.length, "guided stays 6").toBe(6);
+      await page.goto(`/years/${g.year}/pages/home.html`);
+      await expect(page.locator(`[data-ott-one-thing="${g.year}"]`)).toBeVisible();
+      await expect(page.locator(`#ott-guided-${g.year} ol > li`)).toHaveCount(6);
+      const painted = await page.content();
+      expect(painted).toMatch(new RegExp(g.chipHref.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 
       const writerRes = await page.request.get(`/years/${g.year}/${g.writer}`);
       expect(writerRes.status(), g.writer).toBe(200);

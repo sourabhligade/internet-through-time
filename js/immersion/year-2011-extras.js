@@ -68,10 +68,6 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (countChecked(doc, "[data-gp11-req]") < 2) {
-        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-        return;
-      }
       var circle = val(doc, "[data-gp11-circle]");
       if (!circle || circle.length < 2) {
         feedback("Name a circle first. Empty never writes.", st, { error: true });

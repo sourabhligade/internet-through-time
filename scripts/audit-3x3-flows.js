@@ -11,6 +11,8 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const TRIOS = require("./popular-3x3-sites.json");
 const FIRST = require("./popular-3x-sites.json");
+const { loadYearStart, assertStartCatalog } = require("./year-start-data");
+const START = loadYearStart();
 
 const STARS = {
   1994: "sites/csotd/index.html",
@@ -27,25 +29,29 @@ const STARS = {
   2005: "sites/youtube/upload.html",
   2006: "sites/twitter/index.html",
   2007: "sites/iphone/index.html",
-  2008: "sites/appstore/index.html",
+  2008: "sites/github/issue.html",
   2009: "sites/facebook/index.html",
   2010: "sites/instagram/index.html",
   2011: "sites/googleplus/index.html",
   2012: "sites/instagram/android.html",
   2013: "sites/vine/record.html",
+  2014: "sites/whatsapp/index.html",
   2015: "sites/periscope/index.html",
   2016: "sites/instagram/stories.html",
   2017: "sites/iphone/x.html",
   2018: "sites/gdpr/index.html",
   2019: "sites/disneyplus/home.html",
   2020: "sites/zoom/meeting.html",
+  2021: "sites/att/index.html",
+  2022: "sites/chatgpt/index.html",
 };
 
-const SHARE_POP_MORE = new Set(["2007", "2009", "2011", "2012", "2013", "2019", "2020"]);
+const SHARE_POP_MORE = new Set(["2007", "2009", "2011"]);
 
 const fail = [];
 const warn = [];
 let ok = 0;
+fail.push.apply(fail, assertStartCatalog(START));
 
 function relHref(fromDir, href) {
   if (!href) return null;
@@ -70,7 +76,7 @@ function normSite(href) {
 }
 
 const years = Object.keys(TRIOS).sort();
-if (years.length !== 26) fail.push("trio years " + years.length + " != 26");
+if (years.length !== 29) fail.push("trio years " + years.length + " != 29");
 
 for (const year of years) {
   const rows = TRIOS[year];
@@ -85,14 +91,26 @@ for (const year of years) {
     continue;
   }
   const homeHtml = fs.readFileSync(home, "utf8");
-  const guided = homeHtml.match(new RegExp(`id="ott-guided-${year}"[\\s\\S]*?<ol[^>]*>([\\s\\S]*?)</ol>`));
-  const guidedLis = guided ? (guided[1].match(/<li/g) || []).length : 0;
+  const spec = START[year];
+  let starHref = spec && spec.href;
+  let guidedLis = spec && spec.items ? spec.items.length : 0;
+  if (spec) {
+    if (!homeHtml.includes('id="itt-year-start"') || !homeHtml.includes("YearUI.paintStart")) {
+      fail.push(year + " home missing YearUI.paintStart mount");
+    }
+  } else {
+    const guided = homeHtml.match(new RegExp(`id="ott-guided-${year}"[\\s\\S]*?<ol[^>]*>([\\s\\S]*?)</ol>`));
+    guidedLis = guided ? (guided[1].match(/<li/g) || []).length : 0;
+    const star = homeHtml.match(new RegExp(`data-ott-one-thing="${year}"[^>]*href="([^"]+)"`));
+    starHref = star && star[1];
+    if (homeHtml.includes("YearUI.paintStart")) {
+      fail.push(year + " 2010+ home must keep inline start chrome");
+    }
+  }
   if (guidedLis !== 6) fail.push(year + " guided ol = " + guidedLis + " (want 6)");
-
-  const star = homeHtml.match(new RegExp(`data-ott-one-thing="${year}"[^>]*href="([^"]+)"`));
-  if (!star) fail.push(year + " missing star");
-  else if (normSite(star[1]) !== STARS[year]) {
-    fail.push(year + " star moved: " + star[1] + " != " + STARS[year]);
+  if (!starHref) fail.push(year + " missing star");
+  else if (normSite(starHref) !== STARS[year]) {
+    fail.push(year + " star moved: " + starHref + " != " + STARS[year]);
   }
 
   const strip3 = hrefsIn(homeHtml, `data-itt-pop-3x3="${year}"`);
@@ -111,7 +129,7 @@ for (const year of years) {
     if (!dest || !fs.existsSync(dest)) fail.push(year + " home 3x3 broken " + href);
   }
 
-  if (star && stripNorm.includes(normSite(star[1]))) {
+  if (starHref && stripNorm.includes(normSite(starHref))) {
     fail.push(year + " 3x3 overlaps star");
   }
   for (const h of stripNorm) {
@@ -174,7 +192,6 @@ for (const year of years) {
   });
 }
 
-if (TRIOS["2014"]) fail.push("2014 must stay wiped from third-trio spec");
 void FIRST;
 
 console.log("audit-3x3-flows · dests checked " + ok + " · fail " + fail.length + " · warn " + warn.length);

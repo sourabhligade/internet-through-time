@@ -1,6 +1,7 @@
 # LEFT OUT — What remains to implement
 
-> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Optional residuals below = pixels, platform debt, git — not missing years. Body counts below may lag lean 2000–01 rebuilds; trust live `find` + smoke over old snapshots.
+> **ARCHIVAL · dated 2026-07-24 · do not implement from this file.**  
+> **Ship law 2026-08-23:** hub **1994–2022** (29 years). Prefer [`DISK-TRUTH.md`](DISK-TRUTH.md) + live tree. Body counts below lag the museum.
 
 
 **Date audited:** 2026-07-24  

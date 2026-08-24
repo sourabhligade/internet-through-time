@@ -10,9 +10,12 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from itt_5x_contract import plaque_required  # noqa: E402
 LOOP_RE = re.compile(
     r'\s*<div class="itt-5x-loop"[^>]*data-5x-loop[\s\S]*?</div>\s*',
     re.I,
@@ -97,6 +100,10 @@ def main() -> int:
             skipped += 1
             continue
         html = p.read_text(encoding="utf-8", errors="replace")
+        if plaque_required(int(year), rel):
+            print("keep plaque (5× contract)", year, rel)
+            skipped += 1
+            continue
         if "data-5x-loop" not in html and "data-5x-save" not in html:
             continue
         if not has_real_writer(html):

@@ -15,6 +15,9 @@ python3 scripts/test-authenticity.py
 echo "==> Static: pipeline"
 python3 scripts/test-pipeline.py
 
+echo "==> Static: 5× leftover contract"
+python3 scripts/check-5x-contract.py
+
 echo "==> Static: mock-flow classifier"
 node scripts/audit-mock-flows.js
 
@@ -46,7 +49,7 @@ unset BASE_URL || true
 export CI="${CI:-1}"
 echo "==> E2E: OSS visitor gate"
 node scripts/oss-visitor-gate.mjs
-echo "==> E2E: ship pack (hub · 3× · gold-A · 2016–2018)"
-npx playwright test e2e/hub-years.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js --workers=2
+echo "==> E2E: ship pack (hub · 3× · gold-A · 2016–2018 · 2023–2024 leftover)"
+npx playwright test e2e/hub-years.spec.js e2e/atlas.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/2023-session-flows-real.spec.js e2e/2024-session-flows-real.spec.js --workers=2
 
 echo "==> CI OK"

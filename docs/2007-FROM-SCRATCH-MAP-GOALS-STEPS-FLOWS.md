@@ -102,6 +102,7 @@ Shell default: **Windows XP + IE 7**. Vista is a **product leftover**, not the y
 | 7th guided `<li>` | Always |
 | Adult-video top-10 room | Compiled lists only |
 | 5,000 dest rooms because Live Stats says 121M | The 5k number is a **walk queue**, not dests |
+| Forest dests (`iphone/about.html`, `facebook/platform.html`, `gmail/invite.html`, and the rest of the wiped ~292-HTML tree) | **NEVER** — do not rebuild. Live leftover dests stay on existing lean rooms (Etsy, FriendFeed, Justin, Ustream, YouTube, iPhone). |
 
 ---
 

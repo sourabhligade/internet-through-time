@@ -1,73 +1,82 @@
-# 2021 — READ FIRST (from-scratch lean door)
+# 2021 — READ FIRST (from-scratch 4k-web research freeze)
 
-**Date:** 2026-08-20  
-**Disk truth:** Hub is **1994–2006 + 2008 + 2010 + 2012 + 2015–2021**. `years/2021/` is the **lean from-scratch door** (ATT Ask App Not to Track).  
+**Date:** 2026-08-22  
+**Status:** **live lean door.** `years/2021/` is on disk. Prefix `itt21`. Star = ATT Ask App Not to Track.  
+**Disk truth:** Hub is **1994–2013 + 2015–2021** (27 years). **2014 wiped. 2022+ not on disk.**  
 **Prefix:** `itt21`  
-**Clone shape from:** live `years/2019/` (then 2020 Zoom door). **Do not** restore any old 43-HTML 2021 forest as-is — rewrite.
+**Clone shape:** live `years/2020/` (Zoom door · lean). **Do not** restore any wiped 2021 forest.
 
 | Doc | Role |
 |-----|------|
-| **This file** | Thesis · star · **AI honesty** · do / do not |
-| [`2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | **Execute bible** — S0–S16 |
-| [`GAMES-PER-YEAR/YEAR-2021.md`](GAMES-PER-YEAR/YEAR-2021.md) | Five Letter feel · 90 users 1 Nov |
-| Parent | `years/2020/` Zoom · `years/2019/` Continue |
+| **This file** | Thesis · star · AI honesty · do / do not |
+| [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-23.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-23.md) | **Current harvest** — visit log · 10k walk queue · live-disk freeze |
+| [`2021-FROM-SCRATCH-4K-WEB-RESEARCH.md`](2021-FROM-SCRATCH-4K-WEB-RESEARCH.md) | Older 4k envelope — scale cites still used; **disk-truth header is stale** |
+| [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | **Implementer map** — life → museum → proof · official 10 · file list |
+| [`2021-CHECK-EVERY-FLOW-MAP.md`](2021-CHECK-EVERY-FLOW-MAP.md) | **Visitor check walk** — trap · save · key · Next |
+| [`2021-4K-WEB-FLOW-MAP.md`](2021-4K-WEB-FLOW-MAP.md) | **Walkable 4k diagram** — envelope · NEVER |
+| [`2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | **Execute bible** — goals · phases · minute · e2e |
+| Parent live year | `years/2020/` · `itt20` · Zoom mute → Leave |
 
-**Legal:** Educational. `localStorage` only. Never invent brand pixels. No Apple ATT screenshot. No Facebook / Meta wordmark. No GitHub Copilot official UI. No NYT Wordle tiles.
+**Legal:** Educational. `localStorage` only. Never invent brand pixels. No Apple ATT screenshot. No Facebook / Meta wordmark. No GitHub Copilot official UI. No NYT Wordle tiles. **No ChatGPT dest** (30 Nov **2022**).
 
 ## One-line thesis (locked)
 
-**2021 is when Allow Tracking is the trap and Ask App Not to Track is the save.** WhatsApp’s privacy rewrite pushes people to Signal in January. Facebook Inc. **renames** to Meta on 28 Oct — the app is still Facebook. GitHub Copilot is a **technical preview waitlist**, not a chat box. ChatGPT is **30 Nov 2022**. Wordle is a quiet page with 90 users on 1 Nov.
+**2021 is when Allow Tracking is the trap and Ask App Not to Track is the save.** WhatsApp’s January privacy pop-up pushes people toward Signal (enforcement delayed to **15 May**). Facebook Inc. **renames the company** to Meta on **28 Oct** — the app is still Facebook. GitHub Copilot is a **29 Jun technical-preview waitlist**, not a chat box. Wordle is **90 users on 1 Nov**. Flash is already dead — **12 Jan** is the brick leftover of the 2020 gold.
 
-## Gold
+## Gold (if ever implemented)
 
 | Role | Product | Key |
 |------|---------|-----|
-| **Star** | **ATT Ask App Not to Track** · iOS 14.5 · 26 Apr · Allow never writes | `itt21-att` |
-| P0 leftover | WhatsApp → Signal · Jan privacy notice (enforcement delayed to **15 May**) | `itt21-signal` |
+| **Star** | **ATT Ask App Not to Track** · iOS 14.5 · **26 Apr** · Allow never writes | `itt21-att` |
+| P0 leftover | WhatsApp → Signal · Jan notice · enforcement **15 May** | `itt21-signal` |
 | P0 leftover | Meta rename · 28 Oct · app still Facebook | `itt21-meta` |
-| P0 leftover | **GitHub Copilot technical preview** · 29 Jun · waitlist · **not ChatGPT** | `itt21-copilot` |
+| P0 leftover | GitHub Copilot technical preview · 29 Jun · waitlist · **not ChatGPT** | `itt21-copilot` |
 | P0 leftover | Windows 11 · announced 24 Jun · released **5 Oct** | `itt21-win11` |
-| Game | Five Letter (Wordle class · public Oct · 90 users 1 Nov) | `itt21-game-five` |
+| Continuity leftover | Flash brick · **12 Jan 2021** · not a second 2020 Zoom gold | `itt21-flash-brick` |
+| Game | Five Letter (Wordle class · public Oct · **90** users 1 Nov) | `itt21-game-five` |
 
-## Scale (locked · dual-cite)
+## Scale (locked · dual-cite · opened this pass)
 
-| Cite | Number |
-|------|--------|
-| Websites June (Live Stats) | **Table ends 2018** at **1,630,322,579**. **No June 2021 websites digit.** |
-| Internet users (ITU Facts and Figures 2021) | **4.9 billion / 63%** — [ITU](https://www.itu.int/itu-d/reports/statistics/facts-figures-2021/) · +17% since 2019 · 782 million came online 2019–2021 |
-| Wordle 1 Nov 2021 | **90** users (NYT origin recap). **300,000 is mid-Jan 2022. NYT buy is 31 Jan 2022.** Do not print millions of 2021 players. |
+| Cite | Number | Print as |
+|------|--------|----------|
+| Live Stats June websites | Table **ends 2018** at **1,630,322,579**. **No June 2021 websites digit.** | About · never invent |
+| Netcraft **January 2021** | **1,197,982,359** sites · **262,949,225** domains · **10,649,817** computers | **January**, not June |
+| Netcraft **December 2021** | **1,168,864,866** sites · **268,328,184** domains · **11,669,818** computers | Year-end January-class |
+| Netcraft **January 2022** | **1,167,715,133** sites | Start-2022 pair |
+| ITU Facts & Figures **2021** | **4.9 billion / 63%** · +**17%** since 2019 · **782 million** came online 2019–2021 · **2.9B** still offline | People-online · not hostnames |
+| ITU 2020 look-back | **+10.2%** users in 2020 (largest in a decade) · 2021 growth **+5.8%** | Growth, not a websites cell |
+| Wordle 1 Nov 2021 | **90** users. **300,000 is early Jan 2022. NYT buy is 31 Jan 2022.** | Game honesty |
 
-## AI honesty (read twice — 2021 is the careful year)
+## AI honesty (read twice)
 
-| Thing | When it actually is | 2021 room? |
-|-------|---------------------|------------|
-| **GitHub Copilot technical preview** | **29 Jun 2021** waitlist · “your AI pair programmer” inside VS Code · OpenAI Codex | **Yes** · leftover · waitlist only |
-| GPT-3 API | 11 Jun **2020** paper / API · developers, not a chat site | Residual line on Copilot / About · **not a 2021 star** |
-| DALL·E 1 | Jan 2021 research paper | Residual line only · **no consumer playground** |
+| Thing | When | 2021 room? |
+|-------|------|------------|
+| GitHub Copilot technical preview | **29 Jun 2021** waitlist · pair programmer in VS Code · OpenAI Codex | **Yes** · leftover · waitlist only |
+| GPT-3 API | 11 Jun **2020** | Residual line · not a 2021 star |
+| DALL·E 1 | Jan 2021 **research paper** | Residual line · **no playground** |
 | **ChatGPT** | **30 Nov 2022** | **BAN** |
 | Bing Chat / GPT-4 | 2023 | **BAN** |
-| Midjourney | 2022 | **BAN** |
-| Stable Diffusion | Aug 2022 | **BAN** |
-| “Ask Copilot a question” chat UI | later product | **BAN** — 2021 is waitlist + pair-programmer honesty |
-
-The Copilot room must force a tick: **“This is not ChatGPT (30 Nov 2022).”** Empty waitlist never writes. Missing that tick never writes.
+| Midjourney / Stable Diffusion | 2022 | **BAN** |
+| “Ask Copilot” chat UI | later product | **BAN** |
 
 ## Do
 
-- Clone the lean door. Guided **exactly 6**.  
-- Star / trail #1 / year-start step 1 = `sites/att/index.html`.  
-- Allow Tracking = trap (GDPR Accept All pattern). Ask App Not to Track = save.  
-- Year game is **Five Letter**, not Sus Vote, not Consent Dash.  
-- Shell: Win10 still mass at the start of the year · Win11 leftover room · Chrome habit.  
+- Research envelope is **~4,000 websites** (walk budget). **Never 4,000 dests.**  
+- If implement is named: clone lean **2020**. Guided **exactly 6**. Hard stop **~50 HTML**.  
+- Star / trail #1 = `sites/att/index.html`. Allow = trap.  
+- Year game is **Five Letter**, not Sus Vote. Print **90 users 1 Nov**.  
+- Shell: Win10 still mass at year-start · Win11 leftover · Chrome habit.  
 - Print ITU **4.9B / 63%**. Never invent a June 2021 websites digit.
 
 ## Do not
 
-- Ship ChatGPT, Bing Chat, Midjourney, Stable Diffusion, “Chat with Copilot.”  
+- Scaffold `years/2021/` until asked.  
+- Restore a wiped 2021 forest.  
+- Ship ChatGPT, Bing Chat, Midjourney, Stable Diffusion, Copilot-as-chat.  
 - Write `itt21-att` from **Allow**.  
 - Print Wordle as a 2021 mass hit or as a NYT game.  
-- Rebrand the Facebook app as Meta (the **company** renamed; the app is still Facebook).  
-- Move the chip to Signal / Meta / Copilot / Wordle / Squid Game.  
-- Invent Apple / Meta / GitHub official pixels.  
-- Claim Zoom-as-new (that is 2020). Claim Reels-as-new (that is 2020).  
-- Print “millions of Wordle players in 2021.”
+- Rebrand the Facebook **app** as Meta.  
+- Move the chip to Signal / Meta / Copilot / Wordle / Squid Game / GameStop.  
+- Invent Apple / Meta / GitHub / NYT official pixels.  
+- Claim Zoom-as-new or Reels-as-new (those are 2020).  
+- Adult dests · `google.com` habit dest · Discord/Netflix dest as 2020 leftover habit.

@@ -1,6 +1,17 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-21 · **Ship update:** hub **1994–2013 + 2015–2020** playable (**26 years**) · **2007 / 2009 / 2011 / 2013 / 2020 lean doors** · **2014 · 2021–2023 wiped** · **2024+ not on disk**
+**Date:** 2026-08-24 · **Ship update:** hub **28 years open** · **1994–2024 minus 2005–2007 wiped** · **2023** ChatGPT Plus $20 · **2024** GPT-4o Talk · museum ends **2024**
+
+**This file appends older ship cards.** When a later section contradicts the header + live tree + `SHIP_YEARS`, **live tree + `SHIP_YEARS` win**. Rebuild 2005–2007 later — do not `git checkout` those trees.
+
+| Year | Disk now (2026-08-24) |
+|------|------------------------|
+| **1994–2004 · 2008–2024** | **Live** (28 years) |
+| **2005 / 2006 / 2007** | **Wiped** — hub cards locked · no year trees |
+| **2023** | **Live lean door** — Plus $20 · 2× pack 1 (18) |
+| **2024** | **Live lean door** — GPT-4o Talk · 2× packs (36) |
+| **2008** | Still a dense forest |
+| **2009 / 2011 / 2013–2022** | Lean doors |
 
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
 **Museum-grade A gap map:** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md)  
@@ -15,17 +26,18 @@
 
 | Year | Leftover phase | Gold | Guided 2–3 | Grade now |
 |------|----------------|------|------------|-----------|
-| 2011 | P6 invite / G+ / Qwikster | Airbnb `itt11-airbnb` | Airbnb · Spotify | **A−** (HTML over 60) |
-| 2012 | P5 pin / tile / Maps | IG Android `itt12-ig-android` | IG · IPO | **A−** (HTML over cap) |
-| 2013 | P7 iOS 7 flat 2-page | Vine `itt13-vine-posts` | Vine · iOS 7 | **A−** |
-| 2014 | lean door (25 HTML) | WhatsApp `itt14-wa-install` | WA · Heartbleed | **A−** |
+| 2011 | lean door on hub | Google+ `itt11-*` | G+ · Spotify | **A−** live lean (~28 HTML) |
+| 2012 | lean from-scratch | IG Android `itt12-ig-android` | IG · IPO | **A−** |
+| 2013 | lean door on hub | Vine `itt13-vine-posts` | Vine · iOS 7 | **A−** live lean |
+| 2014 | lean door on hub | WhatsApp Install `itt14-wa-install` | WhatsApp · Heartbleed | **A−** live lean |
 | 2015 | lean Periscope door | Periscope `itt15-periscope` | Periscope · Photos | **A−** |
-| 2016 | P4 L1–L4 | Stories `itt16-ig-stories` | Stories | **A−** |
-| 2017 | P9 parked `[~]` | Face ID `itt17-faceid` | Face ID · Fortnite | **A−** / docs A claim predates leftover |
-| 2018 | P3 S15 | GDPR `itt18-gdpr` | GDPR | **A−** |
-| 2019 | lean door | Disney+ Continue `itt19-disneyplus` | Disney+ · TikTok | **A−** |
-| 2020 | **wiped** | — | — | not on disk |
-| 2021 | **wiped** | — | — | not on disk |
+| 2016 | lean Stories door | Stories `itt16-ig-stories` | Stories | **A−** |
+| 2017 | lean Face ID door | Face ID `itt17-faceid` | Face ID · Fortnite | **A−** |
+| 2018 | lean GDPR door | GDPR `itt18-gdpr` | GDPR | **A−** |
+| 2019 | lean Disney+ door | Disney+ Continue `itt19-disneyplus` | Disney+ · TikTok | **A−** |
+| 2020 | **live lean door** | Zoom mute `itt20-zoom` | Zoom · Reels leftover | **A−** on hub |
+| 2021 | **live lean door** | ATT Ask `itt21-att` | ATT · Signal leftover | **A−** on hub |
+| 2022 | **live lean door** | ChatGPT Send `itt22-chatgpt` | ChatGPT · Twitter leftover | **A−** on hub |
 
 **2014:** L3 densify · [`2014-MUSEUM-GRADE.md`](2014-MUSEUM-GRADE.md) · `npm run test:e2e:2014`  
 **2015:** L3 densify · [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) · `npm run test:e2e:2015`  
@@ -57,15 +69,15 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2013 + 2015–2020** (26 years) |
-| Hub locked | **2014 · 2021–2023** (wiped) · **2024+** (not on disk) |
-| Year trees | `years/1994/` … `years/2013/` · `2015/` … `2020/` |
-| Period CSS | `css/period-1995.css` … `period-2019.css` (lean-door CSS stay as import bridges) |
-| HTML on disk | 1994–2013 live · **2007 / 2009 / 2011 / 2013 / 2020 lean doors** · **2014 wiped** · 2015–2019 live lean · **2021–2023 wiped** |
+| Hub open years | **1994–2022** (29 years) |
+| Hub locked | **2023** (not on disk) · **2024+** (not on disk) |
+| Year trees | `years/1994/` … `years/2022/` |
+| Period CSS | `css/period-1995.css` … `period-2022.css` (lean-door CSS stay as import bridges) |
+| HTML on disk | 1994–2022 live · **2007 / 2009 / 2011 / 2013–2022 lean doors** · **2023+ not on disk** |
 | **2010** | **Live · lean from-scratch** · ~22 rooms · star Instagram iOS · `itt10-*` · `e2e/2010-mvp.spec.js` |
-| **2011** | **Wiped** for from-scratch rebuild · research docs stay |
+| **2011** | **Live · lean door** · Google+ · Spotify US · Siri · `itt11-*` · `e2e/2011-mvp.spec.js` |
 | **2012** | **Live · lean from-scratch** · Instagram Android + $1B · IPO $38 · `itt12-*` · `e2e/2012-mvp.spec.js` |
-| **2013+** | **2013 lean door** · **2014 wiped** · 2015–2020 live · **2021–2023 wiped** |
+| **2013+** | **2013–2022 lean doors** · **2023+ not on disk** |
 
 ### 2016 (lean from-scratch · playable)
 
@@ -121,9 +133,17 @@ Hub includes **2019**. Star = Disney+ Who’s watching · `itt19-disneyplus`. Tr
 
 Hub includes **2020**. Star = Zoom mute → leave · `itt20-zoom`. Join never writes. Game = Sus Vote. See [`2020-READ-FIRST.md`](2020-READ-FIRST.md).
 
-### 2021–2023 — wiped
+### 2021 — lean ATT door (this branch)
 
-**2021–2023 are not playable.** Hub cards locked. Research notebooks stay archival. Do not restore as forests.
+Hub includes **2021**. Star = ATT Ask App Not to Track · `itt21-att`. Allow never writes. Game = Five Letter. See [`2021-READ-FIRST.md`](2021-READ-FIRST.md).
+
+### 2022 — lean ChatGPT door (this branch)
+
+Hub includes **2022**. Star = ChatGPT Send · `itt22-chatgpt`. Empty / Plus / GPT-4 / Bing Chat never write. Game = Prompt Box. See [`2022-READ-FIRST.md`](2022-READ-FIRST.md).
+
+### 2023+ — not on disk
+
+**2023+ are not playable.** No hub cards. Plus / GPT-4 / Bing Chat / Threads / X stay next year. Do not scaffold a forest.
 
 ### 2019 leftover forest notes (do not restore)
 
@@ -152,13 +172,18 @@ Hub includes **2020**. Star = Zoom mute → leave · `itt20-zoom`. Join never wr
 | Research | **[`2020-READ-FIRST.md`](2020-READ-FIRST.md)** |
 | e2e | `npm run test:e2e:2020` |
 
-### 2021 (wiped)
+### 2021 (lean from-scratch · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2021/` | **Wiped** — not on disk |
-| Hub | **Locked** |
-| Research | archival [`2021-READ-FIRST.md`](2021-READ-FIRST.md) · minute [`2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) |
+| `years/2021/` | **Live · lean** (~28 HTML) |
+| Hub | **Unlocked** |
+| Prefix | **`itt21`** |
+| P0 | ATT Ask · Signal leftover · Copilot waitlist · Meta rename · Win11 · Flash brick |
+| One-thing | ATT Ask · `itt21-att` |
+| Game | Five Letter (`itt21-game-five`) |
+| Research | **[`2021-READ-FIRST.md`](2021-READ-FIRST.md)** |
+| e2e | `npm run test:e2e:2021` |
 
 ### 2015 (lean from-scratch rebuild · playable)
 
@@ -219,13 +244,15 @@ Hub includes **2020**. Star = Zoom mute → leave · `itt20-zoom`. Join never wr
 | e2e | `npm run test:e2e:2012` |
 | Layer C | H12-01–04 `[failed-final]` (WA 503) · H12-05 chrome `[continuity]` 2009 still |
 
-### 2011 (wiped · rebuild from scratch)
+### 2011 (lean from-scratch door · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2011/` | **Wiped** — not on disk |
-| Hub | **Locked** |
-| Research | [`2011-RESEARCH.md`](2011-RESEARCH.md) · master bible · minute pack stay |
+| `years/2011/` | **Live · lean door** (~31 HTML). Do not restore the old forest. |
+| Hub | **Unlocked** |
+| Prefix | `itt11` |
+| Star | Google+ · `itt11-gplus` |
+| Research | [`2011-READ-FIRST.md`](2011-READ-FIRST.md) · master bible · minute pack stay |
 
 ### 2010 (lean from-scratch · playable)
 
@@ -244,14 +271,16 @@ Hub includes **2020**. Star = Zoom mute → leave · `itt20-zoom`. Join never wr
 | e2e | `e2e/2010-mvp.spec.js` · `npm run test:e2e:2010` |
 | New leftover 2026-08-21 | Instant `itt10-instant` · FaceTime dest `itt10-facetime` · Kickstarter `itt10-kickstarter` · second IG share `itt10-ig-2` · iPad radios also write `itt10-ipad-order` · [`NEW-LINKS-FLOWS-EVERY-ON-DISK-YEAR-RESEARCH-GOALS-PHASES-MINUTE-2026-08-21.md`](NEW-LINKS-FLOWS-EVERY-ON-DISK-YEAR-RESEARCH-GOALS-PHASES-MINUTE-2026-08-21.md) |
 
-### 2009 (wiped · rebuild from scratch)
+### 2009 (lean from-scratch door · playable)
 
 | Item | Status |
 |------|--------|
-| `years/2009/` | **Wiped** — not on disk |
-| Hub | **Locked** |
+| `years/2009/` | **Live · lean door** (~30 HTML). Do not restore the old forest. |
+| Hub | **Unlocked** |
+| Prefix | `itt09` |
+| Star | Facebook Like · `itt09-like` |
 | CSS | `css/period-2009.css` kept as import bridge (2010+ chain) |
-| Research | [`2009-RESEARCH.md`](2009-RESEARCH.md) · master bible · harvest stay |
+| Research | [`2009-READ-FIRST.md`](2009-READ-FIRST.md) · master bible · harvest stay |
 
 ### 2008 (museum-ready · densify + WA ship · playable)
 
@@ -430,7 +459,7 @@ Plan: [`1996-1997-IMPLEMENTATION-PHASES.md`](1996-1997-IMPLEMENTATION-PHASES.md)
 
 ---
 
-**2026-08-09 revert (history):** years 2014–2020 were briefly removed, then **2014 MVP was rebuilt the same day**, then **2015 MVP** was cloned from live 2014 + overlay. **2026-08-10:** lean **2016** unlocked. **2026-08-11:** lean **2017** + **2018** on hub — then **2019** + **2020** lean from-scratch the same day. **2026-08-16:** hub **1994–2021**. **2022+ not on disk.** 2014 improve I1–I10: [`2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md`](2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md). Leftover 2015: [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) Part 2 **L0–L6**.
+**2026-08-09 revert (history):** years 2014–2020 were briefly removed, then **2014 MVP was rebuilt the same day**, then **2015 MVP** was cloned from live 2014 + overlay. **2026-08-10:** lean **2016** unlocked. **2026-08-11:** lean **2017** + **2018** on hub — then **2019** + **2020** lean from-scratch the same day. **2026-08-16:** hub **1994–2021**. **2026-08-23:** hub **1994–2022** (29 years) · 2014 and 2022 live lean doors. **2023+ not on disk.** 2014 improve I1–I10: [`2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md`](2014-IMPROVE-MUSEUM-GRADE-GAMES-IMPLEMENTATION-PHASES.md). Leftover 2015: [`2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md`](2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md) Part 2 **L0–L6**.
 
 **2026-08-09 feel-done residual:** Nostalgia F0–F3 + D8–D10 + D5 + T1 + T2 + T4 on disk — 2008–2013 year-labels, continuity archive chips, shared `css/phone-frame.css` bezels (2007 iPhone · 2010–11 IG · 2013 Vine/iOS7/Snap), IG share requires a filter click, 1996 portal wars land in rooms and write `itt96-portal-wars` only at 3 visits (session partials), 1995 cart→SSL→thanks trail links, 2001 Wikipedia Save → `itt01-wiki-pages`.
 

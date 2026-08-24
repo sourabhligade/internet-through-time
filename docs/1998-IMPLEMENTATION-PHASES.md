@@ -780,7 +780,7 @@ e2e/pipeline-health.spec.js   # year list includes 1998
 |------|----------------|
 | You’ve Got Mail promo | `sites/youvegotmail/index.html` — AOL culture |
 | BowieNet | `sites/bowienet/index.html` — ISP $19.95 / community; frames aesthetic |
-| Larry Page / Sergey Brin Stanford | `sites/stanford/larry.html`, `sergey.html` |
+| Larry Page / Sergey Brin Stanford | `sites/larrypage/` · `sites/sergeybrin/` (live folders; do not invent `stanford/larry.html`) |
 | WinFiles | `sites/winfiles/index.html` |
 | MP3.com | thin culture page |
 | Hillman Curtis / Flash showcase | plugin theater careful |

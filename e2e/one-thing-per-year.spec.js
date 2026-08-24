@@ -150,32 +150,6 @@ const THINGS = [
     },
   },
   {
-    year: "2005",
-    path: "/years/2005/sites/youtube/upload.html",
-    key: "itt05-yt-uploads",
-    incomplete: async (page) => {
-      await page.evaluate(() => localStorage.removeItem("itt05-yt-uploads"));
-      await page.locator('[data-yt-upload] [name="title"]').fill("");
-      await page.locator('[data-yt-upload] button[type="submit"]').click();
-    },
-    complete: async (page) => {
-      await page.locator('[data-yt-upload] [name="title"]').fill("Me at the zoo residual");
-      await page.locator('[data-yt-upload] button[type="submit"]').click();
-    },
-  },
-  {
-    year: "2006",
-    path: "/years/2006/sites/twitter/index.html",
-    key: "itt06-tweets",
-    incomplete: async (page) => {
-      await page.locator("form[data-twitter-compose] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.fill("#ott-field", "just setting up my twttr residual");
-      await page.locator("form[data-twitter-compose] button[type='submit']").click();
-    },
-  },
-  {
     year: "2009",
     path: "/years/2009/sites/facebook/index.html",
     key: "itt09-like",
@@ -183,8 +157,6 @@ const THINGS = [
       await page.locator("[data-lk09-like]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-lk09-req]").nth(0).check();
-      await page.locator("[data-lk09-req]").nth(1).check();
       await page.locator('[data-lk09-page="news"]').click();
       await page.locator('[data-lk09-page="music"]').click();
       await page.locator("[data-lk09-like]").click();
@@ -198,12 +170,21 @@ const THINGS = [
       await page.locator("[data-gp11-hangout]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-gp11-req]").nth(0).check();
-      await page.locator("[data-gp11-req]").nth(1).check();
       await page.fill("[data-gp11-circle]", "Friends");
       await page.locator('[data-gp11-person="ada"]').click();
       await page.locator('[data-gp11-person="al"]').click();
       await page.locator("[data-gp11-hangout]").click();
+    },
+  },
+  {
+    year: "2014",
+    path: "/years/2014/sites/whatsapp/index.html",
+    key: "itt14-wa-install",
+    incomplete: async (page) => {
+      await page.locator("[data-wa14-messenger]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-wa14-install]").click();
     },
   },
   {
@@ -214,24 +195,8 @@ const THINGS = [
       await page.locator("[data-vn13-post]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-vn13-req]").nth(0).check();
-      await page.locator("[data-vn13-req]").nth(1).check();
       await page.locator("[data-vn13-hold]").click();
       await page.locator("[data-vn13-post]").click();
-    },
-  },
-  {
-    year: "2007",
-    path: "/years/2007/sites/iphone/index.html",
-    key: "itt07-iphone",
-    incomplete: async (page) => {
-      await page.locator("[data-ip07-safari]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-ip07-req]").nth(0).check();
-      await page.locator("[data-ip07-req]").nth(1).check();
-      await page.locator('[data-ip07-cap="4"]').click();
-      await page.locator("[data-ip07-safari]").click();
     },
   },
   {
@@ -304,8 +269,7 @@ const THINGS = [
       await page.locator("[data-faceid-unlock]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-faceid-req]").nth(0).check();
-      await page.locator("[data-faceid-req]").nth(1).check();
+      await page.locator("[data-faceid-look]").click();
       await page.locator("[data-faceid-unlock]").click();
     },
   },
@@ -318,8 +282,6 @@ const THINGS = [
     },
     complete: async (page) => {
       await page.locator("[data-gdpr-manage]").click();
-      await page.locator("[data-gdpr-req]").nth(0).check();
-      await page.locator("[data-gdpr-req]").nth(1).check();
       await page.locator("[data-gdpr-save]").click();
     },
   },
@@ -349,12 +311,63 @@ const THINGS = [
       await page.locator("[data-zoom-leave]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-zoom-req]").nth(0).check();
-      await page.locator("[data-zoom-req]").nth(1).check();
       await page.locator("[data-zoom-mute]").click();
       await page.fill("[data-zoom-field]", "can you see my screen");
       await page.locator("[data-zoom-send]").click();
       await page.locator("[data-zoom-leave]").click();
+    },
+  },
+  {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-att-allow]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-att-ask]").click();
+    },
+  },
+  {
+    year: "2022",
+    path: "/years/2022/sites/chatgpt/index.html",
+    key: "itt22-chatgpt",
+    incomplete: async (page) => {
+      await page.locator("[data-gpt22-plus]").click();
+    },
+    complete: async (page) => {
+      await page.fill("[data-gpt22-prompt]", "explain leftover");
+      await page.locator("[data-gpt22-send]").click();
+    },
+  },
+  {
+    year: "2023",
+    path: "/years/2023/sites/chatgpt/plus.html",
+    key: "itt23-chatgpt-plus",
+    incomplete: async (page) => {
+      await page.locator("[data-plus-go]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-plus-pick="20"]').click();
+      const reqs = page.locator("[data-plus-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-plus-go]").click();
+    },
+  },
+  {
+    year: "2024",
+    path: "/years/2024/sites/chatgpt/4o.html",
+    key: "itt24-gpt4o",
+    incomplete: async (page) => {
+      await page.locator("[data-4o-go]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-4o-pick="4o"]').click();
+      const reqs = page.locator("[data-4o-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-4o-go]").click();
     },
   },
 ];
@@ -398,6 +411,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   test("1994–2009 homes lead with one-thing then guided, residual later", async ({ page }) => {
     const years = [];
     for (let y = 1994; y <= 2009; y++) {
+      if (y === 2005 || y === 2006 || y === 2007) continue;
       years.push(String(y));
     }
     for (const y of years) {

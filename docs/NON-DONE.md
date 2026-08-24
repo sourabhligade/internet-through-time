@@ -1,5 +1,9 @@
 # Non-done map — Internet Through Time
 
+> **ARCHIVAL · dated notebook · do not implement from this file.**  
+> **Ship law 2026-08-23:** hub **1994–2022** (29 years). **2014 and 2022 are live lean doors.** **2023+ not on disk.**  
+> Prefer [`DISK-TRUTH.md`](DISK-TRUTH.md) header + live tree + `scripts/itt_gate.py` `SHIP_YEARS`. Every paragraph below that says 2014 / 2021 / 2022 is wiped is **false**.
+
 **Date:** 2026-08-03  
 **Updated:** 2026-08-14 — leftover execute after the check is [`TO-100-LEFTOVER-TODO-EXECUTE-2026-08-14.md`](TO-100-LEFTOVER-TODO-EXECUTE-2026-08-14.md). Parent waves: [`TO-100-PERCENT-ALL-YEARS-PHASES-STEPS-ROI-2026-08-14.md`](TO-100-PERCENT-ALL-YEARS-PHASES-STEPS-ROI-2026-08-14.md) (W0–W7). **Next complex live UX (one new machine per year, not a second star):** [`COMPLEX-LIVE-UX-PER-YEAR-RESEARCH-2026-08-14.md`](COMPLEX-LIVE-UX-PER-YEAR-RESEARCH-2026-08-14.md). Do not treat older plans below as the active queue.  
 **Updated:** 2026-08-07 — one-thing-per-year **[x]** · residual implement bible.
@@ -193,9 +197,9 @@ Do **not** treat as backlog unless product scope changes:
 
 ## 10. One-line status
 
-**Done:** **25-year** museum playable (**1994–2013 + 2015–2019**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · lean doors on 2007 / 2009 / 2011 / 2013.
+**Done:** **26-year** museum playable (**1994–2013 + 2015–2020**) · P0 rooms · tours/trails · isolated storage · flow gates · N1–N7 · lean doors on 2007 / 2009 / 2011 / 2013 / 2020.
 
-**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2014 · 2020–2023 wiped** · **2024+ not on disk**.
+**Not done:** Architecture (**N20–N23**) · L4 pixels (**N14–N19**) · **2014 · 2021–2023 wiped** · **2024+ not on disk**.
 
 ---
 

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Internet Through Time</title>
   <meta property="og:title" content="The Internet Through Time">
-  <meta property="og:description" content="Museum of the live Web. 2014 wiped for from-scratch rebuild. 2007/2009/2011/2013 are lean doors. Period browsers, real product flows, localStorage-only theater.">
+  <meta property="og:description" content="Museum of the live Web, 1994–2024 (28 years on disk; 2005–2007 wiped). 2005–2007 are wiped for rebuild. The museum ends in 2024. Period browsers, real product flows, localStorage-only theater.">
   <meta property="og:type" content="website">
-  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2019. Open a year: desktop, browser chrome, sites, and flows reconstructed from archives — not a modern redesign.">
+  <meta name="description" content="Year-by-year museum of the World Wide Web from 1994 to 2022. Open a year: desktop, browser chrome, sites, and flows reconstructed from archives — not a modern redesign.">
   <link rel="stylesheet" href="css/hub.css">
   <link rel="stylesheet" href="css/period-announce.css">
   <link rel="icon" href="favicon.gif" type="image/gif">
@@ -27,37 +27,43 @@
           <em>Historical reconstruction from archives — not a modern redesign, and not a wallpaper pack.</em>
         </p>
         <p class="hub-stats" aria-label="Museum coverage">
-          <b>26 years open</b> · 2014 · 2021–2023 wiped
+          <b>28 years open</b> · 2005–2007 wiped for rebuild · museum ends 2024
           · <a href="#passport" class="hub-passport-link">Passport stamps</a>
         </p>
         <p class="hub-stats hub-stat-muted" aria-label="Scale arc">
-          Scale arc (order of magnitude): ~10k sites in late 1994 → ~17M (2000) → ~65M (2005) → ~122M (2007) → ~172M (2008) → ~238M (2009) → ~207M June / 255M Dec (2010) → 672,985,183 June 2013 (−3%) / ~861M Dec → 968,882,453 June 2014 (+44%) / 1B hostnames Sep
+          Scale arc (order of magnitude): Gray <b>10,022</b> sites Dec 1994 → ~17M (2000) → ~65M (2005) → ~122M (2007) → ~172M (2008) → ~238M (2009) → ~207M June / 255M Dec (2010) → 672,985,183 June 2013 (−3%) / ~861M Dec → 968,882,453 June 2014 (+44%) / 1B hostnames Sep
           · Internet Live Stats / period sources, cited inside each year
         </p>
 
         <div class="start-path" role="navigation" aria-label="Start paths">
-          <button type="button" class="start-btn start-primary" id="begin-first-night" data-itt-night-start>Start first night →</button>
-          <a class="start-btn start-primary" href="atlas/">See the whole museum</a>
-          <a class="start-btn" href="years/1994/">Begin with 1994</a>
-          <a class="start-btn" href="years/1998/">1998 · Google!</a>
-          <a class="start-btn" href="years/2005/">2005 · YouTube · Maps</a>
-          <a class="start-btn" href="years/2007/">2007 · iPhone Safari</a>
-          <a class="start-btn" href="years/2008/">2008 · App Store · Chrome</a>
-          <a class="start-btn" href="years/2009/">2009 · Like · FarmVille · Bing</a>
-          <a class="start-btn" href="years/2010/">2010 · iPad · Instagram · Open Graph</a>
-          <a class="start-btn" href="years/2011/">2011 · Google+ · Spotify US · Siri</a>
-          <a class="start-btn" href="years/2012/">2012 · Instagram Android · IPO · SOPA</a>
-          <a class="start-btn" href="years/2013/">2013 · Vine 6s · iOS 7 · Stories</a>
-          <a class="start-btn" href="years/2016/">2016 · Stories · sidewalks · five faces</a>
-          <a class="start-btn" href="years/2017/">2017 · Face ID · free storm · 280</a>
-          <a class="start-btn" href="years/2018/">2018 · GDPR · TikTok · hearing</a>
-          <a class="start-btn" href="years/2019/">2019 · Disney+ · Arcade · Stadia</a>
-          <a class="start-btn" href="years/2020/">2020 · Zoom mute · Reels · GPT-3 waitlist</a>
-          <a class="start-btn" href="games/index.html">Period web games →</a>
-          <a class="start-btn" href="#directory">Browse the directory ↓</a>
+          <button type="button" class="start-btn start-primary" id="begin-first-night" data-itt-night-start>Start</button>
           <span id="resume-wrap" class="resume-wrap hidden">
-            <a id="resume-link" class="start-btn start-resume" href="#">Continue where you left off</a>
+            <a id="resume-link" class="start-btn start-resume" href="#">Resume</a>
           </span>
+          <details class="start-jumps">
+            <summary>or jump to a year</summary>
+            <div class="start-jumps-row">
+              <a class="start-btn" href="atlas/">See the whole museum</a>
+              <a class="start-btn" href="years/1994/">Begin with 1994</a>
+              <a class="start-btn" href="years/1998/">1998 · Google!</a>
+              <a class="start-btn" href="years/2004/">2004 · thefacebook · Gmail</a>
+              <a class="start-btn" href="years/2008/">2008 · App Store · Chrome</a>
+              <a class="start-btn" href="years/2009/">2009 · Like · FarmVille · Bing</a>
+              <a class="start-btn" href="years/2010/">2010 · iPad · Instagram · Open Graph</a>
+              <a class="start-btn" href="years/2011/">2011 · Google+ · Spotify US · Siri</a>
+              <a class="start-btn" href="years/2012/">2012 · Instagram Android · IPO · SOPA</a>
+              <a class="start-btn" href="years/2013/">2013 · Vine 6s · iOS 7 · Stories</a>
+              <a class="start-btn" href="years/2016/">2016 · Stories · sidewalks · five faces</a>
+              <a class="start-btn" href="years/2017/">2017 · Face ID · free storm · 280</a>
+              <a class="start-btn" href="years/2018/">2018 · GDPR · TikTok · hearing</a>
+              <a class="start-btn" href="years/2019/">2019 · Disney+ · Arcade · Stadia</a>
+              <a class="start-btn" href="years/2020/">2020 · Zoom mute · Reels · GPT-3 waitlist</a>
+              <a class="start-btn" href="years/2021/">2021 · ATT Ask · Signal leftover · Copilot waitlist</a>
+              <a class="start-btn" href="years/2022/">2022 · ChatGPT Send · Twitter leftover · Wordle leftover</a>
+              <a class="start-btn" href="games/index.html">Period web games →</a>
+              <a class="start-btn" href="#directory">Browse the directory ↓</a>
+            </div>
+          </details>
         </div>
         <p class="start-hint">
           First visit? <a href="atlas/">See the whole museum</a> is the floor plan (every gold, trail, and follow-a-site).
@@ -78,7 +84,7 @@
       <span class="ann-ticker-label">NEWS</span>
       <div class="ann-ticker-inner">
         <div class="ann-ticker-track">
-          ★ 26 years open · 2014 · 2021–2023 wiped ★
+          ★ 28 years open · 2005–2007 wiped for rebuild · museum ends 2024 ★
           NEW: Period web games wing — Flash portals · Club Penguin · museum arcade ★
           2007: iPhone Safari · open Gmail · Street View · Facebook Platform ★
           2008: App Store · iPhone 3G · Chrome · Android G1 · Hulu ★
@@ -147,6 +153,9 @@
       <a class="era-jump-chip" href="#era-1994-1999">1994–1999</a>
       <a class="era-jump-chip" href="#era-2000-2005">2000–2005</a>
       <a class="era-jump-chip" href="#era-2006-2009">2006–2009</a>
+      <a class="era-jump-chip" href="#era-2010-2013">2010–2014</a>
+      <a class="era-jump-chip" href="#era-2015-2020">2015–2020</a>
+      <a class="era-jump-chip" href="#era-2021-2022">2021–2022</a>
       <a class="era-jump-chip" href="atlas/">Atlas →</a>
       <a class="era-jump-chip" href="games/index.html">Games wing →</a>
     </nav>
@@ -163,7 +172,7 @@
             <span class="era-chip">Netscape 1.0 · 14.4k</span>
           </div>
           <p class="label">The public Web’s first mass year — Mosaic gray, Yahoo at Stanford, CERN, NCSA, IUMA helper apps, personal university pages.</p>
-          <p class="scale">~10k sites by Dec · Matthew Gray / MIT class</p>
+          <p class="scale">10,022 sites by Dec · Matthew Gray / MIT Wanderer</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
@@ -306,45 +315,45 @@
         </div>
       </a>
 
-      <a class="year-card available y2005" href="years/2005/" data-year="2005">
+      <div class="year-card locked y2005" data-year="2005">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2005</p>
-            <span class="era-chip">YouTube · Ajax</span>
+            <span class="era-chip">wiped</span>
           </div>
-          <p class="label">Web 2.0 becomes business — YouTube (still independent), Google Maps + Ajax, Reddit, Digg rise, podcasting in iTunes.</p>
+          <p class="label">Off disk for a from-scratch rebuild. YouTube / Maps / Reddit will come back as a new lean door.</p>
           <p class="scale">~64.8M sites · ~1.03B users (Live Stats)</p>
-          <p class="meta">Enter immersion</p>
+          <p class="meta">Wiped · rebuild later</p>
         </div>
-      </a>
+      </div>
 
       <span id="era-2006-2009" class="era-anchor" aria-hidden="true"></span>
-      <a class="year-card available y2006" href="years/2006/" data-year="2006">
+      <div class="year-card locked y2006" data-year="2006">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2006</p>
-            <span class="era-chip">Twitter · Feed · open FB</span>
+            <span class="era-chip">wiped</span>
           </div>
-          <p class="label">Social breakthrough — Twitter, Facebook News Feed + open registration, Digg peak, Docs, AWS; Google buys YouTube late year. Still pre-iPhone.</p>
+          <p class="label">Off disk for a from-scratch rebuild. Twitter / News Feed / YouTube sale will come back as a new lean door.</p>
           <p class="scale">~85.5M sites · ~1.16B users (Live Stats, June)</p>
-          <p class="meta">Enter immersion</p>
+          <p class="meta">Wiped · rebuild later</p>
         </div>
-      </a>
+      </div>
 
-      <a class="year-card available y2007" href="years/2007/" data-year="2007">
+      <div class="year-card locked y2007" data-year="2007">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
           <div class="year-row">
             <p class="year">2007</p>
-            <span class="era-chip">iPhone Safari · Gmail</span>
+            <span class="era-chip">wiped</span>
           </div>
-          <p class="label">Phone becomes a real browser — iPhone Safari (no App Store), open Gmail, Street View, Facebook Platform. Still XP + IE 7.</p>
+          <p class="label">Off disk for a from-scratch rebuild. iPhone Safari / open Gmail / Street View will come back as a new lean door.</p>
           <p class="scale">~121.9M sites · ~1.37B users (Live Stats, June)</p>
-          <p class="meta">Enter immersion</p>
+          <p class="meta">Wiped · rebuild later</p>
         </div>
-      </a>
+      </div>
 
     
       <a class="year-card available y2008" href="years/2008/" data-year="2008">
@@ -371,11 +380,14 @@
           <p class="meta">Enter immersion</p>
         </div>
       </a>
+      <span id="era-2010-2013" class="era-anchor" aria-hidden="true"></span>
       <a class="year-card available y2010" href="years/2010/" data-year="2010">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Tablet · filter · Like</p>
-          <p class="year">2010</p>
+          <div class="year-row">
+            <p class="year">2010</p>
+            <span class="era-chip">Tablet · filter · Like</span>
+          </div>
           <p class="label">iPad · iPhone 4 · Instagram iOS · Open Graph · FarmVille peak</p>
           <p class="scale">206,956,723 June · 255M Dec · Win7 · IE 8</p>
           <p class="meta">Enter immersion</p>
@@ -396,8 +408,10 @@
       <a class="year-card available y2012" href="years/2012/" data-year="2012">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Square photo · IPO · blackout</p>
-          <p class="year">2012</p>
+          <div class="year-row">
+            <p class="year">2012</p>
+            <span class="era-chip">Square photo · IPO · blackout</span>
+          </div>
           <p class="label">Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · Maps flop</p>
           <p class="scale">697,089,489 June · 634M Dec · Win7 · IE 9</p>
           <p class="meta">Enter immersion</p>
@@ -415,20 +429,26 @@
           <p class="meta">Enter immersion</p>
         </div>
       </a>
-      <div class="year-card locked y2014" data-year="2014">
+      <a class="year-card available y2014" href="years/2014/" data-year="2014">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Wiped · rebuild from scratch</p>
-          <p class="year">2014</p>
-          <p class="label">Lean door was mock (deal literacy + plaques). Not playable. Rebuild later.</p>
-          <p class="meta">Coming later</p>
+          <div class="year-row">
+            <p class="year">2014</p>
+            <span class="era-chip">WhatsApp · Heartbleed · Ice</span>
+          </div>
+          <p class="label">Messaging becomes the mass internet. WhatsApp is the $19 billion install. TLS bleeds. Ice in July. Still Win7 + IE 9.</p>
+          <p class="scale">968,882,453 June (+44%) · 1B hostnames Sep · Win7 · IE 9</p>
+          <p class="meta">Enter immersion</p>
         </div>
-      </div>
+      </a>
+      <span id="era-2015-2020" class="era-anchor" aria-hidden="true"></span>
       <a class="year-card available y2015" href="years/2015/" data-year="2015">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Go live · free locker · free Windows</p>
-          <p class="year">2015</p>
+          <div class="year-row">
+            <p class="year">2015</p>
+            <span class="era-chip">Go live · free locker</span>
+          </div>
           <p class="label">Periscope · Google Photos · Win10 · Apple Music</p>
           <p class="scale">863,105,652 June (−11%) · Win7 residual · Chrome habit</p>
           <p class="meta">Enter immersion</p>
@@ -437,8 +457,10 @@
       <a class="year-card available y2016" href="years/2016/" data-year="2016">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Stories · sidewalks · five faces</p>
-          <p class="year">2016</p>
+          <div class="year-row">
+            <p class="year">2016</p>
+            <span class="era-chip">Stories · sidewalks</span>
+          </div>
           <p class="label">Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E</p>
           <p class="scale">1,045,534,808 June (+21%) · Win10 rising · Chrome habit</p>
           <p class="meta">Enter immersion</p>
@@ -447,8 +469,10 @@
       <a class="year-card available y2017" href="years/2017/" data-year="2017">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Face ID · free storm · 280</p>
-          <p class="year">2017</p>
+          <div class="year-row">
+            <p class="year">2017</p>
+            <span class="era-chip">Face ID · free storm</span>
+          </div>
           <p class="label">iPhone X / Face ID · Fortnite leftover · Twitter 280 · Teams GA</p>
           <p class="scale">1,766,926,408 June (+69%) · Win10 mass · Chrome habit</p>
           <p class="meta">Enter immersion</p>
@@ -457,8 +481,10 @@
       <a class="year-card available y2018" href="years/2018/" data-year="2018">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Banner · hearing · For You</p>
-          <p class="year">2018</p>
+          <div class="year-row">
+            <p class="year">2018</p>
+            <span class="era-chip">Banner · hearing · For You</span>
+          </div>
           <p class="label">GDPR Manage · TikTok leftover · hearing · IGTV</p>
           <p class="scale">1,630,322,579 June (−8%) · Win10 mass · Chrome habit</p>
           <p class="meta">Enter immersion</p>
@@ -467,8 +493,10 @@
       <a class="year-card available y2019" href="years/2019/" data-year="2019">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Who’s watching · Continue</p>
-          <p class="year">2019</p>
+          <div class="year-row">
+            <p class="year">2019</p>
+            <span class="era-chip">Who’s watching · Continue</span>
+          </div>
           <p class="label">Disney+ Continue · TikTok leftover · Arcade · Stadia</p>
           <p class="scale">Table ends 2018 · ITU 4.1B / 53.6% · Win10 mass · Chrome habit</p>
           <p class="meta">Enter immersion</p>
@@ -477,40 +505,66 @@
       <a class="year-card available y2020" href="years/2020/" data-year="2020">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Mute · participants · 15 seconds</p>
-          <p class="year">2020</p>
+          <div class="year-row">
+            <p class="year">2020</p>
+            <span class="era-chip">Mute · participants · 15s</span>
+          </div>
           <p class="label">Zoom mute → leave · Reels leftover · GPT-3 waitlist</p>
           <p class="scale">Table ends 2018 · 300M participants not users · Edge 79</p>
           <p class="meta">Enter immersion</p>
         </div>
       </a>
-      <div class="year-card locked y2021" data-year="2021">
+      <span id="era-2021-2022" class="era-anchor" aria-hidden="true"></span>
+      <a class="year-card available y2021" href="years/2021/" data-year="2021">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Wiped</p>
-          <p class="year">2021</p>
-          <p class="label">Not playable. Rebuild later from a check map.</p>
-          <p class="meta">Coming later</p>
+          <div class="year-row">
+            <p class="year">2021</p>
+            <span class="era-chip">Allow · Ask App Not to Track</span>
+          </div>
+          <p class="label">ATT Ask · Signal leftover · Copilot waitlist · Meta rename</p>
+          <p class="scale">Table ends 2018 · ITU 4.9B / 63% · Win10 mass · Chrome habit</p>
+          <p class="meta">Enter immersion</p>
         </div>
-      </div>
-      <div class="year-card locked y2022" data-year="2022">
+      </a>
+      <a class="year-card available y2022" href="years/2022/" data-year="2022">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Wiped</p>
-          <p class="year">2022</p>
-          <p class="label">Not playable. Rebuild later from a check map.</p>
-          <p class="meta">Coming later</p>
+          <div class="year-row">
+            <p class="year">2022</p>
+            <span class="era-chip">Send · research preview</span>
+          </div>
+          <p class="label">ChatGPT Send · Twitter leftover · Wordle leftover · Stable Diffusion</p>
+          <p class="scale">Table ends 2018 · ITU 5.3B / 66% · Win10 mass · Chrome habit</p>
+          <p class="meta">Enter immersion</p>
         </div>
-      </div>
-      <div class="year-card locked y2023" data-year="2023">
+      </a>
+
+      <a class="year-card available y2023" href="years/2023/" data-year="2023">
         <div class="motif" aria-hidden="true"></div>
         <div class="year-card-inner">
-          <p class="era">Wiped</p>
-          <p class="year">2023</p>
-          <p class="label">Not playable. Rebuild later from a check map.</p>
-          <p class="meta">Coming later</p>
+          <div class="year-row">
+            <p class="year">2023</p>
+            <span class="era-chip">$20 · Plus · GPT-4</span>
+          </div>
+          <p class="label">ChatGPT Plus · GPT-4 leftover · Bing Chat · Bard leftover</p>
+          <p class="scale">Table ends 2018 · Netcraft Jan 1,132,268,801 · Gemini is 2024</p>
+          <p class="meta">Enter immersion</p>
         </div>
-      </div>
+      </a>
+
+      <a class="year-card available y2024" href="years/2024/" data-year="2024">
+        <div class="motif" aria-hidden="true"></div>
+        <div class="year-card-inner">
+          <div class="year-row">
+            <p class="year">2024</p>
+            <span class="era-chip">4o · omni · Talk</span>
+          </div>
+          <p class="label">GPT-4o Talk · Gemini leftover · Claude 3.5 leftover</p>
+          <p class="scale">Table ends 2018 · Netcraft Jan 1,079,154,539 · ITU 5.5B / 68%</p>
+          <p class="meta">Enter immersion</p>
+        </div>
+      </a>
 
 </div>
 
@@ -666,6 +720,40 @@
         </tbody>
       </table>
       </div>
+      <h3 class="compare-sub">2012–2013 · IPO, six seconds, flat glass</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late compare-2012-2013">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">2012</th>
+            <th scope="col">2013</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">OS / browser</th>
+            <td>Win7 · IE 9 · Chrome overtakes IE</td>
+            <td>Win7 · IE 9 · iOS 7 is the phone story</td>
+          </tr>
+          <tr>
+            <th scope="row">Signature products</th>
+            <td>Instagram Android · Facebook IPO $38 · SOPA blackout</td>
+            <td>Vine 6s · Snapchat Stories · iOS 7 / Touch ID</td>
+          </tr>
+          <tr>
+            <th scope="row">Hard bans</th>
+            <td>No Vine mass · no iOS 7 · no Stories</td>
+            <td>No Instagram Stories (2016) · no TikTok as Vine</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale (dual-cite)</th>
+            <td>697,089,489 June · 634M Dec</td>
+            <td>672,985,183 June (−3%) · ~861M Dec</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
       <h3 class="compare-sub">2015 · Go live · free locker</h3>
       <div class="compare-scroll">
       <table class="compare-table compare-late compare-2015">
@@ -695,6 +783,39 @@
           <tr>
             <th scope="row">Connection story</th>
             <td>Go LIVE · photo locker leaves the phone · Get Windows 10</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <h3 class="compare-sub">2016–2018 · Stories, Face ID, consent</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late compare-2016-2018">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">2016</th>
+            <th scope="col">2017</th>
+            <th scope="col">2018</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Signature products</th>
+            <td>Instagram Stories · Reactions · WhatsApp E2E</td>
+            <td>Face ID / iPhone X · Twitter 280 · Teams GA</td>
+            <td>GDPR Manage · TikTok FYP · IGTV</td>
+          </tr>
+          <tr>
+            <th scope="row">Hard bans</th>
+            <td>No Face ID · no GDPR as default</td>
+            <td>No GDPR 25 May · no TikTok as US mass</td>
+            <td>No Zoom · no Reels · Accept All never writes</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale (Live Stats June)</th>
+            <td>1,045,534,808 (+21%)</td>
+            <td>1,766,926,408 (+69%)</td>
+            <td>1,630,322,579 (−8%) · table last cell</td>
           </tr>
         </tbody>
       </table>
@@ -732,6 +853,122 @@
         </tbody>
       </table>
       </div>
+      <h3 class="compare-sub">2020 · Mute, then leave</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late compare-2020">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">2020</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">OS / browser</th>
+            <td>Win10 mass · Chrome habit · Edge 79 leftover</td>
+          </tr>
+          <tr>
+            <th scope="row">Signature products</th>
+            <td>Zoom mute → leave · Reels 15s leftover · GPT-3 waitlist · Flash EOL</td>
+          </tr>
+          <tr>
+            <th scope="row">Hard bans</th>
+            <td>ChatGPT · GameStop · 300 million Zoom <b>users</b> · June 2020 websites digit</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale (honest)</th>
+            <td>Live Stats table ends 2018 · Zoom April = 300M daily <b>participants</b>, not users</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <h3 class="compare-sub">2021 · Ask, then leave the sheet</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late compare-2021">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">2021</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">OS / browser</th>
+            <td>Win10 mass · Chrome habit · Win11 leftover after 5 Oct</td>
+          </tr>
+          <tr>
+            <th scope="row">Signature products</th>
+            <td>ATT Ask App Not to Track · Signal leftover · Copilot waitlist · Meta rename</td>
+          </tr>
+          <tr>
+            <th scope="row">Hard bans</th>
+            <td>ChatGPT · Wordle millions / NYT · Meta consumer app · Allow as the save</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale (honest)</th>
+            <td>Live Stats table ends 2018 · Netcraft Jan 1,197,982,359 · ITU 4.9B / 63%</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <h3 class="compare-sub">2014 · WhatsApp Install</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late compare-2014">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">2014</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">OS / browser</th>
+            <td>Win7 · IE 9 desktop residual · the year lives in WhatsApp / Heartbleed rooms</td>
+          </tr>
+          <tr>
+            <th scope="row">Signature products</th>
+            <td>WhatsApp Install · Heartbleed rotate · Ice Bucket leftover</td>
+          </tr>
+          <tr>
+            <th scope="row">Hard bans</th>
+            <td>Messenger as the save · invented WhatsApp pixels · restore the old forest</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale (honest)</th>
+            <td>968,882,453 June (+44%) · 1B hostnames Sep</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <h3 class="compare-sub">2022 · Send, not Plus</h3>
+      <div class="compare-scroll">
+      <table class="compare-table compare-late compare-2022">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">2022</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">OS / browser</th>
+            <td>Win10 mass · Chrome habit · no official Chrome pixels</td>
+          </tr>
+          <tr>
+            <th scope="row">Signature products</th>
+            <td>ChatGPT Send · Twitter leftover · Wordle leftover · Stable Diffusion leftover</td>
+          </tr>
+          <tr>
+            <th scope="row">Hard bans</th>
+            <td>Plus · GPT-4 · Bing Chat · Threads · X (all 2023)</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale (honest)</th>
+            <td>Live Stats table ends 2018 · ITU ~5.3B / 66% · museum ends 2024</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
       <h3 class="compare-sub" id="follow-a-site">Follow a site through the years</h3>
       <p class="compare-intro">Same brand, different year. Only rooms that exist on disk. Continuity clones stay in that year’s chrome.</p>
       <div class="follow-site">
@@ -741,7 +978,6 @@
           <a href="years/1996/sites/yahoo/">1996</a>
           <a href="years/1998/sites/yahoo/">1998</a>
           <a href="years/2000/sites/yahoo/">2000</a>
-          <a href="years/2005/sites/yahoo/">2005</a>
           <a href="years/2010/sites/yahoo/">2010</a>
         </p>
         <p><b>Amazon</b> —
@@ -753,19 +989,28 @@
         <p><b>Google</b> —
           <a href="years/1998/sites/google/">1998 Lucky</a>
           <a href="years/2001/sites/google/">2001</a>
-          <a href="years/2005/sites/maps/">2005 Maps</a>
           <a href="years/2008/sites/chrome/">2008 Chrome</a>
           <a href="years/2015/sites/googlephotos/">2015 Photos</a>
         </p>
         <p><b>Facebook</b> —
           <a href="years/2004/sites/facebook/networks.html">2004 thefacebook</a>
-          <a href="years/2006/sites/facebook/">2006 Feed</a>
           <a href="years/2010/sites/facebook/">2010 Open Graph</a>
         </p>
         <p><b>YouTube</b> —
-          <a href="years/2005/sites/youtube/">2005</a>
-          <a href="years/2006/sites/youtube/">2006</a>
           <a href="years/2010/sites/youtube/">2010</a>
+        </p>
+        <p><b>Twitter</b> —
+          <a href="years/2009/sites/twitter/">2009 leftover</a>
+        </p>
+        <p><b>Instagram</b> —
+          <a href="years/2010/sites/instagram/">2010 iOS</a>
+          <a href="years/2012/sites/instagram/">2012 Android</a>
+          <a href="years/2016/sites/instagram/stories.html">2016 Stories</a>
+        </p>
+        <p><b>iPhone / Safari</b> —
+          <a href="years/2008/sites/appstore/">2008 App Store</a>
+          <a href="years/2009/sites/iphone/">2009 3GS</a>
+          <a href="years/2017/sites/iphone/x.html">2017 Face ID</a>
         </p>
       </div>
       <p class="compare-hint">
@@ -777,7 +1022,7 @@
     <section class="how" id="how">
       <h2>How to use the museum</h2>
       <ol class="how-list">
-        <li><b>Pick a year</b> — start at 1994 and walk forward, or jump to a hinge (1998 Google · 2004 Gmail · 2005 YouTube · 2008 App Store · 2010 Instagram).</li>
+        <li><b>Pick a year</b> — start at 1994 and walk forward, or jump to a hinge (1998 Google · 2004 Gmail · 2008 App Store · 2010 Instagram). 2005–2007 are wiped for rebuild.</li>
         <li><b>Connect theater</b> — dial-up or always-on boot may play; use <b>Skip</b> if offered. It sets the era’s “feel,” not a real modem.</li>
         <li><b>Starting Point + tour</b> — each year has a home page and short guided stops; then free-roam period sites in the content frame.</li>
         <li><b>Do real things</b> — add to cart, compose mail, digg a story, build a queue: state is local only, year-prefixed so years don’t collide.</li>
@@ -824,7 +1069,7 @@
       <a href="#compare">Compare</a> ·
       <a href="#how">How to use</a> ·
       <a href="#about">About / legal</a>
-      · 2014 · 2021–2023 wiped · 2024+ not on disk
+      · museum ends 2024
     </footer>
   </div>
   <script src="js/museum-progress.js"></script>
@@ -834,7 +1079,7 @@
       var y = localStorage.getItem("itt-last-year");
       var wrap = document.getElementById("resume-wrap");
       var link = document.getElementById("resume-link");
-      if (wrap && link && /^(199[4-9]|200[0-6]|2008|2010|2012|201[5-9]|2020)$/.test(y)) {
+      if (wrap && link && /^(199[4-9]|200[0-9]|201[0-9]|202[0-2])$/.test(y)) {
         link.href = "years/" + y + "/";
         link.textContent = "Continue " + y + " »";
         wrap.classList.remove("hidden");

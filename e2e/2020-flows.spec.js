@@ -65,8 +65,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/reels/index.html", "itt20-reels");
     await page.locator("[data-reels-post]").click();
     expect(await getKey(page, "itt20-reels")).toBeFalsy();
-    await page.locator("[data-reels-req]").nth(0).check();
-    await page.locator("[data-reels-req]").nth(1).check();
     await page.locator('[data-reels-len="24"]').click();
     await page.locator("[data-reels-post]").click();
     expect(await getKey(page, "itt20-reels")).toBeFalsy();
@@ -86,8 +84,6 @@ test.describe("2020 leftover flows", () => {
     expect(await getKey(page, "itt20-gpt3")).toBeFalsy();
     await page.locator("[data-gpt-wait]").click();
     expect(await getKey(page, "itt20-gpt3")).toBeFalsy();
-    await page.locator("[data-gpt-req]").nth(0).check();
-    await page.locator("[data-gpt-req]").nth(1).check();
     await page.fill("[data-gpt-email]", "waitlist@museum");
     await page.locator("[data-gpt-wait]").click();
     await expect.poll(async () => getKey(page, "itt20-gpt3")).toBeTruthy();
@@ -101,8 +97,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/flash/index.html", "itt20-flash");
     await page.locator("[data-flash-play]").click();
     expect(await getKey(page, "itt20-flash")).toBeFalsy();
-    await page.locator("[data-flash-req]").nth(0).check();
-    await page.locator("[data-flash-req]").nth(1).check();
     await page.locator("[data-flash-uninstall]").click();
     expect(await getKey(page, "itt20-flash")).toBeFalsy();
     await page.locator('[data-flash-site="youtube"]').click();
@@ -121,8 +115,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/tiktok/index.html", "itt20-tiktok-eo");
     await page.locator("[data-eo-ban]").click();
     expect(await getKey(page, "itt20-tiktok-eo")).toBeFalsy();
-    await page.locator("[data-eo-req]").nth(0).check();
-    await page.locator("[data-eo-req]").nth(1).check();
     await page.locator("[data-eo-open]").click();
     expect(await getKey(page, "itt20-tiktok-eo")).toBeFalsy();
     await page.locator('[data-eo-pick="banned"]').click();
@@ -144,8 +136,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/markets/wti.html", "itt20-wti");
     await page.locator("[data-wti-buy]").click();
     expect(await getKey(page, "itt20-wti")).toBeFalsy();
-    await page.locator("[data-wti-req]").nth(0).check();
-    await page.locator("[data-wti-req]").nth(1).check();
     await page.locator("[data-wti-ack]").click();
     expect(await getKey(page, "itt20-wti")).toBeFalsy();
     await page.locator('[data-wti-pick="dec"]').click();
@@ -168,8 +158,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/edge/index.html", "itt20-edge");
     await page.locator("[data-edge-set]").click();
     expect(await getKey(page, "itt20-edge")).toBeFalsy();
-    await page.locator("[data-edge-req]").nth(0).check();
-    await page.locator("[data-edge-req]").nth(1).check();
     await page.locator("[data-edge-set]").click();
     expect(await getKey(page, "itt20-edge")).toBeFalsy();
     await page.locator('[data-edge-pick="legacy"]').click();
@@ -188,8 +176,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/ccpa/index.html", "itt20-ccpa");
     await page.locator("[data-ccpa-accept]").click();
     expect(await getKey(page, "itt20-ccpa")).toBeFalsy();
-    await page.locator("[data-ccpa-req]").nth(0).check();
-    await page.locator("[data-ccpa-req]").nth(1).check();
     await page.locator("[data-ccpa-dns]").click();
     expect(await getKey(page, "itt20-ccpa")).toBeFalsy();
     await page.locator('[data-ccpa-pick="sell"]').click();
@@ -208,8 +194,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/chrome/index.html", "itt20-chrome");
     await page.locator("[data-ch-switch]").click();
     expect(await getKey(page, "itt20-chrome")).toBeFalsy();
-    await page.locator("[data-ch-req]").nth(0).check();
-    await page.locator("[data-ch-req]").nth(1).check();
     await page.locator("[data-ch-ack]").click();
     expect(await getKey(page, "itt20-chrome")).toBeFalsy();
     await page.locator('[data-ch-pick="edge"]').click();
@@ -231,8 +215,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/windows10/index.html", "itt20-win10");
     await page.locator("[data-w10-get]").click();
     expect(await getKey(page, "itt20-win10")).toBeFalsy();
-    await page.locator("[data-w10-req]").nth(0).check();
-    await page.locator("[data-w10-req]").nth(1).check();
     await page.locator("[data-w10-ack]").click();
     expect(await getKey(page, "itt20-win10")).toBeFalsy();
     await page.locator('[data-w10-pick="get"]').click();
@@ -255,8 +237,6 @@ test.describe("2020 leftover flows", () => {
     await page.locator("[data-meet-zoom]").click();
     expect(await getKey(page, "itt20-meet")).toBeFalsy();
     expect(await getKey(page, "itt20-zoom")).toBeFalsy();
-    await page.locator("[data-meet-req]").nth(0).check();
-    await page.locator("[data-meet-req]").nth(1).check();
     await page.locator("[data-meet-join]").click();
     expect(await getKey(page, "itt20-meet")).toBeFalsy();
     await page.fill("[data-meet-code]", "abc-defg-hij");
@@ -309,7 +289,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/playable/extra-b.html", "itt20-extra-b");
     await page.locator("[data-extra-b-save]").click();
     expect(await getKey(page, "itt20-extra-b")).toBeFalsy();
-    await page.locator("[data-extra-b-req]").check();
     await page.fill("[data-extra-b-field]", "users");
     await page.locator("[data-extra-b-save]").click();
     expect(await getKey(page, "itt20-extra-b")).toBeFalsy();
@@ -338,8 +317,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/mixer/index.html", "itt20-mixer");
     await page.locator("[data-mx-save]").click();
     expect(await getKey(page, "itt20-mixer")).toBeFalsy();
-    await page.locator("[data-mx-req]").nth(0).check();
-    await page.locator("[data-mx-req]").nth(1).check();
     await page.locator('[data-mx-pick="twitch"]').click();
     await page.locator("[data-mx-save]").click();
     expect(await getKey(page, "itt20-mixer")).toBeFalsy();
@@ -353,8 +330,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/twitter/hack.html", "itt20-tw-hack");
     await page.locator("[data-tw-send]").click();
     expect(await getKey(page, "itt20-tw-hack")).toBeFalsy();
-    await page.locator("[data-tw-req]").nth(0).check();
-    await page.locator("[data-tw-req]").nth(1).check();
     await page.locator('[data-tw-flag="a"]').click();
     await page.locator("[data-tw-save]").click();
     expect(await getKey(page, "itt20-tw-hack")).toBeFalsy();
@@ -369,8 +344,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/hbomax/index.html", "itt20-hbomax");
     await page.locator("[data-hbo-trial]").click();
     expect(await getKey(page, "itt20-hbomax")).toBeFalsy();
-    await page.locator("[data-hbo-req]").nth(0).check();
-    await page.locator("[data-hbo-req]").nth(1).check();
     await page.locator('[data-hbo-pick="dplus"]').click();
     await page.locator("[data-hbo-watch]").click();
     expect(await getKey(page, "itt20-hbomax")).toBeFalsy();
@@ -384,8 +357,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/peacock/index.html", "itt20-peacock");
     await page.locator("[data-pk-hbo]").click();
     expect(await getKey(page, "itt20-peacock")).toBeFalsy();
-    await page.locator("[data-pk-req]").nth(0).check();
-    await page.locator("[data-pk-req]").nth(1).check();
     await page.locator('[data-pk-pick="hbo"]').click();
     await page.locator("[data-pk-watch]").click();
     expect(await getKey(page, "itt20-peacock")).toBeFalsy();
@@ -399,8 +370,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/epic/index.html", "itt20-epic");
     await page.locator("[data-epic-store]").click();
     expect(await getKey(page, "itt20-epic")).toBeFalsy();
-    await page.locator("[data-epic-req]").nth(0).check();
-    await page.locator("[data-epic-req]").nth(1).check();
     await page.locator('[data-epic-pick="store"]').click();
     await page.locator("[data-epic-save]").click();
     expect(await getKey(page, "itt20-epic")).toBeFalsy();
@@ -414,8 +383,6 @@ test.describe("2020 leftover flows", () => {
     await openClean(page, "/years/2020/sites/spacehey/index.html", "itt20-spacehey");
     await page.locator("[data-shy-join]").click();
     expect(await getKey(page, "itt20-spacehey")).toBeFalsy();
-    await page.locator("[data-shy-req]").nth(0).check();
-    await page.locator("[data-shy-req]").nth(1).check();
     await page.locator("[data-shy-add]").click();
     expect(await getKey(page, "itt20-spacehey")).toBeFalsy();
     await page.fill("[data-shy-name]", "leftover");
@@ -455,6 +422,24 @@ test.describe("2020 first 3× leftover", () => {
   });
   test("Facebook empty / no pick never writes · complete writes", async ({ page }) => {
     await completePop(page, "/years/2020/sites/facebook/index.html", "itt20-pop-facebook");
+  });
+});
+
+test.describe("2020 second leftover 3× — unique vs third", () => {
+  test("home pop-more is Meet · Mixer · HBO Max and not the third trio", async ({ page }) => {
+    await page.goto("/years/2020/pages/home.html");
+    await expect(page.locator("#ott-guided-2020 ol > li")).toHaveCount(6);
+    await expect(page.locator('[data-ott-one-thing="2020"]')).toHaveAttribute("href", /zoom\/meeting/);
+    const more = page.locator('[data-itt-pop-more="2020"] a[href*="sites/"]');
+    const third = page.locator('[data-itt-pop-3x3="2020"] a[href*="sites/"]');
+    await expect(more).toHaveCount(3);
+    await expect(third).toHaveCount(3);
+    const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    expect(moreH.join(" ")).toMatch(/meet\//);
+    expect(moreH.join(" ")).toMatch(/mixer\//);
+    expect(moreH.join(" ")).toMatch(/hbomax\//);
+    for (const h of moreH) expect(thirdH).not.toContain(h);
   });
 });
 

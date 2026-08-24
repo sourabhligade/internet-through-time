@@ -42,6 +42,9 @@ test.describe("2009 leftover densify", () => {
     await page.locator('[data-fv09-plot="a"]').click();
     await page.locator('[data-fv09-plot="b"]').click();
     await page.locator("[data-fv09-harvest]").click();
+    expect(await getKey(page, "itt09-farm")).toBeFalsy();
+    await page.waitForTimeout(3100);
+    await page.locator("[data-fv09-harvest]").click();
     await expect.poll(() => getKey(page, "itt09-farm")).toBeTruthy();
   });
   test("Bing trap/empty never writes then save", async ({ page }) => {

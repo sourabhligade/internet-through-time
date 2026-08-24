@@ -1,0 +1,27 @@
+@import url("period-2020.css");
+
+.year-2021.os-win10 {
+  --itt-desktop-bg: #0078d7;
+}
+
+.att21-sheet {
+  max-width: 360px;
+  margin: 24px auto;
+  padding: 18px 16px;
+  background: #f2f2f7;
+  color: #111;
+  border-radius: 14px;
+  font-family: -apple-system, Segoe UI, Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+.att21-sheet h1 { font-size: 17px; margin: 0 0 10px; }
+.att21-allow {
+  display: block; width: 100%; margin: 8px 0 0; padding: 10px;
+  background: #007aff; color: #fff; border: 0; border-radius: 10px; font-size: 15px;
+}
+.att21-ask {
+  display: block; width: 100%; margin: 8px 0 0; padding: 10px;
+  background: #e5e5ea; color: #007aff; border: 0; border-radius: 10px; font-size: 15px;
+}
+.att21-allow:focus, .att21-ask:focus { outline: 2px solid #111; }

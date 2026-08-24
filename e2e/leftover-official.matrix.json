@@ -1189,6 +1189,56 @@
       "minPick": 0,
       "field": false,
       "placeholder": ""
+    },
+    {
+      "year": "1995",
+      "href": "sites/netscape/index.html",
+      "key": "itt95-ns-dl",
+      "suffix": "ns-dl",
+      "needPick": "nav2",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1996",
+      "href": "sites/spacejam/index.html",
+      "key": "itt96-jam",
+      "suffix": "jam",
+      "needPick": "planet",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1997",
+      "href": "sites/drudge/index.html",
+      "key": "itt97-drudge",
+      "suffix": "drudge",
+      "needPick": "ie4",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1997",
+      "href": "sites/apple/think-different.html",
+      "key": "itt97-td",
+      "suffix": "td",
+      "needPick": "ad",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "1999",
+      "href": "sites/y2k/index.html",
+      "key": "itt99-y2k",
+      "suffix": "y2k",
+      "needPick": "clock",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
     }
   ]
 }

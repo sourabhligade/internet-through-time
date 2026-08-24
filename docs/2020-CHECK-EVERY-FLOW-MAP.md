@@ -3,7 +3,7 @@
 **Date:** 2026-08-21  
 **What this is:** a visitor walk. Open the URLs. Do the trap. Do the save. Confirm the key.  
 **Door:** `years/2020/` · prefix **`itt20`** · star **Zoom mute → leave**  
-**Not this file:** implementer bible [`2020-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-STEPS-FLOWS-E2E-MINUTE.md`](2020-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-STEPS-FLOWS-E2E-MINUTE.md) · thesis [`2020-READ-FIRST.md`](2020-READ-FIRST.md)
+**Not this file:** walkable 5k map [`2020-5K-WEB-FLOW-MAP.md`](2020-5K-WEB-FLOW-MAP.md) · implementer bible [`2020-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-STEPS-FLOWS-E2E-MINUTE.md`](2020-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-STEPS-FLOWS-E2E-MINUTE.md) · thesis [`2020-READ-FIRST.md`](2020-READ-FIRST.md)
 
 Serve first:
 
@@ -178,7 +178,8 @@ These three must **not** be the Zoom chip.
 
 ## 9. Third leftover 3× (unique writers)
 
-Home `data-itt-pop-3x3="2020"` (same three as `data-itt-pop-more`).
+Home `data-itt-pop-3x3="2020"` (ACNH · Astronomical · Quibi).  
+Home `data-itt-pop-more="2020"` is a **different** trio: Meet · Mixer · HBO Max.
 
 | Order | URL | Placeholder | Key |
 |------:|-----|-------------|-----|

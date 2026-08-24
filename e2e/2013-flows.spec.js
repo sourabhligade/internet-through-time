@@ -78,18 +78,17 @@ test.describe("2013 flows", () => {
     await expect.poll(() => getKey(page, "itt13-medium")).toBeTruthy();
   });
 
-  test("HealthCare.gov Apply / Retry never writes; 503 ack writes", async ({ page }) => {
+  test("HealthCare.gov fine/retry never writes; enroll writes 503", async ({ page }) => {
     await page.goto("/years/2013/sites/healthcare/index.html");
     await page.evaluate(() => localStorage.removeItem("itt13-healthcare"));
     await page.reload();
-    await page.locator("[data-hc13-apply]").click();
+    await page.locator("[data-hc13-fine]").click();
     expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
     await page.goto("/years/2013/sites/healthcare/status.html");
     await page.locator("[data-hc13-retry]").click();
     expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
-    await page.locator("[data-hc13-req]").nth(0).check();
-    await page.locator("[data-hc13-req]").nth(1).check();
-    await page.locator("[data-hc13-ack]").click();
+    await page.goto("/years/2013/sites/healthcare/index.html");
+    await page.locator("[data-hc13-apply]").click();
     await expect.poll(() => getKey(page, "itt13-healthcare")).toBeTruthy();
   });
 
@@ -121,5 +120,21 @@ test.describe("2013 flows", () => {
     await page.locator('[data-sn13-snap="two"]').click();
     await page.locator("[data-sn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-snap-story")).toBeTruthy();
+  });
+
+  test("second leftover 3× is Chrome · Snowden · Telegram and not the third trio", async ({ page }) => {
+    await page.goto("/years/2013/pages/home.html");
+    await expect(page.locator("#ott-guided-2013 ol > li")).toHaveCount(6);
+    await expect(page.locator('[data-ott-one-thing="2013"]')).toHaveAttribute("href", /vine\/record/);
+    const more = page.locator('[data-itt-pop-more="2013"] a[href*="sites/"]');
+    const third = page.locator('[data-itt-pop-3x3="2013"] a[href*="sites/"]');
+    await expect(more).toHaveCount(3);
+    await expect(third).toHaveCount(3);
+    const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    expect(moreH.join(" ")).toMatch(/chrome\//);
+    expect(moreH.join(" ")).toMatch(/snowden\//);
+    expect(moreH.join(" ")).toMatch(/telegram\//);
+    for (const h of moreH) expect(thirdH).not.toContain(h);
   });
 });

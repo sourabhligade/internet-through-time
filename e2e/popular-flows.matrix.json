@@ -814,7 +814,7 @@
     "id": "F2",
     "key": "itt13-google",
     "suffix": "google",
-    "path": "/years/2013/sites/google/index.html",
+    "path": "/years/2013/sites/chrome/index.html",
     "kind": "new",
     "field": "query",
     "next": "../../pages/about.html"
@@ -824,10 +824,10 @@
     "id": "F3",
     "key": "itt13-wiki",
     "suffix": "wiki",
-    "path": "/years/2013/pages/about.html",
+    "path": "/years/2013/sites/youtube/index.html",
     "kind": "reuse",
     "field": null,
-    "next": "../sites/vine/index.html"
+    "next": "../vine/index.html"
   },
   {
     "year": "2013",
@@ -844,7 +844,7 @@
     "id": "F5",
     "key": "itt13-snap",
     "suffix": "snap",
-    "path": "/years/2013/sites/snapchat/index.html",
+    "path": "/years/2013/sites/snapchat/story.html",
     "kind": "reuse",
     "field": null,
     "next": "../vine/index.html"
@@ -954,10 +954,10 @@
     "id": "F1",
     "key": "itt16-tweets",
     "suffix": "tweets",
-    "path": "/years/2016/sites/twitter/index.html",
+    "path": "/years/2016/sites/facebook/reactions.html",
     "kind": "new",
     "field": "tweet",
-    "next": "../instagram/index.html"
+    "next": "../instagram/stories.html"
   },
   {
     "year": "2016",
@@ -967,24 +967,24 @@
     "path": "/years/2016/sites/youtube/index.html",
     "kind": "new",
     "field": null,
-    "next": "../google/index.html"
+    "next": "../reddit/index.html"
   },
   {
     "year": "2016",
     "id": "F3",
     "key": "itt16-google",
     "suffix": "google",
-    "path": "/years/2016/sites/google/index.html",
+    "path": "/years/2016/sites/reddit/index.html",
     "kind": "new",
     "field": "query",
-    "next": "../instagram/index.html"
+    "next": "../instagram/stories.html"
   },
   {
     "year": "2016",
     "id": "F4",
     "key": "itt16-stories",
     "suffix": "stories",
-    "path": "/years/2016/sites/instagram/index.html",
+    "path": "/years/2016/sites/instagram/stories.html",
     "kind": "star",
     "field": null,
     "next": ""
@@ -997,7 +997,7 @@
     "path": "/years/2016/sites/pokemongo/index.html",
     "kind": "reuse",
     "field": null,
-    "next": "../instagram/index.html"
+    "next": "../instagram/stories.html"
   },
   {
     "year": "2017",
@@ -1117,14 +1117,14 @@
     "path": "/years/2019/sites/instagram/index.html",
     "kind": "new",
     "field": null,
-    "next": "../twitter/index.html"
+    "next": "../wikipedia/index.html"
   },
   {
     "year": "2019",
     "id": "F3",
     "key": "itt19-tweets",
     "suffix": "tweets",
-    "path": "/years/2019/sites/twitter/index.html",
+    "path": "/years/2019/sites/tiktok/index.html",
     "kind": "new",
     "field": "tweet",
     "next": "../disneyplus/home.html"
@@ -1134,10 +1134,10 @@
     "id": "F4",
     "key": "itt19-wiki",
     "suffix": "wiki",
-    "path": "/years/2019/pages/about.html",
+    "path": "/years/2019/sites/wikipedia/index.html",
     "kind": "reuse",
     "field": null,
-    "next": "../sites/disneyplus/home.html"
+    "next": "../disneyplus/home.html"
   },
   {
     "year": "2019",

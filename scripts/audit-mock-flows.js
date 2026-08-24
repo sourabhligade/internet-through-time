@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — ship years 1994–2019 (2014 and 2020–2023 wiped).
+ * Mock-flow classifier — ship years 1994–2022. Museum ends 2022.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,8 +27,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2019; y++) {
-  if (y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
+for (let y = 1994; y <= 2022; y++) {
   YEARS.push(String(y));
 }
 
@@ -42,6 +41,45 @@ const PRODUCT_HOOK = new RegExp(
     "data-itt-popular-",
     "data-itt-pack",
     "data-itt-product-action",
+    "data-lo-",
+    "data-drive-",
+    "data-ch21-",
+    "data-gpt22-",
+    "data-tw22-",
+    "data-wd22-",
+    "data-sd22-",
+    "data-md22-",
+    "data-br22-",
+    "data-dl22-",
+    "data-ch22-",
+    "data-prompt-",
+    "data-pop3-",
+    "data-wa14-",
+    "data-hb14-",
+    "data-ice14-",
+    "data-ip14-",
+    "data-sl14-",
+    "data-mat14-",
+    "data-tw14-",
+    "data-nft-",
+    "data-sq-",
+    "data-mw09-",
+    "data-yt09-",
+    "data-tw13-",
+    "data-med13-",
+    "data-gpt-",
+    "data-edge-",
+    "data-epic-",
+    "data-hbo-",
+    "data-wti-",
+    "data-meet-",
+    "data-mx-",
+    "data-pk-",
+    "data-extra-a-",
+    "data-extra-b-",
+    "data-shy-",
+    "data-eo-",
+    "data-tw-",
     "data-pack-",
     "data-req",
     "data-ott-",
@@ -54,6 +92,24 @@ const PRODUCT_HOOK = new RegExp(
     "data-ipo-",
     "data-fb1b-",
     "data-sopa-",
+    "data-sopa-seen",
+    "data-sopa-cheat",
+    "data-seti-",
+    "data-pets-",
+    "data-hc13-",
+    "data-wb-",
+    "data-banner-",
+    "data-wc-",
+    "data-feed-",
+    "data-fv09-",
+    "data-sr11-",
+    "data-sv07-",
+    "data-le-",
+    "data-flash-",
+    "data-pogo-",
+    "data-hear-",
+    "data-dplus-",
+    "data-gi-",
     "data-flip-",
     "data-tinder-",
     "data-sc-",
@@ -411,7 +467,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 1994–2013 + 2015–2019");
+  console.log("audit-mock-flows — 1994–2022");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

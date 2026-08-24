@@ -209,6 +209,25 @@
   margin: 0 0 2px;
 }
 
+/* C4 — leftover rails stay for e2e, but sit below the year page as footnotes */
+[data-itt-pop3x],
+[data-itt-pop-more],
+[data-itt-pop-3x3],
+.itt-pop3x,
+.itt-pop-more,
+.itt-pop-3x3,
+.itt-5x-trails,
+[id^="ott-5x-"] {
+  font-size: 11px !important;
+  line-height: 1.45;
+  padding: 5px 8px !important;
+  margin: 8px auto !important;
+  max-width: 48em;
+  background: #fafafa !important;
+  border: 1px dashed #999 !important;
+  color: #333;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   #exit-bar.itt-ux-pulse-exit {

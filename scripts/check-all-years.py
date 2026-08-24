@@ -25,10 +25,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships (2014 wiped for from-scratch rebuild)
-_WIPED = {"2014", "2021", "2022", "2023"}
+# Years the museum ships. 2024+ not on disk. Museum ends 2024. 2005–2007 wiped.
+# 2005–2007 wiped 2026-08-24 — rebuild later.
+_WIPED = {"2005", "2006", "2007"}
 KNOWN_YEARS = [
-    str(y) for y in list(range(1994, 2014)) + list(range(2015, 2021)) if str(y) not in _WIPED
+    str(y) for y in list(range(1994, 2025)) if str(y) not in _WIPED
 ]
 
 # Per-year signature pages that must exist when the year tree is present
@@ -107,6 +108,15 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/instagram/video.html",
         "sites/playable/game.html",
     ],
+    "2014": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/whatsapp/index.html",
+        "sites/heartbleed/index.html",
+        "sites/icebucket/index.html",
+        "sites/iphone/index.html",
+        "sites/playable/game.html",
+    ],
     "2012": [
         "pages/home.html",
         "pages/about.html",
@@ -169,6 +179,42 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/reels/index.html",
         "sites/openai/index.html",
         "sites/flash/index.html",
+        "sites/playable/game.html",
+    ],
+    "2021": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/att/index.html",
+        "sites/signal/index.html",
+        "sites/copilot/index.html",
+        "sites/meta/index.html",
+        "sites/playable/game.html",
+    ],
+    "2022": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/chatgpt/index.html",
+        "sites/twitter/index.html",
+        "sites/wordle/index.html",
+        "sites/stablediffusion/index.html",
+        "sites/playable/game.html",
+    ],
+    "2023": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/chatgpt/plus.html",
+        "sites/chatgpt/gpt4.html",
+        "sites/bing/chat.html",
+        "sites/bard/index.html",
+        "sites/playable/game.html",
+    ],
+    "2024": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/chatgpt/4o.html",
+        "sites/gemini/index.html",
+        "sites/claude35/index.html",
+        "sites/sora/index.html",
         "sites/playable/game.html",
     ],
 }

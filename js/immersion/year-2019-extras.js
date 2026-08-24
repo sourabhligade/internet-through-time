@@ -111,10 +111,6 @@
 
       if (!save) return;
       save.addEventListener("click", function () {
-        if (countChecked(doc, "[data-dplus-req]") < 2) {
-          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
-          return;
-        }
         if (!profiles.adult || !profiles.kids) {
           feedback("Pick Adult and Kids.", st, { error: true });
           return;

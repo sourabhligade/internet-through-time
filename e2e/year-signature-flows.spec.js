@@ -360,7 +360,7 @@ test.describe('year-signature 2004', () => {
   });
 });
 
-test.describe('year-signature 2005', () => {
+test.describe.skip('year-signature 2005 (wiped)', () => {
   test('YouTube upload theater', async ({ page }) => {
     await enterYear(page, '2005');
     await page.evaluate(() => { try { localStorage.removeItem('itt05-yt-uploads'); } catch (e) { /* */ } });
@@ -449,7 +449,7 @@ test.describe('year-signature 2005', () => {
   });
 });
 
-test.describe('year-signature 2006', () => {
+test.describe.skip('year-signature 2006 (wiped)', () => {
   test('Digg peak digg → itt06-digg-links', async ({ page }) => {
     await enterYear(page, '2006');
     await page.evaluate(() => {

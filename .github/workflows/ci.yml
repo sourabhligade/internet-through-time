@@ -39,6 +39,9 @@ jobs:
       - name: Pipeline invariants
         run: python3 scripts/test-pipeline.py
 
+      - name: 5× leftover contract
+        run: python3 scripts/check-5x-contract.py
+
       - name: Mock-flow classifier
         run: node scripts/audit-mock-flows.js
 
@@ -98,8 +101,8 @@ jobs:
         env:
           CI: true
 
-      - name: Ship e2e (hub · 3× · gold-A · 2016–2018)
-        run: npx playwright test e2e/hub-years.spec.js e2e/atlas.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js --workers=2
+      - name: Ship e2e (hub · 3× · gold-A · 2016–2018 · 2023–2024 leftover)
+        run: npx playwright test e2e/hub-years.spec.js e2e/atlas.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/2023-session-flows-real.spec.js e2e/2024-session-flows-real.spec.js --workers=2
         env:
           CI: true
 

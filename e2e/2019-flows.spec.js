@@ -237,4 +237,20 @@ test.describe("2019 flows", () => {
     await page.locator("[data-itt-real-save]").click();
     await expect.poll(async () => getKey(page, "itt19-thesis-ack"), { timeout: 8000 }).toBeTruthy();
   });
+
+  test("second leftover 3× is Apple TV+ · AirPods Pro · iPhone 11 and not the third trio", async ({ page }) => {
+    await page.goto("/years/2019/pages/home.html");
+    await expect(page.locator("#ott-guided-2019 ol > li")).toHaveCount(6);
+    await expect(page.locator('[data-ott-one-thing="2019"]')).toHaveAttribute("href", /disneyplus\/home/);
+    const more = page.locator('[data-itt-pop-more="2019"] a[href*="sites/"]');
+    const third = page.locator('[data-itt-pop-3x3="2019"] a[href*="sites/"]');
+    await expect(more).toHaveCount(3);
+    await expect(third).toHaveCount(3);
+    const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    expect(moreH.join(" ")).toMatch(/appletv\//);
+    expect(moreH.join(" ")).toMatch(/airpodspro\//);
+    expect(moreH.join(" ")).toMatch(/iphone\/iphone11/);
+    for (const h of moreH) expect(thirdH).not.toContain(h);
+  });
 });

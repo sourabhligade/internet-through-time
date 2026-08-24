@@ -8,6 +8,9 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/extra-e.html",
+    "sites/playable/extra-d.html",
+    "sites/playable/extra-c.html",
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",

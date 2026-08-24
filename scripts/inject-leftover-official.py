@@ -129,6 +129,11 @@ DESTS = [
     ("2011", "sites/instagram/index.html", "ig", "Android / 2012 (trap)", "Note iOS leftover", "", [("ios", "iOS leftover"), ("android", "Android (trap)")], "ios", 0),
     ("2011", "sites/qwikster/index.html", "qwikster", "Qwikster shipped (trap)", "Note funeral leftover", "", [("funeral", "Funeral leftover"), ("shipped", "Shipped (trap)")], "funeral", 0),
     ("2013", "sites/instagram/video.html", "ig-posts", "Skip 15s (trap)", "Note 15s leftover", "", [("sec", "15s leftover"), ("skip", "Skip (trap)")], "sec", 0),
+    ("1995", "sites/netscape/index.html", "ns-dl", "Chrome as 1995 download (trap)", "Download Navigator leftover", "", [("nav2", "Navigator 2 leftover"), ("chrome", "Chrome (trap)")], "nav2", 0),
+    ("1996", "sites/spacejam/index.html", "jam", "Watch the movie (trap)", "Hop leftover planet", "", [("planet", "Planet leftover"), ("movie", "Movie (trap)")], "planet", 0),
+    ("1997", "sites/drudge/index.html", "drudge", "Live Drudge (trap)", "Open leftover wire", "", [("ie4", "IE4 leftover"), ("live", "Live Drudge (trap)")], "ie4", 0),
+    ("1997", "sites/apple/think-different.html", "td", "iPhone (trap)", "Note leftover ad", "", [("ad", "Think Different leftover"), ("iphone", "iPhone (trap)")], "ad", 0),
+    ("1999", "sites/y2k/index.html", "y2k", "The world ended (trap)", "Note leftover clock", "", [("clock", "Clock leftover"), ("ended", "World ended (trap)")], "clock", 0),
 ]
 
 # Fill trail whenKey only — dest already writes this key (do not inject a second game machine).

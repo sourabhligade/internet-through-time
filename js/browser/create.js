@@ -37,7 +37,7 @@
     var BM_KEY = config.bookmarksKey || ("itt-" + YEAR + "-bookmarks");
     var CONNECTED_KEY = config.connectedKey || ("itt-" + YEAR + "-connected");
     var URL_MAP = config.urlMap || {};
-    var DEFAULT_BOOKMARKS = (config.defaultBookmarks || []).slice();
+    var DEFAULT_BOOKMARKS = (config.defaultBookmarks || config.bookmarks || []).slice();
     var FALLBACK_BASE = config.fallbackUrlBase || ("http://home.nerf.edu/web" + YEAR + "/");
     var TITLE_SUFFIX = config.browserTitleSuffix || " - Netscape";
     var DIR_KEYS = config.dirSiteKeys || [];
@@ -679,11 +679,21 @@
           return;
         }
         /* Museum hub / games wing escapes: iframe sandbox blocks target=_top
-         * (no allow-top-navigation). Parent chrome navigates the top window. */
+         * (no allow-top-navigation). Parent chrome navigates the top window
+         * only for same-origin museum exits. Off-origin and javascript: stay
+         * inside the exhibit (unreachable / ignored). */
         var tgt = (linkEl.getAttribute("target") || "").toLowerCase();
         if (tgt === "_top" || tgt === "_parent") {
           e.preventDefault();
           e.stopPropagation();
+          if (/^\s*(javascript|data|vbscript):/i.test(href)) return;
+          var liveTop = pathFromIframe() || path;
+          var resolvedTop = resolveHref(href, liveTop);
+          if (resolvedTop && resolvedTop.external) {
+            sessionStorage.setItem("itt-last-url", href);
+            navigate("pages/error/unreachable.html");
+            return;
+          }
           var absTop = "";
           try {
             absTop = linkEl.href || "";
@@ -700,9 +710,27 @@
             }
           }
           try {
-            (window.top || window).location.href = absTop;
+            var dest = new URL(absTop, window.location.href);
+            if (dest.protocol === "javascript:" || dest.protocol === "data:" || dest.protocol === "vbscript:") {
+              return;
+            }
+            if (dest.origin !== window.location.origin) {
+              sessionStorage.setItem("itt-last-url", href);
+              navigate("pages/error/unreachable.html");
+              return;
+            }
+            var destPath = dest.pathname || "";
+            var yearPrefix = "/years/" + YEAR + "/";
+            var yi = destPath.indexOf(yearPrefix);
+            if (yi !== -1) {
+              var goIn = destPath.slice(yi + yearPrefix.length);
+              if (goIn.indexOf("pages/sites/") === 0) goIn = goIn.slice("pages/".length);
+              navigate(goIn || HOME);
+              return;
+            }
+            (window.top || window).location.href = dest.href;
           } catch (errNav) {
-            window.location.href = absTop;
+            if (resolvedTop && resolvedTop.path) navigate(resolvedTop.path);
           }
           return;
         }
@@ -1272,6 +1300,7 @@
         } catch (eOv) { /* */ }
       }
       try { sessionStorage.setItem(CONNECTED_KEY, "1"); } catch (e) { /* */ }
+      try { localStorage.setItem(CONNECTED_KEY, "1"); } catch (e2) { /* */ }
       try {
         ensureBackdropSane();
       } catch (eBd) { /* */ }
@@ -1322,7 +1351,9 @@
     }
 
     var already = false;
-    try { already = sessionStorage.getItem(CONNECTED_KEY) === "1"; } catch (e) { /* */ }
+    try {
+      already = sessionStorage.getItem(CONNECTED_KEY) === "1" || localStorage.getItem(CONNECTED_KEY) === "1";
+    } catch (e) { /* */ }
     if (already) {
       if (overlay) overlay.classList.add("hidden");
       seedHistory();

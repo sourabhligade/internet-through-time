@@ -143,7 +143,6 @@
       ["imgur", "immersion/imgur.js"],
       ["cnn", "immersion/facebook.js"],
       ["wave", "immersion/wave.js"],
-      ["sourceforge", "immersion/sourceforge.js"],
       ["oneThingMachines", "immersion/one-thing-machines.js"],
       ["bbs", "immersion/source-flows.js"],
       ["zengarden", "immersion/source-flows.js"],
@@ -158,7 +157,8 @@
     ];
     var priority = [];
     var seen = {};
-    function add(rel) {
+    /** Year-list modules only (CORE + EXTRA). Lean EXTRA stays lean. */
+    function addListed(rel) {
       if (!rel || seen[rel]) return;
       var i;
       for (i = 0; i < all.length; i++) {
@@ -168,6 +168,18 @@
           return;
         }
       }
+    }
+    /**
+     * Dest engine for hooks already on this page.
+     * Lean years omit dest engines from EXTRA; the dest HTML is the contract.
+     */
+    function addEngine(rel) {
+      if (!rel || seen[rel]) return;
+      seen[rel] = 1;
+      priority.push(rel);
+    }
+    function add(rel) {
+      addListed(rel);
     }
     /* CORE first — honesty + 5× + packs must not wait 1.2s (that felt like mock). */
     add("immersion/shared.js");
@@ -180,6 +192,7 @@
     add("immersion/year-5x-pack.js");
     add("immersion/year-true-packs.js");
     add("immersion/year-popular-3x.js");
+    add("immersion/year-true-leftover.js");
     add("immersion/leftover-official.js");
     add("immersion/year-4x-flows.js");
     add("immersion/one-thing-machines.js");
@@ -192,15 +205,30 @@
     var h;
     for (h = 0; h < hints.length; h++) {
       var key = hints[h][0];
-      if (
-        path.indexOf("/sites/" + key + "/") !== -1 ||
-        path.indexOf("/" + key + "/") !== -1
-      ) {
+      if (path.indexOf("/sites/" + key + "/") !== -1) {
+        addEngine(hints[h][1]);
+        if (key === "itunes") addEngine("immersion/podcasts.js");
+        if (key === "maps") addEngine("immersion/housingmaps.js");
+      } else if (path.indexOf("/" + key + "/") !== -1) {
         add(hints[h][1]);
         if (key === "itunes") add("immersion/podcasts.js");
         if (key === "maps") add("immersion/housingmaps.js");
       }
     }
+    try {
+      if (typeof document !== "undefined" && document.querySelector) {
+        var hookEngines = [
+          ["[data-appstore-install], [data-appstore-apps], [data-appstore-catalog]", "immersion/appstore.js"],
+          ["[data-spotify-invite], [data-spotify-plan], [data-spotify-play], [data-spotify-ack]", "immersion/spotify.js"],
+          ["[data-hulu-play]", "immersion/hulu.js"],
+          ["[data-itunes-buy]", "immersion/itunes.js"]
+        ];
+        var hi;
+        for (hi = 0; hi < hookEngines.length; hi++) {
+          if (document.querySelector(hookEngines[hi][0])) addEngine(hookEngines[hi][1]);
+        }
+      }
+    } catch (eHook) { /* */ }
     if (
       path.indexOf("/macromedia") !== -1 ||
       path.indexOf("/flash") !== -1 ||
@@ -219,7 +247,7 @@
       add("immersion/year-playable.js");
     }
     /* Pets.com shop reuses Amazon cart hooks — load the engine off /amazon/. */
-    if (path.indexOf("/pets/") !== -1) add("immersion/amazon.js");
+    if (path.indexOf("/pets/") !== -1) addEngine("immersion/amazon.js");
     try {
       if (
         typeof document !== "undefined" &&

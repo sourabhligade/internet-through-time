@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""3× discoverable internal links for every playable year (1994–2019).
+"""3× discoverable internal links for every playable year (1994–2022).
 
 Adds (or replaces) marked blocks:
   home / about / what's-new / cool  → full site-index + extra-page directory
@@ -19,7 +19,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-YEARS = range(1994, 2010)
+YEARS = range(1994, 2025)
+# Lean doors already have pop3x rows. Do not paste a full room directory on those homes.
+LEAN_NO_LOBBY = set(range(2010, 2025))
 
 MARK_LINKS = ("<!-- ITT-3X-LINKS:start -->", "<!-- ITT-3X-LINKS:end -->")
 MARK_ALSO = ("<!-- ITT-3X-ALSO:start -->", "<!-- ITT-3X-ALSO:end -->")
@@ -305,6 +307,8 @@ def main() -> None:
             if not is_year_html(html, year):
                 continue
             if lobby_names(html):
+                if year in LEAN_NO_LOBBY:
+                    continue
                 if patch_file(html, MARK_LINKS, home_block(year, html, rooms, extras, titles)):
                     changed += 1
             else:
