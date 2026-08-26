@@ -4266,6 +4266,323 @@
       "href": "sites/youtube/index.html",
       "name": "YouTube"
     }
+  ],
+  "2025": [
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/appleintel/index.html",
+      "name": "Apple Intelligence leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/artifacts/index.html",
+      "name": "Claude Artifacts leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/astra/index.html",
+      "name": "Project Astra leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/bard/index.html",
+      "name": "Bard leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/bardabout/index.html",
+      "name": "Bard about leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/beacons/index.html",
+      "name": "Beacons leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/bereal/index.html",
+      "name": "BeReal leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/bing/about.html",
+      "name": "Bing leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/bluesky/index.html",
+      "name": "Bluesky leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/canvas/index.html",
+      "name": "ChatGPT Canvas leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/characterai/index.html",
+      "name": "Character.AI leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/chatgpt/index.html",
+      "name": "ChatGPT free residual"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/chatgptsearch/index.html",
+      "name": "ChatGPT Search leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/chrome/index.html",
+      "name": "Chrome habit"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/claude2/index.html",
+      "name": "Claude 2 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/claude3/index.html",
+      "name": "Claude 3 family leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/claude35/index.html",
+      "name": "Claude 3.5 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/computeruse/index.html",
+      "name": "Computer Use leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/copilotx/index.html",
+      "name": "Copilot X leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/dalle2/index.html",
+      "name": "DALL\u00b7E 2 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/devin/index.html",
+      "name": "Devin leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/facebook/index.html",
+      "name": "Facebook leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/flash/index.html",
+      "name": "Gemini 1.5 Flash leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/flux/index.html",
+      "name": "Flux leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/gemini/index.html",
+      "name": "Gemini leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/gen3/index.html",
+      "name": "Runway Gen-3 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/gptstore/index.html",
+      "name": "GPT Store leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/grok/index.html",
+      "name": "Grok leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/humane/index.html",
+      "name": "Humane Pin leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/lensa/index.html",
+      "name": "Lensa leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/llama3/index.html",
+      "name": "Llama 3 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/llama31/index.html",
+      "name": "Llama 3.1 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/luma/index.html",
+      "name": "Luma Dream Machine leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/mastodon/index.html",
+      "name": "Mastodon leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/memory/index.html",
+      "name": "ChatGPT Memory leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/midjourney/index.html",
+      "name": "Midjourney leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/mini/index.html",
+      "name": "GPT-4o mini leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/notebooklm/index.html",
+      "name": "NotebookLM leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/notionai/index.html",
+      "name": "Notion AI leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/o1/index.html",
+      "name": "o1 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/o1mini/index.html",
+      "name": "o1-mini leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/orion/index.html",
+      "name": "Meta Orion leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/perplexity/index.html",
+      "name": "Perplexity leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/playable/index.html",
+      "name": "2022 playables"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/plusabout/index.html",
+      "name": "Plus about leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/rabbit/index.html",
+      "name": "Rabbit R1 leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/recall/index.html",
+      "name": "Copilot+ Recall leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/searchgpt/index.html",
+      "name": "SearchGPT leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/sora/index.html",
+      "name": "Sora leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/stablediffusion/index.html",
+      "name": "Stable Diffusion leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/suno/index.html",
+      "name": "Suno leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/threads/index.html",
+      "name": "Threads leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/threadsabout/index.html",
+      "name": "Threads about leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/tiktok/index.html",
+      "name": "TikTok leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/twitter/index.html",
+      "name": "Twitter leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/udio/index.html",
+      "name": "Udio leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/veo/index.html",
+      "name": "Veo leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/visionpro/index.html",
+      "name": "Vision Pro leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/voice/index.html",
+      "name": "Advanced Voice leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/wikipedia/index.html",
+      "name": "Wikipedia"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/windows10/index.html",
+      "name": "Windows 10 residual"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/wordle/index.html",
+      "name": "Wordle leftover"
+    },
+    {
+      "do": "Existing room \u00b7 3\u00d7 link pass",
+      "href": "sites/youtube/index.html",
+      "name": "YouTube"
+    }
   ]
 };
   Object.keys(extra).forEach(function (y) {

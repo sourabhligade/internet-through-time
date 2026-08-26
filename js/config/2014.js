@@ -7,6 +7,10 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/extra-i.html",
+    "sites/playable/extra-h.html",
+    "sites/playable/extra-g.html",
+    "sites/playable/extra-f.html",
     "sites/facebook/about.html",
     "sites/youtube/about.html",
     "sites/uber/about.html",
@@ -49,6 +53,10 @@
     "sites/facebook/index.html",
     "sites/twitter/index.html",
     "sites/playable/game.html",
+    "sites/playable/game-2.html",
+    "sites/playable/game-3.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-5.html",
     "sites/playable/index.html",
     "sites/playable/famous.html",
     "sites/playable/extra-a.html",

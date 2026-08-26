@@ -109,3 +109,6 @@
 /years/2024/
 /years/2024/pages/home.html
 /years/2024/sites/chatgpt/4o.html
+/years/2025/
+/years/2025/pages/home.html
+/years/2025/sites/deepseek/r1.html

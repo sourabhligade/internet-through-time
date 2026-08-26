@@ -296,10 +296,26 @@
     return Promise.all(jobs);
   }
 
+  function ensureMuseumCss() {
+    if (document.getElementById("itt-4x-css")) return;
+    var href = "/css/itt-4x.css";
+    try {
+      var path = location.pathname || "";
+      var idx = path.indexOf("/years/");
+      if (idx !== -1) href = path.slice(0, idx) + "/css/itt-4x.css";
+    } catch (eH) { /* */ }
+    var link = document.createElement("link");
+    link.id = "itt-4x-css";
+    link.rel = "stylesheet";
+    link.href = href;
+    (document.head || document.documentElement).appendChild(link);
+  }
+
   function start(year) {
     var YEAR = String(year || resolveYear());
     ITT._immersionYear = YEAR;
     var base = scriptDirFromLoader();
+    try { ensureMuseumCss(); } catch (eCss) { /* */ }
 
     function bootCreate() {
       var cfg = ITT.immersionConfigs && ITT.immersionConfigs[YEAR];

@@ -70,7 +70,7 @@ test.describe("complex products · incomplete / persist", () => {
     await expect(page.locator("[data-pb-hotlinks]")).toContainText(/board/i);
   });
 
-  test("Pandora thumbs without station blocked", async ({ page }) => {
+  test.skip("Pandora thumbs without station blocked", async ({ page }) => {
     await page.goto("/years/2005/sites/pandora/index.html");
     await clearPrefix(page, "itt05-pandora");
     await page.reload();

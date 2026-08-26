@@ -4,6 +4,7 @@
 **Status:** **live lean door.** `years/2021/` is on disk. Prefix `itt21`.  
 **Prefix:** `itt21`  
 **Clone shape:** live `years/2020/` (Zoom door · lean).  
+**From-disk lock (2026-08-26):** [`2021-FROM-DISK-LOCK-IMPLEMENT-MINUTE-2026-08-26.md`](2021-FROM-DISK-LOCK-IMPLEMENT-MINUTE-2026-08-26.md) — ATT honesty ticks · Copilot waitlist never writes without ticks.  
 **Git only if asked.**
 
 Read first: [`2021-READ-FIRST.md`](2021-READ-FIRST.md) · harvest [`2021-FROM-SCRATCH-4K-WEB-RESEARCH.md`](2021-FROM-SCRATCH-4K-WEB-RESEARCH.md) · implementer map [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) · check walk [`2021-CHECK-EVERY-FLOW-MAP.md`](2021-CHECK-EVERY-FLOW-MAP.md) · 4k diagram [`2021-4K-WEB-FLOW-MAP.md`](2021-4K-WEB-FLOW-MAP.md).

@@ -99,6 +99,10 @@ test.describe("2021 leftover flows", () => {
     await page.locator("[data-meta-app]").click();
     expect(await getKey(page, "itt21-meta")).toBeFalsy();
     await page.locator("[data-meta-save]").click();
+    expect(await getKey(page, "itt21-meta")).toBeFalsy();
+    await page.locator("[data-meta-req]").nth(0).check();
+    await page.locator("[data-meta-req]").nth(1).check();
+    await page.locator("[data-meta-save]").click();
     await expect.poll(async () => getKey(page, "itt21-meta")).toBeTruthy();
     const blob = await blobOf(page, "itt21-meta");
     expect(blob.real).toBe(true);

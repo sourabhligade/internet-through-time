@@ -7,11 +7,11 @@ const { test, expect } = require("@playwright/test");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
   "2002", "2003", "2004", "2008", "2009",
-  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024",
+  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025",
 ];
 const WIPED = ["2005", "2006", "2007"];
 const THREADS = ["yahoo", "amazon", "google", "facebook", "youtube", "mail", "search", "phone", "im"];
-const TOURS = ["first-night", "find", "buy", "talk", "phone-trail", "broadcast", "games"];
+const TOURS = ["first-night", "find", "buy", "talk", "phone-trail", "broadcast", "games", "models"];
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -38,10 +38,14 @@ test.describe("museum atlas", () => {
     await expect(page.locator("a[href='../index.html']").first()).toBeVisible();
   });
 
-  test("spine has 28 open years and 3 wiped ticks", async ({ page }) => {
+  test("hallway has seven wings, 29 open years and 3 boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
-    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(31);
-    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(28);
+    await expect(page.locator("h1")).toContainText(/whole museum/i);
+    await expect(page.locator(".lede")).toContainText(/2025/);
+    await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(7);
+    await expect(page.locator('#atlas-spine .atlas-wing[data-wing="gap"]')).toBeVisible();
+    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(32);
+    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(29);
     await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(3);
     for (const y of OPEN) {
       await expect(page.locator(`#atlas-spine .spine-year.open[data-atlas-year="${y}"]`)).toBeVisible();
@@ -130,5 +134,41 @@ test.describe("museum atlas", () => {
     await page.goto("/atlas/");
     await page.locator("#atlas-first-night").click();
     await expect(page).toHaveURL(/\/years\/1994\//);
+  });
+
+  test("2019 door card is Disney+ and lists leftover 2× after catalog load", async ({ page }) => {
+    await page.goto("/atlas/");
+    await page.locator('#atlas-spine [data-atlas-year="2019"]').click();
+    const panel = page.locator("#atlas-year");
+    await expect(panel).toBeVisible();
+    await expect(panel.locator("li.gold")).toContainText(/Disney\+/i);
+    await expect(panel).toContainText(/Not this year/i);
+    await expect(panel.locator("ol.ten li")).toHaveCount(10);
+    await expect(page.locator("#atlas-all-golds")).toBeVisible();
+    await expect(page.locator("#atlas-all-2x")).toBeVisible({ timeout: 15000 });
+    await expect(page.locator("#atlas-2x-2019")).toBeVisible({ timeout: 15000 });
+    const n2x = page.locator("#atlas-2x-2019 summary .n");
+    await expect(n2x).toHaveText(/^[1-9]\d*$/);
+  });
+
+  test("2024 door and models tour are live", async ({ page }) => {
+    await page.goto("/atlas/");
+    await page.locator('#atlas-spine [data-atlas-year="2024"]').click();
+    const panel = page.locator("#atlas-year");
+    await expect(panel.locator("h2")).toContainText("2024");
+    await expect(panel.locator("li.gold")).toContainText(/GPT-4o|Talk/i);
+    await expect(page.locator("#trail-models")).toBeVisible();
+    const talk = page.locator('#trail-models a[href*="chatgpt/4o"]');
+    await expect(talk).toBeVisible();
+    await expectLive(page, await talk.getAttribute("href"), "models 2024");
+  });
+
+  test("find: disney hits the 2019 gold room", async ({ page }) => {
+    await page.goto("/atlas/");
+    await page.fill("#atlas-find", "disney");
+    const results = page.locator("#atlas-find-results a");
+    await expect(results.first()).toBeVisible();
+    await expect(results.first()).toHaveAttribute("href", /disneyplus/i);
+    await expectLive(page, await results.first().getAttribute("href"), "find disney");
   });
 });

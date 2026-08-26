@@ -134,6 +134,36 @@
       }
     }
 
+    function persist(scoreNow) {
+      var merge = {
+        real: true,
+        multiStep: true,
+        kind: kind,
+        traps: traps,
+        goods: goods
+      };
+      var k = prefixYear(year) + "-game-" + gid;
+      var blob = {
+        gameId: String(gid),
+        year: String(year || ""),
+        best: scoreNow,
+        last: scoreNow,
+        runs: 1,
+        ts: Date.now(),
+        real: true,
+        multiStep: true,
+        kind: kind,
+        traps: traps,
+        goods: goods
+      };
+      try {
+        localStorage.setItem(k, JSON.stringify(blob));
+      } catch (eSave) { /* */ }
+      if (yg && yg.saveBest) {
+        yg.saveBest(gid, scoreNow, { year: year, merge: merge });
+      }
+    }
+
     function finish() {
       if (!running) {
         setStatus("Start first. Incomplete never writes.");
@@ -143,24 +173,29 @@
         setStatus("Already saved · " + prefixYear(year) + "-game-" + gid + ".");
         return;
       }
+      checkConfirm();
+      if (spec.confirm) {
+        var inpF = host.querySelector("[data-mx-confirm]");
+        if (inpF) {
+          var vF = String(inpF.value || "").toLowerCase().replace(/\s+/g, " ").trim();
+          if (vF === String(spec.confirm).toLowerCase()) typed = true;
+        }
+      }
+      var unused = host.querySelectorAll("[data-mx-good]:not([data-mx-used='1'])").length;
+      if (
+        (kind === "pick" || kind === "buffer" || kind === "burst") &&
+        need > 0 &&
+        unused === 0
+      ) {
+        goods = Math.max(goods, need);
+      }
       if (!ready()) {
         setStatus("Not every step yet. Incomplete never writes.");
         return;
       }
       saved = true;
       score = Math.max(1, 10 + goods - traps);
-      if (yg && yg.saveBest) {
-        yg.saveBest(gid, score, {
-          year: year,
-          merge: {
-            real: true,
-            multiStep: true,
-            kind: kind,
-            traps: traps,
-            goods: goods
-          }
-        });
-      }
+      persist(score);
       step("save");
       paintBest();
       paintHud();
@@ -471,7 +506,9 @@
     }
 
     function renderConfirm() {
-      if (!spec.confirm || !field) return;
+      if (!spec.confirm) return;
+      if (host.querySelector("[data-mx-confirm]")) return;
+      if (!field) return;
       var wrap = document.createElement("p");
       wrap.style.margin = "10px 0 0";
       var lab = document.createElement("label");
@@ -553,6 +590,14 @@
     if (finBtn && finBtn.getAttribute("data-mx-bound") !== "1") {
       finBtn.setAttribute("data-mx-bound", "1");
       on(finBtn, "click", finish);
+    }
+    var confirmInp = host.querySelector("[data-mx-confirm]");
+    if (confirmInp && confirmInp.getAttribute("data-mx-bound") !== "1") {
+      confirmInp.setAttribute("data-mx-bound", "1");
+      on(confirmInp, "input", function () {
+        if (!running || saved) return;
+        checkConfirm();
+      });
     }
 
     paintBest();

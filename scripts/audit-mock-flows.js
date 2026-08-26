@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — ship years 1994–2022. Museum ends 2022.
+ * Mock-flow classifier — ship years 1994–2024 minus 2005–2007.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -26,9 +26,11 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
+const WIPED = new Set(["2005", "2006", "2007"]);
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) {
-  YEARS.push(String(y));
+for (let y = 1994; y <= 2025; y++) {
+  const s = String(y);
+  if (!WIPED.has(s)) YEARS.push(s);
 }
 
 const argv = process.argv.slice(2);
@@ -293,6 +295,13 @@ const PRODUCT_HOOK = new RegExp(
     "data-xa-",
     "data-xb-",
     "data-peg-",
+    "data-4x-",
+    "data-ytl",
+    "data-plus-",
+    "data-4o-",
+    "data-pop-",
+    "data-pop3",
+    "data-ott-",
   ].join("|"),
   "i"
 );
@@ -467,7 +476,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 1994–2022");
+  console.log("audit-mock-flows — 1994–2024 minus 2005–2007");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

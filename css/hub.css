@@ -1506,3 +1506,10 @@ button.start-btn {
 .year-card.y2024 .era-chip { background: #10a37f; color: #fff; }
 .year-card.y2024 .motif { background: linear-gradient(135deg, #10a37f, #0e7a0d); }
 .year-card.y2024 .label, .year-card.y2024 .scale { color: #ccc; }
+
+.year-card.y2025 { border-color: #1a365d #404040 #404040 #111; }
+.year-card.y2025 .year-card-inner { background: linear-gradient(180deg, #0b1020 0%, #163 55%); color: #eee; }
+.year-card.y2025 .year { color: #fff; }
+.year-card.y2025 .era-chip { background: #2b6cb0; color: #fff; }
+.year-card.y2025 .motif { background: linear-gradient(135deg, #2b6cb0, #1a365d); }
+.year-card.y2025 .label, .year-card.y2025 .scale { color: #ccc; }

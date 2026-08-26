@@ -378,6 +378,18 @@
       era: "Talk is the save. GPT-5 is next year.",
       famous: "Brick Bat + Concentration",
       accent: "#10a37f"
+    },
+    "2025": {
+      id: "think",
+      title: "Think Dash",
+      href: "game.html",
+      key: "itt25-game-think",
+      inspire: "Theater think — not a live model · R1 is the gold dest",
+      blurb: "Type think. Incomplete never writes.",
+      why: "R1 is the door. The game is a theater box.",
+      era: "Think is the save. 4o is last year.",
+      famous: "Brick Bat + Concentration",
+      accent: "#2b6cb0"
     }
   };
 })(typeof window !== "undefined" ? window : this);

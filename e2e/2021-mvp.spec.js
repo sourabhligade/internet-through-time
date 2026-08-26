@@ -29,6 +29,10 @@ test.describe("2021 MVP", () => {
     await page.locator("[data-att-allow]").click();
     expect(await page.evaluate(() => localStorage.getItem("itt21-att"))).toBeFalsy();
     await page.locator("[data-att-ask]").click();
+    expect(await page.evaluate(() => localStorage.getItem("itt21-att"))).toBeFalsy();
+    await page.locator("[data-att-req]").nth(0).check();
+    await page.locator("[data-att-req]").nth(1).check();
+    await page.locator("[data-att-ask]").click();
     await expect.poll(() => page.evaluate(() => localStorage.getItem("itt21-att"))).toBeTruthy();
     const blob = JSON.parse((await page.evaluate(() => localStorage.getItem("itt21-att"))) || "{}");
     expect(blob.real).toBe(true);

@@ -198,6 +198,9 @@
     "2024": yearVisitTour("2024",
       { path: "sites/chatgpt/4o.html", label: "GPT-4o Talk", blurb: "Omni. Free-class. Empty / GPT-5 never write.", match: "/chatgpt/4o" },
       { path: "sites/gemini/index.html", label: "Gemini leftover", blurb: "8 Feb. Bard is the old name.", match: "/gemini/" }),
+    "2025": yearVisitTour("2025",
+      { path: "sites/deepseek/r1.html", label: "DeepSeek R1 Think", blurb: "20 Jan. MIT. Empty / V3 / treat-as-2024 never write.", match: "/deepseek/" },
+      { path: "sites/operator/index.html", label: "Operator leftover", blurb: "Jan computer-use leftover. Not the chip.", match: "/operator/" }),
   };
 
   var TRAILS = {
@@ -212,7 +215,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2024; y++) {
+    for (y = 1994; y <= 2025; y++) {
       if (y === 2005 || y === 2006 || y === 2007) continue;
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
@@ -658,7 +661,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2024; y++) {
+    for (y = 1994; y <= 2025; y++) {
       if (y === 2005 || y === 2006 || y === 2007) continue;
       years.push(String(y));
     }

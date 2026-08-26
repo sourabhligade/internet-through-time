@@ -1,15 +1,17 @@
 // @ts-check
 /**
- * Play every third leftover 3× writer (27 × 3 = 81).
+ * Third leftover 3× writer on every ship year (2005–2007 wiped).
  * Empty / no pick / no tick never writes. Complete writes ittYY-pop3-<id>.
  */
 const { test, expect } = require("@playwright/test");
 const TRIOS = require("../scripts/popular-3x3-sites.json");
 
 const YEARS = Object.keys(TRIOS).sort();
+const WIPED = new Set(["2005", "2006", "2007"]);
 
 test.describe("every third leftover 3× writer", () => {
   for (const year of YEARS) {
+    if (WIPED.has(year)) continue;
     for (const row of TRIOS[year]) {
       const key = `itt${year.slice(2)}-pop3-${row.id}`;
       test(`${year} ${row.id} empty/no-pick/no-tick never write · complete writes ${key}`, async ({ page }) => {

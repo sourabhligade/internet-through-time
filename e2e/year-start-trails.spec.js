@@ -48,7 +48,7 @@ test.describe("Per-year guided start trails", () => {
   });
 
   test("every year home has a numbered ott-guided P0 trail", async ({ page }) => {
-    for (let y = 1994; y <= 2024; y++) {
+    for (let y = 1994; y <= 2025; y++) {
       if (y === 2005 || y === 2006 || y === 2007) continue;
       await page.goto(`/years/${y}/pages/home.html`);
       const rail = page.locator(`#ott-guided-${y}`);

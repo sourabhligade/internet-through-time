@@ -365,6 +365,8 @@ test.describe('all-years signature REAL · late web', () => {
     const frame = contentFrame(page);
     const adult = frame.locator('[data-dplus-profile="adult"]');
     await expect(adult).toBeVisible({ timeout: 15000 });
+    await frame.locator("[data-dplus-req]").nth(0).check();
+    await frame.locator("[data-dplus-req]").nth(1).check();
     await adult.click();
     await frame.locator("[data-dplus-add]").nth(0).click();
     await frame.locator("[data-dplus-add]").nth(1).click();

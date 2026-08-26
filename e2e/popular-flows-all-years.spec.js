@@ -70,7 +70,9 @@ test.describe("Popular flows — every year F1–F5 checked", () => {
       const raw = (await getKey(page, flow.key)) || "";
       expect(raw).toMatch(/real|true|multiStep/i);
       if (flow.next) {
-        await expect(page.locator("[data-next-flow] a").first()).toBeVisible();
+        await expect(
+          page.locator(".itt-popular-panel [data-next-flow] a, [data-itt-popular] [data-next-flow] a").first()
+        ).toBeVisible();
       }
     });
   }

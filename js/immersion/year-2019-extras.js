@@ -50,6 +50,32 @@
       if (row) row.textContent = ids && ids.length ? "Continue: " + ids.join(" · ") : "Continue row empty";
     }
 
+    function markOn(el) {
+      if (!el || /\bis-on\b/.test(el.className || "")) return;
+      el.className = String(el.className || "").replace(/\s+$/g, "") + " is-on";
+    }
+
+    function markProfiles(doc, profiles) {
+      var pbtns = doc.querySelectorAll("[data-dplus-profile]");
+      var i;
+      var id;
+      for (i = 0; i < pbtns.length; i++) {
+        id = pbtns[i].getAttribute("data-dplus-profile") || "";
+        if (profiles[id]) markOn(pbtns[i]);
+      }
+    }
+
+    function showKidsBlock(doc, on) {
+      var block = doc.querySelector("[data-dplus-kids-block]");
+      if (!block) return;
+      if (on) {
+        block.removeAttribute("hidden");
+        block.style.display = "";
+      } else {
+        block.setAttribute("hidden", "hidden");
+      }
+    }
+
     function bootDisneyPlus(doc) {
       var trial = doc.querySelector("[data-dplus-trial]");
       var save = doc.querySelector("[data-dplus-continue]");
@@ -67,9 +93,13 @@
       var saved = YX.loadJSON(key("disneyplus"));
       if (saved && saved.real) {
         if (saved.continueIds) titles = saved.continueIds.slice();
-        if (saved.profile) profiles[saved.profile] = true;
+        profiles.adult = true;
         if (saved.kidsSeen) profiles.kids = true;
+        markProfiles(doc, profiles);
         paintRow(doc, titles);
+        var reqs0 = doc.querySelectorAll("[data-dplus-req]");
+        var r0;
+        for (r0 = 0; r0 < reqs0.length; r0++) reqs0[r0].checked = true;
         feedback("Continue row restored · itt19-disneyplus", st);
         reveal(doc);
       }
@@ -80,18 +110,11 @@
         pbtns[i].addEventListener("click", function () {
           var id = this.getAttribute("data-dplus-profile") || "";
           profiles[id] = true;
-          this.className = (this.className || "") + " is-on";
+          markOn(this);
           kidsOn = id === "kids";
-          var block = doc.querySelector("[data-dplus-kids-block]");
-          if (block) {
-            if (kidsOn) {
-              block.removeAttribute("hidden");
-              block.style.display = "";
-            } else {
-              block.setAttribute("hidden", "hidden");
-            }
-          }
-          feedback(id === "kids" ? "Kids profile — different color. Blocked title hidden." : "Adult profile.", st);
+          showKidsBlock(doc, kidsOn);
+          if (!kidsOn) paintRow(doc, titles);
+          feedback(id === "kids" ? "Kids profile — different color. Blocked title hidden." : "Adult profile. Continue row still holds.", st);
         });
       }
 
@@ -111,6 +134,10 @@
 
       if (!save) return;
       save.addEventListener("click", function () {
+        if (countChecked(doc, "[data-dplus-req]") < 2) {
+          feedback("Tick both honesties first.", st, { error: true });
+          return;
+        }
         if (!profiles.adult || !profiles.kids) {
           feedback("Pick Adult and Kids.", st, { error: true });
           return;

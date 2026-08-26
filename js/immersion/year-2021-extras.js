@@ -44,10 +44,17 @@
     if (!ask) return;
     var saved = YX.loadJSON(key("att"));
     if (saved && saved.real) {
+      var reqs0 = doc.querySelectorAll("[data-att-req]");
+      var r0;
+      for (r0 = 0; r0 < reqs0.length; r0++) reqs0[r0].checked = true;
       feedback("Asked leftover · " + key("att"), st);
       reveal(doc);
     }
     ask.addEventListener("click", function () {
+      if (countChecked(doc, "[data-att-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("att"), blob({ asked: true, date: "2021-04-26", allow: false }));
       feedback("Ask App Not to Track · " + key("att"), st);
       reveal(doc);
@@ -65,6 +72,10 @@
     }
     if (!go) return;
     go.addEventListener("click", function () {
+      if (countChecked(doc, "[data-sig-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       var handle = val(doc, "[data-sig-handle]");
       if (!handle || handle.length < 2) {
         feedback("Type a leftover handle first. Empty never writes.", st, { error: true });
@@ -87,6 +98,10 @@
     }
     if (!go) return;
     go.addEventListener("click", function () {
+      if (countChecked(doc, "[data-copilot-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       var email = val(doc, "[data-copilot-email]");
       if (!email || email.indexOf("@") < 1) {
         feedback("Type a leftover email first. Empty never writes.", st, { error: true });
@@ -109,6 +124,10 @@
     }
     if (!go) return;
     go.addEventListener("click", function () {
+      if (countChecked(doc, "[data-meta-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("meta"), blob({ company: true, appStillFacebook: true, date: "2021-10-28" }));
       feedback("Company leftover · " + key("meta"), st);
       reveal(doc);
@@ -190,67 +209,28 @@
 
   function bootClub(doc) {
     var trap = doc.querySelector("[data-ch-trap]");
-    var go = doc.querySelector("[data-ch-go]");
     var st = doc.querySelector("[data-ch-status]");
-    if (trap) {
-      trap.addEventListener("click", function () {
-        feedback("Clubhouse is not 2020 mass here. That click never writes.", st, { error: true });
-      });
-    }
-    if (!go) return;
-    go.addEventListener("click", function () {
-      var q = val(doc, "[data-ch-field]");
-      if (!q || q.length < 2) {
-        feedback("Type invite leftover first.", st, { error: true });
-        return;
-      }
-      saveJSON(key("pop3-clubhouse"), blob({ q: q.slice(0, 80), pop: "clubhouse" }));
-      feedback("Clubhouse leftover · " + key("pop3-clubhouse"), st);
-      reveal(doc);
+    if (!trap) return;
+    trap.addEventListener("click", function () {
+      feedback("Clubhouse is not 2020 mass here. That click never writes.", st, { error: true });
     });
   }
 
   function bootNft(doc) {
     var trap = doc.querySelector("[data-nft-mint]");
-    var go = doc.querySelector("[data-nft-go]");
     var st = doc.querySelector("[data-nft-status]");
-    if (trap) {
-      trap.addEventListener("click", function () {
-        feedback("No mint. No wallet. That click never writes.", st, { error: true });
-      });
-    }
-    if (!go) return;
-    go.addEventListener("click", function () {
-      var q = val(doc, "[data-nft-field]");
-      if (!q || q.length < 2) {
-        feedback("Type a leftover note first.", st, { error: true });
-        return;
-      }
-      saveJSON(key("pop3-nft"), blob({ q: q.slice(0, 80), pop: "nft" }));
-      feedback("NFT literacy leftover · " + key("pop3-nft"), st);
-      reveal(doc);
+    if (!trap) return;
+    trap.addEventListener("click", function () {
+      feedback("No mint. No wallet. That click never writes.", st, { error: true });
     });
   }
 
   function bootSquid(doc) {
     var trap = doc.querySelector("[data-sq-netflix]");
-    var go = doc.querySelector("[data-sq-go]");
     var st = doc.querySelector("[data-sq-status]");
-    if (trap) {
-      trap.addEventListener("click", function () {
-        feedback("No Netflix dest. Print-only leftover. That click never writes.", st, { error: true });
-      });
-    }
-    if (!go) return;
-    go.addEventListener("click", function () {
-      var q = val(doc, "[data-sq-field]");
-      if (!q || q.length < 2) {
-        feedback("Type a leftover note first.", st, { error: true });
-        return;
-      }
-      saveJSON(key("pop3-squid"), blob({ q: q.slice(0, 80), pop: "squid" }));
-      feedback("Squid Game print leftover · " + key("pop3-squid"), st);
-      reveal(doc);
+    if (!trap) return;
+    trap.addEventListener("click", function () {
+      feedback("No Netflix dest. Print-only leftover. That click never writes.", st, { error: true });
     });
   }
 

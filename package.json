@@ -41,6 +41,7 @@
     "test:e2e:2022": "playwright test e2e/2022-mvp.spec.js e2e/2022-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2022 --workers=1",
     "test:e2e:2023": "playwright test e2e/2023-session-flows-real.spec.js e2e/2x-links-all-years.spec.js e2e/one-thing-per-year.spec.js --grep 2023 --workers=1",
     "test:e2e:2024": "playwright test e2e/2024-session-flows-real.spec.js e2e/2x-links-all-years.spec.js e2e/one-thing-per-year.spec.js --grep 2024 --workers=1",
+    "test:e2e:2025": "playwright test e2e/2025-session-flows-real.spec.js e2e/2x-links-all-years.spec.js e2e/one-thing-per-year.spec.js --grep 2025 --workers=1",
     "test:e2e:popular": "playwright test e2e/popular-flows-all-years.spec.js --workers=1",
     "test:e2e:3x3": "playwright test e2e/year-3x3.spec.js e2e/year-more-3x.spec.js --workers=1",
     "test:oss:gate": "node scripts/oss-visitor-gate.mjs",
@@ -59,6 +60,8 @@
     "test:e2e:1998-2000-4x": "playwright test e2e/1998-2000-4x-flows.spec.js --workers=1",
     "test:e2e:2x": "playwright test e2e/2x-links-all-years.spec.js --workers=2",
     "test:e2e:3g": "playwright test e2e/year-extra-cde.spec.js --workers=2",
+    "test:e2e:2g": "playwright test e2e/year-extra-fg.spec.js --workers=2",
+    "test:e2e:2g2": "playwright test e2e/year-extra-hi.spec.js --workers=2",
     "test:e2e:2001": "playwright test e2e/2001-mvp.spec.js e2e/2001-flows.spec.js e2e/2001-densify.spec.js e2e/2001-buttons.spec.js e2e/2001-trail-real-flows.spec.js e2e/2001-5x-live.spec.js --workers=1",
     "test:e2e:2002": "playwright test e2e/2002-mvp.spec.js e2e/2002-flows.spec.js e2e/2002-densify.spec.js e2e/2002-trail-real-flows.spec.js e2e/2002-buttons.spec.js e2e/2002-5x-live.spec.js --workers=1",
     "test:e2e:2003": "playwright test e2e/2003-mvp.spec.js e2e/2003-flows.spec.js e2e/2003-densify.spec.js e2e/2003-trail-real-flows.spec.js e2e/2003-buttons.spec.js e2e/2003-live-flows.spec.js e2e/2003-5x-live.spec.js --workers=1",
@@ -77,7 +80,7 @@
     "test:e2e:5x-all": "playwright test e2e/1994-5x-live.spec.js e2e/1995-5x-live.spec.js e2e/1996-5x-live.spec.js e2e/1997-5x-live.spec.js e2e/1998-5x-live.spec.js e2e/1999-5x-live.spec.js e2e/2000-5x-live.spec.js e2e/2001-5x-live.spec.js e2e/2002-5x-live.spec.js e2e/2003-5x-live.spec.js e2e/2004-5x-live.spec.js e2e/2005-5x-live.spec.js e2e/2006-5x-live.spec.js e2e/2008-5x-live.spec.js --workers=1",
     "test:e2e:5x-recheck": "playwright test e2e/5x-all-years-recheck.spec.js --workers=2",
     "test:e2e:gold-a": "playwright test e2e/gold-a-leftover-pack.spec.js e2e/one-thing-per-year.spec.js e2e/flow-maps.spec.js --workers=1",
-    "test:e2e:atlas": "playwright test e2e/atlas.spec.js --workers=1"
+    "test:e2e:atlas": "playwright test e2e/atlas.spec.js e2e/atlas-all-flows.spec.js --workers=1"
   },
   "engines": {
     "node": ">=18"

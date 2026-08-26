@@ -5,6 +5,8 @@
 **Clone shape:** live `years/2023/` (Plus · Chrome habit · lean).  
 **2× leftover packs:** [`2024-2X-LEFTOVER-RESEARCH-2026-08-24.md`](2024-2X-LEFTOVER-RESEARCH-2026-08-24.md) · 18 writers · [`2024-2X-LEFTOVER-PACK2-RESEARCH-2026-08-24.md`](2024-2X-LEFTOVER-PACK2-RESEARCH-2026-08-24.md) · +18 = **36**.  
 **What’s left after this pass:** [`WHAT-IS-LEFT-AFTER-2024-2X-RESEARCH-FREEZE-2026-08-24.md`](WHAT-IS-LEFT-AFTER-2024-2X-RESEARCH-FREEZE-2026-08-24.md) (2023 2× · thin years · 1994 extra-a).  
+**Execute bible:** [`2024-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2024-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md)  
+**4k-web visit:** [`2021-2024-4K-WEB-BLOG-VISIT-2026-08-26.md`](2021-2024-4K-WEB-BLOG-VISIT-2026-08-26.md)  
 **Git only if asked.**
 
 ## One line

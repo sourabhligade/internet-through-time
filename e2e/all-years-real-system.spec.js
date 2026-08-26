@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every year 1994–2018.
+ * REAL-flow system gate — every ship year (1994–2018 minus 2005–2007 wiped).
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -30,8 +30,6 @@ const YEARS = [
   '2002',
   '2003',
   '2004',
-  '2005',
-  '2006',
   '2008',
 ];
 
@@ -194,7 +192,7 @@ test.describe('REAL system product samples', () => {
       .toBeGreaterThan(0);
   });
 
-  test('2005 YouTube empty title blocked; titled upload writes', async ({ page }) => {
+  test.skip('2005 YouTube empty title blocked; titled upload writes', async ({ page }) => {
     await page.goto('/years/2005/sites/youtube/upload.html');
     await page.evaluate(() => {
       try {

@@ -100,17 +100,18 @@ async function completeMinute(frame, page) {
     for (const x of orders) await items.nth(x.i).click();
   } else {
     await frame.locator("[data-mx-good]").first().waitFor({ timeout: 8000 });
-    const goods = frame.locator("[data-mx-good]");
-    const n = await goods.count();
-    for (let i = 0; i < n; i++) {
-      await killOverlays(page);
-      await goods.nth(i).click({ force: true });
-    }
+    await frame.locator("[data-mx-good]").first().evaluate(() => {
+      const nodes = document.querySelectorAll("[data-mx-good]");
+      for (let i = 0; i < nodes.length; i++) {
+        if (nodes[i].getAttribute("data-mx-used") === "1") continue;
+        nodes[i].click();
+      }
+    });
   }
 
   const confirmNeed = (await host.getAttribute("data-mx-confirm-need")) || "";
   if (confirmNeed) {
-    const box = frame.locator("[data-mx-confirm]");
+    const box = frame.locator("[data-mx-confirm]").first();
     await box.fill(confirmNeed);
     await box.dispatchEvent("input");
   }

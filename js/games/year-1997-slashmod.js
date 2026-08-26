@@ -1,13 +1,11 @@
 /**
- * Slashdot mod — 1997 G4
- * Class: +1/−1
+ * Slash Mod — 1997 extra (2-more pack)
  * Key: itt97-game-slashmod
- * Engine: year-pack-boot.js (taps + optional phrase + optional wait).
- * Incomplete never writes. Museum original · no commercial SWF.
+ * Mounts year-more-kit.js from host data-*. Incomplete never writes.
  */
 (function () {
   "use strict";
-  var host = document.querySelector('[data-year-game][data-game-id="slashmod"]');
+  var host = document.querySelector('[data-year-game][data-more-game][data-game-id="slashmod"]');
   if (!host) return;
-  host.setAttribute("data-5x-pack", "1");
+  host.setAttribute("data-2g-engine", "1");
 })();

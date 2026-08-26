@@ -378,6 +378,18 @@
       {"n": 8, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt24-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
       {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt24-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Omni Dash"},
       {"n": 10, "name": "Omni Dash", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt24-game-omni", "nextHref": "sites/chatgpt/4o.html", "nextLabel": "GPT-4o"}
+    ],
+    "2025": [
+      {"n": 1, "name": "DeepSeek R1 Think", "href": "sites/deepseek/r1.html", "match": "/deepseek/r1", "whenKey": "itt25-r1", "nextHref": "sites/operator/index.html", "nextLabel": "Operator leftover"},
+      {"n": 2, "name": "Operator leftover", "href": "sites/operator/index.html", "match": "/operator/", "whenKey": "itt25-operator", "nextHref": "sites/o3mini/index.html", "nextLabel": "o3-mini leftover"},
+      {"n": 3, "name": "o3-mini leftover", "href": "sites/o3mini/index.html", "match": "/o3mini/", "whenKey": "itt25-o3mini", "nextHref": "sites/gpt45/index.html", "nextLabel": "GPT-4.5 leftover"},
+      {"n": 4, "name": "GPT-4.5 leftover", "href": "sites/gpt45/index.html", "match": "/gpt45/", "whenKey": "itt25-gpt45", "nextHref": "sites/grok3/index.html", "nextLabel": "Grok 3 leftover"},
+      {"n": 5, "name": "Grok 3 leftover", "href": "sites/grok3/index.html", "match": "/grok3/", "whenKey": "itt25-grok3", "nextHref": "sites/claude4/index.html", "nextLabel": "Claude 4 leftover"},
+      {"n": 6, "name": "Claude 4 leftover", "href": "sites/claude4/index.html", "match": "/claude4/", "whenKey": "itt25-claude4", "nextHref": "sites/gemini25/index.html", "nextLabel": "Gemini 2.5 leftover"},
+      {"n": 7, "name": "Gemini 2.5 leftover", "href": "sites/gemini25/index.html", "match": "/gemini25/", "whenKey": "itt25-gemini25", "nextHref": "sites/playable/game.html", "nextLabel": "Think Dash"},
+      {"n": 8, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt25-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
+      {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt25-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Think Dash"},
+      {"n": 10, "name": "Think Dash", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt25-game-think", "nextHref": "sites/deepseek/r1.html", "nextLabel": "DeepSeek R1"}
     ]
   };
 })(typeof window !== "undefined" ? window : this);

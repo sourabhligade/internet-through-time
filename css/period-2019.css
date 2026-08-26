@@ -4,22 +4,83 @@
   --itt-desktop-bg: #0078d7;
 }
 
+.dplus19-stage {
+  min-height: 100vh;
+  background: #0b0b0d;
+  color: #f5f5f7;
+  padding: 20px 12px 48px;
+}
+.dplus19-well {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #f5f5f7;
+  font-family: "Segoe UI", Avenir, Helvetica, Arial, sans-serif;
+}
+.dplus19-wordmark {
+  letter-spacing: 0.28em;
+  font-weight: 800;
+  font-size: 13px;
+  color: #e50914;
+  margin: 0 0 6px;
+}
 .dplus19-grid {
   display: flex;
-  gap: 12px;
-  margin: 12px 0;
+  gap: 16px;
+  margin: 18px 0;
   flex-wrap: wrap;
 }
 .dplus19-grid button {
-  min-width: 120px;
-  min-height: 88px;
+  min-width: 148px;
+  min-height: 168px;
   background: #1a1a1a;
   color: #f5f5f7;
-  border: 1px solid #444;
+  border: 1px solid #2a2a2a;
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px;
+  letter-spacing: 0.04em;
+}
+.dplus19-face {
+  width: 88px;
+  height: 88px;
+  margin: 0 0 12px;
+  border-radius: 4px;
+  background: linear-gradient(160deg, #3a3a3a, #161616);
+}
+.dplus19-grid button[data-dplus-profile="kids"] .dplus19-face {
+  background: linear-gradient(160deg, #1b4f72, #0b1d36);
 }
 .dplus19-grid button.is-on { outline: 2px solid #e50914; }
-.dplus19-grid button[data-dplus-profile="kids"] { background: #1b4f72; }
+.dplus19-grid button[data-dplus-profile="kids"] { background: #121820; }
+.dplus19-shelf {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.dplus19-shelf [data-dplus-add] {
+  min-width: 120px;
+  min-height: 72px;
+  background: #1c1c1c;
+  color: #f5f5f7;
+  border: 1px solid #333;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+}
+.dplus19-shelf [data-dplus-add]:after {
+  content: " + Continue";
+  display: block;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 6px;
+}
+.dplus19-honesty { margin: 10px 0; font-size: 12px; color: #ccc; }
 .dplus19-trial {
   background: #e50914;
   color: #fff;

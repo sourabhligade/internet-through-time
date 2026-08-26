@@ -8,6 +8,14 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/extra-i.html",
+    "sites/playable/extra-h.html",
+    "sites/playable/extra-g.html",
+    "sites/playable/extra-f.html",
+    "sites/cohere/index.html",
+    "sites/jasper/index.html",
+    "sites/runwaygen1/index.html",
+    "sites/stabilityhq/index.html",
     "sites/bereal/about.html",
     "sites/mastodon/about.html",
     "sites/facebook/about.html",

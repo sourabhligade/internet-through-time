@@ -466,6 +466,11 @@
       "immersion/no-mock-common.js",
       "immersion/year-2024-extras.js",
       "immersion/one-thing-machines.js"
+    ],
+    "2025": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2025-extras.js",
+      "immersion/one-thing-machines.js"
     ]
   };
 

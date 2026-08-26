@@ -928,5 +928,35 @@
     "kind": "parlor",
     "title": "Sora Note",
     "next": "/years/2024/sites/playable/game.html"
+  },
+  {
+    "year": "2025",
+    "role": "c",
+    "path": "/years/2025/sites/playable/extra-c.html",
+    "key": "itt25-game-thinkwait",
+    "id": "thinkwait",
+    "kind": "quiz",
+    "title": "Think Wait",
+    "next": "/years/2025/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2025",
+    "role": "d",
+    "path": "/years/2025/sites/playable/extra-d.html",
+    "key": "itt25-game-opask",
+    "id": "opask",
+    "kind": "parlor",
+    "title": "Operator Ask",
+    "next": "/years/2025/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2025",
+    "role": "e",
+    "path": "/years/2025/sites/playable/extra-e.html",
+    "key": "itt25-game-r1note",
+    "id": "r1note",
+    "kind": "hold",
+    "title": "R1 Note",
+    "next": "/years/2025/sites/playable/game.html"
   }
 ]

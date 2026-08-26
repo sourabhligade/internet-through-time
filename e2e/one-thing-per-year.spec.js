@@ -325,6 +325,8 @@ const THINGS = [
       await page.locator("[data-att-allow]").click();
     },
     complete: async (page) => {
+      await page.locator("[data-att-req]").nth(0).check();
+      await page.locator("[data-att-req]").nth(1).check();
       await page.locator("[data-att-ask]").click();
     },
   },
@@ -368,6 +370,21 @@ const THINGS = [
       const n = await reqs.count();
       for (let i = 0; i < n; i++) await reqs.nth(i).check();
       await page.locator("[data-4o-go]").click();
+    },
+  },
+  {
+    year: "2025",
+    path: "/years/2025/sites/deepseek/r1.html",
+    key: "itt25-r1",
+    incomplete: async (page) => {
+      await page.locator("[data-r1-go]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-r1-pick="r1"]').click();
+      const reqs = page.locator("[data-r1-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-r1-go]").click();
     },
   },
 ];

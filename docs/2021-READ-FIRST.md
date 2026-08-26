@@ -15,6 +15,8 @@
 | [`2021-CHECK-EVERY-FLOW-MAP.md`](2021-CHECK-EVERY-FLOW-MAP.md) | **Visitor check walk** — trap · save · key · Next |
 | [`2021-4K-WEB-FLOW-MAP.md`](2021-4K-WEB-FLOW-MAP.md) | **Walkable 4k diagram** — envelope · NEVER |
 | [`2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2021-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | **Execute bible** — goals · phases · minute · e2e |
+| [`2021-FROM-DISK-LOCK-IMPLEMENT-MINUTE-2026-08-26.md`](2021-FROM-DISK-LOCK-IMPLEMENT-MINUTE-2026-08-26.md) | **This lock pass** — ATT ticks · Copilot waitlist · no ChatGPT |
+| [`2021-2024-4K-WEB-BLOG-VISIT-2026-08-26.md`](2021-2024-4K-WEB-BLOG-VISIT-2026-08-26.md) | **4k-web blog visit** — ILS · Netcraft · ITU · Copilot · GPT-4o |
 | Parent live year | `years/2020/` · `itt20` · Zoom mute → Leave |
 
 **Legal:** Educational. `localStorage` only. Never invent brand pixels. No Apple ATT screenshot. No Facebook / Meta wordmark. No GitHub Copilot official UI. No NYT Wordle tiles. **No ChatGPT dest** (30 Nov **2022**).

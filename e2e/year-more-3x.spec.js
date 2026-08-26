@@ -8,7 +8,7 @@ const { test, expect } = require("@playwright/test");
 const WIPED = new Set(["2005", "2006", "2007"]);
 
 test.describe("3 more leftovers on home — every shipped year", () => {
-  for (let y = 1994; y <= 2024; y++) {
+  for (let y = 1994; y <= 2025; y++) {
     const year = String(y);
     if (WIPED.has(year)) continue;
     test(`${year} home lists 3 more leftover doors`, async ({ page }) => {

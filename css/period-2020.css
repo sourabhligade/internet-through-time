@@ -4,14 +4,78 @@
   --itt-desktop-bg: #0078d7;
 }
 
+.z20-meet {
+  max-width: 720px;
+  margin: 12px auto 24px;
+  background: #1a1a1a;
+  color: #eee;
+  font-family: Segoe UI, Arial, sans-serif;
+  border: 1px solid #2a2a2a;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+.z20-top {
+  padding: 8px 12px;
+  background: #111;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+}
+.z20-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px;
+  flex: 1;
+  background: #0d0d0d;
+}
+.z20-tile {
+  background: #242424;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 12px;
+  position: relative;
+}
+.z20-tile b {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 18px;
+}
+.z20-bar {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #1f1f1f;
+  border-top: 1px solid #333;
+}
+.z20-chatdock {
+  padding: 8px 12px 12px;
+  background: #161616;
+  border-top: 1px solid #333;
+}
+.z20-chatdock form { display: flex; gap: 6px; }
+.z20-chatdock input { flex: 1; padding: 7px 8px; border: 1px solid #444; background: #222; color: #eee; }
 .z20-well {
-  max-width: 520px;
+  max-width: 720px;
   margin: 16px auto;
   font-family: Segoe UI, Arial, sans-serif;
   font-size: 13px;
   background: #1a1a1a;
   color: #eee;
-  padding: 16px;
+  padding: 0;
   border: 1px solid #333;
 }
 .z20-well a { color: #8ec8ff; }

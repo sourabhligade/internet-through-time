@@ -20,6 +20,11 @@
 .itt-recon-gold[data-recon="gdpr"] { background: #1565c0; color: #fff; border-color: #0d47a1; }
 .itt-recon-gold[data-recon="dplus"] { background: #0b1d36; color: #f4e4c1; border-color: #c9a227; }
 .itt-recon-gold[data-recon="zoom"] { background: #2d8cff; color: #fff; border-color: #0b5cad; }
+.itt-recon-gold[data-recon="att"] { background: #f2f2f7; color: #111; border-color: #007aff; }
+.itt-recon-gold[data-recon="chatgpt"] { background: #10a37f; color: #fff; border-color: #0b6b52; }
+.itt-recon-gold[data-recon="chatgpt-plus"] { background: #5436da; color: #fff; border-color: #2d1b8f; }
+.itt-recon-gold[data-recon="gpt4o"] { background: #111; color: #10a37f; border-color: #10a37f; }
+.itt-recon-gold[data-recon="r1"] { background: #0e1116; color: #8ab4f8; border-color: #8ab4f8; }
 
 .itt-mass-honesty {
   font-family: Arial, Helvetica, sans-serif;

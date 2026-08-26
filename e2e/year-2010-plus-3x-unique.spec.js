@@ -7,7 +7,7 @@
 const { test, expect } = require("@playwright/test");
 
 const YEARS = [];
-for (let y = 1994; y <= 2024; y++) {
+for (let y = 1994; y <= 2025; y++) {
   if (y === 2005 || y === 2006 || y === 2007 || y === 2014) continue;
   YEARS.push(String(y));
 }
