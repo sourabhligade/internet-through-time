@@ -56,6 +56,13 @@
     return false;
   }
 
+  function isGap(year) {
+    var list = data.gapYears || [];
+    var i;
+    for (i = 0; i < list.length; i++) if (list[i] === year) return true;
+    return false;
+  }
+
   function isLean(year) {
     var list = data.leanYears || [];
     var i;
@@ -247,7 +254,7 @@
     function door(yr) {
       rec = (data.years && data.years[yr]) || {};
       open = isOpen(yr);
-      wiped = !!rec.wiped;
+      wiped = !!rec.wiped || isGap(yr);
       stamp = open && stamped(yr);
       cls = "spine-year";
       if (open) cls += " open";
@@ -309,15 +316,15 @@
     var html = "";
     var guided, wander, stops, branches, games, twoX, pop, trio, ths, trs, i, b, sites;
 
-    if (rec.wiped) {
+    if (rec.wiped || isGap(year)) {
       html =
         "<h2>" +
         esc(year) +
         " · wiped</h2><p class='era'>" +
         esc((wing && wing.label) || "Boarded") +
         "</p><p>" +
-        esc(rec.thesis) +
-        "</p><p class='muted'>Not on disk. The lean door was mock. Rebuild from scratch later.</p>";
+        esc(rec.thesis || (data.notThisYear && data.notThisYear[year]) || "Off disk for a from-scratch rebuild.") +
+        "</p><p class='muted'>Not on disk. Rebuild from scratch later.</p>";
       panel.innerHTML = html;
       panel.hidden = false;
       return;

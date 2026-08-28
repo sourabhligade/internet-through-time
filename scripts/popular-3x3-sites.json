@@ -753,35 +753,6 @@
       "btn": "Open leftover"
     }
   ],
-  "2020": [
-    {
-      "id": "acnh",
-      "name": "ACNH",
-      "title": "ACNH leftover",
-      "why": "20 Mar 2020 leftover third trio. Not the chip.",
-      "verb": "Pick island then go.",
-      "ph": "island",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "astro",
-      "name": "Astronomical",
-      "title": "Astronomical leftover",
-      "why": "23–25 Apr 2020 leftover third trio. Not the chip.",
-      "verb": "Pick show then go.",
-      "ph": "astronomical",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "quibi",
-      "name": "Quibi",
-      "title": "Quibi leftover",
-      "why": "Apr–Oct 2020 leftover third trio. Not the chip.",
-      "verb": "Pick episode then go.",
-      "ph": "quibi",
-      "btn": "Open leftover"
-    }
-  ],
   "2021": [
     {
       "id": "clubhouse",
@@ -837,6 +808,35 @@
       "why": "Magic Avatars 28 Nov 2022. Prisma 2018 app. Not the chip.",
       "verb": "Pick leftover then go.",
       "ph": "avatar leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2023": [
+    {
+      "id": "reddit",
+      "name": "Reddit leftover",
+      "title": "Reddit leftover",
+      "why": "12–14 Jun 2023 API blackout leftover. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "api leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "dalle3",
+      "name": "DALL·E 3 leftover",
+      "title": "DALL·E 3 leftover",
+      "why": "20 Sep 2023 announce. October Plus. No live image. Sora is 2024.",
+      "verb": "Pick leftover then go.",
+      "ph": "dalle 3 leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "bluesky",
+      "name": "Bluesky leftover",
+      "title": "Bluesky leftover",
+      "why": "2023 invite leftover. Not Threads. Not X.",
+      "verb": "Pick leftover then go.",
+      "ph": "bluesky leftover",
       "btn": "Open leftover"
     }
   ]

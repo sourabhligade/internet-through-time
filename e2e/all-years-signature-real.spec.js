@@ -265,13 +265,16 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     await requireKey(page, 'itt04-gmail', /you@college|college\.edu/i);
   });
 
-  test.skip('2005 YouTube upload → itt05-yt-uploads', async ({ page }) => {
+  test('2005 YouTube upload → itt05-yt-uploads', async ({ page }) => {
     await enterYear(page, '2005');
     await clearPrefix(page, 'itt05-yt');
     await goImmersion(page, '2005', 'sites/youtube/upload.html');
     const frame = contentFrame(page);
     const title = 'AllYearYT ' + Date.now();
     await frame.locator('[data-yt-upload] [name="title"]').fill(title);
+    const ticks = frame.locator('[data-yt-upload] [data-yt-req]');
+    const n = await ticks.count();
+    for (let i = 0; i < n; i++) await ticks.nth(i).check();
     await frame.locator('[data-yt-upload] button[type="submit"]').first().click();
     await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload|list|videos/i, {
       timeout: 10000,
@@ -281,19 +284,20 @@ test.describe('all-years signature REAL · 2000s boom', () => {
 });
 
 test.describe('all-years signature REAL · late web', () => {
-  test.skip('2006 Twitter post → itt06-tweets', async ({ page }) => {
+  test('2006 Twitter post → itt06-tweets', async ({ page }) => {
     await enterYear(page, '2006');
     await clearPrefix(page, 'itt06-tweets');
     await goImmersion(page, '2006', 'sites/twitter/index.html');
     const frame = contentFrame(page);
-    const form = frame.locator('form[data-twitter-compose]');
-    await expect(form).toBeVisible({ timeout: 15000 });
-    await form.locator('button[type="submit"]').click();
+    const post = frame.locator('[data-tw06-post]');
+    await expect(post).toBeVisible({ timeout: 15000 });
+    await post.click();
     await page.waitForTimeout(80);
     expect(await page.evaluate(() => localStorage.getItem('itt06-tweets'))).toBeFalsy();
-    const text = 'AllYear tweet ' + Date.now();
-    await form.locator('[name="status"]').fill(text);
-    await form.locator('button[type="submit"]').click();
+    await frame.locator('[data-tw06-req]').nth(0).check();
+    await frame.locator('[data-tw06-req]').nth(1).check();
+    await frame.locator('[data-tw06-body]').fill('AllYear tweet museum');
+    await post.click();
     await requireKey(page, 'itt06-tweets');
   });
 

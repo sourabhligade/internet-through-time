@@ -970,6 +970,7 @@
     "bookmarksTitle": "Favorites",
     "mailPh": "friend@aol.com",
     "hasTaskbar": true,
+    "startImg": "../../assets/period/2005/xp/start.gif",
     "maximized": true
   },
   "2006": {
@@ -990,8 +991,8 @@
         "label": "Twitter"
       },
       {
-        "go": "sites/facebook/index.html",
-        "label": "Facebook"
+        "go": "sites/facebook/feed.html",
+        "label": "News Feed"
       },
       {
         "go": "sites/youtube/index.html",
@@ -1006,12 +1007,8 @@
         "label": "Docs"
       },
       {
-        "go": "sites/myspace/index.html",
-        "label": "MySpace"
-      },
-      {
-        "go": "sites/google/index.html",
-        "label": "Google"
+        "go": "sites/playable/game.html",
+        "label": "TrailSled"
       }
     ],
     "chrome": "2006",

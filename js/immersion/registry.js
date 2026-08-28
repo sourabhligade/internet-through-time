@@ -87,6 +87,7 @@
     "immersion/leftover-official.js",
     "immersion/year-4x-flows.js",
     "immersion/official-dest-gold.js",
+    "immersion/official-verb.js",
     "immersion/flow-map.js",
     "immersion/year-playable.js",
     "config/year-extra-games.js",
@@ -288,6 +289,7 @@
       "immersion/source-flows.js"
     ],
     "2006": [
+      "immersion/year-2006-extras.js",
       "immersion/amazon.js",
       "immersion/auction.js",
       "immersion/geocities.js",
@@ -442,11 +444,6 @@
       "immersion/year-2019-extras.js",
       "immersion/one-thing-machines.js"
     ],
-    "2020": [
-      "immersion/no-mock-common.js",
-      "immersion/year-2020-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
     "2021": [
       "immersion/no-mock-common.js",
       "immersion/year-2021-extras.js",
@@ -460,16 +457,6 @@
     "2023": [
       "immersion/no-mock-common.js",
       "immersion/year-2023-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
-    "2024": [
-      "immersion/no-mock-common.js",
-      "immersion/year-2024-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
-    "2025": [
-      "immersion/no-mock-common.js",
-      "immersion/year-2025-extras.js",
       "immersion/one-thing-machines.js"
     ]
   };

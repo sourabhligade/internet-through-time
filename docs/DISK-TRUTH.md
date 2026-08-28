@@ -1,17 +1,20 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-08-24 · **Ship update:** hub **28 years open** · **1994–2024 minus 2005–2007 wiped** · **2023** ChatGPT Plus $20 · **2024** GPT-4o Talk · museum ends **2024**
+**Date:** 2026-08-27 · **Ship update:** hub **28 years open** · **1994–2023 minus 2007 and 2020 wiped** · **2024–2025 wiped** · **2006** Twitter 140 · **2021** ATT Ask · **2022** ChatGPT Send · **2023** ChatGPT Plus · **2005** YouTube upload (full year)
 
-**This file appends older ship cards.** When a later section contradicts the header + live tree + `SHIP_YEARS`, **live tree + `SHIP_YEARS` win**. Rebuild 2005–2007 later — do not `git checkout` those trees.
+**This file appends older ship cards.** When a later section contradicts the header + live tree + `SHIP_YEARS`, **live tree + `SHIP_YEARS` win**. Rebuild **2007** later — do not `git checkout` that forest.
 
-| Year | Disk now (2026-08-24) |
+| Year | Disk now (2026-08-27) |
 |------|------------------------|
-| **1994–2004 · 2008–2024** | **Live** (28 years) |
-| **2005 / 2006 / 2007** | **Wiped** — hub cards locked · no year trees |
-| **2023** | **Live lean door** — Plus $20 · 2× pack 1 (18) |
-| **2024** | **Live lean door** — GPT-4o Talk · 2× packs (36) |
+| **1994–2006 · 2008–2019 · 2021–2023** | **Live** (28 years) |
+| **2007** | **Wiped** — hub card locked · no year tree |
+| **2020 · 2024–2025** | **Wiped** — hub cards locked · no year trees · rebuild later |
+| **2005** | **Live full year** — YouTube upload · Maps / Reddit / Digg leftover |
+| **2006** | **Live lean door** — Twitter 140 · News Feed leftover · 51 2× rows |
+| **2017–2019** | **Live lean doors** — Face ID / GDPR / Disney+ · leftover 2× 75 / 73 / 79 |
+| **2021–2022** | **Live lean doors** — ATT Ask / ChatGPT Send · leftover 2× 83 / 83 |
 | **2008** | Still a dense forest |
-| **2009 / 2011 / 2013–2022** | Lean doors |
+| **2006 / 2009 / 2011 / 2013–2019** | Lean doors |
 
 **Research:** [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · master bible · deep harvest  
 **Museum-grade A gap map:** [`MUSEUM-GRADE-GAP-MAP-1994-2016.md`](MUSEUM-GRADE-GAP-MAP-1994-2016.md)  
@@ -35,7 +38,7 @@
 | 2017 | lean Face ID door | Face ID `itt17-faceid` | Face ID · Fortnite | **A−** |
 | 2018 | lean GDPR door | GDPR `itt18-gdpr` | GDPR | **A−** |
 | 2019 | lean Disney+ door | Disney+ Continue `itt19-disneyplus` | Disney+ · TikTok | **A−** |
-| 2020 | **live lean door** | Zoom mute `itt20-zoom` | Zoom · Reels leftover | **A−** on hub |
+| 2020 | **wiped** | — | — | boarded · rebuild later |
 | 2021 | **live lean door** | ATT Ask `itt21-att` | ATT · Signal leftover | **A−** on hub |
 | 2022 | **live lean door** | ChatGPT Send `itt22-chatgpt` | ChatGPT · Twitter leftover | **A−** on hub |
 
@@ -69,15 +72,15 @@
 
 | Item | Status |
 |------|--------|
-| Hub open years | **1994–2022** (29 years) |
-| Hub locked | **2023** (not on disk) · **2024+** (not on disk) |
-| Year trees | `years/1994/` … `years/2022/` |
-| Period CSS | `css/period-1995.css` … `period-2022.css` (lean-door CSS stay as import bridges) |
-| HTML on disk | 1994–2022 live · **2007 / 2009 / 2011 / 2013–2022 lean doors** · **2023+ not on disk** |
+| Hub open years | **1994–2023 minus 2007 and 2020** (28 years) |
+| Hub locked | **2007 · 2020 · 2024–2025** (not on disk) |
+| Year trees | `years/1994/` … `years/2022/` except **2007** and **2020** |
+| Period CSS | `css/period-1995.css` … `period-2022.css` (lean-door CSS stay as import bridges; no period-2020) |
+| HTML on disk | 27 live years · **2006 / 2009 / 2011 / 2013–2019 / 2021 / 2022 lean doors** |
 | **2010** | **Live · lean from-scratch** · ~22 rooms · star Instagram iOS · `itt10-*` · `e2e/2010-mvp.spec.js` |
 | **2011** | **Live · lean door** · Google+ · Spotify US · Siri · `itt11-*` · `e2e/2011-mvp.spec.js` |
 | **2012** | **Live · lean from-scratch** · Instagram Android + $1B · IPO $38 · `itt12-*` · `e2e/2012-mvp.spec.js` |
-| **2013+** | **2013–2022 lean doors** · **2023+ not on disk** |
+| **2013+** | **2013–2023 lean doors** · **2024+ not on disk** |
 
 ### 2016 (lean from-scratch · playable)
 
@@ -141,9 +144,13 @@ Hub includes **2021**. Star = ATT Ask App Not to Track · `itt21-att`. Allow nev
 
 Hub includes **2022**. Star = ChatGPT Send · `itt22-chatgpt`. Empty / Plus / GPT-4 / Bing Chat never write. Game = Prompt Box. See [`2022-READ-FIRST.md`](2022-READ-FIRST.md).
 
-### 2023+ — not on disk
+### 2023 — lean ChatGPT Plus door (this branch)
 
-**2023+ are not playable.** No hub cards. Plus / GPT-4 / Bing Chat / Threads / X stay next year. Do not scaffold a forest.
+Hub includes **2023**. Star = ChatGPT Plus Subscribe · `itt23-plus`. GPT-4 / Bing Chat / live charge never write. Game = Plus Queue. See [`2023-READ-FIRST.md`](2023-READ-FIRST.md).
+
+### 2024+ — not on disk
+
+**2024–2025 are not playable.** No hub cards. GPT-4o / Sora stay next year. Do not restore a wiped forest.
 
 ### 2019 leftover forest notes (do not restore)
 

@@ -469,8 +469,9 @@
         })(phases[pi]);
       }
 
-      // Hold blank iframe until most of the wait is done — that empty throbber IS the memory
-      var startAt = totalDelay <= 0 ? 0 : Math.floor(totalDelay * 0.35);
+      // Text-first: start the document after host-contacted, then drip images.
+      // A long blank iframe is the memory; a complete swap-in is not.
+      var startAt = totalDelay <= 0 ? 0 : Math.floor(totalDelay * 0.18);
       loadTimer = window.setTimeout(function () {
         loadTimer = null;
         if (gen !== loadGen) return;

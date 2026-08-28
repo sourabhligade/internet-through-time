@@ -33,6 +33,8 @@
     "sites/playable/extra-e.html",
     "sites/playable/extra-d.html",
     "sites/playable/extra-c.html",
+    "sites/gme/index.html",
+    "sites/epic/index.html",
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",

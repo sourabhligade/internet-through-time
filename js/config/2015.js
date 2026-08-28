@@ -8,6 +8,12 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/waweb/index.html",
+    "sites/titleii/index.html",
+    "sites/swiftoss/index.html",
+    "sites/instant/index.html",
+    "sites/agario/index.html",
+    "sites/secret/index.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -64,6 +70,9 @@
     "sites/meerkat/index.html",
     "sites/fblive/index.html",
     "sites/playable/game.html",
+    "sites/playable/game-5.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-3.html",
     "sites/playable/game-2.html",
     "sites/playable/extra-b.html",
     "sites/playable/extra-a.html",
@@ -137,6 +146,12 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2015/",
     locationHints: [
+      { re: /whatsapp.?web|web\.whatsapp/i, path: "sites/waweb/index.html" },
+      { re: /title.?ii|open.?internet|net.?neutrality/i, path: "sites/titleii/index.html" },
+      { re: /swift/i, path: "sites/swiftoss/index.html" },
+      { re: /instant.?article/i, path: "sites/instant/index.html" },
+      { re: /agar/i, path: "sites/agario/index.html" },
+      { re: /\bsecret\b/i, path: "sites/secret/index.html" },
       { re: /periscope|go.?live/i, path: "sites/periscope/index.html" },
       { re: /photos|google.?photos/i, path: "sites/googlephotos/index.html" },
       { re: /windows.?10|win10|gwx/i, path: "sites/windows10/index.html" },

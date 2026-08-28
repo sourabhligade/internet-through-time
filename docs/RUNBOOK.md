@@ -39,10 +39,19 @@ Workflow: `.github/workflows/ci.yml`
 
 | Job | Checks |
 |-----|--------|
-| **static** | FS smoke, link audit, authenticity, HTTP smoke |
-| **e2e** | `npm ci` + Playwright Chromium suite |
+| **static** | FS smoke, link audit, authenticity, pipeline, 5× contract, mock-flows, all-years, HTTP smoke |
+| **e2e** | OSS visitor gate + named Playwright **ship pack** (not `npm test` / not the full `e2e/` tree) |
 
 PRs and pushes to `main`/`master` run both jobs.
+
+## Traffic
+
+Static museum. No backend, no sessions, no API keys. A traffic spike is a CDN problem, not an application problem.
+
+- Netlify: `netlify.toml` (+ `_headers` for hosts that read it)
+- Vercel: `vercel.json`
+- GitHub Pages: no custom cache headers — prefer Netlify/Vercel for a public launch
+- Do not add a service worker (it would freeze year iframes on stale JS)
 
 ## E2. Post-deploy smoke
 

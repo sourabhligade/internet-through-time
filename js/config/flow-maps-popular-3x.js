@@ -32,7 +32,6 @@
     "2017": ["reddit|Reddit leftover", "youtube|YouTube leftover", "amazon|Amazon leftover"],
     "2018": ["reddit|Reddit leftover", "youtube|YouTube leftover", "wikipedia|Wikipedia leftover"],
     "2019": ["youtube|YouTube leftover", "instagram|Instagram leftover", "wikipedia|Wikipedia leftover"],
-    "2020": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
     "2021": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
     "2022": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"]
   };

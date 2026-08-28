@@ -173,7 +173,14 @@
       "title": "Maps drag",
       "href": "extra-b.html",
       "key": "itt05-game-mapdrag"
-    }
+    },
+    { "id": "boost", "title": "Reddit boost seq", "href": "extra-c.html", "key": "itt05-game-boost" },
+    { "id": "bury", "title": "Digg bury pick", "href": "extra-d.html", "key": "itt05-game-bury" },
+    { "id": "pod", "title": "iTunes subscribe", "href": "extra-e.html", "key": "itt05-game-pod" },
+    { "id": "hm", "title": "HousingMaps city", "href": "extra-f.html", "key": "itt05-game-hm" },
+    { "id": "radio", "title": "Pandora station", "href": "extra-g.html", "key": "itt05-game-radio" },
+    { "id": "tag", "title": "Flickr tag", "href": "extra-h.html", "key": "itt05-game-tag" },
+    { "id": "deli", "title": "delicious bookmark", "href": "extra-i.html", "key": "itt05-game-deli" }
   ],
   "2006": [
     {
@@ -300,6 +307,14 @@
       "href": "extra-b.html",
       "key": "itt19-game-trialtrap"
     }
+  ],
+  "2021": [
+    { "id": "attask", "title": "Ask drill", "href": "extra-a.html", "key": "itt21-extra-a" },
+    { "id": "ninety", "title": "90 users", "href": "extra-b.html", "key": "itt21-extra-b" }
+  ],
+  "2022": [
+    { "id": "sendbox", "title": "Send drill", "href": "extra-a.html", "key": "itt22-extra-a" },
+    { "id": "onemill", "title": "1 million", "href": "extra-b.html", "key": "itt22-extra-b" }
   ]
 };
   /* ITT-3G:start */
@@ -336,9 +351,7 @@
   ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'ntight',title:'Tight Jump',href:"extra-c.html",key:"itt04-game-ntight"});
   ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'addictpick',title:'Addicting Pick',href:"extra-d.html",key:"itt04-game-addictpick"});
   ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'puckslap',title:'Puck Slap',href:"extra-e.html",key:"itt04-game-puckslap"});
-  ;(ITT.yearExtraGames['2005'] = ITT.yearExtraGames['2005'] || []).push({id:'stickday',title:'Stick Life Day',href:"extra-c.html",key:"itt05-game-stickday"});
-  ;(ITT.yearExtraGames['2005'] = ITT.yearExtraGames['2005'] || []).push({id:'carttime',title:'Cart Timing',href:"extra-d.html",key:"itt05-game-carttime"});
-  ;(ITT.yearExtraGames['2005'] = ITT.yearExtraGames['2005'] || []).push({id:'shaftdig',title:'Shaft Dig',href:"extra-e.html",key:"itt05-game-shaftdig"});
+  /* 2005 extra-c/d/e already hold boost / bury / pod — do not collide hrefs */
   ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'kongbadge2',title:'Kong Badge',href:"extra-c.html",key:"itt06-game-kongbadge2"});
   ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'fancydash',title:'Fancy Dash',href:"extra-d.html",key:"itt06-game-fancydash"});
   ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'flowcell',title:'Flow Cell',href:"extra-e.html",key:"itt06-game-flowcell"});
@@ -381,24 +394,12 @@
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'rowextra',title:'Row Extra',href:"extra-c.html",key:"itt19-game-rowextra"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'stadiawait',title:'Stadia Wait',href:"extra-d.html",key:"itt19-game-stadiawait"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'arcadecard',title:'Arcade Card',href:"extra-e.html",key:"itt19-game-arcadecard"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'muteround',title:'Mute Round',href:"extra-c.html",key:"itt20-game-muteround"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'reel15',title:'Reel 15',href:"extra-d.html",key:"itt20-game-reel15"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'flashbrick',title:'Flash Brick',href:"extra-e.html",key:"itt20-game-flashbrick"});
   ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'sighandle',title:'Sig Handle',href:"extra-c.html",key:"itt21-game-sighandle"});
   ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'waitcop',title:'Wait Copilot',href:"extra-d.html",key:"itt21-game-waitcop"});
   ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'metanote',title:'Meta Note',href:"extra-e.html",key:"itt21-game-metanote"});
   ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'wordguess',title:'Word Guess',href:"extra-c.html",key:"itt22-game-wordguess"});
   ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'mastoinst',title:'Masto Inst',href:"extra-d.html",key:"itt22-game-mastoinst"});
   ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'bereal2',title:'BeReal Two',href:"extra-e.html",key:"itt22-game-bereal2"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'pluswait',title:'Plus Wait',href:"extra-c.html",key:"itt23-game-pluswait"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'bardask',title:'Bard Ask',href:"extra-d.html",key:"itt23-game-bardask"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'xnote',title:'X Note',href:"extra-e.html",key:"itt23-game-xnote"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'talkwait',title:'Talk Wait',href:"extra-c.html",key:"itt24-game-talkwait"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'gemask',title:'Gem Ask',href:"extra-d.html",key:"itt24-game-gemask"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'soranote',title:'Sora Note',href:"extra-e.html",key:"itt24-game-soranote"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'thinkwait',title:'Think Wait',href:"extra-c.html",key:"itt25-game-thinkwait"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'opask',title:'Operator Ask',href:"extra-d.html",key:"itt25-game-opask"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'r1note',title:'R1 Note',href:"extra-e.html",key:"itt25-game-r1note"});
   /* ITT-3G:end */
   /* ITT-2G:start */
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'fingerwho',title:'Finger Who',href:"extra-f.html",key:"itt94-game-fingerwho"});
@@ -447,18 +448,10 @@
   ;(ITT.yearExtraGames['2018'] = ITT.yearExtraGames['2018'] || []).push({id:'fypnote',title:'FYP Note',href:"extra-g.html",key:"itt18-game-fypnote"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'continue2',title:'Continue Two',href:"extra-f.html",key:"itt19-game-continue2"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'stadnote',title:'Stadia Note',href:"extra-g.html",key:"itt19-game-stadnote"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'mute2',title:'Mute Two',href:"extra-f.html",key:"itt20-game-mute2"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'flashnote',title:'Flash Note',href:"extra-g.html",key:"itt20-game-flashnote"});
   ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'ask2',title:'Ask Two',href:"extra-f.html",key:"itt21-game-ask2"});
   ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'copnote',title:'Copilot Note',href:"extra-g.html",key:"itt21-game-copnote"});
   ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'send2',title:'Send Two',href:"extra-f.html",key:"itt22-game-send2"});
   ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'plusnote',title:'Plus Note',href:"extra-g.html",key:"itt22-game-plusnote"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'subnote',title:'Sub Note',href:"extra-f.html",key:"itt23-game-subnote"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'bardnote',title:'Bard Note',href:"extra-g.html",key:"itt23-game-bardnote"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'talk2',title:'Talk Two',href:"extra-f.html",key:"itt24-game-talk2"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'gemnote',title:'Gem Note',href:"extra-g.html",key:"itt24-game-gemnote"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'think2',title:'Think Two',href:"extra-f.html",key:"itt25-game-think2"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'v3trap',title:'V3 Note',href:"extra-g.html",key:"itt25-game-v3trap"});
   /* ITT-2G:end */
   /* ITT-2G2:start */
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'gophermap',title:'Gopher Map',href:"extra-h.html",key:"itt94-game-gophermap"});
@@ -507,17 +500,5 @@
   ;(ITT.yearExtraGames['2018'] = ITT.yearExtraGames['2018'] || []).push({id:'hearingnote',title:'Hearing Note',href:"extra-i.html",key:"itt18-game-hearingnote"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'face2',title:'Face Two',href:"extra-h.html",key:"itt19-game-face2"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'arcnote',title:'Arcade Note',href:"extra-i.html",key:"itt19-game-arcnote"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'leave2',title:'Leave Two',href:"extra-h.html",key:"itt20-game-leave2"});
-  ;(ITT.yearExtraGames['2020'] = ITT.yearExtraGames['2020'] || []).push({id:'gpt3note',title:'GPT-3 Note',href:"extra-i.html",key:"itt20-game-gpt3note"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'dialog2',title:'Dialog Two',href:"extra-h.html",key:"itt21-game-dialog2"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'metanote2',title:'Meta Two',href:"extra-i.html",key:"itt21-game-metanote2"});
-  ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'box2',title:'Box Two',href:"extra-h.html",key:"itt22-game-box2"});
-  ;(ITT.yearExtraGames['2022'] = ITT.yearExtraGames['2022'] || []).push({id:'sdnote',title:'SD Note',href:"extra-i.html",key:"itt22-game-sdnote"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'twenty2',title:'Twenty Two',href:"extra-h.html",key:"itt23-game-twenty2"});
-  ;(ITT.yearExtraGames['2023'] = ITT.yearExtraGames['2023'] || []).push({id:'xnote2',title:'X Two',href:"extra-i.html",key:"itt23-game-xnote2"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'omni2b',title:'Omni Two B',href:"extra-h.html",key:"itt24-game-omni2b"});
-  ;(ITT.yearExtraGames['2024'] = ITT.yearExtraGames['2024'] || []).push({id:'soranote2',title:'Sora Two',href:"extra-i.html",key:"itt24-game-soranote2"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'r1two',title:'R1 Two',href:"extra-h.html",key:"itt25-game-r1two"});
-  ;(ITT.yearExtraGames['2025'] = ITT.yearExtraGames['2025'] || []).push({id:'opnote',title:'Op Note',href:"extra-i.html",key:"itt25-game-opnote"});
   /* ITT-2G2:end */
 })(typeof window !== "undefined" ? window : this);

@@ -319,18 +319,6 @@
       famous: "Continue Row",
       accent: "#e50914"
     },
-    "2020": {
-      id: "among",
-      title: "Sus Vote",
-      href: "game.html",
-      key: "itt20-game-among",
-      inspire: "Among Us surge — 2018 game, 2020 Steam peak; no official art",
-      blurb: "Eject is the save. Incomplete never writes.",
-      why: "The meeting is the star. The game is a 2018 leftover that exploded in September.",
-      era: "Lockdown tab. Participants, not users.",
-      famous: "Brick Bat + Concentration",
-      accent: "#2e86c1"
-    },
     "2021": {
       id: "five",
       title: "Five Letter",
@@ -356,40 +344,16 @@
       accent: "#10a37f"
     },
     "2023": {
-      id: "subscribe",
-      title: "Subscribe Dash",
+      id: "plusq",
+      title: "Plus Queue",
       href: "game.html",
-      key: "itt23-game-subscribe",
-      inspire: "Theater subscribe — not a live checkout · Plus is the gold dest",
+      key: "itt23-game-plusq",
+      inspire: "Plus queue theater — type twenty · no live charge · not Send",
       blurb: "Type twenty. Incomplete never writes.",
-      why: "Plus is the door. The game is a theater box, not Stripe.",
-      era: "Subscribe is the save. Gemini is next year.",
-      famous: "Brick Bat + Concentration",
-      accent: "#0e7a0d"
-    },
-    "2024": {
-      id: "omni",
-      title: "Omni Dash",
-      href: "game.html",
-      key: "itt24-game-omni",
-      inspire: "Theater omni — not a live model · 4o is the gold dest",
-      blurb: "Type omni. Incomplete never writes.",
-      why: "4o is the door. The game is a theater box.",
-      era: "Talk is the save. GPT-5 is next year.",
+      why: "Plus is the door. The game is a leftover queue, not a live card.",
+      era: "Subscribe Plus is the save. 4o is next year.",
       famous: "Brick Bat + Concentration",
       accent: "#10a37f"
-    },
-    "2025": {
-      id: "think",
-      title: "Think Dash",
-      href: "game.html",
-      key: "itt25-game-think",
-      inspire: "Theater think — not a live model · R1 is the gold dest",
-      blurb: "Type think. Incomplete never writes.",
-      why: "R1 is the door. The game is a theater box.",
-      era: "Think is the save. 4o is last year.",
-      famous: "Brick Bat + Concentration",
-      accent: "#2b6cb0"
     }
   };
 })(typeof window !== "undefined" ? window : this);

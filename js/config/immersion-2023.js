@@ -1,6 +1,6 @@
 /**
  * Immersion config — 2023
- * Thesis: Subscribe $20 is the save · empty / stay free / GPT-4o / Gemini never write
+ * Thesis: Subscribe Plus is the save · GPT-4 / Bing Chat / live charge never write
  */
 (function (global) {
   "use strict";
@@ -19,20 +19,20 @@
       yearPopular3x: true,
       officialDestGold: true
     },
-    navSubtitle: "Win11 residual · Chrome habit · ChatGPT Plus",
+    navSubtitle: "Win10 mass · Chrome habit · ChatGPT Plus",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "Plus", href: "sites/chatgpt/plus.html", match: "/chatgpt/plus" },
-      { label: "GPT-4", href: "sites/chatgpt/gpt4.html", match: "/chatgpt/gpt4" },
-      { label: "Bing", href: "sites/bing/chat.html", match: "/bing/" },
-      { label: "Bard", href: "sites/bard/index.html", match: "/bard/" },
+      { label: "Plus", href: "sites/plus/index.html", match: "/plus/" },
+      { label: "GPT-4", href: "sites/gpt4/index.html", match: "/gpt4/" },
+      { label: "Bing Chat", href: "sites/bingchat/index.html", match: "/bingchat/" },
+      { label: "Threads", href: "sites/threads/index.html", match: "/threads/" },
       { label: "About", href: "pages/about.html", match: "/about" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "ChatGPT Plus", href: "sites/chatgpt/plus.html" },
-      { label: "GPT-4 leftover", href: "sites/chatgpt/gpt4.html" },
+      { label: "Plus", href: "sites/plus/index.html" },
+      { label: "GPT-4 leftover", href: "sites/gpt4/index.html" },
       { label: "About 2023", href: "pages/about.html" }
     ]
   };

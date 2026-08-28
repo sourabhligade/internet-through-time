@@ -192,11 +192,39 @@
     });
   }
 
+  function bootProductVerb(doc) {
+    var panel = doc.querySelector("[data-lo-panel]");
+    if (!panel) return;
+    var save = panel.querySelector("[data-lo-save]");
+    if (!save) return;
+    var carts = doc.querySelectorAll("[data-add-cart]");
+    var i;
+    for (i = 0; i < carts.length; i++) {
+      if (carts[i].getAttribute("data-lo-product-bound") === "1") continue;
+      carts[i].setAttribute("data-lo-product-bound", "1");
+      carts[i].addEventListener("click", function () {
+        var pick = panel.querySelector('[data-lo-pick="' + (save.getAttribute("data-lo-need-pick") || "") + '"]');
+        if (pick) pick.click();
+        var reqs = panel.querySelectorAll("[data-lo-req]");
+        var r;
+        for (r = 0; r < reqs.length; r++) {
+          try { reqs[r].checked = true; } catch (eC) { /* */ }
+        }
+        var field = panel.querySelector("[data-lo-field]");
+        if (field && String(field.value || "").replace(/^\s+|\s+$/g, "").length < 2) {
+          field.value = this.getAttribute("data-title") || "ok leftover";
+        }
+        save.click();
+      });
+    }
+  }
+
   function boot(doc) {
     doc = doc || document;
     var btns = doc.querySelectorAll("[data-lo-save]");
     var i;
     for (i = 0; i < btns.length; i++) bootOne(btns[i]);
+    bootProductVerb(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

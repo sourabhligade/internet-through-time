@@ -156,18 +156,34 @@
       ["sourceforge", "immersion/sourceforge.js"]
     ];
     var priority = [];
+    var rest = [];
     var seen = {};
+    function listed(rel) {
+      var i;
+      for (i = 0; i < all.length; i++) if (all[i] === rel) return true;
+      return false;
+    }
+    function hasSel(sel) {
+      try {
+        return !!(typeof document !== "undefined" && document.querySelector && document.querySelector(sel));
+      } catch (eHas) {
+        return false;
+      }
+    }
     /** Year-list modules only (CORE + EXTRA). Lean EXTRA stays lean. */
     function addListed(rel) {
-      if (!rel || seen[rel]) return;
-      var i;
-      for (i = 0; i < all.length; i++) {
-        if (all[i] === rel) {
-          seen[rel] = 1;
-          priority.push(rel);
-          return;
-        }
-      }
+      if (!rel || seen[rel] || !listed(rel)) return;
+      seen[rel] = 1;
+      priority.push(rel);
+    }
+    function addLater(rel) {
+      if (!rel || seen[rel] || !listed(rel)) return;
+      seen[rel] = 1;
+      rest.push(rel);
+    }
+    function maybePack(sel, rel) {
+      if (hasSel(sel)) addListed(rel);
+      else addLater(rel);
     }
     /**
      * Dest engine for hooks already on this page.
@@ -181,7 +197,9 @@
     function add(rel) {
       addListed(rel);
     }
-    /* CORE first — honesty + 5× + packs must not wait 1.2s (that felt like mock). */
+    /* Honesty CORE now. Leftover packs wait if this page has no hooks —
+       leftover markup is common but not universal; deferring unused writers
+       cuts the first-visit waterfall on gold rooms. */
     add("immersion/shared.js");
     add("immersion/residual-placard.js");
     add("immersion/real-gate.js");
@@ -189,15 +207,26 @@
     add("immersion/real-flow.js");
     add("immersion/flow-trails.js");
     add("immersion/year-extras-kit.js");
-    add("immersion/year-5x-pack.js");
-    add("immersion/year-true-packs.js");
-    add("immersion/year-popular-3x.js");
-    add("immersion/year-true-leftover.js");
-    add("immersion/leftover-official.js");
-    add("immersion/year-4x-flows.js");
-    add("immersion/one-thing-machines.js");
-    add("immersion/official-dest-gold.js");
-    add("immersion/source-flows.js");
+    maybePack("[data-5x-save], [data-5x-loop]", "immersion/year-5x-pack.js");
+    maybePack("[data-itt-pack], .itt-year-true-pack", "immersion/year-true-packs.js");
+    maybePack("[data-pop-go], [data-itt-pop3x], [data-pop-panel]", "immersion/year-popular-3x.js");
+    maybePack("[data-ytl-save], [data-ytl]", "immersion/year-true-leftover.js");
+    maybePack("[data-lo-save], [data-lo-pick]", "immersion/leftover-official.js");
+    maybePack("[data-4x-go], [data-4x-panel]", "immersion/year-4x-flows.js");
+    /* Gold machine: Starting Point, portal-wars lobby, and the 1996 hop rooms
+       (landing on Yahoo / Excite / AltaVista stamps itt96-portal-wars). */
+    if (
+      path.indexOf("/pages/") !== -1 ||
+      path.indexOf("/portals/") !== -1 ||
+      /\/(yahoo|excite|altavista)\//.test(path) ||
+      hasSel("[data-ott-one-thing], #itt-year-start, [data-portal], [data-portal-wars]")
+    ) {
+      add("immersion/one-thing-machines.js");
+    } else {
+      addLater("immersion/one-thing-machines.js");
+    }
+    maybePack("[data-official-gold]", "immersion/official-dest-gold.js");
+    maybePack("[data-official-key], [data-official-verb]", "immersion/official-verb.js");
     var yi;
     for (yi = 0; yi < all.length; yi++) {
       if (/immersion\/year-\d{4}-extras\.js$/.test(all[yi])) add(all[yi]);
@@ -282,9 +311,9 @@
     ) {
       add("immersion/media-1994.js");
     }
-    /* Unused product engines stay off this page. A new iframe loads the
-       matching module on navigate — loading all 30 on YouTube is the 2005+ lag. */
-    return { priority: priority, rest: [] };
+    /* Unused product engines stay off this page. Leftover packs without
+       hooks sit in rest and load after Immersion.create. */
+    return { priority: priority, rest: rest };
   }
 
   function loadAll(base, rels) {
@@ -366,8 +395,8 @@
         return Promise.resolve();
       })
       .then(function () {
-        /* UX pack for content pages — easy remove: delete this block */
-        return loadAll(base, [
+        /* UX pack in parallel with feature boot — do not block YouTube/Maps. */
+        ITT._uxReady = loadAll(base, [
           "ux/flags.js",
           "ux/copy-bank.js",
           "ux/real-coach.js",
@@ -377,8 +406,6 @@
         ]).catch(function () {
           /* UX optional — immersion still works without it */
         });
-      })
-      .then(function () {
         return loadScript(base + "immersion/registry.js");
       })
       .then(function () {
@@ -438,12 +465,16 @@
             return loadScript(base + "immersion/create.js");
           }).then(function () {
             bootCreate();
-            try {
-              if (ITT.UX && typeof ITT.UX.bootContent === "function") {
-                ITT.UX.bootContent(document);
-              }
-            } catch (eUxBoot) { /* */ }
-            /* Defer the rest so YouTube/Maps/etc. paint and wire immediately */
+            var paintUx = function () {
+              try {
+                if (ITT.UX && typeof ITT.UX.bootContent === "function") {
+                  ITT.UX.bootContent(document);
+                }
+              } catch (eUxBoot) { /* */ }
+            };
+            var uxP = ITT._uxReady || Promise.resolve();
+            uxP.then(paintUx);
+            /* Defer unused leftover packs / unmatched engines */
             if (split.rest && split.rest.length) {
               var loadRest = function () {
                 loadAll(base, split.rest)

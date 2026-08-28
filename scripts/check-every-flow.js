@@ -11,9 +11,9 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2005", "2006", "2007"]);
+const WIPED = new Set(["2007", "2020", "2024", "2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2025; y++) {
+for (let y = 1994; y <= 2023; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -30,6 +30,8 @@ const GOLD = {
   2002: { path: "sites/stumbleupon/index.html", key: "itt02-stumble", hook: /data-su-stumble/ },
   2003: { path: "sites/photobucket/index.html", key: "itt03-photobucket", hook: /data-pb-upload/ },
   2004: { path: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", hook: /data-fb-join/ },
+  2005: { path: "sites/youtube/upload.html", key: "itt05-yt-uploads", hook: /data-yt-upload/ },
+  2006: { path: "sites/twitter/index.html", key: "itt06-tweets", hook: /data-tw06-/ },
   2008: { path: "sites/github/issue.html", key: "itt08-github", hook: /data-gh-issue/ },
   2009: { path: "sites/facebook/index.html", key: "itt09-like", hook: /data-lk09-like/ },
   2010: { path: "sites/instagram/index.html", key: "itt10-ig", hook: /data-ig-share/ },
@@ -45,7 +47,7 @@ const GOLD = {
   2020: { path: "sites/zoom/meeting.html", key: "itt20-zoom", hook: /data-zoom/ },
   2021: { path: "sites/att/index.html", key: "itt21-att", hook: /data-att/ },
   2022: { path: "sites/chatgpt/index.html", key: "itt22-chatgpt", hook: /data-gpt22/ },
-  2023: { path: "sites/chatgpt/plus.html", key: "itt23-chatgpt-plus", hook: /data-plus-go/ },
+  2023: { path: "sites/plus/index.html", key: "itt23-plus", hook: /data-plus-go|data-p23-go/ },
   2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: /data-4o-go/ },
   2025: { path: "sites/deepseek/r1.html", key: "itt25-r1", hook: /data-r1-go/ },
 };

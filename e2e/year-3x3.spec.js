@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
-for (let y = 1994; y <= 2022; y++) {
+for (let y = 1994; y <= 2023; y++) {
   const year = String(y);
   if (fs.existsSync(path.join(ROOT, "years", year, "index.html"))) SHIP.push(year);
 }

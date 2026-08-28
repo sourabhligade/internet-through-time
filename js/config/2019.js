@@ -8,6 +8,12 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/ios13dark/index.html",
+    "sites/ipados/index.html",
+    "sites/libra/index.html",
+    "sites/cnil/index.html",
+    "sites/ftcfb/index.html",
+    "sites/inboxend/index.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -124,6 +130,12 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2019/",
     locationHints: [
+      { re: /dark.?mode|ios.?13/i, path: "sites/ios13dark/index.html" },
+      { re: /ipados/i, path: "sites/ipados/index.html" },
+      { re: /libra|calibra|diem/i, path: "sites/libra/index.html" },
+      { re: /cnil/i, path: "sites/cnil/index.html" },
+      { re: /\bftc\b/i, path: "sites/ftcfb/index.html" },
+      { re: /inbox/i, path: "sites/inboxend/index.html" },
       { re: /disney|who's watching|whos watching|continue|trial/i, path: "sites/disneyplus/home.html" },
       { re: /tiktok|fyp|for you|coppa/i, path: "sites/tiktok/index.html" },
       { re: /arcade/i, path: "sites/arcade/index.html" },

@@ -1,8 +1,10 @@
 # 2005 5× harvest — new-horizon R0 (reuse rooms)
 
+> **2026-08-26 rebuild lock:** star is **YouTube upload** `itt05-yt-uploads`. Pandora is official leftover only. See [`2005-READ-FIRST.md`](2005-READ-FIRST.md).
+
 **Date:** 2026-08-15  
-**Year:** 2005 · **294 HTML** · gold · do not reopen  
-**Star stays:** Pandora station · `itt05-pandora`  
+**Year:** 2005 · **294 HTML** (tree since wiped)  
+**Star (superseded):** Pandora station · `itt05-pandora` — leftover, not the chip.  
 **Do not invent:** Twitter · Google-owns-YouTube · Chrome · iPhone · new `sites/reader/`
 
 R0 only. No product HTML. Sources visited this session: Google Blog “Mapping your way” 8 Feb 2005 Bret Taylor, Live Stats June YouTube + Reddit launch.

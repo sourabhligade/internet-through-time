@@ -22,6 +22,7 @@ const GOLD = [
   { year: "2002", writer: "sites/stumbleupon/index.html", key: "itt02-stumble", nextNeedle: "friendster", chipHref: "sites/stumbleupon/index.html" },
   { year: "2003", writer: "sites/photobucket/index.html", key: "itt03-photobucket-album", nextNeedle: "myspace", chipHref: "sites/photobucket/index.html" },
   { year: "2004", writer: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", nextNeedle: "friends", chipHref: "sites/facebook/networks.html" },
+  { year: "2005", writer: "sites/youtube/upload.html", key: "itt05-yt-did-upload", nextNeedle: "maps", chipHref: "sites/youtube/upload.html" },
   { year: "2008", writer: "sites/github/issue.html", key: "itt08-github", nextNeedle: "appstore", chipHref: "sites/github/issue.html" },
   { year: "2009", writer: "sites/facebook/index.html", key: "itt09-like", nextNeedle: "farmville", chipHref: "sites/facebook/index.html" },
   { year: "2010", writer: "sites/imgur/index.html", key: "itt10-imgur", nextNeedle: "reddit", chipHref: "sites/imgur/index.html" },
@@ -34,9 +35,6 @@ const GOLD = [
   { year: "2017", writer: "sites/iphone/x.html", key: "itt17-faceid", nextNeedle: "fortnite", chipHref: "sites/iphone/x.html" },
   { year: "2018", writer: "sites/gdpr/index.html", key: "itt18-gdpr", nextNeedle: "tiktok", chipHref: "sites/gdpr/index.html" },
   { year: "2019", writer: "sites/disneyplus/home.html", key: "itt19-disneyplus", nextNeedle: "tiktok", chipHref: "sites/disneyplus/home.html" },
-  { year: "2020", writer: "sites/zoom/meeting.html", key: "itt20-zoom", nextNeedle: "reels", chipHref: "sites/zoom/meeting.html" },
-  { year: "2021", writer: "sites/att/index.html", key: "itt21-att", nextNeedle: "signal", chipHref: "sites/att/index.html" },
-  { year: "2022", writer: "sites/chatgpt/index.html", key: "itt22-chatgpt", nextNeedle: "twitter", chipHref: "sites/chatgpt/index.html" },
 ];
 
 function yearFile(year, rel) {

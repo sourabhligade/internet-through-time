@@ -162,6 +162,27 @@ html[data-itt-year="2021"] .ott-guided a {
   color: #125688;
 }
 
+/* Felt trail — first wander after the locked gold */
+.itt-felt-trail {
+  margin: 8px 0 12px;
+  padding: 6px 10px;
+  max-width: 46em;
+  font-family: "MS Sans Serif", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  background: #ffffcc;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  color: #000;
+}
+.itt-felt-trail a { color: #0000ee; font-weight: bold; }
+html[data-itt-year="1998"] .itt-felt-trail,
+html[data-itt-year="1999"] .itt-felt-trail {
+  background: #ffffe0;
+  border: 1px solid #000080;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
 /* Leftover rails — visible, not a third dashboard */
 .itt-home-more {
   margin: 28px auto 12px;
@@ -176,6 +197,23 @@ html[data-itt-year="2021"] .ott-guided a {
   margin: 0 0 8px;
   font-size: 11px;
   color: #555;
+}
+.itt-3x-links,
+.itt-popular-pack,
+.itt-densify-dir,
+.itt-densify-trails,
+[data-itt-densify="multipage"] {
+  max-height: 7.5em;
+  overflow: auto;
+}
+.itt-playable-link,
+.itt-year-true-pack {
+  font-size: 12px !important;
+  max-width: 48em;
+}
+.itt-2x-trails {
+  max-height: 4.2em;
+  overflow: auto;
 }
 .itt-home-more .itt-5x-trails,
 .itt-home-more .itt-phase2-trails,
@@ -195,4 +233,9 @@ html[data-itt-year="2021"] .ott-guided a {
   border: 1px dashed #999 !important;
   color: #333 !important;
   font-size: 11px !important;
+}
+.itt-home-more .itt-5x-atlas {
+  max-height: 5.2em;
+  overflow: auto;
+  line-height: 1.45;
 }

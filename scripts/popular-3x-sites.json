@@ -909,46 +909,11 @@
       "fg": "#202122"
     }
   ],
-  "2020": [
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube — 2020 leftover",
-      "why": "Still the leftover watch tab. Not Shorts-US. Not Reels.",
-      "verb": "Pick a watch + honesty + Watch.",
-      "ph": "music video",
-      "btn": "Watch (theater)",
-      "bg": "#fff",
-      "fg": "#c00"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia",
-      "title": "Wikipedia — 2020 leftover",
-      "why": "World encyclopedia. Not the 2001 edit star.",
-      "verb": "Pick an article + honesty + Open.",
-      "ph": "covid-19 pandemic",
-      "btn": "Open article (theater)",
-      "bg": "#f8f9fa",
-      "fg": "#202122"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook",
-      "title": "Facebook — 2020 leftover",
-      "why": "2020 residual. Not a 2006 Feed. Meta is 2021.",
-      "verb": "Pick a leftover + honesty + Open.",
-      "ph": "messenger rooms",
-      "btn": "Open (theater)",
-      "bg": "#e9ebee",
-      "fg": "#111"
-    }
-  ],
   "2021": [
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube — 2021 leftover",
+      "title": "YouTube \u2014 2021 leftover",
       "why": "Still the leftover watch tab. Not Shorts-as-2021-new. Not Reels.",
       "verb": "Pick a watch + honesty + Watch.",
       "ph": "music video",
@@ -959,7 +924,7 @@
     {
       "id": "wikipedia",
       "name": "Wikipedia",
-      "title": "Wikipedia — 2021 leftover",
+      "title": "Wikipedia \u2014 2021 leftover",
       "why": "World encyclopedia. Not the 2001 edit star.",
       "verb": "Pick an article + honesty + Open.",
       "ph": "app tracking transparency",
@@ -970,7 +935,7 @@
     {
       "id": "facebook",
       "name": "Facebook",
-      "title": "Facebook — 2021 leftover",
+      "title": "Facebook \u2014 2021 leftover",
       "why": "Hostname leftover. Company is Meta. App is still Facebook.",
       "verb": "Pick a leftover + honesty + Open.",
       "ph": "connect 2021",
@@ -983,7 +948,7 @@
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube — 2022 leftover",
+      "title": "YouTube \u2014 2022 leftover",
       "why": "Still the leftover watch tab. Not Shorts-as-2022-new. Not the chip.",
       "verb": "Pick a watch + honesty + Watch.",
       "ph": "music video",
@@ -994,7 +959,7 @@
     {
       "id": "wikipedia",
       "name": "Wikipedia",
-      "title": "Wikipedia — 2022 leftover",
+      "title": "Wikipedia \u2014 2022 leftover",
       "why": "World encyclopedia. Not the 2001 edit star.",
       "verb": "Pick an article + honesty + Open.",
       "ph": "chatgpt",
@@ -1005,10 +970,45 @@
     {
       "id": "facebook",
       "name": "Facebook",
-      "title": "Facebook — 2022 leftover",
+      "title": "Facebook \u2014 2022 leftover",
       "why": "Hostname leftover. App is still Facebook. Threads is 2023.",
       "verb": "Pick a leftover + honesty + Open.",
       "ph": "connect 2022",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
+  ],
+  "2023": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube — 2023 leftover",
+      "why": "Still the leftover watch tab. Not the Plus chip.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia — 2023 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "chatgpt plus",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook — 2023 leftover",
+      "why": "Consumer app is still Facebook. Threads dest is next door.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2023",
       "btn": "Open (theater)",
       "bg": "#e9ebee",
       "fg": "#111"

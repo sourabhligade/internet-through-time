@@ -52,6 +52,10 @@
         return;
       }
       var word = field ? String(field.value || "").replace(/\s/g, "").toLowerCase() : "";
+      if (ticks() < 2) {
+        setStatus("Tick both honesties first. Incomplete never writes.");
+        return;
+      }
       if (word.length !== 5) {
         setStatus("Type exactly five letters first. Empty never writes.");
         return;

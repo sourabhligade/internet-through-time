@@ -1,42 +1,17 @@
-/**
- * Digg up — 2006 leftover extra (minute).
- * Key: itt06-game-diggup
- * Kind: pick. Incomplete never writes. Traps never write.
- */
 (function () {
   "use strict";
   var MX = window.ITT && ITT.YearExtraMinute;
   if (!MX) return;
   MX.mount({
-  "year": "2006",
-  "id": "diggup",
-  "kind": "pick",
-  "queryLabel": "Query",
-  "runLabel": "Search",
-  "submitLabel": "Submit",
-  "holdLabel": "Hold",
-  "holdMs": 1600,
-  "items": [
-    {
-      "id": "d1",
-      "label": "\u25b2 Story: iPod battery rumor (847 diggs)"
-    },
-    {
-      "id": "d2",
-      "label": "\u25b2 Story: Firefox 2 ships"
-    },
-    {
-      "id": "d3",
-      "label": "\u25b2 Story: YouTube sale chatter"
-    },
-    {
-      "id": "ad",
-      "label": "Sponsored: cheap ringtones",
-      "role": "trap",
-      "trap": "Sponsored"
-    }
-  ],
-  "startStatus": "Three diggs. Skip sponsored.",
-  "idleStatus": "Press Start. Incomplete never writes."
-});
+    year: "2006",
+    id: "diggup",
+    kind: "seq",
+    confirm: "digg",
+    items: [
+      { id: "open", label: "Open a 2006 seed", order: 0 },
+      { id: "digg", label: "Digg it", order: 1 },
+      { id: "bury", label: "Bury leftover", order: 2 },
+      { id: "v4", label: "Open Digg v4 (2010)", role: "trap", trap: "v4 is 2010" }
+    ]
+  });
 })();

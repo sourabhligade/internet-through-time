@@ -320,7 +320,9 @@
   function taskbar(spec) {
     if (!spec.hasTaskbar) return "";
     var startImg =
-      parseInt(spec.year, 10) <= 1996
+      spec.startImg
+        ? '<img src="' + esc(spec.startImg) + '" width="54" height="22" alt="Start">'
+        : parseInt(spec.year, 10) <= 1996
         ? '<img src="../../assets/period/1995/win95/start.gif" width="54" height="22" alt="Start">'
         : "Start";
     var taskId = spec.toolbar === "netscape" ? "task-netscape" : "task-ie";

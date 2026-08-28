@@ -8,6 +8,12 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/youtubetv/index.html",
+    "sites/pixel2/index.html",
+    "sites/ios11ar/index.html",
+    "sites/krack/index.html",
+    "sites/nnrepeal/index.html",
+    "sites/flashend/index.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -57,6 +63,10 @@
     "sites/youtube/index.html",
     "sites/amazon/index.html",
     "sites/playable/game.html",
+    "sites/playable/game-5.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-3.html",
+    "sites/playable/game-2.html",
     "sites/playable/extra-b.html",
     "sites/playable/extra-a.html",
     "sites/playable/famous.html",
@@ -126,6 +136,12 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2017/",
     locationHints: [
+      { re: /youtube.?tv/i, path: "sites/youtubetv/index.html" },
+      { re: /pixel.?2/i, path: "sites/pixel2/index.html" },
+      { re: /arkit|ios.?11/i, path: "sites/ios11ar/index.html" },
+      { re: /krack|wpa2/i, path: "sites/krack/index.html" },
+      { re: /repeal|restore.?internet/i, path: "sites/nnrepeal/index.html" },
+      { re: /flash/i, path: "sites/flashend/index.html" },
       { re: /face.?id|iphone.?x|animoji|no.?home/i, path: "sites/iphone/x.html" },
       { re: /fortnite|battle.?royale|storm|bus/i, path: "sites/fortnite/index.html" },
       { re: /280|twitter|tweet/i, path: "sites/twitter/280.html" },

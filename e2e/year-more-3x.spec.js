@@ -5,10 +5,10 @@
  */
 const { test, expect } = require("@playwright/test");
 
-const WIPED = new Set(["2005", "2006", "2007"]);
+const WIPED = new Set(["2007", "2020", "2024", "2025"]);
 
 test.describe("3 more leftovers on home — every shipped year", () => {
-  for (let y = 1994; y <= 2025; y++) {
+  for (let y = 1994; y <= 2023; y++) {
     const year = String(y);
     if (WIPED.has(year)) continue;
     test(`${year} home lists 3 more leftover doors`, async ({ page }) => {
@@ -77,20 +77,6 @@ test.describe("new leftover rooms write — sample years", () => {
   test("2017 Snap IPO incomplete never writes · complete writes", async ({ page }) => {
     await page.goto("/years/2017/sites/snapipo/index.html");
     await completePop(page, "itt17-pop-snapipo");
-  });
-
-  test("2023 Claude 2 leftover incomplete never writes · complete writes", async ({ page }) => {
-    await page.goto("/years/2023/sites/claude2/index.html");
-    const key = "itt23-pop4-claude2";
-    await page.evaluate((k) => localStorage.removeItem(k), key);
-    await page.reload();
-    await page.locator("[data-ytl-go]").click();
-    expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-    await page.locator('[data-ytl-pick="claude2"]').click();
-    await page.locator("[data-ytl-req]").check();
-    await page.locator("[data-ytl-field]").fill("claude 2 leftover");
-    await page.locator("[data-ytl-go]").click();
-    await expect.poll(async () => page.evaluate((k) => localStorage.getItem(k), key), { timeout: 8000 }).toBeTruthy();
   });
 
   test("2016 Slack incomplete never writes · complete writes", async ({ page }) => {

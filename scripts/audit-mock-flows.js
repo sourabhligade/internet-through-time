@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — ship years 1994–2024 minus 2005–2007.
+ * Mock-flow classifier — ship years 1994–2022 minus 2007 and 2020
+ * (lean doors 2006 / 2021 / 2022 / 2023 are scanned; 2024–2025 wiped).
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -26,9 +27,9 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2005", "2006", "2007"]);
+const WIPED = new Set(["2007", "2020", "2024", "2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2025; y++) {
+for (let y = 1994; y <= 2023; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -43,6 +44,9 @@ const PRODUCT_HOOK = new RegExp(
     "data-itt-popular-",
     "data-itt-pack",
     "data-itt-product-action",
+    "data-official-verb",
+    "data-official-trap",
+    "data-official-key",
     "data-lo-",
     "data-drive-",
     "data-ch21-",
@@ -297,6 +301,16 @@ const PRODUCT_HOOK = new RegExp(
     "data-peg-",
     "data-4x-",
     "data-ytl",
+    "data-p06-",
+    "data-tw06-",
+    "data-ty06-",
+    "data-p17-",
+    "data-p18-",
+    "data-p19-",
+    "data-p21-",
+    "data-p22-",
+    "data-p23-",
+    "data-plus-go",
     "data-plus-",
     "data-4o-",
     "data-pop-",
@@ -476,7 +490,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 1994–2024 minus 2005–2007");
+  console.log("audit-mock-flows — 1994–2023 minus 2007 and 2020 (2024–2025 wiped)");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

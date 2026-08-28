@@ -50,7 +50,6 @@ test.describe("Fascinating integrate leftovers", () => {
       "/years/2009/sites/farmville/index.html",
       "/years/2011/sites/iphone/index.html",
       "/years/2015/sites/letsencrypt/index.html",
-      "/years/2020/sites/flash/index.html",
       "/years/1994/sites/hotwired/ad-att.html",
       "/years/2000/sites/pets/shutdown.html",
       "/years/2001/sites/wayback/index.html",
@@ -149,21 +148,6 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(blob && blob.year).toBe("2015");
     expect(await getKey(page, "itt15-periscope")).toBeFalsy();
     await expect(page.locator('[data-next-when-key="itt15-le"]')).toBeAttached();
-  });
-
-  test("2020 Flash Play SWF never writes · uninstall leftover writes", async ({ page }) => {
-    await openClean(page, "/years/2020/sites/flash/index.html", ["itt20-flash", "itt20-zoom"]);
-    await page.locator("[data-flash-play]").click();
-    expect(await getKey(page, "itt20-flash")).toBeFalsy();
-    await page.locator("[data-flash-req]").nth(0).check();
-    await page.locator("[data-flash-req]").nth(1).check();
-    await page.locator('[data-flash-site="youtube"]').click();
-    await page.locator("[data-flash-uninstall]").click();
-    expect(await getKey(page, "itt20-flash")).toBeFalsy();
-    await page.locator('[data-flash-site="newgrounds"]').click();
-    await page.locator("[data-flash-uninstall]").click();
-    await expect.poll(() => getKey(page, "itt20-flash")).toBeTruthy();
-    expect(await getKey(page, "itt20-zoom")).toBeFalsy();
   });
 
   test("1994 banner skip never writes · I clicked HERE writes itt94-banner", async ({ page }) => {
@@ -348,8 +332,6 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2017", /iphone\/x/],
       ["2018", /gdpr/],
       ["2019", /disneyplus\/home/],
-      ["2020", /zoom\/meeting/],
-      ["2021", /att/],
     ];
     for (const [year, star] of rows) {
       await page.goto("/years/" + year + "/pages/home.html");

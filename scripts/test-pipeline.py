@@ -139,6 +139,9 @@ CI_E2E_ALLOWLIST = (
     "e2e/one-thing-per-year.spec.js",
     "e2e/2016-2018-3x-detail.spec.js",
     "e2e/2016-2018-trail-chain.spec.js",
+    "e2e/2017-2019-deepen-theater.spec.js",
+    "e2e/2021-2022-deepen-theater.spec.js",
+    "e2e/2021-2022-ytl-theater.spec.js",
 )
 
 
@@ -155,7 +158,7 @@ def test_e2e_suite_present() -> None:
 
 
 def test_ci_e2e_allowlist() -> None:
-    """CI runs a named 9-file visitor/gold pack, not `playwright test` of all e2e/."""
+    """CI runs a named ship-subset visitor/gold pack, not `playwright test` of all e2e/."""
     wf = read(ROOT / ".github/workflows/ci.yml")
     sh = read(ROOT / "scripts/ci.sh")
     missing = [rel for rel in CI_E2E_ALLOWLIST if rel not in wf or rel not in sh]
@@ -193,6 +196,25 @@ def test_browser_srp_parts() -> None:
     ok("browser-srp-parts")
 
 
+def test_sitemap_ship_years() -> None:
+    sm = read(ROOT / "sitemap.txt")
+    wiped = {"2007", "2020", "2024", "2025"}
+    for y in range(1994, 2024):
+        ys = str(y)
+        if ys in wiped:
+            if f"/years/{ys}/" in sm:
+                fail("sitemap-years", f"wiped {ys} still listed")
+                return
+            continue
+        if f"/years/{ys}/" not in sm:
+            fail("sitemap-years", f"missing /years/{ys}/")
+            return
+    if "/years/2005/pages/home.html" not in sm:
+        fail("sitemap-years", "missing 2005 Starting Point")
+        return
+    ok("sitemap-years")
+
+
 def test_required_year_shells() -> None:
     for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002"):
         p = ROOT / "years" / y / "index.html"
@@ -214,8 +236,15 @@ def test_deploy_configs() -> None:
         fail("deploy-configs", "missing vercel.json")
         return
     nt = read(ROOT / "netlify.toml")
+    vj = read(ROOT / "vercel.json")
     if "Content-Security-Policy" not in nt:
         fail("deploy-configs", "netlify.toml missing CSP")
+        return
+    if "stale-while-revalidate" not in nt or "stale-while-revalidate" not in vj:
+        fail("deploy-configs", "JS/CSS cache must allow stale-while-revalidate")
+        return
+    if "Permissions-Policy" not in nt:
+        fail("deploy-configs", "netlify.toml missing Permissions-Policy")
         return
     ok("deploy-configs")
 
@@ -242,6 +271,7 @@ def main() -> int:
         test_e2e_suite_present,
         test_ci_e2e_allowlist,
         test_browser_srp_parts,
+        test_sitemap_ship_years,
         test_required_year_shells,
         test_deploy_configs,
         test_gitignore_test_artifacts,

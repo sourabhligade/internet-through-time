@@ -25,11 +25,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Years the museum ships. 2026+ not on disk. Museum ends 2025. 2005–2007 wiped.
-# 2005–2007 wiped 2026-08-24 — rebuild later.
-_WIPED = {"2005", "2006", "2007"}
+# Years the museum ships. Museum ends 2023 lean door. 2007, 2020, 2024–2025 wiped.
+# 2006 / 2021 / 2022 / 2023 lean doors are live. 2005 is a live full year.
+_WIPED = {"2007", "2020", "2024", "2025"}
 KNOWN_YEARS = [
-    str(y) for y in list(range(1994, 2026)) if str(y) not in _WIPED
+    str(y) for y in list(range(1994, 2024)) if str(y) not in _WIPED
 ]
 
 # Per-year signature pages that must exist when the year tree is present
@@ -172,15 +172,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/stadia/index.html",
         "sites/playable/game.html",
     ],
-    "2020": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/zoom/meeting.html",
-        "sites/reels/index.html",
-        "sites/openai/index.html",
-        "sites/flash/index.html",
-        "sites/playable/game.html",
-    ],
     "2021": [
         "pages/home.html",
         "pages/about.html",
@@ -202,27 +193,10 @@ SIGNATURE: dict[str, list[str]] = {
     "2023": [
         "pages/home.html",
         "pages/about.html",
-        "sites/chatgpt/plus.html",
-        "sites/chatgpt/gpt4.html",
-        "sites/bing/chat.html",
-        "sites/bard/index.html",
-        "sites/playable/game.html",
-    ],
-    "2024": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/chatgpt/4o.html",
-        "sites/gemini/index.html",
-        "sites/claude35/index.html",
-        "sites/sora/index.html",
-        "sites/playable/game.html",
-    ],
-    "2025": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/deepseek/r1.html",
-        "sites/operator/index.html",
-        "sites/o3mini/index.html",
+        "sites/plus/index.html",
+        "sites/gpt4/index.html",
+        "sites/bingchat/index.html",
+        "sites/threads/index.html",
         "sites/playable/game.html",
     ],
 }

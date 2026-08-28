@@ -1,62 +1,61 @@
-# 2023 — READ FIRST (from-scratch research freeze)
+# 2023 — READ FIRST (lean door)
 
-**Date:** 2026-08-24  
-**Status:** first door on disk 2026-08-24. **2× pack 1 (18 writers) + leftover-pop upgrade on disk this pass.** Densify / pack 2 later if named.  
-**Parent:** [`2010-2023-AI-ERA-MISSING-3X-RESEARCH-2026-08-24.md`](2010-2023-AI-ERA-MISSING-3X-RESEARCH-2026-08-24.md).  
-**Every-flow walk:** [`ai-era-flows/2023-EVERY-FLOW-MINUTE.md`](ai-era-flows/2023-EVERY-FLOW-MINUTE.md) · corpus [`2010-2023-AI-ERA-RESEARCH-CORPUS-EVERY-FLOW-MINUTE.md`](2010-2023-AI-ERA-RESEARCH-CORPUS-EVERY-FLOW-MINUTE.md).  
-**Clone shape when asked:** live `years/2022/` (ChatGPT Send · Chrome habit · lean).  
-**What’s left after 2024 2×:** [`WHAT-IS-LEFT-AFTER-2024-2X-RESEARCH-FREEZE-2026-08-24.md`](WHAT-IS-LEFT-AFTER-2024-2X-RESEARCH-FREEZE-2026-08-24.md) · 2023 2× is **0** · leftover-pop still Note leftover · densify 54 → 90–120.  
+**Date:** 2026-08-27  
+**Status:** **museum-grade lean year on disk.** Hub card open. `SHIP_YEARS` includes 2023.  
+**Do not** `git checkout` an old 2020–2025 forest. Hard stop ~50–90 HTML.  
+**This pass:** densify (named). Same leftover job as 2021/2022.  
+**Map:** [`2023-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2023-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
+**Deepen:** [`2023-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md`](2023-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md)  
+**Parent:** 2022 ChatGPT Send. **Child:** 2024 GPT-4o / Sora — still wiped.  
 **Git only if asked.**
 
 ## One line
 
-**2023 is when Send is not enough — $20 Subscribe is the save, GPT-4 is Plus-only, and search grows a chat pane.** Twitter becomes X in July. Threads ships in July. Bard is Bard, not Gemini.
+**2023 is when the preview gets a price — Subscribe Plus is the save, GPT-4 / Bing Chat / Threads / X are leftover, Win10 + Chrome habit is still the mass shell, and Sora / 4o are next year.**
 
 ## Lock before you type HTML
 
 | Lock | Value |
 |------|--------|
 | Prefix | `itt23-*` only |
-| Shell | **Win11 residual + Chrome habit** (same as 2022). No Apple Intelligence. |
-| ★ Star | **ChatGPT Plus** · 1 Feb · **$20/month** · `itt23-chatgpt-plus` |
-| Incomplete | empty Subscribe / stay free · never writes |
-| Complete | pick **$20** + Subscribe |
-| Trap | GPT-4o · Gemini rename · treat Plus as 2022 |
+| Shell | **Windows 10 + Chrome habit** (museum desktop · failed-final word Chrome · no official Chrome / OpenAI / Meta / X pixels) |
+| ★ Star | **ChatGPT Plus Subscribe** · **1 Feb 2023** · **$20 / month** · `itt23-plus` |
+| Incomplete | empty subscribe · 0 ticks · GPT-4-as-already-here · Bing Chat-as-Plus · live charge · never writes |
+| Complete | both honesties + **Subscribe Plus** · reload persist |
+| Trap | GPT-4 as this week’s gold · Bing Chat as Plus · live card · **Sora / 4o** (2024) |
 | Guided `<ol>` | **exactly 6** |
-| First door HTML | ~50 (lean). 3× densify later → 90–120 |
+| Official 10 | Plus Subscribe · GPT-4 leftover · Bing Chat leftover · Threads leftover · X leftover · Bard leftover · Claude 2 leftover · Chrome habit · Win10 residual · Plus Queue |
+| First door | **lean + deepen**. Do not restore a 2020–2025 forest. |
 
-## Dual-cite (opened 2026-08-24)
+## Size lock
+
+| Metric | Rule |
+|--------|------|
+| HTML | **≤ 90** (prefer ~50–70) |
+| Guided | **6** |
+| Official trails | **10** |
+| 2× leftover | first-door leftover packs + **32** year-true `-dp` dests. Do not pad with dest-field plaques. |
+
+## Dual-cite
 
 | Fact | Cite |
 |------|------|
-| Plus $20 · 1 Feb 2023 · free stays | [OpenAI — Introducing ChatGPT Plus](https://openai.com/index/chatgpt-plus/) |
-| Plus waitlist / US first | [The Verge 1 Feb 2023](https://www.theverge.com/2023/2/1/23581561/chatgpt-plus-paid-option-20-openai-waitlist) |
-| New Bing + Edge limited preview | [CNBC 7 Feb 2023](https://www.cnbc.com/2023/02/07/microsoft-open-ai-chatgpt-event-2023-live-updates.html) |
-| New Bing on GPT-4 | [Bing blog 14 Mar 2023](https://blogs.bing.com/search/march_2023/Confirmed-the-new-Bing-runs-on-OpenAI%E2%80%99s-GPT-4) |
-| GPT-4 in ChatGPT Plus | [OpenAI release notes · 14 Mar 2023](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) |
-| Bard public | **21 Mar 2023**. Announce 6 Feb. **Gemini name = 8 Feb 2024 — BAN** |
-| Threads | **5 Jul 2023** |
-| X rebrand | **23 Jul 2023** |
-| 100M ChatGPT MAU | **UBS January 2023** — 2023 label, not 2022 Dec |
-| ILS June websites | Table **ends 2018**. Print **Netcraft January 2023** (1,132,268,801). Never invent a June 2023 cell |
+| ChatGPT Plus | **1 Feb 2023** · **$20 / month** — OpenAI “Introducing ChatGPT Plus”. Free tier stays. Expanded outside US **10 Feb**. |
+| Bing Chat | **7 Feb 2023** — Microsoft “new Bing” limited preview on desktop. Waitlist. Renamed Copilot later; **this dest stays Bing Chat**. |
+| GPT-4 | **14 Mar 2023** — OpenAI announce. Plus subscribers can pick GPT-4. Technical report arXiv:2303.08774. API GA **6 Jul**. |
+| Bard | **21 Mar 2023** — Google “Sign up to try Bard”. US + UK first. LaMDA-class leftover. Gemini is **6 Dec**. |
+| Threads | **5 Jul 2023** — Instagram Creators “Introducing Threads”. 500 characters. Not EU at launch. |
+| Claude 2 | **11 Jul 2023** — Anthropic “Claude 2”. claude.ai US + UK beta. |
+| X rebrand | **23 Jul 2023** — bird dest name becomes **X** this year. 2022 dest stays **Twitter**. |
+| DALL·E 3 | **20 Sep 2023** announce · Plus/Enterprise **October**. No live image. |
+| Reddit API | **12–14 Jun 2023** leftover blackout. 7,000+ subs. Apollo leftover neighbor. |
+| ITU 2023 | **5.4 billion / 67%** online · **2.6 billion** offline — Facts and Figures 2023. |
+| Live Stats June websites | **table ends 2018**. Do not invent a 2023 websites cell. |
 
-## Official 10 (first door)
+## Bans (never as 2023 default)
 
-1. About 2023 — bans · $20 · no Gemini  
-2. ★ ChatGPT Plus — Subscribe  
-3. GPT-4 leftover (Plus picker)  
-4. Bing Chat leftover (preview honesty)  
-5. Bard leftover (**not** Gemini)  
-6. Threads leftover  
-7. X leftover (23 Jul)  
-8. ChatGPT free residual (2022 Send still exists next door)  
-9. Year game leftover  
-10. Map
+**Sora · GPT-4o** (2024) · live model · live card charge · official OpenAI / Meta / X / Google pixels · invent a June 2023 websites digit · restore the wiped 2023 forest · treat Send as this year’s gold (Send is 2022).
 
-## Hard bans
+## What this file is not
 
-GPT-4o (May 2024) · Gemini rename / Gemini app (Feb 2024) · Sora public · Apple Intelligence · Claude 3.5 as 2023 mass · treat 2022 Send as Plus · invent ILS June 2023 websites · 7th guided step · brand pixels · ripped weights.
-
-## Do not implement until
-
-You can recite star, $20, GPT-4 date, Bing Chat date, Bard-not-Gemini, Threads, X, and the ILS ban without opening a file. Then say **implement 2023**.
+A forest restore. Leftover 4× / leftover-official / pop panels stay so e2e can walk them.

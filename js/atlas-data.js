@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * Museum ends 2025. Do not invent rooms.
+ * 2006 / 2021 / 2022 / 2023 lean doors live. 2007, 2020, 2024–2025 wiped. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -9,27 +9,28 @@
 
   var OPEN = [
     "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-    "2002", "2003", "2004", "2008", "2009",
-    "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"
+    "2002", "2003", "2004", "2005", "2006", "2008", "2009",
+    "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022", "2023"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2005", "2006", "2007"],
+    gapYears: ["2007", "2020", "2024", "2025"],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
-      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook.", years: ["2001", "2002", "2003", "2004"] },
-      { id: "gap", label: "Boarded", blurb: "These three rooms are empty on purpose. YouTube upload, Twitter 140, and iPhone Safari without a Store will be rebuilt later. They are not on disk.", years: ["2005", "2006", "2007"] },
+      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, YouTube upload, Twttr 140.", years: ["2001", "2002", "2003", "2004", "2005", "2006"] },
+      { id: "gap", label: "Boarded", blurb: "2007 iPhone Safari without a Store stays empty on purpose.", years: ["2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → filter → Vine.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+ Continue, Zoom mute.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"] },
-      { id: "models", label: "Models", blurb: "ATT Ask, ChatGPT Send, Plus $20, GPT-4o Talk, R1 Think.", years: ["2021", "2022", "2023", "2024", "2025"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+ Continue.", years: ["2014", "2015", "2016", "2017", "2018", "2019"] },
+      { id: "late-lean", label: "Ask / Send / Plus", blurb: "ATT Ask, ChatGPT Send, ChatGPT Plus lean doors.", years: ["2021", "2022", "2023"] },
+      { id: "wiped-late", label: "2020 / 2024–2025 boarded", blurb: "Zoom, 4o, Sora, R1 wiped for rebuild.", years: ["2020", "2024", "2025"] }
     ],
 
     leanYears: [
-      "2009", "2011", "2013", "2014", "2015", "2016", "2017",
-      "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"
+      "2006", "2009", "2011", "2013", "2014", "2015", "2016", "2017",
+      "2018", "2019", "2021", "2022", "2023"
     ],
 
     notThisYear: {
@@ -44,8 +45,8 @@
       "2002": "Stumble twice. Not mass Facebook.",
       "2003": "MySpace + 99¢. Photobucket is the gold.",
       "2004": "College network only. Not modern Facebook.",
-      "2005": "Off disk. Rebuild later.",
-      "2006": "Off disk. Rebuild later.",
+      "2005": "YouTube upload is the save. Maps / Reddit / Digg leftover. Google does not own YouTube.",
+      "2006": "140 because SMS. News Feed leftover. No iPhone.",
       "2007": "Off disk. No App Store this year.",
       "2008": "Apps arrive. Desktop is still mass.",
       "2009": "Like, not Reactions. No iPad.",
@@ -59,12 +60,12 @@
       "2017": "Look to unlock. Fortnite is leftover.",
       "2018": "Accept All never writes. Reels are not this year.",
       "2019": "No Reels. No Zoom as mass. Trial never writes.",
-      "2020": "Join is not the save. ChatGPT is 2022.",
-      "2021": "Allow is the trap. ChatGPT is 2022.",
-      "2022": "X is 2023. Empty / Plus / GPT-4 never write.",
-      "2023": "Stay free never writes. GPT-4o is 2024.",
-      "2024": "Empty / GPT-5 / 4o-as-2023 never write.",
-      "2025": "4o is 2024. GPT-5 is not January mass. Empty / V3 never write."
+      "2020": "Off disk. Rebuild later.",
+      "2021": "Allow is the trap. Ask is the save. No ChatGPT.",
+      "2022": "Send is the save. Plus / GPT-4 / X are 2023.",
+      "2023": "Subscribe Plus is the save. GPT-4 / Bing Chat / 4o never write the chip.",
+      "2024": "Off disk. Rebuild later.",
+      "2025": "Off disk. Rebuild later."
     },
 
     /* L1 nostalgia — visitor postcard only. Open years. Wiped years omit this. */
@@ -80,6 +81,8 @@
       "2002": "You picked a topic and stumbled twice. Friendster is a seed, not Facebook.",
       "2003": "You hotlinked a photo. Songs cost ninety-nine cents. Top 8 was diplomacy.",
       "2004": "You needed a college. The wall was not a Feed. Gmail was an invite.",
+      "2005": "You uploaded a clip. You dragged a map. You boosted a link. Google did not own YouTube yet.",
+      "2006": "You typed 140 characters because SMS said so. There was no iPhone.",
       "2008": "There were about five hundred apps. The desktop was still mass. Chrome was a product room.",
       "2009": "You liked a partner page. There were no Reactions. There was no iPad.",
       "2010": "The photo was square. The filter had a name. Android is next year.",
@@ -92,12 +95,9 @@
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters.",
       "2018": "The banner was the door. Accept All never wrote. Manage did. The loops changed their name.",
       "2019": "You picked a face. A seven-day trial is the trap. Continue is the save.",
-      "2020": "Join is not the save. You muted, you typed in chat, you left. The tiles were black with names.",
-      "2021": "The system dialog was the start page. Allow is the trap. Ask App Not to Track is the save.",
-      "2022": "The box was empty. The cursor blinked. Send is the save. Plus and GPT-4 never write. X is next year.",
-      "2023": "Stay free never writes. Twenty dollars Subscribe does. Bard is not Gemini.",
-      "2024": "Talk is the save. The voice is the new ding. Empty / GPT-5 / 4o-as-2023 never write.",
-      "2025": "Think is the save. Open weights reason. Empty / V3 / treat-as-2024 never write."
+      "2021": "You tapped Ask App Not to Track. Allow never wrote.",
+      "2022": "You typed a leftover prompt and hit Send. Plus was next year.",
+      "2023": "You ticked both honesties and subscribed Plus. GPT-4 never wrote."
     },
 
     /* Guided 6 for years whose Starting Point is inline (start-data.js stops at 2009). */
@@ -182,53 +182,29 @@
         { label: "Stadia — Founder’s", href: "years/2019/sites/stadia/index.html" },
         { label: "Year flow map", href: "years/2019/pages/map.html" }
       ],
-      "2020": [
-        { label: "About 2020", href: "years/2020/pages/about.html" },
-        { label: "Zoom meeting — Join never writes", href: "years/2020/sites/zoom/meeting.html" },
-        { label: "Reels 15s — 5 Aug", href: "years/2020/sites/reels/index.html" },
-        { label: "GPT-3 waitlist — not ChatGPT", href: "years/2020/sites/openai/index.html" },
-        { label: "Flash EOL — 31 Dec", href: "years/2020/sites/flash/index.html" },
-        { label: "Year flow map", href: "years/2020/pages/map.html" }
-      ],
       "2021": [
         { label: "About 2021", href: "years/2021/pages/about.html" },
         { label: "ATT Ask App Not to Track", href: "years/2021/sites/att/index.html" },
-        { label: "Signal leftover — 15 May delay", href: "years/2021/sites/signal/index.html" },
-        { label: "Copilot waitlist — not ChatGPT", href: "years/2021/sites/copilot/index.html" },
-        { label: "Meta rename — app still Facebook", href: "years/2021/sites/meta/index.html" },
+        { label: "Signal leftover", href: "years/2021/sites/signal/index.html" },
+        { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" },
+        { label: "Meta rename", href: "years/2021/sites/meta/index.html" },
         { label: "Year flow map", href: "years/2021/pages/map.html" }
       ],
       "2022": [
         { label: "About 2022", href: "years/2022/pages/about.html" },
         { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html" },
-        { label: "Twitter leftover — still Twitter", href: "years/2022/sites/twitter/index.html" },
+        { label: "Twitter leftover", href: "years/2022/sites/twitter/index.html" },
         { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" },
         { label: "Stable Diffusion leftover", href: "years/2022/sites/stablediffusion/index.html" },
         { label: "Year flow map", href: "years/2022/pages/map.html" }
       ],
       "2023": [
         { label: "About 2023", href: "years/2023/pages/about.html" },
-        { label: "ChatGPT Plus — $20 Subscribe", href: "years/2023/sites/chatgpt/plus.html" },
-        { label: "GPT-4 leftover — Plus-only", href: "years/2023/sites/chatgpt/gpt4.html" },
-        { label: "Bing Chat leftover", href: "years/2023/sites/bing/chat.html" },
-        { label: "Bard leftover — not Gemini", href: "years/2023/sites/bard/index.html" },
+        { label: "ChatGPT Plus", href: "years/2023/sites/plus/index.html" },
+        { label: "GPT-4 leftover", href: "years/2023/sites/gpt4/index.html" },
+        { label: "Bing Chat leftover", href: "years/2023/sites/bingchat/index.html" },
+        { label: "Threads leftover", href: "years/2023/sites/threads/index.html" },
         { label: "Year flow map", href: "years/2023/pages/map.html" }
-      ],
-      "2024": [
-        { label: "About 2024", href: "years/2024/pages/about.html" },
-        { label: "GPT-4o Talk", href: "years/2024/sites/chatgpt/4o.html" },
-        { label: "Gemini leftover — not Bard", href: "years/2024/sites/gemini/index.html" },
-        { label: "Claude 3.5 leftover", href: "years/2024/sites/claude35/index.html" },
-        { label: "Sora leftover — preview", href: "years/2024/sites/sora/index.html" },
-        { label: "Year flow map", href: "years/2024/pages/map.html" }
-      ],
-      "2025": [
-        { label: "About 2025", href: "years/2025/pages/about.html" },
-        { label: "DeepSeek R1 Think", href: "years/2025/sites/deepseek/r1.html" },
-        { label: "Operator leftover", href: "years/2025/sites/operator/index.html" },
-        { label: "o3-mini leftover", href: "years/2025/sites/o3mini/index.html" },
-        { label: "GPT-4.5 leftover", href: "years/2025/sites/gpt45/index.html" },
-        { label: "Year flow map", href: "years/2025/pages/map.html" }
       ]
     },
 
@@ -344,9 +320,9 @@
         game: { label: "Gem Cascade", href: "years/2004/sites/playable/game.html" }
       },
       "2005": {
-        wiped: true,
+        wiped: false,
         era: "YouTube · Maps · Ajax",
-        thesis: "Off disk for a from-scratch rebuild.",
+        thesis: "Web 2.0 boom. Upload is the save. Independent YouTube.",
         gold: { label: "YouTube upload", href: "years/2005/sites/youtube/upload.html", key: "itt05-yt-uploads" },
         guided: [
           { label: "Google Maps", href: "years/2005/sites/maps/index.html" },
@@ -355,9 +331,9 @@
         game: { label: "HoverChop", href: "years/2005/sites/playable/game.html" }
       },
       "2006": {
-        wiped: true,
+        wiped: false,
         era: "Twitter · Feed · open Facebook",
-        thesis: "Off disk for a from-scratch rebuild.",
+        thesis: "Twttr 140 is the save. News Feed / YouTube-sale / Digg leftover. XP + IE6. No iPhone.",
         gold: { label: "Twitter 140", href: "years/2006/sites/twitter/index.html", key: "itt06-tweets" },
         guided: [
           { label: "Facebook News Feed", href: "years/2006/sites/facebook/feed.html" },
@@ -498,17 +474,8 @@
         ],
         game: { label: "Continue Row", href: "years/2019/sites/playable/game.html" }
       },
-      "2020": {
-        era: "Mute · participants · 15 seconds",
-        thesis: "Join is not the save. Mute, chat, leave. GPT-3 is a waitlist.",
-        gold: { label: "Zoom mute → leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
-        guided: [
-          { label: "Reels 15s leftover", href: "years/2020/sites/reels/index.html" },
-          { label: "GPT-3 waitlist", href: "years/2020/sites/openai/index.html" }
-        ],
-        game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
-      },
       "2021": {
+        wiped: false,
         era: "Allow · Ask App Not to Track",
         thesis: "Allow is the trap. Ask App Not to Track is the save. ChatGPT is 2022.",
         gold: { label: "ATT Ask App Not to Track", href: "years/2021/sites/att/index.html", key: "itt21-att" },
@@ -519,6 +486,7 @@
         game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
       },
       "2022": {
+        wiped: false,
         era: "Send · research preview",
         thesis: "Send is the save. Empty / Plus / GPT-4 never write. X is 2023.",
         gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
@@ -529,34 +497,15 @@
         game: { label: "Prompt Box", href: "years/2022/sites/playable/game.html" }
       },
       "2023": {
-        era: "Win11 residual · Chrome habit · Plus $20",
-        thesis: "Subscribe is the save. Empty / stay free / GPT-4o / Gemini never write.",
-        gold: { label: "ChatGPT Plus $20", href: "years/2023/sites/chatgpt/plus.html", key: "itt23-chatgpt-plus" },
+        wiped: false,
+        era: "Plus · $20 / month",
+        thesis: "Subscribe Plus is the save. GPT-4 / Bing Chat / live charge never write. 4o is 2024.",
+        gold: { label: "ChatGPT Plus Subscribe", href: "years/2023/sites/plus/index.html", key: "itt23-plus" },
         guided: [
-          { label: "GPT-4 leftover", href: "years/2023/sites/chatgpt/gpt4.html" },
-          { label: "Bing Chat leftover", href: "years/2023/sites/bing/chat.html" }
+          { label: "GPT-4 leftover", href: "years/2023/sites/gpt4/index.html" },
+          { label: "Threads leftover", href: "years/2023/sites/threads/index.html" }
         ],
-        game: { label: "Subscribe Dash", href: "years/2023/sites/playable/game.html" }
-      },
-      "2024": {
-        era: "Win11 residual · Chrome habit · GPT-4o",
-        thesis: "Talk is the save. Empty / GPT-5 / 4o-as-2023 never write.",
-        gold: { label: "GPT-4o Talk", href: "years/2024/sites/chatgpt/4o.html", key: "itt24-gpt4o" },
-        guided: [
-          { label: "Gemini leftover", href: "years/2024/sites/gemini/index.html" },
-          { label: "Claude 3.5 leftover", href: "years/2024/sites/claude35/index.html" }
-        ],
-        game: { label: "Omni Dash", href: "years/2024/sites/playable/game.html" }
-      },
-      "2025": {
-        era: "Win11 residual · Chrome habit · DeepSeek R1",
-        thesis: "Think is the save. Empty / V3 / treat-as-2024 never write.",
-        gold: { label: "DeepSeek R1 Think", href: "years/2025/sites/deepseek/r1.html", key: "itt25-r1" },
-        guided: [
-          { label: "Operator leftover", href: "years/2025/sites/operator/index.html" },
-          { label: "o3-mini leftover", href: "years/2025/sites/o3mini/index.html" }
-        ],
-        game: { label: "Think Dash", href: "years/2025/sites/playable/game.html" }
+        game: { label: "Plus Queue", href: "years/2023/sites/playable/game.html" }
       }
     },
 
@@ -742,16 +691,10 @@
         ]
       },
       {
-        id: "models",
-        label: "How we talked to models",
-        blurb: "Ask App Not to Track → Send → $20 Subscribe → Talk. After first night ends.",
-        steps: [
-          { year: "2021", label: "ATT Ask", href: "years/2021/sites/att/index.html" },
-          { year: "2022", label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html" },
-          { year: "2023", label: "Plus $20", href: "years/2023/sites/chatgpt/plus.html" },
-          { year: "2024", label: "GPT-4o Talk", href: "years/2024/sites/chatgpt/4o.html" },
-          { year: "2025", label: "DeepSeek R1 Think", href: "years/2025/sites/deepseek/r1.html" }
-        ]
+        id: "wiped-late",
+        label: "2020 / 2024–2025 boarded",
+        blurb: "Zoom mute, 4o, Sora, R1 — wiped for rebuild. 2023 Plus is an open lean door.",
+        steps: []
       }
     ]
   };

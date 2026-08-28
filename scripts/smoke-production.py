@@ -39,6 +39,8 @@ def check_files() -> None:
         "atlas/index.html",
         "favicon.gif",
         "404.html",
+        "netlify.toml",
+        "vercel.json",
         "js/lib/util.js",
         "js/browser-core.js",
         "js/browser/chrome-ui.js",

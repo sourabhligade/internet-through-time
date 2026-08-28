@@ -82,6 +82,9 @@ test.describe('2005 YouTube hard suite', () => {
     const frame = contentFrame(page);
     await frame.locator('[name="title"]').fill(title);
     await frame.locator('[name="desc"]').fill(desc);
+    const ticks = frame.locator('[data-yt-upload] [data-yt-req]');
+    const n = await ticks.count();
+    for (let i = 0; i < n; i++) await ticks.nth(i).check();
     await frame.locator('[data-yt-upload] button[type="submit"]').click();
     await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload|list|videos/i, {
       timeout: 10000,
@@ -99,10 +102,17 @@ test.describe('2005 YouTube hard suite', () => {
     await goInFrame(page, 'sites/youtube/upload.html');
     await waitForImmersion(page, '2005');
     let frame = contentFrame(page);
+    async function tickHonesty() {
+      const ticks = frame.locator('[data-yt-upload] [data-yt-req]');
+      const n = await ticks.count();
+      for (let i = 0; i < n; i++) await ticks.nth(i).check();
+    }
     await frame.locator('[name="title"]').fill(a);
+    await tickHonesty();
     await frame.locator('[data-yt-upload] button[type="submit"]').click();
     await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload/i, { timeout: 8000 });
     await frame.locator('[name="title"]').fill(b);
+    await tickHonesty();
     await frame.locator('[data-yt-upload] button[type="submit"]').click();
     await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload/i, { timeout: 8000 });
 

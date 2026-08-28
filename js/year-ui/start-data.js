@@ -143,8 +143,8 @@
       "<a href=\"about.html\">About 2005</a> — Web 2.0 boom",
       "<a href=\"../sites/youtube/upload.html\">YouTube</a> — Broadcast Yourself",
       "<a href=\"../sites/maps/index.html\">Google Maps</a> — slippy drag",
-      "<a href=\"../sites/pandora/index.html\">Pandora</a> — name a station REAL",
-      "<a href=\"../sites/reddit/index.html\">Reddit</a> · <a href=\"../sites/digg/index.html\">Digg</a>",
+      "<a href=\"../sites/reddit/index.html\">Reddit</a> — June boost",
+      "<a href=\"../sites/digg/index.html\">Digg</a> — rise / bury",
       "<a href=\"map.html\">Year flow map</a>"
     ]
   },
@@ -152,23 +152,11 @@
     "href": "../sites/twitter/index.html",
     "label": "★ One-thing · Twitter 140 REAL",
     "items": [
-      "<a href=\"about.html\">About 2006</a> — You · News Feed · 140",
-      "<a href=\"../sites/twitter/index.html\">Twitter / Twttr</a> — 140 chars REAL",
-      "<a href=\"../sites/time-you/index.html\">Time You</a> — magazine cover after UGC",
-      "<a href=\"../sites/facebook/index.html\">Facebook News Feed</a>",
-      "<a href=\"../sites/youtube/index.html\">YouTube</a> · <a href=\"../sites/digg/index.html\">Digg</a>",
-      "<a href=\"map.html\">Year flow map</a>"
-    ]
-  },
-  "2007": {
-    "href": "../sites/iphone/index.html",
-    "label": "★ One-thing · iPhone Safari REAL",
-    "items": [
-      "<a href=\"about.html\">About 2007</a> — dual scale · bans",
-      "<a href=\"../sites/iphone/index.html\">iPhone</a> — Safari · no App Store",
-      "<a href=\"../sites/gmail/index.html\">Gmail</a> — open Feb 14",
-      "<a href=\"../sites/maps/index.html\">Street View</a> — five cities",
-      "<a href=\"../sites/facebook/index.html\">Facebook Platform</a> — add two apps",
+      "<a href=\"about.html\">About 2006</a> — dual scale · bans",
+      "<a href=\"../sites/twitter/index.html\">Twitter 140</a> — type ≤140 + Update REAL",
+      "<a href=\"../sites/facebook/feed.html\">News Feed leftover</a> — 5 Sep privacy",
+      "<a href=\"../sites/youtube/index.html\">YouTube leftover</a> — independent until Oct",
+      "<a href=\"../sites/digg/index.html\">Digg leftover</a> — peak / bury",
       "<a href=\"map.html\">Year flow map</a>"
     ]
   },

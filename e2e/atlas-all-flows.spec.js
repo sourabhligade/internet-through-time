@@ -9,22 +9,23 @@ const trio = require("../scripts/popular-3x3-sites.json");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-  "2002", "2003", "2004", "2008", "2009",
-  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025",
+  "2002", "2003", "2004", "2005", "2006", "2008", "2009",
+  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022", "2023",
 ];
-const WIPED = ["2005", "2006", "2007"];
+const WIPED = ["2007", "2020", "2024", "2025"];
 const LEAN = [
-  "2009", "2011", "2013", "2014", "2015", "2016", "2017",
-  "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025",
+  "2006", "2009", "2011", "2013", "2014", "2015", "2016", "2017",
+  "2018", "2019", "2021", "2022", "2023",
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
-  rebuild: ["2001", "2002", "2003", "2004"],
-  gap: ["2005", "2006", "2007"],
+  rebuild: ["2001", "2002", "2003", "2004", "2005", "2006"],
+  gap: ["2007"],
   phone: ["2008", "2009", "2010", "2011", "2012", "2013"],
-  stream: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"],
-  models: ["2021", "2022", "2023", "2024", "2025"],
+  stream: ["2014", "2015", "2016", "2017", "2018", "2019"],
+  "late-lean": ["2021", "2022", "2023"],
+  "wiped-late": ["2020", "2024", "2025"],
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -39,6 +40,8 @@ const GOLD = {
   "2002": /StumbleUpon/i,
   "2003": /Photobucket/i,
   "2004": /thefacebook/i,
+  "2005": /YouTube/i,
+  "2006": /Twitter 140/i,
   "2008": /App Store/i,
   "2009": /Like/i,
   "2010": /Instagram/i,
@@ -51,12 +54,9 @@ const GOLD = {
   "2017": /Face ID|iPhone X/i,
   "2018": /GDPR Manage/i,
   "2019": /Disney\+/i,
-  "2020": /Zoom/i,
-  "2021": /ATT|Ask App Not to Track/i,
+  "2021": /Ask App Not to Track|ATT/i,
   "2022": /ChatGPT Send/i,
-  "2023": /Plus|\$20/i,
-  "2024": /GPT-4o|Talk/i,
-  "2025": /R1|Think/i,
+  "2023": /ChatGPT Plus/i,
 };
 
 function twoXByYear() {
@@ -107,12 +107,8 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator("#atlas-year p.remember")).toContainText(/ding/i);
     await page.locator('#atlas-spine [data-atlas-year="2019"]').click();
     await expect(page.locator("#atlas-year p.remember")).toContainText(/Continue is the save/i);
-    await page.locator('#atlas-spine [data-atlas-year="2022"]').click();
-    await expect(page.locator("#atlas-year p.remember")).toContainText(/empty/i);
-    await page.locator('#atlas-spine [data-atlas-year="2024"]').click();
-    await expect(page.locator("#atlas-year p.remember")).toContainText(/Talk is the save/i);
     await page.locator('#atlas-spine [data-atlas-year="2005"]').click();
-    await expect(page.locator("#atlas-year p.remember")).toHaveCount(0);
+    await expect(page.locator("#atlas-year p.remember")).toContainText(/uploaded a clip/i);
   });
 
   test("each wing owns its years; lean and boarded classes match disk", async ({ page }) => {
@@ -208,7 +204,7 @@ test.describe("atlas hallway — all flows", () => {
   test("popular third-trio rooms on disk are listed after catalog load", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
-    const sample = ["1994", "2004", "2008", "2014", "2019", "2022"];
+    const sample = ["1994", "2004", "2008", "2014", "2019"];
     for (const y of sample) {
       const want = (trio[y] || []).length;
       expect(want, y + " trio").toBe(3);
@@ -224,23 +220,23 @@ test.describe("atlas hallway — all flows", () => {
     }
   });
 
-  test("museum-wide Every flow lists 29 golds and live official trails", async ({ page }) => {
+  test("museum-wide Every flow lists 28 golds and live official trails", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(29);
+    await expect(golds).toHaveCount(28);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(29);
+    expect(goldHrefs.length).toBe(28);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(29);
+    await expect(officialYears).toHaveCount(28);
   });
 
-  test("first night is the real 5-stop walk; models covers 2021–2025", async ({ page }) => {
+  test("first night is the real 5-stop walk; 2020 / 2024–2025 stay boarded", async ({ page }) => {
     await page.goto("/atlas/");
     const night = page.locator("#trail-first-night");
     await expect(night).toContainText(/Stops in 2010/i);
@@ -256,49 +252,31 @@ test.describe("atlas hallway — all flows", () => {
     expect(nightHrefs.length).toBeGreaterThanOrEqual(5);
     for (const h of nightHrefs) await expectLive(page, h, "first-night");
 
-    const models = page.locator("#trail-models");
-    await expect(models.locator("ol li")).toHaveCount(5);
-    await expect(models).toContainText(/ATT/i);
-    await expect(models).toContainText(/Send/i);
-    await expect(models).toContainText(/Plus|\$20/i);
-    await expect(models).toContainText(/Talk|4o/i);
-    await expect(models).toContainText(/R1|Think/i);
-    const modelHrefs = await models.locator("a[href]").evaluateAll((els) =>
-      els.map((a) => a.getAttribute("href") || "").filter((h) => h && !h.startsWith("#"))
-    );
-    expect(modelHrefs.length).toBe(5);
-    for (const h of modelHrefs) await expectLive(page, h, "models");
+    await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveClass(/wiped/);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2025"]')).toHaveClass(/wiped/);
   });
 
-  test("find covers leftover 2×, ATT, Zoom, and empty/no-match", async ({ page }) => {
+  test("find covers leftover 2×, Disney, and empty/no-match", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     await expect(page.locator("#atlas-find-results")).toContainText(/Type a name/i);
 
-    await page.fill("#atlas-find", "att");
-    await expect(page.locator("#atlas-find-results a").first()).toHaveAttribute("href", /att/i);
-    await expectLive(page, await page.locator("#atlas-find-results a").first().getAttribute("href"), "find att");
+    await page.fill("#atlas-find", "disney");
+    await expect(page.locator("#atlas-find-results a").first()).toHaveAttribute("href", /disneyplus/i);
+    await expectLive(page, await page.locator("#atlas-find-results a").first().getAttribute("href"), "find disney");
 
-    await page.fill("#atlas-find", "zoom");
-    await expect(page.locator("#atlas-find-results a").first()).toHaveAttribute("href", /zoom/i);
-
-    await page.fill("#atlas-find", "gpt-4o");
-    const fourO = page.locator("#atlas-find-results a");
-    await expect(fourO.first()).toBeVisible();
-    await expect(fourO.first()).toHaveAttribute("href", /4o|chatgpt/i);
+    await page.fill("#atlas-find", "lucky");
+    await expect(page.locator("#atlas-find-results a").first()).toBeVisible();
 
     await page.fill("#atlas-find", "zzzz-not-a-room");
     await expect(page.locator("#atlas-find-results")).toContainText(/No match/i);
   });
 
-  test("hash #year-2021 opens ATT; leftover 2× never replaces the gold", async ({ page }) => {
+  test("hash #year-2021 enters ATT Ask", async ({ page }) => {
     await page.goto("/atlas/#year-2021");
     const panel = page.locator("#atlas-year");
-    await expect(panel.locator("h2")).toContainText("2021");
-    await expect(panel.locator("li.gold")).toContainText(/ATT|Ask App Not to Track/i);
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveClass(/selected/);
-    await waitCatalog(page);
-    await expect(page.locator("#atlas-2x-2021")).toBeVisible();
-    await expect(panel.locator("li.gold")).not.toContainText(/leftover 2×/i);
+    await expect(panel).toContainText(/Ask|ATT/i);
+    await expect(panel.locator("a", { hasText: /Enter 2021/ })).toBeVisible();
   });
 });

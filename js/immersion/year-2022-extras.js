@@ -285,6 +285,76 @@
     });
   }
 
+  function bootGeneric22(doc) {
+    var st = doc.querySelector("[data-p22-status]");
+    var hopsDone = {};
+    var waited = false;
+    var traps = doc.querySelectorAll("[data-p22-trap]");
+    var i;
+    for (i = 0; i < traps.length; i++) {
+      traps[i].addEventListener("click", function () {
+        var msg = this.getAttribute("data-p22-trap-msg") || "Trap. That click never writes.";
+        feedback(msg, st, { error: true });
+      });
+    }
+    var hops = doc.querySelectorAll("[data-p22-hop]");
+    for (i = 0; i < hops.length; i++) {
+      hops[i].addEventListener("click", function () {
+        var hid = this.getAttribute("data-p22-hop") || "hop";
+        hopsDone[hid] = true;
+        feedback("Hop leftover · " + Object.keys(hopsDone).length + " / 2. Save after both hops.", st);
+      });
+    }
+    var waitBtn = doc.querySelector("[data-p22-wait]");
+    if (waitBtn) {
+      waitBtn.addEventListener("click", function () {
+        feedback("Waiting leftover…", st);
+        setTimeout(function () {
+          waited = true;
+          feedback("Wait leftover ready. Now save.", st);
+        }, 2000);
+      });
+    }
+    var gos = doc.querySelectorAll("[data-p22-go]");
+    for (i = 0; i < gos.length; i++) {
+      (function (btn) {
+        var suf = btn.getAttribute("data-p22-key") || "lx";
+        var saved = YX.loadJSON(key(suf));
+        if (saved && saved.real) {
+          var reqs = doc.querySelectorAll("[data-p22-req]");
+          var r;
+          for (r = 0; r < reqs.length; r++) reqs[r].checked = true;
+          feedback("Leftover · " + key(suf), st);
+          reveal(doc);
+        }
+      })(gos[i]);
+      gos[i].addEventListener("click", function () {
+        if (countChecked(doc, "[data-p22-req]") < 2) {
+          feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+          return;
+        }
+        if (hops.length && Object.keys(hopsDone).length < 2) {
+          feedback("Hop both leftovers first. Incomplete never writes.", st, { error: true });
+          return;
+        }
+        if (waitBtn && !waited) {
+          feedback("Wait leftover first. Incomplete never writes.", st, { error: true });
+          return;
+        }
+        var field = doc.querySelector("[data-p22-field]");
+        var q = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
+        if (field && q.length < 2) {
+          feedback("Type leftover first. Empty never writes.", st, { error: true });
+          return;
+        }
+        var suf = this.getAttribute("data-p22-key") || "lx";
+        saveJSON(key(suf), blob({ leftover: true, deepen: true, q: q.slice(0, 80) }));
+        feedback("Leftover · " + key(suf), st);
+        reveal(doc);
+      });
+    }
+  }
+
   function bootAll(doc) {
     doc = doc || document;
     bootChatgpt(doc);
@@ -298,6 +368,7 @@
     bootWin10(doc);
     bootExtraA(doc);
     bootExtraB(doc);
+    bootGeneric22(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

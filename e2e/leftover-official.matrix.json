@@ -1239,6 +1239,226 @@
       "minPick": 0,
       "field": false,
       "placeholder": ""
+    },
+    {
+      "year": "2021",
+      "href": "sites/signal/index.html",
+      "key": "itt21-signal",
+      "suffix": "signal",
+      "needPick": "handle",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "museum"
+    },
+    {
+      "year": "2021",
+      "href": "sites/copilot/index.html",
+      "key": "itt21-copilot",
+      "suffix": "copilot",
+      "needPick": "wait",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover@museum"
+    },
+    {
+      "year": "2021",
+      "href": "sites/meta/index.html",
+      "key": "itt21-meta",
+      "suffix": "meta",
+      "needPick": "company",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2021",
+      "href": "sites/windows11/index.html",
+      "key": "itt21-win11",
+      "suffix": "win11",
+      "needPick": "leftover",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2021",
+      "href": "sites/flash/index.html",
+      "key": "itt21-flash-brick",
+      "suffix": "flash-brick",
+      "needPick": "brick",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2021",
+      "href": "sites/chrome/index.html",
+      "key": "itt21-chrome",
+      "suffix": "chrome",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "youtube.com"
+    },
+    {
+      "year": "2021",
+      "href": "sites/windows10/index.html",
+      "key": "itt21-win10",
+      "suffix": "win10",
+      "needPick": "stay",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2022",
+      "href": "sites/twitter/index.html",
+      "key": "itt22-twitter",
+      "suffix": "twitter",
+      "needPick": "bird",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "the bird is freed"
+    },
+    {
+      "year": "2022",
+      "href": "sites/wordle/index.html",
+      "key": "itt22-wordle",
+      "suffix": "wordle",
+      "needPick": "guess",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "crane"
+    },
+    {
+      "year": "2022",
+      "href": "sites/stablediffusion/index.html",
+      "key": "itt22-sd",
+      "suffix": "sd",
+      "needPick": "prompt",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "a leftover still"
+    },
+    {
+      "year": "2022",
+      "href": "sites/mastodon/index.html",
+      "key": "itt22-mastodon",
+      "suffix": "mastodon",
+      "needPick": "instance",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "mastodon.social"
+    },
+    {
+      "year": "2022",
+      "href": "sites/bereal/index.html",
+      "key": "itt22-bereal",
+      "suffix": "bereal",
+      "needPick": "two",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2022",
+      "href": "sites/dalle2/index.html",
+      "key": "itt22-dalle2",
+      "suffix": "dalle2",
+      "needPick": "preview",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "a leftover still"
+    },
+    {
+      "year": "2022",
+      "href": "sites/chrome/index.html",
+      "key": "itt22-chrome",
+      "suffix": "chrome",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "youtube.com"
+    },
+    {
+      "year": "2023",
+      "href": "sites/gpt4/index.html",
+      "key": "itt23-gpt4",
+      "suffix": "gpt4",
+      "needPick": "gpt4",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gpt-4 leftover"
+    },
+    {
+      "year": "2023",
+      "href": "sites/bingchat/index.html",
+      "key": "itt23-bing",
+      "suffix": "bing",
+      "needPick": "bing",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "bing chat leftover"
+    },
+    {
+      "year": "2023",
+      "href": "sites/threads/index.html",
+      "key": "itt23-threads",
+      "suffix": "threads",
+      "needPick": "join",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "threads leftover"
+    },
+    {
+      "year": "2023",
+      "href": "sites/x/index.html",
+      "key": "itt23-x",
+      "suffix": "x",
+      "needPick": "x",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "x leftover"
+    },
+    {
+      "year": "2023",
+      "href": "sites/bard/index.html",
+      "key": "itt23-bard",
+      "suffix": "bard",
+      "needPick": "bard",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "bard leftover"
+    },
+    {
+      "year": "2023",
+      "href": "sites/claude2/index.html",
+      "key": "itt23-claude2",
+      "suffix": "claude2",
+      "needPick": "claude2",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "claude 2 leftover"
+    },
+    {
+      "year": "2023",
+      "href": "sites/chrome/index.html",
+      "key": "itt23-habit",
+      "suffix": "habit",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "youtube.com"
+    },
+    {
+      "year": "2023",
+      "href": "sites/windows10/index.html",
+      "key": "itt23-win10",
+      "suffix": "win10",
+      "needPick": "stay",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
     }
   ]
 }

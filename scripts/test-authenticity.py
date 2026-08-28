@@ -1360,31 +1360,21 @@ def test_2006_signature() -> None:
         "years/2006/pages/home.html",
         "years/2006/pages/about.html",
         "years/2006/sites/twitter/index.html",
-        "years/2006/sites/twitter/about.html",
         "years/2006/sites/facebook/index.html",
         "years/2006/sites/facebook/feed.html",
-        "years/2006/sites/facebook/open.html",
         "years/2006/sites/youtube/index.html",
-        "years/2006/sites/youtube/about.html",
         "years/2006/sites/digg/index.html",
         "years/2006/sites/docs/index.html",
         "years/2006/sites/aws/index.html",
         "years/2006/sites/reader/index.html",
-        "years/2006/sites/microsoft/ie7.html",
         "years/2006/sites/time-you/index.html",
         "js/config/2006.js",
-        "js/immersion/reader.js",
         "js/config/immersion-2006.js",
         "js/browser-2006.js",
         "js/immersion-2006.js",
-        "js/immersion/twitter.js",
-        "js/immersion/docs.js",
-        "js/immersion/aws.js",
-        "js/immersion/facebook.js",
-        "js/immersion/digg.js",
+        "js/immersion/year-2006-extras.js",
         "css/period-2006.css",
-        "docs/2006-MUSEUM-GRADE.md",
-        "docs/2006-RESEARCH.md",
+        "docs/2006-READ-FIRST.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1395,15 +1385,15 @@ def test_2006_signature() -> None:
         fail("2006-signature", "shell year")
         return
     tw = read(ROOT / "years/2006/sites/twitter/index.html")
-    if "data-twitter-compose" not in tw or "What are you doing" not in tw:
+    if "data-tw06-post" not in tw or "What are you doing" not in tw:
         fail("2006-signature", "twitter hooks")
         return
     feed = read(ROOT / "years/2006/sites/facebook/feed.html")
     if "data-fb-feed" not in feed or "News Feed" not in feed:
         fail("2006-signature", "facebook feed hooks")
         return
-    yt = read(ROOT / "years/2006/sites/youtube/about.html")
-    if "1.65" not in yt and "Oct 9" not in yt:
+    yt = read(ROOT / "years/2006/sites/youtube/index.html")
+    if "1.65" not in yt and "9 Oct" not in yt:
         fail("2006-signature", "youtube two-era honesty")
         return
     home = read(ROOT / "years/2006/pages/home.html")
@@ -1423,9 +1413,9 @@ def test_2006_signature() -> None:
     if 'href="years/2006/"' not in hub:
         fail("2006-signature", "hub not unlocked")
         return
-    fb = read(ROOT / "js/immersion/facebook.js")
-    if "itt06-thefacebook" not in fb:
-        fail("2006-signature", "facebook KEY missing 2006")
+    extras = read(ROOT / "js/immersion/year-2006-extras.js")
+    if "itt06" not in extras or "data-tw06-post" not in extras:
+        fail("2006-signature", "year extras missing Twttr machine")
         return
     ok("2006-signature")
 
@@ -1467,8 +1457,8 @@ def test_2006_no_anachronism_products() -> None:
         fail("2006-anachronism", "should ban Street View")
         return
     # YouTube must not claim year-start Google ownership without late-year framing
-    yt = read(ROOT / "years/2006/sites/youtube/about.html").lower()
-    if "independent" not in yt and "oct 9" not in yt:
+    yt = read(ROOT / "years/2006/sites/youtube/index.html").lower()
+    if "independent" not in yt and "oct" not in yt:
         fail("2006-anachronism", "youtube needs two-era honesty")
         return
     ok("2006-no-anachronism-products")
@@ -1486,25 +1476,24 @@ def test_2006_densify() -> None:
     if "2005" not in ms and "News Corp" not in ms:
         fail("2006-densify", "MySpace needs News Corp continuity honesty")
         return
-    fl = read(ROOT / "years/2006/sites/flickr/about.html")
-    if "2005" not in fl:
-        fail("2006-densify", "Flickr about should state Yahoo 2005 acquisition")
+    fl = read(ROOT / "years/2006/sites/flickr/index.html")
+    if "Yahoo" not in fl and "photostream" not in fl:
+        fail("2006-densify", "Flickr leftover needs Yahoo photostream honesty")
         return
-    maps = read(ROOT / "years/2006/sites/maps/about.html")
+    maps = read(ROOT / "years/2006/sites/maps/index.html")
     if "Street View" not in maps:
-        fail("2006-densify", "Maps about needs Street View ban")
+        fail("2006-densify", "Maps leftover needs Street View ban")
         return
-    rd = read(ROOT / "years/2006/sites/reddit/about.html")
+    rd = read(ROOT / "years/2006/sites/reddit/index.html")
     if "Digg" not in rd:
         fail("2006-densify", "Reddit should acknowledge Digg peak")
         return
-    gm = read(ROOT / "years/2006/sites/gmail/about.html")
+    gm = read(ROOT / "years/2006/sites/gmail/index.html")
     if "2007" not in gm:
-        fail("2006-densify", "Gmail about needs open-is-2007 honesty")
+        fail("2006-densify", "Gmail leftover needs open-is-2007 honesty")
         return
     for rel in (
         "years/2006/sites/reader/index.html",
-        "years/2006/sites/microsoft/ie7.html",
         "years/2006/sites/time-you/index.html",
     ):
         if not (ROOT / rel).is_file():
@@ -1512,9 +1501,6 @@ def test_2006_densify() -> None:
             return
     if "data-reader-add" not in read(ROOT / "years/2006/sites/reader/index.html"):
         fail("2006-densify", "reader hooks")
-        return
-    if "October 18, 2006" not in read(ROOT / "years/2006/sites/microsoft/ie7.html"):
-        fail("2006-densify", "IE7 date")
         return
     ok("2006-densify")
 

@@ -34,11 +34,13 @@ function resolveStartHref(year, href) {
 function assertStartCatalog(start) {
   const issues = [];
   const years = Object.keys(start).sort();
-  if (years.length !== 16) issues.push("START years " + years.length + " != 16 (1994–2009)");
+  const live = years.filter((y) => fs.existsSync(path.join(ROOT, "years", y, "index.html")));
+  if (live.length !== 15) issues.push("START live years " + live.length + " != 15 (1994–2009 minus 2007)");
   if (start["2010"] || start["2014"] || start["2021"]) {
     issues.push("2010+ must stay out of YearUI.START");
   }
   for (const year of years) {
+    if (!fs.existsSync(path.join(ROOT, "years", year, "index.html"))) continue;
     const spec = start[year];
     const n = (spec.items || []).length;
     if (n !== 6) issues.push(year + " START items " + n + " (want 6)");

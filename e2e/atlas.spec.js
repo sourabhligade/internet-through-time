@@ -6,12 +6,12 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-  "2002", "2003", "2004", "2008", "2009",
-  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025",
+  "2002", "2003", "2004", "2005", "2006", "2008", "2009",
+  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022", "2023",
 ];
-const WIPED = ["2005", "2006", "2007"];
+const WIPED = ["2007", "2020", "2024", "2025"];
 const THREADS = ["yahoo", "amazon", "google", "facebook", "youtube", "mail", "search", "phone", "im"];
-const TOURS = ["first-night", "find", "buy", "talk", "phone-trail", "broadcast", "games", "models"];
+const TOURS = ["first-night", "find", "buy", "talk", "phone-trail", "broadcast", "games", "wiped-late"];
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -38,15 +38,15 @@ test.describe("museum atlas", () => {
     await expect(page.locator("a[href='../index.html']").first()).toBeVisible();
   });
 
-  test("hallway has seven wings, 29 open years and 3 boarded ticks", async ({ page }) => {
+  test("hallway has eight wings, 28 open years and boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator("h1")).toContainText(/whole museum/i);
-    await expect(page.locator(".lede")).toContainText(/2025/);
-    await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(7);
+    await expect(page.locator(".lede")).toContainText(/2019/);
+    await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(8);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="gap"]')).toBeVisible();
     await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(32);
-    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(29);
-    await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(3);
+    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(28);
+    await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(4);
     for (const y of OPEN) {
       await expect(page.locator(`#atlas-spine .spine-year.open[data-atlas-year="${y}"]`)).toBeVisible();
     }
@@ -66,10 +66,11 @@ test.describe("museum atlas", () => {
     expect(res.status()).toBe(200);
   });
 
-  test("hash #year-2005 shows wiped rebuild note", async ({ page }) => {
+  test("hash #year-2005 shows YouTube upload gold", async ({ page }) => {
     await page.goto("/atlas/#year-2005");
     await expect(page.locator('#atlas-spine [data-atlas-year="2005"]')).toHaveClass(/selected/);
-    await expect(page.locator("#atlas-year")).toContainText(/wiped/i);
+    await expect(page.locator("#atlas-year")).toContainText(/YouTube/i);
+    await expect(page.locator("#atlas-year")).not.toContainText(/wiped/i);
   });
 
   test("select 1998 shows Lucky gold and official 10-stop trail", async ({ page }) => {
@@ -151,16 +152,12 @@ test.describe("museum atlas", () => {
     await expect(n2x).toHaveText(/^[1-9]\d*$/);
   });
 
-  test("2024 door and models tour are live", async ({ page }) => {
+  test("2024 door is boarded", async ({ page }) => {
     await page.goto("/atlas/");
-    await page.locator('#atlas-spine [data-atlas-year="2024"]').click();
-    const panel = page.locator("#atlas-year");
-    await expect(panel.locator("h2")).toContainText("2024");
-    await expect(panel.locator("li.gold")).toContainText(/GPT-4o|Talk/i);
-    await expect(page.locator("#trail-models")).toBeVisible();
-    const talk = page.locator('#trail-models a[href*="chatgpt/4o"]');
-    await expect(talk).toBeVisible();
-    await expectLive(page, await talk.getAttribute("href"), "models 2024");
+    const tick = page.locator('#atlas-spine [data-atlas-year="2024"]');
+    await expect(tick).toBeVisible();
+    await expect(tick).toHaveClass(/wiped/);
+    await expect(tick).toContainText(/boarded/i);
   });
 
   test("find: disney hits the 2019 gold room", async ({ page }) => {

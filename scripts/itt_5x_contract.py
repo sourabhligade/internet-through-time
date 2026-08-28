@@ -26,19 +26,16 @@ NO_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (1996, "sites/spacejam/index.html"),
         (1997, "sites/drudge/index.html"),
         (1999, "sites/y2k/index.html"),
+        (2005, "sites/youtube/index.html"),
     }
 )
 
 # Years restored to committed dests (no leftover 5× plaques).
 NO_PLAQUE_YEARS: frozenset[int] = frozenset({2008, 2010, 2011, 2012, 2013})
 # Hub-wiped trees — do not require dests or famous cabinets.
-WIPED_YEARS: frozenset[int] = frozenset({2005, 2006, 2007})
+WIPED_YEARS: frozenset[int] = frozenset({2006, 2007, 2020, 2021, 2022, 2023, 2024, 2025})
 
-POP_PANEL_2020 = (
-    "years/2020/sites/acnh/index.html",
-    "years/2020/sites/astro/index.html",
-    "years/2020/sites/quibi/index.html",
-)
+POP_PANEL_2020 = ()
 
 FAMOUS_YEARS = [
     y

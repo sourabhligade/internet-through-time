@@ -147,6 +147,12 @@
     "2004": yearVisitTour("2004",
       { path: "sites/facebook/networks.html", label: "thefacebook", blurb: "Join a college network. Not modern FB.", match: "/facebook/networks" },
       { path: "sites/gmail/index.html", label: "Gmail", blurb: "Invite-era gigabyte mail.", match: "/gmail/" }),
+    "2005": yearVisitTour("2005",
+      { path: "sites/youtube/upload.html", label: "YouTube upload", blurb: "Independent. Empty never writes. Upload is the save.", match: "/youtube/upload" },
+      { path: "sites/maps/index.html", label: "Google Maps", blurb: "8 Feb. Drag. Not Street View.", match: "/maps/" }),
+    "2006": yearVisitTour("2006",
+      { path: "sites/twitter/index.html", label: "Twitter 140", blurb: "15 Jul. 140 because SMS. Empty never writes.", match: "/twitter/" },
+      { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep. Privacy leftover. Not the chip.", match: "/facebook/feed" }),
     "2008": yearVisitTour("2008",
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Apps economy begins.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome", blurb: "Browser reinvented · product room.", match: "/chrome/" }),
@@ -183,24 +189,15 @@
     "2019": yearVisitTour("2019",
       { path: "sites/disneyplus/home.html", label: "Disney+ Who’s watching", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
       { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
-    "2020": yearVisitTour("2020",
-      { path: "sites/zoom/meeting.html", label: "Zoom mute → leave", blurb: "Join is the trap. Mute, chat, Leave.", match: "/zoom/" },
-      { path: "sites/reels/index.html", label: "Reels 15s", blurb: "5 Aug. Fifteen seconds. Not Stories.", match: "/reels/" }),
     "2021": yearVisitTour("2021",
-      { path: "sites/att/index.html", label: "ATT Ask App Not to Track", blurb: "Allow is the trap. Ask is the save.", match: "/att/" },
-      { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay. 8 Feb delete is the trap.", match: "/signal/" }),
+      { path: "sites/att/index.html", label: "ATT Ask", blurb: "Allow never writes. Ask is the save.", match: "/att/" },
+      { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay. Not the chip.", match: "/signal/" }),
     "2022": yearVisitTour("2022",
-      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / Plus / GPT-4 never write. Send is the save.", match: "/chatgpt/" },
-      { path: "sites/twitter/index.html", label: "Twitter leftover", blurb: "$44B. Still Twitter. X is 2023.", match: "/twitter/" }),
+      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / Plus never write.", match: "/chatgpt/" },
+      { path: "sites/twitter/index.html", label: "Twitter leftover", blurb: "Still Twitter. X is 2023.", match: "/twitter/" }),
     "2023": yearVisitTour("2023",
-      { path: "sites/chatgpt/plus.html", label: "ChatGPT Plus $20", blurb: "Stay free never writes. $20 Subscribe does.", match: "/chatgpt/plus" },
-      { path: "sites/chatgpt/gpt4.html", label: "GPT-4 leftover", blurb: "14 Mar. Plus-only. Not GPT-4o.", match: "/chatgpt/gpt4" }),
-    "2024": yearVisitTour("2024",
-      { path: "sites/chatgpt/4o.html", label: "GPT-4o Talk", blurb: "Omni. Free-class. Empty / GPT-5 never write.", match: "/chatgpt/4o" },
-      { path: "sites/gemini/index.html", label: "Gemini leftover", blurb: "8 Feb. Bard is the old name.", match: "/gemini/" }),
-    "2025": yearVisitTour("2025",
-      { path: "sites/deepseek/r1.html", label: "DeepSeek R1 Think", blurb: "20 Jan. MIT. Empty / V3 / treat-as-2024 never write.", match: "/deepseek/" },
-      { path: "sites/operator/index.html", label: "Operator leftover", blurb: "Jan computer-use leftover. Not the chip.", match: "/operator/" }),
+      { path: "sites/plus/index.html", label: "ChatGPT Plus", blurb: "Empty / GPT-4 / live charge never write.", match: "/plus/" },
+      { path: "sites/gpt4/index.html", label: "GPT-4 leftover", blurb: "14 Mar leftover. Not the chip.", match: "/gpt4/" }),
   };
 
   var TRAILS = {
@@ -215,8 +212,8 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2025; y++) {
-      if (y === 2005 || y === 2006 || y === 2007) continue;
+    for (y = 1994; y <= 2023; y++) {
+      if (y === 2007 || y === 2020) continue;
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -381,7 +378,7 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2022) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2023) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -661,8 +658,8 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2025; y++) {
-      if (y === 2005 || y === 2006 || y === 2007) continue;
+    for (y = 1994; y <= 2023; y++) {
+      if (y === 2007 || y === 2020) continue;
       years.push(String(y));
     }
     var total = totalStamps();
@@ -750,7 +747,7 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2005 YouTube → 2008 App Store → 2010 Instagram." +
+        "1994 → 1998 Google → 2004 thefacebook → 2008 App Store → 2010 Instagram." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
     }
     html += "</div></div>";

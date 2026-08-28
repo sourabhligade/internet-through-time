@@ -119,7 +119,7 @@ test.describe("leftover official · disk + trail", () => {
       live += keys.length;
       empty += keys.filter((k) => /"whenKey":\s*""/.test(k)).length;
     }
-    expect(live, "live trail dests").toBeGreaterThanOrEqual(27 * 10);
+    expect(live, "live trail dests").toBeGreaterThanOrEqual(28 * 10);
     expect(empty, "empty live whenKeys").toBe(0);
   });
 

@@ -134,10 +134,7 @@
 
       if (!save) return;
       save.addEventListener("click", function () {
-        if (countChecked(doc, "[data-dplus-req]") < 2) {
-          feedback("Tick both honesties first.", st, { error: true });
-          return;
-        }
+        /* Honesty ticks stay visible; they are not the save. */
         if (!profiles.adult || !profiles.kids) {
           feedback("Pick Adult and Kids.", st, { error: true });
           return;
@@ -336,6 +333,76 @@
       bootTwoTick(doc, "[data-w10-req]", "[data-w10-ack]", "win10", { freeUpgradeEnded: "2016-07-29" }, "Tick both honesties first.", "[data-w10-status]");
     }
 
+    function bootPeriodTheater(doc, ns) {
+      var st = doc.querySelector("[data-" + ns + "-status]");
+      var hopsDone = {};
+      var waited = false;
+      var traps = doc.querySelectorAll("[data-" + ns + "-trap]");
+      var i;
+      for (i = 0; i < traps.length; i++) {
+        traps[i].addEventListener("click", function () {
+          var msg = this.getAttribute("data-" + ns + "-trap-msg") || "Trap. That click never writes.";
+          feedback(msg, st, { error: true });
+        });
+      }
+      var hops = doc.querySelectorAll("[data-" + ns + "-hop]");
+      for (i = 0; i < hops.length; i++) {
+        hops[i].addEventListener("click", function () {
+          var hid = this.getAttribute("data-" + ns + "-hop") || "hop";
+          hopsDone[hid] = true;
+          feedback("Hop leftover · " + Object.keys(hopsDone).length + " / 2. Save after both hops.", st);
+        });
+      }
+      var waitBtn = doc.querySelector("[data-" + ns + "-wait]");
+      if (waitBtn) {
+        waitBtn.addEventListener("click", function () {
+          feedback("Waiting leftover…", st);
+          setTimeout(function () {
+            waited = true;
+            feedback("Wait leftover ready. Now save.", st);
+          }, 2000);
+        });
+      }
+      var gos = doc.querySelectorAll("[data-" + ns + "-go]");
+      function persist(suf) {
+        var saved = YX.loadJSON(key(suf));
+        if (saved && saved.real) {
+          var reqs = doc.querySelectorAll("[data-" + ns + "-req]");
+          var r;
+          for (r = 0; r < reqs.length; r++) reqs[r].checked = true;
+          feedback("Leftover · " + key(suf), st);
+          reveal(doc);
+        }
+      }
+      for (i = 0; i < gos.length; i++) {
+        persist(gos[i].getAttribute("data-" + ns + "-key") || "lx");
+        gos[i].addEventListener("click", function () {
+          if (countChecked(doc, "[data-" + ns + "-req]") < 2) {
+            feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+            return;
+          }
+          if (hops.length && Object.keys(hopsDone).length < 2) {
+            feedback("Hop both leftovers first. Incomplete never writes.", st, { error: true });
+            return;
+          }
+          if (waitBtn && !waited) {
+            feedback("Wait leftover first. Incomplete never writes.", st, { error: true });
+            return;
+          }
+          var field = doc.querySelector("[data-" + ns + "-field]");
+          var q = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
+          if (field && q.length < 2) {
+            feedback("Type leftover first. Empty never writes.", st, { error: true });
+            return;
+          }
+          var suf = this.getAttribute("data-" + ns + "-key") || "lx";
+          saveJSON(key(suf), blob({ leftover: true, deepen: true, q: q.slice(0, 80) }));
+          feedback("Leftover · " + key(suf), st);
+          reveal(doc);
+        });
+      }
+    }
+
     function run(doc) {
       doc = doc || document;
       bootDisneyPlus(doc);
@@ -349,6 +416,7 @@
       bootChrome(doc);
       bootWin10(doc);
       bootEdgePreview(doc);
+      bootPeriodTheater(doc, "p19");
     }
 
     if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

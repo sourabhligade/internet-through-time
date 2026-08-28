@@ -8,6 +8,12 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/fnios/index.html",
+    "sites/gplusend/index.html",
+    "sites/clpersonals/index.html",
+    "sites/mastodon/index.html",
+    "sites/itunesmovie/index.html",
+    "sites/screentime/index.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -57,6 +63,10 @@
     "sites/youtube/index.html",
     "sites/wikipedia/index.html",
     "sites/playable/game.html",
+    "sites/playable/game-5.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-3.html",
+    "sites/playable/game-2.html",
     "sites/playable/extra-b.html",
     "sites/playable/extra-a.html",
     "sites/playable/famous.html",
@@ -126,6 +136,12 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2018/",
     locationHints: [
+      { re: /fortnite.?ios|ios.?fortnite/i, path: "sites/fnios/index.html" },
+      { re: /google\+|gplus|g\+/i, path: "sites/gplusend/index.html" },
+      { re: /craigslist|fosta|personals/i, path: "sites/clpersonals/index.html" },
+      { re: /mastodon/i, path: "sites/mastodon/index.html" },
+      { re: /itunes/i, path: "sites/itunesmovie/index.html" },
+      { re: /screen.?time/i, path: "sites/screentime/index.html" },
       { re: /gdpr|cookie|consent|manage|banner/i, path: "sites/gdpr/index.html" },
       { re: /tiktok|fyp|for you|musical/i, path: "sites/tiktok/fyp.html" },
       { re: /hearing|zuckerberg|cambridge|senate/i, path: "sites/trust/index.html" },

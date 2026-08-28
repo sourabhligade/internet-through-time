@@ -1,6 +1,8 @@
 # 2005 Research Dossier — The Internet Through Time
 
-**Status:** **`years/2005/` live** · hub **unlocked** · YouTube · Maps · Reddit · Digg · **research gather 2026-07-30** · **fresh deep web re-pass 2026-07-31**  
+> **2026-08-26 rebuild lock:** `years/2005/` is **wiped**. Do not follow this file’s “live / 100%” status. Start at [`2005-READ-FIRST.md`](2005-READ-FIRST.md). Star is **YouTube upload** `itt05-yt-uploads` (not Pandora). Size matches **2008 or more**.
+
+**Status (stale):** this dossier was written when **`years/2005/` was live**. Tree is now off disk. Facts / dates / bans below still hold unless the READ-FIRST contradicts them.  
 **Master bible (research · goals · phases · steps · ROI · 2026-08-05):** [`2005-MASTER-BIBLE-RESEARCH-GOALS-PHASES-ROI.md`](2005-MASTER-BIBLE-RESEARCH-GOALS-PHASES-ROI.md)  
 **Ship note:** [`docs/2005-MUSEUM-GRADE.md`](2005-MUSEUM-GRADE.md)  
 **Fresh deep research (2026-07-31 web re-visit · minute timeline · full source index):** [`2005-DEEP-RESEARCH-FRESH-2026-07-31.md`](2005-DEEP-RESEARCH-FRESH-2026-07-31.md)  

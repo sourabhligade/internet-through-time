@@ -8,6 +8,12 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/smario/index.html",
+    "sites/assistant/index.html",
+    "sites/houseparty/index.html",
+    "sites/inbox/index.html",
+    "sites/linkedinms/index.html",
+    "sites/jio/index.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -61,6 +67,10 @@
     "sites/netflix/index.html",
     "sites/youtube/index.html",
     "sites/playable/game.html",
+    "sites/playable/game-5.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-3.html",
+    "sites/playable/game-2.html",
     "sites/playable/extra-b.html",
     "sites/playable/extra-a.html",
     "sites/playable/famous.html",
@@ -130,6 +140,12 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2016/",
     locationHints: [
+      { re: /mario.?run|super.?mario/i, path: "sites/smario/index.html" },
+      { re: /assistant|ok.?google|pixel/i, path: "sites/assistant/index.html" },
+      { re: /houseparty/i, path: "sites/houseparty/index.html" },
+      { re: /\binbox\b/i, path: "sites/inbox/index.html" },
+      { re: /linkedin/i, path: "sites/linkedinms/index.html" },
+      { re: /\bjio\b/i, path: "sites/jio/index.html" },
       { re: /stor(y|ies)|instagram/i, path: "sites/instagram/stories.html" },
       { re: /pokemon|pogo|go/i, path: "sites/pokemongo/index.html" },
       { re: /react|haha|wow/i, path: "sites/facebook/reactions.html" },

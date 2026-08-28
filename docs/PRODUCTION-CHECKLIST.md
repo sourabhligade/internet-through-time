@@ -1,6 +1,20 @@
 # Production checklist — Internet Through Time
 
-> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). Residual = pixels · optional rooms · git (Track E). See `DISK-TRUTH.md`.
+> **Ship (2026-08-27):** Hub **28 years open** (1994–2023 minus **2007 and 2020 wiped**). **2024–2025 wiped.** Static only — CDN is the traffic path. Prefer live tree + `SHIP_YEARS`. Older rows below are historical.
+
+## Traffic (how load is handled)
+
+There is **no app server**. Deploy the repo root to Netlify / Vercel / GitHub Pages. Concurrent visitors hit the CDN, not a process. Carts, stamps, and Resume are `localStorage` only.
+
+| Layer | What handles a spike |
+|-------|----------------------|
+| Origin | Static files. Host bandwidth / CDN plan is the only capacity limit. |
+| `/assets/*` | 1 year, immutable |
+| `/css/*` `/js/*` | 1 day + 7-day stale-while-revalidate |
+| HTML / year rooms | revalidate immediately |
+| Client | Year pages load leftover JS **only when that page has leftover hooks**. UX pack loads in parallel with product engines. |
+
+Post-deploy: `python3 scripts/smoke-production.py --base https://YOUR_HOST`
 
 
 **Legend:** `[ ]` todo · `[~]` partial · `[x]` done  

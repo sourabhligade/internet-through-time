@@ -780,36 +780,6 @@
     "next": "/years/2019/sites/playable/game.html"
   },
   {
-    "year": "2020",
-    "role": "c",
-    "path": "/years/2020/sites/playable/extra-c.html",
-    "key": "itt20-game-muteround",
-    "id": "muteround",
-    "kind": "parlor",
-    "title": "Mute Round",
-    "next": "/years/2020/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2020",
-    "role": "d",
-    "path": "/years/2020/sites/playable/extra-d.html",
-    "key": "itt20-game-reel15",
-    "id": "reel15",
-    "kind": "hold",
-    "title": "Reel 15",
-    "next": "/years/2020/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2020",
-    "role": "e",
-    "path": "/years/2020/sites/playable/extra-e.html",
-    "key": "itt20-game-flashbrick",
-    "id": "flashbrick",
-    "kind": "quiz",
-    "title": "Flash Brick",
-    "next": "/years/2020/sites/playable/game.html"
-  },
-  {
     "year": "2021",
     "role": "c",
     "path": "/years/2021/sites/playable/extra-c.html",
@@ -825,7 +795,7 @@
     "path": "/years/2021/sites/playable/extra-d.html",
     "key": "itt21-game-waitcop",
     "id": "waitcop",
-    "kind": "quiz",
+    "kind": "parlor",
     "title": "Wait Copilot",
     "next": "/years/2021/sites/playable/extra-e.html"
   },
@@ -835,7 +805,7 @@
     "path": "/years/2021/sites/playable/extra-e.html",
     "key": "itt21-game-metanote",
     "id": "metanote",
-    "kind": "quiz",
+    "kind": "parlor",
     "title": "Meta Note",
     "next": "/years/2021/sites/playable/game.html"
   },
@@ -845,7 +815,7 @@
     "path": "/years/2022/sites/playable/extra-c.html",
     "key": "itt22-game-wordguess",
     "id": "wordguess",
-    "kind": "quiz",
+    "kind": "parlor",
     "title": "Word Guess",
     "next": "/years/2022/sites/playable/extra-d.html"
   },
@@ -865,7 +835,7 @@
     "path": "/years/2022/sites/playable/extra-e.html",
     "key": "itt22-game-bereal2",
     "id": "bereal2",
-    "kind": "hold",
+    "kind": "parlor",
     "title": "BeReal Two",
     "next": "/years/2022/sites/playable/game.html"
   },
@@ -873,20 +843,20 @@
     "year": "2023",
     "role": "c",
     "path": "/years/2023/sites/playable/extra-c.html",
-    "key": "itt23-game-pluswait",
-    "id": "pluswait",
+    "key": "itt23-game-plusnote",
+    "id": "plusnote",
     "kind": "parlor",
-    "title": "Plus Wait",
+    "title": "Plus Note",
     "next": "/years/2023/sites/playable/extra-d.html"
   },
   {
     "year": "2023",
     "role": "d",
     "path": "/years/2023/sites/playable/extra-d.html",
-    "key": "itt23-game-bardask",
-    "id": "bardask",
+    "key": "itt23-game-threadnote",
+    "id": "threadnote",
     "kind": "parlor",
-    "title": "Bard Ask",
+    "title": "Threads Note",
     "next": "/years/2023/sites/playable/extra-e.html"
   },
   {
@@ -898,65 +868,5 @@
     "kind": "parlor",
     "title": "X Note",
     "next": "/years/2023/sites/playable/game.html"
-  },
-  {
-    "year": "2024",
-    "role": "c",
-    "path": "/years/2024/sites/playable/extra-c.html",
-    "key": "itt24-game-talkwait",
-    "id": "talkwait",
-    "kind": "parlor",
-    "title": "Talk Wait",
-    "next": "/years/2024/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2024",
-    "role": "d",
-    "path": "/years/2024/sites/playable/extra-d.html",
-    "key": "itt24-game-gemask",
-    "id": "gemask",
-    "kind": "parlor",
-    "title": "Gem Ask",
-    "next": "/years/2024/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2024",
-    "role": "e",
-    "path": "/years/2024/sites/playable/extra-e.html",
-    "key": "itt24-game-soranote",
-    "id": "soranote",
-    "kind": "parlor",
-    "title": "Sora Note",
-    "next": "/years/2024/sites/playable/game.html"
-  },
-  {
-    "year": "2025",
-    "role": "c",
-    "path": "/years/2025/sites/playable/extra-c.html",
-    "key": "itt25-game-thinkwait",
-    "id": "thinkwait",
-    "kind": "quiz",
-    "title": "Think Wait",
-    "next": "/years/2025/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2025",
-    "role": "d",
-    "path": "/years/2025/sites/playable/extra-d.html",
-    "key": "itt25-game-opask",
-    "id": "opask",
-    "kind": "parlor",
-    "title": "Operator Ask",
-    "next": "/years/2025/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2025",
-    "role": "e",
-    "path": "/years/2025/sites/playable/extra-e.html",
-    "key": "itt25-game-r1note",
-    "id": "r1note",
-    "kind": "hold",
-    "title": "R1 Note",
-    "next": "/years/2025/sites/playable/game.html"
   }
 ]

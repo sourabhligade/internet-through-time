@@ -11,7 +11,7 @@ const { enterYear, goImmersion, contentFrame, killOverlays } = require("./helper
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2019; y++) {
+for (let y = 1994; y <= 2022; y++) {
   if (y === 2007 || y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
   YEARS.push(String(y));
 }
@@ -118,6 +118,34 @@ async function completeMinute(frame, page) {
   await killOverlays(page);
   await frame.locator("[data-mx-finish]").click({ force: true });
 }
+
+test.describe("H13 lean cabinets 2015–2018 — game-2…5 minute machines", () => {
+  for (const year of ["2015", "2016", "2017", "2018"]) {
+    for (const file of /** @type {const} */ ([
+      "game-2.html",
+      "game-3.html",
+      "game-4.html",
+      "game-5.html",
+    ])) {
+      test(`${year} ${file} leftover cabinet · empty Finish never writes · verbs write`, async ({
+        page,
+      }) => {
+        const frame = await openExtra(page, year, file);
+        const host = frame.locator("[data-year-game][data-minute-extra]");
+        const gid = await host.getAttribute("data-game-id");
+        expect(gid).toBeTruthy();
+        expect(await host.getAttribute("data-pack-game")).toBeNull();
+        const key = prefix(year) + "-game-" + gid;
+        await frame.locator("[data-mx-finish]").click();
+        expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
+        await completeMinute(frame, page);
+        await expect
+          .poll(async () => page.evaluate((k) => localStorage.getItem(k), key), { timeout: 8000 })
+          .toBeTruthy();
+      });
+    }
+  }
+});
 
 test.describe("year extra games — minute machines", () => {
   for (const year of YEARS) {

@@ -7,6 +7,12 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/oculus/index.html",
+    "sites/ello/index.html",
+    "sites/serial/index.html",
+    "sites/musically14/index.html",
+    "sites/truecrypt/index.html",
+    "sites/echoinvite/index.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -127,6 +133,12 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2014/",
     locationHints: [
+      { re: /oculus|rift/i, path: "sites/oculus/index.html" },
+      { re: /\bello\b/i, path: "sites/ello/index.html" },
+      { re: /serial/i, path: "sites/serial/index.html" },
+      { re: /musical\.?ly/i, path: "sites/musically14/index.html" },
+      { re: /truecrypt/i, path: "sites/truecrypt/index.html" },
+      { re: /echo.?invite|alexa.?invite/i, path: "sites/echoinvite/index.html" },
       { re: /whatsapp/i, path: "sites/whatsapp/index.html" },
       { re: /heartbleed|openssl|cve-2014-0160/i, path: "sites/heartbleed/index.html" },
       { re: /ice.?bucket|als/i, path: "sites/icebucket/index.html" },

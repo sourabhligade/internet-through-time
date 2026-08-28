@@ -12,11 +12,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Hub-open years on disk. 2026+ not on disk. Museum ends 2025. 2005–2007 wiped.
-# 2005–2007 wiped 2026-08-24 — rebuild later, not HEAD restore.
-_WIPED = {"2005", "2006", "2007"}
+# Hub-open years on disk. Museum ends 2023 lean door. 2007, 2020, 2024–2025 wiped.
+# 2006 / 2021 / 2022 / 2023 lean doors are live. 2007 and 2020 stay wiped.
+_WIPED = {"2007", "2020", "2024", "2025"}
 SHIP_YEARS: list[str] = [
-    str(y) for y in list(range(1994, 2026)) if str(y) not in _WIPED
+    str(y) for y in list(range(1994, 2024)) if str(y) not in _WIPED
 ]
 
 _URLMAP_START = re.compile(r"\burlMap\s*:\s*\{")
