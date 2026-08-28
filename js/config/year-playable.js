@@ -163,18 +163,6 @@
       famous: "Fall Blocks + Pocket Snake",
       accent: "#37474f"
     },
-    "2007": {
-      id: "peg",
-      title: "Peg Walk",
-      href: "game.html",
-      key: "itt07-game-peg",
-      inspire: "Street View (29 May 2007)",
-      blurb: "Walk two launch-city blocks. Not Google art.",
-      why: "2007 is when maps became a place you could stand. The star is still iPhone Safari.",
-      era: "XP + IE 7. iPhone ships late. Most people still click Digg from a laptop.",
-      famous: "Pocket Snake + Concentration",
-      accent: "#1565c0",
-    },
         "2008": {
       id: "goospan",
       title: "Goo Span",

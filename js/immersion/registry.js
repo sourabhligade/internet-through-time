@@ -327,11 +327,7 @@
       "immersion/netflix.js",
       "immersion/one-thing-machines.js"
     ],
-    "2007": [
-      "immersion/year-2007-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
-        "2008": [
+    "2008": [
       "immersion/amazon.js",
       "immersion/auction.js",
       "immersion/geocities.js",

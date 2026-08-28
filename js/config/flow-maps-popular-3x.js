@@ -19,7 +19,6 @@
     "2004": ["piczo|Piczo", "tagged|Tagged", "odeo|Odeo"],
     "2005": ["dailymotion|Dailymotion", "vimeo|Vimeo", "gaia|Gaia"],
     "2006": ["bebo|Bebo", "slideshare|SlideShare", "newsvine|Newsvine"],
-    "2007": ["justintv|Justin.tv", "ustream|Ustream", "qik|Qik"],
     "2008": ["stackoverflow|Stack Overflow", "posterous|Posterous", "grooveshark|Grooveshark"],
     "2009": ["omegle|Omegle", "chatroulette|Chatroulette", "mafiawars|Mafia Wars"],
     "2010": ["netflix|Netflix Instant", "tumblr|Tumblr", "formspring|Formspring"],

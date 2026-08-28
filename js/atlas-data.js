@@ -344,8 +344,8 @@
             "2008": {
         era: "App Store · Chrome · G1",
         thesis: "Apps arrive. Chrome is a product room. GitHub leftover writes REAL.",
-        gold: { label: "App Store", href: "years/2008/sites/appstore/index.html", key: "" },
-        leftoverGold: { label: "GitHub issue (REAL leftover)", href: "years/2008/sites/github/issue.html", key: "itt08-github" },
+        gold: { label: "GitHub issue", href: "years/2008/sites/github/issue.html", key: "itt08-github" },
+        leftoverGold: { label: "App Store leftover", href: "years/2008/sites/appstore/index.html", key: "itt08-apps" },
         guided: [
           { label: "Chrome", href: "years/2008/sites/chrome/index.html" },
           { label: "Android G1", href: "years/2008/sites/android/index.html" }

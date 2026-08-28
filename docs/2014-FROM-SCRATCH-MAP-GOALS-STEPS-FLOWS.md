@@ -50,7 +50,7 @@ Dest paths **must** be:
 
 **Not done if:** Ice Bucket / Heartbleed / Watch / Slack / Twitch is the chip, Messenger writes the star, Exploit writes, Starting Point is a leftover wall, or the forest returns.
 
-**HTML cap:** ~25–40 rooms (2013 lean is ~34 HTML). Hard stop **50**.
+**HTML cap:** live lean+6× is **63 HTML**. Hard stop **70**. Do not grow a forest. A Google search leftover is **NEVER** a 2014 dest (not the WhatsApp year).
 
 ---
 

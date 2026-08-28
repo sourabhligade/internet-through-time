@@ -42,7 +42,9 @@ Hub card “2017”
 
 **Not done if:** Fortnite or Netflix is the chip, Face ID is a checkbox plaque, TikTok/Reels/Meta/GDPR appear, Edge looks Chromium, or Starting Point is a leftover wall.
 
-**HTML cap:** ~25–40 rooms (2016 is ~25). Hard stop **50**. Do not grow a forest.
+**HTML cap:** live lean+6× is **87 HTML**. Hard stop **90**. Do not grow a forest.
+
+**NEVER as 2017 dests:** Stories gold (`years/2016/sites/instagram/stories.html`) · Vine recorder (`years/2013/sites/vine/record.html`). Vine-gone leftover may be text-only. `itt17-twitter-140` is not the 2017 object — use `itt17-twitter-280`. `itt17-thesis-ack` is not a plan dest.
 
 ---
 
@@ -306,7 +308,7 @@ Crumbs, pixels (WA or failed-final), Animoji second path, official PLAQUE count 
 - [ ] No TikTok / Reels / Meta / GDPR / Chromium Edge / HomePod-in-stores as defaults  
 - [ ] Official dests have named hooks — **no** `data-5x-save` on the official 10  
 - [ ] e2e mvp + flows + one-thing 2017 green  
-- [ ] HTML ≤ 50  
+- [ ] HTML ≤ 90  
 
 Leftover pixels + museum-grade A polish are **not** the door.
 

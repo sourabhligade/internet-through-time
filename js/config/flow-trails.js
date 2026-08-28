@@ -163,18 +163,6 @@
       {"n": 9, "name": "Time You", "href": "sites/time-you/index.html", "match": "/time-you/", "whenKey": "itt06-time-you", "nextHref": "sites/playable/game.html", "nextLabel": "TrailSled"},
       {"n": 10, "name": "TrailSled", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt06-game-sled", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube"}
     ],
-    "2007": [
-      {"n": 1, "name": "iPhone Safari", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt07-iphone", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail"},
-      {"n": 2, "name": "Gmail open", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt07-gmail", "nextHref": "sites/maps/index.html", "nextLabel": "Street View"},
-      {"n": 3, "name": "Street View", "href": "sites/maps/index.html", "match": "/maps/", "whenKey": "itt07-streetview", "nextHref": "sites/facebook/index.html", "nextLabel": "Platform"},
-      {"n": 4, "name": "Facebook Platform", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt07-fb-platform", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter"},
-      {"n": 5, "name": "Twitter SXSW", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt07-tweets", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube"},
-      {"n": 6, "name": "YouTube leftover", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt07-yt", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace"},
-      {"n": 7, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt07-myspace", "nextHref": "sites/digg/index.html", "nextLabel": "Digg"},
-      {"n": 8, "name": "Digg leftover", "href": "sites/digg/index.html", "match": "/digg/", "whenKey": "itt07-digg", "nextHref": "sites/vista/index.html", "nextLabel": "Vista"},
-      {"n": 9, "name": "Vista leftover", "href": "sites/vista/index.html", "match": "/vista/", "whenKey": "itt07-vista", "nextHref": "sites/playable/game.html", "nextLabel": "Peg Walk"},
-      {"n": 10, "name": "Peg Walk", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt07-game-peg", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone"}
-    ],
     "2008": [
       {"n": 1, "name": "App Store", "href": "sites/appstore/index.html", "match": "/appstore/", "whenKey": "itt08-apps", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome"},
       {"n": 2, "name": "Chrome", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt08-chrome", "nextHref": "sites/github/issue.html", "nextLabel": "GitHub leftover"},

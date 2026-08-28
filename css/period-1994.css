@@ -1,0 +1,8 @@
+/* 1994 document styles — Mosaic / Netscape 1.0 grey page, not Win95 */
+@import url("mosaic-defaults.css");
+
+body.year-1994 .itt-year-chip,
+html[data-itt-year="1994"] .itt-year-chip {
+  color: #000080;
+  border-bottom-color: #000080;
+}

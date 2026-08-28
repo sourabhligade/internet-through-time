@@ -2912,44 +2912,6 @@
     "year": "2006"
   };
 
-    ITT.flowMaps["2007"] = {
-    "thesis": "The phone becomes a real web browser you carry — most people still live on a laptop.",
-    "shell": "Windows XP · IE 7 · no App Store",
-    "how": [
-      "★ iPhone Safari: 320px glass · 980px table · pinch is the joke → itt07-iphone",
-      "F1 Street View pano → F2 Gmail open send → F3 Platform app → F4 Twitter SXSW → F5 Kindle → ★",
-      "Leftover 3× Justin.tv / Ustream / Qik share the lean doors"
-    ],
-    "branches": [
-      {
-        "label": "★ Star",
-        "do": "Safari on iPhone · no App Store",
-        "sites": [
-          { "name": "iPhone Safari", "href": "sites/iphone/index.html", "do": "320px glass → itt07-iphone" }
-        ]
-      },
-      {
-        "label": "5× F1–F5 · 2007",
-        "do": "REAL leftover loops · incomplete never writes",
-        "sites": [
-          { "name": "F1 Street View", "href": "sites/maps/index.html", "do": "pano → itt07-streetview" },
-          { "name": "F2 Gmail open", "href": "sites/gmail/index.html", "do": "no invite wall → itt07-gmail" },
-          { "name": "F3 Platform", "href": "sites/facebook/index.html", "do": "add residual → itt07-fb-app" },
-          { "name": "F4 Twitter SXSW", "href": "sites/twitter/index.html", "do": "compose → itt07-tw" },
-          { "name": "F5 Kindle", "href": "sites/kindle/index.html", "do": "Nov 2007 2-check → itt07-kindle-ack" }
-        ]
-      },
-      {
-        "label": "Year game",
-        "do": "Peg Walk leftover · gold is Safari",
-        "sites": [
-          { "name": "Peg Walk", "href": "sites/playable/game.html", "do": "year game" },
-          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet · gold is Safari" }
-        ]
-      }
-    ],
-    "year": "2007"
-  };
 
     ITT.flowMaps["2008"] =   {
     "thesis": "Apps + browser reinvention — App Store + iPhone 3G, Chrome, Android G1, Hulu.",

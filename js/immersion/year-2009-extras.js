@@ -70,6 +70,7 @@
         return;
       }
       saveJSON(key("like"), blob({ pages: Object.keys(liked), date: "2009-02-09" }));
+      saveJSON(key("fb-likes"), blob({ pages: Object.keys(liked), date: "2009-02-09" }));
       feedback("Like · two partners · " + key("like"), st);
       reveal(doc);
     });
@@ -174,6 +175,7 @@
         return;
       }
       saveJSON(key("iphone"), blob({ capacity: cap + "GB", price: cap === "32" ? 299 : 199, model: "3GS" }));
+      saveJSON(key("iphone-history"), blob({ capacity: cap + "GB", model: "3GS" }));
       feedback("3GS · no iPad · " + key("iphone"), st);
       reveal(doc);
     });

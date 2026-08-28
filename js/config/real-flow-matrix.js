@@ -145,15 +145,6 @@
       complete: { action: "twitter", expect: null }
     },
     {
-      year: "2007",
-      prefix: "itt07",
-      path: "sites/facebook/beacon.html",
-      kind: "product",
-      key: "itt07-beacon-ack",
-      hook: "[data-beacon-ack]",
-      complete: { action: "beacon", expect: null }
-    },
-    {
       year: "2008",
       prefix: "itt08",
       path: "sites/github/issue.html",

@@ -165,7 +165,7 @@ Each flow is how a person used 2006, then the room, then what must write. **Noth
 
 **Life:** The counted web is ~85.5 million sites in June. Hostnames pass 100 million in November. Twttr is the Live Stats birthmark.  
 **Museum:** `pages/about.html` — **85,507,314 (+32%)** · **1,160,335,280** · Twttr · Nov **100M** labeled. Bans listed.  
-**Proof:** two thesis ticks + Save → `itt06-thesis-ack`. One tick never writes. Do not mash June ILS with November Netcraft.
+**Proof:** About dual-cite is literacy only. `itt06-thesis-ack` is **not** a plan dest.
 
 ### C — ★ Twitter 140 (star) · `[ ]`
 
@@ -291,7 +291,7 @@ years/2006/
   pages/error/404.html · unreachable.html
 ```
 
-Optional thin leftovers **only if** HTML stays ≤90: `sites/myspace/index.html` · `sites/flickr/index.html` · `sites/techcrunch/index.html`.
+Optional thin leftovers **only if** HTML stays ≤90: `sites/myspace/index.html` · `sites/flickr/index.html`. TechCrunch is **NEVER** a dest on this door.
 
 **Do not add:** `twitterbird` · `wikihow06` · `diggv4` · `meebo` · `huffpost` · `wikileaks` · `youtubeembed` · IE7 as default chrome · Vista Aero shell · iPhone room · Chrome room · Street View · Gmail-open-to-all as year-start dest.
 

@@ -41,7 +41,9 @@ Hub card “2016”
 
 **Not done if:** Pokémon GO is the chip, Stories is a checkbox plaque, TikTok/Reels/Meta appear, Edge looks Chromium, or Starting Point is a leftover wall.
 
-**HTML cap:** ~32–40 rooms (2015 is 32). Hard stop ~50. Do not grow a forest.
+**HTML cap:** live lean is **67 HTML**. Hard stop **70**. Do not grow a forest.
+
+**NEVER as 2016 dests:** parent IG home (`years/2010/sites/instagram/`) · Periscope (`years/2015/sites/periscope/`) · Vine recorder (`years/2013/sites/vine/record.html`). Gold is `sites/instagram/stories.html`. `itt16-fb-like` is not the 2016 object — use `itt16-fb-react`. `itt16-thesis-ack` is not a plan dest.
 
 ---
 
@@ -132,7 +134,7 @@ Atlas / leftover dump **below** the year banner.
 ### B — Read the thesis
 **Life:** Hostnames crossed 1B again in March and then exploded (900M → 1.7B) while **active** sites stayed ~170M.  
 **Museum:** `pages/about.html` — dual-cite +21% and 3,424,971,237. Bans listed.  
-**Proof:** optional `itt16-thesis-ack` after two checks.
+**Proof:** About dual-cite is literacy only. `itt16-thesis-ack` is not a plan dest.
 
 ### C — Instagram Stories (star)
 **Life:** You post the highlight grid. Everyday stuff went to Snapchat. Aug 2 Instagram puts a 24h rail at the top. Systrom: they deserve the credit.  

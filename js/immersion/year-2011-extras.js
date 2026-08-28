@@ -78,6 +78,8 @@
         return;
       }
       saveJSON(key("gplus"), blob({ circle: circle.slice(0, 40), people: Object.keys(people), hangout: true }));
+      saveJSON(key("gplus-circles"), blob({ circle: circle.slice(0, 40), people: Object.keys(people) }));
+      saveJSON(key("gplus-hangout"), blob({ circle: circle.slice(0, 40), hangout: true }));
       if (canvas) canvas.textContent = "Hangout leftover · up to 10 · " + circle;
       feedback("Google+ · " + key("gplus"), st);
       reveal(doc);
@@ -114,6 +116,7 @@
         return;
       }
       saveJSON(key("spotify"), blob({ sku: sku, date: "2011-07-14", facebook: false }));
+      saveJSON(key("spotify-invited"), blob({ sku: sku, date: "2011-07-14", facebook: false }));
       feedback("Spotify US invite · " + key("spotify"), st);
       reveal(doc);
     });

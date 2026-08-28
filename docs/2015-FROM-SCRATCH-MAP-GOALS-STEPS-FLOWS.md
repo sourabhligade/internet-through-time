@@ -117,7 +117,7 @@ Each flow is how a person used 2015, then the room, then what must write.
 ### B — Read the thesis
 **Life:** The web “shrank” after 1B — methodology, not apocalypse.  
 **Museum:** `pages/about.html` — dual-cite 863,105,652 (−11%) and 3,185,996,155. Bans listed.  
-**Proof:** optional `itt15-thesis-ack` after two checks. Incomplete = no write.
+**Proof:** About dual-cite is literacy only. `itt15-thesis-ack` is not a plan dest. Vine recorder (`years/2013/sites/vine/record.html`) is **2013** — NEVER a 2015 dest. `itt15-fblive-live` is optional leftover, not required for Bar A.
 
 ### C — ★ Go LIVE
 **Life:** Hold the phone. Name the broadcast. Hearts. Apple’s App of the Year. Not a Story.  

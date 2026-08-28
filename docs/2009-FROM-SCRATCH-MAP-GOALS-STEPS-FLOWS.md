@@ -133,7 +133,7 @@ Guided list (`#ott-guided-2009`) stays **exactly 6**:
 Hub → XP + IE 8 → `pages/home.html`. Proof: chip · guided 6 · `SHIP_YEARS` includes 2009.
 
 ### B — Thesis
-About: **238,027,855** · **1.77B** · Dec **~234M** labeled · bans. Two ticks → `itt09-thesis-ack`.
+About: **238,027,855** · **1.77B** · Dec **~234M** labeled · bans. Thesis ticks are literacy only. `itt09-thesis-ack` is not a plan dest. Like leftover may also write `itt09-fb-likes`. 3GS leftover may also write `itt09-iphone-history`.
 
 ### C — ★ Facebook Like
 Two ticks + Like **two** leftover partner pages → `itt09-like`. **Share via Beacon** never writes. 0–1 Like never writes.

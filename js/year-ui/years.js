@@ -10,7 +10,8 @@
   "1994": {
     "title": "Netscape Navigator — 1994",
     "css": [
-      "netscape-chrome.css"
+      "netscape-chrome.css",
+      "period-1994.css"
     ],
     "bodyClass": "",
     "boot": "browser.js",
@@ -1028,71 +1029,6 @@
     "taskBtn": "Internet Explorer",
     "icon": "e",
     "aria": "Internet Explorer 6",
-    "locLabel": "Address",
-    "bookmarksTitle": "Favorites",
-    "mailPh": "friend@aol.com",
-    "hasTaskbar": true,
-    "maximized": true
-  },
-  "2007": {
-    "title": "Internet Explorer 7.0 — 2007",
-    "css": [
-      "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
-    "bodyClass": "year-2007 os-winxp browser-ie7",
-    "boot": "browser-2007.js",
-    "dir": [
-      {
-        "go": "pages/home.html",
-        "label": "Start"
-      },
-      {
-        "go": "sites/iphone/index.html",
-        "label": "iPhone"
-      },
-      {
-        "go": "sites/gmail/index.html",
-        "label": "Gmail"
-      },
-      {
-        "go": "sites/maps/index.html",
-        "label": "Street View"
-      },
-      {
-        "go": "sites/facebook/index.html",
-        "label": "Facebook"
-      },
-      {
-        "go": "sites/twitter/index.html",
-        "label": "Twitter"
-      },
-      {
-        "go": "sites/youtube/index.html",
-        "label": "YouTube"
-      },
-      {
-        "go": "sites/kindle/index.html",
-        "label": "Kindle"
-      }
-    ],
-    "chrome": "2007",
-    "toolbar": "ie",
-    "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2007/",
-    "prefHome": "http://home.microsoft.com/intl/web2007/",
-    "yearLabel": "2007 · Windows XP · Internet Explorer 7",
-    "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2007 thesis: the phone becomes a real browser you carry. iPhone Safari · no App Store · open Gmail · Street View · Facebook Platform. Desktop XP + IE 7 is still how most people live.",
-    "openLoc": "Open Location in Internet Explorer:",
-    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 7.0<br>Copyright © 1995–2006 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Supports Dynamic HTML, CSS, ActiveX, channels, and 56k modems.</p>",
-    "startBanner": "Windows<b>XP</b>",
-    "taskBtn": "Internet Explorer",
-    "icon": "e",
-    "aria": "Internet Explorer 7",
     "locLabel": "Address",
     "bookmarksTitle": "Favorites",
     "mailPh": "friend@aol.com",

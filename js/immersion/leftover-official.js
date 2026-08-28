@@ -203,18 +203,8 @@
       if (carts[i].getAttribute("data-lo-product-bound") === "1") continue;
       carts[i].setAttribute("data-lo-product-bound", "1");
       carts[i].addEventListener("click", function () {
-        var pick = panel.querySelector('[data-lo-pick="' + (save.getAttribute("data-lo-need-pick") || "") + '"]');
-        if (pick) pick.click();
-        var reqs = panel.querySelectorAll("[data-lo-req]");
-        var r;
-        for (r = 0; r < reqs.length; r++) {
-          try { reqs[r].checked = true; } catch (eC) { /* */ }
-        }
-        var field = panel.querySelector("[data-lo-field]");
-        if (field && String(field.value || "").replace(/^\s+|\s+$/g, "").length < 2) {
-          field.value = this.getAttribute("data-title") || "ok leftover";
-        }
-        save.click();
+        var st = panel.querySelector("[data-lo-status]") || doc.querySelector("[data-itt-action-status]");
+        say(st, "Add to cart is leftover theater. Honesty + Save still required. Incomplete never writes.", true);
       });
     }
   }

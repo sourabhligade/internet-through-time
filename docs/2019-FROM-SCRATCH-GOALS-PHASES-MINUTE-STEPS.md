@@ -175,7 +175,7 @@ Do **one phase at a time**. Stop after S2 if Who’s watching still feels like a
 
 **After clone, delete these 2018 product rooms** (do not leave them renamed as fake 2019 dests):
 
-`sites/gdpr/manage.html` · `sites/trust/` · `sites/instagram/igtv.html` · `sites/chrome/not-secure.html` · `sites/homepod/` · `sites/spectre/` · `sites/github/microsoft.html` · `sites/fortnite/switch.html` · `sites/fortnite/creative.html` · `sites/discord/` · `sites/applemusic/` · playable files that still say Consent Dash.
+Steal-from-2018 only (do not create under 2019): `years/2018/sites/gdpr/` · `years/2018/sites/trust/` · `years/2018/sites/instagram/igtv.html` · `years/2018/sites/chrome/` · `years/2018/sites/homepod/` · `years/2018/sites/spectre/` · `years/2018/sites/github/` · Fortnite 2018 rooms · `years/2018/sites/discord/` · `years/2018/sites/applemusic/` · playable files that still say Consent Dash.
 
 Keep: `index.html` · pages skeleton · playable `index.html` / `famous.html` / `extra-a.html` / `extra-b.html` (rewrite copy). GDPR may remain as a **one-line residual** on About, not a star room.
 

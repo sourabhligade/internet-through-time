@@ -202,6 +202,55 @@
     }
   }
 
+  function bootSled(doc) {
+    var host = doc.querySelector("[data-year-game][data-game-id=\"sled\"]");
+    if (!host || host.getAttribute("data-sled-bound") === "1") return;
+    host.setAttribute("data-sled-bound", "1");
+    var scoreEl = host.querySelector("[data-game-score]");
+    var status = host.querySelector("[data-itt-action-status]");
+    var start = host.querySelector("[data-game-start]");
+    var hills = {};
+    var score = 0;
+    function saySled(msg, err) {
+      if (!status) return;
+      status.textContent = msg;
+      try { status.style.color = err ? "#a00" : "#060"; } catch (eC) { /* */ }
+    }
+    if (start) {
+      start.addEventListener("click", function () {
+        score = 0;
+        hills = {};
+        if (scoreEl) scoreEl.textContent = "0";
+        saySled("New run. Ride two hills. Unlock 280 never scores.");
+      });
+    }
+    var walks = host.querySelectorAll("[data-peg-city]");
+    var i;
+    for (i = 0; i < walks.length; i++) {
+      walks[i].addEventListener("click", function () {
+        var id = this.getAttribute("data-peg-city") || "";
+        if (!hills[id]) {
+          hills[id] = true;
+          score += 1;
+          if (scoreEl) scoreEl.textContent = String(score);
+        }
+        if (Object.keys(hills).length >= 2) {
+          saveJSON(key("game-sled"), blob({ hills: Object.keys(hills), score: score, gameId: "sled" }));
+          saySled("TrailSled · " + key("game-sled"));
+          reveal(doc);
+        } else {
+          saySled("Hill " + id + ". Ride the other hill to save.");
+        }
+      });
+    }
+    var trap = host.querySelector("[data-peg-trap]");
+    if (trap) {
+      trap.addEventListener("click", function () {
+        saySled("Unlock 280-char trail is leftover. Trap never scores.", true);
+      });
+    }
+  }
+
   function boot(doc) {
     doc = doc || document;
     bootTwitter(doc);
@@ -209,6 +258,7 @@
     bootWatch(doc);
     bootTimeYou(doc);
     bootProduct(doc);
+    bootSled(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

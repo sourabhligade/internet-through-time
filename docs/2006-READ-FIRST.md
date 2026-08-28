@@ -1,4 +1,4 @@
-# 2006 — READ FIRST (wiped · from-scratch later)
+# 2006 — READ FIRST (lean door on disk)
 
 **Date:** 2026-08-27  
 **Status:** **lean door on disk.** Hub card open. `SHIP_YEARS` includes 2006.  

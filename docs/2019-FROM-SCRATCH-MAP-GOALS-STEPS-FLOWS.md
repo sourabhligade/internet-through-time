@@ -43,7 +43,9 @@ Hub card “2019”
 
 **Not done if:** TikTok / Arcade / Stadia is the chip, Who’s watching is a checkbox plaque, trial writes the star, Consent Dash is the year game, Reels/Meta/COVID/Zoom appear, Edge looks like the default browser, or Starting Point is a leftover wall.
 
-**HTML cap:** ~30–45 rooms (2018 is ~31). Hard stop **50**. Do not grow a forest.
+**HTML cap:** live lean+6× is **87 HTML**. Hard stop **90**. Do not grow a forest.
+
+**NEVER as 2019 dests** (2018 clone paths — do not recreate under 2019): `years/2018/sites/gdpr/` · `years/2018/sites/tiktok/fyp.html` · `years/2018/sites/instagram/igtv.html` · `years/2016/sites/instagram/stories.html` · `years/2018/sites/chrome/` · Fortnite 2018 switch/creative rooms. `itt19-thesis-ack` is not a plan dest.
 
 ---
 

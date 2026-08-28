@@ -1,7 +1,9 @@
 # 2005 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-26  
-**Status:** **on disk.** Full-year door. Star `itt05-yt-uploads`. 2006–2007 stay wiped.  
+**Status:** **on disk.** Full-year door. Star `itt05-yt-uploads`. 2006 is a live Twitter 140 lean door. 2007 stays wiped.
+
+Plan keys on this door: `itt05-yt-uploads` plus official 10 in `flow-trails.js`. Harvest tokens `itt05-digg-comments` · `itt05-reddit-sort` · `itt05-game-famous` · `itt05-game-maphold` · `itt05-game-yttag` · `itt05-suffix` are **not** required for Bar A.  
 **Do not** `git checkout` the old tree.  
 **Size lock:** full year. Match **2008 or more** — not a lean door.  
 **5k-web:** research envelope, not dest count. ILS June table **includes 2005** (legal cell).  

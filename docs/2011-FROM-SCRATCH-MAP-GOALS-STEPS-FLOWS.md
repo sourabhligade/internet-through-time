@@ -26,7 +26,10 @@ Hub “2011”
 
 **Not done if:** Airbnb is the chip, “G+ won” writes, Siri runs on iPhone 4, Spotify US looks like 2008, IG Android is default, or the forest returns.
 
-**HTML cap:** ~50.
+**HTML cap:** live lean is **56 HTML**. Hard stop **70**.
+
+**Plan keys on this door:** `itt11-gplus` (also writes `itt11-gplus-circles` + `itt11-gplus-hangout` from the same G+ save) · `itt11-spotify` (also writes `itt11-spotify-invited`).  
+**NEVER as 2011 dests/keys:** `itt11-groupon` · `itt11-tumblr` · `itt11-wiki` · `itt11-ig-posts` (2010/2012) · `itt11-thesis-ack`.
 
 ---
 
