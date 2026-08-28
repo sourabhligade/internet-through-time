@@ -32,4 +32,6 @@ Hub **28 years open** · **1994–2023 minus 2007 and 2020** · **2024–2025 wi
 Lean doors: **2006 / 2009 / 2011 / 2013–2019 / 2021 / 2022 / 2023**.  
 Games wing (`games/`) is separate and live.
 
+**G1–G10 scoreboard:** [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md).
+
 Rebuild a wiped year only when named. Do not `git checkout` an old forest.

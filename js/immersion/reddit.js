@@ -182,6 +182,22 @@
           var id = ev.currentTarget.getAttribute(attr);
           bump(id, delta);
           render(doc);
+          if (delta > 0) {
+            var trailKey = U().immersionStorageKey
+              ? U().immersionStorageKey("reddit", "itt05")
+              : "itt05-reddit";
+            try {
+              localStorage.setItem(trailKey, JSON.stringify({
+                multiStep: true,
+                real: true,
+                official: true,
+                year: U().immersionYear ? U().immersionYear("2005") : "2005",
+                ts: Date.now(),
+                id: String(id || "").slice(0, 40)
+              }));
+            } catch (eTrail) { /* */ }
+            try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+          }
           var msg =
             (delta > 0 ? "Boosted" : "Buried") +
             " · " +

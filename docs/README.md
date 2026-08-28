@@ -10,7 +10,8 @@ If a paragraph’s hub range is not **1994–2023 minus 2007 and 2020**, it is a
 ## Read first
 
 1. [`ARCHITECTURE.md`](ARCHITECTURE.md) — year differences live in config + content. Shared behavior lives once in `js/`.
-2. [`DISK-TRUTH.md`](DISK-TRUTH.md) — playable years. Live tree + `scripts/itt_gate.py` `SHIP_YEARS` win when anything else disagrees.
+2. [`DISK-TRUTH.md`](DISK-TRUTH.md) — playable years. Live tree + `scripts/itt_gate.py` `SHIP_YEARS` win when anything else disagrees.  
+2b. [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md) — **G1–G10 scoreboard** · 28/28 live years 10/10 · leftover A2 / L4 named.
 3. Year lock: that year’s `YYYY-READ-FIRST.md` (if it exists), then the year tree. Never invent brand pixels.
 4. Incomplete REAL (empty field, Allow / Accept All / Join trap) never writes `localStorage`.
 5. Prefix **`ittYY-*` only**.

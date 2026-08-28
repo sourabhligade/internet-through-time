@@ -105,6 +105,20 @@
         save(list.slice(0, 30));
         if (input) input.value = "";
         render(doc);
+        try {
+          var trailKey = U().immersionStorageKey
+            ? U().immersionStorageKey("reader", "itt06")
+            : "itt06-reader";
+          localStorage.setItem(trailKey, JSON.stringify({
+            multiStep: true,
+            real: true,
+            official: true,
+            year: U().immersionYear ? U().immersionYear("2006") : "2006",
+            ts: Date.now(),
+            feed: name.slice(0, 48)
+          }));
+        } catch (eTrail) { /* */ }
+        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
         var st = doc.querySelector("[data-reader-status]");
         if (st) {
           st.textContent = "Subscribed (local only).";

@@ -47,14 +47,12 @@
     var st =
       doc.querySelector("[data-official-status]") ||
       doc.querySelector("[data-itt-action-status]");
-    var trapped = false;
     var traps = doc.querySelectorAll("[data-official-trap]");
     var t;
     for (t = 0; t < traps.length; t++) {
       if (traps[t].getAttribute("data-official-trap-bound") === "1") continue;
       traps[t].setAttribute("data-official-trap-bound", "1");
       traps[t].addEventListener("click", function () {
-        trapped = true;
         say(st, "Trap. That click never writes.", true);
       });
     }
@@ -64,10 +62,12 @@
       if (verbs[i].getAttribute("data-official-verb-bound") === "1") continue;
       verbs[i].setAttribute("data-official-verb-bound", "1");
       verbs[i].addEventListener("click", function (ev) {
-        if (this.getAttribute("type") === "submit" && ev && ev.preventDefault) ev.preventDefault();
-        if (trapped) {
-          say(st, "Trap path. Incomplete never writes.", true);
-          return;
+        /* Only stop navigation. Forms with an existing period machine
+           (no action / action="#") must still fire submit. */
+        if (this.getAttribute("type") === "submit" && ev && ev.preventDefault) {
+          var form = this.form || (this.closest && this.closest("form"));
+          var action = form ? String(form.getAttribute("action") || "").replace(/^\s+|\s+$/g, "") : "";
+          if (action && action !== "#") ev.preventDefault();
         }
         var reqs = doc.querySelectorAll("[data-official-req]");
         var r;

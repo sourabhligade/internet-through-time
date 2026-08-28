@@ -89,6 +89,20 @@
         list.unshift({ name: name || "bucket", region: "US", objects: 0 });
         save(list.slice(0, 20));
         render(doc);
+        try {
+          var trailKey = U().immersionStorageKey
+            ? U().immersionStorageKey("aws", "itt06")
+            : "itt06-aws";
+          localStorage.setItem(trailKey, JSON.stringify({
+            multiStep: true,
+            real: true,
+            official: true,
+            year: U().immersionYear ? U().immersionYear("2006") : "2006",
+            ts: Date.now(),
+            bucket: name
+          }));
+        } catch (eTrail) { /* */ }
+        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
         var st = doc.querySelector("[data-aws-status]");
         if (st) {
           st.textContent ="Bucket “" + name + "” created (local only) — S3 launched Mar 14, 2006."
