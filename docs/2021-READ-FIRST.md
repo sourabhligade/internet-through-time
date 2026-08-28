@@ -5,6 +5,8 @@
 **Do not** `git checkout` an old 2020–2025 forest. Hard stop ~50–90 HTML.  
 **This pass:** implement (named). Same lean-door job as 2006.  
 **Map:** [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
+**Research freeze (2026-08-28):** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md)  
+**In-place implement (walk this):** [`2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md)  
 **Deepen freeze:** [`2021-2022-2X-DEEPEN-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-27.md`](2021-2022-2X-DEEPEN-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-27.md)  
 **Year map (walk this):** [`2021-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md`](2021-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md) — every dest incomplete/complete · minute steps · phases.  
 **Parent:** 2020 Zoom mute / Reels / GPT-3 waitlist — still wiped. **Child:** 2022 ChatGPT Send.  
@@ -22,7 +24,7 @@
 | Shell | **Windows 10 + Chrome habit** (museum desktop · failed-final word Chrome · no official Chrome pixels). Win11 = **5 Oct** leftover. |
 | ★ Star | **ATT Ask** · iOS 14.5 · `itt21-att` · **Ask App Not to Track** is the save |
 | Incomplete | empty Ask · 0 ticks · **Allow Tracking** · never writes |
-| Complete | both honesties + Ask · reload persist |
+| Complete | Privacy → Tracking · both honesties + Ask · reload persist |
 | Trap | Allow · ChatGPT · Wordle millions / NYT · Meta consumer app · Zoom-as-2021-gold |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ATT Ask · Signal leftover · Copilot waitlist · Meta rename · Win11 leftover · Flash brick · Chrome habit · Win10 residual · Facebook leftover · Five Letter |

@@ -1459,6 +1459,766 @@
       "minPick": 0,
       "field": false,
       "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/reels/index.html",
+      "key": "itt20-reels",
+      "suffix": "reels",
+      "needPick": "post",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/openai/index.html",
+      "key": "itt20-gpt3",
+      "suffix": "gpt3",
+      "needPick": "wait",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/flash/index.html",
+      "key": "itt20-flash",
+      "suffix": "flash",
+      "needPick": "uninstall",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/tiktok/index.html",
+      "key": "itt20-tiktok-eo",
+      "suffix": "tiktok-eo",
+      "needPick": "works",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/markets/wti.html",
+      "key": "itt20-wti",
+      "suffix": "wti",
+      "needPick": "print",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/edge/index.html",
+      "key": "itt20-edge",
+      "suffix": "edge",
+      "needPick": "stable",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/ccpa/index.html",
+      "key": "itt20-ccpa",
+      "suffix": "ccpa",
+      "needPick": "dns",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/chrome/index.html",
+      "key": "itt20-chrome",
+      "suffix": "chrome",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/meet/index.html",
+      "key": "itt20-meet",
+      "suffix": "meet",
+      "needPick": "free",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/quibi/index.html",
+      "key": "itt20-quibi",
+      "suffix": "quibi",
+      "needPick": "bite",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/acnh/index.html",
+      "key": "itt20-acnh",
+      "suffix": "acnh",
+      "needPick": "turnip",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/amongus/index.html",
+      "key": "itt20-among-lit",
+      "suffix": "among-lit",
+      "needPick": "surge",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/hbomax/index.html",
+      "key": "itt20-hbomax",
+      "suffix": "hbomax",
+      "needPick": "continue",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2020",
+      "href": "sites/mixer/index.html",
+      "key": "itt20-mixer",
+      "suffix": "mixer",
+      "needPick": "tomb",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/gemini/index.html",
+      "key": "itt24-gemini",
+      "suffix": "gemini",
+      "needPick": "gemini",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/claude35/index.html",
+      "key": "itt24-claude35",
+      "suffix": "claude35",
+      "needPick": "35",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/sora/index.html",
+      "key": "itt24-sora",
+      "suffix": "sora",
+      "needPick": "preview",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/appleintel/index.html",
+      "key": "itt24-appleintel",
+      "suffix": "appleintel",
+      "needPick": "late",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/o1/index.html",
+      "key": "itt24-o1",
+      "suffix": "o1",
+      "needPick": "preview",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/chatgpt/plus.html",
+      "key": "itt24-plus",
+      "suffix": "plus",
+      "needPick": "2023",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/chrome/index.html",
+      "key": "itt24-chrome",
+      "suffix": "chrome",
+      "needPick": "habit",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/win11/index.html",
+      "key": "itt24-win11",
+      "suffix": "win11",
+      "needPick": "residual",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/store/index.html",
+      "key": "itt24-store",
+      "suffix": "store",
+      "needPick": "store",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/visionpro/index.html",
+      "key": "itt24-vp",
+      "suffix": "vp",
+      "needPick": "ship",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/grok/index.html",
+      "key": "itt24-grok",
+      "suffix": "grok",
+      "needPick": "2024",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/memory/index.html",
+      "key": "itt24-mem",
+      "suffix": "mem",
+      "needPick": "memory",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/notebooklm/index.html",
+      "key": "itt24-nb",
+      "suffix": "nb",
+      "needPick": "notebook",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/rabbit/index.html",
+      "key": "itt24-rabbit",
+      "suffix": "rabbit",
+      "needPick": "r1",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/search/index.html",
+      "key": "itt24-csearch",
+      "suffix": "csearch",
+      "needPick": "search",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/o1mini/index.html",
+      "key": "itt24-o1m",
+      "suffix": "o1m",
+      "needPick": "mini",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/computeruse/index.html",
+      "key": "itt24-cu",
+      "suffix": "cu",
+      "needPick": "cu",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/llama31/index.html",
+      "key": "itt24-l31",
+      "suffix": "l31",
+      "needPick": "l31",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/gen3/index.html",
+      "key": "itt24-gen3",
+      "suffix": "gen3",
+      "needPick": "gen3",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/orion/index.html",
+      "key": "itt24-orion",
+      "suffix": "orion",
+      "needPick": "orion",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/mini/index.html",
+      "key": "itt24-mini",
+      "suffix": "mini",
+      "needPick": "mini",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2024",
+      "href": "sites/voice/index.html",
+      "key": "itt24-voice",
+      "suffix": "voice",
+      "needPick": "voice",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2014",
+      "href": "sites/whatsapp/chat.html",
+      "key": "itt14-wa-chat",
+      "suffix": "wa-chat",
+      "needPick": "chat",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover chat"
+    },
+    {
+      "year": "2014",
+      "href": "sites/heartbleed/index.html",
+      "key": "itt14-heartbleed",
+      "suffix": "heartbleed",
+      "needPick": "patch",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2014",
+      "href": "sites/icebucket/index.html",
+      "key": "itt14-icebucket",
+      "suffix": "icebucket",
+      "needPick": "dump",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2014",
+      "href": "sites/iphone/index.html",
+      "key": "itt14-iphone6",
+      "suffix": "iphone6",
+      "needPick": "6",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2014",
+      "href": "sites/iphone/pay.html",
+      "key": "itt14-applepay",
+      "suffix": "applepay",
+      "needPick": "tap",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2014",
+      "href": "sites/material/index.html",
+      "key": "itt14-material",
+      "suffix": "material",
+      "needPick": "paper",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2014",
+      "href": "sites/slack/index.html",
+      "key": "itt14-slack",
+      "suffix": "slack",
+      "needPick": "chan",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover #general"
+    },
+    {
+      "year": "2014",
+      "href": "sites/twitch/index.html",
+      "key": "itt14-twitch",
+      "suffix": "twitch",
+      "needPick": "stream",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/googlephotos/index.html",
+      "key": "itt15-googlephotos",
+      "suffix": "googlephotos",
+      "needPick": "lib",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/windows10/index.html",
+      "key": "itt15-win10",
+      "suffix": "win10",
+      "needPick": "stay",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/applemusic/index.html",
+      "key": "itt15-applemusic",
+      "suffix": "applemusic",
+      "needPick": "play",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/edge/index.html",
+      "key": "itt15-edge",
+      "suffix": "edge",
+      "needPick": "spartan",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/apple/watch.html",
+      "key": "itt15-watch",
+      "suffix": "watch",
+      "needPick": "s0",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/snapchat/discover.html",
+      "key": "itt15-snap-discover",
+      "suffix": "snap-discover",
+      "needPick": "disc",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2015",
+      "href": "sites/discord/index.html",
+      "key": "itt15-discord",
+      "suffix": "discord",
+      "needPick": "server",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover server"
+    },
+    {
+      "year": "2015",
+      "href": "sites/letsencrypt/index.html",
+      "key": "itt15-le",
+      "suffix": "le",
+      "needPick": "cert",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/pokemongo/index.html",
+      "key": "itt16-pogo",
+      "suffix": "pogo",
+      "needPick": "gym",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/facebook/reactions.html",
+      "key": "itt16-fb-react",
+      "suffix": "fb-react",
+      "needPick": "wow",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/whatsapp/e2e.html",
+      "key": "itt16-wa-e2e",
+      "suffix": "wa-e2e",
+      "needPick": "lock",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/iphone/index.html",
+      "key": "itt16-iphone7",
+      "suffix": "iphone7",
+      "needPick": "7",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/vine/goodbye.html",
+      "key": "itt16-vine-end",
+      "suffix": "vine-end",
+      "needPick": "bye",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/snapchat/spectacles.html",
+      "key": "itt16-spectacles",
+      "suffix": "spectacles",
+      "needPick": "glass",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/musically/index.html",
+      "key": "itt16-musically",
+      "suffix": "musically",
+      "needPick": "lip",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2016",
+      "href": "sites/windows10/end.html",
+      "key": "itt16-win10-end",
+      "suffix": "win10-end",
+      "needPick": "end",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/fortnite/index.html",
+      "key": "itt17-fortnite",
+      "suffix": "fortnite",
+      "needPick": "drop",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/twitter/280.html",
+      "key": "itt17-twitter-280",
+      "suffix": "twitter-280",
+      "needPick": "280",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "leftover tweet"
+    },
+    {
+      "year": "2017",
+      "href": "sites/teams/index.html",
+      "key": "itt17-teams",
+      "suffix": "teams",
+      "needPick": "team",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/vine/gone.html",
+      "key": "itt17-vine-gone",
+      "suffix": "vine-gone",
+      "needPick": "gone",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/switch/index.html",
+      "key": "itt17-switch",
+      "suffix": "switch",
+      "needPick": "hybrid",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/wannacry/index.html",
+      "key": "itt17-wannacry",
+      "suffix": "wannacry",
+      "needPick": "patch",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/musically/index.html",
+      "key": "itt17-musically",
+      "suffix": "musically",
+      "needPick": "clip",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2017",
+      "href": "sites/equifax/index.html",
+      "key": "itt17-equifax",
+      "suffix": "equifax",
+      "needPick": "freeze",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/tiktok/fyp.html",
+      "key": "itt18-tiktok-fyp",
+      "suffix": "tiktok-fyp",
+      "needPick": "fyp",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/trust/index.html",
+      "key": "itt18-hearing",
+      "suffix": "hearing",
+      "needPick": "hear",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/instagram/igtv.html",
+      "key": "itt18-igtv",
+      "suffix": "igtv",
+      "needPick": "igtv",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/chrome/not-secure.html",
+      "key": "itt18-not-secure",
+      "suffix": "not-secure",
+      "needPick": "mark",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/homepod/index.html",
+      "key": "itt18-homepod",
+      "suffix": "homepod",
+      "needPick": "pod",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/spectre/index.html",
+      "key": "itt18-spectre",
+      "suffix": "spectre",
+      "needPick": "cpu",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/fortnite/switch.html",
+      "key": "itt18-fn-switch",
+      "suffix": "fn-switch",
+      "needPick": "nsw",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
+    },
+    {
+      "year": "2018",
+      "href": "sites/github/microsoft.html",
+      "key": "itt18-github",
+      "suffix": "github",
+      "needPick": "deal",
+      "minPick": 0,
+      "field": false,
+      "placeholder": ""
     }
   ]
 }

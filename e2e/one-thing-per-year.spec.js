@@ -184,6 +184,20 @@ const THINGS = [
     },
   },
   {
+    year: "2007",
+    path: "/years/2007/sites/iphone/index.html",
+    key: "itt07-iphone",
+    incomplete: async (page) => {
+      await page.locator("[data-ip07-store]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-ip07-req]").nth(0).check();
+      await page.locator("[data-ip07-req]").nth(1).check();
+      await page.locator('[data-ip07-cap][value="8"]').check();
+      await page.locator("[data-ip07-safari]").click();
+    },
+  },
+  {
     year: "2009",
     path: "/years/2009/sites/facebook/index.html",
     key: "itt09-like",
@@ -337,6 +351,77 @@ const THINGS = [
       await page.locator("[data-dplus-continue]").click();
     },
   },
+  {
+    year: "2020",
+    path: "/years/2020/sites/zoom/meeting.html",
+    key: "itt20-zoom",
+    incomplete: async (page) => {
+      await page.locator("[data-zoom-leave]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-zoom-req]").nth(0).check();
+      await page.locator("[data-zoom-req]").nth(1).check();
+      await page.locator("[data-zoom-mute]").click();
+      await page.locator("[data-zoom-chat]").fill("can you hear me");
+      await page.locator("[data-zoom-send]").click();
+      await page.locator("[data-zoom-leave]").click();
+    },
+  },
+  {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-att-allow]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-att-open="privacy"]').click();
+      await page.locator('[data-att-open="tracking"]').click();
+      await page.locator("[data-att-req]").nth(0).check();
+      await page.locator("[data-att-req]").nth(1).check();
+      await page.locator("[data-att-ask]").click();
+    },
+  },
+  {
+    year: "2022",
+    path: "/years/2022/sites/chatgpt/index.html",
+    key: "itt22-chatgpt",
+    incomplete: async (page) => {
+      await page.locator("[data-gpt22-send]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-gpt22-prompt]").fill("explain this leftover");
+      await page.locator("[data-gpt22-send]").click();
+    },
+  },
+  {
+    year: "2023",
+    path: "/years/2023/sites/plus/index.html",
+    key: "itt23-plus",
+    incomplete: async (page) => {
+      await page.locator("[data-plus-go]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-p23-req]").nth(0).check();
+      await page.locator("[data-p23-req]").nth(1).check();
+      await page.locator("[data-p23-field]").fill("plus leftover $20");
+      await page.locator("[data-plus-go]").click();
+    },
+  },
+  {
+    year: "2024",
+    path: "/years/2024/sites/chatgpt/4o.html",
+    key: "itt24-gpt4o",
+    incomplete: async (page) => {
+      await page.locator("[data-4o-talk]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-4o-pick="4o"]').click();
+      await page.locator("[data-4o-req]").nth(0).check();
+      await page.locator("[data-4o-req]").nth(1).check();
+      await page.locator("[data-4o-talk]").click();
+    },
+  },
 ];
 
 test.describe("One-thing per year — load + REAL gate", () => {
@@ -378,7 +463,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   test("1994–2009 homes lead with one-thing then guided, residual later", async ({ page }) => {
     const years = [];
     for (let y = 1994; y <= 2009; y++) {
-      if (y === 2007) continue;
+
       years.push(String(y));
     }
     for (const y of years) {

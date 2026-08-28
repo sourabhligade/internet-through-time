@@ -160,6 +160,18 @@
       "<a href=\"map.html\">Year flow map</a>"
     ]
   },
+  "2007": {
+    "href": "../sites/iphone/index.html",
+    "label": "★ One-thing · iPhone Safari REAL",
+    "items": [
+      "<a href=\"about.html\">About 2007</a> — dual scale · bans",
+      "<a href=\"../sites/iphone/index.html\">iPhone Safari</a> — capacity + Use Safari REAL",
+      "<a href=\"../sites/gmail/index.html\">Gmail open leftover</a> — 14 Feb",
+      "<a href=\"../sites/maps/index.html\">Street View leftover</a> — two cities",
+      "<a href=\"../sites/facebook/index.html\">Platform leftover</a> — Beacon trap",
+      "<a href=\"map.html\">Year flow map</a>"
+    ]
+  },
   "2008": {
     "href": "../sites/github/issue.html",
     "label": "★ One-thing · GitHub issue REAL",
@@ -181,6 +193,30 @@
       "<a href=\"../sites/farmville/index.html\">FarmVille — plant / harvest</a>",
       "<a href=\"../sites/bing/index.html\">Bing — decision engine</a>",
       "<a href=\"../sites/iphone/index.html\">iPhone 3GS — no iPad</a>",
+      "<a href=\"map.html\">Year flow map</a>"
+    ]
+  },
+  "2020": {
+    "href": "../sites/zoom/meeting.html",
+    "label": "★ One-thing · Zoom mute → leave REAL",
+    "items": [
+      "<a href=\"about.html\">About 2020</a> — dual scale · bans",
+      "<a href=\"../sites/zoom/meeting.html\">Zoom meeting</a> — mute + chat + Leave REAL",
+      "<a href=\"../sites/reels/index.html\">Reels 15s leftover</a> — 5 Aug",
+      "<a href=\"../sites/openai/index.html\">GPT-3 waitlist leftover</a> — not a chat",
+      "<a href=\"../sites/flash/index.html\">Flash EOL leftover</a> — 31 Dec",
+      "<a href=\"map.html\">Year flow map</a>"
+    ]
+  },
+  "2024": {
+    "href": "../sites/chatgpt/4o.html",
+    "label": "★ One-thing · GPT-4o Talk REAL",
+    "items": [
+      "<a href=\"about.html\">About 2024</a> — 4o · Gemini · ILS ban",
+      "<a href=\"../sites/chatgpt/4o.html\">GPT-4o Talk</a> — omni · free-class REAL",
+      "<a href=\"../sites/gemini/index.html\">Gemini leftover</a> — not Bard",
+      "<a href=\"../sites/claude35/index.html\">Claude 3.5 leftover</a> — June",
+      "<a href=\"../sites/sora/index.html\">Sora leftover</a> — preview",
       "<a href=\"map.html\">Year flow map</a>"
     ]
   }

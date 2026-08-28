@@ -17,8 +17,8 @@ test.describe("2023 ChatGPT Plus gold", () => {
   test("hub card open · guided 6 · plus dest 200", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator('a.year-card.available[href*="years/2023"]').first()).toBeVisible();
-    await expect(page.locator(".year-card.locked.y2020")).toBeVisible();
-    await expect(page.locator(".year-card.locked.y2024")).toBeVisible();
+    await expect(page.locator(".year-card.locked.y2020")).toHaveCount(0);
+    await expect(page.locator(".year-card.locked.y2024")).toHaveCount(0);
     await expect(page.locator(".year-card.locked.y2025")).toBeVisible();
 
     await page.goto("/years/2023/pages/home.html");

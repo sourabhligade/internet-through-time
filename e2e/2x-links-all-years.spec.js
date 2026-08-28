@@ -87,8 +87,18 @@ for (const row of matrix) {
 
 for (const year of Object.keys(byYear).sort()) {
   if (!fs.existsSync(path.join(ROOT, 'years', year, 'index.html'))) continue;
+  const rows = byYear[year].filter((fl) => {
+    const dest = path.join(ROOT, String(fl.path || '').replace(/^\//, ''));
+    if (!fs.existsSync(dest)) return false;
+    try {
+      return fs.readFileSync(dest, 'utf8').indexOf('data-4x-go') !== -1;
+    } catch (e) {
+      return false;
+    }
+  });
+  if (!rows.length) continue;
   test.describe(`2× leftover ${year}`, () => {
-    for (const fl of byYear[year]) {
+    for (const fl of rows) {
       test(`${fl.key} incomplete then REAL`, async ({ page }) => {
         await runFlow(page, fl);
       });

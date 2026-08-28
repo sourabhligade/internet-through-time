@@ -46,7 +46,7 @@
 
 ## S7 Implement this sprint
 
-- [ ] Visitor-visible change: **none this pass** (research freeze)
-- [ ] CAPTURE IDs: ATT sheet · WA policy · Meta Connect · Win11 Start
-- [ ] e2e: after `implement 2021 from scratch`
-- [ ] REAL key: `itt21-att`
+- [x] Visitor-visible: About leftover-dest line · official Next chips Win10 → Facebook → Five Letter  
+- [ ] CAPTURE IDs: ATT sheet · WA policy · Meta Connect · Win11 Start  
+- [x] REAL key: `itt21-att` (door already live)  
+- [ ] e2e ship pack before push

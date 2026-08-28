@@ -1,0 +1,153 @@
+/**
+ * Year config — 2020 lean from-scratch
+ */
+(function (global) {
+  "use strict";
+  var ITT = global.ITT || (global.ITT = {});
+  ITT.configs = ITT.configs || {};
+
+  var rooms = [
+    "pages/home.html",
+    "pages/about.html",
+    "pages/map.html",
+    "pages/whats-new.html",
+    "pages/error/404.html",
+    "pages/error/unreachable.html",
+    "sites/zoom/index.html",
+    "sites/zoom/meeting.html",
+    "sites/zoom/wait.html",
+    "sites/tiktok/fyp.html",
+    "sites/playable/index.html",
+    "sites/playable/game.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
+    "sites/playable/extra-a.html",
+    "sites/playable/extra-b.html",
+    "sites/playable/extra-c.html",
+    "sites/playable/extra-d.html",
+    "sites/playable/extra-e.html",
+    "sites/reels/index.html",
+    "sites/openai/index.html",
+    "sites/flash/index.html",
+    "sites/tiktok/index.html",
+    "sites/markets/wti.html",
+    "sites/edge/index.html",
+    "sites/ccpa/index.html",
+    "sites/chrome/index.html",
+    "sites/meet/index.html",
+    "sites/mixer/index.html",
+    "sites/hbomax/index.html",
+    "sites/acnh/index.html",
+    "sites/astro/index.html",
+    "sites/quibi/index.html",
+    "sites/peacock/index.html",
+    "sites/clubhouse/index.html",
+    "sites/discord/index.html",
+    "sites/youtube/index.html",
+    "sites/wikipedia/index.html",
+    "sites/facebook/index.html",
+    "sites/spacehey/index.html",
+    "sites/exposure/index.html",
+    "sites/epic/index.html",
+    "sites/iphone12/index.html",
+    "sites/fleets/index.html",
+    "sites/teams/index.html",
+    "sites/ps5/index.html",
+    "sites/fallguys/index.html",
+    "sites/stimulus/index.html",
+    "sites/schrems/index.html",
+    "sites/ios14/index.html",
+    "sites/quest2/index.html",
+    "sites/disneyplus/index.html",
+    "sites/amongus/index.html"
+];
+
+  var urlMap = {
+    "index.html": "http://museum.local/index.html",
+    "pages/home.html": "http://museum.local/years/2020/pages/home.html",
+    "pages/about.html": "http://museum.local/years/2020/pages/about.html",
+    "pages/map.html": "http://museum.local/years/2020/pages/map.html",
+    "pages/whats-new.html": "http://museum.local/years/2020/pages/whats-new.html",
+    "pages/error/404.html": "http://museum.local/years/2020/pages/error/404.html",
+    "pages/error/unreachable.html": "http://museum.local/years/2020/pages/error/unreachable.html",
+    "sites/zoom/index.html": "http://museum.local/years/2020/sites/zoom/index.html",
+    "sites/zoom/meeting.html": "http://museum.local/years/2020/sites/zoom/meeting.html",
+    "sites/zoom/wait.html": "http://museum.local/years/2020/sites/zoom/wait.html",
+    "sites/tiktok/fyp.html": "http://museum.local/years/2020/sites/tiktok/fyp.html",
+    "sites/playable/index.html": "http://museum.local/years/2020/sites/playable/index.html",
+    "sites/playable/game.html": "http://museum.local/years/2020/sites/playable/game.html",
+    "sites/playable/more-a.html": "http://museum.local/years/2020/sites/playable/more-a.html",
+    "sites/playable/more-b.html": "http://museum.local/years/2020/sites/playable/more-b.html",
+    "sites/playable/extra-a.html": "http://museum.local/years/2020/sites/playable/extra-a.html",
+    "sites/playable/extra-b.html": "http://museum.local/years/2020/sites/playable/extra-b.html",
+    "sites/playable/extra-c.html": "http://museum.local/years/2020/sites/playable/extra-c.html",
+    "sites/playable/extra-d.html": "http://museum.local/years/2020/sites/playable/extra-d.html",
+    "sites/playable/extra-e.html": "http://museum.local/years/2020/sites/playable/extra-e.html",
+    "sites/reels/index.html": "http://museum.local/years/2020/sites/reels/index.html",
+    "sites/openai/index.html": "http://museum.local/years/2020/sites/openai/index.html",
+    "sites/flash/index.html": "http://museum.local/years/2020/sites/flash/index.html",
+    "sites/tiktok/index.html": "http://museum.local/years/2020/sites/tiktok/index.html",
+    "sites/markets/wti.html": "http://museum.local/years/2020/sites/markets/wti.html",
+    "sites/edge/index.html": "http://museum.local/years/2020/sites/edge/index.html",
+    "sites/ccpa/index.html": "http://museum.local/years/2020/sites/ccpa/index.html",
+    "sites/chrome/index.html": "http://museum.local/years/2020/sites/chrome/index.html",
+    "sites/meet/index.html": "http://museum.local/years/2020/sites/meet/index.html",
+    "sites/mixer/index.html": "http://museum.local/years/2020/sites/mixer/index.html",
+    "sites/hbomax/index.html": "http://museum.local/years/2020/sites/hbomax/index.html",
+    "sites/acnh/index.html": "http://museum.local/years/2020/sites/acnh/index.html",
+    "sites/astro/index.html": "http://museum.local/years/2020/sites/astro/index.html",
+    "sites/quibi/index.html": "http://museum.local/years/2020/sites/quibi/index.html",
+    "sites/peacock/index.html": "http://museum.local/years/2020/sites/peacock/index.html",
+    "sites/clubhouse/index.html": "http://museum.local/years/2020/sites/clubhouse/index.html",
+    "sites/discord/index.html": "http://museum.local/years/2020/sites/discord/index.html",
+    "sites/youtube/index.html": "http://museum.local/years/2020/sites/youtube/index.html",
+    "sites/wikipedia/index.html": "http://museum.local/years/2020/sites/wikipedia/index.html",
+    "sites/facebook/index.html": "http://museum.local/years/2020/sites/facebook/index.html",
+    "sites/spacehey/index.html": "http://museum.local/years/2020/sites/spacehey/index.html",
+    "sites/exposure/index.html": "http://museum.local/years/2020/sites/exposure/index.html",
+    "sites/epic/index.html": "http://museum.local/years/2020/sites/epic/index.html",
+    "sites/iphone12/index.html": "http://museum.local/years/2020/sites/iphone12/index.html",
+    "sites/fleets/index.html": "http://museum.local/years/2020/sites/fleets/index.html",
+    "sites/teams/index.html": "http://museum.local/years/2020/sites/teams/index.html",
+    "sites/ps5/index.html": "http://museum.local/years/2020/sites/ps5/index.html",
+    "sites/fallguys/index.html": "http://museum.local/years/2020/sites/fallguys/index.html",
+    "sites/stimulus/index.html": "http://museum.local/years/2020/sites/stimulus/index.html",
+    "sites/schrems/index.html": "http://museum.local/years/2020/sites/schrems/index.html",
+    "sites/ios14/index.html": "http://museum.local/years/2020/sites/ios14/index.html",
+    "sites/quest2/index.html": "http://museum.local/years/2020/sites/quest2/index.html",
+    "sites/disneyplus/index.html": "http://museum.local/years/2020/sites/disneyplus/index.html",
+    "sites/amongus/index.html": "http://museum.local/years/2020/sites/amongus/index.html",
+  };
+  var i;
+  for (i = 0; i < rooms.length; i++) {
+    if (!urlMap[rooms[i]]) {
+      urlMap[rooms[i]] = "http://museum.local/years/2020/" + rooms[i];
+    }
+  }
+
+  ITT.configs["2020"] = {
+    year: "2020",
+    home: "pages/home.html",
+    prefsKey: "itt-2020-prefs",
+    bookmarksKey: "itt-2020-bookmarks",
+    connectedKey: "itt-2020-connected",
+    immersionScript: "js/immersion-2020.js",
+    maximizedDefault: true,
+    browserTitleSuffix: " - Chrome habit",
+    connectMode: "broadband",
+    connectSpeedLine: "Connected · always-on broadband (museum)",
+    connectBrowserLine: "Starting Chrome habit...",
+    defaultPrefs: {
+      underline: true,
+      expireDays: 30,
+      autoload: true,
+      modemDelay: 20
+    },
+    urlMap: urlMap,
+    titleMap: {
+      "pages/home.html": "Welcome to the World Wide Web — 2020",
+      "pages/about.html": "About 2020",
+      "sites/zoom/meeting.html": "You’re muted — Zoom 2020"
+    }
+  };
+})(typeof window !== "undefined" ? window : this);

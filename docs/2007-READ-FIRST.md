@@ -1,9 +1,9 @@
-# 2007 — READ FIRST (**WIPED**)
+# 2007 — READ FIRST (**LEAN DOOR LIVE**)
 
 **Date:** 2026-08-28  
-**Status:** **Wiped.** Hub card locked. No `years/2007/` on disk. `SHIP_YEARS` does not include 2007.
+**Status:** **Lean door on disk.** Prefix `itt07`. Star = iPhone Safari · no App Store. Do **not** `git checkout` the old ~292-HTML forest.
 
-**Do not** scaffold, restore, or `git checkout` a 2007 forest. Chrome GIFs under `assets/period/2007/chrome/` stay — 2008/2009 shells reuse that family. That is not a year door.
+Chrome GIFs under `assets/period/2007/chrome/` stay — 2008/2009 shells reuse that family.
 
 | | |
 |--|--|
@@ -12,5 +12,8 @@
 | Shell if rebuilt later | XP + IE 7 · lean door ~50–90 HTML |
 | Parent | 2006 Twitter 140 (live) |
 | Child | 2008 App Store leftover / GitHub chip (live) |
+
+**This pass harvest:** [`2007-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2007-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md) — research only.  
+**This pass execute:** [`2007-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-28.md`](2007-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-28.md) — goals · phases · minute.
 
 Older 2007 maps, harvests, and “lean door done on disk” sentences are notebooks. They lose to this file + the live tree.

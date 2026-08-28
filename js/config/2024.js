@@ -1,0 +1,151 @@
+/**
+ * Year config — 2024 lean from-scratch
+ */
+(function (global) {
+  "use strict";
+  var ITT = global.ITT || (global.ITT = {});
+  ITT.configs = ITT.configs || {};
+
+  var rooms = [
+    "pages/home.html",
+    "pages/about.html",
+    "pages/map.html",
+    "pages/whats-new.html",
+    "pages/error/404.html",
+    "pages/error/unreachable.html",
+    "sites/chatgpt/4o.html",
+    "sites/chatgpt/plus.html",
+    "sites/playable/index.html",
+    "sites/playable/game.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
+    "sites/playable/extra-a.html",
+    "sites/playable/extra-b.html",
+    "sites/playable/extra-c.html",
+    "sites/playable/extra-d.html",
+    "sites/playable/extra-e.html",
+    "sites/gemini/index.html",
+    "sites/claude35/index.html",
+    "sites/sora/index.html",
+    "sites/appleintel/index.html",
+    "sites/o1/index.html",
+    "sites/chrome/index.html",
+    "sites/win11/index.html",
+    "sites/youtube/index.html",
+    "sites/wikipedia/index.html",
+    "sites/facebook/index.html",
+    "sites/tiktok/index.html",
+    "sites/midjourney/index.html",
+    "sites/lensa/index.html",
+    "sites/claude2/index.html",
+    "sites/bluesky/index.html",
+    "sites/threads/index.html",
+    "sites/store/index.html",
+    "sites/visionpro/index.html",
+    "sites/grok/index.html",
+    "sites/memory/index.html",
+    "sites/notebooklm/index.html",
+    "sites/perplexity/index.html",
+    "sites/rabbit/index.html",
+    "sites/suno/index.html",
+    "sites/flux/index.html",
+    "sites/llama3/index.html",
+    "sites/devin/index.html",
+    "sites/udio/index.html",
+    "sites/gemflash/index.html",
+    "sites/astra/index.html",
+    "sites/veo/index.html",
+    "sites/recall/index.html",
+    "sites/luma/index.html",
+    "sites/artifacts/index.html",
+    "sites/canvas/index.html"
+];
+
+  var urlMap = {
+    "index.html": "http://museum.local/index.html",
+    "pages/home.html": "http://museum.local/years/2024/pages/home.html",
+    "pages/about.html": "http://museum.local/years/2024/pages/about.html",
+    "pages/map.html": "http://museum.local/years/2024/pages/map.html",
+    "pages/whats-new.html": "http://museum.local/years/2024/pages/whats-new.html",
+    "pages/error/404.html": "http://museum.local/years/2024/pages/error/404.html",
+    "pages/error/unreachable.html": "http://museum.local/years/2024/pages/error/unreachable.html",
+    "sites/chatgpt/4o.html": "http://museum.local/years/2024/sites/chatgpt/4o.html",
+    "sites/chatgpt/plus.html": "http://museum.local/years/2024/sites/chatgpt/plus.html",
+    "sites/playable/index.html": "http://museum.local/years/2024/sites/playable/index.html",
+    "sites/playable/game.html": "http://museum.local/years/2024/sites/playable/game.html",
+    "sites/playable/more-a.html": "http://museum.local/years/2024/sites/playable/more-a.html",
+    "sites/playable/more-b.html": "http://museum.local/years/2024/sites/playable/more-b.html",
+    "sites/playable/extra-a.html": "http://museum.local/years/2024/sites/playable/extra-a.html",
+    "sites/playable/extra-b.html": "http://museum.local/years/2024/sites/playable/extra-b.html",
+    "sites/playable/extra-c.html": "http://museum.local/years/2024/sites/playable/extra-c.html",
+    "sites/playable/extra-d.html": "http://museum.local/years/2024/sites/playable/extra-d.html",
+    "sites/playable/extra-e.html": "http://museum.local/years/2024/sites/playable/extra-e.html",
+    "sites/gemini/index.html": "http://museum.local/years/2024/sites/gemini/index.html",
+    "sites/claude35/index.html": "http://museum.local/years/2024/sites/claude35/index.html",
+    "sites/sora/index.html": "http://museum.local/years/2024/sites/sora/index.html",
+    "sites/appleintel/index.html": "http://museum.local/years/2024/sites/appleintel/index.html",
+    "sites/o1/index.html": "http://museum.local/years/2024/sites/o1/index.html",
+    "sites/chrome/index.html": "http://museum.local/years/2024/sites/chrome/index.html",
+    "sites/win11/index.html": "http://museum.local/years/2024/sites/win11/index.html",
+    "sites/youtube/index.html": "http://museum.local/years/2024/sites/youtube/index.html",
+    "sites/wikipedia/index.html": "http://museum.local/years/2024/sites/wikipedia/index.html",
+    "sites/facebook/index.html": "http://museum.local/years/2024/sites/facebook/index.html",
+    "sites/tiktok/index.html": "http://museum.local/years/2024/sites/tiktok/index.html",
+    "sites/midjourney/index.html": "http://museum.local/years/2024/sites/midjourney/index.html",
+    "sites/lensa/index.html": "http://museum.local/years/2024/sites/lensa/index.html",
+    "sites/claude2/index.html": "http://museum.local/years/2024/sites/claude2/index.html",
+    "sites/bluesky/index.html": "http://museum.local/years/2024/sites/bluesky/index.html",
+    "sites/threads/index.html": "http://museum.local/years/2024/sites/threads/index.html",
+    "sites/store/index.html": "http://museum.local/years/2024/sites/store/index.html",
+    "sites/visionpro/index.html": "http://museum.local/years/2024/sites/visionpro/index.html",
+    "sites/grok/index.html": "http://museum.local/years/2024/sites/grok/index.html",
+    "sites/memory/index.html": "http://museum.local/years/2024/sites/memory/index.html",
+    "sites/notebooklm/index.html": "http://museum.local/years/2024/sites/notebooklm/index.html",
+    "sites/perplexity/index.html": "http://museum.local/years/2024/sites/perplexity/index.html",
+    "sites/rabbit/index.html": "http://museum.local/years/2024/sites/rabbit/index.html",
+    "sites/suno/index.html": "http://museum.local/years/2024/sites/suno/index.html",
+    "sites/flux/index.html": "http://museum.local/years/2024/sites/flux/index.html",
+    "sites/llama3/index.html": "http://museum.local/years/2024/sites/llama3/index.html",
+    "sites/devin/index.html": "http://museum.local/years/2024/sites/devin/index.html",
+    "sites/udio/index.html": "http://museum.local/years/2024/sites/udio/index.html",
+    "sites/gemflash/index.html": "http://museum.local/years/2024/sites/gemflash/index.html",
+    "sites/astra/index.html": "http://museum.local/years/2024/sites/astra/index.html",
+    "sites/veo/index.html": "http://museum.local/years/2024/sites/veo/index.html",
+    "sites/recall/index.html": "http://museum.local/years/2024/sites/recall/index.html",
+    "sites/luma/index.html": "http://museum.local/years/2024/sites/luma/index.html",
+    "sites/artifacts/index.html": "http://museum.local/years/2024/sites/artifacts/index.html",
+    "sites/canvas/index.html": "http://museum.local/years/2024/sites/canvas/index.html",
+  };
+  var i;
+  for (i = 0; i < rooms.length; i++) {
+    if (!urlMap[rooms[i]]) {
+      urlMap[rooms[i]] = "http://museum.local/years/2024/" + rooms[i];
+    }
+  }
+
+  ITT.configs["2024"] = {
+    year: "2024",
+    home: "pages/home.html",
+    prefsKey: "itt-2024-prefs",
+    bookmarksKey: "itt-2024-bookmarks",
+    connectedKey: "itt-2024-connected",
+    immersionScript: "js/immersion-2024.js",
+    maximizedDefault: true,
+    browserTitleSuffix: " - Chrome habit",
+    connectMode: "broadband",
+    connectSpeedLine: "Connected · always-on broadband (museum)",
+    connectBrowserLine: "Starting Chrome habit...",
+    defaultPrefs: {
+      underline: true,
+      expireDays: 30,
+      autoload: true,
+      modemDelay: 20
+    },
+    urlMap: urlMap,
+    titleMap: {
+      "pages/home.html": "Welcome to the World Wide Web — 2024",
+      "pages/about.html": "About 2024",
+      "sites/chatgpt/4o.html": "GPT-4o Talk — 2024"
+    }
+  };
+})(typeof window !== "undefined" ? window : this);

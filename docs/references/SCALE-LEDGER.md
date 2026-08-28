@@ -28,8 +28,9 @@ Source: [Internet Live Stats — total number of websites](https://www.internetl
 | **2017** | **1,766,926,408** | **+69%** | **MVP live** (2026-08-06) · hub unlocked · `itt17` · complex REAL rooms · hostname explosion honesty |
 | **2018** | **1,630,322,579** | **−8%** | **MVP live** (2026-08-06) · hub unlocked · `itt18` · GDPR/TikTok/IGTV/trust · complex densify |
 | **2019** | **not on Live Stats public June table as of 2026-08-11 freeze** (table ends 2018) | — | **Research freeze only · not on disk** · Netcraft Jun 2019 **active ~186.7M** (Apache 54,879,492 = 29.39%) · `itt19` reserved · [`2019-READ-FIRST.md`](../2019-READ-FIRST.md) |
-| **2020** | **not on Live Stats public June table as of 2026-08-11 freeze** (table ends 2018) | — | **MVP live** (2026-08-11 lean) · hub 1994–2020 · `itt20` · Netcraft Jan 2020 **~189M active** · [`2020-READ-FIRST.md`](../2020-READ-FIRST.md) |
-| **2021** | **not on Live Stats public June table** (still ends 2018) | — | **research freeze 2026-08-16 · not on disk** · `itt21` reserved · Netcraft Jun 2021 **1,213,277,377** hostnames · **199,484,949** active · ITU **4.9B / 63%** · HA median **~1.9–2.2 MB** · [`../2021-READ-FIRST.md`](../2021-READ-FIRST.md) |
+| **2020** | **not on Live Stats public June table as of 2026-08-28 reopen** (table ends 2018) | — | **lean door live** · Zoom mute→leave `itt20-zoom` · Netcraft Jan 2020 **1,295,973,827 / ~189M active** · [`2020-READ-FIRST.md`](../2020-READ-FIRST.md) |
+| **2021** | **not on Live Stats public June table** (still ends 2018) | — | **live lean door** (2026-08-28) · hub open · `itt21` · Netcraft Jan 2021 **1,197,982,359** hostnames · Netcraft Jun 2021 **1,213,277,377** / **199,484,949** active · ITU **4.9B / 63%** · HA median **~1.9–2.2 MB** · [`../2021-READ-FIRST.md`](../2021-READ-FIRST.md) |
+| **2024** | **not on Live Stats public June table as of 2026-08-28 reopen** (table ends 2018) | — | **lean door live** · GPT-4o Talk `itt24-gpt4o` · Netcraft Jan 2024 **1,079,154,539** · Siteefy Jan 2024 third label **1,079,154,539 / 192,375,760** · ITU F&F 2024 **5.5B / 68%** · [`../2024-READ-FIRST.md`](../2024-READ-FIRST.md) |
 
 ## Websites (Pingdom / Netcraft — December class)
 

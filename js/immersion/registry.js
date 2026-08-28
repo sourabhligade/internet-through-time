@@ -327,6 +327,11 @@
       "immersion/netflix.js",
       "immersion/one-thing-machines.js"
     ],
+    "2007": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2007-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
     "2008": [
       "immersion/amazon.js",
       "immersion/auction.js",
@@ -440,6 +445,11 @@
       "immersion/year-2019-extras.js",
       "immersion/one-thing-machines.js"
     ],
+    "2020": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2020-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
     "2021": [
       "immersion/no-mock-common.js",
       "immersion/year-2021-extras.js",
@@ -453,6 +463,11 @@
     "2023": [
       "immersion/no-mock-common.js",
       "immersion/year-2023-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2024": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2024-extras.js",
       "immersion/one-thing-machines.js"
     ]
   };

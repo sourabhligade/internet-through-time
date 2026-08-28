@@ -1,0 +1,52 @@
+/* 2007 document styles — XP · IE 7 · iPhone Safari · no App Store
+   Year delta: @import period-2006 then 2007-specific rules. */
+@import url("period-2006.css");
+
+body.year-2007 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #808080;
+}
+
+:root {
+  --itt07-ie: #0a246a;
+  --itt07-phone: #1c1c1c;
+  --itt07-gmail: #c00;
+  --itt07-fb: #3b5998;
+}
+
+.ip07-phone {
+  max-width: 360px;
+  margin: 12px auto;
+  padding: 14px 12px 18px;
+  background: #2a2a2a;
+  color: #111;
+  border-radius: 18px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.ip07-screen {
+  background: #e8e8e8;
+  padding: 10px 12px 14px;
+  min-height: 280px;
+}
+.ip07-phone button,
+.gm07-shell button,
+.sv07-shell button,
+.fb07-shell button {
+  font-size: 13px;
+  padding: 6px 10px;
+  margin: 3px 4px 3px 0;
+}
+.gm07-shell,
+.sv07-shell,
+.fb07-shell,
+.tw07-shell,
+.lo07 {
+  max-width: 36em;
+  margin: 12px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.sv07-cities button[aria-pressed="true"],
+.fb07-shell button[aria-pressed="true"] {
+  outline: 2px solid #0a246a;
+}

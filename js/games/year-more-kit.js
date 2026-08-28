@@ -71,7 +71,6 @@
     var saved = false;
     var score = 0;
     var done = 0;
-    var trapped = false;
     var held = false;
     var holdTimer = 0;
     var holding = false;
@@ -92,13 +91,15 @@
       if (finBtn) finBtn.disabled = !!saved;
     }
     function ready() {
-      if (trapped) return false;
       if (testMode() && running && (held || done >= need || score >= 12)) return true;
-      if (kind === "hold") return running && held;
+      if (kind === "hold") return running && (held || done >= need);
       if (kind === "draw" && prompt) {
         var inp = host.querySelector("[data-more-type]");
         var v = inp ? String(inp.value || "").replace(/^\s+|\s+$/g, "").toLowerCase() : "";
-        return running && v.length >= 2 && (!prompt || v.indexOf(String(prompt).toLowerCase()) !== -1 || v.length >= 4);
+        var typed =
+          v.length >= 2 &&
+          (v.indexOf(String(prompt).toLowerCase()) !== -1 || v.length >= 4);
+        return running && (typed || done >= need);
       }
       return running && done >= need;
     }
@@ -109,7 +110,15 @@
       var i;
       if (kind === "hold") {
         html =
-          '<p><button type="button" data-more-hold>Hold</button> <span data-more-hold-st>not held</span></p>';
+          '<p><button type="button" data-more-hold>Hold / swing</button> <span data-more-hold-st>click 3 times or hold</span></p>';
+        for (i = 0; i < traps.length; i++) {
+          html +=
+            '<button type="button" data-more-trap="' +
+            esc(traps[i]) +
+            '">' +
+            esc(traps[i]) +
+            " (trap)</button> ";
+        }
       } else if (kind === "draw") {
         html =
           '<p><label>type the prompt<br><input type="text" data-more-type maxlength="80" autocomplete="off" placeholder="' +
@@ -130,9 +139,27 @@
         html += '<button type="button" data-more-good="drop">Drop stick</button> ';
         html += '<button type="button" data-more-trap="gore">Gore (trap)</button>';
       } else if (kind === "idle") {
-        html = '<button type="button" data-more-good="click">Click resource</button> ';
-        html += '<button type="button" data-more-good="buy">Buy automator</button> ';
-        html += '<button type="button" data-more-trap="skip">Skip (trap)</button>';
+        if (goods.length) {
+          for (i = 0; i < goods.length; i++) {
+            html +=
+              '<button type="button" data-more-good="' +
+              esc(goods[i]) +
+              '">' +
+              esc(goods[i]) +
+              "</button> ";
+          }
+        } else {
+          html = '<button type="button" data-more-good="click">Click resource</button> ';
+          html += '<button type="button" data-more-good="buy">Buy automator</button> ';
+        }
+        for (i = 0; i < traps.length; i++) {
+          html +=
+            '<button type="button" data-more-trap="' +
+            esc(traps[i]) +
+            '">' +
+            esc(traps[i]) +
+            " (trap)</button> ";
+        }
       } else if (kind === "place") {
         for (i = 0; i < need; i++) {
           html +=
@@ -154,14 +181,25 @@
         }
         html += '<button type="button" data-more-trap="waste">Waste move (trap)</button>';
       } else if (kind === "runner" || kind === "dodge") {
-        for (i = 0; i < need; i++) {
-          html +=
-            '<button type="button" data-more-good="beat-' +
-            i +
-            '">' +
-            (kind === "dodge" ? "Dodge " : "Clear ") +
-            (i + 1) +
-            "</button> ";
+        if (goods.length >= need) {
+          for (i = 0; i < need; i++) {
+            html +=
+              '<button type="button" data-more-good="' +
+              esc(goods[i]) +
+              '">' +
+              esc(goods[i]) +
+              "</button> ";
+          }
+        } else {
+          for (i = 0; i < need; i++) {
+            html +=
+              '<button type="button" data-more-good="beat-' +
+              i +
+              '">' +
+              (kind === "dodge" ? "Dodge " : "Clear ") +
+              (i + 1) +
+              "</button> ";
+          }
         }
         html += '<button type="button" data-more-trap="crash">Crash (trap)</button>';
       } else if (kind === "quiz") {
@@ -208,7 +246,6 @@
       saved = false;
       score = 0;
       done = 0;
-      trapped = false;
       held = false;
       holding = false;
       if (holdTimer) {
@@ -232,7 +269,8 @@
     }
 
     function onGood() {
-      if (!running || saved || trapped) return;
+      if (saved) return;
+      if (!running) reset();
       done += 1;
       score += 4;
       step("acts");
@@ -241,9 +279,8 @@
     }
 
     function onTrap() {
-      if (!running || saved) return;
-      trapped = true;
-      status("Trap. That path never writes.");
+      if (saved) return;
+      status("Trap. That click never writes.");
       paint();
     }
 
@@ -262,10 +299,18 @@
             status("Click both ramp points first. Incomplete never writes.");
             return;
           }
-          if (kind === "idle" && t.getAttribute("data-more-good") === "buy" && done < 2 && !testMode()) {
+          if (kind === "idle" && t.getAttribute("data-more-good") === "buy" && done < 1 && !testMode()) {
             status("Click the resource first. Incomplete never writes.");
             return;
           }
+          if (kind === "draw") {
+            var typeIn = host.querySelector("[data-more-type]");
+            if (typeIn && prompt && !String(typeIn.value || "").replace(/^\s+|\s+$/g, "")) {
+              typeIn.value = prompt;
+            }
+          }
+          onGood();
+        } else if (t.getAttribute("data-more-hold") != null) {
           onGood();
         } else if (t.getAttribute("data-more-trap") != null) {
           onTrap();
@@ -274,10 +319,14 @@
       field.addEventListener("mousedown", function (ev) {
         var t = ev.target;
         if (!t || t.getAttribute("data-more-hold") == null) return;
-        if (!running || saved || trapped) return;
+        if (!running || saved) return;
         holding = true;
         var stH = field.querySelector("[data-more-hold-st]");
         if (stH) stH.textContent = "holding…";
+        if (holdTimer) {
+          clearTimeout(holdTimer);
+          holdTimer = 0;
+        }
         holdTimer = setTimeout(function () {
           if (!holding) return;
           held = true;
@@ -295,7 +344,8 @@
         if (!held && holdTimer) {
           clearTimeout(holdTimer);
           holdTimer = 0;
-          status("Released early. Hold the full beat. Never writes.");
+          var stH2 = field.querySelector("[data-more-hold-st]");
+          if (stH2 && done < need) stH2.textContent = "click 3 times or hold";
         }
       });
       field.addEventListener("mouseleave", function () {
@@ -321,11 +371,9 @@
         }
         if (!ready()) {
           status(
-            trapped
-              ? "Trap path. Incomplete never writes."
-              : kind === "hold"
-                ? "Hold the full beat first. Incomplete never writes."
-                : "Need " + need + " good acts first. Incomplete never writes."
+            kind === "hold"
+              ? "Swing three times or hold the beat. Incomplete never writes."
+              : "Need " + need + " good acts first. Incomplete never writes."
           );
           return;
         }
@@ -346,6 +394,7 @@
       });
     }
 
+    paintField();
     paint();
     if (bestEl && Y.loadBest) bestEl.textContent = String(Y.loadBest(gid, year) || 0);
     return host;

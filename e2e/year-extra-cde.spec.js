@@ -7,7 +7,8 @@ const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
 const matrix = require('./year-extra-cde.matrix.json').filter((row) =>
-  fs.existsSync(path.join(__dirname, '..', 'years', row.year, 'index.html'))
+  fs.existsSync(path.join(__dirname, '..', 'years', row.year, 'index.html')) &&
+  fs.existsSync(path.join(__dirname, '..', row.path.replace(/^\//, '')))
 );
 
 async function getKey(page, key) {

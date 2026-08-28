@@ -174,6 +174,20 @@
         say(YX, st, "That pick is the trap. It never writes.", true);
         return;
       }
+      var trapMarked = false;
+      var tp;
+      for (tp = 0; tp < picks.length; tp++) {
+        if (
+          (/\bis-on\b/.test(picks[tp].className) || picks[tp].getAttribute("aria-pressed") === "true") &&
+          picks[tp].getAttribute("data-pop-trap") === "1"
+        ) {
+          trapMarked = true;
+        }
+      }
+      if (trapMarked) {
+        say(YX, st, "That pick is the trap. It never writes.", true);
+        return;
+      }
       if (reqs.need && reqs.have < reqs.need) {
         say(YX, st, "Tick the honesty notes first. Incomplete never writes.", true);
         return;

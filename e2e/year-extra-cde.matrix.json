@@ -333,31 +333,31 @@
     "year": "2005",
     "role": "c",
     "path": "/years/2005/sites/playable/extra-c.html",
-    "key": "itt05-game-stickday",
-    "id": "stickday",
-    "kind": "parlor",
-    "title": "Stick Life Day",
+    "key": "itt05-game-boost",
+    "id": "boost",
+    "kind": "runner",
+    "title": "Reddit boost seq",
     "next": "/years/2005/sites/playable/extra-d.html"
   },
   {
     "year": "2005",
     "role": "d",
     "path": "/years/2005/sites/playable/extra-d.html",
-    "key": "itt05-game-carttime",
-    "id": "carttime",
+    "key": "itt05-game-bury",
+    "id": "bury",
     "kind": "runner",
-    "title": "Cart Timing",
+    "title": "Digg bury",
     "next": "/years/2005/sites/playable/extra-e.html"
   },
   {
     "year": "2005",
     "role": "e",
     "path": "/years/2005/sites/playable/extra-e.html",
-    "key": "itt05-game-shaftdig",
-    "id": "shaftdig",
-    "kind": "idle",
-    "title": "Shaft Dig",
-    "next": "/years/2005/sites/playable/game.html"
+    "key": "itt05-game-pod",
+    "id": "pod",
+    "kind": "runner",
+    "title": "Podcast",
+    "next": "/years/2005/sites/playable/extra-f.html"
   },
   {
     "year": "2006",
@@ -403,20 +403,20 @@
     "year": "2007",
     "role": "d",
     "path": "/years/2007/sites/playable/extra-d.html",
-    "key": "itt07-game-deskpath",
-    "id": "deskpath",
-    "kind": "place",
-    "title": "Desk Path",
+    "key": "itt07-game-haloack",
+    "id": "haloack",
+    "kind": "parlor",
+    "title": "Halo Note",
     "next": "/years/2007/sites/playable/extra-e.html"
   },
   {
     "year": "2007",
     "role": "e",
     "path": "/years/2007/sites/playable/extra-e.html",
-    "key": "itt07-game-trickcard",
-    "id": "trickcard",
-    "kind": "quiz",
-    "title": "Trick Card",
+    "key": "itt07-game-portalbox",
+    "id": "portalbox",
+    "kind": "place",
+    "title": "Box Shift",
     "next": "/years/2007/sites/playable/game.html"
   },
   {
@@ -868,5 +868,65 @@
     "kind": "parlor",
     "title": "X Note",
     "next": "/years/2023/sites/playable/game.html"
+  },
+  {
+    "year": "2020",
+    "role": "c",
+    "path": "/years/2020/sites/playable/extra-c.html",
+    "key": "itt20-game-fall",
+    "id": "fall",
+    "kind": "place",
+    "title": "Fall leftover",
+    "next": "/years/2020/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2020",
+    "role": "d",
+    "path": "/years/2020/sites/playable/extra-d.html",
+    "key": "itt20-game-turnip",
+    "id": "turnip",
+    "kind": "place",
+    "title": "Turnip",
+    "next": "/years/2020/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2020",
+    "role": "e",
+    "path": "/years/2020/sites/playable/extra-e.html",
+    "key": "itt20-game-flashbrick",
+    "id": "flashbrick",
+    "kind": "place",
+    "title": "Flash Brick",
+    "next": "/years/2020/sites/playable/game.html"
+  },
+  {
+    "year": "2024",
+    "role": "c",
+    "path": "/years/2024/sites/playable/extra-c.html",
+    "key": "itt24-game-omni2b",
+    "id": "omni2b",
+    "kind": "place",
+    "title": "Omni 2 leftover",
+    "next": "/years/2024/sites/playable/extra-d.html"
+  },
+  {
+    "year": "2024",
+    "role": "d",
+    "path": "/years/2024/sites/playable/extra-d.html",
+    "key": "itt24-game-soranote",
+    "id": "soranote",
+    "kind": "place",
+    "title": "Sora note leftover",
+    "next": "/years/2024/sites/playable/extra-e.html"
+  },
+  {
+    "year": "2024",
+    "role": "e",
+    "path": "/years/2024/sites/playable/extra-e.html",
+    "key": "itt24-game-4ocost",
+    "id": "4ocost",
+    "kind": "place",
+    "title": "4o costume leftover",
+    "next": "/years/2024/sites/playable/game.html"
   }
 ]

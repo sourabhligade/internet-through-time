@@ -1,5 +1,8 @@
 # 2021 map — lean door
 
+**Research freeze:** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md).  
+**In-place implement:** [`2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md).
+
 Guided 6: About → ★ ATT Ask → Signal leftover → Copilot waitlist → Meta rename → Year map.
 
 Official 10: ATT Ask `itt21-att` → Signal `itt21-signal` → Copilot `itt21-copilot` → Meta `itt21-meta` → Win11 `itt21-win11` → Flash brick `itt21-flash-brick` → Chrome `itt21-chrome` → Win10 `itt21-win10` → Facebook leftover `itt21-pop-facebook` → Five Letter `itt21-game-five`.

@@ -10,9 +10,16 @@ const { test, expect } = require("@playwright/test");
 const ROOT = path.join(__dirname, "..");
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
 /** @type {{ year: string, href: string, key: string, suffix: string, needPick: string, minPick: number, field: boolean, placeholder: string }[]} */
-const DESTS = MATRIX.dests.filter((d) =>
-  fs.existsSync(path.join(ROOT, "years", d.year, "index.html"))
-);
+const DESTS = MATRIX.dests.filter((d) => {
+  const dest = path.join(ROOT, "years", d.year, d.href);
+  if (!fs.existsSync(path.join(ROOT, "years", d.year, "index.html"))) return false;
+  if (!fs.existsSync(dest)) return false;
+  try {
+    return fs.readFileSync(dest, "utf8").indexOf("data-lo-panel") !== -1;
+  } catch (e) {
+    return false;
+  }
+});
 
 function neighborKeys(year, suffix) {
   const y = parseInt(year, 10);

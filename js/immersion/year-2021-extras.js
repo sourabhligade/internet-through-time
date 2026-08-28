@@ -32,10 +32,30 @@
     return n;
   }
 
+  function showPane(doc, id) {
+    var pane = doc.querySelector('[data-att-pane="' + id + '"]');
+    if (!pane) return;
+    pane.removeAttribute("hidden");
+    pane.style.display = "";
+  }
+
   function bootAtt(doc) {
     var allow = doc.querySelector("[data-att-allow]");
     var ask = doc.querySelector("[data-att-ask]");
     var st = doc.querySelector("[data-att-status]");
+    var hops = {};
+    var openers = doc.querySelectorAll("[data-att-open]");
+    var needHops = openers.length > 0;
+    var i;
+    for (i = 0; i < openers.length; i++) {
+      openers[i].addEventListener("click", function () {
+        var id = this.getAttribute("data-att-open") || "";
+        hops[id] = true;
+        this.setAttribute("aria-pressed", "true");
+        showPane(doc, id);
+        feedback("Opened " + id + ". Tracking then Ask.", st);
+      });
+    }
     if (allow) {
       allow.addEventListener("click", function () {
         feedback("Allow Tracking is the trap. That click never writes.", st, { error: true });
@@ -47,15 +67,29 @@
       var reqs0 = doc.querySelectorAll("[data-att-req]");
       var r0;
       for (r0 = 0; r0 < reqs0.length; r0++) reqs0[r0].checked = true;
+      hops.privacy = true;
+      hops.tracking = true;
+      showPane(doc, "privacy");
+      showPane(doc, "tracking");
       feedback("Asked leftover · " + key("att"), st);
       reveal(doc);
     }
     ask.addEventListener("click", function () {
+      if (needHops && (!hops.privacy || !hops.tracking)) {
+        feedback("Open Privacy, then Tracking first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       if (countChecked(doc, "[data-att-req]") < 2) {
         feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("att"), blob({ asked: true, date: "2021-04-26", allow: false }));
+      saveJSON(key("att"), blob({
+        asked: true,
+        date: "2021-04-26",
+        allow: false,
+        privacy: true,
+        tracking: true
+      }));
       feedback("Ask App Not to Track · " + key("att"), st);
       reveal(doc);
     });
@@ -65,6 +99,17 @@
     var trap = doc.querySelector("[data-sig-trap]");
     var go = doc.querySelector("[data-sig-join]");
     var st = doc.querySelector("[data-sig-status]");
+    var notes = {};
+    var i;
+    var noteBtns = doc.querySelectorAll("[data-sig-note]");
+    for (i = 0; i < noteBtns.length; i++) {
+      noteBtns[i].addEventListener("click", function () {
+        var id = this.getAttribute("data-sig-note") || "";
+        notes[id] = true;
+        this.setAttribute("aria-pressed", "true");
+        feedback("Notice " + id + ".", st);
+      });
+    }
     if (trap) {
       trap.addEventListener("click", function () {
         feedback("WhatsApp did not mass-delete on 8 Feb. That lie never writes.", st, { error: true });
@@ -81,7 +126,12 @@
         feedback("Type a leftover handle first. Empty never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("signal"), blob({ handle: handle.slice(0, 40), delay: "2021-05-15" }));
+      saveJSON(key("signal"), blob({
+        handle: handle.slice(0, 40),
+        delay: "2021-05-15",
+        jan4: !!notes.jan4,
+        may15: !!notes.may15
+      }));
       feedback("Signal leftover · " + key("signal"), st);
       reveal(doc);
     });
@@ -117,6 +167,25 @@
     var trap = doc.querySelector("[data-meta-app]");
     var go = doc.querySelector("[data-meta-save]");
     var st = doc.querySelector("[data-meta-status]");
+    var kept = {};
+    var row = doc.querySelector("[data-meta-kept]");
+    function paintKept() {
+      var ids = [];
+      var k;
+      for (k in kept) if (kept[k]) ids.push(k);
+      if (row) row.textContent = ids.length ? "Apps that keep names: " + ids.join(" · ") : "Apps that keep names: none yet";
+    }
+    var keepBtns = doc.querySelectorAll("[data-meta-keep]");
+    var i;
+    for (i = 0; i < keepBtns.length; i++) {
+      keepBtns[i].addEventListener("click", function () {
+        var id = this.getAttribute("data-meta-keep") || "";
+        kept[id] = true;
+        this.setAttribute("aria-pressed", "true");
+        paintKept();
+        feedback(id + " keeps its name.", st);
+      });
+    }
     if (trap) {
       trap.addEventListener("click", function () {
         feedback("There is no Meta consumer app in 2021. The Facebook app stays Facebook.", st, { error: true });
@@ -128,7 +197,14 @@
         feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("meta"), blob({ company: true, appStillFacebook: true, date: "2021-10-28" }));
+      saveJSON(key("meta"), blob({
+        company: true,
+        appStillFacebook: true,
+        date: "2021-10-28",
+        facebook: !!kept.facebook,
+        instagram: !!kept.instagram,
+        whatsapp: !!kept.whatsapp
+      }));
       feedback("Company leftover · " + key("meta"), st);
       reveal(doc);
     });
@@ -145,6 +221,10 @@
     }
     if (!go) return;
     go.addEventListener("click", function () {
+      if (countChecked(doc, "[data-w11-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("win11"), blob({ announced: "2021-06-24", ga: "2021-10-05" }));
       feedback("Win11 leftover · " + key("win11"), st);
       reveal(doc);
@@ -155,13 +235,20 @@
     var play = doc.querySelector("[data-flash-play]");
     var go = doc.querySelector("[data-flash-brick]");
     var st = doc.querySelector("[data-flash-status]");
+    var stage = doc.querySelector("[data-flash-stage]");
     if (play) {
       play.addEventListener("click", function () {
+        if (stage) stage.textContent = "Blocked 12 Jan 2021. Play SWF never writes.";
         feedback("Play SWF never writes. 12 Jan is the brick.", st, { error: true });
       });
     }
     if (!go) return;
     go.addEventListener("click", function () {
+      if (countChecked(doc, "[data-flash-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      if (stage) stage.textContent = "Brick leftover noted · 12 Jan 2021.";
       saveJSON(key("flash-brick"), blob({ brick: "2021-01-12", eol: "2020-12-31" }));
       feedback("Brick leftover · " + key("flash-brick"), st);
       reveal(doc);
@@ -201,6 +288,10 @@
     }
     if (!go) return;
     go.addEventListener("click", function () {
+      if (countChecked(doc, "[data-w10-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("win10"), blob({ mass: true, until: "2021-10" }));
       feedback("Win10 residual · " + key("win10"), st);
       reveal(doc);

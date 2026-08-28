@@ -153,6 +153,9 @@
     "2006": yearVisitTour("2006",
       { path: "sites/twitter/index.html", label: "Twitter 140", blurb: "15 Jul. 140 because SMS. Empty never writes.", match: "/twitter/" },
       { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep. Privacy leftover. Not the chip.", match: "/facebook/feed" }),
+    "2007": yearVisitTour("2007",
+      { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Safari is the save. App Store never writes.", match: "/iphone/" },
+      { path: "sites/gmail/index.html", label: "Gmail open leftover", blurb: "14 Feb. Invite is the trap.", match: "/gmail/" }),
     "2008": yearVisitTour("2008",
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Apps economy begins.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome", blurb: "Browser reinvented · product room.", match: "/chrome/" }),
@@ -189,6 +192,9 @@
     "2019": yearVisitTour("2019",
       { path: "sites/disneyplus/home.html", label: "Disney+ Who’s watching", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
       { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
+    "2020": yearVisitTour("2020",
+      { path: "sites/zoom/meeting.html", label: "Zoom mute → leave", blurb: "Join is the trap. Participants, not users.", match: "/zoom/" },
+      { path: "sites/reels/index.html", label: "Reels 15s leftover", blurb: "5 Aug. Not the chip.", match: "/reels/" }),
     "2021": yearVisitTour("2021",
       { path: "sites/att/index.html", label: "ATT Ask", blurb: "Allow never writes. Ask is the save.", match: "/att/" },
       { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay. Not the chip.", match: "/signal/" }),
@@ -198,6 +204,9 @@
     "2023": yearVisitTour("2023",
       { path: "sites/plus/index.html", label: "ChatGPT Plus", blurb: "Empty / GPT-4 / live charge never write.", match: "/plus/" },
       { path: "sites/gpt4/index.html", label: "GPT-4 leftover", blurb: "14 Mar leftover. Not the chip.", match: "/gpt4/" }),
+    "2024": yearVisitTour("2024",
+      { path: "sites/chatgpt/4o.html", label: "GPT-4o Talk", blurb: "Stay on GPT-4 never writes. Talk is the save.", match: "/chatgpt/4o" },
+      { path: "sites/gemini/index.html", label: "Gemini leftover", blurb: "8 Feb. Not Bard.", match: "/gemini/" }),
   };
 
   var TRAILS = {
@@ -212,8 +221,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2023; y++) {
-      if (y === 2007 || y === 2020) continue;
+    for (y = 1994; y <= 2024; y++) {
       var ys = String(y);
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
@@ -378,7 +386,7 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2023) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2024) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -658,8 +666,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2023; y++) {
-      if (y === 2007 || y === 2020) continue;
+    for (y = 1994; y <= 2024; y++) {
       years.push(String(y));
     }
     var total = totalStamps();

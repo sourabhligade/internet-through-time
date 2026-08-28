@@ -2913,6 +2913,39 @@
   };
 
 
+  ITT.flowMaps["2007"] = {
+    "thesis": "iPhone Safari — no App Store. Gmail open. Street View. Platform. Desktop still mass.",
+    "shell": "Windows XP · IE 7 · Vista leftover product",
+    "how": [
+      "ATT-class gold: iPhone capacity + Use Safari → itt07-iphone (App Store never writes)",
+      "Gmail: handle + two ticks → itt07-gmail (invite never writes)",
+      "Street View: two of five cities → itt07-streetview"
+    ],
+    "year": "2007",
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "Phone-as-browser lobby",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "iPhone · Gmail · Street View" },
+          { "name": "About 2007", "href": "pages/about.html", "do": "121,892,559 June · bans" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "Official 10" }
+        ]
+      },
+      {
+        "label": "Official 10",
+        "do": "Star then leftovers",
+        "sites": [
+          { "name": "1 iPhone Safari", "href": "sites/iphone/index.html", "do": "Use Safari → itt07-iphone" },
+          { "name": "2 Gmail open", "href": "sites/gmail/index.html", "do": "Create account → itt07-gmail" },
+          { "name": "3 Street View", "href": "sites/maps/index.html", "do": "Two cities → itt07-streetview" },
+          { "name": "4 Platform", "href": "sites/facebook/index.html", "do": "Two apps · Beacon trap" },
+          { "name": "5–10 leftovers", "href": "sites/twitter/index.html", "do": "SXSW · YT · MySpace · Digg · Vista · Peg" }
+        ]
+      }
+    ]
+  };
+
     ITT.flowMaps["2008"] =   {
     "thesis": "Apps + browser reinvention — App Store + iPhone 3G, Chrome, Android G1, Hulu.",
     "shell": "Windows XP · IE 7 · Chrome product room (not sole shell)",
@@ -3588,12 +3621,45 @@
     ]
   };
 
-  ITT.flowMaps["2021"] = {
+  
+  ITT.flowMaps["2020"] = {
+    "thesis": "Join is the trap. Mute + chat + Leave writes the star. Participants, not users.",
+    "shell": "Windows 10 · Chrome habit",
+    "how": [
+      "Zoom: mute + chat + Leave → itt20-zoom (Join never writes)",
+      "Reels 15s leftover · GPT-3 waitlist · Flash 31 Dec",
+      "28 leftover dests on the 2× trail — more than 2007"
+    ],
+    "year": "2020",
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "Meeting lobby",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "Zoom · Reels · Flash" },
+          { "name": "About 2020", "href": "pages/about.html", "do": "No June ILS · 300M participants" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "Official 10" }
+        ]
+      },
+      {
+        "label": "Official 10",
+        "do": "Star then leftovers",
+        "sites": [
+          { "name": "1 Zoom mute", "href": "sites/zoom/meeting.html", "do": "Leave → itt20-zoom" },
+          { "name": "2 Reels 15s", "href": "sites/reels/index.html", "do": "15s leftover" },
+          { "name": "3 GPT-3 waitlist", "href": "sites/openai/index.html", "do": "waitlist not chat" },
+          { "name": "4–10 leftovers", "href": "sites/flash/index.html", "do": "Flash · EO · WTI · Edge · CCPA · Chrome · Sus" }
+        ]
+      }
+    ]
+  };
+
+ITT.flowMaps["2021"] = {
     thesis: "Allow Tracking is the trap. Ask App Not to Track is the save. No ChatGPT.",
     shell: "Win10 mass · Chrome habit · Win11 leftover 5 Oct",
     year: "2021",
     how: [
-      "ATT: Allow never writes · both honesties + Ask → itt21-att",
+      "ATT: Settings → Privacy → Tracking · Allow never writes · both honesties + Ask → itt21-att",
       "Signal leftover · Copilot waitlist · Meta rename · Flash brick",
       "Live Stats June table ends 2018. ITU 4.9B / 63%."
     ],
@@ -3691,6 +3757,37 @@
         do: "Never a second star",
         sites: [
           { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Plus" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2024"] = {
+    thesis: "Stay on GPT-4 is the trap. Pick 4o + Talk writes the star. Omni and free-class.",
+    shell: "Windows 11 residual · Chrome habit",
+    how: [
+      "4o: pick GPT-4o + both ticks + Talk → itt24-gpt4o (GPT-5 never writes)",
+      "Gemini leftover · Claude 3.5 leftover · Sora preview · Apple Intelligence late ship",
+      "28 leftover dests on the 2× trail — more than 2007"
+    ],
+    year: "2024",
+    branches: [
+      {
+        label: "Enter",
+        do: "Model picker",
+        sites: [
+          { name: "Starting Point", href: "pages/home.html", do: "4o · Gemini · Sora" },
+          { name: "About 2024", href: "pages/about.html", do: "No June ILS · omni · free-class" },
+          { name: "Year flow map", href: "pages/map.html", do: "Official 10" }
+        ]
+      },
+      {
+        label: "Official 10",
+        do: "Star then leftovers",
+        sites: [
+          { name: "1 GPT-4o Talk", href: "sites/chatgpt/4o.html", do: "Talk → itt24-gpt4o" },
+          { name: "2 Gemini leftover", href: "sites/gemini/index.html", do: "not Bard" },
+          { name: "3–10 leftovers", href: "sites/claude35/index.html", do: "3.5 · Sora · Apple Intel · o1 · Plus · Chrome · Win11 · Omni" }
         ]
       }
     ]
