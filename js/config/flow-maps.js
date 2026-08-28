@@ -2818,7 +2818,7 @@
           },
           {
             "name": "Open registration",
-            "href": "sites/facebook/open.html",
+            "href": "sites/facebook/feed.html",
             "do": "Sep 26 · 13+ · email"
           },
           {
@@ -2839,7 +2839,7 @@
           },
           {
             "name": "Google Video",
-            "href": "sites/googlevideo/index.html",
+            "href": "sites/youtube/index.html",
             "do": "Not the same product as YT"
           }
         ]
@@ -2866,7 +2866,7 @@
         "sites": [
           {
             "name": "Google Docs",
-            "href": "sites/docs/edit.html",
+            "href": "sites/docs/index.html",
             "do": "Edit/save document theater"
           },
           {
@@ -3583,6 +3583,114 @@
         sites: [
           { name: "Join / trial trap", href: "sites/disneyplus/index.html", do: "trial never writes" },
           { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Continue Row" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2021"] = {
+    thesis: "Allow Tracking is the trap. Ask App Not to Track is the save. No ChatGPT.",
+    shell: "Win10 mass · Chrome habit · Win11 leftover 5 Oct",
+    year: "2021",
+    how: [
+      "ATT: Allow never writes · both honesties + Ask → itt21-att",
+      "Signal leftover · Copilot waitlist · Meta rename · Flash brick",
+      "Live Stats June table ends 2018. ITU 4.9B / 63%."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays ATT Ask. Allow never writes.",
+        sites: [
+          { name: "1 ATT Ask", href: "sites/att/index.html", do: "Ask App Not to Track → itt21-att" },
+          { name: "2 Signal leftover", href: "sites/signal/index.html", do: "leftover install" },
+          { name: "3 Copilot waitlist", href: "sites/copilot/index.html", do: "waitlist · not ChatGPT" },
+          { name: "4 Meta rename", href: "sites/meta/index.html", do: "consumer app stays Facebook" },
+          { name: "5 Win11 leftover", href: "sites/windows11/index.html", do: "5 Oct leftover" },
+          { name: "6 Flash brick", href: "sites/flash/index.html", do: "Chrome hard-block 12 Jan" },
+          { name: "7 Chrome habit", href: "sites/chrome/index.html", do: "failed-final word Chrome" },
+          { name: "8 Win10 residual", href: "sites/windows10/index.html", do: "January mass" },
+          { name: "9 Facebook leftover", href: "sites/facebook/index.html", do: "not Meta app" },
+          { name: "10 Five Letter", href: "sites/playable/game.html", do: "year game" }
+        ]
+      },
+      {
+        label: "Side leftover",
+        do: "Never a second star",
+        sites: [
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is ATT" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2022"] = {
+    thesis: "Send is the save. Empty / Plus / GPT-4 / Bing Chat never write.",
+    shell: "Win10 mass · Chrome habit",
+    year: "2022",
+    how: [
+      "ChatGPT: empty never writes · Send → itt22-chatgpt",
+      "Twitter leftover · Wordle leftover · Stable Diffusion leftover",
+      "Plus / GPT-4 / Bing Chat / Threads / X are 2023."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays ChatGPT Send.",
+        sites: [
+          { name: "1 ChatGPT Send", href: "sites/chatgpt/index.html", do: "Send → itt22-chatgpt" },
+          { name: "2 Twitter leftover", href: "sites/twitter/index.html", do: "still Twitter" },
+          { name: "3 Wordle leftover", href: "sites/wordle/index.html", do: "NYT leftover" },
+          { name: "4 Stable Diffusion leftover", href: "sites/stablediffusion/index.html", do: "waitlist / leftover" },
+          { name: "5 Mastodon leftover", href: "sites/mastodon/index.html", do: "federation leftover" },
+          { name: "6 BeReal leftover", href: "sites/bereal/index.html", do: "two-minute leftover" },
+          { name: "7 DALL·E 2 leftover", href: "sites/dalle2/index.html", do: "waitlist leftover" },
+          { name: "8 Chrome habit", href: "sites/chrome/index.html", do: "failed-final word Chrome" },
+          { name: "9 Win10 residual", href: "sites/windows10/index.html", do: "January mass" },
+          { name: "10 Year game", href: "sites/playable/game.html", do: "Prompt Box" }
+        ]
+      },
+      {
+        label: "Side leftover",
+        do: "Never a second star",
+        sites: [
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Send" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2023"] = {
+    thesis: "Subscribe Plus is the save. GPT-4 / Bing Chat / live charge never write.",
+    shell: "Win10 mass · Chrome habit",
+    year: "2023",
+    how: [
+      "Plus: empty / 0 ticks / live charge never write · Subscribe → itt23-plus",
+      "GPT-4 leftover · Bing Chat leftover · Threads leftover · X leftover",
+      "4o / Sora are 2024. Live Stats June table ends 2018."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays ChatGPT Plus Subscribe.",
+        sites: [
+          { name: "1 Plus Subscribe", href: "sites/plus/index.html", do: "Subscribe Plus → itt23-plus" },
+          { name: "2 GPT-4 leftover", href: "sites/gpt4/index.html", do: "14 Mar leftover" },
+          { name: "3 Bing Chat leftover", href: "sites/bingchat/index.html", do: "7 Feb leftover" },
+          { name: "4 Threads leftover", href: "sites/threads/index.html", do: "5 Jul leftover" },
+          { name: "5 X leftover", href: "sites/x/index.html", do: "rebrand leftover" },
+          { name: "6 Bard leftover", href: "sites/bard/index.html", do: "21 Mar leftover" },
+          { name: "7 Claude 2 leftover", href: "sites/claude2/index.html", do: "11 Jul leftover" },
+          { name: "8 Chrome habit", href: "sites/chrome/index.html", do: "failed-final word Chrome" },
+          { name: "9 Win10 residual", href: "sites/windows10/index.html", do: "January mass" },
+          { name: "10 Plus Queue", href: "sites/playable/game.html", do: "year game" }
+        ]
+      },
+      {
+        label: "Side leftover",
+        do: "Never a second star",
+        sites: [
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "cabinet · gold is Plus" }
         ]
       }
     ]

@@ -116,9 +116,9 @@
       {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt02-game-roomsticky", "nextHref": "sites/stumbleupon/index.html", "nextLabel": "StumbleUpon"}
     ],
     "2003": [
-      {"n": 1, "name": "MySpace", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt03-myspace", "nextHref": "sites/itunes/index.html", "nextLabel": "iTunes Store 99¢"},
-      {"n": 2, "name": "iTunes Store", "href": "sites/itunes/index.html", "match": "/itunes/", "whenKey": "itt03-itunes", "nextHref": "sites/photobucket/index.html", "nextLabel": "Photobucket"},
-      {"n": 3, "name": "Photobucket", "href": "sites/photobucket/index.html", "match": "/photobucket/", "whenKey": "itt03-photobucket", "nextHref": "sites/wordpress/index.html", "nextLabel": "WordPress"},
+      {"n": 1, "name": "Photobucket", "href": "sites/photobucket/index.html", "match": "/photobucket/", "whenKey": "itt03-photobucket", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace leftover"},
+      {"n": 2, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt03-myspace", "nextHref": "sites/itunes/index.html", "nextLabel": "iTunes Store 99¢"},
+      {"n": 3, "name": "iTunes Store", "href": "sites/itunes/index.html", "match": "/itunes/", "whenKey": "itt03-itunes", "nextHref": "sites/wordpress/index.html", "nextLabel": "WordPress"},
       {"n": 4, "name": "WordPress", "href": "sites/wordpress/index.html", "match": "/wordpress/", "whenKey": "itt03-wp", "nextHref": "sites/linkedin/index.html", "nextLabel": "LinkedIn"},
       {"n": 5, "name": "LinkedIn", "href": "sites/linkedin/index.html", "match": "/linkedin/", "whenKey": "itt03-li", "nextHref": "sites/friendster/index.html", "nextLabel": "Friendster"},
       {"n": 6, "name": "Friendster", "href": "sites/friendster/index.html", "match": "/friendster/", "whenKey": "itt03-friendster", "nextHref": "sites/bloglines/index.html", "nextLabel": "Bloglines"},
@@ -164,9 +164,9 @@
       {"n": 10, "name": "TrailSled", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt06-game-sled", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube"}
     ],
     "2008": [
-      {"n": 1, "name": "App Store", "href": "sites/appstore/index.html", "match": "/appstore/", "whenKey": "itt08-apps", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome"},
-      {"n": 2, "name": "Chrome", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt08-chrome", "nextHref": "sites/github/issue.html", "nextLabel": "GitHub leftover"},
-      {"n": 3, "name": "GitHub leftover", "href": "sites/github/issue.html", "match": "/github/", "whenKey": "itt08-github", "nextHref": "sites/android/index.html", "nextLabel": "Android G1"},
+      {"n": 1, "name": "GitHub issue", "href": "sites/github/issue.html", "match": "/github/", "whenKey": "itt08-github", "nextHref": "sites/appstore/index.html", "nextLabel": "App Store leftover"},
+      {"n": 2, "name": "App Store leftover", "href": "sites/appstore/index.html", "match": "/appstore/", "whenKey": "itt08-apps", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome"},
+      {"n": 3, "name": "Chrome", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt08-chrome", "nextHref": "sites/android/index.html", "nextLabel": "Android G1"},
       {"n": 4, "name": "Android G1", "href": "sites/android/index.html", "match": "/android/", "whenKey": "itt08-android", "nextHref": "sites/hulu/index.html", "nextLabel": "Hulu"},
       {"n": 5, "name": "Hulu", "href": "sites/hulu/index.html", "match": "/hulu/", "whenKey": "itt08-hulu", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook"},
       {"n": 6, "name": "Facebook", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt08-facebook", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter"},
