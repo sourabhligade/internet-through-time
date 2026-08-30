@@ -140,66 +140,6 @@
     "next": "/years/2000/sites/playable/game.html"
   },
   {
-    "year": "2001",
-    "role": "h",
-    "path": "/years/2001/sites/playable/extra-h.html",
-    "key": "itt01-game-editnote",
-    "id": "editnote",
-    "kind": "parlor",
-    "title": "Edit Note",
-    "next": "/years/2001/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2001",
-    "role": "i",
-    "path": "/years/2001/sites/playable/extra-i.html",
-    "key": "itt01-game-codehold",
-    "id": "codehold",
-    "kind": "hold",
-    "title": "Code Hold",
-    "next": "/years/2001/sites/playable/game.html"
-  },
-  {
-    "year": "2002",
-    "role": "h",
-    "path": "/years/2002/sites/playable/extra-h.html",
-    "key": "itt02-game-stumble3",
-    "id": "stumble3",
-    "kind": "parlor",
-    "title": "Stumble 3",
-    "next": "/years/2002/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2002",
-    "role": "i",
-    "path": "/years/2002/sites/playable/extra-i.html",
-    "key": "itt02-game-ljnote",
-    "id": "ljnote",
-    "kind": "quiz",
-    "title": "LJ Note",
-    "next": "/years/2002/sites/playable/game.html"
-  },
-  {
-    "year": "2003",
-    "role": "h",
-    "path": "/years/2003/sites/playable/extra-h.html",
-    "key": "itt03-game-delnote",
-    "id": "delnote",
-    "kind": "parlor",
-    "title": "Del Note",
-    "next": "/years/2003/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2003",
-    "role": "i",
-    "path": "/years/2003/sites/playable/extra-i.html",
-    "key": "itt03-game-skypenote",
-    "id": "skypenote",
-    "kind": "quiz",
-    "title": "Skype Note",
-    "next": "/years/2003/sites/playable/game.html"
-  },
-  {
     "year": "2004",
     "role": "h",
     "path": "/years/2004/sites/playable/extra-h.html",
@@ -458,5 +398,25 @@
     "kind": "quiz",
     "title": "Arcade Note",
     "next": "/years/2019/sites/playable/game.html"
+  },
+  {
+    "year": "2006",
+    "role": "h",
+    "path": "/years/2006/sites/playable/extra-h.html",
+    "key": "itt06-game-burycell",
+    "id": "burycell",
+    "kind": "place",
+    "title": "Bury Cell",
+    "next": "/years/2006/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2006",
+    "role": "i",
+    "path": "/years/2006/sites/playable/extra-i.html",
+    "key": "itt06-game-youcover",
+    "id": "youcover",
+    "kind": "place",
+    "title": "You Cover",
+    "next": "/years/2006/sites/playable/game.html"
   }
 ]

@@ -1,0 +1,283 @@
+/**
+ * Starting Point chrome — every shipped year.
+ * Star + guided stay first. Leftover rails sit in .itt-also-year.
+ * Period pages keep their own look. This file only restyles museum chrome.
+ */
+
+.itt-year-star {
+  margin: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.itt-year-star a {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #e8f5e9;
+  border: 2px solid #2e7d32;
+  font-weight: bold;
+  color: #1b5e20;
+  text-decoration: none;
+}
+
+.ott-guided {
+  margin: 12px 0;
+  padding: 10px 12px;
+  max-width: 48em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.ott-guided ol {
+  margin: 8px 0 0;
+  padding-left: 1.3em;
+  line-height: 1.7;
+}
+
+/* 1994–1997 · Mosaic / Win95 gray */
+html[data-itt-year="1994"] .ott-guided,
+html[data-itt-year="1995"] .ott-guided,
+html[data-itt-year="1996"] .ott-guided,
+html[data-itt-year="1997"] .ott-guided {
+  background: #c0c0c0;
+  color: #000;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  border-radius: 0;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+}
+html[data-itt-year="1994"] .ott-guided a,
+html[data-itt-year="1995"] .ott-guided a,
+html[data-itt-year="1996"] .ott-guided a,
+html[data-itt-year="1997"] .ott-guided a {
+  color: #0000ee;
+}
+
+/* 1998–2001 · IE navy */
+html[data-itt-year="1998"] .ott-guided,
+html[data-itt-year="1999"] .ott-guided,
+html[data-itt-year="2000"] .ott-guided,
+html[data-itt-year="2001"] .ott-guided {
+  background: #0a246a;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
+html[data-itt-year="1998"] .ott-guided a,
+html[data-itt-year="1999"] .ott-guided a,
+html[data-itt-year="2000"] .ott-guided a,
+html[data-itt-year="2001"] .ott-guided a {
+  color: #c6d4f0;
+}
+
+/* 2002–2008 · XP start */
+html[data-itt-year="2002"] .ott-guided,
+html[data-itt-year="2003"] .ott-guided,
+html[data-itt-year="2004"] .ott-guided,
+html[data-itt-year="2005"] .ott-guided,
+html[data-itt-year="2006"] .ott-guided,
+html[data-itt-year="2007"] .ott-guided,
+html[data-itt-year="2008"] .ott-guided {
+  background: #3a6ea5;
+  color: #fff;
+  border: 1px solid #0a246a;
+  border-radius: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
+html[data-itt-year="2002"] .ott-guided a,
+html[data-itt-year="2003"] .ott-guided a,
+html[data-itt-year="2004"] .ott-guided a,
+html[data-itt-year="2005"] .ott-guided a,
+html[data-itt-year="2006"] .ott-guided a,
+html[data-itt-year="2007"] .ott-guided a,
+html[data-itt-year="2008"] .ott-guided a {
+  color: #cfe4ff;
+}
+
+/* 2009 · Like blue (matches period-2009) */
+html[data-itt-year="2009"] .ott-guided {
+  background: #3b5998;
+  color: #fff;
+  border: 0;
+}
+html[data-itt-year="2009"] .ott-guided a {
+  color: #d8dfea;
+}
+
+/* 2010–2013 · light desktop residual */
+html[data-itt-year="2010"] .ott-guided,
+html[data-itt-year="2011"] .ott-guided,
+html[data-itt-year="2012"] .ott-guided,
+html[data-itt-year="2013"] .ott-guided {
+  background: #f2f2f2;
+  color: #111;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+html[data-itt-year="2010"] .ott-guided a,
+html[data-itt-year="2011"] .ott-guided a,
+html[data-itt-year="2012"] .ott-guided a,
+html[data-itt-year="2013"] .ott-guided a {
+  color: #125688;
+}
+html[data-itt-year="2011"] .ott-guided {
+  background: #dd4b39;
+  color: #fff;
+  border: 0;
+}
+html[data-itt-year="2011"] .ott-guided a {
+  color: #ffe8e4;
+}
+html[data-itt-year="2013"] .ott-guided {
+  background: #00bf8f;
+  color: #fff;
+  border: 0;
+}
+html[data-itt-year="2013"] .ott-guided a {
+  color: #e8fff8;
+}
+
+/* 2015–2021 · Chrome habit / Win10, not IE 5 black cards */
+html[data-itt-year="2015"] .ott-guided,
+html[data-itt-year="2016"] .ott-guided,
+html[data-itt-year="2017"] .ott-guided,
+html[data-itt-year="2018"] .ott-guided,
+html[data-itt-year="2019"] .ott-guided,
+html[data-itt-year="2020"] .ott-guided,
+html[data-itt-year="2021"] .ott-guided {
+  background: #f7f7f7;
+  color: #111;
+  border: 1px solid #c8c8c8;
+  border-radius: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+html[data-itt-year="2015"] .ott-guided a,
+html[data-itt-year="2016"] .ott-guided a,
+html[data-itt-year="2017"] .ott-guided a,
+html[data-itt-year="2018"] .ott-guided a,
+html[data-itt-year="2019"] .ott-guided a,
+html[data-itt-year="2020"] .ott-guided a,
+html[data-itt-year="2021"] .ott-guided a {
+  color: #125688;
+}
+
+/* Felt trail — first wander after the locked gold */
+.itt-felt-trail {
+  margin: 8px 0 12px;
+  padding: 6px 10px;
+  max-width: 46em;
+  font-family: "MS Sans Serif", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  background: #ffffcc;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  color: #000;
+}
+.itt-felt-trail a { color: #0000ee; font-weight: bold; }
+html[data-itt-year="1998"] .itt-felt-trail,
+html[data-itt-year="1999"] .itt-felt-trail {
+  background: #ffffe0;
+  border: 1px solid #000080;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* Leftover rails — visible, not a third dashboard */
+.itt-home-more {
+  margin: 28px auto 12px;
+  padding: 10px 0 0;
+  max-width: 48em;
+  border-top: 1px dashed #888;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333;
+}
+.itt-home-more-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: #555;
+}
+.itt-3x-links,
+.itt-popular-pack,
+.itt-densify-dir,
+.itt-densify-trails,
+[data-itt-densify="multipage"] {
+  max-height: 7.5em;
+  overflow: auto;
+}
+.itt-playable-link,
+.itt-year-true-pack {
+  font-size: 12px !important;
+  max-width: 48em;
+}
+.itt-2x-trails {
+  max-height: 4.2em;
+  overflow: auto;
+}
+.itt-home-more .itt-5x-trails,
+.itt-home-more .itt-phase2-trails,
+.itt-home-more .itt-pop3x,
+.itt-home-more .itt-pop-more,
+.itt-home-more .itt-pop-3x3,
+.itt-home-more .itt-5x-atlas,
+.itt-home-more .itt-2x-trails,
+.itt-home-more [data-itt-pop3x],
+.itt-home-more [data-itt-pop-more],
+.itt-home-more [data-itt-pop-3x3],
+.itt-home-more [id^="ott-5x-"] {
+  margin: 6px 0 !important;
+  padding: 6px 8px !important;
+  max-width: none !important;
+  background: #fafafa !important;
+  border: 1px dashed #999 !important;
+  color: #333 !important;
+  font-size: 11px !important;
+}
+.itt-home-more .itt-5x-atlas {
+  max-height: 5.2em;
+  overflow: auto;
+  line-height: 1.45;
+}
+
+/* One drawer for leftover rails — star + guided stay first */
+.itt-also-year {
+  margin: 18px auto 14px;
+  max-width: 48em;
+  padding: 0;
+  border: 1px solid #888;
+  background: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #222;
+}
+.itt-also-year > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 8px 12px;
+  font-weight: bold;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+}
+.itt-also-year > summary::-webkit-details-marker {
+  display: none;
+}
+.itt-also-year > summary::before {
+  content: "▸ ";
+}
+.itt-also-year[open] > summary::before {
+  content: "▾ ";
+}
+.itt-also-year-body {
+  padding: 8px 12px 12px;
+}
+.itt-also-year-body .itt-2x-trails,
+.itt-also-year-body .itt-5x-trails,
+.itt-also-year-body .itt-home-more,
+.itt-also-year-body .itt-3x-links,
+.itt-also-year-body .itt-popular-pack,
+.itt-also-year-body .itt-densify-dir,
+.itt-also-year-body .itt-densify-trails {
+  max-height: none;
+  overflow: visible;
+}

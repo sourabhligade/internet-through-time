@@ -1,6 +1,8 @@
 # 2003 Research Dossier — The Internet Through Time
 
-**Status:** **Museum densify complete 2026-07-27** · hub **unlocked** · research packs + implement on disk  
+> **2026-08-30:** This file’s “unlocked / 214 HTML” sentences are **archive**. Live disk: **boarded**. Wins: [`2003-READ-FIRST.md`](2003-READ-FIRST.md) · harvest [`2003-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-30.md`](2003-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-30.md).
+
+**Status (July archive):** Museum densify complete 2026-07-27 · hub **unlocked** · research packs + implement on disk  
 **Museum status:** [`2003-MUSEUM-GRADE.md`](2003-MUSEUM-GRADE.md) · **Web surf:** [`2003-WEB-SURF-RESEARCH-2026-07-27.md`](2003-WEB-SURF-RESEARCH-2026-07-27.md)  
 **Deep research (canonical):** [`2003-DEEP-RESEARCH-2026-07-26.md`](2003-DEEP-RESEARCH-2026-07-26.md)  
 **Pair audit (2026-07-29):** [`2002-2003-DEEP-RESEARCH-AUDIT-2026-07-29.md`](2002-2003-DEEP-RESEARCH-AUDIT-2026-07-29.md)  

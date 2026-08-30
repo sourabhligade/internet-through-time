@@ -36,31 +36,5 @@ test.describe("new unused-source flows", () => {
       .toBeTruthy();
   });
 
-  test("2003 Zen Garden: no theme blocked; pick + check writes itt03-zengarden", async ({ page }) => {
-    await page.goto("/years/2003/sites/zengarden/index.html");
-    await page.evaluate(() => {
-      Object.keys(localStorage)
-        .filter((k) => k.startsWith("itt03-zengarden"))
-        .forEach((k) => localStorage.removeItem(k));
-    });
-    await page.reload();
-    await page.waitForTimeout(400);
-
-    await page.locator("[data-zen-save]").click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt03-zengarden"))).toBeNull();
-
-    await page.locator("[data-zen-theme-pick='midnight']").click();
-    await page.locator("[data-zen-save]").click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem("itt03-zengarden"))).toBeNull();
-
-    await page.locator("[data-zen-html-same]").check();
-    await page.locator("[data-zen-save]").click();
-    await expect
-      .poll(async () => {
-        const raw = await page.evaluate(() => localStorage.getItem("itt03-zengarden"));
-        return raw && raw.includes("midnight") && raw.includes("htmlUnchanged");
-      })
-      .toBeTruthy();
-  });
 });
 

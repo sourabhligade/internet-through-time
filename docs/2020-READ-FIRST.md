@@ -24,7 +24,7 @@
 | HTML cap | **≤90** |
 | Pixels | never invent brand art |
 | Neighbors | `itt19-*` / `itt21-*` stay empty |
-| Boarded siblings | **2024 / 2025 stay wiped** |
+| Boarded siblings | **2025 stays boarded.** 2024 GPT-4o lean door is live. |
 
 Do not invent a June Live Stats 2020 websites digit.  
 Do not print “300 million Zoom users.”  

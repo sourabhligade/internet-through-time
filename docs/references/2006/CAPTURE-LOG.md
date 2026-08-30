@@ -1,8 +1,10 @@
 # 2006 Capture Log
 
 **Opened:** 2026-07-30  
-**Updated:** 2026-07-31 (fresh deep research re-pass — narrative primaries re-opened; bulk WA still queued)  
-**Status:** Queue only — bulk WA HTML harvest **not yet run**  
+**Updated:** 2026-08-29 (from-scratch re-pass · live lean door)  
+**Status:** Primaries + WDM + two period captures opened. Bulk WA HTML still not downloaded as pixels.  
+**Harvest bible:** `docs/2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`  
+**Games harvest:** `docs/2006-GAMES-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`  
 **Rule:** Log every attempt. Prefer Wayback + WDM + company PR. No inventing brand pixels.  
 **Visit log:** `wayback-extracts/VISIT-LOG-2026-07-31-fresh-deep.txt`
 
@@ -10,8 +12,8 @@
 
 | Pri | Target | Suggested URL / frame | Goal | Status |
 |-----|--------|----------------------|------|--------|
-| P0 | Twitter / Twttr | `web.archive.org/*/http://twitter.com/` 2006-07 → 12 | Home · “What are you doing?” · timeline words | **queued** |
-| P0 | Twitter first era | WDM https://www.webdesignmuseum.org/gallery/twitter-2006 | Screenshot reference | **visited page 2026-07-30** · pixel not downloaded |
+| P0 | Twitter / Twttr | `web.archive.org/web/20061203201128/http://twitter.com/` | Home · “What are you doing?” · no 140 numeral | **opened 2026-08-29** · pixel not downloaded |
+| P0 | Twitter first era | WDM https://www.webdesignmuseum.org/gallery/twitter-2006 | 8 stills · harvest or failed-final | **re-opened 2026-08-29** · pixel not downloaded |
 | P0 | Facebook News Feed | WA facebook.com 2006-09–11 | Feed chrome · Mini-Feed · privacy | **queued** |
 | P0 | Facebook open | WA ~2006-10 facebook.com | Open registration framing | **queued** |
 | P0 | YouTube mid 2006 | WA youtube.com 2006-06 | Independent product UI | **queued** |
@@ -24,6 +26,9 @@
 | P1 | MySpace | WA myspace.com 2006 mid | Mass social continuity | **queued** |
 | P2 | IE7 download | microsoft.com IE7 2006-10 | Browser room | **queued** |
 | P2 | AWS S3 blog | aws.amazon.com S3 launch post | Cloud narrative | **visited notes 2026-07-30** |
+| P0 | Line Rider DeviantArt | WA `deviantart.com/deviation/40255643/` · submitted **23 Sep 2006** | Toy copy · no official pixels | **opened 2026-08-29** · pixel not downloaded |
+| P0 | Line Rider Time | WA Time 19 Oct 2006 | Contemporaneous press | **queued URL confirmed 2026-08-29** |
+| P0 | Kongregate TechCrunch | `techcrunch.com/2006/10/19/kongregate-…` | Alpha · upload · Newgrounds competitor | **opened 2026-08-29** |
 
 ## Narrative primaries (visited 2026-07-30 · re-opened 2026-07-31)
 

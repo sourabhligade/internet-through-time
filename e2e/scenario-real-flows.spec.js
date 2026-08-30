@@ -760,7 +760,6 @@ test.describe('scenario: ebay/auction bid form (sample years)', () => {
   for (const [year, path] of [
     ['1995', '/years/1995/sites/auctionweb/item-bean.html'],
     ['1997', '/years/1997/sites/ebay/item-laptop.html'],
-    ['2002', '/years/2002/sites/ebay/item-pda.html'],
   ]) {
     test(`auction ${year}: bid form present + high-bid theater`, async ({ page }) => {
       await page.goto(path);

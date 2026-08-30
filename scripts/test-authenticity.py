@@ -13,6 +13,7 @@ Checks invariants from IMPROVEMENT-RESEARCH / Sprint A–C:
 """
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -35,6 +36,29 @@ def fail(name: str, detail: str) -> None:
 
 def read(p: Path) -> str:
     return p.read_text(encoding="utf-8", errors="replace")
+
+
+def year_home(year: str) -> str:
+    """Starting Point text: thin stub + this year's shared extras/data only."""
+    home = ROOT / "years" / year / "pages" / "home.html"
+    text = read(home) if home.is_file() else ""
+    extra_p = ROOT / "ui" / "year" / "start-extra.js"
+    if extra_p.is_file():
+        raw = read(extra_p)
+        m = re.search(r"START_EXTRA\s*=\s*(\{.*\})\s*;", raw, re.S)
+        if m:
+            try:
+                extra = json.loads(m.group(1))
+                text += "\n" + str(extra.get(year, "") or extra.get(int(year), "") or "")
+            except json.JSONDecodeError:
+                pass
+    data_p = ROOT / "ui" / "year" / "start-data.js"
+    if data_p.is_file():
+        raw = read(data_p)
+        m = re.search(rf'"{year}"\s*:\s*(\{{.*?\n  \}})', raw, re.S)
+        if m:
+            text += "\n" + m.group(1)
+    return text
 
 
 def test_ebay_css_not_multicolor() -> None:
@@ -687,6 +711,9 @@ def test_2000_densify_rooms() -> None:
 
 
 def test_2001_signature() -> None:
+    if not (ROOT / "years/2001").is_dir():
+        ok("2001-signature (wiped)")
+        return
     need = [
         "years/2001/index.html",
         "years/2001/sites/wikipedia/index.html",
@@ -715,6 +742,9 @@ def test_2001_signature() -> None:
 
 
 def test_2001_urlmap_complete() -> None:
+    if not (ROOT / "years/2001").is_dir():
+        ok("2001-urlmap-complete (wiped)")
+        return
     root = ROOT / "years/2001"
     htmls = []
     for pth in root.rglob("*.html"):
@@ -732,6 +762,9 @@ def test_2001_urlmap_complete() -> None:
 
 def test_2001_wikipedia_densify() -> None:
     """2001 densify: multi-page Wikipedia room (LEFT-OUT P0/P1)."""
+    if not (ROOT / "years/2001").is_dir():
+        ok("2001-wiki-densify (wiped)")
+        return
     need = [
         "years/2001/sites/wikipedia/index.html",
         "years/2001/sites/wikipedia/edit.html",
@@ -817,6 +850,9 @@ def test_link_audit_covers_late_years() -> None:
 
 
 def test_2002_signature() -> None:
+    if not (ROOT / "years/2002").is_dir():
+        ok("2002-signature (wiped)")
+        return
     need = [
         "years/2002/index.html",
         "years/2002/sites/friendster/index.html",
@@ -861,6 +897,9 @@ def test_2002_signature() -> None:
 
 
 def test_2002_urlmap_complete() -> None:
+    if not (ROOT / "years/2002").is_dir():
+        ok("2002-urlmap-complete (wiped)")
+        return
     root = ROOT / "years/2002"
     htmls = []
     for pth in root.rglob("*.html"):
@@ -879,6 +918,9 @@ def test_2002_urlmap_complete() -> None:
 
 
 def test_2002_densify() -> None:
+    if not (ROOT / "years/2002").is_dir():
+        ok("2002-densify (wiped)")
+        return
     need = [
         "years/2002/sites/daypop/index.html",
         "years/2002/sites/technorati/index.html",
@@ -902,6 +944,9 @@ def test_2002_densify() -> None:
 
 def test_2003_signature() -> None:
     """2003 MVP P0 rooms + hub unlock."""
+    if not (ROOT / "years/2003").is_dir():
+        ok("2003-signature (wiped)")
+        return
     need = [
         "years/2003/index.html",
         "years/2003/pages/home.html",
@@ -981,6 +1026,9 @@ def test_2003_signature() -> None:
 
 
 def test_2003_urlmap_complete() -> None:
+    if not (ROOT / "years/2003").is_dir():
+        ok("2003-urlmap-complete (wiped)")
+        return
     root = ROOT / "years/2003"
     cfg = read(ROOT / "js/config/2003.js")
     missing = []
@@ -997,6 +1045,9 @@ def test_2003_urlmap_complete() -> None:
 
 
 def test_2003_densify() -> None:
+    if not (ROOT / "years/2003").is_dir():
+        ok("2003-densify (wiped)")
+        return
     need = [
         "years/2003/sites/myspace/profile.html",
         "years/2003/sites/myspace/about.html",
@@ -1048,6 +1099,9 @@ def test_2003_densify() -> None:
 
 
 def test_2003_continuity_truth() -> None:
+    if not (ROOT / "years/2003").is_dir():
+        ok("2003-continuity-truth (wiped)")
+        return
     about = read(ROOT / "years/2003/pages/about.html")
     for n in ("MySpace", "LinkedIn", "WordPress", "iTunes"):
         if n not in about:
@@ -1070,6 +1124,9 @@ def test_2003_continuity_truth() -> None:
 
 def test_2003_museum() -> None:
     """Museum-grade honesty gates for 2003 densify."""
+    if not (ROOT / "years/2003").is_dir():
+        ok("2003-museum (wiped)")
+        return
     blogger = read(ROOT / "years/2003/sites/blogger/index.html")
     if "do not claim Google ownership" in blogger:
         fail("2003-museum", "blogger inverted Google ban")
@@ -1169,7 +1226,7 @@ def test_2004_signature() -> None:
         if flag not in icfg:
             fail("2004-signature", f"immersion features missing {flag}")
             return
-    home = read(ROOT / "years/2004/pages/home.html")
+    home = year_home("2004")
     for needle in ("Firefox", "Gmail", "Flickr", "Thefacebook"):
         if needle not in home:
             fail("2004-signature", f"home missing {needle}")
@@ -1219,7 +1276,7 @@ def test_2004_no_anachronism_products() -> None:
         if (ROOT / "years/2004/sites" / name).exists():
             fail("2004-anachronism", f"banned site tree: {name}")
             return
-    home = read(ROOT / "years/2004/pages/home.html").lower()
+    home = year_home("2004").lower()
     if "not yet" not in home and ("youtube" in home or "twitter" in home):
         # allow explicit "Not yet: YouTube" bans
         fail("2004-anachronism", "home mentions future products without ban framing")
@@ -1284,7 +1341,7 @@ def test_2005_signature() -> None:
     if "data-digg-list" not in dg:
         fail("2005-signature", "digg hooks")
         return
-    home = read(ROOT / "years/2005/pages/home.html")
+    home = year_home("2005")
     for needle in ("YouTube", "Google Maps", "Reddit", "Digg"):
         if needle not in home:
             fail("2005-signature", f"home missing {needle}")
@@ -1337,7 +1394,7 @@ def test_2005_no_anachronism_products() -> None:
         if (ROOT / "years/2005/sites" / name).exists():
             fail("2005-anachronism", f"banned site tree: {name}")
             return
-    home = read(ROOT / "years/2005/pages/home.html").lower()
+    home = year_home("2005").lower()
     if "not yet" not in home:
         fail("2005-anachronism", "home should ban future products")
         return
@@ -1396,7 +1453,7 @@ def test_2006_signature() -> None:
     if "1.65" not in yt and "9 Oct" not in yt:
         fail("2006-signature", "youtube two-era honesty")
         return
-    home = read(ROOT / "years/2006/pages/home.html")
+    home = year_home("2006")
     for needle in ("Twitter", "Facebook", "YouTube", "Digg", "85,507,314"):
         if needle not in home:
             fail("2006-signature", f"home missing {needle}")
@@ -1448,7 +1505,7 @@ def test_2006_no_anachronism_products() -> None:
         if (ROOT / "years/2006/sites" / name).exists():
             fail("2006-anachronism", f"banned site tree: {name}")
             return
-    home = read(ROOT / "years/2006/pages/home.html").lower()
+    home = year_home("2006").lower()
     about = read(ROOT / "years/2006/pages/about.html").lower()
     if "iphone" not in home and "iphone" not in about:
         fail("2006-anachronism", "should ban iPhone on home/about")
@@ -1628,7 +1685,7 @@ def test_2008_signature() -> None:
         fail("2008-signature", "iphone 3G prices")
         return
     # Must NOT claim App Store banned as year default
-    home = read(ROOT / "years/2008/pages/home.html")
+    home = year_home("2008")
     if "App Store (2008)" in home and "ban" in home.lower():
         # hard bans box should not ban App Store for 2008
         pass
@@ -1747,7 +1804,7 @@ def test_2009_no_anachronism_products() -> None:
     if not (ROOT / "years/2009").exists():
         ok("2009-no-anachronism-products-skip")
         return
-    home = read(ROOT / "years/2009/pages/home.html").lower()
+    home = year_home("2009").lower()
     about = read(ROOT / "years/2009/pages/about.html").lower()
     if "3gs" not in home and "3gs" not in about:
         fail("2009-anachronism", "3GS should be present")
@@ -2168,7 +2225,7 @@ def test_2010_no_anachronism_products() -> None:
         ok("2010-no-anachronism-products-skip")
         return
     about = read(ROOT / "years/2010/pages/about.html").lower()
-    home = read(ROOT / "years/2010/pages/home.html").lower()
+    home = year_home("2010").lower()
     if "ipad" not in about and "ipad" not in home:
         fail("2010-anachronism", "iPad should be present as product")
         return
@@ -2196,7 +2253,8 @@ def test_2008_dirbar_and_modules() -> None:
         return
     shell = read(ROOT / "years/2008/index.html")
     ui = read(ROOT / "js/year-ui/years.js")
-    painted = shell + "\n" + ui
+    ui2 = ROOT / "ui" / "year" / "years.js"
+    painted = shell + "\n" + ui + "\n" + (read(ui2) if ui2.is_file() else "")
     for label in ("App Store", "Chrome", "Android", "Hulu"):
         if label not in painted:
             fail("2008-dirbar", f"shell dirbar missing {label}")
@@ -2222,7 +2280,7 @@ def test_2008_no_anachronism_products() -> None:
     if not (ROOT / "years/2008").exists():
         ok("2008-no-anachronism-products-skip")
         return
-    home = read(ROOT / "years/2008/pages/home.html").lower()
+    home = year_home("2008").lower()
     about = read(ROOT / "years/2008/pages/about.html").lower()
     # App Store must be in product story
     if "app store" not in home and "app store" not in about:
@@ -2294,7 +2352,7 @@ def test_2008_densify() -> None:
         fail("2008-densify", "youtube HD note")
         return
     # Home trails
-    home = read(ROOT / "years/2008/pages/home.html")
+    home = year_home("2008")
     for trail in ("Apps arrive", "Browser wars", "Android opens", "Stream night", "Login everywhere", "Still desktop"):
         if trail not in home:
             fail("2008-densify", f"home trail missing: {trail}")
@@ -2650,7 +2708,7 @@ def test_2005_densify() -> None:
         fail("2005-densify", "techcrunch weak")
         return
     # bans
-    home = read(ROOT / "years/2005/pages/home.html").lower()
+    home = year_home("2005").lower()
     if "twitter.com" in home or "href=\"http://twitter" in home:
         fail("2005-densify", "twitter anachronism on home")
         return

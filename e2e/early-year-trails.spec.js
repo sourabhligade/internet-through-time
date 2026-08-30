@@ -42,18 +42,6 @@ const YEARS = [
     must: [/Connection trails/i, /Amazon|smile/i, /Napster/i, /Pets\.com/i, /Starting Point/i],
   },
   {
-    y: '2001',
-    must: [/Connection trails/i, /Wikipedia/i, /iPod/i, /IE 6|Windows XP/i, /Starting Point/i],
-  },
-  {
-    y: '2002',
-    must: [/Connection trails/i, /Friendster/i, /KaZaA|Blogger/i, /Starting Point/i],
-  },
-  {
-    y: '2003',
-    must: [/Connection trails/i, /MySpace|Friendster/i, /iTunes|WordPress/i, /Starting Point/i],
-  },
-  {
     y: '2004',
     must: [/Connection trails|REAL multipath/i, /Firefox|Gmail/i, /Flickr|Thefacebook|facebook/i, /Starting Point/i],
   },

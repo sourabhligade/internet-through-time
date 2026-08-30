@@ -112,7 +112,27 @@
                 markTourUsed();
                 return;
               }
-              location.href = searchHref(q);
+              var qTrim = String(q || "").replace(/^\s+|\s+$/g, "");
+              if (!qTrim) {
+                actionFeedback("Type a query first. Empty never writes.", { error: true, flash: true });
+                return;
+              }
+              try {
+                var year = String((config && config.year) || "1998");
+                var pfx = (config && config.storagePrefix) || ("itt" + year.slice(2));
+                var gk = ITT.util && ITT.util.immersionStorageKey
+                  ? ITT.util.immersionStorageKey("google", pfx)
+                  : pfx + "-google";
+                localStorage.setItem(gk, JSON.stringify({
+                  q: qTrim.slice(0, 80),
+                  multiStep: true,
+                  real: true,
+                  year: year,
+                  ts: Date.now()
+                }));
+                try { if (ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN0) { /* */ }
+              } catch (eG) { /* */ }
+              location.href = searchHref(qTrim);
             });
             // explicit lucky button click (older browsers)
             var luckyBtns = f.querySelectorAll("[data-google-lucky], input[name='btnI']");
@@ -125,6 +145,14 @@
               });
             }
           })(forms[i]);
+        }
+        var luckyTrap = document.querySelector("[data-lucky-trap]");
+        if (luckyTrap && luckyTrap.getAttribute("data-lucky-trap-bound") !== "1") {
+          luckyTrap.setAttribute("data-lucky-trap-bound", "1");
+          luckyTrap.addEventListener("click", function (ev) {
+            ev.preventDefault();
+            actionFeedback("Yahoo-as-home / portal pack never writes Lucky.", { error: true, flash: true });
+          });
         }
         // autofocus first search box
         var first = document.querySelector('form[data-google-search] input[name="q"]');

@@ -83,6 +83,7 @@ HTML counts match [`DISK-TRUTH.md`](DISK-TRUTH.md) playable table. One-thing chi
 | 2011 | **28** | 19 | **1** | Pass* | lean | **80 / 75 feel** | Google+ Circles | `itt11-gplus-*` | Same · dual IE8 skin leftover |
 | 2012 | **30** | 19 | **2** | Pass* | lean | **80 / 75 feel** | Instagram Android | `itt12-ig` | H12-01–04 failed-final · one 2009 Chrome continuity still |
 | 2013 | **38** | ~28 | **1** | Pass* | lean | **80 / 75 feel** | Vine 6s | `itt13-vine-posts` | H13 failed-final · leftover L3/L5/L7/L8 on disk · not the old forest |
+| 2014 | **75** | lean | **1** | Pass* | **A−** | **90 / 80 feel** | WhatsApp Install | `itt14-wa-install` | Failed-final · leftover forests on map · L4 stills only |
 
 \*Ship **Pass** on lean years = A–F with **C closed honestly** (failed-final / continuity). That is the [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md) contract. It is **not** “the stills look finished.”
 

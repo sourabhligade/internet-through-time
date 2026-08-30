@@ -153,6 +153,14 @@
       });
     }
 
+    var mqTrap = doc.querySelector("[data-mq-trap]");
+    if (mqTrap && mqTrap.getAttribute("data-mq-trap-bound") !== "1") {
+      mqTrap.setAttribute("data-mq-trap-bound", "1");
+      mqTrap.addEventListener("click", function () {
+        feedback("Live GPS / Google Maps never writes. Print From + To.", status, true);
+      });
+    }
+
     var form = doc.querySelector("[data-mq-form]");
     if (form) {
       var fromEl = form.querySelector("#ott-field") || form.querySelector("[name='from']");

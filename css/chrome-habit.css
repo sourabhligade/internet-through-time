@@ -160,6 +160,10 @@
   border-bottom: 1px solid #e8eaed;
   padding: 4px 8px 8px;
 }
+.os-win10 .browser.dirbar-hidden #dirbar,
+.os-win10 #dirbar.hidden {
+  display: none !important;
+}
 .os-win10 .dirbar .dir-btn,
 .os-win10 .dirbar a,
 .os-win10 .dirbar button {

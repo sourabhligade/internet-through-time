@@ -1,0 +1,157 @@
+2014 deep-research visit log — 2026-08-29
+Envelope = ILS June 968,882,453 hostnames. NOT 5000 dests.
+Opened this pass:
+
+SCALE / BROWSER / ALEXA
+https://www.internetlivestats.com/internet-users/
+  year-2014 users 2,956,385,569 · NOT the June websites-table 2,925,249,355
+https://web.archive.org/web/20140201193154/http://news.netcraft.com/archives/2014/01/03/january-2014-web-server-survey.html
+  Jan 2014 861,379,152 contemporaneous page
+https://web.archive.org/web/20140926203453/http://news.netcraft.com/archives/2014/09/24/september-2014-web-server-survey.html
+  first time survey exceeded a billion · 1,022,954,603 · ~178M active in-article
+https://twitter.com/timberners_lee/status/511988109211627520
+  16 Sep 2014 TBL · ILS billion
+https://thenextweb.com/news/ie11-gains-market-share-chrome-finally-passes-firefox
+  Mar 2014 · StatCounter Chrome 43.66% vs Net Apps IE 57.96%
+https://redmondmag.com/articles/2014/06/06/chrome-surpasses-ie.aspx
+  Apr 2014 desktop StatCounter Chrome 48.08% · Net Apps IE 57.88% · ADI US 31.8 vs 30.9
+https://martech.org/report-googles-chrome-android-browser-edge-microsoft-ie-lead-market-share/
+  ADI Apr 2014 US · desktop IE 43%
+https://news.softpedia.com/news/59-Percent-of-the-World-s-PCs-Now-Running-Internet-Explorer-468790.shtml
+  Dec 2014 Net Apps IE 59.11% · barely below 58% all year
+https://web.archive.org/web/20140109160331/http://www.alexa.com/topsites/global
+  Jan 2014 Alexa top 10
+https://web.archive.org/web/20140530011023/http://www.alexa.com/topsites
+  May 2014 Alexa · Twitter #9
+
+SCALE
+https://www.internetlivestats.com/total-number-of-websites/
+  June 2014 websites 968,882,453 (+44%) users 2,925,249,355 3.0 users/site
+  2013 672,985,183 (−3%)  2015 863,105,652 (−11%)
+  1B first Sep 2014 · NetCraft Oct 2014 survey · TBL tweet 16 Sep 2014
+  hostname = website · ~75% inactive/parked
+
+http://news.netcraft.com/archives/2015/06/25/june-2015-web-server-survey.html
+  Jan 2014 861,379,152 / 180,067,270 active
+  Jun 2014 968,882,453 / 181,414,052 active
+  Sep 2014 1,022,954,603 / 177,831,433 active
+  Jan 2015 876,812,666 / 177,127,427 active
+
+https://web.archive.org/web/20210821204152/https://news.netcraft.com/archives/2014/06/06/june-2014-web-server-survey.html
+  968,882,453 sites · Apache 36.50% / Microsoft 36.35% of ALL hostnames
+  do not use as Heartbleed two-thirds
+
+https://www.washingtonpost.com/news/the-intersect/wp/2014/09/22/there-are-now-officially-a-billion-web-sites-on-the-internet-we-think/
+  pair for 1B · count is estimated
+
+https://phys.org/news/2014-09-websites-billion.html
+  AFP 17 Sep 2014 · ILS + TBL tweet
+
+GOLD / HEARTBLEED / ICE
+https://about.fb.com/news/2014/02/facebook-to-acquire-whatsapp/
+  19 Feb 2014 · $4B cash + $12B stock = $16B + $3B RSU
+  450M MAU · 1M users/day · independent brand · Messenger standalone
+https://web.archive.org/web/20140219234111/http://blog.whatsapp.com/index.php/2014/02/facebook/
+  nothing changes for users · nominal fee · no ads
+https://www.sec.gov/Archives/edgar/data/1326801/000132680114000037/fb_8-kxclosingxofxwhatsapp.htm
+  close 6 Oct 2014 · cash ~$4.59B · do not print $22B as announced
+https://web.archive.org/web/20130725010657/http://blog.whatsapp.com/index.php/2013/07/iphone-v2-10-1-release-notes/
+  first year free then $.99/year · BAN 2016 free forever
+https://web.archive.org/web/20150121212045/http://blog.whatsapp.com/614/WhatsApp-Web
+  WhatsApp Web 21 Jan 2015 · BAN as 2014 star
+
+https://www.heartbleed.com/
+  CVE-2014-0160 · 1.0.1–1.0.1f · 1.0.1g 7 Apr 2014
+  64k heartbeat · no log trace
+  Apache+nginx >66% of ACTIVE sites (Netcraft April 2014)
+https://www.openssl.org/news/secadv/20140407.txt
+https://web.archive.org/web/20140409045632/http://news.netcraft.com/archives/2014/04/08/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug.html
+  heartbeat on 17.5% of SSL sites · ~500k trusted certs · not 66% of HTTPS
+
+https://web.archive.org/web/20140924070322/http://time.com/3136507/als-ice-bucket-challenge-started/
+  Kennedy 15 Jul · Frates 31 Jul · ALSA uptick 29 Jul
+https://web.archive.org/web/20140818175545/http://www.alsa.org/news/media/press-releases/ice-bucket-challenge-0818.html
+  $15.6M vs $1.8M
+https://web.archive.org/web/20140903173531/http://www.alsa.org/news/media/press-releases/ice-bucket-challenge-082914.html
+  $100.9M vs $2.8M 29 Jul–29 Aug · dest copy stands
+
+GAMES / YEAR MOOD
+https://en.wikipedia.org/wiki/2014_in_video_games
+  Twitch Amazon · Oculus Facebook
+  Hearthstone / Destiny notable · Flappy not listed as GOTY
+  Tile Fold stays gold · Flappy stays trap
+
+https://en.wikipedia.org/wiki/2014
+  Ebola / ISIS / MH370 / Crimea / Ferguson — mood NOT dests
+
+LOCAL MD
+docs/2014-READ-FIRST.md
+docs/2014-EVERY-FLOW-MINUTE-E2E-2026-08-29.md
+docs/2014-FROM-SCRATCH-RESEARCH-…-2026-08-23.md  (STALE: said year missing)
+docs/2014-5K-WEB-FLOW-MAP.md  (STALE disk 0 HTML)
+docs/SCALE-LEDGER.md 2014 rows
+docs/GAMES-PER-YEAR/ — no YEAR-2014.md
+
+GAMES / CULTURE LEFTOVER (opened via research pass)
+https://en.wikipedia.org/wiki/Hearthstone
+  Win/Mac 11 Mar 2014 · already more-c Hearth Hand
+https://en.wikipedia.org/wiki/Destiny_(video_game)
+  worldwide 9 Sep 2014 · $325M first five days · already more-d
+https://en.wikipedia.org/wiki/Flappy_Bird
+  pull 10 Feb 2014 · TRAP not gold
+https://about.fb.com/news/2014/03/facebook-to-acquire-oculus/
+  25 Mar · ~$2B · DK2 not CV1 · dest oculus
+https://serialpodcast.org/posts/2014/09/introducing-serial
+  launch 3 Oct · dest serial · no victim stills
+https://arstechnica.com/information-technology/2014/05/truecrypt-is-not-secure-official-sourceforge-page-abruptly-warns/
+  28 May · dest truecrypt · no exploit
+https://arstechnica.com/gadgets/2014/11/amazon-announces-echo-a-199-voice-driven-home-assistant/
+  6 Nov invite $199 · dest echoinvite · mass 2015
+https://www.apple.com/newsroom/2014/05/28Apple-to-Acquire-Beats-Music-Beats-Electronics/
+  28 May $3B · dest beats · not Apple Music
+https://www.theverge.com/2014/9/30/6871483/ebay-and-paypal-are-splitting-up
+  30 Sep announce · dest ebaypaypal
+
+LEFTOVER SLICE (opened via research pass · official pages)
+https://www.apple.com/newsroom/2014/09/09Apple-Announces-iPhone-6-iPhone-6-Plus-The-Biggest-Advancements-in-iPhone-History/
+  9 Sep · 4.7 / 5.5 · $199 / $299 two-year · US 19 Sep
+https://www.theverge.com/2014/9/9/6121325/apple-iphone-6-release-date-pricing
+https://www.apple.com/newsroom/2014/09/09Apple-Unveils-Apple-Watch-Apples-Most-Personal-Device-Ever/
+  Watch early 2015 from $349 · leftover LINE not star
+https://www.apple.com/newsroom/2015/03/09Apple-Watch-Available-in-Nine-Countries-on-April-24/
+  ships 24 Apr 2015
+https://www.apple.com/newsroom/2014/09/09Apple-Announces-Apple-Pay/
+  NFC + Secure Element + Touch ID · US October on iPhone 6/6 Plus
+https://www.apple.com/newsroom/2014/10/16Apple-Pay-Set-to-Transform-Mobile-Payments-Starting-October-20/
+  go-live Monday 20 Oct · iOS 8.1
+https://www.theverge.com/2014/10/16/6981117/apple-pay-release-date-available-october-20th
+https://developers.googleblog.com/this-is-material-design
+  I/O 25 Jun 2014 Material · Android L
+https://www.theverge.com/2014/6/25/5841044/material-design-new-google-interface-2014
+https://www.theverge.com/2014/11/12/7210717/android-lollipop-nexus-devices-release-download
+  Lollipop OTA 12 Nov
+https://techcrunch.com/2014/02/12/slack-exits-beta/
+  Slack public 12 Feb 2014 · not Teams
+https://buildingslack.com/year-1/
+https://www.sec.gov/Archives/edgar/data/1018724/000101872414000034/amzn-2014augustxex991.htm
+  Amazon 25 Aug · ~$970 million in cash for Twitch
+https://techcrunch.com/2014/08/25/amazon-will-buy-twitch-for-over-1-billion/
+  Google almost / then lost
+https://web.archive.org/web/20141006032340/http://news.microsoft.com/2014/09/30/microsoft-unveils-the-future-of-windows/
+  Win10 announced 30 Sep 2014
+https://blogs.windows.com/windows-insider/2014/09/30/announcing-windows-10/
+https://news.microsoft.com/source/2015/07/29/windows-10-available-in-190-countries-as-a-free-upgrade/
+  ships 29 Jul 2015
+https://www.theverge.com/2014/4/9/5598440/facebook-will-turn-off-messaging-in-its-mobile-app-forcing-you-to-download-messenger
+  Messenger unbundle Apr 2014 leftover · not WhatsApp
+https://newsroom.snap.com/introducing-discover
+  Discover 27 Jan 2015 BAN
+https://web.archive.org/web/20150403100430/https://blog.twitter.com/2015/introducing-periscope
+  Periscope 26 Mar 2015 BAN
+
+DID NOT
+GET 5000 URLs
+add dest folders
+wipe years/2014
+retitle star or games
+make Pay / Watch / Win10 / Slack / Twitch the chip

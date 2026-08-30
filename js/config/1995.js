@@ -46,6 +46,12 @@
       connectBusyChance: 0.14
     },
     urlMap: {
+      "sites/playable/extra-f.html": "http://museum.local/years/1995/sites/playable/extra-f.html",
+      "sites/playable/extra-g.html": "http://museum.local/years/1995/sites/playable/extra-g.html",
+      "sites/playable/extra-h.html": "http://museum.local/years/1995/sites/playable/extra-h.html",
+      "sites/playable/extra-i.html": "http://museum.local/years/1995/sites/playable/extra-i.html",
+      "sites/playable/more-c.html": "http://museum.local/years/1995/sites/playable/more-c.html",
+      "sites/playable/more-d.html": "http://museum.local/years/1995/sites/playable/more-d.html",
       "sites/playable/extra-e.html": "http://museum.local/years/1995/sites/playable/extra-e.html",
       "sites/playable/extra-d.html": "http://museum.local/years/1995/sites/playable/extra-d.html",
       "sites/playable/extra-c.html": "http://museum.local/years/1995/sites/playable/extra-c.html",
@@ -64,6 +70,8 @@
       "sites/hotbot/index.html": "http://museum.local/years/1995/sites/hotbot/index.html",
       "sites/playable/extra-a.html": "http://museum.local/years/1995/sites/playable/extra-a.html",
       "sites/playable/extra-b.html": "http://museum.local/years/1995/sites/playable/extra-b.html",
+      "sites/playable/more-a.html": "http://museum.local/years/1995/sites/playable/more-a.html",
+      "sites/playable/more-b.html": "http://museum.local/years/1995/sites/playable/more-b.html",
       "sites/cnet/index.html": "http://museum.local/years/1995/sites/cnet/index.html",
       "sites/espn/index.html": "http://museum.local/years/1995/sites/espn/index.html",
       "sites/salon/index.html": "http://museum.local/years/1995/sites/salon/index.html",

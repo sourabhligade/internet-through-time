@@ -6,6 +6,23 @@
   var ITT = global.ITT || (global.ITT = {});
   ITT.configs = ITT.configs || {};
   var rooms = [
+    "sites/plus/about.html",
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
+    "sites/myai/index.html",
+    "sites/firefly/index.html",
+    "sites/m365copilot/index.html",
+    "sites/copilotx/index.html",
+    "sites/sge/index.html",
+    "sites/gen2/index.html",
+    "sites/spotifyaidj/index.html",
+    "sites/duolingomax/index.html",
+    "sites/poe/index.html",
+    "sites/huggingfacechat/index.html",
+    "sites/pika/index.html",
+    "sites/pi/index.html",
+    "sites/neevashut/index.html",
+    "sites/writersstrike/index.html",
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",
@@ -72,6 +89,8 @@
     "sites/playable/extra-a.html",
     "sites/playable/extra-b.html",
     "sites/playable/extra-e.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
     "sites/playable/extra-d.html",
     "sites/playable/extra-c.html",
   ];
@@ -102,7 +121,7 @@
       underline: true, expireDays: 30, autoload: true, modemDelay: 20,
       homeUrl: "http://home.microsoft.com/intl/web2023/",
       homePath: "pages/home.html",
-      showToolbar: true, showLocation: true, showDirbar: true, showDesktopIcons: true,
+      showToolbar: true, showLocation: true, showDirbar: false, showDesktopIcons: true,
       desktopBg: "#0078d7"
     },
     urlMap: urlMap

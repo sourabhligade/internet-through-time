@@ -24,7 +24,7 @@ const WANT_MORE = {
   2000: [/ivillage/, /womencom/, /napsterweb/],
   2001: [/moveon/, /grok/, /appleimac/],
   2002: [/fark/, /homestar/, /blogspot/],
-  2003: [/evite/, /tribe/, /secondlifegrid/],
+  2003: [/flash/, /phoenix/, /4chan/],
   2004: [/yelplocal/, /orkutcircle/, /flickrpro/],
   2005: [/redditfront/, /googleearthkml/, /kayakplus/],
   2006: [/twitterbird/, /wikihow06/, /diggv4/],

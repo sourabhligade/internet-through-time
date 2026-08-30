@@ -3,8 +3,15 @@
 **Date:** 2026-08-27  
 **Status:** **lean door on disk.** Hub card open. `SHIP_YEARS` includes 2006.  
 **Do not** `git checkout` an old 2006 forest. Hard stop ~50–90 HTML. The old forest drowned the thesis.  
-**This pass:** implement (named).  
-**Harvest:** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-27.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-27.md)  
+**This pass:** research freeze 2026-08-29 (named). Implement only when named — do not wipe the live lean door.  
+**Harvest (this session):** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md)  
+**Goals · phases · minute · e2e:** [`2006-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md`](2006-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md)  
+**Games harvest (this session):** [`2006-GAMES-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`](2006-GAMES-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md)  
+**Games goals · minute · e2e:** [`2006-GAMES-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md`](2006-GAMES-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md)  
+**Two more full era games (every year):** [`GAMES-FULL-MORE-EVERY-YEAR-DONE-MAP-2026-08-29.md`](GAMES-FULL-MORE-EVERY-YEAR-DONE-MAP-2026-08-29.md) · harvest [`GAMES-FULL-MORE-EVERY-YEAR-RESEARCH-2026-08-29.md`](GAMES-FULL-MORE-EVERY-YEAR-RESEARCH-2026-08-29.md) · visit log [`GAMES-FULL-MORE-EVERY-YEAR-VISITED-2026-08-29.md`](GAMES-FULL-MORE-EVERY-YEAR-VISITED-2026-08-29.md) · 2006 = Obliv Walk + Gears Cover  
+**In place done · every dest D.01–D.66 · 142 leftover rows · e2e (this pass):** [`2006-IN-PLACE-DONE-GOALS-PHASES-FLOWS-MINUTE-E2E-TEST-2026-08-29.md`](2006-IN-PLACE-DONE-GOALS-PHASES-FLOWS-MINUTE-E2E-TEST-2026-08-29.md)  
+**5k walk map (2014 / 2005 grain):** [`2006-5K-WEB-FLOW-MAP.md`](2006-5K-WEB-FLOW-MAP.md)  
+**Prior harvest (disk-stale):** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-27.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-27.md)  
 **Map:** [`2006-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2006-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Older notebooks (lose to live tree):** `2006-RESEARCH.md` · `2006-MUSEUM-GRADE.md` · `2006-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md` still say LIVE / 100% — **ignore those sentences**.  
 **Parent:** 2005 YouTube upload (independent all year). **Child:** 2007 iPhone Safari — also wiped. **2008** App Store / Chrome are **not** 2006.  
@@ -25,8 +32,8 @@
 | Complete | 140-or-less status + update · reload persist |
 | Trap | iPhone · App Store · Chrome · Street View · Gmail open-to-all as year-start · Google owns YouTube **as year-start** · Vista retail shell · campus-only Facebook **after Sep 26** as product truth |
 | Guided `<ol>` | **exactly 6** |
-| Official 10 (already in `flow-trails.js`) | Twitter 140 · News Feed · YouTube · Digg · Reddit · Google Docs · AWS · Google Reader · Time You · TrailSled |
-| First door | **lean**. Do not restore leftover `js/config/2006.js` urlMap forest. |
+| Official 10 (already in `flow-trails.js`) | Twitter 140 · News Feed · YouTube · Digg · Reddit · Google Docs · AWS · Google Reader · Time You · TrailSled — **dest files exist** |
+| First door | **lean · live (66 HTML).** Do not restore leftover urlMap forest. Do not add meebo / huffpost / wikileaks. |
 
 ## Size lock (when named)
 

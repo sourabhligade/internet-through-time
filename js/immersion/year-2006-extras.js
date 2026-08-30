@@ -235,7 +235,7 @@
           if (scoreEl) scoreEl.textContent = String(score);
         }
         if (Object.keys(hills).length >= 2) {
-          saveJSON(key("game-sled"), blob({ hills: Object.keys(hills), score: score, gameId: "sled" }));
+          saveJSON(key("game-sled"), blob({ hills: Object.keys(hills), score: score, gameId: "sled", best: score }));
           saySled("TrailSled · " + key("game-sled"));
           reveal(doc);
         } else {

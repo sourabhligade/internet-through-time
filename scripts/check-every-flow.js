@@ -11,9 +11,9 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2007", "2020", "2024", "2025"]);
+const WIPED = new Set(["2001", "2002", "2003", "2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2023; y++) {
+for (let y = 1994; y <= 2024; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -32,6 +32,7 @@ const GOLD = {
   2004: { path: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", hook: /data-fb-join/ },
   2005: { path: "sites/youtube/upload.html", key: "itt05-yt-uploads", hook: /data-yt-upload/ },
   2006: { path: "sites/twitter/index.html", key: "itt06-tweets", hook: /data-tw06-/ },
+  2007: { path: "sites/iphone/index.html", key: "itt07-iphone", hook: /data-ip07-/ },
   2008: { path: "sites/github/issue.html", key: "itt08-github", hook: /data-gh-issue/ },
   2009: { path: "sites/facebook/index.html", key: "itt09-like", hook: /data-lk09-like/ },
   2010: { path: "sites/instagram/index.html", key: "itt10-ig", hook: /data-ig-share/ },
@@ -48,7 +49,7 @@ const GOLD = {
   2021: { path: "sites/att/index.html", key: "itt21-att", hook: /data-att/ },
   2022: { path: "sites/chatgpt/index.html", key: "itt22-chatgpt", hook: /data-gpt22/ },
   2023: { path: "sites/plus/index.html", key: "itt23-plus", hook: /data-plus-go|data-p23-go/ },
-  2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: /data-4o-go/ },
+  2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: /data-4o-talk/ },
   2025: { path: "sites/deepseek/r1.html", key: "itt25-r1", hook: /data-r1-go/ },
 };
 

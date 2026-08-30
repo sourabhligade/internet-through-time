@@ -105,49 +105,7 @@
       "key": "itt00-game-petsock"
     }
   ],
-  "2001": [
-    {
-      "id": "wikiprev",
-      "title": "Wiki preview",
-      "href": "extra-a.html",
-      "key": "itt01-game-wikiprev"
-    },
-    {
-      "id": "ipodclick",
-      "title": "iPod click wheel",
-      "href": "extra-b.html",
-      "key": "itt01-game-ipodclick"
-    }
-  ],
-  "2002": [
-    {
-      "id": "stumble2",
-      "title": "Stumble twice",
-      "href": "extra-a.html",
-      "key": "itt02-game-stumble2"
-    },
-    {
-      "id": "kazaafind",
-      "title": "KaZaA find",
-      "href": "extra-b.html",
-      "key": "itt02-game-kazaafind"
-    }
-  ],
-  "2003": [
-    {
-      "id": "top8swap",
-      "title": "Top 8 swap",
-      "href": "extra-a.html",
-      "key": "itt03-game-top8swap"
-    },
-    {
-      "id": "itunestap",
-      "title": "99\u00a2 tap",
-      "href": "extra-b.html",
-      "key": "itt03-game-itunestap"
-    }
-  ],
-  "2004": [
+        "2004": [
     {
       "id": "thepoke",
       "title": "thefacebook poke",
@@ -183,18 +141,15 @@
     { "id": "deli", "title": "delicious bookmark", "href": "extra-i.html", "key": "itt05-game-deli" }
   ],
   "2006": [
-    {
-      "id": "t140type",
-      "title": "140 type",
-      "href": "extra-a.html",
-      "key": "itt06-game-t140type"
-    },
-    {
-      "id": "diggup",
-      "title": "Digg up",
-      "href": "extra-b.html",
-      "key": "itt06-game-diggup"
-    }
+    { "id": "t140type", "title": "140 type", "href": "extra-a.html", "key": "itt06-game-t140type" },
+    { "id": "diggup", "title": "Digg up", "href": "extra-b.html", "key": "itt06-game-diggup" },
+    { "id": "kongbadge2", "title": "Kong Badge", "href": "extra-c.html", "key": "itt06-game-kongbadge2" },
+    { "id": "fancydash", "title": "Fancy Dash", "href": "extra-d.html", "key": "itt06-game-fancydash" },
+    { "id": "flowcell", "title": "Flow Cell", "href": "extra-e.html", "key": "itt06-game-flowcell" },
+    { "id": "ie7tab", "title": "Tab Filter", "href": "extra-f.html", "key": "itt06-game-ie7tab" },
+    { "id": "feedtick", "title": "Feed Tick", "href": "extra-g.html", "key": "itt06-game-feedtick" },
+    { "id": "burycell", "title": "Bury Cell", "href": "extra-h.html", "key": "itt06-game-burycell" },
+    { "id": "youcover", "title": "You Cover", "href": "extra-i.html", "key": "itt06-game-youcover" }
   ],
     "2008": [
     {

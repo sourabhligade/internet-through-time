@@ -1,12 +1,8 @@
 # 2010–2023 AI-era — missing years · 3× flows · 3× links
 
 **Date:** 2026-08-24  
-**Status:** research freeze. **Not an implement order.** Git only if asked.  
-**Question:** Which years 2010–2023 are missing, what “bigger / more complex / 3×” means in numbers, and what to build first.
-
-**Honesty:** this pass did **not** open 10,000 unique live URLs. “10k websites” is the museum’s **research envelope** (Gray’s **10,022** Dec 1994 sites → ILS June spine through 2018 → Netcraft January cells after). Existing year harvests already walked 4k–10k URL corpora. New 2023 dates below are dual-cited from official posts opened this pass.
-
-**Disk now:** **26** playable years. **2005–2007 wiped** (rebuild later). **2010–2022 lean doors on disk.** **2023 absent.**
+**Status:** **STALE disk sentences.** Live tree + [`2010-2023-AI-ERA-3X-GAP-RESEARCH-VISITED-2026-08-30.md`](2010-2023-AI-ERA-3X-GAP-RESEARCH-VISITED-2026-08-30.md) **win**. 2010–2024 are live. 2023 is **not** absent.  
+**Question (then):** Which years 2010–2023 are missing, what “bigger / more complex / 3×” means in numbers, and what to build first.
 
 ---
 

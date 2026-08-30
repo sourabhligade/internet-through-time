@@ -94,6 +94,8 @@
       ["wordpress", "immersion/wordpress.js"],
       ["linkedin", "immersion/linkedin.js"],
       ["adsense", "immersion/adsense.js"],
+      ["wikipedia", "immersion/wikipedia.js"],
+      ["stumbleupon", "immersion/stumbleupon.js"],
       ["friendster", "immersion/friendster.js"],
       ["orkut", "immersion/orkut.js"],
       ["livejournal", "immersion/livejournal.js"],

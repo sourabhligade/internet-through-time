@@ -113,8 +113,13 @@
       if (qt && ti) ti.value = qt;
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var url = (form.querySelector('[name="url"]') || {}).value || "http://example.com/index.xml";
-        var title = (form.querySelector('[name="title"]') || {}).value || "Feed";
+        var url = ((form.querySelector('[name="url"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var title = ((form.querySelector('[name="title"]') || {}).value || "").replace(/^\s+|\s+$/g, "") || "Feed";
+        var st0 = doc.querySelector("[data-bloglines-status]");
+        if (!url) {
+          if (st0) st0.textContent = "Feed URL required. Empty subscribe never writes.";
+          return;
+        }
         var feeds = load();
         feeds.unshift({ url: url, title: title, ts: Date.now() });
         save(feeds.slice(0, 40));

@@ -1,0 +1,506 @@
+[
+  {
+    "year": "1994",
+    "slot": "c",
+    "id": "hallpeek",
+    "key": "itt94-game-hallpeek",
+    "engine": "corridor",
+    "path": "/years/1994/sites/playable/more-c.html",
+    "next": "/years/1994/sites/playable/more-d.html"
+  },
+  {
+    "year": "1994",
+    "slot": "d",
+    "id": "deskklond",
+    "key": "itt94-game-deskklond",
+    "engine": "solitaire",
+    "path": "/years/1994/sites/playable/more-d.html",
+    "next": "/years/1994/sites/playable/game.html"
+  },
+  {
+    "year": "1995",
+    "slot": "c",
+    "id": "warharvest",
+    "key": "itt95-game-warharvest",
+    "engine": "gather",
+    "path": "/years/1995/sites/playable/more-c.html",
+    "next": "/years/1995/sites/playable/more-d.html"
+  },
+  {
+    "year": "1995",
+    "slot": "d",
+    "id": "cmdclick",
+    "key": "itt95-game-cmdclick",
+    "engine": "cards",
+    "path": "/years/1995/sites/playable/more-d.html",
+    "next": "/years/1995/sites/playable/game.html"
+  },
+  {
+    "year": "1996",
+    "slot": "c",
+    "id": "starcubed",
+    "key": "itt96-game-starcubed",
+    "engine": "platform",
+    "path": "/years/1996/sites/playable/more-c.html",
+    "next": "/years/1996/sites/playable/more-d.html"
+  },
+  {
+    "year": "1996",
+    "slot": "d",
+    "id": "quakehall",
+    "key": "itt96-game-quakehall",
+    "engine": "corridor",
+    "path": "/years/1996/sites/playable/more-d.html",
+    "next": "/years/1996/sites/playable/game.html"
+  },
+  {
+    "year": "1997",
+    "slot": "c",
+    "id": "goldlane",
+    "key": "itt97-game-goldlane",
+    "engine": "corridor",
+    "path": "/years/1997/sites/playable/more-c.html",
+    "next": "/years/1997/sites/playable/more-d.html"
+  },
+  {
+    "year": "1997",
+    "slot": "d",
+    "id": "ageclick",
+    "key": "itt97-game-ageclick",
+    "engine": "gather",
+    "path": "/years/1997/sites/playable/more-d.html",
+    "next": "/years/1997/sites/playable/game.html"
+  },
+  {
+    "year": "1998",
+    "slot": "c",
+    "id": "mineralsc",
+    "key": "itt98-game-mineralsc",
+    "engine": "gather",
+    "path": "/years/1998/sites/playable/more-c.html",
+    "next": "/years/1998/sites/playable/more-d.html"
+  },
+  {
+    "year": "1998",
+    "slot": "d",
+    "id": "crowbarhl",
+    "key": "itt98-game-crowbarhl",
+    "engine": "corridor",
+    "path": "/years/1998/sites/playable/more-d.html",
+    "next": "/years/1998/sites/playable/game.html"
+  },
+  {
+    "year": "1999",
+    "slot": "c",
+    "id": "eqcamp",
+    "key": "itt99-game-eqcamp",
+    "engine": "gather",
+    "path": "/years/1999/sites/playable/more-c.html",
+    "next": "/years/1999/sites/playable/more-d.html"
+  },
+  {
+    "year": "1999",
+    "slot": "d",
+    "id": "smashstk",
+    "key": "itt99-game-smashstk",
+    "engine": "cards",
+    "path": "/years/1999/sites/playable/more-d.html",
+    "next": "/years/1999/sites/playable/game.html"
+  },
+  {
+    "year": "2000",
+    "slot": "c",
+    "id": "d2rift",
+    "key": "itt00-game-d2rift",
+    "engine": "gather",
+    "path": "/years/2000/sites/playable/more-c.html",
+    "next": "/years/2000/sites/playable/more-d.html"
+  },
+  {
+    "year": "2000",
+    "slot": "d",
+    "id": "csdust",
+    "key": "itt00-game-csdust",
+    "engine": "corridor",
+    "path": "/years/2000/sites/playable/more-d.html",
+    "next": "/years/2000/sites/playable/game.html"
+  },
+  {
+    "year": "2004",
+    "slot": "c",
+    "id": "wowchore",
+    "key": "itt04-game-wowchore",
+    "engine": "gather",
+    "path": "/years/2004/sites/playable/more-c.html",
+    "next": "/years/2004/sites/playable/more-d.html"
+  },
+  {
+    "year": "2004",
+    "slot": "d",
+    "id": "hl2grav",
+    "key": "itt04-game-hl2grav",
+    "engine": "corridor",
+    "path": "/years/2004/sites/playable/more-d.html",
+    "next": "/years/2004/sites/playable/game.html"
+  },
+  {
+    "year": "2005",
+    "slot": "c",
+    "id": "penguinice",
+    "key": "itt05-game-penguinice",
+    "engine": "craft",
+    "path": "/years/2005/sites/playable/more-c.html",
+    "next": "/years/2005/sites/playable/more-d.html"
+  },
+  {
+    "year": "2005",
+    "slot": "d",
+    "id": "colossclb",
+    "key": "itt05-game-colossclb",
+    "engine": "platform",
+    "path": "/years/2005/sites/playable/more-d.html",
+    "next": "/years/2005/sites/playable/game.html"
+  },
+  {
+    "year": "2006",
+    "slot": "c",
+    "id": "oblivwalk",
+    "key": "itt06-game-oblivwalk",
+    "engine": "gather",
+    "path": "/years/2006/sites/playable/more-c.html",
+    "next": "/years/2006/sites/playable/more-d.html"
+  },
+  {
+    "year": "2006",
+    "slot": "d",
+    "id": "gearscover",
+    "key": "itt06-game-gearscover",
+    "engine": "corridor",
+    "path": "/years/2006/sites/playable/more-d.html",
+    "next": "/years/2006/sites/playable/game.html"
+  },
+  {
+    "year": "2007",
+    "slot": "c",
+    "id": "shockbath",
+    "key": "itt07-game-shockbath",
+    "engine": "corridor",
+    "path": "/years/2007/sites/playable/more-c.html",
+    "next": "/years/2007/sites/playable/more-d.html"
+  },
+  {
+    "year": "2007",
+    "slot": "d",
+    "id": "galaxspin",
+    "key": "itt07-game-galaxspin",
+    "engine": "platform",
+    "path": "/years/2007/sites/playable/more-d.html",
+    "next": "/years/2007/sites/playable/game.html"
+  },
+  {
+    "year": "2008",
+    "slot": "c",
+    "id": "sporecell",
+    "key": "itt08-game-sporecell",
+    "engine": "craft",
+    "path": "/years/2008/sites/playable/more-c.html",
+    "next": "/years/2008/sites/playable/more-d.html"
+  },
+  {
+    "year": "2008",
+    "slot": "d",
+    "id": "braidfold",
+    "key": "itt08-game-braidfold",
+    "engine": "fold",
+    "path": "/years/2008/sites/playable/more-d.html",
+    "next": "/years/2008/sites/playable/game.html"
+  },
+  {
+    "year": "2009",
+    "slot": "c",
+    "id": "craftmine",
+    "key": "itt09-game-craftmine",
+    "engine": "craft",
+    "path": "/years/2009/sites/playable/more-c.html",
+    "next": "/years/2009/sites/playable/more-d.html"
+  },
+  {
+    "year": "2009",
+    "slot": "d",
+    "id": "lolcs",
+    "key": "itt09-game-lolcs",
+    "engine": "gather",
+    "path": "/years/2009/sites/playable/more-d.html",
+    "next": "/years/2009/sites/playable/game.html"
+  },
+  {
+    "year": "2010",
+    "slot": "c",
+    "id": "meatboyr",
+    "key": "itt10-game-meatboyr",
+    "engine": "platform",
+    "path": "/years/2010/sites/playable/more-c.html",
+    "next": "/years/2010/sites/playable/more-d.html"
+  },
+  {
+    "year": "2010",
+    "slot": "d",
+    "id": "limbowalk",
+    "key": "itt10-game-limbowalk",
+    "engine": "flap",
+    "path": "/years/2010/sites/playable/more-d.html",
+    "next": "/years/2010/sites/playable/game.html"
+  },
+  {
+    "year": "2011",
+    "slot": "c",
+    "id": "skyrimsh",
+    "key": "itt11-game-skyrimsh",
+    "engine": "corridor",
+    "path": "/years/2011/sites/playable/more-c.html",
+    "next": "/years/2011/sites/playable/more-d.html"
+  },
+  {
+    "year": "2011",
+    "slot": "d",
+    "id": "darkbon",
+    "key": "itt11-game-darkbon",
+    "engine": "cards",
+    "path": "/years/2011/sites/playable/more-d.html",
+    "next": "/years/2011/sites/playable/game.html"
+  },
+  {
+    "year": "2012",
+    "slot": "c",
+    "id": "journeysc",
+    "key": "itt12-game-journeysc",
+    "engine": "platform",
+    "path": "/years/2012/sites/playable/more-c.html",
+    "next": "/years/2012/sites/playable/more-d.html"
+  },
+  {
+    "year": "2012",
+    "slot": "d",
+    "id": "telltalec",
+    "key": "itt12-game-telltalec",
+    "engine": "cards",
+    "path": "/years/2012/sites/playable/more-d.html",
+    "next": "/years/2012/sites/playable/game.html"
+  },
+  {
+    "year": "2013",
+    "slot": "c",
+    "id": "flap2013",
+    "key": "itt13-game-flap2013",
+    "engine": "flap",
+    "path": "/years/2013/sites/playable/more-c.html",
+    "next": "/years/2013/sites/playable/more-d.html"
+  },
+  {
+    "year": "2013",
+    "slot": "d",
+    "id": "cookieclk",
+    "key": "itt13-game-cookieclk",
+    "engine": "idle",
+    "path": "/years/2013/sites/playable/more-d.html",
+    "next": "/years/2013/sites/playable/game.html"
+  },
+  {
+    "year": "2014",
+    "slot": "c",
+    "id": "hearthand",
+    "key": "itt14-game-hearthand",
+    "engine": "cards",
+    "path": "/years/2014/sites/playable/more-c.html",
+    "next": "/years/2014/sites/playable/more-d.html"
+  },
+  {
+    "year": "2014",
+    "slot": "d",
+    "id": "destinytw",
+    "key": "itt14-game-destinytw",
+    "engine": "corridor",
+    "path": "/years/2014/sites/playable/more-d.html",
+    "next": "/years/2014/sites/playable/game.html"
+  },
+  {
+    "year": "2015",
+    "slot": "c",
+    "id": "undertalm",
+    "key": "itt15-game-undertalm",
+    "engine": "cards",
+    "path": "/years/2015/sites/playable/more-c.html",
+    "next": "/years/2015/sites/playable/more-d.html"
+  },
+  {
+    "year": "2015",
+    "slot": "d",
+    "id": "splatink",
+    "key": "itt15-game-splatink",
+    "engine": "craft",
+    "path": "/years/2015/sites/playable/more-d.html",
+    "next": "/years/2015/sites/playable/game.html"
+  },
+  {
+    "year": "2016",
+    "slot": "c",
+    "id": "owpayload",
+    "key": "itt16-game-owpayload",
+    "engine": "corridor",
+    "path": "/years/2016/sites/playable/more-c.html",
+    "next": "/years/2016/sites/playable/more-d.html"
+  },
+  {
+    "year": "2016",
+    "slot": "d",
+    "id": "stardewpl",
+    "key": "itt16-game-stardewpl",
+    "engine": "craft",
+    "path": "/years/2016/sites/playable/more-d.html",
+    "next": "/years/2016/sites/playable/game.html"
+  },
+  {
+    "year": "2017",
+    "slot": "c",
+    "id": "botwplate",
+    "key": "itt17-game-botwplate",
+    "engine": "platform",
+    "path": "/years/2017/sites/playable/more-c.html",
+    "next": "/years/2017/sites/playable/more-d.html"
+  },
+  {
+    "year": "2017",
+    "slot": "d",
+    "id": "cuprun",
+    "key": "itt17-game-cuprun",
+    "engine": "rhythm",
+    "path": "/years/2017/sites/playable/more-d.html",
+    "next": "/years/2017/sites/playable/game.html"
+  },
+  {
+    "year": "2018",
+    "slot": "c",
+    "id": "celestecl",
+    "key": "itt18-game-celestecl",
+    "engine": "platform",
+    "path": "/years/2018/sites/playable/more-c.html",
+    "next": "/years/2018/sites/playable/more-d.html"
+  },
+  {
+    "year": "2018",
+    "slot": "d",
+    "id": "gowaxe",
+    "key": "itt18-game-gowaxe",
+    "engine": "corridor",
+    "path": "/years/2018/sites/playable/more-d.html",
+    "next": "/years/2018/sites/playable/game.html"
+  },
+  {
+    "year": "2019",
+    "slot": "c",
+    "id": "sekirobar",
+    "key": "itt19-game-sekirobar",
+    "engine": "rhythm",
+    "path": "/years/2019/sites/playable/more-c.html",
+    "next": "/years/2019/sites/playable/more-d.html"
+  },
+  {
+    "year": "2019",
+    "slot": "d",
+    "id": "goosehk",
+    "key": "itt19-game-goosehk",
+    "engine": "platform",
+    "path": "/years/2019/sites/playable/more-d.html",
+    "next": "/years/2019/sites/playable/game.html"
+  },
+  {
+    "year": "2020",
+    "slot": "c",
+    "id": "acnhplot",
+    "key": "itt20-game-acnhplot",
+    "engine": "craft",
+    "path": "/years/2020/sites/playable/more-c.html",
+    "next": "/years/2020/sites/playable/more-d.html"
+  },
+  {
+    "year": "2020",
+    "slot": "d",
+    "id": "fallguysc",
+    "key": "itt20-game-fallguysc",
+    "engine": "platform",
+    "path": "/years/2020/sites/playable/more-d.html",
+    "next": "/years/2020/sites/playable/game.html"
+  },
+  {
+    "year": "2021",
+    "slot": "c",
+    "id": "ittakest",
+    "key": "itt21-game-ittakest",
+    "engine": "platform",
+    "path": "/years/2021/sites/playable/more-c.html",
+    "next": "/years/2021/sites/playable/more-d.html"
+  },
+  {
+    "year": "2021",
+    "slot": "d",
+    "id": "metroiddr",
+    "key": "itt21-game-metroiddr",
+    "engine": "corridor",
+    "path": "/years/2021/sites/playable/more-d.html",
+    "next": "/years/2021/sites/playable/game.html"
+  },
+  {
+    "year": "2022",
+    "slot": "c",
+    "id": "eldengrc",
+    "key": "itt22-game-eldengrc",
+    "engine": "corridor",
+    "path": "/years/2022/sites/playable/more-c.html",
+    "next": "/years/2022/sites/playable/more-d.html"
+  },
+  {
+    "year": "2022",
+    "slot": "d",
+    "id": "straycat",
+    "key": "itt22-game-straycat",
+    "engine": "platform",
+    "path": "/years/2022/sites/playable/more-d.html",
+    "next": "/years/2022/sites/playable/game.html"
+  },
+  {
+    "year": "2023",
+    "slot": "c",
+    "id": "bg3dice",
+    "key": "itt23-game-bg3dice",
+    "engine": "cards",
+    "path": "/years/2023/sites/playable/more-c.html",
+    "next": "/years/2023/sites/playable/more-d.html"
+  },
+  {
+    "year": "2023",
+    "slot": "d",
+    "id": "totkisland",
+    "key": "itt23-game-totkisland",
+    "engine": "platform",
+    "path": "/years/2023/sites/playable/more-d.html",
+    "next": "/years/2023/sites/playable/game.html"
+  },
+  {
+    "year": "2024",
+    "slot": "c",
+    "id": "balatrojk",
+    "key": "itt24-game-balatrojk",
+    "engine": "cards",
+    "path": "/years/2024/sites/playable/more-c.html",
+    "next": "/years/2024/sites/playable/more-d.html"
+  },
+  {
+    "year": "2024",
+    "slot": "d",
+    "id": "helldive",
+    "key": "itt24-game-helldive",
+    "engine": "rhythm",
+    "path": "/years/2024/sites/playable/more-d.html",
+    "next": "/years/2024/sites/playable/game.html"
+  }
+]

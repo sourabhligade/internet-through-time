@@ -71,9 +71,8 @@ say "-- project files --"
 for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.yml netlify.toml vercel.json playwright.config.js .gitignore .gitattributes robots.txt sitemap.txt index.html; do
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
-# Hub-open years on disk. 2006 / 2021 / 2022 / 2023 lean doors live. 2007 and 2020 wiped.
-for y in $(seq 1994 2023); do
-  if [[ "$y" == "2007" || "$y" == "2020" ]]; then continue; fi
+# Hub-open years on disk. 1994–2024 live. 2025 boarded.
+for y in $(seq 1994 2024); do
   if [[ -f "years/$y/index.html" ]]; then ok "years/$y/index.html"; else bad "missing years/$y"; fi
 done
 
@@ -124,5 +123,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 1994–2023 (28 years; 2007 and 2020 wiped). 2023 Plus · 2022 Send · 2021 ATT Ask."
+say "  Ship hub 1994–2024 lean doors. 2025 boarded. Gold / leftover dests / 2× writers."
 exit 0

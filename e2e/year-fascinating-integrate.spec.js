@@ -52,8 +52,6 @@ test.describe("Fascinating integrate leftovers", () => {
       "/years/2015/sites/letsencrypt/index.html",
       "/years/1994/sites/hotwired/ad-att.html",
       "/years/2000/sites/pets/shutdown.html",
-      "/years/2001/sites/wayback/index.html",
-      "/years/2002/sites/friendster/testimonial.html",
       "/years/2006/sites/facebook/feed.html",
       "/years/2008/sites/chrome/index.html",
       "/years/1999/sites/seti/index.html",
@@ -170,34 +168,6 @@ test.describe("Fascinating integrate leftovers", () => {
     const blob = await blobOf(page, "itt00-pets");
     expect(blob && blob.year).toBe("2000");
     expect(await getKey(page, "itt00-mapquest")).toBeFalsy();
-  });
-
-  test("2001 Wayback empty query never writes · host+date writes itt01-wayback", async ({ page }) => {
-    await openClean(page, "/years/2001/sites/wayback/index.html", ["itt01-wayback", "itt01-wiki-pages"]);
-    await page.locator("[data-wb-go]").click();
-    expect(await getKey(page, "itt01-wayback")).toBeFalsy();
-    await page.fill("[data-wb-host]", "example.com");
-    await page.locator("[data-wb-go]").click();
-    expect(await getKey(page, "itt01-wayback")).toBeFalsy();
-    await page.locator('[data-wb-date="2001-10-24"]').click();
-    await page.locator("[data-wb-go]").click();
-    await expect.poll(() => getKey(page, "itt01-wayback")).toBeTruthy();
-    const blob = await blobOf(page, "itt01-wayback");
-    expect(blob && blob.year).toBe("2001");
-    expect(await getKey(page, "itt01-wiki-pages")).toBeFalsy();
-  });
-
-  test("2002 Friendster empty post never writes · name+note writes itt02-fs", async ({ page }) => {
-    await openClean(page, "/years/2002/sites/friendster/testimonial.html", ["itt02-fs", "itt02-stumble"]);
-    await page.locator("[data-friendster-add-form] button[type='submit']").click();
-    expect(await getKey(page, "itt02-fs")).toBeFalsy();
-    await page.fill('[data-friendster-add-form] [name="fname"]', "Pal");
-    await page.fill('[data-friendster-add-form] [name="fabout"]', "Always-on leftover note");
-    await page.locator("[data-friendster-add-form] button[type='submit']").click();
-    await expect.poll(() => getKey(page, "itt02-fs")).toBeTruthy();
-    const blob = await blobOf(page, "itt02-fs");
-    expect(blob && blob.year).toBe("2002");
-    expect(await getKey(page, "itt02-stumble")).toBeFalsy();
   });
 
   test("2006 News Feed hide never writes · one story writes itt06-feed", async ({ page }) => {

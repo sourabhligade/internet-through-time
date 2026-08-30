@@ -198,8 +198,8 @@ def test_browser_srp_parts() -> None:
 
 def test_sitemap_ship_years() -> None:
     sm = read(ROOT / "sitemap.txt")
-    wiped = {"2007", "2020", "2024", "2025"}
-    for y in range(1994, 2024):
+    wiped = {"2003", "2025"}
+    for y in range(1994, 2025):
         ys = str(y)
         if ys in wiped:
             if f"/years/{ys}/" in sm:
@@ -216,7 +216,7 @@ def test_sitemap_ship_years() -> None:
 
 
 def test_required_year_shells() -> None:
-    for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002"):
+    for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004"):
         p = ROOT / "years" / y / "index.html"
         if not p.is_file():
             fail("year-shells", f"missing years/{y}/index.html")

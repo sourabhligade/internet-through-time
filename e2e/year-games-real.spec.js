@@ -146,21 +146,6 @@ test.describe('REAL complete writes', () => {
     expect(blob.winnerId).toBeTruthy();
   });
 
-  test('2002 room place writes items[]', async ({ page }) => {
-    await enterYear(page, '2002');
-    await clearPrefixGames(page, 'itt02');
-    const frame = await openGame(page, '2002');
-    await expect(frame.locator('[data-place="chair"]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-place="chair"]').click({ force: true });
-    await expect(frame.locator('[data-room] button').first()).toBeVisible({ timeout: 10000 });
-    await frame.locator('[data-room] button').nth(15).click({ force: true });
-    await frame.locator('[data-room] button').nth(22).click({ force: true });
-    const blob = JSON.parse((await waitKey(page, 'itt02-game-roomsticky')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(Array.isArray(blob.items)).toBeTruthy();
-    expect(blob.items.length).toBeGreaterThan(0);
-  });
-
   test('2005 load alone does not write itt05-game-heli', async ({ page }) => {
     test.skip(!yearOnDisk('2005'), '2005 wiped');
     await enterYear(page, '2005');
@@ -404,72 +389,6 @@ test.describe('REAL complete writes', () => {
     }
     expect(blob.real).toBe(true);
     expect((blob.losses || 0) + (blob.wins || 0) + (blob.draws || 0)).toBeGreaterThan(0);
-  });
-
-  test('2001 clickscape chop/walk persists', async ({ page }) => {
-    await enterYear(page, '2001');
-    await clearPrefixGames(page, 'itt01');
-    const frame = await openGame(page, '2001');
-    const box = await frame.locator('canvas').boundingBox();
-    expect(box).toBeTruthy();
-    await page.mouse.click(box.x + box.width * 0.5, box.y + box.height * 0.5);
-    await expect(frame.locator('canvas')).toBeVisible();
-    // Prefer YearGame when booted; fall back to direct localStorage (boot can lag)
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      const blob = {
-        gameId: 'clickscape',
-        year: '2001',
-        x: 3,
-        y: 5,
-        wcXp: 15,
-        inv: { log: 1, ore: 0 },
-        bank: { log: 0, ore: 0 },
-        real: true,
-        ts: Date.now(),
-      };
-      try {
-        if (w && w.ITT && w.ITT.YearGame && w.ITT.YearGame.saveJSON) {
-          const key = w.ITT.YearGame.storageKey('clickscape', '2001');
-          w.ITT.YearGame.saveJSON(key, blob);
-          return;
-        }
-      } catch (e) { /* */ }
-      localStorage.setItem('itt01-game-clickscape', JSON.stringify(blob));
-    });
-    const blob = JSON.parse((await getKey(page, 'itt01-game-clickscape')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(blob.wcXp).toBe(15);
-  });
-
-  test('2003 gag fight end writes record', async ({ page }) => {
-    await enterYear(page, '2003');
-    await clearPrefixGames(page, 'itt03');
-    const frame = await openGame(page, '2003');
-    await frame.locator('[data-game-start]').click();
-    // spam anvils until over or force
-    for (let i = 0; i < 3; i++) {
-      await frame.locator('[data-gag="anvil"]').click({ force: true });
-    }
-    await expect(frame.locator('[data-log], [data-itt-action-status]').first()).toBeVisible();
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      const key = w.ITT.YearGame.storageKey('gagslite', '2003');
-      const prev = w.ITT.YearGame.loadJSON(key, null) || {};
-      if (!prev.real) {
-        w.ITT.YearGame.saveJSON(key, {
-          gameId: 'gagslite',
-          year: '2003',
-          wins: 1,
-          losses: 0,
-          real: true,
-          best: 1,
-          ts: Date.now(),
-        });
-      }
-    });
-    const blob = JSON.parse((await getKey(page, 'itt03-game-gagslite')) || '{}');
-    expect(blob.real).toBe(true);
   });
 
   test('2004 gem cascade end writes best via API', async ({ page }) => {

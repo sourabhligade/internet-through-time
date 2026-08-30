@@ -229,8 +229,13 @@
     if (iform) {
       iform.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var email = (iform.querySelector('[name="email"]') || {}).value || "friend@example.com";
+        var email = ((iform.querySelector('[name="email"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
         var message = (iform.querySelector('[name="message"]') || {}).value || "";
+        var stEmpty = doc.querySelector("[data-myspace-invite-status]");
+        if (!email) {
+          if (stEmpty) stEmpty.textContent = "Email required. Empty invite never writes.";
+          return;
+        }
         var invs = loadInvites();
         invs.unshift({ email: email, message: message, ts: Date.now() });
         saveInvites(invs.slice(0, 40));

@@ -140,8 +140,13 @@
     if (inv) {
       inv.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var name = (inv.querySelector('[name="name"]') || {}).value || "New connection";
-        var title = (inv.querySelector('[name="title"]') || {}).value || "Professional";
+        var name = ((inv.querySelector('[name="name"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var title = ((inv.querySelector('[name="title"]') || {}).value || "").replace(/^\s+|\s+$/g, "") || "Professional";
+        var st0 = doc.querySelector("[data-li-invite-status]");
+        if (!name) {
+          if (st0) st0.textContent = "Name required. Empty invite never writes.";
+          return;
+        }
         var cons = loadC();
         if (!cons.length) cons = defaults();
         cons.unshift({ name: name, title: title, ts: Date.now() });

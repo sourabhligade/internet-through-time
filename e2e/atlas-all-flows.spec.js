@@ -8,8 +8,8 @@ const matrix = require("./2x-links.matrix.json");
 const trio = require("../scripts/popular-3x3-sites.json");
 
 const OPEN = [
-  "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-  "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009",
+  "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
+  "2004", "2005", "2006", "2007", "2008", "2009",
   "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024",
 ];
 const WIPED = ["2025"];
@@ -104,7 +104,7 @@ test.describe("atlas hallway — all flows", () => {
 
   test("remember lines are year-true and wiped years stay silent", async ({ page }) => {
     await page.goto("/atlas/");
-    await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"] .wing-blurb')).toContainText(/wiped for rebuild/i);
+    await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"] .wing-blurb')).toContainText(/empty for rebuild|wiped for rebuild/i);
     await page.locator('#atlas-spine [data-atlas-year="1999"]').click();
     await expect(page.locator("#atlas-year p.remember")).toContainText(/ding/i);
     await page.locator('#atlas-spine [data-atlas-year="2019"]').click();

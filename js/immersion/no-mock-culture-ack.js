@@ -120,7 +120,7 @@
       spec.checks || ("[data-req], [data-" + suffix + "-check]");
     /* Two-step click is a leftover mock. No boxes → never write. */
     if (!doc.querySelectorAll(checkSel).length) {
-      G.feedback("REAL gate: literacy checks required (not a soft mock).", st, { error: true });
+      G.feedback("Not yet — finish the checks first.", st, { error: true });
       return;
     }
     if (!G.requireMinChecks(doc, checkSel, min, st)) {
@@ -129,7 +129,7 @@
     var n = G.countChecked(doc, checkSel);
     var extra = Object.assign({ checks: n }, spec.extra || {});
     var full = G.saveReal(suffix, extra);
-    G.feedback("Saved REAL · " + full, st);
+    G.feedback("Saved in this browser.", st);
     G.markUsed();
     try {
       btn.setAttribute("data-real-bound", "1");

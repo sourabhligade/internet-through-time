@@ -196,7 +196,10 @@
         homePath: d.homePath || HOME,
         showToolbar: d.showToolbar !== false,
         showLocation: d.showLocation !== false,
-        showDirbar: d.showDirbar !== false,
+        showDirbar:
+          d.showDirbar != null
+            ? !!d.showDirbar
+            : parseInt(config.year, 10) < 2015,
         showDesktopIcons: d.showDesktopIcons !== false,
         desktopBg: d.desktopBg || "#000000"
       };

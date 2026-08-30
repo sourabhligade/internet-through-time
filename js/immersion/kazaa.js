@@ -81,7 +81,12 @@
 
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      var term = q && q.value ? String(q.value).replace(/^\s+|\s+$/g, "") : "music";
+      var term = q && q.value ? String(q.value).replace(/^\s+|\s+$/g, "") : "";
+      if (term.length < 2) {
+        if (status) status.textContent = "Type a leftover query. Empty never writes.";
+        if (out) out.innerHTML = "";
+        return;
+      }
       if (status) status.textContent = 'Searching FastTrack network for "' + term + '"…';
       if (out) out.innerHTML = "<p style='font-size:11px;color:#666'>Searching…</p>";
       setTimeout(function () {

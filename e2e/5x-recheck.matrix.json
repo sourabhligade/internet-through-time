@@ -337,150 +337,6 @@
       ]
     },
     {
-      "year": 2001,
-      "yy": "01",
-      "mode": "panel",
-      "star": "sites/msn/index.html",
-      "flows": [
-        {
-          "suffix": "wiki-pages",
-          "room": "sites/wikipedia/index.html",
-          "next": "sites/apple/ipod.html",
-          "key": "itt01-wiki-pages",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "ipod",
-          "room": "sites/apple/ipod.html",
-          "next": "sites/wayback/index.html",
-          "key": "itt01-ipod",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "wayback",
-          "room": "sites/wayback/index.html",
-          "next": "sites/movabletype/index.html",
-          "key": "itt01-wayback",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "mt",
-          "room": "sites/movabletype/index.html",
-          "next": "sites/broadband/index.html",
-          "key": "itt01-mt",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "bb",
-          "room": "sites/broadband/index.html",
-          "next": "sites/msn/index.html",
-          "key": "itt01-bb",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2002,
-      "yy": "02",
-      "mode": "panel",
-      "star": "sites/stumbleupon/index.html",
-      "flows": [
-        {
-          "suffix": "netflix-q",
-          "room": "sites/netflix/index.html",
-          "next": "sites/friendster/index.html",
-          "key": "itt02-netflix-q",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "fs",
-          "room": "sites/friendster/index.html",
-          "next": "sites/kazaa/index.html",
-          "key": "itt02-fs",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "kazaa",
-          "room": "sites/kazaa/index.html",
-          "next": "sites/wired/index.html",
-          "key": "itt02-kazaa",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "wired",
-          "room": "sites/wired/index.html",
-          "next": "sites/googlenews/index.html",
-          "key": "itt02-wired",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "gnews",
-          "room": "sites/googlenews/index.html",
-          "next": "sites/stumbleupon/index.html",
-          "key": "itt02-gnews",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
-      "year": 2003,
-      "yy": "03",
-      "mode": "panel",
-      "star": "sites/photobucket/index.html",
-      "flows": [
-        {
-          "suffix": "itunes",
-          "room": "sites/itunes/index.html",
-          "next": "sites/wordpress/index.html",
-          "key": "itt03-itunes",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "wp",
-          "room": "sites/wordpress/index.html",
-          "next": "sites/linkedin/index.html",
-          "key": "itt03-wp",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "li",
-          "room": "sites/linkedin/index.html",
-          "next": "sites/myspace/index.html",
-          "key": "itt03-li",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "ms-top8-5x",
-          "room": "sites/myspace/index.html",
-          "next": "sites/adsense/index.html",
-          "key": "itt03-ms-top8-5x",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "adsense",
-          "room": "sites/adsense/index.html",
-          "next": "sites/photobucket/index.html",
-          "key": "itt03-adsense",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
       "year": 2004,
       "yy": "04",
       "mode": "panel",
@@ -774,11 +630,46 @@
       "mode": "panel",
       "star": "sites/instagram/index.html",
       "flows": [
-        {"suffix": "ask", "room": "sites/ask/index.html", "next": "sites/facebook/index.html", "key": "itt10-ask", "ok": true, "checks": 2},
-        {"suffix": "facebook", "room": "sites/facebook/index.html", "next": "sites/youtube/index.html", "key": "itt10-facebook", "ok": true, "checks": 2},
-        {"suffix": "youtube", "room": "sites/youtube/index.html", "next": "sites/twitter/index.html", "key": "itt10-youtube", "ok": true, "checks": 2},
-        {"suffix": "tweets", "room": "sites/twitter/index.html", "next": "sites/foursquare/index.html", "key": "itt10-tweets", "ok": true, "checks": 2},
-        {"suffix": "4sq", "room": "sites/foursquare/index.html", "next": "sites/instagram/index.html", "key": "itt10-4sq", "ok": true, "checks": 2}
+        {
+          "suffix": "ask",
+          "room": "sites/ask/index.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt10-ask",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "facebook",
+          "room": "sites/facebook/index.html",
+          "next": "sites/youtube/index.html",
+          "key": "itt10-facebook",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "youtube",
+          "room": "sites/youtube/index.html",
+          "next": "sites/twitter/index.html",
+          "key": "itt10-youtube",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "tweets",
+          "room": "sites/twitter/index.html",
+          "next": "sites/foursquare/index.html",
+          "key": "itt10-tweets",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "4sq",
+          "room": "sites/foursquare/index.html",
+          "next": "sites/instagram/index.html",
+          "key": "itt10-4sq",
+          "ok": true,
+          "checks": 2
+        }
       ]
     },
     {
@@ -787,11 +678,46 @@
       "mode": "panel",
       "star": "sites/googleplus/index.html",
       "flows": [
-        {"suffix": "spotify", "room": "sites/spotify/index.html", "next": "sites/iphone/index.html", "key": "itt11-spotify", "ok": true, "checks": 2},
-        {"suffix": "siri", "room": "sites/iphone/index.html", "next": "sites/facebook/index.html", "key": "itt11-siri", "ok": true, "checks": 2},
-        {"suffix": "timeline", "room": "sites/facebook/index.html", "next": "sites/airbnb/index.html", "key": "itt11-timeline", "ok": true, "checks": 2},
-        {"suffix": "airbnb", "room": "sites/airbnb/index.html", "next": "sites/qwikster/index.html", "key": "itt11-airbnb", "ok": true, "checks": 2},
-        {"suffix": "qwikster", "room": "sites/qwikster/index.html", "next": "sites/googleplus/index.html", "key": "itt11-qwikster", "ok": true, "checks": 2}
+        {
+          "suffix": "spotify",
+          "room": "sites/spotify/index.html",
+          "next": "sites/iphone/index.html",
+          "key": "itt11-spotify",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "siri",
+          "room": "sites/iphone/index.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt11-siri",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "timeline",
+          "room": "sites/facebook/index.html",
+          "next": "sites/airbnb/index.html",
+          "key": "itt11-timeline",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "airbnb",
+          "room": "sites/airbnb/index.html",
+          "next": "sites/qwikster/index.html",
+          "key": "itt11-airbnb",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "qwikster",
+          "room": "sites/qwikster/index.html",
+          "next": "sites/googleplus/index.html",
+          "key": "itt11-qwikster",
+          "ok": true,
+          "checks": 2
+        }
       ]
     },
     {
@@ -800,11 +726,46 @@
       "mode": "panel",
       "star": "sites/instagram/android.html",
       "flows": [
-        {"suffix": "pin", "room": "sites/pinterest/index.html", "next": "sites/facebook/ipo.html", "key": "itt12-pin", "ok": true, "checks": 2},
-        {"suffix": "fb-ipo", "room": "sites/facebook/ipo.html", "next": "sites/facebook/index.html", "key": "itt12-fb-ipo", "ok": true, "checks": 2},
-        {"suffix": "facebook", "room": "sites/facebook/index.html", "next": "sites/iphone/maps.html", "key": "itt12-facebook", "ok": true, "checks": 2},
-        {"suffix": "maps", "room": "sites/iphone/maps.html", "next": "sites/wikipedia/sopa.html", "key": "itt12-maps", "ok": true, "checks": 2},
-        {"suffix": "sopa", "room": "sites/wikipedia/sopa.html", "next": "sites/instagram/android.html", "key": "itt12-sopa", "ok": true, "checks": 2}
+        {
+          "suffix": "pin",
+          "room": "sites/pinterest/index.html",
+          "next": "sites/facebook/ipo.html",
+          "key": "itt12-pin",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "fb-ipo",
+          "room": "sites/facebook/ipo.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt12-fb-ipo",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "facebook",
+          "room": "sites/facebook/index.html",
+          "next": "sites/iphone/maps.html",
+          "key": "itt12-facebook",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "maps",
+          "room": "sites/iphone/maps.html",
+          "next": "sites/wikipedia/sopa.html",
+          "key": "itt12-maps",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "sopa",
+          "room": "sites/wikipedia/sopa.html",
+          "next": "sites/instagram/android.html",
+          "key": "itt12-sopa",
+          "ok": true,
+          "checks": 2
+        }
       ]
     },
     {
@@ -813,11 +774,46 @@
       "mode": "panel",
       "star": "sites/vine/record.html",
       "flows": [
-        {"suffix": "ios7", "room": "sites/iphone/ios7.html", "next": "sites/snapchat/story.html", "key": "itt13-ios7", "ok": true, "checks": 2},
-        {"suffix": "snap-story", "room": "sites/snapchat/story.html", "next": "sites/instagram/video.html", "key": "itt13-snap-story", "ok": true, "checks": 2},
-        {"suffix": "igvid", "room": "sites/instagram/video.html", "next": "sites/snowden/index.html", "key": "itt13-igvid", "ok": true, "checks": 2},
-        {"suffix": "snowden", "room": "sites/snowden/index.html", "next": "sites/windows81/index.html", "key": "itt13-snowden", "ok": true, "checks": 2},
-        {"suffix": "win81", "room": "sites/windows81/index.html", "next": "sites/vine/record.html", "key": "itt13-win81", "ok": true, "checks": 2}
+        {
+          "suffix": "ios7",
+          "room": "sites/iphone/ios7.html",
+          "next": "sites/snapchat/story.html",
+          "key": "itt13-ios7",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "snap-story",
+          "room": "sites/snapchat/story.html",
+          "next": "sites/instagram/video.html",
+          "key": "itt13-snap-story",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "igvid",
+          "room": "sites/instagram/video.html",
+          "next": "sites/snowden/index.html",
+          "key": "itt13-igvid",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "snowden",
+          "room": "sites/snowden/index.html",
+          "next": "sites/windows81/index.html",
+          "key": "itt13-snowden",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "win81",
+          "room": "sites/windows81/index.html",
+          "next": "sites/vine/record.html",
+          "key": "itt13-win81",
+          "ok": true,
+          "checks": 2
+        }
       ]
     }
   ],
@@ -829,9 +825,6 @@
     "1998": "sites/google/lucky.html",
     "1999": "sites/aim/index.html",
     "2000": "sites/mapquest/index.html",
-    "2001": "sites/msn/index.html",
-    "2002": "sites/stumbleupon/index.html",
-    "2003": "sites/photobucket/index.html",
     "2004": "sites/facebook/networks.html",
     "2005": "sites/pandora/index.html",
     "2006": "sites/twitter/index.html",

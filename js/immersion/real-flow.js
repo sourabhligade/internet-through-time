@@ -150,7 +150,7 @@
             var msgInc =
               ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
                 ? ITT.UX.RealCoach.messageIncomplete(yInc, n, min)
-                : "REAL gate: complete at least " + min + " checks first (not a soft mock).";
+                : "Not yet — finish at least " + min + " steps first.";
             try {
               if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach) {
                 ITT.UX.RealCoach.pulseMissing(doc, reqSel);
@@ -171,7 +171,7 @@
               var msgFld =
                 ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
                   ? ITT.UX.RealCoach.messageField(yFld)
-                  : "REAL gate: fill the required field first.";
+                  : "Type the required field first.";
               feedback(msgFld, st, { error: true });
               return;
             }
@@ -186,7 +186,7 @@
             clickCount = clicked.length;
             if (clickCount < minClicks) {
               feedback(
-                "REAL gate: complete at least " + minClicks + " interactive step(s) first (not a soft mock).",
+                "Not yet — finish at least " + minClicks + " step(s) first.",
                 st,
                 { error: true }
               );
@@ -210,7 +210,7 @@
           var msgOk =
             ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
               ? ITT.UX.RealCoach.messageSuccess(yOk, full)
-              : "Saved REAL · " + full;
+              : "Saved in this browser.";
           feedback(msgOk, st);
           markUsed(btn.getAttribute("data-tour-id") || undefined);
           try {
@@ -293,13 +293,13 @@
             ok = any;
           }
           if (!ok) {
-            feedback("REAL gate: required fields empty — nothing saved.", st, { error: true });
+            feedback("Required fields are empty — nothing saved.", st, { error: true });
             return;
           }
           var minReq = parseInt(form.getAttribute("data-min-req") || "0", 10);
           if (isNaN(minReq)) minReq = 0;
           if (minReq > 0 && countChecked(form, "[data-req]") < minReq) {
-            feedback("REAL gate: complete at least " + minReq + " checks first (not a soft mock).", st, { error: true });
+            feedback("Not yet — finish at least " + minReq + " steps first.", st, { error: true });
             return;
           }
           var suffix = form.getAttribute("data-storage-key") || "form-save";
@@ -312,7 +312,7 @@
             year: yearOf(),
             ts: Date.now()
           });
-          feedback("Saved REAL · " + full, st);
+          feedback("Saved in this browser.", st);
           markUsed(form.getAttribute("data-tour-id") || undefined);
           try {
             var nexts = doc.querySelectorAll("[data-next-flow]");

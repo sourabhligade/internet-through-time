@@ -216,102 +216,6 @@
     "title": "Travelocity residual"
   },
   {
-    "year": "2001",
-    "id": "runescape",
-    "path": "/years/2001/sites/runescape/index.html",
-    "key": "itt01-runescape",
-    "type": "twoClick",
-    "title": "RuneScape residual"
-  },
-  {
-    "year": "2001",
-    "id": "habbo",
-    "path": "/years/2001/sites/habbo/index.html",
-    "key": "itt01-habbo",
-    "type": "twoClick",
-    "title": "Habbo Hotel residual"
-  },
-  {
-    "year": "2001",
-    "id": "limewire",
-    "path": "/years/2001/sites/limewire/index.html",
-    "key": "itt01-limewire",
-    "type": "fillGo",
-    "title": "LimeWire residual"
-  },
-  {
-    "year": "2001",
-    "id": "itunesstoreban",
-    "path": "/years/2001/sites/itunesstoreban/index.html",
-    "key": "itt01-itunesstoreban",
-    "type": "twoClick",
-    "title": "iTunes 2 honesty"
-  },
-  {
-    "year": "2002",
-    "id": "xanga",
-    "path": "/years/2002/sites/xanga/index.html",
-    "key": "itt02-xanga",
-    "type": "fillGo",
-    "title": "Xanga residual"
-  },
-  {
-    "year": "2002",
-    "id": "deviantart",
-    "path": "/years/2002/sites/deviantart/index.html",
-    "key": "itt02-deviantart",
-    "type": "twoClick",
-    "title": "DeviantArt residual"
-  },
-  {
-    "year": "2002",
-    "id": "somethingawful",
-    "path": "/years/2002/sites/somethingawful/index.html",
-    "key": "itt02-somethingawful",
-    "type": "twoClick",
-    "title": "Something Awful residual"
-  },
-  {
-    "year": "2002",
-    "id": "livejournal",
-    "path": "/years/2002/sites/livejournal/index.html",
-    "key": "itt02-livejournal",
-    "type": "fillGo",
-    "title": "LiveJournal residual"
-  },
-  {
-    "year": "2003",
-    "id": "secondlife",
-    "path": "/years/2003/sites/secondlife/index.html",
-    "key": "itt03-secondlife",
-    "type": "twoClick",
-    "title": "Second Life residual"
-  },
-  {
-    "year": "2003",
-    "id": "skype",
-    "path": "/years/2003/sites/skype/index.html",
-    "key": "itt03-skype",
-    "type": "fillGo",
-    "title": "Skype residual"
-  },
-  {
-    "year": "2003",
-    "id": "imageshack",
-    "path": "/years/2003/sites/imageshack/index.html",
-    "key": "itt03-imageshack",
-    "type": "twoClick",
-    "title": "ImageShack residual"
-  },
-  {
-    "year": "2003",
-    "id": "delicious",
-    "path": "/years/2003/sites/delicious/index.html",
-    "key": "itt03-delicious",
-    "type": "fillGo",
-    "title": "del.icio.us residual"
-  },
-  {
     "year": "2004",
     "id": "basecamp",
     "path": "/years/2004/sites/basecamp/index.html",
@@ -349,7 +253,7 @@
     "path": "/years/2005/sites/utorrent/index.html",
     "key": "itt05-utorrent",
     "type": "twoClick",
-    "title": "\u00b5Torrent residual"
+    "title": "µTorrent residual"
   },
   {
     "year": "2005",

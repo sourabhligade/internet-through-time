@@ -30,8 +30,8 @@
         );
       },
       incompleteField: "Fill the required field, then try again.",
-      success: function (key) {
-        return "Saved in this browser · " + key;
+      success: function () {
+        return "Saved in this browser.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. ← Exit (Year menu) leaves this year. Starting Point is the year map.",
@@ -40,16 +40,16 @@
     nav: {
       incomplete: function (need, min) {
         return (
-          "REAL gate: complete at least " +
+          "Not yet — finish at least " +
           min +
-          " checks (now " +
+          " steps (now " +
           need +
-          "). Incomplete actions do not save."
+          "). Then try again."
         );
       },
       incompleteField: "Type the required field first (not a soft mock).",
-      success: function (key) {
-        return "OK — stored locally · " + key;
+      success: function () {
+        return "Saved in this browser.";
       },
       shellCoach:
         "Museum reconstruction of this year’s browser. Content is the large pane. Year menu returns to the hub. Links stay inside this window.",
@@ -68,8 +68,8 @@
         );
       },
       incompleteField: "A required field is empty.",
-      success: function (key) {
-        return "Document saved (this PC only) · " + key;
+      success: function () {
+        return "Saved in this browser.";
       },
       shellCoach:
         "Windows-era museum shell. Starting Point = year map · Year menu = all years · Back = previous page in this year.",
@@ -88,8 +88,8 @@
         );
       },
       incompleteField: "Fill the required field to continue.",
-      success: function (key) {
-        return "Saved · " + key + " · local only";
+      success: function () {
+        return "Saved in this browser.";
       },
       shellCoach:
         "Museum year shell — not a live login. The iframe is the 2000s web. Exit top-left returns to the lobby.",
@@ -108,8 +108,8 @@
         );
       },
       incompleteField: "Required text is empty.",
-      success: function (key) {
-        return "Done · " + key;
+      success: function () {
+        return "Saved in this browser.";
       },
       shellCoach:
         "Museum reconstruction. Starting Point maps the year · Year menu exits · scores stay on this device only.",
@@ -128,8 +128,8 @@
         );
       },
       incompleteField: "Required field missing — not saved.",
-      success: function (key) {
-        return "Preferences / action saved in this browser · " + key;
+      success: function () {
+        return "Saved in this browser.";
       },
       shellCoach:
         "Museum desktop for this year. Big window = reconstructed web. ← Year menu leaves. Yellow boxes on pages are exhibit maps, not ads.",
@@ -150,9 +150,9 @@
     acceptAll: function (year) {
       var y = parseInt(year, 10) || 2013;
       if (y >= 2018) {
-        return "Accept all is what people clicked in 2018. The museum stamp is Manage → preferences → Save.";
+        return "Accept all is what people clicked in 2018. Finish Manage → preferences → Save to complete this room.";
       }
-      return "That path is period-true but does not earn the REAL badge. Finish the full steps.";
+      return "That path is what people clicked, but it does not finish this room. Complete the remaining steps.";
     },
     incompleteField: function (year) {
       return UX.Copy.forYear(year).incompleteField;

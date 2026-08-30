@@ -50,11 +50,11 @@
     /** U2 incomplete REAL pulse + clearer copy */
     realCoach: true,
     /** U4-S1 ambient you-are-here under exhibit nav */
-    hereStrip: true,
+    hereStrip: false,
     /** U5-S2 soft year meter on home + stamp about on visit */
-    yearMeter: true,
+    yearMeter: false,
     /** U6-S1 room quality chips when data-itt-room present */
-    roomChips: true
+    roomChips: false
   };
 
   if (masterOff) {

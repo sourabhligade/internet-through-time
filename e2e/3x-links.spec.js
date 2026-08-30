@@ -22,16 +22,16 @@ test.describe("3× links every implemented year", () => {
       test.skip(!yearOnDisk(year), year + " not on disk");
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);
-      await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toHaveCount(1);
-      const dir = page.locator("[data-itt-3x-links]");
-      const pop = page.locator(`[data-itt-pop3x="${year}"]`);
-      const hasDir = (await dir.count()) > 0;
-      const box = hasDir ? dir : pop;
+      await expect(page.locator(".itt-year-star [data-ott-one-thing]")).toHaveCount(1);
+      const box = page.locator(
+        "[data-itt-3x-links]:visible, [data-itt-pop3x]:visible, [data-itt-cut-3x-trios]:visible"
+      ).first();
       await expect(box).toBeVisible();
       const hrefs = await box.locator("a[href]").evaluateAll((els) =>
         els.map((a) => a.getAttribute("href") || "").filter(Boolean)
       );
-      expect(hrefs.length, `${year} 3× dests`).toBeGreaterThanOrEqual(hasDir ? 12 : 3);
+      const minHrefs = (await box.getAttribute("data-itt-3x-links")) !== null ? 12 : 3;
+      expect(hrefs.length, `${year} 3× dests`).toBeGreaterThanOrEqual(minHrefs);
       const samples = hrefs.filter((_, i) => i === 0 || i === Math.floor(hrefs.length / 2) || i === hrefs.length - 1);
       for (const href of samples) {
         const url = new URL(href, `http://x/years/${year}/pages/home.html`).pathname;

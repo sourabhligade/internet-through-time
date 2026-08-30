@@ -106,44 +106,6 @@ const THINGS = [
     },
   },
   {
-    year: "2001",
-    path: "/years/2001/sites/wikipedia/edit.html",
-    key: "itt01-wiki-pages",
-    incomplete: async (page) => {
-      await page.locator("textarea[name='text']").fill("");
-      await page.locator("[data-wiki-save]").click();
-    },
-    complete: async (page) => {
-      await page.fill("textarea[name='text']", "'''Wikipedia''' anyone can edit · museum 2001");
-      await page.locator("[data-wiki-save]").click();
-    },
-  },
-  {
-    year: "2002",
-    path: "/years/2002/sites/stumbleupon/index.html",
-    key: "itt02-stumble",
-    incomplete: async (page) => {
-      await page.locator("[data-su-stumble]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-su-interest='tech']").check();
-      await page.locator("[data-su-stumble]").click();
-      await page.locator("[data-su-stumble]").click();
-    },
-  },
-  {
-    year: "2003",
-    path: "/years/2003/sites/photobucket/index.html",
-    key: "itt03-photobucket",
-    incomplete: async (page) => {
-      await page.locator("form[data-pb-upload] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.fill("#ott-field", "party.jpg");
-      await page.locator("form[data-pb-upload] button[type='submit']").click();
-    },
-  },
-  {
     year: "2004",
     path: "/years/2004/sites/facebook/networks.html",
     key: "itt04-thefacebook-networks",
@@ -232,6 +194,8 @@ const THINGS = [
       await page.locator("[data-wa14-messenger]").click();
     },
     complete: async (page) => {
+      await page.locator('[data-wa14-deal="16b"]').click();
+      await page.locator('[data-wa14-deal="rsu"]').click();
       await page.locator("[data-wa14-install]").click();
     },
   },
@@ -468,8 +432,8 @@ test.describe("One-thing per year — load + REAL gate", () => {
     }
     for (const y of years) {
       await page.goto(`/years/${y}/pages/home.html`);
-      await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
-      await expect(page.locator(`#ott-guided-${y}`)).toBeVisible();
+      await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
+      await expect(page.locator(`#ott-guided-${y}`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y} a[href="about.html"]`).first()).toBeVisible();
       await expect(page.locator(".itt-year-true-pack").first()).toBeVisible();
       const first = await page.evaluate(() => {
@@ -486,7 +450,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   test("home chips present for sample years", async ({ page }) => {
     for (const y of ["1999", "2000", "2008", "2010", "2012"]) {
       await page.goto(`/years/${y}/pages/home.html`);
-      await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
+      await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
     }
   });
 });

@@ -7,6 +7,21 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/alipay/about.html",
+    "sites/echoinvite/about.html",
+    "sites/ello/about.html",
+    "sites/giphy/about.html",
+    "sites/iphone/about.html",
+    "sites/iphone6about/about.html",
+    "sites/material/about.html",
+    "sites/materialabout/about.html",
+    "sites/musically14/about.html",
+    "sites/oculus/about.html",
+    "sites/payabout/about.html",
+    "sites/serial/about.html",
+    "sites/slackabout/about.html",
+    "sites/swarm/about.html",
+    "sites/truecrypt/about.html",
     "sites/oculus/index.html",
     "sites/ello/index.html",
     "sites/serial/index.html",
@@ -67,6 +82,8 @@
     "sites/playable/famous.html",
     "sites/playable/extra-a.html",
     "sites/playable/extra-b.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
     "pages/error/404.html",
     "pages/error/unreachable.html"
   ];

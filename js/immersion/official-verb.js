@@ -77,11 +77,30 @@
             return;
           }
         }
+        var form = this.form || (this.closest && this.closest("form"));
         var field = doc.querySelector("[data-official-need]");
+        if (!field && form) {
+          field =
+            form.querySelector("[data-official-need]") ||
+            form.querySelector("input[required], textarea[required]") ||
+            form.querySelector("input[type='text'], input[type='search'], input:not([type]), textarea");
+        }
         var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
         if (field && v.length < 2) {
           say(st, "Type something first. Empty never writes.", true);
           return;
+        }
+        if (form && !reqs.length) {
+          var boxes = form.querySelectorAll("input[type='checkbox']");
+          if (boxes.length >= 2) {
+            var ticked = 0;
+            var b;
+            for (b = 0; b < boxes.length; b++) if (boxes[b].checked) ticked++;
+            if (ticked < 2) {
+              say(st, "Tick honesty first. Incomplete never writes.", true);
+              return;
+            }
+          }
         }
         var year = yearOf(doc);
         var payload = {

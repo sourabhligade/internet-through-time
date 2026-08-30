@@ -376,6 +376,13 @@
       }, 1600);
     }
     render();
+    var trapPc = doc.querySelector("[data-pc-trap]");
+    if (trapPc && trapPc.getAttribute("data-pc-trap-bound") !== "1") {
+      trapPc.setAttribute("data-pc-trap-bound", "1");
+      trapPc.addEventListener("click", function () {
+        feedback("Live TV / all-channels never writes. Still two residual channels.", st, true);
+      });
+    }
     var subs = doc.querySelectorAll("[data-pc-sub]");
     var i;
     for (i = 0; i < subs.length; i++) {

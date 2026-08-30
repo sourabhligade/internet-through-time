@@ -90,7 +90,7 @@
 
   function renderFriends(root) {
     var list = loadFriends();
-    if (!list.length) { list = defaultFriends(); saveFriends(list); }
+    if (!list.length) list = defaultFriends();
     var ul = root.querySelector("[data-friendster-friends]");
     if (!ul) return;
     ul.innerHTML = "";
@@ -160,19 +160,21 @@
         list.push({ name: name, about: about });
         saveFriends(list);
         try {
+          var y = year() || "2002";
+          var suffix = y === "2003" ? "fs-mass" : "fs";
           var fsKey = ITT.util && ITT.util.immersionStorageKey
-            ? ITT.util.immersionStorageKey("fs", "itt02")
-            : "itt02-fs";
+            ? ITT.util.immersionStorageKey(suffix, y === "2003" ? "itt03" : "itt02")
+            : (y === "2003" ? "itt03-fs-mass" : "itt02-fs");
           localStorage.setItem(fsKey, JSON.stringify({
             multiStep: true,
             real: true,
-            year: "2002",
+            year: y,
             ts: Date.now(),
             friend: name.slice(0, 40),
             note: about.slice(0, 80)
           }));
         } catch (eFs) { /* */ }
-        if (st) st.textContent = "Posted leftover · itt02-fs";
+        if (st) st.textContent = "Posted leftover · " + (year() === "2003" ? "itt03-fs-mass" : "itt02-fs");
         try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
         renderFriends(doc);
         addForm.reset();

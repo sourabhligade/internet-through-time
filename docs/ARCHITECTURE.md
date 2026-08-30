@@ -23,6 +23,8 @@
 │  → each page loads js/immersion-YYYY.js (stub only)     │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
+│  Shared YEAR UI (one folder)                            │
+│  ui/year/shell.js · start.js · years.js · start-data.js │
 │  Shared ENGINE (SRP modules — no year forks)            │
 │  js/browser/* · js/immersion/* · js/lib/util.js         │
 └─────────────────────────────────────────────────────────┘

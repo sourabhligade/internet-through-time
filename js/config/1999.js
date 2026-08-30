@@ -45,6 +45,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/more-c.html": "http://museum.local/years/1999/sites/playable/more-c.html",
+      "sites/playable/more-d.html": "http://museum.local/years/1999/sites/playable/more-d.html",
       "sites/seti/index.html": "http://setiathome.ssl.berkeley.edu/",
       "sites/playable/extra-e.html": "http://museum.local/years/1999/sites/playable/extra-e.html",
       "sites/playable/extra-f.html": "http://museum.local/years/1999/sites/playable/extra-f.html",
@@ -64,6 +66,8 @@
       "sites/sixdegrees/index.html": "http://museum.local/years/1999/sites/sixdegrees/index.html",
       "sites/playable/extra-a.html": "http://museum.local/years/1999/sites/playable/extra-a.html",
       "sites/playable/extra-b.html": "http://museum.local/years/1999/sites/playable/extra-b.html",
+      "sites/playable/more-a.html": "http://museum.local/years/1999/sites/playable/more-a.html",
+      "sites/playable/more-b.html": "http://museum.local/years/1999/sites/playable/more-b.html",
       "sites/egroups/index.html": "http://museum.local/years/1999/sites/egroups/index.html",
       "sites/livejournal/index.html": "http://museum.local/years/1999/sites/livejournal/index.html",
       "sites/neopets/index.html": "http://museum.local/years/1999/sites/neopets/index.html",

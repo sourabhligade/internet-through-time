@@ -140,66 +140,6 @@
     "next": "/years/2000/sites/playable/game.html"
   },
   {
-    "year": "2001",
-    "role": "f",
-    "path": "/years/2001/sites/playable/extra-f.html",
-    "key": "itt01-game-ipodspin",
-    "id": "ipodspin",
-    "kind": "parlor",
-    "title": "iPod Spin",
-    "next": "/years/2001/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2001",
-    "role": "g",
-    "path": "/years/2001/sites/playable/extra-g.html",
-    "key": "itt01-game-wikiprev2",
-    "id": "wikiprev2",
-    "kind": "hold",
-    "title": "Wiki Hold",
-    "next": "/years/2001/sites/playable/game.html"
-  },
-  {
-    "year": "2002",
-    "role": "f",
-    "path": "/years/2002/sites/playable/extra-f.html",
-    "key": "itt02-game-friendseed",
-    "id": "friendseed",
-    "kind": "parlor",
-    "title": "Friend Seed",
-    "next": "/years/2002/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2002",
-    "role": "g",
-    "path": "/years/2002/sites/playable/extra-g.html",
-    "key": "itt02-game-kaznote",
-    "id": "kaznote",
-    "kind": "quiz",
-    "title": "KaZaA Note",
-    "next": "/years/2002/sites/playable/game.html"
-  },
-  {
-    "year": "2003",
-    "role": "f",
-    "path": "/years/2003/sites/playable/extra-f.html",
-    "key": "itt03-game-top8note",
-    "id": "top8note",
-    "kind": "parlor",
-    "title": "Top 8 Note",
-    "next": "/years/2003/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2003",
-    "role": "g",
-    "path": "/years/2003/sites/playable/extra-g.html",
-    "key": "itt03-game-ninetynine",
-    "id": "ninetynine",
-    "kind": "quiz",
-    "title": "99\u00a2 Note",
-    "next": "/years/2003/sites/playable/game.html"
-  },
-  {
     "year": "2004",
     "role": "f",
     "path": "/years/2004/sites/playable/extra-f.html",
@@ -458,5 +398,25 @@
     "kind": "quiz",
     "title": "Stadia Note",
     "next": "/years/2019/sites/playable/game.html"
+  },
+  {
+    "year": "2006",
+    "role": "f",
+    "path": "/years/2006/sites/playable/extra-f.html",
+    "key": "itt06-game-ie7tab",
+    "id": "ie7tab",
+    "kind": "place",
+    "title": "Tab Filter",
+    "next": "/years/2006/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2006",
+    "role": "g",
+    "path": "/years/2006/sites/playable/extra-g.html",
+    "key": "itt06-game-feedtick",
+    "id": "feedtick",
+    "kind": "place",
+    "title": "Feed Tick",
+    "next": "/years/2006/sites/playable/game.html"
   }
 ]

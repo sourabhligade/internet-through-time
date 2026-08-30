@@ -1,7 +1,7 @@
 # 2012 — READ FIRST
 
 **Date:** 2026-08-19  
-**Status:** Research + implement map only. **`years/2012/` is wiped.** Do not `git checkout` the old lean door.  
+**Status:** **lean door on disk** (~89 HTML). Official dests + densify check live. **Do not** `git checkout` an old 115-room / dest-field forest.  
 **Implement bible:** [`2012-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE.md`](2012-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE.md).  
 **Harvest:** [`2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-19.md`](2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-19.md).  
 **Git only if asked.**
@@ -32,6 +32,6 @@ Vine 6s · Snap **Stories** 24h · IG **Stories** · iPhone 6 · WhatsApp-as-sta
 
 Corpus **5,873** lines mention `2012` (**974** hosts). That is **not** 5,000 unique 2012 product homepages. Wikipedia-class **286** titles + harvest **285** + WDM first-page **18** exhibits + official newsrooms. Opening 5,000 dest homes is how the last 2012 door became mock.
 
-## Do not implement until
+## Disk truth
 
-You can recite star, F1–F5, 3×, June scale, and bans without opening a file. Then say **implement 2012**.
+`years/2012/` is the lean Instagram Android door. Guided stays 6. Star is `itt12-ig-android`. Do not restore the 115-room forest.

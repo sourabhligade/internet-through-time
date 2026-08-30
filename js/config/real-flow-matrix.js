@@ -90,34 +90,6 @@
       complete: { action: "cart", expect: null }
     },
     {
-      year: "2001",
-      prefix: "itt01",
-      path: "sites/wikipedia/edit.html",
-      kind: "product",
-      key: "itt01-wiki-pages",
-      hook: "[data-wiki-save]",
-      complete: { action: "wiki", expect: null }
-    },
-    {
-      year: "2002",
-      prefix: "itt02",
-      path: "sites/friendster/index.html",
-      kind: "product",
-      key: "itt02",
-      keyMatch: true,
-      hook: "[data-friendster], form, [data-add-friend]",
-      complete: { action: "friendster", expect: null }
-    },
-    {
-      year: "2003",
-      prefix: "itt03",
-      path: "sites/photobucket/index.html",
-      kind: "product",
-      key: "itt03-photobucket",
-      hook: "form[data-pb-upload]",
-      complete: { action: "photobucket", expect: null }
-    },
-    {
       year: "2004",
       prefix: "itt04",
       path: "sites/gmail/index.html",

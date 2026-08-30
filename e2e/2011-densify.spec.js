@@ -44,6 +44,21 @@ test.describe("2011 leftover densify", () => {
     await page.locator("[data-sp11-invite]").click();
     await expect.poll(() => getKey(page, "itt11-spotify")).toBeTruthy();
   });
+  test("dirbar dests resolve · no 2012 clone rooms", async ({ page }) => {
+    await page.goto("/years/2011/");
+    await expect(page.locator('[data-go="sites/instagram/android.html"]')).toHaveCount(0);
+    await expect(page.locator('[data-go="sites/facebook/ipo.html"]')).toHaveCount(0);
+    await expect(page.locator('[data-go="sites/chrome/index.html"]')).toHaveCount(0);
+    const goes = await page.locator(".dir-btn[data-go]").evaluateAll((els) =>
+      els.map((el) => el.getAttribute("data-go") || "")
+    );
+    expect(goes.length).toBeGreaterThanOrEqual(6);
+    for (const go of goes) {
+      const res = await page.request.get("/years/2011/" + go);
+      expect(res.status(), "dirbar " + go).toBeLessThan(400);
+    }
+  });
+
   test("Siri trap/empty never writes then save", async ({ page }) => {
     await page.goto("/years/2011/sites/iphone/index.html");
     await page.evaluate(() => localStorage.removeItem("itt11-siri"));

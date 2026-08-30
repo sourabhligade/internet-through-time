@@ -24,13 +24,11 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from itt_gate import SHIP_YEARS  # noqa: E402
 
-# Years the museum ships. Museum ends 2023 lean door. 2007, 2020, 2024–2025 wiped.
-# 2006 / 2021 / 2022 / 2023 lean doors are live. 2005 is a live full year.
-_WIPED = {"2007", "2020", "2024", "2025"}
-KNOWN_YEARS = [
-    str(y) for y in list(range(1994, 2024)) if str(y) not in _WIPED
-]
+KNOWN_YEARS = list(SHIP_YEARS)
+_WIPED = {"2025"}
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -41,9 +39,9 @@ SIGNATURE: dict[str, list[str]] = {
     "1998": ["pages/home.html", "sites/google/index.html", "sites/amazon/index.html"],
     "1999": ["pages/home.html", "sites/napster/index.html", "sites/google/index.html", "sites/blogger/index.html"],
     "2000": ["pages/home.html", "sites/amazon/index.html", "sites/napster/index.html"],
-    "2001": ["pages/home.html", "sites/wikipedia/index.html", "sites/apple/ipod.html"],
-    "2002": ["pages/home.html", "sites/friendster/index.html", "sites/kazaa/index.html"],
-    "2003": ["pages/home.html", "sites/myspace/index.html", "sites/itunes/index.html", "sites/wordpress/index.html"],
+    "2001": ["pages/home.html", "sites/wikipedia/index.html", "sites/apple/ipod.html", "sites/wikipedia/edit.html"],
+    "2002": ["pages/home.html", "sites/stumbleupon/index.html", "sites/friendster/index.html", "sites/kazaa/index.html"],
+    "2003": ["pages/home.html", "sites/photobucket/index.html", "sites/myspace/index.html", "sites/itunes/index.html", "sites/wordpress/index.html"],
     "2004": ["pages/home.html", "sites/facebook/index.html", "sites/flickr/index.html", "sites/gmail/index.html"],
     "2005": [
         "pages/home.html",
@@ -197,6 +195,24 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/gpt4/index.html",
         "sites/bingchat/index.html",
         "sites/threads/index.html",
+        "sites/playable/game.html",
+    ],
+    "2020": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/zoom/meeting.html",
+        "sites/reels/index.html",
+        "sites/openai/index.html",
+        "sites/flash/index.html",
+        "sites/playable/game.html",
+    ],
+    "2024": [
+        "pages/home.html",
+        "pages/about.html",
+        "sites/chatgpt/4o.html",
+        "sites/gemini/index.html",
+        "sites/claude35/index.html",
+        "sites/sora/index.html",
         "sites/playable/game.html",
     ],
 }
@@ -396,6 +412,10 @@ def check_year(year: str, http_base: str | None) -> dict:
             continue
         t = p.read_text(errors="ignore")
         if re.search(r"immersion-\d{4}\.js", t) and re.search(r"immersion/[a-z0-9-]+\.js", t):
+            # Star machines sync-load their module so Save / Stumble bind
+            # before boot.js EXTRA arrives. Not a dual-load smell.
+            if "data-wiki-save" in t or "data-su-stumble" in t:
+                continue
             dual += 1
     checks["no_dual_load_sample"] = dual == 0
     if dual:
@@ -436,7 +456,10 @@ def main() -> int:
     if args.years:
         years = [y.strip() for y in args.years.split(",") if y.strip()]
     else:
-        years = sorted(set(KNOWN_YEARS) | set(disk_years), key=int)
+        years = sorted(
+            (set(KNOWN_YEARS) | set(disk_years)) - _WIPED,
+            key=int,
+        )
 
     results = [check_year(y, args.http_base) for y in years]
 

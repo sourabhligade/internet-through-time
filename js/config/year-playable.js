@@ -96,38 +96,38 @@
       title: "Clickscape",
       href: "game.html",
       key: "itt01-game-clickscape",
-      inspire: "RuneScape (Jan 2001) Java browser MMO",
-      blurb: "Click to pathfind. Chop, mine, bank. The grind is the game.",
-      why: "RuneScape made a full MMO run in a Java applet on a school PC. That was 2001’s ‘I play on the internet.’",
-      era: "Bejeweled launched the same year. Halo owned consoles. The library computer ran Runescape.",
-      famous: "Desk Mines + Concentration",
-      accent: "#2e7d32"
+      inspire: "UseMod wiki click-farm leftover",
+      blurb: "Click live links. Avoid dead ones. Incomplete never writes.",
+      why: "2001 games were still mines and Flash seeds. The year verb is Wikipedia.",
+      era: "XP ships. IE6 freezes the web. The cabinet is leftover.",
+      famous: "Desk Mines + Table Tennis",
+      accent: "#003399"
     },
     "2002": {
       id: "roomsticky",
       title: "Room Sticky",
       href: "game.html",
       key: "itt02-game-roomsticky",
-      inspire: "Habbo Hotel (global 2001–02)",
-      blurb: "Pick furniture. Stick it in the room. Make the tile grid yours.",
-      why: "Habbo turned chat into a furnished hotel. The game was the room, not a high score.",
-      era: "Warcraft III shipped. Alien Hominid hit Newgrounds. Most kids rearranged virtual chairs.",
-      famous: "Pocket Snake + Brick Bat",
-      accent: "#c62828"
+      inspire: "Friendster / blog sidebar leftover",
+      blurb: "Stick notes on the wall. Empty never writes.",
+      why: "2002 social seed. Star stays Stumble.",
+      era: "Always-on minority. KaZaA chaos.",
+      famous: "Brick Bat + Desk Mines",
+      accent: "#336699"
     },
     "2003": {
       id: "gagslite",
       title: "Gags Lite",
       href: "game.html",
       key: "itt03-game-gagslite",
-      inspire: "Toontown Online (June 2003)",
-      blurb: "Start a gag fight. Land the pie. Don’t get sad.",
-      why: "Disney’s Toontown was the first mass kids MMO many families allowed. Gags, not guns.",
-      era: "Steam launched in September. Second Life opened. After school was still a cartoon street.",
-      famous: "Fall Blocks + Simon Pads",
-      accent: "#1565c0"
+      inspire: "Toontown-class gags leftover",
+      blurb: "Start a fight. Land a gag. Incomplete start never writes.",
+      why: "2003 leftover cabinet. Star stays Photobucket.",
+      era: "XP + IE6. 99¢ songs. Friendster still larger.",
+      famous: "Gags Lite + Top 8 leftover",
+      accent: "#3366cc"
     },
-    "2004": {
+                "2004": {
       id: "gemcascade",
       title: "Gem Cascade",
       href: "game.html",

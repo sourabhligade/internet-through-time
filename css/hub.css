@@ -637,6 +637,43 @@ body {
   content: "";
 }
 
+/* Boarded 2001–2003 — one compact strip, cards stay .year-card.locked.yYYYY */
+.closed-rooms {
+  grid-column: 1 / -1;
+  margin: 2px 0;
+  padding: 6px 8px 8px;
+  background: #d4d0c8;
+  border: 1px solid #808080;
+}
+.closed-rooms-label {
+  margin: 0 0 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333;
+}
+.closed-rooms-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.closed-rooms .year-card {
+  flex: 1 1 7em;
+  min-width: 6.5em;
+  min-height: 0;
+}
+.closed-rooms .year-card-inner {
+  padding: 6px 8px;
+}
+.closed-rooms .year-card .year {
+  font-size: 15px;
+}
+.closed-rooms .year-card .label,
+.closed-rooms .year-card .scale,
+.closed-rooms .year-card .meta,
+.closed-rooms .year-card .motif {
+  display: none;
+}
+
 /* —— Per-year period skins (match each immersion’s UI grammar) ——
    Top chrome strip + face colors + era chips · not loud parody. */
 

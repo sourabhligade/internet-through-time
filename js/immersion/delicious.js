@@ -58,7 +58,13 @@
   function seed() {
     var list = load();
     if (list && list.length) return list;
-    if (year() === "2004") {
+    if (year() === "2003") {
+      list = [
+        { url: "http://wordpress.org/", title: "WordPress 0.7", tags: "blogs php", others: 8 },
+        { url: "http://bloglines.com/", title: "Bloglines", tags: "rss reader", others: 11 },
+        { url: "http://myspace.com/", title: "MySpace seed", tags: "social", others: 6 }
+      ];
+    } else if (year() === "2004") {
       list = [
         { url: "http://flickr.com/", title: "Flickr", tags: "photos tags", others: 34 },
         { url: "http://gmail.com/", title: "Gmail invite lore", tags: "mail google", others: 52 },
@@ -127,8 +133,13 @@
       if (qtags && tg) tg.value = qtags;
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var url = (form.querySelector('[name="url"]') || {}).value || "http://";
-        var title = (form.querySelector('[name="title"]') || {}).value || url;
+        var url = ((form.querySelector('[name="url"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+        var title = ((form.querySelector('[name="title"]') || {}).value || "").replace(/^\s+|\s+$/g, "") || url;
+        if (!url || url === "http://") {
+          var stD = form.querySelector("[data-delicious-status]") || doc.querySelector("[data-delicious-status]");
+          if (stD) stD.textContent = "URL required. Empty bookmark never writes.";
+          return;
+        }
         var tags = (form.querySelector('[name="tags"]') || {}).value || "";
         var list = seed();
         list.unshift({

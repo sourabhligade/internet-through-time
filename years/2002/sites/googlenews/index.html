@@ -1,115 +1,15 @@
 <!DOCTYPE html>
-<html data-official-key="itt02-gnews" lang="en">
+<html lang="en" data-itt-year="2002">
 <head>
 <meta charset="utf-8">
-<title>Google News — BETA</title>
+<title>Google News BETA leftover — Sep 2002</title>
 <link rel="stylesheet" href="../../../../css/period-2002.css">
-<style>
-.gn-tab { margin-right: 10px; font-size: 13px; cursor: pointer; color: #00c; text-decoration: underline; background:none; border:0; padding:0; font-family:Arial,sans-serif; }
-.gn-tab.active { font-weight: bold; color: #000; text-decoration: none; cursor: default; }
-.gn-panel { display: none; }
-.gn-panel.active { display: block; }
-</style>
 </head>
-<body bgcolor="#ffffff">
+<body bgcolor="#ffffff" text="#111" link="#003399" vlink="#551a8b">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="720" align="center" cellpadding="8" style="font-family:Arial,sans-serif;font-size:13px">
-<tr><td>
- <img src="../../../../assets/period/2002/googlenews/logo.gif" width="24" height="24" alt="">
- <b style="font-size:18px">Google News</b> <font color="#c00"><b>BETA</b></font>
- <p>Search and browse <b>4,000</b> continuously updated news sources. Stories are grouped automatically into clusters.</p>
- <p id="gn-tabs">
- <button type="button" class="gn-tab active" data-gn-tab="top">Top Stories</button>
- <button type="button" class="gn-tab" data-gn-tab="world">World</button>
- <button type="button" class="gn-tab" data-gn-tab="us">U.S.</button>
- <button type="button" class="gn-tab" data-gn-tab="biz">Business</button>
- <button type="button" class="gn-tab" data-gn-tab="tech">Sci/Tech</button>
- </p>
- <form data-google-search action="../google/search.html" method="get" style="margin:8px 0">
- <input name="q" size="40" placeholder="Search news…">
- <input type="submit" value="Search News" data-official-verb>
- </form>
- <hr>
- <div class="gn-panel active" data-gn-panel="top">
- <h3 style="margin-bottom:4px">Top Stories <font size="1" color="#666">(sample Sep 2002 era)</font></h3>
- <ul>
- <li><b>Israel ends siege of Arafat compound</b> — cluster of international wires</li>
- <li><b>UN–Iraq weapons inspectors talks</b> — diplomacy desk</li>
- <li><b>Ryder Cup / sports wires</b> — auto-clustered sports</li>
- <li><b>Cabinet reshuffles &amp; markets</b> — business/world mix</li>
- </ul>
- </div>
- <div class="gn-panel" data-gn-panel="world">
- <h3>World</h3>
- <ul>
- <li>Middle East compound siege ends — multi-source cluster</li>
- <li>European markets react to bank concerns</li>
- <li>Asia: cabinet reshuffles and regional politics</li>
- </ul>
- </div>
- <div class="gn-panel" data-gn-panel="us">
- <h3>U.S.</h3>
- <ul>
- <li>Airport security / box-cutter arrests still in news cycles</li>
- <li>Congress and campaign coverage</li>
- <li>Giuliani book / leadership commentary clusters</li>
- </ul>
- </div>
- <div class="gn-panel" data-gn-panel="biz">
- <h3>Business</h3>
- <ul>
- <li>German banks under pressure — market wires</li>
- <li>Tech spending still cautious post-bust</li>
- <li>Broadband providers restructure after Excite@Home</li>
- </ul>
- </div>
- <div class="gn-panel" data-gn-panel="tech">
- <h3>Sci/Tech</h3>
- <ul>
- <li>Google News BETA itself is the story</li>
- <li>P2P: KaZaA / Morpheus FastTrack chaos</li>
- <li>Mozilla 1.0 · Phoenix 0.1 · IE6 monopoly sleep</li>
- <li>Wired News all-CSS redesign (Oct)</li>
- </ul>
- </div>
- <p style="font-size:11px;color:#444">
- In 2002 Google News was not treating blogs as mainstream journalism sources.
- <a href="../google/index.html">← Google Web</a>
- </p>
-</td></tr>
-</table>
-<script>
-(function(){
- var tabs = document.querySelectorAll("[data-gn-tab]");
- var panels = document.querySelectorAll("[data-gn-panel]");
- for (var i = 0; i < tabs.length; i++) {
- tabs[i].addEventListener("click", function () {
- var id = this.getAttribute("data-gn-tab");
- for (var j = 0; j < tabs.length; j++) tabs[j].classList.remove("active");
- this.classList.add("active");
- for (var k = 0; k < panels.length; k++) {
- panels[k].classList.toggle("active", panels[k].getAttribute("data-gn-panel") === id);
- }
- });
- }
-})();
-</script>
+<p class="crumb"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About 2002</a></p>
+<img src="../../../../assets/period/2002/googlenews/logo.gif" border="0" alt="Google News"><h1>Google News leftover</h1><p>Sep 2002 beta. Clusters leftover. <b>No blogs</b> in the cluster this year.</p>
 <script src="../../../../js/immersion-2002.js"></script>
-
-
-<!-- ITT-POPULAR-PANEL:gnews:start -->
-<section class="itt-popular-panel" data-itt-popular="gnews" style="margin:12px 0;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:13px;max-width:46em"><b>Google News scan</b><p style="margin:6px 0;color:#444">Popular session · known destination · incomplete never writes</p><label style="display:block;margin:6px 0"><input type="checkbox" data-popular-req> Sep 2002 headlines</label><label style="display:block;margin:6px 0"><input type="checkbox" data-popular-req> Not a newspaper site</label><p><button type="button" data-itt-popular-save data-storage-key="gnews" data-min-req="2" data-requires="[data-popular-req]">Save popular session</button></p><p data-itt-real-status class="itt-popular-status" style="min-height:1.2em"></p><p style="font-size:11px;color:#555">key <code>itt02-gnews</code></p><p class="itt-popular-next" data-next-flow hidden><b>Next:</b> <a href="../stumbleupon/index.html">StumbleUpon</a></p></section>
-<!-- ITT-POPULAR-PANEL:gnews:end -->
-<!-- ITT-4X:gnews-lx:start -->
-<section class="itt-4x-panel itt-4x-product" data-4x-panel data-4x-kind="query" data-4x-min="2" style="margin:12px 0;padding:12px;border:1px solid #333;font-family:inherit;font-size:13px;max-width:46em;background:#fff">
-<h2 style="margin:0 0 8px;font-size:16px">Google News BETA leftover</h2>
-<p class="honest" style="margin:0 0 8px;font-size:12px">2002 product path · incomplete never writes · not the chip</p>
-<p><label>Google News BETA<br><input type="text" data-4x-field maxlength="80" autocomplete="off" placeholder="iraq"></label></p>
-<p><button type="button" data-4x-go="gnews-lx">Confirm</button> <span data-4x-status></span></p>
-<p hidden data-4x-result class="itt-4x-result" style="font-size:12px;color:#333"></p>
-<p hidden data-next-flow data-next-when-key="itt02-gnews-lx"><b>Next:</b> <a href="../../sites/daypop/index.html">Daypop</a></p>
-</section>
-<!-- ITT-4X:gnews-lx:end -->
 <!-- ITT-LO-OFFICIAL:start -->
 <section data-lo-panel="1" data-itt-year="2002" style="margin:12px auto;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
 <p><b>Leftover machine</b> · not the chip · incomplete never writes · <code>itt02-gnews</code></p>
@@ -124,41 +24,45 @@
  <button type="button" data-lo-save data-lo-key="gnews" data-lo-need-pick="h">Open leftover headline</button>
 </p>
 <p data-lo-status></p>
-<p hidden data-next-flow data-next-when-key="itt02-gnews"><b>Next:</b> <a href="../wikipedia/index.html">Wikipedia</a></p>
 </section>
 <!-- ITT-LO-OFFICIAL:end -->
-
-
 <!-- ITT-3X-ALSO:start -->
 <nav class="itt-3x-also" data-itt-3x-also data-itt-year="2002" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
  <a href="../../pages/home.html">Starting Point</a> ·
  <a href="../../pages/map.html">Year flow map</a> ·
- <a href="cluster.html">Google News · cluster</a> ·
- <a href="../loudcloud/index.html">Loudcloud</a> ·
- <a href="../macromedia/index.html">Macromedia Flash</a> ·
- <a href="../meetup/index.html">Meetup</a> ·
- <a href="../metafilter/index.html">MetaFilter</a> ·
- <a href="../microsoft/index.html">Microsoft</a> ·
- <a href="../moreover/index.html">Moreover</a> ·
- <a href="../movabletype/index.html">movabletype</a> ·
- <a href="../mozilla/index.html">mozilla.org</a> ·
- <a href="../msn/index.html">MSN.com 2002</a> ·
- <a href="../mtv/index.html">MTV.com</a> ·
- <a href="../napster/index.html">Napster</a> ·
- <a href="../netcenter/index.html">Netscape Netcenter</a> ·
+ <a href="about.html">Google News BETA leftover · about</a> ·
+ <a href="../lastfm/index.html">last.fm leftover seed</a> ·
+ <a href="../movabletype/index.html">Movable Type 2.x leftover</a> ·
+ <a href="../mozilla/index.html">Mozilla 1.0 leftover</a> ·
+ <a href="../mtv/index.html">MTV leftover</a> ·
  <a href="../netflix/index.html">Netflix</a> ·
- <a href="../netscape/index.html">Netscape</a> ·
- <a href="../paypal/index.html">PayPal</a> ·
- <a href="../pets/index.html">Pets.com</a> ·
- <a href="../phoenix/index.html">Phoenix 0.1</a> ·
- <a href="../playable/index.html">Room Sticky</a> ·
- <a href="../slashdot/index.html">slashdot</a> ·
- <a href="../somethingawful/index.html">Something Awful</a> ·
- <a href="../startupfailures/index.html">Startup Failures</a> ·
- <a href="../steam/index.html">Steam</a>
+ <a href="../phoenix/index.html">Phoenix 0.1 leftover</a> ·
+ <a href="../playable/index.html">2002 playable</a> ·
+ <a href="../stumbleupon/index.html">StumbleUpon</a> ·
+ <a href="../technorati/index.html">Technorati</a> ·
+ <a href="../wikipedia/index.html">Wikipedia leftover</a> ·
+ <a href="../wired/index.html">Wired News</a> ·
+ <a href="../xp/index.html">Windows XP leftover</a>
 </p>
 </nav>
 <!-- ITT-3X-ALSO:end -->
+
+<!-- ITT-POP3:googlenews:start -->
+<section class="itt-pop3" data-pop-panel="1" data-itt-year="2002" style="margin:12px 0;padding:12px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:13px;max-width:46em">
+<p><b>Also popular leftover (not the chip)</b> · googlenews leftover</p>
+<p class="honest" style="font-size:12px">2002 leftover · incomplete never writes · star stays Stumble</p>
+<p>
+ <button type="button" data-pop-pick="googlenews" data-pop-q="broadband">googlenews</button>
+ <button type="button" data-pop-pick="chip">This is Stumble gold (trap)</button>
+</p>
+<label><input type="checkbox" data-pop-req> Leftover. Star stays Stumble.</label>
+<p><input type="text" data-pop-field maxlength="40" placeholder="broadband"></p>
+<p><button type="button" data-pop-go data-pop-id="googlenews">Open leftover</button> <button type="button" data-pop-go data-pop-id="pop3-googlenews" data-pop-key="pop3-googlenews">Third leftover</button>
+ <span data-pop-status></span></p>
+<p hidden data-next-flow data-next-when-key="itt02-pop3-googlenews"><b>Next:</b>
+ <a href="../technorati/index.html">Technorati leftover</a></p>
+</section>
+<!-- ITT-POP3:googlenews:end -->
 
 </body>
 </html>

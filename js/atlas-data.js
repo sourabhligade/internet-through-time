@@ -8,8 +8,9 @@
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-    "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009",
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000",
+    "2001", "2002", "2003",
+    "2004", "2005", "2006", "2007", "2008", "2009",
     "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"
   ];
 
@@ -20,11 +21,11 @@
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
-      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, YouTube upload, Twttr 140, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
+      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, YouTube upload.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → filter → Vine.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
       { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+ Continue.", years: ["2014", "2015", "2016", "2017", "2018", "2019"] },
       { id: "late-lean", label: "Mute / Ask / Send / Plus / Talk", blurb: "Zoom mute, ATT Ask, ChatGPT Send, ChatGPT Plus, GPT-4o Talk lean doors.", years: ["2020", "2021", "2022", "2023", "2024"] },
-      { id: "wiped-late", label: "2025 boarded", blurb: "This room stays empty on purpose. R1 wiped for rebuild.", years: ["2025"] }
+      { id: "wiped-late", label: "2025 boarded", blurb: "2025 stays empty for rebuild.", years: ["2025"] }
     ],
 
     leanYears: [
@@ -40,9 +41,9 @@
       "1998": "Portals still win. Google is sparse.",
       "1999": "Buddy lists and P2P. Not modern chat.",
       "2000": "Peak and crash in one year. Pets.com is an epitaph.",
-      "2001": "Anyone can edit. No iTunes Store yet.",
-      "2002": "Stumble twice. Not mass Facebook.",
-      "2003": "MySpace + 99¢. Photobucket is the gold.",
+      "2001": "Anyone can edit. Preview is not Save. No Store.",
+      "2002": "Stumble. Always-on is still a minority. No Store. No MySpace.",
+      "2003": "Photobucket hotlink is the save. 99¢ leftover. Friendster still larger than MySpace.",
       "2004": "College network only. Not modern Facebook.",
       "2005": "YouTube upload is the save. Maps / Reddit / Digg leftover. Google does not own YouTube.",
       "2006": "140 because SMS. News Feed leftover. No iPhone.",
@@ -76,9 +77,9 @@
       "1998": "Yahoo is still fat. Google is almost nothing. Skipping the intro is the sport.",
       "1999": "The ding meant they were there. You signed on. You did not text.",
       "2000": "You typed from and to and printed the page. Some sites would not be here next year.",
-      "2001": "Anyone can edit. The page is ugly on purpose. There is no Store on iTunes yet.",
-      "2002": "You picked a topic and stumbled twice. Friendster is a seed, not Facebook.",
-      "2003": "You hotlinked a photo. Songs cost ninety-nine cents. Top 8 was diplomacy.",
+      "2001": "You edited an article. Preview was not Save. The library had no Store yet.",
+      "2002": "You picked a topic and stumbled. Always-on was still a minority. Firefox was not here yet.",
+      "2003": "You uploaded a photo to get a URL you could paste. Songs were 99¢. Friendster was still bigger.",
       "2004": "You needed a college. The wall was not a Feed. Gmail was an invite.",
       "2005": "You uploaded a clip. You dragged a map. You boosted a link. Google did not own YouTube yet.",
       "2006": "You typed 140 characters because SMS said so. There was no iPhone.",
@@ -300,10 +301,10 @@
       "2001": {
         era: "XP · IE 6 · Wiki · iPod",
         thesis: "Post-crash rebuild. Anyone can edit.",
-        gold: { label: "Wikipedia edit", href: "years/2001/sites/wikipedia/edit.html", key: "itt01-wiki-pages" },
+        gold: { label: "Wikipedia edit", href: "years/2001/sites/wikipedia/edit.html", key: "itt01-wiki" },
         guided: [
           { label: "iPod", href: "years/2001/sites/apple/ipod.html" },
-          { label: "iTunes (no Store)", href: "years/2001/sites/apple/itunes.html" }
+          { label: "iTunes (no Store)", href: "years/2001/sites/itunes/index.html" }
         ],
         game: { label: "Clickscape", href: "years/2001/sites/playable/game.html" }
       },
@@ -318,7 +319,8 @@
         game: { label: "Room Sticky", href: "years/2002/sites/playable/game.html" }
       },
       "2003": {
-        era: "MySpace · 99¢ Store",
+        wiped: false,
+        era: "Photobucket · 99¢ Store",
         thesis: "Social + paid music. Photobucket hotlink is the gold.",
         gold: { label: "Photobucket upload", href: "years/2003/sites/photobucket/index.html", key: "itt03-photobucket" },
         guided: [
@@ -733,7 +735,7 @@
       {
         id: "wiped-late",
         label: "2025 boarded",
-        blurb: "DeepSeek R1 stays wiped for rebuild. 2024 4o Talk is an open lean door.",
+        blurb: "DeepSeek R1 year stays wiped for rebuild.",
         steps: []
       }
     ]

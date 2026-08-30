@@ -7,6 +7,29 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/acnh/about.html",
+    "sites/amongus/about.html",
+    "sites/astro/about.html",
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
+    "sites/meet/about.html",
+    "sites/mixer/about.html",
+    "sites/hbomax/about.html",
+    "sites/quibi/about.html",
+    "sites/peacock/about.html",
+    "sites/clubhouse/about.html",
+    "sites/fleets/about.html",
+    "sites/teams/about.html",
+    "sites/ps5/about.html",
+    "sites/quest2/about.html",
+    "sites/shop/index.html",
+    "sites/zoombomb/index.html",
+    "sites/school20/index.html",
+    "sites/teamsschool/index.html",
+    "sites/playable/extra-f.html",
+    "sites/playable/extra-g.html",
+    "sites/playable/extra-h.html",
+    "sites/playable/extra-i.html",
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",
@@ -19,6 +42,7 @@
     "sites/tiktok/fyp.html",
     "sites/playable/index.html",
     "sites/playable/game.html",
+    "sites/playable/famous.html",
     "sites/playable/more-a.html",
     "sites/playable/more-b.html",
     "sites/playable/extra-a.html",
@@ -141,7 +165,8 @@
       underline: true,
       expireDays: 30,
       autoload: true,
-      modemDelay: 20
+      modemDelay: 20,
+      showDirbar: false
     },
     urlMap: urlMap,
     titleMap: {

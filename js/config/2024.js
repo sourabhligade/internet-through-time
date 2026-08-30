@@ -7,6 +7,22 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
+    "sites/store/about.html",
+    "sites/sora/about.html",
+    "sites/gemini/about.html",
+    "sites/claude35/about.html",
+    "sites/o1/about.html",
+    "sites/visionpro/about.html",
+    "sites/grok/about.html",
+    "sites/search/about.html",
+    "sites/recall/about.html",
+    "sites/notebooklm/about.html",
+    "sites/playable/extra-f.html",
+    "sites/playable/extra-g.html",
+    "sites/playable/extra-h.html",
+    "sites/playable/extra-i.html",
     "pages/home.html",
     "pages/about.html",
     "pages/map.html",
@@ -17,6 +33,15 @@
     "sites/chatgpt/plus.html",
     "sites/playable/index.html",
     "sites/playable/game.html",
+    "sites/playable/famous.html",
+    "sites/computeruse/index.html",
+    "sites/gen3/index.html",
+    "sites/llama31/index.html",
+    "sites/mini/index.html",
+    "sites/o1mini/index.html",
+    "sites/orion/index.html",
+    "sites/search/index.html",
+    "sites/voice/index.html",
     "sites/playable/more-a.html",
     "sites/playable/more-b.html",
     "sites/playable/extra-a.html",
@@ -139,7 +164,8 @@
       underline: true,
       expireDays: 30,
       autoload: true,
-      modemDelay: 20
+      modemDelay: 20,
+      showDirbar: false
     },
     urlMap: urlMap,
     titleMap: {

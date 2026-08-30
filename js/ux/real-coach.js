@@ -57,7 +57,7 @@
 
   function messageSuccess(year, key) {
     if (UX.Copy && UX.Copy.success) return UX.Copy.success(year, key);
-    return "Saved · " + key;
+    return "Saved in this browser.";
   }
 
   function pulseEl(el, ms) {

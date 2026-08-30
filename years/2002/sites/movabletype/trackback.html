@@ -1,88 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-itt-year="2002">
 <head>
 <meta charset="utf-8">
-<title>Movable Type — TrackBack</title>
+<title>TrackBack</title>
 <link rel="stylesheet" href="../../../../css/period-2002.css">
 </head>
-<body bgcolor="#ffffff">
+<body bgcolor="#fff" text="#111">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="640" align="center" cellpadding="12"><tr><td>
-<font face="Verdana,Arial" size="2">
-<p><img src="../../../../assets/period/2002/movabletype/logo.gif" width="24" height="24" alt="">
-<b>Movable Type · TrackBack</b> · Six Apart · 2002</p>
-<h1 style="font-size:16px">Peer-to-peer conversations between blogs</h1>
-<p>TrackBack (mid-2002) lets you send a <b>ping</b> when you link to another blog entry —
-like a remote comment. Bloggers called it “blog tennis.” Early UI often used a <b>popup</b> listing pings.</p>
-<div class="trackback-box">
- <b>TrackBack URL</b> (example)<br>
- <code class="trackback-url">http://example.org/mt-tb.cgi/42</code>
- <form data-trackback-form style="margin-top:8px">
- Your blog title<br><input name="title" size="50" value="My reply post"><br>
- Excerpt<br><textarea name="excerpt" rows="3" style="width:100%">I linked to your post about RSS 2.0…</textarea><br>
- <button type="submit">Send TrackBack ping</button>
- </form>
- <div data-trackback-status style="margin-top:8px;color:#060"></div>
- <div data-trackback-list class="trackback-body" style="margin-top:8px;font-size:11px"></div>
-</div>
-<p><a href="index.html">Movable Type home</a> · <a href="features.html">Features (v2.5)</a> ·
-<a href="../blogger/index.html">Blogger (still Pyra)</a></p>
-</font>
-</td></tr></table>
-<script>
-(function(){
- var form = document.querySelector("[data-trackback-form]");
- if (!form) return;
- var list = document.querySelector("[data-trackback-list]");
- var status = document.querySelector("[data-trackback-status]");
- var pings = [];
- form.addEventListener("submit", function(ev){
- ev.preventDefault();
- var title = form.title.value || "Untitled";
- var excerpt = form.excerpt.value || "";
- pings.unshift({ title: title, excerpt: excerpt, when: new Date().toLocaleString() });
- if (status) status.textContent = "Ping accepted (theater) — peer conversation logged locally.";
- if (list) {
- list.innerHTML = pings.map(function(p){
- return "<div class=\"trackback-post\" style=\"border-top:1px solid #ccc;padding:6px 0\"><b>" +
- p.title + "</b> <span style=\"color:#666\">" + p.when + "</span><br>" + p.excerpt + "</div>";
- }).join("");
- }
- });
-})();
-</script>
-<script src="../../../../js/config/immersion-2002.js"></script>
+<p class="crumb"><a href="../../pages/home.html">← Starting Point</a> · <a href="../../pages/about.html">About</a></p>
+<p class="itt-pixel-failed" data-itt-capture-cite style="font-size:11px">[failed-final] Period mark · CSS / wordmark only · no invented brand pixels</p>
+<h1>TrackBack</h1>
+<p>Movable Type <b>2.2</b> ships <b>26 Jun 2002</b>. Ping a permalink. RSS wars leftover. WordPress is 2003. Twitter is a trap.</p>
+<p hidden data-next-flow data-next-when-key="itt02-trackback"><b>Next:</b> <a href="../playable/game.html">Room Sticky leftover</a></p>
 <script src="../../../../js/immersion-2002.js"></script>
-
-
+<p><a href="about.html">TrackBack leftover about</a></p>
+<!-- ITT-LO-OFFICIAL:start -->
+<section data-lo-panel="1" data-itt-year="2002" style="margin:12px auto;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+<p><b>Leftover machine</b> · not the chip · incomplete never writes · <code>itt02-trackback</code></p>
+<label style="display:block"><input type="checkbox" data-lo-req> This is leftover, not the year star.</label>
+<label style="display:block"><input type="checkbox" data-lo-req> Trap / empty never writes.</label>
+<p>
+ <button type="button" data-lo-pick="ping">Ping leftover</button>
+ <button type="button" data-lo-pick="tw">Twitter (trap)</button>
+</p>
+<p><input data-lo-field placeholder="leftover ping" maxlength="80"></p>
+<p>
+ <button type="button" data-lo-trap>Twitter (trap)</button>
+ <button type="button" data-lo-save data-lo-key="trackback" data-lo-need-pick="ping">Send leftover ping</button>
+</p>
+<p data-lo-status></p>
+</section>
+<!-- ITT-LO-OFFICIAL:end -->
 <!-- ITT-3X-ALSO:start -->
 <nav class="itt-3x-also" data-itt-3x-also data-itt-year="2002" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
  <a href="../../pages/home.html">Starting Point</a> ·
  <a href="../../pages/map.html">Year flow map</a> ·
- <a href="download.html">movabletype · download</a> ·
- <a href="features.html">movabletype · features</a> ·
- <a href="../xanga/index.html">Xanga</a> ·
- <a href="../y2k/index.html">Y2K</a> ·
- <a href="../yahoo/index.html">Yahoo!</a> ·
- <a href="../youvegotmail/index.html">You've Got Mail</a> ·
- <a href="../zombo/index.html">Zombo.com</a> ·
- <a href="../about/index.html">About.com 2002</a> ·
- <a href="../altavista/index.html">AltaVista</a> ·
- <a href="../amazon/index.html">Amazon.com--Earth's Biggest Selection</a> ·
- <a href="../aol/index.html">AOL.com 2002</a> ·
- <a href="../apple/index.html">Apple Computer</a> ·
- <a href="../askjeeves/index.html">Ask Jeeves!</a> ·
- <a href="../bbc/index.html">BBC News 2002</a> ·
- <a href="../blogdex/index.html">( blogdex )</a> ·
- <a href="../blogger/index.html">blogger!</a> ·
- <a href="../blogspot/index.html">Blogspot</a> ·
- <a href="../bowienet/index.html">BowieNet</a> ·
- <a href="../cnn/index.html">CNN.com</a> ·
- <a href="../daypop/index.html">Daypop</a> ·
- <a href="../deviantart/index.html">DeviantArt</a> ·
- <a href="../dmoz/index.html">Open Directory Project (DMOZ)</a> ·
- <a href="../ebay/index.html">eBay</a> ·
- <a href="../encarta/index.html">Encarta vs Wikipedia</a>
+ <a href="about.html">Movable Type 2.x leftover · about</a> ·
+ <a href="../netflix/index.html">Netflix</a> ·
+ <a href="../phoenix/index.html">Phoenix 0.1 leftover</a> ·
+ <a href="../playable/index.html">2002 playable</a> ·
+ <a href="../stumbleupon/index.html">StumbleUpon</a> ·
+ <a href="../technorati/index.html">Technorati</a> ·
+ <a href="../wikipedia/index.html">Wikipedia leftover</a> ·
+ <a href="../wired/index.html">Wired News</a> ·
+ <a href="../xp/index.html">Windows XP leftover</a> ·
+ <a href="../yahoo/index.html">Yahoo leftover</a> ·
+ <a href="../amazon/index.html">Amazon smile leftover</a> ·
+ <a href="../blogger/index.html">Blogger leftover</a> ·
+ <a href="../blogspot/index.html">Blogspot leftover</a>
 </p>
 </nav>
 <!-- ITT-3X-ALSO:end -->

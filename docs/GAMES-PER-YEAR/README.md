@@ -38,6 +38,8 @@
 | 2020 | Sus Vote | Among Us–class vote (no sprites) | M | [YEAR-2020.md](YEAR-2020.md) |
 | 2021 | Five Letter | Wordle-class daily guess (no NYT art) | M | [YEAR-2021.md](YEAR-2021.md) · **research only** |
 
+**Two more full era games (every year 1994–2024):** [`../GAMES-FULL-MORE-EVERY-YEAR-DONE-MAP-2026-08-29.md`](../GAMES-FULL-MORE-EVERY-YEAR-DONE-MAP-2026-08-29.md) (what shipped · how to test) · [`../GAMES-FULL-MORE-EVERY-YEAR-RESEARCH-2026-08-29.md`](../GAMES-FULL-MORE-EVERY-YEAR-RESEARCH-2026-08-29.md) (picks) · [`../GAMES-FULL-MORE-EVERY-YEAR-VISITED-2026-08-29.md`](../GAMES-FULL-MORE-EVERY-YEAR-VISITED-2026-08-29.md) (opened pages) · `more-c.html` + `more-d.html` · `e2e/year-full-more.spec.js` · `e2e/year-full-more-play-all.spec.js` (62/62 real play)
+
 ## Shared integration (every year)
 
 ```

@@ -21,7 +21,8 @@ test.describe("3× popular websites — every on-disk year", () => {
         await page.goto(path);
         await page.evaluate((k) => localStorage.removeItem(k), key);
         await page.reload();
-        await page.locator("[data-pop-go]").click();
+        const go = page.locator("[data-pop-go]:not([data-pop-key])").first();
+        await go.click();
         expect(await page.evaluate((k) => localStorage.getItem(k), key), key).toBeFalsy();
         const picks = page.locator("[data-pop-pick]");
         if ((await picks.count()) > 0) await picks.first().click();
@@ -29,7 +30,7 @@ test.describe("3× popular websites — every on-disk year", () => {
         const n = await reqs.count();
         for (let i = 0; i < n; i++) await reqs.nth(i).check();
         await page.fill("[data-pop-field]", "museum residual");
-        await page.locator("[data-pop-go]").click();
+        await go.click();
         await expect.poll(async () => page.evaluate((k) => localStorage.getItem(k), key)).toMatch(/museum residual/);
       }
     });

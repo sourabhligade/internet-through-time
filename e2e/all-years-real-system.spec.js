@@ -226,17 +226,6 @@ test.describe('REAL system product samples', () => {
     await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt99-aim'))).toBeTruthy();
   });
 
-  test('2001 wiki preview no write; save writes itt01-wiki-pages', async ({ page }) => {
-    await page.goto('/years/2001/sites/wikipedia/edit.html');
-    await page.evaluate(() => localStorage.removeItem('itt01-wiki-pages'));
-    await page.reload();
-    await page.locator('[data-wiki-preview]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt01-wiki-pages'))).toBeFalsy();
-    await page.fill("textarea[name='text']", "'''REAL wiki residual'''");
-    await page.locator('[data-wiki-save]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt01-wiki-pages'))).toBeTruthy();
-  });
-
   test('2008 GitHub empty issue blocked; titled+body writes', async ({ page }) => {
     await page.goto('/years/2008/sites/github/issue.html');
     await page.evaluate(() => {

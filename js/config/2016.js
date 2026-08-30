@@ -8,6 +8,17 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/alphago/about.html",
+    "sites/assistant/about.html",
+    "sites/dyn/about.html",
+    "sites/e2eabout/about.html",
+    "sites/fblive/about.html",
+    "sites/houseparty/about.html",
+    "sites/inbox/about.html",
+    "sites/iphone/about.html",
+    "sites/iphone7about/about.html",
+    "sites/jio/about.html",
+    "sites/linkedinms/about.html",
     "sites/smario/index.html",
     "sites/assistant/index.html",
     "sites/houseparty/index.html",
@@ -73,6 +84,8 @@
     "sites/playable/game-2.html",
     "sites/playable/extra-b.html",
     "sites/playable/extra-a.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
     "sites/playable/famous.html",
     "sites/playable/index.html"
   ];
@@ -113,7 +126,7 @@
       homePath: "pages/home.html",
       showToolbar: true,
       showLocation: true,
-      showDirbar: true,
+      showDirbar: false,
       showDesktopIcons: true,
       desktopBg: "#0078d7"
     },

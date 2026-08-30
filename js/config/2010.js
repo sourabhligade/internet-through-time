@@ -8,6 +8,8 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
     "sites/playable/extra-i.html",
     "sites/playable/extra-h.html",
     "sites/playable/extra-g.html",
@@ -31,6 +33,8 @@
     "sites/hulustream/index.html",
     "sites/dropbox/index.html",
     "sites/playable/extra-e.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
     "sites/playable/extra-d.html",
     "sites/playable/extra-c.html",
     "sites/groupondeal/index.html",

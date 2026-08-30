@@ -863,3 +863,30 @@ pre.lobby,
     transition: none;
   }
 }
+
+/* Full-more dests: keep the toy on screen inside the short year-shell iframe */
+body:has([data-full-more]) #itt-layer-legend,
+body:has([data-full-more]) #itt-wayfind,
+body:has([data-full-more]) #itt-ux-room-chip {
+  display: none !important;
+}
+body:has([data-full-more]) #itt-nav-slot {
+  max-height: 42px;
+  overflow: hidden;
+}
+[data-year-game][data-full-more] [data-yg-chrome-bar],
+[data-year-game][data-full-more] [data-yg-goal-line],
+[data-year-game][data-full-more] [data-yg-how-overlay],
+[data-year-game][data-full-more] .yg-chrome {
+  display: none !important;
+}
+[data-full-play] {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background: #f2f2f2;
+  padding: 6px 0 8px;
+}
+[data-year-game][data-full-more] canvas {
+  margin-top: 6px !important;
+}

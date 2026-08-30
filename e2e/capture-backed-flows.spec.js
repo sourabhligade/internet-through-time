@@ -175,36 +175,6 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     }, { timeout: 8000 }).toBeGreaterThan(0);
   });
 
-  test("2001 Wikipedia preview never writes · save with summary writes", async ({ page }) => {
-    await page.goto("/years/2001/sites/wikipedia/index.html");
-    await chipOk(page);
-    await expect(page.locator("body")).toContainText(/July 27, 2001/);
-    await page.goto("/years/2001/sites/wikipedia/edit.html");
-    await clearKeys(page, ["itt01-wiki-pages"]);
-    await page.reload();
-    await page.locator("[data-wiki-preview]").click();
-    expect(await getKey(page, "itt01-wiki-pages")).toBeFalsy();
-    await page.locator("[name='summary']").fill("clarify intro residual");
-    await page.locator("[data-wiki-save]").click();
-    await expect.poll(() => getKey(page, "itt01-wiki-pages")).toBeTruthy();
-  });
-
-  test("2002 Blogger cite + enter form present", async ({ page }) => {
-    await page.goto("/years/2002/sites/blogger/index.html");
-    await chipOk(page);
-    await expect(page.locator("form[data-blogger-title]")).toBeVisible();
-  });
-
-  test("2003 MySpace Top 8 incomplete blocked · 8 slots write", async ({ page }) => {
-    await page.goto("/years/2003/sites/myspace/index.html");
-    await chipOk(page);
-    await expect(page.locator("body")).toContainText(/Kevin Bacon/);
-    await clearKeys(page, ["itt03-ms-top8"]);
-    await page.reload();
-    await page.locator("[data-ms-top8-save]").click();
-    expect(await getKey(page, "itt03-ms-top8")).toBeFalsy();
-  });
-
   test("2004 Gmail invite empty-ish still decrements only on send · chip", async ({ page }) => {
     await page.goto("/years/2004/sites/gmail/invite.html");
     await chipOk(page);

@@ -8,6 +8,13 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/adblock/about.html",
+    "sites/agario/about.html",
+    "sites/amppage/about.html",
+    "sites/apple/about.html",
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
+    "sites/peach/index.html",
     "sites/waweb/index.html",
     "sites/titleii/index.html",
     "sites/swiftoss/index.html",
@@ -37,6 +44,8 @@
     "sites/adblock/index.html",
     "sites/amppage/index.html",
     "sites/playable/extra-e.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
     "sites/playable/extra-d.html",
     "sites/playable/extra-c.html",
     "sites/meerkatlive/index.html",
@@ -119,7 +128,7 @@
       homePath: "pages/home.html",
       showToolbar: true,
       showLocation: true,
-      showDirbar: true,
+      showDirbar: false,
       showDesktopIcons: true,
       desktopBg: "#1b2838"
     },
@@ -146,6 +155,7 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2015/",
     locationHints: [
+      { re: /peach/i, path: "sites/peach/index.html" },
       { re: /whatsapp.?web|web\.whatsapp/i, path: "sites/waweb/index.html" },
       { re: /title.?ii|open.?internet|net.?neutrality/i, path: "sites/titleii/index.html" },
       { re: /swift/i, path: "sites/swiftoss/index.html" },

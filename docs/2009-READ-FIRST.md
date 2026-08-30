@@ -1,7 +1,7 @@
 # 2009 — READ FIRST
 
 **Date:** 2026-08-21  
-**Status:** From-scratch lean rebuild. `years/2009/` was **wiped**. Do not restore the old forest.  
+**Status:** **lean door on disk** (~47 HTML). Facebook Like is the star. **Do not** restore the old forest.  
 **Implementer map:** [`2009-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2009-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Older research (tree status stale):** [`2009-RESEARCH.md`](2009-RESEARCH.md) · [`2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
 **Prefix:** `itt09-*`  

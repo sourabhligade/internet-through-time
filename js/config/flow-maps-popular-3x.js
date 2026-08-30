@@ -13,10 +13,7 @@
     "1998": ["go|GO.com", "snap|Snap", "about|About"],
     "1999": ["livejournal|LiveJournal", "neopets|Neopets", "egroups|eGroups"],
     "2000": ["half|Half.com", "baidu|Baidu", "everything2|Everything2"],
-    "2001": ["bittorrent|BitTorrent", "itunes|iTunes", "morpheus|Morpheus"],
-    "2002": ["meetup|Meetup", "fotolog|Fotolog", "typepad|TypePad"],
-    "2003": ["4chan|4chan", "hi5|hi5", "newgrounds|Newgrounds"],
-    "2004": ["piczo|Piczo", "tagged|Tagged", "odeo|Odeo"],
+                "2004": ["piczo|Piczo", "tagged|Tagged", "odeo|Odeo"],
     "2005": ["dailymotion|Dailymotion", "vimeo|Vimeo", "gaia|Gaia"],
     "2006": ["bebo|Bebo", "slideshare|SlideShare", "newsvine|Newsvine"],
     "2008": ["stackoverflow|Stack Overflow", "posterous|Posterous", "grooveshark|Grooveshark"],
@@ -32,6 +29,10 @@
     "2018": ["reddit|Reddit leftover", "youtube|YouTube leftover", "wikipedia|Wikipedia leftover"],
     "2019": ["youtube|YouTube leftover", "instagram|Instagram leftover", "wikipedia|Wikipedia leftover"],
     "2021": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
+    "2007": ["tumblr|Tumblr", "kindle|Kindle", "hulu|Hulu"],
+    "2020": ["meet|Google Meet", "hbomax|HBO Max", "quibi|Quibi"],
+    "2023": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
+    "2024": ["store|GPT Store", "search|ChatGPT Search", "visionpro|Vision Pro"],
     "2022": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"]
   };
 

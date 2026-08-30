@@ -44,6 +44,8 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "sites/playable/more-c.html": "http://museum.local/years/2000/sites/playable/more-c.html",
+      "sites/playable/more-d.html": "http://museum.local/years/2000/sites/playable/more-d.html",
       "sites/playable/extra-e.html": "http://museum.local/years/2000/sites/playable/extra-e.html",
       "sites/playable/extra-f.html": "http://museum.local/years/2000/sites/playable/extra-f.html",
       "sites/playable/extra-g.html": "http://museum.local/years/2000/sites/playable/extra-g.html",
@@ -62,6 +64,8 @@
       "sites/napsterweb/index.html": "http://museum.local/years/2000/sites/napsterweb/index.html",
       "sites/playable/extra-a.html": "http://museum.local/years/2000/sites/playable/extra-a.html",
       "sites/playable/extra-b.html": "http://museum.local/years/2000/sites/playable/extra-b.html",
+      "sites/playable/more-a.html": "http://museum.local/years/2000/sites/playable/more-a.html",
+      "sites/playable/more-b.html": "http://museum.local/years/2000/sites/playable/more-b.html",
       "sites/baidu/index.html": "http://museum.local/years/2000/sites/baidu/index.html",
       "sites/everything2/index.html": "http://museum.local/years/2000/sites/everything2/index.html",
       "sites/playable/famous.html": "http://museum.local/years/2000/sites/playable/famous.html",

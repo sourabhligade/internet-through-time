@@ -48,6 +48,8 @@
       connectBusyChance: 0
     },
     urlMap: {
+      "sites/playable/more-c.html": "http://museum.local/years/2005/sites/playable/more-c.html",
+      "sites/playable/more-d.html": "http://museum.local/years/2005/sites/playable/more-d.html",
       "sites/googletalk/index.html": "http://museum.local/years/2005/sites/googletalk/index.html",
       "sites/analytics/index.html": "http://museum.local/years/2005/sites/analytics/index.html",
       "sites/reader/index.html": "http://museum.local/years/2005/sites/reader/index.html",
@@ -131,6 +133,8 @@
       "sites/kayakplus/index.html": "http://museum.local/years/2005/sites/kayakplus/index.html",
       "sites/playable/extra-a.html": "http://museum.local/years/2005/sites/playable/extra-a.html",
       "sites/playable/extra-b.html": "http://museum.local/years/2005/sites/playable/extra-b.html",
+      "sites/playable/more-a.html": "http://museum.local/years/2005/sites/playable/more-a.html",
+      "sites/playable/more-b.html": "http://museum.local/years/2005/sites/playable/more-b.html",
       "sites/dailymotion/index.html": "http://museum.local/years/2005/sites/dailymotion/index.html",
       "sites/gaia/index.html": "http://museum.local/years/2005/sites/gaia/index.html",
       "sites/vimeo/index.html": "http://museum.local/years/2005/sites/vimeo/index.html",

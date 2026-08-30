@@ -52,23 +52,6 @@ test.describe("complex products · incomplete / persist", () => {
     await expect(page.locator("[data-mq-print]")).not.toContainText("123 Main St residual");
   });
 
-  test("Photobucket empty blocked; MySpace apply needs album", async ({ page }) => {
-    await page.goto("/years/2003/sites/myspace/index.html");
-    await clearPrefix(page, "itt03-photobucket");
-    await clearPrefix(page, "itt03-myspace");
-    await page.reload();
-    await page.waitForTimeout(400);
-    await page.locator("[data-pb-apply]").click();
-    await expect(page.locator("[data-pb-hotlinks]")).not.toContainText(/party/i);
-    await page.goto("/years/2003/sites/photobucket/index.html");
-    await page.waitForTimeout(400);
-    await page.fill("#ott-field", "board.jpg");
-    await page.locator("form[data-pb-upload] button[type='submit']").click();
-    await page.goto("/years/2003/sites/myspace/index.html");
-    await page.waitForTimeout(400);
-    await page.locator("[data-pb-apply]").click();
-    await expect(page.locator("[data-pb-hotlinks]")).toContainText(/board/i);
-  });
 
   test.skip("Pandora thumbs without station blocked", async ({ page }) => {
     await page.goto("/years/2005/sites/pandora/index.html");

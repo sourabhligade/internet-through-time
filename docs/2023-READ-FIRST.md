@@ -6,7 +6,7 @@
 **This pass:** densify (named). Same leftover job as 2021/2022.  
 **Map:** [`2023-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2023-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Deepen:** [`2023-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md`](2023-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md)  
-**Parent:** 2022 ChatGPT Send. **Child:** 2024 GPT-4o / Sora — still wiped.  
+**Parent:** 2022 ChatGPT Send. **Child:** 2024 GPT-4o lean door is live. **2025 stays boarded.**  
 **Git only if asked.**
 
 ## One line

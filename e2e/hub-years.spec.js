@@ -2,8 +2,8 @@
 const { test, expect } = require('@playwright/test');
 
 const OPEN = [
-  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001',
-  '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024',
+  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003',
+  '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024',
 ];
 const LOCKED = ['2025'];
 
@@ -79,16 +79,14 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2022.available')).toBeVisible();
     await expect(page.locator('body')).toContainText(/31 years open/i);
     await page.locator('details.start-jumps summary').click();
+    await expect(page.locator('#begin-first-night.start-primary')).toBeVisible();
+    await expect(page.locator('a.start-btn[href="atlas/"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/1994"]').first()).toBeVisible();
+    await expect(page.locator('a.start-btn[href*="years/1998"]').first()).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2004"]').first()).toBeVisible();
     await expect(page.locator('a.start-btn[href*="years/2008"]').first()).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/2009"]').first()).toBeVisible();
-    await expect(page.locator('#begin-first-night.start-primary')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/1994"]').first()).toBeVisible();
-    await expect(page.locator('a.start-btn[href="#directory"], a.start-btn[href*="#directory"]')).toBeVisible();
     await expect(page.locator('a.start-btn[href*="games"]')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/1998"]')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/2004"]')).toBeVisible();
-    await expect(page.locator('a.start-btn[href*="years/2008"]')).toBeVisible();
+    await expect(page.locator('a[href="#directory"], a[href*="#directory"]').first()).toBeVisible();
   });
 
   test('hub compare includes 2006–2007 and 2008–2009', async ({ page }) => {

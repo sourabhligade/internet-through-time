@@ -5,8 +5,8 @@
 const { test, expect } = require("@playwright/test");
 
 const OPEN = [
-  "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
-  "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009",
+  "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
+  "2004", "2005", "2006", "2007", "2008", "2009",
   "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024",
 ];
 const WIPED = ["2025"];
@@ -38,7 +38,7 @@ test.describe("museum atlas", () => {
     await expect(page.locator("a[href='../index.html']").first()).toBeVisible();
   });
 
-  test("hallway has seven wings, 31 open years and boarded ticks", async ({ page }) => {
+  test("hallway has seven wings, 28 open years and boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator("h1")).toContainText(/whole museum/i);
     await expect(page.locator(".lede")).toContainText(/2019/);

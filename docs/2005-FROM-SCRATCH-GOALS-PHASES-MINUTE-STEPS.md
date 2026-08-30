@@ -1,7 +1,7 @@
 # 2005 — From scratch: goals · phases · minute steps
 
 **Date:** 2026-08-26  
-**Status:** **research freeze.** `years/2005/` is wiped. Do **not** execute S1+ until the user says **implement**.  
+**Status:** **on disk.** Full-year door. `years/2005/` is **LIVE**. Star `itt05-yt-uploads`. Do **not** `git checkout` an old forest.  
 **Prefix:** `itt05`  
 **Do not** `git checkout` the old tree. Do **not** `cp -R years/2004` over a new tree.  
 **Git only if asked.**

@@ -25,9 +25,9 @@ const ROOT = path.join(__dirname, "..");
 const WANT_JSON = process.argv.includes("--json");
 const WANT_MD = process.argv.includes("--md");
 
-const WIPED = new Set(["2014"]);
+const WIPED = new Set(["2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2019; y++) {
+for (let y = 1994; y <= 2024; y++) {
   if (!WIPED.has(String(y))) YEARS.push(String(y));
 }
 
@@ -52,11 +52,17 @@ const STARS = {
   2011: { name: "Google+", href: "sites/googleplus/index.html", key: "itt11-gplus" },
   2012: { name: "Instagram Android", href: "sites/instagram/android.html", key: "itt12-ig-android" },
   2013: { name: "Vine 6s", href: "sites/vine/record.html", key: "itt13-vine-posts" },
+  2014: { name: "WhatsApp Install", href: "sites/whatsapp/index.html", key: "itt14-wa-install" },
   2015: { name: "Periscope Go LIVE", href: "sites/periscope/index.html", key: "itt15-periscope" },
   2016: { name: "Instagram Stories", href: "sites/instagram/stories.html", key: "itt16-ig-stories" },
   2017: { name: "Face ID / iPhone X", href: "sites/iphone/x.html", key: "itt17-faceid" },
   2018: { name: "GDPR Manage", href: "sites/gdpr/index.html", key: "itt18-gdpr" },
   2019: { name: "Disney+ Continue", href: "sites/disneyplus/home.html", key: "itt19-disneyplus" },
+  2020: { name: "Zoom mute → leave", href: "sites/zoom/meeting.html", key: "itt20-zoom" },
+  2021: { name: "ATT Ask", href: "sites/att/index.html", key: "itt21-att" },
+  2022: { name: "ChatGPT Send", href: "sites/chatgpt/index.html", key: "itt22-chatgpt" },
+  2023: { name: "ChatGPT Plus", href: "sites/plus/index.html", key: "itt23-plus" },
+  2024: { name: "GPT-4o Talk", href: "sites/chatgpt/4o.html", key: "itt24-gpt4o" },
 };
 
 const PRODUCT_HOOK = new RegExp(

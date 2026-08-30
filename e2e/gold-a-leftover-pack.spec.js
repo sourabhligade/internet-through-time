@@ -18,9 +18,6 @@ const GOLD = [
   { year: "1998", writer: "sites/google/lucky.html", key: "itt98-lucky", nextNeedle: "amazon/music", chipHref: "sites/google/lucky.html" },
   { year: "1999", writer: "sites/aim/index.html", key: "itt99-aim", nextNeedle: "napster", chipHref: "sites/aim/index.html" },
   { year: "2000", writer: "sites/mapquest/index.html", key: "itt00-mapquest", nextNeedle: "amazon", chipHref: "sites/mapquest/index.html" },
-  { year: "2001", writer: "sites/msn/index.html", key: "itt01-msn", nextNeedle: "wikipedia", chipHref: "sites/msn/index.html" },
-  { year: "2002", writer: "sites/stumbleupon/index.html", key: "itt02-stumble", nextNeedle: "friendster", chipHref: "sites/stumbleupon/index.html" },
-  { year: "2003", writer: "sites/photobucket/index.html", key: "itt03-photobucket-album", nextNeedle: "myspace", chipHref: "sites/photobucket/index.html" },
   { year: "2004", writer: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", nextNeedle: "friends", chipHref: "sites/facebook/networks.html" },
   { year: "2005", writer: "sites/youtube/upload.html", key: "itt05-yt-did-upload", nextNeedle: "maps", chipHref: "sites/youtube/upload.html" },
   { year: "2008", writer: "sites/github/issue.html", key: "itt08-github", nextNeedle: "appstore", chipHref: "sites/github/issue.html" },
@@ -48,7 +45,7 @@ test.describe("Gold-A leftover · home chip + writer + next dest live", () => {
       expect(fs.existsSync(yearFile(g.year, g.writer)), g.writer).toBe(true);
 
       await page.goto(`/years/${g.year}/pages/home.html`);
-      await expect(page.locator(`[data-ott-one-thing="${g.year}"]`)).toBeVisible();
+      await expect(page.locator(".itt-year-star [data-ott-one-thing]")).toBeVisible();
       await expect(page.locator(`#ott-guided-${g.year} ol > li`)).toHaveCount(6);
       const painted = await page.content();
       expect(painted).toMatch(new RegExp(g.chipHref.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));

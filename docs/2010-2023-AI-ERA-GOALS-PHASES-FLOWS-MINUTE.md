@@ -6,7 +6,7 @@
 **Implement walk:** [`2010-2023-AI-ERA-RESEARCH-CORPUS-EVERY-FLOW-MINUTE.md`](2010-2023-AI-ERA-RESEARCH-CORPUS-EVERY-FLOW-MINUTE.md) + every file in [`ai-era-flows/`](ai-era-flows/).  
 **Parent freeze:** [`2010-2023-AI-ERA-MISSING-3X-RESEARCH-2026-08-24.md`](2010-2023-AI-ERA-MISSING-3X-RESEARCH-2026-08-24.md)  
 **2023 lock:** [`2023-READ-FIRST.md`](2023-READ-FIRST.md)  
-**Status:** implement **one named year**. Do not scaffold 2023 until **implement 2023**. Git only if asked.
+**Status:** scoreboard only. 2023 lean door is **on disk**. 3× densify = [`2010-2023-AI-ERA-3X-GAP-RESEARCH-VISITED-2026-08-30.md`](2010-2023-AI-ERA-3X-GAP-RESEARCH-VISITED-2026-08-30.md). Implement only when you name a year + CUT-3X-AI. Git only if asked.
 
 ---
 

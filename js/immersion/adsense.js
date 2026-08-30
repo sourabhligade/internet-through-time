@@ -63,7 +63,12 @@
 
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      var site = (form.querySelector('[name="site"]') || {}).value || "http://example.com";
+      var site = ((form.querySelector('[name="site"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
+      var stEmpty = doc.querySelector("[data-adsense-status]");
+      if (!site) {
+        if (stEmpty) stEmpty.textContent = "Site URL required. Empty apply never writes.";
+        return;
+      }
       var rec = { site: site, ts: Date.now() };
       localStorage.setItem(storageKey(), JSON.stringify(rec));
       var code = doc.querySelector("[data-adsense-code]");

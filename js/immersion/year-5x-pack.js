@@ -96,6 +96,19 @@
     } else {
       fallbackBootChecks(panel, spec, year);
     }
+    var traps = panel.querySelectorAll("[data-5x-trap]");
+    var stEl = panel.querySelector("[data-5x-status]");
+    var t;
+    for (t = 0; t < traps.length; t++) {
+      if (traps[t].getAttribute("data-5x-trap-bound") === "1") continue;
+      traps[t].setAttribute("data-5x-trap-bound", "1");
+      traps[t].addEventListener("click", function () {
+        if (stEl) {
+          stEl.textContent = "Trap. That click never writes.";
+          stEl.style.color = "#a00";
+        }
+      });
+    }
     revealPanelNext(panel, year, suffix);
     var saveBtn = panel.querySelector("[data-5x-save]");
     if (saveBtn) {

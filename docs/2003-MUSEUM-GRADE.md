@@ -1,7 +1,9 @@
 # 2003 — Museum grade status
 
+> **2026-08-30:** Tree is **wiped**. This file is July archive. Wins: [`2003-READ-FIRST.md`](2003-READ-FIRST.md).
+
 **Date:** 2026-07-29  
-**Status:** **Museum-ready** · was: **100% museum complete** (content densify · M5/TO-100 WA signatures · accepted-final residuals · Flash culture) · hub **unlocked**  
+**Status (July archive):** **Museum-ready** · was: **100% museum complete** (content densify · M5/TO-100 WA signatures · accepted-final residuals · Flash culture) · hub **unlocked**  
 
 **Elevate pass 2026-08-02:** aligned to [`MUSEUM-READY-BAR-1994-2012.md`](MUSEUM-READY-BAR-1994-2012.md).
 **Disk:** `years/2003/` **live** · **58** site rooms · `assets/period/2003/` period files · urlMap **complete** · **LinkedIn WA** closed

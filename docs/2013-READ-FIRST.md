@@ -1,7 +1,7 @@
 # 2013 — READ FIRST
 
 **Date:** 2026-08-21  
-**Status:** From-scratch lean rebuild. `years/2013/` was **wiped**. Do not restore the old forest.  
+**Status:** **lean door on disk** (~68 HTML). Star Vine 6s `itt13-vine-posts`. Do **not** restore the old forest.  
 **Implementer map:** [`2013-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2013-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Prefix:** `itt13-*`  
 **Official 10 keys already live in `flow-trails.js` — dest paths must match.**  

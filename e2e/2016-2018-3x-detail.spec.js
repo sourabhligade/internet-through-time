@@ -87,11 +87,11 @@ for (const y of YEARS) {
     test(`home still 6 guided · star unchanged · 3× linked`, async ({ page }) => {
       await page.goto(`/years/${y.year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${y.year} ol > li`)).toHaveCount(6);
-      await expect(page.locator(`[data-ott-one-thing="${y.year}"]`)).toHaveCount(1);
-      const pop = page.locator(`[data-itt-pop3x="${y.year}"]`);
+      await expect(page.locator(".itt-year-star [data-ott-one-thing]")).toHaveCount(1);
+      const pop = page.locator(`[data-itt-pop3x="${y.year}"]`).first();
       await expect(pop).toBeVisible();
       for (const room of y.rooms) {
-        await expect(pop.locator(`a[href*="${room.id}"]`)).toBeVisible();
+        await expect(page.locator(`[data-itt-pop3x="${y.year}"] a[href*="${room.id}"]`).first()).toBeVisible();
       }
     });
   });

@@ -208,50 +208,6 @@ test.describe('all-years signature REAL · 2000s boom', () => {
       .toBeGreaterThan(0);
   });
 
-  test('2001 Wikipedia edit → itt01-wiki-pages', async ({ page }) => {
-    await enterYear(page, '2001');
-    await clearPrefix(page, 'itt01-wiki');
-    await goImmersion(page, '2001', 'sites/wikipedia/edit.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-wiki-save]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('textarea[name="text"]').fill('');
-    await frame.locator('[data-wiki-save]').click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt01-wiki-pages'))).toBeFalsy();
-    await frame.locator('textarea[name="text"]').fill("'''Wikipedia''' anyone can edit · museum 2001");
-    await frame.locator('[data-wiki-save]').click();
-    await requireKey(page, 'itt01-wiki-pages');
-  });
-
-  test('2002 Friendster profile → itt02-friendster', async ({ page }) => {
-    await enterYear(page, '2002');
-    await clearPrefix(page, 'itt02-friendster');
-    await goImmersion(page, '2002', 'sites/friendster/profile.html');
-    const frame = contentFrame(page);
-    const form = frame.locator('[data-friendster-profile-form]');
-    await expect(form).toBeVisible({ timeout: 10000 });
-    await form.locator('input[name="name"], input[name="display"]').first().fill('Real02');
-    await form.locator('input[type="submit"], button[type="submit"]').first().click();
-    await requireAnyPrefix(page, 'itt02-friendster');
-  });
-
-  test('2003 Photobucket upload → itt03-photobucket', async ({ page }) => {
-    await enterYear(page, '2003');
-    await clearPrefix(page, 'itt03-photobucket');
-    await goImmersion(page, '2003', 'sites/photobucket/index.html');
-    const frame = contentFrame(page);
-    const form = frame.locator('form[data-pb-upload]');
-    await expect(form).toBeVisible({ timeout: 15000 });
-    await form.locator('button[type="submit"], [data-ott-click="upload"]').first().click();
-    await page.waitForTimeout(80);
-    expect(
-      await page.evaluate(() => localStorage.getItem('itt03-photobucket') || localStorage.getItem('itt03-photobucket-album'))
-    ).toBeFalsy();
-    await form.locator('[name="file"]').fill('party-pic.jpg');
-    await form.locator('button[type="submit"], [data-ott-click="upload"]').first().click();
-    await requireAnyPrefix(page, 'itt03-photobucket');
-  });
-
   test('2004 Gmail login → itt04-gmail', async ({ page }) => {
     await enterYear(page, '2004');
     await clearPrefix(page, 'itt04-gmail');

@@ -856,7 +856,9 @@
       var host = document.querySelector("[data-year-game]");
       if (host) {
         a11yHost(host);
-        installChrome(host);
+        /* Full-more dests are short toys in a short iframe — bulky How/Pause
+           chrome pushes the canvas below the fold and looks “dead”. */
+        if (!host.hasAttribute("data-full-more")) installChrome(host);
         focusHost();
       }
     } catch (eUi) { /* */ }

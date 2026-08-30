@@ -4,7 +4,7 @@
 **This file is the mid harvest.** The implement walk is [`2010-2023-AI-ERA-RESEARCH-CORPUS-EVERY-FLOW-MINUTE.md`](2010-2023-AI-ERA-RESEARCH-CORPUS-EVERY-FLOW-MINUTE.md) + [`ai-era-flows/`](ai-era-flows/) (every dest, every year, 3× leftover 27). The short scoreboard is index-only.
 **Parent freeze:** [`2010-2023-AI-ERA-MISSING-3X-RESEARCH-2026-08-24.md`](2010-2023-AI-ERA-MISSING-3X-RESEARCH-2026-08-24.md)  
 **2023 lock:** [`2023-READ-FIRST.md`](2023-READ-FIRST.md)  
-**Status:** implement **one named year**. Do not scaffold 2023 until **implement 2023**. Git only if asked.
+**Status:** **STALE.** Use [`2010-2023-AI-ERA-GOALS-PHASES-FLOWS-MINUTE-EVERY-DEST-2026-08-30.md`](2010-2023-AI-ERA-GOALS-PHASES-FLOWS-MINUTE-EVERY-DEST-2026-08-30.md). 2023 is live. Implement only when you name YYYY + CUT-3X-AI.
 
 Selectors below were harvested from live `years/YYYY/**/*.html` on 2026-08-24. If a dest only has `[data-pop-go]` / `[data-4x-go]`, S8 must grow it into a year-true verb (not leave dest-field theater).
 
