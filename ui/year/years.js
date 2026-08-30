@@ -869,7 +869,7 @@
       },
       {
         "go": "sites/facebook/feed.html",
-        "label": "News Feed"
+        "label": "Facebook"
       },
       {
         "go": "sites/youtube/index.html",

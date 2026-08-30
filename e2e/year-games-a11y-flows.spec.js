@@ -128,6 +128,7 @@ async function runPrimaryFlow(page, frame, year) {
 test.describe('Year games — each flow + UI accessible', () => {
   for (const year of YEARS) {
     const conf = FLOW[year];
+    if (!conf) continue;
     test(`${year} ${conf.id}: a11y shell + primary flow`, async ({ page }) => {
       await enterYear(page, year);
       await killOverlays(page).catch(() => {});

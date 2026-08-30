@@ -59,7 +59,7 @@ function starKey(year) {
 }
 
 test("every live year has more-a and more-b", () => {
-  expect(YEARS.length, "live years with more-a").toBe(31);
+  expect(YEARS.length, "live years with more-a").toBe(27);
 });
 
 /**

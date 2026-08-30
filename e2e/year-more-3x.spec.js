@@ -5,7 +5,7 @@
  */
 const { test, expect } = require("@playwright/test");
 
-const WIPED = new Set(["2007", "2020", "2024", "2025"]);
+const WIPED = new Set(["2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"]);
 
 test.describe("3 more leftovers on home — every shipped year", () => {
   for (let y = 1994; y <= 2023; y++) {

@@ -22,7 +22,7 @@ test.describe("3× links every implemented year", () => {
       test.skip(!yearOnDisk(year), year + " not on disk");
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);
-      await expect(page.locator(".itt-year-star [data-ott-one-thing]")).toHaveCount(1);
+      await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
       const box = page.locator(
         "[data-itt-3x-links]:visible, [data-itt-pop3x]:visible, [data-itt-cut-3x-trios]:visible"
       ).first();

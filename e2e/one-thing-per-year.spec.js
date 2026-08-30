@@ -3,7 +3,10 @@
  * One-thing-per-year integration pack — incomplete no write · complete writes.
  * @see docs/ONE-THING-PER-YEAR-INTEGRATION-1994-2018.md
  */
+const fs = require("fs");
+const path = require("path");
 const { test, expect } = require("@playwright/test");
+const ROOT = path.join(__dirname, "..");
 
 /** @type {{ year: string, path: string, key: string, steps: (p: import('@playwright/test').Page) => Promise<void> }[]} */
 const THINGS = [
@@ -391,6 +394,7 @@ const THINGS = [
 test.describe("One-thing per year — load + REAL gate", () => {
   for (const t of THINGS) {
     test(`${t.year} loads and incomplete does not write ${t.key}`, async ({ page }) => {
+      test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);
       await page.reload();
@@ -407,6 +411,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
     });
 
     test(`${t.year} complete writes ${t.key}`, async ({ page }) => {
+      test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);
       await page.reload();
@@ -431,6 +436,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
       years.push(String(y));
     }
     for (const y of years) {
+      if (!fs.existsSync(path.join(ROOT, "years", y, "index.html"))) continue;
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y}`).first()).toBeVisible();

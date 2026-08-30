@@ -18,6 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
+  var WIPED = { "2009": 1, "2011": 1, "2020": 1, "2021": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -223,6 +224,7 @@
     var y;
     for (y = 1994; y <= 2024; y++) {
       var ys = String(y);
+      if (WIPED[ys]) continue;
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
       var tid = ys + "-start";
@@ -667,6 +669,7 @@
     var years = [];
     var y;
     for (y = 1994; y <= 2024; y++) {
+      if (WIPED[String(y)]) continue;
       years.push(String(y));
     }
     var total = totalStamps();

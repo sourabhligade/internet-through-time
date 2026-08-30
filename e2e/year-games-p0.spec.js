@@ -5,8 +5,13 @@
 const { test, expect } = require('@playwright/test');
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey } = require('./helpers');
 
+const fs = require('fs');
+const path = require('path');
 const YEARS = [];
-for (let y = 1994; y <= 2009; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2009; y++) {
+  const s = String(y);
+  if (fs.existsSync(path.join(__dirname, '..', 'years', s, 'index.html'))) YEARS.push(s);
+}
 
 const FEATURED = {
   1994: 'hotlist',

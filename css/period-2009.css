@@ -1,63 +1,11 @@
-/* 2009 CSS bridge — year tree wiped. 2010+ still imports this for Like / Bing / Win7 grammar. */
+/* 2009 document styles — XP residual · IE 8 · Win7 product · Like · FarmVille · Bing · 3GS
+   Year delta: @import period-2008 then 2009 product grammar. */
 @import url("period-2008.css");
 
 body.year-2009 .itt-year-chip {
   color: #0a246a;
   border-bottom-color: #6b9;
 }
-
-.h09, .ab-lean, .pop-lean { max-width: 720px; margin: 12px auto; font-family: Tahoma, Arial, sans-serif; font-size: 13px; }
-.lean-star { display: inline-block; padding: 5px 12px; background: #3b5998; color: #fff; border-radius: 14px; text-decoration: none; font-weight: bold; }
-.ott-guided { margin: 12px 0; padding: 14px; background: #3b5998; color: #fff; }
-.ott-guided ol { margin: 8px 0 0; padding-left: 1.3em; line-height: 1.7; }
-.ott-guided a { color: #d8dfea; }
-.itt-5x-trails { padding: 10px; background: #fff8e1; border: 1px solid #f9a825; }
-.lean-card { border: 2px solid #3b5998; }
-.itt-year-true-pack, .itt-pop3x, .itt-pop-more { font-size: 12px; margin: 10px 0; padding: 8px; border: 1px dashed #666; }
-.ab-scale { background: #fff8dc; border: 1px solid #cc0; padding: 8px; font-size: 12px; }
-.ab-bans { border-collapse: collapse; font-size: 12px; background: #fff; }
-.fb09 { max-width: 640px; margin: 0 auto; font-family: Tahoma, "Lucida Grande", Arial, sans-serif; font-size: 13px; background: #edeff4; padding: 0 0 20px; }
-.fb09-bar { background: #3b5998; color: #fff; padding: 8px 12px; font-weight: bold; }
-.fb09-wall { min-height: 64px; border: 1px solid #c3c6d0; padding: 10px; background: #fff; margin: 8px 0; }
-.fb09-story {
-  background: #fff;
-  border: 1px solid #c3c6d0;
-  padding: 10px 12px;
-  margin: 10px 0;
-}
-.fb09 [data-lk09-page] {
-  margin: 0 6px 8px 0;
-  padding: 6px 10px;
-  background: #eceff5;
-  border: 1px solid #94a3c4;
-  color: #3b5998;
-  cursor: pointer;
-  font-weight: bold;
-}
-.fb09 [data-lk09-like] {
-  background: #eceff5;
-  border: 1px solid #94a3c4;
-  color: #3b5998;
-  padding: 4px 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.fb09 [data-lk09-beacon] {
-  background: transparent;
-  border: 0;
-  color: #666;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.fv09 { max-width: 560px; margin: 16px auto; font-family: Arial, sans-serif; }
-.fv09-field { min-height: 80px; background: #8c4; border: 3px solid #680; padding: 10px; margin: 8px 0; }
-.bg09 { max-width: 560px; margin: 16px auto; font-family: Segoe UI, Arial, sans-serif; }
-.bg09-res { border: 1px solid #ccc; padding: 8px; margin-top: 8px; }
-.ip09 { max-width: 420px; margin: 16px auto; font-family: Helvetica, Arial, sans-serif; color: #eee; }
-.as09, .fq09, .ks09, .w709 { max-width: 520px; margin: 16px auto; font-family: Arial, sans-serif; font-size: 13px; }
-.tw09 { max-width: 520px; margin: 16px auto; font-family: Georgia, serif; }
-.tw09-logo { font-size: 28px; font-weight: bold; color: #33ccff; }
-.crumb { font-size: 12px; }
 
 /* Facebook Like era */
 .fb-like-btn,
@@ -146,25 +94,4 @@ body.year-2009 .itt-year-chip {
   --itt09-win7: #1e90ff;
   --itt09-farm: #5a9e2e;
 }
-
-/* Third-trio leftover rooms — 2009 seeds */
-.mw09, .wa09, .ub09 { max-width: 560px; margin: 16px auto; font-family: Arial, sans-serif; font-size: 13px; }
-.mw09 a { color: #e8c47a; }
-.wa09 a { color: #075e54; }
-.ub09 a { color: #9cf; }
-.mw09-honest, .wa09-honest, .ub09-honest, .mw09 .pop-note, .wa09 .pop-note, .ub09 .pop-note {
-  font-size: 12px; padding: 8px; border: 1px solid #666; margin: 8px 0;
-}
-.mw09-hud { display: flex; gap: 12px; background: #2a1c12; padding: 8px; font-size: 12px; margin: 8px 0; }
-.wa09-thread { background: #fff; color: #111; padding: 10px; border-radius: 4px; margin: 8px 0; }
-.wa09-sms { background: #dcf8c6; padding: 6px 8px; margin: 4px 0; font-size: 12px; }
-.wa09-out { background: #fff; border: 1px solid #ddd; }
-.ub09-map { background: #1a2a1a; height: 120px; padding: 12px; margin: 8px 0; border: 1px solid #333; }
-.ub09-pin { color: #6c6; }
-.mw09 .pop-rows, .wa09 .pop-rows, .ub09 .pop-rows { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
-.mw09 .pop-rows button, .ub09 .pop-rows button { text-align: left; padding: 8px; background: #222; color: #eee; border: 1px solid #555; cursor: pointer; }
-.wa09 .pop-rows button { text-align: left; padding: 8px; background: #fff; border: 1px solid #075e54; cursor: pointer; }
-.mw09 .pop-rows button.is-on, .ub09 .pop-rows button.is-on { border-color: #e8c47a; }
-.wa09 .pop-rows button.is-on { background: #dcf8c6; }
-.pop-req { display: block; font-size: 12px; margin: 4px 0; }
 

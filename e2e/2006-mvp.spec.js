@@ -34,10 +34,11 @@ test.describe('2006 MVP', () => {
   test('twitter compose + timeline', async ({ page }) => {
     await page.goto('/years/2006/sites/twitter/index.html');
     await expect(page.locator('body')).toContainText(/What are you doing/i);
-    const status = page.locator('[name="status"], [data-twitter-status]').first();
-    await status.fill('hello from museum 2006');
-    await page.locator('[data-twitter-compose] button[type="submit"]').click();
-    await expect(page.locator('[data-twitter-timeline]')).toContainText('hello from museum 2006');
+    await page.locator("[data-tw06-req]").nth(0).check();
+    await page.locator("[data-tw06-req]").nth(1).check();
+    await page.fill("[data-tw06-body]", "hello from museum 2006");
+    await page.locator("[data-tw06-post]").click();
+    await expect.poll(() => page.evaluate(() => localStorage.getItem("itt06-tweets"))).toMatch(/hello from museum 2006/);
   });
 
   test('facebook feed room', async ({ page }) => {

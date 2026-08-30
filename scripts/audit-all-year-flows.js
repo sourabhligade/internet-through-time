@@ -25,7 +25,7 @@ const ROOT = path.join(__dirname, "..");
 const WANT_JSON = process.argv.includes("--json");
 const WANT_MD = process.argv.includes("--md");
 
-const WIPED = new Set(["2025"]);
+const WIPED = new Set(["2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2024; y++) {
   if (!WIPED.has(String(y))) YEARS.push(String(y));

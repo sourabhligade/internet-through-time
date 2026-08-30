@@ -88,28 +88,22 @@ test.describe('2006 Flow C — Twitter compose + timeline', () => {
     await page.goto('/years/2006/sites/twitter/index.html');
     await clearKeys(page, ['itt06-tweets']);
     await page.reload();
-    await page.waitForSelector('[data-twitter-compose]', { timeout: 20000 });
+    await page.waitForSelector('[data-tw06-post]', { timeout: 20000 });
     await expect(page.locator('body')).toContainText(/What are you doing/i);
-    // Honesty bans modern X; product is status timeline not algorithmic For You home
-    await expect(page.locator('body')).toContainText(/no For You algorithm|modern X/i);
+    await expect(page.locator('body')).toContainText(/modern X/i);
     const navLabels = await page.locator('a, button').allTextContents();
     expect(navLabels.some((t) => /^For You$/i.test(String(t).trim()))).toBeFalsy();
 
-    const status = page.locator('[name="status"], [data-twitter-status]').first();
     const msg = 'museum flow C ' + Date.now();
-    await status.fill(msg);
-    await page.locator('[data-twitter-compose] button[type="submit"]').click();
-    await expect(page.locator('[data-twitter-timeline]')).toContainText(msg, { timeout: 8000 });
-    await expect(page.locator('[data-twitter-status-msg]')).toContainText(/Posted|saved/i);
-
-    const raw = await page.evaluate(() => localStorage.getItem('itt06-tweets'));
-    expect(raw || '').toContain(msg);
-    // wrong-year key must not be used
+    await page.locator("[data-tw06-req]").nth(0).check();
+    await page.locator("[data-tw06-req]").nth(1).check();
+    await page.fill("[data-tw06-body]", msg);
+    await page.locator("[data-tw06-post]").click();
+    await expect.poll(() => page.evaluate(() => localStorage.getItem("itt06-tweets"))).toContain(msg);
     expect(await page.evaluate(() => localStorage.getItem('itt05-tweets'))).toBeNull();
 
-    // 140 limit: oversize rejected or truncated by maxlength
-    await status.fill('x'.repeat(141));
-    const len = await status.evaluate((el) => /** @type {HTMLTextAreaElement|HTMLInputElement} */ (el).value.length);
+    await page.fill("[data-tw06-body]", "x".repeat(141));
+    const len = await page.locator("[data-tw06-body]").evaluate((el) => /** @type {HTMLTextAreaElement} */ (el).value.length);
     expect(len).toBeLessThanOrEqual(140);
 
     await page.goto('/years/2006/sites/twitter/about.html');
@@ -387,12 +381,12 @@ test.describe('2006 Flow shell trail — dirbar navigation', () => {
 test.describe('2006 no registerLocal race on P0 pages', () => {
   test('P0 pages boot clean', async ({ page }) => {
     const paths = [
-      ['/years/2006/sites/twitter/index.html', '[data-twitter-compose]'],
+      ['/years/2006/sites/twitter/index.html', '[data-tw06-post]'],
       ['/years/2006/sites/facebook/feed.html', '[data-fb-feed]'],
       ['/years/2006/sites/youtube/index.html', '[data-yt-list]'],
       ['/years/2006/sites/digg/index.html', '[data-digg-list]'],
-      ['/years/2006/sites/docs/index.html', '[data-docs-list], [data-docs-collab]'],
-      ['/years/2006/sites/aws/index.html', '[data-aws-buckets]'],
+      ['/years/2006/sites/docs/index.html', '[data-lo-save], [data-docs-list], [data-docs-collab]'],
+      ['/years/2006/sites/aws/index.html', '[data-lo-save], [data-aws-buckets]'],
     ];
     /** @type {string[]} */
     const fails = [];

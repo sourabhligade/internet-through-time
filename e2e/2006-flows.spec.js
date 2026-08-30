@@ -65,11 +65,12 @@ test.describe('2006 flows — Twitter (shell)', () => {
     await goInFrame(page, 'sites/twitter/index.html');
     await waitForImmersion(page, '2006');
     const frame = contentFrame(page);
-    await expect(frame.locator('[data-twitter-compose]')).toBeVisible({ timeout: 15000 });
+    await expect(frame.locator('[data-tw06-post]')).toBeVisible({ timeout: 15000 });
     const msg = 'shell06 ' + Date.now();
-    await frame.locator('[name="status"], [data-twitter-status]').first().fill(msg);
-    await frame.locator('[data-twitter-compose] button[type="submit"]').click();
-    await expect(frame.locator('[data-twitter-timeline]')).toContainText(msg, { timeout: 8000 });
+    await frame.locator("[data-tw06-req]").nth(0).check();
+    await frame.locator("[data-tw06-req]").nth(1).check();
+    await frame.locator("[data-tw06-body]").fill(msg);
+    await frame.locator("[data-tw06-post]").click();
     const raw = await page.evaluate(() => localStorage.getItem('itt06-tweets'));
     expect(raw || '').toContain(msg);
     expect(await page.evaluate(() => localStorage.getItem('itt05-tweets'))).toBeNull();

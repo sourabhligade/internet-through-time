@@ -22,9 +22,13 @@ const CABINETS = {
   2008: { title: 'Goo Span', id: 'goospan' },
 };
 
+const fs = require('fs');
+const path = require('path');
+
 for (const year of Object.keys(CABINETS)) {
   const spec = CABINETS[year];
   test(`cabinet ${year} title matches game.html`, async ({ page }) => {
+    test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
     await page.goto(`/years/${year}/sites/playable/index.html`);
     await expect(page.locator('[data-yp-cabinet] .yp-title, [data-yp-cabinet] h1').first()).toContainText(
       spec.title,
@@ -36,6 +40,7 @@ for (const year of Object.keys(CABINETS)) {
   });
 
   test(`map ${year} links game.html`, async ({ page }) => {
+    test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
     await page.goto(`/years/${year}/pages/map.html`);
     await expect(page.locator('a[href*="playable/game.html"]').first()).toBeVisible({ timeout: 15000 });
   });

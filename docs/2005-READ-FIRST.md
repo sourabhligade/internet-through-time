@@ -1,7 +1,7 @@
 # 2005 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-26  
-**Status:** **on disk.** Full-year door. Star `itt05-yt-uploads`. 2006 is a live Twitter 140 lean door. 2007 is a live iPhone Safari lean door.
+**Status:** **on disk.** Full-year door. Star `itt05-yt-uploads`. 2006 / 2007 / 2009 / 2011 year doors are wiped.
 
 Plan keys on this door: `itt05-yt-uploads` plus official 10 in `flow-trails.js`. Harvest tokens `itt05-digg-comments` · `itt05-reddit-sort` · `itt05-game-famous` · `itt05-game-maphold` · `itt05-game-yttag` · `itt05-suffix` are **not** required for Bar A.  
 **Do not** `git checkout` the old tree.  

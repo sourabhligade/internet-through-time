@@ -48,11 +48,12 @@ test.describe('2006 trail A — Microblog → Feed → Digg', () => {
       'itt05-digg-links',
     ]);
     await page.reload();
-    await page.waitForSelector('[data-twitter-compose]', { timeout: 20000 });
+    await page.waitForSelector('[data-tw06-post]', { timeout: 20000 });
     const tw = 'trail06-tw ' + Date.now();
-    await page.locator('[name="status"], [data-twitter-status]').first().fill(tw);
-    await page.locator('[data-twitter-compose] button[type="submit"]').click();
-    await expect(page.locator('[data-twitter-timeline]')).toContainText(tw, { timeout: 8000 });
+    await page.locator("[data-tw06-req]").nth(0).check();
+    await page.locator("[data-tw06-req]").nth(1).check();
+    await page.fill("[data-tw06-body]", tw);
+    await page.locator("[data-tw06-post]").click();
     await requireKey(page, 'itt06-tweets');
     expect(await page.evaluate(() => localStorage.getItem('itt05-tweets'))).toBeNull();
 

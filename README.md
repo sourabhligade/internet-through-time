@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **31 years open** (1994–2024). **2025** is wiped. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twitter 140. 2007 star = iPhone Safari. 2020 star = Zoom mute→Leave. 2021 star = ATT Ask. 2022 star = ChatGPT Send. 2023 star = ChatGPT Plus. 2024 star = GPT-4o Talk.
+Historical reconstruction of the World Wide Web — year by year. Hub **24 years open** (1994–2019). **2009 / 2011 / 2020–2025** are wiped. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twitter 140. 2007 star = iPhone Safari.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -84,12 +84,12 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2003/` | **Boarded** — MySpace / iTunes Store rebuild later |
 | `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
 | `/years/2005/` | XP · IE6 · YouTube upload · Maps · Reddit · Digg · **full year** |
-| `/years/2006/` | Lean door — Twitter 140 · News Feed leftover · XP + IE6 |
-| `/years/2007/` | Lean door — iPhone Safari · YouTube leftover · MySpace leftover · XP + IE7 |
+| `/years/2006/` | Twitter / Twttr 140 · News Feed leftover · XP+IE6 |
+| `/years/2007/` | **Wiped** — iPhone Safari rebuild later · Chrome GIFs stay |
 | `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
-| `/years/2009/` | Lean door — Facebook Like · FarmVille · Bing · 3GS |
+| `/years/2009/` | **Wiped** — Facebook Like rebuild later |
 | `/years/2010/` | Win7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph · **lean** |
-| `/years/2011/` | Lean door — Google+ · Spotify US · Siri · Timeline |
+| `/years/2011/` | **Wiped** — Google+ / Spotify US / Siri rebuild later |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
 | `/years/2013/` | Lean door — Vine 6s · iOS 7 · Snapchat Stories |
 | `/years/2014/` | Lean door — WhatsApp Install · Heartbleed · Ice Bucket |
@@ -98,14 +98,10 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
 | `/years/2018/` | GDPR Manage · TikTok leftover · hearing · IGTV · **lean** |
 | `/years/2019/` | Disney+ Continue · TikTok leftover · Arcade · Stadia · **lean** |
-| `/years/2020/` | Lean door — Zoom mute→Leave · Reels leftover · GPT-3 waitlist leftover · Flash EOL |
-| `/years/2021/` | Lean door — ATT Ask · Signal leftover · Copilot waitlist · Win10 + Chrome habit |
-| `/years/2022/` | Lean door — ChatGPT Send · Twitter leftover · Wordle leftover · Win10 + Chrome habit |
-| `/years/2023/` | Lean door — ChatGPT Plus · GPT-4 leftover · Bing Chat leftover · Threads leftover · X leftover |
-| `/years/2024/` | Lean door — GPT-4o Talk · Gemini leftover · Claude 3.5 leftover · Sora leftover |
+| `/years/2020/`–`/years/2025/` | **Wiped** — hub locked · no year tree |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**2006 / 2007 / 2009 / 2011 / 2013–2024 are lean doors.** Hub is **31 years open** (1994–2024). **2025 is wiped.** 2001–2003 are criteria forests. 2005 is a full YouTube-upload year.
+**2013–2019 are lean doors.** Hub is **24 years open** (1994–2019). **2009 / 2011 / 2020–2025 are wiped.** 2007 is iPhone Safari. 2001–2003 are criteria forests. 2005 is a full YouTube-upload year. 2006 is Twitter 140.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

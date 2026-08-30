@@ -1,7 +1,8 @@
-# 2011 — READ FIRST
+# 2011 — READ FIRST (**WIPED**)
 
-**Date:** 2026-08-17  
-**Status:** Research mapped in the same pack shape as 2010. Lean year **is on disk**. Corpus **10,320** unique URLs. Git only if asked. **Do not restore** any old 2011 forest.
+**Date:** 2026-08-30  
+**Status:** **WIPED.** Hub card locked. No year tree. Rebuild only when named.  
+**Do not** `git checkout` the old forest unless named.
 
 | Doc | Role |
 |-----|------|

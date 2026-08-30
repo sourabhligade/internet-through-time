@@ -12,6 +12,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "scripts") not in sys.path:
+    sys.path.insert(0, str(ROOT / "scripts"))
+from itt_gate import SHIP_YEARS, _WIPED  # noqa: E402
 failures: list[str] = []
 passes = 0
 
@@ -140,8 +143,6 @@ CI_E2E_ALLOWLIST = (
     "e2e/2016-2018-3x-detail.spec.js",
     "e2e/2016-2018-trail-chain.spec.js",
     "e2e/2017-2019-deepen-theater.spec.js",
-    "e2e/2021-2022-deepen-theater.spec.js",
-    "e2e/2021-2022-ytl-theater.spec.js",
 )
 
 
@@ -198,14 +199,11 @@ def test_browser_srp_parts() -> None:
 
 def test_sitemap_ship_years() -> None:
     sm = read(ROOT / "sitemap.txt")
-    wiped = {"2003", "2025"}
-    for y in range(1994, 2025):
-        ys = str(y)
-        if ys in wiped:
-            if f"/years/{ys}/" in sm:
-                fail("sitemap-years", f"wiped {ys} still listed")
-                return
-            continue
+    for ys in sorted(_WIPED):
+        if f"/years/{ys}/" in sm:
+            fail("sitemap-years", f"wiped {ys} still listed")
+            return
+    for ys in SHIP_YEARS:
         if f"/years/{ys}/" not in sm:
             fail("sitemap-years", f"missing /years/{ys}/")
             return

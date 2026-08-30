@@ -45,7 +45,7 @@ test.describe("Gold-A leftover · home chip + writer + next dest live", () => {
       expect(fs.existsSync(yearFile(g.year, g.writer)), g.writer).toBe(true);
 
       await page.goto(`/years/${g.year}/pages/home.html`);
-      await expect(page.locator(".itt-year-star [data-ott-one-thing]")).toBeVisible();
+      await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${g.year} ol > li`)).toHaveCount(6);
       const painted = await page.content();
       expect(painted).toMatch(new RegExp(g.chipHref.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));

@@ -1,10 +1,14 @@
-# 2006 — READ FIRST (lean door on disk)
+# 2006 — READ FIRST (**WIPED**)
 
-**Date:** 2026-08-27  
-**Status:** **lean door on disk.** Hub card open. `SHIP_YEARS` includes 2006.  
-**Do not** `git checkout` an old 2006 forest. Hard stop ~50–90 HTML. The old forest drowned the thesis.  
-**This pass:** research freeze 2026-08-29 (named). Implement only when named — do not wipe the live lean door.  
-**Harvest (this session):** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md)  
+**Date:** 2026-08-30  
+**Status:** **on disk.** Hub card open. Star Twitter 140. Rebuild was from scratch — no forest checkout.  
+**Do not** `git checkout` the old forest unless named.  
+**Harvest (this pass · density-matched):** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-30.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-30.md)  
+**2× leftover freeze (120 writers):** [`2006-2X-LEFTOVER-RESEARCH-2026-08-30.md`](2006-2X-LEFTOVER-RESEARCH-2026-08-30.md)  
+**Sources catalog (2× densify · 233 numbered / 231 unique):** [`2006-SOURCES-CATALOG-2026-08-30.md`](2006-SOURCES-CATALOG-2026-08-30.md)  
+**Sources report:** [`2006-SOURCES-REPORT-2026-08-30.md`](2006-SOURCES-REPORT-2026-08-30.md)  
+**Implement checklist (every MD element):** [`2006-IMPLEMENT-CHECKLIST-2026-08-30.md`](2006-IMPLEMENT-CHECKLIST-2026-08-30.md)  
+**Prior harvest (lean grain · lose to this pass):** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md)  
 **Goals · phases · minute · e2e:** [`2006-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md`](2006-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md)  
 **Games harvest (this session):** [`2006-GAMES-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md`](2006-GAMES-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-29.md)  
 **Games goals · minute · e2e:** [`2006-GAMES-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md`](2006-GAMES-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-29.md)  
@@ -33,16 +37,19 @@
 | Trap | iPhone · App Store · Chrome · Street View · Gmail open-to-all as year-start · Google owns YouTube **as year-start** · Vista retail shell · campus-only Facebook **after Sep 26** as product truth |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 (already in `flow-trails.js`) | Twitter 140 · News Feed · YouTube · Digg · Reddit · Google Docs · AWS · Google Reader · Time You · TrailSled — **dest files exist** |
-| First door | **lean · live (66 HTML).** Do not restore leftover urlMap forest. Do not add meebo / huffpost / wikileaks. |
+| First door | **full year at live-neighbor density.** Do not restore leftover urlMap forest. Do not `git checkout` `ce0d70fb`. |
 
 ## Size lock (when named)
 
+Live neighbors measured 2026-08-30: **2005 = 432 HTML / 174 dests** · **2008 = 353 HTML / 105 dests**. Lean doors are 78–92 HTML — too thin.
+
 | Metric | Rule |
 |--------|------|
-| HTML | **≤ 90** (prefer ~50–70). Old forest drowned Twitter. |
+| HTML | Floor **353** (2008). Target **350–430** (toward 2005). Old lean ≤90 **loses**. |
+| Dest folders | Floor **105**. Target **105–174**. |
 | Guided | **6** |
 | Official trails | **10** (rows already live; dests 404 until rebuild) |
-| New dest folders | only official + named leftovers. No 2005 clone dump. |
+| New dest folders | official + named leftovers + year-true 2006 band. No 2005 clone dump. No forest checkout. |
 
 ## Dual-cite (opened 2026-08-27)
 
