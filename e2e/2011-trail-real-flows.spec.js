@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 test.describe("2011 official trail dests exist", () => {
   test("sites/googleplus/index.html loads", async ({ page }) => {
     const res = await page.goto("/years/2011/sites/googleplus/index.html");

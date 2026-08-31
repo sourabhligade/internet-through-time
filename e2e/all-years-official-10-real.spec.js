@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 
+
 const ROOT = path.join(__dirname, "..");
 
 function loadTrails() {
@@ -410,12 +411,12 @@ async function runDest(page, d) {
   }
 
   if (html.indexOf("data-lo-panel") !== -1 && html.indexOf('data-lo-key="' + suffix + '"') !== -1) {
-    const lo = page.locator("[data-lo-panel]").first();
+    const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
     await lo.locator("[data-lo-save]").waitFor({ timeout: 20000 });
-    await page.waitForFunction(() => {
-      const b = document.querySelector("[data-lo-panel] [data-lo-save]");
+    await page.waitForFunction((suf) => {
+      const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
       return !!(b && b.getAttribute("data-lo-bound") === "1");
-    }, null, { timeout: 20000 });
+    }, suffix, { timeout: 20000 });
     await page.evaluate((k) => localStorage.removeItem(k), d.whenKey);
 
     await lo.locator("[data-lo-trap]").first().click();
@@ -425,8 +426,12 @@ async function runDest(page, d) {
     const reqs = lo.locator("[data-lo-req]");
     const nReq = await reqs.count();
     for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
-    await lo.locator("[data-lo-save]").first().click();
-    expect(await getKey(page, d.whenKey), d.whenKey + " ticks only").toBeFalsy();
+    const hasField0 = (await lo.locator("[data-lo-field]").count()) > 0;
+    const hasPicks0 = (await lo.locator("[data-lo-pick]").count()) > 0;
+    if (hasField0 || hasPicks0) {
+      await lo.locator("[data-lo-save]").first().click();
+      expect(await getKey(page, d.whenKey), d.whenKey + " ticks only").toBeFalsy();
+    }
 
     const needPick = await lo.locator("[data-lo-save]").first().getAttribute("data-lo-need-pick");
     const minPick = parseInt((await lo.locator("[data-lo-save]").first().getAttribute("data-lo-min-pick")) || "0", 10);

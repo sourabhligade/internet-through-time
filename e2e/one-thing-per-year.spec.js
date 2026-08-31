@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+
 const ROOT = path.join(__dirname, "..");
 
 /** @type {{ year: string, path: string, key: string, steps: (p: import('@playwright/test').Page) => Promise<void> }[]} */
@@ -121,47 +122,7 @@ const THINGS = [
       await page.locator("[data-fb-join-btn]").click();
     },
   },
-  {
-    year: "2005",
-    path: "/years/2005/sites/youtube/upload.html",
-    key: "itt05-yt-did-upload",
-    incomplete: async (page) => {
-      await page.locator("form[data-yt-upload] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.fill("[name='title']", "Me at the zoo residual");
-      await page.fill("[name='desc']", "first clip");
-      await page.locator("form[data-yt-upload] button[type='submit']").click();
-    },
-  },
-  {
-    year: "2006",
-    path: "/years/2006/sites/twitter/index.html",
-    key: "itt06-tweets",
-    incomplete: async (page) => {
-      await page.locator("[data-tw06-post]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-tw06-req]").nth(0).check();
-      await page.locator("[data-tw06-req]").nth(1).check();
-      await page.fill("[data-tw06-body]", "just setting up my twttr");
-      await page.locator("[data-tw06-post]").click();
-    },
-  },
-  {
-    year: "2007",
-    path: "/years/2007/sites/iphone/index.html",
-    key: "itt07-iphone",
-    incomplete: async (page) => {
-      await page.locator("[data-ip07-store]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-ip07-req]").nth(0).check();
-      await page.locator("[data-ip07-req]").nth(1).check();
-      await page.locator('[data-ip07-cap][value="8"]').check();
-      await page.locator("[data-ip07-safari]").click();
-    },
-  },
+
   {
     year: "2009",
     path: "/years/2009/sites/facebook/index.html",
@@ -212,6 +173,23 @@ const THINGS = [
     complete: async (page) => {
       await page.locator("[data-vn13-hold]").click();
       await page.locator("[data-vn13-post]").click();
+    },
+  },
+  {
+    year: "2005",
+    path: "/years/2005/sites/youtube/upload.html",
+    key: "itt05-yt-uploads",
+    seedOk: true,
+    incomplete: async (page) => {
+      await page.locator("form[data-yt-upload] button[type='submit']").click();
+    },
+    complete: async (page) => {
+      await page.fill("[name='title']", "Me at the zoo residual");
+      await page.fill("[name='desc']", "first clip");
+      const reqs = page.locator("[data-yt-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("form[data-yt-upload] button[type='submit']").click();
     },
   },
   {
@@ -407,7 +385,13 @@ test.describe("One-thing per year — load + REAL gate", () => {
         await save.click();
       }
       await page.waitForTimeout(150);
-      expect(await page.evaluate((k) => localStorage.getItem(k), t.key)).toBeFalsy();
+      if (t.seedOk && t.key === "itt05-yt-uploads") {
+        const raw = await page.evaluate((k) => localStorage.getItem(k), t.key);
+        const list = JSON.parse(raw || "[]");
+        expect(Array.isArray(list) ? list.some((x) => x && /residual/i.test(x.title || "")) : false).toBeFalsy();
+      } else {
+        expect(await page.evaluate((k) => localStorage.getItem(k), t.key)).toBeFalsy();
+      }
     });
 
     test(`${t.year} complete writes ${t.key}`, async ({ page }) => {
@@ -422,9 +406,19 @@ test.describe("One-thing per year — load + REAL gate", () => {
         await t.steps(page);
         await page.locator("[data-itt-real-save]").first().click();
       }
-      await expect
-        .poll(async () => page.evaluate((k) => localStorage.getItem(k), t.key), { timeout: 8000 })
-        .toBeTruthy();
+      if (t.seedOk && t.key === "itt05-yt-uploads") {
+        await expect
+          .poll(async () => {
+            const raw = await page.evaluate((k) => localStorage.getItem(k), t.key);
+            const list = JSON.parse(raw || "[]");
+            return Array.isArray(list) && list.some((x) => x && /residual/i.test(x.title || ""));
+          }, { timeout: 8000 })
+          .toBeTruthy();
+      } else {
+        await expect
+          .poll(async () => page.evaluate((k) => localStorage.getItem(k), t.key), { timeout: 8000 })
+          .toBeTruthy();
+      }
     });
   }
 

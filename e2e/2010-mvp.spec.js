@@ -3,6 +3,7 @@
  * 2010 lean from-scratch — verify each playbook flow (docs/2010-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md).
  */
 const { test, expect } = require('@playwright/test');
+
 const { completeRealGate, enterYear, twoStepClick } = require('./helpers');
 
 async function clearKeys(page, keys) {

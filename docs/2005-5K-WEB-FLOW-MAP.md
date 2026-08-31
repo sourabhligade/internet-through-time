@@ -1,7 +1,7 @@
 # 2005 — 5k-web flow map
 
-**Date:** 2026-08-26  
-**Walk this after** [`2005-READ-FIRST.md`](2005-READ-FIRST.md) and [`2005-FROM-SCRATCH-5K-WEB-RESEARCH.md`](2005-FROM-SCRATCH-5K-WEB-RESEARCH.md).  
+**Date:** 2026-08-31  
+**Walk this after** [`2005-READ-FIRST.md`](2005-READ-FIRST.md).  
 **Star:** YouTube upload `itt05-yt-uploads`. Guided **6**. Official **10**. 2× **120**.  
 **Disk:** year wiped. This is the rebuild walk.
 
@@ -12,13 +12,14 @@
 ┌───────────────────┐
 │ Scale             │  ILS June 2005  64,780,617
 │                   │  users          1,027,580,990
+│ Netcraft Jun      │  64,808,485
 │ Netcraft Dec      │  74,353,258
-│ Visits            │  Yahoo still #1
+│ Visits            │  Yahoo still #1 · MySpace enters top 10
 └─────────┬─────────┘
           │
           ▼
 ┌───────────────────┐
-│ Mass 2005         │  Yahoo · Google climb · MySpace
+│ Mass 2005         │  Yahoo · Google climb · MySpace #9
 │ Zeitgeist gainer  │  MySpace #1 gainer (not the chip)
 └─────────┬─────────┘
           │
@@ -46,10 +47,15 @@
           ├─ TechCrunch                Jun
           └─ HoverChop
           │
+     leftover 9+9+9 (3× strips)
+          │
+          ├─ pop3x   watch · wiki · myspace · yahoo · google · amazon · ebay · msn · aol
+          ├─ pop-more firefox · gmail-invite · flickr · skype · delicious · blogger · wordpress · cnn · ipod
+          └─ pop-3x3 clubpenguin · milliondollar · dailymotion · vimeo · googlevideo · earth · mashable · programmableweb · kayak
+          │
      120 2× leftover
           │
-          ├─ stub on disk now: 18 (illegal to ship)
-          └─ year-true 120: 2005-2X-LEFTOVER-RESEARCH
+          └─ Pack A 40 · Pack B 40 · Pack C 40
           │
           ▼
 ┌───────────────────┐
@@ -76,8 +82,8 @@
 | Guided | 6 | **6** | 6 |
 | Official | 10 | **10** | 10 |
 | 2× | 102 | **120** | 116 |
-| Extras | a–i + g2–5 + famous | **same** | same |
 | HTML | 315 | **≥ 349** | 349 |
+| Site folders | 90 | **≥ 105** | 105 |
 
 ## Do not walk as dests
 

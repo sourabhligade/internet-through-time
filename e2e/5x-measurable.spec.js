@@ -4,6 +4,7 @@
  * Incomplete pack games never write. Locked star keys stay neighbor-safe.
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
 const SAMPLE = ['1994', '2005', '2010', '2015'];

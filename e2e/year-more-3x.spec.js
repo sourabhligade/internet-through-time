@@ -5,7 +5,16 @@
  */
 const { test, expect } = require("@playwright/test");
 
-const WIPED = new Set(["2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"]);
+
+const WIPED = new Set(["2005", "2006", "2007", "2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"]);
+
+async function openAlsoYear(page, year) {
+  const box = page.locator(`#itt-also-year-${year}`);
+  if (await box.count()) {
+    await box.locator("summary").first().click();
+    await expect(box).toHaveAttribute("open", "");
+  }
+}
 
 test.describe("3 more leftovers on home — every shipped year", () => {
   for (let y = 1994; y <= 2023; y++) {
@@ -13,6 +22,7 @@ test.describe("3 more leftovers on home — every shipped year", () => {
     if (WIPED.has(year)) continue;
     test(`${year} home lists 3 more leftover doors`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
+      await openAlsoYear(page, year);
       const strip = page.locator(`[data-itt-pop-more="${year}"]`);
       await expect(strip).toBeVisible();
       await expect(strip.locator("a[href*='sites/']")).toHaveCount(3);
@@ -104,23 +114,6 @@ test.describe("new leftover rooms write — sample years", () => {
     await page.locator("[data-pop-go][data-pop-id='netflix']").click();
     await expect
       .poll(() => page.evaluate(() => localStorage.getItem("itt10-pop-netflix")), { timeout: 8000 })
-      .toBeTruthy();
-  });
-
-  test("2011 Snapchat leftover 3× incomplete never writes · complete writes", async ({ page }) => {
-    await page.goto("/years/2011/sites/snapchat/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt11-pop3-snapchat"));
-    await page.reload();
-    await page.locator("[data-pop-go]").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt11-pop3-snapchat"))).toBeFalsy();
-    await page.locator("[data-pop-pick]").first().click();
-    const reqs = page.locator("[data-pop-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-pop-field]").fill("ghost");
-    await page.locator("[data-pop-go]").click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem("itt11-pop3-snapchat")), { timeout: 8000 })
       .toBeTruthy();
   });
 

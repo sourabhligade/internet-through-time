@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-WIPED = {"2007", "2009", "2011", "2013", "2014"}
+WIPED = {"2005", "2006", "2007", "2009", "2011", "2013", "2014"}
 YEARS = [str(y) for y in range(1994, 2010) if str(y) not in WIPED]
 
 CABINETS = {

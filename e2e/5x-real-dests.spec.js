@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
 test('1994 densify page exists and star next works', async ({ page }) => {

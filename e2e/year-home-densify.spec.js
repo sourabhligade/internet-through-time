@@ -7,6 +7,7 @@
  *  - sample REAL multipath from trail destinations (gated years)
  */
 const { test, expect } = require('@playwright/test');
+
 const { completeRealGate, twoStepClick, checkAllReq, killOverlays } = require('./helpers');
 
 const fs = require('fs');

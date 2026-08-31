@@ -3,6 +3,7 @@
  * Per-year museum games — page loads + basic interactivity smoke.
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
 const YEARS = [];

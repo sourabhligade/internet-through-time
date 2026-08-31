@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 const { enterYear, goInFrame, waitForImmersion, contentFrame } = require("./helpers");
 
 test.describe("1996 My Excite personalize persist", () => {

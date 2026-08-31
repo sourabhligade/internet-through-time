@@ -207,8 +207,11 @@ def test_sitemap_ship_years() -> None:
         if f"/years/{ys}/" not in sm:
             fail("sitemap-years", f"missing /years/{ys}/")
             return
-    if "/years/2005/pages/home.html" not in sm:
-        fail("sitemap-years", "missing 2005 Starting Point")
+    if "/years/2004/pages/home.html" not in sm:
+        fail("sitemap-years", "missing 2004 Starting Point")
+        return
+    if "/years/2021/pages/home.html" not in sm:
+        fail("sitemap-years", "missing 2021 Starting Point")
         return
     ok("sitemap-years")
 

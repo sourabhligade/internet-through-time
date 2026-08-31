@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
 
 function yearOnDisk(year) {
@@ -163,21 +164,7 @@ test.describe('year game flows — full matrix', () => {
     await expect(frame.locator('[data-gem-board]')).toBeVisible();
   });
 
-  test('2005 HoverChop: start → score increases', async ({ page }) => {
-    const frame = await openGame(page, '2005', '', 'itt05');
-    await frame.locator('#play-start').click();
-    await expect
-      .poll(async () => Number((await frame.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
-      .toBeGreaterThan(0);
-  });
 
-  test('2006 TrailSled: ride → distance > 0', async ({ page }) => {
-    const frame = await openGame(page, '2006', '', 'itt06');
-    await frame.locator('#play-start').click(); // seeds demo ramp if empty
-    await expect
-      .poll(async () => Number((await frame.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
-      .toBeGreaterThan(0);
-  });
 
   test('2008 Goo Span: start fast writes score', async ({ page }) => {
     const frame = await openGame(page, '2008', '?fast=1', 'itt08');

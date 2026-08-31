@@ -4,6 +4,7 @@
  * Stars: page loads as that year (machine already covered by one-thing).
  */
 const { test, expect } = require("@playwright/test");
+
 const fs = require("fs");
 const path = require("path");
 const { checkAllReq } = require("./helpers");

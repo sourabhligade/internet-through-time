@@ -3,6 +3,7 @@
  * Machine / Web / Game layer split — visitor can tell which surface they are on.
  */
 const { test, expect } = require("@playwright/test");
+
 const { enterYear, contentFrame, killOverlays } = require("./helpers");
 
 test.describe("layer split — shell is the machine", () => {

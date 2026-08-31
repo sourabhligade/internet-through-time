@@ -8,6 +8,7 @@
  * Soft "I saw" / one-click success is a failure.
  */
 const { test, expect } = require('@playwright/test');
+
 const fs = require('fs');
 const path = require('path');
 const { enterYear, goImmersion, contentFrame } = require('./helpers');

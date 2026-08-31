@@ -11,13 +11,15 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-WIPED = set()
+WIPED = {"2005", "2006", "2007"}
 
 # year, role, slug, title, kind, inspire, goods, traps, prompt, need, hold_ms
 GAMES: list[tuple] = []
 
 
 def G(year, role, slug, title, kind, inspire, goods, traps="", prompt="", need=3, hold_ms=2000):
+    if year in WIPED:
+        return
     GAMES.append((year, role, slug, title, kind, inspire, goods, traps, prompt, need, hold_ms))
 
 

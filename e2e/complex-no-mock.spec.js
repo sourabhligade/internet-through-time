@@ -3,6 +3,12 @@
  * Wave-1 complex products — no checkbox mock, incomplete never writes, reload persist.
  */
 const { test, expect } = require("@playwright/test");
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 
 /** @param {import('@playwright/test').Page} page @param {string} pfx */
 async function clearPrefix(page, pfx) {
@@ -54,6 +60,7 @@ test.describe("complex products · incomplete / persist", () => {
 
 
   test.skip("Pandora thumbs without station blocked", async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto("/years/2005/sites/pandora/index.html");
     await clearPrefix(page, "itt05-pandora");
     await page.reload();

@@ -398,25 +398,5 @@
     "kind": "quiz",
     "title": "Arcade Note",
     "next": "/years/2019/sites/playable/game.html"
-  },
-  {
-    "year": "2006",
-    "role": "h",
-    "path": "/years/2006/sites/playable/extra-h.html",
-    "key": "itt06-game-burycell",
-    "id": "burycell",
-    "kind": "place",
-    "title": "Bury Cell",
-    "next": "/years/2006/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2006",
-    "role": "i",
-    "path": "/years/2006/sites/playable/extra-i.html",
-    "key": "itt06-game-youcover",
-    "id": "youcover",
-    "kind": "place",
-    "title": "You Cover",
-    "next": "/years/2006/sites/playable/game.html"
   }
 ]

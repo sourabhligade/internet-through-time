@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goInFrame, waitForImmersion, contentFrame, killOverlays } = require('./helpers');
 
 test.describe('shell chrome (cross-year)', () => {

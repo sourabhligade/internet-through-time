@@ -1,11 +1,12 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
 const OPEN = [
   '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003',
-  '2004', '2005', '2006', '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019',
+  '2004', '2005', '2006', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021',
 ];
-const LOCKED = ['2009', '2011', '2020', '2021', '2022', '2023', '2024', '2025'];
+const LOCKED = ['2007', '2009', '2011', '2020', '2022', '2023', '2024', '2025'];
 
 test.describe('hub + year shells', () => {
   test('hub lists playable years; 2026+ off disk', async ({ page }) => {
@@ -57,11 +58,10 @@ test.describe('hub + year shells', () => {
     }
     await expect(page.locator('.y1994')).toBeVisible();
     await expect(page.locator('.y2005.available')).toBeVisible();
-    await expect(page.locator('.y2005.locked')).toHaveCount(0);
-    await expect(page.locator('.y2006.locked')).toHaveCount(0);
     await expect(page.locator('.y2006.available')).toBeVisible();
-    await expect(page.locator('.y2007.locked')).toHaveCount(0);
-    await expect(page.locator('.y2007.available')).toBeVisible();
+    await expect(page.locator('.y2007.locked')).toBeVisible();
+    await expect(page.locator('.y2007.available')).toHaveCount(0);
+    await expect(page.locator('.y2007.locked')).toBeVisible();
     await expect(page.locator('.y2008')).toBeVisible();
     await expect(page.locator('.y2009.locked')).toBeVisible();
     await expect(page.locator('.y2009.available')).toHaveCount(0);
@@ -77,8 +77,8 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2019.available')).toBeVisible();
     await expect(page.locator('.y2020.available')).toHaveCount(0);
     await expect(page.locator('.y2020.locked')).toBeVisible();
-    await expect(page.locator('.y2021.available')).toHaveCount(0);
-    await expect(page.locator('.y2021.locked')).toBeVisible();
+    await expect(page.locator('.y2021.available')).toBeVisible();
+    await expect(page.locator('.y2021.locked')).toHaveCount(0);
     await expect(page.locator('.y2022.available')).toHaveCount(0);
     await expect(page.locator('.y2022.locked')).toBeVisible();
     await expect(page.locator('body')).toContainText(/24 years open/i);

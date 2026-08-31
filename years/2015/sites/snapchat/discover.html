@@ -21,20 +21,6 @@
 <p data-discover-status data-itt-action-status></p>
 <p hidden data-next-flow><b>Next:</b> <a href="../discord/index.html">Discord seed</a></p>
 </div>
-<script src="../../../../js/immersion-2015.js"></script>
-<!-- ITT-4X:discover:start -->
-<section class="itt-4x-panel itt-4x-product" data-4x-panel data-4x-kind="hops" data-4x-min="2" style="margin:12px 0;padding:12px;border:1px solid #333;font-family:inherit;font-size:13px;max-width:46em;background:#fff">
-<h2 style="margin:0 0 8px;font-size:16px">snapchat leftover (not the chip)</h2>
-<p class="honest" style="margin:0 0 8px;font-size:12px">2015 product path · incomplete never writes · not the chip</p>
-<p><button type="button" data-4x-hop="a">Tile A</button> <button type="button" data-4x-hop="b">Tile B</button></p>
-<p><button type="button" data-4x-go="discover">Do leftover snapchat</button> <span data-4x-status></span></p>
-<p hidden data-4x-result class="itt-4x-result"></p>
-<p hidden data-next-flow data-next-when-key="itt15-discover"><b>Next:</b> <a href="../../sites/discord/index.html">Discord</a></p>
-</section>
-<!-- ITT-4X:discover:end -->
-<p hidden data-next-flow data-next-when-key="itt15-snap-discover"><b>Next:</b> <a href="../discord/index.html">Discord</a></p>
-
-
 <!-- ITT-LO-OFFICIAL:start -->
 <section data-lo-panel="1" data-itt-year="2015" style="margin:12px auto;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
 <p><b>Leftover machine</b> · not the chip · incomplete never writes · <code>itt15-snap-discover</code></p>
@@ -42,26 +28,44 @@
 <label style="display:block"><input type="checkbox" data-lo-req> Trap / empty never writes.</label>
 <p>
  <button type="button" data-lo-pick="disc">Discover leftover</button>
- <button type="button" data-lo-pick="stories">Stories 2016 (trap)</button>
-</p>
+ <button type="button" data-lo-pick="pub">Publisher leftover</button>
+ </p>
 <p>
  <button type="button" data-lo-trap>Stories 2016 (trap)</button>
- <button type="button" data-lo-save data-lo-key="snap-discover" data-lo-need-pick="disc">Open leftover Discover</button>
+ <button type="button" data-lo-save data-lo-key="snap-discover" data-lo-min-pick="2">Open leftover Discover</button>
 </p>
 <p data-lo-status></p>
 <p hidden data-next-flow data-next-when-key="itt15-snap-discover"><b>Next:</b> <a href="../discord/index.html">Discord</a></p>
 </section>
 <!-- ITT-LO-OFFICIAL:end -->
-<!-- ITT-4X:snapchat-d3:start -->
-<section class="itt-4x-panel itt-4x-product" data-4x-panel data-4x-kind="query" data-4x-min="2" style="margin:12px 0;padding:12px;border:1px solid #333;font-family:inherit;font-size:13px;max-width:46em;background:#fff">
-<h2 style="margin:0 0 8px;font-size:16px">snapchat leftover (not the chip)</h2>
-<p class="honest" style="margin:0 0 8px;font-size:12px">2015 leftover · incomplete never writes · not the chip</p>
-<p><label>Leftover verb<br><input type="text" data-4x-field maxlength="80" autocomplete="off" placeholder="snapchat leftover"></label></p>
-<p><button type="button" data-4x-go="snapchat-d3">Do leftover snapchat</button> <span data-4x-status></span></p>
-<p hidden data-4x-result class="itt-4x-result"></p>
+<div data-lo-panel="1" data-itt-year="2015" class="itt-2015-machine" style="margin:14px 0;padding:12px;border:1px solid #333;background:#fff8dc;max-width:46em;color:#111">
+<p style="font-size:11px;color:#444;margin:0 0 8px">2015 leftover machine · dest-true · incomplete never writes</p>
+<p><button type="button" data-lo-trap>This leftover is the year star (trap)</button></p>
+<p>
+ <button type="button" data-lo-pick="a">Tile A</button>
+ <button type="button" data-lo-pick="b">Tile B</button>
+</p>
+<p><label><input type="checkbox" data-lo-req> Leftover 2015 · not the year star.</label></p>
+<p><label><input type="checkbox" data-lo-req> 0 hops / 1 hop / trap never writes.</label></p>
+<p><button type="button" data-lo-save data-lo-key="discover" data-lo-min-pick="2">Send leftover snap</button> <span data-lo-status></span></p>
+<p hidden data-next-flow data-next-when-key="itt15-discover"><b>Next:</b> <a href="../../sites/discord/index.html">Discord</a></p>
+</div>
+
+<div data-lo-panel="1" data-itt-year="2015" class="itt-2015-machine" style="margin:14px 0;padding:12px;border:1px solid #333;background:#fff8dc;max-width:46em;color:#111">
+<p style="font-size:11px;color:#444;margin:0 0 8px">2015 leftover machine · dest-true · incomplete never writes</p>
+<p><button type="button" data-lo-trap>This leftover is the year star (trap)</button></p>
+<p><label>Snap leftover. Stories 24h is a later machine.<br><input type="text" data-lo-field maxlength="80" placeholder="snap leftover" autocomplete="off"></label></p>
+<p><label><input type="checkbox" data-lo-req> Leftover 2015 · not the year star.</label></p>
+<p><label><input type="checkbox" data-lo-req> Empty / trap never writes.</label></p>
+<p><button type="button" data-lo-save data-lo-key="snapchat-d3">Send leftover snap</button> <span data-lo-status></span></p>
 <p hidden data-next-flow data-next-when-key="itt15-snapchat-d3"><b>Next:</b> <a href="../../sites/periscope/index.html">★ year star</a></p>
-</section>
-<!-- ITT-4X:snapchat-d3:end -->
+</div>
+
+<script src="../../../../js/immersion-2015.js"></script>
+<p hidden data-next-flow data-next-when-key="itt15-snap-discover"><b>Next:</b> <a href="../discord/index.html">Discord</a></p>
+
+
+
 <!-- ITT-3X-ALSO:start -->
 <nav class="itt-3x-also" data-itt-3x-also data-itt-year="2015" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
  <a href="../../pages/home.html">Starting Point</a> ·

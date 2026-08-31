@@ -4,9 +4,10 @@
  * Runs inside year shell iframe (enterYear + goImmersion).
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const WIPED = new Set(['2007', '2009', '2011', '2013', '2014']);
+const WIPED = new Set(['2005', '2006', '2007', '2009', '2011', '2013', '2014']);
 const YEARS = [];
 for (let y = 1994; y <= 2011; y++) {
   const s = String(y);
@@ -23,9 +24,6 @@ const FLOW = {
   '1999': { id: 'petdash', primary: '[data-feed]', flow: 'click-primary' },
   '2000': { id: 'lotlife', primary: '[data-game-start]', flow: 'literacy' },
   '2004': { id: 'gemcascade', primary: '[data-game-start]', flow: 'click-start' },
-  '2005': { id: 'heli', primary: '#play-start', flow: 'click-start' },
-  '2006': { id: 'sled', primary: '#play-start', flow: 'click-start' },
-  '2007': { id: 'boxshift', primary: '[data-restart], [data-next], [data-dir]', flow: 'click-primary' },
   '2008': { id: 'goospan', primary: '[data-game-start]', flow: 'click-start' },
   '2009': { id: 'plotneighbors', primary: '[data-fv-free]', flow: 'plant' },
   '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
@@ -120,9 +118,6 @@ async function runPrimaryFlow(page, frame, year) {
     await page.waitForTimeout(250);
   }
   /* secondary action for a few years */
-  if (year === '2007') {
-    await frame.locator('[data-dir]').first().click({ force: true }).catch(() => {});
-  }
 }
 
 test.describe('Year games — each flow + UI accessible', () => {
@@ -158,26 +153,8 @@ test.describe('Year games — each flow + UI accessible', () => {
   }
 });
 
-test.describe('Year games — keyboard / focus affordances', () => {
-
-  test('2005 heli start control is named and clickable', async ({ page }) => {
-    await enterYear(page, '2005');
-    await goImmersion(page, '2005', 'sites/playable/game.html');
-    const frame = contentFrame(page);
-    const btn = frame.locator('#play-start');
-    await expect(btn).toBeVisible();
-    const name = ((await btn.textContent()) || '').trim() || (await btn.getAttribute('aria-label'));
-    expect(name && name.length).toBeGreaterThan(0);
-    await btn.click({ force: true });
-    await page.waitForTimeout(200);
-    await expect(frame.locator('#game-canvas')).toBeVisible();
-  });
-
-
-});
-
 test.describe('Playables lobby a11y smoke (sample years)', () => {
-  for (const year of ['1994', '2000', '2005', '2008']) {
+  for (const year of ['1994', '2000', '2004', '2008']) {
     test(`${year} playable lobby has heading and cabinet`, async ({ page }) => {
       await enterYear(page, year);
       await goImmersion(page, year, 'sites/playable/index.html');

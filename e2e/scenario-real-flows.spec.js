@@ -9,6 +9,7 @@
  * docs/CROSS-YEAR-REAL-FLOWS-EXECUTION.md
  */
 const { test, expect } = require('@playwright/test');
+
 const { checkAllReq } = require('./helpers');
 
 async function twoStepClick(page, selector) {
@@ -79,7 +80,7 @@ async function clickSubmit(page, formSel) {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: adsense signup', () => {
-  for (const year of ['2003', '2004', '2005', '2006']) {
+  for (const year of ['2003', '2004']) {
     test(`adsense ${year}: apply → ${ittKey(year, 'adsense')} + code`, async ({ page }) => {
       const key = ittKey(year, 'adsense');
       await gotoReady(
@@ -106,7 +107,7 @@ test.describe('scenario: adsense signup', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: itunes buy', () => {
-  for (const year of ['2003', '2004', '2005', '2006']) {
+  for (const year of ['2003', '2004']) {
     test(`itunes ${year}: buy → ${ittKey(year, 'itunes-library')}`, async ({ page }) => {
       const key = ittKey(year, 'itunes-library');
       await gotoReady(
@@ -135,7 +136,7 @@ test.describe('scenario: itunes buy', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: linkedin', () => {
-  for (const year of ['2003', '2004', '2005', '2006']) {
+  for (const year of ['2003', '2004']) {
     test(`linkedin ${year}: profile save → ${ittKey(year, 'li-profile')}`, async ({ page }) => {
       const key = ittKey(year, 'li-profile');
       await gotoReady(
@@ -177,7 +178,7 @@ test.describe('scenario: linkedin', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: gmail compose', () => {
-  for (const year of ['2004', '2005', '2006']) {
+  for (const year of ['2004']) {
     test(`gmail ${year}: compose → ${ittKey(year, 'gmail-msgs')}`, async ({ page }) => {
       const key = ittKey(year, 'gmail-msgs');
       await gotoReady(
@@ -201,7 +202,7 @@ test.describe('scenario: gmail compose', () => {
 });
 
 test.describe('scenario: gmail save draft (real localStorage)', () => {
-  for (const year of ['2004', '2005', '2006']) {
+  for (const year of ['2004']) {
     test(`gmail ${year}: Save Draft → ${ittKey(year, 'gmail-drafts')}`, async ({ page }) => {
       const key = ittKey(year, 'gmail-drafts');
       await gotoReady(
@@ -229,7 +230,7 @@ test.describe('scenario: gmail save draft (real localStorage)', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: netflix DVD queue', () => {
-  for (const year of ['2002', '2003', '2004', '2005', '2006']) {
+  for (const year of ['2002', '2003', '2004']) {
     test(`netflix ${year}: add queue → ${ittKey(year, 'netflix-queue')}`, async ({ page }) => {
       const key = ittKey(year, 'netflix-queue');
       await gotoReady(
@@ -256,7 +257,7 @@ test.describe('scenario: netflix DVD queue', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: facebook profile', () => {
-  for (const year of ['2004', '2005', '2006']) {
+  for (const year of ['2004']) {
     test(`facebook ${year}: profile save → ${ittKey(year, 'thefacebook')}`, async ({ page }) => {
       const key = ittKey(year, 'thefacebook');
       await gotoReady(
@@ -288,7 +289,7 @@ test.describe('scenario: facebook profile', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: flickr upload', () => {
-  for (const year of ['2004', '2005', '2006']) {
+  for (const year of ['2004']) {
     test(`flickr ${year}: upload → ${ittKey(year, 'flickr-stream')}`, async ({ page }) => {
       const key = ittKey(year, 'flickr-stream');
       await gotoReady(
@@ -317,7 +318,7 @@ test.describe('scenario: flickr upload', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: myspace comment / invite / contact', () => {
-  for (const year of ['2003', '2004', '2005', '2006']) {
+  for (const year of ['2003', '2004']) {
     test(`myspace ${year}: leave comment → ${ittKey(year, 'myspace-comments')}`, async ({
       page,
     }) => {
@@ -382,7 +383,7 @@ test.describe('scenario: myspace comment / invite / contact', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: digg bury', () => {
-  for (const year of ['2004', '2005', '2006']) {
+  for (const year of ['2004']) {
     test(`digg ${year}: bury decrements count`, async ({ page }) => {
       const key = ittKey(year, 'digg-links');
       await gotoReady(page, `/years/${year}/sites/digg/index.html`, '[data-digg-list]', key);
@@ -402,7 +403,7 @@ test.describe('scenario: digg bury', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: friendster add friend', () => {
-  for (const year of ['2002', '2003', '2004', '2005', '2006']) {
+  for (const year of ['2002', '2003', '2004']) {
     test(`friendster ${year}: add friend → ${ittKey(year, 'friendster-friends')}`, async ({
       page,
     }) => {
@@ -431,7 +432,7 @@ test.describe('scenario: friendster add friend', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('scenario: blogger login', () => {
-  for (const year of ['1999', '2003', '2005', '2006']) {
+  for (const year of ['1999', '2003']) {
     test(`blogger ${year}: login → edit.html`, async ({ page }) => {
       await page.goto(`/years/${year}/sites/blogger/index.html`);
       await clearKeys(page, ittKey(year, 'blog'));
@@ -459,147 +460,10 @@ test.describe('scenario: blogger login', () => {
  * 2005-only signature products — each scenario
  * ═══════════════════════════════════════════════════════════════════════ */
 
-test.describe('scenario: youtube 2005', () => {
-  test('youtube: upload → itt05-yt-uploads + list', async ({ page }) => {
-    await gotoReady(page, '/years/2005/sites/youtube/upload.html', '[data-yt-upload]', 'itt05-yt-uploads');
-    const title = 'ScenarioYT ' + Date.now();
-    await page.fill('[data-yt-upload] [name="title"]', title);
-    if (await page.locator('[data-yt-upload] [name="desc"]').count()) {
-      await page.fill('[data-yt-upload] [name="desc"]', 'scenario clip');
-    }
-    await clickSubmit(page, '[data-yt-upload]');
-    await expect(page.locator('[data-yt-upload-status]')).toContainText(/Upload|list|videos|saved/i, {
-      timeout: 10000,
-    });
-    expect(await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'))).toContain(title);
-    await page.goto('/years/2005/sites/youtube/index.html');
-    await page.waitForSelector('[data-yt-list]', { timeout: 20000 });
-    await expect(page.locator('[data-yt-list]')).toContainText(title, { timeout: 10000 });
-  });
 
-  test('youtube: like increments views in itt05-yt-views', async ({ page }) => {
-    await page.goto('/years/2005/sites/youtube/watch.html?v=Me%20at%20the%20zoo');
-    await clearKeys(page, 'itt05-yt-views');
-    await page.reload();
-    await page.waitForSelector('[data-yt-like]', { timeout: 20000 });
-    const before = parseInt(await page.locator('[data-yt-views]').innerText(), 10);
-    await page.locator('[data-yt-like]').click();
-    await expect(page.locator('[data-yt-views]')).toContainText(String(before + 1), { timeout: 5000 });
-    const raw = await page.evaluate(() => localStorage.getItem('itt05-yt-views'));
-    expect(raw || '').toMatch(/zoo|Me at the zoo/i);
-  });
-});
 
-test.describe('scenario: reddit 2005', () => {
-  test('reddit: submit → itt05-reddit-links + index', async ({ page }) => {
-    await gotoReady(
-      page,
-      '/years/2005/sites/reddit/submit.html',
-      '[data-reddit-submit]',
-      'itt05-reddit-links'
-    );
-    const title = 'ScenarioReddit ' + Date.now();
-    await page.fill('[data-reddit-submit] [name="title"]', title);
-    await page.fill('[data-reddit-submit] [name="url"]', 'http://example.com/scenario-reddit');
-    await clickSubmit(page, '[data-reddit-submit]');
-    await expect(page.locator('[data-reddit-status]')).toContainText(/Submitted|browser|front/i, {
-      timeout: 10000,
-    });
-    expect(await page.evaluate(() => localStorage.getItem('itt05-reddit-links'))).toContain(title);
-    await page.goto('/years/2005/sites/reddit/index.html');
-    await page.waitForSelector('[data-reddit-list]', { timeout: 20000 });
-    await expect(page.locator('[data-reddit-list]')).toContainText(title, { timeout: 10000 });
-  });
 
-  test('reddit: boost increments score', async ({ page }) => {
-    await gotoReady(
-      page,
-      '/years/2005/sites/reddit/index.html',
-      '[data-reddit-up]',
-      'itt05-reddit-links'
-    );
-    const up = page.locator('[data-reddit-up]').first();
-    const id = await up.getAttribute('data-reddit-up');
-    const scoreEl = page.locator(`[data-reddit-score="${id}"]`);
-    const before = parseInt(await scoreEl.innerText(), 10);
-    await up.click();
-    await expect(scoreEl).toContainText(String(before + 1), { timeout: 5000 });
-  });
-});
 
-test.describe('scenario: maps 2005', () => {
-  test('maps: zoom + local search update status', async ({ page }) => {
-    await gotoReady(page, '/years/2005/sites/maps/index.html', '[data-maps-status]', 'itt05-maps-state');
-    await page.locator('[data-maps-zoom="in"]').click();
-    await expect(page.locator('[data-maps-status]')).toContainText(/Zoom/i, { timeout: 5000 });
-    if (await page.locator('[name="what"]').count()) {
-      await page.fill('[name="what"]', 'coffee');
-      await page.fill('[name="where"]', 'Portland, OR');
-    } else {
-      await page.fill('[name="q"]', 'Portland, OR');
-    }
-    await clickSubmit(page, '[data-maps-search]');
-    await expect(page.locator('[data-maps-status]')).toContainText(/Local Search|Results|coffee|Portland/i, {
-      timeout: 5000,
-    });
-  });
-
-  test('maps: state persists in itt05-maps-state', async ({ page }) => {
-    await gotoReady(page, '/years/2005/sites/maps/index.html', '[data-maps-status]', 'itt05-maps-state');
-    await page.locator('[data-maps-zoom="in"]').click();
-    if (await page.locator('[name="what"]').count()) {
-      await page.fill('[name="what"]', 'pizza');
-      await page.fill('[name="where"]', 'Oakland, CA');
-    }
-    await clickSubmit(page, '[data-maps-search]');
-    await expect(page.locator('[data-maps-status]')).toContainText(/pizza|Oakland|Local Search/i, {
-      timeout: 5000,
-    });
-    const raw = await page.evaluate(() => localStorage.getItem('itt05-maps-state'));
-    expect(raw || '').toMatch(/zoom|history|pizza|Oakland/i);
-    await page.reload();
-    await page.waitForSelector('[data-maps-history]', { timeout: 20000 });
-    await expect(page.locator('[data-maps-history]')).toContainText(/pizza|Oakland/i, { timeout: 5000 });
-  });
-});
-
-test.describe('scenario: housingmaps 2005', () => {
-  test('housingmaps: filter → pins + itt05-housingmaps', async ({ page }) => {
-    await gotoReady(
-      page,
-      '/years/2005/sites/housingmaps/index.html',
-      '[data-hm-filter]',
-      'itt05-housingmaps'
-    );
-    await page.selectOption('[name="city"]', 'Austin');
-    if (await page.locator('[name="kind"]').count()) {
-      await page.selectOption('[name="kind"]', 'rent');
-    }
-    if (await page.locator('[name="max"]').count()) {
-      await page.fill('[name="max"]', '1000');
-    }
-    await clickSubmit(page, '[data-hm-filter]');
-    await expect(page.locator('[data-hm-status]')).toContainText(/Austin/i, { timeout: 5000 });
-    await expect(page.locator('[data-hm-pins]')).toContainText(/Austin|800|\$/i, { timeout: 5000 });
-    expect(await page.evaluate(() => localStorage.getItem('itt05-housingmaps'))).toMatch(/Austin/);
-  });
-});
-
-test.describe('scenario: podcasts 2005', () => {
-  test('podcasts: subscribe → itt05-pod-subs + list', async ({ page }) => {
-    await gotoReady(page, '/years/2005/sites/itunes/index.html', '[data-pod-sub]', 'itt05-pod-subs');
-    await page.locator('[data-pod-sub="This Week in Web 2.0"]').click();
-    await expect(page.locator('[data-pod-status]')).toContainText(/Subscribed|This Week/i, {
-      timeout: 5000,
-    });
-    expect(await page.evaluate(() => localStorage.getItem('itt05-pod-subs'))).toContain(
-      'This Week in Web 2.0'
-    );
-    await expect(page.locator('[data-pod-list]')).toContainText(/This Week in Web 2.0/i, {
-      timeout: 5000,
-    });
-  });
-});
 
 /* ═══════════════════════════════════════════════════════════════════════
  * 2004-only continuity products
@@ -786,7 +650,7 @@ test.describe('scenario: ebay/auction bid form (sample years)', () => {
 });
 
 test.describe('scenario: google search (sample years)', () => {
-  for (const year of ['1998', '2001', '2005', '2006']) {
+  for (const year of ['1998', '2001', '2004']) {
     test(`google ${year}: search form navigates with q`, async ({ page }) => {
       await page.goto(`/years/${year}/sites/google/index.html`);
       await page.waitForSelector('form[data-google-search] input[name="q"], form input[name="q"]', {
@@ -826,41 +690,4 @@ test.describe('scenario: hotmail login (1996–1998)', () => {
   }
 });
 
-test.describe('scenario: technorati cosmos (already multi-year; sample isolation)', () => {
-  test('technorati 2005 cosmos writes itt05 only', async ({ page }) => {
-    await gotoReady(page, '/years/2005/sites/technorati/index.html', '[data-technorati-cosmos]', [
-      'itt05-technorati-cosmos',
-      'itt04-technorati-cosmos',
-    ]);
-    await page.fill('[data-technorati-cosmos] [name="url"]', 'http://example.com/iso-tech');
-    await clickSubmit(page, '[data-technorati-cosmos]');
-    await expect(page.locator('[data-technorati-status]')).toContainText(/blogs linking|Cosmos/i, {
-      timeout: 5000,
-    });
-    const pair = await page.evaluate(() => ({
-      y05: localStorage.getItem('itt05-technorati-cosmos'),
-      y04: localStorage.getItem('itt04-technorati-cosmos'),
-    }));
-    expect(pair.y05 || '').toContain('iso-tech');
-    expect(pair.y04 || '').not.toContain('iso-tech');
-  });
-});
 
-test.describe('scenario: delicious / digg isolation samples', () => {
-  test('delicious 2005 post writes itt05 only', async ({ page }) => {
-    await gotoReady(page, '/years/2005/sites/delicious/index.html', '[data-delicious-post]', [
-      'itt05-delicious-posts',
-      'itt04-delicious-posts',
-    ]);
-    const title = 'IsoDel05 ' + Date.now();
-    await page.fill('[data-delicious-post] [name="url"]', 'http://example.com/iso05');
-    await page.fill('[data-delicious-post] [name="title"]', title);
-    await clickSubmit(page, '[data-delicious-post]');
-    const pair = await page.evaluate(() => ({
-      y05: localStorage.getItem('itt05-delicious-posts'),
-      y04: localStorage.getItem('itt04-delicious-posts'),
-    }));
-    expect(pair.y05 || '').toContain(title);
-    expect(pair.y04 || '').not.toContain(title);
-  });
-});

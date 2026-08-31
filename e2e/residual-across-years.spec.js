@@ -4,6 +4,7 @@
  * Incomplete never writes. completeRealGate checks literacy then acts.
  */
 const { test, expect } = require("@playwright/test");
+
 const { completeRealGate } = require("./helpers");
 const fs = require("fs");
 const path = require("path");

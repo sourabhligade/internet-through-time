@@ -38,18 +38,6 @@
       { id: "wowchore", slot: "c", title: "WoW Chore", engine: "gather", key: "itt04-game-wowchore", inspire: "World of Warcraft · 23 Nov 2004", trap: "Gold seller" },
       { id: "hl2grav", slot: "d", title: "HL2 Grav", engine: "corridor", key: "itt04-game-hl2grav", inspire: "Half-Life 2 · 16 Nov 2004", trap: "Gravity gun rip" }
     ],
-    "2005": [
-      { id: "penguinice", slot: "c", title: "Penguin Ice", engine: "craft", key: "itt05-game-penguinice", inspire: "Club Penguin · 24 Oct 2005", trap: "Official puffle" },
-      { id: "colossclb", slot: "d", title: "Colossus Climb", engine: "platform", key: "itt05-game-colossclb", inspire: "Shadow of the Colossus · 18 Oct 2005 JP", trap: "Official colossus" }
-    ],
-    "2006": [
-      { id: "oblivwalk", slot: "c", title: "Obliv Walk", engine: "gather", key: "itt06-game-oblivwalk", inspire: "TES IV: Oblivion · 20 Mar 2006", trap: "Click wheel" },
-      { id: "gearscover", slot: "d", title: "Gears Cover", engine: "corridor", key: "itt06-game-gearscover", inspire: "Gears of War · 7 Nov 2006", trap: "Official cog" }
-    ],
-    "2007": [
-      { id: "shockbath", slot: "c", title: "Shock Bath", engine: "corridor", key: "itt07-game-shockbath", inspire: "BioShock · 21 Aug 2007", trap: "Would you kindly" },
-      { id: "galaxspin", slot: "d", title: "Galaxy Spin", engine: "platform", key: "itt07-game-galaxspin", inspire: "Super Mario Galaxy · 1 Nov 2007", trap: "Official luma" }
-    ],
     "2008": [
       { id: "sporecell", slot: "c", title: "Spore Cell", engine: "craft", key: "itt08-game-sporecell", inspire: "Spore · 7 Sep 2008", trap: "Official cell" },
       { id: "braidfold", slot: "d", title: "Braid Fold", engine: "fold", key: "itt08-game-braidfold", inspire: "Braid · 6 Aug 2008", trap: "Official Tim" }

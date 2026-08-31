@@ -5,6 +5,7 @@
  */
 const { test, expect } = require("@playwright/test");
 
+
 async function clearAim(page) {
   await page.evaluate(() => {
     Object.keys(localStorage)

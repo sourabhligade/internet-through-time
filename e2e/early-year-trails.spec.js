@@ -4,6 +4,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
+
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
   await el.click();
@@ -44,10 +45,6 @@ const YEARS = [
   {
     y: '2004',
     must: [/Connection trails|REAL multipath/i, /Firefox|Gmail/i, /Flickr|Thefacebook|facebook/i, /Starting Point/i],
-  },
-  {
-    y: '2005',
-    must: [/Connection trails|REAL multipath/i, /YouTube|Digg|Flickr/i, /Starting Point|flow map/i],
   },
   {
     y: '2008',

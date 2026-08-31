@@ -1,6 +1,5 @@
 /**
  * Immersion config — 2006
- * Thesis: social breakthrough · Twitter · FB open/Feed · Google→YT · Digg peak · Docs · AWS
  */
 (function (global) {
   "use strict";
@@ -21,9 +20,6 @@
       yahoo: true,
       napster: true,
       blogger: true,
-      slashdot: true,
-      technorati: true,
-      plugin: true,
       friendster: true,
       kazaa: true,
       myspace: true,
@@ -35,40 +31,33 @@
       gmail: true,
       facebook: true,
       flickr: true,
+      digg: true,
       youtube: true,
       maps: true,
       reddit: true,
-      digg: true,
-      podcasts: true,
-      delicious: true,
+      pandora: true,
       housingmaps: true,
-      feedburner: true,
+      podcasts: true,
       twitter: true,
       docs: true,
-      aws: true,
-      reader: true
+      aws: true
     },
-    navSubtitle: "IE 6 · XP · Twitter · Facebook · YouTube · Digg · Docs",
+    navSubtitle: "IE 6 · Windows XP · Upload · Maps · Reddit",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "Twitter", href: "sites/twitter/index.html", match: "/twitter/" },
-      { label: "Facebook", href: "sites/facebook/index.html", match: "/facebook/" },
-      { label: "YouTube", href: "sites/youtube/index.html", match: "/youtube/" },
-      { label: "Digg", href: "sites/digg/index.html", match: "/digg/" },
-      { label: "Docs", href: "sites/docs/index.html", match: "/docs/" },
-      { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" },
-      { label: "Google", href: "sites/google/index.html", match: "/google/" }
+      { label: "Firefox", href: "sites/firefox/index.html", match: "/firefox/" },
+      { label: "Gmail", href: "sites/gmail/index.html", match: "/gmail/" },
+      { label: "Flickr", href: "sites/flickr/index.html", match: "/flickr/" },
+      { label: "Thefacebook", href: "sites/facebook/index.html", match: "/facebook/" },
+      { label: "Google", href: "sites/google/index.html", match: "/google/" },
+      { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "Twitter", href: "sites/twitter/index.html" },
-      { label: "Facebook", href: "sites/facebook/index.html" },
-      { label: "YouTube", href: "sites/youtube/index.html" },
-      { label: "Digg", href: "sites/digg/index.html" },
-      { label: "Docs", href: "sites/docs/index.html" },
-      { label: "Reader", href: "sites/reader/index.html" },
-      { label: "AWS", href: "sites/aws/index.html" },
+      { label: "Gmail", href: "sites/gmail/index.html" },
+      { label: "Flickr", href: "sites/flickr/index.html" },
+      { label: "Web 2.0 Conf", href: "sites/web20conference/index.html" },
       { label: "About 2006", href: "pages/about.html" }
     ],
     tour: [
@@ -77,80 +66,72 @@
         label: "About 2006",
         href: "pages/about.html",
         match: "/about",
-        hint: "85.5M sites · social breakthrough",
-        doneMessage: "Twitter · Facebook open · Google→YouTube · Digg peak."
+        hint: "64.8M sites · boom year · Yahoo still #1",
+        doneMessage: "Upload · Maps · Reddit · Google owns YouTube as of Oct 2006."
       },
       {
-        id: "twitter",
-        label: "Twitter / Twttr",
-        href: "sites/twitter/index.html",
-        match: "/twitter/",
-        hint: "What are you doing? · 140 chars",
-        doneMessage: "Compose + timeline — Mar 21 first tweet · Jul 15 public."
+        id: "firefox",
+        label: "Firefox 1.0",
+        href: "sites/firefox/index.html",
+        match: "/firefox/",
+        hint: "Nov 9 · tabs · popup block",
+        doneMessage: "IE6 still mass default — Firefox is rising."
+      },
+      {
+        id: "gmail",
+        label: "Gmail",
+        href: "sites/gmail/index.html",
+        match: "/gmail/",
+        hint: "invite · 1 GB · search mail",
+        doneMessage: "Invite-only webmail — 1 GB pitch."
+      },
+      {
+        id: "flickr",
+        label: "Flickr",
+        href: "sites/flickr/index.html",
+        match: "/flickr/",
+        hint: "photostream · tags",
+        doneMessage: "Ludicorp Flickr — not Yahoo-owned yet."
       },
       {
         id: "facebook",
-        label: "Facebook",
+        label: "Thefacebook",
         href: "sites/facebook/index.html",
         match: "/facebook/",
-        hint: "News Feed · open Sep 26",
-        doneMessage: "Feed + open registration — not campus-only after Sep 26."
+        hint: "campus network only",
+        doneMessage: "Harvard seed — not open Facebook."
       },
       {
-        id: "youtube",
-        label: "YouTube",
-        href: "sites/youtube/index.html",
-        match: "/youtube/",
-        hint: "Broadcast Yourself · Google deal late year",
-        doneMessage: "Independent early · Google $1.65B Oct/Nov honesty."
-      },
-      {
-        id: "digg",
-        label: "Digg",
-        href: "sites/digg/index.html",
-        match: "/digg/",
-        hint: "Peak UGC · digg it / bury",
-        doneMessage: "Front-page power diggers — peak year."
-      },
-      {
-        id: "docs",
-        label: "Google Docs",
-        href: "sites/docs/index.html",
-        match: "/docs/",
-        hint: "Writely → Docs & Spreadsheets Oct 10",
-        doneMessage: "Collaborative web office theater."
-      },
-      {
-        id: "aws",
-        label: "Amazon Web Services",
-        href: "sites/aws/index.html",
-        match: "/aws/",
-        hint: "S3 Mar 14 · EC2 Aug",
-        doneMessage: "Developer cloud birth — not a consumer console."
+        id: "google",
+        label: "Google",
+        href: "sites/google/index.html",
+        match: "/google/",
+        hint: "IPO year",
+        doneMessage: "Search habit + public company story."
       },
       {
         id: "myspace",
         label: "MySpace",
         href: "sites/myspace/index.html",
         match: "/myspace/",
-        hint: "Still mass social · News Corp",
-        doneMessage: "Mass social continuity from 2005 sale."
+        hint: "mass social still",
+        doneMessage: "MySpace still larger than Thefacebook."
       },
       {
-        id: "reader",
-        label: "Google Reader",
-        href: "sites/reader/index.html",
-        match: "/reader/",
-        hint: "Sep 2006 redesign · unread counts",
-        doneMessage: "RSS geek pane — most people still don’t use feeds."
+        id: "web20",
+        label: "Web 2.0 Conf",
+        href: "sites/web20conference/index.html",
+        match: "/web20conference/",
+        hint: "Oct · Web as Platform",
+        doneMessage: "Business meets blogosphere."
       },
       {
-        id: "ie7",
-        label: "IE 7",
-        href: "sites/microsoft/ie7.html",
-        match: "/ie7",
-        hint: "Oct 18 download · shell stays IE6",
-        doneMessage: "Late-year browser story — XP+IE6 remains default."
+        id: "amazon",
+        label: "Amazon",
+        href: "sites/amazon/index.html",
+        match: "/amazon/",
+        hint: "smile continues",
+        doneMessage: "Commerce continuity."
       }
     ]
   };

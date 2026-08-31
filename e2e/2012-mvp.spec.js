@@ -3,6 +3,7 @@
  * 2012 lean from-scratch — door + star + thesis
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear } = require('./helpers');
 
 async function clearKeys(page, keys) {

@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 const { twoStepClick } = require('./helpers');
 
 async function clearKeys(page, keys) {

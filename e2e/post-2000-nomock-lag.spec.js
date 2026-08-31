@@ -3,9 +3,16 @@
  * Post-2000: no unused product engines on a single room.
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 
 test.describe('post-2000 boot is page-local, not the full forest', () => {
   test('2005 YouTube does not load Amazon / Napster engines', async ({ page }) => {
+    skipIfWiped('2005');
     const extra = [];
     page.on('request', (req) => {
       const u = req.url();

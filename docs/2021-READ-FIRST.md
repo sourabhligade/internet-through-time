@@ -1,9 +1,9 @@
 # 2021 — READ FIRST (lean door)
 
 **Date:** 2026-08-27  
-**Status:** **lean door on disk.** Hub card open. `SHIP_YEARS` includes 2021.  
-**Do not** `git checkout` an old 2020–2025 forest. Hard stop ~50–90 HTML.  
-**This pass:** implement (named). Same lean-door job as 2006.  
+**Status:** **live lean 3× door.** Hub card open. Passport chip live. `SHIP_YEARS` includes 2021.  
+**Do not** `git checkout` an old 2020–2025 forest.  
+**This pass:** 3× leftover + 3×-links ship (177 dests / 376 HTML). **P5 2× deepen rooms restored** (32 `ITT-DP-ROOM` theaters + `#ott-2x-2021-dp`). Costume / full visitor chrome is a later pass.  
 **Map:** [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Research freeze (2026-08-28):** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md)  
 **In-place implement (walk this):** [`2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md)  
@@ -32,12 +32,17 @@
 
 ## Size lock
 
+This pass is the **3× leftover + 3×-links** door, not the old ≤90 lean cap.
+
 | Metric | Rule |
 |--------|------|
-| HTML | **≤ 90** (prefer ~50–70) |
+| Dest folders | **≥ 177** |
+| HTML | **≥ 276** (this ship: 376) |
 | Guided | **6** |
 | Official trails | **10** |
-| 2× leftover | **83** (51 first door + **32** year-true `-dp` dests). Do not pad with more `*about` plaques. |
+| Leftover 3× doors | **27** as three strips **9 + 9 + 9** (not stuffed into one `pop3x`) |
+| 3×-links also-nav | `n = max(36, min(72, dest_count // 2))` via `scripts/build-3x-links.py` |
+| Minute bible | [`2021-3X-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md`](2021-3X-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md) |
 
 ## Dual-cite
 

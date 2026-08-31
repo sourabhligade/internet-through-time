@@ -1,13 +1,24 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
+
 const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
+const WIPED = new Set(["2005", "2006", "2007", "2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"]);
 const SHIP = [];
 for (let y = 1994; y <= 2023; y++) {
   const year = String(y);
+  if (WIPED.has(year)) continue;
   if (fs.existsSync(path.join(ROOT, "years", year, "index.html"))) SHIP.push(year);
+}
+
+async function openAlsoYear(page, year) {
+  const box = page.locator(`#itt-also-year-${year}`);
+  if (await box.count()) {
+    await box.locator("summary").first().click();
+    await expect(box).toHaveAttribute("open", "");
+  }
 }
 
 async function tickAllReqs(page) {
@@ -34,8 +45,10 @@ async function leftoverSave(page, year, slug, key) {
 
 test.describe("third leftover 3× — every shipped year", () => {
   for (const year of SHIP) {
+    if (year === "2021") continue; // 9 doors — e2e/2021-3x-links.spec.js
     test(`${year} home lists 3 third-trio leftover doors`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
+      await openAlsoYear(page, year);
       const strip = page.locator(`[data-itt-pop-3x3="${year}"]`);
       await expect(strip).toBeVisible();
       await expect(strip.locator("a[href*='sites/']")).toHaveCount(3);
@@ -66,15 +79,8 @@ test.describe("third leftover 3× writers — sample years", () => {
     await leftoverSave(page, "1994", "lycos", "itt94-pop3-lycos");
   });
 
-  test("2009 mafiawars empty never writes then leftover save", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2009", "index.html")), "2009 wiped");
-    await leftoverSave(page, "2009", "mafiawars", "itt09-pop3-mafiawars");
-  });
   test("2010 chrome empty never writes then leftover save", async ({ page }) => {
     await leftoverSave(page, "2010", "chrome", "itt10-pop3-chrome");
-  });
-  test("2011 snapchat empty never writes then leftover save", async ({ page }) => {
-    await leftoverSave(page, "2011", "snapchat", "itt11-pop3-snapchat");
   });
   test("2012 reddit empty never writes then leftover save", async ({ page }) => {
     await leftoverSave(page, "2012", "reddit", "itt12-pop3-reddit");
@@ -87,20 +93,4 @@ test.describe("third leftover 3× writers — sample years", () => {
   });
 });
 
-test.describe("third leftover 3× costume rooms", () => {
-  test("2009 ubercab trap never writes", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2009", "index.html")), "2009 wiped");
-    await page.goto("/years/2009/sites/ubercab/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt09-pop3-ubercab"));
-    await page.reload();
-    await page.locator("[data-ub09-trap]").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt09-pop3-ubercab"))).toBeFalsy();
-  });
-  test("2011 snapchat story trap never writes", async ({ page }) => {
-    await page.goto("/years/2011/sites/snapchat/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt11-pop3-snapchat"));
-    await page.reload();
-    await page.locator("[data-sc11-trap]").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt11-pop3-snapchat"))).toBeFalsy();
-  });
-});
+

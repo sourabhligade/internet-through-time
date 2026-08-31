@@ -7,6 +7,7 @@ const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 
+
 const ROOT = path.join(__dirname, "..");
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
 /** @type {{ year: string, href: string, key: string, suffix: string, needPick: string, minPick: number, field: boolean, placeholder: string }[]} */
@@ -33,13 +34,13 @@ async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-async function waitLo(page) {
-  const panel = page.locator("[data-lo-panel]").first();
+async function waitLo(page, suffix) {
+  const panel = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
   await panel.locator("[data-lo-save]").waitFor({ timeout: 20000 });
-  await page.waitForFunction(() => {
-    const b = document.querySelector("[data-lo-panel] [data-lo-save]");
+  await page.waitForFunction((suf) => {
+    const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
     return !!(b && b.getAttribute("data-lo-bound") === "1");
-  }, null, { timeout: 20000 });
+  }, suffix, { timeout: 20000 });
 }
 
 /**
@@ -47,9 +48,9 @@ async function waitLo(page) {
  * @param {(typeof DESTS)[0]} d
  */
 async function runDest(page, d) {
-  const lo = page.locator("[data-lo-panel]").first();
+  const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${d.suffix}"])`).first();
   await page.goto("/years/" + d.year + "/" + d.href);
-  await waitLo(page);
+  await waitLo(page, d.suffix);
   /* Dest extras may seed the same key on boot — leftover machine starts after that. */
   await page.evaluate((k) => localStorage.removeItem(k), d.key);
 

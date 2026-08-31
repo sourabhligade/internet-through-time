@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
 const FLOWS = [
   { suf: 'pin', path: '/years/2012/sites/pinterest/index.html', next: /facebook\/ipo/ },
   { suf: 'fb-ipo', path: '/years/2012/sites/facebook/ipo.html', next: /index\.html/ },

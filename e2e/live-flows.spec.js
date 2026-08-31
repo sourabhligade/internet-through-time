@@ -1,5 +1,11 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 const { checkAllReq, twoStepClick } = require('./helpers');
 
 /**
@@ -47,6 +53,7 @@ test.describe('Live flows — former theater CTAs', () => {
   });
 
   test('2005 YouTube upload mutates itt05-yt-uploads', async ({ page }) => {
+    skipIfWiped('2005');
     // Replaces flaky data-yt-file-name assertion (file picker theater is optional)
     await page.goto('/years/2005/sites/youtube/upload.html');
     await page.evaluate(() => {
@@ -58,7 +65,11 @@ test.describe('Live flows — former theater CTAs', () => {
     });
     await page.reload();
     await page.waitForSelector('[data-yt-upload]', { timeout: 20000 });
-    await page.fill('[data-yt-upload] [name="title"]', 'zoo-clip museum');
+    await page.fill('[data-yt-upload] [name="title"]', 'zoo-clip museum residual');
+    await page.fill('[data-yt-upload] [name="desc"]', 'first clip');
+    const reqs = page.locator('[data-yt-upload] [data-yt-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator('[data-yt-upload] button[type="submit"], [data-yt-upload] input[type="submit"]').first().click();
     await expect(page.locator('[data-yt-upload-status]')).toContainText(/upload|saved|list|itt05/i, {
       timeout: 8000,

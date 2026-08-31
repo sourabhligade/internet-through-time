@@ -2,6 +2,12 @@
 /** Viral coefficients — V1 k-loops + V2/V3 culture toys.
  * Incomplete never writes. Gold is not restarred. */
 const { test, expect } = require("@playwright/test");
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 
 /**
  * @param {import("@playwright/test").Page} page
@@ -49,6 +55,7 @@ test.describe("viral loops V4 leftover", () => {
   });
 
   test("2005 YouTube URL share incomplete writes nothing; complete writes itt05-yt-url", async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto("/years/2005/sites/youtube/watch.html");
     await clearKey(page, "itt05-yt-url");
     await page.reload();

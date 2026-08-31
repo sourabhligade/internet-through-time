@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 const { enterYear, contentFrame } = require("./helpers");
 
 test.describe("2019 MVP", () => {

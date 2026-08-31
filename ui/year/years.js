@@ -793,40 +793,18 @@
     "bodyClass": "year-2005 os-winxp browser-ie6",
     "boot": "browser-2005.js",
     "dir": [
-      {
-        "go": "pages/home.html",
-        "label": "Start"
-      },
-      {
-        "go": "sites/youtube/index.html",
-        "label": "YouTube"
-      },
-      {
-        "go": "sites/maps/index.html",
-        "label": "Maps"
-      },
-      {
-        "go": "sites/reddit/index.html",
-        "label": "Reddit"
-      },
-      {
-        "go": "sites/digg/index.html",
-        "label": "Digg"
-      },
-      {
-        "go": "sites/gmail/index.html",
-        "label": "Gmail"
-      },
-      {
-        "go": "sites/flickr/index.html",
-        "label": "Flickr"
-      },
-      {
-        "go": "sites/myspace/index.html",
-        "label": "MySpace"
-      }
+      { "go": "pages/home.html", "label": "Start" },
+      { "go": "sites/youtube/upload.html", "label": "Upload" },
+      { "go": "sites/maps/index.html", "label": "Maps" },
+      { "go": "sites/reddit/index.html", "label": "Reddit" },
+      { "go": "sites/digg/index.html", "label": "Digg" },
+      { "go": "sites/flickr/index.html", "label": "Flickr" },
+      { "go": "sites/pandora/index.html", "label": "Pandora" },
+      { "go": "sites/myspace/index.html", "label": "MySpace" },
+      { "go": "sites/yahoo/index.html", "label": "Yahoo" },
+      { "go": "pages/about.html", "label": "About" }
     ],
-    "chrome": "2005",
+    "chrome": "2004",
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web2005/",
@@ -836,9 +814,9 @@
     "connectH2": "Network Connections",
     "connectBtn": "Connect (always-on broadband)",
     "skipBtn": "Skip connect",
-    "thesis": "2005 thesis: YouTube still independent · Maps + Ajax · Reddit · Digg rise. Always-on is common enough for web apps. No Twitter. No iPhone. No Street View.",
+    "thesis": "2005 thesis: Web 2.0 boom. YouTube upload is the save. Yahoo still #1 visits. Google does not own YouTube.",
     "openLoc": "Open Location in Internet Explorer:",
-    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 6.0<br>Copyright © 1995–2001 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Supports Dynamic HTML, CSS, ActiveX, channels, and 56k modems.</p>",
+    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 6.0<br>Copyright © 1995–2001 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Supports Dynamic HTML, CSS, ActiveX, and always-on broadband.</p>",
     "startBanner": "Windows<b>XP</b>",
     "taskBtn": "Internet Explorer",
     "icon": "e",
@@ -847,7 +825,6 @@
     "bookmarksTitle": "Favorites",
     "mailPh": "friend@aol.com",
     "hasTaskbar": true,
-    "startImg": "../../assets/period/2005/xp/start.gif",
     "maximized": true
   },
   "2006": {
@@ -859,36 +836,15 @@
     "bodyClass": "year-2006 os-winxp browser-ie6",
     "boot": "browser-2006.js",
     "dir": [
-      {
-        "go": "pages/home.html",
-        "label": "Start"
-      },
-      {
-        "go": "sites/twitter/index.html",
-        "label": "Twitter"
-      },
-      {
-        "go": "sites/facebook/feed.html",
-        "label": "Facebook"
-      },
-      {
-        "go": "sites/youtube/index.html",
-        "label": "YouTube"
-      },
-      {
-        "go": "sites/digg/index.html",
-        "label": "Digg"
-      },
-      {
-        "go": "sites/docs/index.html",
-        "label": "Docs"
-      },
-      {
-        "go": "sites/playable/game.html",
-        "label": "TrailSled"
-      }
+      { "go": "pages/home.html", "label": "Start" },
+      { "go": "sites/twitter/index.html", "label": "Twttr" },
+      { "go": "sites/facebook/feed.html", "label": "Feed" },
+      { "go": "sites/youtube/index.html", "label": "YouTube" },
+      { "go": "sites/googledocs/index.html", "label": "Docs" },
+      { "go": "sites/wikipedia/millionth.html", "label": "Wiki 1M" },
+      { "go": "pages/about.html", "label": "About" }
     ],
-    "chrome": "2006",
+    "chrome": "2004",
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web2006/",
@@ -898,9 +854,9 @@
     "connectH2": "Network Connections",
     "connectBtn": "Connect (always-on broadband)",
     "skipBtn": "Skip connect",
-    "thesis": "2006 thesis: Twitter 140 · Facebook News Feed + open registration · Digg peak. Pre-iPhone. YouTube independent until the late-year Google deal.",
+    "thesis": "2006 thesis: Twttr is the save. News Feed leftover. Google owns YouTube. iPhone is 2007.",
     "openLoc": "Open Location in Internet Explorer:",
-    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 6.0<br>Copyright © 1995–2001 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Supports Dynamic HTML, CSS, ActiveX, channels, and 56k modems.</p>",
+    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 6.0<br>Copyright © 1995–2001 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p>",
     "startBanner": "Windows<b>XP</b>",
     "taskBtn": "Internet Explorer",
     "icon": "e",
@@ -909,48 +865,6 @@
     "bookmarksTitle": "Favorites",
     "mailPh": "friend@aol.com",
     "hasTaskbar": true,
-    "maximized": true
-  },
-  "2007": {
-    "title": "Internet Explorer 7.0 — 2007",
-    "css": [
-      "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
-    "bodyClass": "year-2007 os-winxp browser-ie7",
-    "boot": "browser-2007.js",
-    "dir": [
-      { "go": "pages/home.html", "label": "Start" },
-      { "go": "sites/iphone/index.html", "label": "iPhone" },
-      { "go": "sites/gmail/index.html", "label": "Gmail" },
-      { "go": "sites/maps/index.html", "label": "Street View" },
-      { "go": "sites/facebook/index.html", "label": "Platform" },
-      { "go": "sites/playable/game.html", "label": "Peg Walk" },
-      { "go": "sites/tumblr/index.html", "label": "Tumblr" },
-      { "go": "sites/kindle/index.html", "label": "Kindle" }
-    ],
-    "chrome": "2007",
-    "toolbar": "ie",
-    "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2007/",
-    "prefHome": "http://home.microsoft.com/intl/web2007/",
-    "yearLabel": "2007 · Windows XP · Internet Explorer 7",
-    "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2007 thesis: iPhone Safari · no App Store · Gmail open · Street View · Platform. Desktop still mass. XP + IE 7.",
-    "openLoc": "Open Location in Internet Explorer:",
-    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 7.0<br>Copyright © 1995–2007 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Always-on broadband · IE 7 · Chrome is 2008.</p>",
-    "startBanner": "Windows<b>XP</b>",
-    "taskBtn": "Internet Explorer",
-    "icon": "e",
-    "aria": "Internet Explorer 7",
-    "locLabel": "Address",
-    "bookmarksTitle": "Favorites",
-    "mailPh": "friend@aol.com",
-    "hasTaskbar": true,
-    "startImg": "../../assets/period/2007/xp/start.gif",
     "maximized": true
   },
   "2008": {

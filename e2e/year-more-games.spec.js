@@ -7,6 +7,7 @@ const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 
+
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
 for (let y = 1994; y <= 2024; y++) {
@@ -34,8 +35,6 @@ function starKey(year) {
     2002: "itt02-stumble",
     2003: "itt03-photobucket",
     2004: "itt04-thefacebook-networks",
-    2005: "itt05-yt-did-upload",
-    2006: "itt06-tweets",
     2008: "itt08-github",
     2009: "itt09-like",
     2010: "itt10-ig",
@@ -48,7 +47,6 @@ function starKey(year) {
     2017: "itt17-faceid",
     2018: "itt18-gdpr",
     2019: "itt19-disneyplus",
-    2007: "itt07-iphone",
     2020: "itt20-zoom",
     2021: "itt21-att",
     2022: "itt22-chatgpt",
@@ -59,7 +57,7 @@ function starKey(year) {
 }
 
 test("every live year has more-a and more-b", () => {
-  expect(YEARS.length, "live years with more-a").toBe(27);
+  expect(YEARS.length, "live years with more-a").toBe(22);
 });
 
 /**

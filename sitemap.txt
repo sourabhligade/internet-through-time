@@ -39,17 +39,10 @@
 /years/2005/pages/home.html
 /years/2005/pages/about.html
 /years/2005/sites/youtube/upload.html
-/years/2005/sites/maps/index.html
-/years/2005/sites/reddit/index.html
-/years/2005/sites/digg/index.html
 /years/2006/
 /years/2006/pages/home.html
 /years/2006/pages/about.html
 /years/2006/sites/twitter/index.html
-/years/2007/
-/years/2007/pages/home.html
-/years/2007/pages/about.html
-/years/2007/sites/iphone/index.html
 /years/2008/
 /years/2008/pages/home.html
 /years/2008/pages/about.html
@@ -88,6 +81,9 @@
 /years/2019/pages/home.html
 /years/2019/pages/about.html
 /years/2019/sites/disneyplus/home.html
+/years/2021/
+/years/2021/pages/home.html
+/years/2021/pages/about.html
 /years/1994/sites/goodtimes/index.html
 /years/1994/sites/goodtimes/about.html
 /years/1997/sites/dancing-baby/index.html

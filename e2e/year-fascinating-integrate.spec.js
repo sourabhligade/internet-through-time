@@ -7,6 +7,10 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 const ROOT = path.join(__dirname, "..");
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "index.html"));
@@ -52,13 +56,11 @@ test.describe("Fascinating integrate leftovers", () => {
   test("leftover dests are product verbs, not I-saw / dest-field plaques", async ({ page }) => {
     const dests = [
       "/years/2012/sites/wikipedia/sopa.html",
-      "/years/2007/sites/maps/index.html",
       "/years/2009/sites/farmville/index.html",
       "/years/2011/sites/iphone/index.html",
       "/years/2015/sites/letsencrypt/index.html",
       "/years/1994/sites/hotwired/ad-att.html",
       "/years/2000/sites/pets/shutdown.html",
-      "/years/2006/sites/facebook/feed.html",
       "/years/2008/sites/chrome/index.html",
       "/years/1999/sites/seti/index.html",
       "/years/2013/sites/healthcare/index.html",
@@ -98,6 +100,7 @@ test.describe("Fascinating integrate leftovers", () => {
   });
 
   test("2007 Street View 0–1 city never writes · two cities persist last pano", async ({ page }) => {
+    skipIfWiped('2007');
     test.skip(!yearOnDisk("2007"), "2007 wiped");
     await openClean(page, "/years/2007/sites/maps/index.html", ["itt07-streetview", "itt07-iphone"]);
     await page.locator('[data-sv07-city="sf"]').click();
@@ -181,6 +184,7 @@ test.describe("Fascinating integrate leftovers", () => {
   });
 
   test("2006 News Feed hide never writes · one story writes itt06-feed", async ({ page }) => {
+    skipIfWiped('2006');
     test.skip(!yearOnDisk("2006"), "2006 wiped");
     await openClean(page, "/years/2006/sites/facebook/feed.html", ["itt06-feed", "itt06-tweets"]);
     await page.locator("[data-feed-hide]").waitFor({ timeout: 20000 });

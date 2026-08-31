@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 test.describe("2011 mvp", () => {
   test("hub card opens Starting Point", async ({ page }) => {
     await page.goto("/");

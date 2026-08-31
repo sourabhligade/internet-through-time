@@ -4,6 +4,12 @@
  * Incomplete actions must NOT write storage; full multi-step must write year-prefixed keys.
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
@@ -77,6 +83,7 @@ test.describe('densify reload persistence (REAL)', () => {
 
 test.describe('2005 signature REAL vs mock gates', () => {
   test('YouTube blank title soft-fail; titled upload is REAL', async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto('/years/2005/sites/youtube/upload.html');
     await clearKeys(page, ['itt05-yt-uploads']);
     await page.reload();
@@ -95,6 +102,7 @@ test.describe('2005 signature REAL vs mock gates', () => {
   });
 
   test('Reddit blank title soft-fail; submit is REAL', async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto('/years/2005/sites/reddit/submit.html');
     await clearKeys(page, ['itt05-reddit-links']);
     await page.reload();
@@ -114,6 +122,7 @@ test.describe('2005 signature REAL vs mock gates', () => {
   });
 
   test('Digg blank title soft-fail; digg + submit use itt05 only', async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto('/years/2005/sites/digg/submit.html');
     await clearKeys(page, ['itt05-digg-links', 'itt04-digg-links']);
     await page.reload();

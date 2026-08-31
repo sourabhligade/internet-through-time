@@ -253,15 +253,15 @@
     "path": "/years/2005/sites/utorrent/index.html",
     "key": "itt05-utorrent",
     "type": "twoClick",
-    "title": "µTorrent residual"
+    "title": "\u00b5Torrent residual"
   },
   {
     "year": "2005",
     "id": "googleearth",
-    "path": "/years/2005/sites/googleearth/index.html",
-    "key": "itt05-googleearth",
+    "path": "/years/2005/sites/earth/index.html",
+    "key": "itt05-earth-lx",
     "type": "twoClick",
-    "title": "Google Earth residual"
+    "title": "Google Earth leftover"
   },
   {
     "year": "2005",

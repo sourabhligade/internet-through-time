@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goInFrame, contentFrame, killOverlays } = require('./helpers');
 
 test('shell 2006 Obliv Walk actually plays', async ({ page }) => {

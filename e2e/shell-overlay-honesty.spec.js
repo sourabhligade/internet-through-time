@@ -4,6 +4,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
+
 async function skipOnly(page, year) {
   await page.goto(`/years/${year}/`);
   const skip = page.locator('#skip-connect');

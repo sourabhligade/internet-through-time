@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
+
 const ROOT = path.join(__dirname, '..');
 
 /** @type {{ year: string, gold: string, name: RegExp }[]} */

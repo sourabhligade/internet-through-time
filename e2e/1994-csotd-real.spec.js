@@ -4,6 +4,7 @@
  */
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("1994 CSotD + FishCam gold", () => {
   test("pick is day-stable via ?pick=; link click does not write; guestbook stamps", async ({
     page,

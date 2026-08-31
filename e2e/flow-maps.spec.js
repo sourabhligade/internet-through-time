@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
   await el.click();
@@ -10,7 +11,7 @@ async function twoStepClick(page, selector) {
 
 const { enterYear, contentFrame, goInFrame, waitForImmersion } = require('./helpers');
 
-const SAMPLE = ['1994', '1995', '1998', '2005', '2008', '2010'];
+const SAMPLE = ['1994', '1995', '1998', '2004', '2008', '2010'];
 
 for (const year of SAMPLE) {
   test.describe(`flow map ${year}`, () => {

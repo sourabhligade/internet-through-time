@@ -2,6 +2,7 @@
 /** 1994 mvp alias — W7 pack shape (wraps existing smoke + CSotD). */
 const { test, expect } = require("@playwright/test");
 
+
 test("1994 About prints Gray 10,022 and June 2,738", async ({ page }) => {
   await page.goto("/years/1994/pages/about.html");
   await expect(page.locator("body")).toContainText("10,022");

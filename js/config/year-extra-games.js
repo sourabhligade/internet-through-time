@@ -119,38 +119,6 @@
       "key": "itt04-game-flickrfave"
     }
   ],
-  "2005": [
-    {
-      "id": "ytsurge",
-      "title": "YouTube surge",
-      "href": "extra-a.html",
-      "key": "itt05-game-ytsurge"
-    },
-    {
-      "id": "mapdrag",
-      "title": "Maps drag",
-      "href": "extra-b.html",
-      "key": "itt05-game-mapdrag"
-    },
-    { "id": "boost", "title": "Reddit boost seq", "href": "extra-c.html", "key": "itt05-game-boost" },
-    { "id": "bury", "title": "Digg bury pick", "href": "extra-d.html", "key": "itt05-game-bury" },
-    { "id": "pod", "title": "iTunes subscribe", "href": "extra-e.html", "key": "itt05-game-pod" },
-    { "id": "hm", "title": "HousingMaps city", "href": "extra-f.html", "key": "itt05-game-hm" },
-    { "id": "radio", "title": "Pandora station", "href": "extra-g.html", "key": "itt05-game-radio" },
-    { "id": "tag", "title": "Flickr tag", "href": "extra-h.html", "key": "itt05-game-tag" },
-    { "id": "deli", "title": "delicious bookmark", "href": "extra-i.html", "key": "itt05-game-deli" }
-  ],
-  "2006": [
-    { "id": "t140type", "title": "140 type", "href": "extra-a.html", "key": "itt06-game-t140type" },
-    { "id": "diggup", "title": "Digg up", "href": "extra-b.html", "key": "itt06-game-diggup" },
-    { "id": "kongbadge2", "title": "Kong Badge", "href": "extra-c.html", "key": "itt06-game-kongbadge2" },
-    { "id": "fancydash", "title": "Fancy Dash", "href": "extra-d.html", "key": "itt06-game-fancydash" },
-    { "id": "flowcell", "title": "Flow Cell", "href": "extra-e.html", "key": "itt06-game-flowcell" },
-    { "id": "ie7tab", "title": "Tab Filter", "href": "extra-f.html", "key": "itt06-game-ie7tab" },
-    { "id": "feedtick", "title": "Feed Tick", "href": "extra-g.html", "key": "itt06-game-feedtick" },
-    { "id": "burycell", "title": "Bury Cell", "href": "extra-h.html", "key": "itt06-game-burycell" },
-    { "id": "youcover", "title": "You Cover", "href": "extra-i.html", "key": "itt06-game-youcover" }
-  ],
     "2008": [
     {
       "id": "storeget",
@@ -306,13 +274,6 @@
   ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'ntight',title:'Tight Jump',href:"extra-c.html",key:"itt04-game-ntight"});
   ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'addictpick',title:'Addicting Pick',href:"extra-d.html",key:"itt04-game-addictpick"});
   ;(ITT.yearExtraGames['2004'] = ITT.yearExtraGames['2004'] || []).push({id:'puckslap',title:'Puck Slap',href:"extra-e.html",key:"itt04-game-puckslap"});
-  /* 2005 extra-c/d/e already hold boost / bury / pod — do not collide hrefs */
-  ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'kongbadge2',title:'Kong Badge',href:"extra-c.html",key:"itt06-game-kongbadge2"});
-  ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'fancydash',title:'Fancy Dash',href:"extra-d.html",key:"itt06-game-fancydash"});
-  ;(ITT.yearExtraGames['2006'] = ITT.yearExtraGames['2006'] || []).push({id:'flowcell',title:'Flow Cell',href:"extra-e.html",key:"itt06-game-flowcell"});
-  ;(ITT.yearExtraGames['2007'] = ITT.yearExtraGames['2007'] || []).push({id:'dartlane',title:'Dart Lane',href:"extra-c.html",key:"itt07-game-dartlane"});
-  ;(ITT.yearExtraGames['2007'] = ITT.yearExtraGames['2007'] || []).push({id:'deskpath',title:'Desk Path',href:"extra-d.html",key:"itt07-game-deskpath"});
-  ;(ITT.yearExtraGames['2007'] = ITT.yearExtraGames['2007'] || []).push({id:'trickcard',title:'Trick Card',href:"extra-e.html",key:"itt07-game-trickcard"});
   ;(ITT.yearExtraGames['2008'] = ITT.yearExtraGames['2008'] || []).push({id:'fourkey',title:'Four Key Dash',href:"extra-c.html",key:"itt08-game-fourkey"});
   ;(ITT.yearExtraGames['2008'] = ITT.yearExtraGames['2008'] || []).push({id:'touchroom',title:'Touch Room',href:"extra-d.html",key:"itt08-game-touchroom"});
   ;(ITT.yearExtraGames['2008'] = ITT.yearExtraGames['2008'] || []).push({id:'burnrope',title:'Burn Rope',href:"extra-e.html",key:"itt08-game-burnrope"});

@@ -150,7 +150,11 @@ def also_block(year: int, src: Path, rooms, extras, titles, this_site: str | Non
         return ""
     digest = hashlib.md5(str(src.relative_to(ROOT)).encode()).hexdigest()
     offset = int(digest[:8], 16)
-    n = max(12, min(24, max(8, len(names) // 3)))
+    # 2021 3× lock: n = max(36, min(72, dest_count // 2)). Live 2010–2019 stay cap 24.
+    if year == 2021:
+        n = max(36, min(72, max(8, len(names) // 2)))
+    else:
+        n = max(12, min(24, max(8, len(names) // 3)))
     picks = []
     for i in range(len(names)):
         name = names[(offset + i) % len(names)]

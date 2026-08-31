@@ -4,6 +4,7 @@
  * This is how a visitor actually uses 2018 + the other year games.
  */
 const { test, expect } = require("@playwright/test");
+
 const fs = require("fs");
 const path = require("path");
 const { enterYear, goInFrame, contentFrame, killOverlays } = require("./helpers");

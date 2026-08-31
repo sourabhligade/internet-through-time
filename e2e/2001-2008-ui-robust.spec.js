@@ -5,6 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
+
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
   await el.click();
@@ -14,7 +15,7 @@ async function twoStepClick(page, selector) {
 
 const { enterYear, contentFrame, goInFrame, waitForImmersion } = require('./helpers');
 
-const YEARS = ['2004', '2005', '2006', '2007', '2008'];
+const YEARS = ['2004', '2008'];
 
 for (const year of YEARS) {
   test.describe(`UI robust ${year}`, () => {

@@ -3,6 +3,7 @@
  * P2 integration gates — cabinet title, map href, year meter.
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
 const CABINETS = {
@@ -17,8 +18,6 @@ const CABINETS = {
   2002: { title: 'Room Sticky', id: 'roomsticky' },
   2003: { title: 'Gags Lite', id: 'gagslite' },
   2004: { title: 'Gem Cascade', id: 'gemcascade' },
-  2005: { title: 'HoverChop', id: 'heli' },
-  2006: { title: 'TrailSled', id: 'sled' },
   2008: { title: 'Goo Span', id: 'goospan' },
 };
 

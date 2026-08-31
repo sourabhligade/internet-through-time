@@ -2,6 +2,7 @@
 /** 2008 5× live — incomplete never writes · Next along the locked chain · isolation. */
 const { test, expect } = require('@playwright/test');
 
+
 async function getKey(page, key) { return page.evaluate((k) => localStorage.getItem(k), key); }
 
 test.describe('2008 5× live F1–F5', () => {

@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+WIPED = {2005, 2006, 2007}
 
 # engine, museum title, why this year (period-famous, not brand clone)
 FAMOUS = {
@@ -352,6 +353,8 @@ def main() -> None:
     maps = 0
     statics = 0
     for year in range(1994, 2010):
+        if year in WIPED:
+            continue
         dest_dir = ROOT / "years" / str(year) / "sites" / "playable"
         dest_dir.mkdir(parents=True, exist_ok=True)
         (dest_dir / "famous.html").write_text(page(year), encoding="utf-8")

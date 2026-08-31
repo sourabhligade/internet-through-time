@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **24 years open** (1994–2019). **2009 / 2011 / 2020–2025** are wiped. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twitter 140. 2007 star = iPhone Safari.
+Historical reconstruction of the World Wide Web — year by year. Hub **23 years open** (1994–2005 + 2008 + 2010 + 2012–2019 + 2021). **2006–2007 / 2009 / 2011 / 2020 / 2022–2025** are wiped. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2021 star = ATT Ask.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -83,8 +83,8 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2002/` | **Boarded** — Friendster / KaZaA rebuild later |
 | `/years/2003/` | **Boarded** — MySpace / iTunes Store rebuild later |
 | `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
-| `/years/2005/` | XP · IE6 · YouTube upload · Maps · Reddit · Digg · **full year** |
-| `/years/2006/` | Twitter / Twttr 140 · News Feed leftover · XP+IE6 |
+| `/years/2005/` | **Wiped** — YouTube upload rebuild later |
+| `/years/2006/` | **Wiped** — Twitter 140 rebuild later |
 | `/years/2007/` | **Wiped** — iPhone Safari rebuild later · Chrome GIFs stay |
 | `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
 | `/years/2009/` | **Wiped** — Facebook Like rebuild later |
@@ -98,10 +98,11 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
 | `/years/2018/` | GDPR Manage · TikTok leftover · hearing · IGTV · **lean** |
 | `/years/2019/` | Disney+ Continue · TikTok leftover · Arcade · Stadia · **lean** |
-| `/years/2020/`–`/years/2025/` | **Wiped** — hub locked · no year tree |
+| `/years/2021/` | ATT Ask App Not to Track · Signal leftover · Copilot waitlist · Meta rename · **lean 3×** |
+| `/years/2020/` · `/years/2022/`–`/years/2025/` | **Wiped** — hub locked · no year tree |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**2013–2019 are lean doors.** Hub is **24 years open** (1994–2019). **2009 / 2011 / 2020–2025 are wiped.** 2007 is iPhone Safari. 2001–2003 are criteria forests. 2005 is a full YouTube-upload year. 2006 is Twitter 140.
+**2013–2019 + 2021 are lean doors.** Hub is **22 years open** (1994–2019 + 2021). **2005–2007 / 2009 / 2011 / 2020 / 2022–2025 are wiped.** 2001–2003 are criteria forests. 2021 is ATT Ask.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

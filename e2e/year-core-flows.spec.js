@@ -5,6 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
+
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
   await el.click();
@@ -24,7 +25,7 @@ const {
 
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
-  '2000', '2001', '2002', '2003', '2004', '2005', '2006',
+  '2000', '2001', '2002', '2003', '2004',
   '2008', '2010', '2012', '2015', '2016', '2017', '2018', '2019',
 ];
 
@@ -40,9 +41,6 @@ const LOCATION_HINT = {
   '2002': { type: 'stumbleupon', re: /stumbleupon/i },
   '2003': { type: 'photobucket', re: /photobucket/i },
   '2004': { type: 'gmail', re: /gmail|mail/i },
-  '2005': { type: 'youtube', re: /youtube/i },
-  '2006': { type: 'twitter', re: /twitter|twttr/i },
-  '2007': { type: 'iphone', re: /iphone/i },
 
   /* Prefer keys that exist in each year's locationHints map */
   '2008': { type: 'iphone', re: /iphone/i },
@@ -117,7 +115,7 @@ for (const year of YEARS) {
 
     test(`Museum hub link leaves immersion (UX U2)`, async ({ page }) => {
       /* Spot-check a few years so suite stays fast; path is same pattern all years. */
-      test.skip(!['1995', '2005', '2008'].includes(year), 'spot-check only');
+      test.skip(!['1995', '2004', '2008'].includes(year), 'spot-check only');
       await enterYear(page, year);
       await killOverlays(page);
       const frame = contentFrame(page);

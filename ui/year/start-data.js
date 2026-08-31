@@ -140,35 +140,23 @@
     "href": "../sites/youtube/upload.html",
     "label": "★ One-thing · YouTube upload REAL",
     "items": [
-      "<a href=\"about.html\">About 2005</a> — Web 2.0 boom",
-      "<a href=\"../sites/youtube/upload.html\">YouTube</a> — Broadcast Yourself",
-      "<a href=\"../sites/maps/index.html\">Google Maps</a> — slippy drag",
-      "<a href=\"../sites/reddit/index.html\">Reddit</a> — June boost",
-      "<a href=\"../sites/digg/index.html\">Digg</a> — rise / bury",
+      "<a href=\"about.html\">About 2005</a> — boom · Yahoo still #1",
+      "<a href=\"../sites/youtube/upload.html\">★ Upload</a> — empty / dating / Google-owned never write",
+      "<a href=\"../sites/maps/index.html\">Google Maps leftover</a> — 8 Feb · no Street View",
+      "<a href=\"../sites/reddit/index.html\">Reddit leftover</a> — 22 / 23 Jun",
+      "<a href=\"../sites/digg/index.html\">Digg leftover</a> — rise year",
       "<a href=\"map.html\">Year flow map</a>"
     ]
   },
   "2006": {
     "href": "../sites/twitter/index.html",
-    "label": "★ One-thing · Twitter 140 REAL",
+    "label": "★ One-thing · Twttr update REAL",
     "items": [
-      "<a href=\"about.html\">About 2006</a> — dual scale · bans",
-      "<a href=\"../sites/twitter/index.html\">Twitter 140</a> — type ≤140 + Update REAL",
-      "<a href=\"../sites/facebook/feed.html\">News Feed leftover</a> — 5 Sep privacy",
-      "<a href=\"../sites/youtube/index.html\">YouTube leftover</a> — independent until Oct",
-      "<a href=\"../sites/digg/index.html\">Digg leftover</a> — peak / bury",
-      "<a href=\"map.html\">Year flow map</a>"
-    ]
-  },
-  "2007": {
-    "href": "../sites/iphone/index.html",
-    "label": "★ One-thing · iPhone Safari REAL",
-    "items": [
-      "<a href=\"about.html\">About 2007</a> — dual scale · bans",
-      "<a href=\"../sites/iphone/index.html\">iPhone Safari</a> — capacity + Use Safari REAL",
-      "<a href=\"../sites/gmail/index.html\">Gmail open leftover</a> — 14 Feb",
-      "<a href=\"../sites/maps/index.html\">Street View leftover</a> — two cities",
-      "<a href=\"../sites/facebook/index.html\">Platform leftover</a> — Beacon trap",
+      "<a href=\"about.html\">About 2006</a> — feed year · Twttr birthmark",
+      "<a href=\"../sites/twitter/index.html\">★ Twttr</a> — empty / 280 / iPhone never write",
+      "<a href=\"../sites/facebook/feed.html\">News Feed leftover</a> — 5 Sep",
+      "<a href=\"../sites/youtube/index.html\">YouTube Google-owned leftover</a> — 9 Oct",
+      "<a href=\"../sites/googledocs/index.html\">Google Docs leftover</a> — Oct",
       "<a href=\"map.html\">Year flow map</a>"
     ]
   },

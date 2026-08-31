@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
 }

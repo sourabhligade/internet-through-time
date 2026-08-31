@@ -16,6 +16,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+WIPED = {"2005", "2006", "2007"}
 
 # year, rel-from-year-root, suffix, kind, title, extra, next-rel, next-label
 # extra: query placeholder | hops [(id,label)] | checks [label] | wait ms | toggle None
@@ -79,6 +80,8 @@ COLLIDE: dict[tuple[str, str], str] = {
 
 
 def F(year: str, path: str, suffix: str, kind: str, title: str, extra, nxt: str, nl: str) -> None:
+    if year in WIPED:
+        return
     new = COLLIDE.get((year, suffix), suffix)
     if new != suffix:
         RETIRE.setdefault((year, path), set()).add(suffix)

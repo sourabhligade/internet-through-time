@@ -5,6 +5,7 @@
  * Real = DOM and/or localStorage mutation under itt08-*.
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, contentFrame, completeRealGate } = require('./helpers');
 
 /**

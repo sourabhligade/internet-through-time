@@ -2,6 +2,7 @@
 /** 2000 MapQuest generate + print persist */
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("2000 MapQuest real machine", () => {
   test("empty from/to does not write trip; generate persists visitor addresses", async ({ page }) => {
     await page.goto("/years/2000/sites/mapquest/index.html");

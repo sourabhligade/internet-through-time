@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 const PACKS = require("../js/config/year-true-packs.json");
 
 async function waitPack(page) {

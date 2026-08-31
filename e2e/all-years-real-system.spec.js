@@ -10,6 +10,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
+
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
   await el.click();
@@ -190,29 +191,6 @@ test.describe('REAL system product samples', () => {
         })
       )
       .toBeGreaterThan(0);
-  });
-
-  test.skip('2005 YouTube empty title blocked; titled upload writes', async ({ page }) => {
-    await page.goto('/years/2005/sites/youtube/upload.html');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt05-yt-uploads');
-      } catch (e) {
-        /* */
-      }
-    });
-    await page.reload();
-    await page.waitForSelector('[data-yt-upload]', { timeout: 20000 });
-    await page.fill('[name="title"]', '');
-    await page.locator('[data-yt-upload] button[type="submit"]').click();
-    await page.waitForTimeout(400);
-    const empty = await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'));
-    // either null or seed-only without empty mock title — must not invent blank success as only item
-    await page.fill('[name="title"]', 'REAL system 2005 ' + Date.now());
-    await page.locator('[data-yt-upload] button[type="submit"]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-yt-uploads') || ''))
-      .toMatch(/REAL system 2005/);
   });
 
   test('1999 AIM empty sign-on blocked; SN writes itt99-aim', async ({ page }) => {

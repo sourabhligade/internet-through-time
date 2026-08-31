@@ -4,6 +4,7 @@
  * leftover key isolation, shell/voice/home-boot honesty.
  */
 const { test, expect } = require("@playwright/test");
+
 const fs = require("fs");
 const path = require("path");
 
@@ -19,7 +20,6 @@ const GOLD = [
   { year: "1999", writer: "sites/aim/index.html", key: "itt99-aim", nextNeedle: "napster", chipHref: "sites/aim/index.html" },
   { year: "2000", writer: "sites/mapquest/index.html", key: "itt00-mapquest", nextNeedle: "amazon", chipHref: "sites/mapquest/index.html" },
   { year: "2004", writer: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", nextNeedle: "friends", chipHref: "sites/facebook/networks.html" },
-  { year: "2005", writer: "sites/youtube/upload.html", key: "itt05-yt-did-upload", nextNeedle: "maps", chipHref: "sites/youtube/upload.html" },
   { year: "2008", writer: "sites/github/issue.html", key: "itt08-github", nextNeedle: "appstore", chipHref: "sites/github/issue.html" },
   { year: "2009", writer: "sites/facebook/index.html", key: "itt09-like", nextNeedle: "farmville", chipHref: "sites/facebook/index.html" },
   { year: "2010", writer: "sites/imgur/index.html", key: "itt10-imgur", nextNeedle: "reddit", chipHref: "sites/imgur/index.html" },

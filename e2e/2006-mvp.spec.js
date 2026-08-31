@@ -1,67 +1,26 @@
-// @ts-check
 const { test, expect } = require('@playwright/test');
 
-async function twoStepClick(page, selector) {
-  const el = page.locator(selector).first();
-  await el.click();
-  await page.waitForTimeout(150);
-  await el.click();
-}
-
-const { enterYear, contentFrame } = require('./helpers');
-
 test.describe('2006 MVP', () => {
-  test('shell boots XP/IE6 2006', async ({ page }) => {
-    await enterYear(page, '2006');
+  test('hub opens 2006', async ({ page }) => {
+    await page.goto('/');
+    const card = page.locator('a.year-card[data-year="2006"]');
+    await expect(card).toBeVisible();
+    await card.click();
+    await expect(page).toHaveURL(/years\/2006/);
+  });
+  test('shell boots year 2006', async ({ page }) => {
+    await page.goto('/years/2006/');
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2006');
-    await expect(page.locator('#content')).toBeVisible();
   });
-
-  test('home tour lists P0 thesis sites', async ({ page }) => {
+  test('home lists guided 6 and leftover strips', async ({ page }) => {
     await page.goto('/years/2006/pages/home.html');
-    for (const t of ['Twitter', 'Facebook', 'YouTube', 'Digg', 'Google Docs', 'AWS', '85,507,314']) {
-      await expect(page.locator('body')).toContainText(t);
-    }
+    await expect(page.locator('#ott-guided-2006 ol li')).toHaveCount(6);
+    await expect(page.locator('body')).toContainText('Twttr');
+    await expect(page.locator('nav[data-itt-pop3x="2006"] a')).toHaveCount(9);
   });
-
-  test('about has scale and bans', async ({ page }) => {
-    await page.goto('/years/2006/pages/about.html');
-    await expect(page.locator('body')).toContainText('85,507,314');
-    await expect(page.locator('body')).toContainText(/iPhone|Chrome|Street View/i);
-    await expect(page.locator('body')).toContainText(/News Feed|Sep 26|Jul 15/i);
-  });
-
-  test('twitter compose + timeline', async ({ page }) => {
-    await page.goto('/years/2006/sites/twitter/index.html');
-    await expect(page.locator('body')).toContainText(/What are you doing/i);
-    await page.locator("[data-tw06-req]").nth(0).check();
-    await page.locator("[data-tw06-req]").nth(1).check();
-    await page.fill("[data-tw06-body]", "hello from museum 2006");
-    await page.locator("[data-tw06-post]").click();
-    await expect.poll(() => page.evaluate(() => localStorage.getItem("itt06-tweets"))).toMatch(/hello from museum 2006/);
-  });
-
-  test('facebook feed room', async ({ page }) => {
-    await page.goto('/years/2006/sites/facebook/feed.html');
-    await expect(page.locator('body')).toContainText(/News Feed/i);
-    await expect(page.locator('[data-fb-feed]')).toBeVisible();
-  });
-
-  test('youtube two-era framing', async ({ page }) => {
-    await page.goto('/years/2006/sites/youtube/about.html');
-    await expect(page.locator('body')).toContainText(/1\.65|Oct 9|independent/i);
-  });
-
-  test('digg peak front page', async ({ page }) => {
-    await page.goto('/years/2006/sites/digg/index.html');
-    await expect(page.locator('body')).toContainText(/peak|Digg/i);
-    await expect(page.locator('[data-digg-list]')).toBeVisible();
-  });
-
-  test('docs + aws rooms load', async ({ page }) => {
-    await page.goto('/years/2006/sites/docs/index.html');
-    await expect(page.locator('body')).toContainText(/Docs|Writely|Oct 10/i);
-    await page.goto('/years/2006/sites/aws/index.html');
-    await expect(page.locator('body')).toContainText(/S3|Mar 14|EC2/i);
+  test('2007 stays boarded', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('a.year-card[href*="years/2007"]')).toHaveCount(0);
+    await expect(page.locator('.year-card.locked.y2007')).toBeVisible();
   });
 });

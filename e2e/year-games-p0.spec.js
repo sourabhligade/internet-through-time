@@ -3,6 +3,7 @@
  * P0 games-integration gates (docs/GAMES-INTEGRATION-TODO-VERIFY-1994-2009.md §8).
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey } = require('./helpers');
 
 const fs = require('fs');
@@ -25,9 +26,6 @@ const FEATURED = {
   2002: 'roomsticky',
   2003: 'gagslite',
   2004: 'gemcascade',
-  2005: 'heli',
-  2006: 'sled',
-  2007: 'boxshift',
   2008: 'goospan',
   2009: 'plotneighbors',
 };

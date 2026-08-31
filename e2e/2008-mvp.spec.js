@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, completeRealGate } = require('./helpers');
 
 test.describe('2008 MVP', () => {

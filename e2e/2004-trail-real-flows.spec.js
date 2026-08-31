@@ -2,6 +2,7 @@
 /** 2004 trail — Gmail / Thefacebook paths */
 const { test, expect } = require('@playwright/test');
 
+
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
   await el.click();

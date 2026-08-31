@@ -144,24 +144,12 @@
       title: "HoverChop",
       href: "game.html",
       key: "itt05-game-heli",
-      inspire: "Helicopter Game (viral Flash)",
-      blurb: "Hold to climb. Release to fall. Don’t hit the cave.",
-      why: "One-button helicopter was the 2005 Flash that followed you from library to home. Club Penguin opened that October.",
-      era: "Webkinz and YouTube launched. The game you actually finished in one sitting was a white chopper.",
-      famous: "Pocket Snake + Space Rows",
-      accent: "#00838f"
-    },
-    "2006": {
-      id: "sled",
-      title: "TrailSled",
-      href: "game.html",
-      key: "itt06-game-sled",
-      inspire: "Line Rider (Sep 2006)",
-      blurb: "Draw a trail. Ride it. Don’t crash. Distance is the score.",
-      why: "Line Rider was the 2006 link you forwarded. Kongregate launched in October and socialized Flash high scores.",
-      era: "Wii Sports owned living rooms. In the browser, a scribbled line was enough.",
-      famous: "Fall Blocks + Pocket Snake",
-      accent: "#37474f"
+      inspire: "Helicopter-game genre (hold to climb)",
+      blurb: "Hold to climb. Release to fall. Don't hit the cave. Incomplete never writes.",
+      why: "2005 leftover cabinet. Star stays YouTube upload.",
+      era: "XP + IE6. Maps. Independent YouTube.",
+      famous: "HoverChop + leftover cabinets",
+      accent: "#c00"
     },
         "2008": {
       id: "goospan",

@@ -144,60 +144,6 @@
     "next": "/years/2004/sites/playable/game.html"
   },
   {
-    "year": "2005",
-    "slot": "c",
-    "id": "penguinice",
-    "key": "itt05-game-penguinice",
-    "engine": "craft",
-    "path": "/years/2005/sites/playable/more-c.html",
-    "next": "/years/2005/sites/playable/more-d.html"
-  },
-  {
-    "year": "2005",
-    "slot": "d",
-    "id": "colossclb",
-    "key": "itt05-game-colossclb",
-    "engine": "platform",
-    "path": "/years/2005/sites/playable/more-d.html",
-    "next": "/years/2005/sites/playable/game.html"
-  },
-  {
-    "year": "2006",
-    "slot": "c",
-    "id": "oblivwalk",
-    "key": "itt06-game-oblivwalk",
-    "engine": "gather",
-    "path": "/years/2006/sites/playable/more-c.html",
-    "next": "/years/2006/sites/playable/more-d.html"
-  },
-  {
-    "year": "2006",
-    "slot": "d",
-    "id": "gearscover",
-    "key": "itt06-game-gearscover",
-    "engine": "corridor",
-    "path": "/years/2006/sites/playable/more-d.html",
-    "next": "/years/2006/sites/playable/game.html"
-  },
-  {
-    "year": "2007",
-    "slot": "c",
-    "id": "shockbath",
-    "key": "itt07-game-shockbath",
-    "engine": "corridor",
-    "path": "/years/2007/sites/playable/more-c.html",
-    "next": "/years/2007/sites/playable/more-d.html"
-  },
-  {
-    "year": "2007",
-    "slot": "d",
-    "id": "galaxspin",
-    "key": "itt07-game-galaxspin",
-    "engine": "platform",
-    "path": "/years/2007/sites/playable/more-d.html",
-    "next": "/years/2007/sites/playable/game.html"
-  },
-  {
     "year": "2008",
     "slot": "c",
     "id": "sporecell",

@@ -3,6 +3,7 @@
  * 2008–2013 exit-bar year-labels are year-true (not 2004 thesis / 2007 clone).
  */
 const { test, expect } = require("@playwright/test");
+
 const { enterYear, killOverlays } = require("./helpers");
 
 const YEARS = [

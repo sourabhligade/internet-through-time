@@ -6,9 +6,10 @@
  */
 const { test, expect } = require("@playwright/test");
 
+
 const YEARS = [];
 for (let y = 1994; y <= 2023; y++) {
-  if (y === 2005 || y === 2006 || y === 2007 || y === 2014 || y === 2020) continue;
+  if (y === 2005 || y === 2006 || y === 2007 || y === 2014 || y === 2020 || y === 2021) continue;
   YEARS.push(String(y));
 }
 
@@ -26,9 +27,6 @@ const WANT_MORE = {
   2002: [/fark/, /homestar/, /blogspot/],
   2003: [/flash/, /phoenix/, /4chan/],
   2004: [/yelplocal/, /orkutcircle/, /flickrpro/],
-  2005: [/redditfront/, /googleearthkml/, /kayakplus/],
-  2006: [/twitterbird/, /wikihow06/, /diggv4/],
-  2007: [/justin/, /ustream/, /qik/],
   2008: [/spotifyeu/, /dropboxfolder/, /huluwatch/],
   2009: [/farmville/, /bing/, /wolframalpha/],
   2010: [/groupondeal/, /quorawait/, /instagramios/],

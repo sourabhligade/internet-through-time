@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("2004 thefacebook friends typed add", () => {
   test("empty name blocked; add persists after reload", async ({ page }) => {
     await page.goto("/years/2004/sites/facebook/friends.html");

@@ -19,8 +19,6 @@
     "2002": { machine: "Windows XP · Internet Explorer 6", star: "StumbleUpon", starHref: "sites/stumbleupon/index.html", game: "Room Sticky" },
     "2003": { machine: "Windows XP · Internet Explorer 6", star: "Photobucket", starHref: "sites/photobucket/index.html", game: "Gags Lite" },
     "2004": { machine: "Windows XP · Internet Explorer 6", star: "thefacebook", starHref: "sites/facebook/index.html", game: "Cube Whack" },
-    "2005": { machine: "Windows XP · Internet Explorer 6", star: "YouTube", starHref: "sites/youtube/index.html", game: "Heli" },
-    "2006": { machine: "Windows XP · Internet Explorer 6", star: "Twitter 140", starHref: "sites/twitter/index.html", game: "TrailSled" },
     "2008": { machine: "Windows XP · Internet Explorer 7", star: "App Store / Chrome", starHref: "sites/appstore/index.html", game: "Tap Grid" },
     "2009": { machine: "Windows XP residual · IE8 (Win7 ships)", star: "FarmVille residual", starHref: "sites/farmville/index.html", game: "Plot Neighbors" },
     "2010": { machine: "Windows 7 · Internet Explorer 8", star: "Instagram iOS", starHref: "sites/instagram/index.html", game: "Sling Nest" },

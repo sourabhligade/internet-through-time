@@ -606,6 +606,12 @@ def fourx_from(path: Path) -> str:
     return "\n".join(blocks) + ("\n" if blocks else "")
 
 
+def also_from(path: Path) -> str:
+    t = path.read_text(encoding="utf-8")
+    m = re.search(r"<!-- ITT-3X-ALSO:start -->.*?<!-- ITT-3X-ALSO:end -->", t, flags=re.S)
+    return (m.group(0) + "\n") if m else ""
+
+
 def theater(row) -> str:
     (year, slug, suffix, kind, tone, bar, h1, life, ticks, field, hops, wait,
      trap_lab, trap_msg, go_lab, nxt, nl) = row
@@ -637,6 +643,7 @@ def theater(row) -> str:
 </head>
 <body bgcolor="#f2f2f2" text="#111">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<!-- ITT-DP-ROOM:{slug} -->
 <div class="itt-recon-gold" data-recon="{slug}"><b>RECON frame</b> leftover theater · no official mark</div>
 <div class="dp-stage" data-dp-tone="{tone}" data-{ns}-theater>
 <div class="dp-bar">{bar}</div>
@@ -656,19 +663,71 @@ def theater(row) -> str:
 """
 
 
+def patch_home_2021() -> None:
+    home = ROOT / "years" / "2021" / "pages" / "home.html"
+    if not home.is_file():
+        print("SKIP home 2021")
+        return
+    rows = [(r[1], r[2], r[6]) for r in D if r[0] == "2021"]
+    links = []
+    for slug, suffix, title in rows:
+        links.append(
+            f' <a href="../sites/{slug}/index.html" data-trail-keys="itt21-{suffix}">{title}</a> ·'
+        )
+    inner = (
+        '<p class="itt-2x-trails" id="ott-2x-2021-dp" '
+        'style="margin:10px auto;padding:10px;background:#e3f2fd;border:1px solid #1565c0;'
+        'font-family:Arial,sans-serif;font-size:12px;max-width:52em">'
+        "<b>Year-true leftover dests (deepen)</b> (new doors · not the chip · incomplete never writes):"
+        + "".join(links)
+        + ' <a href="../sites/att/index.html">★ ATT Ask</a>'
+        + "</p>"
+    )
+    marker = "<!-- ITT-2X-DP:2021:start -->"
+    end = "<!-- ITT-2X-DP:2021:end -->"
+    block = f"{marker}\n{inner}\n{end}\n"
+    t = home.read_text(encoding="utf-8")
+    if marker in t:
+        t = re.sub(
+            re.escape(marker) + r".*?" + re.escape(end),
+            block.strip(),
+            t,
+            count=1,
+            flags=re.S,
+        )
+    elif '<nav data-itt-pop3x="2021"' in t:
+        t = t.replace('<nav data-itt-pop3x="2021"', block + '<nav data-itt-pop3x="2021"', 1)
+    elif "</body>" in t:
+        t = t.replace("</body>", block + "</body>", 1)
+    else:
+        t += block
+    home.write_text(t, encoding="utf-8")
+    print(f"home strip #ott-2x-2021-dp · {len(rows)} dests + star")
+
+
 def main() -> None:
     n = 0
+    missing = 0
     for row in D:
         year, slug = row[0], row[1]
+        if year != "2021":
+            continue
         dest = ROOT / "years" / year / "sites" / slug / "index.html"
         if not dest.is_file():
             print("MISSING", dest)
+            missing += 1
             continue
+        also = also_from(dest)
         fourx = fourx_from(dest)
-        html = theater(row) + fourx + f'<script src="../../../../js/immersion-{year}.js"></script>\n</body>\n</html>\n'
+        html = (
+            theater(row)
+            + also
+            + fourx
+            + f'<script src="../../../../js/immersion-{year}.js"></script>\n</body>\n</html>\n'
+        )
         dest.write_text(html, encoding="utf-8")
         n += 1
-    print(f"upgraded {n} dests")
+    print(f"upgraded {n} dests · skipped 2022 · missing {missing} · home strip stays in start-extra")
 
 
 if __name__ == "__main__":

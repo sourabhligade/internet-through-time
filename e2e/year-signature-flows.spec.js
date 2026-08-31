@@ -4,6 +4,12 @@
  * Runs inside the year shell so parent browser + iframe immersion both work.
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 const { enterYear, goImmersion, goInFrame, contentFrame, killOverlays } = require('./helpers');
 
 test.describe('year-signature 1994', () => {
@@ -290,8 +296,9 @@ test.describe('year-signature 2004', () => {
   });
 });
 
-test.describe.skip('year-signature 2005 (wiped)', () => {
+test.describe('year-signature 2005', () => {
   test('YouTube upload theater', async ({ page }) => {
+    skipIfWiped('2005');
     await enterYear(page, '2005');
     await page.evaluate(() => { try { localStorage.removeItem('itt05-yt-uploads'); } catch (e) { /* */ } });
     await goImmersion(page, '2005', 'sites/youtube/upload.html');
@@ -299,14 +306,19 @@ test.describe.skip('year-signature 2005 (wiped)', () => {
     await expect(frame.locator('body')).toContainText(/YouTube|Upload/i, { timeout: 15000 });
     const form = frame.locator('[data-yt-upload]');
     await expect(form).toBeVisible({ timeout: 10000 });
-    const title = 'E2E zoo ' + Date.now();
+    const title = 'E2E zoo residual ' + Date.now();
     await form.locator('input[name="title"], input[type="text"]').first().fill(title);
+    await form.locator('[name="desc"]').fill('first clip');
+    const reqs = form.locator('[data-yt-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await form.locator('input[type="submit"], button[type="submit"]').first().click();
     await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload|local|list|videos/i, { timeout: 8000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'));
     expect(raw || '').toContain(title);
   });
   test('Reddit submit → storage', async ({ page }) => {
+    skipIfWiped('2005');
     await enterYear(page, '2005');
     await page.evaluate(() => {
       try {
@@ -315,21 +327,26 @@ test.describe.skip('year-signature 2005 (wiped)', () => {
         /* */
       }
     });
-    await goImmersion(page, '2005', 'sites/reddit/submit.html');
+    await goImmersion(page, '2005', 'sites/reddit/index.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/reddit|Reddit|submit/i, { timeout: 15000 });
-    const form = frame.locator('[data-reddit-submit]');
-    await expect(form).toBeVisible({ timeout: 10000 });
-    const title = 'E2E post ' + Date.now();
-    await form.locator('input[name="title"]').fill(title);
-    await form.locator('input[type="submit"], button[type="submit"]').first().click();
+    await expect(frame.locator('body')).toContainText(/reddit|Reddit|boost/i, { timeout: 15000 });
+    const lo = frame.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="reddit"])').first();
+    await expect(lo.locator('[data-lo-save]')).toBeVisible({ timeout: 10000 });
+    const reqs = lo.locator('[data-lo-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+    const picks = lo.locator('[data-lo-pick]');
+    await picks.nth(0).click();
+    await picks.nth(1).click();
+    await lo.locator('[data-lo-save]').click();
     await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit-links')), {
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit')), {
         timeout: 8000,
       })
-      .toContain(title);
+      .toBeTruthy();
   });
   test('Maps zoom + search write itt05-maps-state', async ({ page }) => {
+    skipIfWiped('2005');
     await enterYear(page, '2005');
     await page.evaluate(() => {
       try {
@@ -355,6 +372,7 @@ test.describe.skip('year-signature 2005 (wiped)', () => {
       .toMatch(/sig maps|Boston|zoom|history/i);
   });
   test('Digg dig mutates itt05-digg-links (not mock count only)', async ({ page }) => {
+    skipIfWiped('2005');
     await enterYear(page, '2005');
     await page.evaluate(() => {
       try {
@@ -381,6 +399,7 @@ test.describe.skip('year-signature 2005 (wiped)', () => {
 
 test.describe.skip('year-signature 2006 (wiped)', () => {
   test('Digg peak digg → itt06-digg-links', async ({ page }) => {
+    skipIfWiped('2006');
     await enterYear(page, '2006');
     await page.evaluate(() => {
       try {
@@ -403,6 +422,7 @@ test.describe.skip('year-signature 2006 (wiped)', () => {
   });
 
   test('Twitter compose theater', async ({ page }) => {
+    skipIfWiped('2006');
     await enterYear(page, '2006');
     await page.evaluate(() => {
       try {

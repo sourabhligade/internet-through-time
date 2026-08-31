@@ -118,6 +118,18 @@
     ) {
       return;
     }
+
+    var traps = doc.querySelectorAll("[data-tw-trap]");
+    var ti;
+    for (ti = 0; ti < traps.length; ti++) {
+      if (traps[ti].getAttribute("data-tw-trap-bound") === "1") continue;
+      traps[ti].setAttribute("data-tw-trap-bound", "1");
+      traps[ti].addEventListener("click", function () {
+        var st2 = doc.querySelector("[data-twitter-status-msg]");
+        if (st2) st2.textContent = "Trap. That click never writes.";
+      });
+    }
+
     seed();
     renderTimeline(doc);
 
@@ -138,6 +150,18 @@
         if (!text) {
           if (st) st.textContent = "Type something first.";
           return;
+        }
+        var reqs = form.querySelectorAll("[data-tw-req]");
+        if (reqs.length) {
+          var ticksOk = true;
+          var ri;
+          for (ri = 0; ri < reqs.length; ri++) {
+            if (!reqs[ri].checked) ticksOk = false;
+          }
+          if (!ticksOk) {
+            if (st) st.textContent = "Tick both honesty boxes. Empty / trap never writes.";
+            return;
+          }
         }
         if (text.length > MAX) {
           if (st) st.textContent = "Too long — " + MAX + " character limit (SMS era).";

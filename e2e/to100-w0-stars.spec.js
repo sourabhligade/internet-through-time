@@ -1,6 +1,7 @@
 // @ts-check
 /** W0 — 2015/2016/2019 one-thing chips on Starting Point */
 const { test, expect } = require("@playwright/test");
+
 const fs = require("fs");
 const path = require("path");
 function yearOnDisk(year) {

@@ -220,40 +220,7 @@ html[data-itt-year="2004"] [data-year-game] {
   --yg-shadow: 3px 3px 0 #0a246a;
 }
 
-body.yg-year-2005,
-body.yg-year-2006,
-html[data-itt-year="2005"] body,
-html[data-itt-year="2006"] body {
-  background: #dce6f0 !important;
-}
-body.yg-year-2005 .yg-shell,
-body.yg-year-2006 .yg-shell,
-html[data-itt-year="2005"] [data-year-game],
-html[data-itt-year="2006"] [data-year-game] {
-  --yg-accent: #0a246a;
-  --yg-panel: #f0f4fa;
-  --yg-btn: #06c;
-  --yg-radius: 2px;
-}
 
-body.yg-year-2007,
-html[data-itt-year="2007"] body {
-  background: #1a1a22 !important;
-}
-body.yg-year-2007 .yg-shell,
-html[data-itt-year="2007"] [data-year-game] {
-  --yg-accent: #0f0;
-  --yg-panel: #12121a;
-  --yg-ink: #e0ffe0;
-  --yg-muted: #8a8;
-  --yg-warn-bg: #1a2010;
-  --yg-warn-border: #6a6;
-  --yg-hud-bg: #0a0a12;
-  --yg-btn: #163;
-  --yg-btn-ink: #cfc;
-  --yg-stage-bg: #0a0a10;
-  --yg-font: Consolas, "Courier New", monospace;
-}
 
 body.yg-year-2008,
 html[data-itt-year="2008"] body {

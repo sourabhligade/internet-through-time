@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 test.describe("2009 official trail dests exist", () => {
   test("sites/facebook/index.html loads", async ({ page }) => {
     const res = await page.goto("/years/2009/sites/facebook/index.html");

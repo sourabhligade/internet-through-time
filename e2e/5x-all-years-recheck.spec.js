@@ -5,6 +5,7 @@
  * · reload persists · neighbor prefix absent · chips + guided 6 · chain click.
  */
 const { test, expect } = require('@playwright/test');
+
 const fs = require('fs');
 const path = require('path');
 const matrix = require('./5x-recheck.matrix.json');

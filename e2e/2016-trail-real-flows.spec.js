@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("2016 official trail dests exist", () => {
   const stops = [
     "sites/instagram/stories.html",

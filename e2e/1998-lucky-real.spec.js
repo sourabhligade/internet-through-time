@@ -4,6 +4,7 @@
  */
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("1998 I'm Feeling Lucky real jump", () => {
   test("empty query does not write; yahoo jumps in-year", async ({ page }) => {
     await page.goto("/years/1998/sites/google/lucky.html");

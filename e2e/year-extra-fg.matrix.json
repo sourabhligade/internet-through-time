@@ -398,25 +398,5 @@
     "kind": "quiz",
     "title": "Stadia Note",
     "next": "/years/2019/sites/playable/game.html"
-  },
-  {
-    "year": "2006",
-    "role": "f",
-    "path": "/years/2006/sites/playable/extra-f.html",
-    "key": "itt06-game-ie7tab",
-    "id": "ie7tab",
-    "kind": "place",
-    "title": "Tab Filter",
-    "next": "/years/2006/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2006",
-    "role": "g",
-    "path": "/years/2006/sites/playable/extra-g.html",
-    "key": "itt06-game-feedtick",
-    "id": "feedtick",
-    "kind": "place",
-    "title": "Feed Tick",
-    "next": "/years/2006/sites/playable/game.html"
   }
 ]

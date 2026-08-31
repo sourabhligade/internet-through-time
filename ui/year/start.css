@@ -74,9 +74,6 @@ html[data-itt-year="2001"] .ott-guided a {
 html[data-itt-year="2002"] .ott-guided,
 html[data-itt-year="2003"] .ott-guided,
 html[data-itt-year="2004"] .ott-guided,
-html[data-itt-year="2005"] .ott-guided,
-html[data-itt-year="2006"] .ott-guided,
-html[data-itt-year="2007"] .ott-guided,
 html[data-itt-year="2008"] .ott-guided {
   background: #3a6ea5;
   color: #fff;
@@ -87,9 +84,6 @@ html[data-itt-year="2008"] .ott-guided {
 html[data-itt-year="2002"] .ott-guided a,
 html[data-itt-year="2003"] .ott-guided a,
 html[data-itt-year="2004"] .ott-guided a,
-html[data-itt-year="2005"] .ott-guided a,
-html[data-itt-year="2006"] .ott-guided a,
-html[data-itt-year="2007"] .ott-guided a,
 html[data-itt-year="2008"] .ott-guided a {
   color: #cfe4ff;
 }

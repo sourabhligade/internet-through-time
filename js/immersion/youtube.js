@@ -178,7 +178,7 @@
   function saveViews(map) {
     localStorage.setItem(viewsKey(), JSON.stringify(map));
   }
-  function seed() {
+  function seed(doc) {
     var list = load();
     if (list && list.length) return list;
     list = [
@@ -186,7 +186,10 @@
       { title: "Lazy Sunday vibes", desc: "sample clip · no real file", id: "lazy" },
       { title: "My first upload", desc: "session sample", id: "demo" }
     ];
-    save(list);
+    /* Leftover dests (watch / list) may paint samples. Only the gold upload dest persists the star. */
+    if (doc && doc.querySelector && doc.querySelector("[data-yt-upload]")) {
+      save(list);
+    }
     return list;
   }
   function qs(doc, name) {
@@ -270,7 +273,39 @@
       return;
     }
 
-    var list = seed();
+
+    var trapBtns = doc.querySelectorAll("[data-yt-trap]");
+    var tbi;
+    for (tbi = 0; tbi < trapBtns.length; tbi++) {
+      (function (btn) {
+        if (btn.getAttribute("data-yt-trap-bound") === "1") return;
+        btn.setAttribute("data-yt-trap-bound", "1");
+        btn.addEventListener("click", function () {
+          var st2 = doc.querySelector("[data-yt-upload-status]");
+          if (st2) {
+            st2.innerHTML = "Trap. That click never writes.";
+            st2.classList.add("itt-ux-need-attention");
+          }
+        });
+      })(trapBtns[tbi]);
+    }
+
+    var dating = doc.querySelector("form[data-yt-dating]");
+    if (dating && dating.getAttribute("data-yt-dating-bound") !== "1") {
+      dating.setAttribute("data-yt-dating-bound", "1");
+      dating.addEventListener("submit", function (ev) {
+        if (ev.preventDefault) ev.preventDefault();
+        if (ev.stopPropagation) ev.stopPropagation();
+        var st3 = doc.querySelector("[data-yt-upload-status]");
+        if (st3) {
+          st3.innerHTML = "Dating form is leftover. That submit never writes.";
+          st3.classList.add("itt-ux-need-attention");
+        }
+        return false;
+      });
+    }
+
+    var list = seed(doc);
     var views = loadViews();
 
     var listEl = doc.querySelector("[data-yt-list]");
@@ -297,7 +332,22 @@
           }
           return false;
         }
-        var cur = load() || seed();
+        var reqs = form.querySelectorAll("[data-yt-req]");
+        if (reqs.length) {
+          var ticksOk = true;
+          var ri;
+          for (ri = 0; ri < reqs.length; ri++) {
+            if (!reqs[ri].checked) ticksOk = false;
+          }
+          if (!ticksOk) {
+            if (st) {
+              st.innerHTML = "Tick both honesty boxes. Empty / trap never writes.";
+              st.classList.add("itt-ux-need-attention");
+            }
+            return false;
+          }
+        }
+        var cur = load() || seed(doc);
         cur.unshift({ title: title, desc: desc, id: "u" + Date.now(), ts: Date.now() });
         save(cur.slice(0, 40));
         views = loadViews();
@@ -415,6 +465,13 @@
     var player = doc.querySelector("[data-yt-player]");
     if (player && player.getAttribute("data-yt-player-bound") !== "1") {
       player.setAttribute("data-yt-player-bound", "1");
+      if (!/\byt-player\b/.test(player.className || "")) {
+        player.className = (String(player.className || "") + " yt-player").replace(/^\s+/, "");
+      }
+      try {
+        player.style.position = "relative";
+        player.style.overflow = "hidden";
+      } catch (ePos) { /* */ }
       var playing = false;
       var pct = 0;
       var timer = null;

@@ -3,6 +3,7 @@
  * P1 play gates (docs/GAMES-INTEGRATION-TODO-VERIFY-1994-2009.md §8).
  */
 const { test, expect } = require('@playwright/test');
+
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey } = require('./helpers');
 
 async function openGame(page, year, query, clearPrefix) {

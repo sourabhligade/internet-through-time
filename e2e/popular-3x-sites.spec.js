@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+
 const fs = require("fs");
 const path = require("path");
 const spec = require("../scripts/popular-3x-sites.json");

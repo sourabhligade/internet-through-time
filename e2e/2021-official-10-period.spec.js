@@ -6,6 +6,7 @@
  */
 const { test, expect } = require("@playwright/test");
 
+
 /** @param {import('@playwright/test').Page} page @param {string} key */
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);

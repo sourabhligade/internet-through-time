@@ -13,6 +13,12 @@
  * Deep single-year suites stay in e2e/2004-real-flows / 2005-real-flows.
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
@@ -110,6 +116,7 @@ test.describe('cross-year blogger (post → view + year key)', () => {
   }
 
   test('blogger 2005 exposes ITT.blogger after boot', async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto('/years/2005/sites/blogger/edit.html');
     await page.waitForSelector('[data-blogger-post]', { timeout: 20000 });
     await expect

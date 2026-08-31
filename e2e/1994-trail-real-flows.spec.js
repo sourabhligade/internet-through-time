@@ -2,6 +2,7 @@
 /** 1994 trail alias — W7 pack shape (Yahoo + CSotD + BBS). */
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("1994 trail real flows", () => {
   test("home chip + CSotD + BBS + Yahoo hubs 200", async ({ page }) => {
     const home = await page.goto("/years/1994/pages/home.html");

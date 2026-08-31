@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2011": 1, "2020": 1, "2021": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2007": 1, "2009": 1, "2011": 1, "2020": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -148,15 +148,6 @@
     "2004": yearVisitTour("2004",
       { path: "sites/facebook/networks.html", label: "thefacebook", blurb: "Join a college network. Not modern FB.", match: "/facebook/networks" },
       { path: "sites/gmail/index.html", label: "Gmail", blurb: "Invite-era gigabyte mail.", match: "/gmail/" }),
-    "2005": yearVisitTour("2005",
-      { path: "sites/youtube/upload.html", label: "YouTube upload", blurb: "Independent. Empty never writes. Upload is the save.", match: "/youtube/upload" },
-      { path: "sites/maps/index.html", label: "Google Maps", blurb: "8 Feb. Drag. Not Street View.", match: "/maps/" }),
-    "2006": yearVisitTour("2006",
-      { path: "sites/twitter/index.html", label: "Twitter 140", blurb: "15 Jul. 140 because SMS. Empty never writes.", match: "/twitter/" },
-      { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep. Privacy leftover. Not the chip.", match: "/facebook/feed" }),
-    "2007": yearVisitTour("2007",
-      { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Safari is the save. App Store never writes.", match: "/iphone/" },
-      { path: "sites/gmail/index.html", label: "Gmail open leftover", blurb: "14 Feb. Invite is the trap.", match: "/gmail/" }),
     "2008": yearVisitTour("2008",
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Apps economy begins.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome", blurb: "Browser reinvented · product room.", match: "/chrome/" }),

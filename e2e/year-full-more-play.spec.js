@@ -5,6 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
+
 async function openGame(page, path, key) {
   await page.goto(path);
   await page.evaluate((k) => localStorage.removeItem(k), key);
@@ -24,25 +25,6 @@ async function expectSaved(page, key) {
   expect(blob.fullMore, key + ' fullMore').toBe(true);
   expect(blob.best, key + ' best').toBeGreaterThan(0);
 }
-
-test('gather 2006 Obliv Walk plays without test flag', async ({ page }) => {
-  test.skip(!require('fs').existsSync(require('path').join(__dirname, '..', 'years', '2006', 'index.html')), '2006 wiped');
-  await openGame(page, '/years/2006/sites/playable/more-c.html', 'itt06-game-oblivwalk');
-  const canvas = page.locator('canvas');
-  const spots = [
-    [60, 50],
-    [200, 50],
-    [340, 50],
-    [60, 140],
-    [200, 140],
-    [340, 140]
-  ];
-  for (let n = 0; n < 4; n++) {
-    for (const [x, y] of spots) await canvas.click({ position: { x, y } });
-  }
-  for (let i = 0; i < 4; i++) await canvas.click({ position: { x: 420, y: 260 } });
-  await expectSaved(page, 'itt06-game-oblivwalk');
-});
 
 test('corridor 1994 Hall Peek trap then mouse play', async ({ page }) => {
   await openGame(page, '/years/1994/sites/playable/more-c.html', 'itt94-game-hallpeek');
@@ -86,20 +68,6 @@ test('platform 1996 Star Cube mouse + jump', async ({ page }) => {
     await canvas.click({ position: { x, y } });
   }
   await expectSaved(page, 'itt96-game-starcubed');
-});
-
-test('craft 2005 Penguin Ice fills outline', async ({ page }) => {
-  await openGame(page, '/years/2005/sites/playable/more-c.html', 'itt05-game-penguinice');
-  const canvas = page.locator('canvas');
-  const need = [18, 19, 26, 27, 34, 35, 42, 43];
-  const cw = 480 / 8;
-  const ch = 280 / 8;
-  for (const i of need) {
-    const r = (i / 8) | 0;
-    const c = i % 8;
-    await canvas.click({ position: { x: c * cw + cw / 2, y: r * ch + ch / 2 } });
-  }
-  await expectSaved(page, 'itt05-game-penguinice');
 });
 
 test('fold 2008 Braid Fold edge click reaches 16', async ({ page }) => {

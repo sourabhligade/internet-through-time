@@ -1,16 +1,15 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 const { enterYear } = require('./helpers');
 
 const YEARS = [
   { year: '2002', os: /Windows XP/i, browser: /Internet Explorer 6/i },
   { year: '2003', os: /Windows XP/i, browser: /Internet Explorer 6/i },
   { year: '2004', os: /Windows XP/i, browser: /Internet Explorer 6/i },
-  { year: '2005', os: /Windows XP/i, browser: /Internet Explorer 6/i },
-  { year: '2006', os: /Windows XP/i, browser: /Internet Explorer 6/i },
 ];
 
-test.describe('shell honesty 2002–2007', () => {
+test.describe('shell honesty 2002–2004', () => {
   for (const { year, os, browser } of YEARS) {
     test(`${year} exit-bar year-label is year-true`, async ({ page }) => {
       await enterYear(page, year);

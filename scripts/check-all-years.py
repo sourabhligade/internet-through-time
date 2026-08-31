@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from itt_gate import SHIP_YEARS  # noqa: E402
 
 KNOWN_YEARS = list(SHIP_YEARS)
-_WIPED = {"2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"}
+_WIPED = {"2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"}
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -43,22 +43,8 @@ SIGNATURE: dict[str, list[str]] = {
     "2002": ["pages/home.html", "sites/stumbleupon/index.html", "sites/friendster/index.html", "sites/kazaa/index.html"],
     "2003": ["pages/home.html", "sites/photobucket/index.html", "sites/myspace/index.html", "sites/itunes/index.html", "sites/wordpress/index.html"],
     "2004": ["pages/home.html", "sites/facebook/index.html", "sites/flickr/index.html", "sites/gmail/index.html"],
-    "2005": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/youtube/index.html",
-        "sites/maps/index.html",
-        "sites/reddit/index.html",
-        "sites/digg/index.html",
-    ],
-    "2006": ["pages/home.html", "sites/twitter/index.html", "sites/facebook/feed.html", "sites/youtube/index.html"],
-    "2007": [
-        "pages/home.html",
-        "sites/iphone/index.html",
-        "sites/gmail/index.html",
-        "sites/maps/index.html",
-        "sites/facebook/index.html",
-    ],
+    "2005": ["pages/home.html", "pages/about.html", "sites/youtube/upload.html", "sites/maps/index.html", "sites/reddit/index.html", "sites/digg/index.html", "sites/playable/game.html"],
+    "2006": ["pages/home.html", "pages/about.html", "sites/twitter/index.html", "sites/facebook/feed.html", "sites/youtube/index.html", "sites/googledocs/index.html", "sites/playable/linerider.html"],
     "2008": [
         "pages/home.html",
         "sites/appstore/index.html",
@@ -219,11 +205,7 @@ SIGNATURE: dict[str, list[str]] = {
 
 # Optional research markers (year can be "research-only" without tree)
 RESEARCH_MARKERS: dict[str, list[str]] = {
-    "2006": [
-        "docs/2006-RESEARCH.md",
-        "docs/2006-MUSEUM-GRADE.md",
-        "docs/2006-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md",
-    ],
+    
 }
 
 

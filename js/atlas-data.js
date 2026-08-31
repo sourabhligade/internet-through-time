@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2013–2019 lean doors live. 2009 / 2011 / 2020–2025 wiped. Do not invent rooms.
+ * 2013–2019 + 2021 lean doors live. 2006–2007 / 2009 / 2011 / 2020 / 2022–2025 wiped. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,27 +10,27 @@
   var OPEN = [
     "1994", "1995", "1996", "1997", "1998", "1999", "2000",
     "2001", "2002", "2003",
-    "2004", "2005", "2006", "2007", "2008",
-    "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019"
+    "2004", "2005", "2006", "2008",
+    "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2009", "2011", "2020", "2021", "2022", "2023", "2024", "2025"],
+    gapYears: ["2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
-      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, YouTube upload, Twttr 140, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
+      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook.", years: ["2001", "2002", "2003", "2004", "2005"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → filter → Vine.", years: ["2008", "2010", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+ Continue.", years: ["2014", "2015", "2016", "2017", "2018", "2019"] },
-      { id: "late-lean", label: "Boarded late years", blurb: "2020–2025 stay empty for rebuild.", years: ["2020", "2021", "2022", "2023", "2024", "2025"] },
-      { id: "wiped-late", label: "Boarded years", blurb: "2009 / 2011 stay empty for rebuild.", years: ["2009", "2011"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+ Continue, ATT Ask.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2021"] },
+      { id: "late-lean", label: "Boarded late years", blurb: "2020 / 2022–2025 stay empty for rebuild.", years: ["2020", "2022", "2023", "2024", "2025"] },
+      { id: "wiped-late", label: "Boarded years", blurb: "2007 / 2009 / 2011 stay empty for rebuild.", years: ["2007", "2009", "2011"] }
     ],
 
     leanYears: [
       "2013", "2014", "2015", "2016", "2017",
-      "2018", "2019"
+      "2018", "2019", "2021"
     ],
 
     notThisYear: {
@@ -330,7 +330,6 @@
         game: { label: "Gem Cascade", href: "years/2004/sites/playable/game.html" }
       },
       "2005": {
-        wiped: false,
         era: "YouTube · Maps · Ajax",
         thesis: "Web 2.0 boom. Upload is the save. Independent YouTube.",
         gold: { label: "YouTube upload", href: "years/2005/sites/youtube/upload.html", key: "itt05-yt-uploads" },
@@ -341,7 +340,7 @@
         game: { label: "HoverChop", href: "years/2005/sites/playable/game.html" }
       },
       "2006": {
-        wiped: false,
+        wiped: true,
         era: "Twitter 140 · News Feed leftover",
         thesis: "140 because SMS. News Feed leftover. No iPhone.",
         gold: { label: "Twitter 140", href: "years/2006/sites/twitter/index.html", key: "itt06-tweets" },
@@ -383,7 +382,7 @@
         game: { label: "Guess Doodle", href: "years/2012/sites/playable/game.html" }
       },
       "2007": {
-        wiped: false,
+        wiped: true,
         era: "iPhone Safari · Street View leftover",
         thesis: "Safari is the save. App Store never writes. Desktop is still mass.",
         gold: { label: "iPhone Safari", href: "years/2007/sites/iphone/index.html", key: "itt07-iphone" },
@@ -485,7 +484,7 @@
         game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
       },
       "2021": {
-        wiped: true,
+        wiped: false,
         era: "Allow · Ask App Not to Track",
         thesis: "Allow is the trap. Ask App Not to Track is the save. ChatGPT is 2022.",
         gold: { label: "ATT Ask App Not to Track", href: "years/2021/sites/att/index.html", key: "itt21-att" },
@@ -713,7 +712,7 @@
       {
         id: "wiped-late",
         label: "Boarded years",
-        blurb: "2009 / 2011 / 2020–2025 stay wiped for rebuild.",
+        blurb: "2005–2007 / 2009 / 2011 / 2020 / 2022–2025 stay wiped for rebuild.",
         steps: []
       }
     ]

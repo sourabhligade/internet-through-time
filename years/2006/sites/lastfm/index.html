@@ -1,52 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" data-itt-year="2006">
-<head>
-<meta charset="utf-8">
-<title>Last.fm leftover — 2006</title>
+<html lang="en"><head><meta charset="utf-8">
+<title>last.fm / Audioscrobbler seed — 2003</title>
 <link rel="stylesheet" href="../../../../css/period-2006.css">
-
 </head>
-<body bgcolor="#ffffff" link="#0000cc" vlink="#551a8b" text="#000000">
+<body bgcolor="#ffffff" text="#000" link="#d51007">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-
-<div style="max-width:46em;margin:12px auto;font-family:Arial,Helvetica,sans-serif;font-size:13px">
-<p><a href="../../pages/home.html">Starting Point</a> · <a href="index.html">Last.fm leftover</a></p>
-<p class="itt-pixel-failed">[failed-final] 2006 leftover costume · no invented brand pixel</p>
+<table width="600" align="center" cellpadding="14"><tr><td>
+<img src="../../../../assets/period/2004/lastfm/logo.gif" alt="last.fm" height="32"><br><br>
+<font face="Arial" size="2">
+<h1 style="font-size:18px;color:#d51007">Social music seed · 2003</h1>
+<p><b>last.fm</b> and <b>Audioscrobbler</b> start in the early 2000s music-social story (scrobbling what you play so charts and “similar artists” emerge). Cybercultural places this seed in the 2003 music ecosystem alongside iPod gen 2 and P2P chaos.</p>
+<form data-lastfm-scrobble style="background:#fff0f0;border:1px solid #d51007;padding:10px">
+ Track you just “played”:<br>
+ <input name="track" size="40" value="The White Stripes — Fell in Love With a Girl"><br><br>
+ <button type="submit">Scrobble (theater)</button>
+</form>
+<div data-lastfm-status style="margin-top:8px;font-size:12px;color:#060"></div>
+<ul data-lastfm-recent style="font-size:12px"></ul>
+<p style="font-size:11px;color:#666">Museum only — no real audio. Later last.fm brand merges / evolves; this is the <b>seed</b> room.</p>
+<p><a href="../kazaa/index.html">KaZaA wild west</a> · <a href="../apple/ipod.html">iPod gen 2</a></p>
+</font>
+</td></tr></table>
+<script>
+(function(){
+ var form = document.querySelector("[data-lastfm-scrobble]");
+ if (!form) return;
+ var key = "itt06-lastfm-recent";
+ function load(){ try { return JSON.parse(localStorage.getItem(key)||"[]"); } catch(e){ return []; } }
+ function save(a){ localStorage.setItem(key, JSON.stringify(a)); }
+ function paint(){
+ var ul = document.querySelector("[data-lastfm-recent]");
+ if (!ul) return;
+ ul.innerHTML = "";
+ load().forEach(function(t){
+ var li = document.createElement("li");
+ li.textContent = t;
+ ul.appendChild(li);
+ });
+ }
+ paint();
+ form.addEventListener("submit", function(ev){
+ ev.preventDefault();
+ var track = (form.querySelector('[name="track"]')||{}).value || "Unknown track";
+ var list = load();
+ list.unshift(new Date().toLocaleTimeString() + " · " + track);
+ if (list.length > 12) list = list.slice(0,12);
+ save(list);
+ paint();
+ var st = document.querySelector("[data-lastfm-status]");
+ if (st) st.textContent = "Scrobbled (local): " + track;
+ });
+})();
+</script>
+<p class="itt-pixel-failed">[failed-final]</p>
 <h1>Last.fm leftover</h1>
-<p style="background:#ffc;border:1px solid #cc0;padding:8px;font-size:12px"><b>Honesty:</b> Scrobble leftover. Incomplete never writes. Star stays Twitter 140.</p>
-<p>Period leftover room. XP + IE6. No iPhone. No Chrome.</p>
+<p>9 Aug 2005 merge leftover. Scrobble leftover.</p>
 
-<!-- ITT-LO-OFFICIAL:start -->
-<section data-lo-panel="1" data-itt-year="2006" style="margin:12px auto;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
-<p><b>Leftover machine</b> · not the chip · incomplete never writes · <code>itt06-lastfm-lx</code></p>
-<label style="display:block"><input type="checkbox" data-lo-req> This is leftover, not the year star.</label>
-<label style="display:block"><input type="checkbox" data-lo-req> Trap / empty never writes.</label>
+<div data-lo-panel="1" data-itt-year="2006" class="itt-2006-machine" style="margin:14px 0;padding:12px;border:1px solid #333;background:#fff8dc;max-width:46em">
+<p style="font-size:11px;color:#444;margin:0 0 8px">2006 leftover machine · dest-true · incomplete never writes</p>
+<p><button type="button" data-lo-trap>Last.fm is Pandora gold (trap)</button></p>
 <p>
- <button type="button" data-lo-pick="scrobble">scrobble leftover</button>
- <button type="button" data-lo-trap>spotify (trap)</button>
- <button type="button" data-lo-pick="spotify">spotify (wrong)</button>
+ <button type="button" data-lo-pick="scrobble">Scrobble leftover</button>
+ <button type="button" data-lo-pick="chart">Chart leftover</button>
 </p>
-<p><input data-lo-field placeholder="leftover lastfm-lx" maxlength="80"></p>
-<p><button type="button" data-lo-save data-lo-key="lastfm-lx" data-lo-need-pick="scrobble">Save leftover</button>
- <span data-lo-status></span></p>
-<p hidden data-next-flow data-next-when-key="itt06-lastfm-lx"><b>Next:</b> <a href="../../pages/map.html">Year map</a></p>
-</section>
-<!-- ITT-LO-OFFICIAL:end -->
+<p><label><input type="checkbox" data-lo-req> Leftover 2005 · not the Twttr chip.</label></p>
+<p><label><input type="checkbox" data-lo-req> 0 hops / 1 hop / trap never writes.</label></p>
+<p><button type="button" data-lo-save data-lo-key="lastfm-lx" data-lo-min-pick="2">Save leftover lastfm</button> <span data-lo-status></span></p>
+<p hidden data-next-flow data-next-when-key="itt06-lastfm-lx"><b>Next:</b> <a href="../pandora/index.html">Pandora leftover</a></p>
+</div>
+
+<div data-lo-panel="1" data-itt-year="2006" class="itt-2006-machine" style="margin:14px 0;padding:12px;border:1px solid #333;background:#fff8dc;max-width:46em;color:#111">
+<p style="font-size:11px;color:#444;margin:0 0 8px">2006 leftover machine · dest-true · incomplete never writes</p>
+<p><button type="button" data-lo-trap>This leftover is the 2005 star (trap)</button></p>
+<p><label>lastfm leftover. Incomplete never writes. Not the upload chip.<br><input type="text" data-lo-field maxlength="80" placeholder="lastfm leftover" autocomplete="off"></label></p>
+<p><label><input type="checkbox" data-lo-req> Leftover 2005 · not the Twttr chip.</label></p>
+<p><label><input type="checkbox" data-lo-req> Empty / trap never writes.</label></p>
+<p><button type="button" data-lo-save data-lo-key="lastfm-rlx">Save leftover lastfm</button> <span data-lo-status></span></p>
+<p hidden data-next-flow data-next-when-key="itt06-lastfm-rlx"><b>Next:</b> <a href="../../sites/linkedin/index.html">linkedin leftover</a></p>
+</div>
+
+<script src="../../../../js/immersion-2006.js"></script>
 
 
 <!-- ITT-3X-ALSO:start -->
 <nav class="itt-3x-also" data-itt-3x-also data-itt-year="2006" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
  <a href="../../pages/home.html">Starting Point</a> ·
  <a href="../../pages/map.html">Year flow map</a> ·
- <a href="../twitter/index.html">Twitter 140</a> ·
- <a href="../bebo/index.html">Bebo</a> ·
- <a href="../slideshare/index.html">SlideShare</a> ·
- <a href="../newsvine/index.html">Newsvine</a>
-</p></nav>
+ <a href="../folklore/index.html">folklore.org</a> ·
+ <a href="../friendster/index.html">Friendster</a> ·
+ <a href="../gamespot/index.html">GameSpot</a> ·
+ <a href="../geocities/index.html">Yahoo! GeoCities</a> ·
+ <a href="../gmail/index.html">Welcome to Gmail</a> ·
+ <a href="../gnutella/index.html">Gnutella</a> ·
+ <a href="../google/index.html">Google</a> ·
+ <a href="../googlenews/index.html">Google News</a> ·
+ <a href="../hampsterdance/index.html">Hampster Dance</a> ·
+ <a href="../hotbot/index.html">HotBot</a> ·
+ <a href="../icq/index.html">ICQ</a> ·
+ <a href="../imdb/index.html">The Internet Movie Database (IMDb)</a> ·
+ <a href="../infoseek/index.html">Infoseek</a> ·
+ <a href="../isp/index.html">CableNet Broadband</a> ·
+ <a href="../itunes/index.html">iTunes Music Store</a> ·
+ <a href="../kazaa/index.html">KaZaA</a> ·
+ <a href="../linkedin/index.html">LinkedIn</a> ·
+ <a href="../livejournal/index.html">LiveJournal</a> ·
+ <a href="../loudcloud/index.html">Loudcloud</a> ·
+ <a href="../macromedia/index.html">Macromedia Flash</a> ·
+ <a href="../metafilter/index.html">MetaFilter</a> ·
+ <a href="../microsoft/index.html">Microsoft</a> ·
+ <a href="../moreover/index.html">Moreover</a> ·
+ <a href="../movabletype/index.html">movabletype</a>
+</p>
+</nav>
 <!-- ITT-3X-ALSO:end -->
 
-</div>
 
-<script src="../../../../js/immersion-2006.js" defer></script>
-</body>
-</html>
+<p class="itt-pixel-failed">[failed-final]</p>
+<h1>Last.fm leftover</h1>
+<p>9 Aug 2005 merge leftover. Scrobble leftover.</p>
+
+</body></html>

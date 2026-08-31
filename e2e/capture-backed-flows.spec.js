@@ -4,6 +4,12 @@
  * Incomplete never writes. Chip is outbound only (not a write).
  */
 const { test, expect } = require("@playwright/test");
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -189,6 +195,7 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
   });
 
   test("2005 YouTube + Maps cite-only · gold machines stay", async ({ page }) => {
+    skipIfWiped('2005');
     await page.goto("/years/2005/sites/youtube/index.html");
     await chipOk(page);
     await expect(page.locator("body")).toContainText(/Broadcast Yourself/);

@@ -10,6 +10,10 @@
 const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
+
 const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
 
 function yearOnDisk(year) {
@@ -147,6 +151,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2005 load alone does not write itt05-game-heli', async ({ page }) => {
+    skipIfWiped('2005');
     test.skip(!yearOnDisk('2005'), '2005 wiped');
     await enterYear(page, '2005');
     await clearPrefixGames(page, 'itt05');
@@ -155,6 +160,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2006 load alone does not write itt06-game-sled', async ({ page }) => {
+    skipIfWiped('2006');
     test.skip(!yearOnDisk('2006'), '2006 wiped');
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');
@@ -163,6 +169,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2005 heli crash path can write year best via hook', async ({ page }) => {
+    skipIfWiped('2005');
     test.skip(!yearOnDisk('2005'), '2005 wiped');
     await enterYear(page, '2005');
     await clearPrefixGames(page, 'itt05');
@@ -181,6 +188,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2005 HoverChop start then crash writes itt05-game-heli', async ({ page }) => {
+    skipIfWiped('2005');
     test.skip(!yearOnDisk('2005'), '2005 wiped');
     await enterYear(page, '2005');
     await clearPrefixGames(page, 'itt05');
@@ -197,6 +205,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2006 sled finish writes year best', async ({ page }) => {
+    skipIfWiped('2006');
     test.skip(!yearOnDisk('2006'), '2006 wiped');
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');
@@ -214,6 +223,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2006 TrailSled Ride on demo ramp writes itt06-game-sled', async ({ page }) => {
+    skipIfWiped('2006');
     test.skip(!yearOnDisk('2006'), '2006 wiped');
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');

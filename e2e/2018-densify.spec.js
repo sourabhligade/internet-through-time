@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
+
 test.describe("2018 densify", () => {
   test("manage replay has no Accept All writer", async ({ page }) => {
     await page.goto("/years/2018/sites/gdpr/manage.html");

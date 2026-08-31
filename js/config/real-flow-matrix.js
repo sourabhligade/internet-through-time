@@ -99,24 +99,6 @@
       complete: { action: "gmail", expect: null }
     },
     {
-      year: "2005",
-      prefix: "itt05",
-      path: "sites/youtube/upload.html",
-      kind: "product",
-      key: "itt05-yt-uploads",
-      hook: "[data-yt-upload]",
-      complete: { action: "yt", expect: null }
-    },
-    {
-      year: "2006",
-      prefix: "itt06",
-      path: "sites/twitter/index.html",
-      kind: "product",
-      key: "itt06-tweets",
-      hook: "[data-twitter-compose]",
-      complete: { action: "twitter", expect: null }
-    },
-    {
       year: "2008",
       prefix: "itt08",
       path: "sites/github/issue.html",

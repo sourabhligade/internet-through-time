@@ -7,6 +7,11 @@
  * Complements year-signature-flows (broader) and no-mock-flows (deep late years).
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
+function skipIfWiped(year) {
+  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
+}
 
 async function twoStepClick(page, selector) {
   const el = page.locator(selector).first();
@@ -16,8 +21,6 @@ async function twoStepClick(page, selector) {
 }
 
 const { enterYear, contentFrame, waitForImmersion, goInFrame, goImmersion } = require('./helpers');
-const fs = require('fs');
-const path = require('path');
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
 }
@@ -222,6 +225,7 @@ test.describe('all-years signature REAL · 2000s boom', () => {
   });
 
   test('2005 YouTube upload → itt05-yt-uploads', async ({ page }) => {
+    skipIfWiped('2005');
     await enterYear(page, '2005');
     await clearPrefix(page, 'itt05-yt');
     await goImmersion(page, '2005', 'sites/youtube/upload.html');
@@ -241,6 +245,7 @@ test.describe('all-years signature REAL · 2000s boom', () => {
 
 test.describe('all-years signature REAL · late web', () => {
   test('2006 Twitter post → itt06-tweets', async ({ page }) => {
+    skipIfWiped('2006');
     await enterYear(page, '2006');
     await clearPrefix(page, 'itt06-tweets');
     await goImmersion(page, '2006', 'sites/twitter/index.html');

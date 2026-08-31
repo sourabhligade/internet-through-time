@@ -20,9 +20,6 @@
       yahoo: true,
       napster: true,
       blogger: true,
-      slashdot: true,
-      technorati: true,
-      plugin: true,
       friendster: true,
       kazaa: true,
       myspace: true,
@@ -34,36 +31,29 @@
       gmail: true,
       facebook: true,
       flickr: true,
+      digg: true,
       youtube: true,
-      pandora: true,
       maps: true,
       reddit: true,
-      digg: true,
-      podcasts: true,
-      delicious: true,
+      pandora: true,
       housingmaps: true,
-      feedburner: true
+      podcasts: true
     },
-    navSubtitle: "IE 6 · Windows XP · YouTube · Maps · Reddit · Digg",
+    navSubtitle: "IE 6 · Windows XP · Upload · Maps · Reddit",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "YouTube", href: "sites/youtube/index.html", match: "/youtube/" },
-      { label: "Maps", href: "sites/maps/index.html", match: "/maps/" },
-      { label: "Reddit", href: "sites/reddit/index.html", match: "/reddit/" },
-      { label: "Digg", href: "sites/digg/index.html", match: "/digg/" },
-      { label: "Pandora", href: "sites/pandora/index.html", match: "/pandora/" },
+      { label: "Firefox", href: "sites/firefox/index.html", match: "/firefox/" },
       { label: "Gmail", href: "sites/gmail/index.html", match: "/gmail/" },
       { label: "Flickr", href: "sites/flickr/index.html", match: "/flickr/" },
+      { label: "Thefacebook", href: "sites/facebook/index.html", match: "/facebook/" },
+      { label: "Google", href: "sites/google/index.html", match: "/google/" },
       { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "YouTube", href: "sites/youtube/index.html" },
-      { label: "Maps", href: "sites/maps/index.html" },
-      { label: "HousingMaps", href: "sites/housingmaps/index.html" },
-      { label: "del.icio.us", href: "sites/delicious/index.html" },
-      { label: "Pandora", href: "sites/pandora/index.html" },
+      { label: "Gmail", href: "sites/gmail/index.html" },
+      { label: "Flickr", href: "sites/flickr/index.html" },
       { label: "Web 2.0 Conf", href: "sites/web20conference/index.html" },
       { label: "About 2005", href: "pages/about.html" }
     ],
@@ -73,74 +63,73 @@
         label: "About 2005",
         href: "pages/about.html",
         match: "/about",
-        hint: "64.8M sites · Web 2.0 boom",
-        doneMessage: "YouTube · Maps · Reddit · Digg."
+        hint: "64.8M sites · boom year · Yahoo still #1",
+        doneMessage: "Upload · Maps · Reddit · Google does not own YouTube."
       },
       {
-        id: "youtube",
-        label: "YouTube",
-        href: "sites/youtube/index.html",
-        match: "/youtube/",
-        hint: "Apr 23 beta · Broadcast Yourself",
-        doneMessage: "Upload theater — no real video host."
+        id: "firefox",
+        label: "Firefox 1.0",
+        href: "sites/firefox/index.html",
+        match: "/firefox/",
+        hint: "Nov 9 · tabs · popup block",
+        doneMessage: "IE6 still mass default — Firefox is rising."
       },
       {
-        id: "maps",
-        label: "Google Maps",
-        href: "sites/maps/index.html",
-        match: "/maps/",
-        hint: "Ajax poster child",
-        doneMessage: "Pan/zoom theater — no live tiles."
+        id: "gmail",
+        label: "Gmail",
+        href: "sites/gmail/index.html",
+        match: "/gmail/",
+        hint: "invite · 1 GB · search mail",
+        doneMessage: "Invite-only webmail — 1 GB pitch."
       },
       {
-        id: "reddit",
-        label: "Reddit",
-        href: "sites/reddit/index.html",
-        match: "/reddit/",
-        hint: "Jun 23 · boosts · YC first class",
-        doneMessage: "Boost theater — sparse front page."
+        id: "flickr",
+        label: "Flickr",
+        href: "sites/flickr/index.html",
+        match: "/flickr/",
+        hint: "photostream · tags",
+        doneMessage: "Ludicorp Flickr — not Yahoo-owned yet."
       },
       {
-        id: "digg",
-        label: "Digg",
-        href: "sites/digg/index.html",
-        match: "/digg/",
-        hint: "2005 rise · Diggnation Jul 1",
-        doneMessage: "Digg/bury theater — rise year."
+        id: "facebook",
+        label: "Thefacebook",
+        href: "sites/facebook/index.html",
+        match: "/facebook/",
+        hint: "campus network only",
+        doneMessage: "Harvard seed — not open Facebook."
+      },
+      {
+        id: "google",
+        label: "Google",
+        href: "sites/google/index.html",
+        match: "/google/",
+        hint: "IPO year",
+        doneMessage: "Search habit + public company story."
       },
       {
         id: "myspace",
         label: "MySpace",
         href: "sites/myspace/index.html",
         match: "/myspace/",
-        hint: "News Corp $580M Jul 18",
-        doneMessage: "Mass social + sale story."
+        hint: "mass social still",
+        doneMessage: "MySpace still larger than Thefacebook."
       },
       {
-        id: "itunes",
-        label: "iTunes Podcasts",
-        href: "sites/itunes/index.html",
-        match: "/itunes/",
-        hint: "Jun 28 · >1M subs in two days",
-        doneMessage: "Podcast directory — free, auto-download lore."
+        id: "web20",
+        label: "Web 2.0 Conf",
+        href: "sites/web20conference/index.html",
+        match: "/web20conference/",
+        hint: "Oct · Web as Platform",
+        doneMessage: "Business meets blogosphere."
       },
       {
-        id: "housingmaps",
-        label: "HousingMaps",
-        href: "sites/housingmaps/index.html",
-        match: "/housingmaps/",
-        hint: "Apr mashup · pre-API",
-        doneMessage: "Craigslist-on-Maps filter theater."
-      },
-      {
-        id: "delicious",
-        label: "del.icio.us",
-        href: "sites/delicious/index.html",
-        match: "/delicious/",
-        hint: "tags · Yahoo Dec 9",
-        doneMessage: "Social bookmarks — folksonomy."
+        id: "amazon",
+        label: "Amazon",
+        href: "sites/amazon/index.html",
+        match: "/amazon/",
+        hint: "smile continues",
+        doneMessage: "Commerce continuity."
       }
     ]
-
   };
 })(typeof window !== "undefined" ? window : this);

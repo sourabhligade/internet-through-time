@@ -223,9 +223,12 @@
       featureKey: "leftoverOfficial",
       boot: boot
     });
-  } else if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () { boot(document); });
+  }
+  /* Dest leftover after immersion-YYYY.js still binds. Button data-lo-bound is the once-guard. */
+  function rescan() { boot(document); }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", rescan);
   } else {
-    boot(document);
+    rescan();
   }
 })(typeof window !== "undefined" ? window : this);

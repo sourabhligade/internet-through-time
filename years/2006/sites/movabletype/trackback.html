@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Movable Type — TrackBack</title>
+<link rel="stylesheet" href="../../../../css/period-2006.css">
+</head>
+<body bgcolor="#ffffff">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<table width="640" align="center" cellpadding="12"><tr><td>
+<font face="Verdana,Arial" size="2">
+<p><img src="../../../../assets/period/2004/movabletype/logo.gif" width="24" height="24" alt="">
+<b>Movable Type · TrackBack</b> · Six Apart · 2003</p>
+<h1 style="font-size:16px">Peer-to-peer conversations between blogs</h1>
+<p>TrackBack (mid-2003) lets you send a <b>ping</b> when you link to another blog entry —
+like a remote comment. Bloggers called it “blog tennis.” Early UI often used a <b>popup</b> listing pings.</p>
+<div class="trackback-box">
+ <b>TrackBack URL</b> (example)<br>
+ <code class="trackback-url">http://example.org/mt-tb.cgi/42</code>
+ <form data-trackback-form style="margin-top:8px">
+ Your blog title<br><input name="title" size="50" value="My reply post"><br>
+ Excerpt<br><textarea name="excerpt" rows="3" style="width:100%">I linked to your post about RSS 2.0…</textarea><br>
+ <button type="submit">Send TrackBack ping</button>
+ </form>
+ <div data-trackback-status style="margin-top:8px;color:#060"></div>
+ <div data-trackback-list class="trackback-body" style="margin-top:8px;font-size:11px"></div>
+</div>
+<p><a href="index.html">Movable Type home</a> · <a href="features.html">Features (v2.5)</a> ·
+<a href="../blogger/index.html">Blogger (still Pyra)</a></p>
+</font>
+</td></tr></table>
+<script>
+(function(){
+ var form = document.querySelector("[data-trackback-form]");
+ if (!form) return;
+ var list = document.querySelector("[data-trackback-list]");
+ var status = document.querySelector("[data-trackback-status]");
+ var pings = [];
+ form.addEventListener("submit", function(ev){
+ ev.preventDefault();
+ var title = form.title.value || "Untitled";
+ var excerpt = form.excerpt.value || "";
+ pings.unshift({ title: title, excerpt: excerpt, when: new Date().toLocaleString() });
+ if (status) status.textContent = "Ping accepted (theater) — peer conversation logged locally.";
+ if (list) {
+ list.innerHTML = pings.map(function(p){
+ return "<div class=\"trackback-post\" style=\"border-top:1px solid #ccc;padding:6px 0\"><b>" +
+ p.title + "</b> <span style=\"color:#666\">" + p.when + "</span><br>" + p.excerpt + "</div>";
+ }).join("");
+ }
+ });
+})();
+</script>
+<script src="../../../../js/config/immersion-2006.js"></script>
+<script src="../../../../js/immersion-2006.js"></script>
+
+
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2006" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="download.html">movabletype · download</a> ·
+ <a href="features.html">movabletype · features</a> ·
+ <a href="../aol/index.html">AOL.com 2004</a> ·
+ <a href="../apple/index.html">Apple Computer</a> ·
+ <a href="../askjeeves/index.html">Ask Jeeves!</a> ·
+ <a href="../basecamp/index.html">Basecamp</a> ·
+ <a href="../bbc/index.html">BBC NEWS</a> ·
+ <a href="../blogdex/index.html">( blogdex )</a> ·
+ <a href="../blogger/index.html">blogger!</a> ·
+ <a href="../bloglines/index.html">Bloglines</a> ·
+ <a href="../bowienet/index.html">BowieNet</a> ·
+ <a href="../cnn/index.html">CNN.com</a> ·
+ <a href="../craigslist/index.html">craigslist</a> ·
+ <a href="../daypop/index.html">Daypop</a> ·
+ <a href="../delicious/index.html">del.icio.us</a> ·
+ <a href="../digg/index.html">digg</a> ·
+ <a href="../dmoz/index.html">Open Directory Project (DMOZ)</a> ·
+ <a href="../ebay/index.html">eBay</a> ·
+ <a href="../encarta/index.html">Encarta vs Wikipedia</a> ·
+ <a href="../excite/index.html">Excite</a> ·
+ <a href="../facebook/index.html">Thefacebook</a> ·
+ <a href="../feedburner/index.html">FeedBurner</a> ·
+ <a href="../firefox/index.html">Mozilla Firefox 1.0</a> ·
+ <a href="../flickr/index.html">Flickr</a> ·
+ <a href="../flickrpro/index.html">Flickr Pro leftover</a> ·
+ <a href="../folklore/index.html">folklore.org</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
+</body>
+</html>
