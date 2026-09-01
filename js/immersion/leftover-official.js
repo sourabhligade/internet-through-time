@@ -149,7 +149,10 @@
       });
     }
 
-    save.addEventListener("click", function () {
+    save.addEventListener("click", function (ev) {
+      if (ev && ev.preventDefault) ev.preventDefault();
+      if (ev && ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+      if (ev && ev.stopPropagation) ev.stopPropagation();
       var reqs = countReq(root);
       if (reqs.need && reqs.have < reqs.need) {
         say(st, "Tick honesty first. Incomplete never writes.", true);

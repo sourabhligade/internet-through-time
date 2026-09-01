@@ -38,6 +38,45 @@
     } catch (eC) { /* */ }
   }
 
+  function inLoPanel(el) {
+    var n = el;
+    while (n && n.nodeType === 1) {
+      if (n.getAttribute && n.getAttribute("data-lo-panel") === "1") return true;
+      n = n.parentNode;
+    }
+    return false;
+  }
+
+  function productReqs(doc) {
+    var all = doc.querySelectorAll("[data-official-req], [data-req]");
+    var out = [];
+    var i;
+    for (i = 0; i < all.length; i++) {
+      if (!inLoPanel(all[i])) out.push(all[i]);
+    }
+    return out;
+  }
+
+  function productField(doc, form) {
+    var field = doc.querySelector("[data-official-need]");
+    if (field && !inLoPanel(field)) return field;
+    if (form) {
+      field =
+        form.querySelector("[data-official-need]") ||
+        form.querySelector("input[required], textarea[required]") ||
+        form.querySelector("input[type='text'], input[type='search'], input:not([type]), textarea");
+      if (field && !inLoPanel(field)) return field;
+    }
+    var cands = doc.querySelectorAll(
+      "input[type='text'], input[type='search'], input:not([type]), textarea"
+    );
+    var i;
+    for (i = 0; i < cands.length; i++) {
+      if (!inLoPanel(cands[i])) return cands[i];
+    }
+    return null;
+  }
+
   function boot(doc) {
     doc = doc || document;
     var key = keyOf(doc);
@@ -69,7 +108,7 @@
           var action = form ? String(form.getAttribute("action") || "").replace(/^\s+|\s+$/g, "") : "";
           if (action && action !== "#") ev.preventDefault();
         }
-        var reqs = doc.querySelectorAll("[data-official-req]");
+        var reqs = productReqs(doc);
         var r;
         for (r = 0; r < reqs.length; r++) {
           if (!reqs[r].checked) {
@@ -78,13 +117,7 @@
           }
         }
         var form = this.form || (this.closest && this.closest("form"));
-        var field = doc.querySelector("[data-official-need]");
-        if (!field && form) {
-          field =
-            form.querySelector("[data-official-need]") ||
-            form.querySelector("input[required], textarea[required]") ||
-            form.querySelector("input[type='text'], input[type='search'], input:not([type]), textarea");
-        }
+        var field = productField(doc, form);
         var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
         if (field && v.length < 2) {
           say(st, "Type something first. Empty never writes.", true);
@@ -95,7 +128,10 @@
           if (boxes.length >= 2) {
             var ticked = 0;
             var b;
-            for (b = 0; b < boxes.length; b++) if (boxes[b].checked) ticked++;
+            for (b = 0; b < boxes.length; b++) {
+              if (inLoPanel(boxes[b])) continue;
+              if (boxes[b].checked) ticked++;
+            }
             if (ticked < 2) {
               say(st, "Tick honesty first. Incomplete never writes.", true);
               return;

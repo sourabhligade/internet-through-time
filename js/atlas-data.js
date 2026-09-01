@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2013–2019 + 2021 lean doors live. 2006–2007 / 2009 / 2011 / 2020 / 2022–2025 wiped. Do not invent rooms.
+ * 2013–2019 + 2021 lean doors live. 2007 / 2009 / 2011 / 2020 / 2022–2025 boarded. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -21,7 +21,7 @@
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
-      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook.", years: ["2001", "2002", "2003", "2004", "2005"] },
+      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr.", years: ["2001", "2002", "2003", "2004", "2005", "2006"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → filter → Vine.", years: ["2008", "2010", "2012", "2013"] },
       { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+ Continue, ATT Ask.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2021"] },
       { id: "late-lean", label: "Boarded late years", blurb: "2020 / 2022–2025 stay empty for rebuild.", years: ["2020", "2022", "2023", "2024", "2025"] },
@@ -340,7 +340,7 @@
         game: { label: "HoverChop", href: "years/2005/sites/playable/game.html" }
       },
       "2006": {
-        wiped: true,
+        wiped: false,
         era: "Twitter 140 · News Feed leftover",
         thesis: "140 because SMS. News Feed leftover. No iPhone.",
         gold: { label: "Twitter 140", href: "years/2006/sites/twitter/index.html", key: "itt06-tweets" },
@@ -712,7 +712,7 @@
       {
         id: "wiped-late",
         label: "Boarded years",
-        blurb: "2005–2007 / 2009 / 2011 / 2020 / 2022–2025 stay wiped for rebuild.",
+        blurb: "2007 / 2009 / 2011 / 2020 / 2022–2025 stay wiped for rebuild.",
         steps: []
       }
     ]

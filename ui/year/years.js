@@ -1320,7 +1320,7 @@
     "win95-netscape.css",
     "chrome-habit.css"
   ],
-  "bodyClass": "year-2015 os-win10 browser-chrome-habit",
+  "bodyClass": "year-2015 os-win7 browser-chrome-habit",
   "boot": "browser-2015.js",
   "dir": [
     {

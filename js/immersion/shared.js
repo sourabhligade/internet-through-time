@@ -606,7 +606,7 @@
               /* pointer-events:none on bar so bid/checkout submits under the strip still work;
                * only anchors capture clicks (flow masterpiece Pass 1). */
               "#itt-wayfind{position:fixed;left:0;right:0;bottom:0;z-index:9999;" +
-                "display:block;text-align:center;padding:7px 12px;background:#000080;color:#fff;" +
+                "display:block;text-align:left;padding:7px 12px;background:#000080;color:#fff;" +
                 "font-family:Arial,Helvetica,sans-serif;font-size:12px;border-top:2px solid #99ccff;" +
                 "pointer-events:none;}" +
               "#itt-wayfind a{color:#ffff99;font-weight:bold;text-decoration:underline;margin:0 4px;" +
@@ -616,6 +616,7 @@
               "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
               "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
               "body.has-itt-wayfind{padding-bottom:56px !important;}" +
+              "html.has-itt-wayfind,body.has-itt-wayfind{scroll-padding-bottom:64px;}" +
               "html,body{max-width:100%;overflow-x:hidden;}" +
               ".itt-nav-slot{max-width:100%;width:100%;box-sizing:border-box;overflow:hidden;margin-left:0;margin-right:0;}" +
               "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
@@ -647,6 +648,10 @@
         /* Room for sticky bar so last content is not covered */
         try {
           document.body.className = (document.body.className || "") + " has-itt-wayfind";
+          if (document.documentElement) {
+            document.documentElement.className =
+              (document.documentElement.className || "") + " has-itt-wayfind";
+          }
         } catch (eCls) { /* */ }
       }
 
