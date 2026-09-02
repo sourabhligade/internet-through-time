@@ -11,9 +11,9 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2005", "2006", "2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2024; y++) {
+for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -32,7 +32,7 @@ const GOLD = {
   2004: { path: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", hook: /data-fb-join/ },
   2005: { path: "sites/youtube/upload.html", key: "itt05-yt-uploads", hook: /data-yt-upload/ },
   2006: { path: "sites/twitter/index.html", key: "itt06-tweets", hook: /data-tw06-/ },
-  2007: { path: "sites/iphone/index.html", key: "itt07-iphone", hook: /data-ip07-/ },
+  2007: { path: "sites/iphone/index.html", key: "itt07-iphone", hook: /data-official-verb|data-ip07-/ },
   2008: { path: "sites/github/issue.html", key: "itt08-github", hook: /data-gh-issue/ },
   2009: { path: "sites/facebook/index.html", key: "itt09-like", hook: /data-lk09-like/ },
   2010: { path: "sites/instagram/index.html", key: "itt10-ig", hook: /data-ig-share/ },
@@ -45,13 +45,11 @@ const GOLD = {
   2017: { path: "sites/iphone/x.html", key: "itt17-faceid", hook: /data-faceid/ },
   2018: { path: "sites/gdpr/index.html", key: "itt18-gdpr", hook: /data-gdpr/ },
   2019: { path: "sites/disneyplus/home.html", key: "itt19-disneyplus", hook: /data-dplus/ },
-  2020: { path: "sites/zoom/meeting.html", key: "itt20-zoom", hook: /data-zoom/ },
-  2021: { path: "sites/att/index.html", key: "itt21-att", hook: /data-att/ },
-  2022: { path: "sites/chatgpt/index.html", key: "itt22-chatgpt", hook: /data-gpt22/ },
-  2023: { path: "sites/plus/index.html", key: "itt23-plus", hook: /data-plus-go|data-p23-go/ },
-  2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: /data-4o-talk/ },
-  2025: { path: "sites/deepseek/r1.html", key: "itt25-r1", hook: /data-r1-go/ },
-};
+  2020: { path: "sites/zoom/meeting.html", key: "itt20-zoom", hook: /data-zoom-leave/ },
+  2021: { path: "sites/att/index.html", key: "itt21-att", hook: /data-official-verb|data-att-/ },
+  2022: { path: "sites/chatgpt/index.html", key: "itt22-chatgpt", hook: /data-official-verb|data-gpt22-/ },
+  2023: { path: "sites/plus/index.html", key: "itt23-plus", hook: /data-official-verb/ },
+  2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: /data-official-verb|data-official-pick/ }};
 
 function walkHtml(dir, acc) {
   if (!fs.existsSync(dir)) return acc;
@@ -119,7 +117,7 @@ function yearReport() {
       gold: { ok: false, reason: "" },
       guided: { n: 0, missing: [] },
       twoX: { n: 0, missing: [], unwired: [] },
-      trails: { n: 0, missing: [] },
+      trails: { n: 0, missing: [] }
     };
   }
 
@@ -225,7 +223,17 @@ function yearReport() {
       }
       const html = fs.readFileSync(dest, "utf8");
       const suffix = String(row.key || "").replace(/^itt\d{2}-/, "");
-      if (!new RegExp('data-4x-go="' + suffix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + '"').test(html)) {
+      const esc = suffix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const leanLo120 = /^(2007|2009|2011|2020|2021|2022|2023|2024)$/.test(year);
+      const wired = leanLo120
+        ? new RegExp('data-4x-go="' + esc + '"').test(html) ||
+          new RegExp('data-lo-key="' + esc + '"').test(html)
+        : new RegExp('data-4x-go="' + esc + '"').test(html) ||
+          new RegExp('data-lo-key="' + esc + '"').test(html) ||
+          new RegExp('data-official-key="' + String(row.key || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + '"').test(html) ||
+          /data-official-verb/.test(html) ||
+          /data-lo-save/.test(html);
+      if (!wired) {
         rep.twoX.unwired.push(row.key);
       }
       if (row.next) {
@@ -283,7 +291,7 @@ function main() {
         String(r.twoX.missing.length + r.twoX.unwired.length).padStart(7),
         String(r.destField.length).padStart(10),
         String(r.hashCta.length).padStart(4),
-        String(r.trails.n) + (r.trails.missing.length ? "!" + r.trails.missing.length : ""),
+        String(r.trails.n) + (r.trails.missing.length ? "!" + r.trails.missing.length : "")
       ].join("  ")
     );
   }

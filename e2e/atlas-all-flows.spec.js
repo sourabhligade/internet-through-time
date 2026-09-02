@@ -10,22 +10,23 @@ const trio = require("../scripts/popular-3x3-sites.json");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
-  "2004", "2008",
-  "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021",
+  "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013",
+  "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"
 ];
-const WIPED = ["2005", "2006", "2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"];
+const WIPED = ["2025"];
 const LEAN = [
+  "2007", "2009", "2011",
   "2013", "2014", "2015", "2016", "2017",
-  "2018", "2019", "2021",
+  "2018", "2019", "2020", "2021", "2022", "2023", "2024"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
-  rebuild: ["2001", "2002", "2003", "2004"],
-  phone: ["2008", "2010", "2012", "2013"],
-  stream: ["2014", "2015", "2016", "2017", "2018", "2019", "2021"],
-  "late-lean": ["2020", "2022", "2023", "2024", "2025"],
-  "wiped-late": ["2005", "2006", "2007", "2009", "2011"],
+  rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
+  phone: ["2008", "2009", "2010", "2011", "2012", "2013"],
+  stream: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+  "late-lean": ["2021", "2022", "2023", "2024"],
+  "wiped-late": ["2025"]
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -55,11 +56,11 @@ const GOLD = {
   "2017": /Face ID|iPhone X/i,
   "2018": /GDPR Manage/i,
   "2019": /Disney\+/i,
-  "2020": /Zoom/i,
-  "2021": /Ask App Not to Track|ATT/i,
+  "2020": /Zoom Leave/i,
+  "2021": /ATT|Ask App Not to Track/i,
   "2022": /ChatGPT Send/i,
-  "2023": /ChatGPT Plus/i,
-  "2024": /GPT-4o Talk/i,
+  "2023": /Plus Subscribe/i,
+  "2024": /GPT-4o Talk/i
 };
 
 function twoXByYear() {
@@ -223,20 +224,20 @@ test.describe("atlas hallway — all flows", () => {
     }
   });
 
-  test("museum-wide Every flow lists 22 golds and live official trails", async ({ page }) => {
+  test("museum-wide Every flow lists 31 golds and live official trails", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(22);
+    await expect(golds).toHaveCount(31);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(22);
+    expect(goldHrefs.length).toBe(31);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(22);
+    await expect(officialYears).toHaveCount(31);
   });
 
   test("first night is the real 5-stop walk; 2025 stays boarded", async ({ page }) => {
@@ -256,7 +257,7 @@ test.describe("atlas hallway — all flows", () => {
     for (const h of nightHrefs) await expectLive(page, h, "first-night");
 
     await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).toHaveClass(/open/);
-    await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveClass(/wiped/);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveClass(/open/);
     await expect(page.locator('#atlas-spine [data-atlas-year="2025"]')).toHaveClass(/wiped/);
   });
 

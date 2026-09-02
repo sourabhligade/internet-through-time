@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from itt_gate import SHIP_YEARS  # noqa: E402
 
 KNOWN_YEARS = list(SHIP_YEARS)
-_WIPED = {"2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"}
+_WIPED = {"2025"}
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -45,6 +45,7 @@ SIGNATURE: dict[str, list[str]] = {
     "2004": ["pages/home.html", "sites/facebook/index.html", "sites/flickr/index.html", "sites/gmail/index.html"],
     "2005": ["pages/home.html", "pages/about.html", "sites/youtube/upload.html", "sites/maps/index.html", "sites/reddit/index.html", "sites/digg/index.html", "sites/playable/game.html"],
     "2006": ["pages/home.html", "pages/about.html", "sites/twitter/index.html", "sites/facebook/feed.html", "sites/youtube/index.html", "sites/googledocs/index.html", "sites/playable/linerider.html"],
+    "2007": ["pages/home.html", "pages/about.html", "sites/iphone/index.html", "sites/streetview/index.html", "sites/gmail/index.html", "sites/fbplat/index.html", "sites/playable/game.html"],
     "2008": [
         "pages/home.html",
         "sites/appstore/index.html",
@@ -53,7 +54,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/hulu/index.html",
         "sites/dropbox/index.html",
         "sites/spotify/index.html",
-        "sites/friendconnect/index.html",
+        "sites/friendconnect/index.html"
     ],
     "2009": [
         "pages/home.html",
@@ -63,7 +64,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/bing/index.html",
         "sites/iphone/index.html",
         "sites/appstore/index.html",
-        "sites/windows7/index.html",
+        "sites/windows7/index.html"
     ],
     "2010": [
         "pages/home.html",
@@ -72,7 +73,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/ipad/index.html",
         "sites/iphone/index.html",
         "sites/facebook/index.html",
-        "sites/farmville/index.html",
+        "sites/farmville/index.html"
     ],
     "2011": [
         "pages/home.html",
@@ -81,7 +82,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/googleplus/hangouts.html",
         "sites/spotify/index.html",
         "sites/airbnb/index.html",
-        "sites/iphone/index.html",
+        "sites/iphone/index.html"
     ],
     "2013": [
         "pages/home.html",
@@ -90,7 +91,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/snapchat/story.html",
         "sites/iphone/ios7.html",
         "sites/instagram/video.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2014": [
         "pages/home.html",
@@ -99,7 +100,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/heartbleed/index.html",
         "sites/icebucket/index.html",
         "sites/iphone/index.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2012": [
         "pages/home.html",
@@ -109,7 +110,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/wikipedia/sopa.html",
         "sites/pinterest/index.html",
         "sites/iphone/maps.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2015": [
         "pages/home.html",
@@ -118,7 +119,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/googlephotos/index.html",
         "sites/windows10/index.html",
         "sites/applemusic/index.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2016": [
         "pages/home.html",
@@ -127,7 +128,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/pokemongo/index.html",
         "sites/facebook/reactions.html",
         "sites/whatsapp/e2e.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2017": [
         "pages/home.html",
@@ -136,7 +137,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/fortnite/index.html",
         "sites/twitter/280.html",
         "sites/teams/index.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2018": [
         "pages/home.html",
@@ -145,7 +146,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/tiktok/fyp.html",
         "sites/trust/index.html",
         "sites/instagram/igtv.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2019": [
         "pages/home.html",
@@ -154,7 +155,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/tiktok/index.html",
         "sites/arcade/index.html",
         "sites/stadia/index.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
     "2021": [
         "pages/home.html",
@@ -163,8 +164,11 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/signal/index.html",
         "sites/copilot/index.html",
         "sites/meta/index.html",
-        "sites/playable/game.html",
+        "sites/playable/game.html"
     ],
+    "2023": ["pages/home.html", "pages/about.html", "sites/plus/index.html", "sites/playable/game.html"],
+    "2024": ["pages/home.html", "pages/about.html", "sites/chatgpt/4o.html", "sites/playable/game.html"],
+    "2020": ["pages/home.html", "pages/about.html", "sites/zoom/meeting.html", "sites/playable/game.html"],
     "2022": [
         "pages/home.html",
         "pages/about.html",
@@ -172,35 +176,8 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/twitter/index.html",
         "sites/wordle/index.html",
         "sites/stablediffusion/index.html",
-        "sites/playable/game.html",
-    ],
-    "2023": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/plus/index.html",
-        "sites/gpt4/index.html",
-        "sites/bingchat/index.html",
-        "sites/threads/index.html",
-        "sites/playable/game.html",
-    ],
-    "2020": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/zoom/meeting.html",
-        "sites/reels/index.html",
-        "sites/openai/index.html",
-        "sites/flash/index.html",
-        "sites/playable/game.html",
-    ],
-    "2024": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/chatgpt/4o.html",
-        "sites/gemini/index.html",
-        "sites/claude35/index.html",
-        "sites/sora/index.html",
-        "sites/playable/game.html",
-    ],
+        "sites/playable/game.html"
+    ]
 }
 
 # Optional research markers (year can be "research-only" without tree)
@@ -300,7 +277,7 @@ def check_year(year: str, http_base: str | None) -> dict:
         "status": "absent",
         "checks": {},
         "errors": [],
-        "warnings": [],
+        "warnings": []
     }
 
     research = RESEARCH_MARKERS.get(year, [])
@@ -339,7 +316,7 @@ def check_year(year: str, http_base: str | None) -> dict:
         "immersion_config": ROOT / f"js/config/immersion-{year}.js",
         "immersion_stub": ROOT / f"js/immersion-{year}.js",
         "browser_year": ROOT / f"js/browser-{year}.js",
-        "home": ydir / "pages/home.html",
+        "home": ydir / "pages/home.html"
     }
     for name, p in paths.items():
         ok = p.is_file()

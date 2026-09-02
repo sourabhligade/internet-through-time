@@ -103,6 +103,15 @@
     if (isNaN(minPick)) minPick = 0;
     var st = root.querySelector("[data-lo-status]");
     var field = root.querySelector("[data-lo-field]");
+    var waitBtn = root.querySelector("[data-lo-wait]");
+    var pickEls = root.querySelectorAll("[data-lo-pick]");
+    var kind = save.getAttribute("data-lo-kind") || "";
+    if (!kind) {
+      if (waitBtn) kind = "wait";
+      else if (minPick > 1 || pickEls.length) kind = "hops";
+      else if (field) kind = "query";
+      else kind = "checks";
+    }
     var k = keyOf(year, suffix);
     var multiOn = minPick > 1;
 
@@ -121,6 +130,17 @@
     for (t = 0; t < traps.length; t++) {
       traps[t].addEventListener("click", function () {
         say(st, "Trap. That click never writes.", true);
+      });
+    }
+
+    if (waitBtn && waitBtn.getAttribute("data-lo-wait-bound") !== "1") {
+      waitBtn.setAttribute("data-lo-wait-bound", "1");
+      waitBtn.addEventListener("click", function () {
+        say(st, "Waiting leftover…", false);
+        setTimeout(function () {
+          waitBtn.setAttribute("data-lo-waited", "1");
+          say(st, "Wait leftover ready.", false);
+        }, 800);
       });
     }
 
@@ -177,11 +197,16 @@
         say(st, "Type something first. Empty never writes.", true);
         return;
       }
+      if (waitBtn && waitBtn.getAttribute("data-lo-waited") !== "1") {
+        say(st, "Wait leftover first. Incomplete never writes.", true);
+        return;
+      }
       var payload = {
         multiStep: true,
         real: true,
         leftover: true,
         year: year,
+        kind: kind,
         pick: needPick || (ids[0] || ""),
         picks: ids.length ? ids : undefined,
         q: v ? v.slice(0, 80) : undefined,

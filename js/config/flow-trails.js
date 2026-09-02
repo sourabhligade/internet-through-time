@@ -155,7 +155,7 @@
       {"n": 1, "name": "Twttr", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt06-tweets", "nextHref": "sites/facebook/feed.html", "nextLabel": "News Feed leftover"},
       {"n": 2, "name": "News Feed leftover", "href": "sites/facebook/feed.html", "match": "/facebook/feed", "whenKey": "itt06-feed", "nextHref": "sites/facebook/open.html", "nextLabel": "Facebook open leftover"},
       {"n": 3, "name": "Facebook open leftover", "href": "sites/facebook/open.html", "match": "/facebook/open", "whenKey": "itt06-fb-open", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube Google-owned leftover"},
-      {"n": 4, "name": "YouTube Google-owned leftover", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt06-yt-google", "nextHref": "sites/googledocs/index.html", "nextLabel": "Google Docs leftover"},
+      {"n": 4, "name": "YouTube Google-owned leftover", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt06-yt", "nextHref": "sites/googledocs/index.html", "nextLabel": "Google Docs leftover"},
       {"n": 5, "name": "Google Docs leftover", "href": "sites/googledocs/index.html", "match": "/googledocs/", "whenKey": "itt06-gdocs", "nextHref": "sites/aws/index.html", "nextLabel": "S3 leftover"},
       {"n": 6, "name": "S3 leftover", "href": "sites/aws/index.html", "match": "/aws/", "whenKey": "itt06-s3", "nextHref": "sites/ie7/index.html", "nextLabel": "IE7 leftover"},
       {"n": 7, "name": "IE7 leftover", "href": "sites/ie7/index.html", "match": "/ie7/", "whenKey": "itt06-ie7", "nextHref": "sites/wikipedia/millionth.html", "nextLabel": "Wiki millionth leftover"},
@@ -307,29 +307,65 @@
       {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt19-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Continue Row"},
       {"n": 10, "name": "Continue Row", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt19-game-continuerow", "nextHref": "sites/disneyplus/home.html", "nextLabel": "Disney+"}
     ],
-    "2020": [
-      {"n": 1, "name": "Zoom mute", "href": "sites/zoom/meeting.html", "match": "/zoom/meeting", "whenKey": "itt20-zoom", "nextHref": "sites/reels/index.html", "nextLabel": "Reels 15s"},
-      {"n": 2, "name": "Reels 15s", "href": "sites/reels/index.html", "match": "/reels/", "whenKey": "itt20-reels", "nextHref": "sites/openai/index.html", "nextLabel": "GPT-3 waitlist"},
-      {"n": 3, "name": "GPT-3 waitlist", "href": "sites/openai/index.html", "match": "/openai/", "whenKey": "itt20-gpt3", "nextHref": "sites/flash/index.html", "nextLabel": "Flash EOL"},
-      {"n": 4, "name": "Flash EOL", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt20-flash", "nextHref": "sites/tiktok/index.html", "nextLabel": "TikTok EO"},
-      {"n": 5, "name": "TikTok EO", "href": "sites/tiktok/index.html", "match": "/tiktok/", "whenKey": "itt20-tiktok-eo", "nextHref": "sites/markets/wti.html", "nextLabel": "WTI"},
-      {"n": 6, "name": "WTI −$37.63", "href": "sites/markets/wti.html", "match": "/markets/", "whenKey": "itt20-wti", "nextHref": "sites/edge/index.html", "nextLabel": "Edge 79"},
-      {"n": 7, "name": "Edge 79", "href": "sites/edge/index.html", "match": "/edge/", "whenKey": "itt20-edge", "nextHref": "sites/ccpa/index.html", "nextLabel": "CCPA"},
-      {"n": 8, "name": "CCPA", "href": "sites/ccpa/index.html", "match": "/ccpa/", "whenKey": "itt20-ccpa", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
-      {"n": 9, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt20-chrome", "nextHref": "sites/playable/game.html", "nextLabel": "Sus Vote"},
-      {"n": 10, "name": "Sus Vote", "href": "sites/playable/game.html", "match": "/playable/game", "whenKey": "itt20-game-among", "nextHref": "sites/zoom/meeting.html", "nextLabel": "Zoom"}
+    "2007": [
+      {"n": 1, "name": "iPhone Safari", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt07-iphone", "nextHref": "sites/streetview/index.html", "nextLabel": "Street View leftover"},
+      {"n": 2, "name": "Street View leftover", "href": "sites/streetview/index.html", "match": "/streetview/", "whenKey": "itt07-streetview", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail leftover"},
+      {"n": 3, "name": "Gmail open leftover", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt07-gmail", "nextHref": "sites/fbplat/index.html", "nextLabel": "Facebook Platform"},
+      {"n": 4, "name": "Facebook Platform leftover", "href": "sites/fbplat/index.html", "match": "/fbplat/", "whenKey": "itt07-fbplat", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter leftover"},
+      {"n": 5, "name": "Twitter leftover", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt07-twitter", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube leftover"},
+      {"n": 6, "name": "YouTube leftover", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt07-youtube", "nextHref": "sites/tumblr/index.html", "nextLabel": "Tumblr leftover"},
+      {"n": 7, "name": "Tumblr leftover", "href": "sites/tumblr/index.html", "match": "/tumblr/", "whenKey": "itt07-tumblr", "nextHref": "sites/kindle/index.html", "nextLabel": "Kindle leftover"},
+      {"n": 8, "name": "Kindle leftover", "href": "sites/kindle/index.html", "match": "/kindle/", "whenKey": "itt07-kindle", "nextHref": "sites/ie6/index.html", "nextLabel": "XP/IE6 residual"},
+      {"n": 9, "name": "XP/IE6 residual", "href": "sites/ie6/index.html", "match": "/ie6/", "whenKey": "itt07-ie6", "nextHref": "sites/playable/game.html", "nextLabel": "Safari Queue"},
+      {"n": 10, "name": "Safari Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt07-game-safariq", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone Safari"}
     ],
     "2021": [
       {"n": 1, "name": "ATT Ask", "href": "sites/att/index.html", "match": "/att/", "whenKey": "itt21-att", "nextHref": "sites/signal/index.html", "nextLabel": "Signal leftover"},
       {"n": 2, "name": "Signal leftover", "href": "sites/signal/index.html", "match": "/signal/", "whenKey": "itt21-signal", "nextHref": "sites/copilot/index.html", "nextLabel": "Copilot waitlist"},
       {"n": 3, "name": "Copilot waitlist", "href": "sites/copilot/index.html", "match": "/copilot/", "whenKey": "itt21-copilot", "nextHref": "sites/meta/index.html", "nextLabel": "Meta rename"},
-      {"n": 4, "name": "Meta rename", "href": "sites/meta/index.html", "match": "/meta/", "whenKey": "itt21-meta", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11"},
+      {"n": 4, "name": "Meta rename", "href": "sites/meta/index.html", "match": "/meta/", "whenKey": "itt21-meta", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11 leftover"},
       {"n": 5, "name": "Windows 11 leftover", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt21-win11", "nextHref": "sites/flash/index.html", "nextLabel": "Flash brick"},
       {"n": 6, "name": "Flash brick", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt21-flash-brick", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
       {"n": 7, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt21-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
       {"n": 8, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt21-win10", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook leftover"},
       {"n": 9, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt21-pop-facebook", "nextHref": "sites/playable/game.html", "nextLabel": "Five Letter"},
-      {"n": 10, "name": "Five Letter", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt21-game-five", "nextHref": "sites/att/index.html", "nextLabel": "ATT"}
+      {"n": 10, "name": "Five Letter", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt21-game-five", "nextHref": "sites/att/index.html", "nextLabel": "ATT Ask"}
+    ],
+    "2023": [
+      {"n": 1, "name": "ChatGPT Plus Subscribe", "href": "sites/plus/index.html", "match": "/plus/", "whenKey": "itt23-plus", "nextHref": "sites/gpt4/index.html", "nextLabel": "GPT-4 leftover"},
+      {"n": 2, "name": "GPT-4 leftover", "href": "sites/gpt4/index.html", "match": "/gpt4/", "whenKey": "itt23-gpt4", "nextHref": "sites/bingchat/index.html", "nextLabel": "Bing Chat leftover"},
+      {"n": 3, "name": "Bing Chat leftover", "href": "sites/bingchat/index.html", "match": "/bingchat/", "whenKey": "itt23-bing", "nextHref": "sites/threads/index.html", "nextLabel": "Threads leftover"},
+      {"n": 4, "name": "Threads leftover", "href": "sites/threads/index.html", "match": "/threads/", "whenKey": "itt23-threads", "nextHref": "sites/x/index.html", "nextLabel": "X leftover"},
+      {"n": 5, "name": "X leftover", "href": "sites/x/index.html", "match": "/x/", "whenKey": "itt23-x", "nextHref": "sites/bard/index.html", "nextLabel": "Bard leftover"},
+      {"n": 6, "name": "Bard leftover", "href": "sites/bard/index.html", "match": "/bard/", "whenKey": "itt23-bard", "nextHref": "sites/claude2/index.html", "nextLabel": "Claude 2 leftover"},
+      {"n": 7, "name": "Claude 2 leftover", "href": "sites/claude2/index.html", "match": "/claude2/", "whenKey": "itt23-claude2", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit leftover"},
+      {"n": 8, "name": "Chrome habit leftover", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt23-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10 residual"},
+      {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt23-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Plus Queue"},
+      {"n": 10, "name": "Plus Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt23-game-plusq", "nextHref": "sites/plus/index.html", "nextLabel": "ChatGPT Plus Subscribe"}
+    ],
+    "2024": [
+      {"n": 1, "name": "GPT-4o Talk", "href": "sites/chatgpt/4o.html", "match": "/chatgpt/", "whenKey": "itt24-gpt4o", "nextHref": "sites/gemini/index.html", "nextLabel": "Gemini leftover"},
+      {"n": 2, "name": "Gemini leftover", "href": "sites/gemini/index.html", "match": "/gemini/", "whenKey": "itt24-gemini", "nextHref": "sites/claude35/index.html", "nextLabel": "Claude 3.5 leftover"},
+      {"n": 3, "name": "Claude 3.5 leftover", "href": "sites/claude35/index.html", "match": "/claude35/", "whenKey": "itt24-claude35", "nextHref": "sites/sora/index.html", "nextLabel": "Sora preview leftover"},
+      {"n": 4, "name": "Sora preview leftover", "href": "sites/sora/index.html", "match": "/sora/", "whenKey": "itt24-sora", "nextHref": "sites/appleintel/index.html", "nextLabel": "Apple Intelligence leftover"},
+      {"n": 5, "name": "Apple Intelligence leftover", "href": "sites/appleintel/index.html", "match": "/appleintel/", "whenKey": "itt24-ai", "nextHref": "sites/o1/index.html", "nextLabel": "o1 leftover"},
+      {"n": 6, "name": "o1 leftover", "href": "sites/o1/index.html", "match": "/o1/", "whenKey": "itt24-o1", "nextHref": "sites/plus/index.html", "nextLabel": "Plus residual leftover"},
+      {"n": 7, "name": "Plus residual leftover", "href": "sites/plus/index.html", "match": "/plus/", "whenKey": "itt24-plus", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit leftover"},
+      {"n": 8, "name": "Chrome habit leftover", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt24-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10 residual"},
+      {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt24-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Omni Dash"},
+      {"n": 10, "name": "Omni Dash", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt24-game-omni", "nextHref": "sites/chatgpt/4o.html", "nextLabel": "GPT-4o Talk"}
+    ],
+    "2020": [
+      {"n": 1, "name": "Zoom mute \u2192 Leave", "href": "sites/zoom/meeting.html", "match": "/zoom/", "whenKey": "itt20-zoom", "nextHref": "sites/reels/index.html", "nextLabel": "Reels 15s leftover"},
+      {"n": 2, "name": "Reels 15s leftover", "href": "sites/reels/index.html", "match": "/reels/", "whenKey": "itt20-reels", "nextHref": "sites/openai/index.html", "nextLabel": "GPT-3 waitlist leftover"},
+      {"n": 3, "name": "GPT-3 waitlist leftover", "href": "sites/openai/index.html", "match": "/openai/", "whenKey": "itt20-gpt3", "nextHref": "sites/flash/index.html", "nextLabel": "Flash EOL leftover"},
+      {"n": 4, "name": "Flash EOL leftover", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt20-flash", "nextHref": "sites/tiktok/index.html", "nextLabel": "TikTok EO leftover"},
+      {"n": 5, "name": "TikTok EO leftover", "href": "sites/tiktok/index.html", "match": "/tiktok/", "whenKey": "itt20-tiktok-eo", "nextHref": "sites/markets/wti.html", "nextLabel": "WTI leftover"},
+      {"n": 6, "name": "WTI leftover", "href": "sites/markets/wti.html", "match": "/markets/", "whenKey": "itt20-wti", "nextHref": "sites/edge/index.html", "nextLabel": "Edge 79 leftover"},
+      {"n": 7, "name": "Edge 79 leftover", "href": "sites/edge/index.html", "match": "/edge/", "whenKey": "itt20-edge", "nextHref": "sites/ccpa/index.html", "nextLabel": "CCPA leftover"},
+      {"n": 8, "name": "CCPA leftover", "href": "sites/ccpa/index.html", "match": "/ccpa/", "whenKey": "itt20-ccpa", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit leftover"},
+      {"n": 9, "name": "Chrome habit leftover", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt20-chrome", "nextHref": "sites/playable/game.html", "nextLabel": "Sus Vote"},
+      {"n": 10, "name": "Sus Vote", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt20-game-among", "nextHref": "sites/zoom/meeting.html", "nextLabel": "Zoom mute \u2192 Leave"}
     ],
     "2022": [
       {"n": 1, "name": "ChatGPT Send", "href": "sites/chatgpt/index.html", "match": "/chatgpt/", "whenKey": "itt22-chatgpt", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter leftover"},
@@ -341,31 +377,7 @@
       {"n": 7, "name": "DALL·E 2 leftover", "href": "sites/dalle2/index.html", "match": "/dalle2/", "whenKey": "itt22-dalle2", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
       {"n": 8, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt22-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
       {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt22-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Prompt Box"},
-      {"n": 10, "name": "Prompt Box", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt22-game-prompt", "nextHref": "sites/chatgpt/index.html", "nextLabel": "ChatGPT"}
-    ],
-    "2023": [
-      {"n": 1, "name": "ChatGPT Plus", "href": "sites/plus/index.html", "match": "/plus/", "whenKey": "itt23-plus", "nextHref": "sites/gpt4/index.html", "nextLabel": "GPT-4 leftover"},
-      {"n": 2, "name": "GPT-4 leftover", "href": "sites/gpt4/index.html", "match": "/gpt4/", "whenKey": "itt23-gpt4", "nextHref": "sites/bingchat/index.html", "nextLabel": "Bing Chat leftover"},
-      {"n": 3, "name": "Bing Chat leftover", "href": "sites/bingchat/index.html", "match": "/bingchat/", "whenKey": "itt23-bing", "nextHref": "sites/threads/index.html", "nextLabel": "Threads leftover"},
-      {"n": 4, "name": "Threads leftover", "href": "sites/threads/index.html", "match": "/threads/", "whenKey": "itt23-threads", "nextHref": "sites/x/index.html", "nextLabel": "X leftover"},
-      {"n": 5, "name": "X leftover", "href": "sites/x/index.html", "match": "/x/", "whenKey": "itt23-x", "nextHref": "sites/bard/index.html", "nextLabel": "Bard leftover"},
-      {"n": 6, "name": "Bard leftover", "href": "sites/bard/index.html", "match": "/bard/", "whenKey": "itt23-bard", "nextHref": "sites/claude2/index.html", "nextLabel": "Claude 2 leftover"},
-      {"n": 7, "name": "Claude 2 leftover", "href": "sites/claude2/index.html", "match": "/claude2/", "whenKey": "itt23-claude2", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
-      {"n": 8, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt23-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
-      {"n": 9, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt23-win10", "nextHref": "sites/playable/game.html", "nextLabel": "Plus Queue"},
-      {"n": 10, "name": "Plus Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt23-game-plusq", "nextHref": "sites/plus/index.html", "nextLabel": "Plus"}
-    ],
-    "2024": [
-      {"n": 1, "name": "GPT-4o Talk", "href": "sites/chatgpt/4o.html", "match": "/chatgpt/4o", "whenKey": "itt24-gpt4o", "nextHref": "sites/gemini/index.html", "nextLabel": "Gemini leftover"},
-      {"n": 2, "name": "Gemini leftover", "href": "sites/gemini/index.html", "match": "/gemini/", "whenKey": "itt24-gemini", "nextHref": "sites/claude35/index.html", "nextLabel": "Claude 3.5 leftover"},
-      {"n": 3, "name": "Claude 3.5 leftover", "href": "sites/claude35/index.html", "match": "/claude35/", "whenKey": "itt24-claude35", "nextHref": "sites/sora/index.html", "nextLabel": "Sora leftover"},
-      {"n": 4, "name": "Sora leftover", "href": "sites/sora/index.html", "match": "/sora/", "whenKey": "itt24-sora", "nextHref": "sites/appleintel/index.html", "nextLabel": "Apple Intelligence"},
-      {"n": 5, "name": "Apple Intelligence leftover", "href": "sites/appleintel/index.html", "match": "/appleintel/", "whenKey": "itt24-appleintel", "nextHref": "sites/o1/index.html", "nextLabel": "o1 leftover"},
-      {"n": 6, "name": "o1 leftover", "href": "sites/o1/index.html", "match": "/o1/", "whenKey": "itt24-o1", "nextHref": "sites/chatgpt/plus.html", "nextLabel": "Plus residual"},
-      {"n": 7, "name": "Plus residual", "href": "sites/chatgpt/plus.html", "match": "/chatgpt/plus", "whenKey": "itt24-plus", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
-      {"n": 8, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt24-chrome", "nextHref": "sites/win11/index.html", "nextLabel": "Win11 residual"},
-      {"n": 9, "name": "Win11 residual", "href": "sites/win11/index.html", "match": "/win11/", "whenKey": "itt24-win11", "nextHref": "sites/playable/game.html", "nextLabel": "Omni Dash"},
-      {"n": 10, "name": "Omni Dash", "href": "sites/playable/game.html", "match": "/playable/game", "whenKey": "itt24-game-omni", "nextHref": "sites/chatgpt/4o.html", "nextLabel": "GPT-4o Talk"}
+      {"n": 10, "name": "Prompt Box", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt22-game-prompt", "nextHref": "sites/chatgpt/index.html", "nextLabel": "ChatGPT Send"}
     ]
   };
 })(typeof window !== "undefined" ? window : this);

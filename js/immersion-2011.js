@@ -1,6 +1,3 @@
-/**
- * Immersion year stub — 2011
- */
 (function () {
   "use strict";
   var ITT = window.ITT || (window.ITT = {});

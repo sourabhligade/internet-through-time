@@ -93,6 +93,13 @@ docs/references/5x-improve-corpus-*.txt
 # Local generate output / scratch
 dev/
 
+# Leftover / official walker dumps (regenerate with scripts/walk-*.mjs)
+docs/_WALK-*.json
+docs/_SCAN-EVERY-FILE-*
+
+# One-off Playwright result dirs (not the ignored test-results/)
+test-results-*/
+
 
 # local one-off Playwright probes
 e2e/_tmp-*.spec.js

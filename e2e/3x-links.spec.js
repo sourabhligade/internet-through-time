@@ -5,6 +5,7 @@
  * Guided <ol> stays 6. Star chip stays.
  */
 const { test, expect } = require("@playwright/test");
+const { openAlsoYear } = require("./helpers");
 
 const fs = require("fs");
 const path = require("path");
@@ -24,6 +25,7 @@ test.describe("3× links every implemented year", () => {
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);
       await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
+      await openAlsoYear(page, year);
       const box = page.locator(
         "[data-itt-3x-links]:visible, [data-itt-pop3x]:visible, [data-itt-cut-3x-trios]:visible"
       ).first();

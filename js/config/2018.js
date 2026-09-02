@@ -137,7 +137,7 @@
       homePath: "pages/home.html",
       showToolbar: true,
       showLocation: true,
-      showDirbar: false,
+      showDirbar: true,
       showDesktopIcons: true,
       desktopBg: "#0078d7"
     },

@@ -151,6 +151,18 @@
       famous: "HoverChop + leftover cabinets",
       accent: "#c00"
     },
+    "2006": {
+      id: "heli",
+      title: "HoverChop leftover",
+      href: "game.html",
+      key: "itt06-game-heli",
+      inspire: "Helicopter-game leftover on the Twttr year",
+      blurb: "Hold to climb. Release to fall. Incomplete never writes.",
+      why: "2006 leftover cabinet. Star stays Twttr update.",
+      era: "XP + IE6. News Feed. Google owns YouTube.",
+      famous: "HoverChop leftover",
+      accent: "#00aced"
+    },
         "2008": {
       id: "goospan",
       title: "Goo Span",
@@ -295,41 +307,76 @@
       famous: "Continue Row",
       accent: "#e50914"
     },
+    "2007": {
+      id: "safariq",
+      title: "Safari Queue",
+      href: "game.html",
+      key: "itt07-game-safariq",
+      inspire: "iPhone Safari-class leftover queue — App Store / Chrome never write",
+      blurb: "Queue a leftover URL. App Store never writes.",
+      why: "The star is still iPhone Safari.",
+      era: "App Store is highlighted. Go leftover is the real click.",
+      famous: "Safari Queue",
+      accent: "#0a246a"
+    },
     "2021": {
-      id: "five",
+      id: "fiveletter",
       title: "Five Letter",
       href: "game.html",
       key: "itt21-game-five",
-      inspire: "Wordle class — public Oct · 90 users 1 Nov · NYT 31 Jan 2022; no NYT tiles",
-      blurb: "Guess five. Incomplete never writes.",
-      why: "ATT is the door. The game is 90 users, not millions.",
-      era: "Allow is highlighted. Ask is the real click.",
-      famous: "Brick Bat + Concentration",
-      accent: "#007aff"
-    },
-    "2022": {
-      id: "prompt",
-      title: "Prompt Box",
-      href: "game.html",
-      key: "itt22-game-prompt",
-      inspire: "Theater prompt — not Five Letter · not NYT tiles · not a live model",
-      blurb: "Type a leftover prompt. Incomplete never writes.",
-      why: "ChatGPT is the door. The game is a theater box, not the Times grid.",
-      era: "Send is the save. Plus is next year.",
-      famous: "Brick Bat + Concentration",
-      accent: "#10a37f"
+      inspire: "Wordle-class — 90 users 1 Nov 2021; NYT is 2022; no official tiles",
+      blurb: "Guess five. NYT tiles never write.",
+      why: "The star is still ATT Ask.",
+      era: "NYT tiles are highlighted. Five is the real click.",
+      famous: "Five Letter",
+      accent: "#1565c0"
     },
     "2023": {
       id: "plusq",
       title: "Plus Queue",
       href: "game.html",
       key: "itt23-game-plusq",
-      inspire: "Plus queue theater — type twenty · no live charge · not Send",
-      blurb: "Type twenty. Incomplete never writes.",
-      why: "Plus is the door. The game is a leftover queue, not a live card.",
-      era: "Subscribe Plus is the save. 4o is next year.",
-      famous: "Brick Bat + Concentration",
-      accent: "#10a37f"
-    }
-  };
+      inspire: "leftover year game",
+      blurb: "Leftover game. Star stays.",
+      why: "The star stays.",
+      era: "Trap is highlighted.",
+      famous: "Plus Queue",
+      accent: "#1565c0"
+    },
+    "2024": {
+      id: "omni",
+      title: "Omni Dash",
+      href: "game.html",
+      key: "itt24-game-omni",
+      inspire: "leftover year game",
+      blurb: "Leftover game. Star stays.",
+      why: "The star stays.",
+      era: "Trap is highlighted.",
+      famous: "Omni Dash",
+      accent: "#1565c0"
+    },
+    "2020": {
+      id: "among",
+      title: "Sus Vote",
+      href: "game.html",
+      key: "itt20-game-among",
+      inspire: "leftover year game",
+      blurb: "Leftover game. Star stays.",
+      why: "The star stays.",
+      era: "Trap is highlighted.",
+      famous: "Sus Vote",
+      accent: "#1565c0"
+    },
+    "2022": {
+      id: "promptbox",
+      title: "Prompt Box",
+      href: "game.html",
+      key: "itt22-game-prompt",
+      inspire: "ChatGPT-class leftover box — Plus / GPT-4 never write",
+      blurb: "Type leftover prompt. Plus never writes.",
+      why: "The star is still ChatGPT Send.",
+      era: "Plus is highlighted. Send leftover is the real click.",
+      famous: "Prompt Box",
+      accent: "#1565c0"
+    }};
 })(typeof window !== "undefined" ? window : this);

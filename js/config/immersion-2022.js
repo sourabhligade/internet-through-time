@@ -1,6 +1,6 @@
 /**
  * Immersion config — 2022
- * Thesis: Send is the save · empty / Plus / GPT-4 / Bing Chat never write
+ * Thesis: research preview · Send is the save · Plus / GPT-4 / Bing never write
  */
 (function (global) {
   "use strict";
@@ -15,11 +15,11 @@
       nav: true,
       oneThingMachines: true,
       yearTruePacks: true,
-      year2022Extras: true,
-      yearPopular3x: true,
-      officialDestGold: true
+      officialDestGold: true,
+      leftoverOfficial: true,
+      officialVerb: true
     },
-    navSubtitle: "Win10 mass · Chrome habit · ChatGPT Send",
+    navSubtitle: "Win10 mass · Chrome habit · ChatGPT Send · still Twitter",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "ChatGPT", href: "sites/chatgpt/index.html", match: "/chatgpt/" },
@@ -31,7 +31,7 @@
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "ChatGPT", href: "sites/chatgpt/index.html" },
+      { label: "ChatGPT Send", href: "sites/chatgpt/index.html" },
       { label: "Twitter leftover", href: "sites/twitter/index.html" },
       { label: "About 2022", href: "pages/about.html" }
     ]

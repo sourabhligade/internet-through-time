@@ -46,18 +46,12 @@ function starKey(year) {
     2016: "itt16-ig-stories",
     2017: "itt17-faceid",
     2018: "itt18-gdpr",
-    2019: "itt19-disneyplus",
-    2020: "itt20-zoom",
-    2021: "itt21-att",
-    2022: "itt22-chatgpt",
-    2023: "itt23-plus",
-    2024: "itt24-gpt4o"
-  };
+    2019: "itt19-disneyplus"};
   return map[year] || "";
 }
 
 test("every live year has more-a and more-b", () => {
-  expect(YEARS.length, "live years with more-a").toBe(22);
+  expect(YEARS.length, "live years with more-a").toBe(23);
 });
 
 /**

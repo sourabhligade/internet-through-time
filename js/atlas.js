@@ -176,9 +176,13 @@
     }
     if (extras && extras.length) {
       for (i = 0; i < extras.length; i++) {
+        var eh = String(extras[i].href || "").replace(/^\//, "");
+        if (/^extra-/.test(eh) && year !== "2021") continue;
+        if (/^more-[ab]\.html$/.test(eh) && year !== "2021") continue;
+        if (/^more-[cd]\.html$/.test(eh) && year !== "2021" && year !== "2022") continue;
         out.push({
           label: extras[i].title || extras[i].id,
-          href: "years/" + year + "/sites/playable/" + String(extras[i].href || "").replace(/^\//, "")
+          href: "years/" + year + "/sites/playable/" + eh
         });
       }
     }
@@ -548,9 +552,9 @@
     }
   }
 
-  function pushRow(rows, q, path, label) {
+  function pushRow(rows, q, path, label, kind) {
     if (!path) return;
-    rows.push({ q: q, href: path, label: label });
+    rows.push({ q: q, href: path, label: label, kind: kind || "room" });
   }
 
   function allFindRows() {
@@ -560,9 +564,9 @@
       if (!Object.prototype.hasOwnProperty.call(data.years, yr)) continue;
       rec = data.years[yr];
       if (rec.wiped || !isOpen(yr)) continue;
-      if (rec.gold) pushRow(rows, rec.gold.label + " " + yr + " gold", rec.gold.href, yr + " · " + rec.gold.label);
+      if (rec.gold) pushRow(rows, rec.gold.label + " " + yr + " gold", rec.gold.href, yr + " · " + rec.gold.label, "gold");
       if (rec.leftoverGold) {
-        pushRow(rows, rec.leftoverGold.label + " " + yr, rec.leftoverGold.href, yr + " · " + rec.leftoverGold.label);
+        pushRow(rows, rec.leftoverGold.label + " " + yr, rec.leftoverGold.href, yr + " · " + rec.leftoverGold.label, "leftoverGold");
       }
       guided = guidedOf(yr);
       guided.forEach(function (g) {
@@ -578,7 +582,8 @@
           rows,
           (stops[i].name || "") + " " + yr,
           "years/" + yr + "/" + String(stops[i].href || "").replace(/^\//, ""),
-          yr + " · " + (stops[i].name || "stop")
+          yr + " · " + (stops[i].name || "stop"),
+          "official"
         );
       }
       pop = popularOf(yr);
@@ -628,12 +633,20 @@
     var rows = allFindRows();
     var hits = [];
     var i, r;
-    for (i = 0; i < rows.length && hits.length < 36; i++) {
+    var rank = { gold: 0, official: 1, leftoverGold: 2 };
+    for (i = 0; i < rows.length; i++) {
       r = rows[i];
       if (String(r.q).toLowerCase().indexOf(q) !== -1 || String(r.label).toLowerCase().indexOf(q) !== -1) {
         hits.push(r);
       }
     }
+    hits.sort(function (a, b) {
+      var ra = rank[a.kind] != null ? rank[a.kind] : 3;
+      var rb = rank[b.kind] != null ? rank[b.kind] : 3;
+      if (ra !== rb) return ra - rb;
+      return String(a.label).localeCompare(String(b.label));
+    });
+    if (hits.length > 36) hits = hits.slice(0, 36);
     if (!hits.length) {
       host.innerHTML = "<p class='muted'>No match. Try yahoo, gmail, youtube, farmville, disney, zoom.</p>";
       return;

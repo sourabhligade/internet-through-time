@@ -1,6 +1,6 @@
 /**
  * Immersion config — 2021
- * Thesis: Allow is the trap · Ask App Not to Track is the save
+ * Thesis: the phone asks first · Allow is the trap · Ask is the save
  */
 (function (global) {
   "use strict";
@@ -16,10 +16,11 @@
       oneThingMachines: true,
       yearTruePacks: true,
       year2021Extras: true,
-      yearPopular3x: true,
-      officialDestGold: true
+      officialDestGold: true,
+      leftoverOfficial: true,
+      officialVerb: true
     },
-    navSubtitle: "Win10 mass · Chrome habit · ATT Ask App Not to Track",
+    navSubtitle: "Win10 mass · Chrome habit · ATT Ask · Signal leftover",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "ATT", href: "sites/att/index.html", match: "/att/" },
@@ -31,7 +32,7 @@
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
-      { label: "ATT", href: "sites/att/index.html" },
+      { label: "ATT Ask", href: "sites/att/index.html" },
       { label: "Signal leftover", href: "sites/signal/index.html" },
       { label: "About 2021", href: "pages/about.html" }
     ]

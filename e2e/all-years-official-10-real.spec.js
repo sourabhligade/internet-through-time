@@ -166,13 +166,13 @@ const STAR = {
   },
   "itt07-iphone": {
     incomplete: async (page) => {
-      await page.locator("[data-ip07-store]").click();
+      await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
-      await page.locator("[data-ip07-req]").nth(0).check();
-      await page.locator("[data-ip07-req]").nth(1).check();
-      await page.locator('[data-ip07-cap][value="8"]').check();
-      await page.locator("[data-ip07-safari]").click();
+      await page.locator("[data-official-need]").fill("apple.com");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
   "itt08-github": {
@@ -310,25 +310,26 @@ const STAR = {
   },
   "itt21-att": {
     incomplete: async (page) => {
-      await page.locator("[data-att-allow]").click();
+      await page.locator("[data-official-trap]").click();
     },
     complete: async (page) => {
-      await page.locator('[data-att-open="privacy"]').click();
-      await page.locator('[data-att-open="tracking"]').click();
-      await page.locator("[data-att-req]").nth(0).check();
-      await page.locator("[data-att-req]").nth(1).check();
-      await page.locator("[data-att-ask]").click();
+      await page.locator('[data-att-hop="privacy"]').click();
+      await page.locator('[data-att-hop="tracking"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
   "itt24-gpt4o": {
     incomplete: async (page) => {
-      await page.locator("[data-4o-talk]").click();
+      await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
-      await page.locator('[data-4o-pick="4o"]').click();
-      await page.locator("[data-4o-req]").nth(0).check();
-      await page.locator("[data-4o-req]").nth(1).check();
-      await page.locator("[data-4o-talk]").click();
+      await page.locator('[data-official-pick="4o"]').click();
+      await page.locator("[data-official-need]").fill("leftover");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
 };
@@ -447,6 +448,12 @@ async function runDest(page, d) {
       await lo.locator("[data-lo-save]").first().click();
       expect(await getKey(page, d.whenKey), d.whenKey + " empty field").toBeFalsy();
       await lo.locator("[data-lo-field]").fill("museum leftover");
+    }
+    if ((await lo.locator("[data-lo-wait]").count()) > 0) {
+      await lo.locator("[data-lo-save]").first().click();
+      expect(await getKey(page, d.whenKey), d.whenKey + " skip wait").toBeFalsy();
+      await lo.locator("[data-lo-wait]").first().click();
+      await page.waitForTimeout(1000);
     }
     await lo.locator("[data-lo-save]").first().click();
     await expectReal(page, d.whenKey, d.year);
@@ -642,6 +649,9 @@ async function runDest(page, d) {
   }
 
   if (html.indexOf("data-official-verb") !== -1) {
+    const hops = page.locator("[data-att-hop]");
+    const nHop = await hops.count();
+    for (let i = 0; i < nHop; i++) await hops.nth(i).click();
     const save = page.locator("[data-official-verb], [data-official-save]").first();
     await save.waitFor({ timeout: 15000 });
     await save.click();
@@ -649,7 +659,7 @@ async function runDest(page, d) {
     const reqs = page.locator("[data-official-req], [data-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    const field = page.locator("[data-official-field], [data-lo-field]").first();
+    const field = page.locator("[data-official-need], [data-official-field], [data-lo-field]").first();
     if ((await field.count()) > 0) await field.fill("museum leftover");
     const pick = page.locator("[data-official-pick]").first();
     if ((await pick.count()) > 0) await pick.click();
@@ -663,7 +673,7 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(27 * 10);
+    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(25 * 10);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);
   });

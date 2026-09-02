@@ -1,7 +1,3 @@
-/**
- * Immersion year stub — 2009
- * SRP: declare year only; shared loader is immersion/boot.js
- */
 (function () {
   "use strict";
   var ITT = window.ITT || (window.ITT = {});

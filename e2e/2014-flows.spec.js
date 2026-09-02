@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const { openAlsoYear } = require("./helpers");
 
 
 async function getKey(page, k) {
@@ -46,7 +47,8 @@ test.describe("2014 flows", () => {
 
   test("second leftover 3× is Heartbleed · Ice Bucket · Slack", async ({ page }) => {
     await page.goto("/years/2014/pages/home.html");
-    const strip = page.locator('[data-itt-pop-more="2014"]');
+    await openAlsoYear(page, "2014");
+    const strip = page.locator('nav[data-itt-pop-more="2014"], p.itt-pop-more[data-itt-pop-more="2014"]').first();
     await expect(strip).toContainText(/Heartbleed/);
     await expect(strip).toContainText(/Ice Bucket/);
     await expect(strip).toContainText(/Slack/);

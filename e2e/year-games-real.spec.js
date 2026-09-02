@@ -161,7 +161,7 @@ test.describe('REAL complete writes', () => {
 
   test('2006 load alone does not write itt06-game-sled', async ({ page }) => {
     skipIfWiped('2006');
-    test.skip(!yearOnDisk('2006'), '2006 wiped');
+    test.skip(!yearOnDisk('2006'), '2006 not on disk');
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');
     await openGame(page, '2006');
@@ -206,7 +206,7 @@ test.describe('REAL complete writes', () => {
 
   test('2006 sled finish writes year best', async ({ page }) => {
     skipIfWiped('2006');
-    test.skip(!yearOnDisk('2006'), '2006 wiped');
+    test.skip(!yearOnDisk('2006'), '2006 not on disk');
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');
     const frame = await openGame(page, '2006');
@@ -224,7 +224,7 @@ test.describe('REAL complete writes', () => {
 
   test('2006 TrailSled Ride on demo ramp writes itt06-game-sled', async ({ page }) => {
     skipIfWiped('2006');
-    test.skip(!yearOnDisk('2006'), '2006 wiped');
+    test.skip(!yearOnDisk('2006'), '2006 not on disk');
     await enterYear(page, '2006');
     await clearPrefixGames(page, 'itt06');
     const frame = await openGame(page, '2006');
@@ -444,7 +444,7 @@ test.describe('REAL complete writes', () => {
 
 // ——— Isolation matrix sample ———
 test('REAL isolation: 2005 write does not create 2006 key', async ({ page }) => {
-  test.skip(!yearOnDisk('2005') || !yearOnDisk('2006'), '2005/2006 wiped');
+  test.skip(!yearOnDisk('2005') || !yearOnDisk('2006'), '2005/2006 not on disk');
   await enterYear(page, '2005');
   await clearPrefixGames(page, 'itt05');
   await clearPrefixGames(page, 'itt06');

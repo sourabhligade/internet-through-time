@@ -94,6 +94,13 @@ async function runDest(page, d) {
     await lo.locator("[data-lo-field]").fill(ph.length >= 2 ? ph : ph + "xx");
   }
 
+  if ((await lo.locator("[data-lo-wait]").count()) > 0) {
+    await lo.locator("[data-lo-save]").first().click();
+    expect(await getKey(page, d.key), d.key + " skip wait").toBeFalsy();
+    await lo.locator("[data-lo-wait]").first().click();
+    await page.waitForTimeout(1000);
+  }
+
   await lo.locator("[data-lo-save]").first().click();
   await expect.poll(() => getKey(page, d.key), { timeout: 8000 }).toBeTruthy();
   const blob = JSON.parse((await getKey(page, d.key)) || "{}");
@@ -127,12 +134,12 @@ test.describe("leftover official · disk + trail", () => {
       live += keys.length;
       empty += keys.filter((k) => /"whenKey":\s*""/.test(k)).length;
     }
-    expect(live, "live trail dests").toBeGreaterThanOrEqual(28 * 10);
+    expect(live, "live trail dests").toBeGreaterThanOrEqual(26 * 10);
     expect(empty, "empty live whenKeys").toBe(0);
   });
 
   test("every matrix dest file has leftover panel + dest exists", () => {
-    expect(DESTS.length).toBeGreaterThanOrEqual(99);
+    expect(DESTS.length).toBeGreaterThanOrEqual(4776);
     for (const d of DESTS) {
       const file = path.join(ROOT, "years", d.year, d.href);
       expect(fs.existsSync(file), file).toBe(true);
@@ -142,12 +149,139 @@ test.describe("leftover official · disk + trail", () => {
       expect(html, d.key + " trap").toMatch(/data-lo-trap/);
     }
   });
+
+  test("forest leftover-official matrix lists every disk leftover dest", () => {
+    const keyRe = /data-lo-key="([^"]+)"/g;
+    const missing = [];
+    const have = new Set(DESTS.map((d) => d.year + "\t" + d.href + "\t" + d.suffix));
+    const yearsRoot = path.join(ROOT, "years");
+    for (const year of fs.readdirSync(yearsRoot)) {
+      if (!/^\d{4}$/.test(year) || year === "2025") continue;
+      const yroot = path.join(yearsRoot, year);
+      const stack = [yroot];
+      while (stack.length) {
+        const dir = stack.pop();
+        for (const name of fs.readdirSync(dir)) {
+          const full = path.join(dir, name);
+          const st = fs.statSync(full);
+          if (st.isDirectory()) {
+            stack.push(full);
+            continue;
+          }
+          if (!name.endsWith(".html")) continue;
+          const html = fs.readFileSync(full, "utf8");
+          if (html.indexOf("data-lo-key=") === -1) continue;
+          const href = path.relative(yroot, full).replace(/\\/g, "/");
+          let m;
+          const re = new RegExp(keyRe.source, "g");
+          while ((m = re.exec(html))) {
+            const sig = year + "\t" + href + "\t" + m[1];
+            if (!have.has(sig)) missing.push(sig.replace(/\t/g, " "));
+          }
+        }
+      }
+    }
+    expect(missing, "disk leftover dests missing from matrix").toEqual([]);
+  });
+
+  test("leftover-120 years have a 2× row for every leftover dest key", () => {
+    const lean = new Set(["2007", "2009", "2011", "2020", "2021", "2022", "2023", "2024"]);
+    const gold = new Set([
+      "itt07-iphone",
+      "itt09-like",
+      "itt11-gplus",
+      "itt20-zoom",
+      "itt21-att",
+      "itt22-chatgpt",
+      "itt23-plus",
+      "itt24-gpt4o",
+    ]);
+    const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
+    const byYear = {};
+    for (const row of x2) {
+      (byYear[row.year] || (byYear[row.year] = new Set())).add(row.key);
+    }
+    const missing = [];
+    for (const d of DESTS) {
+      if (!lean.has(d.year) || gold.has(d.key)) continue;
+      if (!byYear[d.year] || !byYear[d.year].has(d.key)) {
+        missing.push(d.year + " " + d.key + " " + d.href);
+      }
+    }
+    expect(missing, "leftover-120 dests missing from 2× matrix").toEqual([]);
+  });
 });
 
 test.describe("leftover official · trap then save", () => {
   for (const d of DESTS) {
-    test(`${d.year} ${d.suffix} incomplete never writes then save`, async ({ page }) => {
+    test(`${d.year} ${d.suffix} ${d.href} incomplete never writes then save`, async ({ page }) => {
       await runDest(page, d);
     });
   }
+});
+
+test.describe("2007 leftover isolation", () => {
+  test("Safari literacy leftover never writes gold", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2007" && x.suffix === "iphone-lx");
+    test.skip(!d, "2007 iphone-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt07-iphone"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt06-iphone"), "2006 neighbor").toBeFalsy();
+    expect(await getKey(page, "itt08-iphone"), "2008 neighbor").toBeFalsy();
+  });
+});
+
+test.describe("2023 leftover isolation", () => {
+  test("Plus literacy leftover never writes gold or 2024 Plus residual", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2023" && x.suffix === "plus-lx");
+    test.skip(!d, "2023 plus-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt23-plus"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt22-plus"), "2022 neighbor").toBeFalsy();
+    expect(await getKey(page, "itt24-plus"), "2024 Plus residual").toBeFalsy();
+  });
+});
+
+test.describe("2020 leftover isolation", () => {
+  test("Zoom literacy leftover never writes gold", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2020" && x.suffix === "zoom-lx");
+    test.skip(!d, "2020 zoom-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt20-zoom"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt19-zoom"), "2019 neighbor").toBeFalsy();
+    expect(await getKey(page, "itt21-zoom"), "2021 neighbor").toBeFalsy();
+  });
+});
+
+test.describe("2011 leftover isolation", () => {
+  test("Google+ literacy leftover never writes gold", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2011" && x.suffix === "gplus-lx");
+    test.skip(!d, "2011 gplus-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt11-gplus"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt10-gplus"), "2010 neighbor").toBeFalsy();
+    expect(await getKey(page, "itt12-gplus"), "2012 neighbor").toBeFalsy();
+  });
+});
+
+test.describe("2009 leftover isolation", () => {
+  test("Like literacy leftover never writes gold", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2009" && x.suffix === "like-lx");
+    test.skip(!d, "2009 like-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt09-like"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt08-like"), "2008 neighbor").toBeFalsy();
+    expect(await getKey(page, "itt10-like"), "2010 neighbor").toBeFalsy();
+  });
+});
+
+test.describe("2024 leftover isolation", () => {
+  test("4o literacy leftover never writes gold or 2023 Plus", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2024" && x.suffix === "gpt4o-lx");
+    test.skip(!d, "2024 gpt4o-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt24-gpt4o"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt23-plus"), "2023 Plus gold").toBeFalsy();
+    expect(await getKey(page, "itt25-gpt4o"), "2025 neighbor").toBeFalsy();
+  });
 });

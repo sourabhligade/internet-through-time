@@ -86,25 +86,12 @@
       { id: "sekirobar", slot: "c", title: "Shinobi Bar", engine: "rhythm", key: "itt19-game-sekirobar", inspire: "Sekiro · 22 Mar 2019", trap: "Official wolf" },
       { id: "goosehk", slot: "d", title: "Goose Honk", engine: "platform", key: "itt19-game-goosehk", inspire: "Untitled Goose Game · 20 Sep 2019", trap: "Official goose" }
     ],
-    "2020": [
-      { id: "acnhplot", slot: "c", title: "Island Plot", engine: "craft", key: "itt20-game-acnhplot", inspire: "Animal Crossing: NH · 20 Mar 2020", trap: "Official Nook" },
-      { id: "fallguysc", slot: "d", title: "Crown Race", engine: "platform", key: "itt20-game-fallguysc", inspire: "Fall Guys · 4 Aug 2020", trap: "Official bean" }
-    ],
     "2021": [
-      { id: "ittakest", slot: "c", title: "Coop Jump", engine: "platform", key: "itt21-game-ittakest", inspire: "It Takes Two · 26 Mar 2021", trap: "Official dolls" },
-      { id: "metroiddr", slot: "d", title: "Dread Seq", engine: "corridor", key: "itt21-game-metroiddr", inspire: "Metroid Dread · 8 Oct 2021", trap: "Official Samus" }
+      { id: "ittakes", slot: "c", title: "It Takes Two leftover", engine: "coop", key: "itt21-game-ittakes", inspire: "It Takes Two · 26 Mar 2021", trap: "Official dolls" },
+      { id: "dread", slot: "d", title: "Metroid Dread leftover", engine: "platform", key: "itt21-game-dread", inspire: "Metroid Dread · 8 Oct 2021", trap: "Official Samus" }
     ],
     "2022": [
-      { id: "eldengrc", slot: "c", title: "Elden Grace", engine: "corridor", key: "itt22-game-eldengrc", inspire: "Elden Ring · 25 Feb 2022", trap: "Official grace" },
-      { id: "straycat", slot: "d", title: "Stray Cat", engine: "platform", key: "itt22-game-straycat", inspire: "Stray · 19 Jul 2022", trap: "Official cat" }
-    ],
-    "2023": [
-      { id: "bg3dice", slot: "c", title: "Dice Camp", engine: "cards", key: "itt23-game-bg3dice", inspire: "Baldur’s Gate 3 · 3 Aug 2023", trap: "Official tadpole" },
-      { id: "totkisland", slot: "d", title: "Sky Island", engine: "platform", key: "itt23-game-totkisland", inspire: "Zelda TotK · 12 May 2023", trap: "Official zonai" }
-    ],
-    "2024": [
-      { id: "balatrojk", slot: "c", title: "Joker Ante", engine: "cards", key: "itt24-game-balatrojk", inspire: "Balatro · 20 Feb 2024", trap: "Official joker" },
-      { id: "helldive", slot: "d", title: "Stratagem", engine: "rhythm", key: "itt24-game-helldive", inspire: "Helldivers 2 · 8 Feb 2024", trap: "Official eagle" }
-    ]
-  };
+      { id: "gow", slot: "c", title: "God of War Ragnarök leftover", engine: "platform", key: "itt22-game-gow", inspire: "God of War Ragnarök · 9 Nov 2022", trap: "Official dolls" },
+      { id: "elden", slot: "d", title: "Elden Ring leftover", engine: "corridor", key: "itt22-game-elden", inspire: "Elden Ring · 25 Feb 2022", trap: "Official dolls" }
+    ]};
 })(typeof window !== "undefined" ? window : this);

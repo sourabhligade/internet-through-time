@@ -235,6 +235,7 @@
       "immersion/source-flows.js"
     ],
     "2006": [
+      "immersion/year-2006-extras.js",
       "immersion/twitter.js",
       "immersion/youtube.js",
       "immersion/maps.js",
@@ -242,7 +243,9 @@
       "immersion/digg.js",
       "immersion/gmail.js",
       "immersion/flickr.js",
-      "immersion/amazon.js"
+      "immersion/amazon.js",
+      "immersion/one-thing-machines.js",
+      "immersion/source-flows.js"
     ],
     "2005": [
       "immersion/amazon.js",
@@ -396,9 +399,8 @@
       "immersion/year-2019-extras.js",
       "immersion/one-thing-machines.js"
     ],
-    "2020": [
+    "2007": [
       "immersion/no-mock-common.js",
-      "immersion/year-2020-extras.js",
       "immersion/one-thing-machines.js"
     ],
     "2021": [
@@ -406,22 +408,23 @@
       "immersion/year-2021-extras.js",
       "immersion/one-thing-machines.js"
     ],
-    "2022": [
-      "immersion/no-mock-common.js",
-      "immersion/year-2022-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
     "2023": [
       "immersion/no-mock-common.js",
-      "immersion/year-2023-extras.js",
       "immersion/one-thing-machines.js"
     ],
     "2024": [
       "immersion/no-mock-common.js",
-      "immersion/year-2024-extras.js",
       "immersion/one-thing-machines.js"
-    ]
-  };
+    ],
+    "2020": [
+      "immersion/no-mock-common.js",
+      "immersion/year-2020-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2022": [
+      "immersion/no-mock-common.js",
+      "immersion/one-thing-machines.js"
+    ]};
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};
   (function buildYearLists() {

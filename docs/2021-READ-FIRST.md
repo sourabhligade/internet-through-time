@@ -1,15 +1,15 @@
-# 2021 — READ FIRST (lean door)
+# 2021 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-08-27  
-**Status:** **live lean 3× door.** Hub card open. Passport chip live. `SHIP_YEARS` includes 2021.  
-**Do not** `git checkout` an old 2020–2025 forest.  
-**This pass:** 3× leftover + 3×-links ship (177 dests / 376 HTML). **P5 2× deepen rooms restored** (32 `ITT-DP-ROOM` theaters + `#ott-2x-2021-dp`). Costume / full visitor chrome is a later pass.  
-**Map:** [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
-**Research freeze (2026-08-28):** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md)  
-**In-place implement (walk this):** [`2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md)  
-**Deepen freeze:** [`2021-2022-2X-DEEPEN-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-27.md`](2021-2022-2X-DEEPEN-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-27.md)  
-**Year map (walk this):** [`2021-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md`](2021-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md) — every dest incomplete/complete · minute steps · phases.  
-**Parent:** 2020 Zoom mute / Reels / GPT-3 waitlist — still wiped. **Child:** 2022 ChatGPT Send.  
+**Date:** 2026-09-01  
+**Status:** **live lean door + leftover 2×.** `years/2021/` is **on disk**. Hub card **available**. Star is ATT Ask. Guided stays 6. Leftover 2× is 120 writers.  
+**All-years implement walk:** [`ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md`](ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md)  
+**Criteria (always / tick a row):** [`2021-2X-CRITERIA-MAP-2026-09-01.md`](2021-2X-CRITERIA-MAP-2026-09-01.md)  
+**2× leftover harvest (walk this for leftover dests):** [`2021-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2021-2X-LEFTOVER-RESEARCH-2026-09-01.md)  
+**2× leftover minute walk:** [`2021-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-01.md`](2021-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-01.md)  
+**Year lock / scale / official 10:** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md)  
+**Visitor map (locks, not live dests):** [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
+**Older notebooks that lose to this file + DISK-TRUTH:** `2021-FROM-SCRATCH-RESEARCH-…-2026-08-28.md` (says door live) · `2021-IN-PLACE-…` · any “85 HTML / 376 HTML on disk” sentence.  
+**Parent (live):** 2019 Disney+ Continue. **2020 sibling:** wiped (Zoom). **Child:** 2022 ChatGPT — also wiped.  
 **Git only if asked.**
 
 ## One line
@@ -19,49 +19,36 @@
 ## Lock before you type HTML
 
 | Lock | Value |
-|------|--------|
+|------|-------|
 | Prefix | `itt21-*` only |
 | Shell | **Windows 10 + Chrome habit** (museum desktop · failed-final word Chrome · no official Chrome pixels). Win11 = **5 Oct** leftover. |
-| ★ Star | **ATT Ask** · iOS 14.5 · `itt21-att` · **Ask App Not to Track** is the save |
-| Incomplete | empty Ask · 0 ticks · **Allow Tracking** · never writes |
-| Complete | Privacy → Tracking · both honesties + Ask · reload persist |
+| ★ Star | **ATT Ask** · iOS 14.5 · **26 Apr 2021** · `itt21-att` · **Ask App Not to Track** is the save |
+| Incomplete | empty Ask · 0 ticks · hops skipped · **Allow Tracking** · never writes |
+| Complete | Settings → Privacy → Tracking · both honesties + **Ask App Not to Track** · reload persist |
 | Trap | Allow · ChatGPT · Wordle millions / NYT · Meta consumer app · Zoom-as-2021-gold |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ATT Ask · Signal leftover · Copilot waitlist · Meta rename · Win11 leftover · Flash brick · Chrome habit · Win10 residual · Facebook leftover · Five Letter |
-| First door | **lean**. Do not restore a 2020–2025 forest. |
+| First door | **lean from scratch**. Do **not** `git checkout` an old 2020–2025 forest. |
 
-## Size lock
-
-This pass is the **3× leftover + 3×-links** door, not the old ≤90 lean cap.
-
-| Metric | Rule |
-|--------|------|
-| Dest folders | **≥ 177** |
-| HTML | **≥ 276** (this ship: 376) |
-| Guided | **6** |
-| Official trails | **10** |
-| Leftover 3× doors | **27** as three strips **9 + 9 + 9** (not stuffed into one `pop3x`) |
-| 3×-links also-nav | `n = max(36, min(72, dest_count // 2))` via `scripts/build-3x-links.py` |
-| Minute bible | [`2021-3X-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md`](2021-3X-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md) |
-
-## Dual-cite
+## Dual-cite (reopened 2026-09-01)
 
 | Fact | Cite |
 |------|------|
-| ATT / iOS 14.5 | **26 Apr 2021** · prompt “Allow [app] to track…?” · **Ask App Not to Track** vs **Allow** — Apple iOS 14.5 release notes / ATT docs |
-| Netcraft Jan 2021 | **1,197,982,359** hostnames — Netcraft January 2021 Web Server Survey |
-| ITU 2021 | **4.9 billion** users / **63%** — ITU Facts and Figures 2021 |
-| Live Stats June websites | **table ends 2018** at **1,630,322,579**. **No June 2021 websites cell.** Do not invent one. |
-| Copilot technical preview | **29 Jun 2021** — GitHub blog. Not ChatGPT. |
-| Meta rename | **28 Oct 2021** — Facebook, Inc. → Meta. The consumer app stays Facebook. |
-| Windows 11 GA | **5 Oct 2021** — leftover. Win10 is January mass. |
-| Flash brick | EOL **31 Dec 2020** · Chrome hard-block **12 Jan 2021** |
+| ILS June websites | **table ends 2018** at **1,630,322,579 (−8%)**. **No 2019 row. No 2020 row. No 2021 row.** [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
+| Netcraft January 2021 | **1,197,982,359** sites · **262,949,225** unique domains · **10,649,817** web-facing computers — [Netcraft 27 Jan 2021](https://www.netcraft.com/blog/january-2021-web-server-survey) |
+| Netcraft December 2021 | **1,168,864,866** sites · **268,328,184** domains · **11,669,818** computers — December pair, still not June. Hostnames fell; domains/computers rose. |
+| ITU 2021 people | **4.9 billion / 63%** · +17% since 2019 · **782 million** came online · **2.9 billion** still offline (96% in developing countries) — [ITU Facts and Figures 2021](https://www.itu.int/itu-d/reports/statistics/facts-figures-2021/) |
+| ATT / iOS 14.5 | **26 Apr 2021** · prompt “Allow [app] to track your activity across other companies’ apps and websites?” · **Ask App Not to Track** vs **Allow** — NYT 26 Apr 2021 · WIRED 26–27 Apr |
+| Copilot technical preview | **29 Jun 2021** — [GitHub blog](https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/). OpenAI Codex. **Not ChatGPT.** |
+| Meta rename | **28 Oct 2021** — Facebook, Inc. → Meta. Apps stay Facebook / Instagram / WhatsApp. [Meta Newsroom](https://about.fb.com/news/2021/10/facebook-company-is-now-meta/) |
+| Windows 11 | Availability begins **4–5 Oct 2021** · phased · all eligible Win10 by **mid-2022** — Windows Experience Blog 4 Oct 2021. Win10 is January mass. |
+| Flash brick | EOL **31 Dec 2020** · Adobe **blocks content 12 Jan 2021** — Adobe Flash EOL page |
 | Wordle | public Oct 2021 · **90 users 1 Nov 2021** · NYT **31 Jan 2022** — not 2021 gold |
 
 ## Bans (never as 2021 default)
 
-ChatGPT · Wordle millions / NYT tiles · Meta consumer app · Allow as the save · Zoom-as-gold · GPT-4 · Threads · X.
+ChatGPT · Wordle millions / NYT tiles · Meta consumer app · Allow as the save · Zoom-as-gold · GPT-4 · Threads · X · Midjourney / Stable Diffusion mass.
 
 ## What this file is not
 
-A forest restore. Leftover 4× / leftover-official / pop panels stay so e2e can walk them.
+A forest restore. A live year. An implement pass. Open the 2026-09-01 harvest, then wait for a named rebuild.

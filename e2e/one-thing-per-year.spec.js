@@ -110,6 +110,58 @@ const THINGS = [
     },
   },
   {
+    year: "2001",
+    path: "/years/2001/sites/wikipedia/edit.html",
+    key: "itt01-wiki",
+    incomplete: async (page) => {
+      await page.locator("[data-wiki-preview]").click();
+    },
+    complete: async (page) => {
+      await page.fill("[data-wiki-body]", "This is the new WikiPedia residual.");
+      await page.locator("[data-wiki-save]").click();
+    },
+  },
+  {
+    year: "2002",
+    path: "/years/2002/sites/stumbleupon/index.html",
+    key: "itt02-stumble",
+    incomplete: async (page) => {
+      await page.locator("[data-su-stumble]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-su-topic]").selectOption("art");
+      await page.locator("[data-su-stumble]").click();
+      await page.locator("[data-su-up]").click();
+    },
+  },
+  {
+    year: "2003",
+    path: "/years/2003/sites/photobucket/index.html",
+    key: "itt03-photobucket",
+    incomplete: async (page) => {
+      await page.locator("form[data-pb-upload] button[type='submit']").click();
+    },
+    complete: async (page) => {
+      await page.fill("#ott-field", "vacation.jpg");
+      await page.locator("[data-pb-req]").check();
+      await page.locator("form[data-pb-upload] button[type='submit']").click();
+    },
+  },
+  {
+    year: "2006",
+    path: "/years/2006/sites/twitter/index.html",
+    key: "itt06-tweets",
+    incomplete: async (page) => {
+      await page.locator("[data-tw06-trap]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-tw06-req]").nth(0).check();
+      await page.locator("[data-tw06-req]").nth(1).check();
+      await page.fill("[data-tw06-body]", "just setting up my twttr residual");
+      await page.locator("[data-tw06-post]").click();
+    },
+  },
+  {
     year: "2004",
     path: "/years/2004/sites/facebook/networks.html",
     key: "itt04-thefacebook-networks",
@@ -297,6 +349,64 @@ const THINGS = [
     },
   },
   {
+    year: "2007",
+    path: "/years/2007/sites/iphone/index.html",
+    key: "itt07-iphone",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("apple.com");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-att-hop="privacy"]').click();
+      await page.locator('[data-att-hop="tracking"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2023",
+    path: "/years/2023/sites/plus/index.html",
+    key: "itt23-plus",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("leftover");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2024",
+    path: "/years/2024/sites/chatgpt/4o.html",
+    key: "itt24-gpt4o",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-official-pick="4o"]').click();
+      await page.locator("[data-official-need]").fill("leftover");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
     year: "2020",
     path: "/years/2020/sites/zoom/meeting.html",
     key: "itt20-zoom",
@@ -313,58 +423,17 @@ const THINGS = [
     },
   },
   {
-    year: "2021",
-    path: "/years/2021/sites/att/index.html",
-    key: "itt21-att",
-    incomplete: async (page) => {
-      await page.locator("[data-att-allow]").click();
-    },
-    complete: async (page) => {
-      await page.locator('[data-att-open="privacy"]').click();
-      await page.locator('[data-att-open="tracking"]').click();
-      await page.locator("[data-att-req]").nth(0).check();
-      await page.locator("[data-att-req]").nth(1).check();
-      await page.locator("[data-att-ask]").click();
-    },
-  },
-  {
     year: "2022",
     path: "/years/2022/sites/chatgpt/index.html",
     key: "itt22-chatgpt",
     incomplete: async (page) => {
-      await page.locator("[data-gpt22-send]").click();
+      await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
-      await page.locator("[data-gpt22-prompt]").fill("explain this leftover");
-      await page.locator("[data-gpt22-send]").click();
-    },
-  },
-  {
-    year: "2023",
-    path: "/years/2023/sites/plus/index.html",
-    key: "itt23-plus",
-    incomplete: async (page) => {
-      await page.locator("[data-plus-go]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-p23-req]").nth(0).check();
-      await page.locator("[data-p23-req]").nth(1).check();
-      await page.locator("[data-p23-field]").fill("plus leftover $20");
-      await page.locator("[data-plus-go]").click();
-    },
-  },
-  {
-    year: "2024",
-    path: "/years/2024/sites/chatgpt/4o.html",
-    key: "itt24-gpt4o",
-    incomplete: async (page) => {
-      await page.locator("[data-4o-talk]").click();
-    },
-    complete: async (page) => {
-      await page.locator('[data-4o-pick="4o"]').click();
-      await page.locator("[data-4o-req]").nth(0).check();
-      await page.locator("[data-4o-req]").nth(1).check();
-      await page.locator("[data-4o-talk]").click();
+      await page.locator("[data-official-need]").fill("leftover prompt");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
 ];
@@ -431,11 +500,13 @@ test.describe("One-thing per year — load + REAL gate", () => {
     }
     for (const y of years) {
       if (!fs.existsSync(path.join(ROOT, "years", y, "index.html"))) continue;
+      /* Lean doors use leftover 2× strip, not a forest residual pack. */
+      if (y === "2007" || y === "2009") continue;
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y}`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y} a[href="about.html"]`).first()).toBeVisible();
-      await expect(page.locator(".itt-year-true-pack").first()).toBeVisible();
+      await expect(page.locator(".itt-year-true-pack").first()).toHaveCount(1);
       const first = await page.evaluate(() => {
         const el = document.querySelector("[data-ott-one-thing], .ott-guided, .itt-year-true-pack");
         if (!el) return "missing";

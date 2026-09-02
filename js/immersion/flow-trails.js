@@ -97,27 +97,41 @@
   function paint(doc, trails) {
     if (!doc || !trails || !trails.length) return;
     var path = yearRelPath();
+    var here = currentTrail(trails, path);
+    var hereN = here ? Number(here.n) || 0 : 0;
     var wrap = doc.createElement("nav");
     wrap.setAttribute("data-itt-flow-trail", "1");
-    wrap.setAttribute("aria-label", "Ten year flows");
+    wrap.setAttribute("aria-label", "Year flows");
     wrap.style.cssText =
-      "margin:14px auto;max-width:46em;padding:8px 10px;border:1px dashed #666;font:12px/1.45 Arial,Helvetica,sans-serif;background:#fffbe8;color:#222";
+      "margin:14px auto;max-width:46em;padding:10px 12px;border:1px solid;font:13px/1.5 Arial,Helvetica,sans-serif";
     var bits = [];
     var i;
     var t;
-    bits.push("<b>Year flows</b> — ");
+    var n;
+    bits.push(
+      "<p style=\"margin:0 0 8px\"><b>Step " +
+        esc(hereN || "—") +
+        " of " +
+        trails.length +
+        (here && here.name ? " · " + esc(here.name) : "") +
+        "</b></p>"
+    );
+    bits.push("<ol data-itt-ten-flows style=\"margin:0;padding-left:1.3em\">");
     for (i = 0; i < trails.length; i++) {
       t = trails[i];
-      if (i) bits.push(" · ");
+      n = Number(t.n) || i + 1;
+      bits.push(n === hereN ? '<li aria-current="step"><b>' : "<li>");
       bits.push(
         '<a href="' +
           esc(toRelative(t.href)) +
           '">' +
-          esc(String(t.n || i + 1) + ". " + (t.name || "flow")) +
+          esc(n + " · " + (t.name || "flow")) +
           "</a>"
       );
+      if (t.nextLabel) bits.push(" → " + esc(t.nextLabel));
+      bits.push(n === hereN ? "</b></li>" : "</li>");
     }
-    var here = currentTrail(trails, path);
+    bits.push("</ol>");
     if (here && here.nextHref && here.nextLabel && !doc.querySelector("[data-next-flow]")) {
       bits.push(
         '<p data-next-flow data-next-when-key="' +
@@ -132,9 +146,34 @@
     wrap.innerHTML = bits.join("");
     var host = doc.querySelector(".itt-phone") || doc.body;
     host.appendChild(wrap);
+    foldDestAlso(doc);
     try {
       if (ITT.bootRevealNext) ITT.bootRevealNext(doc);
     } catch (eB) { /* */ }
+  }
+
+  function foldDestAlso(doc) {
+    var nodes = doc.querySelectorAll("[data-itt-3x-also], [data-itt-3x-links]");
+    if (!nodes.length) return;
+    if (doc.querySelector("details.itt-also-year[data-itt-3x-also]")) return;
+    var first = nodes[0];
+    if (!first.parentNode) return;
+    var box = doc.createElement("details");
+    box.className = "itt-also-year";
+    box.setAttribute("data-itt-3x-also", "1");
+    box.style.cssText =
+      "margin:14px auto;max-width:46em;font:12px/1.45 Arial,Helvetica,sans-serif";
+    box.innerHTML = "<summary>Also this year</summary><div class=\"itt-also-year-body\"></div>";
+    var body = box.querySelector(".itt-also-year-body");
+    first.parentNode.insertBefore(box, first);
+    var i;
+    var n;
+    for (i = 0; i < nodes.length; i++) {
+      n = nodes[i];
+      if (box.contains(n)) continue;
+      n.removeAttribute("data-itt-3x-also");
+      body.appendChild(n);
+    }
   }
 
   function trailsFor(y) {

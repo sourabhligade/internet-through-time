@@ -1,45 +1,40 @@
 # Every year · every flow · every game — live e2e run
 
-**Started:** 2026-08-27T04:18:59.313Z
-**Finished:** 2026-08-27T04:30:06.853Z
+**Started:** 2026-09-01T11:57:00.593Z
+**Finished:** 2026-09-01T12:08:54.270Z
 **Method:** Chromium walks gold (full complete + key write), official 10 (live page), every `sites/playable/*.html` (start / leftover extra / minute complete), every 2× leftover dest (wait `data-4x-ready`, incomplete never writes, complete writes), every popular 3× dest, then crawls in-year hrefs (museum year-root resolve).
 **Incomplete never writes** is asserted on leftover 2× / popular 3× / empty game Finish.
-**Wiped:** 2006, 2007, **2020–2025** — no year tree. 2020–2025 rows below are from the last live walk before those years were deleted.
+**Wiped:** 2006, 2007 — no year tree.
 
-**Totals:** 2399 pass · 0 fail
+**Totals:** 905 pass · 2538 fail
 
 | Year | Gold | Official 10 | Games | 2× leftover | Popular 3× | Links |
 |------|------|-------------|-------|-------------|------------|-------|
-| 1994 | 1/1 | 10/10 | 16/16 | 28/28 | 3/3 | ok (31) |
-| 1995 | 1/1 | 10/10 | 16/16 | 27/27 | 3/3 | ok (33) |
-| 1996 | 1/1 | 10/10 | 16/16 | 24/24 | 3/3 | ok (24) |
-| 1997 | 1/1 | 10/10 | 16/16 | 24/24 | 3/3 | ok (30) |
-| 1998 | 1/1 | 10/10 | 16/16 | 33/33 | 3/3 | ok (29) |
-| 1999 | 1/1 | 10/10 | 16/16 | 32/32 | 3/3 | ok (37) |
-| 2000 | 1/1 | 10/10 | 16/16 | 38/38 | 3/3 | ok (35) |
-| 2001 | 1/1 | 10/10 | 16/16 | 57/57 | 3/3 | ok (43) |
-| 2002 | 1/1 | 10/10 | 16/16 | 76/76 | 3/3 | ok (37) |
-| 2003 | 1/1 | 10/10 | 16/16 | 85/85 | 3/3 | ok (40) |
-| 2004 | 1/1 | 10/10 | 16/16 | 102/102 | 3/3 | ok (41) |
-| 2005 | 1/1 | 10/10 | 16/16 | 179/179 | 3/3 | ok (22) |
-| 2008 | 1/1 | 10/10 | 16/16 | 116/116 | 3/3 | ok (41) |
-| 2009 | 1/1 | 10/10 | 12/12 | 36/36 | 3/3 | ok (21) |
-| 2010 | 1/1 | 10/10 | 16/16 | 44/44 | 3/3 | ok (28) |
-| 2011 | 1/1 | 10/10 | 12/12 | 35/35 | 3/3 | ok (25) |
-| 2012 | 1/1 | 10/10 | 12/12 | 40/40 | 3/3 | ok (28) |
-| 2013 | 1/1 | 10/10 | 12/12 | 29/29 | 3/3 | ok (25) |
-| 2014 | 1/1 | 10/10 | 16/16 | 30/30 | 3/3 | ok (25) |
-| 2015 | 1/1 | 10/10 | 16/16 | 45/45 | 3/3 | ok (26) |
-| 2016 | 1/1 | 10/10 | 16/16 | 45/45 | 3/3 | ok (25) |
-| 2017 | 1/1 | 10/10 | 16/16 | 45/45 | 3/3 | ok (25) |
-| 2018 | 1/1 | 10/10 | 16/16 | 45/45 | 3/3 | ok (26) |
-| 2019 | 1/1 | 10/10 | 12/12 | 45/45 | 3/3 | ok (26) |
-| 2020 | 1/1 | 10/10 | 12/12 | 46/46 | 3/3 | ok (27) |
-| 2021 | 1/1 | 10/10 | 12/12 | 45/45 | 3/3 | ok (24) |
-| 2022 | 1/1 | 10/10 | 12/12 | 34/34 | 3/3 | ok (24) |
-| 2023 | 1/1 | 10/10 | 12/12 | 41/41 | 0/0 | ok (30) |
-| 2024 | 1/1 | 10/10 | 12/12 | 48/48 | 0/0 | ok (36) |
-| 2025 | 1/1 | 10/10 | 12/12 | 48/48 | 0/0 | ok (15) |
+| 1994 | 1/1 | 10/10 | 20/20 | 0/56 | 3/3 | ok (31) |
+| 1995 | 1/1 | 10/10 | 20/20 | 0/54 | 3/3 | ok (33) |
+| 1996 | 1/1 | 10/10 | 20/20 | 0/48 | 3/3 | ok (24) |
+| 1997 | 1/1 | 10/10 | 20/20 | 0/48 | 3/3 | ok (30) |
+| 1998 | 1/1 | 10/10 | 20/20 | 0/66 | 3/3 | ok (29) |
+| 1999 | 1/1 | 10/10 | 20/20 | 0/64 | 3/3 | ok (37) |
+| 2000 | 1/1 | 10/10 | 20/20 | 76/76 | 3/3 | ok (35) |
+| 2001 | 1/1 | 10/10 | 20/20 | 0/23 | 3/3 | ok (31) |
+| 2002 | 0/1 | 10/10 | 20/20 | 0/23 | 3/3 | ok (24) |
+| 2003 | 1/1 | 10/10 | 20/20 | 0/18 | 0/0 | ok (28) |
+| 2004 | 1/1 | 10/10 | 20/20 | 0/204 | 3/3 | ok (41) |
+| 2005 | 1/1 | 10/10 | 18/20 | 0/128 | 3/3 | ok (24) |
+| 2006 | 1/1 | 10/10 | 18/21 | 0/139 | 3/3 | ok (23) |
+| 2008 | 1/1 | 10/10 | 20/20 | 0/267 | 3/3 | ok (41) |
+| 2010 | 1/1 | 10/10 | 20/20 | 0/148 | 3/3 | ok (28) |
+| 2012 | 1/1 | 10/10 | 16/16 | 0/162 | 3/3 | ok (30) |
+| 2013 | 1/1 | 10/10 | 16/16 | 0/117 | 3/3 | ok (28) |
+| 2014 | 1/1 | 10/10 | 18/18 | 0/74 | 3/3 | ok (25) |
+| 2015 | 1/1 | 10/10 | 20/20 | 0/140 | 3/3 | ok (28) |
+| 2016 | 1/1 | 10/10 | 18/18 | 0/102 | 3/3 | ok (25) |
+| 2017 | 1/1 | 10/10 | 20/20 | 0/174 | 3/3 | ok (28) |
+| 2018 | 1/1 | 10/10 | 20/20 | 0/171 | 3/3 | ok (31) |
+| 2019 | 1/1 | 10/10 | 16/16 | 0/180 | 3/3 | ok (33) |
+| 2021 | 1/1 | 10/10 | 17/17 | 0/120 | 0/3 | ok (15) |
+| 2022 | 1/1 | 10/10 | 7/7 | 0/0 | 0/3 | ok (15) |
 
 ## 1994
 
@@ -75,36 +70,68 @@
 - [x] game-5.html — pack-game → itt94-game-fishwait
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt94-game-sharewarp
+- [x] more-b.html — more-game → itt94-game-telnet
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Confirm pizza leftover — itt94-pizza-more
-- [x] Confirm first-retail leftover — itt94-netmarket-more
-- [x] Open a title card leftover — itt94-imdb-more
-- [x] Open a second Galaxy category — itt94-galaxy-more
-- [x] GNN leftover second page — itt94-gnn-more
-- [x] JumpStation leftover results — itt94-jump-more
-- [x] Prodigy leftover second door — itt94-prodigy-more
-- [x] Pathfinder leftover magazine — itt94-pathfinder-more
-- [x] Infoseek leftover results — itt94-infoseek-more
-- [x] CompuServe leftover forum — itt94-cis-more
-- [x] Yahoo leftover 2× — itt94-yh-lx
-- [x] White House leftover 2× — itt94-wh-lx
-- [x] FishCam leftover 2× — itt94-fish-lx
-- [x] Exploratorium leftover 2× — itt94-exp-lx
-- [x] WebLouvre leftover 2× — itt94-louvre-lx
-- [x] BBS leftover 2× — itt94-bbs-lx
-- [x] Netscape leftover 2× — itt94-mcom-lx
-- [x] Good Times leftover 2× — itt94-gt-lx
-- [x] CERN leftover 2× — itt94-cern-lx
-- [x] NASA leftover 2× — itt94-nasa-lx
-- [x] NCSA leftover 2× — itt94-ncsa-lx
-- [x] Lycos leftover 2× — itt94-ly-lx
-- [x] WebCrawler leftover 2× — itt94-wc-lx
-- [x] HotWired leftover 2× — itt94-hw-lx
-- [x] IUMA leftover 2× — itt94-iuma-lx
-- [x] CompuServe leftover 2× pack — itt94-cis-lx
-- [x] Prodigy leftover 2× pack — itt94-prod-lx
-- [x] Infoseek leftover 2× pack — itt94-is-lx
+- [ ] 1994 leftover · bbs about — no data-4x-go bbs-about
+- [ ] 1994 leftover · bbs files — no data-4x-go bbs-files
+- [ ] 1994 leftover · bbs log — no data-4x-go bbs-log
+- [ ] BBS leftover 2× — no data-4x-go bbs-lx
+- [ ] 1994 leftover · cern about — no data-4x-go cern-about
+- [ ] 1994 leftover · cern line mode — no data-4x-go cern-line-mode
+- [ ] CERN leftover 2× — no data-4x-go cern-lx
+- [ ] 1994 leftover · cern www — no data-4x-go cern-www
+- [ ] CompuServe leftover 2× pack — no data-4x-go cis-lx
+- [ ] CompuServe leftover forum — no data-4x-go cis-more
+- [ ] 1994 leftover · csotd about — no data-4x-go csotd-about
+- [ ] 1994 leftover · csotd archive — no data-4x-go csotd-archive
+- [ ] 1994 leftover · csotd — no data-4x-go csotd-d2
+- [ ] 1994 leftover · csotd guestbook — no data-4x-go csotd-guestbook
+- [ ] Exploratorium leftover 2× — no data-4x-go exp-lx
+- [ ] 1994 leftover · exploratorium about — no data-4x-go exploratorium-about
+- [ ] 1994 leftover · exploratorium exhibits — no data-4x-go exploratorium-exhibits
+- [ ] 1994 leftover · exploratorium perception — no data-4x-go exploratorium-perception
+- [ ] FishCam leftover 2× — no data-4x-go fish-lx
+- [ ] 1994 leftover · fishcam about — no data-4x-go fishcam-about
+- [ ] 1994 leftover · fishcam still — no data-4x-go fishcam-still
+- [ ] Open a second Galaxy category — no data-4x-go galaxy-more
+- [ ] GNN leftover second page — no data-4x-go gnn-more
+- [ ] 1994 leftover · goodtimes about — no data-4x-go goodtimes-about
+- [ ] Good Times leftover 2× — no data-4x-go gt-lx
+- [ ] 1994 leftover · hotwired ad att — no data-4x-go hotwired-ad-att
+- [ ] 1994 leftover · hotwired ad zima — no data-4x-go hotwired-ad-zima
+- [ ] 1994 leftover · hotwired agent — no data-4x-go hotwired-agent
+- [ ] 1994 leftover · hotwired coin — no data-4x-go hotwired-coin
+- [ ] 1994 leftover · hotwired renaissance — no data-4x-go hotwired-renaissance
+- [ ] 1994 leftover · hotwired signal — no data-4x-go hotwired-signal
+- [ ] HotWired leftover 2× — no data-4x-go hw-lx
+- [ ] Open a title card leftover — no data-4x-go imdb-more
+- [ ] Infoseek leftover results — no data-4x-go infoseek-more
+- [ ] Infoseek leftover 2× pack — no data-4x-go is-lx
+- [ ] 1994 leftover · iuma about — no data-4x-go iuma-about
+- [ ] 1994 leftover · iuma bands download — no data-4x-go iuma-bands-download
+- [ ] 1994 leftover · iuma bands garage orbit — no data-4x-go iuma-bands-garage-orbit
+- [ ] 1994 leftover · iuma bands space cadet — no data-4x-go iuma-bands-space-cadet
+- [ ] 1994 leftover · iuma bands static free — no data-4x-go iuma-bands-static-free
+- [ ] 1994 leftover · iuma — no data-4x-go iuma-d2
+- [ ] IUMA leftover 2× — no data-4x-go iuma-lx
+- [ ] JumpStation leftover results — no data-4x-go jump-more
+- [ ] WebLouvre leftover 2× — no data-4x-go louvre-lx
+- [ ] Lycos leftover 2× — no data-4x-go ly-lx
+- [ ] Netscape leftover 2× — no data-4x-go mcom-lx
+- [ ] NASA leftover 2× — no data-4x-go nasa-lx
+- [ ] NCSA leftover 2× — no data-4x-go ncsa-lx
+- [ ] Confirm first-retail leftover — no data-4x-go netmarket-more
+- [ ] Pathfinder leftover magazine — no data-4x-go pathfinder-more
+- [ ] Confirm pizza leftover — no data-4x-go pizza-more
+- [ ] Prodigy leftover 2× pack — no data-4x-go prod-lx
+- [ ] Prodigy leftover second door — no data-4x-go prodigy-more
+- [ ] WebCrawler leftover 2× — no data-4x-go wc-lx
+- [ ] White House leftover 2× — no data-4x-go wh-lx
+- [ ] Yahoo leftover 2× — no data-4x-go yh-lx
 
 ### Popular 3×
 - [x] Pizza Hut — itt94-pop-pizzahut
@@ -148,35 +175,66 @@
 - [x] game-5.html — pack-game → itt95-game-homestead
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt95-game-yalert
+- [x] more-b.html — more-game → itt95-game-orchall
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] ESPNet leftover scoreboard — itt95-espn-more
-- [x] Salon leftover essay — itt95-salon-more
-- [x] Classmates leftover result — itt95-classmates-more
-- [x] Match leftover profile — itt95-match-more
-- [x] Tripod leftover page — itt95-tripod-more
-- [x] AOL leftover keyword — itt95-aol-more
-- [x] WSJ leftover story — itt95-wsj-more
-- [x] HotBot leftover results — itt95-hotbot-more
-- [x] Pathfinder leftover 1995 — itt95-pf-more
-- [x] Infoseek leftover 1995 — itt95-infoseek-more
-- [x] AltaVista leftover 2× — itt95-av-lx
-- [x] CompuServe leftover 2× — itt95-cis-lx
-- [x] Prodigy leftover 2× — itt95-prod-lx
-- [x] Beanie leftover 2× — itt95-bn-lx
-- [x] AOL leftover 2× pack — itt95-aol-lx
-- [x] CNN leftover 2× — itt95-cnn-lx
-- [x] CNET leftover 2× — itt95-cnet-lx
-- [x] ESPN leftover 2× pack — itt95-espn-lx
-- [x] Microsoft leftover 2× — itt95-ms-lx
-- [x] Netscape leftover 2× — itt95-ns-lx
-- [x] HotWired leftover 2× — itt95-hw-lx
-- [x] White House leftover 2× — itt95-wh-lx
-- [x] Yahoo leftover 2× — itt95-yh-lx
-- [x] Infoseek leftover 2× pack — itt95-is-lx
-- [x] HotBot leftover 2× pack — itt95-hb-lx
-- [x] GeoCities leftover 2× — itt95-geo-lx
-- [x] AuctionWeb leftover literacy — itt95-aw-lx
+- [ ] 1995 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 1995 leftover · altavista search — no data-4x-go altavista-search
+- [ ] 1995 leftover · amazon book — no data-4x-go amazon-book
+- [ ] 1995 leftover · amazon book accidental — no data-4x-go amazon-book-accidental
+- [ ] 1995 leftover · amazon book being digita — no data-4x-go amazon-book-being-digita
+- [ ] 1995 leftover · amazon book cuckoos egg — no data-4x-go amazon-book-cuckoos-egg
+- [ ] 1995 leftover · amazon book diamond age — no data-4x-go amazon-book-diamond-age
+- [ ] 1995 leftover · amazon book hackers — no data-4x-go amazon-book-hackers
+- [ ] 1995 leftover · amazon book hitchhiker — no data-4x-go amazon-book-hitchhiker
+- [ ] 1995 leftover · amazon book microserfs — no data-4x-go amazon-book-microserfs
+- [ ] 1995 leftover · amazon book neuromancer — no data-4x-go amazon-book-neuromancer
+- [ ] 1995 leftover · amazon book road ahead — no data-4x-go amazon-book-road-ahead
+- [ ] 1995 leftover · amazon book snow crash — no data-4x-go amazon-book-snow-crash
+- [ ] 1995 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 1995 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 1995 leftover · amazon eyes — no data-4x-go amazon-eyes
+- [ ] 1995 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] 1995 leftover · amazon search — no data-4x-go amazon-search
+- [ ] 1995 leftover · amazon ssl checkout — no data-4x-go amazon-ssl-checkout
+- [ ] AOL leftover 2× pack — no data-4x-go aol-lx
+- [ ] AOL leftover keyword — no data-4x-go aol-more
+- [ ] 1995 leftover · auctionweb about — no data-4x-go auctionweb-about
+- [ ] 1995 leftover · auctionweb item — no data-4x-go auctionweb-item
+- [ ] 1995 leftover · auctionweb item bean — no data-4x-go auctionweb-item-bean
+- [ ] 1995 leftover · auctionweb item disk — no data-4x-go auctionweb-item-disk
+- [ ] 1995 leftover · auctionweb item laser — no data-4x-go auctionweb-item-laser
+- [ ] 1995 leftover · auctionweb item modem — no data-4x-go auctionweb-item-modem
+- [ ] 1995 leftover · auctionweb item netscape — no data-4x-go auctionweb-item-netscape
+- [ ] 1995 leftover · auctionweb list — no data-4x-go auctionweb-list
+- [ ] AltaVista leftover 2× — no data-4x-go av-lx
+- [ ] AuctionWeb leftover literacy — no data-4x-go aw-lx
+- [ ] Beanie leftover 2× — no data-4x-go bn-lx
+- [ ] CompuServe leftover 2× — no data-4x-go cis-lx
+- [ ] Classmates leftover result — no data-4x-go classmates-more
+- [ ] CNET leftover 2× — no data-4x-go cnet-lx
+- [ ] CNN leftover 2× — no data-4x-go cnn-lx
+- [ ] ESPN leftover 2× pack — no data-4x-go espn-lx
+- [ ] ESPNet leftover scoreboard — no data-4x-go espn-more
+- [ ] GeoCities leftover 2× — no data-4x-go geo-lx
+- [ ] HotBot leftover 2× pack — no data-4x-go hb-lx
+- [ ] HotBot leftover results — no data-4x-go hotbot-more
+- [ ] HotWired leftover 2× — no data-4x-go hw-lx
+- [ ] Infoseek leftover 1995 — no data-4x-go infoseek-more
+- [ ] Infoseek leftover 2× pack — no data-4x-go is-lx
+- [ ] Match leftover profile — no data-4x-go match-more
+- [ ] Microsoft leftover 2× — no data-4x-go ms-lx
+- [ ] Netscape leftover 2× — no data-4x-go ns-lx
+- [ ] Pathfinder leftover 1995 — no data-4x-go pf-more
+- [ ] Prodigy leftover 2× — no data-4x-go prod-lx
+- [ ] Salon leftover essay — no data-4x-go salon-more
+- [ ] Tripod leftover page — no data-4x-go tripod-more
+- [ ] White House leftover 2× — no data-4x-go wh-lx
+- [ ] WSJ leftover story — no data-4x-go wsj-more
+- [ ] Yahoo leftover 2× — no data-4x-go yh-lx
 
 ### Popular 3×
 - [x] ESPNet — itt95-pop-espn
@@ -220,32 +278,60 @@
 - [x] game-5.html — pack-game → itt96-game-jamhub
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt96-game-quakehop
+- [x] more-b.html — more-game → itt96-game-pocketred
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] MTV leftover video page — itt96-mtv-more
-- [x] Ask Jeeves leftover answer — itt96-jeeves-more
-- [x] theGlobe leftover — itt96-globe-more
-- [x] totalny leftover listing — itt96-tny-more
-- [x] MSN leftover 1996 — itt96-msn-more
-- [x] Plugin leftover skip — itt96-plugin-more
-- [x] Angelfire leftover page — itt96-angel-more
-- [x] Infoseek leftover 1996 — itt96-infoseek-more
-- [x] AOL portal leftover 2× — itt96-aol-lx
-- [x] Prodigy leftover 2× — itt96-prod-lx
-- [x] HotBot leftover 2× — itt96-hb-lx
-- [x] Microsoft leftover 2× — itt96-ms-lx
-- [x] MSN leftover 2× pack — itt96-msn-lx
-- [x] Amazon leftover literacy — itt96-am-lx
-- [x] Excite leftover 2× pack — itt96-ex-lx
-- [x] Yahoo leftover 2× — itt96-yh-lx
-- [x] AltaVista leftover 2× pack — itt96-av-lx
-- [x] GeoCities leftover 2× — itt96-geo-lx
-- [x] CNN leftover 2× — itt96-cnn-lx
-- [x] Infoseek leftover 2× pack — itt96-is-lx
-- [x] Netscape leftover 2× — itt96-ns-lx
-- [x] Craigslist leftover 2× pack — itt96-cl-lx
-- [x] Angelfire leftover 2× pack — itt96-af-lx
-- [x] Pathfinder leftover 2× pack — itt96-pf-lx
+- [ ] Angelfire leftover 2× pack — no data-4x-go af-lx
+- [ ] 1996 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 1996 leftover · altavista search — no data-4x-go altavista-search
+- [ ] Amazon leftover literacy — no data-4x-go am-lx
+- [ ] 1996 leftover · amazon book hitchhiker — no data-4x-go amazon-book-hitchhiker
+- [ ] 1996 leftover · amazon book neuromancer — no data-4x-go amazon-book-neuromancer
+- [ ] 1996 leftover · amazon book road ahead — no data-4x-go amazon-book-road-ahead
+- [ ] 1996 leftover · amazon book snow crash — no data-4x-go amazon-book-snow-crash
+- [ ] 1996 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 1996 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 1996 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] 1996 leftover · amazon search — no data-4x-go amazon-search
+- [ ] Angelfire leftover page — no data-4x-go angel-more
+- [ ] AOL portal leftover 2× — no data-4x-go aol-lx
+- [ ] 1996 leftover · auctionweb item laser — no data-4x-go auctionweb-item-laser
+- [ ] 1996 leftover · auctionweb item modem — no data-4x-go auctionweb-item-modem
+- [ ] 1996 leftover · auctionweb list — no data-4x-go auctionweb-list
+- [ ] AltaVista leftover 2× pack — no data-4x-go av-lx
+- [ ] Craigslist leftover 2× pack — no data-4x-go cl-lx
+- [ ] CNN leftover 2× — no data-4x-go cnn-lx
+- [ ] 1996 leftover · cnn scitech — no data-4x-go cnn-scitech
+- [ ] 1996 leftover · cnn showbiz — no data-4x-go cnn-showbiz
+- [ ] 1996 leftover · cnn world — no data-4x-go cnn-world
+- [ ] Excite leftover 2× pack — no data-4x-go ex-lx
+- [ ] 1996 leftover · excite my — no data-4x-go excite-my
+- [ ] 1996 leftover · excite search — no data-4x-go excite-search
+- [ ] GeoCities leftover 2× — no data-4x-go geo-lx
+- [ ] 1996 leftover · geocities — no data-4x-go geocities-d2
+- [ ] 1996 leftover · geocities — no data-4x-go geocities-d3
+- [ ] 1996 leftover · geocities — no data-4x-go geocities-d4
+- [ ] 1996 leftover · geocities — no data-4x-go geocities-d5
+- [ ] 1996 leftover · geocities — no data-4x-go geocities-d6
+- [ ] 1996 leftover · geocities — no data-4x-go geocities-d7
+- [ ] theGlobe leftover — no data-4x-go globe-more
+- [ ] HotBot leftover 2× — no data-4x-go hb-lx
+- [ ] Infoseek leftover 1996 — no data-4x-go infoseek-more
+- [ ] Infoseek leftover 2× pack — no data-4x-go is-lx
+- [ ] Ask Jeeves leftover answer — no data-4x-go jeeves-more
+- [ ] Microsoft leftover 2× — no data-4x-go ms-lx
+- [ ] MSN leftover 2× pack — no data-4x-go msn-lx
+- [ ] MSN leftover 1996 — no data-4x-go msn-more
+- [ ] MTV leftover video page — no data-4x-go mtv-more
+- [ ] Netscape leftover 2× — no data-4x-go ns-lx
+- [ ] Pathfinder leftover 2× pack — no data-4x-go pf-lx
+- [ ] Plugin leftover skip — no data-4x-go plugin-more
+- [ ] Prodigy leftover 2× — no data-4x-go prod-lx
+- [ ] totalny leftover listing — no data-4x-go tny-more
+- [ ] Yahoo leftover 2× — no data-4x-go yh-lx
 
 ### Popular 3×
 - [x] Craigslist — itt96-pop-craigslist
@@ -289,32 +375,60 @@
 - [x] game-5.html — pack-game → itt97-game-slashmod
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt97-game-shard
+- [x] more-b.html — more-game → itt97-game-crypt
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] NYTimes leftover story — itt97-nyt-more
-- [x] MP3.com leftover track — itt97-mp3-more
-- [x] ZDNet leftover file — itt97-zdnet-more
-- [x] BBC leftover story — itt97-bbc-more
-- [x] News.com leftover — itt97-newscom-more
-- [x] Scripting leftover — itt97-scripting-more
-- [x] Winamp leftover skin — itt97-winamp-more
-- [x] AOL leftover 2× — itt97-aol-lx
-- [x] MSN leftover 2× — itt97-msn-lx
-- [x] Excite leftover 2× — itt97-ex-lx
-- [x] Yahoo leftover 2× — itt97-yh-lx
-- [x] CNN leftover 2× — itt97-cnn-lx
-- [x] Netscape leftover 2× — itt97-ns-lx
-- [x] HotWired leftover 2× — itt97-hw-lx
-- [x] Drudge leftover 2× — itt97-dr-lx
-- [x] Dancing Baby leftover 2× — itt97-db-lx
-- [x] Apple leftover 2× — itt97-ap-lx
-- [x] Microsoft leftover 2× — itt97-ms-lx
-- [x] GeoCities leftover 2× — itt97-geo-lx
-- [x] AltaVista leftover 2× pack — itt97-av-lx
-- [x] Lycos leftover 2× pack — itt97-ly-lx
-- [x] HoTMaiL leftover 2× pack — itt97-hm-lx
-- [x] ICQ leftover 2× pack — itt97-icq-lx
-- [x] Slashdot leftover 2× pack — itt97-sd-lx
+- [ ] 1997 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 1997 leftover · altavista babelfish — no data-4x-go altavista-babelfish
+- [ ] 1997 leftover · altavista search — no data-4x-go altavista-search
+- [ ] 1997 leftover · amazon book being digita — no data-4x-go amazon-book-being-digita
+- [ ] 1997 leftover · amazon book contact — no data-4x-go amazon-book-contact
+- [ ] 1997 leftover · amazon book dove — no data-4x-go amazon-book-dove
+- [ ] 1997 leftover · amazon book microserfs — no data-4x-go amazon-book-microserfs
+- [ ] 1997 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 1997 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 1997 leftover · amazon ipo — no data-4x-go amazon-ipo
+- [ ] 1997 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] 1997 leftover · amazon search — no data-4x-go amazon-search
+- [ ] AOL leftover 2× — no data-4x-go aol-lx
+- [ ] Apple leftover 2× — no data-4x-go ap-lx
+- [ ] 1997 leftover · apple think different — no data-4x-go apple-think-different
+- [ ] 1997 leftover · apple thinkdifferent — no data-4x-go apple-thinkdifferent
+- [ ] AltaVista leftover 2× pack — no data-4x-go av-lx
+- [ ] BBC leftover story — no data-4x-go bbc-more
+- [ ] 1997 leftover · cnn diana — no data-4x-go cnn-diana
+- [ ] CNN leftover 2× — no data-4x-go cnn-lx
+- [ ] 1997 leftover · cnn pathfinder — no data-4x-go cnn-pathfinder
+- [ ] 1997 leftover · cnn showbiz — no data-4x-go cnn-showbiz
+- [ ] 1997 leftover · cnn tech — no data-4x-go cnn-tech
+- [ ] Dancing Baby leftover 2× — no data-4x-go db-lx
+- [ ] Drudge leftover 2× — no data-4x-go dr-lx
+- [ ] 1997 leftover · drudge — no data-4x-go drudge-d2
+- [ ] 1997 leftover · ebay bid confirm — no data-4x-go ebay-bid-confirm
+- [ ] 1997 leftover · ebay category — no data-4x-go ebay-category
+- [ ] 1997 leftover · ebay item — no data-4x-go ebay-item
+- [ ] 1997 leftover · ebay item laptop — no data-4x-go ebay-item-laptop
+- [ ] 1997 leftover · ebay item pda — no data-4x-go ebay-item-pda
+- [ ] Excite leftover 2× — no data-4x-go ex-lx
+- [ ] GeoCities leftover 2× — no data-4x-go geo-lx
+- [ ] HoTMaiL leftover 2× pack — no data-4x-go hm-lx
+- [ ] HotWired leftover 2× — no data-4x-go hw-lx
+- [ ] ICQ leftover 2× pack — no data-4x-go icq-lx
+- [ ] Lycos leftover 2× pack — no data-4x-go ly-lx
+- [ ] MP3.com leftover track — no data-4x-go mp3-more
+- [ ] Microsoft leftover 2× — no data-4x-go ms-lx
+- [ ] MSN leftover 2× — no data-4x-go msn-lx
+- [ ] News.com leftover — no data-4x-go newscom-more
+- [ ] Netscape leftover 2× — no data-4x-go ns-lx
+- [ ] NYTimes leftover story — no data-4x-go nyt-more
+- [ ] Scripting leftover — no data-4x-go scripting-more
+- [ ] Slashdot leftover 2× pack — no data-4x-go sd-lx
+- [ ] Winamp leftover skin — no data-4x-go winamp-more
+- [ ] Yahoo leftover 2× — no data-4x-go yh-lx
+- [ ] ZDNet leftover file — no data-4x-go zdnet-more
 
 ### Popular 3×
 - [x] NYTimes — itt97-pop-nytimes
@@ -358,41 +472,78 @@
 - [x] game-5.html — pack-game → itt98-game-gotobid
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt98-game-ladder
+- [x] more-b.html — more-game → itt98-game-tram
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] GO leftover channel — itt98-go-more
-- [x] Snap leftover results — itt98-snap-more
-- [x] About leftover guide — itt98-about-more
-- [x] Open Diary leftover — itt98-od-more
-- [x] ICQ web leftover — itt98-icqweb-more
-- [x] Valve leftover — itt98-valve-more
-- [x] WinFiles leftover — itt98-winfiles-more
-- [x] AOL leftover 2× — itt98-aol-lx
-- [x] MSN leftover 2× — itt98-msn-lx
-- [x] Excite leftover 2× — itt98-ex-lx
-- [x] Lycos leftover 2× — itt98-ly-lx
-- [x] GeoCities leftover 2× — itt98-geo-lx
-- [x] BBC leftover 2× — itt98-bbc-lx
-- [x] CNN leftover 2× — itt98-cnn-lx
-- [x] HoTMaiL leftover 2× — itt98-hm-lx
-- [x] ICQ leftover 2× — itt98-icq-lx
-- [x] Infoseek leftover 2× — itt98-is-lx
-- [x] HotBot leftover 2× — itt98-hb-lx
-- [x] Netscape leftover 2× — itt98-ns-lx
-- [x] Microsoft leftover 2× — itt98-ms-lx
-- [x] AltaVista leftover 2× pack — itt98-av-lx
-- [x] About leftover 2× pack — itt98-ab-lx
-- [x] DMOZ leftover 2× pack — itt98-dmoz-lx
-- [x] Slashdot leftover 2× pack — itt98-sd-lx
-- [x] apple leftover REAL — itt98-apple-rlx
-- [x] ayb leftover REAL — itt98-ayb-rlx
-- [x] bowienet leftover REAL — itt98-bowienet-rlx
-- [x] cdnow leftover REAL — itt98-cdnow-rlx
-- [x] goto leftover REAL — itt98-goto-rlx
-- [x] mp3com leftover REAL — itt98-mp3com-rlx
-- [x] realplayer leftover REAL — itt98-realplayer-rlx
-- [x] textfiles leftover REAL — itt98-textfiles-rlx
-- [x] winamp leftover REAL — itt98-winamp-rlx
+- [ ] About leftover 2× pack — no data-4x-go ab-lx
+- [ ] About leftover guide — no data-4x-go about-more
+- [ ] 1998 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 1998 leftover · altavista babelfish — no data-4x-go altavista-babelfish
+- [ ] 1998 leftover · altavista search — no data-4x-go altavista-search
+- [ ] 1998 leftover · amazon book being digita — no data-4x-go amazon-book-being-digita
+- [ ] 1998 leftover · amazon book contact — no data-4x-go amazon-book-contact
+- [ ] 1998 leftover · amazon book dove — no data-4x-go amazon-book-dove
+- [ ] 1998 leftover · amazon book microserfs — no data-4x-go amazon-book-microserfs
+- [ ] 1998 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 1998 leftover · amazon cd homogenic — no data-4x-go amazon-cd-homogenic
+- [ ] 1998 leftover · amazon cd ok computer — no data-4x-go amazon-cd-ok-computer
+- [ ] 1998 leftover · amazon cd ray of light — no data-4x-go amazon-cd-ray-of-light
+- [ ] 1998 leftover · amazon cd the miseducati — no data-4x-go amazon-cd-the-miseducati
+- [ ] 1998 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 1998 leftover · amazon music — no data-4x-go amazon-music-d2
+- [ ] 1998 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] 1998 leftover · amazon search — no data-4x-go amazon-search
+- [ ] AOL leftover 2× — no data-4x-go aol-lx
+- [ ] apple leftover REAL — no data-4x-go apple-rlx
+- [ ] 1998 leftover · apple think different — no data-4x-go apple-think-different
+- [ ] AltaVista leftover 2× pack — no data-4x-go av-lx
+- [ ] ayb leftover REAL — no data-4x-go ayb-rlx
+- [ ] BBC leftover 2× — no data-4x-go bbc-lx
+- [ ] 1998 leftover · bowienet about — no data-4x-go bowienet-about
+- [ ] bowienet leftover REAL — no data-4x-go bowienet-rlx
+- [ ] 1998 leftover · cdnow about — no data-4x-go cdnow-about
+- [ ] 1998 leftover · cdnow browse — no data-4x-go cdnow-browse
+- [ ] cdnow leftover REAL — no data-4x-go cdnow-rlx
+- [ ] 1998 leftover · cnn diana — no data-4x-go cnn-diana
+- [ ] CNN leftover 2× — no data-4x-go cnn-lx
+- [ ] 1998 leftover · cnn pathfinder — no data-4x-go cnn-pathfinder
+- [ ] 1998 leftover · cnn showbiz — no data-4x-go cnn-showbiz
+- [ ] 1998 leftover · cnn tech — no data-4x-go cnn-tech
+- [ ] 1998 leftover · cnn world — no data-4x-go cnn-world
+- [ ] 1998 leftover · dmoz about — no data-4x-go dmoz-about
+- [ ] 1998 leftover · dmoz category — no data-4x-go dmoz-category
+- [ ] DMOZ leftover 2× pack — no data-4x-go dmoz-lx
+- [ ] 1998 leftover · dmoz submit — no data-4x-go dmoz-submit
+- [ ] 1998 leftover · ebay bid confirm — no data-4x-go ebay-bid-confirm
+- [ ] 1998 leftover · ebay category — no data-4x-go ebay-category
+- [ ] 1998 leftover · ebay item laptop — no data-4x-go ebay-item-laptop
+- [ ] 1998 leftover · ebay item pda — no data-4x-go ebay-item-pda
+- [ ] 1998 leftover · ebay myebay — no data-4x-go ebay-myebay
+- [ ] Excite leftover 2× — no data-4x-go ex-lx
+- [ ] GeoCities leftover 2× — no data-4x-go geo-lx
+- [ ] GO leftover channel — no data-4x-go go-more
+- [ ] goto leftover REAL — no data-4x-go goto-rlx
+- [ ] HotBot leftover 2× — no data-4x-go hb-lx
+- [ ] HoTMaiL leftover 2× — no data-4x-go hm-lx
+- [ ] ICQ leftover 2× — no data-4x-go icq-lx
+- [ ] ICQ web leftover — no data-4x-go icqweb-more
+- [ ] Infoseek leftover 2× — no data-4x-go is-lx
+- [ ] Lycos leftover 2× — no data-4x-go ly-lx
+- [ ] mp3com leftover REAL — no data-4x-go mp3com-rlx
+- [ ] Microsoft leftover 2× — no data-4x-go ms-lx
+- [ ] MSN leftover 2× — no data-4x-go msn-lx
+- [ ] Netscape leftover 2× — no data-4x-go ns-lx
+- [ ] Open Diary leftover — no data-4x-go od-more
+- [ ] realplayer leftover REAL — no data-4x-go realplayer-rlx
+- [ ] Slashdot leftover 2× pack — no data-4x-go sd-lx
+- [ ] Snap leftover results — no data-4x-go snap-more
+- [ ] textfiles leftover REAL — no data-4x-go textfiles-rlx
+- [ ] Valve leftover — no data-4x-go valve-more
+- [ ] winamp leftover REAL — no data-4x-go winamp-rlx
+- [ ] WinFiles leftover — no data-4x-go winfiles-more
 
 ### Popular 3×
 - [x] GO.com — itt98-pop-go
@@ -436,40 +587,76 @@
 - [x] game-5.html — pack-game → itt99-game-paysend
 - [x] game.html — host ok
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt99-game-camp
+- [x] more-b.html — more-game → itt99-game-binds
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Neopets leftover pet — itt99-neo-more
-- [x] eGroups leftover list — itt99-egroups-more
-- [x] Webvan leftover — itt99-webvan-more
-- [x] E*TRADE leftover — itt99-etrade-more
-- [x] Onion leftover — itt99-onion-more
-- [x] Yahoo Messenger leftover — itt99-ym-more
-- [x] AOL leftover 2× — itt99-aol-lx
-- [x] MSN leftover 2× — itt99-msn-lx
-- [x] Yahoo leftover 2× — itt99-yh-lx
-- [x] Excite leftover 2× — itt99-ex-lx
-- [x] About leftover 2× — itt99-ab-lx
-- [x] Google leftover literacy — itt99-g-lx
-- [x] CNN leftover 2× — itt99-cnn-lx
-- [x] ICQ leftover 2× — itt99-icq-lx
-- [x] AltaVista leftover 2× — itt99-av-lx
-- [x] Slashdot leftover 2× — itt99-sd-lx
-- [x] Y2K leftover 2× — itt99-y2k-lx
-- [x] Apple leftover 2× — itt99-ap-lx
-- [x] Microsoft leftover 2× — itt99-ms-lx
-- [x] HotBot leftover 2× — itt99-hb-lx
-- [x] Infoseek leftover 2× — itt99-is-lx
-- [x] DMOZ leftover 2× pack — itt99-dmoz-lx
-- [x] GameSpot leftover 2× pack — itt99-gs-lx
-- [x] boocom leftover REAL — itt99-boocom-rlx
-- [x] bowienet leftover REAL — itt99-bowienet-rlx
-- [x] matrix leftover REAL — itt99-matrix-rlx
-- [x] msngaming leftover REAL — itt99-msngaming-rlx
-- [x] mynetscape leftover REAL — itt99-mynetscape-rlx
-- [x] netcenter leftover REAL — itt99-netcenter-rlx
-- [x] netscape leftover REAL — itt99-netscape-rlx
-- [x] seti leftover REAL — itt99-seti-rlx
-- [x] youvegotmail leftover REAL — itt99-youvegotma-rlx
+- [ ] About leftover 2× — no data-4x-go ab-lx
+- [ ] 1999 leftover · aim about — no data-4x-go aim-about
+- [ ] 1999 leftover · aim — no data-4x-go aim-d2
+- [ ] 1999 leftover · aim im — no data-4x-go aim-im
+- [ ] 1999 leftover · aim profile — no data-4x-go aim-profile
+- [ ] 1999 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 1999 leftover · altavista babelfish — no data-4x-go altavista-babelfish
+- [ ] 1999 leftover · altavista search — no data-4x-go altavista-search
+- [ ] 1999 leftover · amazon auctions — no data-4x-go amazon-auctions
+- [ ] 1999 leftover · amazon book being digita — no data-4x-go amazon-book-being-digita
+- [ ] 1999 leftover · amazon book contact — no data-4x-go amazon-book-contact
+- [ ] 1999 leftover · amazon book dove — no data-4x-go amazon-book-dove
+- [ ] 1999 leftover · amazon book harry cos — no data-4x-go amazon-book-harry-cos
+- [ ] 1999 leftover · amazon book microserfs — no data-4x-go amazon-book-microserfs
+- [ ] 1999 leftover · amazon book tuesdays — no data-4x-go amazon-book-tuesdays
+- [ ] 1999 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 1999 leftover · amazon cd homogenic — no data-4x-go amazon-cd-homogenic
+- [ ] 1999 leftover · amazon cd ok computer — no data-4x-go amazon-cd-ok-computer
+- [ ] 1999 leftover · amazon cd ray of light — no data-4x-go amazon-cd-ray-of-light
+- [ ] 1999 leftover · amazon cd the miseducati — no data-4x-go amazon-cd-the-miseducati
+- [ ] 1999 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 1999 leftover · amazon dvd matrix — no data-4x-go amazon-dvd-matrix
+- [ ] 1999 leftover · amazon electronics — no data-4x-go amazon-electronics
+- [ ] 1999 leftover · amazon electronics palm  — no data-4x-go amazon-electronics-palm-
+- [ ] 1999 leftover · amazon music — no data-4x-go amazon-music
+- [ ] 1999 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] 1999 leftover · amazon search — no data-4x-go amazon-search
+- [ ] 1999 leftover · amazon toy furby — no data-4x-go amazon-toy-furby
+- [ ] 1999 leftover · amazon toys — no data-4x-go amazon-toys
+- [ ] 1999 leftover · amazon zshops — no data-4x-go amazon-zshops
+- [ ] AOL leftover 2× — no data-4x-go aol-lx
+- [ ] Apple leftover 2× — no data-4x-go ap-lx
+- [ ] 1999 leftover · apple think different — no data-4x-go apple-think-different
+- [ ] 1999 leftover · askjeeves ask — no data-4x-go askjeeves-ask
+- [ ] AltaVista leftover 2× — no data-4x-go av-lx
+- [ ] 1999 leftover · blogger post — no data-4x-go blogger-post
+- [ ] boocom leftover REAL — no data-4x-go boocom-rlx
+- [ ] bowienet leftover REAL — no data-4x-go bowienet-rlx
+- [ ] CNN leftover 2× — no data-4x-go cnn-lx
+- [ ] DMOZ leftover 2× pack — no data-4x-go dmoz-lx
+- [ ] eGroups leftover list — no data-4x-go egroups-more
+- [ ] E*TRADE leftover — no data-4x-go etrade-more
+- [ ] Excite leftover 2× — no data-4x-go ex-lx
+- [ ] Google leftover literacy — no data-4x-go g-lx
+- [ ] GameSpot leftover 2× pack — no data-4x-go gs-lx
+- [ ] HotBot leftover 2× — no data-4x-go hb-lx
+- [ ] ICQ leftover 2× — no data-4x-go icq-lx
+- [ ] Infoseek leftover 2× — no data-4x-go is-lx
+- [ ] matrix leftover REAL — no data-4x-go matrix-rlx
+- [ ] Microsoft leftover 2× — no data-4x-go ms-lx
+- [ ] MSN leftover 2× — no data-4x-go msn-lx
+- [ ] msngaming leftover REAL — no data-4x-go msngaming-rlx
+- [ ] mynetscape leftover REAL — no data-4x-go mynetscape-rlx
+- [ ] Neopets leftover pet — no data-4x-go neo-more
+- [ ] netcenter leftover REAL — no data-4x-go netcenter-rlx
+- [ ] netscape leftover REAL — no data-4x-go netscape-rlx
+- [ ] Onion leftover — no data-4x-go onion-more
+- [ ] Slashdot leftover 2× — no data-4x-go sd-lx
+- [ ] seti leftover REAL — no data-4x-go seti-rlx
+- [ ] Webvan leftover — no data-4x-go webvan-more
+- [ ] Y2K leftover 2× — no data-4x-go y2k-lx
+- [ ] Yahoo leftover 2× — no data-4x-go yh-lx
+- [ ] Yahoo Messenger leftover — no data-4x-go ym-more
+- [ ] youvegotmail leftover REAL — no data-4x-go youvegotma-rlx
 
 ### Popular 3×
 - [x] LiveJournal — itt99-pop-livejournal
@@ -513,46 +700,88 @@
 - [x] game-5.html — pack-game → itt00-game-dutch
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt00-game-twin
+- [x] more-b.html — more-game → itt00-game-dust
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Half.com leftover used CD — itt00-half-more
-- [x] Baidu leftover results — itt00-baidu-more
-- [x] Everything2 leftover writeup — itt00-e2-more
-- [x] Expedia leftover — itt00-expedia-more
-- [x] Travelocity leftover — itt00-travel-more
-- [x] Homestar leftover — itt00-homestar-more
-- [x] Yahoo leftover 2× — itt00-yh-lx
-- [x] AOL leftover 2× — itt00-aol-lx
-- [x] MSN leftover 2× — itt00-msn-lx
 - [x] About leftover 2× — itt00-ab-lx
-- [x] BBC leftover 2× — itt00-bbc-lx
-- [x] Excite leftover 2× — itt00-ex-lx
-- [x] Google leftover literacy — itt00-g-lx
-- [x] Blogger leftover 2× — itt00-bg-lx
-- [x] PayPal leftover 2× — itt00-pp-lx
-- [x] Zombo leftover literacy — itt00-zombo-lx
-- [x] AltaVista leftover 2× — itt00-av-lx
-- [x] Ask leftover 2× — itt00-ask-lx
-- [x] DMOZ leftover 2× — itt00-dmoz-lx
-- [x] GameSpot leftover 2× — itt00-gs-lx
-- [x] GeoCities leftover 2× — itt00-geo-lx
-- [x] ICQ leftover 2× — itt00-icq-lx
-- [x] Slashdot leftover 2× — itt00-sd-lx
+- [x] 2000 leftover · altavista about — itt00-altavista-about
+- [x] 2000 leftover · altavista babelfish — itt00-altavista-babelfish
+- [x] 2000 leftover · altavista search — itt00-altavista-search
+- [x] 2000 leftover · amazon about smile — itt00-amazon-about-smile
+- [x] 2000 leftover · amazon auctions — itt00-amazon-auctions
+- [x] 2000 leftover · amazon book being digita — itt00-amazon-book-being-digita
+- [x] 2000 leftover · amazon book contact — itt00-amazon-book-contact
+- [x] 2000 leftover · amazon book dove — itt00-amazon-book-dove
+- [x] 2000 leftover · amazon book harry cos — itt00-amazon-book-harry-cos
+- [x] 2000 leftover · amazon book microserfs — itt00-amazon-book-microserfs
+- [x] 2000 leftover · amazon book tuesdays — itt00-amazon-book-tuesdays
+- [x] 2000 leftover · amazon cart — itt00-amazon-cart-d2
+- [x] 2000 leftover · amazon cd homogenic — itt00-amazon-cd-homogenic
+- [x] 2000 leftover · amazon cd ok computer — itt00-amazon-cd-ok-computer
+- [x] 2000 leftover · amazon cd ray of light — itt00-amazon-cd-ray-of-light
+- [x] 2000 leftover · amazon cd the miseducati — itt00-amazon-cd-the-miseducati
+- [x] 2000 leftover · amazon checkout — itt00-amazon-checkout
+- [x] 2000 leftover · amazon dvd matrix — itt00-amazon-dvd-matrix
+- [x] 2000 leftover · amazon electronics — itt00-amazon-electronics
+- [x] 2000 leftover · amazon electronics palm  — itt00-amazon-electronics-palm-
+- [x] 2000 leftover · amazon music — itt00-amazon-music
+- [x] 2000 leftover · amazon order thanks — itt00-amazon-order-thanks
+- [x] 2000 leftover · amazon search — itt00-amazon-search
+- [x] 2000 leftover · amazon toy furby — itt00-amazon-toy-furby
+- [x] 2000 leftover · amazon toys — itt00-amazon-toys
+- [x] 2000 leftover · amazon zshops — itt00-amazon-zshops
+- [x] AOL leftover 2× — itt00-aol-lx
 - [x] apple leftover REAL — itt00-apple-rlx
+- [x] 2000 leftover · apple think different — itt00-apple-think-different
+- [x] Ask leftover 2× — itt00-ask-lx
+- [x] 2000 leftover · askjeeves ask — itt00-askjeeves-ask
+- [x] AltaVista leftover 2× — itt00-av-lx
+- [x] Baidu leftover results — itt00-baidu-more
+- [x] BBC leftover 2× — itt00-bbc-lx
+- [x] Blogger leftover 2× — itt00-bg-lx
+- [x] 2000 leftover · blogger edit — itt00-blogger-edit
+- [x] 2000 leftover · blogger view — itt00-blogger-view
+- [x] 2000 leftover · bowienet about — itt00-bowienet-about
 - [x] bowienet leftover REAL — itt00-bowienet-rlx
+- [x] 2000 leftover · camworld about — itt00-camworld-about
+- [x] 2000 leftover · camworld blogroll — itt00-camworld-blogroll
+- [x] 2000 leftover · cnn aol tw — itt00-cnn-aol-tw
+- [x] 2000 leftover · cnn diana — itt00-cnn-diana
+- [x] 2000 leftover · cnn pathfinder — itt00-cnn-pathfinder
+- [x] 2000 leftover · cnn showbiz — itt00-cnn-showbiz
+- [x] 2000 leftover · cnn tech — itt00-cnn-tech
+- [x] DMOZ leftover 2× — itt00-dmoz-lx
+- [x] Everything2 leftover writeup — itt00-e2-more
+- [x] Excite leftover 2× — itt00-ex-lx
+- [x] Expedia leftover — itt00-expedia-more
+- [x] Google leftover literacy — itt00-g-lx
+- [x] GeoCities leftover 2× — itt00-geo-lx
+- [x] GameSpot leftover 2× — itt00-gs-lx
+- [x] Half.com leftover used CD — itt00-half-more
 - [x] hampsterdance leftover REAL — itt00-hampsterda-rlx
+- [x] Homestar leftover — itt00-homestar-more
 - [x] hotbot leftover REAL — itt00-hotbot-rlx
+- [x] ICQ leftover 2× — itt00-icq-lx
 - [x] infoseek leftover REAL — itt00-infoseek-rlx
 - [x] kottke leftover REAL — itt00-kottke-rlx
 - [x] matrix leftover REAL — itt00-matrix-rlx
 - [x] metafilter leftover REAL — itt00-metafilter-rlx
 - [x] microsoft leftover REAL — itt00-microsoft-rlx
+- [x] MSN leftover 2× — itt00-msn-lx
 - [x] msngaming leftover REAL — itt00-msngaming-rlx
 - [x] mynetscape leftover REAL — itt00-mynetscape-rlx
 - [x] napsterweb leftover REAL — itt00-napsterweb-rlx
 - [x] netcenter leftover REAL — itt00-netcenter-rlx
 - [x] netscape leftover REAL — itt00-netscape-rlx
+- [x] PayPal leftover 2× — itt00-pp-lx
+- [x] Slashdot leftover 2× — itt00-sd-lx
+- [x] Travelocity leftover — itt00-travel-more
+- [x] Yahoo leftover 2× — itt00-yh-lx
 - [x] youvegotmail leftover REAL — itt00-youvegotma-rlx
+- [x] Zombo leftover literacy — itt00-zombo-lx
 
 ### Popular 3×
 - [x] Half.com — itt00-pop-half
@@ -568,222 +797,146 @@
 - [x] sites/wikipedia/edit.html — complete → itt01-wiki-pages
 
 ### Official 10
-- [x] 1. Wikipedia edit — sites/wikipedia/edit.html
-- [x] 2. iPod — sites/apple/ipod.html
-- [x] 3. iTunes — sites/apple/itunes.html
-- [x] 4. MSN Messenger — sites/msn/index.html
-- [x] 5. Broadband — sites/broadband/index.html
-- [x] 6. IE 6 — sites/microsoft/ie6.html
-- [x] 7. Wayback — sites/wayback/index.html
-- [x] 8. Google — sites/google/index.html
-- [x] 9. Blogger — sites/blogger/index.html
-- [x] 10. Movable Type — sites/movabletype/index.html
+- [x] 1. Wikipedia — sites/wikipedia/edit.html
+- [x] 2. Wayback — sites/archive/index.html
+- [x] 3. iTunes library — sites/itunes/index.html
+- [x] 4. iPod — sites/apple/ipod.html
+- [x] 5. Napster leftover — sites/napster/index.html
+- [x] 6. Movable Type — sites/movabletype/index.html
+- [x] 7. Google leftover — sites/google/index.html
+- [x] 8. Yahoo leftover — sites/yahoo/index.html
+- [x] 9. Amazon smile leftover — sites/amazon/index.html
+- [x] 10. Clickscape — sites/playable/game.html
 
 ### Games
-- [x] extra-a.html — minute → itt01-game-wikiprev
-- [x] extra-b.html — minute → itt01-game-ipodclick
+- [x] extra-a.html — lean leftover page
+- [x] extra-b.html — lean leftover page
 - [x] extra-c.html — more-game → itt01-game-minipitch
 - [x] extra-d.html — more-game → itt01-game-appletslice
 - [x] extra-e.html — more-game → itt01-game-redpatch
 - [x] extra-f.html — more-game → itt01-game-ipodspin
 - [x] extra-g.html — more-game started
 - [x] extra-h.html — more-game → itt01-game-editnote
-- [x] extra-i.html — more-game started
-- [x] famous.html — started
-- [x] game-2.html — pack-game → itt01-game-wikiprev
-- [x] game-3.html — pack-game → itt01-game-ipodwheel
-- [x] game-4.html — pack-game → itt01-game-wayback
-- [x] game-5.html — pack-game → itt01-game-patchquiz
-- [x] game.html — host ok
+- [x] extra-i.html — more-game → itt01-game-codehold
+- [x] famous.html — lean leftover page
+- [x] game-2.html — pack-game → itt01-game-mqprint
+- [x] game-3.html — pack-game → itt01-game-petsock
+- [x] game-4.html — pack-game → itt01-game-flash3
+- [x] game-5.html — pack-game → itt01-game-dutch
+- [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — lean leftover page
+- [x] more-b.html — lean leftover page
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Wiki preview then leftover — itt01-wiki-prev
-- [x] Name a track in the iPod library — itt01-ipod-lib
-- [x] Always-on ISP leftover — itt01-broadband
-- [x] MSN leftover sign-on — itt01-msn-sign
-- [x] Google 2001 catalog query — itt01-google-q
-- [x] Yahoo 2001 two hubs — itt01-yahoo-hop
-- [x] Amazon smile leftover search — itt01-cart
-- [x] eBay leftover bid theater — itt01-ebay-bid
-- [x] Napster leftover search (no files) — itt01-napster-q
-- [x] Gnutella scare leftover — itt01-gnutella
-- [x] Wayback first-look leftover — itt01-wayback-q
-- [x] Blogger leftover title — itt01-blog-q
-- [x] Movable Type leftover hops — itt01-mt-hop
-- [x] Mozilla 0.9 leftover — itt01-mozilla-ack
-- [x] CNET leftover download name — itt01-cnet-dl
-- [x] BBC leftover headline — itt01-bbc-q
-- [x] Encarta vs wiki leftover — itt01-encarta-ack
-- [x] Pets.com archive leftover — itt01-pets-ack
-- [x] AOL leftover 2× — itt01-aol-lx
-- [x] About.com leftover 2× — itt01-about-lx
-- [x] CNN leftover 2× — itt01-cnn-lx
-- [x] GameSpot leftover 2× — itt01-gs-lx
-- [x] Geocities leftover 2× — itt01-geo-lx
-- [x] ICQ leftover 2× — itt01-icq-lx
-- [x] Paypal leftover 2× — itt01-pp-lx
-- [x] Slashdot leftover 2× — itt01-sd-lx
-- [x] Limewire leftover 2× — itt01-lw-lx
-- [x] Morpheus leftover 2× — itt01-morph-lx
-- [x] Habbo leftover 2× — itt01-habbo-lx
-- [x] RuneScape leftover 2× — itt01-rs-lx
-- [x] Itunes leftover 2× — itt01-it-lx
-- [x] Macromedia leftover 2× — itt01-mm-lx
-- [x] Encarta leftover 2× — itt01-enc-lx
-- [x] Ask Jeeves leftover 2× — itt01-ask-lx
-- [x] DMOZ leftover 2× — itt01-dmoz-lx
-- [x] Moreover leftover 2× — itt01-more-lx
-- [x] altavista leftover REAL — itt01-altavista-rlx
-- [x] appleimac leftover REAL — itt01-appleimac-rlx
-- [x] ayb leftover REAL — itt01-ayb-rlx
-- [x] bittorrent leftover REAL — itt01-bittorrent-rlx
-- [x] blogdex leftover REAL — itt01-blogdex-rlx
-- [x] bowienet leftover REAL — itt01-bowienet-rlx
-- [x] excite leftover REAL — itt01-excite-rlx
-- [x] grok leftover REAL — itt01-grok-rlx
-- [x] hampsterdance leftover REAL — itt01-hampsterda-rlx
-- [x] hotbot leftover REAL — itt01-hotbot-rlx
-- [x] infoseek leftover REAL — itt01-infoseek-rlx
-- [x] itunesstoreban leftover REAL — itt01-itunesstor-rlx
-- [x] loudcloud leftover REAL — itt01-loudcloud-rlx
-- [x] metafilter leftover REAL — itt01-metafilter-rlx
-- [x] moveon leftover REAL — itt01-moveon-rlx
-- [x] netcenter leftover REAL — itt01-netcenter-rlx
-- [x] netscape leftover REAL — itt01-netscape-rlx
-- [x] startupfailures leftover REAL — itt01-startupfai-rlx
-- [x] y2k leftover REAL — itt01-y2k-rlx
-- [x] youvegotmail leftover REAL — itt01-youvegotma-rlx
-- [x] zombo leftover REAL — itt01-zombo-rlx
+- [ ] Wiki leftover recent changes — no data-4x-go wiki-hist
+- [ ] Wiki leftover languages — no data-4x-go wiki-lang
+- [ ] Wayback leftover URL — no data-4x-go wayback
+- [ ] Wayback leftover about — no data-4x-go wa-url
+- [ ] iTunes library leftover — no data-4x-go itunes
+- [ ] iTunes rip/mix leftover — no data-4x-go itunes-lx
+- [ ] iPod leftover — no data-4x-go ipod
+- [ ] iPod leftover FAQ — no data-4x-go ipod-lx
+- [ ] Napster endgame leftover — no data-4x-go napster
+- [ ] Napster leftover search — no data-4x-go nap-q
+- [ ] Movable Type leftover — no data-4x-go mt
+- [ ] Movable Type leftover about — no data-4x-go mt-lx
+- [ ] Blogdex leftover — no data-4x-go blogdex
+- [ ] Blogger Pyra leftover — no data-4x-go blogger
+- [ ] Warblog leftover — no data-4x-go tpm
+- [ ] Google 2001 leftover — no data-4x-go google
+- [ ] Yahoo 2001 leftover — no data-4x-go yahoo
+- [ ] Amazon smile leftover — no data-4x-go amz
+- [ ] CNN Nov 2001 leftover — no data-4x-go cnn
+- [ ] Mozilla 0.9 leftover — no data-4x-go moz
+- [ ] Encarta leftover — no data-4x-go encarta
+- [ ] Weblogs.com ping leftover — no data-4x-go ping
+- [ ] Clickscape — no data-4x-go game-clickscape
 
 ### Popular 3×
-- [x] BitTorrent — itt01-pop-bittorrent
-- [x] iTunes — itt01-pop-itunes
-- [x] Morpheus — itt01-pop-morpheus
+- [x] Google — itt01-pop-google
+- [x] Yahoo — itt01-pop-yahoo
+- [x] CNN — itt01-pop-cnn
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 43 URLs resolved
+- [x] 31 URLs resolved
 
 ## 2002
 
 ### Gold
-- [x] sites/stumbleupon/index.html — complete → itt02-stumble
+- [ ] sites/stumbleupon/index.html — complete threw: locator.check: Timeout 12000ms exceeded.
+Call log:
+  - waiting for locator('[data-su-interest=\'tech\']')
+
 
 ### Official 10
 - [x] 1. StumbleUpon — sites/stumbleupon/index.html
-- [x] 2. Friendster — sites/friendster/index.html
+- [x] 2. Always-on — sites/isp/index.html
 - [x] 3. KaZaA — sites/kazaa/index.html
-- [x] 4. Blogger — sites/blogger/index.html
-- [x] 5. Google News — sites/googlenews/index.html
-- [x] 6. Wikipedia — sites/wikipedia/index.html
-- [x] 7. Daypop — sites/daypop/index.html
-- [x] 8. Wired — sites/wired/index.html
-- [x] 9. Google — sites/google/index.html
-- [x] 10. Year game — sites/playable/game.html
+- [x] 4. Wired CSS — sites/wired/index.html
+- [x] 5. Phoenix — sites/phoenix/index.html
+- [x] 6. Mozilla 1.0 — sites/mozilla/index.html
+- [x] 7. iPod gen 2 — sites/ipod/index.html
+- [x] 8. Friendster seed — sites/friendster/index.html
+- [x] 9. TrackBack — sites/movabletype/trackback.html
+- [x] 10. Room Sticky — sites/playable/game.html
 
 ### Games
-- [x] extra-a.html — minute → itt02-game-stumble2
-- [x] extra-b.html — minute → itt02-game-kazaafind
+- [x] extra-a.html — lean leftover page
+- [x] extra-b.html — lean leftover page
 - [x] extra-c.html — more-game → itt02-game-stickwalk
 - [x] extra-d.html — more-game → itt02-game-growsprout
-- [x] extra-e.html — more-game started
+- [x] extra-e.html — more-game → itt02-game-fleetnight
 - [x] extra-f.html — more-game → itt02-game-friendseed
-- [x] extra-g.html — more-game → itt02-game-kaznote
+- [x] extra-g.html — more-game started
 - [x] extra-h.html — more-game → itt02-game-stumble3
 - [x] extra-i.html — more-game → itt02-game-ljnote
-- [x] famous.html — started
-- [x] game-2.html — pack-game → itt02-game-ftest
-- [x] game-3.html — pack-game → itt02-game-kazaasearch
-- [x] game-4.html — pack-game → itt02-game-nfq
-- [x] game-5.html — pack-game → itt02-game-gnclus
-- [x] game.html — host ok
+- [x] famous.html — lean leftover page
+- [x] game-2.html — pack-game → itt02-game-mqprint
+- [x] game-3.html — pack-game → itt02-game-petsock
+- [x] game-4.html — pack-game → itt02-game-flash3
+- [x] game-5.html — pack-game → itt02-game-dutch
+- [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — lean leftover page
+- [x] more-b.html — lean leftover page
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Stumble leftover ×2 — itt02-stumble-2x
-- [x] Friendster leftover testimonial — itt02-ftest
-- [x] KaZaA leftover search (no files) — itt02-kazaa-q
-- [x] Netflix DVD leftover queue — itt02-nfq
-- [x] Wired CSS leftover hops — itt02-wired-hop
-- [x] Google News BETA leftover — itt02-gnews-lx
-- [x] Daypop leftover query — itt02-daypop
-- [x] Technorati cosmos leftover — itt02-cosmos
-- [x] Blogger Pyra leftover — itt02-blog-q
-- [x] Phoenix 0.1 leftover — itt02-phoenix-ack
-- [x] Last.fm leftover seed — itt02-lastfm
-- [x] Steam leftover — itt02-steam-ack
-- [x] Meetup leftover RSVP — itt02-meetup
-- [x] Fotolog leftover caption — itt02-fotolog
-- [x] TypePad leftover publish — itt02-typepad
-- [x] Ask leftover question — itt02-ask
-- [x] Amazon smile leftover — itt02-cart
-- [x] Wikipedia leftover hops — itt02-wiki-hop
-- [x] Friendster leftover 2× — itt02-fs-lx
-- [x] LiveJournal leftover 2× — itt02-lj-lx
-- [x] Meetup leftover 2× — itt02-mu-lx
-- [x] DeviantArt leftover 2× — itt02-da-lx
-- [x] last.fm leftover 2× — itt02-lfm-lx
-- [x] Steam leftover 2× — itt02-st-lx
-- [x] Netflix leftover 2× — itt02-nf-lx
-- [x] Wired leftover 2× — itt02-wired-lx
-- [x] Something Awful leftover 2× — itt02-sa-lx
-- [x] Fotolog leftover 2× — itt02-fl-lx
-- [x] Xanga leftover 2× — itt02-xg-lx
-- [x] TypePad leftover 2× — itt02-tp-lx
-- [x] BBC leftover 2× — itt02-bbc-lx
-- [x] AOL leftover 2× — itt02-aol-lx
-- [x] MSN leftover 2× — itt02-msn-lx
-- [x] eBay leftover 2× — itt02-ebay-lx
-- [x] Kazaa leftover 2× — itt02-kz-lx
-- [x] Technorati leftover 2× — itt02-tech-lx
-- [x] about leftover REAL — itt02-about-rlx
-- [x] altavista leftover REAL — itt02-altavista-rlx
-- [x] apple leftover REAL — itt02-apple-rlx
-- [x] blogdex leftover REAL — itt02-blogdex-rlx
-- [x] blogspot leftover REAL — itt02-blogspot-rlx
-- [x] bowienet leftover REAL — itt02-bowienet-rlx
-- [x] cnn leftover REAL — itt02-cnn-rlx
-- [x] dmoz leftover REAL — itt02-dmoz-rlx
-- [x] encarta leftover REAL — itt02-encarta-rlx
-- [x] excite leftover REAL — itt02-excite-rlx
-- [x] fark leftover REAL — itt02-fark-rlx
-- [x] gamespot leftover REAL — itt02-gamespot-rlx
-- [x] geocities leftover REAL — itt02-geocities-rlx
-- [x] gnutella leftover REAL — itt02-gnutella-rlx
-- [x] hampsterdance leftover REAL — itt02-hampsterda-rlx
-- [x] homestar leftover REAL — itt02-homestar-rlx
-- [x] hotbot leftover REAL — itt02-hotbot-rlx
-- [x] icq leftover REAL — itt02-icq-rlx
-- [x] infoseek leftover REAL — itt02-infoseek-rlx
-- [x] isp leftover REAL — itt02-isp-rlx
-- [x] loudcloud leftover REAL — itt02-loudcloud-rlx
-- [x] macromedia leftover REAL — itt02-macromedia-rlx
-- [x] metafilter leftover REAL — itt02-metafilter-rlx
-- [x] microsoft leftover REAL — itt02-microsoft-rlx
-- [x] moreover leftover REAL — itt02-moreover-rlx
-- [x] movabletype leftover REAL — itt02-movabletyp-rlx
-- [x] mozilla leftover REAL — itt02-mozilla-rlx
-- [x] mtv leftover REAL — itt02-mtv-rlx
-- [x] napster leftover REAL — itt02-napster-rlx
-- [x] netcenter leftover REAL — itt02-netcenter-rlx
-- [x] netscape leftover REAL — itt02-netscape-rlx
-- [x] paypal leftover REAL — itt02-paypal-rlx
-- [x] pets leftover REAL — itt02-pets-rlx
-- [x] slashdot leftover REAL — itt02-slashdot-rlx
-- [x] startupfailures leftover REAL — itt02-startupfai-rlx
-- [x] wayback leftover REAL — itt02-wayback-rlx
-- [x] y2k leftover REAL — itt02-y2k-rlx
-- [x] yahoo leftover REAL — itt02-yahoo-rlx
-- [x] youvegotmail leftover REAL — itt02-youvegotma-rlx
-- [x] zombo leftover REAL — itt02-zombo-rlx
+- [ ] Stumble leftover topic — no data-4x-go su-lx
+- [ ] Always-on leftover — no data-4x-go broadband
+- [ ] Excite@Home leftover — no data-4x-go bb-lx
+- [ ] KaZaA leftover — no data-4x-go kazaa
+- [ ] KaZaA Lite leftover — no data-4x-go kazaa-lite
+- [ ] Wired CSS leftover — no data-4x-go wired
+- [ ] Wired CSS leftover theme — no data-4x-go wired-css
+- [ ] Phoenix 0.1 leftover — no data-4x-go phoenix
+- [ ] Mozilla 1.0 leftover — no data-4x-go mozilla
+- [ ] iPod gen 2 leftover — no data-4x-go ipod2
+- [ ] iPod gen 2 specs leftover — no data-4x-go ipod2-lx
+- [ ] Friendster seed leftover — no data-4x-go fs
+- [ ] Friendster leftover circle — no data-4x-go fs-seed
+- [ ] TrackBack leftover — no data-4x-go trackback
+- [ ] TrackBack leftover ping — no data-4x-go tb-ping
+- [ ] Daypop leftover — no data-4x-go daypop
+- [ ] MTV leftover — no data-4x-go mtv
+- [ ] last.fm leftover — no data-4x-go lastfm
+- [ ] Google News leftover — no data-4x-go gnews
+- [ ] Wikipedia 2002 leftover — no data-4x-go wiki-lx
+- [ ] Amazon smile leftover — no data-4x-go amz
+- [ ] Yahoo 2002 leftover — no data-4x-go yahoo
+- [ ] Room Sticky — no data-4x-go game-roomsticky
 
 ### Popular 3×
-- [x] Meetup — itt02-pop-meetup
-- [x] Fotolog — itt02-pop-fotolog
-- [x] TypePad — itt02-pop-typepad
+- [x] Daypop — itt02-pop-daypop
+- [x] Google News — itt02-pop-googlenews
+- [x] Technorati — itt02-pop-technorati
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 37 URLs resolved
+- [x] 24 URLs resolved
 
 ## 2003
 
@@ -791,129 +944,63 @@
 - [x] sites/photobucket/index.html — complete → itt03-photobucket
 
 ### Official 10
-- [x] 1. MySpace — sites/myspace/index.html
+- [x] 1. Photobucket — sites/photobucket/index.html
 - [x] 2. iTunes Store — sites/itunes/index.html
-- [x] 3. Photobucket — sites/photobucket/index.html
-- [x] 4. WordPress — sites/wordpress/index.html
-- [x] 5. LinkedIn — sites/linkedin/index.html
-- [x] 6. Friendster — sites/friendster/index.html
-- [x] 7. Bloglines — sites/bloglines/index.html
-- [x] 8. AdSense — sites/adsense/index.html
-- [x] 9. Blogger — sites/blogger/index.html
-- [x] 10. Google — sites/google/index.html
+- [x] 3. WordPress — sites/wordpress/dashboard.html
+- [x] 4. LinkedIn — sites/linkedin/invite.html
+- [x] 5. MySpace — sites/myspace/index.html
+- [x] 6. Friendster mass — sites/friendster/friends.html
+- [x] 7. AdSense — sites/adsense/index.html
+- [x] 8. Bloglines — sites/bloglines/index.html
+- [x] 9. Blogger-Google — sites/blogger/edit.html
+- [x] 10. Gags Lite — sites/playable/game.html
 
 ### Games
-- [x] extra-a.html — minute → itt03-game-top8swap
-- [x] extra-b.html — minute → itt03-game-itunestap
-- [x] extra-c.html — more-game → itt03-game-kolturn
-- [x] extra-d.html — more-game → itt03-game-pointclick
-- [x] extra-e.html — more-game → itt03-game-gaghand
-- [x] extra-f.html — more-game → itt03-game-top8note
-- [x] extra-g.html — more-game → itt03-game-ninetynine
-- [x] extra-h.html — more-game → itt03-game-delnote
-- [x] extra-i.html — more-game → itt03-game-skypenote
+- [x] extra-a.html — started
+- [x] extra-b.html — started
+- [x] extra-c.html — started
+- [x] extra-d.html — started
+- [x] extra-e.html — started
+- [x] extra-f.html — started
+- [x] extra-g.html — started
+- [x] extra-h.html — started
+- [x] extra-i.html — started
 - [x] famous.html — started
-- [x] game-2.html — pack-game → itt03-game-it99
-- [x] game-3.html — pack-game → itt03-game-licon
-- [x] game-4.html — pack-game → itt03-game-top8
-- [x] game-5.html — pack-game → itt03-game-wppub
+- [x] game-2.html — started
+- [x] game-3.html — started
+- [x] game-4.html — started
+- [x] game-5.html — started
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — started
+- [x] more-b.html — started
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Photobucket leftover filename — itt03-pb-fn
-- [x] MySpace leftover two friends — itt03-ms-top8-lx
-- [x] iTunes 99¢ leftover — itt03-it99
-- [x] WordPress leftover publish — itt03-wppub
-- [x] LinkedIn leftover invite — itt03-li-inv
-- [x] AdSense leftover site — itt03-adsense-lx
-- [x] Bloglines leftover subscribe — itt03-bl
-- [x] Friendster leftover (still larger) — itt03-ftest
-- [x] Skype leftover call theater — itt03-skype-lx
-- [x] del.icio.us leftover post — itt03-del
-- [x] 4chan leftover board code — itt03-board
-- [x] hi5 leftover add — itt03-hi5
-- [x] Newgrounds leftover play theater — itt03-ng
-- [x] Second Life leftover — itt03-sl
-- [x] Walmart leftover cart theater — itt03-wm
-- [x] CSS Zen Garden leftover themes — itt03-zen
-- [x] Phoenix leftover — itt03-phoenix-ack
-- [x] Wikipedia leftover hops — itt03-wiki-hop
-- [x] LinkedIn leftover 2× — itt03-li-lx
-- [x] WordPress leftover 2× — itt03-wp-lx
-- [x] Skype leftover 2× — itt03-sk-lx
-- [x] hi5 leftover 2× — itt03-hi5-lx
-- [x] 4Chan leftover 2× — itt03-4c-lx
-- [x] Second Life leftover 2× — itt03-sl-lx
-- [x] Newgrounds leftover 2× — itt03-ng-lx
-- [x] Walmart leftover 2× — itt03-wm-lx
-- [x] CNET leftover 2× — itt03-cnet-lx
-- [x] Evite leftover 2× — itt03-ev-lx
-- [x] ImageShack leftover 2× — itt03-is-lx
-- [x] del.icio.us leftover 2× — itt03-del-lx
-- [x] Tribe leftover 2× — itt03-tr-lx
-- [x] CSS Zen Garden leftover 2× — itt03-css-lx
-- [x] Friendster leftover 2× — itt03-fs-lx
-- [x] Ask leftover 2× — itt03-ask-lx
-- [x] Bloglines leftover 2× — itt03-bl-lx
-- [x] Itunes leftover 2× — itt03-it-lx
-- [x] altavista leftover REAL — itt03-altavista-rlx
-- [x] amazon leftover REAL — itt03-amazon-rlx
-- [x] apple leftover REAL — itt03-apple-rlx
-- [x] badger leftover REAL — itt03-badger-rlx
-- [x] blogdex leftover REAL — itt03-blogdex-rlx
-- [x] blogger leftover REAL — itt03-blogger-rlx
-- [x] bowienet leftover REAL — itt03-bowienet-rlx
-- [x] cnn leftover REAL — itt03-cnn-rlx
-- [x] daypop leftover REAL — itt03-daypop-rlx
-- [x] dmoz leftover REAL — itt03-dmoz-rlx
-- [x] ebay leftover REAL — itt03-ebay-rlx
-- [x] encarta leftover REAL — itt03-encarta-rlx
-- [x] excite leftover REAL — itt03-excite-rlx
-- [x] gamespot leftover REAL — itt03-gamespot-rlx
-- [x] geocities leftover REAL — itt03-geocities-rlx
-- [x] gnutella leftover REAL — itt03-gnutella-rlx
-- [x] googlenews leftover REAL — itt03-googlenews-rlx
-- [x] hampsterdance leftover REAL — itt03-hampsterda-rlx
-- [x] hotbot leftover REAL — itt03-hotbot-rlx
-- [x] icq leftover REAL — itt03-icq-rlx
-- [x] infoseek leftover REAL — itt03-infoseek-rlx
-- [x] isp leftover REAL — itt03-isp-rlx
-- [x] kazaa leftover REAL — itt03-kazaa-rlx
-- [x] lastfm leftover REAL — itt03-lastfm-rlx
-- [x] loudcloud leftover REAL — itt03-loudcloud-rlx
-- [x] macromedia leftover REAL — itt03-macromedia-rlx
-- [x] metafilter leftover REAL — itt03-metafilter-rlx
-- [x] microsoft leftover REAL — itt03-microsoft-rlx
-- [x] moreover leftover REAL — itt03-moreover-rlx
-- [x] movabletype leftover REAL — itt03-movabletyp-rlx
-- [x] mozilla leftover REAL — itt03-mozilla-rlx
-- [x] mtv leftover REAL — itt03-mtv-rlx
-- [x] napster leftover REAL — itt03-napster-rlx
-- [x] netcenter leftover REAL — itt03-netcenter-rlx
-- [x] netflix leftover REAL — itt03-netflix-rlx
-- [x] netscape leftover REAL — itt03-netscape-rlx
-- [x] paypal leftover REAL — itt03-paypal-rlx
-- [x] pets leftover REAL — itt03-pets-rlx
-- [x] secondlifegrid leftover REAL — itt03-secondlife-rlx
-- [x] slashdot leftover REAL — itt03-slashdot-rlx
-- [x] startupfailures leftover REAL — itt03-startupfai-rlx
-- [x] steam leftover REAL — itt03-steam-rlx
-- [x] technorati leftover REAL — itt03-technorati-rlx
-- [x] wayback leftover REAL — itt03-wayback-rlx
-- [x] wired leftover REAL — itt03-wired-rlx
-- [x] y2k leftover REAL — itt03-y2k-rlx
-- [x] yahoo leftover REAL — itt03-yahoo-rlx
-- [x] youvegotmail leftover REAL — itt03-youvegotma-rlx
-- [x] zombo leftover REAL — itt03-zombo-rlx
+- [ ] Photobucket album leftover — no data-4x-go pb-lx
+- [ ] MySpace friends leftover — no data-4x-go ms-friends
+- [ ] Store 99 leftover — no data-4x-go itunes-99
+- [ ] WP leftover — no data-4x-go wp-lx
+- [ ] LI invite leftover — no data-4x-go li-invite
+- [ ] Friendster mass leftover — no data-4x-go fs-mass
+- [ ] AdSense leftover — no data-4x-go adsense-lx
+- [ ] Bloglines leftover — no data-4x-go bloglines
+- [ ] Blogger leftover — no data-4x-go blogger-g
+- [ ] Skype leftover — no data-4x-go skype
+- [ ] 4chan leftover — no data-4x-go 4chan-lx
+- [ ] delicious leftover — no data-4x-go delicious
+- [ ] Firebird leftover — no data-4x-go firebird
+- [ ] Flash leftover — no data-4x-go flash-fwa
+- [ ] hi5 leftover — no data-4x-go hi5
+- [ ] Amazon leftover — no data-4x-go amz
+- [ ] Yahoo leftover — no data-4x-go yahoo
+- [ ] Gags Lite — no data-4x-go game-gagslite
 
 ### Popular 3×
-- [x] 4chan — itt03-pop-4chan
-- [x] hi5 — itt03-pop-hi5
-- [x] Newgrounds — itt03-pop-newgrounds
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 40 URLs resolved
+- [x] 28 URLs resolved
 
 ## 2004
 
@@ -949,110 +1036,216 @@
 - [x] game-5.html — pack-game → itt04-game-ffdl
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt04-game-gate60
+- [x] more-b.html — more-game → itt04-game-rollball
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] thefacebook leftover two campuses — itt04-fb-net
-- [x] Gmail leftover invite login — itt04-gmail-inv
-- [x] Flickr leftover title — itt04-flickr-lx
-- [x] Firefox 1.0 leftover — itt04-ff-ack
-- [x] Digg leftover submit — itt04-digg-seed
-- [x] Orkut leftover add — itt04-orkut
-- [x] LiveJournal leftover update — itt04-lj
-- [x] Craigslist leftover post — itt04-cl
-- [x] Yelp leftover local — itt04-yelp
-- [x] Piczo leftover layout — itt04-piczo
-- [x] Tagged leftover tag — itt04-tagged
-- [x] Odeo leftover subscribe — itt04-odeo
-- [x] WoW retail leftover — itt04-wow
-- [x] FeedBurner leftover burn — itt04-fburn
-- [x] del.icio.us leftover — itt04-del
-- [x] Weather.com leftover zip — itt04-weather-lx
-- [x] MySpace leftover hops — itt04-ms
-- [x] thefacebook leftover wall — itt04-fb-wall
-- [x] Orkut leftover 2× — itt04-ork-lx
-- [x] Yelp leftover 2× — itt04-yelp-lx
-- [x] Craigslist leftover 2× — itt04-cl-lx
-- [x] LiveJournal leftover 2× — itt04-lj-lx
-- [x] Weather.com leftover 2× — itt04-wx-lx
-- [x] Firefox leftover 2× — itt04-fx-lx
-- [x] Digg leftover 2× — itt04-digg-lx
-- [x] Gmail leftover 2× — itt04-gm-lx
-- [x] WoW leftover 2× — itt04-wow-lx
-- [x] Piczo leftover 2× — itt04-pz-lx
-- [x] Tagged leftover 2× — itt04-tg-lx
-- [x] Odeo leftover 2× — itt04-od-lx
-- [x] Basecamp leftover 2× — itt04-bc-lx
-- [x] Flickr leftover 2× — itt04-fl-lx
-- [x] Orkut circle leftover 2× — itt04-oc-lx
-- [x] Yelp local leftover 2× — itt04-yl-lx
-- [x] TinyPic leftover 2× — itt04-tp-lx
-- [x] FeedBurner leftover 2× — itt04-fburn-lx
-- [x] adsense leftover REAL — itt04-adsense-rlx
-- [x] altavista leftover REAL — itt04-altavista-rlx
-- [x] amazon leftover REAL — itt04-amazon-rlx
-- [x] aol leftover REAL — itt04-aol-rlx
-- [x] apple leftover REAL — itt04-apple-rlx
-- [x] askjeeves leftover REAL — itt04-askjeeves-rlx
-- [x] bbc leftover REAL — itt04-bbc-rlx
-- [x] blogdex leftover REAL — itt04-blogdex-rlx
-- [x] blogger leftover REAL — itt04-blogger-rlx
-- [x] bloglines leftover REAL — itt04-bloglines-rlx
-- [x] bowienet leftover REAL — itt04-bowienet-rlx
-- [x] cnn leftover REAL — itt04-cnn-rlx
-- [x] daypop leftover REAL — itt04-daypop-rlx
-- [x] dmoz leftover REAL — itt04-dmoz-rlx
-- [x] ebay leftover REAL — itt04-ebay-rlx
-- [x] encarta leftover REAL — itt04-encarta-rlx
-- [x] excite leftover REAL — itt04-excite-rlx
-- [x] flickrpro leftover REAL — itt04-flickrpro-rlx
-- [x] friendster leftover REAL — itt04-friendster-rlx
-- [x] gamespot leftover REAL — itt04-gamespot-rlx
-- [x] geocities leftover REAL — itt04-geocities-rlx
-- [x] gnutella leftover REAL — itt04-gnutella-rlx
-- [x] google leftover REAL — itt04-google-rlx
-- [x] googlenews leftover REAL — itt04-googlenews-rlx
-- [x] hampsterdance leftover REAL — itt04-hampsterda-rlx
-- [x] hotbot leftover REAL — itt04-hotbot-rlx
-- [x] icq leftover REAL — itt04-icq-rlx
-- [x] imdb leftover REAL — itt04-imdb-rlx
-- [x] infoseek leftover REAL — itt04-infoseek-rlx
-- [x] isp leftover REAL — itt04-isp-rlx
-- [x] itunes leftover REAL — itt04-itunes-rlx
-- [x] kazaa leftover REAL — itt04-kazaa-rlx
-- [x] lastfm leftover REAL — itt04-lastfm-rlx
-- [x] linkedin leftover REAL — itt04-linkedin-rlx
-- [x] loudcloud leftover REAL — itt04-loudcloud-rlx
-- [x] macromedia leftover REAL — itt04-macromedia-rlx
-- [x] metafilter leftover REAL — itt04-metafilter-rlx
-- [x] microsoft leftover REAL — itt04-microsoft-rlx
-- [x] moreover leftover REAL — itt04-moreover-rlx
-- [x] movabletype leftover REAL — itt04-movabletyp-rlx
-- [x] mozilla leftover REAL — itt04-mozilla-rlx
-- [x] msn leftover REAL — itt04-msn-rlx
-- [x] mtv leftover REAL — itt04-mtv-rlx
-- [x] napster leftover REAL — itt04-napster-rlx
-- [x] netcenter leftover REAL — itt04-netcenter-rlx
-- [x] netflix leftover REAL — itt04-netflix-rlx
-- [x] netscape leftover REAL — itt04-netscape-rlx
-- [x] orkutseed leftover REAL — itt04-orkutseed-rlx
-- [x] paypal leftover REAL — itt04-paypal-rlx
-- [x] pets leftover REAL — itt04-pets-rlx
-- [x] phoenix leftover REAL — itt04-phoenix-rlx
-- [x] skype leftover REAL — itt04-skype-rlx
-- [x] slashdot leftover REAL — itt04-slashdot-rlx
-- [x] startupfailures leftover REAL — itt04-startupfai-rlx
-- [x] steam leftover REAL — itt04-steam-rlx
-- [x] technorati leftover REAL — itt04-technorati-rlx
-- [x] walmart leftover REAL — itt04-walmart-rlx
-- [x] wayback leftover REAL — itt04-wayback-rlx
-- [x] wikipedia leftover REAL — itt04-wikipedia-rlx
-- [x] wired leftover REAL — itt04-wired-rlx
-- [x] wordpress leftover REAL — itt04-wordpress-rlx
-- [x] wow leftover REAL — itt04-wow-rlx
-- [x] y2k leftover REAL — itt04-y2k-rlx
-- [x] yahoo leftover REAL — itt04-yahoo-rlx
-- [x] youvegotmail leftover REAL — itt04-youvegotma-rlx
-- [x] zombo leftover REAL — itt04-zombo-rlx
+- [ ] adsense leftover REAL — no data-4x-go adsense-rlx
+- [ ] 2004 leftover · adsense stats — no data-4x-go adsense-stats
+- [ ] 2004 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 2004 leftover · altavista babelfish — no data-4x-go altavista-babelfish
+- [ ] altavista leftover REAL — no data-4x-go altavista-rlx
+- [ ] 2004 leftover · altavista search — no data-4x-go altavista-search
+- [ ] 2004 leftover · amazon auctions — no data-4x-go amazon-auctions
+- [ ] 2004 leftover · amazon book being digita — no data-4x-go amazon-book-being-digita
+- [ ] 2004 leftover · amazon book contact — no data-4x-go amazon-book-contact
+- [ ] 2004 leftover · amazon book dove — no data-4x-go amazon-book-dove
+- [ ] 2004 leftover · amazon book harry cos — no data-4x-go amazon-book-harry-cos
+- [ ] 2004 leftover · amazon book microserfs — no data-4x-go amazon-book-microserfs
+- [ ] 2004 leftover · amazon book tuesdays — no data-4x-go amazon-book-tuesdays
+- [ ] 2004 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 2004 leftover · amazon cd homogenic — no data-4x-go amazon-cd-homogenic
+- [ ] 2004 leftover · amazon cd ok computer — no data-4x-go amazon-cd-ok-computer
+- [ ] 2004 leftover · amazon cd ray of light — no data-4x-go amazon-cd-ray-of-light
+- [ ] 2004 leftover · amazon cd the miseducati — no data-4x-go amazon-cd-the-miseducati
+- [ ] 2004 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 2004 leftover · amazon dvd matrix — no data-4x-go amazon-dvd-matrix
+- [ ] 2004 leftover · amazon electronics — no data-4x-go amazon-electronics
+- [ ] 2004 leftover · amazon electronics palm  — no data-4x-go amazon-electronics-palm-
+- [ ] 2004 leftover · amazon music — no data-4x-go amazon-music
+- [ ] 2004 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] amazon leftover REAL — no data-4x-go amazon-rlx
+- [ ] 2004 leftover · amazon search — no data-4x-go amazon-search
+- [ ] 2004 leftover · amazon toy furby — no data-4x-go amazon-toy-furby
+- [ ] 2004 leftover · amazon toys — no data-4x-go amazon-toys
+- [ ] 2004 leftover · amazon zshops — no data-4x-go amazon-zshops
+- [ ] aol leftover REAL — no data-4x-go aol-rlx
+- [ ] 2004 leftover · apple ipod — no data-4x-go apple-ipod
+- [ ] 2004 leftover · apple ipod faq — no data-4x-go apple-ipod-faq
+- [ ] 2004 leftover · apple ipod howto — no data-4x-go apple-ipod-howto
+- [ ] 2004 leftover · apple ipod specs — no data-4x-go apple-ipod-specs
+- [ ] 2004 leftover · apple itunes — no data-4x-go apple-itunes
+- [ ] apple leftover REAL — no data-4x-go apple-rlx
+- [ ] 2004 leftover · apple think different — no data-4x-go apple-think-different
+- [ ] 2004 leftover · askjeeves ask — no data-4x-go askjeeves-ask
+- [ ] askjeeves leftover REAL — no data-4x-go askjeeves-rlx
+- [ ] 2004 leftover · bbc about — no data-4x-go bbc-about
+- [ ] bbc leftover REAL — no data-4x-go bbc-rlx
+- [ ] 2004 leftover · bbc tech — no data-4x-go bbc-tech
+- [ ] 2004 leftover · bbc world — no data-4x-go bbc-world
+- [ ] Basecamp leftover 2× — no data-4x-go bc-lx
+- [ ] 2004 leftover · blogdex about — no data-4x-go blogdex-about
+- [ ] blogdex leftover REAL — no data-4x-go blogdex-rlx
+- [ ] 2004 leftover · blogger edit — no data-4x-go blogger-edit
+- [ ] blogger leftover REAL — no data-4x-go blogger-rlx
+- [ ] 2004 leftover · blogger view — no data-4x-go blogger-view
+- [ ] 2004 leftover · bloglines reader — no data-4x-go bloglines-reader
+- [ ] bloglines leftover REAL — no data-4x-go bloglines-rlx
+- [ ] 2004 leftover · bowienet about — no data-4x-go bowienet-about
+- [ ] bowienet leftover REAL — no data-4x-go bowienet-rlx
+- [ ] Craigslist leftover post — no data-4x-go cl
+- [ ] Craigslist leftover 2× — no data-4x-go cl-lx
+- [ ] 2004 leftover · cnn aol tw — no data-4x-go cnn-aol-tw
+- [ ] 2004 leftover · cnn diana — no data-4x-go cnn-diana
+- [ ] 2004 leftover · cnn election — no data-4x-go cnn-election
+- [ ] 2004 leftover · cnn markets — no data-4x-go cnn-markets
+- [ ] 2004 leftover · cnn napster story — no data-4x-go cnn-napster-story
+- [ ] 2004 leftover · cnn pathfinder — no data-4x-go cnn-pathfinder
+- [ ] cnn leftover REAL — no data-4x-go cnn-rlx
+- [ ] 2004 leftover · cnn showbiz — no data-4x-go cnn-showbiz
+- [ ] 2004 leftover · cnn tech — no data-4x-go cnn-tech
+- [ ] 2004 leftover · cnn world — no data-4x-go cnn-world
+- [ ] 2004 leftover · craigslist about — no data-4x-go craigslist-about
+- [ ] 2004 leftover · craigslist category — no data-4x-go craigslist-category
+- [ ] 2004 leftover · craigslist post — no data-4x-go craigslist-post
+- [ ] daypop leftover REAL — no data-4x-go daypop-rlx
+- [ ] del.icio.us leftover — no data-4x-go del
+- [ ] 2004 leftover · delicious about — no data-4x-go delicious-about
+- [ ] 2004 leftover · digg about — no data-4x-go digg-about
+- [ ] Digg leftover 2× — no data-4x-go digg-lx
+- [ ] Digg leftover submit — no data-4x-go digg-seed
+- [ ] 2004 leftover · digg submit — no data-4x-go digg-submit
+- [ ] 2004 leftover · dmoz about — no data-4x-go dmoz-about
+- [ ] 2004 leftover · dmoz category — no data-4x-go dmoz-category
+- [ ] dmoz leftover REAL — no data-4x-go dmoz-rlx
+- [ ] 2004 leftover · ebay bid confirm — no data-4x-go ebay-bid-confirm
+- [ ] 2004 leftover · ebay category — no data-4x-go ebay-category
+- [ ] 2004 leftover · ebay item laptop — no data-4x-go ebay-item-laptop
+- [ ] 2004 leftover · ebay item pda — no data-4x-go ebay-item-pda
+- [ ] 2004 leftover · ebay myebay — no data-4x-go ebay-myebay
+- [ ] 2004 leftover · ebay register — no data-4x-go ebay-register
+- [ ] ebay leftover REAL — no data-4x-go ebay-rlx
+- [ ] 2004 leftover · ebay search — no data-4x-go ebay-search
+- [ ] 2004 leftover · ebay sell — no data-4x-go ebay-sell
+- [ ] encarta leftover REAL — no data-4x-go encarta-rlx
+- [ ] excite leftover REAL — no data-4x-go excite-rlx
+- [ ] 2004 leftover · excite search — no data-4x-go excite-search
+- [ ] 2004 leftover · facebook about — no data-4x-go facebook-about
+- [ ] 2004 leftover · facebook friends — no data-4x-go facebook-friends
+- [ ] 2004 leftover · facebook invite — no data-4x-go facebook-invite
+- [ ] 2004 leftover · facebook poke — no data-4x-go facebook-poke
+- [ ] 2004 leftover · facebook profile — no data-4x-go facebook-profile
+- [ ] thefacebook leftover two campuses — no data-4x-go fb-net
+- [ ] thefacebook leftover wall — no data-4x-go fb-wall
+- [ ] FeedBurner leftover burn — no data-4x-go fburn
+- [ ] FeedBurner leftover 2× — no data-4x-go fburn-lx
+- [ ] Firefox 1.0 leftover — no data-4x-go ff-ack
+- [ ] 2004 leftover · firefox download — no data-4x-go firefox-download
+- [ ] 2004 leftover · firefox download thanks — no data-4x-go firefox-download-thanks
+- [ ] 2004 leftover · firefox features — no data-4x-go firefox-features
+- [ ] 2004 leftover · firefox nyt ad — no data-4x-go firefox-nyt-ad
+- [ ] 2004 leftover · firefox whatsnew — no data-4x-go firefox-whatsnew
+- [ ] Flickr leftover 2× — no data-4x-go fl-lx
+- [ ] 2004 leftover · flickr about — no data-4x-go flickr-about
+- [ ] 2004 leftover · flickr explore — no data-4x-go flickr-explore
+- [ ] 2004 leftover · flickr fave — no data-4x-go flickr-fave
+- [ ] 2004 leftover · flickr groups — no data-4x-go flickr-groups
+- [ ] Flickr leftover title — no data-4x-go flickr-lx
+- [ ] 2004 leftover · flickr tags — no data-4x-go flickr-tags
+- [ ] 2004 leftover · flickr upload — no data-4x-go flickr-upload
+- [ ] flickrpro leftover REAL — no data-4x-go flickrpro-rlx
+- [ ] 2004 leftover · folklore about — no data-4x-go folklore-about
+- [ ] 2004 leftover · friendster friends — no data-4x-go friendster-friends-lx
+- [ ] 2004 leftover · friendster profile — no data-4x-go friendster-profile
+- [ ] friendster leftover REAL — no data-4x-go friendster-rlx
+- [ ] 2004 leftover · friendster testimonials — no data-4x-go friendster-testimonials
+- [ ] Firefox leftover 2× — no data-4x-go fx-lx
+- [ ] 2004 leftover · gamespot about — no data-4x-go gamespot-about
+- [ ] 2004 leftover · gamespot downloads — no data-4x-go gamespot-downloads
+- [ ] 2004 leftover · gamespot previews — no data-4x-go gamespot-previews
+- [ ] gamespot leftover REAL — no data-4x-go gamespot-rlx
+- [ ] 2004 leftover · geocities — no data-4x-go geocities
+- [ ] 2004 leftover · geocities — no data-4x-go geocities-d2
+- [ ] 2004 leftover · geocities neighborhoods — no data-4x-go geocities-neighborhoods
+- [ ] geocities leftover REAL — no data-4x-go geocities-rlx
+- [ ] Gmail leftover 2× — no data-4x-go gm-lx
+- [ ] 2004 leftover · gmail about — no data-4x-go gmail-about
+- [ ] 2004 leftover · gmail compose — no data-4x-go gmail-compose
+- [ ] 2004 leftover · gmail inbox — no data-4x-go gmail-inbox
+- [ ] Gmail leftover invite login — no data-4x-go gmail-inv
+- [ ] 2004 leftover · gmail invite — no data-4x-go gmail-invite
+- [ ] 2004 leftover · gnutella about — no data-4x-go gnutella-about
+- [ ] gnutella leftover REAL — no data-4x-go gnutella-rlx
+- [ ] 2004 leftover · google about — no data-4x-go google-about
+- [ ] 2004 leftover · google ipo — no data-4x-go google-ipo
+- [ ] google leftover REAL — no data-4x-go google-rlx
+- [ ] 2004 leftover · google search — no data-4x-go google-search
+- [ ] googlenews leftover REAL — no data-4x-go googlenews-rlx
+- [ ] hampsterdance leftover REAL — no data-4x-go hampsterda-rlx
+- [ ] 2004 leftover · hampsterdance about — no data-4x-go hampsterdance-about
+- [ ] hotbot leftover REAL — no data-4x-go hotbot-rlx
+- [ ] icq leftover REAL — no data-4x-go icq-rlx
+- [ ] imdb leftover REAL — no data-4x-go imdb-rlx
+- [ ] infoseek leftover REAL — no data-4x-go infoseek-rlx
+- [ ] isp leftover REAL — no data-4x-go isp-rlx
+- [ ] itunes leftover REAL — no data-4x-go itunes-rlx
+- [ ] kazaa leftover REAL — no data-4x-go kazaa-rlx
+- [ ] lastfm leftover REAL — no data-4x-go lastfm-rlx
+- [ ] linkedin leftover REAL — no data-4x-go linkedin-rlx
+- [ ] LiveJournal leftover update — no data-4x-go lj
+- [ ] LiveJournal leftover 2× — no data-4x-go lj-lx
+- [ ] loudcloud leftover REAL — no data-4x-go loudcloud-rlx
+- [ ] macromedia leftover REAL — no data-4x-go macromedia-rlx
+- [ ] metafilter leftover REAL — no data-4x-go metafilter-rlx
+- [ ] microsoft leftover REAL — no data-4x-go microsoft-rlx
+- [ ] moreover leftover REAL — no data-4x-go moreover-rlx
+- [ ] movabletype leftover REAL — no data-4x-go movabletyp-rlx
+- [ ] mozilla leftover REAL — no data-4x-go mozilla-rlx
+- [ ] MySpace leftover hops — no data-4x-go ms
+- [ ] msn leftover REAL — no data-4x-go msn-rlx
+- [ ] mtv leftover REAL — no data-4x-go mtv-rlx
+- [ ] napster leftover REAL — no data-4x-go napster-rlx
+- [ ] netcenter leftover REAL — no data-4x-go netcenter-rlx
+- [ ] netflix leftover REAL — no data-4x-go netflix-rlx
+- [ ] netscape leftover REAL — no data-4x-go netscape-rlx
+- [ ] Orkut circle leftover 2× — no data-4x-go oc-lx
+- [ ] Odeo leftover 2× — no data-4x-go od-lx
+- [ ] Odeo leftover subscribe — no data-4x-go odeo
+- [ ] Orkut leftover 2× — no data-4x-go ork-lx
+- [ ] Orkut leftover add — no data-4x-go orkut
+- [ ] orkutseed leftover REAL — no data-4x-go orkutseed-rlx
+- [ ] paypal leftover REAL — no data-4x-go paypal-rlx
+- [ ] pets leftover REAL — no data-4x-go pets-rlx
+- [ ] phoenix leftover REAL — no data-4x-go phoenix-rlx
+- [ ] Piczo leftover layout — no data-4x-go piczo
+- [ ] Piczo leftover 2× — no data-4x-go pz-lx
+- [ ] skype leftover REAL — no data-4x-go skype-rlx
+- [ ] slashdot leftover REAL — no data-4x-go slashdot-rlx
+- [ ] startupfailures leftover REAL — no data-4x-go startupfai-rlx
+- [ ] steam leftover REAL — no data-4x-go steam-rlx
+- [ ] Tagged leftover tag — no data-4x-go tagged
+- [ ] technorati leftover REAL — no data-4x-go technorati-rlx
+- [ ] Tagged leftover 2× — no data-4x-go tg-lx
+- [ ] TinyPic leftover 2× — no data-4x-go tp-lx
+- [ ] walmart leftover REAL — no data-4x-go walmart-rlx
+- [ ] wayback leftover REAL — no data-4x-go wayback-rlx
+- [ ] Weather.com leftover zip — no data-4x-go weather-lx
+- [ ] wikipedia leftover REAL — no data-4x-go wikipedia-rlx
+- [ ] wired leftover REAL — no data-4x-go wired-rlx
+- [ ] wordpress leftover REAL — no data-4x-go wordpress-rlx
+- [ ] WoW retail leftover — no data-4x-go wow
+- [ ] WoW leftover 2× — no data-4x-go wow-lx
+- [ ] wow leftover REAL — no data-4x-go wow-rlx
+- [ ] Weather.com leftover 2× — no data-4x-go wx-lx
+- [ ] y2k leftover REAL — no data-4x-go y2k-rlx
+- [ ] yahoo leftover REAL — no data-4x-go yahoo-rlx
+- [ ] Yelp leftover local — no data-4x-go yelp
+- [ ] Yelp leftover 2× — no data-4x-go yelp-lx
+- [ ] Yelp local leftover 2× — no data-4x-go yl-lx
+- [ ] youvegotmail leftover REAL — no data-4x-go youvegotma-rlx
+- [ ] zombo leftover REAL — no data-4x-go zombo-rlx
 
 ### Popular 3×
 - [x] Piczo — itt04-pop-piczo
@@ -1068,223 +1261,365 @@
 - [x] sites/youtube/upload.html — complete → itt05-yt-uploads
 
 ### Official 10
-- [x] 1. YouTube — sites/youtube/upload.html
-- [x] 2. Google Maps — sites/maps/index.html
-- [x] 3. Pandora station — sites/pandora/index.html
-- [x] 4. HousingMaps — sites/housingmaps/index.html
-- [x] 5. Digg — sites/digg/index.html
-- [x] 6. Reddit — sites/reddit/index.html
-- [x] 7. Flickr — sites/flickr/index.html
-- [x] 8. iTunes podcasts — sites/itunes/index.html
-- [x] 9. TechCrunch — sites/techcrunch/index.html
+- [x] 1. Upload — sites/youtube/upload.html
+- [x] 2. Maps leftover — sites/maps/index.html
+- [x] 3. Pandora leftover — sites/pandora/index.html
+- [x] 4. HousingMaps leftover — sites/housingmaps/index.html
+- [x] 5. Digg leftover — sites/digg/index.html
+- [x] 6. Reddit leftover — sites/reddit/index.html
+- [x] 7. Flickr leftover — sites/flickr/index.html
+- [x] 8. iTunes podcasts leftover — sites/itunes/podcasts.html
+- [x] 9. TechCrunch leftover — sites/techcrunch/index.html
 - [x] 10. HoverChop — sites/playable/game.html
 
 ### Games
-- [x] extra-a.html — minute → itt05-game-ytsurge
-- [x] extra-b.html — minute → itt05-game-mapdrag
-- [x] extra-c.html — more-game → itt05-game-boost
-- [x] extra-d.html — more-game → itt05-game-bury
-- [x] extra-e.html — more-game → itt05-game-pod
-- [x] extra-f.html — more-game → itt05-game-hm
-- [x] extra-g.html — more-game → itt05-game-radio
-- [x] extra-h.html — more-game → itt05-game-tag
-- [x] extra-i.html — more-game → itt05-game-deli
+- [ ] extra-a.html — minute complete did not write itt05-game-thepoke
+- [ ] extra-b.html — minute complete did not write itt05-game-flickrfave
+- [x] extra-c.html — more-game → itt05-game-ntight
+- [x] extra-d.html — more-game → itt05-game-addictpick
+- [x] extra-e.html — more-game started
+- [x] extra-f.html — more-game → itt05-game-thepoke2
+- [x] extra-g.html — more-game → itt05-game-gmailinv
+- [x] extra-h.html — more-game → itt05-game-flick2
+- [x] extra-i.html — more-game → itt05-game-orcutnote
 - [x] famous.html — started
-- [x] game-2.html — more-game → itt05-game-g2
-- [x] game-3.html — more-game → itt05-game-g3
-- [x] game-4.html — more-game → itt05-game-g4
-- [x] game-5.html — more-game → itt05-game-g5
+- [x] game-2.html — pack-game → itt05-game-poke
+- [x] game-3.html — pack-game → itt05-game-ginvite
+- [x] game-4.html — pack-game → itt05-game-flickrfave
+- [x] game-5.html — pack-game → itt05-game-ffdl
 - [x] game.html — started
-- [x] index.html — leftover dest page (4× bound)
+- [x] index.html — cabinet
+- [x] more-a.html — more-game → itt05-game-gate60
+- [x] more-b.html — more-game → itt05-game-rollball
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] YouTube leftover title — itt05-yt-lx
-- [x] YouTube invite — itt05-yt-inv
-- [x] Watch leftover — itt05-yt-watch
-- [x] Maps two views — itt05-maps-lx
-- [x] hotels near LAX — itt05-maps-lax
-- [x] No Street View — itt05-maps-nsv
-- [x] Ajax 18 Feb — itt05-ajax-lx
-- [x] HousingMaps city — itt05-hm-lx
-- [x] Mashup ticks — itt05-hm-ck
-- [x] Reddit leftover boost — itt05-reddit-lx
-- [x] hottest leftover — itt05-reddit-hot
-- [x] Empty submit literacy — itt05-reddit-empty
-- [x] Digg leftover bury — itt05-digg-lx
-- [x] Digg promote — itt05-digg-up
-- [x] Diggnation 1 Jul — itt05-diggnation
-- [x] Pandora leftover station — itt05-pandora-lx
-- [x] Genome leftover — itt05-pandora-ck
-- [x] Podcast name — itt05-pod-lx
-- [x] >1M in two days — itt05-pod-1m
-- [x] Flickr leftover tag — itt05-flickr-lx
-- [x] Second tag — itt05-flickr-tag
-- [x] delicious leftover — itt05-deli-lx
-- [x] Yahoo 9 Dec — itt05-deli-bm
-- [x] TechCrunch leftover — itt05-tc-lx
-- [x] Mashable leftover — itt05-mash-lx
-- [x] API leftover — itt05-pw-lx
-- [x] DailyMotion leftover — itt05-dm-lx
-- [x] Vimeo leftover — itt05-vimeo-lx
-- [x] Google Video search — itt05-gv-lx
-- [x] Google Video play — itt05-gv-play
-- [x] Earth leftover — itt05-earth-lx
-- [x] Million Dollar leftover — itt05-mdh-lx
-- [x] Club Penguin leftover — itt05-cp-lx
-- [x] Firefox 1.5 leftover — itt05-fx15-lx
-- [x] Kayak leftover — itt05-kayak-lx
-- [x] FeedBurner leftover — itt05-fburn-lx
-- [x] Bloglines leftover — itt05-blines-lx
-- [x] Web 2.0 Conf leftover — itt05-w20-lx
-- [x] Facebook rename leftover — itt05-fb-rename
-- [x] High school leftover — itt05-fb-hs
-- [x] MySpace leftover — itt05-ms-lx
-- [x] MySpace $580M — itt05-ms-sold
-- [x] College networks leftover — itt05-fb-net
-- [x] Facebook invite leftover — itt05-fb-inv
-- [x] Friendster leftover — itt05-fs-lx
-- [x] Gaia leftover — itt05-gaia-lx
-- [x] Skype leftover — itt05-skype-lx
-- [x] Skype call leftover — itt05-skype-call
-- [x] Gmail still-invite — itt05-gmail-lx
-- [x] Google search leftover — itt05-google-q
-- [x] Yahoo portal leftover — itt05-yahoo-lx
-- [x] Technorati leftover — itt05-techno-lx
-- [x] Movable Type leftover — itt05-mt-lx
-- [x] WordPress leftover — itt05-wp-lx
-- [x] Blogger leftover — itt05-blogger-lx
-- [x] Last.fm leftover — itt05-lastfm-lx
-- [x] LinkedIn leftover — itt05-li-lx
-- [x] Steam leftover — itt05-steam-lx
-- [x] Second Life leftover — itt05-sl-lx
-- [x] µTorrent leftover — itt05-ut-lx
-- [x] Wikipedia leftover — itt05-wiki-lx
-- [x] Amazon leftover — itt05-amz-lx
-- [x] eBay leftover — itt05-ebay-lx
-- [x] PayPal leftover — itt05-pp-lx
-- [x] CNN leftover — itt05-cnn-lx
-- [x] iPod leftover — itt05-ipod-lx
-- [x] Microsoft leftover — itt05-msft-lx
-- [x] AdSense leftover — itt05-ads-lx
-- [x] Slashdot leftover — itt05-sd-lx
-- [x] MetaFilter leftover — itt05-mefi-lx
-- [x] Memeorandum leftover — itt05-memo-lx
-- [x] Daypop leftover — itt05-daypop-lx
-- [x] Netflix DVD leftover — itt05-nflx-lx
-- [x] MapQuest print trap — itt05-mq-trap
-- [x] Ask→Bloglines — itt05-ask-bl
-- [x] Android quiet footnote — itt05-android-fn
-- [x] Accel $12.7M — itt05-fb-accel
-- [x] Sequoia $3.5M — itt05-yt-seq
-- [x] 15 Dec launch class — itt05-yt-dec
-- [x] Independent 2005 — itt05-yt-ind
-- [x] AltaVista leftover — itt05-av-lx
-- [x] Ask Jeeves leftover — itt05-aj-lx
-- [x] Encarta leftover — itt05-enc-lx
-- [x] Excite leftover — itt05-exc-lx
-- [x] HotBot leftover — itt05-hb-lx
-- [x] Infoseek leftover — itt05-is-lx
-- [x] DMOZ leftover — itt05-dmoz-lx
-- [x] GeoCities leftover — itt05-geo-lx
-- [x] ICQ leftover — itt05-icq-lx
-- [x] Kazaa leftover — itt05-kazaa-lx
-- [x] Napster epitaph — itt05-nap-lx
-- [x] Gnutella leftover — itt05-gn-lx
-- [x] Netscape leftover — itt05-ns-lx
-- [x] Netcenter leftover — itt05-nc-lx
-- [x] AOL leftover — itt05-aol-lx
-- [x] MTV leftover — itt05-mtv-lx
-- [x] Gamespot leftover — itt05-gs-lx
-- [x] Wired leftover — itt05-wired-lx
-- [x] Wayback leftover — itt05-wa-lx
-- [x] Macromedia leftover — itt05-mm-lx
-- [x] Mozilla leftover — itt05-moz-lx
-- [x] Broadband leftover — itt05-isp-lx
-- [x] Pets.com epitaph — itt05-pets-lx
-- [x] Startup failures leftover — itt05-fail-lx
-- [x] You've Got Mail leftover — itt05-ygm-lx
-- [x] Moreover leftover — itt05-more-lx
-- [x] Blogdex leftover — itt05-bdex-lx
-- [x] BowieNet leftover — itt05-bowie-lx
-- [x] Phoenix leftover — itt05-phx-lx
-- [x] Loudcloud leftover — itt05-lc-lx
-- [x] Zombo leftover — itt05-zombo-lx
-- [x] Y2K epitaph leftover — itt05-y2k-lx
-- [x] Hampster leftover — itt05-hamp-lx
-- [x] Google News leftover — itt05-gnews-lx
-- [x] Maps API June leftover — itt05-maps-api
-- [x] Second HousingMaps city — itt05-hm-city2
-- [x] Reddit submit leftover — itt05-reddit-sub
-- [x] Digg submit leftover — itt05-digg-sub
-- [x] iTunes directory leftover — itt05-pod-dir
-- [x] HoverChop leftover path — itt05-heli-lx
-- [x] Google Talk leftover — itt05-gtalk-lx
-- [x] Google Analytics leftover — itt05-ga-lx
-- [x] Google Reader leftover — itt05-reader-lx
-- [x] iTunes 6 video leftover — itt05-itv-lx
-- [x] iPod nano leftover — itt05-nano-lx
-- [x] Video iPod leftover — itt05-vidpod-lx
-- [x] Xbox 360 leftover — itt05-x360-lx
-- [x] Webkinz leftover — itt05-wkz-lx
-- [x] Lifehacker leftover — itt05-lh-lx
-- [x] The Huffington Post leftover — itt05-huff-lx
-- [x] Yahoo Answers leftover — itt05-ya-lx
-- [x] Yahoo 360 leftover — itt05-y360-lx
-- [x] Windows Live leftover — itt05-wlive-lx
-- [x] Virtual Earth / Live Local leftover — itt05-ve-lx
-- [x] Ruby on Rails 1.0 leftover — itt05-rails-lx
-- [x] WordPress.com leftover — itt05-wpcom-lx
-- [x] LibraryThing leftover — itt05-lt-lx
-- [x] Amazon Mechanical Turk leftover — itt05-mturk-lx
-- [x] Newsvine leftover — itt05-nv-lx
-- [x] Google Blog Search leftover — itt05-gbs-lx
-- [x] Google Base leftover — itt05-gbase-lx
-- [x] Netvibes leftover — itt05-nvib-lx
-- [x] Greasemonkey leftover — itt05-gm-lx
-- [x] BarCamp leftover — itt05-bcamp-lx
-- [x] Katrina Maps leftover — itt05-kat-lx
-- [x] Upcoming.org leftover — itt05-up-lx
-- [x] Eventful leftover — itt05-evf-lx
-- [x] Metacafe leftover — itt05-mc-lx
-- [x] Revver leftover — itt05-rev-lx
-- [x] iFilm leftover — itt05-ifilm-lx
-- [x] Yahoo Video leftover — itt05-yv-lx
-- [x] ImageShack leftover — itt05-ish-lx
-- [x] DeviantArt leftover — itt05-da-lx
-- [x] Newgrounds leftover — itt05-ng-lx
-- [x] Homestar Runner leftover — itt05-hsr-lx
-- [x] YTMND leftover — itt05-ytmnd-lx
-- [x] Fark leftover — itt05-fark-lx
-- [x] Engadget leftover — itt05-eng-lx
-- [x] Gizmodo leftover — itt05-giz-lx
-- [x] Boing Boing leftover — itt05-bb-lx
-- [x] Akismet leftover — itt05-aki-lx
-- [x] Joomla leftover — itt05-joom-lx
-- [x] Habbo Hotel leftover — itt05-hab-lx
-- [x] Neopets leftover — itt05-neo-lx
-- [x] RuneScape leftover — itt05-rs-lx
-- [x] Azureus leftover — itt05-az-lx
-- [x] YouSendIt leftover — itt05-ysi-lx
-- [x] CollegeHumor leftover — itt05-ch-lx
-- [x] Miniclip leftover — itt05-mini-lx
-- [x] MSN Messenger leftover — itt05-msn-lx
-- [x] NewsGator leftover — itt05-ngat-lx
-- [x] Personalized Home / iGoogle leftover — itt05-igoog-lx
-- [x] Google Desktop 2 leftover — itt05-gdesk-lx
-- [x] IE7 beta leftover — itt05-ie7-lx
-- [x] ChicagoCrime leftover — itt05-ccrime-lx
-- [x] Lazy Sunday leftover leftover — itt05-lazy-lx
-- [x] Infogami leftover — itt05-info-lx
-- [x] Kiko leftover — itt05-kiko-lx
-- [x] Photobucket leftover leftover — itt05-pbkt-lx
+- [ ] Digg leftover 2× — no data-4x-go digg-lx
+- [ ] thefacebook leftover two campuses — no data-4x-go fb-net
+- [ ] FeedBurner leftover 2× — no data-4x-go fburn-lx
+- [ ] Flickr leftover title — no data-4x-go flickr-lx
+- [ ] YouTube leftover title — no data-4x-go yt-lx
+- [ ] Maps leftover — no data-4x-go maps
+- [ ] Pandora leftover — no data-4x-go pandora
+- [ ] HousingMaps leftover — no data-4x-go hm
+- [ ] Digg leftover — no data-4x-go digg
+- [ ] Reddit leftover — no data-4x-go reddit
+- [ ] Flickr leftover — no data-4x-go flickr
+- [ ] iTunes podcast leftover — no data-4x-go pod
+- [ ] TechCrunch leftover — no data-4x-go tc
+- [ ] Ajax leftover — no data-4x-go ajax-lx
+- [ ] Earth leftover — no data-4x-go earth-lx
+- [ ] Club Penguin leftover — no data-4x-go cp-lx
+- [ ] Kayak leftover — no data-4x-go kayak-lx
+- [ ] Million Dollar leftover — no data-4x-go mdh-lx
+- [ ] µTorrent leftover — no data-4x-go utorrent
+- [ ] Second Life leftover — no data-4x-go secondlife
+- [ ] YouTube invite leftover — no data-4x-go yt-inv
+- [ ] YouTube watch leftover — no data-4x-go yt-watch
+- [ ] Maps leftover two views — no data-4x-go maps-lx
+- [ ] Maps hotels near LAX — no data-4x-go maps-lax
+- [ ] Maps no-Street-View — no data-4x-go maps-nsv
+- [ ] HousingMaps city — no data-4x-go hm-lx
+- [ ] HousingMaps ticks — no data-4x-go hm-ck
+- [ ] Reddit leftover boost — no data-4x-go reddit-lx
+- [ ] Reddit hottest — no data-4x-go reddit-hot
+- [ ] Reddit empty-submit — no data-4x-go reddit-empty
+- [ ] Digg promote — no data-4x-go digg-up
+- [ ] Diggnation ep.1 — no data-4x-go diggnation
+- [ ] Pandora station leftover — no data-4x-go pandora-lx
+- [ ] Pandora genome — no data-4x-go pandora-ck
+- [ ] iTunes podcast subscribe — no data-4x-go pod-lx
+- [ ] iTunes 1M / 2 days — no data-4x-go pod-1m
+- [ ] Flickr tags — no data-4x-go flickr-tag
+- [ ] delicious leftover tag — no data-4x-go deli-lx
+- [ ] delicious bookmarklet — no data-4x-go deli-bm
+- [ ] TechCrunch leftover — no data-4x-go tc-lx
+- [ ] Mashable leftover — no data-4x-go mash-lx
+- [ ] ProgrammableWeb leftover — no data-4x-go pw-lx
+- [ ] DailyMotion leftover — no data-4x-go dm-lx
+- [ ] Vimeo leftover — no data-4x-go vimeo-lx
+- [ ] Google Video search — no data-4x-go gv-lx
+- [ ] Google Video play — no data-4x-go gv-play
+- [ ] Firefox 1.5 leftover — no data-4x-go fx15-lx
+- [ ] Bloglines leftover — no data-4x-go blines-lx
+- [ ] Web 2.0 Conference — no data-4x-go w20-lx
+- [ ] Facebook rename leftover — no data-4x-go fb-rename
+- [ ] Facebook high school leftover — no data-4x-go fb-hs
+- [ ] MySpace $580M leftover — no data-4x-go ms-580
+- [ ] Facebook invite leftover — no data-4x-go fb-inv
+- [ ] Friendster leftover — no data-4x-go friendster-lx
+- [ ] Gaia leftover — no data-4x-go gaia-lx
+- [ ] Skype leftover — no data-4x-go skype-lx
+- [ ] Skype call leftover — no data-4x-go skype-call
+- [ ] Gmail invite leftover — no data-4x-go gmail-lx
+- [ ] Google search leftover — no data-4x-go google-q
+- [ ] Yahoo leftover — no data-4x-go yahoo-lx
+- [ ] Technorati leftover — no data-4x-go techno-lx
+- [ ] Movable Type leftover — no data-4x-go mt-lx
+- [ ] WordPress leftover — no data-4x-go wp-lx
+- [ ] Blogger leftover — no data-4x-go blogger-lx
+- [ ] Last.fm leftover — no data-4x-go lastfm-lx
+- [ ] LinkedIn leftover — no data-4x-go li-lx
+- [ ] Steam leftover — no data-4x-go steam-lx
+- [ ] Wikipedia leftover — no data-4x-go wiki-lx
+- [ ] Amazon leftover — no data-4x-go amz-lx
+- [ ] eBay leftover — no data-4x-go ebay-lx
+- [ ] PayPal leftover — no data-4x-go paypal-lx
+- [ ] CNN leftover — no data-4x-go cnn-lx
+- [ ] iPod leftover — no data-4x-go ipod-lx
+- [ ] Microsoft leftover — no data-4x-go msft-lx
+- [ ] AdSense leftover — no data-4x-go adsense-lx
+- [ ] Slashdot leftover — no data-4x-go slash-lx
+- [ ] MetaFilter leftover — no data-4x-go mefi-lx
+- [ ] Memeorandum leftover — no data-4x-go memo-lx
+- [ ] Daypop leftover — no data-4x-go daypop-lx
+- [ ] Netflix DVD leftover — no data-4x-go nflix-dvd
+- [ ] MapQuest print leftover — no data-4x-go mq-print
+- [ ] Ask/Bloglines leftover — no data-4x-go ask-acq
+- [ ] Android footnote leftover — no data-4x-go android-fn
+- [ ] Accel leftover — no data-4x-go fb-accel
+- [ ] YouTube Sequoia leftover — no data-4x-go yt-seq
+- [ ] YouTube Dec launch leftover — no data-4x-go yt-dec
+- [ ] Independent YouTube leftover — no data-4x-go yt-ind
+- [ ] MySpace leftover — no data-4x-go ms-lx
+- [ ] AltaVista leftover — no data-4x-go altavista-lx
+- [ ] Ask Jeeves leftover — no data-4x-go jeeves-lx
+- [ ] Encarta leftover — no data-4x-go encarta-lx
+- [ ] Excite leftover — no data-4x-go excite-lx
+- [ ] HotBot leftover — no data-4x-go hotbot-lx
+- [ ] Infoseek leftover — no data-4x-go infoseek-lx
+- [ ] DMOZ leftover — no data-4x-go dmoz-lx
+- [ ] GeoCities leftover — no data-4x-go geo-lx
+- [ ] ICQ leftover — no data-4x-go icq-lx
+- [ ] KaZaA leftover — no data-4x-go kazaa-lx
+- [ ] Napster epitaph leftover — no data-4x-go nap-ep
+- [ ] Gnutella leftover — no data-4x-go gnutella-lx
+- [ ] Netscape leftover — no data-4x-go netscape-lx
+- [ ] Netcenter leftover — no data-4x-go netcenter-lx
+- [ ] AOL leftover — no data-4x-go aol-lx
+- [ ] MTV leftover — no data-4x-go mtv-lx
+- [ ] GameSpot leftover — no data-4x-go gamespot-lx
+- [ ] Wired leftover — no data-4x-go wired-lx
+- [ ] Wayback leftover — no data-4x-go wayback-lx
+- [ ] Macromedia leftover — no data-4x-go macro-lx
+- [ ] Mozilla leftover — no data-4x-go mozilla-lx
+- [ ] ISP leftover — no data-4x-go isp-lx
+- [ ] Pets.com leftover — no data-4x-go pets-ep
+- [ ] Startup-failures leftover — no data-4x-go fail-lx
+- [ ] You've Got Mail leftover — no data-4x-go ygm-lx
+- [ ] Moreover leftover — no data-4x-go moreover-lx
+- [ ] Blogdex leftover — no data-4x-go blogdex-lx
+- [ ] BowieNet leftover — no data-4x-go bowie-lx
+- [ ] Phoenix leftover — no data-4x-go phoenix-lx
+- [ ] Loudcloud leftover — no data-4x-go loud-lx
+- [ ] Zombo leftover — no data-4x-go zombo-lx
+- [ ] Y2K leftover — no data-4x-go y2k-ep
+- [ ] Hampster leftover — no data-4x-go hamp-lx
+- [ ] Google News leftover — no data-4x-go gnews-lx
+- [ ] Maps API leftover — no data-4x-go maps-api
+- [ ] HousingMaps second city — no data-4x-go hm-city2
+- [ ] Reddit submit leftover — no data-4x-go reddit-sub
+- [ ] Digg submit leftover — no data-4x-go digg-sub
+- [ ] iTunes browse leftover — no data-4x-go itunes-browse
+- [ ] HoverChop leftover path — no data-4x-go heli-lx
 
 ### Popular 3×
-- [x] Dailymotion — itt05-pop-dailymotion
-- [x] Vimeo — itt05-pop-vimeo
-- [x] Gaia — itt05-pop-gaia
+- [x] Million Dollar Homepage — itt05-pop-milliondollar
+- [x] Club Penguin — itt05-pop-clubpenguin
+- [x] Kayak — itt05-pop-kayak
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 22 URLs resolved
+- [x] 24 URLs resolved
+
+## 2006
+
+### Gold
+- [x] sites/twitter/index.html — complete → itt06-tweets
+
+### Official 10
+- [x] 1. Twttr — sites/twitter/index.html
+- [x] 2. News Feed leftover — sites/facebook/feed.html
+- [x] 3. Facebook open leftover — sites/facebook/open.html
+- [x] 4. YouTube Google-owned leftover — sites/youtube/index.html
+- [x] 5. Google Docs leftover — sites/googledocs/index.html
+- [x] 6. S3 leftover — sites/aws/index.html
+- [x] 7. IE7 leftover — sites/ie7/index.html
+- [x] 8. Wiki millionth leftover — sites/wikipedia/millionth.html
+- [x] 9. Roblox leftover — sites/roblox/index.html
+- [x] 10. Line Rider leftover — sites/playable/linerider.html
+
+### Games
+- [ ] extra-a.html — minute complete did not write itt06-game-thepoke
+- [ ] extra-b.html — minute complete did not write itt06-game-flickrfave
+- [x] extra-c.html — more-game → itt06-game-ntight
+- [x] extra-d.html — more-game → itt06-game-addictpick
+- [x] extra-e.html — more-game started
+- [x] extra-f.html — more-game → itt06-game-thepoke2
+- [x] extra-g.html — more-game → itt06-game-gmailinv
+- [x] extra-h.html — more-game → itt06-game-flick2
+- [x] extra-i.html — more-game → itt06-game-orcutnote
+- [x] famous.html — started
+- [x] game-2.html — pack-game → itt06-game-poke
+- [x] game-3.html — pack-game → itt06-game-ginvite
+- [x] game-4.html — pack-game → itt06-game-flickrfave
+- [x] game-5.html — pack-game → itt06-game-ffdl
+- [x] game.html — started
+- [x] index.html — cabinet
+- [ ] linerider.html — no game host / start / leftover dest
+- [x] more-a.html — more-game → itt06-game-gate60
+- [x] more-b.html — more-game → itt06-game-rollball
+- [x] more-c.html — started
+- [x] more-d.html — started
+
+### 2× leftover dests
+- [ ] Twttr update — no data-4x-go tweets
+- [ ] News Feed leftover — no data-4x-go feed
+- [ ] Facebook open leftover — no data-4x-go fb-open
+- [ ] YouTube Google-owned leftover — no data-4x-go yt-google
+- [ ] Google Docs leftover — no data-4x-go gdocs
+- [ ] AWS S3 leftover — no data-4x-go s3
+- [ ] IE7 leftover — no data-4x-go ie7
+- [ ] Wiki millionth leftover — no data-4x-go wiki-1m
+- [ ] Roblox leftover — no data-4x-go roblox
+- [ ] Line Rider leftover — no data-4x-go game-linerider
+- [ ] Digg leftover 2× — no data-4x-go digg-lx
+- [ ] thefacebook leftover two campuses — no data-4x-go fb-net
+- [ ] FeedBurner leftover 2× — no data-4x-go fburn-lx
+- [ ] Flickr leftover title — no data-4x-go flickr-lx
+- [ ] YouTube leftover title — no data-4x-go yt-lx
+- [ ] Maps leftover — no data-4x-go maps
+- [ ] Pandora leftover — no data-4x-go pandora
+- [ ] HousingMaps leftover — no data-4x-go hm
+- [ ] Digg leftover — no data-4x-go digg
+- [ ] Reddit leftover — no data-4x-go reddit
+- [ ] Flickr leftover — no data-4x-go flickr
+- [ ] iTunes podcast leftover — no data-4x-go pod
+- [ ] TechCrunch leftover — no data-4x-go tc
+- [ ] Ajax leftover — no data-4x-go ajax-lx
+- [ ] Earth leftover — no data-4x-go earth-lx
+- [ ] Club Penguin leftover — no data-4x-go cp-lx
+- [ ] Kayak leftover — no data-4x-go kayak-lx
+- [ ] Million Dollar leftover — no data-4x-go mdh-lx
+- [ ] µTorrent leftover — no data-4x-go utorrent
+- [ ] Second Life leftover — no data-4x-go secondlife
+- [ ] YouTube invite leftover — no data-4x-go yt-inv
+- [ ] YouTube watch leftover — no data-4x-go yt-watch
+- [ ] Maps leftover two views — no data-4x-go maps-lx
+- [ ] Maps hotels near LAX — no data-4x-go maps-lax
+- [ ] Maps no-Street-View — no data-4x-go maps-nsv
+- [ ] HousingMaps city — no data-4x-go hm-lx
+- [ ] HousingMaps ticks — no data-4x-go hm-ck
+- [ ] Reddit leftover boost — no data-4x-go reddit-lx
+- [ ] Reddit hottest — no data-4x-go reddit-hot
+- [ ] Reddit empty-submit — no data-4x-go reddit-empty
+- [ ] Digg promote — no data-4x-go digg-up
+- [ ] Diggnation ep.1 — no data-4x-go diggnation
+- [ ] Pandora station leftover — no data-4x-go pandora-lx
+- [ ] Pandora genome — no data-4x-go pandora-ck
+- [ ] iTunes podcast subscribe — no data-4x-go pod-lx
+- [ ] iTunes 1M / 2 days — no data-4x-go pod-1m
+- [ ] Flickr tags — no data-4x-go flickr-tag
+- [ ] delicious leftover tag — no data-4x-go deli-lx
+- [ ] delicious bookmarklet — no data-4x-go deli-bm
+- [ ] TechCrunch leftover — no data-4x-go tc-lx
+- [ ] Mashable leftover — no data-4x-go mash-lx
+- [ ] ProgrammableWeb leftover — no data-4x-go pw-lx
+- [ ] DailyMotion leftover — no data-4x-go dm-lx
+- [ ] Vimeo leftover — no data-4x-go vimeo-lx
+- [ ] Google Video search — no data-4x-go gv-lx
+- [ ] Google Video play — no data-4x-go gv-play
+- [ ] Firefox 1.5 leftover — no data-4x-go fx15-lx
+- [ ] Bloglines leftover — no data-4x-go blines-lx
+- [ ] Web 2.0 Conference — no data-4x-go w20-lx
+- [ ] Facebook rename leftover — no data-4x-go fb-rename
+- [ ] Facebook high school leftover — no data-4x-go fb-hs
+- [ ] MySpace $580M leftover — no data-4x-go ms-580
+- [ ] Facebook invite leftover — no data-4x-go fb-inv
+- [ ] Friendster leftover — no data-4x-go friendster-lx
+- [ ] Gaia leftover — no data-4x-go gaia-lx
+- [ ] Skype leftover — no data-4x-go skype-lx
+- [ ] Skype call leftover — no data-4x-go skype-call
+- [ ] Gmail invite leftover — no data-4x-go gmail-lx
+- [ ] Google search leftover — no data-4x-go google-q
+- [ ] Yahoo leftover — no data-4x-go yahoo-lx
+- [ ] Technorati leftover — no data-4x-go techno-lx
+- [ ] Movable Type leftover — no data-4x-go mt-lx
+- [ ] WordPress leftover — no data-4x-go wp-lx
+- [ ] Blogger leftover — no data-4x-go blogger-lx
+- [ ] Last.fm leftover — no data-4x-go lastfm-lx
+- [ ] LinkedIn leftover — no data-4x-go li-lx
+- [ ] Steam leftover — no data-4x-go steam-lx
+- [ ] Wikipedia leftover — no data-4x-go wiki-lx
+- [ ] Amazon leftover — no data-4x-go amz-lx
+- [ ] eBay leftover — no data-4x-go ebay-lx
+- [ ] PayPal leftover — no data-4x-go paypal-lx
+- [ ] CNN leftover — no data-4x-go cnn-lx
+- [ ] iPod leftover — no data-4x-go ipod-lx
+- [ ] Microsoft leftover — no data-4x-go msft-lx
+- [ ] AdSense leftover — no data-4x-go adsense-lx
+- [ ] Slashdot leftover — no data-4x-go slash-lx
+- [ ] MetaFilter leftover — no data-4x-go mefi-lx
+- [ ] Memeorandum leftover — no data-4x-go memo-lx
+- [ ] Daypop leftover — no data-4x-go daypop-lx
+- [ ] Netflix DVD leftover — no data-4x-go nflix-dvd
+- [ ] MapQuest print leftover — no data-4x-go mq-print
+- [ ] Ask/Bloglines leftover — no data-4x-go ask-acq
+- [ ] Android footnote leftover — no data-4x-go android-fn
+- [ ] Accel leftover — no data-4x-go fb-accel
+- [ ] YouTube Sequoia leftover — no data-4x-go yt-seq
+- [ ] YouTube Dec launch leftover — no data-4x-go yt-dec
+- [ ] Independent YouTube leftover — no data-4x-go yt-ind
+- [ ] MySpace leftover — no data-4x-go ms-lx
+- [ ] AltaVista leftover — no data-4x-go altavista-lx
+- [ ] Ask Jeeves leftover — no data-4x-go jeeves-lx
+- [ ] Encarta leftover — no data-4x-go encarta-lx
+- [ ] Excite leftover — no data-4x-go excite-lx
+- [ ] HotBot leftover — no data-4x-go hotbot-lx
+- [ ] Infoseek leftover — no data-4x-go infoseek-lx
+- [ ] DMOZ leftover — no data-4x-go dmoz-lx
+- [ ] GeoCities leftover — no data-4x-go geo-lx
+- [ ] ICQ leftover — no data-4x-go icq-lx
+- [ ] KaZaA leftover — no data-4x-go kazaa-lx
+- [ ] Napster epitaph leftover — no data-4x-go nap-ep
+- [ ] Gnutella leftover — no data-4x-go gnutella-lx
+- [ ] Netscape leftover — no data-4x-go netscape-lx
+- [ ] Netcenter leftover — no data-4x-go netcenter-lx
+- [ ] AOL leftover — no data-4x-go aol-lx
+- [ ] MTV leftover — no data-4x-go mtv-lx
+- [ ] GameSpot leftover — no data-4x-go gamespot-lx
+- [ ] Wired leftover — no data-4x-go wired-lx
+- [ ] Wayback leftover — no data-4x-go wayback-lx
+- [ ] Macromedia leftover — no data-4x-go macro-lx
+- [ ] Mozilla leftover — no data-4x-go mozilla-lx
+- [ ] ISP leftover — no data-4x-go isp-lx
+- [ ] Pets.com leftover — no data-4x-go pets-ep
+- [ ] Startup-failures leftover — no data-4x-go fail-lx
+- [ ] You've Got Mail leftover — no data-4x-go ygm-lx
+- [ ] Moreover leftover — no data-4x-go moreover-lx
+- [ ] Blogdex leftover — no data-4x-go blogdex-lx
+- [ ] BowieNet leftover — no data-4x-go bowie-lx
+- [ ] Phoenix leftover — no data-4x-go phoenix-lx
+- [ ] Loudcloud leftover — no data-4x-go loud-lx
+- [ ] Zombo leftover — no data-4x-go zombo-lx
+- [ ] Y2K leftover — no data-4x-go y2k-ep
+- [ ] Hampster leftover — no data-4x-go hamp-lx
+- [ ] Google News leftover — no data-4x-go gnews-lx
+- [ ] Maps API leftover — no data-4x-go maps-api
+- [ ] HousingMaps second city — no data-4x-go hm-city2
+- [ ] Reddit submit leftover — no data-4x-go reddit-sub
+- [ ] Digg submit leftover — no data-4x-go digg-sub
+- [ ] iTunes browse leftover — no data-4x-go itunes-browse
+- [ ] HoverChop leftover path — no data-4x-go heli-lx
+- [ ] Wii leftover — no data-4x-go wii
+
+### Popular 3×
+- [x] Roblox — itt06-pop-roblox
+- [x] Wikipedia millionth — itt06-pop-wikipedia
+- [x] AWS S3 — itt06-pop-aws
+
+### Links crawled from gold / official 10 / home / about
+- [x] 23 URLs resolved
 
 ## 2008
 
@@ -1292,9 +1627,9 @@
 - [x] sites/github/issue.html — complete → itt08-github
 
 ### Official 10
-- [x] 1. App Store — sites/appstore/index.html
-- [x] 2. Chrome — sites/chrome/index.html
-- [x] 3. GitHub leftover — sites/github/issue.html
+- [x] 1. GitHub issue — sites/github/issue.html
+- [x] 2. App Store leftover — sites/appstore/index.html
+- [x] 3. Chrome — sites/chrome/index.html
 - [x] 4. Android G1 — sites/android/index.html
 - [x] 5. Hulu — sites/hulu/index.html
 - [x] 6. Facebook — sites/facebook/index.html
@@ -1320,124 +1655,279 @@
 - [x] game-5.html — pack-game → itt08-game-huluep
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt08-game-rewind
+- [x] more-b.html — more-game → itt08-game-cell
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] App Store leftover literacy — itt08-store
-- [x] Chrome leftover download — itt08-chrome-dl
-- [x] Android Market leftover — itt08-g1-lx
-- [x] Hulu leftover episode title — itt08-hulu-ep
-- [x] GitHub leftover issue title — itt08-gh-issue
-- [x] Dropbox leftover folder — itt08-db-lx
-- [x] Spotify EU leftover — itt08-spot-eu
-- [x] Stack Overflow leftover ask — itt08-so
-- [x] Posterous leftover title — itt08-posterous
-- [x] Grooveshark leftover song — itt08-groove
-- [x] Airbnb leftover listing — itt08-abnb
-- [x] Groupon leftover deal — itt08-groupon-lx
-- [x] Evernote leftover note — itt08-evernote-lx
-- [x] Friend Connect leftover — itt08-gfc
-- [x] YouTube HD leftover — itt08-yt-hd
-- [x] Facebook Connect leftover — itt08-fb-con
-- [x] iPhone 3G leftover — itt08-3g
-- [x] Dropbox leftover about — itt08-db-about
-- [x] Dropbox leftover 2× — itt08-db2-lx
-- [x] Hulu leftover 2× — itt08-hulu-lx
-- [x] Spotify leftover 2× — itt08-sp-lx
-- [x] Stack Overflow leftover 2× — itt08-so-lx
-- [x] Airbnb leftover 2× — itt08-ab-lx
-- [x] Tumblr leftover 2× — itt08-tb-lx
-- [x] Reddit leftover 2× — itt08-rd-lx
-- [x] Android leftover 2× — itt08-and-lx
-- [x] Maps leftover 2× — itt08-maps-lx
-- [x] Docs leftover 2× — itt08-docs2-lx
-- [x] Twitter leftover 2× — itt08-tw-lx
-- [x] YouTube leftover 2× — itt08-yt-lx
-- [x] Facebook leftover 2× — itt08-fb-lx
-- [x] Ask leftover 2× — itt08-ask-lx
-- [x] Groupon leftover 2× — itt08-gp-lx
-- [x] Evernote leftover 2× — itt08-en-lx
-- [x] TechCrunch leftover 2× — itt08-tc-lx
-- [x] Chrome leftover 2× — itt08-ch-lx
-- [x] adsense leftover REAL — itt08-adsense-rlx
-- [x] altavista leftover REAL — itt08-altavista-rlx
-- [x] amazon leftover REAL — itt08-amazon-rlx
-- [x] apple leftover REAL — itt08-apple-rlx
-- [x] askjeeves leftover REAL — itt08-askjeeves-rlx
-- [x] aws leftover REAL — itt08-aws-rlx
-- [x] blogdex leftover REAL — itt08-blogdex-rlx
-- [x] blogger leftover REAL — itt08-blogger-rlx
-- [x] bloglines leftover REAL — itt08-bloglines-rlx
-- [x] bowienet leftover REAL — itt08-bowienet-rlx
-- [x] cnn leftover REAL — itt08-cnn-rlx
-- [x] daypop leftover REAL — itt08-daypop-rlx
-- [x] delicious leftover REAL — itt08-delicious-rlx
-- [x] digg leftover REAL — itt08-digg-rlx
-- [x] dmoz leftover REAL — itt08-dmoz-rlx
-- [x] dropboxfolder leftover REAL — itt08-dropboxfol-rlx
-- [x] ebay leftover REAL — itt08-ebay-rlx
-- [x] encarta leftover REAL — itt08-encarta-rlx
-- [x] excite leftover REAL — itt08-excite-rlx
-- [x] feedburner leftover REAL — itt08-feedburner-rlx
-- [x] firefox leftover REAL — itt08-firefox-rlx
-- [x] flickr leftover REAL — itt08-flickr-rlx
-- [x] friendster leftover REAL — itt08-friendster-rlx
-- [x] gamespot leftover REAL — itt08-gamespot-rlx
-- [x] geocities leftover REAL — itt08-geocities-rlx
-- [x] gmail leftover REAL — itt08-gmail-rlx
-- [x] gnutella leftover REAL — itt08-gnutella-rlx
-- [x] google leftover REAL — itt08-google-rlx
-- [x] googlenews leftover REAL — itt08-googlenews-rlx
-- [x] googlevideo leftover REAL — itt08-googlevide-rlx
-- [x] hampsterdance leftover REAL — itt08-hampsterda-rlx
-- [x] hotbot leftover REAL — itt08-hotbot-rlx
-- [x] housingmaps leftover REAL — itt08-housingmap-rlx
-- [x] huluwatch leftover REAL — itt08-huluwatch-rlx
-- [x] icq leftover REAL — itt08-icq-rlx
-- [x] infoseek leftover REAL — itt08-infoseek-rlx
-- [x] isp leftover REAL — itt08-isp-rlx
-- [x] itunes leftover REAL — itt08-itunes-rlx
-- [x] kazaa leftover REAL — itt08-kazaa-rlx
-- [x] lastfm leftover REAL — itt08-lastfm-rlx
-- [x] linkedin leftover REAL — itt08-linkedin-rlx
-- [x] loudcloud leftover REAL — itt08-loudcloud-rlx
-- [x] macromedia leftover REAL — itt08-macromedia-rlx
-- [x] mashable leftover REAL — itt08-mashable-rlx
-- [x] memeorandum leftover REAL — itt08-memeorandu-rlx
-- [x] metafilter leftover REAL — itt08-metafilter-rlx
-- [x] microsoft leftover REAL — itt08-microsoft-rlx
-- [x] milliondollar leftover REAL — itt08-milliondol-rlx
-- [x] moreover leftover REAL — itt08-moreover-rlx
-- [x] movabletype leftover REAL — itt08-movabletyp-rlx
-- [x] mozilla leftover REAL — itt08-mozilla-rlx
-- [x] msn leftover REAL — itt08-msn-rlx
-- [x] mtv leftover REAL — itt08-mtv-rlx
-- [x] myspace leftover REAL — itt08-myspace-rlx
-- [x] napster leftover REAL — itt08-napster-rlx
-- [x] netcenter leftover REAL — itt08-netcenter-rlx
-- [x] netflix leftover REAL — itt08-netflix-rlx
-- [x] netscape leftover REAL — itt08-netscape-rlx
-- [x] paypal leftover REAL — itt08-paypal-rlx
-- [x] pets leftover REAL — itt08-pets-rlx
-- [x] phoenix leftover REAL — itt08-phoenix-rlx
-- [x] programmableweb leftover REAL — itt08-programmab-rlx
-- [x] reader leftover REAL — itt08-reader-rlx
-- [x] skype leftover REAL — itt08-skype-rlx
-- [x] slashdot leftover REAL — itt08-slashdot-rlx
-- [x] spotifyeu leftover REAL — itt08-spotifyeu-rlx
-- [x] spotifyseed leftover REAL — itt08-spotifysee-rlx
-- [x] startupfailures leftover REAL — itt08-startupfai-rlx
-- [x] steam leftover REAL — itt08-steam-rlx
-- [x] technorati leftover REAL — itt08-technorati-rlx
-- [x] time you leftover REAL — itt08-timeyou-rlx
-- [x] wayback leftover REAL — itt08-wayback-rlx
-- [x] web20conference leftover REAL — itt08-web20confe-rlx
-- [x] wikipedia leftover REAL — itt08-wikipedia-rlx
-- [x] wired leftover REAL — itt08-wired-rlx
-- [x] wordpress leftover REAL — itt08-wordpress-rlx
-- [x] y2k leftover REAL — itt08-y2k-rlx
-- [x] yahoo leftover REAL — itt08-yahoo-rlx
-- [x] youvegotmail leftover REAL — itt08-youvegotma-rlx
-- [x] zombo leftover REAL — itt08-zombo-rlx
+- [ ] iPhone 3G leftover — no data-4x-go 3g
+- [ ] Airbnb leftover 2× — no data-4x-go ab-lx
+- [ ] Airbnb leftover listing — no data-4x-go abnb
+- [ ] 2008 leftover · about — no data-4x-go about
+- [ ] 2008 leftover · about — no data-4x-go about10lx
+- [ ] 2008 leftover · about — no data-4x-go about11lx
+- [ ] 2008 leftover · about — no data-4x-go about12lx
+- [ ] 2008 leftover · about — no data-4x-go about13lx
+- [ ] 2008 leftover · about — no data-4x-go about14lx
+- [ ] 2008 leftover · about — no data-4x-go about15lx
+- [ ] 2008 leftover · about — no data-4x-go about16lx
+- [ ] 2008 leftover · about — no data-4x-go about17lx
+- [ ] 2008 leftover · about — no data-4x-go about18lx
+- [ ] 2008 leftover · about — no data-4x-go about19lx
+- [ ] 2008 leftover · about — no data-4x-go about20lx
+- [ ] 2008 leftover · about — no data-4x-go about21lx
+- [ ] 2008 leftover · about — no data-4x-go about22lx
+- [ ] 2008 leftover · about — no data-4x-go about23lx
+- [ ] 2008 leftover · about — no data-4x-go about24lx
+- [ ] 2008 leftover · about — no data-4x-go about25lx
+- [ ] 2008 leftover · about — no data-4x-go about26lx
+- [ ] 2008 leftover · about — no data-4x-go about27lx
+- [ ] 2008 leftover · about — no data-4x-go about28lx
+- [ ] 2008 leftover · about — no data-4x-go about2lx
+- [ ] 2008 leftover · about — no data-4x-go about3lx
+- [ ] 2008 leftover · about — no data-4x-go about4lx
+- [ ] 2008 leftover · about — no data-4x-go about5lx
+- [ ] 2008 leftover · about — no data-4x-go about6lx
+- [ ] 2008 leftover · about — no data-4x-go about7lx
+- [ ] 2008 leftover · about — no data-4x-go about8lx
+- [ ] 2008 leftover · about — no data-4x-go about9lx
+- [ ] 2008 leftover · about — no data-4x-go aboutlx
+- [ ] adsense leftover REAL — no data-4x-go adsense-rlx
+- [ ] 2008 leftover · altavista about — no data-4x-go altavista-about
+- [ ] 2008 leftover · altavista babelfish — no data-4x-go altavista-babelfish
+- [ ] altavista leftover REAL — no data-4x-go altavista-rlx
+- [ ] 2008 leftover · altavista search — no data-4x-go altavista-search
+- [ ] 2008 leftover · amazon auctions — no data-4x-go amazon-auctions
+- [ ] 2008 leftover · amazon book being digita — no data-4x-go amazon-book-being-digita
+- [ ] 2008 leftover · amazon book contact — no data-4x-go amazon-book-contact
+- [ ] 2008 leftover · amazon book dove — no data-4x-go amazon-book-dove
+- [ ] 2008 leftover · amazon book harry cos — no data-4x-go amazon-book-harry-cos
+- [ ] 2008 leftover · amazon book microserfs — no data-4x-go amazon-book-microserfs
+- [ ] 2008 leftover · amazon book tuesdays — no data-4x-go amazon-book-tuesdays
+- [ ] 2008 leftover · amazon cart — no data-4x-go amazon-cart
+- [ ] 2008 leftover · amazon cd homogenic — no data-4x-go amazon-cd-homogenic
+- [ ] 2008 leftover · amazon cd ok computer — no data-4x-go amazon-cd-ok-computer
+- [ ] 2008 leftover · amazon cd ray of light — no data-4x-go amazon-cd-ray-of-light
+- [ ] 2008 leftover · amazon cd the miseducati — no data-4x-go amazon-cd-the-miseducati
+- [ ] 2008 leftover · amazon checkout — no data-4x-go amazon-checkout
+- [ ] 2008 leftover · amazon dvd matrix — no data-4x-go amazon-dvd-matrix
+- [ ] 2008 leftover · amazon electronics — no data-4x-go amazon-electronics
+- [ ] 2008 leftover · amazon electronics palm  — no data-4x-go amazon-electronics-palm-
+- [ ] 2008 leftover · amazon kindle — no data-4x-go amazon-kindle
+- [ ] 2008 leftover · amazon music — no data-4x-go amazon-music
+- [ ] 2008 leftover · amazon order thanks — no data-4x-go amazon-order-thanks
+- [ ] amazon leftover REAL — no data-4x-go amazon-rlx
+- [ ] 2008 leftover · amazon search — no data-4x-go amazon-search
+- [ ] 2008 leftover · amazon toy furby — no data-4x-go amazon-toy-furby
+- [ ] 2008 leftover · amazon toys — no data-4x-go amazon-toys
+- [ ] 2008 leftover · amazon zshops — no data-4x-go amazon-zshops
+- [ ] Android leftover 2× — no data-4x-go and-lx
+- [ ] 2008 leftover · android about — no data-4x-go android-about
+- [ ] 2008 leftover · android market — no data-4x-go android-market
+- [ ] 2008 leftover · apple ipod — no data-4x-go apple-ipod
+- [ ] 2008 leftover · apple ipod faq — no data-4x-go apple-ipod-faq
+- [ ] 2008 leftover · apple ipod howto — no data-4x-go apple-ipod-howto
+- [ ] 2008 leftover · apple ipod specs — no data-4x-go apple-ipod-specs
+- [ ] 2008 leftover · apple itunes — no data-4x-go apple-itunes
+- [ ] apple leftover REAL — no data-4x-go apple-rlx
+- [ ] 2008 leftover · apple think different — no data-4x-go apple-think-different
+- [ ] 2008 leftover · appstore about — no data-4x-go appstore-about
+- [ ] Ask leftover 2× — no data-4x-go ask-lx
+- [ ] 2008 leftover · askjeeves ask — no data-4x-go askjeeves-ask
+- [ ] askjeeves leftover REAL — no data-4x-go askjeeves-rlx
+- [ ] 2008 leftover · aws about — no data-4x-go aws-about
+- [ ] aws leftover REAL — no data-4x-go aws-rlx
+- [ ] 2008 leftover · aws s3 — no data-4x-go aws-s3
+- [ ] 2008 leftover · blogdex about — no data-4x-go blogdex-about
+- [ ] blogdex leftover REAL — no data-4x-go blogdex-rlx
+- [ ] 2008 leftover · blogger edit — no data-4x-go blogger-edit
+- [ ] blogger leftover REAL — no data-4x-go blogger-rlx
+- [ ] 2008 leftover · blogger view — no data-4x-go blogger-view
+- [ ] 2008 leftover · bloglines reader — no data-4x-go bloglines-reader
+- [ ] bloglines leftover REAL — no data-4x-go bloglines-rlx
+- [ ] 2008 leftover · bowienet about — no data-4x-go bowienet-about
+- [ ] bowienet leftover REAL — no data-4x-go bowienet-rlx
+- [ ] Chrome leftover 2× — no data-4x-go ch-lx
+- [ ] 2008 leftover · chrome about — no data-4x-go chrome-about
+- [ ] Chrome leftover download — no data-4x-go chrome-dl
+- [ ] 2008 leftover · cnn aol tw — no data-4x-go cnn-aol-tw
+- [ ] 2008 leftover · cnn diana — no data-4x-go cnn-diana
+- [ ] 2008 leftover · cnn election — no data-4x-go cnn-election
+- [ ] 2008 leftover · cnn markets — no data-4x-go cnn-markets
+- [ ] 2008 leftover · cnn napster story — no data-4x-go cnn-napster-story
+- [ ] 2008 leftover · cnn pathfinder — no data-4x-go cnn-pathfinder
+- [ ] cnn leftover REAL — no data-4x-go cnn-rlx
+- [ ] 2008 leftover · cnn showbiz — no data-4x-go cnn-showbiz
+- [ ] 2008 leftover · cnn tech — no data-4x-go cnn-tech
+- [ ] 2008 leftover · cnn world — no data-4x-go cnn-world
+- [ ] daypop leftover REAL — no data-4x-go daypop-rlx
+- [ ] Dropbox leftover about — no data-4x-go db-about
+- [ ] Dropbox leftover folder — no data-4x-go db-lx
+- [ ] Dropbox leftover 2× — no data-4x-go db2-lx
+- [ ] 2008 leftover · delicious about — no data-4x-go delicious-about
+- [ ] delicious leftover REAL — no data-4x-go delicious-rlx
+- [ ] 2008 leftover · digg about — no data-4x-go digg-about
+- [ ] digg leftover REAL — no data-4x-go digg-rlx
+- [ ] 2008 leftover · digg submit — no data-4x-go digg-submit
+- [ ] 2008 leftover · dmoz about — no data-4x-go dmoz-about
+- [ ] 2008 leftover · dmoz category — no data-4x-go dmoz-category
+- [ ] dmoz leftover REAL — no data-4x-go dmoz-rlx
+- [ ] 2008 leftover · docs about — no data-4x-go docs-about
+- [ ] 2008 leftover · docs edit — no data-4x-go docs-edit
+- [ ] Docs leftover 2× — no data-4x-go docs2-lx
+- [ ] 2008 leftover · dropbox refer — no data-4x-go dropbox-refer
+- [ ] dropboxfolder leftover REAL — no data-4x-go dropboxfol-rlx
+- [ ] 2008 leftover · ebay bid confirm — no data-4x-go ebay-bid-confirm
+- [ ] 2008 leftover · ebay category — no data-4x-go ebay-category
+- [ ] 2008 leftover · ebay item laptop — no data-4x-go ebay-item-laptop
+- [ ] 2008 leftover · ebay item pda — no data-4x-go ebay-item-pda
+- [ ] 2008 leftover · ebay myebay — no data-4x-go ebay-myebay
+- [ ] 2008 leftover · ebay register — no data-4x-go ebay-register
+- [ ] ebay leftover REAL — no data-4x-go ebay-rlx
+- [ ] 2008 leftover · ebay search — no data-4x-go ebay-search
+- [ ] 2008 leftover · ebay sell — no data-4x-go ebay-sell
+- [ ] 2008 leftover · edit — no data-4x-go edit
+- [ ] Evernote leftover 2× — no data-4x-go en-lx
+- [ ] encarta leftover REAL — no data-4x-go encarta-rlx
+- [ ] Evernote leftover note — no data-4x-go evernote-lx
+- [ ] excite leftover REAL — no data-4x-go excite-rlx
+- [ ] 2008 leftover · excite search — no data-4x-go excite-search
+- [ ] 2008 leftover · facebook about — no data-4x-go facebook-about
+- [ ] 2008 leftover · facebook connect — no data-4x-go facebook-connect
+- [ ] 2008 leftover · facebook feed — no data-4x-go facebook-feed
+- [ ] 2008 leftover · facebook friends — no data-4x-go facebook-friends
+- [ ] 2008 leftover · facebook invite — no data-4x-go facebook-invite
+- [ ] 2008 leftover · facebook networks — no data-4x-go facebook-networks
+- [ ] 2008 leftover · facebook open — no data-4x-go facebook-open
+- [ ] 2008 leftover · facebook platform — no data-4x-go facebook-platform
+- [ ] 2008 leftover · facebook profile — no data-4x-go facebook-profile
+- [ ] Facebook Connect leftover — no data-4x-go fb-con
+- [ ] Facebook leftover 2× — no data-4x-go fb-lx
+- [ ] feedburner leftover REAL — no data-4x-go feedburner-rlx
+- [ ] 2008 leftover · firefox download — no data-4x-go firefox-download
+- [ ] 2008 leftover · firefox download thanks — no data-4x-go firefox-download-thanks
+- [ ] 2008 leftover · firefox features — no data-4x-go firefox-features
+- [ ] 2008 leftover · firefox nyt ad — no data-4x-go firefox-nyt-ad
+- [ ] firefox leftover REAL — no data-4x-go firefox-rlx
+- [ ] 2008 leftover · firefox whatsnew — no data-4x-go firefox-whatsnew
+- [ ] 2008 leftover · flickr about — no data-4x-go flickr-about
+- [ ] 2008 leftover · flickr explore — no data-4x-go flickr-explore
+- [ ] 2008 leftover · flickr groups — no data-4x-go flickr-groups
+- [ ] flickr leftover REAL — no data-4x-go flickr-rlx
+- [ ] 2008 leftover · flickr tags — no data-4x-go flickr-tags
+- [ ] 2008 leftover · flickr upload — no data-4x-go flickr-upload
+- [ ] 2008 leftover · friendconnect about — no data-4x-go friendconnect-about
+- [ ] 2008 leftover · friendster friends — no data-4x-go friendster-friends-lx
+- [ ] 2008 leftover · friendster profile — no data-4x-go friendster-profile
+- [ ] friendster leftover REAL — no data-4x-go friendster-rlx
+- [ ] 2008 leftover · friendster testimonials — no data-4x-go friendster-testimonials
+- [ ] Android Market leftover — no data-4x-go g1-lx
+- [ ] 2008 leftover · gamespot about — no data-4x-go gamespot-about
+- [ ] 2008 leftover · gamespot downloads — no data-4x-go gamespot-downloads
+- [ ] 2008 leftover · gamespot previews — no data-4x-go gamespot-previews
+- [ ] gamespot leftover REAL — no data-4x-go gamespot-rlx
+- [ ] 2008 leftover · geocities — no data-4x-go geocities
+- [ ] 2008 leftover · geocities — no data-4x-go geocities-d2
+- [ ] 2008 leftover · geocities neighborhoods — no data-4x-go geocities-neighborhoods
+- [ ] geocities leftover REAL — no data-4x-go geocities-rlx
+- [ ] Friend Connect leftover — no data-4x-go gfc
+- [ ] GitHub leftover issue title — no data-4x-go gh-issue
+- [ ] 2008 leftover · github about — no data-4x-go github-about
+- [ ] 2008 leftover · github — no data-4x-go github-d2
+- [ ] 2008 leftover · github fork — no data-4x-go github-fork
+- [ ] 2008 leftover · github repo — no data-4x-go github-repo
+- [ ] 2008 leftover · gmail about — no data-4x-go gmail-about
+- [ ] 2008 leftover · gmail compose — no data-4x-go gmail-compose
+- [ ] 2008 leftover · gmail inbox — no data-4x-go gmail-inbox
+- [ ] 2008 leftover · gmail invite — no data-4x-go gmail-invite
+- [ ] gmail leftover REAL — no data-4x-go gmail-rlx
+- [ ] 2008 leftover · gnutella about — no data-4x-go gnutella-about
+- [ ] gnutella leftover REAL — no data-4x-go gnutella-rlx
+- [ ] 2008 leftover · google about — no data-4x-go google-about
+- [ ] 2008 leftover · google ipo — no data-4x-go google-ipo
+- [ ] google leftover REAL — no data-4x-go google-rlx
+- [ ] 2008 leftover · google search — no data-4x-go google-search
+- [ ] googlenews leftover REAL — no data-4x-go googlenews-rlx
+- [ ] googlevideo leftover REAL — no data-4x-go googlevide-rlx
+- [ ] 2008 leftover · googlevideo about — no data-4x-go googlevideo-about
+- [ ] Groupon leftover 2× — no data-4x-go gp-lx
+- [ ] Grooveshark leftover song — no data-4x-go groove
+- [ ] Groupon leftover deal — no data-4x-go groupon-lx
+- [ ] hampsterdance leftover REAL — no data-4x-go hampsterda-rlx
+- [ ] 2008 leftover · hampsterdance about — no data-4x-go hampsterdance-about
+- [ ] hotbot leftover REAL — no data-4x-go hotbot-rlx
+- [ ] 2008 leftover · hotbot search — no data-4x-go hotbot-search
+- [ ] housingmaps leftover REAL — no data-4x-go housingmap-rlx
+- [ ] 2008 leftover · hulu about — no data-4x-go hulu-about
+- [ ] Hulu leftover episode title — no data-4x-go hulu-ep
+- [ ] Hulu leftover 2× — no data-4x-go hulu-lx
+- [ ] huluwatch leftover REAL — no data-4x-go huluwatch-rlx
+- [ ] 2008 leftover · icq about — no data-4x-go icq-about
+- [ ] icq leftover REAL — no data-4x-go icq-rlx
+- [ ] infoseek leftover REAL — no data-4x-go infoseek-rlx
+- [ ] isp leftover REAL — no data-4x-go isp-rlx
+- [ ] itunes leftover REAL — no data-4x-go itunes-rlx
+- [ ] kazaa leftover REAL — no data-4x-go kazaa-rlx
+- [ ] lastfm leftover REAL — no data-4x-go lastfm-rlx
+- [ ] linkedin leftover REAL — no data-4x-go linkedin-rlx
+- [ ] loudcloud leftover REAL — no data-4x-go loudcloud-rlx
+- [ ] macromedia leftover REAL — no data-4x-go macromedia-rlx
+- [ ] Maps leftover 2× — no data-4x-go maps-lx
+- [ ] mashable leftover REAL — no data-4x-go mashable-rlx
+- [ ] memeorandum leftover REAL — no data-4x-go memeorandu-rlx
+- [ ] metafilter leftover REAL — no data-4x-go metafilter-rlx
+- [ ] microsoft leftover REAL — no data-4x-go microsoft-rlx
+- [ ] milliondollar leftover REAL — no data-4x-go milliondol-rlx
+- [ ] moreover leftover REAL — no data-4x-go moreover-rlx
+- [ ] movabletype leftover REAL — no data-4x-go movabletyp-rlx
+- [ ] mozilla leftover REAL — no data-4x-go mozilla-rlx
+- [ ] msn leftover REAL — no data-4x-go msn-rlx
+- [ ] mtv leftover REAL — no data-4x-go mtv-rlx
+- [ ] myspace leftover REAL — no data-4x-go myspace-rlx
+- [ ] napster leftover REAL — no data-4x-go napster-rlx
+- [ ] netcenter leftover REAL — no data-4x-go netcenter-rlx
+- [ ] netflix leftover REAL — no data-4x-go netflix-rlx
+- [ ] netscape leftover REAL — no data-4x-go netscape-rlx
+- [ ] paypal leftover REAL — no data-4x-go paypal-rlx
+- [ ] pets leftover REAL — no data-4x-go pets-rlx
+- [ ] phoenix leftover REAL — no data-4x-go phoenix-rlx
+- [ ] 2008 leftover · playable — no data-4x-go playable
+- [ ] Posterous leftover title — no data-4x-go posterous
+- [ ] programmableweb leftover REAL — no data-4x-go programmab-rlx
+- [ ] Reddit leftover 2× — no data-4x-go rd-lx
+- [ ] reader leftover REAL — no data-4x-go reader-rlx
+- [ ] 2008 leftover · search — no data-4x-go search
+- [ ] 2008 leftover · search — no data-4x-go searchlx
+- [ ] skype leftover REAL — no data-4x-go skype-rlx
+- [ ] slashdot leftover REAL — no data-4x-go slashdot-rlx
+- [ ] Stack Overflow leftover ask — no data-4x-go so
+- [ ] Stack Overflow leftover 2× — no data-4x-go so-lx
+- [ ] Spotify leftover 2× — no data-4x-go sp-lx
+- [ ] Spotify EU leftover — no data-4x-go spot-eu
+- [ ] spotifyeu leftover REAL — no data-4x-go spotifyeu-rlx
+- [ ] spotifyseed leftover REAL — no data-4x-go spotifysee-rlx
+- [ ] startupfailures leftover REAL — no data-4x-go startupfai-rlx
+- [ ] steam leftover REAL — no data-4x-go steam-rlx
+- [ ] App Store leftover literacy — no data-4x-go store
+- [ ] 2008 leftover · story — no data-4x-go story
+- [ ] Tumblr leftover 2× — no data-4x-go tb-lx
+- [ ] TechCrunch leftover 2× — no data-4x-go tc-lx
+- [ ] technorati leftover REAL — no data-4x-go technorati-rlx
+- [ ] time you leftover REAL — no data-4x-go timeyou-rlx
+- [ ] Twitter leftover 2× — no data-4x-go tw-lx
+- [ ] 2008 leftover · upload — no data-4x-go upload
+- [ ] wayback leftover REAL — no data-4x-go wayback-rlx
+- [ ] web20conference leftover REAL — no data-4x-go web20confe-rlx
+- [ ] wikipedia leftover REAL — no data-4x-go wikipedia-rlx
+- [ ] wired leftover REAL — no data-4x-go wired-rlx
+- [ ] wordpress leftover REAL — no data-4x-go wordpress-rlx
+- [ ] y2k leftover REAL — no data-4x-go y2k-rlx
+- [ ] yahoo leftover REAL — no data-4x-go yahoo-rlx
+- [ ] youvegotmail leftover REAL — no data-4x-go youvegotma-rlx
+- [ ] YouTube HD leftover — no data-4x-go yt-hd
+- [ ] YouTube leftover 2× — no data-4x-go yt-lx
+- [ ] zombo leftover REAL — no data-4x-go zombo-rlx
 
 ### Popular 3×
 - [x] Stack Overflow — itt08-pop-stackoverflow
@@ -1446,83 +1936,6 @@
 
 ### Links crawled from gold / official 10 / home / about
 - [x] 41 URLs resolved
-
-## 2009
-
-### Gold
-- [x] sites/facebook/index.html — complete → itt09-like
-
-### Official 10
-- [x] 1. Facebook Like — sites/facebook/index.html
-- [x] 2. FarmVille — sites/farmville/index.html
-- [x] 3. Bing — sites/bing/index.html
-- [x] 4. iPhone 3GS — sites/iphone/index.html
-- [x] 5. App Store leftover — sites/appstore/index.html
-- [x] 6. Twitter leftover — sites/twitter/index.html
-- [x] 7. Foursquare leftover — sites/foursquare/index.html
-- [x] 8. Kickstarter leftover — sites/kickstarter/index.html
-- [x] 9. Win7 leftover — sites/windows7/index.html
-- [x] 10. Plot Neighbors — sites/playable/game.html
-
-### Games
-- [x] extra-a.html — leftover extra → itt09-game-like
-- [x] extra-b.html — leftover extra → itt09-game-beacon
-- [x] extra-c.html — more-game → itt09-game-roofrun
-- [x] extra-d.html — more-game → itt09-game-orclimb
-- [x] extra-e.html — more-game started
-- [x] extra-f.html — more-game → itt09-game-like2
-- [x] extra-g.html — more-game → itt09-game-bingnote
-- [x] extra-h.html — more-game → itt09-game-farm2
-- [x] extra-i.html — more-game → itt09-game-win7note
-- [x] famous.html — started
-- [x] game.html — started
-- [x] index.html — cabinet
-
-### 2× leftover dests
-- [x] Facebook Like leftover ×2 — itt09-like-2x
-- [x] FarmVille leftover plant literacy — itt09-farm-2x
-- [x] Bing leftover query — itt09-bing-q
-- [x] Foursquare leftover venue — itt09-4sq-lx
-- [x] Kickstarter leftover $amt theater — itt09-ks-lx
-- [x] Wave leftover invite — itt09-wave-lx
-- [x] SO leftover accept path — itt09-so-acc
-- [x] Win7 / IE8 leftover — itt09-win7
-- [x] Omegle leftover first line (text) — itt09-omegle
-- [x] Chatroulette leftover no-cam — itt09-cr
-- [x] Mafia Wars leftover job — itt09-mw
-- [x] Wolfram leftover query — itt09-wa
-- [x] WhatsApp leftover literacy — itt09-wa-ack
-- [x] UberCab SF leftover — itt09-uber-sf
-- [x] Twitter leftover 140 — itt09-t140
-- [x] YouTube leftover — itt09-yt
-- [x] IE8 leftover — itt09-ie8
-- [x] Chrome leftover (product room) — itt09-chrome-lx
-- [x] Bing leftover 2× pack — itt09-bing2-lx
-- [x] FarmVille leftover 2× pack — itt09-fv2-lx
-- [x] Foursquare leftover 2× pack — itt09-4sq2-lx
-- [x] Kickstarter leftover 2× pack — itt09-ks2-lx
-- [x] Wolfram leftover 2× pack — itt09-wa2-lx
-- [x] Chatroulette leftover 2× — itt09-cr-lx
-- [x] Omegle leftover 2× — itt09-og-lx
-- [x] UberCab leftover 2× — itt09-uber-lx
-- [x] WhatsApp leftover 2× — itt09-wa-lx
-- [x] Win7 leftover 2× — itt09-w7-lx
-- [x] Mafia Wars leftover 2× — itt09-mw-lx
-- [x] Twitter leftover 2× — itt09-tw-lx
-- [x] YouTube leftover 2× — itt09-yt-lx
-- [x] Wikipedia leftover 2× — itt09-wk-lx
-- [x] App Store leftover 2× — itt09-as-lx
-- [x] iPhone leftover 2× — itt09-ip-lx
-- [x] Facebook leftover literacy — itt09-fb2-lx
-- [x] Bing leftover literacy — itt09-bing3-lx
-
-### Popular 3×
-- [x] Omegle — itt09-pop-omegle
-- [x] Chatroulette — itt09-pop-chatroulette
-- [x] Wikipedia — itt09-pop-wikipedia
-
-### Links crawled from gold / official 10 / home / about
-- [x] 21 URLs resolved
 
 ## 2010
 
@@ -1558,52 +1971,160 @@
 - [x] game-5.html — pack-game → itt10-game-imgurup
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt10-game-raghill
+- [x] more-b.html — more-game → itt10-game-meatrun
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Instagram leftover caption path — itt10-ig-cap
-- [x] iPad leftover $499 literacy — itt10-ipad-ord
-- [x] iPhone 4 leftover FaceTime/Antenna — itt10-iphone4
-- [x] Open Graph leftover Like CNN — itt10-og1
-- [x] Open Graph leftover Like IMDb — itt10-og2
-- [x] FarmVille peak leftover — itt10-farm-peak
-- [x] Foursquare leftover check-in — itt10-4sq-lx
-- [x] Imgur leftover title — itt10-imgur-lx
-- [x] Pinterest leftover two pins — itt10-pin-lx
-- [x] Twitter leftover 140 lurk OK — itt10-t140
-- [x] YouTube leftover — itt10-yt
-- [x] Digg v4 leftover — itt10-digg-v4
-- [x] Groupon leftover deal — itt10-groupon
-- [x] Quora leftover ask — itt10-quora
-- [x] UberCab SF leftover — itt10-uber-sf
-- [x] Wave funeral leftover — itt10-wave-fun
-- [x] Browser Ballot leftover pick — itt10-ballot
-- [x] Cablegate leftover one-cable — itt10-wl
-- [x] Android leftover 2× — itt10-and-lx
-- [x] Chrome leftover 2× — itt10-ch-lx
-- [x] Dropbox leftover 2× — itt10-db-lx
-- [x] FaceTime leftover 2× — itt10-ft-lx
-- [x] Farm leftover 2× — itt10-fn-lx
-- [x] Formspring leftover 2× — itt10-fs-lx
-- [x] Gmail leftover 2× — itt10-gm-lx
-- [x] Groupon leftover 2× — itt10-gp-lx
-- [x] Hulu leftover 2× — itt10-hu-lx
-- [x] IE9 leftover 2× — itt10-ie-lx
-- [x] Instant leftover 2× — itt10-in-lx
-- [x] Kickstarter leftover 2× — itt10-ks-lx
-- [x] Netflix leftover 2× — itt10-nf-lx
-- [x] Quora leftover 2× — itt10-qu-lx
-- [x] Reddit leftover 2× — itt10-rd-lx
-- [x] Spotify leftover 2× — itt10-sp-lx
-- [x] Tumblr leftover 2× — itt10-tb-lx
-- [x] Wave leftover 2× — itt10-wv-lx
-- [x] angrybirds leftover REAL — itt10-angrybirds-rlx
-- [x] flickrbox leftover REAL — itt10-flickrbox-rlx
-- [x] foursqnote leftover REAL — itt10-foursqnote-rlx
-- [x] google leftover REAL — itt10-google-rlx
-- [x] instagramios leftover REAL — itt10-instagrami-rlx
-- [x] pinbeta leftover REAL — itt10-pinbeta-rlx
-- [x] windowsphone leftover REAL — itt10-windowspho-rlx
-- [x] yahoo leftover REAL — itt10-yahoo-rlx
+- [ ] Foursquare leftover check-in — no data-4x-go 4sq-lx
+- [ ] Android leftover 2× — no data-4x-go and-lx
+- [ ] 2010 leftover · and lx d2 — no data-4x-go and-lx-d2
+- [ ] angrybirds leftover REAL — no data-4x-go angrybirds-rlx
+- [ ] 2010 leftover · angrybirds rlx d2 — no data-4x-go angrybirds-rlx-d2
+- [ ] 2010 leftover · ask d2 — no data-4x-go ask-d2
+- [ ] Browser Ballot leftover pick — no data-4x-go ballot
+- [ ] 2010 leftover · ballot d2 — no data-4x-go ballot-d2
+- [ ] Chrome leftover 2× — no data-4x-go ch-lx
+- [ ] 2010 leftover · ch lx d2 — no data-4x-go ch-lx-d2
+- [ ] 2010 leftover · chrome about — no data-4x-go chrome-about
+- [ ] 2010 leftover · chrome d2 — no data-4x-go chrome-d2
+- [ ] Dropbox leftover 2× — no data-4x-go db-lx
+- [ ] 2010 leftover · db lx d2 — no data-4x-go db-lx-d2
+- [ ] Digg v4 leftover — no data-4x-go digg-v4
+- [ ] 2010 leftover · digg v4 d2 — no data-4x-go digg-v4-d2
+- [ ] 2010 leftover · facebook about — no data-4x-go facebook-about
+- [ ] 2010 leftover · facebook d2 — no data-4x-go facebook-d2
+- [ ] 2010 leftover · facebook d2 — no data-4x-go facebook-d3
+- [ ] FarmVille peak leftover — no data-4x-go farm-peak
+- [ ] 2010 leftover · farm peak d2 — no data-4x-go farm-peak-d2
+- [ ] 2010 leftover · farmville about — no data-4x-go farmville-about
+- [ ] 2010 leftover · farmville d2 — no data-4x-go farmville-d2
+- [ ] flickrbox leftover REAL — no data-4x-go flickrbox-rlx
+- [ ] 2010 leftover · flickrbox rlx d2 — no data-4x-go flickrbox-rlx-d2
+- [ ] Farm leftover 2× — no data-4x-go fn-lx
+- [ ] 2010 leftover · fn lx d2 — no data-4x-go fn-lx-d2
+- [ ] 2010 leftover · formspring d2 — no data-4x-go formspring-d2
+- [ ] 2010 leftover · foursqnote d2 — no data-4x-go foursqnote-d2
+- [ ] foursqnote leftover REAL — no data-4x-go foursqnote-rlx
+- [ ] 2010 leftover · foursquare d2 — no data-4x-go foursqua-d2
+- [ ] 2010 leftover · foursquare about — no data-4x-go foursquare-about
+- [ ] 2010 leftover · foursquare d2 — no data-4x-go foursquare-d2
+- [ ] Formspring leftover 2× — no data-4x-go fs-lx
+- [ ] FaceTime leftover 2× — no data-4x-go ft-lx
+- [ ] 2010 leftover · ft lx d2 — no data-4x-go ft-lx-d2
+- [ ] Gmail leftover 2× — no data-4x-go gm-lx
+- [ ] 2010 leftover · gmailtab d2 — no data-4x-go gmailtab-d2
+- [ ] 2010 leftover · google d2 — no data-4x-go google-d2
+- [ ] google leftover REAL — no data-4x-go google-rlx
+- [ ] Groupon leftover 2× — no data-4x-go gp-lx
+- [ ] Groupon leftover deal — no data-4x-go groupon
+- [ ] 2010 leftover · groupon d2 — no data-4x-go groupon-d2
+- [ ] 2010 leftover · groupondeal d2 — no data-4x-go groupondea-d2
+- [ ] Hulu leftover 2× — no data-4x-go hu-lx
+- [ ] 2010 leftover · hulustream d2 — no data-4x-go hulustream-d2
+- [ ] IE9 leftover 2× — no data-4x-go ie-lx
+- [ ] 2010 leftover · ie9 d2 — no data-4x-go ie9-d2
+- [ ] Instagram leftover caption path — no data-4x-go ig-cap
+- [ ] 2010 leftover · imgur d2 — no data-4x-go imgur-d2
+- [ ] Imgur leftover title — no data-4x-go imgur-lx
+- [ ] Instant leftover 2× — no data-4x-go in-lx
+- [ ] 2010 leftover · instagram about — no data-4x-go instagram-about
+- [ ] 2010 leftover · instagram d2 — no data-4x-go instagram-d2
+- [ ] 2010 leftover · instagramios d2 — no data-4x-go instagrami-d2
+- [ ] instagramios leftover REAL — no data-4x-go instagrami-rlx
+- [ ] 2010 leftover · instant d2 — no data-4x-go instant-d2
+- [ ] 2010 leftover · ipad about — no data-4x-go ipad-about
+- [ ] 2010 leftover · ipad — no data-4x-go ipad-d2
+- [ ] 2010 leftover · ipad d2 — no data-4x-go ipad-d3
+- [ ] 2010 leftover · ipad d2 — no data-4x-go ipad-d4
+- [ ] 2010 leftover · ipad d2 — no data-4x-go ipad-d5
+- [ ] 2010 leftover · ipad d2 — no data-4x-go ipad-d6
+- [ ] iPad leftover $499 literacy — no data-4x-go ipad-ord
+- [ ] 2010 leftover · ipad safari — no data-4x-go ipad-safari
+- [ ] 2010 leftover · iphone about — no data-4x-go iphone-about
+- [ ] 2010 leftover · iphone d2 — no data-4x-go iphone-d2
+- [ ] 2010 leftover · iphone d2 — no data-4x-go iphone-d3
+- [ ] iPhone 4 leftover FaceTime/Antenna — no data-4x-go iphone4
+- [ ] 2010 leftover · kickstarter d2 — no data-4x-go kickstarte-d2
+- [ ] Kickstarter leftover 2× — no data-4x-go ks-lx
+- [ ] 2010 leftover · netflix d2 — no data-4x-go netflix-d2
+- [ ] Netflix leftover 2× — no data-4x-go nf-lx
+- [ ] Open Graph leftover Like CNN — no data-4x-go og1
+- [ ] 2010 leftover · og1 d2 — no data-4x-go og1-d2
+- [ ] Open Graph leftover Like IMDb — no data-4x-go og2
+- [ ] 2010 leftover · og2 d2 — no data-4x-go og2-d2
+- [ ] Pinterest leftover two pins — no data-4x-go pin-lx
+- [ ] 2010 leftover · pinbeta d2 — no data-4x-go pinbeta-d2
+- [ ] pinbeta leftover REAL — no data-4x-go pinbeta-rlx
+- [ ] 2010 leftover · pinterest d2 — no data-4x-go pinteres-d2
+- [ ] 2010 leftover · pinterest about — no data-4x-go pinterest-about
+- [ ] 2010 leftover · pinterest d2 — no data-4x-go pinterest-d2
+- [ ] 2010 leftover · playable — no data-4x-go playable
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d11
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d12
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d13
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d14
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d15
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d16
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d17
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d18
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d19
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2010 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2010 leftover · playable extra a — no data-4x-go playable-extra-a
+- [ ] 2010 leftover · playable extra b — no data-4x-go playable-extra-b
+- [ ] 2010 leftover · playable extra c — no data-4x-go playable-extra-c
+- [ ] 2010 leftover · playable extra d — no data-4x-go playable-extra-d
+- [ ] 2010 leftover · playable extra e — no data-4x-go playable-extra-e
+- [ ] 2010 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2010 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2010 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2010 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2010 leftover · playable famous — no data-4x-go playable-famous
+- [ ] 2010 leftover · playable game — no data-4x-go playable-game
+- [ ] 2010 leftover · playable game 2 — no data-4x-go playable-game-2
+- [ ] 2010 leftover · playable game 3 — no data-4x-go playable-game-3
+- [ ] 2010 leftover · playable game 4 — no data-4x-go playable-game-4
+- [ ] 2010 leftover · playable game 5 — no data-4x-go playable-game-5
+- [ ] 2010 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2010 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] Quora leftover 2× — no data-4x-go qu-lx
+- [ ] Quora leftover ask — no data-4x-go quora
+- [ ] 2010 leftover · quora d2 — no data-4x-go quora-d2
+- [ ] 2010 leftover · quorawait d2 — no data-4x-go quorawait-d2
+- [ ] Reddit leftover 2× — no data-4x-go rd-lx
+- [ ] 2010 leftover · reddit d2 — no data-4x-go reddit-d2
+- [ ] 2010 leftover · reddit d2 — no data-4x-go reddit-d3
+- [ ] 2010 leftover · reddit submit — no data-4x-go reddit-submit
+- [ ] Spotify leftover 2× — no data-4x-go sp-lx
+- [ ] 2010 leftover · spotifyeu d2 — no data-4x-go spotifyeu-d2
+- [ ] Twitter leftover 140 lurk OK — no data-4x-go t140
+- [ ] Tumblr leftover 2× — no data-4x-go tb-lx
+- [ ] 2010 leftover · trail q d2 — no data-4x-go trail-q-d2
+- [ ] 2010 leftover · trail q d2 — no data-4x-go trail-q-d2-d2
+- [ ] 2010 leftover · tumblr d2 — no data-4x-go tumblr-d2
+- [ ] 2010 leftover · twitter d2 — no data-4x-go twitter-d2
+- [ ] 2010 leftover · uber d2 — no data-4x-go uber-d2
+- [ ] UberCab SF leftover — no data-4x-go uber-sf
+- [ ] Wave funeral leftover — no data-4x-go wave-fun
+- [ ] 2010 leftover · wikileaks d2 — no data-4x-go wikileaks-d2
+- [ ] 2010 leftover · windowsphone d2 — no data-4x-go windowspho-d2
+- [ ] windowsphone leftover REAL — no data-4x-go windowspho-rlx
+- [ ] Cablegate leftover one-cable — no data-4x-go wl
+- [ ] Wave leftover 2× — no data-4x-go wv-lx
+- [ ] yahoo leftover REAL — no data-4x-go yahoo-rlx
+- [ ] 2010 leftover · youtube about — no data-4x-go youtube-about
+- [ ] 2010 leftover · youtube d2 — no data-4x-go youtube-d2
+- [ ] 2010 leftover · youtube d2 — no data-4x-go youtube-d3
+- [ ] YouTube leftover — no data-4x-go yt
 
 ### Popular 3×
 - [x] Netflix — itt10-pop-netflix
@@ -1612,82 +2133,6 @@
 
 ### Links crawled from gold / official 10 / home / about
 - [x] 28 URLs resolved
-
-## 2011
-
-### Gold
-- [x] sites/googleplus/index.html — complete → itt11-gplus
-
-### Official 10
-- [x] 1. Google+ — sites/googleplus/index.html
-- [x] 2. Spotify US — sites/spotify/index.html
-- [x] 3. Siri — sites/iphone/index.html
-- [x] 4. Timeline — sites/facebook/index.html
-- [x] 5. iPad 2 leftover — sites/ipad/index.html
-- [x] 6. Airbnb leftover — sites/airbnb/index.html
-- [x] 7. IG iOS leftover — sites/instagram/index.html
-- [x] 8. Twitter leftover — sites/twitter/index.html
-- [x] 9. Qwikster leftover — sites/qwikster/index.html
-- [x] 10. Letter Swap — sites/playable/game.html
-
-### Games
-- [x] extra-a.html — leftover extra → itt11-game-circles
-- [x] extra-b.html — leftover extra → itt11-game-won
-- [x] extra-c.html — more-game → itt11-game-rushlane
-- [x] extra-d.html — more-game started
-- [x] extra-e.html — more-game → itt11-game-spentweek
-- [x] extra-f.html — more-game → itt11-game-sirinote
-- [x] extra-g.html — more-game → itt11-game-circle2
-- [x] extra-h.html — more-game → itt11-game-hang2
-- [x] extra-i.html — more-game → itt11-game-spotnote
-- [x] famous.html — started
-- [x] game.html — started
-- [x] index.html — cabinet
-
-### 2× leftover dests
-- [x] G+ Hangouts leftover literacy — itt11-hang
-- [x] G+ leftover circle name — itt11-circles
-- [x] Spotify US leftover invite — itt11-spot-us
-- [x] Siri leftover type/chip — itt11-siri
-- [x] Timeline leftover two boxes — itt11-timeline-lx
-- [x] iPad 2 leftover cameras — itt11-ipad2-lx
-- [x] Qwikster leftover reversed-split — itt11-qwik
-- [x] Snapchat leftover not-Stories — itt11-snap
-- [x] Instagram iOS leftover — itt11-ig
-- [x] Tumblr leftover reblog — itt11-reblog
-- [x] Airbnb leftover pick — itt11-air
-- [x] Twitter leftover 140 — itt11-t140
-- [x] YouTube leftover — itt11-yt
-- [x] iCloud leftover — itt11-icloud
-- [x] IE9 leftover — itt11-ie9
-- [x] LinkedIn leftover — itt11-li
-- [x] Pinterest leftover two pins — itt11-pin-lx
-- [x] Snap leftover ghost — itt11-ghost
-- [x] Dropbox leftover 2× — itt11-db-lx
-- [x] Groupon leftover 2× — itt11-gp-lx
-- [x] Hangout leftover 2× — itt11-hg-lx
-- [x] IE9 leftover 2× — itt11-ie-lx
-- [x] iPad 2 leftover 2× — itt11-ip2-lx
-- [x] Netflix leftover 2× — itt11-nf-lx
-- [x] Qwikster leftover 2× — itt11-qw-lx
-- [x] Qwikster dest leftover 2× — itt11-qw2-lx
-- [x] Siri leftover 2× — itt11-si-lx
-- [x] Twitter leftover 2× — itt11-tw-lx
-- [x] iCloud leftover 2× pack — itt11-ic-lx
-- [x] Snap leftover 2× pack — itt11-sc-lx
-- [x] Spotify leftover 2× pack — itt11-sp-lx
-- [x] Airbnb leftover 2× pack — itt11-ab-lx
-- [x] LinkedIn leftover 2× pack — itt11-li-lx
-- [x] Tumblr leftover 2× pack — itt11-tb-lx
-- [x] YouTube leftover 2× pack — itt11-yt-lx
-
-### Popular 3×
-- [x] iCloud — itt11-pop-icloud
-- [x] Pinterest — itt11-pop-pinterest
-- [x] LinkedIn — itt11-pop-linkedin
-
-### Links crawled from gold / official 10 / home / about
-- [x] 25 URLs resolved
 
 ## 2012
 
@@ -1717,50 +2162,176 @@
 - [x] extra-h.html — more-game → itt12-game-share2
 - [x] extra-i.html — more-game → itt12-game-iponote
 - [x] famous.html — started
-- [x] game.html — leftover dest page (4× bound)
+- [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt12-game-candyrow
+- [x] more-b.html — more-game → itt12-game-silkwalk
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Medium leftover post — itt12-medium-more
-- [x] Path leftover — itt12-path-more
-- [x] Flipboard leftover — itt12-flip-more
-- [x] Tinder leftover swipe — itt12-tinder-more
-- [x] Waze leftover route — itt12-waze-more
-- [x] Trello leftover card — itt12-trello-more
-- [x] BuzzFeed leftover list — itt12-buzz-more
-- [x] Lyft leftover — itt12-lyft-more
-- [x] IG leftover literacy — itt12-ig-lx
-- [x] Facebook IPO leftover — itt12-ipo-lx
-- [x] Pinterest leftover 2× — itt12-pin-lx
-- [x] Win8 leftover 2× — itt12-w8-lx
-- [x] SoundCloud leftover 2× — itt12-sc-lx
-- [x] YouTube leftover 2× — itt12-yt-lx
-- [x] SOPA leftover — itt12-wk-lx
-- [x] Tinder leftover 2× — itt12-td-lx
-- [x] Uber leftover 2× — itt12-ub-lx
-- [x] Vine wait leftover — itt12-vw-lx
-- [x] Medium leftover 2× pack — itt12-md2-lx
-- [x] Path leftover 2× — itt12-path-lx
-- [x] Flipboard leftover 2× — itt12-flip-lx
-- [x] Waze leftover 2× — itt12-wz-lx
-- [x] Trello leftover 2× — itt12-tr-lx
-- [x] BuzzFeed leftover 2× — itt12-bz-lx
-- [x] Lyft leftover 2× — itt12-ly-lx
-- [x] Kindle Fire leftover 2× — itt12-kf-lx
-- [x] Drive leftover 2× — itt12-gd-lx
-- [x] Drive box leftover 2× — itt12-gdb-lx
-- [x] Windows8 leftover 2× — itt12-w8b-lx
-- [x] Tumblr leftover 2× — itt12-tb12-lx
-- [x] Twitter leftover 2× — itt12-tw12-lx
-- [x] YouTube leftover 2× — itt12-yt12-lx
-- [x] Pinterest about leftover 2× — itt12-pina-lx
-- [x] IG about leftover 2× — itt12-iga-lx
-- [x] IPO about leftover 2× — itt12-ipoa-lx
-- [x] amazon leftover REAL — itt12-amazon-rlx
-- [x] gmail leftover REAL — itt12-gmail-rlx
-- [x] google leftover REAL — itt12-google-rlx
-- [x] netflix leftover REAL — itt12-netflix-rlx
-- [x] yahoo leftover REAL — itt12-yahoo-rlx
+- [ ] 2012 leftover · ama — no data-4x-go ama
+- [ ] amazon leftover REAL — no data-4x-go amazon-rlx
+- [ ] 2012 leftover · amazon rlx d2 — no data-4x-go amazon-rlx-d2
+- [ ] BuzzFeed leftover list — no data-4x-go buzz-more
+- [ ] 2012 leftover · buzz more d2 — no data-4x-go buzz-more-d2
+- [ ] 2012 leftover · buzzfeed d2 — no data-4x-go buzzfeed-d2
+- [ ] BuzzFeed leftover 2× — no data-4x-go bz-lx
+- [ ] 2012 leftover · chrome d2 — no data-4x-go chrome-d2
+- [ ] 2012 leftover · chrome d2 — no data-4x-go chrome-d3
+- [ ] Draw Something leftover — 2012 — no data-4x-go draw-lx
+- [ ] 2012 leftover · drawsomething d2 — no data-4x-go draw-lx-d2
+- [ ] 2012 leftover · facebook about — no data-4x-go facebook-about
+- [ ] 2012 leftover · facebook d2 — no data-4x-go facebook-d2
+- [ ] 2012 leftover · facebook d2 — no data-4x-go facebook-d3
+- [ ] Flipboard leftover 2× — no data-4x-go flip-lx
+- [ ] 2012 leftover · flip lx d2 — no data-4x-go flip-lx-d2
+- [ ] Flipboard leftover — no data-4x-go flip-more
+- [ ] 2012 leftover · flip more d2 — no data-4x-go flip-more-d2
+- [ ] 2012 leftover · flipboard about — no data-4x-go flipboard-about
+- [ ] 2012 leftover · flipboard d2 — no data-4x-go flipboard-d2
+- [ ] 2012 leftover · game — no data-4x-go game
+- [ ] Drive leftover 2× — no data-4x-go gd-lx
+- [ ] 2012 leftover · gd lx d2 — no data-4x-go gd-lx-d2
+- [ ] Drive box leftover 2× — no data-4x-go gdb-lx
+- [ ] 2012 leftover · gdb lx d2 — no data-4x-go gdb-lx-d2
+- [ ] gmail leftover REAL — no data-4x-go gmail-rlx
+- [ ] 2012 leftover · gmail rlx d2 — no data-4x-go gmail-rlx-d2
+- [ ] google leftover REAL — no data-4x-go google-rlx
+- [ ] 2012 leftover · google rlx d2 — no data-4x-go google-rlx-d2
+- [ ] 2012 leftover · googleplus — no data-4x-go googleplus
+- [ ] 2012 leftover · googleplus d2 — no data-4x-go googleplus-d2
+- [ ] IG leftover literacy — no data-4x-go ig-lx
+- [ ] IG about leftover 2× — no data-4x-go iga-lx
+- [ ] 2012 leftover · igabout d2 — no data-4x-go igabout-d2
+- [ ] 2012 leftover · instagram d2 — no data-4x-go instagra-d2
+- [ ] 2012 leftover · instagram d2 — no data-4x-go instagra-d3
+- [ ] 2012 leftover · instagram about — no data-4x-go instagram-about
+- [ ] 2012 leftover · instagram acquired — no data-4x-go instagram-acquired
+- [ ] 2012 leftover · instagram android — no data-4x-go instagram-android
+- [ ] 2012 leftover · instagram d2 — no data-4x-go instagram-d2
+- [ ] 2012 leftover · iphone — no data-4x-go iphone
+- [ ] 2012 leftover · iphone d2 — no data-4x-go iphone-d2
+- [ ] 2012 leftover · iphone d2 — no data-4x-go iphone-d3
+- [ ] 2012 leftover · iphone maps — no data-4x-go iphone-maps
+- [ ] Facebook IPO leftover — no data-4x-go ipo-lx
+- [ ] 2012 leftover · ipo lx d2 — no data-4x-go ipo-lx-d2
+- [ ] IPO about leftover 2× — no data-4x-go ipoa-lx
+- [ ] 2012 leftover · ipoabout d2 — no data-4x-go ipoabout-d2
+- [ ] Kindle Fire leftover 2× — no data-4x-go kf-lx
+- [ ] 2012 leftover · kindlefire d2 — no data-4x-go kindlefire-d2
+- [ ] Lyft leftover 2× — no data-4x-go ly-lx
+- [ ] 2012 leftover · lyft d2 — no data-4x-go lyft-d2
+- [ ] 2012 leftover · lyft d2 — no data-4x-go lyft-d3
+- [ ] Lyft leftover — no data-4x-go lyft-more
+- [ ] Yahoo / Mayer leftover — Jul 2012 — no data-4x-go marissa-lx
+- [ ] 2012 leftover · yahoo-marissa d2 — no data-4x-go marissa-lx-d2
+- [ ] Medium leftover 2× pack — no data-4x-go md2-lx
+- [ ] 2012 leftover · medium about — no data-4x-go medium-about
+- [ ] 2012 leftover · medium d2 — no data-4x-go medium-d2
+- [ ] 2012 leftover · medium d2 — no data-4x-go medium-d3
+- [ ] 2012 leftover · medium d2 — no data-4x-go medium-d4
+- [ ] Medium leftover post — no data-4x-go medium-more
+- [ ] 2012 leftover · netflix d2 — no data-4x-go netflix-d2
+- [ ] netflix leftover REAL — no data-4x-go netflix-rlx
+- [ ] Nexus leftover — 2012 — no data-4x-go nexus-lx
+- [ ] 2012 leftover · nexus d2 — no data-4x-go nexus-lx-d2
+- [ ] 2012 leftover · path about — no data-4x-go path-about
+- [ ] 2012 leftover · path d2 — no data-4x-go path-d2
+- [ ] 2012 leftover · path d2 — no data-4x-go path-d3
+- [ ] 2012 leftover · path d2 — no data-4x-go path-d4
+- [ ] Path leftover 2× — no data-4x-go path-lx
+- [ ] Path leftover — no data-4x-go path-more
+- [ ] Pinterest leftover 2× — no data-4x-go pin-lx
+- [ ] Pinterest about leftover 2× — no data-4x-go pina-lx
+- [ ] 2012 leftover · pinabout d2 — no data-4x-go pinabout-d2
+- [ ] 2012 leftover · pinterest d2 — no data-4x-go pinteres-d2
+- [ ] 2012 leftover · pinterest about — no data-4x-go pinterest-about
+- [ ] 2012 leftover · pinterest d2 — no data-4x-go pinterest-d2
+- [ ] 2012 leftover · play — no data-4x-go play
+- [ ] 2012 leftover · play d2 — no data-4x-go play-d2
+- [ ] 2012 leftover · playable — no data-4x-go playable
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d11
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d12
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d13
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d14
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d15
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2012 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2012 leftover · playable extra a — no data-4x-go playable-extra-a
+- [ ] 2012 leftover · playable extra b — no data-4x-go playable-extra-b
+- [ ] 2012 leftover · playable extra c — no data-4x-go playable-extra-c
+- [ ] 2012 leftover · playable extra d — no data-4x-go playable-extra-d
+- [ ] 2012 leftover · playable extra e — no data-4x-go playable-extra-e
+- [ ] 2012 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2012 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2012 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2012 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2012 leftover · playable famous — no data-4x-go playable-famous
+- [ ] 2012 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2012 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] 2012 leftover · reddit — no data-4x-go reddit
+- [ ] 2012 leftover · reddit about — no data-4x-go reddit-about
+- [ ] 2012 leftover · reddit d2 — no data-4x-go reddit-d2
+- [ ] 2012 leftover · reddit d2 — no data-4x-go reddit-d3
+- [ ] 2012 leftover · reddit d2 — no data-4x-go reddit-d4
+- [ ] SoundCloud leftover 2× — no data-4x-go sc-lx
+- [ ] 2012 leftover · snapchat — no data-4x-go snapchat
+- [ ] 2012 leftover · snapchat d2 — no data-4x-go snapchat-d2
+- [ ] 2012 leftover · soundcloud d2 — no data-4x-go soundclo-d2
+- [ ] 2012 leftover · soundcloud d2 — no data-4x-go soundcloud-d2
+- [ ] 2012 leftover · soundcloud pop — no data-4x-go soundcloud-pop
+- [ ] Surface leftover — 2012 announce — no data-4x-go surface-lx
+- [ ] 2012 leftover · surface d2 — no data-4x-go surface-lx-d2
+- [ ] Tumblr leftover 2× — no data-4x-go tb12-lx
+- [ ] Tinder leftover 2× — no data-4x-go td-lx
+- [ ] 2012 leftover · tinder about — no data-4x-go tinder-about
+- [ ] 2012 leftover · tinder d2 — no data-4x-go tinder-d2
+- [ ] 2012 leftover · tinder d2 — no data-4x-go tinder-d3
+- [ ] 2012 leftover · tinder d2 — no data-4x-go tinder-d4
+- [ ] Tinder leftover swipe — no data-4x-go tinder-more
+- [ ] Trello leftover 2× — no data-4x-go tr-lx
+- [ ] 2012 leftover · trail q d2 — no data-4x-go trail-q-d2
+- [ ] 2012 leftover · trello d2 — no data-4x-go trello-d2
+- [ ] 2012 leftover · trello d2 — no data-4x-go trello-d3
+- [ ] Trello leftover card — no data-4x-go trello-more
+- [ ] 2012 leftover · tumblr — no data-4x-go tumblr
+- [ ] 2012 leftover · tumblr d2 — no data-4x-go tumblr-d2
+- [ ] 2012 leftover · tumblr12 d2 — no data-4x-go tumblr12-d2
+- [ ] Twitter leftover 2× — no data-4x-go tw12-lx
+- [ ] 2012 leftover · twitter — no data-4x-go twitter
+- [ ] 2012 leftover · twitter d2 — no data-4x-go twitter-d2
+- [ ] 2012 leftover · twnote12 d2 — no data-4x-go twnote12-d2
+- [ ] Uber leftover 2× — no data-4x-go ub-lx
+- [ ] 2012 leftover · uber d2 — no data-4x-go uber-d2
+- [ ] 2012 leftover · vinewait d2 — no data-4x-go vinewait-d2
+- [ ] Vine wait leftover — no data-4x-go vw-lx
+- [ ] Win8 leftover 2× — no data-4x-go w8-lx
+- [ ] Windows8 leftover 2× — no data-4x-go w8b-lx
+- [ ] 2012 leftover · waze d2 — no data-4x-go waze-d2
+- [ ] 2012 leftover · waze d2 — no data-4x-go waze-d3
+- [ ] Waze leftover route — no data-4x-go waze-more
+- [ ] 2012 leftover · wikipedia d2 — no data-4x-go wikipedi-d2
+- [ ] 2012 leftover · wikipedia d2 — no data-4x-go wikipedia-d2
+- [ ] 2012 leftover · wikipedia sopa — no data-4x-go wikipedia-sopa
+- [ ] 2012 leftover · windows8 about — no data-4x-go windows8-about
+- [ ] 2012 leftover · windows8 d2 — no data-4x-go windows8-d2
+- [ ] SOPA leftover — no data-4x-go wk-lx
+- [ ] Windows Phone leftover — 2012 — no data-4x-go wp-lx
+- [ ] 2012 leftover · windows-phone d2 — no data-4x-go wp-lx-d2
+- [ ] Waze leftover 2× — no data-4x-go wz-lx
+- [ ] yahoo leftover REAL — no data-4x-go yahoo-rlx
+- [ ] 2012 leftover · youtube d2 — no data-4x-go youtube-d2
+- [ ] YouTube leftover 2× — no data-4x-go yt-lx
+- [ ] YouTube leftover 2× — no data-4x-go yt12-lx
+- [ ] 2012 leftover · ytnote12 d2 — no data-4x-go ytnote12-d2
 
 ### Popular 3×
 - [x] Medium — itt12-pop-medium
@@ -1768,7 +2339,7 @@
 - [x] Flipboard — itt12-pop-flipboard
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 28 URLs resolved
+- [x] 30 URLs resolved
 
 ## 2013
 
@@ -1800,37 +2371,129 @@
 - [x] famous.html — started
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt13-game-pipetap
+- [x] more-b.html — more-game → itt13-game-booth
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Vine leftover second hold — itt13-vn-lx
-- [x] iOS 7 leftover flat note — itt13-ios7-lx
-- [x] Stories leftover 24h note — itt13-st-lx
-- [x] Snowden leftover literacy — itt13-sn-lx
-- [x] Telegram leftover chat note — itt13-tg-lx
-- [x] Yahoo×Tumblr leftover note — itt13-tb-lx
-- [x] Ask.fm leftover — itt13-ask-lx
-- [x] Whisper leftover — itt13-wh-lx
-- [x] YouTube leftover — itt13-yt-lx
-- [x] Healthcare.gov leftover — itt13-hc-lx
-- [x] Xbox One leftover — itt13-xb-lx
-- [x] OUYA leftover — itt13-oy-lx
-- [x] Medium leftover — itt13-md-lx
-- [x] Facebook leftover — itt13-fb-lx
-- [x] Twitter leftover — itt13-tw-lx
-- [x] Tumblr leftover 2× — itt13-tb2-lx
-- [x] Win8.1 leftover — itt13-w81-lx
-- [x] Vine leftover literacy — itt13-vine-lx
-- [x] Chrome leftover 2× — itt13-ch-lx
-- [x] Reddit leftover 2× — itt13-rd-lx
-- [x] Snap leftover 2× — itt13-sna-lx
-- [x] Telegram leftover 2× — itt13-tla-lx
-- [x] Touch ID leftover 2× — itt13-tid-lx
-- [x] Vineabout leftover 2× — itt13-vina-lx
-- [x] Win8.1 leftover 2× pack — itt13-w81b-lx
-- [x] Twitter leftover 2× pack — itt13-twb-lx
-- [x] YouTube leftover 2× pack — itt13-ytb-lx
-- [x] instagram leftover REAL — itt13-instagram-rlx
-- [x] IG leftover 2× — itt13-ig-lx
+- [ ] Ask.fm leftover — no data-4x-go ask-lx
+- [ ] 2013 leftover · ask lx d2 — no data-4x-go ask-lx-d2
+- [ ] Bitcoin leftover — 2013 literacy — no data-4x-go bt-13
+- [ ] 2013 leftover · bitcoin13 d2 — no data-4x-go bt-13-d2
+- [ ] Chrome leftover 2× — no data-4x-go ch-lx
+- [ ] 2013 leftover · chrome d2 — no data-4x-go chrome-d2
+- [ ] 2013 leftover · facebook about — no data-4x-go facebook-about
+- [ ] 2013 leftover · facebook d2 — no data-4x-go facebook-d2
+- [ ] 2013 leftover · facebook d2 — no data-4x-go facebook-d3
+- [ ] Facebook leftover — no data-4x-go fb-lx
+- [ ] Healthcare.gov leftover — no data-4x-go hc-lx
+- [ ] 2013 leftover · healthcare d2 — no data-4x-go healthca-d2
+- [ ] 2013 leftover · healthcare d2 — no data-4x-go healthca-d3
+- [ ] 2013 leftover · healthcare d2 — no data-4x-go healthcare-d2
+- [ ] 2013 leftover · healthcare pop — no data-4x-go healthcare-pop
+- [ ] 2013 leftover · healthcare status — no data-4x-go healthcare-status
+- [ ] Hangouts leftover — 2013 — no data-4x-go hg-13
+- [ ] 2013 leftover · hangouts13 d2 — no data-4x-go hg-13-d2
+- [ ] IG leftover 2× — no data-4x-go ig-lx
+- [ ] 2013 leftover · instagram d2 — no data-4x-go instagram-d2
+- [ ] instagram leftover REAL — no data-4x-go instagram-rlx
+- [ ] 2013 leftover · instagram video — no data-4x-go instagram-video
+- [ ] iOS 7 leftover flat note — no data-4x-go ios7-lx
+- [ ] 2013 leftover · ios7about — no data-4x-go ios7about
+- [ ] 2013 leftover · ios7about d2 — no data-4x-go ios7about-d2
+- [ ] 2013 leftover · iphone 5c — no data-4x-go iphone-5c
+- [ ] 2013 leftover · iphone d2 — no data-4x-go iphone-d2
+- [ ] 2013 leftover · iphone d2 — no data-4x-go iphone-d3
+- [ ] 2013 leftover · iphone d2 — no data-4x-go iphone-d4
+- [ ] 2013 leftover · iphone touchid — no data-4x-go iphone-touchid
+- [ ] Medium leftover — no data-4x-go md-lx
+- [ ] 2013 leftover · medium d2 — no data-4x-go medium-d2
+- [ ] 2013 leftover · ouya d2 — no data-4x-go ouya-d2
+- [ ] OUYA leftover — no data-4x-go oy-lx
+- [ ] Patreon leftover — 2013 — no data-4x-go pa-13
+- [ ] 2013 leftover · patreon d2 — no data-4x-go pa-13-d2
+- [ ] 2013 leftover · playable — no data-4x-go playable
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d11
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d12
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d13
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d14
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d15
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2013 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2013 leftover · playable extra a — no data-4x-go playable-extra-a
+- [ ] 2013 leftover · playable extra b — no data-4x-go playable-extra-b
+- [ ] 2013 leftover · playable extra c — no data-4x-go playable-extra-c
+- [ ] 2013 leftover · playable extra d — no data-4x-go playable-extra-d
+- [ ] 2013 leftover · playable extra e — no data-4x-go playable-extra-e
+- [ ] 2013 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2013 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2013 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2013 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2013 leftover · playable famous — no data-4x-go playable-famous
+- [ ] 2013 leftover · playable game — no data-4x-go playable-game
+- [ ] 2013 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2013 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] Reddit leftover 2× — no data-4x-go rd-lx
+- [ ] 2013 leftover · reddit about — no data-4x-go reddit-about
+- [ ] 2013 leftover · reddit d2 — no data-4x-go reddit-d2
+- [ ] 2013 leftover · reddit d2 — no data-4x-go reddit-d3
+- [ ] Snowden leftover literacy — no data-4x-go sn-lx
+- [ ] Snap leftover 2× — no data-4x-go sna-lx
+- [ ] 2013 leftover · snapabout d2 — no data-4x-go snapabout-d2
+- [ ] 2013 leftover · snapchat about — no data-4x-go snapchat-about
+- [ ] 2013 leftover · snapchat d2 — no data-4x-go snapchat-d2
+- [ ] 2013 leftover · snapchat d2 — no data-4x-go snapchat-d3
+- [ ] 2013 leftover · snowden about — no data-4x-go snowden-about
+- [ ] 2013 leftover · snowden d2 — no data-4x-go snowden-d2
+- [ ] 2013 leftover · snowden d2 — no data-4x-go snowden-d3
+- [ ] Stories leftover 24h note — no data-4x-go st-lx
+- [ ] Yahoo×Tumblr leftover note — no data-4x-go tb-lx
+- [ ] Tumblr leftover 2× — no data-4x-go tb2-lx
+- [ ] 2013 leftover · teleabout d2 — no data-4x-go teleabout-d2
+- [ ] 2013 leftover · telegram about — no data-4x-go telegram-about
+- [ ] 2013 leftover · telegram chat — no data-4x-go telegram-chat-d2
+- [ ] 2013 leftover · telegram d2 — no data-4x-go telegram-d2
+- [ ] 2013 leftover · telegram d2 — no data-4x-go telegram-d3
+- [ ] 2013 leftover · telegram d2 — no data-4x-go telegram-d4
+- [ ] Telegram leftover chat note — no data-4x-go tg-lx
+- [ ] Twitter IPO leftover — 7 Nov 2013 — no data-4x-go ti-13
+- [ ] 2013 leftover · twitteripo d2 — no data-4x-go ti-13-d2
+- [ ] Touch ID leftover 2× — no data-4x-go tid-lx
+- [ ] Telegram leftover 2× — no data-4x-go tla-lx
+- [ ] 2013 leftover · touchabout d2 — no data-4x-go touchabout-d2
+- [ ] 2013 leftover · tumblr about — no data-4x-go tumblr-about
+- [ ] 2013 leftover · tumblr d2 — no data-4x-go tumblr-d2
+- [ ] 2013 leftover · tumblr d2 — no data-4x-go tumblr-d3
+- [ ] 2013 leftover · tumblr13 d2 — no data-4x-go tumblr13-d2
+- [ ] Twitter leftover — no data-4x-go tw-lx
+- [ ] Twitter leftover 2× pack — no data-4x-go twb-lx
+- [ ] 2013 leftover · twitter about — no data-4x-go twitter-about
+- [ ] 2013 leftover · twitter d2 — no data-4x-go twitter-d2
+- [ ] Vineabout leftover 2× — no data-4x-go vina-lx
+- [ ] 2013 leftover · vine about — no data-4x-go vine-about
+- [ ] 2013 leftover · vine d2 — no data-4x-go vine-d2
+- [ ] 2013 leftover · vine d2 — no data-4x-go vine-d3
+- [ ] Vine leftover literacy — no data-4x-go vine-lx
+- [ ] 2013 leftover · vineabout d2 — no data-4x-go vineabout-d2
+- [ ] Vine leftover second hold — no data-4x-go vn-lx
+- [ ] Win8.1 leftover — no data-4x-go w81-lx
+- [ ] Win8.1 leftover 2× pack — no data-4x-go w81b-lx
+- [ ] Whisper leftover — no data-4x-go wh-lx
+- [ ] 2013 leftover · whisper d2 — no data-4x-go whisper-d2
+- [ ] Xbox One leftover — no data-4x-go xb-lx
+- [ ] 2013 leftover · xboxone d2 — no data-4x-go xboxone-d2
+- [ ] Yik Yak leftover — 2013 seed — no data-4x-go yk-13
+- [ ] 2013 leftover · yikyak13 d2 — no data-4x-go yk-13-d2
+- [ ] YouTube leftover — no data-4x-go yt-lx
+- [ ] YouTube leftover 2× pack — no data-4x-go ytb-lx
 
 ### Popular 3×
 - [x] Ask.fm — itt13-pop-askfm
@@ -1838,7 +2501,7 @@
 - [x] YouTube — itt13-pop-youtube
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 25 URLs resolved
+- [x] 28 URLs resolved
 
 ## 2014
 
@@ -1874,38 +2537,84 @@
 - [x] game-5.html — pack-game → itt14-game-paytap
 - [x] game.html — started
 - [x] index.html — cabinet
+- [x] more-a.html — more-game → itt14-game-clone
+- [x] more-b.html — more-game → itt14-game-inn
 
 ### 2× leftover dests
-- [x] WhatsApp leftover second note — itt14-wa-lx
-- [x] Heartbleed leftover second rotate — itt14-hb-lx
-- [x] Ice Bucket leftover second name — itt14-ice-lx
-- [x] iPhone 6 leftover second size — itt14-ip-lx
-- [x] Slack leftover second channel — itt14-sl-lx
-- [x] Twitch leftover second stream — itt14-tw-lx
-- [x] WhatsApp chat leftover — itt14-chat-lx
-- [x] Slack leftover 2× — itt14-sl2-lx
-- [x] Twitch leftover 2× — itt14-tw2-lx
-- [x] Swarm leftover — itt14-sw-lx
-- [x] Giphy leftover — itt14-gi-lx
-- [x] Material leftover — itt14-mat-lx
-- [x] Alipay leftover — itt14-ali-lx
-- [x] Uber leftover — itt14-ub-lx
-- [x] Facebook leftover — itt14-fb-lx
-- [x] YouTube leftover — itt14-yt-lx
-- [x] Wikipedia leftover — itt14-wk-lx
-- [x] iPhone 6 leftover 2× — itt14-ip6-lx
-- [x] IG leftover 2× — itt14-ig-lx
-- [x] Snap leftover 2× — itt14-sc-lx
-- [x] Waabout leftover 2× — itt14-waa-lx
-- [x] Apple Pay leftover 2× — itt14-pay-lx
-- [x] Material leftover 2× pack — itt14-mata-lx
-- [x] Ice Bucket leftover 2× — itt14-ib-lx
-- [x] Twitch leftover 2× pack — itt14-twch-lx
-- [x] Uber leftover 2× pack — itt14-ub2-lx
-- [x] Facebook leftover 2× pack — itt14-fb2-lx
-- [x] YouTube leftover 2× pack — itt14-yt2-lx
-- [x] Wikipedia leftover 2× pack — itt14-wk2-lx
-- [x] Giphy leftover 2× pack — itt14-gi2-lx
+- [ ] Alipay leftover — no data-4x-go ali-lx
+- [ ] 2014 leftover · ali lx d2 — no data-4x-go ali-lx-d2
+- [ ] WhatsApp chat leftover — no data-4x-go chat-lx
+- [ ] Echo invite leftover 6× — no data-4x-go ec-6x
+- [ ] 2014 leftover · ec 6x d2 — no data-4x-go ec-6x-d2
+- [ ] Ello leftover 6× — no data-4x-go el-6x
+- [ ] 2014 leftover · el 6x d2 — no data-4x-go el-6x-d2
+- [ ] 2014 leftover · facebook about — no data-4x-go facebook-about
+- [ ] Facebook leftover — no data-4x-go fb-lx
+- [ ] Facebook leftover 2× pack — no data-4x-go fb2-lx
+- [ ] 2014 leftover · fb2 lx d2 — no data-4x-go fb2-lx-d2
+- [ ] Giphy leftover — no data-4x-go gi-lx
+- [ ] Giphy leftover 2× pack — no data-4x-go gi2-lx
+- [ ] 2014 leftover · gi2 lx d2 — no data-4x-go gi2-lx-d2
+- [ ] Heartbleed leftover second rotate — no data-4x-go hb-lx
+- [ ] 2014 leftover · hb lx d2 — no data-4x-go hb-lx-d2
+- [ ] 2014 leftover · heartbleed about — no data-4x-go heartbleed-about
+- [ ] Ice Bucket leftover 2× — no data-4x-go ib-lx
+- [ ] 2014 leftover · ib lx d2 — no data-4x-go ib-lx-d2
+- [ ] Ice Bucket leftover second name — no data-4x-go ice-lx
+- [ ] 2014 leftover · icebucket about — no data-4x-go icebucket-about
+- [ ] IG leftover 2× — no data-4x-go ig-lx
+- [ ] 2014 leftover · ig lx d2 — no data-4x-go ig-lx-d2
+- [ ] 2014 leftover · instagram about — no data-4x-go instagram-about
+- [ ] iPhone 6 leftover second size — no data-4x-go ip-lx
+- [ ] 2014 leftover · ip lx d2 — no data-4x-go ip-lx-d2
+- [ ] iPhone 6 leftover 2× — no data-4x-go ip6-lx
+- [ ] 2014 leftover · iphone pay — no data-4x-go iphone-pay
+- [ ] Material leftover — no data-4x-go mat-lx
+- [ ] Material leftover 2× pack — no data-4x-go mata-lx
+- [ ] musical.ly leftover 6× — no data-4x-go ml-6x
+- [ ] Oculus leftover 6× — no data-4x-go oc-6x
+- [ ] Apple Pay leftover 2× — no data-4x-go pay-lx
+- [ ] 2014 leftover · playable — no data-4x-go playable
+- [ ] 2014 leftover · playable extra a — no data-4x-go playable-extra-a
+- [ ] 2014 leftover · playable extra b — no data-4x-go playable-extra-b
+- [ ] 2014 leftover · playable extra c — no data-4x-go playable-extra-c
+- [ ] 2014 leftover · playable extra d — no data-4x-go playable-extra-d
+- [ ] 2014 leftover · playable extra e — no data-4x-go playable-extra-e
+- [ ] 2014 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2014 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2014 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2014 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2014 leftover · playable famous — no data-4x-go playable-famous
+- [ ] 2014 leftover · playable game — no data-4x-go playable-game
+- [ ] 2014 leftover · playable game 2 — no data-4x-go playable-game-2
+- [ ] 2014 leftover · playable game 3 — no data-4x-go playable-game-3
+- [ ] 2014 leftover · playable game 4 — no data-4x-go playable-game-4
+- [ ] 2014 leftover · playable game 5 — no data-4x-go playable-game-5
+- [ ] 2014 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2014 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] Snap leftover 2× — no data-4x-go sc-lx
+- [ ] Serial leftover 6× — no data-4x-go se-6x
+- [ ] Slack leftover second channel — no data-4x-go sl-lx
+- [ ] Slack leftover 2× — no data-4x-go sl2-lx
+- [ ] 2014 leftover · slack about — no data-4x-go slack-about
+- [ ] 2014 leftover · snapchat about — no data-4x-go snapchat-about
+- [ ] Swarm leftover — no data-4x-go sw-lx
+- [ ] TrueCrypt leftover 6× — no data-4x-go tc-6x
+- [ ] Twitch leftover second stream — no data-4x-go tw-lx
+- [ ] Twitch leftover 2× — no data-4x-go tw2-lx
+- [ ] Twitch leftover 2× pack — no data-4x-go twch-lx
+- [ ] Twitter leftover 2× — no data-4x-go twt-lx
+- [ ] Uber leftover — no data-4x-go ub-lx
+- [ ] Uber leftover 2× pack — no data-4x-go ub2-lx
+- [ ] 2014 leftover · uber about — no data-4x-go uber-about
+- [ ] WhatsApp leftover second note — no data-4x-go wa-lx
+- [ ] Waabout leftover 2× — no data-4x-go waa-lx
+- [ ] 2014 leftover · whatsapp about — no data-4x-go whatsapp-about
+- [ ] Wikipedia leftover — no data-4x-go wk-lx
+- [ ] Wikipedia leftover 2× pack — no data-4x-go wk2-lx
+- [ ] 2014 leftover · youtube about — no data-4x-go youtube-about
+- [ ] YouTube leftover — no data-4x-go yt-lx
+- [ ] YouTube leftover 2× pack — no data-4x-go yt2-lx
 
 ### Popular 3×
 - [x] Snapchat — itt14-pop-snapchat
@@ -1942,60 +2651,159 @@
 - [x] extra-g.html — more-game → itt15-game-gwxnote
 - [x] extra-h.html — more-game → itt15-game-live2
 - [x] extra-i.html — more-game → itt15-game-lockernote
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game-2.html — minute → itt15-game-meerkathop
+- [x] famous.html — started
+- [x] game-2.html — pack-game → itt15-game-meerkathop
 - [x] game-3.html — minute → itt15-game-fbliveceleb
 - [x] game-4.html — minute → itt15-game-win10tray
 - [x] game-5.html — minute → itt15-game-watchface
 - [x] game.html — started
-- [x] index.html — leftover dest page (4× bound)
+- [x] index.html — cabinet
+- [x] more-a.html — more-game → itt15-game-mercy
+- [x] more-b.html — more-game → itt15-game-kickoff
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Periscope leftover titled Go LIVE — itt15-peri-title
-- [x] Google Photos leftover backup — itt15-gp
-- [x] Win10 leftover reserve — itt15-win10-lx
-- [x] Apple Music leftover trial honesty — itt15-am
-- [x] Edge Spartan leftover (not Chromium) — itt15-edge-lx
-- [x] Let's Encrypt leftover domain — itt15-le-lx
-- [x] iOS9 leftover content blockers — itt15-block
-- [x] Snap Discover leftover tiles — itt15-discover
-- [x] Discord leftover join — itt15-dc
-- [x] Echo leftover order literacy — itt15-echo-lx
-- [x] Watch leftover (not the chip) — itt15-watch-lx
-- [x] Meerkat leftover stream — itt15-meerkat
-- [x] FB Live leftover celebs-only — itt15-fblive
-- [x] Spotify leftover — itt15-spot
-- [x] Netflix leftover — itt15-nf
-- [x] Instagram leftover (no Stories) — itt15-ig
-- [x] Get Windows 10 leftover — itt15-gw10
-- [x] Meerkat live leftover — itt15-meerkat-live
-- [x] Periscope leftover watch title — itt15-peri-w
-- [x] Photos leftover library name — itt15-gp-lib
-- [x] Win10 leftover upgrade literacy — itt15-w10-up
-- [x] Beats 1 leftover show — itt15-beats1
-- [x] Apple Music leftover trial note — itt15-am-sub
-- [x] Watch leftover face name — itt15-faces
-- [x] Watch leftover pair literacy — itt15-pair
-- [x] Snapchat leftover story note — itt15-snap-h
-- [x] 2015 extra-a leftover — itt15-xa
-- [x] 2015 extra-b leftover — itt15-xb
-- [x] 2015 extra-c leftover — itt15-xc
-- [x] 2015 extra-d leftover — itt15-xd
-- [x] 2015 extra-e leftover — itt15-xe
-- [x] 2015 second game leftover — itt15-g2
-- [x] 2015 cabinet leftover — itt15-cab
-- [x] Famous leftover 2015 second — itt15-fam-2
-- [x] iOS 9 leftover blocker name — itt15-block-2
-- [x] Let's Encrypt leftover second domain — itt15-le-2
-- [x] adblock leftover REAL — itt15-adblock-rlx
-- [x] amppage leftover REAL — itt15-amppage-rlx
-- [x] discordabout leftover REAL — itt15-discordabo-rlx
-- [x] discoverabout leftover REAL — itt15-discoverab-rlx
-- [x] edgeabout leftover REAL — itt15-edgeabout-rlx
-- [x] leabout leftover REAL — itt15-leabout-rlx
-- [x] periabout leftover REAL — itt15-periabout-rlx
-- [x] photosabout leftover REAL — itt15-photosabou-rlx
-- [x] watchabout leftover REAL — itt15-watchabout-rlx
+- [ ] adblock leftover REAL — no data-4x-go adblock-rlx
+- [ ] 2015 leftover · adblock rlx d2 — no data-4x-go adblock-rlx-d2
+- [ ] Agar.io leftover 6× — no data-4x-go ag-6x
+- [ ] 2015 leftover · ag 6x d2 — no data-4x-go ag-6x-d2
+- [ ] Apple Music leftover trial honesty — no data-4x-go am
+- [ ] 2015 leftover · am d2 — no data-4x-go am-d2
+- [ ] Apple Music leftover trial note — no data-4x-go am-sub
+- [ ] 2015 leftover · am sub d2 — no data-4x-go am-sub-d2
+- [ ] amppage leftover REAL — no data-4x-go amppage-rlx
+- [ ] 2015 leftover · amppage rlx d2 — no data-4x-go amppage-rlx-d2
+- [ ] 2015 leftover · applemusic about — no data-4x-go applemusic-about
+- [ ] 2015 leftover · applemusic d2 — no data-4x-go applemusic-d2
+- [ ] Beats 1 leftover show — no data-4x-go beats1
+- [ ] 2015 leftover · beats1 d2 — no data-4x-go beats1-d2
+- [ ] iOS9 leftover content blockers — no data-4x-go block
+- [ ] iOS 9 leftover blocker name — no data-4x-go block-2
+- [ ] 2015 leftover · block d2 — no data-4x-go block-d2
+- [ ] 2015 cabinet leftover — no data-4x-go cab
+- [ ] Discord leftover join — no data-4x-go dc
+- [ ] 2015 leftover · dc d2 — no data-4x-go dc-d2
+- [ ] 2015 leftover · discord about — no data-4x-go discord-about
+- [ ] 2015 leftover · discord d2 — no data-4x-go discord-d2
+- [ ] discordabout leftover REAL — no data-4x-go discordabo-rlx
+- [ ] 2015 leftover · discordabo rlx d2 — no data-4x-go discordabo-rlx-d2
+- [ ] Snap Discover leftover tiles — no data-4x-go discover
+- [ ] discoverabout leftover REAL — no data-4x-go discoverab-rlx
+- [ ] 2015 leftover · discoverab rlx d2 — no data-4x-go discoverab-rlx-d2
+- [ ] 2015 leftover · echo about — no data-4x-go echo-about
+- [ ] 2015 leftover · echo d2 — no data-4x-go echo-d2
+- [ ] Echo leftover order literacy — no data-4x-go echo-lx
+- [ ] 2015 leftover · echo lx d2 — no data-4x-go echo-lx-d2
+- [ ] Edge Spartan leftover (not Chromium) — no data-4x-go edge-lx
+- [ ] 2015 leftover · edge lx d2 — no data-4x-go edge-lx-d2
+- [ ] edgeabout leftover REAL — no data-4x-go edgeabout-rlx
+- [ ] 2015 leftover · edgeabout rlx d2 — no data-4x-go edgeabout-rlx-d2
+- [ ] Watch leftover face name — no data-4x-go faces
+- [ ] 2015 leftover · faces d2 — no data-4x-go faces-d2
+- [ ] Famous leftover 2015 second — no data-4x-go fam-2
+- [ ] FB Live leftover celebs-only — no data-4x-go fblive
+- [ ] 2015 leftover · fblive d2 — no data-4x-go fblive-d2
+- [ ] 2015 second game leftover — no data-4x-go g2
+- [ ] 2015 leftover · googlephotos d2 — no data-4x-go googlephot-d2
+- [ ] 2015 leftover · googlephotos about — no data-4x-go googlephotos-about
+- [ ] Google Photos leftover backup — no data-4x-go gp
+- [ ] 2015 leftover · gp d2 — no data-4x-go gp-d2
+- [ ] Photos leftover library name — no data-4x-go gp-lib
+- [ ] 2015 leftover · gp lib d2 — no data-4x-go gp-lib-d2
+- [ ] Get Windows 10 leftover — no data-4x-go gw10
+- [ ] Instant Articles leftover 6× — no data-4x-go ia-6x
+- [ ] 2015 leftover · ia 6x d2 — no data-4x-go ia-6x-d2
+- [ ] Instagram leftover (no Stories) — no data-4x-go ig
+- [ ] 2015 leftover · ig d2 — no data-4x-go ig-d2
+- [ ] 2015 leftover · instagram about — no data-4x-go instagram-about
+- [ ] 2015 leftover · instagram d2 — no data-4x-go instagram-d2
+- [ ] Let's Encrypt leftover second domain — no data-4x-go le-2
+- [ ] Let's Encrypt leftover domain — no data-4x-go le-lx
+- [ ] 2015 leftover · le lx d2 — no data-4x-go le-lx-d2
+- [ ] leabout leftover REAL — no data-4x-go leabout-rlx
+- [ ] 2015 leftover · leabout rlx d2 — no data-4x-go leabout-rlx-d2
+- [ ] Meerkat leftover stream — no data-4x-go meerkat
+- [ ] 2015 leftover · meerkat d2 — no data-4x-go meerkat-d2
+- [ ] Meerkat live leftover — no data-4x-go meerkat-live
+- [ ] 2015 leftover · meerkat live d2 — no data-4x-go meerkat-live-d2
+- [ ] 2015 leftover · netflix about — no data-4x-go netflix-about
+- [ ] 2015 leftover · netflix d2 — no data-4x-go netflix-d2
+- [ ] Netflix leftover — no data-4x-go nf
+- [ ] 2015 leftover · nf d2 — no data-4x-go nf-d2
+- [ ] Watch leftover pair literacy — no data-4x-go pair
+- [ ] 2015 leftover · pair d2 — no data-4x-go pair-d2
+- [ ] Peach leftover — 2015 — no data-4x-go peach-lx
+- [ ] 2015 leftover · peach d2 — no data-4x-go peach-lx-d2
+- [ ] Periscope leftover titled Go LIVE — no data-4x-go peri-title
+- [ ] 2015 leftover · peri title d2 — no data-4x-go peri-title-d2
+- [ ] Periscope leftover watch title — no data-4x-go peri-w
+- [ ] 2015 leftover · peri w d2 — no data-4x-go peri-w-d2
+- [ ] periabout leftover REAL — no data-4x-go periabout-rlx
+- [ ] 2015 leftover · periabout rlx d2 — no data-4x-go periabout-rlx-d2
+- [ ] 2015 leftover · periscope about — no data-4x-go periscope-about
+- [ ] 2015 leftover · periscope d2 — no data-4x-go periscope-d2
+- [ ] photosabout leftover REAL — no data-4x-go photosabou-rlx
+- [ ] 2015 leftover · photosabou rlx d2 — no data-4x-go photosabou-rlx-d2
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d11
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d12
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d13
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d14
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d15
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d16
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d17
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2015 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2015 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2015 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2015 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2015 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2015 leftover · playable game — no data-4x-go playable-game
+- [ ] 2015 leftover · playable game 3 — no data-4x-go playable-game-3
+- [ ] 2015 leftover · playable game 4 — no data-4x-go playable-game-4
+- [ ] 2015 leftover · playable game 5 — no data-4x-go playable-game-5
+- [ ] 2015 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2015 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] Secret leftover 6× — no data-4x-go sec-6x
+- [ ] 2015 leftover · secret d2 — no data-4x-go secret-d2
+- [ ] Snapchat leftover story note — no data-4x-go snap-h
+- [ ] 2015 leftover · snapchat about — no data-4x-go snapchat-about
+- [ ] 2015 leftover · snapchat d2 — no data-4x-go snapchat-d2
+- [ ] 2015 leftover · snapchat d2 — no data-4x-go snapchat-d3
+- [ ] 2015 leftover · snapchat d2 — no data-4x-go snapchat-d4
+- [ ] Spotify leftover — no data-4x-go spot
+- [ ] 2015 leftover · spotify d2 — no data-4x-go spotify-d2
+- [ ] Swift OSS leftover 6× — no data-4x-go sw-6x
+- [ ] 2015 leftover · swiftoss d2 — no data-4x-go swiftoss-d2
+- [ ] Title II leftover 6× — no data-4x-go t2-6x
+- [ ] 2015 leftover · titleii d2 — no data-4x-go titleii-d2
+- [ ] Win10 leftover upgrade literacy — no data-4x-go w10-up
+- [ ] Watch leftover (not the chip) — no data-4x-go watch-lx
+- [ ] 2015 leftover · watch lx d2 — no data-4x-go watch-lx-d2
+- [ ] 2015 leftover · watchabout d2 — no data-4x-go watchabout-d2
+- [ ] watchabout leftover REAL — no data-4x-go watchabout-rlx
+- [ ] 2015 leftover · waweb d2 — no data-4x-go waweb-d2
+- [ ] Win10 leftover reserve — no data-4x-go win10-lx
+- [ ] 2015 leftover · win10get d2 — no data-4x-go win10get-d2
+- [ ] 2015 leftover · windows10 d2 — no data-4x-go windows1-d2
+- [ ] 2015 leftover · windows10 d2 — no data-4x-go windows1-d3
+- [ ] 2015 leftover · windows10 about — no data-4x-go windows10-about
+- [ ] 2015 leftover · windows10 d2 — no data-4x-go windows10-d2
+- [ ] WhatsApp Web leftover 6× — no data-4x-go ww-6x
+- [ ] 2015 extra-a leftover — no data-4x-go xa
+- [ ] 2015 leftover · xa d2 — no data-4x-go xa-d2
+- [ ] 2015 extra-b leftover — no data-4x-go xb
+- [ ] 2015 leftover · xb d2 — no data-4x-go xb-d2
+- [ ] 2015 extra-c leftover — no data-4x-go xc
+- [ ] 2015 extra-d leftover — no data-4x-go xd
+- [ ] 2015 extra-e leftover — no data-4x-go xe
 
 ### Popular 3×
 - [x] Instagram — itt15-pop-instagram
@@ -2003,7 +2811,7 @@
 - [x] Netflix — itt15-pop-netflix
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 26 URLs resolved
+- [x] 28 URLs resolved
 
 ## 2016
 
@@ -2037,55 +2845,114 @@
 - [x] game-3.html — minute → itt16-game-walkgo
 - [x] game-4.html — minute → itt16-game-reactbar
 - [x] game-5.html — minute → itt16-game-lipapp
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — leftover dest page (4× bound)
+- [x] game.html — started
+- [x] index.html — cabinet
+- [x] more-a.html — more-game → itt16-game-slither
+- [x] more-b.html — more-game → itt16-game-spawn
 
 ### 2× leftover dests
-- [x] Stories leftover add (empty blocked) — itt16-story
-- [x] Pokémon GO leftover team — itt16-pogo-lx
-- [x] Reactions leftover two faces — itt16-react
-- [x] WhatsApp E2E leftover — itt16-wa-e2e-lx
-- [x] iPhone 7 leftover no-jack — itt16-iphone7-lx
-- [x] Vine leftover dying — itt16-vine-end-lx
-- [x] Spectacles leftover — itt16-specs
-- [x] Musical.ly leftover (not TikTok) — itt16-mly
-- [x] Win10 free-upgrade ended leftover — itt16-win10-end-lx
-- [x] Dyn/Mirai leftover literacy (no exploit) — itt16-dyn-lx
-- [x] Slack leftover channel — itt16-slack
-- [x] Reddit leftover two votes — itt16-reddit
-- [x] Netflix leftover — itt16-nf
-- [x] YouTube leftover — itt16-yt
-- [x] FB Live leftover everyone — itt16-fblive
-- [x] Moments leftover — itt16-moments
-- [x] AirPods leftover — itt16-airpods-lx
-- [x] Gym Rush leftover literacy — itt16-gym
-- [x] Stories leftover archive note — itt16-ig-arch
-- [x] Vine leftover loop note — itt16-vine-h
-- [x] Snapchat leftover 2016 residual — itt16-snap-h
-- [x] 2016 extra-a leftover — itt16-xa
-- [x] 2016 extra-b leftover — itt16-xb
-- [x] 2016 extra-c leftover — itt16-xc
-- [x] 2016 extra-d leftover — itt16-xd
-- [x] 2016 extra-e leftover — itt16-xe
-- [x] 2016 cabinet leftover — itt16-cab
-- [x] Reactions leftover second face — itt16-react-2
-- [x] GO leftover sidewalk note — itt16-pogo-2
-- [x] musical.ly leftover second caption — itt16-mly-2
-- [x] Slack leftover channel — itt16-slack-2
-- [x] YouTube leftover second watch — itt16-yt-2
-- [x] Netflix leftover second title — itt16-nf-2
-- [x] Moments leftover second album — itt16-mom-2
-- [x] WhatsApp leftover second lock — itt16-wa-2
-- [x] Win10 leftover second note — itt16-w10e-2
-- [x] alphago leftover REAL — itt16-alphago-rlx
-- [x] e2eabout leftover REAL — itt16-e2eabout-rlx
-- [x] iphone7about leftover REAL — itt16-iphone7abo-rlx
-- [x] pogoabout leftover REAL — itt16-pogoabout-rlx
-- [x] reactabout leftover REAL — itt16-reactabout-rlx
-- [x] spectabout leftover REAL — itt16-spectabout-rlx
-- [x] storyabout leftover REAL — itt16-storyabout-rlx
-- [x] superbowl leftover REAL — itt16-superbowl-rlx
-- [x] win10end leftover REAL — itt16-win10end-rlx
+- [ ] AirPods leftover — no data-4x-go airpods-lx
+- [ ] 2016 leftover · airpods lx d2 — no data-4x-go airpods-lx-d2
+- [ ] alphago leftover REAL — no data-4x-go alphago-rlx
+- [ ] 2016 leftover · alphago rlx d2 — no data-4x-go alphago-rlx-d2
+- [ ] Assistant leftover 6× — no data-4x-go as-6x
+- [ ] 2016 leftover · as 6x d2 — no data-4x-go as-6x-d2
+- [ ] 2016 cabinet leftover — no data-4x-go cab
+- [ ] 2016 leftover · cab d2 — no data-4x-go cab-d2
+- [ ] Dyn/Mirai leftover literacy (no exploit) — no data-4x-go dyn-lx
+- [ ] 2016 leftover · dyn lx d2 — no data-4x-go dyn-lx-d2
+- [ ] e2eabout leftover REAL — no data-4x-go e2eabout-rlx
+- [ ] 2016 leftover · e2eabout rlx d2 — no data-4x-go e2eabout-rlx-d2
+- [ ] 2016 leftover · facebook about — no data-4x-go facebook-about
+- [ ] FB Live leftover everyone — no data-4x-go fblive
+- [ ] 2016 leftover · fblive d2 — no data-4x-go fblive-d2
+- [ ] Gym Rush leftover literacy — no data-4x-go gym
+- [ ] 2016 leftover · gym d2 — no data-4x-go gym-d2
+- [ ] Houseparty leftover 6× — no data-4x-go hp-6x
+- [ ] 2016 leftover · hp 6x d2 — no data-4x-go hp-6x-d2
+- [ ] Stories leftover archive note — no data-4x-go ig-arch
+- [ ] 2016 leftover · ig arch d2 — no data-4x-go ig-arch-d2
+- [ ] Inbox leftover 6× — no data-4x-go in-6x
+- [ ] 2016 leftover · in 6x d2 — no data-4x-go in-6x-d2
+- [ ] 2016 leftover · instagram about — no data-4x-go instagram-about
+- [ ] iPhone 7 leftover no-jack — no data-4x-go iphone7-lx
+- [ ] 2016 leftover · iphone7 lx d2 — no data-4x-go iphone7-lx-d2
+- [ ] iphone7about leftover REAL — no data-4x-go iphone7abo-rlx
+- [ ] 2016 leftover · iphone7abo rlx d2 — no data-4x-go iphone7abo-rlx-d2
+- [ ] Jio leftover 6× — no data-4x-go ji-6x
+- [ ] 2016 leftover · ji 6x d2 — no data-4x-go ji-6x-d2
+- [ ] LinkedIn leftover 6× — no data-4x-go li-6x
+- [ ] 2016 leftover · li 6x d2 — no data-4x-go li-6x-d2
+- [ ] Musical.ly leftover (not TikTok) — no data-4x-go mly
+- [ ] musical.ly leftover second caption — no data-4x-go mly-2
+- [ ] 2016 leftover · mly d2 — no data-4x-go mly-d2
+- [ ] Moments leftover second album — no data-4x-go mom-2
+- [ ] Moments leftover — no data-4x-go moments
+- [ ] 2016 leftover · moments d2 — no data-4x-go moments-d2
+- [ ] 2016 leftover · musically about — no data-4x-go musically-about
+- [ ] 2016 leftover · netflix about — no data-4x-go netflix-about
+- [ ] Netflix leftover — no data-4x-go nf
+- [ ] Netflix leftover second title — no data-4x-go nf-2
+- [ ] 2016 leftover · nf d2 — no data-4x-go nf-d2
+- [ ] 2016 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2016 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2016 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2016 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2016 leftover · playable famous — no data-4x-go playable-famous
+- [ ] 2016 leftover · playable game 2 — no data-4x-go playable-game-2
+- [ ] 2016 leftover · playable game 3 — no data-4x-go playable-game-3
+- [ ] 2016 leftover · playable game 4 — no data-4x-go playable-game-4
+- [ ] 2016 leftover · playable game 5 — no data-4x-go playable-game-5
+- [ ] 2016 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2016 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] GO leftover sidewalk note — no data-4x-go pogo-2
+- [ ] Pokémon GO leftover team — no data-4x-go pogo-lx
+- [ ] 2016 leftover · pogo lx d2 — no data-4x-go pogo-lx-d2
+- [ ] pogoabout leftover REAL — no data-4x-go pogoabout-rlx
+- [ ] 2016 leftover · pogoabout rlx d2 — no data-4x-go pogoabout-rlx-d2
+- [ ] 2016 leftover · pokemongo about — no data-4x-go pokemongo-about
+- [ ] Reactions leftover two faces — no data-4x-go react
+- [ ] Reactions leftover second face — no data-4x-go react-2
+- [ ] 2016 leftover · react d2 — no data-4x-go react-d2
+- [ ] reactabout leftover REAL — no data-4x-go reactabout-rlx
+- [ ] 2016 leftover · reactabout rlx d2 — no data-4x-go reactabout-rlx-d2
+- [ ] Reddit leftover two votes — no data-4x-go reddit
+- [ ] 2016 leftover · reddit about — no data-4x-go reddit-about
+- [ ] 2016 leftover · reddit d2 — no data-4x-go reddit-d2
+- [ ] Slack leftover channel — no data-4x-go slack
+- [ ] Slack leftover channel — no data-4x-go slack-2
+- [ ] 2016 leftover · slack d2 — no data-4x-go slack-d2
+- [ ] Super Mario Run leftover 6× — no data-4x-go sm-6x
+- [ ] 2016 leftover · sm 6x d2 — no data-4x-go sm-6x-d2
+- [ ] Snapchat leftover 2016 residual — no data-4x-go snap-h
+- [ ] Spectacles leftover — no data-4x-go specs
+- [ ] spectabout leftover REAL — no data-4x-go spectabout-rlx
+- [ ] Stories leftover add (empty blocked) — no data-4x-go story
+- [ ] 2016 leftover · story d2 — no data-4x-go story-d2
+- [ ] storyabout leftover REAL — no data-4x-go storyabout-rlx
+- [ ] superbowl leftover REAL — no data-4x-go superbowl-rlx
+- [ ] 2016 leftover · vine about — no data-4x-go vine-about
+- [ ] Vine leftover dying — no data-4x-go vine-end-lx
+- [ ] Vine leftover loop note — no data-4x-go vine-h
+- [ ] Win10 leftover second note — no data-4x-go w10e-2
+- [ ] WhatsApp leftover second lock — no data-4x-go wa-2
+- [ ] WhatsApp E2E leftover — no data-4x-go wa-e2e-lx
+- [ ] 2016 leftover · whatsapp about — no data-4x-go whatsapp-about
+- [ ] Win10 free-upgrade ended leftover — no data-4x-go win10-end-lx
+- [ ] win10end leftover REAL — no data-4x-go win10end-rlx
+- [ ] 2016 extra-a leftover — no data-4x-go xa
+- [ ] 2016 leftover · xa d2 — no data-4x-go xa-d2
+- [ ] 2016 extra-b leftover — no data-4x-go xb
+- [ ] 2016 leftover · xb d2 — no data-4x-go xb-d2
+- [ ] 2016 extra-c leftover — no data-4x-go xc
+- [ ] 2016 leftover · xc d2 — no data-4x-go xc-d2
+- [ ] 2016 extra-d leftover — no data-4x-go xd
+- [ ] 2016 leftover · xd d2 — no data-4x-go xd-d2
+- [ ] 2016 extra-e leftover — no data-4x-go xe
+- [ ] 2016 leftover · xe d2 — no data-4x-go xe-d2
+- [ ] 2016 leftover · youtube about — no data-4x-go youtube-about
+- [ ] YouTube leftover — no data-4x-go yt
+- [ ] YouTube leftover second watch — no data-4x-go yt-2
 
 ### Popular 3×
 - [x] Reddit — itt16-pop-reddit
@@ -2115,67 +2982,200 @@
 ### Games
 - [x] extra-a.html — minute → itt17-game-facetap
 - [x] extra-b.html — minute → itt17-game-bustap
-- [x] extra-c.html — more-game started
+- [x] extra-c.html — more-game → itt17-game-clipdesk
 - [x] extra-d.html — more-game → itt17-game-hintguess
-- [x] extra-e.html — more-game started
+- [x] extra-e.html — more-game → itt17-game-pondtier
 - [x] extra-f.html — more-game started
 - [x] extra-g.html — more-game → itt17-game-tweet280
 - [x] extra-h.html — more-game → itt17-game-look2
 - [x] extra-i.html — more-game → itt17-game-clipnote
-- [x] famous.html — leftover dest page (4× bound)
+- [x] famous.html — started
 - [x] game-2.html — minute → itt17-game-swipeup
 - [x] game-3.html — minute → itt17-game-animojipick
 - [x] game-4.html — minute → itt17-game-dropbus
 - [x] game-5.html — minute → itt17-game-twoeighty
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — leftover dest page (4× bound)
+- [x] game.html — started
+- [x] index.html — cabinet
+- [x] more-a.html — more-game → itt17-game-plane
+- [x] more-b.html — more-game → itt17-game-plateau
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] Face ID leftover two boxes — itt17-faceid-2x
-- [x] Animoji leftover (needs Face ID gold) — itt17-animoji-lx
-- [x] Fortnite leftover drop — itt17-fn
-- [x] Twitter leftover must exceed 140 — itt17-t280
-- [x] Teams leftover create — itt17-teams-lx
-- [x] Vine leftover actually gone — itt17-vine-gone-lx
-- [x] Switch leftover buy — itt17-switch-lx
-- [x] WannaCry leftover literacy (no payload) — itt17-wc
-- [x] Equifax leftover freeze literacy — itt17-eq
-- [x] Musical.ly leftover — itt17-mly
-- [x] Echo Show leftover — itt17-show
-- [x] Snap IPO leftover — itt17-snapipo
-- [x] Reddit leftover two — itt17-reddit
-- [x] YouTube leftover — itt17-yt
-- [x] Amazon leftover — itt17-amzn
-- [x] Bitcoin ATH leftover literacy — itt17-btc
-- [x] Storm Circle leftover literacy — itt17-storm
-- [x] Famous leftover 2017 — itt17-famous
-- [x] 2017 extra-a leftover — itt17-xa
-- [x] 2017 extra-b leftover — itt17-xb
-- [x] 2017 extra-c leftover — itt17-xc
-- [x] 2017 extra-d leftover — itt17-xd
-- [x] 2017 extra-e leftover — itt17-xe
-- [x] 2017 cabinet leftover — itt17-cab
-- [x] Fortnite leftover second drop — itt17-fn-2
-- [x] Amazon leftover second search — itt17-amzn-2
-- [x] YouTube leftover second watch — itt17-yt-2
-- [x] Reddit leftover second row — itt17-reddit-2
-- [x] Twitter leftover second 280 — itt17-t280-2
-- [x] Teams leftover second name — itt17-teams-2
-- [x] WannaCry leftover second literacy — itt17-wc-2
-- [x] Switch leftover second reserve — itt17-sw-2
-- [x] musical.ly leftover second caption — itt17-mly-2
-- [x] Snap IPO leftover second note — itt17-snap-2
-- [x] Bitcoin leftover second note — itt17-btc-2
-- [x] Echo Show leftover second note — itt17-show-2
-- [x] bitmoji leftover REAL — itt17-bitmoji-rlx
-- [x] equifaxabout leftover REAL — itt17-equifaxabo-rlx
-- [x] faceabout leftover REAL — itt17-faceabout-rlx
-- [x] hqtrivia leftover REAL — itt17-hqtrivia-rlx
-- [x] musically17 leftover REAL — itt17-musically1-rlx
-- [x] notpetya leftover REAL — itt17-notpetya-rlx
-- [x] pubgnote leftover REAL — itt17-pubgnote-rlx
-- [x] t280about leftover REAL — itt17-t280about-rlx
-- [x] wannaabout leftover REAL — itt17-wannaabout-rlx
+- [ ] 2017 leftover · amazon about — no data-4x-go amazon-about
+- [ ] 2017 leftover · amazon d2 — no data-4x-go amazon-d2
+- [ ] Amazon leftover — no data-4x-go amzn
+- [ ] Amazon leftover second search — no data-4x-go amzn-2
+- [ ] 2017 leftover · amzn d2 — no data-4x-go amzn-d2
+- [ ] Animoji leftover (needs Face ID gold) — no data-4x-go animoji-lx
+- [ ] 2017 leftover · animoji lx d2 — no data-4x-go animoji-lx-d2
+- [ ] AirPods leftover deepen — no data-4x-go ap17-dp
+- [ ] 2017 leftover · ap17 dp d2 — no data-4x-go ap17-dp-d2
+- [ ] ARKit leftover 6× — no data-4x-go ar-6x
+- [ ] 2017 leftover · ar 6x d2 — no data-4x-go ar-6x-d2
+- [ ] Bitcoin Cash leftover deepen — no data-4x-go bch-dp
+- [ ] 2017 leftover · bch dp d2 — no data-4x-go bch-dp-d2
+- [ ] bitmoji leftover REAL — no data-4x-go bitmoji-rlx
+- [ ] 2017 leftover · bitmoji rlx d2 — no data-4x-go bitmoji-rlx-d2
+- [ ] Bitcoin ATH leftover literacy — no data-4x-go btc
+- [ ] Bitcoin leftover second note — no data-4x-go btc-2
+- [ ] 2017 leftover · btc d2 — no data-4x-go btc-d2
+- [ ] 2017 cabinet leftover — no data-4x-go cab
+- [ ] 2017 leftover · cab d2 — no data-4x-go cab-d2
+- [ ] Cloudbleed leftover deepen — no data-4x-go cbleed-dp
+- [ ] 2017 leftover · cbleed dp d2 — no data-4x-go cbleed-dp-d2
+- [ ] Credit freeze leftover deepen — no data-4x-go cfrz-dp
+- [ ] 2017 leftover · cfrz dp d2 — no data-4x-go cfrz-dp-d2
+- [ ] CME Bitcoin leftover deepen — no data-4x-go cmebtc-dp
+- [ ] 2017 leftover · cmebtc dp d2 — no data-4x-go cmebtc-dp-d2
+- [ ] Core ML leftover deepen — no data-4x-go coreml-dp
+- [ ] 2017 leftover · coreml dp d2 — no data-4x-go coreml-dp-d2
+- [ ] Discord leftover deepen — no data-4x-go dc17-dp
+- [ ] 2017 leftover · dc17 dp d2 — no data-4x-go dc17-dp-d2
+- [ ] Equifax leftover freeze literacy — no data-4x-go eq
+- [ ] 2017 leftover · eq d2 — no data-4x-go eq-d2
+- [ ] equifaxabout leftover REAL — no data-4x-go equifaxabo-rlx
+- [ ] 2017 leftover · equifaxabo rlx d2 — no data-4x-go equifaxabo-rlx-d2
+- [ ] faceabout leftover REAL — no data-4x-go faceabout-rlx
+- [ ] 2017 leftover · faceabout rlx d2 — no data-4x-go faceabout-rlx-d2
+- [ ] Face ID leftover two boxes — no data-4x-go faceid-2x
+- [ ] 2017 leftover · faceid 2x d2 — no data-4x-go faceid-2x-d2
+- [ ] Famous leftover 2017 — no data-4x-go famous
+- [ ] 2017 leftover · famous d2 — no data-4x-go famous-d2
+- [ ] Facebook 2 billion leftover deepen — no data-4x-go fb2b-dp
+- [ ] 2017 leftover · fb2b dp d2 — no data-4x-go fb2b-dp-d2
+- [ ] Flash EOL announce leftover 6× — no data-4x-go fl-6x
+- [ ] 2017 leftover · fl 6x d2 — no data-4x-go fl-6x-d2
+- [ ] Fortnite leftover drop — no data-4x-go fn
+- [ ] Fortnite leftover second drop — no data-4x-go fn-2
+- [ ] 2017 leftover · fn d2 — no data-4x-go fn-d2
+- [ ] 2017 leftover · fortnite about — no data-4x-go fortnite-about
+- [ ] 2017 leftover · fortnite d2 — no data-4x-go fortnite-d2
+- [ ] HomePod announce leftover deepen — no data-4x-go hpodann-dp
+- [ ] 2017 leftover · hpodann dp d2 — no data-4x-go hpodann-dp-d2
+- [ ] hqtrivia leftover REAL — no data-4x-go hqtrivia-rlx
+- [ ] 2017 leftover · hqtrivia rlx d2 — no data-4x-go hqtrivia-rlx-d2
+- [ ] iOS 11 leftover deepen — no data-4x-go ios11-dp
+- [ ] 2017 leftover · ios11 dp d2 — no data-4x-go ios11-dp-d2
+- [ ] 2017 leftover · iphone about — no data-4x-go iphone-about
+- [ ] 2017 leftover · iphone d2 — no data-4x-go iphone-d2
+- [ ] iPhone 8 leftover deepen — no data-4x-go iphone8-dp
+- [ ] 2017 leftover · iphone8 dp d2 — no data-4x-go iphone8-dp-d2
+- [ ] KRACK leftover 6× — no data-4x-go kr-6x
+- [ ] 2017 leftover · kr 6x d2 — no data-4x-go kr-6x-d2
+- [ ] Musical.ly leftover — no data-4x-go mly
+- [ ] musical.ly leftover second caption — no data-4x-go mly-2
+- [ ] 2017 leftover · mly d2 — no data-4x-go mly-d2
+- [ ] musically17 leftover REAL — no data-4x-go musically1-rlx
+- [ ] 2017 leftover · musically1 rlx d2 — no data-4x-go musically1-rlx-d2
+- [ ] Title II repeal leftover 6× — no data-4x-go nn-6x
+- [ ] 2017 leftover · nn 6x d2 — no data-4x-go nn-6x-d2
+- [ ] notpetya leftover REAL — no data-4x-go notpetya-rlx
+- [ ] 2017 leftover · notpetya rlx d2 — no data-4x-go notpetya-rlx-d2
+- [ ] Odyssey leftover deepen — no data-4x-go odyssey-dp
+- [ ] 2017 leftover · odyssey dp d2 — no data-4x-go odyssey-dp-d2
+- [ ] Android Oreo leftover deepen — no data-4x-go oreo-dp
+- [ ] 2017 leftover · oreo dp d2 — no data-4x-go oreo-dp-d2
+- [ ] Apple Park leftover deepen — no data-4x-go park-dp
+- [ ] 2017 leftover · park dp d2 — no data-4x-go park-dp-d2
+- [ ] Pixelbook leftover deepen — no data-4x-go pbook-dp
+- [ ] 2017 leftover · pbook dp d2 — no data-4x-go pbook-dp-d2
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d11
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2017 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2017 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2017 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2017 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2017 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2017 leftover · playable game 2 — no data-4x-go playable-game-2
+- [ ] 2017 leftover · playable game 3 — no data-4x-go playable-game-3
+- [ ] 2017 leftover · playable game 4 — no data-4x-go playable-game-4
+- [ ] 2017 leftover · playable game 5 — no data-4x-go playable-game-5
+- [ ] 2017 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2017 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] pubgnote leftover REAL — no data-4x-go pubgnote-rlx
+- [ ] 2017 leftover · pubgnote rlx d2 — no data-4x-go pubgnote-rlx-d2
+- [ ] Pixel 2 leftover 6× — no data-4x-go px-6x
+- [ ] 2017 leftover · px 6x d2 — no data-4x-go px-6x-d2
+- [ ] Reddit leftover two — no data-4x-go reddit
+- [ ] Reddit leftover second row — no data-4x-go reddit-2
+- [ ] 2017 leftover · reddit about — no data-4x-go reddit-about
+- [ ] 2017 leftover · reddit d2 — no data-4x-go reddit-d2
+- [ ] 2017 leftover · reddit d2 — no data-4x-go reddit-d3
+- [ ] Echo Show leftover — no data-4x-go show
+- [ ] Echo Show leftover second note — no data-4x-go show-2
+- [ ] 2017 leftover · show d2 — no data-4x-go show-d2
+- [ ] Signal leftover deepen — no data-4x-go sig17-dp
+- [ ] 2017 leftover · sig17 dp d2 — no data-4x-go sig17-dp-d2
+- [ ] Slack leftover deepen — no data-4x-go slack17-dp
+- [ ] 2017 leftover · slack17 dp d2 — no data-4x-go slack17-dp-d2
+- [ ] Snap IPO leftover second note — no data-4x-go snap-2
+- [ ] Snap IPO leftover — no data-4x-go snapipo
+- [ ] 2017 leftover · snapipo d2 — no data-4x-go snapipo-d2
+- [ ] Storm Circle leftover literacy — no data-4x-go storm
+- [ ] 2017 leftover · storm d2 — no data-4x-go storm-d2
+- [ ] Save the World leftover deepen — no data-4x-go stw-dp
+- [ ] 2017 leftover · stw dp d2 — no data-4x-go stw-dp-d2
+- [ ] Switch leftover second reserve — no data-4x-go sw-2
+- [ ] 2017 leftover · switch about — no data-4x-go switch-about
+- [ ] 2017 leftover · switch d2 — no data-4x-go switch-d2
+- [ ] Switch leftover buy — no data-4x-go switch-lx
+- [ ] 2017 leftover · switch lx d2 — no data-4x-go switch-lx-d2
+- [ ] Twitter leftover must exceed 140 — no data-4x-go t280
+- [ ] Twitter leftover second 280 — no data-4x-go t280-2
+- [ ] 2017 leftover · t280 d2 — no data-4x-go t280-d2
+- [ ] t280about leftover REAL — no data-4x-go t280about-rlx
+- [ ] 2017 leftover · t280about rlx d2 — no data-4x-go t280about-rlx-d2
+- [ ] Teams leftover second name — no data-4x-go teams-2
+- [ ] 2017 leftover · teams about — no data-4x-go teams-about
+- [ ] 2017 leftover · teams d2 — no data-4x-go teams-d2
+- [ ] Teams leftover create — no data-4x-go teams-lx
+- [ ] 2017 leftover · teams lx d2 — no data-4x-go teams-lx-d2
+- [ ] Telegram leftover deepen — no data-4x-go tg17-dp
+- [ ] 2017 leftover · tg17 dp d2 — no data-4x-go tg17-dp-d2
+- [ ] 2017 leftover · twitter about — no data-4x-go twitter-about
+- [ ] 2017 leftover · twitter d2 — no data-4x-go twitter-d2
+- [ ] Vault 7 leftover deepen — no data-4x-go vault7-dp
+- [ ] 2017 leftover · vault7 dp d2 — no data-4x-go vault7-dp-d2
+- [ ] Vine leftover actually gone — no data-4x-go vine-gone-lx
+- [ ] 2017 leftover · vine gone lx d2 — no data-4x-go vine-gone-lx-d2
+- [ ] wannaabout leftover REAL — no data-4x-go wannaabout-rlx
+- [ ] 2017 leftover · wannaabout rlx d2 — no data-4x-go wannaabout-rlx-d2
+- [ ] 2017 leftover · wannacry about — no data-4x-go wannacry-about
+- [ ] 2017 leftover · wannacry d2 — no data-4x-go wannacry-d2
+- [ ] 2017 leftover · watch3 d2 — no data-4x-go watch3-d2
+- [ ] Watch Series 3 leftover deepen — no data-4x-go watch3-dp
+- [ ] WannaCry leftover literacy (no payload) — no data-4x-go wc
+- [ ] WannaCry leftover second literacy — no data-4x-go wc-2
+- [ ] 2017 extra-a leftover — no data-4x-go xa
+- [ ] 2017 leftover · xa d2 — no data-4x-go xa-d2
+- [ ] 2017 extra-b leftover — no data-4x-go xb
+- [ ] 2017 leftover · xb d2 — no data-4x-go xb-d2
+- [ ] 2017 leftover · xboxonex d2 — no data-4x-go xboxonex-d2
+- [ ] 2017 extra-c leftover — no data-4x-go xc
+- [ ] 2017 leftover · xc d2 — no data-4x-go xc-d2
+- [ ] 2017 extra-d leftover — no data-4x-go xd
+- [ ] 2017 leftover · xd d2 — no data-4x-go xd-d2
+- [ ] 2017 extra-e leftover — no data-4x-go xe
+- [ ] 2017 leftover · xe d2 — no data-4x-go xe-d2
+- [ ] Xbox One X leftover deepen — no data-4x-go xonex-dp
+- [ ] 2017 leftover · yahoo3b d2 — no data-4x-go yahoo3b-d2
+- [ ] Yahoo 3 billion leftover deepen — no data-4x-go yahoo3b-dp
+- [ ] 2017 leftover · youtube about — no data-4x-go youtube-about
+- [ ] 2017 leftover · youtube d2 — no data-4x-go youtube-d2
+- [ ] 2017 leftover · youtubetv d2 — no data-4x-go youtubetv-d2
+- [ ] YouTube leftover — no data-4x-go yt
+- [ ] YouTube leftover second watch — no data-4x-go yt-2
+- [ ] YouTube TV leftover 6× — no data-4x-go ytv-6x
+- [ ] 2017 leftover · zoom17 d2 — no data-4x-go zoom17-d2
+- [ ] Zoom leftover deepen — no data-4x-go zoom17-dp
 
 ### Popular 3×
 - [x] Reddit — itt17-pop-reddit
@@ -2183,7 +3183,7 @@
 - [x] Amazon — itt17-pop-amazon
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 25 URLs resolved
+- [x] 28 URLs resolved
 
 ## 2018
 
@@ -2212,60 +3212,190 @@
 - [x] extra-g.html — more-game → itt18-game-fypnote
 - [x] extra-h.html — more-game → itt18-game-banner2
 - [x] extra-i.html — more-game → itt18-game-hearingnote
-- [x] famous.html — leftover dest page (4× bound)
+- [x] famous.html — started
 - [x] game-2.html — minute → itt18-game-cookiebar
 - [x] game-3.html — minute → itt18-game-fypforu
 - [x] game-4.html — minute → itt18-game-notlock
 - [x] game-5.html — minute → itt18-game-igtvrow
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — leftover dest page (4× bound)
+- [x] game.html — started
+- [x] index.html — cabinet
+- [x] more-a.html — more-game → itt18-game-dashclimb
+- [x] more-b.html — more-game → itt18-game-votetick
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] GDPR Manage leftover two ticks — itt18-gdpr-2x
-- [x] TikTok leftover two FYP taps — itt18-fyp
-- [x] Hearing leftover sit — itt18-hear
-- [x] IGTV leftover post (not Reels) — itt18-igtv-lx
-- [x] Chrome 68 leftover Not Secure — itt18-ns
-- [x] HomePod leftover reserve — itt18-hp
-- [x] Spectre leftover literacy — itt18-sp
-- [x] Fortnite Switch leftover drop — itt18-fn-sw
-- [x] Microsoft♥GitHub leftover — itt18-gh-ms
-- [x] Discord leftover — itt18-dc
-- [x] Reddit leftover two — itt18-reddit
-- [x] YouTube leftover — itt18-yt
-- [x] Wikipedia leftover — itt18-wiki
-- [x] Apple Music leftover — itt18-am
-- [x] GDPR leftover door (Accept All never here) — itt18-gdpr-door
-- [x] Consent Dash leftover (Manage wins) — itt18-consent
-- [x] Fortnite Creative leftover — itt18-fn-cr
-- [x] Famous leftover 2018 — itt18-famous
-- [x] TikTok leftover home note — itt18-tt-h
-- [x] GitHub leftover issue note — itt18-gh-h
-- [x] 2018 extra-a leftover — itt18-xa
-- [x] 2018 extra-b leftover — itt18-xb
-- [x] 2018 extra-c leftover — itt18-xc
-- [x] 2018 extra-d leftover — itt18-xd
-- [x] 2018 extra-e leftover — itt18-xe
-- [x] 2018 cabinet leftover — itt18-cab
-- [x] YouTube leftover second watch — itt18-yt-2
-- [x] Wikipedia leftover second article — itt18-wiki-2
-- [x] Reddit leftover second row — itt18-reddit-2
-- [x] Discord leftover second join — itt18-dc-2
-- [x] Chrome leftover second URL — itt18-ns-2
-- [x] IGTV leftover second title — itt18-igtv-2
-- [x] Hearing leftover second note — itt18-hear-2
-- [x] HomePod leftover second reserve — itt18-hp-2
-- [x] Spectre leftover second literacy — itt18-sp-2
-- [x] Apple Music leftover second trial — itt18-am-2
-- [x] cambridge leftover REAL — itt18-cambridge-rlx
-- [x] fnswitch leftover REAL — itt18-fnswitch-rlx
-- [x] fypabout leftover REAL — itt18-fypabout-rlx
-- [x] gdpra leftover REAL — itt18-gdpra-rlx
-- [x] githubms leftover REAL — itt18-githubms-rlx
-- [x] homepodabout leftover REAL — itt18-homepodabo-rlx
-- [x] igtvabout leftover REAL — itt18-igtvabout-rlx
-- [x] notsecure leftover REAL — itt18-notsecure-rlx
-- [x] spectre18 leftover REAL — itt18-spectre18-rlx
+- [ ] Apple Music leftover — no data-4x-go am
+- [ ] Apple Music leftover second trial — no data-4x-go am-2
+- [ ] 2018 leftover · am d2 — no data-4x-go am-d2
+- [ ] Bitcoin leftover 2018 deepen — no data-4x-go btc18-dp
+- [ ] 2018 leftover · btc18 dp d2 — no data-4x-go btc18-dp-d2
+- [ ] 2018 cabinet leftover — no data-4x-go cab
+- [ ] 2018 leftover · cab d2 — no data-4x-go cab-d2
+- [ ] cambridge leftover REAL — no data-4x-go cambridge-rlx
+- [ ] 2018 leftover · cambridge rlx d2 — no data-4x-go cambridge-rlx-d2
+- [ ] Craigslist personals leftover 6× — no data-4x-go cl-6x
+- [ ] 2018 leftover · cl 6x d2 — no data-4x-go cl-6x-d2
+- [ ] Consent Dash leftover (Manage wins) — no data-4x-go consent
+- [ ] 2018 leftover · consent d2 — no data-4x-go consent-d2
+- [ ] Discord leftover — no data-4x-go dc
+- [ ] Discord leftover second join — no data-4x-go dc-2
+- [ ] 2018 leftover · dc d2 — no data-4x-go dc-d2
+- [ ] 2018 leftover · discord about — no data-4x-go discord-about
+- [ ] 2018 leftover · discord d2 — no data-4x-go discord-d2
+- [ ] 1.1.1.1 leftover deepen — no data-4x-go dns-dp
+- [ ] 2018 leftover · dns dp d2 — no data-4x-go dns-dp-d2
+- [ ] Duplex leftover deepen — no data-4x-go duplex-dp
+- [ ] 2018 leftover · duplex dp d2 — no data-4x-go duplex-dp-d2
+- [ ] Epic Games Store leftover deepen — no data-4x-go egs-dp
+- [ ] 2018 leftover · egs dp d2 — no data-4x-go egs-dp-d2
+- [ ] Famous leftover 2018 — no data-4x-go famous
+- [ ] 2018 leftover · famous d2 — no data-4x-go famous-d2
+- [ ] Fortnite iOS leftover 6× — no data-4x-go fi-6x
+- [ ] 2018 leftover · fi 6x d2 — no data-4x-go fi-6x-d2
+- [ ] Fortnite Creative leftover — no data-4x-go fn-cr
+- [ ] 2018 leftover · fn cr d2 — no data-4x-go fn-cr-d2
+- [ ] Fortnite Switch leftover drop — no data-4x-go fn-sw
+- [ ] 2018 leftover · fn sw d2 — no data-4x-go fn-sw-d2
+- [ ] fnswitch leftover REAL — no data-4x-go fnswitch-rlx
+- [ ] 2018 leftover · fnswitch rlx d2 — no data-4x-go fnswitch-rlx-d2
+- [ ] TikTok leftover two FYP taps — no data-4x-go fyp
+- [ ] fypabout leftover REAL — no data-4x-go fypabout-rlx
+- [ ] 2018 leftover · fypabout rlx d2 — no data-4x-go fypabout-rlx-d2
+- [ ] GDPR Manage leftover two ticks — no data-4x-go gdpr-2x
+- [ ] 2018 leftover · gdpr 2x d2 — no data-4x-go gdpr-2x-d2
+- [ ] 2018 leftover · gdpr about — no data-4x-go gdpr-about
+- [ ] 2018 leftover · gdpr d2 — no data-4x-go gdpr-d2
+- [ ] GDPR leftover door (Accept All never here) — no data-4x-go gdpr-door
+- [ ] 2018 leftover · gdpr door d2 — no data-4x-go gdpr-door-d2
+- [ ] gdpra leftover REAL — no data-4x-go gdpra-rlx
+- [ ] 2018 leftover · gdpra rlx d2 — no data-4x-go gdpra-rlx-d2
+- [ ] Group FaceTime leftover deepen — no data-4x-go gft-dp
+- [ ] 2018 leftover · gft dp d2 — no data-4x-go gft-dp-d2
+- [ ] GitHub leftover issue note — no data-4x-go gh-h
+- [ ] 2018 leftover · gh h d2 — no data-4x-go gh-h-d2
+- [ ] Microsoft♥GitHub leftover — no data-4x-go gh-ms
+- [ ] 2018 leftover · gh ms d2 — no data-4x-go gh-ms-d2
+- [ ] 2018 leftover · github about — no data-4x-go github-about
+- [ ] 2018 leftover · github d2 — no data-4x-go github-d2
+- [ ] githubms leftover REAL — no data-4x-go githubms-rlx
+- [ ] 2018 leftover · githubms rlx d2 — no data-4x-go githubms-rlx-d2
+- [ ] God of War leftover deepen — no data-4x-go gow-dp
+- [ ] 2018 leftover · gow dp d2 — no data-4x-go gow-dp-d2
+- [ ] Google+ sunset leftover 6× — no data-4x-go gp-6x
+- [ ] 2018 leftover · gp 6x d2 — no data-4x-go gp-6x-d2
+- [ ] Hearing leftover sit — no data-4x-go hear
+- [ ] Hearing leftover second note — no data-4x-go hear-2
+- [ ] 2018 leftover · homepod about — no data-4x-go homepod-about
+- [ ] 2018 leftover · homepod d2 — no data-4x-go homepod-d2
+- [ ] homepodabout leftover REAL — no data-4x-go homepodabo-rlx
+- [ ] 2018 leftover · homepodabo rlx d2 — no data-4x-go homepodabo-rlx-d2
+- [ ] HomePod leftover reserve — no data-4x-go hp
+- [ ] HomePod leftover second reserve — no data-4x-go hp-2
+- [ ] 2018 leftover · hp d2 — no data-4x-go hp-d2
+- [ ] IGTV leftover second title — no data-4x-go igtv-2
+- [ ] IGTV leftover post (not Reels) — no data-4x-go igtv-lx
+- [ ] 2018 leftover · igtv lx d2 — no data-4x-go igtv-lx-d2
+- [ ] igtvabout leftover REAL — no data-4x-go igtvabout-rlx
+- [ ] 2018 leftover · igtvabout rlx d2 — no data-4x-go igtvabout-rlx-d2
+- [ ] iTunes movie leftover 6× — no data-4x-go im-6x
+- [ ] 2018 leftover · im 6x d2 — no data-4x-go im-6x-d2
+- [ ] 2018 leftover · instagram about — no data-4x-go instagram-about
+- [ ] 2018 leftover · instagram d2 — no data-4x-go instagram-d2
+- [ ] iOS 12 leftover deepen — no data-4x-go ios12-dp
+- [ ] 2018 leftover · ios12 dp d2 — no data-4x-go ios12-dp-d2
+- [ ] Labo leftover deepen — no data-4x-go labo-dp
+- [ ] 2018 leftover · labo dp d2 — no data-4x-go labo-dp-d2
+- [ ] Mastodon leftover 6× — no data-4x-go ma-6x
+- [ ] 2018 leftover · ma 6x d2 — no data-4x-go ma-6x-d2
+- [ ] Memoji leftover deepen — no data-4x-go memoji-dp
+- [ ] 2018 leftover · memoji dp d2 — no data-4x-go memoji-dp-d2
+- [ ] Mojave leftover deepen — no data-4x-go mojave-dp
+- [ ] 2018 leftover · mojave dp d2 — no data-4x-go mojave-dp-d2
+- [ ] notsecure leftover REAL — no data-4x-go notsecure-rlx
+- [ ] 2018 leftover · notsecure rlx d2 — no data-4x-go notsecure-rlx-d2
+- [ ] Chrome 68 leftover Not Secure — no data-4x-go ns
+- [ ] Chrome leftover second URL — no data-4x-go ns-2
+- [ ] 2018 leftover · ns d2 — no data-4x-go ns-d2
+- [ ] Oculus Go leftover deepen — no data-4x-go ogo-dp
+- [ ] 2018 leftover · ogo dp d2 — no data-4x-go ogo-dp-d2
+- [ ] Android Pie leftover deepen — no data-4x-go pie-dp
+- [ ] 2018 leftover · pie dp d2 — no data-4x-go pie-dp-d2
+- [ ] Pixel 3 leftover deepen — no data-4x-go pixel3-dp
+- [ ] 2018 leftover · pixel3 dp d2 — no data-4x-go pixel3-dp-d2
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d11
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2018 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2018 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2018 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2018 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2018 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2018 leftover · playable game 2 — no data-4x-go playable-game-2
+- [ ] 2018 leftover · playable game 3 — no data-4x-go playable-game-3
+- [ ] 2018 leftover · playable game 4 — no data-4x-go playable-game-4
+- [ ] 2018 leftover · playable game 5 — no data-4x-go playable-game-5
+- [ ] 2018 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2018 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] Portal leftover deepen — no data-4x-go portal-dp
+- [ ] 2018 leftover · portal dp d2 — no data-4x-go portal-dp-d2
+- [ ] Red Dead 2 leftover deepen — no data-4x-go rdr2-dp
+- [ ] 2018 leftover · rdr2 dp d2 — no data-4x-go rdr2-dp-d2
+- [ ] Reddit leftover two — no data-4x-go reddit
+- [ ] Reddit leftover second row — no data-4x-go reddit-2
+- [ ] 2018 leftover · reddit about — no data-4x-go reddit-about
+- [ ] 2018 leftover · reddit d2 — no data-4x-go reddit-d2
+- [ ] 2018 leftover · reddit d2 — no data-4x-go reddit-d3
+- [ ] Slack leftover deepen — no data-4x-go slack18-dp
+- [ ] 2018 leftover · slack18 dp d2 — no data-4x-go slack18-dp-d2
+- [ ] Smash leftover deepen — no data-4x-go smash-dp
+- [ ] 2018 leftover · smash dp d2 — no data-4x-go smash-dp-d2
+- [ ] Spectre leftover literacy — no data-4x-go sp
+- [ ] Spectre leftover second literacy — no data-4x-go sp-2
+- [ ] 2018 leftover · sp d2 — no data-4x-go sp-d2
+- [ ] 2018 leftover · spectre18 d2 — no data-4x-go spectre18-d2
+- [ ] spectre18 leftover REAL — no data-4x-go spectre18-rlx
+- [ ] Screen Time leftover 6× — no data-4x-go st-6x
+- [ ] 2018 leftover · st 6x d2 — no data-4x-go st-6x-d2
+- [ ] 2018 leftover · tiktok about — no data-4x-go tiktok-about
+- [ ] 2018 leftover · tiktok d2 — no data-4x-go tiktok-d2
+- [ ] 2018 leftover · tiktok d2 — no data-4x-go tiktok-d3
+- [ ] 2018 leftover · tiktok d2 — no data-4x-go tiktok-d4
+- [ ] TikTok leftover home note — no data-4x-go tt-h
+- [ ] Tumblr leftover ban deepen — no data-4x-go tumblr18-dp
+- [ ] 2018 leftover · tumblrban d2 — no data-4x-go tumblrban-d2
+- [ ] 2018 leftover · watch4 d2 — no data-4x-go watch4-d2
+- [ ] Watch Series 4 leftover deepen — no data-4x-go watch4-dp
+- [ ] Wikipedia leftover — no data-4x-go wiki
+- [ ] Wikipedia leftover second article — no data-4x-go wiki-2
+- [ ] 2018 leftover · wikipedia about — no data-4x-go wikipedia-about
+- [ ] 2018 leftover · wikipedia d2 — no data-4x-go wikipedia-d2
+- [ ] 2018 extra-a leftover — no data-4x-go xa
+- [ ] 2018 leftover · xa d2 — no data-4x-go xa-d2
+- [ ] 2018 extra-b leftover — no data-4x-go xb
+- [ ] 2018 leftover · xb d2 — no data-4x-go xb-d2
+- [ ] 2018 extra-c leftover — no data-4x-go xc
+- [ ] 2018 leftover · xc d2 — no data-4x-go xc-d2
+- [ ] 2018 extra-d leftover — no data-4x-go xd
+- [ ] 2018 leftover · xd d2 — no data-4x-go xd-d2
+- [ ] 2018 extra-e leftover — no data-4x-go xe
+- [ ] 2018 leftover · xe d2 — no data-4x-go xe-d2
+- [ ] iPhone XR leftover deepen — no data-4x-go xr-dp
+- [ ] 2018 leftover · xr dp d2 — no data-4x-go xr-dp-d2
+- [ ] iPhone XS leftover deepen — no data-4x-go xs-dp
+- [ ] 2018 leftover · xs dp d2 — no data-4x-go xs-dp-d2
+- [ ] 2018 leftover · youtube about — no data-4x-go youtube-about
+- [ ] 2018 leftover · youtube d2 — no data-4x-go youtube-d2
+- [ ] YouTube leftover — no data-4x-go yt
+- [ ] YouTube leftover second watch — no data-4x-go yt-2
+- [ ] 2018 leftover · zoom18 d2 — no data-4x-go zoom18-d2
+- [ ] Zoom leftover deepen — no data-4x-go zoom18-dp
 
 ### Popular 3×
 - [x] Reddit — itt18-pop-reddit
@@ -2273,7 +3403,7 @@
 - [x] Wikipedia — itt18-pop-wikipedia
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 26 URLs resolved
+- [x] 31 URLs resolved
 
 ## 2019
 
@@ -2302,56 +3432,195 @@
 - [x] extra-g.html — more-game → itt19-game-stadnote
 - [x] extra-h.html — more-game → itt19-game-face2
 - [x] extra-i.html — more-game → itt19-game-arcnote
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — leftover dest page (4× bound)
+- [x] famous.html — started
+- [x] game.html — started
+- [x] index.html — cabinet
+- [x] more-a.html — more-game → itt19-game-squaddrop
+- [x] more-b.html — more-game → itt19-game-honk
+- [x] more-c.html — started
+- [x] more-d.html — started
 
 ### 2× leftover dests
-- [x] TikTok leftover FYP (not the chip) — itt19-tt-lx
-- [x] Arcade leftover pick — itt19-arcade-lx
-- [x] Stadia leftover Founders — itt19-stadia-lx
-- [x] Apple TV+ leftover title — itt19-tv-lx
-- [x] AirPods Pro leftover — itt19-app-lx
-- [x] iPhone 11 leftover — itt19-11-lx
-- [x] Edge Chromium leftover preview — itt19-edge-lx
-- [x] Chrome leftover habit URL — itt19-ch-lx
-- [x] YouTube leftover watch — itt19-yt-lx
-- [x] Instagram leftover hide-likes — itt19-ig-lx
-- [x] Wikipedia leftover article — itt19-wiki-lx
-- [x] Win10 leftover residual — itt19-w10-lx
-- [x] Instagram leftover 2019 residual — itt19-ig-fn
-- [x] Continue Row leftover year game — itt19-game-lx
-- [x] Famous leftover 2019 — itt19-famous-lx
-- [x] Playable cabinet leftover — itt19-cab-lx
-- [x] 2019 extra-a leftover — itt19-xa-lx
-- [x] 2019 extra-b leftover — itt19-xb-lx
-- [x] Disney+ leftover about note — itt19-dplus-ab
-- [x] Disney+ leftover door note — itt19-dplus-ix
-- [x] Fortnite leftover concert note — itt19-marsh
-- [x] TikTok leftover second sound — itt19-tt-2
-- [x] YouTube leftover second watch — itt19-yt-2
-- [x] Wikipedia leftover second article — itt19-wiki-2
-- [x] Chrome leftover second URL — itt19-ch-2
-- [x] Arcade leftover second title — itt19-arcade-2
-- [x] Stadia leftover second note — itt19-stadia-2
-- [x] Apple TV+ leftover second title — itt19-tv-2
-- [x] AirPods Pro leftover second note — itt19-app-2
-- [x] iPhone 11 leftover second note — itt19-11-2
-- [x] Edge leftover second note — itt19-edge-2
-- [x] Win10 leftover second residual — itt19-w10-2
-- [x] Instagram leftover second hide-likes — itt19-ig-2
-- [x] 2019 cabinet leftover second — itt19-cab-2
-- [x] Famous leftover 2019 second — itt19-fam-2
-- [x] 2019 extra-a leftover second — itt19-xa-2
-- [x] airpodsabout leftover REAL — itt19-airpodsabo-rlx
-- [x] arcadeabout leftover REAL — itt19-arcadeabou-rlx
-- [x] chrome19 leftover REAL — itt19-chrome19-rlx
-- [x] dplusabout leftover REAL — itt19-dplusabout-rlx
-- [x] fn19 leftover REAL — itt19-fn19-rlx
-- [x] marshnote leftover REAL — itt19-marshnote-rlx
-- [x] stadiaabout leftover REAL — itt19-stadiaabou-rlx
-- [x] tt19 leftover REAL — itt19-tt19-rlx
-- [x] win10n leftover REAL — itt19-win10n-rlx
+- [ ] iPhone 11 leftover second note — no data-4x-go 11-2
+- [ ] iPhone 11 leftover — no data-4x-go 11-lx
+- [ ] 2019 leftover · 11 lx d2 — no data-4x-go 11-lx-d2
+- [ ] Apple Card leftover deepen — no data-4x-go acard-dp
+- [ ] 2019 leftover · acard dp d2 — no data-4x-go acard-dp-d2
+- [ ] airpodsabout leftover REAL — no data-4x-go airpodsabo-rlx
+- [ ] 2019 leftover · airpodsabo rlx d2 — no data-4x-go airpodsabo-rlx-d2
+- [ ] 2019 leftover · airpodspro about — no data-4x-go airpodspro-about
+- [ ] 2019 leftover · airpodspro d2 — no data-4x-go airpodspro-d2
+- [ ] Allo leftover deepen — no data-4x-go allo-dp
+- [ ] 2019 leftover · allo dp d2 — no data-4x-go allo-dp-d2
+- [ ] Apex leftover deepen — no data-4x-go apex-dp
+- [ ] 2019 leftover · apex dp d2 — no data-4x-go apex-dp-d2
+- [ ] AirPods Pro leftover second note — no data-4x-go app-2
+- [ ] AirPods Pro leftover — no data-4x-go app-lx
+- [ ] 2019 leftover · app lx d2 — no data-4x-go app-lx-d2
+- [ ] 2019 leftover · appletv about — no data-4x-go appletv-about
+- [ ] 2019 leftover · appletv d2 — no data-4x-go appletv-d2
+- [ ] Arcade leftover second title — no data-4x-go arcade-2
+- [ ] 2019 leftover · arcade about — no data-4x-go arcade-about
+- [ ] 2019 leftover · arcade d2 — no data-4x-go arcade-d2
+- [ ] Arcade leftover pick — no data-4x-go arcade-lx
+- [ ] 2019 leftover · arcade lx d2 — no data-4x-go arcade-lx-d2
+- [ ] arcadeabout leftover REAL — no data-4x-go arcadeabou-rlx
+- [ ] 2019 leftover · arcadeabou rlx d2 — no data-4x-go arcadeabou-rlx-d2
+- [ ] Article 17 leftover deepen — no data-4x-go art17-dp
+- [ ] 2019 leftover · art17 dp d2 — no data-4x-go art17-dp-d2
+- [ ] 2019 cabinet leftover second — no data-4x-go cab-2
+- [ ] Playable cabinet leftover — no data-4x-go cab-lx
+- [ ] 2019 leftover · cab lx d2 — no data-4x-go cab-lx-d2
+- [ ] Catalina leftover deepen — no data-4x-go cata-dp
+- [ ] 2019 leftover · cata dp d2 — no data-4x-go cata-dp-d2
+- [ ] Chrome leftover second URL — no data-4x-go ch-2
+- [ ] Chrome leftover habit URL — no data-4x-go ch-lx
+- [ ] 2019 leftover · ch lx d2 — no data-4x-go ch-lx-d2
+- [ ] chrome19 leftover REAL — no data-4x-go chrome19-rlx
+- [ ] 2019 leftover · chrome19 rlx d2 — no data-4x-go chrome19-rlx-d2
+- [ ] CNIL leftover 6× — no data-4x-go cn-6x
+- [ ] 2019 leftover · cn 6x d2 — no data-4x-go cn-6x-d2
+- [ ] 2019 leftover · disneyplus d2 — no data-4x-go disneypl-d2
+- [ ] 2019 leftover · disneyplus — no data-4x-go disneyplus-d2
+- [ ] 2019 leftover · disneyplus lx — no data-4x-go disneyplus-lx
+- [ ] iOS 13 Dark Mode leftover 6× — no data-4x-go dk-6x
+- [ ] 2019 leftover · dk 6x d2 — no data-4x-go dk-6x-d2
+- [ ] Disney+ leftover about note — no data-4x-go dplus-ab
+- [ ] 2019 leftover · dplus ab d2 — no data-4x-go dplus-ab-d2
+- [ ] Disney+ leftover door note — no data-4x-go dplus-ix
+- [ ] 2019 leftover · dplus ix d2 — no data-4x-go dplus-ix-d2
+- [ ] dplusabout leftover REAL — no data-4x-go dplusabout-rlx
+- [ ] 2019 leftover · dplusabout rlx d2 — no data-4x-go dplusabout-rlx-d2
+- [ ] Edge leftover second note — no data-4x-go edge-2
+- [ ] Edge Chromium leftover preview — no data-4x-go edge-lx
+- [ ] 2019 leftover · edge lx d2 — no data-4x-go edge-lx-d2
+- [ ] Famous leftover 2019 second — no data-4x-go fam-2
+- [ ] Famous leftover 2019 — no data-4x-go famous-lx
+- [ ] 2019 leftover · famous lx d2 — no data-4x-go famous-lx-d2
+- [ ] Find My leftover deepen — no data-4x-go findmy-dp
+- [ ] 2019 leftover · findmy dp d2 — no data-4x-go findmy-dp-d2
+- [ ] 5G leftover deepen — no data-4x-go fiveg-dp
+- [ ] 2019 leftover · fiveg dp d2 — no data-4x-go fiveg-dp-d2
+- [ ] fn19 leftover REAL — no data-4x-go fn19-rlx
+- [ ] 2019 leftover · fn19 rlx d2 — no data-4x-go fn19-rlx-d2
+- [ ] Chapter 2 leftover deepen — no data-4x-go fnch2-dp
+- [ ] 2019 leftover · fnch2 dp d2 — no data-4x-go fnch2-dp-d2
+- [ ] World Cup leftover deepen — no data-4x-go fnwc-dp
+- [ ] 2019 leftover · fnwc dp d2 — no data-4x-go fnwc-dp-d2
+- [ ] Galaxy Fold leftover deepen — no data-4x-go fold-dp
+- [ ] 2019 leftover · fold dp d2 — no data-4x-go fold-dp-d2
+- [ ] FTC Facebook leftover 6× — no data-4x-go ft-6x
+- [ ] 2019 leftover · ft 6x d2 — no data-4x-go ft-6x-d2
+- [ ] Continue Row leftover year game — no data-4x-go game-lx
+- [ ] 2019 leftover · game lx d2 — no data-4x-go game-lx-d2
+- [ ] Game Pass leftover deepen — no data-4x-go gpass-dp
+- [ ] 2019 leftover · gpass dp d2 — no data-4x-go gpass-dp-d2
+- [ ] Google+ leftover end deepen — no data-4x-go gplus19-dp
+- [ ] 2019 leftover · gplus19 dp d2 — no data-4x-go gplus19-dp-d2
+- [ ] Huawei leftover deepen — no data-4x-go huawei-dp
+- [ ] 2019 leftover · huawei dp d2 — no data-4x-go huawei-dp-d2
+- [ ] Inbox sunset leftover 6× — no data-4x-go ib-6x
+- [ ] 2019 leftover · ib 6x d2 — no data-4x-go ib-6x-d2
+- [ ] Instagram leftover second hide-likes — no data-4x-go ig-2
+- [ ] Instagram leftover 2019 residual — no data-4x-go ig-fn
+- [ ] Instagram leftover hide-likes — no data-4x-go ig-lx
+- [ ] 2019 leftover · ig lx d2 — no data-4x-go ig-lx-d2
+- [ ] 2019 leftover · instagram about — no data-4x-go instagram-about
+- [ ] 2019 leftover · instagram d2 — no data-4x-go instagram-d2
+- [ ] iPadOS leftover 6× — no data-4x-go ip-6x
+- [ ] 2019 leftover · ip 6x d2 — no data-4x-go ip-6x-d2
+- [ ] iTunes leftover end deepen — no data-4x-go itunes-dp
+- [ ] 2019 leftover · itunes dp d2 — no data-4x-go itunes-dp-d2
+- [ ] Libra leftover 6× — no data-4x-go lb-6x
+- [ ] 2019 leftover · lb 6x d2 — no data-4x-go lb-6x-d2
+- [ ] Lyft IPO leftover deepen — no data-4x-go lyft-dp
+- [ ] 2019 leftover · lyft dp d2 — no data-4x-go lyft-dp-d2
+- [ ] Fortnite leftover concert note — no data-4x-go marsh
+- [ ] 2019 leftover · marsh d2 — no data-4x-go marsh-d2
+- [ ] marshnote leftover REAL — no data-4x-go marshnote-rlx
+- [ ] 2019 leftover · marshnote rlx d2 — no data-4x-go marshnote-rlx-d2
+- [ ] Mixer leftover deepen — no data-4x-go mixer-dp
+- [ ] 2019 leftover · mixer dp d2 — no data-4x-go mixer-dp-d2
+- [ ] News+ leftover deepen — no data-4x-go news-dp
+- [ ] 2019 leftover · news dp d2 — no data-4x-go news-dp-d2
+- [ ] Pixel 4 leftover deepen — no data-4x-go pixel4-dp
+- [ ] 2019 leftover · pixel4 dp d2 — no data-4x-go pixel4-dp-d2
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d10
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d2
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d3
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d4
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d5
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d6
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d7
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d8
+- [ ] 2019 leftover · playable d2 — no data-4x-go playable-d9
+- [ ] 2019 leftover · playable extra c — no data-4x-go playable-extra-c
+- [ ] 2019 leftover · playable extra d — no data-4x-go playable-extra-d
+- [ ] 2019 leftover · playable extra e — no data-4x-go playable-extra-e
+- [ ] 2019 leftover · playable extra f — no data-4x-go playable-extra-f
+- [ ] 2019 leftover · playable extra g — no data-4x-go playable-extra-g
+- [ ] 2019 leftover · playable extra h — no data-4x-go playable-extra-h
+- [ ] 2019 leftover · playable extra i — no data-4x-go playable-extra-i
+- [ ] 2019 leftover · playable more a — no data-4x-go playable-more-a
+- [ ] 2019 leftover · playable more b — no data-4x-go playable-more-b
+- [ ] Oculus Quest leftover — May 2019 — no data-4x-go quest-lx
+- [ ] 2019 leftover · quest d2 — no data-4x-go quest-lx-d2
+- [ ] Sidecar leftover deepen — no data-4x-go sidecar-dp
+- [ ] 2019 leftover · sidecar dp d2 — no data-4x-go sidecar-dp-d2
+- [ ] Sign in with Apple leftover deepen — no data-4x-go siwa-dp
+- [ ] 2019 leftover · siwa dp d2 — no data-4x-go siwa-dp-d2
+- [ ] Slack listing leftover deepen — no data-4x-go slipo-dp
+- [ ] 2019 leftover · slipo dp d2 — no data-4x-go slipo-dp-d2
+- [ ] Stadia leftover second note — no data-4x-go stadia-2
+- [ ] 2019 leftover · stadia about — no data-4x-go stadia-about
+- [ ] 2019 leftover · stadia d2 — no data-4x-go stadia-d2
+- [ ] Stadia leftover Founders — no data-4x-go stadia-lx
+- [ ] 2019 leftover · stadia lx d2 — no data-4x-go stadia-lx-d2
+- [ ] stadiaabout leftover REAL — no data-4x-go stadiaabou-rlx
+- [ ] 2019 leftover · stadiaabou rlx d2 — no data-4x-go stadiaabou-rlx-d2
+- [ ] SwiftUI leftover deepen — no data-4x-go swiftui-dp
+- [ ] 2019 leftover · swiftui dp d2 — no data-4x-go swiftui-dp-d2
+- [ ] 2019 leftover · tiktok about — no data-4x-go tiktok-about
+- [ ] 2019 leftover · tiktok d2 — no data-4x-go tiktok-d2
+- [ ] TikTok leftover second sound — no data-4x-go tt-2
+- [ ] TikTok leftover FYP (not the chip) — no data-4x-go tt-lx
+- [ ] 2019 leftover · tt lx d2 — no data-4x-go tt-lx-d2
+- [ ] tt19 leftover REAL — no data-4x-go tt19-rlx
+- [ ] 2019 leftover · tt19 rlx d2 — no data-4x-go tt19-rlx-d2
+- [ ] Apple TV+ leftover second title — no data-4x-go tv-2
+- [ ] Apple TV+ leftover title — no data-4x-go tv-lx
+- [ ] 2019 leftover · tv lx d2 — no data-4x-go tv-lx-d2
+- [ ] Uber IPO leftover deepen — no data-4x-go uber-dp
+- [ ] 2019 leftover · uber dp d2 — no data-4x-go uber-dp-d2
+- [ ] Win10 leftover second residual — no data-4x-go w10-2
+- [ ] Win10 leftover residual — no data-4x-go w10-lx
+- [ ] 2019 leftover · w10 lx d2 — no data-4x-go w10-lx-d2
+- [ ] Watch Series 5 leftover deepen — no data-4x-go watch5-dp
+- [ ] 2019 leftover · watch5 dp d2 — no data-4x-go watch5-dp-d2
+- [ ] WeWork leftover deepen — no data-4x-go wework-dp
+- [ ] 2019 leftover · wework dp d2 — no data-4x-go wework-dp-d2
+- [ ] Wikipedia leftover second article — no data-4x-go wiki-2
+- [ ] Wikipedia leftover article — no data-4x-go wiki-lx
+- [ ] 2019 leftover · wiki lx d2 — no data-4x-go wiki-lx-d2
+- [ ] 2019 leftover · wikipedia about — no data-4x-go wikipedia-about
+- [ ] 2019 leftover · wikipedia d2 — no data-4x-go wikipedia-d2
+- [ ] win10n leftover REAL — no data-4x-go win10n-rlx
+- [ ] 2019 leftover · win10n rlx d2 — no data-4x-go win10n-rlx-d2
+- [ ] 2019 extra-a leftover second — no data-4x-go xa-2
+- [ ] 2019 extra-a leftover — no data-4x-go xa-lx
+- [ ] 2019 leftover · xa lx d2 — no data-4x-go xa-lx-d2
+- [ ] 2019 extra-b leftover — no data-4x-go xb-lx
+- [ ] 2019 leftover · xb lx d2 — no data-4x-go xb-lx-d2
+- [ ] xCloud leftover deepen — no data-4x-go xcloud-dp
+- [ ] 2019 leftover · xcloud dp d2 — no data-4x-go xcloud-dp-d2
+- [ ] 2019 leftover · youtube about — no data-4x-go youtube-about
+- [ ] 2019 leftover · youtube d2 — no data-4x-go youtube-d2
+- [ ] YouTube leftover second watch — no data-4x-go yt-2
+- [ ] YouTube leftover watch — no data-4x-go yt-lx
+- [ ] 2019 leftover · ytcoppa d2 — no data-4x-go ytcoppa-d2
+- [ ] YouTube COPPA leftover deepen — no data-4x-go ytcoppa-dp
+- [ ] 2019 leftover · zoom19 d2 — no data-4x-go zoom19-d2
+- [ ] Zoom leftover deepen — no data-4x-go zoom19-dp
 
 ### Popular 3×
 - [x] YouTube — itt19-pop-youtube
@@ -2359,94 +3628,7 @@
 - [x] Wikipedia — itt19-pop-wikipedia
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 26 URLs resolved
-
-## 2020
-
-### Gold
-- [x] sites/zoom/meeting.html — complete → itt20-zoom
-
-### Official 10
-- [x] 1. Zoom mute — sites/zoom/meeting.html
-- [x] 2. Reels 15s — sites/reels/index.html
-- [x] 3. GPT-3 waitlist — sites/openai/index.html
-- [x] 4. Flash EOL — sites/flash/index.html
-- [x] 5. TikTok EO — sites/tiktok/index.html
-- [x] 6. WTI −$37.63 — sites/markets/wti.html
-- [x] 7. Edge 79 — sites/edge/index.html
-- [x] 8. CCPA — sites/ccpa/index.html
-- [x] 9. Chrome habit — sites/chrome/index.html
-- [x] 10. Sus Vote — sites/playable/game.html
-
-### Games
-- [x] extra-a.html — mute extra → itt20-extra-a
-- [x] extra-b.html — leftover dest page (4× bound)
-- [x] extra-c.html — more-game → itt20-game-muteround
-- [x] extra-d.html — more-game started
-- [x] extra-e.html — more-game → itt20-game-flashbrick
-- [x] extra-f.html — more-game → itt20-game-mute2
-- [x] extra-g.html — more-game → itt20-game-flashnote
-- [x] extra-h.html — more-game → itt20-game-leave2
-- [x] extra-i.html — more-game → itt20-game-gpt3note
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — leftover dest page (4× bound)
-
-### 2× leftover dests
-- [x] Reels leftover 15s (not Shorts) — itt20-reels-lx
-- [x] GPT-3 leftover waitlist (not ChatGPT) — itt20-gpt-lx
-- [x] Flash leftover EOL — itt20-flash-lx
-- [x] Meet leftover room name — itt20-meet-lx
-- [x] Mixer leftover shutdown — itt20-mixer-lx
-- [x] HBO Max leftover title — itt20-hbo-lx
-- [x] Peacock leftover title — itt20-pk-lx
-- [x] CCPA leftover Do Not Sell — itt20-ccpa-lx
-- [x] Chrome leftover habit URL — itt20-ch-lx
-- [x] Edge 79 leftover (not Legacy) — itt20-edge-lx
-- [x] Epic leftover sideload literacy — itt20-epic-lx
-- [x] TikTok leftover caption — itt20-tt-lx
-- [x] SpaceHey leftover add-friend — itt20-shy-lx
-- [x] YouTube leftover watch — itt20-yt-lx
-- [x] Wikipedia leftover article — itt20-wiki-lx
-- [x] Facebook leftover 2020 residual — itt20-fb-lx
-- [x] 2020 game leftover — itt20-game-lx
-- [x] Famous leftover 2020 — itt20-famous-lx
-- [x] Zoom leftover about note — itt20-zm-ab
-- [x] Zoom leftover door note — itt20-zm-ix
-- [x] Zoom leftover recap note — itt20-zm-rc
-- [x] Reels leftover about note — itt20-reels-ab
-- [x] Reels leftover record note — itt20-reels-rc
-- [x] GPT-3 leftover waitlist note — itt20-gpt-w
-- [x] Flash leftover EOL literacy — itt20-flash-eol
-- [x] TikTok leftover EO note — itt20-tt-eo
-- [x] Twitter leftover hack note — itt20-tw-hk
-- [x] WTI leftover negative oil note — itt20-wti
-- [x] ACNH leftover second island — itt20-acnh-2
-- [x] Astronomical leftover second note — itt20-astro-2
-- [x] Quibi leftover second title — itt20-quibi-2
-- [x] 2020 extra-a leftover — itt20-xa
-- [x] 2020 extra-b leftover — itt20-xb
-- [x] 2020 cabinet leftover — itt20-cab
-- [x] Famous leftover 2020 second — itt20-fam-2
-- [x] HBO Max leftover second title — itt20-hbo-2
-- [x] amongabout leftover REAL — itt20-amongabout-rlx
-- [x] ccpaabout leftover REAL — itt20-ccpaabout-rlx
-- [x] edge79about leftover REAL — itt20-edge79abou-rlx
-- [x] flashabout leftover REAL — itt20-flashabout-rlx
-- [x] gpt3about leftover REAL — itt20-gpt3about-rlx
-- [x] reelsabout leftover REAL — itt20-reelsabout-rlx
-- [x] tteo leftover REAL — itt20-tteo-rlx
-- [x] windows10 leftover REAL — itt20-windows10-rlx
-- [x] wtiabout leftover REAL — itt20-wtiabout-rlx
-- [x] zoomabout leftover REAL — itt20-zoomabout-rlx
-
-### Popular 3×
-- [x] YouTube — itt20-pop-youtube
-- [x] Wikipedia — itt20-pop-wikipedia
-- [x] Facebook — itt20-pop-facebook
-
-### Links crawled from gold / official 10 / home / about
-- [x] 27 URLs resolved
+- [x] 33 URLs resolved
 
 ## 2021
 
@@ -2466,73 +3648,153 @@
 - [x] 10. Five Letter — sites/playable/game.html
 
 ### Games
-- [x] extra-a.html — leftover dest page (4× bound)
-- [x] extra-b.html — leftover dest page (4× bound)
-- [x] extra-c.html — more-game → itt21-game-sighandle
-- [x] extra-d.html — more-game → itt21-game-waitcop
-- [x] extra-e.html — more-game → itt21-game-metanote
-- [x] extra-f.html — more-game → itt21-game-ask2
-- [x] extra-g.html — more-game → itt21-game-copnote
-- [x] extra-h.html — more-game → itt21-game-dialog2
-- [x] extra-i.html — more-game → itt21-game-metanote2
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — leftover dest page (4× bound)
+- [x] extra-a.html — lean leftover page
+- [x] extra-b.html — lean leftover page
+- [x] extra-c.html — lean leftover page
+- [x] extra-d.html — lean leftover page
+- [x] extra-e.html — lean leftover page
+- [x] extra-f.html — lean leftover page
+- [x] extra-g.html — lean leftover page
+- [x] extra-h.html — lean leftover page
+- [x] extra-i.html — lean leftover page
+- [x] famous.html — lean leftover page
+- [x] game.html — host ok
+- [x] index.html — cabinet
+- [x] more-a.html — lean leftover page
+- [x] more-b.html — lean leftover page
+- [x] more-c.html — lean leftover page
+- [x] more-d.html — lean leftover page
+- [x] more.html — lean leftover page
 
 ### 2× leftover dests
-- [x] Signal leftover handle — itt21-sig-lx
-- [x] Copilot leftover waitlist (not ChatGPT) — itt21-cop-lx
-- [x] Meta leftover rename — itt21-meta-lx
-- [x] Chrome leftover habit URL — itt21-ch-lx
-- [x] YouTube leftover watch — itt21-yt-lx
-- [x] Wikipedia leftover article — itt21-wiki-lx
-- [x] Facebook leftover 2021 residual — itt21-fb-lx
-- [x] Flash leftover brick — itt21-flash-lx
-- [x] Win10 leftover mass residual — itt21-w10-lx
-- [x] Win11 leftover install literacy — itt21-w11-lx
-- [x] Clubhouse leftover room — itt21-chouse-lx
-- [x] NFT leftover literacy — itt21-nft-lx
-- [x] Squid leftover chip note — itt21-squid-lx
-- [x] 2021 game leftover — itt21-game-lx
-- [x] Famous leftover 2021 — itt21-famous-lx
-- [x] ATT leftover literacy note — itt21-att-lx
-- [x] 2021 extra-a leftover — itt21-xa-lx
-- [x] 2021 extra-b leftover — itt21-xb-lx
-- [x] Signal leftover second handle — itt21-sig-2
-- [x] Copilot leftover second waitlist — itt21-cop-2
-- [x] Meta leftover second rename note — itt21-meta-2
-- [x] Chrome leftover second URL — itt21-ch-2
-- [x] YouTube leftover second watch — itt21-yt-2
-- [x] Wikipedia leftover second article — itt21-wiki-2
-- [x] Facebook leftover second residual — itt21-fb-2
-- [x] Flash leftover second brick note — itt21-flash-2
-- [x] Win10 leftover second residual — itt21-w10-2
-- [x] Win11 leftover second install — itt21-w11-2
-- [x] Clubhouse leftover second room — itt21-chouse-2
-- [x] NFT leftover second literacy — itt21-nft-2
-- [x] Squid leftover second print — itt21-squid-2
-- [x] 2021 cabinet leftover second — itt21-cab-2
-- [x] Famous leftover 2021 second — itt21-fam-2
-- [x] Five Letter leftover second note — itt21-game-2
-- [x] 2021 extra-a leftover second — itt21-xa-2
-- [x] 2021 extra-b leftover second — itt21-xb-2
-- [x] attabout leftover REAL — itt21-attabout-rlx
-- [x] copabout leftover REAL — itt21-copabout-rlx
-- [x] discord21 leftover REAL — itt21-discord21-rlx
-- [x] metaabout leftover REAL — itt21-metaabout-rlx
-- [x] opensea leftover REAL — itt21-opensea-rlx
-- [x] robinhood leftover REAL — itt21-robinhood-rlx
-- [x] sigabout leftover REAL — itt21-sigabout-rlx
-- [x] win11about leftover REAL — itt21-win11about-rlx
-- [x] wordleseed leftover REAL — itt21-wordleseed-rlx
+- [ ] 2021 leftover · YouTube Shorts leftover — no data-4x-go shorts-dp
+- [ ] 2021 leftover · AirTag leftover — no data-4x-go airtag-dp
+- [ ] 2021 leftover · Coinbase listing leftover — no data-4x-go coin-dp
+- [ ] 2021 leftover · Beeple Everydays leftover — no data-4x-go beeple-dp
+- [ ] 2021 leftover · BAYC leftover — no data-4x-go bayc-dp
+- [ ] 2021 leftover · Log4j patch leftover — no data-4x-go log4j-dp
+- [ ] 2021 leftover · WhatsApp policy leftover — no data-4x-go wa21-dp
+- [ ] 2021 leftover · Telegram surge leftover — no data-4x-go tg21-dp
+- [ ] 2021 leftover · iOS 15 Focus leftover — no data-4x-go ios15-dp
+- [ ] 2021 leftover · Mail Privacy leftover — no data-4x-go mailpp-dp
+- [ ] 2021 leftover · iCloud Private Relay leftover — no data-4x-go relay-dp
+- [ ] 2021 leftover · Hide My Email leftover — no data-4x-go hidemail-dp
+- [ ] 2021 leftover · Twitter Spaces leftover — no data-4x-go spaces-dp
+- [ ] 2021 leftover · Super Follows leftover — no data-4x-go superfol-dp
+- [ ] 2021 leftover · Facebook outage leftover — no data-4x-go fbout-dp
+- [ ] 2021 leftover · Haugen leftover — no data-4x-go haugen-dp
+- [ ] 2021 leftover · DALL·E 1 leftover — no data-4x-go dalle1-dp
+- [ ] 2021 leftover · OpenAI Codex leftover — no data-4x-go codex-dp
+- [ ] 2021 leftover · Windows 365 leftover — no data-4x-go win365-dp
+- [ ] 2021 leftover · Android 12 leftover — no data-4x-go and12-dp
+- [ ] 2021 leftover · Pixel 6 leftover — no data-4x-go pixel6-dp
+- [ ] 2021 leftover · TikTok-as-2021 leftover — no data-4x-go tt21-dp
+- [ ] 2021 leftover · Snap Spotlight leftover — no data-4x-go spotlight-dp
+- [ ] 2021 leftover · Discord Stage leftover — no data-4x-go dstage-dp
+- [ ] 2021 leftover · Substack leftover — no data-4x-go substack-dp
+- [ ] 2021 leftover · Notion 2021 leftover — no data-4x-go notion21-dp
+- [ ] 2021 leftover · FigJam leftover — no data-4x-go figjam-dp
+- [ ] 2021 leftover · Roblox listing leftover — no data-4x-go rbxipo-dp
+- [ ] 2021 leftover · Affirm leftover — no data-4x-go affirm-dp
+- [ ] 2021 leftover · Paramount+ leftover — no data-4x-go paramount-dp
+- [ ] 2021 leftover · Disney+ Day leftover — no data-4x-go dplus21-dp
+- [ ] 2021 leftover · NBA Top Shot leftover — no data-4x-go topshot-dp
+- [ ] 2021 leftover · Clubhouse leftover — no data-4x-go club-dp
+- [ ] 2021 leftover · GME leftover — no data-4x-go gme-dp
+- [ ] 2021 leftover · Epic v Apple leftover — no data-4x-go epic-dp
+- [ ] 2021 leftover · Robinhood leftover — no data-4x-go hood-dp
+- [ ] 2021 leftover · OpenSea leftover — no data-4x-go opensea-dp
+- [ ] 2021 leftover · Wordle seed leftover — no data-4x-go wordle-dp
+- [ ] 2021 leftover · Copilot second path leftover — no data-4x-go cop-lx
+- [ ] 2021 leftover · ATT literacy leftover — no data-4x-go att-lx
+- [ ] 2021 leftover · Signal second path leftover — no data-4x-go sig-lx
+- [ ] 2021 leftover · Meta app stays Facebook leftover — no data-4x-go meta-lx
+- [ ] 2021 leftover · Win11 not January leftover — no data-4x-go win11-lx
+- [ ] 2021 leftover · Flash Play trap leftover — no data-4x-go flash-lx
+- [ ] 2021 leftover · Chrome habit second path — no data-4x-go chrome-lx
+- [ ] 2021 leftover · YouTube leftover 3× — no data-4x-go pop-youtube
+- [ ] 2021 leftover · Wikipedia leftover 3× — no data-4x-go pop-wiki
+- [ ] 2021 leftover · Facebook leftover 3× — no data-4x-go pop-fb3
+- [ ] 2021 leftover · Clubhouse 3×3 leftover — no data-4x-go pop3-club
+- [ ] 2021 leftover · NFT literacy 3×3 — no data-4x-go pop3-nft
+- [ ] 2021 leftover · Squid Game print leftover — no data-4x-go pop3-squid
+- [ ] 2021 leftover · musical.ly leftover — no data-4x-go mly-lx
+- [ ] 2021 leftover · Equifax leftover — no data-4x-go eq-lx
+- [ ] 2021 leftover · AirPods leftover — no data-4x-go pods-lx
+- [ ] 2021 leftover · Discord leftover — no data-4x-go disc-lx
+- [ ] 2021 leftover · Echo Show leftover — no data-4x-go echo-lx
+- [ ] 2021 leftover · Pixel leftover 2 — no data-4x-go pix-lx
+- [ ] 2021 leftover · Telegram leftover 2 — no data-4x-go tg-lx
+- [ ] 2021 leftover · Watch leftover — no data-4x-go watch-lx
+- [ ] 2021 leftover · Xbox leftover — no data-4x-go xbox-lx
+- [ ] 2021 leftover · Yahoo 3B leftover — no data-4x-go y3b-lx
+- [ ] 2021 leftover · Zoom leftover note — no data-4x-go zoom-lx
+- [ ] 2021 leftover · Teams leftover — no data-4x-go teams-lx
+- [ ] 2021 leftover · Slack leftover — no data-4x-go slack-lx
+- [ ] 2021 leftover · Bitcoin leftover — no data-4x-go btc-lx
+- [ ] 2021 leftover · NFT mint-trap dest — no data-4x-go nft-lx
+- [ ] 2021 leftover · Spaces second path leftover — no data-4x-go spc-lx
+- [ ] 2021 leftover · Super Follows second leftover — no data-4x-go sf-lx
+- [ ] 2021 leftover · iCloud leftover — no data-4x-go icloud-lx
+- [ ] 2021 leftover · FaceTime leftover — no data-4x-go ft-lx
+- [ ] 2021 leftover · iMessage leftover — no data-4x-go imsg-lx
+- [ ] 2021 leftover · Win11 pop-more leftover — no data-4x-go w11-more
+- [ ] 2021 leftover · YouTube leftover watch — no data-4x-go yt-lx
+- [ ] 2021 leftover · Wikipedia leftover edit — no data-4x-go wk-lx
+- [ ] 2021 leftover · Amazon leftover — no data-4x-go amzn-lx
+- [ ] 2021 leftover · Reddit leftover — no data-4x-go reddit-lx
+- [ ] 2021 leftover · Netflix leftover — no data-4x-go nfx-lx
+- [ ] 2021 leftover · Spotify leftover — no data-4x-go spot-lx
+- [ ] 2021 leftover · Instagram leftover — no data-4x-go ig-lx
+- [ ] 2021 leftover · Twitter leftover — no data-4x-go tw-lx
+- [ ] 2021 leftover · TikTok leftover 2 — no data-4x-go tt-lx
+- [ ] 2021 leftover · Google leftover — no data-4x-go g-lx
+- [ ] 2021 leftover · Gmail leftover — no data-4x-go gm-lx
+- [ ] 2021 leftover · Maps leftover — no data-4x-go maps-lx
+- [ ] 2021 leftover · PayPal leftover — no data-4x-go pp-lx
+- [ ] 2021 leftover · Slack leftover 2 — no data-4x-go sl-lx
+- [ ] 2021 leftover · Discord leftover 2 — no data-4x-go dc-lx
+- [ ] 2021 leftover · Zoom leftover 2 — no data-4x-go zm-lx
+- [ ] 2021 leftover · Teams leftover 2 — no data-4x-go tm-lx
+- [ ] 2021 leftover · Notion leftover 2 — no data-4x-go no-lx
+- [ ] 2021 leftover · Figma leftover — no data-4x-go fg-lx
+- [ ] 2021 leftover · GitHub leftover — no data-4x-go gh-lx
+- [ ] 2021 leftover · LinkedIn leftover — no data-4x-go li-lx
+- [ ] 2021 leftover · Twitch leftover — no data-4x-go twitch-lx
+- [ ] 2021 leftover · Steam leftover — no data-4x-go steam-lx
+- [ ] 2021 leftover · Epic leftover 2 — no data-4x-go egs-lx
+- [ ] 2021 leftover · PlayStation leftover — no data-4x-go ps-lx
+- [ ] 2021 leftover · Xbox leftover 2 — no data-4x-go xb-lx
+- [ ] 2021 leftover · Nintendo leftover — no data-4x-go nin-lx
+- [ ] 2021 leftover · Fortnite leftover — no data-4x-go fn-lx
+- [ ] 2021 leftover · Among Us leftover — no data-4x-go au-lx
+- [ ] 2021 leftover · Roblox leftover play — no data-4x-go rbx-lx
+- [ ] 2021 leftover · Substack leftover 2 — no data-4x-go ss-lx
+- [ ] 2021 leftover · Patreon leftover — no data-4x-go pat-lx
+- [ ] 2021 leftover · Twitch bits leftover — no data-4x-go bits-lx
+- [ ] 2021 leftover · Kindle leftover — no data-4x-go kindle-lx
+- [ ] 2021 leftover · iCloud leftover 2 — no data-4x-go ic2-lx
+- [ ] 2021 leftover · Edge leftover — no data-4x-go edge-lx
+- [ ] 2021 leftover · Safari leftover — no data-4x-go saf-lx
+- [ ] 2021 leftover · Firefox leftover — no data-4x-go ff-lx
+- [ ] 2021 leftover · Brave leftover — no data-4x-go brave-lx
+- [ ] 2021 leftover · Continuity close leftover — no data-4x-go cont-lx
+- [ ] 2021 leftover · Signal leftover — no data-4x-go signal
+- [ ] 2021 leftover · Copilot waitlist — no data-4x-go copilot
+- [ ] 2021 leftover · Meta rename — no data-4x-go meta
+- [ ] 2021 leftover · Win11 leftover — no data-4x-go win11
+- [ ] 2021 leftover · Flash brick — no data-4x-go flash-brick
+- [ ] 2021 leftover · Chrome habit — no data-4x-go chrome
+- [ ] 2021 leftover · Win10 residual — no data-4x-go win10
+- [ ] 2021 leftover · Facebook leftover — no data-4x-go pop-facebook
 
 ### Popular 3×
-- [x] YouTube — itt21-pop-youtube
-- [x] Wikipedia — itt21-pop-wikipedia
-- [x] Facebook — itt21-pop-facebook
+- [ ] YouTube — no data-pop-go
+- [ ] Wikipedia — no data-pop-go
+- [ ] Facebook — no data-pop-go
 
 ### Links crawled from gold / official 10 / home / about
-- [x] 24 URLs resolved
+- [x] 15 URLs resolved
 
 ## 2022
 
@@ -2552,310 +3814,20 @@
 - [x] 10. Prompt Box — sites/playable/game.html
 
 ### Games
-- [x] extra-a.html — lean leftover page
-- [x] extra-b.html — lean leftover page
-- [x] extra-c.html — more-game → itt22-game-wordguess
-- [x] extra-d.html — more-game → itt22-game-mastoinst
-- [x] extra-e.html — more-game started
-- [x] extra-f.html — more-game → itt22-game-send2
-- [x] extra-g.html — more-game → itt22-game-plusnote
-- [x] extra-h.html — more-game → itt22-game-box2
-- [x] extra-i.html — more-game → itt22-game-sdnote
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
+- [x] close.html — lean leftover page
+- [x] famous.html — lean leftover page
+- [x] game.html — host ok
 - [x] index.html — cabinet
+- [x] more-c.html — lean leftover page
+- [x] more-d.html — lean leftover page
+- [x] more.html — lean leftover page
 
 ### 2× leftover dests
-- [x] Twitter leftover note — itt22-tw-lx
-- [x] Wordle leftover guess — itt22-wd-lx
-- [x] SD leftover prompt — itt22-sd-lx
-- [x] Mastodon leftover instance — itt22-md-lx
-- [x] Chrome leftover habit — itt22-ch-lx
-- [x] Prompt Box leftover — itt22-game-lx
-- [x] BeReal leftover 2× — itt22-br-lx
-- [x] DALL·E 2 leftover 2× — itt22-dl-lx
-- [x] Win10 leftover 2× — itt22-w10-lx
-- [x] ChatGPT leftover literacy — itt22-send-lx
-- [x] Notion leftover 2× — itt22-nt-lx
-- [x] Midjourney leftover 2× — itt22-mj-lx
-- [x] Lensa leftover 2× — itt22-le-lx
-- [x] TikTok leftover 2× — itt22-tt-lx
-- [x] Cohere leftover — itt22-co-lx
-- [x] Jasper leftover — itt22-jsp-lx
-- [x] Runway Gen-1 leftover — itt22-rw-lx
-- [x] Stability leftover — itt22-stab-lx
-- [x] Cohere leftover 2× pack — itt22-co2-lx
-- [x] Jasper leftover 2× pack — itt22-jsp2-lx
-- [x] Runway leftover 2× pack — itt22-rw2-lx
-- [x] Stabilityhq leftover 2× — itt22-stab2-lx
-- [x] SD leftover 2× pack — itt22-sd2-lx
-- [x] Chrome leftover 2× — itt22-ch22-lx
-- [x] Copilot leftover 2× — itt22-cp22-lx
-- [x] Character leftover 2× — itt22-cai-lx
-- [x] DALL·E about leftover 2× — itt22-dla-lx
-- [x] Gptabout leftover 2× — itt22-gpa-lx
-- [x] Masto about leftover 2× — itt22-msa-lx
-- [x] Win10 leftover 2× — itt22-w10n-lx
-- [x] Facebook leftover 2× — itt22-fb-lx
-- [x] YouTube leftover 2× — itt22-yt-lx
-- [x] Wikipedia leftover 2× — itt22-wk-lx
-- [x] berealabout leftover REAL — itt22-berealabou-rlx
 
 ### Popular 3×
-- [x] YouTube — itt22-pop-youtube
-- [x] Wikipedia — itt22-pop-wikipedia
-- [x] Facebook — itt22-pop-facebook
-
-### Links crawled from gold / official 10 / home / about
-- [x] 24 URLs resolved
-
-## 2023
-
-### Gold
-- [x] sites/chatgpt/plus.html — complete → itt23-chatgpt-plus
-
-### Official 10
-- [x] 1. ChatGPT Plus — sites/chatgpt/plus.html
-- [x] 2. GPT-4 leftover — sites/chatgpt/gpt4.html
-- [x] 3. Bing Chat leftover — sites/bing/chat.html
-- [x] 4. Bard leftover — sites/bard/index.html
-- [x] 5. Threads leftover — sites/threads/index.html
-- [x] 6. X leftover — sites/twitter/x.html
-- [x] 7. Free residual — sites/chatgpt/index.html
-- [x] 8. Chrome habit — sites/chrome/index.html
-- [x] 9. Windows 10 residual — sites/windows10/index.html
-- [x] 10. Subscribe Dash — sites/playable/game.html
-
-### Games
-- [x] extra-a.html — lean leftover page
-- [x] extra-b.html — lean leftover page
-- [x] extra-c.html — more-game → itt23-game-pluswait
-- [x] extra-d.html — more-game → itt23-game-bardask
-- [x] extra-e.html — more-game started
-- [x] extra-f.html — more-game → itt23-game-subnote
-- [x] extra-g.html — more-game → itt23-game-bardnote
-- [x] extra-h.html — more-game → itt23-game-twenty2
-- [x] extra-i.html — more-game → itt23-game-xnote2
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — cabinet
-
-### 2× leftover dests
-- [x] ChatGPT plugins leftover — itt23-plug-lx
-- [x] Code Interpreter leftover — itt23-ada-lx
-- [x] Custom GPTs leftover — itt23-gpts-lx
-- [x] Llama 2 leftover — itt23-l2-lx
-- [x] DALL·E 3 leftover — itt23-d3-lx
-- [x] Snapchat My AI leftover — itt23-myai-lx
-- [x] Adobe Firefly leftover — itt23-fly-lx
-- [x] Microsoft 365 Copilot leftover — itt23-m365-lx
-- [x] Search Generative Experience leftover — itt23-sge-lx
-- [x] ChatGPT iOS leftover — itt23-ios-lx
-- [x] Mixtral leftover — itt23-mix-lx
-- [x] Grok announce leftover — itt23-grok23-lx
-- [x] Gemini announce leftover — itt23-gem23-lx
-- [x] Vision Pro announce leftover — itt23-vp23-lx
-- [x] SDXL leftover — itt23-sdxl-lx
-- [x] Runway Gen-2 leftover — itt23-gen2-lx
-- [x] GPT-4 Turbo leftover — itt23-turbo-lx
-- [x] NYT v OpenAI leftover — itt23-nyt-lx
-- [x] Plus leftover literacy — itt23-plus-lx
-- [x] GPT-4 leftover 2× — itt23-gpt4-lx
-- [x] Bing Chat leftover 2× — itt23-bing-lx
-- [x] Bard leftover 2× — itt23-bard-lx
-- [x] Threads leftover 2× — itt23-th-lx
-- [x] X leftover 2× — itt23-x-lx
-- [x] Claude 2 leftover 2× — itt23-c2-lx
-- [x] Character.AI leftover 2× — itt23-cai-lx
-- [x] Copilot X leftover 2× — itt23-cx-lx
-- [x] Bluesky leftover 2× — itt23-bsky-lx
-- [x] Spotify AI DJ leftover — itt23-aidj-lx
-- [x] Duolingo Max leftover — itt23-duo-lx
-- [x] Quora Poe leftover — itt23-poe-lx
-- [x] HuggingChat leftover — itt23-hf-lx
-- [x] Pika Labs leftover — itt23-pika-lx
-- [x] Inflection Pi leftover — itt23-pi-lx
-- [x] Neeva shutdown leftover — itt23-neeva-lx
-- [x] WGA leftover literacy — itt23-wga-lx
-- [x] bardabout leftover REAL — itt23-bardabout-rlx
-- [x] beacons leftover REAL — itt23-beacons-rlx
-- [x] notionai leftover REAL — itt23-notionai-rlx
-- [x] plusabout leftover REAL — itt23-plusabout-rlx
-- [x] threadsabout leftover REAL — itt23-threadsabo-rlx
-
-### Popular 3×
-
-### Links crawled from gold / official 10 / home / about
-- [x] 30 URLs resolved
-
-## 2024
-
-### Gold
-- [x] sites/chatgpt/4o.html — complete → itt24-gpt4o
-
-### Official 10
-- [x] 1. GPT-4o Talk — sites/chatgpt/4o.html
-- [x] 2. Gemini leftover — sites/gemini/index.html
-- [x] 3. Claude 3.5 leftover — sites/claude35/index.html
-- [x] 4. Sora leftover — sites/sora/index.html
-- [x] 5. Apple Intelligence leftover — sites/appleintel/index.html
-- [x] 6. o1 leftover — sites/o1/index.html
-- [x] 7. Plus residual — sites/chatgpt/plus.html
-- [x] 8. Chrome habit — sites/chrome/index.html
-- [x] 9. Windows 10 residual — sites/windows10/index.html
-- [x] 10. Omni Dash — sites/playable/game.html
-
-### Games
-- [x] extra-a.html — lean leftover page
-- [x] extra-b.html — lean leftover page
-- [x] extra-c.html — more-game → itt24-game-talkwait
-- [x] extra-d.html — more-game → itt24-game-gemask
-- [x] extra-e.html — more-game started
-- [x] extra-f.html — more-game → itt24-game-talk2
-- [x] extra-g.html — more-game → itt24-game-gemnote
-- [x] extra-h.html — more-game → itt24-game-omni2b
-- [x] extra-i.html — more-game → itt24-game-soranote2
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — cabinet
-
-### 2× leftover dests
-- [x] nb-lx — itt24-nb-lx
-- [x] sgpt-lx — itt24-sgpt-lx
-- [x] llama-lx — itt24-llama-lx
-- [x] grok-lx — itt24-grok-lx
-- [x] rabbit-lx — itt24-rabbit-lx
-- [x] suno-lx — itt24-suno-lx
-- [x] vp-lx — itt24-vp-lx
-- [x] pplx-lx — itt24-pplx-lx
-- [x] voice-lx — itt24-voice-lx
-- [x] mini-lx — itt24-mini-lx
-- [x] flux-lx — itt24-flux-lx
-- [x] pin-lx — itt24-pin-lx
-- [x] gem-lx — itt24-gem-lx
-- [x] c35-lx — itt24-c35-lx
-- [x] sora-lx — itt24-sora-lx
-- [x] ai-lx — itt24-ai-lx
-- [x] o1-lx — itt24-o1-lx
-- [x] 4o-lx — itt24-4o-lx
-- [x] GPT Store leftover — itt24-store-lx
-- [x] ChatGPT Memory leftover — itt24-mem-lx
-- [x] Claude 3 family leftover — itt24-opus-lx
-- [x] Devin leftover — itt24-devin-lx
-- [x] Udio leftover — itt24-udio-lx
-- [x] Gemini 1.5 Flash leftover — itt24-flash-lx
-- [x] Project Astra leftover — itt24-astra-lx
-- [x] Veo leftover — itt24-veo-lx
-- [x] Copilot+ Recall leftover — itt24-recall-lx
-- [x] Luma Dream Machine leftover — itt24-luma-lx
-- [x] Runway Gen-3 leftover — itt24-gen3-lx
-- [x] Claude Artifacts leftover — itt24-art-lx
-- [x] Llama 3.1 leftover — itt24-l31-lx
-- [x] Meta Orion leftover — itt24-orion-lx
-- [x] o1-mini leftover — itt24-o1m-lx
-- [x] ChatGPT Canvas leftover — itt24-canvas-lx
-- [x] Computer Use leftover — itt24-cu-lx
-- [x] ChatGPT Search leftover — itt24-csearch-lx
-- [x] bard leftover REAL — itt24-bard-rlx
-- [x] bardabout leftover REAL — itt24-bardabout-rlx
-- [x] beacons leftover REAL — itt24-beacons-rlx
-- [x] bing leftover REAL — itt24-bing-rlx
-- [x] bluesky leftover REAL — itt24-bluesky-rlx
-- [x] characterai leftover REAL — itt24-charactera-rlx
-- [x] claude2 leftover REAL — itt24-claude2-rlx
-- [x] copilotx leftover REAL — itt24-copilotx-rlx
-- [x] notionai leftover REAL — itt24-notionai-rlx
-- [x] plusabout leftover REAL — itt24-plusabout-rlx
-- [x] threads leftover REAL — itt24-threads-rlx
-- [x] threadsabout leftover REAL — itt24-threadsabo-rlx
-
-### Popular 3×
-
-### Links crawled from gold / official 10 / home / about
-- [x] 36 URLs resolved
-
-## 2025
-
-### Gold
-- [x] sites/deepseek/r1.html — complete → itt25-r1
-
-### Official 10
-- [x] 1. DeepSeek R1 Think — sites/deepseek/r1.html
-- [x] 2. Operator leftover — sites/operator/index.html
-- [x] 3. o3-mini leftover — sites/o3mini/index.html
-- [x] 4. GPT-4.5 leftover — sites/gpt45/index.html
-- [x] 5. Grok 3 leftover — sites/grok3/index.html
-- [x] 6. Claude 4 leftover — sites/claude4/index.html
-- [x] 7. Gemini 2.5 leftover — sites/gemini25/index.html
-- [x] 8. Chrome habit — sites/chrome/index.html
-- [x] 9. Windows 10 residual — sites/windows10/index.html
-- [x] 10. Think Dash — sites/playable/game.html
-
-### Games
-- [x] extra-a.html — lean leftover page
-- [x] extra-b.html — lean leftover page
-- [x] extra-c.html — more-game → itt25-game-thinkwait
-- [x] extra-d.html — more-game → itt25-game-opask
-- [x] extra-e.html — more-game started
-- [x] extra-f.html — more-game → itt25-game-think2
-- [x] extra-g.html — more-game → itt25-game-v3trap
-- [x] extra-h.html — more-game → itt25-game-r1two
-- [x] extra-i.html — more-game → itt25-game-opnote
-- [x] famous.html — leftover dest page (4× bound)
-- [x] game.html — leftover dest page (4× bound)
-- [x] index.html — cabinet
-
-### 2× leftover dests
-- [x] nb-lx — itt25-nb-lx
-- [x] sgpt-lx — itt25-sgpt-lx
-- [x] llama-lx — itt25-llama-lx
-- [x] grok-lx — itt25-grok-lx
-- [x] rabbit-lx — itt25-rabbit-lx
-- [x] suno-lx — itt25-suno-lx
-- [x] vp-lx — itt25-vp-lx
-- [x] pplx-lx — itt25-pplx-lx
-- [x] voice-lx — itt25-voice-lx
-- [x] mini-lx — itt25-mini-lx
-- [x] flux-lx — itt25-flux-lx
-- [x] pin-lx — itt25-pin-lx
-- [x] gem-lx — itt25-gem-lx
-- [x] c35-lx — itt25-c35-lx
-- [x] sora-lx — itt25-sora-lx
-- [x] ai-lx — itt25-ai-lx
-- [x] o1-lx — itt25-o1-lx
-- [x] 4o-lx — itt25-4o-lx
-- [x] GPT Store leftover — itt25-store-lx
-- [x] ChatGPT Memory leftover — itt25-mem-lx
-- [x] Claude 3 family leftover — itt25-opus-lx
-- [x] Devin leftover — itt25-devin-lx
-- [x] Udio leftover — itt25-udio-lx
-- [x] Gemini 1.5 Flash leftover — itt25-flash-lx
-- [x] Project Astra leftover — itt25-astra-lx
-- [x] Veo leftover — itt25-veo-lx
-- [x] Copilot+ Recall leftover — itt25-recall-lx
-- [x] Luma Dream Machine leftover — itt25-luma-lx
-- [x] Runway Gen-3 leftover — itt25-gen3-lx
-- [x] Claude Artifacts leftover — itt25-art-lx
-- [x] Llama 3.1 leftover — itt25-l31-lx
-- [x] Meta Orion leftover — itt25-orion-lx
-- [x] o1-mini leftover — itt25-o1m-lx
-- [x] ChatGPT Canvas leftover — itt25-canvas-lx
-- [x] Computer Use leftover — itt25-cu-lx
-- [x] ChatGPT Search leftover — itt25-csearch-lx
-- [x] bard leftover REAL — itt25-bard-rlx
-- [x] bardabout leftover REAL — itt25-bardabout-rlx
-- [x] beacons leftover REAL — itt25-beacons-rlx
-- [x] bing leftover REAL — itt25-bing-rlx
-- [x] bluesky leftover REAL — itt25-bluesky-rlx
-- [x] characterai leftover REAL — itt25-charactera-rlx
-- [x] claude2 leftover REAL — itt25-claude2-rlx
-- [x] copilotx leftover REAL — itt25-copilotx-rlx
-- [x] notionai leftover REAL — itt25-notionai-rlx
-- [x] plusabout leftover REAL — itt25-plusabout-rlx
-- [x] threads leftover REAL — itt25-threads-rlx
-- [x] threadsabout leftover REAL — itt25-threadsabo-rlx
-
-### Popular 3×
+- [ ] YouTube — no data-pop-go
+- [ ] Wikipedia — no data-pop-go
+- [ ] Facebook — no data-pop-go
 
 ### Links crawled from gold / official 10 / home / about
 - [x] 15 URLs resolved

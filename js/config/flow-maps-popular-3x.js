@@ -14,6 +14,7 @@
     "1999": ["livejournal|LiveJournal", "neopets|Neopets", "egroups|eGroups"],
     "2000": ["half|Half.com", "baidu|Baidu", "everything2|Everything2"],
                 "2004": ["piczo|Piczo", "tagged|Tagged", "odeo|Odeo"],
+    "2007": ["youtube|YouTube leftover", "wiki|Wikipedia leftover", "myspace|MySpace leftover"],
     "2008": ["stackoverflow|Stack Overflow", "posterous|Posterous", "grooveshark|Grooveshark"],
     "2009": ["omegle|Omegle", "chatroulette|Chatroulette", "mafiawars|Mafia Wars"],
     "2010": ["netflix|Netflix Instant", "tumblr|Tumblr", "formspring|Formspring"],
@@ -26,12 +27,11 @@
     "2017": ["reddit|Reddit leftover", "youtube|YouTube leftover", "amazon|Amazon leftover"],
     "2018": ["reddit|Reddit leftover", "youtube|YouTube leftover", "wikipedia|Wikipedia leftover"],
     "2019": ["youtube|YouTube leftover", "instagram|Instagram leftover", "wikipedia|Wikipedia leftover"],
-    "2021": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
-    "2020": ["meet|Google Meet", "hbomax|HBO Max", "quibi|Quibi"],
-    "2023": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
-    "2024": ["store|GPT Store", "search|ChatGPT Search", "visionpro|Vision Pro"],
-    "2022": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"]
-  };
+    "2021": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook3x|Facebook leftover"],
+    "2023": ["youtube|YouTube leftover", "wiki|Wikipedia leftover", "facebook|Facebook leftover"],
+    "2024": ["youtube|YouTube leftover", "wiki|Wikipedia leftover", "facebook|Facebook leftover"],
+    "2020": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
+    "2022": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"]};
 
   function sites(year) {
     var rows = POP[year] || [];

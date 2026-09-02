@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 const { enterYear, goInFrame, contentFrame, killOverlays } = require('./helpers');
 
 test('shell 2006 Obliv Walk actually plays', async ({ page }) => {
-  test.skip(!require('fs').existsSync(require('path').join(__dirname, '..', 'years', '2006', 'index.html')), '2006 wiped');
+  test.skip(!require('fs').existsSync(require('path').join(__dirname, '..', 'years', '2006', 'index.html')), '2006 not on disk');
   const logs = [];
   page.on('console', (m) => logs.push(m.type() + ': ' + m.text()));
   page.on('pageerror', (e) => logs.push('PAGEERROR: ' + e.message));

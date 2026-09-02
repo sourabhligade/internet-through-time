@@ -25,8 +25,8 @@ const {
 
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
-  '2000', '2001', '2002', '2003', '2004',
-  '2008', '2010', '2012', '2015', '2016', '2017', '2018', '2019',
+  '2000', '2001', '2002', '2003', '2004', '2005', '2006',
+  '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021', '2023', '2024', '2020', '2011', '2009', '2022',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -43,7 +43,12 @@ const LOCATION_HINT = {
   '2004': { type: 'gmail', re: /gmail|mail/i },
 
   /* Prefer keys that exist in each year's locationHints map */
+  '2007': { type: 'iphone', re: /iphone|safari/i },
+  '2005': { type: 'youtube', re: /youtube|upload/i },
+  '2006': { type: 'twitter', re: /twttr|twitter/i },
   '2008': { type: 'iphone', re: /iphone/i },
+  '2013': { type: 'vine', re: /vine|six|6s/i },
+  '2014': { type: 'whatsapp', re: /whatsapp|install/i },
 
   '2010': { type: 'instagram', re: /instagram/i },
 
@@ -52,6 +57,13 @@ const LOCATION_HINT = {
   '2017': { type: 'faceid', re: /face.?id|iphone.?x|animoji|no.?home/i },
   '2018': { type: 'gdpr', re: /gdpr|cookie|consent|manage|banner/i },
   '2019': { type: 'disneyplus', re: /disney|who's watching|continue|trial/i },
+  '2021': { type: 'att', re: /att|tracking|ask app|idfa/i },
+  '2023': { type: 'plus', re: /plus/i },
+  '2024': { type: 'chatgpt', re: /4o/i },
+  '2020': { type: 'zoom', re: /zoom/i },
+  '2011': { type: 'googleplus', re: /google.?plus/i },
+  '2009': { type: 'facebook', re: /facebook/i },
+  '2022': { type: 'chatgpt', re: /chatgpt|send|research preview/i },
 };
 
 for (const year of YEARS) {

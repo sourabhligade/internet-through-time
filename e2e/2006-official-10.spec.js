@@ -65,8 +65,8 @@ test.describe("2006 official 10 · dest machines", () => {
     await completeLo(page, "itt06-fb-open");
   });
   test("4 YouTube Google-owned leftover", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/youtube/index.html", "itt06-yt-google");
-    await completeLo(page, "itt06-yt-google");
+    await openClear(page, "/years/2006/sites/youtube/index.html", "itt06-yt");
+    await completeLo(page, "itt06-yt");
   });
   test("5 Google Docs leftover", async ({ page }) => {
     await openClear(page, "/years/2006/sites/googledocs/index.html", "itt06-gdocs");

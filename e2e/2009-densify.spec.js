@@ -4,10 +4,29 @@ const { test, expect } = require("@playwright/test");
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
 }
+
+async function officialVerbLeftover(page, href, key) {
+  await page.goto(href);
+  await page.evaluate((k) => localStorage.removeItem(k), key);
+  await page.reload();
+  await page.locator("[data-official-trap]").first().click();
+  expect(await getKey(page, key), key + " trap").toBeFalsy();
+  await page.locator("[data-official-verb]").click();
+  expect(await getKey(page, key), key + " empty").toBeFalsy();
+  const need = page.locator("[data-official-need]");
+  if ((await need.count()) > 0) await need.fill("leftover");
+  const reqs = page.locator("[data-official-req]");
+  const n = await reqs.count();
+  for (let i = 0; i < n; i++) await reqs.nth(i).check();
+  await page.locator("[data-official-verb]").click();
+  await expect.poll(() => getKey(page, key)).toBeTruthy();
+  expect(await getKey(page, "itt09-like"), "star after leftover").toBeFalsy();
+}
+
 test.describe("2009 leftover densify", () => {
   test("About dual-cite + bans", async ({ page }) => {
     await page.goto("/years/2009/pages/about.html");
-        await expect(page.locator("body")).toContainText("238,027,855");
+    await expect(page.locator("body")).toContainText("238,027,855");
     await expect(page.locator("body")).toContainText(/234 million|234M/i);
     await expect(page.locator("body")).toContainText("iPad");
     await expect(page.locator("body")).toContainText("Instagram");
@@ -24,38 +43,15 @@ test.describe("2009 leftover densify", () => {
     await page.locator("[data-lk09-beacon]").click();
     await page.locator("[data-lk09-like]").click();
     expect(await getKey(page, "itt09-like")).toBeFalsy();
-    await page.locator("[data-lk09-req]").nth(0).check();
-    await page.locator("[data-lk09-req]").nth(1).check();
     await page.locator('[data-lk09-page="news"]').click();
     await page.locator('[data-lk09-page="music"]').click();
     await page.locator("[data-lk09-like]").click();
     await expect.poll(() => getKey(page, "itt09-like")).toBeTruthy();
   });
-  test("FarmVille trap/empty never writes then save", async ({ page }) => {
-    await page.goto("/years/2009/sites/farmville/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt09-farm"));
-    await page.reload();
-    await page.locator("[data-fv09-pay]").click();
-    await page.locator("[data-fv09-harvest]").click();
-    expect(await getKey(page, "itt09-farm")).toBeFalsy();
-    await page.locator("[data-fv09-req]").nth(0).check();
-    await page.locator("[data-fv09-req]").nth(1).check();
-    await page.locator('[data-fv09-plot="a"]').click();
-    await page.locator('[data-fv09-plot="b"]').click();
-    await page.locator("[data-fv09-harvest]").click();
-    await expect.poll(() => getKey(page, "itt09-farm")).toBeTruthy();
+  test("FarmVille leftover incomplete never writes then save", async ({ page }) => {
+    await officialVerbLeftover(page, "/years/2009/sites/farmville/index.html", "itt09-farm");
   });
-  test("Bing trap/empty never writes then save", async ({ page }) => {
-    await page.goto("/years/2009/sites/bing/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt09-bing"));
-    await page.reload();
-    await page.locator("[data-bg09-trap]").click();
-    await page.locator("[data-bg09-go]").click();
-    expect(await getKey(page, "itt09-bing")).toBeFalsy();
-    await page.locator("[data-bg09-req]").nth(0).check();
-    await page.locator("[data-bg09-req]").nth(1).check();
-    await page.fill("[data-bg09-q]", "weather seattle");
-    await page.locator("[data-bg09-go]").click();
-    await expect.poll(() => getKey(page, "itt09-bing")).toBeTruthy();
+  test("Bing leftover incomplete never writes then save", async ({ page }) => {
+    await officialVerbLeftover(page, "/years/2009/sites/bing/index.html", "itt09-bing");
   });
 });

@@ -4,32 +4,12 @@
   --itt-desktop-bg: #0078d7;
 }
 
-.gpt22-sheet {
-  max-width: 420px;
-  margin: 24px auto;
-  padding: 18px 16px;
-  background: #fff;
-  color: #111;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: Segoe UI, Helvetica Neue, Arial, sans-serif;
-  font-size: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+.itt-2022-machine {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
 }
-.gpt22-sheet h1 { font-size: 18px; margin: 0 0 10px; }
-.dp-stage[data-dp-tone="gpt"] .dp-bar { background: #202123; }
-.dp-stage[data-dp-tone="eth"] .dp-bar { background: #3c3c3d; }
-.dp-stage[data-dp-tone="xtrap"] .dp-bar { background: #111; }
-.gpt22-send {
-  display: inline-block; margin: 8px 6px 0 0; padding: 8px 14px;
-  background: #10a37f; color: #fff; border: 0; border-radius: 6px; font-size: 14px;
-}
-.gpt22-trap {
-  display: inline-block; margin: 8px 6px 0 0; padding: 8px 14px;
-  background: #eee; color: #333; border: 1px solid #bbb; border-radius: 6px; font-size: 13px;
-}
-.gpt22-send:focus, .gpt22-trap:focus { outline: 2px solid #111; }
-.gpt22-reply {
-  margin: 10px 0 0; padding: 8px; background: #f7f7f8; border: 1px solid #ddd;
-  font-size: 13px; min-height: 2.4em;
+.itt-pixel-failed,
+.archive-residual {
+  font-family: Arial, sans-serif;
+  color: #555;
 }

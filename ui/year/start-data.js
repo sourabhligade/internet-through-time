@@ -184,30 +184,6 @@
       "<a href=\"map.html\">Year flow map</a>"
     ]
   },
-  "2020": {
-    "href": "../sites/zoom/meeting.html",
-    "label": "★ One-thing · Zoom mute → leave REAL",
-    "items": [
-      "<a href=\"about.html\">About 2020</a> — dual scale · bans",
-      "<a href=\"../sites/zoom/meeting.html\">Zoom meeting</a> — mute + chat + Leave REAL",
-      "<a href=\"../sites/reels/index.html\">Reels 15s leftover</a> — 5 Aug",
-      "<a href=\"../sites/openai/index.html\">GPT-3 waitlist leftover</a> — not a chat",
-      "<a href=\"../sites/flash/index.html\">Flash EOL leftover</a> — 31 Dec",
-      "<a href=\"map.html\">Year flow map</a>"
-    ]
-  },
-  "2024": {
-    "href": "../sites/chatgpt/4o.html",
-    "label": "★ One-thing · GPT-4o Talk REAL",
-    "items": [
-      "<a href=\"about.html\">About 2024</a> — 4o · Gemini · ILS ban",
-      "<a href=\"../sites/chatgpt/4o.html\">GPT-4o Talk</a> — omni · free-class REAL",
-      "<a href=\"../sites/gemini/index.html\">Gemini leftover</a> — not Bard",
-      "<a href=\"../sites/claude35/index.html\">Claude 3.5 leftover</a> — June",
-      "<a href=\"../sites/sora/index.html\">Sora leftover</a> — preview",
-      "<a href=\"map.html\">Year flow map</a>"
-    ]
-  },
   "2010": {
   "href": "../sites/instagram/index.html",
   "label": "★ One-thing · Instagram iOS filter REAL",
@@ -328,40 +304,76 @@
     "<a href=\"map.html\" style=\"color:#ffcdd2\">Year flow map</a>"
   ]
 },
+  "2007": {
+  "href": "../sites/iphone/index.html",
+  "label": "★ One-thing · iPhone Safari REAL",
+  "items": [
+    "<a href=\"about.html\" style=\"color:#90caf9\">About 2007</a> — June 121,892,559 · Jan 106,875,138 · 1,373,327,790",
+    "<a href=\"../sites/iphone/index.html\" style=\"color:#90caf9\">★ iPhone Safari</a> — App Store never writes",
+    "<a href=\"../sites/streetview/index.html\" style=\"color:#90caf9\">Street View leftover</a> — 29 May",
+    "<a href=\"../sites/gmail/index.html\" style=\"color:#90caf9\">Gmail open leftover</a> — 7 Feb",
+    "<a href=\"../sites/fbplat/index.html\" style=\"color:#90caf9\">Facebook Platform leftover</a> — 24 May",
+    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
+  ]
+},
   "2021": {
   "href": "../sites/att/index.html",
-  "label": "★ One-thing · Ask App Not to Track REAL",
+  "label": "★ One-thing · ATT Ask REAL",
   "items": [
-    "<a href=\"about.html\" style=\"color:#aed6f1\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
-    "<a href=\"../sites/att/index.html\" style=\"color:#aed6f1\">ATT Ask App Not to Track</a> — Allow never writes",
-    "<a href=\"../sites/signal/index.html\" style=\"color:#aed6f1\">Signal leftover</a> — 15 May delay",
-    "<a href=\"../sites/copilot/index.html\" style=\"color:#aed6f1\">Copilot waitlist</a> — not ChatGPT",
-    "<a href=\"../sites/meta/index.html\" style=\"color:#aed6f1\">Meta rename</a> — app still Facebook",
-    "<a href=\"map.html\" style=\"color:#aed6f1\">Year flow map</a>"
+    "<a href=\"about.html\" style=\"color:#90caf9\">About 2021</a> — table ends 2018 · 1,197,982,359 Jan · ITU 4.9B / 63%",
+    "<a href=\"../sites/att/index.html\" style=\"color:#90caf9\">★ ATT Ask</a> — Allow never writes",
+    "<a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal leftover</a> — not WhatsApp gold",
+    "<a href=\"../sites/copilot/index.html\" style=\"color:#90caf9\">Copilot waitlist</a> — not ChatGPT",
+    "<a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename</a> — app stays Facebook",
+    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
+  ]
+},
+  "2023": {
+  "href": "../sites/plus/index.html",
+  "label": "\u2605 One-thing \u00b7 Plus Subscribe REAL",
+  "items": [
+    "<a href=\"about.html\" style=\"color:#90caf9\">About 2023</a> \u2014 table ends 2018 \u00b7 1,132,268,801 Jan \u00b7 ITU 5.4B / 67%",
+    "<a href=\"../sites/plus/index.html\" style=\"color:#90caf9\">\u2605 Plus Subscribe</a> \u2014 GPT-4-as-here never writes",
+    "<a href=\"../sites/gpt4/index.html\" style=\"color:#90caf9\">GPT-4 leftover</a> \u2014 14 Mar",
+    "<a href=\"../sites/bingchat/index.html\" style=\"color:#90caf9\">Bing Chat leftover</a> \u2014 stays Bing Chat",
+    "<a href=\"../sites/threads/index.html\" style=\"color:#90caf9\">Threads leftover</a> \u2014 5 Jul",
+    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
+  ]
+},
+  "2024": {
+  "href": "../sites/chatgpt/4o.html",
+  "label": "\u2605 One-thing \u00b7 GPT-4o Talk REAL",
+  "items": [
+    "<a href=\"about.html\" style=\"color:#90caf9\">About 2024</a> \u2014 table ends 2018 \u00b7 1,079,154,539 Jan \u00b7 ITU 5.5B / 68%",
+    "<a href=\"../sites/chatgpt/4o.html\" style=\"color:#90caf9\">\u2605 GPT-4o Talk</a> \u2014 no 4o pick never writes",
+    "<a href=\"../sites/gemini/index.html\" style=\"color:#90caf9\">Gemini leftover</a> \u2014 Bard is 2023",
+    "<a href=\"../sites/claude35/index.html\" style=\"color:#90caf9\">Claude 3.5 leftover</a> \u2014 20\u201321 Jun",
+    "<a href=\"../sites/sora/index.html\" style=\"color:#90caf9\">Sora preview leftover</a> \u2014 public is trap",
+    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
+  ]
+},
+  "2020": {
+  "href": "../sites/zoom/meeting.html",
+  "label": "\u2605 One-thing \u00b7 Zoom Leave REAL",
+  "items": [
+    "<a href=\"about.html\" style=\"color:#90caf9\">About 2020</a> \u2014 table ends 2018 \u00b7 1,295,973,827 Jan \u00b7 300M participants",
+    "<a href=\"../sites/zoom/meeting.html\" style=\"color:#90caf9\">\u2605 Zoom Leave</a> \u2014 Join never writes",
+    "<a href=\"../sites/reels/index.html\" style=\"color:#90caf9\">Reels leftover</a> \u2014 15s",
+    "<a href=\"../sites/openai/index.html\" style=\"color:#90caf9\">GPT-3 waitlist leftover</a>",
+    "<a href=\"../sites/flash/index.html\" style=\"color:#90caf9\">Flash EOL leftover</a> \u2014 31 Dec",
+    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
   ]
 },
   "2022": {
   "href": "../sites/chatgpt/index.html",
   "label": "★ One-thing · ChatGPT Send REAL",
   "items": [
-    "<a href=\"about.html\" style=\"color:#aed6f1\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
-    "<a href=\"../sites/chatgpt/index.html\" style=\"color:#aed6f1\">ChatGPT Send</a> — empty / Plus / GPT-4 never write",
-    "<a href=\"../sites/twitter/index.html\" style=\"color:#aed6f1\">Twitter leftover</a> — still Twitter · not X",
-    "<a href=\"../sites/wordle/index.html\" style=\"color:#aed6f1\">Wordle leftover</a> — Times · initially free",
-    "<a href=\"../sites/stablediffusion/index.html\" style=\"color:#aed6f1\">Stable Diffusion leftover</a> — 22 Aug public",
-    "<a href=\"map.html\" style=\"color:#aed6f1\">Year flow map</a>"
-  ]
-},
-  "2023": {
-  "href": "../sites/plus/index.html",
-  "label": "★ One-thing · ChatGPT Plus REAL",
-  "items": [
-    "<a href=\"about.html\" style=\"color:#aed6f1\">About 2023</a> — table ends 2018 · ITU 5.4B / 67%",
-    "<a href=\"../sites/plus/index.html\" style=\"color:#aed6f1\">ChatGPT Plus</a> — $20 · GPT-4 is leftover",
-    "<a href=\"../sites/gpt4/index.html\" style=\"color:#aed6f1\">GPT-4 leftover</a> — 14 Mar",
-    "<a href=\"../sites/bingchat/index.html\" style=\"color:#aed6f1\">Bing Chat leftover</a> — 7 Feb",
-    "<a href=\"../sites/threads/index.html\" style=\"color:#aed6f1\">Threads leftover</a> — 5 Jul",
-    "<a href=\"map.html\" style=\"color:#aed6f1\">Year flow map</a>"
+    "<a href=\"about.html\" style=\"color:#90caf9\">About 2022</a> — table ends 2018 · 1,167,715,133 Jan · ITU 5.3B / 66%",
+    "<a href=\"../sites/chatgpt/index.html\" style=\"color:#90caf9\">★ ChatGPT Send</a> — Plus never writes",
+    "<a href=\"../sites/twitter/index.html\" style=\"color:#90caf9\">Twitter leftover</a> — still Twitter",
+    "<a href=\"../sites/wordle/index.html\" style=\"color:#90caf9\">Wordle leftover</a> — NYT 31 Jan",
+    "<a href=\"../sites/stablediffusion/index.html\" style=\"color:#90caf9\">Stable Diffusion leftover</a> — 22 Aug",
+    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
   ]
 }
 };

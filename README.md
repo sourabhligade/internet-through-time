@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **23 years open** (1994–2005 + 2008 + 2010 + 2012–2019 + 2021). **2006–2007 / 2009 / 2011 / 2020 / 2022–2025** are wiped. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2021 star = ATT Ask.
+Historical reconstruction of the World Wide Web — year by year. Hub **31 years open** (1994–2024). **2025** is boarded. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2019 star = Disney+ Continue. 2020 star = Zoom Leave. 2021 star = ATT Ask. 2022 star = ChatGPT Send. 2023 star = Plus Subscribe. 2024 star = GPT-4o Talk.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -79,17 +79,17 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/1998/` | Win98 · IE4 · portals · Google! · Amazon Music · eBay IPO · Mozilla |
 | `/years/1999/` | Win98 SE · IE5 · Napster · Blogger · Google funded · Y2K · multi-cat Amazon · **museum grade** |
 | `/years/2000/` | IE 5.5 · Win98 · Amazon **smile** · Napster · Pets.com · crash year · **museum densify** |
-| `/years/2001/` | **Boarded** — Wikipedia / iPod rebuild later |
-| `/years/2002/` | **Boarded** — Friendster / KaZaA rebuild later |
-| `/years/2003/` | **Boarded** — MySpace / iTunes Store rebuild later |
+| `/years/2001/` | Wikipedia UseMod · leftover 18 · **cut-forest live** |
+| `/years/2002/` | StumbleUpon · leftover 18 · **cut-forest live** |
+| `/years/2003/` | Photobucket upload · leftover 18 · **cut-forest live** |
 | `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
-| `/years/2005/` | **Wiped** — YouTube upload rebuild later |
-| `/years/2006/` | **Wiped** — Twitter 140 rebuild later |
-| `/years/2007/` | **Wiped** — iPhone Safari rebuild later · Chrome GIFs stay |
+| `/years/2005/` | YouTube upload · Maps / Reddit / Digg leftover · XP+IE6 · **live** |
+| `/years/2006/` | Twttr update · News Feed leftover · XP+IE6 · **live** |
+| `/years/2007/` | Lean door — iPhone Safari `itt07-iphone` · leftover 2× 120 · XP+IE6 |
 | `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
-| `/years/2009/` | **Wiped** — Facebook Like rebuild later |
+| `/years/2009/` | Lean door — Facebook Like `itt09-like` · leftover 2× 120 · XP+IE8 |
 | `/years/2010/` | Win7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph · **lean** |
-| `/years/2011/` | **Wiped** — Google+ / Spotify US / Siri rebuild later |
+| `/years/2011/` | Lean door — Google+ Hangout `itt11-gplus` · leftover 2× 120 · Win7+IE9 |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
 | `/years/2013/` | Lean door — Vine 6s · iOS 7 · Snapchat Stories |
 | `/years/2014/` | Lean door — WhatsApp Install · Heartbleed · Ice Bucket |
@@ -98,11 +98,15 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
 | `/years/2018/` | GDPR Manage · TikTok leftover · hearing · IGTV · **lean** |
 | `/years/2019/` | Disney+ Continue · TikTok leftover · Arcade · Stadia · **lean** |
-| `/years/2021/` | ATT Ask App Not to Track · Signal leftover · Copilot waitlist · Meta rename · **lean 3×** |
-| `/years/2020/` · `/years/2022/`–`/years/2025/` | **Wiped** — hub locked · no year tree |
+| `/years/2020/` | Lean door — Zoom Leave `itt20-zoom` · leftover 2× 120 · Win10 + Chrome habit |
+| `/years/2021/` | Lean door — ATT Ask `itt21-att` · leftover 2× 120 |
+| `/years/2022/` | Lean door — ChatGPT Send `itt22-chatgpt` · leftover 2× 120 |
+| `/years/2023/` | Lean door — Plus Subscribe `itt23-plus` · leftover 2× 120 · dest name X |
+| `/years/2024/` | Lean door — GPT-4o Talk `itt24-gpt4o` · leftover 2× 120 |
+| `/years/2025/` | **Boarded** — hub locked · no year tree |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**2013–2019 + 2021 are lean doors.** Hub is **22 years open** (1994–2019 + 2021). **2005–2007 / 2009 / 2011 / 2020 / 2022–2025 are wiped.** 2001–2003 are criteria forests. 2021 is ATT Ask.
+**Lean doors:** 2007 + 2009 + 2011 + 2013–2024. Hub is **31 years open** (1994–2024). **2025 is boarded.** 2001–2003 are cut-forest live. 2019 is Disney+ Continue. 2021 is ATT Ask. 2022 is ChatGPT Send. 2023 is Plus Subscribe. 2024 is GPT-4o Talk.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

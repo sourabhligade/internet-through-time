@@ -1,7 +1,12 @@
-# 2021 map — lean door
+# 2021 map — from-scratch lean door (not on disk)
 
-**Research freeze:** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md).  
-**In-place implement:** [`2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md).
+**Date:** 2026-09-01  
+**Status:** **live lean door.** `years/2021/` is on disk. Hub card **available**. Star is ATT Ask.  
+**Research freeze (this pass):** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md)  
+**Criteria (always / leftover 2×):** [`2021-2X-CRITERIA-MAP-2026-09-01.md`](2021-2X-CRITERIA-MAP-2026-09-01.md)  
+**Read first:** [`2021-READ-FIRST.md`](2021-READ-FIRST.md)  
+**Older harvest (loses on disk truth):** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md) still talks as if the door is live.  
+**In-place implement (notebook):** [`2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2021-IN-PLACE-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md)
 
 Guided 6: About → ★ ATT Ask → Signal leftover → Copilot waitlist → Meta rename → Year map.
 
@@ -11,6 +16,6 @@ Popular 3×: YouTube → Wikipedia → Facebook.
 3×3: Clubhouse · NFT literacy · Squid Game print.  
 Pop-more: Win11 · Flash brick · Chrome habit.
 
-2×: 51 first-door rows + **32 year-true `-dp` dests** (Shorts · AirTag · Coinbase · Beeple · BAYC · Log4j patch · …). First click is the product verb. 4× leftover pack stays at the bottom. Deepen freeze: `docs/2021-2022-2X-DEEPEN-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-08-27.md`.
+2×: **120 leftover REAL writers** (Pack A 40 + Pack B 40 + Pack C 40). Older “51 rows / 32 `-dp`” sentences lose to [`2021-2X-CRITERIA-MAP-2026-09-01.md`](2021-2X-CRITERIA-MAP-2026-09-01.md). First click is the product verb. 4× leftover pack stays at the bottom. Deepen freeze is notebook only.
 
 Gold: Ask App Not to Track. Allow never writes.

@@ -282,9 +282,7 @@
       '<fieldset><legend>Show / Hide</legend>' +
       '<label><input type="checkbox" id="pref-toolbar" checked> Show Toolbar</label><br>' +
       '<label><input type="checkbox" id="pref-location" checked> Show Location</label><br>' +
-      '<label><input type="checkbox" id="pref-dirbar"' +
-      (parseInt(spec.year, 10) >= 2015 ? "" : " checked") +
-      "> Show Directory Buttons</label><br>" +
+      '<label><input type="checkbox" id="pref-dirbar" checked> Show Directory Buttons</label><br>' +
       '<label><input type="checkbox" id="pref-desktopicons" checked> Show Desktop Icons</label></fieldset>' +
       '<fieldset><legend>Desktop</legend><label>Background: <select id="pref-desktop">' +
       '<option value="#008080">Teal</option><option value="#000000" selected>Black</option>' +
@@ -400,9 +398,7 @@
       '" spellcheck="false" autocomplete="off">' +
       goLabel +
       "</div>" +
-      '<div class="dirbar' +
-      (parseInt(spec.year, 10) >= 2015 ? " hidden" : "") +
-      '" id="dirbar">' +
+      '<div class="dirbar" id="dirbar">' +
       dirbar(spec) +
       "</div>" +
       '<div class="content-frame"><iframe id="content" tabindex="-1" title="Web page content" src="pages/home.html" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"></iframe></div>' +

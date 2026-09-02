@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — ship years 1994–2019 (2009 / 2011 / 2020–2025 boarded / wiped).
+ * Mock-flow classifier — 23 ship years 1994–2006 + 2008 + 2010 + 2012–2019
+ * (2025 boarded / wiped).
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -26,9 +27,9 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2005", "2006", "2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2024; y++) {
+for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -329,7 +330,7 @@ const PRODUCT_HOOK = new RegExp(
     "data-z20-",
     "data-v20-",
     "data-z24-",
-    "data-v24-",
+    "data-v24-"
   ].join("|"),
   "i"
 );
@@ -379,13 +380,13 @@ function classifyPage(fileRel, html) {
     hits.push({
       kind: "DEST_FIELD",
       sev: "fail",
-      msg: "5× dest-field plaque (period note + theater check + dest-field + Save)",
+      msg: "5× dest-field plaque (period note + theater check + dest-field + Save)"
     });
   } else if (DEST_NOTE.test(html) && DEST_SAVE.test(html)) {
     hits.push({
       kind: "DEST_FIELD",
       sev: "fail",
-      msg: "period-note REAL plaque (not a product machine)",
+      msg: "period-note REAL plaque (not a product machine)"
     });
   }
 
@@ -393,14 +394,14 @@ function classifyPage(fileRel, html) {
     hits.push({
       kind: "WEAK_REAL",
       sev: "fail",
-      msg: "data-min-req < 2 (" + mins.join(",") + ") — one-click / one-check write",
+      msg: "data-min-req < 2 (" + mins.join(",") + ") — one-click / one-check write"
     });
   }
   if (DEST_SAVE.test(html) && nReq < 2 && (!mins.length || Math.min.apply(null, mins) < 2)) {
     hits.push({
       kind: "WEAK_REAL",
       sev: "fail",
-      msg: "real-save with " + nReq + " data-req checkbox(es)",
+      msg: "real-save with " + nReq + " data-req checkbox(es)"
     });
   }
 
@@ -410,7 +411,7 @@ function classifyPage(fileRel, html) {
     hits.push({
       kind: "WEAK_REAL",
       sev: "fail",
-      msg: "one-click literacy CTA: " + m[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 60),
+      msg: "one-click literacy CTA: " + m[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 60)
     });
   }
 
@@ -425,7 +426,7 @@ function classifyPage(fileRel, html) {
       hits.push({
         kind: "HASH_CTA",
         sev: "fail",
-        msg: 'href="#" action with no hook: ' + inner.slice(0, 60),
+        msg: 'href="#" action with no hook: ' + inner.slice(0, 60)
       });
     }
   }
@@ -435,7 +436,7 @@ function classifyPage(fileRel, html) {
     hits.push({
       kind: "PACK",
       sev: "warn",
-      msg: "year-true pack (" + typ + ") — two-click / fillGo machine, not dest-field",
+      msg: "year-true pack (" + typ + ") — two-click / fillGo machine, not dest-field"
     });
   }
 
@@ -460,7 +461,7 @@ function classifyPage(fileRel, html) {
       hits.push({
         kind: "UNWIRED",
         sev: "warn",
-        msg: "action button with no product/REAL/pack hook: " + (inner || attrs).slice(0, 70),
+        msg: "action button with no product/REAL/pack hook: " + (inner || attrs).slice(0, 70)
       });
     }
   }
@@ -504,7 +505,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 1994–2019 (2009 / 2011 / 2020–2025 boarded)");
+  console.log("audit-mock-flows — 31 years (2025 boarded)");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

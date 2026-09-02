@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * All-year flow report — 1994–2015.
+ * All-year flow report — 23 ship years (1994–2006 + 2008 + 2010 + 2012–2019).
  *
  * Classes (strict):
  *   REAL      named product hook + incomplete-never-writes + JSON {real, multiStep}
@@ -25,9 +25,9 @@ const ROOT = path.join(__dirname, "..");
 const WANT_JSON = process.argv.includes("--json");
 const WANT_MD = process.argv.includes("--md");
 
-const WIPED = new Set(["2005", "2006", "2007", "2009", "2011", "2020", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2025"]);
 const YEARS = [];
-for (let y = 1994; y <= 2024; y++) {
+for (let y = 1994; y <= 2025; y++) {
   if (!WIPED.has(String(y))) YEARS.push(String(y));
 }
 
@@ -57,13 +57,7 @@ const STARS = {
   2016: { name: "Instagram Stories", href: "sites/instagram/stories.html", key: "itt16-ig-stories" },
   2017: { name: "Face ID / iPhone X", href: "sites/iphone/x.html", key: "itt17-faceid" },
   2018: { name: "GDPR Manage", href: "sites/gdpr/index.html", key: "itt18-gdpr" },
-  2019: { name: "Disney+ Continue", href: "sites/disneyplus/home.html", key: "itt19-disneyplus" },
-  2020: { name: "Zoom mute → leave", href: "sites/zoom/meeting.html", key: "itt20-zoom" },
-  2021: { name: "ATT Ask", href: "sites/att/index.html", key: "itt21-att" },
-  2022: { name: "ChatGPT Send", href: "sites/chatgpt/index.html", key: "itt22-chatgpt" },
-  2023: { name: "ChatGPT Plus", href: "sites/plus/index.html", key: "itt23-plus" },
-  2024: { name: "GPT-4o Talk", href: "sites/chatgpt/4o.html", key: "itt24-gpt4o" },
-};
+  2019: { name: "Disney+ Continue", href: "sites/disneyplus/home.html", key: "itt19-disneyplus" }};
 
 const PRODUCT_HOOK = new RegExp(
   [
@@ -225,7 +219,7 @@ const PRODUCT_HOOK = new RegExp(
     "data-tb07-",
     "data-xa07-",
     "data-xb07-",
-    "data-peg-",
+    "data-peg-"
   ].join("|"),
   "i"
 );
@@ -277,7 +271,7 @@ function classifyHtml(html, fileRel) {
     product: PRODUCT_HOOK.test(html) && !(/data-5x-save/.test(html) && !PRODUCT_HOOK.test(html.replace(/data-5x-[^>]*/g, ""))),
     namedProduct: false,
     hashCta: [],
-    unwired: [],
+    unwired: []
   };
 
   // named product = a specific data-* hook besides 5x / pack / pop
@@ -344,7 +338,7 @@ function gradeLabel(g) {
       PLAQUE: "MOCK — checkbox plaque (data-5x-save)",
       VISIT: "visit-only (no writer / empty whenKey)",
       MISSING: "MISSING file",
-      UNWIRED: "UNWIRED action (no hook)",
+      UNWIRED: "UNWIRED action (no hook)"
     }[g] || g
   );
 }
@@ -363,7 +357,7 @@ for (const year of YEARS) {
     extraUnwired: [],
     extraHash: [],
     extraPacks: [],
-    counts: { REAL: 0, "REAL+PLAQUE": 0, LITERACY: 0, LEFTOVER: 0, PLAQUE: 0, VISIT: 0, MISSING: 0 },
+    counts: { REAL: 0, "REAL+PLAQUE": 0, LITERACY: 0, LEFTOVER: 0, PLAQUE: 0, VISIT: 0, MISSING: 0 }
   };
 
   const star = STARS[year];
@@ -403,7 +397,7 @@ for (const year of YEARS) {
       plaque: !!cls.plaque,
       pack: !!cls.pack,
       hash: cls.hashCta || [],
-      unwired: cls.unwired || [],
+      unwired: cls.unwired || []
     });
     row.counts[grade] = (row.counts[grade] || 0) + 1;
   }
@@ -427,7 +421,7 @@ for (const year of YEARS) {
       key: "itt" + year.slice(2) + "-pop-" + p.id,
       exists,
       grade,
-      theater: /\(theater\)/i.test(p.btn || ""),
+      theater: /\(theater\)/i.test(p.btn || "")
     });
   }
 

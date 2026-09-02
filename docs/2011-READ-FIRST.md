@@ -1,8 +1,8 @@
 # 2011 — READ FIRST (**WIPED**)
 
 **Date:** 2026-08-30  
-**Status:** **WIPED.** Hub card locked. No year tree. Rebuild only when named.  
-**Do not** `git checkout` the old forest unless named.
+**Status:** **live lean door** as of 2026-09-01. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× 120.  
+**Do not** `git checkout` an older forest.
 
 | Doc | Role |
 |-----|------|
@@ -16,7 +16,7 @@
 | [`references/2011/`](references/2011/) | Wikipedia 2011 list · extlinks · CDX · visit log |
 | Parent live year | `years/2010/` · `itt10` |
 
-**Disk truth:** Hub lean cut is **1994–2011**. `years/2011/` is a **lean door** (~22 rooms), cloned from 2010. Prior thicker 2011 forests are **not** the source of truth.
+**Disk truth:** `years/2011/` is **live**. Hub card **available**. Prior thicker 2011 forests are **not** the source of truth.
 
 ---
 

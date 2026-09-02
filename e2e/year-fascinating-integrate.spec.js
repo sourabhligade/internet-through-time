@@ -99,22 +99,33 @@ test.describe("Fascinating integrate leftovers", () => {
     await expect(page.locator('a[href*="iphone/maps.html"]').first()).toBeVisible();
   });
 
-  test("2007 Street View 0–1 city never writes · two cities persist last pano", async ({ page }) => {
-    skipIfWiped('2007');
-    test.skip(!yearOnDisk("2007"), "2007 wiped");
-    await openClean(page, "/years/2007/sites/maps/index.html", ["itt07-streetview", "itt07-iphone"]);
-    await page.locator('[data-sv07-city="sf"]').click();
-    await page.locator("[data-sv07-go]").click();
-    expect(await getKey(page, "itt07-streetview")).toBeFalsy();
-    await page.locator('[data-sv07-city="nyc"]').click();
-    await page.locator("[data-sv07-go]").click();
-    await expect.poll(() => getKey(page, "itt07-streetview")).toBeTruthy();
-    const blob = await blobOf(page, "itt07-streetview");
-    expect(blob && blob.year).toBe("2007");
-    expect(blob && blob.last).toBeTruthy();
+  test("2007 leftover Maps + official Street View never write gold", async ({ page }) => {
+    skipIfWiped("2007");
+    await openClean(page, "/years/2007/sites/maps/index.html", ["itt07-maps-dp", "itt07-iphone", "itt07-streetview"]);
+    const lo = page.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="maps-dp"])').first();
+    await lo.locator("[data-lo-trap]").first().click();
+    expect(await getKey(page, "itt07-maps-dp")).toBeFalsy();
     expect(await getKey(page, "itt07-iphone")).toBeFalsy();
-    await page.reload();
-    await expect(page.locator("[data-sv07-status]")).toContainText(/Last pano|Street View/i);
+    const reqs = lo.locator("[data-lo-req]");
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+    const picks = lo.locator("[data-lo-pick]");
+    const nPick = await picks.count();
+    for (let i = 0; i < nPick; i++) await picks.nth(i).click();
+    await lo.locator("[data-lo-save]").first().click();
+    await expect.poll(() => getKey(page, "itt07-maps-dp")).toBeTruthy();
+    expect(await getKey(page, "itt07-iphone")).toBeFalsy();
+    expect(await getKey(page, "itt07-streetview")).toBeFalsy();
+
+    await openClean(page, "/years/2007/sites/streetview/index.html", ["itt07-streetview", "itt07-iphone"]);
+    await page.locator("[data-official-trap]").first().click();
+    expect(await getKey(page, "itt07-streetview")).toBeFalsy();
+    await page.locator("[data-official-need]").fill("museum leftover");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
+    await expect.poll(() => getKey(page, "itt07-streetview")).toBeTruthy();
+    expect(await getKey(page, "itt07-iphone")).toBeFalsy();
   });
 
   test("2009 FarmVille instant harvest never writes · wait ~3s writes", async ({ page }) => {
@@ -185,7 +196,7 @@ test.describe("Fascinating integrate leftovers", () => {
 
   test("2006 News Feed hide never writes · one story writes itt06-feed", async ({ page }) => {
     skipIfWiped('2006');
-    test.skip(!yearOnDisk("2006"), "2006 wiped");
+    test.skip(!yearOnDisk("2006"), "2006 not on disk");
     await openClean(page, "/years/2006/sites/facebook/feed.html", ["itt06-feed", "itt06-tweets"]);
     await page.locator("[data-feed-hide]").waitFor({ timeout: 20000 });
     await page.locator("[data-feed-hide]").click();

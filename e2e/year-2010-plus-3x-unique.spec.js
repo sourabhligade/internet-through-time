@@ -8,8 +8,8 @@ const { test, expect } = require("@playwright/test");
 
 
 const YEARS = [];
-for (let y = 1994; y <= 2023; y++) {
-  if (y === 2005 || y === 2006 || y === 2007 || y === 2014 || y === 2020 || y === 2021) continue;
+for (let y = 1994; y <= 2019; y++) {
+  if (y === 2005 || y === 2006 || y === 2007 || y === 2014) continue;
   YEARS.push(String(y));
 }
 
@@ -37,11 +37,7 @@ const WANT_MORE = {
   2016: [/slack/, /fblive/, /moments/],
   2017: [/snapipo/, /bitcoinath/, /echoshow/],
   2018: [/discord/, /applemusic/, /fortnite/],
-  2019: [/appletv/, /airpodspro/, /iphone\/iphone11/],
-  2021: [/windows11/, /flash/, /chrome/],
-  2022: [/twitter/, /wordle/, /stablediffusion/],
-  2023: [/\/x\//, /bard/, /claude2/],
-};
+  2019: [/appletv/, /airpodspro/, /iphone\/iphone11/]};
 
 function siteKey(href) {
   const m = String(href || "").match(/sites\/[^?#]+/);

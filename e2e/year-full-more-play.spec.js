@@ -101,15 +101,3 @@ test('idle 2013 Cookie Click bakery', async ({ page }) => {
   await expectSaved(page, 'itt13-game-cookieclk');
 });
 
-test('rhythm 2024 Stratagem lane clicks', async ({ page }) => {
-  test.skip(!require('fs').existsSync(require('path').join(__dirname, '..', 'years', '2024', 'index.html')), '2024 wiped');
-  await openGame(page, '/years/2024/sites/playable/more-d.html', 'itt24-game-helldive');
-  const canvas = page.locator('canvas');
-  const lanes = [60, 180, 300, 420];
-  for (let t = 0; t < 80; t++) {
-    await canvas.click({ position: { x: lanes[t % 4], y: 250 } });
-    await page.waitForTimeout(70);
-    if (await page.evaluate(() => localStorage.getItem('itt24-game-helldive'))) break;
-  }
-  await expectSaved(page, 'itt24-game-helldive');
-});

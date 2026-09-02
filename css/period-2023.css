@@ -1,2 +1,2 @@
 @import url("period-2022.css");
-.year-2023.os-win10 { --itt-desktop-bg: #0078d7; }
+body.year-2023 .itt-year-chip { color:#1565c0; }

@@ -1,5 +1,7 @@
 # All-years research + implement recheck — 2026-08-29
 
+**Disk 2026-09-01:** this file’s “31 live / 2025 only boarded” spine **loses** to [`DISK-TRUTH.md`](DISK-TRUTH.md) + [`ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md`](ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md) (24 open · 2021 live · 2007/2009/2011/2020/2022–2025 wiped).
+
 Shared bar from each year’s READ-FIRST / densify / REAL contract:
 
 - Year **on disk** is the source of truth. Do not wipe. Do not restore a forest. Do not add dest folders unless named.

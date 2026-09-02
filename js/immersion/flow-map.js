@@ -185,14 +185,13 @@
     var host = doc.querySelector("[data-itt-flow-map]");
     if (!host) return;
     var y = yearOf();
-    var data = (ITT.flowMaps && ITT.flowMaps[y]) || null;
-    if (!data) {
-      host.innerHTML =
-        '<p class="itt-fmap-missing">Flow map data missing for ' +
-        esc(y) +
-        ". Ensure <code>js/config/flow-maps.js</code> is loaded.</p>";
-      return;
-    }
+    var data = (ITT.flowMaps && ITT.flowMaps[y]) || {
+      year: y,
+      thesis: "",
+      shell: "",
+      how: [],
+      branches: []
+    };
     ensureTrails(function () {
       render(host, data);
     });

@@ -38,41 +38,61 @@
     } catch (eC) { /* */ }
   }
 
-  function inLoPanel(el) {
+  function inSidePanel(el) {
     var n = el;
     while (n && n.nodeType === 1) {
-      if (n.getAttribute && n.getAttribute("data-lo-panel") === "1") return true;
+      if (n.getAttribute) {
+        if (n.getAttribute("data-lo-panel") === "1") return true;
+        if (n.getAttribute("data-pop-panel") === "1") return true;
+      }
       n = n.parentNode;
     }
     return false;
   }
 
+  function isProductReqBox(el) {
+    if (!el || el.type !== "checkbox") return false;
+    if (inSidePanel(el)) return false;
+    if (el.getAttribute("data-official-req") != null) return true;
+    if (el.getAttribute("data-req") != null) return true;
+    var attrs = el.attributes;
+    var i;
+    for (i = 0; i < attrs.length; i++) {
+      var n = attrs[i].name || "";
+      if (n.indexOf("data-") !== 0) continue;
+      if (n.slice(-4) !== "-req") continue;
+      if (n === "data-lo-req" || n === "data-pop-req") continue;
+      return true;
+    }
+    return false;
+  }
+
   function productReqs(doc) {
-    var all = doc.querySelectorAll("[data-official-req], [data-req]");
+    var all = doc.querySelectorAll("input[type='checkbox']");
     var out = [];
     var i;
     for (i = 0; i < all.length; i++) {
-      if (!inLoPanel(all[i])) out.push(all[i]);
+      if (isProductReqBox(all[i])) out.push(all[i]);
     }
     return out;
   }
 
   function productField(doc, form) {
     var field = doc.querySelector("[data-official-need]");
-    if (field && !inLoPanel(field)) return field;
+    if (field && !inSidePanel(field)) return field;
     if (form) {
       field =
         form.querySelector("[data-official-need]") ||
         form.querySelector("input[required], textarea[required]") ||
         form.querySelector("input[type='text'], input[type='search'], input:not([type]), textarea");
-      if (field && !inLoPanel(field)) return field;
+      if (field && !inSidePanel(field)) return field;
     }
     var cands = doc.querySelectorAll(
       "input[type='text'], input[type='search'], input:not([type]), textarea"
     );
     var i;
     for (i = 0; i < cands.length; i++) {
-      if (!inLoPanel(cands[i])) return cands[i];
+      if (!inSidePanel(cands[i])) return cands[i];
     }
     return null;
   }
@@ -86,6 +106,24 @@
     var st =
       doc.querySelector("[data-official-status]") ||
       doc.querySelector("[data-itt-action-status]");
+    var picks = doc.querySelectorAll("[data-official-pick]");
+    var p;
+    for (p = 0; p < picks.length; p++) {
+      if (picks[p].getAttribute("data-official-pick-bound") === "1") continue;
+      picks[p].setAttribute("data-official-pick-bound", "1");
+      picks[p].addEventListener("click", function () {
+        var all = doc.querySelectorAll("[data-official-pick]");
+        var j;
+        for (j = 0; j < all.length; j++) {
+          all[j].className = String(all[j].className || "").replace(/\bis-on\b/g, "").replace(/\s+/g, " ");
+          all[j].setAttribute("aria-pressed", "false");
+        }
+        this.className = (String(this.className || "") + " is-on").replace(/\s+/g, " ");
+        this.setAttribute("aria-pressed", "true");
+        say(st, "Picked leftover.", false);
+      });
+    }
+
     var traps = doc.querySelectorAll("[data-official-trap]");
     var t;
     for (t = 0; t < traps.length; t++) {
@@ -116,11 +154,31 @@
             return;
           }
         }
+        var needPick = this.getAttribute("data-official-need-pick") || "";
+        if (needPick) {
+          var picked = doc.querySelector('[data-official-pick="' + needPick + '"]');
+          var on = picked && (/\bis-on\b/.test(picked.className || "") || picked.getAttribute("aria-pressed") === "true");
+          if (!on) {
+            say(st, "Pick the leftover first. Incomplete never writes.", true);
+            return;
+          }
+        }
         var form = this.form || (this.closest && this.closest("form"));
         var field = productField(doc, form);
         var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
-        if (field && v.length < 2) {
-          say(st, "Type something first. Empty never writes.", true);
+        var minNeed = 2;
+        if (field) {
+          var minAttr = field.getAttribute("data-official-min");
+          if (minAttr && /^\d+$/.test(minAttr)) minNeed = parseInt(minAttr, 10);
+        }
+        if (field && v.length < minNeed) {
+          say(
+            st,
+            minNeed > 2
+              ? "Past the old limit first. Incomplete never writes."
+              : "Type something first. Empty never writes.",
+            true
+          );
           return;
         }
         if (form && !reqs.length) {
@@ -129,7 +187,7 @@
             var ticked = 0;
             var b;
             for (b = 0; b < boxes.length; b++) {
-              if (inLoPanel(boxes[b])) continue;
+              if (inSidePanel(boxes[b])) continue;
               if (boxes[b].checked) ticked++;
             }
             if (ticked < 2) {

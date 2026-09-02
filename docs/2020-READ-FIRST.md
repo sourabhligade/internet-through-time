@@ -1,7 +1,7 @@
 # 2020 — read first
 
-**Date:** 2026-08-28  
-**Status:** lean door **on disk**. Prefix `itt20`. Star `itt20-zoom`.  
+**Date:** 2026-09-01  
+**Status:** **live lean door** as of 2026-09-01. `years/2020/` is on disk. Hub card **available**. Star `itt20-zoom`. Leftover 2× 120. Join never writes gold.  
 
 | Companion | When |
 |-----------|------|

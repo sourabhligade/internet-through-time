@@ -1,7 +1,7 @@
 # 2009 — READ FIRST (**WIPED**)
 
 **Date:** 2026-08-30  
-**Status:** **WIPED.** Hub card locked. No year tree. Facebook Like is the star if rebuilt later.  
+**Status:** **live lean door** as of 2026-09-01. `years/2009/` is on disk. Hub card **available**. Star `itt09-like`. Leftover 2× 120.  
 **Implementer map:** [`2009-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2009-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Older research (tree status stale):** [`2009-RESEARCH.md`](2009-RESEARCH.md) · [`2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
 **Prefix:** `itt09-*`  

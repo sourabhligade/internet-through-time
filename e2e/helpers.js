@@ -576,6 +576,98 @@ async function pageYear(page) {
   );
 }
 
+/**
+ * Open the Starting Point leftover drawer when present.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} year
+ */
+async function openAlsoYear(page, year) {
+  const box = page.locator(`#itt-also-year-${year}`);
+  if (!(await box.count())) return;
+  if ((await box.getAttribute('open')) === null) {
+    await box.locator('summary').first().click();
+  }
+}
+
+/**
+ * The 3-door leftover strip (not the 9-door leftover nav).
+ * @param {import('@playwright/test').Page} page
+ * @param {string} year
+ * @param {'pop-more'|'pop-3x3'} kind
+ */
+function leftoverTrioStrip(page, year, kind) {
+  return page.locator(`p.itt-${kind}[data-itt-${kind}="${year}"]`).first();
+}
+
+/**
+ * Dest-true leftover-official on a dest page: trap / 0 ticks / field-or-picks / wait
+ * then save. Never writes goldKey.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} href
+ * @param {string} suffix
+ * @param {string} [goldKey]
+ */
+async function leftoverOfficialDest(page, href, suffix, goldKey) {
+  const { expect } = require("@playwright/test");
+  const yearMatch = String(href).match(/\/years\/(\d{4})\//);
+  const year = yearMatch ? yearMatch[1] : "";
+  const key = "itt" + String(year).slice(-2) + "-" + suffix;
+  const panel = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
+  await page.goto(href);
+  await panel.locator("[data-lo-save]").waitFor({ timeout: 20000 });
+  await page.waitForFunction((suf) => {
+    const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
+    return !!(b && b.getAttribute("data-lo-bound") === "1");
+  }, suffix, { timeout: 20000 });
+  await page.evaluate((k) => localStorage.removeItem(k), key);
+  if (goldKey) await page.evaluate((k) => localStorage.removeItem(k), goldKey);
+
+  await panel.locator("[data-lo-trap]").first().click();
+  expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " trap").toBeFalsy();
+
+  await panel.locator("[data-lo-save]").first().click();
+  expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " 0 ticks").toBeFalsy();
+
+  const reqs = panel.locator("[data-lo-req]");
+  const nReq = await reqs.count();
+  for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+
+  const saveBtn = panel.locator("[data-lo-save]").first();
+  const needPick = (await saveBtn.getAttribute("data-lo-need-pick")) || "";
+  const minPick = Number((await saveBtn.getAttribute("data-lo-min-pick")) || "0");
+  const picks = panel.locator("[data-lo-pick]");
+  const nPick = await picks.count();
+  if (needPick) {
+    await panel.locator(`[data-lo-pick="${needPick}"]`).first().click();
+  } else if (nPick > 0) {
+    const need = Math.max(minPick || 1, 1);
+    for (let i = 0; i < Math.min(need, nPick); i++) await picks.nth(i).click();
+  }
+
+  const field = panel.locator("[data-lo-field]");
+  if ((await field.count()) > 0) {
+    await saveBtn.click();
+    expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " empty field").toBeFalsy();
+    const ph = (await field.first().getAttribute("placeholder")) || "leftover";
+    await field.first().fill(ph.length >= 2 ? ph : ph + "xx");
+  }
+
+  const wait = panel.locator("[data-lo-wait]");
+  if ((await wait.count()) > 0) {
+    await saveBtn.click();
+    expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " skip wait").toBeFalsy();
+    await wait.first().click();
+    await page.waitForTimeout(1000);
+  }
+
+  await saveBtn.click();
+  await expect.poll(() => page.evaluate((k) => localStorage.getItem(k), key), { timeout: 8000 }).toBeTruthy();
+  if (goldKey) {
+    expect(await page.evaluate((k) => localStorage.getItem(k), goldKey), "star after leftover").toBeFalsy();
+  }
+  return key;
+}
+
 module.exports = {
   enterYear,
   goInFrame,
@@ -600,4 +692,7 @@ module.exports = {
   fillGmailLogin,
   REAL_CHECK_SEL,
   pageYear,
+  openAlsoYear,
+  leftoverTrioStrip,
+  leftoverOfficialDest,
 };

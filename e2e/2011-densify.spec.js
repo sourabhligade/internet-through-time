@@ -4,10 +4,29 @@ const { test, expect } = require("@playwright/test");
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
 }
+
+async function officialVerbLeftover(page, href, key) {
+  await page.goto(href);
+  await page.evaluate((k) => localStorage.removeItem(k), key);
+  await page.reload();
+  await page.locator("[data-official-trap]").first().click();
+  expect(await getKey(page, key), key + " trap").toBeFalsy();
+  await page.locator("[data-official-verb]").click();
+  expect(await getKey(page, key), key + " empty").toBeFalsy();
+  const need = page.locator("[data-official-need]");
+  if ((await need.count()) > 0) await need.fill("leftover");
+  const reqs = page.locator("[data-official-req]");
+  const n = await reqs.count();
+  for (let i = 0; i < n; i++) await reqs.nth(i).check();
+  await page.locator("[data-official-verb]").click();
+  await expect.poll(() => getKey(page, key)).toBeTruthy();
+  expect(await getKey(page, "itt11-gplus"), "star after leftover").toBeFalsy();
+}
+
 test.describe("2011 leftover densify", () => {
   test("About dual-cite + bans", async ({ page }) => {
     await page.goto("/years/2011/pages/about.html");
-        await expect(page.locator("body")).toContainText("346,004,403");
+    await expect(page.locator("body")).toContainText("346,004,403");
     await expect(page.locator("body")).toContainText("555 million");
     await expect(page.locator("body")).toContainText("Android");
     await expect(page.locator("body")).toContainText("iPhone 4");
@@ -24,53 +43,32 @@ test.describe("2011 leftover densify", () => {
     await page.locator("[data-gp11-won]").click();
     await page.locator("[data-gp11-hangout]").click();
     expect(await getKey(page, "itt11-gplus")).toBeFalsy();
-    await page.locator("[data-gp11-req]").nth(0).check();
-    await page.locator("[data-gp11-req]").nth(1).check();
     await page.fill("[data-gp11-circle]", "Friends");
     await page.locator('[data-gp11-person="ada"]').click();
     await page.locator('[data-gp11-person="al"]').click();
     await page.locator("[data-gp11-hangout]").click();
     await expect.poll(() => getKey(page, "itt11-gplus")).toBeTruthy();
   });
-  test("Spotify trap/empty never writes then save", async ({ page }) => {
-    await page.goto("/years/2011/sites/spotify/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt11-spotify"));
-    await page.reload();
-    await page.locator("[data-sp11-stream]").click();
-    await page.locator("[data-sp11-invite]").click();
-    expect(await getKey(page, "itt11-spotify")).toBeFalsy();
-    await page.locator("[data-sp11-req]").nth(0).check();
-    await page.locator("[data-sp11-req]").nth(1).check();
-    await page.locator('[data-sp11-sku="free"]').click();
-    await page.locator("[data-sp11-invite]").click();
-    await expect.poll(() => getKey(page, "itt11-spotify")).toBeTruthy();
+  test("Spotify leftover incomplete never writes then save", async ({ page }) => {
+    await officialVerbLeftover(page, "/years/2011/sites/spotify/index.html", "itt11-spotify");
   });
-  test("dirbar dests resolve · no 2012 clone rooms", async ({ page }) => {
+  test("lean dests resolve · no 2012 clone rooms", async ({ page }) => {
     await page.goto("/years/2011/");
     await expect(page.locator('[data-go="sites/instagram/android.html"]')).toHaveCount(0);
     await expect(page.locator('[data-go="sites/facebook/ipo.html"]')).toHaveCount(0);
-    await expect(page.locator('[data-go="sites/chrome/index.html"]')).toHaveCount(0);
-    const goes = await page.locator(".dir-btn[data-go]").evaluateAll((els) =>
-      els.map((el) => el.getAttribute("data-go") || "")
-    );
-    expect(goes.length).toBeGreaterThanOrEqual(6);
-    for (const go of goes) {
+    const dests = [
+      "sites/googleplus/index.html",
+      "sites/spotify/index.html",
+      "sites/iphone/index.html",
+      "sites/facebook/index.html",
+      "sites/playable/game.html",
+    ];
+    for (const go of dests) {
       const res = await page.request.get("/years/2011/" + go);
-      expect(res.status(), "dirbar " + go).toBeLessThan(400);
+      expect(res.status(), "dest " + go).toBeLessThan(400);
     }
   });
-
-  test("Siri trap/empty never writes then save", async ({ page }) => {
-    await page.goto("/years/2011/sites/iphone/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt11-siri"));
-    await page.reload();
-    await page.locator("[data-sr11-iphone4]").click();
-    await page.locator("[data-sr11-ask]").click();
-    expect(await getKey(page, "itt11-siri")).toBeFalsy();
-    await page.locator("[data-sr11-req]").nth(0).check();
-    await page.locator("[data-sr11-req]").nth(1).check();
-    await page.fill("[data-sr11-phrase]", "will I need an umbrella");
-    await page.locator("[data-sr11-ask]").click();
-    await expect.poll(() => getKey(page, "itt11-siri")).toBeTruthy();
+  test("Siri leftover incomplete never writes then save", async ({ page }) => {
+    await officialVerbLeftover(page, "/years/2011/sites/iphone/index.html", "itt11-siri");
   });
 });

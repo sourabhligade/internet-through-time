@@ -56,7 +56,7 @@ test.describe('ten link-flows every year', () => {
         as.map((a) => a.getAttribute('href') || '').filter(Boolean)
       );
       expect(hrefs.length, s.year).toBeGreaterThanOrEqual(10);
-      const base = `http://127.0.0.1:8080/years/${s.year}/${s.gold}`;
+      const base = page.url();
       for (const h of hrefs.slice(0, 10)) {
         const url = new URL(h, base).href;
         const res = await request.get(url);

@@ -72,7 +72,7 @@ for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.y
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
 # Hub-open years on disk. Keep in sync with scripts/itt_gate.py SHIP_YEARS.
-WIPED=" 2007 2009 2011 2020 2022 2023 2024 2025 "
+WIPED=" 2025 "
 for y in $(seq 1994 2025); do
   if [[ "$WIPED" == *" $y "* ]]; then
     if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y boarded"; fi

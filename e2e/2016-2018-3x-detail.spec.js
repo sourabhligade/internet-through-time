@@ -4,6 +4,7 @@
  * Star / guided 6 stay locked. Keys remain ittYY-pop-<slug>.
  */
 const { test, expect } = require("@playwright/test");
+const { openAlsoYear } = require("./helpers");
 
 
 const YEARS = [
@@ -89,6 +90,7 @@ for (const y of YEARS) {
       await page.goto(`/years/${y.year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${y.year} ol > li`)).toHaveCount(6);
       await expect(page.locator(".itt-year-star [data-ott-one-thing]")).toHaveCount(1);
+      await openAlsoYear(page, y.year);
       const pop = page.locator(`[data-itt-pop3x="${y.year}"]`).first();
       await expect(pop).toBeVisible();
       for (const room of y.rooms) {

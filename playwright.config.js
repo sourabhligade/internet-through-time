@@ -5,7 +5,7 @@ const isCI = !!process.env.CI;
 
 module.exports = defineConfig({
   testDir: './e2e',
-  testIgnore: [/2007[-.]/, /\/2009[-.]/, /\/2011[-.]/, /202[02-5][-.]/],
+  testIgnore: [/2025[-.]/],
   timeout: 60_000,
   retries: isCI ? 1 : 0,
   workers: isCI ? 2 : undefined,

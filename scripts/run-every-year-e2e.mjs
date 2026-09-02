@@ -18,7 +18,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2006", "2007", "2020", "2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
@@ -43,6 +43,8 @@ const GOLD = {
   2003: { path: "sites/photobucket/index.html", key: "itt03-photobucket", hook: "[data-pb-upload]" },
   2004: { path: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", hook: "[data-fb-join-btn], [data-fb-join]" },
   2005: { path: "sites/youtube/upload.html", key: "itt05-yt-uploads", hook: "[data-yt-upload]" },
+  2006: { path: "sites/twitter/index.html", key: "itt06-tweets", hook: "[data-tw06-post], [data-tw06-body]" },
+  2007: { path: "sites/iphone/index.html", key: "itt07-iphone", hook: "[data-official-verb], [data-official-need]" },
   2008: { path: "sites/github/issue.html", key: "itt08-github", hook: "[data-gh-issue-form], form[data-gh-issue-form]" },
   2009: { path: "sites/facebook/index.html", key: "itt09-like", hook: "[data-lk09-like]" },
   2010: { path: "sites/instagram/index.html", key: "itt10-ig", hook: "[data-ig-share]" },
@@ -55,13 +57,11 @@ const GOLD = {
   2017: { path: "sites/iphone/x.html", key: "itt17-faceid", hook: "[data-faceid-unlock]" },
   2018: { path: "sites/gdpr/index.html", key: "itt18-gdpr", hook: "[data-gdpr-manage], [data-gdpr-accept-all]" },
   2019: { path: "sites/disneyplus/home.html", key: "itt19-disneyplus", hook: "[data-dplus-continue]" },
-  2020: { path: "sites/zoom/meeting.html", key: "itt20-zoom", hook: "[data-zoom-leave]" },
-  2021: { path: "sites/att/index.html", key: "itt21-att", hook: "[data-att-allow], [data-att-ask]" },
-  2022: { path: "sites/chatgpt/index.html", key: "itt22-chatgpt", hook: "[data-gpt22-send], [data-gpt22]" },
-  2023: { path: "sites/chatgpt/plus.html", key: "itt23-chatgpt-plus", hook: "[data-plus-go]" },
-  2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: "[data-4o-go]" },
-  2025: { path: "sites/deepseek/r1.html", key: "itt25-r1", hook: "[data-r1-go]" },
-};
+  2021: { path: "sites/att/index.html", key: "itt21-att", hook: "[data-official-verb], [data-att-hop]" },
+  2023: { path: "sites/plus/index.html", key: "itt23-plus", hook: "[data-official-verb], [data-official-need]" },
+  2024: { path: "sites/chatgpt/4o.html", key: "itt24-gpt4o", hook: "[data-official-verb], [data-official-need], [data-official-pick]" },
+  2020: { path: "sites/zoom/meeting.html", key: "itt20-zoom", hook: "[data-official-verb], [data-official-need]" },
+  2022: { path: "sites/chatgpt/index.html", key: "itt22-chatgpt", hook: "[data-official-verb], [data-official-need]" }};
 
 function loadVm(rel, pick) {
   const src = fs.readFileSync(path.join(ROOT, rel), "utf8");
@@ -92,7 +92,7 @@ async function maybeStartServer() {
   if (!free) return null;
   const child = spawn("python3", ["-m", "http.server", "8080", "--bind", "127.0.0.1"], {
     cwd: ROOT,
-    stdio: "ignore",
+    stdio: "ignore"
   });
   for (let i = 0; i < 40; i++) {
     try {
@@ -210,7 +210,7 @@ const GOLD_COMPLETE = {
       await link.click({ timeout: 4000 }).catch(() => {});
       await page.goto(`${BASE}/years/1994/sites/csotd/index.html`, {
         waitUntil: "domcontentloaded",
-        timeout: 15000,
+        timeout: 15000
       });
       await waitImmersion(page);
       await page.evaluate(() => {
@@ -271,9 +271,9 @@ const GOLD_COMPLETE = {
     await page.locator("[data-wiki-save]").click();
   },
   2002: async (page) => {
-    await page.locator("[data-su-interest='tech']").check();
+    await page.locator("[data-su-topic]").selectOption("science");
     await page.locator("[data-su-stumble]").click();
-    await page.locator("[data-su-stumble]").click();
+    await page.locator("[data-su-up]").click();
   },
   2003: async (page) => {
     await page.fill("#ott-field", "party.jpg");
@@ -351,42 +351,50 @@ const GOLD_COMPLETE = {
     await page.locator('[data-dplus-profile="adult"]').click();
     await page.locator("[data-dplus-continue]").click();
   },
-  2020: async (page) => {
-    await page.locator("[data-zoom-mute]").click();
-    await page.fill("[data-zoom-field]", "can you see my screen");
-    await page.locator("[data-zoom-send]").click();
-    await page.locator("[data-zoom-leave]").click();
+  2007: async (page) => {
+    await page.locator("[data-official-need]").fill("apple.com");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
+  },
+  2006: async (page) => {
+    await page.locator("[data-tw06-req]").nth(0).check();
+    await page.locator("[data-tw06-req]").nth(1).check();
+    await page.fill("[data-tw06-body]", "just setting up my twttr residual");
+    await page.locator("[data-tw06-post]").click();
   },
   2021: async (page) => {
-    await page.locator("[data-att-req]").nth(0).check();
-    await page.locator("[data-att-req]").nth(1).check();
-    await page.locator("[data-att-ask]").click();
-  },
-  2022: async (page) => {
-    await page.fill("[data-gpt22-prompt]", "explain leftover");
-    await page.locator("[data-gpt22-send]").click();
+    await page.locator('[data-att-hop="privacy"]').click();
+    await page.locator('[data-att-hop="tracking"]').click();
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
   },
   2023: async (page) => {
-    await page.locator('[data-plus-pick="20"]').click();
-    const reqs = page.locator("[data-plus-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-plus-go]").click();
+    await page.locator("[data-official-need]").fill("leftover");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
   },
   2024: async (page) => {
-    await page.locator('[data-4o-pick="4o"]').click();
-    const reqs = page.locator("[data-4o-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-4o-go]").click();
+    await page.locator('[data-official-pick="4o"]').click();
+    await page.locator("[data-official-need]").fill("leftover");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
   },
-  2025: async (page) => {
-    await page.locator('[data-r1-pick="r1"]').click();
-    const reqs = page.locator("[data-r1-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-r1-go]").click();
+  2020: async (page) => {
+    await page.locator("[data-official-need]").fill("leftover");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
   },
+  2022: async (page) => {
+    await page.locator("[data-official-need]").fill("leftover prompt");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.locator("[data-official-verb]").click();
+  }
 };
 
 async function runGold(page, year, spec) {
@@ -854,7 +862,7 @@ async function main() {
         games: [],
         twoX: [],
         pop: [],
-        links: { ok: true, n: 0, broken: [] },
+        links: { ok: true, n: 0, broken: [] }
       };
       console.log("== " + year + " ==");
 
@@ -909,7 +917,7 @@ async function main() {
       y.links = await crawlLinks(page, year, seed).catch((e) => ({
         ok: false,
         n: 0,
-        broken: [{ href: "crawl", detail: String(e.message || e) }],
+        broken: [{ href: "crawl", detail: String(e.message || e) }]
       }));
       if (!y.links.ok) console.log("  links FAIL", y.links.broken.length);
 
@@ -941,7 +949,7 @@ function writeMd(report, started) {
     "**Method:** Chromium walks gold (full complete + key write), official 10 (live page), every `sites/playable/*.html` (start / leftover extra / minute complete), every 2× leftover dest (wait `data-4x-ready`, incomplete never writes, complete writes), every popular 3× dest, then crawls in-year hrefs (museum year-root resolve)."
   );
   lines.push("**Incomplete never writes** is asserted on leftover 2× / popular 3× / empty game Finish.");
-  lines.push("**Wiped:** 2006, 2007 — no year tree.");
+  lines.push("**Wiped:** 2009 / 2011 / 2020 / 2023–2025 — no year tree.");
   lines.push("");
   lines.push(`**Totals:** ${report.totals.pass} pass · ${report.totals.fail} fail`);
   lines.push("");
