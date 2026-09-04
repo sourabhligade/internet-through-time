@@ -71,7 +71,6 @@
 
   function extraLinks(y) {
     var list = (ITT.yearExtraGames && ITT.yearExtraGames[y]) || [];
-    if (!list.length) return "";
     var i;
     var bits = [];
     for (i = 0; i < list.length; i++) {
@@ -83,9 +82,12 @@
           "</a>"
       );
     }
-    return (
-      ' <span class="yp-extras">· extras ' + bits.join(" ") + "</span>"
-    );
+    if (y !== "2007" && y !== "2009") {
+      bits.push('<a class="yp-btn secondary" href="more-a.html">more-a</a>');
+      bits.push('<a class="yp-btn secondary" href="more-b.html">more-b</a>');
+    }
+    if (!bits.length) return "";
+    return " <span class=\"yp-extras\">· extras " + bits.join(" ") + "</span>";
   }
 
   function renderCabinet(host, y, spec) {

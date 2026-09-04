@@ -110,19 +110,109 @@
         chip.id = chipId;
         chip.className = "itt-playable-link";
         chip.setAttribute("data-itt-famous-chip", year);
-        chip.innerHTML =
-          "<b>▶ Play this year’s games</b> — " +
-          '<a href="../sites/playable/famous.html">Famous games</a>';
+        chip.innerHTML = playableChipHtml(year);
         var extraEl = document.getElementById("itt-year-start-extra");
         if (extraEl) host.parentNode.insertBefore(chip, extraEl);
         else if (host.nextSibling) host.parentNode.insertBefore(chip, host.nextSibling);
         else host.parentNode.appendChild(chip);
+      }
+      var threeId = "ott-3x-" + year + "-dp";
+      var three = document.getElementById(threeId);
+      if (!three && host.parentNode) {
+        var threeHtml = threeXRow(year);
+        if (threeHtml) {
+          three = document.createElement("div");
+          three.innerHTML = threeHtml;
+          three = three.firstChild;
+          var afterChip = document.getElementById(chipId);
+          if (afterChip && afterChip.nextSibling) {
+            afterChip.parentNode.insertBefore(three, afterChip.nextSibling);
+          } else if (afterChip) {
+            afterChip.parentNode.appendChild(three);
+          } else if (host.nextSibling) {
+            host.parentNode.insertBefore(three, host.nextSibling);
+          } else {
+            host.parentNode.appendChild(three);
+          }
+        }
+      }
+      if (year === "2001" || year === "2002" || year === "2003") {
+        var freezeId = "itt-leftover18-" + year + "-dp";
+        if (!document.getElementById(freezeId) && host.parentNode) {
+          var freeze = document.createElement("p");
+          freeze.id = freezeId;
+          freeze.className = "itt-mass-honesty";
+          freeze.setAttribute("data-itt-mass", "leftover-18");
+          freeze.innerHTML =
+            "<b>Leftover-18 freeze</b> — named leftover dests stay at 18. No new dest folders. Costume is XP + IE6.";
+          var threeEl = document.getElementById(threeId);
+          var anchor = threeEl || document.getElementById(chipId) || host;
+          if (anchor.nextSibling) anchor.parentNode.insertBefore(freeze, anchor.nextSibling);
+          else anchor.parentNode.appendChild(freeze);
+        }
       }
       scheduleFold(year);
     }
 
     if (ITT.flowTrails) finish();
     else loadFlowTrails(finish);
+  }
+
+  function playableChipHtml(year) {
+    var html =
+      "<b>▶ Play this year’s games</b> — " +
+      '<a href="../sites/playable/famous.html">Famous games</a>';
+    if (year !== "2007" && year !== "2009") {
+      html +=
+        ' · <a href="../sites/playable/extra-a.html">extra-a</a>' +
+        ' · <a href="../sites/playable/extra-b.html">extra-b</a>' +
+        ' · <a href="../sites/playable/more-a.html">more-a</a>' +
+        ' · <a href="../sites/playable/more-b.html">more-b</a>';
+    } else {
+      html += ' · <a href="../sites/playable/game.html">year cabinet</a>';
+    }
+    return html;
+  }
+
+  function threeXRow(year) {
+    var trails = (ITT.flowTrails && ITT.flowTrails[year]) || [];
+    if (!trails.length) return "";
+    var picks = [];
+    var i;
+    var t;
+    for (i = 0; i < trails.length; i++) {
+      t = trails[i];
+      if (t.n >= 11 && t.n <= 13) picks.push(t);
+    }
+    if (picks.length < 3) {
+      for (i = 0; i < trails.length && picks.length < 3; i++) {
+        t = trails[i];
+        if (t.n === 1) continue;
+        if (/leftover/i.test(t.name || "")) picks.push(t);
+      }
+    }
+    if (picks.length < 3) {
+      for (i = 0; i < trails.length && picks.length < 3; i++) {
+        t = trails[i];
+        if (t.n === 1) continue;
+        if (picks.indexOf(t) >= 0) continue;
+        picks.push(t);
+      }
+    }
+    picks = picks.slice(0, 3);
+    if (!picks.length) return "";
+    var html = '<p class="itt-3x-visible" id="ott-3x-' + year + '-dp"><b>Also 3×</b> · ';
+    for (i = 0; i < picks.length; i++) {
+      if (i) html += " · ";
+      html +=
+        '<a href="' +
+        esc(flowHref(picks[i].href)) +
+        '">' +
+        esc(picks[i].name || "leftover") +
+        "</a>";
+    }
+    html += "</p>";
+    return html;
   }
 
   function esc(s) {
