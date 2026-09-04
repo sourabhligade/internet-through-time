@@ -166,6 +166,7 @@ async function completeLeftover(page, href, year, suffix, star) {
 test.describe("2010–2019 href-2× gold hops are live leftover dests", () => {
   for (const y of YEARS) {
     test(`${y.year} gold 2×/3× hops 200 + leftover machine`, async ({ page }) => {
+      test.skip(!fs.existsSync(path.join(ROOT, "years", y.year, "index.html")), y.year + " wiped");
       await page.goto(y.gold);
       const hrefs = await page.locator("[data-itt-2x-links] a[href*='../'], [data-itt-3x-also] a[href*='../']").evaluateAll((as) =>
         [...new Set(as.map((a) => a.getAttribute("href")).filter(Boolean))]

@@ -208,7 +208,7 @@ test.describe("atlas hallway — all flows", () => {
   test("popular third-trio rooms on disk are listed after catalog load", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
-    const sample = ["1994", "2004", "2008", "2014", "2019"];
+    const sample = ["1994", "2004", "2008", "2015", "2019"];
     for (const y of sample) {
       const want = (trio[y] || []).length;
       expect(want, y + " trio").toBe(3);
