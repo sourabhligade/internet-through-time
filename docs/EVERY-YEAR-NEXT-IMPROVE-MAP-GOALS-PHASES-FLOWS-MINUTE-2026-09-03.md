@@ -422,9 +422,9 @@ If Wave 6 already put the 2007 / 2012 / 2018 / 2019 hops on gold, Wave 8 only do
 
 **Wave 8 pass**
 
-- [ ] From each named gold dest, required hops HTTP 200  
-- [ ] Dest folders unchanged  
-- [ ] One-thing e2e those years green  
+- [x] From each named gold dest, required hops HTTP 200 (2018 skipped — wiped)  
+- [x] Dest folders unchanged  
+- [x] One-thing e2e those years green (2018 wiped · skipped)  
 
 ---
 
@@ -461,9 +461,9 @@ years/2011/pages/home.html
 
 **Wave 9 pass**
 
-- [ ] Those homes have `.itt-home-more`  
-- [ ] After paint, warehouse is inside closed `#itt-also-year-YYYY`  
-- [ ] Stars unchanged  
+- [x] Those homes have `.itt-home-more` (2011 leftover 2× strip classed; 2018 wiped)  
+- [x] After paint, warehouse is inside closed `#itt-also-year-YYYY`  
+- [x] Stars unchanged  
 
 ---
 

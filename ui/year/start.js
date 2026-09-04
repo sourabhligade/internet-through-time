@@ -103,6 +103,21 @@
         }
         extra.innerHTML = extraHtml;
       }
+      var chipId = "itt-famous-chip-" + year + "-dp";
+      var chip = document.getElementById(chipId);
+      if (!chip && host.parentNode) {
+        chip = document.createElement("p");
+        chip.id = chipId;
+        chip.className = "itt-playable-link";
+        chip.setAttribute("data-itt-famous-chip", year);
+        chip.innerHTML =
+          "<b>▶ Play this year’s games</b> — " +
+          '<a href="../sites/playable/famous.html">Famous games</a>';
+        var extraEl = document.getElementById("itt-year-start-extra");
+        if (extraEl) host.parentNode.insertBefore(chip, extraEl);
+        else if (host.nextSibling) host.parentNode.insertBefore(chip, host.nextSibling);
+        else host.parentNode.appendChild(chip);
+      }
       scheduleFold(year);
     }
 
@@ -272,6 +287,10 @@
       if (kids[i].id && /-dp$/.test(kids[i].id) && extra.parentNode) {
         extra.parentNode.insertBefore(kids[i], extra);
       }
+    }
+    var dps = extra.querySelectorAll("[id$='-dp']");
+    for (i = 0; i < dps.length; i++) {
+      if (extra.parentNode) extra.parentNode.insertBefore(dps[i], extra);
     }
     /* Museum hub must stay visible — do not fold it into Also this year. */
     for (i = 0; i < kids.length; i++) {

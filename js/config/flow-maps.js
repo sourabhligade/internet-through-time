@@ -1765,6 +1765,7 @@
           { "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "do": "leftover" },
           { "name": "Amazon smile leftover", "href": "sites/amazon/index.html", "do": "leftover" },
           { "name": "Clickscape", "href": "sites/playable/game.html", "do": "itt01-game-clickscape" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
         ]
       }
@@ -1796,6 +1797,7 @@
           { "name": "Friendster seed", "href": "sites/friendster/index.html", "do": "itt02-fs" },
           { "name": "TrackBack", "href": "sites/movabletype/trackback.html", "do": "itt02-trackback" },
           { "name": "Room Sticky", "href": "sites/playable/game.html", "do": "itt02-game-roomsticky" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
         ]
       }
@@ -1827,6 +1829,7 @@
           { "name": "Bloglines", "href": "sites/bloglines/index.html", "do": "itt03-bloglines-feeds" },
           { "name": "Blogger-Google", "href": "sites/blogger/edit.html", "do": "itt03-blog" },
           { "name": "Gags Lite", "href": "sites/playable/game.html", "do": "itt03-game-gagslite" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
         ]
       }
@@ -2015,6 +2018,7 @@
         "sites": [
           { "name": "Starting Point", "href": "pages/home.html", "do": "6 steps · official 10 flows" },
           { "name": "YouTube upload", "href": "sites/youtube/upload.html", "do": "★ gold" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
         ]
       }
@@ -2036,6 +2040,7 @@
         "sites": [
           { "name": "Starting Point", "href": "pages/home.html", "do": "6 steps · official 10 flows" },
           { "name": "Twttr", "href": "sites/twitter/index.html", "do": "★ gold" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
         ]
       }

@@ -202,6 +202,37 @@
       setStatus("Saved · " + prefixYear(year) + "-game-" + gid + ".");
     }
 
+    function bindStaticPick() {
+      if (!field) return;
+      var goodsEl = field.querySelectorAll("[data-mx-good]");
+      var i;
+      need = goodsEl.length;
+      for (i = 0; i < goodsEl.length; i++) {
+        (function (b) {
+          if (b.getAttribute("data-mx-bound") === "1") return;
+          b.setAttribute("data-mx-bound", "1");
+          on(b, "click", function () {
+            if (!running || saved) return;
+            if (b.getAttribute("data-mx-used") === "1") return;
+            b.setAttribute("data-mx-used", "1");
+            b.disabled = true;
+            markGood("g" + goods);
+          });
+        })(goodsEl[i]);
+      }
+      var trapsEl = field.querySelectorAll("[data-mx-trap]");
+      for (i = 0; i < trapsEl.length; i++) {
+        (function (b) {
+          if (b.getAttribute("data-mx-bound") === "1") return;
+          b.setAttribute("data-mx-bound", "1");
+          on(b, "click", function () {
+            if (!running || saved) return;
+            trap("Wrong row");
+          });
+        })(trapsEl[i]);
+      }
+    }
+
     function renderPickLike(list, goodAttr) {
       if (!field) return;
       field.innerHTML = "";
@@ -552,7 +583,11 @@
         for (i = 0; i < items.length; i++) {
           if (items[i].role !== "trap") need += 1;
         }
-        renderPickLike(items, "data-mx-good");
+        if (items.length) {
+          renderPickLike(items, "data-mx-good");
+        } else {
+          bindStaticPick();
+        }
       }
       renderConfirm();
     }
@@ -607,4 +642,24 @@
   }
 
   ITT.YearExtraMinute = { mount: mount };
+
+  function boot(doc) {
+    doc = doc || document;
+    var host = doc.querySelector("[data-year-game][data-minute-extra]");
+    if (!host) return;
+    mount({
+      id: host.getAttribute("data-game-id"),
+      year: host.getAttribute("data-year"),
+      kind: host.getAttribute("data-mx-kind")
+    });
+  }
+
+  ITT.YearExtraMinute.boot = boot;
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      boot(document);
+    });
+  } else {
+    boot(document);
+  }
 })(typeof window !== "undefined" ? window : this);
