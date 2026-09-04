@@ -1,0 +1,21 @@
+SOURCE: https://web.archive.org/web/20011130071527id_/http://blogdex.media.mit.edu/
+STATUS: [wa-visited] 2026-07-26 deep research pass (NEW)
+TITLE: ( blogdex )
+ROLE: P1 Blogdex — most-linked URLs across weblogs
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Header stats: "13494 sites : 473663 links" (Nov 30 2001 capture)
+- Tagline: harness personal news / democratic media / amalgamate weblogs
+- Indexes: recent | all-time
+- Tools: add your site | url search | config (look preferences)
+- Project info: news weblog | overview (info.asp)
+- Top 25 recent links with points + sources (blog community voting with links)
+- Sample late-Nov links: RuPaul weblog, The Register Google/AV, Buffy, Tempest for Eliza, NYT Friedman, Apple QT5, CNN cloning story, etc.
+- Footer: mit media laboratory · blogdex@media.mit.edu
+- Cameron Marlow / MIT Media Lab (from narrative)
+
+BUILD:
+- Top-links list theater (curated period links, not live crawl)
+- info.asp copy for democratic media framing
+- Optional "wrap a blog" educational note

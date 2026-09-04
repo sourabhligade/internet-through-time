@@ -1,5 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
 
 test.describe('1996 immersion', () => {
@@ -13,7 +22,7 @@ test.describe('1996 immersion', () => {
 
     await frame.locator('input[name="login"]').fill('testuser');
     await frame.locator('input[name="pass"]').fill('secret');
-    await frame.locator('form[data-hotmail-login] input[type="submit"]').click({ force: true });
+    await frame.locator('form[data-hotmail-login] input[type="submit"], form[data-hotmail-login] input[type="image"]').click({ force: true });
 
     await expect(frame.locator('[data-hotmail-inbox] tr').first()).toBeVisible({ timeout: 20000 });
     await expect(frame.locator('body')).toContainText(/Inbox|welcome@hotmail|HoTMaiL/i);

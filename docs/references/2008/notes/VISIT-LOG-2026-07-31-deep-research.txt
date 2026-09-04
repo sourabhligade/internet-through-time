@@ -1,0 +1,30 @@
+2008 deep research visit log
+Date: 2026-07-31
+Docs: 2008-RESEARCH.md · 2008-DEEP-RESEARCH-FRESH-2026-07-31.md ·
+      2008-IMPLEMENTATION-GOALS-PHASES-AND-USER-FLOWS.md ·
+      2008-IMPLEMENT-PHASES-CLEAR · 2008-CONNECTIONS-AND-TRAILS · 2008-MUSEUM-GRADE
+
+Opened / used:
+- https://cybercultural.com/p/internet-2008/
+  App Store + Android Market · Chrome · Firefox 3 · Hulu · Netflix streaming ·
+  Spotify Europe · Friend Connect · Facebook Connect · OpenSocial · FB growth ~140M
+- https://www.apple.com/newsroom/2008/07/10iPhone-3G-on-Sale-Tomorrow/
+  App Store 500+ apps · iPhone 3G tomorrow · $199/$299 · iPhone 2.0
+- https://www.apple.com/newsroom/2008/07/14iPhone-App-Store-Downloads-Top-10-Million-in-First-Weekend/
+  10M downloads first weekend · 1M iPhone 3G weekend
+- https://googleblog.blogspot.com/2008/09/fresh-take-on-browser.html
+  Chrome comic · Windows beta next day
+- https://en.wikipedia.org/wiki/Google_Chrome
+  Beta Sep 2 2008 · stable 1.0 Dec 11 2008 · Windows first
+- https://en.wikipedia.org/wiki/IPhone_3G · HTC Dream / G1
+  3G ship Jul 11 · G1 Oct 2008 US T-Mobile
+- https://www.t-mobile.com/news/press/t-mobile-unveils-the-t-mobile-g1-the-first-phone-powered-by
+  G1 unveil · $179 contract · Oct retail
+- https://www.internetlivestats.com/total-number-of-websites/
+  2008: 172,338,726 sites · +41% · users ~1.57B · Dropbox birthmark
+- Hulu public Mar 12 2008 · Spotify Oct 7 2008 Europe · Beacon shutdown 2009
+
+Project MD re-read:
+- 2007-RESEARCH · 2007-DEEP · 2007-GOALS · DISK-TRUTH · 2006-IMPLEMENT goals pattern
+
+Disk: years/2008 ABSENT · hub 2008+ locked · research only

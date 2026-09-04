@@ -19,13 +19,34 @@
       var loadJSON = api.loadJSON;
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
 function hotmailHref(file) {
   if ((location.pathname || "").indexOf("/hotmail/") !== -1) return file;
   return R("sites/hotmail/" + file);
+}
+
+/** Prefer shell navigate so Location bar / history stay in sync */
+function hotmailGo(file) {
+  var path = "sites/hotmail/" + file;
+  try {
+    if (parentBrowser && typeof parentBrowser.navigate === "function") {
+      parentBrowser.navigate(path, { instant: true });
+      return;
+    }
+  } catch (eNav) { /* fall through */ }
+  try {
+    if (window.top && window.top.ITT && window.top.ITT.activeBrowser &&
+        typeof window.top.ITT.activeBrowser.navigate === "function") {
+      window.top.ITT.activeBrowser.navigate(path, { instant: true });
+      return;
+    }
+  } catch (eTop) { /* fall through */ }
+  location.href = hotmailHref(file);
 }
 
 function getHotmailUser() {
@@ -87,14 +108,14 @@ function initHotmail() {
       var login = ((loginForm.querySelector('[name="login"]') || {}).value || "").trim();
       var pass = ((loginForm.querySelector('[name="pass"]') || {}).value || "").trim();
       if (!login) {
-        showFlash("Enter a login name.");
+        actionFeedback("Enter a login name.");
         return;
       }
-      setHotmailUser({ login: login, pass: pass ? "set" : "" });
+      setHotmailUser({ login: login, pass: pass ? "set" : "", multiStep: true, real: true, ts: Date.now() });
       seedMail({ login: login });
-      showFlash("✓ Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
-      markTourProgress();
-      location.href = hotmailHref("inbox.html");
+      actionFeedback("Signed in as <b>" + escapeHtml(login) + "@hotmail.com</b>");
+      markTourUsed();
+      hotmailGo("inbox.html");
     };
   }
 
@@ -148,6 +169,20 @@ function initHotmail() {
       }
     }
     setMail(mail2);
+    if (!found) {
+      var sentList = loadJSON(storageKey("hotmail-sent"), []);
+      for (var si = 0; si < sentList.length; si++) {
+        if (sentList[si].id === id) {
+          found = {
+            from: (user.login || "you") + "@hotmail.com",
+            subject: sentList[si].subject,
+            body: sentList[si].body,
+            to: sentList[si].to
+          };
+          break;
+        }
+      }
+    }
     var sub = readRoot.querySelector("[data-hm-subject]");
     var fr = readRoot.querySelector("[data-hm-from]");
     var bd = readRoot.querySelector("[data-hm-body]");
@@ -158,6 +193,11 @@ function initHotmail() {
       if (fr) fr.textContent = found.from;
       if (bd) bd.textContent = found.body;
     }
+    var cta = document.querySelector("[data-hotmail-sig-cta]");
+    if (cta) {
+      var hasFooter = found && String(found.body || "").indexOf("Get your free email at HoTMaiL") !== -1;
+      cta.style.display = hasFooter ? "" : "none";
+    }
   }
 
   var compose = document.querySelector("form[data-hotmail-compose]");
@@ -167,22 +207,42 @@ function initHotmail() {
       var to = ((compose.querySelector('[name="to"]') || {}).value || "").trim();
       var subject = ((compose.querySelector('[name="subject"]') || {}).value || "(no subject)").trim();
       var body = ((compose.querySelector('[name="body"]') || {}).value || "").trim();
+      if (!to || !body) {
+        actionFeedback("Enter To and a message — empty mail is not an invite.");
+        return;
+      }
+      var FOOTER = "Get your free email at HoTMaiL";
+      if (body.indexOf(FOOTER) === -1) {
+        body = body.replace(/\s+$/, "") + "\n\n" + FOOTER;
+      }
       var sent = loadJSON(storageKey("hotmail-sent"), []);
+      var sentId = "s" + Date.now();
       sent.unshift({
-        id: "s" + Date.now(),
+        id: sentId,
         to: to,
         subject: subject,
         body: body,
         date: new Date().toLocaleString()
       });
       saveJSON(storageKey("hotmail-sent"), sent.slice(0, 30));
-      showFlash(
-        "✓ Message queued to <b>" + escapeHtml(to || "recipient") +
-        "</b>. <font size=\"1\">Get your free email at HoTMaiL — exhibit theater.</font>"
+      /* Every outbound mail is the invite. Peak loop is 1996. */
+      if (String(YEAR) === "1996") {
+        saveJSON(storageKey("hotmail-sig"), {
+          multiStep: true,
+          real: true,
+          year: "1996",
+          ts: Date.now(),
+          to: to,
+          id: sentId
+        });
+      }
+      actionFeedback(
+        "Message queued to <b>" + escapeHtml(to) +
+        "</b>. Footer on the letter: <font size=\"1\">" + FOOTER + ".</font>"
       );
-      markTourProgress();
+      markTourUsed();
       window.setTimeout(function () {
-        location.href = hotmailHref("inbox.html");
+        hotmailGo("read.html?id=" + encodeURIComponent(sentId));
       }, 800);
     };
   }
@@ -192,8 +252,8 @@ function initHotmail() {
     logout.onclick = function (e) {
       e.preventDefault();
       setHotmailUser(null);
-      showFlash("Signed out of HoTMaiL.");
-      location.href = hotmailHref("index.html");
+      actionFeedback("Signed out of HoTMaiL.");
+      hotmailGo("index.html");
     };
   }
 }

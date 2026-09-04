@@ -1,0 +1,28 @@
+SOURCE: https://web.archive.org/web/20011001000000/http://www.microsoft.com/windows/ie/
+STATUS: [wa-visited] 2026-07-25 capture research pass (retry)
+TITLE: 
+ROLE: P1 IE product marketing
+YEAR TARGET: 2001
+
+BUILD NOTES:
+Media Bar P3P XP bundling.
+
+COLORS: #1dcaff, #33f, #3b5998, #666, #777, #888888, #fff
+
+NAV / LINKS:
+  - About this capture → #expand
+  - Alexa Crawls → https://archive.org/details/alexacrawls
+  - Alexa Internet → http://www.alexa.com/
+  - Wayback Machine → http://web.archive.org/
+  - Alexa Crawl DH → https://archive.org/details/alexa_dh
+
+IMG SRC:
+  - https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png
+  - https://web-static.archive.org/_static/images/loading.gif
+
+TEXT EXCERPT:
+Sep OCT Nov 05 2000 2001 2002 success fail About this capture COLLECTED BY Organization: Alexa Crawls Starting in 1996, Alexa Internet has been donating their crawl data to the Internet Archive. Flowing in every day, these data are added to the Wayback Machine after an embargo period. Collection: Alexa Crawl DH Crawl DH from Alexa Internet. This data is currently not publicly accessible. TIMESTAMPS The Wayback Machine - https://web.archive.org/web/20011005040051/http://www.microsoft.com:80/WINDOWS/IE/
+
+ANACHRONISM CHECK:
+No IE7.
+

@@ -1,0 +1,12 @@
+2015 clone inventory + prune
+date: 2026-08-10
+backup: /tmp/itt-2015-clone-backup-2026-08-10
+before dirs: 151
+after dirs: 38
+html now: 118
+
+KEEP P0: apple, applemusic, chrome, edge, fblive, googlephotos, ios9, meerkat, periscope, playable, whatsapp, windows10
+KEEP CHIP/residual: alibaba, billion, heartbleed, instagram, material, twitch, vine
+KEEP all: alibaba, amp, apple, applemusic, billion, chrome, discord, echo, edge, facebook, fblive, fcc, googlephotos, heartbleed, ie8, instagram, ios9, iphone, letsencrypt, material, meerkat, messenger, oculus, peach, periscope, playable, privacy, reactnative, snapchat, spotify, swift, twitch, twitter, vine, whatsapp, windows10, windows7, youtube
+
+KILLED: adsense, altavista, amazon, android, appstore, askjeeves, aws, bing, bitcoin, blogdex, blogger, bloglines, bowienet, cnn, cortana, daypop, delicious, digg, dmoz, docs, dropbox, ebay, encarta, excite, farmville, feedburner, firefox, flickr, foursquare, friendconnect, friendfeed, friendster, gamespot, geocities, glass, gmail, gnutella, google, googlekeep, googlenews, googleplus, googlevideo, hampsterdance, healthcare, hotbot, housingmaps, hulu, icebucket, icq, ie9, infoseek, ipad, isp, itunes, kazaa, kickstarter, lastfm, linkedin, loudcloud, macromedia, maps, mashable, medium, memeorandum, metafilter, microsoft, milliondollar, moreover, movabletype, mozilla, mtv, myspace, napster, netcenter, netflix, netscape, outlook, paypal, pets, phoenix, pinterest, programmableweb, ps4, reader, reddit, serial, skype, slack, slashdot, snowden, startupfailures, steam, techcrunch, technorati, telegram, time-you, tinder, tumblr, uber, ubercab, wave, wayback, web20conference, wikipedia, windows8, windows81, wired, wordpress, xboxone, y2k, yahoo, youvegotmail, zombo

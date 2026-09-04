@@ -26,9 +26,8 @@ jobs:
 
       - name: Prepare publish tree
         run: |
-          # Static museum root only — drop tooling that must not ship as site files
-          rm -rf node_modules test-results playwright-report .git
-          # Keep docs for provenance; drop huge optional extracts if needed later
+          # Static museum root only — do not ship docs / e2e / scripts / tooling
+          rm -rf e2e scripts test-results playwright-report node_modules .git docs
           touch .nojekyll
 
       - uses: actions/configure-pages@v5

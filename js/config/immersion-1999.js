@@ -11,6 +11,7 @@
     year: "1999",
     storagePrefix: "itt99",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -19,13 +20,15 @@
       excite: true,
       yahoo: true,
       napster: true,
-      blogger: true
+      blogger: true,
+      aim: true
     },
     navSubtitle: "IE 5.0 · Win98 SE · 56k",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "Napster", href: "sites/napster/index.html", match: "/napster/" },
       { label: "Google", href: "sites/google/index.html", match: "/google/" },
+      { label: "AIM", href: "sites/aim/index.html", match: "/aim/" },
       { label: "Blogger", href: "sites/blogger/index.html", match: "/blogger/" },
       { label: "Yahoo!", href: "sites/yahoo/index.html", match: "/yahoo/" },
       { label: "Amazon", href: "sites/amazon/index.html", match: "/amazon/" },
@@ -35,6 +38,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Napster", href: "sites/napster/index.html" },
       { label: "Google", href: "sites/google/index.html" },
       { label: "About 1999", href: "pages/about.html" }

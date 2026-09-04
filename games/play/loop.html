@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Loop Six — museum game</title>
+  <link rel="stylesheet" href="../../css/games.css">
+  <link rel="stylesheet" href="../../css/period-announce.css">
+  <link rel="stylesheet" href="../../css/year-game-ui.css">
+</head>
+<body>
+  <div class="games-wrap">
+    <header class="games-top">
+      <div class="games-brand">WEB GAMES</div>
+      <a href="../index.html">Lobby</a>
+      <a href="index.html">Arcade</a>
+      <a href="../../index.html">Hub</a>
+    </header>
+    <section class="games-panel">
+      <div class="itt-year-game yg-shell" data-year-game data-year="2006" data-game-id="loopsix" data-yg-goal="Hold to fill a 6s loop. Release in the gold band." data-yg-next-href="index.html" data-yg-next-label="Arcade lobby">
+      <h1>Loop Six</h1>
+      <p style="font-size:12px;margin:0 0 8px">Museum original · 6-second hold genre (Vine-class 2013). Not Vine software.</p>
+      <div class="flash-banner">Hold 5–6 seconds · gold band posts · 8 loops · 3 misses and you’re out</div>
+      <div class="play-hud">
+        <button type="button" id="play-start" data-game-start>Start / Hold</button>
+        <span>Score: <b id="play-score" data-game-score>0</b></span>
+        <span>Combo: <b data-game-combo>0</b></span>
+        <span>Best: <b data-game-best>0</b></span>
+        <span id="play-status" style="color:#444">Hold to fill the loop</span>
+      </div>
+      <div class="play-stage">
+        <canvas id="game-canvas" width="320" height="400" data-game="loopsix"></canvas>
+      </div>
+      <div class="scoreboard" id="score-board"></div>
+      <p style="font-size:11px">
+        <a href="index.html">← Arcade</a> ·
+        <a href="../index.html">Games lobby</a>
+      </p>
+      </div>
+    </section>
+  </div>
+  <script src="../../js/games/scores.js"></script>
+  <script src="../../js/games/year-game-boot.js"></script>
+  <script src="../../js/games/year-2013-loopsix.js"></script>
+  <script src="../../js/games/shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,1087 @@
+{
+  "1994": [
+    {
+      "id": "pizzahut",
+      "name": "Pizza Hut",
+      "title": "Pizza Hut \u2014 order online",
+      "why": "1994 online pizza order theater. First mass food-on-the-web memory.",
+      "verb": "Type a pizza (required) then Order.",
+      "ph": "pepperoni",
+      "btn": "Order (theater)",
+      "bg": "#c8102e",
+      "fg": "#fff"
+    },
+    {
+      "id": "netmarket",
+      "name": "NetMarket",
+      "title": "NetMarket \u2014 first retail",
+      "why": "Aug 1994 first secure retail class. St. Louis Cardinals CD.",
+      "verb": "Name an item then Buy.",
+      "ph": "Stagione CD",
+      "btn": "Buy (theater)",
+      "bg": "#003366",
+      "fg": "#fff"
+    },
+    {
+      "id": "imdb",
+      "name": "IMDb",
+      "title": "Internet Movie Database",
+      "why": "Cards / titles already a habit by 1994\u201395.",
+      "verb": "Search a title.",
+      "ph": "Pulp Fiction",
+      "btn": "Search",
+      "bg": "#f5c518",
+      "fg": "#111"
+    }
+  ],
+  "1995": [
+    {
+      "id": "espn",
+      "name": "ESPNet",
+      "title": "ESPNet SportsZone",
+      "why": "1995 sports web destination.",
+      "verb": "Type a team then Get score.",
+      "ph": "Bulls",
+      "btn": "Get score",
+      "bg": "#cc0000",
+      "fg": "#fff"
+    },
+    {
+      "id": "cnet",
+      "name": "CNET",
+      "title": "CNET \u2014 1995",
+      "why": "Tech news mass in 1995.",
+      "verb": "Open a headline.",
+      "ph": "Windows 95 ships",
+      "btn": "Read",
+      "bg": "#e31937",
+      "fg": "#fff"
+    },
+    {
+      "id": "salon",
+      "name": "Salon",
+      "title": "Salon \u2014 1995",
+      "why": "Web magazine launch year.",
+      "verb": "Name an essay then Open.",
+      "ph": "Table talk",
+      "btn": "Open",
+      "bg": "#111",
+      "fg": "#fff"
+    }
+  ],
+  "1996": [
+    {
+      "id": "craigslist",
+      "name": "Craigslist",
+      "title": "craigslist \u2014 1996",
+      "why": "Craig Newmark list goes public on the web.",
+      "verb": "City + one listing title.",
+      "ph": "sf bay \u2014 bike",
+      "btn": "Post (theater)",
+      "bg": "#ffffcc",
+      "fg": "#00e"
+    },
+    {
+      "id": "askjeeves",
+      "name": "Ask Jeeves",
+      "title": "Ask Jeeves",
+      "why": "1996 natural-language ask.",
+      "verb": "Ask a full question.",
+      "ph": "What is a modem?",
+      "btn": "Ask",
+      "bg": "#fff",
+      "fg": "#111"
+    },
+    {
+      "id": "mtv",
+      "name": "MTV",
+      "title": "mtv.com \u2014 1996",
+      "why": "Music television on the web.",
+      "verb": "Name a video.",
+      "ph": "Wannabe",
+      "btn": "Play (theater)",
+      "bg": "#000",
+      "fg": "#fff"
+    }
+  ],
+  "1997": [
+    {
+      "id": "nytimes",
+      "name": "NYTimes",
+      "title": "NYTimes.com \u2014 1997",
+      "why": "Newspaper of record on the live web.",
+      "verb": "Open a dated headline.",
+      "ph": "Front page",
+      "btn": "Read",
+      "bg": "#fff",
+      "fg": "#111"
+    },
+    {
+      "id": "mp3com",
+      "name": "MP3.com",
+      "title": "MP3.com \u2014 1997",
+      "why": "Legal-ish download destination before Napster mass.",
+      "verb": "Name a track then Download theater.",
+      "ph": "indie.mp3",
+      "btn": "Download (theater)",
+      "bg": "#003399",
+      "fg": "#fff"
+    },
+    {
+      "id": "zdnet",
+      "name": "ZDNet",
+      "title": "ZDNet downloads",
+      "why": "1997 shareware / driver habit.",
+      "verb": "Name a file.",
+      "ph": "winzip.exe",
+      "btn": "Download (theater)",
+      "bg": "#cc0000",
+      "fg": "#fff"
+    }
+  ],
+  "1998": [
+    {
+      "id": "go",
+      "name": "GO.com",
+      "title": "GO Network \u2014 Disney 1998",
+      "why": "Disney portal year.",
+      "verb": "Pick a channel name.",
+      "ph": "Sports",
+      "btn": "Go",
+      "bg": "#0066cc",
+      "fg": "#fff"
+    },
+    {
+      "id": "snap",
+      "name": "Snap",
+      "title": "Snap.com \u2014 1998",
+      "why": "NBC portal / search rival.",
+      "verb": "Search the portal.",
+      "ph": "seinfeld",
+      "btn": "Snap",
+      "bg": "#ff6600",
+      "fg": "#fff"
+    },
+    {
+      "id": "about",
+      "name": "About",
+      "title": "About.com / Mining Co",
+      "why": "Guide sites peak late 90s.",
+      "verb": "Name a topic guide.",
+      "ph": "hobbies",
+      "btn": "Open guide",
+      "bg": "#cc0000",
+      "fg": "#fff"
+    }
+  ],
+  "1999": [
+    {
+      "id": "livejournal",
+      "name": "LiveJournal",
+      "title": "LiveJournal \u2014 1999",
+      "why": "Diary culture before Blogger mass.",
+      "verb": "Write an entry title.",
+      "ph": "today",
+      "btn": "Post",
+      "bg": "#2040a0",
+      "fg": "#fff"
+    },
+    {
+      "id": "neopets",
+      "name": "Neopets",
+      "title": "Neopets \u2014 1999",
+      "why": "Pet-site mania.",
+      "verb": "Name a pet then Adopt (theater).",
+      "ph": "Aisha",
+      "btn": "Adopt (theater)",
+      "bg": "#ffcc00",
+      "fg": "#111"
+    },
+    {
+      "id": "egroups",
+      "name": "eGroups",
+      "title": "eGroups \u2014 1999",
+      "why": "Mailing-list web before Yahoo Groups rename.",
+      "verb": "Name a list to join.",
+      "ph": "vintage-computers",
+      "btn": "Join (theater)",
+      "bg": "#006633",
+      "fg": "#fff"
+    }
+  ],
+  "2000": [
+    {
+      "id": "half",
+      "name": "Half.com",
+      "title": "Half.com \u2014 2000",
+      "why": "Used media marketplace; eBay buys it this era.",
+      "verb": "Name a used CD/book.",
+      "ph": "OK Computer",
+      "btn": "Buy used (theater)",
+      "bg": "#ff6600",
+      "fg": "#fff"
+    },
+    {
+      "id": "baidu",
+      "name": "Baidu",
+      "title": "Baidu \u2014 2000",
+      "why": "Launched 2000. Chinese search habit begins.",
+      "verb": "Type a query.",
+      "ph": "\u4e92\u8054\u7f51",
+      "btn": "Baidu\u4e00\u4e0b",
+      "bg": "#2319dc",
+      "fg": "#fff"
+    },
+    {
+      "id": "everything2",
+      "name": "Everything2",
+      "title": "Everything2 \u2014 2000",
+      "why": "Writeup culture / noder habit.",
+      "verb": "Title a writeup.",
+      "ph": "modem sounds",
+      "btn": "Write",
+      "bg": "#003366",
+      "fg": "#fff"
+    }
+  ],
+  "2004": [
+    {
+      "id": "piczo",
+      "name": "Piczo",
+      "title": "Piczo \u2014 2004",
+      "why": "Decorate-your-page social for teens.",
+      "verb": "Name a layout.",
+      "ph": "sparkle",
+      "btn": "Save layout",
+      "bg": "#ff66aa",
+      "fg": "#fff"
+    },
+    {
+      "id": "tagged",
+      "name": "Tagged",
+      "title": "Tagged \u2014 2004",
+      "why": "Meet / tag people social.",
+      "verb": "Tag a name.",
+      "ph": "classmate",
+      "btn": "Tag",
+      "bg": "#ff6600",
+      "fg": "#fff"
+    },
+    {
+      "id": "odeo",
+      "name": "Odeo",
+      "title": "Odeo \u2014 2004\u201305",
+      "why": "Podcast directory (Twitter\u2019s parent company).",
+      "verb": "Name a podcast.",
+      "ph": "IT Conversations",
+      "btn": "Subscribe (theater)",
+      "bg": "#333",
+      "fg": "#fff"
+    }
+  ],
+  "2008": [
+    {
+      "id": "stackoverflow",
+      "name": "Stack Overflow",
+      "title": "Stack Overflow \u2014 Sep 2008",
+      "why": "Programmer Q&A launch.",
+      "verb": "Type a question title.",
+      "ph": "how to center a div",
+      "btn": "Ask (theater)",
+      "bg": "#f48024",
+      "fg": "#fff"
+    },
+    {
+      "id": "posterous",
+      "name": "Posterous",
+      "title": "Posterous \u2014 2008",
+      "why": "Email-to-blog. Dead later; alive this year.",
+      "verb": "Title a post.",
+      "ph": "photos from the show",
+      "btn": "Publish",
+      "bg": "#444",
+      "fg": "#fff"
+    },
+    {
+      "id": "grooveshark",
+      "name": "Grooveshark",
+      "title": "Grooveshark \u2014 2007\u201308",
+      "why": "Search-and-play music habit (theater, no stream).",
+      "verb": "Name a song.",
+      "ph": "Kids",
+      "btn": "Play (theater)",
+      "bg": "#f77",
+      "fg": "#111"
+    }
+  ],
+  "2009": [
+    {
+      "id": "omegle",
+      "name": "Omegle",
+      "title": "Omegle \u2014 2009 leftover",
+      "why": "Stranger chat leftover. Not the Like chip.",
+      "verb": "Type a first line.",
+      "ph": "hello",
+      "btn": "Open leftover",
+      "bg": "#222",
+      "fg": "#fff"
+    },
+    {
+      "id": "chatroulette",
+      "name": "Chatroulette",
+      "title": "Chatroulette \u2014 2009 leftover",
+      "why": "Webcam leftover. Not the chip.",
+      "verb": "Spin leftover.",
+      "ph": "next",
+      "btn": "Open leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2009 leftover",
+      "why": "Encyclopedia leftover. Not the chip.",
+      "verb": "Open an article leftover.",
+      "ph": "bing",
+      "btn": "Open leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    }
+  ],
+  "2010": [
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "title": "Netflix Watch Instantly \u2014 2010",
+      "why": "Streaming is the habit; discs still mail.",
+      "verb": "Name a title then Play instantly.",
+      "ph": "House of Cards? (2013). Try Lost.",
+      "btn": "Play instantly (theater)",
+      "bg": "#111",
+      "fg": "#e50914"
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr",
+      "title": "Tumblr \u2014 2010 habit",
+      "why": "Reblog dashboard mass around 2010.",
+      "verb": "Caption a reblog.",
+      "ph": "gif set",
+      "btn": "Reblog",
+      "bg": "#36465d",
+      "fg": "#fff"
+    },
+    {
+      "id": "formspring",
+      "name": "Formspring",
+      "title": "Formspring \u2014 2009\u201310",
+      "why": "Anonymous Q&A before ask.fm.",
+      "verb": "Answer one question.",
+      "ph": "what is your url",
+      "btn": "Answer",
+      "bg": "#1abc9c",
+      "fg": "#fff"
+    }
+  ],
+  "2011": [
+    {
+      "id": "icloud",
+      "name": "iCloud",
+      "title": "iCloud \u2014 2011 leftover",
+      "why": "12 Oct leftover. Not the G+ chip.",
+      "verb": "Name a photostream leftover.",
+      "ph": "photostream",
+      "btn": "Open leftover",
+      "bg": "#369",
+      "fg": "#fff"
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "title": "Pinterest \u2014 2011 leftover",
+      "why": "Invite leftover. Mass is 2012.",
+      "verb": "Name a pin leftover.",
+      "ph": "recipe",
+      "btn": "Open leftover",
+      "bg": "#bd081c",
+      "fg": "#fff"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "title": "LinkedIn \u2014 2011 leftover",
+      "why": "IPO leftover. Not the chip.",
+      "verb": "Type a headline leftover.",
+      "ph": "headline",
+      "btn": "Open leftover",
+      "bg": "#0a66c2",
+      "fg": "#fff"
+    }
+  ],
+  "2012": [
+    {
+      "id": "medium",
+      "name": "Medium",
+      "title": "Medium \u2014 2012",
+      "why": "Ev Williams\u2019s new writing place.",
+      "verb": "Title a draft.",
+      "ph": "why we ship",
+      "btn": "Publish (theater)",
+      "bg": "#00ab6c",
+      "fg": "#fff"
+    },
+    {
+      "id": "path",
+      "name": "Path",
+      "title": "Path \u2014 2012",
+      "why": "50-friend social. Intimate, not Facebook.",
+      "verb": "Post a moment.",
+      "ph": "dinner",
+      "btn": "Post",
+      "bg": "#c33",
+      "fg": "#fff"
+    },
+    {
+      "id": "flipboard",
+      "name": "Flipboard",
+      "title": "Flipboard \u2014 2010\u201312 mass",
+      "why": "Magazine swipe on the phone.",
+      "verb": "Name a section.",
+      "ph": "Tech",
+      "btn": "Flip",
+      "bg": "#e12828",
+      "fg": "#fff"
+    }
+  ],
+  "2013": [
+    {
+      "id": "askfm",
+      "name": "Ask.fm",
+      "title": "Ask.fm \u2014 2013 mass",
+      "why": "Anonymous Q after Formspring.",
+      "verb": "Answer one ask.",
+      "ph": "why did you leave",
+      "btn": "Answer",
+      "bg": "#ee1a3b",
+      "fg": "#fff"
+    },
+    {
+      "id": "whisper",
+      "name": "Whisper",
+      "title": "Whisper \u2014 2012\u201313",
+      "why": "Anonymous confession cards.",
+      "verb": "Type a whisper.",
+      "ph": "I still use IE",
+      "btn": "Post (theater)",
+      "bg": "#222",
+      "fg": "#fff"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2013 leftover",
+      "why": "Still the mass video site. Lean year had no room.",
+      "verb": "Title a watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#c00",
+      "fg": "#fff"
+    }
+  ],
+  "2014": [
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "title": "Snapchat \u2014 2014 leftover",
+      "why": "Stories launched 2013; mass habit here. Not IG Stories (2016).",
+      "verb": "Caption a snap (24h).",
+      "ph": "behind the gym",
+      "btn": "Send (theater)",
+      "bg": "#fffc00",
+      "fg": "#111"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "title": "Instagram \u2014 2014 leftover",
+      "why": "Still the filter feed. No Stories.",
+      "verb": "Caption + share leftover.",
+      "ph": "weekend",
+      "btn": "Share",
+      "bg": "#3f729b",
+      "fg": "#fff"
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "title": "Uber \u2014 2014 leftover",
+      "why": "Ride-hail mass. Not UberX-as-2012-only.",
+      "verb": "Set a pickup then Request.",
+      "ph": "airport",
+      "btn": "Request (theater)",
+      "bg": "#111",
+      "fg": "#fff"
+    }
+  ],
+  "2015": [
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "title": "Instagram \u2014 2015 leftover",
+      "why": "Feed + ads begin. No Stories (Aug 2016).",
+      "verb": "Caption a still. Not a Story.",
+      "ph": "rooftop",
+      "btn": "Share",
+      "bg": "#3f729b",
+      "fg": "#fff"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "title": "Spotify \u2014 2015 leftover",
+      "why": "Streaming habit. Discover Weekly is this year.",
+      "verb": "Name a track then Play.",
+      "ph": "Hotline Bling",
+      "btn": "Play (theater)",
+      "bg": "#1db954",
+      "fg": "#fff"
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "title": "Netflix \u2014 2015 leftover",
+      "why": "House of Cards / binge is the living-room web.",
+      "verb": "Name a title then Play.",
+      "ph": "House of Cards",
+      "btn": "Play (theater)",
+      "bg": "#111",
+      "fg": "#e50914"
+    }
+  ],
+  "2016": [
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "reddit \u2014 2016 leftover",
+      "why": "US Alexa-class front page. Still old reddit.",
+      "verb": "Pick a row + honesty + Open.",
+      "ph": "the front page",
+      "btn": "Open (theater)",
+      "bg": "#cee3f8",
+      "fg": "#000"
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "title": "Netflix \u2014 2016 leftover",
+      "why": "Streaming habit. Stranger Things S1 is weather. Discs still mail.",
+      "verb": "Pick a 2016 title + honesty + Play.",
+      "ph": "Stranger Things",
+      "btn": "Play (theater)",
+      "bg": "#111",
+      "fg": "#e50914"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2016 leftover",
+      "why": "Still the #2 site. Not Shorts.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    }
+  ],
+  "2017": [
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "reddit \u2014 2017 leftover",
+      "why": "April 2017 Alexa world #8. Redesign is 2018.",
+      "verb": "Pick a row + honesty + Open.",
+      "ph": "the front page",
+      "btn": "Open (theater)",
+      "bg": "#cee3f8",
+      "fg": "#000"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2017 leftover",
+      "why": "Still the #2 site. YouTube TV $35 is About weather.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "title": "Amazon \u2014 2017 leftover",
+      "why": "US Alexa extras. Whole Foods / Echo Show weather.",
+      "verb": "Pick a catalog row + honesty + Search.",
+      "ph": "Echo Show",
+      "btn": "Search (theater)",
+      "bg": "#fff",
+      "fg": "#111"
+    }
+  ],
+  "2018": [
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "reddit \u2014 2018 leftover",
+      "why": "Redesign lands April 2018. Old reddit still works.",
+      "verb": "Pick old/new + honesty + Open.",
+      "ph": "the front page",
+      "btn": "Open (theater)",
+      "bg": "#cee3f8",
+      "fg": "#000"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2018 leftover",
+      "why": "Still the #2 site. Not Shorts. Not Reels.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2018 leftover",
+      "why": "World Alexa-class encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "GDPR",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    }
+  ],
+  "2019": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2019 leftover",
+      "why": "Still the #2 site. Not Shorts. Not Reels.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "title": "Instagram \u2014 2019 leftover",
+      "why": "Hide-likes test is the year beat. Not Reels.",
+      "verb": "Pick hide-likes + honesty + Open.",
+      "ph": "hide likes",
+      "btn": "Open (theater)",
+      "bg": "#fafafa",
+      "fg": "#111"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2019 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "Disney+",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    }
+  ],
+  "2021": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2021 leftover",
+      "why": "Still the leftover watch tab. Not Shorts-as-2021-new. Not Reels.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2021 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "app tracking transparency",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook \u2014 2021 leftover",
+      "why": "Hostname leftover. Company is Meta. App is still Facebook.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2021",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
+  ],
+  "2022": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2022 leftover",
+      "why": "Still the leftover watch tab. Not Shorts-as-2022-new. Not the chip.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2022 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "chatgpt",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook \u2014 2022 leftover",
+      "why": "Hostname leftover. App is still Facebook. Threads is 2023.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2022",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
+  ],
+  "2023": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2023 leftover",
+      "why": "Still the leftover watch tab. Not the Plus chip.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wiki",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2023 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "chatgpt plus",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook \u2014 2023 leftover",
+      "why": "Consumer app is still Facebook. Threads dest is next door.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2023",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
+  ],
+  "2020": [
+    {
+      "id": "meet",
+      "name": "Google Meet",
+      "title": "Meet leftover \u2014 free 29 Apr 2020",
+      "why": "Meet went free. Not the Zoom chip.",
+      "verb": "Name leftover room.",
+      "ph": "leftover room",
+      "btn": "Open leftover",
+      "bg": "#1a73e8",
+      "fg": "#fff"
+    },
+    {
+      "id": "hbomax",
+      "name": "HBO Max",
+      "title": "HBO Max leftover \u2014 27 May 2020",
+      "why": "Streamer leftover. Not the Zoom chip.",
+      "verb": "Name leftover title.",
+      "ph": "leftover title",
+      "btn": "Open leftover",
+      "bg": "#b10dc9",
+      "fg": "#fff"
+    },
+    {
+      "id": "quibi",
+      "name": "Quibi",
+      "title": "Quibi leftover \u2014 6 Apr 2020",
+      "why": "Short-form leftover. Dead 2020. Not the chip.",
+      "verb": "Name leftover bite.",
+      "ph": "leftover bite",
+      "btn": "Open leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    }
+  ],
+  "2024": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2024 leftover",
+      "why": "Still the leftover watch tab. Not the 4o chip.",
+      "verb": "Pick a watch + honesty + Watch.",
+      "ph": "music video",
+      "btn": "Watch (theater)",
+      "bg": "#fff",
+      "fg": "#c00"
+    },
+    {
+      "id": "wiki",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2024 leftover",
+      "why": "World encyclopedia. Not the 2001 edit star.",
+      "verb": "Pick an article + honesty + Open.",
+      "ph": "gpt-4o",
+      "btn": "Open article (theater)",
+      "bg": "#f8f9fa",
+      "fg": "#202122"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook \u2014 2024 leftover",
+      "why": "Consumer app leftover. Plus residual is a different dest.",
+      "verb": "Pick a leftover + honesty + Open.",
+      "ph": "connect 2024",
+      "btn": "Open (theater)",
+      "bg": "#e9ebee",
+      "fg": "#111"
+    }
+  ],
+  "2001": [
+    {
+      "id": "google",
+      "name": "Google",
+      "title": "Google \u2014 2001",
+      "why": "Sparse habit. Not the wiki star.",
+      "verb": "Type a query.",
+      "ph": "nupedia",
+      "btn": "Search",
+      "bg": "#fff",
+      "fg": "#111"
+    },
+    {
+      "id": "yahoo",
+      "name": "Yahoo",
+      "title": "Yahoo \u2014 2001",
+      "why": "Still mass portal visits.",
+      "verb": "Browse a category.",
+      "ph": "News",
+      "btn": "Go",
+      "bg": "#7b0099",
+      "fg": "#fff"
+    },
+    {
+      "id": "cnn",
+      "name": "CNN",
+      "title": "CNN \u2014 2001",
+      "why": "Post-9/11 news costume.",
+      "verb": "Open a headline.",
+      "ph": "Afghanistan",
+      "btn": "Read",
+      "bg": "#cc0000",
+      "fg": "#fff"
+    }
+  ],
+  "2002": [
+    {
+      "id": "daypop",
+      "name": "Daypop",
+      "title": "Daypop \u2014 2002",
+      "why": "Blog hottest leftover.",
+      "verb": "Name a link.",
+      "ph": "trackback",
+      "btn": "Hot",
+      "bg": "#003366",
+      "fg": "#fff"
+    },
+    {
+      "id": "googlenews",
+      "name": "Google News",
+      "title": "Google News \u2014 2002",
+      "why": "Sep 2002 beta. No blogs.",
+      "verb": "Type a topic.",
+      "ph": "broadband",
+      "btn": "Cluster",
+      "bg": "#1a73e8",
+      "fg": "#fff"
+    },
+    {
+      "id": "technorati",
+      "name": "Technorati",
+      "title": "Technorati seed \u2014 2002",
+      "why": "Cosmos leftover.",
+      "verb": "Name a blog.",
+      "ph": "plasticbag",
+      "btn": "Cosmos",
+      "bg": "#111",
+      "fg": "#fff"
+    }
+  ],
+  "2005": [
+    {
+      "id": "milliondollar",
+      "name": "Million Dollar Homepage",
+      "title": "Million Dollar Homepage \u2014 26 Aug 2005",
+      "why": "Alex Tew pixel leftover. Not the chip.",
+      "verb": "Name a pixel leftover.",
+      "ph": "pixel leftover",
+      "btn": "Save leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "clubpenguin",
+      "name": "Club Penguin",
+      "title": "Club Penguin \u2014 24 Oct 2005",
+      "why": "Public noon PT. Disney is 2007.",
+      "verb": "Name a waddle leftover.",
+      "ph": "waddle leftover",
+      "btn": "Waddle leftover",
+      "bg": "#039",
+      "fg": "#fff"
+    },
+    {
+      "id": "kayak",
+      "name": "Kayak",
+      "title": "Kayak \u2014 7 Feb 2005",
+      "why": "Travel leftover. Not Google Flights.",
+      "verb": "Name a flight leftover.",
+      "ph": "SFO leftover",
+      "btn": "Search leftover",
+      "bg": "#ff6600",
+      "fg": "#fff"
+    }
+  ],
+  "2006": [
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "title": "Roblox \u2014 1 Sep 2006",
+      "why": "Public leftover. Not the chip.",
+      "verb": "Play leftover.",
+      "ph": "place leftover",
+      "btn": "Play leftover",
+      "bg": "#039",
+      "fg": "#fff"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia millionth",
+      "title": "Wiki millionth \u2014 1 Mar 2006",
+      "why": "EN millionth leftover.",
+      "verb": "Name leftover article.",
+      "ph": "Jordanhill leftover",
+      "btn": "Ack leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "aws",
+      "name": "AWS S3",
+      "title": "S3 \u2014 14 Mar 2006",
+      "why": "Object store leftover.",
+      "verb": "Name leftover bucket.",
+      "ph": "bucket leftover",
+      "btn": "Save leftover",
+      "bg": "#222",
+      "fg": "#fff"
+    }
+  ],
+  "2007": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube \u2014 2007 leftover",
+      "why": "Google-owned leftover. Upload gold is 2005.",
+      "verb": "Name a leftover clip.",
+      "ph": "music video",
+      "btn": "Open leftover",
+      "bg": "#c00",
+      "fg": "#fff"
+    },
+    {
+      "id": "wiki",
+      "name": "Wikipedia",
+      "title": "Wikipedia \u2014 2007 leftover",
+      "why": "Encyclopedia leftover. Not the Safari chip.",
+      "verb": "Open an article leftover.",
+      "ph": "iphone",
+      "btn": "Open leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "myspace",
+      "name": "MySpace",
+      "title": "MySpace \u2014 2007 leftover",
+      "why": "Still mass leftover. Facebook is opening.",
+      "verb": "Open leftover.",
+      "ph": "tom",
+      "btn": "Open leftover",
+      "bg": "#003399",
+      "fg": "#fff"
+    }
+  ],
+  "2003": [
+    {
+      "id": "myspace",
+      "name": "MySpace",
+      "title": "MySpace \u2014 Aug 2003 seed",
+      "why": "Meet your friends' friends leftover. Photobucket stays the chip.",
+      "verb": "Name a leftover profile.",
+      "ph": "top 8",
+      "btn": "Open leftover",
+      "bg": "#003399",
+      "fg": "#fff"
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "title": "WordPress \u2014 27 May 2003",
+      "why": "b2/cafelog leftover. Not Gutenberg.",
+      "verb": "Name leftover software.",
+      "ph": "b2/cafelog",
+      "btn": "Open leftover",
+      "bg": "#21759b",
+      "fg": "#fff"
+    },
+    {
+      "id": "skype",
+      "name": "Skype",
+      "title": "Skype \u2014 29 Aug 2003",
+      "why": "P2P voice leftover. eBay is 2005.",
+      "verb": "Name leftover call.",
+      "ph": "P2P voice",
+      "btn": "Open leftover",
+      "bg": "#00aff0",
+      "fg": "#fff"
+    }
+  ]
+}

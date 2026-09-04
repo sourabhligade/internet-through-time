@@ -1,0 +1,346 @@
+[
+  {
+    "year": "1994",
+    "id": "webcrawler",
+    "path": "/years/1994/sites/webcrawler/index.html",
+    "key": "itt94-webcrawler",
+    "type": "fillGo",
+    "title": "WebCrawler"
+  },
+  {
+    "year": "1994",
+    "id": "galaxy",
+    "path": "/years/1994/sites/galaxy/index.html",
+    "key": "itt94-galaxy",
+    "type": "twoClick",
+    "title": "EINet Galaxy"
+  },
+  {
+    "year": "1994",
+    "id": "gnn",
+    "path": "/years/1994/sites/gnn/index.html",
+    "key": "itt94-gnn",
+    "type": "twoClick",
+    "title": "Global Network Navigator"
+  },
+  {
+    "year": "1994",
+    "id": "jumpstation",
+    "path": "/years/1994/sites/jumpstation/index.html",
+    "key": "itt94-jumpstation",
+    "type": "fillGo",
+    "title": "JumpStation"
+  },
+  {
+    "year": "1995",
+    "id": "classmates",
+    "path": "/years/1995/sites/classmates/index.html",
+    "key": "itt95-classmates",
+    "type": "fillGo",
+    "title": "Classmates.com"
+  },
+  {
+    "year": "1995",
+    "id": "match",
+    "path": "/years/1995/sites/match/index.html",
+    "key": "itt95-match",
+    "type": "twoClick",
+    "title": "Match.com"
+  },
+  {
+    "year": "1995",
+    "id": "tripod",
+    "path": "/years/1995/sites/tripod/index.html",
+    "key": "itt95-tripod",
+    "type": "fillGo",
+    "title": "Tripod"
+  },
+  {
+    "year": "1995",
+    "id": "pathfinder",
+    "path": "/years/1995/sites/pathfinder/index.html",
+    "key": "itt95-pathfinder",
+    "type": "twoClick",
+    "title": "Pathfinder"
+  },
+  {
+    "year": "1996",
+    "id": "angelfire",
+    "path": "/years/1996/sites/angelfire/index.html",
+    "key": "itt96-angelfire",
+    "type": "fillGo",
+    "title": "Angelfire"
+  },
+  {
+    "year": "1996",
+    "id": "aolportal",
+    "path": "/years/1996/sites/aolportal/index.html",
+    "key": "itt96-aolportal",
+    "type": "fillGo",
+    "title": "AOL.com residual"
+  },
+  {
+    "year": "1996",
+    "id": "realplayer",
+    "path": "/years/1996/sites/realplayer/index.html",
+    "key": "itt96-realplayer",
+    "type": "twoClick",
+    "title": "RealPlayer / RealAudio"
+  },
+  {
+    "year": "1996",
+    "id": "theglobe",
+    "path": "/years/1996/sites/theglobe/index.html",
+    "key": "itt96-theglobe",
+    "type": "twoClick",
+    "title": "theGlobe.com"
+  },
+  {
+    "year": "1997",
+    "id": "aim",
+    "path": "/years/1997/sites/aim/index.html",
+    "key": "itt97-aim",
+    "type": "fillGo",
+    "title": "AOL Instant Messenger"
+  },
+  {
+    "year": "1997",
+    "id": "winamp",
+    "path": "/years/1997/sites/winamp/index.html",
+    "key": "itt97-winamp",
+    "type": "twoClick",
+    "title": "Winamp"
+  },
+  {
+    "year": "1997",
+    "id": "javaplugin",
+    "path": "/years/1997/sites/javaplugin/index.html",
+    "key": "itt97-javaplugin",
+    "type": "twoClick",
+    "title": "Java plugin nag"
+  },
+  {
+    "year": "1997",
+    "id": "scripting",
+    "path": "/years/1997/sites/scripting/index.html",
+    "key": "itt97-scripting",
+    "type": "twoClick",
+    "title": "Scripting News"
+  },
+  {
+    "year": "1998",
+    "id": "goto",
+    "path": "/years/1998/sites/goto/index.html",
+    "key": "itt98-goto",
+    "type": "fillGo",
+    "title": "GoTo.com"
+  },
+  {
+    "year": "1998",
+    "id": "mp3com",
+    "path": "/years/1998/sites/mp3com/index.html",
+    "key": "itt98-mp3com",
+    "type": "twoClick",
+    "title": "MP3.com"
+  },
+  {
+    "year": "1998",
+    "id": "realplayer",
+    "path": "/years/1998/sites/realplayer/index.html",
+    "key": "itt98-realplayer",
+    "type": "twoClick",
+    "title": "RealPlayer 5 residual"
+  },
+  {
+    "year": "1998",
+    "id": "winamp",
+    "path": "/years/1998/sites/winamp/index.html",
+    "key": "itt98-winamp",
+    "type": "twoClick",
+    "title": "Winamp 2 residual"
+  },
+  {
+    "year": "1999",
+    "id": "yahoomessenger",
+    "path": "/years/1999/sites/yahoomessenger/index.html",
+    "key": "itt99-yahoomessenger",
+    "type": "fillGo",
+    "title": "Yahoo Messenger"
+  },
+  {
+    "year": "1999",
+    "id": "etrade",
+    "path": "/years/1999/sites/etrade/index.html",
+    "key": "itt99-etrade",
+    "type": "twoClick",
+    "title": "E*TRADE residual"
+  },
+  {
+    "year": "1999",
+    "id": "webvan",
+    "path": "/years/1999/sites/webvan/index.html",
+    "key": "itt99-webvan",
+    "type": "pickStart",
+    "title": "Webvan residual"
+  },
+  {
+    "year": "1999",
+    "id": "boocom",
+    "path": "/years/1999/sites/boocom/index.html",
+    "key": "itt99-boocom",
+    "type": "twoClick",
+    "title": "Boo.com residual"
+  },
+  {
+    "year": "2000",
+    "id": "limewire",
+    "path": "/years/2000/sites/limewire/index.html",
+    "key": "itt00-limewire",
+    "type": "fillGo",
+    "title": "LimeWire residual"
+  },
+  {
+    "year": "2000",
+    "id": "expedia",
+    "path": "/years/2000/sites/expedia/index.html",
+    "key": "itt00-expedia",
+    "type": "fillGo",
+    "title": "Expedia residual"
+  },
+  {
+    "year": "2000",
+    "id": "travelocity",
+    "path": "/years/2000/sites/travelocity/index.html",
+    "key": "itt00-travelocity",
+    "type": "fillGo",
+    "title": "Travelocity residual"
+  },
+  {
+    "year": "2004",
+    "id": "basecamp",
+    "path": "/years/2004/sites/basecamp/index.html",
+    "key": "itt04-basecamp",
+    "type": "twoClick",
+    "title": "Basecamp residual"
+  },
+  {
+    "year": "2004",
+    "id": "tinypic",
+    "path": "/years/2004/sites/tinypic/index.html",
+    "key": "itt04-tinypic",
+    "type": "twoClick",
+    "title": "TinyPic residual"
+  },
+  {
+    "year": "2004",
+    "id": "orkutseed",
+    "path": "/years/2004/sites/orkutseed/index.html",
+    "key": "itt04-orkutseed",
+    "type": "twoClick",
+    "title": "Orkut residual densify"
+  },
+  {
+    "year": "2004",
+    "id": "worldofwarcraft",
+    "path": "/years/2004/sites/worldofwarcraft/index.html",
+    "key": "itt04-worldofwarcraft",
+    "type": "twoClick",
+    "title": "World of Warcraft residual"
+  },
+  {
+    "year": "2005",
+    "id": "utorrent",
+    "path": "/years/2005/sites/utorrent/index.html",
+    "key": "itt05-utorrent",
+    "type": "twoClick",
+    "title": "\u00b5Torrent residual"
+  },
+  {
+    "year": "2005",
+    "id": "googleearth",
+    "path": "/years/2005/sites/earth/index.html",
+    "key": "itt05-earth-lx",
+    "type": "twoClick",
+    "title": "Google Earth leftover"
+  },
+  {
+    "year": "2005",
+    "id": "kayak",
+    "path": "/years/2005/sites/kayak/index.html",
+    "key": "itt05-kayak",
+    "type": "fillGo",
+    "title": "KAYAK residual"
+  },
+  {
+    "year": "2005",
+    "id": "secondlife",
+    "path": "/years/2005/sites/secondlife/index.html",
+    "key": "itt05-secondlife",
+    "type": "twoClick",
+    "title": "Second Life residual"
+  },
+  {
+    "year": "2006",
+    "id": "meebo",
+    "path": "/years/2006/sites/meebo/index.html",
+    "key": "itt06-meebo",
+    "type": "fillGo",
+    "title": "Meebo residual"
+  },
+  {
+    "year": "2006",
+    "id": "huffpost",
+    "path": "/years/2006/sites/huffpost/index.html",
+    "key": "itt06-huffpost",
+    "type": "twoClick",
+    "title": "Huffington Post residual"
+  },
+  {
+    "year": "2006",
+    "id": "wikileaks",
+    "path": "/years/2006/sites/wikileaks/index.html",
+    "key": "itt06-wikileaks",
+    "type": "twoClick",
+    "title": "WikiLeaks residual"
+  },
+  {
+    "year": "2006",
+    "id": "youtubeembed",
+    "path": "/years/2006/sites/youtubeembed/index.html",
+    "key": "itt06-youtubeembed",
+    "type": "twoClick",
+    "title": "YouTube embed residual"
+  },
+  {
+    "year": "2008",
+    "id": "evernote",
+    "path": "/years/2008/sites/evernote/index.html",
+    "key": "itt08-evernote",
+    "type": "twoClick",
+    "title": "Evernote residual"
+  },
+  {
+    "year": "2008",
+    "id": "groupon",
+    "path": "/years/2008/sites/groupon/index.html",
+    "key": "itt08-groupon",
+    "type": "twoClick",
+    "title": "Groupon residual"
+  },
+  {
+    "year": "2008",
+    "id": "airbnb",
+    "path": "/years/2008/sites/airbnb/index.html",
+    "key": "itt08-airbnb",
+    "type": "fillGo",
+    "title": "Airbnb residual"
+  },
+  {
+    "year": "2008",
+    "id": "spotifyseed",
+    "path": "/years/2008/sites/spotifyseed/index.html",
+    "key": "itt08-spotifyseed",
+    "type": "twoClick",
+    "title": "Spotify invite residual"
+  }
+]

@@ -1,0 +1,28 @@
+Google AdSense self-serve PR — Wayback 20030630191256 id_
+Source: http://www2.google.com/press/pressrel/adsense.html
+Date line: June 18, 2003 Mountain View
+Visited: 2026-07-27
+
+Title: Google Expands Advertising Monetization Program for Websites
+Subtitle: Google AdSense Enables Sites to Maximize Revenue Potential While Enhancing User Experience
+
+Key points:
+- New self-service option for Google AdSense
+- Publishers serve text-based Google AdWords ads on content pages
+- Google pays for clicks (CPC)
+- Expands content targeting services announced March 2003 to broader high-quality websites
+- Apply online: www.google.com/adsense
+- Editorial review of applications
+- Activate by cut-and-paste small piece of HTML into web pages or ad server
+- Online performance reports
+- English language websites worldwide
+- Premium AdSense for >20 million page views/month (dedicated account)
+- Premium examples: ABC.com, HowStuffWorks, IBS, Lycos Europe, NY Post Online,
+  Reed Business Information, U.S. News & World Report
+
+Sergey Brin quote:
+"Google AdSense improves the overall web user experience by bringing relevant,
+unobtrusive, text ads to web pages rather than disruptive, unrelated ads such
+as pop-ups and animations... By providing website publishers with an effective
+way to monetize content pages on their sites, Google AdSense strengthens the
+long-term business viability of content creation on the web."

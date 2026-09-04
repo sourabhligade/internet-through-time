@@ -1,0 +1,64 @@
+2010 deep research visit log — 2026-08-01
+==========================================
+
+Goal: Long web harvest for museum year 2010 (not yet on disk).
+Output: docs/2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md
+        docs/2010-RESEARCH.md
+        docs/2010-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+        docs/references/2010/CAPTURE-LOG.md
+        docs/references/2010/ARTIFACTS-MAP.md
+
+Disk check
+----------
+- years/ : 1994–2009 only (no 2010)
+- Hub: 2010+ locked per DISK-TRUTH.md
+- No prior docs/*2010* research files before this pass
+
+Web visits / searches (high level)
+----------------------------------
+1. Internet Live Stats — websites June 2010 = 206,956,723 (−13%); users ~2,045,865,660
+2. Pingdom "Internet 2010 in numbers" — full recap (email, social, video, FB 600M, YT 2B/day)
+3. Cybercultural "What the Internet Was Like in 2010" — mobile apps, Instagram, iPad, Foursquare, social mainstream, Arab Spring seed
+4. Apple Newsroom — iPad Jan 27; iPhone 4 Jun 7; 1.7M sales Jun 28
+5. Instagram histories — Oct 6 iOS launch; ~25k day 1; ~1M end-year; Burbn pivot
+6. Pinterest — Mar 2010 beta (Silbermann et al.)
+7. Uber — SF service 2010; rename Oct; black car not UberX
+8. Google Wave — public May 19; development end Aug 4
+9. Facebook Open Graph / 500M–600M / Social Network film Oct
+10. FarmVille peak ~84M MAU Mar 2010
+11. Nexus One Jan 5; IE9 beta Sep 15
+12. Spotify US = Jul 2011 (hard ban for 2010)
+13. WDM Instagram for iPhone 2010 gallery
+14. Stuxnet / Cablegate culture notes
+
+Thesis locked
+-------------
+Tablet + camera-phone app web arrives; social colonizes open web; PC still mass; seeds of 2011+ banned.
+
+P0 product spine
+----------------
+iPad
+iPhone 4 / iOS 4 / FaceTime / Antennagate
+Instagram (iOS-only)
+Facebook Open Graph + 600M
+Foursquare peak culture
+App Store / FarmVille densify
+
+P1
+--
+Android Nexus multiphone, Twitter New, Pinterest seed, Uber SF, Wave public/funeral, IE9 beta
+
+Hard bans
+---------
+Spotify US, Snapchat, Instagram Android mass, Stories/Reels, UberX mass, Reactions, Wave as stable daily email
+
+Not done this pass
+------------------
+- Actual WA binary downloads
+- years/2010 scaffold
+- Hub unlock
+- Pixel install
+
+Next
+----
+User: "implement 2010" or "harvest pixels only"

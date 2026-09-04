@@ -1,0 +1,113 @@
+SOURCE: https://www.versionmuseum.com/history-of/amazon-website
+FINAL: https://www.versionmuseum.com/history-of/amazon-website
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: versionmuseum-amazon
+ROLE: smile chronology
+TITLE: 31 Years of Amazon.com Website Design History - 34 Images - Version Museum
+BYTES: 56040
+ERROR: 
+
+KEY FACTS / TEXT:
+31 Years of Amazon.com Website Design History - 34 Images - Version Museum
+Home
+Categories
+Websites
+Operating Systems
+Applications
+Games
+Discontinued
+Blog
+Social
+Twitter
+Instagram
+YouTube
+About
+About Version Museum
+Contact Us
+Terms
+Privacy Policy
+A visual history of your favorite technology
+Amazon.com Design History
+Explore more history
+Website Gallery
+View all websites
+Operating Systems
+View all operating systems
+Applications
+Discontinued Product Gallery
+Games Gallery
+Check out our YouTube video showing the
+history of the Amazon.com website !
+It has all the images and captions from this page, and is easy on the eyes.
+Early Stage Amazon (1994-1995)
+In 1994, Jeff Bezos witnessed the exponential growth of the World Wide Web
+and saw an opportunity to realize online commerce. Initially named Cadabra ,
+Bezos changed the name when his attorney convinced him that it sounded too much
+like Cadaver . Bezos also considered
+the name Relentless for a while before opting for Amazon, which reflected
+the ideas of grandiosity and abundance. The company was founded on July 5th, 1994.
+Jeff Bezos (1997) Source: CNBC Video
+Original Amazon Website (1995)
+Amazon.com was launched in July 1995. The logo was an abstract
+letter 'A' with a winding river flowing through it and the words Amazon.com, Earth’s
+biggest bookstore at the bottom. The color scheme of the site was typical
+for 1995 -- lots of gray and not terribly vibrant.
+The company offered more than 1 million book titles, vastly
+outpacing any competition at the time. It featured a simple search engine
+to help find relevant books. Amazon also offered a
+free subscription to its personal notification service called "Eyes and Editors,"
+enabling clients to proclaim their favorite authors and books. Whenever a
+new book of interest was added to the catalog, Amazon would automatically send
+the customer an email announcing the addition.
+Additionally, Amazon allowed clients to comment on books and exchange ideas with
+people around the world using review pages.
+The original Amazon website (August 1995) Source: Restored by Taran Van Hemert
+TV Interview Footage (1997)
+Amazon founder Jeff Bezos conducted many interviews in the early years,
+but this one in 1997 with KIRO 7 Seattle
+is notable because it had footage of the website at the time. The quality
+is poor, but still valuable to see Amazon in it's infancy. The computer in the closeup
+shots of the website appears to be an
+Apple Powerbook 1400 ,
+but the PC brand on Bezos' desk is unclear.
+The first image below makes light of Amazon's massive collection of more than one million
+books. Amazon's Book of the Day link boasts "a different title every day
+for the next 3,000 years."
+Amazon.com Homepage on TV broadcast (1997) Source: KIRO 7 News
+Amazon.com Search by Title, Author, or Subject (1997) Source: KIRO 7 News
+Jeff Bezos with Amazon.com (1997) Source: KIRO 7 News
+Logo Experimentation (1997)
+The initial Amazon logo underwent several iterations, with changes in color
+scheme and fonts. With each iteration, the logo slowly came into shape,
+with the color palette becoming increasingly similar to the modern logo.
+Amazon experiments with logo iterations (1997) Source: fineprintart.com
+Early Amazon Homepage (1997)
+The company went public on May 15th, 1997 and raised $54 million in the process.
+Amazon's website underwent major changes, reflected in the design and
+more user-friendly interface. A left sidebar was introduced to enhance navigation, making the website more usable.
+Book covers and reviews were introduced to the experience to allow users to visualize the bookstore.
+Amazon homepage image, restored by Version Museum (1997) Source: ebaumsworld.com
+Additional Logo Changes (1998)
+In 1998, the Amazon logo went through additional iterations. A lowercase serif font
+served as the main logo for a short time, with the tag line "Earth's Biggest Bookstore" underneath.
+But later that year, the company employed a sans serif all-caps logo with a bright yellow letter 'O' in the middle.
+This was also taken down in a few months; the logo soon morphed
+into the more familiar lowercase sans-serif logo with a slightly curved yellow line
+underneath. The motto "Books, Music and More" floated above. With Amazon's ambitious
+expansion plans, the slogan was taken out after a couple of months.
+Early Amazon logos (1998) Source: fineprintart.com
+Homepage with "Earth's Biggest Bookstore" slogan (1998) Source: blog.cake.hr
+Introduction of Tabs & International Expansion (1998)
+As Amazon's ambitions grew beyond selling books, tabs were introduced to the website.
+The site itself went through numerous alterations, with the search bar making
+its first prominent appearance to the top left of the homepage in the latter half
+of the year.
+Furthermore, international expansion began, with acquisitions of online stores in the United Kingdom and Germany.
+Tabs introduced (1998) Source: nist.gov
+Oprah's Book Club (1998) Source: nist.gov
+Amazon.de homepage (1998) Source: presseportal.de
+
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

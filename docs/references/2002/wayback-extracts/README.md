@@ -1,10 +1,17 @@
 # 2002 wayback / source extracts
 
-Text notes harvested during research passes. Prefer dated WA HTML dumps when CDX resolves cleanly at build time.
+**Method:** Same as 1999 gold / 2001 — one KEY-FACTS note per URL in the **project stack**:
+- `docs/SOURCES.md` §20
+- `docs/REBUILD-ARTIFACT-MAP.md` §3–§5
+- `docs/2002-RESEARCH.md` archive map
 
-| File | Source | Date logged |
-|------|--------|-------------|
-| `pew-broadband-2002-notes.txt` | Pew Broadband Difference main report | 2026-07-23 |
-| `blogs-rss-2002-notes.txt` | Cybercultural blogs-rss-2002 | 2026-07-23 |
-| `stopdesign-wired-notes.txt` | StopDesign “Finally we’re live” | 2026-07-23 |
-| `internet-2002-notes.txt` | Cybercultural internet-2002 | 2026-07-23 |
+**Capture log:** [`../CAPTURE-LOG.md`](../CAPTURE-LOG.md)  
+**Deep visit log:** [`../../../2002-DEEP-RESEARCH-PROJECT-STACK-2026-07-25.md`](../../../2002-DEEP-RESEARCH-PROJECT-STACK-2026-07-25.md)
+
+| Pass | Date | Notes |
+|------|------|-------|
+| Narrative / capture | 2026-07-23–25 | Early notes + TrackBack / Hiler / Daypop |
+| Continuity WA | 2026-07-25 | Google Amazon Yahoo Wiki MTV Mozilla News CNN eBay |
+| **Project-stack every source** | **2026-07-25** | Re-open full SOURCES/REBUILD list; KEY FACTS rewrite |
+
+Build from these notes; do not invent pixels.

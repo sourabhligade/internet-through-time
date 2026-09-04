@@ -1,0 +1,69 @@
+2009 deep research visit log — 2026-08-01
+==========================================
+
+Goal: Long web harvest for museum year 2009 (not yet on disk).
+Output: docs/2009-DEEP-RESEARCH-WEB-HARVEST-2026-08-01.md
+        docs/references/2009/CAPTURE-LOG.md
+        docs/references/2009/ARTIFACTS-MAP.md
+
+Disk check
+----------
+- years/ : 1994–2008 only (no 2009)
+- Hub: 2009+ locked per DISK-TRUTH.md
+- No prior docs/*2009* research files before this pass
+
+Web visits / searches (high level)
+----------------------------------
+1. Internet Live Stats — websites 2009 June = 238,027,855 (+38%); users ~1,766,403,814
+2. Pingdom "Internet 2009 in numbers" — full recap (email, social, video, domains)
+3. Cybercultural "What the Internet Was Like in 2009" — real-time web, FB, apps, content farms
+4. Apple Newsroom — 3GS Jun 8; 1M sales Jun 22; App Store 1B Apr 24; 1.5B Jul 14
+5. Microsoft Source — Bing unveil May 28, worldwide Jun 3
+6. Wikipedia / histories — FarmVille Jun 19; Foursquare Mar 11 SXSW; Kickstarter Apr 28;
+   WhatsApp Feb 24 / May 3; Beacon Sep 21 shutdown; Wave May 28 I/O; Win7 Oct 22; IE8 Mar 19;
+   Chrome Mac/Linux beta Dec 8; UberCab Mar 2009 seed (not mass)
+7. TechCrunch — Facebook Like Feb 9 2009
+8. WDM / Version Museum — Facebook 2009 screenshots queued
+9. Iran "Twitter Revolution" — Atlantic / Wikipedia nuance (witness > organizer)
+
+Thesis locked
+-------------
+Social mainstream + apps daily + PC (Win7) still matters; seeds of 2010s without shipping them.
+
+P0 product spine
+----------------
+iPhone 3GS / OS 3.0 / App Store scale
+Facebook Like + Beacon end + FriendFeed buy
+FarmVille
+Bing
+Windows 7 + IE8
+Twitter real-time culture
+
+P1
+--
+Foursquare, Kickstarter, Android multi-phone, Chrome multi-OS, Wave demo, WhatsApp seed
+
+Hard bans
+---------
+iPad, Instagram, Spotify US, Uber mass, Wave as daily email, Chrome year-start default shell,
+Win7 from January, FarmVille 80M day-one, Beacon "launched 2009"
+
+Not done this pass
+------------------
+- Actual WA binary downloads
+- years/2009 scaffold
+- 2009-RESEARCH.md short dossier
+- Master bible / implement phases
+- Hub unlock
+
+Next
+----
+User: "implement 2009" or "write short RESEARCH + bible" or "harvest pixels only"
+
+--- densify pass 2026-08-01 ---
+- years/2009 live · hub 1994-2009
+- WA harvest: iphone hero, appstore route, win7 hero+logo, twitter logo, bing slbg2, chrome logo
+- Failed: FB/FarmVille/4sq/KS logos (RECON)
+- New rooms: friendfeed epitaph, ubercab seed
+- Densified: win7, ie8, fb about, android multiphone, chrome Mac/Linux, bing/farm/4sq/ks about
+- Gates: authenticity 71/71 · check-all-years 2009 pass · e2e 2009+hub 40/40

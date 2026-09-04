@@ -1,17 +1,23 @@
 # 2002 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · **deep visit pass 1+2 2026-07-23** · ready for implementation · Phase 0 harvest next  
-**Deep research:** [`docs/2002-DEEP-RESEARCH-2026-07-23.md`](2002-DEEP-RESEARCH-2026-07-23.md)  
-**Artifacts kit:** [`docs/references/2002/ARTIFACTS.md`](references/2002/ARTIFACTS.md)  
+**Status:** Research complete · **full year shipped 2026-07-26** (MVP+P1+P2+Phase 9 RECON pixels) · hub unlocked · Phase 11 re-verify complete · **100% content**  
+**★ Consolidated index (2000–2002 deep pack):** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
+**Deep research (canonical):** [`2002-DEEP-RESEARCH-2026-07-26.md`](2002-DEEP-RESEARCH-2026-07-26.md)  
+**Pair audit (2026-07-29):** [`2002-2003-DEEP-RESEARCH-AUDIT-2026-07-29.md`](2002-2003-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
+**2001→2002 handoff (scaffold bible):** [`2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md`](2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md)  
+**Prior deep passes:** project-stack 07-25 · 07-25 · pass4 · 07-23 (extracts still gold)  
+**Artifacts findings:** [`docs/references/2002/ARTIFACTS.md`](references/2002/ARTIFACTS.md)  
 **Capture queue:** [`docs/references/2002/CAPTURE-LOG.md`](references/2002/CAPTURE-LOG.md)  
 **Assets provenance:** [`docs/references/2002/ASSETS.md`](references/2002/ASSETS.md)  
-**Prior year:** 2001 (Windows XP · IE6 · Wikipedia · iPod · post-crash rebuild · Google habit)  
+**Wayback extracts:** **~38** files under `docs/references/2002/wayback-extracts/`  
+**Build bible:** [`2002-IMPLEMENTATION-PHASES.md`](2002-IMPLEMENTATION-PHASES.md) — MVP phases **0–8** shipped; 9–11 optional densify  
+**Prior year:** **2001 full year shipped** (XP · IE6 · Wikipedia · iPod/iTunes · warblogs · Google habit)  
 **Target immersion:** Calendar year **2002** — **broadband as “always-on”** · **blogosphere** matures · post-Napster **P2P chaos** (KaZaA) · **CSS / standards** (Wired redesign) · **Friendster** seeds social graph · **Mozilla 1.0 / Phoenix** · IE6 peak monopoly  
-**Sources method:** Same stack as `docs/SOURCES.md` — Cybercultural · Web Design Museum · Wayback · company histories · Pew · Live Stats  
+**Sources method:** Same stack as `docs/SOURCES.md` — Cybercultural · Pew · StopDesign · Live Stats · Wayback `id_` · Version Museum · WDM · Friendster wiki · Register  
 
-**Hub state today:** 2002 card **locked / Planned** (`index.html`).
+**Hub state (2026-07-26):** 2002 card **unlocked**. `years/2002/` + `assets/period/2002/` on disk (MVP + P1).
 
-**Foundation pattern:** This file is the year research dossier (template: `docs/2000-RESEARCH.md` / `docs/1999-RESEARCH.md`).
+**Foundation pattern:** Year research dossier (template: `docs/2001-RESEARCH.md`).
 
 ---
 
@@ -26,8 +32,8 @@
 | Fact | Notes / source family |
 |------|------------------------|
 | **~38.8M websites** (June 2002) | Internet Live Stats: **38,760,373** (+32% YoY); ~**663M** users |
-| Broadband “difference” | Pew **Jun 23 2002** report (May data): **21%** of U.S. internet users / **24M** adults home broadband (was **6%** in Jun 2000); among broadband: **71% cable**, **27% DSL** — always-on “information appliance” framing |
-| Always-on framing | Pew: from occasional tool → always-on information appliance |
+| Broadband “difference” | Pew **Jun 23 2002** report (May data): **21%** of U.S. internet users / **24M** adults home broadband (= **12%** of all American adults); was **6%** of users in Jun 2000; among broadband: **71% cable**, **27% DSL**, **2%** satellite/fixed wireless — always-on “information appliance” framing |
+| Always-on framing | Pew: from occasional tool → always-on information appliance; **82%** broadband vs **58%** dial-up online on a typical day |
 | **Blogosphere** | Word popularized as ecosystem (Hiler 2002; Quick end-2001; Graham joke 1999) |
 | **Movable Type** | v2.x: templates, categories, comments, **trackback** — WA Dec 2002 features |
 | **Blogger** | Still strong; free weblogs continue |
@@ -36,7 +42,7 @@
 | KaZaA scale | ~**100M downloads** by Aug 2002 (Cybercultural / WA) |
 | **iPod gen 2** | Aug 2002 — legal portable path; labels not yet on store |
 | **last.fm / Audioscrobbler** | Social music seeds (2002 launches → later merge) |
-| **Friendster** | Founded / launched **2002** (Abrams); mainstream social graph prototype; peak Asia later |
+| **Friendster** | **Founded 2002** (Abrams); public mass “went live” often dated **2003** (see §14 pitfalls) — use founding + careful early-graph story in 2002 |
 | **Wired CSS redesign** | Oct 2002 — major news site all-CSS layout (Bowman / StopDesign) |
 | **IE6 monopoly** | ~**90%** class share; little innovation until IE7 (2006) |
 | **Mozilla 1.0** | **Jun 5 2002** — Gecko suite (browser + mail + chat) |
@@ -204,21 +210,27 @@
 | StopDesign Wired launch | https://stopdesign.com/journal/2002/10/11/finally-were-live.html |
 | Friendster history | https://en.wikipedia.org/wiki/Friendster |
 
-### Dated Wayback targets
+### Dated Wayback targets (captures logged)
 
-| Target | Window |
-|--------|--------|
-| friendster.com | 2002–early 2003 |
-| blogger.com | Dec 2002 |
-| movabletype.org | Dec 2002 features |
-| kazaa.com | Aug 2002 |
-| google.com | mid/late 2002 |
-| yahoo.com / amazon.com | 2002 |
-| wired.com / news | Oct 2002 CSS era |
-| mtv.com | Aug 2002 |
-| mozilla.org 1.0 | Jun 2002 |
-| wikipedia.org | 2002 growth |
-| apple.com/ipod | Aug 2002 gen2 |
+| Target | Window / capture | Extract |
+|--------|------------------|---------|
+| google.com | `20021111080812` | `google-2002-11` — News-New! · 3.08B pages |
+| news.google.com | `20020930` | `googlenews-2002-09` BETA |
+| amazon.com | `20021015` | `amazon-2002-10` smile densify |
+| yahoo.com | `20021114` | `yahoo-2002-11` |
+| wikipedia.com Main | `20020802` | `wikipedia-en-2002-08` · **35,688** articles |
+| wikipedia.org | `20021214` | `wikipedia-2002-12` |
+| mtv.com | `20020808` | `mtv-2002-08` |
+| mozilla.org | `20020606` | `mozilla-2002-06` |
+| cnn.com | `20021114` | `cnn-2002-11` |
+| ebay.com | `20021015` | `ebay-2002-10` |
+| blogger.com | Dec 2002 | `blogger-2002-12` Pyra |
+| movabletype.org | TrackBack + features | `mt-trackback-manual` · `movabletype-features` |
+| kazaa.com | Aug 2002 | `kazaa-2002-08` partial |
+| wired redesign PR | Oct 2002 | `wired-redesign-pr` + StopDesign |
+| daypop about | Feb 2002 | `daypop-about-2002-02` |
+| friendster.com | early 2003 attempt | honesty note only |
+| apple.com/ipod | Aug–Oct 2002 | WA fail → Cybercultural ipod-2002 |
 
 ---
 
@@ -310,7 +322,8 @@ Full phase detail: [`2002-IMPLEMENTATION-PHASES.md`](2002-IMPLEMENTATION-PHASES.
 
 | Trap | Correct 2002 fact |
 |------|-------------------|
-| MySpace as the social network | **Friendster** (MySpace = 2003) |
+| MySpace as the social network | **Friendster founding** (MySpace = 2003); Friendster mass public often **2003** |
+| Friendster “everyone’s on it mid-2002” | Founded 2002; denser WA UI may be early **2003** — label carefully |
 | iTunes Music Store | **Not yet** — labels courtship; Store = 2003 |
 | Blogger “by Google” | Acquisition **Feb 2003** — keep independent for 2002 |
 | Firefox as browser name | **Phoenix 0.1** only (Sep 23) |
@@ -326,14 +339,17 @@ Full phase detail: [`2002-IMPLEMENTATION-PHASES.md`](2002-IMPLEMENTATION-PHASES.
 ## 15. Definition of done (research)
 
 - [x] Thesis + timeline + bans + P0 list  
-- [x] Source map + deep visit log (pass 1+2)  
-- [x] Artifacts + capture log  
+- [x] Source map + deep visit log (passes 1–4)  
+- [x] Artifacts + capture log (disk-truth corrected)  
 - [x] Implementation phases  
 - [x] Comparison / tour / pitfalls (parity with 1999 dossier)  
-- [ ] Phase 0: dated WA HTML bodies + GIFs on disk  
+- [x] Continuity brand WA notes (Google/Amazon/Yahoo/Wiki/MTV/CNN/eBay/News)  
+- [x] TrackBack manual + blogosphere + Pew exact  
+- [ ] Phase 0: GIFs on disk (`git checkout` assets/period/2002)  
+- [ ] Full HTML dumps like 1999 `*.html` (optional; notes sufficient for MVP)  
 - [ ] Hub unlock only after implementation Phase 8 green  
 
-**Next:** Phase 0 harvest → Phase 1 scaffold (`2002-IMPLEMENTATION-PHASES.md`).
+**Next:** Implement via **[`2002-IMPLEMENTATION-PHASES.md`](2002-IMPLEMENTATION-PHASES.md)** — full goals + detailed phases **0–11** (how to do + acceptance). Handoff continuity: [`2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md`](2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md).
 
 ---
 
@@ -353,8 +369,11 @@ Museum voice only on hub / About.
 | 2026-07-23 | Pass 2: Pew broadband full read; blogs-rss-2002; StopDesign Wired; local extracts under `references/2002/wayback-extracts/` |
 | 2026-07-23 | Implementation phases audit: `2002-IMPLEMENTATION-PHASES.md` |
 | 2026-07-23 | Parity pass vs 1998–2001: added comparison, tour, effort, pitfalls; gap audit |
+| **2026-07-25** | **Pass 3 live re-visit** all primaries; Friendster date honesty; `2002-DEEP-RESEARCH-2026-07-25.md` |
+| **2026-07-25** | **Pass 4 densify (research only):** continuity WA bodies; ARTIFACTS/ASSETS disk-truth fix |
+| **2026-07-25** | **Project-stack every-source pass:** open every URL from SOURCES §20 + REBUILD §3/§5 + RESEARCH archive map (1999/2001 method); rewrite CAPTURE-LOG; `2002-DEEP-RESEARCH-PROJECT-STACK-2026-07-25.md`; 28/30 live |
 
-**Companions:** deep research · ARTIFACTS · CAPTURE-LOG · ASSETS · IMPLEMENTATION-PHASES.
+**Companions:** deep research ×3 · ARTIFACTS · CAPTURE-LOG · ASSETS · IMPLEMENTATION-PHASES · step-by-step Part C.
 
 ---
 
@@ -362,10 +381,16 @@ Museum voice only on hub / About.
 
 | Compared to | 2002 status |
 |-------------|-------------|
-| **1999 gold research pack** | Research structure now **parity**; lacks WA **HTML** dumps + built year |
-| **2000** | Similar research depth; 2000 is **built**; 2002 is not |
-| **2001** | 2001 research is **thinner** than 2002, but 2001 is **built MVP** |
-| **SOURCES.md / MASTER-PROVENANCE** | Still no dedicated §2002 — do in Phase 10 |
+| **1999 gold research pack** | Research structure **parity+**; notes-first (not full HTML dumps); year **not built** |
+| **2000** | Research depth **≥**; 2000 is **built**; 2002 is not |
+| **2001** | Research now **deeper** than 2001 pack; 2001 is **built MVP** — fork source for scaffold |
+| **SOURCES.md / MASTER-PROVENANCE** | Still no dedicated §2002 — do in Phase 10 / hub unlock |
 
 *End of 2002 research dossier.*
 
+## Implementation log
+
+- **2026-07-25** — MVP shipped (A1–A7) + A8 P1 rooms (Daypop, Technorati, Mozilla, Phoenix); hub unlocked; live flows only (no alert mocks).
+
+
+- **2026-07-26** — Phase 9 RECON pixel densify + P2 rooms (Netflix DVD, Steam, last.fm, ISP); gates 40/40; e2e p2-pixels green.

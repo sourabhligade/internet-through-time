@@ -1,10 +1,15 @@
-# Museum complete — 1994–2005 (2026-07-24)
+# Museum complete — 1994–2005 (HISTORICAL SNAPSHOT — not current) (2026-07-24)
+
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Track D restored. Residual = true WA pixel crops + platform debt + git.
+
+**This file is a historical snapshot (2026-07-24).** It is **not** current disk truth.
+
 
 ## Ship status: **CONTENT COMPLETE**
 
 | Criterion | Status |
 |-----------|--------|
-| Hub years **1994–2005** unlocked | ✅ |
+| Hub years **1994–2005** unlocked | ✅ restored (2026-07-25+) |
 | Shells, immersion, urlMap 100% | ✅ |
 | Culture rooms densified (0 brand rooms &lt;2.5KB) | ✅ |
 | Continuity truth (XP/IE6, Pets archive, Y2K retrospective) | ✅ |

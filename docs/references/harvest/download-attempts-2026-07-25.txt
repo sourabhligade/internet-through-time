@@ -1,0 +1,13 @@
+OK docs/references/harvest/found-assets/google-Title_HomPg-1999.gif 11370b
+OK docs/references/harvest/found-assets/google-logo-2001.gif 8748b
+OK docs/references/harvest/found-assets/yahoo-main33.gif 4672b
+OK docs/references/harvest/found-assets/blogger.gif 3271b
+NOHIT ebay-logo_home_tb
+OK docs/references/harvest/found-assets/napster.gif 23021b
+NOHIT amazon-tabs
+OK docs/references/harvest/found-assets/spacejam-0.gif 189b
+OK docs/references/harvest/found-assets/spacejam-1.gif 6756b
+OK docs/references/harvest/found-assets/spacejam-2.gif 229b
+OK docs/references/harvest/found-assets/spacejam-3.gif 4422b
+OK docs/references/harvest/found-assets/spacejam-4.gif 1908b
+OK docs/references/harvest/found-assets/spacejam-5.gif 1368b

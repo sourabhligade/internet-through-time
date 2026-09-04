@@ -1,24 +1,133 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>eBay - Register</title>
-<link rel="stylesheet" href="../../../../css/period-2000.css"></head>
-<body bgcolor="#FFFFFF" text="#000000" link="#0000EE" vlink="#551A8B">
+<html lang="en"><head><meta charset="utf-8">
+<title>eBay registration — 2000</title>
+<link rel="stylesheet" href="../../../../css/period-2000.css">
+</head>
+<body bgcolor="#ffffff" link="#0000cc">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<table width="100%" cellpadding="0" cellspacing="0"><tr><td class="eb-bar">
-<a href="index.html" class="eb-logo"><b>eBay</b></a>
+<table width="640" align="center" cellpadding="10"><tr><td>
+ <font face="Arial" size="2">
+ <p><a href="index.html"><img src="../../../../assets/period/2000/ebay/logo.gif" height="40" border="0" alt="eBay"></a></p>
+ <h1 style="font-size:16px">Register for the personal trading community</h1>
+ <p>Signing up for eBay in 2000 is a ritual: choose a user ID, agree to the User Agreement,
+ and start building feedback.</p>
+ <table width="100%" cellpadding="6" bgcolor="#f5f5ff" style="border:1px solid #99c">
+ <tr><td>
+ <form id="ebay-register-form" action="myebay.html" method="get">
+ User ID: <input type="text" name="user" id="ebay-user" size="24" value=""><br><br>
+ Email: <input type="text" name="email" id="ebay-email" size="28" value=""><br><br>
+ <label><input type="checkbox" id="ebay-agree" checked> I agree to the User Agreement (sample)</label><br><br>
+ <input type="submit" value="Register Now">
+ </form>
+ <p id="ebay-reg-status" style="font-size:12px;color:#060"></p>
+ </td></tr>
+ </table>
+ <p style="font-size:11px;color:#666">Registration is saved in <b>this browser only</b> (localStorage) and shown on
+ <a href="myebay.html">My eBay</a>. No email is sent to the internet.</p>
+ <p><a href="index.html">Home</a> · <a href="category.html">Categories</a> ·
+ <a href="search.html">Search</a> · <a href="sell.html">Sell</a></p>
+ </font>
 </td></tr></table>
-<br>
-<font face="Arial, Helvetica, sans-serif">
-<h2>Register to buy and sell</h2>
-<p><font size="2">Join the personal trading community. Registration is free.</font></p>
-<form action="bid-confirm.html" method="get">
-<table border="0" cellpadding="4">
-<tr><td><font size="2">User ID:</font></td><td><input type="text" name="user" size="24"></td></tr>
-<tr><td><font size="2">Email:</font></td><td><input type="text" name="email" size="28"></td></tr>
-<tr><td><font size="2">Password:</font></td><td><input type="password" name="pass" size="24"></td></tr>
-<tr><td></td><td><input type="submit" value="Register Now"></td></tr>
-</table>
-</form>
-<p><font size="2"><a href="index.html">Back to eBay Home</a> · <a href="sell.html">Sell an item</a></font></p>
-</font>
+<script>
+(function () {
+  var f = document.getElementById("ebay-register-form");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var user = (document.getElementById("ebay-user").value || "").replace(/^\s+|\s+$/g, "");
+    var email = (document.getElementById("ebay-email").value || "").replace(/^\s+|\s+$/g, "");
+    var agree = document.getElementById("ebay-agree");
+    var st = document.getElementById("ebay-reg-status");
+    if (!user) {
+      if (st) st.textContent = "Choose a User ID.";
+      return;
+    }
+    if (agree && !agree.checked) {
+      if (st) st.textContent = "You must agree to the User Agreement.";
+      return;
+    }
+    try {
+      var key = "itt00-ebay-user";
+      localStorage.setItem(key, JSON.stringify({
+        user: user,
+        email: email || (user + "@example.com"),
+        registeredAt: Date.now(),
+        feedback: 0
+      }));
+    } catch (err) {}
+    if (st) st.innerHTML = "Welcome, <b>" + user.replace(/</g, "") + "</b> — opening My eBay…";
+    setTimeout(function () { location.href = "myebay.html"; }, 400);
+  });
+})();
+</script>
 <script src="../../../../js/immersion-2000.js"></script>
+
+
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2000" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="bid-confirm.html">eBay · bid-confirm</a> ·
+ <a href="category.html">eBay · category</a> ·
+ <a href="dutch.html">eBay · dutch</a> ·
+ <a href="../half/index.html">Half.com</a> ·
+ <a href="../hampsterdance/index.html">Hampster Dance</a> ·
+ <a href="../homestar/index.html">Homestar Runner</a> ·
+ <a href="../hotbot/index.html">HotBot</a> ·
+ <a href="../icq/index.html">ICQ</a> ·
+ <a href="../infoseek/index.html">Infoseek</a> ·
+ <a href="../ivillage/index.html">iVillage</a> ·
+ <a href="../kottke/index.html">kottke.org</a> ·
+ <a href="../limewire/index.html">LimeWire</a> ·
+ <a href="../macromedia/index.html">Macromedia Flash 5</a> ·
+ <a href="../mapquest/index.html">MapQuest</a> ·
+ <a href="../matrix/index.html">The Matrix</a> ·
+ <a href="../metafilter/index.html">MetaFilter</a> ·
+ <a href="../microsoft/index.html">Microsoft</a> ·
+ <a href="../msn/index.html">MSN.com residual 2000</a> ·
+ <a href="../msngaming/index.html">MSN Gaming Zone</a> ·
+ <a href="../mynetscape/index.html">My Netscape</a> ·
+ <a href="../napster/index.html">Napster</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
+<!-- ITT-LO-OFFICIAL-D2:ebay-register:start -->
+<section data-lo-panel="1" data-itt-year="2000" class="itt-2000-machine" style="margin:14px auto;padding:12px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em;background:#fff8dc;color:#111">
+<p><b>Leftover 2×</b> · 2000 leftover · ebay register · not the chip · incomplete never writes · <code>itt00-ebay-register</code></p>
+<label style="display:block"><input type="checkbox" data-lo-req> This is leftover, not the year star.</label>
+<label style="display:block"><input type="checkbox" data-lo-req> Trap / empty / 0 ticks never write.</label>
+<p>
+ <button type="button" data-lo-pick="keep">2000 leftover path</button>
+ <button type="button" data-lo-pick="trap">Neighbor year (trap)</button>
+</p>
+<p>
+ <button type="button" data-lo-trap>Neighbor year (trap)</button>
+ <button type="button" data-lo-save data-lo-key="ebay-register" data-lo-need-pick="keep">Save leftover 2×</button>
+</p>
+<p data-lo-status></p>
+<p hidden data-next-flow data-next-when-key="itt00-ebay-register"><b>Next:</b> <a href="../microsoft/index.html">Microsoft</a></p>
+</section>
+<!-- ITT-LO-OFFICIAL-D2:ebay-register:end -->
+<!-- ITT-LO-OFFICIAL-D2:ebay-register-d2:start -->
+<section data-lo-panel="1" data-itt-year="2000" class="itt-2000-machine" style="margin:14px auto;padding:12px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em;background:#fff8dc;color:#111">
+<p><b>Leftover 2×</b> · 2000 leftover · ebay register d2 · not the chip · incomplete never writes · <code>itt00-ebay-register-d2</code></p>
+<label style="display:block"><input type="checkbox" data-lo-req> This is leftover, not the year star.</label>
+<label style="display:block"><input type="checkbox" data-lo-req> Trap / empty / 0 ticks never write.</label>
+<p>
+ <button type="button" data-lo-pick="keep">2000 leftover path</button>
+ <button type="button" data-lo-pick="trap">Neighbor year (trap)</button>
+</p>
+<p>
+ <button type="button" data-lo-trap>Neighbor year (trap)</button>
+ <button type="button" data-lo-save data-lo-key="ebay-register-d2" data-lo-need-pick="keep">Save leftover 2×</button>
+</p>
+<p data-lo-status></p>
+<p hidden data-next-flow data-next-when-key="itt00-ebay-register-d2"><b>Next:</b> <a href="../microsoft/windows98.html">Microsoft Windows 98 Second Edition</a></p>
+</section>
+<!-- ITT-LO-OFFICIAL-D2:ebay-register-d2:end -->
+
+<!-- ITT-2X-TARGET:2000:start -->
+<p class="itt-pop-more" data-itt-pop-more="2000" data-itt-2x-links="2000" data-itt-2x-flow="2000" style="margin:12px auto;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;max-width:52em"><b>2× leftover walk</b> · <a href="../mapquest/index.html">★ MapQuest leftover</a> · <a href="../google/index.html">Google leftover</a> · <a href="../amazon/index.html">Amazon leftover</a> · <a href="../yahoo/index.html">Yahoo leftover</a> · <a href="../google/about.html">Google leftover · about</a> · <a href="../napster/search.html">Napster leftover</a> · <a href="../napster/about.html">Napster leftover · about</a> · <a href="../paypal/index.html">PayPal leftover</a> · <a href="../paypal/about.html">PayPal leftover · about</a> · <a href="../mapquest/about.html">MapQuest leftover · about</a> · <a href="../geocities/index.html">GeoCities leftover</a> · <a href="../gnutella/index.html">Gnutella leftover</a> · <a href="../gnutella/about.html">Gnutella leftover · about</a> · <a href="../cnn/index.html">CNN leftover</a> · <a href="../about/index.html">about leftover</a> · <a href="../altavista/index.html">AltaVista leftover</a> · <a href="../altavista/about.html">AltaVista leftover · about</a> · <a href="../aol/index.html">aol leftover</a> · <a href="../apple/index.html">apple leftover</a> · <a href="../askjeeves/index.html">Ask Jeeves leftover</a> · <a href="../baidu/index.html">baidu leftover</a> · <a href="../bbc/index.html">bbc leftover</a> · <a href="../blogger/index.html">Blogger leftover</a> · <a href="../bowienet/index.html">bowienet leftover</a> · <a href="../bowienet/about.html">bowienet leftover · about</a> · <a href="../camworld/index.html">camworld leftover</a> · <a href="../camworld/about.html">camworld leftover · about</a> · <a href="../dmoz/index.html">dmoz leftover</a> · <a href="../dmoz/about.html">dmoz leftover · about</a> · <a href="../everything2/index.html">everything2 leftover</a> · <a href="../excite/index.html">Excite leftover</a> · <a href="../expedia/index.html">expedia leftover</a> · <a href="../flash4/index.html">flash4 leftover</a> · <a href="../flash4/about.html">flash4 leftover · about</a> · <a href="../gamespot/index.html">gamespot leftover</a> · <a href="../gamespot/about.html">gamespot leftover · about</a> · <a href="../half/index.html">half leftover</a> · <a href="../hampsterdance/index.html">hampsterdance leftover</a> · <a href="../hampsterdance/about.html">hampsterdance leftover · about</a> · <a href="../homestar/index.html">homestar leftover</a> · <a href="../homestar/about.html">homestar leftover · about</a> · <a href="../hotbot/index.html">HotBot leftover</a> · <a href="../icq/index.html">ICQ leftover</a> · <a href="../icq/about.html">ICQ leftover · about</a> · <a href="../infoseek/index.html">infoseek leftover</a> · <a href="../infoseek/about.html">infoseek leftover · about</a> · <a href="../ivillage/index.html">ivillage leftover</a> · <a href="../kottke/index.html">kottke leftover</a> · <a href="../kottke/about.html">kottke leftover · about</a> · <a href="../limewire/index.html">limewire leftover</a> · <a href="../macromedia/index.html">macromedia leftover</a> · <a href="../macromedia/about.html">macromedia leftover · about</a> · <a href="../matrix/index.html">matrix leftover</a> · <a href="../metafilter/index.html">metafilter leftover</a> · <a href="../metafilter/about.html">metafilter leftover · about</a> · <a href="../microsoft/index.html">Microsoft leftover</a> · <a href="../microsoft/about.html">Microsoft leftover · about</a> · <a href="../msn/index.html">msn leftover</a> · <a href="../msngaming/index.html">msngaming leftover</a> · <a href="../msngaming/about.html">msngaming leftover · about</a> · <a href="../mynetscape/index.html">mynetscape leftover</a> · <a href="../napsterweb/index.html">napsterweb leftover</a> · <a href="../netcenter/index.html">netcenter leftover</a> · <a href="../netcenter/about.html">netcenter leftover · about</a> · <a href="../netscape/index.html">Netscape leftover</a> · <a href="../netscape/about.html">Netscape leftover · about</a> · <a href="../pets/index.html">pets leftover</a> · <a href="../pets/about.html">pets leftover · about</a> · <a href="../slashdot/index.html">Slashdot leftover</a> · <a href="../startupfailures/index.html">startupfailures leftover</a> · <a href="../travelocity/index.html">travelocity leftover</a> · <a href="../womencom/index.html">womencom leftover</a> · <a href="../y2k/index.html">y2k leftover</a> · <a href="../y2k/about.html">y2k leftover · about</a> · <a href="../youvegotmail/index.html">youvegotmail leftover</a> · <a href="../youvegotmail/about.html">youvegotmail leftover · about</a> · <a href="../zombo/index.html">zombo leftover</a> · <a href="../zombo/about.html">zombo leftover · about</a></p>
+<!-- ITT-2X-TARGET:2000:end -->
 </body></html>

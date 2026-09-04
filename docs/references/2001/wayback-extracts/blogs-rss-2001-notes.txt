@@ -1,0 +1,20 @@
+SOURCE: https://cybercultural.com/p/blogs-rss-2001/
+STATUS: [visited] 2026-07-26 deep research pass
+ROLE: Blog professionalization + warblogs
+
+KEY FACTS:
+- Jan: Weblog Awards 2001 (bloggies); winner /Usr/Bin/Girl (Zannah) linkblog
+- Political blogs: TPM from Nov 2000; Instapundit Aug 2001 → warblog emblem; Daily Dish
+- Sep 11 shifts blogs to real-time political forum
+- Early blogger resentment of warblog influx (Dornfest quote in later reviews)
+- Movable Type Oct 8 2001: multi-blog, templates, static HTML, RSS OOTB (Blogger still weak on RSS)
+- Mena Trott former Blogger user; MetaFilter Haughey praises MT admin UI
+- Greymatter: Noah Grey withdraws Mar 2001 (health)
+- RSS: MT starts 0.91; later RSS 1.0 template; format wars continue; default 0.91 not always valid
+- Moreover: webfeed company; portal widgets; critical on 9/11
+- Blogdex Jul 2001 (Cameron Marlow, MIT)
+- Weblogs.com Oct 2001 ping server (Winer) + recently updated list
+- Late 2001: Boing Boing / DiveIntoMark have feeds; Kottke/Plasticbag not yet universal
+
+BUILD:
+- Blogger + MT + Blogdex rooms; warblogs as NEWS ABOUT blogging not partisan museum voice

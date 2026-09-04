@@ -1,0 +1,238 @@
+/* Museum atlas — same lobby grammar as hub.css (Win95 window on teal). */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #008080;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+.atlas {
+  max-width: 980px;
+  margin: 20px auto 40px;
+  padding: 0 10px 28px;
+}
+
+.atlas-win {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+}
+
+.atlas-bar {
+  background: #000080;
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  padding: 3px 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.atlas-body {
+  background: #fff;
+  padding: 14px 16px 18px;
+  border-top: 1px solid #808080;
+}
+
+.atlas h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.atlas .lede {
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.atlas .muted { color: #444; font-size: 13px; }
+
+.atlas-nav {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+
+.atlas-nav a { margin-right: 10px; }
+
+.atlas h2 {
+  font-size: 16px;
+  margin: 16px 0 6px;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 2px;
+}
+
+.atlas h3 { font-size: 14px; margin: 10px 0 4px; }
+
+#atlas-spine {
+  margin: 8px 0 12px;
+}
+
+.atlas-wing {
+  margin: 0 0 14px;
+  padding: 8px 8px 10px;
+  border: 1px solid #808080;
+  background: #f3f3f3;
+}
+
+.atlas-wing[data-wing="gap"] {
+  background: #d8d8d8;
+  border-style: dashed;
+}
+
+.wing-name {
+  margin: 0 0 2px;
+  font-size: 14px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.wing-blurb { margin: 0 0 8px; }
+
+.wing-doors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.spine-year {
+  width: 118px;
+  min-height: 52px;
+  text-align: left;
+  padding: 4px 6px;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  cursor: pointer;
+}
+
+.spine-year.open { background: #fff; }
+.spine-year.wiped { background: #d0d0d0; color: #666; cursor: default; }
+.spine-year.selected { outline: 2px solid #000080; }
+.spine-year.lean.open { background: #fffef4; }
+.spine-year.stamped { box-shadow: inset 0 0 0 1px #000080; }
+
+.spine-year .sy { display: block; font-weight: bold; font-size: 13px; }
+.spine-year .sg {
+  display: block;
+  color: #333;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.spine-year .sl,
+.spine-year .ss {
+  display: block;
+  font-size: 10px;
+  color: #000080;
+  margin-top: 2px;
+}
+.spine-year.wiped .sg { color: #666; }
+
+#atlas-year {
+  background: #ffffe8;
+  border: 1px solid #808080;
+  padding: 10px 12px;
+  margin: 0 0 16px;
+}
+
+#atlas-year .era { font-style: italic; margin: 0 0 6px; }
+#atlas-year .doors { font-family: Tahoma, Arial, sans-serif; font-size: 12px; }
+#atlas-year .gold { font-weight: bold; }
+#atlas-year code { font-size: 11px; color: #333; }
+#atlas-year ol.ten { columns: 2; column-gap: 18px; }
+#atlas-year li { margin: 2px 0; }
+#atlas-year .remember {
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 8px 0 10px;
+}
+#atlas-year .not-year {
+  background: #fff8dc;
+  border: 1px solid #c9a227;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+#atlas-year .layers-h { margin-top: 16px; }
+#atlas-year ol.wander { padding-left: 1.3em; }
+
+.atlas-layer {
+  margin: 6px 0;
+  border: 1px solid #b0b0b0;
+  background: #fafafa;
+  padding: 4px 8px 6px;
+}
+.atlas-layer summary {
+  cursor: pointer;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 0;
+}
+.atlas-layer .n {
+  font-weight: normal;
+  color: #000080;
+  font-size: 11px;
+}
+.atlas-layer h4 { margin: 8px 0 2px; font-size: 13px; }
+.lede-all { font-size: 13px; line-height: 1.45; }
+
+.start-btn {
+  display: inline-block;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  padding: 3px 10px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #404040 #404040 #dfdfdf;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.start-btn.start-primary { font-weight: bold; }
+
+#atlas-threads, #atlas-trails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.thread, .trail {
+  border: 1px solid #808080;
+  padding: 8px 10px;
+  background: #f7f7f7;
+}
+
+.thread ol, .trail ol { margin: 4px 0 0; padding-left: 1.2em; }
+.yr {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #000080;
+  font-weight: bold;
+}
+
+#atlas-find {
+  width: 100%;
+  max-width: 28em;
+  font-size: 14px;
+  padding: 3px 4px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+#atlas-find-results ul { margin: 6px 0 0; padding-left: 1.2em; }
+
+.atlas-foot {
+  margin-top: 16px;
+  font-size: 12px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+@media (max-width: 640px) {
+  #atlas-threads, #atlas-trails { grid-template-columns: 1fr; }
+  #atlas-year ol.ten { columns: 1; }
+  .spine-year { width: 30%; }
+}

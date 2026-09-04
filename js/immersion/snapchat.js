@@ -1,0 +1,120 @@
+/**
+ * Snapchat 2011 seed — timer snap theater (localStorage only)
+ */
+(function (global) {
+  "use strict";
+  var ITT = global.ITT || (global.ITT = {});
+
+  function U() {
+    return ITT.util || {};
+  }
+  function key(kind) {
+    var y = "";
+    try {
+      y =
+        (ITT._immersionYear && String(ITT._immersionYear)) ||
+        (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
+        "";
+    } catch (eY) {
+      y = "";
+    }
+    var pfx = /^\d{4}$/.test(y) ? "itt" + y.slice(2) : "itt11";
+    if (U().immersionStorageKey) return U().immersionStorageKey(kind, pfx);
+    return pfx + "-" + kind;
+  }
+
+  function boot(doc) {
+    doc = doc || document;
+    var send = doc.querySelector("[data-snap-send]");
+    var timer = doc.querySelector("[data-snap-timer]");
+    var out = doc.querySelector("[data-snap-out]");
+    var status = doc.querySelector("[data-snap-status]");
+    if (!send) return;
+
+    send.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var gate =
+        doc.querySelector("[data-snap-not-stories]") || doc.querySelector("[data-snap-not-ig]");
+      if (gate && !gate.checked) {
+        if (status) status.textContent = "Confirm this is not Stories / not IG Stories first.";
+        return;
+      }
+      var secs = timer ? parseInt(timer.value, 10) || 5 : 5;
+      secs = Math.max(1, Math.min(10, secs));
+      /* REAL: require literacy checks if present, else two-step arm */
+      var checks = doc.querySelectorAll("[data-snap-check], [data-req]");
+      var cn = 0;
+      var ci;
+      for (ci = 0; ci < checks.length; ci++) if (checks[ci].checked) cn++;
+      if (checks.length >= 1) {
+        if (cn < Math.min(2, checks.length)) {
+          if (status) status.textContent = "REAL gate: complete Snap literacy checks first.";
+          return;
+        }
+      } else if (!gate && send.getAttribute("data-snap-armed") !== "1") {
+        send.setAttribute("data-snap-armed", "1");
+        if (status) {
+          status.textContent = "Confirm: no real Snapchat account — click Send again (REAL two-step).";
+        }
+        return;
+      }
+      var n = 0;
+      try {
+        n = parseInt(localStorage.getItem(key("snap-count")) || "0", 10) || 0;
+      } catch (e) { /* */ }
+      n += 1;
+      try {
+        localStorage.setItem(key("snap-count"), String(n));
+        localStorage.setItem(key("snap-last-timer"), String(secs));
+      } catch (e2) { /* */ }
+      if (status) {
+        status.innerHTML =
+          "Snap #" + n + " sent · visible <b>" + secs + "s</b> · then gone (museum theater).";
+      }
+      if (out) {
+        out.style.display = "block";
+        out.innerHTML =
+          "<div style='padding:40px;background:#222;color:#fffc00;font-weight:bold'>📷 snap · " +
+          secs +
+          "s</div>";
+        window.setTimeout(function () {
+          out.innerHTML =
+            "<div style='padding:20px;color:#666;font-size:12px'>Snap expired · Picaboo→Snapchat 2011 seed · not mass default all year</div>";
+        }, secs * 1000);
+      }
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) { /* */ }
+      var snapMsg = "Snap sent · " + secs + "s timer · this browser only";
+      if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(snapMsg, {
+          doc: doc,
+          statusSelector: "[data-snap-status]",
+          kind: "snap",
+          flash: true
+        });
+      } else if (ITT._immersionApi && ITT._immersionApi.showFlash) {
+        ITT._immersionApi.showFlash(snapMsg);
+      }
+    });
+  }
+
+  if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
+    ITT.ImmersionFeatures.registerLocal({
+      id: "snapchat",
+      featureKey: "snapchat",
+      boot: boot
+    });
+  } else {
+    ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
+    ITT.ImmersionFeatures.push({
+      id: "snapchat",
+      needs: function (cfg) {
+        return !cfg.features || cfg.features.snapchat !== false;
+      },
+      init: function () {
+        boot(document);
+      }
+    });
+  }
+})(typeof window !== "undefined" ? window : this);

@@ -1,0 +1,18 @@
+/* 2012 document styles — Win7 · IE 9 residual · Instagram Android · IPO · SOPA */
+@import url("period-2011.css");
+
+body.year-2012 .itt-year-chip {
+  color: #125688;
+  border-bottom-color: #125688;
+}
+
+/* Third-trio leftover — 2012 reddit door */
+.rd12 { max-width: 560px; margin: 16px auto; font-family: Arial, sans-serif; font-size: 13px; }
+.rd12 a { color: #369; }
+.rd12-kicker { font-size: 12px; color: #369; }
+.rd12-board { background: #fff; border: 1px solid #ccc; padding: 10px; margin: 8px 0; font-size: 12px; }
+.rd12 .pop-note { font-size: 12px; padding: 8px; border: 1px solid #666; margin: 8px 0; background: #fff8dc; }
+.rd12 .pop-rows { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+.rd12 .pop-rows button { text-align: left; padding: 8px; background: #fff; border: 1px solid #369; cursor: pointer; }
+.rd12 .pop-rows button.is-on { background: #fff8dc; }
+.rd12 .pop-req { display: block; font-size: 12px; margin: 4px 0; }

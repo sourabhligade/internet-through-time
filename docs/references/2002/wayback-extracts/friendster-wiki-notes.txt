@@ -1,0 +1,96 @@
+SOURCE: https://en.wikipedia.org/wiki/Friendster
+FINAL: https://en.wikipedia.org/wiki/Friendster
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wiki-friendster
+ROLE: founding vs mass public
+TITLE: Friendster - Wikipedia
+BYTES: 272388
+ERROR: 
+
+KEY FACTS / TEXT:
+Friendster - Wikipedia
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page Contents Current events Random article About Wikipedia Contact us
+Contribute
+Help Learn to edit Community portal Recent changes Upload file Special pages
+Search
+Search
+Appearance
+Donate
+Create account
+Log in
+Personal tools
+Donate
+Create account
+Log in
+Contents
+move to sidebar
+hide
+(Top)
+1
+History
+Toggle History subsection
+1.1
+Financial history
+2
+Awards and recognitions
+3
+Services
+4
+Languages
+5
+Development
+6
+Patents
+7
+Site transformation
+8
+References
+9
+External links
+Toggle the table of contents
+Friendster
+21 languages
+العربية বাংলা Chavacano de Zamboanga Чӑвашла Deutsch فارسی Français Bahasa Indonesia Italiano 日本語 Jawa 한국어 Bahasa Melayu Polski Português Русский Tagalog Türkçe Oʻzbekcha / ўзбекча Tiếng Việt 中文
+Edit links
+Article
+Talk
+English
+Read
+Edit
+View history
+Tools
+Tools
+move to sidebar
+hide
+Actions
+Read
+Edit
+View history
+General
+What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser
+Print/export
+Download as PDF Printable version
+In other projects
+Wikidata item
+Appearance
+move to sidebar
+hide
+From Wikipedia, the free encyclopedia
+This article needs more citations . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . Find sources:   "Friendster"   –   news   · newspapers   · books   · scholar   · JSTOR ( March 2025 ) ( Learn how and when to remove this message )
+Social networking service
+{{Start date and age|2023}} (second incarnation)"},"dissolved":{"wt":"{{End date and age|2015}} (first incarnation)"},"location_city":{"wt":"[[Dover, Delaware]]"},"location_country":{"wt":"United States"},"area_served":{"wt":"Worldwide"},"key_people":{"wt":"Mike Carson ([[Chief Executive Officer|CEO]])"},"url":{"wt":"{{URL|friendster.com}}"},"screenshot":{"wt":""},"caption":{"wt":""},"website_type":{"wt":"[[Social networking service]]"},"advertising":{"wt":"Banner ads, contextual ads, sponsorships"},"registration":{"wt":"Free"},"launch_date":{"wt":"{{start date and age|March 22, 2003}} (first incarnation)<br/>{{start date and age|2026}} (second incarnation)"},"native_clients":{"wt":"{{hlist|[[iOS]]|[[Android (operating system)|Android]]}}"},"parent":{"wt":"Friendster Labs, Inc. (2003–2009; 2023–present) <br> MOL Global (2009–2015)"},"current_status":{"wt":"Active"},"num_users":{"wt":"8.2&nbsp;million (June 2010)<ref>{{cite web|url=https://www.google.com/adplanner/planning/site_profile#siteDetails?identifier=friendster.com&geo=001&trait_type=1&lp=true|title=DoubleClick Ad Planner|access-date=2011-11-02|archive-date=October 10, 2010|archive-url=https://web.archive.org/web/20101010001626/https://www.google.com/adplanner/planning/site_profile#siteDetails?identifier=friendster.com&geo=001&trait_type=1&lp=true|url-status=live}}</ref>"}},"i":0}}]}'> Friendster Type of site Social networking service Founded 2002 ; 24   years ago   ( 2002 ) (first incarnation) 2023 ; 3   years ago   ( 2023 ) (second incarnation) Dissolved 2015 ; 11 years ago   ( 2015 ) (first incarnation) Headquarters Dover, Delaware , United States Area   served Worldwide Founder Jonathan Abrams Key   people Mike Carson ( CEO ) Parent Friendster Labs, Inc. (2003–2009; 2023–present) MOL Global (2009–2015) URL friendster .com Advertising Banner ads, contextual ads, sponsorships Registration Free Users 8.2   million (June 2010) [ 1 ] Launched March 22, 2003 ; 23 years ago   ( March 22, 2003 ) (first incarnation) 2026 ; 0   years ago   ( 2026 ) (second incarnation) Current   status Active Native clients on iOS Android
+Friendster is a social networking service originally based in Mountain View, California , founded by Jonathan Abrams and launched in March 2002. [ 2 ] [ 3 ] [ 4 ] Before Friendster was redesigned, the service allowed users to contact other members, maintain those contacts, and share online content and media with those contacts. [ 5 ] The website was also used for dating and discovering new events, bands, and hobbies. Users could share videos, photos, messages, and comments with other members via profiles and networks. [ 5 ] It is considered one of the original social networking services. [ 6 ]
+After the launching of Friendster as a social gaming platform in June 2011, the number of registered users reached over 115 million. The company operated mainly from four countries in Southeast Asia : the Philippines, Malaysia, Thailand, and Singapore, and over 90% of the site's traffic came from Asia. As of 2008, Friendster had more monthly unique visitors than any other social network in Asia. [ 7 ] [ 8 ] [ 9 ] Friendster remained notably popular in Indonesia through 2012. [ 10 ]
+The company suspended services in 2015, citing "the evolving landscape in our challenging industry" and lack of engagement by the online community , and ceased trading in 2018.
+History [ edit ]
+Friendster was founded by Canadian computer
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

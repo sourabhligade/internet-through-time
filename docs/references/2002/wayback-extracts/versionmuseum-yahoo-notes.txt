@@ -1,0 +1,91 @@
+SOURCE: https://www.versionmuseum.com/history-of/yahoo-website
+FINAL: https://www.versionmuseum.com/history-of/yahoo-website
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: versionmuseum-yahoo
+ROLE: portal frames
+TITLE: 32 Years of Yahoo.com Website Design History - 20 Images - Version Museum
+BYTES: 33434
+ERROR: 
+
+KEY FACTS / TEXT:
+32 Years of Yahoo.com Website Design History - 20 Images - Version Museum
+Home
+Categories
+Websites
+Operating Systems
+Applications
+Games
+Discontinued
+Blog
+Social
+Twitter
+Instagram
+YouTube
+About
+About Version Museum
+Contact Us
+Terms
+Privacy Policy
+A visual history of your favorite technology
+Design History of Yahoo.com
+Explore more history
+Website Gallery
+View all websites
+Operating Systems
+View all operating systems
+Applications
+Discontinued Product Gallery
+Games Gallery
+Yahoo! Homepage (1994)
+Yahoo! homepage on Stanford servers (1994) Source: flickr.com
+Yahoo! Homepage (1995)
+Yahoo! homepage (1995) Source: flickr.com
+Yahoo! homepage (1995) Source: techrepublic.com
+Yahoo! Homepage (1996)
+Yahoo! homepage (1996) Source: archive.fo
+Personalized Yahoo! (1997)
+Yahoo! homepage (1997) Source: web.archive.org
+Yahoo! Finance (1997)
+Yahoo! finance (1997) Source: web.archive.org
+Yahoo! Homepage (1998)
+Yahoo! homepage (1998) Source: archive.fo
+Y2K Yahoo! Homepage (2000)
+Yahoo! homepage (2000) Source: archive.fo
+Yahoo! Homepage With Personals (2001)
+Yahoo! homepage with personals (2001) Source: web.archive.org
+Yahooligans Site For Kids (2001)
+Yahooligans! (2001) Source: web.archive.org
+Yahoo! Finance and Yahoo! Search (2004)
+Yahoo! Finance (2004) Source: web.archive.org
+Yahoo! Search (2004) Source: web.archive.org
+Yahoo! Answers (2005)
+Yahoo! Answers (2005) Source: buildingreputation.com
+Yahoo! Homepage (2005)
+Yahoo! homepage (2005) Source: web.archive.org
+Yahoo! Homepage (2007)
+Yahoo! homepage (2007) Source: blogoscoped.com
+Yahoo! Homepage (2010)
+Yahoo! homepage (2010) Source: web.archive.org
+Yahoo! Finance (2012)
+Yahoo! Finance (2012) Source: web.archive.org
+Yahoo! Homepage (2013)
+Yahoo! homepage (2013) Source: web.archive.org
+Yahoo! Homepage (2015)
+Yahoo! homepage (2015) Source: mashable.com
+Yahoo! Homepage (2019)
+Yahoo! homepage (2019) Source: Yahoo.com
+Please help support our museum hosting costs by making a small donation -- buy us a coffee! Thank you so much!
+Buy us a coffee!
+Scroll up to the top .
+About
+Contact Us
+Terms of Service
+Instagram
+Twitter
+YouTube
+Facebook
+© Version Museum. All rights reserved.
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

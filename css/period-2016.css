@@ -1,0 +1,88 @@
+@import url("period-2015.css");
+
+.archive-residual[data-itt-capture-cite] {
+  margin: 14px auto;
+  max-width: 36em;
+  padding: 6px 8px;
+  border: 1px dashed #666688;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.ig16-shell {
+  max-width: 420px;
+  margin: 16px auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.ig16-rail {
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px solid #c2185b;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  min-height: 2.4em;
+}
+[data-pogo-team].is-on {
+  outline: 2px solid #ffeb3b;
+}
+.year-2016.os-win10 {
+  --itt-desktop-bg: #0078d7;
+}
+
+.itt-pop3x-flow {
+  max-width: 32em;
+  margin: 16px auto;
+  padding: 14px 16px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.itt-pop3x-flow .pop-kicker {
+  margin: 0 0 4px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #444;
+}
+.itt-pop3x-flow .pop-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0;
+}
+.itt-pop3x-flow .pop-rows button {
+  text-align: left;
+  padding: 8px 10px;
+  border: 1px solid #888;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.itt-pop3x-flow .pop-rows button.is-on,
+.itt-pop3x-flow .pop-rows button[aria-pressed="true"] {
+  outline: 2px solid #336699;
+  background: #e8f0ff;
+}
+.itt-pop3x-flow .pop-req {
+  display: block;
+  margin: 8px 0;
+}
+.itt-pop3x-flow .pop-note {
+  font-size: 11px;
+  color: #555;
+}
+.pop-netflix-2016 .pop-rows button,
+.pop-netflix-2016 .pop-tiles button {
+  background: #1a1a1a;
+  color: #e5e5e5;
+  border-color: #e50914;
+}
+.pop-netflix-2016 .pop-rows button.is-on,
+.pop-netflix-2016 .pop-rows button[aria-pressed="true"] {
+  outline-color: #e50914;
+  background: #2a0a0a;
+}

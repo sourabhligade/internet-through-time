@@ -1,5 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
 
 /** @type {{ year: string, page: string, storageKey: string }[]} */

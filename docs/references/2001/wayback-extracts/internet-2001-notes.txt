@@ -1,0 +1,22 @@
+SOURCE: https://cybercultural.com/p/internet-2001/
+STATUS: [visited] 2026-07-26 deep research pass
+ROLE: Primary year spine
+
+THESIS LINES:
+- Rays of hope amid bust: Wikipedia, Wayback, iTunes/iPod, blogging matures
+- Mood: optimism Jan → solemn EOY (bust + 9/11 + warblogs); IE6 monopoly
+- Web gains memory (wiki + archive) and legitimate digital music path
+
+SECTIONS → EXHIBIT:
+1. Wikipedia + Wayback (memory)
+2. IE6 + Microsoft power (Thurrott: few features; wins by ubiquity)
+3. iTunes + iPod (digital lifestyle; Napster court endgame)
+4. Blogging expands (warblogs + MT + Blogdex)
+5. Bust & looking ahead (Loudcloud, Exodus, Andreessen Oracle speech ignored)
+
+KEY NUMBERS / QUOTES:
+- Wiki: 1k articles first month; 20k+ EOY vs Nupedia <24 prior year
+- Sanger hands-off / trolling tolerance note (secondary)
+- IE6 Thurrott quotes (few features; standards list weaker than Mozilla but sites work)
+- iPod slogan 1,000 songs; Mac-only expensive
+- Mozilla 0.9.4 era still bloated

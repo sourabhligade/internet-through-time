@@ -1,6 +1,15 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 test.describe('1998 SOURCES rooms', () => {
   test('CDnow music-first store + Amazon Music link', async ({ page }) => {
     await page.goto('/years/1998/sites/cdnow/index.html');

@@ -1,5 +1,10 @@
 # Research MD ↔ tree audit — 2026-07-24
 
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). F1/F2 densify shipped. Residual = true WA/IE6 pixels · platform debt · git Track E. Canonical: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
+**Historical audit dated 2026-07-24.**
+
+
 **Method:** Every year `*-RESEARCH.md` / `*-MUSEUM-GRADE.md` / `*-DEEP-RESEARCH-*.md` / `references/*/CAPTURE-LOG.md` cross-checked against live `years/` + `assets/period/` + e2e + immersion registry.  
 **Companion:** [`LEFT-OUT.md`](LEFT-OUT.md) · [`INCOMPLETE-YEARS-RESEARCH.md`](INCOMPLETE-YEARS-RESEARCH.md)
 
@@ -7,7 +12,7 @@
 
 | Layer | Result |
 |-------|--------|
-| Research **P0 must-ship rooms** | **None missing** (1994–2005) |
+| Research **P0 must-ship rooms** | Historical (1994–2005); **disk playable 1994–2005** |
 | Optional / WDM / P2 rooms | **1998–2000 research-named rooms shipped**; optional pop densify + 2001+ remain |
 | Pixel / WA harvest | **Open** on multiple years |
 | Doc status text | **Refreshed** this pass (was stale on 2005 / inventory / link audit) |
@@ -62,7 +67,7 @@
 
 - `2005-RESEARCH.md` — no longer “not built / locked”
 - `PROJECT-INVENTORY.md` — 2004–2005 live; page counts refreshed
-- `MASTER-PROVENANCE.md` — scope 1994–2005
+- `MASTER-PROVENANCE.md` — scope 1994–2002 playable (2026-07-25)
 - `LEFT-OUT.md` / `INCOMPLETE-YEARS-RESEARCH.md` — live snapshot + residual table
 - `references/2003/ASSETS.md` — **added**
 - `LINK-AUDIT-REPORT.md` — 0 broken / 14211
@@ -71,4 +76,4 @@
 
 ## Do not re-open as unbuilt
 
-All hub years **1994–2005** playable; P0 research cast present; authenticity + smoke + link audit green after re-verify.
+All hub years **1994–2005** playable (claim **obsolete** 2026-07-25 — only 1994–2002 on disk); P0 research cast present; authenticity + smoke + link audit green after re-verify.

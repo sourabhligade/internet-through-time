@@ -1,0 +1,178 @@
+       <html> <script type="text/javascript"><!--
+
+  var start_time = (new Date()).getTime();
+//--> </script> <head> <title>Welcome to Gmail</title> <style type="text/css"><!--
+
+
+body,td,div,.p,a,font,span {font-family: arial,sans-serif;}
+body {margin-top:2}
+
+.tl {
+	background-image: url(/gmail/help/images/corner_tl_sharp.gif);
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+
+.tr {
+	background-image: url(/gmail/help/images/corner_tr_sharp.gif);
+	background-position:top right;
+	background-repeat:no-repeat;
+}
+
+.bl {
+	background-image: url(/gmail/help/images/corner_bl_sharp.gif);
+	background-position:bottom left;
+	background-repeat:no-repeat;
+}
+
+.br {
+	background-image: url(/gmail/help/images/corner_br_sharp.gif);
+	background-position:bottom right;
+	background-repeat:no-repeat;
+}
+
+.bubble {
+	background-color:#C3D9FF;
+}
+.caption { FONT-WEIGHT: bold; COLOR: #000; white-space:nowrap; background:#eeeeee;text-align:center; margin-bottom:5px}
+.form-noindent {BACKGROUND-COLOR: #ffffff; BORDER-RIGHT: #C3D9FF 1px solid; BORDER-TOP: #C3D9FF 1px solid; BORDER-LEFT: #C3D9FF 1px solid; BORDER-BOTTOM: #C3D9FF 1px solid}
+
+
+//--> </style> <script type="text/javascript"><!--
+
+
+
+
+
+
+if (top.location != self.location) {  // see note above
+  top.location = self.location.href;
+} else {
+  document.domain = "google.com";
+}
+
+function wh(w, h) {
+  if (document.getElementById){  
+    document.getElementById("login").style.height = h;
+    document.getElementById("login").style.width = w; 
+  }
+}
+
+
+// This is called when the user logs in to gmail.
+// We set a GMAIL_LOGIN cookie with the initial timings. 
+// The first letter "T" in the cookie value means that the login is not 
+// completed yet. The main JS will complete logging the timings and update 
+// the GMAIL_LOGIN cookie. See main.js
+function lg() {
+  if (login_box_time) {
+    var now = (new Date()).getTime();
+
+    var cookie = "T" + start_time + "/" + login_box_time + "/" + now;
+    document.cookie = "GMAIL_LOGIN=" + cookie;
+  }
+}
+
+// Returns whether Gmail supports this browser
+// Currently supports IE5+ and Moz1.4+
+function BrowserSupportedByGmail() {
+  var agt = navigator.userAgent.toLowerCase();
+
+  // check for IE5.5+
+
+  var is_ie = (agt.indexOf("msie") != -1);
+  var is_opera = (agt.indexOf("opera") != -1);
+  var is_mac = (agt.indexOf("mac") != -1);
+
+  // !is_opera: Opera can include the MSIE string when it masquerades as IE
+  // !is_mac: Omniweb includes MSIE string
+  if (is_ie && !is_opera && !is_mac) {
+
+    var version = GetFollowingFloat(agt, "msie ");
+    if (version != null) {
+      return (version >= 5.5);
+    }
+  }
+
+  // check for Moz1.4+
+
+  var is_gecko = (agt.indexOf("gecko") != -1);
+  var is_safari = (agt.indexOf("safari") != -1);
+
+  // !is_safari: Safari includes Gecko string
+  if (is_gecko && !is_safari) {
+
+    var version = GetFollowingFloat(agt, "rv:");
+    if (version != null) {
+      return (version >= 1.4);
+
+    } else {
+      // no rv: version; check for Galeon versions that did't include rv:
+      var i = agt.indexOf("galeon");
+      version = GetFollowingFloat(agt, "galeon/");
+
+      if (version != null) {
+        // Galeon 1.3+ can be used with Moz 1.3+
+        // to really check for Gecko 1.4+, should parse the date string
+        // following "Gecko/"
+        return (version >= 1.3);
+      }
+    }
+  }
+
+  // check for Safarai 1.2.1+
+  if (is_safari) {
+    var version = GetFollowingFloat(agt, "applewebkit/");
+    if (version != null) {
+      return (version >= 124);
+    }
+  }
+
+  return false;
+}
+
+// returns a float, so for a version only returns major.minor;
+// doesn't return smaller grain versions
+// if not found, return null
+function GetFollowingFloat(str, prefix) {
+  var i = str.indexOf(prefix);
+  if (i != -1) {
+    var version = parseFloat(str.substring(i + prefix.length));
+    if (!isNaN(version)) {
+      return version;
+    }
+  }
+  return null;
+}
+
+function ShowLogin() {
+  document.getElementById("browser").style.display = "none";
+  document.getElementById("login").style.display = "";
+  return false;
+}
+
+function HideLogin() {
+  document.getElementById("login").style.display = "none";
+  document.getElementById("browser").style.display = "";
+}
+
+function CheckBrowser() {
+  if (BrowserSupportedByGmail()) {
+    ShowLogin();
+  } else {
+    HideLogin();
+  }                          
+}
+
+var login_box_time;
+function IframeOnLoad() {
+  if (!login_box_time) {
+    login_box_time = (new Date()).getTime();
+  }
+}
+
+
+//--> </script> </head> <body onload="CheckBrowser()" vlink="#666666" bgcolor="#ffffff"> <table cellpadding="0" width="95%" align="center" cellspacing="0" border="0"> <tr valign="top"> <td width="1%"> <a href="/"><img src="/gmail/help/images/logo.gif" align="left" height="59" width="143" vspace="10" alt="Gmail" border="0"></a> </td> <td width="99%" valign="top" bgcolor="#ffffff"> <table cellpadding="1" width="100%"> <tr valign="bottom"> <td><div align="right">&nbsp;</div></td> </tr> <tr> <td nowrap> <table style="margin-bottom:5px;" width="100%" align="center" bgcolor="#C3D9FF" cellpadding="0" cellspacing="0"> <tr> <td width="4" class="bubble tl"></td> <td style="font-family:arial;text-align:left;font-weight:bold;padding:3px,0px;" rowspan="2" class="bubble"><b>Welcome to Gmail</b></td> <td width="4" class="bubble tr"></td> </tr> <tr> <td width="4" class="bubble bl"></td> <td width="4" class="bubble br"></td> </tr> </table> </td> </tr> </table> </td> </tr> </table> <br> <table cellpadding="5" width="94%" align="center" cellspacing="1"> <tr> <td valign="top"><b>A Google approach to email.</b></td> <td valign="top">&nbsp;</td> </tr> </table> <table cellpadding="5" width="94%" align="center" cellspacing="1"> <tr> <td width="75%" valign="top"> <p><font size="-1">Gmail is an experiment in a new kind of webmail, built on the idea that you should never have to delete mail and you should always be able to find the message you want. The key features are: </font></p> <ul> <li> <p><font size="-1"><b>Search, don't sort.</b><br> Use Google search to <b>find the exact message</b> you want, no matter when it was sent or received.</font></p> </li> </ul> <ul> <li> <p><font size="-1"><b>Don't throw anything away.</b><br> 1000 megabytes of free storage so you'll never need to delete another message.</font></p> </li> </ul> <ul> <li> <p><font size="-1"><b>Keep it all in context.<br> </b>Each message is grouped with all its replies and displayed as a conversation.</font></p> </li> </ul> <ul> <li> <p><font size="-1"><b>No pop-up ads. No untargeted banners.<br> </b>You see only <a href="http://gmail.google.com/gmail/help/about.html#ads">relevant text ads</a> and links to related web pages of interest.</font></p> </li> </ul> </td> <td valign="top"> <table cellpadding="5" bgcolor="#eeeeee" class="form-noindent" width="100%"> <tr bgcolor="#eeeeee"> <td style="text-align:center" nowrap valign="top"> <div class="caption"> <font size="-1">Gmail Sign In</font> </div> <noscript> Gmail requires Javascript and cookies to be enabled. </noscript> <div style="display:none;text-align:center" id="browser"> <font size="-1"> Gmail does not currently support your browser.<br> See <a href="/gmail/browser_requirements.html">browser requirements</a> for Gmail<br> or <a href="#" onclick="return ShowLogin()">sign in anyway</a>. </font> </div> <iframe src="https://www.google.com/accounts/ServiceLoginBox?service=mail&amp;continue=http%3A%2F%2Fgmail.google.com%2Fgmail" style="width:210px;height:99px" align="center" marginwidth="0" marginheight="0" scrolling="no" id="login" frameborder="0"> <font size="-1"> Gmail does not currently support your browser.<br> See <a href="/gmail/browser_requirements.html">browser requirements</a> for Gmail. </font> </iframe> <script type="text/javascript"><!--
+
+  document.getElementById("login").onload = IframeOnLoad;
+//--> </script> </td> </tr> </table> <br> <table cellpadding="0" bgcolor="#eeeeee" class="form-noindent" width="100%"> <tr bgcolor="#eeeeee"> <td valign="top"> <div align="center"> <p><font size="-1"><br> Learn more <a href="http://gmail.google.com/gmail/help/about.html">about Gmail</a>.<br> <br> A few words about <a href="http://gmail.google.com/gmail/help/more.html">privacy&nbsp;and&nbsp;Gmail</a>.<br> <br> </font></p> </div></td> </tr> </table></td> </tr> </table> <br> <table style="margin-bottom:5px;" width="95%" align="center" bgcolor="#C3D9FF" cellpadding="3" cellspacing="0"> <tr> <td width="4" class="bubble tl"></td> <td style="font-family:arial;text-align:left;" rowspan="2" class="bubble"> <div align="center"> <font color="#666666" size="-1">&copy;2004 Google - <a href="http://gmail.google.com/gmail/help/privacy.html">Privacy Policy</a> - <a href="http://gmail.google.com/gmail/help/program_policies.html">Program Policies</a> - <a href="http://gmail.google.com/gmail/help/terms_of_use.html">Terms of Use </a> </font> </div> </td> <td width="4" class="bubble tr"></td> </tr> <tr> <td width="4" class="bubble bl"></td> <td width="4" class="bubble br"></td> </tr> </table> </body> </html> 

@@ -1,0 +1,20 @@
+SOURCE: https://web.archive.org/web/20011014235719id_/http://pages.ebay.com/
+STATUS: [wa-visited] 2026-07-26 deep research pass (NEW; www.ebay.com robots blocked)
+TITLE: eBay - the world's online marketplace
+ROLE: P1 commerce continuity
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Tagline: world's online marketplace
+- Verticals: eBay Stores · eBay Motors · Live Auctions · Professional Services · Half.com · Auction for America
+- Category laundry: Antiques… Toys… Video Games… Everything Else
+- International country links (AU, AT, CA, FR, DE, IE, IT, JP, KR, NZ, CH, UK…)
+- Charity / GMA Flag / Monsters Inc tix flavor items in Oct 2001
+- Nav: My eBay · Browse · Sell · Services · Search · Help · Community · SafeHarbor · Feedback
+- © 1995-2001 eBay Inc.
+- Last updated: Oct-14-01
+
+BUILD:
+- Multicolor logo continuity from 1999
+- auction.js bid theater
+- Half.com mention OK as eBay property era

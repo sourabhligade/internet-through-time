@@ -1,0 +1,71 @@
+/* Flow map — year UX tree */
+.itt-fmap {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: "MS Sans Serif", Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #000;
+}
+.itt-fmap-head h1 { font-size: 18px; margin: 0 0 8px; }
+.itt-fmap-thesis { margin: 0 0 6px; font-size: 13px; }
+.itt-fmap-shell {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #333;
+  background: #ffffcc;
+  border: 1px solid #999;
+  padding: 6px 8px;
+}
+.itt-fmap-how {
+  margin: 0 0 16px;
+  border: 1px solid #666;
+  background: #f0f0f0;
+  padding: 8px 12px;
+}
+.itt-fmap-how h2,
+.itt-fmap-tree h2 { font-size: 14px; margin: 0 0 6px; }
+.itt-fmap-how ol { margin: 4px 0 0 20px; padding: 0; }
+.itt-fmap-legend { font-size: 11px; color: #444; margin: 0 0 10px; }
+.itt-fmap-branches { list-style: none; margin: 0; padding: 0; }
+.itt-fmap-branch {
+  margin: 0 0 14px;
+  border-left: 3px solid #0a246a;
+  padding-left: 10px;
+}
+.itt-fmap-branch-label { margin: 0 0 4px; font-size: 13px; }
+.itt-fmap-sites {
+  list-style: none;
+  margin: 0 0 0 8px;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+.itt-fmap-site { margin: 2px 0; padding: 2px 0; }
+.itt-fmap-twig { color: #666; user-select: none; }
+a.itt-fmap-name { color: #0000cc; text-decoration: underline; }
+.itt-fmap-do {
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+.itt-fmap-steps {
+  margin: 2px 0 6px 28px;
+  padding: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #222;
+}
+.itt-fmap-foot {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid #999;
+  font-size: 12px;
+}
+.itt-fmap-note { font-size: 11px; color: #666; margin: 8px 0 0; }
+.itt-fmap-missing {
+  color: #900;
+  padding: 12px;
+  border: 1px solid #c66;
+  background: #fee;
+}

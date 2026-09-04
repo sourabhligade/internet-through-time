@@ -1,40 +1,36 @@
-# 1998 Museum Grade — completion note (2026-07-23)
+# 1998 Museum Grade — status (2026-07-27)
 
-**Status: Museum-grade ship for year 1998** (playable, gated, asset-backed, authenticity-checked).
+**Status: Museum densify residual closed (TO-100 year #5)** — playable, gated, asset-tagged, buttons live.
 
-## What “museum grade” means here
+## Ship bar
 
 | Criterion | 1998 |
 |-----------|------|
-| Year shell + dial-up | Windows 98 banner, IE4 chrome, 1998 Start + throbber |
-| Period asset pack | `assets/period/1998/**` GIFs (Google, Yahoo, Amazon, eBay, Excite, CNN, Netscape, chrome) |
-| P0 story loop | Google (new) · Yahoo densify · Amazon Music · eBay IPO/My eBay · Excite personalize |
-| SRP immersion | `google.js` · `excite.js` · `yahoo.js` + shared amazon/auction |
-| urlMap integrity | All content HTML mapped (79 paths) |
-| Anachronism bans | No Amazon smile · no multicolor eBay · Google as newcomer |
-| Gates | Smoke green · authenticity static green · Playwright 1998 suite green |
-| Hub | 1998 unlocked · 1999–2000 locked |
+| Shell | Windows **98** + IE4 chrome · Start menu **live** |
+| Assets | Google/Yahoo **WA** · amazon/ebay/excite RECON honest · chrome RECON v2 |
+| P0 story | Google newcomer · Yahoo · Amazon Music · eBay IPO · Excite |
+| Bans | No Amazon smile · no multicolor eBay |
+| Gates | authenticity · smoke · e2e including buttons |
+| Plan | [`TO-100-PERCENT/YEAR-1998.md`](TO-100-PERCENT/YEAR-1998.md) |
 
-## Culture / depth extras
+## Residual optional
 
-- CNN Interactive retargeted to 1998 (antitrust, portals, You’ve Got Mail)
-- You’ve Got Mail promo room
-- BowieNet community/ISP room
-- Yahoo World Yahoos + Metros + My Yahoo!
-- eBay IPO news + correct My eBay links (not 1997 rebrand blurb)
+- True evolt IE4 OEM toolbar  
+- True WA Amazon/eBay logos if CDX yields usable GIFs  
 
-## How to verify
+### Residual densify (2026-07-29)
+
+Thin about/search/CD/CNN leaves densified · hard suite `e2e/1998-flows.spec.js` · see [`1998-1999-IMPLEMENTATION-PHASES.md`](1998-1999-IMPLEMENTATION-PHASES.md).  
+
+## Verify
 
 ```bash
-python3 scripts/smoke-production.py
 python3 scripts/test-authenticity.py
-npx playwright test e2e/1998-*.spec.js e2e/hub-years.spec.js e2e/pipeline-health.spec.js
+python3 scripts/smoke-production.py
+npx playwright test e2e/1998-*.spec.js
 ```
 
-## Honest residual (optional future polish)
+*Educational reconstruction only.*
 
-- Wayback HTML harvest for pixel-perfect Amazon/eBay tables (current is research-faithful reconstruction)
-- Dedicated Win98 wallpaper / more IE4 chrome crops from evolt
-- Even denser Yahoo category leaves
-
-These do not block calling the year **museum-grade** relative to 1995–1997 ship standards in this project.
+### Densify re-pass 2026-07-28
+TO-100 residual thin rooms closed (signature multipage depth). Logo WA residual remains honest RECON/failed where harvest returns HTML. See `docs/TO-100-PERCENT/YEAR-1998`.md`.

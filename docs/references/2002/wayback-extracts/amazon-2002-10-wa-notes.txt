@@ -1,0 +1,238 @@
+SOURCE: https://web.archive.org/web/20021015071523id_/http://www.amazon.com/exec/obidos/subst/home/home.html
+FINAL: https://web.archive.org/web/20021015071523id_/http://www.amazon.com/exec/obidos/subst/home/home.html
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-amazon
+ROLE: Amazon smile densify
+TITLE: Amazon.com--Earth's Biggest Selection
+BYTES: 41329
+ERROR: 
+
+KEY FACTS / TEXT:
+Amazon.com--Earth's Biggest Selection
+All Products
+Books
+Popular Music
+Music Downloads
+Classical Music
+DVD
+VHS
+Restaurants (Beta)
+Movie Showtimes
+Toys
+Baby
+Computers
+Video Games
+Electronics
+Camera & Photo
+Software
+Tools & Hardware
+Office Products
+Magazines
+Outdoor Living
+Kitchen
+Travel
+Cell Phones & Service
+Outlet
+Auctions
+zShops
+Sci. Supplies (Beta)
+Med. Supplies (Beta)
+Indust. Suppl. (Beta)
+Car Parts (Beta)
+Home Furnish. (Beta)
+Lifestyle (Beta)
+Pet Toys (Beta)
+Arts & Hobbies (Beta)
+Featured Stores
+•   Health & Beauty
+•   Office Products
+Books, Music, DVD
+•   Books
+•   DVD
+•   Magazine     Subscriptions
+•   Music
+•   Video
+Electronics & Office
+•   Electronics
+•   Camera & Photo
+•   Office Products
+•   Software
+•   Computer &     Video Games
+•   Computers
+•   Cell Phones     & Service
+Kids & Baby
+•   Toys & Games
+•   Baby
+•   Imaginarium
+Home & Garden
+•   Home & Garden
+•   Kitchen &     Housewares
+•   Tools &     Hardware
+•   Outdoor Living
+Gifts & Registries
+•   Baby Registry
+•   Free e-Cards
+•   Gift Certificates
+•   Gift Store
+•   Wedding Registry
+•   Wish List
+Amazon.com Services
+•   Movie Showtimes
+•   Cars
+•   Corporate Accounts
+•   Friends & Favorites
+•   Restaurants (Beta)
+•   Travel
+Bargains
+•   Auctions
+•   Outlet
+•   Used
+•   zShops
+Featured Partners
+Special Features
+Alerts
+Amazon.com Mobile Access
+Amazon.com Web Services
+Amazon Credit Account
+Free e-Cards
+Friends & Favorites
+Gift Certificates
+Honor System
+Purchase Circles
+Wedding Registry
+Associates
+Sell books, music, videos, and more from your Web site. Start earning today !
+Hello.
+Sign in to get personalized recommendations . New customer? Start here .
+Top Sellers in Toys & Games
+Trivial Pursuit 20th Anniversary
+Product Description
+Celebrate all things trivial from the past 20 years with this anniversary edition of Trivial Pursuit. Contains 3,600 all-new questions spanning 1982-2002. Question categories include: Global View, The Written Word, Sound & Screen, Innovations, News and Game Time. Includes game board, special anniversary card dispenser, question and answer cards, 1...
+Read more
+More Top Sellers:
+Linksys Wireless 4-Port Cable/DSL Router
+by Linksys
+Star Wars - Episode II, Attack of the Clones (Widescreen)
+DVD ~ Ewan McGregor
+I Don't Know How She Does It
+by Allison Pearson
+Forty Licks
+~ Rolling Stones
+Your Books Store
+The Piano Tuner
+Daniel Mason's debut novel, The Piano Tuner , is the mesmerizing story of Edgar Drake, commissioned by the British War Office in 1886 to travel to hostile Burma to repair a rare Erard grand piano vital to the Crown's strategic interests. Eccentric Surgeon-Major Anthony Carroll has brokered peace with local warlords primarily through music, a free...
+Read more
+Your Music Store :
+Live in Paris
+~ Diana Krall
+Your DVD Store :
+Spider-Man (Widescreen Edition)
+DVD ~ Tobey Maguire
+Your Toys & Games Store :
+Trivial Pursuit 20th Anniversary
+by Hasbro
+Your Electronics Store :
+Audiovox Personal CD Player - Blue
+by Target
+Already a customer?
+Sign in to see what's New for You .
+New customer?
+New Releases
+It's a Wonderful Life
+VHS ~ James Stewart
+More Categories
+Classics
+Grownups
+Jazz
+Computer Add-Ons
+PlayStation2
+More New Releases
+Movers & Shakers
+1,592%
+The Hydrogen Economy
+by Jeremy Rifkin
+More Movers & Shakers
+Where's My Stuff?
+• Track your recent orders .
+• View or change your orders in Your Account .
+Shipping & Returns
+• See our shipping rates & policies .
+• Return an item (here's our Returns Policy ).
+Need Help?
+• Forgot your password? Click here .
+• Redeem or buy a gift certificate.
+• Visit our Help department .
+Search
+All Products
+Books
+Popular Music
+Music Downloads
+Classical Music
+DVD
+VHS
+Restaurants (Beta)
+Movie Showtimes
+Toys
+Baby
+Computers
+Video Games
+Electronics
+Camera & Photo
+Software
+Tools & Hardware
+Office Products
+Magazines
+Outdoor Living
+Kitchen
+Travel
+Cell Phones & Service
+Outlet
+Auctions
+zShops
+Sci. Supplies (Beta)
+Med. Supplies (Beta)
+Indust. Suppl. (Beta)
+Car Parts (Beta)
+Home Furnish. (Beta)
+Lifestyle (Beta)
+Pet Toys (Beta)
+Arts & Hobbies (Beta)
+for
+Turn your past purchases into $$$
+Learn more about selling at Amazon.com today!
+Text Only
+Top of Page
+Directory of All Stores
+Our International Sites:
+Canada
+|
+United Kingdom
+|
+Germany
+|
+Japan
+|
+France
+Help   |
+Shopping Cart   |
+Your Account   |
+Sell Items   |
+1-Click Settings
+About Amazon.com   |
+Join Our Staff   |
+Join Associates   |
+Join Advantage   |
+Join Honor System
+Conditions of Use | Updated Privacy Notice © 1996-2002, Amazon.com, Inc. or its affiliates
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.
+
+## 2026-07-26 re-visit (id_ 20021015071523)
+Title: Amazon.com--Earth's Biggest Selection
+Multi-store: Books/Music/DVD · Electronics · Toys · Home & Garden · Gift/Wedding
+Hello. personalized recommendations
+Top Sellers era: Trivial Pursuit 20th · Linksys Wireless Cable/DSL Router · Star Wars Ep II DVD · Spider-Man DVD
+©1996-2002 Amazon.com · International CA/UK/DE/JP/FR
+Smile era continuity required

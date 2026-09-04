@@ -1,0 +1,49 @@
+2011-2020 VISIT-LOG 2026-08-31
+Visited = page opened and read. Search snippets labeled. Corpus files are bibliography.
+
+OPENED THIS PASS
+1  https://www.internetlivestats.com/total-number-of-websites/
+   June 2011-2018 websites. Users through 2015. Users blank 2016-2018. Table ends 2018.
+   2012 697,089,489 / 2,518,453,530 / 3.6
+   2013 672,985,183 / 2,756,198,420 / 4.1
+   2014 968,882,453 / 2,925,249,355 / 3.0 · 1B Sep 2014
+   2015 863,105,652 / 3,185,996,155* / 3.7
+   2016 1,045,534,808 / blank users
+   2017 1,766,926,408 / blank users
+   2018 1,630,322,579 / blank users · last June cell
+   2011 346,004,403 / 2,282,955,130 / 6.6 · boarded
+   Aug 2012 Netcraft ~40M wildcard drop. ~75% parked honesty.
+
+2  https://www.apple.com/newsroom/2017/09/the-future-is-here-iphone-x/
+   Face ID · 12 Sep 2017 · $999 · pre-order 27 Oct · stores 3 Nov
+   TrueDepth · swipe up · Super Retina · AirPower "coming 2018" never shipped.
+
+3  https://about.instagram.com/blog/announcements/instagram-for-android
+   404 this pass. Do not invent Android announce paragraph from a dead URL.
+   Keep 2012 harvest dual-cite (NYT/Reuters/BBC $1B + 3 Apr Android).
+
+LOCAL MD OPENED
+2012-READ-FIRST · 2012-DEEP-RESEARCH-WEB-HARVEST
+2013-READ-FIRST
+2014-READ-FIRST · 2014-FROM-SCRATCH-RESEARCH
+2015-READ-FIRST · 2015-RESEARCH · 2015-DEEP-RESEARCH
+2016-READ-FIRST · 2016-RESEARCH · 2016-DEEP-RESEARCH
+2017-READ-FIRST · 2017-RESEARCH · 2017-DEEP-RESEARCH
+2018-READ-FIRST · 2018-RESEARCH
+2019-READ-FIRST · 2019-RESEARCH
+2011-READ-FIRST · 2020-READ-FIRST (boarded honesty)
+DISK-TRUTH · OPERATING-PROCESS §8
+2005-EVERY-FLOW · 2005-FROM-SCRATCH · 2001-FROM-SCRATCH (shape bar)
+years/2012-2019 dest HTML + home leftover 9+9+9
+leftover-official.matrix.json 2012-2019 rows
+flow-trails.js 2012-2019 official 10
+
+SEARCH-SUPPORTED (snippet, not pixel)
+WhatsApp 19 Feb / 6 Oct $19B · Heartbleed 7 Apr CVE-2014-0160
+Vine 24 Jan 2013 · Snap Stories 3 Oct 2013 · iOS 7 18 Sep
+Periscope 26 Mar 2015 · Photos 28 May · Win10 29 Jul · Music 30 Jun
+IG Stories 2 Aug 2016 · PoGO 6 Jul · Reactions 24 Feb · WA E2E 5 Apr
+Twitter 280 7 Nov 2017 · CJK stay 140 · Teams 14 Mar · WannaCry 12 May
+GDPR 25 May 2018 · CA 17 Mar · hearing 10 Apr · musical.ly→TikTok 2 Aug
+Disney+ 12 Nov 2019 · Arcade 19 Sep · TV+ 1 Nov · Stadia 19 Nov
+ITU 2019 4.1B / 53.6%

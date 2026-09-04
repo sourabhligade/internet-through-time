@@ -1,15 +1,19 @@
 # 2000 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · **deep visit pass 2026-07-23** · ready for implementation planning  
-**Deep research (sources + captures):** [`docs/2000-DEEP-RESEARCH-2026-07-23.md`](2000-DEEP-RESEARCH-2026-07-23.md)  
-**Artifacts inventory (build kit):** [`docs/references/2000/ARTIFACTS.md`](references/2000/ARTIFACTS.md)  
-**Capture queue:** [`docs/references/2000/CAPTURE-LOG.md`](references/2000/CAPTURE-LOG.md)  
-**Assets provenance (empty pack):** [`docs/references/2000/ASSETS.md`](references/2000/ASSETS.md)  
-**Prior year:** 1999 (Win98 SE · IE5 · Napster · Blogger · Google funded · Y2K · multicolor eBay · Amazon multi-cat)  
-**Target immersion:** Calendar year **2000** — post-Y2K relief · **dot-com peak & crash** · Amazon **smile** · Napster monster year · Flash everywhere · blogrolls · slow broadband rise  
-**Sources method:** Same stack as `docs/SOURCES.md` — Cybercultural · Web Design Museum · Version Museum · Wayback (excellent) · company histories · press
+**Status:** **MVP shipped 2026-07-27** · hub **unlocked** · research + implement · **pair audit 2026-07-29**  
+**★ Consolidated index (2000–2002 deep pack):** [`2000-2002-RESEARCH-INDEX.md`](2000-2002-RESEARCH-INDEX.md)  
+**Deep research:** [`2000-DEEP-RESEARCH-2026-07-23.md`](2000-DEEP-RESEARCH-2026-07-23.md)  
+**Implementation phases (Goal · Source artifacts · Steps):** [`2000-2001-IMPLEMENTATION-PHASES.md`](2000-2001-IMPLEMENTATION-PHASES.md)  
+**Pair audit + residual (2000–2001):** [`2000-2001-DEEP-RESEARCH-AUDIT-2026-07-29.md`](2000-2001-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
+**Web surf (rebuild):** [`2000-WEB-SURF-RESEARCH-2026-07-27.md`](2000-WEB-SURF-RESEARCH-2026-07-27.md)  
+**Museum audit:** [`2000-MUSEUM-GRADE-RESEARCH-2026-07-27.md`](2000-MUSEUM-GRADE-RESEARCH-2026-07-27.md)  
+**Build steps:** [`2000-MUSEUM-PHASES-STEP-BY-STEP.md`](2000-MUSEUM-PHASES-STEP-BY-STEP.md) · [`2000-IMPLEMENTATION-PHASES.md`](2000-IMPLEMENTATION-PHASES.md)  
+**Ship card:** [`2000-MUSEUM-GRADE.md`](2000-MUSEUM-GRADE.md)  
+**Artifacts / capture / assets:** [`references/2000/ARTIFACTS.md`](references/2000/ARTIFACTS.md) · [`CAPTURE-LOG.md`](references/2000/CAPTURE-LOG.md) · [`ASSETS.md`](references/2000/ASSETS.md)  
+**Prior year:** **1999** shipped (scaffold source)  
+**Target immersion:** Calendar year **2000** — post-Y2K · **dot-com peak & crash** · Amazon **smile** · Napster monster · Flash · blogrolls  
 
-**Hub state today:** 2000 card **locked / Planned** (`index.html`).
+**Hub state (2026-07-27):** 2000 card **unlocked** (“Available”). `years/2000/` live (MVP + P0 densify).
 
 ---
 

@@ -23,6 +23,8 @@
 │  → each page loads js/immersion-YYYY.js (stub only)     │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
+│  Shared YEAR UI (one folder)                            │
+│  ui/year/shell.js · start.js · years.js · start-data.js │
 │  Shared ENGINE (SRP modules — no year forks)            │
 │  js/browser/* · js/immersion/* · js/lib/util.js         │
 └─────────────────────────────────────────────────────────┘
@@ -172,7 +174,7 @@ Avoid full-file copies of period CSS when only a few rules change.
 - [x] One immersion boot loader (`immersion/boot.js`)  
 - [x] Thin year stubs only  
 - [x] Thin browser year stubs + `bootBrowserYear`  
-- [ ] `browser/create.js` split into navigate + chrome-ui (SRP plan Phase 3)  
+- [x] `browser/chrome-ui.js` extracted (dialogs / menus / prefs / bookmarks / find) · create.js still owns navigate + connect  
 - [ ] Period CSS composition (`@import` deltas) for 1998+  
 - [ ] Optional codegen script: `scripts/new-year.py 1999` scaffolding stubs + empty dirs  
 

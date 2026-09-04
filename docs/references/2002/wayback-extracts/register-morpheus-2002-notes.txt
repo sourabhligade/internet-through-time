@@ -1,0 +1,138 @@
+SOURCE: https://www.theregister.com/2002/03/15/old_morpheus_still_works/
+FINAL: https://www.theregister.com/software/2002/03/15/old-morpheus-still-works-for-unhacked-users/756991
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: register-morpheus
+ROLE: KaZaA/Morpheus chaos
+TITLE: Old Morpheus still works for unhacked users
+BYTES: 158164
+ERROR: 
+
+KEY FACTS / TEXT:
+Old Morpheus still works for unhacked users
+Jump to main content
+Search
+TOPICS
+Security
+All Security
+Cyber-crime
+Patches
+Research
+CSO
+Off-Prem
+All Off-Prem
+Edge and IoT
+Channel
+PaaS and IaaS
+SaaS
+On-Prem
+All On-Prem
+Systems
+Storage
+Networks
+HPC
+Personal Tech
+Cx0
+Public Sector
+Software
+All Software
+AI and ML
+Applications
+Databases
+DevOps
+OS Platforms
+Virtualization
+Offbeat
+All Offbeat
+Columnists
+Science
+BOFH
+Legal
+Site News
+About Us
+Special Features
+All Special Features
+HPE: AI Explainers
+RSA Conference
+Agentic AI
+The Future of the Datacenter
+AWS:Reinvent
+Nvidia GTC
+Supercomputing Month
+Computex 2026
+AI Infrastructure Month 2026
+Vendor Voice
+All Vendor Voice
+Modernizing Financial Services with FIS and AWS
+Barco
+Infinidat
+Everpure
+Rubrik
+Make it real with Capgemini and AWS
+Money Movement Hub
+ZTE
+Nutanix: Scale Kubernetes. Not Chaos.
+AWS New Horizon
+Resources
+Intelligence
+Webinars & Events
+Newsletters
+Search
+Sign in
+AI
+Security
+Microsoft
+AWS
+Developer
+Open Source
+Columnists
+BOFH
+Who, Me?
+On Call
+REG AD
+Software
+Old Morpheus still works for unhacked users
+P2P networks hack given a fresh twist
+John Leyden
+John
+Leyden
+Published
+fri 15 Mar 2002 // 13:41 UTC
+UPDATED Older versions of the Morpheus file sharing utility still work, Register readers have discovered to their surprise.
+Earlier this month Music City Morpheus ditched support for the P2P stack supplied by developer FastTrack and embraced the open source Gnutella protocol, with the launch of Morpheus Preview Edition.
+The move was accompanied by accusations from Morpheus that its servers had been subject to a denial of service attack, and that messages which changed its users' registry setting had made the service unavailable.
+REG AD
+Music City pointed the finger of blame towards KaZaA.com (recently acquired by Sharman Network Services), which like MusicCity's Morpheus and Grokster has licensed the FastTrack P2P stack. MusicCity described FastTrack-KaZaA software as a security risk (or a vector for spyware).
+REG AD
+Not so, says FastTrack-KaZaA.
+KaZaA founder Niklas Zennstrom told CNet that StreamCast Networks, the firm behind Music City Morpheus, had failed to pay its bills, so the license for its P2P stack was terminated.
+Sharman Network Services and KaZaA deny any involvement in the hacking attacks, and Sharman has issued a statement saying KaZaA.com was also subjected to malicious DoS attacks.
+On February 28, the KaZaA.com Web site was "bombarded by hundreds of thousands of http requests", which prevented users from accessing the site or downloading KaZaA Media Desktop 1.5 for five hours, it said.
+Whoever did it is hard to say, but we've recently received evidence that someone with in-depth knowledge of KaZaA has been playing silly buggers.
+Shenanigans
+Register reader Haavard Pettersen's recent experiences suggest someone had indeed tampered with people's computers to prevent them from using Morpheus.
+When Pettersen tried to use an older version of Morpheus (on a Windows 98 partition), that hasn't been used since before Morpheus went down, he discovered to his surprise that it still worked.
+REG AD
+In XP, he couldn't get either old Morpheus or Preview Edition to work, incidentally.
+Russ Spooner, a security consultants at Interrorem and former Morpheus user, confirms Pettersen's experience.
+"Clearly the FastTrack client part of the software (used in KaZaA, Grokster and Morpheus) has a backdoor in it that allows the knowledgeable few to fire special packets at clients logged into the FastTrack network which will enable them to modify registry settings," Spooner told us.
+"It would appear that for a period of time they had effectively a login script sitting on the authentication servers that basically said 'if (client==morpheus ){ modify registry}'," he added.
+The offending login script has now been removed, he notes, so now the original clients work fine, "just so long as they were not exposed to the evil pathogen".
+Sharman Network Services (which contrary to what we earlier reported only licenses the FastTrack stack) referred our queries on this to KaZaA founder Niklas Zennstrom. We'll fill you on what he says when he gets back to us.
+Both Morpheus and KaZaA are embroiled in copyright violation lawsuits brought against them by the music industry. Yesterday StreamCast Networks announced plans to use digital rights management technology called CintoA to protect the copyright of independent artists, while allowing its users to continue sharing free files.
+Whether this will appease its critics, such as the Recording Industry Ass. of America and the Motion Picture Ass. of America, seems doubtful. ®
+REG AD
+Related stories
+Morpheus fesses up to user lockout security breach
+Morpheus goes to sleep - users locked out
+Morpheus application is 'safe'
+KaZaA.com 'evaluates' Dutch court ban
+Ala-KaZaA-m!
+KaZaA ordered to cease infringing copyright
+Napster to ask court to reaffirm Appeal Court ruling
+Get your filthy hands off my CDs
+RIAA targets post-Napster MP3 sharers
+Popula
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

@@ -14,8 +14,10 @@
       var escapeHtml = api.escapeHtml;
       var qs = api.qs;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var R = api.R;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
 
       function catalog() {
         return config.googleCatalog || [];
@@ -57,7 +59,33 @@
       }
 
       function goLucky(q) {
-        var show = rank(q || "yahoo");
+        q = String(q || "").replace(/^\s+|\s+$/g, "");
+        if (!q) {
+          actionFeedback("Type a query first (Lucky does not guess).", { error: true, flash: true });
+          return;
+        }
+        try {
+          var pfx = (config && config.storagePrefix) || "itt98";
+          var lk = ITT.util && ITT.util.immersionStorageKey
+            ? ITT.util.immersionStorageKey("lucky", pfx)
+            : pfx + "-lucky";
+          var destShow = rank(q);
+          var destHref = destShow.length ? entryHref(destShow[0].e) : searchHref(q);
+          localStorage.setItem(lk, JSON.stringify({
+            q: q,
+            dest: destHref,
+            multiStep: true,
+            real: true,
+            year: String((config && config.year) || "1998"),
+            ts: Date.now()
+          }));
+          try {
+            if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+          } catch (eN) {
+            /* */
+          }
+        } catch (eLk) { /* */ }
+        var show = rank(q);
         if (show.length) {
           location.href = entryHref(show[0].e);
         } else {
@@ -81,10 +109,30 @@
               );
               if (isLucky) {
                 goLucky(q);
-                markTourProgress();
+                markTourUsed();
                 return;
               }
-              location.href = searchHref(q);
+              var qTrim = String(q || "").replace(/^\s+|\s+$/g, "");
+              if (!qTrim) {
+                actionFeedback("Type a query first. Empty never writes.", { error: true, flash: true });
+                return;
+              }
+              try {
+                var year = String((config && config.year) || "1998");
+                var pfx = (config && config.storagePrefix) || ("itt" + year.slice(2));
+                var gk = ITT.util && ITT.util.immersionStorageKey
+                  ? ITT.util.immersionStorageKey("google", pfx)
+                  : pfx + "-google";
+                localStorage.setItem(gk, JSON.stringify({
+                  q: qTrim.slice(0, 80),
+                  multiStep: true,
+                  real: true,
+                  year: year,
+                  ts: Date.now()
+                }));
+                try { if (ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN0) { /* */ }
+              } catch (eG) { /* */ }
+              location.href = searchHref(qTrim);
             });
             // explicit lucky button click (older browsers)
             var luckyBtns = f.querySelectorAll("[data-google-lucky], input[name='btnI']");
@@ -93,10 +141,18 @@
                 ev.preventDefault();
                 var input = f.querySelector('input[name="q"]') || f.querySelector('input[type="text"]');
                 goLucky(input ? input.value : "");
-                markTourProgress();
+                markTourUsed();
               });
             }
           })(forms[i]);
+        }
+        var luckyTrap = document.querySelector("[data-lucky-trap]");
+        if (luckyTrap && luckyTrap.getAttribute("data-lucky-trap-bound") !== "1") {
+          luckyTrap.setAttribute("data-lucky-trap-bound", "1");
+          luckyTrap.addEventListener("click", function (ev) {
+            ev.preventDefault();
+            actionFeedback("Yahoo-as-home / portal pack never writes Lucky.", { error: true, flash: true });
+          });
         }
         // autofocus first search box
         var first = document.querySelector('form[data-google-search] input[name="q"]');
@@ -153,7 +209,7 @@
           }
         }
         host.innerHTML = html;
-        markTourProgress();
+        markTourUsed();
       }
 
       initForms();

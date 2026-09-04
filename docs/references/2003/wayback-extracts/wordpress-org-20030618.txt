@@ -1,0 +1,15 @@
+WordPress.org Home — Wayback 20030618021947 id_
+Source: http://wordpress.org/
+Visited: 2026-07-27
+
+WordPress is a semantic personal publishing platform with a focus on
+aesthetics, web standards, and usability.
+
+For information about the WordPress project—its philosophy, current features,
+developers, and future direction—see the About section. For updates on
+development and announcements, see the WordBlog. If you'd like help with
+WordPress or have questions, the support forums are the place for you.
+If you just want to skip all the formalities and get the product, download away.
+
+WordPress has also been named the new official branch of b2 (cafelog.com).
+We're looking forward to being a part of the community.

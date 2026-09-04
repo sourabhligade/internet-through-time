@@ -1,0 +1,107 @@
+SOURCE: https://web.archive.org/web/20020701050155id_/http://www.movabletype.org/docs/mtmanual_trackback.html
+FINAL: https://web.archive.org/web/20020701050155id_/http://www.movabletype.org/docs/mtmanual_trackback.html
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-mt-trackback
+ROLE: TrackBack manual
+TITLE: TRACKBACK
+BYTES: 17680
+ERROR: 
+
+KEY FACTS / TEXT:
+TRACKBACK
+Movable Type User Manual: TRACKBACK
+« Table of Contents
+TRACKBACK
+Setting up TrackBack
+Using TrackBack
+TrackBack Ping Format
+Reference Documentation
+TRACKBACK
+Movable Type's TrackBack system allows peer-to-peer communication and
+conversations
+between blogs. Imagine that you write about a movie you just saw in an
+entry on your Movable Type-powered blog. Another MT blogger reads your
+entry, and wants to write an entry referencing your original post. He could
+just comment on your blog, but he'd like to keep the post in his own
+database and host it on his site.
+Using TrackBack, the other blogger can automatically send a ping to your
+blog, indicating that he has written an entry referencing your original
+post. This accomplishes two things:
+On your site, you can automatically list all sites that have referenced a
+particular post, allowing visitors to your site to read the response on the
+other user's blog.
+It provides a firm, explicit link between his entry and yours, as opposed
+to an implicit link (like a referrer log) that depends upon outside action
+(someone clicking on the link to your entry).
+You can use TrackBack for more than just communication on particular entries,
+however. You can also associate TrackBack pings URLs with categories in your
+blog. Whenever you post an entry to that category, the URLs you have
+associated will automatically be notified of your post. This allows remote
+sites to keep a repository of references to posts all around the web.
+For example, if you run a site about Perl, you might want to provide a
+repository of links to Perl articles on other weblogs. Using TrackBack, you
+can allow other weblogs to ping a particular category in your own blog,
+whenever a new entry is posted that pertains to this category.
+These are just examples of TrackBack usage. TrackBack itself is a framework
+for peer-to-peer communication between weblogs; it can track cross-weblog
+discussions, it can provide remote content repositories, it can emulate
+guest authoring, etc. The technical side of TrackBack is very simple: when
+you want to notify a remote site of your existence, you send a ping to that
+site. The format of these pings (simple HTTP GET requests) is discussed
+below . In the Movable Type implementation of
+TrackBack, we've added password protection to category pings, IP banning,
+automatic RSS output, and email notification of new pings.
+In other words: we want TrackBack to benefit, and to be useful to, more than
+just Movable Type users. We want to encourage integration of this feature
+into other weblog tools; that's why we have documented the ping format below
+and have tried to make the basic framework very simple. Feel free to
+email us ( trackback@movabletype.org ) if you have questions.
+Setting up TrackBack
+If you are a new Movable Type user, the TrackBack tags are included in the
+default templates, so you are ready to use it as soon as you install Movable
+Type. You can skip down to Step 5.
+If you are an existing MT user, you'll first need to set up your templates
+to handle TrackBack pings. Start at Step 1.
+Create a TrackBack Listing template.
+In List Templates , edit the TrackBack Listing template and initialize
+it with the template body from the default templates. You can find that here:
+http://www.movabletype.org/default_templates.shtml#trackback
+Update your stylesheet.
+An entry's TrackBack pings are displayed in a popup window similar to that
+used for listing an entry's comments. The default template that you added
+in Step 1 uses some CSS styles new to version 2.2. If you are using one of
+the default styles provided with Movable Type, copy and paste in the updated
+version from the styles here:
+http://www.movabletype.org/default_styles.shtml
+If you have a custom stylesheet, you can either customize the TrackBack
+Listing Template to match your site's styles, or add new CSS styles to
+your stylesheet for the classes .trackback-url , .trackback-body , and
+.trackback-post .
+Add TrackBack code to your Main Index Template.
+Add the following code in the <script> section of your Main Index
+Template:
+function OpenTrackback (c) {
+window.open(c,
+'trackback',
+'width=480,height=480,scrollbars=yes,status=yes');
+}
+Now, inside of your <MTEntries> tag, add the following code to
+display a link to the TrackBack listings for each entry:
+<MTEntryIfAllowPings>
+| <a href="<$MTCGIPath$>mt-tb.cgi?__mode=view&entry_id=<$MTEntryID$>" onclick="OpenTrackback(this.href); return false">TrackBack
+(<$MTEntryTrackbackCount$>)</a>
+</MTEntryIfAllowPings>
+Add TrackBack ping data to index and archive templates.
+In your Main Index Template and in your category and date-based archive
+templates, add the following tag directly after the main
+<MTEntries> tag:
+<$MTEntryTrackbackData$>
+Then, in your Individual Entry Archive Template, add this same tag anywhere
+in the template:
+<$MTEntryTrackbackData$>
+When you rebuild, this will add the necessary information to your public
+files to allow Movable Type's bookmarklet to parse out entri
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

@@ -1,0 +1,344 @@
+/**
+ * XP-era museum UI kit (2001–2008 Starting Points + product affordances)
+ * Import from period-2001 / period-2002 so the year chain inherits it.
+ * Period-honest: Tahoma/Arial, Luna blue, silver chrome, table layouts.
+ */
+
+/* —— Starting Point window (use class="itt-start" on outer table) —— */
+body.itt-start-page,
+body[data-itt-start] {
+  margin: 0;
+  background: #3a6ea5 !important;
+  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif;
+}
+.itt-start {
+  width: 760px;
+  max-width: 96%;
+  margin: 12px auto 28px;
+  border: 2px solid #0a246a;
+  background: #d4d0c8;
+  border-collapse: collapse;
+  box-shadow: 2px 2px 0 #1a3a6a;
+}
+.itt-start-title {
+  background: #0a246a;
+  color: #fff;
+  padding: 8px 12px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.itt-start-title b {
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+.itt-start-title .itt-start-meta {
+  color: #99bbee;
+  font-size: 11px;
+  margin-left: 6px;
+}
+.itt-start-thesis {
+  background: #fff8dc;
+  border-bottom: 1px solid #c9c0a0;
+  padding: 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #111;
+}
+.itt-start-body {
+  background: #fff;
+  padding: 12px 14px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000;
+  line-height: 1.45;
+}
+.itt-start-body a { color: #000080; }
+.itt-start-body a:visited { color: #551a8b; }
+
+/* Flow map CTA */
+.itt-flow-map-link {
+  margin: 10px 0 12px !important;
+  padding: 8px 10px !important;
+  font-size: 12px !important;
+  background: #eef3ff;
+  border: 1px solid #0a246a;
+  border-left: 4px solid #0a246a;
+}
+.itt-flow-map-link a {
+  color: #0a246a !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+.itt-flow-map-link a:hover {
+  text-decoration: underline;
+}
+
+/* Product chips — robust buttons (no inline styles required) */
+.itt-product-chips {
+  margin: 12px 0 14px !important;
+  padding: 10px 10px 6px;
+  background: #f5f5f0;
+  border: 1px solid #b0b0a0;
+}
+.itt-product-chips > b,
+.itt-product-chips .itt-chips-label {
+  display: block;
+  color: #0a246a;
+  font-size: 12px;
+  margin: 0 0 8px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.itt-product-chips a {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 88px;
+  max-width: 140px;
+  margin: 0 6px 8px 0 !important;
+  padding: 8px 10px !important;
+  border: 1px solid #808080 !important;
+  background: #fff !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+  color: #000080 !important;
+  line-height: 1.25;
+  box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #808080 inset;
+}
+.itt-product-chips a:hover {
+  background: #e8f0ff !important;
+  border-color: #0a246a !important;
+  color: #0a246a !important;
+}
+.itt-product-chips a b {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.itt-product-chips a span {
+  display: block;
+  color: #555 !important;
+  font-size: 10px;
+  font-weight: normal;
+}
+/* Year accent chips (optional class on <a>) */
+.itt-product-chips a.chip-wiki { border-color: #666 !important; background: #fafafa !important; }
+.itt-product-chips a.chip-orange { border-color: #ff6600 !important; background: #fff5eb !important; color: #c40 !important; }
+.itt-product-chips a.chip-blue { border-color: #3b5998 !important; background: #eef2ff !important; color: #3b5998 !important; }
+.itt-product-chips a.chip-red { border-color: #c00 !important; background: #ffebee !important; color: #b71c1c !important; }
+.itt-product-chips a.chip-green { border-color: #2e7d32 !important; background: #e8f5e9 !important; color: #1b5e20 !important; }
+.itt-product-chips a.chip-pink { border-color: #ff0084 !important; background: #fce4ec !important; color: #ad1457 !important; }
+.itt-product-chips a.chip-sky { border-color: #33ccff !important; background: #e0f7fa !important; color: #006680 !important; }
+.itt-product-chips a.chip-chrome { border-color: #4d90fe !important; background: #e8f0fe !important; color: #174ea6 !important; }
+
+/* Trails */
+.itt-trails {
+  margin: 10px 0 14px;
+}
+.itt-trails > b,
+.itt-trails-title {
+  display: block;
+  color: #0a246a;
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+.itt-trail {
+  font-size: 12px;
+  margin: 0 0 8px;
+  padding: 6px 8px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-left: 3px solid #0a246a;
+  line-height: 1.4;
+}
+.itt-trail b {
+  color: #0a246a;
+}
+
+/* Two-column directory */
+.itt-dir-cols {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.itt-dir-cols td {
+  vertical-align: top;
+  font-size: 12px;
+  padding: 4px 8px 4px 0;
+}
+.itt-dir-cols td + td {
+  border-left: 1px solid #ccc;
+  padding-left: 12px;
+}
+.itt-dir-cols ul {
+  margin: 4px 0 12px 16px;
+  padding: 0;
+}
+.itt-dir-cols li { margin: 2px 0; }
+
+/* Bans / honesty */
+.itt-bans {
+  margin-top: 10px;
+  padding: 8px;
+  background: #ffeeee;
+  border: 1px solid #c66;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.itt-bans b { color: #900; }
+
+/* Quick button bar (2002-style) — XP buttons */
+.itt-quick-btns {
+  width: 760px;
+  max-width: 96%;
+  margin: 8px auto 0;
+  padding: 6px 8px;
+  background: #d4d0c8;
+  border: 1px solid #0a246a;
+  text-align: left;
+  font-size: 11px;
+}
+.itt-quick-btns input[type="button"],
+.itt-btn,
+button.itt-btn,
+input.itt-btn {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  padding: 3px 10px;
+  margin: 2px 3px 2px 0;
+  border: 1px solid #000;
+  background: #d4d0c8;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #808080 inset;
+}
+.itt-quick-btns input[type="button"]:hover,
+.itt-btn:hover,
+button.itt-btn:hover {
+  background: #e8e4d8;
+}
+.itt-btn-primary {
+  background: #0a246a !important;
+  color: #fff !important;
+  border-color: #000 !important;
+  box-shadow: none !important;
+  font-weight: bold;
+}
+.itt-btn-primary:hover {
+  background: #163a9a !important;
+}
+
+/* Status / action feedback surfaces on product pages */
+.itt-status,
+[data-twitter-status-msg],
+[data-yt-upload-status],
+[data-docs-status],
+[data-gmail-compose-status],
+[data-iphone-status],
+[data-appstore-status] {
+  min-height: 1.2em;
+}
+.itt-status-ok {
+  color: #060;
+  font-size: 12px;
+  background: #e8ffe8;
+  border: 1px solid #6a6;
+  padding: 4px 8px;
+  margin: 6px 0;
+}
+.itt-note,
+.as-note,
+.iphone-note,
+.yt-note {
+  line-height: 1.4;
+}
+
+/* Product page foot wayfind */
+.itt-product-foot {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #ccc;
+  font-size: 11px;
+  color: #444;
+}
+.itt-product-foot a { margin-right: 6px; }
+
+/* Map page XP frame */
+.itt-map-page {
+  margin: 0;
+  background: #3a6ea5 !important;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.itt-map-window {
+  width: 760px;
+  max-width: 96%;
+  margin: 12px auto 24px;
+  border: 2px solid #0a246a;
+  background: #fff;
+  box-shadow: 2px 2px 0 #1a3a6a;
+}
+.itt-map-window .itt-map-bar {
+  background: #0a246a;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.itt-map-window .itt-map-bar a { color: #cde; }
+.itt-map-window .itt-map-bar a:hover { color: #fff; }
+.itt-map-window [data-itt-flow-map] {
+  padding: 8px 12px 20px;
+}
+/* denser flow map inside XP window */
+.itt-map-window .itt-fmap-branch {
+  background: #fafafa;
+  padding: 6px 8px;
+  margin-bottom: 10px;
+  border-left-width: 4px;
+}
+.itt-map-window .itt-fmap-site {
+  padding: 3px 0;
+}
+.itt-map-window a.itt-fmap-name:hover {
+  background: #ffffcc;
+}
+
+/* Tour host breathing room */
+#itt-tour-host,
+[data-itt-tour] {
+  margin-bottom: 4px;
+}
+
+/* Form controls on product pages — denser XP feel */
+.itt-start-body input[type="text"],
+.itt-start-body input[type="password"],
+.itt-start-body textarea,
+.tw-box textarea,
+.gmail-shell input[type="text"],
+.gmail-shell textarea {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #7f9db9;
+  padding: 3px 4px;
+}
+.itt-start-body input[type="submit"],
+.tw-box button,
+.gmail-shell button,
+form[data-yt-upload] button,
+form[data-docs-save] button {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  padding: 3px 12px;
+  cursor: pointer;
+}
+
+/* Mobile honesty: keep desktop-first but avoid overflow */
+@media (max-width: 800px) {
+  .itt-start,
+  .itt-quick-btns,
+  .itt-map-window {
+    width: auto;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .itt-product-chips a {
+    min-width: 72px;
+  }
+}

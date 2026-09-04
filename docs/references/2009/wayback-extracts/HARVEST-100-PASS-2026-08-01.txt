@@ -1,0 +1,81 @@
+2009 100% harvest pass 2026-08-01T07:18Z
+TRY FB https://web.archive.org/web/20090615000000id_/http://static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif → assets/period/2009/facebook/logo-wa.gif
+  file=GIF image data, version 89a, 1 x 1 size=67
+  REJECT too small
+TRY FB https://web.archive.org/web/20090615000000id_/http://static.ak.fbcdn.net/images/logo-fb.gif → assets/period/2009/facebook/logo-wa.gif
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY FB https://web.archive.org/web/20090601000000id_/http://static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif → assets/period/2009/facebook/logo-wa.gif
+  file=GIF image data, version 89a, 1 x 1 size=67
+  REJECT too small
+TRY FB https://web.archive.org/web/20090209000000id_/http://static.ak.fbcdn.net/images/banners/logo_header.gif → assets/period/2009/facebook/logo-wa.gif
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY FB https://web.archive.org/web/20090801000000id_/http://b.static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif → assets/period/2009/facebook/logo-wa.gif
+  file=GIF image data, version 89a, 1 x 1 size=67
+  REJECT too small
+TRY FB https://web.archive.org/web/20090715000000id_/http://static.ak.fbcdn.net/rsrc.php/z1WGD/hash/76lh4cws.png → assets/period/2009/facebook/logo-wa.gif
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY 4sq https://web.archive.org/web/20090601000000id_/http://foursquare.com/img/logo.png → assets/period/2009/foursquare/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY 4sq https://web.archive.org/web/20090815000000id_/http://foursquare.com/img/logo.png → assets/period/2009/foursquare/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY 4sq https://web.archive.org/web/20091001000000id_/http://foursquare.com/img/foursquare-logo.png → assets/period/2009/foursquare/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY 4sq https://web.archive.org/web/20091201000000id_/http://foursquare.com/img/logo.png → assets/period/2009/foursquare/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY 4sq https://web.archive.org/web/20090501000000id_/http://www.foursquare.com/img/logo.png → assets/period/2009/foursquare/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY 4sq https://web.archive.org/web/20091115000000id_/http://foursquare.com/static/img/logo.png → assets/period/2009/foursquare/logo-wa.png
+  file=PNG image data, 280 x 60, 8-bit/color RGBA, non-interlaced size=2694
+  OK [wa] assets/period/2009/foursquare/logo-wa.png
+TRY KS https://web.archive.org/web/20090601000000id_/http://www.kickstarter.com/images/logo.png → assets/period/2009/kickstarter/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY KS https://web.archive.org/web/20090801000000id_/http://www.kickstarter.com/images/logo.png → assets/period/2009/kickstarter/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY KS https://web.archive.org/web/20091001000000id_/http://kickstarter.com/images/logo.png → assets/period/2009/kickstarter/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY KS https://web.archive.org/web/20091201000000id_/http://www.kickstarter.com/images/kickstarter_logo.png → assets/period/2009/kickstarter/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY KS https://web.archive.org/web/20090515000000id_/http://www.kickstarter.com/images/header_logo.png → assets/period/2009/kickstarter/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY KS https://web.archive.org/web/20091101000000id_/http://s3.amazonaws.com/ksr/assets/logo.png → assets/period/2009/kickstarter/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY FV https://web.archive.org/web/20090801000000id_/http://www.farmville.com/images/logo.png → assets/period/2009/farmville/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY FV https://web.archive.org/web/20091001000000id_/http://www.farmville.com/images/logo.gif → assets/period/2009/farmville/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY FV https://web.archive.org/web/20091201000000id_/http://zynga.com/images/games/farmville/logo.png → assets/period/2009/farmville/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+TRY FV https://web.archive.org/web/20091101000000id_/http://static.ak.fbcdn.net/rsrc.php/v1/yX/r/farmville_logo.gif → assets/period/2009/farmville/logo-wa.png
+curl: (56) The requested URL returned error: 404
+  FAIL download
+=== CDX facebook logo gif ===
+=== CDX facebook.com/images ===
+=== CDX kickstarter images ===
+=== CDX foursquare already have ===
+=== CDX farmville ===
+=== HTML extract fb-home ===
+=== HTML extract ks-home ===
+=== HTML extract ks-home2 ===
+=== HTML extract fv ===
+=== HTML extract fv-app ===
+PAGE https://web.archive.org/web/20090615054231/http://www.facebook.com/
+PAGE https://web.archive.org/web/20090209000000/http://www.facebook.com/
+PAGE https://web.archive.org/web/20091101000000/http://www.facebook.com/login.php
+PAGE https://web.archive.org/web/20091215000000/http://www.facebook.com/

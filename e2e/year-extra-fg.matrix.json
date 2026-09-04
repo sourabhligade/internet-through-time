@@ -1,0 +1,362 @@
+[
+  {
+    "year": "1994",
+    "role": "f",
+    "path": "/years/1994/sites/playable/extra-f.html",
+    "key": "itt94-game-fingerwho",
+    "id": "fingerwho",
+    "kind": "parlor",
+    "title": "Finger Who",
+    "next": "/years/1994/sites/playable/extra-g.html"
+  },
+  {
+    "year": "1994",
+    "role": "g",
+    "path": "/years/1994/sites/playable/extra-g.html",
+    "key": "itt94-game-lynxline",
+    "id": "lynxline",
+    "kind": "quiz",
+    "title": "Lynx Line",
+    "next": "/years/1994/sites/playable/game.html"
+  },
+  {
+    "year": "1995",
+    "role": "f",
+    "path": "/years/1995/sites/playable/extra-f.html",
+    "key": "itt95-game-nscapplet",
+    "id": "nscapplet",
+    "kind": "hold",
+    "title": "NSCA Plug",
+    "next": "/years/1995/sites/playable/extra-g.html"
+  },
+  {
+    "year": "1995",
+    "role": "g",
+    "path": "/years/1995/sites/playable/extra-g.html",
+    "key": "itt95-game-auctiontap",
+    "id": "auctiontap",
+    "kind": "parlor",
+    "title": "Auction Tap",
+    "next": "/years/1995/sites/playable/game.html"
+  },
+  {
+    "year": "1996",
+    "role": "f",
+    "path": "/years/1996/sites/playable/extra-f.html",
+    "key": "itt96-game-shockwait",
+    "id": "shockwait",
+    "kind": "hold",
+    "title": "Shock Wait",
+    "next": "/years/1996/sites/playable/extra-g.html"
+  },
+  {
+    "year": "1996",
+    "role": "g",
+    "path": "/years/1996/sites/playable/extra-g.html",
+    "key": "itt96-game-excitebox",
+    "id": "excitebox",
+    "kind": "quiz",
+    "title": "Excite Box",
+    "next": "/years/1996/sites/playable/game.html"
+  },
+  {
+    "year": "1997",
+    "role": "f",
+    "path": "/years/1997/sites/playable/extra-f.html",
+    "key": "itt97-game-slashmod",
+    "id": "slashmod",
+    "kind": "parlor",
+    "title": "Slash Mod",
+    "next": "/years/1997/sites/playable/extra-g.html"
+  },
+  {
+    "year": "1997",
+    "role": "g",
+    "path": "/years/1997/sites/playable/extra-g.html",
+    "key": "itt97-game-uinwait",
+    "id": "uinwait",
+    "kind": "hold",
+    "title": "UIN Wait",
+    "next": "/years/1997/sites/playable/game.html"
+  },
+  {
+    "year": "1998",
+    "role": "f",
+    "path": "/years/1998/sites/playable/extra-f.html",
+    "key": "itt98-game-skipintro",
+    "id": "skipintro",
+    "kind": "hold",
+    "title": "Skip Intro",
+    "next": "/years/1998/sites/playable/extra-g.html"
+  },
+  {
+    "year": "1998",
+    "role": "g",
+    "path": "/years/1998/sites/playable/extra-g.html",
+    "key": "itt98-game-dmozrow",
+    "id": "dmozrow",
+    "kind": "quiz",
+    "title": "DMOZ Row",
+    "next": "/years/1998/sites/playable/game.html"
+  },
+  {
+    "year": "1999",
+    "role": "f",
+    "path": "/years/1999/sites/playable/extra-f.html",
+    "key": "itt99-game-y2ktick",
+    "id": "y2ktick",
+    "kind": "hold",
+    "title": "Y2K Tick",
+    "next": "/years/1999/sites/playable/extra-g.html"
+  },
+  {
+    "year": "1999",
+    "role": "g",
+    "path": "/years/1999/sites/playable/extra-g.html",
+    "key": "itt99-game-napquery",
+    "id": "napquery",
+    "kind": "parlor",
+    "title": "Nap Query",
+    "next": "/years/1999/sites/playable/game.html"
+  },
+  {
+    "year": "2000",
+    "role": "f",
+    "path": "/years/2000/sites/playable/extra-f.html",
+    "key": "itt00-game-petsock2",
+    "id": "petsock2",
+    "kind": "quiz",
+    "title": "Sock Wave",
+    "next": "/years/2000/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2000",
+    "role": "g",
+    "path": "/years/2000/sites/playable/extra-g.html",
+    "key": "itt00-game-flashpad2",
+    "id": "flashpad2",
+    "kind": "hold",
+    "title": "Flash Pad",
+    "next": "/years/2000/sites/playable/game.html"
+  },
+  {
+    "year": "2004",
+    "role": "f",
+    "path": "/years/2004/sites/playable/extra-f.html",
+    "key": "itt04-game-thepoke2",
+    "id": "thepoke2",
+    "kind": "parlor",
+    "title": "Poke Burst",
+    "next": "/years/2004/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2004",
+    "role": "g",
+    "path": "/years/2004/sites/playable/extra-g.html",
+    "key": "itt04-game-gmailinv",
+    "id": "gmailinv",
+    "kind": "quiz",
+    "title": "Gmail Invite",
+    "next": "/years/2004/sites/playable/game.html"
+  },
+  {
+    "year": "2008",
+    "role": "f",
+    "path": "/years/2008/sites/playable/extra-f.html",
+    "key": "itt08-game-storewait",
+    "id": "storewait",
+    "kind": "hold",
+    "title": "Store Wait",
+    "next": "/years/2008/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2008",
+    "role": "g",
+    "path": "/years/2008/sites/playable/extra-g.html",
+    "key": "itt08-game-omni2",
+    "id": "omni2",
+    "kind": "parlor",
+    "title": "Omni Two",
+    "next": "/years/2008/sites/playable/game.html"
+  },
+  {
+    "year": "2009",
+    "role": "f",
+    "path": "/years/2009/sites/playable/extra-f.html",
+    "key": "itt09-game-like2",
+    "id": "like2",
+    "kind": "parlor",
+    "title": "Like Two",
+    "next": "/years/2009/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2009",
+    "role": "g",
+    "path": "/years/2009/sites/playable/extra-g.html",
+    "key": "itt09-game-bingnote",
+    "id": "bingnote",
+    "kind": "quiz",
+    "title": "Bing Note",
+    "next": "/years/2009/sites/playable/game.html"
+  },
+  {
+    "year": "2010",
+    "role": "f",
+    "path": "/years/2010/sites/playable/extra-f.html",
+    "key": "itt10-game-filter2",
+    "id": "filter2",
+    "kind": "hold",
+    "title": "Filter Two",
+    "next": "/years/2010/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2010",
+    "role": "g",
+    "path": "/years/2010/sites/playable/extra-g.html",
+    "key": "itt10-game-ognote",
+    "id": "ognote",
+    "kind": "quiz",
+    "title": "OG Note",
+    "next": "/years/2010/sites/playable/game.html"
+  },
+  {
+    "year": "2011",
+    "role": "f",
+    "path": "/years/2011/sites/playable/extra-f.html",
+    "key": "itt11-game-sirinote",
+    "id": "sirinote",
+    "kind": "quiz",
+    "title": "Siri Note",
+    "next": "/years/2011/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2011",
+    "role": "g",
+    "path": "/years/2011/sites/playable/extra-g.html",
+    "key": "itt11-game-circle2",
+    "id": "circle2",
+    "kind": "parlor",
+    "title": "Circle Two",
+    "next": "/years/2011/sites/playable/game.html"
+  },
+  {
+    "year": "2012",
+    "role": "f",
+    "path": "/years/2012/sites/playable/extra-f.html",
+    "key": "itt12-game-instahead",
+    "id": "instahead",
+    "kind": "parlor",
+    "title": "Insta Head",
+    "next": "/years/2012/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2012",
+    "role": "g",
+    "path": "/years/2012/sites/playable/extra-g.html",
+    "key": "itt12-game-sopanote",
+    "id": "sopanote",
+    "kind": "quiz",
+    "title": "SOPA Note",
+    "next": "/years/2012/sites/playable/game.html"
+  },
+  {
+    "year": "2013",
+    "role": "f",
+    "path": "/years/2013/sites/playable/extra-f.html",
+    "key": "itt13-game-vineloop2",
+    "id": "vineloop2",
+    "kind": "parlor",
+    "title": "Vine Loop 2",
+    "next": "/years/2013/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2013",
+    "role": "g",
+    "path": "/years/2013/sites/playable/extra-g.html",
+    "key": "itt13-game-snap24",
+    "id": "snap24",
+    "kind": "hold",
+    "title": "Snap 24",
+    "next": "/years/2013/sites/playable/game.html"
+  },
+  {
+    "year": "2014",
+    "role": "f",
+    "path": "/years/2014/sites/playable/extra-f.html",
+    "key": "itt14-game-wa2step",
+    "id": "wa2step",
+    "kind": "parlor",
+    "title": "WA Two-Step",
+    "next": "/years/2014/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2014",
+    "role": "g",
+    "path": "/years/2014/sites/playable/extra-g.html",
+    "key": "itt14-game-bleednote",
+    "id": "bleednote",
+    "kind": "quiz",
+    "title": "Bleed Note",
+    "next": "/years/2014/sites/playable/game.html"
+  },
+  {
+    "year": "2016",
+    "role": "f",
+    "path": "/years/2016/sites/playable/extra-f.html",
+    "key": "itt16-game-story24b",
+    "id": "story24b",
+    "kind": "hold",
+    "title": "Story 24b",
+    "next": "/years/2016/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2016",
+    "role": "g",
+    "path": "/years/2016/sites/playable/extra-g.html",
+    "key": "itt16-game-pokehunt",
+    "id": "pokehunt",
+    "kind": "parlor",
+    "title": "Poke Hunt",
+    "next": "/years/2016/sites/playable/game.html"
+  },
+  {
+    "year": "2017",
+    "role": "f",
+    "path": "/years/2017/sites/playable/extra-f.html",
+    "key": "itt17-game-facehold",
+    "id": "facehold",
+    "kind": "hold",
+    "title": "Face Hold",
+    "next": "/years/2017/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2017",
+    "role": "g",
+    "path": "/years/2017/sites/playable/extra-g.html",
+    "key": "itt17-game-tweet280",
+    "id": "tweet280",
+    "kind": "parlor",
+    "title": "Tweet 280",
+    "next": "/years/2017/sites/playable/game.html"
+  },
+  {
+    "year": "2019",
+    "role": "f",
+    "path": "/years/2019/sites/playable/extra-f.html",
+    "key": "itt19-game-continue2",
+    "id": "continue2",
+    "kind": "parlor",
+    "title": "Continue Two",
+    "next": "/years/2019/sites/playable/extra-g.html"
+  },
+  {
+    "year": "2019",
+    "role": "g",
+    "path": "/years/2019/sites/playable/extra-g.html",
+    "key": "itt19-game-stadnote",
+    "id": "stadnote",
+    "kind": "quiz",
+    "title": "Stadia Note",
+    "next": "/years/2019/sites/playable/game.html"
+  }
+]

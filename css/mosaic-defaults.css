@@ -2,6 +2,16 @@
    Simulates Mosaic / Netscape Navigator 1.0 page defaults.
    NOT a modern redesign. */
 
+.archive-residual[data-itt-capture-cite] {
+  margin: 14px auto;
+  max-width: 36em;
+  padding: 6px 8px;
+  border: 1px dashed #666688;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 /* Live-flow panels (shared immersion) — keep gray document grammar */
 .itt-live-host { margin: 8px 0; }
 .itt-live-panel { border-radius: 0 !important; box-shadow: none !important; }
@@ -201,3 +211,15 @@ button:active {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
+/* ITT feel tokens 1994 — Mosaic gray era */
+:root {
+  --itt94-bg: #c0c0c0;
+  --itt94-link: #0000ee;
+  --itt94-vlink: #551a8b;
+  --itt94-chrome: #808080;
+}
+body[data-itt-year="1994"], html[data-itt-year="1994"] body {
+  background: var(--itt94-bg);
+}
+

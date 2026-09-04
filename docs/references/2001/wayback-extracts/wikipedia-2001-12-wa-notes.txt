@@ -1,0 +1,9 @@
+SOURCE: https://web.archive.org/web/20011215000000/http://www.wikipedia.org/
+STATUS: [FAILED / DO NOT USE] 2026-07-25 capture returned modern Internet Archive chrome
+ROLE: superseded
+
+USE INSTEAD:
+- wikipedia-2001-07-wa-notes.txt (birth grammar gold)
+- wikipedia-2001-12-com-wa-notes.txt (late 2001 wikipedia.com good body)
+
+This file kept only as honesty log of a bad capture.

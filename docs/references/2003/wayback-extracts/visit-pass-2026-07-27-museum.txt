@@ -1,0 +1,44 @@
+2003 museum-grade research visit pass — 2026-07-27
+====================================================
+Disk: years/2003 MVP LIVE (204 html). assets/period/2003 = 106 files.
+Prior CAPTURE claimed wipe — corrected this pass.
+
+LIVE RE-VISITS
+- cybercultural.com/p/internet-2003/  [visited]
+  Blogging mainstream; AdSense; iTunes Store; Friendster+MySpace; Flash peak; Blogger→Google; Bloglines; Facemash footnote
+- cybercultural.com/p/myspace-2003/  [visited]
+  eUniverse; Aug 15 narrative; HTML profiles; ~100k Oct vs Friendster ~3M
+- apple.com/newsroom/2003/04/28...iTunes-Music-Store/  [visited]
+  Apr 28 2003; 99c; 200k songs; AAC 128k; Mac+US; 3 Macs; personal CD burns; unlimited iPods
+- webdesignmuseum.org/gallery/year-2003  [visited]
+  LinkedIn 2003, Flash agencies, CSS Zen Garden era
+- webdesignmuseum.org/gallery/linkedin-2003  [visited]
+  Early LI screenshot grammar (layout ref)
+
+WAYBACK id_ RE-VISITS
+- 20030618021947 wordpress.org  [wa-visited]
+  semantic personal publishing; b2 official branch
+- 20031008115927 myspace.com/misc/about.html  [wa-visited]
+  friends' friends; photos journals; invite; for everyone list
+- 20030630191256 google AdSense press  [wa-visited]
+  Jun 18 2003 self-service; expands Mar content targeting; cut-paste HTML
+- 20030704094052 bloglines.com  [wa-visited]
+  free browser RSS; no install; Trustic ©2003
+
+SECONDARY FACT-CHECK
+- Phoenix 0.1 released 2002-09-23 (NOT 2003)
+- Firebird rename April 2003
+- Firefox 1.0 = Nov 2004 (banned as 2003 default)
+
+DISK BUGS FOUND (fix before densify)
+- Blogger footer still Pyra + "do not claim Google ownership" (wrong for 2003)
+- Phoenix room dates 0.1 as Sep 23 2003
+- Friendster "founded in 2003" (should be founded 2002, public Mar 2003)
+
+MUSEUM GAPS
+- Bloglines room missing
+- P0 rooms thin (1-3 short pages)
+- Signature logos RECON only
+- Only e2e/2003-mvp.spec.js (need buttons/links/pixels suite)
+
+NEXT: implement phases M0–M9 in 2003-MUSEUM-GRADE-RESEARCH-2026-07-27.md

@@ -1,0 +1,134 @@
+2010 harvest execute 2026-08-01T07:34Z
+TRY iPad hero
+  URL https://web.archive.org/web/20100403000000id_/http://images.apple.com/ipad/home/images/hero.jpg
+curl: (56) The requested URL returned error: 503
+  FAIL
+TRY iPad hero
+  URL https://web.archive.org/web/20100415000000id_/http://images.apple.com/ipad/home/images/hero.jpg
+curl: (56) The requested URL returned error: 503
+  FAIL
+TRY iPad hero
+  URL https://web.archive.org/web/20100501000000id_/http://images.apple.com/ipad/home/images/overview_hero.jpg
+  file=JPEG image data, Exif standard: [TIFF image data, little-endian, direntries=0], baseline, precision 8, 1120x480, components 3 size=114896
+  OK [wa] assets/period/2010/ipad/hero-wa.jpg
+TRY iPad prices
+  URL https://web.archive.org/web/20100403000000id_/http://images.apple.com/ipad/home/images/pricing_wifi.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY iPad prices
+  URL https://web.archive.org/web/20100415000000id_/http://images.apple.com/ipad/home/images/buy_wifi.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY iPad prices
+  URL https://web.archive.org/web/20100403000000id_/http://images.apple.com/ipad/home/images/gallery_ipad_wifi.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY iPhone4 hero
+  URL https://web.archive.org/web/20100624000000id_/http://images.apple.com/iphone/home/images/hero.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY iPhone4 hero
+  URL https://web.archive.org/web/20100625000000id_/http://images.apple.com/iphone/home/images/hero20100607.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY iPhone4 hero
+  URL https://web.archive.org/web/20100701000000id_/http://images.apple.com/iphone/home/images/hero.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY iPhone4 hero
+  URL https://web.archive.org/web/20100624000000id_/http://images.apple.com/iphone/iphone-4/images/overview_hero.jpg
+curl: (56) The requested URL returned error: 503
+  FAIL
+TRY FaceTime
+  URL https://web.archive.org/web/20100624000000id_/http://images.apple.com/iphone/features/images/facetime_hero.jpg
+curl: (56) The requested URL returned error: 503
+  FAIL
+TRY FaceTime
+  URL https://web.archive.org/web/20100701000000id_/http://images.apple.com/iphone/features/images/facetime_hero20100607.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY FaceTime
+  URL https://web.archive.org/web/20100624000000id_/http://images.apple.com/iphone/iphone-4/images/facetime.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY IG logo
+  URL https://web.archive.org/web/20101015000000id_/http://instagr.am/static/images/logo.png
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY IG logo
+  URL https://web.archive.org/web/20101101000000id_/http://instagr.am/static/images/logo.png
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY IG logo
+  URL https://web.archive.org/web/20101201000000id_/http://instagr.am/images/logo.png
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY IG logo
+  URL https://web.archive.org/web/20101020000000id_/http://instagr.am/static/img/logo.png
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY IG ui
+  URL https://web.archive.org/web/20101115000000id_/http://instagr.am/static/images/home.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY IG ui
+  URL https://web.archive.org/web/20101201000000id_/http://instagr.am/static/images/screenshot.png
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY FB logo
+  URL https://web.archive.org/web/20100715000000id_/http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/FGFbc80dUKj.png
+  file=PNG image data, 39 x 476, 8-bit colormap, non-interlaced size=1916
+  OK [wa] assets/period/2010/facebook/logo-wa.png
+TRY AppStore hero
+  URL https://web.archive.org/web/20100624000000id_/http://images.apple.com/iphone/apps-for-iphone/images/hero.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY AppStore hero
+  URL https://web.archive.org/web/20100701000000id_/http://images.apple.com/iphone/apps-for-iphone/images/hero20100607.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+TRY AppStore hero
+  URL https://web.archive.org/web/20100403000000id_/http://images.apple.com/ipad/features/images/apps_hero.jpg
+curl: (56) The requested URL returned error: 404
+  FAIL
+COPY 2009 foursquare logo [wa continuity]
+=== RESULTS ===
+assets/period/2010/facebook/logo-wa.png
+assets/period/2010/foursquare/logo-wa.png
+assets/period/2010/ipad/hero-wa.jpg
+assets/period/2010/README-AUTHENTICITY.txt
+assets/period/2010/facebook/logo-wa.png:   PNG image data, 39 x 476, 8-bit colormap, non-interlaced
+assets/period/2010/foursquare/logo-wa.png: PNG image data, 280 x 60, 8-bit/color RGBA, non-interlaced
+assets/period/2010/ipad/hero-wa.jpg:       JPEG image data, Exif standard: [TIFF image data, little-endian, direntries=0], baseline, precision 8, 1120x480, components 3
+=== CDX iphone ===
+curl: (28) Operation timed out after 25009 milliseconds with 0 bytes received
+TRY i4 https://web.archive.org/web/20100624120000id_/http://images.apple.com/iphone/home/images/hero.jpg
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY i4 https://web.archive.org/web/20100624180000id_/http://images.apple.com/iphone/home/images/hero20100607.jpg
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY i4 https://web.archive.org/web/20100715120000id_/http://images.apple.com/iphone/home/images/hero.jpg
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY i4 https://web.archive.org/web/20100625000000id_/http://images.apple.com/iphone/iphone4/images/overview_hero20100607.jpg
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY i4 https://web.archive.org/web/20100801000000id_/http://images.apple.com/iphone/home/images/gallery_iphone4_hero.jpg
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY ig https://web.archive.org/web/20101006120000id_/http://instagr.am/static/images/logo.png
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY ig https://web.archive.org/web/20101224120000id_/http://instagr.am/static/images/logo.png
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY ig https://web.archive.org/web/20110101120000id_/http://instagr.am/static/images/logo.png
+curl: (56) The requested URL returned error: 503
+FAIL
+TRY as https://web.archive.org/web/20100624120000id_/http://images.apple.com/itunes/whatson/images/apps_hero.jpg
+curl: (56) The requested URL returned error: 404
+FAIL
+TRY as https://web.archive.org/web/20100701120000id_/http://images.apple.com/iphone/apps-for-iphone/images/hero20100607.jpg
+curl: (56) The requested URL returned error: 404
+FAIL

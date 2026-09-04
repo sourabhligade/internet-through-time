@@ -1,0 +1,225 @@
+/**
+ * Chrome-habit museum chrome — 2015–2022.
+ * Layout still comes from win95-netscape.css. This file restyles the
+ * window so a 2015–2022 year does not read as Internet Explorer 5.
+ * Do not load ie5-overrides.css on these shells.
+ * No official Chrome / Edge pixels.
+ */
+.os-win10 {
+  --itt-desktop-bg: #0078d7;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.os-win10 .browser {
+  border: 1px solid #666;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  background: #fff;
+}
+
+.os-win10 .browser .titlebar,
+.os-win10 .titlebar {
+  background: linear-gradient(180deg, #f2f2f2 0%, #d6d6d6 100%) !important;
+  color: #222 !important;
+  border-bottom: 1px solid #bbb;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .titlebar .title,
+.os-win10 .titlebar .icon {
+  color: #222;
+}
+
+.os-win10 .win-btn {
+  background: #e8e8e8;
+  border: 1px solid #999;
+  color: #222;
+}
+
+.os-win10 .menubar,
+.os-win10 .toolbar,
+.os-win10 .locationbar,
+.os-win10 .dirbar,
+.os-win10 .statusbar {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f7f7;
+  border-color: #ccc;
+}
+
+.os-win10 .locationbar input,
+.os-win10 #location {
+  border: 1px solid #b0b0b0;
+  border-radius: 2px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .dialog {
+  border: 1px solid #777;
+  background: #f2f2f2;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .dialog-titlebar {
+  background: #0078d7;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .connect-box {
+  font-family: "Segoe UI", Arial, sans-serif;
+  border: 1px solid #666;
+}
+
+.os-win10 .exit-bar {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.os-win10 .win95-taskbar {
+  background: #0078d7;
+  border-top: 1px solid #5aa0e0;
+}
+
+/* Alias so late-year body class is honest even if a leftover IE class remains */
+.browser-chrome-habit .dialog-titlebar,
+.os-win10.browser-chrome-habit .dialog-titlebar {
+  background: #0078d7;
+  color: #fff;
+}
+
+.os-win10 .menubar a,
+.os-win10 .menubar button,
+.os-win10 .toolbar button {
+  font-family: "Segoe UI", Arial, sans-serif;
+  border-radius: 2px;
+}
+
+.os-win10 .locationbar {
+  background: #fff;
+}
+
+.os-win10 .dirbar {
+  background: #f0f0f0;
+}
+
+.os-win10 .connect-box h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.os-win10 .dialog-btns button,
+.os-win10 .connect-box button {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #e1e1e1;
+  border: 1px solid #adadad;
+  color: #111;
+  min-width: 5.5em;
+}
+
+.os-win10 .win95-start {
+  background: #0078d7;
+  border: 0;
+  color: #fff;
+}
+
+/* Chrome-habit costume: kill leftover Win95 bevels so the year does not read as IE 5 */
+.os-win10 .browser.maximized,
+.os-win10 .browser {
+  border-radius: 0;
+  border-color: #aaa;
+}
+.os-win10 .titlebar {
+  height: auto;
+  min-height: 28px;
+  padding: 4px 6px;
+}
+.os-win10 .titlebar .icon {
+  display: none;
+}
+.os-win10 .menubar {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+.os-win10 .toolbar {
+  background: #fff;
+  border: 0;
+  padding: 4px 8px;
+}
+.os-win10 .toolbar button {
+  background: #fff;
+  border: 1px solid transparent;
+  color: #444;
+}
+.os-win10 .toolbar button:hover {
+  background: #f1f3f4;
+  border-color: #dadce0;
+}
+.os-win10 .dirbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background: #fff;
+  border-bottom: 1px solid #e8eaed;
+  padding: 4px 8px 8px;
+}
+.os-win10 .browser.dirbar-hidden #dirbar,
+.os-win10 #dirbar.hidden {
+  display: none !important;
+}
+.os-win10 .dirbar .dir-btn,
+.os-win10 .dirbar a,
+.os-win10 .dirbar button {
+  background: #f1f3f4;
+  border: 1px solid #dadce0;
+  border-radius: 12px;
+  color: #202124;
+  font-size: 11px;
+  padding: 2px 10px;
+}
+.os-win10 .locationbar {
+  background: #fff;
+  padding: 4px 10px 8px;
+}
+.os-win10 .locationbar input,
+.os-win10 #location {
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 16px;
+  padding: 6px 12px;
+}
+.os-win10 .statusbar {
+  background: #fff;
+  border-top: 1px solid #e8eaed;
+  color: #5f6368;
+}
+.os-win10 .win95-taskbar {
+  height: 40px;
+}
+.os-win10 .desk-icon .desk-label {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* More habit costume: dialogs / start / chrome buttons lose Win95 bevel */
+.os-win10 .dialog,
+.os-win10 .connect-box,
+.os-win10 .win95-window {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.os-win10 .dialog-titlebar,
+.os-win10 .connect-box h2 {
+  background: #fff;
+  color: #202124;
+  border-bottom: 1px solid #e8eaed;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.os-win10 .win95-start,
+.os-win10 .win95-task-btn {
+  border-radius: 4px;
+  border: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.os-win10 button.win95,
+.os-win10 .toolbar .win95-btn {
+  border-style: solid;
+  box-shadow: none;
+}

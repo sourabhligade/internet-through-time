@@ -1,6 +1,15 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
+
 async function enter1998(page) {
   await page.goto('/years/1998/');
   const skip = page.locator('#skip-connect');

@@ -1,0 +1,362 @@
+[
+  {
+    "year": "1994",
+    "role": "h",
+    "path": "/years/1994/sites/playable/extra-h.html",
+    "key": "itt94-game-gophermap",
+    "id": "gophermap",
+    "kind": "parlor",
+    "title": "Gopher Map",
+    "next": "/years/1994/sites/playable/extra-i.html"
+  },
+  {
+    "year": "1994",
+    "role": "i",
+    "path": "/years/1994/sites/playable/extra-i.html",
+    "key": "itt94-game-bookrot",
+    "id": "bookrot",
+    "kind": "quiz",
+    "title": "Book Rot",
+    "next": "/years/1994/sites/playable/game.html"
+  },
+  {
+    "year": "1995",
+    "role": "h",
+    "path": "/years/1995/sites/playable/extra-h.html",
+    "key": "itt95-game-geoguest",
+    "id": "geoguest",
+    "kind": "parlor",
+    "title": "Geo Guest",
+    "next": "/years/1995/sites/playable/extra-i.html"
+  },
+  {
+    "year": "1995",
+    "role": "i",
+    "path": "/years/1995/sites/playable/extra-i.html",
+    "key": "itt95-game-altabox",
+    "id": "altabox",
+    "kind": "quiz",
+    "title": "Alta Box",
+    "next": "/years/1995/sites/playable/game.html"
+  },
+  {
+    "year": "1996",
+    "role": "h",
+    "path": "/years/1996/sites/playable/extra-h.html",
+    "key": "itt96-game-jamnote",
+    "id": "jamnote",
+    "kind": "quiz",
+    "title": "Jam Note",
+    "next": "/years/1996/sites/playable/extra-i.html"
+  },
+  {
+    "year": "1996",
+    "role": "i",
+    "path": "/years/1996/sites/playable/extra-i.html",
+    "key": "itt96-game-mailhold",
+    "id": "mailhold",
+    "kind": "hold",
+    "title": "Mail Hold",
+    "next": "/years/1996/sites/playable/game.html"
+  },
+  {
+    "year": "1997",
+    "role": "h",
+    "path": "/years/1997/sites/playable/extra-h.html",
+    "key": "itt97-game-ebaynote",
+    "id": "ebaynote",
+    "kind": "parlor",
+    "title": "eBay Note",
+    "next": "/years/1997/sites/playable/extra-i.html"
+  },
+  {
+    "year": "1997",
+    "role": "i",
+    "path": "/years/1997/sites/playable/extra-i.html",
+    "key": "itt97-game-pcskip",
+    "id": "pcskip",
+    "kind": "quiz",
+    "title": "Push Skip",
+    "next": "/years/1997/sites/playable/game.html"
+  },
+  {
+    "year": "1998",
+    "role": "h",
+    "path": "/years/1998/sites/playable/extra-h.html",
+    "key": "itt98-game-luckynote",
+    "id": "luckynote",
+    "kind": "quiz",
+    "title": "Lucky Note",
+    "next": "/years/1998/sites/playable/extra-i.html"
+  },
+  {
+    "year": "1998",
+    "role": "i",
+    "path": "/years/1998/sites/playable/extra-i.html",
+    "key": "itt98-game-moznote",
+    "id": "moznote",
+    "kind": "parlor",
+    "title": "Moz Note",
+    "next": "/years/1998/sites/playable/game.html"
+  },
+  {
+    "year": "1999",
+    "role": "h",
+    "path": "/years/1999/sites/playable/extra-h.html",
+    "key": "itt99-game-aimidle",
+    "id": "aimidle",
+    "kind": "parlor",
+    "title": "AIM Idle",
+    "next": "/years/1999/sites/playable/extra-i.html"
+  },
+  {
+    "year": "1999",
+    "role": "i",
+    "path": "/years/1999/sites/playable/extra-i.html",
+    "key": "itt99-game-napidle",
+    "id": "napidle",
+    "kind": "hold",
+    "title": "Nap Idle",
+    "next": "/years/1999/sites/playable/game.html"
+  },
+  {
+    "year": "2000",
+    "role": "h",
+    "path": "/years/2000/sites/playable/extra-h.html",
+    "key": "itt00-game-mqprint",
+    "id": "mqprint",
+    "kind": "parlor",
+    "title": "MQ Print",
+    "next": "/years/2000/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2000",
+    "role": "i",
+    "path": "/years/2000/sites/playable/extra-i.html",
+    "key": "itt00-game-crashnote",
+    "id": "crashnote",
+    "kind": "quiz",
+    "title": "Crash Note",
+    "next": "/years/2000/sites/playable/game.html"
+  },
+  {
+    "year": "2004",
+    "role": "h",
+    "path": "/years/2004/sites/playable/extra-h.html",
+    "key": "itt04-game-flick2",
+    "id": "flick2",
+    "kind": "parlor",
+    "title": "Flick Two",
+    "next": "/years/2004/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2004",
+    "role": "i",
+    "path": "/years/2004/sites/playable/extra-i.html",
+    "key": "itt04-game-orcutnote",
+    "id": "orcutnote",
+    "kind": "quiz",
+    "title": "Orkut Note",
+    "next": "/years/2004/sites/playable/game.html"
+  },
+  {
+    "year": "2008",
+    "role": "h",
+    "path": "/years/2008/sites/playable/extra-h.html",
+    "key": "itt08-game-issue2",
+    "id": "issue2",
+    "kind": "parlor",
+    "title": "Issue Two",
+    "next": "/years/2008/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2008",
+    "role": "i",
+    "path": "/years/2008/sites/playable/extra-i.html",
+    "key": "itt08-game-dropnote",
+    "id": "dropnote",
+    "kind": "quiz",
+    "title": "Drop Note",
+    "next": "/years/2008/sites/playable/game.html"
+  },
+  {
+    "year": "2009",
+    "role": "h",
+    "path": "/years/2009/sites/playable/extra-h.html",
+    "key": "itt09-game-farm2",
+    "id": "farm2",
+    "kind": "parlor",
+    "title": "Farm Two",
+    "next": "/years/2009/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2009",
+    "role": "i",
+    "path": "/years/2009/sites/playable/extra-i.html",
+    "key": "itt09-game-win7note",
+    "id": "win7note",
+    "kind": "quiz",
+    "title": "Win7 Note",
+    "next": "/years/2009/sites/playable/game.html"
+  },
+  {
+    "year": "2010",
+    "role": "h",
+    "path": "/years/2010/sites/playable/extra-h.html",
+    "key": "itt10-game-ipadnote",
+    "id": "ipadnote",
+    "kind": "quiz",
+    "title": "iPad Note",
+    "next": "/years/2010/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2010",
+    "role": "i",
+    "path": "/years/2010/sites/playable/extra-i.html",
+    "key": "itt10-game-ftwait",
+    "id": "ftwait",
+    "kind": "hold",
+    "title": "FaceTime Wait",
+    "next": "/years/2010/sites/playable/game.html"
+  },
+  {
+    "year": "2011",
+    "role": "h",
+    "path": "/years/2011/sites/playable/extra-h.html",
+    "key": "itt11-game-hang2",
+    "id": "hang2",
+    "kind": "parlor",
+    "title": "Hang Two",
+    "next": "/years/2011/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2011",
+    "role": "i",
+    "path": "/years/2011/sites/playable/extra-i.html",
+    "key": "itt11-game-spotnote",
+    "id": "spotnote",
+    "kind": "quiz",
+    "title": "Spot Note",
+    "next": "/years/2011/sites/playable/game.html"
+  },
+  {
+    "year": "2012",
+    "role": "h",
+    "path": "/years/2012/sites/playable/extra-h.html",
+    "key": "itt12-game-share2",
+    "id": "share2",
+    "kind": "parlor",
+    "title": "Share Two",
+    "next": "/years/2012/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2012",
+    "role": "i",
+    "path": "/years/2012/sites/playable/extra-i.html",
+    "key": "itt12-game-iponote",
+    "id": "iponote",
+    "kind": "quiz",
+    "title": "IPO Note",
+    "next": "/years/2012/sites/playable/game.html"
+  },
+  {
+    "year": "2013",
+    "role": "h",
+    "path": "/years/2013/sites/playable/extra-h.html",
+    "key": "itt13-game-post2",
+    "id": "post2",
+    "kind": "parlor",
+    "title": "Post Two",
+    "next": "/years/2013/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2013",
+    "role": "i",
+    "path": "/years/2013/sites/playable/extra-i.html",
+    "key": "itt13-game-flatnote",
+    "id": "flatnote",
+    "kind": "quiz",
+    "title": "Flat Note",
+    "next": "/years/2013/sites/playable/game.html"
+  },
+  {
+    "year": "2014",
+    "role": "h",
+    "path": "/years/2014/sites/playable/extra-h.html",
+    "key": "itt14-game-install2",
+    "id": "install2",
+    "kind": "parlor",
+    "title": "Install Two",
+    "next": "/years/2014/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2014",
+    "role": "i",
+    "path": "/years/2014/sites/playable/extra-i.html",
+    "key": "itt14-game-icenote",
+    "id": "icenote",
+    "kind": "quiz",
+    "title": "Ice Note",
+    "next": "/years/2014/sites/playable/game.html"
+  },
+  {
+    "year": "2016",
+    "role": "h",
+    "path": "/years/2016/sites/playable/extra-h.html",
+    "key": "itt16-game-slide2",
+    "id": "slide2",
+    "kind": "parlor",
+    "title": "Slide Two",
+    "next": "/years/2016/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2016",
+    "role": "i",
+    "path": "/years/2016/sites/playable/extra-i.html",
+    "key": "itt16-game-reactnote",
+    "id": "reactnote",
+    "kind": "quiz",
+    "title": "React Note",
+    "next": "/years/2016/sites/playable/game.html"
+  },
+  {
+    "year": "2017",
+    "role": "h",
+    "path": "/years/2017/sites/playable/extra-h.html",
+    "key": "itt17-game-look2",
+    "id": "look2",
+    "kind": "parlor",
+    "title": "Look Two",
+    "next": "/years/2017/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2017",
+    "role": "i",
+    "path": "/years/2017/sites/playable/extra-i.html",
+    "key": "itt17-game-clipnote",
+    "id": "clipnote",
+    "kind": "quiz",
+    "title": "Clip Note",
+    "next": "/years/2017/sites/playable/game.html"
+  },
+  {
+    "year": "2019",
+    "role": "h",
+    "path": "/years/2019/sites/playable/extra-h.html",
+    "key": "itt19-game-face2",
+    "id": "face2",
+    "kind": "parlor",
+    "title": "Face Two",
+    "next": "/years/2019/sites/playable/extra-i.html"
+  },
+  {
+    "year": "2019",
+    "role": "i",
+    "path": "/years/2019/sites/playable/extra-i.html",
+    "key": "itt19-game-arcnote",
+    "id": "arcnote",
+    "kind": "quiz",
+    "title": "Arcade Note",
+    "next": "/years/2019/sites/playable/game.html"
+  }
+]

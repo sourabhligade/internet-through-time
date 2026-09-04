@@ -1,0 +1,19 @@
+SOURCE: https://web.archive.org/web/20011201074049id_/http://www.blogger.com/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: BLOGGER
+ROLE: P0/P1 Blogger — still Pyra Labs
+YEAR TARGET: 2001
+
+KEY FACTS:
+- "Blogger offers you instant communication power by letting you post your thoughts to the web whenever the urge strikes."
+- Fresh blogs rail + Directory
+- Sign in / sign up forms (username, password)
+- News from Ev Williams: micro ads change, Weblogs.com ping support planned, BlogBuddy, spellcheck, FTP IP notes
+- Copyright © 2000 Pyra Labs (pyra.com) — NOT Google-owned
+- Nav: Home · About · How To · Directory · Discuss · Sponsorship
+- Colors (prior extract): #003366 / #0099FF / orange accents
+
+BUILD:
+- Reuse blogger.js publish theater
+- Pyra logo from 1999 harvest continuity
+- BAN: Blogger-by-Google branding (Feb 2003 acquisition)

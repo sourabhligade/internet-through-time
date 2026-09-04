@@ -1,0 +1,15 @@
+SOURCE: https://guidebookgallery.org/guis/windows/winxp
+FINAL: https://guidebookgallery.org/guis/windows/winxp
+STATUS: [visited] 2026-07-25 project-stack visit (retry)
+ROLE: Luna chrome
+TITLE: GUIdebook &gt; ... &gt; Windows &gt; Windows XP
+BYTES: 28878
+
+KEY FACTS / TEXT:
+GUIdebook > ... > Windows > Windows XP
+Home > GUIs > Windows > Windows XP
+The newest consumer OS, with a brand new interface. Released on 25th October 2001 by Microsoft   . Interface names: Watercolor (in alpha versions), Luna (unofficial name) Tagline: “Experience the Best of the Digital Age” 17 Feb 00 Windows 2000 14 Sep 00 Windows Millennium Edition 24 Aug 00   Whistler 2257 (56 screenshots) 25 Oct 01   Windows XP Home Edition 25 Oct 01   Windows XP Professional (52 screenshots) 07 Windows Vista “One thousand square pixels of canvas” by Marcin Wichary, 2003 “Interview with Nathan Lineback” by Marcin Wichary, 2005 Whistler 2257 23 magazine ads, including: An early advertisement of Windows XP Second advertisement of Windows XP Tablet PC Edition from Wired 5/2004 Startup (415 KB) Shutdown (276 KB) Logon sound (186 KB) In late 1999 Apple discontinued the British English localized version of Mac OS 9 , causing quite an uproar among UK users. The changes between UK and US editions included “Wastebasket” instead of “Trash,” in addition to the obvious spelling differences such as “Colours” instead of “Colors.”
+Copyright © 2002-2006 Marcin Wichary , unless stated otherwise.
+
+BUILD NOTES:
+From SOURCES.md / REBUILD-ARTIFACT-MAP chrome family.

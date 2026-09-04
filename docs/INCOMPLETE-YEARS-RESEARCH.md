@@ -1,5 +1,8 @@
 # Incomplete Years — Research Map (Gaps → Sources → Artifacts → Docs)
 
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). F1/F2 densify shipped. Residual = true WA/IE6 pixels · platform debt · git Track E. Canonical: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
+
 **Project:** Internet Through Time  
 **Date:** 2026-07-24  
 **Purpose:** Single operational research map for every year that is **not** pixel-perfect / full museum densify. For each incomplete year: **what is incomplete**, **which external sources to use**, **which artifacts to harvest**, **which internal MD files already document it**, and **where files should land in the tree**.
@@ -25,20 +28,20 @@
 
 | Year | Hub | Ship bar | Pages | Rooms | Period assets | E2E | **Playable** | **Museum densify** | Primary incompleteness class |
 |------|-----|----------|------:|------:|--------------:|----:|:------------:|:------------------:|------------------------------|
-| 1994 | Open | Flagship | 155 | 12 | 5* | 4 | ~95% | ~80% | Assets + chrome crops (RECON pack) |
-| 1995 | Open | Flagship | 130 | 10 | 27 | 5 | ~95% | ~85% | Chrome crops; pixel pass |
+| 1994 | Open | Flagship | ~164 | 14 | **22** period pack | 4+ | ~98% | ~95% | **Optional forever:** evolt NN1 OEM · deep Yahoo leaves · NARA WH photo (densify 2026-07-29 closed HotWired/Yahoo hubs/NASA) |
+| 1995 | Open | Flagship | ~134 | 10 | 27 | 5+ | ~98% | ~95% | **Optional forever:** evolt NN2 OEM · WDM Amazon/Yahoo logo crops · GeoCities dump icons (densify 2026-07-29 closed AuctionWeb/HotWired/AltaVista/CNN/Yahoo hubs; live flows green) |
 | 1996 | Open | Flagship | 96 | 12 | 28 | 4 | ~95% | ~80% | Portal/Hotmail chrome depth |
 | 1997 | Open | Flagship | 67 | 13 | 6 | 5 | ~95% | ~85% | **Asset starvation** |
 | 1998 | Open | Museum-grade | 100 | 22 | 22 | 7 | ~95% | ~90% | Optional research rooms; RECON residual |
 | 1999 | Open | Museum-grade | 120 | 27 | 49 | 6 | ~95% | ~90% | Open capture crops; thin culture |
 | 2000 | Open | Densify ship | 138 | 32 | 58 | 4 | ~90% | ~85% | WA bodies still queued (~27 CAPTURE rows) |
 | **2001** | Open | **MVP + HTML densify** | 157 | 33 | 63 | 4 | **~90%** | **~78%** | XP/IE6 pixel crops still open |
-| 2002 | Open | Densify ship | 168 | 43 | 70 | 4 | ~90% | ~85% | UI crops; optional Netflix/Steam |
-| 2003 | Open | Densify ship | 185 | 48 | 93 | 4 | ~90% | ~85% | WA harvest; DRM depth |
+| 2002 | Open | **MVP+P1 shipped** | 73 | — | — | — | ~95% | — | Optional pixels / P2 rooms |
+| 2003 | **Absent** | Not on disk | 0 | — | — | — | — | — | Track D rebuild |
 | **2004** | Open | **MVP + HTML densify** | 104 | 14 | 63 | 4 | **~88%** | **~72%** | RECON brand logos → WA |
 | **2005** | Open | **MVP + HTML densify** | 122 | 20 | 65 | 4 | **~88%** | **~72%** | RECON brand logos → WA |
 
-\*1994 uses `assets/gif/` + `css/mosaic-defaults.css` (no `assets/period/1994/`).
+\*1994 also uses shared `assets/gif/` + `css/mosaic-defaults.css`; **period pack exists** at `assets/period/1994/` (chrome · yahoo WA · fishcam · WH map). Matrix row updated **2026-07-29**.
 
 ### Priority order for densify work
 
@@ -674,7 +677,7 @@ From [`BINGO.md` §5](BINGO.md) + CAPTURE-LOGs — **not yet perfect on disk:**
 | Amazon smile production authenticity check | Version Museum · Turner Duckworth · WA 2000 | 2000–2005 continuity honesty |
 | Pets.com puppet | WA · press | 2000 |
 | MySpace 2003 logo + Tom authentic | WDM · WA (failed harvest history) | 2003–2005 |
-| IE/NN toolbar icons (all gens) | evolt · GUIdebook · WDM software | 1994–2005 shells |
+| IE/NN toolbar icons (all gens) | evolt · GUIdebook · WDM software | 1994–2002 shells on disk (2003–05 if rebuilt) |
 | Win Start buttons | guidebookgallery.org | 95/98/XP shells |
 | Modem WAVs | archive.org modem collections | connect theater all years |
 | Gmail/Flickr/Thefacebook/Firefox crops | WA 2004 | **2004** |

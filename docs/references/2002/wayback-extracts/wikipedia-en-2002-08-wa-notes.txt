@@ -1,0 +1,95 @@
+SOURCE: https://web.archive.org/web/20020802160522id_/http://www.wikipedia.com/wiki/Main_Page
+FINAL: https://web.archive.org/web/20020802160522id_/http://www.wikipedia.com/wiki/Main_Page
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-wikipedia
+ROLE: Wikipedia densify
+TITLE: Main Page
+BYTES: 24627
+ERROR: 
+
+KEY FACTS / TEXT:
+Main Page
+Main Page |
+Recent changes |
+Protected page |
+History |
+Special pages
+Set my user preferences
+Show my watchlist
+List recently updated pages
+Upload image files
+List uploaded images
+List registered users
+Show site statistics
+Go to randomly-selected article
+List orphaned articles
+List orphaned images
+List popular articles
+List most wanted articles
+List short articles
+List long articles
+List newly created articles
+List all pages by title
+List blocked IP addresses
+Printable version
+Other languages: German | Esperanto | Spanish | French | Italian | Dutch | Polish | Portuguese
+66.28.250.175
+Log in | Help
+Main Page From Wikipedia, the free encyclopedia.
+Welcome to Wikipedia , a collaborative project to produce a complete encyclopedia from scratch. We started in January 2001 and already have 35688 articles. We want to make over 100,000 complete articles, so let's get to work--with few exceptions, anyone can edit any article--copyedit, expand an article, write a little, write a lot. See the Wikipedia FAQ for information on how to edit pages and other questions.
+The content of Wikipedia is covered by the GNU Free Documentation License , which means that it is free and will remain so forever. See wikipedia:copyrights for the details and open content and free content for background.
+Current events and breaking news
+Encyclopedia articles about the topics behind the news.
+Current events - Israeli-Palestinian conflict - Airshow - Su-27 - Juan Diego Cuauhtlatoatzin
+Recent celebrity deaths - Chaim Potok - William Pierce
+Philosophy, Mathematics, and Natural Science
+Astronomy and astrophysics - Biology - Chemistry - Earth science - Mathematics - Philosophy - Physics - Statistics
+Social Sciences
+Anthropology - Archaeology - Economics - Geography - History - History of science and technology - Language - Linguistics - Political science - Psychology - Sociology
+Applied Arts and Sciences
+Agriculture - Architecture - Business and industry - Communication - Computer Science - Education - Engineering - Family and consumer science - Health science - Law - Library and information science - Public affairs - Technology - Transport
+Culture
+Classics - Cooking - Critical theory - Dance - Entertainment - Film - Games - Hobbies - Literature - Music - Opera - Painting - Recreation - Religion - Sculpture - Sports - Theater - Tourism - Visual arts and design - Handicraft
+Other Category Schemes
+About Wikipedia category schemes - Library of Congress catalog scheme - Dewey Decimal System - Wikipedia arranged by topic - Historical timeline - Historical anniversaries - Reference tables - Biographies - Current events
+Wikipedias in other languages
+About the non-English Wikipedias - Afrikaans - Arabic (Araby) - Basque (Euskara) - Catalan (Català) - Chinese (Hanyu) - Danish (Dansk) - Dutch (Nederlands) - Esperanto - French (Français) - German (Deutsch) - Hebrew (Ivrit) - Hungarian (Magyar) - Italian (Italiano) - Japanese (Nihongo) - Latin (Latina) - Norwegian (Norsk) - Polish (Polska) - Portuguese (Português) - Russian (Russkiy) - Serbocroatian (Srpskohrvatska) - Slovene (Slovensko) - Spanish (Castellano) - Swedish (Svensk)
+Wikipedia
+About the project: Announcements - FAQ - Policy - Bug reports and feature requests - Wikipedia and Nupedia - Wikipedians
+Discussion and commentary: Wikipedia Commentary - Mailing list - Wikipedia Chat
+Article pointers: New topics - Brilliant prose - Go to a random page
+Content requests: Requested articles - Help desk
+Useful resources for us: Wikipedia utilities - Wikipedia database download - Public domain resources - Sandbox
+Selected press coverage: The New York Times Magazine (December 9, 2001) - The New York Times (September 20, 2001) - MIT's Techreview (September 4, 2001)
+Links: Friends of Wikipedia
+Protected page |
+Talk page |
+History |
+What links here |
+Watch links
+Other languages: German | Esperanto | Spanish | French | Italian | Dutch | Polish | Portuguese
+Main Page | About Wikipedia | Recent changes |
+This page has been accessed 46919 times. The page was last modified 16:43 Aug 1, 2002.
+Main Page
+Recent changes
+Random page
+Watch list
+Current events
+Protected page
+Talk page
+History
+What links here
+Watch links
+Bug reports
+Special pages
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.
+
+## 2026-07-26 re-visit (~20021010 Main_Page after redirect)
+~52,364 English articles (growth densify from 2001)
+"Welcome to Wikipedia, a collaborative project to produce a complete encyclopedia from scratch"
+Started Jan 2001 · anyone can edit without login · GFDL
+Category schemes: Philosophy/Math/Natural Science · Social Sciences · Applied · Culture
+Multi-language list · NOT modern Vector skin

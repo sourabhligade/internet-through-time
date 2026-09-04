@@ -1,0 +1,27 @@
+SOURCE: https://web.archive.org/web/20011124154309id_/http://www.apple.com/ipod/
+STATUS: [wa-visited] 2026-07-26 deep research pass (full body)
+TITLE: Apple - iPod
+ROLE: P0 iPod product — Mac-first portable jukebox
+YEAR TARGET: 2001
+
+KEY COPY (exact / near-exact):
+- Hero: "1,000 songs in your pocket"
+- "Presenting iPod. The first MP3 player to pack a mind-blowing 1,000 songs and a 10-hour battery into a stunning 6.5-ounce package"
+- Size: 2.43 × 4.02 × 0.78 inches; 6.5 ounces
+- FireWire auto-sync with iTunes: "download an entire CD in less than 10 seconds. Or 1,000 songs in under 10 minutes"
+- LCD: six lines; white LED backlight
+- Scroll wheel: browse by playlist, artist or song
+- Headphones: Neodymium magnets; 20–20,000 Hz
+- "iTunes 2 included" — rip MP3s, playlists, burn CDs, equalizer, crossfade, MP3 CD burn
+- "Music shown is not included."
+- Links: commercial · keynote · video · QuickTime VR · itunes.html · userinterface.html · specs.html · Apple Store
+- Copyright © 2001 Apple Computer, Inc.
+- 1-800-MY-APPLE
+
+BUILD:
+- Multi-page: index (hero) · specs · howto/sync · faq · optional UI tour
+- White sparse Apple marketing; tables OK
+- BAN: iTunes Music Store, Windows iTunes, Shuffle/Nano, iPhone
+
+HARVEST:
+- Akamai image paths under a772.g.akamai.net for product stills (im_ form)

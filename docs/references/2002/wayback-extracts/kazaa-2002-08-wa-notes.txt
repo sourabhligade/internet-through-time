@@ -1,0 +1,21 @@
+SOURCE: https://web.archive.org/web/20020820084135id_/http://www.kazaa.com/
+FINAL: https://web.archive.org/web/20020820084135id_/http://www.kazaa.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-kazaa
+ROLE: KaZaA marketing
+TITLE: (no title)
+BYTES: 943
+ERROR: 
+
+KEY FACTS / TEXT:
+(empty — see ERROR)
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.
+
+
+FALLBACK KEY FACTS (Cybercultural internet-2002 [visited]):
+- KaZaA homepage Aug 2002; ~100 million downloads by then
+- FastTrack protocol; Morpheus kicked; spyware accusations; KaZaA Lite unofficial
+- Client theater only in museum — no copyrighted media

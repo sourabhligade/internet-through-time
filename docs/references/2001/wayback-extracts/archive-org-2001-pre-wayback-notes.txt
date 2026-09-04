@@ -1,0 +1,22 @@
+SOURCE: https://web.archive.org/web/20010919170019id_/http://www.archive.org/
+STATUS: [wa-visited] 2026-07-26 (pre-public Wayback UI — Sep 2001)
+TITLE: The Internet Archive: Building an 'Internet Library'
+ROLE: P1/P2 Wayback / memory story context
+YEAR TARGET: 2001
+
+KEY FACTS (Sep 2001 — before Oct 24 public Wayback launch):
+- Mission: free permanent access for researchers/historians
+- Collections as of Mar 2001: Web 4B pages / 40 TB; Election 2000 200M pages; Usenet; movies; Arpanet docs
+- 43+ terabytes total
+- Election 2000 on the Web (Alexa/Compaq/LoC)
+- Movies with Prelinger
+- Library of Congress sculpture of 1997 web snapshot
+
+PUBLIC WAYBACK:
+- Launch Oct 24 2001 UC Berkeley library demo (Brewster Kahle)
+- FAQ honesty: broken pages, missing graphics, incomplete crawls
+- Cybercultural wayback-machine-launch-2001 full narrative
+
+BUILD:
+- Optional educational room: enter URL → fake "archived version" theater (local only)
+- Or About strip on home: web gains a memory

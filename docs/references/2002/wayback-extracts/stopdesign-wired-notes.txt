@@ -1,16 +1,60 @@
 SOURCE: https://stopdesign.com/journal/2002/10/11/finally-were-live.html
-TITLE: Finally, we're live (Douglas Bowman / Stopdesign)
-STATUS: [visited] 2026-07-23
+FINAL: https://stopdesign.com/journal/2002/10/11/finally-were-live.html
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: stopdesign-wired
+ROLE: Wired CSS launch
+TITLE: Finally, we&#039;re live | Stopdesign
+BYTES: 32499
+ERROR: 
 
-KEY FACTS:
-- Wired News redesign launched ~10pm PDT previous night (Oct 2002)
-- Strict **XHTML 1.0**; pages **rely entirely on CSS** for design/format/presentation
-- Millions of pageviews; convert thousands of pages
-- “Significant event in the development and evolution of the Web”
-- Related: Wired article “A Site for Your Eyes” + “Behind the Wired News Redesign”
-- WA announcement path cited elsewhere: 20021013195949 wired culture article
-- Later same year: HotBot redesign also XHTML/CSS (Dec 2002 Stopdesign post)
+KEY FACTS / TEXT:
+Finally, we're live | Stopdesign
+Skip to content
+Menu
+Home
+Journal
+Portfolio
+About
+Contact
+Home Journal 2002
+Finally, we’re live At long last, the Wired News redesign is visible to the world. We launched the site around 10pm PDT time last night. And what a relief it is. Despite numerous setbacks, delays, bugs, and technical difficulties, we pushed through to…
+At long last, the Wired News redesign is visible to the world. We launched the site around 10pm PDT time last night. And what a relief it is. Despite numerous setbacks, delays, bugs, and technical difficulties, we pushed through to the other side and found success. Are all of the bugs and errors fixed? No. But the major problems which were keeping us from launching last night have been solved. And now it’s live for all to see.
+Why is this significant? Why should anyone care? Why did we fight to get a press release issued by our parent company just to cover a redesign of a technology news site? While the design on the surface may look different, admittedly, we haven’t added many new features. So what’s the big deal?
+Take one of the Web’s longest-running daily content-producing sites which gets millions of pageviews, redesign the site with a noticeable facelift, convert the markup of thousands of pages to follow strict XHTML 1.0 rules, make those pages rely entirely on CSS for every design, format, and presentation detail, and don’t look back. Our Executive Editor, Jon Rochmis wrote an article about the redesign, Wired News: A Site for Your Eyes . I took a slightly more technical approach with my explanation: Behind the Wired News Redesign .
+We believe this is a huge deal, and a significant event in the development and evolution of the Web. Wired News is not the first website to make this leap. But it remains a highly visible beacon among the influential techno-savvy creators, inventors, and developers who are building and shaping the Web. It’s our hope that Wired News can be a powerful example of the what can be achieved when following W3C endorsed standards . Articles and documentation discussing the nuts and bolts of the redesign will be posted on this site soon.
+11 October 2002 css wired projects Next post The snowball begins 11 Oct 2002 css wired Just after wrapping up my last post, I started looking around to see if any buzz about the WN launch had hit the Web yet. Ahem… I don’t think this one will sneak under too many radars. Jeffrey Zeldman just… ~300 words
+Related Posts Coming right up 10 Oct 2002 wired projects Since our failed attempt at pushing the Wired redesign live last night, our engineers and developers have been working like crazy to figure out what went wrong. The errors never showed up in our development environment, but only manifested themselves… ~100 words
+News worth noting 21 Aug 2002 css design I should mention here one of the major reasons I’ve become obsessed with Web standards and CSS. My current project (as Design Director of Wired) is a complete redesign of Wired News. See a screenshot of the before state [.gif,… ~300 words
+HotBot redesign launched 16 Dec 2002 css wired Ah, I can finally talk about it. It’s so far off everyone’s radar that hardly anyone has noticed yet. Let’s change that. Another project I had a hand in design directing and pushing to XHTML/CSS (smack in the middle of… ~900 words
+Issue-based content 19 Sep 2002 design wired Finally had a chance over the last two days to begin thinking about the Wired magazine site design. The current site is riddled with usability problems, poor architecture, and a very awkward design. I can be brutally honest about it,… ~200 words
+Navigate
+Home
+Journal
+Portfolio
+About
+Contact
+Explore
+css 85
+design 61
+events 54
+web 52
+locations 51
+personal 46
+wired 43
+technology 40
+site 33
+people 27
+twitter 18
+Follow
+Threads
+Mastodon
+Instagram
+LinkedIn
+Search
+Search across posts, links, & projects
+Search for:
+© 1998–2026 stopdesign. All rights reserved. Hosted by DreamHost .
 
-EXHIBIT USE:
-- sites/wired/ CSS reconstruction + standards beat
-- Contrast with table-heavy MTV / portals
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

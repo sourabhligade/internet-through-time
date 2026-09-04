@@ -1,0 +1,24 @@
+SOURCE: https://web.archive.org/web/20011004133714id_/http://www.amazon.com/exec/obidos/subst/home/home.html/
+STATUS: [wa-visited] 2026-07-26 deep research pass
+TITLE: Amazon.com--Earth's Biggest Selection
+ROLE: P0 Amazon smile-era post-crash retail
+YEAR TARGET: 2001
+
+KEY FACTS:
+- Slogan: "Earth's Biggest Selection"
+- Store tabs / categories (Oct 2001): Auctions, Baby & Baby Registry, Books, Camera & Photo, Cars, Cell Phones, Computer & Video Games, Computers, Corporate Accounts, DVD, Electronics, Gifts, Health & Beauty, In Theaters, Kitchen, Music, Outdoor Living, Outlet, Software, Tools, Toys, Travel, Video, zShops
+- Personalized gateway: "Your Books Store" / Music / DVD / Toys / Electronics
+- Hello / Sign in for personalized recommendations · New customer Start here
+- Top sellers sample: The Corrections (Franzen); Black House; Enya; Mummy Returns DVD
+- Amazon.com Delivers email signup
+- Associates program
+- Gift certificates · NextCard Visa · Purchase Circles · Anywhere · Alerts
+- International: UK, Germany, Japan, France
+- © 1996-2001 Amazon.com
+- Version Museum: 2001–2003 tabs refined / often moved toward left sidebar; smile logo smaller
+
+BUILD:
+- Smile logo REQUIRED (from 2000)
+- Multi-store tabs + cart (amazon.js)
+- Year-correct catalog samples (2001 titles)
+- BAN: Prime as dominant (2005); modern black-nav Amazon

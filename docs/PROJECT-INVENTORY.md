@@ -1,8 +1,11 @@
 # Internet Through Time — Complete Project Inventory
 
+> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). F1/F2 densify shipped. Residual = true WA/IE6 pixels · platform debt · git Track E. Canonical: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
+
 **Project:** The Internet Through Time  
 **Type:** Museum-grade static reconstruction of the early World Wide Web  
-**Scope:** 1994–2005 unlocked on hub · 2006+ planned  
+**Scope:** Hub unlocked **1994–2005** · all year trees on disk · 2006+ planned  
 **Document purpose:** Single reference for everything that exists in the repo — years, sites, pages, engines, features, assets, tests, deploy, and ops.  
 **Generated from repo state:** working tree 2026-07-24 (see also `docs/LEFT-OUT.md` for residuals). **Note:** large uncommitted expansion may exist locally; no git remote required for local museum.  
 
@@ -48,9 +51,9 @@ Historical reconstruction of the Web **year by year**. Not a modern redesign and
 | **2000** | ✅ Museum densify | IE5.5 · smile · crash culture | 56k | `itt00` |
 | **2001** | ✅ MVP + wiki densify | XP · IE6 · Wikipedia · iPod | DSL rising | `itt01` |
 | **2002** | ✅ Densify ship | Friendster · KaZaA · blogosphere | Broadband | `itt02` |
-| **2003** | ✅ Densify ship | MySpace · iTunes · WordPress · LinkedIn | Broadband | `itt03` |
-| **2004** | ✅ MVP densify | XP · IE6 · Firefox 1.0 · Gmail · Flickr · Thefacebook | Broadband | `itt04` |
-| **2005** | ✅ MVP densify | XP · IE6 · YouTube · Maps · Reddit · Digg · Ajax | Broadband | `itt05` |
+| **2003** | ✅ Restored densify | MySpace · iTunes Store · WordPress · LinkedIn | Broadband | `itt03` |
+| **2004** | ✅ Restored MVP | Gmail · Flickr · Thefacebook · Firefox 1.0 | Broadband | `itt04` |
+| **2005** | ✅ Restored MVP | YouTube · Maps · Reddit · Digg | Broadband | `itt05` |
 | **2006+** | 🔒 Planned | Twitter · Facebook open · Google–YouTube | — | — |
 
 ### 2.2 How each year differs (hub comparison)
@@ -92,7 +95,7 @@ Historical reconstruction of the Web **year by year**. Not a modern redesign and
 ### Implemented
 
 - Title and museum tagline (period lobby chrome — not a modern dark product page)
-- Year cards for **1994–2005** (links to `years/<Y>/`) with **per-year visual motifs**
+- Year cards for **1994–2005** available (links to `years/<Y>/` when present)
 - Locked card for **2006+**
 - Comparison table (see §2.2 — extended through 2005 on hub)
 - **Resume row** — if `localStorage.itt-last-year` is set, shows “Continue YYYY immersion”
@@ -641,7 +644,7 @@ npm run ci
 
 ## 17. One-page “what’s built” checklist
 
-- [x] Hub with live years **1994–2005** + future card beyond  
+- [x] Hub with live years **1994–2002** + 2003 locked Planned  
 - [x] Resume last year  
 - [x] 1994–2003 museum/densify spine  
 - [x] 2001 Wikipedia + iPod densify  

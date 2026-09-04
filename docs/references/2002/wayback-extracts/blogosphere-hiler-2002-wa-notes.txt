@@ -1,0 +1,44 @@
+SOURCE: https://web.archive.org/web/20020604065327id_/http://www.microcontentnews.com/articles/blogosphere.htm
+FINAL: https://web.archive.org/web/20020604065327id_/http://www.microcontentnews.com/articles/blogosphere.htm
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-hiler
+ROLE: blogosphere word
+TITLE: Blogosphere: the emerging Media Ecosystem - How Weblogs and Journalists work together to Report, Filter and Break the News - Microcontent News, a Corante.com Microblog
+BYTES: 58987
+ERROR: 
+
+KEY FACTS / TEXT:
+Blogosphere: the emerging Media Ecosystem - How Weblogs and Journalists work together to Report, Filter and Break the News - Microcontent News, a Corante.com Microblog
+This site will work and look better in a browser that supports web standards , but it is accessible to any browser or Internet device.
+SUBSCRIBE
+Enter your e-mail address to receive Microcontent News !
+powered by Bloglet
+ABOUT MICROCONTENT
+This Corante Microblog covers what we call the "microcontent" sector: weblogs, Webzines, email digests, and the entire personal publishing sector. We also cover the business side of microcontent, including text-based microads, and corporate blogging You can read more about our magazine here
+Tuesday, May 28, 2002
+Blogosphere: the emerging Media Ecosystem
+How Weblogs and Journalists work together to Report, Filter and Break the News
+by John Hiler
+Trying to understand the complex relationship between bloggers and journalists has become my own personal Waterloo.
+I've taken a few stabs at it already, and learned a lot along the way.  Lesson One : Blogs can do a tremendous job breaking news, and journalists are wise to start their own to tap that power.  Lesson Two : Some rare bloggers become amateur journalists, a status which brings with it its own unique ethical challenges.  Lesson Three : Most bloggers are more like Columnists than capital-J Journalists.
+Still no matter what I did, the weblog/journalism relationship seemed to defy reduction.  No metaphor seemed complex enough to capture the subtleties of their interactions.  I greatly enjoyed one set of metaphors from fellow metablogger Doctor Weevil:
+blogger : journalist :: tick : sheep bloggers : journalists :: dung beetles : elephants
+But surely bloggers are more than just ticks and dung beetles feeding off of their journalist hosts!  True, the majority of links in weblogs are to articles written by journalists...  but I've seen too many articles by journalists pulled straight from weblogs, Blogdex , and Metafilter to buy fully into the Bloggers/Parasite metaphor.
+SEARCHING FOR A METAPHOR
+Were Bloggers parasites feasting off their Journalist hosts?  Or were Bloggers creating a new form of grassroots journalism, one that threatened the extinction of Journalism as we know it?
+Then one day it hit me: parasites & hosts , grassroots  & extinction ...  they were all biological metaphors.
+All of a sudden, it all made sense!  The truth is, Bloggers and Journalists are both parasitic organisms.  In biology, we have a term for relationship that seems mutually parasitic: symbiosis, when both organisms benefit from working together.  In many ways, bloggers and journalists are in a mutually symbiotic relationship, working together to report, filter and break the news.
+INTRODUCING THE BLOGOSPHERE
+Bloggers and Journalists form a blogging biosphere that has become an ecosystem in its own right, an ecosystem that one savvy blogger has dubbed the Blogosphere.  The word was meant as a clever pun combining "Blog" with "logos", a Greek word meaning logic and reason.  And while bloggers do often use logic in dissecting arguments, I love the word Blogosphere because it happens to capture another truth: the Blogosphere is a biosphere of its own, a Media Ecosystem that lives and breathes just like any other biological system.
+Like any ecosystem, the Blogosphere demonstrates all the classic ecological patterns: predators and prey, evolution and emergence, natural selection and adaptation.  I've often thought that anthropologists were best equipped to deconstruct the emerging blogging sub-culture, but now I'm convinced I got it wrong: the greater mysteries of the Blogosphere will be unlocked instead by evolutionary biologists.
+BIRTH OF THE BLOGOSPHERE
+Something about the Blogosphere gives it the feel of a living breathing ecosystem.
+Like any ecosystem, the Blogosphere has a life of its own, one that's more than the sum of its weblogs.  You can't understand a jungle by studying a single jaguar, and in the same way you can't understand the Blogosphere by studying a single weblog.  Surfing the Blogosphere you can see evolutionary forces play out in real time, as weblogs vie for niche status, establish communities of like-minded sites, and jostle for links to their site.
+But in order to understand the new Media Ecosystem, first we have to make sense of the Old Media Ecosystem.  Let's start by following a typical news story across its natural life cycle.
+THE LIFE CYCLE OF A NEWS STORY
+I witnessed firsthand the life cycle of a news story a few months ago, when the Google/Scientology story broke this past March.  The Church of Scientology filed a DMCA (Digital Millennium Copyright Act) complaint against Google, forcing the search engine to pull the content of a website criticizing the Church.  There was an instant uproar on the web, as critics charged Google with censorship (a situation that Google handled brilliantly a few weeks later).
+I found out about the DMCA complaint late one night,
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

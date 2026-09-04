@@ -1,0 +1,51 @@
+SOURCE: https://web.archive.org/web/20021202091911id_/http://www.blogger.com/
+FINAL: https://web.archive.org/web/20021202091911id_/http://www.blogger.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-blogger
+ROLE: Blogger Pyra Dec 2002
+TITLE: BLOGGER
+BYTES: 25037
+ERROR: 
+
+KEY FACTS / TEXT:
+BLOGGER
+The 10 most recently published blogs:
+1:18 AM Programmer's Story so long sweet summer Blah...Blah..B... Fightin' with Grabes neged I Hate Danger Red Jacket : : : [ shaunMtai ] bloGGed : : : egy�bk�nt FLaTBLoG
+Feel like browsing? Here are some blogs we've noticed recently.
+21.11.02 ph8
+21.11.02 Primal Records
+20.11.02 CNET Radio - The Tech Station
+13.11.02 Tireli
+4.11.02 purse lip square jaw
+28.10.02 Long Passage
+24.10.02 Mr. Dutton Goes to Mozambique
+22.10.02 How Appealing
+21.10.02 Chuck's Blogumentary
+16.10.02 Life in the Freezer
+Stay in the loop. Subscribe to the BloggerBuzz Newsletter:
+(Your address, of course!, will never be shared. Unsubscribe any time.)
+Blogger offers you instant communication power by letting you post your
+thoughts to the web whenever the urge strikes. Learn more about it. Or:
+And the winner (of the Blogger redesign contest) is... Kevin Conboy! We are very excited to work with Kevin to implement his design concept over the next weeks (we're going to keep it as a surprise). Thanks to everyone who participated in the design contest...we were impressed by the work turned in by everyone. The final decision was difficult, but we look forward to the new Blogger site, and hope you do too. Congratulations, Kevin!
+Looking for another design contest? How about the 2003 SXSW website competition ? Deadline for entry is December 6th. SXSW Interactive was a sponsor of the Blogger Redesign contest.
+As our winner, Kevin will receive a Gold Pass to the 2003 SXSW Interactive and Film conferences, $500 to help defray travel expenses, a Blogger messenger bag , and one year of Blogger Pro .
+– Ev. [11/25/2002 12:44:41 PM] +
+Redesign Contest Update: Last Thursday we sent responses to everyone who expressed interest in entering the contest. Unfortunately, a number of the e-mails have been returned to us due to full mailboxes, bad addresses, etc. We have tried to make contact with those people once again, but in some cases have failed. If submitted your portfolio but still haven't heard from us, this is the reason. If you haven't heard from us and want to know if we tried to send you the documentation, e-mail contest AT blogger.com
+– Ev. [11/21/2002 04:00:10 PM] +
+Design Contest Update (see below): Due to the overwhelming response we've received, it's taken us a few extra days to check out all the potential designers who are interested in our redesign contest. We're not blowing you off, honest! We'll be sending responses to everyone who submitted their email/URL over the next two days; we just didn't want anyone to worry. If you are interested in signing up for the contest, better do it now ... (also, I re-enabled the form that wasn't there on one of the servers) we'll stop taking names at midnight tonight so that we can distribute the design materials to everyone at the same time.
+Update update: The applications have been filtered, and specs have gone out. There were some amazing applicants. The deadline is in a week (from tomorrow).
+– Ev. [11/12/2002 02:59:44 PM] +
+Calling all Designers: Blogger.com needs a facelift! We're getting ready to release some major changes and improvements to the Blogger application, and we think the occasion calls for a long-overdue update to the Blogger.com site design. In order to get this done at the same time, we've decided to hold a contest for designers who would like to take a stab at what they think Blogger should look like. Learn more...
+– Ev. [11/4/2002 02:53:12 PM] +
+Happy Halloween!
+– Jason Shellen [10/31/2002 12:00:43 AM] +
+Ever have something you didn't want the whole world to see? There is now an admin panel for Blog*Spot Plus sites that will allow you to, among other things (soon), password-protect all or part of your site . Very handy for: business blogs, family blogs, subscription-based content...hmmm, what else?
+– Ev. [9/21/2002 03:31:15 PM] +
+Hey, we got something new! bSTATS , the newest creation from the lab , is the first web stats tracker designed specifically for blog publishers. It will tell you how many people are viewing your blog, where they're coming from, what they're driving, and even what they're looking at (ever want to know what your most popular posts are?). In real time. With no ugly graphics on your page. And guess what? It's free for Blog*Spot Plus users. And guess what else? It's not available to anyone else. Yet. Sorry. So, if you're on Blog*Spot, yet another reason to upgrade. If you're not...hold tight.
+– Ev. [9/19/2002 06:39:22 PM] +
+The 'Not quite in time for back-to-school' Blogger Store Sale We may be off a few weeks with this one but it's still worth a look. Due to popular request we are now selling Blogger Messenger bags! Just the thing to keep your Shakira Trapper Keeper in, order soon we have a limited supply. We are also offering mugs and mousepads again at lowered prices. Mugs are just $11.99 plus shipping thru September. Order today! Then get back to home room before the dean catches you.
+– Jason Shellen [9/17/2002 10
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

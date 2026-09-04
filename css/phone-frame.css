@@ -1,0 +1,33 @@
+/* Shared handheld bezel for 2007–2013 product rooms (RECON — no brand pixels). */
+.itt-phone {
+  max-width: 320px;
+  margin: 12px auto;
+  background: #1a1a1a;
+  border-radius: 28px;
+  padding: 14px 12px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+.itt-phone-4 { max-width: 340px; }
+.itt-phone-status {
+  font: 10px/1.4 Tahoma, Arial, sans-serif;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px 8px;
+}
+.itt-phone-screen {
+  background: #fff;
+  border-radius: 4px;
+  overflow: auto;
+  min-height: 280px;
+}
+.itt-phone-home {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  margin: 12px auto 0;
+  background: #111;
+}
+.vine-app .itt-phone-screen { background: #000; color: #eee; min-height: 360px; }

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="home" title="Home" href="http://www.mozilla.org/">
+<link rel="stylesheet" type="text/css" href="../../css/print.css"  media="print">
+<link rel="stylesheet" type="text/css" href="../../css/base/content.css"  media="all">
+<link rel="stylesheet" type="text/css" href="../../css/cavendish/content.css" title="Cavendish" media="screen">
+<link rel="stylesheet" type="text/css" href="../../css/base/template.css"  media="screen">
+<link rel="stylesheet" type="text/css" href="../../css/cavendish/template.css" title="Cavendish" media="screen">
+<link rel="icon" href="../../images/mozilla-16.png" type="image/png">
+
+    <title>Firefox - Rediscover the web</title>
+    <link rel="icon" href="http://www.mozilla.org/products/firefox/ffico.png" type="image/png">  
+    <script type="text/javascript">
+    <!--
+    function getPlatform()
+    {
+      if (navigator.platform.indexOf("Win32") != -1)
+        return "Windows";
+      else if (navigator.platform.indexOf("Linux") != -1)
+        return "Linux";
+      else if (navigator.userAgent.indexOf("Mac OS X") != -1)
+        return "MacOSX";
+      else if (navigator.userAgent.indexOf("MSIE 5.2") != -1)
+        return "MacOSX";
+      else if (navigator.platform.indexOf("Mac") != -1)
+        return "Mac";
+      return "Other";
+    }
+  
+  var gWin32DownloadLink = "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10.1/Firefox Setup 1.0PR.exe";
+  var gLinuxDownloadLink = "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10.1/firefox-1.0PR-i686-linux-gtk2+xft-installer.tar.gz";
+  var gMacOSDownloadLink = "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10.1/Firefox 1.0PR.dmg.gz";
+  var gWin32DownloadSize = "(4.5MB)";
+  var gLinuxDownloadSize = "(8.1MB)"
+  var gMacOSDownloadSize = "(8.4MB)";
+
+  function writeNewDownloadsSidebar()
+  {
+    document.writeln("<div class=\"download\">");
+    // Show the dynamic links
+    var platform = getPlatform();
+    if (platform == "Mac")
+      document.writeln("  <a href=\"\">MacOS 9 and earlier are not supported<\/a>");
+    else {
+      switch (platform) {
+      case "Windows":
+        document.writeln("    <h3><a href=\"" + gWin32DownloadLink + "\" id=\"downloadLink\">Free Download<\/a><\/h3>");
+        document.writeln("    <span id=\"configParent\">for <span id=\"configuration\">Windows, English " + gWin32DownloadSize + "<\/span><\/span>");
+        break;
+      case "Linux":
+        document.writeln("    <h3><a href=\"" + gLinuxDownloadLink + "\" id=\"downloadLink\">Free Download<\/a><\/h3>");
+        document.writeln("    <span id=\"configParent\">for <span id=\"configuration\">Linux (x86), English " + gLinuxDownloadSize + "<\/span><\/span>");
+        break;
+      case "MacOSX":
+        document.writeln("    <h3><a href=\"" + gMacOSDownloadLink + "\" id=\"downloadLink\">Free Download<\/a><\/h3>");
+        document.writeln("    <span id=\"configParent\">for <span id=\"configuration\">MacOS X, English " + gMacOSDownloadSize + "<\/span><\/span>");
+        break;
+      default:
+        document.writeln("    <h3><a href=\"http://www.mozilla.org/products/firefox/releases/#download\" id=\"downloadLink\">Free Download<\/a><\/h3>");
+        document.writeln("    <span id=\"configParent\">    <span id=\"configuration\">            <\/span><\/span>");
+        break;
+      }
+    }
+    document.writeln("    <\/div>");
+    // box displaying CD link
+    document.writeln("    <div class=\"shop\">");
+    document.writeln("    Or, get the <a href=\"http://www.mozillastore.com/products/software/firefoxcdguidebook/?r=mozorg8\">Firefox CD &amp; Guidebook<\/a> from the <a href=\"http://www.mozillastore.com/?r=mozorg9\">Mozilla Store<\/a>.");
+    document.writeln("    <\/div>");
+  }
+  -->
+  </script>
+  </head>
+<body id="www-mozilla-org" class="deepLevel nomenu">
+<div id="container">
+<p class="skipLink"><a href="#mBody" accesskey="2">Skip to main content</a></p>
+<div id="header">
+<h1><a href="/" title="Return to home page" accesskey="1">Mozilla</a></h1>
+<ul>
+<li id="menu_aboutus"><a href="../../about/" title="Getting the most out of your online experience">About</a></li>
+<li id="menu_developers"><a href="../../developer/" title="Using Mozilla's products for your own applications">Developers</a></li>
+<li id="menu_store"><a href="http://www.mozillastore.com/?r=mozorg1" title="Shop for Mozilla products on CD and other merchandise">Store</a></li>
+<li id="menu_support"><a href="../../support/" title="Installation, trouble-shooting, and the knowledge base">Support</a></li>
+<li id="menu_products"><a href="../../products/" title="All software Mozilla currently offers">Products</a></li>
+</ul>
+<form id="search" method="get" action="http://www.google.com/custom" title="Mozilla.org Search">
+<div>
+<label for="q" title="Search mozilla.org&quot;s sites">search mozilla:</label>
+<input type="hidden" name="cof" value="LW:174;LH:60;L:http://www.mozilla.org/images/mlogosm.gif;GIMP:#cc0000;T:black;ALC:#0000ff;GFNT:grey;LC:#990000;BGC:white;AH:center;VLC:purple;GL:0;GALT:#666633;AWFID:9262c37cefe23a86;">
+<input type="hidden" name="domains" value="mozilla.org">
+<input type="hidden" name="sitesearch" value="mozilla.org">
+<input type="text" id="q" name="q" accesskey="s" size="30">
+<input type="submit" id="submit" value="Go">
+</div>
+</form>
+</div>
+<hr class="hide">
+<div id="mBody">
+
+
+  
+
+  
+	<div class="key-point">
+		<div id="product-desc" class="product-firefox">
+			<h2>Firefox: the browser, reloaded</h2>
+			<p>The Firefox Preview Release empowers you 
+			   to browse faster, more safely, and more efficiently than with any 
+			   other browser. Join more than <b>7 million</b> others and
+			   <a href="http://www.mozilla.org/products/firefox/switch.html">make the switch 						   today</a>&mdash;Firefox imports your Favorites, settings and other information, so you have 			   		   nothing to lose.
+			</p>
+		</div>
+		<div id="product-side">
+            <script type="text/javascript">
+            <!--
+              writeNewDownloadsSidebar();
+            //-->
+            </script>
+            <noscript>
+              <div class="download">
+			        <h3>Download Now</h3>
+              <ul>
+                <li><a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10.1/Firefox Setup 1.0PR.exe">Windows (4.5MB)</a> </li>
+                <li><a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10.1/firefox-1.0PR-i686-linux-gtk2+xft-installer.tar.gz">Linux (8.1MB)</a></li>
+                <li><a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10.1/Firefox 1.0PR.dmg.gz">Mac OS X (8.4MB)</a></li>
+              </ul>
+			  </div>
+            </noscript>
+			<ul>
+			<li><a class="ancilliaryLink" href="releases/0.10.html#download">Other Systems and Languages</a></li>
+			<li><a class="ancilliaryLink" href="system-requirements.html">System Requirements</a></li>
+			<li><a class="ancilliaryLink" href="releases/">Release Notes</a></li>
+			<li><a class="ancilliaryLink" href="http://www.spreadfirefox.com/">Spread the Word</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="mainContent" class="right">
+	      <h3>Why Use Firefox?</h3>
+			<p>&ldquo;<strong><a href="http://www.usatoday.com/tech/news/computersecurity/2004-09-08-zombieinfect_x.htm">Beware of spyware. If you can, use the Firefox browser.</a></strong>&rdquo; <em>-&nbsp;USA&nbsp;Today</em></p>
+			<p>&ldquo;<strong><a href="http://www.forbes.com/2004/09/29/cx_ah_0929tentech.html?partner=tentech_newsletter">Better than Internet Explorer by leaps and bounds</a>.</strong>&rdquo; <em>-&nbsp;FORBES</em></p>
+		  <dl id="features">
+		  <dt>Popup Blocking</dt>
+	      <dd>Stop annoying popup ads in their tracks with Firefox's built in popup
+	        blocker.</dd>
+	
+	      <dt>Tabbed Browsing</dt>
+	      <dd>View more than one web page in a single window with this time saving
+	        feature. Open links in the background so that they're ready for viewing
+	        when you're ready to read them. <a href="tabbed-browsing.html">Find out more...</a></dd>
+	
+	      <dt>Privacy and Security</dt>
+	      <dd>Built with your security in mind, Firefox keeps your computer safe from
+	        malicious spyware by not loading harmful ActiveX controls. A comprehensive
+	        set of privacy tools keep your online activity your business.
+	      </dd>
+
+	      <dt>Smarter Search</dt>
+	      <dd>Google Search is built right into the toolbar, and there are a plethora
+	        of other search tools including Keywords (type "dict &lt;word&gt;" in
+	        the Location Bar), and the new find toolbar (which finds as you type and eliminates the annoying window 	        	that always seems to be in your way).</dd>
+	
+	      <dt>Live Bookmarks</dt>
+	      <dd>RSS integration lets you read the latest news headlines and read updates
+	          to your favorite sites that are syndicated. 
+	          <a href="live-bookmarks.html">Find out more...</a></dd>
+
+	      <dt>Hassle-Free Downloading</dt>
+	      <dd>Files you download are automatically saved to your Desktop so they're
+	        easy to find. Fewer prompts mean files download quicker.</dd>
+	
+	      <dt>Fits Like a Glove</dt>
+	      <dd>Simple and intuitive, yet fully featured, Firefox has all the functions
+	        you're used to - Bookmarks, History, Full Screen, Text Zooming to make
+	        pages with small text easier to read, etc.</dd>
+	
+	      <dt>S, M, L or XL&#8212;It's Your Choice</dt>
+	      <dd>Firefox is the most customizable browser on the planet. Customize your
+	        toolbars to add additional buttons, install new Extensions that add
+	        new features, add new Themes to browse with style, and use the adaptive
+	        search system to allow you to search an infinite number of engines.
+	        Firefox is as big or small as you want.</dd>
+	
+	      <dt>Setup's a Snap</dt>
+	      <dd>At only 4.5MB (Windows), Firefox takes just a few minutes to download over
+	        a slow connection and seconds over a fast connection. The installer gets you set up quickly, and
+	        the new Easy Transition system imports all of your settings -
+	        Favorites, passwords and other data from Internet Explorer and other
+	        browsers - so you can start surfing right away.</dd>
+	
+	      <dt>A Developer's Best Friend</dt>
+	      <dd>Firefox comes with a standard set of developer tools including
+	        a powerful JavaScript and CSS error/warning console, and an optional
+	        Document Inspector that gives detailed insight about your pages.</dd>
+	
+	      <dt>Read Mail&#8212;Not Spam</dt>
+              <dd><a href="../thunderbird/">Thunderbird</a> is the                       perfect complement to Firefox.</dd>
+		 </dl>
+	</div>
+    <div id="side" class="right">
+      <h3>Support Our Work</h3>
+      <p><a href="http://www.MozillaStore.com/products/clothing/firefoxtee/?r=mozorg13"><img src="../../images/ff_shirt.jpg" width="90" height="109" class="imgright" alt="Firefox Shirt"></a>You can support our work on Firefox and other projects and get some sweet stuff in return. <a href="http://www.MozillaStore.com/products/donations/?r=mozorg10">Make a donation</a> or <a href="http://www.MozillaStore.com/products/clothing/firefoxtee/?r=mozorg11">buy a Firefox shirt</a> at the <a href="http://www.MozillaStore.com/?r=mozorg12">Mozilla Store</a>.</p>
+      <h3>Resources and Links</h3>
+      <ul class="compact">
+        <li><a href="http://update.mozilla.org/?application=firefox">Get Extensions and Themes</a></li>
+        <li><a href="http://www.spreadfirefox.com/">Spread the Word!</a></li>
+        <li><a href="http://forums.mozillazine.org/viewforum.php?f=38">Support Forum</a></li>
+        <li><a href="http://www.mozillazine.org/">MozillaZine</a></li>
+        <li><a href="../../support/firefox/">Firefox Help</a></li>
+        <li><a href="../../projects/firefox/">Project Information</a></li>
+      </ul>
+      <h3>New in Firefox PR</h3>
+      <ul class="compact">
+        <li>Live Bookmarks</li>
+        <li>Improved FastFind</li>
+        <li>Improved Security</li>
+        <li>Master Password</li>
+        <li>Software Update</li>
+        <li>Smaller Download</li>
+      </ul>
+    </div>
+  
+
+
+<hr class="hide">
+<hr class="hide">
+</div>
+<div id="footer">
+<ul>
+<li><a href="../../sitemap.html">Site Map</a></li>
+<li><a href="../../contact/">Contact Us</a></li>
+<li><a href="../../foundation/donate.html">Donate</a></li>
+</ul>
+<p class="copyright">Copyright &copy; 1998-2004 The Mozilla Organization</p>
+<p>
+<span>Last modified October 30,  2004</span>
+<span><a href="http://www.mozilla.org/webtools/bonsai/cvslog.cgi?file=mozilla-org/html/products/firefox/index.html&amp;rev=&amp;root=/cvsroot/">Document History</a></span>
+<span><a href="http://doctor.mozilla.org/?file=mozilla-org/html/products/firefox/index.html">Edit this Page</a></span> <span>(or <a href="/README-cvs.html">via CVS</a>)</span>
+</p>
+</div>
+</div>
+</body>
+</html>

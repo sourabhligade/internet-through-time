@@ -3,7 +3,8 @@
  * Part of SRP split under js/browser/ (see docs/SRP-SPLIT-PLAN.md)
  *
  * Usage: ITT.Browser.create(ITT.configs["1995"]);
- * Depends on: js/lib/util.js (+ optional BrowserConnect / BrowserLoadTheater installers)
+ * Depends on: js/lib/util.js + browser/navigate.js + browser/chrome-ui.js
+ *   (+ BrowserConnect / BrowserLoadTheater)
  * Config shape: js/config/<year>.js
  */
 (function (global) {
@@ -13,6 +14,13 @@
   var U = ITT.util;
   if (!U) {
     throw new Error("ITT.util missing — load js/lib/util.js before browser-core.js");
+  }
+  var Nav = ITT.BrowserNavigate;
+  if (!Nav) {
+    throw new Error("ITT.BrowserNavigate missing — load js/browser/navigate.js before browser/create.js");
+  }
+  if (!ITT.BrowserChrome || typeof ITT.BrowserChrome.attach !== "function") {
+    throw new Error("ITT.BrowserChrome missing — load js/browser/chrome-ui.js before browser/create.js");
   }
 
   /**
@@ -29,9 +37,7 @@
     var BM_KEY = config.bookmarksKey || ("itt-" + YEAR + "-bookmarks");
     var CONNECTED_KEY = config.connectedKey || ("itt-" + YEAR + "-connected");
     var URL_MAP = config.urlMap || {};
-    var TITLE_MAP = config.titleMap || {};
-    var DEFAULT_BOOKMARKS = (config.defaultBookmarks || []).slice();
-    var URL_PREFIXES = config.urlPrefixes || [];
+    var DEFAULT_BOOKMARKS = (config.defaultBookmarks || config.bookmarks || []).slice();
     var FALLBACK_BASE = config.fallbackUrlBase || ("http://home.nerf.edu/web" + YEAR + "/");
     var TITLE_SUFFIX = config.browserTitleSuffix || " - Netscape";
     var DIR_KEYS = config.dirSiteKeys || [];
@@ -103,9 +109,6 @@
     var statusTimers = [];
     var imageRevealTimers = [];
     var loadStartedAt = 0;
-    var findLastQuery = "";
-    var findLastIndex = 0;
-    var clipboardText = "";
     var maximized = !!config.maximizedDefault;
     var lastAttemptedUrl = "";
     var ignoreIframeLoad = false;
@@ -155,6 +158,30 @@
       return null;
     }
 
+    /* Chrome UI is attached after navigate exists. These stubs close over Chrome. */
+    var Chrome = null;
+    function renderBookmarkMenus() {
+      if (Chrome && Chrome.renderBookmarkMenus) Chrome.renderBookmarkMenus();
+    }
+    function renderGoHistory() {
+      if (Chrome && Chrome.renderGoHistory) Chrome.renderGoHistory();
+    }
+    function closeAllDialogs() {
+      if (Chrome && Chrome.closeAllDialogs) Chrome.closeAllDialogs();
+    }
+    function ensureBackdropSane() {
+      if (Chrome && Chrome.ensureBackdropSane) Chrome.ensureBackdropSane();
+    }
+    function showAlert(title, msg) {
+      if (Chrome && Chrome.showAlert) Chrome.showAlert(title, msg);
+    }
+    function closeMenus() {
+      if (Chrome && Chrome.closeMenus) Chrome.closeMenus();
+    }
+    function runCommand(cmd, el) {
+      if (Chrome && Chrome.runCommand) Chrome.runCommand(cmd, el);
+    }
+
     /* ============================================================
      * Prefs / bookmarks
      * ============================================================ */
@@ -169,7 +196,10 @@
         homePath: d.homePath || HOME,
         showToolbar: d.showToolbar !== false,
         showLocation: d.showLocation !== false,
-        showDirbar: d.showDirbar !== false,
+        showDirbar:
+          d.showDirbar != null
+            ? !!d.showDirbar
+            : parseInt(config.year, 10) < 2015,
         showDesktopIcons: d.showDesktopIcons !== false,
         desktopBg: d.desktopBg || "#000000"
       };
@@ -232,27 +262,14 @@
     }
 
     /* ============================================================
-     * Path / URL helpers
+     * Path / URL helpers — pure logic in browser/navigate.js (SRP)
      * ============================================================ */
     function normalizePath(path) {
-      return U.normalizeYearPath(path, YEAR, HOME);
-    }
-
-    function yearRoot() {
-      return U.yearRootPath(YEAR);
+      return Nav.normalizePath(path, YEAR, HOME);
     }
 
     function absContentUrl(relPath) {
-      relPath = normalizePath(relPath || HOME);
-      var q = "";
-      var qi = relPath.indexOf("?");
-      if (qi !== -1) {
-        q = relPath.slice(qi);
-        relPath = relPath.slice(0, qi);
-      }
-      if (relPath.indexOf("pages/sites/") === 0) relPath = relPath.slice("pages/".length);
-      if (relPath.indexOf("sites/pages/") === 0) relPath = relPath.slice("sites/".length);
-      return yearRoot() + relPath.replace(/^\//, "") + q;
+      return Nav.absContentUrl(YEAR, relPath, HOME);
     }
 
     function pathFromIframe() {
@@ -268,52 +285,15 @@
     }
 
     function resolveHref(href, currentPath) {
-      if (!href) return null;
-      // Same-origin absolute URLs (immersion R() now emits /years/YYYY/sites/…)
-      try {
-        if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
-          var absU = new URL(href, window.location.href);
-          if (absU.origin === window.location.origin) {
-            href = absU.pathname + absU.search + absU.hash;
-          } else {
-            return { external: true, href: href };
-          }
-        }
-      } catch (eAbs) { /* keep href */ }
-      var marker = "/years/" + YEAR + "/";
-      var mi = href.indexOf(marker);
-      if (mi !== -1) {
-        return { external: false, path: normalizePath(href.slice(mi + marker.length)) };
-      }
-      var resolved = U.resolveRelativePath(href, currentPath);
-      if (resolved && !resolved.external && resolved.path) {
-        resolved.path = normalizePath(resolved.path);
-      }
-      return resolved;
+      return Nav.resolveHref(href, currentPath, YEAR, HOME);
     }
 
     function displayUrl(path) {
-      var clean = normalizePath(path).split("?")[0];
-      if (URL_MAP[clean]) return URL_MAP[clean];
-
-      if (typeof config.displayUrlExtras === "function") {
-        var extra = config.displayUrlExtras(clean);
-        if (extra) return extra;
-      }
-
-      for (var i = 0; i < URL_PREFIXES.length; i++) {
-        var rule = URL_PREFIXES[i];
-        if (clean.indexOf(rule.prefix) === 0) {
-          var rest = clean.slice(rule.prefix.length);
-          if (rule.stripIndex) rest = rest.replace(/\/index\.html$/, "/").replace(/^index\.html$/, "");
-          return rule.base + rest;
-        }
-      }
-      return FALLBACK_BASE + clean;
+      return Nav.displayUrl(path, config);
     }
 
     function hostFromDisplayUrl(url) {
-      return U.hostFromUrl(url);
+      return Nav.hostFromDisplayUrl(url);
     }
 
     function brokenImageUrl() {
@@ -337,13 +317,7 @@
     }
 
     function displayTitle(path) {
-      var clean = normalizePath(path).split("?")[0];
-      if (TITLE_MAP[clean]) return TITLE_MAP[clean] + TITLE_SUFFIX;
-      var parts = clean.split("/");
-      var last = parts[parts.length - 1].replace(".html", "").replace(/_/g, " ");
-      if (last === "index" && parts.length > 1) last = parts[parts.length - 2].replace(/_/g, " ");
-      if (clean.indexOf("sites/yahoo/") === 0) return "Yahoo! - " + last + TITLE_SUFFIX;
-      return last.charAt(0).toUpperCase() + last.slice(1) + TITLE_SUFFIX;
+      return Nav.displayTitle(path, config);
     }
 
     function currentPath() {
@@ -426,13 +400,14 @@
      * ============================================================ */
     function navigate(path, options) {
       options = options || {};
-      path = normalizePath(path);
-      // Defense: never load the bogus pages/sites/* join (year-root hrefs from pages/*)
-      if (path.indexOf("pages/sites/") === 0) {
-        path = path.slice("pages/".length);
-      }
-      if (path.indexOf("sites/pages/") === 0) {
-        path = path.slice("sites/".length);
+      path = Nav.sanitizeNavPath(path, YEAR, HOME);
+      /* Drop any stuck Welcome/alert modal so iframe links stay clickable */
+      try {
+        closeAllDialogs();
+      } catch (eNavDlg) {
+        try {
+          ensureBackdropSane();
+        } catch (e2) { /* */ }
       }
       clearLoadTimers();
       var gen = ++loadGen;
@@ -497,8 +472,9 @@
         })(phases[pi]);
       }
 
-      // Hold blank iframe until most of the wait is done — that empty throbber IS the memory
-      var startAt = totalDelay <= 0 ? 0 : Math.floor(totalDelay * 0.35);
+      // Text-first: start the document after host-contacted, then drip images.
+      // A long blank iframe is the memory; a complete swap-in is not.
+      var startAt = totalDelay <= 0 ? 0 : Math.floor(totalDelay * 0.18);
       loadTimer = window.setTimeout(function () {
         loadTimer = null;
         if (gen !== loadGen) return;
@@ -580,38 +556,26 @@
     function openLocationString(val) {
       val = (val || "").trim();
       if (!val) return;
-      var lower = val.toLowerCase();
       lastAttemptedUrl = val;
 
-      for (var k in URL_MAP) {
-        if (Object.prototype.hasOwnProperty.call(URL_MAP, k)) {
-          var mapped = URL_MAP[k].toLowerCase();
-          if (mapped === lower || lower.indexOf(mapped) === 0) {
-            navigate(k);
-            return;
-          }
-        }
-      }
+      var match = Nav.matchOpenLocation(val, URL_MAP, LOCATION_HINTS);
+      if (!match) return;
 
-      for (var h = 0; h < LOCATION_HINTS.length; h++) {
-        var hint = LOCATION_HINTS[h];
-        if (hint.re && hint.re.test(val)) {
-          navigate(hint.path);
-          return;
-        }
+      if (match.path) {
+        navigate(match.path);
+        return;
       }
-
-      if (lower.indexOf("gopher:") === 0 || lower.indexOf("ftp:") === 0) {
+      if (match.protocolHelper) {
         showAlert(
           "Netscape",
-          "Netscape needs a helper application to handle this URL:\n" + val +
+          "Netscape needs a helper application to handle this URL:\n" + match.val +
             "\n\nGopher and FTP were common in this era but are not mirrored in this exhibit."
         );
         setStatus("No helper application for this protocol.");
         return;
       }
 
-      sessionStorage.setItem("itt-last-url", val);
+      sessionStorage.setItem("itt-last-url", match.val || val);
       navigate("pages/error/unreachable.html");
       setStatus("Unable to locate the server.");
     }
@@ -621,14 +585,56 @@
      * ============================================================ */
     function ensureImmersion(doc) {
       try {
-        if (!doc || doc.querySelector("script[data-itt-immersion]")) return;
+        if (!doc) return;
+        /* Already injected by shell */
+        if (doc.querySelector("script[data-itt-immersion]")) return;
+        /* Content page already loads immersion-YYYY.js — do not double-boot
+           (double load was racing form bind / registerLocal once-guards). */
+        try {
+          if (doc.documentElement && doc.documentElement.getAttribute("data-itt-immersion-booted")) return;
+        } catch (eBoot) { /* */ }
+        var existing = doc.getElementsByTagName("script");
+        var si;
+        for (si = 0; si < existing.length; si++) {
+          var es = existing[si].getAttribute("src") || "";
+          /* config/immersion-YYYY.js is data only — it does not boot product JS */
+          if (/\/config\/immersion-\d{4}\.js(\?|$)/.test(es)) continue;
+          if (/immersion(-\d{4})?\.js(\?|$)/.test(es) || /\/immersion\/boot\.js(\?|$)/.test(es)) {
+            return;
+          }
+        }
         var s = doc.createElement("script");
         s.setAttribute("data-itt-immersion", "1");
-        var root = yearRoot();
-        var siteRoot = root.replace(new RegExp("years\\/" + YEAR + "\\/?$"), "");
+        /* yearRoot lives on BrowserNavigate — bare yearRoot() was undefined (latent inject bug) */
+        var root = (Nav && Nav.yearRoot) ? Nav.yearRoot(YEAR) : (U.yearRootPath ? U.yearRootPath(YEAR) : ("/years/" + YEAR + "/"));
+        var siteRoot = String(root).replace(new RegExp("years\\/" + YEAR + "\\/?$"), "");
+        if (!siteRoot || siteRoot === root) {
+          try {
+            siteRoot = String(root).replace(new RegExp("years\\/" + YEAR + "\\/?.*$"), "");
+          } catch (eRoot) {
+            siteRoot = "/";
+          }
+        }
         s.src = siteRoot + IMMERSION_SCRIPT;
         (doc.body || doc.documentElement).appendChild(s);
       } catch (e) { /* */ }
+    }
+
+    /**
+     * Forms owned by immersion modules — never chrome-navigate them.
+     * Heuristic: any data-* form attr except navigational search (data-google-search)
+     * is a local theater. Chrome still handles plain action= HTML search forms.
+     */
+    function formHasImmersionSubmitHandler(form) {
+      if (!form || !form.attributes) return false;
+      /* Google search: chrome may append ?q= — module also preventDefaults; either path OK */
+      if (form.hasAttribute("data-google-search")) return false;
+      var attrs = form.attributes;
+      for (var i = 0; i < attrs.length; i++) {
+        var name = attrs[i].name || "";
+        if (name.indexOf("data-") === 0) return true;
+      }
+      return false;
     }
 
     function wireDocument(doc, path) {
@@ -671,7 +677,69 @@
         if (!href || href.charAt(0) === "#") return;
         if (href.indexOf("mailto:") === 0) {
           e.preventDefault();
-          openMailDialog(href.replace(/^mailto:/i, ""), "From Web page");
+          if (Chrome && Chrome.openMailDialog) {
+            Chrome.openMailDialog(href.replace(/^mailto:/i, ""), "From Web page");
+          }
+          return;
+        }
+        /* Museum hub / games wing escapes: iframe sandbox blocks target=_top
+         * (no allow-top-navigation). Parent chrome navigates the top window
+         * only for same-origin museum exits. Off-origin and javascript: stay
+         * inside the exhibit (unreachable / ignored). */
+        var tgt = (linkEl.getAttribute("target") || "").toLowerCase();
+        if (tgt === "_top" || tgt === "_parent") {
+          e.preventDefault();
+          e.stopPropagation();
+          if (/^\s*(javascript|data|vbscript):/i.test(href)) return;
+          var liveTop = pathFromIframe() || path;
+          var resolvedTop = resolveHref(href, liveTop);
+          if (resolvedTop && resolvedTop.external) {
+            sessionStorage.setItem("itt-last-url", href);
+            navigate("pages/error/unreachable.html");
+            return;
+          }
+          var absTop = "";
+          try {
+            absTop = linkEl.href || "";
+          } catch (errTop) {
+            absTop = "";
+          }
+          if (!absTop) {
+            try {
+              var base = (iframe.contentWindow && iframe.contentWindow.location &&
+                iframe.contentWindow.location.href) || window.location.href;
+              absTop = new URL(href, base).href;
+            } catch (errUrl) {
+              absTop = href;
+            }
+          }
+          try {
+            var dest = new URL(absTop, window.location.href);
+            if (dest.protocol === "javascript:" || dest.protocol === "data:" || dest.protocol === "vbscript:") {
+              return;
+            }
+            if (dest.origin !== window.location.origin) {
+              sessionStorage.setItem("itt-last-url", href);
+              navigate("pages/error/unreachable.html");
+              return;
+            }
+            var destPath = dest.pathname || "";
+            var yearPrefix = "/years/" + YEAR + "/";
+            var yi = destPath.indexOf(yearPrefix);
+            if (yi !== -1) {
+              var goIn = destPath.slice(yi + yearPrefix.length);
+              if (goIn.indexOf("pages/sites/") === 0) goIn = goIn.slice("pages/".length);
+              navigate(goIn || HOME);
+              return;
+            }
+            (window.top || window).location.href = dest.href;
+          } catch (errNav) {
+            if (resolvedTop && resolvedTop.path) navigate(resolvedTop.path);
+          }
+          return;
+        }
+        if (tgt === "_blank") {
+          /* allow-popups is on shell sandbox — let default / open */
           return;
         }
         var livePath = pathFromIframe() || path;
@@ -692,8 +760,17 @@
       doc.addEventListener("submit", function (e) {
         var form = e.target;
         if (!form || form.tagName !== "FORM") return;
+        /*
+         * Immersion theater forms bind their own submit handlers (login, upload,
+         * digg, reddit, etc.). Do not chrome-navigate those — that was wiping
+         * status text / double-handling and felt like “dead buttons”.
+         * If immersion already preventDefault'd, never steal the submit.
+         * Navigational search forms keep data-google-search / plain action=.
+         */
+        if (e.defaultPrevented) return;
+        if (formHasImmersionSubmitHandler(form)) return;
         var action = form.getAttribute("action");
-        if (!action) return;
+        if (!action || action === "#" || action.indexOf("javascript:") === 0) return;
         e.preventDefault();
         var livePath = pathFromIframe() || path;
         var resolved = resolveHref(action, livePath);
@@ -867,659 +944,90 @@
         }
         wireDocument(doc, path.split("?")[0]);
         ensureImmersion(doc);
+        /* Unlock clicks as soon as the document is wired — do not wait for
+           progressive-image drip (that used to keep .loading + dead links). */
+        setLoading(false);
         applyProgressiveImages(doc);
+        /* Year games (Box Shift, etc.) need iframe focus for Arrow/WASD */
+        try {
+          var clean = path.split("?")[0];
+          if (/playable\/game\.html$/i.test(clean) || doc.querySelector("[data-year-game]")) {
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+              } catch (eF) { /* */ }
+            }, 80);
+            window.setTimeout(function () {
+              try {
+                iframe.focus();
+                if (iframe.contentWindow) iframe.contentWindow.focus();
+                var gh = doc.querySelector("[data-year-game]");
+                if (gh && gh.focus) gh.focus();
+              } catch (eF2) { /* */ }
+            }, 500);
+          }
+        } catch (eGameFocus) { /* */ }
       } catch (err) {
         finishDocumentLoad(0);
       }
     });
 
     /* ============================================================
-     * Dialogs
+     * Chrome UI (dialogs / menus / prefs / bookmarks) — js/browser/chrome-ui.js
      * ============================================================ */
-    function openDialog(id) {
-      closeMenus();
-      if (backdrop) backdrop.classList.remove("hidden");
-      var el = document.getElementById(id);
-      if (el) {
-        el.classList.remove("hidden");
-        var focusable = el.querySelector("input:not([type=checkbox]):not([type=number]), textarea, select, button");
-        if (focusable) {
-          window.setTimeout(function () {
-            focusable.focus();
-            if (focusable.select) focusable.select();
-          }, 30);
-        }
-      }
-    }
+    Chrome = ITT.BrowserChrome.attach({
+      year: YEAR,
+      titleSuffix: TITLE_SUFFIX,
+      cmdPaths: CMD_PATHS,
+      getPrefs: function () { return prefs; },
+      savePrefs: savePrefs,
+      getImagesOn: function () { return imagesOn; },
+      setImagesOn: function (v) { imagesOn = !!v; },
+      getBookmarks: function () { return bookmarks; },
+      saveBookmarks: saveBookmarks,
+      currentPath: currentPath,
+      displayTitle: displayTitle,
+      displayUrl: displayUrl,
+      navigate: navigate,
+      goBack: goBack,
+      goForward: goForward,
+      goHome: goHome,
+      reload: reload,
+      stopLoad: stopLoad,
+      openLocationString: openLocationString,
+      wireDocument: wireDocument,
+      updateNavButtons: updateNavButtons,
+      getHistoryStack: function () { return historyStack; },
+      getHistoryIndex: function () { return historyIndex; },
+      setHistoryIndex: function (i) { historyIndex = i; },
+      iframe: iframe,
+      locationInput: locationInput,
+      windowTitle: windowTitle,
+      backdrop: backdrop,
+      browserEl: browserEl,
+      setStatus: setStatus,
+      escapeHtml: U.escapeHtml,
+      perf: PERF
+    });
+    Chrome.wire();
 
-    function closeDialog(id) {
-      var el = document.getElementById(id);
-      if (el) el.classList.add("hidden");
-      if (!document.querySelector(".dialog:not(.hidden)")) {
-        if (backdrop) backdrop.classList.add("hidden");
-      }
-    }
-
-    function closeAllDialogs() {
-      var dialogs = document.querySelectorAll(".dialog");
-      for (var i = 0; i < dialogs.length; i++) dialogs[i].classList.add("hidden");
-      if (backdrop) backdrop.classList.add("hidden");
-    }
-
-    function showAlert(title, msg) {
-      var t = document.getElementById("dlg-alert-title");
-      var m = document.getElementById("dlg-alert-msg");
-      if (t) t.textContent = title || "Netscape";
-      if (m) m.textContent = msg || "";
-      openDialog("dlg-alert");
-    }
-
-    function doFind(again) {
-      var input = document.getElementById("dlg-find-input");
-      var caseEl = document.getElementById("dlg-find-case");
-      var q = again ? findLastQuery : (input && input.value) || "";
-      if (!q) return;
-      findLastQuery = q;
-      var matchCase = caseEl && caseEl.checked;
-      try {
-        var doc = iframe.contentDocument;
-        var body = doc.body;
-        var text = body.innerText || body.textContent || "";
-        var hay = matchCase ? text : text.toLowerCase();
-        var needle = matchCase ? q : q.toLowerCase();
-        var start = again ? findLastIndex + 1 : 0;
-        var idx = hay.indexOf(needle, start);
-        if (idx === -1 && start > 0) idx = hay.indexOf(needle, 0);
-        if (idx === -1) {
-          showAlert("Find", "Search string not found:\n" + q);
-          return;
-        }
-        findLastIndex = idx;
-        // best-effort highlight via selection
-        if (window.find) {
-          iframe.contentWindow.focus();
-          iframe.contentWindow.find(q, matchCase, false, true, false, false, false);
-        }
-        setStatus("Found: " + q);
-      } catch (e) {
-        showAlert("Find", "Could not search this document.");
-      }
-    }
-
-    function refreshBmDialog() {
-      var list = document.getElementById("dlg-bm-list");
-      if (!list) return;
-      list.innerHTML = "";
-      for (var i = 0; i < bookmarks.length; i++) {
-        var opt = document.createElement("option");
-        opt.value = bookmarks[i].path;
-        opt.textContent = bookmarks[i].title;
-        list.appendChild(opt);
-      }
-    }
-
-    function openMailDialog(to, subject) {
-      var toEl = document.getElementById("dlg-mail-to");
-      var subEl = document.getElementById("dlg-mail-subj");
-      var bodyEl = document.getElementById("dlg-mail-body");
-      if (toEl) toEl.value = to || "";
-      if (subEl) {
-        subEl.value = subject || (windowTitle
-          ? windowTitle.textContent.replace(/ - Netscape$/, "")
-          : "");
-      }
-      if (bodyEl) {
-        bodyEl.value = "\n\n--\nSent from Netscape Navigator (" + YEAR + " exhibit)";
-      }
-      openDialog("dlg-mail");
-    }
-
-    function closeMenus() {
-      var open = document.querySelectorAll(".menu-root.open");
-      for (var i = 0; i < open.length; i++) open[i].classList.remove("open");
-    }
-
-    function openMenu(root) {
-      closeMenus();
-      if (root) root.classList.add("open");
-    }
-
-    function renderGoHistory() {
-      var dd = document.getElementById("menu-go-dropdown");
-      if (!dd) return;
-      var old = dd.querySelectorAll("[data-hist]");
-      for (var i = 0; i < old.length; i++) old[i].remove();
-      var start = Math.max(0, historyStack.length - 10);
-      for (var h = historyStack.length - 1; h >= start; h--) {
-        var path = historyStack[h];
-        var b = document.createElement("button");
-        b.type = "button";
-        b.setAttribute("role", "menuitem");
-        b.setAttribute("data-hist", "1");
-        b.setAttribute("data-cmd", "go-hist");
-        b.setAttribute("data-path", path);
-        b.setAttribute("data-idx", String(h));
-        var label = displayTitle(path).replace(new RegExp(TITLE_SUFFIX.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$"), "");
-        label = (h === historyIndex ? "✓ " : "   ") + label;
-        b.textContent = label;
-        dd.appendChild(b);
-      }
-    }
-
-    function renderBookmarkMenus() {
-      var dd = document.getElementById("menu-bm-dropdown");
-      if (!dd) return;
-      var old = dd.querySelectorAll("[data-bm]");
-      for (var i = 0; i < old.length; i++) old[i].remove();
-      for (var b = 0; b < bookmarks.length; b++) {
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.setAttribute("role", "menuitem");
-        btn.setAttribute("data-bm", "1");
-        btn.setAttribute("data-cmd", "bm-open");
-        btn.setAttribute("data-path", bookmarks[b].path);
-        btn.textContent = bookmarks[b].title;
-        dd.appendChild(btn);
-      }
-    }
-
-    function addBookmark() {
-      var path = currentPath().split("?")[0];
-      var title = displayTitle(path).replace(new RegExp(TITLE_SUFFIX.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$"), "");
-      for (var i = 0; i < bookmarks.length; i++) {
-        if (bookmarks[i].path === path) {
-          showAlert("Bookmarks", "Already bookmarked:\n" + title);
-          return;
-        }
-      }
-      bookmarks.push({ title: title, path: path });
-      saveBookmarks();
-      setStatus("Bookmark added: " + title);
-      showAlert("Bookmarks", "Added to bookmarks:\n" + title + "\n" + displayUrl(path));
-    }
-
-    /* ============================================================
-     * Commands
-     * ============================================================ */
-    function runCommand(cmd, el) {
-      switch (cmd) {
-        case "file-new":
-          window.open(window.location.href, "_blank");
-          break;
-        case "file-open-file":
-          var foi = document.getElementById("file-open-input");
-          if (foi) foi.click();
-          break;
-        case "file-open-loc":
-          var oli = document.getElementById("dlg-ol-input");
-          if (oli && locationInput) oli.value = locationInput.value;
-          openDialog("dlg-open-location");
-          break;
-        case "file-save":
-          saveDocumentSource();
-          break;
-        case "file-mail":
-          openMailDialog("", "");
-          break;
-        case "file-print":
-          try {
-            iframe.contentWindow.focus();
-            iframe.contentWindow.print();
-          } catch (e) {
-            window.print();
-          }
-          break;
-        case "file-close":
-        case "file-exit":
-          window.location.href = "../../index.html";
-          break;
-        case "edit-cut":
-          doClipboard("cut");
-          break;
-        case "edit-copy":
-          doClipboard("copy");
-          break;
-        case "edit-paste":
-          doClipboard("paste");
-          break;
-        case "edit-find":
-          openDialog("dlg-find");
-          break;
-        case "edit-find-again":
-          if (findLastQuery) doFind(true);
-          else openDialog("dlg-find");
-          break;
-        case "edit-select-all":
-          try {
-            var doc = iframe.contentDocument;
-            var sel = doc.getSelection();
-            var range = doc.createRange();
-            range.selectNodeContents(doc.body);
-            sel.removeAllRanges();
-            sel.addRange(range);
-          } catch (e2) {
-            if (locationInput) locationInput.select();
-          }
-          break;
-        case "view-reload":
-          reload();
-          break;
-        case "view-images":
-          imagesOn = !imagesOn;
-          prefs.autoload = imagesOn;
-          savePrefs();
-          setStatus(imagesOn ? "Images will load." : "Images off.");
-          reload();
-          break;
-        case "view-source":
-          showSource();
-          break;
-        case "view-info":
-          showInfo();
-          break;
-        case "view-stop":
-        case "go-stop":
-          stopLoad();
-          break;
-        case "go-back":
-          goBack();
-          break;
-        case "go-forward":
-          goForward();
-          break;
-        case "go-home":
-          goHome();
-          break;
-        case "go-hist":
-          if (el) {
-            var idx = parseInt(el.getAttribute("data-idx"), 10);
-            if (!isNaN(idx)) {
-              historyIndex = idx;
-              updateNavButtons();
-              navigate(historyStack[historyIndex], { fromHistory: true });
-            }
-          }
-          break;
-        case "bm-add":
-          addBookmark();
-          break;
-        case "bm-view":
-          refreshBmDialog();
-          openDialog("dlg-bookmarks");
-          break;
-        case "bm-open":
-          if (el) navigate(el.getAttribute("data-path"));
-          break;
-        case "opt-prefs":
-          fillPrefsDialog();
-          openDialog("dlg-prefs");
-          break;
-        case "opt-toolbar":
-          prefs.showToolbar = !prefs.showToolbar;
-          savePrefs();
-          break;
-        case "opt-location":
-          prefs.showLocation = !prefs.showLocation;
-          savePrefs();
-          break;
-        case "opt-dirbar":
-          prefs.showDirbar = !prefs.showDirbar;
-          savePrefs();
-          break;
-        case "opt-autoload":
-          prefs.autoload = !prefs.autoload;
-          imagesOn = prefs.autoload;
-          savePrefs();
-          setStatus(imagesOn ? "Auto load images: On" : "Auto load images: Off");
-          break;
-        case "dir-welcome":
-          navigate("pages/home.html");
-          break;
-        case "dir-new":
-          navigate("pages/whats-new.html");
-          break;
-        case "dir-cool":
-          navigate("pages/cool.html");
-          break;
-        case "dir-handbook":
-          navigate(CMD_PATHS["dir-handbook"] || "pages/about.html");
-          break;
-        case "dir-search":
-          navigate(CMD_PATHS["dir-search"] || "pages/home.html");
-          break;
-        case "dir-directory":
-          navigate(CMD_PATHS["dir-directory"] || "sites/yahoo/index.html");
-          break;
-        case "dir-whitepages":
-          showAlert(
-            "Internet White Pages",
-            "Internet White Pages services (like Four11 / WhoWhere) were emerging in this era.\n\nThis exhibit does not mirror an external white-pages host."
-          );
-          break;
-        case "dir-about-net":
-          navigate("pages/about.html");
-          break;
-        case "help-about":
-          openDialog("dlg-about");
-          break;
-        case "help-handbook":
-          navigate(CMD_PATHS["help-handbook"] || "pages/about.html");
-          break;
-        case "help-faq":
-          navigate(CMD_PATHS["help-faq"] || "pages/about.html");
-          break;
-        case "help-support":
-          showAlert(
-            "How to Get Support",
-            "Netscape Communications Corporation\n\nIn this era, support was available via:\n• info@mcom.com\n• Handbook and FAQ on home.mcom.com\n• Usenet newsgroups\n\nThis reconstruction is an offline museum exhibit."
-          );
-          break;
-        case "help-feedback":
-          openMailDialog("info@mcom.com", "Netscape Feedback");
-          break;
-        case "help-exhibit":
-          navigate("pages/about.html");
-          break;
-        default:
-          setStatus("Command: " + cmd);
-      }
-    }
-
-    function fillPrefsDialog() {
-      setCheck("pref-underline", prefs.underline);
-      setVal("pref-expire", prefs.expireDays);
-      setCheck("pref-autoload", prefs.autoload);
-      setVal("pref-modem", String(prefs.modemDelay));
-      setVal("pref-home", prefs.homeUrl);
-      setCheck("pref-toolbar", prefs.showToolbar);
-      setCheck("pref-location", prefs.showLocation);
-      setCheck("pref-dirbar", prefs.showDirbar);
-      setCheck("pref-desktopicons", prefs.showDesktopIcons !== false);
-      setVal("pref-desktop", prefs.desktopBg || "#000000");
-    }
-
-    function setCheck(id, v) {
-      var el = document.getElementById(id);
-      if (el) el.checked = !!v;
-    }
-    function setVal(id, v) {
-      var el = document.getElementById(id);
-      if (el) el.value = v;
-    }
-
-    function doClipboard(op) {
-      try {
-        var doc = iframe.contentDocument;
-        var sel = doc.getSelection();
-        if (op === "copy" || op === "cut") {
-          clipboardText = sel ? sel.toString() : "";
-          if (!clipboardText && locationInput === document.activeElement) {
-            clipboardText = locationInput.value.substring(
-              locationInput.selectionStart,
-              locationInput.selectionEnd
-            );
-          }
-          if (navigator.clipboard && clipboardText) {
-            navigator.clipboard.writeText(clipboardText).catch(function () {});
-          }
-          if (op === "cut" && locationInput === document.activeElement) {
-            document.execCommand("cut");
-          }
-          setStatus(op === "cut" ? "Cut." : "Copied.");
-        } else if (op === "paste") {
-          if (locationInput === document.activeElement) {
-            document.execCommand("paste");
-          } else if (clipboardText) {
-            /* limited paste into content */
-            setStatus("Paste (clipboard ready).");
-          }
-        }
-      } catch (e) {
-        setStatus("Clipboard unavailable.");
-      }
-    }
-
-    function showSource() {
-      try {
-        var html = iframe.contentDocument.documentElement.outerHTML;
-        var pre = document.getElementById("dlg-source-text");
-        if (pre) pre.textContent = html;
-        openDialog("dlg-source");
-      } catch (e) {
-        showAlert("Document Source", "Could not read document source.");
-      }
-    }
-
-    function saveDocumentSource() {
-      try {
-        var html = iframe.contentDocument.documentElement.outerHTML;
-        var blob = new Blob([html], { type: "text/html" });
-        var a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = (currentPath().split("/").pop() || "document") + ".html";
-        a.click();
-        URL.revokeObjectURL(a.href);
-        setStatus("Saved document source.");
-      } catch (e) {
-        showAlert("Save", "Could not save document.");
-      }
-    }
-
-    function showInfo() {
-      var path = currentPath();
-      var table = document.getElementById("dlg-info-table");
-      if (!table) return;
-      var rows = [
-        ["URL", displayUrl(path)],
-        ["Local path", path],
-        ["Title", displayTitle(path)],
-        ["Year", YEAR],
-        ["Images", imagesOn ? "Auto load" : "Off"]
-      ];
-      table.innerHTML = "";
-      for (var i = 0; i < rows.length; i++) {
-        var tr = document.createElement("tr");
-        tr.innerHTML =
-          "<th>" + U.escapeHtml(rows[i][0]) + "</th><td>" + U.escapeHtml(rows[i][1]) + "</td>";
-        table.appendChild(tr);
-      }
-      openDialog("dlg-info");
-    }
-
-    /* ============================================================
-     * Event wiring
-     * ============================================================ */
     function byId(id) {
       return document.getElementById(id);
     }
-
     function on(id, event, fn) {
       var el = byId(id);
       if (el) el.addEventListener(event, fn);
     }
 
-    // Dialog close buttons (data-close on × / Cancel)
-    document.addEventListener("click", function (e) {
-      var closeId = e.target.getAttribute && e.target.getAttribute("data-close");
-      if (closeId) {
-        closeDialog(closeId);
-        return;
-      }
-    });
-
-    // Menubar — match Netscape: click label to open; click item to run
-    var menubar = document.getElementById("menubar");
-    var menuMode = false;
-    if (menubar) {
-      menubar.addEventListener("click", function (e) {
-        var btn = e.target.closest ? e.target.closest(".menu-item") : null;
-        if (btn && menubar.contains(btn)) {
-          e.stopPropagation();
-          var root = btn.parentNode;
-          if (root.classList.contains("open")) {
-            closeMenus();
-            menuMode = false;
-          } else {
-            if (root.getAttribute("data-menu") === "go") renderGoHistory();
-            if (root.getAttribute("data-menu") === "bookmarks") renderBookmarkMenus();
-            openMenu(root);
-            menuMode = true;
-          }
-          return;
-        }
-        var item = e.target.closest ? e.target.closest("[data-cmd]") : null;
-        if (item && !item.disabled && menubar.contains(item)) {
-          e.stopPropagation();
-          var cmd = item.getAttribute("data-cmd");
-          closeMenus();
-          menuMode = false;
-          runCommand(cmd, item);
-        }
-      });
-      menubar.addEventListener("mouseover", function (e) {
-        if (!menuMode) return;
-        var root = e.target.closest ? e.target.closest(".menu-root") : null;
-        if (root && !root.classList.contains("open")) {
-          if (root.getAttribute("data-menu") === "go") renderGoHistory();
-          if (root.getAttribute("data-menu") === "bookmarks") renderBookmarkMenus();
-          openMenu(root);
-        }
-      });
-    }
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest || !e.target.closest("#menubar")) {
-        closeMenus();
-        menuMode = false;
-      }
-      // Toolbar / dir buttons / non-menu commands with data-cmd
-      var cmdEl = e.target.closest ? e.target.closest("[data-cmd]") : null;
-      if (cmdEl && browserEl.contains(cmdEl) && !(menubar && menubar.contains(cmdEl))) {
-        var cmd = cmdEl.getAttribute("data-cmd");
-        if (cmd) {
-          e.preventDefault();
-          runCommand(cmd, cmdEl);
-        }
-      }
-    });
-
-    on("dlg-ol-ok", "click", function () {
-      var v = byId("dlg-ol-input");
-      closeDialog("dlg-open-location");
-      if (v) openLocationString(v.value);
-    });
-    on("dlg-ol-input", "keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        var btn = byId("dlg-ol-ok");
-        if (btn) btn.click();
-      }
-    });
-    on("dlg-find-ok", "click", function () {
-      doFind(false);
-    });
-    on("dlg-find-input", "keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        doFind(false);
-      }
-    });
-    on("dlg-source-save", "click", saveDocumentSource);
-    on("dlg-alert-ok", "click", function () {
-      closeDialog("dlg-alert");
-    });
-
-    on("dlg-bm-go", "click", function () {
-      var list = byId("dlg-bm-list");
-      if (list && list.value) {
-        closeDialog("dlg-bookmarks");
-        navigate(list.value);
-      }
-    });
-    on("dlg-bm-list", "dblclick", function () {
-      var go = byId("dlg-bm-go");
-      if (go) go.click();
-    });
-    on("dlg-bm-remove", "click", function () {
-      var list = byId("dlg-bm-list");
-      if (!list || list.selectedIndex < 0) return;
-      bookmarks.splice(list.selectedIndex, 1);
-      saveBookmarks();
-      refreshBmDialog();
-    });
-
-    on("dlg-prefs-ok", "click", function () {
-      var u = byId("pref-underline");
-      var ex = byId("pref-expire");
-      var al = byId("pref-autoload");
-      var md = byId("pref-modem");
-      var hm = byId("pref-home");
-      var tb = byId("pref-toolbar");
-      var loc = byId("pref-location");
-      var db = byId("pref-dirbar");
-      var di = byId("pref-desktopicons");
-      var dsk = byId("pref-desktop");
-      if (u) prefs.underline = u.checked;
-      if (ex) prefs.expireDays = parseInt(ex.value, 10) || 30;
-      if (al) prefs.autoload = al.checked;
-      if (md) prefs.modemDelay = parseInt(md.value, 10) || 0;
-      if (hm) prefs.homeUrl = (hm.value || "").trim() || prefs.homeUrl;
-      if (tb) prefs.showToolbar = tb.checked;
-      if (loc) prefs.showLocation = loc.checked;
-      if (db) prefs.showDirbar = db.checked;
-      if (di) prefs.showDesktopIcons = di.checked;
-      if (dsk) prefs.desktopBg = dsk.value;
-      imagesOn = !!prefs.autoload;
-      prefs.perfVersion = PERF.prefsPerfVersion;
-      savePrefs();
-      closeDialog("dlg-prefs");
-      setStatus("Preferences saved.");
-      showAlert("Preferences", "Preferences saved.\n\nModem delay, images, and chrome visibility now apply to this session.");
-    });
-
-    on("dlg-mail-send", "click", function () {
-      var to = (byId("dlg-mail-to") && byId("dlg-mail-to").value) || "";
-      closeDialog("dlg-mail");
-      showAlert(
-        "Mail",
-        "Message queued for delivery" + (to ? " to " + to.trim() : "") +
-          ".\n\n(This is an offline museum exhibit — no mail is sent.)"
-      );
-    });
-
-    var fileOpen = byId("file-open-input");
-    if (fileOpen) {
-      fileOpen.addEventListener("change", function (e) {
-        var file = e.target.files && e.target.files[0];
-        if (!file) return;
-        var reader = new FileReader();
-        reader.onload = function () {
-          try {
-            var doc = iframe.contentDocument;
-            doc.open();
-            doc.write(reader.result);
-            doc.close();
-            if (windowTitle) windowTitle.textContent = file.name + TITLE_SUFFIX;
-            if (locationInput) locationInput.value = "file:///" + file.name;
-            setStatus("Opened " + file.name);
-            wireDocument(doc, currentPath());
-          } catch (err) {
-            showAlert("Open File", "Could not open file:\n" + file.name);
-          }
-        };
-        reader.readAsText(file);
-        e.target.value = "";
-      });
-    }
-
+    /* ============================================================
+     * Shell nav (back / forward / home / location / dirbar)
+     * ============================================================ */
     if (btnBack) btnBack.addEventListener("click", goBack);
     if (btnForward) btnForward.addEventListener("click", goForward);
     on("btn-home", "click", goHome);
     on("btn-reload", "click", reload);
     on("btn-stop", "click", stopLoad);
-    on("btn-images", "click", function () { runCommand("view-images"); });
-    on("btn-open", "click", function () { runCommand("file-open-loc"); });
-    on("btn-find", "click", function () { runCommand("edit-find"); });
-    on("btn-close", "click", function () { runCommand("file-exit"); });
 
     on("btn-min", "click", function () {
       browserEl.classList.add("minimized");
@@ -1553,60 +1061,25 @@
         openLocationString(locationInput.value);
       });
     }
-    // Optional IE5-style toolbar extras (Favorites / Mail already have commands)
-    var btnFav = document.getElementById("btn-favorites");
-    if (btnFav) {
-      btnFav.addEventListener("click", function () { runCommand("bm-view"); });
-    }
-    var btnMailTb = document.getElementById("btn-mail");
-    if (btnMailTb) {
-      btnMailTb.addEventListener("click", function () { runCommand("file-mail"); });
-    }
-    var btnSearchTb = document.getElementById("btn-search");
-    if (btnSearchTb) {
-      btnSearchTb.addEventListener("click", function () {
-        if (locationInput) {
-          locationInput.focus();
-          locationInput.select();
-        }
-      });
-    }
-    var btnHist = document.getElementById("btn-history");
-    if (btnHist) {
-      btnHist.addEventListener("click", function () {
-        runCommand("go-back");
-      });
-    }
 
     var dirBtns = document.querySelectorAll(".dir-btn");
     for (var d = 0; d < dirBtns.length; d++) {
       dirBtns[d].addEventListener("click", function (ev) {
+        try {
+          closeAllDialogs();
+          ensureBackdropSane();
+          if (backdrop) {
+            backdrop.classList.add("hidden");
+            try {
+              backdrop.style.display = "none";
+              backdrop.style.pointerEvents = "none";
+            } catch (ePe) { /* */ }
+          }
+        } catch (eDir) { /* */ }
         var go = ev.currentTarget.getAttribute("data-go");
         if (go) navigate(go);
       });
     }
-
-    document.addEventListener("keydown", function (e) {
-      var mod = e.ctrlKey || e.metaKey;
-      if (e.key === "Escape") {
-        if (backdrop && !backdrop.classList.contains("hidden")) {
-          closeAllDialogs();
-          e.preventDefault();
-          return;
-        }
-        stopLoad();
-        closeMenus();
-      }
-      if (!mod) return;
-      var k = e.key.toLowerCase();
-      if (k === "l") { e.preventDefault(); runCommand("file-open-loc"); }
-      else if (k === "f") { e.preventDefault(); runCommand("edit-find"); }
-      else if (k === "g") { e.preventDefault(); runCommand("edit-find-again"); }
-      else if (k === "r") { e.preventDefault(); reload(); }
-      else if (k === "s") { e.preventDefault(); runCommand("file-save"); }
-      else if (k === "p") { e.preventDefault(); runCommand("file-print"); }
-      else if (k === "d") { e.preventDefault(); runCommand("bm-add"); }
-    });
 
     /* ============================================================
      * Modem sound (Web Audio API — no external files needed)
@@ -1655,21 +1128,129 @@
       try {
         if (sessionStorage.getItem(key) === "1") return;
         if (localStorage.getItem(key) === "1") return;
+        /* UX strip coach (js/ux/shell-coach.js) already dismissed */
+        if (localStorage.getItem("itt-ux-coach-seen-" + YEAR) === "1") return;
       } catch (e) {
         return;
       }
+      /* Prefer non-blocking strip when UX pack is on — skip modal wall */
+      try {
+        if (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("shellCoach") && ITT.UX.ShellCoach) {
+          if (typeof ITT.UX.ShellCoach.boot === "function") {
+            ITT.UX.ShellCoach.boot(YEAR);
+          }
+          /* Strip will mark its own key; also mark legacy so we don't double later */
+          return;
+        }
+      } catch (eUx) { /* fall through to legacy modal */ }
+
+      var browserLabel = "Netscape";
+      if (TITLE_SUFFIX && /Chrome/i.test(TITLE_SUFFIX)) browserLabel = "Chrome";
+      else if (TITLE_SUFFIX && /Internet Explorer/i.test(TITLE_SUFFIX)) browserLabel = "Internet Explorer";
+      else if (config.connectBrowserLine && /Chrome/i.test(config.connectBrowserLine)) {
+        browserLabel = "Chrome";
+      } else if (config.connectBrowserLine && /Internet Explorer/i.test(config.connectBrowserLine)) {
+        browserLabel = "Internet Explorer";
+      } else if (YEAR === "2001" || YEAR === "2002" || YEAR === "2003" || YEAR === "2004" || YEAR === "2005") {
+        browserLabel = "Internet Explorer";
+      }
+      /* Year-correct coach tips — never cite anachronistic brands (no Gmail in 1994). */
+      var dirExamples = {
+        "1994": "Yahoo! · White House · IUMA",
+        "1995": "Yahoo · Amazon · AltaVista",
+        "1996": "Space Jam · HoTMaiL · Yahoo",
+        "1997": "Yahoo · eBay · Slashdot",
+        "1998": "Google · Amazon · eBay",
+        "1999": "Napster · Google · Blogger",
+        "2000": "Amazon · Napster · Pets.com",
+        "2001": "Wikipedia · Google · iPod",
+        "2002": "Friendster · KaZaA · Google",
+        "2003": "MySpace · iTunes · WordPress",
+        "2004": "Gmail · Flickr · Firefox",
+        "2005": "YouTube · Maps · Reddit",
+        "2006": "Twitter · YouTube · Facebook",
+        "2007": "iPhone · Gmail · Street View",
+        "2008": "App Store · Chrome · Android",
+        "2009": "Like · FarmVille · Bing"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      };
+      var locTips = {
+        "1994": "yahoo or whitehouse",
+        "1995": "amazon or yahoo",
+        "1996": "hotmail or spacejam",
+        "1997": "ebay or slashdot",
+        "1998": "google or amazon",
+        "1999": "napster or google",
+        "2000": "napster or amazon",
+        "2001": "wikipedia or google",
+        "2002": "friendster or kazaa",
+        "2003": "myspace or itunes",
+        "2004": "gmail or flickr",
+        "2005": "youtube or reddit",
+        "2006": "twitter or youtube",
+        "2007": "iphone or gmail",
+        "2008": "chrome or appstore",
+        "2009": "facebook or farmville"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      };
+      var dirHint = dirExamples[YEAR] || "directory buttons on the bar";
+      var locTip = locTips[YEAR] || "a site name from this year";
       var msg =
-        "You are inside a reconstructed Netscape window for " + YEAR + ".\n\n" +
-        "• Links open inside this window (not a new browser tab)\n" +
-        "• Use Back, directory buttons, or the blue bar on pages to navigate\n" +
-        "• Follow the ★ Suggested tour on the Starting Point page\n" +
-        "• Exit (top of the desktop) returns to the year menu\n\n" +
-        "Tip: in Location, try typing yahoo and press Enter.";
-      showAlert("Welcome — " + YEAR, msg);
+        "You are inside a reconstructed " + browserLabel + " window for " + YEAR + ".\n\n" +
+        "HOW TO NAVIGATE\n" +
+        "• Starting Point = this year’s map (trails, About). Use the Starting Point button, toolbar Home, or the sticky bar on site pages.\n" +
+        "• Year menu = leave this year back to the museum lobby. Use ← Year menu (top) or window ×.\n" +
+        "• Directory bar: " + dirHint + "\n" +
+        "• Links open inside this window (not a new browser tab). Use Back to go previous.\n\n" +
+        "Tip: in Location, type " + locTip + " and press Enter.\n" +
+        "Click OK (or wait) so the page stays clickable.";
+      showAlert("Welcome — " + YEAR + " · how to navigate", msg);
+      /* Non-blocking coach: full-screen backdrop was intercepting dirbar/toolbar/iframe
+         clicks so “buttons felt dead” until OK. Keep the dialog, drop the dimmer. */
+      try {
+        if (backdrop) backdrop.classList.add("hidden");
+      } catch (eBd) { /* */ }
       try {
         localStorage.setItem(key, "1");
         sessionStorage.setItem(key, "1");
       } catch (e2) { /* */ }
+      /* Auto-dismiss Welcome — coach only, not other alerts */
+      window.setTimeout(function () {
+        try {
+          var alertEl = document.getElementById("dlg-alert");
+          if (alertEl && !alertEl.classList.contains("hidden")) {
+            var titleEl = document.getElementById("dlg-alert-title");
+            var titleText = titleEl ? titleEl.textContent || "" : "";
+            if (titleText.indexOf("Welcome") === 0) closeAllDialogs();
+          }
+          ensureBackdropSane();
+        } catch (eAuto) { /* */ }
+      }, 1800);
+      window.setTimeout(function () {
+        try {
+          ensureBackdropSane();
+        } catch (e2) { /* */ }
+      }, 5500);
     }
 
     function seedHistory() {
@@ -1699,12 +1280,34 @@
       }
       // Coach after chrome is ready
       window.setTimeout(maybeFirstRunCoach, 600);
+      /* First-night trail: open signature room for this year when active */
+      window.setTimeout(function () {
+        try {
+          if (ITT.MuseumProgress && typeof ITT.MuseumProgress.maybeOpenTrailRoom === "function") {
+            ITT.MuseumProgress.maybeOpenTrailRoom(function (path) {
+              navigate(path, { instant: true });
+            });
+          }
+        } catch (eTrail) {
+          /* */
+        }
+      }, 200);
     }
 
     function hideOverlay() {
       stopModemSound();
-      if (overlay) overlay.classList.add("hidden");
+      if (overlay) {
+        overlay.classList.add("hidden");
+        try {
+          overlay.style.display = "none";
+          overlay.style.pointerEvents = "none";
+        } catch (eOv) { /* */ }
+      }
       try { sessionStorage.setItem(CONNECTED_KEY, "1"); } catch (e) { /* */ }
+      try { localStorage.setItem(CONNECTED_KEY, "1"); } catch (e2) { /* */ }
+      try {
+        ensureBackdropSane();
+      } catch (eBd) { /* */ }
       seedHistory();
     }
 
@@ -1715,7 +1318,11 @@
       var lines = connectSequence(Math.random() < PERF.connectBusyChance);
       // Estimate total connect duration for modem sound
       var estMs = lines.length * PERF.connectLineMs + PERF.connectEndMs;
-      playModemSound(estMs);
+      // Broadband / always-on years: no modem screech (still show status lines)
+      var cMode = String(config.connectMode || "dialup").toLowerCase();
+      if (cMode !== "broadband" && cMode !== "always-on" && cMode !== "always_on") {
+        playModemSound(estMs);
+      }
       var i = 0;
       function next() {
         if (i < lines.length) {
@@ -1748,7 +1355,9 @@
     }
 
     var already = false;
-    try { already = sessionStorage.getItem(CONNECTED_KEY) === "1"; } catch (e) { /* */ }
+    try {
+      already = sessionStorage.getItem(CONNECTED_KEY) === "1" || localStorage.getItem(CONNECTED_KEY) === "1";
+    } catch (e) { /* */ }
     if (already) {
       if (overlay) overlay.classList.add("hidden");
       seedHistory();
@@ -1797,6 +1406,10 @@
         if (localStorage.getItem(PHONE_MUTE_KEY) === "1") return;
         if (prefs && prefs.phoneEvents === false) return;
       } catch (e0) { /* */ }
+      /* Still on the modem screen — do not cover Skip / Connect */
+      try {
+        if (overlay && !overlay.classList.contains("hidden")) return;
+      } catch (eOv) { /* */ }
       if (Math.random() > 0.022) return; // ~2.2% — rare household drama, once/session
       var kinds = [
         "Someone picked up another extension.\n\nNO CARRIER\n\nClick Connect to redial.",
@@ -1805,11 +1418,20 @@
       ];
       var msg = kinds[Math.floor(Math.random() * kinds.length)];
       try {
-        sessionStorage.removeItem(CONNECTED_KEY);
         sessionStorage.setItem(PHONE_MUTE_KEY, "1"); // never chain-interrupt the same visit
       } catch (e1) { /* */ }
+      /* Do not drop CONNECTED_KEY or revive the modem overlay — that undoes Skip
+         and leaves #dlg-alert / #connect-overlay intercepting iframe clicks. */
       showAlert("Modem", msg);
-      if (overlay) overlay.classList.remove("hidden");
+    }
+
+    function focusContent() {
+      try {
+        if (iframe) {
+          iframe.focus();
+          if (iframe.contentWindow) iframe.contentWindow.focus();
+        }
+      } catch (eFc) { /* */ }
     }
 
     // Expose for immersion iframe / debugging
@@ -1823,9 +1445,13 @@
       perf: PERF,
       getPrefs: function () { return prefs; },
       setSecureMode: setSecureMode,
-      maybePhoneEvent: maybePhoneEvent
+      maybePhoneEvent: maybePhoneEvent,
+      focusContent: focusContent
     };
     ITT.activeBrowser = api;
+    try {
+      if (ITT.Layers && typeof ITT.Layers.bootShell === "function") ITT.Layers.bootShell(YEAR);
+    } catch (eL) { /* */ }
     return api;
   }
 

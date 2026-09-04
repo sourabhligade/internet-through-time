@@ -1,12 +1,15 @@
 # 2000 Artifacts Inventory — Build Kit
 
 **Purpose:** Single checklist of **every artifact** useful for building the year-2000 room: logos, chrome, Wayback captures, screenshots, copy snippets, audio/visual culture, immersion data, and code reuse.  
-**Status:** Research harvest plan (2026-07-23) — files not yet on disk under `assets/period/2000/` unless noted.  
+**Status:** Research kit (historical). **Disk truth 2026-07-28:** `years/2000/` + `assets/period/2000/` **live museum densify** — do not wipe. Leftover tickets: `docs/TO-100-PERCENT/RESEARCH-FREEZE-2000.md`.  
+**Rebuild status:** [`docs/2000-MUSEUM-GRADE.md`](../../2000-MUSEUM-GRADE.md)  
 **Companions:**  
 - [`docs/2000-RESEARCH.md`](../../2000-RESEARCH.md) — thesis, sites, bans  
 - [`docs/2000-DEEP-RESEARCH-2026-07-23.md`](../../2000-DEEP-RESEARCH-2026-07-23.md) — visit log  
 - [`CAPTURE-LOG.md`](CAPTURE-LOG.md) — dated URLs  
 - [`ASSETS.md`](ASSETS.md) — on-disk provenance after harvest  
+- [`docs/2000-WEB-SURF-RESEARCH-2026-07-27.md`](../../2000-WEB-SURF-RESEARCH-2026-07-27.md) — rebuild web-surf  
+- [`docs/2000-MUSEUM-PHASES-STEP-BY-STEP.md`](../../2000-MUSEUM-PHASES-STEP-BY-STEP.md) — implement steps  
 
 **Legal:** Educational reconstruction. Trademarks belong to owners. Never ship real copyrighted music files or live payment rails.
 

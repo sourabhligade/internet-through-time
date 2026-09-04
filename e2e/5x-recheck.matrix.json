@@ -1,0 +1,701 @@
+{
+  "panel": [
+    {
+      "year": 1994,
+      "yy": "94",
+      "mode": "panel",
+      "star": "sites/csotd/index.html",
+      "flows": [
+        {
+          "suffix": "iuma",
+          "room": "sites/iuma/index.html",
+          "next": "sites/fishcam/index.html",
+          "key": "itt94-iuma",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "fishcam-5x",
+          "room": "sites/fishcam/index.html",
+          "next": "sites/whitehouse/index.html",
+          "key": "itt94-fishcam-5x",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "wh-map-5x",
+          "room": "sites/whitehouse/index.html",
+          "next": "sites/yahoo/index.html",
+          "key": "itt94-wh-map-5x",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "yahoo-5x",
+          "room": "sites/yahoo/index.html",
+          "next": "sites/ncsa/index.html",
+          "key": "itt94-yahoo-5x",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "whatsnew",
+          "room": "sites/ncsa/index.html",
+          "next": "sites/csotd/index.html",
+          "key": "itt94-whatsnew",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "yy": "95",
+      "mode": "panel",
+      "star": "sites/amazon/ssl-checkout.html",
+      "flows": [
+        {
+          "suffix": "homestead",
+          "room": "sites/geocities/homestead.html",
+          "next": "sites/auctionweb/item-laser.html",
+          "key": "itt95-homestead",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "aw-bid",
+          "room": "sites/auctionweb/item-laser.html",
+          "next": "sites/altavista/index.html",
+          "key": "itt95-aw-bid",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "av",
+          "room": "sites/altavista/index.html",
+          "next": "sites/hotwired/index.html",
+          "key": "itt95-av",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "hotwired",
+          "room": "sites/hotwired/index.html",
+          "next": "sites/netscape/index.html",
+          "key": "itt95-hotwired",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "cool",
+          "room": "sites/netscape/index.html",
+          "next": "sites/amazon/ssl-checkout.html",
+          "key": "itt95-cool",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "yy": "96",
+      "mode": "panel",
+      "star": "sites/portals/wars.html",
+      "flows": [
+        {
+          "suffix": "myportal",
+          "room": "sites/yahoo/index.html",
+          "next": "sites/hotmail/index.html",
+          "key": "itt96-myportal",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "hotmail",
+          "room": "sites/hotmail/index.html",
+          "next": "sites/spacejam/index.html",
+          "key": "itt96-hotmail",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "jam",
+          "room": "sites/spacejam/index.html",
+          "next": "sites/realplayer/index.html",
+          "key": "itt96-jam",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "real",
+          "room": "sites/realplayer/index.html",
+          "next": "sites/angelfire/index.html",
+          "key": "itt96-real",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "gb",
+          "room": "sites/angelfire/index.html",
+          "next": "sites/portals/wars.html",
+          "key": "itt96-gb",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "yy": "97",
+      "mode": "panel",
+      "star": "sites/pointcast/index.html",
+      "flows": [
+        {
+          "suffix": "slashdot",
+          "room": "sites/slashdot/index.html",
+          "next": "sites/ebay/index.html",
+          "key": "itt97-slashdot",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "ebay-bid",
+          "room": "sites/ebay/index.html",
+          "next": "sites/icq/index.html",
+          "key": "itt97-ebay-bid",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "icq-buddy",
+          "room": "sites/icq/index.html",
+          "next": "sites/apple/index.html",
+          "key": "itt97-icq-buddy",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "td",
+          "room": "sites/apple/index.html",
+          "next": "sites/drudge/index.html",
+          "key": "itt97-td",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "drudge",
+          "room": "sites/drudge/index.html",
+          "next": "sites/pointcast/index.html",
+          "key": "itt97-drudge",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "yy": "98",
+      "mode": "panel",
+      "star": "sites/google/lucky.html",
+      "flows": [
+        {
+          "suffix": "babelfish",
+          "room": "sites/altavista/index.html",
+          "next": "sites/google/index.html",
+          "key": "itt98-babelfish",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "google-q",
+          "room": "sites/google/index.html",
+          "next": "sites/amazon/index.html",
+          "key": "itt98-google-q",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "amzn-cd",
+          "room": "sites/amazon/index.html",
+          "next": "sites/dmoz/index.html",
+          "key": "itt98-amzn-cd",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "dmoz",
+          "room": "sites/dmoz/index.html",
+          "next": "sites/mozilla/index.html",
+          "key": "itt98-dmoz",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "mozilla",
+          "room": "sites/mozilla/index.html",
+          "next": "sites/google/lucky.html",
+          "key": "itt98-mozilla",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "yy": "99",
+      "mode": "panel",
+      "star": "sites/aim/index.html",
+      "flows": [
+        {
+          "suffix": "napster",
+          "room": "sites/napster/index.html",
+          "next": "sites/blogger/index.html",
+          "key": "itt99-napster",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "blogger",
+          "room": "sites/blogger/index.html",
+          "next": "sites/paypal/index.html",
+          "key": "itt99-blogger",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "paypal",
+          "room": "sites/paypal/index.html",
+          "next": "sites/ebay/index.html",
+          "key": "itt99-paypal",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "ebay",
+          "room": "sites/ebay/index.html",
+          "next": "sites/y2k/index.html",
+          "key": "itt99-ebay",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "y2k",
+          "room": "sites/y2k/index.html",
+          "next": "sites/aim/index.html",
+          "key": "itt99-y2k",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "yy": "00",
+      "mode": "panel",
+      "star": "sites/mapquest/index.html",
+      "flows": [
+        {
+          "suffix": "ebay-watch",
+          "room": "sites/ebay/index.html",
+          "next": "sites/pets/index.html",
+          "key": "itt00-ebay-watch",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "pets",
+          "room": "sites/pets/index.html",
+          "next": "sites/amazon/index.html",
+          "key": "itt00-pets",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "amzn",
+          "room": "sites/amazon/index.html",
+          "next": "sites/napster/index.html",
+          "key": "itt00-amzn",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "nap-legal",
+          "room": "sites/napster/index.html",
+          "next": "sites/flash4/index.html",
+          "key": "itt00-nap-legal",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "flash",
+          "room": "sites/flash4/index.html",
+          "next": "sites/mapquest/index.html",
+          "key": "itt00-flash",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "yy": "04",
+      "mode": "panel",
+      "star": "sites/facebook/networks.html",
+      "flows": [
+        {
+          "suffix": "flickr",
+          "room": "sites/flickr/index.html",
+          "next": "sites/gmail/index.html",
+          "key": "itt04-flickr",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "gmail",
+          "room": "sites/gmail/index.html",
+          "next": "sites/firefox/index.html",
+          "key": "itt04-gmail",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "fx",
+          "room": "sites/firefox/index.html",
+          "next": "sites/digg/index.html",
+          "key": "itt04-fx",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "digg",
+          "room": "sites/digg/index.html",
+          "next": "sites/folklore/index.html",
+          "key": "itt04-digg",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "folk",
+          "room": "sites/folklore/index.html",
+          "next": "sites/facebook/networks.html",
+          "key": "itt04-folk",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "yy": "08",
+      "mode": "panel",
+      "star": "sites/github/issue.html",
+      "flows": [
+        {
+          "suffix": "appstore",
+          "room": "sites/appstore/index.html",
+          "next": "sites/chrome/index.html",
+          "key": "itt08-appstore",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "chrome",
+          "room": "sites/chrome/index.html",
+          "next": "sites/android/index.html",
+          "key": "itt08-chrome",
+          "ok": true,
+          "checks": 3
+        },
+        {
+          "suffix": "g1",
+          "room": "sites/android/index.html",
+          "next": "sites/hulu/index.html",
+          "key": "itt08-g1",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "hulu",
+          "room": "sites/hulu/index.html",
+          "next": "sites/dropbox/index.html",
+          "key": "itt08-hulu",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "db",
+          "room": "sites/dropbox/index.html",
+          "next": "sites/github/issue.html",
+          "key": "itt08-db",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "yy": "09",
+      "mode": "panel",
+      "star": "sites/facebook/index.html",
+      "flows": [
+        {
+          "suffix": "farm-5x",
+          "room": "sites/farmville/index.html",
+          "next": "sites/bing/index.html",
+          "key": "itt09-farm-5x",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "bing",
+          "room": "sites/bing/index.html",
+          "next": "sites/iphone/index.html",
+          "key": "itt09-bing",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "iphone",
+          "room": "sites/iphone/index.html",
+          "next": "sites/foursquare/index.html",
+          "key": "itt09-iphone",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "foursquare",
+          "room": "sites/foursquare/index.html",
+          "next": "sites/windows7/index.html",
+          "key": "itt09-foursquare",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "w7",
+          "room": "sites/windows7/index.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt09-w7",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "yy": "10",
+      "mode": "panel",
+      "star": "sites/instagram/index.html",
+      "flows": [
+        {
+          "suffix": "ask",
+          "room": "sites/ask/index.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt10-ask",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "facebook",
+          "room": "sites/facebook/index.html",
+          "next": "sites/youtube/index.html",
+          "key": "itt10-facebook",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "youtube",
+          "room": "sites/youtube/index.html",
+          "next": "sites/twitter/index.html",
+          "key": "itt10-youtube",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "tweets",
+          "room": "sites/twitter/index.html",
+          "next": "sites/foursquare/index.html",
+          "key": "itt10-tweets",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "4sq",
+          "room": "sites/foursquare/index.html",
+          "next": "sites/instagram/index.html",
+          "key": "itt10-4sq",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "yy": "11",
+      "mode": "panel",
+      "star": "sites/googleplus/index.html",
+      "flows": [
+        {
+          "suffix": "spotify",
+          "room": "sites/spotify/index.html",
+          "next": "sites/iphone/index.html",
+          "key": "itt11-spotify",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "siri",
+          "room": "sites/iphone/index.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt11-siri",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "timeline",
+          "room": "sites/facebook/index.html",
+          "next": "sites/airbnb/index.html",
+          "key": "itt11-timeline",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "airbnb",
+          "room": "sites/airbnb/index.html",
+          "next": "sites/qwikster/index.html",
+          "key": "itt11-airbnb",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "qwikster",
+          "room": "sites/qwikster/index.html",
+          "next": "sites/googleplus/index.html",
+          "key": "itt11-qwikster",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "yy": "12",
+      "mode": "panel",
+      "star": "sites/instagram/android.html",
+      "flows": [
+        {
+          "suffix": "pin",
+          "room": "sites/pinterest/index.html",
+          "next": "sites/facebook/ipo.html",
+          "key": "itt12-pin",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "fb-ipo",
+          "room": "sites/facebook/ipo.html",
+          "next": "sites/facebook/index.html",
+          "key": "itt12-fb-ipo",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "facebook",
+          "room": "sites/facebook/index.html",
+          "next": "sites/iphone/maps.html",
+          "key": "itt12-facebook",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "maps",
+          "room": "sites/iphone/maps.html",
+          "next": "sites/wikipedia/sopa.html",
+          "key": "itt12-maps",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "sopa",
+          "room": "sites/wikipedia/sopa.html",
+          "next": "sites/instagram/android.html",
+          "key": "itt12-sopa",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "yy": "13",
+      "mode": "panel",
+      "star": "sites/vine/record.html",
+      "flows": [
+        {
+          "suffix": "ios7",
+          "room": "sites/iphone/ios7.html",
+          "next": "sites/snapchat/story.html",
+          "key": "itt13-ios7",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "snap-story",
+          "room": "sites/snapchat/story.html",
+          "next": "sites/instagram/video.html",
+          "key": "itt13-snap-story",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "igvid",
+          "room": "sites/instagram/video.html",
+          "next": "sites/snowden/index.html",
+          "key": "itt13-igvid",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "snowden",
+          "room": "sites/snowden/index.html",
+          "next": "sites/windows81/index.html",
+          "key": "itt13-snowden",
+          "ok": true,
+          "checks": 2
+        },
+        {
+          "suffix": "win81",
+          "room": "sites/windows81/index.html",
+          "next": "sites/vine/record.html",
+          "key": "itt13-win81",
+          "ok": true,
+          "checks": 2
+        }
+      ]
+    }
+  ],
+  "stars": {
+    "1994": "sites/csotd/index.html",
+    "1995": "sites/amazon/ssl-checkout.html",
+    "1996": "sites/portals/wars.html",
+    "1997": "sites/pointcast/index.html",
+    "1998": "sites/google/lucky.html",
+    "1999": "sites/aim/index.html",
+    "2000": "sites/mapquest/index.html",
+    "2004": "sites/facebook/networks.html",
+    "2005": "sites/pandora/index.html",
+    "2006": "sites/twitter/index.html",
+    "2007": "sites/iphone/index.html",
+    "2008": "sites/github/issue.html",
+    "2009": "sites/facebook/index.html",
+    "2010": "sites/instagram/index.html",
+    "2011": "sites/googleplus/index.html",
+    "2012": "sites/instagram/android.html",
+    "2013": "sites/vine/record.html",
+    "2014": "sites/whatsapp/index.html",
+    "2015": "sites/apple/watch.html",
+    "2016": "sites/instagram/stories.html",
+    "2017": "sites/iphone/x.html",
+    "2018": "sites/gdpr/index.html",
+    "2019": "sites/disneyplus/home.html"
+  }
+}

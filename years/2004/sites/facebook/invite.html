@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html data-official-key="itt04-fb-invite" lang="en"><head><meta charset="utf-8">
+<title>Thefacebook — Invite</title>
+<link rel="stylesheet" href="../../../../css/period-2004.css">
+</head>
+<body class="fb-shell">
+<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
+<div class="fb-card">
+ <div class="fb-top">
+ [ thefacebook ] invite ·
+ <a href="friends.html" style="color:#fff">friends</a> ·
+ <a href="networks.html" style="color:#fff">networks</a> ·
+ <a href="index.html" style="color:#fff">home</a>
+ </div>
+ <div class="fb-body" style="font-size:13px">
+ <h2 style="margin-top:0">Invite classmates</h2>
+ <p style="line-height:1.45">
+ Growth is <b>school-network invite culture</b> — not open web signup.
+ Harvard first (Feb 4, 2004); other colleges later in the year.
+ Membership is campus-gated; .edu vibe is the point.
+ </p>
+ <form data-fb-invite style="background:#eee;padding:12px;border:1px solid #ccc">
+ Friend's email (.edu vibe)<br>
+ <input name="email" size="38" value="classmate@college.edu"><br><br>
+ Note<br>
+ <input name="note" size="42" value="Join Thefacebook!"><br><br>
+ <button type="submit">Send invite</button>
+ </form>
+ <p data-fb-invite-status style="font-size:12px;color:#060"></p>
+ <h3 style="font-size:13px">Invites this browser</h3>
+ <ul data-fb-invite-list style="font-size:12px"></ul>
+ <div class="fb-note" style="margin-top:10px">
+ No real email is sent — invites are recorded in this browser only.
+ Not News Feed. Not open Facebook. Not modern blue product chrome.
+ Mass social king in 2004: <a href="../myspace/index.html">MySpace</a>.
+ </div>
+ <h2 style="font-size:14px">.edu hop (the 2004 loop)</h2>
+ <p style="font-size:12px">Invite is campus-gated. Three <code>.edu</code> roommates required. Incomplete never writes <code>itt04-fb-edu</code>. Does not replace the invite form above.</p>
+ <form data-itt-real-form data-storage-key="fb-edu" data-require-name="r1 r2 r3" data-min-req="1" data-edu-hop>
+  <p>
+   <input name="r1" size="28" placeholder="roommate1@college.edu"><br>
+   <input name="r2" size="28" placeholder="roommate2@college.edu"><br>
+   <input name="r3" size="28" placeholder="roommate3@college.edu">
+  </p>
+  <label style="display:block;margin:6px 0;font-size:12px"><input type="checkbox" data-req> All three are campus .edu — not open web signup</label>
+  <p><input type="submit" value="Invite 3 roommates" data-official-verb></p>
+  <p data-itt-real-status style="min-height:1.2em;font-size:12px"></p>
+ </form>
+ <p data-next-flow hidden><b>Next:</b> <a href="networks.html">Networks</a></p>
+ <script>
+ (function () {
+   var form = document.querySelector("form[data-edu-hop]");
+   if (!form) return;
+   form.addEventListener("submit", function (ev) {
+     var ok = true;
+     ["r1", "r2", "r3"].forEach(function (n) {
+       var el = form.querySelector('[name="' + n + '"]');
+       var v = el && el.value ? String(el.value).replace(/^\s+|\s+$/g, "") : "";
+       if (!/\.edu$/i.test(v)) ok = false;
+     });
+     if (!ok) {
+       ev.preventDefault();
+       ev.stopImmediatePropagation();
+       var st = form.querySelector("[data-itt-real-status]");
+       if (st) st.textContent = "Three .edu addresses required — nothing written.";
+     }
+   }, true);
+ })();
+ </script>
+ <p style="font-size:12px">
+ You can use Thefacebook to search your school, find classmates,
+ look up friends’ friends, and visualize the network
+ (period product bullets from WA thefacebook.com).
+ </p>
+ <p>
+ <a href="friends.html">← Friends</a> ·
+ <a href="profile.html">Profile</a> ·
+ <a href="networks.html">Networks</a> ·
+ <a href="about.html">About</a>
+ </p>
+ <p style="font-size:11px;color:#666">a Mark Zuckerberg production · Thefacebook © 2004</p>
+ </div>
+</div>
+<!-- ITT-LO-OFFICIAL:start -->
+<section data-lo-panel="1" data-itt-year="2004" style="margin:12px auto;padding:10px;border:1px dashed #666;font-family:Arial,sans-serif;font-size:12px;max-width:46em">
+<p><b>Leftover machine</b> · not the chip · incomplete never writes · <code>itt04-fb-invite-lx</code></p>
+<label style="display:block"><input type="checkbox" data-lo-req> This is leftover, not the year star.</label>
+<label style="display:block"><input type="checkbox" data-lo-req> Trap / empty never writes.</label>
+<p>
+ <button type="button" data-lo-pick="invite">Invite leftover</button>
+ <button type="button" data-lo-pick="open">Open Facebook (trap)</button>
+</p>
+<p><input data-lo-field placeholder="wait@museum" maxlength="80"></p>
+<p>
+ <button type="button" data-lo-trap>Open Facebook (trap)</button>
+ <button type="button" data-lo-save data-lo-key="fb-invite-lx" data-lo-need-pick="invite">Send leftover invite</button>
+</p>
+<p data-lo-status></p>
+<p hidden data-next-flow data-next-when-key="itt04-fb-invite-lx"><b>Next:</b> <a href="../gmail/index.html">Gmail</a></p>
+</section>
+<!-- ITT-LO-OFFICIAL:end -->
+<div data-lo-panel="1" data-itt-year="2004" class="itt-2004-machine" style="margin:14px 0;padding:12px;border:1px solid #333;background:#fff8dc;max-width:46em;color:#111">
+<p style="font-size:11px;color:#444;margin:0 0 8px">2004 leftover machine · dest-true · incomplete never writes</p>
+<p><button type="button" data-lo-trap>This leftover is the year star (trap)</button></p>
+<p><label>Facebook leftover. Not the year star.<br><input type="text" data-lo-field maxlength="80" placeholder="feed leftover" autocomplete="off"></label></p>
+<p><label><input type="checkbox" data-lo-req> Leftover 2004 · not the year star.</label></p>
+<p><label><input type="checkbox" data-lo-req> Empty / trap never writes.</label></p>
+<p><button type="button" data-lo-save data-lo-key="facebook-invite">Open leftover feed</button> <span data-lo-status></span></p>
+<p hidden data-next-flow data-next-when-key="itt04-facebook-invite"><b>Next:</b> <a href="networks.html">Next leftover</a></p>
+</div>
+
+<script src="../../../../js/immersion-2004.js"></script>
+
+
+
+<!-- ITT-3X-ALSO:start -->
+<nav class="itt-3x-also" data-itt-3x-also data-itt-year="2004" style="margin:12px 0;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;line-height:1.7;max-width:52em"><b>Also this year · 3×</b><p style="margin:6px 0 0">
+ <a href="../../pages/home.html">Starting Point</a> ·
+ <a href="../../pages/map.html">Year flow map</a> ·
+ <a href="about.html">Thefacebook · about</a> ·
+ <a href="friends.html">Thefacebook · friends</a> ·
+ <a href="../msn/index.html">MSN.com 2004</a> ·
+ <a href="../mtv/index.html">MTV.com</a> ·
+ <a href="../myspace/index.html">MySpace</a> ·
+ <a href="../napster/index.html">Napster</a> ·
+ <a href="../netcenter/index.html">Netscape Netcenter</a> ·
+ <a href="../netflix/index.html">Netflix</a> ·
+ <a href="../netscape/index.html">Netscape</a> ·
+ <a href="../odeo/index.html">Odeo</a> ·
+ <a href="../orkut/index.html">Orkut</a> ·
+ <a href="../orkutcircle/index.html">Orkut</a> ·
+ <a href="../orkutseed/index.html">Orkut residual densify</a> ·
+ <a href="../paypal/index.html">PayPal</a> ·
+ <a href="../pets/index.html">Pets.com</a> ·
+ <a href="../phoenix/index.html">Mozilla Firebird</a> ·
+ <a href="../piczo/index.html">Piczo</a> ·
+ <a href="../playable/index.html">Gem Cascade</a> ·
+ <a href="../skype/index.html">Skype</a> ·
+ <a href="../slashdot/index.html">slashdot</a> ·
+ <a href="../startupfailures/index.html">Startup Failures</a> ·
+ <a href="../steam/index.html">Steam</a> ·
+ <a href="../tagged/index.html">Tagged</a> ·
+ <a href="../technorati/index.html">Technorati</a> ·
+ <a href="../tinypic/index.html">TinyPic</a> ·
+ <a href="../walmart/index.html">Walmart.com 2004</a>
+</p>
+</nav>
+<!-- ITT-3X-ALSO:end -->
+
+
+<!-- ITT-2X-TARGET:2004:start -->
+<p class="itt-pop-more" data-itt-pop-more="2004" data-itt-2x-links="2004" data-itt-2x-flow="2004" style="margin:12px auto;padding:8px;border:1px dashed #888;font-family:Arial,sans-serif;font-size:11px;max-width:52em"><b>2× leftover walk</b> · <a href="../ebay/index.html">eBay leftover</a> · <a href="../gmail/index.html">Gmail leftover</a> · <a href="../google/index.html">Google leftover</a> · <a href="../yahoo/index.html">Yahoo leftover</a> · <a href="../amazon/index.html">Amazon leftover</a> · <a href="../flickr/index.html">Flickr leftover</a> · <a href="../myspace/index.html">MySpace leftover</a> · <a href="../wikipedia/index.html">Wikipedia leftover</a> · <a href="../cnn/index.html">CNN leftover</a> · <a href="../digg/index.html">Digg leftover</a> · <a href="../delicious/index.html">del.icio.us leftover</a> · <a href="../adsense/index.html">adsense leftover</a> · <a href="../altavista/index.html">altavista leftover</a> · <a href="../aol/index.html">aol leftover</a> · <a href="../apple/index.html">apple leftover</a> · <a href="../askjeeves/index.html">askjeeves leftover</a> · <a href="../basecamp/index.html">basecamp leftover</a> · <a href="../bbc/index.html">bbc leftover</a> · <a href="../blogdex/index.html">blogdex leftover</a> · <a href="../blogger/index.html">Blogger leftover</a> · <a href="../bloglines/index.html">bloglines leftover</a> · <a href="../bowienet/index.html">bowienet leftover</a> · <a href="../craigslist/index.html">craigslist leftover</a> · <a href="../daypop/index.html">daypop leftover</a> · <a href="../dmoz/index.html">dmoz leftover</a> · <a href="../encarta/index.html">encarta leftover</a> · <a href="../excite/index.html">Excite leftover</a> · <a href="../feedburner/index.html">feedburner leftover</a> · <a href="../firefox/index.html">firefox leftover</a> · <a href="../flickrpro/index.html">flickrpro leftover</a> · <a href="../folklore/index.html">folklore leftover</a> · <a href="../friendster/index.html">Friendster leftover</a> · <a href="../gamespot/index.html">gamespot leftover</a> · <a href="../geocities/index.html">geocities leftover</a> · <a href="../gnutella/index.html">gnutella leftover</a> · <a href="../googlenews/index.html">googlenews leftover</a> · <a href="../hampsterdance/index.html">hampsterdance leftover</a> · <a href="../hotbot/index.html">hotbot leftover</a> · <a href="../icq/index.html">icq leftover</a> · <a href="../imdb/index.html">imdb leftover</a> · <a href="../infoseek/index.html">infoseek leftover</a> · <a href="../isp/index.html">isp leftover</a> · <a href="../itunes/index.html">itunes leftover</a> · <a href="../kazaa/index.html">kazaa leftover</a> · <a href="../lastfm/index.html">lastfm leftover</a> · <a href="../linkedin/index.html">LinkedIn leftover</a> · <a href="../livejournal/index.html">livejournal leftover</a> · <a href="../loudcloud/index.html">loudcloud leftover</a> · <a href="../macromedia/index.html">macromedia leftover</a> · <a href="../metafilter/index.html">metafilter leftover</a> · <a href="../microsoft/index.html">Microsoft leftover</a> · <a href="../moreover/index.html">moreover leftover</a> · <a href="../movabletype/index.html">movabletype leftover</a> · <a href="../mozilla/index.html">Mozilla leftover</a> · <a href="../msn/index.html">MSN leftover</a> · <a href="../mtv/index.html">mtv leftover</a> · <a href="../napster/index.html">napster leftover</a> · <a href="../netcenter/index.html">netcenter leftover</a> · <a href="../netflix/index.html">Netflix leftover</a> · <a href="../netscape/index.html">netscape leftover</a> · <a href="../odeo/index.html">odeo leftover</a> · <a href="../orkut/index.html">orkut leftover</a> · <a href="../orkutcircle/index.html">orkutcircle leftover</a> · <a href="../orkutseed/index.html">orkutseed leftover</a> · <a href="../paypal/index.html">PayPal leftover</a> · <a href="../pets/index.html">pets leftover</a> · <a href="../phoenix/index.html">phoenix leftover</a> · <a href="../piczo/index.html">piczo leftover</a> · <a href="../skype/index.html">Skype leftover</a> · <a href="../slashdot/index.html">Slashdot leftover</a> · <a href="../startupfailures/index.html">startupfailures leftover</a> · <a href="../steam/index.html">steam leftover</a> · <a href="../tagged/index.html">tagged leftover</a> · <a href="../technorati/index.html">technorati leftover</a> · <a href="../tinypic/index.html">tinypic leftover</a> · <a href="../walmart/index.html">walmart leftover</a> · <a href="../wayback/index.html">wayback leftover</a> · <a href="../weather/index.html">weather leftover</a> · <a href="../web20conference/index.html">web20conference leftover</a> · <a href="../wired/index.html">Wired leftover</a> · <a href="../wordpress/index.html">wordpress leftover</a> · <a href="../worldofwarcraft/index.html">worldofwarcraft leftover</a> · <a href="../wow/index.html">wow leftover</a> · <a href="../y2k/index.html">y2k leftover</a> · <a href="../yelp/index.html">yelp leftover</a> · <a href="../yelplocal/index.html">yelplocal leftover</a> · <a href="../youvegotmail/index.html">youvegotmail leftover</a> · <a href="../zombo/index.html">zombo leftover</a></p>
+<!-- ITT-2X-TARGET:2004:end -->
+</body></html>

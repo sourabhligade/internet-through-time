@@ -1,25 +1,54 @@
 SOURCE: https://cybercultural.com/p/blogs-rss-2002/
-TITLE: How the Blogosphere Takes Shape in 2002, Along With RSS 2.0
-STATUS: [visited] 2026-07-23
+FINAL: https://cybercultural.com/p/blogs-rss-2002/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: cybercultural-blogs-rss-2002
+ROLE: blogosphere/TrackBack/Daypop
+TITLE: How the Blogosphere Takes Shape in 2002, Along With RSS 2.0 | Cybercultural
+BYTES: 31035
+ERROR: 
 
-KEY FACTS:
-- Radio UserLand: write + RSS read in one desktop app (Winer); author anecdote Mar 2002
-- Daypop: “current events search engine”; Feb 2002 ~6300 news+weblogs; EOY ~7500
-- Daypop Top 40 = “front page of the Internet” (Wired / Burning Man anecdote)
-- Blogdex redesign Nov 2002 (MIT)
-- Technorati founded late 2002 (Dave Sifry); early feature “Cosmos” (who links to whom)
-- Google News quiet beta early 2002; NYT Sep 2002; blogs not treated as journalism yet
-- RSS 2.0: Winer Sep 6 2002 promotes 0.94 → RSS 2.0 + namespaces; “Really Simple Syndication”
-- Mark Pilgrim MT RSS 2.0 template late Sep 2002
-- Movable Type **trackback** June 2002 — “blog tennis”; pop-up UI; peer-to-peer between blogs
-- Pingback: Ian Hickson (Langridge/Willison ideas) — automated, software-agnostic
-- MT 2.51: templates, categories, comments, trackback (WA 20021207200657)
-- Blogger still strong (WA 20021202091911); Google acquires Blogger **Feb 2003** (do not put in 2002 default)
-- Also: LiveJournal, Xanga, Radio UserLand
-- Plasticbag (Tom Coates) = design peak blog aesthetic
-- Hiler Microcontent News blogosphere article (WA 20020604065327)
+KEY FACTS / TEXT:
+How the Blogosphere Takes Shape in 2002, Along With RSS 2.0 | Cybercultural
+Skip to content
+Cybercultural
+Home
+Explore
+Pre-web
+Dot-com
+Web 2.0
+2010s
+By Year
+Seasons
+Notes
+Book
+About
+Search
+Subscribe
+Menu
+How the Blogosphere Takes Shape in 2002, Along With RSS 2.0
+The blogosphere becomes a trend in 2002 — a growing ecosystem of weblogs interconnecting via feeds, comments and a new feature called trackback. We also see the debut of RSS 2.0 and Technorati.
+By Richard MacManus |
+November 25, 2025
+| Tags:  Dot-com , 2002 , Season 4
+Movable Type blog entry template, 2002; via Wayback Machine .
+In my history of blogging so far, we've seen how weblogs emerged in 1999 as a new form of personal journal, began to link to each other in 2000 via blogrolls, and then turned serious in 2001 with "warblogs." During those early years of the form, I was aware of certain weblogs but I hadn't yet signed up for an account at Blogger or downloaded Movable Type. In other words, I was a reader of blogs — but not yet a writer . That changed in March 2002, when I paid for an annual license to a desktop blogging tool called Radio Userland.
+I called my new weblog Modern Web . My initial goal was to blog about "web development and e-business trends." At the time, I worked for a New Zealand power company as a "Web Manager" — I was in charge of the company website and intranet. So my intention was to use my weblog to track the latest web trends, which might then help me in my job. What I discovered, slowly and over time, was a community of people that were passionate about the same things I was. I didn't immediately find my blogging voice (that was in April 2003, when I started a new blog called ReadWriteWeb ), but I felt like I was a part of something: the "blogosphere," as it would later be termed.
+My first blog post in Radio Userland in 2002, pre-ReadWriteWeb.
+The beauty of Radio Userland was that it wasn't just a blog authoring tool, but an RSS aggregator too — you could both write a blog and read other blogs. The creator of Radio Userland was Dave Winer, whose blog Scripting News I read on a regular basis (which was how I discovered Radio). I was also a fan of a New Zealand tech news column called Aardvark , which didn't call itself a blog but was updated every day and had an RSS feed. Before I downloaded Radio, I had simply visited the homepages of those sites in my browser every day — perhaps while I was drinking coffee at my cubicle after I'd arrived at work, or during snatches of downtime during my work day, or in the evenings at home on my desktop computer. So being able to track RSS feeds in Radio Userland — where new posts came to me, rather than me seeking them out every day — was a revelation.
+Radio Userland editing interface, January 2002; image by Dave Winer .
+Daypop and Technorati
+While I was making my first tentative steps in the blogosphere, the ecosystem was starting to become better organized. Daypop had launched in 2001 and described itself as "a current events search engine." By February 2002, it was indexing "over 6300 of the best news sites and weblogs on the net every day." By the end of the year, it had risen to 7,500 sources .
+Daypop Top 40, October 2002 .
+What seemed to most appeal to bloggers was its list of top 40 links in the weblogging community. But because Daypop was a one-person operation — the site was created and run by Daniel Chan, a Los Angeles programmer — the site sometimes had technical issues. In September Daypop reported that it was "out of disk space", which led to a bemused Wired article . But Wired also noted the site's additive quality:
+"It's like the front page of the Internet," said one participant at last week's Burning Man festival, who borrowed a wireless laptop to check Daypop from the middle of the Nevada desert in 100-degree heat. "They've made it so easy."
+Blogdex redesign, November 2002.
+In addition to Daypop, the MIT project Blogdex (which I profiled in the 2001 post ) continued to evolve, including with a redesign in November 2002. But both Daypop and Blogdex would eventually be usurped as a blog popularity index by Technorati, founded by Dave Sifry at the end of 2002. At first, Technorati's main feature was called Cosmos:
+"Cosmos allows you to find what's new in the blogging universe, and find out who's linking to whom. Simply type in a URL of a blog, website, or interesting article on the web, and Cosmos will tell you which bloggers are linking to the URL."
+It wasn't until 2004 that Technorati dropped the Cosmos branding and became the brand that in many ways defined the Web 2.0 era from a blog indexing perspective.
+Another indexing project from 2002 worth a mention is Google News, which Google quietly released in early 2002. The New York Times reported on it in September , but there was no mention of blogs. In later years, Google News would start to index blog content — but in 2002 blogs weren't widely regarded as journalism.
+Google News beta, March 2002 .
+The State of RSS in
 
-EXHIBIT USE:
-- Movable Type product room + trackback theater
-- Daypop / Technorati thin educational pages (P1)
-- Blog sidebar grammar: narrow column + stuffed blogroll
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

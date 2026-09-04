@@ -518,3 +518,10 @@ a:hover { color: #cc0000 !important; }
 body.year-1998 .start-banner-text b { color: #ffff99; }
 .g98-wrap img { max-width: 100%; height: auto; }
 .eb-logo img { vertical-align: middle; }
+
+/* ITT feel tokens 1998 — Google sparse · portal peak */
+:root {
+  --itt98-google-blue: #0000cc;
+  --itt98-portal: #000080;
+}
+

@@ -1,0 +1,26 @@
+1994-1999 VISIT-LOG 2026-08-31
+Visited = page opened and read this pass.
+
+1 ILS total-number-of-websites
+   June 1994 2738 websites / 25454590 users / 9297 users-per-site
+   June 1995 23500 / 44838900 / 1908
+   June 1996 257601 / 77433860 / 301
+   June 1997 1117255 / 120758310 / 108
+   June 1998 2410067 / 188023930 / 78
+   June 1999 3177453 / 280866670 / 88
+   Website = unique hostname. Dual-cite vs Matthew Gray Dec 1994 10022.
+
+2 years/1994..1999 dest HTML
+   leftover 4x ITT-4X blocks 78/75/70/71/89/88
+   leftover-official dest-true first on official leftover dests
+   gold dest extras present
+
+3 js/config/flow-trails.js 1994-1999 official 10 whenKeys
+
+4 ui/year/start-data.js guided exactly 6
+
+5 docs/1994-RESEARCH.md .. 1999-RESEARCH.md stars bans shell
+
+6 docs/1994-1999-PRE-2000-IMPROVE-RESEARCH-2026-08-27.md no new folders
+
+Failed-final this pass: no new brand pixels invented.

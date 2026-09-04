@@ -1,0 +1,24 @@
+DL docs/references/harvest/found-assets/2003-m5/bloglines_logo.gif <- 20030704094052 http://www.bloglines.com/images/bloglines_logo.gif
+  http:200 size:13483
+docs/references/harvest/found-assets/2003-m5/bloglines_logo.gif: GIF image data, version 89a, 264 x 65
+DL docs/references/harvest/found-assets/2003-m5/bloglines_welcome.gif <- 20030704094052 http://www.bloglines.com/images/welcome.gif
+  http:200 size:2457
+docs/references/harvest/found-assets/2003-m5/bloglines_welcome.gif: GIF image data, version 89a, 302 x 30
+DL docs/references/harvest/found-assets/2003-m5/bloglines_nav_bar.gif <- 20030704094052 http://www.bloglines.com/images/nav_bar.gif
+  http:200 size:155
+docs/references/harvest/found-assets/2003-m5/bloglines_nav_bar.gif: GIF image data, version 89a, 1 x 30
+DL docs/references/harvest/found-assets/2003-m5/bloglines_subscribe.gif <- 20030704094052 http://www.bloglines.com/images/subscribe.gif
+  http:200 size:3904
+docs/references/harvest/found-assets/2003-m5/bloglines_subscribe.gif: GIF image data, version 89a, 74 x 77
+DL docs/references/harvest/found-assets/2003-m5/myspace_header_43.gif <- 20031008115927 http://www.myspace.com/images/header_43.gif
+  http:200 size:2249
+docs/references/harvest/found-assets/2003-m5/myspace_header_43.gif: GIF image data, version 89a, 208 x 55
+DL docs/references/harvest/found-assets/2003-m5/adsense_google_sm.gif <- 20030630191256 http://www.google.com/adsense/images/google_sm.gif
+  http:200 size:4204
+docs/references/harvest/found-assets/2003-m5/adsense_google_sm.gif: GIF image data, version 89a, 143 x 59
+DL docs/references/harvest/found-assets/2003-m5/adsense_art.gif <- 20030630191256 http://www.google.com/adsense/images/art.gif
+  http:200 size:2991
+docs/references/harvest/found-assets/2003-m5/adsense_art.gif: GIF image data, version 89a, 143 x 53
+DL docs/references/harvest/found-assets/2003-m5/friendster_logo.gif <- 20030925162256 http://www.friendster.com/images/logo.gif
+  http:200 size:2529
+docs/references/harvest/found-assets/2003-m5/friendster_logo.gif: GIF image data, version 89a, 255 x 48

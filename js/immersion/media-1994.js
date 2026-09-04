@@ -5,6 +5,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
   ITT.ImmersionFeatures.push({
     id: "media-1994",
@@ -20,6 +29,7 @@
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -36,18 +46,67 @@ function initFishCam(root) {
     });
   }
   var n = parseInt(localStorage.getItem(storageKey("fishcam-n")) || "0", 10) || 0;
-  var frame = frames[n % frames.length];
-  if (frame.src) img.src = frame.src;
-  localStorage.setItem(storageKey("fishcam-n"), String(n + 1));
-  if (label) {
-    label.textContent = "Frame " + ((n % frames.length) + 1) + " of " + frames.length +
-      " · " + frame.caption + " · Reload for next frame · " + new Date().toLocaleTimeString();
+  var reduce = false;
+  try {
+    reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  } catch (eRed) { /* */ }
+  var goldKey = storageKey("fishcam");
+
+  function writeFishGold() {
+    try {
+      if (localStorage.getItem(goldKey)) return;
+    } catch (eHas) { /* */ }
+    var payload = {
+      multiStep: true,
+      real: true,
+      waited: true,
+      year: "1994",
+      ts: Date.now()
+    };
+    try {
+      if (saveJSON) saveJSON(goldKey, payload);
+      else localStorage.setItem(goldKey, JSON.stringify(payload));
+    } catch (eW) { /* */ }
+    try {
+      if (markTourUsed) markTourUsed();
+    } catch (eM) { /* */ }
   }
-  var stamp = root.querySelector("[data-fish-time]");
-  if (stamp) {
-    var mins = 3 + (n % 5);
-    stamp.textContent = "Last update: " + new Date().toLocaleTimeString() +
-      " · next capture in ~" + mins + " min";
+
+  function paint(idx) {
+    var frame = frames[idx % frames.length];
+    if (frame.src) img.src = frame.src;
+    img.setAttribute("data-fish-n", String(idx % frames.length));
+    if (label) {
+      label.textContent = "Frame " + ((idx % frames.length) + 1) + " of " + frames.length +
+        " · " + frame.caption +
+        (reduce ? " · Reload for next frame" : " · live stills") +
+        " · " + new Date().toLocaleTimeString();
+    }
+    var stamp = root.querySelector("[data-fish-time]");
+    if (stamp) {
+      var mins = 3 + (idx % 5);
+      stamp.textContent = "Last update: " + new Date().toLocaleTimeString() +
+        " · next capture in ~" + mins + " min";
+    }
+  }
+
+  function advance() {
+    n += 1;
+    try {
+      localStorage.setItem(storageKey("fishcam-n"), String(n));
+    } catch (eN) { /* */ }
+    paint(n);
+    writeFishGold();
+  }
+
+  paint(n);
+  if (n >= 1) {
+    writeFishGold();
+  } else {
+    setTimeout(writeFishGold, 8000);
+  }
+  if (!reduce && frames.length > 1) {
+    setInterval(advance, 8000);
   }
 }
 
@@ -56,16 +115,24 @@ function initCsotd(root) {
   var host = root || document.querySelector("[data-csotd]");
   if (!host) return;
   var picks = [
-    { href: "../iuma/index.html", title: "Internet Underground Music Archive", blurb: "Unsigned bands. Digital audio. Downloads longer than lunch." },
-    { href: "../fishcam/index.html", title: "Fish Cam", blurb: "A camera. A tank. Continuously updated over the Net." },
     { href: "../cern/index.html", title: "World Wide Web at CERN", blurb: "Where hypertext met the Internet." },
+    { href: "../yahoo/index.html", title: "Yahoo! @ Stanford", blurb: "Two graduate students keep a hierarchical guide by hand." },
+    { href: "../fishcam/index.html", title: "Fish Cam", blurb: "A camera. A tank. Continuously updated over the Net." },
+    { href: "../iuma/index.html", title: "Internet Underground Music Archive", blurb: "Unsigned bands. Digital audio. Downloads longer than lunch." },
     { href: "../whitehouse/index.html", title: "The White House", blurb: "Citizens meet the Executive Branch online." },
+    { href: "../ncsa/index.html", title: "NCSA Mosaic", blurb: "The browser that made the Web a place people actually went." },
     { href: "../hotwired/index.html", title: "HotWired", blurb: "A magazine born on the Web — banners and all." },
-    { href: "../nasa/index.html", title: "NASA", blurb: "Public-domain space pictures for the patiently connected." },
-    { href: "../personal/messy.html", title: "A personal home page", blurb: "Anyone with an account can publish." }
+    { href: "../nasa/index.html", title: "NASA", blurb: "Public-domain space pictures for the patiently connected." }
   ];
   var day = Math.floor(Date.now() / 86400000);
-  var pick = picks[day % picks.length];
+  var hook = -1;
+  try {
+    var rawPick = qs ? qs("pick") : "";
+    if (rawPick !== "" && rawPick != null) hook = parseInt(rawPick, 10);
+  } catch (ePick) { /* */ }
+  if (isNaN(hook)) hook = -1;
+  var idx = hook >= 0 ? hook % picks.length : day % picks.length;
+  var pick = picks[idx];
   var link = host.querySelector("[data-csotd-link]");
   var blurb = host.querySelector("[data-csotd-blurb]");
   var stampEl = host.querySelector("[data-csotd-date]");

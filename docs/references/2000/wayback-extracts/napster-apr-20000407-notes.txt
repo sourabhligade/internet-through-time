@@ -1,0 +1,14 @@
+Napster www1.napster.com — Wayback 20000407210312 id_
+Visited/fetched: 2026-07-27
+
+From prior deep research + this pass body fetch:
+- Title: Napster
+- Body: black bg, background images/bk.gif
+- Marketing: "Napster is music at Internet speed." (Cybercultural + CAPTURE-LOG)
+- CTA: Download Napster 2.0 Beta 5a
+- Mac path: Macster
+- MP3 Copyright Policy links
+- ©1999-2000 Napster, Inc.
+
+Museum use: home hero tagline + Beta 5a download theater + legal policy page.
+No real MP3 files.

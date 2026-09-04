@@ -11,21 +11,29 @@
     year: "1997",
     storagePrefix: "itt97",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
-      auction: true
+      auction: true,
+      hotmail: true,
+      icq: true
     },
     navSubtitle: "IE 4.0 · 56k",
     nav: [
       {
-        label: "Start",
+        label: "Home",
         href: "pages/home.html",
-        match: "/pages/"
+        match: "/pages/home"
       },
       {
         label: "eBay",
         href: "sites/ebay/index.html",
         match: "/ebay/"
+      },
+      {
+        label: "HoTMaiL",
+        href: "sites/hotmail/index.html",
+        match: "/hotmail/"
       },
       {
         label: "Amazon",
@@ -64,6 +72,7 @@
       }
     ],
     footerNav: [
+      { label: "Flow map", href: "pages/map.html" },
       {
         label: "Starting Point",
         href: "pages/home.html"
@@ -84,23 +93,31 @@
     tour: [
       {
         id: "ebay",
-        label: "eBay browse + bid",
+        label: "eBay",
         href: "sites/ebay/index.html",
         match: "/ebay/",
-        hint: "browse categories · place a bid",
+        hint: "rebranded from AuctionWeb · optional bid",
         doneMessage: "eBay — rebranded from AuctionWeb."
       },
       {
+        id: "hotmail",
+        label: "HoTMaiL",
+        href: "sites/hotmail/index.html",
+        match: "/hotmail/",
+        hint: "free web mail — try sign-in",
+        doneMessage: "HoTMaiL — free email after the Microsoft deal."
+      },
+      {
         id: "amazon",
-        label: "Amazon review + cart",
+        label: "Amazon.com",
         href: "sites/amazon/index.html",
         match: "/amazon/",
-        hint: "add a book · view cart",
+        hint: "IPO-era bookstore · optional cart",
         doneMessage: "Amazon — IPO era, still just books."
       },
       {
         id: "cnn",
-        label: "CNN news",
+        label: "CNN",
         href: "sites/cnn/index.html",
         match: "/cnn/",
         hint: "Mars Pathfinder · Princess Diana",
@@ -108,26 +125,26 @@
       },
       {
         id: "hotbot",
-        label: "HotBot search",
+        label: "HotBot",
         href: "sites/hotbot/index.html",
         match: "/hotbot/",
-        hint: "neon search engine by Wired",
+        hint: "Wired Digital's neon search",
         doneMessage: "HotBot — Wired Digital's search engine."
       },
       {
         id: "geocities",
-        label: "GeoCities homestead",
+        label: "GeoCities",
         href: "sites/geocities/index.html",
         match: "/geocities/",
-        hint: "visit a neighborhood homepage",
+        hint: "neighborhoods of free home pages",
         doneMessage: "GeoCities — free homepages in neighborhoods."
       },
       {
         id: "yahoo",
-        label: "Yahoo! portal",
+        label: "Yahoo!",
         href: "sites/yahoo/index.html",
         match: "/yahoo/",
-        hint: "portal services · Yahoo! Mail",
+        hint: "portal + Yahoo! Mail",
         doneMessage: "Yahoo! — portal stickiness at its peak."
       }
     ],
@@ -135,13 +152,19 @@
       "area51-9277",
       "sunset-4100"
     ],
-    searchEmptyHint: "Try: <i>ebay</i>, <i>amazon</i>, <i>cnn</i>, <i>slashdot</i>, <i>geocities</i>.",
+    searchEmptyHint: "Try: <i>ebay</i>, <i>hotmail</i>, <i>amazon</i>, <i>cnn</i>, <i>slashdot</i>.",
     catalog: [
       {
         title: "eBay",
         path: "sites/ebay/index.html",
         kw: "ebay auction bid buy sell",
         blurb: "Your Personal Trading Community."
+      },
+      {
+        title: "HoTMaiL",
+        path: "sites/hotmail/index.html",
+        kw: "hotmail email free webmail microsoft msn mail",
+        blurb: "Free web-based email (Microsoft era)."
       },
       {
         title: "Amazon.com",

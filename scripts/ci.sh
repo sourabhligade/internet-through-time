@@ -15,6 +15,15 @@ python3 scripts/test-authenticity.py
 echo "==> Static: pipeline"
 python3 scripts/test-pipeline.py
 
+echo "==> Static: 5× leftover contract"
+python3 scripts/check-5x-contract.py
+
+echo "==> Static: mock-flow classifier"
+node scripts/audit-mock-flows.js
+
+echo "==> Static: all-years health matrix"
+python3 scripts/check-all-years.py
+
 echo "==> Static: HTTP smoke (ephemeral server)"
 python3 -m http.server 8080 --bind 127.0.0.1 >/tmp/itt-ci-http.log 2>&1 &
 SERVER_PID=$!
@@ -38,6 +47,9 @@ fi
 # Playwright starts its own webServer when BASE_URL is unset
 unset BASE_URL || true
 export CI="${CI:-1}"
-npx playwright test
+echo "==> E2E: OSS visitor gate"
+node scripts/oss-visitor-gate.mjs
+echo "==> E2E: ship pack (hub · atlas · 3× · gold-A · 2016–2019)"
+npx playwright test e2e/hub-years.spec.js e2e/atlas.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/2017-2019-deepen-theater.spec.js --workers=2
 
 echo "==> CI OK"

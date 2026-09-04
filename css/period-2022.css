@@ -1,0 +1,15 @@
+@import url("period-2021.css");
+
+.year-2022.os-win10 {
+  --itt-desktop-bg: #0078d7;
+}
+
+.itt-2022-machine {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+}
+.itt-pixel-failed,
+.archive-residual {
+  font-family: Arial, sans-serif;
+  color: #555;
+}

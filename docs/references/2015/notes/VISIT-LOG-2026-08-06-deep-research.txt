@@ -1,0 +1,62 @@
+2015 deep research visit log — 2026-08-06
+============================================
+Purpose: Multi-source harvest for museum year 2015 research freeze.
+No years/2015 scaffold. Planned prefix itt15.
+
+PRIMARY SCALE
+- https://www.internetlivestats.com/total-number-of-websites/
+  June 2015: 863,105,652 websites (−11%), users 3,185,996,155, users/site 3.7
+  Narrative: 1B first crossed Sep 2014; dipped below 1B; restabilized Mar 2016
+- docs/references/SCALE-LEDGER.md already aligned
+
+WEARABLE / APPLE
+- Apple Newsroom 2015-03-09 Watch availability Apr 24; Sport $349/$399; steel $549+; Edition $10k+
+- Apple Newsroom 2015-06-08 Apple Music + Beats 1; Jun 30 launch; $9.99; family $14.99; 3-mo free
+- Apple Newsroom 2015-12-03 Swift open source
+- Apple Newsroom 2015-09-21 iPhone 6s / 6s Plus arrive Sep 25; 3D Touch
+- Guardian/BBC Jun 2015 Taylor Swift → Apple pays trial royalties
+
+MICROSOFT
+- Microsoft Source 2015-06-01 Windows 10 free upgrade Jul 29 for Win7/8.1; Edge ships
+- Free upgrade ends Jul 29 2016 (ZDNet class) — still open entire 2015
+
+LIVE VIDEO
+- Guardian/Variety/TIME 2015-03-26 Periscope launch vs Meerkat
+- Meerkat SXSW Mar 2015; Twitter social graph block mid-Mar
+- FB Newsroom 2015-08-05 Live for public figures (Mentions) — celebs only
+
+GOOGLE / PHOTOS / DEV
+- Verge/TC/Engadget 2015-05-28 Google Photos unlimited HQ (~16MP / 1080p class)
+- FB Engineering 2015-03-26 React Native open source at F8
+- TechCrunch 2016-04-12 Messenger mass bots = F8 2016 NOT 2015
+
+OTHER P1
+- Snap Newsroom 2015-01-27 Discover
+- Wikipedia/press Discord May 13 2015
+- Amazon Press 2015-06-23 Echo open all customers $179.99; ship Jul 14
+- letsencrypt.org + EFF Dec 3 2015 public beta
+- Oculus May 6 2015: CV1 ships Q1 2016 (actual Mar 28 2016)
+- TechCrunch iOS 9 content blockers Sep 2015
+- Pew US Smartphone Use 2015 Apr 1 (~two-thirds / ~64%); fact sheet 67–69% through 2015
+- Ashley Madison Jul–Aug 2015 Impact Team / dumps — literacy only careful
+- Peach Dec 31 2015 / early 2016 Magic Words densify
+
+HARD BANS LOCKED FOR 2015 DEFAULT
+- IG Stories 2016 · FB Reactions 2016 · Messenger mass bots 2016
+- Oculus CV1 retail ship 2016 · Pokémon GO 2016 · Meta 2021
+- Chromium Edge 2020 · WhatsApp default E2E as 2015 story 2016
+- Win10 free upgrade already ended (ends 2016)
+
+FLOW MAP NOTE
+- js/config/flow-maps.js 2015 tree exists; reword "Messenger bots" → Platform (business) on implement
+
+OUTPUT DOCS
+- docs/2015-READ-FIRST.md
+- docs/2015-RESEARCH.md
+- docs/2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-06.md
+- docs/2015-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md
+- docs/2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
+- docs/2015-IMPLEMENTATION-PHASES-STEP-BY-STEP.md
+- docs/2015-MUSEUM-GRADE.md
+- docs/references/2015/CAPTURE-LOG.md
+- docs/references/2015/ARTIFACTS-MAP.md

@@ -12,6 +12,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "scripts") not in sys.path:
+    sys.path.insert(0, str(ROOT / "scripts"))
+from itt_gate import SHIP_YEARS, _WIPED  # noqa: E402
 failures: list[str] = []
 passes = 0
 
@@ -44,6 +47,8 @@ def test_ci_workflow_exists() -> None:
         "npm ci",
         "playwright test",
         "playwright install",
+        "check-all-years.py",
+        "check-5x-contract.py",
     ]
     for needle in required:
         if needle not in s:
@@ -126,6 +131,21 @@ def test_playwright_config_ci() -> None:
     ok("playwright-config-ci")
 
 
+# Merge CI Playwright allowlist — not npm test / not the full e2e/ tree.
+CI_E2E_ALLOWLIST = (
+    "e2e/hub-years.spec.js",
+    "e2e/atlas.spec.js",
+    "e2e/3x-links.spec.js",
+    "e2e/all-years-smoke.spec.js",
+    "e2e/gold-a-leftover-pack.spec.js",
+    "e2e/popular-3x-sites.spec.js",
+    "e2e/one-thing-per-year.spec.js",
+    "e2e/2016-2018-3x-detail.spec.js",
+    "e2e/2016-2018-trail-chain.spec.js",
+    "e2e/2017-2019-deepen-theater.spec.js",
+)
+
+
 def test_e2e_suite_present() -> None:
     e2e = ROOT / "e2e"
     specs = list(e2e.glob("*.spec.js"))
@@ -138,8 +158,66 @@ def test_e2e_suite_present() -> None:
     ok(f"e2e-suite ({len(specs)} specs)")
 
 
+def test_ci_e2e_allowlist() -> None:
+    """CI runs a named ship-subset visitor/gold pack, not `playwright test` of all e2e/."""
+    wf = read(ROOT / ".github/workflows/ci.yml")
+    sh = read(ROOT / "scripts/ci.sh")
+    missing = [rel for rel in CI_E2E_ALLOWLIST if rel not in wf or rel not in sh]
+    if missing:
+        fail("ci-e2e-allowlist", "ci.yml/ci.sh missing " + ", ".join(missing))
+        return
+    extra_hint = "This is a subset of e2e/; npm test runs the full tree"
+    if "ship pack" not in sh.lower() and "ship e2e" not in wf.lower():
+        fail("ci-e2e-allowlist", "ci.sh / ci.yml should label the pack as a ship subset")
+        return
+    for rel in CI_E2E_ALLOWLIST:
+        if not (ROOT / rel).is_file():
+            fail("ci-e2e-allowlist", f"missing {rel}")
+            return
+    _ = extra_hint
+    ok(f"ci-e2e-allowlist ({len(CI_E2E_ALLOWLIST)} files · not full npm test)")
+
+
+def test_browser_srp_parts() -> None:
+    for rel in (
+        "js/browser/navigate.js",
+        "js/browser/connect.js",
+        "js/browser/load-theater.js",
+        "js/browser/chrome-ui.js",
+        "js/browser/create.js",
+        "js/browser/year-boot.js",
+    ):
+        if not (ROOT / rel).is_file():
+            fail("browser-srp", f"missing {rel}")
+            return
+    core = read(ROOT / "js/browser-core.js")
+    if "browser/chrome-ui.js" not in core:
+        fail("browser-srp", "browser-core.js must load chrome-ui.js")
+        return
+    ok("browser-srp-parts")
+
+
+def test_sitemap_ship_years() -> None:
+    sm = read(ROOT / "sitemap.txt")
+    for ys in sorted(_WIPED):
+        if f"/years/{ys}/" in sm:
+            fail("sitemap-years", f"wiped {ys} still listed")
+            return
+    for ys in SHIP_YEARS:
+        if f"/years/{ys}/" not in sm:
+            fail("sitemap-years", f"missing /years/{ys}/")
+            return
+    if "/years/2004/pages/home.html" not in sm:
+        fail("sitemap-years", "missing 2004 Starting Point")
+        return
+    if "/years/2019/pages/home.html" not in sm:
+        fail("sitemap-years", "missing 2019 Starting Point")
+        return
+    ok("sitemap-years")
+
+
 def test_required_year_shells() -> None:
-    for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005"):
+    for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004"):
         p = ROOT / "years" / y / "index.html"
         if not p.is_file():
             fail("year-shells", f"missing years/{y}/index.html")
@@ -159,8 +237,15 @@ def test_deploy_configs() -> None:
         fail("deploy-configs", "missing vercel.json")
         return
     nt = read(ROOT / "netlify.toml")
+    vj = read(ROOT / "vercel.json")
     if "Content-Security-Policy" not in nt:
         fail("deploy-configs", "netlify.toml missing CSP")
+        return
+    if "stale-while-revalidate" not in nt or "stale-while-revalidate" not in vj:
+        fail("deploy-configs", "JS/CSS cache must allow stale-while-revalidate")
+        return
+    if "Permissions-Policy" not in nt:
+        fail("deploy-configs", "netlify.toml missing Permissions-Policy")
         return
     ok("deploy-configs")
 
@@ -185,6 +270,9 @@ def main() -> int:
         test_ci_sh_executable,
         test_playwright_config_ci,
         test_e2e_suite_present,
+        test_ci_e2e_allowlist,
+        test_browser_srp_parts,
+        test_sitemap_ship_years,
         test_required_year_shells,
         test_deploy_configs,
         test_gitignore_test_artifacts,

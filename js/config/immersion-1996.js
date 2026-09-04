@@ -11,18 +11,21 @@
     year: "1996",
     storagePrefix: "itt96",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
       hotmail: true,
-      yahoo: true
+      yahoo: true,
+      excite: true,
+      officialDestGold: true
     },
     navSubtitle: "Netscape 3.0 · 28.8k",
     nav: [
       {
-        label: "Start",
+        label: "Home",
         href: "pages/home.html",
-        match: "/pages/"
+        match: "/pages/home"
       },
       {
         label: "Yahoo!",
@@ -61,6 +64,7 @@
       }
     ],
     footerNav: [
+      { label: "Flow map", href: "pages/map.html" },
       {
         label: "Starting Point",
         href: "pages/home.html"
@@ -85,39 +89,39 @@
     tour: [
       {
         id: "yahoo",
-        label: "Yahoo! portal",
+        label: "Yahoo!",
         href: "sites/yahoo/index.html",
         match: "/yahoo/",
-        hint: "denser directory + search after the IPO era",
+        hint: "directory + search — portals want you to stay",
         doneMessage: "Yahoo! — portals want you to stay."
       },
       {
         id: "hotmail",
-        label: "Free HoTMaiL",
+        label: "HoTMaiL",
         href: "sites/hotmail/index.html",
         match: "/hotmail/",
-        hint: "sign in · open inbox · optional compose",
+        hint: "free web mail — try sign-in",
         doneMessage: "HoTMaiL — free email in the browser."
       },
       {
         id: "spacejam",
-        label: "Space Jam site",
+        label: "Space Jam",
         href: "sites/spacejam/index.html",
         match: "/spacejam/",
-        hint: "click a planet / section",
+        hint: "movie site — click a planet",
         doneMessage: "Space Jam — 1996 movie-web playground."
       },
       {
         id: "amazon",
-        label: "Amazon cart",
+        label: "Amazon.com",
         href: "sites/amazon/index.html",
         match: "/amazon/",
-        hint: "add a book · view cart",
+        hint: "bookstore · optional cart",
         doneMessage: "Amazon — bigger catalog, same river-A era."
       },
       {
         id: "auction",
-        label: "AuctionWeb bid",
+        label: "AuctionWeb",
         href: "sites/auctionweb/item-laser.html",
         match: "/auctionweb/",
         hint: "still AuctionWeb — not eBay yet",
@@ -125,7 +129,7 @@
       },
       {
         id: "search",
-        label: "Search war",
+        label: "Excite",
         href: "sites/excite/index.html",
         match: "/excite/",
         hint: "or try AltaVista full-text",

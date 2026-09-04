@@ -1,0 +1,33 @@
+# 2001 re-visit for 2002 handoff — 2026-07-26
+# Full doc: docs/2001-TO-2002-HANDOFF-DEEP-RESEARCH-2026-07-26.md
+
+## Live re-open (SOURCES §19)
+[visited] cybercultural.com/p/internet-2001/
+  Wiki+WA memory; IE6 Thurrott few features/ubiquity; iTunes/iPod no Store;
+  warblogs; MT; Blogdex; bust mood; Mozilla bloated vs IE
+
+[visited] cybercultural.com/p/blogs-rss-2001/
+  Bloggies; TPM/Instapundit/Dish warblogs; MT Oct 8 multi-blog/templates/static/RSS;
+  Greymatter exit Mar; Blogdex Jul; Weblogs.com pings Oct; RSS format wars
+
+[visited] cybercultural.com/p/itunes-launch-2001/
+  Macworld Jan 9 digital hub; SoundJam; rip/mix/burn; MP3 not WMA; library only
+
+[visited] cybercultural.com/p/wayback-machine-launch-2001/
+  Oct 24 Berkeley; Kahle; FAQ broken pages honesty; 9/11 collection
+
+[visited] en.wikipedia.org/wiki/History_of_Wikipedia
+  First edit 15 Jan 2001; UseMod feeder; 20k+ EOY; languages 2001;
+  Sanger leaves Mar 2002; multi-lang growth into 2002
+
+[visited] internetlivestats · versionmuseum amazon · evolt browsers
+
+## Extract re-read (disk gold)
+wikipedia-2001-07 UseMod · google sparse · amazon smile Biggest Selection ·
+blogger Pyra · MT 1.2 · mozilla 0.9.4 · live-stats 29.25M
+
+## Handoff deltas → 2002 (do not invent)
+ADD: Pew always-on · Friendster seed · KaZaA · TrackBack · Wired CSS ·
+     Phoenix 0.1 · Mozilla 1.0 · Google News-New! · iPod gen2 · Daypop/Technorati
+KEEP: XP+IE6 · smile · sparse google · Pyra · wiki edit · library no Store
+BAN: Store · MySpace · WP · Firefox brand · Blogger-by-Google · most-adults broadband

@@ -1,0 +1,14 @@
+SOURCE: https://cybercultural.com/p/wayback-machine-launch-2001/
+STATUS: [visited] 2026-07-26 deep research pass (NEW)
+ROLE: Web memory meta-story
+
+KEY FACTS:
+- Public launch Oct 24 2001, UC Berkeley library; Brewster Kahle
+- Demo: White House 1996 page + 9/11 special collection
+- Internet Archive operating since 1996; SciAm essay roots
+- Honesty: broken pages, missing graphics, incomplete sites, Flash often unpreserved
+- Average web page life ~100 days (Kahle 2002 quote)
+- NYT Oct 29 2001 coverage; copyright concerns foreshadowed
+- Collection craft: partners, finite resources, not full commercial crawl
+
+BUILD: educational meta room or About rail — do not claim perfect archive

@@ -1,0 +1,70 @@
+SOURCE: https://web.archive.org/web/20021214065731id_/http://www.wikipedia.org/
+FINAL: https://web.archive.org/web/20021130190725id_/http://www.wikipedia.org/
+STATUS: [wa-visited] 2026-07-25 densify pass 4
+TITLE: Main Page - Wikipedia
+ROLE: Wikipedia.org Dec 2002 multilingual hub
+YEAR TARGET: 2002
+BYTES: 26952
+
+BUILD NOTES:
+Grammar from dated WA body. Prefer id_ raw captures. Continuity from 2001 packs where logos match; retarget year-correct copy only.
+
+TEXT EXCERPT:
+Main Page - Wikipedia
+Main Page |
+Recent changes |
+Protected page |
+Older versions |
+Special pages
+Set my user preferences
+My watchlist
+Recently updated pages
+Upload image files
+Image list
+Registered users
+Site statistics
+Random article
+Orphaned articles
+Orphaned images
+Popular articles
+Most wanted articles
+Short articles
+Long articles
+Newly created articles
+All pages by title
+Blocked IP addresses
+Maintenance page
+External book sources
+Printable version
+Other languages: Dansk | Deutsch | Esperanto | Español | Français | Nederlands | Polski | Português | Svenska
+209.237.238.158
+Log in | Help
+Main Page From Wikipedia, the free encyclopedia.
+Welcome to Wikipedia , a collaborative project to produce a free and complete encyclopedia in every language .
+We started in January 2001 and are already working on 93656 articles in the English version, with more being added and improved all the time.
+Anyone, including you , can edit any article right now, without even having to log in.
+See the Wikipedia FAQ for more background information about the project, and the help page for information on how to use and contribute to Wikipedia.
+The content of Wikipedia is covered by the GNU Free Documentation License , which means that it is free and will remain so forever. See wikipedia:Copyrights for the details and open content and free content for background.
+This day in history : November 30
+Ongoing events : Israeli-Palestinian conflict - War on Terrorism - terrorist incidents - Oil spill off Spanish coast
+In the news : Henry Kissinger - Severino Antinori - Dept. of Homeland Security - Volkert van der Graaf
+Recent deaths : Verne Winchell - James Coburn - Abba Eban - Myra Hindley
+Philosophy, Mathematics, and Natural Science
+Astronomy and astrophysics - Biology - Chemistry - Earth science - Mathematics - Philosophy - Physics - Statistics
+Social Sciences
+Anthropology - Archaeology - Economics - Geography - History - History of science and technology - Language - Linguistics - Political science - Psychology - Sociology
+Applied Arts and Sciences
+Agriculture - Architecture - Business and industry - Communication - Computer science - Education - Engineering - Family and consumer science - Health science - Law - Library and information science - Public affairs - Technology - Transport
+Culture
+Classics - Cooking - Dance - Entertainment - Film - Games - Handicraft - Hobbies - Literature - Music - Opera - Painting - Recreation - Religion - Sculpture - Sports - Theater - Tourism - Visual arts and design
+Other Category Schemes
+About Wikipedia category schemes - Library of Congress catalog scheme - Dewey Decimal System - Wikipedia arranged by topic - Various Lists - Historical timeline - Historical anniversaries - Reference tables - Biographies - Current events
+About the project:
+Announcements - FAQ - Policy - Bug reports and feature requests - Wikipedia and Nupedia - Wikipedians - Wikipedia Commentary - Mailing lists - Wikipedia Chat - New topics - Brilliant prose - Requested articles - Requested pictures - Help desk - Wikipedia utilities - Wikipedia database download - Spiders and bots policy - Public domain resources - Sandbox - Friends of Wikipedia
+Press coverage:
+The New York Times Magazine (December 9, 2001) - The New York Times (September 20, 2001) - MIT's Techreview (September 4, 2001)
+Wikipedia in other languages
+Coordination between languages - Afrikaans - Arabic (Araby) - Basque (Euskara) - Catalan (Català) - Chinese (Hanyu) - Danish (Dansk) - Dutch (Nederland
+
+ANACHRONISM CHECK:
+No MySpace / iTunes Music Store / Facebook / Firefox final brand / WordPress default / Blogger-by-Google / Netflix streaming.

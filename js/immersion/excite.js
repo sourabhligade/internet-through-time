@@ -6,6 +6,15 @@
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
+
+  function ittFeedback(msg, st) {
+    try {
+      if (typeof ITT !== "undefined" && ITT._immersionApi && ITT._immersionApi.actionFeedback) {
+        ITT._immersionApi.actionFeedback(msg, { flash: true, status: st || null });
+      }
+    } catch (eIttFb) { /* */ }
+  }
+
   ITT.ImmersionFeatures = ITT.ImmersionFeatures || [];
   ITT.ImmersionFeatures.push({
     id: "excite",
@@ -15,6 +24,7 @@
       var saveJSON = api.saveJSON;
       var storageKey = api.storageKey;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var showFlash = api.showFlash;
 
       var toggles = document.querySelectorAll("[data-excite-toggle]");
@@ -46,7 +56,7 @@
           el.style.display = hide ? "none" : "";
           state[id] = !hide;
           saveJSON(key, state);
-          markTourProgress();
+          markTourUsed();
           if (showFlash) {
             showFlash(
               hide

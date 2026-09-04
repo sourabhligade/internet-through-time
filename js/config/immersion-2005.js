@@ -1,6 +1,5 @@
 /**
  * Immersion config — 2005
- * YouTube · Google Maps · Reddit · Digg · podcasts · Web 2.0 boom
  */
 (function (global) {
   "use strict";
@@ -11,106 +10,126 @@
     year: "2005",
     storagePrefix: "itt05",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
+      geocities: true,
       google: true,
+      excite: true,
       yahoo: true,
+      napster: true,
       blogger: true,
       friendster: true,
+      kazaa: true,
       myspace: true,
+      itunes: true,
+      wordpress: true,
+      linkedin: true,
+      adsense: true,
+      bloglines: true,
       gmail: true,
       facebook: true,
       flickr: true,
+      digg: true,
       youtube: true,
       maps: true,
       reddit: true,
-      digg: true,
+      pandora: true,
+      housingmaps: true,
       podcasts: true
     },
-    navSubtitle: "XP · IE6 default · Firefox 1.x · Web 2.0 boom",
+    navSubtitle: "IE 6 · Windows XP · Upload · Maps · Reddit",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "YouTube", href: "sites/youtube/index.html", match: "/youtube/" },
-      { label: "Maps", href: "sites/maps/index.html", match: "/maps/" },
-      { label: "Reddit", href: "sites/reddit/index.html", match: "/reddit/" },
-      { label: "Digg", href: "sites/digg/index.html", match: "/digg/" },
+      { label: "Firefox", href: "sites/firefox/index.html", match: "/firefox/" },
+      { label: "Gmail", href: "sites/gmail/index.html", match: "/gmail/" },
+      { label: "Flickr", href: "sites/flickr/index.html", match: "/flickr/" },
+      { label: "Thefacebook", href: "sites/facebook/index.html", match: "/facebook/" },
       { label: "Google", href: "sites/google/index.html", match: "/google/" },
       { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" }
     ],
     footerNav: [
-      { label: "Start", href: "pages/home.html" },
-      { label: "YouTube", href: "sites/youtube/index.html" },
+      { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
+      { label: "Gmail", href: "sites/gmail/index.html" },
+      { label: "Flickr", href: "sites/flickr/index.html" },
+      { label: "Web 2.0 Conf", href: "sites/web20conference/index.html" },
       { label: "About 2005", href: "pages/about.html" }
     ],
     tour: [
       {
-        id: "youtube",
-        label: "YouTube",
-        href: "sites/youtube/index.html",
-        match: "/youtube/",
-        hint: "watch a clip · try upload",
-        doneMessage: "YouTube — Broadcast Yourself (2005 beta era)."
+        id: "about",
+        label: "About 2005",
+        href: "pages/about.html",
+        match: "/about",
+        hint: "64.8M sites · boom year · Yahoo still #1",
+        doneMessage: "Upload · Maps · Reddit · Google does not own YouTube."
       },
       {
-        id: "maps",
-        label: "Google Maps",
-        href: "sites/maps/index.html",
-        match: "/maps/",
-        hint: "search a city · drag the map",
-        doneMessage: "Google Maps — Ajax-era draggable map."
+        id: "firefox",
+        label: "Firefox 1.0",
+        href: "sites/firefox/index.html",
+        match: "/firefox/",
+        hint: "Nov 9 · tabs · popup block",
+        doneMessage: "IE6 still mass default — Firefox is rising."
       },
       {
-        id: "reddit",
-        label: "Reddit",
-        href: "sites/reddit/index.html",
-        match: "/reddit/",
-        hint: "boost a story · submit a link",
-        doneMessage: "Reddit — front page of the internet pitch."
+        id: "gmail",
+        label: "Gmail",
+        href: "sites/gmail/index.html",
+        match: "/gmail/",
+        hint: "invite · 1 GB · search mail",
+        doneMessage: "Invite-only webmail — 1 GB pitch."
       },
       {
-        id: "digg",
-        label: "Digg",
-        href: "sites/digg/index.html",
-        match: "/digg/",
-        hint: "digg or bury a headline",
-        doneMessage: "Digg — social news rise year."
+        id: "flickr",
+        label: "Flickr",
+        href: "sites/flickr/index.html",
+        match: "/flickr/",
+        hint: "photostream · tags",
+        doneMessage: "Ludicorp Flickr — not Yahoo-owned yet."
+      },
+      {
+        id: "facebook",
+        label: "Thefacebook",
+        href: "sites/facebook/index.html",
+        match: "/facebook/",
+        hint: "campus network only",
+        doneMessage: "Harvard seed — not open Facebook."
       },
       {
         id: "google",
         label: "Google",
         href: "sites/google/index.html",
         match: "/google/",
-        hint: "search · open Maps from the web",
-        doneMessage: "Google — search default + Maps year."
+        hint: "IPO year",
+        doneMessage: "Search habit + public company story."
+      },
+      {
+        id: "myspace",
+        label: "MySpace",
+        href: "sites/myspace/index.html",
+        match: "/myspace/",
+        hint: "mass social still",
+        doneMessage: "MySpace still larger than Thefacebook."
+      },
+      {
+        id: "web20",
+        label: "Web 2.0 Conf",
+        href: "sites/web20conference/index.html",
+        match: "/web20conference/",
+        hint: "Oct · Web as Platform",
+        doneMessage: "Business meets blogosphere."
+      },
+      {
+        id: "amazon",
+        label: "Amazon",
+        href: "sites/amazon/index.html",
+        match: "/amazon/",
+        hint: "smile continues",
+        doneMessage: "Commerce continuity."
       }
-    ],
-    tourCompleteHint: "Type youtube, maps, reddit, or digg in the Address bar.",
-    searchEmptyHint: "Try: <i>youtube</i>, <i>maps</i>, <i>reddit</i>, <i>digg</i>.",
-    catalog: [
-      { title: "YouTube", path: "sites/youtube/index.html", kw: "youtube video upload broadcast zoo", blurb: "Broadcast Yourself." },
-      { title: "Google Maps", path: "sites/maps/index.html", kw: "maps google ajax mashup", blurb: "Drag the map. Feb 2005." },
-      { title: "Reddit", path: "sites/reddit/index.html", kw: "reddit boost front page", blurb: "Jun 2005 link list." },
-      { title: "Digg", path: "sites/digg/index.html", kw: "digg bury news social", blurb: "Digg / bury headlines." },
-      { title: "iTunes Podcasts", path: "sites/itunes/index.html", kw: "itunes podcast apple", blurb: "iTunes 4.9 podcasts." },
-      { title: "Facebook", path: "sites/facebook/index.html", kw: "facebook thefacebook college", blurb: "Rename era · still gated." },
-      { title: "MySpace", path: "sites/myspace/index.html", kw: "myspace profile news corp", blurb: "Still huge · News Corp." },
-      { title: "Flickr", path: "sites/flickr/index.html", kw: "flickr photos yahoo", blurb: "Yahoo-owned after March." },
-      { title: "Google", path: "sites/google/index.html", kw: "google search", blurb: "Search + Maps year." },
-      { title: "TechCrunch", path: "sites/techcrunch/index.html", kw: "techcrunch web 2.0 blog arrington", blurb: "Tracking Web 2.0." },
-      { title: "Starting Point", path: "pages/home.html", kw: "home start 2005", blurb: "2005 immersion home." }
-    ],
-    books: [
-      { id: "freakonomics", title: "Freakonomics", author: "Levitt & Dubner", price: 14.99, cat: "nonfiction", format: "Hardcover", file: "book-freakonomics.html", blurb: "Hot nonfiction." },
-      { id: "da-vinci", title: "The Da Vinci Code", author: "Dan Brown", price: 12.99, cat: "fiction", format: "Paperback", file: "book-davinci.html", blurb: "Airport omnipresence." }
-    ],
-    googleCatalog: [
-      { title: "YouTube", path: "sites/youtube/index.html", kw: "youtube video", snippet: "Broadcast Yourself." },
-      { title: "Google Maps", path: "sites/maps/index.html", kw: "maps directions", snippet: "Get from A to B." },
-      { title: "Reddit", path: "sites/reddit/index.html", kw: "reddit news links", snippet: "What's hot on the web." },
-      { title: "Digg", path: "sites/digg/index.html", kw: "digg news", snippet: "Digg it." },
-      { title: "MySpace", path: "sites/myspace/index.html", kw: "myspace social", snippet: "A place for friends." },
-      { title: "Yahoo!", path: "sites/yahoo/index.html", kw: "yahoo portal", snippet: "Still a start page for millions." }
     ]
   };
 })(typeof window !== "undefined" ? window : this);

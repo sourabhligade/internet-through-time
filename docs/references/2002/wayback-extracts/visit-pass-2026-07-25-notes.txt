@@ -1,0 +1,44 @@
+SOURCE PASS: 2026-07-25 live re-visit
+STATUS: [visited] primaries + selected WA
+
+PEW (main report):
+- May 2002: 21% of internet users, 24M adults, 12% of all American adults have home broadband
+- Jun 2000 baseline: 6% of internet users
+- Feb 2002 callback of broadband users: 71% cable, 27% DSL, 2% satellite/fixed wireless
+- Always-on transforms net from sometimes tool → information appliance
+- Typical day online: 82% broadband vs 58% dial-up
+- Excite@Home shut Feb 2002 after bankruptcy end-2001
+- Early adopters: wealthier, more educated, more male, urban/suburban
+
+STOPDESIGN Wired:
+- Launch ~10pm PDT night before Oct 11 2002 post
+- Strict XHTML 1.0; entirely CSS for design/format/presentation
+- Millions of pageviews; beacon for standards community
+
+BLOGGER WA 20021202:
+- Copyright 2000-2002 Pyra Labs
+- Sign in / sign up username password
+- Recent published blogs list
+- Blog*Spot Plus, image hosting, password-protect, bSTATS
+- Redesign contest winner Kevin Conboy Nov 2002
+- NOT Google branding
+
+MT FEATURES WA 20021029 (v2.5):
+- TrackBack peer-to-peer weblog conversations
+- Multi-weblog, multi-author, categories, comments, IP ban
+- RSS / multiple templates, XML-RPC Blogger+MetaWeblog APIs
+- Import Blogger/GreyMatter/NewsPro
+- Static publishing model implied
+
+REGISTER 2002-03-15:
+- Morpheus leaves FastTrack → Gnutella Preview Edition
+- Accusations of DoS / registry backdoor vs unpaid license (Zennstrom)
+- Both Morpheus and KaZaA under music industry lawsuits
+
+FRIENDSTER WIKI:
+- Founded 2002 Abrams
+- Public live / mass adoption often dated 2003
+- Exhibit: careful founding-year story
+
+LIVE STATS 2002:
+- 38,760,373 sites; 662,663,600 users

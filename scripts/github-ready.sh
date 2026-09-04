@@ -71,7 +71,13 @@ say "-- project files --"
 for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.yml netlify.toml vercel.json playwright.config.js .gitignore .gitattributes robots.txt sitemap.txt index.html; do
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
-for y in 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005; do
+# Hub-open years on disk. Keep in sync with scripts/itt_gate.py SHIP_YEARS.
+WIPED=" 2018 2020 2021 2022 2023 2024 2025 "
+for y in $(seq 1994 2025); do
+  if [[ "$WIPED" == *" $y "* ]]; then
+    if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y boarded"; fi
+    continue
+  fi
   if [[ -f "years/$y/index.html" ]]; then ok "years/$y/index.html"; else bad "missing years/$y"; fi
 done
 
@@ -82,6 +88,9 @@ python3 scripts/smoke-production.py
 python3 scripts/audit-internal-links.py
 python3 scripts/test-authenticity.py
 python3 scripts/test-pipeline.py
+python3 scripts/check-5x-contract.py
+node scripts/audit-mock-flows.js
+python3 scripts/check-all-years.py
 
 # --- gh tooling ---
 say ""
@@ -119,5 +128,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship 1994–2005 museum: content densify, live flows, pixel harvests, prod ready"
+say "  Ship hub 25 years (1994–2017 + 2019). 2018 / 2020–2025 wiped."
 exit 0

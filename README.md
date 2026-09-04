@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year.
+Historical reconstruction of the World Wide Web — year by year. Hub **25 years open**. **2018 / 2020–2025** are boarded. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2015 star = Periscope Go LIVE. 2019 star = Disney+ Continue.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -40,7 +40,7 @@ npm run check
 npm run github:ready
 ```
 
-CI on GitHub: `.github/workflows/ci.yml` (static job + e2e job on push/PR to `main`).
+CI on GitHub: `.github/workflows/ci.yml` (static job + a **named 10-file Playwright pack**, not the full `e2e/` tree). `npm test` is the full suite and is **not** what GitHub Actions runs.
 
 **Requirements for production:**
 - Single origin for hub + years (iframe + localStorage + script injection)
@@ -71,24 +71,45 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | Path | Description |
 |------|-------------|
 | `/` | Year selection hub |
+| `/atlas/` | Floor plan — every gold, official 10-stop trail, follow-a-site, first night |
 | `/years/1994/` | Netscape 1.0 · Win 3.1 · Yahoo@Stanford · IUMA · NASA |
 | `/years/1995/` | Win95 · Netscape 2.0 · Amazon · AuctionWeb · GeoCities · AltaVista |
 | `/years/1996/` | Netscape 3.0 · HoTMaiL · Space Jam · Excite · portal wars |
 | `/years/1997/` | IE4 · Win95 · eBay · Amazon IPO · Slashdot · HotBot · Think Different |
 | `/years/1998/` | Win98 · IE4 · portals · Google! · Amazon Music · eBay IPO · Mozilla |
 | `/years/1999/` | Win98 SE · IE5 · Napster · Blogger · Google funded · Y2K · multi-cat Amazon · **museum grade** |
-| `/years/2000/` | Win98/ME · IE5.5 · Amazon smile · Napster · Pets.com · Flash 5 · **museum densify** |
-| `/years/2001/` | Windows XP · IE6 · Wikipedia · iPod · post-crash rebuild |
-| `/years/2002/` | XP · IE6 · Friendster · KaZaA · blogosphere · Wired CSS · broadband |
-| `/years/2003/` | XP · IE6 · MySpace · iTunes Store · WordPress · LinkedIn · social web |
-| `/years/2004/` | XP · IE6 · Firefox 1.0 · Gmail · Flickr · Thefacebook · Google IPO · **MVP unlock** |
-| `/years/2005/` | XP · IE6 · YouTube · Google Maps · Reddit · Digg · Ajax · **MVP unlock** |
+| `/years/2000/` | IE 5.5 · Win98 · Amazon **smile** · Napster · Pets.com · crash year · **museum densify** |
+| `/years/2001/` | Wikipedia UseMod · leftover 18 · **cut-forest live** |
+| `/years/2002/` | StumbleUpon · leftover 18 · **cut-forest live** |
+| `/years/2003/` | Photobucket upload · leftover 18 · **cut-forest live** |
+| `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
+| `/years/2005/` | YouTube upload · Maps / Reddit / Digg leftover · XP+IE6 · **live** |
+| `/years/2006/` | Twttr update · News Feed leftover · XP+IE6 · **live** |
+| `/years/2007/` | Lean door — iPhone Safari `itt07-iphone` · leftover 2× every dest · XP+IE6 |
+| `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
+| `/years/2009/` | Lean door — Facebook Like `itt09-like` · leftover 2× every dest · XP+IE8 |
+| `/years/2010/` | Win7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph · **lean** |
+| `/years/2011/` | Lean door — Google+ Hangout `itt11-gplus` · leftover 2× every dest · Win7+IE9 |
+| `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
+| `/years/2013/` | Lean door — Vine 6s · iOS 7 · Snapchat Stories |
+| `/years/2014/` | Lean door — WhatsApp Install · Heartbleed · Ice Bucket |
+| `/years/2015/` | Periscope Go LIVE · Google Photos · Win10 free upgrade · Apple Music · **lean** |
+| `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
+| `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
+| `/years/2018/` | **Boarded** — hub locked · no year tree |
+| `/years/2019/` | Disney+ Continue · TikTok leftover · Arcade · Stadia · **lean** |
+| `/years/2020/`–`/years/2025/` | **Boarded** — hub locked · no year tree |
+| `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Full inventory** (every site, feature, test, asset, and deploy detail): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
+**Lean doors:** 2007 + 2009 + 2011 + 2013–2017 + 2019. Hub is **25 years open**. **2018 / 2020–2025 are boarded.** 2001–2003 are cut-forest live. 2015 is Periscope Go LIVE. 2019 is Disney+ Continue.
+
+**Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
+**Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  
+**Full inventory** (may lag disk): [`docs/PROJECT-INVENTORY.md`](docs/PROJECT-INVENTORY.md).
 
 **Every source, artifact & image provenance** (full inventory): [`docs/MASTER-PROVENANCE.md`](docs/MASTER-PROVENANCE.md).  
 **External bibliography + link audit:** [`docs/SOURCES.md`](docs/SOURCES.md) · [`docs/SOURCE-AUDIT.md`](docs/SOURCE-AUDIT.md).  
-**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md).
+**Incomplete years (gaps → sources → harvest artifacts):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](docs/INCOMPLETE-YEARS-RESEARCH.md) · backlog [`docs/LEFT-OUT.md`](docs/LEFT-OUT.md) (prefer DISK-TRUTH when they disagree).
 
 ## Architecture (keep this clean)
 

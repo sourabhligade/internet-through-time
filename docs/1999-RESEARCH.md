@@ -1,7 +1,8 @@
 # 1999 Research Dossier — The Internet Through Time
 
-**Status:** Research complete · **Museum-grade ship 2026-07-23**  
+**Status:** Research complete · **Museum-grade ship 2026-07-23** · **pair audit 2026-07-29**  
 **Deep research:** [`docs/1999-DEEP-RESEARCH-2026-07-23.md`](1999-DEEP-RESEARCH-2026-07-23.md)  
+**Pair audit + residual (1998–1999):** [`docs/1998-1999-DEEP-RESEARCH-AUDIT-2026-07-29.md`](1998-1999-DEEP-RESEARCH-AUDIT-2026-07-29.md)  
 **Code phases:** [`docs/1999-IMPLEMENTATION-PHASES.md`](1999-IMPLEMENTATION-PHASES.md)  
 **Ship note:** [`docs/1999-MUSEUM-GRADE.md`](1999-MUSEUM-GRADE.md) · [`docs/1999-QUALITY-PASS.md`](1999-QUALITY-PASS.md)  
 **Prior year:** 1998 (Win98 · IE4 · portal peak · Google newcomer · Amazon music · eBay IPO · Mozilla / AOL–Netscape announced)  

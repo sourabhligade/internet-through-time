@@ -1,5 +1,8 @@
 # FOUNDATION · PERFECT SITE BINGO
 
+> **Disk truth (2026-07-25):** Hub open **1994–2005**. Pixel/perfection bingo below may still show open crop tasks — story ship is complete.
+
+
 **Project:** Internet Through Time  
 **Purpose:** Foundation for **improving every already-implemented year (1994–2003)** — every research MD, every external website we learned from, harvests, year bingo, and a step-by-step improve playbook (§8).  
 **Date:** 2026-07-24  
@@ -22,7 +25,7 @@
 | **G. Improve playbook** | How to upgrade each shipped year using §1–§3 sources | **§8** |
 
 Original plan: **1994–1997** built, **1998–2000** planned.  
-Current unlock: **1994–2005**. Improve via §8. Next card: **2006**.  
+Current unlock: **1994–2005**. Next card: **2006** (planned).  
 
 **Start improving:** jump to [§8 — Improve all implemented years](#8--improve-all-implemented-years-playbook).  
 
@@ -789,8 +792,8 @@ Mark `[x]` only with harvest/proof. See also legacy detail in git history of thi
 | 2001 | Medium | Weak densify | Thin deep | **No** |
 | 2002 | Strong | Medium | Strong | **No** |
 | 2003 | Strong | MySpace open | Medium | **No** |
-| 2004 | MVP | signature | Firefox · Gmail · Flickr · Thefacebook | **MVP unlock** (densify WA crops next) |
-| 2005 | MVP | signature | YouTube · Maps · Reddit · Digg | **MVP unlock** (WA crops next) |
+| 2004 | **Not on disk** | signature | Firefox · Gmail · Flickr · Thefacebook | **MVP unlock** (densify WA crops next) |
+| 2005 | **Not on disk** | signature | YouTube · Maps · Reddit · Digg | **MVP unlock** (WA crops next) |
 
 ### 2005 — planned bingo (research only)
 

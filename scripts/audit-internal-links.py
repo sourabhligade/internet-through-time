@@ -12,6 +12,9 @@ def resolve(page: Path, href: str):
     href = unquote(href.split("#")[0].split("?")[0].strip())
     if not href or href.startswith(("http://", "https://", "mailto:", "javascript:", "data:")):
         return None
+    # Site-root absolute (how the static server + browser resolve it)
+    if href.startswith("/"):
+        return ROOT / href.lstrip("/")
     parts = list(page.parent.parts) + href.split("/")
     out = []
     for p in parts:
@@ -24,8 +27,10 @@ def resolve(page: Path, href: str):
             out.append(p)
     return Path(*out)
 
-# All unlocked museum years (hub 1994–2005). Keep in sync with index.html year cards.
-YEARS = ("1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005")
+# Open museum years — keep in sync with itt_gate.SHIP_YEARS / hub (DISK-TRUTH: 1994–2022).
+from itt_gate import SHIP_YEARS
+
+YEARS = tuple(SHIP_YEARS)
 
 for year in YEARS:
     yroot = ROOT / "years" / year

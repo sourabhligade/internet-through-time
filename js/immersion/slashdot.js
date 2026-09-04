@@ -19,7 +19,9 @@
       var loadJSON = api.loadJSON;
       var saveJSON = api.saveJSON;
       var showFlash = api.showFlash;
+      var actionFeedback = api.actionFeedback || showFlash;
       var markTourProgress = api.markTourProgress;
+      var markTourUsed = api.markTourUsed || api.markTourProgress;
       var renderCounter = api.renderCounter;
       var parentBrowser = api.parentBrowser;
 
@@ -78,15 +80,15 @@ function initSlashdotComments() {
       var subject = ((form.querySelector('[name="subject"]') || {}).value || "Re: story").trim();
       var body = ((form.querySelector('[name="body"]') || {}).value || "").trim();
       if (!body) {
-        showFlash("Write a comment first.");
+        actionFeedback("Write a comment first.");
         return;
       }
       comments.unshift({ nick: nick, subject: subject, body: body, score: "1", date: new Date().toLocaleString() });
       saveComments(comments);
       paint(comments);
       form.reset();
-      showFlash("✓ Comment posted (stored in this browser only).");
-      markTourProgress();
+      actionFeedback("Comment posted.");
+      markTourUsed();
     };
   }
 }

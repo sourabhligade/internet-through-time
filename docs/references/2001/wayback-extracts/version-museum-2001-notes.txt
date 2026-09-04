@@ -1,0 +1,17 @@
+SOURCE: https://www.versionmuseum.com/history-of/amazon-website + wikipedia-website
+STATUS: [visited] 2026-07-26 deep research pass (NEW)
+ROLE: Brand chronology
+
+AMAZON:
+- Smile logo = 2000 Turner Duckworth (still correct 2001)
+- 2001–2003: tabs refined; categories often move to left sidebar; logo smaller
+- Do not use 2000 "tab insanity" as only layout if 2001 frame shows sidebar shift
+
+WIKIPEDIA:
+- 2001 homepage frame exists in VM series (use alongside WA Jul body)
+- Later color/Vector frames are bans for 2001
+
+ALSO OPEN FOR 2001 SHELL:
+- Version Museum IE history + Windows history (Luna)
+- Version Museum Google sparse evolution
+- Version Museum Apple.com product eras

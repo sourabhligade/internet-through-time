@@ -1,5 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
 
 test.describe('1996 Space Jam + HoTMaiL polish', () => {
@@ -17,9 +26,18 @@ test.describe('1996 Space Jam + HoTMaiL polish', () => {
     const count = await planets.count();
     expect(count).toBeGreaterThanOrEqual(6);
 
-    // Navigate to Jam Central
+    // Navigate to Jam Central — use the planet hub link, not year-nav */index.html
     await frame.locator('a[href*="jam.htm"]').first().click({ force: true });
     await expect(frame.locator('text=/Jam Central/i').first()).toBeVisible({ timeout: 15000 });
+    await expect(frame.locator('body')).toContainText(/no plugin required/i);
+    await frame.locator('a[href="../index.html"]').first().click({ force: true });
+    await expect(frame.locator('img[alt="Space Jam"]').first()).toBeVisible({ timeout: 10000 });
+    await frame.locator('a[href*="press.htm"]').first().click({ force: true });
+    await expect(frame.locator('body')).toContainText(/Press|press kit|no plugin required/i);
+    await frame.locator('a[href="../index.html"]').first().click({ force: true });
+    await expect(frame.locator('img[alt="Space Jam"]').first()).toBeVisible({ timeout: 10000 });
+    await frame.locator('a[href*="junior.htm"]').first().click({ force: true });
+    await expect(frame.locator('body')).toContainText(/Junior Jam|no plugin required/i);
   });
 
   test('HoTMaiL seed inbox has welcome messages after login', async ({ page }) => {
@@ -36,7 +54,7 @@ test.describe('1996 Space Jam + HoTMaiL polish', () => {
 
     await frame.locator('input[name="login"]').fill('playwright');
     await frame.locator('input[name="pass"]').fill('x');
-    await frame.locator('form[data-hotmail-login] input[type="submit"]').click({ force: true });
+    await frame.locator('form[data-hotmail-login] input[type="submit"], form[data-hotmail-login] input[type="image"]').click({ force: true });
 
     await expect(frame.locator('[data-hotmail-inbox] tr').first()).toBeVisible({ timeout: 20000 });
     const rows = await frame.locator('[data-hotmail-inbox] tr').count();

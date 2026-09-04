@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Museum atlas — The Internet Through Time</title>
+  <meta name="description" content="Hallway of the museum: 25 open years, 2018 / 2020–2025 boarded, every gold, official trail, leftover 2×, popular 3×, games, and tour.">
+  <link rel="stylesheet" href="../css/atlas.css">
+  <link rel="icon" href="../favicon.gif" type="image/gif">
+</head>
+<body>
+  <div class="atlas">
+    <div class="atlas-win">
+      <div class="atlas-bar">
+        <span>The Internet Through Time — museum atlas</span>
+        <span>_ □ ×</span>
+      </div>
+      <div class="atlas-body">
+        <nav class="atlas-nav" aria-label="Atlas sections">
+          <a href="../index.html">← Year menu</a>
+          <a href="#spine">Hallway</a>
+          <a href="#year-card">Year card</a>
+          <a href="#all-flows">Every flow</a>
+          <a href="#threads">Follow a site</a>
+          <a href="#trails">Tours</a>
+          <a href="#find">Find</a>
+          <a href="../games/index.html">Games wing</a>
+        </nav>
+        <h1>See the whole museum</h1>
+        <p class="lede">
+          Twenty-five open years on disk. 2018 / 2020–2025 stay boarded.
+          Each open door is <b>one gold</b>. Click a door, read the card, then enter — or open a layer for every flow in that year.
+          2007 is iPhone Safari. 2009 is Facebook Like. 2011 is Google+. 2013–2017 and 2019 are lean doors. 2015 is Periscope Go LIVE. 2019 is Disney+ Continue. Zoom / ATT / ChatGPT / Plus / 4o come back later.
+        </p>
+        <p class="muted">
+          Progress stays in this browser only. Stars do not move. Incomplete never writes.
+        </p>
+
+        <h2 id="spine">Hallway — one gold on each door</h2>
+        <p class="muted">Open years are white. Boarded years are gray. A stamp means you have been. Selected door opens the card below.</p>
+        <div id="atlas-spine" role="list" aria-label="Year hallway 1994–2025"></div>
+        <div id="atlas-year" hidden></div>
+
+        <h2 id="year-card">Year card</h2>
+        <p class="muted">Pick a door above. The card is the overview. Layers under it list every flow on disk for that year.</p>
+
+        <h2 id="all-flows">Every flow in the museum</h2>
+        <p class="muted">Golds, guided starts, official 10-stop trails, leftover 2×, popular 3×, year games. Open a layer. Do not treat leftover lists as the star.</p>
+        <div id="atlas-all"></div>
+
+        <h2 id="threads">Follow a site through time</h2>
+        <p class="muted">Same brand, only rooms that exist on disk. Continuity clones stay in that year’s chrome.</p>
+        <div id="atlas-threads"></div>
+
+        <h2 id="trails">Tours (human paths)</h2>
+        <p class="muted">First night is the built-in walk (ends 2010). The others are curator threads, not leftover 5× farms. 2025 stays boarded.</p>
+        <div id="atlas-trails"></div>
+
+        <h2 id="find">Find a name</h2>
+        <p class="muted">Jumps to a real room. Searches golds, guided, official 10, leftover 2×, popular 3×, games, threads, and tours.</p>
+        <p><input type="search" id="atlas-find" placeholder="hotmail, napster, lucky, gdpr, disney, zoom, att…" autocomplete="off"></p>
+        <div id="atlas-find-results"></div>
+
+        <p class="atlas-foot">
+          <a href="../index.html">Year menu</a> ·
+          <a href="../games/index.html">Games</a> ·
+          25 years playable · 2018 / 2020–2025 boarded · 2007 / 2009 / 2011 / 2013–2017 / 2019 lean doors
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/museum-progress.js"></script>
+  <script src="../js/config/flow-trails.js"></script>
+  <script src="../js/config/flow-maps.js"></script>
+  <script src="../js/config/flow-maps-3x.js"></script>
+  <script src="../js/config/flow-maps-popular-3x.js"></script>
+  <script src="../js/config/flow-maps-5x-atlas.js"></script>
+  <script src="../js/config/year-playable.js"></script>
+  <script src="../js/config/year-extra-games.js"></script>
+  <script src="../js/year-ui/start-data.js"></script>
+  <script src="../js/atlas-data.js"></script>
+  <script src="../js/atlas.js"></script>
+</body>
+</html>

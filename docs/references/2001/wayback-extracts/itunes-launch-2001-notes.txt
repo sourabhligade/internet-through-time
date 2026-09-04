@@ -1,0 +1,15 @@
+SOURCE: https://cybercultural.com/p/itunes-launch-2001/
+STATUS: [visited] 2026-07-26 deep research pass (NEW)
+ROLE: Digital hub + iTunes 1.0 narrative
+
+KEY FACTS:
+- Macworld SF Jan 9 2001: "third golden age" = digital lifestyle; PC as digital hub
+- Devices: cellphones, MP3 players, camcorders, DVD, digital cameras, Palm
+- Rip / Mix / Burn framing
+- iTunes from SoundJam acquisition; free; cleaner than RealJukebox / WMP7
+- WMP7 fails MP3 encode (WMA proprietary) — Jobs MP3-first wins
+- Audion founders despair (Cabel Sasser)
+- No hardware unveil in Jan — iPod still early research
+- Apple PR: "World's Best and Easiest-To-Use Jukebox Software" Jan 9 2001
+
+BUILD: pair with iTunes product WA Nov (iTunes 2 + iPod)

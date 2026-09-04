@@ -10,6 +10,7 @@
     year: "1998",
     storagePrefix: "itt98",
     features: {
+      flowMap: true,
       nav: true,
       amazon: true,
       auction: true,
@@ -34,6 +35,7 @@
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
+      { label: "Flow map", href: "pages/map.html" },
       { label: "Google!", href: "sites/google/index.html" },
       { label: "Yahoo!", href: "sites/yahoo/index.html" },
       { label: "About 1998", href: "pages/about.html" }

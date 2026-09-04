@@ -10,9 +10,10 @@
 |-------|--------|--------|
 | **Phase 1 Immersion** | **Done** | `js/immersion/{shared,guestbook-search,amazon,auction,hotmail,geocities,slashdot,media-1994,plugin,create}.js`; boots load sequentially; `immersion-core.js` is a shim |
 | **Phase 2 Browser connect + load-theater** | **Partial** | `browser/connect.js` owns modem sound + sequence; `browser/load-theater.js` owns step/batch/delay math; progressive loop + chrome still in `browser/create.js` |
-| **Phase 3 Navigate + chrome-ui** | **Deferred** | Still inside `browser/create.js` (~1.7k); year shells still load via `browser-core.js` document.write shim |
-| **Phase 4–5 Cleanup** | **Partial** | Smoke/auth/e2e/README updated; full navigate extract still open |
+| **Phase 3 Navigate + chrome-ui** | **Partial** | `browser/navigate.js` + `browser/chrome-ui.js` (`ITT.BrowserChrome.attach`). `create.js` still owns history, iframe navigate, connect overlay, and wires chrome via ctx. Coach copy 1994–2018. |
+| **Phase 4–5 Cleanup** | **Partial** | Smoke/auth/e2e/README updated; chrome-ui extract still open |
 | **1998 immersion modules** | **Done** | `google.js`, `excite.js`, `yahoo.js` registered via `immersion-1998.js` FEATURES; no inline page scripts for personalize |
+| **Year extras kit** | **Done** 2026-08-11 | `js/immersion/year-extras-kit.js` (`ITT.YearExtras.forYear`) · `boot.js` loads the kit **sequentially before** extras / true-packs (priority list is not enough — `loadAll` is parallel). 2007/2010/2013–2019 extras + `year-true-packs.js` bind kit helpers. Product boots stay in the year file. |
 
 ---
 
@@ -56,6 +57,7 @@ js/
     google.js               # 1998 Google search theater (catalog results + lucky)
     excite.js               # 1998 My Excite personalize modules
     yahoo.js                # 1998 My Yahoo personalize modules
+    year-extras-kit.js      # ITT.YearExtras.forYear — prefix/key/save/bootChecks
     registry.js             # FEATURES_BY_YEAR (single source of truth)
     boot.js                 # shared loader for all years
     create.js               # ITT.Immersion.create + boot() orchestrator only

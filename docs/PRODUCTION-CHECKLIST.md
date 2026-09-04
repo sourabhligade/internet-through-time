@@ -1,5 +1,22 @@
 # Production checklist — Internet Through Time
 
+> **Ship (2026-08-27):** Hub **28 years open** (1994–2023 minus **2007 and 2020 wiped**). **2024–2025 wiped.** Static only — CDN is the traffic path. Prefer live tree + `SHIP_YEARS`. Older rows below are historical.
+
+## Traffic (how load is handled)
+
+There is **no app server**. Deploy the repo root to Netlify / Vercel / GitHub Pages. Concurrent visitors hit the CDN, not a process. Carts, stamps, and Resume are `localStorage` only.
+
+| Layer | What handles a spike |
+|-------|----------------------|
+| Origin | Static files. Host bandwidth / CDN plan is the only capacity limit. |
+| `/assets/*` | 1 year, immutable |
+| `/css/*` `/js/*` | 1 day + 7-day stale-while-revalidate |
+| HTML / year rooms | revalidate immediately |
+| Client | Year pages load leftover JS **only when that page has leftover hooks**. UX pack loads in parallel with product engines. |
+
+Post-deploy: `python3 scripts/smoke-production.py --base https://YOUR_HOST`
+
+
 **Legend:** `[ ]` todo · `[~]` partial · `[x]` done  
 
 ---
@@ -35,7 +52,7 @@
 |----|------|--------|----------|
 | **C1** | Asset link scan | [x] | smoke-production.py |
 | **C2** | urlMap ↔ disk | [x] | smoke-production.py |
-| **C3** | Internal links all years | [x] | `audit-internal-links.py` → 0 broken / 14k+ (1994–2005) |
+| **C3** | Internal links all years | [x] | `audit-internal-links.py` → 0 broken / 14k+ (1994–2002) |
 | **C4** | 1994 internal links | [x] | same |
 | **C5** | 1996 internal links | [x] | same |
 | **C6** | Assets inventory | [x] | `docs/references/ASSETS-INVENTORY.md` |
@@ -86,5 +103,5 @@ python3 scripts/measure-perf.py
 
 | 2026-07-19 | Sprint A–C authenticity pass: eBay logo, Space Jam planets, museum voice strip, Amazon period inputs, 1997 zero href=#, SSL checkout, GeoCities homestead+webring, HoTMaiL redesign, phone-line theater |
 | 2026-07-19 | Pipeline: `ci.yml` (static + e2e), authenticity in CI, `npm run ci` / `scripts/ci.sh`, Playwright CI retries + report artifact |
-| 2026-07-24 | Prod ready: expanded `.gitignore`, `.gitattributes`, `.env.example`, removed local backups, hub years 1994–2005, link audit 0 broken, pixel harvest pass |
+| 2026-07-24 | Prod ready: expanded `.gitignore`, `.gitattributes`, `.env.example`, removed local backups, hub years 1994–2002 (2003–05 not on disk as of 2026-07-25), link audit 0 broken, pixel harvest pass |
 

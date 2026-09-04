@@ -1,0 +1,901 @@
+{
+  "1994": [
+    {
+      "id": "lycos",
+      "name": "Lycos",
+      "title": "Lycos leftover",
+      "why": "1994 leftover third trio. Not the chip.",
+      "verb": "Pick catalog then go.",
+      "ph": "web",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "infoseek",
+      "name": "Infoseek",
+      "title": "Infoseek leftover",
+      "why": "1994 leftover third trio. Not the chip.",
+      "verb": "Pick search then go.",
+      "ph": "mosaic",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "nasa",
+      "name": "NASA",
+      "title": "NASA leftover",
+      "why": "1994 leftover third trio. Not the chip.",
+      "verb": "Pick shuttle then go.",
+      "ph": "ksc",
+      "btn": "Open leftover"
+    }
+  ],
+  "1995": [
+    {
+      "id": "geocities",
+      "name": "GeoCities",
+      "title": "GeoCities leftover",
+      "why": "1995 leftover third trio. Not the chip.",
+      "verb": "Pick homestead then go.",
+      "ph": "colby",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "classmates",
+      "name": "Classmates",
+      "title": "Classmates leftover",
+      "why": "1995 leftover third trio. Not the chip.",
+      "verb": "Pick find then go.",
+      "ph": "class of 89",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "match",
+      "name": "Match",
+      "title": "Match leftover",
+      "why": "1995 leftover third trio. Not the chip.",
+      "verb": "Pick personals then go.",
+      "ph": "seattle",
+      "btn": "Open leftover"
+    }
+  ],
+  "1996": [
+    {
+      "id": "hotmail",
+      "name": "Hotmail",
+      "title": "Hotmail leftover",
+      "why": "1996 leftover third trio. Not the chip.",
+      "verb": "Pick inbox then go.",
+      "ph": "you@hotmail",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "excite",
+      "name": "Excite",
+      "title": "Excite leftover",
+      "why": "1996 leftover third trio. Not the chip.",
+      "verb": "Pick portal then go.",
+      "ph": "channels",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "angelfire",
+      "name": "Angelfire",
+      "title": "Angelfire leftover",
+      "why": "1996 leftover third trio. Not the chip.",
+      "verb": "Pick page then go.",
+      "ph": "my site",
+      "btn": "Open leftover"
+    }
+  ],
+  "1997": [
+    {
+      "id": "slashdot",
+      "name": "Slashdot",
+      "title": "Slashdot leftover",
+      "why": "1997 leftover third trio. Not the chip.",
+      "verb": "Pick story then go.",
+      "ph": "linux",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "winamp",
+      "name": "Winamp",
+      "title": "Winamp leftover",
+      "why": "1997 leftover third trio. Not the chip.",
+      "verb": "Pick skin then go.",
+      "ph": "classic",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "ebay",
+      "name": "eBay",
+      "title": "eBay leftover",
+      "why": "1997 leftover third trio. Not the chip.",
+      "verb": "Pick auction then go.",
+      "ph": "peanut",
+      "btn": "Open leftover"
+    }
+  ],
+  "1998": [
+    {
+      "id": "dmoz",
+      "name": "DMOZ",
+      "title": "DMOZ leftover",
+      "why": "1998 leftover third trio. Not the chip.",
+      "verb": "Pick catalog then go.",
+      "ph": "computers",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "cdnow",
+      "name": "CDNow",
+      "title": "CDNow leftover",
+      "why": "1998 leftover third trio. Not the chip.",
+      "verb": "Pick album then go.",
+      "ph": "ok computer",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "gamespot",
+      "name": "GameSpot",
+      "title": "GameSpot leftover",
+      "why": "1998 leftover third trio. Not the chip.",
+      "verb": "Pick preview then go.",
+      "ph": "halflife",
+      "btn": "Open leftover"
+    }
+  ],
+  "1999": [
+    {
+      "id": "blogger",
+      "name": "Blogger",
+      "title": "Blogger leftover",
+      "why": "1999 leftover third trio. Not the chip.",
+      "verb": "Pick post then go.",
+      "ph": "hello",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "etrade",
+      "name": "E*TRADE",
+      "title": "E*TRADE leftover",
+      "why": "1999 leftover third trio. Not the chip.",
+      "verb": "Pick quote then go.",
+      "ph": "yhoo",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "title": "PayPal leftover",
+      "why": "1999 leftover third trio. Not the chip.",
+      "verb": "Pick send then go.",
+      "ph": "20",
+      "btn": "Open leftover"
+    }
+  ],
+  "2000": [
+    {
+      "id": "expedia",
+      "name": "Expedia",
+      "title": "Expedia leftover",
+      "why": "2000 leftover third trio. Not the chip.",
+      "verb": "Pick flight then go.",
+      "ph": "sfo",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "title": "PayPal leftover",
+      "why": "2000 leftover third trio. Not the chip.",
+      "verb": "Pick send then go.",
+      "ph": "20",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "ebay",
+      "name": "eBay",
+      "title": "eBay leftover",
+      "why": "2000 leftover third trio. Not the chip.",
+      "verb": "Pick watch then go.",
+      "ph": "beanie",
+      "btn": "Open leftover"
+    }
+  ],
+  "2004": [
+    {
+      "id": "digg",
+      "name": "Digg",
+      "title": "Digg leftover",
+      "why": "2004 leftover third trio. Not the chip.",
+      "verb": "Pick digg then go.",
+      "ph": "firefox",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "title": "Gmail leftover",
+      "why": "2004 leftover third trio. Not the chip.",
+      "verb": "Pick invite then go.",
+      "ph": "1gb",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "delicious",
+      "name": "Delicious",
+      "title": "Delicious leftover",
+      "why": "2004 leftover third trio. Not the chip.",
+      "verb": "Pick tag then go.",
+      "ph": "web2",
+      "btn": "Open leftover"
+    }
+  ],
+  "2008": [
+    {
+      "id": "friendconnect",
+      "name": "FriendConnect",
+      "title": "FriendConnect leftover",
+      "why": "2008 leftover third trio. Not the chip.",
+      "verb": "Pick gadget then go.",
+      "ph": "friends",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "evernote",
+      "name": "Evernote",
+      "title": "Evernote leftover",
+      "why": "2008 leftover third trio. Not the chip.",
+      "verb": "Pick clip then go.",
+      "ph": "note",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "lastfm",
+      "name": "Last.fm",
+      "title": "Last.fm leftover",
+      "why": "2008 leftover third trio. Not the chip.",
+      "verb": "Pick scrobble then go.",
+      "ph": "radio",
+      "btn": "Open leftover"
+    }
+  ],
+  "2009": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover",
+      "why": "2009 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "myspace leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "myspace",
+      "name": "MySpace",
+      "title": "MySpace leftover",
+      "why": "2009 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "wave leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "wave",
+      "name": "Google Wave",
+      "title": "Google Wave leftover",
+      "why": "2009 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "youtube leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2010": [
+    {
+      "id": "chrome",
+      "name": "Chrome",
+      "title": "Chrome leftover",
+      "why": "2010 leftover third trio. Not the chip.",
+      "verb": "Pick tab then go.",
+      "ph": "omnibox",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "wave",
+      "name": "Wave",
+      "title": "Wave leftover",
+      "why": "2010 leftover third trio. Not the chip.",
+      "verb": "Pick funeral then go.",
+      "ph": "wave",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "android",
+      "name": "Android",
+      "title": "Android leftover",
+      "why": "2010 leftover third trio. Not the chip.",
+      "verb": "Pick market then go.",
+      "ph": "app",
+      "btn": "Open leftover"
+    }
+  ],
+  "2011": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover",
+      "why": "2011 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "reddit leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover",
+      "why": "2011 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "twitter leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "title": "Twitter leftover",
+      "why": "2011 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "youtube leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2012": [
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover",
+      "why": "2012 leftover third trio. Not the chip.",
+      "verb": "Pick sub then go.",
+      "ph": "pics",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "tinder",
+      "name": "Tinder",
+      "title": "Tinder leftover",
+      "why": "2012 leftover third trio. Not the chip.",
+      "verb": "Pick swipe then go.",
+      "ph": "usc",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "windows8",
+      "name": "Windows 8",
+      "title": "Windows 8 leftover",
+      "why": "2012 leftover third trio. Not the chip.",
+      "verb": "Pick start then go.",
+      "ph": "tiles",
+      "btn": "Open leftover"
+    }
+  ],
+  "2013": [
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover",
+      "why": "2013 leftover third trio. Not the chip.",
+      "verb": "Pick sub then go.",
+      "ph": "videos",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook leftover",
+      "why": "2013 leftover third trio. Not the chip.",
+      "verb": "Pick home then go.",
+      "ph": "graph",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "title": "Twitter leftover",
+      "why": "2013 leftover third trio. Not the chip.",
+      "verb": "Pick tweet then go.",
+      "ph": "vine",
+      "btn": "Open leftover"
+    }
+  ],
+  "2014": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover",
+      "why": "2014 leftover third trio. Not the chip.",
+      "verb": "Pick watch then go.",
+      "ph": "music video",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia leftover",
+      "why": "2014 leftover third trio. Not the chip.",
+      "verb": "Pick article then go.",
+      "ph": "whatsapp",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook leftover",
+      "why": "2014 leftover third trio. Not the chip.",
+      "verb": "Pick deal then go.",
+      "ph": "$19 billion",
+      "btn": "Open leftover"
+    }
+  ],
+  "2015": [
+    {
+      "id": "discord",
+      "name": "Discord",
+      "title": "Discord leftover",
+      "why": "2015 leftover third trio. Not the chip.",
+      "verb": "Pick server then go.",
+      "ph": "#general",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "echo",
+      "name": "Echo",
+      "title": "Echo leftover",
+      "why": "2015 leftover third trio. Not the chip.",
+      "verb": "Pick alexa then go.",
+      "ph": "timer",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "title": "Snapchat leftover",
+      "why": "2015 leftover third trio. Not the chip.",
+      "verb": "Pick snap then go.",
+      "ph": "24h",
+      "btn": "Open leftover"
+    }
+  ],
+  "2016": [
+    {
+      "id": "musically",
+      "name": "Musical.ly",
+      "title": "Musical.ly leftover",
+      "why": "2016 leftover third trio. Not the chip.",
+      "verb": "Pick lip then go.",
+      "ph": "15",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "vine",
+      "name": "Vine",
+      "title": "Vine leftover",
+      "why": "2016 leftover third trio. Not the chip.",
+      "verb": "Pick loop then go.",
+      "ph": "6s",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "title": "Snapchat leftover",
+      "why": "2016 leftover third trio. Not the chip.",
+      "verb": "Pick story then go.",
+      "ph": "24h",
+      "btn": "Open leftover"
+    }
+  ],
+  "2017": [
+    {
+      "id": "fortnite",
+      "name": "Fortnite",
+      "title": "Fortnite leftover",
+      "why": "2017 leftover third trio. Not the chip.",
+      "verb": "Pick drop then go.",
+      "ph": "tilted",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "teams",
+      "name": "Teams",
+      "title": "Teams leftover",
+      "why": "2017 leftover third trio. Not the chip.",
+      "verb": "Pick chat then go.",
+      "ph": "#general",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "title": "Switch leftover",
+      "why": "2017 leftover third trio. Not the chip.",
+      "verb": "Pick dock then go.",
+      "ph": "zelda",
+      "btn": "Open leftover"
+    }
+  ],
+  "2018": [
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "title": "TikTok leftover",
+      "why": "2018 leftover third trio. Not the chip.",
+      "verb": "Pick fyp then go.",
+      "ph": "sound",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "title": "GitHub leftover",
+      "why": "2018 leftover third trio. Not the chip.",
+      "verb": "Pick issue then go.",
+      "ph": "ms",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "homepod",
+      "name": "HomePod",
+      "title": "HomePod leftover",
+      "why": "2018 leftover third trio. Not the chip.",
+      "verb": "Pick siri then go.",
+      "ph": "room",
+      "btn": "Open leftover"
+    }
+  ],
+  "2019": [
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "title": "TikTok leftover",
+      "why": "2019 leftover third trio. Not the chip.",
+      "verb": "Pick fyp then go.",
+      "ph": "sound",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "stadia",
+      "name": "Stadia",
+      "title": "Stadia leftover",
+      "why": "2019 leftover third trio. Not the chip.",
+      "verb": "Pick stream then go.",
+      "ph": "founders",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade",
+      "title": "Arcade leftover",
+      "why": "2019 leftover third trio. Not the chip.",
+      "verb": "Pick play then go.",
+      "ph": "oceanhorn",
+      "btn": "Open leftover"
+    }
+  ],
+  "2001": [
+    {
+      "id": "google",
+      "name": "Google",
+      "title": "Google leftover",
+      "why": "2001 leftover third trio. Not the chip.",
+      "verb": "Pick search then go.",
+      "ph": "nupedia",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "yahoo",
+      "name": "Yahoo",
+      "title": "Yahoo leftover",
+      "why": "2001 leftover third trio. Not the chip.",
+      "verb": "Pick directory then go.",
+      "ph": "News",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "cnn",
+      "name": "CNN",
+      "title": "CNN leftover",
+      "why": "2001 leftover third trio. Not the chip.",
+      "verb": "Pick headline then go.",
+      "ph": "Afghanistan",
+      "btn": "Open leftover"
+    }
+  ],
+  "2002": [
+    {
+      "id": "daypop",
+      "name": "Daypop",
+      "title": "Daypop leftover",
+      "why": "2002 leftover third trio. Not the chip.",
+      "verb": "Pick link then go.",
+      "ph": "blog",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "googlenews",
+      "name": "Google News",
+      "title": "Google News leftover",
+      "why": "2002 leftover third trio. Not the chip.",
+      "verb": "Pick cluster then go.",
+      "ph": "iraq",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "technorati",
+      "name": "Technorati",
+      "title": "Technorati leftover",
+      "why": "2002 leftover third trio. Not the chip.",
+      "verb": "Pick cosmos then go.",
+      "ph": "plasticbag",
+      "btn": "Open leftover"
+    }
+  ],
+  "2021": [
+    {
+      "id": "clubhouse",
+      "name": "Clubhouse",
+      "title": "Clubhouse leftover",
+      "why": "2021 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "nft leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "nft",
+      "name": "NFT",
+      "title": "NFT leftover",
+      "why": "2021 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "squid leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "squid",
+      "name": "Squid",
+      "title": "Squid leftover",
+      "why": "2021 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "clubhouse leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2003": [
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "title": "Amazon leftover",
+      "why": "2003 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "yahoo leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "yahoo",
+      "name": "Yahoo",
+      "title": "Yahoo leftover",
+      "why": "2003 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "blogger leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "blogger",
+      "name": "Blogger",
+      "title": "Blogger leftover",
+      "why": "2003 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "photobucket leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2005": [
+    {
+      "id": "maps",
+      "name": "Maps",
+      "title": "Maps leftover",
+      "why": "2005 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "reddit leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover",
+      "why": "2005 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "digg leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "digg",
+      "name": "Digg",
+      "title": "Digg leftover",
+      "why": "2005 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "maps leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2006": [
+    {
+      "id": "googledocs",
+      "name": "Docs",
+      "title": "Docs leftover",
+      "why": "2006 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "roblox leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "title": "Roblox leftover",
+      "why": "2006 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "ie7 leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "ie7",
+      "name": "IE7",
+      "title": "IE7 leftover",
+      "why": "2006 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "docs leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2007": [
+    {
+      "id": "digg",
+      "name": "Digg",
+      "title": "Digg leftover",
+      "why": "2007 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "flickr leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "flickr",
+      "name": "Flickr",
+      "title": "Flickr leftover",
+      "why": "2007 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "reddit leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover",
+      "why": "2007 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "digg leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2020": [
+    {
+      "id": "teams",
+      "name": "Teams",
+      "title": "Teams leftover",
+      "why": "2020 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "discord leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "title": "Discord leftover",
+      "why": "2020 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "tiktok leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "title": "TikTok leftover",
+      "why": "2020 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "teams leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2022": [
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "title": "TikTok leftover",
+      "why": "2022 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "midjourney leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "title": "Midjourney leftover",
+      "why": "2022 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "lensa leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "lensa3",
+      "name": "Lensa",
+      "title": "Lensa leftover",
+      "why": "2022 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "tiktok leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2023": [
+    {
+      "id": "redditapi",
+      "name": "Reddit API",
+      "title": "Reddit API leftover",
+      "why": "2023 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "dalle3 leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "dalle3",
+      "name": "DALL\u00b7E 3",
+      "title": "DALL\u00b7E 3 leftover",
+      "why": "2023 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "bsky leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "bsky",
+      "name": "Bluesky",
+      "title": "Bluesky leftover",
+      "why": "2023 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "redditapi leftover",
+      "btn": "Open leftover"
+    }
+  ],
+  "2024": [
+    {
+      "id": "ttban",
+      "name": "TikTok ban",
+      "title": "TikTok ban leftover",
+      "why": "2024 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "mj24 leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "mj24",
+      "name": "Midjourney",
+      "title": "Midjourney leftover",
+      "why": "2024 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "bsky24 leftover",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "bsky24",
+      "name": "Bluesky",
+      "title": "Bluesky leftover",
+      "why": "2024 leftover third trio. Not the chip.",
+      "verb": "Pick leftover then go.",
+      "ph": "ttban leftover",
+      "btn": "Open leftover"
+    }
+  ]
+}

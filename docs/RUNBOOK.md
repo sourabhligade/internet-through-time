@@ -16,6 +16,14 @@
    python3 scripts/smoke-production.py --base http://127.0.0.1:8080
    npx playwright test
    ```
+   Fast multi-year + per-scenario real-flow gates:
+   ```bash
+   npm run test:e2e:cross-year      # multi-year product matrix
+   npm run test:e2e:scenarios      # one test per interactive scenario
+   npm run test:e2e:real-gates     # both
+   ```
+   Plan: `docs/CROSS-YEAR-REAL-FLOWS-EXECUTION.md`  
+   CI: job **Playwright cross-year real flows (fast gate)** runs both suites + full e2e job.
 2. Tag a museum release:
    ```bash
    git tag -a v0.3.0-museum -m "1994–1997 museum + production pack"
@@ -31,10 +39,19 @@ Workflow: `.github/workflows/ci.yml`
 
 | Job | Checks |
 |-----|--------|
-| **static** | FS smoke, link audit, authenticity, HTTP smoke |
-| **e2e** | `npm ci` + Playwright Chromium suite |
+| **static** | FS smoke, link audit, authenticity, pipeline, 5× contract, mock-flows, all-years, HTTP smoke |
+| **e2e** | OSS visitor gate + named Playwright **ship pack** (not `npm test` / not the full `e2e/` tree) |
 
 PRs and pushes to `main`/`master` run both jobs.
+
+## Traffic
+
+Static museum. No backend, no sessions, no API keys. A traffic spike is a CDN problem, not an application problem.
+
+- Netlify: `netlify.toml` (+ `_headers` for hosts that read it)
+- Vercel: `vercel.json`
+- GitHub Pages: no custom cache headers — prefer Netlify/Vercel for a public launch
+- Do not add a service worker (it would freeze year iframes on stale JS)
 
 ## E2. Post-deploy smoke
 

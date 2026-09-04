@@ -1,0 +1,94 @@
+2016 from-scratch research visit — 2026-08-10
+Hub on disk: 1994–2015. years/2016 absent. HEAD has clone forest — do not restore.
+
+Opened:
+- Live Stats total websites (2016 row 1,045,534,808 +21%, prose 1B Mar, 900M–1.7B, ~170M active)
+- Instagram About Stories 2016-08-02
+- TechCrunch Instagram Stories 2016-08-02
+- Facebook Newsroom Reactions 2016-02-24
+- TechCrunch / EFF / BBC WhatsApp E2E 2016-04-05
+- Vine Medium 2016-10-27
+- Fortune Vine Jan 17 2017
+- Apple Newsroom AirPods 2016-12-13 $159
+- Parent live years/2015 + extras + 2015 FROM-SCRATCH bibles
+- Git HEAD docs/2016-READ-FIRST.md + harvest 2026-08-06
+- COMPLEX 2016, ONE-THING (Musical.ly — overridden), YEAR-STATUS, SCALE-LEDGER
+- ARCHITECTURE add-year checklist, REAL-FLOW-SYSTEM, check-all-years.py, registry 2015
+- GAMES gymrush row
+
+One-thing locked: Instagram Stories (not Musical.ly, not PoGO).
+Game: Gym Rush.
+Implement: docs/2016-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md
+
+---
+
+2016 LIVE-YEAR deep harvest — 2026-08-10 (beyond first freeze MD)
+
+Hub now 1994–2016. years/2016 lean MVP ~37 HTML. Do not restore HEAD forest.
+
+Read on disk first:
+- 2016-READ-FIRST, FROM-SCRATCH research + goals, MUSEUM-GRADE
+- references/2016 ARTIFACTS-MAP + CAPTURE-LOG + this visit log
+- GAMES-PER-YEAR/YEAR-2016, GAMES-YEAR-AUTHENTICITY, DISK-TRUTH, NON-DONE, SCALE-LEDGER
+- 2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-10 (template)
+- ONE-THING, COMPLEX-INTEGRATIONS, WIDELY-USED-MISSING
+- live years/2016/pages/home.html + sites tree
+- assets/period/2016/README-PIXELS.txt
+
+Opened live (new or re-opened):
+- Live Stats websites (re-OK)
+- Live Stats internet-users (NEW 3,424,971,237 / 46.1%)
+- FB Reactions newsroom (full Krug text + hold/hover + video zip)
+- WhatsApp blog end-to-end-encryption (Jan+Brian Apr 5 “Not even us”)
+- EFF 2016-04-07 (Mar 31 push, Signal, QR, backups caveat)
+- Verge 2016-08-02 Stories (10s, + icon, no v1 filters, 500M/300M, Systrom interview)
+- Apple Newsroom iPhone 7 Sep 7 ($649, Sep 16, adapter $9, IP67, A10)
+- Apple Newsroom AirPods Sep 7 + Dec 13 ($159, delayed, 5h+case)
+- Vine Medium (exact nothing-today quote)
+- Microsoft Source LinkedIn Jun 13 ($26.2B / $196 / Dec 8)
+- Microsoft Source Teams Nov 2 (preview, GA Mar 2017)
+- FB Live Apr 6 Fidji Simo
+- Pokémon Co PR 500M downloads Sep 7
+- Pew Mobile Fact Sheet 2016 rows (72% Apr / 77% Nov)
+- TC Messenger bots Apr 12 · AMP SERP Feb 24 · Google Home $129 Nov 4
+- Billboard musical.ly Oct 20 (133.5M / half US teens claim)
+- Krebs Dyn Oct 21
+
+Densify frozen (not implemented): 16-D1 IG Live · D2 AMP-SERP · D3 FB Live everyone · D4 Dyn/Mirai · D5 Pixel+Home · D6 Spectacles.
+
+Bible: docs/2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-10.md
+
+---
+
+2016 NEW-SOURCE harvest — 2026-08-11 (venture past first harvest)
+
+Hub 1994–2016. years/2016 lean A− ~44 HTML. D1–D6 already shipped. Do not restore forest.
+
+Did not re-open Live Stats / Stories / Reactions / WA E2E / PoGO / iPhone 7 / Vine Medium (locked).
+
+Opened live (new primaries):
+- apple.com/customer-letter/ (Feb 16 2016 Cook — still live; backdoor / master-key / All Writs)
+- about.fb.com Marketplace 2016-10-03 (450M Groups, 18+, US/UK/AU/NZ, no payment/delivery)
+- about.fb.com Workplace 2016-10-10
+- blog.google Duo 2016-08-16 (phone number, Knock Knock, E2E)
+- news.microsoft.com Teams 2016-11-02 + Office blog (preview, GA 2017 Q1)
+- deepmind.google/research/alphago + Nature 2016-03-09 / 03-15 (4–1, 200M-class)
+- letsencrypt.org millionth-cert + 10-year recap + EFF 2016-10-10 (1M Mar, prod Apr 12, 6M unexpired)
+- help.yahoo.com SLN28092 / SLN27925 + NYT Sep 22 / Dec 14 (500M vs 1B; not 3B)
+- cpsc.gov Note7 2016-09-15 + expand Oct 13 (~1M / ~1.9M)
+- Apple Newsroom iOS 10 Jun 13 preview + Sep 19 stickers (ship Sep 13)
+- blog.google + android-developers Nougat Aug 22
+- nintendo.co.jp 2016-11-15 Mario Run Dec 15 / $9.99
+- Google Daydream blog Nov 1 ($79, stores Nov 10)
+- PSVR Oct 13 $399 (CNBC / Road to VR)
+- Guardian + BBC TRAI Feb 8 Free Basics
+- blog.whatsapp.com/one-billion Feb 1
+- blog.npmjs.org left-pad Mar 23
+
+New IDs: 16-D21 Apple/FBI · D22 Free Basics · D23 WA 1B copy · D24 PSVR · D25 Daydream · D26 left-pad · D27 Verizon line.
+Sourced former names: D7–D15, D18–D19.
+
+Bible: docs/2016-DEEP-RESEARCH-WEB-HARVEST-2026-08-11.md
+Implement: docs/2016-P2-DENSIFY-IMPLEMENTATION-PHASES.md (not executed this pass)
+
+

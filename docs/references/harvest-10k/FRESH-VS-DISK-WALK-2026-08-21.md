@@ -1,0 +1,5639 @@
+# Fresh Wikipedia internet properties vs disk dests
+
+**Date:** 2026-08-21
+**What this is:** titles from `wikipedia-missing-vs-disk.json` that are **not** already a `years/*/sites/<folder>` dest.
+**Not opened as 5,550 live pages.** This is the walk queue for museum-grade leftover research.
+**Already-opened in prior freezes (do not recount as new):** Internet Live Stats, ITU PRs, Scripting News June 1997, TechCrunch Twttr 15 Jul 2006.
+**Total fresh titles: 5550**
+
+
+## 1994 · 52 fresh
+
+- ALIWEB
+- Automatic Complaint-Letter Generator
+- Border Gateway Protocol
+- Cashiers du Cinemart
+- Cool Site of the Day
+- DALnet
+- Dickinson Electronic Archives
+- EWorld
+- Elsevier Biobase
+- Examiner.com
+- Flyaow
+- FogCam
+- Global Electronic Music Marketplace
+- GoAntiques
+- HTTPS
+- Handle System
+- Hob Nob Anyone?
+- Horseland
+- Inducks
+- Internet in China
+- Lambiek
+- Lib.ru
+- Libero (web portal)
+- Lin Hsin Hsin Art Museum
+- Nausicaa.net
+- Online Writing Lab
+- PLBY Group
+- Phone Losers of America
+- Playboy.co.uk
+- PowWow (chat program)
+- Pseudo.com
+- Purple.com
+- RSSSF
+- Register.com
+- SFGate
+- Sex.com
+- Snopes
+- Subkulture
+- Sweetwater Sound
+- TalkOrigins Archive
+- The Nine Planets
+- The Register
+- The Simpsons Archive
+- The Useless Pages
+- The World's First Collaborative Sentence
+- Virtual Library museums pages
+- WAHM (magazine)
+- WebMuseum
+- Webring
+- Whitehouse.gov
+- World Wide Web Worm
+- ZoneZero
+
+## 1995 · 133 fresh
+
+- 8-Track Heaven
+- Academy of Canadian Cinema & Television
+- Adrenaline Vault
+- All About Jazz
+- Alt attribute
+- Angi
+- Angi Inc.
+- Animal Diversity Web
+- Anime Web Turnpike
+- Antiwar.com
+- AsiaOne
+- Astronomy Picture of the Day
+- AutoWeb
+- Boing Boing
+- Boston.com
+- BoyChat
+- CareerBuilder
+- CharityVillage.com
+- Comic Book Resources
+- Corona's Coming Attractions
+- Covers.com
+- Crime Scene (website)
+- Cruise Critic
+- Cyber Cemetery
+- Cyberian Outpost
+- Cyclingnews.com
+- DataLounge
+- DermNet
+- Dictionary.com
+- Disney Interactive
+- Dogpile
+- ESPN FC
+- ESPN.com
+- Edmunds (company)
+- Encyclopedia Mythica
+- Epicurious
+- Europa (web portal)
+- FantasyGuru.com
+- Find a Grave
+- FindLaw
+- Firefly (website)
+- Folk Den
+- Free Internet Chess Server
+- Freenode
+- GameFAQs
+- Gazetteer for Scotland
+- Getty Images
+- Hell.com
+- Hollywood.com
+- Hong Kong Movie Database
+- IETF language tag
+- Impress Watch
+- Interactive Investor
+- Internet Adult Film Database
+- Internet Chess Club
+- Internet Encyclopedia of Philosophy
+- Internet Protocol television
+- Internet Public Library
+- Internet Speculative Fiction Database
+- Internet in India
+- Inverse Symbolic Calculator
+- Iranian.com
+- JRI-Poland
+- Laughing Squid
+- Library and Archival Exhibitions on the Web
+- Livedoor
+- Loser.com
+- MSN Dial-Up Internet Access
+- MSN Groups
+- Mail.com
+- MapmyIndia
+- Medscape
+- Mercury Center Web
+- Mirsky's Worst of the Web
+- MovieWeb
+- Music Boulevard
+- NameBase
+- Nettime
+- Nick.com
+- Online Gaming Review
+- Ontario Consultants on Religious Tolerance
+- Opera (web browser)
+- Outpost Gallifrey
+- PTT Bulletin Board System
+- Pitchfork (website)
+- PlanetOut
+- Project Muse
+- Rapture Ready
+- Realtor.com
+- RxList
+- SAPO (company)
+- SWI swissinfo
+- Salon.com
+- SamoaNIC
+- ScienceDaily
+- SegaSoft
+- Shetland News
+- SpinnWebe
+- Stanford Encyclopedia of Philosophy
+- Starbright World
+- Stormfront (website)
+- Suck.com
+- TechNet (computer network)
+- TechnoSphere (virtual environment)
+- Telegarden
+- The Globe and Mail
+- The LiederNet Archive
+- The Mud Connector
+- The Spot
+- The Unofficial Elder Scrolls Pages
+- The Virtual Museum of Computing
+- TheGlobe.com
+- Townhall
+- Transformation Story Archive
+- Vatican.va
+- Venere.com
+- VersionTracker
+- Viaweb
+- Vrbo
+- Waiter.com
+- Walla! Communications
+- Wargamer (website)
+- Weather Underground (weather service)
+- Webex
+- Webshots
+- WikiWikiWeb
+- Wireplay
+- Wirtualna Polska
+- Worlds.com
+- YachtWorld
+- Zaman (newspaper)
+- Zug (website)
+- České filmové nebe
+
+## 1996 · 169 fresh
+
+- @Home Network
+- ABA Journal Online
+- AR15.com
+- AbeBooks
+- ActuaBD
+- Adland
+- Adult FriendFinder
+- Ain't It Cool News
+- Alt.culture
+- Ancestry.com
+- Animation World Network
+- Assistive Media
+- Avsim.com
+- Backcountry.com
+- Bahamut Gamer's Community
+- BoatTrader.com
+- Bolt (website)
+- Booking Holdings
+- Brainwashed (website)
+- Brasil Online
+- Britské listy
+- BusinessesForSale.com
+- CD Universe
+- CNET Download
+- CSS
+- Canoe.com
+- Career Edge Organization
+- Casebook: Jack the Ripper
+- Cheapflights
+- CheatCodes.com
+- ChessCafe.com
+- ClutchFans
+- ComicBook.com
+- Cryptome
+- CustomMade
+- Cyndi's List
+- DLsite
+- De Imperatoribus Romanis
+- Desperate Preacher's Site
+- Doctor Who Online
+- Documenting the American South
+- Drive.com.au
+- EarthCam
+- Electronic Data Gathering, Analysis, and Retrieval
+- Elfwood
+- Emporis
+- Encyclopedia Titanica
+- Experts Exchange
+- Famous Birthdays
+- Filmsite
+- Filmtracks
+- Fireball (search engine)
+- Flightsim.com
+- Flirt4Free
+- Florida Memory
+- Friend Finder Networks
+- GameSpy
+- GameTZ.com
+- Geek.com
+- Geizhals
+- Geneanet
+- Global Anabaptist Mennonite Encyclopedia Online
+- GlobalSpec
+- Gob.cl
+- Gostosa Home Page
+- Great Internet Mersenne Prime Search
+- Gurl.com
+- H-Soz-Kult
+- Handheld Device Markup Language
+- Heartless Bitches International
+- Hi-Living
+- HockeyDB
+- IGN
+- IPv6
+- IRCnet
+- Improvised Music from Japan
+- IndiaMART
+- InfoSpace
+- International Documentation of Electroacoustic Music
+- Internet 1996 World Exposition
+- Internet Archive
+- J-List
+- Jayski's Silly Season Site
+- JuniorNet
+- Juno Online Services
+- KidsReads
+- LendingTree
+- MSN TV
+- Maremagnum
+- Marvel CyberComics
+- Matchmaker.com
+- MedicineNet
+- Metal.de
+- Metromix
+- Mod Archive
+- Molecule of the Month
+- Moviemistakes.com
+- Mplayer.com
+- NBCNews.com
+- Network-i
+- Nifty Corporation
+- On-Line Encyclopedia of Integer Sequences
+- Online Cenotaph
+- OpenNet (website)
+- Operabase
+- Operation Clambake
+- Pantip.com
+- Peacefire
+- Peapod
+- PetMed Express
+- Postmodernism Generator
+- Professional Pilots Rumour Network
+- PubMed
+- Punkrock.net
+- Quackwatch
+- RPGnet
+- RTÉ.ie
+- Radio4all.net
+- Rambler (portal)
+- Realestate.co.nz
+- Rediff.com
+- Reel Top 40 Radio Repository
+- ReliefWeb
+- Rentboy.com
+- RocketMail
+- Roller Coaster DataBase
+- SOHH
+- Scene.org
+- Search Engine Watch
+- Sequart Organization
+- Server.com
+- Seznam.cz
+- Shacknews
+- Shoes.com (defunct company)
+- SikhNet
+- Social Psychology Network
+- Society for Preventing Parents from Naming Their Children Jennifer
+- Sohu
+- SpryNet
+- Stamps.com
+- Starmedia
+- Suite101
+- Sysinternals
+- TF1+
+- THEM Anime Reviews
+- Teknoscape
+- The Black Vault
+- The Black World Today
+- The D-Word
+- The Political Graveyard
+- TheForce.Net
+- TheStreet
+- TradeIndia
+- TrueType core fonts for the Web
+- UK Resistance
+- UKGameshows.com
+- USAJobs
+- UbuWeb
+- Universo Online
+- VGMusic.com
+- Virgilio.it
+- Web Gallery of Art
+- Web archiving
+- WebMD
+- WhatsOnStage.com
+- Wilkes University Election Statistics Project
+- Womensforum
+- World Wide Words
+- Xoom (web hosting)
+
+## 1997 · 156 fresh
+
+- 888casino
+- A List Apart
+- Acronym Finder
+- Adversity.net
+- Airliners.net
+- All That Is Heavy
+- Allrecipes
+- Amina – Chechen Republic Online
+- Ask a Biologist
+- Audible (service)
+- Autotrader.com
+- Bed Bath & Beyond (2023–present)
+- Bert is Evil
+- Bharat Rakshak
+- Bluelight (web forum)
+- BookFinder.com
+- Books4cars
+- Buena Vista Internet Group
+- CAR Group
+- CheapTickets
+- Chowhound
+- Chowk.com
+- Collegeinsider.com
+- Cool Math Games
+- CyberPowWow
+- CyberThrill
+- DVDEmpire.com
+- Daft.ie
+- Dark Horizons
+- Dbna
+- DealNews
+- Digital Camera Resource Page
+- Dunkindonuts.org
+- EHealthInsurance
+- EToys.com
+- El Sitio (website)
+- Elijah List
+- EmailSanta.com
+- Eng-Tips Forums
+- Entertainment.ie
+- Eurobasket.com
+- Fibertel
+- Film Threat
+- Football365
+- FortuneCity
+- Free Republic
+- GO Voyages
+- Game Developer (website)
+- GayNZ.com
+- GenomeWeb
+- GoDaddy
+- Goo (search engine)
+- GoodNewsNetwork
+- Guinéenews
+- Hattrick (video game)
+- Headsets.com
+- Hetzner
+- Himalayan Art Resources
+- HomeGrocer
+- IFilm
+- In Music We Trust
+- Infinity Plus
+- Insex
+- Interment.net
+- International Lyrics Server
+- IslamOnline
+- IslamQA.info
+- JDate
+- Jabberwacky
+- Japanese Movie Database
+- Jeuxvideo.com
+- Just Adventure
+- Kakaku.com
+- Kink.com
+- LacusCurtius
+- Live Audio Wrestling
+- MarketWatch
+- Mathematicians of the African Diaspora
+- Mathematics Genealogy Project
+- Matrimony.com
+- MovieLens
+- MuseWeb
+- Museum of Hoaxes
+- NORAD Tracks Santa
+- Naukri.com
+- NetJet
+- News.ABS-CBN.com
+- Nine.com.au
+- Nytheatre.com
+- OSNews
+- Palestinian Information Center
+- Patient UK
+- Peakbagger.com
+- People Inc.
+- People's Daily Online
+- Piled Higher and Deeper
+- PostPet
+- Project Rastko
+- Quepasa
+- RagingBull.com
+- Rakuten
+- Rakuten.com
+- Reference.com
+- Release Magazine
+- Rithum
+- RotoWire
+- Rotten.com
+- SK Gaming
+- ScienceDirect
+- Shaadi.com
+- Sherdog
+- ShowBIZ Data
+- Sidewalk.com
+- SixDegrees.com
+- Softonic
+- SoundClick
+- Sounddogs
+- Soundtrack.Net
+- Stinkers Bad Movie Awards
+- Superbad (website)
+- TOTSE
+- TV Cream
+- TamilNet
+- TechRepublic
+- Techdirt
+- Telugucinema.com
+- Terraserver.com
+- The Best Page in the Universe
+- The Big Cartoon DataBase
+- The Futon Critic
+- The Hive (website)
+- The International House of Mojo
+- The Numbers (website)
+- The Smoking Gun
+- The Virtual Wall
+- The Wire (magazine)
+- The Witches' Voice
+- They Go On
+- Time Cube
+- Tradus
+- Turnitin
+- UBid
+- UGO Networks
+- Uchronia: The Alternate History List
+- Underneath.com
+- Untied.com
+- VietNamNet
+- WarCry Network
+- Web.com (1995–2007)
+- Whitepages (company)
+- Wordplay (website)
+- World Chess Network
+- WorldNetDaily
+- XNXX
+- Xinhuanet
+- Yandex
+
+## 1998 · 169 fresh
+
+- AALBC.com
+- African Journals OnLine
+- Airlock Alpha
+- AllHipHop
+- AllMovie
+- AlphaGalileo
+- AlterNet
+- Anime News Network
+- AnimeClick.it
+- Ars Technica
+- Arts & Letters Daily
+- Atari Age
+- AtariAge
+- Atom.com
+- AtomicPark.com
+- Auction (website)
+- Auctiva
+- Bare Necessities (company)
+- BarrysWorld
+- Beenz.com
+- Bollywood Hungama
+- Box Office Mojo
+- Brainbench
+- Break Media
+- Break.com
+- BrettspielWelt
+- Canadian Internet Registration Authority
+- Care2
+- Cars.com
+- CarsDirect
+- CartoonNetwork.com
+- Cdiscount
+- Checkatrade
+- ChickClick
+- Choral Public Domain Library
+- ChristianRock.Net
+- Cockeyed.com
+- Crime Library
+- CyberAgent
+- CyberRebate
+- Cybersocket, Inc.
+- Detik.com
+- Digital Photography Review
+- DyeStat
+- EBags.com
+- EMusic
+- EWay
+- EasyDNS
+- Eiga.com
+- El Rincón del Vago
+- Encyclopedia of Indigenous Peoples in Brazil
+- Encyclopedia.com
+- Eric Conveys an Emotion
+- Etree
+- FanFiction.Net
+- Figleaves
+- Filmweb
+- Firebox.com
+- FlyerTalk
+- Fred Flare
+- Freei
+- Go.com
+- GovWorks
+- GreatSchools
+- Gulli.com
+- Guru.com
+- HardwareZone
+- HealthBoards
+- HistoryLink
+- Home of the Underdogs
+- HomeAdvisor
+- Hong Kong Cinemagic
+- HowStuffWorks
+- Imagine Radio
+- IndexMaster
+- IndieWire
+- Intermix Media
+- International Academy of Digital Arts and Sciences
+- JD.com
+- Jew Watch
+- Jewish Virtual Library
+- JoBlo.com
+- Kozmo.com
+- LWN.net
+- La Nueva Cuba
+- LabourStart
+- Landover Baptist Church
+- Lastminute.com
+- Legacy.com
+- Literotica
+- LiveDaily
+- Maktoob
+- Memepool
+- Metababy
+- Mondo Media
+- Moreover Technologies
+- Movile (company)
+- Music Online Records
+- Neelwafurat.com
+- NetZero
+- News24 (website)
+- Omniglot
+- Oneview
+- Onmanorama
+- OpenTable
+- PCRUSH
+- Packet Storm
+- Parents Television and Media Council
+- PinupFiles
+- Pixelon
+- Pogo.com
+- Preloved
+- Priceline.com
+- ProFlowers
+- Qnet
+- Questia Online Library
+- Quotient Technology
+- Rakuten Rewards
+- Rakuten.co.uk
+- Random.org
+- Ripoff Report
+- Rivals.com
+- Rotten Tomatoes
+- San Francisco Classical Voice
+- Sanook.com
+- SatireWire
+- Segfault (website)
+- Shangguan News
+- Ship of Fools (website)
+- Shopping.com
+- Sierra (retailer)
+- Skunk (community)
+- SkyscraperPage
+- Soompi
+- Speed Demos Archive
+- Speedyclick.com
+- Startpage
+- Structurae
+- Suomi24
+- Swatch Internet Time
+- THG Ingenuity Cloud Services
+- TVARK
+- Television Without Pity
+- Tencent
+- TexAgs
+- Textfiles.com
+- The Daily Howler
+- Think Secret
+- Tradeweb
+- Travelzoo
+- TruNews
+- Truth (anti-tobacco campaign)
+- Tweakers
+- Ultimate Guitar
+- Usenet II
+- VK (company)
+- W3Schools
+- WebMoney
+- Webjet
+- Where's George?
+- Whirlpool (website)
+- Wine-Searcher
+- Wine.com
+- Wings Over Kansas
+- World News Network
+- World Socialist Web Site
+- XBIZ
+- YesAsia
+- Érudit
+
+## 1999 · 282 fresh
+
+- 2channel
+- ATRL
+- Abandoned & Little-Known Airfields
+- Acid1
+- Adult Film Database
+- Adventure Gamers
+- Advogato
+- AfricaBib
+- AfterCollege
+- AgBiotechNet
+- Albino Blacksheep
+- Allegro (website)
+- AlltheWeb
+- Ample Bosom
+- Answers.com
+- AskMen
+- Audioholics
+- Aufeminin
+- Awards Daily
+- Baen Books
+- Baen Ebooks
+- Bahrain Online
+- Baseball Almanac
+- Batanga Media
+- Beach Volleyball Database
+- Beliefnet
+- BlackPlanet
+- Bodybuilding.com
+- BookRags
+- Brainshark
+- Business.com
+- BuyCostumes.com
+- CafePress
+- Canadian Health Network
+- Capitolwire
+- Chef2chef
+- Chinese Software Developer Network
+- Chitraloka.com
+- CiaoWeb
+- Classic Game Room
+- Clix (website)
+- Coles Online
+- CollegeHumor
+- Comiclopedia
+- Complete Review
+- ContractorUK
+- Crack in the Road
+- Custom Ink
+- Cyworld
+- DCinside
+- DI.FM
+- DMM.com
+- DSLReports
+- DVD Talk
+- DVD Verdict
+- Dangdang
+- DeNA
+- Dek-D.com
+- Delticom
+- Dermstore
+- Designboom
+- Digital Library for Dutch Literature
+- Digital Spy
+- Drugstore.com
+- Dublab
+- Duowei News
+- E-Hentai
+- ECOST.com
+- EHow
+- ELong
+- Ebuyer
+- Ekşi Sözlük
+- Election.com
+- Elite Prospects
+- Epguides
+- Epidemic Marketing
+- Epinions
+- Eurogamer
+- Example.com
+- FC2 (portal)
+- Fametracker
+- FashionUnited
+- Fastmail
+- FatWallet
+- Favicon
+- Film.ru
+- Flooz.com
+- Fltplan.com
+- Food.com
+- Forgotten New York
+- Forum.hr
+- Forumopera.com
+- Four Word Film Review
+- Freaky Trigger
+- FreshDirect
+- Fultonhistory.com
+- GameRankings
+- GamesRadar+
+- GarageBand.com
+- Genealogy Today
+- Genome News Network
+- GhanaWeb
+- GiftCards.com
+- Goatse.cx
+- GreenCine
+- GunBroker.com
+- H2g2
+- Half.com
+- Halo.Bungie.Org
+- HappyCow
+- Healthline
+- Heavy (website)
+- Henry Thornton (magazine)
+- Hiiraan Online
+- HipHopCanada
+- HitQuarters
+- Homes.com
+- Hushmail
+- Huuto.net
+- HyperOffice
+- ICraveTV
+- IGP (e-gifting retailer)
+- IParenting Media
+- IWon
+- Idlebrain.com
+- In.gr
+- Index (Hungarian website)
+- Indiaplaza
+- Infowars
+- Inside Hoops
+- Inside.com
+- Internet Sacred Text Archive
+- InternetCash.com
+- Inthemix
+- Investopedia
+- Ishkur's Guide to Electronic Music
+- Itslearning
+- JibJab
+- Jippii
+- Josaka
+- Jotform
+- JournalismUK
+- Kabyle.com
+- Kaskus
+- Kataweb
+- Kibu.com
+- King and McGaw
+- Kiwibox
+- Kodak Gallery
+- Krstarica
+- Kuro5hin
+- LateRooms.com
+- Lenta.ru
+- LinuxChix
+- Little Golden Guy
+- Live365
+- Loserkids.com
+- LowerMyBills.com
+- MDLinx
+- MPWH
+- MXTabs
+- Magazines.com
+- Makeoutclub.com
+- Malaysiakini
+- Masterseek
+- Mediabistro
+- MercadoLibre
+- Military.com
+- MissingMoney.com
+- MobyGames
+- Mongabay
+- Monster.com
+- Movie Insider
+- Mr. Skin
+- MuggleNet
+- Music4Games
+- MusicOMH
+- MyLackey.com
+- NU.nl
+- NabiscoWorld
+- Naked News
+- Naver Corporation
+- Naver Dictionary
+- NeoGAF
+- Net Applications
+- Netlog
+- Netzwelt
+- NewspaperArchive
+- OpenRice
+- Orderzone.com
+- OverClocked ReMix
+- Paper Project
+- PaperofRecord.com
+- Pashnit.com
+- Pharmacy2U
+- Physiotherapy Evidence Database
+- Planet Half-Life
+- Political Wire
+- Postini
+- Pravoslavie.ru
+- ProZ.com
+- Project Canterbury
+- PunterNet
+- Purple Skirt
+- QuinStreet
+- Quotidiano.net
+- RSS
+- Racó Català
+- Rate My Professors
+- RateItAll
+- Ready2shop.com
+- Realm of Thought
+- Rent.com
+- Review Centre
+- Revues.org
+- SHE Media
+- Sacred Space (website)
+- Scoop (website)
+- Seamless (company)
+- SecurityFocus
+- Shockwave (game portal)
+- Shoes.com
+- Shopbop
+- Shutterfly
+- Sina Corporation
+- Singingfish
+- Slickdeals
+- SmartPlanet
+- Snapfish
+- SomaFM
+- Songfacts
+- Space.com
+- Special-use domain name
+- Speechbot
+- Squirt.org
+- Sssh.com
+- Stargate fandom
+- Stile Project
+- SurveyMonkey
+- Synchronized Multimedia Integration Language
+- TGSCOM
+- Taiwan.cn
+- Tarisio Auctions
+- Tencent QQ
+- The Chattanoogan
+- The Cluetrain Manifesto
+- The Doe Network
+- The Erotic Review
+- The Green Papers
+- The Hunger Site
+- The Mine (brand)
+- The Tech Report
+- The9
+- Thugs on Film
+- Tianya Club
+- Tickle.com
+- Trade Me
+- Tradera
+- Trance.nu
+- Transport Layer Security
+- Travelstart
+- Trip.com Group
+- Trusonic
+- TruthOrFiction.com
+- UKFast
+- Urban Dictionary
+- UrbanBaby
+- Urbanfetch
+- Virtualtourist
+- Web.com
+- Websleuths
+- Weiv
+- Whyville
+- Wiggle (brand)
+- Winamax
+- Wispolitics.com
+- WorldWIT
+- Xneelo
+- YTHT
+- Ya.com
+- Zappos
+- Zooplus
+
+## 2000 · 256 fresh
+
+- 123 Reg
+- 1stdibs
+- 4Gamer.net
+- 4Players
+- A21, Inc.
+- AO World
+- AOL Radio
+- AOL TV
+- ASOS plc
+- Abbywinters.com
+- AbsolutePunk
+- AccuRadio
+- Activated Content
+- Aeroxchange
+- Afilias
+- Al Bawaba
+- Am I Right
+- AmIAnnoying.com
+- An Fear Rua
+- Ananova
+- Archies Limited
+- Askimam
+- Australian Rock Database
+- AutoIndustriya.com
+- Automatic Media
+- BAYT.com
+- BBspot
+- Baseball Reference
+- Basenotes
+- BeingGirl
+- Bet365
+- Betfair
+- Betsson
+- BharatMatrimony
+- BigSoccer
+- BillDesk
+- BoardGameGeek
+- Boats.com
+- Bonsai Kitten
+- BookLender
+- Bookspan
+- BrickLink
+- Bugs! (streaming service)
+- C2it
+- CBC Radio 3
+- CNews (magazine)
+- CarComplaints.com
+- Cartoon Orbit
+- Central and Eastern European Online Library
+- Century China
+- Charges.com.br
+- Cheapair
+- Chess Live
+- Chortle
+- Christian Connection (website)
+- Cinema Treasures
+- Cinenacional.com
+- Cites & Insights
+- Clearly
+- ClickTheCity.com
+- Clickradio
+- ClinicalTrials.gov
+- CliqueMusic
+- Coast to Coast Tickets
+- Compete.com
+- Compute Against Cancer
+- CrimeFictionCanada
+- DShield
+- DXY.cn
+- Dave's Garden
+- Deadmalls.com
+- Debkafile
+- Diary-X
+- Discogs
+- Distributed Proofreaders
+- Dodgeball (service)
+- Dol2day
+- Doom9
+- Doorstep (company)
+- Drowned in Sound
+- E-med
+- EDreams
+- EHarmony
+- ESPN Deportes.com
+- El Mostrador
+- Elbakin.net
+- Emporis
+- EmuParadise
+- Esmas.com
+- Esure
+- Expatica
+- Fabchannel.com
+- Fandango Media
+- Fashion Model Directory
+- Fathom.com
+- FindArticles
+- Flirtboat
+- Friends Reunited
+- Front Porch Forum
+- Fucked Company
+- Fucking Machines
+- G-Market
+- GCFGlobal.org
+- Gamekult
+- Gameplanet
+- Gaysir
+- Geebo
+- GeneSweep
+- Gigazine
+- Gjenvick-Gjønvik Archives
+- GlobalSecurity.org
+- Guerrilla News Network
+- Guide du rôliste galactique
+- Gumtree
+- HITC
+- Happy Tree Friends
+- HeinOnline
+- Hits Daily Double
+- Hollywoodbets
+- Home Décor Products
+- Hot or Not
+- Hotwire.com
+- Hyphanet
+- Hyundai AutoEver
+- I Love Music (forum)
+- IEEE Xplore
+- IStock
+- Icebox Animation
+- Identifont
+- Index to Organism Names
+- Info-14
+- Internet Broadway Database
+- Internet Crime Complaint Center
+- Japan Registry Services
+- Jeeran
+- John Titor
+- JumpTV
+- JustGiving
+- Karmaloop
+- Keenspot
+- Keyhole (Internet forum)
+- Korea Post
+- Korrespondent.net
+- Kremlin.ru
+- Kwangmyong (network)
+- LawMoose
+- LegalMatch
+- LinuxQuestions.org
+- LunarStorm
+- MacRumors
+- Machinima, Inc.
+- MakeMyTrip
+- Maya (mobile payments)
+- MeatballWiki
+- Metal Storm (webzine)
+- Mindat.org
+- MonotaRO
+- MovieTickets.com
+- Mozdev.org
+- Mumsnet
+- Museum of Black Joy
+- MusicBrainz
+- Mutopia Project
+- My-Tv
+- Mymovies.it
+- NEWSru
+- Naharnet
+- Namecheap
+- Narthaki.com
+- Neowin
+- Netmums
+- Netshoes
+- New York Social Diary
+- News.nl
+- No-IP
+- Nupedia
+- Ogrish.com
+- OhmyNews
+- Omelete
+- OpenBSD Journal
+- Opticsplanet
+- Orisinal
+- Page Six
+- Pambazuka News
+- Photobox
+- Pixmania
+- Planetizen
+- Playahead
+- Playlouder
+- Popbitch
+- Pro Football Reference
+- ProBoards
+- PubMed Central
+- Rakuten France
+- Rate Your Music
+- RealClearPolitics
+- Reality Kings
+- RegisterFly
+- Retecool
+- Rock's Backpages
+- RollOnFriday
+- SNCF Connect
+- STYLEPIT
+- SUNeVision
+- Sahibinden.com
+- Sarvatra Technologies
+- Schlock Mercenary
+- Science Fiction Awards Database
+- Seatrade Insider
+- Sensei's Library
+- SingleMuslim.com
+- Sporting Options
+- Sportnet.hr
+- Startups.co.uk
+- Streetdirectory.com
+- StubHub
+- Stuff (website)
+- Style.com
+- TV Tome
+- Talking Points Memo
+- TalkingCock.com
+- Team Liquid
+- TeamXbox
+- Techlink
+- Tesco.com
+- The Leaky Cauldron (website)
+- The Originals (website)
+- The Plan Collection
+- The Rainforest Site
+- The Romp (website)
+- Theoi Project
+- Threadless
+- Tibet.cn
+- Timmy Big Hands
+- Toptable
+- Transfermarkt
+- Truthout
+- Tut.By
+- Ukrainska Pravda
+- Uncommon Goods
+- Uswitch
+- Vanguard News Network
+- VeggieBoards
+- Village Media
+- Virgin Cars
+- Virgin Wines
+- Voyagermoinscher.com
+- WeatherBug
+- Workopolis
+- Wotif
+- WrestleCrap
+- WriteAPrisoner.com
+- Ynet
+- Zabasearch.com
+- Zap2it
+- Zeropaid.com
+
+## 2001 · 171 fresh
+
+- Adequacy.org
+- Aegean Sea (website)
+- African Online Digital Library
+- Angry Asian Man
+- Animutation
+- Arabeyes
+- Arts Professional
+- Asexual Visibility and Education Network
+- Ashley Madison
+- B3ta
+- Baseball Think Factory
+- Bitzi
+- Blabbermouth.net
+- Bloody Disgusting
+- Bloody Elbow
+- BoardEx
+- BookCrossing
+- Bulatlat
+- Buzzgrinder
+- CMON Limited
+- Canadian Global Affairs Institute
+- Catalogue of Life
+- Caucasian Knot
+- Centre for Research on Globalization
+- Chessgames.com
+- Chinaknowledge
+- Chosun Journal
+- Confused.com
+- Cool Beans World
+- Cotonete
+- Cram.com
+- Culture.pl
+- D3.ru
+- Daijiworld Media
+- DealBook
+- Democracy and Freedom Web
+- Democratic Underground
+- Deutsche Biographie
+- Dictionaries of the Scots Language
+- DistroWatch
+- Dogs On Acid
+- Don Markstein's Toonopedia
+- Doogtoons
+- Dragonlance Nexus
+- Drugs.com
+- E-Boks
+- EBaum's World
+- EPodunk
+- Educarchile
+- Encyclopedia of Life Sciences
+- EquiLend
+- Etymonline
+- ExtremeTech
+- Fred Entertainment
+- Freedb
+- Fridae
+- Futaba Channel
+- GMInsideNews
+- GNE (encyclopedia)
+- Geiriadur Prifysgol Cymru
+- Gigwise
+- Grid.org
+- Gry-Online
+- HAL (open archive)
+- Harare Tribune
+- Hatena (company)
+- HelpX
+- Hill Communications
+- Histmag
+- HistoryWorld
+- Holocaust Encyclopedia
+- HostDime
+- Hotels.nl
+- IZM
+- InoSMI
+- Instapundit
+- Internet Off-Broadway Database
+- Intrade
+- Israblog
+- Jappy
+- Just Eat
+- LiveJasmin
+- M3 (magazine)
+- MMA Fighting
+- MacMinute
+- ManBeef.com
+- Manhunt (social network)
+- Meetic
+- MemeStreams
+- Memoria Chilena
+- Metacritic
+- Midnight Eye
+- MillionaireMatch
+- Miniclip
+- Mousebreaker
+- Multitran
+- MuslimVillage Forums
+- My Opera
+- MyDD
+- NRW Literatur im Netz
+- Nate (web portal)
+- Naughty America
+- Net Authority
+- Network for Good
+- Nexus Mods
+- Off the Kuff
+- OldVersion.com
+- Ondarock
+- Online Stores
+- Onliner.by
+- OpenDemocracy
+- Opodo
+- Orbitz
+- Paarfieber
+- Parship
+- Partypoker
+- Phayul.com
+- Physics Forums
+- Plastic.com
+- PlayStation 2 online functionality
+- PokerStars
+- PoliticsPA
+- Portadown News (satirical news website)
+- Postopia
+- ProFootballTalk
+- Probush.com
+- Project Gutenberg Australia
+- PublishNews
+- RateMyTeachers
+- RealArcade
+- RealGM
+- ResellerRatings
+- Responsive web design
+- Rhythmer
+- Ryze
+- Saipan Sucks
+- Samizdata
+- SeatGuru
+- ShareReactor
+- Sittercity.com
+- Slyck.com
+- Sniff Petrol
+- Softpedia
+- SourceOECD
+- Spritmonitor
+- Spymac
+- SuicideGirls
+- Susning.nu
+- T-Shirt Hell
+- TGcom
+- TV Acres
+- TVShowsOnDVD.com
+- Tbilisis Forumi
+- Teoma
+- The F-Word (blog)
+- The Framley Examiner
+- Thottbot
+- Tianshannet
+- TooMunchFun
+- U.ae
+- Ukonline
+- Utrop
+- VWorker
+- Veepee
+- VirtualCourthouse.com
+- Webs (web hosting)
+- Where's Willy?
+- WiseNut
+- Wrecksite
+- XXXchurch.com
+- YTMND
+
+## 2002 · 140 fresh
+
+- AfterEllen
+- AnimeSuki
+- Aporrea
+- Australian Trade Union Archives
+- Bandai Channel
+- Bandmix
+- Bang Bros
+- Base de datos
+- BeautifulPeople.com
+- Beijing GNU/Linux User Group
+- Blogcritics
+- Book of Records of Ukraine
+- Bored of Studies
+- Broken Frontier
+- Buy.at
+- BuysUSA.com
+- Bzzzpeek
+- CacheFly
+- Caracas Chronicles
+- Celebdaq
+- China Elections and Governance Website
+- Cineuropa
+- Cokemachineglow
+- Colnect
+- Constitutional Forum
+- Cramster.com
+- Cylinder Audio Archive
+- DIY (magazine)
+- Daily Kos
+- Dudesnude
+- Dynadot
+- E-farsas
+- Enciclopedia Libre Universal en Español
+- Encyclopaedia Metallum
+- EveryScape
+- Everyday Health
+- FilmAffinity
+- Fluxblog
+- GameStats
+- GameTrailers
+- Gizmodo
+- Goldstar Events
+- GotFrag
+- Harry's Place
+- Hayneedle
+- HighBeam Research
+- HoopsHype
+- IOffer
+- IWiW
+- Index.hr
+- Infobae
+- Jihadunspun.com
+- Joy of Satan Ministries
+- Lernu!
+- Long Island Exchange
+- Lovehoney
+- MIT OpenCourseWare
+- MVGroup
+- MailEnable
+- Mamba (website)
+- MaxPreps
+- Mediaweek (Australia)
+- MetroLyrics
+- Midwest Radio Network
+- ModCloth
+- ModDB
+- Modern Tales
+- My Medical Education
+- MyCoke
+- MyFreeCams
+- MyLife
+- NNDB
+- NationStates
+- NearlyFreeSpeech
+- Niche (company)
+- OSDN
+- Oddpost
+- Open Source Vulnerability Database
+- Ourproject.org
+- PaidContent
+- Pastebin.com
+- Payscale (company)
+- PeopleFinders.com
+- Phillyblog
+- Picaboo
+- Planning Portal
+- Playasia
+- Playerhistory.com
+- Poetry International Web
+- Puremédias
+- Qidian
+- RapidShare
+- Real Ultimate Power
+- Red Ice
+- Redding News Review
+- RogerEbert.com
+- Romeo (social network)
+- Rox Jewellers
+- SCOTUSblog
+- Save Karyn
+- Serializer.net
+- Sex141
+- Skyrock (social network site)
+- Skyscanner
+- SkyscraperCity
+- Slugger O'Toole
+- Smashboards
+- SmugMug
+- Sportdaq
+- Spread Group
+- Starfall (website)
+- StayFriends.de
+- Stereoboard
+- Stereogum
+- Suprnova.org
+- Swiss Media Database
+- Text (company)
+- The Cutting Room Floor (website)
+- The Duck Webcomics
+- The Insider (newsletter)
+- The Memory Hole (website)
+- The Poke
+- The Volokh Conspiracy
+- Three Imaginary Girls
+- TicketNetwork
+- Timarit.is
+- TinyURL
+- Tor (network)
+- Toytown Germany
+- TravelBlog.org
+- Travellerspoint
+- TuneIn
+- Vagalume
+- Volcanoes of the World
+- Wayfair
+- Whedonesque.com
+- Whole Wheat Radio
+- Wholesale Furniture Brokers
+- Wiktionary
+- Zhejiang Online
+
+## 2003 · 164 fresh
+
+- /b/
+- 10bet
+- 1Up Network
+- 419eater.com
+- AFL Dream Team
+- Aaqua
+- Adam4Adam
+- Agoda
+- AmericanMuscle
+- Atom (web standard)
+- BBQGuys
+- Balkinization (blog)
+- Bang Cartoon
+- BlueLine Grid
+- Box Office India
+- BoxingScene
+- British Comedy Guide
+- BroadwayWorld
+- BugGuide
+- BugMeNot
+- CD3WD
+- CSS Zen Garden
+- Carstuckgirls.com
+- CellarTracker
+- Cheap Ass Gamer
+- China Digital Times
+- Chinese Public Opinion Surveillance Net
+- Cinando
+- Clips4Sale
+- Coco (website)
+- Coupon Cabin
+- CricketArchive
+- Culturally Authentic Pictorial Lexicon
+- D&E Media
+- D1Baseball
+- DVD Unlimited
+- Demonoid
+- DiVA (open archive)
+- Directory of Open Access Journals
+- Document.no
+- EConozco
+- Engrade
+- Eroakirkosta.fi
+- FactCheck.org
+- Findmypast
+- FirstVoices
+- Fleshbot
+- ForoCoches
+- Furl
+- Gaia Online
+- Gawker
+- Gear4music
+- GeenStijl
+- Girlamatic
+- Glbtq: An encyclopedia of gay, lesbian, bisexual, transgender, and queer culture
+- Global Personals
+- GoFish
+- God Is in the TV
+- Gothamist
+- GreenCine Daily
+- Groklaw
+- Groovera
+- HanCinema
+- Harry Potter Fan Zone
+- Heathen Harvest
+- Hoax Slayer
+- Holiday Watchdog
+- Hong Kong Discuss Forum
+- I'm Not Sorry.net
+- ICasualties.org
+- IFixit
+- IPKat
+- IWant
+- Indiacom
+- InfoRos
+- Intelius
+- Iraqi News
+- IsoHunt
+- Jay Is Games
+- Jiayuan.com
+- Jihad Watch
+- Jinjiang Literature City
+- Justia
+- KaBuM!
+- Kabul Press
+- Kakao Webtoon
+- Kinopoisk
+- Kiwiblog
+- Language Log
+- Law Street Media
+- Libcom.org
+- Lifeknot
+- Logbook of The World
+- Lowculture
+- MEETin
+- MailOnline
+- Mao Zedong Thought Flag
+- Medical News Today
+- Memory Alpha
+- Metacafe
+- Multiply (website)
+- Musée protestant
+- MyBroadband
+- MyHeritage
+- Name.com
+- NamePros
+- Nexopia
+- Open Source Shakespeare
+- PLOS
+- PakWheels
+- Pixnet
+- Plenty of Fish
+- Prism Comics
+- Public Whip
+- Puretracks
+- Quickflix
+- RLLMUK
+- Rapzilla
+- ReadWrite
+- Requiem Survey (website)
+- Rooster Teeth
+- Rootschat
+- SF Signal
+- SSENSE
+- Said the Gramophone
+- SawYouAtSinai
+- Screen Rant
+- Scroogle
+- SecondHandSongs
+- Simply Hired
+- Siteimprove
+- Social.fm
+- SoulTracks
+- Sparktop
+- Survey of Scottish Witchcraft
+- Taobao
+- Taxi Maxim
+- The Free Dictionary
+- The Millions
+- The Pirate Bay
+- The Sneeze (blog)
+- The Wilson Post
+- TheLadders.com
+- Tolkien Gateway
+- Torrentz
+- Treasuremytext
+- TriCities.com
+- Trusted Reviews
+- Tuzin.fm
+- UShip
+- Upcoming
+- Utopia (internet forum)
+- Vaccine Safety Net
+- Voices.com
+- Weblogs, Inc.
+- Wikibooks
+- Wikiquote
+- Wikisource
+- Wikitravel
+- XDA Developers
+- YaCy
+- YourBittorrent
+- Zenni Optical
+- Zorpia
+
+## 2004 · 215 fresh
+
+- /v/ (imageboard)
+- 270toWin
+- 3 Quarks Daily
+- 4INFO
+- A9.com
+- ALL.Net
+- ASmallWorld
+- AddThis
+- African Activist Archive
+- Album2
+- AltSounds
+- Ameba (website)
+- Americablog
+- Ampparit
+- AnnualCreditReport.com
+- Armor Games
+- AutoAdmit
+- Autoblog
+- Aviation Special Interest Group
+- Aylo
+- Backpage
+- Beatport
+- Beautiful Agony
+- BlackPast.org
+- Bleeping Computer
+- Blipfoto
+- Brazzers
+- BrooklynVegan
+- Browse Happy
+- BurnLounge
+- By Common Consent
+- CPO Commerce
+- Cake Network
+- Canadian Register of Historic Places
+- Cartoon Brew
+- CcMixter
+- China Internet Illegal Information Reporting Center
+- CiteULike
+- Cloob
+- Complete Index to World Film
+- ConnectU
+- Connotea
+- Copyscape
+- Crackle (service)
+- Cricbuzz
+- Crooks and Liars
+- DHgate.com
+- Daily NK
+- DailyOM
+- DavisWiki
+- Direct2Drive
+- Directgov
+- Discover the Networks
+- Dogster
+- Dohop
+- Doyles Room
+- Draugiem.lv
+- ESky Group
+- Ehoron.com
+- Electoral-vote.com
+- Elfster
+- Encyclopedia Dramatica
+- Engadget
+- ExploitDB
+- Fandango (streaming service)
+- Fandom (website)
+- Fandom Inc
+- Fandom, Inc
+- Fandom, Inc.
+- FantLab
+- FareCompare
+- Fatso (service)
+- Faves.com
+- Feminist Mormon Housewives
+- Feministing
+- Find a Crew
+- Firedoglake
+- Fishpond.co.nz
+- Foetry.com
+- GCash
+- Gates of Vienna
+- GetJar
+- Goal (website)
+- GrassrootsPA
+- Gree (social network)
+- Grono.net
+- Grubhub
+- Guido Fawkes
+- Hakia
+- Hardcore Gaming 101
+- Hip Hop Republican
+- Hostinger
+- Hungry Girl
+- I2hub
+- IThenticate
+- If(we)
+- Imeem
+- Indeed
+- Info.com
+- Interfax-Religion
+- Internet Movie Cars Database
+- Jamendo
+- Jane-Finch.com
+- Japanese Culture Channel Sakura
+- Jeevansathi.com
+- Journal of Turkish Weekly
+- Joystiq
+- Judy's Book
+- JurisPedia
+- Kinja (website)
+- Koolmuzone
+- Kotaku
+- Lavabit
+- Le.com
+- LearnThat Foundation
+- LocalWiki
+- LokiTorrent
+- Mandatory (company)
+- Medgadget
+- Mefeedia.com
+- Melon (online music service)
+- Mevio
+- Miestai.net
+- Mike's Weather Page
+- Mixi
+- Mobissimo
+- Momo.com
+- Monoskop
+- Music for Robots (website)
+- MyAnimeList
+- National Electronic Library
+- New Georgia Encyclopedia
+- New Matilda
+- Nitrome
+- Notpron
+- Nowthatsfuckedup.com
+- Oh No They Didn't
+- Oink's Pink Palace
+- OkCupid
+- OpenStreetMap
+- Openclipart
+- OutHistory
+- Overblog
+- PC Perspective
+- PJ Media
+- PaperBackSwap
+- Peekvid
+- Phys.org
+- Platial
+- Plazes
+- Pluralsight
+- Popehat
+- Portal to Texas History
+- ProCon.org
+- Putfile
+- Rap.ru
+- Raw Story
+- RealClimate
+- RedState
+- Sepia Mutiny
+- Shōsetsuka ni Narō
+- Simpy
+- Sogou
+- Sorry Everybody
+- Squarespace
+- Stadtwiki Karlsruhe
+- Stupidedia
+- TV Tropes
+- Tagged (website)
+- Taringa!
+- The Christian Post
+- The Comics Curmudgeon
+- The Daily WTF
+- The Gateway Pundit
+- The Hardball Times
+- The Jawa Report
+- The Living Room Candidate
+- The Local
+- The Morningside Post
+- The Omnificent English Dictionary in Limerick Form
+- The Superficial
+- Thrillist
+- TimesJobs.com
+- Tours4fun
+- Triton (content delivery)
+- TrueDelta
+- Truveo
+- Twango
+- Ubuntu Forums
+- Viadeo
+- Videolog.tv
+- VirusTotal
+- Vote for the Worst
+- WWE Classics on Demand
+- Wapedia
+- Wazap!
+- WeRelate
+- WebCite
+- Webjay
+- Webtoon (platform)
+- Where.com
+- Whosarat.com
+- Wikia Search
+- Wikimedia Commons
+- Wikinews
+- Wikispecies
+- Wirehog
+- WoWWiki
+- Worldometer
+- Wrong Planet
+- Y'all Politics
+- Yandex Maps
+- Yannan Web
+- Yippy
+- ZipcodeZoo
+
+## 2005 · 269 fresh
+
+- /Film
+- /x/
+- 2345.com
+- 30 Boxes
+- 420chan
+- 43 Things
+- 4shared
+- 56.com
+- Acid2
+- Aktuality.sk
+- Al-Maktaba al-Shamela
+- Arab Reporters for Investigative Journalism
+- Archives West
+- Ask the Doctor (website)
+- Awol Marines
+- BTJunkie
+- Baidu Maps
+- Baihe.com
+- Baike.com
+- Ballislife.com
+- BasketNews
+- Battlestar Wiki
+- Bdnews24.com
+- Behance
+- Believe Music
+- Betabrand
+- Betclic
+- Biip.no
+- Bills.com
+- Blip.tv
+- Bloggingheads.tv
+- Bloomex
+- BluegrassReport.org
+- BookWalker
+- BoxRec
+- Brooklyn Bunny
+- Cairn.info
+- Calculated Risk (blog)
+- CampusJ
+- Charitybuzz
+- Chegg
+- China Worker Net
+- Club Penguin
+- Collider (website)
+- ConservativeHome
+- Consumerist
+- Cow Television
+- Cozi
+- Cracked.com
+- Danbooru
+- DatPiff
+- Deadspin
+- Diapers.com
+- Dlisted
+- DontDateHimGirl.com
+- Douban
+- EQ Music
+- ESPN3
+- EZTV
+- Eater (website)
+- Edugeek
+- Elite Daily
+- Erobella
+- Eyebuydirect
+- FOD (streaming service)
+- Face of the Future
+- Fairground Gaming
+- Fightmag
+- Fire Joe Morgan
+- Fixya
+- FlightAware
+- Flirtomatic
+- Focus.com
+- Fora.tv
+- Freesound
+- Freesound.org
+- FromthePage.com
+- FrontPage Magazine
+- Fur Affinity
+- GamePolitics.com
+- GameTap
+- Gamezebo
+- Ganfyd
+- Gather.com
+- Gay Japan News
+- Genographic Project
+- GetUp!
+- Glam (magazine)
+- Gloria.tv
+- GoComics
+- Hard Knock TV
+- HomeAway
+- HopStop
+- HotPads
+- HotelsCombined
+- Htwins.net
+- I-Jet Media
+- ICANNWiki
+- ITV Local
+- IWork
+- Icelolly.com
+- Immunopaedia
+- Inbenta
+- India.gov.in
+- Instructables
+- Internacia Televido
+- International Business Times
+- Istorrent
+- Istrian Encyclopedia
+- Jajah
+- Kajgana.com
+- Kermode and Mayo's Film Review
+- Kijiji
+- La Frikipedia
+- Lego Design byME
+- Lexulous
+- LibraryThing
+- Lifehacker
+- Lixtor
+- Lostpedia
+- MDN Web Docs
+- Ma'an News Agency
+- Magazeta
+- Meatspin
+- MedPage Today
+- Megalodon (website)
+- Megaupload
+- Menéame
+- Michigan Liberal
+- MicroWiki
+- Milblogging.com
+- Mininova
+- MocoSpace
+- ModernGhana
+- Mofos
+- Mountain Project
+- Musopen
+- My Web
+- MyRegistry.com
+- Myriad Search
+- NG-Gamer
+- Nairaland
+- Nederland 24
+- Netdisaster
+- Netvibes
+- NeverForget84.com
+- Nialler9
+- Ning (website)
+- Niumba
+- NowPublic
+- Nukapedia
+- Nyaa Torrents
+- Oodle
+- OpenSubtitles
+- OpenWetWare
+- PBworks
+- Pageflakes
+- Panoramio
+- PatientsLikeMe
+- Pedestrian (company)
+- Persée (web portal)
+- Picnik
+- PinkNews
+- Pluck (company)
+- Podcast Pickle
+- PostSecret
+- Practice Fusion
+- Project Fanboy
+- Queerty
+- Quicksales
+- Qunar
+- Qzone
+- RIP.ie
+- Radiopaedia
+- Raising Kaine
+- Rangjung Yeshe Wiki
+- Rate Your Students
+- Redlasso
+- Refinery29
+- Renren
+- RentAHitman.com
+- Revision3
+- Revolution Health Group
+- Rheinland-Pfälzische Personendatenbank
+- Rhode Island's Future
+- Right to Be
+- Rodovid
+- SB Nation
+- Salehoo
+- Save Toby
+- ScienTOMogy
+- Sesam (search engine)
+- ShareFile
+- SikhiWiki
+- Skroutz
+- Skwigly
+- Smarthistory
+- Somewhereinblog.net
+- Soop (service)
+- Souq (company)
+- Spike.com
+- Sputnikmusic
+- Squidoo
+- Statler and Waldorf: From the Balcony
+- Stickam
+- StudiVZ
+- Sudan Tribune
+- TIGSource
+- TMZ
+- TV.com
+- TWiT.tv
+- Tabelog
+- Tablo ID
+- Tamagotchi Town
+- Te Ara: The Encyclopedia of New Zealand
+- Techmeme
+- The "Blog" of "Unnecessary" Quotation Marks
+- The Brussels Journal
+- The Chaser (newspaper)
+- The Escapist (magazine)
+- The Meet Group
+- The Million Dollar Homepage
+- The Oil Drum
+- The Rutherford Journal
+- The Signpost
+- The Student Bar
+- The Tempest (media company)
+- TheBacklot.com
+- ThinkProgress
+- Todos (..) los nombres
+- TravBuddy.com
+- TreeHugger
+- Tripsta S.A.
+- Trivago
+- TrueCar
+- TrueHoop
+- Trulia
+- Truthdig
+- Tudou
+- TuneCore
+- Tunefind
+- Uncyclopedia
+- VGChartz
+- VariFlight
+- Veoh
+- VetDepot
+- Virtual Library of Musicology
+- Watching America
+- Web Services Distributed Management
+- Web Sudoku
+- Webcomics Nation
+- Webkinz
+- Wego.com
+- Wesabe
+- WhatHouse?
+- WikiBaseball
+- WikiHow
+- Williamson Herald
+- Windows Live
+- Windows Live Personalized Experience
+- Wookieepedia
+- WorldStarHipHop
+- WriteToThem
+- Wykop.pl
+- YY.com
+- Yuku
+- Zattoo
+- Zazzle
+- ΜTorrent
+
+## 2006 · 344 fresh
+
+- /mu/
+- AboutUs.com
+- Above the Law (website)
+- AdExtent
+- Affinity Labs
+- AfroFoodtv.com
+- Amie Street
+- Aniboom
+- Anobii
+- Appropedia
+- Are You Watching This?!
+- Askville
+- Awful Announcing
+- Badoo
+- Baidu Baike
+- Bakchich (internet)
+- BeSoccer
+- Betsafe
+- Bix (website)
+- BlogHer
+- BlogTV
+- BlogTalkRadio
+- Blue Hampshire
+- Blurtit
+- BookRenter
+- Booknik
+- Bossip
+- Boy Genius Report
+- Bring Light
+- Builders Square
+- Builderscrack.co.nz
+- BuyTigers.com
+- CBS Innertube
+- CafeMom
+- Cake Financial
+- Capazoo
+- Captain Copyright
+- CarGurus
+- Carbonite, Inc.
+- CareerStructure.com
+- Cats That Look Like Hitler!
+- ChaCha (search engine)
+- Channel 4 (VoD service)
+- Chinese Communist Party News Network
+- Chomikuj.pl
+- Citizendium
+- Cleartrip
+- CoComment
+- ComicSpace
+- Compare the Market
+- Conservapedia
+- Couric & Co.
+- Course Hero
+- Crash the Super Bowl
+- Crime Expo South Africa
+- Crnogorska Enciklopedija
+- Crunchyroll
+- Curbed
+- Curse LLC
+- DailyINK
+- DailyStrength
+- DeSmog
+- Dealsplus
+- Deathswitch
+- Debenhams Group
+- Destructoid
+- Digital Library of the Caribbean
+- Digital Trends
+- Digital Universe
+- Diplopedia
+- Disa.ukzn.ac.za
+- Disaboom
+- Do512
+- DoneDeal
+- Dread Central
+- Elonet
+- Encyclopedia of Earth
+- Encyclopedia of Iranian Architectural History
+- Eons.com
+- Eventbrite
+- ExerciseTV
+- ExtraTorrent
+- FT Alphaville
+- FabSwingers
+- Fakku
+- FanHouse
+- Farecast
+- Ficlets
+- Film School Rejects
+- FlightGlobal
+- Flightradar24
+- FloSports
+- FluTrackers
+- Formstack
+- Foter
+- G.ho.st
+- G1 (website)
+- GamerDNA
+- GamersGate
+- Geekologie
+- Gender, Institutions and Development Database
+- Gigaom
+- GoFundMe Pro
+- GoTrump.com
+- GoldMyne TV
+- Goodreads
+- Goozex
+- Gov.cn
+- GreenCE
+- GroundReport
+- Grub Street (website)
+- Guerrilla Mail
+- Gutefrage.net
+- Habr
+- Heroes Wiki
+- Hidden Palace
+- Historisches Lexikon Bayerns
+- Hitchwiki
+- Hollywood Wiretap
+- Hot Air
+- HubPages
+- HungryGoWhere
+- Hungryhouse
+- IBT Media
+- ILike
+- IMedix
+- IReport
+- Ideel
+- Idolator (website)
+- Idontwantdowry.com
+- Ijji
+- Intelligencer (website)
+- Intellipedia
+- Interim Register of Marine and Nonmarine Genera
+- International Music Score Library Project
+- Interparliamentary EU Information Exchange
+- Invisible Oranges
+- Irrepressible.info
+- Islam21c
+- Issuu
+- IvyGate
+- JJJJound
+- JOOBLE
+- Jaiku
+- Jenesaispop
+- Jetcost
+- JewTube
+- Jewcy
+- JustPark
+- Kissing Suzy Kolber
+- Kogan.com
+- Kongregate
+- Korean Movie Database
+- Kuruc.info
+- LXTV
+- Labourhome
+- Leboncoin
+- Liligo.com
+- Liquipedia
+- Listen2myradio
+- LiveLeak
+- LiveMixtapes
+- LyricWiki
+- MMA Junkie
+- MNopedia
+- MagicBricks
+- Mango TV
+- MeasuringWorth
+- MediaFire
+- Meez
+- MetalSucks
+- Metapedia
+- Metavid
+- Metro Jacksonville
+- Mister Wong
+- Mobage
+- Mobiforge
+- Momondo
+- Money Under 30
+- Mushroom Observer
+- Musicovery
+- Muxlim
+- My Coke Rewards
+- MyDeathSpace
+- MyDirtyHobby
+- MyOutdoorTV
+- MySupermarket
+- MyVideo
+- MyVoucherCodes
+- Myartspace
+- Myfreeimplants
+- NK.pl
+- Nasty Gal
+- Naymz
+- Nefarious Realm
+- Nestoria
+- NewsBiscuit
+- Niconico
+- North by Northwestern
+- Nuroa
+- OLX
+- OMGPop
+- OVGuide
+- Odnoklassniki
+- One Million Masterpiece
+- Open Hub
+- Open Library
+- OpenDNS
+- Ouibox
+- PKR.com
+- PagBank
+- PeekYou
+- PeopleBrowsr
+- PhilPapers
+- PhishTank
+- Pimp My Search
+- Pimp That Snack
+- Piperlime
+- PissedConsumer
+- PlayStation Network
+- PodProperty
+- PopSugar
+- Pray As You Go
+- Project Wonderful
+- Punchbowl, Inc.
+- Qaym
+- R/science
+- Rabwah Times
+- Radio Free Skaro
+- Raileurope.co.uk
+- Raising Children Network
+- Rare Book Room
+- RealSelf
+- RedTube
+- Redbubble
+- ReverbNation
+- Rewire News Group
+- RiffTrax
+- Roblox
+- Rupture (social networking)
+- Rutube
+- SB.TV
+- STOMP (website)
+- SVT Play
+- Sahara Reporters
+- Scholarpedia
+- Scottish Theatre Forum
+- Seeking.com
+- Shopify
+- SigFig (company)
+- Smashing Magazine
+- Smitten Kitchen
+- Socialite Rank
+- Softwareload
+- SongCast Music Distribution
+- Spaces (social network)
+- Speedtest.net
+- Spill.com
+- Spinner (website)
+- Spock (website)
+- Spokeo
+- Stage6
+- Stips (website)
+- StockPickr
+- Storytel
+- StreetEasy
+- Superbru
+- Supernatural Wiki
+- Symphonic Distribution
+- TV Links
+- TVer
+- Tatto Media
+- Taw9eel
+- Tesco Direct
+- The Big Lead
+- The Farmer's Market
+- The Future of Things
+- The Hague Justice Portal
+- The Neglected Books Page
+- The Online Citizen
+- The Roar (website)
+- The World's Online Festival
+- The simExchange
+- Thomas Register
+- Tistory
+- Toonami Jetstream
+- Topsy Labs
+- Translatewiki.net
+- Trazzler
+- Trexy
+- TrialPay
+- Triple J Unearthed
+- Tureng dictionary
+- Twenga
+- Two Circles
+- Têtes à claques
+- U17 Comics
+- Urbanspoon
+- VBox7
+- VK (service)
+- Valleywag
+- VentureBeat
+- Via.com
+- Viagogo
+- Viewzi
+- Vox (blogging platform)
+- Walkit.com
+- WatZatSong
+- WatchMojo
+- Wattpad
+- Watts Up With That?
+- Watunes
+- Weblio
+- Weblo
+- Weebly
+- WeoGeo
+- Wesleying
+- WhatCulture
+- Widgetbox
+- Wii Shop Channel
+- WikiEducator
+- WikiIslam
+- Wikimapia
+- Wikiversity
+- Wikivoyage
+- Will It Blend?
+- Wix.com
+- Wowhead
+- X (social network)
+- Xobdo.org
+- Xtube
+- Yardbarker
+- Yatra (company)
+- Yedda
+- YouPorn
+- Youku
+- Zapak
+- Zillow
+- Zippyshare
+- Zoo.com
+- ZooBank
+- Zoopy
+- Zunafish
+- Çiçeksepeti
+
+## 2007 · 340 fresh
+
+- 2collab
+- 8coupons
+- 9to5Mac
+- AcFun
+- Adcash
+- Al Arabiya English
+- All Things Digital
+- Allkpop
+- Ameba TV
+- Anime Network Online
+- Anime on Demand
+- Art of the Title
+- Asian American Action Fund
+- Ask a Manager
+- Aviasales
+- Avito.ru
+- Avvo
+- BNO News
+- Babbel
+- Babelio
+- Ballotpedia
+- Bandcamp
+- Bandsintown
+- BarbieGirls.com
+- Barstool Sports
+- BayImg
+- BeenVerified
+- Begslist.org
+- Betstar
+- Biblioteca Digital Puertorriqueña
+- Big Think
+- Bitstrips
+- Blackle
+- Blekko
+- Blinkbox Music
+- Blip.pl
+- Bonobos (apparel)
+- BookScouter.com
+- Botchamania
+- Breitbart News
+- Brisbane Times
+- Business Insider
+- Business Spectator
+- Busuu
+- BuyMyTronics.com
+- CagePotato
+- Cam4
+- Care.com
+- Caring.com
+- Causes (company)
+- Change.org
+- Check Mii Out Channel
+- ChemSpider
+- Chemist Direct
+- Chess.com
+- Chronicling America
+- Circumpolar Health Bibliographic Database
+- Cobocards
+- CollegeWeekLive
+- Colors!
+- Comedy 23/6
+- ComiXology
+- Credit Karma
+- Critical Metrics
+- Crosscut.com
+- Crunchbase
+- Cut Out + Keep
+- Darulifta-Deoband.com
+- Dato Capital
+- Daylife
+- De Speld
+- Deezer
+- Diabetes Hands Foundation
+- DipNote
+- Dipdive
+- Disclose.tv
+- Disqus
+- Distributed Proofreaders Canada
+- DogsBite.org
+- DogsBlog.com
+- Doodle (website)
+- Dramabeans
+- Drought.gov
+- E621 (website)
+- EToro
+- Ecomom
+- Edocr
+- Elixio
+- Endless.com
+- Endomondo LLC
+- Europe PubMed Central
+- European Feminist Forum
+- EveryBlock
+- Everybody Votes Channel
+- Everything Is Terrible!
+- FDD's Long War Journal
+- FFFFOUND!
+- Faces in Places
+- FamilySearch Research Wiki
+- Fanfou
+- Fashionista (website)
+- Feedbooks
+- Felt (website)
+- FilesTube
+- FilmCrave
+- Filmklik
+- FlipKey
+- Flipkart
+- Free Malaysia Today
+- Freebase (database)
+- Freerice
+- Funny or Die
+- GMA News Online
+- GOOG-411
+- GameZombie
+- Gardenology.org
+- Gbanga
+- GeekDad
+- Geekadelphia
+- Geni.com
+- GetBack (website)
+- Gilt Groupe
+- Glee.com
+- Glogster
+- Glottopedia
+- Godtube
+- Gowalla
+- Graphic.ly
+- Gumtree.com.au
+- HK Film Blog
+- Hacker News
+- Hallmark+
+- HauteLook
+- Houseful (company)
+- HowTo.tv
+- Hungarian Spectrum
+- I Can Has Cheezburger?
+- IBM Cloud Video
+- Ibibo
+- Imedexchange
+- Indochino
+- Induna.com
+- InstantTV
+- Interactive Fiction Database
+- Internet Channel
+- Internet Movie Firearms Database
+- Investing.com
+- Islamopedia Online
+- It Came from Canada Archive
+- Italki
+- Ivey League
+- Ixigo
+- Jango (website)
+- Jezebel (website)
+- Jimdo
+- Joost
+- JournoList
+- Justin.tv
+- KET ED
+- Kixeye
+- Knol
+- Know Your Meme
+- Knowledge crystal
+- Koinup
+- Kune (software)
+- Kuvalauta
+- Language Grid
+- Liberal Conspiracy
+- Librusec
+- LightInTheBox
+- LinkExpats
+- Livemocha
+- LivingSocial
+- Location View
+- Lurkmore
+- MOSH (Nokia)
+- Mahalo.com
+- Mamamia (website)
+- Manhattan Movie Magazine
+- Marefa
+- MarineTraffic
+- Marvel Unlimited
+- Matches Fashion
+- Me2day
+- MeBeam
+- MediGuard
+- Mediaset Infinity (Italy)
+- Minutes Before Six
+- Moviepilot
+- Mubi (streaming service)
+- My World@Mail.Ru
+- MyFootballClub
+- MyTalk
+- MyToons
+- Myngle
+- Natalie (website)
+- NeighborCity
+- New Books Network
+- Newser
+- Nexus Mods
+- Njuškalo
+- Now Play It
+- OAuth
+- Occidental Observer
+- Omnivision Entertainment
+- One Million Monkeys Typing
+- OneDrive
+- OpenLeft
+- Organization for Transformative Works
+- Ovi (Nokia)
+- PEP (website)
+- Panfu
+- Passive-Aggressive Notes
+- Patch Media
+- Peace and Collaborative Development Network
+- PeoplePerHour
+- Photography Is Not a Crime
+- Pixiv
+- PolitiFact
+- Pornhub
+- Portal de Archivos Españoles
+- Portfolio.com
+- Poupéegirl
+- Project Gutenberg Canada
+- Project for Awesome
+- Proteopedia
+- Proximic by Comscore
+- Quizlet
+- RTL+
+- RationalWiki
+- Ravelry
+- Readergirlz
+- Remodelista
+- Rent.com.au
+- RevZilla
+- Rigveda Wiki
+- Rock Paper Shotgun
+- Rozee.pk
+- Rue89
+- SFScope
+- Sarcastic Gamer
+- School of Everything
+- SchoolTube
+- Science Fiction Awards Watch
+- ScienceNet
+- Scitopia
+- Scribd
+- ShopJimmy.com
+- ShowBizCafe.com
+- SideReel
+- Skeptical Science
+- Skimlinks
+- Skout
+- Sociological Images
+- SodaHead.com
+- Someecards
+- Songkick
+- Songza
+- Sonico.com
+- Soup.io
+- SpeedDate.com
+- Sporcle
+- Statista
+- Study Notes
+- Super Deluxe
+- SuperPoke!
+- Superkoora
+- Symbaloo
+- TV Tonight
+- TV by the Numbers
+- TVNZ+
+- TakeLessons
+- TalkTalk TV Store
+- TeacherTube
+- The Anarchist Library
+- The Daily Mash
+- The Daily Squib
+- The Line of Best Fit
+- The Lowdown (website)
+- The Mimi & Flo Show
+- The Monkey Cage (blog)
+- The Museum of Classic Chicago Television
+- The Needle Drop
+- The Nethernet
+- The NewHouse
+- The Producer's Perspective
+- The Psycho Ex-Wife
+- The Real News Network
+- The Visual Novel Database
+- TheTVDB
+- Tibet Post
+- Tonton (streaming service)
+- Total Recut
+- Trailers from Hell
+- Trajnimi
+- Trilulilu
+- Trusera
+- Trustpilot
+- Twine (social network)
+- U-Next
+- V2.fi
+- VBS.tv
+- Velvetpark
+- Veropedia
+- Viaplay
+- VideoLectures.net
+- Vimeo Livestream
+- Vinismo
+- Vostu
+- Vukajlija
+- Vulture (website)
+- Vyond
+- Walk Score
+- Washington Decoded
+- Watch Shop
+- WeSeed
+- WeShow
+- Weplay
+- What They Play
+- What.CD
+- Where I've Been
+- Whrrl
+- WikiAfrica
+- WikiPilipinas
+- WikiScanner
+- WikiVet
+- Womo
+- WorldWideScience
+- XHamster
+- XVideos
+- Xively
+- Xleague.tv
+- Young Hollywood
+- Yr.no
+- Zaxid.net
+- Zen Habits
+- Zino
+- Zone Militaire
+- Zoosk
+- Zwaggle
+
+## 2008 · 317 fresh
+
+- 1000 Awesome Things
+- 4mations
+- 5 (streaming service)
+- 888 Ladies
+- 888sport
+- 8tracks.com
+- 9gag
+- Aardvark (search engine)
+- Academia.edu
+- Achievement Hunter
+- Acid3
+- AdTaily
+- Akvo Foundation
+- Al-Sadr Online
+- AlterGeo
+- ArchDaily
+- Archive of Our Own
+- ArenaBG
+- Ask Ontario
+- Audiotool
+- BackType
+- Bayut
+- Best Gore
+- BibleGateway
+- Biographicon
+- Bitly
+- Bleacher Report
+- Book View Café
+- Broadleaf Commerce
+- Budgetplaces
+- BusinessTech
+- Cake Wrecks
+- CanadaStays
+- Celeb Jihad
+- Channel Awesome
+- Checkvist
+- Chictopia
+- Christian Film Database
+- CityCaucus.com
+- Classic Game Room
+- CleanTechnica
+- Cleverbot
+- Club Fonograma
+- College ACB
+- CompeteFor
+- Crispy Gamer
+- Critical Commons
+- Cuil
+- Culture Inside
+- Dacast
+- DataMarket
+- Deletionpedia
+- Der Postillon
+- Dictionary of Frequently-Used Taiwanese Taigi
+- Digiday
+- DigitalNZ
+- Ditto Music
+- DoDTechipedia
+- Dream11
+- Dril
+- Dulwich OnView
+- EA WorldView
+- EHealthMe
+- ERepublik
+- ESchoolView
+- EaseMyTrip
+- Eatyourkimchi
+- Edmodo
+- El Chigüire Bipolar
+- El Koshary Today
+- El Paquete Semanal
+- Encyclopedia of Life
+- Europeana
+- Experty.by
+- Exscientologykids.com
+- FMyLife
+- Fail Blog
+- Faking News
+- FetLife
+- FilmOn
+- First on Mars (website)
+- FiveThirtyEight
+- Flipnote Studio
+- Foodbeast
+- Foodista.com
+- Forestle
+- Forvo
+- Freedom Hosting
+- Fringepedia
+- FromAtoB.com
+- Frosmo
+- FunOrb
+- GOG.com
+- GWAS catalog
+- Gays.com
+- Giant Bomb
+- Glassdoor
+- GovLoop
+- Greater Greater Washington
+- Green Prophet
+- Guvera
+- HD share
+- HDtracks
+- HTMLGIANT
+- Help a Reporter Out
+- HitBliss
+- HitFix
+- Hodinkee
+- Hootsuite
+- Hover (domain registrar)
+- Howcast
+- Hype Machine
+- IHeartRadio
+- INaturalist
+- IPVM
+- IPredict
+- ITVX
+- IVillage UK
+- Identi.ca
+- In.com
+- Indiegogo
+- Indonesian Atheists
+- Io9
+- Jagran Josh
+- Jinni (search engine)
+- Juvenation
+- Kaixin001
+- Keepapitchinin
+- KickassTorrents
+- Kids' WB
+- Klout
+- Koprol
+- KupujemProdajem
+- Label Engine
+- Lafonoteca
+- Latma
+- Leadel.net
+- Lego Ideas
+- Library Genesis
+- LiveStation
+- Livedrive
+- Lookbook.nu
+- Loqu8
+- M6+
+- MBC Shahid
+- MOBTV
+- MadBid
+- MagCloud
+- Maneno
+- Mantic Games
+- Massive open online course
+- Math Images Project
+- Max Planck Encyclopedia of Public International Law
+- Medici.tv
+- Minno
+- Mixcloud
+- MobileMe
+- Mollom
+- Moshi Monsters
+- Motherless (website)
+- Ms Sparky
+- Mumbrella
+- Music Story
+- MutualArt.com
+- Muxtape
+- Muzu.tv
+- MyRadar
+- MyVetwork
+- NYU Local
+- NZ On Screen
+- National Preservation
+- Natural News
+- Nawmal
+- Need Supply Co.
+- NetGalley
+- Next Big Sound
+- NinjaVideo
+- NoiseTrade
+- NotchUp
+- Notehall
+- NurseTV (TV network)
+- OfficeArrow
+- OneDrive Groups
+- OneFootball
+- OpenCelliD
+- Openfilm
+- Paperless Post
+- Patheos
+- Pitchero
+- Pixie Hollow (video game)
+- Play Rapport
+- PlayStation Home
+- Politicker Network
+- PoliticsHome
+- Pornokitsch
+- Postbox (email client)
+- Pricefalls
+- Prodege
+- Quamut
+- Quizzle
+- R/Art
+- R/anime
+- RARBG
+- Rap Rebirth
+- RateMyCop.com
+- RecipeBridge
+- Records of the Parliaments of Scotland
+- Regator
+- ReportMyloss.com
+- ResearchGate
+- Resonate (company)
+- Rocket Lawyer
+- Roku
+- Ruff&Cut
+- SCP Foundation
+- SKYbrary
+- Satbeams
+- Scary Mommy
+- Secoo
+- Semrush
+- Shein
+- Shiba Inu Puppy Cam
+- Shmoop
+- ShockHound
+- Sitejabber
+- Smashwords
+- SnagFilms
+- Social Blade
+- Social media surgery
+- SpareFoot
+- Spreecast
+- St. Louis Beacon
+- Starring the Computer
+- Stuff White People Like
+- SumZero
+- Superpedia
+- Surgisphere
+- Suvudu
+- TAPinto
+- TNW (website)
+- TSN.ua
+- TakePart
+- Talkbiznow
+- Taobao Shangou
+- TasteDive
+- Tasting Table
+- Telinea
+- The 405 (magazine)
+- The Aviation Herald
+- The Chive
+- The Cut (publication)
+- The Daily Beast
+- The Food Channel
+- The Grommet
+- The Indie-Verse
+- The Malaysian Insider
+- The National Law Review
+- The Quietus
+- The Sam Plenty Cavalcade of Action Show Plus Singing!
+- The Save Jersey Blog
+- The Sphere (social network)
+- The WB
+- The Western Journal
+- Thingiverse
+- This Week in Blackness
+- Tibet Sun
+- TinEye
+- Tmall
+- Togetherville
+- TouchArcade
+- TradeKorea
+- Tribe of Noise
+- TroopTube
+- TrueAchievements
+- TwitPic
+- UNdata
+- USell
+- Under30Media
+- Uproxx
+- Urtak
+- Ushahidi
+- VPNLab
+- Vera Files
+- Vinopedia.hr
+- Vinted
+- Vipshop
+- Viva Engage
+- Vokle
+- WAtoday
+- We Heart It
+- WeMix
+- WePay
+- Weardrobe
+- Web Compatibility Test for Mobile Browsers
+- Web Therapy
+- Webicina
+- Weedmaps
+- What's The Harm?
+- WhatDoTheyKnow
+- WhoSampled
+- Whole Travel
+- WikiFeet
+- WikiTree
+- Wind Repertory Project
+- Women in Crime Ink
+- WonderHowTo
+- World Atlas of Language Structures
+- WowOwow
+- Yebol
+- Yihaodian
+- YouVersion
+- YouthSays
+- Yummly
+- Yuuzoo
+- Zembly
+- Zimbabwe Telegraph
+- Zomato
+
+## 2009 · 304 fresh
+
+- 1Point3Acres
+- 34mag
+- 500px
+- AOL Seed
+- Academic Earth
+- Africa Is a Country
+- Agropedia
+- AlternativeTo
+- Anthony Fantano
+- ArtBabble
+- Artizone
+- Asian Correspondent
+- Australia Live TV
+- AyosDito.ph
+- Ballroom Throwbacks Television
+- BandPage
+- Beezid
+- Beyond the Rack
+- BigCommerce
+- Bleeding Cool
+- Blippy
+- Bloomreach
+- Book Drum
+- BookArmy
+- Borderland Beat
+- Bored Panda
+- Boticca
+- Brainly
+- Brand.com
+- BusJunction
+- BuyWithMe
+- CBS MoneyWatch
+- CURIE
+- Campus Reform
+- Canadian Headstones
+- CapGeek
+- CarTrade.com
+- Cashify
+- Catchafire
+- ChicagoNow
+- Chromaroma
+- Clicker.com
+- Clixtr
+- Cloudflare
+- Coke Zero Facial Profiler
+- Company.com
+- Comunes Collective
+- Consensus (website)
+- CredibleMeds
+- DASHED
+- DNAinfo
+- DailyBooth
+- Dancing Astronaut
+- Deadline Hollywood
+- DealDash
+- Death Risk Rankings
+- Depositphotos
+- Devpost
+- Dictionary of Sydney
+- Disney Digital Network
+- DocumentCloud
+- Doha News
+- DramaFever
+- Dribbble
+- Dumbemployed
+- EX.UA
+- Ecosia
+- El Mundo Today
+- EnergySage
+- Ensogo
+- ExpressVPN
+- FUN88
+- FanDuel
+- FanSided
+- Favstar
+- Feefighters
+- FilmOn
+- Filmow
+- FindAnyFilm
+- Flibusta
+- Flickchart
+- Food Safety News
+- Food52
+- Foot Africa
+- Fotopedia
+- Fox Nation
+- Free Music Archive
+- Freelancer.com
+- Fria Tider
+- Front Porch Republic
+- Full Fact
+- Funimation
+- Futurity (website)
+- GRM Daily
+- Gallifrey Base
+- Game Classroom
+- Game Rant
+- Genius (company)
+- Gift Card Granny
+- GirlsDoPorn
+- GivesMeHope
+- Golwg360
+- GoodMorning.com
+- Goom Radio
+- Gosuslugi
+- Grammarly
+- Green Man Gaming
+- H-Pem
+- Hackteria
+- HealthyWage
+- Hollywood Life
+- Holy Soap
+- Honk (website)
+- Houzz
+- Hunch (website)
+- Hyperallergic
+- Jade Magnet
+- Kabbage
+- Kanaja
+- KartaView
+- Kikar HaShabbat (website)
+- Kobo Inc.
+- Kotobank
+- LB.ua
+- LGBTQ Nation
+- LabourList
+- Lamebook
+- Left Foot Forward
+- LessWrong
+- Let Simon Decide
+- Listia
+- Livabl
+- LiveOne
+- Lost Lettermen
+- Maravi Post
+- MathOverflow
+- Media Cloud
+- Mediaite
+- MicroVentures
+- Middle East Monitor
+- Miley Save Fuzzy
+- Mixcrate
+- Modelinia
+- Moontoast
+- Mother Nature Network
+- Movie Review Intelligence
+- Muck Rack
+- My Phone
+- MyDaughter
+- Myhomepage
+- Naijaloaded
+- Net News Daily
+- NewsClick
+- NewsThump
+- Newtalk News
+- North Carolina Digital Heritage Center
+- Numbeo
+- Offers.com
+- Okoban
+- Onlymyhealth
+- Open Access Tracking Project
+- Open Government Initiative
+- OpenEI
+- OpenGameArt.org
+- OpenSeaMap
+- OrderUp
+- Otalo.com
+- Pearltrees
+- PedidosYa
+- People of Walmart
+- Personal, Inc.
+- PetaPixel
+- Peter Molydeux
+- Philo (company)
+- Piazza (web service)
+- Pikabu
+- Pinboard (website)
+- Pl@ntNet
+- Plane Finder
+- PlayerScale
+- PlugShare
+- Plum District
+- Political Scrapbook
+- PoliticusUSA
+- Pope2you
+- Posteo
+- PragerU
+- Presseurop
+- Prezi
+- Proleksis Encyclopedia
+- PromoJam
+- Pronoun (publishing platform)
+- Qaiku
+- Quartzy
+- R/Feminism
+- R/IAmA
+- R/malefashionadvice
+- RTS.FM
+- Radar Online
+- Radio23
+- Ranker
+- Reebonz
+- Rent the Runway
+- Republic.ru
+- RocketHub
+- Rotten Tomatoes Movieclips
+- Rounds (website)
+- Russian Machine Never Breaks
+- STV Player
+- Salem Radio Network
+- Sciblogs.co.nz
+- ScoreBig
+- SeatGeek
+- Seattle Post Globe
+- Shit My Dad Says
+- Shodan (website)
+- ShoeDazzle
+- Simfy
+- SkillSlate
+- Skoob
+- Slatest
+- Slicing Up Eyeballs
+- Social Media Examiner
+- Social media use by Donald Trump
+- Speedcafe
+- Spillpikene.no
+- Spring.me
+- Sprudge
+- StartupDigest
+- Stay LDS / Mormon
+- Stipple (company)
+- Summify
+- SwoopThat.com
+- TIMvision
+- TV Pixie
+- Talenthouse
+- Tango (American magazine)
+- TeamBuy
+- TeuxDeux
+- Texts From Last Night
+- Thaifoodmaster
+- The Arts Desk
+- The Awl
+- The Center Square
+- The Dictionary of Obscure Sorrows
+- The Incidental Economist
+- The Kashmir Walla
+- The Klaxon.com
+- The Oatmeal
+- The Palestine Telegraph
+- The Punch (Australia)
+- The Rumpus
+- The Skwawkbox
+- The Tender
+- The Texas Tribune
+- TheFork Australia
+- TheGrio
+- TheOfficialBoard
+- Things Bogans Like
+- ThisAV
+- Thumbtack (company)
+- Tokopedia
+- Tradepal
+- Trekiz
+- Tripping.com
+- Trove
+- True/Slant
+- Trunk Club
+- Twick.it
+- UKSCblog
+- Upserve
+- VNdroid
+- Vagaro
+- Verfassungsblog
+- Very (online retailer)
+- Vestiaire Collective
+- ViXra
+- Wakanim
+- Walks Around Britain
+- Waterford Whispers News
+- We Are Hunted
+- WeTransfer
+- Wealth Migrate
+- Web 2.0 Suicide Machine
+- Weibo
+- When in Manila
+- WikEM
+- Wikirank.com
+- WinkBall
+- Wiwibloggs
+- Wordnik
+- World Digital Library
+- World History Encyclopedia
+- Yardsellr
+- Yebhi
+- Yfrog
+- YinYueTai
+- Z-Library
+- Zeldathon
+- Zero Hedge
+- Zerocater
+- Zimbabwe Tribune
+- Zooniverse
+- Zulily
+
+## 2010 · 261 fresh
+
+- /lit/
+- 1000Memories
+- 24.hu
+- 247Sports
+- 2b2t
+- ABCmouse
+- About.me
+- AliExpress
+- All That's Interesting
+- AllTrails
+- Another Angry Voice
+- AreaVibes
+- Ask Ubuntu
+- Audacy
+- Audimated
+- Balls.ie
+- Banglanews24.com
+- Between the Bars (blog)
+- BigQuery
+- Bilibili
+- BillGuard
+- BlackBoxTV
+- Blaze Media
+- Blog del Narco
+- Bloomberg Law
+- Bookmate
+- BranchOut
+- Brandwatch Qriously
+- BrowserChoice.eu
+- Bukalapak
+- Canvas Networks
+- CarWoo
+- Carbon Brief
+- CashCashPinoy
+- CgeTV
+- Cheekd
+- Chicago Independent Radio Project
+- Circle Chart
+- Clicktrans
+- Cognician
+- Colossal (blog)
+- Corridor Digital
+- Coupang
+- Cue (search engine)
+- Datadog
+- DateMySchool
+- Diaspora (social network)
+- Docs.com
+- DolarToday
+- EatStreet
+- EcuRed
+- Educaplay
+- El Asira
+- El Dínamo
+- Emarat
+- Fab (website)
+- Feminist Hulk
+- Fflick
+- Fiksimini
+- Fishbrain
+- FitFinder
+- Fiverr
+- FlipMe
+- FoodPair
+- France.tv
+- Freecharge
+- GEDmatch
+- Gaana (music streaming service)
+- GaySurfers.net
+- Geliyoo
+- GoFundMe
+- Gogobot
+- Goregrish.com
+- Green Man Gaming
+- GroupPrice
+- Groupalia
+- HBO Go
+- HTML5test
+- Historypin
+- Histrodamus
+- Holy Mountain (website)
+- Honolulu Civil Beat
+- HotelTonight
+- Humans of New York
+- Humble Bundle
+- I Write Like
+- IQIYI
+- Ici TOU.TV
+- Ilbe Storehouse
+- Indian Memory Project
+- InvestedIn
+- Inzopa
+- Is Anyone Up?
+- Istorychna Pravda
+- It's Psychedelic Baby! Magazine
+- Itsmy
+- J-Comi
+- Jack'd
+- Jiepang
+- Jog.fm
+- Johnson County Post
+- Just A Pinch Recipes
+- KBS News 24
+- KZBL
+- Kik (app)
+- Kinobox
+- Krrb
+- Kveller
+- LESLi
+- Lakome.com
+- Lambo Xtra
+- Lanyrd
+- Law and the Multiverse
+- Lawfare (website)
+- Lendwithcare
+- Lichess
+- LinguaLeo
+- Live Connect
+- Lolita City
+- Longform.org
+- LucyPhone
+- Magnific
+- ManageFlitter
+- Mapbox
+- MasFlight
+- Medical Heritage Library
+- Meituan
+- Memrise
+- MinecraftOnline
+- Mixtape Madness
+- Mobli
+- MobyMax
+- Moegirlpedia
+- Most Awesomest Thing Ever
+- Movie TV Tech Geeks
+- Mp3skull
+- MuckRock
+- Mudlark (company)
+- Munchery
+- My School
+- My Windows Phone
+- MyMFB
+- NESiCAxLive
+- NK News
+- Naked Apartments
+- NameSilo
+- Native Appropriations
+- Nearby
+- News360
+- NewsTilt
+- NewspaperSG
+- No Man's Art Gallery
+- NotJustOk
+- Nowness
+- NumberFire
+- OECD iLibrary
+- ONErpm
+- OkayAfrica
+- Old Weather
+- OnLive
+- OntheBoards.tv
+- Openbook (website)
+- Optimizely
+- Oracle Cloud
+- Ostrovok.ru
+- Paytm
+- Pikimal
+- Pixabay
+- Planet Hunters
+- Planet Soho
+- PlayStation Video
+- Podcast Squared
+- Private Internet Access
+- Project Veritas
+- PubMed Central Canada
+- Putin Must Go
+- Qafqazinfo
+- Qoo10
+- Quote Investigator
+- R/nosleep
+- Radiko
+- Rakuten TV
+- Rdio
+- Readgeek
+- Reuters Insider
+- Ricochet (website)
+- Rock Band Network
+- RotoGrinders
+- SNAC
+- SafeDNS
+- Saturday Down South
+- Savukku
+- ScuttlePad
+- Secret London
+- Shabbat.com
+- Showself
+- Sky Sports News Radio
+- Snapdeal
+- Sofascore
+- Sprout Social
+- Storify
+- Storyful
+- Strasbourg Observers
+- Street View Trusted
+- Students Circle Network
+- Swappa
+- T Layout
+- Tastebuds.fm
+- TeamBackpack
+- Tech in Asia
+- TenPages.com
+- Tencent Weibo
+- The Cutting Room Floor (website)
+- The Daily Caller
+- The Hairpin
+- The Journal (Ireland)
+- The Journalist's Resource
+- The Milky Way Project
+- The Noun Project
+- The Pan-Arabia Enquirer
+- The Pioneer Trail
+- The Plant List
+- The Points Guy
+- The Scale of the Universe
+- The School Fund
+- TheBlaze.com
+- TheSwizzle.com
+- Thought Catalog
+- Thuuz
+- TicketIQ
+- TooXclusive
+- Tout (company)
+- Travelgenio
+- Trendyol
+- Tribun Network
+- Tvtag
+- TwitCasting
+- Udemy
+- Unsealed World News
+- UrbanSitter
+- Videoland (Netherlands)
+- Votizen
+- VozMob
+- WP Engine
+- WagJag
+- Warby Parker
+- WatchESPN
+- Weather Zombie
+- Weibo Corporation
+- WhatCulture
+- WhoSay
+- Wind Energy Data & Information Gateway
+- WooYun
+- Wowpedia
+- Xinmsn
+- YNaija
+- YouNoodle
+- Zaytung
+- Ziilch
+- ZipRecruiter
+- ZunZuneo
+
+## 2011 · 294 fresh
+
+- /pol/
+- 47North
+- 90min
+- ASZdziennik
+- AXS (company)
+- Adzuna
+- Aljazeera.com
+- Amen (website)
+- Anonplus
+- Anphabe.com
+- Aparat
+- Artspace (website)
+- Audiobook Creation Exchange
+- Ayı Sözlük
+- BKash
+- BT MyDonate
+- BTC-e
+- Baby.com.br
+- Baker Street Babes
+- BayFiles
+- Bedsider
+- Blibli
+- Blockchain.com
+- Boats Group
+- Book Riot
+- Brasil 247
+- Bridge Michigan
+- Brit + Co
+- Broadbent Institute
+- Bucketfeet
+- BuggedPlanet
+- BuzzFeed News
+- Byju's
+- CGTrader
+- CVLT Nation
+- CarsGuide
+- Chaturbate
+- Chewy (company)
+- Chope (platform)
+- ChowNow
+- ClassDojo
+- CoinWeek
+- Comics & Cola
+- Computer Weekly
+- Craftsy
+- Crowdcube
+- Crunchyroll News
+- Curators of Sweden
+- DBCult Film Institute
+- Dalit Camera
+- Datasheets.com
+- Dawrat
+- Dcard
+- Delitoon
+- Delivery Hero
+- Democracy & Freedom Watch
+- Depop
+- Desmos
+- DigitalOcean
+- Disney Second Screen
+- Dollar Shave Club
+- Dolls Kill
+- Don't Hug Me I'm Scared
+- Doxbin (darknet)
+- Doximity
+- Drumeo
+- Duolingo
+- EButterfly
+- EDreams ODIGEO
+- EUscreen
+- EdSurge
+- Ekō (organization)
+- Equals6
+- Equestria Daily
+- EverQuote
+- Examine.com
+- Exaro
+- Fastly
+- Fayve
+- FedRAMP
+- FileServe
+- Fimfiction
+- Find Your FaceMate
+- Firstpost
+- Flandrica.be
+- Fondomat
+- FreeCast
+- Fundageek
+- Funding4Learning
+- Game-Art-HQ
+- GeekWire
+- GeneTalk
+- Global Fashion Group
+- GlobalDoodle
+- Glottolog
+- Grantland
+- Grove.io
+- Gulagu.net
+- Hatch (e-commerce company)
+- Holotypic Occlupanid Research Group
+- How to be a Redhead
+- Hurb
+- I Believe in Science
+- I Done This
+- I Want to Draw a Cat For You
+- I-Ready
+- IFTTT
+- IFood
+- IFunny
+- IM Creator
+- IPawn
+- ITHome (website)
+- Ibakatv
+- Indigenous Tweets
+- InforMEA
+- Inkblazers
+- Interaksyon
+- Irokotv
+- JManga
+- KROV-FM
+- Kaidee
+- Kawowo Sports
+- Keek
+- Kuaishou
+- L'union Suite
+- Legal Cheek
+- Lemino
+- Lendink
+- Letterboxd
+- Liburuklik
+- Lightbox.com
+- Litecoin
+- MarketBeat
+- Materials Project
+- Mediakraft Networks
+- Megogo
+- Mic (media company)
+- Minds (social network)
+- Mogujie
+- Mojo Motors
+- Mr. Money Mustache
+- MySchoolHelp
+- New 7 Wonders Cities
+- Nextdoor
+- Nintendo eShop
+- NoBudge
+- NoCopyrightSounds
+- NoFap
+- Nollywood Reinvented
+- Novara Media
+- Nucleonica
+- NutritionFacts.org
+- OVD-Info
+- OfferUp
+- Olam.uz
+- Old Bull Lee
+- Oneflare
+- Onepager
+- OpenCorporates
+- OpenEdition.org
+- OrderAhead
+- OurResearch
+- OutKick
+- PROSPERO
+- Paprika (app)
+- Pet Circle
+- PetCloud
+- PlagTracker
+- PlainSite
+- Player FM
+- Popcornflix
+- Poshmark
+- Postmates
+- Priyo.com
+- QRpedia
+- Quackdown
+- Queens Memory Project
+- Qunb
+- Qwiki
+- R/AskHistorians
+- R/bald
+- RTINGS
+- RTP Play
+- Raditaz
+- Rara (service)
+- Rated R&B
+- Rebrickable
+- Red Song Society
+- Ribbon (company)
+- Ridus
+- RockMyRun
+- Rome2Rio
+- Rover (American company)
+- Ruck.us
+- Rugby Republic
+- Rukkus.com
+- SBS On Demand
+- SGAG
+- Saveup
+- Schema.org
+- Sci-Hub
+- Scripted (company)
+- Sefaria
+- Sheeel
+- Shop.ca
+- ShopClues
+- Shut Up & Sit Down
+- Silk Road (marketplace)
+- SkillPages
+- Skillshare
+- Skyblock
+- Snap Inc.
+- So Comic
+- So.cl
+- Son of the Bronx
+- Speedof.me
+- SpotHero
+- Stage 32
+- Sticker (messaging)
+- Stitch Fix
+- Storemates
+- Streetlife (website)
+- Stuff Dutch People Like
+- Sumazi
+- SuperMama
+- TV Time
+- TVLine
+- TamilRockers
+- Tarzanija
+- Tencent Video
+- Tenthwave Digital
+- The Classical
+- The College Fix
+- The Conversation (website)
+- The Daily Dot
+- The Daily Meal
+- The Iconic
+- The Mary Sue
+- The Muse (website)
+- The Online Network
+- The Public Domain Review
+- The Real Geeks
+- The RealReal
+- The UnReal Times
+- The Verge
+- Then and Now (retailer)
+- Think Africa Press
+- TickPick
+- Trajectory Inc.
+- Travis CI
+- Treehouse (company)
+- Triposo
+- Trovebox
+- TubeCrush
+- Turntable.fm
+- Tuta (email)
+- Udacity
+- VHX
+- Verbling
+- VidIQ
+- View-source URI scheme
+- Vingle (social network)
+- Virtual Museum of Modern Nigerian Art
+- Visual.ly
+- Voyagin
+- Voyo
+- VroniPlag Wiki
+- VyRT
+- WDYL (search engine)
+- Wall Street Magnate
+- We the People (petitioning system)
+- WeChat
+- Web platform
+- What Degree? Which University?
+- Wimdu
+- Wirecutter (website)
+- Wish (company)
+- Wizarding World Digital
+- WomenWriteAboutComics
+- Wonkblog
+- Workflowy
+- Worldcrunch
+- XoJane
+- Xumo
+- YIFY
+- Ylilauta
+- Yo, Is This Racist?
+- Yookos
+- YouCaring
+- YouNow
+- Zava
+- ZeroPC
+- Zhihu
+- Zombie Lane
+
+## 2012 · 264 fresh
+
+- /mlp/
+- 0404 News
+- 1CAK
+- 23snaps
+- 24KZ
+- AXS Map
+- Airtasker
+- Airtime.com
+- Al-Monitor
+- All Dead Mormons Are Now Gay
+- AllSides
+- Alto Mail
+- Amino (app)
+- AppLovin
+- Archive.today
+- AskforTask
+- Astro Go
+- Audiomack
+- Ballast (website)
+- Band (software)
+- Bangladesh Black Hat Hackers
+- Bark.com
+- Becoacht.com
+- Blinkist
+- Blue Apron
+- BongaCams
+- Brideside
+- Bync
+- ByteDance
+- CBC Hamilton
+- Canopy Labs
+- Carousell (company)
+- Channel Frederator Network
+- Chron.com
+- Circa News
+- CloudForge
+- Cogobuy
+- ComicsVerse
+- Companisto
+- Compare the Market Australia
+- Congress.gov
+- Coub
+- Credible (company)
+- CubeCraft Games
+- DIY.org
+- DTOX
+- Data.gov.in
+- Decision Desk HQ
+- Derpibooru
+- Dialpad Meetings
+- Diamondère
+- Did You Know Gaming?
+- Digital Post Australia
+- DistroKid
+- Docomo Anime Store
+- Downdetector
+- DraftKings
+- Dropmyemail
+- Duffel Blog
+- Dumb Ways to Die
+- EduFocal
+- El Orden Mundial
+- Electrek
+- Eliademy
+- Endangered Languages Project
+- Endeavorist
+- Everyday Africa
+- Evidence Based Birth
+- Evntlive
+- Experiment (website)
+- Eğitim Bilişim Ağı
+- FabFurnish
+- Fake Taxi
+- Fandalism
+- Fightland
+- First We Feast
+- Flightfox
+- Foodpanda
+- Forever (website)
+- Freshly
+- Furlenco
+- Gadget Flow
+- Game Grumps
+- Gametime
+- Gardenista
+- Ginga Scout
+- Goteo
+- Gousto
+- Gov.uk
+- Groove Music
+- Guancha
+- Handy Technologies
+- Hawar News Agency
+- Highlight (application)
+- Hinge (app)
+- Hollywood and Swine
+- Housing.com
+- IDreamBooks
+- IFLScience
+- Independent Journal Review
+- Insidetrak
+- Instacart
+- Internet Defense League
+- Irasutoya
+- Is Anybody Down?
+- Jumia
+- Kamcord
+- KingFut
+- KissAnime
+- Kiwi.com
+- Knowing Neurons
+- Konga.com
+- Kworb
+- LADbible Group
+- Lazada
+- Le Gorafi
+- Le Tote
+- Legit.ng
+- Lercio
+- Lost Media Wiki
+- MTL Blog
+- Magnet.me
+- Mawdoo3
+- Medeo (app)
+- MessageMe
+- Mewe (social media)
+- Miiverse
+- Millennial (blog)
+- Million Short
+- MintPress News
+- Monkeybuzz
+- Multiple Sclerosis Discovery Forum
+- Muslim Mirror
+- Mwebantu
+- My Old Man Said
+- NOW News
+- Neon Alley
+- NeverSeconds
+- News Deeply
+- NewsDiffs
+- Next Avenue
+- Nintendo Network
+- Novertur
+- Now (streaming service)
+- NowThis
+- Nukemap
+- Occupy Democrats
+- Offbeatr
+- Open Food Facts
+- Ora TV
+- Oracle Cloud Enterprise Resource Planning
+- Orfogrammka
+- Origin Net
+- Otus (education)
+- Outgrow.me
+- PCGamesN
+- PCGamingWiki
+- PandoDaily
+- Paye ta shnek
+- Peercoin
+- Pheed
+- PicMonkey
+- Piktochart
+- Pingit
+- Plated (meal kits)
+- Plug.dj
+- Polygon (website)
+- Portal e-Cidadania
+- Powtoon
+- Psychic Friends Network
+- PubPeer
+- Puhutv
+- QQ Browser
+- QUIC
+- Quartz (publication)
+- Quip (software)
+- R/dataisbeautiful
+- R/wallstreetbets
+- RTMKlik
+- Radix (company)
+- Rat Chaos
+- Readly
+- Realtime Trains
+- Red Alert Politics
+- Renegade (media platform)
+- Rev3Games
+- Roads & Kingdoms
+- Roll20
+- Russian Anonymous Marketplace
+- S Voice
+- SAP BTP
+- SETILive
+- SSNDOB
+- Scholastica (company)
+- Scriptorium (website)
+- Seed&Spark
+- Seedrs
+- Shiftgig
+- ShiftyLook
+- ShrekChan
+- Sketchfab
+- Skift
+- SkipTheDishes
+- SourceFed
+- Spacehive
+- Split My Fare
+- Spuul
+- Storenvy
+- Storyhunter
+- Strikingly
+- Supper Mario Broth
+- Swap.com
+- SwimSwam
+- Tapas (website)
+- Tastemade
+- Tea Party Community
+- Tehran – Haifa – Tel Aviv
+- Telasa
+- Tencent Dajia
+- Terms of Service; Didn't Read
+- Texture (app)
+- The Black Tux
+- The Daily Currant
+- The Global Mail
+- The Hawkeye Initiative
+- The Kumquat
+- The Right Stuff (blog)
+- The Siberian Times
+- The Spun
+- The Times of Israel
+- The Washington Free Beacon
+- Top Level Design
+- Toutiao
+- Tracking the Wild
+- Tracklib
+- Triller TV
+- Tripfez Travel
+- True & Co.
+- Tuition.io
+- Tune.pk
+- Twistys
+- USAFacts
+- UglyChristmasSweater.com
+- UltraViolet (organization)
+- Uniregistry
+- Universal Jobmatch
+- Unpakt
+- UpCounsel
+- Upworthy
+- Urban Ladder
+- VarageSale
+- Viddsee
+- VideoScribe
+- Wanderu Inc.
+- Wanelo
+- Web Application Open Platform Interface
+- Whisper (app)
+- Wideo.co
+- Wikidata
+- Wikipediocracy
+- WindowsWear
+- YossarianLives
+- Zetland (newspaper)
+- Zumbl
+
+## 2013 · 242 fresh
+
+- 10 (VoD service)
+- 5Pillars
+- 8chan
+- A Good Movie to Watch
+- ARA News
+- ASAP (food delivery)
+- Affairs Today
+- Agora (online marketplace)
+- Animation Digital Network
+- AppyParking
+- AthenaPlus
+- Atlantis (market)
+- AudioBoom
+- AudioCulture
+- Autcraft
+- Awok
+- Azure Web Apps
+- Band (software)
+- BetterHelp
+- BetterUp
+- Bhutan Biodiversity Portal
+- Biesloaded
+- BioRxiv
+- Bitmovin
+- Blinkit
+- Bongo BD
+- Breakfast Network
+- Brooklyn Visual Heritage
+- Bulgarian Rock Archives
+- Bustle (magazine)
+- CJTM
+- Camp Mobile
+- Canaan Creative
+- Canva
+- Carmudi
+- Carvana
+- Carwow
+- Chaldal
+- Chotoonz TV
+- Cinapse
+- Clara.io
+- Click and Boat
+- Cnyakundi.com
+- CoinDesk
+- Coinmarketcap
+- Compare.com
+- Croatian Encyclopedia
+- Crunchyroll Manga
+- DOWN (app)
+- Daisuki (website)
+- Dandin (audio platform)
+- DeepDotWeb
+- Deliveroo
+- Digital Kosovo
+- Diply
+- DiscoverCars.com
+- Dissernet
+- Distractify
+- Dogecoin
+- Dogolachan
+- DoorDash
+- Doorman (company)
+- Dream Market
+- Dronestagram
+- EComFuel
+- EDM.com
+- Editorialist
+- Emojipedia
+- Espreso TV
+- Every Noise at Once
+- Fabletics
+- Favor Delivery
+- Finanzas Justas
+- First Look Media
+- Florida Politics
+- Founders Online
+- Foxtel Now
+- Fumettologica
+- Funding Tree
+- Galactic Journey
+- Gear Gods
+- Giphy
+- Gitter
+- Glints (platform)
+- Gopuff
+- Gowalla
+- Graphika
+- Guide to Iceland
+- Gun Violence Archive
+- Haptik
+- HealthCare.gov
+- HerpMapper
+- Hitbox (service)
+- Home Chef
+- Hromadske
+- Hublished
+- Huzlers
+- Hypixel
+- IMakr
+- IMbesharam
+- Ideapod
+- InDrive
+- Inside Philanthropy
+- Insurify
+- Internet.org
+- Is4oa.org
+- Itch.io
+- Ivy League Digital Network
+- Jim'll Paint It
+- Jumia Travel
+- Kahoot!
+- Kaymu
+- Kaymu Pakistan
+- Kentucky Center for Investigative Reporting
+- Kids in the House
+- Kiwi Farms
+- Latvian Public Service Media
+- LaunchGood
+- Line Manga
+- Lingvist
+- Linus Media Group
+- Live Law
+- Magine
+- Mailfence
+- Manga Box
+- Mapillary
+- Meatspace Chat
+- Mega (service)
+- Mercari
+- Mewatch
+- Meydan TV
+- Mineplex
+- MixBit
+- Mobsyte
+- Mr. Man (website)
+- MyEx.com
+- MyGwork
+- MyMiniFactory
+- MyMusic.com.ng
+- MyNoise
+- National Rock Review
+- Netd.com
+- New Noise Magazine
+- New Payments Platform
+- Omio
+- OnGamers
+- Ones to Watch
+- OpenGeofiction
+- OpenHistoricalMap
+- OpenLearning
+- OpenRailwayMap
+- Oyster (company)
+- Pasquines
+- Patreon
+- Perma.cc
+- Photofeeler
+- Pluto TV
+- Politico
+- Portfolium
+- Product Hunt
+- Proton Mail
+- Queer Lala Times
+- Qwant
+- R/AmItheAsshole
+- R/GenderCritical
+- R/antiwork
+- R/changemyview
+- Reductress
+- Registry of Research Data Repositories
+- Renowned for Sound
+- Research Square
+- ReserveBar
+- Reverb.com
+- Road.issn.org
+- Rumble (company)
+- SMART News Agency
+- Sad Puppies
+- School Stream
+- ScoopWhoop
+- Seatrade Maritime News
+- SharingDard
+- Sheep Marketplace
+- Showbox.com
+- Showroom (streaming service)
+- Skiplagged
+- Slate Star Codex
+- Smallpdf.com
+- SonyLIV
+- Speech Recognition & Synthesis
+- Spinnup
+- Splice (platform)
+- State (website)
+- Studio71
+- Subjekt
+- Sunrise Calendar
+- SuperMoney
+- Swiggy
+- TVPlayer
+- TeePublic
+- The Big Smoke (publication)
+- The Bitter Southerner
+- The Civilian
+- The Daily Stormer
+- The Fashion (website)
+- The Hive (server)
+- The Information (website)
+- The London Economic
+- The Mysterious Package Company
+- The People's Voice (internet TV station)
+- The Toast (website)
+- Theneeds
+- Tiqets
+- Titstare
+- TodayTix
+- TouchVision
+- Trendin
+- TrustLeaf
+- UFC Fight Pass
+- UltimatePoker.com
+- Unbolted
+- University of Fashion
+- Unsplash
+- Vdio
+- Vice News
+- VidAngel
+- ViralNova
+- VirtualRealPorn
+- Vocativ
+- Vroom, Inc.
+- Wait But Why
+- WalletHub
+- WebTorrent
+- Webflow
+- What3words
+- Women Film Pioneers Project
+- World News Daily Report
+- Wynncraft
+- Xiaohongshu
+- Xometry
+- Yamibuy
+- Zerocoin protocol
+- Zola (company)
+
+## 2014 · 236 fresh
+
+- 14ymedio
+- 1914–1918 Online
+- AJ+
+- About You (company)
+- Abu Ali Express
+- Agents of Ishq
+- Al-Masdar News
+- Allblk
+- AlphaBay
+- Altitude Learning
+- Amaq News Agency
+- Animaker
+- AnimeLab
+- Are.na
+- Asteroid Zoo
+- Atom Tickets
+- Baby Bundle (app)
+- Bangla Tribune
+- Bato (website)
+- Beats Music
+- Bitnation
+- Black Nerd Problems
+- Blavity
+- Book of Remembrance for Those Who Fell for Ukraine
+- Briefly.co.za
+- Bristlr
+- Buffalo Chronicle
+- Bumble
+- CBS News 24/7
+- CamSoda
+- Chalkbeat
+- Chess24
+- Claro Música
+- ClickHole
+- Clover (mobile app)
+- CongressEdits
+- Conservative Review
+- Crave (streaming service)
+- CrowdBlue
+- Cults (3D printing marketplace)
+- Daily Nous
+- Dallas Analytics
+- Dash (cryptocurrency)
+- DealStreetAsia
+- Dingit.tv
+- Discovergreece.com
+- Disk Detective
+- Donorbox
+- Double Toasted
+- Drama Alert
+- Dubsmash
+- Dunzo
+- El Español
+- El Líbero
+- Electric Jukebox
+- Emojli
+- Eurasmus
+- European Pravda
+- European Western Balkans
+- Eurosender
+- Everipedia
+- Every Single Word
+- Evolution (marketplace)
+- FilmFreeway
+- Front Office Sports
+- Full30
+- Funzing
+- Fyuse
+- GGPoker
+- Gamurs
+- GeenPeil
+- Generation Tux
+- GhostTunes
+- GiveSendGo
+- Global Dossier
+- Goodfood Market
+- Goodwall
+- Gopili
+- GotNews
+- Grain (company)
+- Grams (search)
+- Happn
+- Hevria
+- HomeToGo
+- Huya Live
+- IDN Times
+- IGDB
+- IZA World of Labor
+- Idology
+- Iflix
+- Indy100
+- Inkl
+- IranWire
+- JSTOR Daily
+- JSwipe
+- Jagonews24.com
+- JemJem
+- Jet.com
+- Jiemian News
+- KKday
+- Kakao
+- Keybase
+- Khabaristan Times
+- Kickback (video game platform)
+- Kiddle (search engine)
+- Kidoodle.TV
+- Kmall24
+- Lapsi.al
+- Lexbase
+- Lightbox (service)
+- Liveuamap
+- MV-media
+- Mailbox (email)
+- ManyVids
+- Marco Polo (app)
+- Mediazona
+- Meduza
+- Minibar Delivery
+- Mississippi Today
+- Mothership (website)
+- MovieCode
+- Movies Anywhere
+- Music Y
+- MyGov.in
+- Mygov.scot
+- Myrotvorets
+- Nestpick
+- Netlify
+- New Japan Pro-Wrestling World
+- NewHive
+- News2Share
+- NiceHash
+- Non-fungible token
+- Nulled
+- Nutaku
+- Nyheter Idag
+- Odyssey (website)
+- On TV Tonight
+- OnePath Network
+- OpenBazaar
+- Outbreak News Today
+- Paramount+
+- People's Archive of Rural India
+- Pexels
+- PhysicsOverflow
+- PlayStation Now
+- Playpen (website)
+- Polarr
+- Politiko (website)
+- Pono (digital music service)
+- Post-Trash
+- Poundit
+- PredictIt
+- Presto (streaming company)
+- Project Zero
+- Purple Carrot
+- RaiseMe
+- Recode
+- Research.com
+- Resy
+- Rolling Stone Country
+- RoundMe
+- Russia Insider
+- Samaritans Radar
+- Scroll.in
+- Secret Flying
+- ShareTheMeal
+- Shenma
+- Shift (MSNBC)
+- Shift Technologies (online marketplace)
+- Shipt
+- Shomi
+- Shōnen Jump+
+- Smigin
+- Smithsonian Transcription Center
+- Spring (application)
+- Sputnik (news agency)
+- Squirrel (personal finance company)
+- StatMuse
+- StopFake
+- Studio FOW
+- Sunbasket
+- Swisscows
+- TGP Europe
+- Talking Marriage with Ryan Bailey
+- Task & Purpose
+- Tenor (website)
+- The Alternative (online magazine)
+- The American Independent
+- The Betoota Advocate
+- The Daily Signal
+- The Dodo (website)
+- The Flow (website)
+- The Hard Times
+- The Hub (forum)
+- The Intercept
+- The News Minute
+- The Paper (newspaper)
+- The Passport Index
+- The Players' Tribune
+- The Richie Allen Show
+- The Shade Room
+- The Spinoff
+- The Upshot
+- The Urbanist
+- Thundershorts
+- Tidal (service)
+- Tock (company)
+- Tradesports
+- Tribute (website)
+- Tubi
+- Twenty20 Stock Photos
+- U (streaming service)
+- UBlock Origin
+- University Compare
+- Urban Company
+- Utopia (marketplace)
+- Vidio
+- Vidme
+- Vikaspedia
+- Virtual Museum of Soviet Repression in Belarus
+- Vivaldi.net
+- Voat
+- Vox (website)
+- WWE Network
+- Wallapop
+- WeMall
+- Whatjobs
+- Wikileaf
+- Wikiwand
+- Wolt
+- World Intermediary Liability Map
+- Worthy.com
+- Wyldfire
+- Yevropeyska Pravda
+- Zilzar
+
+## 2015 · 207 fresh
+
+- A Cloud Guru
+- ARU TV
+- Alchemiya
+- AliMusic
+- American Herald Tribune
+- Amuse (music company)
+- Arre (brand)
+- Ascend Group
+- Babestation
+- Baboom
+- BandLab
+- Bangladesh National Portal
+- BeBee
+- Beme (app)
+- Beme (company)
+- Bilyonaryo
+- Blankspot
+- BluTV
+- Byline Times
+- CONtv
+- CTXT
+- Campaign Zero
+- CapFriendly
+- CapX
+- Capt. Andrew Luck
+- Carro (online car marketplace)
+- Carsome
+- Carspring
+- Cisco Umbrella
+- Climate Feedback
+- ClutchPoints
+- Conversable
+- Copyleaks
+- Create Music Group
+- CreateTV
+- Crowd Cow
+- Crypt TV
+- CubbySpot
+- DAZN
+- Da share z0ne
+- Dat Boi
+- Dear Straight People
+- Decentraleyes
+- Dexerto
+- Digital Repository of Ireland
+- Digital5
+- Disney Consumer Products
+- EPathshala
+- ET Money
+- Ennuigi
+- EurAsia Daily
+- Evolve Politics
+- Fanseat
+- Farewill
+- Fig (company)
+- Flix Premiere
+- Foodora
+- FuboTV
+- Getir
+- Gfycat
+- Globoplay
+- Glovo
+- Go90
+- Great American Pure Flix
+- Guazi Used Cars
+- HBO Now
+- HKTVMall
+- HTTP/2
+- Hamichlol
+- Happy Returns (company)
+- Honestbee
+- Hooked (app)
+- Hooq
+- Huijiwiki
+- Hydra Market
+- IndiHome
+- Indiepost
+- InterPlanetary File System
+- Internet Video Coding
+- Inverse (website)
+- It's Going Down (website)
+- Jewish Insider
+- Jones & Blount
+- Kwesé Sports
+- LBRY
+- Lead Stories
+- Lemonade, Inc.
+- Letgo
+- Liberty Hangout
+- Libraries.io
+- LifeZette
+- Line TV
+- Lionsgate+
+- Literary Hub
+- LittleThings
+- Live India
+- Looke (streaming platform)
+- Maestro (service)
+- MasterClass
+- Maths Pathway
+- Matrubharti
+- MeaningCloud
+- Media Bias/Fact Check
+- Megalia
+- Merry Jane
+- Mindful Chef
+- Monzo
+- Mouse Mingle
+- MusicBee (crowdfunding)
+- Namuwiki
+- Narcity Media
+- Neon (service)
+- Network for Public Policy Studies
+- NewsBreak
+- Nexo Jornal
+- Noggin (brand)
+- OWOW Radio
+- Once (dating platform)
+- OpenCritic
+- OpenSky Network
+- OpenWeb
+- Openload
+- OwlCrate
+- POIZON
+- PVP Live
+- Pandlr
+- Parting.com
+- Patari (service)
+- Pathao
+- PawnHero
+- PharmEasy
+- PhonePe
+- Pickle (app)
+- Pinduoduo
+- PlayStation Vue
+- Poker Central
+- Potato Parcel
+- PrizePicks
+- Puls (company)
+- Quillette
+- R/The Donald
+- Radiate (app)
+- RaidForums
+- Rappi
+- Rat & Boa
+- Raya (app)
+- Rebel News
+- Reuters TV
+- RingID
+- Samsung Pay
+- Samsung TV Plus
+- Saransh
+- Semantic Scholar
+- Servify
+- ShareChat
+- SheThePeople
+- Shopee
+- Showmax
+- Shudder (streaming service)
+- Sky On Demand
+- Sling TV
+- Smart Sheriff
+- Snapask
+- Soccer Iraq
+- Soundfly
+- Source News
+- SouthFront
+- Southend News Network
+- Spark Social
+- Spectrum (online publication)
+- Stan (streaming service)
+- StarWipe
+- Stat (website)
+- StayUncle
+- Super Deluxe
+- Symbolab
+- Taazi
+- Tahaqaq
+- The 74
+- The Canary (website)
+- The Daily Wire
+- The Ferret (website)
+- The Grayzone
+- The League (app)
+- The Library of Babel (website)
+- The Pool (magazine)
+- The Trace (website)
+- TinyStep
+- Tovala
+- Triller (app)
+- Triller Inc.
+- Truebil
+- Truthfinder
+- UK Parliament petitions website
+- Ultrasawt
+- Unacademy
+- Vessel (website)
+- Vinterior
+- Washingtondigitalnewspapers.org
+- WeFarm
+- WeRateDogs
+- WeSearchr
+- WebAssembly
+- Women in Red
+- Yen.com.gh
+- ZeroNet
+- Zeta (company)
+
+## 2016 · 146 fresh
+
+- 5-Minute Crafts
+- 9Now
+- Abema
+- Accelerated Mobile Pages
+- Actualite.cd
+- Aftown
+- AirDine
+- Andscape
+- AniWave
+- Aze (magazine)
+- Baopals
+- Bernie Singles
+- Blim TV
+- Blue Whale Challenge
+- BlueVision
+- Brandless
+- Brasil Paralelo
+- Builder.ai
+- CIAYO Comics
+- CS.Money
+- Chalo Chatu
+- Childs Play (website)
+- Chowbus
+- ClassBento
+- Comoto Holdings Inc.
+- Crypto.com
+- Davar
+- Denfaminico Gamer
+- Denver Guardian
+- DirecTV Stream
+- Dork (magazine)
+- Double Down News
+- El Nacional (Catalonia)
+- Emergencybnb
+- Every Outfit on Sex and the City
+- FMovies
+- Faceu
+- FactorDaily
+- Fanvue
+- FilmStruck
+- Filmatique
+- Firo (cryptocurrency)
+- Frinkiac
+- FunimationNow
+- Funk (service)
+- Gab (social network)
+- GagaOOLala
+- Global Fishing Watch
+- Government e Marketplace
+- Hayu (streaming service)
+- Heat Street
+- Hidden Palace
+- Houseparty (app)
+- Huggle (app)
+- Humanitix
+- Imzy
+- IndependentWrestling.tv
+- J-Novel Club
+- Jack's Flight Club
+- JioTV
+- Knowledge Engine (search engine)
+- Kocowa
+- LIHKG
+- Letras & Poesía
+- Lifewire
+- Lingua Libre
+- LiquidSky
+- Litsy
+- Local Government Information Services
+- Mangamura
+- Mangapedia
+- Maple Match
+- Mathematically Gifted & Black
+- McMansion Hell
+- Miitomo
+- Millat Times
+- Molotov TV
+- National Scholarship Portal
+- Never Again pledge
+- Night Flight Plus
+- OKO.press
+- One Music PH
+- OnlyFans
+- Open Syllabus Project
+- Our.News
+- Overtime (sports network)
+- Palmer Report
+- Polygraph.info
+- Pray.com
+- Preprints.org
+- Professor Watchlist
+- QueerAF
+- Radio Garden
+- RaiPlay
+- Reparations (website)
+- Sarahah
+- Seeso
+- Shpock
+- SiIvaGunner
+- Software Heritage
+- Somali Faces
+- Spoon Radio
+- SportsCastr
+- StoryChopsticks
+- Strana.ua
+- Stripchat
+- Sugarbook
+- Swiss Policy Research
+- Tabletopia
+- Tata Cliq
+- Tay (chatbot)
+- The Athletic
+- The Babylon Bee
+- The Balance (website)
+- The Daily Bonnet
+- The Frontier (website)
+- The Incline
+- The Mendocino Voice
+- The Outline (website)
+- The Ringer (website)
+- The Rochdale Herald
+- The Screening Room
+- The Sex Factor
+- The Strategist
+- The Tempest (media company)
+- The Theatre Times
+- Triller TV
+- True Pundit
+- Truth & Transparency Foundation
+- Ukrainian Cyber Alliance
+- Up Media
+- Urimalsaem
+- VINwiki
+- VRV (streaming service)
+- Vampr
+- Verywell
+- Voot
+- Watcha
+- WiPay
+- Wikenigma
+- Winnie (website)
+- Womad (website)
+- Wondery
+- Yape (payment)
+- Zcash
+- Zo (chatbot)
+
+## 2017 · 141 fresh
+
+- 1600 Daily
+- 338Canada
+- 5 Calls
+- 6ixBuzz
+- 7plus
+- ARD Sounds
+- Accidentally Wes Anderson
+- Actu.fr
+- Adopt Me!
+- African Food Network
+- Alt News
+- Anime Strike
+- Backyard Worlds
+- Bellesa
+- Big Big Channel
+- Big League Politics
+- BitChute
+- Blender.io
+- BritBox
+- British Culture Archive
+- Cabells' Predatory Reports
+- Caldron Pool
+- Cameo (website)
+- Cardano (blockchain platform)
+- Club Penguin Rewritten
+- Comments by Celebs
+- Common Voice
+- Co–Star
+- Crooked Media
+- Cryptee
+- D&D Beyond
+- DLive
+- DTube
+- DisneyNow
+- EarthArXiv
+- Factba.se
+- FanCentro
+- Fanatiz
+- Foodhub
+- Futurism (website)
+- Genesis Market
+- Gimme Radio
+- Glitch Productions
+- Global Wrestling Network
+- Guilded
+- Gören Duyan
+- H. H. Gregg
+- Hard Drive (website)
+- Hatreon
+- Hidive
+- JSON Feed
+- Jeremy Renner Official
+- Journals.openedition.org
+- Joyn (streaming platform)
+- Kiwi Campus
+- Lego Life
+- Likee
+- LocalBTV
+- Logically (company)
+- MAD Solutions
+- Made In Cookware
+- Manga Up!
+- Messenger Kids
+- Micro.blog
+- Monogatary.com
+- Motorway (brand)
+- Nation.Cymru
+- Naver Papago
+- Neighbor (company)
+- Nevada Independent
+- New Urbanist Memes for Transit-Oriented Teens
+- Newsroom (website)
+- OGUsers
+- OKX
+- OVO (payment service)
+- OfflineTV
+- Omniarchive
+- Ondamedia
+- Open Encyclopedia of Anthropology
+- Panorama (Russian satirical website)
+- Pantaya
+- Passionflix
+- Patribotics
+- Pillowfort
+- Pincong
+- Pinoy Seoul
+- Playlist Studio
+- Playz
+- Presearch (search engine)
+- R/BreadStapledToTrees
+- R/HaveWeMet
+- R/place
+- Registry.Africa
+- Resett
+- Resi (company)
+- Robomart
+- Samhällsnytt
+- Slowly (app)
+- Smash (file transfer service)
+- Splinter News
+- Start (streaming service)
+- Steady (app)
+- StoneToss (webcomic)
+- Stop Child Abuse – Trace an Object
+- Substack
+- Sugar Pine 7
+- Sun NXT
+- Surviv.io
+- Sweet.tv
+- Tattle Life
+- Tbh
+- The Action Network
+- The Bell (newspaper)
+- The Chenab Times
+- The Informant247
+- The Kashmiriyat
+- The Nevada Independent
+- The Overtake
+- The Perspective
+- The Post Millennial
+- The Pudding
+- The Roku Channel
+- TheGamer
+- ThePrint
+- Them (magazine)
+- Thodex
+- Touch 'n Go eWallet
+- Trip.com
+- Txt.fyi
+- UnHerd
+- Vcash
+- Vegas Stats & Information Network
+- Walking Eagle News
+- Wausau Pilot and Review
+- WhiteDate
+- WhopperCoin
+- WikiTribune
+- Wrestle Universe
+- Xbox Game Pass
+- Xfinity Flex
+- Zedwap
+
+## 2018 · 81 fresh
+
+- 1.1.1.1
+- 10 daily
+- ABC News Live
+- Advantage Archives
+- AfricArXiv
+- All Japan Pro Wrestling TV
+- Artbreeder
+- Bionomia
+- Blazor
+- Bot Sentinel
+- CBS Sports HQ
+- Caffeine (service)
+- Can I Play That?
+- Cazoo
+- CherryPicks
+- Circuit City
+- Civiqs
+- CompUSA
+- Convoz
+- DC Universe (streaming service)
+- Data Transfer Project
+- Dread (forum)
+- Egg (magazine)
+- Epic Games Store
+- Everyday Pakistan
+- FactGrid
+- G123
+- Gothamist
+- HTTP/3
+- HateAid
+- Honor Club
+- Inkstone News
+- Invidious
+- Italic (company)
+- Kayo Sports
+- Kumu (social network)
+- Lezzoo
+- Lingopie
+- Locast
+- Lysn
+- Main Media
+- MangaDex
+- Moomoo (company)
+- Moonbug Entertainment
+- MrDeepFakes
+- MyLondon
+- Naver Vibe
+- NewsGuard
+- Nintendo Switch Online
+- Noclip.website
+- Nym Technologies
+- OceanofPDF
+- Parler
+- Petro (token)
+- Picrew
+- Pincong
+- Proekt
+- Rising (web series)
+- Robot Cache
+- Samokat
+- Sanctioned Suicide
+- Sharesome
+- Sniffies
+- StreamYard
+- Surfshark VPN
+- Switter
+- TasteAtlas
+- The Bulwark (website)
+- The Curb (website)
+- The Doha Historical Dictionary of Arabic
+- The Fauxy
+- The Roys Report
+- Timberwolves Brasil
+- Tribunal del Pueblo
+- Unam Wiki
+- Unfold (app)
+- VeVe
+- Vidgo
+- Vkgy
+- ZEE5
+- Zeus Network
+
+## 2019 · 113 fresh
+
+- 'Tis Time for "Torture," Princess
+- 1inch
+- A group where we all pretend to be boomers
+- ATA Football
+- ArtButMakeItSports
+- Aseel (platform)
+- Avenga
+- Avenue (store)
+- BET+
+- Blaze.com
+- Boardroom (company)
+- Border Report
+- Boystown (website)
+- Buttercup Festival
+- Can You Pet the Dog?
+- Chained Soldier
+- Chirp (service)
+- Cobra (manga)
+- Cognilize
+- Core (video game)
+- Courier Newsroom
+- Crossdressing Pandemic
+- Declassified UK
+- Demiplane (company)
+- Disney Deluxe
+- Dispo
+- Doxbin (clearnet)
+- Dude With Sign
+- ETV Win
+- Established Titles
+- Fangs (webtoon)
+- Frndly TV
+- Ganbare Doukichan
+- Gapo
+- GeeXPlus
+- Gemini (protocol)
+- Glean Technologies
+- GolfTV
+- Gript
+- HKChronicles
+- HKmap.live
+- Headway (app)
+- Hive Social
+- Hokkaido Gals Are Super Adorable!
+- Hong Kong Feature
+- Hopin (company)
+- Hyperskill
+- I Think I Turned My Childhood Friend into a Girl
+- ImmuniWeb
+- JioMart
+- Latinus (news portal)
+- Lex (app)
+- Lexico
+- Luscii
+- MC Championship
+- Manga Plus
+- Marvel × Shōnen Jump+ Super Collaboration
+- Means (company)
+- Metric Media
+- Minecraft Monday
+- MinnMax
+- Misbar
+- Model Media
+- Mola (streaming service)
+- Mysterious Disappearances
+- NBC LX Home
+- NBC News Now
+- Nagad
+- National File
+- Nick+
+- Nitter
+- No Longer Allowed in Another World
+- NordLocker
+- Ogelle
+- OneSoccer
+- Puffer (research study)
+- Quince (company)
+- Quinn (app)
+- RAIC Labs
+- Ramp (company)
+- Religion Unplugged
+- Roboflow
+- Ruck.us
+- Senpai Is an Otokonoko
+- Spy × Family
+- StackTV
+- Stirr
+- Strange Planet (webcomic)
+- TNA+
+- Tehama Inc.
+- The 19th Medical Chart
+- The Backrooms
+- The Dispatch
+- The Fix Media
+- The Garden (animated series)
+- The StoryGraph
+- Third Shift Society
+- Toffee (streaming service)
+- Tonplein
+- Trust Café
+- Unpacked (website)
+- Viavii
+- Video Games Chronicle
+- Virtual Police Station
+- Volfefe index
+- Vx-underground
+- Wavve
+- Weverse
+- Wikilala
+- Windows96.net
+- Yesim
+- Yippee TV
+- Z Holdings
+
+## 2020 · 84 fresh
+
+- 15.ai
+- A Starting Point
+- AMC+
+- Aha (streaming service)
+- American Futurist
+- ApartmentAdvisor
+- Archetyp Market
+- Bangla Sahayata Kendra
+- Barça TV+
+- BeReal
+- Big Hairy Network
+- Blast TV
+- Blockeley
+- Bookshop (company)
+- BreakThrough News
+- Breeze (app)
+- Build the Earth
+- Bulletin (online newspaper)
+- COVID Tracking Project
+- Captions (app)
+- Clapper (service)
+- Congresstrading.com
+- Coronavirus Tech Handbook
+- Coupang Play
+- Covid Act Now
+- Dear White Staffers
+- Defector Media
+- Diia
+- Dimers
+- Dream SMP
+- Dreams (video game)
+- Dressbarn
+- FakeReporter
+- Fanfix
+- Gorillas (company)
+- Hey (email service)
+- Huddles (app)
+- INDIAai
+- IStories
+- Just Women's Sports
+- Kapamilya Online Live
+- Koo (social network)
+- Lego World Builder
+- Lemon8
+- Manta (platform)
+- NHK+
+- Nookazon
+- Nostr
+- Oak National Academy
+- Odysee
+- Ovarit
+- Pacaso
+- Pearpop
+- Perfectly Imperfect (platform)
+- Pirate Wires
+- Real Raw News
+- Remento
+- RiverTV
+- Rumor Scanner Bangladesh
+- Salish Current
+- Salto (streaming service)
+- Shiba Inu (cryptocurrency)
+- Smash (app)
+- State Navigate
+- TVING
+- Telasa
+- The 19th
+- The Exposé
+- The Lever
+- The Poolrooms
+- The Uncensored Library
+- TheCityCeleb
+- There I Ruined It
+- Top Charts Africa
+- TramwayPath
+- Turing College (edtech company)
+- Underdog Fantasy Sports
+- Upstream PH
+- VENN
+- Vetster
+- Visegrád 24
+- Vision+
+- Waitroom
+- Wimkin

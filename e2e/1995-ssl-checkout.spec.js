@@ -1,5 +1,14 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
+
+async function twoStepClick(page, selector) {
+  const el = page.locator(selector).first();
+  await el.click();
+  await page.waitForTimeout(150);
+  await el.click();
+}
+
 const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
 
 test.describe('1995 SSL checkout ritual', () => {
@@ -66,6 +75,19 @@ test.describe('1995 SSL checkout ritual', () => {
     }));
     expect(state.mail[0].from).toMatch(/amazon/i);
     expect(state.orders[0].name).toMatch(/Test Buyer/i);
+  });
+
+  test('cart → checkout → SSL → thanks trail links exist', async ({ page }) => {
+    await page.goto('/years/1995/sites/amazon/cart.html');
+    await expect(page.locator('a[href="checkout.html"]').first()).toBeVisible();
+    await expect(page.locator('a[href="ssl-checkout.html"]').first()).toBeVisible();
+    await page.goto('/years/1995/sites/amazon/checkout.html');
+    await expect(page.locator('a[href="ssl-checkout.html"]')).toBeVisible();
+    await page.goto('/years/1995/sites/amazon/ssl-checkout.html');
+    await expect(page.locator('a[href="order-thanks.html"]')).toBeVisible();
+    await expect(page.locator('form[data-ssl-form]')).toBeVisible();
+    await page.locator('form[data-ssl-form] button[type="submit"]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt95-ssl-checkout'))).toBeFalsy();
   });
 
   test('add-to-cart uses period input control', async ({ page }) => {

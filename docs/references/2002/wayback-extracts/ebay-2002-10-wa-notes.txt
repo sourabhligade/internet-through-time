@@ -1,0 +1,103 @@
+SOURCE: https://web.archive.org/web/20021015084941id_/http://www.ebay.com/
+FINAL: https://web.archive.org/web/20021015084941id_/http://www.ebay.com/
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-ebay
+ROLE: eBay continuity
+TITLE: eBay - The World's Online Marketplace
+BYTES: 51028
+ERROR: 
+
+KEY FACTS / TEXT:
+eBay - The World's Online Marketplace
+What are you looking for?
+Smart Search
+Specialty Sites
+eBay Motors
+eBay Stores
+Half.com by eBay
+PayPal
+Sothebys.com
+Categories
+Airline Tickets
+Antiques | Art
+Baby | Books
+Business & Industrial
+Cameras & Photo
+Cars, Trucks, Parts
+Charity - Bid for a Cure
+Clothing & Accessories
+Coins | Collectibles
+Computers & Office
+Consumer Electronics
+Crafts | Dolls & Bears
+DVDs & Movies
+Event Tickets
+Food & Wine
+Halloween Central
+Health & Beauty
+Home & Living
+Home Improvement
+Jewelry, Gems, Watches
+Live Auctions
+Motorcycles | Music
+Musical Instruments
+Networking & Telecom
+PDAs | Pet Supplies
+Pottery & Glass
+Professional Services
+Real Estate, Timeshares
+Sports
+Fan Shop | Memorabilia
+Sporting Goods | Tickets
+Stamps | Toys & Hobbies
+Travel | TV | Video Games
+Wholesale
+Everything Else
+see all eBay categories
+Global Sites
+Argentina
+Australia
+Austria
+Belgium
+Brazil
+Canada
+France
+Germany
+Ireland
+Italy
+Korea
+Mexico
+Netherlands
+New Zealand
+Singapore
+Spain
+Sweden
+Switzerland
+Taiwan
+United Kingdom
+Featured Items
+Designer 15+ Ct. Gem Emerald Diamond Ring NR!
+Panasonic Pv-L781 Camcorder 4" Lcd& 300x Zoom
+Rolling Stones Autographed Electric Guitar
+1987 Dunruss O.D. Barry Bonds Error Bgs9 1/4
+$22.00 Harley Davidson Blanket...New
+Champagne Cases Full Of Unsearched Emeralds!!
+all featured items...
+Announcements   |   Register   |   eBay Gear   |   SafeHarbor (Rules & Safety)   |   eBay Payments
+Feedback Forum   |   About eBay   |   Jobs   |   Affiliates Program   |   eBay Downloads
+Last updated: Oct-15-02 01:40:27 PDT
+My eBay   |
+Site Map
+Browse   |
+Sell   |
+Services   |
+Search   |
+Help   |
+Community
+Copyright © 1995-2002 eBay Inc. All Rights Reserved.
+Designated trademarks and brands are the property of their respective owners.
+Use of this Web site constitutes acceptance of the eBay User Agreement and Privacy Policy .
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.

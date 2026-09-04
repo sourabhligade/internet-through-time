@@ -1,0 +1,15 @@
+SOURCE: https://web.archive.org/web/*/http://www.daypop.com/
+STATUS: [wa-failed] home body 2026-07-25 densify pass 4 — connection refused
+ROLE: Daypop home / Top 40
+YEAR TARGET: 2002
+
+FALLBACK:
+- Use sibling extract daypop-about-2002-02-wa-notes.txt (WA success Feb 2002)
+- About copy: "current events search engine"; indexes news sites + weblogs daily
+- Feb 2002: over ~5800–6300 sources; EOY ~7500 (Cybercultural)
+- Top 40 links list = "front page of the Internet" (Wired quote via Cybercultural)
+- Sep 2002 out-of-disk-space lore optional educational note
+- Daniel Chan one-person operation
+
+BUILD NOTES:
+P1 room: search + Top 40 list theater (fake links). Not Technorati Cosmos (EOY separate seed).

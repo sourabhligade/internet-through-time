@@ -1,0 +1,58 @@
+SOURCE: https://web.archive.org/web/20020204141118id_/http://www.daypop.com/about.htm
+FINAL: https://web.archive.org/web/20011204210720id_/http://www.daypop.com/about.htm
+STATUS: [visited] 2026-07-25 project-stack visit
+SLUG: wa-daypop-about
+ROLE: Daypop about
+TITLE: Daypop - About
+BYTES: 5861
+ERROR: 
+
+KEY FACTS / TEXT:
+Daypop - About
+Advanced Search
+| Top 40
+DAYPOP
+All Pages News Weblogs
+About
+What is
+Daypop?
+Daypop is a current events search
+engine. Daypop crawls the living web at least once a day to bring you the latest
+information relevant to your searches.
+The living web is composed of sites
+that update on a daily basis: newspapers, online magazines, and weblogs. Weblogs
+are a new form of personal journalism. Think of them as opinion columns or slices
+of life. Newspapers give you the international headlines and weblogs give you
+both a subjective view of current events and a personal view of the author's
+life.
+Currently, Daypop indexes over 5800
+of the best news sites and weblogs on the net every day. If you know of a site
+that should be included in the Daypop index, feel free to submit
+it .
+Use Daypop to search for the
+latest news, the newest movie reviews, sports results or the hottest memes.
+Daypop:
+Searching the Living Web...
+Questions? Comments? Feedback? I'm
+always looking to improve this service.
+Send all email to daypop@danchan.com .
+Advertise:
+Until the self-serve ad system is up and running, I'll manually enter your ad
+into the database for a minimum donation of $10. It's $4 per thousand impressions.
+Help support Daypop! Donate now with PayPal!
+When PayPal asks for comments/ special
+instructions, enter:
+Title: (max 20 chars)
+URL:
+Description: (max 50 chars)
+Read about this
+deal before donating.
+Top 40 |
+Search Tips |
+About |
+Add Search |
+Submit Site
+
+BUILD NOTES:
+From project stack (SOURCES.md §20 · REBUILD-ARTIFACT-MAP · 2002-RESEARCH archive map).
+Anachronism bans: MySpace default · iTunes Music Store · Facebook · Firefox final brand · WordPress default · Blogger-by-Google mid-2002 · Netflix streaming · always-on = most adults.
