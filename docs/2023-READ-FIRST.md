@@ -1,7 +1,7 @@
 # 2023 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-09-01  
-**Status:** **live lean door** as of 2026-09-01. `years/2023/` is on disk. Hub card **available**. Star `itt23-plus`. Leftover 2× 120. `_WIPED` no longer includes **2023**.  
+**Date:** 2026-09-04  
+**Status:** **WIPED.** Hub card locked. No `years/2023/`. Do not `git checkout` an old 2023 forest. Rebuild only when named. This file is the wipe stamp, not a live door.  
 **This pass:** named lean door + leftover 120 from this freeze.  
 **Criteria (always / tick a row):** [`2023-2X-CRITERIA-MAP-2026-09-01.md`](2023-2X-CRITERIA-MAP-2026-09-01.md)  
 **2× leftover harvest:** [`2023-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2023-2X-LEFTOVER-RESEARCH-2026-09-01.md)  

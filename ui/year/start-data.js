@@ -14,6 +14,7 @@
       "<a href=\"../sites/cern/index.html\">CERN / WWW</a> · <a href=\"../sites/ncsa/index.html\">NCSA Mosaic</a>",
       "<a href=\"../sites/fishcam/index.html\">Fish Cam</a> · <a href=\"../sites/whitehouse/index.html\">White House</a>",
       "<a href=\"map.html\">Year flow map</a> — full trail tree"
+    
     ]
   },
   "1995": {
@@ -25,7 +26,8 @@
       "<a href=\"../sites/amazon/index.html\">Amazon books</a> → cart",
       "<a href=\"../sites/auctionweb/index.html\">AuctionWeb</a> — bid higher (not eBay yet)",
       "<a href=\"../sites/geocities/homestead.html\">GeoCities homestead</a> — claim a free page",
-      "<a href=\"../sites/yahoo/index.html\">Yahoo! directory</a> · <a href=\"map.html\">flow map</a>"
+      "<a href=\"map.html\">Year flow map</a> — full trail tree"
+    
     ]
   },
   "1996": {
@@ -38,6 +40,7 @@
       "<a href=\"../sites/spacejam/index.html\">Space Jam</a> — click 3 planets",
       "<a href=\"../sites/yahoo/my.html\">My Yahoo!</a> · <a href=\"../sites/geocities/index.html\">GeoCities</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "1997": {
@@ -50,6 +53,7 @@
       "<a href=\"../sites/ebay/item-laptop.html\">eBay laptop</a> — bid higher",
       "<a href=\"../sites/hotmail/index.html\">HoTMaiL</a> · <a href=\"../sites/slashdot/index.html\">Slashdot</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "1998": {
@@ -62,6 +66,7 @@
       "<a href=\"../sites/yahoo/index.html\">Yahoo!</a> — packed portal TV ads",
       "<a href=\"../sites/amazon/music.html\">Buy a CD</a> · <a href=\"../sites/ebay/index.html\">eBay</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "1999": {
@@ -74,6 +79,7 @@
       "<a href=\"../sites/google/index.html\">Google</a> — funded, still empty",
       "<a href=\"../sites/blogger/edit.html\">Blogger</a> · <a href=\"../sites/y2k/index.html\">Y2K clock</a> · <a href=\"../sites/sourceforge/index.html\">SourceForge</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2000": {
@@ -86,6 +92,7 @@
       "<a href=\"../sites/napster/index.html\">Napster war</a> — search / download theater",
       "<a href=\"../sites/pets/index.html\">Pets.com</a> · <a href=\"../sites/google/index.html\">Google</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2001": {
@@ -98,6 +105,7 @@
       "<a href=\"../sites/itunes/index.html\">iTunes library leftover</a> — no Store",
       "<a href=\"../sites/apple/ipod.html\">iPod leftover</a> — 1,000 songs · $399",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2002": {
@@ -110,6 +118,7 @@
       "<a href=\"../sites/kazaa/index.html\">KaZaA leftover</a> — no real files",
       "<a href=\"../sites/wired/index.html\">Wired CSS leftover</a> — Oct redesign",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2003": {
@@ -122,6 +131,7 @@
       "<a href=\"../sites/wordpress/index.html\">WordPress leftover</a> \u2014 0.7 self-host",
       "<a href=\"../sites/linkedin/index.html\">LinkedIn leftover</a> \u2014 May 5 career graph",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
         "2004": {
@@ -134,6 +144,7 @@
       "<a href=\"../sites/gmail/index.html\">Gmail</a> — 1GB invite lore",
       "<a href=\"../sites/flickr/index.html\">Flickr</a> · <a href=\"../sites/facebook/index.html\">Thefacebook</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2005": {
@@ -146,6 +157,7 @@
       "<a href=\"../sites/reddit/index.html\">Reddit leftover</a> — 22 / 23 Jun",
       "<a href=\"../sites/digg/index.html\">Digg leftover</a> — rise year",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2006": {
@@ -158,6 +170,7 @@
       "<a href=\"../sites/youtube/index.html\">YouTube Google-owned leftover</a> — 9 Oct",
       "<a href=\"../sites/googledocs/index.html\">Google Docs leftover</a> — Oct",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2008": {
@@ -170,6 +183,7 @@
       "<a href=\"../sites/github/issue.html\">GitHub issue</a> — title + body REAL",
       "<a href=\"../sites/android/index.html\">Android G1</a> · <a href=\"../sites/hulu/index.html\">Hulu</a>",
       "<a href=\"map.html\">Year flow map</a>"
+    
     ]
   },
   "2009": {
@@ -308,12 +322,13 @@
   "href": "../sites/iphone/index.html",
   "label": "★ One-thing · iPhone Safari REAL",
   "items": [
-    "<a href=\"about.html\" style=\"color:#90caf9\">About 2007</a> — June 121,892,559 · Jan 106,875,138 · 1,373,327,790",
-    "<a href=\"../sites/iphone/index.html\" style=\"color:#90caf9\">★ iPhone Safari</a> — App Store never writes",
-    "<a href=\"../sites/streetview/index.html\" style=\"color:#90caf9\">Street View leftover</a> — 29 May",
-    "<a href=\"../sites/gmail/index.html\" style=\"color:#90caf9\">Gmail open leftover</a> — 7 Feb",
-    "<a href=\"../sites/fbplat/index.html\" style=\"color:#90caf9\">Facebook Platform leftover</a> — 24 May",
-    "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
+      "<a href=\"about.html\" style=\"color:#90caf9\">About 2007</a> — June 121,892,559 · Jan 106,875,138 · 1,373,327,790",
+      "<a href=\"../sites/iphone/index.html\" style=\"color:#90caf9\">★ iPhone Safari</a> — App Store never writes",
+      "<a href=\"../sites/streetview/index.html\" style=\"color:#90caf9\">Street View leftover</a> — 29 May",
+      "<a href=\"../sites/gmail/index.html\" style=\"color:#90caf9\">Gmail open leftover</a> — 7 Feb",
+      "<a href=\"../sites/fbplat/index.html\" style=\"color:#90caf9\">Facebook Platform leftover</a> — 24 May",
+      "<a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a>"
+    
   ]
 },
   "2021": {

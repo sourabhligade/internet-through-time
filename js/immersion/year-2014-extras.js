@@ -228,6 +228,8 @@
     var host = doc.querySelector('[data-year-game][data-game-id="tilefold"]');
     var start = doc.querySelector("[data-game-start]");
     if (!host) return;
+    if (host.getAttribute("data-tilefold-engine") === "1") return;
+    if (doc.querySelector('script[src*="year-2014-tilefold.js"]')) return;
     var scoreEl = doc.querySelector("[data-game-score]");
     var status = doc.querySelector("[data-itt-action-status]");
     var folded = {};

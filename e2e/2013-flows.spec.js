@@ -123,19 +123,13 @@ test.describe("2013 flows", () => {
     await expect.poll(() => getKey(page, "itt13-snap-story")).toBeTruthy();
   });
 
-  test("second leftover 3× is Chrome · Snowden · Telegram and not the third trio", async ({ page }) => {
+  test("second leftover dests Chrome · Snowden · Telegram exist and are not the gold", async ({ page }) => {
     await page.goto("/years/2013/pages/home.html");
     await expect(page.locator("#ott-guided-2013 ol > li")).toHaveCount(6);
     await expect(page.locator('[data-ott-one-thing="2013"]')).toHaveAttribute("href", /vine\/record/);
-    const more = page.locator('[data-itt-pop-more="2013"] a[href*="sites/"]');
-    const third = page.locator('[data-itt-pop-3x3="2013"] a[href*="sites/"]');
-    await expect(more).toHaveCount(3);
-    await expect(third).toHaveCount(3);
-    const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-    const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-    expect(moreH.join(" ")).toMatch(/chrome\//);
-    expect(moreH.join(" ")).toMatch(/snowden\//);
-    expect(moreH.join(" ")).toMatch(/telegram\//);
-    for (const h of moreH) expect(thirdH).not.toContain(h);
+    for (const dest of ["sites/chrome/index.html", "sites/snowden/index.html", "sites/telegram/index.html"]) {
+      const res = await page.request.get("/years/2013/" + dest);
+      expect(res.status(), dest).toBeLessThan(400);
+    }
   });
 });

@@ -12,9 +12,12 @@ const { enterYear, goImmersion, contentFrame, killOverlays } = require("./helper
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) {
+const WIPED_YEARS = new Set(["2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+for (let y = 1994; y <= 2019; y++) {
   if (y === 2006 || y === 2007 || y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
-  YEARS.push(String(y));
+  const s = String(y);
+  if (WIPED_YEARS.has(s)) continue;
+  YEARS.push(s);
 }
 
 function yearOnDisk(year) {
@@ -120,8 +123,8 @@ async function completeMinute(frame, page) {
   await frame.locator("[data-mx-finish]").click({ force: true });
 }
 
-test.describe("H13 lean cabinets 2015–2018 — game-2…5 minute machines", () => {
-  for (const year of ["2015", "2016", "2017", "2018"]) {
+test.describe("H13 lean cabinets 2016–2017 — game-2…5 minute machines", () => {
+  for (const year of ["2016", "2017"]) {
     for (const file of /** @type {const} */ ([
       "game-2.html",
       "game-3.html",

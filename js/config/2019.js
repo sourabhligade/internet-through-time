@@ -8,6 +8,10 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/game-2.html",
+    "sites/playable/game-3.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-5.html",
     "sites/alloend/index.html",
     "sites/apex/index.html",
     "sites/applecard/index.html",

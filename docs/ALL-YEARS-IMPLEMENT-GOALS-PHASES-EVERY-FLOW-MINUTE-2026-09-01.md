@@ -2,8 +2,8 @@
 
 **Date:** 2026-09-01  
 **Status:** **walk this to implement or recheck.** Disk + `scripts/itt_gate.py` win when older MD disagrees.  
-**Hub now:** **24 years open** · 1994–2006 + 2008 + 2010 + 2012–2019 + **2021**.  
-**Wiped:** 2007 · 2009 · 2011 · 2020 · 2022–2025. Do **not** invent dests for wiped years. Rebuild only if named.
+**Hub now:** **25 years open** · **1994–2017, 2019**.  
+**Wiped:** 2018 · 2020–2025. Do **not** invent dests for wiped years. Rebuild only if named.
 
 This file is the **cross-year implement map**. Year-true leftover dest lists stay in that year’s leftover / from-scratch harvest. Stars, guided 6, official 10, and gold minutes here are copied from live `start-data.js` + `flow-trails.js` + one-thing e2e + READ-FIRST.
 
@@ -505,7 +505,7 @@ Shared leftover minute (every leftover dest):
 
 ---
 
-## 2015 · live lean · Chrome habit starts · `itt15`
+## 2015 · **LIVE lean door** · Periscope Go LIVE · `itt15`
 
 **Thesis:** The phone goes live. Title then Go LIVE. Win10 is a product room, not January chrome.  
 **Shell:** Win7 residual + Chrome habit. Edge is Spartan, not Chromium.  
@@ -554,7 +554,7 @@ Shared leftover minute (every leftover dest):
 
 ---
 
-## 2018 · live lean · `itt18`
+## 2018 · **WIPED** · GDPR Manage later · `itt18`
 
 **Thesis:** The banner is the door. Accept All never writes. Manage → Save does.  
 **Star:** GDPR Manage · `sites/gdpr/index.html` · `itt18-gdpr`  
@@ -588,7 +588,7 @@ Shared leftover minute (every leftover dest):
 
 ---
 
-## 2021 · live lean + leftover 2× · `itt21`
+## 2021 · **WIPED** · ATT Ask later · `itt21`
 
 **Thesis:** The phone asks first. Ask App Not to Track is the save. Allow is the trap. No ChatGPT.  
 **Shell:** Win10 mass · Chrome habit. Win11 is 5 Oct leftover.  

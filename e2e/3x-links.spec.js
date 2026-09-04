@@ -1,7 +1,7 @@
 // @ts-check
 /**
- * 3× discoverable links — every playable year on disk (1994–2018).
- * Early years: lobby directory [data-itt-3x-links]. Lean 2010–2018: leftover pop3x row.
+ * 3× discoverable links — every playable year on disk.
+ * Early years: lobby directory [data-itt-3x-links]. Lean leftover years: leftover pop3x row.
  * Guided <ol> stays 6. Star chip stays.
  */
 const { test, expect } = require("@playwright/test");

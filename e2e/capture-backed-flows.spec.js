@@ -229,23 +229,4 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     await expect.poll(() => getKey(page, "itt16-fb-react")).toMatch(/love/i);
   });
 
-  test("2018 Not-secure still 2-check · 0-tick blocked · GDPR Accept All never writes", async ({ page }) => {
-    await page.goto("/years/2018/sites/chrome/not-secure.html");
-    await chipOk(page);
-    expect(await page.locator("[data-ns-req]").count()).toBe(2);
-    await clearKeys(page, ["itt18-not-secure", "itt18-gdpr"]);
-    await page.reload();
-    await page.locator("[data-ns-ack]").click();
-    expect(await getKey(page, "itt18-not-secure")).toBeFalsy();
-    await page.locator("[data-ns-req]").nth(0).check();
-    await page.locator("[data-ns-req]").nth(1).check();
-    await page.locator("[data-ns-ack]").click();
-    await expect.poll(() => getKey(page, "itt18-not-secure")).toBeTruthy();
-    await page.goto("/years/2018/sites/gdpr/index.html");
-    const accept = page.locator("[data-gdpr-accept], button:has-text('Accept All')").first();
-    if (await accept.count()) {
-      await accept.click();
-      expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
-    }
-  });
 });

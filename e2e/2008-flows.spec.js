@@ -6,7 +6,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, contentFrame, completeRealGate } = require('./helpers');
+const { enterYear, contentFrame, completeRealGate, leftoverOfficialDest } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -243,16 +243,10 @@ test.describe('Flow G — Firefox 3', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('Flow H — Hulu', () => {
-  test('public Mar 12 · play → itt08-hulu', async ({ page }) => {
-    await gotoReady(page, '/years/2008/sites/hulu/index.html', '[data-hulu-play]', ['itt08-hulu']);
-    await expect(page.locator('body')).toContainText(/Mar(?:ch)?\s*12|2008|ad/i);
-    await completeRealGate(page, '[data-hulu-play]');
-    await expect(page.locator('[data-hulu-status]')).toContainText(/Watching|itt08|theater/i, {
-      timeout: 8000,
-    });
-    await expect(page.locator('[data-hulu-history]')).toContainText(/Office|30 Rock|SNL/i);
-    const raw = await page.evaluate(() => localStorage.getItem('itt08-hulu'));
-    expect(raw || '').toMatch(/title|Office|SNL|Rock/i);
+  test('public Mar 12 · leftover dest-true never writes gold', async ({ page }) => {
+    await page.goto("/years/2008/sites/hulu/index.html");
+    await expect(page.locator("body")).toContainText(/Mar(?:ch)?\s*12|2008|ad/i);
+    await leftoverOfficialDest(page, "/years/2008/sites/hulu/index.html", "hulu-lx", "itt08-github");
   });
 
   test('YouTube contrast link', async ({ page }) => {
@@ -286,17 +280,13 @@ test.describe('Flow I — Netflix', () => {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('Flow J — Facebook Connect', () => {
-  test('Connect approve → itt08-fb-connect', async ({ page }) => {
-    await gotoReady(page, '/years/2008/sites/facebook/connect.html', '[data-fb-connect]', [
-      'itt08-fb-connect',
-    ]);
-    await completeRealGate(page, '[data-fb-connect]');
-    await expect(page.locator('[data-fb-connect-status]')).toContainText(
-      /Connected|Approved|itt08/i,
-      { timeout: 8000 }
+  test('Connect leftover dest-true never writes gold', async ({ page }) => {
+    await leftoverOfficialDest(
+      page,
+      "/years/2008/sites/facebook/connect.html",
+      "facebook-connect",
+      "itt08-github"
     );
-    const raw = await page.evaluate(() => localStorage.getItem('itt08-fb-connect'));
-    expect(raw || '').toMatch(/connected|real|multiStep/i);
   });
 
   test('about links Connect + Beacon residual', async ({ page }) => {

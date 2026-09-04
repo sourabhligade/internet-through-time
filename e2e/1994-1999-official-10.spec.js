@@ -61,7 +61,7 @@ const YEARS = [
     year: "1994",
     star: "itt94-csotd",
     gold: async (page) => {
-      await openClear(page, "/years/1994/sites/csotd/index.html", "itt94-csotd");
+      await openClear(page, "/years/1994/sites/csotd/index.html", "itt94-csotd-d3");
       await page.evaluate(() => { try { sessionStorage.removeItem("itt94-csotd-wandered"); } catch (e) { /* */ } });
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
       expect(await getKey(page, "itt94-csotd")).toBeFalsy();
@@ -74,15 +74,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt94-csotd"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/1994/sites/yahoo/index.html", "itt94-yahoo-wander"],
-      ["/years/1994/sites/cern/index.html", "itt94-cern"],
-      ["/years/1994/sites/fishcam/index.html", "itt94-fishcam"],
-      ["/years/1994/sites/whitehouse/index.html", "itt94-wh-map"],
-      ["/years/1994/sites/nasa/index.html", "itt94-nasa"],
-      ["/years/1994/sites/iuma/listen.html", "itt94-iuma"],
-      ["/years/1994/sites/hotwired/index.html", "itt94-hotwired"],
-      ["/years/1994/sites/lycos/index.html", "itt94-lycos"],
-      ["/years/1994/sites/playable/game.html", "itt94-game-hotlist"],
+      ["/years/1994/sites/yahoo/index.html", "itt94-yahoo-wander-lx"],
+      ["/years/1994/sites/cern/index.html", "itt94-cern-lx"],
+      ["/years/1994/sites/fishcam/index.html", "itt94-fishcam-lx"],
+      ["/years/1994/sites/whitehouse/index.html", "itt94-wh-map-lx"],
+      ["/years/1994/sites/nasa/index.html", "itt94-nasa-lx"],
+      ["/years/1994/sites/iuma/listen.html", "itt94-iuma-lx"],
+      ["/years/1994/sites/hotwired/index.html", "itt94-hotwired-lx"],
+      ["/years/1994/sites/lycos/index.html", "itt94-lycos-lx"],
+      ["/years/1994/sites/playable/game.html", "itt94-game-hotlist-lx"],
     ],
   },
   {
@@ -99,15 +99,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt95-ssl-checkout"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/1995/sites/amazon/index.html", "itt95-amazon"],
-      ["/years/1995/sites/auctionweb/item-laser.html", "itt95-aw-bid"],
-      ["/years/1995/sites/geocities/homestead.html", "itt95-homestead"],
-      ["/years/1995/sites/yahoo/index.html", "itt95-yahoo"],
-      ["/years/1995/sites/altavista/index.html", "itt95-av"],
-      ["/years/1995/sites/cnn/index.html", "itt95-cnn"],
-      ["/years/1995/sites/microsoft/index.html", "itt95-ms"],
-      ["/years/1995/sites/netscape/index.html", "itt95-ns-dl"],
-      ["/years/1995/sites/classmates/index.html", "itt95-classmates"],
+      ["/years/1995/sites/amazon/index.html", "itt95-amazon-lx"],
+      ["/years/1995/sites/auctionweb/item-laser.html", "itt95-aw-bid-lx"],
+      ["/years/1995/sites/geocities/homestead.html", "itt95-homestead-lx"],
+      ["/years/1995/sites/yahoo/index.html", "itt95-yahoo-lx"],
+      ["/years/1995/sites/altavista/index.html", "itt95-av-lx"],
+      ["/years/1995/sites/cnn/index.html", "itt95-cnn-lx"],
+      ["/years/1995/sites/microsoft/index.html", "itt95-ms-lx"],
+      ["/years/1995/sites/netscape/index.html", "itt95-ns-dl-lx"],
+      ["/years/1995/sites/classmates/index.html", "itt95-classmates-lx"],
     ],
   },
   {
@@ -123,15 +123,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt96-portal-wars"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/1996/sites/hotmail/index.html", "itt96-hotmail-user"],
-      ["/years/1996/sites/spacejam/index.html", "itt96-jam"],
-      ["/years/1996/sites/yahoo/my.html", "itt96-myyahoo"],
-      ["/years/1996/sites/geocities/index.html", "itt96-geocities"],
-      ["/years/1996/sites/amazon/index.html", "itt96-amazon"],
-      ["/years/1996/sites/auctionweb/index.html", "itt96-auctionweb"],
-      ["/years/1996/sites/excite/index.html", "itt96-excite"],
-      ["/years/1996/sites/altavista/index.html", "itt96-av"],
-      ["/years/1996/sites/playable/game.html", "itt96-game-planets"],
+      ["/years/1996/sites/hotmail/index.html", "itt96-hotmail-user-lx"],
+      ["/years/1996/sites/spacejam/index.html", "itt96-jam-lx"],
+      ["/years/1996/sites/yahoo/my.html", "itt96-myyahoo-lx"],
+      ["/years/1996/sites/geocities/index.html", "itt96-geocities-lx"],
+      ["/years/1996/sites/amazon/index.html", "itt96-amazon-lx"],
+      ["/years/1996/sites/auctionweb/index.html", "itt96-auctionweb-lx"],
+      ["/years/1996/sites/excite/index.html", "itt96-excite-lx"],
+      ["/years/1996/sites/altavista/index.html", "itt96-av-lx"],
+      ["/years/1996/sites/playable/game.html", "itt96-game-planets-lx"],
     ],
   },
   {
@@ -147,15 +147,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt97-pointcast"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/1997/sites/icq/index.html", "itt97-icq-buddy"],
-      ["/years/1997/sites/ebay/item-laptop.html", "itt97-ebay"],
-      ["/years/1997/sites/hotmail/index.html", "itt97-hotmail"],
-      ["/years/1997/sites/slashdot/story.html", "itt97-sd-comments-ie4"],
-      ["/years/1997/sites/drudge/index.html", "itt97-drudge"],
-      ["/years/1997/sites/hotbot/index.html", "itt97-hotbot"],
-      ["/years/1997/sites/aim/index.html", "itt97-aim-seed"],
-      ["/years/1997/sites/apple/think-different.html", "itt97-td"],
-      ["/years/1997/sites/microsoft/index.html", "itt97-ms"],
+      ["/years/1997/sites/icq/index.html", "itt97-icq-buddy-lx"],
+      ["/years/1997/sites/ebay/item-laptop.html", "itt97-ebay-lx"],
+      ["/years/1997/sites/hotmail/index.html", "itt97-hotmail-lx"],
+      ["/years/1997/sites/slashdot/story.html", "itt97-sd-comments-ie4-lx"],
+      ["/years/1997/sites/drudge/index.html", "itt97-drudge-lx"],
+      ["/years/1997/sites/hotbot/index.html", "itt97-hotbot-lx"],
+      ["/years/1997/sites/aim/index.html", "itt97-aim-seed-lx"],
+      ["/years/1997/sites/apple/think-different.html", "itt97-td-lx"],
+      ["/years/1997/sites/microsoft/index.html", "itt97-ms-lx"],
     ],
   },
   {
@@ -172,22 +172,22 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt98-lucky"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/1998/sites/google/index.html", "itt98-google"],
-      ["/years/1998/sites/yahoo/index.html", "itt98-yahoo"],
-      ["/years/1998/sites/amazon/music.html", "itt98-amazon-music"],
-      ["/years/1998/sites/ebay/index.html", "itt98-ebay"],
-      ["/years/1998/sites/cdnow/index.html", "itt98-cdnow"],
-      ["/years/1998/sites/hotmail/index.html", "itt98-hotmail"],
-      ["/years/1998/sites/mozilla/index.html", "itt98-mozilla"],
-      ["/years/1998/sites/slashdot/index.html", "itt98-slashdot"],
-      ["/years/1998/sites/dmoz/index.html", "itt98-dmoz"],
+      ["/years/1998/sites/google/index.html", "itt98-google-lx"],
+      ["/years/1998/sites/yahoo/index.html", "itt98-yahoo-lx"],
+      ["/years/1998/sites/amazon/music.html", "itt98-amazon-music-lx"],
+      ["/years/1998/sites/ebay/index.html", "itt98-ebay-lx"],
+      ["/years/1998/sites/cdnow/index.html", "itt98-cdnow-lx"],
+      ["/years/1998/sites/hotmail/index.html", "itt98-hotmail-lx"],
+      ["/years/1998/sites/mozilla/index.html", "itt98-mozilla-lx"],
+      ["/years/1998/sites/slashdot/index.html", "itt98-slashdot-lx"],
+      ["/years/1998/sites/dmoz/index.html", "itt98-dmoz-lx"],
     ],
   },
   {
     year: "1999",
     star: "itt99-aim",
     gold: async (page) => {
-      await openClear(page, "/years/1999/sites/aim/index.html", "itt99-aim");
+      await openClear(page, "/years/1999/sites/aim/index.html", "itt99-aim-d3");
       await page.evaluate(() => localStorage.removeItem("itt99-aim-user"));
       await page.reload();
       await page.locator("form[data-aim-signon] button[type='submit']").click();
@@ -197,15 +197,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt99-aim"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/1999/sites/napster/search.html", "itt99-napster"],
-      ["/years/1999/sites/google/index.html", "itt99-google"],
-      ["/years/1999/sites/blogger/edit.html", "itt99-blogger"],
-      ["/years/1999/sites/y2k/index.html", "itt99-y2k"],
-      ["/years/1999/sites/sourceforge/index.html", "itt99-sf"],
-      ["/years/1999/sites/paypal/send.html", "itt99-paypal"],
-      ["/years/1999/sites/amazon/index.html", "itt99-amazon"],
-      ["/years/1999/sites/ebay/item-laptop.html", "itt99-ebay"],
-      ["/years/1999/sites/askjeeves/index.html", "itt99-jeeves"],
+      ["/years/1999/sites/napster/search.html", "itt99-napster-lx"],
+      ["/years/1999/sites/google/index.html", "itt99-google-lx"],
+      ["/years/1999/sites/blogger/edit.html", "itt99-blogger-lx"],
+      ["/years/1999/sites/y2k/index.html", "itt99-y2k-lx"],
+      ["/years/1999/sites/sourceforge/index.html", "itt99-sf-lx"],
+      ["/years/1999/sites/paypal/send.html", "itt99-paypal-lx"],
+      ["/years/1999/sites/amazon/index.html", "itt99-amazon-lx"],
+      ["/years/1999/sites/ebay/item-laptop.html", "itt99-ebay-lx"],
+      ["/years/1999/sites/askjeeves/index.html", "itt99-jeeves-lx"],
     ],
   },
 ];

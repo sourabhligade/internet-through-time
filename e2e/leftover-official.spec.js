@@ -121,6 +121,36 @@ test.describe("leftover official · disk + trail", () => {
     expect(fs.existsSync(path.join(ROOT, "js/immersion/leftover-official.js"))).toBe(true);
   });
 
+  test("leftover keys on official dests never equal whenKey suffix", () => {
+    const trails = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
+    const hits = [];
+    const yearBlocks = [...trails.matchAll(/"(\d{4})":\s*\[/g)];
+    for (const ym of yearBlocks) {
+      const year = ym[1];
+      if (!fs.existsSync(path.join(ROOT, "years", year, "index.html"))) continue;
+      const start = ym.index + ym[0].length;
+      let depth = 1;
+      let j = start;
+      while (j < trails.length && depth) {
+        if (trails[j] === "[") depth += 1;
+        else if (trails[j] === "]") depth -= 1;
+        j += 1;
+      }
+      const block = trails.slice(start, j - 1);
+      const stops = [...block.matchAll(/"n":\s*(\d+)[\s\S]*?"href":\s*"([^"]*)"[\s\S]*?"whenKey":\s*"([^"]*)"/g)];
+      for (const sm of stops) {
+        if (parseInt(sm[1], 10) > 10) continue;
+        const dest = path.join(ROOT, "years", year, sm[2]);
+        if (!fs.existsSync(dest)) continue;
+        const html = fs.readFileSync(dest, "utf8");
+        const suf = String(sm[3]).replace(/^itt\d{2}-/, "");
+        const re = new RegExp('data-lo-key="' + suf.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + '"');
+        if (re.test(html)) hits.push(year + " " + sm[2] + " " + sm[3]);
+      }
+    }
+    expect(hits, "leftover key = official whenKey suffix").toEqual([]);
+  });
+
   test("every live official-10 dest has a named whenKey", () => {
     const trails = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
     const years = trails.match(/"(\d{4})":\s*\[([\s\S]*?)\]/g) || [];
@@ -130,16 +160,17 @@ test.describe("leftover official · disk + trail", () => {
       const ym = block.match(/"(\d{4})"/);
       const year = ym ? ym[1] : "";
       if (!year) continue;
+      if (!fs.existsSync(path.join(ROOT, "years", year, "index.html"))) continue;
       const keys = block.match(/"whenKey":\s*"([^"]*)"/g) || [];
       live += keys.length;
       empty += keys.filter((k) => /"whenKey":\s*""/.test(k)).length;
     }
-    expect(live, "live trail dests").toBeGreaterThanOrEqual(26 * 10);
+    expect(live, "live trail dests").toBeGreaterThanOrEqual(25 * 10);
     expect(empty, "empty live whenKeys").toBe(0);
   });
 
   test("every matrix dest file has leftover panel + dest exists", () => {
-    expect(DESTS.length).toBeGreaterThanOrEqual(4776);
+    expect(DESTS.length).toBeGreaterThanOrEqual(9500);
     for (const d of DESTS) {
       const file = path.join(ROOT, "years", d.year, d.href);
       expect(fs.existsSync(file), file).toBe(true);
@@ -184,17 +215,59 @@ test.describe("leftover official · disk + trail", () => {
     expect(missing, "disk leftover dests missing from matrix").toEqual([]);
   });
 
-  test("leftover-120 years have a 2× row for every leftover dest key", () => {
-    const lean = new Set(["2007", "2009", "2011", "2020", "2021", "2022", "2023", "2024"]);
+  test("every live year has a 2× row for every leftover dest key", () => {
     const gold = new Set([
+      "itt94-csotd",
+      "itt95-ssl-checkout",
+      "itt96-portal-wars",
+      "itt97-pointcast",
+      "itt98-lucky",
+      "itt99-aim",
+      "itt00-mapquest",
+      "itt01-wiki",
+      "itt02-stumble",
+      "itt03-photobucket",
+      "itt04-thefacebook-networks",
+      "itt05-yt-uploads",
+      "itt06-tweets",
       "itt07-iphone",
+      "itt08-github",
       "itt09-like",
+      "itt10-ig",
       "itt11-gplus",
-      "itt20-zoom",
-      "itt21-att",
-      "itt22-chatgpt",
-      "itt23-plus",
-      "itt24-gpt4o",
+      "itt12-ig-android",
+      "itt13-vine-posts",
+      "itt14-wa-install",
+      "itt15-periscope",
+      "itt16-ig-stories",
+      "itt17-faceid",
+      "itt18-gdpr",
+      "itt19-disneyplus",
+    ]);
+    const wiped = new Set(["2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+    const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
+    const byYear = {};
+    for (const row of x2) {
+      (byYear[row.year] || (byYear[row.year] = new Set())).add(row.key);
+    }
+    const missing = [];
+    for (const d of DESTS) {
+      if (wiped.has(d.year) || gold.has(d.key)) continue;
+      if (!byYear[d.year] || !byYear[d.year].has(d.key)) {
+        missing.push(d.year + " " + d.key + " " + d.href);
+      }
+    }
+    expect(missing, "live leftover dests missing from 2× matrix").toEqual([]);
+  });
+
+  test("2010–2014 leftover dests have a 2× row for every leftover dest key", () => {
+    const years = new Set(["2010", "2011", "2012", "2013", "2014"]);
+    const gold = new Set([
+      "itt10-ig",
+      "itt11-gplus",
+      "itt12-ig-android",
+      "itt13-vine-posts",
+      "itt14-wa-install",
     ]);
     const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
     const byYear = {};
@@ -203,12 +276,12 @@ test.describe("leftover official · disk + trail", () => {
     }
     const missing = [];
     for (const d of DESTS) {
-      if (!lean.has(d.year) || gold.has(d.key)) continue;
+      if (!years.has(d.year) || gold.has(d.key)) continue;
       if (!byYear[d.year] || !byYear[d.year].has(d.key)) {
         missing.push(d.year + " " + d.key + " " + d.href);
       }
     }
-    expect(missing, "leftover-120 dests missing from 2× matrix").toEqual([]);
+    expect(missing, "2010–2014 leftover dests missing from 2× matrix").toEqual([]);
   });
 });
 

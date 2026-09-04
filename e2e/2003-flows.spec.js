@@ -39,10 +39,8 @@ test.describe('2003 flows', () => {
   });
 
   test('guided is exactly 6', async ({ page }) => {
-    await enterYear(page, '2003');
-    await waitForImmersion(page, '2003');
-    const n = await contentFrame(page).locator('#ott-guided-2003 li, ol[data-itt-guided] li, [data-itt-start] ol li').count();
-    expect(n === 0 || n === 6).toBeTruthy();
+    await page.goto("/years/2003/pages/home.html");
+    await expect(page.locator("#ott-guided-2003 ol > li")).toHaveCount(6);
   });
 
   test('Store empty buy never writes', async ({ page }) => {

@@ -650,56 +650,6 @@
     "next": ""
   },
   {
-    "year": "2015",
-    "id": "F1",
-    "key": "itt15-googlephotos",
-    "suffix": "googlephotos",
-    "path": "/years/2015/sites/googlephotos/index.html",
-    "kind": "star",
-    "field": null,
-    "next": "../windows10/index.html"
-  },
-  {
-    "year": "2015",
-    "id": "F2",
-    "key": "itt15-win10",
-    "suffix": "win10",
-    "path": "/years/2015/sites/windows10/index.html",
-    "kind": "star",
-    "field": null,
-    "next": "../applemusic/index.html"
-  },
-  {
-    "year": "2015",
-    "id": "F3",
-    "key": "itt15-applemusic",
-    "suffix": "applemusic",
-    "path": "/years/2015/sites/applemusic/index.html",
-    "kind": "star",
-    "field": null,
-    "next": "../edge/index.html"
-  },
-  {
-    "year": "2015",
-    "id": "F4",
-    "key": "itt15-watch",
-    "suffix": "watch",
-    "path": "/years/2015/sites/apple/watch.html",
-    "kind": "star",
-    "field": null,
-    "next": "../snapchat/discover.html"
-  },
-  {
-    "year": "2015",
-    "id": "F5",
-    "key": "itt15-periscope",
-    "suffix": "periscope",
-    "path": "/years/2015/sites/periscope/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
     "year": "2016",
     "id": "F1",
     "key": "itt16-tweets",
@@ -795,56 +745,6 @@
     "key": "itt17-fortnite",
     "suffix": "fortnite",
     "path": "/years/2017/sites/fortnite/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2018",
-    "id": "F1",
-    "key": "itt18-pop-reddit",
-    "suffix": "reddit",
-    "path": "/years/2018/sites/reddit/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2018",
-    "id": "F2",
-    "key": "itt18-pop-youtube",
-    "suffix": "youtube",
-    "path": "/years/2018/sites/youtube/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2018",
-    "id": "F3",
-    "key": "itt18-pop-wikipedia",
-    "suffix": "wikipedia",
-    "path": "/years/2018/sites/wikipedia/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2018",
-    "id": "F4",
-    "key": "itt18-gdpr",
-    "suffix": "gdpr",
-    "path": "/years/2018/sites/gdpr/index.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2018",
-    "id": "F5",
-    "key": "itt18-tiktok-fyp",
-    "suffix": "tiktok",
-    "path": "/years/2018/sites/tiktok/fyp.html",
     "kind": "star",
     "field": null,
     "next": ""

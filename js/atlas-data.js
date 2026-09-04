@@ -1,34 +1,34 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2009 / 2011 / 2013–2024 lean doors live. 2025 boarded. Do not invent rooms.
+ * 2007 / 2009 / 2011 / 2013–2019 lean doors live. 2020–2025 boarded. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2025"],
+    gapYears: ["2018", "2020", "2021", "2022", "2023", "2024", "2025"],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles → Vine.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, GDPR, Disney+, Zoom Leave.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"] },
-      { id: "late-lean", label: "Ask · Send · Plus · Talk", blurb: "ATT Ask · ChatGPT Send · Plus Subscribe · GPT-4o Talk.", years: ["2021", "2022", "2023", "2024"] },
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, Face ID, Disney+ Continue.", years: ["2014", "2016", "2017", "2019"] },
+      { id: "late-lean", label: "Boarded late years", blurb: "2020–2024 stay empty for rebuild.", years: ["2020", "2021", "2022", "2023", "2024"] },
       { id: "wiped-late", label: "Boarded years", blurb: "2025 stays empty for rebuild.", years: ["2025"] }
     ],
 
     leanYears: [
       "2007",
-      "2013", "2014", "2015", "2016", "2017",
-      "2018", "2019", "2021", "2022", "2020", "2011", "2009", "2023", "2024"
+      "2013", "2014", "2016", "2017",
+      "2019", "2011", "2009"
     ],
 
     notThisYear: {
@@ -438,52 +438,29 @@
         game: { label: "Continue Row", href: "years/2019/sites/playable/game.html" }
       },
       "2021": {
+        wiped: true,
         era: "Ask · ATT",
-        thesis: "Lean door. Allow never writes. Ask does.",
-        gold: { label: "ATT Ask", href: "years/2021/sites/att/index.html", key: "itt21-att" },
-        guided: [
-          { label: "Signal leftover", href: "years/2021/sites/signal/index.html" },
-          { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" }
-        ],
-        game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
+        thesis: "Boarded. ATT Ask will come back as a new lean door."
       },
       "2020": {
+        wiped: true,
         era: "Mute · chat · Leave",
-        thesis: "Leave is the save. Join never writes. 300 million is daily meeting participants, not users.",
-        gold: { label: "Zoom Leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
-        guided: [
-          { label: "Reels 15s leftover", href: "years/2020/sites/reels/index.html" },
-          { label: "GPT-3 waitlist leftover", href: "years/2020/sites/openai/index.html" }
-        ],
-        game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
+        thesis: "Boarded. Zoom mute → leave will come back as a new lean door."
       },
       "2022": {
-        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
-        leftover: [
-          { label: "Twitter leftover", href: "years/2022/sites/twitter/index.html" },
-          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" }
-        ],
-        game: { label: "Prompt Box", href: "years/2022/sites/playable/game.html" }
+        wiped: true,
+        era: "Send · ChatGPT",
+        thesis: "Boarded. ChatGPT Send will come back as a new lean door."
       },
       "2023": {
+        wiped: true,
         era: "Subscribe Plus · dest name X",
-        thesis: "Subscribe Plus is the save. Empty / GPT-4-as-already-here / Bing-as-Plus never write. Sora / 4o are 2024.",
-        gold: { label: "Plus Subscribe", href: "years/2023/sites/plus/index.html", key: "itt23-plus" },
-        guided: [
-          { label: "GPT-4 leftover", href: "years/2023/sites/gpt4/index.html" },
-          { label: "Bing Chat leftover", href: "years/2023/sites/bingchat/index.html" }
-        ],
-        game: { label: "Plus Queue", href: "years/2023/sites/playable/game.html" }
+        thesis: "Boarded. ChatGPT Plus will come back as a new lean door."
       },
       "2024": {
+        wiped: true,
         era: "GPT-4o Talk · Plus is residual",
-        thesis: "Talk is the save. Talk with no 4o pick never writes. Plus residual writes itt24-plus only.",
-        gold: { label: "GPT-4o Talk", href: "years/2024/sites/chatgpt/4o.html", key: "itt24-gpt4o" },
-        guided: [
-          { label: "Gemini leftover", href: "years/2024/sites/gemini/index.html" },
-          { label: "Sora preview leftover", href: "years/2024/sites/sora/index.html" }
-        ],
-        game: { label: "Omni Dash", href: "years/2024/sites/playable/game.html" }
+        thesis: "Boarded. GPT-4o Talk will come back as a new lean door."
       }},
 
     threads: [
@@ -540,7 +517,7 @@
         stops: [
           { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean leftover" },
           { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean leftover" },
-          { year: "2018", href: "years/2018/sites/youtube/index.html", note: "lean leftover" }
+          { year: "2017", href: "years/2017/sites/youtube/index.html", note: "lean leftover" }
         ]
       },
       {
@@ -653,7 +630,7 @@
         steps: [
           { year: "2015", label: "Periscope LIVE", href: "years/2015/sites/periscope/index.html" },
           { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" },
-          { year: "2018", label: "IGTV leftover", href: "years/2018/sites/instagram/igtv.html" }
+          { year: "2019", label: "TikTok For You leftover", href: "years/2019/sites/tiktok/index.html" }
         ]
       },
       {
@@ -669,7 +646,7 @@
       {
         id: "wiped-late",
         label: "Boarded years",
-        blurb: "2025 stays empty for rebuild.",
+        blurb: "2020–2025 stay empty for rebuild.",
         steps: []
       }
     ]

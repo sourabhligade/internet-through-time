@@ -99,32 +99,53 @@ function initGuestbook(root) {
 
   render();
 
+  function addFromForm() {
+    if (!form) return false;
+    var fd = new FormData(form);
+    var name = String(fd.get(nameF) || fd.get("name") || "").replace(/^\s+|\s+$/g, "");
+    var msg = String(
+      fd.get(msgF) || fd.get("m") || fd.get("msg") || fd.get("c") || ""
+    ).replace(/^\s+|\s+$/g, "");
+    var from = String(fd.get(fromF) || fd.get("from") || "");
+    var url = String(fd.get(urlF) || fd.get("u") || fd.get("url") || "");
+    if (!name && !msg) return false;
+    var entry2 = {
+      name: name || "Anonymous",
+      from: from,
+      msg: msg,
+      url: url,
+      date: new Date().toLocaleDateString()
+    };
+    entries.unshift(entry2);
+    if (entries.length > 40) entries = entries.slice(0, 40);
+    saveJSON(storage, entries);
+    form.reset();
+    if (notice) {
+      notice.style.display = "block";
+      notice.innerHTML = "Thanks, <b>" + escapeHtml(entry2.name) + "</b>! Your entry is saved.";
+    }
+    showFlash("Thanks, <b>" + escapeHtml(entry2.name) + "</b> — your guestbook entry was added.");
+    markTourUsed();
+    render();
+    return true;
+  }
+
   if (form) {
+    form.setAttribute("data-gb-client", "1");
     form.addEventListener("submit", function (ev) {
-      // client-side if data-gb-client or always prevent for SPA-like immersion pages
       if (form.getAttribute("data-gb-client") === "1" || form.getAttribute("data-gb-form") != null) {
-        ev.preventDefault();
-        var fd = new FormData(form);
-        var entry2 = {
-          name: (fd.get(nameF) || fd.get("name") || "Anonymous") + "",
-          from: (fd.get(fromF) || fd.get("from") || "") + "",
-          msg: (fd.get(msgF) || fd.get("m") || fd.get("msg") || fd.get("c") || "") + "",
-          url: (fd.get(urlF) || fd.get("u") || fd.get("url") || "") + "",
-          date: new Date().toLocaleDateString()
-        };
-        entries.unshift(entry2);
-        if (entries.length > 40) entries = entries.slice(0, 40);
-        saveJSON(storage, entries);
-        form.reset();
-        if (notice) {
-          notice.style.display = "block";
-          notice.innerHTML = "Thanks, <b>" + escapeHtml(entry2.name) + "</b>! Your entry is saved.";
-        }
-        showFlash("Thanks, <b>" + escapeHtml(entry2.name) + "</b> — your guestbook entry was added.");
-        markTourUsed();
-        render();
+        if (ev && ev.preventDefault) ev.preventDefault();
+        addFromForm();
       }
     });
+    var submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
+    if (submitBtn && submitBtn.getAttribute("data-gb-bound") !== "1") {
+      submitBtn.setAttribute("data-gb-bound", "1");
+      submitBtn.addEventListener("click", function (ev) {
+        if (ev && ev.preventDefault) ev.preventDefault();
+        addFromForm();
+      });
+    }
   }
 }
 

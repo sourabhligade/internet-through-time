@@ -26,15 +26,6 @@ const YEARS = [
       { id: "amazon", next: /home\.html/ },
     ],
   },
-  {
-    year: "2018",
-    prefix: "itt18",
-    rooms: [
-      { id: "reddit", next: /youtube/ },
-      { id: "youtube", next: /wikipedia/ },
-      { id: "wikipedia", next: /home\.html/ },
-    ],
-  },
 ];
 
 async function getKey(page, key) {

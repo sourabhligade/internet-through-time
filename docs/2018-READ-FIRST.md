@@ -1,7 +1,8 @@
 # 2018 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-08-18  
-**Disk truth:** Hub is **1994–2018**. `years/2018/` is the **lean from-scratch rebuild** (GDPR Manage star).  
+**Date:** 2026-09-04  
+**Status:** **WIPED.** Hub card locked. No `years/2018/`. Do not `git checkout` an old 2018 forest. Rebuild only when named.  
+**Disk truth:** Hub is **25 years open** · **2018 / 2020–2025 wiped**. This file is the wipe stamp, not a live door.  
 **Prefix:** `itt18`  
 **Clone shape from:** live `years/2017/` (lean door · Face ID star). **Do not** restore git `HEAD` / `52df8ae3` `years/2018/` (108-page forest) or the 48-HTML leftover lean tree.
 

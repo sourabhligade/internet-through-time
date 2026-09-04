@@ -1,7 +1,7 @@
 # 2022 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-09-01  
-**Status:** **live lean door + leftover 2×.** `years/2022/` is on disk. Hub card **available**. `_WIPED` does **not** include **2022**. Star is ChatGPT Send.  
+**Date:** 2026-09-04  
+**Status:** **WIPED.** Hub card locked. No `years/2022/`. Do not `git checkout` an old 2022 forest. Rebuild only when named. `_WIPED` includes **2022**. This file is the wipe stamp, not a live door.  
 **All-years implement walk:** [`ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md`](ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md)  
 **Criteria (always / tick a row):** [`2022-2X-CRITERIA-MAP-2026-09-01.md`](2022-2X-CRITERIA-MAP-2026-09-01.md)  
 **2× leftover harvest:** [`2022-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2022-2X-LEFTOVER-RESEARCH-2026-09-01.md)  

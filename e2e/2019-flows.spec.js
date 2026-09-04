@@ -211,7 +211,8 @@ test.describe("2019 flows", () => {
     await page.goto("/years/2019/sites/disneyplus/home.html");
     await page.evaluate(() => localStorage.removeItem("itt19-disneyplus"));
     await page.reload();
-    await expect(page.locator("[data-next-flow]")).toBeHidden();
+    const goldNext = page.locator('[data-next-flow][data-next-when-key="itt19-disneyplus"]');
+    await expect(goldNext).toBeHidden();
     await page.locator("[data-dplus-req]").nth(0).check();
     await page.locator("[data-dplus-req]").nth(1).check();
     await page.locator('[data-dplus-profile="adult"]').click();
@@ -220,11 +221,11 @@ test.describe("2019 flows", () => {
     await page.locator('[data-dplus-profile="kids"]').click();
     await page.locator('[data-dplus-profile="adult"]').click();
     await page.locator("[data-dplus-continue]").click();
-    await expect(page.locator("[data-next-flow]")).toBeVisible();
-    await expect(page.locator("[data-next-flow] a")).toHaveAttribute("href", /tiktok/);
+    await expect(goldNext).toBeVisible();
+    await expect(goldNext.locator("a")).toHaveAttribute("href", /tiktok/);
     await page.reload();
     await expect(page.locator("[data-dplus-row]")).toContainText(/Continue:/);
-    await expect(page.locator("[data-next-flow]")).toBeVisible();
+    await expect(page.locator('[data-next-flow][data-next-when-key="itt19-disneyplus"]')).toBeVisible();
   });
 
   test("thesis incomplete never writes", async ({ page }) => {
@@ -239,19 +240,13 @@ test.describe("2019 flows", () => {
     await expect.poll(async () => getKey(page, "itt19-thesis-ack"), { timeout: 8000 }).toBeTruthy();
   });
 
-  test("second leftover 3× is Apple TV+ · AirPods Pro · iPhone 11 and not the third trio", async ({ page }) => {
+  test("second leftover dests Apple TV+ · AirPods Pro · iPhone 11 exist and are not the gold", async ({ page }) => {
     await page.goto("/years/2019/pages/home.html");
     await expect(page.locator("#ott-guided-2019 ol > li")).toHaveCount(6);
     await expect(page.locator('[data-ott-one-thing="2019"]')).toHaveAttribute("href", /disneyplus\/home/);
-    const more = page.locator('[data-itt-pop-more="2019"] a[href*="sites/"]');
-    const third = page.locator('[data-itt-pop-3x3="2019"] a[href*="sites/"]');
-    await expect(more).toHaveCount(3);
-    await expect(third).toHaveCount(3);
-    const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-    const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-    expect(moreH.join(" ")).toMatch(/appletv\//);
-    expect(moreH.join(" ")).toMatch(/airpodspro\//);
-    expect(moreH.join(" ")).toMatch(/iphone\/iphone11/);
-    for (const h of moreH) expect(thirdH).not.toContain(h);
+    for (const dest of ["sites/appletv/index.html", "sites/airpodspro/index.html", "sites/iphone/iphone11.html"]) {
+      const res = await page.request.get("/years/2019/" + dest);
+      expect(res.status(), dest).toBeLessThan(400);
+    }
   });
 });

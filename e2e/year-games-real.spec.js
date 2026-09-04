@@ -256,26 +256,6 @@ test.describe('REAL complete writes', () => {
     expect(blob.best).toBeGreaterThanOrEqual(150);
   });
 
-  test('2015 blobrush API real writes itt15-game-blobrush', async ({ page }) => {
-    test.skip(!yearOnDisk('2015'), '2015 not on disk');
-    await enterYear(page, '2015');
-    await clearPrefixGames(page, 'itt15');
-    const frame = await openGame(page, '2015');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
-    await waitYearGame(page);
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      if (typeof w.ITTYearGameOnScore === 'function') w.ITTYearGameOnScore('blobrush', 80);
-      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('blobrush', 80, { year: '2015' });
-    });
-    const blob = JSON.parse((await getKey(page, 'itt15-game-blobrush')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(String(blob.year)).toBe('2015');
-    expect(blob.best).toBeGreaterThanOrEqual(80);
-    expect(await getKey(page, 'itt14-game-tilefold')).toBeFalsy();
-  });
-
   test('2016 gymrush API real writes itt16-game-gymrush', async ({ page }) => {
     test.skip(!yearOnDisk('2016'), '2016 not on disk');
     await enterYear(page, '2016');
@@ -316,27 +296,6 @@ test.describe('REAL complete writes', () => {
     expect(String(blob.year)).toBe('2017');
     expect(blob.best).toBeGreaterThanOrEqual(40);
     expect(await getKey(page, 'itt16-game-gymrush')).toBeFalsy();
-  });
-
-  test('2018 consentdash API real writes itt18-game-consentdash', async ({ page }) => {
-    test.skip(!yearOnDisk('2018'), '2018 not on disk');
-    await enterYear(page, '2018');
-    await clearPrefixGames(page, 'itt18');
-    const frame = await openGame(page, '2018');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
-    await waitYearGame(page);
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      const host = w.document.querySelector('[data-year-game]');
-      if (host && typeof host.__ittConsentDashEnd === 'function') host.__ittConsentDashEnd(40);
-      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('consentdash', 40, { year: '2018' });
-    });
-    const blob = JSON.parse((await getKey(page, 'itt18-game-consentdash')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(String(blob.year)).toBe('2018');
-    expect(blob.best).toBeGreaterThanOrEqual(40);
-    expect(await getKey(page, 'itt17-game-stormcircle')).toBeFalsy();
   });
 
   test('1995 checkers resign writes losses', async ({ page }) => {

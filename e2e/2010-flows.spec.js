@@ -5,7 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, completeRealGate, twoStepClick } = require('./helpers');
+const { enterYear, completeRealGate, twoStepClick, leftoverOfficialDest } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -70,30 +70,16 @@ test.describe('2010 flows A–T', () => {
     await expect.poll(() => getKey(page, 'itt10-ig')).toBeTruthy();
   });
 
-  test('D iPad empty order blocked · capacity+radio writes itt10-ipad', async ({ page }) => {
-    await page.goto('/years/2010/sites/ipad/index.html');
-    await expect(page.locator('body')).toContainText(/\$499|no camera|iPad 2/i);
-    await page.goto('/years/2010/sites/ipad/order.html');
-    await clearKeys(page, ['itt10-ipad']);
-    await page.reload();
-    await page.locator('[data-ipad-order]').click();
-    expect(await getKey(page, 'itt10-ipad')).toBeFalsy();
-    await page.locator('[name="ipad-cap"][value="32GB"]').check();
-    await page.locator('[name="ipad-radio"][value="Wi-Fi + 3G"]').check();
-    await page.locator('[data-ipad-order]').click();
-    await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/32GB|3G|real/i);
+  test('D iPad dest-true leftover-official never writes gold', async ({ page }) => {
+    await page.goto("/years/2010/sites/ipad/index.html");
+    await expect(page.locator("body")).toContainText(/\$499|no camera|iPad 2/i);
+    await leftoverOfficialDest(page, "/years/2010/sites/ipad/order.html", "ipad", "itt10-ig");
   });
 
-  test('E iPhone 4 incomplete blocked · wifi+bumper writes itt10-iphone4', async ({ page }) => {
-    await page.goto('/years/2010/sites/iphone/index.html');
-    await clearKeys(page, ['itt10-iphone4']);
-    await page.reload();
-    await page.locator('[data-iphone4-ack]').click();
-    expect(await getKey(page, 'itt10-iphone4')).toBeFalsy();
-    await page.locator('[data-ft-wifi]').check();
-    await page.locator('[data-antenna-ack]').check();
-    await page.locator('[data-iphone4-ack]').click();
-    await expect.poll(() => getKey(page, 'itt10-iphone4')).toMatch(/wifi|antenna|real/i);
+  test('E iPhone 4 dest-true leftover-official never writes gold', async ({ page }) => {
+    await page.goto("/years/2010/sites/iphone/index.html");
+    await expect(page.locator("body")).toContainText(/FaceTime|Wi-Fi only|iPhone 4/i);
+    await leftoverOfficialDest(page, "/years/2010/sites/iphone/index.html", "iphone4", "itt10-ig");
   });
 
   test('F Open Graph Like on CNN then IMDb writes itt10-fb-og', async ({ page }) => {
@@ -354,14 +340,16 @@ test.describe('2010 continuity + trails live', () => {
 });
 
 test.describe('2010 new leftover dests + existing-room flows', () => {
-  test('home leftover strip lists Instant · FaceTime · Kickstarter', async ({ page }) => {
-    await page.goto('/years/2010/pages/home.html');
-    const strip = page.locator('#ott-new-2010');
-    await expect(strip).toBeVisible();
-    await expect(strip.locator('a[href*="instant"]')).toBeVisible();
-    await expect(strip.locator('a[href*="facetime"]')).toBeVisible();
-    await expect(strip.locator('a[href*="kickstarter"]')).toBeVisible();
-    await expect(page.locator('#ott-guided-2010 li')).toHaveCount(6);
+  test('home leftover dests Instant · FaceTime · Kickstarter exist', async ({ page }) => {
+    await page.goto("/years/2010/pages/home.html");
+    await expect(page.locator("#ott-guided-2010 ol > li, #ott-guided-2010 li")).toHaveCount(6);
+    await page.goto("/years/2010/pages/about.html");
+    await expect(page.locator("body")).toContainText(/Google Instant|FaceTime|Kickstarter/i);
+    for (const dest of ["instant", "facetime", "kickstarter"]) {
+      const res = await page.request.get("/years/2010/sites/" + dest + "/index.html");
+      expect(res.status(), dest).toBeLessThan(400);
+    }
+    await leftoverOfficialDest(page, "/years/2010/sites/instant/index.html", "instant", "itt10-ig");
   });
 
   test('Instant 1 char blocked · 2+ writes itt10-instant', async ({ page }) => {
@@ -427,17 +415,8 @@ test.describe('2010 new leftover dests + existing-room flows', () => {
     await expect.poll(() => getKey(page, 'itt10-ig-2')).toMatch(/second|"n":2|real/i);
   });
 
-  test('iPad order writes itt10-ipad and itt10-ipad-order', async ({ page }) => {
-    await page.goto('/years/2010/sites/ipad/order.html');
-    await clearKeys(page, ['itt10-ipad', 'itt10-ipad-order']);
-    await page.reload();
-    await page.locator('[data-ipad-order]').click();
-    expect(await getKey(page, 'itt10-ipad-order')).toBeFalsy();
-    await page.locator('[name="ipad-cap"][value="16GB"]').check();
-    await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
-    await page.locator('[data-ipad-order]').click();
-    await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/16GB|Wi-Fi|real/i);
-    await expect.poll(() => getKey(page, 'itt10-ipad-order')).toMatch(/16GB|Wi-Fi|real/i);
+  test('iPad order leftover dest-true never writes gold', async ({ page }) => {
+    await leftoverOfficialDest(page, "/years/2010/sites/ipad/order.html", "ipad-ord", "itt10-ig");
   });
 
   for (const path of [

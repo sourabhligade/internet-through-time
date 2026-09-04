@@ -270,24 +270,6 @@
     "next": "/years/2014/sites/playable/game.html"
   },
   {
-    "year": "2015",
-    "slot": "c",
-    "id": "undertalm",
-    "key": "itt15-game-undertalm",
-    "engine": "cards",
-    "path": "/years/2015/sites/playable/more-c.html",
-    "next": "/years/2015/sites/playable/more-d.html"
-  },
-  {
-    "year": "2015",
-    "slot": "d",
-    "id": "splatink",
-    "key": "itt15-game-splatink",
-    "engine": "craft",
-    "path": "/years/2015/sites/playable/more-d.html",
-    "next": "/years/2015/sites/playable/game.html"
-  },
-  {
     "year": "2016",
     "slot": "c",
     "id": "owpayload",
@@ -324,24 +306,6 @@
     "next": "/years/2017/sites/playable/game.html"
   },
   {
-    "year": "2018",
-    "slot": "c",
-    "id": "celestecl",
-    "key": "itt18-game-celestecl",
-    "engine": "platform",
-    "path": "/years/2018/sites/playable/more-c.html",
-    "next": "/years/2018/sites/playable/more-d.html"
-  },
-  {
-    "year": "2018",
-    "slot": "d",
-    "id": "gowaxe",
-    "key": "itt18-game-gowaxe",
-    "engine": "corridor",
-    "path": "/years/2018/sites/playable/more-d.html",
-    "next": "/years/2018/sites/playable/game.html"
-  },
-  {
     "year": "2019",
     "slot": "c",
     "id": "sekirobar",
@@ -358,95 +322,5 @@
     "engine": "platform",
     "path": "/years/2019/sites/playable/more-d.html",
     "next": "/years/2019/sites/playable/game.html"
-  },
-  {
-    "year": "2020",
-    "slot": "c",
-    "id": "acnhplot",
-    "key": "itt20-game-acnhplot",
-    "engine": "craft",
-    "path": "/years/2020/sites/playable/more-c.html",
-    "next": "/years/2020/sites/playable/more-d.html"
-  },
-  {
-    "year": "2020",
-    "slot": "d",
-    "id": "fallguysc",
-    "key": "itt20-game-fallguysc",
-    "engine": "platform",
-    "path": "/years/2020/sites/playable/more-d.html",
-    "next": "/years/2020/sites/playable/game.html"
-  },
-  {
-    "year": "2021",
-    "slot": "c",
-    "id": "ittakest",
-    "key": "itt21-game-ittakest",
-    "engine": "platform",
-    "path": "/years/2021/sites/playable/more-c.html",
-    "next": "/years/2021/sites/playable/more-d.html"
-  },
-  {
-    "year": "2021",
-    "slot": "d",
-    "id": "metroiddr",
-    "key": "itt21-game-metroiddr",
-    "engine": "corridor",
-    "path": "/years/2021/sites/playable/more-d.html",
-    "next": "/years/2021/sites/playable/game.html"
-  },
-  {
-    "year": "2022",
-    "slot": "c",
-    "id": "eldengrc",
-    "key": "itt22-game-eldengrc",
-    "engine": "corridor",
-    "path": "/years/2022/sites/playable/more-c.html",
-    "next": "/years/2022/sites/playable/more-d.html"
-  },
-  {
-    "year": "2022",
-    "slot": "d",
-    "id": "straycat",
-    "key": "itt22-game-straycat",
-    "engine": "platform",
-    "path": "/years/2022/sites/playable/more-d.html",
-    "next": "/years/2022/sites/playable/game.html"
-  },
-  {
-    "year": "2023",
-    "slot": "c",
-    "id": "bg3dice",
-    "key": "itt23-game-bg3dice",
-    "engine": "cards",
-    "path": "/years/2023/sites/playable/more-c.html",
-    "next": "/years/2023/sites/playable/more-d.html"
-  },
-  {
-    "year": "2023",
-    "slot": "d",
-    "id": "totkisland",
-    "key": "itt23-game-totkisland",
-    "engine": "platform",
-    "path": "/years/2023/sites/playable/more-d.html",
-    "next": "/years/2023/sites/playable/game.html"
-  },
-  {
-    "year": "2024",
-    "slot": "c",
-    "id": "balatrojk",
-    "key": "itt24-game-balatrojk",
-    "engine": "cards",
-    "path": "/years/2024/sites/playable/more-c.html",
-    "next": "/years/2024/sites/playable/more-d.html"
-  },
-  {
-    "year": "2024",
-    "slot": "d",
-    "id": "helldive",
-    "key": "itt24-game-helldive",
-    "engine": "rhythm",
-    "path": "/years/2024/sites/playable/more-d.html",
-    "next": "/years/2024/sites/playable/game.html"
   }
 ]

@@ -319,18 +319,6 @@ const THINGS = [
     },
   },
   {
-    year: "2018",
-    path: "/years/2018/sites/gdpr/index.html",
-    key: "itt18-gdpr",
-    incomplete: async (page) => {
-      await page.locator("[data-gdpr-accept-all]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-gdpr-manage]").click();
-      await page.locator("[data-gdpr-save]").click();
-    },
-  },
-  {
     year: "2019",
     path: "/years/2019/sites/disneyplus/home.html",
     key: "itt19-disneyplus",
@@ -357,21 +345,6 @@ const THINGS = [
     },
     complete: async (page) => {
       await page.locator("[data-official-need]").fill("apple.com");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
-    },
-  },
-  {
-    year: "2021",
-    path: "/years/2021/sites/att/index.html",
-    key: "itt21-att",
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").click();
-    },
-    complete: async (page) => {
-      await page.locator('[data-att-hop="privacy"]').click();
-      await page.locator('[data-att-hop="tracking"]').click();
       await page.locator("[data-official-req]").nth(0).check();
       await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-official-verb]").click();
@@ -420,20 +393,6 @@ const THINGS = [
       await page.locator("[data-zoom-chat]").fill("can you hear me");
       await page.locator("[data-zoom-send]").click();
       await page.locator("[data-zoom-leave]").click();
-    },
-  },
-  {
-    year: "2022",
-    path: "/years/2022/sites/chatgpt/index.html",
-    key: "itt22-chatgpt",
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-official-need]").fill("leftover prompt");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
     },
   },
 ];

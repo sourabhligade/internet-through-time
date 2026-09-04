@@ -1,7 +1,7 @@
 # 2021 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-09-01  
-**Status:** **live lean door + leftover 2×.** `years/2021/` is **on disk**. Hub card **available**. Star is ATT Ask. Guided stays 6. Leftover 2× is 120 writers.  
+**Date:** 2026-09-04  
+**Status:** **WIPED.** Hub card locked. No `years/2021/`. Do not `git checkout` an old 2021 forest. Rebuild only when named. This file is the wipe stamp, not a live door.  
 **All-years implement walk:** [`ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md`](ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md)  
 **Criteria (always / tick a row):** [`2021-2X-CRITERIA-MAP-2026-09-01.md`](2021-2X-CRITERIA-MAP-2026-09-01.md)  
 **2× leftover harvest (walk this for leftover dests):** [`2021-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2021-2X-LEFTOVER-RESEARCH-2026-09-01.md)  

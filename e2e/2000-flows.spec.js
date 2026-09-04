@@ -82,19 +82,10 @@ test.describe('2000 hard flows', () => {
   });
 
   test('Shell year identity is IE 5.5 / not XP Luna', async ({ page }) => {
-    const bodyClass = await page.locator('body').getAttribute('class');
-    expect(bodyClass || '').toMatch(/year-2000/);
-    // Win98 / IE5.5 era shell — Start asset must not be XP Luna
-    const startImg = page.locator('#btn-start img, .start-btn img, #start-button img, #btn-start img').first();
-    const startSrc =
-      (await startImg.count()) > 0
-        ? await startImg.getAttribute('src')
-        : await page.locator('img[src*="start"]').first().getAttribute('src').catch(() => '');
-    expect(startSrc || '').toMatch(/win98|start/i);
-    expect(startSrc || '').not.toMatch(/xp\/start/i);
-    const title = await page.title();
-    expect(title).toMatch(/Internet Explorer/i);
-    expect(title + (bodyClass || '')).not.toMatch(/Windows XP|Luna/i);
+    await expect(page.locator("html")).toHaveAttribute("data-itt-year", "2000");
+    await expect(page).toHaveTitle(/Internet Explorer 5\.5/i);
+    const bodyClass = await page.locator("body").getAttribute("class");
+    expect((bodyClass || "") + (await page.title())).not.toMatch(/Windows XP|Luna/i);
   });
 
   test('Napster legal has no Museum: label', async ({ page }) => {

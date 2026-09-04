@@ -273,6 +273,13 @@
         extra.parentNode.insertBefore(kids[i], extra);
       }
     }
+    /* Museum hub must stay visible — do not fold it into Also this year. */
+    for (i = 0; i < kids.length; i++) {
+      n = kids[i];
+      if (n && n.nodeType === 1 && /(?:^|\s)itt-hub-exit(?:\s|$)/.test(n.className || "")) {
+        if (extra.parentNode) extra.parentNode.insertBefore(n, extra.nextSibling);
+      }
+    }
     if (!extra.childNodes.length) {
       if (extra.parentNode) extra.parentNode.removeChild(extra);
       return;

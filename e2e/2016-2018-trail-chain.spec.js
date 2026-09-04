@@ -222,111 +222,6 @@ const YEARS = [
       },
     ],
   },
-  {
-    year: "2018",
-    stops: [
-      {
-        path: "/years/2018/sites/gdpr/index.html",
-        key: "itt18-gdpr",
-        next: /tiktok/,
-        complete: async (page) => {
-          await page.locator("[data-gdpr-manage]").click();
-          await checkAll(page, "[data-gdpr-req]");
-          await page.locator("[data-gdpr-save]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/tiktok/fyp.html",
-        key: "itt18-tiktok-fyp",
-        next: /trust/,
-        prev: /gdpr/,
-        complete: async (page) => {
-          await page.locator("[data-fyp-tap]").nth(0).click();
-          await page.locator("[data-fyp-tap]").nth(1).click();
-          await page.locator("[data-fyp-req]").check();
-          await page.locator("[data-fyp-learn]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/trust/index.html",
-        key: "itt18-hearing",
-        next: /igtv/,
-        prev: /tiktok/,
-        complete: async (page) => {
-          await checkAll(page, "[data-hear-req]");
-          await page.locator("[data-hear-sit]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/instagram/igtv.html",
-        key: "itt18-igtv",
-        next: /not-secure/,
-        prev: /trust/,
-        complete: async (page) => {
-          await page.locator("[data-igtv-req]").check();
-          await page.fill("[data-igtv-title]", "not reels");
-          await page.locator("[data-igtv-post]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/chrome/not-secure.html",
-        key: "itt18-not-secure",
-        next: /homepod/,
-        prev: /igtv/,
-        complete: async (page) => {
-          await checkAll(page, "[data-ns-req]");
-          await page.locator("[data-ns-ack]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/homepod/index.html",
-        key: "itt18-homepod",
-        next: /spectre/,
-        prev: /not-secure/,
-        complete: async (page) => {
-          await checkAll(page, "[data-hp-req]");
-          await page.locator("[data-hp-reserve]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/spectre/index.html",
-        key: "itt18-spectre",
-        next: /fortnite/,
-        prev: /homepod/,
-        complete: async (page) => {
-          await checkAll(page, "[data-sp-req]");
-          await page.locator("[data-sp-ack]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/fortnite/switch.html",
-        key: "itt18-fn-switch",
-        next: /github/,
-        prev: /spectre/,
-        complete: async (page) => {
-          await checkAll(page, "[data-fns-req]");
-          await page.locator("[data-fns-drop]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/github/microsoft.html",
-        key: "itt18-github",
-        next: /playable\/game/,
-        prev: /fortnite/,
-        complete: async (page) => {
-          await checkAll(page, "[data-gh-req]");
-          await page.locator("[data-gh-ack]").click();
-        },
-      },
-      {
-        path: "/years/2018/sites/playable/game.html",
-        key: null,
-        next: null,
-        prev: /github/,
-        complete: null,
-      },
-    ],
-  },
 ];
 
 for (const y of YEARS) {
@@ -348,9 +243,10 @@ for (const y of YEARS) {
         }
         await stop.complete(page);
         await expect.poll(async () => getKey(page, stop.key), { timeout: 8000 }).toBeTruthy();
-        await expect(page.locator("[data-next-flow] a").first()).toBeVisible();
-        await expect(page.locator("[data-next-flow] a").first()).toHaveAttribute("href", stop.next);
-        await page.locator("[data-next-flow] a").first().click();
+        const next = page.locator(`[data-next-flow][data-next-when-key="${stop.key}"] a`).first();
+        await expect(next).toBeVisible();
+        await expect(next).toHaveAttribute("href", stop.next);
+        await next.click();
         const nxt = y.stops[i + 1];
         await expect(page).toHaveURL(new RegExp(nxt.path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
       }

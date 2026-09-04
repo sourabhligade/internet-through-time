@@ -240,17 +240,13 @@ test.describe('2004 hard flows', () => {
   });
 
   test('bans 2004', async ({ page }) => {
-    await goInFrame(page, 'pages/home.html');
-    await page.waitForTimeout(400);
-    const home = await contentFrame(page).locator('body').innerText();
-    expect(home).toMatch(/YouTube|Twitter|Chrome|Yahoo-owned Flickr|not yet/i);
-    expect(home).toMatch(/Gmail|Flickr|Thefacebook|Firefox/i);
+    await page.goto("/years/2004/pages/about.html");
+    await expect(page.locator("body")).toContainText(/Gmail|Flickr|Firefox/i);
+    await expect(page.locator("body")).toContainText(/YouTube \(2005\)|Twitter \(2006\)|Chrome browser/i);
 
-    await goInFrame(page, 'sites/flickr/about.html');
-    await waitForImmersion(page, '2004');
-    const fl = await contentFrame(page).locator('body').innerText();
-    expect(fl).toMatch(/Ludicorp|February 10/i);
-    expect(fl).toMatch(/2005|not yet|Not yet/i);
-    expect(fl.toLowerCase()).not.toMatch(/yahoo owns flickr in 2004/);
+    await page.goto("/years/2004/sites/flickr/about.html");
+    await expect(page.locator("body")).toContainText(/Ludicorp|February 10/i);
+    await expect(page.locator("body")).toContainText(/2005|Not yet/i);
+    await expect(page.locator("body")).not.toContainText(/yahoo owns flickr in 2004/i);
   });
 });

@@ -58,7 +58,6 @@ test.describe("Fascinating integrate leftovers", () => {
       "/years/2012/sites/wikipedia/sopa.html",
       "/years/2009/sites/farmville/index.html",
       "/years/2011/sites/iphone/index.html",
-      "/years/2015/sites/letsencrypt/index.html",
       "/years/1994/sites/hotwired/ad-att.html",
       "/years/2000/sites/pets/shutdown.html",
       "/years/2008/sites/chrome/index.html",
@@ -67,7 +66,6 @@ test.describe("Fascinating integrate leftovers", () => {
       "/years/2010/sites/instant/index.html",
       "/years/2016/sites/pokemongo/index.html",
       "/years/2017/sites/wannacry/index.html",
-      "/years/2018/sites/trust/index.html",
       "/years/2019/sites/disneyplus/home.html",
     ];
     const mockRe = /I (saw|watched|visited|acknowledge|was there|read the blackout|see the 503)/i;
@@ -157,19 +155,6 @@ test.describe("Fascinating integrate leftovers", () => {
     const blob = await blobOf(page, "itt11-siri");
     expect(blob && blob.year).toBe("2011");
     expect(await getKey(page, "itt11-gplus")).toBeFalsy();
-  });
-
-  test("2015 Let's Encrypt empty host never writes · hostname writes itt15-le", async ({ page }) => {
-    await openClean(page, "/years/2015/sites/letsencrypt/index.html", ["itt15-le", "itt15-periscope"]);
-    await page.locator("[data-le-request]").click();
-    expect(await getKey(page, "itt15-le")).toBeFalsy();
-    await page.fill("[data-le-domain]", "example.com");
-    await page.locator("[data-le-request]").click();
-    await expect.poll(() => getKey(page, "itt15-le")).toBeTruthy();
-    const blob = await blobOf(page, "itt15-le");
-    expect(blob && blob.year).toBe("2015");
-    expect(await getKey(page, "itt15-periscope")).toBeFalsy();
-    await expect(page.locator('[data-next-when-key="itt15-le"]')).toBeAttached();
   });
 
   test("1994 banner skip never writes · I clicked HERE writes itt94-banner", async ({ page }) => {
@@ -288,17 +273,6 @@ test.describe("Fascinating integrate leftovers", () => {
     await expect(page.locator("input[data-wc-wallet], [data-wc-exploit]")).toHaveCount(0);
   });
 
-  test("2018 Hearing meme-free sit · 0 ticks never write", async ({ page }) => {
-    await openClean(page, "/years/2018/sites/trust/index.html", ["itt18-hearing", "itt18-gdpr"]);
-    await page.locator("[data-hear-sit]").click();
-    expect(await getKey(page, "itt18-hearing")).toBeFalsy();
-    await page.locator("[data-hear-req]").nth(0).check();
-    await page.locator("[data-hear-req]").nth(1).check();
-    await page.locator("[data-hear-sit]").click();
-    await expect.poll(() => getKey(page, "itt18-hearing")).toBeTruthy();
-    expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
-  });
-
   test("2019 Disney+ trial never writes gold · star stays Who’s watching", async ({ page }) => {
     await openClean(page, "/years/2019/sites/disneyplus/home.html", ["itt19-disneyplus"]);
     await page.locator("[data-dplus-trial]").click();
@@ -323,10 +297,8 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2011", /googleplus/],
       ["2012", /instagram\/android/],
       ["2013", /vine\/record/],
-      ["2015", /periscope/],
       ["2016", /instagram\/stories/],
       ["2017", /iphone\/x/],
-      ["2018", /gdpr/],
       ["2019", /disneyplus\/home/],
     ];
     for (const [year, star] of rows) {

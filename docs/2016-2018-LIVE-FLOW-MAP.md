@@ -1,7 +1,7 @@
 # 2016–2018 live flow map
 
-**Date:** 2026-08-18  
-**Disk:** lean doors on `years/2016/` · `years/2017/` · `years/2018/`  
+**Date:** 2026-09-04  
+**Disk:** lean doors on `years/2016/` · `years/2017/`. **2018 is WIPED** — no `years/2018/`. Hub locked. Rebuild only when named.  
 **This file is the walk.** How you enter, what each dest does, where Next goes, where Back goes.  
 **In the product:** `years/2016/pages/map.html` · `years/2017/pages/map.html` · `years/2018/pages/map.html` — official 10 numbered, leftover 3×, side leftovers, mid-trail rule.  
 **Locked:** one star per year · guided `<ol>` exactly 6 · official 10 dests · leftover 3× never steal the chip.

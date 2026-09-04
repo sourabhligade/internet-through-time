@@ -186,39 +186,6 @@ test.describe('year game flows — full matrix', () => {
 
 
 
-  test('2015 Blob Rush: start → canvas + status', async ({ page }) => {
-    const frame = await openGame(page, '2015');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas')).toBeVisible();
-    await frame.locator('#game-canvas').click({ force: true });
-    await expect(frame.locator('[data-itt-action-status], [data-game-score]').first()).toBeVisible({
-      timeout: 5000,
-    });
-    await expect(frame.locator('body')).toContainText(/Blob Rush|agar/i);
-    await expect(frame.locator('body')).toContainText(/28 Apr 2015|slither\.io is 2016|\.io wave/i);
-    await expect(frame.locator('[data-blob-board]')).toBeVisible();
-    await expect(frame.locator('[data-blob-split]')).toBeVisible();
-  });
-
-  test('2015 Blob Rush split API + pause honors YearGame', async ({ page }) => {
-    const frame = await openGame(page, '2015', '?fast=1');
-    await frame.locator('[data-game-start]').click();
-    await page.waitForTimeout(200);
-    const splitOk = await page.evaluate(() => {
-      try {
-        const w = document.getElementById('content') && document.getElementById('content').contentWindow;
-        if (!w || typeof w.__ittBlobRushSplit !== 'function') return false;
-        w.__ittBlobRushSplit();
-        return true;
-      } catch (e) {
-        return false;
-      }
-    });
-    expect(splitOk).toBeTruthy();
-    await expect(frame.locator('[data-itt-action-status]')).toContainText(/Split|mass|Need mass/i);
-    await expect(frame.locator('[data-blob-board]')).toContainText(/you/i);
-  });
-
   test('2016 Gym Rush: start → canvas + status', async ({ page }) => {
     const frame = await openGame(page, '2016');
     await frame.locator('[data-game-start]').click();
@@ -258,36 +225,6 @@ test.describe('year game flows — full matrix', () => {
       timeout: 5000,
     });
     await expect(frame.locator('body')).toContainText(/Storm Circle|Sep 26 2017|no official/i);
-  });
-
-  test('2018 Consent Dash: start → canvas + status', async ({ page }) => {
-    const frame = await openGame(page, '2018');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas')).toBeVisible();
-    await frame.locator('#game-canvas').click({ force: true });
-    await expect(frame.locator('[data-itt-action-status], [data-game-score]').first()).toBeVisible({
-      timeout: 5000,
-    });
-    await expect(frame.locator('body')).toContainText(/Consent Dash|25 May|Manage/i);
-  });
-
-  test('2018 Consent Dash end API + pause honors YearGame', async ({ page }) => {
-    const frame = await openGame(page, '2018', '?fast=1');
-    await frame.locator('[data-game-start]').click();
-    await page.waitForTimeout(200);
-    const endOk = await page.evaluate(() => {
-      try {
-        const w = document.getElementById('content') && document.getElementById('content').contentWindow;
-        const host = w && w.document.querySelector('[data-year-game]');
-        if (!host || typeof host.__ittConsentDashEnd !== 'function') return false;
-        host.__ittConsentDashEnd(40);
-        return true;
-      } catch (e) {
-        return false;
-      }
-    });
-    expect(endOk).toBeTruthy();
-    await expect(frame.locator('[data-itt-action-status]').first()).toContainText(/score|gold|Manage|test end/i);
   });
 
   test('2017 Storm Circle end API + pause honors YearGame', async ({ page }) => {

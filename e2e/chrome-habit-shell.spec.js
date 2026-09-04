@@ -2,7 +2,7 @@
 const { test, expect } = require("@playwright/test");
 
 
-const YEARS = ["2015", "2016", "2017", "2018", "2019", "2021"];
+const YEARS = ["2016", "2017", "2019"];
 
 test.describe("Chrome habit shell labels", () => {
   for (const year of YEARS) {

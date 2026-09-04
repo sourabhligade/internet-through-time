@@ -172,7 +172,15 @@
 
     for (var h = 0; h < locationHints.length; h++) {
       var hint = locationHints[h];
-      if (hint.re && hint.re.test(val)) {
+      var re = hint && hint.re;
+      if (typeof re === "string") {
+        try {
+          re = new RegExp(re, "i");
+        } catch (eRe) {
+          continue;
+        }
+      }
+      if (re && typeof re.test === "function" && re.test(val)) {
         return { path: hint.path };
       }
     }

@@ -213,6 +213,16 @@
         ts: Date.now()
       };
       try {
+        var trails = (ITT.flowTrails && ITT.flowTrails[year]) || [];
+        var ti;
+        for (ti = 0; ti < trails.length; ti++) {
+          if (trails[ti] && trails[ti].whenKey === k) {
+            say(st, "Leftover never stamps the official key.", true);
+            return;
+          }
+        }
+      } catch (eO) { /* */ }
+      try {
         localStorage.setItem(k, JSON.stringify(payload));
       } catch (eS) { /* */ }
       say(st, "Saved · " + k, false);

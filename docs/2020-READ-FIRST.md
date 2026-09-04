@@ -1,7 +1,7 @@
 # 2020 — read first
 
-**Date:** 2026-09-01  
-**Status:** **live lean door** as of 2026-09-01. `years/2020/` is on disk. Hub card **available**. Star `itt20-zoom`. Leftover 2× 120. Join never writes gold.  
+**Date:** 2026-09-04  
+**Status:** **WIPED.** Hub card locked. No `years/2020/`. Do not `git checkout` an old 2020 forest. Rebuild only when named. This file is the wipe stamp, not a live door.  
 
 | Companion | When |
 |-----------|------|

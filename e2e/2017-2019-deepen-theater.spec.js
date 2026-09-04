@@ -69,26 +69,6 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   });
 });
 
-test("2018 Epic Games Store leftover query · live cart trap", async ({ page }) => {
-  await walkTheater(page, {
-    path: "/years/2018/sites/epicstore/index.html",
-    key: "itt18-egs-dp",
-    ns: "p18",
-    kind: "query",
-  });
-});
-
-test("2018 GDPR gold dest is still Manage, leftover Memoji never writes gold", async ({ page }) => {
-  await walkTheater(page, {
-    path: "/years/2018/sites/memoji/index.html",
-    key: "itt18-memoji-dp",
-    ns: "p18",
-    kind: "hops",
-  });
-  const gold = await page.evaluate(() => localStorage.getItem("itt18-gdpr"));
-  expect(gold).toBeFalsy();
-});
-
 test("2019 WeWork leftover checks · live order trap", async ({ page }) => {
   await walkTheater(page, {
     path: "/years/2019/sites/wework/index.html",
@@ -107,8 +87,8 @@ test("2019 xCloud leftover wait · Stadia trap", async ({ page }) => {
   });
 });
 
-test("2017/2018/2019 guided lists stay 6 · deepen strip is outside", async ({ page }) => {
-  for (const y of ["2017", "2018", "2019"]) {
+test("2017/2019 guided lists stay 6 · deepen strip is outside", async ({ page }) => {
+  for (const y of ["2017", "2019"]) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator(`#ott-guided-${y} ol > li`)).toHaveCount(6);
     await expect(page.locator(`#ott-2x-${y}-dp`)).toBeVisible();

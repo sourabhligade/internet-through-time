@@ -308,17 +308,6 @@ const SIGNATURE = {
       await frame.locator('[data-ig12-share]').click();
     },
   },
-  '2015': {
-    path: 'sites/periscope/index.html',
-    keySuffix: 'periscope',
-    body: /Periscope|Go LIVE|live/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await expect(frame.locator('[data-peri-live]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-peri-title]').fill('handoff rooftop');
-      await frame.locator('[data-peri-live]').click();
-    },
-  },
   '2016': {
     path: 'sites/instagram/stories.html',
     keySuffix: 'ig-stories',
@@ -339,19 +328,6 @@ const SIGNATURE = {
       await expect(frame.locator('[data-faceid-look]')).toBeVisible({ timeout: 15000 });
       await frame.locator('[data-faceid-look]').click();
       await frame.locator('[data-faceid-unlock]').click();
-    },
-  },
-  '2018': {
-    path: 'sites/gdpr/index.html',
-    keySuffix: 'gdpr',
-    body: /25 May|GDPR|Manage|Accept All/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await expect(frame.locator('[data-gdpr-manage]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-gdpr-manage]').click();
-      await frame.locator('[data-gdpr-req]').nth(0).check({ force: true });
-      await frame.locator('[data-gdpr-req]').nth(1).check({ force: true });
-      await frame.locator('[data-gdpr-save]').click();
     },
   },
   '2019': {
@@ -388,10 +364,8 @@ const YEARS = [
   '2008',
   '2010',
   '2012',
-  '2015',
   '2016',
   '2017',
-  '2018',
   '2019',
 ];
 

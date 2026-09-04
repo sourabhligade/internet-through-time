@@ -305,23 +305,6 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt17-faceid', /multiStep|2017-11-03|noHomeButton/i);
   });
 
-  test('2018 GDPR real write', async ({ page }) => {
-    test.skip(!yearOnDisk('2018'), '2018 not on disk');
-    await enterYear(page, '2018');
-    await clearPrefix(page, 'itt18');
-    await goImmersion(page, '2018', 'sites/gdpr/index.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-gdpr-manage]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-gdpr-accept-all]').click();
-    await page.waitForTimeout(120);
-    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
-    await frame.locator('[data-gdpr-manage]').click();
-    await frame.locator('[data-gdpr-req]').nth(0).check({ force: true });
-    await frame.locator('[data-gdpr-req]').nth(1).check({ force: true });
-    await frame.locator('[data-gdpr-save]').click();
-    await requireKey(page, 'itt18-gdpr', /multiStep|2018-05-25|manage/i);
-  });
-
   test('2019 Disney+ continue REAL → itt19-disneyplus', async ({ page }) => {
     test.skip(!yearOnDisk('2019'), '2019 not on disk');
     await enterYear(page, '2019');

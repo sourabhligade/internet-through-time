@@ -300,26 +300,6 @@
     "next": "/years/2014/sites/playable/game.html"
   },
   {
-    "year": "2015",
-    "role": "h",
-    "path": "/years/2015/sites/playable/extra-h.html",
-    "key": "itt15-game-live2",
-    "id": "live2",
-    "kind": "parlor",
-    "title": "Live Two",
-    "next": "/years/2015/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2015",
-    "role": "i",
-    "path": "/years/2015/sites/playable/extra-i.html",
-    "key": "itt15-game-lockernote",
-    "id": "lockernote",
-    "kind": "quiz",
-    "title": "Locker Note",
-    "next": "/years/2015/sites/playable/game.html"
-  },
-  {
     "year": "2016",
     "role": "h",
     "path": "/years/2016/sites/playable/extra-h.html",
@@ -358,26 +338,6 @@
     "kind": "quiz",
     "title": "Clip Note",
     "next": "/years/2017/sites/playable/game.html"
-  },
-  {
-    "year": "2018",
-    "role": "h",
-    "path": "/years/2018/sites/playable/extra-h.html",
-    "key": "itt18-game-banner2",
-    "id": "banner2",
-    "kind": "parlor",
-    "title": "Banner Two",
-    "next": "/years/2018/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2018",
-    "role": "i",
-    "path": "/years/2018/sites/playable/extra-i.html",
-    "key": "itt18-game-hearingnote",
-    "id": "hearingnote",
-    "kind": "quiz",
-    "title": "Hearing Note",
-    "next": "/years/2018/sites/playable/game.html"
   },
   {
     "year": "2019",

@@ -81,7 +81,11 @@
   }
 
   function flowStops(year) {
-    return (window.ITT && ITT.flowTrails && ITT.flowTrails[year]) || [];
+    var rows = (window.ITT && ITT.flowTrails && ITT.flowTrails[year]) || [];
+    return rows.filter(function (s) {
+      var n = Number(s && s.n);
+      return n >= 1 && n <= 10;
+    });
   }
 
   function stamped(year) {

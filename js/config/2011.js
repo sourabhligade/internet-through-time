@@ -3,6 +3,23 @@
   var ITT = global.ITT || (global.ITT = {});
   ITT.configs = ITT.configs || {};
   var rooms = [
+    "sites/playable/extra-a.html",
+    "sites/playable/extra-b.html",
+    "sites/playable/extra-c.html",
+    "sites/playable/extra-d.html",
+    "sites/playable/extra-e.html",
+    "sites/playable/extra-f.html",
+    "sites/playable/extra-g.html",
+    "sites/playable/extra-h.html",
+    "sites/playable/extra-i.html",
+    "sites/playable/more-a.html",
+    "sites/playable/more-b.html",
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
+    "sites/playable/game-2.html",
+    "sites/playable/game-3.html",
+    "sites/playable/game-4.html",
+    "sites/playable/game-5.html",
     "pages/about.html",
     "pages/error/404.html",
     "pages/error/unreachable.html",

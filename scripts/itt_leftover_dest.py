@@ -12,6 +12,40 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# Dest-folder slugs that are year-true leftover dests, not factory codes.
+SLUG_LABEL = {
+    "amz": "Amazon",
+    "pp": "PayPal",
+    "ps": "PlayStation",
+    "nfx": "Netflix",
+    "li": "LinkedIn",
+    "wiki": "Wikipedia",
+    "ig": "Instagram",
+    "fb": "Facebook",
+    "yt": "YouTube",
+    "wa": "WhatsApp",
+    "gplus": "Google+",
+    "googleplus": "Google+",
+}
+
+
+def dest_label(dest: Path) -> str:
+    """Readable leftover dest label. Existing dests only. No invented copy."""
+    slug = dest.parent.name if dest.stem in ("index", "more", "home", "about") else dest.stem
+    if slug in SLUG_LABEL:
+        return SLUG_LABEL[slug]
+    text = dest.read_text(encoding="utf-8", errors="replace")
+    m = re.search(r"<h1[^>]*>(.*?)</h1>", text, re.I | re.S) or re.search(
+        r"<title>(.*?)</title>", text, re.I | re.S
+    )
+    raw = re.sub(r"<[^>]+>", "", m.group(1) if m else slug)
+    t = re.sub(r"\s+", " ", raw).strip()
+    t = re.sub(r"\s*[—–|:]\s*\d{4}\b.*$", "", t).strip()
+    if re.search(r"continuity leftover", t, re.I) or not t or t.lower() == slug.lower():
+        t = SLUG_LABEL.get(slug, slug.replace("-", " "))
+        t = t[:1].upper() + t[1:] if t else slug
+    return t[:42].rstrip()
+
 
 def append_matrix_row(rows: list, have: set, year: str, path: str, key: str, kind: str, title: str, nxt: str, label: str) -> int:
     if (year, key) in have:

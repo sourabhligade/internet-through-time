@@ -7,7 +7,7 @@ const { test, expect } = require('@playwright/test');
 
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const SAMPLE = ['1994', '2005', '2010', '2015'];
+const SAMPLE = ['1994', '2005', '2010', '2016'];
 
 const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },

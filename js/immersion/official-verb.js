@@ -212,6 +212,15 @@
         try {
           if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
         } catch (eN) { /* */ }
+        /* Form submits with a real action must still navigate (1998 Google Search). */
+        if (form) {
+          var go = String(form.getAttribute("action") || "").replace(/^\s+|\s+$/g, "");
+          if (go && go !== "#") {
+            try {
+              HTMLFormElement.prototype.submit.call(form);
+            } catch (eGo) { /* */ }
+          }
+        }
       });
     }
   }

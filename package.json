@@ -31,10 +31,8 @@
     "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-flows.spec.js e2e/2014-densify.spec.js e2e/2014-implemented-real.spec.js e2e/2014-trail-real-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2014 --workers=1",
     "test:e2e:2010": "playwright test e2e/2010-mvp.spec.js e2e/2010-flows.spec.js e2e/2010-densify.spec.js e2e/2010-trail-real-flows.spec.js --workers=1",
     "test:e2e:2012": "playwright test e2e/2012-mvp.spec.js e2e/2012-flows.spec.js e2e/2012-densify.spec.js e2e/2012-trail-real-flows.spec.js e2e/2012-5x-live.spec.js e2e/2012-4x-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2012 --workers=1",
-    "test:e2e:2015": "playwright test e2e/2015-mvp.spec.js e2e/2015-flows.spec.js e2e/2015-densify.spec.js e2e/2015-trail-real-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2015 --workers=1",
     "test:e2e:2016": "playwright test e2e/2016-mvp.spec.js e2e/2016-flows.spec.js e2e/2016-densify.spec.js e2e/2016-trail-real-flows.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/one-thing-per-year.spec.js --grep 2016 --workers=1",
     "test:e2e:2017": "playwright test e2e/2017-mvp.spec.js e2e/2017-flows.spec.js e2e/2017-densify.spec.js e2e/2017-trail-real-flows.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/one-thing-per-year.spec.js --grep 2017 --workers=1",
-    "test:e2e:2018": "playwright test e2e/2018-mvp.spec.js e2e/2018-flows.spec.js e2e/2018-densify.spec.js e2e/2018-trail-real-flows.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/one-thing-per-year.spec.js --grep 2018 --workers=1",
     "test:e2e:2019": "playwright test e2e/2019-mvp.spec.js e2e/2019-flows.spec.js e2e/2019-densify.spec.js e2e/2019-trail-real-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2019 --workers=1",
 
     "test:e2e:popular": "playwright test e2e/popular-flows-all-years.spec.js --workers=1",
@@ -74,7 +72,7 @@
     "test:e2e:5x-recheck": "playwright test e2e/5x-all-years-recheck.spec.js --workers=2",
     "test:e2e:gold-a": "playwright test e2e/gold-a-leftover-pack.spec.js e2e/one-thing-per-year.spec.js e2e/flow-maps.spec.js --workers=1",
     "test:e2e:atlas": "playwright test e2e/atlas.spec.js e2e/atlas-all-flows.spec.js --workers=1",
-    "test:e2e:last5": "playwright test e2e/2017-2019-deepen-theater.spec.js e2e/2021-2022-deepen-theater.spec.js e2e/2021-2022-ytl-theater.spec.js --workers=2"
+    "test:e2e:last5": "playwright test e2e/2017-2019-deepen-theater.spec.js --workers=2"
   },
   "engines": {
     "node": ">=18"

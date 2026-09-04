@@ -371,6 +371,8 @@
     var host = doc.querySelector('[data-year-game][data-game-id="loopsix"]');
     var btn = doc.querySelector("[data-game-start]");
     if (!host || !btn) return;
+    if (host.getAttribute("data-loopsix-engine") === "1") return;
+    if (doc.querySelector('script[src*="year-2013-loopsix.js"]')) return;
     var scoreEl = doc.querySelector("[data-game-score]");
     var status = doc.querySelector("[data-itt-action-status]");
     var score = 0;
@@ -387,6 +389,12 @@
       walks[i].addEventListener("click", function () {
         score += 1;
         if (scoreEl) scoreEl.textContent = String(score);
+        if (status) {
+          status.textContent =
+            score >= 6
+              ? "Loop of six · leftover cabinet · star stays Vine."
+              : "Beat " + score + " / 6 · 15s never scores.";
+        }
       });
     }
     var trap = doc.querySelector("[data-peg-trap]");

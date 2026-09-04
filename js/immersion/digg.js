@@ -307,11 +307,13 @@
           }
           if (row) {
             row.diggs = Math.max(0, (row.diggs || 0) + delta);
-            list2.sort(function (a, b) {
-              return (b.diggs || 0) - (a.diggs || 0);
-            });
             save(list2);
-            render(doc);
+            var countEl = btn.parentNode && btn.parentNode.querySelector("[data-digg-count]");
+            if (countEl) countEl.textContent = String(row.diggs || 0);
+            var idxAttr = btn.getAttribute(attr);
+            if (idxAttr != null && doc.querySelector("[data-digg-count='" + idxAttr + "']")) {
+              doc.querySelector("[data-digg-count='" + idxAttr + "']").textContent = String(row.diggs || 0);
+            }
             if (delta > 0) {
               var trailKey = fallbackPrefix() + "-digg";
               try {

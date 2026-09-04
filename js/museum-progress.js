@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2025": 1 };
+  var WIPED = { "2018": 1, "2020": 1, "2021": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -148,6 +148,12 @@
     "2004": yearVisitTour("2004",
       { path: "sites/facebook/networks.html", label: "thefacebook", blurb: "Join a college network. Not modern FB.", match: "/facebook/networks" },
       { path: "sites/gmail/index.html", label: "Gmail", blurb: "Invite-era gigabyte mail.", match: "/gmail/" }),
+    "2005": yearVisitTour("2005",
+      { path: "sites/youtube/upload.html", label: "YouTube upload", blurb: "Empty / dating / Google-owned never write.", match: "/youtube/upload" },
+      { path: "sites/maps/index.html", label: "Google Maps leftover", blurb: "8 Feb leftover. No Street View.", match: "/maps/" }),
+    "2006": yearVisitTour("2006",
+      { path: "sites/twitter/index.html", label: "Twttr", blurb: "Empty / 280 / iPhone never write.", match: "/twitter/" },
+      { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep leftover. Not the chip.", match: "/facebook/feed" }),
     "2008": yearVisitTour("2008",
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Apps economy begins.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome", blurb: "Browser reinvented · product room.", match: "/chrome/" }),
@@ -216,7 +222,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2024; y++) {
+    for (y = 1994; y <= 2025; y++) {
       var ys = String(y);
       if (WIPED[ys]) continue;
       var steps = YEAR_STARTS[ys];
@@ -382,7 +388,7 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2024) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2019) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -662,7 +668,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2024; y++) {
+    for (y = 1994; y <= 2025; y++) {
       if (WIPED[String(y)]) continue;
       years.push(String(y));
     }

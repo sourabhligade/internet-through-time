@@ -14,10 +14,8 @@ const YEARS = [
   { year: "2012", star: "itt12-ig-android", honesty: "Instagram Android" },
   { year: "2013", star: "itt13-vine-posts", honesty: "Vine 6s" },
   { year: "2014", star: "itt14-wa-install", honesty: "WhatsApp Install" },
-  { year: "2015", star: "itt15-periscope", honesty: "Periscope" },
   { year: "2016", star: "itt16-ig-stories", honesty: "Instagram Stories" },
   { year: "2017", star: "itt17-faceid", honesty: "Face ID" },
-  { year: "2018", star: "itt18-gdpr", honesty: "GDPR Manage" },
   { year: "2019", star: "itt19-disneyplus", honesty: "Disney+" },
 ];
 
@@ -93,10 +91,11 @@ async function completeLo(page, destPath, year, suffix, star) {
   expect(await getKey(page, star), key + " must not write star").toBeFalsy();
 }
 
-test.describe("2011 / 2020 stay boarded", () => {
+test.describe("wiped years stay boarded", () => {
   test("no year tree", () => {
-    expect(fs.existsSync(path.join(ROOT, "years", "2011", "index.html"))).toBe(false);
-    expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(false);
+    for (const y of ["2018", "2020", "2021", "2022", "2023", "2024", "2025"]) {
+      expect(fs.existsSync(path.join(ROOT, "years", y, "index.html"))).toBe(false);
+    }
   });
 });
 

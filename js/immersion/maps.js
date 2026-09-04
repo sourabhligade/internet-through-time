@@ -310,6 +310,25 @@
             flash: true
           });
         }
+        try {
+          var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
+          if (ok === "itt05-maps" && (what || where || q)) {
+            if (!localStorage.getItem("itt05-maps")) {
+              localStorage.setItem(
+                "itt05-maps",
+                JSON.stringify({
+                  multiStep: true,
+                  real: true,
+                  year: "2005",
+                  official: true,
+                  q: String(label).slice(0, 80),
+                  ts: Date.now()
+                })
+              );
+            }
+            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          }
+        } catch (eMapOff) { /* */ }
       });
     }
     var dirForm = doc.querySelector("[data-maps-directions]");
@@ -342,6 +361,29 @@
         }
       });
     }
+    function writeOfficialMapsDrag() {
+      var root = doc.documentElement;
+      var k = root && root.getAttribute("data-official-key");
+      if (k !== "itt05-maps") return;
+      try {
+        if (localStorage.getItem(k)) {
+          if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          return;
+        }
+        localStorage.setItem(
+          k,
+          JSON.stringify({
+            multiStep: true,
+            real: true,
+            year: "2005",
+            official: true,
+            drag: true,
+            ts: Date.now()
+          })
+        );
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eW) { /* */ }
+    }
     /* Drag-to-pan on canvas (doc listeners once per document) */
     var canvasEl = doc.querySelector("[data-maps-canvas]");
     if (canvasEl && canvasEl.getAttribute("data-maps-drag-bound") !== "1") {
@@ -373,11 +415,13 @@
             pan.x += dx > 0 ? -1 : 1;
             dragState.x = ev.clientX;
             paint();
+            writeOfficialMapsDrag();
           }
           if (Math.abs(dy) > 8) {
             pan.y += dy > 0 ? -1 : 1;
             dragState.y = ev.clientY;
             paint();
+            writeOfficialMapsDrag();
           }
         });
       }

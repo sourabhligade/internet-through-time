@@ -25,9 +25,12 @@ async function completeLo(page, key) {
   const reqs = lo.locator("[data-lo-req]");
   const nReq = await reqs.count();
   for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
+  const needPick = await lo.locator("[data-lo-save]").getAttribute("data-lo-need-pick");
   const picks = lo.locator("[data-lo-pick]");
   const nPick = await picks.count();
-  if (nPick) {
+  if (needPick) {
+    await lo.locator(`[data-lo-pick="${needPick}"]`).click({ force: true });
+  } else if (nPick) {
     const min = parseInt((await lo.locator("[data-lo-save]").getAttribute("data-lo-min-pick")) || "0", 10);
     const need = min || nPick;
     for (let i = 0; i < need && i < nPick; i++) await picks.nth(i).click({ force: true });
@@ -43,54 +46,54 @@ async function completeLo(page, key) {
 test.describe("2006 official 10 · dest machines", () => {
   test("1 Twttr empty / trap never write · ticks + update writes", async ({ page }) => {
     await openClear(page, "/years/2006/sites/twitter/index.html", "itt06-tweets");
-    await page.locator("form[data-twitter-compose] button[type='submit']").click();
+    await page.locator("[data-tw06-post]").click();
     expect(await getKey(page, "itt06-tweets")).toBeFalsy();
-    await page.locator("[data-tw-trap]").first().click();
+    await page.locator("[data-tw06-trap]").first().click();
     expect(await getKey(page, "itt06-tweets")).toBeFalsy();
-    await page.fill("[data-twitter-status]", "just setting up my twttr residual");
-    const reqs = page.locator("[data-tw-req]");
+    await page.fill("[data-tw06-body]", "just setting up my twttr residual");
+    const reqs = page.locator("[data-tw06-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("form[data-twitter-compose] button[type='submit']").click();
+    await page.locator("[data-tw06-post]").click();
     await expect.poll(() => getKey(page, "itt06-tweets"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt05-yt-uploads")).toBeFalsy();
     expect(await getKey(page, "itt07-iphone")).toBeFalsy();
   });
   test("2 News Feed hops", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/facebook/feed.html", "itt06-feed");
-    await completeLo(page, "itt06-feed");
+    await openClear(page, "/years/2006/sites/facebook/feed.html", "itt06-feed-lx");
+    await completeLo(page, "itt06-feed-lx");
   });
   test("3 Facebook open hops", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/facebook/open.html", "itt06-fb-open");
-    await completeLo(page, "itt06-fb-open");
+    await openClear(page, "/years/2006/sites/facebook/open.html", "itt06-fb-open-lx");
+    await completeLo(page, "itt06-fb-open-lx");
   });
   test("4 YouTube Google-owned leftover", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/youtube/index.html", "itt06-yt");
-    await completeLo(page, "itt06-yt");
+    await openClear(page, "/years/2006/sites/youtube/index.html", "itt06-yt-lx");
+    await completeLo(page, "itt06-yt-lx");
   });
   test("5 Google Docs leftover", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/googledocs/index.html", "itt06-gdocs");
-    await completeLo(page, "itt06-gdocs");
+    await openClear(page, "/years/2006/sites/googledocs/index.html", "itt06-gdocs-lx");
+    await completeLo(page, "itt06-gdocs-lx");
   });
   test("6 S3 checks", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/aws/index.html", "itt06-s3");
-    await completeLo(page, "itt06-s3");
+    await openClear(page, "/years/2006/sites/aws/index.html", "itt06-s3-lx");
+    await completeLo(page, "itt06-s3-lx");
   });
   test("7 IE7 hops", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/ie7/index.html", "itt06-ie7");
-    await completeLo(page, "itt06-ie7");
+    await openClear(page, "/years/2006/sites/ie7/index.html", "itt06-ie7-lx");
+    await completeLo(page, "itt06-ie7-lx");
   });
   test("8 Wiki millionth", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/wikipedia/millionth.html", "itt06-wiki-1m");
-    await completeLo(page, "itt06-wiki-1m");
+    await openClear(page, "/years/2006/sites/wikipedia/millionth.html", "itt06-wiki-1m-lx");
+    await completeLo(page, "itt06-wiki-1m-lx");
   });
   test("9 Roblox hops", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/roblox/index.html", "itt06-roblox");
-    await completeLo(page, "itt06-roblox");
+    await openClear(page, "/years/2006/sites/roblox/index.html", "itt06-roblox-lx");
+    await completeLo(page, "itt06-roblox-lx");
   });
   test("10 Line Rider hops", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/playable/linerider.html", "itt06-game-linerider");
-    await completeLo(page, "itt06-game-linerider");
+    await openClear(page, "/years/2006/sites/playable/linerider.html", "itt06-game-linerider-lx");
+    await completeLo(page, "itt06-game-linerider-lx");
   });
   test("guided stays 6", async ({ page }) => {
     await page.goto("/years/2006/pages/home.html");

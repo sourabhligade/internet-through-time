@@ -7,6 +7,8 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/playable/more-c.html",
+    "sites/playable/more-d.html",
     "sites/alipay/about.html",
     "sites/echoinvite/about.html",
     "sites/ello/about.html",

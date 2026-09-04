@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, museum/1994-2020-lean]
   pull_request:
 
 permissions:

@@ -72,49 +72,49 @@ test.describe("2005 official 10 · dest machines", () => {
   });
 
   test("2 Maps hops · Street View trap never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/maps/index.html", "itt05-maps");
-    await completeLo(page, "itt05-maps");
+    await openClear(page, "/years/2005/sites/maps/index.html", "itt05-maps-lx");
+    await completeLo(page, "itt05-maps-lx");
   });
 
   test("3 Pandora leftover · star trap never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/pandora/index.html", "itt05-pandora");
-    await completeLo(page, "itt05-pandora");
+    await openClear(page, "/years/2005/sites/pandora/index.html", "itt05-pandora-lx");
+    await completeLo(page, "itt05-pandora-lx");
   });
 
   test("4 HousingMaps ticks · live CL trap never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/housingmaps/index.html", "itt05-hm");
-    await completeLo(page, "itt05-hm");
+    await openClear(page, "/years/2005/sites/housingmaps/index.html", "itt05-hm-lx");
+    await completeLo(page, "itt05-hm-lx");
   });
 
   test("5 Digg hops · 1 hop never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/digg/index.html", "itt05-digg");
-    await completeLo(page, "itt05-digg");
+    await openClear(page, "/years/2005/sites/digg/index.html", "itt05-digg-lx");
+    await completeLo(page, "itt05-digg-lx");
   });
 
   test("6 Reddit hops · Untitled trap never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/reddit/index.html", "itt05-reddit");
-    await completeLo(page, "itt05-reddit");
+    await openClear(page, "/years/2005/sites/reddit/index.html", "itt05-reddit-lx");
+    await completeLo(page, "itt05-reddit-lx");
   });
 
   test("7 Flickr leftover · Yahoo Photos trap · itt04-flickr empty", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/flickr/index.html", "itt05-flickr");
-    await completeLo(page, "itt05-flickr");
+    await openClear(page, "/years/2005/sites/flickr/index.html", "itt05-flickr-lx");
+    await completeLo(page, "itt05-flickr-lx");
     expect(await getKey(page, "itt04-flickr")).toBeFalsy();
   });
 
   test("8 iTunes podcasts · live store trap never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/itunes/podcasts.html", "itt05-pod");
-    await completeLo(page, "itt05-pod");
+    await openClear(page, "/years/2005/sites/itunes/podcasts.html", "itt05-pod-lx");
+    await completeLo(page, "itt05-pod-lx");
   });
 
   test("9 TechCrunch leftover · star trap never writes", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/techcrunch/index.html", "itt05-tc");
-    await completeLo(page, "itt05-tc");
+    await openClear(page, "/years/2005/sites/techcrunch/index.html", "itt05-tc-lx");
+    await completeLo(page, "itt05-tc-lx");
   });
 
   test("10 HoverChop hops write itt05-game-heli", async ({ page }) => {
-    await openClear(page, "/years/2005/sites/playable/game.html", "itt05-game-heli");
-    await completeLo(page, "itt05-game-heli");
+    await openClear(page, "/years/2005/sites/playable/game.html", "itt05-game-heli-lx");
+    await completeLo(page, "itt05-game-heli-lx");
   });
 
   test("guided stays 6", async ({ page }) => {

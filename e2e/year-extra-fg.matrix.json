@@ -300,26 +300,6 @@
     "next": "/years/2014/sites/playable/game.html"
   },
   {
-    "year": "2015",
-    "role": "f",
-    "path": "/years/2015/sites/playable/extra-f.html",
-    "key": "itt15-game-liveheart",
-    "id": "liveheart",
-    "kind": "hold",
-    "title": "Live Heart",
-    "next": "/years/2015/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2015",
-    "role": "g",
-    "path": "/years/2015/sites/playable/extra-g.html",
-    "key": "itt15-game-gwxnote",
-    "id": "gwxnote",
-    "kind": "quiz",
-    "title": "GWX Note",
-    "next": "/years/2015/sites/playable/game.html"
-  },
-  {
     "year": "2016",
     "role": "f",
     "path": "/years/2016/sites/playable/extra-f.html",
@@ -358,26 +338,6 @@
     "kind": "parlor",
     "title": "Tweet 280",
     "next": "/years/2017/sites/playable/game.html"
-  },
-  {
-    "year": "2018",
-    "role": "f",
-    "path": "/years/2018/sites/playable/extra-f.html",
-    "key": "itt18-game-manage2",
-    "id": "manage2",
-    "kind": "parlor",
-    "title": "Manage Two",
-    "next": "/years/2018/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2018",
-    "role": "g",
-    "path": "/years/2018/sites/playable/extra-g.html",
-    "key": "itt18-game-fypnote",
-    "id": "fypnote",
-    "kind": "quiz",
-    "title": "FYP Note",
-    "next": "/years/2018/sites/playable/game.html"
   },
   {
     "year": "2019",

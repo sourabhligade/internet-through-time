@@ -1400,7 +1400,7 @@
   "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2015 thesis: the phone goes live · free photo locker · Get Windows 10. Periscope · Google Photos · Win10 free upgrade · Apple Music.",
   "openLoc": "Open Location:",
   "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
+  "startBanner": "Windows<b>7</b> residual",
   "taskBtn": "Chrome",
   "icon": "e",
   "aria": "Chrome habit",

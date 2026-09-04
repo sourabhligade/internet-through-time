@@ -179,9 +179,11 @@
       var i;
       for (i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function (ev) {
-          var id = ev.currentTarget.getAttribute(attr);
-          bump(id, delta);
-          render(doc);
+          var btn = ev.currentTarget;
+          var id = btn.getAttribute(attr);
+          var score = bump(id, delta);
+          var word = el.querySelector("[data-reddit-score-word='" + id + "']");
+          if (word && score != null) word.textContent = String(score);
           if (delta > 0) {
             var trailKey = U().immersionStorageKey
               ? U().immersionStorageKey("reddit", "itt05")

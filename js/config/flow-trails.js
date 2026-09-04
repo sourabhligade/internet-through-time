@@ -17,7 +17,17 @@
       {"n": 7, "name": "IUMA listen", "href": "sites/iuma/listen.html", "match": "/iuma/", "whenKey": "itt94-iuma", "nextHref": "sites/hotwired/index.html", "nextLabel": "HotWired"},
       {"n": 8, "name": "HotWired", "href": "sites/hotwired/index.html", "match": "/hotwired/", "whenKey": "itt94-hotwired", "nextHref": "sites/lycos/index.html", "nextLabel": "Lycos"},
       {"n": 9, "name": "Lycos catalog", "href": "sites/lycos/index.html", "match": "/lycos/", "whenKey": "itt94-lycos", "nextHref": "sites/csotd/index.html", "nextLabel": "Cool Site of the Day"},
-      {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt94-game-hotlist", "nextHref": "sites/csotd/index.html", "nextLabel": "CSotD guestbook"}
+      {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt94-game-hotlist", "nextHref": "sites/csotd/index.html", "nextLabel": "CSotD guestbook"},
+      {"n": 11, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt94-cnn-dp", "nextHref": "sites/apple/index.html", "nextLabel": "Apple leftover"},
+      {"n": 12, "name": "Apple leftover", "href": "sites/apple/index.html", "match": "/apple/", "whenKey": "itt94-apple-dp", "nextHref": "sites/bbc/index.html", "nextLabel": "BBC leftover"},
+      {"n": 13, "name": "BBC leftover", "href": "sites/bbc/index.html", "match": "/bbc/", "whenKey": "itt94-bbc-dp", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft leftover"},
+      {"n": 14, "name": "Microsoft leftover", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt94-microsoft-dp", "nextHref": "sites/ibm/index.html", "nextLabel": "IBM leftover"},
+      {"n": 15, "name": "IBM leftover", "href": "sites/ibm/index.html", "match": "/ibm/", "whenKey": "itt94-ibm-dp", "nextHref": "sites/webcrawler/index.html", "nextLabel": "WebCrawler leftover"},
+      {"n": 16, "name": "WebCrawler leftover", "href": "sites/webcrawler/index.html", "match": "/webcrawler/", "whenKey": "itt94-wc", "nextHref": "sites/ncsa/index.html", "nextLabel": "NCSA leftover"},
+      {"n": 17, "name": "NCSA leftover", "href": "sites/ncsa/index.html", "match": "/ncsa/", "whenKey": "itt94-trail-q", "nextHref": "sites/imdb/index.html", "nextLabel": "IMDb leftover"},
+      {"n": 18, "name": "IMDb leftover", "href": "sites/imdb/index.html", "match": "/imdb/", "whenKey": "itt94-imdb", "nextHref": "sites/infoseek/index.html", "nextLabel": "Infoseek leftover"},
+      {"n": 19, "name": "Infoseek leftover", "href": "sites/infoseek/index.html", "match": "/infoseek/", "whenKey": "itt94-is-lx", "nextHref": "sites/mcom/index.html", "nextLabel": "Mosaic leftover"},
+      {"n": 20, "name": "Mosaic leftover", "href": "sites/mcom/index.html", "match": "/mcom/", "whenKey": "itt94-mcom-lx", "nextHref": "sites/csotd/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "1995": [
       {"n": 1, "name": "SSL checkout", "href": "sites/amazon/ssl-checkout.html", "match": "/amazon/ssl-checkout", "whenKey": "itt95-ssl-checkout", "nextHref": "sites/auctionweb/item-laser.html", "nextLabel": "Bid higher · AuctionWeb"},
@@ -29,7 +39,17 @@
       {"n": 7, "name": "CNN", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt95-cnn", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft"},
       {"n": 8, "name": "Microsoft", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt95-ms", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape"},
       {"n": 9, "name": "Netscape", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt95-ns-dl", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon books"},
-      {"n": 10, "name": "Classmates", "href": "sites/classmates/index.html", "match": "/classmates/", "whenKey": "itt95-classmates", "nextHref": "sites/amazon/ssl-checkout.html", "nextLabel": "SSL checkout"}
+      {"n": 10, "name": "Classmates", "href": "sites/classmates/index.html", "match": "/classmates/", "whenKey": "itt95-classmates", "nextHref": "sites/amazon/ssl-checkout.html", "nextLabel": "SSL checkout"},
+      {"n": 11, "name": "AOL leftover", "href": "sites/aol/index.html", "match": "/aol/", "whenKey": "itt95-aol", "nextHref": "sites/apple/index.html", "nextLabel": "Apple leftover"},
+      {"n": 12, "name": "Apple leftover", "href": "sites/apple/index.html", "match": "/apple/", "whenKey": "itt95-apple-dp", "nextHref": "sites/espn/index.html", "nextLabel": "ESPN leftover"},
+      {"n": 13, "name": "ESPN leftover", "href": "sites/espn/index.html", "match": "/espn/", "whenKey": "itt95-espn-lx", "nextHref": "sites/hotwired/index.html", "nextLabel": "HotWired leftover"},
+      {"n": 14, "name": "HotWired leftover", "href": "sites/hotwired/index.html", "match": "/hotwired/", "whenKey": "itt95-hw-lx", "nextHref": "sites/ibm/index.html", "nextLabel": "IBM leftover"},
+      {"n": 15, "name": "IBM leftover", "href": "sites/ibm/index.html", "match": "/ibm/", "whenKey": "itt95-ibm-dp", "nextHref": "sites/infoseek/index.html", "nextLabel": "Infoseek leftover"},
+      {"n": 16, "name": "Infoseek leftover", "href": "sites/infoseek/index.html", "match": "/infoseek/", "whenKey": "itt95-infoseek", "nextHref": "sites/nyt/index.html", "nextLabel": "NYT leftover"},
+      {"n": 17, "name": "NYT leftover", "href": "sites/nyt/index.html", "match": "/nyt/", "whenKey": "itt95-nyt-dp", "nextHref": "sites/pathfinder/index.html", "nextLabel": "Pathfinder leftover"},
+      {"n": 18, "name": "Pathfinder leftover", "href": "sites/pathfinder/index.html", "match": "/pathfinder/", "whenKey": "itt95-pathfinder", "nextHref": "sites/webcrawler/index.html", "nextLabel": "WebCrawler leftover"},
+      {"n": 19, "name": "WebCrawler leftover", "href": "sites/webcrawler/index.html", "match": "/webcrawler/", "whenKey": "itt95-webcrawler-dp", "nextHref": "sites/zdnet/index.html", "nextLabel": "ZDNet leftover"},
+      {"n": 20, "name": "ZDNet leftover", "href": "sites/zdnet/index.html", "match": "/zdnet/", "whenKey": "itt95-zdnet-dp", "nextHref": "sites/amazon/ssl-checkout.html", "nextLabel": "★ year gold leftover"}
     ],
     "1996": [
       {"n": 1, "name": "Portal wars", "href": "sites/portals/wars.html", "match": "/portals/", "whenKey": "itt96-portal-wars", "nextHref": "sites/hotmail/index.html", "nextLabel": "HoTMaiL"},
@@ -41,7 +61,17 @@
       {"n": 7, "name": "AuctionWeb", "href": "sites/auctionweb/index.html", "match": "/auctionweb/", "whenKey": "itt96-auctionweb", "nextHref": "sites/excite/index.html", "nextLabel": "Excite"},
       {"n": 8, "name": "Excite", "href": "sites/excite/index.html", "match": "/excite/", "whenKey": "itt96-excite", "nextHref": "sites/altavista/index.html", "nextLabel": "AltaVista"},
       {"n": 9, "name": "AltaVista", "href": "sites/altavista/index.html", "match": "/altavista/", "whenKey": "itt96-av", "nextHref": "sites/portals/wars.html", "nextLabel": "Portal wars"},
-      {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt96-game-planets", "nextHref": "sites/portals/wars.html", "nextLabel": "Portal wars"}
+      {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt96-game-planets", "nextHref": "sites/portals/wars.html", "nextLabel": "Portal wars"},
+      {"n": 11, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt96-cnn-lx", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft leftover"},
+      {"n": 12, "name": "Microsoft leftover", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt96-ms-lx", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape leftover"},
+      {"n": 13, "name": "Netscape leftover", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt96-ns-lx", "nextHref": "sites/icq/index.html", "nextLabel": "ICQ leftover"},
+      {"n": 14, "name": "ICQ leftover", "href": "sites/icq/index.html", "match": "/icq/", "whenKey": "itt96-icq-dp", "nextHref": "sites/espn/index.html", "nextLabel": "ESPN leftover"},
+      {"n": 15, "name": "ESPN leftover", "href": "sites/espn/index.html", "match": "/espn/", "whenKey": "itt96-espn-dp", "nextHref": "sites/disney/index.html", "nextLabel": "Disney leftover"},
+      {"n": 16, "name": "Disney leftover", "href": "sites/disney/index.html", "match": "/disney/", "whenKey": "itt96-disney-dp", "nextHref": "sites/archive/index.html", "nextLabel": "Archive leftover"},
+      {"n": 17, "name": "Archive leftover", "href": "sites/archive/index.html", "match": "/archive/", "whenKey": "itt96-archive-dp", "nextHref": "sites/askjeeves/index.html", "nextLabel": "Ask Jeeves leftover"},
+      {"n": 18, "name": "Ask Jeeves leftover", "href": "sites/askjeeves/index.html", "match": "/askjeeves/", "whenKey": "itt96-jeeves", "nextHref": "sites/craigslist/index.html", "nextLabel": "Craigslist leftover"},
+      {"n": 19, "name": "Craigslist leftover", "href": "sites/craigslist/index.html", "match": "/craigslist/", "whenKey": "itt96-cl-lx", "nextHref": "sites/mtv/index.html", "nextLabel": "MTV leftover"},
+      {"n": 20, "name": "MTV leftover", "href": "sites/mtv/index.html", "match": "/mtv/", "whenKey": "itt96-mtv", "nextHref": "sites/portals/wars.html", "nextLabel": "★ year gold leftover"}
     ],
     "1997": [
       {"n": 1, "name": "PointCast", "href": "sites/pointcast/index.html", "match": "/pointcast/", "whenKey": "itt97-pointcast", "nextHref": "sites/icq/index.html", "nextLabel": "ICQ sign-on"},
@@ -53,7 +83,17 @@
       {"n": 7, "name": "HotBot", "href": "sites/hotbot/index.html", "match": "/hotbot/", "whenKey": "itt97-hotbot", "nextHref": "sites/aim/index.html", "nextLabel": "AIM seed"},
       {"n": 8, "name": "AIM seed", "href": "sites/aim/index.html", "match": "/aim/", "whenKey": "itt97-aim-seed", "nextHref": "sites/apple/think-different.html", "nextLabel": "Apple"},
       {"n": 9, "name": "Apple", "href": "sites/apple/think-different.html", "match": "/apple/", "whenKey": "itt97-td", "nextHref": "sites/microsoft/index.html", "nextLabel": "IE 4"},
-      {"n": 10, "name": "Microsoft", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt97-ms", "nextHref": "sites/pointcast/index.html", "nextLabel": "PointCast"}
+      {"n": 10, "name": "Microsoft", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt97-ms", "nextHref": "sites/pointcast/index.html", "nextLabel": "PointCast"},
+      {"n": 11, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt97-amzn-ipo", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo leftover"},
+      {"n": 12, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt97-yh-lx", "nextHref": "sites/cnn/index.html", "nextLabel": "CNN leftover"},
+      {"n": 13, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt97-cnn-lx", "nextHref": "sites/geocities/index.html", "nextLabel": "GeoCities leftover"},
+      {"n": 14, "name": "GeoCities leftover", "href": "sites/geocities/index.html", "match": "/geocities/", "whenKey": "itt97-geo-lx", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape leftover"},
+      {"n": 15, "name": "Netscape leftover", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt97-ns-lx", "nextHref": "sites/altavista/index.html", "nextLabel": "AltaVista leftover"},
+      {"n": 16, "name": "AltaVista leftover", "href": "sites/altavista/index.html", "match": "/altavista/", "whenKey": "itt97-av-lx", "nextHref": "sites/espn/index.html", "nextLabel": "ESPN leftover"},
+      {"n": 17, "name": "ESPN leftover", "href": "sites/espn/index.html", "match": "/espn/", "whenKey": "itt97-espn-dp", "nextHref": "sites/disney/index.html", "nextLabel": "Disney leftover"},
+      {"n": 18, "name": "Disney leftover", "href": "sites/disney/index.html", "match": "/disney/", "whenKey": "itt97-disney-dp", "nextHref": "sites/winamp/index.html", "nextLabel": "Winamp leftover"},
+      {"n": 19, "name": "Winamp leftover", "href": "sites/winamp/index.html", "match": "/winamp/", "whenKey": "itt97-winamp", "nextHref": "sites/netflix/index.html", "nextLabel": "Netflix leftover"},
+      {"n": 20, "name": "Netflix leftover", "href": "sites/netflix/index.html", "match": "/netflix/", "whenKey": "itt97-netflix-dp", "nextHref": "sites/pointcast/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "1998": [
       {"n": 1, "name": "I'm Feeling Lucky", "href": "sites/google/lucky.html", "match": "/google/lucky", "whenKey": "itt98-lucky", "nextHref": "sites/amazon/music.html", "nextLabel": "Amazon Music"},
@@ -65,7 +105,17 @@
       {"n": 7, "name": "HoTMaiL", "href": "sites/hotmail/index.html", "match": "/hotmail/", "whenKey": "itt98-hotmail", "nextHref": "sites/mozilla/index.html", "nextLabel": "Mozilla.org"},
       {"n": 8, "name": "Mozilla.org", "href": "sites/mozilla/index.html", "match": "/mozilla/", "whenKey": "itt98-mozilla", "nextHref": "sites/slashdot/index.html", "nextLabel": "Slashdot"},
       {"n": 9, "name": "Slashdot", "href": "sites/slashdot/index.html", "match": "/slashdot/", "whenKey": "itt98-slashdot", "nextHref": "sites/dmoz/index.html", "nextLabel": "Open Directory"},
-      {"n": 10, "name": "DMOZ", "href": "sites/dmoz/index.html", "match": "/dmoz/", "whenKey": "itt98-dmoz", "nextHref": "sites/google/lucky.html", "nextLabel": "I'm Feeling Lucky"}
+      {"n": 10, "name": "DMOZ", "href": "sites/dmoz/index.html", "match": "/dmoz/", "whenKey": "itt98-dmoz", "nextHref": "sites/google/lucky.html", "nextLabel": "I'm Feeling Lucky"},
+      {"n": 11, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt98-cnn-lx", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft leftover"},
+      {"n": 12, "name": "Microsoft leftover", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt98-ms-lx", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape leftover"},
+      {"n": 13, "name": "Netscape leftover", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt98-ns-lx", "nextHref": "sites/excite/index.html", "nextLabel": "Excite leftover"},
+      {"n": 14, "name": "Excite leftover", "href": "sites/excite/index.html", "match": "/excite/", "whenKey": "itt98-ex-lx", "nextHref": "sites/geocities/index.html", "nextLabel": "GeoCities leftover"},
+      {"n": 15, "name": "GeoCities leftover", "href": "sites/geocities/index.html", "match": "/geocities/", "whenKey": "itt98-geo-lx", "nextHref": "sites/aol/index.html", "nextLabel": "AOL leftover"},
+      {"n": 16, "name": "AOL leftover", "href": "sites/aol/index.html", "match": "/aol/", "whenKey": "itt98-aol-lx", "nextHref": "sites/lycos/index.html", "nextLabel": "Lycos leftover"},
+      {"n": 17, "name": "Lycos leftover", "href": "sites/lycos/index.html", "match": "/lycos/", "whenKey": "itt98-ly-lx", "nextHref": "sites/icq/index.html", "nextLabel": "ICQ leftover"},
+      {"n": 18, "name": "ICQ leftover", "href": "sites/icq/index.html", "match": "/icq/", "whenKey": "itt98-icq-lx", "nextHref": "sites/altavista/index.html", "nextLabel": "AltaVista leftover"},
+      {"n": 19, "name": "AltaVista leftover", "href": "sites/altavista/index.html", "match": "/altavista/", "whenKey": "itt98-av-lx", "nextHref": "sites/winamp/index.html", "nextLabel": "Winamp leftover"},
+      {"n": 20, "name": "Winamp leftover", "href": "sites/winamp/index.html", "match": "/winamp/", "whenKey": "itt98-winamp-rlx", "nextHref": "sites/google/lucky.html", "nextLabel": "★ year gold leftover"}
     ],
     "1999": [
       {"n": 1, "name": "AIM sign-on", "href": "sites/aim/index.html", "match": "/aim/", "whenKey": "itt99-aim", "nextHref": "sites/napster/index.html", "nextLabel": "Napster"},
@@ -77,7 +127,17 @@
       {"n": 7, "name": "PayPal", "href": "sites/paypal/send.html", "match": "/paypal/", "whenKey": "itt99-paypal", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon"},
       {"n": 8, "name": "Amazon", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt99-amazon", "nextHref": "sites/ebay/item-laptop.html", "nextLabel": "eBay"},
       {"n": 9, "name": "eBay", "href": "sites/ebay/item-laptop.html", "match": "/ebay/", "whenKey": "itt99-ebay", "nextHref": "sites/askjeeves/index.html", "nextLabel": "Ask Jeeves"},
-      {"n": 10, "name": "Ask Jeeves", "href": "sites/askjeeves/index.html", "match": "/askjeeves/", "whenKey": "itt99-jeeves", "nextHref": "sites/aim/index.html", "nextLabel": "AIM"}
+      {"n": 10, "name": "Ask Jeeves", "href": "sites/askjeeves/index.html", "match": "/askjeeves/", "whenKey": "itt99-jeeves", "nextHref": "sites/aim/index.html", "nextLabel": "AIM"},
+      {"n": 11, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt99-yh-lx", "nextHref": "sites/cnn/index.html", "nextLabel": "CNN leftover"},
+      {"n": 12, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt99-cnn-lx", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft leftover"},
+      {"n": 13, "name": "Microsoft leftover", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt99-ms-lx", "nextHref": "sites/geocities/index.html", "nextLabel": "GeoCities leftover"},
+      {"n": 14, "name": "GeoCities leftover", "href": "sites/geocities/index.html", "match": "/geocities/", "whenKey": "itt99-gc-yahoo", "nextHref": "sites/slashdot/index.html", "nextLabel": "Slashdot leftover"},
+      {"n": 15, "name": "Slashdot leftover", "href": "sites/slashdot/index.html", "match": "/slashdot/", "whenKey": "itt99-sd-lx", "nextHref": "sites/livejournal/index.html", "nextLabel": "LiveJournal leftover"},
+      {"n": 16, "name": "LiveJournal leftover", "href": "sites/livejournal/index.html", "match": "/livejournal/", "whenKey": "itt99-lj", "nextHref": "sites/dmoz/index.html", "nextLabel": "dmoz leftover"},
+      {"n": 17, "name": "dmoz leftover", "href": "sites/dmoz/index.html", "match": "/dmoz/", "whenKey": "itt99-dmoz-lx", "nextHref": "sites/excite/index.html", "nextLabel": "Excite leftover"},
+      {"n": 18, "name": "Excite leftover", "href": "sites/excite/index.html", "match": "/excite/", "whenKey": "itt99-ex-lx", "nextHref": "sites/aol/index.html", "nextLabel": "AOL leftover"},
+      {"n": 19, "name": "AOL leftover", "href": "sites/aol/index.html", "match": "/aol/", "whenKey": "itt99-aol-lx", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape leftover"},
+      {"n": 20, "name": "Netscape leftover", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt99-netscape-rlx", "nextHref": "sites/aim/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "2000": [
       {"n": 1, "name": "MapQuest", "href": "sites/mapquest/index.html", "match": "/mapquest/", "whenKey": "itt00-mapquest", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon smile"},
@@ -89,7 +149,17 @@
       {"n": 7, "name": "Pets.com", "href": "sites/pets/shop.html", "match": "/pets/", "whenKey": "itt00-amazon-cart", "nextHref": "sites/google/index.html", "nextLabel": "Google"},
       {"n": 8, "name": "Google", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt00-google", "nextHref": "sites/cnn/index.html", "nextLabel": "CNN"},
       {"n": 9, "name": "CNN", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt00-cnn", "nextHref": "sites/blogger/index.html", "nextLabel": "Blogger"},
-      {"n": 10, "name": "Y2K", "href": "sites/y2k/index.html", "match": "/y2k/", "whenKey": "itt00-y2k", "nextHref": "sites/mapquest/index.html", "nextLabel": "MapQuest"}
+      {"n": 10, "name": "Y2K", "href": "sites/y2k/index.html", "match": "/y2k/", "whenKey": "itt00-y2k", "nextHref": "sites/mapquest/index.html", "nextLabel": "MapQuest"},
+      {"n": 11, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt00-yahoo", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft leftover"},
+      {"n": 12, "name": "Microsoft leftover", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt00-microsoft-d3", "nextHref": "sites/geocities/index.html", "nextLabel": "GeoCities leftover"},
+      {"n": 13, "name": "GeoCities leftover", "href": "sites/geocities/index.html", "match": "/geocities/", "whenKey": "itt00-geocities-d5", "nextHref": "sites/slashdot/index.html", "nextLabel": "Slashdot leftover"},
+      {"n": 14, "name": "Slashdot leftover", "href": "sites/slashdot/index.html", "match": "/slashdot/", "whenKey": "itt00-slashdot", "nextHref": "sites/blogger/index.html", "nextLabel": "Blogger leftover"},
+      {"n": 15, "name": "Blogger leftover", "href": "sites/blogger/index.html", "match": "/blogger/", "whenKey": "itt00-blogger", "nextHref": "sites/aol/index.html", "nextLabel": "AOL leftover"},
+      {"n": 16, "name": "AOL leftover", "href": "sites/aol/index.html", "match": "/aol/", "whenKey": "itt00-aol", "nextHref": "sites/excite/index.html", "nextLabel": "Excite leftover"},
+      {"n": 17, "name": "Excite leftover", "href": "sites/excite/index.html", "match": "/excite/", "whenKey": "itt00-excite", "nextHref": "sites/dmoz/index.html", "nextLabel": "dmoz leftover"},
+      {"n": 18, "name": "dmoz leftover", "href": "sites/dmoz/index.html", "match": "/dmoz/", "whenKey": "itt00-dmoz-d3", "nextHref": "sites/apple/index.html", "nextLabel": "Apple leftover"},
+      {"n": 19, "name": "Apple leftover", "href": "sites/apple/index.html", "match": "/apple/", "whenKey": "itt00-apple", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape leftover"},
+      {"n": 20, "name": "Netscape leftover", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt00-netscape-d3", "nextHref": "sites/mapquest/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "2001": [
       {"n": 1, "name": "Wikipedia", "href": "sites/wikipedia/edit.html", "match": "/wikipedia/", "whenKey": "itt01-wiki", "nextHref": "sites/archive/index.html", "nextLabel": "Wayback"},
@@ -101,7 +171,17 @@
       {"n": 7, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt01-google", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo"},
       {"n": 8, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt01-yahoo", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon"},
       {"n": 9, "name": "Amazon smile leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt01-amz", "nextHref": "sites/playable/game.html", "nextLabel": "Clickscape"},
-      {"n": 10, "name": "Clickscape", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt01-game-clickscape", "nextHref": "sites/wikipedia/edit.html", "nextLabel": "Wikipedia"}
+      {"n": 10, "name": "Clickscape", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt01-game-clickscape", "nextHref": "sites/wikipedia/edit.html", "nextLabel": "Wikipedia"},
+      {"n": 11, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt01-cnn", "nextHref": "sites/ebay/index.html", "nextLabel": "eBay leftover"},
+      {"n": 12, "name": "eBay leftover", "href": "sites/ebay/index.html", "match": "/ebay/", "whenKey": "itt01-ebay-d3", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft leftover"},
+      {"n": 13, "name": "Microsoft leftover", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt01-microsoft", "nextHref": "sites/paypal/index.html", "nextLabel": "PayPal leftover"},
+      {"n": 14, "name": "PayPal leftover", "href": "sites/paypal/index.html", "match": "/paypal/", "whenKey": "itt01-paypal-d3", "nextHref": "sites/slashdot/index.html", "nextLabel": "Slashdot leftover"},
+      {"n": 15, "name": "Slashdot leftover", "href": "sites/slashdot/index.html", "match": "/slashdot/", "whenKey": "itt01-slashdot-d3", "nextHref": "sites/blogger/index.html", "nextLabel": "Blogger leftover"},
+      {"n": 16, "name": "Blogger leftover", "href": "sites/blogger/index.html", "match": "/blogger/", "whenKey": "itt01-blogger", "nextHref": "sites/mozilla/index.html", "nextLabel": "Mozilla leftover"},
+      {"n": 17, "name": "Mozilla leftover", "href": "sites/mozilla/index.html", "match": "/mozilla/", "whenKey": "itt01-moz", "nextHref": "sites/askjeeves/index.html", "nextLabel": "Ask Jeeves leftover"},
+      {"n": 18, "name": "Ask Jeeves leftover", "href": "sites/askjeeves/index.html", "match": "/askjeeves/", "whenKey": "itt01-askjeeves-d3", "nextHref": "sites/dmoz/index.html", "nextLabel": "dmoz leftover"},
+      {"n": 19, "name": "dmoz leftover", "href": "sites/dmoz/index.html", "match": "/dmoz/", "whenKey": "itt01-dmoz-d3", "nextHref": "sites/encarta/index.html", "nextLabel": "Encarta leftover"},
+      {"n": 20, "name": "Encarta leftover", "href": "sites/encarta/index.html", "match": "/encarta/", "whenKey": "itt01-encarta", "nextHref": "sites/wikipedia/edit.html", "nextLabel": "★ year gold leftover"}
     ],
     "2002": [
       {"n": 1, "name": "StumbleUpon", "href": "sites/stumbleupon/index.html", "match": "/stumbleupon/", "whenKey": "itt02-stumble", "nextHref": "sites/isp/index.html", "nextLabel": "Always-on"},
@@ -113,7 +193,17 @@
       {"n": 7, "name": "iPod gen 2", "href": "sites/ipod/index.html", "match": "/ipod/", "whenKey": "itt02-ipod2", "nextHref": "sites/friendster/index.html", "nextLabel": "Friendster"},
       {"n": 8, "name": "Friendster seed", "href": "sites/friendster/index.html", "match": "/friendster/", "whenKey": "itt02-fs", "nextHref": "sites/movabletype/trackback.html", "nextLabel": "TrackBack"},
       {"n": 9, "name": "TrackBack", "href": "sites/movabletype/trackback.html", "match": "/movabletype/", "whenKey": "itt02-trackback", "nextHref": "sites/playable/game.html", "nextLabel": "Room Sticky"},
-      {"n": 10, "name": "Room Sticky", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt02-game-roomsticky", "nextHref": "sites/stumbleupon/index.html", "nextLabel": "Stumble"}
+      {"n": 10, "name": "Room Sticky", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt02-game-roomsticky", "nextHref": "sites/stumbleupon/index.html", "nextLabel": "Stumble"},
+      {"n": 11, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt02-yahoo", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon leftover"},
+      {"n": 12, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt02-amz", "nextHref": "sites/google/index.html", "nextLabel": "Google leftover"},
+      {"n": 13, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt02-google-d3", "nextHref": "sites/wikipedia/index.html", "nextLabel": "Wikipedia leftover"},
+      {"n": 14, "name": "Wikipedia leftover", "href": "sites/wikipedia/index.html", "match": "/wikipedia/", "whenKey": "itt02-wiki-lx", "nextHref": "sites/ebay/index.html", "nextLabel": "eBay leftover"},
+      {"n": 15, "name": "eBay leftover", "href": "sites/ebay/index.html", "match": "/ebay/", "whenKey": "itt02-ebay-d3", "nextHref": "sites/googlenews/index.html", "nextLabel": "Google News leftover"},
+      {"n": 16, "name": "Google News leftover", "href": "sites/googlenews/index.html", "match": "/googlenews/", "whenKey": "itt02-gnews", "nextHref": "sites/lastfm/index.html", "nextLabel": "Last.fm leftover"},
+      {"n": 17, "name": "Last.fm leftover", "href": "sites/lastfm/index.html", "match": "/lastfm/", "whenKey": "itt02-lastfm", "nextHref": "sites/netflix/index.html", "nextLabel": "Netflix leftover"},
+      {"n": 18, "name": "Netflix leftover", "href": "sites/netflix/index.html", "match": "/netflix/", "whenKey": "itt02-netflix", "nextHref": "sites/daypop/index.html", "nextLabel": "Daypop leftover"},
+      {"n": 19, "name": "Daypop leftover", "href": "sites/daypop/index.html", "match": "/daypop/", "whenKey": "itt02-daypop", "nextHref": "sites/mtv/index.html", "nextLabel": "MTV leftover"},
+      {"n": 20, "name": "MTV leftover", "href": "sites/mtv/index.html", "match": "/mtv/", "whenKey": "itt02-mtv", "nextHref": "sites/stumbleupon/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "2003": [
       {"n": 1, "name": "Photobucket", "href": "sites/photobucket/index.html", "match": "/photobucket/", "whenKey": "itt03-photobucket", "nextHref": "sites/itunes/index.html", "nextLabel": "iTunes Store"},
@@ -125,7 +215,17 @@
       {"n": 7, "name": "AdSense", "href": "sites/adsense/index.html", "match": "/adsense/", "whenKey": "itt03-adsense", "nextHref": "sites/bloglines/index.html", "nextLabel": "Bloglines"},
       {"n": 8, "name": "Bloglines", "href": "sites/bloglines/index.html", "match": "/bloglines/", "whenKey": "itt03-bloglines-feeds", "nextHref": "sites/blogger/index.html", "nextLabel": "Blogger"},
       {"n": 9, "name": "Blogger-Google", "href": "sites/blogger/edit.html", "match": "/blogger/", "whenKey": "itt03-blog", "nextHref": "sites/playable/game.html", "nextLabel": "Gags Lite"},
-      {"n": 10, "name": "Gags Lite", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt03-game-gagslite", "nextHref": "sites/photobucket/index.html", "nextLabel": "Photobucket"}
+      {"n": 10, "name": "Gags Lite", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt03-game-gagslite", "nextHref": "sites/photobucket/index.html", "nextLabel": "Photobucket"},
+      {"n": 11, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt03-yahoo", "nextHref": "sites/google/index.html", "nextLabel": "Google leftover"},
+      {"n": 12, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt03-google", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon leftover"},
+      {"n": 13, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt03-amz", "nextHref": "sites/wikipedia/index.html", "nextLabel": "Wikipedia leftover"},
+      {"n": 14, "name": "Wikipedia leftover", "href": "sites/wikipedia/index.html", "match": "/wikipedia/", "whenKey": "itt03-wikipedia-d3", "nextHref": "sites/skype/index.html", "nextLabel": "Skype leftover"},
+      {"n": 15, "name": "Skype leftover", "href": "sites/skype/index.html", "match": "/skype/", "whenKey": "itt03-skype", "nextHref": "sites/delicious/index.html", "nextLabel": "del.icio.us leftover"},
+      {"n": 16, "name": "del.icio.us leftover", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt03-delicious", "nextHref": "sites/kazaa/index.html", "nextLabel": "KaZaA leftover"},
+      {"n": 17, "name": "KaZaA leftover", "href": "sites/kazaa/index.html", "match": "/kazaa/", "whenKey": "itt03-kazaa-q", "nextHref": "sites/cnn/index.html", "nextLabel": "CNN leftover"},
+      {"n": 18, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt03-cnn-d3", "nextHref": "sites/hi5/index.html", "nextLabel": "Hi5 leftover"},
+      {"n": 19, "name": "Hi5 leftover", "href": "sites/hi5/index.html", "match": "/hi5/", "whenKey": "itt03-hi5", "nextHref": "sites/flash/index.html", "nextLabel": "Flash leftover"},
+      {"n": 20, "name": "Flash leftover", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt03-flash-fwa", "nextHref": "sites/photobucket/index.html", "nextLabel": "★ year gold leftover"}
     ],
                 "2004": [
       {"n": 1, "name": "thefacebook networks", "href": "sites/facebook/networks.html", "match": "/facebook/networks", "whenKey": "itt04-thefacebook-networks", "nextHref": "sites/facebook/friends.html", "nextLabel": "Friends / poke"},
@@ -137,7 +237,17 @@
       {"n": 7, "name": "Friends", "href": "sites/facebook/friends.html", "match": "/facebook/friends", "whenKey": "itt04-fb-friends", "nextHref": "sites/facebook/profile.html", "nextLabel": "Profile"},
       {"n": 8, "name": "Profile", "href": "sites/facebook/profile.html", "match": "/facebook/profile", "whenKey": "itt04-fb-profile", "nextHref": "sites/facebook/invite.html", "nextLabel": "Invite"},
       {"n": 9, "name": "Invite", "href": "sites/facebook/invite.html", "match": "/facebook/invite", "whenKey": "itt04-fb-invite", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail"},
-      {"n": 10, "name": "Web 2.0 Conf", "href": "sites/web20conference/index.html", "match": "/web20conference/", "whenKey": "itt04-web20", "nextHref": "sites/facebook/networks.html", "nextLabel": "thefacebook"}
+      {"n": 10, "name": "Web 2.0 Conf", "href": "sites/web20conference/index.html", "match": "/web20conference/", "whenKey": "itt04-web20", "nextHref": "sites/facebook/networks.html", "nextLabel": "thefacebook"},
+      {"n": 11, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt04-google-rlx", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo leftover"},
+      {"n": 12, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt04-yahoo-rlx", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon leftover"},
+      {"n": 13, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt04-amazon-rlx", "nextHref": "sites/ebay/index.html", "nextLabel": "eBay leftover"},
+      {"n": 14, "name": "eBay leftover", "href": "sites/ebay/index.html", "match": "/ebay/", "whenKey": "itt04-ebay-rlx", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace leftover"},
+      {"n": 15, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt04-ms", "nextHref": "sites/wikipedia/index.html", "nextLabel": "Wikipedia leftover"},
+      {"n": 16, "name": "Wikipedia leftover", "href": "sites/wikipedia/index.html", "match": "/wikipedia/", "whenKey": "itt04-wikipedia-rlx", "nextHref": "sites/cnn/index.html", "nextLabel": "CNN leftover"},
+      {"n": 17, "name": "CNN leftover", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt04-cnn-rlx", "nextHref": "sites/orkut/index.html", "nextLabel": "Orkut leftover"},
+      {"n": 18, "name": "Orkut leftover", "href": "sites/orkut/index.html", "match": "/orkut/", "whenKey": "itt04-ork-lx", "nextHref": "sites/skype/index.html", "nextLabel": "Skype leftover"},
+      {"n": 19, "name": "Skype leftover", "href": "sites/skype/index.html", "match": "/skype/", "whenKey": "itt04-skype-rlx", "nextHref": "sites/livejournal/index.html", "nextLabel": "LiveJournal leftover"},
+      {"n": 20, "name": "LiveJournal leftover", "href": "sites/livejournal/index.html", "match": "/livejournal/", "whenKey": "itt04-lj-lx", "nextHref": "sites/facebook/networks.html", "nextLabel": "★ year gold leftover"}
     ],
     "2005": [
       {"n": 1, "name": "Upload", "href": "sites/youtube/upload.html", "match": "/youtube/upload", "whenKey": "itt05-yt-uploads", "nextHref": "sites/maps/index.html", "nextLabel": "Google Maps leftover"},
@@ -149,7 +259,17 @@
       {"n": 7, "name": "Flickr leftover", "href": "sites/flickr/index.html", "match": "/flickr/", "whenKey": "itt05-flickr", "nextHref": "sites/itunes/podcasts.html", "nextLabel": "iTunes podcasts leftover"},
       {"n": 8, "name": "iTunes podcasts leftover", "href": "sites/itunes/podcasts.html", "match": "/itunes/podcasts", "whenKey": "itt05-pod", "nextHref": "sites/techcrunch/index.html", "nextLabel": "TechCrunch leftover"},
       {"n": 9, "name": "TechCrunch leftover", "href": "sites/techcrunch/index.html", "match": "/techcrunch/", "whenKey": "itt05-tc", "nextHref": "sites/playable/game.html", "nextLabel": "HoverChop"},
-      {"n": 10, "name": "HoverChop", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt05-game-heli", "nextHref": "sites/youtube/upload.html", "nextLabel": "Upload"}
+      {"n": 10, "name": "HoverChop", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt05-game-heli", "nextHref": "sites/youtube/upload.html", "nextLabel": "Upload"},
+      {"n": 11, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt05-google-q", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo leftover"},
+      {"n": 12, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt05-yahoo-lx", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon leftover"},
+      {"n": 13, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt05-amz-lx", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook leftover"},
+      {"n": 14, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt05-fb-rename", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail leftover"},
+      {"n": 15, "name": "Gmail leftover", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt05-gmail-lx", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace leftover"},
+      {"n": 16, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt05-ms-lx", "nextHref": "sites/wikipedia/index.html", "nextLabel": "Wikipedia leftover"},
+      {"n": 17, "name": "Wikipedia leftover", "href": "sites/wikipedia/index.html", "match": "/wikipedia/", "whenKey": "itt05-wiki-lx", "nextHref": "sites/delicious/index.html", "nextLabel": "del.icio.us leftover"},
+      {"n": 18, "name": "del.icio.us leftover", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt05-deli-lx", "nextHref": "sites/firefox/index.html", "nextLabel": "Firefox leftover"},
+      {"n": 19, "name": "Firefox leftover", "href": "sites/firefox/index.html", "match": "/firefox/", "whenKey": "itt05-fx15-lx", "nextHref": "sites/vimeo/index.html", "nextLabel": "Vimeo leftover"},
+      {"n": 20, "name": "Vimeo leftover", "href": "sites/vimeo/index.html", "match": "/vimeo/", "whenKey": "itt05-vimeo-lx", "nextHref": "sites/youtube/upload.html", "nextLabel": "★ year gold leftover"}
     ],
     "2006": [
       {"n": 1, "name": "Twttr", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt06-tweets", "nextHref": "sites/facebook/feed.html", "nextLabel": "News Feed leftover"},
@@ -161,7 +281,17 @@
       {"n": 7, "name": "IE7 leftover", "href": "sites/ie7/index.html", "match": "/ie7/", "whenKey": "itt06-ie7", "nextHref": "sites/wikipedia/millionth.html", "nextLabel": "Wiki millionth leftover"},
       {"n": 8, "name": "Wiki millionth leftover", "href": "sites/wikipedia/millionth.html", "match": "/wikipedia/millionth", "whenKey": "itt06-wiki-1m", "nextHref": "sites/roblox/index.html", "nextLabel": "Roblox leftover"},
       {"n": 9, "name": "Roblox leftover", "href": "sites/roblox/index.html", "match": "/roblox/", "whenKey": "itt06-roblox", "nextHref": "sites/playable/linerider.html", "nextLabel": "Line Rider leftover"},
-      {"n": 10, "name": "Line Rider leftover", "href": "sites/playable/linerider.html", "match": "/linerider/", "whenKey": "itt06-game-linerider", "nextHref": "sites/twitter/index.html", "nextLabel": "Twttr"}
+      {"n": 10, "name": "Line Rider leftover", "href": "sites/playable/linerider.html", "match": "/linerider/", "whenKey": "itt06-game-linerider", "nextHref": "sites/twitter/index.html", "nextLabel": "Twttr"},
+      {"n": 11, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt06-google-q", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo leftover"},
+      {"n": 12, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt06-yahoo-lx", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon leftover"},
+      {"n": 13, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt06-amz-lx", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace leftover"},
+      {"n": 14, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt06-ms-lx", "nextHref": "sites/flickr/index.html", "nextLabel": "Flickr leftover"},
+      {"n": 15, "name": "Flickr leftover", "href": "sites/flickr/index.html", "match": "/flickr/", "whenKey": "itt06-flickr", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail leftover"},
+      {"n": 16, "name": "Gmail leftover", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt06-gmail-lx", "nextHref": "sites/reddit/index.html", "nextLabel": "Reddit leftover"},
+      {"n": 17, "name": "Reddit leftover", "href": "sites/reddit/index.html", "match": "/reddit/", "whenKey": "itt06-reddit", "nextHref": "sites/delicious/index.html", "nextLabel": "del.icio.us leftover"},
+      {"n": 18, "name": "del.icio.us leftover", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt06-deli-lx", "nextHref": "sites/digg/index.html", "nextLabel": "Digg leftover"},
+      {"n": 19, "name": "Digg leftover", "href": "sites/digg/index.html", "match": "/digg/", "whenKey": "itt06-digg", "nextHref": "sites/maps/index.html", "nextLabel": "Maps leftover"},
+      {"n": 20, "name": "Maps leftover", "href": "sites/maps/index.html", "match": "/maps/", "whenKey": "itt06-maps", "nextHref": "sites/twitter/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "2008": [
       {"n": 1, "name": "GitHub issue", "href": "sites/github/issue.html", "match": "/github/", "whenKey": "itt08-github", "nextHref": "sites/appstore/index.html", "nextLabel": "App Store leftover"},
@@ -173,7 +303,17 @@
       {"n": 7, "name": "Twitter", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt08-tweets", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube"},
       {"n": 8, "name": "YouTube", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt08-yt", "nextHref": "sites/dropbox/index.html", "nextLabel": "Dropbox"},
       {"n": 9, "name": "Dropbox", "href": "sites/dropbox/index.html", "match": "/dropbox/", "whenKey": "itt08-dropbox", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone 3G"},
-      {"n": 10, "name": "iPhone 3G", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt08-iphone3g", "nextHref": "sites/appstore/index.html", "nextLabel": "App Store"}
+      {"n": 10, "name": "iPhone 3G", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt08-iphone3g", "nextHref": "sites/appstore/index.html", "nextLabel": "App Store"},
+      {"n": 11, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt08-google-rlx", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo leftover"},
+      {"n": 12, "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt08-yahoo-rlx", "nextHref": "sites/wikipedia/index.html", "nextLabel": "Wikipedia leftover"},
+      {"n": 13, "name": "Wikipedia leftover", "href": "sites/wikipedia/index.html", "match": "/wikipedia/", "whenKey": "itt08-wikipedia-rlx", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail leftover"},
+      {"n": 14, "name": "Gmail leftover", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt08-gmail-rlx", "nextHref": "sites/flickr/index.html", "nextLabel": "Flickr leftover"},
+      {"n": 15, "name": "Flickr leftover", "href": "sites/flickr/index.html", "match": "/flickr/", "whenKey": "itt08-flickr-rlx", "nextHref": "sites/reddit/index.html", "nextLabel": "Reddit leftover"},
+      {"n": 16, "name": "Reddit leftover", "href": "sites/reddit/index.html", "match": "/reddit/", "whenKey": "itt08-rd-lx", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon leftover"},
+      {"n": 17, "name": "Amazon leftover", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt08-amazon-rlx", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace leftover"},
+      {"n": 18, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt08-myspace-rlx", "nextHref": "sites/delicious/index.html", "nextLabel": "del.icio.us leftover"},
+      {"n": 19, "name": "del.icio.us leftover", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt08-delicious-rlx", "nextHref": "sites/stackoverflow/index.html", "nextLabel": "Stack Overflow leftover"},
+      {"n": 20, "name": "Stack Overflow leftover", "href": "sites/stackoverflow/index.html", "match": "/stackoverflow/", "whenKey": "itt08-so-lx", "nextHref": "sites/github/issue.html", "nextLabel": "★ year gold leftover"}
     ],
     "2009": [
       {"n": 1, "name": "Facebook Like", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt09-like", "nextHref": "sites/farmville/index.html", "nextLabel": "FarmVille"},
@@ -317,7 +457,17 @@
       {"n": 7, "name": "Tumblr leftover", "href": "sites/tumblr/index.html", "match": "/tumblr/", "whenKey": "itt07-tumblr", "nextHref": "sites/kindle/index.html", "nextLabel": "Kindle leftover"},
       {"n": 8, "name": "Kindle leftover", "href": "sites/kindle/index.html", "match": "/kindle/", "whenKey": "itt07-kindle", "nextHref": "sites/ie6/index.html", "nextLabel": "XP/IE6 residual"},
       {"n": 9, "name": "XP/IE6 residual", "href": "sites/ie6/index.html", "match": "/ie6/", "whenKey": "itt07-ie6", "nextHref": "sites/playable/game.html", "nextLabel": "Safari Queue"},
-      {"n": 10, "name": "Safari Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt07-game-safariq", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone Safari"}
+      {"n": 10, "name": "Safari Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt07-game-safariq", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone Safari"},
+      {"n": 11, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt07-facebook-c", "nextHref": "sites/google/index.html", "nextLabel": "Google leftover"},
+      {"n": 12, "name": "Google leftover", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt07-google-c", "nextHref": "sites/wiki/index.html", "nextLabel": "Wikipedia leftover"},
+      {"n": 13, "name": "Wikipedia leftover", "href": "sites/wiki/index.html", "match": "/wiki/", "whenKey": "itt07-wiki-dp", "nextHref": "sites/maps/index.html", "nextLabel": "Maps leftover"},
+      {"n": 14, "name": "Maps leftover", "href": "sites/maps/index.html", "match": "/maps/", "whenKey": "itt07-maps-dp", "nextHref": "sites/reddit/index.html", "nextLabel": "Reddit leftover"},
+      {"n": 15, "name": "Reddit leftover", "href": "sites/reddit/index.html", "match": "/reddit/", "whenKey": "itt07-reddit-dp", "nextHref": "sites/flickr/index.html", "nextLabel": "Flickr leftover"},
+      {"n": 16, "name": "Flickr leftover", "href": "sites/flickr/index.html", "match": "/flickr/", "whenKey": "itt07-flickr-dp", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace leftover"},
+      {"n": 17, "name": "MySpace leftover", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt07-myspace-dp", "nextHref": "sites/ebay/index.html", "nextLabel": "eBay leftover"},
+      {"n": 18, "name": "eBay leftover", "href": "sites/ebay/index.html", "match": "/ebay/", "whenKey": "itt07-ebay-dp", "nextHref": "sites/digg/index.html", "nextLabel": "Digg leftover"},
+      {"n": 19, "name": "Digg leftover", "href": "sites/digg/index.html", "match": "/digg/", "whenKey": "itt07-digg-dp", "nextHref": "sites/stumble/index.html", "nextLabel": "Stumble leftover"},
+      {"n": 20, "name": "Stumble leftover", "href": "sites/stumble/index.html", "match": "/stumble/", "whenKey": "itt07-stumble-dp", "nextHref": "sites/iphone/index.html", "nextLabel": "★ year gold leftover"}
     ],
     "2021": [
       {"n": 1, "name": "ATT Ask", "href": "sites/att/index.html", "match": "/att/", "whenKey": "itt21-att", "nextHref": "sites/signal/index.html", "nextLabel": "Signal leftover"},

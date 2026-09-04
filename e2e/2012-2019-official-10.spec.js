@@ -69,15 +69,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt12-ig-android"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/2012/sites/pinterest/index.html", "itt12-pin"],
-      ["/years/2012/sites/facebook/ipo.html", "itt12-fb-ipo"],
-      ["/years/2012/sites/facebook/index.html", "itt12-facebook"],
-      ["/years/2012/sites/iphone/maps.html", "itt12-maps"],
-      ["/years/2012/sites/wikipedia/sopa.html", "itt12-sopa"],
-      ["/years/2012/sites/medium/index.html", "itt12-pop-medium"],
-      ["/years/2012/sites/path/index.html", "itt12-pop-path"],
-      ["/years/2012/sites/flipboard/index.html", "itt12-pop-flipboard"],
-      ["/years/2012/sites/playable/game.html", "itt12-game-guessdoodle"],
+      ["/years/2012/sites/pinterest/index.html", "itt12-pin-lx"],
+      ["/years/2012/sites/facebook/ipo.html", "itt12-fb-ipo-lx"],
+      ["/years/2012/sites/facebook/index.html", "itt12-facebook-lx"],
+      ["/years/2012/sites/iphone/maps.html", "itt12-maps-lx"],
+      ["/years/2012/sites/wikipedia/sopa.html", "itt12-sopa-lx"],
+      ["/years/2012/sites/medium/index.html", "itt12-pop-medium-lx"],
+      ["/years/2012/sites/path/index.html", "itt12-pop-path-lx"],
+      ["/years/2012/sites/flipboard/index.html", "itt12-pop-flipboard-lx"],
+      ["/years/2012/sites/playable/game.html", "itt12-game-guessdoodle-lx"],
     ],
   },
   {
@@ -94,15 +94,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt13-vine-posts"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/2013/sites/instagram/video.html", "itt13-ig-posts"],
-      ["/years/2013/sites/snapchat/story.html", "itt13-snap-story"],
-      ["/years/2013/sites/iphone/ios7.html", "itt13-ios7"],
-      ["/years/2013/sites/iphone/touchid.html", "itt13-touchid"],
-      ["/years/2013/sites/snowden/index.html", "itt13-snowden-ack"],
-      ["/years/2013/sites/telegram/index.html", "itt13-telegram-chat"],
-      ["/years/2013/sites/tumblr/index.html", "itt13-tumblr-yahoo"],
-      ["/years/2013/sites/windows81/index.html", "itt13-win81"],
-      ["/years/2013/sites/playable/game.html", "itt13-game-loopsix"],
+      ["/years/2013/sites/instagram/video.html", "itt13-ig-posts-lx"],
+      ["/years/2013/sites/snapchat/story.html", "itt13-snap-story-lx"],
+      ["/years/2013/sites/iphone/ios7.html", "itt13-ios7-lx"],
+      ["/years/2013/sites/iphone/touchid.html", "itt13-touchid-lx"],
+      ["/years/2013/sites/snowden/index.html", "itt13-snowden-ack-lx"],
+      ["/years/2013/sites/telegram/index.html", "itt13-telegram-chat-lx"],
+      ["/years/2013/sites/tumblr/index.html", "itt13-tumblr-yahoo-lx"],
+      ["/years/2013/sites/windows81/index.html", "itt13-win81-lx"],
+      ["/years/2013/sites/playable/game.html", "itt13-game-loopsix-lx"],
     ],
   },
   {
@@ -116,38 +116,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt14-wa-install"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/2014/sites/whatsapp/chat.html", "itt14-wa-chat"],
-      ["/years/2014/sites/heartbleed/index.html", "itt14-heartbleed"],
-      ["/years/2014/sites/icebucket/index.html", "itt14-icebucket"],
-      ["/years/2014/sites/iphone/index.html", "itt14-iphone6"],
-      ["/years/2014/sites/iphone/pay.html", "itt14-applepay"],
-      ["/years/2014/sites/material/index.html", "itt14-material"],
-      ["/years/2014/sites/slack/index.html", "itt14-slack"],
-      ["/years/2014/sites/twitch/index.html", "itt14-twitch"],
-      ["/years/2014/sites/playable/game.html", "itt14-game-tilefold"],
-    ],
-  },
-  {
-    year: "2015",
-    star: "itt15-periscope",
-    gold: async (page) => {
-      await openClear(page, "/years/2015/sites/periscope/index.html", "itt15-periscope");
-      await page.locator("[data-peri-live]").click();
-      expect(await getKey(page, "itt15-periscope")).toBeFalsy();
-      await page.fill("[data-peri-title]", "museum leftover live");
-      await page.locator("[data-peri-live]").click();
-      await expect.poll(() => getKey(page, "itt15-periscope"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2015/sites/googlephotos/index.html", "itt15-googlephotos"],
-      ["/years/2015/sites/windows10/index.html", "itt15-win10"],
-      ["/years/2015/sites/applemusic/index.html", "itt15-applemusic"],
-      ["/years/2015/sites/edge/index.html", "itt15-edge"],
-      ["/years/2015/sites/apple/watch.html", "itt15-watch"],
-      ["/years/2015/sites/snapchat/discover.html", "itt15-snap-discover"],
-      ["/years/2015/sites/discord/index.html", "itt15-discord"],
-      ["/years/2015/sites/letsencrypt/index.html", "itt15-le"],
-      ["/years/2015/sites/playable/game.html", "itt15-game-blobrush"],
+      ["/years/2014/sites/whatsapp/chat.html", "itt14-wa-chat-lx"],
+      ["/years/2014/sites/heartbleed/index.html", "itt14-heartbleed-lx"],
+      ["/years/2014/sites/icebucket/index.html", "itt14-icebucket-lx"],
+      ["/years/2014/sites/iphone/index.html", "itt14-iphone6-lx"],
+      ["/years/2014/sites/iphone/pay.html", "itt14-applepay-lx"],
+      ["/years/2014/sites/material/index.html", "itt14-material-lx"],
+      ["/years/2014/sites/slack/index.html", "itt14-slack-lx"],
+      ["/years/2014/sites/twitch/index.html", "itt14-twitch-lx"],
+      ["/years/2014/sites/playable/game.html", "itt14-game-tilefold-lx"],
     ],
   },
   {
@@ -162,15 +139,15 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/2016/sites/pokemongo/index.html", "itt16-pogo"],
-      ["/years/2016/sites/facebook/reactions.html", "itt16-fb-react"],
-      ["/years/2016/sites/whatsapp/e2e.html", "itt16-wa-e2e"],
-      ["/years/2016/sites/iphone/index.html", "itt16-iphone7"],
-      ["/years/2016/sites/vine/goodbye.html", "itt16-vine-end"],
-      ["/years/2016/sites/snapchat/spectacles.html", "itt16-spectacles"],
-      ["/years/2016/sites/musically/index.html", "itt16-musically"],
-      ["/years/2016/sites/windows10/end.html", "itt16-win10-end"],
-      ["/years/2016/sites/playable/game.html", "itt16-game-gymrush"],
+      ["/years/2016/sites/pokemongo/index.html", "itt16-pogo-lx"],
+      ["/years/2016/sites/facebook/reactions.html", "itt16-fb-react-lx"],
+      ["/years/2016/sites/whatsapp/e2e.html", "itt16-wa-e2e-lx"],
+      ["/years/2016/sites/iphone/index.html", "itt16-iphone7-lx"],
+      ["/years/2016/sites/vine/goodbye.html", "itt16-vine-end-lx"],
+      ["/years/2016/sites/snapchat/spectacles.html", "itt16-spectacles-lx"],
+      ["/years/2016/sites/musically/index.html", "itt16-musically-lx"],
+      ["/years/2016/sites/windows10/end.html", "itt16-win10-end-lx"],
+      ["/years/2016/sites/playable/game.html", "itt16-game-gymrush-lx"],
     ],
   },
   {
@@ -185,45 +162,22 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt17-faceid"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/2017/sites/fortnite/index.html", "itt17-fortnite"],
-      ["/years/2017/sites/twitter/280.html", "itt17-twitter-280"],
-      ["/years/2017/sites/teams/index.html", "itt17-teams"],
-      ["/years/2017/sites/vine/gone.html", "itt17-vine-gone"],
-      ["/years/2017/sites/switch/index.html", "itt17-switch"],
-      ["/years/2017/sites/wannacry/index.html", "itt17-wannacry"],
-      ["/years/2017/sites/musically/index.html", "itt17-musically"],
-      ["/years/2017/sites/equifax/index.html", "itt17-equifax"],
-      ["/years/2017/sites/playable/game.html", "itt17-game-stormcircle"],
-    ],
-  },
-  {
-    year: "2018",
-    star: "itt18-gdpr",
-    gold: async (page) => {
-      await openClear(page, "/years/2018/sites/gdpr/index.html", "itt18-gdpr");
-      await page.locator("[data-gdpr-accept-all]").click();
-      expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
-      await page.locator("[data-gdpr-manage]").click();
-      await page.locator("[data-gdpr-save]").click();
-      await expect.poll(() => getKey(page, "itt18-gdpr"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2018/sites/tiktok/fyp.html", "itt18-tiktok-fyp"],
-      ["/years/2018/sites/trust/index.html", "itt18-hearing"],
-      ["/years/2018/sites/instagram/igtv.html", "itt18-igtv"],
-      ["/years/2018/sites/chrome/not-secure.html", "itt18-not-secure"],
-      ["/years/2018/sites/homepod/index.html", "itt18-homepod"],
-      ["/years/2018/sites/spectre/index.html", "itt18-spectre"],
-      ["/years/2018/sites/fortnite/switch.html", "itt18-fn-switch"],
-      ["/years/2018/sites/github/microsoft.html", "itt18-github"],
-      ["/years/2018/sites/playable/game.html", "itt18-game-consentdash"],
+      ["/years/2017/sites/fortnite/index.html", "itt17-fortnite-lx"],
+      ["/years/2017/sites/twitter/280.html", "itt17-twitter-280-lx"],
+      ["/years/2017/sites/teams/index.html", "itt17-teams-lx"],
+      ["/years/2017/sites/vine/gone.html", "itt17-vine-gone-lx"],
+      ["/years/2017/sites/switch/index.html", "itt17-switch-lx"],
+      ["/years/2017/sites/wannacry/index.html", "itt17-wannacry-lx"],
+      ["/years/2017/sites/musically/index.html", "itt17-musically-lx"],
+      ["/years/2017/sites/equifax/index.html", "itt17-equifax-lx"],
+      ["/years/2017/sites/playable/game.html", "itt17-game-stormcircle-lx"],
     ],
   },
   {
     year: "2019",
     star: "itt19-disneyplus",
     gold: async (page) => {
-      await openClear(page, "/years/2019/sites/disneyplus/home.html", "itt19-disneyplus");
+      await openClear(page, "/years/2019/sites/disneyplus/home.html", "itt19-disneyplus-d3");
       await page.locator("[data-dplus-trial]").click();
       expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
       await page.locator("[data-dplus-continue]").click();
@@ -237,26 +191,27 @@ const YEARS = [
       await expect.poll(() => getKey(page, "itt19-disneyplus"), { timeout: 8000 }).toBeTruthy();
     },
     leftover: [
-      ["/years/2019/sites/tiktok/index.html", "itt19-tiktok"],
-      ["/years/2019/sites/arcade/index.html", "itt19-arcade"],
-      ["/years/2019/sites/appletv/index.html", "itt19-appletv"],
-      ["/years/2019/sites/stadia/index.html", "itt19-stadia"],
-      ["/years/2019/sites/iphone/iphone11.html", "itt19-iphone11"],
-      ["/years/2019/sites/airpodspro/index.html", "itt19-airpods-pro"],
-      ["/years/2019/sites/chrome/index.html", "itt19-chrome"],
-      ["/years/2019/sites/windows10/index.html", "itt19-win10"],
-      ["/years/2019/sites/playable/game.html", "itt19-game-continuerow"],
+      ["/years/2019/sites/tiktok/index.html", "itt19-tiktok-lx"],
+      ["/years/2019/sites/arcade/index.html", "itt19-arcade-lx"],
+      ["/years/2019/sites/appletv/index.html", "itt19-appletv-lx"],
+      ["/years/2019/sites/stadia/index.html", "itt19-stadia-lx"],
+      ["/years/2019/sites/iphone/iphone11.html", "itt19-iphone11-lx"],
+      ["/years/2019/sites/airpodspro/index.html", "itt19-airpods-pro-lx"],
+      ["/years/2019/sites/chrome/index.html", "itt19-chrome-lx"],
+      ["/years/2019/sites/windows10/index.html", "itt19-win10-lx"],
+      ["/years/2019/sites/playable/game.html", "itt19-game-continuerow-lx"],
     ],
   },
 ];
 
-test.describe("2011 / 2020 stay boarded", () => {
+test.describe("wiped years stay boarded", () => {
   test("no year tree", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    expect(fs.existsSync(path.join(root, "years", "2011", "index.html"))).toBe(false);
-    expect(fs.existsSync(path.join(root, "years", "2020", "index.html"))).toBe(false);
+    for (const y of ["2018", "2020", "2021", "2022", "2023", "2024", "2025"]) {
+      expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
+    }
   });
 });
 

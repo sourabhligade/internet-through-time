@@ -1740,6 +1740,99 @@
     "year": "2000"
   };
 
+  ITT.flowMaps["2001"] = {
+    "year": "2001",
+    "thesis": "Wikipedia edit is the gold. Wayback / iTunes / iPod sit beside leftover Search. XP + IE6.",
+    "shell": "Windows XP · Internet Explorer 6",
+    "how": [
+      "Wikipedia: edit theater",
+      "Wayback: one capture hop",
+      "Incomplete never writes"
+    ],
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "2001 star first",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "6 steps · official 10 flows" },
+          { "name": "Wikipedia", "href": "sites/wikipedia/edit.html", "do": "★ gold · itt01-wiki" },
+          { "name": "Wayback", "href": "sites/archive/index.html", "do": "next after gold" },
+          { "name": "iTunes library", "href": "sites/itunes/index.html", "do": "itt01-itunes" },
+          { "name": "iPod", "href": "sites/apple/ipod.html", "do": "itt01-ipod" },
+          { "name": "Napster leftover", "href": "sites/napster/index.html", "do": "leftover beside Search" },
+          { "name": "Movable Type", "href": "sites/movabletype/index.html", "do": "itt01-mt" },
+          { "name": "Google leftover", "href": "sites/google/index.html", "do": "leftover" },
+          { "name": "Yahoo leftover", "href": "sites/yahoo/index.html", "do": "leftover" },
+          { "name": "Amazon smile leftover", "href": "sites/amazon/index.html", "do": "leftover" },
+          { "name": "Clickscape", "href": "sites/playable/game.html", "do": "itt01-game-clickscape" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2002"] = {
+    "year": "2002",
+    "thesis": "StumbleUpon is the gold. Always-on / KaZaA / Phoenix sit on XP + IE6.",
+    "shell": "Windows XP · Internet Explorer 6",
+    "how": [
+      "StumbleUpon: one hop theater",
+      "Always-on: broadband leftover",
+      "Incomplete never writes"
+    ],
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "2002 star first",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "6 steps · official 10 flows" },
+          { "name": "StumbleUpon", "href": "sites/stumbleupon/index.html", "do": "★ gold · itt02-stumble" },
+          { "name": "Always-on", "href": "sites/isp/index.html", "do": "itt02-broadband" },
+          { "name": "KaZaA", "href": "sites/kazaa/index.html", "do": "itt02-kazaa" },
+          { "name": "Wired CSS", "href": "sites/wired/index.html", "do": "itt02-wired" },
+          { "name": "Phoenix", "href": "sites/phoenix/index.html", "do": "itt02-phoenix" },
+          { "name": "Mozilla 1.0", "href": "sites/mozilla/index.html", "do": "itt02-mozilla" },
+          { "name": "iPod gen 2", "href": "sites/ipod/index.html", "do": "itt02-ipod2" },
+          { "name": "Friendster seed", "href": "sites/friendster/index.html", "do": "itt02-fs" },
+          { "name": "TrackBack", "href": "sites/movabletype/trackback.html", "do": "itt02-trackback" },
+          { "name": "Room Sticky", "href": "sites/playable/game.html", "do": "itt02-game-roomsticky" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2003"] = {
+    "year": "2003",
+    "thesis": "Photobucket is the gold. iTunes Store / WordPress / MySpace sit on XP + IE6.",
+    "shell": "Windows XP · Internet Explorer 6",
+    "how": [
+      "Photobucket: upload theater",
+      "iTunes Store: library leftover",
+      "Incomplete never writes"
+    ],
+    "branches": [
+      {
+        "label": "Enter",
+        "do": "2003 star first",
+        "sites": [
+          { "name": "Starting Point", "href": "pages/home.html", "do": "6 steps · official 10 flows" },
+          { "name": "Photobucket", "href": "sites/photobucket/index.html", "do": "★ gold · itt03-photobucket" },
+          { "name": "iTunes Store", "href": "sites/itunes/index.html", "do": "itt03-itunes-library" },
+          { "name": "WordPress", "href": "sites/wordpress/dashboard.html", "do": "itt03-wp-posts" },
+          { "name": "LinkedIn", "href": "sites/linkedin/invite.html", "do": "itt03-li-connections" },
+          { "name": "MySpace", "href": "sites/myspace/index.html", "do": "itt03-ms-top8" },
+          { "name": "Friendster mass", "href": "sites/friendster/friends.html", "do": "itt03-fs-mass" },
+          { "name": "AdSense", "href": "sites/adsense/index.html", "do": "itt03-adsense" },
+          { "name": "Bloglines", "href": "sites/bloglines/index.html", "do": "itt03-bloglines-feeds" },
+          { "name": "Blogger-Google", "href": "sites/blogger/edit.html", "do": "itt03-blog" },
+          { "name": "Gags Lite", "href": "sites/playable/game.html", "do": "itt03-game-gagslite" },
+          { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
+        ]
+      }
+    ]
+  };
+
         ITT.flowMaps["2004"] =   {
     "thesis": "Web 2.0 named — Gmail invite, Flickr, Thefacebook, Firefox 1.0.",
     "shell": "Windows XP · IE 6 · Firefox rising",

@@ -140,6 +140,22 @@
         say(st, "Google-owned as a March fact never writes. Independent until 9 Oct.", true);
       });
     }
+    var list = doc.querySelector("[data-yt-list]");
+    if (list && list.getAttribute("data-yt06-list-bound") !== "1") {
+      list.setAttribute("data-yt06-list-bound", "1");
+      list.addEventListener("click", function (ev) {
+        var t = ev.target;
+        while (t && t !== list) {
+          if (t.getAttribute && t.getAttribute("data-yt-item")) {
+            if (ev.preventDefault) ev.preventDefault();
+            t.setAttribute("data-yt-played", "1");
+            say(st, "Clip ready. Click Watch.", false);
+            return;
+          }
+          t = t.parentNode;
+        }
+      });
+    }
     btn.addEventListener("click", function () {
       var played = doc.querySelector("[data-yt-played='1']");
       if (!played) {

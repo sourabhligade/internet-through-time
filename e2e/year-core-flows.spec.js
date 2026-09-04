@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Core shell flows for every exhibit year 1994–2018.
+ * Core shell flows for every exhibit year on disk.
  * Covers: boot · home content · dirbar · home button · start menu · location Go.
  */
 const { test, expect } = require('@playwright/test');
@@ -26,7 +26,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005', '2006',
-  '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021', '2023', '2024', '2020', '2011', '2009', '2022',
+  '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2019', '2011', '2009',
 ];
 
 /** Location bar hint that should resolve inside each year (when known). */

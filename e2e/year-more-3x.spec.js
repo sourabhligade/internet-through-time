@@ -1,12 +1,12 @@
 // @ts-check
 /**
  * Second leftover trio (3 more) on every shipped year home.
- * 2016 / 2018 new rooms write ittYY-pop-* after pick + honesty + go.
+ * 2016 / 2019 leftover rooms write ittYY-pop-* after pick + honesty + go.
  */
 const { test, expect } = require("@playwright/test");
 
 
-const WIPED = new Set(["2025"]);
+const WIPED = new Set(["2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
 
 async function openAlsoYear(page, year) {
   const box = page.locator(`#itt-also-year-${year}`);
@@ -128,18 +128,4 @@ test.describe("new leftover rooms write — sample years", () => {
     await completePop(page, "itt19-pop-appletv");
   });
 
-  test("2018 Discord incomplete never writes · complete writes", async ({ page }) => {
-    await page.goto("/years/2018/sites/discord/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt18-pop-discord"));
-    await page.reload();
-    await page.locator("[data-pop-go]").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt18-pop-discord"))).toBeFalsy();
-    await page.locator("[data-pop-pick]").first().click();
-    await page.locator("[data-pop-req]").check();
-    await page.locator("[data-pop-field]").fill("#general");
-    await page.locator("[data-pop-go]").click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem("itt18-pop-discord")), { timeout: 8000 })
-      .toBeTruthy();
-  });
 });

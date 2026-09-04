@@ -121,6 +121,9 @@
       st.textContent = (exists ? "Already installed: " : "Installed: ") + app.name + " · " + storageKey();
       ittFeedback(st.textContent, st);
     }
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+    } catch (eN) { /* */ }
     renderInstalled(doc);
   }
   function boot(doc) {

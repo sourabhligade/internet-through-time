@@ -505,7 +505,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 31 years (2025 boarded)");
+  console.log("audit-mock-flows — 26 years (2020–2025 boarded)");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +
