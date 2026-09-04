@@ -8,26 +8,26 @@
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2015", "2016", "2017", "2019"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2018", "2020", "2021", "2022", "2023", "2024", "2025"],
+    gapYears: ["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles → Vine.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp, Face ID, Disney+ Continue.", years: ["2014", "2016", "2017", "2019"] },
+      { id: "stream", label: "Streams / tracking", blurb: "Stories, Face ID, Disney+ Continue.", years: ["2015", "2016", "2017", "2019"] },
       { id: "late-lean", label: "Boarded late years", blurb: "2020–2024 stay empty for rebuild.", years: ["2020", "2021", "2022", "2023", "2024"] },
       { id: "wiped-late", label: "Boarded years", blurb: "2025 stays empty for rebuild.", years: ["2025"] }
     ],
 
     leanYears: [
       "2007",
-      "2013", "2014", "2016", "2017",
+      "2013", "2016", "2017",
       "2019", "2011", "2009"
     ],
 
@@ -548,7 +548,7 @@
         stops: [
           { year: "2008", href: "years/2008/sites/appstore/index.html", note: "Store opens" },
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
-          { year: "2014", href: "years/2014/sites/whatsapp/index.html", note: "Install" },
+          { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E leftover" },
           { year: "2017", href: "years/2017/sites/iphone/x.html", note: "Face ID" }
         ]
       },
@@ -619,7 +619,7 @@
         steps: [
           { year: "2008", label: "App Store", href: "years/2008/sites/appstore/index.html" },
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
-          { year: "2014", label: "WhatsApp Install", href: "years/2014/sites/whatsapp/index.html" },
+          { year: "2016", label: "WhatsApp E2E leftover", href: "years/2016/sites/whatsapp/e2e.html" },
           { year: "2017", label: "Face ID", href: "years/2017/sites/iphone/x.html" }
         ]
       },

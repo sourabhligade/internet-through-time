@@ -106,28 +106,6 @@ const YEARS = [
     ],
   },
   {
-    year: "2014",
-    star: "itt14-wa-install",
-    gold: async (page) => {
-      await openClear(page, "/years/2014/sites/whatsapp/index.html", "itt14-wa-install");
-      await page.locator("[data-wa14-messenger]").click();
-      expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
-      await page.locator("[data-wa14-install]").click();
-      await expect.poll(() => getKey(page, "itt14-wa-install"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2014/sites/whatsapp/chat.html", "itt14-wa-chat-lx"],
-      ["/years/2014/sites/heartbleed/index.html", "itt14-heartbleed-lx"],
-      ["/years/2014/sites/icebucket/index.html", "itt14-icebucket-lx"],
-      ["/years/2014/sites/iphone/index.html", "itt14-iphone6-lx"],
-      ["/years/2014/sites/iphone/pay.html", "itt14-applepay-lx"],
-      ["/years/2014/sites/material/index.html", "itt14-material-lx"],
-      ["/years/2014/sites/slack/index.html", "itt14-slack-lx"],
-      ["/years/2014/sites/twitch/index.html", "itt14-twitch-lx"],
-      ["/years/2014/sites/playable/game.html", "itt14-game-tilefold-lx"],
-    ],
-  },
-  {
     year: "2016",
     star: "itt16-ig-stories",
     gold: async (page) => {
@@ -209,7 +187,7 @@ test.describe("wiped years stay boarded", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    for (const y of ["2018", "2020", "2021", "2022", "2023", "2024", "2025"]) {
+    for (const y of ["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
   });

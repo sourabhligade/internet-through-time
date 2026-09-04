@@ -11,7 +11,7 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);

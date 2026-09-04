@@ -1,8 +1,8 @@
 # 2014 — READ FIRST (from-scratch 5k-web research freeze)
 
-**Date:** 2026-08-23  
-**Status:** **lean door on disk** (implement S1–S16 2026-08-23). Hub card is **open**.  
-**Disk truth:** Hub is **1994–2021** (28 years). **2022+ not on disk.**  
+**Date:** 2026-09-04  
+**Status:** **WIPED.** Hub card is locked. Tree deleted.  
+**Disk truth:** Hub is **24 years open** · **2014 / 2018 / 2020–2025 wiped**. This file is the wipe stamp, not a live door.  
 **Prefix:** `itt14`  
 **Clone shape:** live `years/2013/` (Vine door · Win7 + IE 9). Costume note from live `years/2015/` (Chrome habit is **2015+**). **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
 

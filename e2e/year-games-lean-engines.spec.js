@@ -61,6 +61,7 @@ test.describe("lean year game engines", () => {
   test("2014 Tile Fold: New Fold never writes · Flappy never writes · two tiles write itt14-game-tilefold", async ({
     page
   }) => {
+    test.skip(true, "2014 wiped");
     await openClear(page, "/years/2014/sites/playable/game.html", [
       "itt14-game-tilefold",
       "itt14-game-tilefold-lx"

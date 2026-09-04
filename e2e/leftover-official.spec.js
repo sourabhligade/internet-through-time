@@ -165,7 +165,7 @@ test.describe("leftover official · disk + trail", () => {
       live += keys.length;
       empty += keys.filter((k) => /"whenKey":\s*""/.test(k)).length;
     }
-    expect(live, "live trail dests").toBeGreaterThanOrEqual(25 * 10);
+    expect(live, "live trail dests").toBeGreaterThanOrEqual(24 * 10);
     expect(empty, "empty live whenKeys").toBe(0);
   });
 
@@ -244,7 +244,7 @@ test.describe("leftover official · disk + trail", () => {
       "itt18-gdpr",
       "itt19-disneyplus",
     ]);
-    const wiped = new Set(["2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+    const wiped = new Set(["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
     const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
     const byYear = {};
     for (const row of x2) {
@@ -261,7 +261,7 @@ test.describe("leftover official · disk + trail", () => {
   });
 
   test("2010–2014 leftover dests have a 2× row for every leftover dest key", () => {
-    const years = new Set(["2010", "2011", "2012", "2013", "2014"]);
+    const years = new Set(["2010", "2011", "2012", "2013"]);
     const gold = new Set([
       "itt10-ig",
       "itt11-gplus",

@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **25 years open**. **2018 / 2020–2025** are boarded. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2015 star = Periscope Go LIVE. 2019 star = Disney+ Continue.
+Historical reconstruction of the World Wide Web — year by year. Hub **24 years open**. **2014 / 2018 / 2020–2025** are boarded. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2015 star = Periscope Go LIVE. 2019 star = Disney+ Continue.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -92,7 +92,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2011/` | Lean door — Google+ Hangout `itt11-gplus` · leftover 2× every dest · Win7+IE9 |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
 | `/years/2013/` | Lean door — Vine 6s · iOS 7 · Snapchat Stories |
-| `/years/2014/` | Lean door — WhatsApp Install · Heartbleed · Ice Bucket |
+| `/years/2014/` | **Wiped** — WhatsApp Install later |
 | `/years/2015/` | Periscope Go LIVE · Google Photos · Win10 free upgrade · Apple Music · **lean** |
 | `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
@@ -101,7 +101,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2020/`–`/years/2025/` | **Boarded** — hub locked · no year tree |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2009 + 2011 + 2013–2017 + 2019. Hub is **25 years open**. **2018 / 2020–2025 are boarded.** 2001–2003 are cut-forest live. 2015 is Periscope Go LIVE. 2019 is Disney+ Continue.
+**Lean doors:** 2007 + 2009 + 2011 + 2013 + 2015–2017 + 2019. Hub is **24 years open**. **2014 / 2018 / 2020–2025 are boarded.** 2001–2003 are cut-forest live. 2015 is Periscope Go LIVE. 2019 is Disney+ Continue.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

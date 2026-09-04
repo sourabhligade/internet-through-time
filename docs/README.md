@@ -1,6 +1,6 @@
 # Docs — Internet Through Time
 
-Play **25 years** from the hub (`index.html`). **2018 / 2020–2025 are wiped.** Lean doors: **2007 / 2009 / 2011 / 2013–2017 / 2019.** **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
+Play **24 years** from the hub (`index.html`). **2014 / 2018 / 2020–2025 are wiped.** Lean doors: **2007 / 2009 / 2011 / 2013 / 2015–2017 / 2019.** **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
 
 **Bar A 100% (ship):** dests, keys, official 10, gold, guided 6, and HTML cap in the year’s *current* READ-FIRST / map match the live tree.  
 **Bar B** (museum-grade feel) is leftover costume / leftover verbs / optional stills. L4 pixels stay outside both bars.
@@ -27,7 +27,7 @@ If a paragraph’s hub range is not **1994–2019** (2020–2025 wiped), it is a
 
 ## Ship law
 
-Live tree + hub + `SHIP_YEARS` = **25 years**. **2018 / 2020–2025 stay wiped.** Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
+Live tree + hub + `SHIP_YEARS` = **24 years**. **2014 / 2018 / 2020–2025 stay wiped.** Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
 
 ## Live-year locks
 

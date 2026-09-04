@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LIVE = [str(y) for y in range(1994, 2020) if y != 2018]
-WIPED = {"2018", "2020", "2021", "2022", "2023", "2024", "2025"}
+WIPED = {"2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"}
 LEAN_STILL = ("2009", "2011", "2012", "2015", "2016", "2017", "2019")
 UA = "InternetThroughTimeMuseum/improve-af (educational; static reconstruction)"
 CDX = "https://web.archive.org/cdx/search/cdx"

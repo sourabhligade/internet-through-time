@@ -3,7 +3,7 @@
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Star is Periscope Go LIVE `itt15-periscope`. Hub card open. Do not `git checkout` the wiped forest.  
 **Walk the rebuild:** [`2015-FROM-SCRATCH-MAP-CRITERIA-BLOGS-FLOWS-LINKS-GAMES-2026-09-04.md`](2015-FROM-SCRATCH-MAP-CRITERIA-BLOGS-FLOWS-LINKS-GAMES-2026-09-04.md) — criteria Y1–Y18 · blogs · flows · links · games. Density twin **2011**.  
-**Disk truth:** Hub is **25 years open** · **2018 / 2020–2025 wiped**.  
+**Disk truth:** Hub is **24 years open** · **2014 / 2018 / 2020–2025 wiped**.  
 **Prefix:** `itt15`  
 **Clone shape from:** live `years/2014/` (lean door). **Do not** restore `/tmp` or git leftovers.
 

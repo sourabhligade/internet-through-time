@@ -673,7 +673,7 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(25 * 10);
+    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(24 * 10);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);
   });

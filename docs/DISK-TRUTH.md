@@ -3,7 +3,7 @@
 **Date:** 2026-09-02  
 **Law:** live tree + `scripts/itt_gate.py` `SHIP_YEARS`. This file does **not** append old ship cards.
 
-Hub **25 years open** · **2018 / 2020–2025 wiped**. Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). 2005 is YouTube upload. 2006 is Twttr. 2009 is Facebook Like. 2011 is Google+. **2015 is Periscope Go LIVE.** 2019 is Disney+ Continue. 2018 GDPR / 2020 Zoom / 2021 ATT / 2022 Send / 2023 Plus / 2024 4o stay boarded.
+Hub **24 years open** · **2014 / 2018 / 2020–2025 wiped**. Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). 2005 is YouTube upload. 2006 is Twttr. 2009 is Facebook Like. 2011 is Google+. **2015 is Periscope Go LIVE.** 2019 is Disney+ Continue. 2014 WhatsApp / 2018 GDPR / 2020 Zoom / 2021 ATT / 2022 Send / 2023 Plus / 2024 4o stay boarded.
 
 | Year | Disk |
 |------|------|
@@ -20,7 +20,7 @@ Hub **25 years open** · **2018 / 2020–2025 wiped**. Leftover 2× is on **ever
 | **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · leftover 2× every dest |
 | **2012** | Live lean · IG Android · leftover 9+9+9 dest-true · leftover 4× **0** |
 | **2013** | Live lean door · Vine 6s · leftover 9+9+9 dest-true · leftover 4× **0** |
-| **2014** | Live lean door · WhatsApp Install · leftover 9+9+9 dest-true · leftover 4× **0** |
+| **2014** | **Wiped** · hub locked · WhatsApp Install later |
 | **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · leftover 2× every dest · Win7 residual + Chrome habit |
 | **2016** | Live lean door · IG Stories · leftover 9+9+9 dest-true · leftover 4× **0** |
 | **2017** | Live lean door · Face ID · leftover 9+9+9 dest-true · leftover 4× **0** |
@@ -33,7 +33,7 @@ Hub **25 years open** · **2018 / 2020–2025 wiped**. Leftover 2× is on **ever
 | **2024** | **Wiped** · hub locked · GPT-4o Talk later |
 | **2025** | **Wiped** · hub locked · no year tree |
 
-Lean doors: **2007 + 2009 + 2011 + 2013–2017 + 2019**. Wiped: **2018 · 2020–2025**.  
+Lean doors: **2007 + 2009 + 2011 + 2013 + 2015–2017 + 2019**. Wiped: **2014 · 2018 · 2020–2025**.  
 Games wing (`games/`) is separate and live.
 
 **G1–G10 scoreboard:** [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md).

@@ -6,7 +6,7 @@
 const { test, expect } = require("@playwright/test");
 
 
-const WIPED = new Set(["2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
 
 async function openAlsoYear(page, year) {
   const box = page.locator(`#itt-also-year-${year}`);

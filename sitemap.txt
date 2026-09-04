@@ -59,10 +59,6 @@
 /years/2013/pages/home.html
 /years/2013/pages/about.html
 /years/2013/sites/vine/index.html
-/years/2014/
-/years/2014/pages/home.html
-/years/2014/pages/about.html
-/years/2014/sites/whatsapp/index.html
 /years/2015/
 /years/2015/pages/home.html
 /years/2015/pages/about.html

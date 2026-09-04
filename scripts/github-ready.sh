@@ -72,7 +72,7 @@ for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.y
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
 # Hub-open years on disk. Keep in sync with scripts/itt_gate.py SHIP_YEARS.
-WIPED=" 2018 2020 2021 2022 2023 2024 2025 "
+WIPED=" 2014 2018 2020 2021 2022 2023 2024 2025 "
 for y in $(seq 1994 2025); do
   if [[ "$WIPED" == *" $y "* ]]; then
     if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y boarded"; fi
@@ -128,5 +128,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 25 years (1994–2017 + 2019). 2018 / 2020–2025 wiped."
+say "  Ship hub 24 years (1994–2013 + 2015–2017 + 2019). 2014 / 2018 / 2020–2025 wiped."
 exit 0
