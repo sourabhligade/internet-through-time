@@ -1,5 +1,9 @@
 // @ts-check
+const fs = require("fs");
+const path = require("path");
 const { test, expect } = require("@playwright/test");
+
+test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
 
 test.describe("2013 mvp", () => {
   test("hub card opens Starting Point", async ({ page }) => {

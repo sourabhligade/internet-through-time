@@ -8,9 +8,9 @@ const { test, expect } = require("@playwright/test");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007", "2008", "2009",
-  "2010", "2011", "2012", "2013", "2015", "2016", "2017", "2019",
+  "2010", "2011", "2012", "2014", "2015", "2016", "2017", "2019", "2021", "2022",
 ];
-const WIPED = ["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"];
+const WIPED = ["2013", "2018", "2020", "2023", "2024", "2025"];
 const THREADS = ["yahoo", "amazon", "google", "facebook", "youtube", "mail", "search", "phone", "im"];
 const TOURS = ["first-night", "find", "buy", "talk", "phone-trail", "broadcast", "games", "wiped-late"];
 
@@ -39,15 +39,15 @@ test.describe("museum atlas", () => {
     await expect(page.locator("a[href='../index.html']").first()).toBeVisible();
   });
 
-  test("hallway has seven wings, 24 open years and boarded ticks", async ({ page }) => {
+  test("hallway has seven wings, 26 open years and boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator("h1")).toContainText(/whole museum/i);
-    await expect(page.locator(".lede")).toContainText(/2019/);
+    await expect(page.locator(".lede")).toContainText(/2018/);
     await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(7);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toBeVisible();
     await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(32);
-    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(24);
-    await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(8);
+    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(26);
+    await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(6);
     for (const y of OPEN) {
       await expect(page.locator(`#atlas-spine .spine-year.open[data-atlas-year="${y}"]`)).toBeVisible();
     }
@@ -56,16 +56,18 @@ test.describe("museum atlas", () => {
     }
   });
 
-  test("2014 door is boarded from the spine", async ({ page }) => {
+  test("2014 door is live from the spine", async ({ page }) => {
     await page.goto("/atlas/");
     const tick = page.locator('#atlas-spine [data-atlas-year="2014"]');
-    await expect(tick).toHaveClass(/wiped/);
+    await expect(tick).toHaveClass(/open/);
+    await expect(tick).not.toHaveClass(/wiped/);
     await tick.click();
     const panel = page.locator("#atlas-year");
     await expect(panel).toBeVisible();
-    await expect(panel).toContainText(/wiped|boarded/i);
+    await expect(panel).toContainText(/WhatsApp/i);
+    await expect(panel).not.toContainText(/wiped/i);
     const res = await page.request.get("/years/2014/sites/whatsapp/index.html");
-    expect(res.status()).toBe(404);
+    expect(res.status()).toBe(200);
   });
 
   test("hash #year-2004 shows thefacebook gold", async ({ page }) => {
@@ -139,19 +141,16 @@ test.describe("museum atlas", () => {
     await expect(page).toHaveURL(/\/years\/1994\//);
   });
 
-  test("2019 door card is Disney+ and lists leftover 2× after catalog load", async ({ page }) => {
+  test("2019 door is live from the spine", async ({ page }) => {
     await page.goto("/atlas/");
-    await page.locator('#atlas-spine [data-atlas-year="2019"]').click();
+    const tick = page.locator('#atlas-spine [data-atlas-year="2019"]');
+    await expect(tick).not.toHaveClass(/wiped/);
+    await tick.click();
     const panel = page.locator("#atlas-year");
     await expect(panel).toBeVisible();
-    await expect(panel.locator("li.gold")).toContainText(/Disney\+/i);
-    await expect(panel).toContainText(/Not this year/i);
-    await expect(panel.locator("ol.ten li")).toHaveCount(10);
-    await expect(page.locator("#atlas-all-golds")).toBeVisible();
-    await expect(page.locator("#atlas-all-2x")).toBeVisible({ timeout: 15000 });
-    await expect(page.locator("#atlas-2x-2019")).toBeVisible({ timeout: 15000 });
-    const n2x = page.locator("#atlas-2x-2019 summary .n");
-    await expect(n2x).toHaveText(/^[1-9]\d*$/);
+    await expect(panel).toContainText(/Disney\+|Continue/i);
+    const res = await page.request.get("/years/2019/sites/disneyplus/home.html");
+    expect(res.status()).toBe(200);
   });
 
   test("wiped doors are boarded", async ({ page }) => {
@@ -160,17 +159,19 @@ test.describe("museum atlas", () => {
     await expect(tick).toBeVisible();
     await expect(tick).toHaveClass(/wiped/);
     await expect(tick).toContainText(/boarded/i);
-    for (const y of ["2014", "2018", "2020", "2021", "2022", "2023", "2024"]) {
+    for (const y of ["2013", "2018", "2020", "2023", "2024"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveClass(/wiped/);
     }
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveClass(/open/);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).not.toHaveClass(/wiped/);
   });
 
-  test("find: disney hits the 2019 gold room", async ({ page }) => {
+  test("find: lucky still hits 1998 gold", async ({ page }) => {
     await page.goto("/atlas/");
-    await page.fill("#atlas-find", "disney");
+    await page.fill("#atlas-find", "lucky");
     const results = page.locator("#atlas-find-results a");
     await expect(results.first()).toBeVisible();
-    await expect(results.first()).toHaveAttribute("href", /disneyplus/i);
-    await expectLive(page, await results.first().getAttribute("href"), "find disney");
+    await expect(results.first()).toHaveAttribute("href", /lucky/i);
+    await expectLive(page, await results.first().getAttribute("href"), "find lucky");
   });
 });

@@ -163,7 +163,7 @@ for (const year of Object.keys(byYear).sort()) {
   if (!rows.length) continue;
   test.describe(`2× leftover ${year}`, () => {
     for (const fl of rows) {
-      test(`${fl.key} incomplete then REAL`, async ({ page }) => {
+      test(`${fl.key} ${fl.path} → ${fl.next} incomplete then REAL`, async ({ page }) => {
         await runFlow(page, fl);
       });
     }

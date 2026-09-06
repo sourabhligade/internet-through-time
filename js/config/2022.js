@@ -91,6 +91,8 @@
     "sites/patreon/index.html",
     "sites/paypal/index.html",
     "sites/playable/close.html",
+    "sites/playable/extra-a.html",
+    "sites/playable/extra-b.html",
     "sites/playable/famous.html",
     "sites/playable/game.html",
     "sites/playable/index.html",

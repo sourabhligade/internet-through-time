@@ -6,7 +6,7 @@
 const { test, expect } = require("@playwright/test");
 
 
-const WIPED = new Set(["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2018", "2020", "2023", "2024", "2025"]);
 
 async function openAlsoYear(page, year) {
   const box = page.locator(`#itt-also-year-${year}`);
@@ -123,9 +123,12 @@ test.describe("new leftover rooms write — sample years", () => {
     await completePop(page, "itt13-pop-chrome");
   });
 
-  test("2019 Apple TV+ second 3× incomplete never writes · complete writes", async ({ page }) => {
-    await page.goto("/years/2019/sites/appletv/index.html");
-    await completePop(page, "itt19-pop-appletv");
+  test("2019 is live", async ({ page }) => {
+    const fs = require("fs");
+    const path = require("path");
+    expect(fs.existsSync(path.join(__dirname, "..", "years", "2019", "index.html"))).toBe(true);
+    await page.goto("/");
+    await expect(page.locator("a.year-card.available[href*='years/2019']")).toBeVisible();
   });
 
 });

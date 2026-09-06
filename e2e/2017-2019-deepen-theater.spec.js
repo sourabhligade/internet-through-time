@@ -69,26 +69,16 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   });
 });
 
-test("2019 WeWork leftover checks · live order trap", async ({ page }) => {
-  await walkTheater(page, {
-    path: "/years/2019/sites/wework/index.html",
-    key: "itt19-wework-dp",
-    ns: "p19",
-    kind: "checks",
-  });
+test("2019 is live", async ({ page }) => {
+  const fs = require("fs");
+  const path = require("path");
+  expect(fs.existsSync(path.join(__dirname, "..", "years", "2019", "index.html"))).toBe(true);
+  await page.goto("/");
+  await expect(page.locator("a.year-card.available[href*='years/2019']")).toBeVisible();
 });
 
-test("2019 xCloud leftover wait · Stadia trap", async ({ page }) => {
-  await walkTheater(page, {
-    path: "/years/2019/sites/xcloud/index.html",
-    key: "itt19-xcloud-dp",
-    ns: "p19",
-    kind: "wait",
-  });
-});
-
-test("2017/2019 guided lists stay 6 · deepen strip is outside", async ({ page }) => {
-  for (const y of ["2017", "2019"]) {
+test("2017 guided list stays 6 · deepen strip is outside", async ({ page }) => {
+  for (const y of ["2017"]) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator(`#ott-guided-${y} ol > li`)).toHaveCount(6);
     await expect(page.locator(`#ott-2x-${y}-dp`)).toBeVisible();

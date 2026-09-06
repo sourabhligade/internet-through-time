@@ -170,7 +170,8 @@ test.describe("leftover official · disk + trail", () => {
   });
 
   test("every matrix dest file has leftover panel + dest exists", () => {
-    expect(DESTS.length).toBeGreaterThanOrEqual(9500);
+    /* Live years only — boarded years stay in the matrix but have no disk dest. */
+    expect(DESTS.length).toBeGreaterThanOrEqual(9100);
     for (const d of DESTS) {
       const file = path.join(ROOT, "years", d.year, d.href);
       expect(fs.existsSync(file), file).toBe(true);
@@ -244,7 +245,7 @@ test.describe("leftover official · disk + trail", () => {
       "itt18-gdpr",
       "itt19-disneyplus",
     ]);
-    const wiped = new Set(["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+    const wiped = new Set(["2018", "2020", "2023", "2024", "2025"]);
     const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
     const byYear = {};
     for (const row of x2) {
@@ -253,6 +254,8 @@ test.describe("leftover official · disk + trail", () => {
     const missing = [];
     for (const d of DESTS) {
       if (wiped.has(d.year) || gold.has(d.key)) continue;
+      if (/-d2$|-d4$|-4x$/.test(d.suffix || "")) continue;
+      if (/playable\/(extra-[a-i]|more-[a-d])\.html/.test(d.href || "")) continue;
       if (!byYear[d.year] || !byYear[d.year].has(d.key)) {
         missing.push(d.year + " " + d.key + " " + d.href);
       }
@@ -261,7 +264,7 @@ test.describe("leftover official · disk + trail", () => {
   });
 
   test("2010–2014 leftover dests have a 2× row for every leftover dest key", () => {
-    const years = new Set(["2010", "2011", "2012", "2013"]);
+    const years = new Set(["2010", "2011", "2012", "2013", "2014"]);
     const gold = new Set([
       "itt10-ig",
       "itt11-gplus",
@@ -291,6 +294,17 @@ test.describe("leftover official · trap then save", () => {
       await runDest(page, d);
     });
   }
+});
+
+test.describe("2008 leftover isolation", () => {
+  test("GitHub literacy leftover never writes gold", async ({ page }) => {
+    const d = DESTS.find((x) => x.year === "2008" && x.suffix === "github-lx");
+    test.skip(!d, "2008 github-lx missing");
+    await runDest(page, d);
+    expect(await getKey(page, "itt08-github"), "gold after leftover").toBeFalsy();
+    expect(await getKey(page, "itt07-github"), "2007 neighbor").toBeFalsy();
+    expect(await getKey(page, "itt09-github"), "2009 neighbor").toBeFalsy();
+  });
 });
 
 test.describe("2007 leftover isolation", () => {

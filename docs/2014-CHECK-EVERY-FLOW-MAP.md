@@ -10,10 +10,10 @@ Format twin: [`2021-CHECK-EVERY-FLOW-MAP.md`](2021-CHECK-EVERY-FLOW-MAP.md) · [
 **Today’s check (S0):**
 
 ```
-test -d years/2014 && echo FAIL-tree-exists || echo OK-wiped
+test -d years/2014 && echo OK-live || echo FAIL-missing
 ```
 
-Pass: `OK-wiped`. Hub has a **locked** 2014 card (`.year-card.locked.y2014`), not `a.year-card.available.y2014`.
+Pass: `OK-live`. Hub has `a.year-card.available.y2014`. Star writes `itt14-wa-install`.
 
 When a door ships, serve:
 

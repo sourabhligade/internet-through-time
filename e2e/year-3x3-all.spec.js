@@ -8,7 +8,7 @@ const { test, expect } = require("@playwright/test");
 const TRIOS = require("../scripts/popular-3x3-sites.json");
 
 const YEARS = Object.keys(TRIOS).sort();
-const WIPED = new Set(["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2018", "2020", "2022", "2023", "2024", "2025"]);
 
 test.describe("every third leftover 3× writer", () => {
   for (const year of YEARS) {

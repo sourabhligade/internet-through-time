@@ -1,7 +1,7 @@
 # 2021 map — from-scratch lean door (not on disk)
 
-**Date:** 2026-09-01  
-**Status:** **live lean door.** `years/2021/` is on disk. Hub card **available**. Star is ATT Ask.  
+**Date:** 2026-09-05  
+**Status:** **locks only.** `years/2021/` is **absent**. Named implement walk: [`2021-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-PHASES-FLOWS-MINUTE-4X-2026-09-05.md`](2021-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-PHASES-FLOWS-MINUTE-4X-2026-09-05.md).  
 **Research freeze (this pass):** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md)  
 **Criteria (always / leftover 2×):** [`2021-2X-CRITERIA-MAP-2026-09-01.md`](2021-2X-CRITERIA-MAP-2026-09-01.md)  
 **Read first:** [`2021-READ-FIRST.md`](2021-READ-FIRST.md)  

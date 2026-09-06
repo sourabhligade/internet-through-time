@@ -213,10 +213,16 @@
         ts: Date.now()
       };
       try {
+        /* Official 10 is n=1–10. Leftover-trail dests (n>10) use leftover
+           whenKeys — leftover save must write those. Blocking every whenKey
+           made leftover-trail dests never complete. */
         var trails = (ITT.flowTrails && ITT.flowTrails[year]) || [];
         var ti;
         for (ti = 0; ti < trails.length; ti++) {
-          if (trails[ti] && trails[ti].whenKey === k) {
+          var stop = trails[ti];
+          if (!stop || stop.whenKey !== k) continue;
+          var tn = parseInt(stop.n, 10);
+          if (tn >= 1 && tn <= 10) {
             say(st, "Leftover never stamps the official key.", true);
             return;
           }

@@ -920,6 +920,10 @@
         "label": "Start"
       },
       {
+        "go": "sites/github/issue.html",
+        "label": "★ GitHub"
+      },
+      {
         "go": "sites/appstore/index.html",
         "label": "App Store"
       },
@@ -1318,12 +1322,8 @@
       "label": "Ice Bucket"
     },
     {
-      "go": "sites/instagram/video.html",
-      "label": "IG Video"
-    },
-    {
-      "go": "sites/chrome/index.html",
-      "label": "Chrome"
+      "go": "sites/iphone/index.html",
+      "label": "iPhone 6"
     },
     {
       "go": "pages/about.html",

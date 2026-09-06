@@ -23,8 +23,10 @@ fi
 
 branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)"
 say "  branch: $branch"
-if [[ "$branch" != "main" && "$branch" != "master" ]]; then
-  say "  note: CI triggers on main/master — consider renaming before push"
+if [[ "$branch" != "main" && "$branch" != "master" && "$branch" != "museum/1994-2020-lean" ]]; then
+  say "  note: CI triggers on main / master / museum/1994-2020-lean"
+else
+  ok "branch $branch is a CI trigger"
 fi
 
 if git remote get-url origin >/dev/null 2>&1; then
@@ -72,7 +74,7 @@ for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.y
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
 # Hub-open years on disk. Keep in sync with scripts/itt_gate.py SHIP_YEARS.
-WIPED=" 2014 2018 2020 2021 2022 2023 2024 2025 "
+WIPED=" $(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _WIPED; print(" ".join(sorted(_WIPED)))') "
 for y in $(seq 1994 2025); do
   if [[ "$WIPED" == *" $y "* ]]; then
     if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y boarded"; fi
@@ -117,7 +119,7 @@ say "PREFLIGHT PASSED"
 say ""
 say "Next steps (run yourself — creates a public remote):"
 say ""
-say "  1) Commit the museum work on main (review git status first)."
+say "  1) Commit the museum work on this branch (review git status first)."
 say "  2) gh auth login          # if not already"
 say "  3) gh repo create internet-through-time --public --source=. --remote=origin --push"
 say "     # or private:  --private"
@@ -128,5 +130,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 24 years (1994–2013 + 2015–2017 + 2019). 2014 / 2018 / 2020–2025 wiped."
+say "  Ship hub 26 years (1994–2012 + 2014–2017 + 2019 + 2021–2022). 2013 / 2018 / 2020 / 2023–2025 boarded."
 exit 0

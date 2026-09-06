@@ -48,6 +48,7 @@ SIGNATURE: dict[str, list[str]] = {
     "2007": ["pages/home.html", "pages/about.html", "sites/iphone/index.html", "sites/streetview/index.html", "sites/gmail/index.html", "sites/fbplat/index.html", "sites/playable/game.html"],
     "2008": [
         "pages/home.html",
+        "sites/github/issue.html",
         "sites/appstore/index.html",
         "sites/chrome/index.html",
         "sites/android/index.html",
@@ -374,6 +375,9 @@ def check_year(year: str, http_base: str | None) -> dict:
             # Star machines sync-load their module so Save / Stumble bind
             # before boot.js EXTRA arrives. Not a dual-load smell.
             if "data-wiki-save" in t or "data-su-stumble" in t:
+                continue
+            mods = re.findall(r"immersion/([a-z0-9-]+)\.js", t)
+            if mods and all(m == f"year-{year}-extras" for m in mods):
                 continue
             dual += 1
     checks["no_dual_load_sample"] = dual == 0

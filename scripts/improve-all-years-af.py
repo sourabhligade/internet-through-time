@@ -22,9 +22,9 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LIVE = [str(y) for y in range(1994, 2020) if y != 2018]
 WIPED = {"2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"}
-LEAN_STILL = ("2009", "2011", "2012", "2015", "2016", "2017", "2019")
+LIVE = [str(y) for y in range(1994, 2026) if str(y) not in WIPED]
+LEAN_STILL = ("2009", "2011", "2012", "2015", "2016", "2017")
 UA = "InternetThroughTimeMuseum/improve-af (educational; static reconstruction)"
 CDX = "https://web.archive.org/cdx/search/cdx"
 CTX = ssl.create_default_context()
@@ -258,6 +258,52 @@ SLUG_VERB = {
     "amppage": "Open leftover AMP",
     "dropbox": "Sync leftover",
     "yahoo": "Browse leftover",
+    "healthcare": "Enroll leftover",
+    "hbonow": "Watch leftover",
+    "ios9": "Open leftover",
+    "uber": "Request leftover",
+    "adblock": "Block leftover",
+    "meerkat": "Go leftover live",
+    "meerkatlive": "Go leftover live",
+    "titleii": "Note leftover Title II",
+    "yelp": "Review leftover",
+    "swiftoss": "Open leftover Swift",
+    "ytgaming": "Watch leftover",
+    "musicabout": "Play leftover",
+    "messenger": "Send leftover",
+    "waabout": "Install leftover",
+    "buzzfeed": "Open leftover list",
+    "edgeabout": "Open leftover Spartan",
+    "fblive": "Go leftover live",
+    "discordabout": "Join leftover",
+    "win10get": "Get leftover upgrade",
+    "w10about": "Get leftover upgrade",
+    "tinder": "Swipe leftover",
+    "secret": "Post leftover",
+    "waweb": "Scan leftover",
+    "foursqnote": "Check-in leftover",
+    "angrybirds": "Fling leftover",
+    "ask": "Ask leftover",
+    "formspring": "Ask leftover",
+    "instant": "Open leftover AMP",
+    "leabout": "Issue leftover cert",
+    "hidelikes": "Hide leftover likes",
+    "applecard": "Pay leftover",
+    "oculusquest": "Play leftover",
+    "fortnitewc": "Watch leftover cup",
+    "wework": "Note leftover IPO",
+    "area51": "Note leftover raid",
+    "zoom10m": "Note leftover 10M",
+    "edgerc": "Preview leftover",
+    "ios13": "Open leftover Dark Mode",
+    "ipados": "Open leftover iPadOS",
+    "libra": "Read leftover paper",
+    "cnil": "Note leftover fine",
+    "ftc": "Note leftover $5B",
+    "inbox": "Note leftover off",
+    "gplus": "Note leftover funeral",
+    "huawei": "Note leftover GMS",
+    "windows10": "Stay leftover Win10",
 }
 
 SLUG_YEAR_VERB = {
@@ -633,9 +679,7 @@ def main() -> int:
     print("F official dest still-or-failed-final…")
     stamped = pass_f_failed()
     print(f"  stamped failed-final on {stamped} official dests")
-    print("A Wayback id_ harvest (lean official dests)…")
-    for line in pass_a():
-        print(" ", line)
+    print("A Wayback harvest skipped (local feel pass only)")
     print("done · D/E home chip + 3× row live in ui/year/start.js · no push")
     return 0
 

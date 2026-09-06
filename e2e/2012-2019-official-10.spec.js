@@ -80,31 +80,7 @@ const YEARS = [
       ["/years/2012/sites/playable/game.html", "itt12-game-guessdoodle-lx"],
     ],
   },
-  {
-    year: "2013",
-    star: "itt13-vine-posts",
-    gold: async (page) => {
-      await openClear(page, "/years/2013/sites/vine/record.html", "itt13-vine-posts");
-      await page.locator("[data-vn13-post]").click();
-      expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
-      await page.locator("[data-vn13-trap]").click();
-      expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
-      await page.locator("[data-vn13-hold]").click();
-      await page.locator("[data-vn13-post]").click();
-      await expect.poll(() => getKey(page, "itt13-vine-posts"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2013/sites/instagram/video.html", "itt13-ig-posts-lx"],
-      ["/years/2013/sites/snapchat/story.html", "itt13-snap-story-lx"],
-      ["/years/2013/sites/iphone/ios7.html", "itt13-ios7-lx"],
-      ["/years/2013/sites/iphone/touchid.html", "itt13-touchid-lx"],
-      ["/years/2013/sites/snowden/index.html", "itt13-snowden-ack-lx"],
-      ["/years/2013/sites/telegram/index.html", "itt13-telegram-chat-lx"],
-      ["/years/2013/sites/tumblr/index.html", "itt13-tumblr-yahoo-lx"],
-      ["/years/2013/sites/windows81/index.html", "itt13-win81-lx"],
-      ["/years/2013/sites/playable/game.html", "itt13-game-loopsix-lx"],
-    ],
-  },
+
   {
     year: "2016",
     star: "itt16-ig-stories",
@@ -155,11 +131,11 @@ const YEARS = [
     year: "2019",
     star: "itt19-disneyplus",
     gold: async (page) => {
-      await openClear(page, "/years/2019/sites/disneyplus/home.html", "itt19-disneyplus-d3");
-      await page.locator("[data-dplus-trial]").click();
-      expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
+      await openClear(page, "/years/2019/sites/disneyplus/home.html", "itt19-disneyplus");
       await page.locator("[data-dplus-continue]").click();
       expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
+      await page.locator("[data-dplus-req]").nth(0).check();
+      await page.locator("[data-dplus-req]").nth(1).check();
       await page.locator('[data-dplus-profile="adult"]').click();
       await page.locator("[data-dplus-add]").nth(0).click();
       await page.locator("[data-dplus-add]").nth(1).click();
@@ -174,10 +150,64 @@ const YEARS = [
       ["/years/2019/sites/appletv/index.html", "itt19-appletv-lx"],
       ["/years/2019/sites/stadia/index.html", "itt19-stadia-lx"],
       ["/years/2019/sites/iphone/iphone11.html", "itt19-iphone11-lx"],
-      ["/years/2019/sites/airpodspro/index.html", "itt19-airpods-pro-lx"],
+      ["/years/2019/sites/airpodspro/index.html", "itt19-airpods-lx"],
       ["/years/2019/sites/chrome/index.html", "itt19-chrome-lx"],
       ["/years/2019/sites/windows10/index.html", "itt19-win10-lx"],
-      ["/years/2019/sites/playable/game.html", "itt19-game-continuerow-lx"],
+      ["/years/2019/sites/playable/game.html", "itt19-play-lx"],
+    ],
+  },
+  {
+    year: "2014",
+    star: "itt14-wa-install",
+    gold: async (page) => {
+      await openClear(page, "/years/2014/sites/whatsapp/index.html", "itt14-wa-install");
+      await page.locator("[data-wa14-messenger]").first().click();
+      expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
+      await page.locator("[data-wa14-install]").click();
+      expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
+      await page.locator('[data-wa14-deal="16b"]').click();
+      await page.locator("[data-wa14-install]").click();
+      expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
+      await page.locator('[data-wa14-deal="rsu"]').click();
+      await page.locator("[data-wa14-install]").click();
+      await expect.poll(() => getKey(page, "itt14-wa-install"), { timeout: 8000 }).toBeTruthy();
+    },
+    leftover: [
+      ["/years/2014/sites/whatsapp/chat.html", "itt14-chat-lx"],
+      ["/years/2014/sites/heartbleed/index.html", "itt14-hb-lx"],
+      ["/years/2014/sites/icebucket/index.html", "itt14-ice-lx"],
+      ["/years/2014/sites/iphone/index.html", "itt14-ip6-lx"],
+      ["/years/2014/sites/iphone/pay.html", "itt14-pay-lx"],
+      ["/years/2014/sites/material/index.html", "itt14-mat-lx"],
+      ["/years/2014/sites/slack/index.html", "itt14-sl-lx"],
+      ["/years/2014/sites/twitch/index.html", "itt14-tw-lx"],
+      ["/years/2014/sites/playable/game.html", "itt14-tile-lx"],
+    ],
+  },
+  {
+    year: "2021",
+    star: "itt21-att",
+    gold: async (page) => {
+      await openClear(page, "/years/2021/sites/att/index.html", "itt21-att");
+      await page.locator("[data-official-trap]").first().click();
+      expect(await getKey(page, "itt21-att")).toBeFalsy();
+      await page.locator('[data-att-hop="privacy"]').click();
+      await page.locator('[data-att-hop="tracking"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+      await expect.poll(() => getKey(page, "itt21-att"), { timeout: 8000 }).toBeTruthy();
+    },
+    leftover: [
+      ["/years/2021/sites/signal/index.html", "itt21-sig-lx"],
+      ["/years/2021/sites/copilot/index.html", "itt21-cop-lx"],
+      ["/years/2021/sites/meta/index.html", "itt21-meta-lx"],
+      ["/years/2021/sites/windows11/index.html", "itt21-win11-lx"],
+      ["/years/2021/sites/flash/index.html", "itt21-flash-lx"],
+      ["/years/2021/sites/chrome/index.html", "itt21-chrome-lx"],
+      ["/years/2021/sites/windows10/index.html", "itt21-win10-lx"],
+      ["/years/2021/sites/facebook/index.html", "itt21-fb-lo"],
+      ["/years/2021/sites/playable/game.html", "itt21-game-five-lx"],
     ],
   },
 ];
@@ -187,9 +217,12 @@ test.describe("wiped years stay boarded", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    for (const y of ["2014", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]) {
+    for (const y of ["2013", "2018", "2020", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
+    expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(true);
   });
 });
 

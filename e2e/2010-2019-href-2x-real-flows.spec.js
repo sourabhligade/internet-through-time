@@ -56,9 +56,9 @@ const YEARS = [
     star: "itt14-wa-install",
     gold: "/years/2014/sites/whatsapp/index.html",
     leftover: [
-      { href: "/years/2014/sites/slack/index.html", suffix: "slack" },
-      { href: "/years/2014/sites/heartbleed/index.html", suffix: "heartbleed" },
-      { href: "/years/2014/sites/icebucket/index.html", suffix: "icebucket" },
+      { href: "/years/2014/sites/slack/index.html", suffix: "sl-lx" },
+      { href: "/years/2014/sites/heartbleed/index.html", suffix: "hb-lx" },
+      { href: "/years/2014/sites/icebucket/index.html", suffix: "ice-lx" },
     ],
   },
   {

@@ -475,8 +475,8 @@
       {"n": 3, "name": "Copilot waitlist", "href": "sites/copilot/index.html", "match": "/copilot/", "whenKey": "itt21-copilot", "nextHref": "sites/meta/index.html", "nextLabel": "Meta rename"},
       {"n": 4, "name": "Meta rename", "href": "sites/meta/index.html", "match": "/meta/", "whenKey": "itt21-meta", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11 leftover"},
       {"n": 5, "name": "Windows 11 leftover", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt21-win11", "nextHref": "sites/flash/index.html", "nextLabel": "Flash brick"},
-      {"n": 6, "name": "Flash brick", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt21-flash-brick", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
-      {"n": 7, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt21-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
+      {"n": 6, "name": "Flash brick", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt21-flash-brick", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome leftover"},
+      {"n": 7, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt21-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10 leftover"},
       {"n": 8, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt21-win10", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook leftover"},
       {"n": 9, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt21-pop-facebook", "nextHref": "sites/playable/game.html", "nextLabel": "Five Letter"},
       {"n": 10, "name": "Five Letter", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt21-game-five", "nextHref": "sites/att/index.html", "nextLabel": "ATT Ask"}

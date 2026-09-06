@@ -31,11 +31,13 @@ const GOLD = [
   { year: "2010", writer: "sites/instagram/index.html", key: "itt10-ig", nextNeedle: "iphone", chipHref: "sites/instagram/index.html" },
   { year: "2011", writer: "sites/googleplus/index.html", key: "itt11-gplus", nextNeedle: "spotify", chipHref: "sites/googleplus/index.html" },
   { year: "2012", writer: "sites/instagram/android.html", key: "itt12-ig-android", nextNeedle: "pinterest", chipHref: "sites/instagram/android.html" },
-  { year: "2013", writer: "sites/vine/record.html", key: "itt13-vine-posts", nextNeedle: "instagram/video", chipHref: "sites/vine/record.html" },
+  { year: "2014", writer: "sites/whatsapp/index.html", key: "itt14-wa-install", nextNeedle: "chat", chipHref: "sites/whatsapp/index.html" },
   { year: "2015", writer: "sites/periscope/index.html", key: "itt15-periscope", nextNeedle: "googlephotos", chipHref: "sites/periscope/index.html" },
   { year: "2016", writer: "sites/instagram/stories.html", key: "itt16-ig-stories", nextNeedle: "pokemongo", chipHref: "sites/instagram/stories.html" },
   { year: "2017", writer: "sites/iphone/x.html", key: "itt17-faceid", nextNeedle: "fortnite", chipHref: "sites/iphone/x.html" },
   { year: "2019", writer: "sites/disneyplus/home.html", key: "itt19-disneyplus", nextNeedle: "tiktok", chipHref: "sites/disneyplus/home.html" },
+  { year: "2021", writer: "sites/att/index.html", key: "itt21-att", nextNeedle: "signal", chipHref: "sites/att/index.html" },
+  { year: "2022", writer: "sites/chatgpt/index.html", key: "itt22-chatgpt", nextNeedle: "twitter", chipHref: "sites/chatgpt/index.html" },
 ];
 
 function yearFile(year, rel) {
@@ -45,7 +47,7 @@ function yearFile(year, rel) {
 test("gold-a table covers every live year on disk", () => {
   const years = GOLD.map((g) => g.year);
   const live = [];
-  for (let y = 1994; y <= 2019; y++) {
+  for (let y = 1994; y <= 2022; y++) {
     if (fs.existsSync(yearFile(String(y), "index.html"))) live.push(String(y));
   }
   expect(years.sort()).toEqual(live.sort());

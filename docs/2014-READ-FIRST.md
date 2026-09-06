@@ -1,8 +1,8 @@
 # 2014 — READ FIRST (from-scratch 5k-web research freeze)
 
 **Date:** 2026-09-04  
-**Status:** **WIPED.** Hub card is locked. Tree deleted.  
-**Disk truth:** Hub is **24 years open** · **2014 / 2018 / 2020–2025 wiped**. This file is the wipe stamp, not a live door.  
+**Status:** **LIVE lean door.** Hub card is available.  
+**Disk truth:** Hub is **26 years open** · **2018 / 2020 / 2022–2025 wiped**. This file is the lock. Star is WhatsApp Install.  
 **Prefix:** `itt14`  
 **Clone shape:** live `years/2013/` (Vine door · Win7 + IE 9). Costume note from live `years/2015/` (Chrome habit is **2015+**). **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
 
@@ -84,8 +84,8 @@ Never blend June Live Stats with January Netcraft. Never invent a “980 million
 
 ## Do not
 
-- Scaffold `years/2014/` until asked.  
 - Restore `/tmp/itt-2014-*` or any 100+ HTML forest.  
+- Grow past the HTML hard stop **70**.  
 - Make Watch, Win10, Ice Bucket, Heartbleed, Slack, or Twitch the chip.  
 - Ship a Heartbleed **exploit** or live dump.  
 - Ship IG Stories (2016) · Snap Discover (27 Jan **2015**) · Periscope (26 Mar **2015**).  
@@ -93,4 +93,4 @@ Never blend June Live Stats with January Netcraft. Never invent a “980 million
 - Rebrand WhatsApp as Facebook Messenger.  
 - Print WhatsApp as “free forever ads.” 2014 product is **$0.99 / year** after the first year.  
 - Invent official WhatsApp / Apple / Google / Slack / Twitch pixels.  
-- Unlock the hub card until the door writes `itt14-wa-install`.  
+- Move the star off WhatsApp Install.  

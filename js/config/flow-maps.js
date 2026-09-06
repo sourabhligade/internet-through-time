@@ -2047,7 +2047,7 @@
     ]
   };
     ITT.flowMaps["2008"] =   {
-    "thesis": "Apps + browser reinvention — App Store + iPhone 3G, Chrome, Android G1, Hulu.",
+    "thesis": "GitHub issue is the star. App Store · Chrome · G1 · Hulu leftover. Phone becomes a platform; desktop still mass.",
     "shell": "Windows XP · IE 7 · Chrome product room (not sole shell)",
     "how": [
       "App Store: browse → install theater",
@@ -2105,8 +2105,540 @@
 },
 
       {
+        "label": "CUT-DOUBLE dest minutes",
+        "do": "105 leftover machines · Pack A/B/C · trap / empty never write · leftover never writes itt08-github",
+        "sites": [
+          {
+            "name": "N-A01 Firefox 3 Download Day",
+            "href": "sites/firefox/downloadday.html",
+            "do": "Pledge leftover \u00b7 trap never writes \u2192 itt08-fx3-day"
+          },
+          {
+            "name": "N-A02 Cuil",
+            "href": "sites/cuil/index.html",
+            "do": "Search leftover \u00b7 trap never writes \u2192 itt08-cuil-dp"
+          },
+          {
+            "name": "N-A03 Bitcoin P2P e-cash paper",
+            "href": "sites/bitcoin/index.html",
+            "do": "Read leftover \u00b7 trap never writes \u2192 itt08-btc-paper"
+          },
+          {
+            "name": "N-A04 FriendFeed",
+            "href": "sites/friendfeed/index.html",
+            "do": "Follow leftover \u00b7 trap never writes \u2192 itt08-ffeed-dp"
+          },
+          {
+            "name": "N-A05 TweetDeck",
+            "href": "sites/tweetdeck/index.html",
+            "do": "Column leftover \u00b7 trap never writes \u2192 itt08-tdeck-dp"
+          },
+          {
+            "name": "N-A06 bit.ly",
+            "href": "sites/bitly/index.html",
+            "do": "Shorten leftover \u00b7 trap never writes \u2192 itt08-bitly-dp"
+          },
+          {
+            "name": "N-A07 reCAPTCHA",
+            "href": "sites/recaptcha/index.html",
+            "do": "Type leftover \u00b7 trap never writes \u2192 itt08-recap-dp"
+          },
+          {
+            "name": "N-A08 Facebook Connect",
+            "href": "sites/fbconnect/index.html",
+            "do": "Connect leftover \u00b7 trap never writes \u2192 itt08-fbcon-dp"
+          },
+          {
+            "name": "N-A09 Facebook Beacon",
+            "href": "sites/beacon/index.html",
+            "do": "Opt-out leftover \u00b7 trap never writes \u2192 itt08-beacon-dp"
+          },
+          {
+            "name": "N-A10 my.barackobama.com",
+            "href": "sites/mybo/index.html",
+            "do": "RSVP leftover \u00b7 trap never writes \u2192 itt08-mybo-dp"
+          },
+          {
+            "name": "N-A11 change.gov",
+            "href": "sites/changegov/index.html",
+            "do": "Read leftover \u00b7 trap never writes \u2192 itt08-change-dp"
+          },
+          {
+            "name": "N-A12 Lehman literacy",
+            "href": "sites/lehman/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-lehman-dp"
+          },
+          {
+            "name": "N-A13 Justin.tv",
+            "href": "sites/justin/index.html",
+            "do": "Watch leftover \u00b7 trap never writes \u2192 itt08-jtv-dp"
+          },
+          {
+            "name": "N-A14 Ustream",
+            "href": "sites/ustream/index.html",
+            "do": "Go leftover \u00b7 trap never writes \u2192 itt08-ustream-dp"
+          },
+          {
+            "name": "N-A15 Vimeo",
+            "href": "sites/vimeo/index.html",
+            "do": "Upload leftover \u00b7 trap never writes \u2192 itt08-vimeo-dp"
+          },
+          {
+            "name": "N-A16 Kongregate",
+            "href": "sites/kongregate/index.html",
+            "do": "Play leftover \u00b7 trap never writes \u2192 itt08-kong-dp"
+          },
+          {
+            "name": "N-A17 Newgrounds",
+            "href": "sites/newgrounds/index.html",
+            "do": "Portal leftover \u00b7 trap never writes \u2192 itt08-ng-dp"
+          },
+          {
+            "name": "N-A18 Miniclip",
+            "href": "sites/miniclip/index.html",
+            "do": "Play leftover \u00b7 trap never writes \u2192 itt08-mini-dp"
+          },
+          {
+            "name": "N-A19 Mafia Wars",
+            "href": "sites/mafiawars/index.html",
+            "do": "Job leftover \u00b7 trap never writes \u2192 itt08-mafia-dp"
+          },
+          {
+            "name": "N-A20 Scrabulous",
+            "href": "sites/scrabulous/index.html",
+            "do": "Tile leftover \u00b7 trap never writes \u2192 itt08-scrab-dp"
+          },
+          {
+            "name": "N-A21 World of Warcraft \u00b7 Wrath",
+            "href": "sites/wow/index.html",
+            "do": "Armory leftover \u00b7 trap never writes \u2192 itt08-wotlk-dp"
+          },
+          {
+            "name": "N-A22 Spore",
+            "href": "sites/spore/index.html",
+            "do": "Cell leftover \u00b7 trap never writes \u2192 itt08-spore-dp"
+          },
+          {
+            "name": "N-A23 Braid",
+            "href": "sites/braid/index.html",
+            "do": "Fold leftover \u00b7 trap never writes \u2192 itt08-braid-dp"
+          },
+          {
+            "name": "N-A24 LittleBigPlanet",
+            "href": "sites/lbp/index.html",
+            "do": "Sack leftover \u00b7 trap never writes \u2192 itt08-lbp-dp"
+          },
+          {
+            "name": "N-A25 Grand Theft Auto IV",
+            "href": "sites/gtaiv/index.html",
+            "do": "Load leftover \u00b7 trap never writes \u2192 itt08-gtaiv-dp"
+          },
+          {
+            "name": "N-A26 Club Penguin",
+            "href": "sites/clubpenguin/index.html",
+            "do": "Waddle leftover \u00b7 trap never writes \u2192 itt08-cp-dp"
+          },
+          {
+            "name": "N-A27 BBC iPlayer",
+            "href": "sites/iplayer/index.html",
+            "do": "Play leftover \u00b7 trap never writes \u2192 itt08-iplayer-dp"
+          },
+          {
+            "name": "N-A28 Mint.com",
+            "href": "sites/mint/index.html",
+            "do": "Budget leftover \u00b7 trap never writes \u2192 itt08-mint-dp"
+          },
+          {
+            "name": "N-A29 Yelp",
+            "href": "sites/yelp/index.html",
+            "do": "Review leftover \u00b7 trap never writes \u2192 itt08-yelp-dp"
+          },
+          {
+            "name": "N-A30 Etsy",
+            "href": "sites/etsy/index.html",
+            "do": "Shop leftover \u00b7 trap never writes \u2192 itt08-etsy-dp"
+          },
+          {
+            "name": "N-A31 LimeWire",
+            "href": "sites/limewire/index.html",
+            "do": "Search leftover \u00b7 trap never writes \u2192 itt08-lime-dp"
+          },
+          {
+            "name": "N-A32 The Pirate Bay literacy",
+            "href": "sites/piratebay/index.html",
+            "do": "Literacy leftover \u00b7 trap never writes \u2192 itt08-tpb-dp"
+          },
+          {
+            "name": "N-A33 MobileMe",
+            "href": "sites/mobileme/index.html",
+            "do": "Sync leftover \u00b7 trap never writes \u2192 itt08-mme-dp"
+          },
+          {
+            "name": "N-A34 Google Lively",
+            "href": "sites/lively/index.html",
+            "do": "Walk leftover \u00b7 trap never writes \u2192 itt08-lively-dp"
+          },
+          {
+            "name": "N-A35 Google Knol",
+            "href": "sites/knol/index.html",
+            "do": "Write leftover \u00b7 trap never writes \u2192 itt08-knol-dp"
+          },
+          {
+            "name": "N-B01 hi5",
+            "href": "sites/hi5/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-hi5-dp"
+          },
+          {
+            "name": "N-B02 Orkut",
+            "href": "sites/orkut/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-orkut-dp"
+          },
+          {
+            "name": "N-B03 Bebo",
+            "href": "sites/bebo/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-bebo-dp"
+          },
+          {
+            "name": "N-B04 Ning",
+            "href": "sites/ning/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ning-dp"
+          },
+          {
+            "name": "N-B05 Scribd",
+            "href": "sites/scribd/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-scribd-dp"
+          },
+          {
+            "name": "N-B06 Windows Live Spaces",
+            "href": "sites/livespaces/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-spaces-dp"
+          },
+          {
+            "name": "N-B07 Craigslist",
+            "href": "sites/craigslist/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-cl-dp"
+          },
+          {
+            "name": "N-B08 Weather leftover",
+            "href": "sites/weather/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-wx-dp"
+          },
+          {
+            "name": "N-B09 New York Times leftover",
+            "href": "sites/nyt/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-nyt-dp"
+          },
+          {
+            "name": "N-B10 BBC leftover",
+            "href": "sites/bbc/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-bbc-dp"
+          },
+          {
+            "name": "N-B11 Huffington Post",
+            "href": "sites/huffpo/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-huff-dp"
+          },
+          {
+            "name": "N-B12 Gizmodo",
+            "href": "sites/gizmodo/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-giz-dp"
+          },
+          {
+            "name": "N-B13 Engadget",
+            "href": "sites/engadget/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-eng-dp"
+          },
+          {
+            "name": "N-B14 Ars Technica",
+            "href": "sites/ars/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ars-dp"
+          },
+          {
+            "name": "N-B15 CollegeHumor",
+            "href": "sites/collegehumor/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ch-dp"
+          },
+          {
+            "name": "N-B16 Funny or Die",
+            "href": "sites/funnyordie/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-fod-dp"
+          },
+          {
+            "name": "N-B17 I Can Has Cheezburger",
+            "href": "sites/icanhas/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ichc-dp"
+          },
+          {
+            "name": "N-B18 Failblog",
+            "href": "sites/failblog/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-fail-dp"
+          },
+          {
+            "name": "N-B19 xkcd",
+            "href": "sites/xkcd/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-xkcd-dp"
+          },
+          {
+            "name": "N-B20 The Onion",
+            "href": "sites/onion/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-onion-dp"
+          },
+          {
+            "name": "N-B21 YTMND",
+            "href": "sites/ytmnd/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ytmnd-dp"
+          },
+          {
+            "name": "N-B22 Disqus",
+            "href": "sites/disqus/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-disqus-dp"
+          },
+          {
+            "name": "N-B23 Plurk",
+            "href": "sites/plurk/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-plurk-dp"
+          },
+          {
+            "name": "N-B24 DuckDuckGo",
+            "href": "sites/duckduckgo/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-ddg-dp"
+          },
+          {
+            "name": "N-B25 Pandora",
+            "href": "sites/pandora/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-pandora-dp"
+          },
+          {
+            "name": "N-B26 Imeem",
+            "href": "sites/imeem/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-imeem-dp"
+          },
+          {
+            "name": "N-B27 TripAdvisor",
+            "href": "sites/tripadvisor/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ta-dp"
+          },
+          {
+            "name": "N-B28 Kayak",
+            "href": "sites/kayak/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-kayak-dp"
+          },
+          {
+            "name": "N-B29 Zillow",
+            "href": "sites/zillow/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-zillow-dp"
+          },
+          {
+            "name": "N-B30 Adobe Flash 10 leftover",
+            "href": "sites/flash10/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-flash10-dp"
+          },
+          {
+            "name": "N-B31 Microsoft Silverlight leftover",
+            "href": "sites/silverlight/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-silver-dp"
+          },
+          {
+            "name": "N-B32 HTML5 leftover",
+            "href": "sites/html5/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-html5-dp"
+          },
+          {
+            "name": "N-B33 OpenSocial leftover",
+            "href": "sites/opensocial/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-osoc-dp"
+          },
+          {
+            "name": "N-B34 Internet Explorer 8 beta leftover",
+            "href": "sites/ie8/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-ie8-dp"
+          },
+          {
+            "name": "N-B35 Windows 7 PDC leftover",
+            "href": "sites/windows7/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-win7-dp"
+          },
+          {
+            "name": "N-C01 AddictingGames",
+            "href": "sites/addicting/index.html",
+            "do": "Play leftover \u00b7 trap never writes \u2192 itt08-ag-dp"
+          },
+          {
+            "name": "N-C02 Armor Games",
+            "href": "sites/armorgames/index.html",
+            "do": "Play leftover \u00b7 trap never writes \u2192 itt08-armor-dp"
+          },
+          {
+            "name": "N-C03 Pogo",
+            "href": "sites/pogo/index.html",
+            "do": "Play leftover \u00b7 trap never writes \u2192 itt08-pogo-dp"
+          },
+          {
+            "name": "N-C04 Neopets",
+            "href": "sites/neopets/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-neo-dp"
+          },
+          {
+            "name": "N-C05 Habbo",
+            "href": "sites/habbo/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-habbo-dp"
+          },
+          {
+            "name": "N-C06 Gaia Online",
+            "href": "sites/gaia/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-gaia-dp"
+          },
+          {
+            "name": "N-C07 RuneScape",
+            "href": "sites/runescape/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-rs-dp"
+          },
+          {
+            "name": "N-C08 Webkinz",
+            "href": "sites/webkinz/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-wk-dp"
+          },
+          {
+            "name": "N-C09 Second Life",
+            "href": "sites/secondlife/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-sl-dp"
+          },
+          {
+            "name": "N-C10 Xbox Live leftover",
+            "href": "sites/xboxlive/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-xbl-dp"
+          },
+          {
+            "name": "N-C11 Wii leftover",
+            "href": "sites/wii/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-wii-dp"
+          },
+          {
+            "name": "N-C12 PlayStation Network leftover",
+            "href": "sites/psn/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-psn-dp"
+          },
+          {
+            "name": "N-C13 IGN leftover",
+            "href": "sites/ign/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ign-dp"
+          },
+          {
+            "name": "N-C14 WoW Armory leftover",
+            "href": "sites/wow/armory.html",
+            "do": "Armory leftover \u00b7 trap never writes \u2192 itt08-armory-dp"
+          },
+          {
+            "name": "N-C15 Megaupload literacy",
+            "href": "sites/megaupload/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-mega-dp"
+          },
+          {
+            "name": "N-C16 RapidShare leftover",
+            "href": "sites/rapidshare/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-rsfile-dp"
+          },
+          {
+            "name": "N-C17 Windows Live SkyDrive leftover",
+            "href": "sites/skydrive/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-sky-dp"
+          },
+          {
+            "name": "N-C18 Heroku leftover",
+            "href": "sites/heroku/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-heroku-dp"
+          },
+          {
+            "name": "N-C19 Bitbucket leftover",
+            "href": "sites/bitbucket/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-bb-dp"
+          },
+          {
+            "name": "N-C20 WikiLeaks leftover",
+            "href": "sites/wikileaks/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-wl-dp"
+          },
+          {
+            "name": "N-C21 Project Chanology literacy",
+            "href": "sites/chanology/index.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-chan-dp"
+          },
+          {
+            "name": "N-C22 Fail Whale leftover",
+            "href": "sites/failwhale/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-whale-dp"
+          },
+          {
+            "name": "N-C23 Seesmic leftover",
+            "href": "sites/seesmic/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-see-dp"
+          },
+          {
+            "name": "N-C24 Identi.ca leftover",
+            "href": "sites/identica/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-identica-dp"
+          },
+          {
+            "name": "N-C25 Google App Engine leftover",
+            "href": "sites/appengine/index.html",
+            "do": "Query leftover \u00b7 trap never writes \u2192 itt08-gae-dp"
+          },
+          {
+            "name": "N-C26 StumbleUpon leftover",
+            "href": "sites/stumbleupon/index.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-stumble-dp"
+          },
+          {
+            "name": "N-C27 Digg leftover 2\u00d7",
+            "href": "sites/digg/more.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-digg-lx"
+          },
+          {
+            "name": "N-C28 Reddit leftover 2\u00d7",
+            "href": "sites/reddit/more.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-rd-lx"
+          },
+          {
+            "name": "N-C29 MySpace still wins the US",
+            "href": "sites/myspace/us.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ms-us"
+          },
+          {
+            "name": "N-C30 GeoCities still #6 leftover",
+            "href": "sites/geocities/more.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-geo-lx"
+          },
+          {
+            "name": "N-C31 Flickr leftover 2\u00d7",
+            "href": "sites/flickr/more.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-flickr-lx"
+          },
+          {
+            "name": "N-C32 del.icio.us leftover 2\u00d7",
+            "href": "sites/delicious/more.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-del-lx"
+          },
+          {
+            "name": "N-C33 Friendster Asia leftover",
+            "href": "sites/friendster/asia.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-fs-asia"
+          },
+          {
+            "name": "N-C34 GitHub literacy leftover",
+            "href": "sites/github/about.html",
+            "do": "Tick leftover \u00b7 trap never writes \u2192 itt08-github-lx"
+          },
+          {
+            "name": "N-C35 YouTube 720p leftover",
+            "href": "sites/youtube/hd.html",
+            "do": "Hops leftover \u00b7 trap never writes \u2192 itt08-ythd-dp"
+          }
+        ]
+      },
+
+      {
         "label": "Phase 2 · Builder Web trail",
-        "do": "GitHub → Stack Overflow (2009)",
+        "do": "GitHub issue star · Stack Overflow leftover (15 Sep 2008)",
         "sites": [
           {
             "name": "GitHub",
@@ -2128,7 +2660,7 @@
           {
             "name": "Starting Point",
             "href": "pages/home.html",
-            "do": "App Store · Chrome · G1 chips"
+            "do": "Guided 6 · GitHub issue is the chip"
           },
           {
             "name": "About 2008",
@@ -2442,7 +2974,8 @@
           { "name": "Heartbleed", "href": "sites/heartbleed/index.html", "do": "CVE-2014-0160 rotate \u2192 itt14-heartbleed" },
           { "name": "Ice Bucket", "href": "sites/icebucket/index.html", "do": "Nominate \u2192 itt14-icebucket" },
           { "name": "iPhone 6 / Pay", "href": "sites/iphone/index.html", "do": "6 or 6 Plus \u2192 itt14-iphone6" },
-          { "name": "Material", "href": "sites/material/index.html", "do": "I/O + Lollipop \u2192 itt14-material" }
+          { "name": "Material", "href": "sites/material/index.html", "do": "I/O + Lollipop \u2192 itt14-material" },
+          { "name": "Famous leftover", "href": "sites/playable/famous.html", "do": "Mines + Pocket Snake leftover parlor" }
         ]
       }
     ],
@@ -2796,6 +3329,7 @@
         label: "Leftover 2×",
         do: "Never a second star",
         sites: [
+          { name: "Famous leftover", href: "sites/playable/famous.html", do: "Pocket Snake + Breakout parlor" },
           { name: "Whisper leftover", href: "sites/whisper/index.html", do: "Pack A start" },
           { name: "Continuity close", href: "sites/playable/close.html", do: "Pack C end · Next ChatGPT" }
         ]

@@ -19,13 +19,15 @@ const YEARS = new Set(
 );
 const USE_MATRIX = process.env.MATRIX === "1";
 const WORKERS = Math.max(1, parseInt(process.env.WORKERS || "1", 10) || 1);
-const OUT = path.join(
-  ROOT,
-  "docs",
-  YEARS.size
-    ? `_WALK-LEFTOVER-DESTS-${[...YEARS].join("-")}.json`
-    : "_WALK-LEFTOVER-DESTS-2026-09-02.json"
-);
+const OUT =
+  process.env.OUT ||
+  path.join(
+    ROOT,
+    "docs",
+    YEARS.size
+      ? `_WALK-LEFTOVER-DESTS-${[...YEARS].join("-")}.json`
+      : "_WALK-LEFTOVER-DESTS-2026-09-02.json"
+  );
 
 function walkHtml(dir, acc = []) {
   if (!fs.existsSync(dir)) return acc;

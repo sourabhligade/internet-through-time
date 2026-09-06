@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **24 years open**. **2014 / 2018 / 2020–2025** are boarded. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2015 star = Periscope Go LIVE. 2019 star = Disney+ Continue.
+Historical reconstruction of the World Wide Web — year by year. Hub **26 years open**. **2013 / 2018 / 2020 / 2023–2025** are boarded. 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2019 star = Disney+ Continue. 2021 star = ATT Ask.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -40,7 +40,7 @@ npm run check
 npm run github:ready
 ```
 
-CI on GitHub: `.github/workflows/ci.yml` (static job + a **named 10-file Playwright pack**, not the full `e2e/` tree). `npm test` is the full suite and is **not** what GitHub Actions runs.
+CI on GitHub: `.github/workflows/ci.yml` (static job + a **named ship Playwright pack**, not the full `e2e/` tree). Triggers on `main` / `master` / `museum/1994-2020-lean`. `npm test` is the full suite and is **not** what GitHub Actions runs.
 
 **Requirements for production:**
 - Single origin for hub + years (iframe + localStorage + script injection)
@@ -62,7 +62,7 @@ gh repo create internet-through-time --public --source=. --remote=origin --push
 ```
 
 Use `--private` instead of `--public` if you want a private museum first.  
-CI runs automatically on push to `main` (static smoke + Playwright).
+CI runs automatically on push to `main` or `museum/1994-2020-lean` (static smoke + Playwright).
 
 Then connect **Netlify** or **Vercel** to the same GitHub repo for production CDN.
 
@@ -83,25 +83,28 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2002/` | StumbleUpon · leftover 18 · **cut-forest live** |
 | `/years/2003/` | Photobucket upload · leftover 18 · **cut-forest live** |
 | `/years/2004/` | XP · IE6 · Gmail · Flickr · Thefacebook · Firefox 1.0 · **museum densify** |
-| `/years/2005/` | YouTube upload · Maps / Reddit / Digg leftover · XP+IE6 · **live** |
-| `/years/2006/` | Twttr update · News Feed leftover · XP+IE6 · **live** |
-| `/years/2007/` | Lean door — iPhone Safari `itt07-iphone` · leftover 2× every dest · XP+IE6 |
-| `/years/2008/` | App Store · iPhone 3G · Chrome · Android G1 · Hulu · **ship** |
-| `/years/2009/` | Lean door — Facebook Like `itt09-like` · leftover 2× every dest · XP+IE8 |
-| `/years/2010/` | Win7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph · **lean** |
+| `/years/2005/` | YouTube upload · leftover 2× + leftover 4× · XP+IE6 · **live** |
+| `/years/2006/` | Twttr update · leftover 2× + leftover 4× · XP+IE6 · **live** |
+| `/years/2007/` | Lean door — iPhone Safari `itt07-iphone` · leftover 2× + leftover 4× · XP+IE6 |
+| `/years/2008/` | GitHub issue · leftover 2× + leftover 4× · App Store leftover · **ship** |
+| `/years/2009/` | Lean door — Facebook Like `itt09-like` · leftover 2× + leftover 4× · XP+IE8 |
+| `/years/2010/` | Win7 · IE 8 · Instagram iOS · leftover 2× + leftover 4× · **lean** |
 | `/years/2011/` | Lean door — Google+ Hangout `itt11-gplus` · leftover 2× every dest · Win7+IE9 |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
-| `/years/2013/` | Lean door — Vine 6s · iOS 7 · Snapchat Stories |
-| `/years/2014/` | **Wiped** — WhatsApp Install later |
+| `/years/2013/` | **Boarded** — hub locked · no year tree |
+| `/years/2014/` | **Live lean door** — WhatsApp Install `itt14-wa-install` · leftover 2× + leftover 4× |
 | `/years/2015/` | Periscope Go LIVE · Google Photos · Win10 free upgrade · Apple Music · **lean** |
 | `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
 | `/years/2018/` | **Boarded** — hub locked · no year tree |
-| `/years/2019/` | Disney+ Continue · TikTok leftover · Arcade · Stadia · **lean** |
-| `/years/2020/`–`/years/2025/` | **Boarded** — hub locked · no year tree |
+| `/years/2019/` | **Live lean door** — Disney+ Continue · leftover 312 |
+| `/years/2020/` | **Boarded** — hub locked · no year tree |
+| `/years/2021/` | **Live lean door** — ATT Ask `itt21-att` · leftover 2× + leftover 4× |
+| `/years/2022/` | **Live lean door** — ChatGPT Send · leftover 2× + leftover 4× |
+| `/years/2023/`–`/years/2025/` | **Boarded** — hub locked · no year tree |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2009 + 2011 + 2013 + 2015–2017 + 2019. Hub is **24 years open**. **2014 / 2018 / 2020–2025 are boarded.** 2001–2003 are cut-forest live. 2015 is Periscope Go LIVE. 2019 is Disney+ Continue.
+**Lean doors:** 2007 + 2009 + 2011 + 2014–2017 + 2019 + 2021 + 2022. Hub is **26 years open**. **2013 / 2018 / 2020 / 2023–2025 are boarded.** 2014 star = WhatsApp Install. 2021 star = ATT Ask. 2022 star = ChatGPT Send. 2001–2003 are cut-forest live. 2015 is Periscope Go LIVE. 2019 is Disney+ Continue.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

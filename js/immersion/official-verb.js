@@ -44,6 +44,7 @@
       if (n.getAttribute) {
         if (n.getAttribute("data-lo-panel") === "1") return true;
         if (n.getAttribute("data-pop-panel") === "1") return true;
+        if (n.hasAttribute("data-4x-panel")) return true;
       }
       n = n.parentNode;
     }
@@ -138,6 +139,8 @@
     for (i = 0; i < verbs.length; i++) {
       if (verbs[i].getAttribute("data-official-verb-bound") === "1") continue;
       verbs[i].setAttribute("data-official-verb-bound", "1");
+      /* Capture so we write the official key before a product machine
+         clears the field (2008 Dropbox). residual-real still blocks first. */
       verbs[i].addEventListener("click", function (ev) {
         /* Only stop navigation. Forms with an existing period machine
            (no action / action="#") must still fire submit. */
@@ -221,7 +224,7 @@
             } catch (eGo) { /* */ }
           }
         }
-      });
+      }, true);
     }
   }
 

@@ -71,7 +71,7 @@ Guided `#ott-guided-2014` — **exactly 6**:
 
 ## Phases (do in order when named)
 
-### S0 — Freeze · `[ ]` until implement is named
+### S0 — Freeze · `[x]` named implement 2026-09-05
 
 1. Recite: 2014 wiped · official 10 already in trails · first 3× Snap/IG/Uber.  
 2. Confirm `years/2014/` missing. Confirm 2013 live.  
@@ -141,25 +141,25 @@ Guided `#ott-guided-2014` — **exactly 6**:
 2. Next dest 200.  
 3. `js/config/2014.js` `rooms` + urlMap.
 
-### S10 — first 3×
+### S10 — first 3× · `[x]`
 
 1. Snapchat · Instagram · Uber dests matching `popular-3x-sites.json`.  
 2. pick + honesty + go → `itt14-pop-<id>`.  
 3. Home `data-itt-pop3x="2014"` three links.
 
-### S11 — third 3× + pop-more
+### S11 — third 3× + pop-more · `[x]`
 
 1. Add `popular-3x3-sites.json` `"2014"`: youtube · wikipedia · facebook.  
 2. Pop-more on Heartbleed · Ice Bucket · Slack (`itt14-pop-*`).  
 3. Guided stays 6.
 
-### S12 — Tile Fold + Famous
+### S12 — Tile Fold + Famous · `[x]`
 
 1. `sites/playable/game.html` · `itt14-game-tilefold`.  
 2. `famous.html` two `[data-famous]` cabinets.  
 3. `year-playable.js` `"2014"` if missing.
 
-### S13 — 2× leftover 4×
+### S13 — 2× leftover 4× · `[x]`
 
 1. Extra `data-4x-go` on existing rooms.  
 2. Rows in `e2e/2x-links.matrix.json`.  
@@ -175,7 +175,7 @@ Guided `#ott-guided-2014` — **exactly 6**:
 1. Title / `#window-title` / `#task-ie` = **IE residual**, not Chrome habit.  
 2. About scale cites pass G10.
 
-### S16 — e2e pack
+### S16 — e2e pack · `[x]`
 
 1. `e2e/2014-mvp.spec.js` · `e2e/2014-flows.spec.js` · one-thing 2014.  
 2. `check-all-years.py` includes 2014.  

@@ -244,7 +244,7 @@
       blurb: "Fold two leftover tiles. Flappy never writes.",
       why: "2014 leftover cabinet. The star is still WhatsApp.",
       era: "Win7 + IE 9. $19B chat. TLS bleeds. Ice in July.",
-      famous: "Pocket Snake + Concentration",
+      famous: "Mines + Pocket Snake",
       accent: "#25d366"
     },
     "2015": {

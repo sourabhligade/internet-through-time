@@ -30,10 +30,27 @@ NO_PLAQUE: frozenset[tuple[int, str]] = frozenset(
     }
 )
 
-# Years restored to committed dests (no leftover 5× plaques).
+# Years restored to committed dests (no leftover 5× plaques) except ALLOW_PLAQUE.
 NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2008, 2009, 2010, 2011, 2012, 2013, 2021, 2022, 2023})
+
+# 5×-live F1–F5 leftover plaques (keys are not official gold, except Hulu/Chrome
+# share a dest with gold). 2008-5x-live / 2012-5x-live require data-5x-save here.
+ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
+    {
+        (2008, "sites/appstore/index.html"),
+        (2008, "sites/chrome/index.html"),
+        (2008, "sites/android/index.html"),
+        (2008, "sites/hulu/index.html"),
+        (2008, "sites/dropbox/index.html"),
+        (2012, "sites/pinterest/index.html"),
+        (2012, "sites/facebook/ipo.html"),
+        (2012, "sites/facebook/index.html"),
+        (2012, "sites/iphone/maps.html"),
+        (2012, "sites/wikipedia/sopa.html"),
+    }
+)
 # Hub-wiped trees — do not require dests or famous cabinets.
-WIPED_YEARS: frozenset[int] = frozenset({2007, 2009, 2011, 2014, 2018, 2020, 2021, 2022, 2023, 2024, 2025})
+WIPED_YEARS: frozenset[int] = frozenset({2007, 2009, 2011, 2013, 2014, 2018, 2020, 2021, 2022, 2023, 2024, 2025})
 
 POP_PANEL_2020 = ()
 
@@ -50,6 +67,8 @@ def load_matrix() -> dict:
 
 
 def plaque_required(year: int, room: str) -> bool:
+    if (year, room) in ALLOW_PLAQUE:
+        return True
     if year in NO_PLAQUE_YEARS:
         return False
     return (year, room) not in NO_PLAQUE

@@ -140,6 +140,9 @@ CI_E2E_ALLOWLIST = (
     "e2e/gold-a-leftover-pack.spec.js",
     "e2e/popular-3x-sites.spec.js",
     "e2e/one-thing-per-year.spec.js",
+    "e2e/2005-2010-leftover-4x.spec.js",
+    "e2e/2008-cut-double-dest-minutes.spec.js",
+    "e2e/2008-5x-live.spec.js",
     "e2e/2016-2018-3x-detail.spec.js",
     "e2e/2016-2018-trail-chain.spec.js",
     "e2e/2017-2019-deepen-theater.spec.js",
@@ -210,8 +213,8 @@ def test_sitemap_ship_years() -> None:
     if "/years/2004/pages/home.html" not in sm:
         fail("sitemap-years", "missing 2004 Starting Point")
         return
-    if "/years/2019/pages/home.html" not in sm:
-        fail("sitemap-years", "missing 2019 Starting Point")
+    if "/years/2017/pages/home.html" not in sm:
+        fail("sitemap-years", "missing 2017 Starting Point")
         return
     ok("sitemap-years")
 

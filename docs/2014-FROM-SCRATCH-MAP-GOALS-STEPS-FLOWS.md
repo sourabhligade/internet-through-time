@@ -1,8 +1,8 @@
 # 2014 — From-scratch map: goals, steps, flows
 
-**Date:** 2026-08-23  
-**This file is the implementer visitor map.** Door is **wiped**. Scaffold only when implement is named.  
-**Disk now:** hub **1994–2013 + 2015–2021**. `years/2014/` is **missing**.  
+**Date:** 2026-08-23 · implement **2026-09-05**  
+**This file is the implementer visitor map.** Door is **live**.  
+**Disk now:** hub **1994–2017 + 2019 + 2021** (26 years). `years/2014/` is the WhatsApp Install lean door.  
 **Prefix:** `itt14`  
 **Clone shape:** live `years/2013/` (Vine door · Win7 + IE 9). Never restore `/tmp/itt-2014-*`.
 

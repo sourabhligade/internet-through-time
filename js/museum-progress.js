@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2014": 1, "2018": 1, "2020": 1, "2021": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2013": 1, "2018": 1, "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -52,11 +52,11 @@
     {
       id: "fn-2008",
       year: "2008",
-      path: "sites/appstore/index.html",
-      title: "2008 · App Store",
-      blurb: "Apps economy begins. Desktop still mass.",
+      path: "sites/github/issue.html",
+      title: "2008 · GitHub issue",
+      blurb: "Open an issue. App Store · Chrome · G1 stay leftover.",
       mode: "visit",
-      match: "/appstore/"
+      match: "/github/"
     },
     {
       id: "fn-2010",
@@ -388,7 +388,7 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2019) via "YYYY-start" trail id */
+  /** Start any shipped year tour (1994–2017) via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
     if (!YEAR_STARTS[year]) return startFirstNight();
@@ -757,7 +757,7 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2004 thefacebook → 2008 App Store → 2010 Instagram." +
+        "1994 → 1998 Google → 2004 thefacebook → 2008 GitHub issue → 2010 Instagram." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
     }
     html += "</div></div>";

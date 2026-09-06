@@ -337,6 +337,35 @@ const THINGS = [
     },
   },
   {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator('[data-att-hop="privacy"]').click();
+      await page.locator('[data-att-hop="tracking"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2022",
+    path: "/years/2022/sites/chatgpt/index.html",
+    key: "itt22-chatgpt",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("museum leftover");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
     year: "2007",
     path: "/years/2007/sites/iphone/index.html",
     key: "itt07-iphone",

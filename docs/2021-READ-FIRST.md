@@ -1,7 +1,8 @@
 # 2021 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-09-04  
-**Status:** **WIPED.** Hub card locked. No `years/2021/`. Do not `git checkout` an old 2021 forest. Rebuild only when named. This file is the wipe stamp, not a live door.  
+**Date:** 2026-09-05  
+**Status:** **LIVE lean door.** Star is ATT Ask. Leftover 2× = 120. Leftover 4× on every dest. Do not `git checkout` an old 2021 forest.  
+**Named implement walk (goals · every step · leftover 2× + leftover 4×):** [`2021-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-PHASES-FLOWS-MINUTE-4X-2026-09-05.md`](2021-FROM-SCRATCH-IMPLEMENT-MAP-GOALS-PHASES-FLOWS-MINUTE-4X-2026-09-05.md)  
 **All-years implement walk:** [`ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md`](ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md)  
 **Criteria (always / tick a row):** [`2021-2X-CRITERIA-MAP-2026-09-01.md`](2021-2X-CRITERIA-MAP-2026-09-01.md)  
 **2× leftover harvest (walk this for leftover dests):** [`2021-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2021-2X-LEFTOVER-RESEARCH-2026-09-01.md)  

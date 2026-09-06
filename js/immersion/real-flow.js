@@ -208,9 +208,10 @@
           saveJSON(full, payload);
           var yOk = yearOf();
           var msgOk =
-            ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
+            btn.getAttribute("data-ok-msg") ||
+            (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
               ? ITT.UX.RealCoach.messageSuccess(yOk, full)
-              : "Saved in this browser.";
+              : "Saved in this browser.");
           feedback(msgOk, st);
           markUsed(btn.getAttribute("data-tour-id") || undefined);
           try {

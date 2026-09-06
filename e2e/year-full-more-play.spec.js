@@ -3,7 +3,11 @@
  * Real play (no ?test=1) for every full-more engine.
  * Mouse-only — same path a visitor uses inside the year shell.
  */
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
+
+const WIPED_2013 = !fs.existsSync(path.join(__dirname, '..', 'years', '2013', 'index.html'));
 
 
 async function openGame(page, path, key) {
@@ -82,6 +86,7 @@ test('fold 2008 Braid Fold edge click reaches 16', async ({ page }) => {
 });
 
 test('flap 2013 Pipe Flap click climb', async ({ page }) => {
+  test.skip(WIPED_2013, '2013 wiped');
   await openGame(page, '/years/2013/sites/playable/more-c.html', 'itt13-game-flap2013');
   const canvas = page.locator('canvas');
   for (let i = 0; i < 40; i++) {
@@ -93,6 +98,7 @@ test('flap 2013 Pipe Flap click climb', async ({ page }) => {
 });
 
 test('idle 2013 Cookie Click bakery', async ({ page }) => {
+  test.skip(WIPED_2013, '2013 wiped');
   await openGame(page, '/years/2013/sites/playable/more-d.html', 'itt13-game-cookieclk');
   const canvas = page.locator('canvas');
   for (let i = 0; i < 55; i++) {

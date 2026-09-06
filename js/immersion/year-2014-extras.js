@@ -59,10 +59,14 @@
       reveal(doc);
     }
     install.addEventListener("click", function () {
+      if (!notes["16b"] || !notes["rsu"]) {
+        feedback("Tick both deal notes first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("wa-install"), blob({
         installed: true,
-        deal16: !!notes["16b"],
-        rsu3: !!notes["rsu"],
+        deal16: true,
+        rsu3: true,
         total: "19B",
         date: "2014-02-19"
       }));
@@ -81,7 +85,11 @@
         feedback("Type a leftover note (min 2). Empty never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("wa-chat"), blob({ note: note.slice(0, 80) }));
+      if (countChecked(doc, "[data-wa14-req]") < 2) {
+        feedback("Tick both chat honesties. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      saveJSON(key("wa-chat"), blob({ note: note.slice(0, 80), ticks: 2 }));
       feedback("Chat leftover · " + key("wa-chat"), st);
       reveal(doc);
     });
@@ -98,6 +106,10 @@
       });
     }
     rotate.addEventListener("click", function () {
+      if (countChecked(doc, "[data-hb14-req]") < 2) {
+        feedback("Tick both Heartbleed honesties. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("heartbleed"), blob({ cve: "CVE-2014-0160", rotated: true, date: "2014-04-07" }));
       feedback("Heartbleed rotate · " + key("heartbleed"), st);
       reveal(doc);
@@ -112,6 +124,10 @@
       var name = val(doc, "[data-ice14-name]");
       if (!name || name.length < 2) {
         feedback("Nominate someone (min 2). Empty never writes.", st, { error: true });
+        return;
+      }
+      if (countChecked(doc, "[data-ice14-req]") < 2) {
+        feedback("Tick both Ice Bucket honesties. Incomplete never writes.", st, { error: true });
         return;
       }
       saveJSON(key("icebucket"), blob({ nominate: name.slice(0, 80), summer: true }));
@@ -150,6 +166,10 @@
         feedback("Pick 6 or 6 Plus first. Incomplete never writes.", st, { error: true });
         return;
       }
+      if (countChecked(doc, "[data-ip14-req]") < 2) {
+        feedback("Tick both iPhone 6 honesties. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("iphone6"), blob({ size: picked, date: "2014-09-09" }));
       feedback("iPhone 6 leftover · " + key("iphone6"), st);
       reveal(doc);
@@ -161,6 +181,10 @@
     if (!tap) return;
     var st = doc.querySelector("[data-pay14-status]");
     tap.addEventListener("click", function () {
+      if (countChecked(doc, "[data-pay14-req]") < 2) {
+        feedback("Tick both merchant honesties. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("applepay"), blob({ tap: true, month: "2014-10" }));
       feedback("Apple Pay leftover · " + key("applepay"), st);
       reveal(doc);
@@ -172,6 +196,10 @@
     if (!save) return;
     var st = doc.querySelector("[data-mat14-status]");
     save.addEventListener("click", function () {
+      if (countChecked(doc, "[data-mat14-req]") < 2) {
+        feedback("Tick both Material honesties. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("material"), blob({ io: "2014-06-25", lollipop: "2014-11-12" }));
       feedback("Material leftover · " + key("material"), st);
       reveal(doc);
@@ -216,6 +244,10 @@
       var note = val(doc, "[data-tw14-note]");
       if (!note || note.length < 2) {
         feedback("Type a stream leftover (min 2). Empty never writes.", st, { error: true });
+        return;
+      }
+      if (countChecked(doc, "[data-tw14-req]") < 1) {
+        feedback("Tick the $970M leftover. Incomplete never writes.", st, { error: true });
         return;
       }
       saveJSON(key("twitch"), blob({ amazon: true, note: note.slice(0, 80), date: "2014-08-25" }));
