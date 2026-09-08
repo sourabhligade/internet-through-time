@@ -12,7 +12,7 @@ import { fileURLToPath } from "url";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
 const WORKERS = Math.max(1, parseInt(process.env.WORKERS || "4", 10) || 4);
-const WIPED = new Set(["2018", "2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2020", "2023", "2024", "2025"]);
 const OUT = process.env.OUT || "/tmp/walk-official-dests.json";
 
 function walkHtml(dir, acc = []) {

@@ -319,6 +319,18 @@ const THINGS = [
     },
   },
   {
+    year: "2018",
+    path: "/years/2018/sites/gdpr/index.html",
+    key: "itt18-gdpr",
+    incomplete: async (page) => {
+      await page.locator("[data-gdpr-accept-all]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-gdpr-manage]").click();
+      await page.locator("[data-gdpr-save]").click();
+    },
+  },
+  {
     year: "2019",
     path: "/years/2019/sites/disneyplus/home.html",
     key: "itt19-disneyplus",

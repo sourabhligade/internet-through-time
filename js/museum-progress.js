@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2013": 1, "2018": 1, "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -388,10 +388,10 @@
     return startTrail("first-night");
   }
 
-  /** Start any shipped year tour (1994–2017) via "YYYY-start" trail id */
+  /** Start any shipped year tour via "YYYY-start" trail id */
   function startYear(year) {
     year = String(year || "").replace(/\D/g, "");
-    if (!YEAR_STARTS[year]) return startFirstNight();
+    if (!isLiveYear(year) || !YEAR_STARTS[year]) return startFirstNight();
     return startTrail(year + "-start");
   }
 
@@ -656,6 +656,12 @@
     }
   }
 
+  function isLiveYear(year) {
+    year = String(year || "");
+    if (!/^(199[4-9]|200[0-9]|201[0-9]|202[12])$/.test(year)) return false;
+    return !WIPED[year];
+  }
+
   function escapeHtml(s) {
     return String(s || "")
       .replace(/&/g, "&amp;")
@@ -816,6 +822,8 @@
     maybeOpenTrailRoom: maybeOpenTrailRoom,
     injectTrailBar: injectTrailBar,
     renderHubPassport: renderHubPassport,
+    WIPED: WIPED,
+    isLiveYear: isLiveYear,
     on: on
   };
 

@@ -12,9 +12,8 @@ const { enterYear, goImmersion, contentFrame, killOverlays } = require("./helper
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const WIPED_YEARS = new Set(["2018", "2020", "2023", "2024", "2025"]);
-for (let y = 1994; y <= 2019; y++) {
-  if (y === 2006 || y === 2007 || y === 2009 || y === 2011 || y === 2013 || y === 2014) continue;
+const WIPED_YEARS = new Set(["2020", "2023", "2024", "2025"]);
+for (let y = 1994; y <= 2022; y++) {
   const s = String(y);
   if (WIPED_YEARS.has(s)) continue;
   YEARS.push(s);

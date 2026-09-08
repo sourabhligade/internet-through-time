@@ -6,7 +6,7 @@
 const { test, expect } = require("@playwright/test");
 
 
-const WIPED = new Set(["2018", "2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2020", "2023", "2024", "2025"]);
 
 async function openAlsoYear(page, year) {
   const box = page.locator(`#itt-also-year-${year}`);
@@ -26,37 +26,47 @@ test.describe("3 more leftovers on home — every shipped year", () => {
       const strip = page.locator(`p.itt-pop-more[data-itt-pop-more="${year}"]`).first();
       test.skip(!(await strip.count()), year + " has no 3-door leftover strip");
       await expect(strip).toBeVisible();
-      await expect(strip.locator("a[href*='sites/']")).toHaveCount(3);
+      const n = await strip.locator("a[href*='sites/']").count();
+      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2015", "2017", "2019", "2021", "2022"].includes(year)
+        ? 9
+        : ["2001", "2002", "2003"].includes(year)
+          ? 5
+          : 3;
+      expect(n, year).toBeGreaterThanOrEqual(wantMin);
     });
   }
 });
 
+async function destTrueFirst(page) {
+  const destTrue = page.locator("[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))").first();
+  if (await destTrue.count()) return destTrue;
+  return page.locator("[data-pop-panel]:has([data-pop-go]:not([data-pop-key]))").first();
+}
+
 async function completePop(page, key) {
   await page.evaluate((k) => localStorage.removeItem(k), key);
   await page.reload();
-  await page.locator("[data-pop-go]").click();
+  const panel = await destTrueFirst(page);
+  const go = panel.locator("[data-pop-go]:not([data-pop-key])").first();
+  await expect(go).toBeVisible();
+  await go.click();
   expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-  await page.locator("[data-pop-pick]").first().click();
-  await page.locator("[data-pop-req]").check();
-  const field = page.locator("[data-pop-field]");
+  const picks = panel.locator("[data-pop-pick]");
+  if ((await picks.count()) > 0) await picks.first().click();
+  const reqs = panel.locator("[data-pop-req]");
+  const n = await reqs.count();
+  for (let i = 0; i < n; i++) await reqs.nth(i).check();
+  const field = panel.locator("[data-pop-field]").first();
   const ph = (await field.getAttribute("placeholder")) || "museum";
   await field.fill(ph);
-  await page.locator("[data-pop-go]").click();
+  await go.click();
   await expect.poll(async () => page.evaluate((k) => localStorage.getItem(k), key), { timeout: 8000 }).toBeTruthy();
 }
 
 test.describe("new leftover rooms write — sample years", () => {
   test("1994 Pizza Hut first 3× empty never writes · complete writes", async ({ page }) => {
     await page.goto("/years/1994/sites/pizzahut/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt94-pop-pizzahut"));
-    await page.reload();
-    await page.locator("[data-pop-go][data-pop-id='pizzahut']").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt94-pop-pizzahut"))).toBeFalsy();
-    await page.locator("[data-pop-field]").first().fill("pepperoni");
-    await page.locator("[data-pop-go][data-pop-id='pizzahut']").click();
-    await expect
-      .poll(() => page.evaluate(() => localStorage.getItem("itt94-pop-pizzahut")), { timeout: 8000 })
-      .toBeTruthy();
+    await completePop(page, "itt94-pop-pizzahut");
   });
 
   test("1994 Prodigy incomplete never writes · complete writes", async ({ page }) => {
@@ -92,33 +102,30 @@ test.describe("new leftover rooms write — sample years", () => {
 
   test("2016 Slack incomplete never writes · complete writes", async ({ page }) => {
     await page.goto("/years/2016/sites/slack/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt16-pop-slack"));
-    await page.reload();
-    await page.locator("[data-pop-go]").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt16-pop-slack"))).toBeFalsy();
-    await page.locator("[data-pop-pick]").first().click();
-    await page.locator("[data-pop-req]").check();
-    await page.locator("[data-pop-field]").fill("#general");
-    await page.locator("[data-pop-go]").click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem("itt16-pop-slack")), { timeout: 8000 })
-      .toBeTruthy();
+    await completePop(page, "itt16-pop-slack");
   });
 
   test("2010 Netflix first 3× incomplete never writes · complete writes", async ({ page }) => {
     await page.goto("/years/2010/sites/netflix/index.html");
     await page.evaluate(() => localStorage.removeItem("itt10-pop-netflix"));
     await page.reload();
-    await page.locator("[data-pop-go][data-pop-id='netflix']").click();
+    const panel = page
+      .locator("[data-pop-panel]:has([data-pop-go][data-pop-id='netflix']:not([data-pop-key])):not([data-itt-lo3x])")
+      .first();
+    const go = panel.locator("[data-pop-go][data-pop-id='netflix']:not([data-pop-key])");
+    await go.click();
     expect(await page.evaluate(() => localStorage.getItem("itt10-pop-netflix"))).toBeFalsy();
-    await page.locator("[data-pop-field]").first().fill("Lost");
-    await page.locator("[data-pop-go][data-pop-id='netflix']").click();
+    await panel.locator("[data-pop-field]").fill("Lost");
+    await go.click();
     await expect
       .poll(() => page.evaluate(() => localStorage.getItem("itt10-pop-netflix")), { timeout: 8000 })
       .toBeTruthy();
   });
 
   test("2013 Chrome second 3× incomplete never writes · complete writes", async ({ page }) => {
+    const fs = require("fs");
+    const path = require("path");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
     await page.goto("/years/2013/sites/chrome/index.html");
     await completePop(page, "itt13-pop-chrome");
   });

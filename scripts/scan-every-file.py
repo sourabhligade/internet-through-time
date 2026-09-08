@@ -9,18 +9,21 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "_SCAN-EVERY-FILE-2026-09-02.md"
+SCAN_DATE = "2026-09-07"
+OUT = ROOT / "docs" / f"_SCAN-EVERY-FILE-{SCAN_DATE}.md"
+RAW_OUT = ROOT / "docs" / f"_SCAN-EVERY-FILE-{SCAN_DATE}.json"
 SKIP_JS_PARTS = {"node_modules", "playwright-report", "test-results", "test-results-"}
-WIPED = {"2025"}
+# Ship law: itt_gate._WIPED. Live years called boarded are stale.
+WIPED = {"2020", "2023", "2024", "2025"}
 SHIP = [str(y) for y in range(1994, 2026) if str(y) not in WIPED]
 HREF_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.I)
 SKIP_HREF = re.compile(r"^(https?:|mailto:|javascript:|data:|#)", re.I)
 TODO_RE = re.compile(r"\b(TODO|FIXME|XXX|HACK|UNDONE|WIP\b|not implemented|coming soon)\b", re.I)
 BOARDED_LIVE = re.compile(
-    r"(2007|2009|2011|2020|2022|2023|2024).{0,40}(wiped|boarded|not on disk|no year tree)",
+    r"(2007|2009|2011|2014|2015|2016|2017|2019|2021|2022).{0,40}(wiped|boarded|not on disk|no year tree)",
     re.I,
 )
-OPEN24 = re.compile(r"\b(24 years open|26 years open|23 years open)\b", re.I)
+OPEN24 = re.compile(r"\b(23 years open|24 years open|25 years open)\b", re.I)
 
 
 def exists_target(from_file: Path, href: str) -> bool:
@@ -257,12 +260,11 @@ def main() -> int:
 
     (ROOT / "docs").mkdir(exist_ok=True)
     payload = {"html": html, "js": js, "md": md}
-    raw = ROOT / "docs" / "_SCAN-EVERY-FILE-2026-09-02.json"
     # trim huge lists in json for leftover dests keep
-    raw.write_text(json.dumps(payload, indent=2)[:8_000_000], encoding="utf-8")
+    RAW_OUT.write_text(json.dumps(payload, indent=2)[:8_000_000], encoding="utf-8")
 
     lines = []
-    lines.append("# Full-file scan — 2026-09-02")
+    lines.append(f"# Full-file scan — {SCAN_DATE}")
     lines.append("")
     lines.append(f"Read **{html['n']}** year HTML, **{js['n']}** JS, **{md['n']}** MD.")
     lines.append("")

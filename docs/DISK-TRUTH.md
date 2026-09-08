@@ -3,7 +3,7 @@
 **Date:** 2026-09-02  
 **Law:** live tree + `scripts/itt_gate.py` `SHIP_YEARS`. This file does **not** append old ship cards.
 
-Hub **26 years open** · **2013 / 2018 / 2020 / 2023–2025 wiped**. Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). 2005 is YouTube upload. 2006 is Twttr. 2009 is Facebook Like. 2011 is Google+. **2014 is WhatsApp Install.** **2015 is Periscope Go LIVE.** **2019 is Disney+ Continue.** **2021 is ATT Ask.** **2022 is ChatGPT Send.** 2018 GDPR / 2020 Zoom / 2023 Plus / 2024 4o stay boarded.
+Hub **28 years open** · **2020 / 2023–2025 wiped**. Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). **2013 is Vine 6s.** **2018 is GDPR Manage.** 2019 `sites/fortnite/index.html` leftover-2× cloned from `marshmello.html` (`fn-lx` · `fn-d2`). 2005 is YouTube upload. 2006 is Twttr. 2009 is Facebook Like. 2011 is Google+. **2014 is WhatsApp Install.** **2015 is Periscope Go LIVE.** **2019 is Disney+ Continue.** **2021 is ATT Ask.** **2022 is ChatGPT Send.** 2020 Zoom / 2023 Plus / 2024 4o stay boarded.
 
 | Year | Disk |
 |------|------|
@@ -19,13 +19,13 @@ Hub **26 years open** · **2013 / 2018 / 2020 / 2023–2025 wiped**. Leftover 2�
 | **2010** | Live lean · Instagram iOS · leftover 2× + leftover 4× on every dest |
 | **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · leftover 2× every dest |
 | **2012** | Live lean · IG Android · leftover 9+9+9 dest-true · leftover 4× **0** |
-| **2013** | **Wiped** · hub locked · Vine 6s later |
+| **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · leftover 2× + leftover 4× on every dest · leftover 6× dests · Win7 + IE 9 |
 | **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · leftover 2× every dest · Win7 residual + Chrome habit |
 | **2016** | Live lean door · IG Stories · leftover 9+9+9 dest-true · leftover 4× **0** |
 | **2017** | Live lean door · Face ID · leftover 9+9+9 dest-true · leftover 4× **0** |
-| **2018** | **Wiped** · hub locked · GDPR Manage later |
-| **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · leftover 312 dest-true · leftover 4× **0** |
+| **2018** | **Live lean door** · GDPR Manage `itt18-gdpr` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
+| **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · leftover 312 dest-true · leftover 4× **0** · leftover 2× on every dest index including `sites/fortnite/index.html` (`fn-lx` · `fn-d2`) |
 | **2020** | **Wiped** · hub locked · Zoom mute → leave later |
 | **2021** | **Live lean door** · ATT Ask `itt21-att` · leftover 2× 120 · leftover 4× on every dest · Win10 + Chrome habit |
 | **2022** | **Live lean door** · ChatGPT Send · leftover 2× 120 · leftover 4× on every dest |
@@ -33,10 +33,11 @@ Hub **26 years open** · **2013 / 2018 / 2020 / 2023–2025 wiped**. Leftover 2�
 | **2024** | **Wiped** · hub locked · GPT-4o Talk later |
 | **2025** | **Wiped** · hub locked · no year tree |
 
-Lean doors: **2007 + 2009 + 2011 + 2014–2017 + 2019 + 2021 + 2022**. Wiped: **2013 · 2018 · 2020 · 2023–2025**.  
+Lean doors: **2007 + 2009 + 2011 + 2013–2019 + 2021 + 2022**. Wiped: **2020 · 2023–2025**.  
 Games wing (`games/`) is separate and live.
 
-**G1–G10 scoreboard:** [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md).
+**G1–G10 scoreboard:** [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md).  
+**Visitor e2e V1–V10 (generated):** [`YEAR-E2E-POTENTIAL.md`](YEAR-E2E-POTENTIAL.md) · `npm run check:potential`.
 
 Rebuild a wiped year only when named. Do not `git checkout` an old forest.
 

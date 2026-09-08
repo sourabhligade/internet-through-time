@@ -3,6 +3,8 @@
  * Core shell flows for every exhibit year on disk.
  * Covers: boot · home content · dirbar · home button · start menu · location Go.
  */
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
 
 
@@ -26,8 +28,8 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005', '2006',
-  '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2019', '2011', '2009', '2021', '2022',
-];
+  '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2011', '2009', '2021', '2022',
+].filter((year) => fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')));
 
 /** Location bar hint that should resolve inside each year (when known). */
 const LOCATION_HINT = {

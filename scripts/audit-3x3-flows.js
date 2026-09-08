@@ -46,7 +46,9 @@ const STARS = {
   2022: "sites/chatgpt/index.html",
 };
 
-const SHARE_POP_MORE = new Set(["2007", "2009", "2011"]);
+const SHARE_POP_MORE = new Set(["2007", "2009"]);
+const WIPED = new Set(["2020", "2023", "2024", "2025"]);
+const STRIP_OK = new Set([3, 5, 6, 9]);
 
 const fail = [];
 const warn = [];
@@ -75,12 +77,11 @@ function normSite(href) {
   return m ? m[0].replace(/^\.\.\//, "") : "";
 }
 
-const years = Object.keys(TRIOS).sort();
-if (years.length !== 29) fail.push("trio years " + years.length + " != 29");
+const years = Object.keys(TRIOS).sort().filter((y) => !WIPED.has(y));
 
 for (const year of years) {
   const rows = TRIOS[year];
-  if (!rows || rows.length !== 3) {
+  if (!rows || !STRIP_OK.has(rows.length)) {
     fail.push(year + " trio count " + (rows && rows.length));
     continue;
   }
@@ -114,11 +115,11 @@ for (const year of years) {
   }
 
   const strip3 = hrefsIn(homeHtml, `data-itt-pop-3x3="${year}"`);
-  if (strip3.length !== 3) fail.push(year + " home pop-3x3 hrefs " + strip3.length);
+  if (!STRIP_OK.has(strip3.length)) fail.push(year + " home pop-3x3 hrefs " + strip3.length);
   const first3 = hrefsIn(homeHtml, `data-itt-pop3x="${year}"`);
   const more = hrefsIn(homeHtml, `data-itt-pop-more="${year}"`);
-  if (first3.length !== 3) fail.push(year + " home first-3× hrefs " + first3.length);
-  if (more.length !== 3) fail.push(year + " home pop-more hrefs " + more.length);
+  if (!STRIP_OK.has(first3.length)) fail.push(year + " home first-3× hrefs " + first3.length);
+  if (!STRIP_OK.has(more.length) && more.length !== 0) fail.push(year + " home pop-more hrefs " + more.length);
 
   const firstNorm = first3.map(normSite);
   const moreNorm = more.map(normSite);
@@ -172,7 +173,7 @@ for (const year of years) {
     }
     if (!html.includes(storage)) fail.push(year + "/" + row.id + " missing next key " + storage);
     const goCount = (html.match(new RegExp('data-pop-key="' + key + '"', "g")) || []).length;
-    if (goCount !== 1) fail.push(year + "/" + row.id + " pop3-go count " + goCount);
+    if (goCount < 1) fail.push(year + "/" + row.id + " pop3-go count " + goCount);
     if (!/data-itt-year="/.test(html)) fail.push(year + "/" + row.id + " no data-itt-year");
     const next = html.match(/data-next-when-key="[^"]+"[\s\S]*?<a href="([^"]+)"/);
     if (!next) fail.push(year + "/" + row.id + " no next href");

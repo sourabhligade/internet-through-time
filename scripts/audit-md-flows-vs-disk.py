@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-WIPED = {"2018", "2020", "2022", "2023", "2024", "2025"}
+WIPED = {"2020", "2023", "2024", "2025"}
 YEARS = [str(y) for y in range(1994, 2026) if str(y) not in WIPED]
 
 PRODUCT = re.compile(

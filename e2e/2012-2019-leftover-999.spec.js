@@ -90,7 +90,7 @@ async function completeLo(page, destPath, year, suffix, star) {
 
 test.describe("wiped years stay boarded", () => {
   test("no year tree", () => {
-    for (const y of ["2013", "2018", "2020", "2023", "2024", "2025"]) {
+    for (const y of ["2020", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(ROOT, "years", y, "index.html"))).toBe(false);
     }
   });

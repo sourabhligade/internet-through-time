@@ -10,13 +10,15 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
-const SRC = path.join(ROOT, "js", "year-ui", "start-data.js");
+const SRC = path.join(ROOT, "ui", "year", "start-data.js");
+const WIPED = new Set(["2020", "2023", "2024", "2025"]);
 
 function loadYearStart() {
-  const sandbox = { window: {} };
+  const sandbox = { window: {}, ITT: {} };
   vm.createContext(sandbox);
   vm.runInContext(fs.readFileSync(SRC, "utf8"), sandbox);
-  return (sandbox.window.ITT && sandbox.window.ITT.YearUI && sandbox.window.ITT.YearUI.START) || {};
+  const itt = sandbox.window.ITT || sandbox.ITT;
+  return (itt && itt.YearUI && itt.YearUI.START) || {};
 }
 
 function startBlob(spec) {
@@ -35,9 +37,19 @@ function assertStartCatalog(start) {
   const issues = [];
   const years = Object.keys(start).sort();
   const live = years.filter((y) => fs.existsSync(path.join(ROOT, "years", y, "index.html")));
-  if (live.length !== 15) issues.push("START live years " + live.length + " != 15 (1994–2009 minus 2007)");
-  if (start["2010"] || start["2014"] || start["2021"]) {
-    issues.push("2010+ must stay out of YearUI.START");
+  const ship = [];
+  for (let y = 1994; y <= 2022; y++) {
+    const s = String(y);
+    if (WIPED.has(s)) continue;
+    if (fs.existsSync(path.join(ROOT, "years", s, "index.html"))) ship.push(s);
+  }
+  if (live.length !== ship.length) {
+    issues.push("START live years " + live.length + " != ship " + ship.length);
+  }
+  for (const y of ["2007", "2010", "2014", "2021", "2022"]) {
+    if (!start[y] && fs.existsSync(path.join(ROOT, "years", y, "index.html"))) {
+      issues.push(y + " live door missing from YearUI.START");
+    }
   }
   for (const year of years) {
     if (!fs.existsSync(path.join(ROOT, "years", year, "index.html"))) continue;

@@ -1,33 +1,33 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2009 / 2011 / 2014–2017 / 2019 / 2021 / 2022 lean doors live. 2013 / 2018 / 2020 / 2023–2025 boarded. Do not invent rooms.
+ * 2007 / 2009 / 2011 / 2013–2019 / 2021 / 2022 lean doors live. 2020 / 2023–2025 boarded. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2014", "2015", "2016", "2017", "2019", "2021", "2022"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2013", "2018", "2020", "2023", "2024", "2025"],
+    gapYears: ["2020", "2023", "2024", "2025"],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
-      { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles. Vine door is boarded.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Continue watching, ATT Ask, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2019", "2021", "2022"] },
+      { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, ATT Ask, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022"] },
       { id: "late-lean", label: "Boarded late years", blurb: "2020 / 2023–2024 stay empty for rebuild.", years: ["2020", "2023", "2024"] },
       { id: "wiped-late", label: "Boarded years", blurb: "2025 stays empty for rebuild.", years: ["2025"] }
     ],
 
     leanYears: [
       "2007",
-      "2014", "2015", "2016", "2017", "2019", "2021", "2022",
+      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022",
       "2011", "2009"
     ],
 
@@ -155,6 +155,14 @@
         { label: "Twitter 280", href: "years/2017/sites/twitter/280.html" },
         { label: "Teams GA", href: "years/2017/sites/teams/index.html" },
         { label: "Year flow map", href: "years/2017/pages/map.html" }
+      ],
+      "2018": [
+        { label: "About 2018", href: "years/2018/pages/about.html" },
+        { label: "GDPR Manage — Accept All never writes", href: "years/2018/sites/gdpr/index.html" },
+        { label: "TikTok For You — Aug 2 merge", href: "years/2018/sites/tiktok/fyp.html" },
+        { label: "Hearing — Apr 10", href: "years/2018/sites/trust/index.html" },
+        { label: "IGTV — not Reels", href: "years/2018/sites/instagram/igtv.html" },
+        { label: "Year flow map", href: "years/2018/pages/map.html" }
       ]},
 
     years: {
@@ -352,9 +360,14 @@
         game: { label: "Letter Swap", href: "years/2011/sites/playable/game.html" }
       },
       "2013": {
-        wiped: true,
         era: "Vine 6s · iOS 7 · Stories",
-        thesis: "Boarded. Vine 6s will come back as a new lean door."
+        thesis: "Lean door. Hold 6s then post. Stories here are Snapchat, not Instagram.",
+        gold: { label: "Vine 6s", href: "years/2013/sites/vine/record.html", key: "itt13-vine-posts" },
+        guided: [
+          { label: "IG Video leftover", href: "years/2013/sites/instagram/video.html" },
+          { label: "Snapchat Stories", href: "years/2013/sites/snapchat/story.html" }
+        ],
+        game: { label: "Loop Six", href: "years/2013/sites/playable/game.html" }
       },
       "2014": {
         era: "WhatsApp · Heartbleed · Ice",
@@ -397,9 +410,14 @@
         game: { label: "Storm Circle", href: "years/2017/sites/playable/game.html" }
       },
       "2018": {
-        wiped: true,
         era: "Banner · hearing · For You",
-        thesis: "Boarded. GDPR Manage will come back as a new lean door."
+        thesis: "Lean door. Accept All never writes. Manage is the save.",
+        gold: { label: "GDPR Manage", href: "years/2018/sites/gdpr/index.html", key: "itt18-gdpr" },
+        guided: [
+          { label: "TikTok For You", href: "years/2018/sites/tiktok/fyp.html" },
+          { label: "Hearing leftover", href: "years/2018/sites/trust/index.html" }
+        ],
+        game: { label: "Consent Dash", href: "years/2018/sites/playable/game.html" }
       },
       "2019": {
         era: "Who’s watching · Continue",
@@ -633,7 +651,7 @@
       {
         id: "wiped-late",
         label: "Boarded years",
-        blurb: "2018–2025 stay empty for rebuild.",
+        blurb: "2020 / 2023–2025 stay empty for rebuild.",
         steps: []
       }
     ]

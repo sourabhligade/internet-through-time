@@ -217,7 +217,7 @@ test.describe("wiped years stay boarded", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    for (const y of ["2013", "2018", "2020", "2023", "2024", "2025"]) {
+    for (const y of ["2020", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
     expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);

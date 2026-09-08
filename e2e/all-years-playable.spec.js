@@ -6,7 +6,7 @@
 const { test, expect } = require('@playwright/test');
 
 
-const WIPED = new Set(['2018', '2020', '2022', '2023', '2024', '2025']);
+const WIPED = new Set(['2020', '2023', '2024', '2025']);
 const YEARS = [];
 for (let y = 1994; y <= 2011; y++) {
   const s = String(y);

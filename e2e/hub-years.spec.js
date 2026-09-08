@@ -3,9 +3,9 @@ const { test, expect } = require('@playwright/test');
 
 
 const OPEN = [
-  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2014', '2015', '2016', '2017', '2019', '2021', '2022'
+  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021', '2022'
 ];
-const LOCKED = ['2018', '2020', '2023', '2024', '2025'];
+const LOCKED = ['2020', '2023', '2024', '2025'];
 
 test.describe('hub + year shells', () => {
   test('hub lists playable years; 2026+ off disk', async ({ page }) => {
@@ -17,10 +17,10 @@ test.describe('hub + year shells', () => {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
       await expect(page.locator(`.year-card.locked.y${y}`)).toBeVisible();
     }
-    await expect(page.locator('body')).toContainText(/26 years open/i);
-    await expect(page.locator('a.year-card.available[href*="years/2018"]')).toHaveCount(0);
+    await expect(page.locator('body')).toContainText(/28 years open/i);
+    await expect(page.locator('a.year-card.available[href*="years/2018"]')).toBeVisible();
     await expect(page.locator('a.year-card.available[href*="years/2015"]')).toBeVisible();
-    await expect(page.locator('.year-card.locked.y2018')).toBeVisible();
+    await expect(page.locator('.year-card.locked.y2018')).toHaveCount(0);
     await expect(page.locator('a.year-card.available[href*="years/2019"]')).toBeVisible();
     await expect(page.locator('.year-card.locked.y2019')).toHaveCount(0);
     await expect(page.locator('a.year-card.available[href*="years/2020"]')).toHaveCount(0);
@@ -70,13 +70,14 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2011.available')).toBeVisible();
     await expect(page.locator('.y2011.locked')).toHaveCount(0);
     await expect(page.locator('.y2012.available')).toBeVisible();
-    await expect(page.locator('.y2013.locked')).toBeVisible();
-    await expect(page.locator('a.y2013')).toHaveCount(0);
+    await expect(page.locator('.y2013.available')).toBeVisible();
+    await expect(page.locator('.y2013.locked')).toHaveCount(0);
     await expect(page.locator('.y2014.available')).toBeVisible();
     await expect(page.locator('.y2014.locked')).toHaveCount(0);
     await expect(page.locator('.y2016')).toBeVisible();
     await expect(page.locator('.y2017')).toBeVisible();
-    await expect(page.locator('.y2018')).toBeVisible();
+    await expect(page.locator('.y2018.available')).toBeVisible();
+    await expect(page.locator('.y2018.locked')).toHaveCount(0);
     await expect(page.locator('.y2019.available')).toBeVisible();
     await expect(page.locator('.y2019.locked')).toHaveCount(0);
     await expect(page.locator('.y2020.available')).toHaveCount(0);
@@ -85,7 +86,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2021.locked')).toHaveCount(0);
     await expect(page.locator('.y2022.available')).toBeVisible();
     await expect(page.locator('.y2022.locked')).toHaveCount(0);
-    await expect(page.locator('body')).toContainText(/26 years open/i);
+    await expect(page.locator('body')).toContainText(/28 years open/i);
     await page.locator('details.start-jumps summary').click();
     await expect(page.locator('#begin-first-night.start-primary')).toBeVisible();
     await expect(page.locator('a.start-btn[href="atlas/"]').first()).toBeVisible();
@@ -142,7 +143,7 @@ test.describe('hub + year shells', () => {
   });
 
   test('resume works for every open year including lean doors', async ({ page }) => {
-    const lean = ['2007', '2009', '2011', '2016', '2017'];
+    const lean = ['2007', '2009', '2011', '2013', '2014', '2016', '2017', '2018', '2019', '2021', '2022'];
     for (const y of lean) {
       await page.goto('/');
       await page.evaluate((year) => {
@@ -154,9 +155,11 @@ test.describe('hub + year shells', () => {
       await expect(link).toHaveAttribute('href', `years/${y}/`);
       await expect(link).toContainText(y);
     }
-    await page.evaluate(() => localStorage.setItem('itt-last-year', '2025'));
-    await page.reload();
-    await expect(page.locator('#resume-wrap')).toHaveClass(/hidden/);
+    for (const wiped of ['2020', '2025']) {
+      await page.evaluate((year) => localStorage.setItem('itt-last-year', year), wiped);
+      await page.reload();
+      await expect(page.locator('#resume-wrap')).toHaveClass(/hidden/);
+    }
   });
 
   for (const year of OPEN) {
