@@ -5,7 +5,7 @@ const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 const SHIP = [];
 for (let y = 1994; y <= 2023; y++) {
   const year = String(y);
@@ -52,7 +52,7 @@ test.describe("third leftover 3× — every shipped year", () => {
       test.skip(!(await strip.count()), year + " has no 3-door third leftover strip");
       await expect(strip).toBeVisible();
       const n = await strip.locator("a[href*='sites/']").count();
-      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2014", "2015", "2016", "2017", "2019", "2021", "2022"].includes(year)
+      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2014", "2015", "2016", "2017", "2019"].includes(year)
         ? 9
         : ["2001", "2002", "2003"].includes(year)
           ? 6

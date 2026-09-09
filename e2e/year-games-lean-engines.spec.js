@@ -50,15 +50,17 @@ test.describe("lean year game engines", () => {
     test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
     await openClear(page, "/years/2013/sites/playable/game.html", [
       "itt13-game-loopsix",
-      "itt13-game-loopsix-lx"
+      "itt13-game-lx"
     ]);
-    const lo = page.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="game-loopsix-lx"])').first();
+    const lo = page.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="game-lx"])').first();
     const reqs = lo.locator("[data-lo-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
-    await lo.locator('[data-lo-pick="a"]').click({ force: true });
-    await lo.locator('[data-lo-save][data-lo-key="game-loopsix-lx"]').click({ force: true });
-    await expect.poll(() => getKey(page, "itt13-game-loopsix-lx"), { timeout: 8000 }).toBeTruthy();
+    await lo.locator('[data-lo-pick="keep"]').click({ force: true });
+    const field = lo.locator("[data-lo-field]");
+    if (await field.count()) await field.first().fill("game leftover");
+    await lo.locator('[data-lo-save][data-lo-key="game-lx"]').click({ force: true });
+    await expect.poll(() => getKey(page, "itt13-game-lx"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt13-game-loopsix")).toBeFalsy();
   });
 
@@ -84,52 +86,5 @@ test.describe("lean year game engines", () => {
     expect(blob.year).toBe("2014");
     expect(blob.real).toBe(true);
     await expect(page.locator('[data-next-flow][data-next-when-key="itt14-game-tilefold"]')).toBeVisible();
-  });
-
-  test("2022 Prompt Box: trap / empty never write · type leftover prompt writes itt22-game-prompt", async ({
-    page
-  }) => {
-    await openClear(page, "/years/2022/sites/playable/game.html", [
-      "itt22-game-prompt",
-      "itt22-chatgpt",
-      "itt22-prompt-lx"
-    ]);
-    await expect(page.locator('html')).toHaveAttribute("data-official-key", "itt22-game-prompt");
-    await page.locator("[data-official-trap]").click();
-    expect(await getKey(page, "itt22-game-prompt")).toBeFalsy();
-    await page.locator("[data-official-verb]").click();
-    expect(await getKey(page, "itt22-game-prompt")).toBeFalsy();
-    const reqs = page.locator("[data-official-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-official-verb]").click();
-    expect(await getKey(page, "itt22-game-prompt")).toBeFalsy();
-    await page.locator("[data-official-need]").fill("type leftover prompt");
-    await page.locator("[data-official-verb]").click();
-    await expect.poll(() => getKey(page, "itt22-game-prompt"), { timeout: 8000 }).toBeTruthy();
-    expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-    const blob = JSON.parse((await getKey(page, "itt22-game-prompt")) || "{}");
-    expect(blob.real).toBe(true);
-    expect(String(blob.year)).toBe("2022");
-    await expect(page.locator('[data-next-flow][data-next-when-key="itt22-game-prompt"]')).toBeVisible();
-  });
-
-  test("2022 Famous leftover: load never writes · Start writes snake + breakout", async ({ page }) => {
-    await openClear(page, "/years/2022/sites/playable/famous.html?test=1", [
-      "itt22-game-snake",
-      "itt22-game-breakout",
-      "itt22-chatgpt",
-      "itt22-game-prompt"
-    ]);
-    await expect(page.locator('[data-famous="snake"][data-year-game]')).toBeVisible();
-    await expect(page.locator('[data-famous="breakout"][data-year-game]')).toBeVisible();
-    expect(await getKey(page, "itt22-game-snake")).toBeFalsy();
-    expect(await getKey(page, "itt22-game-breakout")).toBeFalsy();
-    await page.locator('[data-famous="snake"] [data-game-start]').click();
-    await page.locator('[data-famous="breakout"] [data-game-start]').click();
-    await expect.poll(() => getKey(page, "itt22-game-snake"), { timeout: 8000 }).toBeTruthy();
-    await expect.poll(() => getKey(page, "itt22-game-breakout"), { timeout: 8000 }).toBeTruthy();
-    expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-    expect(await getKey(page, "itt22-game-prompt")).toBeFalsy();
   });
 });

@@ -25,7 +25,7 @@
 | HTML cap | **≤90** |
 | Pixels | never invent brand art |
 | Neighbors | `itt19-*` / `itt21-*` stay empty |
-| Boarded siblings | **2023–2025 boarded.** 2013 Vine · 2018 GDPR · **2020 Zoom** are live lean doors. |
+| Boarded siblings | **2025 boarded.** 2013 Vine · 2018 GDPR · **2020 Zoom** · 2023 Plus · 2024 4o are live lean doors. |
 
 Do not invent a June Live Stats 2020 websites digit.  
 Do not print “300 million Zoom users.”  

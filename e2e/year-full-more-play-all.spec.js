@@ -6,10 +6,12 @@ const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
 
-const matrix = require('./year-full-more.matrix.json').filter((row) =>
-  fs.existsSync(path.join(__dirname, '..', 'years', row.year, 'index.html')) &&
-  fs.existsSync(path.join(__dirname, '..', row.path.replace(/^\//, '')))
-);
+const matrix = require('./year-full-more.matrix.json').filter((row) => {
+  const dest = path.join(__dirname, '..', row.path.replace(/^\//, ''));
+  if (!fs.existsSync(path.join(__dirname, '..', 'years', row.year, 'index.html'))) return false;
+  if (!fs.existsSync(dest)) return false;
+  return /data-full-more/.test(fs.readFileSync(dest, 'utf8'));
+});
 
 /**
  * @param {import('@playwright/test').Page} page

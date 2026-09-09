@@ -140,7 +140,7 @@ for (const year of YEARS) {
         const p = url.pathname || '';
         return p === '/' || p === '/index.html' || /\/index\.html$/.test(p) && !/\/years\//.test(p);
       }, { timeout: 15000 });
-      await expect(page.locator('body')).toContainText(/Internet Through Time|Directory of years|How to use/i);
+      await expect(page.locator('body')).toContainText(/Internet Through Time|Directory of years/i);
       await expect(page).not.toHaveURL(new RegExp(`/years/${year}/?$`));
     });
 

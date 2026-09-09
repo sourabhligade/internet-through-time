@@ -1209,6 +1209,105 @@
       "btn": "Open leftover",
       "bg": "#111",
       "fg": "#fff"
+    },
+    {
+      "id": "hulu",
+      "name": "Hulu",
+      "title": "Hulu leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Hulu leftover, not Instant Queue as this.",
+      "verb": "play leftover Hulu then ads",
+      "ph": "Hulu",
+      "btn": "Hulu leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "pandora",
+      "name": "Pandora",
+      "title": "Pandora leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Thumb leftover, not Spotify-US-as-this.",
+      "verb": "thumb leftover station then not Spotify",
+      "ph": "thumb",
+      "btn": "Pandora leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "foursquare",
+      "name": "Foursquare",
+      "title": "Foursquare leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Mayorship leftover, not Swarm 2014.",
+      "verb": "check-in leftover then mayorship",
+      "ph": "mayorship",
+      "btn": "Foursquare leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "quora",
+      "name": "Quora",
+      "title": "Quora leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Topic leftover, not 2026 Quora as this.",
+      "verb": "ask leftover then follow topic",
+      "ph": "topic",
+      "btn": "Quora leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "kickstarter",
+      "name": "Kickstarter",
+      "title": "Kickstarter leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Pledge leftover, not a live pledge.",
+      "verb": "back leftover project then pledge theater",
+      "ph": "pledge",
+      "btn": "Kickstarter leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "evernote",
+      "name": "Evernote",
+      "title": "Evernote leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Clip leftover, not Notion-as-2011.",
+      "verb": "clip leftover note then sync theater",
+      "ph": "clip",
+      "btn": "Evernote leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "imgur",
+      "name": "Imgur",
+      "title": "Imgur leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Imgur leftover, not Reddit dest as this.",
+      "verb": "host leftover image then link",
+      "ph": "Imgur",
+      "btn": "Imgur leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "vimeo",
+      "name": "Vimeo",
+      "title": "Vimeo leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Staff pick leftover, not YouTube upload-as-gold.",
+      "verb": "watch leftover staff pick",
+      "ph": "staff pick",
+      "btn": "Vimeo leftover",
+      "bg": "#111",
+      "fg": "#fff"
+    },
+    {
+      "id": "huffpost",
+      "name": "HuffPost",
+      "title": "HuffPost leftover \u2014 2011",
+      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. HuffPost leftover, not live comment gold.",
+      "verb": "scan leftover HuffPost then honesty",
+      "ph": "HuffPost",
+      "btn": "HuffPost leftover",
+      "bg": "#111",
+      "fg": "#fff"
     }
   ],
   "2012": [
@@ -2011,107 +2110,6 @@
       "fg": "#fff"
     }
   ],
-  "2021": [
-    {
-      "id": "signal",
-      "name": "Signal",
-      "title": "Signal leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "copilot",
-      "name": "Copilot",
-      "title": "Copilot leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "meta",
-      "name": "Meta",
-      "title": "Meta leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "windows11",
-      "name": "Win11",
-      "title": "Win11 leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "flash",
-      "name": "Flash",
-      "title": "Flash leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome",
-      "title": "Chrome leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "windows10",
-      "name": "Win10",
-      "title": "Win10 leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook",
-      "title": "Facebook leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "tiktok",
-      "name": "TikTok",
-      "title": "TikTok leftover \u2014 2021",
-      "why": "2021 leftover. ATT Ask is the chip. No ChatGPT. No Wordle NYT.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    }
-  ],
   "2003": [
     {
       "id": "amazon",
@@ -2509,165 +2507,6 @@
       "why": "2020 leftover third. EO leftover.",
       "verb": "EO leftover.",
       "ph": "tiktok leftover",
-      "btn": "Open leftover"
-    }
-  ],
-  "2022": [
-    {
-      "id": "twitter",
-      "name": "Twitter",
-      "title": "Twitter leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "wordle",
-      "name": "Wordle",
-      "title": "Wordle leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "stablediffusion",
-      "name": "Stable Diffusion",
-      "title": "Stable Diffusion leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "mastodon",
-      "name": "Mastodon",
-      "title": "Mastodon leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "bereal",
-      "name": "BeReal",
-      "title": "BeReal leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "dalle2",
-      "name": "DALL\u00b7E 2",
-      "title": "DALL\u00b7E 2 leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome",
-      "title": "Chrome leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "windows10",
-      "name": "Win10",
-      "title": "Win10 leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "craiyon",
-      "name": "Craiyon",
-      "title": "Craiyon leftover \u2014 2022",
-      "why": "2022 leftover. ChatGPT Send is the chip. Plus / GPT-4 / Bing / X are 2023.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    }
-  ],
-  "2023": [
-    {
-      "id": "redditapi",
-      "name": "Reddit API",
-      "title": "Reddit API leftover",
-      "why": "2023 leftover third trio. Not the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "dalle3 leftover",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "dalle3",
-      "name": "DALL\u00b7E 3",
-      "title": "DALL\u00b7E 3 leftover",
-      "why": "2023 leftover third trio. Not the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "bsky leftover",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "bsky",
-      "name": "Bluesky",
-      "title": "Bluesky leftover",
-      "why": "2023 leftover third trio. Not the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "redditapi leftover",
-      "btn": "Open leftover"
-    }
-  ],
-  "2024": [
-    {
-      "id": "ttban",
-      "name": "TikTok ban",
-      "title": "TikTok ban leftover",
-      "why": "2024 leftover third trio. Not the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "mj24 leftover",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "mj24",
-      "name": "Midjourney",
-      "title": "Midjourney leftover",
-      "why": "2024 leftover third trio. Not the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "bsky24 leftover",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "bsky24",
-      "name": "Bluesky",
-      "title": "Bluesky leftover",
-      "why": "2024 leftover third trio. Not the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "ttban leftover",
       "btn": "Open leftover"
     }
   ]

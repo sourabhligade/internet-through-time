@@ -184,32 +184,6 @@ const YEARS = [
       ["/years/2014/sites/playable/game.html", "itt14-tile-lx"],
     ],
   },
-  {
-    year: "2021",
-    star: "itt21-att",
-    gold: async (page) => {
-      await openClear(page, "/years/2021/sites/att/index.html", "itt21-att");
-      await page.locator("[data-official-trap]").first().click();
-      expect(await getKey(page, "itt21-att")).toBeFalsy();
-      await page.locator('[data-att-hop="privacy"]').click();
-      await page.locator('[data-att-hop="tracking"]').click();
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
-      await expect.poll(() => getKey(page, "itt21-att"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2021/sites/signal/index.html", "itt21-sig-lx"],
-      ["/years/2021/sites/copilot/index.html", "itt21-cop-lx"],
-      ["/years/2021/sites/meta/index.html", "itt21-meta-lx"],
-      ["/years/2021/sites/windows11/index.html", "itt21-win11-lx"],
-      ["/years/2021/sites/flash/index.html", "itt21-flash-lx"],
-      ["/years/2021/sites/chrome/index.html", "itt21-chrome-lx"],
-      ["/years/2021/sites/windows10/index.html", "itt21-win10-lx"],
-      ["/years/2021/sites/facebook/index.html", "itt21-fb-lo"],
-      ["/years/2021/sites/playable/game.html", "itt21-game-five-lx"],
-    ],
-  },
 ];
 
 test.describe("wiped years stay boarded", () => {
@@ -217,12 +191,12 @@ test.describe("wiped years stay boarded", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    for (const y of ["2020", "2023", "2024", "2025"]) {
+    for (const y of ["2021", "2022", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
     expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(true);
-    expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2020", "index.html"))).toBe(true);
   });
 });
 

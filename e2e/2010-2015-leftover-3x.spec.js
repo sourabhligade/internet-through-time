@@ -6,7 +6,7 @@ const { test, expect } = require("@playwright/test");
 const ROWS = require("./2010-2015-leftover-3x.matrix.json");
 
 const WANT = {
-  2011: { first: 9, more: 9, third: 9 },
+  2011: { first: 18, more: 18, third: 18 },
   2012: { first: 9, more: 9, third: 9 },
   2014: { first: 6, more: 3, third: 9 },
   2015: { first: 9, more: 9, third: 9 },

@@ -85,13 +85,5 @@
     "2019": [
       { id: "sekirobar", slot: "c", title: "Shinobi Bar", engine: "rhythm", key: "itt19-game-sekirobar", inspire: "Sekiro · 22 Mar 2019", trap: "Official wolf" },
       { id: "goosehk", slot: "d", title: "Goose Honk", engine: "platform", key: "itt19-game-goosehk", inspire: "Untitled Goose Game · 20 Sep 2019", trap: "Official goose" }
-    ],
-    "2021": [
-      { id: "ittakes", slot: "c", title: "It Takes Two leftover", engine: "coop", key: "itt21-game-ittakes", inspire: "It Takes Two · 26 Mar 2021", trap: "Official dolls" },
-      { id: "dread", slot: "d", title: "Metroid Dread leftover", engine: "platform", key: "itt21-game-dread", inspire: "Metroid Dread · 8 Oct 2021", trap: "Official Samus" }
-    ],
-    "2022": [
-      { id: "gow", slot: "c", title: "God of War Ragnarök leftover", engine: "platform", key: "itt22-game-gow", inspire: "God of War Ragnarök · 9 Nov 2022", trap: "Official dolls" },
-      { id: "elden", slot: "d", title: "Elden Ring leftover", engine: "corridor", key: "itt22-game-elden", inspire: "Elden Ring · 25 Feb 2022", trap: "Official dolls" }
     ]};
 })(typeof window !== "undefined" ? window : this);

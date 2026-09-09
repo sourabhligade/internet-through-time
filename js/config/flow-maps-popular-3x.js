@@ -23,7 +23,7 @@
     "2008": ["stackoverflow|Stack Overflow leftover","posterous|Posterous leftover","grooveshark|Grooveshark leftover","wikipedia|Wikipedia leftover","gmail|Gmail leftover","reddit|Reddit leftover","flickr|Flickr leftover","myspace|MySpace leftover","netflix|Netflix leftover"],
     "2009": ["omegle|Omegle leftover","chatroulette|Chatroulette leftover","wikipedia|Wikipedia leftover","android|Android leftover","kindle|Kindle leftover","reddit|Reddit leftover","youtube|YouTube leftover","myspace|MySpace leftover","wave|Google Wave leftover"],
     "2010": ["netflix|Netflix leftover","tumblr|Tumblr leftover","formspring|Formspring leftover","groupondeal|Groupon deal leftover","quorawait|Quora wait leftover","instant|Google Instant leftover","chrome|Chrome leftover","wave|Wave leftover","android|Android leftover"],
-    "2011": ["icloud|iCloud leftover","pinterest|Pinterest leftover","linkedin|LinkedIn leftover","kindlefire|Kindle Fire leftover","minecraft|Minecraft leftover","twitch|Twitch leftover","youtube|YouTube leftover","reddit|Reddit leftover","twitter|Twitter leftover"],
+    "2011": ["icloud|iCloud leftover","pinterest|Pinterest leftover","linkedin|LinkedIn leftover","kindlefire|Kindle Fire leftover","minecraft|Minecraft leftover","twitch|Twitch leftover","youtube|YouTube leftover","reddit|Reddit leftover","twitter|Twitter leftover","yahoo|Yahoo leftover","bing|Bing leftover","msn|MSN leftover","aol|AOL leftover","ebay|eBay leftover","craigslist|Craigslist leftover","apple|Apple leftover","ask|Ask leftover","espn|ESPN leftover"],
     "2012": ["drawsomething|Draw Something leftover","googledrive|Drive leftover","snapchat|Snap leftover","uber|Uber leftover","buzzfeed|BuzzFeed leftover","youtube|YouTube leftover","reddit|Reddit leftover","surface|Surface leftover","windows8|Windows 8 leftover"],
     "2013": ["askfm|Ask.fm", "whisper|Whisper", "youtube|YouTube leftover"],
     "2014": ["snapchat|Snapchat leftover","instagram|Instagram leftover","uber|Uber leftover","twitter|Twitter leftover","musically14|musical.ly leftover","truecrypt|TrueCrypt leftover"],
@@ -32,11 +32,7 @@
     "2017": ["snapipo|Snap IPO leftover","bitcoinath|Bitcoin leftover","echoshow|Echo Show leftover","reddit|Reddit leftover","youtube|YouTube leftover","hqtrivia|HQ Trivia leftover","notpetya|NotPetya leftover","yahoo3b|Yahoo leftover","discord17|Discord leftover"],
     "2018": ["reddit|Reddit leftover", "youtube|YouTube leftover", "wikipedia|Wikipedia leftover"],
     "2019": ["youtube|YouTube leftover","instagram|Instagram leftover","wikipedia|Wikipedia leftover","wework|WeWork leftover","fortnitewc|Fortnite World Cup leftover","hidelikes|Hide likes leftover","tiktok|TikTok leftover","stadia|Stadia leftover","arcade|Arcade leftover"],
-    "2021": ["youtube|YouTube leftover","wikipedia|Wikipedia leftover","discord|Discord leftover","clubhouse|Clubhouse leftover","nft|NFT leftover","squid|Squid Game leftover","shorts|Shorts leftover","airtag|AirTag leftover","gme|GME leftover"],
-    "2023": ["youtube|YouTube leftover", "wiki|Wikipedia leftover", "facebook|Facebook leftover"],
-    "2024": ["youtube|YouTube leftover", "wiki|Wikipedia leftover", "facebook|Facebook leftover"],
-    "2020": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"],
-    "2022": ["youtube|YouTube leftover","wikipedia|Wikipedia leftover","facebook|Facebook leftover","ftx|FTX leftover","steamdeck|Steam Deck leftover","passkeys|Passkeys leftover","midjourney|Midjourney leftover","lensa3|Lensa leftover","tiktok|TikTok leftover"]};
+    "2020": ["youtube|YouTube leftover", "wikipedia|Wikipedia leftover", "facebook|Facebook leftover"]};
 
   function sites(year) {
     var rows = POP[year] || [];

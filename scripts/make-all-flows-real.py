@@ -210,45 +210,59 @@ def scan_lo_dests() -> list[dict]:
             except OSError:
                 continue
             rel0 = html_path.relative_to(ROOT / "years" / year).as_posix()
-            if rel0.startswith("pages/"):
+            if "data-lo-key=" not in text:
                 continue
-            if "data-lo-panel" not in text or "data-lo-save" not in text:
+            if "data-lo-save" not in text:
                 continue
-            m = re.search(r'data-lo-key="([^"]+)"', text)
-            if not m:
-                continue
-            suffix = m.group(1)
-            key = f"itt{year[2:]}-{suffix}"
-            if (year, key) in seen:
-                continue
-            seen.add((year, key))
             rel = html_path.relative_to(ROOT / "years" / year).as_posix()
-            need = ""
-            nm = re.search(r'data-lo-need-pick="([^"]*)"', text)
-            if nm:
-                need = nm.group(1)
-            minp = 0
-            mm = re.search(r'data-lo-min-pick="(\d+)"', text)
-            if mm:
-                minp = int(mm.group(1))
-            field = "data-lo-field" in text
-            ph = ""
-            if field:
-                pm = re.search(r'data-lo-field[^>]*placeholder="([^"]*)"', text)
-                if pm:
-                    ph = pm.group(1)
-            dests.append(
-                {
-                    "year": year,
-                    "href": rel,
-                    "key": key,
-                    "suffix": suffix,
-                    "needPick": need,
-                    "minPick": minp,
-                    "field": field,
-                    "placeholder": ph,
-                }
-            )
+            for sm in re.finditer(
+                r'<button\b[^>]*data-lo-save\b[^>]*data-lo-key="([^"]+)"[^>]*>|'
+                r'<button\b[^>]*data-lo-key="([^"]+)"[^>]*data-lo-save\b[^>]*>',
+                text,
+            ):
+                suffix = sm.group(1) or sm.group(2)
+                if not suffix:
+                    continue
+                key = f"itt{year[2:]}-{suffix}"
+                if (year, rel, key) in seen:
+                    continue
+                seen.add((year, rel, key))
+                btn = sm.group(0)
+                need = ""
+                nm = re.search(r'data-lo-need-pick="([^"]*)"', btn)
+                if not nm:
+                    # panel-scoped pick lives on the same leftover block
+                    start = max(0, sm.start() - 800)
+                    nm = re.search(
+                        r'data-lo-need-pick="([^"]*)"', text[start : sm.end()]
+                    )
+                if nm:
+                    need = nm.group(1)
+                minp = 0
+                mm = re.search(r'data-lo-min-pick="(\d+)"', btn)
+                if mm:
+                    minp = int(mm.group(1))
+                field = "data-lo-field" in text[max(0, sm.start() - 800) : sm.end()]
+                ph = ""
+                if field:
+                    pm = re.search(
+                        r'data-lo-field[^>]*placeholder="([^"]*)"',
+                        text[max(0, sm.start() - 800) : sm.end()],
+                    )
+                    if pm:
+                        ph = pm.group(1)
+                dests.append(
+                    {
+                        "year": year,
+                        "href": rel,
+                        "key": key,
+                        "suffix": suffix,
+                        "needPick": need,
+                        "minPick": minp,
+                        "field": field,
+                        "placeholder": ph,
+                    }
+                )
     dests.sort(key=lambda d: (d["year"], d["href"], d["suffix"]))
     return dests
 

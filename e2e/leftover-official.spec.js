@@ -188,7 +188,7 @@ test.describe("leftover official · disk + trail", () => {
     const have = new Set(DESTS.map((d) => d.year + "\t" + d.href + "\t" + d.suffix));
     const yearsRoot = path.join(ROOT, "years");
     for (const year of fs.readdirSync(yearsRoot)) {
-      if (!/^\d{4}$/.test(year) || year === "2025") continue;
+      if (!/^\d{4}$/.test(year) || Number(year) >= 2021) continue;
       const yroot = path.join(yearsRoot, year);
       const stack = [yroot];
       while (stack.length) {
@@ -246,7 +246,7 @@ test.describe("leftover official · disk + trail", () => {
       "itt19-disneyplus",
       "itt20-zoom",
     ]);
-    const wiped = new Set(["2023", "2024", "2025"]);
+    const wiped = new Set(["2025"]);
     const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
     const byYear = {};
     for (const row of x2) {
@@ -319,17 +319,6 @@ test.describe("2007 leftover isolation", () => {
   });
 });
 
-test.describe("2023 leftover isolation", () => {
-  test("Plus literacy leftover never writes gold or 2024 Plus residual", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2023" && x.suffix === "plus-lx");
-    test.skip(!d, "2023 plus-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt23-plus"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt22-plus"), "2022 neighbor").toBeFalsy();
-    expect(await getKey(page, "itt24-plus"), "2024 Plus residual").toBeFalsy();
-  });
-});
-
 test.describe("2020 leftover isolation", () => {
   test("Zoom literacy leftover never writes gold", async ({ page }) => {
     const d = DESTS.find((x) => x.year === "2020" && x.suffix === "zoom-lx");
@@ -360,16 +349,5 @@ test.describe("2009 leftover isolation", () => {
     expect(await getKey(page, "itt09-like"), "gold after leftover").toBeFalsy();
     expect(await getKey(page, "itt08-like"), "2008 neighbor").toBeFalsy();
     expect(await getKey(page, "itt10-like"), "2010 neighbor").toBeFalsy();
-  });
-});
-
-test.describe("2024 leftover isolation", () => {
-  test("4o literacy leftover never writes gold or 2023 Plus", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2024" && x.suffix === "gpt4o-lx");
-    test.skip(!d, "2024 gpt4o-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt24-gpt4o"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt23-plus"), "2023 Plus gold").toBeFalsy();
-    expect(await getKey(page, "itt25-gpt4o"), "2025 neighbor").toBeFalsy();
   });
 });

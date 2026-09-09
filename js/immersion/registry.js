@@ -403,28 +403,12 @@
       "immersion/no-mock-common.js",
       "immersion/one-thing-machines.js"
     ],
-    "2021": [
-      "immersion/no-mock-common.js",
-      "immersion/year-2021-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
-    "2023": [
-      "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
-    ],
-    "2024": [
-      "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
-    ],
     "2020": [
       "immersion/no-mock-common.js",
       "immersion/year-2020-extras.js",
       "immersion/one-thing-machines.js"
-    ],
-    "2022": [
-      "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
-    ]};
+    ]
+  };
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};
   (function buildYearLists() {

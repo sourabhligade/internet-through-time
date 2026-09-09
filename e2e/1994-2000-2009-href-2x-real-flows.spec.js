@@ -20,9 +20,9 @@ const YEARS = [
     star: "itt94-csotd",
     gold: "/years/1994/sites/csotd/index.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/1994/sites/yahoo/index.html", suffix: "yahoo-wander", needPick: "browse", minPick: 0, field: false, placeholder: "" },
-      { href: "/years/1994/sites/cern/index.html", suffix: "cern", needPick: "path", minPick: 0, field: true, placeholder: "info.cern" },
-      { href: "/years/1994/sites/lycos/index.html", suffix: "lycos", needPick: "cat", minPick: 0, field: true, placeholder: "leftover query" },
+      { href: "/years/1994/sites/yahoo/index.html", suffix: "yahoo-wander-lx", needPick: "browse", minPick: 0, field: false, placeholder: "" },
+      { href: "/years/1994/sites/cern/index.html", suffix: "cern-ab", needPick: "path", minPick: 0, field: true, placeholder: "info.cern" },
+      { href: "/years/1994/sites/lycos/index.html", suffix: "lycos-lx", needPick: "cat", minPick: 0, field: true, placeholder: "leftover query" },
     ]),
   },
   {
@@ -30,9 +30,9 @@ const YEARS = [
     star: "itt95-ssl-checkout",
     gold: "/years/1995/sites/amazon/ssl-checkout.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/1995/sites/amazon/index.html", suffix: "amazon", needPick: "book", minPick: 0, field: true, placeholder: "a leftover book" },
-      { href: "/years/1995/sites/altavista/index.html", suffix: "av", needPick: "q", minPick: 0, field: true, placeholder: "leftover query" },
-      { href: "/years/1995/sites/geocities/homestead.html", suffix: "homestead", needPick: "west", minPick: 0, field: true, placeholder: "leftover neighborhood" },
+      { href: "/years/1995/sites/amazon/index.html", suffix: "amazon-lx", needPick: "book", minPick: 0, field: true, placeholder: "a leftover book" },
+      { href: "/years/1995/sites/altavista/index.html", suffix: "av-ab", needPick: "q", minPick: 0, field: true, placeholder: "leftover query" },
+      { href: "/years/1995/sites/geocities/homestead.html", suffix: "homestead-lx", needPick: "west", minPick: 0, field: true, placeholder: "leftover neighborhood" },
     ]),
   },
   {
@@ -40,9 +40,9 @@ const YEARS = [
     star: "itt96-portal-wars",
     gold: "/years/1996/sites/portals/wars.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/1996/sites/hotmail/index.html", suffix: "hotmail-user", needPick: "compose", minPick: 0, field: true, placeholder: "leftover note" },
-      { href: "/years/1996/sites/amazon/index.html", suffix: "amazon", needPick: "book", minPick: 0, field: true, placeholder: "a leftover book" },
-      { href: "/years/1996/sites/spacejam/index.html", suffix: "jam", needPick: "planet", minPick: 0, field: false, placeholder: "" },
+      { href: "/years/1996/sites/hotmail/index.html", suffix: "hotmail-user-lx", needPick: "compose", minPick: 0, field: true, placeholder: "leftover note" },
+      { href: "/years/1996/sites/amazon/index.html", suffix: "amazon-lx", needPick: "book", minPick: 0, field: true, placeholder: "a leftover book" },
+      { href: "/years/1996/sites/spacejam/index.html", suffix: "jam-lx", needPick: "planet", minPick: 0, field: false, placeholder: "" },
     ]),
   },
   {
@@ -50,9 +50,9 @@ const YEARS = [
     star: "itt97-pointcast",
     gold: "/years/1997/sites/pointcast/index.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/1997/sites/ebay/item-laptop.html", suffix: "ebay", needPick: "bid", minPick: 0, field: true, placeholder: "12.00" },
-      { href: "/years/1997/sites/hotmail/index.html", suffix: "hotmail", needPick: "compose", minPick: 0, field: true, placeholder: "leftover note" },
-      { href: "/years/1997/sites/icq/index.html", suffix: "icq-buddy", needPick: "uin", minPick: 0, field: true, placeholder: "leftoveruin" },
+      { href: "/years/1997/sites/ebay/item-laptop.html", suffix: "ebay-lx", needPick: "bid", minPick: 0, field: true, placeholder: "12.00" },
+      { href: "/years/1997/sites/hotmail/index.html", suffix: "hotmail-lx", needPick: "compose", minPick: 0, field: true, placeholder: "leftover note" },
+      { href: "/years/1997/sites/icq/index.html", suffix: "icq-buddy-lx", needPick: "uin", minPick: 0, field: true, placeholder: "leftoveruin" },
     ]),
   },
   {
@@ -60,9 +60,9 @@ const YEARS = [
     star: "itt98-lucky",
     gold: "/years/1998/sites/google/lucky.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/1998/sites/google/index.html", suffix: "google", needPick: "search", minPick: 0, field: true, placeholder: "museum leftover" },
-      { href: "/years/1998/sites/ebay/index.html", suffix: "ebay", needPick: "bid", minPick: 0, field: true, placeholder: "leftover item" },
-      { href: "/years/1998/sites/hotmail/index.html", suffix: "hotmail", needPick: "compose", minPick: 0, field: true, placeholder: "leftover note" },
+      { href: "/years/1998/sites/google/index.html", suffix: "google-lx", needPick: "search", minPick: 0, field: true, placeholder: "museum leftover" },
+      { href: "/years/1998/sites/ebay/index.html", suffix: "ebay-lx", needPick: "bid", minPick: 0, field: true, placeholder: "leftover item" },
+      { href: "/years/1998/sites/hotmail/index.html", suffix: "hotmail-lx", needPick: "compose", minPick: 0, field: true, placeholder: "leftover note" },
     ]),
   },
   {
@@ -70,9 +70,9 @@ const YEARS = [
     star: "itt99-aim",
     gold: "/years/1999/sites/aim/index.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/1999/sites/google/index.html", suffix: "google", needPick: "q", minPick: 0, field: true, placeholder: "leftover query" },
-      { href: "/years/1999/sites/amazon/index.html", suffix: "amazon", needPick: "book", minPick: 0, field: true, placeholder: "leftover book" },
-      { href: "/years/1999/sites/napster/search.html", suffix: "napster", needPick: "q", minPick: 0, field: true, placeholder: "leftover track" },
+      { href: "/years/1999/sites/google/index.html", suffix: "google-lx", needPick: "q", minPick: 0, field: true, placeholder: "leftover query" },
+      { href: "/years/1999/sites/amazon/index.html", suffix: "amazon-lx", needPick: "book", minPick: 0, field: true, placeholder: "leftover book" },
+      { href: "/years/1999/sites/napster/search.html", suffix: "napster-lx", needPick: "q", minPick: 0, field: true, placeholder: "leftover track" },
     ]),
   },
   {
@@ -80,9 +80,9 @@ const YEARS = [
     star: "itt00-mapquest",
     gold: "/years/2000/sites/mapquest/index.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/2000/sites/google/index.html", suffix: "google", needPick: "q", minPick: 0, field: true, placeholder: "leftover query" },
-      { href: "/years/2000/sites/amazon/index.html", suffix: "amazon", needPick: "book", minPick: 0, field: true, placeholder: "leftover book" },
-      { href: "/years/2000/sites/napster/search.html", suffix: "napster", needPick: "q", minPick: 0, field: true, placeholder: "leftover track" },
+      { href: "/years/2000/sites/google/index.html", suffix: "google-lx", needPick: "q", minPick: 0, field: true, placeholder: "leftover query" },
+      { href: "/years/2000/sites/amazon/index.html", suffix: "amazon-lx", needPick: "book", minPick: 0, field: true, placeholder: "leftover book" },
+      { href: "/years/2000/sites/napster/search.html", suffix: "napster-lx", needPick: "q", minPick: 0, field: true, placeholder: "leftover track" },
     ]),
   },
   {

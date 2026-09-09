@@ -50,6 +50,9 @@
     markSeen(year);
     var el = document.getElementById(STRIP_ID);
     if (el && el.parentNode) el.parentNode.removeChild(el);
+    if (ITT.YearUI && typeof ITT.YearUI.fillViewport === "function") {
+      ITT.YearUI.fillViewport();
+    }
   }
 
   function show(year) {
@@ -112,6 +115,9 @@
           }, 2000);
         }
       });
+    }
+    if (ITT.YearUI && typeof ITT.YearUI.fillViewport === "function") {
+      ITT.YearUI.fillViewport();
     }
     return true;
   }

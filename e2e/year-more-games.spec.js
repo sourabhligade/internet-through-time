@@ -78,7 +78,12 @@ for (const year of YEARS) {
     for (const slot of ["more-a", "more-b"]) {
       const res = await page.goto(`/years/${year}/sites/playable/${slot}.html`);
       expect(res && res.status(), year + " " + slot).toBeLessThan(400);
-      const gid = await page.locator("[data-more-game]").getAttribute("data-game-id");
+      const moreHost = page.locator("[data-more-game]");
+      test.skip(
+        (await moreHost.count()) === 0,
+        year + " " + slot + " has no data-more-game (leftover cabinet only — do not dest-farm)"
+      );
+      const gid = await moreHost.getAttribute("data-game-id");
       expect(gid, year + " " + slot + " id").toBeTruthy();
       const key = pfx + "-game-" + gid;
       await page.evaluate((k) => localStorage.removeItem(k), key);

@@ -823,6 +823,9 @@
 
       labelHomeAffordances();
       injectShellNavLegend();
+      if (ITT.YearUI && typeof ITT.YearUI.fillViewport === "function") {
+        ITT.YearUI.fillViewport();
+      }
 
       on("btn-images", "click", function () {
         runCommand("view-images");

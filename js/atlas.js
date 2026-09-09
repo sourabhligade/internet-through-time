@@ -9,7 +9,7 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  for (y = 1994; y <= 2025; y++) YEARS_ALL.push(String(y));
+  for (y = 1994; y <= 2020; y++) YEARS_ALL.push(String(y));
 
   var extra2x = {};
   var pop3x3 = {};
@@ -295,6 +295,7 @@
     if (wings && wings.length) {
       for (i = 0; i < wings.length; i++) {
         w = wings[i];
+        if (!(w.years || []).length) continue;
         html +=
           '<section class="atlas-wing" data-wing="' +
           esc(w.id) +
@@ -309,7 +310,7 @@
     }
     for (i = 0; i < YEARS_ALL.length; i++) {
       yr = YEARS_ALL[i];
-      if (!listed[yr]) {
+      if (!listed[yr] && isOpen(yr)) {
         html += '<div class="wing-doors atlas-wing-loose">' + door(yr) + "</div>";
       }
     }
@@ -701,7 +702,7 @@
     html += "<b>" + (data.threads || []).length + "</b> follow-a-site threads · ";
     html += "<b>" + (data.trails || []).length + "</b> tours";
     html += "</p>";
-    html += "<p class='muted'>Open a layer. Every href is a room on disk. Wiped years stay boarded.</p>";
+    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway ends at 2020.</p>";
 
     html += '<details class="atlas-layer" id="atlas-all-golds"><summary>One-thing golds <span class="n">' + golds.length + "</span></summary><ol>";
     golds.forEach(function (g) {

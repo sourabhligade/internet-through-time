@@ -14,13 +14,11 @@ const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-officia
 const STAR = {
   2019: "itt19-disneyplus",
   2020: "itt20-zoom",
-  2021: "itt21-att",
-  2022: "itt22-chatgpt",
 };
 
 /** @type {{ year: string, href: string, key: string, suffix: string, needPick: string, minPick: number, field: boolean, placeholder: string }[]} */
 const LO = MATRIX.dests.filter((d) => {
-  if (!["2019", "2020", "2021", "2022"].includes(d.year)) return false;
+  if (!["2019", "2020"].includes(d.year)) return false;
   const dest = path.join(ROOT, "years", d.year, d.href);
   if (!fs.existsSync(dest)) return false;
   try {
@@ -313,46 +311,15 @@ const OFFICIAL = [
   { year: "2020", href: "sites/edge/index.html", key: "itt20-edge" },
   { year: "2020", href: "sites/ccpa/index.html", key: "itt20-ccpa" },
   { year: "2020", href: "sites/chrome/index.html", key: "itt20-chrome" },
-  {
-    year: "2021",
-    href: "sites/att/index.html",
-    key: "itt21-att",
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").click();
-      expect(await getKey(page, "itt21-att")).toBeFalsy();
-    },
-    complete: async (page) => {
-      await page.locator('[data-att-hop="privacy"]').click();
-      await page.locator('[data-att-hop="tracking"]').click();
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
-    },
-  },
-  { year: "2021", href: "sites/signal/index.html", key: "itt21-signal" },
-  { year: "2021", href: "sites/copilot/index.html", key: "itt21-copilot" },
-  { year: "2021", href: "sites/meta/index.html", key: "itt21-meta" },
-  { year: "2021", href: "sites/windows11/index.html", key: "itt21-win11" },
-  { year: "2021", href: "sites/flash/index.html", key: "itt21-flash-brick" },
-  { year: "2021", href: "sites/chrome/index.html", key: "itt21-chrome" },
-  { year: "2021", href: "sites/windows10/index.html", key: "itt21-win10" },
-  { year: "2021", href: "sites/facebook/index.html", key: "itt21-pop-facebook" },
-  { year: "2021", href: "sites/playable/game.html", key: "itt21-game-five" },
-  { year: "2022", href: "sites/chatgpt/index.html", key: "itt22-chatgpt" },
-  { year: "2022", href: "sites/twitter/index.html", key: "itt22-twitter" },
-  { year: "2022", href: "sites/wordle/index.html", key: "itt22-wordle" },
-  { year: "2022", href: "sites/stablediffusion/index.html", key: "itt22-sd" },
-  { year: "2022", href: "sites/mastodon/index.html", key: "itt22-mastodon" },
-  { year: "2022", href: "sites/bereal/index.html", key: "itt22-bereal" },
-  { year: "2022", href: "sites/dalle2/index.html", key: "itt22-dalle2" },
-  { year: "2022", href: "sites/chrome/index.html", key: "itt22-chrome" },
-  { year: "2022", href: "sites/windows10/index.html", key: "itt22-win10" },
-  { year: "2022", href: "sites/playable/game.html", key: "itt22-game-prompt" },
 ];
 
 test.describe("2019–2022 official 10 · dest-minute REAL", () => {
   for (const stop of OFFICIAL) {
     test(`${stop.year} ${stop.key} incomplete never writes then complete`, async ({ page }) => {
+      test.skip(
+        !fs.existsSync(path.join(ROOT, "years", stop.year, "index.html")),
+        stop.year + " boarded"
+      );
       await page.goto("/years/" + stop.year + "/" + stop.href);
       await clearKeys(page, [stop.key, STAR[stop.year]]);
       await page.reload();
@@ -377,8 +344,9 @@ test.describe("2019–2022 leftover 2× every dest · dest-minute REAL", () => {
   test("leftover matrix covers every leftover key on disk", () => {
     const have = new Set(LO.map((d) => d.year + "\t" + d.href + "\t" + d.suffix));
     const missing = [];
-    for (const year of ["2019", "2020", "2021", "2022"]) {
+    for (const year of ["2019", "2020"]) {
       const destRoot = path.join(ROOT, "years", year, "sites");
+      if (!fs.existsSync(destRoot)) continue;
       function walk(dir) {
         for (const name of fs.readdirSync(dir)) {
           const full = path.join(dir, name);

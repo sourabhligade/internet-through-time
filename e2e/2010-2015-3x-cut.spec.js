@@ -40,7 +40,7 @@ const LIVE = {
       { dest: "/years/2011/sites/kindlefire/index.html", go: "[data-pop-go][data-pop-id='kindlefire']", key: "itt11-pop-kindlefire", next: "minecraft/index.html" },
       { dest: "/years/2011/sites/minecraft/index.html", go: "[data-pop-go][data-pop-id='minecraft']", key: "itt11-pop-minecraft", next: "twitch/index.html" },
       { dest: "/years/2011/sites/twitch/index.html", go: "[data-pop-go][data-pop-id='twitch']", key: "itt11-pop-twitch", next: "youtube/index.html" },
-      { dest: "/years/2011/sites/youtube/index.html", go: "[data-pop-go][data-pop-key='pop3-youtube']", key: "itt11-pop3-youtube", next: "reddit/index.html" },
+      { dest: "/years/2011/sites/youtube/index.html", go: "[data-pop-go][data-pop-key='pop3-youtube']", key: "itt11-pop3-youtube", next: "hulu/index.html" },
       { dest: "/years/2011/sites/reddit/index.html", go: "[data-pop-go][data-pop-key='pop3-reddit']", key: "itt11-pop3-reddit", next: "twitter/index.html" },
       { dest: "/years/2011/sites/twitter/index.html", go: "[data-pop-go][data-pop-key='pop3-twitter']", key: "itt11-pop3-twitter", next: "youtube/index.html" },
     ],
@@ -163,7 +163,7 @@ test.describe("CUT-3X-2010-2015 boarded stay empty", () => {
   });
 
   test("dest folder counts stay locked", () => {
-    const want = { 2010: 44, 2011: 71, 2012: 45, 2014: 21 };
+    const want = { 2010: 44, 2011: 98, 2012: 45, 2014: 21 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const folders = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory());
@@ -180,16 +180,23 @@ for (const [year, spec] of Object.entries(LIVE)) {
       const first = page.locator(`[data-itt-pop3x="${year}"]`).first().locator('a[href*="sites/"]');
       const more = page.locator(`[data-itt-pop-more="${year}"]`).first().locator('a[href*="sites/"]');
       const third = page.locator(`[data-itt-pop-3x3="${year}"]`).first().locator('a[href*="sites/"]');
-      await expect(first).toHaveCount(3);
-      await expect(more).toHaveCount(3);
-      await expect(third).toHaveCount(3);
+      const STRIP = {
+        2010: { first: 9, more: 9, third: 9 },
+        2011: { first: 18, more: 18, third: 18 },
+        2012: { first: 9, more: 9, third: 9 },
+        2014: { first: 6, more: 3, third: 9 },
+      };
+      const want = STRIP[year];
+      await expect(first).toHaveCount(want.first);
+      await expect(more).toHaveCount(want.more);
+      await expect(third).toHaveCount(want.third);
       const all = [
         ...(await first.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))),
         ...(await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))),
         ...(await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))),
       ];
       const keys = all.map((h) => (String(h).match(/sites\/[^?#]+/) || [h])[0]);
-      expect(new Set(keys).size).toBe(9);
+      expect(new Set(keys).size).toBe(want.first + want.more + want.third);
       const star = (await page.locator(`[data-ott-one-thing="${year}"]`).getAttribute("href")) || "";
       const starK = (star.match(/sites\/[^?#]+/) || [star])[0];
       expect(keys).not.toContain(starK);

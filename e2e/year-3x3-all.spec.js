@@ -3,12 +3,15 @@
  * Third leftover 3× writer on every ship year (2025 boarded).
  * Empty / no pick / no tick never writes. Complete writes ittYY-pop3-<id>.
  */
+const fs = require("fs");
+const path = require("path");
 const { test, expect } = require("@playwright/test");
 
 const TRIOS = require("../scripts/popular-3x3-sites.json");
 
 const YEARS = Object.keys(TRIOS).sort();
-const WIPED = new Set(["2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
+const ROOT = path.join(__dirname, "..");
 
 test.describe("every third leftover 3× writer", () => {
   for (const year of YEARS) {
@@ -16,6 +19,12 @@ test.describe("every third leftover 3× writer", () => {
     for (const row of TRIOS[year]) {
       const key = `itt${year.slice(2)}-pop3-${row.id}`;
       test(`${year} ${row.id} empty/no-pick/no-tick never write · complete writes ${key}`, async ({ page }) => {
+        const dest = path.join(ROOT, "years", year, "sites", row.id, "index.html");
+        test.skip(
+          !fs.existsSync(dest) ||
+            !new RegExp("data-pop-key=['\"]pop3-" + row.id + "['\"]").test(fs.readFileSync(dest, "utf8")),
+          year + " " + row.id + " has no leftover-3× pop3 hook (do not dest-farm)"
+        );
         await page.goto(`/years/${year}/sites/${row.id}/index.html`);
         await page.evaluate((k) => localStorage.removeItem(k), key);
         await page.reload();

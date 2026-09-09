@@ -1,11 +1,11 @@
 # Docs — Internet Through Time
 
-Play **29 years** from the hub (`index.html`). **2023–2025 are wiped.** Lean doors: **2007 / 2009 / 2011 / 2013–2022.** **2013** is Vine 6s. **2018** is GDPR Manage. **2020** is Zoom Leave. **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
+Play **27 years** from the hub (`index.html`). Lean doors: **2007 / 2009 / 2011 / 2013–2020.** **2013** is Vine 6s. **2018** is GDPR Manage. **2020** is Zoom Leave. **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
 
 **Bar A 100% (ship):** dests, keys, official 10, gold, guided 6, and HTML cap in the year’s *current* READ-FIRST / map match the live tree.  
 **Bar B** (museum-grade feel) is leftover costume / leftover verbs / optional stills. L4 pixels stay outside both bars.
 
-If a paragraph’s hub range is not **1994–2022** (2023–2025 wiped), it is a notebook. Live tree + `DISK-TRUTH.md` win.
+If a paragraph’s hub range is not **1994–2020**, it is a notebook. Live tree + `DISK-TRUTH.md` win.
 
 ## Read first
 
@@ -32,7 +32,7 @@ If a paragraph’s hub range is not **1994–2022** (2023–2025 wiped), it is a
 
 ## Ship law
 
-Live tree + hub + `SHIP_YEARS` = **29 years**. **2023–2025 stay wiped.** Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
+Live tree + hub + `SHIP_YEARS` = **27 years** (1994–2020). Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
 
 ## Live-year locks
 
@@ -52,17 +52,15 @@ Live tree + hub + `SHIP_YEARS` = **29 years**. **2023–2025 stay wiped.** Offic
 | 2018 | [`2018-READ-FIRST.md`](2018-READ-FIRST.md) | GDPR Manage `itt18-gdpr` |
 | 2019 | [`2019-READ-FIRST.md`](2019-READ-FIRST.md) | Disney+ Continue `itt19-disneyplus` |
 | 2020 | [`2020-READ-FIRST.md`](2020-READ-FIRST.md) | Zoom Leave `itt20-zoom` |
-| 2021 | [`2021-READ-FIRST.md`](2021-READ-FIRST.md) | ATT Ask `itt21-att` |
-| 2022 | [`2022-READ-FIRST.md`](2022-READ-FIRST.md) | ChatGPT Send |
+
+Named shortfall cut (2024 pick · passport · hub copy · leftover-official matrix): [`SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md).
 
 
 1994–2004 and 2008 use `YYYY-MUSEUM-GRADE.md` + `flow-trails.js`. No READ-FIRST required.
 
-## Wiped — do not scaffold
+## After 2020 — not on the hub
 
-| Year | Stamp |
-|------|--------|
-| 2023 · 2024 · 2025 | Hub cards locked. Rebuild only when named. |
+2021–2025 have no year cards, no atlas doors, and no year trees. Rebuild only when named.
 
 ## Ops
 

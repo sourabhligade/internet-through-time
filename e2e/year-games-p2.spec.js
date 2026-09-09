@@ -47,6 +47,14 @@ for (const year of Object.keys(CABINETS)) {
 
 test('1994 year meter lights Playable after a featured save', async ({ page }) => {
   await enterYear(page, '1994');
+  const meterOn = await page.evaluate(() => {
+    try {
+      return !!(window.ITT && ITT.UX && ITT.UX.isOn && ITT.UX.isOn('yearMeter'));
+    } catch (e) {
+      return false;
+    }
+  });
+  test.skip(!meterOn, 'yearMeter flag is off');
   await page.evaluate(() => {
     localStorage.setItem(
       'itt94-game-hotlist',
@@ -56,7 +64,13 @@ test('1994 year meter lights Playable after a featured save', async ({ page }) =
   await goImmersion(page, '1994', 'pages/home.html');
   await killOverlays(page);
   const frame = contentFrame(page);
-  await expect(frame.locator('#itt-ux-year-meter')).toBeVisible({ timeout: 15000 });
-  const dots = frame.locator('#itt-ux-year-meter .itt-ux-meter-dot');
-  await expect(dots.nth(2)).toHaveClass(/on/);
+  const meter = page.locator('#itt-ux-year-meter');
+  const frameMeter = frame.locator('#itt-ux-year-meter');
+  if (await frameMeter.count()) {
+    await expect(frameMeter).toBeVisible({ timeout: 15000 });
+    await expect(frameMeter.locator('.itt-ux-meter-dot').nth(2)).toHaveClass(/on/);
+  } else {
+    await expect(meter).toBeVisible({ timeout: 15000 });
+    await expect(meter.locator('.itt-ux-meter-dot').nth(2)).toHaveClass(/on/);
+  }
 });

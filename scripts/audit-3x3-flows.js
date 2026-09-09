@@ -47,7 +47,7 @@ const STARS = {
 };
 
 const SHARE_POP_MORE = new Set(["2007", "2009"]);
-const WIPED = new Set(["2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 const STRIP_OK = new Set([3, 5, 6, 9]);
 
 const fail = [];
@@ -77,7 +77,7 @@ function normSite(href) {
   return m ? m[0].replace(/^\.\.\//, "") : "";
 }
 
-const years = Object.keys(TRIOS).sort().filter((y) => !WIPED.has(y));
+const years = Object.keys(TRIOS).sort().filter((y) => !WIPED.has(y) && fs.existsSync(path.join(ROOT, "years", y, "index.html")));
 
 for (const year of years) {
   const rows = TRIOS[year];

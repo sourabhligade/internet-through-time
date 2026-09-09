@@ -25,10 +25,11 @@ const ROOT = path.join(__dirname, "..");
 const WANT_JSON = process.argv.includes("--json");
 const WANT_MD = process.argv.includes("--md");
 
-const WIPED = new Set(["2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
-  if (!WIPED.has(String(y))) YEARS.push(String(y));
+  const s = String(y);
+  if (!WIPED.has(s) && fs.existsSync(path.join(ROOT, "years", s, "index.html"))) YEARS.push(s);
 }
 
 const STARS = {

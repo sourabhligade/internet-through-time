@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2021": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -193,21 +193,9 @@
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
-    "2021": yearVisitTour("2021",
-      { path: "sites/att/index.html", label: "ATT Ask", blurb: "Allow never writes. Ask does.", match: "/att/" },
-      { path: "sites/signal/index.html", label: "Signal leftover", blurb: "Handle leftover. Not WhatsApp gold.", match: "/signal/" }),
-    "2023": yearVisitTour("2023",
-      { path: "sites/plus/index.html", label: "ChatGPT Plus Subscribe", blurb: "Star.", match: "/plus/" },
-      { path: "sites/gpt4/index.html", label: "GPT-4 leftover", blurb: "Leftover.", match: "/gpt4/" }),
-    "2024": yearVisitTour("2024",
-      { path: "sites/chatgpt/4o.html", label: "GPT-4o Talk", blurb: "Star.", match: "/chatgpt/" },
-      { path: "sites/gemini/index.html", label: "Gemini leftover", blurb: "Leftover.", match: "/gemini/" }),
     "2020": yearVisitTour("2020",
       { path: "sites/zoom/meeting.html", label: "Zoom mute \u2192 Leave", blurb: "Star.", match: "/zoom/" },
-      { path: "sites/reels/index.html", label: "Reels 15s leftover", blurb: "Leftover.", match: "/reels/" }),
-    "2022": yearVisitTour("2022",
-      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / Plus / GPT-4 / Bing never write. Send does.", match: "/chatgpt/" },
-      { path: "sites/twitter/index.html", label: "Twitter leftover", blurb: "Still Twitter. X is 2023.", match: "/twitter/" })
+      { path: "sites/reels/index.html", label: "Reels 15s leftover", blurb: "Leftover.", match: "/reels/" })
   };
 
   var TRAILS = {
@@ -222,7 +210,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2025; y++) {
+    for (y = 1994; y <= 2020; y++) {
       var ys = String(y);
       if (WIPED[ys]) continue;
       var steps = YEAR_STARTS[ys];
@@ -658,7 +646,7 @@
 
   function isLiveYear(year) {
     year = String(year || "");
-    if (!/^(199[4-9]|200[0-9]|201[0-9]|202[12])$/.test(year)) return false;
+    if (!/^(199[4-9]|200[0-9]|201[0-9]|2020)$/.test(year)) return false;
     return !WIPED[year];
   }
 
@@ -674,7 +662,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2025; y++) {
+    for (y = 1994; y <= 2020; y++) {
       if (WIPED[String(y)]) continue;
       years.push(String(y));
     }

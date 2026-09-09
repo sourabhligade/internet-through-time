@@ -11,7 +11,7 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
@@ -224,7 +224,7 @@ function yearReport() {
       const html = fs.readFileSync(dest, "utf8");
       const suffix = String(row.key || "").replace(/^itt\d{2}-/, "");
       const esc = suffix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const leanLo120 = /^(2007|2009|2011|2020|2021|2022|2023|2024)$/.test(year);
+      const leanLo120 = /^(2007|2009|2011|2020)$/.test(year);
       const wired = leanLo120
         ? new RegExp('data-4x-go="' + esc + '"').test(html) ||
           new RegExp('data-lo-key="' + esc + '"').test(html)

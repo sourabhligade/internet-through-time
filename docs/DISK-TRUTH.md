@@ -3,7 +3,7 @@
 **Date:** 2026-09-02  
 **Law:** live tree + `scripts/itt_gate.py` `SHIP_YEARS`. This file does **not** append old ship cards.
 
-Hub **29 years open** · **2023–2025 wiped**. Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). **2013 is Vine 6s.** **2018 is GDPR Manage.** **2020 is Zoom mute → Leave.** 2019 `sites/fortnite/index.html` leftover-2× cloned from `marshmello.html` (`fn-lx` · `fn-d2`). 2005 is YouTube upload. 2006 is Twttr. 2009 is Facebook Like. 2011 is Google+. **2014 is WhatsApp Install.** **2015 is Periscope Go LIVE.** **2019 is Disney+ Continue.** **2021 is ATT Ask.** **2022 is ChatGPT Send.** 2023 Plus / 2024 4o stay boarded.
+Hub **27 years open** (1994–2020). Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). **2013 is Vine 6s.** **2018 is GDPR Manage.** **2020 is Zoom mute → Leave.** 2019 `sites/fortnite/index.html` leftover-2× cloned from `marshmello.html` (`fn-lx` · `fn-d2`). 2005 is YouTube upload. 2006 is Twttr. 2009 is Facebook Like. 2011 is Google+. **2014 is WhatsApp Install.** **2015 is Periscope Go LIVE.** **2019 is Disney+ Continue.**
 
 | Year | Disk |
 |------|------|
@@ -27,13 +27,8 @@ Hub **29 years open** · **2023–2025 wiped**. Leftover 2× is on **every dest*
 | **2018** | **Live lean door** · GDPR Manage `itt18-gdpr` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
 | **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · leftover 312 dest-true · leftover 4× **0** · leftover 2× on every dest index including `sites/fortnite/index.html` (`fn-lx` · `fn-d2`) |
 | **2020** | **Live lean door** · Zoom mute → Leave `itt20-zoom` · leftover 2× ×2 · leftover-3× first + third · leftover-4× **0** |
-| **2021** | **Live lean door** · ATT Ask `itt21-att` · leftover 2× 120 · leftover 4× on every dest · Win10 + Chrome habit |
-| **2022** | **Live lean door** · ChatGPT Send · leftover 2× 120 · leftover 4× on every dest |
-| **2023** | **Wiped** · hub locked · Plus Subscribe later |
-| **2024** | **Wiped** · hub locked · GPT-4o Talk later |
-| **2025** | **Wiped** · hub locked · no year tree |
 
-Lean doors: **2007 + 2009 + 2011 + 2013–2022**. Wiped: **2023–2025**.  
+Lean doors: **2007 + 2009 + 2011 + 2013–2020**. The exhibit ends at 2020.  
 Games wing (`games/`) is separate and live.
 
 **G1–G10 scoreboard:** [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md).  
@@ -41,7 +36,7 @@ Games wing (`games/`) is separate and live.
 
 Rebuild a wiped year only when named. Do not `git checkout` an old forest.
 
-**Current residual (broken / incomplete e2e / improvable / do-not-implement):** [`WHAT-TO-DO-PLAN-VS-DISK-2026-09-08.md`](WHAT-TO-DO-PLAN-VS-DISK-2026-09-08.md).  
+**Current residual (named-later / never / stale paper):** [`REMAINING-CHECKLISTS-2026-09-09.md`](REMAINING-CHECKLISTS-2026-09-09.md). Named implement cut **CUT-TRUTH-SHORTFALL:** [`SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md). Older execute file [`WHAT-TO-DO-PLAN-VS-DISK-2026-09-08.md`](WHAT-TO-DO-PLAN-VS-DISK-2026-09-08.md) is stale (still says 28 years / 2020 boarded).  
 **Implement / recheck walk (every year gold + official 10 + leftover machine):** [`ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md`](ALL-YEARS-IMPLEMENT-GOALS-PHASES-EVERY-FLOW-MINUTE-2026-09-01.md).  
 **Improve flows + links (waves 0–5 done · leftover 2× already on every dest):** [`EVERY-YEAR-IMPROVE-FLOWS-LINKS-GOALS-PHASES-MINUTE-2026-09-03.md`](EVERY-YEAR-IMPROVE-FLOWS-LINKS-GOALS-PHASES-MINUTE-2026-09-03.md).  
 **Remaining queue (waves 6–9 · remesasure + dest minutes):** [`EVERY-YEAR-NEXT-IMPROVE-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-03.md`](EVERY-YEAR-NEXT-IMPROVE-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-03.md).  

@@ -12,7 +12,7 @@ test.describe("3× popular websites — every on-disk year", () => {
     const sites = spec[year];
     test(`${year} three popular leftover rooms load + empty never writes`, async ({ page, request }) => {
       test.skip(!fs.existsSync(path.join(ROOT, "years", year, "index.html")), year + " not on disk");
-      const want = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2015", "2017", "2019", "2021", "2022"].includes(year)
+      const want = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2015", "2017", "2019"].includes(year)
         ? 9
         : ["2001", "2002", "2003"].includes(year)
           ? 6

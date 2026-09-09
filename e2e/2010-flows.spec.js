@@ -73,13 +73,13 @@ test.describe('2010 flows A–T', () => {
   test('D iPad dest-true leftover-official never writes gold', async ({ page }) => {
     await page.goto("/years/2010/sites/ipad/index.html");
     await expect(page.locator("body")).toContainText(/\$499|no camera|iPad 2/i);
-    await leftoverOfficialDest(page, "/years/2010/sites/ipad/order.html", "ipad", "itt10-ig");
+    await leftoverOfficialDest(page, "/years/2010/sites/ipad/order.html", "ipad-lx", "itt10-ig");
   });
 
   test('E iPhone 4 dest-true leftover-official never writes gold', async ({ page }) => {
     await page.goto("/years/2010/sites/iphone/index.html");
     await expect(page.locator("body")).toContainText(/FaceTime|Wi-Fi only|iPhone 4/i);
-    await leftoverOfficialDest(page, "/years/2010/sites/iphone/index.html", "iphone4", "itt10-ig");
+    await leftoverOfficialDest(page, "/years/2010/sites/iphone/index.html", "iphone4-lx", "itt10-ig");
   });
 
   test('F Open Graph Like on CNN then IMDb writes itt10-fb-og', async ({ page }) => {
@@ -243,7 +243,7 @@ test.describe('2010 flows A–T', () => {
     await page.reload();
     await page.locator('[data-digg-v4]').click();
     await expect.poll(() => getKey(page, 'itt10-digg')).toMatch(/v4|reddit|real/i);
-    const next = page.locator('[data-next-flow] a[href*="reddit"]');
+    const next = page.locator('[data-next-flow] a[href*="reddit"]').first();
     await expect(next).toBeVisible();
     const href = await next.getAttribute('href');
     const dest = new URL(href || '', page.url());

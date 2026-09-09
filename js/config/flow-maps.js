@@ -3259,85 +3259,6 @@
 
 
 
-  ITT.flowMaps["2021"] = {
-    thesis: "The phone asks first. Allow is the trap. Ask App Not to Track is the save.",
-    shell: "Win10 mass · Chrome habit · iOS 14.5 ATT",
-    year: "2021",
-    how: [
-      "ATT: Privacy → Tracking · two ticks · Ask → itt21-att. Allow never writes.",
-      "Signal leftover / Copilot waitlist / Meta rename are leftover, not the chip.",
-      "Next waits for the write. Crumb ← last dest is visible on land.",
-      "ChatGPT / Wordle-millions / Meta-app / Zoom-as-gold / Win11-as-January are not this year."
-    ],
-    branches: [
-      {
-        label: "★ Official 10",
-        do: "Star stays ATT Ask. Allow never writes.",
-        sites: [
-          { name: "1 ATT Ask", href: "sites/att/index.html", do: "Ask → itt21-att → Signal" },
-          { name: "2 Signal leftover", href: "sites/signal/index.html", do: "handle → itt21-signal → Copilot" },
-          { name: "3 Copilot waitlist", href: "sites/copilot/index.html", do: "waitlist → itt21-copilot → Meta" },
-          { name: "4 Meta rename", href: "sites/meta/index.html", do: "rename → itt21-meta → Win11" },
-          { name: "5 Windows 11 leftover", href: "sites/windows11/index.html", do: "announce leftover → Flash" },
-          { name: "6 Flash brick", href: "sites/flash/index.html", do: "12 Jan block → Chrome" },
-          { name: "7 Chrome habit", href: "sites/chrome/index.html", do: "habit leftover → Win10" },
-          { name: "8 Windows 10 residual", href: "sites/windows10/index.html", do: "January mass → Facebook leftover" },
-          { name: "9 Facebook leftover", href: "sites/facebook/index.html", do: "leftover connect → Five Letter" },
-          { name: "10 Five Letter", href: "sites/playable/game.html", do: "guess five → itt21-game-five → ATT" }
-        ]
-      },
-      {
-        label: "Leftover 2×",
-        do: "Never a second star",
-        sites: [
-          { name: "Shorts leftover", href: "sites/shorts/index.html", do: "Pack A start" },
-          { name: "Continuity close", href: "sites/playable/more.html", do: "Pack C end · Next ATT" }
-        ]
-      }
-    ]
-  };
-
-
-  ITT.flowMaps["2022"] = {
-    thesis: "Research preview. Empty / Plus / GPT-4 / Bing never write. Send is the save.",
-    shell: "Win10 mass · Chrome habit · dest stays Twitter",
-    year: "2022",
-    how: [
-      "ChatGPT: type ≥2 · two ticks · Send → itt22-chatgpt. Empty / Plus / GPT-4 / Bing never write.",
-      "Twitter / Wordle / SD / Mastodon / BeReal / DALL·E 2 are leftover, not the chip.",
-      "Next waits for the write. Crumb ← last dest is visible on land.",
-      "Plus / GPT-4 / Bing / Threads / X / dest named X are not this year."
-    ],
-    branches: [
-      {
-        label: "★ Official 10",
-        do: "Star stays ChatGPT Send. Plus never writes.",
-        sites: [
-          { name: "1 ChatGPT Send", href: "sites/chatgpt/index.html", do: "Send → itt22-chatgpt → Twitter" },
-          { name: "2 Twitter leftover", href: "sites/twitter/index.html", do: "still Twitter → Wordle" },
-          { name: "3 Wordle leftover", href: "sites/wordle/index.html", do: "31 Jan buy → SD" },
-          { name: "4 Stable Diffusion", href: "sites/stablediffusion/index.html", do: "22 Aug leftover → Mastodon" },
-          { name: "5 Mastodon leftover", href: "sites/mastodon/index.html", do: "Nov surge → BeReal" },
-          { name: "6 BeReal leftover", href: "sites/bereal/index.html", do: "wait leftover → DALL·E 2" },
-          { name: "7 DALL·E 2 leftover", href: "sites/dalle2/index.html", do: "waitlist leftover → Chrome" },
-          { name: "8 Chrome habit", href: "sites/chrome/index.html", do: "habit leftover → Win10" },
-          { name: "9 Windows 10 residual", href: "sites/windows10/index.html", do: "January mass → Prompt Box" },
-          { name: "10 Prompt Box", href: "sites/playable/game.html", do: "leftover prompt → itt22-game-prompt → ChatGPT" }
-        ]
-      },
-      {
-        label: "Leftover 2×",
-        do: "Never a second star",
-        sites: [
-          { name: "Famous leftover", href: "sites/playable/famous.html", do: "Pocket Snake + Breakout parlor" },
-          { name: "Whisper leftover", href: "sites/whisper/index.html", do: "Pack A start" },
-          { name: "Continuity close", href: "sites/playable/close.html", do: "Pack C end · Next ChatGPT" }
-        ]
-      }
-    ]
-  };
-
-
   ITT.flowMaps["2007"] = {
     thesis: "The phone becomes a browser. Empty / App Store / Chrome never write. Go is the save.",
     shell: "XP mass · IE6 · iPhone is a room",
@@ -3376,42 +3297,6 @@
     ]
   };
 
-
-  ITT.flowMaps["2023"] = {
-    thesis: "2023 is when the preview gets a price \u2014 Subscribe Plus is the save, empty / GPT-4-as-already-here / Bing-as-Plus / live charge never write, dest name is X, and Sora / 4o are next year.",
-    year: "2023",
-    how: ["2023 is when the preview gets a price \u2014 Subscribe Plus is the save, empty / GPT-4-as-already-here / Bing-as-Plus / live charge never write, dest name is X, and Sora / 4o are next year."],
-    branches: [{ label: "★ Official 10", do: "Star stays.", sites: [
-          { name: "1 ChatGPT Plus Subscribe", href: "sites/plus/index.html", do: "itt23-plus" },
-          { name: "2 GPT-4 leftover", href: "sites/gpt4/index.html", do: "itt23-gpt4" },
-          { name: "3 Bing Chat leftover", href: "sites/bingchat/index.html", do: "itt23-bing" },
-          { name: "4 Threads leftover", href: "sites/threads/index.html", do: "itt23-threads" },
-          { name: "5 X leftover", href: "sites/x/index.html", do: "itt23-x" },
-          { name: "6 Bard leftover", href: "sites/bard/index.html", do: "itt23-bard" },
-          { name: "7 Claude 2 leftover", href: "sites/claude2/index.html", do: "itt23-claude2" },
-          { name: "8 Chrome habit leftover", href: "sites/chrome/index.html", do: "itt23-chrome" },
-          { name: "9 Windows 10 residual", href: "sites/windows10/index.html", do: "itt23-win10" },
-          { name: "10 Plus Queue", href: "sites/playable/game.html", do: "itt23-game-plusq" }
-        ] }]
-  };
-
-  ITT.flowMaps["2024"] = {
-    thesis: "2024 is when the model talks \u2014 GPT-4o Talk is the save, Talk with no 4o pick never writes, Plus still lives in 2023, and 2025 stays boarded.",
-    year: "2024",
-    how: ["2024 is when the model talks \u2014 GPT-4o Talk is the save, Talk with no 4o pick never writes, Plus still lives in 2023, and 2025 stays boarded."],
-    branches: [{ label: "★ Official 10", do: "Star stays.", sites: [
-          { name: "1 GPT-4o Talk", href: "sites/chatgpt/4o.html", do: "itt24-gpt4o" },
-          { name: "2 Gemini leftover", href: "sites/gemini/index.html", do: "itt24-gemini" },
-          { name: "3 Claude 3.5 leftover", href: "sites/claude35/index.html", do: "itt24-claude35" },
-          { name: "4 Sora preview leftover", href: "sites/sora/index.html", do: "itt24-sora" },
-          { name: "5 Apple Intelligence leftover", href: "sites/appleintel/index.html", do: "itt24-ai" },
-          { name: "6 o1 leftover", href: "sites/o1/index.html", do: "itt24-o1" },
-          { name: "7 Plus residual leftover", href: "sites/plus/index.html", do: "itt24-plus" },
-          { name: "8 Chrome habit leftover", href: "sites/chrome/index.html", do: "itt24-chrome" },
-          { name: "9 Windows 10 residual", href: "sites/windows10/index.html", do: "itt24-win10" },
-          { name: "10 Omni Dash", href: "sites/playable/game.html", do: "itt24-game-omni" }
-        ] }]
-  };
 
   ITT.flowMaps["2020"] = {
     thesis: "2020 is when the meeting becomes the room \u2014 mute then chat then Leave is the save, Join never writes, and 300 million is daily meeting participants, not users.",

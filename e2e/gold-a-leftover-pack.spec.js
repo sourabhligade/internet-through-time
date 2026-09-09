@@ -39,8 +39,6 @@ const GOLD = [
   { year: "2018", writer: "sites/gdpr/index.html", key: "itt18-gdpr", nextNeedle: "tiktok", chipHref: "sites/gdpr/index.html" },
   { year: "2019", writer: "sites/disneyplus/home.html", key: "itt19-disneyplus", nextNeedle: "tiktok", chipHref: "sites/disneyplus/home.html" },
   { year: "2020", writer: "sites/zoom/meeting.html", key: "itt20-zoom", nextNeedle: "reels", chipHref: "sites/zoom/meeting.html" },
-  { year: "2021", writer: "sites/att/index.html", key: "itt21-att", nextNeedle: "signal", chipHref: "sites/att/index.html" },
-  { year: "2022", writer: "sites/chatgpt/index.html", key: "itt22-chatgpt", nextNeedle: "twitter", chipHref: "sites/chatgpt/index.html" },
 ];
 
 function yearFile(year, rel) {
@@ -50,7 +48,7 @@ function yearFile(year, rel) {
 test("gold-a table covers every live year on disk", () => {
   const years = GOLD.map((g) => g.year);
   const live = [];
-  for (let y = 1994; y <= 2022; y++) {
+  for (let y = 1994; y <= 2020; y++) {
     if (fs.existsSync(yearFile(String(y), "index.html"))) live.push(String(y));
   }
   expect(years.sort()).toEqual(live.sort());

@@ -517,12 +517,60 @@
   function injectCss(hrefs) {
     var i;
     var el;
-    for (i = 0; i < hrefs.length; i++) {
+    var sheets = ["year-shell.css"].concat(hrefs || []);
+    for (i = 0; i < sheets.length; i++) {
       el = document.createElement("link");
       el.rel = "stylesheet";
-      el.href = "../../css/" + hrefs[i];
+      el.href = "../../css/" + sheets[i] + "?v=20260909h6";
       document.head.appendChild(el);
     }
+  }
+
+  function fillViewport() {
+    var h = window.innerHeight || (document.documentElement && document.documentElement.clientHeight) || 0;
+    var root = document.getElementById("itt-year-ui");
+    var frame = document.querySelector("#itt-year-ui .content-frame");
+    var iframe = document.getElementById("content");
+    var bar = document.querySelector(".win95-taskbar");
+    var barH = 28;
+    var top;
+    var bottom;
+    var pane;
+    if (h < 160) return;
+    if (bar) barH = bar.getBoundingClientRect().height || 28;
+    document.documentElement.style.setProperty("--itt-taskbar-h", barH + "px");
+    if (root) {
+      root.style.setProperty("bottom", barH + "px", "important");
+    }
+    if (!frame || !iframe) return;
+    top = frame.getBoundingClientRect().top;
+    bottom = bar ? bar.getBoundingClientRect().top : h;
+    pane = Math.floor(bottom - top);
+    if (pane < 240) pane = Math.max(240, h - top - barH);
+    frame.style.setProperty("height", pane + "px", "important");
+    iframe.style.setProperty("height", pane + "px", "important");
+    iframe.style.setProperty("min-height", pane + "px", "important");
+    iframe.style.setProperty("top", "0", "important");
+    iframe.style.setProperty("bottom", "0", "important");
+  }
+
+  function bindFill() {
+    fillViewport();
+    if (window.__ittShellFillBound) return;
+    window.__ittShellFillBound = true;
+    window.addEventListener("resize", fillViewport);
+    window.addEventListener("orientationchange", fillViewport);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", fillViewport);
+    }
+    var desk = document.querySelector("#itt-year-ui .desktop") || document.querySelector(".desktop");
+    if (desk && window.MutationObserver) {
+      new MutationObserver(function () {
+        fillViewport();
+      }).observe(desk, { childList: true });
+    }
+    var iframe = document.getElementById("content");
+    if (iframe) iframe.addEventListener("load", fillViewport);
   }
 
   function paint(year) {
@@ -538,6 +586,18 @@
     if (spec.bodyClass) document.body.className = spec.bodyClass;
     document.body.setAttribute("data-itt-year", year);
     injectCss(spec.css || []);
+    if (!document.getElementById("itt-year-fill-style")) {
+      var fillStyle = document.createElement("style");
+      fillStyle.id = "itt-year-fill-style";
+      fillStyle.textContent =
+        "html,body{overflow:hidden!important;height:100dvh!important}" +
+        "#itt-year-ui{position:fixed!important;top:0!important;right:0!important;left:0!important;bottom:var(--itt-taskbar-h,28px)!important;height:auto!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}" +
+        "#itt-year-ui .desktop{display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;overflow:hidden!important;padding-bottom:0!important}" +
+        "#itt-year-ui .browser{display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;height:0!important}" +
+        "#itt-year-ui .content-frame{position:relative!important;flex:1 1 0!important;min-height:0!important;height:0!important}" +
+        "#itt-year-ui iframe#content{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;border:0}";
+      document.head.appendChild(fillStyle);
+    }
     var root = document.getElementById("itt-year-ui");
     if (!root) {
       root = document.createElement("div");
@@ -546,8 +606,14 @@
     }
     root.innerHTML = render(spec);
     bindDesktop(spec);
+    bindFill();
+    if (window.requestAnimationFrame) window.requestAnimationFrame(fillViewport);
+    window.setTimeout(fillViewport, 0);
+    window.setTimeout(fillViewport, 80);
+    window.setTimeout(fillViewport, 520);
   }
 
   ITT.YearUI.paint = paint;
   ITT.YearUI.render = render;
+  ITT.YearUI.fillViewport = fillViewport;
 })(typeof window !== "undefined" ? window : this);

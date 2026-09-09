@@ -13,6 +13,9 @@
 | [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) | One implementer bible |
 | [`2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) | Flows A–T short |
 | [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) | **Long dump:** goals · phases · flows · every visited URL extracted |
+| [`2011-2X-FLOWS-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](2011-2X-FLOWS-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md) | **2× flows map** · leftover 3× 27 → 54 |
+| [`2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md`](2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md) | **New unique 2011 websites** · not already leftover-3× dests |
+| [`2011-2X-FLOW-DIAGRAMS-2026-09-09.md`](2011-2X-FLOW-DIAGRAMS-2026-09-09.md) | Visitor flow diagrams |
 | [`references/2011/`](references/2011/) | Wikipedia 2011 list · extlinks · CDX · visit log |
 | Parent live year | `years/2010/` · `itt10` |
 
@@ -67,6 +70,6 @@ File: [`references/2011/corpus-2011-unique-urls.txt`](references/2011/corpus-201
 5. [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) — **verify every opened site** (V1–V12).  
 6. Harvest if you need kits / Wayback.
 
-## Next when you say densify / leftover implement
+## Leftover unique websites (first board)
 
-Open [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) and tick the leftover `[ ]` against V1–V12.
+[`2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md`](2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md) first board **27** is on disk. Leftover 3× doors stay **54** (extra-27 swapped, not 54→81). Do not dest-farm a second board unless lifted by name.

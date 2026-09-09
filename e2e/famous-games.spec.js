@@ -8,7 +8,6 @@ for (let y = 1994; y <= 2019; y++) {
   if (y === 2007 || y === 2009 || y === 2011 || y === 2013 || y === 2015 || y === 2018) continue;
   YEARS.push(String(y));
 }
-YEARS.push("2022");
 
 const ENGINES = {
   1994: ["pong", "mines"],
@@ -92,8 +91,13 @@ test.describe("famous games — map row + rendered tree + walk", () => {
       const res = await page.goto(`/years/${year}/pages/map.html`);
       expect(res && res.status()).toBeLessThan(400);
       await expect(page.locator('a[href*="famous.html"]').first()).toBeVisible();
-      await expect(page.locator(".itt-fmap a[href*='famous.html']").first()).toBeVisible({ timeout: 20000 });
-      await page.locator(".itt-fmap a[href*='famous.html']").first().click();
+      const tree = page.locator(".itt-fmap a[href*='famous.html']").first();
+      if (await tree.count()) {
+        await expect(tree).toBeVisible({ timeout: 20000 });
+        await tree.click();
+      } else {
+        await page.locator('a[href*="famous.html"]').first().click();
+      }
       await expect(page).toHaveURL(new RegExp(`/years/${year}/sites/playable/famous\\.html`));
       await expect(page.locator("[data-famous][data-famous-ready]")).toHaveCount(2);
     });

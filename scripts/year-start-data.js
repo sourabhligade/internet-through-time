@@ -11,7 +11,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "ui", "year", "start-data.js");
-const WIPED = new Set(["2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 
 function loadYearStart() {
   const sandbox = { window: {}, ITT: {} };
@@ -46,7 +46,7 @@ function assertStartCatalog(start) {
   if (live.length !== ship.length) {
     issues.push("START live years " + live.length + " != ship " + ship.length);
   }
-  for (const y of ["2007", "2010", "2014", "2021", "2022"]) {
+  for (const y of ["2007", "2010", "2014", "2020"]) {
     if (!start[y] && fs.existsSync(path.join(ROOT, "years", y, "index.html"))) {
       issues.push(y + " live door missing from YearUI.START");
     }

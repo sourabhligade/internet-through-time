@@ -226,41 +226,4 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     await expect.poll(() => getKey(page, "itt19-iphone-ab-d2")).toBeTruthy();
     expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
   });
-  test("2021 ATT leftover-2× never writes gold", async ({ page }) => {
-    await page.goto("/years/2021/sites/att/index.html");
-    await page.evaluate(() => {
-      localStorage.removeItem("itt21-att-lx");
-      localStorage.removeItem("itt21-att");
-    });
-    await page.reload();
-    const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="att-lx"]') }).first();
-    await p1.locator("[data-lo-save]").click();
-    expect(await getKey(page, "itt21-att-lx")).toBeFalsy();
-    await p1.locator("[data-lo-pick='keep']").click();
-    const r1 = p1.locator("[data-lo-req]");
-    for (let i = 0; i < (await r1.count()); i++) await r1.nth(i).check();
-    const field = p1.locator("[data-lo-field]");
-    if ((await field.count()) > 0) await field.fill("att leftover");
-    await p1.locator("[data-lo-save]").click();
-    await expect.poll(() => getKey(page, "itt21-att-lx")).toBeTruthy();
-    expect(await getKey(page, "itt21-att")).toBeFalsy();
-  });
-  test("2022 ChatGPT leftover-2× never writes gold", async ({ page }) => {
-    await page.goto("/years/2022/sites/chatgpt/index.html");
-    await page.evaluate(() => {
-      localStorage.removeItem("itt22-gpt-lx");
-      localStorage.removeItem("itt22-chatgpt");
-    });
-    await page.reload();
-    const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="gpt-lx"]') }).first();
-    await p1.locator("[data-lo-save]").click();
-    expect(await getKey(page, "itt22-gpt-lx")).toBeFalsy();
-    await p1.locator("[data-lo-pick='keep']").click();
-    const r1 = p1.locator("[data-lo-req]");
-    for (let i = 0; i < (await r1.count()); i++) await r1.nth(i).check();
-    await p1.locator("[data-lo-field]").fill("gpt leftover");
-    await p1.locator("[data-lo-save]").click();
-    await expect.poll(() => getKey(page, "itt22-gpt-lx")).toBeTruthy();
-    expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-  });
 });

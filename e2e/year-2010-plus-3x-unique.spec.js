@@ -81,19 +81,21 @@ test.describe("every year leftover 3× — three trios", () => {
         "2019",
       ].includes(year);
       const want6 = ["2001", "2002"].includes(year);
-      const firstN = want9 ? 9 : year === "2016" || year === "2014" ? 6 : want6 || year === "2003" ? 6 : 3;
+      const firstN = year === "2011" ? 18 : want9 ? 9 : year === "2016" || year === "2014" ? 6 : want6 || year === "2003" ? 6 : 3;
       const moreN = NO_SECOND.has(year)
         ? 0
-        : want9
-          ? 9
-          : year === "2016" || year === "2014"
-            ? 3
-            : want6
-              ? 6
-              : year === "2003"
-                ? 5
-                : 3;
-      const thirdN = want9 ? 9 : year === "2016" || year === "2014" ? 9 : want6 || year === "2003" ? 6 : 3;
+        : year === "2011"
+          ? 18
+          : want9
+            ? 9
+            : year === "2016" || year === "2014"
+              ? 3
+              : want6
+                ? 6
+                : year === "2003"
+                  ? 5
+                  : 3;
+      const thirdN = year === "2011" ? 18 : want9 ? 9 : year === "2016" || year === "2014" ? 9 : want6 || year === "2003" ? 6 : 3;
       await expect(first).toHaveCount(firstN);
       if (NO_SECOND.has(year)) {
         await expect(moreStrip).toHaveCount(0);

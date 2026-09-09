@@ -41,3 +41,5 @@
 | E10 | Named cut | leftover-official matrix lists every leftover-2× writer (2013/2018/2020 filled) | done |
 
 D3 harvest rewrite · 2013/2018 leftover-3× **second** (not enough leftover dests) · leftover-4× on lock years · forests · CUT-OPEN 2023–2025: **not implemented** (by law).
+
+**Remaining after this queue:** [`REMAINING-CHECKLISTS-2026-09-09.md`](REMAINING-CHECKLISTS-2026-09-09.md).

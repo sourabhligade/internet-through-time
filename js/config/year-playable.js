@@ -319,42 +319,6 @@
       famous: "Safari Queue",
       accent: "#0a246a"
     },
-    "2021": {
-      id: "fiveletter",
-      title: "Five Letter",
-      href: "game.html",
-      key: "itt21-game-five",
-      inspire: "Wordle-class — 90 users 1 Nov 2021; NYT is 2022; no official tiles",
-      blurb: "Guess five. NYT tiles never write.",
-      why: "The star is still ATT Ask.",
-      era: "NYT tiles are highlighted. Five is the real click.",
-      famous: "Five Letter",
-      accent: "#1565c0"
-    },
-    "2023": {
-      id: "plusq",
-      title: "Plus Queue",
-      href: "game.html",
-      key: "itt23-game-plusq",
-      inspire: "leftover year game",
-      blurb: "Leftover game. Star stays.",
-      why: "The star stays.",
-      era: "Trap is highlighted.",
-      famous: "Plus Queue",
-      accent: "#1565c0"
-    },
-    "2024": {
-      id: "omni",
-      title: "Omni Dash",
-      href: "game.html",
-      key: "itt24-game-omni",
-      inspire: "leftover year game",
-      blurb: "Leftover game. Star stays.",
-      why: "The star stays.",
-      era: "Trap is highlighted.",
-      famous: "Omni Dash",
-      accent: "#1565c0"
-    },
     "2020": {
       id: "among",
       title: "Sus Vote",
@@ -365,18 +329,6 @@
       why: "The star stays.",
       era: "Trap is highlighted.",
       famous: "Sus Vote",
-      accent: "#1565c0"
-    },
-    "2022": {
-      id: "promptbox",
-      title: "Prompt Box",
-      href: "game.html",
-      key: "itt22-game-prompt",
-      inspire: "ChatGPT-class leftover box — Plus / GPT-4 never write",
-      blurb: "Type leftover prompt. Plus never writes.",
-      why: "The star is still ChatGPT Send.",
-      era: "Plus is highlighted. Send leftover is the real click.",
-      famous: "Prompt Box",
       accent: "#1565c0"
     }};
 })(typeof window !== "undefined" ? window : this);

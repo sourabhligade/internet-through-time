@@ -16,7 +16,9 @@ test.describe('2006 MVP', () => {
     await page.goto('/years/2006/pages/home.html');
     await expect(page.locator('#ott-guided-2006 ol li')).toHaveCount(6);
     await expect(page.locator('body')).toContainText('Twttr');
-    await expect(page.locator('[data-itt-pop-3x3="2006"] a[href*="sites/"]')).toHaveCount(3);
+    await expect(
+      page.locator('p.itt-pop-3x3[data-itt-pop-3x3="2006"]').first().locator('a[href*="sites/"]')
+    ).toHaveCount(9);
   });
   test('2007 hub card is open', async ({ page }) => {
     await page.goto('/');

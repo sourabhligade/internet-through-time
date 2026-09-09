@@ -11,9 +11,9 @@ import { fileURLToPath } from "url";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const mx = JSON.parse(fs.readFileSync(path.join(ROOT, "e2e/2x-links.matrix.json"), "utf8"));
 const BASE = process.env.BASE_URL || "http://127.0.0.1:8080";
-const WIPED = new Set(["2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 
-const rows = mx.filter((r) => !WIPED.has(String(r.year)));
+const rows = mx.filter((r) => !WIPED.has(String(r.year)) && fs.existsSync(path.join(ROOT, "years", String(r.year), "index.html")));
 
 function suffixOf(key) {
   return String(key).replace(/^itt\d{2}-/, "");

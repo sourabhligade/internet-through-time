@@ -9,7 +9,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS_SKIP = new Set(["2013", "2018", "2020", "2023", "2024", "2025"]);
+const YEARS_SKIP = new Set(["2013", "2018", "2020", "2021", "2022", "2023", "2024", "2025"]);
 
 /** @type {{y:string,slot:string,id:string,title:string,kind:string,inspire:string,trap:string,goods:string,next:string,nextLabel:string}[]} */
 const GAMES = [
@@ -63,12 +63,7 @@ const GAMES = [
   { y: "2018", slot: "b", id: "votetick", title: "Vote Tick", kind: "parlor", inspire: "Among Us 15 Jun 2018 launch · viral is 2020 leftover", trap: "2020gold", goods: "task,report,vote", next: "game.html", nextLabel: "Consent Dash" },
   { y: "2019", slot: "a", id: "squaddrop", title: "Squad Drop", kind: "parlor", inspire: "Apex Legends 4 Feb 2019 surprise live", trap: "heirloom", goods: "drop,ping,banner", next: "more-b.html", nextLabel: "Honk List" },
   { y: "2019", slot: "b", id: "honk", title: "Honk List", kind: "parlor", inspire: "Untitled Goose Game 20 Sep 2019", trap: "untitled2", goods: "honk,steal,bell", next: "game.html", nextLabel: "Continue Row" },
-  { y: "2021", slot: "a", id: "longhouse", title: "Longhouse", kind: "place", inspire: "Valheim 2 Feb 2021 Steam EA", trap: "offpath", goods: "cell-0,cell-1,cell-2", next: "more-b.html", nextLabel: "Couch Split" },
-  { y: "2021", slot: "b", id: "couch", title: "Couch Split", kind: "parlor", inspire: "It Takes Two 26 Mar 2021", trap: "soloskip", goods: "split,catch,hug", next: "game.html", nextLabel: "Five Letter" },
-  { y: "2022", slot: "a", id: "grace", title: "Grace Rest", kind: "parlor", inspire: "Elden Ring 25 Feb 2022", trap: "torrentshop", goods: "grace,ash,lord", next: "more-b.html", nextLabel: "Cat Alley" },
-  { y: "2022", slot: "b", id: "catalley", title: "Cat Alley", kind: "parlor", inspire: "Stray 19 Jul 2022", trap: "photosave", goods: "jump,zurk,drone", next: "game.html", nextLabel: "Prompt Box" },
-  { y: "2023", slot: "a", id: "campdice", title: "Camp Dice", kind: "parlor", inspire: "Baldur’s Gate 3 full 3 Aug 2023 · EA is 2020 leftover", trap: "eagold", goods: "camp,dice,kiss", next: "more-b.html", nextLabel: "Sky Isle" },
-  { y: "2023", slot: "b", id: "skyisle", title: "Sky Isle", kind: "parlor", inspire: "Tears of the Kingdom 12 May 2023 · no Zelda art", trap: "botwremake", goods: "ultrahand,fuse,soar", next: "game.html", nextLabel: "Plus Queue" }
+
 ];
 
 function prefix(year) {

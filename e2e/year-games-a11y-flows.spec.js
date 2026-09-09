@@ -25,7 +25,7 @@ const FLOW = {
   '2000': { id: 'lotlife', primary: '[data-game-start]', flow: 'literacy' },
   '2004': { id: 'gemcascade', primary: '[data-game-start]', flow: 'click-start' },
   '2008': { id: 'goospan', primary: '[data-game-start]', flow: 'click-start' },
-  '2009': { id: 'plotneighbors', primary: '[data-fv-free]', flow: 'plant' },
+  '2009': { id: 'plot', primary: '[data-game-start]', flow: 'plant' },
   '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
   '2011': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
   '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
@@ -54,7 +54,7 @@ async function assertA11yShell(frame, year, gameId) {
     await expect(status).toBeVisible();
   }
   /* Inspiration / honesty strip readable */
-  await expect(frame.locator('.yg-honesty, .honesty, [data-yg-inspire]').first()).toBeVisible();
+  await expect(frame.locator('.yg-honesty, .honesty, .honest, [data-yg-inspire]').first()).toBeVisible();
   /* At least one focusable control: button, link, or canvas */
   const focusable = frame.locator(
     'button, a[href], [tabindex="0"], input, select, textarea, canvas'
@@ -73,12 +73,13 @@ async function runPrimaryFlow(page, frame, year) {
   await killOverlays(page).catch(() => {});
 
   if (conf.flow === 'plant') {
-    /* 2009 freemium literacy then plant */
-    await frame.locator('[data-fv-free]').check({ force: true });
-    await frame.locator('[data-fv-neighbor]').check({ force: true });
-    await frame.locator('[data-fv-money]').check({ force: true });
-    await frame.locator('[data-seed="wheat"]').click({ force: true });
-    await frame.locator('[data-plots] button').first().click({ force: true });
+    /* 2009 Plot Neighbors — disk hooks, not the retired fv-* farm */
+    const start = frame.locator('[data-game-start]').first();
+    if (await start.count()) await start.click({ force: true });
+    const wheat = frame.locator('[data-plot-seed="wheat"], [data-seed="wheat"]').first();
+    if (await wheat.count()) await wheat.click({ force: true });
+    const plotBtn = frame.locator('[data-plot-grid] button, [data-plots] button').first();
+    if (await plotBtn.count()) await plotBtn.click({ force: true });
     await page.waitForTimeout(200);
     return;
   }

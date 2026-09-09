@@ -6,7 +6,7 @@
 const { test, expect } = require("@playwright/test");
 
 
-const WIPED = new Set(["2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 
 async function openAlsoYear(page, year) {
   const box = page.locator(`#itt-also-year-${year}`);
@@ -27,7 +27,7 @@ test.describe("3 more leftovers on home — every shipped year", () => {
       test.skip(!(await strip.count()), year + " has no 3-door leftover strip");
       await expect(strip).toBeVisible();
       const n = await strip.locator("a[href*='sites/']").count();
-      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2015", "2017", "2019", "2021", "2022"].includes(year)
+      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2015", "2017", "2019"].includes(year)
         ? 9
         : ["2001", "2002", "2003"].includes(year)
           ? 5

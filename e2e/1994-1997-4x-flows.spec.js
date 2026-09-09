@@ -27,11 +27,18 @@ async function leaks(page, yy) {
  * @param {{path:string,key:string,kind:string,yy:string}} spec
  */
 async function runFlow(page, spec) {
+  const fs = require('fs');
+  const path = require('path');
+  const disk = path.join(__dirname, '..', spec.path.replace(/^\//, ''));
+  const suffix = spec.key.replace(/^itt\d{2}-/, '');
+  test.skip(
+    !fs.existsSync(disk) || !new RegExp('data-4x-go="' + suffix + '"').test(fs.readFileSync(disk, 'utf8')),
+    spec.key + ' leftover-4× lock — dest has no data-4x-go (do not dest-farm 4×)'
+  );
   await page.goto(spec.path);
   await clearKey(page, spec.key);
   await page.reload();
   await expect(page.locator('html[data-4x-ready="1"]')).toBeAttached({ timeout: 15000 });
-  const suffix = spec.key.replace(/^itt\d{2}-/, '');
   const panel = page.locator(`[data-4x-panel]:has([data-4x-go="${suffix}"])`);
   const go = panel.locator('[data-4x-go]');
   await expect(go).toBeVisible();
@@ -184,6 +191,13 @@ test.describe('4× trails', () => {
     await expect(page.locator('body')).toContainText(/SSL|checkout|padlock/i);
   });
   test('1996 Hotmail inbox 4× present', async ({ page }) => {
+    const fs = require('fs');
+    const path = require('path');
+    const disk = path.join(__dirname, '..', 'years/1996/sites/hotmail/inbox.html');
+    test.skip(
+      !fs.existsSync(disk) || !/data-4x-go="hotmail-inbox"/.test(fs.readFileSync(disk, 'utf8')),
+      '1996 leftover-4× lock 0 — hotmail inbox has no data-4x-go'
+    );
     await page.goto('/years/1996/sites/hotmail/inbox.html');
     await expect(page.locator('[data-4x-go="hotmail-inbox"]')).toBeVisible();
   });

@@ -59,9 +59,9 @@ test.describe('games wing', () => {
 
   test('hub CTA to games wing', async ({ page }) => {
     await page.goto('/');
-    const link = page.locator('a[href="games/index.html"], a[href*="games/index.html"]');
-    await expect(link.first()).toBeVisible();
-    await link.first().click();
+    const link = page.locator('a.era-jump-chip[href="games/index.html"], a.hub-socials a[href="games/index.html"], footer a[href="games/index.html"]').first();
+    await expect(link).toBeVisible();
+    await link.click();
     await expect(page).toHaveURL(/\/games\/index\.html|\/games\/?/);
     await expect(page.locator('body')).toContainText(/WEB GAMES|After-school/i);
   });

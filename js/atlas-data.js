@@ -1,33 +1,31 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2009 / 2011 / 2013–2022 lean doors live. 2023–2025 boarded. Do not invent rooms.
+ * 2007 / 2009 / 2011 / 2013–2020 lean doors live. Hallway ends at 2020. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2023", "2024", "2025"],
+    gapYears: [],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, Zoom Leave, ATT Ask, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"] },
-      { id: "late-lean", label: "Boarded late years", blurb: "2023–2024 stay empty for rebuild.", years: ["2023", "2024"] },
-      { id: "wiped-late", label: "Boarded years", blurb: "2025 stays empty for rebuild.", years: ["2025"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, Zoom Leave.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"] }
     ],
 
     leanYears: [
       "2007",
-      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022",
+      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020",
       "2011", "2009"
     ],
 
@@ -58,11 +56,7 @@
       "2017": "Look to unlock. Fortnite is leftover.",
       "2018": "Accept All never writes. Reels are not this year.",
       "2019": "No Reels. No Zoom as mass. Trial never writes.",
-      "2020": "Join never writes. 300 million is participants, not users. ChatGPT is 2022.",
-      "2021": "Allow never writes. ChatGPT is 2022. Win11 is not January.",
-      "2022": "Plus never writes. Dest stays Twitter. X is 2023.",
-      "2023": "Send is last year. Sora / 4o are 2024. Dest name is X.",
-      "2024": "Talk with no 4o pick never writes. Plus residual never steals 2023. GPT-5 is 2025."},
+      "2020": "Join never writes. 300 million is participants, not users. ChatGPT is 2022."},
 
     /* L1 nostalgia — visitor postcard only. Open years. Wiped years omit this. */
     remember: {
@@ -92,11 +86,7 @@
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters.",
       "2018": "The banner was the door. Accept All never wrote. Manage did. The loops changed their name.",
       "2019": "You picked a face. A seven-day trial is the trap. Continue is the save.",
-      "2020": "You muted, then chatted, then Left. Join never wrote. Three hundred million is participants, not users.",
-      "2021": "The phone asked first. Allow is the trap. Ask App Not to Track is the save.",
-      "2022": "You typed a leftover prompt and hit Send. Plus was already the next year.",
-      "2023": "The preview got a price. Subscribe was the save. Sora and 4o were next year.",
-      "2024": "The model talked. Talk with no 4o pick never wrote. Plus still lived in 2023."},
+      "2020": "You muted, then chatted, then Left. Join never wrote. Three hundred million is participants, not users."},
 
     /* Guided 6 for years whose Starting Point is inline (start-data.js stops at 2009). */
     guidedFull: {
@@ -430,17 +420,6 @@
         ],
         game: { label: "Continue Row", href: "years/2019/sites/playable/game.html" }
       },
-      "2021": {
-        era: "Ask · ATT",
-        thesis: "The phone asks first. Allow is the trap. Ask App Not to Track is the save.",
-        gold: { label: "ATT Ask", href: "years/2021/sites/att/index.html", key: "itt21-att" },
-        guided: [
-          { label: "Signal leftover", href: "years/2021/sites/signal/index.html" },
-          { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" },
-          { label: "Meta rename", href: "years/2021/sites/meta/index.html" }
-        ],
-        game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
-      },
       "2020": {
         era: "Mute · chat · Leave",
         thesis: "Lean door. Join never writes. Mute then chat then Leave is the save. 300 million is participants, not users.",
@@ -451,27 +430,6 @@
           { label: "Facebook leftover", href: "years/2020/sites/facebook/index.html" }
         ],
         game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
-      },
-      "2022": {
-        era: "Send · ChatGPT",
-        thesis: "Research preview. Empty / Plus / GPT-4 / Bing never write. Send is the save.",
-        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
-        guided: [
-          { label: "Twitter leftover", href: "years/2022/sites/twitter/index.html" },
-          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" },
-          { label: "Stable Diffusion leftover", href: "years/2022/sites/stablediffusion/index.html" }
-        ],
-        game: { label: "Prompt Box", href: "years/2022/sites/playable/game.html" }
-      },
-      "2023": {
-        wiped: true,
-        era: "Subscribe Plus · dest name X",
-        thesis: "Boarded. ChatGPT Plus will come back as a new lean door."
-      },
-      "2024": {
-        wiped: true,
-        era: "GPT-4o Talk · Plus is residual",
-        thesis: "Boarded. GPT-4o Talk will come back as a new lean door."
       }},
 
     threads: [
@@ -653,12 +611,6 @@
           { year: "", label: "HoverChop", href: "games/play/heli.html" },
           { year: "", label: "TrailSled", href: "games/play/sled.html" }
         ]
-      },
-      {
-        id: "wiped-late",
-        label: "Boarded years",
-        blurb: "2023–2025 stay empty for rebuild.",
-        steps: []
       }
     ]
   };

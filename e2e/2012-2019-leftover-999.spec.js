@@ -2,7 +2,7 @@
 /**
  * 2012–2019 leftover 9+9+9 + dest-true leftover-official.
  * Home strips 9+9+9. Trap / 0 ticks never write. Leftover never writes the year star.
- * 2011 / 2020 stay boarded.
+ * 2021–2025 stay boarded. 2020 Zoom Leave is live.
  */
 const fs = require("fs");
 const path = require("path");
@@ -90,9 +90,10 @@ async function completeLo(page, destPath, year, suffix, star) {
 
 test.describe("wiped years stay boarded", () => {
   test("no year tree", () => {
-    for (const y of ["2020", "2023", "2024", "2025"]) {
+    for (const y of ["2021", "2022", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(ROOT, "years", y, "index.html"))).toBe(false);
     }
+    expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(true);
   });
 });
 

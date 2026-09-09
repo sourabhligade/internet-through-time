@@ -18,7 +18,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2025"]);
+const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
