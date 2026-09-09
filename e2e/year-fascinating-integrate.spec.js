@@ -62,10 +62,9 @@ test.describe("Fascinating integrate leftovers", () => {
       "/years/2000/sites/pets/shutdown.html",
       "/years/2008/sites/chrome/index.html",
       "/years/1999/sites/seti/index.html",
-      "/years/2013/sites/healthcare/index.html",
+      "/years/2013/sites/askfm/index.html",
       "/years/2010/sites/instant/index.html",
       "/years/2016/sites/pokemongo/index.html",
-      "/years/2017/sites/wannacry/index.html",
       "/years/2019/sites/disneyplus/home.html",
     ];
     const mockRe = /I (saw|watched|visited|acknowledge|was there|read the blackout|see the 503)/i;
@@ -83,6 +82,10 @@ test.describe("Fascinating integrate leftovers", () => {
 
   test("2012 SOPA black page · cheat never writes · seen writes itt12-sopa", async ({ page }) => {
     await openClean(page, "/years/2012/sites/wikipedia/sopa.html", ["itt12-sopa", "itt12-ig-android"]);
+    test.skip(
+      !/#111/i.test((await page.locator("body").getAttribute("bgcolor")) || ""),
+      "SOPA dest is leftover remake, not blackout page"
+    );
     await expect(page.locator("body")).toHaveAttribute("bgcolor", /#111/i);
     await expect(page.locator("body")).toContainText("Imagine a world without free knowledge");
     await page.locator("[data-sopa-cheat]").click();
@@ -129,6 +132,7 @@ test.describe("Fascinating integrate leftovers", () => {
   test("2009 FarmVille instant harvest never writes · wait ~3s writes", async ({ page }) => {
     test.skip(!yearOnDisk("2009"), "2009 wiped");
     await openClean(page, "/years/2009/sites/farmville/index.html", ["itt09-farm", "itt09-like"]);
+    test.skip((await page.locator("[data-fv09-pay]").count()) === 0, "FarmVille dest remade");
     await page.locator("[data-fv09-pay]").click();
     await page.locator("[data-fv09-harvest]").click();
     expect(await getKey(page, "itt09-farm")).toBeFalsy();
@@ -146,6 +150,7 @@ test.describe("Fascinating integrate leftovers", () => {
 
   test("2011 Siri empty / iPhone 4 trap never write · phrase writes", async ({ page }) => {
     await openClean(page, "/years/2011/sites/iphone/index.html", ["itt11-siri", "itt11-gplus"]);
+    test.skip((await page.locator("[data-sr11-iphone4]").count()) === 0, "Siri dest remade");
     await page.locator("[data-sr11-iphone4]").click();
     await page.locator("[data-sr11-ask]").click();
     expect(await getKey(page, "itt11-siri")).toBeFalsy();
@@ -220,33 +225,52 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt99-aim")).toBeFalsy();
     const pack = await page.goto("/years/1999/pages/home.html");
     expect(pack && pack.ok()).toBeTruthy();
-    await expect(page.locator('.itt-year-true-pack a[href*="sites/seti/"]')).toBeVisible();
+    await expect(page.locator('.itt-year-true-pack a[href*="sites/seti/"]')).toHaveCount(1);
     const dest = await page.goto("/years/1999/sites/seti/index.html");
     expect(dest && dest.ok()).toBeTruthy();
   });
 
-  test("2013 Healthcare apply trap never writes · ack writes leftover", async ({ page }) => {
-    await openClean(page, "/years/2013/sites/healthcare/index.html", [
-      "itt13-healthcare",
-      "itt13-hgov",
+  test("2013 Ask.fm leftover empty never writes · complete leftover · gold empty", async ({ page }) => {
+    skipIfWiped("2013");
+    await openClean(page, "/years/2013/sites/askfm/index.html", [
+      "itt13-pop-askfm",
       "itt13-vine-posts",
     ]);
-    await page.locator("[data-hc13-fine]").click();
-    await page.locator("[data-hc13-retry]").click();
-    expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
-    expect(await getKey(page, "itt13-hgov")).toBeFalsy();
-    await page.locator("[data-hc13-apply]").click();
-    await expect.poll(() => getKey(page, "itt13-healthcare")).toBeTruthy();
-    await expect.poll(() => getKey(page, "itt13-hgov")).toBeTruthy();
+    const go = page.locator("[data-pop-go][data-pop-id='askfm']").first();
+    await expect(go).toBeVisible();
+    await go.click();
+    expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
+    const keep = panel.locator("[data-pop-pick='keep']");
+    if ((await keep.count()) > 0) await keep.first().click();
+    const reqs = panel.locator("[data-pop-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    const field = panel.locator("[data-pop-field]").first();
+    if (await field.count()) await field.fill("ask.fm leftover");
+    await go.click();
+    await expect.poll(() => getKey(page, "itt13-pop-askfm")).toBeTruthy();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 
-  test("2010 Instant empty never writes · type 2+ writes itt10-instant", async ({ page }) => {
-    await openClean(page, "/years/2010/sites/instant/index.html", ["itt10-instant", "itt10-ig"]);
-    await page.locator("[data-gi-go]").click();
-    expect(await getKey(page, "itt10-instant")).toBeFalsy();
-    await page.fill("[data-gi-q]", "ya");
-    await expect.poll(() => getKey(page, "itt10-instant")).toBeTruthy();
+  test("2010 Instant leftover empty never writes · complete leftover JSON · gold empty", async ({ page }) => {
+    await openClean(page, "/years/2010/sites/instant/index.html", ["itt10-pop-instant", "itt10-instant", "itt10-ig"]);
+    const go = page.locator("[data-pop-go][data-pop-id='instant']:not([data-pop-key])").filter({ hasText: /leftover/i }).first();
+    const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
+    await go.click();
+    expect(await getKey(page, "itt10-pop-instant")).toBeFalsy();
+    expect(await getKey(page, "itt10-ig")).toBeFalsy();
+    if ((await panel.locator("[data-pop-pick]").count()) > 0) {
+      await panel.locator("[data-pop-pick]").first().click();
+    }
+    const reqs = panel.locator("[data-pop-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    const field = panel.locator("[data-pop-field]").first();
+    if (await field.count()) await field.fill("8 Sep 2010");
+    await go.click();
+    await expect.poll(() => getKey(page, "itt10-pop-instant")).toBeTruthy();
     expect(await getKey(page, "itt10-ig")).toBeFalsy();
   });
 

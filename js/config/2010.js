@@ -48,6 +48,8 @@
     "pages/about.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "pages/error/404.html",
+    "pages/error/unreachable.html",
     "sites/instagram/index.html",
     "sites/ask/index.html",
     "sites/reddit/index.html",

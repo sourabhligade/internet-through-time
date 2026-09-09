@@ -181,7 +181,7 @@
     ITT.YearPlayable = {
       boot: boot,
       mount: mount,
-      cabinets: CABINETS
+      cabinets: cabinets()
     };
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", function () {

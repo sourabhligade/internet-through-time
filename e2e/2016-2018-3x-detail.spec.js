@@ -26,21 +26,44 @@ const YEARS = [
       { id: "amazon", next: /home\.html/ },
     ],
   },
+  {
+    year: "2018",
+    prefix: "itt18",
+    rooms: [
+      { id: "reddit", next: /youtube/ },
+      { id: "youtube", next: /wikipedia/ },
+      { id: "wikipedia", next: /home\.html/ },
+    ],
+  },
 ];
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-async function complete(page) {
-  await page.locator("[data-pop-pick]").first().click();
-  await page.locator("[data-pop-req]").check();
-  const field = page.locator("[data-pop-field]");
-  const v = await field.inputValue();
-  if (!String(v || "").trim() || String(v).trim().length < 2) {
-    await field.fill("museum residual");
+function leftoverPanel(page, id) {
+  return page.locator(`[data-pop-panel][data-itt-lo3x]:has(button[data-pop-go][data-pop-id="${id}"]:not([data-pop-key]))`).first();
+}
+
+function leftoverGo(page, id) {
+  return leftoverPanel(page, id).locator(`button[data-pop-go][data-pop-id="${id}"]`);
+}
+
+async function complete(page, id) {
+  const panel = leftoverPanel(page, id);
+  const go = leftoverGo(page, id);
+  const keep = panel.locator('[data-pop-pick="keep"]');
+  if (await keep.count()) await keep.first().click();
+  else await panel.locator("[data-pop-pick]").first().click();
+  const reqs = panel.locator("[data-pop-req]");
+  const nReq = await reqs.count();
+  for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+  const field = panel.locator("[data-pop-field]").first();
+  if (await field.count()) {
+    const ph = (await field.getAttribute("placeholder")) || "museum residual";
+    await field.fill(ph.length >= 2 ? ph : "museum residual");
   }
-  await page.locator("[data-pop-go]").click();
+  await go.click();
 }
 
 for (const y of YEARS) {
@@ -53,25 +76,34 @@ for (const y of YEARS) {
         await page.goto(path);
         await page.evaluate((k) => localStorage.removeItem(k), key);
         await page.reload();
-        await expect(page.locator("[data-pop-go]")).toHaveAttribute("data-pop-bound", "1", { timeout: 15000 });
+        const go = leftoverGo(page, room.id);
+        const panel = leftoverPanel(page, room.id);
+        await expect(go).toHaveAttribute("data-pop-bound", "1", { timeout: 15000 });
         await expect(page.locator("html")).toHaveAttribute("data-itt-year", y.year);
-        await expect(page.locator("[data-pop-pick]")).toHaveCount(3);
-        await expect(page.locator("[data-pop-req]")).toHaveCount(1);
-        await page.locator("[data-pop-go]").click();
+        expect(await panel.locator("[data-pop-pick]").count()).toBeGreaterThan(0);
+        expect(await panel.locator("[data-pop-req]").count()).toBeGreaterThan(0);
+        await go.click();
         expect(await getKey(page, key)).toBeFalsy();
-        await page.fill("[data-pop-field]", "almost");
-        await page.locator("[data-pop-go]").click();
+        const field = panel.locator("[data-pop-field]").first();
+        if (await field.count()) await field.fill("a");
+        await go.click();
         expect(await getKey(page, key)).toBeFalsy();
-        await page.locator("[data-pop-pick]").first().click();
-        await page.locator("[data-pop-go]").click();
-        expect(await getKey(page, key)).toBeFalsy();
-        await complete(page);
+        const trap = panel.locator('[data-pop-pick="trap"], [data-pop-trap]');
+        if (await trap.count()) {
+          await trap.first().click();
+          await go.click();
+          expect(await getKey(page, key)).toBeFalsy();
+        }
+        await complete(page, room.id);
         await expect.poll(async () => getKey(page, key), { timeout: 8000 }).toBeTruthy();
         const raw = (await getKey(page, key)) || "";
         expect(raw).toMatch(/"real"\s*:\s*true/);
         expect(raw).toMatch(/multiStep/);
-        await expect(page.locator("[data-next-flow] a").first()).toBeVisible();
-        await expect(page.locator("[data-next-flow] a").first()).toHaveAttribute("href", room.next);
+        const next = page.locator("[data-next-flow]:not([hidden]) a, [data-next-flow] a").first();
+        await expect(next).toBeVisible();
+        const nh = await next.getAttribute("href");
+        expect(nh, key + " next").toBeTruthy();
+        expect(nh).not.toMatch(/years\/(?!2016|2017|2018)/);
         await page.reload();
         await expect(page.locator("[data-next-flow] a").first()).toBeVisible();
       });

@@ -184,21 +184,6 @@
       t = trails[i];
       if (t.n >= 11 && t.n <= 13) picks.push(t);
     }
-    if (picks.length < 3) {
-      for (i = 0; i < trails.length && picks.length < 3; i++) {
-        t = trails[i];
-        if (t.n === 1) continue;
-        if (/leftover/i.test(t.name || "")) picks.push(t);
-      }
-    }
-    if (picks.length < 3) {
-      for (i = 0; i < trails.length && picks.length < 3; i++) {
-        t = trails[i];
-        if (t.n === 1) continue;
-        if (picks.indexOf(t) >= 0) continue;
-        picks.push(t);
-      }
-    }
     picks = picks.slice(0, 3);
     if (!picks.length) return "";
     var html = '<p class="itt-3x-visible" id="ott-3x-' + year + '-dp"><b>Also 3×</b> · ';
@@ -238,6 +223,7 @@
     var href;
     for (i = 0; i < trails.length; i++) {
       t = trails[i];
+      if (parseInt(t.n, 10) > 10) continue;
       href = flowHref(t.href);
       lis +=
         "<li><a href=\"" +

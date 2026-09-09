@@ -10,7 +10,7 @@
 **Year lock / scale / official 10:** [`2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md`](2021-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md)  
 **Visitor map (locks, not live dests):** [`2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2021-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Older notebooks that lose to this file + DISK-TRUTH:** `2021-FROM-SCRATCH-RESEARCH-…-2026-08-28.md` (says door live) · `2021-IN-PLACE-…` · any “85 HTML / 376 HTML on disk” sentence.  
-**Parent (live):** 2019 Disney+ Continue. **2020 sibling:** wiped (Zoom). **Child:** 2022 ChatGPT — also wiped.  
+**Parent (live):** 2019 Disney+ Continue. **2020 sibling:** wiped (Zoom). **Child:** 2022 ChatGPT Send — **live**.  
 **Git only if asked.**
 
 ## One line

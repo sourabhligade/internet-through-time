@@ -93,6 +93,9 @@ docs/references/5x-improve-corpus-*.txt
 # Local generate output / scratch
 dev/
 
+# Session / author screenshots (museum assets live under years/ and assets/)
+/images/
+
 # Leftover / official walker dumps (regenerate with scripts/walk-*.mjs)
 docs/_WALK-*.json
 docs/_SCAN-EVERY-FILE-*

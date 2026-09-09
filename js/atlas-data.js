@@ -1,33 +1,33 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2009 / 2011 / 2013–2019 / 2021 / 2022 lean doors live. 2020 / 2023–2025 boarded. Do not invent rooms.
+ * 2007 / 2009 / 2011 / 2013–2022 lean doors live. 2023–2025 boarded. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
     openYears: OPEN,
-    gapYears: ["2020", "2023", "2024", "2025"],
+    gapYears: ["2023", "2024", "2025"],
 
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, ATT Ask, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022"] },
-      { id: "late-lean", label: "Boarded late years", blurb: "2020 / 2023–2024 stay empty for rebuild.", years: ["2020", "2023", "2024"] },
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, Zoom Leave, ATT Ask, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"] },
+      { id: "late-lean", label: "Boarded late years", blurb: "2023–2024 stay empty for rebuild.", years: ["2023", "2024"] },
       { id: "wiped-late", label: "Boarded years", blurb: "2025 stays empty for rebuild.", years: ["2025"] }
     ],
 
     leanYears: [
       "2007",
-      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022",
+      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022",
       "2011", "2009"
     ],
 
@@ -442,9 +442,15 @@
         game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
       },
       "2020": {
-        wiped: true,
         era: "Mute · chat · Leave",
-        thesis: "Boarded. Zoom mute → leave will come back as a new lean door."
+        thesis: "Lean door. Join never writes. Mute then chat then Leave is the save. 300 million is participants, not users.",
+        gold: { label: "Zoom Leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
+        guided: [
+          { label: "YouTube leftover", href: "years/2020/sites/youtube/index.html" },
+          { label: "Wikipedia leftover", href: "years/2020/sites/wikipedia/index.html" },
+          { label: "Facebook leftover", href: "years/2020/sites/facebook/index.html" }
+        ],
+        game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
       },
       "2022": {
         era: "Send · ChatGPT",
@@ -651,7 +657,7 @@
       {
         id: "wiped-late",
         label: "Boarded years",
-        blurb: "2020 / 2023–2025 stay empty for rebuild.",
+        blurb: "2023–2025 stay empty for rebuild.",
         steps: []
       }
     ]

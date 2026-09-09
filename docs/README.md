@@ -1,11 +1,11 @@
 # Docs — Internet Through Time
 
-Play **26 years** from the hub (`index.html`). **2013 / 2018 / 2020 / 2023–2025 are wiped.** Lean doors: **2007 / 2009 / 2011 / 2014–2017 / 2019 / 2021 / 2022.** **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
+Play **29 years** from the hub (`index.html`). **2023–2025 are wiped.** Lean doors: **2007 / 2009 / 2011 / 2013–2022.** **2013** is Vine 6s. **2018** is GDPR Manage. **2020** is Zoom Leave. **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
 
 **Bar A 100% (ship):** dests, keys, official 10, gold, guided 6, and HTML cap in the year’s *current* READ-FIRST / map match the live tree.  
 **Bar B** (museum-grade feel) is leftover costume / leftover verbs / optional stills. L4 pixels stay outside both bars.
 
-If a paragraph’s hub range is not **1994–2012 + 2014–2017 + 2019 + 2021–2022** (2013 / 2018 / 2020 / 2023–2025 wiped), it is a notebook. Live tree + `DISK-TRUTH.md` win.
+If a paragraph’s hub range is not **1994–2022** (2023–2025 wiped), it is a notebook. Live tree + `DISK-TRUTH.md` win.
 
 ## Read first
 
@@ -32,7 +32,7 @@ If a paragraph’s hub range is not **1994–2012 + 2014–2017 + 2019 + 2021–
 
 ## Ship law
 
-Live tree + hub + `SHIP_YEARS` = **26 years**. **2013 / 2018 / 2020 / 2023–2025 stay wiped.** Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
+Live tree + hub + `SHIP_YEARS` = **29 years**. **2023–2025 stay wiped.** Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
 
 ## Live-year locks
 
@@ -48,7 +48,10 @@ Live tree + hub + `SHIP_YEARS` = **26 years**. **2013 / 2018 / 2020 / 2023–202
 | 2015 | [`2015-READ-FIRST.md`](2015-READ-FIRST.md) · [`2015-FROM-SCRATCH-MAP-CRITERIA-BLOGS-FLOWS-LINKS-GAMES-2026-09-04.md`](2015-FROM-SCRATCH-MAP-CRITERIA-BLOGS-FLOWS-LINKS-GAMES-2026-09-04.md) | Periscope Go LIVE `itt15-periscope` |
 | 2016 | [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · [`2016-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2016-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | IG Stories `itt16-ig-stories` |
 | 2017 | [`2017-READ-FIRST.md`](2017-READ-FIRST.md) · [`2017-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2017-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Face ID `itt17-faceid` |
+| 2013 | [`2013-READ-FIRST.md`](2013-READ-FIRST.md) | Vine 6s `itt13-vine-posts` |
+| 2018 | [`2018-READ-FIRST.md`](2018-READ-FIRST.md) | GDPR Manage `itt18-gdpr` |
 | 2019 | [`2019-READ-FIRST.md`](2019-READ-FIRST.md) | Disney+ Continue `itt19-disneyplus` |
+| 2020 | [`2020-READ-FIRST.md`](2020-READ-FIRST.md) | Zoom Leave `itt20-zoom` |
 | 2021 | [`2021-READ-FIRST.md`](2021-READ-FIRST.md) | ATT Ask `itt21-att` |
 | 2022 | [`2022-READ-FIRST.md`](2022-READ-FIRST.md) | ChatGPT Send |
 
@@ -59,9 +62,6 @@ Live tree + hub + `SHIP_YEARS` = **26 years**. **2013 / 2018 / 2020 / 2023–202
 
 | Year | Stamp |
 |------|--------|
-| 2013 | [`2013-READ-FIRST.md`](2013-READ-FIRST.md) — **WIPED**. Hub locked. No `years/2013/`. |
-| 2018 | [`2018-READ-FIRST.md`](2018-READ-FIRST.md) — **WIPED**. Hub locked. No `years/2018/`. |
-| 2020 | Hub card locked. Rebuild only when named. |
 | 2023 · 2024 · 2025 | Hub cards locked. Rebuild only when named. |
 
 ## Ops

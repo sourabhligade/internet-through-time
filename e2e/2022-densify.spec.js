@@ -20,8 +20,15 @@ test.describe("2022 leftover densify", () => {
     await expect(page.locator("#ott-2x-2022")).toContainText(/Whisper/);
     await expect(page.locator("#ott-2x-2022")).toContainText(/ChatGPT/);
     await expect(page.locator("#ott-2x-2022")).toContainText(/120 leftover writers/);
+    await expect(page.locator("#ott-2x-2022")).toContainText(/leftover 2× #1 \+ #2/);
     await expect(page.locator("#ott-2x-2022")).toContainText(/Continuity close leftover/);
     await expect(page.locator("#ott-2x-2022")).toContainText(/BeReal second leftover/);
+    await expect(page.locator("#ott-2x-2022")).toContainText(/Pack A/);
+    await expect(page.locator("#ott-2x-2022")).toContainText(/Pack B/);
+    await expect(page.locator("#ott-2x-2022")).toContainText(/Pack C/);
+    await expect(page.locator("#ott-2x-2022")).toContainText(/Twitter 2nd leftover/);
+    await expect(page.locator("#ott-2x-2022")).toContainText(/Amazon leftover/);
+    await expect(page.locator("#ott-2x-2022 a[href]")).toHaveCount(241);
   });
 
   test("Pack A dests print dual-cite honesty", async ({ page }) => {
@@ -64,22 +71,71 @@ test.describe("2022 leftover densify", () => {
     expect(res.status(), dest.pathname).toBe(200);
   });
 
-  test("Pack A leftover dests 200", async ({ page }) => {
+  test("Pack A leftover dests dest-minute never writes gold", async ({ page }) => {
     for (const slug of PACK_A) {
       const res = await page.goto("/years/2022/sites/" + slug + "/index.html");
       expect(res && res.ok(), slug).toBeTruthy();
-      await expect(page.locator("[data-lo-save]").first()).toBeVisible();
+      const panel = page.locator("[data-lo-panel]").first();
+      await expect(panel.locator("[data-lo-save]").first()).toBeVisible();
+      await page.evaluate(() => localStorage.removeItem("itt22-chatgpt"));
+      await panel.locator("[data-lo-save]").first().click();
+      expect(await page.evaluate(() => localStorage.getItem("itt22-chatgpt")), slug).toBeFalsy();
     }
   });
 
-  test("first 3× dests 200", async ({ page }) => {
+  test("Pack B and Pack C leftover dests dest-minute never writes gold", async ({ page }) => {
+    const packBC = [
+      "twitter/about.html",
+      "wordle/tiles.html",
+      "stablediffusion/about.html",
+      "mastodon/about.html",
+      "dalle2/about.html",
+      "chrome/about.html",
+      "chrome/more.html",
+      "windows10/more.html",
+      "mastodon/more.html",
+      "coprev/index.html",
+      "whisper/about.html",
+      "youtube/watch.html",
+      "wikipedia/edit.html",
+      "amazon/index.html",
+      "netflix/index.html",
+      "spotify/index.html",
+      "google/index.html",
+      "gmail/index.html",
+      "discord/index.html",
+      "zoom/index.html",
+      "github/index.html",
+      "playable/more.html",
+      "playable/close.html",
+    ];
+    for (const rel of packBC) {
+      const res = await page.goto("/years/2022/sites/" + rel);
+      expect(res && res.ok(), rel).toBeTruthy();
+      const panel = page.locator("[data-lo-panel]").first();
+      await expect(panel.locator("[data-lo-save]").first()).toBeVisible();
+      await page.evaluate(() => localStorage.removeItem("itt22-chatgpt"));
+      await panel.locator("[data-lo-save]").first().click();
+      expect(await page.evaluate(() => localStorage.getItem("itt22-chatgpt")), rel).toBeFalsy();
+    }
+  });
+
+  test("first 3× dests leftover dest-minute never writes gold", async ({ page }) => {
     for (const slug of ["youtube", "wikipedia", "facebook"]) {
       const res = await page.goto("/years/2022/sites/" + slug + "/index.html");
       expect(res && res.ok(), slug).toBeTruthy();
+      await page.evaluate(() => localStorage.removeItem("itt22-chatgpt"));
+      const go = page.locator("[data-pop-go]").first();
+      if ((await go.count()) > 0) {
+        await go.click();
+        expect(await page.evaluate(() => localStorage.getItem("itt22-chatgpt")), slug).toBeFalsy();
+      } else {
+        await expect(page.locator("[data-lo-save]").first()).toBeVisible();
+      }
     }
   });
 
-  test("third 3× dests 200", async ({ page }) => {
+  test("third 3× dests leftover dest-minute never writes gold", async ({ page }) => {
     for (const href of [
       "/years/2022/sites/tiktok/index.html",
       "/years/2022/sites/midjourney/index.html",
@@ -87,6 +143,14 @@ test.describe("2022 leftover densify", () => {
     ]) {
       const res = await page.goto(href);
       expect(res && res.ok(), href).toBeTruthy();
+      await page.evaluate(() => localStorage.removeItem("itt22-chatgpt"));
+      const go = page.locator("[data-pop-go]").first();
+      if ((await go.count()) > 0) {
+        await go.click();
+        expect(await page.evaluate(() => localStorage.getItem("itt22-chatgpt")), href).toBeFalsy();
+      } else {
+        await expect(page.locator("[data-lo-save]").first()).toBeVisible();
+      }
     }
   });
 });

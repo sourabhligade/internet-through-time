@@ -28,8 +28,6 @@ test.describe("2013 leftover densify", () => {
     await page.locator("[data-vn13-trap]").click();
     await page.locator("[data-vn13-post]").click();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
-    await page.locator("[data-vn13-req]").nth(0).check();
-    await page.locator("[data-vn13-req]").nth(1).check();
     await page.locator("[data-vn13-hold]").click();
     await page.locator("[data-vn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-vine-posts")).toBeTruthy();
@@ -43,8 +41,8 @@ test.describe("2013 leftover densify", () => {
     expect(await getKey(page, "itt13-snap-story")).toBeFalsy();
     await page.locator("[data-sn13-req]").nth(0).check();
     await page.locator("[data-sn13-req]").nth(1).check();
-    await page.locator('[data-sn13-snap="one"]').click();
-    await page.locator('[data-sn13-snap="two"]').click();
+    await page.locator('[data-sn13-snap="a"]').click();
+    await page.locator('[data-sn13-snap="b"]').click();
     await page.locator("[data-sn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-snap-story")).toBeTruthy();
   });

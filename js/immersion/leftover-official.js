@@ -137,10 +137,12 @@
       waitBtn.setAttribute("data-lo-wait-bound", "1");
       waitBtn.addEventListener("click", function () {
         say(st, "Waiting leftover…", false);
+        var waitMs = parseInt(waitBtn.getAttribute("data-lo-wait-ms") || "800", 10);
+        if (isNaN(waitMs) || waitMs < 200) waitMs = 800;
         setTimeout(function () {
           waitBtn.setAttribute("data-lo-waited", "1");
           say(st, "Wait leftover ready.", false);
-        }, 800);
+        }, waitMs);
       });
     }
 

@@ -8,10 +8,11 @@
 **2× leftover harvest:** [`2022-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2022-2X-LEFTOVER-RESEARCH-2026-09-01.md)  
 **2× leftover minute walk:** [`2022-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-01.md`](2022-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-01.md)  
 **Year lock / scale / official 10:** [`2022-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md`](2022-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md)  
+**Research reopen 2026-09-09 (disk-now):** [`2022-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-09.md`](2022-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-09.md)  
 **Visitor map (locks, not live dests):** [`2022-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2022-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
 **Check every flow (diagram + trap/save):** [`2022-CHECK-EVERY-FLOW-MAP.md`](2022-CHECK-EVERY-FLOW-MAP.md)  
 **Older notebooks that lose to this file + DISK-TRUTH:** this file’s 2026-08-27 “lean door on disk / 83 leftover / SHIP includes 2022” sentences · [`2022-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md`](2022-2X-DEEPEN-GOALS-PHASES-FLOWS-MINUTE.md) (says 32 dests on disk).  
-**Parent (live):** 2021 ATT Ask. **2020 sibling:** wiped (Zoom). **Child:** 2023 Plus — wiped.  
+**Parent (live):** 2021 ATT Ask. **2020 sibling:** Zoom Leave live lean door. **Child:** 2023 Plus — boarded.  
 **Git only if asked.**
 
 ## One line

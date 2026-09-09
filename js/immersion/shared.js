@@ -1130,6 +1130,16 @@
             ev.preventDefault();
             var url = ((form.querySelector('input[type="text"]') || {}).value || "").trim();
             var excerpt = ((form.querySelector("textarea") || {}).value || "").trim();
+            if (!url && !excerpt) {
+              var emptyOut = document.getElementById("tb-out") || form.querySelector("[data-trackback-out]");
+              if (!emptyOut) {
+                emptyOut = ensureStatusAfter(form);
+                emptyOut.id = "tb-out";
+              }
+              emptyOut.style.display = "block";
+              emptyOut.innerHTML = wrapDialog("TrackBack", "Empty ping never writes.");
+              return;
+            }
             var log = loadJSON(storageKey("trackbacks"), []) || [];
             log.unshift({ url: url, excerpt: excerpt, at: new Date().toLocaleString() });
             saveJSON(storageKey("trackbacks"), log.slice(0, 30));

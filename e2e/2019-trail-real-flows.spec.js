@@ -24,9 +24,15 @@ test.describe("2019 official trail dests exist", () => {
     "sites/playable/game.html",
   ];
   for (const href of stops) {
-    test(href + " loads", async ({ page }) => {
+    test(href + " leftover 2× dest-minute never writes gold", async ({ page }) => {
       const res = await page.goto("/years/2019/" + href);
       expect(res && res.ok()).toBeTruthy();
+      const panel = page.locator("[data-lo-panel]").first();
+      await expect(panel.locator("[data-lo-save]").first()).toBeVisible();
+      await page.evaluate(() => localStorage.removeItem("itt19-disneyplus"));
+      const save = panel.locator("[data-lo-save]").first();
+      await save.click();
+      expect(await page.evaluate(() => localStorage.getItem("itt19-disneyplus"))).toBeFalsy();
     });
   }
 

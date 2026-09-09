@@ -25,13 +25,14 @@ Leftover plaques on official dests use `*-lx` / `*-d2` only. Leftover complete n
 
 ### n=1 ★ Disney+ Continue · `sites/disneyplus/home.html` · `itt19-disneyplus`
 
-**Life:** 12 Nov 2019 US / Canada / Netherlands. $6.99 / $69.99. 7-day trial. Who’s watching. Continue row. >10 million sign-ups by 13 Nov. Launch glitches from demand.
+**Life:** 12 Nov 2019 US / Canada / Netherlands. $6.99 / $69.99. Weeklong trial is contemporaneous press, not a Disney-primary “7-day” string. Museum costume may reconstruct a profile picker; do not quote “Who’s watching” as 2019 Disney press. Continue row. >10 million **sign-ups** by 13 Nov (not paid; 26.5M paid as of 28 Dec). ITU 4.1B / 53.6% stays on About, never this C-row.  
+**Cite / refer:** 12 Nov $6.99 / $69.99 · 10M sign-ups 13 Nov ≠ 26.5M paid 28 Dec · not ITU 4.1B / 53.6%.
 
 **Pages:** `index.html` (join / trial **trap**) · `home.html` (Who’s watching + Continue) · `about.html` (literacy · no write)
 
 | Beat | Writes? |
 |------|---------|
-| Start 7-day trial | **no** |
+| Start weeklong trial | **no** |
 | 0–1 profiles | **no** |
 | 0–1 Continue titles | **no** |
 | Adult + Kids + ≥2 titles + Continue | **`itt19-disneyplus`** `{real, year:"2019", multiStep, profile, continueIds}` |
@@ -42,7 +43,8 @@ Leftover plaques on official dests use `*-lx` / `*-d2` only. Leftover complete n
 
 ### n=2 TikTok FYP · `sites/tiktok/index.html` · `itt19-tiktok`
 
-**Life:** Merge was 2 Aug 2018. 2019 = US mass + COPPA $5.7M 27 Feb.
+**Life:** Merge was 2 Aug 2018. 2019 = US mass + FTC 27 Feb $5.7M announced + C.D. Cal. order 27 Mar.  
+**Cite / refer:** FTC 27 Feb $5.7M announced + C.D. Cal. order 27 Mar.
 
 | Incomplete | Complete |
 |------------|----------|
@@ -52,7 +54,8 @@ Leftover plaques on official dests use `*-lx` / `*-d2` only. Leftover complete n
 
 ### n=3 Apple Arcade · `sites/arcade/index.html` · `itt19-arcade`
 
-**Life:** Newsroom 10 Sep · live 19 Sep · $4.99 · no ads / IAP · Family Sharing 6.
+**Life:** Newsroom 10 Sep $4.99/mo · live 19 Sep · no ads or additional in-game purchases · Family Sharing 6.  
+**Cite / refer:** Newsroom 10 Sep $4.99/mo · live 19 Sep.
 
 | Incomplete | Complete |
 |------------|----------|
@@ -62,7 +65,8 @@ Leftover plaques on official dests use `*-lx` / `*-d2` only. Leftover complete n
 
 ### n=4 Apple TV+ · `sites/appletv/index.html` · `itt19-appletv`
 
-**Life:** 1 Nov · $4.99 · one year free on new hardware from 10 Sep.
+**Life:** Newsroom 10 Sep $4.99 / 7-day / 100+ countries · live 1 Nov (CNBC) · one year free on new hardware from 10 Sep.  
+**Cite / refer:** Newsroom 10 Sep $4.99 / 7-day / 100+ countries · pair CNBC 1 Nov.
 
 | Incomplete | Complete |
 |------------|----------|
@@ -72,7 +76,8 @@ Leftover plaques on official dests use `*-lx` / `*-d2` only. Leftover complete n
 
 ### n=5 Stadia Founder’s · `sites/stadia/index.html` · `itt19-stadia`
 
-**Life:** 19 Nov · Founder’s $129 class · Chromecast Ultra + Midnight Blue · 14 countries · 9am PT.
+**Life:** 19 Nov · Founder’s **$129.99** · Chromecast Ultra + **Night Blue** controller · 14 countries · **9 a.m. PST**. Midnight Blue / 9am PT is wrong.  
+**Cite / refer:** Night Blue $129.99 · 9 a.m. PST 19 Nov.
 
 | Incomplete | Complete |
 |------------|----------|

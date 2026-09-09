@@ -120479,6 +120479,2826 @@
       "minPick": 0,
       "field": false,
       "placeholder": ""
+    },
+    {
+      "year": "2013",
+      "href": "sites/vine/record.html",
+      "key": "itt13-vine-lx",
+      "suffix": "vine-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "vine leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/vine/record.html",
+      "key": "itt13-vine-d2",
+      "suffix": "vine-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "vine leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/gdpr/index.html",
+      "key": "itt18-gdpr-lx",
+      "suffix": "gdpr-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gdpr leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/gdpr/index.html",
+      "key": "itt18-gdpr-d2",
+      "suffix": "gdpr-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gdpr leftover"
+    },
+    {
+      "year": "1994",
+      "href": "sites/iuma/listen.html",
+      "key": "itt94-iuma-lx",
+      "suffix": "iuma-lx",
+      "needPick": "listen",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "iuma-lx leftover"
+    },
+    {
+      "year": "1994",
+      "href": "sites/ncsa/index.html",
+      "key": "itt94-trail-q",
+      "suffix": "trail-q",
+      "needPick": "",
+      "minPick": 2,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1994",
+      "href": "sites/cern/index.html",
+      "key": "itt94-trail-q",
+      "suffix": "trail-q",
+      "needPick": "path",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1994",
+      "href": "sites/nasa/index.html",
+      "key": "itt94-trail-q",
+      "suffix": "trail-q",
+      "needPick": "hubble",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1995",
+      "href": "sites/geocities/homestead.html",
+      "key": "itt95-trail-q",
+      "suffix": "trail-q",
+      "needPick": "west",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1995",
+      "href": "sites/microsoft/index.html",
+      "key": "itt95-trail-q",
+      "suffix": "trail-q",
+      "needPick": "win95",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1996",
+      "href": "sites/geocities/index.html",
+      "key": "itt96-trail-q",
+      "suffix": "trail-q",
+      "needPick": "west",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1996",
+      "href": "sites/realplayer/index.html",
+      "key": "itt96-trail-q",
+      "suffix": "trail-q",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1996",
+      "href": "sites/yahoo/my.html",
+      "key": "itt96-trail-q",
+      "suffix": "trail-q",
+      "needPick": "",
+      "minPick": 2,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1997",
+      "href": "sites/hotbot/index.html",
+      "key": "itt97-trail-q",
+      "suffix": "trail-q",
+      "needPick": "q",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1997",
+      "href": "sites/microsoft/index.html",
+      "key": "itt97-trail-q",
+      "suffix": "trail-q",
+      "needPick": "ie4",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1997",
+      "href": "sites/slashdot/index.html",
+      "key": "itt97-trail-q",
+      "suffix": "trail-q",
+      "needPick": "",
+      "minPick": 2,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1997",
+      "href": "sites/ebay/index.html",
+      "key": "itt97-trail-q",
+      "suffix": "trail-q",
+      "needPick": "",
+      "minPick": 2,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1998",
+      "href": "sites/amazon/index.html",
+      "key": "itt98-trail-q",
+      "suffix": "trail-q",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1998",
+      "href": "sites/dmoz/index.html",
+      "key": "itt98-trail-q",
+      "suffix": "trail-q",
+      "needPick": "cat",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1998",
+      "href": "sites/ebay/index.html",
+      "key": "itt98-trail-q",
+      "suffix": "trail-q",
+      "needPick": "bid",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1998",
+      "href": "sites/altavista/index.html",
+      "key": "itt98-trail-q",
+      "suffix": "trail-q",
+      "needPick": "",
+      "minPick": 2,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1999",
+      "href": "sites/amazon/index.html",
+      "key": "itt99-trail-q",
+      "suffix": "trail-q",
+      "needPick": "book",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1999",
+      "href": "sites/sourceforge/index.html",
+      "key": "itt99-trail-q",
+      "suffix": "trail-q",
+      "needPick": "proj",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1999",
+      "href": "sites/ebay/index.html",
+      "key": "itt99-trail-q",
+      "suffix": "trail-q",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1999",
+      "href": "sites/napster/index.html",
+      "key": "itt99-trail-q",
+      "suffix": "trail-q",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "1999",
+      "href": "sites/blogger/index.html",
+      "key": "itt99-trail-q",
+      "suffix": "trail-q",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "2001",
+      "href": "sites/itunes/about.html",
+      "key": "itt01-itunes-lx",
+      "suffix": "itunes-lx",
+      "needPick": "lib",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "itunes-lx leftover"
+    },
+    {
+      "year": "2001",
+      "href": "sites/movabletype/about.html",
+      "key": "itt01-mt-lx",
+      "suffix": "mt-lx",
+      "needPick": "perl",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "mt-lx leftover"
+    },
+    {
+      "year": "2001",
+      "href": "sites/apple/ipod/faq.html",
+      "key": "itt01-ipod-lx",
+      "suffix": "ipod-lx",
+      "needPick": "wheel",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ipod-lx leftover"
+    },
+    {
+      "year": "2002",
+      "href": "sites/phoenix/about.html",
+      "key": "itt02-phoenix-lx",
+      "suffix": "phoenix-lx",
+      "needPick": "phx",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "phoenix-lx leftover"
+    },
+    {
+      "year": "2002",
+      "href": "sites/ipod/specs.html",
+      "key": "itt02-ipod2-lx",
+      "suffix": "ipod2-lx",
+      "needPick": "gen2",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ipod2-lx leftover"
+    },
+    {
+      "year": "2003",
+      "href": "sites/adsense/code.html",
+      "key": "itt03-adsense-lx",
+      "suffix": "adsense-lx",
+      "needPick": "site",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "adsense-lx leftover"
+    },
+    {
+      "year": "2003",
+      "href": "sites/firebird/index.html",
+      "key": "itt03-firebird",
+      "suffix": "firebird",
+      "needPick": "fbird",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "firebird leftover"
+    },
+    {
+      "year": "2004",
+      "href": "sites/web20conference/index.html",
+      "key": "itt04-trail-q",
+      "suffix": "trail-q",
+      "needPick": "sess",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "2005",
+      "href": "sites/facebook/networks.html",
+      "key": "itt05-fb-net",
+      "suffix": "fb-net",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "fb-net leftover"
+    },
+    {
+      "year": "2005",
+      "href": "sites/web20conference/index.html",
+      "key": "itt05-trail-q",
+      "suffix": "trail-q",
+      "needPick": "sess",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "2006",
+      "href": "sites/facebook/networks.html",
+      "key": "itt06-fb-net",
+      "suffix": "fb-net",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "fb-net leftover"
+    },
+    {
+      "year": "2006",
+      "href": "sites/web20conference/index.html",
+      "key": "itt06-trail-q",
+      "suffix": "trail-q",
+      "needPick": "sess",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "2006",
+      "href": "sites/docs/leftover/index.html",
+      "key": "itt06-docs-lx",
+      "suffix": "docs-lx",
+      "needPick": "doc",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "docs-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/kindle/about.html",
+      "key": "itt07-kindle-lx",
+      "suffix": "kindle-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "kindle-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/twitter/about.html",
+      "key": "itt07-twitter-lx",
+      "suffix": "twitter-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "twitter-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/fbplat/about.html",
+      "key": "itt07-fbplat-lx",
+      "suffix": "fbplat-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "fbplat-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/tumblr/about.html",
+      "key": "itt07-tumblr-lx",
+      "suffix": "tumblr-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "tumblr-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/ie6/about.html",
+      "key": "itt07-ie6-lx",
+      "suffix": "ie6-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "ie6-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/youtube/about.html",
+      "key": "itt07-youtube-lx",
+      "suffix": "youtube-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "youtube-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/streetview/about.html",
+      "key": "itt07-streetview-lx",
+      "suffix": "streetview-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "streetview-lx leftover"
+    },
+    {
+      "year": "2007",
+      "href": "sites/gmail/about.html",
+      "key": "itt07-gmail-lx",
+      "suffix": "gmail-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "gmail-lx leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/webkinz/about.html",
+      "key": "itt08-wk-dp-ab",
+      "suffix": "wk-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "wk-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/silverlight/about.html",
+      "key": "itt08-silver-dp-ab",
+      "suffix": "silver-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "silver-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/collegehumor/about.html",
+      "key": "itt08-ch-dp-ab",
+      "suffix": "ch-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ch-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/megaupload/about.html",
+      "key": "itt08-mega-dp-ab",
+      "suffix": "mega-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "mega-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/identica/about.html",
+      "key": "itt08-identica-dp-ab",
+      "suffix": "identica-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "identica-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/armorgames/about.html",
+      "key": "itt08-armor-dp-ab",
+      "suffix": "armor-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "armor-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/orkut/about.html",
+      "key": "itt08-orkut-dp-ab",
+      "suffix": "orkut-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "orkut-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/mybo/about.html",
+      "key": "itt08-mybo-dp-ab",
+      "suffix": "mybo-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "mybo-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/mint/about.html",
+      "key": "itt08-mint-dp-ab",
+      "suffix": "mint-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "mint-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/gizmodo/about.html",
+      "key": "itt08-giz-dp-ab",
+      "suffix": "giz-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "giz-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/html5/about.html",
+      "key": "itt08-html5-dp-ab",
+      "suffix": "html5-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "html5-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/heroku/about.html",
+      "key": "itt08-heroku-dp-ab",
+      "suffix": "heroku-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "heroku-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/braid/about.html",
+      "key": "itt08-braid-dp-ab",
+      "suffix": "braid-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "braid-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/duckduckgo/about.html",
+      "key": "itt08-ddg-dp-ab",
+      "suffix": "ddg-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ddg-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/bitly/about.html",
+      "key": "itt08-bitly-dp-ab",
+      "suffix": "bitly-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "bitly-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/xboxlive/about.html",
+      "key": "itt08-xbl-dp-ab",
+      "suffix": "xbl-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "xbl-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/plurk/about.html",
+      "key": "itt08-plurk-dp-ab",
+      "suffix": "plurk-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "plurk-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/limewire/about.html",
+      "key": "itt08-lime-dp-ab",
+      "suffix": "lime-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "lime-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/opensocial/about.html",
+      "key": "itt08-osoc-dp-ab",
+      "suffix": "osoc-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "osoc-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/onion/about.html",
+      "key": "itt08-onion-dp-ab",
+      "suffix": "onion-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "onion-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/ars/about.html",
+      "key": "itt08-ars-dp-ab",
+      "suffix": "ars-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ars-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/bbc/about.html",
+      "key": "itt08-bbc-dp-ab",
+      "suffix": "bbc-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "bbc-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/lbp/about.html",
+      "key": "itt08-lbp-dp-ab",
+      "suffix": "lbp-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "lbp-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/icanhas/about.html",
+      "key": "itt08-ichc-dp-ab",
+      "suffix": "ichc-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ichc-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/wii/about.html",
+      "key": "itt08-wii-dp-ab",
+      "suffix": "wii-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "wii-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/neopets/about.html",
+      "key": "itt08-neo-dp-ab",
+      "suffix": "neo-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "neo-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/bebo/about.html",
+      "key": "itt08-bebo-dp-ab",
+      "suffix": "bebo-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "bebo-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/wow/about.html",
+      "key": "itt08-wotlk-dp-ab",
+      "suffix": "wotlk-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "wotlk-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/appengine/about.html",
+      "key": "itt08-gae-dp-ab",
+      "suffix": "gae-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "gae-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/kayak/about.html",
+      "key": "itt08-kayak-dp-ab",
+      "suffix": "kayak-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "kayak-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/vimeo/about.html",
+      "key": "itt08-vimeo-dp-ab",
+      "suffix": "vimeo-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "vimeo-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/yelp/about.html",
+      "key": "itt08-yelp-dp-ab",
+      "suffix": "yelp-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "yelp-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/ustream/about.html",
+      "key": "itt08-ustream-dp-ab",
+      "suffix": "ustream-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ustream-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/chanology/about.html",
+      "key": "itt08-chan-dp-ab",
+      "suffix": "chan-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "chan-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/nyt/about.html",
+      "key": "itt08-nyt-dp-ab",
+      "suffix": "nyt-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "nyt-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/ie8/about.html",
+      "key": "itt08-ie8-dp-ab",
+      "suffix": "ie8-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ie8-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/justin/about.html",
+      "key": "itt08-jtv-dp-ab",
+      "suffix": "jtv-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "jtv-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/etsy/about.html",
+      "key": "itt08-etsy-dp-ab",
+      "suffix": "etsy-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "etsy-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/clubpenguin/about.html",
+      "key": "itt08-cp-dp-ab",
+      "suffix": "cp-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "cp-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/failwhale/about.html",
+      "key": "itt08-whale-dp-ab",
+      "suffix": "whale-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "whale-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/craigslist/about.html",
+      "key": "itt08-cl-dp-ab",
+      "suffix": "cl-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "cl-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/changegov/about.html",
+      "key": "itt08-change-dp-ab",
+      "suffix": "change-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "change-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/pogo/about.html",
+      "key": "itt08-pogo-dp-ab",
+      "suffix": "pogo-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "pogo-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/iplayer/about.html",
+      "key": "itt08-iplayer-dp-ab",
+      "suffix": "iplayer-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "iplayer-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/friendfeed/about.html",
+      "key": "itt08-ffeed-dp-ab",
+      "suffix": "ffeed-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ffeed-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/bitcoin/about.html",
+      "key": "itt08-btc-paper-ab",
+      "suffix": "btc-paper-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "btc-paper-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/funnyordie/about.html",
+      "key": "itt08-fod-dp-ab",
+      "suffix": "fod-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "fod-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/runescape/about.html",
+      "key": "itt08-rs-dp-ab",
+      "suffix": "rs-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "rs-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/ign/about.html",
+      "key": "itt08-ign-dp-ab",
+      "suffix": "ign-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ign-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/gaia/about.html",
+      "key": "itt08-gaia-dp-ab",
+      "suffix": "gaia-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "gaia-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/stumbleupon/about.html",
+      "key": "itt08-stumble-dp-ab",
+      "suffix": "stumble-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "stumble-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/imeem/about.html",
+      "key": "itt08-imeem-dp-ab",
+      "suffix": "imeem-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "imeem-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/recaptcha/about.html",
+      "key": "itt08-recap-dp-ab",
+      "suffix": "recap-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "recap-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/tweetdeck/about.html",
+      "key": "itt08-tdeck-dp-ab",
+      "suffix": "tdeck-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "tdeck-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/secondlife/about.html",
+      "key": "itt08-sl-dp-ab",
+      "suffix": "sl-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "sl-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/hi5/about.html",
+      "key": "itt08-hi5-dp-ab",
+      "suffix": "hi5-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "hi5-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/pandora/about.html",
+      "key": "itt08-pandora-dp-ab",
+      "suffix": "pandora-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "pandora-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/miniclip/about.html",
+      "key": "itt08-mini-dp-ab",
+      "suffix": "mini-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "mini-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/lively/about.html",
+      "key": "itt08-lively-dp-ab",
+      "suffix": "lively-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "lively-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/cuil/about.html",
+      "key": "itt08-cuil-dp-ab",
+      "suffix": "cuil-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "cuil-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/kongregate/about.html",
+      "key": "itt08-kong-dp-ab",
+      "suffix": "kong-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "kong-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/livespaces/about.html",
+      "key": "itt08-spaces-dp-ab",
+      "suffix": "spaces-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "spaces-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/newgrounds/about.html",
+      "key": "itt08-ng-dp-ab",
+      "suffix": "ng-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ng-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/habbo/about.html",
+      "key": "itt08-habbo-dp-ab",
+      "suffix": "habbo-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "habbo-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/wikileaks/about.html",
+      "key": "itt08-wl-dp-ab",
+      "suffix": "wl-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "wl-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/weather/about.html",
+      "key": "itt08-wx-dp-ab",
+      "suffix": "wx-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "wx-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/mobileme/about.html",
+      "key": "itt08-mme-dp-ab",
+      "suffix": "mme-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "mme-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/fbconnect/about.html",
+      "key": "itt08-fbcon-dp-ab",
+      "suffix": "fbcon-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "fbcon-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/scrabulous/about.html",
+      "key": "itt08-scrab-dp-ab",
+      "suffix": "scrab-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "scrab-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/failblog/about.html",
+      "key": "itt08-fail-dp-ab",
+      "suffix": "fail-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "fail-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/windows7/about.html",
+      "key": "itt08-win7-dp-ab",
+      "suffix": "win7-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "win7-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/psn/about.html",
+      "key": "itt08-psn-dp-ab",
+      "suffix": "psn-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "psn-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/rapidshare/about.html",
+      "key": "itt08-rsfile-dp-ab",
+      "suffix": "rsfile-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "rsfile-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/gtaiv/about.html",
+      "key": "itt08-gtaiv-dp-ab",
+      "suffix": "gtaiv-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "gtaiv-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/mafiawars/about.html",
+      "key": "itt08-mafia-dp-ab",
+      "suffix": "mafia-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "mafia-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/knol/about.html",
+      "key": "itt08-knol-dp-ab",
+      "suffix": "knol-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "knol-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/zillow/about.html",
+      "key": "itt08-zillow-dp-ab",
+      "suffix": "zillow-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "zillow-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/tripadvisor/about.html",
+      "key": "itt08-ta-dp-ab",
+      "suffix": "ta-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ta-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/bitbucket/about.html",
+      "key": "itt08-bb-dp-ab",
+      "suffix": "bb-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "bb-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/ning/about.html",
+      "key": "itt08-ning-dp-ab",
+      "suffix": "ning-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ning-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/scribd/about.html",
+      "key": "itt08-scribd-dp-ab",
+      "suffix": "scribd-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "scribd-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/engadget/about.html",
+      "key": "itt08-eng-dp-ab",
+      "suffix": "eng-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "eng-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/lehman/about.html",
+      "key": "itt08-lehman-dp-ab",
+      "suffix": "lehman-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "lehman-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/addicting/about.html",
+      "key": "itt08-ag-dp-ab",
+      "suffix": "ag-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ag-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/xkcd/about.html",
+      "key": "itt08-xkcd-dp-ab",
+      "suffix": "xkcd-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "xkcd-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/piratebay/about.html",
+      "key": "itt08-tpb-dp-ab",
+      "suffix": "tpb-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "tpb-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/spore/about.html",
+      "key": "itt08-spore-dp-ab",
+      "suffix": "spore-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "spore-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/ytmnd/about.html",
+      "key": "itt08-ytmnd-dp-ab",
+      "suffix": "ytmnd-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "ytmnd-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/disqus/about.html",
+      "key": "itt08-disqus-dp-ab",
+      "suffix": "disqus-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "disqus-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/seesmic/about.html",
+      "key": "itt08-see-dp-ab",
+      "suffix": "see-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "see-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/flash10/about.html",
+      "key": "itt08-flash10-dp-ab",
+      "suffix": "flash10-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "flash10-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/skydrive/about.html",
+      "key": "itt08-sky-dp-ab",
+      "suffix": "sky-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "sky-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/beacon/about.html",
+      "key": "itt08-beacon-dp-ab",
+      "suffix": "beacon-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "beacon-dp-ab leftover"
+    },
+    {
+      "year": "2008",
+      "href": "sites/huffpo/about.html",
+      "key": "itt08-huff-dp-ab",
+      "suffix": "huff-dp-ab",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "huff-dp-ab leftover"
+    },
+    {
+      "year": "2009",
+      "href": "sites/bing/about.html",
+      "key": "itt09-bing-lx",
+      "suffix": "bing-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "bing-lx leftover"
+    },
+    {
+      "year": "2009",
+      "href": "sites/iphone/about.html",
+      "key": "itt09-iphone-lx",
+      "suffix": "iphone-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "iphone-lx leftover"
+    },
+    {
+      "year": "2010",
+      "href": "sites/facebook/index.html",
+      "key": "itt10-trail-q",
+      "suffix": "trail-q",
+      "needPick": "like",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "2011",
+      "href": "sites/airbnb/about.html",
+      "key": "itt11-airbnb-lx",
+      "suffix": "airbnb-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "airbnb-lx leftover"
+    },
+    {
+      "year": "2011",
+      "href": "sites/spotify/about.html",
+      "key": "itt11-spotify-lx",
+      "suffix": "spotify-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "spotify-lx leftover"
+    },
+    {
+      "year": "2011",
+      "href": "sites/qwikster/about.html",
+      "key": "itt11-qwikster-lx",
+      "suffix": "qwikster-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "qwikster-lx leftover"
+    },
+    {
+      "year": "2012",
+      "href": "sites/facebook/index.html",
+      "key": "itt12-trail-q",
+      "suffix": "trail-q",
+      "needPick": "mau",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "trail-q leftover"
+    },
+    {
+      "year": "2012",
+      "href": "sites/playable/game-5.html",
+      "key": "itt12-playable-d15",
+      "suffix": "playable-d15",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "playable-d15 leftover"
+    },
+    {
+      "year": "2012",
+      "href": "sites/playable/game-4.html",
+      "key": "itt12-playable-d14",
+      "suffix": "playable-d14",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "playable-d14 leftover"
+    },
+    {
+      "year": "2012",
+      "href": "sites/playable/game-3.html",
+      "key": "itt12-playable-d13",
+      "suffix": "playable-d13",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "playable-d13 leftover"
+    },
+    {
+      "year": "2012",
+      "href": "sites/playable/game-2.html",
+      "key": "itt12-playable-d12",
+      "suffix": "playable-d12",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "playable-d12 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/twitter/index.html",
+      "key": "itt13-tw-lx",
+      "suffix": "tw-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tw-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/twitter/index.html",
+      "key": "itt13-tw-d2",
+      "suffix": "tw-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tw-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/snowden/index.html",
+      "key": "itt13-snow-lx",
+      "suffix": "snow-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "snow-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/snowden/index.html",
+      "key": "itt13-snow-d2",
+      "suffix": "snow-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "snow-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/windows81/index.html",
+      "key": "itt13-w81-lx",
+      "suffix": "w81-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "w81-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/windows81/index.html",
+      "key": "itt13-w81-d2",
+      "suffix": "w81-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "w81-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/medium/index.html",
+      "key": "itt13-med-lx",
+      "suffix": "med-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "med-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/medium/index.html",
+      "key": "itt13-med-d2",
+      "suffix": "med-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "med-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/tumblr/index.html",
+      "key": "itt13-tum-lx",
+      "suffix": "tum-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tum-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/tumblr/index.html",
+      "key": "itt13-tum-d2",
+      "suffix": "tum-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tum-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/youtube/index.html",
+      "key": "itt13-yt-lx",
+      "suffix": "yt-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "yt-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/youtube/index.html",
+      "key": "itt13-yt-d2",
+      "suffix": "yt-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "yt-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/facebook/index.html",
+      "key": "itt13-fb-lx",
+      "suffix": "fb-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fb-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/facebook/index.html",
+      "key": "itt13-fb-d2",
+      "suffix": "fb-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fb-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/askfm/index.html",
+      "key": "itt13-askfm-lx",
+      "suffix": "askfm-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "askfm-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/askfm/index.html",
+      "key": "itt13-askfm-d2",
+      "suffix": "askfm-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "askfm-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/chrome/index.html",
+      "key": "itt13-ch-lx",
+      "suffix": "ch-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ch-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/chrome/index.html",
+      "key": "itt13-ch-d2",
+      "suffix": "ch-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ch-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/telegram/index.html",
+      "key": "itt13-tg-lx",
+      "suffix": "tg-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tg-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/telegram/index.html",
+      "key": "itt13-tg-d2",
+      "suffix": "tg-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tg-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/reddit/index.html",
+      "key": "itt13-rd-lx",
+      "suffix": "rd-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "rd-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/reddit/index.html",
+      "key": "itt13-rd-d2",
+      "suffix": "rd-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "rd-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/playable/game.html",
+      "key": "itt13-game-lx",
+      "suffix": "game-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "game-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/playable/game.html",
+      "key": "itt13-game-d2",
+      "suffix": "game-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "game-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/iphone/touchid.html",
+      "key": "itt13-tid-lx",
+      "suffix": "tid-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tid-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/iphone/touchid.html",
+      "key": "itt13-tid-d2",
+      "suffix": "tid-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tid-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/iphone/ios7.html",
+      "key": "itt13-ios7-lx",
+      "suffix": "ios7-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ios7-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/iphone/ios7.html",
+      "key": "itt13-ios7-d2",
+      "suffix": "ios7-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ios7-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/instagram/video.html",
+      "key": "itt13-igv-lx",
+      "suffix": "igv-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "igv-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/instagram/video.html",
+      "key": "itt13-igv-d2",
+      "suffix": "igv-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "igv-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/snapchat/story.html",
+      "key": "itt13-snap-lx",
+      "suffix": "snap-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "snap-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/snapchat/story.html",
+      "key": "itt13-snap-d2",
+      "suffix": "snap-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "snap-d2 leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/whisper/index.html",
+      "key": "itt13-wh-lx",
+      "suffix": "wh-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wh-lx leftover"
+    },
+    {
+      "year": "2013",
+      "href": "sites/whisper/index.html",
+      "key": "itt13-wh-d2",
+      "suffix": "wh-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wh-d2 leftover"
+    },
+    {
+      "year": "2015",
+      "href": "sites/apple/about.html",
+      "key": "itt15-apple-lx-d2",
+      "suffix": "apple-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "apple-lx-d2 leftover"
+    },
+    {
+      "year": "2015",
+      "href": "sites/ios9/about.html",
+      "key": "itt15-ios9-ab-d2",
+      "suffix": "ios9-ab-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ios9-ab-d2 leftover"
+    },
+    {
+      "year": "2015",
+      "href": "sites/letsencrypt/index.html",
+      "key": "itt15-le-lx",
+      "suffix": "le-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "le-lx leftover"
+    },
+    {
+      "year": "2015",
+      "href": "sites/edgeabout/index.html",
+      "key": "itt15-edge-lx",
+      "suffix": "edge-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "edge-lx leftover"
+    },
+    {
+      "year": "2015",
+      "href": "sites/edgeabout/about.html",
+      "key": "itt15-edge-ab",
+      "suffix": "edge-ab",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "edge-ab leftover"
+    },
+    {
+      "year": "2015",
+      "href": "sites/discordabout/about.html",
+      "key": "itt15-discord-ab",
+      "suffix": "discord-ab",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "discord-ab leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/wikipedia/index.html",
+      "key": "itt18-wk-lx",
+      "suffix": "wk-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wk-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/wikipedia/index.html",
+      "key": "itt18-wk-d2",
+      "suffix": "wk-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wk-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/homepod/index.html",
+      "key": "itt18-hp-lx",
+      "suffix": "hp-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "hp-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/homepod/index.html",
+      "key": "itt18-hp-d2",
+      "suffix": "hp-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "hp-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/youtube/index.html",
+      "key": "itt18-yt-lx",
+      "suffix": "yt-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "yt-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/youtube/index.html",
+      "key": "itt18-yt-d2",
+      "suffix": "yt-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "yt-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/github/index.html",
+      "key": "itt18-gh3-lx",
+      "suffix": "gh3-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gh3-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/github/index.html",
+      "key": "itt18-gh3-d2",
+      "suffix": "gh3-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gh3-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/github/microsoft.html",
+      "key": "itt18-gh-lx",
+      "suffix": "gh-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gh-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/github/microsoft.html",
+      "key": "itt18-gh-d2",
+      "suffix": "gh-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gh-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/chrome/not-secure.html",
+      "key": "itt18-ns-lx",
+      "suffix": "ns-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ns-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/chrome/not-secure.html",
+      "key": "itt18-ns-d2",
+      "suffix": "ns-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ns-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/reddit/index.html",
+      "key": "itt18-rd-lx",
+      "suffix": "rd-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "rd-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/reddit/index.html",
+      "key": "itt18-rd-d2",
+      "suffix": "rd-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "rd-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/playable/game.html",
+      "key": "itt18-game-lx",
+      "suffix": "game-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "game-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/playable/game.html",
+      "key": "itt18-game-d2",
+      "suffix": "game-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "game-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/spectre/index.html",
+      "key": "itt18-sp-lx",
+      "suffix": "sp-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "sp-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/spectre/index.html",
+      "key": "itt18-sp-d2",
+      "suffix": "sp-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "sp-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/trust/index.html",
+      "key": "itt18-hear-lx",
+      "suffix": "hear-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "hear-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/trust/index.html",
+      "key": "itt18-hear-d2",
+      "suffix": "hear-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "hear-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/tiktok/index.html",
+      "key": "itt18-tt3-lx",
+      "suffix": "tt3-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tt3-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/tiktok/index.html",
+      "key": "itt18-tt3-d2",
+      "suffix": "tt3-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tt3-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/tiktok/fyp.html",
+      "key": "itt18-tt-lx",
+      "suffix": "tt-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tt-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/tiktok/fyp.html",
+      "key": "itt18-tt-d2",
+      "suffix": "tt-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tt-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/instagram/igtv.html",
+      "key": "itt18-igtv-lx",
+      "suffix": "igtv-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "igtv-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/instagram/igtv.html",
+      "key": "itt18-igtv-d2",
+      "suffix": "igtv-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "igtv-d2 leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/fortnite/switch.html",
+      "key": "itt18-fns-lx",
+      "suffix": "fns-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fns-lx leftover"
+    },
+    {
+      "year": "2018",
+      "href": "sites/fortnite/switch.html",
+      "key": "itt18-fns-d2",
+      "suffix": "fns-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fns-d2 leftover"
+    },
+    {
+      "year": "2019",
+      "href": "sites/iphone/about.html",
+      "key": "itt19-iphone-ab-lx",
+      "suffix": "iphone-ab-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "iphone-ab-lx leftover"
+    },
+    {
+      "year": "2019",
+      "href": "sites/iphone/about.html",
+      "key": "itt19-iphone-ab-d2",
+      "suffix": "iphone-ab-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "iphone-ab-d2 leftover"
+    },
+    {
+      "year": "2019",
+      "href": "sites/fortnite/index.html",
+      "key": "itt19-fn-lx",
+      "suffix": "fn-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fn-lx leftover"
+    },
+    {
+      "year": "2019",
+      "href": "sites/fortnite/index.html",
+      "key": "itt19-fn-d2",
+      "suffix": "fn-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fn-d2 leftover"
+    },
+    {
+      "year": "2019",
+      "href": "sites/disneyplus/index.html",
+      "key": "itt19-disney-join-d2",
+      "suffix": "disney-join-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "disney-join-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/wikipedia/index.html",
+      "key": "itt20-wi-lx",
+      "suffix": "wi-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wi-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/wikipedia/index.html",
+      "key": "itt20-wi-d2",
+      "suffix": "wi-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wi-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/vine/index.html",
+      "key": "itt20-vi-lx",
+      "suffix": "vi-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "vi-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/vine/index.html",
+      "key": "itt20-vi-d2",
+      "suffix": "vi-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "vi-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/youtube/index.html",
+      "key": "itt20-yo-lx",
+      "suffix": "yo-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "yo-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/youtube/index.html",
+      "key": "itt20-yo-d2",
+      "suffix": "yo-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "yo-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/edge/index.html",
+      "key": "itt20-edge-lx",
+      "suffix": "edge-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "edge-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/edge/index.html",
+      "key": "itt20-edge-d2",
+      "suffix": "edge-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "edge-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/reels/index.html",
+      "key": "itt20-reels-lx",
+      "suffix": "reels-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "reels-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/reels/index.html",
+      "key": "itt20-reels-d2",
+      "suffix": "reels-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "reels-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/flash/index.html",
+      "key": "itt20-flash-lx",
+      "suffix": "flash-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "flash-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/flash/index.html",
+      "key": "itt20-flash-d2",
+      "suffix": "flash-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "flash-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/facebook/index.html",
+      "key": "itt20-fa-lx",
+      "suffix": "fa-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fa-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/facebook/index.html",
+      "key": "itt20-fa-d2",
+      "suffix": "fa-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "fa-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/markets/wti.html",
+      "key": "itt20-wti-lx",
+      "suffix": "wti-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wti-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/markets/wti.html",
+      "key": "itt20-wti-d2",
+      "suffix": "wti-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "wti-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/chrome/index.html",
+      "key": "itt20-ch-lx",
+      "suffix": "ch-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ch-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/chrome/index.html",
+      "key": "itt20-ch-d2",
+      "suffix": "ch-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ch-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/teams/index.html",
+      "key": "itt20-te-lx",
+      "suffix": "te-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "te-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/teams/index.html",
+      "key": "itt20-te-d2",
+      "suffix": "te-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "te-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/zoom/meeting.html",
+      "key": "itt20-zoom-lx",
+      "suffix": "zoom-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "zoom-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/zoom/meeting.html",
+      "key": "itt20-zoom-d2",
+      "suffix": "zoom-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "zoom-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/playable/game.html",
+      "key": "itt20-game-lx",
+      "suffix": "game-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "game-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/playable/game.html",
+      "key": "itt20-game-d2",
+      "suffix": "game-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "game-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/ccpa/index.html",
+      "key": "itt20-ccpa-lx",
+      "suffix": "ccpa-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ccpa-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/ccpa/index.html",
+      "key": "itt20-ccpa-d2",
+      "suffix": "ccpa-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "ccpa-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/tiktok/index.html",
+      "key": "itt20-tteo-lx",
+      "suffix": "tteo-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tteo-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/tiktok/index.html",
+      "key": "itt20-tteo-d2",
+      "suffix": "tteo-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "tteo-d2 leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/openai/index.html",
+      "key": "itt20-gpt3-lx",
+      "suffix": "gpt3-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gpt3-lx leftover"
+    },
+    {
+      "year": "2020",
+      "href": "sites/openai/index.html",
+      "key": "itt20-gpt3-d2",
+      "suffix": "gpt3-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "gpt3-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/windows11/about.html",
+      "key": "itt21-win11-lx",
+      "suffix": "win11-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "win11-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/windows11/about.html",
+      "key": "itt21-win11-lx-d2",
+      "suffix": "win11-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "win11-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/windows11/about.html",
+      "key": "itt21-win11-lx-d4",
+      "suffix": "win11-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "win11-lx-d4 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/copilot/more.html",
+      "key": "itt21-cop-lx",
+      "suffix": "cop-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "cop-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/copilot/more.html",
+      "key": "itt21-cop-lx-d2",
+      "suffix": "cop-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "cop-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/copilot/more.html",
+      "key": "itt21-cop-lx-d4",
+      "suffix": "cop-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "cop-lx-d4 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/meta/about.html",
+      "key": "itt21-meta-lx",
+      "suffix": "meta-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "meta-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/meta/about.html",
+      "key": "itt21-meta-lx-d2",
+      "suffix": "meta-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "meta-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/meta/about.html",
+      "key": "itt21-meta-lx-d4",
+      "suffix": "meta-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "meta-lx-d4 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/flash/about.html",
+      "key": "itt21-flash-lx",
+      "suffix": "flash-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "flash-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/flash/about.html",
+      "key": "itt21-flash-lx-d2",
+      "suffix": "flash-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "flash-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/flash/about.html",
+      "key": "itt21-flash-lx-d4",
+      "suffix": "flash-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "flash-lx-d4 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/chrome/about.html",
+      "key": "itt21-chrome-lx",
+      "suffix": "chrome-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "chrome-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/chrome/about.html",
+      "key": "itt21-chrome-lx-d2",
+      "suffix": "chrome-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "chrome-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/chrome/about.html",
+      "key": "itt21-chrome-lx-d4",
+      "suffix": "chrome-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": true,
+      "placeholder": "chrome-lx-d4 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/att/about.html",
+      "key": "itt21-att-lx",
+      "suffix": "att-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "att-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/att/about.html",
+      "key": "itt21-att-lx-d2",
+      "suffix": "att-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "att-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/att/about.html",
+      "key": "itt21-att-lx-d4",
+      "suffix": "att-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "att-lx-d4 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/signal/more.html",
+      "key": "itt21-sig-lx",
+      "suffix": "sig-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "sig-lx leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/signal/more.html",
+      "key": "itt21-sig-lx-d2",
+      "suffix": "sig-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "sig-lx-d2 leftover"
+    },
+    {
+      "year": "2021",
+      "href": "sites/signal/more.html",
+      "key": "itt21-sig-lx-d4",
+      "suffix": "sig-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "sig-lx-d4 leftover"
+    },
+    {
+      "year": "2022",
+      "href": "sites/chatgpt/about.html",
+      "key": "itt22-gpt-lx",
+      "suffix": "gpt-lx",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "gpt-lx leftover"
+    },
+    {
+      "year": "2022",
+      "href": "sites/chatgpt/about.html",
+      "key": "itt22-gpt-lx-d2",
+      "suffix": "gpt-lx-d2",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "gpt-lx-d2 leftover"
+    },
+    {
+      "year": "2022",
+      "href": "sites/chatgpt/about.html",
+      "key": "itt22-gpt-lx-d4",
+      "suffix": "gpt-lx-d4",
+      "needPick": "keep",
+      "minPick": 0,
+      "field": false,
+      "placeholder": "gpt-lx-d4 leftover"
+    },
+    {
+      "year": "1994",
+      "href": "pages/handbook.html",
+      "key": "itt94-viewsrc",
+      "suffix": "viewsrc",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "viewsrc leftover"
+    },
+    {
+      "year": "1994",
+      "href": "pages/handbook.html",
+      "key": "itt94-img-off",
+      "suffix": "img-off",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "img-off leftover"
+    },
+    {
+      "year": "2012",
+      "href": "pages/about.html",
+      "key": "itt12-trail-q",
+      "suffix": "trail-q",
+      "needPick": "",
+      "minPick": 2,
+      "field": false,
+      "placeholder": "trail-q leftover"
     }
   ]
 }

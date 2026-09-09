@@ -64,13 +64,14 @@ test.describe("2014 flows", () => {
     await expect.poll(() => getKey(page, "itt14-icebucket")).toBeTruthy();
   });
 
-  test("second leftover 3× is Heartbleed · Ice Bucket · Slack", async ({ page }) => {
+  test("second leftover 3× is Oculus · Serial · Ello", async ({ page }) => {
     await page.goto("/years/2014/pages/home.html");
     await openAlsoYear(page, "2014");
     const strip = page.locator('nav[data-itt-pop-more="2014"], p.itt-pop-more[data-itt-pop-more="2014"]').first();
-    await expect(strip).toContainText(/Heartbleed/);
-    await expect(strip).toContainText(/Ice Bucket/);
-    await expect(strip).toContainText(/Slack/);
+    await expect(strip).toContainText(/Oculus/);
+    await expect(strip).toContainText(/Serial/);
+    await expect(strip).toContainText(/Ello/);
+    await expect(strip).not.toContainText(/Heartbleed/);
     await expect(page.locator("#ott-guided-2014 ol > li")).toHaveCount(6);
   });
 });

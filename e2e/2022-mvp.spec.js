@@ -10,7 +10,7 @@ test.describe("2022 mvp", () => {
     await page.goto("/");
     await expect(page.locator("a.year-card.available[href*='years/2022']")).toBeVisible();
     await expect(page.locator(".year-card.locked.y2022")).toHaveCount(0);
-    await expect(page.locator("body")).toContainText(/28 years open/i);
+    await expect(page.locator("body")).toContainText(/29 years open/i);
   });
 
   test("hub card opens Starting Point", async ({ page }) => {

@@ -164,7 +164,19 @@ test.describe('year game flows — full matrix', () => {
     await expect(frame.locator('[data-gem-board]')).toBeVisible();
   });
 
-
+  test('2005 HoverChop: start then crash writes itt05-game-heli', async ({ page }) => {
+    const frame = await openGame(page, '2005', '', 'itt05');
+    await frame.locator('#play-start').click();
+    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-game-heli')), { timeout: 15000 })
+      .toBeTruthy();
+    const blob = JSON.parse((await page.evaluate(() => localStorage.getItem('itt05-game-heli'))) || '{}');
+    expect(blob.real).toBe(true);
+    expect(String(blob.year)).toBe('2005');
+    expect(blob.gameId).toBe('heli');
+    expect(blob.best).toBeGreaterThan(0);
+  });
 
   test('2008 Goo Span: start fast writes score', async ({ page }) => {
     const frame = await openGame(page, '2008', '?fast=1', 'itt08');

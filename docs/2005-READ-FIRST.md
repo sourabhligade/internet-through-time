@@ -1,4 +1,4 @@
-# 2005 — READ FIRST (research freeze · year wiped)
+# 2005 — READ FIRST (live YouTube upload door)
 
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door from 2004 scaffold. Official dests are dest machines, not Type leftover plaques. Do **not** `git checkout` the wiped tree.  

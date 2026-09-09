@@ -1,4 +1,4 @@
-# 2011 — READ FIRST (**WIPED**)
+# 2011 — READ FIRST (live lean door)
 
 **Date:** 2026-08-30  
 **Status:** **live lean door** as of 2026-09-01. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× 120.  

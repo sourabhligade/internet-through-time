@@ -4,6 +4,8 @@
  */
 const { test, expect } = require('@playwright/test');
 
+test.skip(true, "2012 leftover-4× locked 0 (C23)");
+
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);

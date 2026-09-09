@@ -75,13 +75,22 @@
 
   function scopeOf(btn) {
     var n = btn;
+    var isolated = null;
     while (n && n !== document && n !== document.documentElement) {
       if (n.getAttribute && (n.getAttribute("data-pop-panel") === "1" || /\bitt-pop3\b/.test(n.className || ""))) {
         return n;
       }
+      /* Unscoped leftover go must not see leftover-3× picks/reqs on the same dest. */
+      if (
+        n.querySelector &&
+        n.querySelector("[data-pop-field]") &&
+        !n.querySelector("[data-itt-lo3x]")
+      ) {
+        isolated = n;
+      }
       n = n.parentNode;
     }
-    return btn.ownerDocument || document;
+    return isolated || btn.parentNode || btn.ownerDocument || document;
   }
 
   function bootOne(btn) {
@@ -195,6 +204,7 @@
       var payload = {
         multiStep: true,
         real: true,
+        leftover: true,
         year: year,
         pop: id,
         q: v.slice(0, 80),

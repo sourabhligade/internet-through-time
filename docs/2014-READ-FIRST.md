@@ -2,9 +2,9 @@
 
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Hub card is available.  
-**Disk truth:** Hub is **26 years open** · **2018 / 2020 / 2022–2025 wiped**. This file is the lock. Star is WhatsApp Install.  
+**Disk truth:** Hub is **28 years open** · **2020 / 2023–2025 wiped**. 2013 Vine and 2018 GDPR are live lean doors. This file is the lock. Star is WhatsApp Install.  
 **Prefix:** `itt14`  
-**Clone shape:** live `years/2013/` (Vine door · Win7 + IE 9). Costume note from live `years/2015/` (Chrome habit is **2015+**). **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
+**Clone shape:** live `years/2012/` (Win7 + IE 9 residual). Costume note from live `years/2015/` (Chrome habit is **2015+**). **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
 
 | Doc | Role |
 |-----|------|
@@ -14,7 +14,7 @@
 | [`2014-CHECK-EVERY-FLOW-MAP.md`](2014-CHECK-EVERY-FLOW-MAP.md) | **Visitor check walk** — trap · save · key · Next · every dest |
 | [`2014-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2014-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | **Execute bible** — S0–S16 · e2e |
 | [`2014-5K-WEB-FLOW-MAP.md`](2014-5K-WEB-FLOW-MAP.md) | Walkable 5k diagram · NEVER |
-| Parent live year | `years/2013/` · `itt13` · Vine 6s |
+| Parent year (boarded) | 2013 Vine 6s — **no `years/2013/` tree**. Clone shape is live `years/2012/`. |
 | Child live year | `years/2015/` · `itt15` · Periscope Go LIVE |
 
 **Legal:** Educational. `localStorage` only. Never invent brand pixels. No WhatsApp wordmark. No OpenSSL exploit. No Ice Bucket celebrity stills. No Apple Pay checkout. No Slack Nitro-class bill.
@@ -74,7 +74,7 @@ Never blend June Live Stats with January Netcraft. Never invent a “980 million
 ## Do
 
 - Research envelope is **~5,000 websites** (walk budget). **Never 5,000 dests.**  
-- If implement is named: clone lean **2013**. Guided **exactly 6**. Hard stop **~50 HTML**.  
+- If implement is named: clone lean **2012** (2013 is boarded). Guided **exactly 6**. Hard stop **~50 HTML**.  
 - Star / trail #1 = `sites/whatsapp/index.html`. Incomplete deal notes never write.  
 - Heartbleed is **literacy + rotate**. Payload / scan / exploit is the **trap**.  
 - Ice Bucket is **nominate + note**. Dump / celebrity still is never required.  

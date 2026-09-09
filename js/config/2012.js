@@ -8,6 +8,8 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "pages/error/404.html",
+    "pages/error/unreachable.html",
     "sites/playable/game-2.html",
     "sites/playable/game-3.html",
     "sites/playable/game-4.html",

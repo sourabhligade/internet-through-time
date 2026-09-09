@@ -125,6 +125,7 @@ test.describe('2004 hard flows', () => {
     await goInFrame(page, 'sites/facebook/friends.html');
     await waitForImmersion(page, '2004');
     const f2 = contentFrame(page);
+    await expect(f2.locator('html')).toHaveAttribute('data-fb-add-bound', '1', { timeout: 15000 });
     await f2.locator('[data-fb-add-name]').fill('CaseyFlow');
     await f2.locator('[data-fb-add]').click();
     await expect(f2.locator('[data-fb-friends]')).toContainText('CaseyFlow', { timeout: 10000 });

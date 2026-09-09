@@ -130,5 +130,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 26 years (1994–2012 + 2014–2017 + 2019 + 2021–2022). 2013 / 2018 / 2020 / 2023–2025 boarded."
+say "  Ship hub 29 years: CUT-OPEN 2020 Zoom lean door. 2023–2025 boarded."
 exit 0

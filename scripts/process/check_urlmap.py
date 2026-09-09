@@ -19,10 +19,24 @@ def years() -> list[str]:
 
 def check_year(y: str) -> list[str]:
     cfg = (ROOT / "js" / "config" / f"{y}.js").read_text(encoding="utf-8", errors="replace")
-    m = re.search(r"urlMap:\s*\{([\s\S]*?)\n\s*\},", cfg)
+    m = re.search(r"(?:urlMap:\s*\{|var\s+urlMap\s*=\s*\{)", cfg)
     if not m:
         return [f"{y}: no urlMap block"]
-    keys = re.findall(r'"([^"]+\.html)":', m.group(1))
+    i = m.end()
+    depth = 1
+    body: list[str] = []
+    while i < len(cfg) and depth:
+        c = cfg[i]
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                break
+        if depth:
+            body.append(c)
+        i += 1
+    keys = re.findall(r'"([^"]+\.html)"\s*:', "".join(body))
     missing = []
     for k in keys:
         if not (ROOT / "years" / y / k).exists():

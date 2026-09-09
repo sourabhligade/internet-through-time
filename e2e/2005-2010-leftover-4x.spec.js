@@ -27,12 +27,36 @@ const OFFICIAL = {
   2010: ["ig", "ig-posts", "iphone4", "ipad", "fb-og", "farm", "imgur", "4sq", "tweets", "yt", "game-slingnest"],
 };
 const SAMPLE = {
-  2005: { path: "/years/2005/sites/maps/index.html", go: "maps-lx-4x" },
-  2006: { path: "/years/2006/sites/twitter/index.html", go: "t140-4x" },
-  2007: { path: "/years/2007/sites/iphone/index.html", go: "iphone-lx-4x" },
-  2008: { path: "/years/2008/sites/github/issue.html", go: "gh-issue-4x" },
-  2009: { path: "/years/2009/sites/facebook/index.html", go: "like-lx-4x" },
-  2010: { path: "/years/2010/sites/instagram/index.html", go: "ig-lx-4x" },
+  2005: [
+    { path: "/years/2005/sites/maps/index.html", go: "maps-lx-4x" },
+    { path: "/years/2005/sites/reddit/index.html", go: "reddit-lx-4x" },
+    { path: "/years/2005/sites/firefox/index.html", go: "fx15-lx-4x" },
+  ],
+  2006: [
+    { path: "/years/2006/sites/twitter/index.html", go: "t140-4x" },
+    { path: "/years/2006/sites/youtube/index.html", go: "yt-lx-4x" },
+    { path: "/years/2006/sites/firefox/index.html", go: "fx15-lx-4x" },
+  ],
+  2007: [
+    { path: "/years/2007/sites/iphone/index.html", go: "iphone-lx-4x" },
+    { path: "/years/2007/sites/maps/index.html", go: "maps-dp-4x" },
+    { path: "/years/2007/sites/twitter/index.html", go: "twitter-lx-4x" },
+  ],
+  2008: [
+    { path: "/years/2008/sites/github/issue.html", go: "gh-issue-4x" },
+    { path: "/years/2008/sites/chrome/index.html", go: "chrome-lx-4x" },
+    { path: "/years/2008/sites/firefox/index.html", go: "firefox-rlx-4x" },
+  ],
+  2009: [
+    { path: "/years/2009/sites/facebook/index.html", go: "like-lx-4x" },
+    { path: "/years/2009/sites/twitter/index.html", go: "tweets-lx-4x" },
+    { path: "/years/2009/sites/kindle/index.html", go: "kindle-4x" },
+  ],
+  2010: [
+    { path: "/years/2010/sites/instagram/index.html", go: "ig-lx-4x" },
+    { path: "/years/2010/sites/twitter/index.html", go: "tweets-lx-4x" },
+    { path: "/years/2010/sites/kickstarter/index.html", go: "ks-lx-4x" },
+  ],
 };
 
 async function getKey(page, key) {
@@ -94,8 +118,8 @@ for (const year of YEARS) {
 }
 
 for (const year of YEARS) {
-  test(year + " leftover 4× sample empty never writes · complete writes leftover not gold", async ({ page }) => {
-    const spec = SAMPLE[year];
+  for (const spec of SAMPLE[year]) {
+  test(year + " leftover 4× " + spec.go + " empty never writes · complete writes leftover not gold", async ({ page }) => {
     const key = "itt" + year.slice(2) + "-" + spec.go;
     await page.goto(spec.path);
     await page.evaluate((ks) => {
@@ -140,6 +164,7 @@ for (const year of YEARS) {
     expect(await getKey(page, GOLD[year]), GOLD[year] + " gold").toBeFalsy();
     if (GOLD2[year]) expect(await getKey(page, GOLD2[year]), GOLD2[year]).toBeFalsy();
   });
+  }
 }
 
 test("2009 About prints live ILS users not the stale cell", async ({ page }) => {

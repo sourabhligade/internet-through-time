@@ -16,7 +16,7 @@ Full walk for each dest (trap → 0 ticks → empty → complete → next) lives
 | 0005 | `tiktok-lx` | `tiktok/index.html` | 2018 merge as gold | caption leftover | tiktok-d2 |
 | 0006 | `tiktok-d2` | `tiktok/index.html` | Reels trap | leftover save | tiktok-ab |
 | 0007 | `tiktok-ab` | `tiktok/index.html` | empty caption | leftover save | coppa-lx |
-| 0008 | `coppa-lx` | `tiktok/index.html` | skip COPPA | leftover save | arcade-lx |
+| 0008 | `coppa-lx` | `tiktok/index.html` | skip COPPA | leftover save · FTC 27 Feb $5.7M + C.D. Cal. 27 Mar | arcade-lx |
 | 0009–0012 | Arcade leftover | `arcade/index.html` | no pick · IAP | leftover save | TV+ leftover |
 | 0013–0016 | TV+ leftover | `appletv/index.html` | no original | leftover save | Stadia leftover |
 | 0017–0020 | Stadia leftover | `stadia/index.html` | 2023 shutdown | leftover save | iPhone leftover |

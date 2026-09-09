@@ -1,10 +1,10 @@
 # 2018 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-09-04  
-**Status:** **WIPED.** Hub card locked. No `years/2018/`. Do not `git checkout` an old 2018 forest. Rebuild only when named.  
-**Disk truth:** Hub is **23 years open** · **2014 / 2018–2025 wiped**. This file is the wipe stamp, not a live door.  
+**Date:** 2026-09-08  
+**Status:** **LIVE lean door** (CUT-OPEN). Star = GDPR Manage `itt18-gdpr`. Accept All never writes.  
+**Disk truth:** Hub is **28 years open** · **2020 / 2023–2025 wiped**. Do not restore a forest.  
 **Prefix:** `itt18`  
-**Clone shape from:** live `years/2017/` (lean door · Face ID star). **Do not** restore git `HEAD` / `52df8ae3` `years/2018/` (108-page forest) or the 48-HTML leftover lean tree.
+**Clone shape from:** live `years/2017/` (lean door · Face ID star). **Do not** restore git `HEAD` / `52df8ae3` `years/2018/` (108-page forest). Leftover 2× ×2 on every dest HTML. Leftover 3× first (Reddit · YouTube · Wikipedia) + third. Second strip **not named**. Leftover 4× **0**.
 
 | Doc | Role |
 |-----|------|

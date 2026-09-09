@@ -2800,9 +2800,9 @@
         label: "Leftover 3×",
         do: "Never a second star",
         sites: [
-          { name: "Mafia Wars leftover", href: "sites/mafiawars/index.html", do: "job leftover" },
-          { name: "WhatsApp seed leftover", href: "sites/whatsapp/index.html", do: "SMS leftover" },
-          { name: "UberCab leftover", href: "sites/ubercab/index.html", do: "SF leftover" }
+          { name: "Omegle leftover", href: "sites/omegle/index.html", do: "stranger leftover" },
+          { name: "Chatroulette leftover", href: "sites/chatroulette/index.html", do: "cam leftover" },
+          { name: "Wikipedia leftover", href: "sites/wikipedia/index.html", do: "encyclopedia leftover" }
         ]
       },
       {

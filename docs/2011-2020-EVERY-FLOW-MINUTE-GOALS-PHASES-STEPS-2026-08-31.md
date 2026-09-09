@@ -2753,7 +2753,7 @@ game key only → `itt18-game-consentdash`
 
 #### Life
 
-12 Nov $6.99 / $69.99. 7-day trial is trap. Who’s watching → Continue is the save. No June ILS websites cell.
+12 Nov $6.99 / $69.99. Weeklong trial is contemporaneous press (not a Disney-primary “7-day” string) and is the trap. 10M on 13 Nov is sign-ups, not paid (26.5M paid 28 Dec). Continue is the save. ITU 4.1B / 53.6% stays on About, not this C-row. No June ILS websites cell.
 
 #### Museum look
 
@@ -2774,7 +2774,7 @@ profile leftover + Continue + ticks → `itt19-disneyplus`
 3. profile leftover + Continue + ticks → `itt19-disneyplus`.
 4. Confirm `itt19-disneyplus` was not written (unless this dest **is** the star). Fail if official dest is a “Do leftover” plaque.
 
-**Cite / refer:** Disney+ 12 Nov 2019. ITU 4.1B / 53.6%.
+**Cite / refer:** 12 Nov $6.99 / $69.99 · 10M sign-ups 13 Nov ≠ 26.5M paid 28 Dec · not ITU 4.1B / 53.6%.
 
 ### Dest 2 — TikTok For You
 
@@ -2786,7 +2786,7 @@ profile leftover + Continue + ticks → `itt19-disneyplus`
 
 #### Life
 
-2019 leftover mass. Not Disney+.
+Merge was 2 Aug 2018. 2019 is US mass. FTC 27 Feb $5.7M announced + C.D. Cal. order 27 Mar. Not Disney+.
 
 #### Museum look
 
@@ -2807,7 +2807,7 @@ profile leftover + Continue + ticks → `itt19-disneyplus`
 3. 2 hops + ticks → `itt19-tiktok`.
 4. Confirm `itt19-disneyplus` was not written (unless this dest **is** the star). Fail if official dest is a “Do leftover” plaque.
 
-**Cite / refer:** TikTok leftover 2019.
+**Cite / refer:** FTC 27 Feb $5.7M announced + C.D. Cal. order 27 Mar.
 
 ### Dest 3 — Apple Arcade
 
@@ -2819,7 +2819,7 @@ profile leftover + Continue + ticks → `itt19-disneyplus`
 
 #### Life
 
-19 Sep $4.99 leftover.
+Newsroom 10 Sep $4.99/mo. Live 19 Sep. No ads or additional in-game purchases. Family Sharing 6.
 
 #### Museum look
 
@@ -2840,7 +2840,7 @@ profile leftover + Continue + ticks → `itt19-disneyplus`
 3. 2 hops + ticks → `itt19-arcade`.
 4. Confirm `itt19-disneyplus` was not written (unless this dest **is** the star). Fail if official dest is a “Do leftover” plaque.
 
-**Cite / refer:** Apple Arcade 19 Sep 2019.
+**Cite / refer:** Newsroom 10 Sep $4.99/mo · live 19 Sep.
 
 ### Dest 4 — Apple TV+
 
@@ -2852,7 +2852,7 @@ profile leftover + Continue + ticks → `itt19-disneyplus`
 
 #### Life
 
-1 Nov $4.99 leftover.
+Newsroom 10 Sep $4.99 / 7-day / 100+ countries. Live 1 Nov (CNBC). One year free on new hardware from 10 Sep.
 
 #### Museum look
 
@@ -2873,7 +2873,7 @@ honesty ticks → `itt19-appletv`
 3. honesty ticks → `itt19-appletv`.
 4. Confirm `itt19-disneyplus` was not written (unless this dest **is** the star). Fail if official dest is a “Do leftover” plaque.
 
-**Cite / refer:** Apple TV+ 1 Nov 2019.
+**Cite / refer:** Newsroom 10 Sep $4.99 / 7-day / 100+ countries · pair CNBC 1 Nov.
 
 ### Dest 5 — Stadia
 
@@ -2885,7 +2885,7 @@ honesty ticks → `itt19-appletv`
 
 #### Life
 
-19 Nov Founders leftover. 14 countries.
+19 Nov Founder’s $129.99. Night Blue controller + Chromecast Ultra + 3 months Pro. 14 countries. 9 a.m. PST. Never invent 2023 shutdown.
 
 #### Museum look
 
@@ -2906,7 +2906,7 @@ honesty ticks → `itt19-appletv`
 3. 2 hops + ticks → `itt19-stadia`.
 4. Confirm `itt19-disneyplus` was not written (unless this dest **is** the star). Fail if official dest is a “Do leftover” plaque.
 
-**Cite / refer:** Stadia 19 Nov 2019.
+**Cite / refer:** Night Blue $129.99 · 9 a.m. PST 19 Nov. Dest-catalog Midnight Blue / 9am PT is wrong.
 
 ### Dest 6 — iPhone 11
 

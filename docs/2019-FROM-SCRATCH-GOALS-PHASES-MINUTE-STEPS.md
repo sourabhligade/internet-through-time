@@ -367,7 +367,7 @@ years/2019/sites/airpodspro/index.html
 
 **Minute steps — Stadia**
 
-1. Founder’s / Premiere honesty. 19 Nov · 9am PT · 14 countries. Founder’s class: Chromecast Ultra + Midnight Blue controller + Pro months.  
+1. Founder’s / Premiere honesty. 19 Nov · **9 a.m. PST** · 14 countries. Founder’s class: Chromecast Ultra + **Night Blue** controller + Pro months. Midnight Blue / 9am PT is wrong.  
 2. Markup:
 
 ```html

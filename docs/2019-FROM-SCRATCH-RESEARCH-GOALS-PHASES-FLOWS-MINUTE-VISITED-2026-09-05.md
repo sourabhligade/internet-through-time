@@ -1,8 +1,8 @@
 # 2019 from scratch — research · 5k envelope · every flow · visit log
 
 **Date:** 2026-09-05  
-**Status:** **RESEARCH LOCK. Do not scaffold HTML until implement is named.**  
-**Disk now:** Hub **23 years open** · `years/2019/` **missing** · 2014 / 2018–2025 wiped.  
+**Status:** **RESEARCH LOCK (historical).** `years/2019/` is **live** — prefer [`2019-READ-FIRST.md`](2019-READ-FIRST.md) + [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+**Disk now:** Hub **26 years open** · `years/2019/` **on disk** · 2013 / 2018 / 2020 / 2023–2025 wiped.  
 **Prefix:** `itt19`  
 **Clone shape:** live `years/2017/` (Face ID lean door · **55 dest folders · 91 HTML · 312 leftover machines**). **Do not** clone wiped `years/2018/`. **Do not** `git checkout` an old 2019 forest.
 
@@ -154,7 +154,7 @@ TV+ is trail n=4, **not** a 7th home item.
 
 | n | Dest | Path | whenKey | Incomplete | Complete |
 |--:|------|------|---------|------------|----------|
-| 1 | ★ Disney+ Continue | `sites/disneyplus/home.html` | `itt19-disneyplus` | 7-day trial · 0–1 profiles · 0–1 Continue titles | Adult + Kids + ≥2 Continue titles |
+| 1 | ★ Disney+ Continue | `sites/disneyplus/home.html` | `itt19-disneyplus` | weeklong trial · 0–1 profiles · 0–1 Continue titles | Adult + Kids + ≥2 Continue titles |
 | 2 | TikTok FYP | `sites/tiktok/index.html` | `itt19-tiktok` | empty caption · 2018-merge costume as gold | caption ≥2 + Post |
 | 3 | Apple Arcade | `sites/arcade/index.html` | `itt19-arcade` | no title pick | pick + Play leftover · $4.99 honesty |
 | 4 | Apple TV+ | `sites/appletv/index.html` | `itt19-appletv` | no original pick | pick + Watch leftover · $4.99 |
@@ -184,12 +184,12 @@ Same letters as 2017 map so the year has the same number of named flows.
 **Proof:** optional `itt19-thesis-ack` after two checks.
 
 ### C — Disney+ Who’s watching (star)
-**Life:** 12 Nov. $6.99 / $69.99. Seven-day trial. You pick Adult / Kids. Continue watching is the row you come back to. Ten million sign-ups by 13 Nov. Launch glitches from demand. US / Canada / Netherlands day one.  
-**Museum:** `sites/disneyplus/index.html` = plan + **Start 7-day trial** trap. `sites/disneyplus/home.html` = Who’s watching + add ≥2 titles + Continue. No Mickey / castle / Grogu pixels.  
+**Life:** 12 Nov. $6.99 / $69.99. Weeklong trial is contemporaneous press, not a Disney-primary “7-day” string. You pick Adult / Kids. Continue watching is the row you come back to. Ten million **sign-ups** by 13 Nov (not paid; 26.5M paid 28 Dec). Launch glitches from demand. US / Canada / Netherlands day one.  
+**Museum:** `sites/disneyplus/index.html` = plan + **Start weeklong trial** trap. `sites/disneyplus/home.html` = profile picker + add ≥2 titles + Continue. Do not quote “Who’s watching” as 2019 Disney press. No Mickey / castle / Grogu pixels.  
 **Proof:** trial-only or 0–1 profiles never write. Complete → `itt19-disneyplus` `{real, multiStep, year:"2019", profile, continueIds}`.
 
 ### D — TikTok For You (P0 leftover, not the chip)
-**Life:** The name is already TikTok (merge 2 Aug **2018**). 2019 is US mass + COPPA **$5.7M** on 27 Feb (musical.ly / TikTok).  
+**Life:** The name is already TikTok (merge 2 Aug **2018**). 2019 is US mass + FTC **$5.7M** announced 27 Feb + C.D. Cal. order 27 Mar (musical.ly / TikTok).  
 **Museum:** `sites/tiktok/index.html` — caption + Post / FYP reorder. Honesty: not the 2018 merge room.  
 **Proof:** empty caption never writes. Complete → `itt19-tiktok`.
 
@@ -199,12 +199,12 @@ Same letters as 2017 map so the year has the same number of named flows.
 **Proof:** no pick never writes. Complete → `itt19-arcade`.
 
 ### F — Apple TV+
-**Life:** 1 Nov. **$4.99**. One week trial. One year free if you bought hardware from 10 Sep.  
+**Life:** Newsroom 10 Sep **$4.99** / 7-day / 100+ countries. Live **1 Nov** (CNBC). One year free if you bought hardware from 10 Sep.  
 **Museum:** `sites/appletv/index.html` — pick an original class + Watch leftover. Key stays `itt19-appletv`.  
 **Proof:** `itt19-appletv`.
 
 ### G — Stadia
-**Life:** 19 Nov. Founder’s box: Chromecast Ultra + Midnight Blue controller + Pro months. Premiere later. 14 countries. 9am PT.  
+**Life:** 19 Nov. Founder’s box: Chromecast Ultra + **Night Blue** controller + Pro months. Premiere later. 14 countries. **9 a.m. PST**. Midnight Blue / 9am PT is wrong.  
 **Museum:** `sites/stadia/index.html` — pick Founder’s or Premiere + Claim (theater). Honesty: do **not** invent the 2023 shutdown.  
 **Proof:** `itt19-stadia`.
 
@@ -302,7 +302,7 @@ GDPR Manage / IGTV / hearing may be **one-line leftovers** on About, not rooms. 
 | 28 / 30 Oct | AirPods **Pro** · **$249** | official 7 | Apple NR https://www.apple.com/newsroom/2019/10/apple-reveals-new-airpods-pro-available-october-30/ | Wiki |
 | 1 Nov | **Apple TV+** · **$4.99** | official 4 | Apple NR https://www.apple.com/newsroom/2019/11/apple-tv-plus-is-now-available/ | Wiki |
 | 4 Nov | Edge Chromium **RC** | leftover dest · not default | Windows blog | Wiki Microsoft Edge |
-| 12 Nov | **Disney+** · **$6.99 / $69.99** · 7-day trial | **STAR** | launch 12 Nov US/CA/NL | Wiki Disney+ |
+| 12 Nov | **Disney+** · **$6.99 / $69.99** · weeklong trial is press, not Disney-primary “7-day” | **STAR** | launch 12 Nov US/CA/NL · 10M **sign-ups** 13 Nov ≠ 26.5M paid 28 Dec | Disney 12 Nov launch + 10M sign-ups reprint |
 | 13 Nov | Disney+ **>10 million** sign-ups | star honesty | CNBC https://www.cnbc.com/2019/11/13/disney-surpasses-10-million-sign-ups-since-launch.html · Verge https://www.theverge.com/2019/11/13/20963172/disney-plus-subscribers-10-million-star-wars-marvel-pixar-launch | Disney reprint |
 | 19 Nov | **Stadia** Founder’s | official 5 | Google blog https://blog.google/products-and-platforms/products/stadia/stadia-arrives-november-19/ | Wiki · **no 2023 shutdown** |
 | Dec | Zoom **10M** daily | leftover literacy **only** | Yuan later cite | **ban as 2019 spine** |

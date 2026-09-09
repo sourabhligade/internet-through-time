@@ -164,7 +164,7 @@ TV+ is trail #4, **not** a 7th home item. Atlas / leftover dump **below** the ye
 **Proof:** `itt19-appletv`.
 
 ### G — Stadia
-**Life:** 19 Nov. Founder’s box: Chromecast Ultra + Midnight Blue controller + Pro months. Premiere later. 14 countries. 9am PT.  
+**Life:** 19 Nov. Founder’s box: Chromecast Ultra + **Night Blue** controller + Pro months. Premiere later. 14 countries. **9 a.m. PST**. Midnight Blue / 9am PT is wrong.  
 **Museum:** `sites/stadia/index.html` — pick Founder’s or Premiere + Claim (theater). Honesty: do **not** invent the 2023 shutdown.  
 **Proof:** `itt19-stadia`.
 

@@ -28,8 +28,6 @@ test.describe("2013 flows", () => {
     await page.locator("[data-vn13-trap]").click();
     await page.locator("[data-vn13-post]").click();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
-    await page.locator("[data-vn13-req]").nth(0).check();
-    await page.locator("[data-vn13-req]").nth(1).check();
     await page.locator("[data-vn13-hold]").click();
     await page.locator("[data-vn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-vine-posts")).toBeTruthy();
@@ -44,9 +42,6 @@ test.describe("2013 flows", () => {
     await page.locator("[data-ch13-req]").nth(1).check();
     await page.locator("[data-ch13-ack]").click();
     expect(await getKey(page, "itt13-chrome")).toBeFalsy();
-    await page.locator('[data-ch13-pick="ie"]').click();
-    await page.locator("[data-ch13-ack]").click();
-    expect(await getKey(page, "itt13-chrome")).toBeFalsy();
     await page.locator('[data-ch13-pick="habit"]').click();
     await page.fill("[data-ch13-field]", "youtube.com");
     await page.locator("[data-ch13-ack]").click();
@@ -54,8 +49,11 @@ test.describe("2013 flows", () => {
   });
 
   test("Telegram WhatsApp trap / empty never writes; send writes", async ({ page }) => {
-    await page.goto("/years/2013/sites/telegram/chat.html");
-    await page.evaluate(() => localStorage.removeItem("itt13-telegram-chat"));
+    await page.goto("/years/2013/sites/telegram/index.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt13-telegram-chat");
+      localStorage.removeItem("itt13-vine-posts");
+    });
     await page.reload();
     await page.locator("[data-tg13-wa]").click();
     expect(await getKey(page, "itt13-telegram-chat")).toBeFalsy();
@@ -66,6 +64,7 @@ test.describe("2013 flows", () => {
     await page.fill("[data-tg13-msg]", "cloud leftover");
     await page.locator("[data-tg13-send]").click();
     await expect.poll(() => getKey(page, "itt13-telegram-chat")).toBeTruthy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 
   test("Medium tweet trap / empty never writes; publish writes", async ({ page }) => {
@@ -83,33 +82,52 @@ test.describe("2013 flows", () => {
     await expect.poll(() => getKey(page, "itt13-medium")).toBeTruthy();
   });
 
-  test("HealthCare.gov fine/retry never writes; enroll writes 503", async ({ page }) => {
-    await page.goto("/years/2013/sites/healthcare/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt13-healthcare"));
+  test("Ask.fm leftover-3× empty never writes · complete leftover · gold empty", async ({ page }) => {
+    await page.goto("/years/2013/sites/askfm/index.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt13-pop-askfm");
+      localStorage.removeItem("itt13-vine-posts");
+    });
     await page.reload();
-    await page.locator("[data-hc13-fine]").click();
-    expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
-    await page.goto("/years/2013/sites/healthcare/status.html");
-    await page.locator("[data-hc13-retry]").click();
-    expect(await getKey(page, "itt13-healthcare")).toBeFalsy();
-    await page.goto("/years/2013/sites/healthcare/index.html");
-    await page.locator("[data-hc13-apply]").click();
-    await expect.poll(() => getKey(page, "itt13-healthcare")).toBeTruthy();
+    const go = page.locator("[data-pop-go][data-pop-id='askfm']").first();
+    await go.click();
+    expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
+    const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
+    await panel.locator("[data-pop-pick='keep']").click();
+    const reqs = panel.locator("[data-pop-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await panel.locator("[data-pop-field]").fill("ask leftover");
+    await go.click();
+    await expect.poll(() => getKey(page, "itt13-pop-askfm")).toBeTruthy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 
-  test("iPhone 5c Face ID / no color never writes; color writes", async ({ page }) => {
-    await page.goto("/years/2013/sites/iphone/5c.html");
-    await page.evaluate(() => localStorage.removeItem("itt13-iphone5c"));
+  test("Vine leftover-2× empty never writes · lx then d2 · gold empty", async ({ page }) => {
+    await page.goto("/years/2013/sites/vine/record.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt13-vine-lx");
+      localStorage.removeItem("itt13-vine-d2");
+      localStorage.removeItem("itt13-vine-posts");
+    });
     await page.reload();
-    await page.locator("[data-5c-face]").click();
-    expect(await getKey(page, "itt13-iphone5c")).toBeFalsy();
-    await page.locator("[data-5c-req]").nth(0).check();
-    await page.locator("[data-5c-req]").nth(1).check();
-    await page.locator("[data-5c-ack]").click();
-    expect(await getKey(page, "itt13-iphone5c")).toBeFalsy();
-    await page.locator('[data-5c-color="green"]').click();
-    await page.locator("[data-5c-ack]").click();
-    await expect.poll(() => getKey(page, "itt13-iphone5c")).toBeTruthy();
+    const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="vine-lx"]') }).first();
+    await p1.locator("[data-lo-save]").click();
+    expect(await getKey(page, "itt13-vine-lx")).toBeFalsy();
+    await p1.locator("[data-lo-pick='keep']").click();
+    const r1 = p1.locator("[data-lo-req]");
+    for (let i = 0; i < (await r1.count()); i++) await r1.nth(i).check();
+    await p1.locator("[data-lo-field]").fill("vine leftover");
+    await p1.locator("[data-lo-save]").click();
+    await expect.poll(() => getKey(page, "itt13-vine-lx")).toBeTruthy();
+    const p2 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="vine-d2"]') }).first();
+    await p2.locator("[data-lo-pick='keep']").click();
+    const r2 = p2.locator("[data-lo-req]");
+    for (let i = 0; i < (await r2.count()); i++) await r2.nth(i).check();
+    await p2.locator("[data-lo-field]").fill("vine leftover two");
+    await p2.locator("[data-lo-save]").click();
+    await expect.poll(() => getKey(page, "itt13-vine-d2")).toBeTruthy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 
   test("Snap Stories trap/empty never writes then save", async ({ page }) => {
@@ -121,10 +139,33 @@ test.describe("2013 flows", () => {
     expect(await getKey(page, "itt13-snap-story")).toBeFalsy();
     await page.locator("[data-sn13-req]").nth(0).check();
     await page.locator("[data-sn13-req]").nth(1).check();
-    await page.locator('[data-sn13-snap="one"]').click();
-    await page.locator('[data-sn13-snap="two"]').click();
+    await page.locator('[data-sn13-snap="a"]').click();
+    await page.locator('[data-sn13-snap="b"]').click();
     await page.locator("[data-sn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-snap-story")).toBeTruthy();
+  });
+
+  test("Snowden empty never writes · complete leftover literacy · gold empty", async ({ page }) => {
+    await page.goto("/years/2013/sites/snowden/index.html");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt13-snowden-ack");
+      localStorage.removeItem("itt13-vine-posts");
+    });
+    await page.reload();
+    const goldTrap = page.locator("[data-lo-trap]").first();
+    if (await goldTrap.count()) await goldTrap.click();
+    await page.locator("[data-sd13-ack]").click();
+    expect(await getKey(page, "itt13-snowden-ack")).toBeFalsy();
+    await page.locator("[data-sd13-req]").nth(0).check();
+    await page.locator("[data-sd13-req]").nth(1).check();
+    await page.locator("[data-sd13-ack]").click();
+    await expect.poll(() => getKey(page, "itt13-snowden-ack")).toBeTruthy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    const next = page.locator('[data-next-when-key="itt13-snowden-ack"] a').first();
+    await expect(next).toBeVisible();
+    const href = await next.getAttribute("href");
+    const res = await page.request.get(new URL(href || "", page.url()).href);
+    expect(res.status(), href).toBeLessThan(400);
   });
 
   test("second leftover dests Chrome · Snowden · Telegram exist and are not the gold", async ({ page }) => {

@@ -74,6 +74,18 @@
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
+  function inLeftoverPanel(el) {
+    var n = el;
+    while (n && n.nodeType === 1) {
+      if (n.getAttribute) {
+        if (n.getAttribute("data-lo-panel") === "1") return true;
+        if (n.getAttribute("data-pop-panel") === "1") return true;
+        if (n.hasAttribute("data-4x-panel")) return true;
+      }
+      n = n.parentNode;
+    }
+    return false;
+  }
   function appsKey() {
     if (ITT.util && ITT.util.immersionStorageKey) {
       return ITT.util.immersionStorageKey("fb-apps", "itt07");
@@ -194,9 +206,21 @@
         if (st) st.textContent = "Profile saved.";
       });
     }
-    var add = doc.querySelector("[data-fb-add]");
-    if (add) {
-      add.addEventListener("click", function () {
+    function renderFriends(profile) {
+      var ul = doc.querySelector("[data-fb-friends]");
+      if (!ul) return;
+      ul.innerHTML = (profile.friends || []).map(function (f) {
+        return "<li>" + esc(f) + "</li>";
+      }).join("");
+    }
+    if (doc.documentElement && doc.documentElement.getAttribute("data-fb-add-bound") !== "1") {
+      doc.documentElement.setAttribute("data-fb-add-bound", "1");
+      doc.addEventListener("click", function (ev) {
+        var t = ev.target;
+        if (!t || !t.closest) return;
+        var btn = t.closest("[data-fb-add]");
+        if (!btn || inLeftoverPanel(btn)) return;
+        var live = load() || p;
         var inp = doc.querySelector("[data-fb-add-name]");
         var who = inp && inp.value != null ? String(inp.value).replace(/^\s+|\s+$/g, "") : "";
         var st = doc.querySelector("[data-fb-add-status]");
@@ -204,19 +228,17 @@
           if (st) st.textContent = "Type a classmate name (min 2). Empty does not add.";
           return;
         }
-        p.friends = p.friends || [];
-        p.friends.unshift(who);
-        p.friends = p.friends.slice(0, 20);
-        save(p);
-        if (list) {
-          list.innerHTML = p.friends.map(function (f) {
-            return "<li>" + esc(f) + "</li>";
-          }).join("");
-        }
+        live.friends = live.friends || [];
+        live.friends.unshift(who);
+        live.friends = live.friends.slice(0, 20);
+        p = live;
+        save(live);
+        renderFriends(live);
         if (inp) inp.value = "";
         if (st) st.textContent = "Added " + who + " to your friends.";
       });
     }
+    renderFriends(p);
     renderFeed(doc, p);
 
     var appsEl = doc.querySelector("[data-fb-apps]");

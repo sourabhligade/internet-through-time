@@ -244,8 +244,9 @@ test.describe("leftover official · disk + trail", () => {
       "itt17-faceid",
       "itt18-gdpr",
       "itt19-disneyplus",
+      "itt20-zoom",
     ]);
-    const wiped = new Set(["2018", "2020", "2023", "2024", "2025"]);
+    const wiped = new Set(["2023", "2024", "2025"]);
     const x2 = JSON.parse(fs.readFileSync(path.join(__dirname, "2x-links.matrix.json"), "utf8"));
     const byYear = {};
     for (const row of x2) {

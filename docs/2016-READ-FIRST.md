@@ -1,7 +1,7 @@
 # 2016 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **1994–2016**. `years/2016/` is the **lean from-scratch rebuild** (Instagram Stories star).  
+**Disk truth:** Hub is **28 years open**. `years/2016/` is the **live lean door** (Instagram Stories star). **2020 / 2023–2025 wiped.** 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt16`  
 **Clone shape from:** live `years/2015/` (lean door · ~32 HTML · Periscope star). **Do not** restore git `HEAD` `years/2016/` or `/tmp/itt-2016-forest-backup-*`.
 
@@ -18,9 +18,9 @@
 
 ---
 
-## Why 2016 is empty
+## Door status
 
-You pulled 2015 and 2016 because the old packs were checkbox forests. **2015 was rebuilt** (Periscope). **2016 was not.** Stale `DISK-TRUTH` still talks about a 2016 Stories door. That year is gone. Do not `git checkout HEAD -- years/2016` — that restores a clone forest.
+**2016 is live.** Instagram Stories is the star. Do not `git checkout` an old 2016 forest.
 
 ---
 

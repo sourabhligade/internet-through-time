@@ -21,7 +21,7 @@ Every row: trap / 0 ticks / empty / wrong pick never write. Complete writes `{re
 | 5 | `itt19-tiktok-lx` | `sites/tiktok/index.html` | 2018 merge as gold |
 | 6 | `itt19-tiktok-d2` | `sites/tiktok/index.html` | Reels costume |
 | 7 | `itt19-tiktok-ab` | `sites/tiktok/index.html` | empty caption |
-| 8 | `itt19-coppa-lx` | `sites/tiktok/index.html` | skip COPPA honesty |
+| 8 | `itt19-coppa-lx` | `sites/tiktok/index.html` | skip COPPA honesty · Cite: FTC 27 Feb $5.7M + C.D. Cal. 27 Mar |
 | 9 | `itt19-arcade-lx` | `sites/arcade/index.html` | IAP costume |
 | 10 | `itt19-arcade-d2` | `sites/arcade/index.html` | official tile art |
 | 11 | `itt19-arcade-ab` | `sites/arcade/index.html` | no pick |

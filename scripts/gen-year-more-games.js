@@ -9,7 +9,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS_SKIP = new Set(["2007", "2020", "2024", "2025"]);
+const YEARS_SKIP = new Set(["2013", "2018", "2020", "2023", "2024", "2025"]);
 
 /** @type {{y:string,slot:string,id:string,title:string,kind:string,inspire:string,trap:string,goods:string,next:string,nextLabel:string}[]} */
 const GAMES = [

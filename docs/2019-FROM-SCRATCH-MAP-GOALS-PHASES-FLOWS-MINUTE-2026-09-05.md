@@ -120,9 +120,9 @@ TV+ is trail **n=4**, not a 7th `<li>`. Atlas / leftover dump **below** the bann
 | n | Room | Path | whenKey | Incomplete | Complete | Next |
 |--:|------|------|---------|------------|----------|------|
 | 1 | ★ Disney+ Continue | `disneyplus/home.html` | `itt19-disneyplus` | weeklong trial · 0–1 profiles · 0–1 titles · do not quote “Who’s watching” as 2019 press | ≥2 profiles (Kids allowed) + ≥2 Continue-watching titles | TikTok |
-| 2 | TikTok FYP | `tiktok/index.html` | `itt19-tiktok` | empty caption · 2018 merge as gold | caption ≥2 + Post | Arcade |
+| 2 | TikTok FYP | `tiktok/index.html` | `itt19-tiktok` | empty caption · 2018 merge as gold | caption ≥2 + Post · FTC 27 Feb $5.7M + C.D. Cal. 27 Mar | Arcade |
 | 3 | Apple Arcade | `arcade/index.html` | `itt19-arcade` | no pick · IAP | pick + Play · $4.99 | TV+ |
-| 4 | Apple TV+ | `appletv/index.html` | `itt19-appletv` | no original | pick + Watch · $4.99 | Stadia |
+| 4 | Apple TV+ | `appletv/index.html` | `itt19-appletv` | no original | pick + Watch · Newsroom 10 Sep $4.99 / 7-day / 100+ countries · CNBC 1 Nov | Stadia |
 | 5 | Stadia | `stadia/index.html` | `itt19-stadia` | no box · 2023 shutdown copy | Founder’s **$129.99** · Night Blue controller · Chromecast Ultra · 3 months Pro · 9 a.m. PST | iPhone 11 |
 | 6 | iPhone 11 | `iphone/iphone11.html` | `itt19-iphone11` | no color · Face-ID-as-new | color + stores 20 Sep | AirPods Pro |
 | 7 | AirPods Pro | `airpodspro/index.html` | `itt19-airpods-pro` | 0–1 tick | 2 ticks + Pair · $249 | Chrome |

@@ -143,7 +143,6 @@
       ["msn", "immersion/msn.js"],
 
       ["imgur", "immersion/imgur.js"],
-      ["cnn", "immersion/facebook.js"],
       ["wave", "immersion/wave.js"],
       ["oneThingMachines", "immersion/one-thing-machines.js"],
       ["bbs", "immersion/source-flows.js"],

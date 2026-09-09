@@ -1,7 +1,7 @@
 # 2017 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **1994–2017**. `years/2017/` is the **lean from-scratch rebuild** (Face ID star).  
+**Disk truth:** Hub is **28 years open**. `years/2017/` is the **live lean door** (Face ID star). **2020 / 2023–2025 wiped.** 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt17`  
 **Clone shape from:** live `years/2016/` (lean door · ~25 HTML · Instagram Stories star). **Do not** restore git `HEAD` / `52df8ae3` `years/2017/` (108-page forest) or the older 43-HTML lean tree. **Do not** restore `/tmp/itt-2017-*`.
 
@@ -18,11 +18,9 @@
 
 ---
 
-## Why 2017 is empty
+## Door status
 
-You pulled late years because the old packs were checkbox forests. **2015** (Periscope) and **2016** (Stories) were rebuilt lean. **2017 was not.** Stale `DISK-TRUTH` still talks about a 43-HTML Face ID door. That year is gone. Do not `git checkout … -- years/2017` — that restores a forest (108 HTML) or a leftover lean clone.
-
-Git leftover is **research only**. Steal facts and the Storm Circle game JS. Do not copy the room pile.
+**2017 is live.** Face ID is the star. Do not `git checkout` an old 2017 forest. Git leftover is research only.
 
 ---
 

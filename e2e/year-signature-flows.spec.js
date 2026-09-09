@@ -323,27 +323,44 @@ test.describe('year-signature 2005', () => {
     await page.evaluate(() => {
       try {
         localStorage.removeItem('itt05-reddit-links');
+        localStorage.removeItem('itt05-reddit');
       } catch (e) {
         /* */
       }
     });
-    await goImmersion(page, '2005', 'sites/reddit/index.html');
+    await goImmersion(page, '2005', 'sites/reddit/submit.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/reddit|Reddit|boost/i, { timeout: 15000 });
-    const lo = frame.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="reddit"])').first();
-    await expect(lo.locator('[data-lo-save]')).toBeVisible({ timeout: 10000 });
-    const reqs = lo.locator('[data-lo-req]');
-    const nReq = await reqs.count();
-    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
-    const picks = lo.locator('[data-lo-pick]');
-    await picks.nth(0).click();
-    await picks.nth(1).click();
-    await lo.locator('[data-lo-save]').click();
+    await expect(frame.locator('[data-reddit-submit]')).toBeVisible({ timeout: 15000 });
+    await expect(frame.locator('[data-reddit-submit]')).toHaveAttribute('data-reddit-form-bound', '1', {
+      timeout: 15000,
+    });
+    await frame.locator('[data-reddit-submit] button[type="submit"]').click();
+    await expect(frame.locator('[data-reddit-status]')).toContainText(/Enter a title/i);
+    const before = await page.evaluate(() => localStorage.getItem('itt05-reddit-links') || '');
+    expect(before).not.toMatch(/Untitled/i);
+    const title = 'YC first class ' + Date.now();
+    await frame.locator('[data-reddit-submit] [name="title"]').fill(title);
+    await frame.locator('[data-reddit-submit] [name="url"]').fill('http://reddit.com');
+    await frame.locator('[data-reddit-submit] button[type="submit"]').click();
+    await expect(frame.locator('[data-reddit-status]')).toContainText(/Submitted/i, { timeout: 10000 });
     await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit')), {
-        timeout: 8000,
-      })
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit-links')), { timeout: 8000 })
+      .toContain(title);
+    expect(await page.evaluate(() => localStorage.getItem('itt05-reddit-links'))).toContain(title);
+    await goImmersion(page, '2005', 'sites/reddit/index.html');
+    const home = contentFrame(page);
+    await expect(home.locator('[data-official-verb]')).toBeVisible({ timeout: 15000 });
+    await home.locator('[data-official-need]').fill('boost leftover');
+    await home.locator('[data-official-req]').nth(0).check();
+    await home.locator('[data-official-req]').nth(1).check();
+    await home.locator('[data-official-verb]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit')), { timeout: 8000 })
       .toBeTruthy();
+    const blob = JSON.parse((await page.evaluate(() => localStorage.getItem('itt05-reddit'))) || '{}');
+    expect(blob.real).toBe(true);
+    expect(blob.official).toBe(true);
+    expect(String(blob.year)).toBe('2005');
   });
   test('Maps zoom + search write itt05-maps-state', async ({ page }) => {
     skipIfWiped('2005');
@@ -788,6 +805,29 @@ test.describe('year-signature 2017', () => {
     await frame.locator('[data-faceid-unlock]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt17-faceid')), { timeout: 8000 })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2018', () => {
+  test('GDPR Accept All never writes · Manage + Save → itt18-gdpr', async ({ page }) => {
+    skipIfWiped('2018');
+    await enterYear(page, '2018');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt18-gdpr');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2018', 'sites/gdpr/index.html');
+    const frame = contentFrame(page);
+    await frame.locator('[data-gdpr-accept-all]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
+    await frame.locator('[data-gdpr-manage]').click();
+    await frame.locator('[data-gdpr-save]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt18-gdpr')), { timeout: 8000 })
       .toBeTruthy();
   });
 });
