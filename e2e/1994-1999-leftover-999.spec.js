@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
@@ -43,6 +44,7 @@ async function getKey(page, key) {
 async function completeLo(page, destPath, year, suffix, star) {
   const key = "itt" + year.slice(2) + "-" + suffix;
   await page.goto(destPath);
+  await revealLeftoverRails(page);
   await page.evaluate((k) => localStorage.removeItem(k), key);
   await page.evaluate((k) => localStorage.removeItem(k), star);
   const save = page.locator(`[data-lo-save][data-lo-key="${suffix}"]`).first();

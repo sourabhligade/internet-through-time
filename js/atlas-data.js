@@ -1,14 +1,14 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2009 / 2011 / 2013–2020 lean doors live. Hallway ends at 2020. Do not invent rooms.
+ * 2007 / 2011 / 2013–2022 lean doors live. 2009 boarded. Hallway ends at 2022. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
@@ -19,14 +19,14 @@
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
-      { id: "phone", label: "Phone eats the web", blurb: "App Store → Like → Circles. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, Zoom Leave.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020"] }
+      { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2008", "2010", "2011", "2012", "2013"] },
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Continue watching, Zoom Leave, ATT Ask, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"] }
     ],
 
     leanYears: [
       "2007",
-      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020",
-      "2011", "2009"
+      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022",
+      "2011"
     ],
 
     notThisYear: {
@@ -56,7 +56,9 @@
       "2017": "Look to unlock. Fortnite is.",
       "2018": "Accept All never writes. Reels are not this year.",
       "2019": "No Reels. No Zoom as mass. Trial never writes.",
-      "2020": "Join never writes. 300 million is participants, not users. ChatGPT is 2022."},
+      "2020": "Join never writes. 300 million is participants, not users. ChatGPT is 2022.",
+      "2021": "Allow never writes. ChatGPT dest never. Wordle-as-2021-mass never. ILS June 2021 websites cell does not exist.",
+      "2022": "Plus never writes. GPT-4 dest never. X dest never. ILS June 2022 websites cell does not exist."},
 
     /* L1 nostalgia — visitor postcard only. Open years. Wiped years omit this. */
     remember: {
@@ -86,7 +88,9 @@
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters.",
       "2018": "The banner was the door. Accept All never wrote. Manage did. The loops changed their name.",
       "2019": "You picked a face. A seven-day trial is the trap. Continue is the save.",
-      "2020": "You muted, then chatted, then Left. Join never wrote. Three hundred million is participants, not users."},
+      "2020": "You muted, then chatted, then Left. Join never wrote. Three hundred million is participants, not users.",
+      "2021": "The phone asked first. Ask wrote. Allow never wrote. The desktop was still Win10 and Chrome habit.",
+      "2022": "You typed a prompt and hit Send. Plus never wrote. The bird was still Twitter."},
 
     /* Guided 6 for years whose Starting Point is inline (start-data.js stops at 2009). */
     guidedFull: {
@@ -153,6 +157,22 @@
         { label: "Hearing — Apr 10", href: "years/2018/sites/trust/index.html" },
         { label: "IGTV — not Reels", href: "years/2018/sites/instagram/igtv.html" },
         { label: "Year flow map", href: "years/2018/pages/map.html" }
+      ],
+      "2021": [
+        { label: "About 2021", href: "years/2021/pages/about.html" },
+        { label: "ATT Ask — Allow never writes", href: "years/2021/sites/att/index.html" },
+        { label: "Signal leftover — 15 May delay", href: "years/2021/sites/signal/index.html" },
+        { label: "Copilot waitlist — not ChatGPT", href: "years/2021/sites/copilot/index.html" },
+        { label: "Meta rename leftover — app still Facebook", href: "years/2021/sites/meta/index.html" },
+        { label: "Year flow map", href: "years/2021/pages/map.html" }
+      ],
+      "2022": [
+        { label: "About 2022", href: "years/2022/pages/about.html" },
+        { label: "ChatGPT Send — Plus never writes", href: "years/2022/sites/chatgpt/index.html" },
+        { label: "Twitter leftover — still Twitter", href: "years/2022/sites/twitter/index.html" },
+        { label: "Wordle leftover — NYT 31 Jan", href: "years/2022/sites/wordle/index.html" },
+        { label: "Stable Diffusion leftover — 22 Aug", href: "years/2022/sites/stablediffusion/index.html" },
+        { label: "Year flow map", href: "years/2022/pages/map.html" }
       ]},
 
     years: {
@@ -430,6 +450,28 @@
           { label: "Facebook", href: "years/2020/sites/facebook/index.html" }
         ],
         game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
+      },
+      "2021": {
+        era: "Ask · Allow never writes",
+        thesis: "Lean door. Ask App Not to Track is the save. Allow never writes. Desktop stays Win10 + Chrome habit.",
+        gold: { label: "ATT Ask", href: "years/2021/sites/att/index.html", key: "itt21-att" },
+        guided: [
+          { label: "Signal leftover", href: "years/2021/sites/signal/index.html" },
+          { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" },
+          { label: "Meta rename leftover", href: "years/2021/sites/meta/index.html" }
+        ],
+        game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
+      },
+      "2022": {
+        era: "Send · Plus never writes",
+        thesis: "Lean door. ChatGPT Send is the save. Empty / Plus / GPT-4 never write. Desktop stays Win10 + Chrome habit. Dest stays Twitter.",
+        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
+        guided: [
+          { label: "Twitter leftover", href: "years/2022/sites/twitter/index.html" },
+          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" },
+          { label: "Stable Diffusion leftover", href: "years/2022/sites/stablediffusion/index.html" }
+        ],
+        game: { label: "Prompt Box", href: "years/2022/sites/playable/game.html" }
       }},
 
     threads: [
@@ -461,11 +503,11 @@
       {
         id: "google",
         label: "Google",
-        blurb: "Sparse search → habit → Maps → Chrome → Photos.",
+        blurb: "Sparse search → habit → Maps → Photos.",
         stops: [
           { year: "1998", href: "years/1998/sites/google/lucky.html", note: "Lucky gold" },
           { year: "2001", href: "years/2001/sites/google/index.html", note: "default" },
-          { year: "2008", href: "years/2008/sites/chrome/index.html", note: "Chrome" },
+          { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps leftover" },
           { year: "2015", href: "years/2015/sites/googlephotos/index.html", note: "Photos locker" }
         ]
       },
@@ -513,9 +555,8 @@
       {
         id: "phone",
         label: "Phone eats the web",
-        blurb: "Safari only → App Store → filter → WhatsApp install → Face ID.",
+        blurb: "iOS filter → WhatsApp install → Face ID.",
         stops: [
-          { year: "2008", href: "years/2008/sites/appstore/index.html", note: "Store opens" },
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
           { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" },
           { year: "2017", href: "years/2017/sites/iphone/x.html", note: "Face ID" }
@@ -537,7 +578,7 @@
       {
         id: "first-night",
         label: "First night",
-        blurb: "The built-in 5-stop walk. CSotD → Google → thefacebook → App Store → Instagram. Stops in 2010.",
+        blurb: "The built-in 5-stop walk. CSotD → Google → thefacebook → Twttr → Instagram. Stops in 2010.",
         href: "../index.html",
         startYear: "1994",
         startPath: "years/1994/?trail=first-night",
@@ -545,7 +586,7 @@
           { year: "1994", label: "CSotD guestbook", href: "years/1994/sites/csotd/index.html" },
           { year: "1998", label: "Sparse Google", href: "years/1998/sites/google/index.html" },
           { year: "2004", label: "thefacebook", href: "years/2004/sites/facebook/networks.html" },
-          { year: "2008", label: "App Store", href: "years/2008/sites/appstore/index.html" },
+          { year: "2006", label: "Twttr", href: "years/2006/sites/twitter/index.html" },
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" }
         ]
       },
@@ -562,12 +603,11 @@
       {
         id: "buy",
         label: "How we bought",
-        blurb: "SSL cart → auction → 99¢ song → App Store.",
+        blurb: "SSL cart → auction → 99¢ song.",
         steps: [
           { year: "1995", label: "Amazon SSL", href: "years/1995/sites/amazon/ssl-checkout.html" },
           { year: "1997", label: "eBay bid", href: "years/1997/sites/ebay/item-laptop.html" },
-          { year: "2003", label: "iTunes 99¢", href: "years/2003/sites/itunes/index.html" },
-          { year: "2008", label: "App Store", href: "years/2008/sites/appstore/index.html" }
+          { year: "2003", label: "iTunes 99¢", href: "years/2003/sites/itunes/index.html" }
         ]
       },
       {
@@ -584,9 +624,8 @@
       {
         id: "phone-trail",
         label: "Phone ate the web",
-        blurb: "Safari-only → Store → filter → WhatsApp install → Face ID.",
+        blurb: "iOS filter → WhatsApp install → Face ID.",
         steps: [
-          { year: "2008", label: "App Store", href: "years/2008/sites/appstore/index.html" },
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
           { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" },
           { year: "2017", label: "Face ID", href: "years/2017/sites/iphone/x.html" }

@@ -75,7 +75,7 @@
           }
         }
         var list = load();
-        list.unshift({ title: title, multiStep: true, real: true, ts: Date.now() });
+        list.unshift({ title: title, multiStep: true, real: true, official: true, year: "2008", ts: Date.now() });
         save(list.slice(0, 40));
         if (st) {
           st.textContent = "Watching (ad-supported theater): " + title + " · " + storageKey();

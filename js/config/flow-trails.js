@@ -480,6 +480,30 @@
       {"n": 8, "name": "CCPA", "href": "sites/ccpa/index.html", "match": "/ccpa/", "whenKey": "itt20-ccpa", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
       {"n": 9, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt20-chrome", "nextHref": "sites/playable/game.html", "nextLabel": "Sus Vote"},
       {"n": 10, "name": "Sus Vote", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt20-game-among", "nextHref": "sites/zoom/meeting.html", "nextLabel": "Zoom mute \u2192 Leave"}
+    ],
+    "2021": [
+      {"n": 1, "name": "ATT Ask", "href": "sites/att/index.html", "match": "/att/", "whenKey": "itt21-att", "nextHref": "sites/signal/index.html", "nextLabel": "Signal leftover"},
+      {"n": 2, "name": "Signal leftover", "href": "sites/signal/index.html", "match": "/signal/", "whenKey": "itt21-signal", "nextHref": "sites/copilot/index.html", "nextLabel": "Copilot waitlist"},
+      {"n": 3, "name": "Copilot waitlist", "href": "sites/copilot/index.html", "match": "/copilot/", "whenKey": "itt21-copilot", "nextHref": "sites/meta/index.html", "nextLabel": "Meta rename leftover"},
+      {"n": 4, "name": "Meta rename leftover", "href": "sites/meta/index.html", "match": "/meta/", "whenKey": "itt21-meta", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11 leftover"},
+      {"n": 5, "name": "Windows 11 leftover", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt21-win11", "nextHref": "sites/flash/index.html", "nextLabel": "Flash brick"},
+      {"n": 6, "name": "Flash brick", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt21-flash-brick", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
+      {"n": 7, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt21-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10 residual"},
+      {"n": 8, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt21-win10", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook leftover"},
+      {"n": 9, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt21-pop-facebook", "nextHref": "sites/playable/game.html", "nextLabel": "Five Letter"},
+      {"n": 10, "name": "Five Letter", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt21-game-five", "nextHref": "sites/att/index.html", "nextLabel": "ATT Ask"}
+    ],
+    "2022": [
+      {"n": 1, "name": "ChatGPT Send", "href": "sites/chatgpt/index.html", "match": "/chatgpt/", "whenKey": "itt22-chatgpt", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter leftover"},
+      {"n": 2, "name": "Twitter leftover", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt22-twitter", "nextHref": "sites/wordle/index.html", "nextLabel": "Wordle leftover"},
+      {"n": 3, "name": "Wordle leftover", "href": "sites/wordle/index.html", "match": "/wordle/", "whenKey": "itt22-wordle", "nextHref": "sites/stablediffusion/index.html", "nextLabel": "Stable Diffusion leftover"},
+      {"n": 4, "name": "Stable Diffusion leftover", "href": "sites/stablediffusion/index.html", "match": "/stablediffusion/", "whenKey": "itt22-sd", "nextHref": "sites/mastodon/index.html", "nextLabel": "Mastodon leftover"},
+      {"n": 5, "name": "Mastodon leftover", "href": "sites/mastodon/index.html", "match": "/mastodon/", "whenKey": "itt22-mastodon", "nextHref": "sites/bereal/index.html", "nextLabel": "BeReal leftover"},
+      {"n": 6, "name": "BeReal leftover", "href": "sites/bereal/index.html", "match": "/bereal/", "whenKey": "itt22-bereal", "nextHref": "sites/dalle2/index.html", "nextLabel": "DALL·E 2 leftover"},
+      {"n": 7, "name": "DALL·E 2 leftover", "href": "sites/dalle2/index.html", "match": "/dalle2/", "whenKey": "itt22-dalle2", "nextHref": "sites/copilotga/index.html", "nextLabel": "Copilot GA leftover"},
+      {"n": 8, "name": "Copilot GA leftover", "href": "sites/copilotga/index.html", "match": "/copilotga/", "whenKey": "itt22-copilotga", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
+      {"n": 9, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt22-chrome", "nextHref": "sites/playable/game.html", "nextLabel": "Prompt Box"},
+      {"n": 10, "name": "Prompt Box", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt22-game-prompt", "nextHref": "sites/chatgpt/index.html", "nextLabel": "ChatGPT Send"}
     ]
   };
 })(typeof window !== "undefined" ? window : this);

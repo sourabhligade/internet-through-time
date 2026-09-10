@@ -73,6 +73,7 @@
       if (!stn) return;
       stn.multiStep = true;
       stn.real = true;
+      stn.official = true;
       stn.year = "2005";
       stn.ts = Date.now();
       saveJSON(key, stn);

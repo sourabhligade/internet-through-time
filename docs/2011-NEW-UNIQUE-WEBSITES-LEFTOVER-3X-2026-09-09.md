@@ -1,7 +1,7 @@
 # 2011 leftover 3× — new unique websites · full research
 
 **Date:** 2026-09-09  
-**Status:** First board **27 boarded** (2026-09-09). Dest-farm lifted **only** for the named first-board 27 below. Not new verbs on dests already leftover-3×.  
+**Status:** First board **27 boarded** (2026-09-09). Leftover **2×** stamped on those dests **2026-09-10** (two leftover writers · never `itt11-gplus`). Dest-farm lifted **only** for the named first-board 27 below. Not new verbs on dests already leftover-3×.  
 **Do not dest-farm** beyond those 27. Official 10 / guided 6 / star / leftover-official 313 stay frozen.  
 **Star** `itt11-gplus` never leftover. Official 10 / guided 6 frozen. ILS June **346,004,403** · Pingdom Dec **555 million** — label, do not blend.  
 **Pew May 2011:** search 92% / email 92% still beat social (65% of online adults). Desktop Win7 + IE 9 is the mass session. Smartphone ownership 35% of U.S. adults (Pew 11 Jul 2011).

@@ -6,11 +6,14 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
-function skipIfWiped(year) {
-  test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
-}
+const { enterYear, goImmersion, goInFrame, contentFrame, killOverlays, isLiveYear, revealLeftoverRails } = require('./helpers');
 
-const { enterYear, goImmersion, goInFrame, contentFrame, killOverlays } = require('./helpers');
+function skipIfWiped(year) {
+  test.skip(
+    !isLiveYear(year) || !fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')),
+    year + ' boarded'
+  );
+}
 
 test.describe('year-signature 1994', () => {
   test('CSotD guestbook REAL → itt94-csotd', async ({ page }) => {
@@ -349,11 +352,8 @@ test.describe('year-signature 2005', () => {
     expect(await page.evaluate(() => localStorage.getItem('itt05-reddit-links'))).toContain(title);
     await goImmersion(page, '2005', 'sites/reddit/index.html');
     const home = contentFrame(page);
-    await expect(home.locator('[data-official-verb]')).toBeVisible({ timeout: 15000 });
-    await home.locator('[data-official-need]').fill('boost leftover');
-    await home.locator('[data-official-req]').nth(0).check();
-    await home.locator('[data-official-req]').nth(1).check();
-    await home.locator('[data-official-verb]').click();
+    await expect(home.locator('[data-reddit-up]').first()).toBeVisible({ timeout: 15000 });
+    await home.locator('[data-reddit-up]').first().click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt05-reddit')), { timeout: 8000 })
       .toBeTruthy();
@@ -420,6 +420,7 @@ test.describe('year-signature 2006', () => {
     await enterYear(page, '2006');
     await goImmersion(page, '2006', 'sites/digg/index.html');
     await expect(contentFrame(page).locator('body')).toContainText(/Digg/i, { timeout: 15000 });
+    await revealLeftoverRails(page);
     await expect(contentFrame(page).locator('[data-lo-save][data-lo-key="digg"]').first()).toBeVisible();
   });
 
@@ -450,6 +451,7 @@ test.describe('year-signature 2006', () => {
 
 test.describe('year-signature 2008', () => {
   test('Chrome download theater → itt08-chrome', async ({ page }) => {
+    skipIfWiped('2008');
     await enterYear(page, '2008');
     await page.evaluate(() => {
       try {
@@ -475,6 +477,7 @@ test.describe('year-signature 2008', () => {
   });
 
   test('App Store install theater', async ({ page }) => {
+    skipIfWiped('2008');
     await enterYear(page, '2008');
     await page.evaluate(() => {
       try {
@@ -858,6 +861,100 @@ test.describe('year-signature 2019', () => {
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt19-disneyplus')), { timeout: 8000 })
       .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2020', () => {
+  test('Zoom Join never writes · mute + chat + Leave → itt20-zoom', async ({ page }) => {
+    skipIfWiped('2020');
+    await enterYear(page, '2020');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt20-zoom');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2020', 'sites/zoom/meeting.html');
+    const frame = contentFrame(page);
+    await frame.locator('[data-zoom-join]').click();
+    expect(await page.evaluate(() => localStorage.getItem('itt20-zoom'))).toBeFalsy();
+    await frame.locator('[data-zoom-mute]').click();
+    await frame.locator('[data-zoom-chat]').fill('can you hear me');
+    await frame.locator('[data-zoom-send]').click();
+    await frame.locator('[data-zoom-req]').nth(0).check();
+    await frame.locator('[data-zoom-req]').nth(1).check();
+    await frame.locator('[data-zoom-leave]').click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt20-zoom')), { timeout: 8000 })
+      .toBeTruthy();
+  });
+});
+
+test.describe('year-signature 2021', () => {
+  test('ATT Allow never writes · Ask + honesty → itt21-att official', async ({ page }) => {
+    skipIfWiped('2021');
+    await enterYear(page, '2021');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt21-att');
+        localStorage.removeItem('itt20-zoom');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2021', 'sites/att/index.html');
+    const frame = contentFrame(page);
+    await frame.locator('[data-official-trap]').first().click();
+    expect(await page.evaluate(() => localStorage.getItem('itt21-att'))).toBeFalsy();
+    const verb = frame.locator('[data-official-verb-host] [data-official-verb]');
+    await verb.click();
+    expect(await page.evaluate(() => localStorage.getItem('itt21-att'))).toBeFalsy();
+    const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await verb.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt21-att')), { timeout: 8000 })
+      .toBeTruthy();
+    const raw = await page.evaluate(() => localStorage.getItem('itt21-att'));
+    const blob = JSON.parse(raw || 'null');
+    expect(blob && blob.official).toBe(true);
+    expect(await page.evaluate(() => localStorage.getItem('itt20-zoom'))).toBeFalsy();
+  });
+});
+
+test.describe('year-signature 2022', () => {
+  test('ChatGPT Plus never writes · prompt + Send → itt22-chatgpt official', async ({ page }) => {
+    skipIfWiped('2022');
+    await enterYear(page, '2022');
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem('itt22-chatgpt');
+        localStorage.removeItem('itt21-att');
+      } catch (e) {
+        /* */
+      }
+    });
+    await goImmersion(page, '2022', 'sites/chatgpt/index.html');
+    const frame = contentFrame(page);
+    await frame.locator('[data-official-trap]').first().click();
+    expect(await page.evaluate(() => localStorage.getItem('itt22-chatgpt'))).toBeFalsy();
+    const verb = frame.locator('[data-official-verb-host] [data-official-verb]');
+    await verb.click();
+    expect(await page.evaluate(() => localStorage.getItem('itt22-chatgpt'))).toBeFalsy();
+    await frame.locator('[data-official-verb-host] [data-official-need]').fill('explain this');
+    const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await verb.click();
+    await expect
+      .poll(async () => page.evaluate(() => localStorage.getItem('itt22-chatgpt')), { timeout: 8000 })
+      .toBeTruthy();
+    const raw = await page.evaluate(() => localStorage.getItem('itt22-chatgpt'));
+    const blob = JSON.parse(raw || 'null');
+    expect(blob && blob.official).toBe(true);
+    expect(await page.evaluate(() => localStorage.getItem('itt21-att'))).toBeFalsy();
   });
 });
 

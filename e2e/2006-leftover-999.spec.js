@@ -5,6 +5,7 @@
  * Never writes star itt06-tweets / itt05-* / itt07-*.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 /** @type {{ path: string, key: string, title: string }[]} */
 const FLOWS = [
@@ -51,6 +52,7 @@ async function completeLo(page, destPath, key) {
     localStorage.removeItem("itt07-iphone");
   }, key);
   await page.reload();
+  await revealLeftoverRails(page);
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
   await lo.locator("[data-lo-save]").waitFor({ timeout: 20000 });
   await page.waitForFunction(

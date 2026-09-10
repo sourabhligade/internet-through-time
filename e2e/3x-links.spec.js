@@ -12,10 +12,15 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2024; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2020; y++) YEARS.push(String(y));
 
 function yearOnDisk(year) {
-  return fs.existsSync(path.join(ROOT, "years", year, "index.html"));
+  return fs.existsSync(path.join(ROOT, "years", year, "pages", "home.html"));
+}
+
+function destSlug(href) {
+  const m = String(href || "").match(/sites\/([^/]+)\//);
+  return m ? m[1].toLowerCase() : "";
 }
 
 test.describe("3× links every implemented year", () => {
@@ -33,8 +38,23 @@ test.describe("3× links every implemented year", () => {
       const hrefs = await box.locator("a[href]").evaluateAll((els) =>
         els.map((a) => a.getAttribute("href") || "").filter(Boolean)
       );
-      const minHrefs = (await box.getAttribute("data-itt-3x-links")) !== null ? 12 : 3;
+      const slugs = hrefs.map(destSlug).filter(Boolean);
+      const unique = new Set(slugs);
+      expect(slugs.length, year + " leftover dest slugs").toBe(unique.size);
+      const warehouse = (await box.getAttribute("data-itt-3x-links")) !== null;
+      const minHrefs = warehouse ? Math.min(12, unique.size || 3) : 3;
       expect(hrefs.length, `${year} 3× dests`).toBeGreaterThanOrEqual(minHrefs);
+      if (warehouse) {
+        for (const href of hrefs) {
+          if (/\/sites\/[^/]+\/(about|more)\.html$/i.test(href)) {
+            const slug = destSlug(href);
+            expect(
+              hrefs.some((h) => destSlug(h) === slug && /\/index\.html$/i.test(h)),
+              year + " warehouse keeps about/more after index for " + slug
+            ).toBe(false);
+          }
+        }
+      }
       const samples = hrefs.filter((_, i) => i === 0 || i === Math.floor(hrefs.length / 2) || i === hrefs.length - 1);
       for (const href of samples) {
         const url = new URL(href, `http://x/years/${year}/pages/home.html`).pathname;

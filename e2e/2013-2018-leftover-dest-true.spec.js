@@ -4,6 +4,7 @@
  * Second leftover-3× strip is not named.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => localStorage.getItem(key), k);
@@ -14,6 +15,7 @@ async function completePop(page, popId, key, gold, fill) {
     ks.forEach((k) => localStorage.removeItem(k));
   }, [key, gold]);
   await page.reload();
+  await revealLeftoverRails(page);
   const go = page.locator(`[data-pop-go][data-pop-id='${popId}']`).first();
   await go.click();
   expect(await getKey(page, key)).toBeFalsy();
@@ -34,6 +36,7 @@ async function completeLo(page, loKey, gold, fill) {
     ks.forEach((k) => localStorage.removeItem(k));
   }, [loKey, gold]);
   await page.reload();
+  await revealLeftoverRails(page);
   const save = page.locator(`[data-lo-save][data-lo-key="${loKey}"]`).first();
   const panel = page.locator("[data-lo-panel]").filter({ has: save }).first();
   await save.click();

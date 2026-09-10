@@ -114,7 +114,7 @@
       if (list[i].id === app.id) { exists = true; break; }
     }
     if (!exists) {
-      list.unshift({ id: app.id, name: app.name, price: app.price, cat: app.cat, ts: Date.now() });
+      list.unshift({ id: app.id, name: app.name, price: app.price, cat: app.cat, official: true, year: "2008", ts: Date.now() });
       save(list.slice(0, 40));
     }
     if (st) {

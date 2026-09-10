@@ -398,13 +398,4 @@
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'face2',title:'Face Two',href:"extra-h.html",key:"itt19-game-face2"});
   ;(ITT.yearExtraGames['2019'] = ITT.yearExtraGames['2019'] || []).push({id:'arcnote',title:'Arcade Note',href:"extra-i.html",key:"itt19-game-arcnote"});
   /* ITT-2G2:end */
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'a21',title:"Ask Extra",href:"extra-a.html",key:"itt21-game-askx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'b21',title:"Allow Trap Extra",href:"extra-b.html",key:"itt21-game-allowx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'c21',title:"Signal Extra",href:"extra-c.html",key:"itt21-game-sigx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'d21',title:"Waitlist Extra",href:"extra-d.html",key:"itt21-game-waitx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'e21',title:"Rename Extra",href:"extra-e.html",key:"itt21-game-renx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'f21',title:"Flash Extra",href:"extra-f.html",key:"itt21-game-flx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'g21',title:"Habit Extra",href:"extra-g.html",key:"itt21-game-habx"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'h21',title:"Five Extra",href:"extra-h.html",key:"itt21-game-fivex"});
-  ;(ITT.yearExtraGames['2021'] = ITT.yearExtraGames['2021'] || []).push({id:'i21',title:"Seed Extra",href:"extra-i.html",key:"itt21-game-seedx"});
 })(typeof window !== "undefined" ? window : this);

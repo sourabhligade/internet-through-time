@@ -27,20 +27,22 @@ test.describe('Museum passport + first night', () => {
     await expect(page.locator('#itt-passport-root')).toBeVisible();
     await expect(page.locator('#itt-passport-root')).toContainText(/Passport stamps/i);
     await expect(page.locator('#begin-first-night, [data-itt-night-start]').first()).toBeVisible();
-    await expect(page.locator('a.year-card.available.y2008[href*="years/2008"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available.y2006[href*="years/2006"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[href*="years/2008"]')).toBeVisible();
     await expect(page.locator('a.year-card.available.y2010[href*="years/2010"]')).toBeVisible();
-    await expect(page.locator('[data-itt-year-tour="2008"]')).toBeVisible();
+    await expect(page.locator('[data-itt-year-tour="2006"]')).toBeVisible();
+    await expect(page.locator('[data-itt-year-tour="2008"]')).toHaveCount(1);
     await expect(page.locator('[data-itt-year-tour="2010"]')).toBeVisible();
-    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(27);
+    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(26);
   });
 
-  test('2008 passport chip starts 2008-start trail', async ({ page }) => {
+  test('2006 passport chip starts 2006-start trail', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2008"]').click();
-    await expect(page).toHaveURL(/years\/2008/);
+    await page.locator('[data-itt-year-tour="2006"]').click();
+    await expect(page).toHaveURL(/years\/2006/);
     const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2008-start/);
+    expect(night).toMatch(/2006-start/);
     expect(night).toMatch(/"active":\s*true/);
   });
 
@@ -54,13 +56,13 @@ test.describe('Museum passport + first night', () => {
     expect(night).toMatch(/"active":\s*true/);
   });
 
-  test('year chip deep-link starts 2008 tour', async ({ page }) => {
+  test('year chip deep-link starts 2006 tour', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2008"]').click();
-    await expect(page).toHaveURL(/years\/2008/);
+    await page.locator('[data-itt-year-tour="2006"]').click();
+    await expect(page).toHaveURL(/years\/2006/);
     const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2008-start/);
+    expect(night).toMatch(/2006-start/);
   });
 
   test('first night start writes state and opens 1994 trail URL', async ({ page }) => {

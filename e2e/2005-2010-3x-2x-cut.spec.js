@@ -256,8 +256,8 @@ async function walkDoor(page, door, gold) {
 const FIRST_PACK_MISSING = {
   2005: [
     { dest: "/years/2005/sites/youtube/watch.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt05-pop-youtube", next: "wikipedia/index.html", nextKey: "itt05-pop-wikipedia", weather: /YouTube leftover 2005 watch/i, lx: [], never: ["itt05-yt-uploads"] },
-    { dest: "/years/2005/sites/wikipedia/index.html", go: "[data-pop-go][data-pop-id='wikipedia']", key: "itt05-pop-wikipedia", next: "myspace/index.html", nextKey: "itt05-pop-myspace", weather: /Wikipedia leftover 2005/i, lx: [], never: ["itt05-yt-uploads"] },
-    { dest: "/years/2005/sites/earth/index.html", go: "[data-pop-go][data-pop-id='earth']", key: "itt05-pop-earth", next: "mashable/index.html", nextKey: "itt05-pop-mashable", weather: /Google Earth leftover 2005 leftover 999/i, lx: [], never: ["itt05-yt-uploads", "itt05-maps"] },
+    { dest: "/years/2005/sites/wikipedia/index.html", go: "[data-pop-go][data-pop-id='wikipedia']", key: "itt05-pop-wikipedia", next: "yahoo/index.html", nextKey: "itt05-pop-yahoo", weather: /Wikipedia leftover 2005/i, lx: [], never: ["itt05-yt-uploads"] },
+    { dest: "/years/2005/sites/earth/index.html", go: "[data-pop-go][data-pop-id='earth']", key: "itt05-pop-earth", next: "milliondollar/index.html", nextKey: "itt05-pop-milliondollar", weather: /Google Earth leftover 2005 leftover 999/i, lx: [], never: ["itt05-yt-uploads", "itt05-maps"] },
   ],
   2006: [
     { dest: "/years/2006/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt06-pop-youtube", next: "facebook/index.html", nextKey: "itt06-pop-facebook", weather: /YouTube leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-yt"] },

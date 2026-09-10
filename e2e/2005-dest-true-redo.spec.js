@@ -377,6 +377,7 @@ test.describe("2005 dest-true official browser walk", () => {
     await page.goto("/years/2005/sites/youtube/upload.html");
     await clearKeys(page, []);
     await page.reload();
+    expect(await getKey(page, STAR), "land must not write the star").toBeFalsy();
     await page.locator("[data-yt-trap]").click();
     await page.locator("form[data-yt-dating] button[type='submit']").click();
     await page.locator("form[data-yt-upload] button[type='submit']").click();

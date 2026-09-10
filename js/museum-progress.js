@@ -8,7 +8,7 @@
  *   itt-last-year      (existing)
  *
  * Trails:
- *   first-night        1994 → 1998 → 2004 → 2008 → 2010
+ *   first-night        1994 → 1998 → 2004 → 2006 → 2010
  *   YYYY-start         short in-year tour for every shipped year
  */
 (function (global) {
@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2021": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -50,13 +50,13 @@
       match: "/facebook/networks"
     },
     {
-      id: "fn-2008",
-      year: "2008",
-      path: "sites/github/issue.html",
-      title: "2008 · GitHub issue",
-      blurb: "Open an issue. App Store · Chrome · G1 stay leftover.",
+      id: "fn-2006",
+      year: "2006",
+      path: "sites/twitter/index.html",
+      title: "2006 · Twttr",
+      blurb: "Update. News Feed leftover. Google owns YouTube.",
       mode: "visit",
-      match: "/github/"
+      match: "/twitter/"
     },
     {
       id: "fn-2010",
@@ -195,7 +195,13 @@
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
     "2020": yearVisitTour("2020",
       { path: "sites/zoom/meeting.html", label: "Zoom mute \u2192 Leave", blurb: "Star.", match: "/zoom/" },
-      { path: "sites/reels/index.html", label: "Reels 15s leftover", blurb: "Leftover.", match: "/reels/" })
+      { path: "sites/reels/index.html", label: "Reels 15s leftover", blurb: "Leftover.", match: "/reels/" }),
+    "2021": yearVisitTour("2021",
+      { path: "sites/att/index.html", label: "ATT Ask", blurb: "Star. Allow never writes.", match: "/att/" },
+      { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay leftover.", match: "/signal/" }),
+    "2022": yearVisitTour("2022",
+      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Star. Empty / Plus / GPT-4 never write.", match: "/chatgpt/" },
+      { path: "sites/twitter/index.html", label: "Twitter leftover", blurb: "Still Twitter. X is 2023.", match: "/twitter/" })
   };
 
   var TRAILS = {
@@ -210,7 +216,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2020; y++) {
+    for (y = 1994; y <= 2022; y++) {
       var ys = String(y);
       if (WIPED[ys]) continue;
       var steps = YEAR_STARTS[ys];
@@ -646,7 +652,7 @@
 
   function isLiveYear(year) {
     year = String(year || "");
-    if (!/^(199[4-9]|200[0-9]|201[0-9]|2020)$/.test(year)) return false;
+    if (!/^(199[4-9]|200[0-9]|201[0-9]|202[0-2])$/.test(year)) return false;
     return !WIPED[year];
   }
 
@@ -662,7 +668,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2020; y++) {
+    for (y = 1994; y <= 2022; y++) {
       if (WIPED[String(y)]) continue;
       years.push(String(y));
     }
@@ -751,7 +757,7 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2004 thefacebook → 2008 GitHub issue → 2010 Instagram." +
+        "1994 → 1998 Google → 2004 thefacebook → 2006 Twttr → 2010 Instagram." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
     }
     html += "</div></div>";

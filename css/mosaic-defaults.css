@@ -1,6 +1,7 @@
 /* 1994 browser default document rendering
    Simulates Mosaic / Netscape Navigator 1.0 page defaults.
    NOT a modern redesign. */
+@import url("itt-leftover-fold.css");
 
 .archive-residual[data-itt-capture-cite] {
   margin: 14px auto;

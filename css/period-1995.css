@@ -1,3 +1,4 @@
+@import url("itt-leftover-fold.css");
 /* H3 capture cite (also inherited by later period sheets that import this via 1996+) */
 .archive-residual[data-itt-capture-cite] {
   margin: 14px auto;

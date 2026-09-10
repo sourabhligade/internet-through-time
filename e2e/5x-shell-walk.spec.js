@@ -7,7 +7,7 @@ const { test, expect } = require('@playwright/test');
 
 const fs = require('fs');
 const path = require('path');
-const { enterYear, goInFrame, contentFrame, killOverlays } = require('./helpers');
+const { enterYear, goInFrame, contentFrame, killOverlays, isLiveYear } = require('./helpers');
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
 }
@@ -51,6 +51,7 @@ for (const yearPack of matrix.panel) {
   const f2 = yearPack.flows[1];
 
   test(`${year} shell F1 empty never writes · complete · Next → F2`, async ({ page }) => {
+    test.skip(!isLiveYear(year), year + ' boarded from visitor UI');
     await enterYear(page, year);
     await iframeClear(page, f1.key);
     await goInFrame(page, f1.room);

@@ -42,10 +42,13 @@
   function inSidePanel(el) {
     var n = el;
     while (n && n.nodeType === 1) {
+      if (n.className && /(^|\s)itt-also-year(\s|$)/.test(n.className)) return true;
       if (n.getAttribute) {
         if (n.getAttribute("data-lo-panel") === "1") return true;
         if (n.getAttribute("data-pop-panel") === "1") return true;
         if (n.hasAttribute("data-4x-panel")) return true;
+        if (n.getAttribute("data-5x-loop") != null) return true;
+        if (n.getAttribute("data-itt-lo3x") != null) return true;
       }
       n = n.parentNode;
     }
@@ -63,13 +66,17 @@
       var n = attrs[i].name || "";
       if (n.indexOf("data-") !== 0) continue;
       if (n.slice(-4) !== "-req") continue;
-      if (n === "data-lo-req" || n === "data-pop-req") continue;
+      if (n === "data-lo-req" || n === "data-pop-req" || n === "data-5x-req") continue;
       return true;
     }
     return false;
   }
 
   function productReqs(doc) {
+    var host = doc.querySelector("[data-official-verb-host]");
+    if (host) {
+      return Array.prototype.slice.call(host.querySelectorAll("[data-official-req]"));
+    }
     var all = doc.querySelectorAll("input[type='checkbox']");
     var out = [];
     var i;
@@ -88,13 +95,6 @@
         form.querySelector("input[required], textarea[required]") ||
         form.querySelector("input[type='text'], input[type='search'], input:not([type]), textarea");
       if (field && !inSidePanel(field)) return field;
-    }
-    var cands = doc.querySelectorAll(
-      "input[type='text'], input[type='search'], input:not([type]), textarea"
-    );
-    var i;
-    for (i = 0; i < cands.length; i++) {
-      if (!inSidePanel(cands[i])) return cands[i];
     }
     return null;
   }
@@ -122,7 +122,7 @@
         }
         this.className = (String(this.className || "") + " is-on").replace(/\s+/g, " ");
         this.setAttribute("aria-pressed", "true");
-        say(st, "Picked leftover.", false);
+        say(st, "Picked.", false);
       });
     }
 
@@ -170,7 +170,7 @@
           var picked = doc.querySelector('[data-official-pick="' + needPick + '"]');
           var on = picked && (/\bis-on\b/.test(picked.className || "") || picked.getAttribute("aria-pressed") === "true");
           if (!on) {
-            say(st, "Pick the leftover first. Incomplete never writes.", true);
+            say(st, "Pick first. Incomplete never writes.", true);
             return;
           }
         }

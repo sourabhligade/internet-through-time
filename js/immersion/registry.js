@@ -408,6 +408,14 @@
       "immersion/no-mock-common.js",
       "immersion/year-2020-extras.js",
       "immersion/one-thing-machines.js"
+    ],
+    "2021": [
+      "immersion/no-mock-common.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2022": [
+      "immersion/no-mock-common.js",
+      "immersion/one-thing-machines.js"
     ]
   };
 

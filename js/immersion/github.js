@@ -60,6 +60,7 @@
     var blob = {
       multiStep: true,
       real: true,
+      official: true,
       year: "2008",
       issues: issues.length,
       forked: !!(fork && fork.from),

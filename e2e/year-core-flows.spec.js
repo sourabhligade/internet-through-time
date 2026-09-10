@@ -23,13 +23,14 @@ const {
   exerciseStartMenu,
   goInFrame,
   waitForImmersion,
+  isLiveYear,
 } = require('./helpers');
 
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005', '2006',
   '2007', '2008', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2011', '2009', '2021', '2022',
-].filter((year) => fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')));
+].filter((year) => isLiveYear(year) && fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')));
 
 /** Location bar hint that should resolve inside each year (when known). */
 const LOCATION_HINT = {
@@ -60,6 +61,7 @@ const LOCATION_HINT = {
   '2018': { type: 'gdpr', re: /gdpr|cookie|consent|manage|banner/i },
   '2019': { type: 'disneyplus', re: /disney|who's watching|continue|trial/i },
   '2021': { type: 'att', re: /att|tracking|ask app|idfa/i },
+  '2022': { type: 'chatgpt', re: /chatgpt|send|prompt/i },
   '2023': { type: 'plus', re: /plus/i },
   '2024': { type: 'chatgpt', re: /4o/i },
   '2020': { type: 'zoom', re: /zoom/i },
@@ -129,7 +131,7 @@ for (const year of YEARS) {
 
     test(`Museum hub link leaves immersion (UX U2)`, async ({ page }) => {
       /* Spot-check a few years so suite stays fast; path is same pattern all years. */
-      test.skip(!['1995', '2004', '2008'].includes(year), 'spot-check only');
+      test.skip(!['1995', '2004', '2006'].includes(year), 'spot-check only');
       await enterYear(page, year);
       await killOverlays(page);
       const frame = contentFrame(page);

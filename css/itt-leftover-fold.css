@@ -1,0 +1,45 @@
+/**
+ * Hide leftover rails on first paint. leftover-official.js folds them
+ * into details.itt-also-year. Open the drawer to see leftover machines.
+ */
+[data-lo-panel],
+[data-itt-2x-links],
+[data-itt-3x-also]:not(details),
+[data-itt-3x-links],
+[data-itt-pop-more],
+[data-itt-pop-3x3],
+[data-itt-pop3x],
+[data-itt-lo3x],
+[data-5x-loop],
+[data-4x-panel],
+.itt-pop3,
+.itt-pop3x-flow,
+.itt-3x-also:not(details),
+.itt-3x-links,
+.itt-pop-more,
+.itt-pop-3x3,
+.itt-w2-official {
+  display: none;
+}
+details.itt-also-year {
+  display: block;
+}
+details.itt-also-year[open] [data-lo-panel],
+details.itt-also-year[open] [data-itt-2x-links],
+details.itt-also-year[open] [data-itt-3x-also],
+details.itt-also-year[open] [data-itt-3x-links],
+details.itt-also-year[open] [data-itt-pop-more],
+details.itt-also-year[open] [data-itt-pop-3x3],
+details.itt-also-year[open] [data-itt-pop3x],
+details.itt-also-year[open] [data-itt-lo3x],
+details.itt-also-year[open] [data-5x-loop],
+details.itt-also-year[open] [data-4x-panel],
+details.itt-also-year[open] .itt-pop3,
+details.itt-also-year[open] .itt-pop3x-flow,
+details.itt-also-year[open] .itt-3x-also,
+details.itt-also-year[open] .itt-3x-links,
+details.itt-also-year[open] .itt-pop-more,
+details.itt-also-year[open] .itt-pop-3x3,
+details.itt-also-year[open] .itt-w2-official {
+  display: block;
+}

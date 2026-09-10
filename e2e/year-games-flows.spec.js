@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
+const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame, isLiveYear } = require('./helpers');
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year)));
@@ -179,6 +179,7 @@ test.describe('year game flows — full matrix', () => {
   });
 
   test('2008 Goo Span: start fast writes score', async ({ page }) => {
+    test.skip(!isLiveYear('2008'), '2008 boarded from visitor UI');
     const frame = await openGame(page, '2008', '?fast=1', 'itt08');
     await frame.locator('[data-game-start]').click();
     await expect

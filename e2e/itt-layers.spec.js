@@ -7,8 +7,8 @@ const { test, expect } = require("@playwright/test");
 const { enterYear, contentFrame, killOverlays } = require("./helpers");
 
 test.describe("layer split — shell is the machine", () => {
-  test("2008 shell stamps machine", async ({ page }) => {
-    await enterYear(page, "2008");
+  test("2006 shell stamps machine", async ({ page }) => {
+    await enterYear(page, "2006");
     await expect(page.locator("body")).toHaveAttribute("data-itt-layer", "machine");
     await expect(page.locator("#itt-layer-legend")).toBeVisible();
     await expect(page.locator("#itt-layer-legend")).toContainText(/Machine/i);
@@ -36,7 +36,7 @@ test.describe("layer split — web vs game", () => {
   });
 
   test("shell Game chip navigates iframe to playables", async ({ page }) => {
-    await enterYear(page, "2008");
+    await enterYear(page, "2006");
     await killOverlays(page);
     const go = page.locator("#itt-layer-legend [data-itt-layer-go='sites/playable/index.html']");
     if (await go.count()) {

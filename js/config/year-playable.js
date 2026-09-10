@@ -330,5 +330,29 @@
       era: "Trap is highlighted.",
       famous: "Sus Vote",
       accent: "#1565c0"
+    },
+    "2021": {
+      id: "five",
+      title: "Five Letter",
+      href: "game.html",
+      key: "itt21-game-five",
+      inspire: "year game leftover",
+      blurb: "Leftover game. Wordle-as-2021-mass never writes gold.",
+      why: "The star stays ATT Ask.",
+      era: "Trap is highlighted.",
+      famous: "Five Letter",
+      accent: "#1565c0"
+    },
+    "2022": {
+      id: "prompt",
+      title: "Prompt Box",
+      href: "game.html",
+      key: "itt22-game-prompt",
+      inspire: "year game leftover",
+      blurb: "Leftover game. Wordle dest is leftover, not this cabinet.",
+      why: "The star stays ChatGPT Send.",
+      era: "Trap is highlighted.",
+      famous: "Prompt Box",
+      accent: "#10a37f"
     }};
 })(typeof window !== "undefined" ? window : this);

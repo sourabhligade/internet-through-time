@@ -333,13 +333,13 @@
 },
  "2021": {
  "href": "../sites/att/index.html",
- "label": "★ One-thing · ATT Ask REAL",
+ "label": "★ One-thing · Ask App Not to Track REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2021</a> — table ends 2018 · 1,197,982,359 Jan · ITU 4.9B / 63%",
- " <a href=\"../sites/att/index.html\" style=\"color:#90caf9\">★ ATT Ask</a> — Allow never writes",
- " <a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal</a> — not WhatsApp gold",
+ " <a href=\"about.html\" style=\"color:#90caf9\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
+ " <a href=\"../sites/att/index.html\" style=\"color:#90caf9\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
+ " <a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal leftover</a> — 15 May delay",
  " <a href=\"../sites/copilot/index.html\" style=\"color:#90caf9\">Copilot waitlist</a> — not ChatGPT",
- " <a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename</a> — app stays Facebook",
+ " <a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename leftover</a> — app still Facebook",
  " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
 },
@@ -383,7 +383,7 @@
  "href": "../sites/chatgpt/index.html",
  "label": "★ One-thing · ChatGPT Send REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2022</a> — table ends 2018 · 1,167,715,133 Jan · ITU 5.3B / 66%",
+ " <a href=\"about.html\" style=\"color:#90caf9\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
  " <a href=\"../sites/chatgpt/index.html\" style=\"color:#90caf9\">★ ChatGPT Send</a> — Plus never writes",
  " <a href=\"../sites/twitter/index.html\" style=\"color:#90caf9\">Twitter</a> — still Twitter",
  " <a href=\"../sites/wordle/index.html\" style=\"color:#90caf9\">Wordle</a> — NYT 31 Jan",

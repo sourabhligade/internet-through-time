@@ -6,7 +6,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, contentFrame, completeRealGate, leftoverOfficialDest } = require('./helpers');
+const { completeRealGate, leftoverOfficialDest, expectYearBoarded } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page
@@ -44,18 +44,11 @@ async function gotoReady(page, path, readySelector, keysToClear) {
  * ═══════════════════════════════════════════════════════════════════════ */
 
 test.describe('Flow A — Enter the year', () => {
-  test('hub → 2008 shell · dirbar P0 · Starting Point', async ({ page }) => {
+  test('hub card opens 2008 shell', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2008"]')).toBeVisible();
-    await enterYear(page, '2008');
+    await page.locator('a.year-card.available[href*="years/2008"]').click();
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2008');
     await expect(page.locator('#content')).toBeVisible();
-    await expect(page.locator('#location')).toBeVisible();
-    for (const label of ['App Store', 'iPhone', 'Chrome', 'Android', 'Hulu']) {
-      await expect(page.locator('#dirbar .dir-btn', { hasText: label })).toBeVisible();
-    }
-    const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/Starting Point|2008|App Store|Chrome/i);
   });
 });
 
@@ -578,22 +571,20 @@ test.describe('Flow T — Exit and resume', () => {
 
     // Exit ritual: leave year shell for hub (same as Exit / Shut Down)
     await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2008"]')).toBeVisible();
+    await expect(page.locator('a.year-card[href*="years/2008"]')).toHaveCount(0);
 
     // Resume: re-open product — storage survives (same origin)
     await page.goto('/years/2008/sites/appstore/index.html');
     const after = await page.evaluate(() => localStorage.getItem('itt08-apps'));
     expect(after).toBe(before);
 
-    // Shell still exposes Exit href for manual visitors
-    await enterYear(page, '2008');
-    const exitHref = await page.locator('a[href="../../index.html"]').first().getAttribute('href');
-    expect(exitHref).toBe('../../index.html');
+    await page.goto('/');
+    await expect(page.locator('a.year-card[href*="years/2008"]')).toHaveCount(0);
   });
 
-  test('hub card still available after exit', async ({ page }) => {
+  test('hub still has no 2008 card after dest exit', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card.available[href*="years/2008"]')).toBeVisible();
-    await expect(page.locator('body')).toContainText(/15 years open|1994–2008|App Store/i);
+    await expect(page.locator('a.year-card[href*="years/2008"]')).toHaveCount(0);
+    await expect(page.locator('body')).toContainText(/26 years open/i);
   });
 });

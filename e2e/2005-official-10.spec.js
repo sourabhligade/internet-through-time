@@ -53,6 +53,7 @@ async function completeLo(page, key) {
 test.describe("2005 official 10 · dest machines", () => {
   test("1 Upload empty / dating / Google-owned never write · ticks + title writes", async ({ page }) => {
     await openClear(page, "/years/2005/sites/youtube/upload.html", "itt05-yt-uploads");
+    expect(await getKey(page, "itt05-yt-uploads"), "land must not write the star").toBeFalsy();
     await page.locator("form[data-yt-upload] button[type='submit']").click();
     const empty = JSON.parse((await getKey(page, "itt05-yt-uploads")) || "[]");
     expect(Array.isArray(empty) ? empty.some((x) => x && /residual/i.test(x.title || "")) : false).toBeFalsy();

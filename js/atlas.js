@@ -9,7 +9,10 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  for (y = 1994; y <= 2020; y++) YEARS_ALL.push(String(y));
+  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
+  for (y = 1994; y <= 2022; y++) {
+    if (!WIPED[String(y)]) YEARS_ALL.push(String(y));
+  }
 
   var extra2x = {};
   var pop3x3 = {};
@@ -181,9 +184,9 @@
     if (extras && extras.length) {
       for (i = 0; i < extras.length; i++) {
         var eh = String(extras[i].href || "").replace(/^\//, "");
-        if (/^extra-/.test(eh) && year !== "2021") continue;
-        if (/^more-[ab]\.html$/.test(eh) && year !== "2021") continue;
-        if (/^more-[cd]\.html$/.test(eh) && year !== "2021" && year !== "2022") continue;
+        if (/^extra-/.test(eh)) continue;
+        if (/^more-[ab]\.html$/.test(eh)) continue;
+        if (/^more-[cd]\.html$/.test(eh) && year !== "2022") continue;
         out.push({
           label: extras[i].title || extras[i].id,
           href: "years/" + year + "/sites/playable/" + eh

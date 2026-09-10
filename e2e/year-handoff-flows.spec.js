@@ -347,6 +347,50 @@ const SIGNATURE = {
       await frame.locator('[data-dplus-continue]').click();
     },
   },
+  '2020': {
+    path: 'sites/zoom/meeting.html',
+    keySuffix: 'zoom',
+    body: /Zoom|Leave|participants/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      await frame.locator('[data-zoom-join]').click();
+      await frame.locator('[data-zoom-mute]').click();
+      await frame.locator('[data-zoom-chat]').fill('handoff 2020');
+      await frame.locator('[data-zoom-send]').click();
+      await frame.locator('[data-zoom-req]').nth(0).check({ force: true });
+      await frame.locator('[data-zoom-req]').nth(1).check({ force: true });
+      await frame.locator('[data-zoom-leave]').click();
+    },
+  },
+  '2021': {
+    path: 'sites/att/index.html',
+    keySuffix: 'att',
+    body: /Ask App Not to Track|Allow/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      const verb = frame.locator('[data-official-verb-host] [data-official-verb]');
+      await expect(verb).toBeVisible({ timeout: 15000 });
+      const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+      await verb.click({ force: true });
+    },
+  },
+  '2022': {
+    path: 'sites/chatgpt/index.html',
+    keySuffix: 'chatgpt',
+    body: /ChatGPT|Send|Plus/i,
+    act: async (page) => {
+      const frame = contentFrame(page);
+      const verb = frame.locator('[data-official-verb-host] [data-official-verb]');
+      await expect(verb).toBeVisible({ timeout: 15000 });
+      await frame.locator('[data-official-verb-host] [data-official-need]').fill('handoff 2022');
+      const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+      await verb.click({ force: true });
+    },
+  },
 };
 
 const YEARS = [
@@ -361,12 +405,14 @@ const YEARS = [
   '2002',
   '2003',
   '2004',
-  '2008',
   '2010',
   '2012',
   '2016',
   '2017',
   '2019',
+  '2020',
+  '2021',
+  '2022',
 ];
 
 /**

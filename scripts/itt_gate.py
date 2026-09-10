@@ -12,9 +12,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Hub-open years on disk. Branch museum/1994-2020-lean.
-# 2020 Zoom Leave is the last live door. 2021–2025 boarded · no year tree.
-_WIPED = {"2021", "2022", "2023", "2024", "2025"}
+# Hub-open years. Branch museum/1994-2020-lean.
+# 2021 ATT Ask + 2022 ChatGPT Send are live lean doors. 2009 boarded. 2023–2025 wiped.
+_WIPED = {"2009", "2023", "2024", "2025"}
 SHIP_YEARS: list[str] = [
     str(y) for y in list(range(1994, 2026)) if str(y) not in _WIPED
 ]

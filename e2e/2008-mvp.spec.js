@@ -1,11 +1,12 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, completeRealGate } = require('./helpers');
+const { completeRealGate } = require('./helpers');
 
 test.describe('2008 MVP', () => {
-  test('shell boots 2008', async ({ page }) => {
-    await enterYear(page, '2008');
+  test('hub card opens 2008 shell', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('a.year-card.available[href*="years/2008"]').click();
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2008');
     await expect(page.locator('#content')).toBeVisible();
   });

@@ -136,6 +136,14 @@
           }
         }
       }
+      if (!document.querySelector(".itt-hub-exit") && document.body) {
+        var hub = document.createElement("p");
+        hub.className = "itt-hub-exit";
+        hub.style.cssText = "font-size:11px;margin:12px 0 4px;padding-top:8px;border-top:1px solid #999;color:#333";
+        hub.innerHTML =
+          ' <a href="../../../index.html" target="_top"><b>← Museum hub</b></a> · or use desktop <b>Exit</b>/ window Close';
+        document.body.appendChild(hub);
+      }
       if (year === "2001" || year === "2002" || year === "2003") {
         var freezeId = "itt-leftover18-" + year + "-dp";
         if (!document.getElementById(freezeId) && host.parentNode) {
@@ -159,19 +167,21 @@
   }
 
   function playableChipHtml(year) {
-    var html =
-      "<b>▶ Play this year’s games</b> — " +
-      '<a href="../sites/playable/famous.html">Famous games</a>';
-    if (year !== "2007" && year !== "2009") {
-      html +=
-        ' · <a href="../sites/playable/extra-a.html">extra-a</a>' +
-        ' · <a href="../sites/playable/extra-b.html">extra-b</a>' +
-        ' · <a href="../sites/playable/more-a.html">more-a</a>' +
-        ' · <a href="../sites/playable/more-b.html">more-b</a>';
-    } else {
-      html += ' · <a href="../sites/playable/game.html">year cabinet</a>';
+    var leanCabinet = year === "2007" || year === "2009" || year === "2018" || year === "2020" || year === "2021" || year === "2022";
+    if (leanCabinet) {
+      return (
+        "<b>▶ Play this year’s games</b> — " +
+        '<a href="../sites/playable/game.html">year cabinet</a>'
+      );
     }
-    return html;
+    return (
+      "<b>▶ Play this year’s games</b> — " +
+      '<a href="../sites/playable/famous.html">Famous games</a>' +
+      ' · <a href="../sites/playable/extra-a.html">extra-a</a>' +
+      ' · <a href="../sites/playable/extra-b.html">extra-b</a>' +
+      ' · <a href="../sites/playable/more-a.html">more-a</a>' +
+      ' · <a href="../sites/playable/more-b.html">more-b</a>'
+    );
   }
 
   function threeXRow(year) {

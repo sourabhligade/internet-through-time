@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const matrix = require("./2x-links.matrix.json");
@@ -45,6 +46,7 @@ async function completeLo(page, destPath, key) {
     localStorage.removeItem("itt06-tweets");
   }, key);
   await page.reload();
+  await revealLeftoverRails(page);
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
   await lo.locator("[data-lo-save]").waitFor({ timeout: 20000 });
   await page.waitForFunction(

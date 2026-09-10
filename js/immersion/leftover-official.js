@@ -255,11 +255,15 @@
     }
   }
 
-  /* Visitor face is the dest. Leftover writers stay on disk, in Also this year. */
+  /* Leftover-note plaques only. Dest-true official period controls stay on dest. */
   function leftoverNoteNodes(doc) {
     var out = [];
     var i;
     var el;
+    var destKey = "";
+    try {
+      destKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
+    } catch (eK) { /* */ }
     var els = doc.querySelectorAll(".itt-w2-official, p, label");
     for (i = 0; i < els.length; i++) {
       el = els[i];
@@ -271,12 +275,17 @@
         continue;
       }
       if (
+        destKey &&
+        el.querySelector &&
+        el.querySelector("[data-official-verb], [data-official-need], [data-official-req]")
+      ) {
+        continue;
+      }
+      if (
         el.querySelector &&
         (el.querySelector("[data-official-need]") ||
           el.querySelector("[data-official-req]") ||
-          el.querySelector("[data-official-trap]") ||
-          el.querySelector("[data-official-verb]") ||
-          el.querySelector("[data-official-status]"))
+          el.querySelector("[data-official-verb]"))
       ) {
         out.push(el);
       }
@@ -296,7 +305,7 @@
   function foldLeftoverRails(doc) {
     doc = doc || document;
     var nodeList = doc.querySelectorAll(
-      "[data-itt-2x-links], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-lo-panel], [data-4x-panel], .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-pop-more, .itt-pop-3x3"
+      "[data-itt-2x-links], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-pop-more, .itt-pop-3x3"
     );
     var extra = leftoverNoteNodes(doc);
     var nodes = [];

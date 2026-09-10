@@ -1,6 +1,30 @@
 // @ts-check
 /** Shared helpers for year-shell immersion e2e tests */
 
+/** Boarded from the visitor UI. Trees stay on disk; year-shell index redirects. */
+const BOARDED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
+
+function isLiveYear(year) {
+  return !BOARDED_YEARS.has(String(year));
+}
+
+/**
+ * Boarded year: no hub card, year-shell index bounces to hub.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} year
+ */
+async function expectYearBoarded(page, year) {
+  const { expect } = require('@playwright/test');
+  const y = String(year);
+  await page.goto('/');
+  await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
+  await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
+  await page.goto(`/years/${y}/`);
+  await expect(page).toHaveURL(/\/(index\.html)?$/);
+  await expect(page.locator('body')).toContainText(/28 years open/i);
+  await expect(page.locator('#dirbar')).toHaveCount(0);
+}
+
 /**
  * Kill connect overlay + modal backdrop that intercept clicks.
  * @param {import('@playwright/test').Page} page
@@ -12,11 +36,21 @@
  */
 /** Open folded leftover rails so dest-minute tests can still click them. */
 async function revealLeftoverRails(page) {
-  await page.evaluate(() => {
+  const open = () => {
     const list = document.querySelectorAll("details.itt-also-year");
     let i;
     for (i = 0; i < list.length; i++) list[i].open = true;
-  });
+  };
+  await page.evaluate(open);
+  const frames = page.frames();
+  let f;
+  for (f = 0; f < frames.length; f++) {
+    try {
+      await frames[f].evaluate(open);
+    } catch (e) {
+      /* cross-origin */
+    }
+  }
 }
 
 async function killOverlays(page) {
@@ -39,6 +73,9 @@ async function killOverlays(page) {
  * @param {string} year
  */
 async function enterYear(page, year) {
+  if (!isLiveYear(year)) {
+    throw new Error(year + ' boarded — year shell redirects; use a dest URL or expectYearBoarded');
+  }
   await page.goto(`/years/${year}/`);
   const skip = page.locator('#skip-connect');
   if (await skip.isVisible().catch(() => false)) {
@@ -679,6 +716,9 @@ async function leftoverOfficialDest(page, href, suffix, goldKey) {
 }
 
 module.exports = {
+  BOARDED_YEARS,
+  isLiveYear,
+  expectYearBoarded,
   enterYear,
   goInFrame,
   waitForImmersion,

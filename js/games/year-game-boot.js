@@ -178,7 +178,19 @@
       var year = host.getAttribute("data-year") || yearOf();
       var id = host.getAttribute("data-game-id") || gameId;
       if (!year) return;
-      var blob = saveBest(id, score, { year: year });
+      var extra = { year: year };
+      var officialKey = "";
+      try {
+        officialKey =
+          (document.documentElement && document.documentElement.getAttribute("data-official-key")) || "";
+      } catch (eK) {
+        officialKey = "";
+      }
+      if (officialKey) {
+        extra.key = officialKey;
+        extra.merge = { official: true, multiStep: true };
+      }
+      var blob = saveBest(id, score, extra);
       var bestEl = document.querySelector("[data-game-best]");
       if (bestEl) bestEl.textContent = String(blob.best);
       setStatus(null, "Run saved · score " + score + " · best " + blob.best);

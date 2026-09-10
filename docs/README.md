@@ -1,6 +1,6 @@
 # Docs — Internet Through Time
 
-Play **27 years** from the hub (`index.html`). Lean doors: **2007 / 2009 / 2011 / 2013–2020.** **2013** is Vine 6s. **2018** is GDPR Manage. **2020** is Zoom Leave. **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
+Play **28 years** from the hub (`index.html`). Lean doors: **2007 / 2011 / 2013–2022.** **2009 boarded** (trees stay · year-shell redirects · no year card). **2013** is Vine 6s. **2018** is GDPR Manage. **2020** is Zoom Leave. **2021** is ATT Ask. **2022** is ChatGPT Send. **2005** is a full YouTube-upload year. 2001–2003 are criteria forests.
 
 **Bar A 100% (ship):** dests, keys, official 10, gold, guided 6, and HTML cap in the year’s *current* READ-FIRST / map match the live tree.  
 **Bar B** (museum-grade feel) is leftover costume / leftover verbs / optional stills. L4 pixels stay outside both bars.
@@ -32,7 +32,7 @@ If a paragraph’s hub range is not **1994–2020**, it is a notebook. Live tree
 
 ## Ship law
 
-Live tree + hub + `SHIP_YEARS` = **27 years** (1994–2020). Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
+Live tree + hub + `SHIP_YEARS` = **28 years** (1994–2008 + 2010–2022). **2009 boarded.** Official 10 dests live in `js/config/flow-trails.js` — year maps must not invent a second list.
 
 ## Live-year locks
 
@@ -40,7 +40,8 @@ Live tree + hub + `SHIP_YEARS` = **27 years** (1994–2020). Official 10 dests l
 |------|------------------|------|
 | 2005 | [`2005-READ-FIRST.md`](2005-READ-FIRST.md) | YouTube upload `itt05-yt-uploads` |
 | 2006 | [`2006-READ-FIRST.md`](2006-READ-FIRST.md) · [`2006-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2006-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Twitter 140 `itt06-tweets` |
-| 2009 | [`2009-READ-FIRST.md`](2009-READ-FIRST.md) | Facebook Like `itt09-like` |
+| 2007 | [`2007-READ-FIRST.md`](2007-READ-FIRST.md) · [`2007-DEST-TRUE-UNIQUE-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2007-DEST-TRUE-UNIQUE-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2007-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2007-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2007-NEW-UNIQUE-WEBSITES-LEFTOVER-2026-09-10.md`](2007-NEW-UNIQUE-WEBSITES-LEFTOVER-2026-09-10.md) | iPhone Safari `itt07-iphone` |
+| 2009 | [`2009-READ-FIRST.md`](2009-READ-FIRST.md) | **Boarded** — Facebook Like `itt09-like` (tree only) |
 | 2010 | [`2010-READ-FIRST.md`](2010-READ-FIRST.md) | Instagram iOS `itt10-ig` |
 | 2011 | [`2011-READ-FIRST.md`](2011-READ-FIRST.md) · [`2011-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2011-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Google+ `itt11-gplus` |
 | 2012 | [`2012-READ-FIRST.md`](2012-READ-FIRST.md) | IG Android `itt12-ig-android` |
@@ -53,16 +54,26 @@ Live tree + hub + `SHIP_YEARS` = **27 years** (1994–2020). Official 10 dests l
 | 2019 | [`2019-READ-FIRST.md`](2019-READ-FIRST.md) | Disney+ Continue `itt19-disneyplus` |
 | 2020 | [`2020-READ-FIRST.md`](2020-READ-FIRST.md) | Zoom Leave `itt20-zoom` |
 
-Named shortfall cut (2024 pick · passport · hub copy · leftover-official matrix): [`SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md) — **stale hub range** (still says 31 years). Live tree is 27 years.
+Named shortfall cut (2024 pick · passport · hub copy · leftover-official matrix): [`SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md) — **stale hub range** (still says 31 years). Live tree is 27 years (2009 boarded · 2021 live lean ATT).
 
 Improve-more research + pickable options (2026-09-10): [`1994-2020-IMPROVE-MORE-RESEARCH-OPTIONS-2026-09-10.md`](1994-2020-IMPROVE-MORE-RESEARCH-OPTIONS-2026-09-10.md). **Option 1 + Option 2 implemented** (KEEP Next chain + home leftover-3× after `#itt-year-start`). Options 3–7 still unpicked.
 
 
-1994–2004 and 2008 use `YYYY-MUSEUM-GRADE.md` + `flow-trails.js`. No READ-FIRST required.
+1994–2004 use `YYYY-MUSEUM-GRADE.md` + `flow-trails.js`. No READ-FIRST required.
+
+**1994–2000 dest-true leftover-note DONE (2026-09-10):** [`1994-2000-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](1994-2000-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`1994-2000-CHECK-EVERY-FLOW-MAP-2026-09-10.md`](1994-2000-CHECK-EVERY-FLOW-MAP-2026-09-10.md). 19 leftover-note official dests dest-true. Warehouse unique. Leftover 2× **not this cut**. Dest freeze holds.
+
+**2011–2016 2× leftover dests (research only 2026-09-10):** [`2011-2016-2X-UNIQUE-LEFTOVER-DESTS-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2011-2016-2X-UNIQUE-LEFTOVER-DESTS-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md). Official 10 frozen. Need **+152** unique leftover dests (69 promote on-disk + 83 new folders). Do not dest-farm unnamed dests.
+
+**2008 DONE** (2026-09-10): [`2008-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2008-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2008-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2008-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2008-5K-WEB-FLOW-MAP-2026-09-10.md`](2008-5K-WEB-FLOW-MAP-2026-09-10.md) · [`2008-NEW-UNIQUE-WEBSITES-RESEARCH-2026-09-10.md`](2008-NEW-UNIQUE-WEBSITES-RESEARCH-2026-09-10.md) · [`2008-CHECK-EVERY-FLOW-MAP.md`](2008-CHECK-EVERY-FLOW-MAP.md). Dest freeze **199**. 5k = ILS June envelope. Do not dest-farm. Do not un-board unless named.
 
 ## After 2020 — not on the hub
 
-2021–2025 have no year cards, no atlas doors, and no year trees. Rebuild only when named.
+2022–2025 have no year cards, no atlas doors, and no year trees. Rebuild only when named.
+
+**2022 CUT-OPEN shipped (2026-09-10):** [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · [`2022-MAP-DEST-TRUE-UNIQUE-2026-09-10.md`](2022-MAP-DEST-TRUE-UNIQUE-2026-09-10.md) · [`2022-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2022-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2022-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2022-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2022-5K-WEB-FLOW-MAP-2026-09-10.md`](2022-5K-WEB-FLOW-MAP-2026-09-10.md) · [`2022-CHECK-EVERY-FLOW-MAP-2026-09-10.md`](2022-CHECK-EVERY-FLOW-MAP-2026-09-10.md). Star named ChatGPT Send. Dest freeze **15** (match 2020 / 2021). Leftover **2×** on every dest. ILS June 2022 websites cell **does not exist**. Dest freeze **15**. Unique vs 2021. Do not dest-farm stale 61-dest dumps.
+
+**2021 CUT-OPEN shipped (2026-09-10):** [`2021-READ-FIRST.md`](2021-READ-FIRST.md) · [`2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2021-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md) · [`2021-5K-WEB-FLOW-MAP-2026-09-10.md`](2021-5K-WEB-FLOW-MAP-2026-09-10.md) · [`2021-CHECK-EVERY-FLOW-MAP-2026-09-10.md`](2021-CHECK-EVERY-FLOW-MAP-2026-09-10.md). Star ATT Ask `itt21-att`. Dest freeze **15**. Leftover **2×** on every dest. ILS June 2021 websites cell **does not exist**.
 
 ## Ops
 

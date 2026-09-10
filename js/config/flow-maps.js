@@ -3345,5 +3345,41 @@
           { name: "10 Sus Vote", href: "sites/playable/game.html", do: "itt20-game-among" }
         ] }]
   };
+
+  ITT.flowMaps["2021"] = {
+    thesis: "2021 is when the phone asks first \u2014 Ask App Not to Track is the save, Allow never writes, and ChatGPT dest never.",
+    year: "2021",
+    how: ["2021 is when the phone asks first \u2014 Ask App Not to Track is the save, Allow never writes, and ChatGPT dest never."],
+    branches: [{ label: "★ Official 10", do: "Star stays.", sites: [
+          { name: "1 ATT Ask", href: "sites/att/index.html", do: "itt21-att" },
+          { name: "2 Signal leftover", href: "sites/signal/index.html", do: "itt21-signal" },
+          { name: "3 Copilot waitlist", href: "sites/copilot/index.html", do: "itt21-copilot" },
+          { name: "4 Meta rename leftover", href: "sites/meta/index.html", do: "itt21-meta" },
+          { name: "5 Windows 11 leftover", href: "sites/windows11/index.html", do: "itt21-win11" },
+          { name: "6 Flash brick", href: "sites/flash/index.html", do: "itt21-flash-brick" },
+          { name: "7 Chrome habit", href: "sites/chrome/index.html", do: "itt21-chrome" },
+          { name: "8 Windows 10 residual", href: "sites/windows10/index.html", do: "itt21-win10" },
+          { name: "9 Facebook leftover", href: "sites/facebook/index.html", do: "itt21-pop-facebook" },
+          { name: "10 Five Letter", href: "sites/playable/game.html", do: "itt21-game-five" }
+        ] }]
+  };
+
+  ITT.flowMaps["2022"] = {
+    thesis: "2022 is when you type a prompt and hit Send \u2014 ChatGPT Send is the save, empty / Plus / GPT-4 never write, and dest stays Twitter.",
+    year: "2022",
+    how: ["2022 is when you type a prompt and hit Send \u2014 ChatGPT Send is the save, empty / Plus / GPT-4 never write, and dest stays Twitter."],
+    branches: [{ label: "★ Official 10", do: "Star stays.", sites: [
+          { name: "1 ChatGPT Send", href: "sites/chatgpt/index.html", do: "itt22-chatgpt" },
+          { name: "2 Twitter leftover", href: "sites/twitter/index.html", do: "itt22-twitter" },
+          { name: "3 Wordle leftover", href: "sites/wordle/index.html", do: "itt22-wordle" },
+          { name: "4 Stable Diffusion leftover", href: "sites/stablediffusion/index.html", do: "itt22-sd" },
+          { name: "5 Mastodon leftover", href: "sites/mastodon/index.html", do: "itt22-mastodon" },
+          { name: "6 BeReal leftover", href: "sites/bereal/index.html", do: "itt22-bereal" },
+          { name: "7 DALL·E 2 leftover", href: "sites/dalle2/index.html", do: "itt22-dalle2" },
+          { name: "8 Copilot GA leftover", href: "sites/copilotga/index.html", do: "itt22-copilotga" },
+          { name: "9 Chrome habit", href: "sites/chrome/index.html", do: "itt22-chrome" },
+          { name: "10 Prompt Box", href: "sites/playable/game.html", do: "itt22-game-prompt" }
+        ] }]
+  };
 })(typeof window !== "undefined" ? window : this);
 

@@ -20,7 +20,7 @@ async function twoStepClick(page, selector) {
   await el.click();
 }
 
-const { enterYear, contentFrame, waitForImmersion, goInFrame, goImmersion } = require('./helpers');
+const { enterYear, contentFrame, waitForImmersion, goInFrame, goImmersion, isLiveYear } = require('./helpers');
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
 }
@@ -263,6 +263,7 @@ test.describe('all-years signature REAL · late web', () => {
   });
 
   test('2008 GitHub issue → itt08-github', async ({ page }) => {
+    test.skip(!isLiveYear('2008'), '2008 boarded from visitor UI');
     await enterYear(page, '2008');
     await clearPrefix(page, 'itt08-github');
     await goImmersion(page, '2008', 'sites/github/issue.html');

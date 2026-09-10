@@ -1,10 +1,68 @@
 # 2008 — check every flow
 
-**Date:** 2026-09-06  
+**Date:** 2026-09-10  
 **Prefix** `itt08` · star **GitHub issue** `itt08-github`  
+**Door:** **live** (2026-09-10). Hub card · XP+IE7.  
+**Dest-true unique research:** [`2008-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2008-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
+**Every flow minutes:** [`2008-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2008-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
+**5k walk:** [`2008-5K-WEB-FLOW-MAP-2026-09-10.md`](2008-5K-WEB-FLOW-MAP-2026-09-10.md)  
 **Dest minutes:** [`2008-CUT-DOUBLE-DEST-MINUTES-2026-09-06.md`](2008-CUT-DOUBLE-DEST-MINUTES-2026-09-06.md)  
 **Official 10:** `js/config/flow-trails.js` `"2008"` n=1–10  
 **Leftover trail:** same file n=11–20
+
+---
+
+## Year card — locked vs leftover (boarded)
+
+```mermaid
+flowchart TB
+  HUB["Hub · no y2008 card"] --> BOUNCE["/years/2008/ bounce"]
+  DEST["Typed dest URL"] --> SP[Starting Point dests]
+  subgraph locked [Locked — dest-true later]
+    G["★ GitHub issue · itt08-github"]
+    OL["Guided 6"]
+    OFF["Official 10"]
+  end
+  subgraph leftover [Leftover — never the star]
+    L3["Leftover-3× 9+9+9"]
+    L2["Leftover 2× / 4×"]
+  end
+  SP --> G
+  SP --> OL
+  SP --> OFF
+  SP --> L3
+  SP --> L2
+```
+
+## Official 10 Next chain
+
+```mermaid
+flowchart LR
+  N1["1 GitHub issue"] --> N2["2 App Store"]
+  N2 --> N3["3 Chrome"]
+  N3 --> N4["4 Android G1"]
+  N4 --> N5["5 Hulu"]
+  N5 --> N6["6 Facebook"]
+  N6 --> N7["7 Twitter leftover"]
+  N7 --> N8["8 YouTube leftover"]
+  N8 --> N9["9 Dropbox"]
+  N9 --> N10["10 iPhone 3G"]
+  N10 --> N2
+```
+
+## Official dest minute (named implement later)
+
+```mermaid
+flowchart LR
+  A[Land dest] --> B{What they do}
+  B -->|Play Store / Chrome-as-January / Like / 3GS| T[Trap · never writes]
+  B -->|empty / 0 ticks| I[Incomplete · never writes]
+  B -->|period control + honesty| C[Complete official JSON]
+  C --> K["official:true year:2008"]
+  C --> NG["itt07-iphone empty · itt09-like empty"]
+  C --> NX[Next dest HTTP 200]
+```
+
 
 Clear every `itt08-*` before you start. After each complete, only `itt08-*` may appear. No `itt07-*`. No `itt09-*`.
 

@@ -113,7 +113,7 @@
         return;
       }
       if (needPick && picked !== needPick) {
-        say(st, "Pick the leftover product row first. Incomplete never writes.", true);
+        say(st, "Pick the product row first. Incomplete never writes.", true);
         return;
       }
       if (r.need && r.have < r.need) {

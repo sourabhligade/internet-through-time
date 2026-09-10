@@ -1,14 +1,17 @@
 # 2007 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-09-01  
-**Status:** **live lean door** (2026-09-01). Follow this lock. Do **not** `git checkout` an old 2007 forest.  
+**Status:** **DONE** (2026-09-10). Live lean door. Dest-true official 10. First-board 27 unique leftover dests. Dest freeze **82**. Follow this lock. Do **not** `git checkout` an old 2007 forest.  
 **Criteria:** [`2007-2X-CRITERIA-MAP-2026-09-01.md`](2007-2X-CRITERIA-MAP-2026-09-01.md)  
 **2× leftover:** [`2007-2X-LEFTOVER-RESEARCH-2026-09-01.md`](2007-2X-LEFTOVER-RESEARCH-2026-09-01.md)  
 **Dest minutes:** [`2007-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-01.md`](2007-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-01.md)  
 **Harvest:** [`2007-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md`](2007-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-01.md)  
 **Visitor map:** [`2007-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2007-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
+**Dest-true unique map (2026-09-10):** [`2007-DEST-TRUE-UNIQUE-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2007-DEST-TRUE-UNIQUE-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
+**New unique leftover dests (first board 27):** [`2007-NEW-UNIQUE-WEBSITES-LEFTOVER-2026-09-10.md`](2007-NEW-UNIQUE-WEBSITES-LEFTOVER-2026-09-10.md)  
+**Every flow (goals · phases · dest minutes):** [`2007-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2007-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
 **Check every flow:** [`2007-CHECK-EVERY-FLOW-MAP.md`](2007-CHECK-EVERY-FLOW-MAP.md)  
-**Parent (live):** 2006 Twttr. **Child (live):** 2008 GitHub issue.  
+**Parent (live):** 2006 Twttr. **Child:** 2008 GitHub issue (**boarded**).  
 **Git only if asked.**
 
 ## One line

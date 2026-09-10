@@ -91,7 +91,11 @@
     } catch (e) {
       path = "";
     }
-    if (path.indexOf("/sites/") !== -1 || /\/pages\//.test(path)) {
+    if (/\/sites\/[^/]+\//.test(path)) {
+      if (rel.indexOf("sites/") === 0 || rel.indexOf("pages/") === 0) return "../../" + rel;
+      return rel;
+    }
+    if (path.indexOf("/pages/") !== -1) {
       if (rel.indexOf("sites/") === 0 || rel.indexOf("pages/") === 0) return "../" + rel;
       return rel;
     }

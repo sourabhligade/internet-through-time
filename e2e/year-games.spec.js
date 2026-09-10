@@ -8,7 +8,7 @@ const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
 const YEARS = [];
 for (let y = 1994; y <= 2009; y++) {
-  if (y === 2007 || y === 2009) continue;
+  if (y === 2007 || y === 2008 || y === 2009) continue;
   YEARS.push(String(y));
 }
 

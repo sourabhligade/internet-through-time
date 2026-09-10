@@ -14,7 +14,7 @@ function skipIfWiped(year) {
   test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
 }
 
-const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame } = require('./helpers');
+const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame, isLiveYear } = require('./helpers');
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year)));
@@ -35,7 +35,6 @@ const GAMES = [
   { year: '2004', prefix: 'itt04', gameId: 'gemcascade', key: 'itt04-game-gemcascade', kind: 'score-end' },
   { year: '2005', prefix: 'itt05', gameId: 'heli', key: 'itt05-game-heli', kind: 'score-end' },
   { year: '2006', prefix: 'itt06', gameId: 'sled', key: 'itt06-game-sled', kind: 'score-end' },
-  { year: '2008', prefix: 'itt08', gameId: 'goospan', key: 'itt08-game-goospan', kind: 'score-end' },
 ];
 
 /**
@@ -64,7 +63,7 @@ async function clearPrefixGames(page, prefix) {
  * @param {string} [q]
  */
 async function openGame(page, year, q) {
-  test.skip(!yearOnDisk(year), year + ' not on disk');
+  test.skip(!isLiveYear(year) || !yearOnDisk(year), year + ' boarded');
   await enterYear(page, year);
   await goImmersion(page, year, 'sites/playable/game.html' + (q || ''));
   await killOverlays(page);
@@ -373,6 +372,7 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2008 goo span writes best via start fast', async ({ page }) => {
+    test.skip(!isLiveYear('2008'), '2008 boarded from visitor UI');
     await enterYear(page, '2008');
     await clearPrefixGames(page, 'itt08');
     const frame = await openGame(page, '2008', '?fast=1');

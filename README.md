@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **27 years open** (1994–2020). 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2007 star = iPhone Safari. 2009 star = Facebook Like. 2011 star = Google+ Hangout. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2018 star = GDPR Manage. 2019 star = Disney+ Continue. 2020 star = Zoom Leave.
+Historical reconstruction of the World Wide Web — year by year. Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay on disk · year-shell index redirects · no year card). 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2011 star = Google+ Hangout. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2018 star = GDPR Manage. 2019 star = Disney+ Continue. 2020 star = Zoom Leave. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -87,7 +87,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2006/` | Twttr update · leftover 2× + leftover 4× · XP+IE6 · **live** |
 | `/years/2007/` | Lean door — iPhone Safari `itt07-iphone` · leftover 2× + leftover 4× · XP+IE6 |
 | `/years/2008/` | GitHub issue · leftover 2× + leftover 4× · App Store leftover · **ship** |
-| `/years/2009/` | Lean door — Facebook Like `itt09-like` · leftover 2× + leftover 4× · XP+IE8 |
+| `/years/2009/` | **Boarded** — tree stays · year-shell redirects to hub · no year card |
 | `/years/2010/` | Win7 · IE 8 · Instagram iOS · leftover 2× + leftover 4× · **lean** |
 | `/years/2011/` | Lean door — Google+ Hangout `itt11-gplus` · leftover 2× every dest · Win7+IE9 |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
@@ -101,7 +101,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2020/` | **Live lean door** — Zoom mute → Leave `itt20-zoom` · leftover 2× ×2 · leftover-4× **0** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2009 + 2011 + 2013–2020. Hub is **27 years open** (1994–2020). 2013 star = Vine 6s. 2018 star = GDPR Manage. 2020 star = Zoom Leave.
+**Lean doors:** 2007 + 2011 + 2013–2022. Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** 2013 star = Vine 6s. 2018 star = GDPR Manage. 2020 star = Zoom Leave. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md) · residual: [`docs/NON-DONE.md`](docs/NON-DONE.md).  
 **Capture-backed dest improve:** [`docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md`](docs/CAPTURE-BACKED-YEAR-IMPROVE-IMPLEMENTATION-PHASES-1994-2018.md).  

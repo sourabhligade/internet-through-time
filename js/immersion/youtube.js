@@ -60,6 +60,7 @@
           title: title,
           multiStep: true,
           real: true,
+          official: true,
           year: String(yearNum()),
           ts: Date.now()
         })
@@ -178,19 +179,21 @@
   function saveViews(map) {
     localStorage.setItem(viewsKey(), JSON.stringify(map));
   }
-  function seed(doc) {
-    var list = load();
-    if (list && list.length) return list;
-    list = [
+  function sampleClips() {
+    return [
       { title: "Me at the zoo", desc: "jawed · early public beta lore", id: "zoo" },
       { title: "Lazy Sunday vibes", desc: "sample clip · no real file", id: "lazy" },
       { title: "My first upload", desc: "session sample", id: "demo" }
     ];
-    /* Leftover dests (watch / list) may paint samples. Only the gold upload dest persists the star. */
+  }
+  function seed(doc) {
+    var list = load();
+    if (list && list.length) return list;
+    /* Samples paint leftover watch/list only. Land on upload never writes the star. */
     if (doc && doc.querySelector && doc.querySelector("[data-yt-upload]")) {
-      save(list);
+      return [];
     }
-    return list;
+    return sampleClips();
   }
   function qs(doc, name) {
     try {
@@ -324,10 +327,18 @@
         var desc = (descInput && descInput.value) || "";
         title = String(title).replace(/^\s+|\s+$/g, "");
         var st = doc.querySelector("[data-yt-upload-status]");
-        /* REAL gate: empty title must not invent "Untitled" mock success */
-        if (!title) {
+        /* REAL gate: empty / 1-char title must not invent "Untitled" mock success */
+        if (!title || title.length < 2) {
           if (st) {
             st.innerHTML = "Enter a title to upload (no blank clips).";
+            st.classList.add("itt-ux-need-attention");
+          }
+          return false;
+        }
+        desc = String(desc || "").replace(/^\s+|\s+$/g, "");
+        if (yearNum() === 2005 && !desc) {
+          if (st) {
+            st.innerHTML = "Add tags. Empty never writes.";
             st.classList.add("itt-ux-need-attention");
           }
           return false;
@@ -347,8 +358,18 @@
             return false;
           }
         }
-        var cur = load() || seed(doc);
-        cur.unshift({ title: title, desc: desc, id: "u" + Date.now(), ts: Date.now() });
+        var cur = load();
+        if (!cur || !cur.length) cur = [];
+        cur.unshift({
+          title: title,
+          desc: desc,
+          id: "u" + Date.now(),
+          ts: Date.now(),
+          real: true,
+          official: true,
+          multiStep: true,
+          year: String(yearNum())
+        });
         save(cur.slice(0, 40));
         views = loadViews();
         if (!views[title]) views[title] = 1;

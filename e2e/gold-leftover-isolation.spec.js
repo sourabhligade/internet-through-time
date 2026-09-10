@@ -5,6 +5,7 @@
  * It must not write the year star. Leftover key must not equal the star suffix.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails, isLiveYear } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 
@@ -27,15 +28,19 @@ const GOLD = [
   { year: "2006", dest: "sites/twitter/index.html", star: "itt06-tweets" },
   { year: "2007", dest: "sites/iphone/index.html", star: "itt07-iphone" },
   { year: "2008", dest: "sites/github/issue.html", star: "itt08-github" },
-  { year: "2009", dest: "sites/facebook/index.html", star: "itt09-like" },
   { year: "2010", dest: "sites/instagram/index.html", star: "itt10-ig" },
   { year: "2011", dest: "sites/googleplus/index.html", star: "itt11-gplus" },
   { year: "2012", dest: "sites/instagram/android.html", star: "itt12-ig-android" },
   { year: "2013", dest: "sites/vine/record.html", star: "itt13-vine-posts" },
+  { year: "2014", dest: "sites/whatsapp/index.html", star: "itt14-wa-install" },
   { year: "2015", dest: "sites/periscope/index.html", star: "itt15-periscope" },
   { year: "2016", dest: "sites/instagram/stories.html", star: "itt16-ig-stories" },
   { year: "2017", dest: "sites/iphone/x.html", star: "itt17-faceid" },
+  { year: "2018", dest: "sites/gdpr/index.html", star: "itt18-gdpr" },
   { year: "2019", dest: "sites/disneyplus/home.html", star: "itt19-disneyplus" },
+  { year: "2020", dest: "sites/zoom/meeting.html", star: "itt20-zoom" },
+  { year: "2021", dest: "sites/att/index.html", star: "itt21-att" },
+  { year: "2022", dest: "sites/chatgpt/index.html", star: "itt22-chatgpt" },
 ];
 
 async function getKey(page, key) {
@@ -46,7 +51,8 @@ test.describe("gold leftover isolation · every live year", () => {
   test("table covers every live year on disk", () => {
     const years = GOLD.map((g) => g.year);
     const live = [];
-    for (let y = 1994; y <= 2019; y++) {
+    for (let y = 1994; y <= 2022; y++) {
+      if (!isLiveYear(String(y))) continue;
       if (fs.existsSync(path.join(ROOT, "years", String(y), "index.html"))) live.push(String(y));
     }
     expect(years.sort()).toEqual(live.sort());
@@ -62,6 +68,7 @@ test.describe("gold leftover isolation · every live year", () => {
       expect(fs.existsSync(destFile), g.dest).toBe(true);
 
       await page.goto(`/years/${g.year}/${g.dest}`);
+      await revealLeftoverRails(page);
       const save = page.locator("[data-lo-save][data-lo-key]").first();
       await expect(save, g.year + " leftover plaque").toBeVisible({ timeout: 20000 });
       const suf = await save.getAttribute("data-lo-key");
