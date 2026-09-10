@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
@@ -385,8 +386,10 @@ test.describe("One-thing per year — load + REAL gate", () => {
     test(`${t.year} loads and incomplete does not write ${t.key}`, async ({ page }) => {
       test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
+      await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);
       await page.reload();
+      await revealLeftoverRails(page);
       await page.waitForTimeout(400);
       if (typeof t.incomplete === "function") {
         await t.incomplete(page);
@@ -408,8 +411,10 @@ test.describe("One-thing per year — load + REAL gate", () => {
     test(`${t.year} complete writes ${t.key}`, async ({ page }) => {
       test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
+      await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);
       await page.reload();
+      await revealLeftoverRails(page);
       await page.waitForTimeout(400);
       if (typeof t.complete === "function") {
         await t.complete(page);

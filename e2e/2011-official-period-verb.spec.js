@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const DESTS = [
   { href: "/years/2011/sites/spotify/index.html", official: "itt11-spotify", leftover: "itt11-spotify-lx", next: "/years/2011/sites/iphone/index.html" },
@@ -20,6 +21,7 @@ test.describe("2011 official n=2–9 dest-minute", () => {
   for (const d of DESTS) {
     test(d.official, async ({ page }) => {
       await page.goto(d.href);
+      await revealLeftoverRails(page);
       await page.evaluate(() => {
         const keys = [];
         for (let i = 0; i < localStorage.length; i++) {
@@ -29,6 +31,7 @@ test.describe("2011 official n=2–9 dest-minute", () => {
         keys.forEach((k) => localStorage.removeItem(k));
       });
       await page.reload();
+      await revealLeftoverRails(page);
 
       await page.locator("[data-official-trap]").first().click();
       expect(await getKey(page, d.official), "trap").toBeFalsy();

@@ -6,7 +6,7 @@
     "key": "itt94-yeslo-intel",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-intel",
     "href": "/years/1994/sites/intel/index.html",
     "miss": "more.html"
@@ -18,7 +18,7 @@
     "key": "itt94-yeslo2-intel",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-intel",
     "href": "/years/1994/sites/intel/index.html",
     "miss": "more.html"
@@ -30,7 +30,7 @@
     "key": "itt94-yeslo3-intel",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-intel",
     "href": "/years/1994/sites/intel/index.html",
     "miss": "more.html"
@@ -42,7 +42,7 @@
     "key": "itt94-yeslo-sun",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-sun",
     "href": "/years/1994/sites/sun/index.html",
     "miss": "more.html"
@@ -54,7 +54,7 @@
     "key": "itt94-yeslo2-sun",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-sun",
     "href": "/years/1994/sites/sun/index.html",
     "miss": "more.html"
@@ -66,7 +66,7 @@
     "key": "itt94-yeslo3-sun",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-sun",
     "href": "/years/1994/sites/sun/index.html",
     "miss": "more.html"
@@ -78,7 +78,7 @@
     "key": "itt94-yeslo-mit",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-mit",
     "href": "/years/1994/sites/mit/index.html",
     "miss": "more.html"
@@ -90,7 +90,7 @@
     "key": "itt94-yeslo2-mit",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-mit",
     "href": "/years/1994/sites/mit/index.html",
     "miss": "more.html"
@@ -102,7 +102,7 @@
     "key": "itt94-yeslo3-mit",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-mit",
     "href": "/years/1994/sites/mit/index.html",
     "miss": "more.html"
@@ -114,7 +114,7 @@
     "key": "itt94-yeslo-startingpoint",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-startingpoint",
     "href": "/years/1994/sites/startingpoint/index.html",
     "miss": "more.html"
@@ -126,7 +126,7 @@
     "key": "itt94-yeslo2-startingpoint",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-startingpoint",
     "href": "/years/1994/sites/startingpoint/index.html",
     "miss": "more.html"
@@ -138,7 +138,7 @@
     "key": "itt94-yeslo3-startingpoint",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-startingpoint",
     "href": "/years/1994/sites/startingpoint/index.html",
     "miss": "more.html"
@@ -150,7 +150,7 @@
     "key": "itt94-yeslo-weather",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-weather",
     "href": "/years/1994/sites/weather/index.html",
     "miss": null
@@ -162,7 +162,7 @@
     "key": "itt94-yeslo2-weather",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-weather",
     "href": "/years/1994/sites/weather/index.html",
     "miss": null
@@ -174,7 +174,7 @@
     "key": "itt94-yeslo3-weather",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-weather",
     "href": "/years/1994/sites/weather/index.html",
     "miss": null
@@ -186,7 +186,7 @@
     "key": "itt94-yeslo-loc",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-loc",
     "href": "/years/1994/sites/loc/index.html",
     "miss": "more.html"
@@ -198,7 +198,7 @@
     "key": "itt94-yeslo2-loc",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-loc",
     "href": "/years/1994/sites/loc/index.html",
     "miss": "more.html"
@@ -210,7 +210,7 @@
     "key": "itt94-yeslo3-loc",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-loc",
     "href": "/years/1994/sites/loc/index.html",
     "miss": "more.html"
@@ -222,7 +222,7 @@
     "key": "itt94-yeslo-exploratorium",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-exploratorium",
     "href": "/years/1994/sites/exploratorium/index.html",
     "miss": null
@@ -234,7 +234,7 @@
     "key": "itt94-yeslo2-exploratorium",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-exploratorium",
     "href": "/years/1994/sites/exploratorium/index.html",
     "miss": null
@@ -246,7 +246,7 @@
     "key": "itt94-yeslo3-exploratorium",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-exploratorium",
     "href": "/years/1994/sites/exploratorium/index.html",
     "miss": null
@@ -258,7 +258,7 @@
     "key": "itt94-yeslo-smithsonian",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-smithsonian",
     "href": "/years/1994/sites/smithsonian/index.html",
     "miss": "more.html"
@@ -270,7 +270,7 @@
     "key": "itt94-yeslo2-smithsonian",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-smithsonian",
     "href": "/years/1994/sites/smithsonian/index.html",
     "miss": "more.html"
@@ -282,7 +282,7 @@
     "key": "itt94-yeslo3-smithsonian",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-smithsonian",
     "href": "/years/1994/sites/smithsonian/index.html",
     "miss": "more.html"
@@ -294,7 +294,7 @@
     "key": "itt94-yeslo-personal",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-personal",
     "href": "/years/1994/sites/personal/index.html",
     "miss": "more.html"
@@ -306,7 +306,7 @@
     "key": "itt94-yeslo2-personal",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-personal",
     "href": "/years/1994/sites/personal/index.html",
     "miss": "more.html"
@@ -318,7 +318,7 @@
     "key": "itt94-yeslo3-personal",
     "star": "itt94-csotd",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-personal",
     "href": "/years/1994/sites/personal/index.html",
     "miss": "more.html"
@@ -330,7 +330,7 @@
     "key": "itt95-yeslo-match",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "seattle",
     "popKey": "yeslo-match",
     "href": "/years/1995/sites/match/index.html",
     "miss": "more.html"
@@ -342,7 +342,7 @@
     "key": "itt95-yeslo2-match",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "seattle",
     "popKey": "yeslo2-match",
     "href": "/years/1995/sites/match/index.html",
     "miss": "more.html"
@@ -354,7 +354,7 @@
     "key": "itt95-yeslo3-match",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "seattle",
     "popKey": "yeslo3-match",
     "href": "/years/1995/sites/match/index.html",
     "miss": "more.html"
@@ -366,7 +366,7 @@
     "key": "itt95-yeslo-npr",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-npr",
     "href": "/years/1995/sites/npr/index.html",
     "miss": null
@@ -378,7 +378,7 @@
     "key": "itt95-yeslo2-npr",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-npr",
     "href": "/years/1995/sites/npr/index.html",
     "miss": null
@@ -390,7 +390,7 @@
     "key": "itt95-yeslo3-npr",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-npr",
     "href": "/years/1995/sites/npr/index.html",
     "miss": null
@@ -402,7 +402,7 @@
     "key": "itt95-yeslo-beanies",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-beanies",
     "href": "/years/1995/sites/beanies/index.html",
     "miss": "more.html"
@@ -414,7 +414,7 @@
     "key": "itt95-yeslo2-beanies",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-beanies",
     "href": "/years/1995/sites/beanies/index.html",
     "miss": "more.html"
@@ -426,7 +426,7 @@
     "key": "itt95-yeslo3-beanies",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-beanies",
     "href": "/years/1995/sites/beanies/index.html",
     "miss": "more.html"
@@ -438,7 +438,7 @@
     "key": "itt95-yeslo-opentext",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-opentext",
     "href": "/years/1995/sites/opentext/index.html",
     "miss": "more.html"
@@ -450,7 +450,7 @@
     "key": "itt95-yeslo2-opentext",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-opentext",
     "href": "/years/1995/sites/opentext/index.html",
     "miss": "more.html"
@@ -462,7 +462,7 @@
     "key": "itt95-yeslo3-opentext",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-opentext",
     "href": "/years/1995/sites/opentext/index.html",
     "miss": "more.html"
@@ -510,7 +510,7 @@
     "key": "itt95-yeslo-sun",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-sun",
     "href": "/years/1995/sites/sun/index.html",
     "miss": "more.html"
@@ -522,7 +522,7 @@
     "key": "itt95-yeslo2-sun",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-sun",
     "href": "/years/1995/sites/sun/index.html",
     "miss": "more.html"
@@ -534,7 +534,7 @@
     "key": "itt95-yeslo3-sun",
     "star": "itt95-ssl-checkout",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-sun",
     "href": "/years/1995/sites/sun/index.html",
     "miss": "more.html"
@@ -546,7 +546,7 @@
     "key": "itt96-yeslo-aolportal",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-aolportal",
     "href": "/years/1996/sites/aolportal/index.html",
     "miss": "more.html"
@@ -558,7 +558,7 @@
     "key": "itt96-yeslo2-aolportal",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-aolportal",
     "href": "/years/1996/sites/aolportal/index.html",
     "miss": "more.html"
@@ -570,7 +570,7 @@
     "key": "itt96-yeslo3-aolportal",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-aolportal",
     "href": "/years/1996/sites/aolportal/index.html",
     "miss": "more.html"
@@ -582,7 +582,7 @@
     "key": "itt96-yeslo-bluemountain",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-bluemountain",
     "href": "/years/1996/sites/bluemountain/index.html",
     "miss": "more.html"
@@ -594,7 +594,7 @@
     "key": "itt96-yeslo2-bluemountain",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-bluemountain",
     "href": "/years/1996/sites/bluemountain/index.html",
     "miss": "more.html"
@@ -606,7 +606,7 @@
     "key": "itt96-yeslo3-bluemountain",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-bluemountain",
     "href": "/years/1996/sites/bluemountain/index.html",
     "miss": "more.html"
@@ -618,7 +618,7 @@
     "key": "itt96-yeslo-four11",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-four11",
     "href": "/years/1996/sites/four11/index.html",
     "miss": "more.html"
@@ -630,7 +630,7 @@
     "key": "itt96-yeslo2-four11",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-four11",
     "href": "/years/1996/sites/four11/index.html",
     "miss": "more.html"
@@ -642,7 +642,7 @@
     "key": "itt96-yeslo3-four11",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-four11",
     "href": "/years/1996/sites/four11/index.html",
     "miss": "more.html"
@@ -654,7 +654,7 @@
     "key": "itt96-yeslo-infospace",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-infospace",
     "href": "/years/1996/sites/infospace/index.html",
     "miss": "more.html"
@@ -666,7 +666,7 @@
     "key": "itt96-yeslo2-infospace",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-infospace",
     "href": "/years/1996/sites/infospace/index.html",
     "miss": "more.html"
@@ -678,7 +678,7 @@
     "key": "itt96-yeslo3-infospace",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-infospace",
     "href": "/years/1996/sites/infospace/index.html",
     "miss": "more.html"
@@ -690,7 +690,7 @@
     "key": "itt96-yeslo-realplayer",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-realplayer",
     "href": "/years/1996/sites/realplayer/index.html",
     "miss": "more.html"
@@ -702,7 +702,7 @@
     "key": "itt96-yeslo2-realplayer",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-realplayer",
     "href": "/years/1996/sites/realplayer/index.html",
     "miss": "more.html"
@@ -714,7 +714,7 @@
     "key": "itt96-yeslo3-realplayer",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-realplayer",
     "href": "/years/1996/sites/realplayer/index.html",
     "miss": "more.html"
@@ -726,7 +726,7 @@
     "key": "itt96-yeslo-theglobe",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-theglobe",
     "href": "/years/1996/sites/theglobe/index.html",
     "miss": "more.html"
@@ -738,7 +738,7 @@
     "key": "itt96-yeslo2-theglobe",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-theglobe",
     "href": "/years/1996/sites/theglobe/index.html",
     "miss": "more.html"
@@ -750,7 +750,7 @@
     "key": "itt96-yeslo3-theglobe",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-theglobe",
     "href": "/years/1996/sites/theglobe/index.html",
     "miss": "more.html"
@@ -762,7 +762,7 @@
     "key": "itt96-yeslo-xoom",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-xoom",
     "href": "/years/1996/sites/xoom/index.html",
     "miss": "more.html"
@@ -774,7 +774,7 @@
     "key": "itt96-yeslo2-xoom",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-xoom",
     "href": "/years/1996/sites/xoom/index.html",
     "miss": "more.html"
@@ -786,7 +786,7 @@
     "key": "itt96-yeslo3-xoom",
     "star": "itt96-portal-wars",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-xoom",
     "href": "/years/1996/sites/xoom/index.html",
     "miss": "more.html"
@@ -798,7 +798,7 @@
     "key": "itt97-yeslo-mp3com",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "indie.mp3",
     "popKey": "yeslo-mp3com",
     "href": "/years/1997/sites/mp3com/index.html",
     "miss": "more.html"
@@ -810,7 +810,7 @@
     "key": "itt97-yeslo2-mp3com",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "indie.mp3",
     "popKey": "yeslo2-mp3com",
     "href": "/years/1997/sites/mp3com/index.html",
     "miss": "more.html"
@@ -822,7 +822,7 @@
     "key": "itt97-yeslo3-mp3com",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "indie.mp3",
     "popKey": "yeslo3-mp3com",
     "href": "/years/1997/sites/mp3com/index.html",
     "miss": "more.html"
@@ -834,7 +834,7 @@
     "key": "itt97-yeslo-scripting",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-scripting",
     "href": "/years/1997/sites/scripting/index.html",
     "miss": "more.html"
@@ -846,7 +846,7 @@
     "key": "itt97-yeslo2-scripting",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-scripting",
     "href": "/years/1997/sites/scripting/index.html",
     "miss": "more.html"
@@ -858,7 +858,7 @@
     "key": "itt97-yeslo3-scripting",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-scripting",
     "href": "/years/1997/sites/scripting/index.html",
     "miss": "more.html"
@@ -870,7 +870,7 @@
     "key": "itt97-yeslo-usatoday",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-usatoday",
     "href": "/years/1997/sites/usatoday/index.html",
     "miss": null
@@ -882,7 +882,7 @@
     "key": "itt97-yeslo2-usatoday",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-usatoday",
     "href": "/years/1997/sites/usatoday/index.html",
     "miss": null
@@ -894,7 +894,7 @@
     "key": "itt97-yeslo3-usatoday",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-usatoday",
     "href": "/years/1997/sites/usatoday/index.html",
     "miss": null
@@ -906,7 +906,7 @@
     "key": "itt97-yeslo-yandex",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-yandex",
     "href": "/years/1997/sites/yandex/index.html",
     "miss": null
@@ -918,7 +918,7 @@
     "key": "itt97-yeslo2-yandex",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-yandex",
     "href": "/years/1997/sites/yandex/index.html",
     "miss": null
@@ -930,7 +930,7 @@
     "key": "itt97-yeslo3-yandex",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-yandex",
     "href": "/years/1997/sites/yandex/index.html",
     "miss": null
@@ -942,7 +942,7 @@
     "key": "itt97-yeslo-dancing-baby",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-dancing-baby",
     "href": "/years/1997/sites/dancing-baby/index.html",
     "miss": "more.html"
@@ -954,7 +954,7 @@
     "key": "itt97-yeslo2-dancing-baby",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-dancing-baby",
     "href": "/years/1997/sites/dancing-baby/index.html",
     "miss": "more.html"
@@ -966,7 +966,7 @@
     "key": "itt97-yeslo3-dancing-baby",
     "star": "itt97-pointcast",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-dancing-baby",
     "href": "/years/1997/sites/dancing-baby/index.html",
     "miss": "more.html"
@@ -978,7 +978,7 @@
     "key": "itt98-yeslo-ayb",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-ayb",
     "href": "/years/1998/sites/ayb/index.html",
     "miss": "more.html"
@@ -990,7 +990,7 @@
     "key": "itt98-yeslo2-ayb",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-ayb",
     "href": "/years/1998/sites/ayb/index.html",
     "miss": "more.html"
@@ -1002,7 +1002,7 @@
     "key": "itt98-yeslo3-ayb",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-ayb",
     "href": "/years/1998/sites/ayb/index.html",
     "miss": "more.html"
@@ -1014,7 +1014,7 @@
     "key": "itt98-yeslo-bowienet",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-bowienet",
     "href": "/years/1998/sites/bowienet/index.html",
     "miss": null
@@ -1026,7 +1026,7 @@
     "key": "itt98-yeslo2-bowienet",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-bowienet",
     "href": "/years/1998/sites/bowienet/index.html",
     "miss": null
@@ -1038,7 +1038,7 @@
     "key": "itt98-yeslo3-bowienet",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-bowienet",
     "href": "/years/1998/sites/bowienet/index.html",
     "miss": null
@@ -1050,7 +1050,7 @@
     "key": "itt98-yeslo-four11",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-four11",
     "href": "/years/1998/sites/four11/index.html",
     "miss": null
@@ -1062,7 +1062,7 @@
     "key": "itt98-yeslo2-four11",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-four11",
     "href": "/years/1998/sites/four11/index.html",
     "miss": null
@@ -1074,7 +1074,7 @@
     "key": "itt98-yeslo3-four11",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-four11",
     "href": "/years/1998/sites/four11/index.html",
     "miss": null
@@ -1086,7 +1086,7 @@
     "key": "itt98-yeslo-hillmancurtis",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-hillmancurtis",
     "href": "/years/1998/sites/hillmancurtis/index.html",
     "miss": "more.html"
@@ -1098,7 +1098,7 @@
     "key": "itt98-yeslo2-hillmancurtis",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-hillmancurtis",
     "href": "/years/1998/sites/hillmancurtis/index.html",
     "miss": "more.html"
@@ -1110,7 +1110,7 @@
     "key": "itt98-yeslo3-hillmancurtis",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-hillmancurtis",
     "href": "/years/1998/sites/hillmancurtis/index.html",
     "miss": "more.html"
@@ -1122,7 +1122,7 @@
     "key": "itt98-yeslo-mp3com",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-mp3com",
     "href": "/years/1998/sites/mp3com/index.html",
     "miss": "more.html"
@@ -1134,7 +1134,7 @@
     "key": "itt98-yeslo2-mp3com",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-mp3com",
     "href": "/years/1998/sites/mp3com/index.html",
     "miss": "more.html"
@@ -1146,7 +1146,7 @@
     "key": "itt98-yeslo3-mp3com",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-mp3com",
     "href": "/years/1998/sites/mp3com/index.html",
     "miss": "more.html"
@@ -1158,7 +1158,7 @@
     "key": "itt98-yeslo-realplayer",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-realplayer",
     "href": "/years/1998/sites/realplayer/index.html",
     "miss": "more.html"
@@ -1170,7 +1170,7 @@
     "key": "itt98-yeslo2-realplayer",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-realplayer",
     "href": "/years/1998/sites/realplayer/index.html",
     "miss": "more.html"
@@ -1182,7 +1182,7 @@
     "key": "itt98-yeslo3-realplayer",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-realplayer",
     "href": "/years/1998/sites/realplayer/index.html",
     "miss": "more.html"
@@ -1194,7 +1194,7 @@
     "key": "itt98-yeslo-textfiles",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-textfiles",
     "href": "/years/1998/sites/textfiles/index.html",
     "miss": "more.html"
@@ -1206,7 +1206,7 @@
     "key": "itt98-yeslo2-textfiles",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-textfiles",
     "href": "/years/1998/sites/textfiles/index.html",
     "miss": "more.html"
@@ -1218,7 +1218,7 @@
     "key": "itt98-yeslo3-textfiles",
     "star": "itt98-lucky",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-textfiles",
     "href": "/years/1998/sites/textfiles/index.html",
     "miss": "more.html"
@@ -1230,7 +1230,7 @@
     "key": "itt16-yeslo-dyn",
     "star": "itt16-ig-stories",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Dyn 21 Oct",
     "popKey": "yeslo-dyn",
     "href": "/years/2016/sites/dyn/index.html",
     "miss": null
@@ -1242,7 +1242,7 @@
     "key": "itt16-yeslo2-dyn",
     "star": "itt16-ig-stories",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Dyn 21 Oct",
     "popKey": "yeslo2-dyn",
     "href": "/years/2016/sites/dyn/index.html",
     "miss": null
@@ -1254,7 +1254,7 @@
     "key": "itt16-yeslo3-dyn",
     "star": "itt16-ig-stories",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Dyn 21 Oct",
     "popKey": "yeslo3-dyn",
     "href": "/years/2016/sites/dyn/index.html",
     "miss": null
@@ -1266,7 +1266,7 @@
     "key": "itt17-yeslo-odyssey",
     "star": "itt17-faceid",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-odyssey",
     "href": "/years/2017/sites/odyssey/index.html",
     "miss": null
@@ -1278,7 +1278,7 @@
     "key": "itt17-yeslo2-odyssey",
     "star": "itt17-faceid",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-odyssey",
     "href": "/years/2017/sites/odyssey/index.html",
     "miss": null
@@ -1290,7 +1290,7 @@
     "key": "itt17-yeslo3-odyssey",
     "star": "itt17-faceid",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-odyssey",
     "href": "/years/2017/sites/odyssey/index.html",
     "miss": null
@@ -1302,7 +1302,7 @@
     "key": "itt19-yeslo-area51",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Storm Area 51",
     "popKey": "yeslo-area51",
     "href": "/years/2019/sites/area51/index.html",
     "miss": null
@@ -1314,7 +1314,7 @@
     "key": "itt19-yeslo2-area51",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Storm Area 51",
     "popKey": "yeslo2-area51",
     "href": "/years/2019/sites/area51/index.html",
     "miss": null
@@ -1326,7 +1326,7 @@
     "key": "itt19-yeslo3-area51",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Storm Area 51",
     "popKey": "yeslo3-area51",
     "href": "/years/2019/sites/area51/index.html",
     "miss": null
@@ -1338,7 +1338,7 @@
     "key": "itt19-yeslo-libra",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Libra",
     "popKey": "yeslo-libra",
     "href": "/years/2019/sites/libra/index.html",
     "miss": null
@@ -1350,7 +1350,7 @@
     "key": "itt19-yeslo2-libra",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Libra",
     "popKey": "yeslo2-libra",
     "href": "/years/2019/sites/libra/index.html",
     "miss": null
@@ -1362,7 +1362,7 @@
     "key": "itt19-yeslo3-libra",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "Libra",
     "popKey": "yeslo3-libra",
     "href": "/years/2019/sites/libra/index.html",
     "miss": null
@@ -1374,7 +1374,7 @@
     "key": "itt19-yeslo-applecard",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo-applecard",
     "href": "/years/2019/sites/applecard/index.html",
     "miss": null
@@ -1386,7 +1386,7 @@
     "key": "itt19-yeslo2-applecard",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo2-applecard",
     "href": "/years/2019/sites/applecard/index.html",
     "miss": null
@@ -1398,7 +1398,7 @@
     "key": "itt19-yeslo3-applecard",
     "star": "itt19-disneyplus",
     "verb": "open dest then dest-true verb",
-    "ph": "this room",
+    "ph": "leftover",
     "popKey": "yeslo3-applecard",
     "href": "/years/2019/sites/applecard/index.html",
     "miss": null

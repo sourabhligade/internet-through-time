@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 function skipIfWiped(year) {
   test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
 }
@@ -39,6 +40,7 @@ async function blobOf(page, key) {
  */
 async function openClean(page, href, keys) {
   await page.goto(href);
+  await revealLeftoverRails(page);
   await page.evaluate((ks) => {
     var i;
     for (i = 0; i < ks.length; i++) {
@@ -50,6 +52,7 @@ async function openClean(page, href, keys) {
     }
   }, keys);
   await page.reload();
+  await revealLeftoverRails(page);
 }
 
 test.describe("Fascinating integrate leftovers", () => {

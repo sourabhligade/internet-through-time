@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 
 const ROOT = path.join(__dirname, "..");
@@ -347,8 +348,10 @@ async function getKey(page, key) {
  */
 async function openClear(page, year, href, key) {
   await page.goto("/years/" + year + "/" + href);
+  await revealLeftoverRails(page);
   await page.evaluate((k) => localStorage.removeItem(k), key);
   await page.reload();
+  await revealLeftoverRails(page);
 }
 
 /**

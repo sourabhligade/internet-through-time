@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
@@ -39,6 +40,7 @@ async function clearKeys(page, keys) {
 }
 
 async function waitLo(page, suffix) {
+  await revealLeftoverRails(page);
   await page.waitForFunction(
     (suf) => {
       const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
@@ -56,6 +58,7 @@ async function waitLo(page, suffix) {
 async function runLeftover(page, d) {
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${d.suffix}"])`).first();
   await page.goto("/years/" + d.year + "/" + d.href);
+  await revealLeftoverRails(page);
   await waitLo(page, d.suffix);
   await page.evaluate((k) => localStorage.removeItem(k), d.key);
   await page.evaluate((k) => localStorage.removeItem(k), STAR[d.year]);
@@ -321,8 +324,10 @@ test.describe("2019–2022 official 10 · dest-minute REAL", () => {
         stop.year + " boarded"
       );
       await page.goto("/years/" + stop.year + "/" + stop.href);
+      await revealLeftoverRails(page);
       await clearKeys(page, [stop.key, STAR[stop.year]]);
       await page.reload();
+      await revealLeftoverRails(page);
       if (stop.incomplete) await stop.incomplete(page);
       else await genericOfficial(page, stop.key);
       if (!stop.complete) {

@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -13,8 +14,10 @@ test.describe("2007 flows", () => {
   });
   test("star incomplete never writes then Safari Go writes itt07-iphone", async ({ page }) => {
     await page.goto("/years/2007/sites/iphone/index.html");
+    await revealLeftoverRails(page);
     await page.evaluate(() => localStorage.removeItem("itt07-iphone"));
     await page.reload();
+    await revealLeftoverRails(page);
     await page.locator("[data-official-trap]").first().click();
     expect(await getKey(page, "itt07-iphone")).toBeFalsy();
     await page.locator("[data-official-need]").fill("apple.com");

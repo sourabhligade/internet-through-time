@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -7,8 +8,10 @@ async function getKey(page, k) {
 
 async function officialVerbLeftover(page, href, key) {
   await page.goto(href);
+  await revealLeftoverRails(page);
   await page.evaluate((k) => localStorage.removeItem(k), key);
   await page.reload();
+  await revealLeftoverRails(page);
   await page.locator("[data-official-trap]").first().click();
   expect(await getKey(page, key), key + " trap").toBeFalsy();
   await page.locator("[data-official-verb]").click();

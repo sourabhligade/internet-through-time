@@ -256,6 +256,34 @@
   }
 
   /* Visitor face is the dest. Leftover writers stay on disk, in Also this year. */
+  function leftoverNoteNodes(doc) {
+    var out = [];
+    var i;
+    var el;
+    var els = doc.querySelectorAll(".itt-w2-official, p, label");
+    for (i = 0; i < els.length; i++) {
+      el = els[i];
+      if (!el || inAlsoYear(el)) continue;
+      if (el.getAttribute && el.getAttribute("data-official-verb-host") === "1") continue;
+      if (el.querySelector && el.querySelector("h1")) continue;
+      if (/(^|\s)itt-w2-official(\s|$)/.test(String(el.className || ""))) {
+        out.push(el);
+        continue;
+      }
+      if (
+        el.querySelector &&
+        (el.querySelector("[data-official-need]") ||
+          el.querySelector("[data-official-req]") ||
+          el.querySelector("[data-official-trap]") ||
+          el.querySelector("[data-official-verb]") ||
+          el.querySelector("[data-official-status]"))
+      ) {
+        out.push(el);
+      }
+    }
+    return out;
+  }
+
   function inAlsoYear(el) {
     var n = el;
     while (n && n.nodeType === 1) {
@@ -267,9 +295,14 @@
 
   function foldLeftoverRails(doc) {
     doc = doc || document;
-    var nodes = doc.querySelectorAll(
+    var nodeList = doc.querySelectorAll(
       "[data-itt-2x-links], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-lo-panel], [data-4x-panel], .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-pop-more, .itt-pop-3x3"
     );
+    var extra = leftoverNoteNodes(doc);
+    var nodes = [];
+    var i;
+    for (i = 0; i < nodeList.length; i++) nodes.push(nodeList[i]);
+    for (i = 0; i < extra.length; i++) nodes.push(extra[i]);
     var box = doc.querySelector("details.itt-also-year");
     if (!box) {
       box = doc.createElement("details");
@@ -279,7 +312,6 @@
     }
     var body = box.querySelector(".itt-also-year-body");
     if (!body) return 0;
-    var i;
     var n;
     var moved = 0;
     var firstOutside = null;
