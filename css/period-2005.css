@@ -5,6 +5,21 @@
 @import url("period-xp-ui.css");
 @import url("period-2005-lite.css");
 
+/* 1999→1995 still sets body{max-width:920px}. IE6 2005 fills the window.
+   Do not wait for data-itt-year — dest rooms omit it until JS. */
+html, body {
+  max-width: none !important;
+}
+html[data-itt-year="2005"] {
+  background: #3a6ea5;
+}
+html[data-itt-year="2005"] body,
+body.itt-start-page,
+body[data-itt-start] {
+  max-width: none !important;
+  width: 100% !important;
+}
+
 body.year-2005 .itt-year-chip {
   color: #0a246a;
   border-bottom-color: #ff6600;

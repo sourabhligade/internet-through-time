@@ -34,7 +34,7 @@ test.describe("2020 mvp", () => {
   test("leftover 2× strip lists lean dests below guided", async ({ page }) => {
     await page.goto("/years/2020/pages/home.html");
     await expect(page.locator("#ott-2x-2020")).toBeAttached();
-    await expect(page.locator("#ott-2x-2020")).toContainText(/leftover 2× #1 \+ #2/);
+    await expect(page.locator("#ott-2x-2020")).toContainText(/#1 \+ #2/);
     expect(await page.locator("#ott-2x-2020 a[href*='sites/']").count()).toBe(31);
     await expect(page.locator("#ott-guided-2020 ol > li")).toHaveCount(6);
   });

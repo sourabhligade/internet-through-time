@@ -3,10 +3,14 @@
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door from 2004 scaffold. Official dests are dest machines, not Type leftover plaques. Do **not** `git checkout` the wiped tree.  
 **This file is the year lock.** Long dump: [`2005-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-31.md`](2005-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-31.md)  
-**Every dest minute (walk this to implement):** [`2005-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md`](2005-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md) · **111 folders · 146 flow minutes**  
+**Dest-true minutes (walk this):** [`2005-DEST-TRUE-EVERY-FLOW-MINUTE-2026-09-10.md`](2005-DEST-TRUE-EVERY-FLOW-MINUTE-2026-09-10.md) · official 10 from period product · leftover-3× leftover only  
+**Rejected filler:** [`2005-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-09-10.md`](2005-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-09-10.md) — generated dest-minutes, not dest-true  
+**Prior leftover inventory:** [`2005-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md`](2005-EVERY-FLOW-MINUTE-GOALS-PHASES-STEPS-2026-08-31.md)  
 **2× leftover freeze:** [`2005-2X-LEFTOVER-RESEARCH-2026-08-31.md`](2005-2X-LEFTOVER-RESEARCH-2026-08-31.md)  
 **Flow map:** [`2005-5K-WEB-FLOW-MAP.md`](2005-5K-WEB-FLOW-MAP.md)  
-**URL corpus:** [`references/2005/harvest/URL-CORPUS-2005.txt`](references/2005/harvest/URL-CORPUS-2005.txt)  
+**URL corpus:** [`references/2005/harvest/URL-CORPUS-2005.txt`](references/2005/harvest/URL-CORPUS-2005.txt) — **43,732** unique (2026-09-10 restack; beats 2011’s 10,320)  
+**Density harvest:** [`2005-DEEP-RESEARCH-WEB-HARVEST-2026-09-10.md`](2005-DEEP-RESEARCH-WEB-HARVEST-2026-09-10.md)  
+**Criteria dump:** [`2005-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-10.md`](2005-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-10.md)  
 **Visit log:** [`references/2005/notes/VISIT-LOG-2026-08-31.txt`](references/2005/notes/VISIT-LOG-2026-08-31.txt)  
 **Parent:** 2004 (Thefacebook · Gmail invite · Flickr · Firefox 1.0). **Child:** 2006 (Twttr · News Feed · Google←YouTube) — **bans here**.  
 **Git only if asked.**
@@ -26,7 +30,7 @@
 | Complete | mid-2005 upload machine + title + tags + both honesty ticks + **Upload** |
 | Trap | Google owns YouTube (Oct **2006**) · Twitter · open Facebook · Street View · Chrome · iPhone |
 | Guided `<ol>` | **exactly 6** |
-| Official 10 | YouTube upload · Maps drag · Pandora station · HousingMaps · Digg bury · Reddit boost · Flickr (Yahoo after 20 Mar) · iTunes podcast subscribe · TechCrunch · HoverChop |
+| Official 10 | YouTube upload · Maps What/Where or drag · Pandora Create station · HousingMaps Refresh listings · Digg bury · Reddit boost · Flickr photostream Upload · iTunes Subscribe · TechCrunch Open this post · HoverChop start/crash. **Not leftover-note plaques.** |
 | First door | **full year**. **111 dest folders** · HTML **≥ 349**. Match **2008 or more**. Not a lean door. |
 | 2× leftover | **120** writers. Beat 2008’s **116**. |
 | 5k-web | research envelope, not dest count. ILS June **includes 2005** (legal cell). |

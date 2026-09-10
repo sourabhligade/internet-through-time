@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const GOLD = "itt08-github";
@@ -58,6 +59,7 @@ async function getKey(page, key) {
 }
 
 async function waitLo(page, suffix) {
+  await revealLeftoverRails(page);
   const panel = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
   await panel.locator("[data-lo-save]").waitFor({ timeout: 20000 });
   await page.waitForFunction(

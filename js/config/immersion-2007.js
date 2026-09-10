@@ -32,7 +32,7 @@
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
       { label: "iPhone Safari", href: "sites/iphone/index.html" },
-      { label: "Street View leftover", href: "sites/streetview/index.html" },
+      { label: "Street View", href: "sites/streetview/index.html" },
       { label: "About 2007", href: "pages/about.html" }
     ]
   };

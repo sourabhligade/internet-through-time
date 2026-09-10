@@ -153,7 +153,9 @@
   }
 
   function foldDestAlso(doc) {
-    var nodes = doc.querySelectorAll("[data-itt-3x-also], [data-itt-3x-links]");
+    var nodes = doc.querySelectorAll(
+      "[data-itt-3x-also], [data-itt-3x-links], [data-itt-2x-links], [data-itt-pop-more]"
+    );
     if (!nodes.length) return;
     if (doc.querySelector("details.itt-also-year[data-itt-3x-also]")) return;
     var first = nodes[0];

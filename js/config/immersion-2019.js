@@ -31,7 +31,7 @@
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
       { label: "Disney+", href: "sites/disneyplus/home.html" },
-      { label: "TikTok leftover", href: "sites/tiktok/index.html" },
+      { label: "TikTok", href: "sites/tiktok/index.html" },
       { label: "About 2019", href: "pages/about.html" }
     ]
   };

@@ -62,6 +62,15 @@
   }
   function boot(doc) {
     doc = doc || document;
+    var podTrap = doc.querySelector("[data-pod-trap]");
+    if (podTrap && podTrap.getAttribute("data-pod-trap-bound") !== "1") {
+      podTrap.setAttribute("data-pod-trap-bound", "1");
+      podTrap.addEventListener("click", function () {
+        var stT = doc.querySelector("[data-pod-status]");
+        if (stT) stT.textContent = "Live iTunes Store trap. That click never writes itt05-pod.";
+        ittFeedback("Live iTunes Store trap. That click never writes.", stT);
+      });
+    }
     var btns = doc.querySelectorAll("[data-pod-sub]");
     var i;
     for (i = 0; i < btns.length; i++) {
@@ -86,6 +95,25 @@
           list.unshift({ name: name, ts: Date.now() });
         }
         save(list.slice(0, 30));
+        try {
+          var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
+          if (ok === "itt05-pod" && name) {
+            if (!localStorage.getItem("itt05-pod")) {
+              localStorage.setItem(
+                "itt05-pod",
+                JSON.stringify({
+                  multiStep: true,
+                  real: true,
+                  official: true,
+                  year: "2005",
+                  show: String(name).slice(0, 80),
+                  ts: Date.now()
+                })
+              );
+            }
+            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          }
+        } catch (ePodOff) { /* */ }
         var st = doc.querySelector("[data-pod-status]");
         if (st) {
           st.textContent = "Subscribed to “" + name + "” (this browser only · " + list.length + " total).";

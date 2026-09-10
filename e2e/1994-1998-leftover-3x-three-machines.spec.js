@@ -1,6 +1,7 @@
 // @ts-check
 /** 3 leftover machines on one dest — 1994–1998 + 2016/2017/2019. */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -28,8 +29,10 @@ async function completePanel(page, panelSel, goSel, ph) {
 test("1994 Pizza Hut: first only does not write pop2/pop3 · then all three · never CSotD", async ({ page }) => {
   const keys = ["itt94-pop-pizzahut", "itt94-pop2-pizzahut", "itt94-pop3-pizzahut", "itt94-csotd"];
   await page.goto("/years/1994/sites/pizzahut/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
@@ -59,8 +62,10 @@ test("1994 Pizza Hut: first only does not write pop2/pop3 · then all three · n
 test("1994 Yahoo official dest is leftover-3× pop3 only · never CSotD", async ({ page }) => {
   const keys = ["itt94-pop-yahoo", "itt94-pop2-yahoo", "itt94-pop3-yahoo", "itt94-csotd"];
   await page.goto("/years/1994/sites/yahoo/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await expect(page.locator("[data-itt-lo3x] [data-pop-go]:not([data-pop-key])")).toHaveCount(0);
   await expect(page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-yahoo']")).toHaveCount(0);
   await completePanel(
@@ -77,8 +82,10 @@ test("1994 Yahoo official dest is leftover-3× pop3 only · never CSotD", async 
 test("2016 Slack: three leftover-3× machines · never Stories gold", async ({ page }) => {
   const keys = ["itt16-pop-slack", "itt16-pop2-slack", "itt16-pop3-slack", "itt16-ig-stories"];
   await page.goto("/years/2016/sites/slack/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
@@ -106,8 +113,10 @@ test("2016 Slack: three leftover-3× machines · never Stories gold", async ({ p
 test("2016 Pokémon GO official dest is leftover-3× pop3 only · never Stories", async ({ page }) => {
   const keys = ["itt16-pop-pokemongo", "itt16-pop2-pokemongo", "itt16-pop3-pokemongo", "itt16-ig-stories"];
   await page.goto("/years/2016/sites/pokemongo/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await expect(page.locator("[data-itt-lo3x] [data-pop-go]:not([data-pop-key])")).toHaveCount(0);
   await completePanel(
     page,
@@ -123,8 +132,10 @@ test("2016 Pokémon GO official dest is leftover-3× pop3 only · never Stories"
 test("2017 Snap IPO: three leftover-3× machines · never Face ID", async ({ page }) => {
   const keys = ["itt17-pop-snapipo", "itt17-pop2-snapipo", "itt17-pop3-snapipo", "itt17-faceid"];
   await page.goto("/years/2017/sites/snapipo/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
@@ -152,8 +163,10 @@ test("2017 Snap IPO: three leftover-3× machines · never Face ID", async ({ pag
 test("2019 TikTok official dest is leftover-3× pop3 only · never Disney+", async ({ page }) => {
   const keys = ["itt19-pop-tiktok", "itt19-pop2-tiktok", "itt19-pop3-tiktok", "itt19-disneyplus"];
   await page.goto("/years/2019/sites/tiktok/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await expect(page.locator("[data-itt-lo3x] [data-pop-go]:not([data-pop-key])")).toHaveCount(0);
   await completePanel(
     page,

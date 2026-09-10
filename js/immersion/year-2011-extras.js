@@ -80,7 +80,7 @@
       saveJSON(key("gplus"), blob({ circle: circle.slice(0, 40), people: Object.keys(people), hangout: true }));
       saveJSON(key("gplus-circles"), blob({ circle: circle.slice(0, 40), people: Object.keys(people) }));
       saveJSON(key("gplus-hangout"), blob({ circle: circle.slice(0, 40), hangout: true }));
-      if (canvas) canvas.textContent = "Hangout leftover · up to 10 · " + circle;
+      if (canvas) canvas.textContent = "Hangout · up to 10 ·" + circle;
       feedback("Google+ · " + key("gplus"), st);
       reveal(doc);
     });
@@ -139,11 +139,11 @@
       }
       var phrase = val(doc, "[data-sr11-phrase]");
       if (!phrase || phrase.length < 2) {
-        feedback("Type a leftover phrase first. Empty never writes.", st, { error: true });
+        feedback("Type a phrase first. Empty never writes.", st, { error: true });
         return;
       }
       saveJSON(key("siri"), blob({ phrase: phrase.slice(0, 60), date: "2011-10-14" }));
-      feedback("Siri leftover · " + key("siri"), st);
+      feedback("Siri ·" + key("siri"), st);
       reveal(doc);
     });
   }
@@ -170,7 +170,7 @@
         return;
       }
       saveJSON(key("ipad2"), blob({ capacity: cap + "GB", cameras: true }));
-      feedback("iPad 2 leftover · " + key("ipad2"), st);
+      feedback("iPad 2 ·" + key("ipad2"), st);
       reveal(doc);
     });
   }
@@ -191,7 +191,7 @@
         return;
       }
       saveJSON(key("airbnb"), blob({ city: city.slice(0, 40), note: note.slice(0, 80) }));
-      feedback("Requested leftover · " + key("airbnb"), st);
+      feedback("Requested ·" + key("airbnb"), st);
       reveal(doc);
     });
   }
@@ -273,7 +273,7 @@
     var cover = doc.querySelector("[data-tl11-cover]");
     if (btn && cover) {
       btn.addEventListener("click", function () {
-        cover.textContent = "Cover leftover · 2011 memoir";
+        cover.textContent = "Cover · 2011 memoir";
       });
     }
   }

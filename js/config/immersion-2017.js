@@ -31,7 +31,7 @@
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
       { label: "Face ID", href: "sites/iphone/x.html" },
-      { label: "Fortnite leftover", href: "sites/fortnite/index.html" },
+      { label: "Fortnite", href: "sites/fortnite/index.html" },
       { label: "About 2017", href: "pages/about.html" }
     ]
   };

@@ -1,7 +1,8 @@
 /**
  * Official-trail period verb — writes flow-trails whenKey.
  * Host: html[data-official-key] + [data-official-verb]
- * Empty / unchecked reqs / trap never write. Incomplete never writes.
+ * Empty / trap never write. Ticks lock unless html[data-official-honesty="1"]
+ * (honesty only — period control writes). Incomplete never writes.
  */
 (function (global) {
   "use strict";
@@ -149,12 +150,19 @@
           var action = form ? String(form.getAttribute("action") || "").replace(/^\s+|\s+$/g, "") : "";
           if (action && action !== "#") ev.preventDefault();
         }
+        var honestyOnly = false;
+        try {
+          honestyOnly =
+            doc.documentElement.getAttribute("data-official-honesty") === "1";
+        } catch (eH) { /* */ }
         var reqs = productReqs(doc);
         var r;
-        for (r = 0; r < reqs.length; r++) {
-          if (!reqs[r].checked) {
-            say(st, "Tick honesty first. Incomplete never writes.", true);
-            return;
+        if (!honestyOnly) {
+          for (r = 0; r < reqs.length; r++) {
+            if (!reqs[r].checked) {
+              say(st, "Tick honesty first. Incomplete never writes.", true);
+              return;
+            }
           }
         }
         var needPick = this.getAttribute("data-official-need-pick") || "";
@@ -184,7 +192,7 @@
           );
           return;
         }
-        if (form && !reqs.length) {
+        if (form && !reqs.length && !honestyOnly) {
           var boxes = form.querySelectorAll("input[type='checkbox']");
           if (boxes.length >= 2) {
             var ticked = 0;

@@ -4,6 +4,25 @@
  * Period pages keep their own look. This file only restyles museum chrome.
  */
 
+/* 2005 start must fill the IE window. 1995 body{max-width:920px} leaks via 1999. */
+html[data-itt-year="2005"],
+html[data-itt-year="2005"] body,
+html[data-itt-year="2005"] body.itt-start-page,
+html[data-itt-year="2005"] body[data-itt-start] {
+  max-width: none !important;
+  width: 100% !important;
+  min-height: 100%;
+  background: #3a6ea5 !important;
+}
+html[data-itt-year="2005"] .ott-guided,
+html[data-itt-year="2005"] .ott-flows,
+html[data-itt-year="2005"] .itt-layer-assess,
+html[data-itt-year="2005"] .itt-also-year,
+html[data-itt-year="2005"] .itt-home-more {
+  max-width: none;
+  box-sizing: border-box;
+}
+
 .itt-year-star {
   margin: 10px 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -103,6 +122,12 @@ html[data-itt-year="2003"] .ott-guided,
 html[data-itt-year="2003"] .ott-flows,
 html[data-itt-year="2004"] .ott-guided,
 html[data-itt-year="2004"] .ott-flows,
+html[data-itt-year="2005"] .ott-guided,
+html[data-itt-year="2005"] .ott-flows,
+html[data-itt-year="2006"] .ott-guided,
+html[data-itt-year="2006"] .ott-flows,
+html[data-itt-year="2007"] .ott-guided,
+html[data-itt-year="2007"] .ott-flows,
 html[data-itt-year="2008"] .ott-guided,
 html[data-itt-year="2008"] .ott-flows {
   background: #3a6ea5;
@@ -117,6 +142,12 @@ html[data-itt-year="2003"] .ott-guided a,
 html[data-itt-year="2003"] .ott-flows a,
 html[data-itt-year="2004"] .ott-guided a,
 html[data-itt-year="2004"] .ott-flows a,
+html[data-itt-year="2005"] .ott-guided a,
+html[data-itt-year="2005"] .ott-flows a,
+html[data-itt-year="2006"] .ott-guided a,
+html[data-itt-year="2006"] .ott-flows a,
+html[data-itt-year="2007"] .ott-guided a,
+html[data-itt-year="2007"] .ott-flows a,
 html[data-itt-year="2008"] .ott-guided a,
 html[data-itt-year="2008"] .ott-flows a {
   color: #cfe4ff;

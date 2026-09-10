@@ -1,0 +1,58 @@
+2005 research visit log — 2026-09-10 density restack
+Honesty: opened-and-read pages below. Corpus is a bibliography, not 43k page visits.
+
+OPENED THIS PASS
+https://www.internetlivestats.com/total-number-of-websites/
+  June 2005 websites 64,780,617 (+26%) · users 1,027,580,990 · 16/site · YouTube + Reddit · table ends 2018
+
+https://cybercultural.com/p/internet-2005/
+  Web 2.0 boom · Flickr/MySpace/Skype M&A · Ajax · RSS over-hoped · IE dominates · Firefox cool · FB students-only
+
+https://googleblog.blogspot.com/2005/02/mapping-your-way.html
+  Bret Taylor 8 Feb 2005 · hotels near LAX · click-and-drag · no wait
+
+https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2005
+  ~311 pages · bibliography only · YouTube Reddit Maps Reader Video Club Penguin MDH Mashable wikiHow MTurk
+  Roblox not in this established-in-2005 list
+
+https://thehistoryoftheweb.com/timeline/
+  8 Feb Maps · 14 Feb YT launch claim (dual-cite first video 23 Apr) · 23 Jun Reddit · 26 Aug MDH · 24 Oct Club Penguin
+
+https://web.archive.org/web/20110102130434/http://www.adaptivepath.com/ideas/essays/archives/000385.php
+  Ajax essay 18 Feb 2005 · Jesse James Garrett · Maps / Suggest / Gmail / Flickr / A9
+
+https://news.netcraft.com/blog/november-2025-web-server-survey
+  Historical hostname table · Jun 64,780,617 · Dec 74,353,725 · print as month not ILS
+
+WDM year-2005 gallery: fetch failed this pass. Prior 2026-08-31 visit stands.
+
+LOCAL MD (all opened)
+2005-READ-FIRST · 2005-RESEARCH · 2005-MUSEUM-GRADE
+2005-FROM-SCRATCH-…-2026-08-31 (header year-wiped STALE)
+2005-EVERY-FLOW-MINUTE · 2005-2X-LEFTOVER · 2005-5K-WEB-FLOW-MAP
+2005-LEFTOVER-4X-DEST-MINUTES · 2005-2010-IMPROVE · 2005-2010-3X-2X-*
+1999-2005-LEFTOVER-3X-X3 · 1999-2005-FAMOUS-ONLY-3X · famous-3x-every-dest/2005.md
+DISK-TRUTH · EVERY-YEAR-IMPROVE-DEEP-RESEARCH · MUSEUM-GRADE-10K-SOURCES
+
+STACK
+wikipedia-2005-pages.tsv 888 titles
+wikipedia-2005-extlinks.tsv 44425 rows / 41894 unique
+five-x-2005-urls.txt 670
+old corpus 7161 → restacked unique 43732 (+36584)
+See ../harvest/URL-CORPUS-2005.txt · corpus-2005-summary.json
+
+CDX 20050101–20051231 started then killed (archive.org hang · same as 2010/2011)
+
+WORKFLOW deep-research-2 (2026-09-10) — Partial
+Corpus claim 7,161 is STALE (restack is 43,732). Dest/HTML 117/362 confirmed. Dest-farm vs 2008-199 confirmed not a hole.
+Verified extra primaries:
+https://web.archive.org/web/20050206094558/http://thefacebook.com/ — college-only directory still
+https://www.sec.gov/Archives/edgar/data/1308161/000118143105040705/rrd86058_6819.htm — News Corp ← Intermix ~$580M cash
+http://web.archive.org/web/20180625195947/https://news.netcraft.com/archives/2005/06/01/june_2005_web_server_survey.html — Jun headline 64,808,485
+Monthly headline vs later revised table folded into SCALE-LEDGER.
+Did not independently re-verify leftover-2× 892 as leftover-official minutes (815 dests / data-lo-save includes 4× writers).
+
+DISK
+117 dests · 362 HTML · leftover-2× ≥2 on 117/117 · ITT-2X-LINKS 117/117
+leftover-3× 144 panels · leftover-4× 117
+No dest-farm this pass.

@@ -136,12 +136,12 @@
     if (waitBtn && waitBtn.getAttribute("data-lo-wait-bound") !== "1") {
       waitBtn.setAttribute("data-lo-wait-bound", "1");
       waitBtn.addEventListener("click", function () {
-        say(st, "Waiting leftover…", false);
+        say(st, "Waiting…", false);
         var waitMs = parseInt(waitBtn.getAttribute("data-lo-wait-ms") || "800", 10);
         if (isNaN(waitMs) || waitMs < 200) waitMs = 800;
         setTimeout(function () {
           waitBtn.setAttribute("data-lo-waited", "1");
-          say(st, "Wait leftover ready.", false);
+          say(st, "Wait ready.", false);
         }, waitMs);
       });
     }
@@ -159,15 +159,15 @@
             this.setAttribute("data-lo-on", "1");
             this.className = (String(this.className || "") + " is-on").replace(/\s+/g, " ");
           }
-          say(st, Object.keys(pickedSet(root)).length + " leftover pick(s).", false);
+          say(st, Object.keys(pickedSet(root)).length + " pick(s).", false);
           return;
         }
         markPick(root, this);
         if (needPick && id !== needPick) {
-          say(st, "Wrong leftover. That pick never writes.", true);
+          say(st, "Wrong pick. That pick never writes.", true);
           return;
         }
-        say(st, "Picked leftover.", false);
+        say(st, "Picked.", false);
       });
     }
 
@@ -183,15 +183,15 @@
       var got = pickedSet(root);
       var ids = Object.keys(got).filter(Boolean);
       if (picks.length && needPick && !got[needPick]) {
-        say(st, "Pick the leftover first. Incomplete never writes.", true);
+        say(st, "Pick first. Incomplete never writes.", true);
         return;
       }
       if (picks.length && minPick && ids.length < minPick) {
-        say(st, "Pick " + minPick + " leftover rows first. Incomplete never writes.", true);
+        say(st, "Pick " + minPick + " rows first. Incomplete never writes.", true);
         return;
       }
       if (picks.length && !needPick && !minPick && !ids.length) {
-        say(st, "Pick a leftover first. Incomplete never writes.", true);
+        say(st, "Pick first. Incomplete never writes.", true);
         return;
       }
       var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
@@ -200,7 +200,7 @@
         return;
       }
       if (waitBtn && waitBtn.getAttribute("data-lo-waited") !== "1") {
-        say(st, "Wait leftover first. Incomplete never writes.", true);
+        say(st, "Wait first. Incomplete never writes.", true);
         return;
       }
       var payload = {
@@ -250,10 +250,130 @@
       carts[i].setAttribute("data-lo-product-bound", "1");
       carts[i].addEventListener("click", function () {
         var st = panel.querySelector("[data-lo-status]") || doc.querySelector("[data-itt-action-status]");
-        say(st, "Add to cart is leftover theater. Honesty + Save still required. Incomplete never writes.", true);
+        say(st, "Add to cart is theater. Honesty + Save still required. Incomplete never writes.", true);
       });
     }
   }
+
+  /* Visitor face is the dest. Leftover writers stay on disk, in Also this year. */
+  function inAlsoYear(el) {
+    var n = el;
+    while (n && n.nodeType === 1) {
+      if (n.className && /(^|\s)itt-also-year(\s|$)/.test(n.className)) return true;
+      n = n.parentNode;
+    }
+    return false;
+  }
+
+  function foldLeftoverRails(doc) {
+    doc = doc || document;
+    var nodes = doc.querySelectorAll(
+      "[data-itt-2x-links], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-lo-panel], [data-4x-panel], .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-pop-more, .itt-pop-3x3"
+    );
+    var box = doc.querySelector("details.itt-also-year");
+    if (!box) {
+      box = doc.createElement("details");
+      box.className = "itt-also-year";
+      box.setAttribute("data-itt-3x-also", "1");
+      box.innerHTML = "<summary>Also this year</summary><div class=\"itt-also-year-body\"></div>";
+    }
+    var body = box.querySelector(".itt-also-year-body");
+    if (!body) return 0;
+    var i;
+    var n;
+    var moved = 0;
+    var firstOutside = null;
+    for (i = 0; i < nodes.length; i++) {
+      n = nodes[i];
+      if (!n || inAlsoYear(n)) continue;
+      if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
+      if (!firstOutside) firstOutside = n;
+    }
+    if (firstOutside && firstOutside.parentNode && !box.parentNode) {
+      firstOutside.parentNode.insertBefore(box, firstOutside);
+    }
+    for (i = 0; i < nodes.length; i++) {
+      n = nodes[i];
+      if (!n || inAlsoYear(n) || box.contains(n)) continue;
+      if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
+      body.appendChild(n);
+      moved++;
+    }
+    if (doc.documentElement) doc.documentElement.setAttribute("data-itt-lo-folded", "1");
+    foldImplementerDumps(doc, box, body);
+    stripVisitorLeftoverWord(doc);
+    return moved;
+  }
+
+  function foldImplementerDumps(doc, box, body) {
+    if (!body) return;
+    var els = doc.querySelectorAll("h2,h3,p,section,nav");
+    var i;
+    var el;
+    var t;
+    for (i = 0; i < els.length; i++) {
+      el = els[i];
+      if (!el || inAlsoYear(el) || (box && box.contains(el))) continue;
+      if (el.hasAttribute && el.hasAttribute("hidden")) continue;
+      if (el.querySelector && el.querySelector("h1")) continue;
+      t = String(el.textContent || "");
+      if (t.length > 4000) continue;
+      if (
+        /CUT-DOUBLE|Named leftover machines|Pack [ABC]\b[\s\S]{0,80}leftover|docs\/\d{4}-[A-Z0-9-]*LEFTOVER|leftover never writes/i.test(
+          t
+        )
+      ) {
+        if (!box.parentNode && el.parentNode) el.parentNode.insertBefore(box, el);
+        body.appendChild(el);
+      }
+    }
+  }
+
+  function stripVisitorLeftoverWord(doc) {
+    if (!doc || !doc.createTreeWalker) return;
+    var filter = {
+      acceptNode: function (node) {
+        var p = node.parentNode;
+        while (p && p.nodeType === 1) {
+          var tag = p.tagName;
+          if (tag === "SCRIPT" || tag === "STYLE" || tag === "CODE" || tag === "PRE") {
+            return 2;
+          }
+          if (inAlsoYear(p)) return 2;
+          if (p.getAttribute) {
+            if (p.getAttribute("data-lo-panel") === "1") return 2;
+            if (p.getAttribute("data-itt-lo3x") != null) return 2;
+            if (p.getAttribute("data-4x-panel") != null) return 2;
+            if (p.getAttribute("data-pop-panel") === "1") return 2;
+          }
+          p = p.parentNode;
+        }
+        if (!/leftover/i.test(node.nodeValue || "")) return 2;
+        return 1;
+      }
+    };
+    var walker = doc.createTreeWalker(doc.body || doc.documentElement, 4, filter, false);
+    var node;
+    var nodes = [];
+    while ((node = walker.nextNode())) nodes.push(node);
+    var i;
+    for (i = 0; i < nodes.length; i++) {
+      nodes[i].nodeValue = String(nodes[i].nodeValue || "")
+        .replace(/\s*leftover(?:-\d+×|\s*[234]×)?/gi, "")
+        .replace(/\s{2,}/g, " ");
+    }
+    try {
+      if (doc.title && /leftover/i.test(doc.title)) {
+        doc.title = String(doc.title)
+          .replace(/\s*leftover(?:-\d+×|\s*[234]×)?/gi, "")
+          .replace(/\s{2,}/g, " ")
+          .replace(/\s+[—\-]+\s*$/g, "")
+          .replace(/^\s+|\s+$/g, "");
+      }
+    } catch (eT) { /* */ }
+  }
+
+  ITT.foldLeftoverRails = foldLeftoverRails;
 
   function boot(doc) {
     doc = doc || document;
@@ -261,6 +381,7 @@
     var i;
     for (i = 0; i < btns.length; i++) bootOne(btns[i]);
     bootProductVerb(doc);
+    foldLeftoverRails(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

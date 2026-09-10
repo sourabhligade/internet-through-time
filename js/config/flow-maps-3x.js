@@ -10,17 +10,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/aliweb/index.html",
-      "name": "ALIWEB leftover"
+      "name": "ALIWEB"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/apple/index.html",
-      "name": "Apple leftover"
+      "name": "Apple"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bbc/index.html",
-      "name": "BBC leftover"
+      "name": "BBC"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -30,37 +30,37 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/berkeley/index.html",
-      "name": "Berkeley leftover"
+      "name": "Berkeley"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cisco/index.html",
-      "name": "Cisco leftover"
+      "name": "Cisco"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cmu/index.html",
-      "name": "CMU leftover"
+      "name": "CMU"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cnn/index.html",
-      "name": "CNN leftover"
+      "name": "CNN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/firstvirtual/index.html",
-      "name": "First Virtual leftover"
+      "name": "First Virtual"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/harvest/index.html",
-      "name": "Harvest leftover"
+      "name": "Harvest"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ibm/index.html",
-      "name": "IBM.com leftover"
+      "name": "IBM.com"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -70,32 +70,32 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/intel/index.html",
-      "name": "Intel leftover"
+      "name": "Intel"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/loc/index.html",
-      "name": "Library of Congress leftover"
+      "name": "Library of Congress"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/microsoft/index.html",
-      "name": "Microsoft.com leftover"
+      "name": "Microsoft.com"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mit/index.html",
-      "name": "MIT leftover"
+      "name": "MIT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nyt/index.html",
-      "name": "NYT leftover"
+      "name": "NYT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pbs/index.html",
-      "name": "PBS leftover"
+      "name": "PBS"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -105,37 +105,37 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/smithsonian/index.html",
-      "name": "Smithsonian leftover"
+      "name": "Smithsonian"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/stanford/index.html",
-      "name": "Stanford leftover"
+      "name": "Stanford"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/startingpoint/index.html",
-      "name": "Starting Point leftover"
+      "name": "Starting Point"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/sun/index.html",
-      "name": "Sun leftover"
+      "name": "Sun"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/time/index.html",
-      "name": "Time leftover"
+      "name": "Time"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/uiuc/index.html",
-      "name": "UIUC / NCSA leftover"
+      "name": "UIUC / NCSA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/weather/index.html",
-      "name": "Weather leftover"
+      "name": "Weather"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -145,24 +145,24 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/well/index.html",
-      "name": "The WELL leftover"
+      "name": "The WELL"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wwworm/index.html",
-      "name": "WWW Worm leftover"
+      "name": "WWW Worm"
     }
   ],
   "1995": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/apple/index.html",
-      "name": "Apple leftover"
+      "name": "Apple"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bbc/index.html",
-      "name": "BBC leftover"
+      "name": "BBC"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -172,12 +172,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fbi/index.html",
-      "name": "FBI leftover"
+      "name": "FBI"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/harvest/index.html",
-      "name": "Harvest leftover"
+      "name": "Harvest"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -187,42 +187,42 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ibm/index.html",
-      "name": "IBM leftover"
+      "name": "IBM"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/intel/index.html",
-      "name": "Intel leftover"
+      "name": "Intel"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/loc/index.html",
-      "name": "Library of Congress leftover"
+      "name": "Library of Congress"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mit/index.html",
-      "name": "MIT leftover"
+      "name": "MIT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/netcom/index.html",
-      "name": "Netcom leftover"
+      "name": "Netcom"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/npr/index.html",
-      "name": "NPR leftover"
+      "name": "NPR"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nyt/index.html",
-      "name": "NYT leftover"
+      "name": "NYT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/opentext/index.html",
-      "name": "Open Text leftover"
+      "name": "Open Text"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -232,7 +232,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pbs/index.html",
-      "name": "PBS leftover"
+      "name": "PBS"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -247,62 +247,62 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/startingpoint/index.html",
-      "name": "Starting Point leftover"
+      "name": "Starting Point"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/starwave/index.html",
-      "name": "Starwave leftover"
+      "name": "Starwave"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/submitit/index.html",
-      "name": "Submit It leftover"
+      "name": "Submit It"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/suck/index.html",
-      "name": "suck.com leftover"
+      "name": "suck.com"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/sun/index.html",
-      "name": "Sun leftover"
+      "name": "Sun"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/thespot/index.html",
-      "name": "The Spot leftover"
+      "name": "The Spot"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/time/index.html",
-      "name": "Time leftover"
+      "name": "Time"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/uunet/index.html",
-      "name": "UUNET leftover"
+      "name": "UUNET"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/weather/index.html",
-      "name": "Weather leftover"
+      "name": "Weather"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/webcrawler/index.html",
-      "name": "WebCrawler leftover"
+      "name": "WebCrawler"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/well/index.html",
-      "name": "The WELL leftover"
+      "name": "The WELL"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zdnet/index.html",
-      "name": "ZDNet leftover"
+      "name": "ZDNet"
     }
   ],
   "1996": [
@@ -314,42 +314,42 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/apple/index.html",
-      "name": "Apple leftover"
+      "name": "Apple"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/archive/index.html",
-      "name": "Internet Archive leftover"
+      "name": "Internet Archive"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/barnes/index.html",
-      "name": "Barnes & Noble leftover"
+      "name": "Barnes & Noble"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bbc/index.html",
-      "name": "BBC leftover"
+      "name": "BBC"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bluemountain/index.html",
-      "name": "Blue Mountain leftover"
+      "name": "Blue Mountain"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/disney/index.html",
-      "name": "Disney Online leftover"
+      "name": "Disney Online"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/espn/index.html",
-      "name": "ESPN leftover"
+      "name": "ESPN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/four11/index.html",
-      "name": "Four11 leftover"
+      "name": "Four11"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -364,27 +364,27 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ibm/index.html",
-      "name": "IBM leftover"
+      "name": "IBM"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/icq/index.html",
-      "name": "ICQ leftover"
+      "name": "ICQ"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/infospace/index.html",
-      "name": "InfoSpace leftover"
+      "name": "InfoSpace"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/intel/index.html",
-      "name": "Intel leftover"
+      "name": "Intel"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/loc/index.html",
-      "name": "Library of Congress leftover"
+      "name": "Library of Congress"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -394,17 +394,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mit/index.html",
-      "name": "MIT leftover"
+      "name": "MIT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nyt/index.html",
-      "name": "NYT leftover"
+      "name": "NYT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pbs/index.html",
-      "name": "PBS leftover"
+      "name": "PBS"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -424,47 +424,47 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/suck/index.html",
-      "name": "suck.com leftover"
+      "name": "suck.com"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/sun/index.html",
-      "name": "Sun leftover"
+      "name": "Sun"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tripod/index.html",
-      "name": "Tripod leftover"
+      "name": "Tripod"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/weather/index.html",
-      "name": "Weather leftover"
+      "name": "Weather"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/webcrawler/index.html",
-      "name": "WebCrawler leftover"
+      "name": "WebCrawler"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/well/index.html",
-      "name": "The WELL leftover"
+      "name": "The WELL"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xoom/index.html",
-      "name": "Xoom leftover"
+      "name": "Xoom"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zdnet/index.html",
-      "name": "ZDNet leftover"
+      "name": "ZDNet"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zdnet2/index.html",
-      "name": "Ziff leftover"
+      "name": "Ziff"
     }
   ],
   "1997": [
@@ -476,22 +476,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/archive/index.html",
-      "name": "Internet Archive leftover"
+      "name": "Internet Archive"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/barnes/index.html",
-      "name": "Barnes leftover"
+      "name": "Barnes"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bluemountain/index.html",
-      "name": "Blue Mountain leftover"
+      "name": "Blue Mountain"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/disney/index.html",
-      "name": "Disney Online leftover"
+      "name": "Disney Online"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -501,7 +501,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/espn/index.html",
-      "name": "ESPN leftover"
+      "name": "ESPN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -511,12 +511,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/four11/index.html",
-      "name": "Four11 leftover"
+      "name": "Four11"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/goto/index.html",
-      "name": "GoTo leftover"
+      "name": "GoTo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -526,22 +526,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ibm/index.html",
-      "name": "IBM leftover"
+      "name": "IBM"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/infospace/index.html",
-      "name": "InfoSpace leftover"
+      "name": "InfoSpace"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/intel/index.html",
-      "name": "Intel leftover"
+      "name": "Intel"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/loc/index.html",
-      "name": "Library of Congress leftover"
+      "name": "Library of Congress"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -551,7 +551,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mit/index.html",
-      "name": "MIT leftover"
+      "name": "MIT"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -561,7 +561,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/netflix/index.html",
-      "name": "Netflix leftover"
+      "name": "Netflix"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -571,7 +571,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pbs/index.html",
-      "name": "PBS leftover"
+      "name": "PBS"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -581,47 +581,47 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/real/index.html",
-      "name": "Real.com leftover"
+      "name": "Real.com"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/suck/index.html",
-      "name": "suck leftover"
+      "name": "suck"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/sun/index.html",
-      "name": "Sun leftover"
+      "name": "Sun"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tripod/index.html",
-      "name": "Tripod leftover"
+      "name": "Tripod"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/usatoday/index.html",
-      "name": "USA Today leftover"
+      "name": "USA Today"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/weather/index.html",
-      "name": "Weather leftover"
+      "name": "Weather"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/webcrawler/index.html",
-      "name": "WebCrawler leftover"
+      "name": "WebCrawler"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/well/index.html",
-      "name": "The WELL leftover"
+      "name": "The WELL"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xoom/index.html",
-      "name": "Xoom leftover"
+      "name": "Xoom"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -631,7 +631,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yandex/index.html",
-      "name": "Yandex leftover"
+      "name": "Yandex"
     }
   ],
   "1998": [
@@ -663,7 +663,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bluemountain/index.html",
-      "name": "Blue Mountain leftover"
+      "name": "Blue Mountain"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -678,7 +678,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/four11/index.html",
-      "name": "Four11 leftover"
+      "name": "Four11"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -703,7 +703,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/infospace/index.html",
-      "name": "InfoSpace leftover"
+      "name": "InfoSpace"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -748,17 +748,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tripod/index.html",
-      "name": "Tripod leftover"
+      "name": "Tripod"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/weather/index.html",
-      "name": "Weather leftover"
+      "name": "Weather"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/webcrawler/index.html",
-      "name": "WebCrawler leftover"
+      "name": "WebCrawler"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -768,7 +768,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xoom/index.html",
-      "name": "Xoom leftover"
+      "name": "Xoom"
     }
   ],
   "1999": [
@@ -1054,7 +1054,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/appleimac/index.html",
-      "name": "iMac leftover"
+      "name": "iMac"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1064,7 +1064,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/askjeeves/index.html",
-      "name": "Ask Jeeves leftover"
+      "name": "Ask Jeeves"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1084,22 +1084,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/dmoz/index.html",
-      "name": "Open Directory leftover"
+      "name": "Open Directory"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ebay/index.html",
-      "name": "eBay leftover"
+      "name": "eBay"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/encarta/index.html",
-      "name": "Encarta leftover"
+      "name": "Encarta"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/excite/index.html",
-      "name": "Excite leftover"
+      "name": "Excite"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1109,7 +1109,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/grok/index.html",
-      "name": "Grokster leftover"
+      "name": "Grokster"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1119,7 +1119,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/microsoft/index.html",
-      "name": "Internet Explorer 6 leftover"
+      "name": "Internet Explorer 6"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1129,17 +1129,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/moveon/index.html",
-      "name": "MoveOn leftover"
+      "name": "MoveOn"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mozilla/index.html",
-      "name": "Mozilla 0.9.4 leftover"
+      "name": "Mozilla 0.9.4"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/msn/index.html",
-      "name": "MSN leftover"
+      "name": "MSN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1149,7 +1149,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/paypal/index.html",
-      "name": "PayPal leftover"
+      "name": "PayPal"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1159,17 +1159,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slashdot/index.html",
-      "name": "Slashdot leftover"
+      "name": "Slashdot"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tpm/index.html",
-      "name": "Warblog leftover"
+      "name": "Warblog"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/weblogs/index.html",
-      "name": "Weblogs.com ping leftover"
+      "name": "Weblogs.com ping"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1179,7 +1179,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xp/index.html",
-      "name": "Windows XP leftover"
+      "name": "Windows XP"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1191,32 +1191,32 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/amazon/index.html",
-      "name": "Amazon smile leftover"
+      "name": "Amazon smile"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/blogger/index.html",
-      "name": "Blogger leftover"
+      "name": "Blogger"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/blogspot/index.html",
-      "name": "Blogspot leftover"
+      "name": "Blogspot"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/daypop/index.html",
-      "name": "Daypop leftover"
+      "name": "Daypop"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ebay/index.html",
-      "name": "eBay leftover"
+      "name": "eBay"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fark/index.html",
-      "name": "Fark leftover"
+      "name": "Fark"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1231,47 +1231,47 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/googlenews/index.html",
-      "name": "Google News BETA leftover"
+      "name": "Google News BETA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/homestar/index.html",
-      "name": "Homestar Runner leftover"
+      "name": "Homestar Runner"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ipod/index.html",
-      "name": "iPod gen 2 leftover"
+      "name": "iPod gen 2"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/isp/index.html",
-      "name": "Always-on leftover"
+      "name": "Always-on"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/kazaa/index.html",
-      "name": "KaZaA leftover"
+      "name": "KaZaA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/lastfm/index.html",
-      "name": "last.fm leftover seed"
+      "name": "last.fm seed"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/movabletype/index.html",
-      "name": "Movable Type 2.x leftover"
+      "name": "Movable Type 2.x"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mozilla/index.html",
-      "name": "Mozilla 1.0 leftover"
+      "name": "Mozilla 1.0"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mtv/index.html",
-      "name": "MTV leftover"
+      "name": "MTV"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1281,7 +1281,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/phoenix/index.html",
-      "name": "Phoenix 0.1 leftover"
+      "name": "Phoenix 0.1"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1301,7 +1301,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wikipedia/index.html",
-      "name": "Wikipedia leftover"
+      "name": "Wikipedia"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1311,19 +1311,19 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xp/index.html",
-      "name": "Windows XP leftover"
+      "name": "Windows XP"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yahoo/index.html",
-      "name": "Yahoo leftover"
+      "name": "Yahoo"
     }
   ],
   "2003": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/4chan/index.html",
-      "name": "4chan leftover literacy"
+      "name": "4chan literacy"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1333,7 +1333,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/amazon/index.html",
-      "name": "Amazon smile leftover"
+      "name": "Amazon smile"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1348,22 +1348,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cnn/index.html",
-      "name": "CNN leftover"
+      "name": "CNN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/delicious/index.html",
-      "name": "del.icio.us leftover"
+      "name": "del.icio.us"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/firebird/index.html",
-      "name": "Firebird leftover hop"
+      "name": "Firebird hop"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/flash/index.html",
-      "name": "Flash / FWA leftover"
+      "name": "Flash / FWA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1373,12 +1373,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/google/index.html",
-      "name": "Google leftover"
+      "name": "Google"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/hi5/index.html",
-      "name": "hi5 leftover"
+      "name": "hi5"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1388,7 +1388,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/kazaa/index.html",
-      "name": "KaZaA leftover"
+      "name": "KaZaA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1403,7 +1403,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/phoenix/index.html",
-      "name": "Firebird leftover"
+      "name": "Firebird"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1418,12 +1418,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/skype/index.html",
-      "name": "Skype leftover"
+      "name": "Skype"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wikipedia/index.html",
-      "name": "Wikipedia leftover"
+      "name": "Wikipedia"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1433,7 +1433,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yahoo/index.html",
-      "name": "Yahoo portal leftover"
+      "name": "Yahoo portal"
     }
   ],
   "2004": [
@@ -1540,7 +1540,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/flickrpro/index.html",
-      "name": "Flickr Pro leftover"
+      "name": "Flickr Pro"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1852,7 +1852,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ajax/index.html",
-      "name": "ajax leftover"
+      "name": "ajax"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1867,12 +1867,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/analytics/index.html",
-      "name": "analytics leftover"
+      "name": "analytics"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/android/index.html",
-      "name": "android leftover"
+      "name": "android"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1887,7 +1887,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ask/index.html",
-      "name": "ask leftover"
+      "name": "ask"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1927,7 +1927,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/clubpenguin/index.html",
-      "name": "clubpenguin leftover"
+      "name": "clubpenguin"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1942,7 +1942,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/dailymotion/index.html",
-      "name": "dailymotion leftover"
+      "name": "dailymotion"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -1967,7 +1967,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/earth/index.html",
-      "name": "earth leftover"
+      "name": "earth"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2007,7 +2007,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/flickrpro/index.html",
-      "name": "Flickr Pro leftover"
+      "name": "Flickr Pro"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2022,7 +2022,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gaia/index.html",
-      "name": "gaia leftover"
+      "name": "gaia"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2052,7 +2052,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/googleearth/index.html",
-      "name": "googleearth leftover"
+      "name": "googleearth"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2062,7 +2062,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/googlevideo/index.html",
-      "name": "googlevideo leftover"
+      "name": "googlevideo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2077,7 +2077,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/housingmaps/index.html",
-      "name": "HousingMaps leftover"
+      "name": "HousingMaps"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2107,7 +2107,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/kayak/index.html",
-      "name": "kayak leftover"
+      "name": "kayak"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2142,22 +2142,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mapquest/index.html",
-      "name": "mapquest leftover"
+      "name": "mapquest"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/maps/index.html",
-      "name": "Google Maps leftover"
+      "name": "Google Maps"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mashable/index.html",
-      "name": "mashable leftover"
+      "name": "mashable"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/memeorandum/index.html",
-      "name": "memeorandum leftover"
+      "name": "memeorandum"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2172,7 +2172,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/milliondollar/index.html",
-      "name": "milliondollar leftover"
+      "name": "milliondollar"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2227,7 +2227,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/odeo/index.html",
-      "name": "odeo leftover"
+      "name": "odeo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2247,7 +2247,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pandora/index.html",
-      "name": "Pandora leftover"
+      "name": "Pandora"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2277,22 +2277,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/programmableweb/index.html",
-      "name": "programmableweb leftover"
+      "name": "programmableweb"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/reader/index.html",
-      "name": "reader leftover"
+      "name": "reader"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/reddit/index.html",
-      "name": "reddit leftover"
+      "name": "reddit"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/secondlife/index.html",
-      "name": "secondlife leftover"
+      "name": "secondlife"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2322,7 +2322,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/techcrunch/index.html",
-      "name": "TechCrunch leftover"
+      "name": "TechCrunch"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2337,12 +2337,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/utorrent/index.html",
-      "name": "utorrent leftover"
+      "name": "utorrent"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vimeo/index.html",
-      "name": "vimeo leftover"
+      "name": "vimeo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2392,7 +2392,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xbox360/index.html",
-      "name": "xbox360 leftover"
+      "name": "xbox360"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2417,142 +2417,142 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/youtube/index.html",
-      "name": "YouTube leftover"
+      "name": "YouTube"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yahoo/index.html",
-      "name": "Yahoo leftover"
+      "name": "Yahoo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bing/index.html",
-      "name": "Bing leftover"
+      "name": "Bing"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/msn/index.html",
-      "name": "MSN leftover"
+      "name": "MSN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/aol/index.html",
-      "name": "AOL leftover"
+      "name": "AOL"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ebay/index.html",
-      "name": "eBay leftover"
+      "name": "eBay"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/craigslist/index.html",
-      "name": "Craigslist leftover"
+      "name": "Craigslist"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/apple/index.html",
-      "name": "Apple leftover"
+      "name": "Apple"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ask/index.html",
-      "name": "Ask leftover"
+      "name": "Ask"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/espn/index.html",
-      "name": "ESPN leftover"
+      "name": "ESPN"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tumblr/index.html",
-      "name": "Tumblr leftover"
+      "name": "Tumblr"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/flickr/index.html",
-      "name": "Flickr leftover"
+      "name": "Flickr"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yelp/index.html",
-      "name": "Yelp leftover"
+      "name": "Yelp"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/groupon/index.html",
-      "name": "Groupon leftover"
+      "name": "Groupon"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/livingsocial/index.html",
-      "name": "LivingSocial leftover"
+      "name": "LivingSocial"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gowalla/index.html",
-      "name": "Gowalla leftover"
+      "name": "Gowalla"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/color/index.html",
-      "name": "Color leftover"
+      "name": "Color"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/reader/index.html",
-      "name": "Reader leftover"
+      "name": "Reader"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/megaupload/index.html",
-      "name": "Megaupload leftover"
+      "name": "Megaupload"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/hulu/index.html",
-      "name": "Hulu leftover"
+      "name": "Hulu"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pandora/index.html",
-      "name": "Pandora leftover"
+      "name": "Pandora"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/foursquare/index.html",
-      "name": "Foursquare leftover"
+      "name": "Foursquare"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/quora/index.html",
-      "name": "Quora leftover"
+      "name": "Quora"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/kickstarter/index.html",
-      "name": "Kickstarter leftover"
+      "name": "Kickstarter"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/evernote/index.html",
-      "name": "Evernote leftover"
+      "name": "Evernote"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/imgur/index.html",
-      "name": "Imgur leftover"
+      "name": "Imgur"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vimeo/index.html",
-      "name": "Vimeo leftover"
+      "name": "Vimeo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/huffpost/index.html",
-      "name": "HuffPost leftover"
+      "name": "HuffPost"
     }
   ],
   "2012": [
@@ -2574,12 +2574,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/drawsomething/index.html",
-      "name": "Draw Something leftover"
+      "name": "Draw Something"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/drivebox/index.html",
-      "name": "Drive leftover"
+      "name": "Drive"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2594,7 +2594,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/googledrive/index.html",
-      "name": "Google Drive leftover"
+      "name": "Google Drive"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2604,7 +2604,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/igabout/index.html",
-      "name": "IG about leftover"
+      "name": "IG about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2619,12 +2619,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ipoabout/index.html",
-      "name": "IPO about leftover"
+      "name": "IPO about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/kindlefire/index.html",
-      "name": "Kindle Fire leftover"
+      "name": "Kindle Fire"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2639,17 +2639,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nexus/index.html",
-      "name": "Nexus leftover"
+      "name": "Nexus"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pinabout/index.html",
-      "name": "Pinterest about leftover"
+      "name": "Pinterest about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/play/index.html",
-      "name": "Google Play / Nexus leftover"
+      "name": "Google Play / Nexus"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2674,7 +2674,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/surface/index.html",
-      "name": "Surface leftover"
+      "name": "Surface"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2694,7 +2694,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tumblr12/index.html",
-      "name": "Tumblr leftover"
+      "name": "Tumblr"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2704,17 +2704,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/twnote12/index.html",
-      "name": "Twitter leftover"
+      "name": "Twitter"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/uber/index.html",
-      "name": "UberX leftover"
+      "name": "UberX"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vinewait/index.html",
-      "name": "Vine wait leftover"
+      "name": "Vine wait"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2729,7 +2729,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/windows-phone/index.html",
-      "name": "Windows Phone leftover"
+      "name": "Windows Phone"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2744,7 +2744,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yahoo-marissa/index.html",
-      "name": "Yahoo / Mayer leftover"
+      "name": "Yahoo / Mayer"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2754,7 +2754,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ytnote12/index.html",
-      "name": "YouTube leftover"
+      "name": "YouTube"
     }
   ],
   "2013": [
@@ -2766,17 +2766,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bitcoin13/index.html",
-      "name": "Bitcoin leftover"
+      "name": "Bitcoin"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/facebook/index.html",
-      "name": "Facebook leftover"
+      "name": "Facebook"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/hangouts13/index.html",
-      "name": "Hangouts leftover"
+      "name": "Hangouts"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2786,32 +2786,32 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/instagram/about.html",
-      "name": "IG Video leftover"
+      "name": "IG Video"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ios7about/index.html",
-      "name": "iOS 7 leftover"
+      "name": "iOS 7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphone/5c.html",
-      "name": "iPhone 5c leftover"
+      "name": "iPhone 5c"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/medium/index.html",
-      "name": "Medium leftover"
+      "name": "Medium"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ouya/index.html",
-      "name": "OUYA leftover"
+      "name": "OUYA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/patreon/index.html",
-      "name": "Patreon leftover"
+      "name": "Patreon"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2826,17 +2826,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/snapabout/index.html",
-      "name": "Snap about leftover"
+      "name": "Snap about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/snapchat/about.html",
-      "name": "Stories leftover"
+      "name": "Stories"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/teleabout/index.html",
-      "name": "Telegram leftover"
+      "name": "Telegram"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2846,7 +2846,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/touchabout/index.html",
-      "name": "Touch ID leftover"
+      "name": "Touch ID"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2856,22 +2856,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tumblr13/index.html",
-      "name": "Tumblr Yahoo leftover"
+      "name": "Tumblr Yahoo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/twitteripo/index.html",
-      "name": "Twitter IPO leftover"
+      "name": "Twitter IPO"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vine/index.html",
-      "name": "Vine feed leftover"
+      "name": "Vine feed"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vineabout/index.html",
-      "name": "Vine about leftover"
+      "name": "Vine about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2886,69 +2886,69 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xboxone/index.html",
-      "name": "Xbox One leftover"
+      "name": "Xbox One"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yikyak13/index.html",
-      "name": "Yik Yak leftover"
+      "name": "Yik Yak"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/youtube/index.html",
-      "name": "YouTube leftover"
+      "name": "YouTube"
     }
   ],
   "2014": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/alipay/index.html",
-      "name": "Alipay leftover"
+      "name": "Alipay"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/echoinvite/index.html",
-      "name": "Echo invite leftover 6\u00d7"
+      "name": "Echo invite 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ello/index.html",
-      "name": "Ello leftover 6\u00d7"
+      "name": "Ello 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/giphy/index.html",
-      "name": "Giphy leftover"
+      "name": "Giphy"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/instagram/index.html",
-      "name": "Instagram leftover"
+      "name": "Instagram"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphone6about/index.html",
-      "name": "iPhone 6 leftover"
+      "name": "iPhone 6"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/materialabout/index.html",
-      "name": "Material leftover"
+      "name": "Material"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/musically14/index.html",
-      "name": "musical.ly leftover 6\u00d7"
+      "name": "musical.ly 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/oculus/index.html",
-      "name": "Oculus leftover 6\u00d7"
+      "name": "Oculus 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/payabout/index.html",
-      "name": "Apple Pay leftover"
+      "name": "Apple Pay"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -2958,94 +2958,94 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/serial/index.html",
-      "name": "Serial leftover 6\u00d7"
+      "name": "Serial 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slack/index.html",
-      "name": "Slack leftover"
+      "name": "Slack"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slackabout/index.html",
-      "name": "Slack leftover"
+      "name": "Slack"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/snapchat/index.html",
-      "name": "Snapchat leftover"
+      "name": "Snapchat"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/swarm/index.html",
-      "name": "Swarm leftover"
+      "name": "Swarm"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/truecrypt/index.html",
-      "name": "TrueCrypt leftover 6\u00d7"
+      "name": "TrueCrypt 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/twitch/index.html",
-      "name": "Twitch leftover"
+      "name": "Twitch"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/twitchabout/index.html",
-      "name": "Twitch leftover"
+      "name": "Twitch"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/uber/index.html",
-      "name": "Uber leftover"
+      "name": "Uber"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/waabout/index.html",
-      "name": "WhatsApp about leftover"
+      "name": "WhatsApp about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wikipedia/index.html",
-      "name": "Wikipedia leftover"
+      "name": "Wikipedia"
     }
   ],
   "2015": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/adblock/index.html",
-      "name": "Adblock leftover"
+      "name": "Adblock"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/agario/index.html",
-      "name": "Agar.io leftover 6\u00d7"
+      "name": "Agar.io 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/amppage/index.html",
-      "name": "AMP leftover"
+      "name": "AMP"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/apple/about.html",
-      "name": "apple leftover hop"
+      "name": "apple hop"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/applemusicsub/index.html",
-      "name": "Apple Music leftover"
+      "name": "Apple Music"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/discordabout/index.html",
-      "name": "Discord leftover"
+      "name": "Discord"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/discoverabout/index.html",
-      "name": "Discover leftover"
+      "name": "Discover"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3055,7 +3055,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/edgeabout/index.html",
-      "name": "Edge leftover"
+      "name": "Edge"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3070,7 +3070,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/instant/index.html",
-      "name": "Instant Articles leftover 6\u00d7"
+      "name": "Instant Articles 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3080,7 +3080,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/leabout/index.html",
-      "name": "Let's Encrypt leftover"
+      "name": "Let's Encrypt"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3090,7 +3090,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/meerkatlive/index.html",
-      "name": "Meerkat leftover"
+      "name": "Meerkat"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3100,17 +3100,17 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/peach/index.html",
-      "name": "Peach leftover"
+      "name": "Peach"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/periabout/index.html",
-      "name": "Periscope about leftover"
+      "name": "Periscope about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/photosabout/index.html",
-      "name": "Photos leftover"
+      "name": "Photos"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3120,12 +3120,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/secret/index.html",
-      "name": "Secret leftover 6\u00d7"
+      "name": "Secret 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/snapchat/index.html",
-      "name": "Snapchat leftover"
+      "name": "Snapchat"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3135,49 +3135,49 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/swiftoss/index.html",
-      "name": "Swift OSS leftover 6\u00d7"
+      "name": "Swift OSS 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/titleii/index.html",
-      "name": "Title II leftover 6\u00d7"
+      "name": "Title II 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/watchabout/index.html",
-      "name": "Watch leftover"
+      "name": "Watch"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/waweb/index.html",
-      "name": "WhatsApp Web leftover 6\u00d7"
+      "name": "WhatsApp Web 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/win10get/index.html",
-      "name": "Get Windows 10 leftover"
+      "name": "Get Windows 10"
     }
   ],
   "2016": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/alphago/index.html",
-      "name": "AlphaGo leftover"
+      "name": "AlphaGo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/assistant/index.html",
-      "name": "Assistant leftover 6\u00d7"
+      "name": "Assistant 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/e2eabout/index.html",
-      "name": "E2E leftover"
+      "name": "E2E"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/facebook/about.html",
-      "name": "Reactions leftover"
+      "name": "Reactions"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3187,32 +3187,32 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/houseparty/index.html",
-      "name": "Houseparty leftover 6\u00d7"
+      "name": "Houseparty 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/inbox/index.html",
-      "name": "Inbox leftover 6\u00d7"
+      "name": "Inbox 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/instagram/about.html",
-      "name": "Stories leftover"
+      "name": "Stories"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphone7about/index.html",
-      "name": "iPhone 7 leftover"
+      "name": "iPhone 7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/jio/index.html",
-      "name": "Jio leftover 6\u00d7"
+      "name": "Jio 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/linkedinms/index.html",
-      "name": "LinkedIn leftover 6\u00d7"
+      "name": "LinkedIn 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3232,12 +3232,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pogoabout/index.html",
-      "name": "GO leftover"
+      "name": "GO"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/reactabout/index.html",
-      "name": "Reactions leftover"
+      "name": "Reactions"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3252,42 +3252,42 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/smario/index.html",
-      "name": "Super Mario Run leftover 6\u00d7"
+      "name": "Super Mario Run 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/snapchat/index.html",
-      "name": "Snapchat leftover"
+      "name": "Snapchat"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/spectabout/index.html",
-      "name": "Spectacles leftover"
+      "name": "Spectacles"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/storyabout/index.html",
-      "name": "Stories about leftover"
+      "name": "Stories about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/superbowl/index.html",
-      "name": "Super Bowl leftover"
+      "name": "Super Bowl"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vine/index.html",
-      "name": "Vine leftover"
+      "name": "Vine"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/whatsapp/about.html",
-      "name": "E2E leftover"
+      "name": "E2E"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/win10end/index.html",
-      "name": "Win10 end leftover"
+      "name": "Win10 end"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3299,7 +3299,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/airpods17/index.html",
-      "name": "AirPods leftover"
+      "name": "AirPods"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3309,147 +3309,147 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/android8/index.html",
-      "name": "Android Oreo leftover"
+      "name": "Android Oreo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/applepark/index.html",
-      "name": "Apple Park leftover"
+      "name": "Apple Park"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bch/index.html",
-      "name": "Bitcoin Cash leftover"
+      "name": "Bitcoin Cash"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bitcoinath/index.html",
-      "name": "Bitcoin leftover"
+      "name": "Bitcoin"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/bitmoji/index.html",
-      "name": "Bitmoji leftover"
+      "name": "Bitmoji"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cloudbleed/index.html",
-      "name": "Cloudbleed leftover"
+      "name": "Cloudbleed"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cmebtc/index.html",
-      "name": "CME Bitcoin leftover"
+      "name": "CME Bitcoin"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/coreml/index.html",
-      "name": "Core ML leftover"
+      "name": "Core ML"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/creditfrz/index.html",
-      "name": "Credit freeze leftover"
+      "name": "Credit freeze"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/discord17/index.html",
-      "name": "Discord leftover"
+      "name": "Discord"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/echoshow/index.html",
-      "name": "Echo Show leftover"
+      "name": "Echo Show"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/equifaxabout/index.html",
-      "name": "Equifax leftover"
+      "name": "Equifax"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/faceabout/index.html",
-      "name": "Face ID leftover"
+      "name": "Face ID"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/facebook2b/index.html",
-      "name": "Facebook 2 billion leftover"
+      "name": "Facebook 2 billion"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/flashend/index.html",
-      "name": "Flash EOL announce leftover 6\u00d7"
+      "name": "Flash EOL announce 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fnstw/index.html",
-      "name": "Save the World leftover"
+      "name": "Save the World"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/homepodann/index.html",
-      "name": "HomePod announce leftover"
+      "name": "HomePod announce"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/hqtrivia/index.html",
-      "name": "HQ Trivia leftover"
+      "name": "HQ Trivia"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ios11/index.html",
-      "name": "iOS 11 leftover"
+      "name": "iOS 11"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ios11ar/index.html",
-      "name": "ARKit leftover 6\u00d7"
+      "name": "ARKit 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphone/about.html",
-      "name": "Face ID leftover"
+      "name": "Face ID"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphone8/index.html",
-      "name": "iPhone 8 leftover"
+      "name": "iPhone 8"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/krack/index.html",
-      "name": "KRACK leftover 6\u00d7"
+      "name": "KRACK 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/musically17/index.html",
-      "name": "musical.ly leftover"
+      "name": "musical.ly"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nnrepeal/index.html",
-      "name": "Title II repeal leftover 6\u00d7"
+      "name": "Title II repeal 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/notpetya/index.html",
-      "name": "NotPetya leftover"
+      "name": "NotPetya"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/odyssey/index.html",
-      "name": "Odyssey leftover"
+      "name": "Odyssey"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pixel2/index.html",
-      "name": "Pixel 2 leftover 6\u00d7"
+      "name": "Pixel 2 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pixelbook/index.html",
-      "name": "Pixelbook leftover"
+      "name": "Pixelbook"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3459,7 +3459,7 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pubgnote/index.html",
-      "name": "PUBG leftover"
+      "name": "PUBG"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3469,52 +3469,52 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/signal17/index.html",
-      "name": "Signal leftover"
+      "name": "Signal"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slack17/index.html",
-      "name": "Slack leftover"
+      "name": "Slack"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/snapipo/index.html",
-      "name": "Snap IPO leftover"
+      "name": "Snap IPO"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/t280about/index.html",
-      "name": "280 leftover"
+      "name": "280"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/telegram17/index.html",
-      "name": "Telegram leftover"
+      "name": "Telegram"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/vault7/index.html",
-      "name": "Vault 7 leftover"
+      "name": "Vault 7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wannaabout/index.html",
-      "name": "WannaCry leftover"
+      "name": "WannaCry"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/watch3/index.html",
-      "name": "Watch Series 3 leftover"
+      "name": "Watch Series 3"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xboxonex/index.html",
-      "name": "Xbox One X leftover"
+      "name": "Xbox One X"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/yahoo3b/index.html",
-      "name": "Yahoo 3 billion leftover"
+      "name": "Yahoo 3 billion"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3524,19 +3524,19 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/youtubetv/index.html",
-      "name": "YouTube TV leftover 6\u00d7"
+      "name": "YouTube TV 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zoom17/index.html",
-      "name": "Zoom leftover"
+      "name": "Zoom"
     }
   ],
   "2018": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/androidpie/index.html",
-      "name": "Android Pie leftover"
+      "name": "Android Pie"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3546,22 +3546,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/btc18/index.html",
-      "name": "Bitcoin leftover 2018"
+      "name": "Bitcoin 2018"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cambridge/index.html",
-      "name": "Hearing leftover"
+      "name": "Hearing"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cf1111/index.html",
-      "name": "1.1.1.1 leftover"
+      "name": "1.1.1.1"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/clpersonals/index.html",
-      "name": "Craigslist personals leftover 6\u00d7"
+      "name": "Craigslist personals 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3571,22 +3571,22 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/duplex/index.html",
-      "name": "Duplex leftover"
+      "name": "Duplex"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/epicstore/index.html",
-      "name": "Epic Games Store leftover"
+      "name": "Epic Games Store"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fnios/index.html",
-      "name": "Fortnite iOS leftover 6\u00d7"
+      "name": "Fortnite iOS 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fnswitch/index.html",
-      "name": "Fortnite Switch leftover"
+      "name": "Fortnite Switch"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3596,107 +3596,107 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fypabout/index.html",
-      "name": "FYP leftover"
+      "name": "FYP"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gdpra/index.html",
-      "name": "GDPR about leftover"
+      "name": "GDPR about"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/github/index.html",
-      "name": "GitHub leftover"
+      "name": "GitHub"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/githubms/index.html",
-      "name": "GitHub leftover"
+      "name": "GitHub"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/godofwar/index.html",
-      "name": "God of War leftover"
+      "name": "God of War"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gplusend/index.html",
-      "name": "Google+ sunset leftover 6\u00d7"
+      "name": "Google+ sunset 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/groupft/index.html",
-      "name": "Group FaceTime leftover"
+      "name": "Group FaceTime"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/homepodabout/index.html",
-      "name": "HomePod leftover"
+      "name": "HomePod"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/igtvabout/index.html",
-      "name": "IGTV leftover"
+      "name": "IGTV"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/instagram/about.html",
-      "name": "IGTV leftover"
+      "name": "IGTV"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ios12/index.html",
-      "name": "iOS 12 leftover"
+      "name": "iOS 12"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphonexr/index.html",
-      "name": "iPhone XR leftover"
+      "name": "iPhone XR"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphonexs/index.html",
-      "name": "iPhone XS leftover"
+      "name": "iPhone XS"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/itunesmovie/index.html",
-      "name": "iTunes movie leftover 6\u00d7"
+      "name": "iTunes movie 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/labo/index.html",
-      "name": "Labo leftover"
+      "name": "Labo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mastodon/index.html",
-      "name": "Mastodon leftover 6\u00d7"
+      "name": "Mastodon 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/memoji/index.html",
-      "name": "Memoji leftover"
+      "name": "Memoji"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mojave/index.html",
-      "name": "Mojave leftover"
+      "name": "Mojave"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/notsecure/index.html",
-      "name": "Not Secure leftover"
+      "name": "Not Secure"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/oculusgo/index.html",
-      "name": "Oculus Go leftover"
+      "name": "Oculus Go"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pixel3/index.html",
-      "name": "Pixel 3 leftover"
+      "name": "Pixel 3"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3706,12 +3706,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/portal18/index.html",
-      "name": "Portal leftover"
+      "name": "Portal"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/rdr2/index.html",
-      "name": "Red Dead 2 leftover"
+      "name": "Red Dead 2"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3721,37 +3721,37 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/screentime/index.html",
-      "name": "Screen Time leftover 6\u00d7"
+      "name": "Screen Time 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slack18/index.html",
-      "name": "Slack leftover"
+      "name": "Slack"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/smashbros/index.html",
-      "name": "Smash leftover"
+      "name": "Smash"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/spectre18/index.html",
-      "name": "Spectre leftover"
+      "name": "Spectre"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tiktok/index.html",
-      "name": "TikTok leftover"
+      "name": "TikTok"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tumblrban/index.html",
-      "name": "Tumblr leftover ban"
+      "name": "Tumblr ban"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/watch4/index.html",
-      "name": "Watch Series 4 leftover"
+      "name": "Watch Series 4"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3766,59 +3766,59 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zoom18/index.html",
-      "name": "Zoom leftover"
+      "name": "Zoom"
     }
   ],
   "2019": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/airpodsabout/index.html",
-      "name": "AirPods Pro leftover"
+      "name": "AirPods Pro"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/alloend/index.html",
-      "name": "Allo leftover"
+      "name": "Allo"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/apex/index.html",
-      "name": "Apex leftover"
+      "name": "Apex"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/applecard/index.html",
-      "name": "Apple Card leftover"
+      "name": "Apple Card"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/arcadeabout/index.html",
-      "name": "Arcade leftover"
+      "name": "Arcade"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/art17/index.html",
-      "name": "Article 17 leftover"
+      "name": "Article 17"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/catalina/index.html",
-      "name": "Catalina leftover"
+      "name": "Catalina"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/chrome19/index.html",
-      "name": "Chrome leftover"
+      "name": "Chrome"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cnil/index.html",
-      "name": "CNIL leftover 6\u00d7"
+      "name": "CNIL 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/dplusabout/index.html",
-      "name": "Disney+ leftover"
+      "name": "Disney+"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3828,32 +3828,32 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/findmy19/index.html",
-      "name": "Find My leftover"
+      "name": "Find My"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fiveg/index.html",
-      "name": "5G leftover"
+      "name": "5G"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fn19/index.html",
-      "name": "Fortnite leftover"
+      "name": "Fortnite"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fnch2/index.html",
-      "name": "Chapter 2 leftover"
+      "name": "Chapter 2"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fnwc/index.html",
-      "name": "World Cup leftover"
+      "name": "World Cup"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fold19/index.html",
-      "name": "Galaxy Fold leftover"
+      "name": "Galaxy Fold"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3863,27 +3863,27 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ftcfb/index.html",
-      "name": "FTC Facebook leftover 6\u00d7"
+      "name": "FTC Facebook 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gamepass/index.html",
-      "name": "Game Pass leftover"
+      "name": "Game Pass"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gplus19/index.html",
-      "name": "Google+ leftover end"
+      "name": "Google+ end"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/huawei19/index.html",
-      "name": "Huawei leftover"
+      "name": "Huawei"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/inboxend/index.html",
-      "name": "Inbox sunset leftover 6\u00d7"
+      "name": "Inbox sunset 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3893,47 +3893,47 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ios13dark/index.html",
-      "name": "iOS 13 Dark Mode leftover 6\u00d7"
+      "name": "iOS 13 Dark Mode 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ipados/index.html",
-      "name": "iPadOS leftover 6\u00d7"
+      "name": "iPadOS 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/itunesend/index.html",
-      "name": "iTunes leftover end"
+      "name": "iTunes end"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/libra/index.html",
-      "name": "Libra leftover 6\u00d7"
+      "name": "Libra 6\u00d7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/lyftipo/index.html",
-      "name": "Lyft IPO leftover"
+      "name": "Lyft IPO"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/marshnote/index.html",
-      "name": "Marshmello leftover"
+      "name": "Marshmello"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mixer19/index.html",
-      "name": "Mixer leftover"
+      "name": "Mixer"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/newsplus/index.html",
-      "name": "News+ leftover"
+      "name": "News+"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pixel4/index.html",
-      "name": "Pixel 4 leftover"
+      "name": "Pixel 4"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3943,52 +3943,52 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/quest/index.html",
-      "name": "Oculus Quest leftover"
+      "name": "Oculus Quest"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/sidecar/index.html",
-      "name": "Sidecar leftover"
+      "name": "Sidecar"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/signinap/index.html",
-      "name": "Sign in with Apple leftover"
+      "name": "Sign in with Apple"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slackipo/index.html",
-      "name": "Slack listing leftover"
+      "name": "Slack listing"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/stadiaabout/index.html",
-      "name": "Stadia leftover"
+      "name": "Stadia"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/swiftui/index.html",
-      "name": "SwiftUI leftover"
+      "name": "SwiftUI"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tt19/index.html",
-      "name": "TikTok leftover"
+      "name": "TikTok"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/uberipo/index.html",
-      "name": "Uber IPO leftover"
+      "name": "Uber IPO"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/watch5/index.html",
-      "name": "Watch Series 5 leftover"
+      "name": "Watch Series 5"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wework/index.html",
-      "name": "WeWork leftover"
+      "name": "WeWork"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -3998,12 +3998,12 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/win10n/index.html",
-      "name": "Win10 leftover"
+      "name": "Win10"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xcloud/index.html",
-      "name": "xCloud leftover"
+      "name": "xCloud"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -4013,199 +4013,199 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ytcoppa/index.html",
-      "name": "YouTube COPPA leftover"
+      "name": "YouTube COPPA"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zoom19/index.html",
-      "name": "Zoom leftover"
+      "name": "Zoom"
     }
   ],
   "2020": [
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/acnh/index.html",
-      "name": "ACNH leftover"
+      "name": "ACNH"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/among/c.html",
-      "name": "Continuity leftover 29"
+      "name": "Continuity 29"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/amongus/index.html",
-      "name": "Among Us leftover"
+      "name": "Among Us"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/amz/index.html",
-      "name": "Continuity leftover 3"
+      "name": "Continuity 3"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/astro/index.html",
-      "name": "Astronomical leftover"
+      "name": "Astronomical"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/brave/index.html",
-      "name": "Continuity leftover 38"
+      "name": "Continuity 38"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/clubhouse/index.html",
-      "name": "Clubhouse leftover"
+      "name": "Clubhouse"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/cont/index.html",
-      "name": "Continuity leftover 39"
+      "name": "Continuity 39"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/discord/index.html",
-      "name": "Discord leftover"
+      "name": "Discord"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/disneyplus/index.html",
-      "name": "Disney+ leftover"
+      "name": "Disney+"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/epic/index.html",
-      "name": "Epic v Apple leftover"
+      "name": "Epic v Apple"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/exposure/index.html",
-      "name": "Exposure Notification leftover"
+      "name": "Exposure Notification"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/facebook/index.html",
-      "name": "Facebook leftover"
+      "name": "Facebook"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fallguys/index.html",
-      "name": "Fall Guys leftover"
+      "name": "Fall Guys"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ff/index.html",
-      "name": "Continuity leftover 37"
+      "name": "Continuity 37"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/figma/index.html",
-      "name": "Continuity leftover 19"
+      "name": "Continuity 19"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fleets/index.html",
-      "name": "Fleets leftover"
+      "name": "Fleets"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/fn/index.html",
-      "name": "Continuity leftover 28"
+      "name": "Continuity 28"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/github/index.html",
-      "name": "Continuity leftover 20"
+      "name": "Continuity 20"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/gmail/index.html",
-      "name": "Continuity leftover 11"
+      "name": "Continuity 11"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/google/index.html",
-      "name": "Continuity leftover 10"
+      "name": "Continuity 10"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/hbomax/index.html",
-      "name": "HBO Max leftover"
+      "name": "HBO Max"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/icloud/index.html",
-      "name": "Continuity leftover 34"
+      "name": "Continuity 34"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ig/index.html",
-      "name": "Continuity leftover 7"
+      "name": "Continuity 7"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ios14/index.html",
-      "name": "iOS 14 leftover"
+      "name": "iOS 14"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/iphone12/index.html",
-      "name": "iPhone 12 leftover"
+      "name": "iPhone 12"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/kindle/index.html",
-      "name": "Continuity leftover 33"
+      "name": "Continuity 33"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/li/index.html",
-      "name": "Continuity leftover 21"
+      "name": "Continuity 21"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/maps/index.html",
-      "name": "Continuity leftover 12"
+      "name": "Continuity 12"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/markets/about.html",
-      "name": "WTI literacy leftover"
+      "name": "WTI literacy"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/meet/index.html",
-      "name": "Meet leftover"
+      "name": "Meet"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/mixer/index.html",
-      "name": "Mixer leftover"
+      "name": "Mixer"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nfx/index.html",
-      "name": "Continuity leftover 5"
+      "name": "Continuity 5"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/nintendo/index.html",
-      "name": "Continuity leftover 27"
+      "name": "Continuity 27"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/notion/index.html",
-      "name": "Continuity leftover 18"
+      "name": "Continuity 18"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/patreon/index.html",
-      "name": "Continuity leftover 32"
+      "name": "Continuity 32"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/peacock/index.html",
-      "name": "Peacock leftover"
+      "name": "Peacock"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
@@ -4215,122 +4215,122 @@
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/pp/index.html",
-      "name": "Continuity leftover 13"
+      "name": "Continuity 13"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ps/index.html",
-      "name": "Continuity leftover 25"
+      "name": "Continuity 25"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ps5/index.html",
-      "name": "PS5 leftover"
+      "name": "PS5"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/quest2/index.html",
-      "name": "Quest 2 leftover"
+      "name": "Quest 2"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/quibi/index.html",
-      "name": "Quibi leftover"
+      "name": "Quibi"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/reddit/index.html",
-      "name": "Continuity leftover 4"
+      "name": "Continuity 4"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/roblox/index.html",
-      "name": "Continuity leftover 30"
+      "name": "Continuity 30"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/safari/index.html",
-      "name": "Continuity leftover 36"
+      "name": "Continuity 36"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/schrems/index.html",
-      "name": "Schrems II leftover"
+      "name": "Schrems II"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/slack/index.html",
-      "name": "Continuity leftover 14"
+      "name": "Continuity 14"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/spacehey/index.html",
-      "name": "SpaceHey leftover"
+      "name": "SpaceHey"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/spotify/index.html",
-      "name": "Continuity leftover 6"
+      "name": "Continuity 6"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/ss/index.html",
-      "name": "Continuity leftover 31"
+      "name": "Continuity 31"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/steam/index.html",
-      "name": "Continuity leftover 23"
+      "name": "Continuity 23"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/stimulus/index.html",
-      "name": "Get My Payment leftover"
+      "name": "Get My Payment"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/teams/index.html",
-      "name": "Teams leftover"
+      "name": "Teams"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/tt/c.html",
-      "name": "Continuity leftover 9"
+      "name": "Continuity 9"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/twitch/index.html",
-      "name": "Continuity leftover 22"
+      "name": "Continuity 22"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/twitter/index.html",
-      "name": "Continuity leftover 8"
+      "name": "Continuity 8"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wiki/c.html",
-      "name": "Continuity leftover 2"
+      "name": "Continuity 2"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/wikipedia/index.html",
-      "name": "Wikipedia leftover"
+      "name": "Wikipedia"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/xbox/index.html",
-      "name": "Continuity leftover 26"
+      "name": "Continuity 26"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/youtube/index.html",
-      "name": "YouTube Shorts leftover"
+      "name": "YouTube Shorts"
     },
     {
       "do": "Existing room \u00b7 3\u00d7 link pass",
       "href": "sites/zoom/index.html",
-      "name": "Zoom Join leftover"
+      "name": "Zoom Join"
     }
   ]
 };

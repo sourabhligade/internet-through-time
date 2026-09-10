@@ -34,7 +34,7 @@
       mute.addEventListener("click", function () {
         muted = true;
         this.setAttribute("aria-pressed", "true");
-        feedback("Muted leftover. Type chat then Leave.", st);
+        feedback("Muted. Type chat then Leave.", st);
       });
     }
     if (send) {
@@ -45,7 +45,7 @@
           return;
         }
         sent = true;
-        feedback("Chat leftover sent. Leave is the save.", st);
+        feedback("Chat sent. Leave is the save.", st);
       });
     }
     if (join) {
@@ -72,7 +72,7 @@
         return;
       }
       saveJSON(key("zoom"), blob({ mute: true, chat: chat.slice(0, 80), left: true }));
-      feedback("Left leftover · " + key("zoom"), st);
+      feedback("Left ·" + key("zoom"), st);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
   }

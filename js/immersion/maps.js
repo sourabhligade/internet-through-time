@@ -262,6 +262,14 @@
         paint();
       });
     }
+    var svTrap = doc.querySelector("[data-maps-streetview]");
+    if (svTrap && svTrap.getAttribute("data-maps-sv-bound") !== "1") {
+      svTrap.setAttribute("data-maps-sv-bound", "1");
+      svTrap.addEventListener("click", function () {
+        var stSv = doc.querySelector("[data-maps-search-status], [data-maps-status]");
+        if (stSv) stSv.textContent = "Street View is 2007. That click never writes itt05-maps.";
+      });
+    }
     var form = doc.querySelector("[data-maps-search]");
     if (form && form.getAttribute("data-maps-search-bound") !== "1") {
       form.setAttribute("data-maps-search-bound", "1");

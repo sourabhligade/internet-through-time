@@ -88,8 +88,8 @@
     bookmarks: [
       { title: "Starting Point", path: "pages/home.html" },
       { title: "Zoom Leave", path: "sites/zoom/meeting.html" },
-      { title: "Reels leftover", path: "sites/reels/index.html" },
-      { title: "GPT-3 waitlist leftover", path: "sites/openai/index.html" }
+      { title: "Reels", path: "sites/reels/index.html" },
+      { title: "GPT-3 waitlist", path: "sites/openai/index.html" }
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2020/",
     locationHints: [

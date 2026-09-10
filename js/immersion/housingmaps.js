@@ -117,6 +117,13 @@
       if (mm) st.max = parseInt(decodeURIComponent(mm[1]), 10) || st.max;
     } catch (e) { /* */ }
 
+    var hmTrap = doc.querySelector("[data-hm-trap]");
+    if (hmTrap && hmTrap.getAttribute("data-hm-trap-bound") !== "1") {
+      hmTrap.setAttribute("data-hm-trap-bound", "1");
+      hmTrap.addEventListener("click", function () {
+        if (status) status.textContent = "Live Craigslist trap. That click never writes itt05-hm.";
+      });
+    }
     if (form) {
       var city = form.querySelector('[name="city"]');
       var kind = form.querySelector('[name="kind"]');
@@ -135,7 +142,31 @@
           st.city = (city && city.value) || st.city;
           st.kind = (kind && kind.value) || st.kind;
           st.max = parseInt((max && max.value) || st.max, 10) || st.max;
+          if (!st.city) {
+            if (status) status.textContent = "Pick a city first. Empty never writes.";
+            return;
+          }
           paint();
+          try {
+            var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
+            if (ok === "itt05-hm") {
+              if (!localStorage.getItem("itt05-hm")) {
+                localStorage.setItem(
+                  "itt05-hm",
+                  JSON.stringify({
+                    multiStep: true,
+                    real: true,
+                    official: true,
+                    year: "2005",
+                    city: String(st.city).slice(0, 40),
+                    kind: String(st.kind || "").slice(0, 16),
+                    ts: Date.now()
+                  })
+                );
+              }
+              if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+            }
+          } catch (eHmOff) { /* */ }
         });
       }
     }

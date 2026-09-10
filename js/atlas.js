@@ -138,28 +138,28 @@
       var key = String(item.href);
       if (seen[key]) return;
       var lab = String(item.label || "");
-      if (/^about\b/i.test(lab) || /flow map/i.test(lab)) return;
-      seen[key] = true;
-      out.push(item);
-    }
-    if (rec.gold) add(rec.gold);
-    guidedOf(year).forEach(add);
-    if (rec.game) add({ href: rec.game.href, label: rec.game.label });
-    return out.slice(0, 3);
-  }
+ if (/^about\b/i.test(lab) || /flow map/i.test(lab)) return;
+ seen[key] = true;
+ out.push(item);
+ }
+ if (rec.gold) add(rec.gold);
+ guidedOf(year).forEach(add);
+ if (rec.game) add({ href: rec.game.href, label: rec.game.label });
+ return out.slice(0, 3);
+ }
 
-  function mapBranches(year) {
-    var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
-    return (maps && maps.branches) || [];
-  }
+ function mapBranches(year) {
+ var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
+ return (maps && maps.branches) || [];
+ }
 
-  function popularOf(year) {
-    var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
-    var branches = (maps && maps.branches) || [];
-    var i, b;
-    for (i = 0; i < branches.length; i++) {
-      b = branches[i];
-      if (b && /popular leftover/i.test(String(b.label || "") + " " + String(b.do || ""))) return b.sites || [];
+ function popularOf(year) {
+ var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
+ var branches = (maps && maps.branches) || [];
+ var i, b;
+ for (i = 0; i < branches.length; i++) {
+ b = branches[i];
+ if (b && /popular/i.test(String(b.label ||"") + " " + String(b.do || ""))) return b.sites || [];
     }
     return [];
   }
@@ -570,8 +570,8 @@
       rec = data.years[yr];
       if (rec.wiped || !isOpen(yr)) continue;
       if (rec.gold) pushRow(rows, rec.gold.label + " " + yr + " gold", rec.gold.href, yr + " · " + rec.gold.label, "gold");
-      if (rec.leftoverGold) {
-        pushRow(rows, rec.leftoverGold.label + " " + yr, rec.leftoverGold.href, yr + " · " + rec.leftoverGold.label, "leftoverGold");
+ if (rec.Gold) {
+ pushRow(rows, rec.Gold.label +" "+ yr, rec.Gold.href, yr +" · "+ rec.Gold.label,"leftoverGold");
       }
       guided = guidedOf(yr);
       guided.forEach(function (g) {
@@ -633,27 +633,27 @@
     q = String(q || "").toLowerCase().replace(/^\s+|\s+$/g, "");
     if (!q) {
       host.innerHTML = "<p class='muted'>Type a name — hotmail, napster, iphone, lucky, gdpr, disney, zoom, att…</p>";
-      return;
-    }
-    var rows = allFindRows();
-    var hits = [];
-    var i, r;
-    var rank = { gold: 0, official: 1, leftoverGold: 2 };
-    for (i = 0; i < rows.length; i++) {
-      r = rows[i];
-      if (String(r.q).toLowerCase().indexOf(q) !== -1 || String(r.label).toLowerCase().indexOf(q) !== -1) {
-        hits.push(r);
-      }
-    }
-    hits.sort(function (a, b) {
-      var ra = rank[a.kind] != null ? rank[a.kind] : 3;
-      var rb = rank[b.kind] != null ? rank[b.kind] : 3;
-      if (ra !== rb) return ra - rb;
-      return String(a.label).localeCompare(String(b.label));
-    });
-    if (hits.length > 36) hits = hits.slice(0, 36);
-    if (!hits.length) {
-      host.innerHTML = "<p class='muted'>No match. Try yahoo, gmail, youtube, farmville, disney, zoom.</p>";
+ return;
+ }
+ var rows = allFindRows();
+ var hits = [];
+ var i, r;
+ var rank = { gold: 0, official: 1,Gold: 2 };
+ for (i = 0; i < rows.length; i++) {
+ r = rows[i];
+ if (String(r.q).toLowerCase().indexOf(q) !== -1 || String(r.label).toLowerCase().indexOf(q) !== -1) {
+ hits.push(r);
+ }
+ }
+ hits.sort(function (a, b) {
+ var ra = rank[a.kind] != null ? rank[a.kind] : 3;
+ var rb = rank[b.kind] != null ? rank[b.kind] : 3;
+ if (ra !== rb) return ra - rb;
+ return String(a.label).localeCompare(String(b.label));
+ });
+ if (hits.length > 36) hits = hits.slice(0, 36);
+ if (!hits.length) {
+ host.innerHTML ="<p class='muted'>No match. Try yahoo, gmail, youtube, farmville, disney, zoom.</p>";
       return;
     }
     var html = "<ul>";

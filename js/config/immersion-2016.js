@@ -31,7 +31,7 @@
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
       { label: "Stories", href: "sites/instagram/stories.html" },
-      { label: "GO leftover", href: "sites/pokemongo/index.html" },
+      { label: "GO", href: "sites/pokemongo/index.html" },
       { label: "About 2016", href: "pages/about.html" }
     ]
   };

@@ -121,6 +121,13 @@
     var seedOut = doc.querySelector("[data-pd-seed]");
     if (seedOut && stn && stn.seed) seedOut.textContent = stn.seed;
 
+    var pdTrap = doc.querySelector("[data-pd-trap]");
+    if (pdTrap && pdTrap.getAttribute("data-pd-trap-bound") !== "1") {
+      pdTrap.setAttribute("data-pd-trap-bound", "1");
+      pdTrap.addEventListener("click", function () {
+        feedback("Pandora is not the 2005 star. That click never writes.", status, true);
+      });
+    }
     var create = doc.querySelector("[data-pd-create]");
     if (create) {
       create.addEventListener("submit", function (ev) {

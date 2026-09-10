@@ -207,6 +207,9 @@
     try {
       if (doc.documentElement) doc.documentElement.setAttribute("data-4x-ready", "1");
     } catch (eR) { /* */ }
+    try {
+      if (ITT.foldLeftoverRails) ITT.foldLeftoverRails(doc);
+    } catch (eF) { /* */ }
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

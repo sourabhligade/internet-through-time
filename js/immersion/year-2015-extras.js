@@ -283,7 +283,7 @@
         return;
       }
       if (countChecked(doc, "[data-watch-req], [data-req]") < 1) {
-        feedback("Tick the Apr 24 shipped note. Watch is leftover, not the star.", st, { error: true });
+        feedback("Tick the Apr 24 shipped note. Watch is, not the star.", st, { error: true });
         return;
       }
       saveJSON(key("watch"), blob({ face: face, band: band, shipped: "2015-04-24" }));

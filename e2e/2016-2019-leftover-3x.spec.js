@@ -4,6 +4,7 @@
  * 2018 is a live lean door (first + third only); walked in 2018-2022 leftover-3×.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 const ROWS = require("./2016-2019-leftover-3x.matrix.json");
 
 const WANT = {
@@ -33,6 +34,7 @@ function panelSel(row) {
 
 async function openDoor(page, row) {
   const res = await page.goto(row.href);
+  await revealLeftoverRails(page);
   expect(res && res.ok(), row.href).toBeTruthy();
   const panel = page.locator(panelSel(row)).first();
   await expect(panel, row.id + " dest-true leftover-3× panel " + row.kind).toBeVisible();
@@ -45,6 +47,7 @@ test.describe("2016–2019 leftover-3× ×3 home strips", () => {
   for (const year of YEARS) {
     test(`${year} leftover-3× strips are 3× famous doors`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
+  await revealLeftoverRails(page);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
       const want = WANT[year];
       await expect(page.locator(`[data-itt-pop3x="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
@@ -64,15 +67,17 @@ for (const row of ROWS) {
   test.describe(`${row.year} leftover-3× ${row.kind} ${row.id}`, () => {
     test(`HTTP 200 · year-true copy · dest-true verb`, async ({ page }) => {
       const panel = await openDoor(page, row);
-      await expect(panel).toContainText(row.verb.split(" ")[0]);
+      await expect(panel).toContainText(String(row.verb || "").replace(/leftover/gi, " ").trim().split(/\s+/)[0]);
       const field = panel.locator("[data-pop-field]");
       await expect(field).toHaveAttribute("placeholder", row.ph);
     });
 
     test(`M1 empty never writes ${row.key}`, async ({ page }) => {
       await page.goto(row.href);
+  await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), row.key);
       await page.reload();
+  await revealLeftoverRails(page);
       const go = page.locator(goSel(row)).first();
       await expect(go).toBeVisible();
       await go.click();
@@ -82,8 +87,10 @@ for (const row of ROWS) {
 
     test(`M2 trap never writes ${row.key}`, async ({ page }) => {
       await page.goto(row.href);
+  await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), row.key);
       await page.reload();
+  await revealLeftoverRails(page);
       const panel = page.locator(panelSel(row)).first();
       const go = page.locator(goSel(row)).first();
       await panel.locator('[data-pop-pick="trap"]').click();
@@ -98,13 +105,16 @@ for (const row of ROWS) {
     if (row.miss) {
       test(`M2 miss hop ${row.miss} never writes ${row.key}`, async ({ page }) => {
         await page.goto(row.href);
+  await revealLeftoverRails(page);
         await page.evaluate((k) => localStorage.removeItem(k), row.key);
         await page.reload();
+  await revealLeftoverRails(page);
         const miss = page.locator("[data-itt-lo3x] a[data-itt-lo3x-miss]").first();
         await expect(miss).toBeVisible();
         const href = await miss.getAttribute("href");
         const dest = new URL(href || row.miss, page.url()).pathname;
         const res = await page.goto(dest);
+  await revealLeftoverRails(page);
         expect(res && res.ok(), dest).toBeTruthy();
         expect(await page.evaluate((k) => localStorage.getItem(k), row.key)).toBeFalsy();
       });
@@ -112,6 +122,7 @@ for (const row of ROWS) {
 
     test(`M3 complete writes dest-true leftover · never gold`, async ({ page }) => {
       await page.goto(row.href);
+  await revealLeftoverRails(page);
       await page.evaluate((k) => {
         localStorage.removeItem(k.key);
         localStorage.removeItem(k.star);
@@ -120,6 +131,7 @@ for (const row of ROWS) {
           .forEach((x) => localStorage.removeItem(x));
       }, { key: row.key, star: row.star, nb: neighborKeys(row.year) });
       await page.reload();
+  await revealLeftoverRails(page);
       const panel = page.locator(panelSel(row)).first();
       const go = page.locator(goSel(row)).first();
       await expect(go).toBeVisible();
@@ -141,6 +153,7 @@ for (const row of ROWS) {
       await expect(next).toBeVisible();
       const nh = await next.getAttribute("href");
       const nres = await page.goto(new URL(nh || "", page.url()).pathname);
+  await revealLeftoverRails(page);
       expect(nres && nres.ok(), nh).toBeTruthy();
     });
   });

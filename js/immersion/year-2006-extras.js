@@ -120,11 +120,11 @@
         return;
       }
       if (picked !== "privacy" && picked !== "see") {
-        say(st, "See the feed or set one privacy leftover first.", true);
+        say(st, "See the feed or set one privacy first.", true);
         return;
       }
       saveJSON(key("feed"), blob({ privacy: picked === "privacy", see: true }));
-      say(st, "Feed leftover · " + key("feed"));
+      say(st, "Feed ·" + key("feed"));
       reveal(doc);
     });
   }

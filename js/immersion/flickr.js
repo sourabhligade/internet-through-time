@@ -83,6 +83,14 @@
   function boot(doc) {
     doc = doc || document;
     render(doc);
+    var flTrap = doc.querySelector("[data-flickr-trap]");
+    if (flTrap && flTrap.getAttribute("data-flickr-trap-bound") !== "1") {
+      flTrap.setAttribute("data-flickr-trap-bound", "1");
+      flTrap.addEventListener("click", function () {
+        var stT = doc.querySelector("[data-flickr-status]");
+        if (stT) stT.textContent = "Yahoo Photos trap. That click never writes itt05-flickr.";
+      });
+    }
     var form = doc.querySelector("[data-flickr-upload]");
     if (form) {
       form.addEventListener("submit", function (ev) {
@@ -97,6 +105,26 @@
         var list = seed();
         list.unshift({ title: title, tags: tags, note: "just uploaded" });
         save(list.slice(0, 40));
+        try {
+          var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
+          if (ok === "itt05-flickr") {
+            if (!localStorage.getItem("itt05-flickr")) {
+              localStorage.setItem(
+                "itt05-flickr",
+                JSON.stringify({
+                  multiStep: true,
+                  real: true,
+                  official: true,
+                  year: "2005",
+                  title: title.slice(0, 80),
+                  tags: String(tags || "").slice(0, 80),
+                  ts: Date.now()
+                })
+              );
+            }
+            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          }
+        } catch (eFlOff) { /* */ }
         var st = doc.querySelector("[data-flickr-status]");
         if (st) {
           var photoUrl = "http://www.flickr.com/photos/you/" + encodeURIComponent(title);

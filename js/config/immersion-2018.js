@@ -31,7 +31,7 @@
       { label: "Starting Point", href: "pages/home.html" },
       { label: "Flow map", href: "pages/map.html" },
       { label: "GDPR", href: "sites/gdpr/index.html" },
-      { label: "TikTok leftover", href: "sites/tiktok/fyp.html" },
+      { label: "TikTok", href: "sites/tiktok/fyp.html" },
       { label: "About 2018", href: "pages/about.html" }
     ]
   };

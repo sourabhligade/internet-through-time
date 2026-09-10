@@ -39,21 +39,21 @@
       "2000": "Peak and crash in one year. Pets.com is an epitaph.",
       "2001": "Anyone can edit. Preview is not Save. No Store.",
       "2002": "Stumble. Always-on is still a minority. No Store. No MySpace.",
-      "2003": "Photobucket hotlink is the save. 99¢ leftover. Friendster still larger than MySpace.",
+      "2003": "Photobucket hotlink is the save. 99¢. Friendster still larger than MySpace.",
       "2004": "College network only. Not modern Facebook.",
-      "2005": "YouTube upload is the save. Maps / Reddit / Digg leftover. Google does not own YouTube.",
-      "2006": "140 because SMS. News Feed leftover. No iPhone.",
+      "2005": "YouTube upload is the save. Maps / Reddit / Digg. Google does not own YouTube.",
+      "2006": "140 because SMS. News Feed. No iPhone.",
       "2007": "Safari only. App Store is 2008. Desktop still mass.",
       "2008": "Apps arrive. Desktop is still mass.",
       "2009": "Like, not Reactions. No iPad.",
       "2010": "iPhone only. Android Instagram is next year.",
-      "2011": "Circles and Siri. Timeline is leftover.",
+      "2011": "Circles and Siri. Timeline is.",
       "2012": "The square photo leaves the iPhone.",
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
       "2015": "Go LIVE. No Stories on Instagram yet.",
       "2016": "Snapchat invented the 24-hour slide.",
-      "2017": "Look to unlock. Fortnite is leftover.",
+      "2017": "Look to unlock. Fortnite is.",
       "2018": "Accept All never writes. Reels are not this year.",
       "2019": "No Reels. No Zoom as mass. Trial never writes.",
       "2020": "Join never writes. 300 million is participants, not users. ChatGPT is 2022."},
@@ -72,7 +72,7 @@
       "2003": "You uploaded a photo to get a URL you could paste. Songs were 99¢. Friendster was still bigger.",
       "2004": "You needed a college. The wall was not a Feed. Gmail was an invite.",
       "2005": "You uploaded a clip. You dragged a map. You boosted a link. Google did not own YouTube yet.",
-      "2006": "You typed 140 because SMS. News Feed was leftover. There was no iPhone yet.",
+      "2006": "You typed 140 because SMS. News Feed was. There was no iPhone yet.",
       "2007": "You used Safari on the phone. The App Store was next year. Desktop was still mass.",
       "2008": "There were about five hundred apps. The desktop was still mass. Chrome was a product room.",
       "2009": "You Liked a partner page. Beacon never wrote. Reactions were not here yet.",
@@ -111,15 +111,15 @@
         { label: "Vine — hold 6s", href: "years/2013/sites/vine/record.html" },
         { label: "iOS 7 — flat", href: "years/2013/sites/iphone/ios7.html" },
         { label: "Snapchat Stories — 24h", href: "years/2013/sites/snapchat/story.html" },
-        { label: "IG Video leftover — 15s", href: "years/2013/sites/instagram/video.html" },
+        { label: "IG Video — 15s", href: "years/2013/sites/instagram/video.html" },
         { label: "Year flow map", href: "years/2013/pages/map.html" }
       ],
       "2014": [
         { label: "About 2014", href: "years/2014/pages/about.html" },
         { label: "WhatsApp — Install", href: "years/2014/sites/whatsapp/index.html" },
-        { label: "Heartbleed leftover — rotate", href: "years/2014/sites/heartbleed/index.html" },
-        { label: "Ice Bucket leftover — nominate", href: "years/2014/sites/icebucket/index.html" },
-        { label: "iPhone 6 leftover", href: "years/2014/sites/iphone/index.html" },
+        { label: "Heartbleed — rotate", href: "years/2014/sites/heartbleed/index.html" },
+        { label: "Ice Bucket — nominate", href: "years/2014/sites/icebucket/index.html" },
+        { label: "iPhone 6", href: "years/2014/sites/iphone/index.html" },
         { label: "Year flow map", href: "years/2014/pages/map.html" }
       ],
       "2015": [
@@ -133,7 +133,7 @@
       "2016": [
         { label: "About 2016", href: "years/2016/pages/about.html" },
         { label: "Instagram Stories — 24h slide", href: "years/2016/sites/instagram/stories.html" },
-        { label: "Pokémon GO leftover", href: "years/2016/sites/pokemongo/index.html" },
+        { label: "Pokémon GO", href: "years/2016/sites/pokemongo/index.html" },
         { label: "Reactions — five faces", href: "years/2016/sites/facebook/reactions.html" },
         { label: "WhatsApp E2E — default lock", href: "years/2016/sites/whatsapp/e2e.html" },
         { label: "Year flow map", href: "years/2016/pages/map.html" }
@@ -141,7 +141,7 @@
       "2017": [
         { label: "About 2017", href: "years/2017/pages/about.html" },
         { label: "Face ID / iPhone X", href: "years/2017/sites/iphone/x.html" },
-        { label: "Fortnite BR leftover", href: "years/2017/sites/fortnite/index.html" },
+        { label: "Fortnite BR", href: "years/2017/sites/fortnite/index.html" },
         { label: "Twitter 280", href: "years/2017/sites/twitter/280.html" },
         { label: "Teams GA", href: "years/2017/sites/teams/index.html" },
         { label: "Year flow map", href: "years/2017/pages/map.html" }
@@ -279,20 +279,20 @@
       },
       "2006": {
         wiped: false,
-        era: "Twitter 140 · News Feed leftover",
-        thesis: "140 because SMS. News Feed leftover. No iPhone.",
+        era: "Twitter 140 · News Feed",
+        thesis: "140 because SMS. News Feed. No iPhone.",
         gold: { label: "Twitter 140", href: "years/2006/sites/twitter/index.html", key: "itt06-tweets" },
         guided: [
-          { label: "News Feed leftover", href: "years/2006/sites/facebook/feed.html" },
-          { label: "Firefox leftover", href: "years/2006/sites/firefox/index.html" }
+          { label: "News Feed", href: "years/2006/sites/facebook/feed.html" },
+          { label: "Firefox", href: "years/2006/sites/firefox/index.html" }
         ],
         game: { label: "TrailSled", href: "years/2006/sites/playable/game.html" }
       },
             "2008": {
         era: "App Store · Chrome · G1",
-        thesis: "GitHub issue is the star. App Store · Chrome · G1 leftover. Chrome is a product room.",
+        thesis: "GitHub issue is the star. App Store · Chrome · G1. Chrome is a product room.",
         gold: { label: "GitHub issue", href: "years/2008/sites/github/issue.html", key: "itt08-github" },
-        leftoverGold: { label: "App Store leftover", href: "years/2008/sites/appstore/index.html", key: "itt08-apps" },
+        leftoverGold: { label: "App Store", href: "years/2008/sites/appstore/index.html", key: "itt08-apps" },
         guided: [
           { label: "Chrome", href: "years/2008/sites/chrome/index.html" },
           { label: "Android G1", href: "years/2008/sites/android/index.html" }
@@ -320,22 +320,22 @@
         game: { label: "Guess Doodle", href: "years/2012/sites/playable/game.html" }
       },
       "2007": {
-        era: "iPhone Safari · Street View leftover",
+        era: "iPhone Safari · Street View",
         thesis: "Safari is the save. App Store never writes. Desktop is still mass.",
         gold: { label: "iPhone Safari", href: "years/2007/sites/iphone/index.html", key: "itt07-iphone" },
         guided: [
-          { label: "Street View leftover", href: "years/2007/sites/streetview/index.html" },
-          { label: "Gmail open leftover", href: "years/2007/sites/gmail/index.html" }
+          { label: "Street View", href: "years/2007/sites/streetview/index.html" },
+          { label: "Gmail open", href: "years/2007/sites/gmail/index.html" }
         ],
         game: { label: "Safari Queue", href: "years/2007/sites/playable/game.html" }
       },
       "2009": {
-        era: "Like · FarmVille leftover · XP + IE 8",
-        thesis: "Like two partner pages is the save. Beacon never writes. Win7 is October leftover.",
+        era: "Like · FarmVille · XP + IE 8",
+        thesis: "Like two partner pages is the save. Beacon never writes. Win7 is October.",
         gold: { label: "Facebook Like", href: "years/2009/sites/facebook/index.html", key: "itt09-like" },
         guided: [
-          { label: "FarmVille leftover", href: "years/2009/sites/farmville/index.html" },
-          { label: "Bing leftover", href: "years/2009/sites/bing/index.html" }
+          { label: "FarmVille", href: "years/2009/sites/farmville/index.html" },
+          { label: "Bing", href: "years/2009/sites/bing/index.html" }
         ],
         game: { label: "Plot Neighbors", href: "years/2009/sites/playable/game.html" }
       },
@@ -344,8 +344,8 @@
         thesis: "Hangout is the save. G+ won never writes. IG Android is 2012.",
         gold: { label: "Google+ Hangout", href: "years/2011/sites/googleplus/index.html", key: "itt11-gplus" },
         guided: [
-          { label: "Spotify US leftover", href: "years/2011/sites/spotify/index.html" },
-          { label: "Siri leftover", href: "years/2011/sites/iphone/index.html" }
+          { label: "Spotify US", href: "years/2011/sites/spotify/index.html" },
+          { label: "Siri", href: "years/2011/sites/iphone/index.html" }
         ],
         game: { label: "Letter Swap", href: "years/2011/sites/playable/game.html" }
       },
@@ -354,7 +354,7 @@
         thesis: "Lean door. Hold 6s then post. Stories here are Snapchat, not Instagram.",
         gold: { label: "Vine 6s", href: "years/2013/sites/vine/record.html", key: "itt13-vine-posts" },
         guided: [
-          { label: "IG Video leftover", href: "years/2013/sites/instagram/video.html" },
+          { label: "IG Video", href: "years/2013/sites/instagram/video.html" },
           { label: "Snapchat Stories", href: "years/2013/sites/snapchat/story.html" }
         ],
         game: { label: "Loop Six", href: "years/2013/sites/playable/game.html" }
@@ -384,17 +384,17 @@
         thesis: "Lean door. 24-hour slide. Snapchat invented the format.",
         gold: { label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html", key: "itt16-ig-stories" },
         guided: [
-          { label: "Pokémon GO leftover", href: "years/2016/sites/pokemongo/index.html" },
+          { label: "Pokémon GO", href: "years/2016/sites/pokemongo/index.html" },
           { label: "Reactions", href: "years/2016/sites/facebook/reactions.html" }
         ],
         game: { label: "Gym Rush", href: "years/2016/sites/playable/game.html" }
       },
       "2017": {
         era: "Face ID · free storm · 280",
-        thesis: "Lean door. Look to unlock. Fortnite is leftover.",
+        thesis: "Lean door. Look to unlock. Fortnite is.",
         gold: { label: "Face ID / iPhone X", href: "years/2017/sites/iphone/x.html", key: "itt17-faceid" },
         guided: [
-          { label: "Fortnite leftover", href: "years/2017/sites/fortnite/index.html" },
+          { label: "Fortnite", href: "years/2017/sites/fortnite/index.html" },
           { label: "Twitter 280", href: "years/2017/sites/twitter/280.html" }
         ],
         game: { label: "Storm Circle", href: "years/2017/sites/playable/game.html" }
@@ -405,7 +405,7 @@
         gold: { label: "GDPR Manage", href: "years/2018/sites/gdpr/index.html", key: "itt18-gdpr" },
         guided: [
           { label: "TikTok For You", href: "years/2018/sites/tiktok/fyp.html" },
-          { label: "Hearing leftover", href: "years/2018/sites/trust/index.html" }
+          { label: "Hearing", href: "years/2018/sites/trust/index.html" }
         ],
         game: { label: "Consent Dash", href: "years/2018/sites/playable/game.html" }
       },
@@ -425,9 +425,9 @@
         thesis: "Lean door. Join never writes. Mute then chat then Leave is the save. 300 million is participants, not users.",
         gold: { label: "Zoom Leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
         guided: [
-          { label: "YouTube leftover", href: "years/2020/sites/youtube/index.html" },
-          { label: "Wikipedia leftover", href: "years/2020/sites/wikipedia/index.html" },
-          { label: "Facebook leftover", href: "years/2020/sites/facebook/index.html" }
+          { label: "YouTube", href: "years/2020/sites/youtube/index.html" },
+          { label: "Wikipedia", href: "years/2020/sites/wikipedia/index.html" },
+          { label: "Facebook", href: "years/2020/sites/facebook/index.html" }
         ],
         game: { label: "Sus Vote", href: "years/2020/sites/playable/game.html" }
       }},
@@ -443,7 +443,7 @@
           { year: "1996", href: "years/1996/sites/yahoo/index.html", note: "My Yahoo" },
           { year: "1998", href: "years/1998/sites/yahoo/index.html", note: "still winning" },
           { year: "2000", href: "years/2000/sites/yahoo/index.html", note: "crash year" },
-          { year: "2010", href: "years/2010/sites/yahoo/index.html", note: "lean leftover" }
+          { year: "2010", href: "years/2010/sites/yahoo/index.html", note: "lean" }
         ]
       },
       {
@@ -476,7 +476,7 @@
         stops: [
           { year: "2004", href: "years/2004/sites/facebook/networks.html", note: "thefacebook" },
           { year: "2010", href: "years/2010/sites/facebook/index.html", note: "Open Graph" },
-          { year: "2016", href: "years/2016/sites/facebook/reactions.html", note: "Reactions leftover" }
+          { year: "2016", href: "years/2016/sites/facebook/reactions.html", note: "Reactions" }
         ]
       },
       {
@@ -484,9 +484,9 @@
         label: "YouTube",
         blurb: "Independent upload → Google-owned → leftover lean rooms.",
         stops: [
-          { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean leftover" },
-          { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean leftover" },
-          { year: "2017", href: "years/2017/sites/youtube/index.html", note: "lean leftover" }
+          { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean" },
+          { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean" },
+          { year: "2017", href: "years/2017/sites/youtube/index.html", note: "lean" }
         ]
       },
       {
@@ -517,7 +517,7 @@
         stops: [
           { year: "2008", href: "years/2008/sites/appstore/index.html", note: "Store opens" },
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
-          { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E leftover" },
+          { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" },
           { year: "2017", href: "years/2017/sites/iphone/x.html", note: "Face ID" }
         ]
       },
@@ -588,7 +588,7 @@
         steps: [
           { year: "2008", label: "App Store", href: "years/2008/sites/appstore/index.html" },
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
-          { year: "2016", label: "WhatsApp E2E leftover", href: "years/2016/sites/whatsapp/e2e.html" },
+          { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" },
           { year: "2017", label: "Face ID", href: "years/2017/sites/iphone/x.html" }
         ]
       },
@@ -599,7 +599,7 @@
         steps: [
           { year: "2015", label: "Periscope LIVE", href: "years/2015/sites/periscope/index.html" },
           { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" },
-          { year: "2017", label: "musical.ly leftover", href: "years/2017/sites/musically/index.html" }
+          { year: "2017", label: "musical.ly", href: "years/2017/sites/musically/index.html" }
         ]
       },
       {

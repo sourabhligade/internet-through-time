@@ -10,6 +10,15 @@
  * skip (see hideOverlay / maybePhoneEvent in js/browser/create.js). Overlay
  * honesty specs must NOT call this.
  */
+/** Open folded leftover rails so dest-minute tests can still click them. */
+async function revealLeftoverRails(page) {
+  await page.evaluate(() => {
+    const list = document.querySelectorAll("details.itt-also-year");
+    let i;
+    for (i = 0; i < list.length; i++) list[i].open = true;
+  });
+}
+
 async function killOverlays(page) {
   await page.evaluate(() => {
     const kill = (el) => {
@@ -614,6 +623,7 @@ async function leftoverOfficialDest(page, href, suffix, goldKey) {
   const key = "itt" + String(year).slice(-2) + "-" + suffix;
   const panel = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
   await page.goto(href);
+  await revealLeftoverRails(page);
   await panel.locator("[data-lo-save]").waitFor({ timeout: 20000 });
   await page.waitForFunction((suf) => {
     const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
@@ -695,4 +705,5 @@ module.exports = {
   openAlsoYear,
   leftoverTrioStrip,
   leftoverOfficialDest,
+  revealLeftoverRails,
 };

@@ -314,19 +314,32 @@
             if (idxAttr != null && doc.querySelector("[data-digg-count='" + idxAttr + "']")) {
               doc.querySelector("[data-digg-count='" + idxAttr + "']").textContent = String(row.diggs || 0);
             }
-            if (delta > 0) {
+            if (delta !== 0) {
               var trailKey = fallbackPrefix() + "-digg";
-              try {
-                localStorage.setItem(trailKey, JSON.stringify({
-                  multiStep: true,
-                  real: true,
-                  official: true,
-                  year: year(),
-                  ts: Date.now(),
-                  story: String(row.title || "").slice(0, 80)
-                }));
-              } catch (eTrail) { /* */ }
-              try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+              var want =
+                (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) ||
+                trailKey;
+              if (want === "itt05-digg" || trailKey === "itt05-digg") {
+                try {
+                  if (!localStorage.getItem("itt05-digg")) {
+                    localStorage.setItem(
+                      "itt05-digg",
+                      JSON.stringify({
+                        multiStep: true,
+                        real: true,
+                        official: true,
+                        year: year(),
+                        ts: Date.now(),
+                        bury: delta < 0,
+                        story: String(row.title || "").slice(0, 80)
+                      })
+                    );
+                  }
+                } catch (eTrail) { /* */ }
+                try {
+                  if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+                } catch (eN) { /* */ }
+              }
             }
             var msg =
               (delta > 0 ? "Dugg" : "Buried") +

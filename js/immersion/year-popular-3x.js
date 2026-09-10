@@ -236,6 +236,9 @@
         if (st) st.textContent = "Trap. That click never writes.";
       });
     }
+    try {
+      if (ITT.foldLeftoverRails) ITT.foldLeftoverRails(doc);
+    } catch (eF) { /* */ }
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

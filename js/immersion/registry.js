@@ -276,6 +276,7 @@
       "immersion/pandora.js",
       "immersion/podcasts.js",
       "immersion/housingmaps.js",
+      "immersion/techcrunch.js",
       "immersion/reader.js",
       "immersion/technorati.js",
       "immersion/delicious.js",

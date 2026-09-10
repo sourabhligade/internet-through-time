@@ -116,7 +116,7 @@
         return;
       }
       saveJSON(key("farm"), blob({ plots: Object.keys(planted), waited: true, date: "2009-06-19" }));
-      if (field) field.textContent = "Harvested leftover Flash field. Nag a neighbor next.";
+      if (field) field.textContent = "Harvested Flash field. Nag a neighbor next.";
       feedback("FarmVille · " + key("farm"), st);
       reveal(doc);
     });
@@ -142,7 +142,7 @@
       saveJSON(key("bing"), blob({ q: q.slice(0, 60), date: "2009-06-03" }));
       if (res) {
         res.hidden = false;
-        res.textContent = "Decision leftover · " + q.slice(0, 60) + " · Google is still first.";
+        res.textContent = "Decision ·" + q.slice(0, 60) + " · Google is still first.";
       }
       feedback("Bing · " + key("bing"), st);
       reveal(doc);
@@ -196,11 +196,11 @@
     }
     btn.addEventListener("click", function () {
       if (Object.keys(apps).length < 2) {
-        feedback("Install two leftover apps first. 0–1 never writes.", st, { error: true });
+        feedback("Install two apps first. 0–1 never writes.", st, { error: true });
         return;
       }
       saveJSON(key("apps"), blob({ apps: Object.keys(apps) }));
-      feedback("App Store leftover · " + key("apps"), st);
+      feedback("App Store ·" + key("apps"), st);
       reveal(doc);
     });
   }
@@ -252,7 +252,7 @@
     }
     btn.addEventListener("click", function () {
       if (!venue) {
-        feedback("Pick a leftover venue first. Empty never writes.", st, { error: true });
+        feedback("Pick a venue first. Empty never writes.", st, { error: true });
         return;
       }
       saveJSON(key("4sq"), blob({ venue: venue, date: "2009-03-11" }));
@@ -274,11 +274,11 @@
     btn.addEventListener("click", function () {
       var note = val(doc, "[data-ks09-note]");
       if (!note || note.length < 2) {
-        feedback("Type a leftover pledge first. Empty never writes.", st, { error: true });
+        feedback("Type a pledge first. Empty never writes.", st, { error: true });
         return;
       }
       saveJSON(key("kickstarter"), blob({ note: note.slice(0, 40), date: "2009-04-28" }));
-      feedback("Backed leftover · " + key("kickstarter"), st);
+      feedback("Backed ·" + key("kickstarter"), st);
       reveal(doc);
     });
   }
@@ -336,7 +336,7 @@
     var trap = doc.querySelector("[data-peg-trap]");
     if (trap) {
       trap.addEventListener("click", function () {
-        if (status) status.textContent = "Pay-to-skip is leftover. Trap never scores.";
+        if (status) status.textContent = "Pay-to-skip is. Trap never scores.";
       });
     }
   }
@@ -362,15 +362,15 @@
     for (i = 0; i < clips.length; i++) {
       clips[i].addEventListener("click", function () {
         watched = this.getAttribute("data-yt09-watch") || "clip";
-        if (player) player.textContent = "▶ Playing leftover · " + watched;
+        if (player) player.textContent = "▶ Playing ·" + watched;
         saveJSON(key("yt"), blob({ clip: watched, rank: 3, leftover: true }));
-        feedback("YouTube leftover · #3 visits · " + key("yt"), st);
+        feedback("YouTube · #3 visits ·" + key("yt"), st);
         reveal(doc);
       });
     }
     if (trap) {
       trap.addEventListener("click", function () {
-        feedback("Upload is the 2005 star. 2009 leftover never writes an upload.", st, { error: true });
+        feedback("Upload is the 2005 star. 2009 never writes an upload.", st, { error: true });
       });
     }
   }

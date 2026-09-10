@@ -55,7 +55,7 @@
     }
     var saved = YX.loadJSON(key("wa-install"));
     if (saved && saved.real) {
-      feedback("Install leftover · " + key("wa-install"), st);
+      feedback("Install ·" + key("wa-install"), st);
       reveal(doc);
     }
     install.addEventListener("click", function () {
@@ -82,7 +82,7 @@
     send.addEventListener("click", function () {
       var note = val(doc, "[data-wa14-note]");
       if (!note || note.length < 2) {
-        feedback("Type a leftover note (min 2). Empty never writes.", st, { error: true });
+        feedback("Type a note (min 2). Empty never writes.", st, { error: true });
         return;
       }
       if (countChecked(doc, "[data-wa14-req]") < 2) {
@@ -90,7 +90,7 @@
         return;
       }
       saveJSON(key("wa-chat"), blob({ note: note.slice(0, 80), ticks: 2 }));
-      feedback("Chat leftover · " + key("wa-chat"), st);
+      feedback("Chat ·" + key("wa-chat"), st);
       reveal(doc);
     });
   }
@@ -131,7 +131,7 @@
         return;
       }
       saveJSON(key("icebucket"), blob({ nominate: name.slice(0, 80), summer: true }));
-      feedback("Ice Bucket leftover · " + key("icebucket"), st);
+      feedback("Ice Bucket ·" + key("icebucket"), st);
       reveal(doc);
     });
   }
@@ -171,7 +171,7 @@
         return;
       }
       saveJSON(key("iphone6"), blob({ size: picked, date: "2014-09-09" }));
-      feedback("iPhone 6 leftover · " + key("iphone6"), st);
+      feedback("iPhone 6 ·" + key("iphone6"), st);
       reveal(doc);
     });
   }
@@ -186,7 +186,7 @@
         return;
       }
       saveJSON(key("applepay"), blob({ tap: true, month: "2014-10" }));
-      feedback("Apple Pay leftover · " + key("applepay"), st);
+      feedback("Apple Pay ·" + key("applepay"), st);
       reveal(doc);
     });
   }
@@ -201,7 +201,7 @@
         return;
       }
       saveJSON(key("material"), blob({ io: "2014-06-25", lollipop: "2014-11-12" }));
-      feedback("Material leftover · " + key("material"), st);
+      feedback("Material ·" + key("material"), st);
       reveal(doc);
     });
   }
@@ -225,7 +225,7 @@
         return;
       }
       saveJSON(key("slack"), blob({ chan: picked, date: "2014-02-12" }));
-      feedback("Slack leftover · " + key("slack"), st);
+      feedback("Slack ·" + key("slack"), st);
       reveal(doc);
     });
   }
@@ -243,15 +243,15 @@
     save.addEventListener("click", function () {
       var note = val(doc, "[data-tw14-note]");
       if (!note || note.length < 2) {
-        feedback("Type a stream leftover (min 2). Empty never writes.", st, { error: true });
+        feedback("Type a stream (min 2). Empty never writes.", st, { error: true });
         return;
       }
       if (countChecked(doc, "[data-tw14-req]") < 1) {
-        feedback("Tick the $970M leftover. Incomplete never writes.", st, { error: true });
+        feedback("Tick the $970M. Incomplete never writes.", st, { error: true });
         return;
       }
       saveJSON(key("twitch"), blob({ amazon: true, note: note.slice(0, 80), date: "2014-08-25" }));
-      feedback("Twitch leftover · " + key("twitch"), st);
+      feedback("Twitch ·" + key("twitch"), st);
       reveal(doc);
     });
   }
@@ -281,7 +281,7 @@
           if (status) status.textContent = "Folded · " + key("game-tilefold");
           reveal(doc);
         } else if (status) {
-          status.textContent = "Fold one more leftover tile.";
+          status.textContent = "Fold one more tile.";
         }
       });
     }

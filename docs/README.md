@@ -53,7 +53,9 @@ Live tree + hub + `SHIP_YEARS` = **27 years** (1994–2020). Official 10 dests l
 | 2019 | [`2019-READ-FIRST.md`](2019-READ-FIRST.md) | Disney+ Continue `itt19-disneyplus` |
 | 2020 | [`2020-READ-FIRST.md`](2020-READ-FIRST.md) | Zoom Leave `itt20-zoom` |
 
-Named shortfall cut (2024 pick · passport · hub copy · leftover-official matrix): [`SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md).
+Named shortfall cut (2024 pick · passport · hub copy · leftover-official matrix): [`SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](SHORTFALL-TRUTH-PASSPORT-4O-MATRIX-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md) — **stale hub range** (still says 31 years). Live tree is 27 years.
+
+Improve-more research + pickable options (2026-09-10): [`1994-2020-IMPROVE-MORE-RESEARCH-OPTIONS-2026-09-10.md`](1994-2020-IMPROVE-MORE-RESEARCH-OPTIONS-2026-09-10.md). **Option 1 + Option 2 implemented** (KEEP Next chain + home leftover-3× after `#itt-year-start`). Options 3–7 still unpicked.
 
 
 1994–2004 and 2008 use `YYYY-MUSEUM-GRADE.md` + `flow-trails.js`. No READ-FIRST required.

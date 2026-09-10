@@ -36,13 +36,13 @@ const LIVE = {
     doors: [
       { dest: "/years/2011/sites/icloud/index.html", go: "[data-pop-go][data-pop-id='icloud']", key: "itt11-pop-icloud", next: "pinterest/index.html" },
       { dest: "/years/2011/sites/pinterest/index.html", go: "[data-pop-go][data-pop-id='pinterest']", key: "itt11-pop-pinterest", next: "linkedin/index.html" },
-      { dest: "/years/2011/sites/linkedin/index.html", go: "[data-pop-go][data-pop-id='linkedin']", key: "itt11-pop-linkedin", next: "kindlefire/index.html" },
+      { dest: "/years/2011/sites/linkedin/index.html", go: "[data-pop-go][data-pop-id='linkedin']", key: "itt11-pop-linkedin", next: "android4/index.html" },
       { dest: "/years/2011/sites/kindlefire/index.html", go: "[data-pop-go][data-pop-id='kindlefire']", key: "itt11-pop-kindlefire", next: "minecraft/index.html" },
       { dest: "/years/2011/sites/minecraft/index.html", go: "[data-pop-go][data-pop-id='minecraft']", key: "itt11-pop-minecraft", next: "twitch/index.html" },
-      { dest: "/years/2011/sites/twitch/index.html", go: "[data-pop-go][data-pop-id='twitch']", key: "itt11-pop-twitch", next: "youtube/index.html" },
+      { dest: "/years/2011/sites/twitch/index.html", go: "[data-pop-go][data-pop-id='twitch']", key: "itt11-pop-twitch", next: "reddit/index.html" },
       { dest: "/years/2011/sites/youtube/index.html", go: "[data-pop-go][data-pop-key='pop3-youtube']", key: "itt11-pop3-youtube", next: "hulu/index.html" },
-      { dest: "/years/2011/sites/reddit/index.html", go: "[data-pop-go][data-pop-key='pop3-reddit']", key: "itt11-pop3-reddit", next: "twitter/index.html" },
-      { dest: "/years/2011/sites/twitter/index.html", go: "[data-pop-go][data-pop-key='pop3-twitter']", key: "itt11-pop3-twitter", next: "youtube/index.html" },
+      { dest: "/years/2011/sites/reddit/index.html", go: "[data-pop-go][data-pop-key='pop3-reddit']", key: "itt11-pop3-reddit", next: "steam/index.html" },
+      { dest: "/years/2011/sites/twitter/index.html", go: "[data-pop-go][data-pop-key='pop3-twitter']", key: "itt11-pop3-twitter", next: "qwikster/index.html" },
     ],
   },
   2012: {

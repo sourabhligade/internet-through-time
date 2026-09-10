@@ -1,6 +1,7 @@
 // @ts-check
 /** 3 leftover machines on one dest — complete walks, not strip counts. */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -28,8 +29,10 @@ async function completePanel(page, panelSel, goSel, ph) {
 test("2006 Flickr: first only does not write pop2/pop3 · then all three · never Twttr", async ({ page }) => {
   const keys = ["itt06-pop-flickr", "itt06-pop2-flickr", "itt06-pop3-flickr", "itt06-tweets"];
   await page.goto("/years/2006/sites/flickr/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     '[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))',
@@ -64,8 +67,10 @@ test("2008 Stack Overflow: three leftover-3× machines · never GitHub star", as
     "itt08-github",
   ];
   await page.goto("/years/2008/sites/stackoverflow/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     '[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))',
@@ -93,8 +98,10 @@ test("2008 Stack Overflow: three leftover-3× machines · never GitHub star", as
 test("2006 Facebook official: leftover-3× is pop3 only · never Twttr", async ({ page }) => {
   const keys = ["itt06-pop-facebook", "itt06-pop2-facebook", "itt06-pop3-facebook", "itt06-tweets"];
   await page.goto("/years/2006/sites/facebook/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   expect(await page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-facebook']").count()).toBe(0);
   await completePanel(
     page,
@@ -110,8 +117,10 @@ test("2006 Facebook official: leftover-3× is pop3 only · never Twttr", async (
 test("2010 YouTube official: leftover-3× pop3 completes · never Instagram star", async ({ page }) => {
   const keys = ["itt10-pop-youtube", "itt10-pop2-youtube", "itt10-pop3-youtube", "itt10-ig-posts"];
   await page.goto("/years/2010/sites/youtube/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   expect(await page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-youtube']").count()).toBe(0);
   await completePanel(
     page,
@@ -126,8 +135,10 @@ test("2010 YouTube official: leftover-3× pop3 completes · never Instagram star
 test("2006 Vimeo YES leftover: yeslo then yeslo2 then yeslo3 · never Twttr", async ({ page }) => {
   const keys = ["itt06-yeslo-vimeo", "itt06-yeslo2-vimeo", "itt06-yeslo3-vimeo", "itt06-tweets"];
   await page.goto("/years/2006/sites/vimeo/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     "[data-itt-yeslo]:has([data-pop-key='yeslo-vimeo'])",

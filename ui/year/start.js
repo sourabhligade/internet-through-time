@@ -144,7 +144,7 @@
           freeze.className = "itt-mass-honesty";
           freeze.setAttribute("data-itt-mass", "leftover-18");
           freeze.innerHTML =
-            "<b>Leftover-18 freeze</b> — named leftover dests stay at 18. No new dest folders. Costume is XP + IE6.";
+            "<b>Year dest freeze</b> — named dests stay at 18. No new dest folders. Costume is XP + IE6.";
           var threeEl = document.getElementById(threeId);
           var anchor = threeEl || document.getElementById(chipId) || host;
           if (anchor.nextSibling) anchor.parentNode.insertBefore(freeze, anchor.nextSibling);
@@ -193,7 +193,7 @@
         '<a href="' +
         esc(flowHref(picks[i].href)) +
         '">' +
-        esc(picks[i].name || "leftover") +
+        esc(String(picks[i].name || "room").replace(/\s*leftover(?:s)?(?:-\d+[×x]|[\s-]*[234][×x])?/gi, "").replace(/\s{2,}/g, " ").replace(/^\s+|\s+$/g, "") || "room") +
         "</a>";
     }
     html += "</p>";
@@ -295,7 +295,12 @@
     "[data-itt-pop-l8]",
     "[data-itt-pop-l9]",
     "[id^='ott-2x-']",
-    "[id^='ott-5x-']"
+    "[id^='ott-5x-']",
+    "[data-itt-2x-links]",
+    "[data-lo-panel]",
+    "[data-4x-panel]",
+    "[data-itt-lo3x]",
+    ".itt-pop3x-flow"
   ].join(",");
 
   function isHonesty(el) {

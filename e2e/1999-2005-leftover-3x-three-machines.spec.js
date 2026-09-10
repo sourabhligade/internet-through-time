@@ -5,6 +5,7 @@
  * Official dest: pop3 only. YES leftover dest: yeslo / yeslo2 / yeslo3.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -53,8 +54,10 @@ test("1999 LiveJournal: first only does not write pop2/pop3 · then all three le
 }) => {
   const keys = ["itt99-pop-livejournal", "itt99-pop2-livejournal", "itt99-pop3-livejournal", "itt99-aim"];
   await page.goto("/years/1999/sites/livejournal/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
 
   await trapNeverWrites(
     page,
@@ -107,8 +110,10 @@ test("2005 Million Dollar: three leftover-3× machines on one dest · never uplo
     "itt05-yt-uploads",
   ];
   await page.goto("/years/2005/sites/milliondollar/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     '[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))',
@@ -136,8 +141,10 @@ test("2005 Million Dollar: three leftover-3× machines on one dest · never uplo
 test("1999 Blogger official: leftover-3× is pop3 only · first/second never write", async ({ page }) => {
   const keys = ["itt99-pop-blogger", "itt99-pop2-blogger", "itt99-pop3-blogger", "itt99-aim"];
   await page.goto("/years/1999/sites/blogger/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await expect(page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key='pop3-blogger']")).toBeVisible();
   expect(await page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-blogger']").count()).toBe(0);
   expect(await page.locator("[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))").count()).toBe(0);
@@ -157,8 +164,10 @@ test("1999 Blogger official: leftover-3× is pop3 only · first/second never wri
 test("2005 Reddit official: leftover-3× pop3 completes · no leftover-3× first/second", async ({ page }) => {
   const keys = ["itt05-pop-reddit", "itt05-pop2-reddit", "itt05-pop3-reddit", "itt05-yt-uploads"];
   await page.goto("/years/2005/sites/reddit/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   expect(await page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-reddit']").count()).toBe(0);
   await completePanel(
     page,
@@ -175,8 +184,10 @@ test("2005 Reddit official: leftover-3× pop3 completes · no leftover-3× first
 test("1999 CNN YES leftover: yeslo then yeslo2 then yeslo3 · never AIM", async ({ page }) => {
   const keys = ["itt99-yeslo-cnn", "itt99-yeslo2-cnn", "itt99-yeslo3-cnn", "itt99-aim"];
   await page.goto("/years/1999/sites/cnn/index.html");
+  await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
+  await revealLeftoverRails(page);
   await completePanel(
     page,
     "[data-itt-yeslo]:has([data-pop-key='yeslo-cnn'])",

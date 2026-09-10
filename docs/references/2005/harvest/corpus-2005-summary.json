@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-10",
+  "note": "Stacked research corpus. Not rooms. Not 5k live GETs.",
+  "sources": {
+    "existing_corpus": 7148,
+    "wiki_extlinks": 41894,
+    "wiki_pages": 888,
+    "wiki_titles_file": 303,
+    "five_x": 670,
+    "local_md": 43079,
+    "primaries": 18
+  },
+  "unique_urls": 43732,
+  "old_corpus": 7148,
+  "new_vs_old": 36584,
+  "target_2011": 10320,
+  "beats_2011": true
+}

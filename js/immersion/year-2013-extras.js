@@ -79,7 +79,7 @@
     }
     btn.addEventListener("click", function () {
       if (held < 1) {
-        feedback("Hold a leftover loop first. Empty never writes.", st, { error: true });
+        feedback("Hold a loop first. Empty never writes.", st, { error: true });
         return;
       }
       saveJSON(key("vine-posts"), blob({ seconds: Math.min(held, 6), date: "2013-01-24" }));
@@ -101,7 +101,7 @@
       els[i].addEventListener("click", function () {
         snaps[this.getAttribute("data-sn13-snap") || ""] = true;
         this.setAttribute("aria-pressed", "true");
-        if (rail) rail.textContent = Object.keys(snaps).length + " snap(s) · 24h leftover";
+        if (rail) rail.textContent = Object.keys(snaps).length + "snap(s) · 24h";
       });
     }
     if (trap) {
@@ -119,7 +119,7 @@
         return;
       }
       saveJSON(key("snap-story"), blob({ snaps: Object.keys(snaps), date: "2013-10-03" }));
-      feedback("Stories leftover · " + key("snap-story"), st);
+      feedback("Stories ·" + key("snap-story"), st);
       reveal(doc);
     });
   }
@@ -137,8 +137,8 @@
     if (!btn) return;
     var saved = YX.loadJSON(key("telegram-chat"));
     if (saved && saved.real) {
-      if (log && saved.msg) log.textContent = "Cloud leftover: " + saved.msg;
-      feedback("Telegram leftover · " + key("telegram-chat"), st);
+      if (log && saved.msg) log.textContent = "Cloud:" + saved.msg;
+      feedback("Telegram ·" + key("telegram-chat"), st);
       reveal(doc);
     }
     btn.addEventListener("click", function () {
@@ -148,12 +148,12 @@
       }
       var msg = val(doc, "[data-tg13-msg]");
       if (!msg || msg.length < 2) {
-        feedback("Type a leftover note first. Empty never writes.", st, { error: true });
+        feedback("Type a note first. Empty never writes.", st, { error: true });
         return;
       }
       saveJSON(key("telegram-chat"), blob({ msg: msg.slice(0, 80), date: "2013-08-14" }));
-      if (log) log.textContent = "Cloud leftover: " + msg.slice(0, 80);
-      feedback("Telegram leftover · " + key("telegram-chat"), st);
+      if (log) log.textContent = "Cloud:" + msg.slice(0, 80);
+      feedback("Telegram ·" + key("telegram-chat"), st);
       reveal(doc);
     });
   }
@@ -224,13 +224,13 @@
     var st = doc.querySelector("[data-med13-status]");
     if (tweet) {
       tweet.addEventListener("click", function () {
-        feedback("A tweet is 140. Medium is the leftover essay. That click never writes.", st, { error: true });
+        feedback("A tweet is 140. Medium is the essay. That click never writes.", st, { error: true });
       });
     }
     if (!pub) return;
     var saved = YX.loadJSON(key("medium"));
     if (saved && saved.real) {
-      feedback("Essay leftover · " + key("medium"), st);
+      feedback("Essay ·" + key("medium"), st);
       reveal(doc);
     }
     pub.addEventListener("click", function () {
@@ -240,11 +240,11 @@
         return;
       }
       if (!draft || draft.length < 2) {
-        feedback("Type an essay leftover (min 2). Empty never writes.", st, { error: true });
+        feedback("Type an essay (min 2). Empty never writes.", st, { error: true });
         return;
       }
       saveJSON(key("medium"), blob({ draft: draft.slice(0, 200) }));
-      feedback("Essay leftover · " + key("medium"), st);
+      feedback("Essay ·" + key("medium"), st);
       reveal(doc);
     });
   }
@@ -263,7 +263,7 @@
     if (apply) {
       apply.addEventListener("click", function () {
         saveJSON(key("healthcare"), blob({ down: true, date: "2013-10-01", enroll: true }));
-        feedback("503 leftover · " + key("healthcare"), st);
+        feedback("503 ·" + key("healthcare"), st);
         reveal(doc);
       });
     }
@@ -275,7 +275,7 @@
     if (!ack) return;
     var saved = YX.loadJSON(key("healthcare"));
     if (saved && saved.real) {
-      feedback("503 leftover · " + key("healthcare"), st);
+      feedback("503 ·" + key("healthcare"), st);
       reveal(doc);
     }
     ack.addEventListener("click", function () {
@@ -284,7 +284,7 @@
         return;
       }
       saveJSON(key("healthcare"), blob({ down: true, date: "2013-10-01" }));
-      feedback("503 leftover · " + key("healthcare"), st);
+      feedback("503 ·" + key("healthcare"), st);
       reveal(doc);
     });
   }
@@ -296,13 +296,13 @@
     var color = "";
     if (face) {
       face.addEventListener("click", function () {
-        feedback("Face ID is later. 5c is a color leftover.", st, { error: true });
+        feedback("Face ID is later. 5c is a color.", st, { error: true });
       });
     }
     if (!ack) return;
     var saved = YX.loadJSON(key("iphone5c"));
     if (saved && saved.real) {
-      feedback("5c leftover · " + key("iphone5c"), st);
+      feedback("5c ·" + key("iphone5c"), st);
       reveal(doc);
     }
     var colors = doc.querySelectorAll("[data-5c-color]");
@@ -311,7 +311,7 @@
       colors[i].addEventListener("click", function () {
         color = this.getAttribute("data-5c-color") || "";
         markOn(doc, "[data-5c-color]", this);
-        feedback("Picked " + color + " leftover.", st);
+        feedback("Picked " + color + ".", st);
       });
     }
     ack.addEventListener("click", function () {
@@ -324,7 +324,7 @@
         return;
       }
       saveJSON(key("iphone5c"), blob({ color: color, date: "2013-09-20" }));
-      feedback("5c leftover · " + key("iphone5c"), st);
+      feedback("5c ·" + key("iphone5c"), st);
       reveal(doc);
     });
   }
@@ -336,7 +336,7 @@
     if (!feed && !trap) return;
     var saved = YX.loadJSON(key("vine-posts"));
     if (feed && saved && saved.real) {
-      feed.textContent = "Loop leftover restored · 6s · not 15s.";
+      feed.textContent = "Loop restored · 6s · not 15s.";
     }
     if (trap) {
       trap.addEventListener("click", function () {
@@ -392,7 +392,7 @@
         if (status) {
           status.textContent =
             score >= 6
-              ? "Loop of six · leftover cabinet · star stays Vine."
+              ? "Loop of six · cabinet · star stays Vine."
               : "Beat " + score + " / 6 · 15s never scores.";
         }
       });

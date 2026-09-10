@@ -7,6 +7,7 @@
  * Stars / guided 6 / official gold stay put.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 
@@ -170,6 +171,7 @@ function siteKey(href) {
  */
 async function walkDoor(page, door, gold) {
   await page.goto(door.dest);
+  await revealLeftoverRails(page);
   await page.evaluate((k) => localStorage.removeItem(k), door.key);
   const extra = [...new Set([...(gold || []), ...(door.never || []), ...(door.lx || [])])];
   for (const g of extra) await page.evaluate((k) => localStorage.removeItem(k), g);
@@ -178,6 +180,7 @@ async function walkDoor(page, door, gold) {
   await page.evaluate((p) => localStorage.removeItem("itt" + p + "-x"), String(Number(y) - 1).padStart(2, "0"));
   await page.evaluate((p) => localStorage.removeItem("itt" + p + "-x"), String(Number(y) + 1).padStart(2, "0"));
   await page.reload();
+  await revealLeftoverRails(page);
 
   await expect(page.locator(".itt-pop3x-flow[data-pop-panel='1']").first()).toContainText(door.weather);
 
@@ -274,6 +277,7 @@ test.describe("leftover 3× first-pack dest machines that were missing", () => {
 
   test("leftover-2× dest-wrong Maps leftover is gone on KEEP dests", async ({ page }) => {
     await page.goto("/years/2005/sites/lastfm/index.html");
+  await revealLeftoverRails(page);
     const labels = await page.locator("[data-lo-save]").allTextContents();
     expect(labels.join(" ")).not.toMatch(/Maps leftover/);
     expect(labels.join(" ")).toMatch(/Scrobble leftover/);
@@ -304,6 +308,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
   test.describe(`${year} leftover 3× 2× doors`, () => {
     test(`home strips 4–6 are unique leftover dests and not the star`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
+  await revealLeftoverRails(page);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
       const a = page.locator(`[data-itt-pop-2x-a="${year}"]`).first().locator('a[href*="sites/"]');
       const b = page.locator(`[data-itt-pop-2x-b="${year}"]`).first().locator('a[href*="sites/"]');
@@ -361,6 +366,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
       for (const h of twoXH) {
         const dest = h.replace(/^\.\.\//, `/years/${year}/`);
         const res = await page.goto(dest);
+  await revealLeftoverRails(page);
         expect(res && res.ok(), dest).toBeTruthy();
         await expect(page.locator(".itt-pop3x-flow[data-pop-panel='1']").first()).toBeVisible();
       }
@@ -368,6 +374,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
 
     test(`map lists all leftover 3× 2× hrefs`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/map.html`);
+  await revealLeftoverRails(page);
       for (const door of spec.doors) {
         const slug = door.dest.replace(`/years/${year}/sites/`, "");
         await expect(page.locator(`a[href*="${slug}"]`).first()).toBeVisible();
@@ -376,6 +383,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
 
     test(`About still prints ILS and no invented June 2019 cell`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/about.html`);
+  await revealLeftoverRails(page);
       const body = await page.locator("body").innerText();
       for (const print of spec.ils) expect(body).toContain(print);
       expect(body).not.toMatch(/June 2019 websites/i);

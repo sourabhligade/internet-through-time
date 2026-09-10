@@ -133,6 +133,8 @@ for (const year of YEARS) {
     }, [key, GOLD[year], GOLD2[year] || ""]);
     await page.reload();
     await expect(page.locator('html[data-4x-ready="1"]')).toBeAttached({ timeout: 15000 });
+    const { revealLeftoverRails } = require("./helpers");
+    await revealLeftoverRails(page);
     const panel = page.locator(`[data-4x-panel]:has([data-4x-go="${spec.go}"])`).first();
     const go = panel.locator(`[data-4x-go="${spec.go}"]`);
     await expect(go).toBeVisible();

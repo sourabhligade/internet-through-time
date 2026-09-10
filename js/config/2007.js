@@ -338,9 +338,9 @@
     bookmarks: [
       { title: "Starting Point", path: "pages/home.html" },
       { title: "iPhone Safari", path: "sites/iphone/index.html" },
-      { title: "Street View leftover", path: "sites/streetview/index.html" },
-      { title: "Gmail leftover", path: "sites/gmail/index.html" },
-      { title: "Tumblr leftover", path: "sites/tumblr/index.html" }
+      { title: "Street View", path: "sites/streetview/index.html" },
+      { title: "Gmail", path: "sites/gmail/index.html" },
+      { title: "Tumblr", path: "sites/tumblr/index.html" }
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2007/",
     locationHints: [

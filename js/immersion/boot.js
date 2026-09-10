@@ -139,6 +139,7 @@
       ["mapquest", "immersion/mapquest.js"],
       ["photobucket", "immersion/photobucket.js"],
       ["pandora", "immersion/pandora.js"],
+      ["techcrunch", "immersion/techcrunch.js"],
       ["github", "immersion/github.js"],
       ["msn", "immersion/msn.js"],
 
@@ -251,7 +252,8 @@
           ["[data-appstore-install], [data-appstore-apps], [data-appstore-catalog]", "immersion/appstore.js"],
           ["[data-spotify-invite], [data-spotify-plan], [data-spotify-play], [data-spotify-ack]", "immersion/spotify.js"],
           ["[data-hulu-play]", "immersion/hulu.js"],
-          ["[data-itunes-buy]", "immersion/itunes.js"]
+          ["[data-itunes-buy]", "immersion/itunes.js"],
+          ["form[data-tc-open], [data-tc-open]", "immersion/techcrunch.js"]
         ];
         var hi;
         for (hi = 0; hi < hookEngines.length; hi++) {

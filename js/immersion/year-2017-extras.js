@@ -107,7 +107,7 @@
         return;
       }
       saveJSON(key("animoji"), blob({ face: picked }));
-      feedback("Sent (theater) · leftover · itt17-animoji", st);
+      feedback("Sent (theater) · · itt17-animoji", st);
       reveal(doc);
     });
   }

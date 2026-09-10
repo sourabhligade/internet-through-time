@@ -135,6 +135,15 @@
 
   function boot(doc) {
     doc = doc || document;
+    var traps = doc.querySelectorAll("[data-official-trap]");
+    var ti;
+    for (ti = 0; ti < traps.length; ti++) {
+      if (traps[ti].getAttribute("data-official-gold-trap") === "1") continue;
+      traps[ti].setAttribute("data-official-gold-trap", "1");
+      traps[ti].addEventListener("click", function () {
+        feedback("Trap. That click never writes.", doc.querySelector("[data-official-status]"), true);
+      });
+    }
     bindForm(doc, "form[data-av-search]", "av", function (form) {
       var q = ((form.querySelector("[name='q']") || {}).value || "").replace(/^\s+|\s+$/g, "");
       if (q.length < 2) return { ok: false, msg: "Type a query first. Empty never writes." };
@@ -163,6 +172,11 @@
       var i;
       for (i = 0; i < boxes.length; i++) ids.push(boxes[i].getAttribute("data-y2k-sys") || "sys");
       return { ok: true, extra: { systems: ids } };
+    });
+    bindForm(doc, "form[data-tc-open]", "tc", function (form) {
+      var post = ((form.querySelector("[name='post']:checked") || form.querySelector("[name='post']") || {}).value || "").replace(/^\s+|\s+$/g, "");
+      if (!post) return { ok: false, msg: "Open a named 2005 post first. Empty never writes." };
+      return { ok: true, extra: { post: post.slice(0, 80) } };
     });
     bindForm(doc, "form[data-td-form]", "td", function (form) {
       var line = ((form.querySelector("[data-td-line]") || {}).value || "").replace(/^\s+|\s+$/g, "");

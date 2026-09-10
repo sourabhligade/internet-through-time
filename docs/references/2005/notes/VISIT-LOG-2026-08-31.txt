@@ -73,3 +73,16 @@ Kayak public 7 Feb 2005 · Odeo announce ~25 Feb / launch ~Jul · Last.fm merge 
 Google Reader Labs 7 Oct · Wikipedia EN 500k 17–18 Mar 2005 · millionth is 1 Mar 2006 BAN
 Roblox public 1 Sep 2006 BAN as 2005 dest · Gaia/Second Life/Craigslist/Orkut/FeedBurner = leftover growth not launches
 Craigslist late 2005 ~190 sites / 35 countries / ~3B pageviews/mo
+
+DEST-TRUE REDO (2026-09-10)
+https://www.internetlivestats.com/total-number-of-websites/
+  reopened · June 2005 64,780,617 · +26% · 1,027,580,990 users · 16/site · YouTube + Reddit · table ends 2018
+https://googleblog.blogspot.com/2005/02/mapping-your-way.html
+  reopened · Bret Taylor · hotels near LAX · click and drag · no wait for a new image
+https://www.apple.com/newsroom/2005/06/28Apple-Takes-Podcasting-Mainstream/
+  reopened · iTunes 4.9 · 3,000+ · Jobs next generation of radio · ABC News, Adam Curry, BBC, Engadget, NPR/KCRW
+https://www.apple.com/newsroom/2005/06/30iTunes-Podcast-Subscriptions-Top-One-Million-in-First-Two-Days/
+  reopened · >1 million subscriptions in two days · Curry / KCRW quotes
+https://blog.flickr.net/en/2005/03/20/yahoo-actually-does-acquire-flickr/
+  reopened · 20 Mar 2005 · not Yahoo Photos · API stays open
+adaptivepath.org/ideas/ajax-new-approach-web-applications/ — fetch failed this redo; 2026-08-31 Ajax 18 Feb visit still stands
