@@ -1,13 +1,14 @@
 # 2022 — READ FIRST (from-scratch research)
 
 **Date:** 2026-09-10  
-**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **15**. Leftover **2×** on every dest. Star `itt22-chatgpt`. Unique vs 2021. Do not dest-farm.  
+**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **98**. Leftover **2×** on every dest. Leftover-3× **18+18+18**. Star `itt22-chatgpt`. Unique vs 2021. Do not dest-farm.  
 **Criteria:** [`2022-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2022-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
 **5k walk:** [`2022-5K-WEB-FLOW-MAP-2026-09-10.md`](2022-5K-WEB-FLOW-MAP-2026-09-10.md)  
 **Every flow dest minutes:** [`2022-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2022-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
 **Check every flow:** [`2022-CHECK-EVERY-FLOW-MAP-2026-09-10.md`](2022-CHECK-EVERY-FLOW-MAP-2026-09-10.md)  
 **Map (this cut):** [`2022-MAP-DEST-TRUE-UNIQUE-2026-09-10.md`](2022-MAP-DEST-TRUE-UNIQUE-2026-09-10.md)  
 **Flow diagram:** [`2022-FLOW-DIAGRAM-2026-09-10.md`](2022-FLOW-DIAGRAM-2026-09-10.md)  
+**Walk checklist (links):** [`2021-2022-EVERY-FLOW-CHECKLIST-2026-09-11.md`](2021-2022-EVERY-FLOW-CHECKLIST-2026-09-11.md)  
 **Stale dest-farm papers (lose to dest freeze 15):** [`2010-2023-AI-ERA-EVERY-FLOW-MINUTE.md`](2010-2023-AI-ERA-EVERY-FLOW-MINUTE.md) §2022 · [`2010-2023-AI-ERA-3X-DEEP-GOALS-PHASES-FLOWS-MINUTE-2026-08-30.md`](2010-2023-AI-ERA-3X-DEEP-GOALS-PHASES-FLOWS-MINUTE-2026-08-30.md) (61 dests / leftover-4×) · [`2017-2022-LAST5-2X-CHECK-MAP.md`](2017-2022-LAST5-2X-CHECK-MAP.md) (88 dests)  
 **Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped.  
 **Git only if asked.**
@@ -32,7 +33,7 @@
 | Leftover 2× | two leftover writers on **every dest** · never the star |
 | Leftover-3× | first 3 + third 3 · gold dest never leftover-3× |
 | Leftover-4× | **0** |
-| HTML cap | **≤90** |
+| HTML cap | **184** (density lift · leftover dest dest faces + leftover extra leftover pages) |
 | 5k | walk envelope · ILS June table **ends 2018** · do not invent June 2022 websites |
 | Scale | ITU **5.3B / 66%** on About · not websites |
 | First door | **CUT-OPEN lean** · hub card · atlas tick · leftover 2× |

@@ -11,7 +11,7 @@
 
 Pass rule: trap / empty / 0 ticks / leftover plaque **never writes** an official `whenKey` or the star. Complete official writes `{real:true, multiStep:true, official:true, year}` from the period control. Leftover complete writes leftover only.
 
-**Do not:** dest-farm · Option 6 leftover-official 313 lift · leftover-4× on 2012 / 2013 / 2016–2021 · restore 2022–2025 · 7th guided `<li>` · implement from rejected EVERY-FLOW dumps · retarget leftover-3× first-strip Nexts · **put 2009 back on the year menu**.
+**Do not:** dest-farm · Option 6 leftover-official 313 lift · leftover-4× on 2012 / 2013 / 2016–2022 · restore **2023–2025** · 7th guided `<li>` · implement from rejected EVERY-FLOW dumps · retarget leftover-3× first-strip Nexts · **put 2009 back on the year menu**.
 
 **Already shipped this session (do not redo):** YouTube land never writes `itt05-yt-uploads` · leftover-official fold + leftover-word strip · leftover-strip residue · Pandora / HoverChop `official:true` · Flickr Yahoo-owned copy · dest-true 2005 official 10 period writes · year home leftover warehouse unique dests (prefer `index.html`) · **2007 DONE** (un-board · dest-true official 10 · first-board 27 · dest freeze 82) · **2008 DONE** (un-board · dest-true official 10 · dest freeze 199).
 

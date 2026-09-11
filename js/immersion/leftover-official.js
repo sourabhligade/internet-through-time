@@ -269,6 +269,8 @@
       el = els[i];
       if (!el || inAlsoYear(el)) continue;
       if (el.getAttribute && el.getAttribute("data-official-verb-host") === "1") continue;
+      if (inDestTrueHost(el)) continue;
+      if (destKey && !inLeftoverPanel(el)) continue;
       if (el.querySelector && el.querySelector("h1")) continue;
       if (/(^|\s)itt-w2-official(\s|$)/.test(String(el.className || ""))) {
         out.push(el);
@@ -291,6 +293,25 @@
       }
     }
     return out;
+  }
+
+  function inDestTrueHost(el) {
+    var n = el;
+    while (n && n.nodeType === 1) {
+      if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") return true;
+      n = n.parentNode;
+    }
+    return false;
+  }
+
+  function inLeftoverPanel(el) {
+    var n = el;
+    while (n && n.nodeType === 1) {
+      if (n.getAttribute && n.getAttribute("data-lo-panel") === "1") return true;
+      if (n.getAttribute && n.getAttribute("data-4x-panel") != null) return true;
+      n = n.parentNode;
+    }
+    return false;
   }
 
   function inAlsoYear(el) {
@@ -356,6 +377,8 @@
       el = els[i];
       if (!el || inAlsoYear(el) || (box && box.contains(el))) continue;
       if (el.hasAttribute && el.hasAttribute("hidden")) continue;
+      if (inDestTrueHost(el) || inLeftoverPanel(el)) continue;
+      if (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) continue;
       if (el.querySelector && el.querySelector("h1")) continue;
       t = String(el.textContent || "");
       if (t.length > 4000) continue;

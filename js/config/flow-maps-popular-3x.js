@@ -32,9 +32,9 @@
     "2017": ["snapipo|Snap IPO","bitcoinath|Bitcoin","echoshow|Echo Show","reddit|Reddit","youtube|YouTube","hqtrivia|HQ Trivia","notpetya|NotPetya","yahoo3b|Yahoo","discord17|Discord"],
     "2018": ["reddit|Reddit", "youtube|YouTube", "wikipedia|Wikipedia"],
     "2019": ["youtube|YouTube","instagram|Instagram","wikipedia|Wikipedia","wework|WeWork","fortnitewc|Fortnite World Cup","hidelikes|Hide likes","tiktok|TikTok","stadia|Stadia","arcade|Arcade"],
-    "2020": ["youtube|YouTube", "wikipedia|Wikipedia", "facebook|Facebook"],
-    "2021": ["youtube|YouTube","wikipedia|Wikipedia","facebook|Facebook","clubhouse|Clubhouse","nft|NFT","squid|Squid","opensea|OpenSea","coinbase|Coinbase","robinhood|Robinhood","gamestop|GameStop","parler|Parler","gettr|GETTR","rumble|Rumble","telegram|Telegram","whatsapp|WhatsApp","instagram|Instagram","tiktok|TikTok","twitch|Twitch"],
-    "2022": ["youtube|YouTube","wikipedia|Wikipedia","twitter|Twitter","truthsocial|Truth Social","characterai|Character","midjourney|Midjourney","lensa|Lensa","runway|Runway","jasper|Jasper","notion|Notion","figma|Figma","linktree|Linktree","substack|Substack","hive|Hive","postnews|Post","reddit|Reddit","discord|Discord","tiktok|TikTok"]};
+    "2020": ["youtube|YouTube", "wikipedia|Wikipedia", "airbnb|Airbnb leftover"],
+    "2021": ["youtube|YouTube","wikipedia|Wikipedia","airbnb|Airbnb leftover","clubhouse|Clubhouse","nft|NFT","squid|Squid","opensea|OpenSea","coinbase|Coinbase","robinhood|Robinhood","gamestop|GameStop","parler|Parler","gettr|GETTR","rumble|Rumble","telegram|Telegram","whatsapp|WhatsApp","instagram|Instagram","tiktok|TikTok","twitch|Twitch"],
+    "2022": ["youtube|YouTube","wikipedia|Wikipedia","slack|Slack leftover","truthsocial|Truth Social","characterai|Character","midjourney|Midjourney","lensa|Lensa","runway|Runway","jasper|Jasper","notion|Notion","figma|Figma","linktree|Linktree","substack|Substack","hive|Hive","postnews|Post","reddit|Reddit","discord|Discord","tiktok|TikTok"]};
 
   function sites(year) {
     var rows = POP[year] || [];

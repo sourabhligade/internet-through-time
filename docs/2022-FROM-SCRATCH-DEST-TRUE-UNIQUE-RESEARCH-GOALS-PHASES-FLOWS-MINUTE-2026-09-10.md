@@ -1,7 +1,7 @@
 # 2022 from-scratch dest-true unique research — 5k envelope · leftover 2× · density
 
 **Date:** 2026-09-10  
-**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **15**. Leftover **2×**. Unique vs 2021. Do not dest-farm.  
+**Status:** **CUT-OPEN shipped.** Dest freeze **98**. Leftover **2×**. Leftover-3× **18+18+18**. Unique vs 2021. Leftover dest dest faces. Do not dest-farm.  
 **Star (named):** ChatGPT Send · `sites/chatgpt/index.html` · `itt22-chatgpt`  
 **Shell:** Win10 + Chrome habit. ChatGPT is a **room**, not January OS.  
 **Parent:** 2021 ATT Ask `itt21-att` (**live lean**). **Child:** 2023 wiped.  

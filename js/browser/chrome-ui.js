@@ -58,12 +58,26 @@
       if (root) root.classList.add("open");
     }
 
+    function hoistToBody(el) {
+      if (el && el.parentNode !== document.body) {
+        document.body.appendChild(el);
+      }
+    }
+
     function openDialog(id) {
       closeMenus();
-      showBackdrop(backdrop());
+      var bd = backdrop();
+      hoistToBody(bd);
+      showBackdrop(bd);
       var el = document.getElementById(id);
       if (el) {
+        hoistToBody(el);
         el.classList.remove("hidden");
+        try {
+          el.style.display = "";
+          el.style.pointerEvents = "auto";
+          el.style.zIndex = "10050";
+        } catch (eZ) { /* */ }
         var focusable = el.querySelector(
           "input:not([type=checkbox]):not([type=number]), textarea, select, button"
         );
@@ -78,14 +92,26 @@
 
     function closeDialog(id) {
       var el = document.getElementById(id);
-      if (el) el.classList.add("hidden");
+      if (el) {
+        el.classList.add("hidden");
+        try {
+          el.style.display = "none";
+          el.style.pointerEvents = "none";
+        } catch (eH) { /* */ }
+      }
       if (!anyDialogOpen()) hideBackdrop(backdrop());
     }
 
     function closeAllDialogs() {
       var dialogs = document.querySelectorAll(".dialog");
       var i;
-      for (i = 0; i < dialogs.length; i++) dialogs[i].classList.add("hidden");
+      for (i = 0; i < dialogs.length; i++) {
+        dialogs[i].classList.add("hidden");
+        try {
+          dialogs[i].style.display = "none";
+          dialogs[i].style.pointerEvents = "none";
+        } catch (eA) { /* */ }
+      }
       hideBackdrop(backdrop());
     }
 
@@ -373,6 +399,10 @@
           break;
         case "file-close":
         case "file-exit":
+          if (anyDialogOpen()) {
+            closeAllDialogs();
+            break;
+          }
           window.location.href = "../../index.html";
           break;
         case "edit-cut":
@@ -625,8 +655,12 @@
 
     function wire() {
       document.addEventListener("click", function (e) {
-        var closeId = e.target.getAttribute && e.target.getAttribute("data-close");
+        var t = e.target;
+        if (t && t.nodeType !== 1) t = t.parentElement;
+        var closer = t && t.closest ? t.closest("[data-close]") : null;
+        var closeId = closer && closer.getAttribute ? closer.getAttribute("data-close") : "";
         if (closeId) {
+          e.preventDefault();
           closeDialog(closeId);
           return;
         }
@@ -731,6 +765,9 @@
           closeDialog("dlg-bookmarks");
           ctx.navigate(list.value);
         }
+      });
+      on("dlg-bm-close", "click", function () {
+        closeDialog("dlg-bookmarks");
       });
       on("dlg-bm-list", "dblclick", function () {
         var go = byId("dlg-bm-go");

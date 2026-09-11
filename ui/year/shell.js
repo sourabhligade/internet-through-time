@@ -262,7 +262,7 @@
       '<div class="dialog-body"><select id="dlg-bm-list" class="bm-list" size="12"></select>' +
       '<div class="dialog-btns"><button type="button" id="dlg-bm-go">Go To</button>' +
       '<button type="button" id="dlg-bm-remove">Remove</button>' +
-      '<button type="button" data-close="dlg-bookmarks">Close</button></div></div></div>' +
+      '<button type="button" id="dlg-bm-close" data-close="dlg-bookmarks">Close</button></div></div></div>' +
       '<div class="dialog dialog-wide hidden" id="dlg-prefs">' +
       '<div class="dialog-titlebar"><span>Preferences</span>' +
       '<button type="button" class="dialog-x" data-close="dlg-prefs">×</button></div>' +

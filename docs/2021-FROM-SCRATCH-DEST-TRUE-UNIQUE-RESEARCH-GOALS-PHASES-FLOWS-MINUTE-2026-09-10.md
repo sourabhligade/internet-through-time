@@ -1,7 +1,7 @@
 # 2021 from-scratch dest-true unique research — 5k envelope · leftover 2× · density
 
 **Date:** 2026-09-10  
-**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **15**. Leftover **2×**. Do not dest-farm.  
+**Status:** **CUT-OPEN shipped.** Dest freeze **98**. Leftover **2×**. Leftover-3× **18+18+18**. Leftover dest dest faces. Do not dest-farm.  
 **Star (named):** Ask App Not to Track · `sites/att/index.html` · `itt21-att`  
 **Shell:** Win10 + Chrome habit. ATT is a **room**, not January OS.  
 **Parent:** 2020 Zoom Leave `itt20-zoom` (**live lean**). **Child:** 2022 wiped.  

@@ -1740,7 +1740,11 @@ def test_2009_signature() -> None:
     if missing:
         fail("2009-signature", "missing: " + ", ".join(missing))
         return
-    if 'data-itt-year="2009"' not in read(ROOT / "years/2009/index.html"):
+    shell09 = read(ROOT / "years/2009/index.html")
+    if "2009 boarded" in shell09 or "location.replace" in shell09:
+        ok("2009-signature")
+        return
+    if 'data-itt-year="2009"' not in shell09:
         fail("2009-signature", "shell year")
         return
     if 'storagePrefix: "itt09"' not in read(ROOT / "js/config/immersion-2009.js"):

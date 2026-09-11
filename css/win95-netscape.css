@@ -721,7 +721,7 @@ html, body {
   position: fixed;
   inset: 0;
   background: transparent;
-  z-index: 200;
+  z-index: 10040;
   cursor: default;
 }
 
@@ -742,7 +742,8 @@ html, body {
   border-right: 2px solid var(--chrome-dark);
   border-bottom: 2px solid var(--chrome-dark);
   box-shadow: 3px 3px 0 #00000066;
-  z-index: 210;
+  z-index: 10050;
+  pointer-events: auto;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
 }

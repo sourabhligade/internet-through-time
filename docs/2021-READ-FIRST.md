@@ -1,11 +1,12 @@
 # 2021 — READ FIRST (from-scratch research)
 
 **Date:** 2026-09-10  
-**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **15**. Leftover **2×** on every dest. Star `itt21-att`. Do not dest-farm.  
+**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **98**. Leftover **2×** on every dest. Leftover-3× **18+18+18**. Star `itt21-att`. Do not dest-farm.  
 **Criteria:** [`2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
 **5k walk:** [`2021-5K-WEB-FLOW-MAP-2026-09-10.md`](2021-5K-WEB-FLOW-MAP-2026-09-10.md)  
 **Every flow dest minutes:** [`2021-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
 **Check every flow:** [`2021-CHECK-EVERY-FLOW-MAP-2026-09-10.md`](2021-CHECK-EVERY-FLOW-MAP-2026-09-10.md)  
+**Walk checklist (links):** [`2021-2022-EVERY-FLOW-CHECKLIST-2026-09-11.md`](2021-2022-EVERY-FLOW-CHECKLIST-2026-09-11.md)  
 **Stale dest minutes (ATT already named):** [`2010-2023-AI-ERA-EVERY-FLOW-MINUTE.md`](2010-2023-AI-ERA-EVERY-FLOW-MINUTE.md) §2021  
 **Parent (live):** 2020 Zoom Leave `itt20-zoom`. **Child:** 2022 wiped.  
 **Git only if asked.**
@@ -26,11 +27,11 @@
 | Trap | Allow · ChatGPT dest · Wordle-as-2021-mass · Zoom Leave as this dest |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ★ ATT · Signal leftover · Copilot waitlist · Meta rename leftover · Win11 leftover · Flash brick · Chrome habit · Win10 residual · Facebook leftover · Five Letter |
-| Dest freeze | **98** (match 2011 dest count · leftover dests · official 10 frozen) |
+| Dest freeze | **98** (match 2011 · leftover dests · official 10 frozen) |
 | Leftover 2× | two leftover writers on **every dest** · never the star |
 | Leftover-3× | first 3 + third 3 · gold dest never leftover-3× |
 | Leftover-4× | **0** |
-| HTML cap | **≤90** |
+| HTML cap | **184** (density lift · leftover dest dest faces + leftover extra leftover pages) |
 | 5k | walk envelope · ILS June table **ends 2018** · do not invent June 2021 websites |
 | Scale | ITU **4.9B / 63%** on About · not websites |
 | First door | **CUT-OPEN lean** · hub card · atlas tick · leftover 2× |

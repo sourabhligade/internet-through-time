@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from itt_gate import SHIP_YEARS  # noqa: E402
 
 KNOWN_YEARS = list(SHIP_YEARS)
-_WIPED = {"2021", "2022", "2023", "2024", "2025"}
+_WIPED = {"2009", "2023", "2024", "2025"}
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {

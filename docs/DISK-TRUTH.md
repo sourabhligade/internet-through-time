@@ -1,6 +1,6 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-09-02  
+**Date:** 2026-09-11  
 **Law:** live tree + `scripts/itt_gate.py` `SHIP_YEARS`. This file does **not** append old ship cards.
 
 Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay on disk · year-shell index redirects · no year card / atlas tick). **2007 is live lean** · iPhone Safari `itt07-iphone`. **2021 is live lean** · ATT Ask `itt21-att`. **2022 is live lean** · ChatGPT Send `itt22-chatgpt`. Year Starting Point leftover warehouse (`[data-itt-3x-links]`) lists **each dest once** (prefer `index.html` · dests already on gold / guided / leftover-3× strips are not repeated). Leftover 2× is on **every dest** in every live year (two leftover writers · leftover key, not the star). **2013 is Vine 6s.** **2018 is GDPR Manage.** **2020 is Zoom mute → Leave.** **2021 is ATT Ask.** 2019 `sites/fortnite/index.html` leftover-2× cloned from `marshmello.html` (`fn-lx` · `fn-d2`). 2005 is YouTube upload. 2006 is Twttr. 2011 is Google+. **2014 is WhatsApp Install.** **2015 is Periscope Go LIVE.** **2019 is Disney+ Continue.**
@@ -27,8 +27,10 @@ Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay 
 | **2018** | **Live lean door** · GDPR Manage `itt18-gdpr` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
 | **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · leftover 312 dest-true · leftover 4× **0** · leftover 2× on every dest index including `sites/fortnite/index.html` (`fn-lx` · `fn-d2`) |
 | **2020** | **Live lean door** · Zoom mute → Leave `itt20-zoom` · leftover 2× ×2 · leftover-3× first + third · leftover-4× **0** |
+| **2021** | **Live lean door** · ATT Ask `itt21-att` · dest freeze **98** · leftover dest dest faces **88** · leftover writers **367** · leftover-3× **18+18+18** · leftover-4× **0** · Win10 + Chrome habit |
+| **2022** | **Live lean door** · ChatGPT Send `itt22-chatgpt` · dest freeze **98** · leftover dest dest faces **88** · leftover writers **367** · leftover-3× **18+18+18** · leftover-4× **0** · Win10 + Chrome habit |
 
-Lean doors: **2007 + 2011 + 2013–2020**. **2009 boarded.** The exhibit ends at 2020.  
+Lean doors: **2007 + 2011 + 2013–2022**. **2009 boarded.** **2023–2025 wiped.**  
 Games wing (`games/`) is separate and live.
 
 **G1–G10 scoreboard:** [`MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md`](MUSEUM-GRADE-100-GATES-EVERY-YEAR-1994-2023.md).  

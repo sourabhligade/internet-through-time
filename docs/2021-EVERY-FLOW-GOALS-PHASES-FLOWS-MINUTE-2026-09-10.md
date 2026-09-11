@@ -1,7 +1,7 @@
 # 2021 — every flow · goals · phases · dest minutes (research)
 
 **Date:** 2026-09-10  
-**Status:** **CUT-OPEN shipped.** Dest freeze **15**. Leftover **2×** on every dest.  
+**Status:** **CUT-OPEN shipped.** Dest freeze **98**. Leftover **2×**. Leftover-3× **18+18+18**.  
 **Read first:** [`2021-READ-FIRST.md`](2021-READ-FIRST.md)  
 **Dest-true unique research:** [`2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
 **5k walk:** [`2021-5K-WEB-FLOW-MAP-2026-09-10.md`](2021-5K-WEB-FLOW-MAP-2026-09-10.md)  

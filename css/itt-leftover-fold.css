@@ -24,6 +24,13 @@
 details.itt-also-year {
   display: block;
 }
+
+/* Dest-true dest face stays on the dest. Leftover rails fold. */
+html[data-official-key] [data-official-verb-host],
+html[data-official-key] h1,
+html[data-official-key] .crumb {
+  display: block !important;
+}
 details.itt-also-year[open] [data-lo-panel],
 details.itt-also-year[open] [data-itt-2x-links],
 details.itt-also-year[open] [data-itt-3x-also],
