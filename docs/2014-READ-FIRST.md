@@ -9,11 +9,6 @@
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · bans · scale |
-| [`2014-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-23.md`](2014-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-23.md) | **Harvest** — visit log · 5k walk queue · gold chat |
-| [`2014-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2014-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | **Implementer map** — life → museum → proof · official 10 · file list |
-| [`2014-CHECK-EVERY-FLOW-MAP.md`](2014-CHECK-EVERY-FLOW-MAP.md) | **Visitor check walk** — trap · save · key · Next · every dest |
-| [`2014-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2014-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | **Execute bible** — S0–S16 · e2e |
-| [`2014-5K-WEB-FLOW-MAP.md`](2014-5K-WEB-FLOW-MAP.md) | Walkable 5k diagram · NEVER |
 | Parent year (boarded) | 2013 Vine 6s — **no `years/2013/` tree**. Clone shape is live `years/2012/`. |
 | Child live year | `years/2015/` · `itt15` · Periscope Go LIVE |
 

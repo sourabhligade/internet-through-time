@@ -1,23 +1,14 @@
 # 2011 — READ FIRST (live lean door)
 
-**Date:** 2026-08-30  
-**Status:** **live lean door** as of 2026-09-01. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× 120.  
-**Do not** `git checkout` an older forest.
+**Date:** 2026-09-12  
+**Status:** **live lean door**. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× every dest · leftover-2× unique 10 dest-true. Leftover-4× **0**.  
+**Dest source:** [`years/2011/dests.json`](../years/2011/dests.json)  
+**Do not** `git checkout` an older forest. Harvest notebooks were removed.
 
 | Doc | Role |
 |-----|------|
 | **This file** | Entry · thesis · do / do not |
-| [`2011-RESEARCH.md`](2011-RESEARCH.md) | Short locked dossier |
-| [`2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md`](2011-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md) | Long harvest · kits · Wayback · corpus |
-| [`2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2011-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Implement playbook · ROI · `[ ]` leftover |
-| [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) | One implementer bible |
-| [`2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) | Flows A–T short |
-| [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) | **Long dump:** goals · phases · flows · every visited URL extracted |
-| [`2011-2X-FLOWS-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md`](2011-2X-FLOWS-GOALS-PHASES-FLOWS-MINUTE-2026-09-09.md) | **2× flows map** · leftover 3× 27 → 54 |
-| [`2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md`](2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md) | **New unique 2011 websites** · not already leftover-3× dests |
-| [`2011-2X-FLOW-DIAGRAMS-2026-09-09.md`](2011-2X-FLOW-DIAGRAMS-2026-09-09.md) | Visitor flow diagrams |
-| [`references/2011/`](references/2011/) | Wikipedia 2011 list · extlinks · CDX · visit log |
-| Parent live year | `years/2010/` · `itt10` |
+| [`DISK-TRUTH.md`](DISK-TRUTH.md) | What is playable |
 
 **Disk truth:** `years/2011/` is **live**. Hub card **available**. Prior thicker 2011 forests are **not** the source of truth.
 
@@ -58,18 +49,13 @@
 
 ## Corpus (this pass)
 
-**10,320 unique URLs** stacked: 19 Wikipedia categories · 1,388 pages · 4,500 citation extlinks · 8,970 unique docs URLs · thin CDX (archive.org timeouts).  
-File: [`references/2011/corpus-2011-unique-urls.txt`](references/2011/corpus-2011-unique-urls.txt). **Not 10,320 rooms.**
+Harvest notebooks and the 10,320-URL corpus dump were removed. **Not 10,320 rooms.**
 
-## How to read this pack (same order as 2010)
+## How to read this pack
 
 1. This file (do / do not).  
-2. [`2011-RESEARCH.md`](2011-RESEARCH.md) — locked numbers.  
-3. [`2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2011-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) — one page.  
-4. [`2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2011-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) — flows A–T in prose.  
-5. [`2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2011-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) — **verify every opened site** (V1–V12).  
-6. Harvest if you need kits / Wayback.
+2. [`years/2011/dests.json`](../years/2011/dests.json) — dest source of truth.
 
-## Leftover unique websites (first board)
+## Leftover unique websites
 
-[`2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md`](2011-NEW-UNIQUE-WEBSITES-LEFTOVER-3X-2026-09-09.md) first board **27** is on disk. Leftover 3× doors stay **54** (extra-27 swapped, not 54→81). Do not dest-farm a second board unless lifted by name.
+Leftover-2× unique 10 is on disk (`wechat` → `batmanarkhamcity`). Leftover-3× first/second/third stay the existing home strips. Do not dest-farm leftover-3× unless lifted by name.

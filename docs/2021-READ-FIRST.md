@@ -2,12 +2,6 @@
 
 **Date:** 2026-09-10  
 **Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **98**. Leftover **2×** on every dest. Leftover-3× **18+18+18**. Star `itt21-att`. Do not dest-farm.  
-**Criteria:** [`2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-FROM-SCRATCH-DEST-TRUE-UNIQUE-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
-**5k walk:** [`2021-5K-WEB-FLOW-MAP-2026-09-10.md`](2021-5K-WEB-FLOW-MAP-2026-09-10.md)  
-**Every flow dest minutes:** [`2021-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md`](2021-EVERY-FLOW-GOALS-PHASES-FLOWS-MINUTE-2026-09-10.md)  
-**Check every flow:** [`2021-CHECK-EVERY-FLOW-MAP-2026-09-10.md`](2021-CHECK-EVERY-FLOW-MAP-2026-09-10.md)  
-**Walk checklist (links):** [`2021-2022-EVERY-FLOW-CHECKLIST-2026-09-11.md`](2021-2022-EVERY-FLOW-CHECKLIST-2026-09-11.md)  
-**Stale dest minutes (ATT already named):** [`2010-2023-AI-ERA-EVERY-FLOW-MINUTE.md`](2010-2023-AI-ERA-EVERY-FLOW-MINUTE.md) §2021  
 **Parent (live):** 2020 Zoom Leave `itt20-zoom`. **Child:** 2022 wiped.  
 **Git only if asked.**
 

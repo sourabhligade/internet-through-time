@@ -771,7 +771,6 @@ def test_2001_wikipedia_densify() -> None:
         "years/2001/sites/wikipedia/history.html",
         "years/2001/sites/wikipedia/article-wiki.html",
         "years/2001/sites/wikipedia/help.html",
-        "docs/references/2001/CAPTURE-LOG.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1066,7 +1065,6 @@ def test_2003_densify() -> None:
         "js/immersion/bloglines.js",
         "assets/period/2003/myspace/friend1.gif",
         "assets/period/2003/itunes/badge-99.gif",
-        "docs/2003-MUSEUM-GRADE.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1186,7 +1184,6 @@ def test_2004_signature() -> None:
         "js/immersion/facebook.js",
         "js/immersion/flickr.js",
         "css/period-2004.css",
-        "docs/2004-MUSEUM-GRADE.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1314,8 +1311,6 @@ def test_2005_signature() -> None:
         "js/immersion/digg.js",
         "js/immersion/podcasts.js",
         "css/period-2005.css",
-        "docs/2005-MUSEUM-GRADE.md",
-        "docs/2005-RESEARCH.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1582,7 +1577,6 @@ def test_2007_signature() -> None:
         "js/config/immersion-2007.js",
         "js/immersion/iphone.js",
         "css/period-2007.css",
-        "docs/2007-RESEARCH.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1648,7 +1642,6 @@ def test_2008_signature() -> None:
         "js/immersion/android.js",
         "js/immersion/hulu.js",
         "css/period-2008.css",
-        "docs/2008-RESEARCH.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1734,7 +1727,6 @@ def test_2009_signature() -> None:
         "js/immersion/farmville.js",
         "js/immersion/bing.js",
         "css/period-2009.css",
-        "docs/2009-RESEARCH.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
@@ -1846,7 +1838,6 @@ def test_2010_signature() -> None:
         "js/config/immersion-2010.js",
         "js/immersion/instagram.js",
         "css/period-2010.css",
-        "docs/2010-RESEARCH.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:

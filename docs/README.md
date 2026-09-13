@@ -11,4 +11,4 @@ Hub is **27 years open** (1994–2008 + 2010–2019 + 2020–2021). **2009 board
 3. That year’s `YYYY-READ-FIRST.md` (if it exists) — thesis and bans only.
 4. [`SOURCES.md`](SOURCES.md) — bibliography.
 
-Everything else (implement notebooks, leftover catalogs, harvest logs, museum-grade scans) was removed.
+Everything else (implement notebooks, leftover catalogs, Board A/B harvest logs, museum-grade scans) is gone. Board C lock for 1999–2004 stays.

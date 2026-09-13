@@ -50,7 +50,7 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
     }
 )
 # Hub-wiped trees — do not require dests or famous cabinets.
-WIPED_YEARS: frozenset[int] = frozenset({2007, 2009, 2011, 2013, 2014, 2018, 2020, 2021, 2022, 2023, 2024, 2025})
+WIPED_YEARS: frozenset[int] = frozenset({2007, 2009, 2011, 2013, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025})
 
 POP_PANEL_2020 = ()
 

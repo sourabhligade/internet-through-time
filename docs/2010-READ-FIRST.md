@@ -1,18 +1,11 @@
 # 2010 — READ FIRST
 
 **Date:** 2026-08-17  
-**Status:** Lean year **on disk**. Leftover densify: [`2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md`](2010-2011-LEFTOVER-IMPLEMENT-PHASES-MINUTE.md).  
 **Git only if asked.**
 
 | Doc | Role |
 |-----|------|
 | **This file** | Entry · thesis · do / do not |
-| [`2010-RESEARCH.md`](2010-RESEARCH.md) | Short locked dossier |
-| [`2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md`](2010-DEEP-RESEARCH-WEB-HARVEST-2026-08-17.md) | Long harvest · kits · Wayback · corpus |
-| [`2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Implement playbook · ROI · `[ ]` |
-| [`2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md`](2010-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md) | One implementer bible |
-| [`2010-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2010-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) | Flows A–T short |
-| [`2010-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md`](2010-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-17.md) | **Long dump:** goals · phases · flows · every visited URL extracted |
 | [`references/2010/`](references/2010/) | Wikipedia 2010 list · extlinks · CDX · visit log |
 | Parent live year | `years/2009/` · `itt09` |
 
@@ -52,4 +45,3 @@
 
 ## Next when you say implement
 
-Open [`2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2010-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) Phase 0.

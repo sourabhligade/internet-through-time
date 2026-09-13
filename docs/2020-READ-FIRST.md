@@ -6,9 +6,6 @@
 | Companion | When |
 |-----------|------|
 | **This file** | Thesis · star · bans · dual-cite |
-| [`2020-BOARDED-CRITERIA-MAP-2026-09-06.md`](2020-BOARDED-CRITERIA-MAP-2026-09-06.md) | **Boarded C-rows + official 10** · CUT-OPEN not named |
-| [`2020-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md`](2020-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE-E2E-2026-08-28.md) | **Execute / minute** — every dest D.01–D.54 · incomplete · trap · complete · e2e |
-| [`2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md`](2020-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-28.md) | Harvest · visit log · 5k envelope · cites |
 
 | Lock | Value |
 |------|--------|

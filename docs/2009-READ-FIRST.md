@@ -1,9 +1,8 @@
-# 2009 — READ FIRST (live lean door)
+# 2009 — READ FIRST (boarded)
 
-**Date:** 2026-08-30  
-**Status:** **live lean door** as of 2026-09-01. `years/2009/` is on disk. Hub card **available**. Star `itt09-like`. Leftover 2× 120.  
-**Implementer map:** [`2009-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2009-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md)  
-**Older research (tree status stale):** [`2009-RESEARCH.md`](2009-RESEARCH.md) · [`2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2009-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md)  
+**Date:** 2026-09-13  
+**Status:** **boarded.** `years/2009/` stays on disk. Year-shell `index.html` redirects to the hub. No year card. No leftover implement pass. Star on disk remains Facebook Like `itt09-like`.  
+**Disk law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Prefix:** `itt09-*`  
 **Git only if asked.**
 

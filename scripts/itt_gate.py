@@ -13,8 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Hub-open years. Branch museum/1994-2020-lean.
-# 2021 ATT Ask + 2022 ChatGPT Send are live lean doors. 2009 boarded. 2023–2025 wiped.
-_WIPED = {"2009", "2023", "2024", "2025"}
+# Hub 27 years open (1994–2008 + 2010–2019 + 2020–2021). 2009 boarded. 2022–2025 wiped.
+_WIPED = {"2009", "2022", "2023", "2024", "2025"}
 SHIP_YEARS: list[str] = [
     str(y) for y in list(range(1994, 2026)) if str(y) not in _WIPED
 ]

@@ -2,8 +2,6 @@
 
 **Date:** 2026-09-05  
 **Status:** **LIVE lean door.** Hub card open. `years/2019/` on disk (55 dests · leftover 312). Do not `git checkout` an old 2019 forest.  
-**Research lock (this pass):** [`2019-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-05.md`](2019-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-05.md) · dest catalog [`2019-FROM-SCRATCH-DEST-CATALOG-FLOWS-LINKS-GAMES-2026-09-05.md`](2019-FROM-SCRATCH-DEST-CATALOG-FLOWS-LINKS-GAMES-2026-09-05.md).  
-**Improve criteria (2026-09-06, after deep-research-2):** [`2019-IMPROVE-CRITERIA-MAP-2026-09-06.md`](2019-IMPROVE-CRITERIA-MAP-2026-09-06.md) — Cite/refer **applied** · dest HTML this cut = coppa-lx plaque + TV+ 7-day / 100+ only.  
 **Disk truth:** Hub is **28 years open** · **2020 / 2023–2025 wiped**. 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt19`  
 **Clone shape from:** live `years/2017/` (Face ID lean door · **55 dests · 91 HTML · 312 leftover machines**). **Do not** clone wiped `years/2018/`. **Do not** restore `/tmp/itt-2019-forest-backup-20260815`, git `HEAD` `years/2019/`, or any 2019 Consent Dash clone.
@@ -11,18 +9,6 @@
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| [`2019-FROM-SCRATCH-RESEARCH-…-2026-09-05.md`](2019-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-09-05.md) | **Research lock** · 5k envelope · flows A–T · sources opened |
-| [`2019-FROM-SCRATCH-DEST-CATALOG-…-2026-09-05.md`](2019-FROM-SCRATCH-DEST-CATALOG-FLOWS-LINKS-GAMES-2026-09-05.md) | **55 dests** · leftover 2× · official 10 minutes |
-| [`2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2019-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Execute bible S0–S18 · Aug-20 HTML cap is **stale** |
-| [`2019-FROM-SCRATCH-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-05.md`](2019-FROM-SCRATCH-MAP-GOALS-PHASES-FLOWS-MINUTE-2026-09-05.md) | **Implementer map** · night diagram · dest map · leftover 312 |
-| [`2019-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2019-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Aug-20 map · 27-HTML cap is **stale** |
-| [`2019-RESEARCH.md`](2019-RESEARCH.md) | Locked dates · prices · 3× |
-| [`nostalgia-5k-every-flow/2019.md`](nostalgia-5k-every-flow/2019.md) | **Every flow** · gold · official 10 · leftover **312** dest minutes |
-| [`2019-2X-LEFTOVER-RESEARCH-2026-09-05.md`](2019-2X-LEFTOVER-RESEARCH-2026-09-05.md) | Pack A 40 + B 40 + C 40 = **120** |
-| [`2019-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-05.md`](2019-2X-LEFTOVER-GOALS-PHASES-FLOWS-MINUTE-2026-09-05.md) | Pack A dest minutes |
-| [`2019-2X-CRITERIA-MAP-2026-09-05.md`](2019-2X-CRITERIA-MAP-2026-09-05.md) | leftover C1–C20 |
-| [`2019-IMPROVE-CRITERIA-MAP-2026-09-06.md`](2019-IMPROVE-CRITERIA-MAP-2026-09-06.md) | **Improve C-rows + dest-minutes** · Cite/refer applied 2026-09-06 |
-| [`2019-CHECK-EVERY-FLOW-MAP.md`](2019-CHECK-EVERY-FLOW-MAP.md) | Trap / save / key for gold + official 10 |
 | Parent live year | `years/2017/` · Face ID · `itt17` |
 
 **Legal:** Educational. `localStorage` only. Never invent brand pixels. No Disney / Marvel / Star Wars / Grogu art. No Epic concert rip. No CMP vendor UI. No COVID case-count dashboard.

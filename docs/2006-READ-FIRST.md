@@ -3,8 +3,6 @@
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door scaffolded from `years/2005`. Do **not** `git checkout` the wiped tree.  
 **This file is the year lock.**  
-**Harvest:** [`2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-31.md`](2006-FROM-SCRATCH-RESEARCH-GOALS-PHASES-FLOWS-MINUTE-VISITED-2026-08-31.md)  
-**Checklist:** [`2006-IMPLEMENT-CHECKLIST-2026-08-31.md`](2006-IMPLEMENT-CHECKLIST-2026-08-31.md)  
 **Parent:** 2005 (Upload · Maps · independent YouTube). **Child:** 2007 (iPhone · Street View) — **bans here**.  
 **Git only if asked.**
 

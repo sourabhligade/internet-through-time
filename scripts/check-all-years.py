@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from itt_gate import SHIP_YEARS  # noqa: E402
 
 KNOWN_YEARS = list(SHIP_YEARS)
-_WIPED = {"2009", "2023", "2024", "2025"}
+_WIPED = {"2009", "2022", "2023", "2024", "2025"}
 
 # Per-year signature pages that must exist when the year tree is present
 SIGNATURE: dict[str, list[str]] = {
@@ -167,18 +167,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/meta/index.html",
         "sites/playable/game.html"
     ],
-    "2023": ["pages/home.html", "pages/about.html", "sites/plus/index.html", "sites/playable/game.html"],
-    "2024": ["pages/home.html", "pages/about.html", "sites/chatgpt/4o.html", "sites/playable/game.html"],
-    "2020": ["pages/home.html", "pages/about.html", "sites/zoom/meeting.html", "sites/playable/game.html"],
-    "2022": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/chatgpt/index.html",
-        "sites/twitter/index.html",
-        "sites/wordle/index.html",
-        "sites/stablediffusion/index.html",
-        "sites/playable/game.html"
-    ]
+    "2020": ["pages/home.html", "pages/about.html", "sites/zoom/meeting.html", "sites/playable/game.html"]
 }
 
 # Optional research markers (year can be "research-only" without tree)

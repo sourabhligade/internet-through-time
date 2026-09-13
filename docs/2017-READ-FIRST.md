@@ -8,10 +8,6 @@
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| [`2017-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2017-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | **Execute bible** — ROI · S0–S18 minute steps · selectors · payloads · e2e |
-| [`2017-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2017-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Visitor flows A–T · file list · short phases |
-| [`2017-RESEARCH.md`](2017-RESEARCH.md) | Locked dates · prices · dual-cite · calendar |
-| [`2017-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md`](2017-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md) | Sources opened this pass |
 | Parent live year | `years/2016/` · Stories · `itt16` |
 
 **Legal:** Educational reconstruction. `localStorage` theater only. Never invent brand pixels. No real Face ID camera, Epic/Nintendo/Apple art, payments, exploits, SSN fields, or partisan rooms.
@@ -66,7 +62,5 @@
 ## How to read
 
 1. This file.  
-2. [`2017-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2017-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) — phases S0–S18.  
-3. [`2017-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2017-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) — visitor flows.  
-4. [`2017-RESEARCH.md`](2017-RESEARCH.md) if you need a date or URL.  
 5. **Implement only after you say so.**
+

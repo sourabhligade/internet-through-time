@@ -9,7 +9,6 @@
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| [`2018-RESEARCH.md`](2018-RESEARCH.md) | Locked dates · dual-cite |
 | Parent live year | `years/2017/` · Face ID · `itt17` |
 
 **Legal:** Educational. `localStorage` only. Never invent brand pixels. No real CMP, no CA targeting UI, no Spectre exploit.

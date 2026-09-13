@@ -2,7 +2,6 @@
 
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Star is Periscope Go LIVE `itt15-periscope`. Hub card open. Do not `git checkout` the wiped forest.  
-**Walk the rebuild:** [`2015-FROM-SCRATCH-MAP-CRITERIA-BLOGS-FLOWS-LINKS-GAMES-2026-09-04.md`](2015-FROM-SCRATCH-MAP-CRITERIA-BLOGS-FLOWS-LINKS-GAMES-2026-09-04.md) — criteria Y1–Y18 · blogs · flows · links · games. Density twin **2011**.  
 **Disk truth:** Hub is **28 years open** · **2020 / 2023–2025 wiped**. 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt15`  
 **Clone shape from:** live `years/2014/` (lean door). **Do not** restore `/tmp` or git leftovers.
@@ -10,14 +9,6 @@
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| [`2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) | Door already shipped — goals · flows A–T · phases 0–12 |
-| [`2015-FLOW-MAP.md`](2015-FLOW-MAP.md) | **Visitor map** — one picture · trail · A–T · Back |
-| [`2015-MUSEUM-GRADE-GOALS-PHASES-MINUTE-STEPS.md`](2015-MUSEUM-GRADE-GOALS-PHASES-MINUTE-STEPS.md) | Leftover playbook — goals · ROI · M0–M11 minute steps |
-| [`2015-MUSEUM-GRADE.md`](2015-MUSEUM-GRADE.md) | Audit · steal table · sources opened |
-| [`2015-RESEARCH.md`](2015-RESEARCH.md) | Locked facts · calendar · bans |
-| [`2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md`](2015-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md) | Short flows twin |
-| [`2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md`](2015-FROM-SCRATCH-GOALS-PHASES-MINUTE-STEPS.md) | Short phase list |
-| [`2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md`](2015-DEEP-RESEARCH-WEB-HARVEST-2026-08-18.md) | Sources actually opened this pass |
 | Parent live year | `years/2014/` · WhatsApp · `itt14` |
 
 **Legal:** Educational reconstruction. `localStorage` theater only. Never invent brand pixels. No real livestream, Win10 installer, Apple Music billing, ACME certs, or Watch checkout.
@@ -69,6 +60,4 @@ This rebuild picks a **verb you can do in the frame**.
 ## How to read
 
 1. This file.  
-2. [`2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md`](2015-FROM-SCRATCH-MAP-GOALS-STEPS-FLOWS.md) — the full map.  
-3. [`2015-RESEARCH.md`](2015-RESEARCH.md) if you need a date or URL.  
 4. Implement only after you say so.

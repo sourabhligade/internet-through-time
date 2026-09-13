@@ -2,8 +2,6 @@
 
 **Date:** 2026-08-19  
 **Status:** **lean door on disk** (~89 HTML). Official dests + densify check live. **Do not** `git checkout` an old 115-room / dest-field forest.  
-**Implement bible:** [`2012-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE.md`](2012-FROM-SCRATCH-GOALS-PHASES-FLOWS-MINUTE.md).  
-**Harvest:** [`2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-19.md`](2012-DEEP-RESEARCH-WEB-HARVEST-2026-08-19.md).  
 **Git only if asked.**
 
 ## One line
