@@ -7,6 +7,42 @@
   ITT.configs = ITT.configs || {};
 
   var rooms = [
+    "sites/prism13/index.html",
+    "sites/vicenews/index.html",
+    "sites/deliveroo/index.html",
+    "sites/pluto/index.html",
+    "sites/unsplash/index.html",
+    "sites/emojipedia/index.html",
+    "sites/waitbutwhy/index.html",
+    "sites/bustle/index.html",
+    "sites/producthunt13/index.html",
+    "sites/canva13/index.html",
+    "sites/hummingbird/index.html",
+    "sites/internetorg/index.html",
+    "sites/facebookhome/index.html",
+    "sites/instagramvideo/index.html",
+    "sites/hangouts13/index.html",
+    "sites/googlekeep/index.html",
+    "sites/kitkat/index.html",
+    "sites/ios7/index.html",
+    "sites/healthcare/index.html",
+    "sites/react/index.html",
+    "sites/dogecoin/index.html",
+    "sites/lastus/index.html",
+    "sites/gta5/index.html",
+    "sites/ps413/index.html",
+    "sites/xboxone13/index.html",
+    "sites/iphone5s/index.html",
+    "sites/chromecast/index.html",
+    "sites/graphsearch/index.html",
+    "sites/itunesradio/index.html",
+    "sites/mega/index.html",
+    "sites/itch/index.html",
+    "sites/doordash/index.html",
+    "sites/giphy/index.html",
+    "sites/kahoot/index.html",
+    "sites/patreon/index.html",
+    "sites/yikyak/index.html",
     "index.html",
     "pages/home.html",
     "pages/about.html",
@@ -31,7 +67,9 @@
     "sites/facebook/index.html",
     "sites/twitter/index.html",
     "sites/medium/index.html",
-    "sites/chrome/index.html"
+    "sites/chrome/index.html",
+    "sites/bitcoin/index.html",
+
   ];
 
   var urlMap = {
