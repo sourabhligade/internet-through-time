@@ -143,7 +143,7 @@ Do not skip ahead to dest-farm.
 
 | Year | I1 star | I3 verb | I4 empty | I5 trap | I7 fold | L2 frame | I13 o10 | I14 e2e | Notes |
 |------|:-------:|:-------:|:--------:|:-------:|:-------:|:--------:|:-------:|:-------:|-------|
-| 2016 | Y | Y | Y | Y | Y* | Y | Y | Y | *stripped dest-true on Win10 end |
+| 2016 | — | — | — | — | — | — | — | — | **reverted to origin 2016** (no I/O chrome pass) |
 | 2017 | Y | Y | Y | Y | Y* | Y | Y | Y | dest-farm still on disk; *Vine gone dest-true stripped |
 | 2018 | Y | Y | Y | Y | Y | — | Y | Y | official 10 framed; GDPR now has official-key |
 | 2019 | Y | Y | Y | Y | Y | — | Y | Y | Continue on chip / trail / start-extra |
