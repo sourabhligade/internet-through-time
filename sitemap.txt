@@ -223,8 +223,6 @@
 /years/2012/sites/nexus/index.html
 /years/2012/sites/yahoo-marissa/index.html
 /years/2012/sites/windows-phone/index.html
-/years/2016/sites/allo/index.html
-/years/2016/sites/note7/index.html
 /years/2007/
 /years/2007/pages/home.html
 /years/2007/pages/about.html
