@@ -10,6 +10,7 @@ const OFFICIAL = [
   { path: "/years/2017/sites/wannacry/index.html", key: "itt17-wannacry", empty: async (p) => p.locator("[data-wc-payload]").click(), fill: async (p) => p.locator("[data-wc-patch]").click() },
   { path: "/years/2017/sites/musically/index.html", key: "itt17-musically", empty: async (p) => p.locator("[data-ml-post]").click(), fill: async (p) => { await p.fill("[data-ml-caption]", "not tiktok"); await p.locator("[data-ml-post]").click(); } },
   { path: "/years/2017/sites/equifax/index.html", key: "itt17-equifax", empty: async (p) => p.locator("[data-eq-freeze]").click(), fill: async (p) => { await p.locator("[data-eq-req]").nth(0).check(); await p.locator("[data-eq-req]").nth(1).check(); await p.locator("[data-eq-freeze]").click(); } },
+  { path: "/years/2017/sites/playable/game.html", key: "itt17-game-stormcircle", empty: async (p) => p.locator("[data-game-start]").click(), fill: null },
 ];
 
 const LEFTOVER = [
@@ -184,6 +185,10 @@ test.describe("2017 unique leftover dests", () => {
       expect(await page.locator("[data-lo-panel]").count(), row.path).toBe(0);
       await row.empty(page);
       expect(await getKey(page, row.key), row.key + " empty").toBeFalsy();
+      if (!row.fill) {
+        expect(await getKey(page, "itt17-faceid"), row.key + " gold").toBeFalsy();
+        return;
+      }
       await row.fill(page);
       await expect.poll(() => getKey(page, row.key), { timeout: 8000 }).toBeTruthy();
       if (row.key !== "itt17-faceid") {

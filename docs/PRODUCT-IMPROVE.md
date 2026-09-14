@@ -79,9 +79,9 @@ Do these in order. Do not dest-farm to “look complete.” Do not add 2022+ to 
 
 A 9,588-page museum that is not on a URL is a private corpus.
 
-- [ ] One reviewed commit slice to a public origin (Netlify / Vercel, or unlock Pages).
-- [ ] Hub 27 cards. No 2022. `ui/year/ui.js` in the commit.
-- [ ] Unlock GitHub Actions billing or stop claiming CI.
+- [x] `museum/1994-2020-lean` pushed (`20b20c076`+). Hub 27 cards. No 2022 year tree.
+- [ ] Unlock GitHub Actions billing or stop claiming CI (not verified this pass).
+- [ ] Enable GitHub Pages / Netlify / Vercel public URL (repo is on origin; Pages not verified).
 
 ### Slice 1 — Visitor product is 27 doors + 5 walks
 

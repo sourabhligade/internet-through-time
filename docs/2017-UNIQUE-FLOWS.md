@@ -1,7 +1,7 @@
 # 2017 unique flows
 
 **Date:** 2026-09-14  
-**Status:** Plan. Not ship law. Implement only after you say so.  
+**Status:** Unique dests shipped. Scorecard §6 filled 2026-09-14. Not dest-farm lock.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2017-READ-FIRST.md`](2017-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O law:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md).  
 **This file supersedes** leftover-2× as “two writers on the same dest.” That model is **out**.
@@ -151,15 +151,15 @@ Keep 30 unique flow dests + About/home/map. Delete the rest **in the same commit
 
 | Gate | Official 10 | Leftover 20 |
 |------|:-----------:|:-----------:|
-| Dest exists | | |
-| Unique href (not in the other 29) | | |
-| Unique key | | |
-| Unique verb | | |
-| Empty never writes | | |
-| Complete writes **this** key only | | |
-| Never writes Face ID / other official keys | | |
-| No leftover panels on official dest | n/a | — |
-| First paint leftover folded | | |
+| Dest exists | Y | Y |
+| Unique href (not in the other 29) | Y | Y |
+| Unique key | Y | Y |
+| Unique verb | Y dest-unique engines | Y dest-unique pick/field · shared `uf17` host |
+| Empty never writes | Y (Storm Circle = New Game only) | Y |
+| Complete writes **this** key only | Y except Storm Circle complete is canvas gym | Y leftover key only |
+| Never writes Face ID / other official keys | Y | Y |
+| No leftover panels on official dest | Y | — |
+| First paint leftover folded | Y on official dests | dest-true leftover dest is the dest face |
 
 Year: U1–U14 all Y.
 
