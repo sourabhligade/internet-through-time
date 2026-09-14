@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "museum-map"
 LOCK_4X = {"2012", "2013", "2016", "2017", "2018", "2019", "2020"}
 NO_SECOND = {"2013", "2018"}
-BOARDED = ["2023", "2024", "2025"]
+BOARDED = ["2009"]
+WIPED = ["2022", "2023", "2024", "2025"]
 
 
 def dump_disk() -> dict:
@@ -166,6 +167,10 @@ def render(data: dict) -> str:
         ticks.append(
             f'<div class="tick board"><div class="y">{escape(y)}</div><div class="g">boarded</div></div>'
         )
+    for y in WIPED:
+        ticks.append(
+            f'<div class="tick board"><div class="y">{escape(y)}</div><div class="g">wiped</div></div>'
+        )
 
     y20 = next(r for r in years if r["year"] == "2020")
     boxes = []
@@ -191,7 +196,7 @@ def render(data: dict) -> str:
 <div class="wrap">
 <header>
   <h1>Internet Through Time — disk map</h1>
-  <p class="lede">29 years open · 2023–2025 boarded · leftover-2× ×2 on every dest · incomplete never writes.</p>
+  <p class="lede">27 years open · 2009 boarded · 2022+ wiped · leftover-2× ×2 on every dest · incomplete never writes.</p>
   <p class="banner">Author only. Not linked from the hub. Names come from <code>js/atlas-data.js</code>, <code>js/config/flow-trails.js</code>, and <code>scripts/popular-3x-sites.json</code>.</p>
 </header>
 
@@ -261,7 +266,7 @@ def render(data: dict) -> str:
   <span class="pill lock">2013 leftover-3× second — no dest-farm</span>
   <span class="pill lock">2018 leftover-3× second — official 10 + first 3 = 13 dests</span>
   <span class="pill lock">leftover-4× on lock years</span>
-  <span class="pill lock">CUT-OPEN 2023–2025 unnamed</span>
+  <span class="pill lock">CUT-OPEN 2022+ wiped · 2009 boarded</span>
   <span class="pill lock">do not restore 2013 / 2018 forests</span>
 </div>
 

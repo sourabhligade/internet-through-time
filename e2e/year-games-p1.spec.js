@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * P1 play gates (docs/GAMES-INTEGRATION-TODO-VERIFY-1994-2009.md §8).
+ * P1 year-game play gates. 2009 boarded.
  */
 const { test, expect } = require('@playwright/test');
 

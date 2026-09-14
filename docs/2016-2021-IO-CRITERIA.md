@@ -38,7 +38,7 @@ A year **passes I/O** only if **all** of these are true. One miss is a fail.
 | I11 | **About honesty** | Dual-cite scale + hard bans on `pages/about.html` | Invented ILS June cell (table **ends 2018**) |
 | I12 | **Neighbor years stay empty** | `itt15` / `itt22` (and ±1) never written from this year | Face ID writes in 2016, ChatGPT dest in 2021, Reels as 2018 gold |
 | I13 | **Official 10 exist** | `flow-trails.js` dest paths are on disk and match | Trail href 404 or leftover plaque standing in |
-| I14 | **e2e covers the verb** | mvp + one real write/no-write spec for the star | mvp copy-only (2021 is currently this) |
+| I14 | **e2e covers the verb** | mvp + one real write/no-write spec for the star | mvp copy-only |
 
 ---
 
@@ -121,7 +121,7 @@ Do not skip ahead to dest-farm.
 | **D** | Capture-cite or failed-final on all 6 stars | I8 / L1 |
 | **E** | Phone frame + Chrome habit on Stories / Face ID / ATT / Zoom | L2 / L3 |
 | **F** | Official 10 dests match `flow-trails.js` and have dest-true verbs | I13 |
-| **G** | e2e: mvp + write/no-write for each star (2021 needs flows) | I14 |
+| **G** | e2e: mvp + write/no-write for each star | I14 |
 | **H** | Optional dest-farm **lock** (2019, 2021, 2017): dests = `urlMap` ∩ disk, delete the rest **in the same pass** as matrices / READ-FIRST | Door reads lean |
 
 ---

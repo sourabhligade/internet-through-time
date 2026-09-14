@@ -1,11 +1,12 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 
 const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2022", "2023", "2024", "2025"]);
 const SHIP = [];
 for (let y = 1994; y <= 2023; y++) {
   const year = String(y);
@@ -27,6 +28,7 @@ async function leftoverSave(page, year, slug, key) {
   await page.goto(`/years/${year}/sites/${slug}/index.html`);
   await page.evaluate((k) => localStorage.removeItem(k), key);
   await page.reload();
+  await revealLeftoverRails(page);
   const go = page.locator(`[data-pop-go][data-pop-key='pop3-${slug}']`).first();
   const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
   await go.click();
