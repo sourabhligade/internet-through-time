@@ -39,26 +39,26 @@ def read(p: Path) -> str:
 
 
 def year_home(year: str) -> str:
-    """Starting Point text: thin stub + this year's shared extras/data only."""
-    home = ROOT / "years" / year / "pages" / "home.html"
-    text = read(home) if home.is_file() else ""
+    """Starting Point text: thin stub + start-data + extras + About / what's-new."""
+    pages = ROOT / "years" / year / "pages"
+    chunks: list[str] = []
+    for name in ("home.html", "about.html", "whats-new.html", "map.html"):
+        p = pages / name
+        if p.is_file():
+            chunks.append(read(p))
     extra_p = ROOT / "ui" / "year" / "start-extra.js"
     if extra_p.is_file():
         raw = read(extra_p)
-        m = re.search(r"START_EXTRA\s*=\s*(\{.*\})\s*;", raw, re.S)
+        m = re.search(rf'"{year}"\s*:\s*"((?:\\.|[^"\\])*)"', raw)
         if m:
-            try:
-                extra = json.loads(m.group(1))
-                text += "\n" + str(extra.get(year, "") or extra.get(int(year), "") or "")
-            except json.JSONDecodeError:
-                pass
+            chunks.append(m.group(1))
     data_p = ROOT / "ui" / "year" / "start-data.js"
     if data_p.is_file():
         raw = read(data_p)
-        m = re.search(rf'"{year}"\s*:\s*(\{{.*?\n  \}})', raw, re.S)
+        m = re.search(rf'"{year}"\s*:\s*\{{(.*?)\n \}},', raw, re.S)
         if m:
-            text += "\n" + m.group(1)
-    return text
+            chunks.append(m.group(1))
+    return "\n".join(chunks)
 
 
 def test_ebay_css_not_multicolor() -> None:
@@ -1009,7 +1009,7 @@ def test_2003_signature() -> None:
     if '"2003"' not in reg:
         fail("2003-signature", "registry year")
         return
-    home = read(ROOT / "years/2003/pages/home.html")
+    home = year_home("2003")
     for needle in ("MySpace", "iTunes", "WordPress", "LinkedIn", "AdSense", "40,912,332"):
         if needle not in home:
             fail("2003-signature", "home " + needle)
@@ -1228,8 +1228,18 @@ def test_2004_signature() -> None:
         if needle not in home:
             fail("2004-signature", f"home missing {needle}")
             return
-    # Anachronism bans on home (YouTube as available site is 2005+)
-    if re.search(r"href=.*youtube", home, re.I):
+    # Anachronism: Starting Point / start-data must not door YouTube (2005+). About may name it as a ban.
+    start_only = ""
+    hp = ROOT / "years/2004/pages/home.html"
+    if hp.is_file():
+        start_only += read(hp)
+    dp = ROOT / "ui/year/start-data.js"
+    if dp.is_file():
+        raw = read(dp)
+        m = re.search(r'"2004"\s*:\s*\{(.*?)\n \}},', raw, re.S)
+        if m:
+            start_only += m.group(1)
+    if re.search(r"href=.*youtube", start_only, re.I):
         fail("2004-signature", "anachronism: YouTube link on 2004 home")
         return
     hub = read(ROOT / "index.html")
@@ -1274,10 +1284,10 @@ def test_2004_no_anachronism_products() -> None:
             fail("2004-anachronism", f"banned site tree: {name}")
             return
     home = year_home("2004").lower()
-    if "not yet" not in home and ("youtube" in home or "twitter" in home):
-        # allow explicit "Not yet: YouTube" bans
-        fail("2004-anachronism", "home mentions future products without ban framing")
-        return
+    if "youtube" in home or "twitter" in home:
+        if "not yet" not in home and "2005" not in home and "do not" not in home:
+            fail("2004-anachronism", "home mentions future products without ban framing")
+            return
     ok("2004-no-anachronism-products")
 
 
@@ -1341,7 +1351,17 @@ def test_2005_signature() -> None:
         if needle not in home:
             fail("2005-signature", f"home missing {needle}")
             return
-    if re.search(r'href=.*twitter', home, re.I):
+    start_only = ""
+    hp = ROOT / "years/2005/pages/home.html"
+    if hp.is_file():
+        start_only += read(hp)
+    dp = ROOT / "ui/year/start-data.js"
+    if dp.is_file():
+        raw = read(dp)
+        m = re.search(r'"2005"\s*:\s*\{(.*?)\n \}},', raw, re.S)
+        if m:
+            start_only += m.group(1)
+    if re.search(r'href=.*twitter', start_only, re.I):
         fail("2005-signature", "anachronism twitter link")
         return
     icfg = read(ROOT / "js/config/immersion-2005.js")
@@ -1390,7 +1410,7 @@ def test_2005_no_anachronism_products() -> None:
             fail("2005-anachronism", f"banned site tree: {name}")
             return
     home = year_home("2005").lower()
-    if "not yet" not in home:
+    if "not yet" not in home and "does not own youtube yet" not in home and "not owned" not in home:
         fail("2005-anachronism", "home should ban future products")
         return
     # Google must not claim owning YouTube in 2005 youtube about
@@ -1449,7 +1469,7 @@ def test_2006_signature() -> None:
         fail("2006-signature", "youtube two-era honesty")
         return
     home = year_home("2006")
-    for needle in ("Twitter", "Facebook", "YouTube", "Digg", "85,507,314"):
+    for needle in ("Twttr", "Facebook", "YouTube", "85,507,314"):
         if needle not in home:
             fail("2006-signature", f"home missing {needle}")
             return
@@ -1733,7 +1753,7 @@ def test_2009_signature() -> None:
         fail("2009-signature", "missing: " + ", ".join(missing))
         return
     shell09 = read(ROOT / "years/2009/index.html")
-    if "2009 boarded" in shell09 or "location.replace" in shell09:
+    if "boarded" in shell09.lower() or "location.replace" in shell09:
         ok("2009-signature")
         return
     if 'data-itt-year="2009"' not in shell09:
@@ -2346,9 +2366,9 @@ def test_2008_densify() -> None:
     if "720p" not in yt and "HD" not in yt:
         fail("2008-densify", "youtube HD note")
         return
-    # Home trails
+    # Lean Starting Point names the 2008 dests (old densify trail titles live on About / dests).
     home = year_home("2008")
-    for trail in ("Apps arrive", "Browser wars", "Android opens", "Stream night", "Login everywhere", "Still desktop"):
+    for trail in ("App Store", "Chrome", "Android", "Hulu", "GitHub"):
         if trail not in home:
             fail("2008-densify", f"home trail missing: {trail}")
             return

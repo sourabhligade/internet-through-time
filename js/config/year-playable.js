@@ -152,15 +152,15 @@
       accent: "#c00"
     },
     "2006": {
-      id: "heli",
-      title: "HoverChop",
+      id: "sled",
+      title: "TrailSled",
       href: "game.html",
-      key: "itt06-game-heli",
-      inspire: "Helicopter-game leftover on the Twttr year",
-      blurb: "Hold to climb. Release to fall. Incomplete never writes.",
+      key: "itt06-game-sled",
+      inspire: "Line Rider–class draw-track leftover on the Twttr year",
+      blurb: "Draw a trail. Ride it. Incomplete never writes.",
       why: "2006 leftover cabinet. Star stays Twttr update.",
       era: "XP + IE6. News Feed. Google owns YouTube.",
-      famous: "HoverChop",
+      famous: "TrailSled",
       accent: "#00aced"
     },
         "2008": {
@@ -308,17 +308,42 @@
       famous: "Safari Queue",
       accent: "#0a246a"
     },
-    "2020": {
-      id: "among",
-      title: "Sus Vote",
+    "2019": {
+      id: "continuerow",
+      title: "Continue Row",
       href: "game.html",
-      key: "itt20-game-among",
-      inspire: "year game",
-      blurb: "Leftover game. Star stays.",
-      why: "The star stays.",
-      era: "Trap is highlighted.",
-      famous: "Sus Vote",
+      key: "itt19-game-continuerow",
+      inspire: "Disney+ Continue-class row — trial is the trap",
+      blurb: "Add a title. Continue. Trial never writes.",
+      why: "2019 leftover cabinet. The star is still Disney+ Continue.",
+      era: "Profiles are the door. A weeklong trial is the trap.",
+      famous: "Continue Row",
+      accent: "#e50914"
+    },
+
+    "2021": {
+      id: "five",
+      title: "Five Letter leftover",
+      href: "game.html",
+      key: "itt21-game-five",
+      inspire: "Wordle-class leftover — Wordle-as-2021-mass never writes gold",
+      blurb: "Start leftover. Wordle-as-2021-mass is the trap.",
+      why: "2021 leftover cabinet. The star is still ATT Ask.",
+      era: "The phone asks first. ChatGPT dest never.",
+      famous: "Five Letter leftover",
       accent: "#1565c0"
     },
+    "2022": {
+      id: "prompt",
+      title: "Prompt Queue",
+      href: "game.html",
+      key: "itt22-game-prompt",
+      inspire: "ChatGPT first week — type, send, wait",
+      blurb: "Year game. Star stays ChatGPT Send.",
+      why: "The star is Send. GPT-4 is the trap.",
+      era: "Win10 + Chrome habit. X / Threads are next years.",
+      famous: "Prompt Queue",
+      accent: "#1565c0"
+    }
     };
 })(typeof window !== "undefined" ? window : this);

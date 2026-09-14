@@ -32,10 +32,11 @@ test.describe('2000 MVP — smile · Napster · Pets · crash', () => {
 
   test('home thesis + P0 links', async ({ page }) => {
     await page.goto('/years/2000/pages/home.html');
-    await expect(page.locator('body')).toContainText(/17[,.]?087[,.]?182|17\.1/);
     for (const slug of ['amazon', 'napster', 'pets']) {
       await expect(page.locator(`a[href*="${slug}"]`).first()).toBeVisible();
     }
+    await page.goto('/years/2000/pages/about.html');
+    await expect(page.locator('body')).toContainText(/17[,.]?087[,.]?182|17\.1/);
   });
 
   test('Amazon smile logo present', async ({ page }) => {

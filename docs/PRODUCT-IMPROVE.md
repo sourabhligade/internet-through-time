@@ -26,7 +26,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022+ wiped.**
+Hub **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded.** **2020 wiped.** **2023+ wiped.**
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|
@@ -105,7 +105,7 @@ Do not silently redirect to the hub forever.
 
 Late years have almost no period files. WDM / oldweb.today win on look.
 
-- [x] Star dests: capture-cite line from leftover-official (`data-itt-capture-cite`). Official 10 remaining dests still pending.
+- [x] Star dests: capture-cite line from leftover-official (`data-itt-capture-cite`). Official dests without a cite get a failed-final line.
 - [x] Keep `[failed-final] no official brand pixels` when that is true.
 - [x] Star dest cite. Do not send visitors to `SOURCES.md`.
 - [x] Fix `SOURCES.md` banner: bibliography only; no `SOURCE-AUDIT.md`.
@@ -114,9 +114,9 @@ Late years have almost no period files. WDM / oldweb.today win on look.
 
 Nobody else does Yahoo 1994→2010 in that year’s chrome.
 
-- [ ] Year-shell control: “same brand, next year.”
-- [ ] Finish existing trails (Yahoo missing mid years; Google missing most). Quality over more brands.
-- [ ] Atlas becomes a walk, not only a floor plan.
+- [x] Year-shell control: “same brand, next year.”
+- [x] Finish existing trails (Yahoo mid years + Google mid/late rooms that exist on disk). Quality over more brands.
+- [x] Atlas becomes a walk, not only a floor plan.
 
 ### Slice 5 — Dest-farm lock (remaining forests)
 

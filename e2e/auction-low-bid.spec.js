@@ -11,14 +11,27 @@ async function twoStepClick(page, selector) {
 
 const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
 
+function watchNativeDialog(page) {
+  const native = [];
+  page.on('dialog', async (dialog) => {
+    native.push(dialog.message());
+    await dialog.accept();
+  });
+  return native;
+}
+
+async function expectPeriodLowBidAlert(page, native) {
+  const dlg = page.locator('#dlg-alert:not(.hidden)');
+  await expect(dlg, 'period shell dialog, not Chrome alert()').toBeVisible({ timeout: 10000 });
+  await expect(page.locator('#dlg-alert-msg')).toContainText(/higher|must be/i);
+  expect(native, 'native window.alert must not fire').toHaveLength(0);
+  await page.locator('#dlg-alert-ok').click();
+  await expect(dlg).toBeHidden();
+}
+
 test.describe('auction low-bid rejection', () => {
   test('1995 AuctionWeb rejects bid at or below high', async ({ page }) => {
-    const messages = [];
-    page.on('dialog', async (dialog) => {
-      messages.push(dialog.message());
-      await dialog.accept();
-    });
-
+    const native = watchNativeDialog(page);
     await enterYear(page, '1995');
     // clear prior bids
     await page.evaluate(() => {
@@ -37,8 +50,7 @@ test.describe('auction low-bid rejection', () => {
     await frame.locator('input[name="bid"]').fill('3');
     await frame.locator('form[data-bid-form] input[type="submit"]').click({ force: true });
 
-    await expect.poll(() => messages.length, { timeout: 10000 }).toBeGreaterThan(0);
-    expect(messages.join(' ')).toMatch(/higher|must be/i);
+    await expectPeriodLowBidAlert(page, native);
 
     // high bid should still be opening (~$5)
     const high = await frame.locator('[data-high-bid]').innerText();
@@ -46,12 +58,7 @@ test.describe('auction low-bid rejection', () => {
   });
 
   test('1997 eBay rejects bid at or below current high', async ({ page }) => {
-    const messages = [];
-    page.on('dialog', async (dialog) => {
-      messages.push(dialog.message());
-      await dialog.accept();
-    });
-
+    const native = watchNativeDialog(page);
     await enterYear(page, '1997');
     await page.evaluate(() => {
       Object.keys(localStorage)
@@ -68,7 +75,27 @@ test.describe('auction low-bid rejection', () => {
     await frame.locator('input[name="bid"]').fill('100');
     await frame.locator('form[data-bid-form] input[type="submit"]').click({ force: true });
 
-    await expect.poll(() => messages.length, { timeout: 10000 }).toBeGreaterThan(0);
-    expect(messages.join(' ')).toMatch(/higher|must be/i);
+    await expectPeriodLowBidAlert(page, native);
+  });
+
+  test('2000 eBay low bid uses IE dialog, not Chrome alert', async ({ page }) => {
+    const native = watchNativeDialog(page);
+    await enterYear(page, '2000');
+    await page.evaluate(() => {
+      Object.keys(localStorage)
+        .filter((k) => k.indexOf('itt00-bid') !== -1 || k.indexOf('itt00-auction') !== -1)
+        .forEach((k) => localStorage.removeItem(k));
+    });
+
+    await goInFrame(page, 'sites/ebay/item-laptop.html');
+    await waitForImmersion(page, '2000');
+    const frame = contentFrame(page);
+
+    await expect(frame.locator('form[data-bid-form]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('input[name="bid"]').fill('100');
+    await frame.locator('form[data-bid-form] input[type="submit"]').click({ force: true });
+
+    await expect(page.locator('#dlg-alert-title')).toContainText(/Internet Explorer/i);
+    await expectPeriodLowBidAlert(page, native);
   });
 });

@@ -9,8 +9,8 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  var WIPED = { "2009": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
-  for (y = 1994; y <= 2021; y++) {
+  var WIPED = { "2009": 1, "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
+  for (y = 1994; y <= 2022; y++) {
     if (!WIPED[String(y)]) YEARS_ALL.push(String(y));
   }
 
@@ -494,7 +494,10 @@
   function renderThreads() {
     var host = $("atlas-threads");
     if (!host || !data.threads) return;
-    var html = "";
+    var html =
+      "<p class='walk-lead'><b>This is a walk, not only a floor plan.</b> " +
+      "Start first night, or pick a brand and step year to year in that year’s chrome. " +
+      "The year-shell control is <code>Same brand, next year →</code> on the exit bar.</p>";
     data.threads.forEach(function (th) {
       html +=
         '<article class="thread" id="thread-' +
@@ -705,7 +708,7 @@
     html += "<b>" + (data.threads || []).length + "</b> follow-a-site threads · ";
     html += "<b>" + (data.trails || []).length + "</b> tours";
     html += "</p>";
-    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway ends at 2020.</p>";
+    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway ends at 2022. 2020 is wiped.</p>";
 
     html += '<details class="atlas-layer" id="atlas-all-golds"><summary>One-thing golds <span class="n">' + golds.length + "</span></summary><ol>";
     golds.forEach(function (g) {

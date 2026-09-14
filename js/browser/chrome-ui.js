@@ -123,11 +123,24 @@
       } catch (eBg) { /* */ }
     }
 
-    function showAlert(title, msg) {
+    function defaultAlertTitle() {
+      var y = parseInt(ctx.year, 10) || 1995;
+      if (y <= 1996) return "Netscape";
+      if (y <= 2014) return "Microsoft Internet Explorer";
+      return "JavaScript Alert";
+    }
+
+    function showAlert(title, msg, kind) {
       var t = document.getElementById("dlg-alert-title");
       var m = document.getElementById("dlg-alert-msg");
-      if (t) t.textContent = title || "Netscape";
+      var ic = document.getElementById("dlg-alert-icon");
+      if (t) t.textContent = title || defaultAlertTitle();
       if (m) m.textContent = msg || "";
+      if (ic) {
+        ic.className =
+          "dialog-alert-icon dialog-alert-icon--" +
+          (kind === "warn" || kind === "error" ? "warn" : "info");
+      }
       openDialog("dlg-alert");
     }
 

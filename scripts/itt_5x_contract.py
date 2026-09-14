@@ -8,6 +8,7 @@ are the gold list; every other 5x-recheck.matrix dest must keep a plaque.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,9 @@ NO_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (1997, "sites/drudge/index.html"),
         (1999, "sites/y2k/index.html"),
         (2005, "sites/youtube/index.html"),
+        (1994, "sites/ncsa/index.html"),
+        (1995, "sites/hotwired/index.html"),
+        (1998, "sites/altavista/index.html"),
     }
 )
 
@@ -50,7 +54,7 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
     }
 )
 # No year tree. 2009 is boarded (tree stays) — skipped in check() separately.
-WIPED_YEARS: frozenset[int] = frozenset({2022, 2023, 2024, 2025})
+WIPED_YEARS: frozenset[int] = frozenset({2020, 2023, 2024, 2025})
 BOARDED_YEARS: frozenset[int] = frozenset({2009})
 
 POP_PANEL_2020 = ()
@@ -68,7 +72,38 @@ def load_matrix() -> dict:
     return json.loads(MATRIX_PATH.read_text(encoding="utf-8"))
 
 
-def plaque_required(year: int, room: str) -> bool:
+def official_trail_rooms() -> dict[int, set[str]]:
+    """flow-trails.js n=1–10 dest paths, plus the dest folder index."""
+    text = (ROOT / "js" / "config" / "flow-trails.js").read_text(encoding="utf-8", errors="replace")
+    out: dict[int, set[str]] = {}
+    year = None
+    n = 0
+    for line in text.splitlines():
+        ym = re.search(r'"(\d{4})"\s*:', line)
+        if ym and "[" in line:
+            year = int(ym.group(1))
+            continue
+        nm = re.search(r'"n"\s*:\s*(\d+)', line)
+        if nm:
+            n = int(nm.group(1))
+        hm = re.search(r'"href"\s*:\s*"([^"]+)"', line)
+        if year and hm and 1 <= n <= 10:
+            href = hm.group(1)
+            out.setdefault(year, set()).add(href)
+            parts = href.split("/")
+            if len(parts) >= 2 and parts[0] == "sites":
+                out[year].add(f"sites/{parts[1]}/index.html")
+    return out
+
+
+_OFFICIAL_ROOMS = official_trail_rooms()
+
+
+def plaque_required(year: int, room: str, html: str = "") -> bool:
+    if html and "data-official-key" in html:
+        return False
+    if room in _OFFICIAL_ROOMS.get(year, set()):
+        return False
     if (year, room) in ALLOW_PLAQUE:
         return True
     if year in NO_PLAQUE_YEARS:
@@ -99,7 +134,8 @@ def check() -> list[str]:
                 fails.append(f"missing dest {year}/{room}")
                 continue
             html = path.read_text(encoding="utf-8", errors="replace")
-            want = plaque_required(year, room)
+            # Official dest leftover-5× is gold-only (I7). Workshop dests keep plaques.
+            want = plaque_required(year, room, html)
             got = "data-5x-save" in html
             # 4× leftover writers replaced plaques on some dests — still REAL.
             if want and not has_plaque(html) and "data-4x-go" not in html:

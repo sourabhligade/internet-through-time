@@ -1,7 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× ×3 for 2021 — dest-true · not mock. 2022 is wiped.
- * 2018 and 2020 are live lean doors (first + third only). 2019 already dest-true leftover-3×.
+ * Leftover-3× for 2018 / 2021 — dest-true · not mock. 2020 is wiped.
  */
 const fs = require("fs");
 const path = require("path");
@@ -15,7 +14,6 @@ function destOnDisk(href) {
 
 const WANT = {
   2018: { first: 3, more: 0, third: 3 },
-  2020: { first: 3, more: 0, third: 3 },
   2021: { first: 9, more: 9, third: 9 },
 };
 
@@ -51,7 +49,7 @@ async function openDoor(page, row) {
 
 test.describe("2018–2021 leftover-3× home strips", () => {
   for (const year of YEARS) {
-    test(`${year} leftover-3× strips are 3× famous doors`, async ({ page }) => {
+    test(`${year} leftover-3× warehouse is not first paint`, async ({ page }) => {
       const fs = require("fs");
       const path = require("path");
       test.skip(
@@ -59,18 +57,12 @@ test.describe("2018–2021 leftover-3× home strips", () => {
         year + " boarded"
       );
       await page.goto(`/years/${year}/pages/home.html`);
-  await revealLeftoverRails(page);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
-      const want = WANT[year];
-      await expect(page.locator(`[data-itt-pop3x="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
-        want.first
-      );
-      await expect(page.locator(`[data-itt-pop-more="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
-        want.more
-      );
-      await expect(page.locator(`[data-itt-pop-3x3="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
-        want.third
-      );
+      await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toBeVisible();
+      await expect(page.locator(`[data-itt-pop3x="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop-more="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop-3x3="${year}"]`)).toHaveCount(0);
+      void WANT[year];
     });
   }
 });

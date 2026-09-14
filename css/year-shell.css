@@ -71,6 +71,16 @@ html, body {
   border: 0;
 }
 
+#itt-year-ui .exit-bar .itt-follow-next {
+  margin-left: auto;
+  color: inherit;
+  font-size: 12px;
+  text-decoration: underline;
+}
+#itt-year-ui .exit-bar .itt-follow-next[hidden] {
+  display: none !important;
+}
+
 #itt-year-ui .exit-bar,
 #itt-year-ui .itt-layer-legend,
 #itt-year-ui .shell-nav-legend,

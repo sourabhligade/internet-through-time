@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **27 years open** (1994–2008 + 2010–2019 + 2020–2021). **2009 boarded.** **2022 wiped.** **2023–2025 wiped.**
+Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023–2025 wiped.**
 
 ## Read first
 
@@ -13,6 +13,8 @@ Hub is **27 years open** (1994–2008 + 2010–2019 + 2020–2021). **2009 board
 5. [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) — same bar for 2013 Vine 6s.
 6. [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests (10 official + 20 leftover). No clones.
 7. [`UNDONE.md`](UNDONE.md) — what is still incomplete (plans vs code vs e2e). Missing years out of scope.
-8. [`SOURCES.md`](SOURCES.md) — bibliography.
+8. [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) — every plan MD, related code, unimplemented leftover, unused/delete list.
+9. [`FLOW-IMPLEMENT-CHECKLIST.md`](FLOW-IMPLEMENT-CHECKLIST.md) — implement + recheck of every allowed criterion.
+10. [`SOURCES.md`](SOURCES.md) — bibliography.
 
 Everything else (implement notebooks, leftover catalogs, Board A/B harvest logs, museum-grade scans) is gone. Board C lock for 1999–2004 stays.

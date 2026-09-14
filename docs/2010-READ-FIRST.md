@@ -43,5 +43,7 @@
 - Say FarmVille “always had 80M from day one” (peak is **March 2010**).
 - Add 279 Wikipedia-established names as rooms. Curate ~20 mass + chips.
 
-## Next when you say implement
+## Door status
+
+**2010 is live.** Instagram iOS is the star. Do not restore the old 115-HTML forest.
 

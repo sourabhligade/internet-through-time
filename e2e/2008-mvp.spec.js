@@ -13,9 +13,11 @@ test.describe('2008 MVP', () => {
 
   test('home lists P0 thesis', async ({ page }) => {
     await page.goto('/years/2008/pages/home.html');
-    for (const t of ['App Store', 'Chrome', 'Android', 'Hulu', '172,338,726']) {
+    for (const t of ['App Store', 'Chrome', 'Android', 'Hulu']) {
       await expect(page.locator('body')).toContainText(t);
     }
+    await page.goto('/years/2008/pages/about.html');
+    await expect(page.locator('body')).toContainText('172,338,726');
   });
 
   test('about bans 3GS and Spotify US', async ({ page }) => {

@@ -1,8 +1,8 @@
 // @ts-check
 /** Shared helpers for year-shell immersion e2e tests */
 
-/** Boarded from the visitor UI. Trees stay on disk. 2009 is a plaque (not a hub redirect). 2022+ have no tree. */
-const BOARDED_YEARS = new Set(["2009", "2022", "2023", "2024", "2025"]);
+/** Boarded from the visitor UI. 2009 is a plaque (tree stays). 2020 and 2023+ have no tree. */
+const BOARDED_YEARS = new Set(["2009", "2020", "2023", "2024", "2025"]);
 
 function isLiveYear(year) {
   return !BOARDED_YEARS.has(String(year));
@@ -11,7 +11,7 @@ function isLiveYear(year) {
 /**
  * Boarded year: no hub card, no dirbar.
  * 2009: plaque at /years/2009/ (not a hub redirect).
- * 2022+: no tree — /years/YYYY/ 404s; still no hub card.
+ * 2020 and 2023+: no tree — /years/YYYY/ 404s; still no hub card.
  * @param {import('@playwright/test').Page} page
  * @param {string} year
  */
@@ -21,10 +21,14 @@ async function expectYearBoarded(page, year) {
   await page.goto('/');
   await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
   await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
-  await page.goto(`/years/${y}/`);
+  const res = await page.goto(`/years/${y}/`);
   if (y === "2009") {
     await expect(page.locator("body")).toContainText(/boarded/i);
     await expect(page.locator("#dirbar")).toHaveCount(0);
+    return;
+  }
+  if (["2020", "2023", "2024", "2025"].includes(y)) {
+    expect(res && res.status()).toBe(404);
     return;
   }
   await expect(page).toHaveURL(/\/(index\.html)?$/);

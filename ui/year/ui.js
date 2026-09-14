@@ -53,7 +53,7 @@
       base + "start.js"
     ];
   } else {
-    parts = [base + "years.js", base + "shell.js"];
+    parts = [jsRoot + "config/follow-site.js", base + "years.js", base + "shell.js"];
   }
   var i;
   for (i = 0; i < parts.length; i++) {

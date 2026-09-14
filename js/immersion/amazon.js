@@ -307,7 +307,14 @@ function initCheckout() {
   if (form) {
     form.onsubmit = function (e) {
       e.preventDefault();
-      if (!cart.length) { alert("Your cart is empty."); return; }
+      if (!cart.length) {
+        if (api.showPeriodAlert) {
+          api.showPeriodAlert(api.periodAlertTitle ? api.periodAlertTitle() : "", "Your cart is empty.", "warn");
+        } else if (api.actionFeedback) {
+          api.actionFeedback("Your cart is empty.", { flash: true, kind: "warn" });
+        }
+        return;
+      }
       var name = (form.querySelector('[name="name"]') || {}).value || "Customer";
       var email = (form.querySelector('[name="email"]') || {}).value || "you@somewhere.com";
       var order = {

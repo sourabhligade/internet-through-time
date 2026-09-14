@@ -246,6 +246,13 @@ html[data-itt-year="2021"] .itt-la-col {
   color: #eee;
   border-color: #444;
 }
+html[data-itt-year="2022"] .itt-la-col {
+  background: #fff;
+  color: #202124;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 html[data-itt-year="2018"] .itt-la-col .itt-la-hint,
 html[data-itt-year="2019"] .itt-la-col .itt-la-hint,
 html[data-itt-year="2020"] .itt-la-col .itt-la-hint,
@@ -254,6 +261,13 @@ html[data-itt-year="2018"] .itt-la-col a,
 html[data-itt-year="2019"] .itt-la-col a,
 html[data-itt-year="2020"] .itt-la-col a,
 html[data-itt-year="2021"] .itt-la-col a { color: #90caf9; }
+html[data-itt-year="2022"] .itt-la-col a {
+  color: #1967d2;
+  text-decoration: none;
+}
+html[data-itt-year="2022"] .itt-la-col a:hover {
+  text-decoration: underline;
+}
 
 /* —— game cabinet —— */
 [data-itt-layer="game"][data-year-game]::before,

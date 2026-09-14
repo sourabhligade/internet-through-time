@@ -927,7 +927,6 @@ test.describe('year-signature 2021', () => {
 
 test.describe('year-signature 2022', () => {
   test('ChatGPT Plus never writes · prompt + Send → itt22-chatgpt official', async ({ page }) => {
-    test.skip(true, '2022 wiped');
     skipIfWiped('2022');
     await enterYear(page, '2022');
     await page.evaluate(() => {

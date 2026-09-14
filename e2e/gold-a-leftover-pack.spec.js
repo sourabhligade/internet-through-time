@@ -27,7 +27,6 @@ const GOLD = [
   { year: "2006", writer: "sites/twitter/index.html", key: "itt06-tweets", nextNeedle: "facebook/feed", chipHref: "sites/twitter/index.html" },
   { year: "2007", writer: "sites/iphone/index.html", key: "itt07-iphone", nextNeedle: "streetview", chipHref: "sites/iphone/index.html" },
   { year: "2008", writer: "sites/github/issue.html", key: "itt08-github", nextNeedle: "appstore", chipHref: "sites/github/issue.html" },
-  { year: "2009", writer: "sites/facebook/index.html", key: "itt09-like", nextNeedle: "farmville", chipHref: "sites/facebook/index.html" },
   { year: "2010", writer: "sites/instagram/index.html", key: "itt10-ig", nextNeedle: "iphone", chipHref: "sites/instagram/index.html" },
   { year: "2011", writer: "sites/googleplus/index.html", key: "itt11-gplus", nextNeedle: "spotify", chipHref: "sites/googleplus/index.html" },
   { year: "2012", writer: "sites/instagram/android.html", key: "itt12-ig-android", nextNeedle: "pinterest", chipHref: "sites/instagram/android.html" },
@@ -38,18 +37,21 @@ const GOLD = [
   { year: "2017", writer: "sites/iphone/x.html", key: "itt17-faceid", nextNeedle: "fortnite", chipHref: "sites/iphone/x.html" },
   { year: "2018", writer: "sites/gdpr/index.html", key: "itt18-gdpr", nextNeedle: "tiktok", chipHref: "sites/gdpr/index.html" },
   { year: "2019", writer: "sites/disneyplus/home.html", key: "itt19-disneyplus", nextNeedle: "tiktok", chipHref: "sites/disneyplus/home.html" },
-  { year: "2020", writer: "sites/zoom/meeting.html", key: "itt20-zoom", nextNeedle: "reels", chipHref: "sites/zoom/meeting.html" },
 ];
 
 function yearFile(year, rel) {
   return path.join(ROOT, "years", year, rel);
 }
 
+const BOARDED = new Set(["2009", "2020", "2023", "2024", "2025"]);
+
 test("gold-a table covers every live year on disk", () => {
   const years = GOLD.map((g) => g.year);
   const live = [];
-  for (let y = 1994; y <= 2020; y++) {
-    if (fs.existsSync(yearFile(String(y), "index.html"))) live.push(String(y));
+  for (let y = 1994; y <= 2019; y++) {
+    const ys = String(y);
+    if (BOARDED.has(ys)) continue;
+    if (fs.existsSync(yearFile(ys, "index.html"))) live.push(ys);
   }
   expect(years.sort()).toEqual(live.sort());
 });

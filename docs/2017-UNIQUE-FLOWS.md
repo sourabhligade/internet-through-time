@@ -119,27 +119,27 @@ All 30 paths exist on disk today. Do not add dests.
 
 ### Phase 1 — Official 10 gold
 
-Walk each official dest: empty never writes, complete writes **that** key only. Face ID chip unchanged.
+- [x] Walk each official dest: empty never writes, complete writes **that** key only. Face ID chip unchanged.
 
 ### Phase 2 — Leftover 20 unique dests
 
-Walk each leftover dest: dest exists, unique key, unique verb, never writes official whenKeys. Period leftover chrome. failed-final if no capture.
+- [x] Walk each leftover dest: dest exists, unique key, unique verb, never writes official whenKeys. Period leftover chrome. failed-final if no capture.
 
 ### Phase 3 — Strip clones
 
-Remove leftover-2× **panels** (`lx` / `d2` / `fn` / `t280` / 59 playable keys) from official dests. Official dest = gold only.
+- [x] Remove leftover-2× **panels** (`lx` / `d2` / `fn` / `t280` / 59 playable keys) from official dests. Official dest = gold only.
 
 ### Phase 4 — Starting Point + About
 
-Guided 6. Unique leftover dests not in the `<ol>`. About dual-cite. Copy names Face ID, not “222 rooms.”
+- [x] Guided 6. Unique leftover dests not in the `<ol>`. About dual-cite. Copy names Face ID, not “222 rooms.”
 
 ### Phase 5 — Workshop
 
-192 leftover dest-farm dests stay unlinked. Do not add dests. Do not dest-farm 2016.
+- [x] 192 leftover dest-farm dests stay unlinked. Do not add dests. Do not dest-farm 2016.
 
 ### Phase 6 — Docs + e2e
 
-`flow-trails` official 10 only. Matrices that treat 332 keys as visitor flows stay workshop. e2e: 10 official + 20 leftover unique href/key.
+- [x] `flow-trails` official 10 only. Matrices that treat 332 keys as visitor flows stay workshop. e2e: 10 official + 20 leftover unique href/key.
 
 ### Phase H — Optional dest lock (last)
 

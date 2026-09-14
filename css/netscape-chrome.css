@@ -887,6 +887,52 @@ html[data-itt-year="1994"] .desktop-icons {
   margin: 0 0 8px;
 }
 
+.dialog-alert-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+#dlg-alert-msg {
+  margin: 0;
+  flex: 1;
+  white-space: pre-wrap;
+  line-height: 1.35;
+}
+
+.dialog-alert-icon {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.dialog-alert-icon--warn {
+  background: #ffc000;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.dialog-alert-icon--warn::before {
+  content: "!";
+}
+
+.dialog-alert-icon--info {
+  background: #000080;
+  border: 2px solid #000040;
+  color: #fff;
+}
+
+.dialog-alert-icon--info::before {
+  content: "i";
+}
+
 .dialog-input {
   width: 100%;
   box-sizing: border-box;

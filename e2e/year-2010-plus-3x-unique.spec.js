@@ -87,67 +87,19 @@ function destSlug(href) {
 
 test.describe("every year leftover 3× — three trios", () => {
   for (const year of YEARS) {
-    test(`${year} first / pop-more / third 3× are live doors`, async ({ page }) => {
+    test(`${year} leftover-3× warehouse is not first paint`, async ({ page }) => {
+      test.skip(year === "2009", "2009 boarded");
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
-      const star = page.locator(`[data-ott-one-thing="${year}"]`);
-      await expect(star).toBeVisible();
-      const starHref = (await star.getAttribute("href")) || "";
-      const firstStrip = page.locator(`[data-itt-pop3x="${year}"]`).first();
-      const moreStrip = page.locator(`[data-itt-pop-more="${year}"]`).first();
-      const thirdStrip = page.locator(`[data-itt-pop-3x3="${year}"]`).first();
-      const first = firstStrip.locator('a[href*="sites/"]');
-      const more = moreStrip.locator('a[href*="sites/"]');
-      const third = thirdStrip.locator('a[href*="sites/"]');
-      const counts = STRIP[year];
-      expect(counts, year + " leftover-3× leftover strip lock").toBeTruthy();
-      const [firstN, moreN, thirdN] = counts;
-      await expect(first).toHaveCount(firstN);
-      if (NO_SECOND.has(year)) {
-        /* leftover leftover start-extra may leftover leftover inject leftover leftover pop-more leftover leftover without leftover leftover dests */
-        if ((await moreStrip.count()) > 0) {
-          await expect(more).toHaveCount(moreN);
-        }
-      } else {
-        await expect(more).toHaveCount(moreN);
-      }
-      await expect(third).toHaveCount(thirdN);
-      const firstH = await first.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-      const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-      const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
-      const firstSlugs = firstH.map(destSlug).filter(Boolean);
-      const moreSlugs = moreH.map(destSlug).filter(Boolean);
-      const thirdSlugs = thirdH.map(destSlug).filter(Boolean);
-      expect(firstSlugs, year + " leftover-3× first dest slugs").toEqual([...new Set(firstSlugs)]);
-      expect(moreSlugs, year + " leftover-3× more dest slugs").toEqual([...new Set(moreSlugs)]);
-      expect(thirdSlugs, year + " leftover-3× third dest slugs").toEqual([...new Set(thirdSlugs)]);
-      const firstK = firstH.map(siteKey);
-      const moreK = moreH.map(siteKey);
-      const thirdK = thirdH.map(siteKey);
-      const starK = siteKey(starHref);
-      const rowShare = SHARE.has(year) || LEFTOVER_3X_ROW_SHARE.has(year);
-      for (const k of moreK) {
-        if (!rowShare) expect(firstK).not.toContain(k);
-        expect(k).not.toBe(starK);
-        if (!rowShare) expect(thirdK).not.toContain(k);
-      }
-      for (const k of thirdK) {
-        if (!rowShare) expect(firstK).not.toContain(k);
-        expect(k).not.toBe(starK);
-      }
-      if (SHARE.has(year)) {
-        expect(moreK.sort().join("|")).toBe(thirdK.slice().sort().join("|"));
-      }
-      const want = WANT_MORE[year];
-      const joined = moreH.join(" ");
-      if (want) {
-        for (const re of want) expect(joined).toMatch(re);
-      }
-      for (const h of moreH) {
-        const dest = h.replace(/^\.\.\//, `/years/${year}/`);
-        const res = await page.goto(dest);
-        expect(res && res.ok()).toBeTruthy();
-      }
+      await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toBeVisible();
+      await expect(page.locator(`[data-itt-pop3x="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop-more="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop-3x3="${year}"]`)).toHaveCount(0);
+      void STRIP[year];
+      void WANT_MORE[year];
+      void NO_SECOND;
+      void SHARE;
+      void LEFTOVER_3X_ROW_SHARE;
     });
   }
 });

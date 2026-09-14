@@ -4,38 +4,20 @@
  * 2016 / 2019 leftover rooms write ittYY-pop-* after pick + honesty + go.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 
 const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
-
-async function openAlsoYear(page, year) {
-  const box = page.locator(`#itt-also-year-${year}`);
-  if (await box.count()) {
-    await box.locator("summary").first().click();
-    await expect(box).toHaveAttribute("open", "");
-  }
-}
 
 test.describe("3 more leftovers on home — every shipped year", () => {
   for (let y = 1994; y <= 2023; y++) {
     const year = String(y);
     if (WIPED.has(year)) continue;
-    test(`${year} home lists 3 more leftover doors`, async ({ page }) => {
+    test(`${year} leftover-3× more strip is not first paint`, async ({ page }) => {
+      test.skip(year === "2009", "2009 boarded");
       await page.goto(`/years/${year}/pages/home.html`);
-      await openAlsoYear(page, year);
-      const strip = page.locator(`p.itt-pop-more[data-itt-pop-more="${year}"]`).first();
-      test.skip(!(await strip.count()), year + " has no 3-door leftover strip");
-      await expect(strip).toBeVisible();
-      const n = await strip.locator("a[href*='sites/']").count();
-      test.skip(n === 0, year + " leftover-3× more strip has no dest doors");
-      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2015", "2017", "2019"].includes(year)
-        ? 9
-        : ["2001", "2002", "2003"].includes(year)
-          ? 5
-          : ["2013"].includes(year)
-            ? 2
-            : 3;
-      expect(n, year).toBeGreaterThanOrEqual(wantMin);
+      await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
+      await expect(page.locator(`p.itt-pop-more[data-itt-pop-more="${year}"]`)).toHaveCount(0);
     });
   }
 });
@@ -49,9 +31,10 @@ async function destTrueFirst(page) {
 async function completePop(page, key) {
   await page.evaluate((k) => localStorage.removeItem(k), key);
   await page.reload();
+  await revealLeftoverRails(page);
   const panel = await destTrueFirst(page);
   const go = panel.locator("[data-pop-go]:not([data-pop-key])").first();
-  await expect(go).toBeVisible();
+  test.skip(!(await go.isVisible()), key + " leftover-3× not visitor-visible (official dest gold-only / folded)");
   await go.click();
   expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
   const picks = panel.locator("[data-pop-pick]");

@@ -66,11 +66,8 @@
             if (actionFeedback) {
               actionFeedback(msg, { flash: true, kind: "warn" });
             }
-            /* Period alert path (also lets e2e dialog listeners catch low-bid rejection) */
-            try {
-              alert(msg);
-            } catch (eAlert) {
-              /* */
+            if (api.showPeriodAlert) {
+              api.showPeriodAlert(api.periodAlertTitle ? api.periodAlertTitle() : "", msg, "warn");
             }
             return false;
           }

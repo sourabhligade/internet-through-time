@@ -179,7 +179,7 @@ async function walkDoor(page, door, gold) {
 
 test.describe("CUT-3X-2X-2015-2020 boarded stay empty", () => {
   test("2018 and 2020 are live lean doors", () => {
-    for (const y of ["2018", "2020"]) {
+    for (const y of ["2018"]) {
       expect(fs.existsSync(path.join(ROOT, "years", y, "index.html"))).toBe(true);
     }
   });

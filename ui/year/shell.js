@@ -58,6 +58,10 @@
     );
   }
 
+  function chrome22Toolbar() {
+    return "";
+  }
+
   function ieToolbar(spec) {
     var a = "../../assets/period/" + spec.chrome + "/chrome/";
     var reload = spec.family === "ie" && parseInt(spec.year, 10) >= 1999 ? "Refresh" : "Reload";
@@ -327,10 +331,12 @@
       "<p>Message:</p><textarea id=\"dlg-mail-body\" class=\"dialog-textarea\" rows=\"4\"></textarea>" +
       '<div class="dialog-btns"><button type="button" id="dlg-mail-send">Send Mail</button>' +
       '<button type="button" data-close="dlg-mail">Cancel</button></div></div></div>' +
-      '<div class="dialog hidden" id="dlg-alert">' +
+      '<div class="dialog hidden" id="dlg-alert" role="alertdialog" aria-modal="true" aria-labelledby="dlg-alert-title" aria-describedby="dlg-alert-msg">' +
       '<div class="dialog-titlebar"><span id="dlg-alert-title">Browser</span>' +
-      '<button type="button" class="dialog-x" data-close="dlg-alert">×</button></div>' +
-      '<div class="dialog-body"><p id="dlg-alert-msg"></p>' +
+      '<button type="button" class="dialog-x" data-close="dlg-alert" aria-label="Close">×</button></div>' +
+      '<div class="dialog-body"><div class="dialog-alert-row">' +
+      '<span class="dialog-alert-icon dialog-alert-icon--info" id="dlg-alert-icon" aria-hidden="true"></span>' +
+      '<p id="dlg-alert-msg"></p></div>' +
       '<div class="dialog-btns"><button type="button" data-close="dlg-alert" id="dlg-alert-ok">OK</button></div></div></div>' +
       '<div class="dialog hidden" id="dlg-desktop-icon">' +
       '<div class="dialog-titlebar"><span id="dlg-desktop-title">My Computer</span>' +
@@ -381,9 +387,22 @@
   function render(spec) {
     var deskClass = spec.maximized ? "desktop browser-max" : "desktop";
     var browserClass = spec.maximized ? "browser maximized" : "browser";
-    var menus = spec.toolbar === "ie" ? ieMenus(spec) : netscapeMenus();
-    var bar = spec.toolbar === "ie" ? ieToolbar(spec) : netscapeToolbar(spec);
+    var chrome22 = spec.toolbar === "chrome22";
+    var menus = chrome22 ? "" : spec.toolbar === "ie" ? ieMenus(spec) : netscapeMenus();
+    var bar = chrome22 ? "" : spec.toolbar === "ie" ? ieToolbar(spec) : netscapeToolbar(spec);
     var goLabel = spec.toolbar === "ie" ? '<button type="button" class="btn-go" id="btn-go" title="Go">Go</button>' : "";
+    var deskIcons = chrome22
+      ? ""
+      : '<div class="desktop-icons" id="desktop-icons">' +
+        '<div class="desk-icon" data-icon="mypc" title="My Computer"><span class="desk-glyph desk-pc"></span><span class="desk-label">My Computer</span></div>' +
+        '<div class="desk-icon" data-icon="net" title="Network Neighborhood"><span class="desk-glyph desk-net"></span><span class="desk-label">Network<br>Neighborhood</span></div>' +
+        '<div class="desk-icon" data-icon="inbox" title="Inbox"><span class="desk-glyph desk-mail"></span><span class="desk-label">Inbox</span></div>' +
+        '<div class="desk-icon" data-icon="bin" title="Recycle Bin"><span class="desk-glyph desk-bin"></span><span class="desk-label">Recycle Bin</span></div>' +
+        "</div>";
+    var statusbar = chrome22
+      ? '<div class="statusbar" id="status" hidden>Document: Done</div>'
+      : '<div class="statusbar"><div class="status-text" id="status">Document: Done</div>' +
+        '<div class="status-done" id="status-done">Document: Done</div></div>';
     return (
       dialogs(spec) +
       '<div class="' +
@@ -392,13 +411,9 @@
       '<div class="exit-bar" id="exit-bar">' +
       '<span class="year-label">' +
       esc(spec.yearLabel || spec.year) +
-      '</span><a href="../../index.html" title="Exit">← Exit</a></div>' +
-      '<div class="desktop-icons" id="desktop-icons">' +
-      '<div class="desk-icon" data-icon="mypc" title="My Computer"><span class="desk-glyph desk-pc"></span><span class="desk-label">My Computer</span></div>' +
-      '<div class="desk-icon" data-icon="net" title="Network Neighborhood"><span class="desk-glyph desk-net"></span><span class="desk-label">Network<br>Neighborhood</span></div>' +
-      '<div class="desk-icon" data-icon="inbox" title="Inbox"><span class="desk-glyph desk-mail"></span><span class="desk-label">Inbox</span></div>' +
-      '<div class="desk-icon" data-icon="bin" title="Recycle Bin"><span class="desk-glyph desk-bin"></span><span class="desk-label">Recycle Bin</span></div>' +
-      "</div>" +
+      '</span><a href="../../index.html" title="Exit">← Exit</a>' +
+      '<a id="itt-follow-next" class="itt-follow-next" hidden href="#">Same brand, next year →</a></div>' +
+      deskIcons +
       '<div class="' +
       browserClass +
       '" id="browser" role="application" aria-label="' +
@@ -414,19 +429,36 @@
       '<button type="button" class="win-btn" id="btn-close" aria-label="Close" title="Close">×</button></div></div>' +
       menus +
       bar +
-      '<div class="locationbar" id="locationbar"><label for="location">' +
-      esc(spec.locLabel || "Location:") +
-      '</label><input type="text" id="location" value="' +
-      esc(spec.location || "") +
-      '" spellcheck="false" autocomplete="off">' +
-      goLabel +
-      "</div>" +
+      (chrome22
+        ? '<style id="itt-2022-one-bar">' +
+          ".year-2022 #browser > .toolbar,.year-2022 .titlebar + .toolbar{display:none!important}" +
+          ".year-2022 #locationbar .toolbar{display:flex!important;flex-wrap:nowrap!important}" +
+          ".year-2022 #btn-back::before,.year-2022 #btn-forward::before,.year-2022 #btn-reload::before,.year-2022 #btn-home::before," +
+          ".year-2022 #btn-back::after,.year-2022 #btn-forward::after,.year-2022 #btn-reload::after,.year-2022 #btn-home::after" +
+          "{content:none!important;display:none!important}" +
+          "</style>" +
+          '<div class="locationbar chrome22-omni" id="locationbar">' +
+          '<div class="toolbar chrome22-bar" id="toolbar" role="toolbar" aria-label="Chrome habit toolbar">' +
+          '<button type="button" class="chrome22-nav" id="btn-back" title="Back">←</button>' +
+          '<button type="button" class="chrome22-nav" id="btn-forward" title="Forward">→</button>' +
+          '<button type="button" class="chrome22-nav" id="btn-reload" title="Reload">↻</button>' +
+          '<button type="button" class="chrome22-nav" id="btn-home" title="Home">⌂</button></div>' +
+          '<input type="text" id="location" value="' +
+          esc(spec.location || "") +
+          '" spellcheck="false" autocomplete="off" aria-label="Address"></div>'
+        : '<div class="locationbar" id="locationbar"><label for="location">' +
+          esc(spec.locLabel || "Location:") +
+          '</label><input type="text" id="location" value="' +
+          esc(spec.location || "") +
+          '" spellcheck="false" autocomplete="off">' +
+          goLabel +
+          "</div>") +
       '<div class="dirbar" id="dirbar">' +
       dirbar(spec) +
       "</div>" +
       '<div class="content-frame"><iframe id="content" tabindex="-1" title="Web page content" src="pages/home.html" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"></iframe></div>' +
-      '<div class="statusbar"><div class="status-text" id="status">Document: Done</div>' +
-      '<div class="status-done" id="status-done">Document: Done</div></div></div>' +
+      statusbar +
+      "</div>" +
       '<button type="button" class="task-icon hidden" id="task-icon" title="Restore"><span>' +
       esc(spec.icon) +
       "</span> " +
@@ -601,6 +633,38 @@
     if (iframe) iframe.addEventListener("load", fillViewport);
   }
 
+  function bindFollow(year) {
+    var iframe = document.getElementById("content");
+    var link = document.getElementById("itt-follow-next");
+    if (!link) return;
+    function pathOf() {
+      try {
+        if (iframe && iframe.contentWindow && iframe.contentWindow.location) {
+          return iframe.contentWindow.location.pathname || "";
+        }
+      } catch (eP) { /* */ }
+      return (iframe && iframe.src) || "";
+    }
+    function refresh() {
+      var FS = window.ITT && ITT.FollowSite;
+      var rec = FS && FS.next(pathOf(), year);
+      if (!rec) {
+        link.hidden = true;
+        link.removeAttribute("href");
+        return;
+      }
+      link.hidden = false;
+      link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
+      link.textContent = rec.label + " · " + rec.year + " →";
+      link.title = "Same brand, next year" + (rec.note ? " · " + rec.note : "");
+    }
+    if (iframe && !iframe.getAttribute("data-itt-follow-bound")) {
+      iframe.setAttribute("data-itt-follow-bound", "1");
+      iframe.addEventListener("load", refresh);
+    }
+    refresh();
+  }
+
   function paint(year) {
     year = String(year);
     var spec = (ITT.YearUI.YEARS || {})[year];
@@ -634,8 +698,21 @@
       document.body.insertBefore(root, document.body.firstChild);
     }
     root.innerHTML = render(spec);
+    if (spec.toolbar === "chrome22") {
+      try {
+        var keepBar = document.querySelector("#locationbar .toolbar");
+        var allBars = document.querySelectorAll(".toolbar");
+        var bi;
+        for (bi = 0; bi < allBars.length; bi++) {
+          if (keepBar && allBars[bi] !== keepBar && allBars[bi].parentNode) {
+            allBars[bi].parentNode.removeChild(allBars[bi]);
+          }
+        }
+      } catch (eBar) { /* */ }
+    }
     bindDesktop(spec);
     bindFill();
+    bindFollow(year);
     if (window.requestAnimationFrame) window.requestAnimationFrame(fillViewport);
     window.setTimeout(fillViewport, 0);
     window.setTimeout(fillViewport, 80);

@@ -60,4 +60,5 @@ This rebuild picks a **verb you can do in the frame**.
 ## How to read
 
 1. This file.  
-4. Implement only after you say so.
+2. [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+3. Do not dest-farm. Do not restore the wiped forest.

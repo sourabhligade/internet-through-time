@@ -292,16 +292,34 @@ body.hub-yahoo {
 .hub-yahoo .year-card,
 .hub-yahoo .year-card.available,
 .hub-yahoo .year-card.available:hover,
-.hub-yahoo .year-card.available:focus {
+.hub-yahoo .year-card.available:focus,
+.hub-yahoo .year-card.available:focus-visible {
   background: transparent !important;
   color: #000 !important;
   border: 0 !important;
   box-shadow: none !important;
+  outline: none;
+  outline-color: transparent;
   min-height: 0;
   display: list-item;
   list-style: disc;
   margin: 0 0 6px;
   padding: 0;
+}
+
+/* Same 1995 Yahoo blue on every year — kill leftover era outlines (1999 green, 1996 gold, 2007 cyan). */
+.hub-yahoo .year-card:hover,
+.hub-yahoo .year-card:focus,
+.hub-yahoo .year-card.available:hover,
+.hub-yahoo .year-card.available:focus {
+  outline: none;
+  outline-color: transparent;
+}
+
+.hub-yahoo .year-card:focus-visible,
+.hub-yahoo .year-card.available:focus-visible {
+  outline: 1px dotted #0000ee;
+  outline-offset: 2px;
 }
 
 .hub-yahoo .year-card.available::before {
@@ -341,6 +359,15 @@ body.hub-yahoo {
 
 .hub-yahoo .year-card:visited .year {
   color: #551a8b !important;
+}
+
+.hub-yahoo .year-card:hover .year,
+.hub-yahoo .year-card:focus .year,
+.hub-yahoo .year-card.available:hover .year,
+.hub-yahoo .year-card.available:focus .year,
+.hub-yahoo .year-card:visited:hover .year,
+.hub-yahoo .year-card:visited:focus .year {
+  color: #0000ee !important;
 }
 
 .hub-yahoo .year-card .era-chip {

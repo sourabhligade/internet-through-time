@@ -347,21 +347,6 @@ const SIGNATURE = {
       await frame.locator('[data-dplus-continue]').click();
     },
   },
-  '2020': {
-    path: 'sites/zoom/meeting.html',
-    keySuffix: 'zoom',
-    body: /Zoom|Leave|participants/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await frame.locator('[data-zoom-join]').click();
-      await frame.locator('[data-zoom-mute]').click();
-      await frame.locator('[data-zoom-chat]').fill('handoff 2020');
-      await frame.locator('[data-zoom-send]').click();
-      await frame.locator('[data-zoom-req]').nth(0).check({ force: true });
-      await frame.locator('[data-zoom-req]').nth(1).check({ force: true });
-      await frame.locator('[data-zoom-leave]').click();
-    },
-  },
 };
 
 const YEARS = [
@@ -380,7 +365,6 @@ const YEARS = [
   '2012',
   '2016',
   '2017',
-  '2020',
 ];
 
 /**

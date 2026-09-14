@@ -12,7 +12,7 @@
     prefsKey: "itt-1994-prefs",
     bookmarksKey: "itt-1994-bookmarks",
     connectedKey: "itt-1994-connected",
-    immersionScript: "js/immersion.js",
+    immersionScript: "js/immersion-1994.js",
     maximizedDefault: false,
     browserTitleSuffix: " - Netscape",
     connectSpeedLine: "CONNECT 14400/ARQ",

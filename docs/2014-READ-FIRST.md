@@ -69,7 +69,7 @@ Never blend June Live Stats with January Netcraft. Never invent a “980 million
 ## Do
 
 - Research envelope is **~5,000 websites** (walk budget). **Never 5,000 dests.**  
-- If implement is named: clone lean **2012** (2013 is boarded). Guided **exactly 6**. Hard stop **~50 HTML**.  
+- Live lean door. Guided **exactly 6**. Hard stop **~50 HTML**. Do not dest-farm.  
 - Star / trail #1 = `sites/whatsapp/index.html`. Incomplete deal notes never write.  
 - Heartbleed is **literacy + rotate**. Payload / scan / exploit is the **trap**.  
 - Ice Bucket is **nominate + note**. Dump / celebrity still is never required.  

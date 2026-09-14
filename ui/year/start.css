@@ -106,9 +106,47 @@ html[data-itt-year] body.itt-start-page .itt-home-more {
   line-height: 1.7;
 }
 .ott-flow-next {
+  display: none;
+}
+html[data-itt-deep] .ott-flow-next {
+  display: inline;
   color: inherit;
   opacity: 0.75;
   font-size: 12px;
+}
+.itt-more-year {
+  margin: 10px 0 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.itt-more-year a {
+  color: inherit;
+}
+html[data-itt-start] .itt-also-year,
+body.itt-start-page .itt-also-year {
+  display: none;
+}
+html[data-itt-deep][data-itt-start] .itt-also-year,
+html[data-itt-deep] body.itt-start-page .itt-also-year {
+  display: block;
+}
+html[data-itt-start] .itt-year-honesty table,
+html[data-itt-start] #itt-year-start-extra,
+body.itt-start-page .itt-2x-strip,
+body.itt-start-page .itt-3x-visible,
+body.itt-start-page [data-itt-year-extras],
+body.itt-start-page [data-itt-famous-more],
+body.itt-start-page nav.itt-3x-also,
+body.itt-start-page [data-itt-3x-links] {
+  display: none !important;
+}
+html[data-itt-deep] body.itt-start-page .itt-2x-strip,
+html[data-itt-deep] body.itt-start-page .itt-3x-visible,
+html[data-itt-deep] body.itt-start-page [data-itt-year-extras],
+html[data-itt-deep] body.itt-start-page [data-itt-famous-more],
+html[data-itt-deep] body.itt-start-page nav.itt-3x-also,
+html[data-itt-deep] body.itt-start-page [data-itt-3x-links] {
+  display: block !important;
 }
 .ott-flows-map {
   margin: 8px 0 0;
@@ -273,7 +311,11 @@ html[data-itt-year="2017"] .ott-flows,
 html[data-itt-year="2018"] .ott-guided,
 html[data-itt-year="2018"] .ott-flows,
 html[data-itt-year="2020"] .ott-guided,
-html[data-itt-year="2020"] .ott-flows {
+html[data-itt-year="2020"] .ott-flows,
+html[data-itt-year="2021"] .ott-guided,
+html[data-itt-year="2021"] .ott-flows,
+html[data-itt-year="2022"] .ott-guided,
+html[data-itt-year="2022"] .ott-flows {
   background: #ffffff !important;
   color: #111 !important;
   border: 1px solid #c8c8c8 !important;
@@ -289,8 +331,40 @@ html[data-itt-year="2017"] .ott-flows a,
 html[data-itt-year="2018"] .ott-guided a,
 html[data-itt-year="2018"] .ott-flows a,
 html[data-itt-year="2020"] .ott-guided a,
-html[data-itt-year="2020"] .ott-flows a {
+html[data-itt-year="2020"] .ott-flows a,
+html[data-itt-year="2021"] .ott-guided a,
+html[data-itt-year="2021"] .ott-flows a {
   color: #125688 !important;
+}
+
+/* 2022 Starting Point — Chrome-era links, not Netscape underlines */
+html[data-itt-year="2022"] body.itt-start-page {
+  background: #f8f9fa !important;
+  color: #202124 !important;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+html[data-itt-year="2022"] body.itt-start-page a,
+html[data-itt-year="2022"] .ott-guided a,
+html[data-itt-year="2022"] .ott-flows a,
+html[data-itt-year="2022"] .itt-la-col a,
+html[data-itt-year="2022"] .itt-felt-trail a {
+  color: #1967d2 !important;
+  text-decoration: none !important;
+}
+html[data-itt-year="2022"] body.itt-start-page a:hover {
+  text-decoration: underline !important;
+}
+html[data-itt-year="2022"] .ott-guided,
+html[data-itt-year="2022"] .ott-flows {
+  border: 0 !important;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(60,64,67,0.15);
+}
+html[data-itt-year="2022"] #ott-flows-2022 ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 24px;
+  padding-left: 1.2em;
 }
 
 /* Felt trail — first wander after the locked gold */

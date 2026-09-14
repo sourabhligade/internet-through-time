@@ -1,6 +1,6 @@
 # Sources, archives & provenance — Internet Through Time
 
-> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022 wiped.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`.
+> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022 wiped.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
 
 
 **Purpose:** External URL bibliography for reconstructions. Not ship state.  

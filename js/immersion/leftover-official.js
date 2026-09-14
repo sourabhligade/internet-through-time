@@ -25,25 +25,25 @@
     "/years/1994/sites/yahoo/": { href: "https://www.webdesignmuseum.org/gallery/yahoo-1994", note: "Yahoo 1994 · WDM · no 1994 Wayback HTML" },
     "/years/1995/sites/amazon/": { href: "https://www.webdesignmuseum.org/gallery/amazon-1995", note: "Amazon 1995 · WDM" },
     "/years/1998/sites/google/": { href: "https://web.archive.org/web/19981202230410/http://google.com/", note: "Google! · Wayback 1998-12-02" },
-    "/years/2001/sites/wikipedia/": { href: "https://www.webdesignmuseum.org/gallery/year-2001", note: "Wikipedia UseMod · WDM year 2001" },
-    "/years/2002/sites/stumbleupon/": { href: "https://www.webdesignmuseum.org/gallery/year-2002", note: "StumbleUpon · WDM year 2002" },
-    "/years/2003/sites/photobucket/": { href: "https://www.webdesignmuseum.org/gallery/year-2003", note: "Photobucket · WDM year 2003" },
-    "/years/2004/sites/facebook/": { href: "https://www.webdesignmuseum.org/gallery/year-2004", note: "thefacebook · WDM year 2004" },
+    "/years/2001/sites/wikipedia/": { href: "", note: "[failed-final] Wikipedia UseMod · no named WDM exhibit" },
+    "/years/2002/sites/stumbleupon/": { href: "", note: "[failed-final] StumbleUpon · no named WDM exhibit" },
+    "/years/2003/sites/photobucket/": { href: "", note: "[failed-final] Photobucket · no named WDM exhibit" },
+    "/years/2004/sites/facebook/": { href: "", note: "[failed-final] thefacebook · no named WDM exhibit" },
     "/years/2005/sites/youtube/": { href: "https://www.webdesignmuseum.org/gallery/youtube-2005", note: "YouTube 2005 · WDM" },
     "/years/2006/sites/twitter/": { href: "https://www.webdesignmuseum.org/gallery/twitter-2006", note: "Twttr · WDM 2006" },
     "/years/2007/sites/iphone/": { href: "https://www.webdesignmuseum.org/web-design-history/safari-1-0-2003", note: "iPhone Safari · period Safari history" },
-    "/years/2008/sites/github/": { href: "https://www.webdesignmuseum.org/gallery/year-2008", note: "GitHub · WDM year 2008" },
-    "/years/2010/sites/instagram/": { href: "https://www.webdesignmuseum.org/gallery/year-2010", note: "Instagram iOS · WDM year 2010" },
-    "/years/2011/sites/googleplus/": { href: "https://www.webdesignmuseum.org/gallery/year-2011", note: "Google+ · WDM year 2011" },
-    "/years/2013/sites/vine/": { href: "https://www.webdesignmuseum.org/gallery/year-2013", note: "Vine 6s · WDM year 2013" },
-    "/years/2014/sites/whatsapp/": { href: "https://www.webdesignmuseum.org/gallery/year-2014", note: "WhatsApp Install · WDM year 2014" },
-    "/years/2015/sites/periscope/": { href: "https://www.webdesignmuseum.org/gallery/year-2015", note: "Periscope · WDM year 2015" },
-    "/years/2016/sites/instagram/": { href: "https://www.webdesignmuseum.org/gallery/year-2016", note: "IG Stories · WDM year 2016" },
-    "/years/2017/sites/iphone/": { href: "https://www.webdesignmuseum.org/gallery/year-2017", note: "Face ID · WDM year 2017" },
-    "/years/2018/sites/gdpr/": { href: "https://www.webdesignmuseum.org/gallery/year-2018", note: "GDPR Manage · WDM year 2018" },
-    "/years/2019/sites/disneyplus/": { href: "https://www.webdesignmuseum.org/gallery/year-2019", note: "Disney+ Continue · WDM year 2019" },
-    "/years/2020/sites/zoom/": { href: "https://www.webdesignmuseum.org/gallery/year-2020", note: "Zoom Leave · WDM year 2020" },
-    "/years/2021/sites/att/": { href: "https://www.webdesignmuseum.org/gallery/year-2021", note: "ATT Ask · WDM year 2021" }
+    "/years/2008/sites/github/": { href: "", note: "[failed-final] GitHub issue · no named WDM exhibit" },
+    "/years/2010/sites/instagram/": { href: "", note: "[failed-final] Instagram iOS · WDM year-index is not a named exhibit" },
+    "/years/2011/sites/googleplus/": { href: "", note: "[failed-final] Google+ Hangout · WDM year-index is not a named exhibit" },
+    "/years/2013/sites/vine/": { href: "", note: "[failed-final] Vine 6s · WDM year-index is not a named exhibit" },
+    "/years/2014/sites/whatsapp/": { href: "", note: "[failed-final] WhatsApp Install · WDM year-index is not a named exhibit" },
+    "/years/2015/sites/periscope/": { href: "", note: "[failed-final] Periscope · WDM year-index is not a named exhibit" },
+    "/years/2016/sites/instagram/": { href: "", note: "[failed-final] IG Stories · WDM year-index is not a named exhibit" },
+    "/years/2017/sites/iphone/": { href: "", note: "[failed-final] Face ID · WDM year-index is not a named exhibit" },
+    "/years/2018/sites/gdpr/": { href: "", note: "[failed-final] GDPR Manage · WDM year-index is not a named exhibit" },
+    "/years/2019/sites/disneyplus/": { href: "", note: "[failed-final] Disney+ Continue · WDM year-index is not a named exhibit" },
+    "/years/2021/sites/att/": { href: "", note: "[failed-final] ATT Ask · WDM year-index is not a named exhibit" },
+    "/years/2022/sites/chatgpt/": { href: "", note: "[failed-final] ChatGPT Send · WDM year-index is not a named exhibit" }
   };
 
   function paintStarCite(doc) {
@@ -64,15 +64,37 @@
       p.className = "archive-residual";
       p.setAttribute("data-itt-capture-cite", "1");
       p.appendChild(doc.createTextNode("Museum reconstruction. "));
-      var a = doc.createElement("a");
-      a.href = rec.href;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.textContent = "Open the dated capture";
-      p.appendChild(a);
-      if (rec.note) p.appendChild(doc.createTextNode(" · " + rec.note));
+      if (rec.href) {
+        var a = doc.createElement("a");
+        a.href = rec.href;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "Open the dated capture";
+        p.appendChild(a);
+        if (rec.note) p.appendChild(doc.createTextNode(" · " + rec.note));
+      } else {
+        p.appendChild(doc.createTextNode(rec.note || "[failed-final] no official brand pixels"));
+      }
       doc.body.appendChild(p);
     } catch (eCite) { /* */ }
+  }
+
+  /** Official dests that are not star dests still get a failed-final cite. */
+  function paintOfficialCite(doc) {
+    doc = doc || document;
+    try {
+      if (doc.querySelector("[data-itt-capture-cite]")) return;
+      var key = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
+      if (!key) return;
+      if (!doc.body) return;
+      var p = doc.createElement("p");
+      p.className = "archive-residual";
+      p.setAttribute("data-itt-capture-cite", "1");
+      p.appendChild(
+        doc.createTextNode("[failed-final] Official dest · no official brand pixels. Museum reconstruction.")
+      );
+      doc.body.appendChild(p);
+    } catch (eOff) { /* */ }
   }
 
   function yearOf(doc) {
@@ -264,6 +286,10 @@
         say(st, "Wait first. Incomplete never writes.", true);
         return;
       }
+      if (!field && !picks.length && !reqs.need && !waitBtn) {
+        say(st, "Dest-true leftover needs a field, pick, tick, or wait. Empty never writes.", true);
+        return;
+      }
       var payload = {
         multiStep: true,
         real: true,
@@ -384,8 +410,25 @@
     return false;
   }
 
+  function isDestTrueLeftoverFace(n, destKey) {
+    if (!n || !n.getAttribute) return false;
+    if (n.getAttribute("data-uf17-host") === "1") return true;
+    if (n.getAttribute("data-itt-dest-true") === "1") return true;
+    /* Official dest leftover-3× is warehouse. Leftover dest leftover-3× is the dest face. */
+    if (destKey) return false;
+    if (n.getAttribute("data-itt-lo3x") != null) return true;
+    var cls = String(n.className || "");
+    if (/(^|\s)itt-pop3x-flow(\s|$)/.test(cls)) return true;
+    if (n.getAttribute("data-pop-panel") === "1" && !n.getAttribute("data-pop-key")) return true;
+    return false;
+  }
+
   function foldLeftoverRails(doc) {
     doc = doc || document;
+    var destKey = "";
+    try {
+      destKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
+    } catch (eK2) { /* */ }
     var nodeList = doc.querySelectorAll(
       "[data-itt-2x-links], [data-itt-2x-unique], [data-itt-2x-unique-b], [data-itt-2x-unique-c], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-3x-board, .itt-pop-more, .itt-pop-3x3"
     );
@@ -411,6 +454,7 @@
       if (!n || inAlsoYear(n)) continue;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
+      if (isDestTrueLeftoverFace(n, destKey)) continue;
       if (!firstOutside) firstOutside = n;
     }
     if (firstOutside && firstOutside.parentNode && !box.parentNode) {
@@ -421,6 +465,7 @@
       if (!n || inAlsoYear(n) || box.contains(n)) continue;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
+      if (isDestTrueLeftoverFace(n, destKey)) continue;
       body.appendChild(n);
       moved++;
     }
@@ -510,6 +555,7 @@
     bootProductVerb(doc);
     foldLeftoverRails(doc);
     paintStarCite(doc);
+    paintOfficialCite(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

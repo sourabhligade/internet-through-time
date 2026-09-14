@@ -62,5 +62,6 @@
 ## How to read
 
 1. This file.  
-5. **Implement only after you say so.**
+2. [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests.  
+3. [`DISK-TRUTH.md`](DISK-TRUTH.md). Do not dest-farm. Do not restore an old 2017 forest.
 

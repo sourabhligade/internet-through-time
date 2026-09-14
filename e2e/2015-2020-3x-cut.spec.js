@@ -134,11 +134,10 @@ async function walkDoor(page, door, gold) {
 }
 
 test.describe("CUT-3X-2015-2020 boarded stay empty", () => {
-  test("2018 and 2020 are live lean doors", () => {
+  test("2018 is a live lean door; 2020 is wiped", () => {
     expect(fs.existsSync(path.join(ROOT, "years", "2018", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(ROOT, "years", "2018", "sites", "gdpr", "index.html"))).toBe(true);
-    expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(true);
-    expect(fs.existsSync(path.join(ROOT, "years", "2020", "sites", "zoom", "meeting.html"))).toBe(true);
+    expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(false);
   });
 
   test("leftover 4× stays 0 on 2016 / 2017 dests", () => {

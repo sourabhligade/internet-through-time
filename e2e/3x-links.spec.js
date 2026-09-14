@@ -12,7 +12,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2020; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2022; y++) YEARS.push(String(y));
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "pages", "home.html"));

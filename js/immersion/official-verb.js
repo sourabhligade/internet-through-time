@@ -96,6 +96,13 @@
         form.querySelector("input[type='text'], input[type='search'], input:not([type]), textarea");
       if (field && !inSidePanel(field)) return field;
     }
+    var inputs = doc.querySelectorAll(
+      "[data-ml-caption], input[type='text'], input[type='search'], input:not([type]), textarea"
+    );
+    var i;
+    for (i = 0; i < inputs.length; i++) {
+      if (!inSidePanel(inputs[i])) return inputs[i];
+    }
     return null;
   }
 

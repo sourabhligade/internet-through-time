@@ -1,31 +1,66 @@
 /**
- * Hide leftover rails on first paint. leftover-official.js folds them
- * into details.itt-also-year. Open the drawer to see leftover machines.
+ * Hide leftover warehouse on official dests and Starting Point.
+ * Leftover dests keep dest-true leftover dest faces visible.
+ * leftover-official.js folds warehouse clones into details.itt-also-year.
  */
-[data-lo-panel]:not([data-itt-dest-true]),
-[data-itt-2x-links],
-[data-itt-2x-unique],
-[data-itt-2x-unique-b],
-[data-itt-2x-unique-c],
-[data-itt-3x-also]:not(details),
-[data-itt-3x-links],
-.itt-3x-board,
-[data-itt-pop-more],
-[data-itt-pop-3x3],
-[data-itt-pop3x],
-[data-itt-lo3x],
-[data-5x-loop],
-[data-4x-panel],
-.itt-pop3,
-.itt-pop3x-flow:not([data-itt-dest-true]),
-.itt-3x-also:not(details),
-.itt-3x-links,
-.itt-pop-more,
-.itt-pop-3x3,
-.itt-w2-official {
+html[data-official-key] [data-lo-panel]:not([data-itt-dest-true]),
+html[data-official-key] [data-itt-2x-links],
+html[data-official-key] [data-itt-2x-unique],
+html[data-official-key] [data-itt-2x-unique-b],
+html[data-official-key] [data-itt-2x-unique-c],
+html[data-official-key] [data-itt-3x-also]:not(details),
+html[data-official-key] [data-itt-3x-links],
+html[data-official-key] .itt-3x-board,
+html[data-official-key] [data-itt-pop-more],
+html[data-official-key] [data-itt-pop-3x3],
+html[data-official-key] [data-itt-pop3x],
+html[data-official-key] [data-itt-lo3x],
+html[data-official-key] [data-5x-loop],
+html[data-official-key] [data-4x-panel],
+html[data-official-key] .itt-pop3,
+html[data-official-key] .itt-pop3x-flow:not([data-itt-dest-true]),
+html[data-official-key] .itt-3x-also:not(details),
+html[data-official-key] .itt-3x-links,
+html[data-official-key] .itt-pop-more,
+html[data-official-key] .itt-pop-3x3,
+html[data-official-key] .itt-w2-official,
+html[data-itt-start] [data-lo-panel]:not([data-itt-dest-true]),
+html[data-itt-start] .itt-pop3x-flow:not([data-itt-dest-true]),
+html[data-itt-start] [data-itt-3x-also]:not(details),
+html[data-itt-start] .itt-3x-also:not(details),
+html[data-itt-start] [data-itt-lo3x],
+html[data-itt-start] [data-4x-panel],
+html[data-itt-start] [data-5x-loop],
+html[data-itt-start] .itt-pop-more,
+body.itt-start-page [data-lo-panel]:not([data-itt-dest-true]),
+body.itt-start-page .itt-pop3x-flow:not([data-itt-dest-true]),
+body.itt-start-page [data-itt-3x-also]:not(details),
+body.itt-start-page .itt-3x-also:not(details) {
+  display: none;
+}
+
+/* Leftover dest dest-true leftover dest face stays on dest. */
+[data-lo-panel][data-itt-dest-true],
+.itt-pop3x-flow[data-itt-dest-true],
+html:not([data-official-key]):not([data-itt-start]) .itt-pop3x-flow,
+html:not([data-official-key]):not([data-itt-start]) [data-itt-lo3x][data-pop-panel] {
+  display: block;
+}
+
+/* Leftover dest warehouse clones still fold. Leftover-3× dest face stays (rule above). */
+html:not([data-official-key]):not([data-itt-start]) [data-lo-panel]:not([data-itt-dest-true]),
+html:not([data-official-key]):not([data-itt-start]) [data-itt-3x-also]:not(details),
+html:not([data-official-key]):not([data-itt-start]) .itt-3x-also:not(details),
+html:not([data-official-key]):not([data-itt-start]) [data-itt-pop-more],
+html:not([data-official-key]):not([data-itt-start]) .itt-pop-more,
+html:not([data-official-key]):not([data-itt-start]) [data-4x-panel],
+html:not([data-official-key]):not([data-itt-start]) [data-5x-loop] {
   display: none;
 }
 details.itt-also-year {
+  display: none;
+}
+html[data-itt-deep] details.itt-also-year {
   display: block;
 }
 [data-lo-panel][data-itt-dest-true] {

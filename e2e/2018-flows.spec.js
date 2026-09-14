@@ -1,6 +1,5 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -62,21 +61,13 @@ test.describe("2018 flows", () => {
       expect(res.status(), dest).toBeLessThan(400);
     }
     await page.goto("/years/2018/sites/trust/index.html");
+    await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
     await page.evaluate(() => {
       localStorage.removeItem("itt18-gdpr");
       localStorage.removeItem("itt18-hear-lx");
     });
-    await page.reload();
-    await revealLeftoverRails(page);
-    const panel = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="hear-lx"]') }).first();
-    await panel.locator("[data-lo-save]").click();
+    await page.locator("[data-hear-sit]").click();
     expect(await getKey(page, "itt18-hear-lx")).toBeFalsy();
-    await panel.locator("[data-lo-pick='keep']").click();
-    const reqs = panel.locator("[data-lo-req]");
-    for (let i = 0; i < (await reqs.count()); i++) await reqs.nth(i).check();
-    await panel.locator("[data-lo-field]").fill("hear leftover");
-    await panel.locator("[data-lo-save]").click();
-    await expect.poll(() => getKey(page, "itt18-hear-lx")).toBeTruthy();
     expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
   });
 

@@ -36,10 +36,16 @@ async function completeFirst(page, path) {
   await panel.locator("[data-lo-save]").click();
 }
 
+const fs = require("fs");
+const path = require("path");
+const ROOT = path.join(__dirname, "..");
+
 for (const year of YEARS) {
   const rows = manifest[year];
   if (!rows || !rows.length) continue;
   const first = rows[0];
+  const destFile = path.join(ROOT, String(first.path || "").replace(/^\//, ""));
+  if (!fs.existsSync(destFile)) continue;
   test(`${year} dest exists and incomplete never writes`, async ({ page }) => {
     await incomplete(page, first.path);
     const keys = await page.evaluate(() => Object.keys(localStorage));

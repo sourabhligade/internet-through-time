@@ -31,10 +31,11 @@
     "test:e2e:2011": "playwright test e2e/2011-mvp.spec.js e2e/2011-flows.spec.js e2e/2011-densify.spec.js e2e/2011-trail-real-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2011 --workers=1",
     "test:e2e:2013": "playwright test e2e/2013-mvp.spec.js e2e/2013-flows.spec.js e2e/2013-densify.spec.js e2e/2013-trail-real-flows.spec.js e2e/2013-2018-leftover-dest-true.spec.js e2e/one-thing-per-year.spec.js --grep 2013 --workers=1",
     "test:e2e:2018": "playwright test e2e/2018-mvp.spec.js e2e/2018-flows.spec.js e2e/2013-2018-leftover-dest-true.spec.js e2e/2018-2022-leftover-3x.spec.js e2e/one-thing-per-year.spec.js --grep 2018 --workers=1",
-    "test:e2e:2020": "playwright test e2e/2020-mvp.spec.js e2e/2020-flows.spec.js  e2e/one-thing-per-year.spec.js --grep 2020 --workers=1",
+
+    "test:e2e:2022": "playwright test e2e/2022-mvp.spec.js e2e/2022-flows.spec.js e2e/2022-leftover.spec.js e2e/2022-rooms.spec.js e2e/2022-nav.spec.js e2e/one-thing-per-year.spec.js e2e/year-signature-flows.spec.js --grep 2022 --workers=1",
     "test:e2e:2014": "playwright test e2e/2014-mvp.spec.js e2e/2014-flows.spec.js e2e/2014-densify.spec.js e2e/2014-trail-real-flows.spec.js e2e/2014-every-flow.spec.js e2e/2014-4x-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2014 --workers=1",
     "test:e2e:2010": "playwright test e2e/2010-mvp.spec.js e2e/2010-flows.spec.js e2e/2010-densify.spec.js e2e/2010-trail-real-flows.spec.js --workers=1",
-    "test:e2e:2012": "playwright test e2e/2012-mvp.spec.js e2e/2012-flows.spec.js e2e/2012-densify.spec.js e2e/2012-trail-real-flows.spec.js e2e/2012-5x-live.spec.js e2e/2012-4x-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2012 --workers=1",
+    "test:e2e:2012": "playwright test e2e/2012-mvp.spec.js e2e/2012-flows.spec.js e2e/2012-densify.spec.js e2e/2012-trail-real-flows.spec.js e2e/2012-5x-live.spec.js e2e/one-thing-per-year.spec.js --grep 2012 --workers=1",
     "test:e2e:2002": "playwright test e2e/2002-mvp.spec.js e2e/2002-flows.spec.js e2e/2002-densify.spec.js e2e/2002-trail-real-flows.spec.js --workers=1",
     "test:e2e:2015": "playwright test e2e/2015-mvp.spec.js e2e/2015-flows.spec.js e2e/2015-densify.spec.js e2e/2015-trail-real-flows.spec.js --workers=1",
     "test:e2e:2015-2020-3x": "playwright test e2e/2015-2020-3x-cut.spec.js --workers=1",

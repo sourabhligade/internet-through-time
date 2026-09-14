@@ -28,7 +28,7 @@ test.describe("2017 official trail dests exist", () => {
     await expect(page.locator("[data-itt-ten-flows] a[href*='iphone/x']").first()).toBeVisible();
     await expect(page.locator("[data-itt-ten-flows] a[href*='fortnite']").first()).toBeVisible();
     await expect(page.locator("[data-itt-ten-flows] a[href*='playable/game']").first()).toBeVisible();
-    await expect(page.locator('a[href*="reddit"]').first()).toBeVisible();
-    await expect(page.locator('a[href*="amazon"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="reddit"]')).toHaveCount(0);
+    await expect(page.locator('a[href*="amazon"]')).toHaveCount(0);
   });
 });

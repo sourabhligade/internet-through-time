@@ -46,20 +46,15 @@ async function openDoor(page, row) {
 
 test.describe("2006–2010 leftover-3× ×3 home strips", () => {
   for (const year of YEARS) {
-    test(`${year} leftover-3× strips are 3× famous doors`, async ({ page }) => {
+    test(`${year} leftover-3× warehouse is not first paint`, async ({ page }) => {
+      test.skip(year === "2009", "2009 boarded — plaque, not a leftover warehouse door");
       await page.goto(`/years/${year}/pages/home.html`);
-  await revealLeftoverRails(page);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
-      const want = WANT[year];
-      await expect(page.locator(`[data-itt-pop3x="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
-        want.first
-      );
-      await expect(page.locator(`[data-itt-pop-more="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
-        want.more
-      );
-      await expect(page.locator(`[data-itt-pop-3x3="${year}"]`).first().locator('a[href*="sites/"]')).toHaveCount(
-        want.third
-      );
+      await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toBeVisible();
+      await expect(page.locator(`[data-itt-pop3x="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop-more="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop-3x3="${year}"]`)).toHaveCount(0);
+      void WANT[year];
     });
   }
 });

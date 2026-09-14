@@ -363,22 +363,7 @@ const THINGS = [
       await page.locator("[data-official-verb]").click();
     },
   },
-  {
-    year: "2020",
-    path: "/years/2020/sites/zoom/meeting.html",
-    key: "itt20-zoom",
-    incomplete: async (page) => {
-      await page.locator("[data-zoom-leave]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-zoom-req]").nth(0).check();
-      await page.locator("[data-zoom-req]").nth(1).check();
-      await page.locator("[data-zoom-mute]").click();
-      await page.locator("[data-zoom-chat]").fill("can you hear me");
-      await page.locator("[data-zoom-send]").click();
-      await page.locator("[data-zoom-leave]").click();
-    },
-  },
+
   {
     year: "2021",
     path: "/years/2021/sites/att/index.html",
@@ -390,6 +375,21 @@ const THINGS = [
       const reqs = page.locator("[data-official-verb-host] [data-official-req]");
       const n = await reqs.count();
       for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-verb-host] [data-official-verb]").click();
+    },
+  },
+  {
+    year: "2022",
+    path: "/years/2022/sites/chatgpt/index.html",
+    key: "itt22-chatgpt",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-need]").fill("explain this like I am five");
       await page.locator("[data-official-verb-host] [data-official-verb]").click();
     },
   },
@@ -468,15 +468,16 @@ test.describe("One-thing per year — load + REAL gate", () => {
       await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y}`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y} a[href="about.html"]`).first()).toBeVisible();
-      await expect(page.locator(".itt-year-true-pack").first()).toHaveCount(1);
+      await expect(page.locator(".itt-year-true-pack")).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop3x="${y}"]`)).toHaveCount(0);
       const first = await page.evaluate(() => {
-        const el = document.querySelector("[data-ott-one-thing], .ott-guided, .itt-year-true-pack");
+        const el = document.querySelector("[data-ott-one-thing], .ott-guided");
         if (!el) return "missing";
         if (el.hasAttribute("data-ott-one-thing") || el.querySelector("[data-ott-one-thing]")) return "one";
         if (el.classList.contains("ott-guided")) return "guided";
-        return "pack";
+        return "other";
       });
-      expect(first, `${y} first rail`).not.toBe("pack");
+      expect(first, `${y} first rail`).toMatch(/one|guided/);
     }
   });
 

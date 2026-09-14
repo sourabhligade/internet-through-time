@@ -481,6 +481,7 @@
       "sites/infoseek/index.html": "http://museum.local/years/2006/sites/infoseek/index.html",
       "sites/infoseek/search.html": "http://museum.local/years/2006/sites/infoseek/search.html",
       "sites/isp/index.html": "http://museum.local/years/2006/sites/isp/index.html",
+      "sites/itunes-note.html": "http://museum.local/years/2006/sites/itunes-note.html",
       "sites/itunes/browse.html": "http://museum.local/years/2006/sites/itunes/browse.html",
       "sites/itunes/fairplay.html": "http://museum.local/years/2006/sites/itunes/fairplay.html",
       "sites/itunes/index.html": "http://museum.local/years/2006/sites/itunes/index.html",

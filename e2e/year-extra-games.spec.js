@@ -193,7 +193,7 @@ test.describe("year extra games — minute machines", () => {
   }
 
   test("2016 home lists both extras", async ({ page }) => {
-    await page.goto("/years/2016/pages/home.html");
+    await page.goto("/years/2016/pages/home.html?deep=1");
     const extras = page.locator('[data-itt-year-extras="2016"]');
     await expect(extras.locator('a[href*="extra-a.html"]')).toBeVisible();
     await expect(extras.locator('a[href*="extra-b.html"]')).toBeVisible();

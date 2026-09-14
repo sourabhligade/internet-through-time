@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **27 years open** (1994–2008 + 2010–2019 + 2020–2021). **2009 boarded** (trees stay on disk · year-shell is a plaque · no year card). **2022 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2011 star = Google+ Hangout. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2018 star = GDPR Manage. 2019 star = Disney+ Continue subscribe. 2020 star = Zoom Leave. 2021 star = ATT Ask.
+Historical reconstruction of the World Wide Web — year by year. Hub **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded** (trees stay on disk · year-shell is a plaque · no year card). **2020 wiped.** **2023+ wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2011 star = Google+ Hangout. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2018 star = GDPR Manage. 2019 star = Disney+ Continue subscribe. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -98,11 +98,12 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2017/` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean** |
 | `/years/2018/` | **Live lean door** — GDPR Manage `itt18-gdpr` · leftover 2× ×2 · leftover 3× first + third |
 | `/years/2019/` | **Live lean door** — Disney+ Continue · 165 dests |
-| `/years/2020/` | **Live lean door** — Zoom mute → Leave `itt20-zoom` · leftover 2× ×2 · leftover-4× **0** |
+| `/years/2020/` | **Wiped** — no tree |
 | `/years/2021/` | **Live lean door** — ATT Ask `itt21-att` · leftover dest faces |
+| `/years/2022/` | **Live lean door** — ChatGPT Send `itt22-chatgpt` · 45 dests |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2011 + 2013–2021. Hub is **27 years open** (1994–2008 + 2010–2019 + 2020–2021). **2009 boarded.** **2022 wiped.** 2013 star = Vine 6s. 2018 star = GDPR Manage. 2019 star = Disney+ Continue. 2020 star = Zoom Leave. 2021 star = ATT Ask.
+**Lean doors:** 2007 + 2011 + 2013–2019 + 2021–2022. Hub is **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded.** **2020 wiped.** **2023+ wiped.** 2013 star = Vine 6s. 2018 star = GDPR Manage. 2019 star = Disney+ Continue. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md).  
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).  

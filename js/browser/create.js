@@ -192,8 +192,8 @@
     function ensureBackdropSane() {
       if (Chrome && Chrome.ensureBackdropSane) Chrome.ensureBackdropSane();
     }
-    function showAlert(title, msg) {
-      if (Chrome && Chrome.showAlert) Chrome.showAlert(title, msg);
+    function showAlert(title, msg, kind) {
+      if (Chrome && Chrome.showAlert) Chrome.showAlert(title, msg, kind);
     }
     function closeMenus() {
       if (Chrome && Chrome.closeMenus) Chrome.closeMenus();
@@ -411,6 +411,8 @@
     }
 
     function updateNavButtons() {
+      btnBack = document.getElementById("btn-back") || btnBack;
+      btnForward = document.getElementById("btn-forward") || btnForward;
       if (btnBack) btnBack.disabled = historyIndex <= 0;
       if (btnForward) btnForward.disabled = historyIndex < 0 || historyIndex >= historyStack.length - 1;
       renderGoHistory();
@@ -530,10 +532,21 @@
     }
 
     function goBack() {
+      var live = "";
+      try {
+        live = pathFromIframe() || "";
+      } catch (eL) {
+        live = "";
+      }
       if (historyIndex > 0) {
         historyIndex--;
         updateNavButtons();
         navigate(historyStack[historyIndex], { fromHistory: true });
+        return;
+      }
+      /* Iframe moved via an in-page link; chrome history never saw it. */
+      if (live && normalizePath(live).split("?")[0] !== normalizePath(HOME).split("?")[0]) {
+        navigate(HOME);
       }
     }
 
@@ -964,6 +977,20 @@
           }
         }
         wireDocument(doc, path.split("?")[0]);
+        try {
+          var livePath = path.split("?")[0];
+          var cur = normalizePath(currentPath()).split("?")[0];
+          if (livePath && livePath !== cur && livePath.indexOf("pages/error/") !== 0) {
+            historyStack = historyStack.slice(0, historyIndex + 1);
+            historyStack.push(livePath);
+            historyIndex = historyStack.length - 1;
+          }
+        } catch (eHist) { /* */ }
+        updateNavButtons();
+        bindNav("btn-back", goBack);
+        bindNav("btn-forward", goForward);
+        bindNav("btn-home", goHome);
+        bindNav("btn-reload", reload);
         ensureImmersion(doc);
         /* Unlock clicks as soon as the document is wired — do not wait for
            progressive-image drip (that used to keep .loading + dead links). */
@@ -1044,10 +1071,26 @@
     /* ============================================================
      * Shell nav (back / forward / home / location / dirbar)
      * ============================================================ */
-    if (btnBack) btnBack.addEventListener("click", goBack);
-    if (btnForward) btnForward.addEventListener("click", goForward);
-    on("btn-home", "click", goHome);
-    on("btn-reload", "click", reload);
+    function live(id) {
+      return document.getElementById(id);
+    }
+    function bindNav(id, fn) {
+      var el = live(id);
+      if (!el || el.getAttribute("data-itt-nav-bound") === "1") return;
+      el.setAttribute("data-itt-nav-bound", "1");
+      el.addEventListener("click", fn);
+    }
+    bindNav("btn-back", goBack);
+    bindNav("btn-forward", goForward);
+    bindNav("btn-home", goHome);
+    bindNav("btn-reload", reload);
+    window.setTimeout(function () {
+      bindNav("btn-back", goBack);
+      bindNav("btn-forward", goForward);
+      bindNav("btn-home", goHome);
+      bindNav("btn-reload", reload);
+      updateNavButtons();
+    }, 250);
     on("btn-stop", "click", stopLoad);
 
     on("btn-min", "click", function () {
@@ -1471,6 +1514,8 @@
       year: YEAR,
       navigate: navigate,
       goHome: goHome,
+      goBack: goBack,
+      goForward: goForward,
       reload: reload,
       displayUrl: displayUrl,
       currentPath: currentPath,
@@ -1478,7 +1523,8 @@
       getPrefs: function () { return prefs; },
       setSecureMode: setSecureMode,
       maybePhoneEvent: maybePhoneEvent,
-      focusContent: focusContent
+      focusContent: focusContent,
+      showAlert: showAlert
     };
     ITT.activeBrowser = api;
     try {

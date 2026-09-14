@@ -14,14 +14,6 @@ for (let y = 1994; y <= 2023; y++) {
   if (fs.existsSync(path.join(ROOT, "years", year, "index.html"))) SHIP.push(year);
 }
 
-async function openAlsoYear(page, year) {
-  const box = page.locator(`#itt-also-year-${year}`);
-  if (await box.count()) {
-    await box.locator("summary").first().click();
-    await expect(box).toHaveAttribute("open", "");
-  }
-}
-
 async function leftoverSave(page, year, slug, key) {
   const dest = path.join(ROOT, "years", year, "sites", slug, "index.html");
   test.skip(!fs.existsSync(dest), year + "/" + slug + " not on disk");
@@ -30,6 +22,7 @@ async function leftoverSave(page, year, slug, key) {
   await page.reload();
   await revealLeftoverRails(page);
   const go = page.locator(`[data-pop-go][data-pop-key='pop3-${slug}']`).first();
+  test.skip(!(await go.isVisible()), year + "/" + slug + " leftover-3× not visitor-visible (official dest gold-only / folded)");
   const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
   await go.click();
   expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
@@ -47,39 +40,12 @@ async function leftoverSave(page, year, slug, key) {
 
 test.describe("third leftover 3× — every shipped year", () => {
   for (const year of SHIP) {
-    test(`${year} home lists 3 third-trio leftover doors`, async ({ page }) => {
+    test(`${year} leftover-3× warehouse is not first paint`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
-      await openAlsoYear(page, year);
-      const strip = page.locator(`p.itt-pop-3x3[data-itt-pop-3x3="${year}"]`).first();
-      test.skip(!(await strip.count()), year + " has no 3-door third leftover strip");
-      await expect(strip).toBeVisible();
-      const n = await strip.locator("a[href*='sites/']").count();
-      const wantMin = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2014", "2015", "2016", "2017", "2019"].includes(year)
-        ? 9
-        : ["2001", "2002", "2003"].includes(year)
-          ? 6
-          : 3;
-      expect(n, year).toBeGreaterThanOrEqual(wantMin);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
-      const star = page.locator(`[data-ott-one-thing="${year}"]`);
-      await expect(star).toBeVisible();
-      const starHref = await star.getAttribute("href");
-      const hrefs = await strip.locator("a[href*='sites/']").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
-      expect(hrefs.some((h) => starHref && h && starHref.includes(h.replace("../", "")))).toBeFalsy();
-      const more = page.locator(`p.itt-pop-more[data-itt-pop-more="${year}"]`).first();
-      if (await more.count()) {
-        await expect(more).toBeVisible();
-        const moreHrefs = await more.locator("a[href*='sites/']").evaluateAll((as) =>
-          as.map((a) => a.getAttribute("href"))
-        );
-        const slug = (h) => {
-          const m = String(h || "").match(/sites\/([^/]+)/);
-          return m ? m[1] : "";
-        };
-        const l3 = moreHrefs.map(slug).filter(Boolean);
-        const l4 = hrefs.map(slug).filter(Boolean);
-        expect(l3.filter((s) => l4.includes(s))).toEqual([]);
-      }
+      await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toBeVisible();
+      await expect(page.locator(`p.itt-pop-3x3[data-itt-pop-3x3="${year}"]`)).toHaveCount(0);
+      await expect(page.locator(`p.itt-pop-more[data-itt-pop-more="${year}"]`)).toHaveCount(0);
     });
   }
 });

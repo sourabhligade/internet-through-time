@@ -35,7 +35,8 @@
     "2018": { machine: "Windows 10 · Chrome habit", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "" },
     "2019": { machine: "Windows 10 · Chrome habit", star: "Disney+ Continue", starHref: "sites/disneyplus/home.html", game: "" },
     "2020": { machine: "Windows 10 · Chrome habit", star: "Zoom Leave", starHref: "sites/zoom/meeting.html", game: "" },
-    "2021": { machine: "Windows 10 · Chrome habit", star: "ATT Ask", starHref: "sites/att/index.html", game: "" }
+    "2021": { machine: "Windows 10 · Chrome habit", star: "ATT Ask", starHref: "sites/att/index.html", game: "" },
+    "2022": { machine: "Windows 10 · Chrome habit", star: "ChatGPT Send", starHref: "sites/chatgpt/index.html", game: "Prompt Queue" }
   };
 
   function yearOf() {
@@ -63,7 +64,8 @@
     if (n <= 1997) return "b";
     if (n <= 2000) return "c";
     if (n <= 2008) return "d";
-    return "e";
+    if (n <= 2021) return "e";
+    return "f";
   }
 
   function cssHref() {

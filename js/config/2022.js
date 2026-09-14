@@ -1,0 +1,178 @@
+/**
+ * Year config — 2022 CUT-OPEN lean door
+ */
+(function (global) {
+  "use strict";
+  var ITT = global.ITT || (global.ITT = {});
+  ITT.configs = ITT.configs || {};
+
+  var rooms = [
+    "sites/reddit/index.html",
+    "sites/youtube/index.html",
+    "sites/youtube/shorts.html",
+    "sites/wikipedia/index.html",
+    "sites/instagram/index.html",
+    "sites/instagram/reels.html",
+    "sites/google/index.html",
+    "sites/facebook/index.html",
+    "sites/amazon/index.html",
+    "sites/netflix/index.html",
+    "sites/zoom/index.html",
+    "sites/chrome/index.html",
+    "sites/windows10/index.html",
+    "sites/apple/index.html",
+    "sites/apple/ios16.html",
+    "sites/nyt/index.html",
+    "sites/openai/index.html",
+    "sites/discord/index.html",
+    "sites/twitch/index.html",
+    "sites/spotify/index.html",
+    "sites/linkedin/index.html",
+    "sites/whatsapp/index.html",
+    "sites/snapchat/index.html",
+    "sites/github/index.html",
+    "sites/substack/index.html",
+    "sites/cohost/index.html",
+    "sites/tumblr/index.html",
+    "sites/pinterest/index.html",
+    "sites/nft/index.html",
+    "sites/coinbase/index.html",
+    "sites/layoffs/index.html",
+    "sites/youtubeshorts/index.html",
+    "sites/reels/index.html",
+    "sites/edge/index.html",
+    "sites/bluesky/index.html",
+    "sites/midjourney/index.html",
+    "sites/stablediffusion/index.html",
+    "sites/notion/index.html",
+    "index.html",
+    "pages/home.html",
+    "pages/about.html",
+    "pages/map.html",
+    "pages/whats-new.html",
+    "pages/error/404.html",
+    "pages/error/unreachable.html",
+    "sites/chatgpt/index.html",
+    "sites/wordle/index.html",
+    "sites/twitter/index.html",
+    "sites/twitter/files.html",
+    "sites/bereal/index.html",
+    "sites/iphone/14.html",
+    "sites/ftx/index.html",
+    "sites/mastodon/index.html",
+    "sites/tiktok/index.html",
+    "sites/windows11/index.html",
+    "sites/playable/game.html",
+    "sites/gmail/index.html",
+    "sites/outlook/index.html",
+    "sites/slack/index.html",
+    "sites/teams/index.html",
+    "sites/meet/index.html",
+    "sites/telegram/index.html",
+    "sites/signal/index.html",
+    "sites/messenger/index.html",
+    "sites/ebay/index.html",
+    "sites/etsy/index.html",
+    "sites/airbnb/index.html",
+    "sites/uber/index.html",
+    "sites/doordash/index.html",
+    "sites/paypal/index.html",
+    "sites/venmo/index.html",
+    "sites/robinhood/index.html",
+    "sites/opensea/index.html",
+    "sites/binance/index.html",
+    "sites/dropbox/index.html",
+    "sites/drive/index.html",
+    "sites/figma/index.html",
+    "sites/canva/index.html",
+    "sites/steam/index.html",
+    "sites/epic/index.html",
+    "sites/roblox/index.html",
+    "sites/hulu/index.html",
+    "sites/disneyplus/index.html",
+    "sites/hbomax/index.html",
+    "sites/kick/index.html",
+    "sites/espn/index.html",
+    "sites/bbc/index.html",
+    "sites/cnn/index.html",
+    "sites/archive/index.html",
+    "sites/imdb/index.html",
+    "sites/duolingo/index.html",
+    "sites/patreon/index.html",
+    "sites/medium/index.html",
+    "sites/wordpress/index.html",
+    "sites/craigslist/index.html",
+    "sites/maps/index.html"
+  ];
+
+  var urlMap = {
+    "index.html": "http://museum.local/index.html",
+    "pages/home.html": "http://home.microsoft.com/intl/web2022/",
+    "pages/about.html": "http://home.microsoft.com/intl/web2022/about.html",
+    "pages/map.html": "http://museum.local/years/2022/map/",
+    "pages/whats-new.html": "http://museum.local/pages/whats-new.html"
+  };
+  var i;
+  for (i = 0; i < rooms.length; i++) {
+    if (!urlMap[rooms[i]]) {
+      urlMap[rooms[i]] = "http://museum.local/years/2022/" + rooms[i];
+    }
+  }
+
+  ITT.configs["2022"] = {
+    year: "2022",
+    storagePrefix: "itt22",
+    home: "pages/home.html",
+    prefsKey: "itt-2022-prefs",
+    bookmarksKey: "itt-2022-bookmarks",
+    connectedKey: "itt-2022-connected",
+    immersionScript: "js/immersion-2022.js",
+    maximizedDefault: true,
+    browserTitleSuffix: " - Chrome habit",
+    connectMode: "broadband",
+    connectSpeedLine: "Connected · always-on broadband (museum)",
+    connectBrowserLine: "Starting Chrome habit (museum desktop frame)...",
+    defaultPrefs: {
+      underline: true,
+      expireDays: 30,
+      autoload: true,
+      modemDelay: 20,
+      homeUrl: "http://home.microsoft.com/intl/web2022/",
+      homePath: "pages/home.html",
+      showToolbar: true,
+      showLocation: true,
+      showDirbar: true,
+      showDesktopIcons: true,
+      desktopBg: "#0078d7"
+    },
+    perf: {
+      navJitterMax: 50,
+      navFixedMax: 40,
+      imageBudgetMs: 360,
+      imageMinStepMs: 30,
+      imageMaxStepMs: 80,
+      imageStartMs: 70,
+      connectEarlyMs: 100,
+      connectLineMs: 160,
+      connectBusyMs: 280,
+      connectEndMs: 120,
+      connectBusyChance: 0.08
+    },
+    urlMap: urlMap,
+    bookmarks: [
+      { title: "Starting Point", path: "pages/home.html" },
+      { title: "ChatGPT Send", path: "sites/chatgpt/index.html" },
+      { title: "Wordle leftover", path: "sites/wordle/index.html" },
+      { title: "Twitter bird leftover", path: "sites/twitter/index.html" }
+    ],
+    fallbackUrlBase: "http://home.microsoft.com/intl/web2022/",
+    locationHints: [
+      { re: /chatgpt|prompt|openai/i, path: "sites/chatgpt/index.html" },
+      { re: /wordle/i, path: "sites/wordle/index.html" },
+      { re: /twitter|bird|musk/i, path: "sites/twitter/index.html" },
+      { re: /bereal/i, path: "sites/bereal/index.html" },
+      { re: /island|iphone/i, path: "sites/iphone/14.html" },
+      { re: /ftx/i, path: "sites/ftx/index.html" }
+    ]
+  };
+})(typeof window !== "undefined" ? window : this);

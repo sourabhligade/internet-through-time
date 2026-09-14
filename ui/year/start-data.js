@@ -332,18 +332,7 @@
  " <a href=\"map.html\" style=\"color:#ffcdd2\">Year flow map</a> "
  ]
 },
- "2020": {
- "href": "../sites/zoom/meeting.html",
- "label": "\u2605 One-thing \u00b7 Zoom Leave REAL",
- "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2020</a> \u2014 table ends 2018 \u00b7 1,295,973,827 Jan \u00b7 300M participants",
- " <a href=\"../sites/zoom/meeting.html\" style=\"color:#90caf9\">\u2605 Zoom Leave</a> \u2014 Join never writes",
- " <a href=\"../sites/reels/index.html\" style=\"color:#90caf9\">Reels</a> \u2014 15s",
- " <a href=\"../sites/openai/index.html\" style=\"color:#90caf9\">GPT-3 waitlist</a> ",
- " <a href=\"../sites/flash/index.html\" style=\"color:#90caf9\">Flash EOL</a> \u2014 31 Dec",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
- ]
-},
+
  "2021": {
  "href": "../sites/att/index.html",
  "label": "★ One-thing · Ask App Not to Track REAL",
@@ -353,6 +342,18 @@
  " <a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal leftover</a> — 15 May delay",
  " <a href=\"../sites/copilot/index.html\" style=\"color:#90caf9\">Copilot waitlist</a> — not ChatGPT",
  " <a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename leftover</a> — app still Facebook",
+ " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
+ ]
+},
+ "2022": {
+ "href": "../sites/chatgpt/index.html",
+ "label": "★ One-thing · ChatGPT Send REAL",
+ "items": [
+ " <a href=\"about.html\" style=\"color:#90caf9\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
+ " <a href=\"../sites/chatgpt/index.html\" style=\"color:#90caf9\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
+ " <a href=\"../sites/wordle/index.html\" style=\"color:#90caf9\">Wordle leftover</a> — NYT 31 Jan",
+ " <a href=\"../sites/twitter/index.html\" style=\"color:#90caf9\">Twitter bird leftover</a> — X is 2023",
+ " <a href=\"../sites/bereal/index.html\" style=\"color:#90caf9\">BeReal leftover</a> — 2-min drop",
  " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
 }

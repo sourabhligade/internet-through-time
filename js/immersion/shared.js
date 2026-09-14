@@ -199,9 +199,83 @@
       return plain;
     }
 
+    function periodAlertTitle() {
+      var suf = config && config.browserTitleSuffix ? String(config.browserTitleSuffix) : "";
+      suf = suf.replace(/^\s*-\s*/, "").trim();
+      if (suf && !/habit/i.test(suf)) return suf;
+      var y = parseInt(YEAR, 10) || 1995;
+      if (y <= 1996) return "Netscape";
+      if (y <= 2014) return "Microsoft Internet Explorer";
+      return "JavaScript Alert";
+    }
+
+    function showInlinePeriodAlert(title, msg, kind) {
+      var host = document.getElementById("itt-period-alert");
+      if (!host) {
+        host = document.createElement("div");
+        host.id = "itt-period-alert";
+        host.setAttribute("role", "alertdialog");
+        host.setAttribute("aria-modal", "true");
+        host.innerHTML =
+          '<div class="itt-period-alert-box">' +
+          '<div class="itt-period-alert-title"></div>' +
+          '<div class="itt-period-alert-body">' +
+          '<span class="dialog-alert-icon" aria-hidden="true"></span>' +
+          '<p class="itt-period-alert-msg"></p></div>' +
+          '<div class="itt-period-alert-btns"><button type="button">OK</button></div></div>';
+        var st = document.createElement("style");
+        st.textContent =
+          "#itt-period-alert{position:fixed;inset:0;z-index:20000;background:rgba(0,0,0,.35);" +
+          "display:flex;align-items:center;justify-content:center;font-family:'MS Sans Serif',Tahoma,sans-serif}" +
+          "#itt-period-alert[hidden]{display:none!important}" +
+          ".itt-period-alert-box{width:360px;max-width:94vw;background:#c0c0c0;color:#000;" +
+          "border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #404040;border-bottom:2px solid #404040;" +
+          "box-shadow:3px 3px 0 #0006}" +
+          ".itt-period-alert-title{background:#000080;color:#fff;font-weight:bold;font-size:11px;padding:3px 6px}" +
+          ".itt-period-alert-body{display:flex;gap:12px;padding:14px 16px 8px;font-size:12px}" +
+          ".itt-period-alert-msg{margin:0;white-space:pre-wrap;flex:1;line-height:1.35}" +
+          ".itt-period-alert-btns{text-align:right;padding:0 12px 12px}" +
+          ".itt-period-alert-btns button{min-width:72px;padding:3px 14px;font-size:11px;background:#c0c0c0;" +
+          "border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #404040;border-bottom:2px solid #404040}";
+        host.appendChild(st);
+        document.body.appendChild(host);
+        host.querySelector("button").onclick = function () {
+          host.hidden = true;
+        };
+      }
+      var warn = kind === "warn" || kind === "error";
+      host.querySelector(".itt-period-alert-title").textContent = title || periodAlertTitle();
+      host.querySelector(".itt-period-alert-msg").textContent = msg || "";
+      var ic = host.querySelector(".dialog-alert-icon");
+      if (ic) {
+        ic.className = "dialog-alert-icon dialog-alert-icon--" + (warn ? "warn" : "info");
+        ic.style.cssText =
+          "flex:0 0 32px;width:32px;height:32px;line-height:28px;text-align:center;font-weight:bold;font-size:20px;" +
+          (warn
+            ? "background:#ffc000;border:2px solid #000;color:#000"
+            : "background:#000080;border:2px solid #000040;color:#fff");
+        ic.textContent = warn ? "!" : "i";
+      }
+      host.hidden = false;
+      try {
+        host.querySelector("button").focus();
+      } catch (eF) { /* */ }
+    }
+
+    function showPeriodAlert(title, msg, kind) {
+      var parent = api.parentBrowser ? api.parentBrowser() : null;
+      if (parent && typeof parent.showAlert === "function") {
+        parent.showAlert(title || periodAlertTitle(), msg, kind);
+        return;
+      }
+      showInlinePeriodAlert(title, msg, kind);
+    }
+
     api.periodEra = periodEra;
     api.periodFace = periodFace;
     api.periodTitleBg = periodTitleBg;
+    api.periodAlertTitle = periodAlertTitle;
+    api.showPeriodAlert = showPeriodAlert;
     api.actionFeedback = actionFeedback;
     api.resolveStatusNode = resolveStatusNode;
 

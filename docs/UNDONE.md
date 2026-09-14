@@ -1,9 +1,9 @@
 # What is undone
 
-**Date:** 2026-09-14  
-**Tree:** `museum/1994-2020-lean` (local dirty after this pass until commit)  
+**Date:** 2026-09-15  
+**Tree:** `museum/1994-2020-lean`  
 **Status:** Audit. Not ship law.  
-**Out of scope:** missing years (no `years/2022`–`years/2025`). Do not treat “add 2022+” as leftover.
+**Out of scope:** wiped years (`years/2020`, `years/2023`–`years/2025`). Do not treat “restore 2020 / add 2023+” as leftover.
 
 Ship law: [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 Plans audited: [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) · [`2017-2X-REALITY.md`](2017-2X-REALITY.md).
@@ -16,7 +16,7 @@ Verified on disk this pass: official-10 leftover-panel counts, leftover dest `da
 
 | Item | Where |
 |------|--------|
-| 27 years open · 2009 plaque · 2022+ wiped | Hub, `itt_gate.py`, DISK-TRUTH, pushed |
+| 27 years open · 2009 plaque · 2020 wiped · 2022 live · 2023+ wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 **30 unique dests** on disk | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §4 |
 | 2016 + 2018–2021 official dest leftover-2× panels **= 0** | same strip as 2017 official 10 (2026-09-14 pass) |
 | 2017 official dests leftover-2× panels **= 0** | `years/2017/sites/{iphone/x,fortnite,twitter/280,teams,vine/gone,switch,wannacry,musically,equifax,playable/game}.html` |
@@ -131,9 +131,9 @@ Unchecked / stale:
 | **0** | `[ ]` Unlock Actions billing or stop claiming CI | **Unknown.** Not checked |
 | **2B** | `[ ]` 2009 real lean door (Like as star) | **Not done.** Plaque (2A) is the shipped choice |
 | **3** | Official 10 remaining dests capture-cite | **Pending** on non-2017 official dests |
-| **4** | `[ ]` Year-shell “same brand, next year” | **No control** in `ui/year/` |
-| **4** | `[ ]` Finish Yahoo / Google follow-a-site trails | Mid years missing |
-| **4** | `[ ]` Atlas as a walk | Atlas is still a floor plan (`atlas/`, `js/atlas.js`) |
+| **4** | `[x]` Year-shell “same brand, next year” | `js/config/follow-site.js` + exit-bar |
+| **4** | `[x]` Finish Yahoo / Google follow-a-site trails | Mid years that exist on disk |
+| **4** | `[x]` Atlas as a walk | Walk copy + expanded Yahoo/Google threads |
 | **5 Dest-farm lock** | `[ ]` 2019, 2021, 2017, 2015 | **Not done** |
 | **5** | `[ ]` 2004, 2008, 1999–2003, 2005–2007, 2010 | **Not done** |
 | **5** | `[ ]` 2009 only after Slice 2 | 2009 boarded; dest tree stays |
@@ -181,9 +181,9 @@ Workshop dests (not official 10) still have leftover-2× HTML.
 | `js/immersion/leftover-official.js` | Empty/field/pick checks exist. dest-true leftover dests **without** field/picks still write on first `[data-lo-save]` |
 | `js/immersion/year-popular-3x.js` | Empty field / no-pick checks exist. dest-true leftover-3× **visibility** is fold vs dest-true |
 | `ui/year/` | No “same brand, next year” control |
-| `js/config/year-playable.js` | Cabinets **1994–2010 only**. 2011+ year games use `js/games/year-game-boot.js` + per-year files. **No 2019/2021 entries** in `yearPlayableGames` |
+| `js/config/year-playable.js` | Cabinets now include **2011–2021**. 2006 is TrailSled (`sled`). 2019 Continue Row + 2021 Five Letter leftover are registered |
 | `assets/period/2011`–`2021` | **0** period files (2012/2013/2015 empty/stub dirs) |
-| `js/immersion/leftover-official.js` `STAR_CITE` | WDM `/gallery/year-2001`–`year-2021` for stars. WDM’s own About limits the project to **mid-2000s**. Late-year cites are the #10 leftover |
+| `js/immersion/leftover-official.js` `STAR_CITE` | Late-year / year-index WDM URLs replaced with **failed-final**. Named exhibits kept only where they exist (Yahoo 1994, Amazon 1995, Google 1998, YouTube 2005, Twttr 2006, Safari history) |
 
 ### 5.5 Storm Circle
 
@@ -223,15 +223,15 @@ Fail pile (that run, **before** leftover-3× reveal/skip on official dests):
 | `e2e/2010-flows.spec.js` | 3 |
 | plus 2010-trail, atlas, capture-backed, cross-year, scenario, year-extra-cde | 3 each |
 
-After `20b20c076`, leftover-3× tests **reveal workshop rails** and **skip** leftover-3× on gold-only official dests. **`year-3x3-all` was not re-run museum-wide.** Sample (1994/2017/2018 leftover-3× + 2017 unique): **59 passed · 1 failed** (2017 Switch leftover-3× on official dest — then skip added).
+After `20b20c076`, leftover-3× tests **reveal workshop rails** and **skip** leftover-3× on gold-only official dests. **`year-3x3-all` re-run 2026-09-14:** 5 passed · 211 skipped · 0 failed. Leftover dest leftover-3× dest face shipped the same day.
 
 ### 6.3 Specs skipped / replaced
 
 | Spec | Why |
 |------|-----|
-| `e2e/2017-2x-3x.spec.js` | `describe.skip` — clone leftover-2× dest-true **replaced** by unique dests. File still in tree |
-| `e2e/2009-flows.spec.js` · `2009-densify` · `2009-trail` · `2009-2x-3x` | Boarded (not a missing year — tree stays) |
-| `e2e/2012-4x-flows.spec.js` | leftover-4× lock **0** |
+| `e2e/2017-2x-3x.spec.js` | **Deleted** 2026-09-14 — clone leftover-2× dest-true replaced by unique dests |
+| `e2e/2009-flows.spec.js` · `2009-densify` · `2009-trail` · `2009-2x-3x` | **Deleted** 2026-09-14 — boarded dest packs. Keep `2009-mvp` |
+| `e2e/2012-4x-flows.spec.js` | **Deleted** 2026-09-14 — leftover-4× lock 0 |
 
 ### 6.4 No unique-flow spec for other years
 
@@ -257,14 +257,14 @@ Closed: **#6** docs vs disk · **#7** matrix 404s.
 
 ## 8. Do next (order)
 
-1. ~~Scorecard + Storm Circle New Game empty e2e + official leftover strip 2016/2018–2021 + Slice 0 flip.~~ **Done this pass.**
-2. Re-run `e2e/year-3x3-all.spec.js` museum-wide (221 fails may drop after reveal/skip).
-3. leftover dest-true **empty never writes** on dest-farm dests — `#8`.
+1. ~~Scorecard + Storm Circle New Game empty e2e + official leftover strip 2016/2018–2021 + Slice 0 flip.~~ **Done.**
+2. ~~Re-run `e2e/year-3x3-all.spec.js` museum-wide (221 fails may drop after reveal/skip).~~ **Done 2026-09-14.** 5 passed · 211 skipped · 0 failed (official dest leftover-3× gold-only). Leftover dest leftover-3× dest face shipped (`leftover-official.js` + `itt-leftover-fold.css` + `e2e/leftover-dest-3x-face.spec.js`).
+3. ~~leftover dest-true **empty never writes** on dest-farm dests — `#8`.~~ **Engine guard shipped** (`leftover-official.js`: no field/pick/req/wait → never writes).
 4. Dest-farm **lock** (`#9` / Phase H) — only if lean doors are the product.
 5. Unique leftover dest maps for **2013 / 2014 / 2015 / 2018–2021** (none exist).
-6. Follow-a-site year-shell control (PRODUCT-IMPROVE Slice 4).
-7. 18 leftover dest **cites** or leave failed-final on purpose.
-8. Replace WDM `/gallery/year-2010`–`year-2021` `STAR_CITE` with named exhibits or failed-final (`#10`).
+6. ~~Follow-a-site year-shell control (PRODUCT-IMPROVE Slice 4).~~ **Done** (`js/config/follow-site.js` + exit-bar control + hub/atlas trails).
+7. 18 leftover dest **cites** — left **failed-final on purpose**.
+8. ~~Replace WDM `/gallery/year-2010`–`year-2021` `STAR_CITE`.~~ **Done** (failed-final; named exhibits kept only where they exist).
 9. Period assets 2011+ (0 files).
 10. Verify GitHub Actions billing / Pages (Slice 0 leftover).
 

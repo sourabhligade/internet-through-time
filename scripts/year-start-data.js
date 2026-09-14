@@ -38,7 +38,7 @@ function assertStartCatalog(start) {
   const years = Object.keys(start).sort();
   const live = years.filter((y) => fs.existsSync(path.join(ROOT, "years", y, "index.html")));
   const ship = [];
-  for (let y = 1994; y <= 2021; y++) {
+  for (let y = 1994; y <= 2022; y++) {
     const s = String(y);
     if (WIPED.has(s)) continue;
     if (fs.existsSync(path.join(ROOT, "years", s, "index.html"))) ship.push(s);
@@ -46,7 +46,7 @@ function assertStartCatalog(start) {
   if (live.length !== ship.length) {
     issues.push("START live years " + live.length + " != ship " + ship.length);
   }
-  for (const y of ["2007", "2010", "2014", "2020"]) {
+  for (const y of ["2007", "2010", "2014", "2021", "2022"]) {
     if (!start[y] && fs.existsSync(path.join(ROOT, "years", y, "index.html"))) {
       issues.push(y + " live door missing from YearUI.START");
     }

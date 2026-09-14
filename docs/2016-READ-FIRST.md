@@ -1,7 +1,7 @@
 # 2016 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **28 years open**. `years/2016/` is the **live lean door** (Instagram Stories star). **2020 / 2023–2025 wiped.** 2013 Vine and 2018 GDPR are live lean doors.  
+**Disk truth:** Hub is **27 years open**. `years/2016/` is the **live lean door** (Instagram Stories star). **2020 wiped.** **2023–2025 wiped.** 2013 Vine, 2018 GDPR, 2021 ATT, and 2022 ChatGPT are live lean doors.  
 **Prefix:** `itt16`  
 **Clone shape from:** live `years/2015/` (lean door · ~32 HTML · Periscope star). **Do not** restore git `HEAD` `years/2016/` or `/tmp/itt-2016-forest-backup-*`.
 
@@ -59,4 +59,5 @@
 ## How to read
 
 1. This file.  
-5. **Implement only after you say so.**
+2. [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+3. Do not dest-farm. Do not restore an old 2016 forest.

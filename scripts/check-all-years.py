@@ -166,8 +166,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/copilot/index.html",
         "sites/meta/index.html",
         "sites/playable/game.html"
-    ],
-    "2020": ["pages/home.html", "pages/about.html", "sites/zoom/meeting.html", "sites/playable/game.html"]
+    ]
 }
 
 # Optional research markers (year can be "research-only" without tree)

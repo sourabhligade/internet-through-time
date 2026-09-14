@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Author-only museum map — hallway, gold dests, leftover law, 2020 door, CI.
+"""Author-only museum map — hallway, gold dests, leftover law, CI.
 
 Not visitor-facing. Not linked from the hub.
   python3 scripts/generate-museum-map.py
@@ -14,10 +14,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "museum-map"
-LOCK_4X = {"2012", "2013", "2016", "2017", "2018", "2019", "2020"}
+LOCK_4X = {"2012", "2013", "2016", "2017", "2018", "2019"}
 NO_SECOND = {"2013", "2018"}
 BOARDED = ["2009"]
-WIPED = ["2022", "2023", "2024", "2025"]
+WIPED = ["2020", "2023", "2024", "2025"]
 
 
 def dump_disk() -> dict:
@@ -172,17 +172,6 @@ def render(data: dict) -> str:
             f'<div class="tick board"><div class="y">{escape(y)}</div><div class="g">wiped</div></div>'
         )
 
-    y20 = next(r for r in years if r["year"] == "2020")
-    boxes = []
-    for s in y20["official"]:
-        star = " star" if s["n"] == 1 else ""
-        boxes.append(
-            f'<div class="box{star}"><b>{s["n"]}. {escape(s["name"])}</b>'
-            f'<div class="path">{escape(s["href"])}</div>'
-            f'<div class="path">→ {escape(s["next"] or "")}</div></div>'
-        )
-    flow20 = '<div class="arrow">→</div>'.join(boxes[:5]) + '</div><div class="flow" style="margin-top:8px">' + '<div class="arrow">→</div>'.join(boxes[5:])
-
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,7 +185,7 @@ def render(data: dict) -> str:
 <div class="wrap">
 <header>
   <h1>Internet Through Time — disk map</h1>
-  <p class="lede">27 years open · 2009 boarded · 2022+ wiped · leftover-2× ×2 on every dest · incomplete never writes.</p>
+  <p class="lede">27 years open · 2009 boarded · 2020 wiped · 2023+ wiped · leftover-2× ×2 on every dest · incomplete never writes.</p>
   <p class="banner">Author only. Not linked from the hub. Names come from <code>js/atlas-data.js</code>, <code>js/config/flow-trails.js</code>, and <code>scripts/popular-3x-sites.json</code>.</p>
 </header>
 
@@ -218,15 +207,8 @@ def render(data: dict) -> str:
   <div class="slot lock"><b>leftover-4×</b> lock 0 on {escape(", ".join(sorted(LOCK_4X)))}.</div>
 </div>
 
-<h2 id="y2020-door">2020 Zoom lean door <span>15 dest folders · leftover-4× 0</span></h2>
-<p class="lede">Star: Join is a trap. Mute → chat → Leave writes <code>itt20-zoom</code>. 300 million is daily meeting participants, not users. No ILS June 2020 websites cell.</p>
-<div class="flow">{flow20}</div>
-<div class="row" style="margin-top:10px">
-  <span class="pill">3× first: youtube · wikipedia · facebook</span>
-  <span class="pill">3× third: teams · vine · tiktok</span>
-  <span class="pill">2× ×2 every dest</span>
-  <span class="pill lock">4× 0</span>
-</div>
+<h2 id="y2020-door">2020 <span>wiped · no tree</span></h2>
+<p class="lede">No <code>years/2020/</code>. Zoom Leave is not a live door. Rebuild only when named.</p>
 
 <h2 id="golds">Every gold + official 10 <span>exact dest paths</span></h2>
 <div class="grid">{''.join(gold_cards)}</div>
@@ -239,7 +221,7 @@ def render(data: dict) -> str:
       <li>smoke-production.py</li>
       <li>audit-internal-links.py — 440,253 / 0 broken</li>
       <li>test-authenticity.py — 84/84</li>
-      <li>test-pipeline.py — sitemap includes /years/2020/</li>
+      <li>test-pipeline.py — sitemap lists ship years only (2020 wiped)</li>
       <li>check-5x-contract.py</li>
       <li>audit-mock-flows.js</li>
       <li>check-all-years.py — 29/29</li>
@@ -254,7 +236,7 @@ def render(data: dict) -> str:
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× · 2008 CUT-DOUBLE + 5×</li>
       <li>2014 mvp/flows/4× · 2018 mvp/flows</li>
-      <li>2020 mvp/flows · 2022 mvp/flows/4×</li>
+      <li>2022 mvp/flows</li>
       <li>2016–2018 3× + trail · 2017–2019 deepen</li>
     </ul>
     <p class="path">Not this script: leftover-official dest-minutes (~12k) · full 317-spec tree</p>

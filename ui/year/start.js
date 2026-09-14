@@ -26,7 +26,7 @@
     }
     var el = document.createElement("link");
     el.rel = "stylesheet";
-    el.href = scriptDir() + "start.css?v=20260911light";
+    el.href = scriptDir() + "start.css?v=20260914quiet";
     el.setAttribute("data-itt-year-start-css", "1");
     (document.head || document.documentElement).appendChild(el);
   }
@@ -46,12 +46,15 @@
       "min-height:100%!important;margin:0}" +
       "html[data-itt-year=\"2015\"] body.itt-start-page,html[data-itt-year=\"2016\"] body.itt-start-page," +
       "html[data-itt-year=\"2017\"] body.itt-start-page,html[data-itt-year=\"2018\"] body.itt-start-page," +
-      "html[data-itt-year=\"2020\"] body.itt-start-page{background:#f3f3f3!important;color:#111!important}" +
+      "html[data-itt-year=\"2019\"] body.itt-start-page,html[data-itt-year=\"2020\"] body.itt-start-page," +
+      "html[data-itt-year=\"2021\"] body.itt-start-page{background:#f3f3f3!important;color:#111!important}" +
       "html[data-itt-year=\"2015\"] .ott-guided,html[data-itt-year=\"2015\"] .ott-flows," +
       "html[data-itt-year=\"2016\"] .ott-guided,html[data-itt-year=\"2016\"] .ott-flows," +
       "html[data-itt-year=\"2017\"] .ott-guided,html[data-itt-year=\"2017\"] .ott-flows," +
       "html[data-itt-year=\"2018\"] .ott-guided,html[data-itt-year=\"2018\"] .ott-flows," +
-      "html[data-itt-year=\"2020\"] .ott-guided,html[data-itt-year=\"2020\"] .ott-flows{" +
+      "html[data-itt-year=\"2019\"] .ott-guided,html[data-itt-year=\"2019\"] .ott-flows," +
+      "html[data-itt-year=\"2020\"] .ott-guided,html[data-itt-year=\"2020\"] .ott-flows," +
+      "html[data-itt-year=\"2021\"] .ott-guided,html[data-itt-year=\"2021\"] .ott-flows{" +
       "background:#fff!important;color:#111!important}" +
       "#itt-year-start,.ott-guided,.ott-flows,.itt-layer-assess,#itt-first-night-bar," +
       ".itt-also-year,.itt-home-more{width:100%!important;max-width:none!important;" +
@@ -71,6 +74,7 @@
     ensureFill();
     try {
       document.documentElement.setAttribute("data-itt-year", year);
+      if (isDeep()) document.documentElement.setAttribute("data-itt-deep", "1");
       if (document.body) {
         document.body.setAttribute("data-itt-year", year);
         document.body.setAttribute("data-itt-start", "1");
@@ -131,7 +135,7 @@
         }
         extra.innerHTML = extraHtml;
       }
-      var chipId = "itt-famous-chip-" + year + "-dp";
+      var chipId = "itt-famous-chip-" + year;
       var chip = document.getElementById(chipId);
       if (!chip && host.parentNode) {
         chip = document.createElement("p");
@@ -144,23 +148,25 @@
         else if (host.nextSibling) host.parentNode.insertBefore(chip, host.nextSibling);
         else host.parentNode.appendChild(chip);
       }
-      var threeId = "ott-3x-" + year + "-dp";
-      var three = document.getElementById(threeId);
-      if (!three && host.parentNode) {
-        var threeHtml = threeXRow(year);
-        if (threeHtml) {
-          three = document.createElement("div");
-          three.innerHTML = threeHtml;
-          three = three.firstChild;
-          var afterChip = document.getElementById(chipId);
-          if (afterChip && afterChip.nextSibling) {
-            afterChip.parentNode.insertBefore(three, afterChip.nextSibling);
-          } else if (afterChip) {
-            afterChip.parentNode.appendChild(three);
-          } else if (host.nextSibling) {
-            host.parentNode.insertBefore(three, host.nextSibling);
-          } else {
-            host.parentNode.appendChild(three);
+      if (isDeep()) {
+        var threeId = "ott-3x-" + year + "-dp";
+        var three = document.getElementById(threeId);
+        if (!three && host.parentNode) {
+          var threeHtml = threeXRow(year);
+          if (threeHtml) {
+            three = document.createElement("div");
+            three.innerHTML = threeHtml;
+            three = three.firstChild;
+            var afterChip = document.getElementById(chipId);
+            if (afterChip && afterChip.nextSibling) {
+              afterChip.parentNode.insertBefore(three, afterChip.nextSibling);
+            } else if (afterChip) {
+              afterChip.parentNode.appendChild(three);
+            } else if (host.nextSibling) {
+              host.parentNode.insertBefore(three, host.nextSibling);
+            } else {
+              host.parentNode.appendChild(three);
+            }
           }
         }
       }
@@ -172,21 +178,6 @@
           ' <a href="../../../index.html" target="_top"><b>← Museum hub</b></a> · or use desktop <b>Exit</b>/ window Close';
         document.body.appendChild(hub);
       }
-      if (year === "2001" || year === "2002" || year === "2003") {
-        var freezeId = "itt-leftover18-" + year + "-dp";
-        if (!document.getElementById(freezeId) && host.parentNode) {
-          var freeze = document.createElement("p");
-          freeze.id = freezeId;
-          freeze.className = "itt-mass-honesty";
-          freeze.setAttribute("data-itt-mass", "leftover-18");
-          freeze.innerHTML =
-            "<b>Year dest freeze</b> — named dests stay at 18. No new dest folders. Costume is XP + IE6.";
-          var threeEl = document.getElementById(threeId);
-          var anchor = threeEl || document.getElementById(chipId) || host;
-          if (anchor.nextSibling) anchor.parentNode.insertBefore(freeze, anchor.nextSibling);
-          else anchor.parentNode.appendChild(freeze);
-        }
-      }
       scheduleFold(year);
     }
 
@@ -194,21 +185,22 @@
     else loadFlowTrails(finish);
   }
 
+  function isDeep() {
+    try {
+      if (/\bdeep=1\b/.test(String(location.search || ""))) return true;
+      if (document.documentElement.getAttribute("data-itt-deep") === "1") return true;
+      if (window.parent && window.parent !== window) {
+        var ps = String((window.parent.location && window.parent.location.search) || "");
+        if (/\bdeep=1\b/.test(ps)) return true;
+      }
+    } catch (eD) { /* */ }
+    return false;
+  }
+
   function playableChipHtml(year) {
-    var leanCabinet = year === "2007" || year === "2009" || year === "2018" || year === "2020";
-    if (leanCabinet) {
-      return (
-        "<b>▶ Play this year’s games</b> — " +
-        '<a href="../sites/playable/game.html">year cabinet</a>'
-      );
-    }
     return (
-      "<b>▶ Play this year’s games</b> — " +
-      '<a href="../sites/playable/famous.html">Famous games</a>' +
-      ' · <a href="../sites/playable/extra-a.html">extra-a</a>' +
-      ' · <a href="../sites/playable/extra-b.html">extra-b</a>' +
-      ' · <a href="../sites/playable/more-a.html">more-a</a>' +
-      ' · <a href="../sites/playable/more-b.html">more-b</a>'
+      "<b>▶ Play</b> — " +
+      '<a href="../sites/playable/game.html">this year’s game</a>'
     );
   }
 
@@ -270,9 +262,7 @@
         esc(t.n || i + 1) +
         " · " +
         esc(t.name || "") +
-        "</b></a>";
-      if (t.nextLabel) lis += " <span class=\"ott-flow-next\">→ " + esc(t.nextLabel) + "</span>";
-      lis += "</li>";
+        "</b></a></li>";
     }
     return (
       '<div class="ott-flows" id="ott-flows-' +
@@ -381,12 +371,40 @@
     function go() {
       foldAlsoYear(document.body, year);
       tuckExtra(year);
+      quietMore(year);
     }
     go();
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", go);
     }
     setTimeout(go, 0);
+  }
+
+  function quietMore(year) {
+    var deep = isDeep();
+    try {
+      if (deep) document.documentElement.setAttribute("data-itt-deep", "1");
+    } catch (eQ) { /* */ }
+    var box = document.getElementById("itt-also-year-" + year);
+    if (box) {
+      if (deep) box.setAttribute("open", "open");
+      else box.removeAttribute("open");
+    }
+    var more = document.getElementById("itt-more-year");
+    if (!more && !deep && document.body) {
+      more = document.createElement("p");
+      more.id = "itt-more-year";
+      more.className = "itt-more-year";
+      more.innerHTML = '<a href="?deep=1">More rooms this year</a>';
+      var after = document.getElementById("itt-famous-chip-" + year) || document.getElementById("itt-year-start");
+      if (after && after.parentNode) {
+        if (after.nextSibling) after.parentNode.insertBefore(more, after.nextSibling);
+        else after.parentNode.appendChild(more);
+      } else {
+        document.body.appendChild(more);
+      }
+    }
+    if (more && deep && more.parentNode) more.parentNode.removeChild(more);
   }
 
   function tuckExtra(year) {
@@ -402,6 +420,8 @@
       hoist.className = "itt-year-honesty";
       extra.parentNode.insertBefore(hoist, extra);
     }
+    var felt = extra.querySelector(".itt-felt-trail");
+    if (felt && !hoist.contains(felt)) hoist.appendChild(felt);
     var i;
     for (i = 0; i < kids.length; i++) {
       if (isHonesty(kids[i])) hoist.appendChild(kids[i]);
