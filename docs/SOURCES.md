@@ -397,7 +397,7 @@ These are **project-authored** documents that organize the sources above — not
 | Project inventory | `docs/PROJECT-INVENTORY.md` |
 | External bibliography (this file) | `docs/SOURCES.md` |
 | **Master provenance (everything)** | `docs/MASTER-PROVENANCE.md` |
-| Link/content audit | `docs/SOURCE-AUDIT.md` |
+| Link/content audit | (removed · bibliography is this file) |
 
 ---
 

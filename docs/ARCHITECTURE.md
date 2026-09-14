@@ -1,6 +1,6 @@
 # Architecture — Internet Through Time
 
-**Purpose:** Keep the repo aligned as years grow (1994 → 2000+).  
+**Purpose:** Keep the repo aligned as years grow (1994–2008 + 2010–2021 live · 2009 boarded · 2022+ wiped).  
 **Rule of thumb:** *Year differences live in config + content. Shared behavior lives once in `js/`.*
 
 ---

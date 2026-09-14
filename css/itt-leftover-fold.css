@@ -17,7 +17,7 @@
 [data-5x-loop],
 [data-4x-panel],
 .itt-pop3,
-.itt-pop3x-flow,
+.itt-pop3x-flow:not([data-itt-dest-true]),
 .itt-3x-also:not(details),
 .itt-3x-links,
 .itt-pop-more,

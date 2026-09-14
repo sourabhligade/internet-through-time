@@ -296,22 +296,6 @@
     "title": "Huffington Post residual"
   },
   {
-    "year": "2006",
-    "id": "wikileaks",
-    "path": "/years/2006/sites/wikileaks/index.html",
-    "key": "itt06-wikileaks",
-    "type": "twoClick",
-    "title": "WikiLeaks residual"
-  },
-  {
-    "year": "2006",
-    "id": "youtubeembed",
-    "path": "/years/2006/sites/youtubeembed/index.html",
-    "key": "itt06-youtubeembed",
-    "type": "twoClick",
-    "title": "YouTube embed residual"
-  },
-  {
     "year": "2008",
     "id": "evernote",
     "path": "/years/2008/sites/evernote/index.html",

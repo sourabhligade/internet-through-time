@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+// Clone leftover-2× dest-true replaced by 2017-unique-flows dest-true unique dests.
 const { revealLeftoverRails } = require("./helpers");
 const YEAR = "2017";
 const STAR = "itt17-faceid";
@@ -83,7 +84,7 @@ async function completeLo(page, href, key) {
     if (off !== key) expect(await getKey(page, off), key + " wrote " + off).toBeFalsy();
   }
 }
-test.describe("2017 leftover-2× 3× dest-true", () => {
+test.describe.skip("2017 leftover-2× 3× dest-true", () => {
   test("home strips dest-disjoint", async ({ page }) => {
     const res = await page.goto("/years/2017/pages/home.html");
     expect(res && res.ok()).toBeTruthy();

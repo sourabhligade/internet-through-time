@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 
 async function getKey(page, key) {
@@ -118,8 +119,9 @@ test.describe("2017 flows", () => {
     await page.goto("/years/2017/sites/reddit/index.html");
     await page.evaluate(() => localStorage.removeItem("itt17-pop-reddit"));
     await page.reload();
+    await revealLeftoverRails(page);
     const go = page.locator('[data-pop-go][data-pop-id="reddit"]:not([data-pop-key])').first();
-    await go.click();
+    await go.click({ force: true });
     expect(await getKey(page, "itt17-pop-reddit")).toBeFalsy();
     await page.locator("[data-pop-field]").first().fill("front page");
     await go.click();
@@ -132,14 +134,26 @@ test.describe("2017 flows", () => {
     await expect(page.locator('[data-next-flow] a[href*="youtube"]').first()).toBeVisible();
   });
 
-  test("Animoji does not write without Face ID", async ({ page }) => {
+  test("Animoji leftover dest-true never writes Face ID", async ({ page }) => {
     await page.goto("/years/2017/sites/iphone/animoji.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt17-faceid");
       localStorage.removeItem("itt17-animoji");
     });
     await page.reload();
-    await expect(page.locator("[data-animoji-need]")).toBeVisible();
+    await page.locator("[data-animoji-send]").click();
     expect(await getKey(page, "itt17-animoji")).toBeFalsy();
+    await page.locator("[data-animoji-pick=panda]").click();
+    await page.locator("[data-animoji-send]").click();
+    await expect.poll(async () => getKey(page, "itt17-animoji"), { timeout: 8000 }).toBeTruthy();
+    expect(await getKey(page, "itt17-faceid")).toBeFalsy();
+    const blob = JSON.parse((await getKey(page, "itt17-animoji")) || "{}");
+    expect(blob.leftover).toBe(true);
+  });
+
+  test("Storm Circle official dest exists dest-true", async ({ page }) => {
+    await page.goto("/years/2017/sites/playable/game.html");
+    await expect(page.locator("[data-year-game][data-game-id=stormcircle]")).toBeVisible();
+    await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
   });
 });

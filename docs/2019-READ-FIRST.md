@@ -4,7 +4,7 @@
 **Status:** **LIVE lean door.** Hub card open. `years/2019/` on disk (**165 dests · 202 HTML**). leftover-312 is stale. Do not `git checkout` an old 2019 forest.  
 **Disk truth:** Hub is **27 years open** · **2009 boarded** · **2022 wiped**. 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt19`  
-**Clone shape from:** live `years/2017/` (Face ID lean door · **55 dests · 91 HTML · 312 leftover machines**). **Do not** clone wiped `years/2018/`. **Do not** restore `/tmp/itt-2019-forest-backup-20260815`, git `HEAD` `years/2019/`, or any 2019 Consent Dash clone.
+**Clone shape from:** live `years/2017/` (Face ID lean door · dest-farm still on disk, not a dest target). **Do not** clone wiped `years/2018/`. **Do not** restore `/tmp/itt-2019-forest-backup-20260815`, git `HEAD` `years/2019/`, or any 2019 Consent Dash clone.
 
 | Doc | Role |
 |-----|------|
@@ -23,7 +23,7 @@
 
 | Role | Product | Key |
 |------|---------|-----|
-| **Star** | **Disney+ Who’s watching + Continue** · 12 Nov · trial never writes | `itt19-disneyplus` |
+| **Star** | **Disney+ Continue** · 12 Nov · trial never writes | `itt19-disneyplus` |
 | P0 leftover | TikTok For You · 2019 US mass · COPPA 27 Feb | `itt19-tiktok` |
 | P0 leftover | Apple Arcade · 19 Sep · $4.99 · no IAP | `itt19-arcade` |
 | P0 leftover | Apple TV+ · 1 Nov · $4.99 | `itt19-appletv` |
@@ -32,10 +32,10 @@
 
 ## Do
 
-- Clone live **2017**, rewrite rooms. Guided **exactly 6**. Official dests named hooks. Dest folders **55** · leftover machines **target 312** (same bar as 2017). 5k websites = research envelope, not dest farm.  
+- Clone live **2017**, rewrite rooms. Guided **exactly 6**. Official dests named hooks. Dest folders **165** · leftover-312 is stale. 5k websites = research envelope, not dest farm.  
 - Dual-cite: Live Stats June table **ends 2018** at **1,630,322,579 (−8%)**. Do **not** invent a June 2019 websites cell. ITU **4.1B / 53.6%** (Facts and Figures 2019 · PR 5 Nov 2019).  
 - Shell: Win10 mass · Chrome habit · iOS 13 / iPadOS. Chromium Edge is a **preview** (ships 15 Jan 2020).  
-- Star / trail #1 / year-start = `sites/disneyplus/home.html` (Who’s watching). `index.html` is the trial trap only.  
+- Star / trail #1 / year-start = `sites/disneyplus/home.html` (Continue). `index.html` is the trial trap only. Do not quote “Who’s watching” as 2019 Disney press.  
 - Year game is **Continue Row**, not Consent Dash.
 
 ## Do not

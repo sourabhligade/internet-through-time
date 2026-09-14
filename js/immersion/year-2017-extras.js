@@ -80,12 +80,6 @@
     var st = doc.querySelector("[data-animoji-status]");
     var need = doc.querySelector("[data-animoji-need]");
     var ready = doc.querySelector("[data-animoji-ready]");
-    var face = YX.loadJSON(key("faceid"));
-    if (!(face && face.noHomeButton)) {
-      if (need) need.removeAttribute("hidden");
-      if (ready) ready.setAttribute("hidden", "");
-      return;
-    }
     if (need) need.setAttribute("hidden", "");
     if (ready) ready.removeAttribute("hidden");
     var picked = "";
@@ -98,16 +92,65 @@
       });
     }
     send.addEventListener("click", function () {
-      if (!YX.loadJSON(key("faceid"))) {
-        feedback("Unlock Face ID first. Animoji never writes the official key.", st, { error: true });
-        return;
-      }
       if (!picked) {
-        feedback("Pick a face class first.", st, { error: true });
+        feedback("Pick a face class first. Empty never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("animoji"), blob({ face: picked }));
-      feedback("Sent (theater) · · itt17-animoji", st);
+      saveJSON(key("animoji"), blob({ leftover: true, unique: true, face: picked }));
+      feedback("Sent (theater) · leftover · itt17-animoji", st);
+      reveal(doc);
+    });
+  }
+
+  function bootUniqueFlow(doc) {
+    var host = doc.querySelector("[data-uf17-host]");
+    if (!host) return;
+    var suf = host.getAttribute("data-uf17-key") || "";
+    if (!suf) return;
+    var need = host.getAttribute("data-uf17-need") || "ticks";
+    var st = host.querySelector("[data-uf17-status]");
+    var trap = host.querySelector("[data-uf17-trap]");
+    var save = host.querySelector("[data-uf17-save]");
+    var picked = "";
+    var picks = host.querySelectorAll("[data-uf17-pick]");
+    var i;
+    for (i = 0; i < picks.length; i++) {
+      picks[i].addEventListener("click", function () {
+        picked = this.getAttribute("data-uf17-pick") || "";
+        if (st) st.textContent = "Picked " + picked + ".";
+      });
+    }
+    if (trap) {
+      trap.addEventListener("click", function () {
+        feedback("Trap. Face ID is the chip. That click never writes.", st, { error: true });
+      });
+    }
+    if (YX.loadJSON(key(suf)) && YX.loadJSON(key(suf)).unique) {
+      feedback("Leftover unique · " + key(suf), st);
+      reveal(doc);
+    }
+    if (!save) return;
+    save.addEventListener("click", function () {
+      if (need === "ticks" && countChecked(host, "[data-uf17-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      if (need === "pick" && !picked) {
+        feedback("Pick first. Empty never writes.", st, { error: true });
+        return;
+      }
+      if (need === "field") {
+        var field = host.querySelector("[data-uf17-field]");
+        var q = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
+        if (q.length < 2) {
+          feedback("Type leftover first. Empty never writes.", st, { error: true });
+          return;
+        }
+        saveJSON(key(suf), blob({ leftover: true, unique: true, q: q.slice(0, 80) }));
+      } else {
+        saveJSON(key(suf), blob({ leftover: true, unique: true, pick: picked || "" }));
+      }
+      feedback("Leftover unique · " + key(suf), st);
       reveal(doc);
     });
   }
@@ -386,6 +429,7 @@
     bootEquifax(doc);
     bootMl(doc);
     bootPeriodTheater(doc, "p17");
+    bootUniqueFlow(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {
