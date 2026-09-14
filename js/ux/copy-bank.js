@@ -34,7 +34,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. ← Exit (Year menu) leaves this year. Starting Point is the year map.",
+        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
       gameFocus: "Click the game board for keyboard focus, or use on-screen controls."
     },
     nav: {

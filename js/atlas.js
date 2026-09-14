@@ -9,8 +9,8 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
-  for (y = 1994; y <= 2022; y++) {
+  var WIPED = { "2009": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
+  for (y = 1994; y <= 2021; y++) {
     if (!WIPED[String(y)]) YEARS_ALL.push(String(y));
   }
 
@@ -573,8 +573,8 @@
       rec = data.years[yr];
       if (rec.wiped || !isOpen(yr)) continue;
       if (rec.gold) pushRow(rows, rec.gold.label + " " + yr + " gold", rec.gold.href, yr + " · " + rec.gold.label, "gold");
- if (rec.Gold) {
- pushRow(rows, rec.Gold.label +" "+ yr, rec.Gold.href, yr +" · "+ rec.Gold.label,"leftoverGold");
+      if (rec.leftoverGold) {
+        pushRow(rows, rec.leftoverGold.label + " " + yr, rec.leftoverGold.href, yr + " · " + rec.leftoverGold.label, "leftoverGold");
       }
       guided = guidedOf(yr);
       guided.forEach(function (g) {

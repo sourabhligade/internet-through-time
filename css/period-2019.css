@@ -82,17 +82,18 @@
 }
 .dplus19-honesty { margin: 10px 0; font-size: 12px; color: #ccc; }
 .dplus19-trial {
+  background: transparent;
+  color: #aaa;
+  border: 0;
+  padding: 6px 0;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.dplus19-continue {
   background: #e50914;
   color: #fff;
   border: 0;
   padding: 10px 18px;
-  font-weight: bold;
-}
-.dplus19-continue {
-  background: #111;
-  color: #fff;
-  border: 1px solid #e50914;
-  padding: 8px 14px;
   font-weight: bold;
 }
 .dplus19-row { margin: 8px 0; font-size: 12px; color: #ccc; }

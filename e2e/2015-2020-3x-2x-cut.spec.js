@@ -1,9 +1,9 @@
 // @ts-check
 /**
  * CUT-3X-2X-2015-2020 — leftover 3× second pack, E2E, not mock.
- * Live years: 2015 / 2016 / 2017 / 2019.
+ * Live years: 2015 / 2016 / 2017.
  * Doors 10–18 (2016 doors 10–15 only). Today’s 9 stay in 2015-2020-3x-cut.spec.js.
- * 2018 / 2020 stay boarded. Stars / guided 6 / official gold stay put.
+ * 2018 / 2020 are live lean doors. 2019 lean leftover-3× is e2e/2019-flows.spec.js.
  */
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
@@ -77,26 +77,6 @@ const LIVE = {
       { dest: "/years/2017/sites/yahoo3b/index.html", go: "[data-pop-go][data-pop-id='pop3-yahoo3b']", key: "itt17-pop3-yahoo3b", next: "iphone8/index.html", nextKey: "itt17-pop3-iphone8", weather: /3 Oct 2017|3 billion/i, lx: ["itt17-yahoo3b-dp"], never: ["itt17-faceid"] },
       { dest: "/years/2017/sites/iphone8/index.html", go: "[data-pop-go][data-pop-id='pop3-iphone8']", key: "itt17-pop3-iphone8", next: "pixel2/index.html", nextKey: "itt17-pop3-pixel2", weather: /22 Sep 2017|#1 technology/i, lx: ["itt17-iphone8-dp"], never: ["itt17-faceid"] },
       { dest: "/years/2017/sites/pixel2/index.html", go: "[data-pop-go][data-pop-id='pop3-pixel2']", key: "itt17-pop3-pixel2", next: "pages/home.html", nextKey: "", weather: /4 Oct 2017|Pixel 2/i, lx: ["itt17-px-6x"], never: ["itt17-faceid"] },
-    ],
-  },
-  2019: {
-    star: "itt19-disneyplus",
-    starHref: "disneyplus",
-    gold: ["itt19-disneyplus", "itt19-tiktok", "itt19-arcade", "itt19-stadia", "itt19-appletv", "itt19-airpods-pro", "itt19-iphone11"],
-    want: 18,
-    today: ["youtube", "instagram", "wikipedia", "facebook", "fortnite", "hidelikes", "tiktok", "stadia", "arcade"],
-    official: ["disneyplus", "tiktok", "arcade", "appletv", "stadia", "iphone", "airpodspro", "chrome", "windows10", "playable"],
-    ils: ["1,630,322,579", "4.1B"],
-    doors: [
-      { dest: "/years/2019/sites/gplus/index.html", go: "[data-pop-go][data-pop-id='gplus']", key: "itt19-pop-gplus", next: "inbox/index.html", nextKey: "itt19-pop-inbox", weather: /2 Apr 2019|Google\+/i, lx: ["itt19-gplus-lx", "itt19-gplus-die"], never: ["itt19-disneyplus"] },
-      { dest: "/years/2019/sites/inbox/index.html", go: "[data-pop-go][data-pop-id='inbox']", key: "itt19-pop-inbox", next: "cnil/index.html", nextKey: "itt19-pop-cnil", weather: /off 2 Apr 2019|Inbox by Gmail/i, lx: ["itt19-inbox-lx", "itt19-inbox-off"], never: ["itt19-disneyplus"] },
-      { dest: "/years/2019/sites/cnil/index.html", go: "[data-pop-go][data-pop-id='cnil']", key: "itt19-pop-cnil", next: "fortnitewc/index.html", nextKey: "itt19-pop-fortnitewc", weather: /€50M|21 Jan 2019/i, lx: ["itt19-cnil-lx", "itt19-cnil-50"], never: ["itt19-disneyplus"] },
-      { dest: "/years/2019/sites/fortnitewc/index.html", go: "[data-pop-go][data-pop-id='fortnitewc']", key: "itt19-pop-fortnitewc", next: "oculusquest/index.html", nextKey: "itt19-pop-oculusquest", weather: /26–28 Jul 2019|Bugha|Arthur Ashe/i, lx: ["itt19-wc-lx", "itt19-wc-cup"], never: ["itt19-disneyplus", "itt19-pop-fortnite"] },
-      { dest: "/years/2019/sites/oculusquest/index.html", go: "[data-pop-go][data-pop-id='oculusquest']", key: "itt19-pop-oculusquest", next: "libra/index.html", nextKey: "itt19-pop-libra", weather: /21 May 2019|\$399/i, lx: ["itt19-quest-lx", "itt19-quest-buy"], never: ["itt19-disneyplus"] },
-      { dest: "/years/2019/sites/libra/index.html", go: "[data-pop-go][data-pop-id='libra']", key: "itt19-pop-libra", next: "slack/index.html", nextKey: "itt19-pop3-slack", weather: /18 Jun 2019|Diem/i, lx: ["itt19-libra-lx", "itt19-libra-wp"], never: ["itt19-disneyplus"] },
-      { dest: "/years/2019/sites/slack/index.html", go: "[data-pop-go][data-pop-id='pop3-slack']", key: "itt19-pop3-slack", next: "huawei/index.html", nextKey: "itt19-pop3-huawei", weather: /20 Jun 2019|WORK/i, lx: ["itt19-sl-lx", "itt19-sl-ws"], never: ["itt19-disneyplus", "itt15-pop-slack"] },
-      { dest: "/years/2019/sites/huawei/index.html", go: "[data-pop-go][data-pop-id='pop3-huawei']", key: "itt19-pop3-huawei", next: "area51/index.html", nextKey: "itt19-pop3-area51", weather: /Entity List|15–16 May 2019/i, lx: ["itt19-hw-lx", "itt19-hw-gms"], never: ["itt19-disneyplus"] },
-      { dest: "/years/2019/sites/area51/index.html", go: "[data-pop-go][data-pop-id='pop3-area51']", key: "itt19-pop3-area51", next: "pages/home.html", nextKey: "", weather: /27 Jun 2019|Storm Area 51/i, lx: ["itt19-a51-lx", "itt19-a51-raid"], never: ["itt19-disneyplus", "itt20-zoom"] },
     ],
   },
 };
@@ -223,8 +203,8 @@ test.describe("CUT-3X-2X-2015-2020 boarded stay empty", () => {
     }
   });
 
-  test("dest folders stay 71 / 32 / 55 / 55", () => {
-    const want = { 2015: 71, 2016: 32, 2017: 55, 2019: 55 };
+  test("dest folders stay 71 / 44 / 70 / 47", () => {
+    const want = { 2015: 71, 2016: 44, 2017: 70, 2019: 47 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;

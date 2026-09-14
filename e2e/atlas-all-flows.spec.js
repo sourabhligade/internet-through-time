@@ -11,20 +11,20 @@ const trio = require("../scripts/popular-3x3-sites.json");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+  "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"
 ];
 const WIPED = [];
 const LEAN = [
   "2007",
   "2011",
-  "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+  "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
   rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
   phone: ["2008", "2010", "2011", "2012", "2013"],
-  stream: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"]
+  stream: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"]
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -55,8 +55,7 @@ const GOLD = {
   "2018": /GDPR Manage/i,
   "2019": /Disney\+/i,
   "2020": /Zoom Leave/i,
-  "2021": /ATT Ask|Ask App Not to Track/i,
-  "2022": /ChatGPT Send/i
+  "2021": /Meta rename/i
 };
 
 function twoXByYear() {
@@ -130,10 +129,10 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
   });
 
-  test("hallway does not list years after 2022", async ({ page }) => {
+  test("hallway does not list years after 2021", async ({ page }) => {
     await page.goto("/atlas/");
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toBeVisible();
-    for (const y of ["2023", "2024", "2025"]) {
+    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toBeVisible();
+    for (const y of ["2022", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
   });
@@ -231,10 +230,10 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(28);
+    await expect(officialYears).toHaveCount(25);
   });
 
-  test("first night is the real 5-stop walk; hallway ends at 2021", async ({ page }) => {
+  test("first night is the real 5-stop walk; hallway ends at 2020", async ({ page }) => {
     await page.goto("/atlas/");
     const night = page.locator("#trail-first-night");
     await expect(night).toContainText(/Stops in 2010/i);
@@ -253,7 +252,7 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).not.toHaveClass(/wiped/);
     await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).not.toHaveClass(/wiped/);
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).not.toHaveClass(/wiped/);
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).not.toHaveClass(/wiped/);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2025"]')).toHaveCount(0);
   });
 

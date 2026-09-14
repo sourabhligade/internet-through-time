@@ -379,10 +379,25 @@ const THINGS = [
       await page.locator("[data-zoom-leave]").click();
     },
   },
+  {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-verb-host] [data-official-verb]").click();
+    },
+  },
 ];
 
 test.describe("One-thing per year — load + REAL gate", () => {
   for (const t of THINGS) {
+    if (t.year === "2009") continue;
     test(`${t.year} loads and incomplete does not write ${t.key}`, async ({ page }) => {
       test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);

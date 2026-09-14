@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
+test.skip(true, "2009 boarded — dest packs are not a visitor door");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);

@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { leftoverOfficialDest, revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -27,7 +27,6 @@ test.describe("2007 flows", () => {
     await expect.poll(() => getKey(page, "itt07-iphone")).toBeTruthy();
   });
   test("leftover dest dest-true leftover-official never writes gold", async ({ page }) => {
-    const { leftoverOfficialDest } = require("./helpers");
     await leftoverOfficialDest(page, "/years/2007/sites/facebook/index.html", "facebook-c", "itt07-iphone");
   });
 });

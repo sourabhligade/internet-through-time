@@ -1,8 +1,8 @@
 # 2011 — READ FIRST (live lean door)
 
 **Date:** 2026-09-12  
-**Status:** **live lean door**. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× every dest · leftover-2× unique 10 dest-true. Leftover-4× **0**.  
-**Dest source:** [`years/2011/dests.json`](../years/2011/dests.json)  
+**Status:** **live lean door**. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× every dest · leftover-3× **18+18+18**. Leftover-4× **0**.  
+**Dest source:** `years/2011/` + `js/config/2011.js`. There is no `dests.json`.  
 **Do not** `git checkout` an older forest. Harvest notebooks were removed.
 
 | Doc | Role |
@@ -54,8 +54,8 @@ Harvest notebooks and the 10,320-URL corpus dump were removed. **Not 10,320 room
 ## How to read this pack
 
 1. This file (do / do not).  
-2. [`years/2011/dests.json`](../years/2011/dests.json) — dest source of truth.
+2. `years/2011/` + `js/config/2011.js` — dest source of truth.
 
 ## Leftover unique websites
 
-Leftover-2× unique 10 is on disk (`wechat` → `batmanarkhamcity`). Leftover-3× first/second/third stay the existing home strips. Do not dest-farm leftover-3× unless lifted by name.
+No leftover-2× unique dest-farm. Leftover-3× first / pop-more / third stay the existing home strips (**18+18+18**). Do not dest-farm leftover-3× unless lifted by name.

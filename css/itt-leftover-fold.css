@@ -2,10 +2,14 @@
  * Hide leftover rails on first paint. leftover-official.js folds them
  * into details.itt-also-year. Open the drawer to see leftover machines.
  */
-[data-lo-panel],
+[data-lo-panel]:not([data-itt-dest-true]),
 [data-itt-2x-links],
+[data-itt-2x-unique],
+[data-itt-2x-unique-b],
+[data-itt-2x-unique-c],
 [data-itt-3x-also]:not(details),
 [data-itt-3x-links],
+.itt-3x-board,
 [data-itt-pop-more],
 [data-itt-pop-3x3],
 [data-itt-pop3x],
@@ -24,6 +28,33 @@
 details.itt-also-year {
   display: block;
 }
+[data-lo-panel][data-itt-dest-true] {
+  display: block;
+}
+
+html[data-itt-deep] [data-lo-panel]:not([data-itt-dest-true]),
+html[data-itt-deep] [data-itt-2x-links],
+html[data-itt-deep] [data-itt-2x-unique],
+html[data-itt-deep] [data-itt-2x-unique-b],
+html[data-itt-deep] [data-itt-2x-unique-c],
+html[data-itt-deep] [data-itt-3x-also]:not(details),
+html[data-itt-deep] [data-itt-3x-links],
+html[data-itt-deep] .itt-3x-board,
+html[data-itt-deep] [data-itt-pop-more],
+html[data-itt-deep] [data-itt-pop-3x3],
+html[data-itt-deep] [data-itt-pop3x],
+html[data-itt-deep] [data-itt-lo3x],
+html[data-itt-deep] [data-5x-loop],
+html[data-itt-deep] [data-4x-panel],
+html[data-itt-deep] .itt-pop3,
+html[data-itt-deep] .itt-pop3x-flow,
+html[data-itt-deep] .itt-3x-also:not(details),
+html[data-itt-deep] .itt-3x-links,
+html[data-itt-deep] .itt-pop-more,
+html[data-itt-deep] .itt-pop-3x3,
+html[data-itt-deep] .itt-w2-official {
+  display: block;
+}
 
 /* Dest-true dest face stays on the dest. Leftover rails fold. */
 html[data-official-key] [data-official-verb-host],
@@ -33,8 +64,12 @@ html[data-official-key] .crumb {
 }
 details.itt-also-year[open] [data-lo-panel],
 details.itt-also-year[open] [data-itt-2x-links],
+details.itt-also-year[open] [data-itt-2x-unique],
+details.itt-also-year[open] [data-itt-2x-unique-b],
+details.itt-also-year[open] [data-itt-2x-unique-c],
 details.itt-also-year[open] [data-itt-3x-also],
 details.itt-also-year[open] [data-itt-3x-links],
+details.itt-also-year[open] .itt-3x-board,
 details.itt-also-year[open] [data-itt-pop-more],
 details.itt-also-year[open] [data-itt-pop-3x3],
 details.itt-also-year[open] [data-itt-pop3x],

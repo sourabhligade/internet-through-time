@@ -49,7 +49,8 @@ async function completeLo(page, destPath, year, suffix, star) {
   await page.evaluate((k) => localStorage.removeItem(k), star);
   const save = page.locator(`[data-lo-save][data-lo-key="${suffix}"]`).first();
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
-  await save.waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await save.waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction(
     (suf) => {
       const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');

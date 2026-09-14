@@ -14,6 +14,67 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
+  try {
+    if (/\bdeep=1\b/.test(String(location.search || ""))) {
+      document.documentElement.setAttribute("data-itt-deep", "1");
+    }
+  } catch (eDeepQ) { /* */ }
+
+  /** Star dests only — dated capture, not SOURCES.md. */
+  var STAR_CITE = {
+    "/years/1994/sites/yahoo/": { href: "https://www.webdesignmuseum.org/gallery/yahoo-1994", note: "Yahoo 1994 · WDM · no 1994 Wayback HTML" },
+    "/years/1995/sites/amazon/": { href: "https://www.webdesignmuseum.org/gallery/amazon-1995", note: "Amazon 1995 · WDM" },
+    "/years/1998/sites/google/": { href: "https://web.archive.org/web/19981202230410/http://google.com/", note: "Google! · Wayback 1998-12-02" },
+    "/years/2001/sites/wikipedia/": { href: "https://www.webdesignmuseum.org/gallery/year-2001", note: "Wikipedia UseMod · WDM year 2001" },
+    "/years/2002/sites/stumbleupon/": { href: "https://www.webdesignmuseum.org/gallery/year-2002", note: "StumbleUpon · WDM year 2002" },
+    "/years/2003/sites/photobucket/": { href: "https://www.webdesignmuseum.org/gallery/year-2003", note: "Photobucket · WDM year 2003" },
+    "/years/2004/sites/facebook/": { href: "https://www.webdesignmuseum.org/gallery/year-2004", note: "thefacebook · WDM year 2004" },
+    "/years/2005/sites/youtube/": { href: "https://www.webdesignmuseum.org/gallery/youtube-2005", note: "YouTube 2005 · WDM" },
+    "/years/2006/sites/twitter/": { href: "https://www.webdesignmuseum.org/gallery/twitter-2006", note: "Twttr · WDM 2006" },
+    "/years/2007/sites/iphone/": { href: "https://www.webdesignmuseum.org/web-design-history/safari-1-0-2003", note: "iPhone Safari · period Safari history" },
+    "/years/2008/sites/github/": { href: "https://www.webdesignmuseum.org/gallery/year-2008", note: "GitHub · WDM year 2008" },
+    "/years/2010/sites/instagram/": { href: "https://www.webdesignmuseum.org/gallery/year-2010", note: "Instagram iOS · WDM year 2010" },
+    "/years/2011/sites/googleplus/": { href: "https://www.webdesignmuseum.org/gallery/year-2011", note: "Google+ · WDM year 2011" },
+    "/years/2013/sites/vine/": { href: "https://www.webdesignmuseum.org/gallery/year-2013", note: "Vine 6s · WDM year 2013" },
+    "/years/2014/sites/whatsapp/": { href: "https://www.webdesignmuseum.org/gallery/year-2014", note: "WhatsApp Install · WDM year 2014" },
+    "/years/2015/sites/periscope/": { href: "https://www.webdesignmuseum.org/gallery/year-2015", note: "Periscope · WDM year 2015" },
+    "/years/2016/sites/instagram/": { href: "https://www.webdesignmuseum.org/gallery/year-2016", note: "IG Stories · WDM year 2016" },
+    "/years/2017/sites/iphone/": { href: "https://www.webdesignmuseum.org/gallery/year-2017", note: "Face ID · WDM year 2017" },
+    "/years/2018/sites/gdpr/": { href: "https://www.webdesignmuseum.org/gallery/year-2018", note: "GDPR Manage · WDM year 2018" },
+    "/years/2019/sites/disneyplus/": { href: "https://www.webdesignmuseum.org/gallery/year-2019", note: "Disney+ Continue · WDM year 2019" },
+    "/years/2020/sites/zoom/": { href: "https://www.webdesignmuseum.org/gallery/year-2020", note: "Zoom Leave · WDM year 2020" },
+    "/years/2021/sites/att/": { href: "https://www.webdesignmuseum.org/gallery/year-2021", note: "ATT Ask · WDM year 2021" }
+  };
+
+  function paintStarCite(doc) {
+    doc = doc || document;
+    try {
+      if (doc.querySelector("[data-itt-capture-cite]")) return;
+      var path = String((doc.defaultView && doc.defaultView.location && doc.defaultView.location.pathname) || location.pathname || "");
+      var rec = null;
+      var k;
+      for (k in STAR_CITE) {
+        if (path.indexOf(k) !== -1) {
+          rec = STAR_CITE[k];
+          break;
+        }
+      }
+      if (!rec || !doc.body) return;
+      var p = doc.createElement("p");
+      p.className = "archive-residual";
+      p.setAttribute("data-itt-capture-cite", "1");
+      p.appendChild(doc.createTextNode("Museum reconstruction. "));
+      var a = doc.createElement("a");
+      a.href = rec.href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = "Open the dated capture";
+      p.appendChild(a);
+      if (rec.note) p.appendChild(doc.createTextNode(" · " + rec.note));
+      doc.body.appendChild(p);
+    } catch (eCite) { /* */ }
+  }
+
   function yearOf(doc) {
     try {
       if (ITT._immersionYear) return String(ITT._immersionYear);
@@ -326,7 +387,7 @@
   function foldLeftoverRails(doc) {
     doc = doc || document;
     var nodeList = doc.querySelectorAll(
-      "[data-itt-2x-links], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-pop-more, .itt-pop-3x3"
+      "[data-itt-2x-links], [data-itt-2x-unique], [data-itt-2x-unique-b], [data-itt-2x-unique-c], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-3x-board, .itt-pop-more, .itt-pop-3x3"
     );
     var extra = leftoverNoteNodes(doc);
     var nodes = [];
@@ -349,6 +410,7 @@
       n = nodes[i];
       if (!n || inAlsoYear(n)) continue;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
+      if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
       if (!firstOutside) firstOutside = n;
     }
     if (firstOutside && firstOutside.parentNode && !box.parentNode) {
@@ -358,6 +420,7 @@
       n = nodes[i];
       if (!n || inAlsoYear(n) || box.contains(n)) continue;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
+      if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
       body.appendChild(n);
       moved++;
     }
@@ -446,6 +509,7 @@
     for (i = 0; i < btns.length; i++) bootOne(btns[i]);
     bootProductVerb(doc);
     foldLeftoverRails(doc);
+    paintStarCite(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

@@ -82,8 +82,5 @@
       { id: "celestecl", slot: "c", title: "Ice Climb", engine: "platform", key: "itt18-game-celestecl", inspire: "Celeste · 25 Jan 2018", trap: "Official Madeline" },
       { id: "gowaxe", slot: "d", title: "Axe Recall", engine: "corridor", key: "itt18-game-gowaxe", inspire: "God of War · 20 Apr 2018", trap: "Official Leviathan" }
     ],
-    "2019": [
-      { id: "sekirobar", slot: "c", title: "Shinobi Bar", engine: "rhythm", key: "itt19-game-sekirobar", inspire: "Sekiro · 22 Mar 2019", trap: "Official wolf" },
-      { id: "goosehk", slot: "d", title: "Goose Honk", engine: "platform", key: "itt19-game-goosehk", inspire: "Untitled Goose Game · 20 Sep 2019", trap: "Official goose" }
-    ]};
+    };
 })(typeof window !== "undefined" ? window : this);

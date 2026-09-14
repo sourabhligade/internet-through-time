@@ -6,6 +6,7 @@
  * Guided stays 6. 2011 / 2020 boarded.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -24,7 +25,8 @@ async function completeLo(page, key, star) {
   const suf = key.replace(/^itt\d{2}-/, "");
   const save = page.locator(`[data-lo-save][data-lo-key="${suf}"]`).first();
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suf}"])`).first();
-  await save.waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await save.waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction((s) => {
     const b = document.querySelector('[data-lo-save][data-lo-key="' + s + '"]');
     return !!(b && b.getAttribute("data-lo-bound") === "1");
@@ -127,35 +129,7 @@ const YEARS = [
       ["/years/2017/sites/playable/game.html", "itt17-game-stormcircle-lx"],
     ],
   },
-  {
-    year: "2019",
-    star: "itt19-disneyplus",
-    gold: async (page) => {
-      await openClear(page, "/years/2019/sites/disneyplus/home.html", "itt19-disneyplus");
-      await page.locator("[data-dplus-continue]").click();
-      expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
-      await page.locator("[data-dplus-req]").nth(0).check();
-      await page.locator("[data-dplus-req]").nth(1).check();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-add]").nth(0).click();
-      await page.locator("[data-dplus-add]").nth(1).click();
-      await page.locator('[data-dplus-profile="kids"]').click();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-continue]").click();
-      await expect.poll(() => getKey(page, "itt19-disneyplus"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2019/sites/tiktok/index.html", "itt19-tiktok-lx"],
-      ["/years/2019/sites/arcade/index.html", "itt19-arcade-lx"],
-      ["/years/2019/sites/appletv/index.html", "itt19-appletv-lx"],
-      ["/years/2019/sites/stadia/index.html", "itt19-stadia-lx"],
-      ["/years/2019/sites/iphone/iphone11.html", "itt19-iphone11-lx"],
-      ["/years/2019/sites/airpodspro/index.html", "itt19-airpods-lx"],
-      ["/years/2019/sites/chrome/index.html", "itt19-chrome-lx"],
-      ["/years/2019/sites/windows10/index.html", "itt19-win10-lx"],
-      ["/years/2019/sites/playable/game.html", "itt19-play-lx"],
-    ],
-  },
+
   {
     year: "2014",
     star: "itt14-wa-install",
@@ -191,16 +165,17 @@ test.describe("wiped years stay boarded", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    for (const y of ["2021", "2022", "2023", "2024", "2025"]) {
+    for (const y of ["2022", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
-    expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(root, "years", "2020", "index.html"))).toBe(true);
   });
 });
 
-for (const y of YEARS) {
+for (const y of YEARS.filter((row) => require("fs").existsSync(require("path").join(__dirname, "..", "years", row.year, "index.html")))) {
   test.describe(`${y.year} official 10`, () => {
     test("guided stays 6", async ({ page }) => {
       await page.goto(`/years/${y.year}/pages/home.html`);

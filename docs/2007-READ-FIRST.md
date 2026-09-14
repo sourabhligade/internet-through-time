@@ -1,8 +1,8 @@
 # 2007 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-09-01  
-**Status:** **DONE** (2026-09-10). Live lean door. Dest-true official 10. First-board 27 unique leftover dests. Dest freeze **82**. Follow this lock. Do **not** `git checkout` an old 2007 forest.  
-**Parent (live):** 2006 Twttr. **Child:** 2008 GitHub issue (**boarded**).  
+**Status:** **DONE**. Live lean door. Dest-true official 10. Dest folders **246** (freeze 82 is stale). Follow this lock. Do **not** `git checkout` an old 2007 forest.  
+**Parent (live):** 2006 Twttr. **Child:** 2008 GitHub issue (**live**).  
 **Git only if asked.**
 
 ## One line

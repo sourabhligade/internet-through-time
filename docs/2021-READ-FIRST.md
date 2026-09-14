@@ -1,7 +1,7 @@
 # 2021 — READ FIRST (from-scratch research)
 
 **Date:** 2026-09-10  
-**Status:** **CUT-OPEN shipped** (2026-09-10). Dest freeze **98**. Leftover **2×** on every dest. Leftover-3× **18+18+18**. Star `itt21-att`. Do not dest-farm.  
+**Status:** **LIVE lean door.** Dest folders **294** · HTML **380** (freeze 98 / HTML cap 184 are stale). Leftover **2×** on dests. Star `itt21-att`. Do not dest-farm.  
 **Parent (live):** 2020 Zoom Leave `itt20-zoom`. **Child:** 2022 wiped.  
 **Git only if asked.**
 

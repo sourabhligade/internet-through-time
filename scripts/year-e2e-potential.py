@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from itt_gate import SHIP_YEARS, _WIPED  # noqa: E402
+from itt_gate import SHIP_YEARS, _NOT_SHIP as _WIPED  # noqa: E402
 
 FOUR_X_REQUIRED = {
     "1997", "1998", "1999", "2000",

@@ -8,7 +8,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { completeRealGate, twoStepClick, checkAllReq, killOverlays } = require('./helpers');
+const { completeRealGate, twoStepClick, checkAllReq, killOverlays, isLiveYear } = require('./helpers');
 
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +16,7 @@ const path = require('path');
 const YEARS = [];
 for (let y = 1994; y <= 2016; y++) {
   const home = path.join(__dirname, '..', 'years', String(y), 'pages', 'home.html');
-  if (fs.existsSync(home)) YEARS.push(String(y));
+  if (fs.existsSync(home) && isLiveYear(String(y))) YEARS.push(String(y));
 }
 
 /**

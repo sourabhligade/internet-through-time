@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+test.skip(true, "2009 boarded — dest packs are not a visitor door");
 
 test.describe("2009 official trail dests exist", () => {
   test("sites/facebook/index.html loads", async ({ page }) => {

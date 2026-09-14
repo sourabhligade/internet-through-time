@@ -6,7 +6,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { completeRealGate, leftoverOfficialDest, expectYearBoarded } = require('./helpers');
+const { completeRealGate, leftoverOfficialDest } = require('./helpers');
 
 /**
  * @param {import('@playwright/test').Page} page

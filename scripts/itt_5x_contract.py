@@ -49,16 +49,18 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (2012, "sites/wikipedia/sopa.html"),
     }
 )
-# Hub-wiped trees — do not require dests or famous cabinets.
-WIPED_YEARS: frozenset[int] = frozenset({2007, 2009, 2011, 2013, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025})
+# No year tree. 2009 is boarded (tree stays) — skipped in check() separately.
+WIPED_YEARS: frozenset[int] = frozenset({2022, 2023, 2024, 2025})
+BOARDED_YEARS: frozenset[int] = frozenset({2009})
 
 POP_PANEL_2020 = ()
 
 FAMOUS_YEARS = [
     y
     for y in list(range(1994, 2020))
-    if y not in {2001, 2002, 2003, 2007, 2009, 2011}
+    if y not in {2001, 2002, 2003, 2007, 2009, 2011, 2013, 2018}
     and y not in WIPED_YEARS
+    and y not in BOARDED_YEARS
 ]
 
 
@@ -88,7 +90,7 @@ def check() -> list[str]:
     matrix = load_matrix()
     for pack in matrix.get("panel") or []:
         year = int(pack["year"])
-        if year in WIPED_YEARS:
+        if year in WIPED_YEARS or year in BOARDED_YEARS:
             continue
         for fl in pack.get("flows") or []:
             room = fl["room"]

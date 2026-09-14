@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× ×3 for 2021 / 2022 — dest-true · not mock.
+ * Leftover-3× ×3 for 2021 — dest-true · not mock. 2022 is wiped.
  * 2018 and 2020 are live lean doors (first + third only). 2019 already dest-true leftover-3×.
  */
 const fs = require("fs");
@@ -17,7 +17,6 @@ const WANT = {
   2018: { first: 3, more: 0, third: 3 },
   2020: { first: 3, more: 0, third: 3 },
   2021: { first: 9, more: 9, third: 9 },
-  2022: { first: 9, more: 9, third: 9 },
 };
 
 const YEARS = Object.keys(WANT);
@@ -50,7 +49,7 @@ async function openDoor(page, row) {
   return panel;
 }
 
-test.describe("2021–2022 leftover-3× ×3 home strips", () => {
+test.describe("2018–2021 leftover-3× home strips", () => {
   for (const year of YEARS) {
     test(`${year} leftover-3× strips are 3× famous doors`, async ({ page }) => {
       const fs = require("fs");

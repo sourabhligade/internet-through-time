@@ -1,8 +1,8 @@
 # 2019 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-09-05  
-**Status:** **LIVE lean door.** Hub card open. `years/2019/` on disk (55 dests · leftover 312). Do not `git checkout` an old 2019 forest.  
-**Disk truth:** Hub is **28 years open** · **2020 / 2023–2025 wiped**. 2013 Vine and 2018 GDPR are live lean doors.  
+**Status:** **LIVE lean door.** Hub card open. `years/2019/` on disk (**165 dests · 202 HTML**). leftover-312 is stale. Do not `git checkout` an old 2019 forest.  
+**Disk truth:** Hub is **27 years open** · **2009 boarded** · **2022 wiped**. 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt19`  
 **Clone shape from:** live `years/2017/` (Face ID lean door · **55 dests · 91 HTML · 312 leftover machines**). **Do not** clone wiped `years/2018/`. **Do not** restore `/tmp/itt-2019-forest-backup-20260815`, git `HEAD` `years/2019/`, or any 2019 Consent Dash clone.
 

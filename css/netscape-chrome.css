@@ -1,13 +1,14 @@
 /* Netscape Navigator 1.0-inspired browser chrome (late 1994) */
 
 :root {
+  color-scheme: only light;
   --chrome-face: #c0c0c0;
   --chrome-shadow: #808080;
   --chrome-dark: #404040;
   --chrome-highlight: #ffffff;
   --chrome-title: #000080;
   --content-bg: #c0c0c0;
-  --desktop-bg: #000000;
+  --desktop-bg: #000080;
 }
 
 *,
@@ -26,6 +27,14 @@ html, body {
   font-size: 11px;
   background: var(--desktop-bg);
   color: #000;
+}
+
+/* 1994 Win 3.1 navy — beats leftover black inline prefs */
+html[data-itt-year="1994"],
+html[data-itt-year="1994"] body,
+html[data-itt-year="1994"] #itt-year-ui,
+html[data-itt-year="1994"] .desktop {
+  background: #000080 !important;
 }
 
 /* Shell paint wraps chrome in #itt-year-ui. Without a height, .desktop
@@ -192,6 +201,91 @@ html, body {
 
 .desktop.browser-max .desktop-icons {
   display: none;
+}
+
+/* 1994 is the only non-max year. Exit + layer + Navigate sit in-flow;
+   icons must start below that stack, not at 32px on top of the links. */
+html[data-itt-year="1994"] .desktop {
+  padding: 6px 8px 8px 92px;
+}
+html[data-itt-year="1994"] .exit-bar,
+html[data-itt-year="1994"] .itt-layer-legend,
+html[data-itt-year="1994"] .shell-nav-legend,
+html[data-itt-year="1994"] #itt-shell-nav-legend,
+html[data-itt-year="1994"] #itt-layer-legend {
+  position: relative !important;
+  z-index: 80 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 0 4px 0 !important;
+}
+html[data-itt-year="1994"] .desktop-icons {
+  top: 118px !important;
+  left: 10px !important;
+  z-index: 4 !important;
+  gap: 16px;
+}
+
+/* Shell nav (chrome-ui injects this). 1994 does not load win95-netscape.css. */
+.shell-nav-legend {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 6px 12px;
+  background: #000060;
+  border-bottom: 1px solid #99ccff;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  color: #fff;
+  z-index: 70;
+}
+.shell-nav-legend .shell-nav-label {
+  font-weight: bold;
+  color: #ffff99;
+}
+.shell-nav-legend .shell-nav-btn {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 8px;
+  cursor: pointer;
+  background: #000080;
+  color: #ffff99;
+  border-top: 1px solid #6688cc;
+  border-left: 1px solid #6688cc;
+  border-right: 1px solid #000040;
+  border-bottom: 1px solid #000040;
+}
+.shell-nav-legend .shell-nav-btn:hover,
+.shell-nav-legend .shell-nav-btn:focus {
+  background: #0000aa;
+  color: #fff;
+  outline: none;
+}
+.shell-nav-legend .shell-nav-exit {
+  font-weight: bold;
+  color: #ffff99;
+  text-decoration: underline;
+  padding: 1px 4px;
+}
+.shell-nav-legend .shell-nav-exit:hover,
+.shell-nav-legend .shell-nav-exit:focus {
+  color: #fff;
+}
+.shell-nav-legend .shell-nav-sep {
+  color: #99ccff;
+}
+.shell-nav-legend .shell-nav-hint {
+  margin-left: auto;
+  font-size: 10px;
+  color: #c0c0c0;
+}
+@media (max-width: 720px) {
+  .shell-nav-legend .shell-nav-hint {
+    display: none;
+  }
 }
 
 /* Exit immersion — keep quiet so the desktop feels like a 90s PC */

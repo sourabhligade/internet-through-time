@@ -36,7 +36,8 @@
     } catch (eS) {
       src = "";
     }
-    if (!src) src = "../../js/immersion/layers.js";
+    if (!src) src = "../../js/immersion/layers.js?v=20260911navyfix";
+    else if (src.indexOf("?") === -1) src += "?v=20260911navyfix";
     var el = document.createElement("script");
     el.src = src;
     el.onload = runLayers;

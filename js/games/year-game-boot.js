@@ -86,7 +86,37 @@
     }
     if (extra.gold) blob.gold = true;
     if (extra.label) blob.label = extra.label;
+    if (sc > 0) {
+      blob.multiStep = true;
+      blob.official = true;
+    }
     saveJSON(key, blob);
+    /* Official n=10 whenKey (flow-trails) — score 0 / Start never writes. */
+    if (sc > 0) {
+      try {
+        var host =
+          (typeof document !== "undefined" && document.querySelector("[data-year-game]")) ||
+          null;
+        var off =
+          extra.officialKey ||
+          (host && host.getAttribute("data-yg-official-key")) ||
+          "";
+        if (!off && typeof document !== "undefined" && document.documentElement) {
+          off = document.documentElement.getAttribute("data-official-key") || "";
+        }
+        if (off && off !== key) {
+          var offBlob = {
+            gameId: String(gameId || ""),
+            year: String(year || ""),
+            real: true,
+            multiStep: true,
+            official: true,
+            ts: Date.now()
+          };
+          saveJSON(off, offBlob);
+        }
+      } catch (eOff) { /* */ }
+    }
     try {
       if (sc > 0 && global.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document);
     } catch (eN) { /* */ }

@@ -2021,6 +2021,22 @@
           { "name": "Famous", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
         ]
+      },
+      {
+        "label": "Leftover-2× unique · dest-true",
+        "do": "Leftover keys only. Never YouTube upload. Not leftover-3×.",
+        "sites": [
+          { "name": "last.fm leftover", "href": "sites/lastfm/index.html", "do": "itt05-lastfm-lx" },
+          { "name": "Google Earth leftover", "href": "sites/googleearth/index.html", "do": "itt05-googleearth" },
+          { "name": "Reader leftover", "href": "sites/reader/index.html", "do": "itt05-reader-lx" },
+          { "name": "Yelp leftover", "href": "sites/yelp/index.html", "do": "itt05-yelp-lx" },
+          { "name": "Odeo leftover", "href": "sites/odeo/index.html", "do": "itt05-odeo-lx" },
+          { "name": "Second Life leftover", "href": "sites/secondlife/index.html", "do": "itt05-secondlife" },
+          { "name": "Mashable leftover", "href": "sites/mashable/index.html", "do": "itt05-mash-lx" },
+          { "name": "Xbox 360 leftover", "href": "sites/xbox360/index.html", "do": "itt05-x360-lx" },
+          { "name": "ProgrammableWeb leftover", "href": "sites/programmableweb/index.html", "do": "itt05-pw-lx" },
+          { "name": "LinkedIn leftover", "href": "sites/linkedin/index.html", "do": "itt05-li-lx" }
+        ]
       }
     ]
   };
@@ -3198,6 +3214,22 @@
         ]
       },
       {
+        label: "Leftover-2× unique · dest-true",
+        do: "Leftover keys only. Never Face ID. Not leftover-3×. Incomplete never writes.",
+        sites: [
+          { name: "WhatsApp Status", href: "sites/whatsapp/index.html", do: "Post a Status → itt17-whatsapp-lx · Watch a Status → itt17-whatsapp-d2 → Snap Map" },
+          { name: "Snap Map", href: "sites/snapmap/index.html", do: "Pinch to Map → itt17-snapmap-lx · Ghost Mode leftover → itt17-snapmap-d2 → Lens" },
+          { name: "Google Lens", href: "sites/googlelens/index.html", do: "Point → itt17-googlelens-lx · Wi-Fi leftover → itt17-googlelens-d2 → BotW" },
+          { name: "Breath of the Wild", href: "sites/botw/index.html", do: "Climb → itt17-botw-lx · Cook leftover → itt17-botw-d2 → Watch" },
+          { name: "Facebook Watch", href: "sites/facebookwatch/index.html", do: "Open Watch → itt17-facebookwatch-lx · Watchlist → itt17-facebookwatch-d2 → Destiny 2" },
+          { name: "Destiny 2", href: "sites/destiny2/index.html", do: "Launch leftover → itt17-destiny2-lx · Fireteam leftover → itt17-destiny2-d2 → Cuphead" },
+          { name: "Cuphead", href: "sites/cuphead/index.html", do: "Fight a boss → itt17-cuphead-lx · Co-op leftover → itt17-cuphead-d2 → SNES Classic" },
+          { name: "SNES Classic Mini", href: "sites/snesclassic/index.html", do: "Pick a cart → itt17-snesclassic-lx · Two-player leftover → itt17-snesclassic-d2 → Model 3" },
+          { name: "Tesla Model 3", href: "sites/model3/index.html", do: "Take delivery → itt17-model3-lx · Configure leftover → itt17-model3-d2 → ST2" },
+          { name: "Stranger Things 2", href: "sites/netflix/index.html", do: "Play Part 2 → itt17-netflix-lx · My List leftover → itt17-netflix-d2 → Starting Point" }
+        ]
+      },
+      {
         label: "Side · rejoin official",
         do: "Never a second star",
         sites: [
@@ -3239,12 +3271,52 @@
         label: "Side · rejoin official",
         do: "Never a second star",
         sites: [
-          { name: "Manage replay", href: "sites/gdpr/manage.html", do: "replay · no second official write" },
-          { name: "Famous", href: "sites/playable/famous.html", do: "cabinet · gold is Consent Dash" }
+          { name: "Manage replay", href: "sites/gdpr/index.html", do: "replay · no second official write" },
+          { name: "Famous", href: "sites/playable/game.html", do: "cabinet · gold is Consent Dash" }
         ]
       }
     ]
   };
+
+ITT.flowMaps["2007"] = {
+    thesis: "The phone becomes a browser. Empty / App Store / Chrome never write. Go is the save.",
+    shell: "XP mass · IE6 · iPhone is a room",
+    year: "2007",
+    how: [
+      "Safari: type ≥2 · two ticks · Go → itt07-iphone. Empty / App Store / Chrome never write.",
+      "Street View / Gmail / Platform / Twitter / YouTube / Tumblr / Kindle are, not the chip.",
+      "Next waits for the write. Crumb ← last dest is visible on land.",
+      "App Store / Chrome / Android / 3G / Like are not this year."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays iPhone Safari. App Store never writes.",
+        sites: [
+          { name: "1 iPhone Safari", href: "sites/iphone/index.html", do: "Go → itt07-iphone → Street View" },
+          { name: "2 Street View", href: "sites/streetview/index.html", do: "29 May → Gmail" },
+          { name: "3 Gmail open", href: "sites/gmail/index.html", do: "7 Feb → Platform" },
+          { name: "4 Facebook Platform", href: "sites/fbplat/index.html", do: "24 May → Twitter" },
+          { name: "5 Twitter", href: "sites/twitter/index.html", do: "Twttr is 2006 → YouTube" },
+          { name: "6 YouTube", href: "sites/youtube/index.html", do: "Google-owned → Tumblr" },
+          { name: "7 Tumblr", href: "sites/tumblr/index.html", do: "ILS birthmark → Kindle" },
+          { name: "8 Kindle", href: "sites/kindle/index.html", do: "19 Nov → IE6" },
+          { name: "9 XP/IE6 residual", href: "sites/ie6/index.html", do: "January mass → Safari Queue" },
+          { name: "10 Safari Queue", href: "sites/playable/game.html", do: "queue → itt07-game-safariq → Safari" }
+        ]
+      },
+      {
+        label: "Leftover 2×",
+        do: "Never a second star",
+        sites: [
+          { name: "Announce", href: "sites/ipann/index.html", do: "Pack A start" },
+          { name: "Continuity close", href: "sites/playable/close.html", do: "Pack C end · Next Safari" }
+        ]
+      }
+    ]
+  };
+
+
 
   ITT.flowMaps["2019"] = {
     thesis: "Who’s watching is the door. A 7-day trial is the trap. Continue is the save.",
@@ -3284,50 +3356,6 @@
     ]
   };
 
-  
-
-
-
-
-  ITT.flowMaps["2007"] = {
-    thesis: "The phone becomes a browser. Empty / App Store / Chrome never write. Go is the save.",
-    shell: "XP mass · IE6 · iPhone is a room",
-    year: "2007",
-    how: [
-      "Safari: type ≥2 · two ticks · Go → itt07-iphone. Empty / App Store / Chrome never write.",
-      "Street View / Gmail / Platform / Twitter / YouTube / Tumblr / Kindle are, not the chip.",
-      "Next waits for the write. Crumb ← last dest is visible on land.",
-      "App Store / Chrome / Android / 3G / Like are not this year."
-    ],
-    branches: [
-      {
-        label: "★ Official 10",
-        do: "Star stays iPhone Safari. App Store never writes.",
-        sites: [
-          { name: "1 iPhone Safari", href: "sites/iphone/index.html", do: "Go → itt07-iphone → Street View" },
-          { name: "2 Street View", href: "sites/streetview/index.html", do: "29 May → Gmail" },
-          { name: "3 Gmail open", href: "sites/gmail/index.html", do: "7 Feb → Platform" },
-          { name: "4 Facebook Platform", href: "sites/fbplat/index.html", do: "24 May → Twitter" },
-          { name: "5 Twitter", href: "sites/twitter/index.html", do: "Twttr is 2006 → YouTube" },
-          { name: "6 YouTube", href: "sites/youtube/index.html", do: "Google-owned → Tumblr" },
-          { name: "7 Tumblr", href: "sites/tumblr/index.html", do: "ILS birthmark → Kindle" },
-          { name: "8 Kindle", href: "sites/kindle/index.html", do: "19 Nov → IE6" },
-          { name: "9 XP/IE6 residual", href: "sites/ie6/index.html", do: "January mass → Safari Queue" },
-          { name: "10 Safari Queue", href: "sites/playable/game.html", do: "queue → itt07-game-safariq → Safari" }
-        ]
-      },
-      {
-        label: "Leftover 2×",
-        do: "Never a second star",
-        sites: [
-          { name: "Announce", href: "sites/ipann/index.html", do: "Pack A start" },
-          { name: "Continuity close", href: "sites/playable/close.html", do: "Pack C end · Next Safari" }
-        ]
-      }
-    ]
-  };
-
-
   ITT.flowMaps["2020"] = {
     thesis: "2020 is when the meeting becomes the room \u2014 mute then chat then Leave is the save, Join never writes, and 300 million is daily meeting participants, not users.",
     year: "2020",
@@ -3364,22 +3392,5 @@
         ] }]
   };
 
-  ITT.flowMaps["2022"] = {
-    thesis: "2022 is when you type a prompt and hit Send \u2014 ChatGPT Send is the save, empty / Plus / GPT-4 never write, and dest stays Twitter.",
-    year: "2022",
-    how: ["2022 is when you type a prompt and hit Send \u2014 ChatGPT Send is the save, empty / Plus / GPT-4 never write, and dest stays Twitter."],
-    branches: [{ label: "★ Official 10", do: "Star stays.", sites: [
-          { name: "1 ChatGPT Send", href: "sites/chatgpt/index.html", do: "itt22-chatgpt" },
-          { name: "2 Twitter leftover", href: "sites/twitter/index.html", do: "itt22-twitter" },
-          { name: "3 Wordle leftover", href: "sites/wordle/index.html", do: "itt22-wordle" },
-          { name: "4 Stable Diffusion leftover", href: "sites/stablediffusion/index.html", do: "itt22-sd" },
-          { name: "5 Mastodon leftover", href: "sites/mastodon/index.html", do: "itt22-mastodon" },
-          { name: "6 BeReal leftover", href: "sites/bereal/index.html", do: "itt22-bereal" },
-          { name: "7 DALL·E 2 leftover", href: "sites/dalle2/index.html", do: "itt22-dalle2" },
-          { name: "8 Copilot GA leftover", href: "sites/copilotga/index.html", do: "itt22-copilotga" },
-          { name: "9 Chrome habit", href: "sites/chrome/index.html", do: "itt22-chrome" },
-          { name: "10 Prompt Box", href: "sites/playable/game.html", do: "itt22-game-prompt" }
-        ] }]
-  };
 })(typeof window !== "undefined" ? window : this);
 

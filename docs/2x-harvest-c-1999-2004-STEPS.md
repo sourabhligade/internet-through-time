@@ -27,7 +27,7 @@ Board A and Board B already 3×’d the original dest folders. Those dests are *
 | 2000 | 162 | **+324** | 486 | `itt00-*` | MapQuest `itt00-mapquest` | IE5.5 |
 | 2001 | 87 | **+174** | 261 | `itt01-*` | Wikipedia `itt01-wiki` | XP + IE6 |
 | 2002 | 78 | **+156** | 234 | `itt02-*` | StumbleUpon `itt02-stumble` | XP + IE6 |
-| 2003 | 69 | **+138** | 207 | `itt03-*` | Photobucket `itt03-photobucket` | XP + IE6 |
+| 2003 | 69 | **+137** | **206** | `itt03-*` | Photobucket `itt03-photobucket` | XP + IE6 |
 | 2004 | 270 | **+540** | 810 | `itt04-*` | thefacebook networks `itt04-thefacebook-networks` | XP + IE6 |
 | **Total** | **810** | **+1,620** | **2,430** | | | |
 
@@ -499,7 +499,7 @@ Run after all six years, or after each year if shipping one year at a time.
 2000 sites == 162 + 324 == 486
 2001 sites ==  87 + 174 == 261
 2002 sites ==  78 + 156 == 234
-2003 sites ==  69 + 138 == 207
+2003 sites ==  69 + 137 == 206
 2004 sites == 270 + 540 == 810
 ```
 

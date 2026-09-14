@@ -6,6 +6,7 @@
  * Guided stays 6.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -21,10 +22,12 @@ async function openClear(page, path, key, star) {
 }
 
 async function completeLo(page, key, star) {
+  await revealLeftoverRails(page);
   const suf = key.replace(/^itt\d{2}-/, "");
   const save = page.locator(`[data-lo-save][data-lo-key="${suf}"]`).first();
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suf}"])`).first();
-  await save.waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await save.waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction((s) => {
     const b = document.querySelector('[data-lo-save][data-lo-key="' + s + '"]');
     return !!(b && b.getAttribute("data-lo-bound") === "1");

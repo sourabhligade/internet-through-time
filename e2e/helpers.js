@@ -1,15 +1,17 @@
 // @ts-check
 /** Shared helpers for year-shell immersion e2e tests */
 
-/** Boarded from the visitor UI. Trees stay on disk; year-shell index redirects. */
-const BOARDED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
+/** Boarded from the visitor UI. Trees stay on disk. 2009 is a plaque (not a hub redirect). 2022+ have no tree. */
+const BOARDED_YEARS = new Set(["2009", "2022", "2023", "2024", "2025"]);
 
 function isLiveYear(year) {
   return !BOARDED_YEARS.has(String(year));
 }
 
 /**
- * Boarded year: no hub card, year-shell index bounces to hub.
+ * Boarded year: no hub card, no dirbar.
+ * 2009: plaque at /years/2009/ (not a hub redirect).
+ * 2022+: no tree — /years/YYYY/ 404s; still no hub card.
  * @param {import('@playwright/test').Page} page
  * @param {string} year
  */
@@ -20,9 +22,14 @@ async function expectYearBoarded(page, year) {
   await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
   await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
   await page.goto(`/years/${y}/`);
+  if (y === "2009") {
+    await expect(page.locator("body")).toContainText(/boarded/i);
+    await expect(page.locator("#dirbar")).toHaveCount(0);
+    return;
+  }
   await expect(page).toHaveURL(/\/(index\.html)?$/);
-  await expect(page.locator('body')).toContainText(/28 years open/i);
-  await expect(page.locator('#dirbar')).toHaveCount(0);
+  await expect(page.locator("body")).toContainText(/27 years open|boarded/i);
+  await expect(page.locator("#dirbar")).toHaveCount(0);
 }
 
 /**
@@ -37,6 +44,9 @@ async function expectYearBoarded(page, year) {
 /** Open folded leftover rails so dest-minute tests can still click them. */
 async function revealLeftoverRails(page) {
   const open = () => {
+    try {
+      document.documentElement.setAttribute("data-itt-deep", "1");
+    } catch (eDeep) { /* */ }
     const list = document.querySelectorAll("details.itt-also-year");
     let i;
     for (i = 0; i < list.length; i++) list[i].open = true;

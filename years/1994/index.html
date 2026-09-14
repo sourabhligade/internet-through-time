@@ -6,14 +6,62 @@
 <title>Netscape Navigator — 1994</title>
 <link rel="icon" href="../../favicon.gif" type="image/gif">
 <base href="./">
+<style>
+/* Keep 1994 chrome rows and desktop icons from stacking (cache-proof). */
+html[data-itt-year="1994"] .desktop { padding: 6px 8px 8px 92px !important; }
+html[data-itt-year="1994"] .exit-bar,
+html[data-itt-year="1994"] #itt-layer-legend,
+html[data-itt-year="1994"] #itt-shell-nav-legend,
+html[data-itt-year="1994"] .itt-layer-legend,
+html[data-itt-year="1994"] .shell-nav-legend {
+  position: relative !important;
+  z-index: 80 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 6px 10px !important;
+  padding: 6px 12px !important;
+  margin: 0 0 4px !important;
+}
+html[data-itt-year="1994"] #itt-shell-nav-legend,
+html[data-itt-year="1994"] .shell-nav-legend {
+  background: #000060 !important;
+  border-bottom: 1px solid #99ccff !important;
+  color: #fff !important;
+}
+html[data-itt-year="1994"] .desktop-icons {
+  top: 118px !important;
+  left: 10px !important;
+  z-index: 4 !important;
+  gap: 16px !important;
+}
+</style>
 </head>
 <body>
-<script src="../../ui/year/years.js?v=20260909h6"></script>
-<script src="../../ui/year/shell.js?v=20260909h6"></script>
+<script src="../../ui/year/ui.js?v=20260911navyfix"></script>
 <script>ITT.YearUI.paint("1994");</script>
 <script src="../../js/lib/util.js?v=20260830ui"></script>
-<script src="../../js/browser-core.js?v=20260830ui"></script>
-<script src="../../js/config/1994.js?v=20260830ui"></script>
-<script src="../../js/browser.js?v=20260830ui"></script>
+<script src="../../js/browser-core.js?v=20260911starthub6"></script>
+<script src="../../js/config/1994.js?v=20260911fillall"></script>
+<script src="../../js/browser.js?v=20260911navyfix"></script>
+<script id="itt-start-to-hub">
+(function () {
+  function hub() {
+    var p = location.pathname || "";
+    var i = p.indexOf("/years/");
+    return (i !== -1 ? p.slice(0, i) : "") + "/index.html";
+  }
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (!t || !t.closest) return;
+    if (!t.closest("#itt-shell-goto-start")) return;
+    e.preventDefault();
+    e.stopPropagation();
+    location.assign(hub());
+  }, true);
+})();
+</script>
 </body>
 </html>

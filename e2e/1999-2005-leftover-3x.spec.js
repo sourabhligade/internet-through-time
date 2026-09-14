@@ -15,7 +15,7 @@ const WANT = {
   2002: { first: 6, more: 6, third: 6 },
   2003: { first: 6, more: 5, third: 6 },
   2004: { first: 9, more: 9, third: 9 },
-  2005: { first: 9, more: 9, third: 9 },
+  2005: { first: 18, more: 18, third: 18 },
 };
 
 const YEARS = Object.keys(WANT);

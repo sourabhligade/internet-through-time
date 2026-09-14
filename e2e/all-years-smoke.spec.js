@@ -17,12 +17,16 @@ const { enterYear, contentFrame } = require('./helpers');
 const fs = require('fs');
 const path = require('path');
 
-/** Discover years/YYYY with index.html (skip research-only years). */
+/** Boarded / wiped: tree may stay; year-shell redirects. Not a visitor door. */
+const BOARDED = new Set(['2009', '2022', '2023', '2024', '2025']);
+
+/** Discover years/YYYY with index.html (skip research-only and boarded). */
 function shippedYears() {
   const yearsDir = path.join(__dirname, '..', 'years');
   return fs
     .readdirSync(yearsDir)
     .filter((name) => /^\d{4}$/.test(name))
+    .filter((name) => !BOARDED.has(name))
     .filter((name) => fs.existsSync(path.join(yearsDir, name, 'index.html')))
     .sort();
 }

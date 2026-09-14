@@ -4,10 +4,12 @@
  * Gold chip + guided 6 may repeat the star dest. Leftover-3× packs stay 9/9/9.
  */
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails, isLiveYear } = require("./helpers");
 
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2021; y++) {
+  if (isLiveYear(String(y))) YEARS.push(String(y));
+}
 
 function destSlug(href) {
   const m = String(href || "").match(/sites\/([^/]+)\//);

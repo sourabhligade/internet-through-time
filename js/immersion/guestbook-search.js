@@ -56,7 +56,7 @@ function initGuestbook(root) {
       var li = document.createElement("li");
       var line = "<b>" + escapeHtml(e.name || "Anonymous") + "</b>";
       if (e.from) line += " (" + escapeHtml(e.from) + ")";
-      if (e.url && !/^javascript:/i.test(e.url.trim())) line += ' — <a href="' + escapeHtml(e.url) + '">' + escapeHtml(e.url) + "</a>";
+      if (e.url && /^(https?:|ftp:|mailto:|#|\/)/i.test(e.url.trim())) line += ' — <a href="' + escapeHtml(e.url) + '">' + escapeHtml(e.url) + "</a>";
       if (e.msg) line += ' — "' + escapeHtml(e.msg) + '"';
       if (e.date) line += ' <font size="1">' + escapeHtml(e.date) + "</font>";
       li.innerHTML = line;

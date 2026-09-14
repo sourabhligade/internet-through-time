@@ -413,10 +413,6 @@
       "immersion/no-mock-common.js",
       "immersion/one-thing-machines.js"
     ],
-    "2022": [
-      "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
-    ]
   };
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};

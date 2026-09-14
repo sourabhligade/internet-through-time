@@ -215,6 +215,29 @@
     );
   }
 
+  function desktopOptions(spec) {
+    var cur = String((spec && spec.desktopBg) || "#000000").toLowerCase();
+    var opts = [
+      ["#000080", "Navy"],
+      ["#ffffff", "White"],
+      ["#008080", "Teal"],
+      ["#000000", "Black"]
+    ];
+    var i;
+    var html = "";
+    for (i = 0; i < opts.length; i++) {
+      html +=
+        '<option value="' +
+        opts[i][0] +
+        '"' +
+        (opts[i][0] === cur ? " selected" : "") +
+        ">" +
+        opts[i][1] +
+        "</option>";
+    }
+    return html;
+  }
+
   function dialogs(spec) {
     var thesis = spec.thesis
       ? '<p style="margin:8px 0 0;font-size:10px;color:#333;max-width:280px">' + esc(spec.thesis) + "</p>"
@@ -285,7 +308,7 @@
       '<label><input type="checkbox" id="pref-dirbar" checked> Show Directory Buttons</label><br>' +
       '<label><input type="checkbox" id="pref-desktopicons" checked> Show Desktop Icons</label></fieldset>' +
       '<fieldset><legend>Desktop</legend><label>Background: <select id="pref-desktop">' +
-      '<option value="#008080">Teal</option><option value="#000000" selected>Black</option>' +
+      desktopOptions(spec) +
       "</select></label></fieldset>" +
       '<div class="dialog-btns"><button type="button" id="dlg-prefs-ok">OK</button>' +
       '<button type="button" data-close="dlg-prefs">Cancel</button></div></div></div>' +
@@ -521,7 +544,7 @@
     for (i = 0; i < sheets.length; i++) {
       el = document.createElement("link");
       el.rel = "stylesheet";
-      el.href = "../../css/" + sheets[i] + "?v=20260909h6";
+      el.href = "../../css/" + sheets[i] + "?v=20260911navypad";
       document.head.appendChild(el);
     }
   }
@@ -548,10 +571,15 @@
     pane = Math.floor(bottom - top);
     if (pane < 240) pane = Math.max(240, h - top - barH);
     frame.style.setProperty("height", pane + "px", "important");
+    frame.style.setProperty("width", "100%", "important");
     iframe.style.setProperty("height", pane + "px", "important");
     iframe.style.setProperty("min-height", pane + "px", "important");
+    iframe.style.setProperty("width", "100%", "important");
+    iframe.style.setProperty("left", "0", "important");
+    iframe.style.setProperty("right", "0", "important");
     iframe.style.setProperty("top", "0", "important");
     iframe.style.setProperty("bottom", "0", "important");
+    iframe.style.setProperty("background", "#c0c0c0", "important");
   }
 
   function bindFill() {
@@ -582,6 +610,7 @@
     }
     spec.year = year;
     document.documentElement.setAttribute("data-itt-year", year);
+    document.documentElement.style.colorScheme = "only light";
     document.title = spec.title || year;
     if (spec.bodyClass) document.body.className = spec.bodyClass;
     document.body.setAttribute("data-itt-year", year);
@@ -595,7 +624,7 @@
         "#itt-year-ui .desktop{display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;overflow:hidden!important;padding-bottom:0!important}" +
         "#itt-year-ui .browser{display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;height:0!important}" +
         "#itt-year-ui .content-frame{position:relative!important;flex:1 1 0!important;min-height:0!important;height:0!important}" +
-        "#itt-year-ui iframe#content{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;border:0}";
+        "#itt-year-ui iframe#content{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;border:0;background:#c0c0c0!important;color-scheme:only light}";
       document.head.appendChild(fillStyle);
     }
     var root = document.getElementById("itt-year-ui");

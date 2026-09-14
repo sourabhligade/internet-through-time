@@ -1,6 +1,8 @@
 /* Period web games wing — separate from year immersions.
    Grammar: ad-portal / school-computer casual, not modern app store. */
 
+@import url("museum-fill.css");
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,9 +14,11 @@ html, body {
 }
 
 .games-wrap {
-  max-width: 820px;
+  width: 100%;
+  max-width: min(1100px, calc(100vw - 24px));
   margin: 0 auto;
   padding: 12px 12px 40px;
+  box-sizing: border-box;
 }
 
 /* Top bar like a mid-2000s free-games portal */

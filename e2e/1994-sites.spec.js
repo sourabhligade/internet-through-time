@@ -12,14 +12,18 @@ async function twoStepClick(page, selector) {
 test.describe('1994 sites densify', () => {
   test('CERN + Yahoo Stanford', async ({ page }) => {
     await page.goto('/years/1994/sites/cern/index.html');
-    await expect(page.getByText(/CERN|Web|Berners/i).first()).toBeVisible();
+    await expect(page).toHaveTitle(/CERN|Web|WWW/i);
+    await expect(page.locator('body')).toContainText(/CERN|Berners|World Wide Web/i);
     await page.goto('/years/1994/sites/yahoo/index.html');
-    await expect(page.getByText(/Yahoo|Directory|Categories/i).first()).toBeVisible();
+    await expect(page).toHaveTitle(/Yahoo/i);
+    await expect(page.locator('body')).toContainText(/akebono|Stanford|Guide/i);
   });
   test('IUMA + White House', async ({ page }) => {
     await page.goto('/years/1994/sites/iuma/index.html');
-    await expect(page.getByText(/IUMA|Music|Underground/i).first()).toBeVisible();
+    await expect(page).toHaveTitle(/IUMA|Music|Underground/i);
+    await expect(page.locator('body')).toContainText(/IUMA|Underground|Music/i);
     await page.goto('/years/1994/sites/whitehouse/index.html');
-    await expect(page.getByText(/White House|President|Welcome/i).first()).toBeVisible();
+    await expect(page).toHaveTitle(/White House/i);
+    await expect(page.locator('body')).toContainText(/White House|President|Welcome/i);
   });
 });

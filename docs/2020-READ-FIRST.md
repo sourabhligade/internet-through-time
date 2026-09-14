@@ -1,7 +1,7 @@
 # 2020 — read first
 
 **Date:** 2026-09-04  
-**Status:** **LIVE lean door** (CUT-OPEN 2026-09-08). Star = Zoom mute → Leave `itt20-zoom`. Hub **29 years open**. Do not `git checkout` an old 2020 forest.  
+**Status:** **LIVE lean door** (CUT-OPEN 2026-09-08). Star = Zoom mute → Leave `itt20-zoom`. Hub **27 years open**. **2009 boarded.** **2022 wiped.** Do not `git checkout` an old 2020 forest.  
 
 | Companion | When |
 |-----------|------|
@@ -22,7 +22,7 @@
 | HTML cap | **≤90** |
 | Pixels | never invent brand art |
 | Neighbors | `itt19-*` / `itt21-*` stay empty |
-| Boarded siblings | **2025 boarded.** 2013 Vine · 2018 GDPR · **2020 Zoom** · 2023 Plus · 2024 4o are live lean doors. |
+| Boarded siblings | **2009 boarded.** **2022–2025 wiped.** 2013 Vine · 2018 GDPR · **2020 Zoom** · 2021 ATT are live lean doors. |
 
 Do not invent a June Live Stats 2020 websites digit.  
 Do not print “300 million Zoom users.”  

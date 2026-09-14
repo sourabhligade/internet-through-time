@@ -3,6 +3,7 @@
  * 2014 leftover 4× — empty go never writes; complete writes leftover key, never the star.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -15,8 +16,9 @@ test("2014 leftover 4× empty then REAL · never writes gold", async ({ page }) 
     localStorage.removeItem("itt14-wa-install");
   });
   await page.reload();
+  await revealLeftoverRails(page);
   const go = page.locator('[data-4x-go="oc-6x-4x"]').first();
-  await go.waitFor();
+  await go.waitFor({ state: "attached" });
   await go.click();
   expect(await getKey(page, "itt14-oc-6x-4x")).toBeFalsy();
   const hops = page.locator("[data-4x-hop]");
@@ -41,8 +43,9 @@ test("2014 WhatsApp leftover 4× never writes itt14-wa-install", async ({ page }
     localStorage.removeItem("itt14-wa-install");
   });
   await page.reload();
+  await revealLeftoverRails(page);
   const go = page.locator('[data-4x-go="wa-lx-4x"]').first();
-  await go.waitFor();
+  await go.waitFor({ state: "attached" });
   const reqs = page.locator("[data-4x-panel] [data-4x-req]");
   const n = await reqs.count();
   for (let i = 0; i < n; i++) await reqs.nth(i).check();
@@ -65,9 +68,10 @@ async function leftover4x(page, href, go, key, star) {
     localStorage.removeItem(s);
   }, { k: key, s: star });
   await page.reload();
+  await revealLeftoverRails(page);
   const panel = page.locator(`[data-4x-panel]:has([data-4x-go="${go}"])`).first();
   const btn = panel.locator(`[data-4x-go="${go}"]`);
-  await btn.waitFor();
+  await btn.waitFor({ state: "attached" });
   await btn.click();
   expect(await getKey(page, key)).toBeFalsy();
   const hops = panel.locator("[data-4x-hop]");

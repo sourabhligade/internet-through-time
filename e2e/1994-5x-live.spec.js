@@ -1,6 +1,7 @@
 // @ts-check
 /** 1994 5× live — incomplete never writes · Next along the locked chain · isolation. */
 const { test, expect } = require('@playwright/test');
+const { revealLeftoverRails } = require('./helpers');
 
 
 async function getKey(page, key) { return page.evaluate((k) => localStorage.getItem(k), key); }
@@ -10,6 +11,7 @@ test.describe('1994 5× live F1–F5', () => {
     await page.goto('/years/1994/sites/iuma/index.html');
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt94-iuma');
     await page.reload();
+    await revealLeftoverRails(page);
     const save = page.locator('[data-5x-save]').first();
     await expect(save).toBeVisible();
     await save.click();
@@ -84,6 +86,7 @@ test.describe('1994 5× live F1–F5', () => {
     await page.goto('/years/1994/sites/ncsa/index.html');
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt94-whatsnew');
     await page.reload();
+    await revealLeftoverRails(page);
     const save = page.locator('[data-5x-save]').first();
     await expect(save).toBeVisible();
     await save.click();

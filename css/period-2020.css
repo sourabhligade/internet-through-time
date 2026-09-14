@@ -1,2 +1,69 @@
 @import url("period-2019.css");
 body.year-2020 .itt-year-chip { color:#1565c0; }
+
+.zm20-meet {
+  max-width: 720px;
+  margin: 16px auto;
+  background: #1a1a1a;
+  color: #f5f5f7;
+  font-family: Segoe UI, Arial, sans-serif;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.zm20-bar {
+  background: #232323;
+  padding: 8px 12px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.zm20-stage {
+  min-height: 240px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ccc;
+}
+.zm20-dock {
+  background: #2d2d2d;
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.zm20-dock [data-zoom-mute] {
+  background: #3d3d3d;
+  color: #fff;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.zm20-dock [data-zoom-mute][aria-pressed="true"] {
+  background: #f5c518;
+  color: #111;
+}
+.zm20-dock [data-zoom-join] {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #555;
+  padding: 6px 10px;
+}
+.zm20-dock [data-zoom-leave] {
+  background: #de382b;
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  font-weight: bold;
+  margin-left: auto;
+}
+.zm20-dock [data-zoom-chat] {
+  width: 10em;
+  padding: 6px;
+}
+.zm20-dock [data-zoom-send] {
+  padding: 6px 10px;
+}
+.zm20-honesty { font-size: 11px; color: #bbb; }

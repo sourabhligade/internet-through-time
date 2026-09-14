@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const STAR = "itt14-wa-install";
@@ -236,6 +237,7 @@ test.describe("2014 leftover 2× every dest end-to-end REAL", () => {
     test(`${d.suffix} ${d.href} leftover 2× trap then REAL`, async ({ page }) => {
       const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${d.suffix}"])`).first();
       await page.goto("/years/2014/" + d.href);
+      await revealLeftoverRails(page);
       await page.waitForFunction((s) => {
         const b = document.querySelector('[data-lo-save][data-lo-key="' + s + '"]');
         return !!(b && b.getAttribute("data-lo-bound") === "1");
@@ -326,9 +328,10 @@ test.describe("2014 leftover 4× every dest end-to-end REAL", () => {
         localStorage.removeItem(s);
       }, { k: d.key, s: STAR });
       await page.reload();
+      await revealLeftoverRails(page);
       const panel = page.locator(`[data-4x-panel]:has([data-4x-go="${d.go}"])`).first();
       const go = panel.locator(`[data-4x-go="${d.go}"]`).first();
-      await go.waitFor({ timeout: 20000 });
+      await go.waitFor({ state: "attached", timeout: 20000 });
       await page.waitForFunction(() => {
         return !!(window.ITT && document.querySelector("[data-4x-go]"));
       }, null, { timeout: 20000 });

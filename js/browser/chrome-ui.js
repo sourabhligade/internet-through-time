@@ -573,9 +573,10 @@
     function labelHomeAffordances() {
       var homeBtn = byId("btn-home");
       if (homeBtn) {
-        homeBtn.setAttribute("title", "Starting Point — year home");
+        homeBtn.setAttribute("title", "This year’s home");
+        homeBtn.setAttribute("aria-label", "This year’s home");
         var hl = homeBtn.querySelector(".btn-label");
-        if (hl && /home/i.test(hl.textContent || "")) hl.textContent = "Home";
+        if (hl && /home|starting point/i.test(hl.textContent || "")) hl.textContent = "Home";
       }
       var closeBtn = byId("btn-close");
       if (closeBtn) {
@@ -598,9 +599,9 @@
         '.dir-btn[data-go*="pages/home"], .dir-btn[data-go$="home.html"]'
       );
       if (dirStart) {
-        dirStart.setAttribute("title", "Starting Point — year landing");
-        if (/^start$/i.test((dirStart.textContent || "").trim())) {
-          dirStart.textContent = "Starting Point";
+        dirStart.setAttribute("title", "This year’s home");
+        if (/^starting point$/i.test((dirStart.textContent || "").trim())) {
+          dirStart.textContent = "Home";
         }
       }
     }
@@ -620,29 +621,44 @@
       } catch (eH) { /* */ }
       legend.innerHTML =
         '<span class="shell-nav-label">Navigate:</span> ' +
-        '<button type="button" class="shell-nav-btn" id="itt-shell-goto-start" title="Year map — trails and About">' +
-        "Starting Point</button>" +
+        '<a class="shell-nav-btn" id="itt-shell-goto-start" href="' +
+        hubHref +
+        '" title="All years — museum home">Starting Point</a>' +
         '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
         '<button type="button" class="shell-nav-btn" id="itt-shell-goto-back" title="Previous page in this year">Back</button>' +
         '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
         '<a class="shell-nav-exit" href="' +
         hubHref +
         '" title="Exit">← Year menu</a>' +
-        '<span class="shell-nav-hint">Lost? Starting Point = year map · Year menu = all years</span>';
-      if (exitBar && exitBar.parentNode) {
+        '<span class="shell-nav-hint">Lost? Starting Point = all years · toolbar Home = this year</span>';
+      var ui = document.getElementById("itt-year-ui");
+      var desk = ui && ui.querySelector(":scope > .desktop");
+      var layer = document.getElementById("itt-layer-legend");
+      if (ui && desk) {
+        if (layer && layer.parentNode === ui) {
+          if (layer.nextSibling) ui.insertBefore(legend, layer.nextSibling);
+          else ui.appendChild(legend);
+        } else {
+          ui.insertBefore(legend, desk);
+        }
+      } else if (exitBar && exitBar.parentNode) {
         if (exitBar.nextSibling) {
           exitBar.parentNode.insertBefore(legend, exitBar.nextSibling);
         } else {
           exitBar.parentNode.appendChild(legend);
         }
-      } else {
-        var desk = document.querySelector(".desktop");
-        if (desk) desk.insertBefore(legend, desk.firstChild);
+      } else if (desk) {
+        desk.insertBefore(legend, desk.firstChild);
       }
       var goStart = document.getElementById("itt-shell-goto-start");
       if (goStart) {
-        goStart.addEventListener("click", function () {
-          ctx.goHome();
+        goStart.addEventListener("click", function (ev) {
+          if (ev && ev.preventDefault) ev.preventDefault();
+          try {
+            (window.top || window).location.href = hubHref;
+          } catch (eHub) {
+            window.location.href = hubHref;
+          }
         });
       }
       var goBackBtn = document.getElementById("itt-shell-goto-back");

@@ -1,26 +1,76 @@
 /**
  * Starting Point chrome — every shipped year.
  * Star + guided stay first. Leftover rails sit in .itt-also-year.
- * Period pages keep their own look. This file only restyles museum chrome.
+ * Period dest sheets (1995+) leak html/body{background:#fff} and max-width.
+ * This file wins on start pages only so the year window never shows a
+ * white or black void beside a 48em column.
  */
 
-/* 2005 start must fill the IE window. 1995 body{max-width:920px} leaks via 1999. */
-html[data-itt-year="2005"],
-html[data-itt-year="2005"] body,
+html,
+body.itt-start-page,
+body[data-itt-start] {
+  color-scheme: only light;
+}
+
+html[data-itt-year] body.itt-start-page,
+html[data-itt-year] body[data-itt-start],
+html[data-itt-start] body {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+html[data-itt-year="1994"] body.itt-start-page,
+html[data-itt-year="1995"] body.itt-start-page,
+html[data-itt-year="1996"] body.itt-start-page,
+html[data-itt-year="1997"] body.itt-start-page,
+html[data-itt-year="1998"] body.itt-start-page,
+html[data-itt-year="1999"] body.itt-start-page,
+html[data-itt-year="2000"] body.itt-start-page,
+html[data-itt-year="2001"] body.itt-start-page {
+  background: #c0c0c0 !important;
+}
+
+html[data-itt-year="2002"] body.itt-start-page,
+html[data-itt-year="2003"] body.itt-start-page,
+html[data-itt-year="2004"] body.itt-start-page,
+html[data-itt-year="2006"] body.itt-start-page,
+html[data-itt-year="2007"] body.itt-start-page,
+html[data-itt-year="2008"] body.itt-start-page {
+  background: #ece9d8 !important;
+}
 html[data-itt-year="2005"] body.itt-start-page,
 html[data-itt-year="2005"] body[data-itt-start] {
-  max-width: none !important;
-  width: 100% !important;
-  min-height: 100%;
   background: #3a6ea5 !important;
 }
-html[data-itt-year="2005"] .ott-guided,
-html[data-itt-year="2005"] .ott-flows,
-html[data-itt-year="2005"] .itt-layer-assess,
-html[data-itt-year="2005"] .itt-also-year,
-html[data-itt-year="2005"] .itt-home-more {
-  max-width: none;
-  box-sizing: border-box;
+html[data-itt-year="2010"] body.itt-start-page,
+html[data-itt-year="2011"] body.itt-start-page,
+html[data-itt-year="2012"] body.itt-start-page,
+html[data-itt-year="2013"] body.itt-start-page,
+html[data-itt-year="2014"] body.itt-start-page,
+html[data-itt-year="2015"] body.itt-start-page,
+html[data-itt-year="2016"] body.itt-start-page,
+html[data-itt-year="2017"] body.itt-start-page,
+html[data-itt-year="2018"] body.itt-start-page,
+html[data-itt-year="2020"] body.itt-start-page {
+  background: #f3f3f3 !important;
+  color: #111 !important;
+}
+
+html[data-itt-year] body.itt-start-page .ott-guided,
+html[data-itt-year] body.itt-start-page .ott-flows,
+html[data-itt-year] body.itt-start-page .itt-layer-assess,
+html[data-itt-year] body.itt-start-page #itt-first-night-bar,
+html[data-itt-year] body.itt-start-page #itt-year-start,
+html[data-itt-year] body.itt-start-page .itt-also-year,
+html[data-itt-year] body.itt-start-page .itt-home-more {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .itt-year-star {
@@ -42,7 +92,9 @@ html[data-itt-year="2005"] .itt-home-more {
 .ott-flows {
   margin: 12px 0;
   padding: 10px 12px;
-  max-width: 48em;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 1.55;
@@ -220,15 +272,11 @@ html[data-itt-year="2017"] .ott-guided,
 html[data-itt-year="2017"] .ott-flows,
 html[data-itt-year="2018"] .ott-guided,
 html[data-itt-year="2018"] .ott-flows,
-html[data-itt-year="2019"] .ott-guided,
-html[data-itt-year="2019"] .ott-flows,
-html[data-itt-year="2021"] .ott-guided,
-html[data-itt-year="2021"] .ott-flows,
-html[data-itt-year="2022"] .ott-guided,
-html[data-itt-year="2022"] .ott-flows {
-  background: #f7f7f7;
-  color: #111;
-  border: 1px solid #c8c8c8;
+html[data-itt-year="2020"] .ott-guided,
+html[data-itt-year="2020"] .ott-flows {
+  background: #ffffff !important;
+  color: #111 !important;
+  border: 1px solid #c8c8c8 !important;
   border-radius: 0;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
@@ -240,13 +288,9 @@ html[data-itt-year="2017"] .ott-guided a,
 html[data-itt-year="2017"] .ott-flows a,
 html[data-itt-year="2018"] .ott-guided a,
 html[data-itt-year="2018"] .ott-flows a,
-html[data-itt-year="2019"] .ott-guided a,
-html[data-itt-year="2019"] .ott-flows a,
-html[data-itt-year="2021"] .ott-guided a,
-html[data-itt-year="2021"] .ott-flows a,
-html[data-itt-year="2022"] .ott-guided a,
-html[data-itt-year="2022"] .ott-flows a {
-  color: #125688;
+html[data-itt-year="2020"] .ott-guided a,
+html[data-itt-year="2020"] .ott-flows a {
+  color: #125688 !important;
 }
 
 /* Felt trail — first wander after the locked gold */

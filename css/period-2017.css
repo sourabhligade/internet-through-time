@@ -39,16 +39,33 @@
 .dp-stage[data-dp-tone="win"] .dp-bar { background: #0078d7; }
 
 .x17-shell {
-  max-width: 420px;
+  max-width: 320px;
   margin: 16px auto;
   font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
   color: #f5f5f7;
-  background: #111;
-  padding: 18px 16px 24px;
-  border-radius: 28px;
-  border: 2px solid #333;
+  background: #0a0a0a;
+  padding: 14px 14px 20px;
+  border-radius: 36px;
+  border: 3px solid #2a2a2a;
+  min-height: 520px;
+  position: relative;
+}
+.x17-shell [data-faceid-look] {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 24px auto 10px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  background: #1c1c1e;
+  color: #f5f5f7;
+  font-size: 11px;
+}
+.x17-shell [data-faceid-req] {
+  font-size: 11px;
+  color: #888;
 }
 .x17-notch {
   height: 18px;
@@ -86,3 +103,62 @@
 .year-2017.os-win10 {
   --itt-desktop-bg: #0078d7;
 }
+
+/* leftover-2× dest-true unique dests · not leftover plaques */
+.lo2-17 {
+  max-width: 46em;
+  margin: 16px auto;
+  font-family: Segoe UI, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.lo2-17 .crumb { font-size: 12px; margin: 0 0 10px; }
+.lo2-17 .lo2-stage {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #333;
+}
+.lo2-17 .lo2-panel {
+  margin: 14px 0;
+  padding: 12px;
+  border: 1px solid #333;
+  font-size: 12px;
+}
+.lo2-17 .lo2-panel label { display: block; margin: 6px 0; }
+.lo2-17 .lo2-panel button { font: inherit; margin: 0 6px 6px 0; }
+.lo2-17 .lo2-note { font-size: 12px; color: #444; }
+body.lo2-wa { background: #ece5dd; color: #111; }
+body.lo2-wa .lo2-stage { background: #075e54; color: #fff; border-color: #054c44; }
+body.lo2-wa .lo2-panel { background: #dcf8c6; }
+body.lo2-snap { background: #111; color: #f5f5f5; }
+body.lo2-snap a { color: #fffc00; }
+body.lo2-snap .lo2-stage { background: #1a1a1a; border-color: #444; }
+body.lo2-snap .lo2-panel { background: #222; color: #f5f5f5; border-color: #555; }
+body.lo2-lens { background: #fafafa; color: #202124; }
+body.lo2-lens .lo2-stage { background: #e8f0fe; border-color: #1a73e8; }
+body.lo2-lens .lo2-panel { background: #fff; }
+body.lo2-botw { background: #1b3a2f; color: #e8f5e9; }
+body.lo2-botw a { color: #a5d6a7; }
+body.lo2-botw .lo2-stage { background: #234d3c; border-color: #c9a227; }
+body.lo2-botw .lo2-panel { background: #fff8e1; color: #111; }
+body.lo2-watch { background: #f0f2f5; color: #1c1e21; }
+body.lo2-watch .lo2-stage { background: #4267b2; color: #fff; border-color: #365899; }
+body.lo2-watch .lo2-panel { background: #fff; }
+body.lo2-d2 { background: #0b0f14; color: #e6edf3; }
+body.lo2-d2 a { color: #79b8ff; }
+body.lo2-d2 .lo2-stage { background: #161b22; border-color: #c9a227; }
+body.lo2-d2 .lo2-panel { background: #fff8dc; color: #111; }
+body.lo2-cup { background: #f4e7c5; color: #1a1208; }
+body.lo2-cup .lo2-stage { background: #1a1208; color: #f4e7c5; }
+body.lo2-cup .lo2-panel { background: #fff8e7; }
+body.lo2-snes { background: #4a4a4a; color: #eee; }
+body.lo2-snes a { color: #cfc; }
+body.lo2-snes .lo2-stage { background: #2b2b2b; border-color: #888; }
+body.lo2-snes .lo2-panel { background: #ececec; color: #111; }
+body.lo2-m3 { background: #fff; color: #111; }
+body.lo2-m3 .lo2-stage { background: #111; color: #fff; }
+body.lo2-m3 .lo2-panel { background: #f7f7f7; }
+body.lo2-nfx { background: #141414; color: #eee; }
+body.lo2-nfx a { color: #90caf9; }
+body.lo2-nfx .lo2-stage { background: #000; border-color: #333; }
+body.lo2-nfx .lo2-panel { background: #222; color: #eee; border-color: #555; }

@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
 
@@ -89,6 +90,7 @@ test.describe("2013 flows", () => {
       localStorage.removeItem("itt13-vine-posts");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const go = page.locator("[data-pop-go][data-pop-id='askfm']").first();
     await go.click();
     expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
@@ -111,6 +113,7 @@ test.describe("2013 flows", () => {
       localStorage.removeItem("itt13-vine-posts");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="vine-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt13-vine-lx")).toBeFalsy();
@@ -152,6 +155,7 @@ test.describe("2013 flows", () => {
       localStorage.removeItem("itt13-vine-posts");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const goldTrap = page.locator("[data-lo-trap]").first();
     if (await goldTrap.count()) await goldTrap.click();
     await page.locator("[data-sd13-ack]").click();

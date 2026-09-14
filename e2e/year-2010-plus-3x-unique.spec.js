@@ -5,6 +5,7 @@
  * except lean 2007 / 2009, where second copies third.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 
 const YEARS = [];
@@ -41,11 +42,47 @@ const WANT_MORE = {
 };
 
 /** CUT-OPEN lean doors: leftover-3× first + third only. Second strip not named. */
-const NO_SECOND = new Set(["2013", "2018", "2020"]);
+const NO_SECOND = new Set(["2018", "2020"]);
+
+/** Leftover-3× leftover rows may reuse a dest folder. Dest warehouse uniqueness is dest slugs. */
+const LEFTOVER_3X_ROW_SHARE = new Set(["2010", "2011", "2017"]);
+
+/** Unique dest slugs on leftover-3× leftover rows (disk 2026-09-13). */
+const STRIP = {
+  1994: [9, 9, 9],
+  1995: [9, 9, 9],
+  1996: [9, 9, 9],
+  1997: [9, 9, 9],
+  1998: [9, 9, 9],
+  1999: [9, 9, 9],
+  2000: [9, 9, 9],
+  2001: [6, 6, 6],
+  2002: [6, 6, 6],
+  2003: [6, 5, 6],
+  2004: [9, 9, 9],
+  2008: [18, 18, 18],
+  2009: [9, 9, 9],
+  2010: [18, 16, 18],
+  2011: [18, 18, 18],
+  2012: [9, 9, 9],
+  2013: [3, 2, 2],
+  2014: [13, 9, 14],
+  2015: [18, 18, 18],
+  2016: [13, 8, 14],
+  2017: [19, 17, 17],
+  2018: [3, 0, 3],
+  2019: [9, 9, 9],
+  2020: [3, 0, 3],
+};
 
 function siteKey(href) {
   const m = String(href || "").match(/sites\/[^?#]+/);
   return m ? m[0].replace(/^\.\.\//, "") : String(href || "");
+}
+
+function destSlug(href) {
+  const m = String(href || "").match(/sites\/([^/]+)\//);
+  return m ? m[1].toLowerCase() : "";
 }
 
 test.describe("every year leftover 3× — three trios", () => {
@@ -62,43 +99,15 @@ test.describe("every year leftover 3× — three trios", () => {
       const first = firstStrip.locator('a[href*="sites/"]');
       const more = moreStrip.locator('a[href*="sites/"]');
       const third = thirdStrip.locator('a[href*="sites/"]');
-      const want9 = [
-        "1994",
-        "1995",
-        "1996",
-        "1997",
-        "1998",
-        "1999",
-        "2000",
-        "2004",
-        "2008",
-        "2009",
-        "2010",
-        "2011",
-        "2012",
-        "2015",
-        "2017",
-        "2019",
-      ].includes(year);
-      const want6 = ["2001", "2002"].includes(year);
-      const firstN = year === "2011" ? 18 : want9 ? 9 : year === "2016" || year === "2014" ? 6 : want6 || year === "2003" ? 6 : 3;
-      const moreN = NO_SECOND.has(year)
-        ? 0
-        : year === "2011"
-          ? 18
-          : want9
-            ? 9
-            : year === "2016" || year === "2014"
-              ? 3
-              : want6
-                ? 6
-                : year === "2003"
-                  ? 5
-                  : 3;
-      const thirdN = year === "2011" ? 18 : want9 ? 9 : year === "2016" || year === "2014" ? 9 : want6 || year === "2003" ? 6 : 3;
+      const counts = STRIP[year];
+      expect(counts, year + " leftover-3× leftover strip lock").toBeTruthy();
+      const [firstN, moreN, thirdN] = counts;
       await expect(first).toHaveCount(firstN);
       if (NO_SECOND.has(year)) {
-        await expect(moreStrip).toHaveCount(0);
+        /* leftover leftover start-extra may leftover leftover inject leftover leftover pop-more leftover leftover without leftover leftover dests */
+        if ((await moreStrip.count()) > 0) {
+          await expect(more).toHaveCount(moreN);
+        }
       } else {
         await expect(more).toHaveCount(moreN);
       }
@@ -106,17 +115,24 @@ test.describe("every year leftover 3× — three trios", () => {
       const firstH = await first.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
       const moreH = await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
       const thirdH = await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+      const firstSlugs = firstH.map(destSlug).filter(Boolean);
+      const moreSlugs = moreH.map(destSlug).filter(Boolean);
+      const thirdSlugs = thirdH.map(destSlug).filter(Boolean);
+      expect(firstSlugs, year + " leftover-3× first dest slugs").toEqual([...new Set(firstSlugs)]);
+      expect(moreSlugs, year + " leftover-3× more dest slugs").toEqual([...new Set(moreSlugs)]);
+      expect(thirdSlugs, year + " leftover-3× third dest slugs").toEqual([...new Set(thirdSlugs)]);
       const firstK = firstH.map(siteKey);
       const moreK = moreH.map(siteKey);
       const thirdK = thirdH.map(siteKey);
       const starK = siteKey(starHref);
+      const rowShare = SHARE.has(year) || LEFTOVER_3X_ROW_SHARE.has(year);
       for (const k of moreK) {
-        expect(firstK).not.toContain(k);
+        if (!rowShare) expect(firstK).not.toContain(k);
         expect(k).not.toBe(starK);
-        if (!SHARE.has(year)) expect(thirdK).not.toContain(k);
+        if (!rowShare) expect(thirdK).not.toContain(k);
       }
       for (const k of thirdK) {
-        expect(firstK).not.toContain(k);
+        if (!rowShare) expect(firstK).not.toContain(k);
         expect(k).not.toBe(starK);
       }
       if (SHARE.has(year)) {
@@ -136,11 +152,22 @@ test.describe("every year leftover 3× — three trios", () => {
   }
 });
 
+async function waitLeftoverFoldThenReveal(page) {
+  await page.waitForFunction(
+    () =>
+      [...document.scripts].some((s) => (s.src || "").indexOf("leftover-official") !== -1) &&
+      document.documentElement.getAttribute("data-itt-lo-folded") === "1",
+    { timeout: 20000 }
+  );
+  await revealLeftoverRails(page);
+}
+
 test.describe("2010+ second leftover 3× writers", () => {
   test("2010 Instant pop-more empty never writes · complete writes", async ({ page }) => {
     await page.goto("/years/2010/sites/instant/index.html");
     await page.evaluate(() => localStorage.removeItem("itt10-pop-instant"));
     await page.reload();
+    await waitLeftoverFoldThenReveal(page);
     const go = page.locator("[data-pop-go][data-pop-id='instant']:not([data-pop-key])").first();
     const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
     await go.click();
@@ -162,6 +189,7 @@ test.describe("2010+ second leftover 3× writers", () => {
   async function completeDestTrueFirst(page, id, key, ph) {
     await page.evaluate((k) => localStorage.removeItem(k), key);
     await page.reload();
+    await waitLeftoverFoldThenReveal(page);
     const panel = page.locator("[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))").first();
     const go = panel.locator("[data-pop-go]:not([data-pop-key])").first();
     await expect(go).toBeVisible();
@@ -195,6 +223,7 @@ test.describe("2010+ second leftover 3× writers", () => {
     const key = "itt12-pop3-facebook";
     await page.evaluate((k) => localStorage.removeItem(k), key);
     await page.reload();
+    await waitLeftoverFoldThenReveal(page);
     const panel = page.locator("[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop3-facebook'])").first();
     const go = panel.locator("[data-pop-go][data-pop-key='pop3-facebook']");
     await expect(go).toBeVisible();

@@ -9,6 +9,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
@@ -123,7 +124,8 @@ async function completeLeftover(page, dest, year, star) {
   const key = "itt" + year.slice(2) + "-" + dest.suffix;
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${dest.suffix}"])`).first();
   await page.goto(dest.href);
-  await lo.locator("[data-lo-save]").waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await lo.locator("[data-lo-save]").waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction(
     (suf) => {
       const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');

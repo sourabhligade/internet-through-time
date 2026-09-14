@@ -6,6 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
+const { revealLeftoverRails } = require('./helpers');
 
 const matrix = require('./2x-links.matrix.json');
 const ROOT = path.join(__dirname, '..');
@@ -35,7 +36,8 @@ async function leaks(page, year) {
 async function runLeftoverOfficial(page, spec) {
   const suffix = spec.key.replace(/^itt\d{2}-/, '');
   const panel = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
-  await panel.locator("[data-lo-save]").waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await panel.locator("[data-lo-save]").waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction((suf) => {
     const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
     return !!(b && b.getAttribute("data-lo-bound") === "1");
@@ -92,6 +94,7 @@ async function runFlow(page, spec) {
   await page.goto(spec.path);
   await clearKey(page, spec.key);
   await page.reload();
+  await revealLeftoverRails(page);
   const suffix = spec.key.replace(/^itt\d{2}-/, '');
   const fourX = page.locator(`[data-4x-panel]:has([data-4x-go="${suffix}"])`);
   if ((await fourX.count()) > 0) {

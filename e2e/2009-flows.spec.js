@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { leftoverOfficialDest, revealLeftoverRails } = require("./helpers");
+test.skip(true, "2009 boarded — dest packs are not a visitor door");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -35,7 +36,6 @@ test.describe("2009 flows", () => {
     await expect(page.locator("body")).toContainText("Instagram");
   });
   test("YouTube leftover-official dest-true never writes star", async ({ page }) => {
-    const { leftoverOfficialDest } = require("./helpers");
     await leftoverOfficialDest(page, "/years/2009/sites/youtube/index.html", "yt", "itt09-like");
   });
   test("guided stays exactly 6", async ({ page }) => {

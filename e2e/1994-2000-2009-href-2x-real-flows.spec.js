@@ -9,6 +9,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
@@ -122,6 +123,7 @@ async function completeLeftover(page, dest, year, star) {
   const key = "itt" + year.slice(2) + "-" + dest.suffix;
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${dest.suffix}"])`).first();
   await page.goto(dest.href);
+  await revealLeftoverRails(page);
   await lo.locator("[data-lo-save]").waitFor({ timeout: 20000 });
   await page.waitForFunction(
     (suf) => {
@@ -200,6 +202,7 @@ async function completeLeftover(page, dest, year, star) {
  * @param {string} fromHref
  */
 async function hopLeftover2x(page, year, fromHref) {
+  await revealLeftoverRails(page);
   const strip = page.locator("[data-itt-2x-links]").first();
   await expect(strip, fromHref + " 2× leftover strip").toBeVisible();
   const hrefs = await strip.locator("a[href*='../']").evaluateAll((as) =>
@@ -228,6 +231,7 @@ async function hopLeftover2x(page, year, fromHref) {
   expect(html.includes("data-lo-save"), abs + " leftover machine").toBeTruthy();
   await expect(strip.locator(`a[href="${nextRel}"]`).first()).toBeVisible();
   await page.goto(abs);
+  await revealLeftoverRails(page);
   await expect(page).not.toHaveURL(/404/);
   expect(page.url()).toContain("/years/" + year + "/sites/");
   await expect(page.locator("[data-lo-save]").first()).toBeVisible({ timeout: 15000 });
@@ -237,6 +241,7 @@ test.describe("1994–2000 + 2009 href-2× gold hops are leftover dests on disk"
   for (const y of YEARS) {
     test(`${y.year} gold 2× hops 200 + leftover machine`, async ({ page }) => {
       await page.goto(y.gold);
+      await revealLeftoverRails(page);
       const hrefs = await page
         .locator("[data-itt-2x-links] a[href*='../']")
         .evaluateAll((as) => [...new Set(as.map((a) => a.getAttribute("href")).filter(Boolean))]);

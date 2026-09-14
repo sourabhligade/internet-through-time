@@ -161,9 +161,7 @@ Avoid full-file copies of period CSS when only a few rules change.
 
 | Doc | Role |
 |-----|------|
-| `docs/SRP-SPLIT-PLAN.md` | Module split history / browser extract backlog |
-| `docs/1998-IMPLEMENTATION-PHASES.md` | Year build phases |
-| `docs/1998-MUSEUM-GRADE.md` | 1998 ship bar |
+| [`DISK-TRUTH.md`](DISK-TRUTH.md) | What is playable |
 | `README.md` | Tree overview |
 
 ---

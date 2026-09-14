@@ -26,9 +26,36 @@
     }
     var el = document.createElement("link");
     el.rel = "stylesheet";
-    el.href = scriptDir() + "start.css";
+    el.href = scriptDir() + "start.css?v=20260911light";
     el.setAttribute("data-itt-year-start-css", "1");
     (document.head || document.documentElement).appendChild(el);
+  }
+
+  function ensureFill() {
+    var id = "itt-start-fill";
+    var el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement("style");
+      el.id = id;
+      (document.head || document.documentElement).appendChild(el);
+    }
+    el.textContent =
+      "html,body{color-scheme:only light}" +
+      "html,body.itt-start-page,body[data-itt-start]{" +
+      "width:100%!important;max-width:none!important;min-width:100%!important;" +
+      "min-height:100%!important;margin:0}" +
+      "html[data-itt-year=\"2015\"] body.itt-start-page,html[data-itt-year=\"2016\"] body.itt-start-page," +
+      "html[data-itt-year=\"2017\"] body.itt-start-page,html[data-itt-year=\"2018\"] body.itt-start-page," +
+      "html[data-itt-year=\"2020\"] body.itt-start-page{background:#f3f3f3!important;color:#111!important}" +
+      "html[data-itt-year=\"2015\"] .ott-guided,html[data-itt-year=\"2015\"] .ott-flows," +
+      "html[data-itt-year=\"2016\"] .ott-guided,html[data-itt-year=\"2016\"] .ott-flows," +
+      "html[data-itt-year=\"2017\"] .ott-guided,html[data-itt-year=\"2017\"] .ott-flows," +
+      "html[data-itt-year=\"2018\"] .ott-guided,html[data-itt-year=\"2018\"] .ott-flows," +
+      "html[data-itt-year=\"2020\"] .ott-guided,html[data-itt-year=\"2020\"] .ott-flows{" +
+      "background:#fff!important;color:#111!important}" +
+      "#itt-year-start,.ott-guided,.ott-flows,.itt-layer-assess,#itt-first-night-bar," +
+      ".itt-also-year,.itt-home-more{width:100%!important;max-width:none!important;" +
+      "box-sizing:border-box!important;margin-left:0!important;margin-right:0!important}";
   }
 
   function paintStart(year) {
@@ -41,6 +68,7 @@
       return;
     }
     ensureCss();
+    ensureFill();
     try {
       document.documentElement.setAttribute("data-itt-year", year);
       if (document.body) {
@@ -167,7 +195,7 @@
   }
 
   function playableChipHtml(year) {
-    var leanCabinet = year === "2007" || year === "2009" || year === "2018" || year === "2020" || year === "2021" || year === "2022";
+    var leanCabinet = year === "2007" || year === "2009" || year === "2018" || year === "2020";
     if (leanCabinet) {
       return (
         "<b>▶ Play this year’s games</b> — " +
@@ -307,6 +335,10 @@
     "[id^='ott-2x-']",
     "[id^='ott-5x-']",
     "[data-itt-2x-links]",
+    "[data-itt-2x-unique]",
+    "[data-itt-2x-unique-b]",
+    "[data-itt-2x-unique-c]",
+    ".itt-3x-board",
     "[data-lo-panel]",
     "[data-4x-panel]",
     "[data-itt-lo3x]",

@@ -9,6 +9,7 @@
   ITT.YearUI.YEARS = {
   "1994": {
     "title": "Netscape Navigator — 1994",
+    "desktopBg": "#000080",
     "css": [
       "netscape-chrome.css",
       "period-1994.css"
@@ -1625,7 +1626,7 @@
   "connectH2": "Network Connections",
   "connectBtn": "Connect (always-on broadband)",
   "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2019 thesis: Who’s watching is the door · a 7-day trial is the trap · Continue is the save. Disney+ Continue · TikTok leftover · Arcade · Stadia.",
+  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2019 thesis: Continue watching is the save · a 7-day trial is the trap. Disney+ Continue · TikTok leftover · Arcade · Stadia.",
   "openLoc": "Open Location:",
   "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
   "startBanner": "Windows<b>10</b>",
@@ -1638,6 +1639,34 @@
   "hasTaskbar": true,
   "maximized": true
 },
+  "2020": {
+    "title": "Chrome habit \u2014 2020",
+    "css": ["win95-netscape.css", "chrome-habit.css"],
+    "bodyClass": "year-2020 os-win10 browser-chrome-habit",
+    "boot": "browser-2020.js",
+    "dir": [
+      { "go": "pages/home.html", "label": "Start" },
+      { "go": "sites/zoom/meeting.html", "label": "Star" },
+      { "go": "pages/about.html", "label": "About" }
+    ],
+    "chrome": "2007",
+    "toolbar": "ie", "family": "ie",
+    "location": "http://home.microsoft.com/intl/web2020/",
+    "prefHome": "http://home.microsoft.com/intl/web2020/",
+    "yearLabel": "2020 \u00b7 Windows 10 mass \u00b7 Chrome habit \u00b7 Zoom",
+    "windowTitle": "Welcome to the World Wide Web — Chrome habit",
+    "connectH2": "Network Connections",
+    "connectBtn": "Connect (always-on broadband)",
+    "skipBtn": "Skip connect",
+    "thesis": "2020 thesis: Leave is the save. Join never writes. 300 million is participants.",
+    "openLoc": "Open Location:",
+    "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop.</p>",
+    "startBanner": "Windows<b>10</b>",
+    "taskBtn": "Chrome",
+    "icon": "e", "aria": "Chrome habit", "locLabel": "Address",
+    "bookmarksTitle": "Favorites", "mailPh": "you@example.com",
+    "hasTaskbar": true, "maximized": true
+  },
   "2021": {
   "title": "Chrome habit — 2021",
   "css": [
@@ -1676,128 +1705,6 @@
   "mailPh": "you@example.com",
   "hasTaskbar": true,
   "maximized": true
-},
-  "2023": {
-    "title": "Chrome habit \u2014 2023",
-    "css": ["win95-netscape.css", "chrome-habit.css"],
-    "bodyClass": "year-2023 os-win10 browser-chrome-habit",
-    "boot": "browser-2023.js",
-    "dir": [
-      { "go": "pages/home.html", "label": "Start" },
-      { "go": "sites/plus/index.html", "label": "Star" },
-      { "go": "pages/about.html", "label": "About" }
-    ],
-    "chrome": "2007",
-    "toolbar": "ie", "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2023/",
-    "prefHome": "http://home.microsoft.com/intl/web2023/",
-    "yearLabel": "2023 \u00b7 Windows 10 mass \u00b7 Chrome habit \u00b7 dest name X",
-    "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2023 thesis: Subscribe Plus is the save. Dest name is X. Sora / 4o are 2024.",
-    "openLoc": "Open Location:",
-    "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop.</p>",
-    "startBanner": "Windows<b>10</b>",
-    "taskBtn": "Chrome",
-    "icon": "e", "aria": "Chrome habit", "locLabel": "Address",
-    "bookmarksTitle": "Favorites", "mailPh": "you@example.com",
-    "hasTaskbar": true, "maximized": true
-  },
-  "2024": {
-    "title": "Chrome habit \u2014 2024",
-    "css": ["win95-netscape.css", "chrome-habit.css"],
-    "bodyClass": "year-2024 os-win10 browser-chrome-habit",
-    "boot": "browser-2024.js",
-    "dir": [
-      { "go": "pages/home.html", "label": "Start" },
-      { "go": "sites/chatgpt/4o.html", "label": "Star" },
-      { "go": "pages/about.html", "label": "About" }
-    ],
-    "chrome": "2007",
-    "toolbar": "ie", "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2024/",
-    "prefHome": "http://home.microsoft.com/intl/web2024/",
-    "yearLabel": "2024 \u00b7 Windows 10 residual \u00b7 Chrome habit \u00b7 GPT-4o Talk",
-    "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2024 thesis: Talk is the save. No 4o pick never writes. Plus is 2023.",
-    "openLoc": "Open Location:",
-    "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop.</p>",
-    "startBanner": "Windows<b>10</b>",
-    "taskBtn": "Chrome",
-    "icon": "e", "aria": "Chrome habit", "locLabel": "Address",
-    "bookmarksTitle": "Favorites", "mailPh": "you@example.com",
-    "hasTaskbar": true, "maximized": true
-  },
-  "2020": {
-    "title": "Chrome habit \u2014 2020",
-    "css": ["win95-netscape.css", "chrome-habit.css"],
-    "bodyClass": "year-2020 os-win10 browser-chrome-habit",
-    "boot": "browser-2020.js",
-    "dir": [
-      { "go": "pages/home.html", "label": "Start" },
-      { "go": "sites/zoom/meeting.html", "label": "Star" },
-      { "go": "pages/about.html", "label": "About" }
-    ],
-    "chrome": "2007",
-    "toolbar": "ie", "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2020/",
-    "prefHome": "http://home.microsoft.com/intl/web2020/",
-    "yearLabel": "2020 \u00b7 Windows 10 mass \u00b7 Chrome habit \u00b7 Zoom",
-    "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2020 thesis: Leave is the save. Join never writes. 300 million is participants.",
-    "openLoc": "Open Location:",
-    "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop.</p>",
-    "startBanner": "Windows<b>10</b>",
-    "taskBtn": "Chrome",
-    "icon": "e", "aria": "Chrome habit", "locLabel": "Address",
-    "bookmarksTitle": "Favorites", "mailPh": "you@example.com",
-    "hasTaskbar": true, "maximized": true
-  },
-  "2022": {
-  "title": "Chrome habit — 2022",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css"
-  ],
-  "bodyClass": "year-2022 os-win10 browser-chrome-habit",
-  "boot": "browser-2022.js",
-  "dir": [
-    { "go": "pages/home.html", "label": "Start" },
-    { "go": "sites/chatgpt/index.html", "label": "ChatGPT" },
-    { "go": "sites/twitter/index.html", "label": "Twitter" },
-    { "go": "sites/wordle/index.html", "label": "Wordle" },
-    { "go": "sites/stablediffusion/index.html", "label": "SD" },
-    { "go": "pages/about.html", "label": "About" }
-  ],
-  "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
-  "location": "http://home.microsoft.com/intl/web2022/",
-  "prefHome": "http://home.microsoft.com/intl/web2022/",
-  "yearLabel": "2022 · Windows 10 mass · Chrome habit · ChatGPT Send",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2022 thesis: research preview · empty / Plus / GPT-4 / Bing never write · Send is the save. Dest stays Twitter. X is 2023.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-}};
+}
+};
 })(typeof window !== "undefined" ? window : this);

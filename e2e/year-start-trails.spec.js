@@ -6,13 +6,13 @@ const { waitKey } = require("./helpers");
 test.describe("Per-year guided start trails", () => {
   test("hub registers year chips and trail map has every YYYY-start", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator(".passport-grid .passport-year")).toHaveCount(28);
+    await expect(page.locator(".passport-grid .passport-year")).toHaveCount(27);
     const trails = await page.evaluate(() => {
       const T = (window.ITT && ITT.MuseumProgress && ITT.MuseumProgress.TRAILS) || {};
       const ids = Object.keys(T).filter((k) => /-start$/.test(k)).sort();
       return ids;
     });
-    expect(trails.length).toBe(28);
+    expect(trails.length).toBe(27);
     expect(trails[0]).toBe("1994-start");
     expect(trails).toContain("2005-start");
     expect(trails).toContain("2006-start");
@@ -25,11 +25,11 @@ test.describe("Per-year guided start trails", () => {
     expect(trails).toContain("2019-start");
     expect(trails).toContain("2020-start");
     expect(trails).toContain("2021-start");
-    expect(trails).toContain("2022-start");
+    expect(trails).not.toContain("2022-start");
     expect(trails).not.toContain("2023-start");
     expect(trails).not.toContain("2024-start");
     expect(trails).not.toContain("2025-start");
-    expect(trails[trails.length - 1]).toBe("2022-start");
+    expect(trails[trails.length - 1]).toBe("2021-start");
   });
 
   test("deep link ?trail=2010-start writes night state", async ({ page }) => {
@@ -47,7 +47,8 @@ test.describe("Per-year guided start trails", () => {
   test("every year home has a numbered ott-guided P0 trail", async ({ page }) => {
     const fs = require("fs");
     const path = require("path");
-    for (let y = 1994; y <= 2022; y++) {
+    for (let y = 1994; y <= 2021; y++) {
+      if (y === 2009) continue;
       if (!fs.existsSync(path.join(__dirname, "..", "years", String(y), "index.html"))) continue;
       await page.goto(`/years/${y}/pages/home.html`);
       const rail = page.locator(`#ott-guided-${y}`);

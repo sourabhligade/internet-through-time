@@ -656,7 +656,8 @@ async function runDest(page, d) {
     const nHop = await hops.count();
     for (let i = 0; i < nHop; i++) await hops.nth(i).click();
     const save = page.locator("[data-official-verb], [data-official-save]").first();
-    await save.waitFor({ timeout: 15000 });
+    await revealLeftoverRails(page);
+  await save.waitFor({ state: "attached", timeout: 15000 });
     await save.click();
     expect(await getKey(page, d.whenKey), d.whenKey + " official empty").toBeFalsy();
     const reqs = page.locator("[data-official-req], [data-req]");

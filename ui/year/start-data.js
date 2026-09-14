@@ -306,18 +306,7 @@
  " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
 },
- "2019": {
- "href": "../sites/disneyplus/home.html",
- "label": "★ One-thing · Disney+ Who’s watching REAL",
- "items": [
- " <a href=\"about.html\" style=\"color:#ffcdd2\">About 2019</a> — table ends 2018 · ITU 4.1B / 53.6%",
- " <a href=\"../sites/disneyplus/home.html\" style=\"color:#ffcdd2\">Disney+ Who’s watching</a> — trial never writes",
- " <a href=\"../sites/tiktok/index.html\" style=\"color:#ffcdd2\">TikTok For You</a> — 2019 US mass",
- " <a href=\"../sites/arcade/index.html\" style=\"color:#ffcdd2\">Apple Arcade</a> — $4.99 · 19 Sep",
- " <a href=\"../sites/stadia/index.html\" style=\"color:#ffcdd2\">Stadia</a> — 19 Nov Founder’s",
- " <a href=\"map.html\" style=\"color:#ffcdd2\">Year flow map</a> "
- ]
-},
+ 
  "2007": {
  "href": "../sites/iphone/index.html",
  "label": "★ One-thing · iPhone Safari REAL",
@@ -331,40 +320,16 @@
  
  ]
 },
- "2021": {
- "href": "../sites/att/index.html",
- "label": "★ One-thing · Ask App Not to Track REAL",
+ "2019": {
+ "href": "../sites/disneyplus/home.html",
+ "label": "★ One-thing · Disney+ Continue REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
- " <a href=\"../sites/att/index.html\" style=\"color:#90caf9\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
- " <a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal leftover</a> — 15 May delay",
- " <a href=\"../sites/copilot/index.html\" style=\"color:#90caf9\">Copilot waitlist</a> — not ChatGPT",
- " <a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename leftover</a> — app still Facebook",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
- ]
-},
- "2023": {
- "href": "../sites/plus/index.html",
- "label": "\u2605 One-thing \u00b7 Plus Subscribe REAL",
- "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2023</a> \u2014 table ends 2018 \u00b7 1,132,268,801 Jan \u00b7 ITU 5.4B / 67%",
- " <a href=\"../sites/plus/index.html\" style=\"color:#90caf9\">\u2605 Plus Subscribe</a> \u2014 GPT-4-as-here never writes",
- " <a href=\"../sites/gpt4/index.html\" style=\"color:#90caf9\">GPT-4</a> \u2014 14 Mar",
- " <a href=\"../sites/bingchat/index.html\" style=\"color:#90caf9\">Bing Chat</a> \u2014 stays Bing Chat",
- " <a href=\"../sites/threads/index.html\" style=\"color:#90caf9\">Threads</a> \u2014 5 Jul",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
- ]
-},
- "2024": {
- "href": "../sites/chatgpt/4o.html",
- "label": "\u2605 One-thing \u00b7 GPT-4o Talk REAL",
- "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2024</a> \u2014 table ends 2018 \u00b7 1,079,154,539 Jan \u00b7 ITU 5.5B / 68%",
- " <a href=\"../sites/chatgpt/4o.html\" style=\"color:#90caf9\">\u2605 GPT-4o Talk</a> \u2014 no 4o pick never writes",
- " <a href=\"../sites/gemini/index.html\" style=\"color:#90caf9\">Gemini</a> \u2014 Bard is 2023",
- " <a href=\"../sites/claude35/index.html\" style=\"color:#90caf9\">Claude 3.5</a> \u2014 20\u201321 Jun",
- " <a href=\"../sites/sora/index.html\" style=\"color:#90caf9\">Sora preview</a> \u2014 public is trap",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
+ " <a href=\"about.html\" style=\"color:#ffcdd2\">About 2019</a> — table ends 2018 · ITU 4.1B / 53.6%",
+ " <a href=\"../sites/disneyplus/home.html\" style=\"color:#ffcdd2\">Disney+ Continue</a> — trial never writes",
+ " <a href=\"../sites/tiktok/index.html\" style=\"color:#ffcdd2\">TikTok For You</a> — 2019 US mass",
+ " <a href=\"../sites/arcade/index.html\" style=\"color:#ffcdd2\">Apple Arcade</a> — $4.99 · 19 Sep",
+ " <a href=\"../sites/stadia/index.html\" style=\"color:#ffcdd2\">Stadia</a> — 19 Nov Founder’s",
+ " <a href=\"map.html\" style=\"color:#ffcdd2\">Year flow map</a> "
  ]
 },
  "2020": {
@@ -379,15 +344,15 @@
  " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
 },
- "2022": {
- "href": "../sites/chatgpt/index.html",
- "label": "★ One-thing · ChatGPT Send REAL",
+ "2021": {
+ "href": "../sites/att/index.html",
+ "label": "★ One-thing · Ask App Not to Track REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
- " <a href=\"../sites/chatgpt/index.html\" style=\"color:#90caf9\">★ ChatGPT Send</a> — Plus never writes",
- " <a href=\"../sites/twitter/index.html\" style=\"color:#90caf9\">Twitter</a> — still Twitter",
- " <a href=\"../sites/wordle/index.html\" style=\"color:#90caf9\">Wordle</a> — NYT 31 Jan",
- " <a href=\"../sites/stablediffusion/index.html\" style=\"color:#90caf9\">Stable Diffusion</a> — 22 Aug",
+ " <a href=\"about.html\" style=\"color:#90caf9\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
+ " <a href=\"../sites/att/index.html\" style=\"color:#90caf9\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
+ " <a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal leftover</a> — 15 May delay",
+ " <a href=\"../sites/copilot/index.html\" style=\"color:#90caf9\">Copilot waitlist</a> — not ChatGPT",
+ " <a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename leftover</a> — app still Facebook",
  " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
 }

@@ -71,6 +71,7 @@ test.describe("2013 leftover dest-true", () => {
       localStorage.removeItem("itt13-vine-posts");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="vine-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt13-vine-lx")).toBeFalsy();
@@ -111,6 +112,7 @@ test.describe("2018 leftover dest-true", () => {
       localStorage.removeItem("itt18-gdpr");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="gdpr-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt18-gdpr-lx")).toBeFalsy();
@@ -132,6 +134,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
       localStorage.removeItem("itt16-ig-stories");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="dyn-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt16-dyn-lx")).toBeFalsy();
@@ -149,6 +152,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
       localStorage.removeItem("itt17-faceid");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="teams-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt17-teams-lx")).toBeFalsy();
@@ -160,12 +164,16 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     expect(await getKey(page, "itt17-faceid")).toBeFalsy();
   });
   test("2019 Fortnite leftover-2×", async ({ page }) => {
+    const fs = require("fs");
+    const path = require("path");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years/2019/sites/fortnite/index.html")), "old 2019 fortnite dest gone");
     await page.goto("/years/2019/sites/fortnite/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt19-fn-lx");
       localStorage.removeItem("itt19-disneyplus");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="fn-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt19-fn-lx")).toBeFalsy();
@@ -185,6 +193,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
       localStorage.removeItem("itt15-periscope");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="apple-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt15-apple-lx")).toBeFalsy();
@@ -204,6 +213,9 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     expect(await getKey(page, "itt15-periscope")).toBeFalsy();
   });
   test("2019 iPhone about leftover-2× lx then d2 · gold empty", async ({ page }) => {
+    const fs = require("fs");
+    const path = require("path");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years/2019/sites/iphone/about.html")), "old 2019 iphone about dest gone");
     await page.goto("/years/2019/sites/iphone/about.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt19-iphone-ab-lx");
@@ -211,6 +223,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
       localStorage.removeItem("itt19-disneyplus");
     });
     await page.reload();
+    await revealLeftoverRails(page);
     const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="iphone-ab-lx"]') }).first();
     await p1.locator("[data-lo-save]").click();
     expect(await getKey(page, "itt19-iphone-ab-lx")).toBeFalsy();

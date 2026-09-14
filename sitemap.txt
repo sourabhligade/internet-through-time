@@ -76,6 +76,7 @@
 /years/2019/
 /years/2019/pages/home.html
 /years/2019/pages/about.html
+/years/2019/sites/disneyplus/home.html
 /years/2018/sites/gdpr/index.html
 /years/1994/sites/goodtimes/index.html
 /years/1994/sites/goodtimes/about.html
@@ -264,3 +265,4 @@
 /years/2021/
 /years/2021/pages/home.html
 /years/2021/pages/about.html
+/years/2021/sites/att/index.html

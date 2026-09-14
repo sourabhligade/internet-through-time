@@ -10,20 +10,32 @@
   var META = {
     "1994": { machine: "Windows 3.1-class · Netscape", star: "Cool Site of the Day", starHref: "sites/csotd/index.html", game: "Hotlist Surfer" },
     "1995": { machine: "Windows 95 · Netscape 2", star: "SSL checkout", starHref: "sites/amazon/ssl-checkout.html", game: "Checkers" },
-    "1996": { machine: "Windows 95 · Netscape", star: "Space Jam", starHref: "sites/spacejam/index.html", game: "Planet Hop" },
-    "1997": { machine: "Windows 95 · Netscape / IE", star: "ICQ", starHref: "sites/icq/index.html", game: "Connect 4" },
+    "1996": { machine: "Windows 95 · Netscape", star: "Portal wars", starHref: "sites/portals/wars.html", game: "Planet Hop" },
+    "1997": { machine: "Windows 95 · Netscape / IE", star: "PointCast", starHref: "sites/pointcast/index.html", game: "Connect 4" },
     "1998": { machine: "Windows 98 · Internet Explorer 4", star: "Google 1998", starHref: "sites/google/index.html", game: "Skip Intro" },
-    "1999": { machine: "Windows 98 · Internet Explorer 5", star: "GeoCities", starHref: "sites/geocities/index.html", game: "Pet Dash" },
-    "2000": { machine: "Windows 98 · Internet Explorer 5", star: "Portal / Amazon", starHref: "sites/amazon/index.html", game: "Portal Judge" },
+    "1999": { machine: "Windows 98 · Internet Explorer 5", star: "AIM", starHref: "sites/aim/index.html", game: "Pet Dash" },
+    "2000": { machine: "Windows 98 · Internet Explorer 5", star: "MapQuest", starHref: "sites/mapquest/index.html", game: "Portal Judge" },
     "2001": { machine: "Windows XP · Internet Explorer 6", star: "Wikipedia", starHref: "sites/wikipedia/edit.html", game: "Clickscape" },
     "2002": { machine: "Windows XP · Internet Explorer 6", star: "StumbleUpon", starHref: "sites/stumbleupon/index.html", game: "Room Sticky" },
     "2003": { machine: "Windows XP · Internet Explorer 6", star: "Photobucket", starHref: "sites/photobucket/index.html", game: "Gags Lite" },
-    "2004": { machine: "Windows XP · Internet Explorer 6", star: "thefacebook", starHref: "sites/facebook/index.html", game: "Cube Whack" },
-    "2008": { machine: "Windows XP · Internet Explorer 7", star: "App Store / Chrome", starHref: "sites/appstore/index.html", game: "Tap Grid" },
-    "2009": { machine: "Windows XP residual · IE8 (Win7 ships)", star: "FarmVille residual", starHref: "sites/farmville/index.html", game: "Plot Neighbors" },
+    "2004": { machine: "Windows XP · Internet Explorer 6", star: "thefacebook networks", starHref: "sites/facebook/networks.html", game: "Cube Whack" },
+    "2008": { machine: "Windows XP · Internet Explorer 7", star: "GitHub issue", starHref: "sites/github/issue.html", game: "Tap Grid" },
+    "2009": { machine: "Windows XP residual · IE8 (Win7 ships)", star: "Facebook Like", starHref: "sites/facebook/index.html", game: "Plot Neighbors" },
     "2010": { machine: "Windows 7 · Internet Explorer 8", star: "Instagram iOS", starHref: "sites/instagram/index.html", game: "Sling Nest" },
     "2011": { machine: "Windows 7 · Internet Explorer 9", star: "Google+", starHref: "sites/googleplus/index.html", game: "Letter Swap" },
-    "2012": { machine: "Windows 7 · Internet Explorer 9", star: "Instagram Android", starHref: "sites/instagram/android.html", game: "Guess Doodle" }
+    "2012": { machine: "Windows 7 · Internet Explorer 9", star: "Instagram Android", starHref: "sites/instagram/android.html", game: "Guess Doodle" },
+    "2005": { machine: "Windows XP · Internet Explorer 6", star: "YouTube upload", starHref: "sites/youtube/upload.html", game: "" },
+    "2006": { machine: "Windows XP · Internet Explorer 6", star: "Twttr", starHref: "sites/twitter/index.html", game: "" },
+    "2007": { machine: "Windows XP · Internet Explorer 6", star: "iPhone Safari", starHref: "sites/iphone/index.html", game: "" },
+    "2013": { machine: "Windows 7 residual · IE 9", star: "Vine 6s", starHref: "sites/vine/record.html", game: "" },
+    "2014": { machine: "Windows 7 residual · IE 9", star: "WhatsApp Install", starHref: "sites/whatsapp/index.html", game: "" },
+    "2015": { machine: "Windows 7 residual · Chrome habit", star: "Periscope Go LIVE", starHref: "sites/periscope/index.html", game: "" },
+    "2016": { machine: "Windows 10 rising · Chrome habit", star: "Instagram Stories", starHref: "sites/instagram/stories.html", game: "" },
+    "2017": { machine: "Windows 10 · Chrome habit", star: "Face ID", starHref: "sites/iphone/x.html", game: "" },
+    "2018": { machine: "Windows 10 · Chrome habit", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "" },
+    "2019": { machine: "Windows 10 · Chrome habit", star: "Disney+ Continue", starHref: "sites/disneyplus/home.html", game: "" },
+    "2020": { machine: "Windows 10 · Chrome habit", star: "Zoom Leave", starHref: "sites/zoom/meeting.html", game: "" },
+    "2021": { machine: "Windows 10 · Chrome habit", star: "ATT Ask", starHref: "sites/att/index.html", game: "" }
   };
 
   function yearOf() {
@@ -152,9 +164,15 @@
     bar.setAttribute("role", "navigation");
     bar.setAttribute("aria-label", "Museum layers: machine, web, game");
     bar.innerHTML = legendHtml(y, here);
+    var ui = doc.getElementById("itt-year-ui");
+    var desk = ui && ui.querySelector(":scope > .desktop");
     var exit = doc.getElementById("exit-bar");
     var nav = doc.getElementById("itt-nav-slot") || doc.getElementById("itt-exhibit-nav");
-    if (exit && exit.parentNode) {
+    /* Shell: reserve a top row on #itt-year-ui so 1994 desktop icons
+       (position:absolute) cannot sit on top of the chips. */
+    if (here === "machine" && ui && desk) {
+      ui.insertBefore(bar, desk);
+    } else if (exit && exit.parentNode) {
       if (exit.nextSibling) exit.parentNode.insertBefore(bar, exit.nextSibling);
       else exit.parentNode.appendChild(bar);
     } else if (nav && nav.parentNode) {

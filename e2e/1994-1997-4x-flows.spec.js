@@ -3,6 +3,7 @@
  * 1994–1997 4× leftover — every N-flow: incomplete never writes, complete writes ittYY-*.
  */
 const { test, expect } = require('@playwright/test');
+const { revealLeftoverRails } = require('./helpers');
 
 
 async function getKey(page, key) {
@@ -38,6 +39,7 @@ async function runFlow(page, spec) {
   await page.goto(spec.path);
   await clearKey(page, spec.key);
   await page.reload();
+  await revealLeftoverRails(page);
   await expect(page.locator('html[data-4x-ready="1"]')).toBeAttached({ timeout: 15000 });
   const panel = page.locator(`[data-4x-panel]:has([data-4x-go="${suffix}"])`);
   const go = panel.locator('[data-4x-go]');

@@ -69,7 +69,7 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   });
 });
 
-test("2019 is live", async ({ page }) => {
+test("2019 is live lean", async ({ page }) => {
   const fs = require("fs");
   const path = require("path");
   expect(fs.existsSync(path.join(__dirname, "..", "years", "2019", "index.html"))).toBe(true);

@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-08  
 **Status:** **LIVE lean door** (CUT-OPEN). Star = GDPR Manage `itt18-gdpr`. Accept All never writes.  
-**Disk truth:** Hub is **28 years open** · **2020 / 2023–2025 wiped**. Do not restore a forest.  
+**Disk truth:** Hub is **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022 wiped.** Do not restore a forest.  
 **Prefix:** `itt18`  
 **Clone shape from:** live `years/2017/` (lean door · Face ID star). **Do not** restore git `HEAD` / `52df8ae3` `years/2018/` (108-page forest). Leftover 2× ×2 on every dest HTML. Leftover 3× first (Reddit · YouTube · Wikipedia) + third. Second strip **not named**. Leftover 4× **0**.
 
@@ -23,8 +23,8 @@
 |------|---------|-----|
 | **Star** | **GDPR Manage** · 25 May · Accept All never writes | `itt18-gdpr` |
 | P0 leftover | TikTok For You · Aug 2 merge | `itt18-tiktok-fyp` |
-| P0 leftover | Hearing Apr 10 | `itt18-hearing` |
-| P0 leftover | IGTV Jun 20 · not Reels | `itt18-igtv` |
+| P0 leftover | Hearing Apr 10 | named on GDPR / leftover-3× — no dest-farm `hearing/` folder |
+| P0 leftover | IGTV Jun 20 · not Reels | `sites/instagram/igtv.html` |
 | Game | Consent Dash | `itt18-game-consentdash` |
 
 ## Do

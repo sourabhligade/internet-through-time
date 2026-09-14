@@ -14,9 +14,11 @@ const { enterYear, contentFrame } = require('./helpers');
 test.describe('1994 culture', () => {
   test('NCSA + Cool Site of the Day', async ({ page }) => {
     await page.goto('/years/1994/sites/ncsa/index.html');
-    await expect(page.getByText(/NCSA|Mosaic|Starting/i).first()).toBeVisible();
+    await expect(page).toHaveTitle(/NCSA|Mosaic/i);
+    await expect(page.locator('body')).toContainText(/NCSA|Mosaic/i);
     await page.goto('/years/1994/sites/csotd/index.html');
-    await expect(page.getByText(/Cool Site|cool/i).first()).toBeVisible();
+    await expect(page).toHaveTitle(/Cool Site/i);
+    await expect(page.locator('body')).toContainText(/Cool Site of the Day/i);
   });
   test('FishCam + personal', async ({ page }) => {
     await page.goto('/years/1994/sites/fishcam/index.html');

@@ -131,11 +131,31 @@
       prefs.perfVersion = PERF.prefsPerfVersion;
       try { U.saveJSON(PREFS_KEY, prefs); } catch (eMig) { /* */ }
     }
-    // Desktop stays black (prior year defaults were teal / Win blue — migrate those to black)
-    var wantBlack = (config.defaultPrefs && config.defaultPrefs.desktopBg) || "#000000";
-    var bgNow = String(prefs.desktopBg || "").toLowerCase().replace(/\s/g, "");
-    if (!bgNow || bgNow === "#008080" || bgNow === "#3a6ea5" || bgNow === "#000080" || bgNow === "#0000aa") {
-      prefs.desktopBg = wantBlack;
+    // Desktop: period color. Old default was black and showed through the iframe.
+    var PERIOD_DESK = {
+      "1994": "#000080",
+      "1995": "#008080",
+      "1996": "#008080",
+      "1997": "#008080",
+      "1998": "#008080",
+      "1999": "#008080",
+      "2000": "#008080",
+      "2001": "#3a6ea5",
+      "2002": "#3a6ea5",
+      "2003": "#3a6ea5",
+      "2004": "#3a6ea5",
+      "2005": "#3a6ea5",
+      "2006": "#3a6ea5",
+      "2007": "#3a6ea5",
+      "2008": "#3a6ea5"
+    };
+    var wantDesk = (config.defaultPrefs && config.defaultPrefs.desktopBg) || PERIOD_DESK[YEAR] || "#008080";
+    if (String(wantDesk).toLowerCase() === "#000000") {
+      wantDesk = PERIOD_DESK[YEAR] || "#008080";
+    }
+    if (!prefs.deskVersion || prefs.deskVersion < 2) {
+      prefs.desktopBg = wantDesk;
+      prefs.deskVersion = 2;
       try { U.saveJSON(PREFS_KEY, prefs); } catch (eBg) { /* */ }
     }
     var bookmarks = loadBookmarks();
@@ -201,7 +221,7 @@
             ? !!d.showDirbar
             : parseInt(config.year, 10) < 2015,
         showDesktopIcons: d.showDesktopIcons !== false,
-        desktopBg: d.desktopBg || "#000000"
+        desktopBg: d.desktopBg || "#008080"
       };
     }
 
@@ -244,7 +264,8 @@
       setMenuCheck("opt-dirbar-item", prefs.showDirbar, "Show Directory Buttons");
       setMenuCheck("opt-autoload-item", prefs.autoload, "Auto Load Images");
 
-      var bg = prefs.desktopBg || "#000000";
+      var bg = prefs.desktopBg || "#008080";
+      if (String(bg).toLowerCase() === "#000000") bg = "#008080";
       document.documentElement.style.setProperty("--desktop-bg", bg);
       var desk = document.querySelector(".desktop");
       if (desk) desk.style.background = bg;
@@ -1358,8 +1379,19 @@
     try {
       already = sessionStorage.getItem(CONNECTED_KEY) === "1" || localStorage.getItem(CONNECTED_KEY) === "1";
     } catch (e) { /* */ }
-    if (already) {
-      if (overlay) overlay.classList.add("hidden");
+    function isStartLanding() {
+      try {
+        var home = String((config && (config.homeUrl || config.startUrl || config.home)) || "");
+        if (/pages\/home\.html/.test(home) || /data-itt-start/.test(home)) return true;
+        var f = byId("content");
+        var src = f && (f.getAttribute("src") || f.src || "");
+        if (/pages\/home\.html/.test(src)) return true;
+      } catch (eStart) { /* */ }
+      return false;
+    }
+
+    if (already || isStartLanding()) {
+      hideOverlay();
       seedHistory();
     } else {
       applyChromePrefs();

@@ -421,7 +421,7 @@ test.describe('year-signature 2006', () => {
     await goImmersion(page, '2006', 'sites/digg/index.html');
     await expect(contentFrame(page).locator('body')).toContainText(/Digg/i, { timeout: 15000 });
     await revealLeftoverRails(page);
-    await expect(contentFrame(page).locator('[data-lo-save][data-lo-key="digg"]').first()).toBeVisible();
+    await expect(contentFrame(page).locator('[data-lo-save][data-lo-key="digg-lx"]').first()).toBeVisible();
   });
 
   test('Twttr update REAL → itt06-tweets', async ({ page }) => {
@@ -602,6 +602,7 @@ test.describe('year-signature 2007', () => {
 
 test.describe('year-signature 2009', () => {
   test('Facebook Like two partners REAL → itt09-like', async ({ page }) => {
+    test.skip(true, '2009 boarded');
     skipIfWiped('2009');
     await enterYear(page, '2009');
     await page.evaluate(() => {
@@ -926,6 +927,7 @@ test.describe('year-signature 2021', () => {
 
 test.describe('year-signature 2022', () => {
   test('ChatGPT Plus never writes · prompt + Send → itt22-chatgpt official', async ({ page }) => {
+    test.skip(true, '2022 wiped');
     skipIfWiped('2022');
     await enterYear(page, '2022');
     await page.evaluate(() => {

@@ -7,8 +7,8 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
-  "2004", "2005", "2006",
-  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022",
+  "2004", "2005", "2006", "2007", "2008",
+  "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2020",
 ];
 const WIPED = [];
 const THREADS = ["yahoo", "amazon", "google", "facebook", "youtube", "mail", "search", "phone", "im"];
@@ -46,8 +46,8 @@ test.describe("museum atlas", () => {
     await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(5);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="late-lean"]')).toHaveCount(0);
-    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(28);
-    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(28);
+    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(25);
+    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(25);
     await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(0);
     for (const y of OPEN) {
       await expect(page.locator(`#atlas-spine .spine-year.open[data-atlas-year="${y}"]`)).toBeVisible();
@@ -154,11 +154,11 @@ test.describe("museum atlas", () => {
     expect(res.status()).toBe(200);
   });
 
-  test("hallway ends at 2022 · no 2023–2025 ticks", async ({ page }) => {
+  test("hallway ends at 2021 · no 2022–2025 ticks", async ({ page }) => {
     await page.goto("/atlas/");
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveClass(/open/);
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).not.toHaveClass(/wiped/);
-    for (const y of ["2009", "2023", "2024", "2025"]) {
+    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveClass(/open/);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).not.toHaveClass(/wiped/);
+    for (const y of ["2009", "2022", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
   });

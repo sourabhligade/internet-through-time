@@ -4,7 +4,6 @@
  * Maps to docs/2008-GOALS-PHASES-AND-USER-FLOWS-CLEAR.md
  */
 const { test, expect } = require('@playwright/test');
-const { expectYearBoarded } = require('./helpers');
 
 
 async function twoStepClick(page, selector) {
@@ -39,10 +38,6 @@ test.describe('2008 densify', () => {
     expect(text).not.toMatch(/no App Store yet/i);
     expect(text).toMatch(/App Store/i);
     expect(text).toMatch(/Chrome|Android|Hulu/i);
-  });
-
-  test('year shell is boarded — no dirbar', async ({ page }) => {
-    await expectYearBoarded(page, '2008');
   });
 
   test('Firefox 3 Download Day framing', async ({ page }) => {

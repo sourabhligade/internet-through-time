@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = ["1994", "1995", "1996", "1997", "1998", "1999", "2000"];
@@ -67,6 +68,7 @@ async function completeLeftover(page, year, href, suffix, star) {
   const key = "itt" + year.slice(2) + "-" + suffix;
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
   await page.goto("/years/" + year + "/" + href);
+  await revealLeftoverRails(page);
   await lo.locator("[data-lo-save]").waitFor({ timeout: 20000 });
   await page.waitForFunction(
     (suf) => {

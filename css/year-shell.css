@@ -9,6 +9,7 @@ html, body {
   height: 100% !important;
   height: 100dvh !important;
   overflow: hidden !important;
+  color-scheme: only light;
 }
 
 #itt-year-ui {
@@ -75,6 +76,9 @@ html, body {
 #itt-year-ui .shell-nav-legend,
 #itt-year-ui .itt-ux-shell-coach {
   flex: 0 0 auto !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 @media (max-height: 720px) {

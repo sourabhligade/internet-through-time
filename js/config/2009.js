@@ -140,6 +140,16 @@
     "sites/ff/index.html",
     "sites/brave/index.html",
     "sites/cont/index.html",
+    "sites/couchsurfing/index.html",
+    "sites/etsy/index.html",
+    "sites/opentable/index.html",
+    "sites/typekit/index.html",
+    "sites/hootsuite/index.html",
+    "sites/mint/index.html",
+    "sites/kiva/index.html",
+    "sites/wordpress/index.html",
+    "sites/stumbleupon/index.html",
+    "sites/gowalla/index.html",
     "sites/playable/close.html"
   ];
   var urlMap = {

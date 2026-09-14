@@ -1,24 +1,17 @@
 # Sources, archives & provenance — Internet Through Time
 
-> **Disk truth (2026-07-25+):** Hub open **1994–2005**. Years 2003–2005 restored (Track D). F1/F2 densify shipped. Residual = true WA/IE6 pixels · platform debt · git Track E. Canonical: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022 wiped.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`.
 
 
-**Purpose:** Canonical **external URL bibliography** for the 1994–2005 research stack (hub playable **1994–2002**; 2003–05 research only until rebuild): websites, museums, archives, blogs, books, captures.  
-**Scope:** Research links used to design and rebuild the exhibit — not a claim that every pixel is an official brand file.  
+**Purpose:** External URL bibliography for reconstructions. Not ship state.  
+**Scope:** Research links used to design the exhibit — not a claim that every pixel is an official brand file.  
 **Use:** Educational reconstruction only. Trademarks belong to their owners.
 
-**For the complete inventory** (every asset file → source, every exhibit site → sources, facts, people, books, internal dossiers): see **[`docs/MASTER-PROVENANCE.md`](MASTER-PROVENANCE.md)**.  
-**What each nostalgia source is good for (visited, detailed):** [`docs/NOSTALGIA-UI-SOURCES-DETAILED.md`](NOSTALGIA-UI-SOURCES-DETAILED.md).  
-**Rebuild later years from earlier sources/artifacts:** [`docs/REBUILD-ARTIFACT-MAP.md`](REBUILD-ARTIFACT-MAP.md).  
-**2000–2002 hub:** [`docs/2000-2001-2002.md`](2000-2001-2002.md).  
-**Implementation backlog vs tree:** [`docs/LEFT-OUT.md`](LEFT-OUT.md).  
-**Incomplete years map (gaps → sources → harvest artifacts → internal MDs):** [`docs/INCOMPLETE-YEARS-RESEARCH.md`](INCOMPLETE-YEARS-RESEARCH.md).  
-**Ordered remaining work:** [`docs/LEFT-TO-DO-STEP-BY-STEP.md`](LEFT-TO-DO-STEP-BY-STEP.md).  
-**Visual authenticity (reference vs exhibit):** [`docs/VISUAL-AUTHENTICITY-AUDIT.md`](VISUAL-AUTHENTICITY-AUDIT.md).  
-**Perfect-site bingo (per-year checklist):** [`docs/BINGO.md`](BINGO.md).
+Visitor-facing capture cites live on **star dests** (`data-itt-capture-cite`), not this file. Product improve map: [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md). Year law: [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
-**Last expanded:** 2026-07-24 (hub 1994–2004 unlock · **2005 research open** · §18–§23)  
-**Live link audit:** [`docs/SOURCE-AUDIT.md`](SOURCE-AUDIT.md) (HTTP + **full content read** of core research URLs, 2026-07-22; extend when adding stacks)
+Deleted research dossiers (`MASTER-PROVENANCE.md`, `LEFT-OUT.md`, `docs/references/**`, year implement notebooks) stay deleted. Do not restore them.
+
+**Last expanded:** 2026-07-24. Ship state lives in DISK-TRUTH, not here.
 
 ---
 
@@ -724,7 +717,7 @@ Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · **Detailed gather:** [`d
 
 **P0 planned rooms:** YouTube · Google Maps · Reddit · Digg · Google · MySpace · Flickr · Facebook (rename era) · Yahoo · Amazon · Wikipedia · iTunes podcasts.
 
-**Hub state:** **1994–2005 open** (2026-07-25+). Research stack §16–§23 remains bibliography for densify/pixels.
+**Hub state:** **27 years open** (1994–2008 + 2010–2021). Research stack §16–§23 remains bibliography for densify/pixels.
 
 **Anachronism bans:** Twitter (2006) · Facebook open registration (2006) · Google owns YouTube (2006) · iPhone · Chrome browser · modern YouTube/Maps/Reddit UI · Street View as 2005 default · consumer “cloud” branding.
 
@@ -748,7 +741,7 @@ Dossier: [`docs/2006-RESEARCH.md`](2006-RESEARCH.md) · **Fresh deep research:**
 
 **P0 planned rooms:** Twitter/Twttr · Facebook (open + News Feed) · YouTube (two-era Google) · Digg peak · Google Docs · AWS · continuity MySpace/Flickr/Maps.
 
-**Hub state:** **1994–2005 open** · **2006 research freeze** (tree not built).
+**Hub state:** **27 years open** (1994–2008 + 2010–2021). 2006 is live.
 
 **Anachronism bans:** iPhone · Chrome · Street View default · Gmail open-as-year-start (Feb 2007) · Vista retail default (Jan 2007) · Google owns YouTube before Oct/Nov 2006 · modern X · campus-only Facebook after Sep 26 as product truth.
 

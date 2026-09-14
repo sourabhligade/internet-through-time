@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -170,7 +170,7 @@
       { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "Named filter → share. The 2012 object.", match: "/instagram/android" },
       { path: "sites/facebook/ipo.html", label: "Facebook IPO", blurb: "$38 · Nasdaq delay · 18 May.", match: "/facebook/ipo" }),
     "2013": yearVisitTour("2013",
-      { path: "sites/vine/index.html", label: "Vine 6s", blurb: "Six seconds. The 2013 loop.", match: "/vine/" },
+      { path: "sites/vine/record.html", label: "Vine 6s", blurb: "Six seconds. The 2013 loop.", match: "/vine/" },
       { path: "sites/iphone/ios7.html", label: "iOS 7", blurb: "The phone goes flat. 18 Sep.", match: "/iphone/ios7" }),
     "2014": yearVisitTour("2014",
       { path: "sites/whatsapp/index.html", label: "WhatsApp Install", blurb: "$19B. Install is the save. Messenger is the trap.", match: "/whatsapp/" },
@@ -187,21 +187,18 @@
     "2018": yearVisitTour("2018",
       { path: "sites/gdpr/index.html", label: "GDPR Manage", blurb: "Accept All never writes. Manage does.", match: "/gdpr/" },
       { path: "sites/tiktok/fyp.html", label: "TikTok For You", blurb: "Aug 2 merge. Tap. Reorder.", match: "/tiktok/" }),
-    "2019": yearVisitTour("2019",
-      { path: "sites/disneyplus/home.html", label: "Disney+ Who’s watching", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
-      { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
+    "2019": yearVisitTour("2019",
+      { path: "sites/disneyplus/home.html", label: "Disney+ Continue", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
+      { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
     "2020": yearVisitTour("2020",
       { path: "sites/zoom/meeting.html", label: "Zoom mute \u2192 Leave", blurb: "Star.", match: "/zoom/" },
       { path: "sites/reels/index.html", label: "Reels 15s leftover", blurb: "Leftover.", match: "/reels/" }),
     "2021": yearVisitTour("2021",
       { path: "sites/att/index.html", label: "ATT Ask", blurb: "Star. Allow never writes.", match: "/att/" },
       { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay leftover.", match: "/signal/" }),
-    "2022": yearVisitTour("2022",
-      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Star. Empty / Plus / GPT-4 never write.", match: "/chatgpt/" },
-      { path: "sites/twitter/index.html", label: "Twitter leftover", blurb: "Still Twitter. X is 2023.", match: "/twitter/" })
   };
 
   var TRAILS = {
@@ -216,7 +213,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2022; y++) {
+    for (y = 1994; y <= 2021; y++) {
       var ys = String(y);
       if (WIPED[ys]) continue;
       var steps = YEAR_STARTS[ys];
@@ -568,6 +565,11 @@
     if (!step) return;
     var y = yearFromPath();
     var onStepYear = String(step.year) === String(y);
+    /* Don't paint another year's trail across 1994 (etc.) Starting Point. */
+    if (!onStepYear) {
+      if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+      return;
+    }
     var bar = existing || doc.createElement("div");
     bar.id = "itt-first-night-bar";
     bar.setAttribute("role", "region");
@@ -581,8 +583,8 @@
       "font:12px/1.35 Arial,sans-serif;padding:8px 10px;border-bottom:2px solid " +
       accent +
       ";" +
-      "box-shadow:0 2px 8px rgba(0,0,0,.25);max-width:100%;box-sizing:border-box;" +
-      "overflow:hidden;word-wrap:break-word";
+      "box-shadow:0 2px 8px rgba(0,0,0,.25);width:100%;max-width:100%;box-sizing:border-box;" +
+      "overflow:hidden;word-wrap:break-word;display:block";
     var next = steps[n.step + 1];
     var hubBase = "/index.html#passport";
     /* Compact header row — long blurbs used to overflow narrow year iframes */
@@ -668,7 +670,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2022; y++) {
+    for (y = 1994; y <= 2021; y++) {
       if (WIPED[String(y)]) continue;
       years.push(String(y));
     }

@@ -7,11 +7,11 @@ const { revealLeftoverRails } = require("./helpers");
 const ROWS = require("./2006-2010-leftover-3x.matrix.json");
 
 const WANT = {
-  2006: { first: 9, more: 9, third: 9 },
-  2007: { first: 9, more: 9, third: 9 },
-  2008: { first: 9, more: 9, third: 9 },
+  2006: { first: 18, more: 18, third: 18 },
+  2007: { first: 18, more: 18, third: 18 },
+  2008: { first: 18, more: 18, third: 18 },
   2009: { first: 9, more: 9, third: 9 },
-  2010: { first: 9, more: 9, third: 9 },
+  2010: { first: 18, more: 18, third: 18 },
 };
 
 const YEARS = Object.keys(WANT);

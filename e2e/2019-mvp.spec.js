@@ -13,7 +13,7 @@ test.describe("2019 MVP", () => {
     await expect(page.locator(".year-card.locked.y2019")).toHaveCount(0);
   });
 
-  test("shell boots and home chip is Disney+ Who’s watching", async ({ page }) => {
+  test("shell boots and home chip is Disney+ Continue", async ({ page }) => {
     await enterYear(page, "2019");
     const frame = contentFrame(page);
     await expect(frame.locator('[data-ott-one-thing="2019"]')).toBeVisible({ timeout: 20000 });

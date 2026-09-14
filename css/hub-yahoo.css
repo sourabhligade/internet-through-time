@@ -1,0 +1,409 @@
+/* Lobby skin matched to the museum Yahoo rooms
+   (years/1995/sites/yahoo + css/period-1995.css, with 1994 Yahoo
+   What's New / Cool / Popular / Random GIFs). Museum title stays
+   ours — no official Yahoo wordmark or logo.gif. */
+
+body.hub-yahoo {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 1.25;
+  margin: 8px;
+}
+
+.hub-yahoo a:link { color: #0000ee; text-decoration: underline; }
+.hub-yahoo a:visited { color: #551a8b; text-decoration: underline; }
+.hub-yahoo a:active { color: #ff0000; }
+
+.hub-yahoo * {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.hub-yahoo .hub {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  padding: 0 8px 20px;
+}
+
+.hub-yahoo .hub-header {
+  background: transparent;
+  border: 0;
+  margin: 0 0 8px;
+}
+
+.hub-yahoo .hub-header-body {
+  background: #ffffff;
+  border: 0;
+  text-align: center;
+  padding: 4px 0 0;
+}
+
+.hub-yahoo .hub-header h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.75em;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin: 0.2em 0 0.15em;
+}
+
+.hub-yahoo .dir-tag {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .dir-btns {
+  margin: 8px 0 6px;
+}
+
+.hub-yahoo .dir-btns a {
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.hub-yahoo .dir-btns img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.hub-yahoo .dir-pipes {
+  margin: 4px 0 8px;
+  font-size: 14px;
+}
+
+.hub-yahoo .dir-pipes a {
+  font-weight: bold;
+}
+
+.hub-yahoo .hub-header-bar {
+  display: none;
+}
+
+.hub-yahoo .hub-header .tagline,
+.hub-yahoo .start-hint,
+.hub-yahoo .start-night-note {
+  display: none;
+}
+
+.hub-yahoo .hub-stats {
+  font-size: 12px;
+  color: #000;
+  margin: 4px 0 8px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .start-path {
+  justify-content: center;
+  margin: 8px 0 4px;
+}
+
+.hub-yahoo .start-search-label {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.hub-yahoo .dir-search {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 12px;
+  background: #fff;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 2px 3px;
+  width: 16em;
+  max-width: 55vw;
+}
+
+/* Same widget chrome as period-1995.css */
+.hub-yahoo .start-btn,
+.hub-yahoo button.start-btn {
+  background: #c0c0c0;
+  color: #000;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 12px;
+  padding: 2px 12px;
+  cursor: default;
+}
+
+.hub-yahoo .start-btn:hover,
+.hub-yahoo .start-btn:focus {
+  background: #c0c0c0;
+  outline: 1px dotted #000;
+}
+
+.hub-yahoo .start-btn:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.hub-yahoo .start-btn.start-primary {
+  background: #c0c0c0;
+  color: #000;
+  font-weight: normal;
+}
+
+.hub-yahoo .start-night-note,
+.hub-yahoo .start-hint,
+.hub-yahoo .try-links {
+  font-size: 12px;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .start-jumps {
+  background: transparent;
+  border: 0;
+  padding: 2px 0;
+  width: auto;
+}
+
+.hub-yahoo .start-jumps > summary {
+  color: #0000ee;
+  text-decoration: underline;
+  font-weight: normal;
+  list-style: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .start-jumps > summary::-webkit-details-marker {
+  display: none;
+}
+
+.hub-yahoo .how-nav-pill {
+  background: transparent;
+  border: 0;
+  color: #000;
+  padding: 0 10px 0 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .mobile-notice {
+  background: #ffffcc;
+  border: 0;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12px;
+}
+
+/* 1995 Yahoo yellow note table */
+.hub-yahoo .how-quick {
+  background: #ffffcc;
+  border: 0;
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 6px 8px;
+}
+
+.hub-yahoo .how-quick-title {
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+.hub-yahoo .year-section-title {
+  background: transparent;
+  border: 0;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  padding: 0;
+  margin: 10px 0 4px;
+}
+
+.hub-yahoo .era-jump {
+  justify-content: center;
+  gap: 0;
+}
+
+.hub-yahoo .era-jump-chip {
+  background: transparent;
+  border: 0;
+  color: #0000ee;
+  text-decoration: underline;
+  padding: 0 4px;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .era-jump-chip:hover {
+  background: transparent;
+}
+
+.hub-yahoo .rainbow-hr {
+  border: none;
+  height: 2px;
+  background: #808080;
+  color: #808080;
+  margin: 0.6em 0;
+}
+
+.hub-yahoo .era-heading {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0.6em 0 0.2em;
+  text-align: left;
+}
+
+.hub-yahoo .era-note {
+  font-size: 12px;
+  color: #000;
+  margin: 0 0 6px;
+}
+
+/* 1995 Yahoo two-column category table */
+.hub-yahoo .year-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+  background: #ffffff;
+  border: 0;
+  padding: 0 4px 4px 1.2em;
+  margin: 0 0 10px;
+}
+
+.hub-yahoo .year-grid > .era-anchor {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 599px) {
+  .hub-yahoo .year-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hub-yahoo .year-card,
+.hub-yahoo .year-card.available,
+.hub-yahoo .year-card.available:hover,
+.hub-yahoo .year-card.available:focus {
+  background: transparent !important;
+  color: #000 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  min-height: 0;
+  display: list-item;
+  list-style: disc;
+  margin: 0 0 6px;
+  padding: 0;
+}
+
+.hub-yahoo .year-card.available::before {
+  display: none !important;
+}
+
+.hub-yahoo .year-card .year-card-inner {
+  background: transparent !important;
+  padding: 0 !important;
+  color: #000 !important;
+  display: inline;
+}
+
+.hub-yahoo .year-card .motif {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: static;
+  transform: none;
+}
+
+.hub-yahoo .year-card .year-row {
+  display: inline;
+  gap: 0;
+  margin: 0;
+}
+
+.hub-yahoo .year-card .year {
+  display: inline;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0000ee !important;
+  text-decoration: underline;
+}
+
+.hub-yahoo .year-card:visited .year {
+  color: #551a8b !important;
+}
+
+.hub-yahoo .year-card .era-chip {
+  display: none;
+}
+
+.hub-yahoo .dir-walks {
+  font-size: 12px;
+  max-width: 42em;
+  margin: 8px auto;
+  text-align: left;
+}
+
+.hub-yahoo .year-card .label,
+.hub-yahoo .year-card .scale,
+.hub-yahoo .year-card .meta {
+  display: none;
+}
+
+.hub-yahoo .follow-site-wrap {
+  border: 0;
+  background: #ffffff;
+  padding: 0;
+}
+
+.hub-yahoo .follow-site-wrap .year-section-title {
+  font-weight: bold;
+}
+
+.hub-yahoo .follow-lead {
+  font-size: 12px;
+}
+
+.hub-yahoo .hub-thesis {
+  background: #ffffcc;
+  border: 0;
+  padding: 6px 8px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hub-yahoo .ann-ticker,
+.hub-yahoo .hub-ann-strip {
+  background: #ffffcc;
+  border: 0;
+}
+
+.hub-yahoo .compare {
+  border-top: 2px solid #808080;
+  padding-top: 8px;
+}
+
+.hub-yahoo .compare-table {
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.hub-yahoo .compare-table th,
+.hub-yahoo .compare-table td {
+  border: 1px solid #808080;
+}
+
+.hub-yahoo .itt-passport-root {
+  background: #ffffcc;
+  border: 0;
+  padding: 6px 8px;
+}

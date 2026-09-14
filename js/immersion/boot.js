@@ -9,6 +9,19 @@
 
   var ITT = global.ITT || (global.ITT = {});
 
+  /* Year About / map / Starting Point: fill the iframe. Dest rooms stay period. */
+  try {
+    var _p = String((typeof location !== "undefined" && location.pathname) || "");
+    if (/\/years\/\d{4}\/pages\//.test(_p) && !document.getElementById("itt-page-fill")) {
+      var _s = document.createElement("style");
+      _s.id = "itt-page-fill";
+      _s.textContent =
+        "html,body{color-scheme:only light;width:100%!important;max-width:none!important;" +
+        "min-height:100%;box-sizing:border-box}html{background:#c0c0c0}";
+      (document.head || document.documentElement).appendChild(_s);
+    }
+  } catch (eFill) { /* */ }
+
   function scriptDirFromLoader() {
     var s = document.currentScript;
     if (s && s.src) {

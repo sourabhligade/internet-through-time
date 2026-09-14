@@ -1177,7 +1177,7 @@
             panel.style.display = "block";
             if (!panel.getAttribute("data-itt-filled")) {
               var custom = panel.getAttribute("data-itt-html");
-              if (custom) panel.innerHTML = custom;
+              if (custom) panel.textContent = custom;
               panel.setAttribute("data-itt-filled", "1");
             }
           }

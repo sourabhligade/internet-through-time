@@ -73,11 +73,23 @@ say "-- project files --"
 for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.yml netlify.toml vercel.json playwright.config.js .gitignore .gitattributes robots.txt sitemap.txt index.html; do
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
-# Hub-open years on disk. Keep in sync with scripts/itt_gate.py SHIP_YEARS.
-WIPED=" $(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _WIPED; print(" ".join(sorted(_WIPED)))') "
+# Hub-open years on disk. Keep in sync with scripts/itt_gate.py.
+# 2009 is boarded (index must exist and redirect). 2022–2025 must be absent.
+eval "$(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _BOARDED, _WIPED
+print("BOARDED=\"" + " ".join(sorted(_BOARDED)) + "\"")
+print("WIPED=\"" + " ".join(sorted(_WIPED)) + "\"")')"
 for y in $(seq 1994 2025); do
-  if [[ "$WIPED" == *" $y "* ]]; then
-    if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y boarded"; fi
+  if [[ " $WIPED " == *" $y "* ]]; then
+    if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y wiped"; fi
+    continue
+  fi
+  if [[ " $BOARDED " == *" $y "* ]]; then
+    if [[ ! -f "years/$y/index.html" ]]; then bad "boarded years/$y missing index"; continue; fi
+    if grep -q 'boarded\|location.replace' "years/$y/index.html"; then
+      ok "years/$y boarded (redirect)"
+    else
+      bad "years/$y index does not redirect"
+    fi
     continue
   fi
   if [[ -f "years/$y/index.html" ]]; then ok "years/$y/index.html"; else bad "missing years/$y"; fi
@@ -130,5 +142,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 29 years: CUT-OPEN 2020 Zoom lean door. 2023–2025 boarded."
+say "  Ship hub 27 years (1994–2008 + 2010–2021). 2009 boarded. 2022 wiped."
 exit 0

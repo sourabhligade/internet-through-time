@@ -16,7 +16,9 @@ const OFFICIAL = ["github", "apps", "chrome", "android", "hulu", "facebook", "tw
 
 /** @returns {Dest[]} */
 function loadDests() {
-  const src = fs.readFileSync(path.join(ROOT, "scripts/build-2008-cut-double.py"), "utf8");
+  const srcPath = path.join(ROOT, "scripts/build-2008-cut-double.py");
+  if (!fs.existsSync(srcPath)) return [];
+  const src = fs.readFileSync(srcPath, "utf8");
   const re =
     /\("(N-[ABC]\d{2})",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]*)",\s*"([^"]*)",\s*"([^"]*)",\s*"([^"]*)",\s*"([^"]*)",\s*"([^"]*)",\s*"([^"]*)"\)/g;
   /** @type {Dest[]} */
@@ -40,6 +42,7 @@ function loadDests() {
 }
 
 const DESTS = loadDests();
+test.skip(!DESTS.length, "scripts/build-2008-cut-double.py not on disk (lean wipe)");
 
 function destPath(d) {
   return path.join(ROOT, "years/2008/sites", d.folder, d.file);

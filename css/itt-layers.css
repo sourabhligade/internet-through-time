@@ -193,9 +193,11 @@ html[data-itt-layer-band="f"] #itt-wayfind a.itt-wayfind-home {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 52em;
-  margin: 10px auto 14px;
+  width: 100%;
+  max-width: none;
+  margin: 10px 0 14px;
   padding: 0 8px;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
 }

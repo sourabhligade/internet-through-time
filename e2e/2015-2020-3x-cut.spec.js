@@ -1,10 +1,11 @@
 // @ts-check
 /**
  * CUT-3X-2015-2020 — leftover 3× dest-minutes, E2E, not mock.
- * Live years 2015 / 2016 / 2017 / 2019: 9 doors each.
- * 2018 / 2020 stay boarded. Stars / guided 6 / official gold stay put.
+ * Live years 2015 / 2016 / 2017: 9 doors each. 2019 is live lean (2019-flows).
+ * 2018 / 2020 are live lean doors (first + third leftover-3×). Stars / guided 6 / official gold stay put.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 
@@ -55,21 +56,6 @@ const LIVE = {
       { dest: "/years/2017/sites/fortnite/index.html", go: "[data-pop-go][data-pop-id='pop3-fortnite']", key: "itt17-pop3-fortnite", next: "teams/index.html" },
       { dest: "/years/2017/sites/teams/index.html", go: "[data-pop-go][data-pop-id='pop3-teams']", key: "itt17-pop3-teams", next: "switch/index.html" },
       { dest: "/years/2017/sites/switch/index.html", go: "[data-pop-go][data-pop-id='pop3-switch']", key: "itt17-pop3-switch", next: "pages/home.html" },
-    ],
-  },
-  2019: {
-    star: "itt19-disneyplus",
-    gold: ["itt19-disneyplus", "itt19-tiktok", "itt19-arcade", "itt19-stadia", "itt19-appletv", "itt19-airpods-pro", "itt19-iphone11"],
-    doors: [
-      { dest: "/years/2019/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt19-pop-youtube", next: "instagram/index.html" },
-      { dest: "/years/2019/sites/instagram/index.html", go: "[data-pop-go][data-pop-id='instagram']", key: "itt19-pop-instagram", next: "wikipedia/index.html" },
-      { dest: "/years/2019/sites/wikipedia/index.html", go: "[data-pop-go][data-pop-id='wikipedia']", key: "itt19-pop-wikipedia", next: "facebook/index.html" },
-      { dest: "/years/2019/sites/facebook/index.html", go: "[data-pop-go][data-pop-id='facebook']", key: "itt19-pop-facebook", next: "fortnite/index.html" },
-      { dest: "/years/2019/sites/fortnite/index.html", go: "[data-pop-go][data-pop-id='fortnite']", key: "itt19-pop-fortnite", next: "hidelikes/index.html" },
-      { dest: "/years/2019/sites/hidelikes/index.html", go: "[data-pop-go][data-pop-id='hidelikes']", key: "itt19-pop-hidelikes", next: "tiktok/index.html" },
-      { dest: "/years/2019/sites/tiktok/index.html", go: "[data-pop-go][data-pop-id='pop3-tiktok']", key: "itt19-pop3-tiktok", next: "stadia/index.html" },
-      { dest: "/years/2019/sites/stadia/index.html", go: "[data-pop-go][data-pop-id='pop3-stadia']", key: "itt19-pop3-stadia", next: "arcade/index.html" },
-      { dest: "/years/2019/sites/arcade/index.html", go: "[data-pop-go][data-pop-id='pop3-arcade']", key: "itt19-pop3-arcade", next: "pages/home.html" },
     ],
   },
 };
@@ -155,9 +141,10 @@ test.describe("CUT-3X-2015-2020 boarded stay empty", () => {
     expect(fs.existsSync(path.join(ROOT, "years", "2020", "sites", "zoom", "meeting.html"))).toBe(true);
   });
 
-  test("leftover 4× stays 0 on 2016 / 2017 / 2019 dests", () => {
-    for (const y of ["2016", "2017", "2019"]) {
+  test("leftover 4× stays 0 on 2016 / 2017 dests", () => {
+    for (const y of ["2016", "2017"]) {
       const dir = path.join(ROOT, "years", y, "sites");
+      if (!fs.existsSync(dir)) continue;
       const hits = [];
       function walk(d) {
         for (const name of fs.readdirSync(d)) {
@@ -202,7 +189,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
       expect(firstJoined + moreJoined + thirdJoined).not.toMatch(/discord/);
       expect(moreJoined).not.toMatch(/moments/);
       if (year === "2015") expect(thirdJoined).toMatch(/vine/);
-      if (year === "2016") expect(moreJoined).toMatch(/smario/);
+      if (year === "2016") expect(moreJoined).toMatch(/houseparty/);
       for (const h of all) {
         const dest = h.replace(/^\.\.\//, `/years/${year}/`);
         const res = await page.goto(dest);
@@ -230,7 +217,6 @@ const ABOUT = {
   2015: { print: ["863,105,652"] },
   2016: { print: ["1,045,534,808"] },
   2017: { print: ["1,766,926,408"] },
-  2019: { print: ["1,630,322,579", "4.1B"] },
 };
 
 const STAR_WALK = {
@@ -267,23 +253,6 @@ const STAR_WALK = {
       await page.locator("[data-faceid-unlock]").click();
     },
   },
-  2019: {
-    path: "/years/2019/sites/disneyplus/home.html",
-    key: "itt19-disneyplus",
-    empty: async (page) => {
-      await page.locator("[data-dplus-continue]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-dplus-req]").nth(0).check();
-      await page.locator("[data-dplus-req]").nth(1).check();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-add]").nth(0).click();
-      await page.locator("[data-dplus-add]").nth(1).click();
-      await page.locator('[data-dplus-profile="kids"]').click();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-continue]").click();
-    },
-  },
 };
 
 const LO_SECOND = {
@@ -291,11 +260,6 @@ const LO_SECOND = {
     ["/years/2015/sites/meerkat/index.html", "meer-lx", "itt15-periscope"],
     ["/years/2015/sites/applemusicsub/index.html", "am-sub", "itt15-applemusic"],
     ["/years/2015/sites/win10get/index.html", "gwx-lx", "itt15-win10"],
-  ],
-  2019: [
-    ["/years/2019/sites/appletv/index.html", "appletv-lx", "itt19-appletv"],
-    ["/years/2019/sites/airpodspro/index.html", "airpods-lx", "itt19-airpods-pro"],
-    ["/years/2019/sites/iphone/iphone11.html", "iphone11-lx", "itt19-iphone11"],
   ],
 };
 
@@ -307,7 +271,8 @@ async function completeLo(page, dest, suffix, star) {
   await page.reload();
   const save = page.locator(`[data-lo-save][data-lo-key="${suffix}"]`).first();
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
-  await save.waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await save.waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction((s) => {
     const b = document.querySelector('[data-lo-save][data-lo-key="' + s + '"]');
     return !!(b && b.getAttribute("data-lo-bound") === "1");

@@ -1,6 +1,7 @@
 /* Windows 95 + Netscape Navigator 2.0 chrome (late 1995) */
 
 :root {
+  color-scheme: only light;
   --chrome-face: #c0c0c0;
   --chrome-shadow: #808080;
   --chrome-dark: #404040;
@@ -494,8 +495,9 @@ html, body {
   height: 100%;
   min-height: 16em;
   border: 0;
-  background: #ffffff;
+  background: #c0c0c0;
   display: block;
+  color-scheme: only light;
 }
 
 /* Status bar */

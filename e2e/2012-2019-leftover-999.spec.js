@@ -47,7 +47,8 @@ async function completeLo(page, destPath, year, suffix, star) {
   await page.evaluate((k) => localStorage.removeItem(k), star);
   const save = page.locator(`[data-lo-save][data-lo-key="${suffix}"]`).first();
   const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
-  await save.waitFor({ timeout: 20000 });
+  await revealLeftoverRails(page);
+  await save.waitFor({ state: "attached", timeout: 20000 });
   await page.waitForFunction(
     (suf) => {
       const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
@@ -92,9 +93,10 @@ async function completeLo(page, destPath, year, suffix, star) {
 
 test.describe("wiped years stay boarded", () => {
   test("no year tree", () => {
-    for (const y of ["2021", "2022", "2023", "2024", "2025"]) {
+    for (const y of ["2022", "2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(ROOT, "years", y, "index.html"))).toBe(false);
     }
+    expect(fs.existsSync(path.join(ROOT, "years", "2021", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(true);
   });
 });

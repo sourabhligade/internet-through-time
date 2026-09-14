@@ -89,7 +89,7 @@ test.describe("1994 CSotD + FishCam gold", () => {
     await page.goto("/years/1994/sites/csotd/archive.html");
     await page.evaluate(() => localStorage.removeItem("itt94-csotd"));
     await expect(page.locator("a[href*='fishcam']").first()).toBeVisible();
-    await expect(page.locator("ol li")).toHaveCount(10);
+    await expect(page.locator("table ol li")).toHaveCount(10);
     expect(await page.evaluate(() => localStorage.getItem("itt94-csotd"))).toBeFalsy();
   });
 });

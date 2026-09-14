@@ -217,20 +217,7 @@
       "key": "itt18-game-fyptap"
     }
   ],
-  "2019": [
-    {
-      "id": "whoswatch",
-      "title": "Who’s watch",
-      "href": "extra-a.html",
-      "key": "itt19-game-whoswatch"
-    },
-    {
-      "id": "trialtrap",
-      "title": "Trial trap",
-      "href": "extra-b.html",
-      "key": "itt19-game-trialtrap"
-    }
-  ]};
+  };
   /* ITT-3G:start */
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'gopherdig',title:'Gopher Dig',href:"extra-c.html",key:"itt94-game-gopherdig"});
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'hang144',title:'14.4 Hang',href:"extra-d.html",key:"itt94-game-hang144"});

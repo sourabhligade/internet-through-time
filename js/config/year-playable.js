@@ -295,18 +295,7 @@
       famous: "Consent Dash",
       accent: "#1565c0"
     },
-    "2019": {
-      id: "continuerow",
-      title: "Continue Row",
-      href: "game.html",
-      key: "itt19-game-continuerow",
-      inspire: "Disney+ Who’s watching class — trial is the trap; no official art",
-      blurb: "Continue is the save. Incomplete never writes.",
-      why: "Who’s watching is the door. The star is still Disney+ Continue.",
-      era: "Trial is highlighted. Continue is the real click.",
-      famous: "Continue Row",
-      accent: "#e50914"
-    },
+    
     "2007": {
       id: "safariq",
       title: "Safari Queue",
@@ -331,28 +320,5 @@
       famous: "Sus Vote",
       accent: "#1565c0"
     },
-    "2021": {
-      id: "five",
-      title: "Five Letter",
-      href: "game.html",
-      key: "itt21-game-five",
-      inspire: "year game leftover",
-      blurb: "Leftover game. Wordle-as-2021-mass never writes gold.",
-      why: "The star stays ATT Ask.",
-      era: "Trap is highlighted.",
-      famous: "Five Letter",
-      accent: "#1565c0"
-    },
-    "2022": {
-      id: "prompt",
-      title: "Prompt Box",
-      href: "game.html",
-      key: "itt22-game-prompt",
-      inspire: "year game leftover",
-      blurb: "Leftover game. Wordle dest is leftover, not this cabinet.",
-      why: "The star stays ChatGPT Send.",
-      era: "Trap is highlighted.",
-      famous: "Prompt Box",
-      accent: "#10a37f"
-    }};
+    };
 })(typeof window !== "undefined" ? window : this);

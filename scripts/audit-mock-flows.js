@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — 27 ship years 1994–2020
- * (2021–2025 boarded / wiped).
+ * Mock-flow classifier — 27 ship years (1994–2008 + 2010–2021).
+ * 2009 boarded. 2022–2025 wiped.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,7 +27,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2022", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);

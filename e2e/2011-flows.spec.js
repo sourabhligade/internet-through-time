@@ -1,6 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { leftoverOfficialDest, revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -56,7 +56,6 @@ test.describe("2011 flows", () => {
     await officialVerbLeftover(page, "/years/2011/sites/spotify/index.html", "itt11-spotify");
   });
   test("YouTube leftover-official dest-true never writes star", async ({ page }) => {
-    const { leftoverOfficialDest } = require("./helpers");
     await leftoverOfficialDest(page, "/years/2011/sites/youtube/index.html", "yt", "itt11-gplus");
   });
   test("Siri leftover incomplete never writes then save", async ({ page }) => {

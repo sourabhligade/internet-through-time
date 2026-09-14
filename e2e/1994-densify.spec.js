@@ -4,6 +4,7 @@
  * Official 10 already dest-minute’d in all-years-official-10-real.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, k) {
   return page.evaluate((key) => window.localStorage.getItem(key), k);
@@ -16,6 +17,7 @@ async function leftover3xFirst(page, href, id, key, star, ph) {
     localStorage.removeItem(s);
   }, { k: key, s: star });
   await page.reload();
+  await revealLeftoverRails(page);
   const panel = page.locator(`[data-itt-lo3x][data-pop-panel]:has([data-pop-go][data-pop-id="${id}"]:not([data-pop-key]))`).first();
   const go = panel.locator(`[data-pop-go][data-pop-id="${id}"]`);
   await expect(go).toBeVisible();

@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
-from itt_gate import SHIP_YEARS, _WIPED  # noqa: E402
+from itt_gate import SHIP_YEARS, _BOARDED, _WIPED  # noqa: E402
 failures: list[str] = []
 passes = 0
 
@@ -202,9 +202,9 @@ def test_browser_srp_parts() -> None:
 
 def test_sitemap_ship_years() -> None:
     sm = read(ROOT / "sitemap.txt")
-    for ys in sorted(_WIPED):
+    for ys in sorted(_WIPED | _BOARDED):
         if f"/years/{ys}/" in sm:
-            fail("sitemap-years", f"wiped {ys} still listed")
+            fail("sitemap-years", f"{'boarded' if ys in _BOARDED else 'wiped'} {ys} still listed")
             return
     for ys in SHIP_YEARS:
         if f"/years/{ys}/" not in sm:
