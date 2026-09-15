@@ -21,60 +21,39 @@ async function clearMuseum(page) {
 }
 
 test.describe('Museum passport + first night', () => {
-  test('hub shows passport panel and first-night CTA', async ({ page }) => {
+  test('hub is year cards only; MuseumProgress still live', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await expect(page.locator('#itt-passport-root')).toBeVisible();
-    await expect(page.locator('#itt-passport-root')).toContainText(/Passport stamps/i);
-    await expect(page.locator('#begin-first-night, [data-itt-night-start]').first()).toBeVisible();
+    await expect(page.locator('#itt-passport-root, #begin-first-night, [data-itt-year-tour]')).toHaveCount(0);
     await expect(page.locator('a.year-card.available.y2006[href*="years/2006"]')).toBeVisible();
     await expect(page.locator('a.year-card.available[href*="years/2008"]')).toBeVisible();
     await expect(page.locator('a.year-card.available.y2010[href*="years/2010"]')).toBeVisible();
-    await expect(page.locator('[data-itt-year-tour="2006"]')).toBeVisible();
-    await expect(page.locator('[data-itt-year-tour="2008"]')).toHaveCount(1);
-    await expect(page.locator('[data-itt-year-tour="2010"]')).toBeVisible();
-    await expect(page.locator('.passport-grid .passport-year')).toHaveCount(27);
+    const live = await page.evaluate(() => {
+      const mp = window.ITT && window.ITT.MuseumProgress;
+      return !!(mp && mp.isLiveYear && mp.isLiveYear('2006') && mp.isLiveYear('2010'));
+    });
+    expect(live).toBe(true);
   });
 
-  test('2006 passport chip starts 2006-start trail', async ({ page }) => {
+  test('2006 year card opens the 2006 door', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2006"]').click();
+    await page.locator('a.year-card.available[href*="years/2006"]').click();
     await expect(page).toHaveURL(/years\/2006/);
-    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2006-start/);
-    expect(night).toMatch(/"active":\s*true/);
   });
 
-  test('2010 passport chip starts 2010-start trail', async ({ page }) => {
+  test('2010 year card opens the 2010 door', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2010"]').click();
+    await page.locator('a.year-card.available[href*="years/2010"]').click();
     await expect(page).toHaveURL(/years\/2010/);
-    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2010-start/);
-    expect(night).toMatch(/"active":\s*true/);
   });
 
-  test('year chip deep-link starts 2006 tour', async ({ page }) => {
+  test('1994 year card opens the 1994 door', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('[data-itt-year-tour="2006"]').click();
-    await expect(page).toHaveURL(/years\/2006/);
-    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toMatch(/2006-start/);
-  });
-
-  test('first night start writes state and opens 1994 trail URL', async ({ page }) => {
-    await clearMuseum(page);
-    await page.goto('/');
-    await page.locator('#begin-first-night, [data-itt-night-start]').first().click();
+    await page.locator('a.year-card.available[href*="years/1994"]').click();
     await expect(page).toHaveURL(/years\/1994/);
-    await expect(page).toHaveURL(/csotd|room=sites%2Fcsotd/);
-    const night = await page.evaluate(() => localStorage.getItem('itt-first-night'));
-    expect(night).toBeTruthy();
-    expect(night).toMatch(/"active":\s*true/);
-    expect(night).toMatch(/"step":\s*0/);
   });
 
   test('visit continue advances first-night step', async ({ page }) => {

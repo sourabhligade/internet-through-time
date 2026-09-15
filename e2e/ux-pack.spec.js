@@ -8,25 +8,17 @@ const { test, expect } = require("@playwright/test");
 const { enterYear, goImmersion, contentFrame } = require("./helpers");
 
 test.describe("UX pack U1 hub", () => {
-  test("hub has single primary first-night CTA", async ({ page }) => {
+  test("hub is one h1 and year cards", async ({ page }) => {
     await page.goto("/index.html");
-    await expect(page.locator("#begin-first-night")).toBeVisible();
-    await expect(page.locator("#begin-first-night")).toHaveClass(/start-primary/);
-    /* Secondary year jumps are not solid primary */
-    const primaries = page.locator(".start-path .start-btn.start-primary");
-    await expect(primaries).toHaveCount(1);
+    await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
+    await expect(page.locator("#begin-first-night")).toHaveCount(0);
+    await expect(page.locator("a.year-card.available")).toHaveCount(28);
   });
 
-  test("first night primary starts trail", async ({ page }) => {
+  test("year card enters 1994", async ({ page }) => {
     await page.goto("/index.html");
-    await page.evaluate(() => {
-      localStorage.removeItem("itt-first-night");
-      localStorage.removeItem("itt-passport");
-    });
-    await page.locator("#begin-first-night").click();
+    await page.locator('a.year-card.available[href*="years/1994"]').click();
     await expect(page).toHaveURL(/years\/1994/);
-    const night = await page.evaluate(() => localStorage.getItem("itt-first-night"));
-    expect(night).toMatch(/first-night/);
   });
 });
 

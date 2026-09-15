@@ -57,11 +57,8 @@ test.describe('games wing', () => {
     await expect(page.locator('a[href="play/heli.html"]').first()).toBeVisible();
   });
 
-  test('hub CTA to games wing', async ({ page }) => {
-    await page.goto('/');
-    const link = page.locator('a.era-jump-chip[href="games/index.html"], a.hub-socials a[href="games/index.html"], footer a[href="games/index.html"]').first();
-    await expect(link).toBeVisible();
-    await link.click();
+  test('games wing still opens as its own page', async ({ page }) => {
+    await page.goto('/games/index.html');
     await expect(page).toHaveURL(/\/games\/index\.html|\/games\/?/);
     await expect(page.locator('body')).toContainText(/WEB GAMES|After-school/i);
   });
@@ -238,9 +235,8 @@ test.describe('games wing', () => {
     await expect(page.locator('.ann-badge-new, .ann-badge').first()).toBeVisible();
   });
 
-  test('hub has period announcement strip + ticker', async ({ page }) => {
+  test('hub has no announcement strip or ticker', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('.ann-ticker, .hub-ann-strip').first()).toBeVisible();
-    await expect(page.locator('body')).toContainText(/Web Games wing|Period web games|announcements/i);
+    await expect(page.locator('.ann-ticker, .hub-ann-strip')).toHaveCount(0);
   });
 });

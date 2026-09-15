@@ -1,0 +1,128 @@
+/* Lean hub: one H1, year cards, museum hall behind. */
+
+html.hub-lean,
+body.hub-lean {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+  color: #f4f1ea;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body.hub-lean {
+  position: relative;
+}
+
+.hub-lean .hub-bg {
+  display: none;
+}
+
+.hub-lean .hub {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 12vh 20px 48px;
+}
+
+.hub-lean .hub-header {
+  text-align: center;
+  margin: 0 0 2.5rem;
+  background: transparent;
+  border: 0;
+}
+
+.hub-lean .hub-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
+}
+
+.hub-lean .hub-stats {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: rgba(244, 241, 234, 0.78);
+}
+
+.hub-lean .year-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.hub-lean .year-card,
+.hub-lean .year-card.available,
+.hub-lean .year-card.available:hover,
+.hub-lean .year-card.available:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background: rgba(12, 12, 14, 0.45) !important;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hub-lean .year-card:hover,
+.hub-lean .year-card:focus,
+.hub-lean .year-card.available:hover,
+.hub-lean .year-card.available:focus {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.hub-lean .year-card .year-card-inner {
+  background: transparent !important;
+  border: 0 !important;
+  margin: 0;
+  padding: 12px 6px;
+  text-align: center;
+}
+
+.hub-lean .year-card .year-row {
+  display: block;
+  margin: 0;
+}
+
+.hub-lean .year-card .year,
+.hub-lean .year-card:visited .year,
+.hub-lean .year-card:hover .year,
+.hub-lean .year-card.available:hover .year {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hub-lean .year-card .motif,
+.hub-lean .year-card .era-chip,
+.hub-lean .year-card .label,
+.hub-lean .year-card .scale,
+.hub-lean .year-card .meta {
+  display: none;
+}
+
+.hub-lean .year-card.available::before {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .hub-lean .hub {
+    padding-top: 8vh;
+  }
+  .hub-lean .year-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
