@@ -1,0 +1,32 @@
+[
+  {
+    "year": "2012",
+    "kind": "fourth",
+    "id": "chrome",
+    "name": "Chrome",
+    "key": "itt12-pop4-chrome",
+    "star": "itt12-ig-android",
+    "verb": "Chrome leftover",
+    "href": "/years/2012/sites/chrome/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "fourth",
+    "id": "twitter",
+    "name": "Twitter",
+    "key": "itt12-pop4-twitter",
+    "star": "itt12-ig-android",
+    "verb": "Tweet leftover",
+    "href": "/years/2012/sites/twitter/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "fourth",
+    "id": "soundcloud",
+    "name": "SoundCloud",
+    "key": "itt12-pop4-soundcloud",
+    "star": "itt12-ig-android",
+    "verb": "Listen leftover",
+    "href": "/years/2012/sites/soundcloud/index.html"
+  }
+]

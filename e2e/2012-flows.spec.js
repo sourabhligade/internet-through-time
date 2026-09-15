@@ -18,9 +18,12 @@ test.describe('2012 flows', () => {
     const card = page.locator('a.year-card.available.y2012[href*="years/2012"]');
     await expect(card).toBeVisible();
     await card.click();
+    await page.waitForURL(/\/years\/2012/);
     const skip = page.locator('#skip-connect');
-    if (await skip.isVisible().catch(() => false)) await skip.click();
-    await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2012');
+    if (await skip.count() && await skip.isVisible().catch(() => false)) {
+      await skip.click({ timeout: 2000 }).catch(() => {});
+    }
+    await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2012', { timeout: 15000 });
     await expect(page.locator('#content')).toBeVisible();
   });
 

@@ -21,7 +21,7 @@ Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay 
 | **2009** | **Boarded** · tree stays · year-shell is a plaque (not a hub redirect) · `/pages/home.html` redirects to the plaque · Facebook Like dests still on disk |
 | **2010** | Live lean · Instagram iOS · dest-lock official 10 + leftover-3× dests · dest folders **22** |
 | **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover-3× dests · dest folders **31** · leftover-4× **0** |
-| **2012** | Live lean · IG Android · dest-lock official 10 + leftover-3× dests · dest folders **24** · leftover 4× **0** |
+| **2012** | Live lean · IG Android · dest-lock official 10 + leftover-3× dests + leftover-4× unique **3** (chrome · twitter · soundcloud) · dest folders **24** · stacked leftover-4× **0** |
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover-3× dests · dest folders **17** · Win7 + IE 9 |
 | **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · dest-lock official 10 + leftover-3× dests · dest folders **26** · Win7 residual + Chrome habit |

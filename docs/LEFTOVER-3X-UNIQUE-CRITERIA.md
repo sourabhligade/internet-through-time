@@ -65,6 +65,7 @@ Do **not** dest-farm to hit the count. Prefer dests **already on disk**. If a ye
 | Second | **3** leftover dests | `ittYY-pop2-<id>` | **No catalog.** Today = `pop2` stacked on the first dest |
 | Third | **3** leftover dests | `ittYY-pop3-<id>` | `scripts/popular-3x3-sites.json` |
 | **Leftover-3×n** | **9** leftover dests | 9 keys | — |
+| leftover-4× unique | **3** leftover dests (2012 only this pass) | `ittYY-pop4-<id>` | chrome · twitter · soundcloud |
 | Official 10 | **10** (already shipped) | `flow-trails.js` n=1–10 | not leftover-3× |
 | **Year unique set** | **19** dests (10 + 9) | 19 keys | 2017 unique leftover-20 is a **different** map (30 total) |
 

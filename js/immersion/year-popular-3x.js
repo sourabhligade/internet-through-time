@@ -3,6 +3,7 @@
  * Rooms may add [data-pop-pick] + [data-pop-req]. Incomplete never writes.
  * Keys: ittYY-pop-<id>
  * Third-trio dests may set data-pop-key="pop3-<slug>" → ittYY-pop3-<slug>.
+ * Fourth-strip dests may set data-pop-key="pop4-<slug>" → ittYY-pop4-<slug>.
  */
 (function (global) {
   "use strict";

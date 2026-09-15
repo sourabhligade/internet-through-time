@@ -18,7 +18,8 @@ Photos leave the iPhone. Facebook buys the camera and goes public. Wikipedia goe
 | Scale June | **697,089,489** sites (**+101%**) · **2,518,453,530** users · ILS |
 | 3× | Medium · Path · Flipboard |
 | F1–F5 | Pinterest · FB IPO $38 · FB 1B · iOS Maps flop · SOPA 18 Jan |
-| 4× leftover | **0** (DISK-TRUTH lock) |
+| 4× leftover stacked | **0** |
+| leftover-4× unique dests | **3** · chrome · twitter · soundcloud · `itt12-pop4-*` · not stacked leftover-4× |
 | Guided `<ol>` | **exactly 6** |
 | SoundCloud | leftover, **not** the star (old one-thing row is stale) |
 

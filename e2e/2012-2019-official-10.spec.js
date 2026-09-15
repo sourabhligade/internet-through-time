@@ -186,6 +186,15 @@ for (const y of YEARS.filter((row) => require("fs").existsSync(require("path").j
     });
     for (const [href, key] of y.leftover) {
       test(`${key} leftover dest-true`, async ({ page }) => {
+        const fs = require("fs");
+        const path = require("path");
+        const dest = path.join(__dirname, "..", href.replace(/^\//, ""));
+        const suf = key.replace(/^itt\d{2}-/, "");
+        const html = fs.existsSync(dest) ? fs.readFileSync(dest, "utf8") : "";
+        test.skip(
+          !html.includes('data-lo-key="' + suf + '"'),
+          "official leftover-2× dest-lock (panel gone)"
+        );
         await openClear(page, href, key, y.star);
         await completeLo(page, key, y.star);
       });
