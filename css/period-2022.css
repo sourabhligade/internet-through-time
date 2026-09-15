@@ -46,6 +46,11 @@ body.year-2022 .itt-year-chip { color:#1565c0; }
   background: #dee1e6;
 }
 
+.year-2022,
+.year-2022 .desktop,
+.year-2022 .browser {
+  color-scheme: only light;
+}
 .year-2022 .titlebar {
   background: #dee1e6 !important;
   color: #202124 !important;
@@ -419,6 +424,28 @@ html[data-itt-year="2022"] #itt-wayfind a.itt-wayfind-home {
   border: 0 !important;
   text-decoration: none !important;
   font-weight: 600 !important;
+}
+/* Start iframe only — never the year shell (shell is also html[data-itt-year=2022]). */
+html[data-itt-year="2022"]:has(body.itt-start-page) {
+  height: 100%;
+  color-scheme: only light;
+  background: #f3f3f3;
+}
+html[data-itt-year="2022"] body.itt-start-page {
+  color-scheme: only light !important;
+  background: #f3f3f3 !important;
+  color: #111 !important;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html[data-itt-year="2022"] body.itt-start-page #itt-year-start {
+  flex: 1 1 auto;
+}
+html[data-itt-year="2022"] body.itt-start-page #itt-exhibit-foot {
+  display: block !important;
+  margin-top: auto;
+  flex: 0 0 auto;
 }
 html[data-itt-year="2022"] #itt-exhibit-foot,
 html[data-itt-year="2022"] #itt-exhibit-foot font {

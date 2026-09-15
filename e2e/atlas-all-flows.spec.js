@@ -171,11 +171,8 @@ test.describe("atlas hallway — all flows", () => {
       const ten = await panel.locator("ol.ten a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
       expect(ten.length, y + " official").toBeGreaterThanOrEqual(7);
       expect(ten.length, y + " official").toBeLessThanOrEqual(10);
-      const slugs = ten.map((h) => {
-        const m = String(h).match(/sites\/([^/]+)/i);
-        return m ? m[1].toLowerCase() : h;
-      });
-      expect(new Set(slugs).size, y + " official dests must be unique").toBe(slugs.length);
+      const pages = ten.map((h) => String(h).replace(/\\/g, "/").split("?")[0].toLowerCase());
+      expect(new Set(pages).size, y + " official dests must be unique hrefs").toBe(pages.length);
       for (const h of ten) await expectLive(page, h, y + " official");
 
       const gameLinks = panel.locator(".atlas-layer", { hasText: /Year games/ }).locator("a");

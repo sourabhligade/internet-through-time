@@ -14,13 +14,13 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 
 - [x] A1 One star dest per live year (`start-data` href = chip = trail n=1) — `year-home-densify` + `one-thing-per-year` 2013/2016–2021
 - [x] A2 Guided Starting Point is exactly 6 (`#ott-guided-YYYY ol > li`) — `year-home-densify` every live year
-- [x] A3 Official 10 dests exist (`flow-trails.js` n=1–10 on disk) — official 10 hrefs resolve 1994–2021
+- [x] A3 Official 10 dests exist (`flow-trails.js` n=1–10 on disk) — 2012 FB 1B · 2013 Touch ID · 2014 chat + Apple Pay now on trail (2026-09-15)
 - [x] A4 Starting Point first paint has no leftover warehouse — leftover-3× home + dest-face Starting Point test
 - [x] A5 Empty / trap / 0 ticks never writes star — `one-thing-per-year` incomplete + 2018 Accept All
 - [x] A6 Leftover never writes the star key — dest-face complete + 2018 leftover-2× never gold
 - [x] A7 Official dest leftover-2× / leftover-3× hidden (gold-only) — dest-face official lycos + `year-3x3-all` official dest skips
 - [x] A8 Leftover dest leftover-3× dest face **visible** without `?deep=1` — dest-face 2010 chrome / 2012 reddit / 2013 reddit
-- [x] A9 No 2022+ year tree — `years/2022` absent
+- [x] A9 No 2023+ year tree — `years/2022` is live lean (85 dests). 2023–2025 wiped.
 - [x] A10 No invented brand pixels / no visitor sent to `SOURCES.md` for the star — failed-final / capture-cite on dests; e2e does not open SOURCES
 
 ## B. I/O I1–I14 (2016–2021 + 2013)

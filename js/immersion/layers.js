@@ -118,7 +118,10 @@
 
   function legendHtml(y, here) {
     var webHref = hrefFor(y, "pages/home.html");
-    var gameRel = String(y) === "2018" ? "sites/playable/game.html" : "sites/playable/index.html";
+    var gameRel =
+      String(y) === "2018" || String(y) === "2013" || String(y) === "2014"
+        ? "sites/playable/game.html"
+        : "sites/playable/index.html";
     var gameHref = hrefFor(y, gameRel);
     var note =
       here === "machine"
@@ -234,7 +237,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

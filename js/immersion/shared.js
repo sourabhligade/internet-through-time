@@ -759,6 +759,24 @@
           fl.join(" · ") +
           "</font></p>";
         document.body.appendChild(foot);
+        /* 2022 start: pin bar to iframe bottom. Inline beats cached period/start CSS. */
+        if (onHome && String(YEAR) === "2022") {
+          var root = document.documentElement;
+          root.style.setProperty("color-scheme", "only light");
+          root.style.setProperty("height", "100%");
+          root.style.setProperty("background", "#f8f9fa");
+          document.body.style.setProperty("color-scheme", "only light", "important");
+          document.body.style.setProperty("background", "#f8f9fa", "important");
+          document.body.style.setProperty("color", "#202124", "important");
+          document.body.style.setProperty("min-height", "100%", "important");
+          document.body.style.setProperty("display", "flex", "important");
+          document.body.style.setProperty("flex-direction", "column", "important");
+          var startEl = document.getElementById("itt-year-start");
+          if (startEl) startEl.style.setProperty("flex", "1 1 auto", "important");
+          foot.style.setProperty("margin-top", "auto", "important");
+          foot.style.setProperty("flex", "0 0 auto", "important");
+          foot.style.setProperty("background", "#f8f9fa", "important");
+        }
       }
     }
 

@@ -147,8 +147,7 @@
       { title: "Face ID / iPhone X", path: "sites/iphone/x.html" },
       { title: "Fortnite BR", path: "sites/fortnite/index.html" },
       { title: "Twitter 280", path: "sites/twitter/280.html" },
-      { title: "Teams GA", path: "sites/teams/index.html" },
-      { title: "Leftover-2× WhatsApp Status", path: "sites/whatsapp/index.html" }
+      { title: "Teams GA", path: "sites/teams/index.html" }
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2017/",
     locationHints: [      { re: /snap.?map/i, path: "sites/snapmap/index.html" },

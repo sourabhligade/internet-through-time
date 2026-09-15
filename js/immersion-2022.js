@@ -6,7 +6,7 @@
   var me = document.currentScript || scripts[scripts.length - 1];
   var base = (me && me.src) ? me.src.replace(/\/[^/]*$/, "/") : "/js/";
   var el = document.createElement("script");
-  el.src = base + "immersion/boot.js?v=20260915pack";
+  el.src = base + "immersion/boot.js?v=20260915foot";
   el.async = true;
   (document.head || document.documentElement).appendChild(el);
 })();

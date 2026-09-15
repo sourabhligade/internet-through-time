@@ -56,3 +56,17 @@ body.year-2021 .itt-year-chip { color:#1565c0; }
   font-size: 13px;
 }
 .att21-alert [data-official-req] { font-size: 11px; color: #aaa; text-align: left; }
+
+/* A · first paint: star + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2021"] .itt-playable-link,
+html[data-itt-year="2021"] .itt-hub-exit,
+html[data-itt-year="2021"] .itt-felt-trail,
+html[data-itt-year="2021"] #itt-year-start-extra,
+html[data-itt-year="2021"] #itt-first-night-bar,
+html[data-itt-year="2021"] .itt-3x-visible,
+html[data-itt-year="2021"] #itt-layer-assess,
+html[data-itt-year="2021"] .itt-layer-assess,
+html[data-itt-year="2021"] .itt-home-more,
+html[data-itt-year="2021"] a[href="?deep=1"] {
+  display: none !important;
+}

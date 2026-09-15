@@ -49,11 +49,11 @@ Disk counts are **today’s tree**, not targets. Do not grow dests to “catch u
 | Year | Star dest | Key | Save (writes) | Trap / incomplete (never) | Shell | Hard bans | Disk now |
 |------|-----------|-----|---------------|---------------------------|-------|-----------|----------|
 | **2016** | `sites/instagram/stories.html` | `itt16-ig-stories` | 24h slide / Story text + honesty | Empty Story · GO as gold · Reactions as gold | Win10 rising · Chrome habit | TikTok brand · Reels · Meta · Face ID · Chromium Edge | **32 dests** (reverted to origin) · **0 assets** |
-| **2017** | `sites/iphone/x.html` | `itt17-faceid` | Look / no Home / swipe up | Home button as 2017 default · Fortnite as gold | Win10 mass · Chrome habit | GDPR 25 May · TikTok US mass · Reels | 222 dests · 258 HTML · **0 assets** |
+| **2017** | `sites/iphone/x.html` | `itt17-faceid` | Look / no Home / swipe up | Home button as 2017 default · Fortnite as gold | Win10 mass · Chrome habit | GDPR 25 May · TikTok US mass · Reels | **40 dests** · **0 assets** |
 | **2018** | `sites/gdpr/index.html` | `itt18-gdpr` | **Manage** | **Accept All** · IGTV as gold · Reels | Win10 mass · Chrome habit · EdgeHTML residual | Zoom · Reels · Meta · Disney+ · Chromium Edge as default | **13 dests · 22 HTML** · 0 assets |
-| **2019** | `sites/disneyplus/home.html` | `itt19-disneyplus` | Continue watching | Trial / join (`index.html`) · “Who’s watching” as Disney press quote | Win10 mass · Chrome habit | Reels · Zoom-as-mass · Meta · Travis Scott | 165 dests · 202 HTML · 0 assets |
-| **2020** | `sites/zoom/meeting.html` | `itt20-zoom` | Mute → chat → **Leave** | **Join** · “300M Zoom users” | Win10 mass · Chrome habit · Edge 79 leftover | ChatGPT · GameStop · June ILS websites digit | 45 dests · 52 HTML · 0 assets |
-| **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | 294 dests · 380 HTML · 0 assets |
+| **2019** | `sites/disneyplus/home.html` | `itt19-disneyplus` | Continue watching | Trial / join (`index.html`) · “Who’s watching” as Disney press quote | Win10 mass · Chrome habit | Reels · Zoom-as-mass · Meta · Travis Scott | **38 dests** · 0 assets |
+| **2020** | `sites/zoom/meeting.html` | `itt20-zoom` | Mute → chat → **Leave** | **Join** · “300M Zoom users” | Win10 mass · Chrome habit · Edge 79 leftover | ChatGPT · GameStop · June ILS websites digit | **38 dests** · 0 assets |
+| **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | **15 dests** · 0 assets |
 
 **Star path rule:** several of these are **not** `index.html`. Year-start / first-night / atlas must use the path in this table. A trail that 404s is an I/O fail (see 2013 Vine `record.html` as the same class of bug).
 

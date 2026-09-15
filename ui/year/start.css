@@ -345,10 +345,27 @@ html[data-itt-year="2021"] .ott-flows a {
 }
 
 /* 2022 Starting Point — Chrome-era links, not Netscape underlines */
+html[data-itt-year="2022"]:has(body.itt-start-page) {
+  height: 100%;
+  color-scheme: only light;
+  background: #f8f9fa;
+}
 html[data-itt-year="2022"] body.itt-start-page {
   background: #f8f9fa !important;
   color: #202124 !important;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: only light !important;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html[data-itt-year="2022"] body.itt-start-page #itt-year-start {
+  flex: 1 1 auto;
+}
+html[data-itt-year="2022"] body.itt-start-page #itt-exhibit-foot {
+  display: block !important;
+  margin-top: auto;
+  flex: 0 0 auto;
 }
 html[data-itt-year="2022"] body.itt-start-page a,
 html[data-itt-year="2022"] .ott-guided a,

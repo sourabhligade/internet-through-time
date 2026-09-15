@@ -28,6 +28,7 @@ LEAN = {
 }
 
 EXTRA_KEEP = {
+    "2014": {"applepay"},
     "2019": {
         "reddit", "wikipedia", "netflix", "spotify", "snapchat", "twitch",
         "slack", "uber", "whatsapp", "linkedin", "github", "hulu",

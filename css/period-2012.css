@@ -16,3 +16,17 @@ body.year-2012 .itt-year-chip {
 .rd12 .pop-rows button { text-align: left; padding: 8px; background: #fff; border: 1px solid #369; cursor: pointer; }
 .rd12 .pop-rows button.is-on { background: #fff8dc; }
 .rd12 .pop-req { display: block; font-size: 12px; margin: 4px 0; }
+
+/* A · first paint: star + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2012"] .itt-playable-link,
+html[data-itt-year="2012"] .itt-hub-exit,
+html[data-itt-year="2012"] .itt-felt-trail,
+html[data-itt-year="2012"] #itt-year-start-extra,
+html[data-itt-year="2012"] #itt-first-night-bar,
+html[data-itt-year="2012"] .itt-3x-visible,
+html[data-itt-year="2012"] #itt-layer-assess,
+html[data-itt-year="2012"] .itt-layer-assess,
+html[data-itt-year="2012"] .itt-home-more,
+html[data-itt-year="2012"] a[href="?deep=1"] {
+  display: none !important;
+}

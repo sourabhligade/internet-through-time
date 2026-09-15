@@ -8,6 +8,7 @@
 .os-win10 {
   --itt-desktop-bg: #0078d7;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: only light;
 }
 
 .os-win10 .browser {

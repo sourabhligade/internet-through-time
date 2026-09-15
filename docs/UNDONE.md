@@ -22,7 +22,7 @@ Verified on disk this pass: official-10 leftover-panel counts, leftover dest `da
 | 2017 official dests leftover-2× panels **= 0** | `years/2017/sites/{iphone/x,fortnite,twitter/280,teams,vine/gone,switch,wannacry,musically,equifax,playable/game}.html` |
 | 2017 unique leftover dests dest-true unique verbs | 18 `data-uf17-need=pick\|field` + Animoji pick/send + iOS 11 `data-p17` |
 | 2017 unique + official e2e | `e2e/2017-unique-flows.spec.js` + `e2e/2017-2x-unique.spec.js` + `e2e/2017-flows.spec.js` + `e2e/2017-mvp.spec.js` = **72/72** |
-| leftover-official / 2×-links 404 dests | **0 missing** of 11,336 leftover-official dests |
+| leftover-official / 2×-links 404 dests | **0 missing** of **166** dest-true lean leftover dests |
 | 2016 dest-farm revert | **32 dests** (origin tree) |
 | 2013 Vine star href | `sites/vine/record.html` (not `index.html`) |
 | Issues **#6** docs vs disk · **#7** matrix 404s | **Closed** on GitHub |
@@ -42,7 +42,7 @@ The file has **no `[x]` on Phases 1–6 / H**. Code exists for 1–3 and part of
 | **2 Leftover 20** | Unique dest, key, verb; never official whenKeys; period chrome; cite or failed-final | 20 dests exist. dest-true leftover keys write. Empty/trap never write (72/72) | **18 dests have no capture cite** (only `ios11` → Apple Newsroom 18 Sep 2017; `cloudbleed` → Cloudflare 23 Feb 2017). Verbs are dest-unique *actions* on a **shared** `data-uf17-host` (`js/immersion/year-2017-extras.js` `bootUniqueFlow`), not dest-unique engines. Period assets `assets/period/2017/` = **0 files** |
 | **3 Strip clones on official dests** | No leftover-2× panels on official 10 | **Done.** `data-lo-panel` count = **0** on all 10 official dest HTML files | Workshop dests still have clones (below) |
 | **4 Starting Point + About** | Guided exactly 6; leftover dests not in `<ol>`; About dual-cite; copy names Face ID not “222 rooms” | Guided 6 in `ui/year/start-data.js` (About · Face ID · Fortnite · 280 · Teams · Map) | **Not re-walked** this audit. Scorecard blank. Home dest-farm unique A/B/C still on disk (folded) |
-| **5 Workshop** | 192 dest-farm dests stay unlinked; do not dest-farm 2016 | 2016 stays 32 dests | **`years/2017/sites/` = 222 dest folders.** Unique-map uses **29 folders** (iphone holds `x.html` + `animoji.html`). **193 dest folders** are workshop dest-farm. **221 HTML files** under `years/2017/sites/` still have **≥2 `data-lo-key`** leftover clones |
+| **5 Workshop** | 192 dest-farm dests stay unlinked; do not dest-farm 2016 | dest-lock 2026-09-15 | **`years/2017/sites/` = 40 dest folders** (30 unique + leftover-3× dests). Workshop dest-farm dests deleted. |
 | **6 Docs + e2e** | flow-trails official 10 only; 10+20 unique e2e | Unique e2e 72/72. Official 10 hrefs on disk | Plan header still says **“Implement only after you say so.”** §6 scorecard empty. `flow-trails.js` 2017 is official 10 only (OK) |
 | **H Dest lock** | Delete dests not in the 30 + About/home/map, same commit as urlMap + leftover-official + sitemap | **Not started** | Optional. Would close #9 for 2017 only |
 
@@ -98,7 +98,7 @@ The file has **no `[x]` on Phases 1–6 / H**. Code exists for 1–3 and part of
 |------------------|------|------|------|------|------|------|
 | I/O chrome pass (phone/banner/meeting) | **Reverted** to origin | Face ID lock screen **shipped** | GDPR banner **shipped** | Continue button **shipped** | Zoom dock **shipped** | ATT dialog **shipped** |
 | Official dest leftover panels (`data-lo-panel`) | Stories **2** · GO **5** · Reactions **5** | Official 10 = **0** | GDPR **2** · FYP **2** · Hearing **2** | Disney+ **4** · TikTok **4** · Arcade **4** | Zoom **2** · Reels **2** · GPT-3 **2** | ATT **2** · Signal **2** · Copilot **2** |
-| L5 lean door | 32 dests (reverted) | **Fail** 222 dests | Pass 13 dests | **Fail** 165 dests | 45 dests | **Fail** 294 dests |
+| L5 lean door | 32 dests (reverted) | **40 dests** (dest-lock) | Pass 13 dests | **38 dests** | 38 dests | **15 dests** |
 | Period assets `assets/period/YYYY/` | **0** | **0** | **0** | **0** | **0** | **0** |
 | Unique leftover dest map | **None** | **30 dests** | **None** | **None** | **None** | **None** |
 | Step H dest-farm lock | n/a (already origin-sized) | **Not done** | n/a (already lean) | **Not done** | optional | **Not done** |

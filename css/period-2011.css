@@ -1,3 +1,17 @@
 @import url("itt-leftover-fold.css");
 @import url("period-2010.css");
 body.year-2011 .itt-year-chip { color:#1565c0; }
+
+/* A · first paint: star + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2011"] .itt-playable-link,
+html[data-itt-year="2011"] .itt-hub-exit,
+html[data-itt-year="2011"] .itt-felt-trail,
+html[data-itt-year="2011"] #itt-year-start-extra,
+html[data-itt-year="2011"] #itt-first-night-bar,
+html[data-itt-year="2011"] .itt-3x-visible,
+html[data-itt-year="2011"] #itt-layer-assess,
+html[data-itt-year="2011"] .itt-layer-assess,
+html[data-itt-year="2011"] .itt-home-more,
+html[data-itt-year="2011"] a[href="?deep=1"] {
+  display: none !important;
+}

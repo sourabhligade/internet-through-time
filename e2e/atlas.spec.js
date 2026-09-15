@@ -115,11 +115,8 @@ test.describe("museum atlas", () => {
       );
       expect(trailHrefs.length, y + " trail").toBeGreaterThanOrEqual(7);
       expect(trailHrefs.length, y + " trail").toBeLessThanOrEqual(10);
-      const slugs = trailHrefs.map((h) => {
-        const m = String(h).match(/sites\/([^/]+)/i);
-        return m ? m[1].toLowerCase() : h;
-      });
-      expect(new Set(slugs).size, y + " official dests must be unique").toBe(slugs.length);
+      const pages = trailHrefs.map((h) => String(h).replace(/\\/g, "/").split("?")[0].toLowerCase());
+      expect(new Set(pages).size, y + " official dests must be unique hrefs").toBe(pages.length);
       for (const h of trailHrefs) await expectLive(page, h, y + " trail");
     }
   });

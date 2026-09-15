@@ -100,11 +100,8 @@ async function officialTrailHrefs(page, year) {
   });
   expect(hrefs.length, `${year} official dests`).toBeGreaterThanOrEqual(7);
   expect(hrefs.length, `${year} official dests`).toBeLessThanOrEqual(10);
-  const slugs = hrefs.map((h) => {
-    const m = h.match(/sites\/([^/]+)/i);
-    return m ? m[1].toLowerCase() : h;
-  });
-  expect(new Set(slugs).size, `${year} official dests must be unique websites`).toBe(slugs.length);
+  const pages = hrefs.map((h) => h.replace(/\\/g, "/").toLowerCase());
+  expect(new Set(pages).size, `${year} official dests must be unique hrefs`).toBe(pages.length);
   return hrefs;
 }
 

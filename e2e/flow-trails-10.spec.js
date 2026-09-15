@@ -42,10 +42,9 @@ test("official trail dests are unique websites inside each year", () => {
     let r;
     while ((r = rowRe.exec(block))) {
       if (parseInt(r[1], 10) > 10) continue;
-      const sm = r[2].match(/sites\/([^/]+)/i);
-      if (sm) official.push(sm[1].toLowerCase());
+      official.push(String(r[2]).replace(/\\/g, "/").toLowerCase());
     }
-    expect(new Set(official).size, year + " official dests must be unique websites").toBe(official.length);
+    expect(new Set(official).size, year + " official dests must be unique hrefs").toBe(official.length);
   }
 });
 
@@ -72,11 +71,8 @@ test.describe('dest-unique official trail every year', () => {
       const hrefs = await ten.locator("a").evaluateAll((as) =>
         as.map((a) => a.getAttribute("href") || "")
       );
-      const slugs = hrefs.map((h) => {
-        const m = String(h).match(/sites\/([^/]+)/i);
-        return m ? m[1].toLowerCase() : h;
-      });
-      expect(new Set(slugs).size, `${s.year} official dests must be unique`).toBe(slugs.length);
+      const pages = hrefs.map((h) => String(h).replace(/\\/g, "/").split("?")[0].toLowerCase());
+      expect(new Set(pages).size, `${s.year} official dests must be unique hrefs`).toBe(pages.length);
       await expect(ten).toContainText(s.name);
     });
   }

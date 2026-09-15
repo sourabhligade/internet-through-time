@@ -69,3 +69,17 @@ body.year-2010 .itt-year-chip {
   padding: 3px 8px;
   cursor: pointer;
 }
+
+/* A · first paint: star + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2010"] .itt-playable-link,
+html[data-itt-year="2010"] .itt-hub-exit,
+html[data-itt-year="2010"] .itt-felt-trail,
+html[data-itt-year="2010"] #itt-year-start-extra,
+html[data-itt-year="2010"] #itt-first-night-bar,
+html[data-itt-year="2010"] .itt-3x-visible,
+html[data-itt-year="2010"] #itt-layer-assess,
+html[data-itt-year="2010"] .itt-layer-assess,
+html[data-itt-year="2010"] .itt-home-more,
+html[data-itt-year="2010"] a[href="?deep=1"] {
+  display: none !important;
+}
