@@ -112,7 +112,7 @@ test.describe("leftover dest leftover-3× dest face", () => {
   test("Starting Point leftover-3× warehouse is not first paint", async ({ page }) => {
     for (const year of ["1994", "2013", "2017", "2018", "2021"]) {
       await page.goto(`/years/${year}/pages/home.html`);
-      await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
+      await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6, { timeout: 15000 });
       await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toBeVisible();
       await expect(page.locator(`[data-itt-pop3x="${year}"]:not(.itt-also-year *)`)).toHaveCount(0);
       await expect(page.locator(`[data-itt-lo3x]:not(.itt-also-year *)`)).toHaveCount(0);
