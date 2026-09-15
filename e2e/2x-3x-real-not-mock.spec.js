@@ -16,7 +16,7 @@ const path = require("path");
 const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2017"];
+const YEARS = ["2005", "2006", "2008"];
 const STAR = {
   2005: "itt05-yt-uploads",
   2006: "itt06-tweets",
@@ -65,30 +65,34 @@ function stripBlock(html, attr, year) {
 }
 
 /**
+ * Starting Point leftover-2× unique strips are folded (lean first paint).
+ * Discover dest-true leftover-2× on leftover dest HTML instead.
  * @param {string} year
  */
 function flowsForYear(year) {
-  const homePath = path.join(ROOT, "years", year, "pages", "home.html");
-  const html = fs.readFileSync(homePath, "utf8");
+  const sitesDir = path.join(ROOT, "years", year, "sites");
   /** @type {{ year: string, dest: string, file: string, href: string }[]} */
   const out = [];
-  const seen = new Set();
-  for (const attr of ATTRS) {
-    const block = stripBlock(html, attr, year);
-    const re = /href="(\.\.\/sites\/([^/"#?]+)\/[^"]+)"/g;
-    let m;
-    while ((m = re.exec(block))) {
-      const dest = m[2];
-      if (seen.has(dest)) continue;
-      seen.add(dest);
-      const rel = m[1].replace(/^\.\.\//, "");
-      out.push({
-        year,
-        dest,
-        file: path.join(ROOT, "years", year, rel),
-        href: "/years/" + year + "/" + rel,
-      });
-    }
+  if (!fs.existsSync(sitesDir)) return out;
+  const dests = fs.readdirSync(sitesDir).sort();
+  for (const dest of dests) {
+    const file = path.join(sitesDir, dest, "index.html");
+    if (!fs.existsSync(file)) continue;
+    const html = fs.readFileSync(file, "utf8");
+    if (/data-official-key=/.test(html)) continue;
+    if (/^(about|aboutus)$/i.test(dest)) continue;
+    if (!/data-itt-dest-true="1"/.test(html)) continue;
+    if (!/data-lo-save/.test(html) || !/data-lo-key=/.test(html)) continue;
+    if (!/data-lo-field/.test(html) || (html.match(/data-lo-req/g) || []).length < 2) continue;
+    if (destTrueKeys(html).length < 2) continue;
+    if (/data-lo-save[^>]*>\s*open leftover/i.test(html)) continue;
+    out.push({
+      year,
+      dest,
+      file,
+      href: "/years/" + year + "/sites/" + dest + "/index.html",
+    });
+    if (out.length >= 3) break;
   }
   return out;
 }

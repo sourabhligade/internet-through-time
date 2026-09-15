@@ -144,10 +144,6 @@
     locationHints: [
       { re: /mario.?run|super.?mario/i, path: "sites/smario/index.html" },
       { re: /assistant|ok.?google|pixel/i, path: "sites/assistant/index.html" },
-      { re: /houseparty/i, path: "sites/houseparty/index.html" },
-      { re: /\binbox\b/i, path: "sites/inbox/index.html" },
-      { re: /linkedin/i, path: "sites/linkedinms/index.html" },
-      { re: /\bjio\b/i, path: "sites/jio/index.html" },
       { re: /stor(y|ies)|instagram/i, path: "sites/instagram/stories.html" },
       { re: /pokemon|pogo|go/i, path: "sites/pokemongo/index.html" },
       { re: /react|haha|wow/i, path: "sites/facebook/reactions.html" },

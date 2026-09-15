@@ -145,9 +145,6 @@
     locationHints: [
       { re: /drawsomething/i, path: "sites/drawsomething/index.html" },
       { re: /surface/i, path: "sites/surface/index.html" },
-      { re: /nexus/i, path: "sites/nexus/index.html" },
-      { re: /yahoo\-marissa/i, path: "sites/yahoo-marissa/index.html" },
-      { re: /windows\-phone/i, path: "sites/windows-phone/index.html" },
       { re: /instagram|ig/i, path: "sites/instagram/android.html" },
       { re: /pinterest|pin/i, path: "sites/pinterest/index.html" },
       { re: /ipo/i, path: "sites/facebook/ipo.html" },
@@ -156,7 +153,6 @@
       { re: /sopa|pipa|wikipedia/i, path: "sites/wikipedia/sopa.html" },
       { re: /iphone|lightning/i, path: "sites/iphone/index.html" },
       { re: /chrome/i, path: "sites/chrome/index.html" },
-      { re: /tinder/i, path: "sites/tinder/index.html" },
       { re: /soundcloud/i, path: "sites/soundcloud/index.html" },
       { re: /twitter/i, path: "sites/twitter/index.html" },
       { re: /youtube|gangnam/i, path: "sites/youtube/index.html" },

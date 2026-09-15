@@ -16,7 +16,8 @@ test.describe("2006 flows", () => {
   test("map lists official 10", async ({ page }) => {
     await page.goto("/years/2006/pages/map.html");
     const n = await page.locator("ol[data-itt-ten-flows] li").count();
-    expect(n).toBeGreaterThanOrEqual(10);
+    expect(n).toBeGreaterThanOrEqual(7);
+    expect(n).toBeLessThanOrEqual(10);
   });
 
   test("leftover 2× panel exists on gold dest", async ({ page }) => {

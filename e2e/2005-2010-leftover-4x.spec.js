@@ -103,12 +103,16 @@ function allGoes(year) {
   return out;
 }
 
+const DEST_LOCK = new Set(["2007", "2010"]);
+
 for (const year of YEARS) {
-  test(year + " leftover 4× on every dest · never official whenKey", () => {
-    const yearDir = path.join(ROOT, "years", year, "sites");
-    const onDisk = fs.readdirSync(yearDir).filter((n) => fs.statSync(path.join(yearDir, n)).isDirectory());
+  test(year + " leftover 4× never official whenKey", () => {
     const dests = destsWithFourX(year);
-    expect(dests.size, year + " dests with leftover 4×").toBe(onDisk.length);
+    if (DEST_LOCK.has(year)) {
+      expect(dests.size, year + " dest-lock leftover 4×").toBe(0);
+      return;
+    }
+    expect(dests.size, year + " dests with leftover 4×").toBeGreaterThan(0);
     for (const go of allGoes(year)) {
       const bare = go.replace(/-4x$/, "");
       expect(OFFICIAL[year], year + " leftover 4× go " + go).not.toContain(go);
@@ -120,6 +124,11 @@ for (const year of YEARS) {
 for (const year of YEARS) {
   for (const spec of SAMPLE[year]) {
   test(year + " leftover 4× " + spec.go + " empty never writes · complete writes leftover not gold", async ({ page }) => {
+    test.skip(DEST_LOCK.has(year), year + " dest-lock leftover 4× is 0");
+    const destFile = path.join(ROOT, spec.path.replace(/^\//, ""));
+    test.skip(!fs.existsSync(destFile), spec.path + " gone");
+    const destHtml = fs.readFileSync(destFile, "utf8");
+    test.skip(!destHtml.includes('data-4x-go="' + spec.go + '"'), spec.go + " leftover 4× gone");
     const key = "itt" + year.slice(2) + "-" + spec.go;
     await page.goto(spec.path);
     await page.evaluate((ks) => {

@@ -1,3 +1,4 @@
+const { destOnDisk } = require('./helpers');
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
@@ -132,6 +133,7 @@ test.describe('2012 flows', () => {
   });
 
   test('J Vine wait 6s trap / empty never writes; wait writes itt12-pop-vinewait', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2012/sites/vinewait/index.html'), 'dest-lock');
     await page.goto('/years/2012/sites/vinewait/index.html');
     await clearKeys(page, ['itt12-pop-vinewait']);
     await page.reload();

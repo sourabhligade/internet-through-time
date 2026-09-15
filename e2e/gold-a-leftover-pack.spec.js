@@ -43,7 +43,7 @@ function yearFile(year, rel) {
   return path.join(ROOT, "years", year, rel);
 }
 
-const BOARDED = new Set(["2009", "2020", "2023", "2024", "2025"]);
+const BOARDED = new Set(["2009", "2023", "2024", "2025"]);
 
 test("gold-a table covers every live year on disk", () => {
   const years = GOLD.map((g) => g.year);

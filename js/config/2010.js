@@ -133,10 +133,7 @@
     fallbackUrlBase: "http://home.microsoft.com/intl/web2010/",
     locationHints: [
       { re: /instagram|instagr\.am/i, path: "sites/instagram/index.html" },
-      { re: /instant/i, path: "sites/instant/index.html" },
-      { re: /facetime/i, path: "sites/facetime/index.html" },
       { re: /kickstarter/i, path: "sites/kickstarter/index.html" },
-      { re: /\bask(\.com)?\b/i, path: "sites/ask/index.html" },
       { re: /reddit/i, path: "sites/reddit/index.html" },
       { re: /ipad/i, path: "sites/ipad/index.html" },
       { re: /iphone/i, path: "sites/iphone/index.html" },
@@ -146,20 +143,12 @@
       { re: /twitter/i, path: "sites/twitter/index.html" },
       { re: /youtube/i, path: "sites/youtube/index.html" },
       { re: /imgur/i, path: "sites/imgur/index.html" },
-      { re: /pinterest/i, path: "sites/pinterest/index.html" },
-      { re: /uber/i, path: "sites/uber/index.html" },
-      { re: /quora/i, path: "sites/quora/index.html" },
       { re: /groupon/i, path: "sites/groupon/index.html" },
       { re: /wave/i, path: "sites/wave/index.html" },
-      { re: /digg/i, path: "sites/digg/index.html" },
-      { re: /wikileaks|cablegate/i, path: "sites/wikileaks/index.html" },
-      { re: /browserchoice/i, path: "sites/browserchoice/index.html" },
       { re: /google/i, path: "sites/google/index.html" },
       { re: /yahoo/i, path: "sites/yahoo/index.html" },
       { re: /chrome/i, path: "sites/chrome/index.html" },
-      { re: /ie9|internet explorer 9/i, path: "sites/ie9/index.html" },
       { re: /nexus|android/i, path: "sites/android/index.html" },
-      { re: /windows.?phone/i, path: "sites/windowsphone/index.html" }
     ]
   };
 })(typeof window !== "undefined" ? window : this);

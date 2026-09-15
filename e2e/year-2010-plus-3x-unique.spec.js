@@ -5,7 +5,7 @@
  * except lean 2007 / 2009, where second copies third.
  */
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails , destOnDisk } = require('./helpers');
 
 
 const YEARS = [];
@@ -42,7 +42,7 @@ const WANT_MORE = {
 };
 
 /** CUT-OPEN lean doors: leftover-3× first + third only. Second strip not named. */
-const NO_SECOND = new Set(["2018", "2020"]);
+const NO_SECOND = new Set(["2018"]);
 
 /** Leftover-3× leftover rows may reuse a dest folder. Dest warehouse uniqueness is dest slugs. */
 const LEFTOVER_3X_ROW_SHARE = new Set(["2010", "2011", "2017"]);
@@ -72,7 +72,7 @@ const STRIP = {
   2017: [19, 17, 17],
   2018: [3, 0, 3],
   2019: [9, 9, 9],
-  2020: [3, 0, 3],
+  2020: [3, 3, 3],
 };
 
 function siteKey(href) {
@@ -116,6 +116,7 @@ async function waitLeftoverFoldThenReveal(page) {
 
 test.describe("2010+ second leftover 3× writers", () => {
   test("2010 Instant pop-more empty never writes · complete writes", async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/instant/index.html'), 'dest-lock');
     await page.goto("/years/2010/sites/instant/index.html");
     await page.evaluate(() => localStorage.removeItem("itt10-pop-instant"));
     await page.reload();

@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2008 dest-true official 10 — dest URLs (year boarded).
+ * 2008 dest-true official 10 — dest URLs (year live).
  * Trap / empty never write. Period control writes official:true.
  */
 const { test, expect } = require("@playwright/test");

@@ -11,10 +11,10 @@ const LEFTOVER = [
   { slug: "coinbase", keys: ["coinbase-lx", "coinbase-d2"] },
   { slug: "discord", keys: ["discord-lx", "discord-d2"] },
   { slug: "edge", keys: ["edge-lx", "edge-d2"] },
-  { slug: "facebook", keys: ["facebook-lx", "facebook-d2"], pop: "facebook" },
+  { slug: "facebook", keys: ["facebook-lx", "facebook-d2"] },
   { slug: "github", keys: ["github-lx", "github-d2"] },
-  { slug: "google", keys: ["google-lx", "google-d2"], pop: "google" },
-  { slug: "instagram", keys: ["instagra-lx", "instagra-d2"], pop: "instagram" },
+  { slug: "google", keys: ["google-lx", "google-d2"] },
+  { slug: "instagram", keys: ["instagra-lx", "instagra-d2"] },
   { slug: "layoffs", keys: ["layoffs-lx", "layoffs-d2"] },
   { slug: "linkedin", keys: ["linkedin-lx", "linkedin-d2"] },
   { slug: "midjourney", keys: ["midjourn-lx", "midjourn-d2"] },
@@ -24,7 +24,7 @@ const LEFTOVER = [
   { slug: "nyt", keys: ["nyt-lx", "nyt-d2"] },
   { slug: "openai", keys: ["openai-lx", "openai-d2"] },
   { slug: "pinterest", keys: ["pinteres-lx", "pinteres-d2"] },
-  { slug: "reddit", keys: ["reddit-lx", "reddit-d2"], pop: "reddit" },
+  { slug: "reddit", keys: ["reddit-lx", "reddit-d2"] },
   { slug: "reels", keys: ["reels-lx", "reels-d2"] },
   { slug: "snapchat", keys: ["snapchat-lx", "snapchat-d2"] },
   { slug: "spotify", keys: ["spotify-lx", "spotify-d2"] },
@@ -33,9 +33,9 @@ const LEFTOVER = [
   { slug: "tumblr", keys: ["tumblr-lx", "tumblr-d2"] },
   { slug: "twitch", keys: ["twitch-lx", "twitch-d2"] },
   { slug: "whatsapp", keys: ["whatsapp-lx", "whatsapp-d2"] },
-  { slug: "wikipedia", keys: ["wikipedi-lx", "wikipedi-d2"], pop: "wikipedia" },
+  { slug: "wikipedia", keys: ["wikipedi-lx", "wikipedi-d2"] },
   { slug: "windows10", keys: ["windows1-lx", "windows1-d2"] },
-  { slug: "youtube", keys: ["youtube-lx", "youtube-d2"], pop: "youtube" },
+  { slug: "youtube", keys: ["youtube-lx", "youtube-d2"] },
   { slug: "youtubeshorts", keys: ["youtubes-lx", "youtubes-d2"] },
   { slug: "zoom", keys: ["zoom-lx", "zoom-d2"] },
   { slug: "gmail", keys: ["gmail-lx", "gmail-d2"] },
@@ -84,6 +84,26 @@ function fullKey(suffix) {
   return "itt22-" + suffix;
 }
 
+/** Leftover-3× unique dests — dest-disjoint from official 10. One dest / one leftover-3× key. */
+const LO3X_UNIQUE = [
+  { slug: "amazon", kind: "first", id: "amazon", key: "itt22-pop-amazon" },
+  { slug: "google", kind: "first", id: "google", key: "itt22-pop-google" },
+  { slug: "instagram", kind: "first", id: "instagram", key: "itt22-pop-instagram" },
+  { slug: "facebook", kind: "second", id: "facebook", key: "itt22-pop2-facebook" },
+  { slug: "youtube", kind: "second", id: "youtube", key: "itt22-pop2-youtube" },
+  { slug: "reddit", kind: "second", id: "reddit", key: "itt22-pop2-reddit" },
+  { slug: "wikipedia", kind: "third", id: "wikipedia", key: "itt22-pop3-wikipedia" },
+  { slug: "netflix", kind: "third", id: "netflix", key: "itt22-pop3-netflix" },
+  { slug: "nyt", kind: "third", id: "nyt", key: "itt22-pop3-nyt" },
+];
+const LO3X_SLUGS = new Set(LO3X_UNIQUE.map((d) => d.slug));
+
+function lo3xGo(dest) {
+  if (dest.kind === "third") return `[data-itt-lo3x] [data-pop-go][data-pop-key='pop3-${dest.id}']`;
+  if (dest.kind === "second") return `[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-${dest.id}']`;
+  return `[data-itt-lo3x] [data-pop-go][data-pop-id='${dest.id}']:not([data-pop-key])`;
+}
+
 test.describe("2022 leftover dests — none skipped", () => {
   test.describe.configure({ timeout: 240000 });
 
@@ -102,7 +122,9 @@ test.describe("2022 leftover dests — none skipped", () => {
         .forEach((k) => localStorage.removeItem(k));
     });
 
-    for (const dest of LEFTOVER) {
+    const leftover2x = LEFTOVER.filter((d) => !LO3X_SLUGS.has(d.slug));
+    expect(leftover2x.length, "leftover-2× dests").toBe(66);
+    for (const dest of leftover2x) {
       await page.goto("/years/2022/sites/" + dest.slug + "/index.html");
       await expect(page.locator("[data-lo-panel]"), dest.slug + " leftover-2×").toHaveCount(2);
       await expect(page.locator("[data-lo-save]"), dest.slug).toHaveCount(2);
@@ -143,9 +165,25 @@ test.describe("2022 leftover dests — none skipped", () => {
     }
   });
 
-  test("leftover-3× dest-faces: six dests, visible, write leftover not star", async ({ page }) => {
-    const faces = LEFTOVER.filter((d) => d.pop);
-    expect(faces).toHaveLength(6);
+  test("leftover-3× unique dests: dest-true empty never writes · complete leftover never star", async ({
+    page,
+  }) => {
+    expect(LO3X_UNIQUE).toHaveLength(9);
+    const official = new Set([
+      "chatgpt",
+      "wordle",
+      "twitter",
+      "bereal",
+      "iphone",
+      "ftx",
+      "mastodon",
+      "tiktok",
+      "windows11",
+      "playable",
+    ]);
+    for (const dest of LO3X_UNIQUE) {
+      expect(official.has(dest.slug), dest.slug + " dest-disjoint from official 10").toBe(false);
+    }
     await page.goto("/years/2022/sites/reddit/index.html");
     await page.evaluate(() => {
       Object.keys(localStorage)
@@ -153,32 +191,21 @@ test.describe("2022 leftover dests — none skipped", () => {
         .forEach((k) => localStorage.removeItem(k));
     });
 
-    for (const dest of faces) {
+    for (const dest of LO3X_UNIQUE) {
       await page.goto("/years/2022/sites/" + dest.slug + "/index.html");
-      const face = page.locator("[data-itt-lo3x]");
-      await expect(face, dest.slug + " leftover-3× dest-face").toBeVisible();
-      const go = page.locator("[data-pop-go][data-pop-key='pop3-" + dest.pop + "']");
-      await expect(go, dest.slug + " pop-go").toBeVisible();
-      const insideAlso = await go.evaluate((el) => !!el.closest("details.itt-also-year"));
-      expect(insideAlso, dest.slug + " dest-face not in Also drawer").toBe(false);
-
-      await go.click({ force: true });
-      const empty = await page.evaluate((k) => localStorage.getItem(k), "itt22-pop3-" + dest.pop);
-      expect(empty, dest.slug + " leftover-3× empty never writes").toBeNull();
-
-      await page.locator('[data-pop-pick="keep"]').click({ force: true });
-      const reqs = page.locator("[data-pop-req]");
-      const n = await reqs.count();
-      for (let r = 0; r < n; r++) await reqs.nth(r).check({ force: true });
-      await page.locator("[data-pop-field]").fill(dest.slug + " leftover-3x");
-      await go.click({ force: true });
-      await expect
-        .poll(() => page.evaluate((k) => localStorage.getItem(k), "itt22-pop3-" + dest.pop), {
-          message: dest.slug + " leftover-3× write",
-        })
-        .toBeTruthy();
-      const star = await page.evaluate(() => localStorage.getItem("itt22-chatgpt"));
-      expect(star, dest.slug + " leftover-3× never writes star").toBeNull();
+      const go = page.locator(lo3xGo(dest)).first();
+      await expect(go, dest.slug + " leftover-3× unique go").toBeVisible();
+      const panel = go.locator("xpath=ancestor::*[@data-itt-lo3x][1]");
+      await expect(panel, dest.slug + " dest-true leftover-3×").toBeVisible();
+      await go.click();
+      expect(await page.evaluate((k) => localStorage.getItem(k), dest.key)).toBeFalsy();
+      await panel.locator('[data-pop-pick="keep"]').click();
+      await panel.locator("[data-pop-req]").nth(0).check();
+      await panel.locator("[data-pop-req]").nth(1).check();
+      await panel.locator("[data-pop-field]").fill(dest.slug + " leftover");
+      await go.click();
+      await expect.poll(() => page.evaluate((k) => localStorage.getItem(k), dest.key)).toBeTruthy();
+      expect(await page.evaluate((k) => localStorage.getItem(k), "itt22-chatgpt")).toBeFalsy();
     }
   });
 });

@@ -20,8 +20,16 @@ const THINGS = [
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
     },
     complete: async (page) => {
+      await page.waitForFunction(
+        () => document.documentElement.getAttribute("data-itt-immersion-booted") === "1994",
+        { timeout: 15000 }
+      );
       await page.locator("[data-csotd-link]").click();
       await page.goto("/years/1994/sites/csotd/index.html");
+      await page.waitForFunction(
+        () => document.documentElement.getAttribute("data-itt-immersion-booted") === "1994",
+        { timeout: 15000 }
+      );
       await page.fill("[name='gbname']", "Glenn residual");
       await page.fill("[name='gbnote']", "Modem worthy.");
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
@@ -364,6 +372,21 @@ const THINGS = [
     },
   },
 
+  {
+    year: "2020",
+    path: "/years/2020/sites/zoom/meeting.html",
+    key: "itt20-zoom",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-need]").fill("brb leftover");
+      await page.locator("[data-official-verb-host] [data-official-verb]").click();
+    },
+  },
   {
     year: "2021",
     path: "/years/2021/sites/att/index.html",

@@ -877,14 +877,13 @@ test.describe('year-signature 2020', () => {
     });
     await goImmersion(page, '2020', 'sites/zoom/meeting.html');
     const frame = contentFrame(page);
-    await frame.locator('[data-zoom-join]').click();
+    await frame.locator('[data-official-trap]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt20-zoom'))).toBeFalsy();
-    await frame.locator('[data-zoom-mute]').click();
-    await frame.locator('[data-zoom-chat]').fill('can you hear me');
-    await frame.locator('[data-zoom-send]').click();
-    await frame.locator('[data-zoom-req]').nth(0).check();
-    await frame.locator('[data-zoom-req]').nth(1).check();
-    await frame.locator('[data-zoom-leave]').click();
+    const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await frame.locator('[data-official-need]').fill('can you hear me');
+    await frame.locator('[data-official-verb-host] [data-official-verb]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt20-zoom')), { timeout: 8000 })
       .toBeTruthy();

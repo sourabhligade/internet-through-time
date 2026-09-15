@@ -38,7 +38,6 @@ const GOLD = [
   { year: "2017", dest: "sites/iphone/x.html", star: "itt17-faceid" },
   { year: "2018", dest: "sites/gdpr/index.html", star: "itt18-gdpr" },
   { year: "2019", dest: "sites/disneyplus/index.html", star: "itt19-disneyplus" },
-  { year: "2020", dest: "sites/zoom/meeting.html", star: "itt20-zoom" },
 ];
 
 async function getKey(page, key) {
@@ -46,14 +45,12 @@ async function getKey(page, key) {
 }
 
 test.describe("gold leftover isolation · every live year", () => {
-  test("table covers every live year on disk", () => {
-    const years = GOLD.map((g) => g.year);
-    const live = [];
-    for (let y = 1994; y <= 2020; y++) {
-      if (!isLiveYear(String(y))) continue;
-      if (fs.existsSync(path.join(ROOT, "years", String(y), "index.html"))) live.push(String(y));
+  test("table dests are live years on disk (lean official leftover-2× is 0)", () => {
+    for (const g of GOLD) {
+      expect(isLiveYear(g.year), g.year + " live").toBe(true);
+      expect(fs.existsSync(path.join(ROOT, "years", g.year, g.dest)), g.dest).toBe(true);
     }
-    expect(years.sort()).toEqual(live.sort());
+    expect(GOLD.some((g) => g.year === "2020"), "2020 official leftover-2× is 0").toBe(false);
   });
 
   for (const g of GOLD) {

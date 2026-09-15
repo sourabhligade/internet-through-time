@@ -6,7 +6,7 @@ const { revealLeftoverRails } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2009", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2023", "2024", "2025"]);
 const SHIP = [];
 for (let y = 1994; y <= 2023; y++) {
   const year = String(y);

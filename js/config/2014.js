@@ -104,13 +104,8 @@
       { title: "Ice Bucket", path: "sites/icebucket/index.html" }
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2014/",
-    locationHints: [
-      { re: /oculus|rift/i, path: "sites/oculus/index.html" },
-      { re: /\bello\b/i, path: "sites/ello/index.html" },
-      { re: /serial/i, path: "sites/serial/index.html" },
-      { re: /musical\.?ly/i, path: "sites/musically14/index.html" },
+    locationHints: [      { re: /musical\.?ly/i, path: "sites/musically14/index.html" },
       { re: /truecrypt/i, path: "sites/truecrypt/index.html" },
-      { re: /echo.?invite|alexa.?invite/i, path: "sites/echoinvite/index.html" },
       { re: /whatsapp/i, path: "sites/whatsapp/index.html" },
       { re: /heartbleed|openssl|cve-2014-0160/i, path: "sites/heartbleed/index.html" },
       { re: /ice.?bucket|als/i, path: "sites/icebucket/index.html" },

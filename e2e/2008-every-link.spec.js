@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2008 every dest link — dest URLs live (year boarded).
+ * 2008 every dest link — dest URLs live (year live).
  */
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");

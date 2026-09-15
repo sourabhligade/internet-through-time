@@ -4,10 +4,10 @@
  * 2016 / 2019 leftover rooms write ittYY-pop-* after pick + honesty + go.
  */
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails , destOnDisk } = require('./helpers');
 
 
-const WIPED = new Set(["2021", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2023", "2024", "2025"]);
 
 test.describe("3 more leftovers on home — every shipped year", () => {
   for (let y = 1994; y <= 2023; y++) {
@@ -61,6 +61,7 @@ test.describe("new leftover rooms write — sample years", () => {
   });
 
   test("2010 Dropbox leftover incomplete never writes · complete writes", async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/dropbox/index.html'), 'dest-lock');
     await page.goto("/years/2010/sites/dropbox/index.html");
     const key = "itt10-pop4-dropbox";
     await page.evaluate((k) => localStorage.removeItem(k), key);

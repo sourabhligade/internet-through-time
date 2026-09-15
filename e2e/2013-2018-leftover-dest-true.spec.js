@@ -4,7 +4,7 @@
  * Second leftover-3× strip is not named.
  */
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails , destOnDisk } = require('./helpers');
 
 async function getKey(page, k) {
   return page.evaluate((key) => localStorage.getItem(key), k);
@@ -171,6 +171,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     const fs = require("fs");
     const path = require("path");
     test.skip(!fs.existsSync(path.join(__dirname, "..", "years/2019/sites/fortnite/index.html")), "old 2019 fortnite dest gone");
+    test.skip(!destOnDisk('/years/2019/sites/fortnite/index.html'), 'dest-lock');
     await page.goto("/years/2019/sites/fortnite/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt19-fn-lx");

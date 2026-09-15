@@ -61,6 +61,12 @@ test("2017 Face ID gold dest is still Face ID, leftover Cloudbleed never writes 
 });
 
 test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
+  const fs = require("fs");
+  const path = require("path");
+  test.skip(
+    !fs.existsSync(path.join(__dirname, "..", "years/2017/sites/zoom17/index.html")),
+    "2017 dest-lock leftover dest gone"
+  );
   await walkTheater(page, {
     path: "/years/2017/sites/zoom17/index.html",
     key: "itt17-zoom17-dp",
@@ -81,8 +87,7 @@ test("2017 guided list stays 6 · deepen strip is outside", async ({ page }) => 
   for (const y of ["2017"]) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator(`#ott-guided-${y} ol > li`)).toHaveCount(6);
-    await expect(page.locator(`#ott-2x-${y}-dp`)).toBeVisible();
-    const inside = await page.locator(`#ott-guided-${y} #ott-2x-${y}-dp`).count();
-    expect(inside).toBe(0);
+    await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
+    await expect(page.locator(`#ott-2x-${y}-dp:visible`)).toHaveCount(0);
   }
 });

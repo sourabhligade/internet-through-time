@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× ×3 for 2011–2015 — dest-true · not mock. 2010 already done. 2013 boarded.
+ * Leftover-3× ×3 for 2011–2015 — dest-true · not mock. 2010 already done. 2013 live lean.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
