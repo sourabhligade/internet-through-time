@@ -1,6 +1,14 @@
 {
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": true,
+  "rewrites": [
+    { "source": "/years/:year/pages/home", "destination": "/years/:year/pages/home.html" },
+    { "source": "/years/:year/pages/home/", "destination": "/years/:year/pages/home.html" },
+    { "source": "/years/:year/pages/about", "destination": "/years/:year/pages/about.html" },
+    { "source": "/years/:year/pages/about/", "destination": "/years/:year/pages/about.html" },
+    { "source": "/years/:year/pages/map", "destination": "/years/:year/pages/map.html" },
+    { "source": "/years/:year/pages/map/", "destination": "/years/:year/pages/map.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
