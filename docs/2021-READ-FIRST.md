@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-10  
 **Status:** **LIVE lean door.** Dest folders **294** · HTML **380** (freeze 98 / HTML cap 184 are stale). Leftover **2×** on dests. Star `itt21-att`. Do not dest-farm.  
-**Parent:** 2020 wiped. **Child:** 2022 ChatGPT Send `itt22-chatgpt`.  
+**Parent:** 2020 Zoom Leave `itt20-zoom`. **Child:** 2022 ChatGPT Send `itt22-chatgpt`.  
 **Git only if asked.**
 
 ## One line

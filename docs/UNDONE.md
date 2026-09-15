@@ -3,7 +3,7 @@
 **Date:** 2026-09-15  
 **Tree:** `museum/1994-2020-lean`  
 **Status:** Audit. Not ship law.  
-**Out of scope:** wiped years (`years/2020`, `years/2023`–`years/2025`). Do not treat “restore 2020 / add 2023+” as leftover.
+**Out of scope:** wiped years (`years/2023`–`years/2025`). Do not treat “restore 2020 / add 2023+” as leftover.
 
 Ship law: [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 Plans audited: [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md).
@@ -16,7 +16,7 @@ Verified on disk this pass: official-10 leftover-panel counts, leftover dest `da
 
 | Item | Where |
 |------|--------|
-| 27 years open · 2009 plaque · 2020 wiped · 2022 live · 2023+ wiped | Hub, `itt_gate.py`, DISK-TRUTH |
+| 28 years open · 2009 plaque · 2020 Zoom Leave · 2022 live · 2023+ wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 **30 unique dests** on disk | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §4 |
 | 2016 + 2018–2021 official dest leftover-2× panels **= 0** | same strip as 2017 official 10 (2026-09-14 pass) |
 | 2017 official dests leftover-2× panels **= 0** | `years/2017/sites/{iphone/x,fortnite,twitter/280,teams,vine/gone,switch,wannacry,musically,equifax,playable/game}.html` |

@@ -3,7 +3,7 @@
 **Date:** 2026-09-14  
 **Status:** Criteria. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Years:** live lean doors **2016 · 2017 · 2018 · 2019 · 2021**. **2022 is a later lean door** (`2022-READ-FIRST.md`). **2020 wiped.**
+**Years:** live lean doors **2016 · 2017 · 2018 · 2019 · 2021**. **2022 is a later lean door** (`2022-READ-FIRST.md`). **2020 live lean** · Zoom Leave.
 
 I/O here means **how the year feels to use**: first click, period chrome, the star verb, what writes, what never writes. It does **not** mean dest count.
 

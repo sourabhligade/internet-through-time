@@ -6,7 +6,7 @@
 **Template:** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests, 30 unique verbs, 30 unique keys.  
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
-**Years:** ship years **1994–2008 + 2010–2019 + 2021–2022**. **2009 boarded.** **2020 wiped.** **2023+ wiped.**
+**Years:** ship years **1994–2008 + 2010–2022**. **2009 boarded.** **2023+ wiped.**
 
 Leftover-3× here means **first / second / third leftover dests**, not three machines on one dest. Counting `pop` + `pop2` + `pop3` on Pizza Hut is **not** unique.
 

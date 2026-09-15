@@ -10,7 +10,7 @@
 
 **Dest map (all 85):** [`2022-DEST-MAP.md`](2022-DEST-MAP.md).  
 **Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · I1–I14.  
-**Density sibling:** **2018 first-paint** · **2021 freeze ceiling 98**. **2020 wiped.**  
+**Density sibling:** **2018 first-paint** · **2021 freeze ceiling 98**. **2020 live lean** · Zoom Leave.  
 **Disk now:** dests **85** (45 + 40 more) · HTML **95** · leftover-4× **0**. Freeze ceiling **98**. HTML cap **184**.
 
 ---

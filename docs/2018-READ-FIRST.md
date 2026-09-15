@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-08  
 **Status:** **LIVE lean door** (CUT-OPEN). Star = GDPR Manage `itt18-gdpr`. Accept All never writes.  
-**Disk truth:** Hub is **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded.** **2020 wiped.** Do not restore a forest.  
+**Disk truth:** Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2020 live lean** · Zoom Leave. Do not restore a forest.  
 **Prefix:** `itt18`  
 **Clone shape from:** live `years/2017/` (lean door · Face ID star). **Do not** restore git `HEAD` / `52df8ae3` `years/2018/` (108-page forest). Leftover 2× ×2 on every dest HTML. Leftover 3× first (Reddit · YouTube · Wikipedia) + third. Second strip **not named**. Leftover 4× **0**.
 

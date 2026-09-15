@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-15  
 **Status:** **LIVE lean door.** Dest freeze **85** · HTML cap **≤90**. Star `itt22-chatgpt`. Do not dest-farm.  
-**Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. **2020 wiped.**  
+**Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. **2020 live lean** · Zoom Leave.  
 **Clone chrome:** 2021 Win10 + Chrome habit.
 
 ## One line
