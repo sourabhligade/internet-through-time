@@ -21,7 +21,7 @@ It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`.
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **27 years open** (1994–2008 + 2010–2021). **2009 boarded** (tree stays; year-shell is a plaque). **2022+ wiped** (no tree).
+The museum is year-locked rooms in period chrome. Hub is **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2020 wiped.** **2023+ wiped.**
 
 Visitor product (I/O):
 
@@ -69,7 +69,7 @@ There are no other `.md` files outside `node_modules` / Playwright report dirs.
 | [`2015-READ-FIRST.md`](2015-READ-FIRST.md) | Periscope star + P0 leftover | Live door. Still says **“Implement only after you say so.”** |
 | [`2016-READ-FIRST.md`](2016-READ-FIRST.md) | Stories star + leftover | Live door. Still says **“Implement only after you say so.”** |
 | [`2017-READ-FIRST.md`](2017-READ-FIRST.md) | Face ID star + leftover | Live door. Still says **“Implement only after you say so.”** Unique-flow work lives in `2017-UNIQUE-FLOWS.md`. |
-| [`2017-2X-REALITY.md`](2017-2X-REALITY.md) | Pointer only | Clone leftover-2× is **out**. Redirects to `2017-UNIQUE-FLOWS.md`. |
+| `2017-2X-REALITY.md` | **Deleted** | Pointer only. Use `2017-UNIQUE-FLOWS.md`. |
 
 ### 1.3 Live-year locks that name official / leftover flows (not “implement later”)
 
@@ -407,7 +407,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | Item | Evidence |
 |------|----------|
-| 27 years open · 2009 plaque · 2022+ wiped | Hub, `itt_gate.py`, DISK-TRUTH |
+| 27 years open · 2009 plaque · 2020 wiped · 2022 live | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 30 unique dests | Disk + 72/72 e2e |
 | Official dest leftover-2× panels = 0 on 2016–2021 official 10 (and sampled earlier official dests) | HTML `data-lo-panel` count |
 | Empty leftover save without field/pick/req/wait | `leftover-official.js` guard |

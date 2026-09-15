@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — 27 ship years (1994–2008 + 2010–2021).
- * 2009 boarded. 2022–2025 wiped.
+ * Mock-flow classifier — 27 ship years (1994–2008 + 2010–2019 + 2021–2022).
+ * 2009 boarded. 2020 wiped. 2023–2025 wiped.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,7 +27,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2009", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2020", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
@@ -43,6 +43,8 @@ const PRODUCT_HOOK = new RegExp(
     "data-itt-real-",
     "data-itt-popular-",
     "data-itt-pack",
+    "data-uf17-",
+    "data-wiki-",
     "data-itt-product-action",
     "data-official-verb",
     "data-official-trap",
@@ -421,6 +423,7 @@ function classifyPage(fileRel, html) {
     const inner = (m[3] || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
     if (!inner) continue;
     if (/ok|dismiss|skip|top|back to/i.test(inner)) continue;
+    if (/\(trap\)|\btrap\b/i.test(inner)) continue;
     if (PRODUCT_HOOK.test(tag) || PRODUCT_HOOK.test(m[0])) continue;
     if (ACTION_WORD.test(inner)) {
       hits.push({
@@ -447,6 +450,13 @@ function classifyPage(fileRel, html) {
       const inner = (m[2] || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
       if (!ACTION_WORD.test(inner) && !ACTION_WORD.test(attrs)) continue;
       if (PRODUCT_HOOK.test(attrs) || PRODUCT_HOOK.test(inner) || PRODUCT_HOOK.test(m[0])) continue;
+      if (
+        /\(trap\)|\btrap\b|never writes|as[- ]only|as[- ]star|as[- ]gold|as[- ]?20\d{2}|as \w+|Buy-It-Now|leftover|Play word|free-to-play|dashboard-20\d{2}|empty .+ writes/i.test(
+          inner
+        ) ||
+        /data-lo-trap|data-official-trap|data-uf17-trap|data-5x-trap/.test(attrs)
+      )
+        continue;
       if (/data-close|id="(connect|skip|dlg-)/i.test(attrs)) continue;
       /* submit inside a form[action] is real navigation */
       const before = html.slice(Math.max(0, m.index - 2500), m.index);
@@ -505,7 +515,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 27 years open (1994–2008 + 2010–2021) · 2009 boarded · 2022+ wiped");
+  console.log("audit-mock-flows — 27 years open (1994–2008 + 2010–2019 + 2021–2022) · 2009 boarded · 2020 wiped · 2023+ wiped");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

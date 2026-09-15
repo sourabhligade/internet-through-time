@@ -17,7 +17,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2009", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2020", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   if (WIPED.has(String(y))) continue;
@@ -154,7 +154,7 @@ try {
       if (!n) missing.push(y);
     }
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
-    else ok("hub-cards", `${YEARS.length} playable years (2009 boarded · 2022–2025 wiped)`);
+    else ok("hub-cards", `${YEARS.length} playable years (2009 boarded · 2020 wiped · 2023–2025 wiped)`);
     const copy = await page.locator("body").innerText();
     if (!/27 years open/i.test(copy)) fail("hub-copy", "expected 27 years open");
     else ok("hub-copy");

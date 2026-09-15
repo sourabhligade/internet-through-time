@@ -1,7 +1,7 @@
 # 2013 — READ FIRST
 
 **Date:** 2026-09-08  
-**Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022 wiped.** Do not `git checkout` an old 2013 forest.  
+**Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded.** **2020 wiped.** Do not `git checkout` an old 2013 forest.  
 **Prefix:** `itt13-*`  
 **Official 10 keys already live in `flow-trails.js` — dest paths must match.**  
 **Git only if asked.**  

@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Hub card is available.  
-**Disk truth:** Hub is **27 years open** · **2009 boarded** · **2022 wiped**. 2013 Vine and 2018 GDPR are live lean doors. This file is the lock. Star is WhatsApp Install.  
+**Disk truth:** Hub is **27 years open** · **2009 boarded** · **2020 wiped** · **2022 ChatGPT live**. 2013 Vine and 2018 GDPR are live lean doors. This file is the lock. Star is WhatsApp Install.  
 **Prefix:** `itt14`  
 **Clone shape:** live `years/2012/` (Win7 + IE 9 residual). Costume note from live `years/2015/` (Chrome habit is **2015+**). **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
 

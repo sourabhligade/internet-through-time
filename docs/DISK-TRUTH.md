@@ -16,25 +16,25 @@ Hub **27 years open** (1994–2008 + 2010–2019 + 2021–2022). **2009 boarded*
 | **2004** | Live forest · thefacebook networks `itt04-thefacebook-networks` · dests **810** (270 + Board C 540) · leftover-2× on every dest · Board C rail |
 | **2005** | **Live** · YouTube upload gold · leftover 2× + leftover 4× on every dest · XP+IE6 |
 | **2006** | **Live** · Twttr update gold · leftover 2× + leftover 4× on every dest · XP+IE6 · dest folders **378** · HTML **637** (lock 126/385 and 379 are stale) |
-| **2007** | **DONE** · live lean door · iPhone Safari `itt07-iphone` · dest-true official 10 · dest folders **246** (freeze 82 is stale) · XP+IE6 |
+| **2007** | **DONE** · live lean door · iPhone Safari `itt07-iphone` · dest-lock official 10 + leftover-3× dests · dest folders **23** · XP+IE6 |
 | **2008** | **DONE** · live dense · GitHub issue `itt08-github` · dest-true official 10 · dest folders **597** (lock 199 / 598 are stale) · XP+IE7 |
 | **2009** | **Boarded** · tree stays · year-shell is a plaque (not a hub redirect) · `/pages/home.html` redirects to the plaque · Facebook Like dests still on disk |
-| **2010** | Live lean · Instagram iOS · leftover 2× + leftover 4× on every dest |
-| **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · leftover 2× every dest · leftover-3× **18+18+18** · leftover-4× **0** |
-| **2012** | Live lean · IG Android · leftover 9+9+9 dest-true · leftover 4× **0** |
+| **2010** | Live lean · Instagram iOS · dest-lock official 10 + leftover-3× dests · dest folders **22** |
+| **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover-3× dests · dest folders **31** · leftover-4× **0** |
+| **2012** | Live lean · IG Android · dest-lock official 10 + leftover-3× dests · dest folders **24** · leftover 4× **0** |
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
-| **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · leftover 2× + leftover 4× on every dest · leftover 6× dests · Win7 + IE 9 |
-| **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · leftover 2× every dest · Win7 residual + Chrome habit |
-| **2016** | Live lean door · IG Stories · leftover 9+9+9 dest-true · leftover 4× **0** |
-| **2017** | Live lean door · Face ID · leftover 9+9+9 dest-true · leftover 4× **0** |
+| **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover-3× dests · dest folders **17** · Win7 + IE 9 |
+| **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · dest-lock official 10 + leftover-3× dests · dest folders **26** · Win7 residual + Chrome habit |
+| **2016** | Live lean door · IG Stories · dest-lock official 10 + leftover-3× dests + Dyn leftover · dest folders **21** · leftover 4× **0** |
+| **2017** | Live lean door · Face ID · dest-lock 30 unique + leftover-3× dests · dest folders **40** · leftover 4× **0** |
 | **2018** | **Live lean door** · GDPR Manage `itt18-gdpr` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
-| **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · dest folders **165** · leftover-312 is a stale clone-bar · leftover 4× **0** · leftover 2× on every dest index including `sites/fortnite/index.html` (`fn-lx` · `fn-d2`) |
+| **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · dest-lock official 10 + leftover-3× dests · dest folders **19** · leftover 4× **0** |
 | **2020** | **Wiped** · no tree · no year card · no atlas tick |
-| **2021** | **Live lean door** · ATT Ask `itt21-att` · dest folders **294** (freeze 98 / HTML cap 184 are stale) · leftover-4× **0** · Win10 + Chrome habit |
+| **2021** | **Live lean door** · ATT Ask `itt21-att` · dest-lock official 10 + leftover-3× dests · dest folders **15** · leftover-4× **0** · Win10 + Chrome habit |
 | **2022** | **Live lean door** · ChatGPT Send `itt22-chatgpt` · dest folders **85** · leftover-4× **0** · Win10 + Chrome habit |
 | **2023–2025** | **Wiped** · no tree · no year card · no atlas tick |
 
-Lean doors: **2007 + 2011 + 2013–2019 + 2021–2022**. **2009 boarded.** **2020 wiped.** **2023–2025 wiped.**  
+Lean doors: **2007 + 2010–2012 + 2013–2019 + 2021–2022**. Dest-lock applied 2026-09-15 on 2007/2010–2012/2014–2017/2019/2021 (official 10 + leftover-3× dests; 2017 also keeps unique 30). **2013 / 2018 / 2022** already lean. **2009 boarded.** **2020 wiped.** **2023–2025 wiped.** Forests 1994–2006 + 2008 stay dense.  
 Games wing (`games/`) is separate and live.
 
 Rebuild a wiped year only when named. Do not `git checkout` an old forest. Live tree + this file win. Stale implement notebooks were removed.

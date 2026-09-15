@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Star is Periscope Go LIVE `itt15-periscope`. Hub card open. Do not `git checkout` the wiped forest.  
-**Disk truth:** Hub is **27 years open** · **2009 boarded** · **2022 wiped**. 2013 Vine and 2018 GDPR are live lean doors.  
+**Disk truth:** Hub is **27 years open** · **2009 boarded** · **2020 wiped** · **2022 ChatGPT live**. 2013 Vine and 2018 GDPR are live lean doors.  
 **Prefix:** `itt15`  
 **Clone shape from:** live `years/2014/` (lean door). **Do not** restore `/tmp` or git leftovers.
 

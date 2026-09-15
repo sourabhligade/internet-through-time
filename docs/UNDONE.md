@@ -6,7 +6,7 @@
 **Out of scope:** wiped years (`years/2020`, `years/2023`–`years/2025`). Do not treat “restore 2020 / add 2023+” as leftover.
 
 Ship law: [`DISK-TRUTH.md`](DISK-TRUTH.md).  
-Plans audited: [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) · [`2017-2X-REALITY.md`](2017-2X-REALITY.md).
+Plans audited: [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md).
 
 Verified on disk this pass: official-10 leftover-panel counts, leftover dest `data-uf17-*` verbs, leftover-official missing dests = 0, 2017 dest-folder count, GitHub issues, last e2e numbers.
 
@@ -260,7 +260,7 @@ Closed: **#6** docs vs disk · **#7** matrix 404s.
 1. ~~Scorecard + Storm Circle New Game empty e2e + official leftover strip 2016/2018–2021 + Slice 0 flip.~~ **Done.**
 2. ~~Re-run `e2e/year-3x3-all.spec.js` museum-wide (221 fails may drop after reveal/skip).~~ **Done 2026-09-14.** 5 passed · 211 skipped · 0 failed (official dest leftover-3× gold-only). Leftover dest leftover-3× dest face shipped (`leftover-official.js` + `itt-leftover-fold.css` + `e2e/leftover-dest-3x-face.spec.js`).
 3. ~~leftover dest-true **empty never writes** on dest-farm dests — `#8`.~~ **Engine guard shipped** (`leftover-official.js`: no field/pick/req/wait → never writes).
-4. Dest-farm **lock** (`#9` / Phase H) — only if lean doors are the product.
+4. Dest-farm **lock** (`#9` / Phase H) — **done 2026-09-15** for lean years 2007/2010–2012/2014–2017/2019/2021. Forests stay.
 5. Unique leftover dest maps for **2013 / 2014 / 2015 / 2018–2021** (none exist).
 6. ~~Follow-a-site year-shell control (PRODUCT-IMPROVE Slice 4).~~ **Done** (`js/config/follow-site.js` + exit-bar control + hub/atlas trails).
 7. 18 leftover dest **cites** — left **failed-final on purpose**.

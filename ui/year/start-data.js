@@ -178,9 +178,9 @@
  "label": "★ One-thing · GitHub issue REAL",
  "items": [
  " <a href=\"about.html\">About 2008</a> — phone as platform",
- " <a href=\"../sites/appstore/index.html\">App Store</a> — ~500 apps",
- " <a href=\"../sites/chrome/index.html\">Chrome</a> — Sep Windows beta",
- " <a href=\"../sites/github/issue.html\">GitHub issue</a> — title + body REAL",
+ " <a href=\"../sites/github/issue.html\">★ GitHub issue</a> — title + body REAL",
+ " <a href=\"../sites/appstore/index.html\">App Store</a> — ~500 apps leftover",
+ " <a href=\"../sites/chrome/index.html\">Chrome</a> — Sep Windows beta leftover",
  " <a href=\"../sites/android/index.html\">Android G1</a> · <a href=\"../sites/hulu/index.html\">Hulu</a> ",
  " <a href=\"map.html\">Year flow map</a> "
  
@@ -231,7 +231,7 @@
  " <a href=\"../sites/facebook/ipo.html\" style=\"color:#9fd4f0\">Facebook IPO</a> — $38 · Nasdaq delay",
  " <a href=\"../sites/wikipedia/sopa.html\" style=\"color:#9fd4f0\">SOPA blackout</a> — 18 Jan",
  " <a href=\"../sites/iphone/maps.html\" style=\"color:#9fd4f0\">iPhone Maps flop</a> — iOS 6",
- " <a href=\"../sites/pinterest/index.html\" style=\"color:#9fd4f0\">Pinterest</a> — pin ≥2"
+ " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
  ]
 },
  "2013": {

@@ -39,7 +39,7 @@
     "test:e2e:2002": "playwright test e2e/2002-mvp.spec.js e2e/2002-flows.spec.js e2e/2002-densify.spec.js e2e/2002-trail-real-flows.spec.js --workers=1",
     "test:e2e:2015": "playwright test e2e/2015-mvp.spec.js e2e/2015-flows.spec.js e2e/2015-densify.spec.js e2e/2015-trail-real-flows.spec.js --workers=1",
     "test:e2e:2015-2020-3x": "playwright test e2e/2015-2020-3x-cut.spec.js --workers=1",
-    "test:e2e:2015-2020-3x-2x": "playwright test e2e/2015-2020-3x-2x-cut.spec.js --workers=2",
+
     "test:e2e:2005-2010-3x-2x": "playwright test e2e/2005-2010-3x-2x-cut.spec.js --workers=2",
     "test:e2e:2005-2010-every-leftover": "playwright test e2e/2005-2010-every-leftover-flow.spec.js --workers=1",
     "test:e2e:2016": "playwright test e2e/2016-mvp.spec.js e2e/2016-flows.spec.js e2e/2016-densify.spec.js e2e/2016-trail-real-flows.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/one-thing-per-year.spec.js --grep 2016 --workers=1",

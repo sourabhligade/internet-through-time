@@ -487,14 +487,6 @@
       "star": "sites/instagram/index.html",
       "flows": [
         {
-          "suffix": "ask",
-          "room": "sites/ask/index.html",
-          "next": "sites/facebook/index.html",
-          "key": "itt10-ask",
-          "ok": true,
-          "checks": 2
-        },
-        {
           "suffix": "facebook",
           "room": "sites/facebook/index.html",
           "next": "sites/youtube/index.html",
