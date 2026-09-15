@@ -89,3 +89,63 @@ test("2021 unique leftover-3×n stops at 5 leftover dests", () => {
   const rows = ROWS.filter((r) => r.year === "2021");
   expect(rows).toHaveLength(5);
 });
+
+test("2020 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
+  const rows = ROWS.filter((r) => r.year === "2020");
+  expect(rows.map((r) => r.id)).toEqual([
+    "amazon",
+    "facebook",
+    "google",
+    "instagram",
+    "youtube",
+    "slack",
+    "reddit",
+    "wikipedia",
+    "nyt",
+  ]);
+  const official = new Set([
+    "zoom",
+    "houseparty",
+    "discord",
+    "teams",
+    "classroom",
+    "netflix",
+    "tiktok",
+    "amongus",
+    "animalcrossing",
+    "playable",
+  ]);
+  for (const r of rows) {
+    expect(official.has(r.id), r.id + " must not be official dest").toBe(false);
+  }
+});
+
+test("2022 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
+  const rows = ROWS.filter((r) => r.year === "2022");
+  expect(rows.map((r) => r.id)).toEqual([
+    "amazon",
+    "google",
+    "instagram",
+    "facebook",
+    "youtube",
+    "reddit",
+    "wikipedia",
+    "netflix",
+    "nyt",
+  ]);
+  const official = new Set([
+    "chatgpt",
+    "wordle",
+    "twitter",
+    "bereal",
+    "iphone",
+    "ftx",
+    "mastodon",
+    "tiktok",
+    "windows11",
+    "playable",
+  ]);
+  for (const r of rows) {
+    expect(official.has(r.id), r.id + " must not be official dest").toBe(false);
+  }
+});

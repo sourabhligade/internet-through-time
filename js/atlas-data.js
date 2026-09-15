@@ -1,14 +1,14 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2011 / 2013–2019 + 2021–2022 lean doors live. 2009 boarded. 2020 wiped. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
+ * 2007 / 2011 / 2013–2022 lean doors live. 2009 boarded. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
@@ -20,13 +20,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2008", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Disney+, Meta rename, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"] }
     ],
 
     leanYears: [
-      "2007",
-      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2021", "2022",
-      "2011"
+      "2007", "2010", "2011", "2012",
+      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -56,6 +55,7 @@
       "2017": "Look to unlock. Fortnite is.",
       "2018": "Accept All never writes. Reels are not this year.",
       "2019": "GDPR is 2018 gold. Zoom Leave is 2020. Reels are not this year.",
+      "2020": "Disney+ Continue is 2019. ATT Ask is 2021. ChatGPT is 2022. No case-count dashboard.",
 
       "2021": "Apps keep their names. Win11 is leftover. ChatGPT is 2022.",
       "2022": "Send writes. GPT-4 / X / Threads are not this year."},
@@ -441,6 +441,17 @@
           { label: "Stadia Founder's", href: "years/2019/sites/stadia/index.html" }
         ],
         game: { label: "Continue Row", href: "years/2019/sites/playable/game.html" }
+      },
+      "2020": {
+        era: "Leave meeting",
+        thesis: "The meeting is the room. Mute, then chat, then Leave. Empty never writes.",
+        gold: { label: "Zoom Leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
+        guided: [
+          { label: "Houseparty leftover", href: "years/2020/sites/houseparty/index.html" },
+          { label: "Classroom leftover", href: "years/2020/sites/classroom/index.html" },
+          { label: "Among Us leftover", href: "years/2020/sites/amongus/index.html" }
+        ],
+        game: { label: "Year game leftover", href: "years/2020/sites/playable/game.html" }
       },
 
       "2021": {

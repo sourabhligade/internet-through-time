@@ -27,16 +27,24 @@ body.year-2021 .itt-year-chip { color:#1565c0; }
   margin: 0 0 8px;
 }
 .att21-alert p { font-size: 12px; color: #ccc; }
-.att21-alert [data-official-trap] {
+.att21-alert [data-official-trap],
+.att21-alert [data-official-verb] {
   display: block;
   width: 100%;
-  margin: 10px 0 6px;
-  padding: 10px;
+  margin: 8px 0 0;
+  padding: 11px;
   border: 0;
   border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.att21-alert [data-official-trap] {
   background: #0a84ff;
   color: #fff;
-  font-weight: bold;
+}
+.att21-alert [data-official-verb] {
+  background: #3a3a3c;
+  color: #0a84ff;
 }
 .att21-alert [data-official-verb] {
   display: block;

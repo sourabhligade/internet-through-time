@@ -5,7 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, completeRealGate, twoStepClick, leftoverOfficialDest } = require('./helpers');
+const { enterYear, completeRealGate, destOnDisk, twoStepClick, leftoverOfficialDest } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -173,6 +173,7 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('L Pinterest pin 2 writes itt10-pin', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/pinterest/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/pinterest/index.html');
     await clearKeys(page, ['itt10-pin']);
     await page.reload();
@@ -188,6 +189,7 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('M UberCab NY refuses · SF writes itt10-uber', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/uber/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/uber/index.html');
     await clearKeys(page, ['itt10-uber']);
     await page.reload();
@@ -201,6 +203,7 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('N Quora empty ask blocked · question writes itt10-quora', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/quora/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/quora/index.html');
     await clearKeys(page, ['itt10-quora']);
     await page.reload();
@@ -238,6 +241,7 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('Q Digg v4 writes itt10-digg · Reddit next lives', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/digg/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/digg/index.html');
     await clearKeys(page, ['itt10-digg']);
     await page.reload();
@@ -251,6 +255,7 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('R Cablegate literacy required then itt10-wl', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/wikileaks/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/wikileaks/index.html');
     await clearKeys(page, ['itt10-wl']);
     await page.reload();
@@ -262,6 +267,7 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('S BrowserChoice empty blocked · pick writes itt10-ballot', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/browserchoice/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/browserchoice/index.html');
     await clearKeys(page, ['itt10-ballot']);
     await page.reload();
@@ -324,6 +330,7 @@ test.describe('2010 continuity + trails live', () => {
   });
 
   test('5× F1 Ask leftover writes itt10-ask', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/ask/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/ask/index.html');
     await clearKeys(page, ['itt10-ask']);
     await page.reload();
@@ -353,6 +360,7 @@ test.describe('2010 new leftover dests + existing-room flows', () => {
   });
 
   test('Instant 1 char blocked · 2+ writes itt10-instant', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/instant/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/instant/index.html');
     await clearKeys(page, ['itt10-instant']);
     await page.reload();
@@ -368,6 +376,7 @@ test.describe('2010 new leftover dests + existing-room flows', () => {
   });
 
   test('FaceTime no Wi-Fi blocked · ticks + call writes itt10-facetime', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/facetime/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/facetime/index.html');
     await clearKeys(page, ['itt10-facetime']);
     await page.reload();

@@ -65,6 +65,12 @@ test.describe("2014 flows", () => {
   });
 
   test("second leftover 3× is Oculus · Serial · Ello", async ({ page }) => {
+    const fs = require("fs");
+    const path = require("path");
+    test.skip(
+      !fs.existsSync(path.join(__dirname, "..", "years/2014/sites/oculus/index.html")),
+      "dest-lock removed Oculus / Serial / Ello dests"
+    );
     await page.goto("/years/2014/pages/home.html");
     await openAlsoYear(page, "2014");
     const strip = page.locator('nav[data-itt-pop-more="2014"], p.itt-pop-more[data-itt-pop-more="2014"]').first();

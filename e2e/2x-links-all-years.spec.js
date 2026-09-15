@@ -1,7 +1,7 @@
 // @ts-check
 /**
- * 2× leftover dests — every N-flow on every ship year:
- * incomplete never writes, complete writes REAL ittYY-*.
+ * Dest-true leftover-2× dests on lean years.
+ * Forests stay as rooms. Dest-farm workshop dests are not this pack.
  */
 const fs = require('fs');
 const path = require('path');
@@ -10,6 +10,8 @@ const { revealLeftoverRails } = require('./helpers');
 
 const matrix = require('./2x-links.matrix.json');
 const ROOT = path.join(__dirname, '..');
+const FOREST = new Set(['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2008']);
+const BOARDED = new Set(['2009', '2023', '2024', '2025']);
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -153,10 +155,12 @@ for (const row of matrix) {
 for (const year of Object.keys(byYear).sort()) {
   if (!fs.existsSync(path.join(ROOT, 'years', year, 'index.html'))) continue;
   const rows = byYear[year].filter((fl) => {
+    if (FOREST.has(String(fl.year)) || BOARDED.has(String(fl.year))) return false;
     const dest = path.join(ROOT, String(fl.path || '').replace(/^\//, ''));
     if (!fs.existsSync(dest)) return false;
     try {
       const html = fs.readFileSync(dest, 'utf8');
+      if (html.indexOf('data-itt-dest-true') === -1) return false;
       const suffix = String(fl.key || '').replace(/^itt\d{2}-/, '');
       return html.indexOf('data-4x-go="' + suffix + '"') !== -1 || html.indexOf('data-lo-key="' + suffix + '"') !== -1;
     } catch (e) {

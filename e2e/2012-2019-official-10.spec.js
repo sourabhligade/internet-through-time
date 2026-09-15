@@ -3,7 +3,7 @@
  * 2012–2019 official 10 dest-true.
  * Gold dests: dest-specific incomplete never writes, complete writes star.
  * Official leftover: leftover-official dest-true · leftover never writes star.
- * Guided stays 6. 2011 / 2020 boarded.
+ * Guided stays 6. 2011 live. 2020 Zoom Leave live.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
@@ -165,7 +165,7 @@ test.describe("wiped years stay boarded", () => {
     const fs = require("fs");
     const path = require("path");
     const root = path.join(__dirname, "..");
-    for (const y of ["2020", "2023", "2024", "2025"]) {
+    for (const y of ["2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
     expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(true);

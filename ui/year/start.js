@@ -47,14 +47,15 @@
       "html[data-itt-year=\"2015\"] body.itt-start-page,html[data-itt-year=\"2016\"] body.itt-start-page," +
       "html[data-itt-year=\"2017\"] body.itt-start-page,html[data-itt-year=\"2018\"] body.itt-start-page," +
       "html[data-itt-year=\"2019\"] body.itt-start-page,html[data-itt-year=\"2020\"] body.itt-start-page," +
-      "html[data-itt-year=\"2021\"] body.itt-start-page{background:#f3f3f3!important;color:#111!important}" +
+      "html[data-itt-year=\"2021\"] body.itt-start-page,html[data-itt-year=\"2022\"] body.itt-start-page{background:#f3f3f3!important;color:#111!important}" +
       "html[data-itt-year=\"2015\"] .ott-guided,html[data-itt-year=\"2015\"] .ott-flows," +
       "html[data-itt-year=\"2016\"] .ott-guided,html[data-itt-year=\"2016\"] .ott-flows," +
       "html[data-itt-year=\"2017\"] .ott-guided,html[data-itt-year=\"2017\"] .ott-flows," +
       "html[data-itt-year=\"2018\"] .ott-guided,html[data-itt-year=\"2018\"] .ott-flows," +
       "html[data-itt-year=\"2019\"] .ott-guided,html[data-itt-year=\"2019\"] .ott-flows," +
       "html[data-itt-year=\"2020\"] .ott-guided,html[data-itt-year=\"2020\"] .ott-flows," +
-      "html[data-itt-year=\"2021\"] .ott-guided,html[data-itt-year=\"2021\"] .ott-flows{" +
+      "html[data-itt-year=\"2021\"] .ott-guided,html[data-itt-year=\"2021\"] .ott-flows," +
+      "html[data-itt-year=\"2022\"] .ott-guided,html[data-itt-year=\"2022\"] .ott-flows{" +
       "background:#fff!important;color:#111!important}" +
       "#itt-year-start,.ott-guided,.ott-flows,.itt-layer-assess,#itt-first-night-bar," +
       ".itt-also-year,.itt-home-more{width:100%!important;max-width:none!important;" +

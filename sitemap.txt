@@ -77,6 +77,10 @@
 /years/2019/pages/home.html
 /years/2019/pages/about.html
 /years/2019/sites/disneyplus/home.html
+/years/2020/
+/years/2020/pages/home.html
+/years/2020/pages/about.html
+/years/2020/sites/zoom/meeting.html
 /years/2018/sites/gdpr/index.html
 /years/1994/sites/goodtimes/index.html
 /years/1994/sites/goodtimes/about.html

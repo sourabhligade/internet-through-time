@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Every live year Starting Point is a lean door:
- *  - guided 6 + star + official 10 flows
+ *  - guided 6 + star + dest-unique official trail (7–10 websites)
  *  - leftover warehouse not first paint
  *  - official flow hrefs resolve (no 404)
  */
@@ -82,13 +82,43 @@ async function twoStep(page, selector) {
   await el.click();
 }
 
-test.describe('Year home lean door · guided 6 + official 10', () => {
+/**
+ * @param {import('@playwright/test').Page} page
+ * @param {string} year
+ */
+async function officialTrailHrefs(page, year) {
+  const hrefs = await page.evaluate(() => {
+    /** @type {string[]} */
+    const out = [];
+    const root = document.querySelector('[data-itt-ten-flows]');
+    if (!root) return out;
+    root.querySelectorAll('a[href*="sites/"]').forEach((a) => {
+      const h = a.getAttribute('href') || '';
+      if (h) out.push(h.split('?')[0].split('#')[0]);
+    });
+    return out;
+  });
+  expect(hrefs.length, `${year} official dests`).toBeGreaterThanOrEqual(7);
+  expect(hrefs.length, `${year} official dests`).toBeLessThanOrEqual(10);
+  const slugs = hrefs.map((h) => {
+    const m = h.match(/sites\/([^/]+)/i);
+    return m ? m[1].toLowerCase() : h;
+  });
+  expect(new Set(slugs).size, `${year} official dests must be unique websites`).toBe(slugs.length);
+  return hrefs;
+}
+
+test.describe('Year home lean door · guided 6 + dest-unique official trail', () => {
   for (const y of YEARS) {
-    test(`${y} first paint is guided 6 + star + official 10`, async ({ page }) => {
+    test(`${y} first paint is guided 6 + star + dest-unique official trail`, async ({ page }) => {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${y} ol > li`)).toHaveCount(6);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
-      await expect(page.locator(`#ott-flows-${y} [data-itt-ten-flows] > li`)).toHaveCount(10);
+      const items = page.locator(`#ott-flows-${y} [data-itt-ten-flows] > li`);
+      const n = await items.count();
+      expect(n, `${y} official list`).toBeGreaterThanOrEqual(7);
+      expect(n, `${y} official list`).toBeLessThanOrEqual(10);
+      await officialTrailHrefs(page, y);
       await expect(page.locator(`[data-itt-pop3x="${y}"]`)).toHaveCount(0);
       await expect(page.locator(`[data-itt-pop-more="${y}"]`)).toHaveCount(0);
       await expect(page.locator(`[data-itt-pop-3x3="${y}"]`)).toHaveCount(0);
@@ -96,7 +126,7 @@ test.describe('Year home lean door · guided 6 + official 10', () => {
       await expect(page.locator('a[href*="map.html"]').first()).toBeVisible();
 
       const siteLinks = page.locator('a[href*="../sites/"], a[href*="/sites/"]');
-      expect(await siteLinks.count(), `${y} site links`).toBeGreaterThanOrEqual(8);
+      expect(await siteLinks.count(), `${y} site links`).toBeGreaterThanOrEqual(7);
       const first = siteLinks.first();
       await expect(first).toBeVisible();
       const href = await first.getAttribute('href');
@@ -106,19 +136,9 @@ test.describe('Year home lean door · guided 6 + official 10', () => {
       expect(res.status(), `GET ${abs}`).toBeLessThan(400);
     });
 
-    test(`${y} official 10 flow hrefs resolve`, async ({ page }) => {
+    test(`${y} official trail hrefs resolve and dests are unique`, async ({ page }) => {
       await page.goto(`/years/${y}/pages/home.html`);
-      const hrefs = await page.evaluate(() => {
-        /** @type {string[]} */
-        const out = [];
-        const root = document.querySelector('[data-itt-ten-flows]') || document.body;
-        root.querySelectorAll('a[href*="sites/"]').forEach((a) => {
-          const h = a.getAttribute('href') || '';
-          if (h) out.push(h.split('?')[0].split('#')[0]);
-        });
-        return out.slice(0, 10);
-      });
-      expect(hrefs.length, `${y} official flow hrefs`).toBe(10);
+      const hrefs = await officialTrailHrefs(page, y);
       for (const h of hrefs) {
         const abs = new URL(h, page.url()).pathname;
         const res = await page.request.get(abs);

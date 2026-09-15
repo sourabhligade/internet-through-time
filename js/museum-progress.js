@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -193,6 +193,9 @@
     "2019": yearVisitTour("2019",
       { path: "sites/disneyplus/home.html", label: "Disney+ Continue", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
       { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
+    "2020": yearVisitTour("2020",
+      { path: "sites/zoom/meeting.html", label: "Zoom Leave", blurb: "Stay / empty never writes. Leave does.", match: "/zoom/" },
+      { path: "sites/houseparty/index.html", label: "Houseparty leftover", blurb: "Not Zoom gold.", match: "/houseparty/" }),
 
     "2021": yearVisitTour("2021",
       { path: "sites/att/index.html", label: "ATT Ask", blurb: "Star. Allow never writes.", match: "/att/" },

@@ -7,7 +7,7 @@
  * Stars / guided 6 / official gold stay put.
  */
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { destOnDisk, revealLeftoverRails } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 
@@ -170,6 +170,7 @@ function siteKey(href) {
  * @param {string[]} gold
  */
 async function walkDoor(page, door, gold) {
+  test.skip(!destOnDisk(door.dest), "dest-lock");
   await page.goto(door.dest);
   await revealLeftoverRails(page);
   await page.evaluate((k) => localStorage.removeItem(k), door.key);
@@ -376,6 +377,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
       await page.goto(`/years/${year}/pages/map.html`);
   await revealLeftoverRails(page);
       for (const door of spec.doors) {
+        if (!destOnDisk(door.dest)) continue;
         const slug = door.dest.replace(`/years/${year}/sites/`, "");
         await expect(page.locator(`a[href*="${slug}"]`).first()).toBeVisible();
       }

@@ -1,4 +1,8 @@
-@import url("period-2017.css");
+/**
+ * 2018 period sheet. Does not import 2017 → 1995 navy / XP.
+ * Year shell 2018–2021 share the Chrome-habit hide-list (2022 has its own sheet).
+ * No official Chrome / Edge / brand pixels.
+ */
 
 .archive-residual[data-itt-capture-cite] {
   margin: 14px auto;
@@ -29,31 +33,33 @@
   bottom: 0;
   z-index: 4;
   margin: 0;
-  padding: 16px 20px 18px;
-  background: #1a1a1a;
-  color: #f5f5f7;
+  padding: 14px 20px 16px;
+  background: #fff;
+  color: #202124;
+  border-top: 1px solid #dadce0;
   border-radius: 0;
-  font-family: Segoe UI, Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 13px;
-  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
 }
 .gdpr18-accept {
-  background: #1565c0;
+  background: #1a73e8;
   color: #fff;
   border: 0;
   padding: 10px 18px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 .gdpr18-manage {
   display: inline-block;
   margin-left: 10px;
   padding: 8px 12px;
-  border: 1px solid #888;
-  color: #ccc;
+  border: 1px solid #dadce0;
+  background: #fff;
+  color: #1967d2;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
 }
 .o18-stage {
   max-width: 420px;
@@ -116,6 +122,400 @@
   border: 1px solid #333;
 }
 .fyp18-rail button.is-on { outline: 2px solid #fe2c55; }
-.year-2018.os-win10 {
+.year-2018.os-win10,
+.year-2019.os-win10,
+.year-2021.os-win10 {
   --itt-desktop-bg: #0078d7;
+}
+
+/* Chrome-habit year shell — hide leftover IE File/Edit / throbber / Go (same family as 2022). */
+.year-2018 #menubar,
+.year-2018 .menubar,
+.year-2018 #desktop-icons,
+.year-2018 .desktop-icons,
+.year-2018 #btn-search,
+.year-2018 #btn-favorites,
+.year-2018 #btn-history,
+.year-2018 #btn-mail,
+.year-2018 #btn-stop,
+.year-2018 #throbber,
+.year-2018 .toolbar .separator,
+.year-2018 .toolbar .btn-label,
+.year-2018 .toolbar img,
+.year-2018 .titlebar .icon,
+.year-2018 .locationbar label,
+.year-2018 #btn-go,
+.year-2018 .statusbar,
+.year-2019 #menubar,
+.year-2019 .menubar,
+.year-2019 #desktop-icons,
+.year-2019 .desktop-icons,
+.year-2019 #btn-search,
+.year-2019 #btn-favorites,
+.year-2019 #btn-history,
+.year-2019 #btn-mail,
+.year-2019 #btn-stop,
+.year-2019 #throbber,
+.year-2019 .toolbar .separator,
+.year-2019 .toolbar .btn-label,
+.year-2019 .toolbar img,
+.year-2019 .titlebar .icon,
+.year-2019 .locationbar label,
+.year-2019 #btn-go,
+.year-2019 .statusbar,
+.year-2021 #menubar,
+.year-2021 .menubar,
+.year-2021 #desktop-icons,
+.year-2021 .desktop-icons,
+.year-2021 #btn-search,
+.year-2021 #btn-favorites,
+.year-2021 #btn-history,
+.year-2021 #btn-mail,
+.year-2021 #btn-stop,
+.year-2021 #throbber,
+.year-2021 .toolbar .separator,
+.year-2021 .toolbar .btn-label,
+.year-2021 .toolbar img,
+.year-2021 .titlebar .icon,
+.year-2021 .locationbar label,
+.year-2021 #btn-go,
+.year-2021 .statusbar {
+  display: none !important;
+}
+
+.year-2018 .browser,
+.year-2018 .browser.maximized,
+.year-2019 .browser,
+.year-2019 .browser.maximized,
+.year-2021 .browser,
+.year-2021 .browser.maximized {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #dee1e6;
+}
+
+.year-2018 .titlebar,
+.year-2019 .titlebar,
+.year-2021 .titlebar {
+  background: #dee1e6 !important;
+  color: #202124 !important;
+  min-height: 36px;
+  border: 0;
+  padding: 6px 8px 0;
+}
+.year-2018 .titlebar .title,
+.year-2019 .titlebar .title,
+.year-2021 .titlebar .title {
+  display: inline-block;
+  background: #fff;
+  color: #202124;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 18px 7px;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+}
+.year-2018 .win-btn,
+.year-2019 .win-btn,
+.year-2021 .win-btn {
+  background: transparent;
+  border: 0;
+  color: #5f6368;
+}
+
+.year-2018 #browser > .toolbar,
+.year-2018 .browser > .toolbar,
+.year-2018 .titlebar + .toolbar,
+.year-2019 #browser > .toolbar,
+.year-2019 .browser > .toolbar,
+.year-2019 .titlebar + .toolbar,
+.year-2021 #browser > .toolbar,
+.year-2021 .browser > .toolbar,
+.year-2021 .titlebar + .toolbar {
+  display: none !important;
+}
+
+.year-2018 .locationbar.chrome22-omni,
+.year-2019 .locationbar.chrome22-omni,
+.year-2021 .locationbar.chrome22-omni {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 0;
+  padding: 6px 12px 8px;
+}
+.year-2018 .toolbar.chrome22-bar,
+.year-2019 .toolbar.chrome22-bar,
+.year-2021 .toolbar.chrome22-bar {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+.year-2018 .chrome22-nav,
+.year-2019 .chrome22-nav,
+.year-2021 .chrome22-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: #5f6368;
+  font-size: 16px;
+}
+.year-2018 .chrome22-nav:hover,
+.year-2019 .chrome22-nav:hover,
+.year-2021 .chrome22-nav:hover {
+  background: #f1f3f4;
+}
+.year-2018 #location,
+.year-2019 #location,
+.year-2021 #location {
+  flex: 1 1 auto;
+  min-width: 0;
+  background: #f1f3f4;
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+}
+.year-2018 .dirbar,
+.year-2019 .dirbar,
+.year-2021 .dirbar {
+  background: #fff;
+  border: 0;
+  padding: 0 12px 8px;
+}
+.year-2018 .dirbar .dir-btn,
+.year-2018 .dirbar a,
+.year-2018 .dirbar button,
+.year-2019 .dirbar .dir-btn,
+.year-2019 .dirbar a,
+.year-2019 .dirbar button,
+.year-2021 .dirbar .dir-btn,
+.year-2021 .dirbar a,
+.year-2021 .dirbar button {
+  background: #f1f3f4;
+  border: 0;
+  border-radius: 16px;
+  color: #202124;
+}
+.year-2018 .exit-bar,
+.year-2018 #exit-bar,
+.year-2019 .exit-bar,
+.year-2019 #exit-bar,
+.year-2021 .exit-bar,
+.year-2021 #exit-bar {
+  background: #202124 !important;
+  color: #e8eaed !important;
+  border: 0 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+.year-2018 .exit-bar a,
+.year-2019 .exit-bar a,
+.year-2021 .exit-bar a {
+  color: #8ab4f8 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Dest pages: kill 1995 navy wayfind / exhibit nav. Restyle, do not invent brand chrome. */
+html[data-itt-year="2018"] #itt-exhibit-nav,
+html[data-itt-year="2018"] #itt-exhibit-nav table,
+html[data-itt-year="2018"] #itt-exhibit-nav td,
+html[data-itt-year="2019"] #itt-exhibit-nav,
+html[data-itt-year="2019"] #itt-exhibit-nav table,
+html[data-itt-year="2019"] #itt-exhibit-nav td,
+html[data-itt-year="2021"] #itt-exhibit-nav,
+html[data-itt-year="2021"] #itt-exhibit-nav table,
+html[data-itt-year="2021"] #itt-exhibit-nav td {
+  background: #fff !important;
+  color: #202124 !important;
+  border: 0 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav,
+html[data-itt-year="2019"] #itt-exhibit-nav,
+html[data-itt-year="2021"] #itt-exhibit-nav {
+  border-bottom: 1px solid #dadce0 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav font,
+html[data-itt-year="2019"] #itt-exhibit-nav font,
+html[data-itt-year="2021"] #itt-exhibit-nav font {
+  color: #202124 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav a,
+html[data-itt-year="2019"] #itt-exhibit-nav a,
+html[data-itt-year="2021"] #itt-exhibit-nav a {
+  color: #1967d2 !important;
+}
+html[data-itt-year="2018"] #itt-wayfind,
+html[data-itt-year="2019"] #itt-wayfind,
+html[data-itt-year="2021"] #itt-wayfind {
+  background: #fff !important;
+  border-top: 1px solid #dadce0 !important;
+  color: #202124 !important;
+}
+html[data-itt-year="2018"] #itt-wayfind a,
+html[data-itt-year="2019"] #itt-wayfind a,
+html[data-itt-year="2021"] #itt-wayfind a {
+  color: #1967d2 !important;
+  background: transparent !important;
+  border: 0 !important;
+  font-weight: 600 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-foot,
+html[data-itt-year="2018"] #itt-exhibit-foot font,
+html[data-itt-year="2019"] #itt-exhibit-foot,
+html[data-itt-year="2019"] #itt-exhibit-foot font,
+html[data-itt-year="2021"] #itt-exhibit-foot,
+html[data-itt-year="2021"] #itt-exhibit-foot font {
+  color: #5f6368 !important;
+}
+
+html[data-itt-year="2018"][data-itt-layer-band] #itt-wayfind,
+html[data-itt-year="2019"][data-itt-layer-band] #itt-wayfind,
+html[data-itt-year="2021"][data-itt-layer-band] #itt-wayfind,
+html[data-itt-year="2018"] body.has-itt-wayfind #itt-wayfind,
+html[data-itt-year="2019"] body.has-itt-wayfind #itt-wayfind,
+html[data-itt-year="2021"] body.has-itt-wayfind #itt-wayfind {
+  background: #fff !important;
+  color: #202124 !important;
+  border-top: 1px solid #dadce0 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+html[data-itt-year="2018"][data-itt-layer-band] #itt-wayfind a,
+html[data-itt-year="2019"][data-itt-layer-band] #itt-wayfind a,
+html[data-itt-year="2021"][data-itt-layer-band] #itt-wayfind a,
+html[data-itt-year="2018"][data-itt-layer-band] #itt-wayfind a.itt-wayfind-home,
+html[data-itt-year="2019"][data-itt-layer-band] #itt-wayfind a.itt-wayfind-home,
+html[data-itt-year="2021"][data-itt-layer-band] #itt-wayfind a.itt-wayfind-home {
+  color: #1967d2 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+html[data-itt-year="2018"] .itt-layer-legend,
+html[data-itt-year="2019"] .itt-layer-legend,
+html[data-itt-year="2021"] .itt-layer-legend,
+.year-2018 .itt-layer-legend,
+.year-2019 .itt-layer-legend,
+.year-2021 .itt-layer-legend {
+  background: #fff !important;
+  color: #202124 !important;
+  border-bottom: 1px solid #dadce0 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+html[data-itt-year="2018"] .itt-layer-chip,
+html[data-itt-year="2019"] .itt-layer-chip,
+html[data-itt-year="2021"] .itt-layer-chip,
+.year-2018 .itt-layer-chip,
+.year-2019 .itt-layer-chip,
+.year-2021 .itt-layer-chip {
+  background: #f1f3f4 !important;
+  color: #202124 !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+}
+
+html[data-itt-year="2018"] #itt-ux-shell-coach,
+html[data-itt-year="2018"] .itt-ux-shell-coach,
+.year-2018 #itt-ux-shell-coach,
+.year-2018 .itt-ux-shell-coach,
+.year-2018 #itt-year-ui .itt-ux-shell-coach,
+html[data-itt-year="2019"] #itt-ux-shell-coach,
+html[data-itt-year="2019"] .itt-ux-shell-coach,
+.year-2019 #itt-ux-shell-coach,
+.year-2019 .itt-ux-shell-coach,
+.year-2019 #itt-year-ui .itt-ux-shell-coach,
+html[data-itt-year="2021"] #itt-ux-shell-coach,
+html[data-itt-year="2021"] .itt-ux-shell-coach,
+.year-2021 #itt-ux-shell-coach,
+.year-2021 .itt-ux-shell-coach,
+.year-2021 #itt-year-ui .itt-ux-shell-coach {
+  display: none !important;
+}
+
+html[data-itt-year="2018"] #itt-exhibit-nav,
+html[data-itt-year="2018"] #itt-exhibit-nav table,
+html[data-itt-year="2018"] #itt-exhibit-nav tr,
+html[data-itt-year="2018"] #itt-exhibit-nav td,
+html[data-itt-year="2018"] #itt-exhibit-nav font,
+html[data-itt-year="2019"] #itt-exhibit-nav,
+html[data-itt-year="2019"] #itt-exhibit-nav table,
+html[data-itt-year="2019"] #itt-exhibit-nav tr,
+html[data-itt-year="2019"] #itt-exhibit-nav td,
+html[data-itt-year="2019"] #itt-exhibit-nav font,
+html[data-itt-year="2021"] #itt-exhibit-nav,
+html[data-itt-year="2021"] #itt-exhibit-nav table,
+html[data-itt-year="2021"] #itt-exhibit-nav tr,
+html[data-itt-year="2021"] #itt-exhibit-nav td,
+html[data-itt-year="2021"] #itt-exhibit-nav font {
+  background: #fff !important;
+  color: #202124 !important;
+  border: 0 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav a.itt-nav-home,
+html[data-itt-year="2019"] #itt-exhibit-nav a.itt-nav-home,
+html[data-itt-year="2021"] #itt-exhibit-nav a.itt-nav-home {
+  background: #f1f3f4 !important;
+  color: #202124 !important;
+  border: 0 !important;
+  border-radius: 16px !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav .itt-nav-sub,
+html[data-itt-year="2019"] #itt-exhibit-nav .itt-nav-sub,
+html[data-itt-year="2021"] #itt-exhibit-nav .itt-nav-sub {
+  background: #f8f9fa !important;
+  color: #5f6368 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav .itt-nav-sub a,
+html[data-itt-year="2018"] #itt-exhibit-nav .itt-nav-sub font,
+html[data-itt-year="2019"] #itt-exhibit-nav .itt-nav-sub a,
+html[data-itt-year="2019"] #itt-exhibit-nav .itt-nav-sub font,
+html[data-itt-year="2021"] #itt-exhibit-nav .itt-nav-sub a,
+html[data-itt-year="2021"] #itt-exhibit-nav .itt-nav-sub font {
+  background: transparent !important;
+  color: #5f6368 !important;
+}
+html[data-itt-year="2018"] #itt-exhibit-nav a.itt-nav font,
+html[data-itt-year="2019"] #itt-exhibit-nav a.itt-nav font,
+html[data-itt-year="2021"] #itt-exhibit-nav a.itt-nav font {
+  color: #1967d2 !important;
+}
+
+/* A · 2018 first paint: GDPR + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2018"] .itt-playable-link,
+html[data-itt-year="2018"] .itt-hub-exit,
+html[data-itt-year="2018"] .itt-felt-trail,
+html[data-itt-year="2018"] #itt-year-start-extra,
+html[data-itt-year="2018"] #itt-first-night-bar,
+html[data-itt-year="2018"] .itt-3x-visible,
+html[data-itt-year="2018"] #itt-layer-assess,
+html[data-itt-year="2018"] .itt-layer-assess,
+html[data-itt-year="2018"] .itt-home-more,
+html[data-itt-year="2018"] a[href="?deep=1"] {
+  display: none !important;
+}
+
+html[data-itt-year="2018"] .itt-pixel-failed,
+html[data-itt-year="2018"] .archive-residual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

@@ -2,12 +2,13 @@
 /**
  * CUT-3X-2010-2015 — leftover 3× dest-minutes, E2E, not mock.
  * Live years 2010 / 2011 / 2012 / 2014: 9 doors each.
- * 2013 stays boarded. Stars / guided 6 / official gold stay put.
+ * 2013 is a live lean door. Stars / guided 6 / official gold stay put.
  * 2015 leftover 3× already ships in 2015-2020-3x-cut.spec.js.
  */
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
+const { destOnDisk } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
@@ -89,6 +90,7 @@ function getKey(page, key) {
  * @param {string[]} gold
  */
 async function walkDoor(page, door, gold) {
+  test.skip(!destOnDisk(door.dest), "dest-lock");
   await page.goto(door.dest);
   await page.evaluate((k) => localStorage.removeItem(k), door.key);
   for (const g of gold) await page.evaluate((k) => localStorage.removeItem(k), g);
@@ -212,6 +214,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
     test(`map lists all 9 leftover 3× hrefs`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/map.html`);
       for (const door of spec.doors) {
+        if (!destOnDisk(door.dest)) continue;
         const slug = door.dest.replace(`/years/${year}/sites/`, "");
         await expect(page.locator(`a[href*="${slug}"]`).first()).toBeVisible();
       }

@@ -1529,7 +1529,8 @@
   "title": "Chrome habit — 2018",
   "css": [
     "win95-netscape.css",
-    "chrome-habit.css"
+    "chrome-habit.css",
+    "period-2018.css"
   ],
   "bodyClass": "year-2018 os-win10 browser-chrome-habit",
   "boot": "browser-2018.js",
@@ -1560,8 +1561,8 @@
     }
   ],
   "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
+  "toolbar": "chrome22",
+  "family": "chrome",
   "location": "http://home.microsoft.com/intl/web2018/",
   "prefHome": "http://home.microsoft.com/intl/web2018/",
   "yearLabel": "2018 · Windows 10 mass · Chrome habit · EdgeHTML residual",
@@ -1586,7 +1587,8 @@
   "title": "Chrome habit — 2019",
   "css": [
     "win95-netscape.css",
-    "chrome-habit.css"
+    "chrome-habit.css",
+    "period-2019.css"
   ],
   "bodyClass": "year-2019 os-win10 browser-chrome-habit",
   "boot": "browser-2019.js",
@@ -1617,8 +1619,8 @@
     }
   ],
   "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
+  "toolbar": "chrome22",
+  "family": "chrome",
   "location": "http://home.microsoft.com/intl/web2019/",
   "prefHome": "http://home.microsoft.com/intl/web2019/",
   "yearLabel": "2019 · Windows 10 mass · Chrome habit · EdgeHTML residual",
@@ -1640,11 +1642,52 @@
   "maximized": true
 },
 
+  "2020": {
+  "title": "Chrome habit — 2020",
+  "css": [
+    "win95-netscape.css",
+    "chrome-habit.css",
+    "period-2020.css"
+  ],
+  "bodyClass": "year-2020 os-win10 browser-chrome-habit",
+  "boot": "browser-2020.js",
+  "dir": [
+    { "go": "pages/home.html", "label": "Start" },
+    { "go": "sites/zoom/meeting.html", "label": "1 Zoom" },
+    { "go": "sites/houseparty/index.html", "label": "2 Houseparty" },
+    { "go": "sites/classroom/index.html", "label": "3 Classroom" },
+    { "go": "sites/amongus/index.html", "label": "4 Among Us" },
+    { "go": "pages/about.html", "label": "About" }
+  ],
+  "chrome": "2007",
+  "toolbar": "chrome22",
+  "family": "chrome",
+  "location": "http://home.microsoft.com/intl/web2020/",
+  "prefHome": "http://home.microsoft.com/intl/web2020/",
+  "yearLabel": "2020 · Windows 10 mass · Chrome habit · Zoom Leave",
+  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
+  "connectH2": "Network Connections",
+  "connectBtn": "Connect (always-on broadband)",
+  "skipBtn": "Skip connect",
+  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2020 thesis: the meeting is the room · Stay is the trap · Leave is the save. Zoom Leave · Houseparty leftover · Classroom leftover · Among Us leftover.",
+  "openLoc": "Open Location:",
+  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
+  "startBanner": "Windows<b>10</b>",
+  "taskBtn": "Chrome",
+  "icon": "e",
+  "aria": "Chrome habit",
+  "locLabel": "Address",
+  "bookmarksTitle": "Favorites",
+  "mailPh": "you@example.com",
+  "hasTaskbar": true,
+  "maximized": true
+},
   "2021": {
   "title": "Chrome habit — 2021",
   "css": [
     "win95-netscape.css",
-    "chrome-habit.css"
+    "chrome-habit.css",
+    "period-2021.css"
   ],
   "bodyClass": "year-2021 os-win10 browser-chrome-habit",
   "boot": "browser-2021.js",
@@ -1657,8 +1700,8 @@
     { "go": "pages/about.html", "label": "About" }
   ],
   "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
+  "toolbar": "chrome22",
+  "family": "chrome",
   "location": "http://home.microsoft.com/intl/web2021/",
   "prefHome": "http://home.microsoft.com/intl/web2021/",
   "yearLabel": "2021 · Windows 10 mass · Chrome habit · iOS 14.5 ATT",

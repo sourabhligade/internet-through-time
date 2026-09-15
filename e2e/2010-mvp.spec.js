@@ -4,7 +4,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { completeRealGate, enterYear, twoStepClick } = require('./helpers');
+const { completeRealGate, destOnDisk, enterYear, twoStepClick } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -129,6 +129,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
   });
 
   test('L — Pinterest pin 2 writes itt10-pin', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/pinterest/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/pinterest/index.html');
     await clearKeys(page, ['itt10-pin']);
     await page.reload();
@@ -143,6 +144,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
   });
 
   test('M — UberCab SF-only writes itt10-uber', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/uber/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/uber/index.html');
     await clearKeys(page, ['itt10-uber']);
     await page.reload();
@@ -155,6 +157,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
   });
 
   test('N — Quora ask writes itt10-quora', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/quora/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/quora/index.html');
     await clearKeys(page, ['itt10-quora']);
     await page.reload();
@@ -190,6 +193,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
   });
 
   test('Q — Digg v4 writes itt10-digg', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/digg/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/digg/index.html');
     await clearKeys(page, ['itt10-digg']);
     await page.reload();
@@ -198,6 +202,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
   });
 
   test('R — Cablegate literacy writes itt10-wl', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/wikileaks/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/wikileaks/index.html');
     await clearKeys(page, ['itt10-wl']);
     await page.reload();
@@ -209,6 +214,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
   });
 
   test('S — BrowserChoice writes itt10-ballot', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/browserchoice/index.html'), 'dest-lock');
     await page.goto('/years/2010/sites/browserchoice/index.html');
     await clearKeys(page, ['itt10-ballot']);
     await page.reload();

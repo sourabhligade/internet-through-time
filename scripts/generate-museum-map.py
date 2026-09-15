@@ -17,7 +17,7 @@ OUT = ROOT / "dev" / "museum-map"
 LOCK_4X = {"2012", "2013", "2016", "2017", "2018", "2019"}
 NO_SECOND = {"2013", "2018"}
 BOARDED = ["2009"]
-WIPED = ["2020", "2023", "2024", "2025"]
+WIPED = ["2023", "2024", "2025"]
 
 
 def dump_disk() -> dict:
@@ -185,7 +185,7 @@ def render(data: dict) -> str:
 <div class="wrap">
 <header>
   <h1>Internet Through Time — disk map</h1>
-  <p class="lede">27 years open · 2009 boarded · 2020 wiped · 2023+ wiped · leftover-2× ×2 on every dest · incomplete never writes.</p>
+  <p class="lede">28 years open · 2009 boarded · 2023+ wiped · leftover-2× ×2 on every dest · incomplete never writes.</p>
   <p class="banner">Author only. Not linked from the hub. Names come from <code>js/atlas-data.js</code>, <code>js/config/flow-trails.js</code>, and <code>scripts/popular-3x-sites.json</code>.</p>
 </header>
 
@@ -207,8 +207,8 @@ def render(data: dict) -> str:
   <div class="slot lock"><b>leftover-4×</b> lock 0 on {escape(", ".join(sorted(LOCK_4X)))}.</div>
 </div>
 
-<h2 id="y2020-door">2020 <span>wiped · no tree</span></h2>
-<p class="lede">No <code>years/2020/</code>. Zoom Leave is not a live door. Rebuild only when named.</p>
+<h2 id="y2020-door">2020 <span>live lean · Zoom Leave</span></h2>
+<p class="lede"><code>years/2020/</code> is a live lean door. Star is Zoom mute → chat → Leave.</p>
 
 <h2 id="golds">Every gold + official 10 <span>exact dest paths</span></h2>
 <div class="grid">{''.join(gold_cards)}</div>
@@ -221,7 +221,7 @@ def render(data: dict) -> str:
       <li>smoke-production.py</li>
       <li>audit-internal-links.py — 440,253 / 0 broken</li>
       <li>test-authenticity.py — 84/84</li>
-      <li>test-pipeline.py — sitemap lists ship years only (2020 wiped)</li>
+      <li>test-pipeline.py — sitemap lists ship years only (2023+ wiped)</li>
       <li>check-5x-contract.py</li>
       <li>audit-mock-flows.js</li>
       <li>check-all-years.py — 29/29</li>

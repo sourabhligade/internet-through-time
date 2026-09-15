@@ -196,3 +196,30 @@ body.lo2-nfx { background: #141414; color: #eee; }
 body.lo2-nfx a { color: #90caf9; }
 body.lo2-nfx .lo2-stage { background: #000; border-color: #333; }
 body.lo2-nfx .lo2-panel { background: #222; color: #eee; border-color: #555; }
+
+/* A · 2017 first paint: Face ID + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2017"] .itt-playable-link,
+html[data-itt-year="2017"] .itt-hub-exit,
+html[data-itt-year="2017"] .itt-felt-trail,
+html[data-itt-year="2017"] #itt-year-start-extra,
+html[data-itt-year="2017"] #itt-first-night-bar,
+html[data-itt-year="2017"] .itt-3x-visible,
+html[data-itt-year="2017"] #itt-layer-assess,
+html[data-itt-year="2017"] .itt-layer-assess,
+html[data-itt-year="2017"] .itt-home-more,
+html[data-itt-year="2017"] a[href="?deep=1"] {
+  display: none !important;
+}
+
+html[data-itt-year="2017"] .itt-pixel-failed,
+html[data-itt-year="2017"] .archive-residual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

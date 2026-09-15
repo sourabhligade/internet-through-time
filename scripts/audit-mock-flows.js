@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — 27 ship years (1994–2008 + 2010–2019 + 2021–2022).
- * 2009 boarded. 2020 wiped. 2023–2025 wiped.
+ * Mock-flow classifier — 28 ship years (1994–2008 + 2010–2022).
+ * 2009 boarded. 2023–2025 wiped.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,7 +27,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2009", "2020", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
@@ -515,7 +515,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 27 years open (1994–2008 + 2010–2019 + 2021–2022) · 2009 boarded · 2020 wiped · 2023+ wiped");
+  console.log("audit-mock-flows — 28 years open (1994–2008 + 2010–2022) · 2009 boarded · 2023+ wiped");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

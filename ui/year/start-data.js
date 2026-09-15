@@ -298,12 +298,12 @@
  "href": "../sites/gdpr/index.html",
  "label": "★ One-thing · GDPR Manage REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2018</a> — 1,630,322,579 · −8% · ITU",
- " <a href=\"../sites/gdpr/index.html\" style=\"color:#90caf9\">GDPR Manage</a> — Accept All never writes",
- " <a href=\"../sites/tiktok/fyp.html\" style=\"color:#90caf9\">TikTok For You</a> — Aug 2 merge",
- " <a href=\"../sites/trust/index.html\" style=\"color:#90caf9\">Hearing</a> — Apr 10",
- " <a href=\"../sites/instagram/igtv.html\" style=\"color:#90caf9\">IGTV</a> — not Reels",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2018</a> — 1,630,322,579 · −8% · ITU",
+ " <a href=\"../sites/gdpr/index.html\" style=\"color:#1565c0\">GDPR Manage</a> — Accept All never writes",
+ " <a href=\"../sites/tiktok/fyp.html\" style=\"color:#1565c0\">TikTok For You</a> — Aug 2 merge",
+ " <a href=\"../sites/trust/index.html\" style=\"color:#1565c0\">Hearing</a> — Apr 10",
+ " <a href=\"../sites/instagram/igtv.html\" style=\"color:#1565c0\">IGTV</a> — not Reels",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
  ]
 },
  
@@ -324,12 +324,24 @@
  "href": "../sites/disneyplus/home.html",
  "label": "★ One-thing · Disney+ Continue REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#ffcdd2\">About 2019</a> — table ends 2018 · ITU 4.1B / 53.6%",
- " <a href=\"../sites/disneyplus/home.html\" style=\"color:#ffcdd2\">Disney+ Continue</a> — trial never writes",
- " <a href=\"../sites/tiktok/index.html\" style=\"color:#ffcdd2\">TikTok For You</a> — 2019 US mass",
- " <a href=\"../sites/arcade/index.html\" style=\"color:#ffcdd2\">Apple Arcade</a> — $4.99 · 19 Sep",
- " <a href=\"../sites/stadia/index.html\" style=\"color:#ffcdd2\">Stadia</a> — 19 Nov Founder’s",
- " <a href=\"map.html\" style=\"color:#ffcdd2\">Year flow map</a> "
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2019</a> — table ends 2018 · ITU 4.1B / 53.6%",
+ " <a href=\"../sites/disneyplus/home.html\" style=\"color:#1565c0\">Disney+ Continue</a> — trial never writes",
+ " <a href=\"../sites/tiktok/index.html\" style=\"color:#1565c0\">TikTok For You</a> — 2019 US mass",
+ " <a href=\"../sites/arcade/index.html\" style=\"color:#1565c0\">Apple Arcade</a> — $4.99 · 19 Sep",
+ " <a href=\"../sites/stadia/index.html\" style=\"color:#1565c0\">Stadia</a> — 19 Nov Founder’s",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
+ ]
+},
+ "2020": {
+ "href": "../sites/zoom/meeting.html",
+ "label": "★ One-thing · Zoom Leave REAL",
+ "items": [
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2020</a> — table ends 2018 · no invented ILS cell",
+ " <a href=\"../sites/zoom/meeting.html\" style=\"color:#1565c0\">★ Zoom Leave</a> — Stay / empty never writes",
+ " <a href=\"../sites/houseparty/index.html\" style=\"color:#1565c0\">Houseparty leftover</a> — not Zoom gold",
+ " <a href=\"../sites/classroom/index.html\" style=\"color:#1565c0\">Classroom leftover</a> — join class",
+ " <a href=\"../sites/amongus/index.html\" style=\"color:#1565c0\">Among Us leftover</a> — not the chip",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
  ]
 },
 
@@ -337,24 +349,24 @@
  "href": "../sites/att/index.html",
  "label": "★ One-thing · Ask App Not to Track REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
- " <a href=\"../sites/att/index.html\" style=\"color:#90caf9\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
- " <a href=\"../sites/signal/index.html\" style=\"color:#90caf9\">Signal leftover</a> — 15 May delay",
- " <a href=\"../sites/copilot/index.html\" style=\"color:#90caf9\">Copilot waitlist</a> — not ChatGPT",
- " <a href=\"../sites/meta/index.html\" style=\"color:#90caf9\">Meta rename leftover</a> — app still Facebook",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
+ " <a href=\"../sites/att/index.html\" style=\"color:#1565c0\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
+ " <a href=\"../sites/signal/index.html\" style=\"color:#1565c0\">Signal leftover</a> — 15 May delay",
+ " <a href=\"../sites/copilot/index.html\" style=\"color:#1565c0\">Copilot waitlist</a> — not ChatGPT",
+ " <a href=\"../sites/meta/index.html\" style=\"color:#1565c0\">Meta rename leftover</a> — app still Facebook",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
  ]
 },
  "2022": {
  "href": "../sites/chatgpt/index.html",
  "label": "★ One-thing · ChatGPT Send REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#90caf9\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
- " <a href=\"../sites/chatgpt/index.html\" style=\"color:#90caf9\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
- " <a href=\"../sites/wordle/index.html\" style=\"color:#90caf9\">Wordle leftover</a> — NYT 31 Jan",
- " <a href=\"../sites/twitter/index.html\" style=\"color:#90caf9\">Twitter bird leftover</a> — X is 2023",
- " <a href=\"../sites/bereal/index.html\" style=\"color:#90caf9\">BeReal leftover</a> — 2-min drop",
- " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
+ " <a href=\"../sites/chatgpt/index.html\" style=\"color:#1565c0\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
+ " <a href=\"../sites/wordle/index.html\" style=\"color:#1565c0\">Wordle leftover</a> — NYT 31 Jan",
+ " <a href=\"../sites/twitter/index.html\" style=\"color:#1565c0\">Twitter bird leftover</a> — X is 2023",
+ " <a href=\"../sites/bereal/index.html\" style=\"color:#1565c0\">BeReal leftover</a> — 2-min drop",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
  ]
 }
 };

@@ -86,3 +86,30 @@
   outline-color: #e50914;
   background: #2a0a0a;
 }
+
+/* A · 2016 first paint: Stories + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2016"] .itt-playable-link,
+html[data-itt-year="2016"] .itt-hub-exit,
+html[data-itt-year="2016"] .itt-felt-trail,
+html[data-itt-year="2016"] #itt-year-start-extra,
+html[data-itt-year="2016"] #itt-first-night-bar,
+html[data-itt-year="2016"] .itt-3x-visible,
+html[data-itt-year="2016"] #itt-layer-assess,
+html[data-itt-year="2016"] .itt-layer-assess,
+html[data-itt-year="2016"] .itt-home-more,
+html[data-itt-year="2016"] a[href="?deep=1"] {
+  display: none !important;
+}
+
+html[data-itt-year="2016"] .itt-pixel-failed,
+html[data-itt-year="2016"] .archive-residual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,6 +1,7 @@
 // @ts-check
 /**
- * Official-trail leftover machines — every dest in leftover-official.matrix.json.
+ * Dest-true leftover-2× machines — lean leftover dests only.
+ * Forests stay as rooms. Dest-farm workshop dests are not this pack.
  * Trap / empty / 0 ticks / wrong pick never writes. Complete writes { real, leftover, year }.
  */
 const fs = require("fs");
@@ -11,13 +12,18 @@ const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
+const BOARDED = new Set(["2009", "2023", "2024", "2025"]);
+const FOREST = new Set(["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2008"]);
 /** @type {{ year: string, href: string, key: string, suffix: string, needPick: string, minPick: number, field: boolean, placeholder: string }[]} */
 const DESTS = MATRIX.dests.filter((d) => {
+  if (BOARDED.has(d.year) || FOREST.has(d.year)) return false;
+  if (!d.field && !d.needPick && !(d.minPick > 0)) return false;
   const dest = path.join(ROOT, "years", d.year, d.href);
   if (!fs.existsSync(path.join(ROOT, "years", d.year, "index.html"))) return false;
   if (!fs.existsSync(dest)) return false;
   try {
-    return fs.readFileSync(dest, "utf8").indexOf("data-lo-panel") !== -1;
+    const html = fs.readFileSync(dest, "utf8");
+    return html.indexOf("data-lo-panel") !== -1 && html.indexOf("data-itt-dest-true") !== -1;
   } catch (e) {
     return false;
   }
@@ -117,6 +123,26 @@ async function runDest(page, d) {
 }
 
 test.describe("leftover official · disk + trail", () => {
+  test("leftover-official pack is dest-true lean dests, not dest-farm", () => {
+    expect(DESTS.length, "dest-true lean leftover dests").toBeGreaterThan(0);
+    const seen = new Set();
+    for (const d of DESTS) {
+      expect(FOREST.has(d.year), d.year + " forest dest-farm").toBe(false);
+      expect(BOARDED.has(d.year), d.year + " boarded").toBe(false);
+      const dest = path.join(ROOT, "years", d.year, d.href);
+      const html = fs.readFileSync(dest, "utf8");
+      expect(html, d.key).toMatch(/data-itt-dest-true/);
+      const id = d.year + "/" + d.href;
+      expect(seen.has(id), "one leftover-2× dest per file " + id).toBe(false);
+      seen.add(id);
+    }
+  });
+
+  test("STAR_CITE never uses a WDM year-index", () => {
+    const src = fs.readFileSync(path.join(ROOT, "js/immersion/leftover-official.js"), "utf8");
+    expect(src).not.toMatch(/gallery\/year-\d{4}/);
+  });
+
   test("leftover-official engine is wired", () => {
     const boot = fs.readFileSync(path.join(ROOT, "js/immersion/boot.js"), "utf8");
     expect(boot).toMatch(/immersion\/leftover-official\.js/);
@@ -172,8 +198,8 @@ test.describe("leftover official · disk + trail", () => {
   });
 
   test("every matrix dest file has leftover panel + dest exists", () => {
-    /* Live years only — boarded years stay in the matrix but have no disk dest. */
-    expect(DESTS.length).toBeGreaterThanOrEqual(9100);
+    expect(DESTS.length).toBeGreaterThan(0);
+    expect(DESTS.length, "dest-farm crawl").toBeLessThan(400);
     for (const d of DESTS) {
       const file = path.join(ROOT, "years", d.year, d.href);
       expect(fs.existsSync(file), file).toBe(true);
@@ -184,38 +210,9 @@ test.describe("leftover official · disk + trail", () => {
     }
   });
 
-  test("forest leftover-official matrix lists every disk leftover dest", () => {
-    const keyRe = /data-lo-key="([^"]+)"/g;
-    const missing = [];
-    const have = new Set(DESTS.map((d) => d.year + "\t" + d.href + "\t" + d.suffix));
-    const yearsRoot = path.join(ROOT, "years");
-    for (const year of fs.readdirSync(yearsRoot)) {
-      if (!/^\d{4}$/.test(year) || Number(year) >= 2021) continue;
-      const yroot = path.join(yearsRoot, year);
-      const stack = [yroot];
-      while (stack.length) {
-        const dir = stack.pop();
-        for (const name of fs.readdirSync(dir)) {
-          const full = path.join(dir, name);
-          const st = fs.statSync(full);
-          if (st.isDirectory()) {
-            stack.push(full);
-            continue;
-          }
-          if (!name.endsWith(".html")) continue;
-          const html = fs.readFileSync(full, "utf8");
-          if (html.indexOf("data-lo-key=") === -1) continue;
-          const href = path.relative(yroot, full).replace(/\\/g, "/");
-          let m;
-          const re = new RegExp(keyRe.source, "g");
-          while ((m = re.exec(html))) {
-            const sig = year + "\t" + href + "\t" + m[1];
-            if (!have.has(sig)) missing.push(sig.replace(/\t/g, " "));
-          }
-        }
-      }
-    }
-    expect(missing, "disk leftover dests missing from matrix").toEqual([]);
+  test("leftover-official pack never lists forest dest-farm dests", () => {
+    const forest = DESTS.filter((d) => FOREST.has(d.year));
+    expect(forest, "forest dests in leftover-official pack").toEqual([]);
   });
 
   test("every live year has a 2× row for every leftover dest key", () => {
@@ -299,57 +296,3 @@ test.describe("leftover official · trap then save", () => {
   }
 });
 
-test.describe("2008 leftover isolation", () => {
-  test("GitHub literacy leftover never writes gold", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2008" && x.suffix === "github-lx");
-    test.skip(!d, "2008 github-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt08-github"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt07-github"), "2007 neighbor").toBeFalsy();
-    expect(await getKey(page, "itt09-github"), "2009 neighbor").toBeFalsy();
-  });
-});
-
-test.describe("2007 leftover isolation", () => {
-  test("Safari literacy leftover never writes gold", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2007" && x.suffix === "iphone-lx");
-    test.skip(!d, "2007 iphone-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt07-iphone"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt06-iphone"), "2006 neighbor").toBeFalsy();
-    expect(await getKey(page, "itt08-iphone"), "2008 neighbor").toBeFalsy();
-  });
-});
-
-test.describe("2020 leftover isolation", () => {
-  test("Zoom literacy leftover never writes gold", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2020" && x.suffix === "zoom-lx");
-    test.skip(!d, "2020 zoom-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt20-zoom"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt19-zoom"), "2019 neighbor").toBeFalsy();
-    expect(await getKey(page, "itt21-zoom"), "2021 neighbor").toBeFalsy();
-  });
-});
-
-test.describe("2011 leftover isolation", () => {
-  test("Google+ literacy leftover never writes gold", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2011" && x.suffix === "gplus-lx");
-    test.skip(!d, "2011 gplus-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt11-gplus"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt10-gplus"), "2010 neighbor").toBeFalsy();
-    expect(await getKey(page, "itt12-gplus"), "2012 neighbor").toBeFalsy();
-  });
-});
-
-test.describe("2009 leftover isolation", () => {
-  test("Like literacy leftover never writes gold", async ({ page }) => {
-    const d = DESTS.find((x) => x.year === "2009" && x.suffix === "like-lx");
-    test.skip(!d, "2009 like-lx missing");
-    await runDest(page, d);
-    expect(await getKey(page, "itt09-like"), "gold after leftover").toBeFalsy();
-    expect(await getKey(page, "itt08-like"), "2008 neighbor").toBeFalsy();
-    expect(await getKey(page, "itt10-like"), "2010 neighbor").toBeFalsy();
-  });
-});

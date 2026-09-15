@@ -888,5 +888,185 @@
     "star": "itt21-att",
     "verb": "Watch leftover",
     "href": "/years/2021/sites/youtube/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "first",
+    "id": "amazon",
+    "name": "Amazon leftover",
+    "key": "itt22-pop-amazon",
+    "star": "itt22-chatgpt",
+    "verb": "Cart leftover",
+    "href": "/years/2022/sites/amazon/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "first",
+    "id": "google",
+    "name": "Google",
+    "key": "itt22-pop-google",
+    "star": "itt22-chatgpt",
+    "verb": "Search leftover",
+    "href": "/years/2022/sites/google/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "first",
+    "id": "instagram",
+    "name": "Instagram",
+    "key": "itt22-pop-instagram",
+    "star": "itt22-chatgpt",
+    "verb": "Filter leftover",
+    "href": "/years/2022/sites/instagram/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "second",
+    "id": "facebook",
+    "name": "Facebook",
+    "key": "itt22-pop2-facebook",
+    "star": "itt22-chatgpt",
+    "verb": "Feed leftover",
+    "href": "/years/2022/sites/facebook/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "second",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt22-pop2-youtube",
+    "star": "itt22-chatgpt",
+    "verb": "Watch leftover",
+    "href": "/years/2022/sites/youtube/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "second",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt22-pop2-reddit",
+    "star": "itt22-chatgpt",
+    "verb": "Open leftover",
+    "href": "/years/2022/sites/reddit/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "third",
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "key": "itt22-pop3-wikipedia",
+    "star": "itt22-chatgpt",
+    "verb": "Read leftover",
+    "href": "/years/2022/sites/wikipedia/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "third",
+    "id": "netflix",
+    "name": "Netflix",
+    "key": "itt22-pop3-netflix",
+    "star": "itt22-chatgpt",
+    "verb": "Queue leftover",
+    "href": "/years/2022/sites/netflix/index.html"
+  },
+  {
+    "year": "2022",
+    "kind": "third",
+    "id": "nyt",
+    "name": "NYT leftover",
+    "key": "itt22-pop3-nyt",
+    "star": "itt22-chatgpt",
+    "verb": "Headline leftover",
+    "href": "/years/2022/sites/nyt/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "first",
+    "id": "amazon",
+    "name": "Amazon leftover",
+    "key": "itt20-pop-amazon",
+    "star": "itt20-zoom",
+    "verb": "Cart leftover",
+    "href": "/years/2020/sites/amazon/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "first",
+    "id": "facebook",
+    "name": "Facebook",
+    "key": "itt20-pop-facebook",
+    "star": "itt20-zoom",
+    "verb": "Feed leftover",
+    "href": "/years/2020/sites/facebook/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "first",
+    "id": "google",
+    "name": "Google",
+    "key": "itt20-pop-google",
+    "star": "itt20-zoom",
+    "verb": "Search leftover",
+    "href": "/years/2020/sites/google/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "second",
+    "id": "instagram",
+    "name": "Instagram",
+    "key": "itt20-pop2-instagram",
+    "star": "itt20-zoom",
+    "verb": "Filter leftover",
+    "href": "/years/2020/sites/instagram/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "second",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt20-pop2-youtube",
+    "star": "itt20-zoom",
+    "verb": "Watch leftover",
+    "href": "/years/2020/sites/youtube/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "second",
+    "id": "slack",
+    "name": "Slack",
+    "key": "itt20-pop2-slack",
+    "star": "itt20-zoom",
+    "verb": "Channel leftover",
+    "href": "/years/2020/sites/slack/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "third",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt20-pop3-reddit",
+    "star": "itt20-zoom",
+    "verb": "Open leftover",
+    "href": "/years/2020/sites/reddit/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "third",
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "key": "itt20-pop3-wikipedia",
+    "star": "itt20-zoom",
+    "verb": "Read leftover",
+    "href": "/years/2020/sites/wikipedia/index.html"
+  },
+  {
+    "year": "2020",
+    "kind": "third",
+    "id": "nyt",
+    "name": "NYT leftover",
+    "key": "itt20-pop3-nyt",
+    "star": "itt20-zoom",
+    "verb": "Headline leftover",
+    "href": "/years/2020/sites/nyt/index.html"
   }
 ]

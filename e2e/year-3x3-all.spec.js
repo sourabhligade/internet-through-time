@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Third leftover 3× writer on every live year (2009 boarded · 2022+ wiped).
+ * Third leftover 3× writer on every live year (2009 boarded · 2023+ wiped).
  * Empty / no pick / no tick never writes. Complete writes ittYY-pop3-<id>.
  */
 const fs = require("fs");
@@ -11,7 +11,7 @@ const { revealLeftoverRails } = require("./helpers");
 const TRIOS = require("../scripts/popular-3x3-sites.json");
 
 const YEARS = Object.keys(TRIOS).sort();
-const WIPED = new Set(["2009", "2022", "2023", "2024", "2025"]);
+const WIPED = new Set(["2009", "2023", "2024", "2025"]);
 const ROOT = path.join(__dirname, "..");
 
 test.describe("every third leftover 3× writer", () => {

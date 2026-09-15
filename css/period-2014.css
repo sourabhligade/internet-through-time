@@ -150,3 +150,30 @@ body.year-2013 .itt-year-chip {
 .tw13 .pop-rows button { text-align: left; padding: 8px; background: #e5f2f7; border: 1px solid #0084b4; cursor: pointer; }
 .rd13 .pop-rows button.is-on, .rd12 .pop-rows button.is-on, .fb13 .pop-rows button.is-on, .tw13 .pop-rows button.is-on { background: #fff8dc; }
 .pop-req { display: block; font-size: 12px; margin: 4px 0; }
+
+/* A · 2014 first paint: star + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2014"] .itt-playable-link,
+html[data-itt-year="2014"] .itt-hub-exit,
+html[data-itt-year="2014"] .itt-felt-trail,
+html[data-itt-year="2014"] #itt-year-start-extra,
+html[data-itt-year="2014"] #itt-first-night-bar,
+html[data-itt-year="2014"] .itt-3x-visible,
+html[data-itt-year="2014"] #itt-layer-assess,
+html[data-itt-year="2014"] .itt-layer-assess,
+html[data-itt-year="2014"] .itt-home-more,
+html[data-itt-year="2014"] a[href="?deep=1"] {
+  display: none !important;
+}
+
+html[data-itt-year="2014"] .itt-pixel-failed,
+html[data-itt-year="2014"] .archive-residual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

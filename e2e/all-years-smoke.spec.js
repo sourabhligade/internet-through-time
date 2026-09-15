@@ -18,7 +18,7 @@ const fs = require('fs');
 const path = require('path');
 
 /** Boarded / wiped: tree may stay; year-shell redirects. Not a visitor door. */
-const BOARDED = new Set(['2009', '2022', '2023', '2024', '2025']);
+const BOARDED = new Set(['2009', '2023', '2024', '2025']);
 
 /** Discover years/YYYY with index.html (skip research-only and boarded). */
 function shippedYears() {

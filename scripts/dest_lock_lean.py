@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Dest-lock lean doors: keep official 10 + guided + unique leftover + leftover-3× dests.
 
-Forests (1994–2006, 2008) stay. 2009 boarded. 2020 wiped.
+Forests (1994–2006, 2008) stay. 2009 boarded. 2020 live lean.
 Does not invent dests. Same pass rewrites rooms[], sitemap, leftover matrices.
 """
 from __future__ import annotations
@@ -23,7 +23,21 @@ LEAN = {
     "2017",
     "2018",
     "2019",
+    "2020",
     "2021",
+}
+
+EXTRA_KEEP = {
+    "2019": {
+        "reddit", "wikipedia", "netflix", "spotify", "snapchat", "twitch",
+        "slack", "uber", "whatsapp", "linkedin", "github", "hulu",
+        "switchlite", "applecard", "pinterest", "cnil", "ftc", "ios13", "ipados",
+    },
+    "2020": {
+        "twitter", "chrome", "windows10", "iphone", "spotify", "twitch", "uber",
+        "whatsapp", "linkedin", "github", "hulu", "airbnb", "peacock", "hbomax",
+        "edge", "notion", "figma", "robinhood", "coinbase",
+    },
 }
 
 UNIQUE_2017 = [
@@ -140,6 +154,7 @@ def keep_slugs(year: str, trails: dict, starts: dict, pop: dict, pop3: dict, fol
             s = dest_folder(href)
             if s:
                 slugs.add(s)
+    slugs |= EXTRA_KEEP.get(year, set())
     return slugs
 
 
