@@ -64,6 +64,7 @@ There are no other `.md` files outside `node_modules` / Playwright report dirs.
 | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Only unique-flow map: 10 official + 20 leftover = 30 dests | Phases 0–6 shipped. **Phase H dest lock not started.** Leftover dests share `bootUniqueFlow` host. 18 leftover dests failed-final on purpose. |
 | [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 + sequence A–H for 2016–2021 | Unique leftover dest maps: **none except 2017**. Step H dest-farm lock not done for 2017/2019/2021. L5 fail on dest-farm years. |
 | [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) | Same I/O bar for Vine 6s | Star + official 10 done. **Unique leftover-20 map not written.** |
+| [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× first/second/third unique dests · not mock | Criteria only. Stacked pop/pop2/pop3 fail unique. 2018/2021 cannot hit 9 leftover dests without new dests. 2022 map not written. |
 | [`2010-READ-FIRST.md`](2010-READ-FIRST.md) | Thesis + Instagram iOS star | Ends at empty heading **“Next when you say implement.”** Year is already a live lean door. |
 | [`2014-READ-FIRST.md`](2014-READ-FIRST.md) | WhatsApp Install + leftover P0 list | Live door. Still says **“If implement is named: clone lean 2012.”** |
 | [`2015-READ-FIRST.md`](2015-READ-FIRST.md) | Periscope star + P0 leftover | Live door. Still says **“Implement only after you say so.”** |

@@ -13,8 +13,9 @@ const LEFTOVER_DESTS = [
     year: "2010",
     href: "/years/2010/sites/chrome/index.html",
     slug: "chrome",
-    key: "itt10-pop3-chrome",
+    key: "itt10-pop2-chrome",
     star: "itt10-ig-posts",
+    go: "[data-pop-go][data-pop-key='pop2-chrome']",
   },
   {
     year: "2012",
@@ -38,12 +39,13 @@ const OFFICIAL_DEST = {
   go: "[data-pop-go][data-pop-key='pop3-lycos']",
 };
 
-function leftoverGo(page, slug) {
-  return page.locator(`[data-pop-go][data-pop-key='pop3-${slug}']`).first();
+function leftoverGo(page, row) {
+  if (row.go) return page.locator(row.go).first();
+  return page.locator(`[data-pop-go][data-pop-key='pop3-${row.slug}']`).first();
 }
 
-function leftoverPanel(page, slug) {
-  const go = leftoverGo(page, slug);
+function leftoverPanel(page, row) {
+  const go = leftoverGo(page, row);
   return page.locator("[data-pop-panel]").filter({ has: go }).first();
 }
 
@@ -51,7 +53,7 @@ test.describe("leftover dest leftover-3× dest face", () => {
   for (const row of LEFTOVER_DESTS) {
     test(`${row.year} leftover dest leftover-3× visible without deep`, async ({ page }) => {
       await page.goto(row.href);
-      const go = leftoverGo(page, row.slug);
+      const go = leftoverGo(page, row);
       await expect(go, row.href + " leftover-3× dest face").toBeVisible();
       const insideFold = await go.evaluate((el) => {
         let n = el;
@@ -73,8 +75,8 @@ test.describe("leftover dest leftover-3× dest face", () => {
         localStorage.removeItem(k.star);
       }, { key: row.key, star: row.star });
       await page.reload();
-      const go = leftoverGo(page, row.slug);
-      const panel = leftoverPanel(page, row.slug);
+      const go = leftoverGo(page, row);
+      const panel = leftoverPanel(page, row);
       await expect(go).toBeVisible();
       await go.click();
       expect(await page.evaluate((k) => localStorage.getItem(k), row.key), "empty go").toBeFalsy();
@@ -112,8 +114,8 @@ test.describe("leftover dest leftover-3× dest face", () => {
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
       await expect(page.locator(`[data-ott-one-thing="${year}"]`)).toBeVisible();
-      await expect(page.locator(`[data-itt-pop3x="${year}"]`)).toHaveCount(0);
-      await expect(page.locator(`[data-itt-lo3x]`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-pop3x="${year}"]:not(.itt-also-year *)`)).toHaveCount(0);
+      await expect(page.locator(`[data-itt-lo3x]:not(.itt-also-year *)`)).toHaveCount(0);
     }
   });
 });

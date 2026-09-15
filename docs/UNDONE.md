@@ -261,7 +261,7 @@ Closed: **#6** docs vs disk · **#7** matrix 404s.
 2. ~~Re-run `e2e/year-3x3-all.spec.js` museum-wide (221 fails may drop after reveal/skip).~~ **Done 2026-09-14.** 5 passed · 211 skipped · 0 failed (official dest leftover-3× gold-only). Leftover dest leftover-3× dest face shipped (`leftover-official.js` + `itt-leftover-fold.css` + `e2e/leftover-dest-3x-face.spec.js`).
 3. ~~leftover dest-true **empty never writes** on dest-farm dests — `#8`.~~ **Engine guard shipped** (`leftover-official.js`: no field/pick/req/wait → never writes).
 4. Dest-farm **lock** (`#9` / Phase H) — **done 2026-09-15** for lean years 2007/2010–2012/2014–2017/2019/2021. Forests stay.
-5. Unique leftover dest maps for **2013 / 2014 / 2015 / 2018–2021** (none exist).
+5. Unique leftover dest maps for **2013 / 2014 / 2015 / 2018–2021** leftover-**20** still none. **Leftover-3× unique dests shipped** (2007 / 2010–2016 / 2018–2019 / 2021; 2013 = 9 dests including second `yikyak`; 2018 first 3 only; 2021 = 5). 2017 leftover uniqueness stays the 30.
 6. ~~Follow-a-site year-shell control (PRODUCT-IMPROVE Slice 4).~~ **Done** (`js/config/follow-site.js` + exit-bar control + hub/atlas trails).
 7. 18 leftover dest **cites** — left **failed-final on purpose**.
 8. ~~Replace WDM `/gallery/year-2010`–`year-2021` `STAR_CITE`.~~ **Done** (failed-final; named exhibits kept only where they exist).

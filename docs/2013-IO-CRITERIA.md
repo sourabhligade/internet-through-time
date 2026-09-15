@@ -3,7 +3,8 @@
 **Date:** 2026-09-14  
 **Status:** Criteria + implemented star / official 10 fold. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2013-READ-FIRST.md`](2013-READ-FIRST.md).  
-**Companion:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — same bar, earlier lean door.
+**Companion:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — same bar, earlier lean door.  
+**Leftover-3× unique:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) — 2013 first+third dests already unique vs official 10. Second strip not named. Unique leftover-20 still not written.
 
 I/O = first click, period chrome, the star verb, what writes. Not dest count.
 

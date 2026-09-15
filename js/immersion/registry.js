@@ -85,6 +85,8 @@
     "immersion/year-popular-3x.js",
     "immersion/year-true-leftover.js",
     "immersion/leftover-official.js",
+    "config/leftover-3x-unique.js",
+    "immersion/leftover-3x-unique.js",
     "immersion/year-4x-flows.js",
     "immersion/official-dest-gold.js",
     "immersion/official-verb.js",

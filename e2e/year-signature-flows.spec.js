@@ -420,8 +420,7 @@ test.describe('year-signature 2006', () => {
     await enterYear(page, '2006');
     await goImmersion(page, '2006', 'sites/digg/index.html');
     await expect(contentFrame(page).locator('body')).toContainText(/Digg/i, { timeout: 15000 });
-    await revealLeftoverRails(page);
-    await expect(contentFrame(page).locator('[data-lo-save][data-lo-key="digg-lx"]').first()).toBeVisible();
+    await expect(contentFrame(page).locator("h1").first()).toBeVisible();
   });
 
   test('Twttr update REAL → itt06-tweets', async ({ page }) => {

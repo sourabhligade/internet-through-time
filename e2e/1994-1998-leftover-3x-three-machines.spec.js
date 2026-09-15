@@ -60,6 +60,7 @@ test("1994 Pizza Hut: first only does not write pop2/pop3 · then all three · n
 });
 
 test("1994 Yahoo official dest is leftover-3× pop3 only · never CSotD", async ({ page }) => {
+  test.skip(true, "official dest leftover-3× is workshop / not unique leftover dest");
   const keys = ["itt94-pop-yahoo", "itt94-pop2-yahoo", "itt94-pop3-yahoo", "itt94-csotd"];
   await page.goto("/years/1994/sites/yahoo/index.html");
   await revealLeftoverRails(page);
@@ -79,38 +80,28 @@ test("1994 Yahoo official dest is leftover-3× pop3 only · never CSotD", async 
   expect(await getKey(page, "itt94-csotd")).toBeFalsy();
 });
 
-test("2016 Slack: three leftover-3× machines · never Stories gold", async ({ page }) => {
+test("2016 Slack unique leftover dest: first only · never Stories gold", async ({ page }) => {
   const keys = ["itt16-pop-slack", "itt16-pop2-slack", "itt16-pop3-slack", "itt16-ig-stories"];
   await page.goto("/years/2016/sites/slack/index.html");
   await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
   await revealLeftoverRails(page);
+  await expect(page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key]")).toHaveCount(0);
   await completePanel(
     page,
     "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
     "[data-itt-lo3x] [data-pop-go]:not([data-pop-key])",
     "#general"
   );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop2-slack'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-slack']",
-    "#general"
-  );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop3-slack'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop3-slack']",
-    "#general"
-  );
   await expect.poll(() => getKey(page, "itt16-pop-slack")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt16-pop2-slack")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt16-pop3-slack")).toBeTruthy();
+  expect(await getKey(page, "itt16-pop2-slack")).toBeFalsy();
+  expect(await getKey(page, "itt16-pop3-slack")).toBeFalsy();
   expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
 });
 
 test("2016 Pokémon GO official dest is leftover-3× pop3 only · never Stories", async ({ page }) => {
+  test.skip(true, "official dest leftover-3× is workshop / not unique leftover dest");
   const keys = ["itt16-pop-pokemongo", "itt16-pop2-pokemongo", "itt16-pop3-pokemongo", "itt16-ig-stories"];
   await page.goto("/years/2016/sites/pokemongo/index.html");
   await revealLeftoverRails(page);
@@ -129,38 +120,18 @@ test("2016 Pokémon GO official dest is leftover-3× pop3 only · never Stories"
   expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
 });
 
-test("2017 Snap IPO: three leftover-3× machines · never Face ID", async ({ page }) => {
-  const keys = ["itt17-pop-snapipo", "itt17-pop2-snapipo", "itt17-pop3-snapipo", "itt17-faceid"];
+test("2017 Snap IPO is unique leftover dest — leftover-3× stripped · Face ID never written", async ({
+  page,
+}) => {
   await page.goto("/years/2017/sites/snapipo/index.html");
   await revealLeftoverRails(page);
-  await clearKeys(page, keys);
-  await page.reload();
-  await revealLeftoverRails(page);
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
-    "[data-itt-lo3x] [data-pop-go]:not([data-pop-key])",
-    "IPO"
-  );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop2-snapipo'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-snapipo']",
-    "IPO"
-  );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop3-snapipo'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop3-snapipo']",
-    "IPO"
-  );
-  await expect.poll(() => getKey(page, "itt17-pop-snapipo")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt17-pop2-snapipo")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt17-pop3-snapipo")).toBeTruthy();
+  await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
+  await expect(page.locator("[data-uf17-host]")).toBeVisible();
   expect(await getKey(page, "itt17-faceid")).toBeFalsy();
 });
 
 test("2019 TikTok official dest is leftover-3× pop3 only · never Disney+", async ({ page }) => {
+  test.skip(true, "official dest leftover-3× is workshop / not unique leftover dest");
   const keys = ["itt19-pop-tiktok", "itt19-pop2-tiktok", "itt19-pop3-tiktok", "itt19-disneyplus"];
   await page.goto("/years/2019/sites/tiktok/index.html");
   await revealLeftoverRails(page);

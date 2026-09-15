@@ -1011,736 +1011,205 @@
   ],
   "2010": [
     {
-      "id": "chrome",
-      "name": "Chrome",
-      "title": "Chrome leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover \u2014 2010",
+      "why": "2010 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Open leftover",
+      "ph": "reddit",
+      "btn": "Open leftover"
     },
     {
-      "id": "wave",
-      "name": "Wave",
-      "title": "Wave leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "google",
+      "name": "Google",
+      "title": "Google leftover \u2014 2010",
+      "why": "2010 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Search leftover",
+      "ph": "google",
+      "btn": "Search leftover"
     },
     {
-      "id": "android",
-      "name": "Android",
-      "title": "Android leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "farmville",
-      "name": "FarmVille",
-      "title": "FarmVille leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "imgur",
-      "name": "Imgur",
-      "title": "Imgur leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "foursquare",
-      "name": "Foursquare",
-      "title": "Foursquare leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter",
-      "title": "Twitter leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "kickstarter",
-      "name": "Kickstarter",
-      "title": "Kickstarter leftover \u2014 2010",
-      "why": "2010 leftover. Instagram iOS is the chip. Android IG is 2012.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "groupon",
+      "name": "Groupon",
+      "title": "Groupon leftover \u2014 2010",
+      "why": "2010 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Deal leftover",
+      "ph": "groupon",
+      "btn": "Deal leftover"
     }
   ],
   "2011": [
     {
-      "id": "spotify",
-      "name": "Spotify",
-      "title": "Spotify leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "iphone",
-      "name": "Siri",
-      "title": "Siri leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "facebook",
-      "name": "Timeline",
-      "title": "Timeline leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "ipad",
-      "name": "iPad 2",
-      "title": "iPad 2 leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "airbnb",
-      "name": "Airbnb",
-      "title": "Airbnb leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "instagram",
-      "name": "IG iOS",
-      "title": "IG iOS leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter",
-      "title": "Twitter leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "qwikster",
-      "name": "Qwikster",
-      "title": "Qwikster leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
       "id": "youtube",
       "name": "YouTube",
       "title": "YouTube leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "why": "2011 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Watch leftover",
+      "ph": "youtube",
+      "btn": "Watch leftover"
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "title": "Dropbox leftover \u2014 2011",
+      "why": "2011 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Sync leftover",
+      "ph": "dropbox",
+      "btn": "Sync leftover"
     },
     {
       "id": "hulu",
       "name": "Hulu",
       "title": "Hulu leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Hulu leftover, not Instant Queue as this.",
-      "verb": "play leftover Hulu then ads",
-      "ph": "Hulu",
-      "btn": "Hulu leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "pandora",
-      "name": "Pandora",
-      "title": "Pandora leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Thumb leftover, not Spotify-US-as-this.",
-      "verb": "thumb leftover station then not Spotify",
-      "ph": "thumb",
-      "btn": "Pandora leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "foursquare",
-      "name": "Foursquare",
-      "title": "Foursquare leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Mayorship leftover, not Swarm 2014.",
-      "verb": "check-in leftover then mayorship",
-      "ph": "mayorship",
-      "btn": "Foursquare leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "quora",
-      "name": "Quora",
-      "title": "Quora leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Topic leftover, not 2026 Quora as this.",
-      "verb": "ask leftover then follow topic",
-      "ph": "topic",
-      "btn": "Quora leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "kickstarter",
-      "name": "Kickstarter",
-      "title": "Kickstarter leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Pledge leftover, not a live pledge.",
-      "verb": "back leftover project then pledge theater",
-      "ph": "pledge",
-      "btn": "Kickstarter leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "evernote",
-      "name": "Evernote",
-      "title": "Evernote leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Clip leftover, not Notion-as-2011.",
-      "verb": "clip leftover note then sync theater",
-      "ph": "clip",
-      "btn": "Evernote leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "imgur",
-      "name": "Imgur",
-      "title": "Imgur leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Imgur leftover, not Reddit dest as this.",
-      "verb": "host leftover image then link",
-      "ph": "Imgur",
-      "btn": "Imgur leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "vimeo",
-      "name": "Vimeo",
-      "title": "Vimeo leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. Staff pick leftover, not YouTube upload-as-gold.",
-      "verb": "watch leftover staff pick",
-      "ph": "staff pick",
-      "btn": "Vimeo leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "huffpost",
-      "name": "HuffPost",
-      "title": "HuffPost leftover \u2014 2011",
-      "why": "2011 leftover. Google+ Circles is the chip. Win7 + IE9. HuffPost leftover, not live comment gold.",
-      "verb": "scan leftover HuffPost then honesty",
-      "ph": "HuffPost",
-      "btn": "HuffPost leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "why": "2011 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Watch leftover",
+      "ph": "hulu",
+      "btn": "Watch leftover"
     }
   ],
   "2012": [
     {
-      "id": "medium",
-      "name": "Medium",
-      "title": "Medium leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "path",
-      "name": "Path",
-      "title": "Path leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "flipboard",
-      "name": "Flipboard",
-      "title": "Flipboard leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "pinterest",
-      "name": "Pinterest",
-      "title": "Pinterest leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook",
-      "title": "Facebook leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "iphone",
-      "name": "Maps",
-      "title": "Maps leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "wikipedia",
-      "name": "SOPA",
-      "title": "SOPA leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
       "id": "reddit",
       "name": "Reddit",
       "title": "Reddit leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "why": "2012 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Open leftover",
+      "ph": "reddit",
+      "btn": "Open leftover"
+    },
+    {
+      "id": "surface",
+      "name": "Surface",
+      "title": "Surface leftover \u2014 2012",
+      "why": "2012 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Start leftover",
+      "ph": "surface",
+      "btn": "Start leftover"
     },
     {
       "id": "windows8",
       "name": "Windows 8",
       "title": "Windows 8 leftover \u2014 2012",
-      "why": "2012 leftover. Instagram Android is the chip. Vine is 2013.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "why": "2012 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Start leftover",
+      "ph": "windows8",
+      "btn": "Start leftover"
     }
   ],
   "2013": [
     {
       "id": "reddit",
       "name": "Reddit",
-      "title": "Reddit leftover",
-      "why": "2013 leftover third trio. Not the chip.",
-      "verb": "Pick sub then go.",
-      "ph": "videos",
+      "title": "Reddit leftover \u2014 2013",
+      "why": "2013 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Open leftover",
+      "ph": "reddit",
       "btn": "Open leftover"
     },
     {
       "id": "facebook",
       "name": "Facebook",
-      "title": "Facebook leftover",
-      "why": "2013 leftover third trio. Not the chip.",
-      "verb": "Pick home then go.",
-      "ph": "graph",
-      "btn": "Open leftover"
+      "title": "Facebook leftover \u2014 2013",
+      "why": "2013 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Feed leftover",
+      "ph": "facebook",
+      "btn": "Feed leftover"
     },
     {
       "id": "twitter",
       "name": "Twitter",
-      "title": "Twitter leftover",
-      "why": "2013 leftover third trio. Not the chip.",
-      "verb": "Pick tweet then go.",
-      "ph": "vine",
-      "btn": "Open leftover"
+      "title": "Twitter leftover \u2014 2013",
+      "why": "2013 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Tweet leftover",
+      "ph": "twitter",
+      "btn": "Tweet leftover"
     }
   ],
   "2014": [
     {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "facebook",
+      "name": "Facebook",
+      "title": "Facebook leftover \u2014 2014",
+      "why": "2014 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Feed leftover",
+      "ph": "facebook",
+      "btn": "Feed leftover"
     },
     {
       "id": "wikipedia",
       "name": "Wikipedia",
       "title": "Wikipedia leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "why": "2014 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Read leftover",
+      "ph": "wikipedia",
+      "btn": "Read leftover"
     },
     {
-      "id": "facebook",
-      "name": "Facebook",
-      "title": "Facebook leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "heartbleed",
-      "name": "Heartbleed",
-      "title": "Heartbleed leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "icebucket",
-      "name": "Ice Bucket",
-      "title": "Ice Bucket leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 6",
-      "title": "iPhone 6 leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "material",
-      "name": "Material",
-      "title": "Material leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "slack",
-      "name": "Slack",
-      "title": "Slack leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "twitch",
-      "name": "Twitch",
-      "title": "Twitch leftover \u2014 2014",
-      "why": "2014 leftover. WhatsApp Install is the chip. Echo is 2015.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover \u2014 2014",
+      "why": "2014 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Watch leftover",
+      "ph": "youtube",
+      "btn": "Watch leftover"
     }
   ],
   "2015": [
     {
-      "id": "googlephotos",
-      "name": "Photos",
-      "title": "Photos leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "vine",
+      "name": "Vine leftover",
+      "title": "Vine leftover leftover \u2014 2015",
+      "why": "2015 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "6s leftover",
+      "ph": "vine",
+      "btn": "6s leftover"
     },
     {
-      "id": "windows10",
-      "name": "Windows 10",
-      "title": "Windows 10 leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "echo",
+      "name": "Echo",
+      "title": "Echo leftover \u2014 2015",
+      "why": "2015 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Alexa leftover",
+      "ph": "echo",
+      "btn": "Alexa leftover"
     },
     {
-      "id": "applemusic",
-      "name": "Apple Music",
-      "title": "Apple Music leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "edge",
-      "name": "Edge",
-      "title": "Edge leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "snapchat",
-      "name": "Discover",
-      "title": "Discover leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "discord",
-      "name": "Discord",
-      "title": "Discord leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "letsencrypt",
-      "name": "Let's Encrypt",
-      "title": "Let's Encrypt leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia",
-      "title": "Wikipedia leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "nyt",
-      "name": "NYT",
-      "title": "NYT leftover \u2014 2015",
-      "why": "2015 leftover. Periscope Go LIVE is the chip.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover \u2014 2015",
+      "why": "2015 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Watch leftover",
+      "ph": "youtube",
+      "btn": "Watch leftover"
     }
   ],
   "2016": [
     {
-      "id": "pokemongo",
-      "name": "Pok\u00e9mon GO",
-      "title": "Pok\u00e9mon GO leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 7",
-      "title": "iPhone 7 leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "vine",
-      "name": "Vine",
-      "title": "Vine leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "snapchat",
-      "name": "Spectacles",
-      "title": "Spectacles leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "musically",
-      "name": "musical.ly",
-      "title": "musical.ly leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "smario",
-      "name": "Mario Run",
-      "title": "Mario Run leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "dyn",
+      "name": "Dyn leftover",
+      "title": "Dyn leftover leftover \u2014 2016",
+      "why": "2016 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Outage leftover",
+      "ph": "dyn",
+      "btn": "Outage leftover"
     },
     {
       "id": "fblive",
-      "name": "FB Live",
-      "title": "FB Live leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "name": "Facebook Live",
+      "title": "Facebook Live leftover \u2014 2016",
+      "why": "2016 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Live leftover",
+      "ph": "fblive",
+      "btn": "Live leftover"
     },
     {
       "id": "moments",
       "name": "Moments",
       "title": "Moments leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "superbowl",
-      "name": "Super Bowl",
-      "title": "Super Bowl leftover \u2014 2016",
-      "why": "2016 leftover. Instagram Stories is the chip. No TikTok brand.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "why": "2016 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Moment leftover",
+      "ph": "moments",
+      "btn": "Moment leftover"
     }
   ],
   "2017": [
@@ -1844,134 +1313,34 @@
       "fg": "#fff"
     }
   ],
-  "2018": [
-    {
-      "id": "tiktok",
-      "name": "TikTok",
-      "title": "TikTok leftover",
-      "why": "2018 leftover third trio. Not the chip.",
-      "verb": "Pick fyp then go.",
-      "ph": "sound",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "github",
-      "name": "GitHub",
-      "title": "GitHub leftover",
-      "why": "2018 leftover third trio. Not the chip.",
-      "verb": "Pick issue then go.",
-      "ph": "ms",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "homepod",
-      "name": "HomePod",
-      "title": "HomePod leftover",
-      "why": "2018 leftover third trio. Not the chip.",
-      "verb": "Pick siri then go.",
-      "ph": "room",
-      "btn": "Open leftover"
-    }
-  ],
+  "2018": [],
   "2019": [
     {
-      "id": "tiktok",
-      "name": "TikTok",
-      "title": "TikTok leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "twitter",
+      "name": "Twitter",
+      "title": "Twitter leftover \u2014 2019",
+      "why": "2019 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Tweet leftover",
+      "ph": "twitter",
+      "btn": "Tweet leftover"
     },
     {
-      "id": "arcade",
-      "name": "Arcade",
-      "title": "Arcade leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "yahoo",
+      "name": "Yahoo leftover",
+      "title": "Yahoo leftover leftover \u2014 2019",
+      "why": "2019 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Portal leftover",
+      "ph": "yahoo",
+      "btn": "Portal leftover"
     },
     {
-      "id": "appletv",
-      "name": "Apple TV+",
-      "title": "Apple TV+ leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "stadia",
-      "name": "Stadia",
-      "title": "Stadia leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "airpodspro",
-      "name": "AirPods Pro",
-      "title": "AirPods Pro leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome",
-      "title": "Chrome leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "windows10",
-      "name": "Windows 10",
-      "title": "Windows 10 leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "oculusquest",
-      "name": "Quest",
-      "title": "Quest leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "nyt",
-      "name": "NYT",
-      "title": "NYT leftover \u2014 2019",
-      "why": "2019 leftover. Disney+ Who's watching is the chip. Trial never writes.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "youtube",
+      "name": "YouTube",
+      "title": "YouTube leftover \u2014 2019",
+      "why": "2019 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Watch leftover",
+      "ph": "youtube",
+      "btn": "Watch leftover"
     }
   ],
   "2001": [
@@ -2382,103 +1751,31 @@
   ],
   "2007": [
     {
-      "id": "streetview",
-      "name": "Street View",
-      "title": "Street View leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "flickr",
+      "name": "Flickr",
+      "title": "Flickr leftover \u2014 2007",
+      "why": "2007 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Upload leftover",
+      "ph": "flickr",
+      "btn": "Upload leftover"
     },
     {
-      "id": "gmail",
-      "name": "Gmail",
-      "title": "Gmail leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "reddit",
+      "name": "Reddit",
+      "title": "Reddit leftover \u2014 2007",
+      "why": "2007 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Open leftover",
+      "ph": "reddit",
+      "btn": "Open leftover"
     },
     {
-      "id": "fbplat",
-      "name": "Facebook Platform",
-      "title": "Facebook Platform leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter",
-      "title": "Twitter leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "tumblr",
-      "name": "Tumblr",
-      "title": "Tumblr leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "kindle",
-      "name": "Kindle",
-      "title": "Kindle leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "ie6",
-      "name": "XP/IE6",
-      "title": "XP/IE6 leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "xbox",
-      "name": "Xbox",
-      "title": "Xbox leftover \u2014 2007",
-      "why": "2007 leftover. iPhone Safari is the chip. App Store / Chrome are 2008.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
+      "id": "digg",
+      "name": "Digg",
+      "title": "Digg leftover \u2014 2007",
+      "why": "2007 leftover-3\u00d7 third. Unique dest. Not the chip.",
+      "verb": "Digg leftover",
+      "ph": "digg",
+      "btn": "Digg leftover"
     }
   ],
   "2020": [
@@ -2509,5 +1806,6 @@
       "ph": "tiktok leftover",
       "btn": "Open leftover"
     }
-  ]
+  ],
+  "2021": []
 }

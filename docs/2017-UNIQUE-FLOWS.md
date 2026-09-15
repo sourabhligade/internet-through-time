@@ -206,4 +206,5 @@ Research also flags **U3**: leftover dests still use a shared “Ack leftover”
 | [`2017-READ-FIRST.md`](2017-READ-FIRST.md) | Thesis + bans |
 | [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 visitor I/O |
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years |
+| [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× first/second/third must be unique dests. 2017 leftover-3× catalogs are not a second unique map. |
 | `js/config/flow-trails.js` | Official 10 only |

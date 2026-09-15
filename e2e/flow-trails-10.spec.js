@@ -41,9 +41,10 @@ test.describe('ten link-flows every year', () => {
 
     test(`${s.year} map lists ten link-flows`, async ({ page }) => {
       await page.goto(`/years/${s.year}/pages/map.html`);
-      await expect(page.locator('[data-itt-ten-flows]')).toBeVisible({ timeout: 20000 });
-      await expect(page.locator('[data-itt-ten-flows] li')).toHaveCount(10);
-      await expect(page.locator('[data-itt-ten-flows]')).toContainText(s.name);
+      const ten = page.locator('ol[data-itt-ten-flows], [data-itt-ten-flows] ol').first();
+      await expect(ten).toBeVisible({ timeout: 20000 });
+      await expect(ten.locator("li")).toHaveCount(10);
+      await expect(ten).toContainText(s.name);
     });
   }
 

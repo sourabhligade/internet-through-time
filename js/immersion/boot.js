@@ -225,6 +225,10 @@
     maybePack("[data-5x-save], [data-5x-loop]", "immersion/year-5x-pack.js");
     maybePack("[data-itt-pack], .itt-year-true-pack", "immersion/year-true-packs.js");
     maybePack("[data-pop-go], [data-itt-pop3x], [data-pop-panel]", "immersion/year-popular-3x.js");
+    if (path.indexOf("/pages/") !== -1 || hasSel("#itt-year-start, .itt-start-page")) {
+      add("config/leftover-3x-unique.js");
+      add("immersion/leftover-3x-unique.js");
+    }
     maybePack("[data-ytl-save], [data-ytl]", "immersion/year-true-leftover.js");
     maybePack("[data-lo-save], [data-lo-pick]", "immersion/leftover-official.js");
     maybePack("[data-4x-go], [data-4x-panel]", "immersion/year-4x-flows.js");

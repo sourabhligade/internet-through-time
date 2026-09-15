@@ -1,0 +1,892 @@
+[
+  {
+    "year": "2007",
+    "kind": "first",
+    "id": "wiki",
+    "name": "Wikipedia",
+    "key": "itt07-pop-wiki",
+    "star": "itt07-iphone",
+    "verb": "Read leftover",
+    "href": "/years/2007/sites/wiki/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "first",
+    "id": "myspace",
+    "name": "MySpace",
+    "key": "itt07-pop-myspace",
+    "star": "itt07-iphone",
+    "verb": "Open profile leftover",
+    "href": "/years/2007/sites/myspace/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "first",
+    "id": "maps",
+    "name": "Maps",
+    "key": "itt07-pop-maps",
+    "star": "itt07-iphone",
+    "verb": "Search leftover",
+    "href": "/years/2007/sites/maps/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "second",
+    "id": "ebay",
+    "name": "eBay",
+    "key": "itt07-pop2-ebay",
+    "star": "itt07-iphone",
+    "verb": "Bid leftover",
+    "href": "/years/2007/sites/ebay/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "second",
+    "id": "stumble",
+    "name": "StumbleUpon",
+    "key": "itt07-pop2-stumble",
+    "star": "itt07-iphone",
+    "verb": "Stumble leftover",
+    "href": "/years/2007/sites/stumble/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "second",
+    "id": "wow",
+    "name": "World of Warcraft",
+    "key": "itt07-pop2-wow",
+    "star": "itt07-iphone",
+    "verb": "Log leftover",
+    "href": "/years/2007/sites/wow/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "third",
+    "id": "flickr",
+    "name": "Flickr",
+    "key": "itt07-pop3-flickr",
+    "star": "itt07-iphone",
+    "verb": "Upload leftover",
+    "href": "/years/2007/sites/flickr/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "third",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt07-pop3-reddit",
+    "star": "itt07-iphone",
+    "verb": "Open leftover",
+    "href": "/years/2007/sites/reddit/index.html"
+  },
+  {
+    "year": "2007",
+    "kind": "third",
+    "id": "digg",
+    "name": "Digg",
+    "key": "itt07-pop3-digg",
+    "star": "itt07-iphone",
+    "verb": "Digg leftover",
+    "href": "/years/2007/sites/digg/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "first",
+    "id": "netflix",
+    "name": "Netflix",
+    "key": "itt10-pop-netflix",
+    "star": "itt10-ig-posts",
+    "verb": "Queue leftover",
+    "href": "/years/2010/sites/netflix/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "first",
+    "id": "tumblr",
+    "name": "Tumblr",
+    "key": "itt10-pop-tumblr",
+    "star": "itt10-ig-posts",
+    "verb": "Reblog leftover",
+    "href": "/years/2010/sites/tumblr/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "first",
+    "id": "formspring",
+    "name": "Formspring",
+    "key": "itt10-pop-formspring",
+    "star": "itt10-ig-posts",
+    "verb": "Answer leftover",
+    "href": "/years/2010/sites/formspring/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "second",
+    "id": "chrome",
+    "name": "Chrome",
+    "key": "itt10-pop2-chrome",
+    "star": "itt10-ig-posts",
+    "verb": "Tab leftover",
+    "href": "/years/2010/sites/chrome/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "second",
+    "id": "wave",
+    "name": "Google Wave",
+    "key": "itt10-pop2-wave",
+    "star": "itt10-ig-posts",
+    "verb": "Wave leftover",
+    "href": "/years/2010/sites/wave/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "second",
+    "id": "android",
+    "name": "Android",
+    "key": "itt10-pop2-android",
+    "star": "itt10-ig-posts",
+    "verb": "Froyo leftover",
+    "href": "/years/2010/sites/android/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "third",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt10-pop3-reddit",
+    "star": "itt10-ig-posts",
+    "verb": "Open leftover",
+    "href": "/years/2010/sites/reddit/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "third",
+    "id": "google",
+    "name": "Google",
+    "key": "itt10-pop3-google",
+    "star": "itt10-ig-posts",
+    "verb": "Search leftover",
+    "href": "/years/2010/sites/google/index.html"
+  },
+  {
+    "year": "2010",
+    "kind": "third",
+    "id": "groupon",
+    "name": "Groupon",
+    "key": "itt10-pop3-groupon",
+    "star": "itt10-ig-posts",
+    "verb": "Deal leftover",
+    "href": "/years/2010/sites/groupon/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "first",
+    "id": "icloud",
+    "name": "iCloud",
+    "key": "itt11-pop-icloud",
+    "star": "itt11-gplus",
+    "verb": "Photo Stream leftover",
+    "href": "/years/2011/sites/icloud/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "first",
+    "id": "pinterest",
+    "name": "Pinterest",
+    "key": "itt11-pop-pinterest",
+    "star": "itt11-gplus",
+    "verb": "Pin leftover",
+    "href": "/years/2011/sites/pinterest/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "first",
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "key": "itt11-pop-linkedin",
+    "star": "itt11-gplus",
+    "verb": "Invite leftover",
+    "href": "/years/2011/sites/linkedin/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "second",
+    "id": "kindlefire",
+    "name": "Kindle Fire",
+    "key": "itt11-pop2-kindlefire",
+    "star": "itt11-gplus",
+    "verb": "Silk leftover",
+    "href": "/years/2011/sites/kindlefire/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "second",
+    "id": "minecraft",
+    "name": "Minecraft",
+    "key": "itt11-pop2-minecraft",
+    "star": "itt11-gplus",
+    "verb": "World leftover",
+    "href": "/years/2011/sites/minecraft/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "second",
+    "id": "twitch",
+    "name": "Twitch",
+    "key": "itt11-pop2-twitch",
+    "star": "itt11-gplus",
+    "verb": "Watch leftover",
+    "href": "/years/2011/sites/twitch/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "third",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt11-pop3-youtube",
+    "star": "itt11-gplus",
+    "verb": "Watch leftover",
+    "href": "/years/2011/sites/youtube/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "third",
+    "id": "dropbox",
+    "name": "Dropbox",
+    "key": "itt11-pop3-dropbox",
+    "star": "itt11-gplus",
+    "verb": "Sync leftover",
+    "href": "/years/2011/sites/dropbox/index.html"
+  },
+  {
+    "year": "2011",
+    "kind": "third",
+    "id": "hulu",
+    "name": "Hulu",
+    "key": "itt11-pop3-hulu",
+    "star": "itt11-gplus",
+    "verb": "Watch leftover",
+    "href": "/years/2011/sites/hulu/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "first",
+    "id": "drawsomething",
+    "name": "Draw Something",
+    "key": "itt12-pop-drawsomething",
+    "star": "itt12-ig-android",
+    "verb": "Draw leftover",
+    "href": "/years/2012/sites/drawsomething/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "first",
+    "id": "googledrive",
+    "name": "Drive",
+    "key": "itt12-pop-googledrive",
+    "star": "itt12-ig-android",
+    "verb": "Share leftover",
+    "href": "/years/2012/sites/googledrive/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "first",
+    "id": "snapchat",
+    "name": "Snapchat",
+    "key": "itt12-pop-snapchat",
+    "star": "itt12-ig-android",
+    "verb": "Snap leftover",
+    "href": "/years/2012/sites/snapchat/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "second",
+    "id": "uber",
+    "name": "Uber",
+    "key": "itt12-pop2-uber",
+    "star": "itt12-ig-android",
+    "verb": "Ride leftover",
+    "href": "/years/2012/sites/uber/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "second",
+    "id": "buzzfeed",
+    "name": "BuzzFeed",
+    "key": "itt12-pop2-buzzfeed",
+    "star": "itt12-ig-android",
+    "verb": "List leftover",
+    "href": "/years/2012/sites/buzzfeed/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "second",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt12-pop2-youtube",
+    "star": "itt12-ig-android",
+    "verb": "Watch leftover",
+    "href": "/years/2012/sites/youtube/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "third",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt12-pop3-reddit",
+    "star": "itt12-ig-android",
+    "verb": "Open leftover",
+    "href": "/years/2012/sites/reddit/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "third",
+    "id": "surface",
+    "name": "Surface",
+    "key": "itt12-pop3-surface",
+    "star": "itt12-ig-android",
+    "verb": "Start leftover",
+    "href": "/years/2012/sites/surface/index.html"
+  },
+  {
+    "year": "2012",
+    "kind": "third",
+    "id": "windows8",
+    "name": "Windows 8",
+    "key": "itt12-pop3-windows8",
+    "star": "itt12-ig-android",
+    "verb": "Start leftover",
+    "href": "/years/2012/sites/windows8/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "first",
+    "id": "askfm",
+    "name": "Ask.fm",
+    "key": "itt13-pop-askfm",
+    "star": "itt13-vine-posts",
+    "verb": "Ask leftover",
+    "href": "/years/2013/sites/askfm/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "first",
+    "id": "whisper",
+    "name": "Whisper",
+    "key": "itt13-pop-whisper",
+    "star": "itt13-vine-posts",
+    "verb": "Whisper leftover",
+    "href": "/years/2013/sites/whisper/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "first",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt13-pop-youtube",
+    "star": "itt13-vine-posts",
+    "verb": "Watch leftover",
+    "href": "/years/2013/sites/youtube/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "second",
+    "id": "chrome",
+    "name": "Chrome",
+    "key": "itt13-pop2-chrome",
+    "star": "itt13-vine-posts",
+    "verb": "Tab leftover",
+    "href": "/years/2013/sites/chrome/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "second",
+    "id": "medium",
+    "name": "Medium",
+    "key": "itt13-pop2-medium",
+    "star": "itt13-vine-posts",
+    "verb": "Publish leftover",
+    "href": "/years/2013/sites/medium/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "second",
+    "id": "yikyak",
+    "name": "Yik Yak",
+    "key": "itt13-pop2-yikyak",
+    "star": "itt13-vine-posts",
+    "verb": "Yak leftover",
+    "href": "/years/2013/sites/yikyak/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "third",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt13-pop3-reddit",
+    "star": "itt13-vine-posts",
+    "verb": "Open leftover",
+    "href": "/years/2013/sites/reddit/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "third",
+    "id": "facebook",
+    "name": "Facebook",
+    "key": "itt13-pop3-facebook",
+    "star": "itt13-vine-posts",
+    "verb": "Feed leftover",
+    "href": "/years/2013/sites/facebook/index.html"
+  },
+  {
+    "year": "2013",
+    "kind": "third",
+    "id": "twitter",
+    "name": "Twitter",
+    "key": "itt13-pop3-twitter",
+    "star": "itt13-vine-posts",
+    "verb": "Tweet leftover",
+    "href": "/years/2013/sites/twitter/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "first",
+    "id": "snapchat",
+    "name": "Snapchat",
+    "key": "itt14-pop-snapchat",
+    "star": "itt14-wa-install",
+    "verb": "Snap leftover",
+    "href": "/years/2014/sites/snapchat/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "first",
+    "id": "instagram",
+    "name": "Instagram",
+    "key": "itt14-pop-instagram",
+    "star": "itt14-wa-install",
+    "verb": "Filter leftover",
+    "href": "/years/2014/sites/instagram/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "first",
+    "id": "uber",
+    "name": "Uber",
+    "key": "itt14-pop-uber",
+    "star": "itt14-wa-install",
+    "verb": "Ride leftover",
+    "href": "/years/2014/sites/uber/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "second",
+    "id": "twitter",
+    "name": "Twitter",
+    "key": "itt14-pop2-twitter",
+    "star": "itt14-wa-install",
+    "verb": "Tweet leftover",
+    "href": "/years/2014/sites/twitter/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "second",
+    "id": "musically14",
+    "name": "musical.ly",
+    "key": "itt14-pop2-musically14",
+    "star": "itt14-wa-install",
+    "verb": "Clip leftover",
+    "href": "/years/2014/sites/musically14/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "second",
+    "id": "truecrypt",
+    "name": "TrueCrypt",
+    "key": "itt14-pop2-truecrypt",
+    "star": "itt14-wa-install",
+    "verb": "Volume leftover",
+    "href": "/years/2014/sites/truecrypt/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "third",
+    "id": "facebook",
+    "name": "Facebook",
+    "key": "itt14-pop3-facebook",
+    "star": "itt14-wa-install",
+    "verb": "Feed leftover",
+    "href": "/years/2014/sites/facebook/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "third",
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "key": "itt14-pop3-wikipedia",
+    "star": "itt14-wa-install",
+    "verb": "Read leftover",
+    "href": "/years/2014/sites/wikipedia/index.html"
+  },
+  {
+    "year": "2014",
+    "kind": "third",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt14-pop3-youtube",
+    "star": "itt14-wa-install",
+    "verb": "Watch leftover",
+    "href": "/years/2014/sites/youtube/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "first",
+    "id": "instagram",
+    "name": "Instagram",
+    "key": "itt15-pop-instagram",
+    "star": "itt15-periscope",
+    "verb": "Filter leftover",
+    "href": "/years/2015/sites/instagram/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "first",
+    "id": "spotify",
+    "name": "Spotify",
+    "key": "itt15-pop-spotify",
+    "star": "itt15-periscope",
+    "verb": "Play leftover",
+    "href": "/years/2015/sites/spotify/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "first",
+    "id": "netflix",
+    "name": "Netflix",
+    "key": "itt15-pop-netflix",
+    "star": "itt15-periscope",
+    "verb": "Queue leftover",
+    "href": "/years/2015/sites/netflix/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "second",
+    "id": "meerkat",
+    "name": "Meerkat",
+    "key": "itt15-pop2-meerkat",
+    "star": "itt15-periscope",
+    "verb": "Go live leftover",
+    "href": "/years/2015/sites/meerkat/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "second",
+    "id": "applemusicsub",
+    "name": "Apple Music leftover",
+    "key": "itt15-pop2-applemusicsub",
+    "star": "itt15-periscope",
+    "verb": "Trial leftover",
+    "href": "/years/2015/sites/applemusicsub/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "second",
+    "id": "win10get",
+    "name": "Get Windows 10",
+    "key": "itt15-pop2-win10get",
+    "star": "itt15-periscope",
+    "verb": "GWX leftover",
+    "href": "/years/2015/sites/win10get/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "third",
+    "id": "vine",
+    "name": "Vine leftover",
+    "key": "itt15-pop3-vine",
+    "star": "itt15-periscope",
+    "verb": "6s leftover",
+    "href": "/years/2015/sites/vine/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "third",
+    "id": "echo",
+    "name": "Echo",
+    "key": "itt15-pop3-echo",
+    "star": "itt15-periscope",
+    "verb": "Alexa leftover",
+    "href": "/years/2015/sites/echo/index.html"
+  },
+  {
+    "year": "2015",
+    "kind": "third",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt15-pop3-youtube",
+    "star": "itt15-periscope",
+    "verb": "Watch leftover",
+    "href": "/years/2015/sites/youtube/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "first",
+    "id": "slack",
+    "name": "Slack",
+    "key": "itt16-pop-slack",
+    "star": "itt16-ig-stories",
+    "verb": "Channel leftover",
+    "href": "/years/2016/sites/slack/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "first",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt16-pop-reddit",
+    "star": "itt16-ig-stories",
+    "verb": "Open leftover",
+    "href": "/years/2016/sites/reddit/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "first",
+    "id": "netflix",
+    "name": "Netflix",
+    "key": "itt16-pop-netflix",
+    "star": "itt16-ig-stories",
+    "verb": "Queue leftover",
+    "href": "/years/2016/sites/netflix/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "second",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt16-pop2-youtube",
+    "star": "itt16-ig-stories",
+    "verb": "Watch leftover",
+    "href": "/years/2016/sites/youtube/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "second",
+    "id": "alphago",
+    "name": "AlphaGo",
+    "key": "itt16-pop2-alphago",
+    "star": "itt16-ig-stories",
+    "verb": "Match leftover",
+    "href": "/years/2016/sites/alphago/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "second",
+    "id": "assistant",
+    "name": "Assistant",
+    "key": "itt16-pop2-assistant",
+    "star": "itt16-ig-stories",
+    "verb": "Ask leftover",
+    "href": "/years/2016/sites/assistant/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "third",
+    "id": "dyn",
+    "name": "Dyn leftover",
+    "key": "itt16-pop3-dyn",
+    "star": "itt16-ig-stories",
+    "verb": "Outage leftover",
+    "href": "/years/2016/sites/dyn/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "third",
+    "id": "fblive",
+    "name": "Facebook Live",
+    "key": "itt16-pop3-fblive",
+    "star": "itt16-ig-stories",
+    "verb": "Live leftover",
+    "href": "/years/2016/sites/fblive/index.html"
+  },
+  {
+    "year": "2016",
+    "kind": "third",
+    "id": "moments",
+    "name": "Moments",
+    "key": "itt16-pop3-moments",
+    "star": "itt16-ig-stories",
+    "verb": "Moment leftover",
+    "href": "/years/2016/sites/moments/index.html"
+  },
+  {
+    "year": "2018",
+    "kind": "first",
+    "id": "reddit",
+    "name": "Reddit",
+    "key": "itt18-pop-reddit",
+    "star": "itt18-gdpr",
+    "verb": "Open leftover",
+    "href": "/years/2018/sites/reddit/index.html"
+  },
+  {
+    "year": "2018",
+    "kind": "first",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt18-pop-youtube",
+    "star": "itt18-gdpr",
+    "verb": "Watch leftover",
+    "href": "/years/2018/sites/youtube/index.html"
+  },
+  {
+    "year": "2018",
+    "kind": "first",
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "key": "itt18-pop-wikipedia",
+    "star": "itt18-gdpr",
+    "verb": "Read leftover",
+    "href": "/years/2018/sites/wikipedia/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "first",
+    "id": "amazon",
+    "name": "Amazon leftover",
+    "key": "itt19-pop-amazon",
+    "star": "itt19-disneyplus",
+    "verb": "Cart leftover",
+    "href": "/years/2019/sites/amazon/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "first",
+    "id": "facebook",
+    "name": "Facebook",
+    "key": "itt19-pop-facebook",
+    "star": "itt19-disneyplus",
+    "verb": "Feed leftover",
+    "href": "/years/2019/sites/facebook/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "first",
+    "id": "google",
+    "name": "Google",
+    "key": "itt19-pop-google",
+    "star": "itt19-disneyplus",
+    "verb": "Search leftover",
+    "href": "/years/2019/sites/google/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "second",
+    "id": "instagram",
+    "name": "Instagram",
+    "key": "itt19-pop2-instagram",
+    "star": "itt19-disneyplus",
+    "verb": "Filter leftover",
+    "href": "/years/2019/sites/instagram/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "second",
+    "id": "nyt",
+    "name": "NYT leftover",
+    "key": "itt19-pop2-nyt",
+    "star": "itt19-disneyplus",
+    "verb": "Headline leftover",
+    "href": "/years/2019/sites/nyt/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "second",
+    "id": "oculusquest",
+    "name": "Oculus Quest",
+    "key": "itt19-pop2-oculusquest",
+    "star": "itt19-disneyplus",
+    "verb": "Quest leftover",
+    "href": "/years/2019/sites/oculusquest/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "third",
+    "id": "twitter",
+    "name": "Twitter",
+    "key": "itt19-pop3-twitter",
+    "star": "itt19-disneyplus",
+    "verb": "Tweet leftover",
+    "href": "/years/2019/sites/twitter/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "third",
+    "id": "yahoo",
+    "name": "Yahoo leftover",
+    "key": "itt19-pop3-yahoo",
+    "star": "itt19-disneyplus",
+    "verb": "Portal leftover",
+    "href": "/years/2019/sites/yahoo/index.html"
+  },
+  {
+    "year": "2019",
+    "kind": "third",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt19-pop3-youtube",
+    "star": "itt19-disneyplus",
+    "verb": "Watch leftover",
+    "href": "/years/2019/sites/youtube/index.html"
+  },
+  {
+    "year": "2021",
+    "kind": "first",
+    "id": "amazon",
+    "name": "Amazon leftover",
+    "key": "itt21-pop-amazon",
+    "star": "itt21-att",
+    "verb": "Cart leftover",
+    "href": "/years/2021/sites/amazon/index.html"
+  },
+  {
+    "year": "2021",
+    "kind": "first",
+    "id": "google",
+    "name": "Google",
+    "key": "itt21-pop-google",
+    "star": "itt21-att",
+    "verb": "Search leftover",
+    "href": "/years/2021/sites/google/index.html"
+  },
+  {
+    "year": "2021",
+    "kind": "first",
+    "id": "instagram",
+    "name": "Instagram",
+    "key": "itt21-pop-instagram",
+    "star": "itt21-att",
+    "verb": "Filter leftover",
+    "href": "/years/2021/sites/instagram/index.html"
+  },
+  {
+    "year": "2021",
+    "kind": "second",
+    "id": "twitter",
+    "name": "Twitter",
+    "key": "itt21-pop2-twitter",
+    "star": "itt21-att",
+    "verb": "Tweet leftover",
+    "href": "/years/2021/sites/twitter/index.html"
+  },
+  {
+    "year": "2021",
+    "kind": "second",
+    "id": "youtube",
+    "name": "YouTube",
+    "key": "itt21-pop2-youtube",
+    "star": "itt21-att",
+    "verb": "Watch leftover",
+    "href": "/years/2021/sites/youtube/index.html"
+  }
+]

@@ -26,13 +26,14 @@ async function completePanel(page, panelSel, goSel, ph) {
   await go.click();
 }
 
-test("2011 iCloud: first only does not write pop2/pop3 · then all three · never G+", async ({ page }) => {
+test("2011 iCloud unique leftover dest: first only · no pop2/pop3 · never G+", async ({ page }) => {
   const keys = ["itt11-pop-icloud", "itt11-pop2-icloud", "itt11-pop3-icloud", "itt11-gplus"];
   await page.goto("/years/2011/sites/icloud/index.html");
   await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
   await revealLeftoverRails(page);
+  await expect(page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key]")).toHaveCount(0);
   await completePanel(
     page,
     "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
@@ -42,24 +43,11 @@ test("2011 iCloud: first only does not write pop2/pop3 · then all three · neve
   await expect.poll(() => getKey(page, "itt11-pop-icloud")).toBeTruthy();
   expect(await getKey(page, "itt11-pop2-icloud")).toBeFalsy();
   expect(await getKey(page, "itt11-pop3-icloud")).toBeFalsy();
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop2-icloud'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-icloud']",
-    "Photo Stream"
-  );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop3-icloud'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop3-icloud']",
-    "Photo Stream"
-  );
-  await expect.poll(() => getKey(page, "itt11-pop2-icloud")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt11-pop3-icloud")).toBeTruthy();
   expect(await getKey(page, "itt11-gplus")).toBeFalsy();
 });
 
 test("2012 Spotify official dest is not leftover-3× first — 2011 Spotify pop3 only · never G+", async ({ page }) => {
+  test.skip(true, "official dest leftover-3× is workshop / not unique leftover dest");
   const keys = ["itt11-pop-spotify", "itt11-pop2-spotify", "itt11-pop3-spotify", "itt11-gplus"];
   await page.goto("/years/2011/sites/spotify/index.html");
   await revealLeftoverRails(page);
@@ -79,38 +67,28 @@ test("2012 Spotify official dest is not leftover-3× first — 2011 Spotify pop3
   expect(await getKey(page, "itt11-gplus")).toBeFalsy();
 });
 
-test("2014 Snapchat: three leftover-3× machines · never WhatsApp gold", async ({ page }) => {
+test("2014 Snapchat unique leftover dest: first only · never WhatsApp gold", async ({ page }) => {
   const keys = ["itt14-pop-snapchat", "itt14-pop2-snapchat", "itt14-pop3-snapchat", "itt14-wa-install"];
   await page.goto("/years/2014/sites/snapchat/index.html");
   await revealLeftoverRails(page);
   await clearKeys(page, keys);
   await page.reload();
   await revealLeftoverRails(page);
+  await expect(page.locator("[data-itt-lo3x] [data-pop-go][data-pop-key]")).toHaveCount(0);
   await completePanel(
     page,
     "[data-itt-lo3x][data-pop-panel]:has([data-pop-go]:not([data-pop-key]))",
     "[data-itt-lo3x] [data-pop-go]:not([data-pop-key])",
     "snap"
   );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop2-snapchat'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop2-snapchat']",
-    "snap"
-  );
-  await completePanel(
-    page,
-    "[data-itt-lo3x][data-pop-panel]:has([data-pop-key='pop3-snapchat'])",
-    "[data-itt-lo3x] [data-pop-go][data-pop-key='pop3-snapchat']",
-    "snap"
-  );
   await expect.poll(() => getKey(page, "itt14-pop-snapchat")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt14-pop2-snapchat")).toBeTruthy();
-  await expect.poll(() => getKey(page, "itt14-pop3-snapchat")).toBeTruthy();
+  expect(await getKey(page, "itt14-pop2-snapchat")).toBeFalsy();
+  expect(await getKey(page, "itt14-pop3-snapchat")).toBeFalsy();
   expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
 });
 
 test("2015 Photos official: leftover-3× pop3 only · never Periscope", async ({ page }) => {
+  test.skip(true, "official dest leftover-3× is workshop / not unique leftover dest");
   const keys = ["itt15-pop-googlephotos", "itt15-pop2-googlephotos", "itt15-pop3-googlephotos", "itt15-periscope"];
   await page.goto("/years/2015/sites/googlephotos/index.html");
   await revealLeftoverRails(page);

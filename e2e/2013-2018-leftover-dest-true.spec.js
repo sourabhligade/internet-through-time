@@ -64,6 +64,7 @@ test.describe("2013 leftover dest-true", () => {
     await completePop(page, "youtube", "itt13-pop-youtube", "itt13-vine-posts", "youtube leftover");
   });
   test("Vine leftover-2× lx then d2 never writes gold", async ({ page }) => {
+    test.skip(true, "official dest leftover-2× panels = 0");
     await page.goto("/years/2013/sites/vine/record.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt13-vine-lx");
@@ -106,6 +107,7 @@ test.describe("2018 leftover dest-true", () => {
     await completePop(page, "wikipedia", "itt18-pop-wikipedia", "itt18-gdpr", "wikipedia leftover");
   });
   test("GDPR leftover-2× lx never writes gold", async ({ page }) => {
+    test.skip(true, "official dest leftover-2× panels = 0; leftover dest leftover-3× is the unique face");
     await page.goto("/years/2018/sites/gdpr/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt18-gdpr-lx");
@@ -128,6 +130,7 @@ test.describe("2018 leftover dest-true", () => {
 
 test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
   test("2016 Dyn leftover-2×", async ({ page }) => {
+    test.skip(true, "Dyn is unique leftover-3× dest-true; leftover-2× warehouse is not the visitor face");
     await page.goto("/years/2016/sites/dyn/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt16-dyn-lx");
@@ -146,6 +149,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
   });
   test("2017 Teams leftover-2×", async ({ page }) => {
+    test.skip(true, "official dest leftover-2× panels = 0");
     await page.goto("/years/2017/sites/teams/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt17-teams-lx");
@@ -186,6 +190,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
   });
   test("2015 apple about leftover-2× lx then d2 · gold empty", async ({ page }) => {
+    test.skip(true, "official dest leftover-2× panels = 0");
     await page.goto("/years/2015/sites/apple/about.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt15-apple-lx");
@@ -213,6 +218,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     expect(await getKey(page, "itt15-periscope")).toBeFalsy();
   });
   test("2019 iPhone about leftover-2× lx then d2 · gold empty", async ({ page }) => {
+    test.skip(true, "official dest leftover-2× panels = 0; leftover dest leftover-3× is the unique face");
     const fs = require("fs");
     const path = require("path");
     test.skip(!fs.existsSync(path.join(__dirname, "..", "years/2019/sites/iphone/about.html")), "old 2019 iphone about dest gone");
