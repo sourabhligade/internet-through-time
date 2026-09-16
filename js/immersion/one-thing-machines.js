@@ -99,17 +99,20 @@
     if (!entries || !entries.length) entries = [];
     function hasWandered() {
       try {
-        return sessionStorage.getItem(wanderKey) === "1";
-      } catch (e) {
-        return false;
-      }
+        if (sessionStorage.getItem(wanderKey) === "1") return true;
+      } catch (eS) { /* */ }
+      try {
+        if (localStorage.getItem(wanderKey) === "1") return true;
+      } catch (eL) { /* */ }
+      return false;
     }
     function markWandered() {
       try {
         sessionStorage.setItem(wanderKey, "1");
-      } catch (e) {
-        /* */
-      }
+      } catch (eS) { /* */ }
+      try {
+        localStorage.setItem(wanderKey, "1");
+      } catch (eL) { /* */ }
     }
     if (link) {
       link.addEventListener("click", function () {

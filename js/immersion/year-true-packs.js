@@ -21,6 +21,27 @@
   var countChecked = YX.countChecked;
   var val = YX.val;
 
+  function packHonest(doc, st) {
+    var reqs = doc.querySelectorAll("[data-pack-req]");
+    var i;
+    var need = reqs.length;
+    var have = 0;
+    for (i = 0; i < reqs.length; i++) if (reqs[i].checked) have++;
+    if (need && have < need) {
+      feedback("Tick honesty first. Incomplete never writes.", st, { error: true });
+      return false;
+    }
+    var field = doc.querySelector("[data-pack-field]");
+    if (field) {
+      var v = String(field.value || "").replace(/^\s+|\s+$/g, "");
+      if (v.length < 2) {
+        feedback("Type something first. Empty never writes.", st, { error: true });
+        return false;
+      }
+    }
+    return true;
+  }
+
   function persist(id, extra, st, okMsg) {
     var payload = { multiStep: true, real: true, pack: id, ts: Date.now() };
     var k;
@@ -100,10 +121,11 @@
     go.addEventListener("click", function () {
       var query = val(q);
       if (!query) {
-        feedback("Type something first.", st, { error: true });
+        feedback("Type something first. Empty never writes.", st, { error: true });
         return;
       }
-      var data = persist(id, { q: query.slice(0, 80) }, st, skin === "im" || skin === "call" ? "Signed on." : "Results ready.");
+      if (!packHonest(doc, st)) return;
+      var data = persist(id, { q: query.slice(0, 80), leftover: true, real: true }, st, skin === "im" || skin === "call" ? "Signed on." : "Results ready.");
       paint(doc, data, skin);
     });
   }
@@ -116,8 +138,12 @@
     var B = false;
     var card = "Ship it";
     function maybe() {
-      if (!A || !B) return;
-      var extra = { twoClick: true, a: true, b: true };
+      if (!A || !B) {
+        feedback("Finish both product clicks first. Incomplete never writes.", st, { error: true });
+        return;
+      }
+      if (!packHonest(doc, st)) return;
+      var extra = { twoClick: true, a: true, b: true, leftover: true, real: true };
       if (skin === "board") extra.cards = [{ t: card, col: "doing" }];
       if (skin === "player") extra.track = "track 01 residual";
       if (skin === "shop") extra.item = "handmade residual";
@@ -164,10 +190,11 @@
     if (start) {
       start.addEventListener("click", function () {
         if (!picked) {
-          feedback("Pick one first.", st, { error: true });
+          feedback("Pick one first. Incomplete never writes.", st, { error: true });
           return;
         }
-        var data = persist(id, { pick: picked }, st, "Selected.");
+        if (!packHonest(doc, st)) return;
+        var data = persist(id, { pick: picked, leftover: true, real: true }, st, "Selected.");
         paint(doc, data, skin === "shop" || skin === "game" ? skin : "shop");
       });
     }

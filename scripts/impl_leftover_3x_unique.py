@@ -25,6 +25,8 @@ STAR = {
     "2018": ("GDPR Manage", "itt18-gdpr"),
     "2019": ("Disney+ Continue", "itt19-disneyplus"),
     "2021": ("ATT Ask", "itt21-att"),
+    "2022": ("ChatGPT Send", "itt22-chatgpt"),
+    "2020": ("Zoom Leave", "itt20-zoom"),
 }
 
 # Leftover dests already on disk. First 3 / next 3 / last 3 = unique leftover-3×n.
@@ -84,6 +86,16 @@ UNIQUE = {
         "first": ["amazon", "google", "instagram"],
         "second": ["twitter", "youtube"],
         "third": [],
+    },
+    "2022": {
+        "first": ["amazon", "google", "instagram"],
+        "second": ["facebook", "youtube", "reddit"],
+        "third": ["wikipedia", "netflix", "nyt"],
+    },
+    "2020": {
+        "first": ["amazon", "facebook", "google"],
+        "second": ["instagram", "youtube", "slack"],
+        "third": ["reddit", "wikipedia", "nyt"],
     },
 }
 

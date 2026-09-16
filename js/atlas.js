@@ -9,7 +9,7 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  var WIPED = { "2009": 1, "2020": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
   for (y = 1994; y <= 2022; y++) {
     if (!WIPED[String(y)]) YEARS_ALL.push(String(y));
   }
@@ -32,7 +32,10 @@
 
   function href(path) {
     if (!path) return "#";
-    if (/^https?:/i.test(path) || path.charAt(0) === "#" || path.indexOf("../") === 0) return path;
+    if (/^https?:/i.test(path) || path.charAt(0) === "#") return path;
+    if (path.indexOf("/years/") === 0) return path;
+    if (path.indexOf("years/") === 0) return "/" + path;
+    if (path.indexOf("../") === 0) return path;
     return "../" + String(path).replace(/^\//, "");
   }
 
@@ -49,7 +52,7 @@
   }
 
   function yearHome(year) {
-    return "years/" + year + "/";
+    return "/years/" + year + "/";
   }
 
   function isOpen(year) {
@@ -274,14 +277,8 @@
       if (stamp) cls += " stamped";
       if (yr === selected) cls += " selected";
       listed[yr] = true;
-      return (
-        '<button type="button" class="' +
-        cls +
-        '" data-atlas-year="' +
-        yr +
-        '" title="' +
-        esc(rec.thesis || yr) +
-        '"><span class="sy">' +
+      var inner =
+        '<span class="sy">' +
         yr +
         "</span>" +
         (open && rec.gold
@@ -290,7 +287,31 @@
             ? '<span class="sg">boarded</span>'
             : "") +
         (isLean(yr) && open ? '<span class="sl">lean door</span>' : "") +
-        (stamp ? '<span class="ss">stamped</span>' : "") +
+        (stamp ? '<span class="ss">stamped</span>' : "");
+      if (open && !wiped) {
+        return (
+          '<a class="' +
+          cls +
+          '" data-atlas-year="' +
+          yr +
+          '" href="' +
+          esc(href(yearHome(yr))) +
+          '" title="' +
+          esc(rec.thesis || yr) +
+          '">' +
+          inner +
+          "</a>"
+        );
+      }
+      return (
+        '<button type="button" class="' +
+        cls +
+        '" data-atlas-year="' +
+        yr +
+        '" title="' +
+        esc(rec.thesis || yr) +
+        '">' +
+        inner +
         "</button>"
       );
     }
@@ -371,7 +392,7 @@
     }
 
     html += "<p class='doors'>";
-    html += a(yearHome(year), "Enter " + year, "start-btn");
+    html += a(yearHome(year), "Enter " + year + " →", "start-btn start-primary");
     html += " ";
     html += a("years/" + year + "/pages/home.html", "Starting Point");
     html += " · ";
@@ -708,7 +729,7 @@
     html += "<b>" + (data.threads || []).length + "</b> follow-a-site threads · ";
     html += "<b>" + (data.trails || []).length + "</b> tours";
     html += "</p>";
-    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway ends at 2022. 2020 is wiped.</p>";
+    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway ends at 2022. Click a year. That year opens.</p>";
 
     html += '<details class="atlas-layer" id="atlas-all-golds"><summary>One-thing golds <span class="n">' + golds.length + "</span></summary><ol>";
     golds.forEach(function (g) {
@@ -783,6 +804,14 @@
     try {
       if (history.replaceState) history.replaceState(null, "", "#year-" + year);
     } catch (e) { /* */ }
+    var panel = $("atlas-year");
+    if (panel && typeof panel.scrollIntoView === "function") {
+      try {
+        panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      } catch (e2) {
+        panel.scrollIntoView(true);
+      }
+    }
   }
 
   function bind() {
@@ -791,7 +820,10 @@
       spine.addEventListener("click", function (e) {
         var t = e.target;
         while (t && t !== spine && !(t.getAttribute && t.getAttribute("data-atlas-year"))) t = t.parentNode;
-        if (t && t.getAttribute) selectYear(t.getAttribute("data-atlas-year"));
+        if (!t || !t.getAttribute) return;
+        var y = t.getAttribute("data-atlas-year");
+        if (!isOpen(y) || isGap(y)) return;
+        window.location.href = "/years/" + y + "/";
       });
     }
     var find = $("atlas-find");
