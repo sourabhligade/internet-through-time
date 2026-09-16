@@ -13,11 +13,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Hub-open years. Branch museum/1994-2020-lean.
-# Hub 28 years open (1994–2008 + 2010–2022).
+# Hub 27 years open (1994–2008 + 2010–2021).
 # 2009 boarded (tree stays, year-shell is a boarded room, no hub card).
-# 2023–2025 wiped (no tree).
+# 2022–2025 wiped (no tree).
 _BOARDED = {"2009"}
-_WIPED = {"2023", "2024", "2025"}
+_WIPED = {"2022", "2023", "2024", "2025"}
 # Back-compat: older scripts imported _WIPED as “not a hub year”.
 _NOT_SHIP = _BOARDED | _WIPED
 SHIP_YEARS: list[str] = [

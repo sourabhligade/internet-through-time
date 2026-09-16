@@ -1721,51 +1721,6 @@
   "mailPh": "you@example.com",
   "hasTaskbar": true,
   "maximized": true
-},
-  "2022": {
-  "title": "Chrome habit — 2022",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-    "period-2022.css"
-  ],
-  "bodyClass": "year-2022 os-win10 browser-chrome-habit",
-  "boot": "browser-2022.js",
-  "dir": [
-    { "go": "pages/home.html", "label": "Start" },
-    { "go": "sites/chatgpt/index.html", "label": "1 ChatGPT" },
-    { "go": "sites/wordle/index.html", "label": "2 Wordle" },
-    { "go": "sites/twitter/index.html", "label": "3 Twitter" },
-    { "go": "sites/bereal/index.html", "label": "4 BeReal" },
-    { "go": "sites/iphone/14.html", "label": "5 Island" },
-    { "go": "sites/ftx/index.html", "label": "6 FTX" },
-    { "go": "sites/mastodon/index.html", "label": "7 Mastodon" },
-    { "go": "sites/tiktok/index.html", "label": "8 TikTok" },
-    { "go": "sites/windows11/index.html", "label": "9 Win11" },
-    { "go": "sites/playable/game.html", "label": "10 Game" }
-  ],
-  "chrome": "2007",
-  "toolbar": "chrome22",
-  "family": "chrome",
-  "location": "http://home.microsoft.com/intl/web2022/",
-  "prefHome": "http://home.microsoft.com/intl/web2022/",
-  "yearLabel": "2022 · Windows 10 mass · Chrome habit · ChatGPT Send",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2022 thesis: you type to a model · GPT-4 is the trap · Send is the save. ChatGPT · Wordle leftover · Twitter bird leftover · BeReal leftover.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
 }
 };
 })(typeof window !== "undefined" ? window : this);

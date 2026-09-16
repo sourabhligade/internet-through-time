@@ -356,18 +356,6 @@
  " <a href=\"../sites/meta/index.html\" style=\"color:#1565c0\">Meta rename leftover</a> — app still Facebook",
  " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
  ]
-},
- "2022": {
- "href": "../sites/chatgpt/index.html",
- "label": "★ One-thing · ChatGPT Send REAL",
- "items": [
- " <a href=\"about.html\" style=\"color:#1565c0\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
- " <a href=\"../sites/chatgpt/index.html\" style=\"color:#1565c0\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
- " <a href=\"../sites/wordle/index.html\" style=\"color:#1565c0\">Wordle leftover</a> — NYT 31 Jan",
- " <a href=\"../sites/twitter/index.html\" style=\"color:#1565c0\">Twitter bird leftover</a> — X is 2023",
- " <a href=\"../sites/bereal/index.html\" style=\"color:#1565c0\">BeReal leftover</a> — 2-min drop",
- " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
- ]
 }
 };
 })(typeof window !== "undefined" ? window : this);

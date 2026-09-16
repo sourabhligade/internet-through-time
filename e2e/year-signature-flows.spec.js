@@ -923,38 +923,5 @@ test.describe('year-signature 2021', () => {
   });
 });
 
-test.describe('year-signature 2022', () => {
-  test('ChatGPT Plus never writes · prompt + Send → itt22-chatgpt official', async ({ page }) => {
-    skipIfWiped('2022');
-    await enterYear(page, '2022');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt22-chatgpt');
-        localStorage.removeItem('itt21-att');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2022', 'sites/chatgpt/index.html');
-    const frame = contentFrame(page);
-    await frame.locator('[data-official-trap]').first().click();
-    expect(await page.evaluate(() => localStorage.getItem('itt22-chatgpt'))).toBeFalsy();
-    const verb = frame.locator('[data-official-verb-host] [data-official-verb]');
-    await verb.click();
-    expect(await page.evaluate(() => localStorage.getItem('itt22-chatgpt'))).toBeFalsy();
-    await frame.locator('[data-official-verb-host] [data-official-need]').fill('explain this');
-    const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await verb.click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt22-chatgpt')), { timeout: 8000 })
-      .toBeTruthy();
-    const raw = await page.evaluate(() => localStorage.getItem('itt22-chatgpt'));
-    const blob = JSON.parse(raw || 'null');
-    expect(blob && blob.official).toBe(true);
-    expect(await page.evaluate(() => localStorage.getItem('itt21-att'))).toBeFalsy();
-  });
-});
 
 

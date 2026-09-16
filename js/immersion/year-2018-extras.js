@@ -120,6 +120,11 @@
   }
 
   function ticksReady(doc, st) {
+    var field = doc.querySelector("[data-official-need]");
+    if (field && String(field.value || "").replace(/^\s+|\s+$/g, "").length < 2) {
+      feedback("Type something first. Incomplete never writes.", st, { error: true });
+      return false;
+    }
     var els = doc.querySelectorAll("[data-official-req]");
     if (!els.length) return true;
     var n = 0;

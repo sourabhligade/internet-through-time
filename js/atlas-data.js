@@ -57,8 +57,7 @@
       "2019": "GDPR is 2018 gold. Zoom Leave is 2020. Reels are not this year.",
       "2020": "Disney+ Continue is 2019. ATT Ask is 2021. ChatGPT is 2022. No case-count dashboard.",
 
-      "2021": "Apps keep their names. Win11 is leftover. ChatGPT is 2022.",
-      "2022": "Send writes. GPT-4 / X / Threads are not this year."},
+      "2021": "Apps keep their names. Win11 is leftover. ChatGPT dest never."},
 
     /* L1 nostalgia — visitor postcard only. Open years. Wiped years omit this. */
     remember: {
@@ -89,8 +88,7 @@
       "2018": "The banner was the door. Accept All never wrote. Manage did. The loops changed their name.",
       "2019": "You subscribed. The Mouse became a stream. $6.99. The Mandalorian Chapter 1.",
 
-      "2021": "The company was renamed. Facebook, Instagram, WhatsApp, and Messenger kept their names.",
-      "2022": "You typed to a model. Send wrote. GPT-4 did not. The bird was still a bird."
+      "2021": "The company was renamed. Facebook, Instagram, WhatsApp, and Messenger kept their names."
     },
 
     /* Guided 6 for years whose Starting Point is inline (start-data.js stops at 2009). */
@@ -166,14 +164,6 @@
         { label: "Copilot waitlist — not ChatGPT", href: "years/2021/sites/copilot/index.html" },
         { label: "Meta rename leftover — app still Facebook", href: "years/2021/sites/meta/index.html" },
         { label: "Year flow map", href: "years/2021/pages/map.html" }
-      ],
-      "2022": [
-        { label: "About 2022", href: "years/2022/pages/about.html" },
-        { label: "ChatGPT Send — empty / GPT-4 never writes", href: "years/2022/sites/chatgpt/index.html" },
-        { label: "Wordle leftover — NYT 31 Jan", href: "years/2022/sites/wordle/index.html" },
-        { label: "Twitter bird leftover — X is 2023", href: "years/2022/sites/twitter/index.html" },
-        { label: "BeReal leftover — 2-min drop", href: "years/2022/sites/bereal/index.html" },
-        { label: "Year flow map", href: "years/2022/pages/map.html" }
       ]
       },
 
@@ -464,17 +454,6 @@
           { label: "Meta rename leftover", href: "years/2021/sites/meta/index.html" }
         ],
         game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
-      },
-      "2022": {
-        era: "Type · Send · GPT-4 never writes",
-        thesis: "Lean door. Send is the save. Empty and GPT-4 never write. Desktop stays Win10 + Chrome habit.",
-        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
-        guided: [
-          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" },
-          { label: "Twitter bird leftover", href: "years/2022/sites/twitter/index.html" },
-          { label: "BeReal leftover", href: "years/2022/sites/bereal/index.html" }
-        ],
-        game: { label: "Prompt Queue", href: "years/2022/sites/playable/game.html" }
       }
       },
 

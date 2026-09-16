@@ -332,18 +332,6 @@
       era: "The phone asks first. ChatGPT dest never.",
       famous: "Five Letter leftover",
       accent: "#1565c0"
-    },
-    "2022": {
-      id: "prompt",
-      title: "Prompt Queue",
-      href: "game.html",
-      key: "itt22-game-prompt",
-      inspire: "ChatGPT first week — type, send, wait",
-      blurb: "Year game. Star stays ChatGPT Send.",
-      why: "The star is Send. GPT-4 is the trap.",
-      era: "Win10 + Chrome habit. X / Threads are next years.",
-      famous: "Prompt Queue",
-      accent: "#1565c0"
     }
     };
 })(typeof window !== "undefined" ? window : this);

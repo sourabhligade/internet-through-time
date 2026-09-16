@@ -43,8 +43,7 @@
     "/years/2018/sites/gdpr/": { href: "", note: "[failed-final] GDPR Manage · WDM year-index is not a named exhibit" },
     "/years/2019/sites/disneyplus/": { href: "", note: "[failed-final] Disney+ Continue · WDM year-index is not a named exhibit" },
     "/years/2020/sites/zoom/": { href: "", note: "[failed-final] Zoom Leave · WDM year-index is not a named exhibit" },
-    "/years/2021/sites/att/": { href: "", note: "[failed-final] ATT Ask · WDM year-index is not a named exhibit" },
-    "/years/2022/sites/chatgpt/": { href: "", note: "[failed-final] ChatGPT Send · WDM year-index is not a named exhibit" }
+    "/years/2021/sites/att/": { href: "", note: "[failed-final] ATT Ask · WDM year-index is not a named exhibit" }
   };
 
   function paintStarCite(doc) {

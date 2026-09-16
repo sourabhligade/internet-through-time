@@ -36,7 +36,6 @@ const ENGINES = {
   2017: ["snake", "tetris"],
   2018: ["memory", "pong"],
   2019: ["snake", "breakout"],
-  2022: ["snake", "breakout"],
 };
 
 function prefix(year) {

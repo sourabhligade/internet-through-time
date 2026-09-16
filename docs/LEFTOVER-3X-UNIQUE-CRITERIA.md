@@ -40,7 +40,7 @@ A leftover-3× flow **fails** if any row is N. One miss is a fail.
 | **U3** | Unique verb | Period action for **that** dest | Shared cream host + different H1 only · “Go Safari” cloned |
 | **U4** | No official overlap | Leftover dest ∉ official 10 hrefs | Third strip is Yahoo / Fortnite / TikTok / GDPR |
 | **U5** | Count | Official 10 + leftover dests = a **set** | 150 leftover-2× clone keys as “unique” |
-| **U6** | Star | Only the year chip writes gold | Leftover-3× writes `itt13-vine-posts` / `itt18-gdpr` / `itt22-chatgpt` |
+| **U6** | Star | Only the year chip writes gold | Leftover-3× writes `itt13-vine-posts` / `itt18-gdpr` / `itt21-att` |
 | **U7** | Incomplete | Empty / 0 ticks / no pick never writes | Any click writes leftover key |
 | **U8** | Trap | Official-as-gold / neighbor year never writes leftover | Trap = save |
 | **U9** | Fold | Official dest leftover-3× hidden unless `?deep=1` · leftover dest face visible without `?deep=1` · Starting Point leftover-3× not first paint | Yellow leftover-3× on GDPR first paint · leftover dest face folded |

@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2022": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -200,9 +200,6 @@
     "2021": yearVisitTour("2021",
       { path: "sites/att/index.html", label: "ATT Ask", blurb: "Star. Allow never writes.", match: "/att/" },
       { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay leftover.", match: "/signal/" }),
-    "2022": yearVisitTour("2022",
-      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Star. Empty / GPT-4 never write.", match: "/chatgpt/" },
-      { path: "sites/wordle/index.html", label: "Wordle leftover", blurb: "NYT 31 Jan leftover.", match: "/wordle/" }),
   };
 
   var TRAILS = {
@@ -217,7 +214,7 @@
 
   (function registerYearStartTrails() {
     var y;
-    for (y = 1994; y <= 2022; y++) {
+    for (y = 1994; y <= 2021; y++) {
       var ys = String(y);
       if (WIPED[ys]) continue;
       var steps = YEAR_STARTS[ys];
@@ -658,7 +655,7 @@
 
   function isLiveYear(year) {
     year = String(year || "");
-    if (!/^(199[4-9]|200[0-9]|201[0-9]|202[0-2])$/.test(year)) return false;
+    if (!/^(199[4-9]|200[0-9]|201[0-9]|202[0-1])$/.test(year)) return false;
     return !WIPED[year];
   }
 
@@ -674,7 +671,7 @@
     if (!root) return;
     var years = [];
     var y;
-    for (y = 1994; y <= 2022; y++) {
+    for (y = 1994; y <= 2021; y++) {
       if (WIPED[String(y)]) continue;
       years.push(String(y));
     }

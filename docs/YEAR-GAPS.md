@@ -164,7 +164,7 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 
 `js/config/2017.js` `locationHints` still has `sites/whatsapp/index.html`. **`years/2017/sites/whatsapp/` does not exist.** Only remaining dead hint after dest-lock strip.
 
-`FLOW-IMPLEMENT-CHECKLIST.md` **A9** checked `[x]` “No 2022+ year tree — `years/2022` absent.” Disk: **`years/2022/` exists, 85 dests.** Checklist is wrong.
+`FLOW-IMPLEMENT-CHECKLIST.md` **A9** · **2022 wiped** · no tree · no hub card. Hallway ends at 2021.
 
 `UNDONE.md` still says 2017 dest folders **222** and leftover-official **11,336**. Disk: 2017 **40** dests; leftover-official matrix **166**.
 

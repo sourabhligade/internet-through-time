@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) {
+for (let y = 1994; y <= 2021; y++) {
   const home = path.join(__dirname, '..', 'years', String(y), 'pages', 'home.html');
   if (fs.existsSync(home) && isLiveYear(String(y))) YEARS.push(String(y));
 }

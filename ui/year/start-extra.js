@@ -55,7 +55,6 @@
 
 
 
- "2021": "<p class=\"itt-felt-trail\">Ask App Not to Track: <a href=\"../sites/att/index.html\">ATT</a>— Allow never writes.</p>",
- "2022": "<p class=\"itt-felt-trail\">ChatGPT Send: <a href=\"../sites/chatgpt/index.html\">Send</a>— empty / GPT-4 never writes.</p>"
+ "2021": "<p class=\"itt-felt-trail\">Ask App Not to Track: <a href=\"../sites/att/index.html\">ATT</a>— Allow never writes.</p>"
 };
 })(typeof window !== "undefined" ? window: this);

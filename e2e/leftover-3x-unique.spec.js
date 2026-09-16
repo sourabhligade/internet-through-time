@@ -120,32 +120,3 @@ test("2020 unique leftover-3×n is 9 dests dest-disjoint from official 10", () =
   }
 });
 
-test("2022 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
-  const rows = ROWS.filter((r) => r.year === "2022");
-  expect(rows.map((r) => r.id)).toEqual([
-    "amazon",
-    "google",
-    "instagram",
-    "facebook",
-    "youtube",
-    "reddit",
-    "wikipedia",
-    "netflix",
-    "nyt",
-  ]);
-  const official = new Set([
-    "chatgpt",
-    "wordle",
-    "twitter",
-    "bereal",
-    "iphone",
-    "ftx",
-    "mastodon",
-    "tiktok",
-    "windows11",
-    "playable",
-  ]);
-  for (const r of rows) {
-    expect(official.has(r.id), r.id + " must not be official dest").toBe(false);
-  }
-});

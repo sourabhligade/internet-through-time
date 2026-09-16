@@ -95,26 +95,6 @@ test("2011 Spotify extras attach · SKU+ticks write itt11-spotify · stream trap
   expect(await getKey(page, "itt11-gplus")).toBeFalsy();
 });
 
-test("2022 BeReal dest-first · field-only never writes · both cams then verb writes", async ({ page }) => {
-  await page.goto("/years/2022/sites/bereal/index.html");
-  await page.evaluate(() => {
-    localStorage.removeItem("itt22-bereal");
-    localStorage.removeItem("itt22-chatgpt");
-  });
-  await page.reload();
-  const verb = page.locator("[data-official-verb]").first();
-  const field = page.locator("[data-official-need]").first();
-  if ((await field.count()) > 0) await field.fill("still leftover");
-  await verb.click();
-  expect(await getKey(page, "itt22-bereal"), "field-only").toBeFalsy();
-  const cams = page.locator(".be22-cam");
-  await expect(cams).toHaveCount(2);
-  await cams.nth(0).click();
-  await cams.nth(1).click();
-  await verb.click();
-  await expect.poll(() => getKey(page, "itt22-bereal")).toBeTruthy();
-  expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-});
 
 test("2005 Starting Point title is 2005 not 2004", async ({ page }) => {
   await page.goto("/years/2005/");

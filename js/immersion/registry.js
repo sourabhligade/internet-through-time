@@ -462,18 +462,7 @@
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
       "immersion/one-thing-machines.js"
-    ],
-    "2022": [
-      "immersion/no-mock-gfc.js",
-      "immersion/no-mock-sopa.js",
-      "immersion/no-mock-uber.js",
-      "immersion/no-mock-wave.js",
-      "immersion/no-mock-fb-connect.js",
-      "immersion/no-mock-culture-ack.js",
-      "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js",
-      "immersion/year-2022-extras.js"
-    ],
+    ]
   };
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};

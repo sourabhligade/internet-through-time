@@ -100,10 +100,9 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2019/` | **Live lean door** — Disney+ Continue · 38 dests |
 | `/years/2020/` | **Live lean door** — Zoom Leave `itt20-zoom` · 38 dests |
 | `/years/2021/` | **Live lean door** — ATT Ask `itt21-att` · leftover dest faces |
-| `/years/2022/` | **Live lean door** — ChatGPT Send `itt22-chatgpt` · 85 dests |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2011 + 2013–2019 + 2021–2022. Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2020 is live lean** · Zoom Leave. **2023+ wiped.** 2013 star = Vine 6s. 2018 star = GDPR Manage. 2019 star = Disney+ Continue. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
+**Lean doors:** 2007 + 2011 + 2013–2021. Hub is **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2020 is live lean** · Zoom Leave. **2022–2025 wiped.** 2013 star = Vine 6s. 2018 star = GDPR Manage. 2019 star = Disney+ Continue. 2021 star = ATT Ask.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md).  
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).  

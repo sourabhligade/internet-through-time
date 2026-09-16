@@ -478,18 +478,6 @@
       {"n": 8, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt21-win10", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook leftover"},
       {"n": 9, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt21-pop-facebook", "nextHref": "sites/playable/game.html", "nextLabel": "Five Letter"},
       {"n": 10, "name": "Five Letter", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt21-game-five", "nextHref": "sites/att/index.html", "nextLabel": "ATT Ask"}
-    ],
-    "2022": [
-      {"n": 1, "name": "ChatGPT Send", "href": "sites/chatgpt/index.html", "match": "/chatgpt/", "whenKey": "itt22-chatgpt", "nextHref": "sites/wordle/index.html", "nextLabel": "Wordle leftover"},
-      {"n": 2, "name": "Wordle leftover", "href": "sites/wordle/index.html", "match": "/wordle/", "whenKey": "itt22-wordle", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter bird leftover"},
-      {"n": 3, "name": "Twitter bird leftover", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt22-twitter", "nextHref": "sites/bereal/index.html", "nextLabel": "BeReal leftover"},
-      {"n": 4, "name": "BeReal leftover", "href": "sites/bereal/index.html", "match": "/bereal/", "whenKey": "itt22-bereal", "nextHref": "sites/iphone/14.html", "nextLabel": "Dynamic Island leftover"},
-      {"n": 5, "name": "Dynamic Island leftover", "href": "sites/iphone/14.html", "match": "/iphone/", "whenKey": "itt22-island", "nextHref": "sites/ftx/index.html", "nextLabel": "FTX leftover"},
-      {"n": 6, "name": "FTX leftover", "href": "sites/ftx/index.html", "match": "/ftx/", "whenKey": "itt22-ftx", "nextHref": "sites/mastodon/index.html", "nextLabel": "Mastodon leftover"},
-      {"n": 7, "name": "Mastodon leftover", "href": "sites/mastodon/index.html", "match": "/mastodon/", "whenKey": "itt22-mastodon", "nextHref": "sites/tiktok/index.html", "nextLabel": "TikTok leftover"},
-      {"n": 8, "name": "TikTok leftover", "href": "sites/tiktok/index.html", "match": "/tiktok/", "whenKey": "itt22-tiktok", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11 leftover"},
-      {"n": 9, "name": "Windows 11 leftover", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt22-win11", "nextHref": "sites/playable/game.html", "nextLabel": "Prompt Queue"},
-      {"n": 10, "name": "Prompt Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt22-game-prompt", "nextHref": "sites/chatgpt/index.html", "nextLabel": "ChatGPT Send"}
     ]
   };
 })(typeof window !== "undefined" ? window : this);

@@ -234,9 +234,3 @@
 /years/2021/pages/home.html
 /years/2021/pages/about.html
 /years/2021/sites/att/index.html
-/years/2022/
-/years/2022/pages/home.html
-/years/2022/pages/about.html
-/years/2022/pages/map.html
-/years/2022/sites/chatgpt/index.html
-/years/2022/sites/playable/game.html

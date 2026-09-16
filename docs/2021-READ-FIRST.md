@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-10  
 **Status:** **LIVE lean door.** Dest folders **294** · HTML **380** (freeze 98 / HTML cap 184 are stale). Leftover **2×** on dests. Star `itt21-att`. Do not dest-farm.  
-**Parent:** 2020 Zoom Leave `itt20-zoom`. **Child:** 2022 ChatGPT Send `itt22-chatgpt`.  
+**Parent:** 2020 Zoom Leave `itt20-zoom`. **2022 wiped** — no ChatGPT dest.  
 **Git only if asked.**
 
 ## One line
@@ -30,7 +30,7 @@
 | Scale | ITU **4.9B / 63%** on About · not websites |
 | First door | **CUT-OPEN lean** · hub card · atlas tick · leftover 2× |
 | Pixels | never invent brand art · `[failed-final]` |
-| Neighbors | `itt20-zoom` / `itt22-*` stay empty |
+| Neighbors | `itt20-zoom` stays empty · 2022 wiped |
 
 ## Dual-cite
 
