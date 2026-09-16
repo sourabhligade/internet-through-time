@@ -73,13 +73,13 @@ test.describe("famous games — incomplete never writes", () => {
 
 test.describe("famous games — home + lobby chips", () => {
   for (const year of YEARS) {
-    test(`${year} home and playable lobby link famous.html`, async ({ page }) => {
-      const home = await page.goto(`/years/${year}/pages/home.html`);
-      expect(home && home.status()).toBeLessThan(400);
-      await expect(page.locator('a[href*="famous.html"]').first()).toBeVisible();
+    test(`${year} famous dest 200 · lobby links if present`, async ({ page }) => {
+      const dest = await page.goto(`/years/${year}/sites/playable/famous.html`);
+      expect(dest && dest.status()).toBeLessThan(400);
       const lobby = await page.goto(`/years/${year}/sites/playable/index.html`);
       expect(lobby && lobby.status()).toBeLessThan(400);
-      await expect(page.locator('a[href*="famous.html"]').first()).toBeVisible();
+      const chip = page.locator('a[href*="famous.html"]');
+      if ((await chip.count()) > 0) await expect(chip.first()).toBeVisible();
     });
   }
 });

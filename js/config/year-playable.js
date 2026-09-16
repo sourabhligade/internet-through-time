@@ -308,6 +308,18 @@
       famous: "Safari Queue",
       accent: "#0a246a"
     },
+    "2020": {
+      id: "leaveroom",
+      title: "Leave Room leftover",
+      href: "game.html",
+      key: "itt20-game-leave",
+      inspire: "Zoom Leave-class leftover — mute / chat then leave",
+      blurb: "Year game. Star stays Zoom Leave.",
+      why: "2020 leftover cabinet. The star is still Zoom Leave.",
+      era: "Win10 + Chrome habit. No invented ILS.",
+      famous: "Leave Room leftover",
+      accent: "#2d8cff"
+    },
     "2019": {
       id: "continuerow",
       title: "Continue Row",

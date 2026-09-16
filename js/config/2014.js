@@ -14,6 +14,7 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "sites/applepay/index.html",
     "sites/facebook/index.html",
     "sites/heartbleed/index.html",
     "sites/icebucket/index.html",

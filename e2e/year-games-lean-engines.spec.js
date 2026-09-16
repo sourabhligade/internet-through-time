@@ -36,7 +36,9 @@ test.describe("lean year game engines", () => {
     expect(await getKey(page, "itt13-game-loopsix")).toBeFalsy();
     await page.locator("[data-peg-trap]").click();
     expect(await getKey(page, "itt13-game-loopsix")).toBeFalsy();
-    await page.locator("[data-peg-city]").first().click();
+    const beats = page.locator("[data-peg-city]");
+    const n = await beats.count();
+    for (let i = 0; i < Math.max(n, 6); i++) await beats.nth(i % n).click();
     await expect.poll(() => getKey(page, "itt13-game-loopsix"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt13-game-loopsix-lx")).toBeFalsy();
     const blob = JSON.parse((await getKey(page, "itt13-game-loopsix")) || "{}");

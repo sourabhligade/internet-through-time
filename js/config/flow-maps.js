@@ -1203,6 +1203,11 @@
             "name": "Year flow map",
             "href": "pages/map.html",
             "do": "This UX tree"
+          },
+          {
+            "name": "Skip-Intro Runner",
+            "href": "sites/playable/game.html",
+            "do": "Year game leftover · Snap is official n=10"
           }
         ]
       },
