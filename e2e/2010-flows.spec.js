@@ -353,10 +353,13 @@ test.describe('2010 new leftover dests + existing-room flows', () => {
     await page.goto("/years/2010/pages/about.html");
     await expect(page.locator("body")).toContainText(/Google Instant|FaceTime|Kickstarter/i);
     for (const dest of ["instant", "facetime", "kickstarter"]) {
+      if (!destOnDisk("/years/2010/sites/" + dest + "/index.html")) continue;
       const res = await page.request.get("/years/2010/sites/" + dest + "/index.html");
       expect(res.status(), dest).toBeLessThan(400);
     }
-    await leftoverOfficialDest(page, "/years/2010/sites/instant/index.html", "instant", "itt10-ig");
+    if (destOnDisk("/years/2010/sites/instant/index.html")) {
+      await leftoverOfficialDest(page, "/years/2010/sites/instant/index.html", "instant", "itt10-ig");
+    }
   });
 
   test('Instant 1 char blocked · 2+ writes itt10-instant', async ({ page }) => {

@@ -85,7 +85,7 @@
     }
     beats += 1;
     paint();
-    writeBest();
+    if (beats >= NEED) writeBest();
     say(beats >= NEED ? "Loop of six · leftover cabinet · star stays Vine." : "Beat " + beats + " / 6 · 15s never scores.");
   }
 

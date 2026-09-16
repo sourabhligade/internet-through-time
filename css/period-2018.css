@@ -1,3 +1,4 @@
+@import url("itt-leftover-fold.css");
 /**
  * 2018 period sheet. Does not import 2017 → 1995 navy / XP.
  * Year shell 2018–2021 share the Chrome-habit hide-list (2022 has its own sheet).
@@ -27,12 +28,12 @@
 .gdpr18-page h1 { font-size: 22px; margin: 0 0 8px; }
 .gdpr18-page .gdpr18-lede { color: #333; line-height: 1.5; }
 .gdpr18-banner {
-  position: fixed;
+  position: sticky;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 4;
-  margin: 0;
+  margin: 16px 0 0;
   padding: 14px 20px 16px;
   background: #fff;
   color: #202124;

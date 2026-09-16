@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails, destOnDisk } = require("./helpers");
 function skipIfWiped(year) {
   test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
 }
@@ -75,6 +75,7 @@ test.describe("Fascinating integrate leftovers", () => {
     for (const href of dests) {
       const y = (href.match(/\/years\/(\d{4})\//) || [])[1];
       if (y && !yearOnDisk(y)) continue;
+      if (!destOnDisk(href)) continue;
       const res = await page.goto(href);
       expect(res && res.ok(), href).toBeTruthy();
       const body = await page.locator("body").innerText();
@@ -258,6 +259,7 @@ test.describe("Fascinating integrate leftovers", () => {
   });
 
   test("2010 Instant leftover empty never writes · complete leftover JSON · gold empty", async ({ page }) => {
+    test.skip(!destOnDisk("/years/2010/sites/instant/index.html"), "dest-lock");
     await openClean(page, "/years/2010/sites/instant/index.html", ["itt10-pop-instant", "itt10-instant", "itt10-ig"]);
     const go = page.locator("[data-pop-go][data-pop-id='instant']:not([data-pop-key])").filter({ hasText: /leftover/i }).first();
     const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();

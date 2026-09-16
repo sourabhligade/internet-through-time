@@ -12,6 +12,18 @@
   /* Year About / map / Starting Point: fill the iframe. Dest rooms stay period. */
   try {
     var _p = String((typeof location !== "undefined" && location.pathname) || "");
+    if (/\/years\/\d{4}\//.test(_p) && !document.querySelector('meta[name="viewport"]')) {
+      var _vp = document.createElement("meta");
+      _vp.name = "viewport";
+      _vp.content = "width=device-width, initial-scale=1";
+      (document.head || document.documentElement).insertBefore(_vp, (document.head && document.head.firstChild) || null);
+    }
+    if (/\/years\/\d{4}\/sites\//.test(_p) && !document.getElementById("itt-dest-resize")) {
+      var _ds = document.createElement("style");
+      _ds.id = "itt-dest-resize";
+      _ds.textContent = "img,table,video{max-width:100%;height:auto}table{box-sizing:border-box}";
+      (document.head || document.documentElement).appendChild(_ds);
+    }
     if (/\/years\/\d{4}\/pages\//.test(_p) && !document.getElementById("itt-page-fill")) {
       var _s = document.createElement("style");
       _s.id = "itt-page-fill";
@@ -143,7 +155,10 @@
       ["pinterest", "immersion/pinterest.js"],
       ["feedburner", "immersion/feedburner.js"],
       ["podcasts", "immersion/podcasts.js"],
-      ["spotify", "immersion/spotify.js"],
+      /* 2008 Europe dest must not load 2011 US invite engine */
+      path.indexOf("/years/2008/") === -1 && path.indexOf("/2008/") === -1
+        ? ["spotify", "immersion/spotify.js"]
+        : ["__itt_skip_spotify__", ""],
       ["googleplus", "immersion/googleplus.js"],
       ["snapchat", "immersion/snapchat.js"],
       ["siri", "immersion/siri.js"],
@@ -267,14 +282,19 @@
       if (typeof document !== "undefined" && document.querySelector) {
         var hookEngines = [
           ["[data-appstore-install], [data-appstore-apps], [data-appstore-catalog]", "immersion/appstore.js"],
-          ["[data-spotify-invite], [data-spotify-plan], [data-spotify-play], [data-spotify-ack]", "immersion/spotify.js"],
           ["[data-hulu-play]", "immersion/hulu.js"],
           ["[data-itunes-buy]", "immersion/itunes.js"],
           ["form[data-tc-open], [data-tc-open]", "immersion/techcrunch.js"]
         ];
+        if (path.indexOf("/years/2008/") === -1 && path.indexOf("/2008/") === -1) {
+          hookEngines.push([
+            "[data-spotify-invite], [data-spotify-plan], [data-spotify-play], [data-spotify-ack]",
+            "immersion/spotify.js"
+          ]);
+        }
         var hi;
         for (hi = 0; hi < hookEngines.length; hi++) {
-          if (document.querySelector(hookEngines[hi][0])) addEngine(hookEngines[hi][1]);
+          if (hookEngines[hi] && document.querySelector(hookEngines[hi][0])) addEngine(hookEngines[hi][1]);
         }
       }
     } catch (eHook) { /* */ }

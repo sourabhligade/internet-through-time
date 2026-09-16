@@ -189,6 +189,14 @@
           var minAttr = field.getAttribute("data-official-min");
           if (minAttr && /^\d+$/.test(minAttr)) minNeed = parseInt(minAttr, 10);
         }
+        var productReady = "";
+        try {
+          productReady = doc.documentElement.getAttribute("data-official-product-ready") || "";
+        } catch (ePr) { /* */ }
+        if (productReady === "0") {
+          say(st, "Do the dest first. Incomplete never writes.", true);
+          return;
+        }
         if (field && v.length < minNeed) {
           say(
             st,

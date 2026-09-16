@@ -42,15 +42,15 @@
       docs: true,
       aws: true
     },
-    navSubtitle: "IE 6 · Windows XP · Upload · Maps · Reddit",
+    navSubtitle: "IE 6 · Windows XP · Twttr · News Feed · YouTube Google-owned",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "Firefox", href: "sites/firefox/index.html", match: "/firefox/" },
-      { label: "Gmail", href: "sites/gmail/index.html", match: "/gmail/" },
-      { label: "Flickr", href: "sites/flickr/index.html", match: "/flickr/" },
-      { label: "Thefacebook", href: "sites/facebook/index.html", match: "/facebook/" },
-      { label: "Google", href: "sites/google/index.html", match: "/google/" },
-      { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" }
+      { label: "Twttr", href: "sites/twitter/index.html", match: "/twitter/" },
+      { label: "Feed", href: "sites/facebook/feed.html", match: "/facebook/feed" },
+      { label: "Open", href: "sites/facebook/open.html", match: "/facebook/open" },
+      { label: "YouTube", href: "sites/youtube/index.html", match: "/youtube/" },
+      { label: "Docs", href: "sites/googledocs/index.html", match: "/googledocs/" },
+      { label: "Google", href: "sites/google/index.html", match: "/google/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },
@@ -66,16 +66,16 @@
         label: "About 2006",
         href: "pages/about.html",
         match: "/about",
-        hint: "64.8M sites · boom year · Yahoo still #1",
-        doneMessage: "Upload · Maps · Reddit · Google owns YouTube as of Oct 2006."
+        hint: "85.5M sites · Twttr · News Feed · YouTube Google-owned",
+        doneMessage: "Twttr 140. Facebook open. Google owns YouTube as of Oct 2006."
       },
       {
-        id: "firefox",
-        label: "Firefox 1.0",
-        href: "sites/firefox/index.html",
-        match: "/firefox/",
-        hint: "Nov 9 · tabs · popup block",
-        doneMessage: "IE6 still mass default — Firefox is rising."
+        id: "twttr",
+        label: "Twttr",
+        href: "sites/twitter/index.html",
+        match: "/twitter/",
+        hint: "140 chars · empty never writes",
+        doneMessage: "Twttr is the 2006 star."
       },
       {
         id: "gmail",

@@ -789,8 +789,8 @@
       "pages/cool.html": "Cool",
       "pages/error/404.html": "404",
       "pages/error/unreachable.html": "Unreachable",
-      "pages/home.html": "Welcome to the World Wide Web \u2014 2004",
-      "pages/map.html": "2004 — UX flow map",
+      "pages/home.html": "Welcome to the World Wide Web \u2014 2005",
+      "pages/map.html": "2005 — UX flow map",
       "pages/whats-new.html": "Whats New",
       "sites/altavista/babelfish.html": "Babelfish",
       "sites/altavista/index.html": "AltaVista",
@@ -864,7 +864,7 @@
       "sites/yahoo/whats-new.html": "Whats New"
     },
     defaultBookmarks: [
-      { title: "Starting Point 2004", path: "pages/home.html" },
+      { title: "Starting Point 2005", path: "pages/home.html" },
       { title: "Gmail", path: "sites/gmail/index.html" },
       { title: "Flickr", path: "sites/flickr/index.html" },
       { title: "Thefacebook", path: "sites/facebook/index.html" },
@@ -891,7 +891,7 @@
       { re: /housingmaps/i, path: "sites/housingmaps/index.html" },
       { re: /pandora/i, path: "sites/pandora/index.html" },
       { re: /google maps|maps\.google/i, path: "sites/maps/index.html" },
-      { re: /youtube|upload/i, path: "sites/youtube/index.html" },
+      { re: /youtube|upload/i, path: "sites/youtube/upload.html" },
       { re: /web2|web 2\.0 conference|web20con/i, path: "sites/web20conference/index.html" },
       { re: /del\.icio\.us|delicious/i, path: "sites/delicious/index.html" },
       { re: /feedburner/i, path: "sites/feedburner/index.html" },

@@ -149,7 +149,7 @@
     if (likeBtn && likeBtn.getAttribute("data-fb-like-bound") !== "1") {
       likeBtn.setAttribute("data-fb-like-bound", "1");
       likeBtn.addEventListener("click", function () {
-        apply("like");
+        feedback("Like-only never writes. Hold a reaction.", st, { error: true });
       });
     }
   }

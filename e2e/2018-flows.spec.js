@@ -74,12 +74,12 @@ test.describe("2018 flows", () => {
   test("official 10 dests write leftover keys, never GDPR gold", async ({ page }) => {
     const rows = [
       { path: "/years/2018/sites/instagram/igtv.html", empty: async (p) => p.locator("[data-igtv-post]").click(), fill: async (p) => { await p.fill("[data-igtv-title]", "episode"); await p.locator("[data-igtv-post]").click(); }, key: "itt18-igtv" },
-      { path: "/years/2018/sites/trust/index.html", empty: async (p) => {}, fill: async (p) => p.locator("[data-hear-sit]").click(), key: "itt18-hearing" },
-      { path: "/years/2018/sites/chrome/not-secure.html", empty: async (p) => {}, fill: async (p) => p.locator("[data-ns-ack]").click(), key: "itt18-not-secure" },
-      { path: "/years/2018/sites/homepod/index.html", empty: async (p) => {}, fill: async (p) => p.locator("[data-hp-reserve]").click(), key: "itt18-homepod" },
-      { path: "/years/2018/sites/spectre/index.html", empty: async (p) => {}, fill: async (p) => p.locator("[data-sp-ack]").click(), key: "itt18-spectre" },
-      { path: "/years/2018/sites/fortnite/switch.html", empty: async (p) => {}, fill: async (p) => p.locator("[data-fns-drop]").click(), key: "itt18-fn-switch" },
-      { path: "/years/2018/sites/github/microsoft.html", empty: async (p) => {}, fill: async (p) => p.locator("[data-gh-ack]").click(), key: "itt18-github" },
+      { path: "/years/2018/sites/trust/index.html", empty: async (p) => p.locator("[data-hear-sit]").click(), fill: async (p) => { await p.locator("[data-official-req]").evaluateAll((els) => els.forEach((el) => { el.checked = true; })); await p.locator("[data-hear-sit]").click(); }, key: "itt18-hearing" },
+      { path: "/years/2018/sites/chrome/not-secure.html", empty: async (p) => p.locator("[data-ns-ack]").click(), fill: async (p) => { await p.locator("[data-official-req]").evaluateAll((els) => els.forEach((el) => { el.checked = true; })); await p.locator("[data-ns-ack]").click(); }, key: "itt18-not-secure" },
+      { path: "/years/2018/sites/homepod/index.html", empty: async (p) => p.locator("[data-hp-reserve]").click(), fill: async (p) => { await p.locator("[data-official-req]").evaluateAll((els) => els.forEach((el) => { el.checked = true; })); await p.locator("[data-hp-reserve]").click(); }, key: "itt18-homepod" },
+      { path: "/years/2018/sites/spectre/index.html", empty: async (p) => p.locator("[data-sp-ack]").click(), fill: async (p) => { await p.locator("[data-official-req]").evaluateAll((els) => els.forEach((el) => { el.checked = true; })); await p.locator("[data-sp-ack]").click(); }, key: "itt18-spectre" },
+      { path: "/years/2018/sites/fortnite/switch.html", empty: async (p) => p.locator("[data-fns-drop]").click(), fill: async (p) => { await p.locator("[data-official-req]").evaluateAll((els) => els.forEach((el) => { el.checked = true; })); await p.locator("[data-fns-drop]").click(); }, key: "itt18-fn-switch" },
+      { path: "/years/2018/sites/github/microsoft.html", empty: async (p) => p.locator("[data-gh-ack]").click(), fill: async (p) => { await p.locator("[data-official-req]").evaluateAll((els) => els.forEach((el) => { el.checked = true; })); await p.locator("[data-gh-ack]").click(); }, key: "itt18-github" },
     ];
     for (const row of rows) {
       await page.goto(row.path);
@@ -90,9 +90,7 @@ test.describe("2018 flows", () => {
       await page.reload();
       await page.waitForTimeout(250);
       await row.empty(page);
-      if (row.key === "itt18-igtv") {
-        expect(await getKey(page, row.key), row.key + " empty").toBeFalsy();
-      }
+      expect(await getKey(page, row.key), row.key + " empty").toBeFalsy();
       await row.fill(page);
       await expect.poll(() => getKey(page, row.key), { timeout: 8000 }).toBeTruthy();
       expect(await getKey(page, "itt18-gdpr"), row.key + " star").toBeFalsy();

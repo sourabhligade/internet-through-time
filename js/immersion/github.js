@@ -172,9 +172,13 @@
             break;
           }
         }
-        if (issues.length) saveJSON(sk("github-issues"), issues);
+        if (!closed) {
+          feedback("Open an issue first. Close never writes the star.", st, true);
+          return;
+        }
+        saveJSON(sk("github-issues"), issues);
         summary({ closed: true });
-        feedback(closed ? "Issue closed residual." : "No open visitor issue · closed residual theater.", st);
+        feedback("Issue closed residual.", st);
         renderIssues();
       });
     }

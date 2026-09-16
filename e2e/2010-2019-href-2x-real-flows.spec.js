@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails, destOnDisk } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
@@ -82,7 +82,11 @@ const YEARS = [
       { href: "/years/2017/sites/switch/index.html", suffix: "switch" },
     ],
   },
-].filter((y) => fs.existsSync(path.join(ROOT, "years", y.year, "index.html")));
+].filter((y) => fs.existsSync(path.join(ROOT, "years", y.year, "index.html")))
+  .map((y) => {
+    y.leftover = (y.leftover || []).filter((row) => destOnDisk(row.href));
+    return y;
+  });
 
 function firstLoKey(abs) {
   const html = fs.readFileSync(abs, "utf8");

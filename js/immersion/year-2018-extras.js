@@ -119,15 +119,35 @@
     });
   }
 
+  function ticksReady(doc, st) {
+    var els = doc.querySelectorAll("[data-official-req]");
+    if (!els.length) return true;
+    var n = 0;
+    var i;
+    for (i = 0; i < els.length; i++) if (els[i].checked) n++;
+    if (n < els.length) {
+      feedback("Tick honesty first. Incomplete never writes.", st, { error: true });
+      return false;
+    }
+    return true;
+  }
+
   function bootHearing(doc) {
     var btn = doc.querySelector("[data-hear-sit]");
     if (!btn) return;
     var st = doc.querySelector("[data-hear-status]");
+    var skip = doc.querySelector("[data-hear-skip], [data-official-trap]");
     if (YX.loadJSON(key("hearing"))) {
       feedback("Noted · itt18-hearing", st);
       reveal(doc);
     }
+    if (skip) {
+      skip.addEventListener("click", function () {
+        feedback("Skip never writes.", st, { error: true });
+      });
+    }
     btn.addEventListener("click", function () {
+      if (!ticksReady(doc, st)) return;
       saveJSON(key("hearing"), blob({ date: "2018-04-10" }));
       feedback("Sat the hearing (theater) · itt18-hearing", st);
       reveal(doc);
@@ -163,6 +183,7 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
+      if (!ticksReady(doc, st)) return;
       saveJSON(key("not-secure"), blob({ chrome: 68 }));
       feedback("Not secure · itt18-not-secure", st);
       reveal(doc);
@@ -178,6 +199,7 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
+      if (!ticksReady(doc, st)) return;
       saveJSON(key("homepod"), blob({ price: 349, date: "2018-02-09" }));
       feedback("Reserved (theater) · itt18-homepod", st);
       reveal(doc);
@@ -193,6 +215,7 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
+      if (!ticksReady(doc, st)) return;
       saveJSON(key("spectre"), blob({ day: "2018-01-03" }));
       feedback("I was there (literacy) · itt18-spectre", st);
       reveal(doc);
@@ -208,6 +231,7 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
+      if (!ticksReady(doc, st)) return;
       saveJSON(key("fn-switch"), blob({ date: "2018-06-12" }));
       feedback("Dropped on Switch (theater) · itt18-fn-switch", st);
       reveal(doc);
@@ -223,6 +247,7 @@
       reveal(doc);
     }
     btn.addEventListener("click", function () {
+      if (!ticksReady(doc, st)) return;
       saveJSON(key("github"), blob({ price: "7.5B", close: "2018-10-26" }));
       feedback("Noted · itt18-github", st);
       reveal(doc);

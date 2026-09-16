@@ -128,8 +128,8 @@
  " <a href=\"about.html\">About 2003</a> \u2014 hotlink \u00b7 99\u00a2 \u00b7 blogs",
  " <a href=\"../sites/photobucket/index.html\">Photobucket</a> \u2014 upload \u00b7 empty never writes",
  " <a href=\"../sites/itunes/index.html\">iTunes Store</a> \u2014 99\u00a2 \u00b7 Mac+US",
- " <a href=\"../sites/wordpress/index.html\">WordPress</a> \u2014 0.7 self-host",
- " <a href=\"../sites/linkedin/index.html\">LinkedIn</a> \u2014 May 5 career graph",
+ " <a href=\"../sites/wordpress/dashboard.html\">WordPress</a> \u2014 0.7 self-host",
+ " <a href=\"../sites/linkedin/invite.html\">LinkedIn</a> \u2014 May 5 career graph",
  " <a href=\"map.html\">Year flow map</a> "
  
  ]

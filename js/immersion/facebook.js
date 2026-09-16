@@ -177,7 +177,6 @@
     var p = load();
     if (!p) {
       p = defaultProfile();
-      save(p);
     }
     var nameEl = doc.querySelector("[data-fb-name]");
     if (nameEl) nameEl.textContent = p.name;
@@ -451,7 +450,16 @@
     if (login) {
       login.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var email = (login.querySelector('[name="email"]') || {}).value || "you@college.edu";
+        var emailEl = login.querySelector('[name="email"]');
+        var passEl = login.querySelector('[name="pass"], [name="password"], [type="password"]');
+        var email = emailEl && emailEl.value != null ? String(emailEl.value).replace(/^\s+|\s+$/g, "") : "";
+        var pass = passEl && passEl.value != null ? String(passEl.value) : "";
+        if (email.length < 2) {
+          return;
+        }
+        if (passEl && pass.length < 1) {
+          return;
+        }
         p.name = email.split("@")[0] || p.name;
         save(p);
         if (global.location) {

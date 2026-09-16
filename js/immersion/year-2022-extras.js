@@ -13,6 +13,12 @@
       .replace(/>/g, "&gt;");
   }
 
+  function markProductReady(doc) {
+    try {
+      doc.documentElement.setAttribute("data-official-product-ready", "1");
+    } catch (eR) { /* */ }
+  }
+
   function destSlug() {
     var m = String(location.pathname || "").match(/\/sites\/([^/]+)/);
     return m ? m[1] : "";
@@ -209,6 +215,12 @@
     verb.addEventListener("click", function () {
       pill.className = "is22-pill is-on";
       pill.textContent = "island · looking";
+      markProductReady(doc);
+    });
+    pill.addEventListener("click", function () {
+      pill.className = "is22-pill is-on";
+      pill.textContent = "island · looking";
+      markProductReady(doc);
     });
   }
 
@@ -222,6 +234,12 @@
     verb.addEventListener("click", function () {
       stage.textContent = "For You leftover · playing";
       stage.className = "tt22-stage is-on";
+      markProductReady(doc);
+    });
+    stage.addEventListener("click", function () {
+      stage.textContent = "For You leftover · playing";
+      stage.className = "tt22-stage is-on";
+      markProductReady(doc);
     });
   }
 
@@ -269,13 +287,26 @@
       left -= 1;
       clock.textContent = Math.floor(left / 60) + ":" + (left % 60 < 10 ? "0" : "") + (left % 60) + " leftover";
     }, 1000);
+    var shot = { back: false, front: false };
+    function shoot(i) {
+      if (i === 0) {
+        shot.back = true;
+        cams[0].textContent = "back · taken";
+        cams[0].className = cams[0].className.replace(/\bis-shot\b/g, "") + " is-shot";
+      } else {
+        shot.front = true;
+        cams[1].textContent = "front · taken";
+        cams[1].className = cams[1].className.replace(/\bis-shot\b/g, "") + " is-shot";
+      }
+      if (shot.back && shot.front) markProductReady(doc);
+    }
+    cams[0].addEventListener("click", function () { shoot(0); });
+    cams[1].addEventListener("click", function () { shoot(1); });
     verb.addEventListener("click", function () {
       clearInterval(tick);
       clock.textContent = "taken leftover";
-      cams[0].textContent = "back · taken";
-      cams[0].className = cams[0].className.replace(/\bis-shot\b/g, "") + " is-shot";
-      cams[1].textContent = "front · taken";
-      cams[1].className = cams[1].className.replace(/\bis-shot\b/g, "") + " is-shot";
+      shoot(0);
+      shoot(1);
     });
   }
 
@@ -295,12 +326,16 @@
       }
       if (key === "itt22-ftx") {
         out.textContent = "Nov 2022 leftover · collapsed. No wallet.";
+        markProductReady(doc);
       } else if (key === "itt22-mastodon") {
         out.textContent = "Joined leftover · " + q;
+        markProductReady(doc);
       } else if (key === "itt22-win11") {
         out.textContent = "Room leftover · Win10 still mass. Chrome habit stays.";
+        markProductReady(doc);
       } else if (key === "itt22-game-prompt") {
         out.textContent = "Queue leftover · " + q + ". Star stays ChatGPT Send.";
+        markProductReady(doc);
         var qel = doc.querySelector("[data-pq22-q]");
         if (qel) {
           var li = doc.createElement("li");

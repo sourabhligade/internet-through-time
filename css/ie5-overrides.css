@@ -594,7 +594,8 @@ body.browser-ie5 .dialog-x:active {
    Note: period-2002.css lives in the iframe only — shell needs these rules.
    ============================================================ */
 body.os-winxp,
-body.browser-ie6 {
+body.browser-ie6,
+body.browser-ie7 {
   --xp-face: #ece9d8;
   --xp-hi: #ffffff;
   --xp-lo: #aca899;

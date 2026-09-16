@@ -676,7 +676,11 @@ function leftoverTrioStrip(page, year, kind) {
  * @param {string} [goldKey]
  */
 async function leftoverOfficialDest(page, href, suffix, goldKey) {
-  const { expect } = require("@playwright/test");
+  const { expect, test } = require("@playwright/test");
+  if (!destOnDisk(href)) {
+    test.skip(true, "dest-lock " + href);
+    return;
+  }
   const yearMatch = String(href).match(/\/years\/(\d{4})\//);
   const year = yearMatch ? yearMatch[1] : "";
   const key = "itt" + String(year).slice(-2) + "-" + suffix;

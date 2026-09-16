@@ -424,12 +424,43 @@
     return false;
   }
 
+  function unwrapDestTrueLo3x(doc) {
+    if (!doc) return;
+    var destKey = "";
+    try {
+      destKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
+    } catch (eK) { /* */ }
+    if (destKey) return;
+    var start = false;
+    try {
+      start =
+        (doc.documentElement && doc.documentElement.getAttribute("data-itt-start") === "1") ||
+        (doc.body && /(^|\s)itt-start-page(\s|$)/.test(doc.body.className || ""));
+    } catch (eS) { /* */ }
+    if (start) return;
+    var faces = doc.querySelectorAll("[data-itt-lo3x], [data-itt-dest-true][data-pop-panel], .itt-pop3x-flow[data-itt-dest-true]");
+    var i;
+    var n;
+    var host;
+    for (i = 0; i < faces.length; i++) {
+      n = faces[i];
+      if (!n || !inAlsoYear(n)) continue;
+      host = n;
+      while (host && host.nodeType === 1 && !(host.className && /(^|\s)itt-also-year(\s|$)/.test(host.className))) {
+        host = host.parentNode;
+      }
+      if (!host || !host.parentNode) continue;
+      host.parentNode.insertBefore(n, host);
+    }
+  }
+
   function foldLeftoverRails(doc) {
     doc = doc || document;
     var destKey = "";
     try {
       destKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
     } catch (eK2) { /* */ }
+    unwrapDestTrueLo3x(doc);
     var nodeList = doc.querySelectorAll(
       "[data-itt-2x-links], [data-itt-2x-unique], [data-itt-2x-unique-b], [data-itt-2x-unique-c], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-3x-board, .itt-pop-more, .itt-pop-3x3"
     );

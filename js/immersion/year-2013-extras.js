@@ -55,22 +55,40 @@
     var clock = doc.querySelector("[data-vn13-clock]");
     var held = 0;
     var t = null;
+    var holdStart = 0;
+    function stopHold(done) {
+      if (t) {
+        clearInterval(t);
+        t = null;
+      }
+      if (!holdStart) return;
+      var sec = (Date.now() - holdStart) / 1000;
+      holdStart = 0;
+      if (done && sec >= 6) held = 6;
+      else if (sec >= 6) held = 6;
+      else held = 0;
+      if (clock) clock.textContent = (held >= 6 ? "6.0" : sec.toFixed(1)) + " / 6.0";
+    }
     if (hold) {
-      hold.addEventListener("click", function () {
+      hold.addEventListener("pointerdown", function (ev) {
+        if (ev && ev.preventDefault) ev.preventDefault();
         if (t) return;
-        held = 6;
+        held = 0;
+        holdStart = Date.now();
         if (clock) clock.textContent = "0.0 / 6.0";
-        var shown = 0;
         t = setInterval(function () {
-          shown += 0.5;
-          if (shown > 6) shown = 6;
-          if (clock) clock.textContent = shown.toFixed(1) + " / 6.0";
-          if (shown >= 6 && t) {
-            clearInterval(t);
-            t = null;
+          var sec = (Date.now() - holdStart) / 1000;
+          if (sec > 6) sec = 6;
+          if (clock) clock.textContent = sec.toFixed(1) + " / 6.0";
+          if (sec >= 6) {
+            held = 6;
+            stopHold(true);
           }
-        }, 200);
+        }, 100);
       });
+      hold.addEventListener("pointerup", function () { stopHold(true); });
+      hold.addEventListener("pointerleave", function () { stopHold(false); });
+      hold.addEventListener("pointercancel", function () { stopHold(false); });
     }
     if (trap) {
       trap.addEventListener("click", function () {
@@ -78,7 +96,7 @@
       });
     }
     btn.addEventListener("click", function () {
-      if (held < 1) {
+      if (held < 6) {
         feedback("Hold a loop first. Empty never writes.", st, { error: true });
         return;
       }

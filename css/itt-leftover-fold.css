@@ -63,6 +63,11 @@ details.itt-also-year {
 html[data-itt-deep] details.itt-also-year {
   display: block;
 }
+/* Leftover dest leftover-3× dest face is first paint (U9). */
+html:not([data-official-key]):not([data-itt-start]) [data-itt-lo3x],
+html:not([data-official-key]):not([data-itt-start]) [data-itt-dest-true][data-pop-panel] {
+  display: block;
+}
 [data-lo-panel][data-itt-dest-true] {
   display: block;
 }

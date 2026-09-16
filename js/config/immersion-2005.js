@@ -65,12 +65,12 @@
     navSubtitle: "IE 6 · Windows XP · Upload · Maps · Reddit",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
-      { label: "Firefox", href: "sites/firefox/index.html", match: "/firefox/" },
-      { label: "Gmail", href: "sites/gmail/index.html", match: "/gmail/" },
+      { label: "Upload", href: "sites/youtube/upload.html", match: "/youtube/" },
+      { label: "Maps", href: "sites/maps/index.html", match: "/maps/" },
+      { label: "reddit", href: "sites/reddit/index.html", match: "/reddit/" },
       { label: "Flickr", href: "sites/flickr/index.html", match: "/flickr/" },
-      { label: "Thefacebook", href: "sites/facebook/index.html", match: "/facebook/" },
-      { label: "Google", href: "sites/google/index.html", match: "/google/" },
-      { label: "MySpace", href: "sites/myspace/index.html", match: "/myspace/" }
+      { label: "thefacebook", href: "sites/facebook/index.html", match: "/facebook/" },
+      { label: "Google", href: "sites/google/index.html", match: "/google/" }
     ],
     footerNav: [
       { label: "Starting Point", href: "pages/home.html" },

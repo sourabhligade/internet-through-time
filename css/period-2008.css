@@ -7,6 +7,19 @@ body.year-2008 .itt-year-chip {
   border-bottom-color: #33ccff;
 }
 
+/* IE 7 tabs · Luna blue residual (not IE 5 / Win95 gray) */
+body.year-2008.browser-ie7 #menubar,
+body.year-2008.browser-ie7 #toolbar {
+  background: #ece9d8;
+  border-color: #aca899;
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+}
+body.year-2008.browser-ie7 #tabs,
+body.year-2008.browser-ie7 .ie-tabs {
+  background: linear-gradient(#fff, #ece9d8);
+  border-bottom: 1px solid #aca899;
+}
+
 /* Chrome beta (Sep 2008) — yellow/minimal product page grammar */
 .chrome-shell,
 body.chrome-shell {

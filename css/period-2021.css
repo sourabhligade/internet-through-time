@@ -2,7 +2,9 @@
 body.year-2021 .itt-year-chip { color:#1565c0; }
 
 .att21-phone {
+  width: 100%;
   max-width: 320px;
+  box-sizing: border-box;
   margin: 16px auto;
   background: #111;
   border-radius: 32px;

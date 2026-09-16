@@ -249,6 +249,10 @@
           feedback("Pick one first. Incomplete never writes.", st, { error: true });
           return;
         }
+        if (suffix === "stadia" && picked === "premiere") {
+          feedback("Premiere never writes. Founder's is the 2019 save.", st, { error: true });
+          return;
+        }
         var extra = { pick: picked };
         if (suffix === "arcade") extra = { pick: picked, price: 4.99, date: "2019-09-19" };
         if (suffix === "appletv") extra = { pick: picked, date: "2019-11-01" };
