@@ -232,7 +232,10 @@ const THINGS = [
       await page.locator("[data-vn13-post]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-vn13-hold]").click();
+      const hold = page.locator("[data-vn13-hold]");
+      await hold.dispatchEvent("pointerdown");
+      await page.waitForTimeout(6200);
+      await hold.dispatchEvent("pointerup");
       await page.locator("[data-vn13-post]").click();
     },
   },

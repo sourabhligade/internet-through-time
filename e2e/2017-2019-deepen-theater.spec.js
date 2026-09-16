@@ -4,6 +4,7 @@
  * 4× leftover pack still walked by 2x-links-all-years.spec.js.
  */
 const { test, expect } = require("@playwright/test");
+const { destOnDisk } = require("./helpers");
 
 
 async function getKey(page, key) {
@@ -64,7 +65,7 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   const fs = require("fs");
   const path = require("path");
   test.skip(
-    !fs.existsSync(path.join(__dirname, "..", "years/2017/sites/zoom17/index.html")),
+    !destOnDisk("/years/2017/sites/zoom17/index.html"),
     "2017 dest-lock leftover dest gone"
   );
   await walkTheater(page, {

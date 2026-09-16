@@ -45,7 +45,15 @@
     rail.textContent = "Your story · 24h · " + text;
   }
 
+  function wrapStoriesPhone(doc) {
+    var shell = doc.querySelector(".ig16-shell");
+    if (!shell || shell.getAttribute("data-ig16-phone") === "1") return;
+    shell.setAttribute("data-ig16-phone", "1");
+    shell.className = String(shell.className || "") + " ig16-phone";
+  }
+
   function bootStories(doc) {
+    wrapStoriesPhone(doc);
     var btn = doc.querySelector("[data-ig-story-add]");
     if (!btn) return;
     var st = doc.querySelector("[data-ig-story-status]");

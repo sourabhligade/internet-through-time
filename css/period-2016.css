@@ -17,6 +17,18 @@
   font-size: 14px;
   line-height: 1.4;
 }
+.ig16-phone,
+.ig16-shell.ig16-phone {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  margin: 16px auto;
+  padding: 18px 14px 22px;
+  background: #111;
+  color: #eee;
+  border-radius: 32px;
+  border: 2px solid #333;
+}
 .ig16-rail {
   margin: 10px 0;
   padding: 12px;

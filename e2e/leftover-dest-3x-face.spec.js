@@ -86,7 +86,6 @@ test.describe("leftover dest leftover-3× dest face", () => {
     test(`${row.year} leftover dest leftover-3× empty never writes · complete writes leftover only`, async ({
       page,
     }) => {
-      test.skip(row.year === "2018", "write locked by leftover-3x-unique; dest-face is first-paint");
       await page.goto(row.href);
       await page.evaluate((k) => {
         localStorage.removeItem(k.key);
@@ -95,8 +94,8 @@ test.describe("leftover dest leftover-3× dest face", () => {
       await page.reload();
       await revealLeftoverRails(page);
       const go = leftoverGo(page, row);
-      const panel = leftoverPanel(page, row);
       await expect(go).toBeVisible();
+      const panel = go.locator("xpath=ancestor::*[@data-itt-lo3x or @data-pop-panel][1]");
       await go.click();
       expect(await page.evaluate((k) => localStorage.getItem(k), row.key), "empty go").toBeFalsy();
       const keep = panel.locator('[data-pop-pick="keep"]');

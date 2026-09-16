@@ -92,6 +92,10 @@
       });
     }
     send.addEventListener("click", function () {
+      if (!YX.loadJSON(key("faceid"))) {
+        feedback("Unlock Face ID first. Animoji never writes without it.", st, { error: true });
+        return;
+      }
       if (!picked) {
         feedback("Pick a face class first. Empty never writes.", st, { error: true });
         return;

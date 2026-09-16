@@ -90,8 +90,8 @@
     running = false;
     if (raf) cancelAnimationFrame(raf);
     raf = 0;
-    if (score > 0 && YG && YG.saveBest) {
-      YG.saveBest("stormcircle", score, { year: "2017", gold: golded });
+    if (golded && score > 0 && YG && YG.saveBest) {
+      YG.saveBest("stormcircle", score, { year: "2017", gold: true });
     }
     paintBest();
     setStatus((why || "Run over") + " · score " + score + (golded ? " · gold" : ""));
