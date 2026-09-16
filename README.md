@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay on disk · year-shell is a plaque · no year card). **2020 is live lean** · Zoom Leave. **2023+ wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2011 star = Google+ Hangout. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2018 star = GDPR Manage. 2019 star = Disney+ Continue subscribe. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
+Historical reconstruction of the World Wide Web — year by year. Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded** (trees stay on disk · year-shell is a plaque · no year card). **2020 is live lean** · Zoom Leave. **2022–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2011 star = Google+ Hangout. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2018 star = GDPR Manage. 2019 star = Disney+ Continue subscribe. 2021 star = ATT Ask.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 

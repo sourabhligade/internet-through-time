@@ -21,7 +21,7 @@ It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`.
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2020 live lean** · Zoom Leave. **2023+ wiped.**
+The museum is year-locked rooms in period chrome. Hub is **27 years open** (1994–2008 + 2010–2021). **2009 boarded** (tree stays; year-shell is a plaque). **2020 live lean** · Zoom Leave. **2022–2025 wiped.**
 
 Visitor product (I/O):
 
@@ -408,7 +408,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | Item | Evidence |
 |------|----------|
-| 28 years open · 2009 plaque · 2020 Zoom Leave · 2022 live | Hub, `itt_gate.py`, DISK-TRUTH |
+| 27 years open · 2009 plaque · 2020 Zoom Leave · 2022 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 30 unique dests | Disk + 72/72 e2e |
 | Official dest leftover-2× panels = 0 on 2016–2021 official 10 (and sampled earlier official dests) | HTML `data-lo-panel` count |
 | Empty leftover save without field/pick/req/wait | `leftover-official.js` guard |

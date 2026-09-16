@@ -16,7 +16,7 @@ Verified on disk this pass: official-10 leftover-panel counts, leftover dest `da
 
 | Item | Where |
 |------|--------|
-| 28 years open · 2009 plaque · 2020 Zoom Leave · 2022 live · 2023+ wiped | Hub, `itt_gate.py`, DISK-TRUTH |
+| 27 years open · 2009 plaque · 2020 Zoom Leave · 2022 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 **30 unique dests** on disk | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §4 |
 | 2016 + 2018–2021 official dest leftover-2× panels **= 0** | same strip as 2017 official 10 (2026-09-14 pass) |
 | 2017 official dests leftover-2× panels **= 0** | `years/2017/sites/{iphone/x,fortnite,twitter/280,teams,vine/gone,switch,wannacry,musically,equifax,playable/game}.html` |

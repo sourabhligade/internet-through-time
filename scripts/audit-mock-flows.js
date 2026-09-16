@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — 28 ship years (1994–2008 + 2010–2022).
+ * Mock-flow classifier — 27 ship years (1994–2008 + 2010–2021).
  * 2009 boarded. 2023–2025 wiped.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
@@ -515,7 +515,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 28 years open (1994–2008 + 2010–2022) · 2009 boarded · 2023+ wiped");
+  console.log("audit-mock-flows — 27 years open (1994–2008 + 2010–2021) · 2009 boarded · 2022–2025 wiped");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

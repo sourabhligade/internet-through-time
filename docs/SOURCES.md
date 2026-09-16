@@ -1,6 +1,6 @@
 # Sources, archives & provenance — Internet Through Time
 
-> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2020 live lean** · Zoom Leave. Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
+> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2020 live lean** · Zoom Leave. Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
 
 
 **Purpose:** External URL bibliography for reconstructions. Not ship state.  
@@ -717,7 +717,7 @@ Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · **Detailed gather:** [`d
 
 **P0 planned rooms:** YouTube · Google Maps · Reddit · Digg · Google · MySpace · Flickr · Facebook (rename era) · Yahoo · Amazon · Wikipedia · iTunes podcasts.
 
-**Hub state:** **28 years open** (1994–2008 + 2010–2022). Research stack §16–§23 remains bibliography for densify/pixels.
+**Hub state:** **27 years open** (1994–2008 + 2010–2021). Research stack §16–§23 remains bibliography for densify/pixels.
 
 **Anachronism bans:** Twitter (2006) · Facebook open registration (2006) · Google owns YouTube (2006) · iPhone · Chrome browser · modern YouTube/Maps/Reddit UI · Street View as 2005 default · consumer “cloud” branding.
 
@@ -741,7 +741,7 @@ Dossier: [`docs/2006-RESEARCH.md`](2006-RESEARCH.md) · **Fresh deep research:**
 
 **P0 planned rooms:** Twitter/Twttr · Facebook (open + News Feed) · YouTube (two-era Google) · Digg peak · Google Docs · AWS · continuity MySpace/Flickr/Maps.
 
-**Hub state:** **28 years open** (1994–2008 + 2010–2022). 2006 is live.
+**Hub state:** **27 years open** (1994–2008 + 2010–2021). 2006 is live.
 
 **Anachronism bans:** iPhone · Chrome · Street View default · Gmail open-as-year-start (Feb 2007) · Vista retail default (Jan 2007) · Google owns YouTube before Oct/Nov 2006 · modern X · campus-only Facebook after Sep 26 as product truth.
 

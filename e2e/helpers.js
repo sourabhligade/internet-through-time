@@ -40,7 +40,7 @@ async function expectYearBoarded(page, year) {
     return;
   }
   await expect(page).toHaveURL(/\/(index\.html)?$/);
-  await expect(page.locator("body")).toContainText(/28 years open|boarded/i);
+  await expect(page.locator("body")).toContainText(/27 years open|28 years open|boarded/i);
   await expect(page.locator("#dirbar")).toHaveCount(0);
 }
 

@@ -26,7 +26,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2020 live lean** · Zoom Leave. **2023+ wiped.**
+Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2020 live lean** · Zoom Leave. **2022–2025 wiped.**
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|

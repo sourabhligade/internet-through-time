@@ -1,7 +1,7 @@
 # 2020 — read first
 
 **Date:** 2026-09-14  
-**Status:** **LIVE lean door.** Hub card open. `years/2020/` on disk (**38 dests**). Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023+ wiped.**
+**Status:** **LIVE lean door.** Hub card open. `years/2020/` on disk (**38 dests**). Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022–2025 wiped.**
 
 Do not `git checkout` an old 2020 forest.
 
