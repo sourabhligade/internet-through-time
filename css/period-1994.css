@@ -1,5 +1,6 @@
 /* 1994 document styles — Mosaic / Netscape 1.0 grey page, not Win95 */
 @import url("mosaic-defaults.css");
+@import url("leftover-dest-face.css");
 
 body.year-1994 .itt-year-chip,
 html[data-itt-year="1994"] .itt-year-chip {

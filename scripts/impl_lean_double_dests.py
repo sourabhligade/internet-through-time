@@ -281,14 +281,14 @@ def dest_html(year: int, slug: str, product: str, verb: str, why: str, cite: str
 <title>{p} leftover — {year}</title>
 <link rel="stylesheet" href="../../../../css/period-{year}.css">
 </head>
-<body bgcolor="#f2f2f2" text="#111">
+<body class="itt-lo-dest-page">
 <div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p class="itt-pixel-failed" data-itt-capture-cite style="font-size:11px;margin:8px 0;font-family:Arial,sans-serif">[failed-final] {p} · {w} · {c} · no invented brand pixels</p>
-<div style="max-width:640px;margin:16px auto;font-family:Segoe UI,Arial,sans-serif;font-size:13px;line-height:1.45">
+<p class="itt-pixel-failed" data-itt-capture-cite>[failed-final] {p} · {w} · {c} · no invented brand pixels</p>
+<div class="itt-lo-dest">
 <p class="crumb"><a href="../../pages/home.html">Starting Point</a></p>
 <h1>{p} leftover</h1>
 <p>{w} Incomplete never writes. Leftover never writes the star.</p>
-<section data-lo-panel="1" data-itt-dest-true="1" data-itt-year="{year}" style="margin:14px 0;padding:12px;border:1px dashed #666;background:#fff8dc;font-size:12px">
+<section class="itt-lo-panel" data-lo-panel="1" data-itt-dest-true="1" data-itt-year="{year}">
 <p><b>{v}</b> · leftover dest · <code>{html.escape(key)}</code></p>
 <label style="display:block"><input type="checkbox" data-lo-req>The chip is not this dest.</label>
 <label style="display:block"><input type="checkbox" data-lo-req>Empty / trap never write.</label>
