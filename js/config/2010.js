@@ -15,7 +15,6 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
-    "sites/amazon/index.html",
     "sites/android/index.html",
     "sites/chrome/about.html",
     "sites/chrome/index.html",
@@ -78,10 +77,9 @@
     "sites/tumblr/index.html",
     "sites/twitter/index.html",
     "sites/wave/index.html",
-    "sites/yahoo/index.html",
     "sites/youtube/about.html",
     "sites/youtube/index.html"
-  ];;;;;
+  ];;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

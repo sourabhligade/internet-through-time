@@ -24,8 +24,6 @@
     "sites/digg/more.html",
     "sites/ebay/c.html",
     "sites/ebay/index.html",
-    "sites/facebook/index.html",
-    "sites/facebook/more.html",
     "sites/fbplat/3x.html",
     "sites/fbplat/about.html",
     "sites/fbplat/index.html",
@@ -42,8 +40,6 @@
     "sites/gmail/c.html",
     "sites/gmail/index.html",
     "sites/gmail/more.html",
-    "sites/google/index.html",
-    "sites/google/more.html",
     "sites/hackernews/index.html",
     "sites/icanhas/index.html",
     "sites/ie6/about.html",
@@ -99,15 +95,13 @@
     "sites/wow/c.html",
     "sites/wow/index.html",
     "sites/wow/more.html",
-    "sites/xbox/index.html",
-    "sites/yahoo/index.html",
     "sites/youtube/about.html",
     "sites/youtube/c.html",
     "sites/youtube/index.html",
     "sites/youtube/more.html",
     "sites/youtube/pop.html",
     "sites/youtube/watch.html"
-  ];;;;;
+  ];;;;;;
 
   var urlMap = {
     "pages/about.html": "http://museum.local/years/2007/pages/about.html",

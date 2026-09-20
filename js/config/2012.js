@@ -15,7 +15,6 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
-    "sites/amazon/index.html",
     "sites/applemaps/index.html",
     "sites/buzzfeed/index.html",
     "sites/buzzfeed/more.html",
@@ -32,7 +31,6 @@
     "sites/flipboard/about.html",
     "sites/flipboard/index.html",
     "sites/flipboard/more.html",
-    "sites/google/index.html",
     "sites/googledrive/index.html",
     "sites/googleplay/index.html",
     "sites/instagram/about.html",
@@ -90,9 +88,8 @@
     "sites/wikipedia/sopa.html",
     "sites/windows8/about.html",
     "sites/windows8/index.html",
-    "sites/yahoo/index.html",
     "sites/youtube/index.html"
-  ];;;;;
+  ];;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

@@ -14,8 +14,6 @@
     "sites/airbnb/index.html",
     "sites/airbnb/more.html",
     "sites/airbnb/stills/wayback-2011.ico",
-    "sites/chrome/index.html",
-    "sites/chrome/more.html",
     "sites/chromebook/index.html",
     "sites/codecademy/index.html",
     "sites/dropbox/index.html",
@@ -30,7 +28,6 @@
     "sites/foursquare/index.html",
     "sites/gmusic/index.html",
     "sites/gmusic/more.html",
-    "sites/google/index.html",
     "sites/googleplus/about.html",
     "sites/googleplus/hangouts.html",
     "sites/googleplus/index.html",
@@ -121,12 +118,11 @@
     "sites/twitter/more.html",
     "sites/vimeo/index.html",
     "sites/wechat/index.html",
-    "sites/yahoo/index.html",
     "sites/youtube/c.html",
     "sites/youtube/index.html",
     "sites/youtube/more.html",
     "sites/zyngaipo/index.html"
-  ];;;;;
+  ];;;;;;
   var urlMap = {
     "pages/about.html": "http://museum.local/years/2011/pages/about.html",
     "pages/error/404.html": "http://museum.local/years/2011/pages/error/404.html",

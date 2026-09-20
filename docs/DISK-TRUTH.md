@@ -16,12 +16,12 @@ Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay 
 | **2004** | Live forest · thefacebook networks `itt04-thefacebook-networks` · dests **810** (270 + Board C 540) · leftover-2× on every dest · Board C rail |
 | **2005** | **Live** · YouTube upload gold · leftover 2× + leftover 4× on every dest · XP+IE6 |
 | **2006** | **Live** · Twttr update gold · leftover 2× + leftover 4× on every dest · XP+IE6 · dest folders **378** · HTML **637** (lock 126/385 and 379 are stale) |
-| **2007** | **DONE** · live lean door · iPhone Safari `itt07-iphone` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **40** · XP+IE6 |
+| **2007** | **DONE** · live lean door · iPhone Safari `itt07-iphone` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **36** · XP+IE6 |
 | **2008** | **DONE** · live dense · GitHub issue `itt08-github` · dest-true official 10 · dest folders **597** (lock 199 / 598 are stale) · XP+IE7 |
 | **2009** | **Boarded** · tree stays · year-shell is a plaque (not a hub redirect) · `/pages/home.html` redirects to the plaque · Facebook Like dests still on disk |
-| **2010** | Live lean · Instagram iOS · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **34** |
-| **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **53** · leftover-4× **0** |
-| **2012** | Live lean · IG Android · dest-lock official 10 + leftover-3× dests + leftover-4× unique **3** (chrome · twitter · soundcloud) + leftover dests · dest folders **36** · stacked leftover-4× **0** |
+| **2010** | Live lean · Instagram iOS · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **32** |
+| **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **50** · leftover-4× **0** |
+| **2012** | Live lean · IG Android · dest-lock official 10 + leftover-3× dests + leftover-4× unique **3** (chrome · twitter · soundcloud) + leftover dests · dest folders **33** · stacked leftover-4× **0** |
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **26** · Win7 + IE 9 |
 | **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · dest-lock **reverted** · dest folders **213** · leftover-2× on dests · leftover-3× unique 9 · Win7 residual + Chrome habit |

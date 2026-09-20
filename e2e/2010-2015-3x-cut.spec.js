@@ -99,7 +99,7 @@ test.describe("CUT-3X-2010-2015 boarded stay empty", () => {
   });
 
   test("dest folder counts stay dest-lock lean", () => {
-    const want = { 2010: 34, 2011: 53, 2012: 36, 2014: 26 };
+    const want = { 2010: 32, 2011: 50, 2012: 33, 2014: 26 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const folders = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory());
