@@ -1,6 +1,7 @@
 /**
  * Unique leftover-3×n home strips (folded). One dest / one key.
  * Dest faces live on leftover dest HTML. This file only paints Starting Point links.
+ * Do not write leftover dest leftover keys or official trail keys. Dest I/O: leftover-official.js / official-verb.js.
  */
 (function (global) {
   "use strict";

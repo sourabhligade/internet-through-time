@@ -7,6 +7,7 @@ Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023�
 ## Read first
 
 1. [`DISK-TRUTH.md`](DISK-TRUTH.md) — what is playable. Wins when anything else disagrees. 1999–2004 Board C dest counts live there. Lock: [`2x-harvest-c-1999-2004.md`](2x-harvest-c-1999-2004.md).
+1b. [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) — SRP: config vs engine vs dest HTML vs dest-true e2e.
 2. [`ARCHITECTURE.md`](ARCHITECTURE.md) — year differences live in config + HTML. Shared engines live in `js/`.
 3. That year’s `YYYY-READ-FIRST.md` (if it exists) — thesis and bans only.
 4. [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — visitor I/O pass/fail for lean doors 2016–2021 (not dest-farm).

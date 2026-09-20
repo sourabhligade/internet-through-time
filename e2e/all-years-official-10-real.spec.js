@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails, killOverlays } = require("./helpers");
+const { getKey, clickOfficialVerb } = require("./dest-true-io");
 
 
 const ROOT = path.join(__dirname, "..");
@@ -352,43 +353,6 @@ const STAR = {
 };
 
 /** @param {import("@playwright/test").Page} page @param {string} key */
-async function getKey(page, key) {
-  for (let i = 0; i < 5; i++) {
-    try {
-      return await page.evaluate((k) => localStorage.getItem(k), key);
-    } catch (e) {
-      const msg = String((e && e.message) || e);
-      if (!/Execution context was destroyed|Target closed|destroyed/i.test(msg)) throw e;
-      await page.waitForLoadState("domcontentloaded").catch(() => {});
-    }
-  }
-  return page.evaluate((k) => localStorage.getItem(k), key);
-}
-
-/**
- * Official-verb may write then navigate (search dests, Amazon add-to-cart).
- * Survive the reload and return to the dest so complete I/O can finish.
- * @param {import("@playwright/test").Page} page
- * @param {string} destUrl
- */
-async function clickOfficialVerb(page, destUrl) {
-  await killOverlays(page);
-  const url0 = page.url();
-  await page.evaluate(() => {
-    const v = document.querySelector("[data-official-verb]");
-    if (v) v.click();
-  }).catch(() => {});
-  await Promise.race([
-    page.waitForURL((u) => u.toString() !== url0, { timeout: 500 }).catch(() => {}),
-    page.waitForTimeout(150),
-  ]);
-  await page.waitForLoadState("domcontentloaded").catch(() => {});
-  if (destUrl && (await page.locator("[data-official-verb]").count()) === 0) {
-    await page.goto(destUrl);
-    await revealLeftoverRails(page);
-  }
-}
-
 /**
  * @param {import("@playwright/test").Page} page
  * @param {string} year
