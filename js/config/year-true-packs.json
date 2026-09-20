@@ -73,14 +73,6 @@
   },
   {
     "year": "1996",
-    "id": "aolportal",
-    "path": "/years/1996/sites/aolportal/index.html",
-    "key": "itt96-aolportal",
-    "type": "fillGo",
-    "title": "AOL.com residual"
-  },
-  {
-    "year": "1996",
     "id": "realplayer",
     "path": "/years/1996/sites/realplayer/index.html",
     "key": "itt96-realplayer",

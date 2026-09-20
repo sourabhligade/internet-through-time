@@ -76,6 +76,7 @@ async function revealLeftoverRails(page) {
 }
 
 async function killOverlays(page) {
+  try {
   await page.evaluate(() => {
     const kill = (el) => {
       if (!el) return;
@@ -85,8 +86,10 @@ async function killOverlays(page) {
     };
     kill(document.getElementById('modal-backdrop'));
     kill(document.getElementById('connect-overlay'));
+    kill(document.getElementById('itt-period-alert'));
     document.querySelectorAll('.dialog').forEach((d) => d.classList.add('hidden'));
   });
+  } catch (e) { /* navigated */ }
 }
 
 /**

@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails, killOverlays } = require("./helpers");
 
 
 const ROOT = path.join(__dirname, "..");
@@ -53,6 +53,42 @@ const DESTS = loadTrails().filter((d) => {
  * @type {Record<string, { incomplete: (p: import("@playwright/test").Page) => Promise<void>, complete: (p: import("@playwright/test").Page) => Promise<void>, seedOk?: boolean }>}
  */
 const STAR = {
+  "itt99-amazon": {
+    incomplete: async () => {},
+    complete: async (page) => {
+      const add = page.locator("[data-add-cart]");
+      if ((await add.count()) > 0) await add.first().click({ force: true });
+      const need = page.locator("[data-official-need]");
+      if ((await need.count()) > 0) await need.first().fill("leftover residual");
+      const reqs = page.locator("[data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    },
+  },
+  "itt00-amazon": {
+    incomplete: async () => {},
+    complete: async (page) => {
+      const add = page.locator("[data-add-cart]");
+      if ((await add.count()) > 0) await add.first().click({ force: true });
+      const need = page.locator("[data-official-need]");
+      if ((await need.count()) > 0) await need.first().fill("leftover residual");
+      const reqs = page.locator("[data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    },
+  },
+  "itt04-digg": {
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").click({ force: true });
+    },
+    complete: async (page) => {
+      await page.locator('[data-official-pick="firefox"]').click({ force: true });
+      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-verb-host] [data-official-verb]").click({ force: true });
+    },
+  },
   "itt94-csotd": {
     incomplete: async (page) => {
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
@@ -388,6 +424,49 @@ async function runDest(page, d) {
 
   await openClear(page, d.year, d.href, d.whenKey);
 
+  if (html.indexOf("data-official-verb") !== -1 && !STAR[d.whenKey]) {
+    await revealLeftoverRails(page);
+    await page.locator("[data-official-verb]").first().waitFor({ state: "attached", timeout: 15000 });
+    await page.evaluate(() => {
+      document.querySelectorAll("[data-official-need]").forEach((el) => {
+        el.value = "";
+      });
+    });
+    await killOverlays(page);
+    await page.evaluate(() => {
+      const v = document.querySelector("[data-official-verb]");
+      if (v) v.click();
+    });
+    await page.waitForLoadState("domcontentloaded").catch(() => {});
+    await killOverlays(page);
+    if (await getKey(page, d.whenKey)) return;
+    await page.evaluate(() => {
+      const boxes = document.querySelectorAll("input[type='checkbox']");
+      for (let i = 0; i < boxes.length; i++) {
+        const el = boxes[i];
+        if (el.closest("[data-lo-panel], [data-pop-panel], .itt-also-year")) continue;
+        el.checked = true;
+      }
+    });
+    const field = page.locator("[data-official-need]").first();
+    if ((await field.count()) > 0) {
+      const typ = (await field.getAttribute("type")) || "text";
+      const minAttr = await field.getAttribute("data-official-min");
+      const minNeed = minAttr && /^\d+$/.test(minAttr) ? parseInt(minAttr, 10) : 2;
+      const long = "leftover residual ".repeat(20).slice(0, Math.max(minNeed, 16));
+      await field.fill(typ === "number" ? "431" : typ === "email" ? "museum@leftover.example" : long);
+    }
+    const pick = page.locator("[data-official-pick]").first();
+    if ((await pick.count()) > 0) await pick.click({ force: true });
+    await killOverlays(page);
+    await page.evaluate(() => {
+      const v = document.querySelector("[data-official-verb]");
+      if (v) v.click();
+    });
+    await expect.poll(() => getKey(page, d.whenKey), { timeout: 8000 }).toBeTruthy();
+    return;
+  }
+
   const star = STAR[d.whenKey];
   if (star) {
     await page.waitForTimeout(400);
@@ -408,6 +487,7 @@ async function runDest(page, d) {
       expect(await getKey(page, d.whenKey), d.whenKey + " incomplete").toBeFalsy();
     }
     await star.complete(page);
+    await page.waitForLoadState("domcontentloaded").catch(() => {});
     if (d.whenKey === "itt05-yt-uploads") {
       await expect.poll(async () => {
         const raw = await getKey(page, d.whenKey);
