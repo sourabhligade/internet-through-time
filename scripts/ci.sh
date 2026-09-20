@@ -51,5 +51,7 @@ echo "==> E2E: OSS visitor gate"
 node scripts/oss-visitor-gate.mjs
 echo "==> E2E: ship pack (hub · atlas · 3× · gold-A · leftover 4× · 2014 · 2018 · 2016–2019)"
 npx playwright test e2e/hub-years.spec.js e2e/atlas.spec.js e2e/3x-links.spec.js e2e/all-years-smoke.spec.js e2e/gold-a-leftover-pack.spec.js e2e/popular-3x-sites.spec.js e2e/one-thing-per-year.spec.js e2e/2005-2010-leftover-4x.spec.js e2e/2008-cut-double-dest-minutes.spec.js e2e/2008-5x-live.spec.js e2e/2014-mvp.spec.js e2e/2014-flows.spec.js e2e/2014-4x-flows.spec.js e2e/2018-mvp.spec.js e2e/2018-flows.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2016-2018-trail-chain.spec.js e2e/2017-2019-deepen-theater.spec.js e2e/2020-mvp.spec.js --workers=2
+echo "==> E2E: FLOW-CHECK dest-true (visitor door · leftover-3× unique · official leftover-2× · 2021/2022)"
+npx playwright test e2e/visitor-door.spec.js e2e/flow-check-pipeline.spec.js e2e/official-leftover-2x.spec.js e2e/leftover-3x-unique.spec.js e2e/2021-mvp.spec.js e2e/2022-mvp.spec.js e2e/2022-flows.spec.js --workers=2
 
 echo "==> CI OK"

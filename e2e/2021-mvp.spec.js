@@ -39,6 +39,7 @@ test.describe("2021 MVP", () => {
     await trap.click();
     expect(await page.evaluate(() => localStorage.getItem("itt21-att"))).toBeFalsy();
     const verb = page.locator("[data-official-verb-host] [data-official-verb]");
+    await page.locator("[data-official-need]").fill("Museum App");
     const reqs = page.locator("[data-official-verb-host] [data-official-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();

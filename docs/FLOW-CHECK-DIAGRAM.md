@@ -113,7 +113,9 @@ flowchart TD
 
 | Check | Pack |
 |-------|------|
+| FLOW-CHECK walk (hub · guided 6 · leftover-2×=0 · leftover-3× stops · leftover I/O sample) | `e2e/flow-check-pipeline.spec.js` · `e2e/visitor-door.spec.js` |
 | Leftover-3× unique dest-true dests | `e2e/leftover-3x-unique.spec.js` |
+| Official dest leftover-2× gone | `e2e/official-leftover-2x.spec.js` |
 | Official dest empty/complete | `e2e/all-years-official-10-real.spec.js` |
 | Dest-farm leftover-3× CUT (walks unique dest-true dests) | `e2e/2010-2015-3x-cut.spec.js` · `e2e/2015-2020-3x-cut.spec.js` |
 | Mock | `node scripts/audit-mock-flows.js` |
