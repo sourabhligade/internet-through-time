@@ -112,7 +112,7 @@ test.describe("new leftover rooms write — sample years", () => {
   test("2013 Chrome second 3× incomplete never writes · complete writes", async ({ page }) => {
     const fs = require("fs");
     const path = require("path");
-    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 tree missing");
     await page.goto("/years/2013/sites/chrome/index.html");
     await completePop(page, "itt13-pop-chrome");
   });

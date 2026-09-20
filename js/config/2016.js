@@ -114,6 +114,7 @@
     "sites/storyabout/index.html",
     "sites/superbowl/index.html",
     "sites/tay/index.html",
+    "sites/tesla/index.html",
     "sites/thedao/index.html",
     "sites/uncharted4/index.html",
     "sites/vine/about.html",
@@ -128,7 +129,7 @@
     "sites/youtube/about.html",
     "sites/youtube/index.html",
     "sites/zcash/index.html"
-  ];;;;;;;;
+  ];;;;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

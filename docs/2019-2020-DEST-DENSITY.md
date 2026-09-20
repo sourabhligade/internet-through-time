@@ -1,7 +1,7 @@
 # 2019–2020 · dest density (2× unique dests)
 
 **Date:** 2026-09-15  
-**Status:** Implemented on disk 2026-09-15. **2019 dest folders 38. 2020 dest folders 38.** Official 10 + leftover-3× unique dest-disjoint + leftover dests 19. Not dest-farm of forests.  
+**Status:** Historical density plan (2026-09-15). **Live disk 2026-09-20: 2019 dest folders 170 (warehouse, dest-lock reverted). 2020 dest folders 39. 2022 dest folders 25.** Do not dest-farm 2019 down or up to match this file.  
 **Named request:** roughly **2× dests on 2019**, and a **2020 rebuild** at the same density. Newer / important years (streaming, COVID web, Zoom, Disney+).  
 **Companion research:** session workflow `deep-research-2` (cites land when that run finishes). This file is the pass/fail map until then.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  

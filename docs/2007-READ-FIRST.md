@@ -1,7 +1,7 @@
 # 2007 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-09-01  
-**Status:** **DONE**. Live lean door. Dest-true official 10. Dest folders **23** (dest-lock). Follow this lock. Do **not** `git checkout` an old 2007 forest.  
+**Status:** **DONE**. Live lean door. Dest-true official 10. Dest folders **33** (dest-lock). Follow this lock. Do **not** `git checkout` an old 2007 forest.  
 **Parent (live):** 2006 Twttr. **Child:** 2008 GitHub issue (**live**).  
 **Git only if asked.**
 

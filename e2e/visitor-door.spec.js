@@ -141,4 +141,18 @@ test.describe("visitor door", () => {
     await expect.poll(() => getKey(page, "itt22-chatgpt")).toBeTruthy();
     await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
   });
+
+  test("local postcard empty never claims a finish", async ({ page }) => {
+    await page.goto("/years/1995/pages/home.html");
+    await page.evaluate(() => localStorage.removeItem("itt95-ssl-checkout"));
+    await page.reload();
+    await page.locator("[data-itt-postcard]").click();
+    await expect(page.locator("[data-itt-postcard-out]")).toContainText(/Empty never writes/i);
+  });
+
+  test("14.4k wait toggle is off by default", async ({ page }) => {
+    await page.goto("/years/1994/pages/home.html");
+    const on = await page.locator("[data-itt-friction]").isChecked();
+    expect(on).toBeFalsy();
+  });
 });

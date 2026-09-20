@@ -6,34 +6,34 @@
 
 | Year | Dests | HTML | 2× | 4× | Official keys | Guided | V1 | V2 | V3 | V4 | V5 | V6 | V7 | V8 | V9 | V10 | Score | Notes |
 |------|------:|-----:|---:|---:|--------------:|-------:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:---:|------:|-------|
-| 1994 | 159 | 383 | 149 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 18/9; CI smoke-only |
-| 1995 | 153 | 349 | 143 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 18/9; CI smoke-only |
-| 1996 | 156 | 303 | 147 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 18/9; CI smoke-only |
-| 1997 | 168 | 295 | 157 | 35 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 18/9; 35/168 dests; CI smoke-only |
-| 1998 | 156 | 306 | 146 | 32 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 18/9; 32/156 dests; CI smoke-only |
-| 1999 | 432 | 603 | 422 | 27 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | second 0/9; doors 18/27; 27/432 dests; CI smoke-only |
-| 2000 | 486 | 641 | 476 | 34 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | second 0/9; doors 18/27; 34/486 dests; CI smoke-only |
-| 2001 | 261 | 333 | 252 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | leftover-18 short 12/18; CI smoke-only |
-| 2002 | 234 | 292 | 225 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | leftover-18 short 12/18; CI smoke-only |
-| 2003 | 206 | 276 | 197 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | leftover-18 short 12/18; CI smoke-only |
-| 2004 | 810 | 1039 | 803 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | second 0/9; doors 18/27; CI smoke-only |
-| 2005 | 351 | 596 | 342 | 97 | 19 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | second 0/9; doors 18/27; 97/351 dests |
-| 2006 | 378 | 637 | 370 | 108 | 23 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 18/9; 108/378 dests |
-| 2007 | 23 | 82 | 1 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 6/9; 0/23 dests |
-| 2008 | 597 | 949 | 587 | 178 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 18/9; 178/597 dests |
-| 2010 | 22 | 61 | 1 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 6/9; 0/22 dests |
-| 2011 | 31 | 94 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 6/9; CI smoke-only |
-| 2012 | 24 | 69 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 6/9; CI smoke-only |
-| 2013 | 54 | 62 | 46 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 6/9; CI smoke-only |
-| 2014 | 18 | 36 | 0 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 6/9; 0/18 dests |
-| 2015 | 26 | 84 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 6/9; CI smoke-only |
-| 2016 | 21 | 65 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 6/9 |
-| 2017 | 40 | 76 | 1 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 18/9 |
-| 2018 | 13 | 22 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 3/9 |
-| 2019 | 38 | 74 | 19 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | Y | 8/10 | no unique second strip; doors 6/9 |
-| 2020 | 38 | 44 | 19 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | · | Y | 7/10 | no unique second strip; doors 6/9; mvp; CI smoke-only |
-| 2021 | 15 | 61 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | · | Y | 6/10 | no unique second strip; doors 3/9; 0/15 dests; mvp; CI smoke-only |
-| 2022 | 19 | 32 | 0 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | Y | 7/10 | no unique second strip; doors 0/9; 0/19 dests; CI smoke-only |
+| 1994 | 158 | 381 | 149 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 18/9 |
+| 1995 | 153 | 349 | 144 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 18/9 |
+| 1996 | 154 | 299 | 145 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 18/9 |
+| 1997 | 167 | 293 | 158 | 34 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 34/167 dests |
+| 1998 | 153 | 300 | 144 | 30 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 30/153 dests |
+| 1999 | 432 | 603 | 422 | 27 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | second 0/9; doors 18/27; 27/432 dests |
+| 2000 | 484 | 637 | 474 | 32 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | second 0/9; doors 18/27; 32/484 dests |
+| 2001 | 261 | 333 | 252 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | leftover-18 short 12/18 |
+| 2002 | 234 | 292 | 225 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | leftover-18 short 12/18 |
+| 2003 | 206 | 276 | 197 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | leftover-18 short 12/18 |
+| 2004 | 810 | 1039 | 803 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | second 0/9; doors 18/27 |
+| 2005 | 350 | 595 | 341 | 96 | 19 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | second 0/9; doors 18/27; 96/350 dests |
+| 2006 | 376 | 635 | 368 | 108 | 23 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 108/376 dests |
+| 2007 | 33 | 90 | 14 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/33 dests |
+| 2008 | 597 | 949 | 587 | 178 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 178/597 dests |
+| 2010 | 30 | 69 | 10 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/30 dests |
+| 2011 | 48 | 110 | 20 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| 2012 | 32 | 77 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| 2013 | 54 | 62 | 45 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| 2014 | 25 | 43 | 7 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/25 dests |
+| 2015 | 213 | 316 | 195 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| 2016 | 66 | 116 | 48 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| 2017 | 222 | 258 | 194 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 18/9 |
+| 2018 | 24 | 33 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 3/9 |
+| 2019 | 170 | 207 | 152 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| 2020 | 39 | 45 | 20 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | · | · | 6/10 | no unique second strip; doors 6/9; mvp |
+| 2021 | 18 | 64 | 3 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | · | · | 5/10 | no unique second strip; doors 3/9; 0/18 dests; mvp |
+| 2022 | 25 | 38 | 6 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 0/9; 0/25 dests |
 
 ## Keys
 

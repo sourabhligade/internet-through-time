@@ -308,7 +308,6 @@
       "sites/android/index.html": "http://museum.local/years/2005/sites/android/index.html",
       "sites/xbox360/index.html": "http://museum.local/years/2005/sites/xbox360/index.html",
       "sites/utorrent/index.html": "http://museum.local/years/2005/sites/utorrent/index.html",
-      "sites/secondlife/index.html": "http://museum.local/years/2005/sites/secondlife/index.html",
       "sites/gaia/index.html": "http://museum.local/years/2005/sites/gaia/index.html",
       "sites/kayak/index.html": "http://museum.local/years/2005/sites/kayak/index.html",
       "sites/clubpenguin/index.html": "http://museum.local/years/2005/sites/clubpenguin/index.html",

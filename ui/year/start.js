@@ -59,7 +59,11 @@
       "background:#fff!important;color:#111!important}" +
       "#itt-year-start,.ott-guided,.ott-flows,.itt-layer-assess,#itt-first-night-bar," +
       ".itt-also-year,.itt-home-more{width:100%!important;max-width:none!important;" +
-      "box-sizing:border-box!important;margin-left:0!important;margin-right:0!important}";
+      "box-sizing:border-box!important;margin-left:0!important;margin-right:0!important}" +
+      "html[data-itt-friction='1']::after{content:'14.4k…';position:fixed;z-index:9999;inset:0;" +
+      "background:#000;color:#0f0;font:14px monospace;display:flex;align-items:center;justify-content:center;" +
+      "animation:ittFriction 1.2s ease forwards;pointer-events:none}" +
+      "@keyframes ittFriction{0%{opacity:1}70%{opacity:1}100%{opacity:0;visibility:hidden}}";
   }
 
   function paintStart(year) {
@@ -79,6 +83,11 @@
         document.documentElement.setAttribute("data-itt-start-habit", "1");
       }
       if (isDeep()) document.documentElement.setAttribute("data-itt-deep", "1");
+      try {
+        if (/\bslow=1\b/.test(String(location.search || "")) || localStorage.getItem("itt-period-friction") === "1") {
+          document.documentElement.setAttribute("data-itt-friction", "1");
+        }
+      } catch (eFr) { /* */ }
       if (document.body) {
         document.body.setAttribute("data-itt-year", year);
         document.body.setAttribute("data-itt-start", "1");
@@ -138,7 +147,11 @@
         "</b><ol>" +
         lis +
         "</ol></div>" +
-        flowsHtml(year);
+        flowsHtml(year) +
+        '<p class="itt-start-tools" data-itt-start-tools="1" style="font-size:12px;margin:10px 0">' +
+        '<button type="button" data-itt-postcard>Local postcard</button> ' +
+        '<label><input type="checkbox" data-itt-friction> 14.4k wait (off by default)</label> ' +
+        '<span data-itt-postcard-out></span></p>';
 
       var extraHtml = spec.extraHtml;
       if (extraHtml == null && ITT.YearUI.START_EXTRA) {
@@ -189,6 +202,7 @@
           }
         }
       }
+      bindStartTools(year, spec);
       if (!document.querySelector(".itt-hub-exit") && document.body) {
         var hub = document.createElement("p");
         hub.className = "itt-hub-exit";
@@ -202,6 +216,57 @@
 
     if (ITT.flowTrails) finish();
     else loadFlowTrails(finish);
+  }
+
+  function bindStartTools(year, spec) {
+    var box = document.querySelector("[data-itt-start-tools]");
+    if (!box) return;
+    var friction = box.querySelector("[data-itt-friction]");
+    var postBtn = box.querySelector("[data-itt-postcard]");
+    var out = box.querySelector("[data-itt-postcard-out]");
+    try {
+      if (friction) {
+        friction.checked = localStorage.getItem("itt-period-friction") === "1";
+        if (friction.checked) document.documentElement.setAttribute("data-itt-friction", "1");
+        friction.onchange = function () {
+          if (friction.checked) {
+            localStorage.setItem("itt-period-friction", "1");
+            document.documentElement.setAttribute("data-itt-friction", "1");
+          } else {
+            localStorage.removeItem("itt-period-friction");
+            document.documentElement.removeAttribute("data-itt-friction");
+          }
+        };
+      }
+    } catch (eF) { /* */ }
+    if (postBtn) {
+      postBtn.onclick = function () {
+        var key = "";
+        try {
+          var trails = (ITT.flowTrails && ITT.flowTrails[year]) || [];
+          var i;
+          for (i = 0; i < trails.length; i++) {
+            if (trails[i] && trails[i].n === 1 && trails[i].whenKey) {
+              key = trails[i].whenKey;
+              break;
+            }
+          }
+        } catch (eT) { /* */ }
+        var blob = null;
+        try {
+          blob = key ? localStorage.getItem(key) : null;
+        } catch (eK) { /* */ }
+        var line = blob
+          ? "I finished " + year + " " + ((spec && spec.label) || "star") + " (local postcard · this browser only)."
+          : "Finish the star dest first. Empty never writes.";
+        if (out) out.textContent = line;
+        try {
+          if (blob && navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(line);
+          }
+        } catch (eC) { /* */ }
+      };
+    }
   }
 
   function isDeep() {

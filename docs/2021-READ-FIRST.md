@@ -1,7 +1,7 @@
 # 2021 — READ FIRST
 
 **Date:** 2026-09-20  
-**Status:** **LIVE dest-lock lean door.** Dest folders **15**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests.  
+**Status:** **LIVE dest-lock lean door.** Dest folders **18**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests.  
 **Parent:** 2020 Zoom Leave `itt20-zoom`. **2022 is live lean** (ChatGPT Send).  
 **Look:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 4. Leftover-3× unique dest-true dests **5**. Map stop.
 

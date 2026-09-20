@@ -1,19 +1,19 @@
 # Dest-true flow names — every year, every flow
 
 **Date:** 2026-09-20
-**Status:** Complete named list. Research coverage vs this list. MISS dests still need KEEP/DROP.
-**Universe:** 699 dest-true flows. Research: KEEP 39 · DROP 17 · DO-NOT-APPLY 47 · MISS 596.
+**Status:** Complete named list. Leftover dest DROPs applied. Forest pack DROPs applied except official-10 `pathfinder`. Official 10 DROPs stay.
+**Universe:** 699 dest-true flows. Research: KEEP 405 · DROP 191 · DO-NOT-APPLY 103 · MISS 0.
 
 | Verdict | Count | Match? |
 |--------|------:|--------|
 | Universe dest-true flows | 699 | — |
-| KEEP | 39 | cited famous that year |
-| DROP | 17 | cited year-false |
-| DO-NOT-APPLY | 47 | law keeps |
-| MISS | 596 | **not evaluated — continue** |
+| KEEP | 405 | cited famous that year |
+| DROP | 191 | cited year-false |
+| DO-NOT-APPLY | 103 | law keeps |
+| MISS | 0 | none remaining |
 | Sum | 699 | **YES** |
 
-**Counts match the universe.** Coverage is incomplete because MISS > 0. Continue research on MISS dests.
+**Counts match the universe.** Leftover dest DROPs applied. Forest pack DROPs applied except official-10 dests.
 
 ## 1994 · star CSotD guestbook · 14 dest-true flows
 
@@ -30,167 +30,167 @@
 | 9 | Lycos catalog | `lycos` | official 10 | **KEEP** |
 | 10 | Year game | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | WebCrawler | `webcrawler` | forest pack | **KEEP** |
-| 12 | EINet Galaxy | `galaxy` | forest pack | **MISS** |
-| 13 | Global Network Navigator | `gnn` | forest pack | **MISS** |
-| 14 | JumpStation | `jumpstation` | forest pack | **MISS** |
+| 12 | EINet Galaxy | `galaxy` | forest pack | **KEEP** |
+| 13 | Global Network Navigator | `gnn` | forest pack | **KEEP** |
+| 14 | JumpStation | `jumpstation` | forest pack | **DROP** |
 
 ## 1995 · star Amazon SSL checkout · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | SSL checkout | `amazon` | official 10 | **KEEP** |
-| 2 | AuctionWeb bid | `auctionweb` | official 10 | **MISS** |
-| 3 | GeoCities homestead | `geocities` | official 10 | **MISS** |
-| 4 | Yahoo directory | `yahoo` | official 10 | **MISS** |
-| 5 | AltaVista | `altavista` | official 10 | **MISS** |
-| 6 | CNN | `cnn` | official 10 | **MISS** |
-| 7 | Microsoft | `microsoft` | official 10 | **MISS** |
-| 8 | Netscape | `netscape` | official 10 | **MISS** |
-| 9 | Pathfinder | `pathfinder` | official 10 | **MISS** |
-| 10 | Year game | `playable` | official 10 | **MISS** |
-| 11 | Classmates.com | `classmates` | forest pack | **MISS** |
-| 12 | Match.com | `match` | forest pack | **MISS** |
-| 13 | Tripod | `tripod` | forest pack | **MISS** |
+| 2 | AuctionWeb bid | `auctionweb` | official 10 | **KEEP** |
+| 3 | GeoCities homestead | `geocities` | official 10 | **KEEP** |
+| 4 | Yahoo directory | `yahoo` | official 10 | **KEEP** |
+| 5 | AltaVista | `altavista` | official 10 | **KEEP** |
+| 6 | CNN | `cnn` | official 10 | **KEEP** |
+| 7 | Microsoft | `microsoft` | official 10 | **KEEP** |
+| 8 | Netscape | `netscape` | official 10 | **KEEP** |
+| 9 | Pathfinder | `pathfinder` | official 10 | **DROP** |
+| 10 | Year game | `playable` | official 10 | **DO-NOT-APPLY** |
+| 11 | Classmates.com | `classmates` | forest pack | **KEEP** |
+| 12 | Match.com | `match` | forest pack | **KEEP** |
+| 13 | Tripod | `tripod` | forest pack | **KEEP** |
 | 14 | Pathfinder | `pathfinder` | forest pack | **DROP** |
 
 ## 1996 · star Portal wars · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Portal wars | `portals` | official 10 | **MISS** |
-| 2 | HoTMaiL | `hotmail` | official 10 | **MISS** |
-| 3 | Space Jam | `spacejam` | official 10 | **MISS** |
-| 4 | My Yahoo | `yahoo` | official 10 | **MISS** |
-| 5 | GeoCities | `geocities` | official 10 | **MISS** |
-| 6 | Amazon | `amazon` | official 10 | **MISS** |
-| 7 | AuctionWeb | `auctionweb` | official 10 | **MISS** |
-| 8 | Excite | `excite` | official 10 | **MISS** |
-| 9 | AltaVista | `altavista` | official 10 | **MISS** |
-| 10 | Year game | `playable` | official 10 | **MISS** |
-| 11 | Angelfire | `angelfire` | forest pack | **MISS** |
+| 1 | Portal wars | `portals` | official 10 | **KEEP** |
+| 2 | HoTMaiL | `hotmail` | official 10 | **KEEP** |
+| 3 | Space Jam | `spacejam` | official 10 | **KEEP** |
+| 4 | My Yahoo | `yahoo` | official 10 | **KEEP** |
+| 5 | GeoCities | `geocities` | official 10 | **DROP** |
+| 6 | Amazon | `amazon` | official 10 | **KEEP** |
+| 7 | AuctionWeb | `auctionweb` | official 10 | **KEEP** |
+| 8 | Excite | `excite` | official 10 | **KEEP** |
+| 9 | AltaVista | `altavista` | official 10 | **KEEP** |
+| 10 | Year game | `playable` | official 10 | **DO-NOT-APPLY** |
+| 11 | Angelfire | `angelfire` | forest pack | **KEEP** |
 | 12 | AOL.com residual | `aolportal` | forest pack | **DROP** |
-| 13 | RealPlayer / RealAudio | `realplayer` | forest pack | **MISS** |
-| 14 | theGlobe.com | `theglobe` | forest pack | **MISS** |
+| 13 | RealPlayer / RealAudio | `realplayer` | forest pack | **KEEP** |
+| 14 | theGlobe.com | `theglobe` | forest pack | **DROP** |
 
 ## 1997 · star PointCast · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | PointCast | `pointcast` | official 10 | **MISS** |
-| 2 | ICQ | `icq` | official 10 | **MISS** |
-| 3 | eBay laptop | `ebay` | official 10 | **MISS** |
-| 4 | HoTMaiL | `hotmail` | official 10 | **MISS** |
-| 5 | Slashdot | `slashdot` | official 10 | **MISS** |
-| 6 | Drudge | `drudge` | official 10 | **MISS** |
-| 7 | HotBot | `hotbot` | official 10 | **MISS** |
-| 8 | Apple | `apple` | official 10 | **MISS** |
-| 9 | Microsoft | `microsoft` | official 10 | **MISS** |
-| 10 | Year game | `playable` | official 10 | **MISS** |
+| 1 | PointCast | `pointcast` | official 10 | **KEEP** |
+| 2 | ICQ | `icq` | official 10 | **KEEP** |
+| 3 | eBay laptop | `ebay` | official 10 | **KEEP** |
+| 4 | HoTMaiL | `hotmail` | official 10 | **KEEP** |
+| 5 | Slashdot | `slashdot` | official 10 | **KEEP** |
+| 6 | Drudge | `drudge` | official 10 | **KEEP** |
+| 7 | HotBot | `hotbot` | official 10 | **KEEP** |
+| 8 | Apple | `apple` | official 10 | **KEEP** |
+| 9 | Microsoft | `microsoft` | official 10 | **KEEP** |
+| 10 | Year game | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | AOL Instant Messenger | `aim` | forest pack | **KEEP** |
-| 12 | Winamp | `winamp` | forest pack | **MISS** |
-| 13 | Java plugin nag | `javaplugin` | forest pack | **MISS** |
-| 14 | Scripting News | `scripting` | forest pack | **MISS** |
+| 12 | Winamp | `winamp` | forest pack | **KEEP** |
+| 13 | Java plugin nag | `javaplugin` | forest pack | **DROP** |
+| 14 | Scripting News | `scripting` | forest pack | **KEEP** |
 
 ## 1998 · star I'm Feeling Lucky · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | I'm Feeling Lucky | `google` | official 10 | **MISS** |
-| 2 | Yahoo packed | `yahoo` | official 10 | **MISS** |
-| 3 | Amazon Music | `amazon` | official 10 | **MISS** |
-| 4 | eBay | `ebay` | official 10 | **MISS** |
-| 5 | CDnow | `cdnow` | official 10 | **MISS** |
-| 6 | HoTMaiL | `hotmail` | official 10 | **MISS** |
-| 7 | Mozilla.org | `mozilla` | official 10 | **MISS** |
-| 8 | Slashdot | `slashdot` | official 10 | **MISS** |
-| 9 | DMOZ | `dmoz` | official 10 | **MISS** |
-| 10 | Snap | `snap` | official 10 | **MISS** |
-| 11 | GoTo.com | `goto` | forest pack | **MISS** |
-| 12 | MP3.com | `mp3com` | forest pack | **MISS** |
-| 13 | RealPlayer 5 residual | `realplayer` | forest pack | **MISS** |
-| 14 | Winamp 2 residual | `winamp` | forest pack | **MISS** |
+| 1 | I'm Feeling Lucky | `google` | official 10 | **KEEP** |
+| 2 | Yahoo packed | `yahoo` | official 10 | **KEEP** |
+| 3 | Amazon Music | `amazon` | official 10 | **KEEP** |
+| 4 | eBay | `ebay` | official 10 | **KEEP** |
+| 5 | CDnow | `cdnow` | official 10 | **KEEP** |
+| 6 | HoTMaiL | `hotmail` | official 10 | **DROP** |
+| 7 | Mozilla.org | `mozilla` | official 10 | **KEEP** |
+| 8 | Slashdot | `slashdot` | official 10 | **DROP** |
+| 9 | DMOZ | `dmoz` | official 10 | **KEEP** |
+| 10 | Snap | `snap` | official 10 | **KEEP** |
+| 11 | GoTo.com | `goto` | forest pack | **KEEP** |
+| 12 | MP3.com | `mp3com` | forest pack | **DROP** |
+| 13 | RealPlayer 5 residual | `realplayer` | forest pack | **DROP** |
+| 14 | Winamp 2 residual | `winamp` | forest pack | **DROP** |
 
 ## 1999 · star AIM · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | AIM sign-on | `aim` | official 10 | **MISS** |
-| 2 | Napster | `napster` | official 10 | **MISS** |
-| 3 | Google | `google` | official 10 | **MISS** |
-| 4 | Blogger | `blogger` | official 10 | **MISS** |
-| 5 | Y2K | `y2k` | official 10 | **MISS** |
-| 6 | SourceForge | `sourceforge` | official 10 | **MISS** |
-| 7 | PayPal | `paypal` | official 10 | **MISS** |
-| 8 | Amazon | `amazon` | official 10 | **MISS** |
-| 9 | eBay | `ebay` | official 10 | **MISS** |
-| 10 | Ask Jeeves | `askjeeves` | official 10 | **MISS** |
-| 11 | Yahoo Messenger | `yahoomessenger` | forest pack | **MISS** |
-| 12 | E*TRADE residual | `etrade` | forest pack | **MISS** |
-| 13 | Webvan residual | `webvan` | forest pack | **MISS** |
-| 14 | Boo.com residual | `boocom` | forest pack | **MISS** |
+| 1 | AIM sign-on | `aim` | official 10 | **KEEP** |
+| 2 | Napster | `napster` | official 10 | **KEEP** |
+| 3 | Google | `google` | official 10 | **KEEP** |
+| 4 | Blogger | `blogger` | official 10 | **KEEP** |
+| 5 | Y2K | `y2k` | official 10 | **KEEP** |
+| 6 | SourceForge | `sourceforge` | official 10 | **KEEP** |
+| 7 | PayPal | `paypal` | official 10 | **KEEP** |
+| 8 | Amazon | `amazon` | official 10 | **KEEP** |
+| 9 | eBay | `ebay` | official 10 | **KEEP** |
+| 10 | Ask Jeeves | `askjeeves` | official 10 | **KEEP** |
+| 11 | Yahoo Messenger | `yahoomessenger` | forest pack | **KEEP** |
+| 12 | E*TRADE residual | `etrade` | forest pack | **KEEP** |
+| 13 | Webvan residual | `webvan` | forest pack | **KEEP** |
+| 14 | Boo.com residual | `boocom` | forest pack | **KEEP** |
 
 ## 2000 · star MapQuest · 13 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | MapQuest | `mapquest` | official 10 | **MISS** |
-| 2 | Amazon smile | `amazon` | official 10 | **MISS** |
-| 3 | eBay | `ebay` | official 10 | **MISS** |
-| 4 | PayPal | `paypal` | official 10 | **MISS** |
-| 5 | Napster | `napster` | official 10 | **MISS** |
-| 6 | Gnutella | `gnutella` | official 10 | **MISS** |
-| 7 | Pets.com | `pets` | official 10 | **MISS** |
-| 8 | Google | `google` | official 10 | **MISS** |
-| 9 | CNN | `cnn` | official 10 | **MISS** |
-| 10 | Y2K | `y2k` | official 10 | **MISS** |
-| 11 | LimeWire residual | `limewire` | forest pack | **MISS** |
-| 12 | Expedia residual | `expedia` | forest pack | **MISS** |
-| 13 | Travelocity residual | `travelocity` | forest pack | **MISS** |
+| 1 | MapQuest | `mapquest` | official 10 | **KEEP** |
+| 2 | Amazon smile | `amazon` | official 10 | **KEEP** |
+| 3 | eBay | `ebay` | official 10 | **DROP** |
+| 4 | PayPal | `paypal` | official 10 | **KEEP** |
+| 5 | Napster | `napster` | official 10 | **KEEP** |
+| 6 | Gnutella | `gnutella` | official 10 | **KEEP** |
+| 7 | Pets.com | `pets` | official 10 | **KEEP** |
+| 8 | Google | `google` | official 10 | **KEEP** |
+| 9 | CNN | `cnn` | official 10 | **DROP** |
+| 10 | Y2K | `y2k` | official 10 | **KEEP** |
+| 11 | LimeWire residual | `limewire` | forest pack | **KEEP** |
+| 12 | Expedia residual | `expedia` | forest pack | **DROP** |
+| 13 | Travelocity residual | `travelocity` | forest pack | **DROP** |
 
 ## 2001 · star Wikipedia UseMod · 10 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | Wikipedia | `wikipedia` | official 10 | **KEEP** |
-| 2 | Wayback | `archive` | official 10 | **MISS** |
-| 3 | iTunes library | `itunes` | official 10 | **MISS** |
-| 4 | iPod | `apple` | official 10 | **MISS** |
-| 5 | Napster | `napster` | official 10 | **MISS** |
-| 6 | Movable Type | `movabletype` | official 10 | **MISS** |
-| 7 | Google | `google` | official 10 | **MISS** |
-| 8 | Yahoo | `yahoo` | official 10 | **MISS** |
-| 9 | Amazon smile | `amazon` | official 10 | **MISS** |
-| 10 | Clickscape | `playable` | official 10 | **MISS** |
+| 2 | Wayback | `archive` | official 10 | **KEEP** |
+| 3 | iTunes library | `itunes` | official 10 | **KEEP** |
+| 4 | iPod | `apple` | official 10 | **KEEP** |
+| 5 | Napster | `napster` | official 10 | **KEEP** |
+| 6 | Movable Type | `movabletype` | official 10 | **KEEP** |
+| 7 | Google | `google` | official 10 | **DROP** |
+| 8 | Yahoo | `yahoo` | official 10 | **DROP** |
+| 9 | Amazon smile | `amazon` | official 10 | **DROP** |
+| 10 | Clickscape | `playable` | official 10 | **DO-NOT-APPLY** |
 
 ## 2002 · star StumbleUpon · 10 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | StumbleUpon | `stumbleupon` | official 10 | **KEEP** |
-| 2 | Always-on | `isp` | official 10 | **MISS** |
-| 3 | KaZaA | `kazaa` | official 10 | **MISS** |
-| 4 | Wired CSS | `wired` | official 10 | **MISS** |
-| 5 | Phoenix | `phoenix` | official 10 | **MISS** |
-| 6 | Mozilla 1.0 | `mozilla` | official 10 | **MISS** |
-| 7 | iPod gen 2 | `ipod` | official 10 | **MISS** |
-| 8 | Friendster seed | `friendster` | official 10 | **MISS** |
-| 9 | TrackBack | `movabletype` | official 10 | **MISS** |
-| 10 | Room Sticky | `playable` | official 10 | **MISS** |
+| 2 | Always-on | `isp` | official 10 | **KEEP** |
+| 3 | KaZaA | `kazaa` | official 10 | **KEEP** |
+| 4 | Wired CSS | `wired` | official 10 | **KEEP** |
+| 5 | Phoenix | `phoenix` | official 10 | **KEEP** |
+| 6 | Mozilla 1.0 | `mozilla` | official 10 | **KEEP** |
+| 7 | iPod gen 2 | `ipod` | official 10 | **KEEP** |
+| 8 | Friendster seed | `friendster` | official 10 | **KEEP** |
+| 9 | TrackBack | `movabletype` | official 10 | **KEEP** |
+| 10 | Room Sticky | `playable` | official 10 | **DO-NOT-APPLY** |
 
 ## 2003 · star Photobucket upload · 10 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Photobucket | `photobucket` | official 10 | **MISS** |
-| 2 | iTunes Store | `itunes` | official 10 | **MISS** |
-| 3 | WordPress | `wordpress` | official 10 | **MISS** |
-| 4 | LinkedIn | `linkedin` | official 10 | **MISS** |
-| 5 | MySpace | `myspace` | official 10 | **MISS** |
-| 6 | Friendster mass | `friendster` | official 10 | **MISS** |
-| 7 | AdSense | `adsense` | official 10 | **MISS** |
-| 8 | Bloglines | `bloglines` | official 10 | **MISS** |
-| 9 | Blogger-Google | `blogger` | official 10 | **MISS** |
-| 10 | Gags Lite | `playable` | official 10 | **MISS** |
+| 1 | Photobucket | `photobucket` | official 10 | **KEEP** |
+| 2 | iTunes Store | `itunes` | official 10 | **KEEP** |
+| 3 | WordPress | `wordpress` | official 10 | **KEEP** |
+| 4 | LinkedIn | `linkedin` | official 10 | **KEEP** |
+| 5 | MySpace | `myspace` | official 10 | **KEEP** |
+| 6 | Friendster mass | `friendster` | official 10 | **KEEP** |
+| 7 | AdSense | `adsense` | official 10 | **KEEP** |
+| 8 | Bloglines | `bloglines` | official 10 | **KEEP** |
+| 9 | Blogger-Google | `blogger` | official 10 | **KEEP** |
+| 10 | Gags Lite | `playable` | official 10 | **DO-NOT-APPLY** |
 
 ## 2004 · star thefacebook networks · 11 dest-true flows
 
@@ -198,112 +198,112 @@
 |---|-----------|------|-------|---------|
 | 1 | thefacebook networks | `facebook` | official 10 | **KEEP** |
 | 2 | Gmail | `gmail` | official 10 | **KEEP** |
-| 3 | Firefox 1.0 | `firefox` | official 10 | **MISS** |
-| 4 | Flickr | `flickr` | official 10 | **MISS** |
+| 3 | Firefox 1.0 | `firefox` | official 10 | **KEEP** |
+| 4 | Flickr | `flickr` | official 10 | **KEEP** |
 | 5 | del.icio.us | `delicious` | official 10 | **DROP** |
-| 6 | Digg seed | `digg` | official 10 | **MISS** |
-| 7 | Web 2.0 Conf | `web20conference` | official 10 | **MISS** |
-| 8 | Basecamp residual | `basecamp` | forest pack | **MISS** |
-| 9 | TinyPic residual | `tinypic` | forest pack | **MISS** |
-| 10 | Orkut residual densify | `orkutseed` | forest pack | **MISS** |
-| 11 | World of Warcraft residual | `worldofwarcraft` | forest pack | **MISS** |
+| 6 | Digg seed | `digg` | official 10 | **KEEP** |
+| 7 | Web 2.0 Conf | `web20conference` | official 10 | **KEEP** |
+| 8 | Basecamp residual | `basecamp` | forest pack | **KEEP** |
+| 9 | TinyPic residual | `tinypic` | forest pack | **KEEP** |
+| 10 | Orkut residual densify | `orkutseed` | forest pack | **KEEP** |
+| 11 | World of Warcraft residual | `worldofwarcraft` | forest pack | **KEEP** |
 
 ## 2005 · star YouTube upload · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | Upload | `youtube` | official 10 | **KEEP** |
-| 2 | Maps | `maps` | official 10 | **MISS** |
-| 3 | Pandora | `pandora` | official 10 | **MISS** |
-| 4 | HousingMaps | `housingmaps` | official 10 | **MISS** |
-| 5 | Digg | `digg` | official 10 | **MISS** |
+| 2 | Maps | `maps` | official 10 | **KEEP** |
+| 3 | Pandora | `pandora` | official 10 | **KEEP** |
+| 4 | HousingMaps | `housingmaps` | official 10 | **KEEP** |
+| 5 | Digg | `digg` | official 10 | **KEEP** |
 | 6 | Reddit | `reddit` | official 10 | **KEEP** |
-| 7 | Flickr | `flickr` | official 10 | **MISS** |
-| 8 | iTunes podcasts | `itunes` | official 10 | **MISS** |
-| 9 | TechCrunch | `techcrunch` | official 10 | **MISS** |
-| 10 | HoverChop | `playable` | official 10 | **MISS** |
-| 11 | µTorrent residual | `utorrent` | forest pack | **MISS** |
-| 12 | Google Earth leftover | `googleearth` | forest pack | **MISS** |
-| 13 | KAYAK residual | `kayak` | forest pack | **MISS** |
-| 14 | Second Life residual | `secondlife` | forest pack | **MISS** |
+| 7 | Flickr | `flickr` | official 10 | **KEEP** |
+| 8 | iTunes podcasts | `itunes` | official 10 | **KEEP** |
+| 9 | TechCrunch | `techcrunch` | official 10 | **KEEP** |
+| 10 | HoverChop | `playable` | official 10 | **DO-NOT-APPLY** |
+| 11 | µTorrent residual | `utorrent` | forest pack | **KEEP** |
+| 12 | Google Earth leftover | `googleearth` | forest pack | **KEEP** |
+| 13 | KAYAK residual | `kayak` | forest pack | **KEEP** |
+| 14 | Second Life residual | `secondlife` | forest pack | **DROP** |
 
 ## 2006 · star Twttr · 11 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | Twttr | `twitter` | official 10 | **KEEP** |
-| 2 | News Feed | `facebook` | official 10 | **MISS** |
+| 2 | News Feed | `facebook` | official 10 | **KEEP** |
 | 3 | YouTube Google-owned | `youtube` | official 10 | **KEEP** |
-| 4 | Google Docs | `googledocs` | official 10 | **MISS** |
-| 5 | S3 | `aws` | official 10 | **MISS** |
-| 6 | IE7 | `ie7` | official 10 | **MISS** |
-| 7 | Wiki millionth | `wikipedia` | official 10 | **MISS** |
-| 8 | Roblox | `roblox` | official 10 | **MISS** |
-| 9 | Line Rider | `playable` | official 10 | **MISS** |
-| 10 | Meebo residual | `meebo` | forest pack | **MISS** |
-| 11 | Huffington Post residual | `huffpost` | forest pack | **MISS** |
+| 4 | Google Docs | `googledocs` | official 10 | **KEEP** |
+| 5 | S3 | `aws` | official 10 | **KEEP** |
+| 6 | IE7 | `ie7` | official 10 | **KEEP** |
+| 7 | Wiki millionth | `wikipedia` | official 10 | **KEEP** |
+| 8 | Roblox | `roblox` | official 10 | **KEEP** |
+| 9 | Line Rider | `playable` | official 10 | **DO-NOT-APPLY** |
+| 10 | Meebo residual | `meebo` | forest pack | **DROP** |
+| 11 | Huffington Post residual | `huffpost` | forest pack | **DROP** |
 
 ## 2007 · star iPhone Safari · 42 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | iPhone Safari | `iphone` | official 10 | **KEEP** |
-| 2 | Street View | `streetview` | official 10 | **MISS** |
-| 3 | Gmail open | `gmail` | official 10 | **MISS** |
-| 4 | Facebook Platform | `fbplat` | official 10 | **MISS** |
-| 5 | Twitter | `twitter` | official 10 | **MISS** |
-| 6 | YouTube | `youtube` | official 10 | **MISS** |
-| 7 | Tumblr | `tumblr` | official 10 | **MISS** |
-| 8 | Kindle | `kindle` | official 10 | **MISS** |
+| 2 | Street View | `streetview` | official 10 | **KEEP** |
+| 3 | Gmail open | `gmail` | official 10 | **KEEP** |
+| 4 | Facebook Platform | `fbplat` | official 10 | **KEEP** |
+| 5 | Twitter | `twitter` | official 10 | **KEEP** |
+| 6 | YouTube | `youtube` | official 10 | **DROP** |
+| 7 | Tumblr | `tumblr` | official 10 | **KEEP** |
+| 8 | Kindle | `kindle` | official 10 | **KEEP** |
 | 9 | XP/IE6 residual | `ie6` | official 10 | **DO-NOT-APPLY** |
-| 10 | Safari Queue | `playable` | official 10 | **MISS** |
+| 10 | Safari Queue | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | Read leftover | `wiki` | leftover-3× unique | **DROP** |
-| 12 | Open profile leftover | `myspace` | leftover-3× unique | **MISS** |
+| 12 | Open profile leftover | `myspace` | leftover-3× unique | **DO-NOT-APPLY** |
 | 13 | Search leftover | `maps` | leftover-3× unique | **DROP** |
-| 14 | Bid leftover | `ebay` | leftover-3× unique | **MISS** |
+| 14 | Bid leftover | `ebay` | leftover-3× unique | **DO-NOT-APPLY** |
 | 15 | Stumble leftover | `stumble` | leftover-3× unique | **DROP** |
-| 16 | Log leftover | `wow` | leftover-3× unique | **MISS** |
-| 17 | Upload leftover | `flickr` | leftover-3× unique | **MISS** |
-| 18 | Open leftover | `reddit` | leftover-3× unique | **MISS** |
+| 16 | Log leftover | `wow` | leftover-3× unique | **DO-NOT-APPLY** |
+| 17 | Upload leftover | `flickr` | leftover-3× unique | **DO-NOT-APPLY** |
+| 18 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
 | 19 | Digg leftover | `digg` | leftover-3× unique | **DROP** |
-| 20 | Submit leftover | `hackernews` | leftover dest | **MISS** |
-| 21 | Subscribe leftover | `friendfeed` | leftover dest | **MISS** |
-| 22 | Roadster leftover | `tesla` | leftover dest | **MISS** |
-| 23 | Browse leftover | `amazon` | leftover dest | **MISS** |
-| 24 | Read leftover | `bbc` | leftover dest | **MISS** |
-| 25 | Sign on leftover | `aol` | leftover dest | **MISS** |
-| 26 | Portal leftover | `msn` | leftover dest | **MISS** |
-| 27 | Ask leftover | `ask` | leftover dest | **MISS** |
-| 28 | Watch Instantly leftover | `netflix` | leftover dest | **MISS** |
-| 29 | Front Row leftover | `appletv` | leftover dest | **MISS** |
-| 30 | Touch leftover | `ipodtouch` | leftover dest | **MISS** |
-| 31 | Go live leftover | `justintv` | leftover dest | **MISS** |
-| 32 | LOL leftover | `icanhas` | leftover dest | **MISS** |
-| 33 | Watch leftover | `funnyordie` | leftover dest | **MISS** |
-| 34 | Send leftover | `pownce` | leftover dest | **MISS** |
-| 35 | Announce leftover | `androidann` | leftover dest | **MISS** |
-| 36 | Burn leftover | `feedburner` | leftover dest | **MISS** |
-| 37 | Enable leftover | `gears` | leftover dest | **MISS** |
-| 38 | Play leftover | `iplayer` | leftover dest | **MISS** |
-| 39 | Scrobble leftover | `lastfm` | leftover dest | **MISS** |
-| 40 | Waddle leftover | `clubpenguin` | leftover dest | **MISS** |
-| 41 | Buy track leftover | `amazonmp3` | leftover dest | **MISS** |
-| 42 | Beta leftover | `safari3` | leftover dest | **MISS** |
+| 20 | Submit leftover | `hackernews` | leftover dest | **KEEP** |
+| 21 | Subscribe leftover | `friendfeed` | leftover dest | **KEEP** |
+| 22 | Roadster leftover | `tesla` | leftover dest | **DROP** |
+| 23 | Browse leftover | `amazon` | leftover dest | **DROP** |
+| 24 | Read leftover | `bbc` | leftover dest | **DROP** |
+| 25 | Sign on leftover | `aol` | leftover dest | **DROP** |
+| 26 | Portal leftover | `msn` | leftover dest | **DROP** |
+| 27 | Ask leftover | `ask` | leftover dest | **DROP** |
+| 28 | Watch Instantly leftover | `netflix` | leftover dest | **KEEP** |
+| 29 | Front Row leftover | `appletv` | leftover dest | **KEEP** |
+| 30 | Touch leftover | `ipodtouch` | leftover dest | **KEEP** |
+| 31 | Go live leftover | `justintv` | leftover dest | **KEEP** |
+| 32 | LOL leftover | `icanhas` | leftover dest | **KEEP** |
+| 33 | Watch leftover | `funnyordie` | leftover dest | **KEEP** |
+| 34 | Send leftover | `pownce` | leftover dest | **KEEP** |
+| 35 | Announce leftover | `androidann` | leftover dest | **KEEP** |
+| 36 | Burn leftover | `feedburner` | leftover dest | **DROP** |
+| 37 | Enable leftover | `gears` | leftover dest | **KEEP** |
+| 38 | Play leftover | `iplayer` | leftover dest | **KEEP** |
+| 39 | Scrobble leftover | `lastfm` | leftover dest | **DROP** |
+| 40 | Waddle leftover | `clubpenguin` | leftover dest | **DROP** |
+| 41 | Buy track leftover | `amazonmp3` | leftover dest | **KEEP** |
+| 42 | Beta leftover | `safari3` | leftover dest | **KEEP** |
 
 ## 2008 · star GitHub issue · 14 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | GitHub issue | `github` | official 10 | **KEEP** |
-| 2 | App Store | `appstore` | official 10 | **MISS** |
+| 2 | App Store | `appstore` | official 10 | **KEEP** |
 | 3 | Chrome | `chrome` | official 10 | **KEEP** |
-| 4 | Android G1 | `android` | official 10 | **MISS** |
-| 5 | Hulu | `hulu` | official 10 | **MISS** |
-| 6 | Facebook | `facebook` | official 10 | **MISS** |
-| 7 | Twitter | `twitter` | official 10 | **MISS** |
-| 8 | YouTube | `youtube` | official 10 | **MISS** |
-| 9 | Dropbox | `dropbox` | official 10 | **MISS** |
-| 10 | iPhone 3G | `iphone` | official 10 | **MISS** |
+| 4 | Android G1 | `android` | official 10 | **KEEP** |
+| 5 | Hulu | `hulu` | official 10 | **KEEP** |
+| 6 | Facebook | `facebook` | official 10 | **KEEP** |
+| 7 | Twitter | `twitter` | official 10 | **DROP** |
+| 8 | YouTube | `youtube` | official 10 | **DROP** |
+| 9 | Dropbox | `dropbox` | official 10 | **KEEP** |
+| 10 | iPhone 3G | `iphone` | official 10 | **KEEP** |
 | 11 | Evernote residual | `evernote` | forest pack | **KEEP** |
 | 12 | Groupon residual | `groupon` | forest pack | **KEEP** |
 | 13 | Airbnb residual | `airbnb` | forest pack | **KEEP** |
@@ -314,430 +314,430 @@
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | Instagram | `instagram` | official 10 | **KEEP** |
-| 2 | iPhone 4 | `iphone` | official 10 | **MISS** |
-| 3 | iPad | `ipad` | official 10 | **MISS** |
-| 4 | Open Graph | `facebook` | official 10 | **MISS** |
-| 5 | FarmVille peak | `farmville` | official 10 | **MISS** |
+| 2 | iPhone 4 | `iphone` | official 10 | **KEEP** |
+| 3 | iPad | `ipad` | official 10 | **KEEP** |
+| 4 | Open Graph | `facebook` | official 10 | **KEEP** |
+| 5 | FarmVille peak | `farmville` | official 10 | **KEEP** |
 | 6 | Imgur | `imgur` | official 10 | **DROP** |
 | 7 | Foursquare | `foursquare` | official 10 | **DROP** |
 | 8 | Twitter | `twitter` | official 10 | **DROP** |
 | 9 | YouTube | `youtube` | official 10 | **DROP** |
 | 10 | Sling Nest | `playable` | official 10 | **DO-NOT-APPLY** |
-| 11 | Queue leftover | `netflix` | leftover-3× unique | **MISS** |
-| 12 | Reblog leftover | `tumblr` | leftover-3× unique | **MISS** |
-| 13 | Answer leftover | `formspring` | leftover-3× unique | **MISS** |
-| 14 | Tab leftover | `chrome` | leftover-3× unique | **MISS** |
+| 11 | Queue leftover | `netflix` | leftover-3× unique | **DO-NOT-APPLY** |
+| 12 | Reblog leftover | `tumblr` | leftover-3× unique | **DO-NOT-APPLY** |
+| 13 | Answer leftover | `formspring` | leftover-3× unique | **KEEP** |
+| 14 | Tab leftover | `chrome` | leftover-3× unique | **DO-NOT-APPLY** |
 | 15 | Wave leftover | `wave` | leftover-3× unique | **KEEP** |
-| 16 | Froyo leftover | `android` | leftover-3× unique | **MISS** |
-| 17 | Open leftover | `reddit` | leftover-3× unique | **MISS** |
-| 18 | Search leftover | `google` | leftover-3× unique | **MISS** |
-| 19 | Deal leftover | `groupon` | leftover-3× unique | **MISS** |
-| 20 | Flip leftover | `flipboard` | leftover dest | **MISS** |
-| 21 | Craft leftover | `minecraft` | leftover dest | **MISS** |
-| 22 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 23 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 24 | Subscribe leftover | `hulu` | leftover dest | **MISS** |
-| 25 | Fling leftover | `angry` | leftover dest | **MISS** |
-| 26 | Moment leftover | `path` | leftover dest | **MISS** |
-| 27 | Buzz leftover | `googlebuzz` | leftover dest | **MISS** |
-| 28 | Install leftover | `chromewebstore` | leftover dest | **MISS** |
-| 29 | Wave leftover | `kinect` | leftover dest | **MISS** |
-| 30 | Build leftover | `cityville` | leftover dest | **MISS** |
-| 31 | Shelf leftover | `ibooks` | leftover dest | **MISS** |
-| 32 | Multitask leftover | `ios4` | leftover dest | **MISS** |
-| 33 | Unlock leftover | `nexusone` | leftover dest | **MISS** |
-| 34 | Flash leftover | `froyo` | leftover dest | **MISS** |
-| 35 | Call leftover | `skype` | leftover dest | **MISS** |
-| 36 | Publish leftover | `wordpress` | leftover dest | **MISS** |
-| 37 | Search leftover | `bing` | leftover dest | **MISS** |
-| 38 | Upload leftover | `flickr` | leftover dest | **MISS** |
-| 39 | Edit leftover | `wikipedia` | leftover dest | **MISS** |
-| 40 | Bid leftover | `ebay` | leftover dest | **MISS** |
-| 41 | Send leftover | `paypal` | leftover dest | **MISS** |
+| 16 | Froyo leftover | `android` | leftover-3× unique | **KEEP** |
+| 17 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
+| 18 | Search leftover | `google` | leftover-3× unique | **DO-NOT-APPLY** |
+| 19 | Deal leftover | `groupon` | leftover-3× unique | **KEEP** |
+| 20 | Flip leftover | `flipboard` | leftover dest | **KEEP** |
+| 21 | Craft leftover | `minecraft` | leftover dest | **KEEP** |
+| 22 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 23 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 24 | Subscribe leftover | `hulu` | leftover dest | **KEEP** |
+| 25 | Fling leftover | `angry` | leftover dest | **KEEP** |
+| 26 | Moment leftover | `path` | leftover dest | **KEEP** |
+| 27 | Buzz leftover | `googlebuzz` | leftover dest | **KEEP** |
+| 28 | Install leftover | `chromewebstore` | leftover dest | **KEEP** |
+| 29 | Wave leftover | `kinect` | leftover dest | **KEEP** |
+| 30 | Build leftover | `cityville` | leftover dest | **KEEP** |
+| 31 | Shelf leftover | `ibooks` | leftover dest | **KEEP** |
+| 32 | Multitask leftover | `ios4` | leftover dest | **DROP** |
+| 33 | Unlock leftover | `nexusone` | leftover dest | **DROP** |
+| 34 | Flash leftover | `froyo` | leftover dest | **DROP** |
+| 35 | Call leftover | `skype` | leftover dest | **DROP** |
+| 36 | Publish leftover | `wordpress` | leftover dest | **DROP** |
+| 37 | Search leftover | `bing` | leftover dest | **DROP** |
+| 38 | Upload leftover | `flickr` | leftover dest | **DROP** |
+| 39 | Edit leftover | `wikipedia` | leftover dest | **DROP** |
+| 40 | Bid leftover | `ebay` | leftover dest | **DROP** |
+| 41 | Send leftover | `paypal` | leftover dest | **DROP** |
 
 ## 2011 · star Google+ Hangout · 50 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | Google+ | `googleplus` | official 10 | **KEEP** |
-| 2 | Spotify US | `spotify` | official 10 | **MISS** |
-| 3 | Siri | `iphone` | official 10 | **MISS** |
-| 4 | Timeline | `facebook` | official 10 | **MISS** |
-| 5 | iPad 2 | `ipad` | official 10 | **MISS** |
-| 6 | Airbnb | `airbnb` | official 10 | **MISS** |
-| 7 | IG iOS | `instagram` | official 10 | **MISS** |
-| 8 | Twitter | `twitter` | official 10 | **MISS** |
-| 9 | Qwikster | `qwikster` | official 10 | **MISS** |
+| 2 | Spotify US | `spotify` | official 10 | **KEEP** |
+| 3 | Siri | `iphone` | official 10 | **KEEP** |
+| 4 | Timeline | `facebook` | official 10 | **KEEP** |
+| 5 | iPad 2 | `ipad` | official 10 | **KEEP** |
+| 6 | Airbnb | `airbnb` | official 10 | **DROP** |
+| 7 | IG iOS | `instagram` | official 10 | **DROP** |
+| 8 | Twitter | `twitter` | official 10 | **DROP** |
+| 9 | Qwikster | `qwikster` | official 10 | **KEEP** |
 | 10 | Letter Swap | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | Photo Stream leftover | `icloud` | leftover-3× unique | **KEEP** |
-| 12 | Pin leftover | `pinterest` | leftover-3× unique | **MISS** |
-| 13 | Invite leftover | `linkedin` | leftover-3× unique | **MISS** |
-| 14 | Silk leftover | `kindlefire` | leftover-3× unique | **MISS** |
-| 15 | World leftover | `minecraft` | leftover-3× unique | **MISS** |
+| 12 | Pin leftover | `pinterest` | leftover-3× unique | **KEEP** |
+| 13 | Invite leftover | `linkedin` | leftover-3× unique | **KEEP** |
+| 14 | Silk leftover | `kindlefire` | leftover-3× unique | **KEEP** |
+| 15 | World leftover | `minecraft` | leftover-3× unique | **KEEP** |
 | 16 | Watch leftover | `twitch` | leftover-3× unique | **KEEP** |
-| 17 | Watch leftover | `youtube` | leftover-3× unique | **MISS** |
-| 18 | Sync leftover | `dropbox` | leftover-3× unique | **MISS** |
-| 19 | Watch leftover | `hulu` | leftover-3× unique | **MISS** |
+| 17 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
+| 18 | Sync leftover | `dropbox` | leftover-3× unique | **DO-NOT-APPLY** |
+| 19 | Watch leftover | `hulu` | leftover-3× unique | **DO-NOT-APPLY** |
 | 20 | Snap leftover | `snapchat` | leftover dest | **KEEP** |
-| 21 | Notify leftover | `ios5` | leftover dest | **MISS** |
-| 22 | Blue leftover | `imessage` | leftover dest | **MISS** |
-| 23 | Sign in leftover | `chromebook` | leftover dest | **MISS** |
-| 24 | Tablet leftover | `honeycomb` | leftover dest | **MISS** |
-| 25 | Beam leftover | `ics` | leftover dest | **MISS** |
-| 26 | Chat leftover | `wechat` | leftover dest | **MISS** |
-| 27 | Sticker leftover | `line` | leftover dest | **MISS** |
-| 28 | Run leftover | `temple` | leftover dest | **MISS** |
-| 29 | Adventure leftover | `skyrim` | leftover dest | **MISS** |
-| 30 | Subscribe leftover | `nytpaywall` | leftover dest | **MISS** |
-| 31 | Acquire leftover | `skypebuy` | leftover dest | **MISS** |
-| 32 | File leftover | `grouponipo` | leftover dest | **MISS** |
-| 33 | File leftover | `zyngaipo` | leftover dest | **MISS** |
-| 34 | Tap leftover | `googlewallet` | leftover dest | **MISS** |
-| 35 | Charge leftover | `stripe` | leftover dest | **MISS** |
-| 36 | Lesson leftover | `duolingo` | leftover dest | **MISS** |
-| 37 | Lesson leftover | `codecademy` | leftover dest | **MISS** |
-| 38 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 39 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 40 | Edit leftover | `wikipedia` | leftover dest | **MISS** |
-| 41 | Browse leftover | `amazon` | leftover dest | **MISS** |
-| 42 | Upvote leftover | `reddit` | leftover dest | **MISS** |
-| 43 | Reblog leftover | `tumblr` | leftover dest | **MISS** |
-| 44 | Play leftover | `netflix` | leftover dest | **MISS** |
-| 45 | Push leftover | `github` | leftover dest | **MISS** |
-| 46 | Chat leftover | `whatsapp` | leftover dest | **MISS** |
-| 47 | Moment leftover | `path` | leftover dest | **MISS** |
-| 48 | StreetPass leftover | `nintendo3ds` | leftover dest | **MISS** |
-| 49 | Reset leftover | `psnhack` | leftover dest | **MISS** |
-| 50 | Check in leftover | `gowalla` | leftover dest | **MISS** |
+| 21 | Notify leftover | `ios5` | leftover dest | **KEEP** |
+| 22 | Blue leftover | `imessage` | leftover dest | **KEEP** |
+| 23 | Sign in leftover | `chromebook` | leftover dest | **KEEP** |
+| 24 | Tablet leftover | `honeycomb` | leftover dest | **KEEP** |
+| 25 | Beam leftover | `ics` | leftover dest | **KEEP** |
+| 26 | Chat leftover | `wechat` | leftover dest | **KEEP** |
+| 27 | Sticker leftover | `line` | leftover dest | **KEEP** |
+| 28 | Run leftover | `temple` | leftover dest | **KEEP** |
+| 29 | Adventure leftover | `skyrim` | leftover dest | **KEEP** |
+| 30 | Subscribe leftover | `nytpaywall` | leftover dest | **KEEP** |
+| 31 | Acquire leftover | `skypebuy` | leftover dest | **KEEP** |
+| 32 | File leftover | `grouponipo` | leftover dest | **KEEP** |
+| 33 | File leftover | `zyngaipo` | leftover dest | **KEEP** |
+| 34 | Tap leftover | `googlewallet` | leftover dest | **KEEP** |
+| 35 | Charge leftover | `stripe` | leftover dest | **KEEP** |
+| 36 | Lesson leftover | `duolingo` | leftover dest | **DROP** |
+| 37 | Lesson leftover | `codecademy` | leftover dest | **KEEP** |
+| 38 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 39 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 40 | Edit leftover | `wikipedia` | leftover dest | **DROP** |
+| 41 | Browse leftover | `amazon` | leftover dest | **DROP** |
+| 42 | Upvote leftover | `reddit` | leftover dest | **DROP** |
+| 43 | Reblog leftover | `tumblr` | leftover dest | **DROP** |
+| 44 | Play leftover | `netflix` | leftover dest | **DROP** |
+| 45 | Push leftover | `github` | leftover dest | **DROP** |
+| 46 | Chat leftover | `whatsapp` | leftover dest | **DROP** |
+| 47 | Moment leftover | `path` | leftover dest | **DROP** |
+| 48 | StreetPass leftover | `nintendo3ds` | leftover dest | **KEEP** |
+| 49 | Reset leftover | `psnhack` | leftover dest | **KEEP** |
+| 50 | Check in leftover | `gowalla` | leftover dest | **KEEP** |
 
 ## 2012 · star IG Android · 42 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Instagram Android | `instagram` | official 10 | **MISS** |
-| 2 | Pinterest | `pinterest` | official 10 | **MISS** |
-| 3 | Facebook IPO | `facebook` | official 10 | **MISS** |
-| 4 | Maps flop | `iphone` | official 10 | **MISS** |
-| 5 | SOPA | `wikipedia` | official 10 | **MISS** |
-| 6 | Medium | `medium` | official 10 | **MISS** |
-| 7 | Path | `path` | official 10 | **MISS** |
-| 8 | Flipboard | `flipboard` | official 10 | **MISS** |
+| 1 | Instagram Android | `instagram` | official 10 | **KEEP** |
+| 2 | Pinterest | `pinterest` | official 10 | **KEEP** |
+| 3 | Facebook IPO | `facebook` | official 10 | **KEEP** |
+| 4 | Maps flop | `iphone` | official 10 | **KEEP** |
+| 5 | SOPA | `wikipedia` | official 10 | **KEEP** |
+| 6 | Medium | `medium` | official 10 | **KEEP** |
+| 7 | Path | `path` | official 10 | **KEEP** |
+| 8 | Flipboard | `flipboard` | official 10 | **KEEP** |
 | 9 | Guess Doodle | `playable` | official 10 | **DO-NOT-APPLY** |
-| 10 | Draw leftover | `drawsomething` | leftover-3× unique | **MISS** |
+| 10 | Draw leftover | `drawsomething` | leftover-3× unique | **KEEP** |
 | 11 | Share leftover | `googledrive` | leftover-3× unique | **KEEP** |
-| 12 | Snap leftover | `snapchat` | leftover-3× unique | **MISS** |
-| 13 | Ride leftover | `uber` | leftover-3× unique | **MISS** |
-| 14 | List leftover | `buzzfeed` | leftover-3× unique | **MISS** |
-| 15 | Watch leftover | `youtube` | leftover-3× unique | **MISS** |
-| 16 | Open leftover | `reddit` | leftover-3× unique | **MISS** |
-| 17 | Start leftover | `surface` | leftover-3× unique | **MISS** |
-| 18 | Start leftover | `windows8` | leftover-3× unique | **MISS** |
-| 19 | Swipe leftover | `tinder` | leftover dest | **MISS** |
-| 20 | Lesson leftover | `duolingo` | leftover dest | **MISS** |
-| 21 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 22 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 23 | Wall leftover | `vk` | leftover dest | **MISS** |
-| 24 | Enroll leftover | `coursera` | leftover dest | **MISS** |
-| 25 | Enroll leftover | `udacity` | leftover dest | **MISS** |
-| 26 | Enroll leftover | `edx` | leftover dest | **MISS** |
-| 27 | Play leftover | `nexus7` | leftover dest | **MISS** |
-| 28 | Project Butter leftover | `jellybean` | leftover dest | **MISS** |
-| 29 | Update leftover | `ios6` | leftover dest | **MISS** |
-| 30 | Route leftover | `applemaps` | leftover dest | **MISS** |
-| 31 | Install leftover | `googleplay` | leftover dest | **MISS** |
-| 32 | Silk leftover | `kindlefirehd` | leftover dest | **MISS** |
-| 33 | Push leftover | `github` | leftover dest | **MISS** |
-| 34 | Share leftover | `dropbox` | leftover dest | **MISS** |
-| 35 | Clip leftover | `evernote` | leftover dest | **MISS** |
-| 36 | Connect leftover | `linkedin` | leftover dest | **MISS** |
-| 37 | Shop leftover | `etsy` | leftover dest | **MISS** |
-| 38 | Play leftover | `netflix` | leftover dest | **MISS** |
-| 39 | Watch leftover | `hulu` | leftover dest | **MISS** |
-| 40 | Chat leftover | `whatsapp` | leftover dest | **MISS** |
-| 41 | Buy leftover | `coinbase` | leftover dest | **MISS** |
-| 42 | Reblog leftover | `tumblr` | leftover dest | **MISS** |
+| 12 | Snap leftover | `snapchat` | leftover-3× unique | **KEEP** |
+| 13 | Ride leftover | `uber` | leftover-3× unique | **DO-NOT-APPLY** |
+| 14 | List leftover | `buzzfeed` | leftover-3× unique | **DO-NOT-APPLY** |
+| 15 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
+| 16 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
+| 17 | Start leftover | `surface` | leftover-3× unique | **KEEP** |
+| 18 | Start leftover | `windows8` | leftover-3× unique | **KEEP** |
+| 19 | Swipe leftover | `tinder` | leftover dest | **KEEP** |
+| 20 | Lesson leftover | `duolingo` | leftover dest | **KEEP** |
+| 21 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 22 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 23 | Wall leftover | `vk` | leftover dest | **DROP** |
+| 24 | Enroll leftover | `coursera` | leftover dest | **KEEP** |
+| 25 | Enroll leftover | `udacity` | leftover dest | **KEEP** |
+| 26 | Enroll leftover | `edx` | leftover dest | **KEEP** |
+| 27 | Play leftover | `nexus7` | leftover dest | **KEEP** |
+| 28 | Project Butter leftover | `jellybean` | leftover dest | **KEEP** |
+| 29 | Update leftover | `ios6` | leftover dest | **KEEP** |
+| 30 | Route leftover | `applemaps` | leftover dest | **DROP** |
+| 31 | Install leftover | `googleplay` | leftover dest | **KEEP** |
+| 32 | Silk leftover | `kindlefirehd` | leftover dest | **KEEP** |
+| 33 | Push leftover | `github` | leftover dest | **DROP** |
+| 34 | Share leftover | `dropbox` | leftover dest | **DROP** |
+| 35 | Clip leftover | `evernote` | leftover dest | **DROP** |
+| 36 | Connect leftover | `linkedin` | leftover dest | **DROP** |
+| 37 | Shop leftover | `etsy` | leftover dest | **DROP** |
+| 38 | Play leftover | `netflix` | leftover dest | **DROP** |
+| 39 | Watch leftover | `hulu` | leftover dest | **DROP** |
+| 40 | Chat leftover | `whatsapp` | leftover dest | **DROP** |
+| 41 | Buy leftover | `coinbase` | leftover dest | **KEEP** |
+| 42 | Reblog leftover | `tumblr` | leftover dest | **DROP** |
 
 ## 2013 · star Vine 6s · 18 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Vine 6s | `vine` | official 10 | **MISS** |
-| 2 | IG Video | `instagram` | official 10 | **MISS** |
-| 3 | Stories | `snapchat` | official 10 | **MISS** |
-| 4 | iOS 7 | `iphone` | official 10 | **MISS** |
-| 5 | Snowden | `snowden` | official 10 | **MISS** |
-| 6 | Telegram | `telegram` | official 10 | **MISS** |
-| 7 | Yahoo×Tumblr | `tumblr` | official 10 | **MISS** |
-| 8 | Win8.1 | `windows81` | official 10 | **MISS** |
+| 1 | Vine 6s | `vine` | official 10 | **KEEP** |
+| 2 | IG Video | `instagram` | official 10 | **KEEP** |
+| 3 | Stories | `snapchat` | official 10 | **KEEP** |
+| 4 | iOS 7 | `iphone` | official 10 | **KEEP** |
+| 5 | Snowden | `snowden` | official 10 | **KEEP** |
+| 6 | Telegram | `telegram` | official 10 | **KEEP** |
+| 7 | Yahoo×Tumblr | `tumblr` | official 10 | **KEEP** |
+| 8 | Win8.1 | `windows81` | official 10 | **KEEP** |
 | 9 | Loop Six | `playable` | official 10 | **DO-NOT-APPLY** |
-| 10 | Ask leftover | `askfm` | leftover-3× unique | **MISS** |
-| 11 | Whisper leftover | `whisper` | leftover-3× unique | **MISS** |
-| 12 | Watch leftover | `youtube` | leftover-3× unique | **MISS** |
-| 13 | Tab leftover | `chrome` | leftover-3× unique | **MISS** |
-| 14 | Publish leftover | `medium` | leftover-3× unique | **MISS** |
-| 15 | Yak leftover | `yikyak` | leftover-3× unique | **MISS** |
-| 16 | Open leftover | `reddit` | leftover-3× unique | **MISS** |
-| 17 | Feed leftover | `facebook` | leftover-3× unique | **MISS** |
-| 18 | Tweet leftover | `twitter` | leftover-3× unique | **MISS** |
+| 10 | Ask leftover | `askfm` | leftover-3× unique | **KEEP** |
+| 11 | Whisper leftover | `whisper` | leftover-3× unique | **DO-NOT-APPLY** |
+| 12 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
+| 13 | Tab leftover | `chrome` | leftover-3× unique | **DO-NOT-APPLY** |
+| 14 | Publish leftover | `medium` | leftover-3× unique | **DO-NOT-APPLY** |
+| 15 | Yak leftover | `yikyak` | leftover-3× unique | **KEEP** |
+| 16 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
+| 17 | Feed leftover | `facebook` | leftover-3× unique | **DO-NOT-APPLY** |
+| 18 | Tweet leftover | `twitter` | leftover-3× unique | **DO-NOT-APPLY** |
 
 ## 2014 · star WhatsApp Install · 36 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | WhatsApp | `whatsapp` | official 10 | **MISS** |
-| 2 | Heartbleed | `heartbleed` | official 10 | **MISS** |
-| 3 | Ice Bucket | `icebucket` | official 10 | **MISS** |
-| 4 | iPhone 6 | `iphone` | official 10 | **MISS** |
-| 5 | Apple Pay | `applepay` | official 10 | **MISS** |
-| 6 | Material | `material` | official 10 | **MISS** |
-| 7 | Slack | `slack` | official 10 | **MISS** |
-| 8 | Twitch | `twitch` | official 10 | **MISS** |
+| 1 | WhatsApp | `whatsapp` | official 10 | **KEEP** |
+| 2 | Heartbleed | `heartbleed` | official 10 | **KEEP** |
+| 3 | Ice Bucket | `icebucket` | official 10 | **KEEP** |
+| 4 | iPhone 6 | `iphone` | official 10 | **KEEP** |
+| 5 | Apple Pay | `applepay` | official 10 | **KEEP** |
+| 6 | Material | `material` | official 10 | **KEEP** |
+| 7 | Slack | `slack` | official 10 | **KEEP** |
+| 8 | Twitch | `twitch` | official 10 | **KEEP** |
 | 9 | Tile Fold | `playable` | official 10 | **DO-NOT-APPLY** |
-| 10 | Snap leftover | `snapchat` | leftover-3× unique | **MISS** |
-| 11 | Filter leftover | `instagram` | leftover-3× unique | **MISS** |
-| 12 | Ride leftover | `uber` | leftover-3× unique | **MISS** |
-| 13 | Tweet leftover | `twitter` | leftover-3× unique | **MISS** |
-| 14 | Clip leftover | `musically14` | leftover-3× unique | **MISS** |
+| 10 | Snap leftover | `snapchat` | leftover-3× unique | **DO-NOT-APPLY** |
+| 11 | Filter leftover | `instagram` | leftover-3× unique | **DO-NOT-APPLY** |
+| 12 | Ride leftover | `uber` | leftover-3× unique | **DO-NOT-APPLY** |
+| 13 | Tweet leftover | `twitter` | leftover-3× unique | **DO-NOT-APPLY** |
+| 14 | Clip leftover | `musically14` | leftover-3× unique | **KEEP** |
 | 15 | Volume leftover | `truecrypt` | leftover-3× unique | **KEEP** |
-| 16 | Feed leftover | `facebook` | leftover-3× unique | **MISS** |
-| 17 | Read leftover | `wikipedia` | leftover-3× unique | **MISS** |
-| 18 | Watch leftover | `youtube` | leftover-3× unique | **MISS** |
-| 19 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 20 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 21 | Wall leftover | `vk` | leftover dest | **MISS** |
-| 22 | Tab leftover | `chrome` | leftover dest | **MISS** |
-| 23 | Search leftover | `google` | leftover dest | **MISS** |
-| 24 | Portal leftover | `yahoo` | leftover dest | **MISS** |
-| 25 | Browse leftover | `amazon` | leftover dest | **MISS** |
-| 26 | Play leftover | `netflix` | leftover dest | **MISS** |
-| 27 | Push leftover | `github` | leftover dest | **MISS** |
-| 28 | Upvote leftover | `reddit` | leftover dest | **MISS** |
-| 29 | File leftover | `alibabaipo` | leftover dest | **MISS** |
-| 30 | Acquire leftover | `oculusfb` | leftover dest | **MISS** |
-| 31 | Bundle leftover | `inbox` | leftover dest | **MISS** |
-| 32 | Alexa leftover | `echo` | leftover dest | **MISS** |
-| 33 | Tap leftover | `flappybird` | leftover dest | **MISS** |
-| 34 | Slide leftover | `game2048` | leftover dest | **MISS** |
-| 35 | Material leftover | `androidl` | leftover dest | **MISS** |
-| 36 | Update leftover | `ios8` | leftover dest | **MISS** |
+| 16 | Feed leftover | `facebook` | leftover-3× unique | **DO-NOT-APPLY** |
+| 17 | Read leftover | `wikipedia` | leftover-3× unique | **DO-NOT-APPLY** |
+| 18 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
+| 19 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 20 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 21 | Wall leftover | `vk` | leftover dest | **DROP** |
+| 22 | Tab leftover | `chrome` | leftover dest | **DROP** |
+| 23 | Search leftover | `google` | leftover dest | **DROP** |
+| 24 | Portal leftover | `yahoo` | leftover dest | **DROP** |
+| 25 | Browse leftover | `amazon` | leftover dest | **DROP** |
+| 26 | Play leftover | `netflix` | leftover dest | **DROP** |
+| 27 | Push leftover | `github` | leftover dest | **DROP** |
+| 28 | Upvote leftover | `reddit` | leftover dest | **DROP** |
+| 29 | File leftover | `alibabaipo` | leftover dest | **KEEP** |
+| 30 | Acquire leftover | `oculusfb` | leftover dest | **KEEP** |
+| 31 | Bundle leftover | `inbox` | leftover dest | **KEEP** |
+| 32 | Alexa leftover | `echo` | leftover dest | **KEEP** |
+| 33 | Tap leftover | `flappybird` | leftover dest | **KEEP** |
+| 34 | Slide leftover | `game2048` | leftover dest | **KEEP** |
+| 35 | Material leftover | `androidl` | leftover dest | **DROP** |
+| 36 | Update leftover | `ios8` | leftover dest | **KEEP** |
 
 ## 2015 · star Periscope Go LIVE · 19 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Periscope Go LIVE | `periscope` | official 10 | **MISS** |
-| 2 | Google Photos | `googlephotos` | official 10 | **MISS** |
-| 3 | Windows 10 | `windows10` | official 10 | **MISS** |
-| 4 | Apple Music | `applemusic` | official 10 | **MISS** |
-| 5 | Edge Spartan | `edge` | official 10 | **MISS** |
-| 6 | Watch | `apple` | official 10 | **MISS** |
-| 7 | Snap Discover | `snapchat` | official 10 | **MISS** |
-| 8 | Discord | `discord` | official 10 | **MISS** |
-| 9 | Let's Encrypt | `letsencrypt` | official 10 | **MISS** |
+| 1 | Periscope Go LIVE | `periscope` | official 10 | **KEEP** |
+| 2 | Google Photos | `googlephotos` | official 10 | **KEEP** |
+| 3 | Windows 10 | `windows10` | official 10 | **KEEP** |
+| 4 | Apple Music | `applemusic` | official 10 | **KEEP** |
+| 5 | Edge Spartan | `edge` | official 10 | **KEEP** |
+| 6 | Watch | `apple` | official 10 | **KEEP** |
+| 7 | Snap Discover | `snapchat` | official 10 | **KEEP** |
+| 8 | Discord | `discord` | official 10 | **KEEP** |
+| 9 | Let's Encrypt | `letsencrypt` | official 10 | **KEEP** |
 | 10 | Blob Rush | `playable` | official 10 | **DO-NOT-APPLY** |
-| 11 | Filter leftover | `instagram` | leftover-3× unique | **MISS** |
-| 12 | Play leftover | `spotify` | leftover-3× unique | **MISS** |
-| 13 | Queue leftover | `netflix` | leftover-3× unique | **MISS** |
-| 14 | Go live leftover | `meerkat` | leftover-3× unique | **MISS** |
+| 11 | Filter leftover | `instagram` | leftover-3× unique | **DO-NOT-APPLY** |
+| 12 | Play leftover | `spotify` | leftover-3× unique | **DO-NOT-APPLY** |
+| 13 | Queue leftover | `netflix` | leftover-3× unique | **DO-NOT-APPLY** |
+| 14 | Go live leftover | `meerkat` | leftover-3× unique | **KEEP** |
 | 15 | Trial leftover | `applemusicsub` | leftover-3× unique | **DROP** |
 | 16 | GWX leftover | `win10get` | leftover-3× unique | **DROP** |
-| 17 | 6s leftover | `vine` | leftover-3× unique | **MISS** |
-| 18 | Alexa leftover | `echo` | leftover-3× unique | **MISS** |
-| 19 | Watch leftover | `youtube` | leftover-3× unique | **MISS** |
+| 17 | 6s leftover | `vine` | leftover-3× unique | **DO-NOT-APPLY** |
+| 18 | Alexa leftover | `echo` | leftover-3× unique | **KEEP** |
+| 19 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 
 ## 2016 · star IG Stories · 93 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Instagram Stories | `instagram` | official 10 | **MISS** |
-| 2 | Pokémon GO | `pokemongo` | official 10 | **MISS** |
-| 3 | Reactions | `facebook` | official 10 | **MISS** |
-| 4 | WhatsApp E2E | `whatsapp` | official 10 | **MISS** |
-| 5 | iPhone 7 | `iphone` | official 10 | **MISS** |
-| 6 | Vine goodbye | `vine` | official 10 | **MISS** |
-| 7 | Spectacles | `snapchat` | official 10 | **MISS** |
-| 8 | musical.ly | `musically` | official 10 | **MISS** |
-| 9 | Win10 upgrade ends | `windows10` | official 10 | **MISS** |
+| 1 | Instagram Stories | `instagram` | official 10 | **KEEP** |
+| 2 | Pokémon GO | `pokemongo` | official 10 | **KEEP** |
+| 3 | Reactions | `facebook` | official 10 | **KEEP** |
+| 4 | WhatsApp E2E | `whatsapp` | official 10 | **KEEP** |
+| 5 | iPhone 7 | `iphone` | official 10 | **KEEP** |
+| 6 | Vine goodbye | `vine` | official 10 | **KEEP** |
+| 7 | Spectacles | `snapchat` | official 10 | **KEEP** |
+| 8 | musical.ly | `musically` | official 10 | **KEEP** |
+| 9 | Win10 upgrade ends | `windows10` | official 10 | **KEEP** |
 | 10 | Gym Rush | `playable` | official 10 | **DO-NOT-APPLY** |
-| 11 | Channel leftover | `slack` | leftover-3× unique | **MISS** |
-| 12 | Open leftover | `reddit` | leftover-3× unique | **MISS** |
-| 13 | Queue leftover | `netflix` | leftover-3× unique | **MISS** |
-| 14 | Watch leftover | `youtube` | leftover-3× unique | **MISS** |
+| 11 | Channel leftover | `slack` | leftover-3× unique | **DO-NOT-APPLY** |
+| 12 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
+| 13 | Queue leftover | `netflix` | leftover-3× unique | **DO-NOT-APPLY** |
+| 14 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 | 15 | Match leftover | `alphago` | leftover-3× unique | **KEEP** |
-| 16 | Ask leftover | `assistant` | leftover-3× unique | **MISS** |
+| 16 | Ask leftover | `assistant` | leftover-3× unique | **KEEP** |
 | 17 | Outage leftover | `dyn` | leftover-3× unique | **KEEP** |
-| 18 | Live leftover | `fblive` | leftover-3× unique | **MISS** |
-| 19 | Moment leftover | `moments` | leftover-3× unique | **MISS** |
-| 20 | For You leftover | `douyin` | leftover dest | **MISS** |
-| 21 | Edit leftover | `wikipedia` | leftover dest | **MISS** |
-| 22 | Tweet leftover | `twitter` | leftover dest | **MISS** |
-| 23 | Browse leftover | `amazon` | leftover dest | **MISS** |
-| 24 | Search leftover | `google` | leftover dest | **MISS** |
-| 25 | Portal leftover | `yahoo` | leftover dest | **MISS** |
-| 26 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 27 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 28 | Tab leftover | `chrome` | leftover dest | **MISS** |
-| 29 | Push leftover | `github` | leftover dest | **MISS** |
-| 30 | Pin leftover | `pinterest` | leftover dest | **MISS** |
-| 31 | Reblog leftover | `tumblr` | leftover dest | **MISS** |
-| 32 | Watch leftover | `twitch` | leftover dest | **MISS** |
-| 33 | Join leftover | `discord` | leftover dest | **MISS** |
-| 34 | Pair leftover | `airpods` | leftover dest | **MISS** |
-| 35 | Assistant leftover | `pixel` | leftover dest | **MISS** |
-| 36 | Update leftover | `nougat` | leftover dest | **MISS** |
-| 37 | Chat leftover | `allo` | leftover dest | **MISS** |
-| 38 | Call leftover | `duo` | leftover dest | **MISS** |
-| 39 | Hey leftover | `googlehome` | leftover dest | **MISS** |
-| 40 | Strap leftover | `oculusrift` | leftover dest | **MISS** |
-| 41 | Strap leftover | `psvr` | leftover dest | **MISS** |
-| 42 | Queue leftover | `overwatch` | leftover dest | **MISS** |
-| 43 | Rip leftover | `doom2016` | leftover dest | **MISS** |
-| 44 | Climb leftover | `uncharted4` | leftover dest | **MISS** |
-| 45 | Warp leftover | `nomanssky` | leftover dest | **MISS** |
-| 46 | Battle leftover | `clashroyale` | leftover dest | **MISS** |
-| 47 | Chat leftover | `signal` | leftover dest | **MISS** |
-| 48 | Chat leftover | `telegram` | leftover dest | **MISS** |
-| 49 | Send leftover | `paypal` | leftover dest | **MISS** |
-| 50 | Tap leftover | `applepay` | leftover dest | **MISS** |
-| 51 | Leak leftover | `panamapapers` | leftover dest | **MISS** |
-| 52 | Invite leftover | `figma` | leftover dest | **MISS** |
-| 53 | Split leftover | `thedao` | leftover dest | **MISS** |
-| 54 | Fork leftover | `ethereum` | leftover dest | **MISS** |
-| 55 | Update leftover | `ios10` | leftover dest | **MISS** |
-| 56 | Update leftover | `sierra` | leftover dest | **MISS** |
-| 57 | Headset leftover | `daydream` | leftover dest | **MISS** |
-| 58 | Deploy leftover | `battlefield1` | leftover dest | **MISS** |
-| 59 | Issue leftover | `letsencrypt` | leftover dest | **MISS** |
-| 60 | Library leftover | `steam` | leftover dest | **MISS** |
-| 61 | Chat leftover | `wechat` | leftover dest | **MISS** |
-| 62 | Swipe leftover | `tinder` | leftover dest | **MISS** |
-| 63 | Ride leftover | `uber` | leftover dest | **MISS** |
-| 64 | Book leftover | `airbnb` | leftover dest | **MISS** |
-| 65 | Play leftover | `spotify` | leftover dest | **MISS** |
-| 66 | Watch leftover | `hulu` | leftover dest | **MISS** |
-| 67 | Read leftover | `nyt` | leftover dest | **MISS** |
-| 68 | Read leftover | `bbc` | leftover dest | **MISS** |
-| 69 | Share leftover | `dropbox` | leftover dest | **MISS** |
-| 70 | Push leftover | `gitlab` | leftover dest | **MISS** |
-| 71 | Shop leftover | `shopify` | leftover dest | **MISS** |
-| 72 | Charge leftover | `stripe` | leftover dest | **MISS** |
-| 73 | Craft leftover | `minecraft` | leftover dest | **MISS** |
-| 74 | Play leftover | `roblox` | leftover dest | **MISS** |
-| 75 | Chat leftover | `messenger` | leftover dest | **MISS** |
-| 76 | Call leftover | `skype` | leftover dest | **MISS** |
-| 77 | Autopilot leftover | `tesla` | leftover dest | **MISS** |
-| 78 | Design leftover | `canva` | leftover dest | **MISS** |
-| 79 | Publish leftover | `medium` | leftover dest | **MISS** |
-| 80 | Wall leftover | `vk` | leftover dest | **MISS** |
-| 81 | Shop leftover | `taobao` | leftover dest | **MISS** |
-| 82 | Bid leftover | `ebay` | leftover dest | **MISS** |
-| 83 | Shop leftover | `etsy` | leftover dest | **MISS** |
-| 84 | Toot leftover | `mastodon` | leftover dest | **MISS** |
-| 85 | Read leftover | `ringer` | leftover dest | **MISS** |
-| 86 | Subscribe leftover | `athletic` | leftover dest | **MISS** |
-| 87 | Share leftover | `peach` | leftover dest | **MISS** |
-| 88 | Bot leftover | `tay` | leftover dest | **MISS** |
-| 89 | Shield leftover | `zcash` | leftover dest | **MISS** |
-| 90 | Filter leftover | `prisma` | leftover dest | **MISS** |
-| 91 | Strap leftover | `vive` | leftover dest | **MISS** |
-| 92 | Mii leftover | `miitomo` | leftover dest | **MISS** |
-| 93 | Transition leftover | `iana` | leftover dest | **MISS** |
+| 18 | Live leftover | `fblive` | leftover-3× unique | **KEEP** |
+| 19 | Moment leftover | `moments` | leftover-3× unique | **DO-NOT-APPLY** |
+| 20 | For You leftover | `douyin` | leftover dest | **KEEP** |
+| 21 | Edit leftover | `wikipedia` | leftover dest | **DROP** |
+| 22 | Tweet leftover | `twitter` | leftover dest | **DROP** |
+| 23 | Browse leftover | `amazon` | leftover dest | **DROP** |
+| 24 | Search leftover | `google` | leftover dest | **DROP** |
+| 25 | Portal leftover | `yahoo` | leftover dest | **DROP** |
+| 26 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 27 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 28 | Tab leftover | `chrome` | leftover dest | **DROP** |
+| 29 | Push leftover | `github` | leftover dest | **DROP** |
+| 30 | Pin leftover | `pinterest` | leftover dest | **DROP** |
+| 31 | Reblog leftover | `tumblr` | leftover dest | **DROP** |
+| 32 | Watch leftover | `twitch` | leftover dest | **DROP** |
+| 33 | Join leftover | `discord` | leftover dest | **DROP** |
+| 34 | Pair leftover | `airpods` | leftover dest | **KEEP** |
+| 35 | Assistant leftover | `pixel` | leftover dest | **KEEP** |
+| 36 | Update leftover | `nougat` | leftover dest | **KEEP** |
+| 37 | Chat leftover | `allo` | leftover dest | **KEEP** |
+| 38 | Call leftover | `duo` | leftover dest | **KEEP** |
+| 39 | Hey leftover | `googlehome` | leftover dest | **KEEP** |
+| 40 | Strap leftover | `oculusrift` | leftover dest | **KEEP** |
+| 41 | Strap leftover | `psvr` | leftover dest | **KEEP** |
+| 42 | Queue leftover | `overwatch` | leftover dest | **KEEP** |
+| 43 | Rip leftover | `doom2016` | leftover dest | **KEEP** |
+| 44 | Climb leftover | `uncharted4` | leftover dest | **KEEP** |
+| 45 | Warp leftover | `nomanssky` | leftover dest | **KEEP** |
+| 46 | Battle leftover | `clashroyale` | leftover dest | **KEEP** |
+| 47 | Chat leftover | `signal` | leftover dest | **DROP** |
+| 48 | Chat leftover | `telegram` | leftover dest | **DROP** |
+| 49 | Send leftover | `paypal` | leftover dest | **DROP** |
+| 50 | Tap leftover | `applepay` | leftover dest | **DROP** |
+| 51 | Leak leftover | `panamapapers` | leftover dest | **KEEP** |
+| 52 | Invite leftover | `figma` | leftover dest | **KEEP** |
+| 53 | Split leftover | `thedao` | leftover dest | **KEEP** |
+| 54 | Fork leftover | `ethereum` | leftover dest | **KEEP** |
+| 55 | Update leftover | `ios10` | leftover dest | **KEEP** |
+| 56 | Update leftover | `sierra` | leftover dest | **KEEP** |
+| 57 | Headset leftover | `daydream` | leftover dest | **KEEP** |
+| 58 | Deploy leftover | `battlefield1` | leftover dest | **KEEP** |
+| 59 | Issue leftover | `letsencrypt` | leftover dest | **KEEP** |
+| 60 | Library leftover | `steam` | leftover dest | **DROP** |
+| 61 | Chat leftover | `wechat` | leftover dest | **DROP** |
+| 62 | Swipe leftover | `tinder` | leftover dest | **DROP** |
+| 63 | Ride leftover | `uber` | leftover dest | **DROP** |
+| 64 | Book leftover | `airbnb` | leftover dest | **DROP** |
+| 65 | Play leftover | `spotify` | leftover dest | **DROP** |
+| 66 | Watch leftover | `hulu` | leftover dest | **DROP** |
+| 67 | Read leftover | `nyt` | leftover dest | **DROP** |
+| 68 | Read leftover | `bbc` | leftover dest | **DROP** |
+| 69 | Share leftover | `dropbox` | leftover dest | **DROP** |
+| 70 | Push leftover | `gitlab` | leftover dest | **DROP** |
+| 71 | Shop leftover | `shopify` | leftover dest | **DROP** |
+| 72 | Charge leftover | `stripe` | leftover dest | **DROP** |
+| 73 | Craft leftover | `minecraft` | leftover dest | **DROP** |
+| 74 | Play leftover | `roblox` | leftover dest | **DROP** |
+| 75 | Chat leftover | `messenger` | leftover dest | **DROP** |
+| 76 | Call leftover | `skype` | leftover dest | **DROP** |
+| 77 | Autopilot leftover | `tesla` | leftover dest | **KEEP** |
+| 78 | Design leftover | `canva` | leftover dest | **DROP** |
+| 79 | Publish leftover | `medium` | leftover dest | **DROP** |
+| 80 | Wall leftover | `vk` | leftover dest | **DROP** |
+| 81 | Shop leftover | `taobao` | leftover dest | **DROP** |
+| 82 | Bid leftover | `ebay` | leftover dest | **DROP** |
+| 83 | Shop leftover | `etsy` | leftover dest | **DROP** |
+| 84 | Toot leftover | `mastodon` | leftover dest | **KEEP** |
+| 85 | Read leftover | `ringer` | leftover dest | **KEEP** |
+| 86 | Subscribe leftover | `athletic` | leftover dest | **KEEP** |
+| 87 | Share leftover | `peach` | leftover dest | **KEEP** |
+| 88 | Bot leftover | `tay` | leftover dest | **KEEP** |
+| 89 | Shield leftover | `zcash` | leftover dest | **KEEP** |
+| 90 | Filter leftover | `prisma` | leftover dest | **KEEP** |
+| 91 | Strap leftover | `vive` | leftover dest | **KEEP** |
+| 92 | Mii leftover | `miitomo` | leftover dest | **KEEP** |
+| 93 | Transition leftover | `iana` | leftover dest | **KEEP** |
 
 ## 2017 · star Face ID · 30 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Face ID / iPhone X | `iphone` | official 10 | **MISS** |
-| 2 | Fortnite BR | `fortnite` | official 10 | **MISS** |
-| 3 | Twitter 280 | `twitter` | official 10 | **MISS** |
-| 4 | Teams GA | `teams` | official 10 | **MISS** |
-| 5 | Vine gone | `vine` | official 10 | **MISS** |
-| 6 | Nintendo Switch | `switch` | official 10 | **MISS** |
-| 7 | WannaCry | `wannacry` | official 10 | **MISS** |
-| 8 | musical.ly | `musically` | official 10 | **MISS** |
-| 9 | Equifax freeze | `equifax` | official 10 | **MISS** |
+| 1 | Face ID / iPhone X | `iphone` | official 10 | **KEEP** |
+| 2 | Fortnite BR | `fortnite` | official 10 | **KEEP** |
+| 3 | Twitter 280 | `twitter` | official 10 | **KEEP** |
+| 4 | Teams GA | `teams` | official 10 | **KEEP** |
+| 5 | Vine gone | `vine` | official 10 | **KEEP** |
+| 6 | Nintendo Switch | `switch` | official 10 | **KEEP** |
+| 7 | WannaCry | `wannacry` | official 10 | **KEEP** |
+| 8 | musical.ly | `musically` | official 10 | **KEEP** |
+| 9 | Equifax freeze | `equifax` | official 10 | **KEEP** |
 | 10 | Storm Circle | `playable` | official 10 | **DO-NOT-APPLY** |
-| 11 | Animoji | `animoji` | leftover-20 extra | **MISS** |
-| 12 | iOS 11 | `ios11` | leftover-20 extra | **MISS** |
-| 13 | PUBG Note | `pubgnote` | leftover-20 extra | **MISS** |
-| 14 | Cuphead | `cuphead` | leftover-20 extra | **MISS** |
-| 15 | Twitter Lite | `twitterlite` | leftover-20 extra | **MISS** |
-| 16 | Snap IPO | `snapipo` | leftover-20 extra | **MISS** |
-| 17 | Slack | `slack17` | leftover-20 extra | **MISS** |
-| 18 | Hangouts Chat | `hangoutschat` | leftover-20 extra | **MISS** |
-| 19 | Snap Map | `snapmap` | leftover-20 extra | **MISS** |
-| 20 | Instagram | `instagram17` | leftover-20 extra | **MISS** |
-| 21 | Breath of the Wild | `botw` | leftover-20 extra | **MISS** |
-| 22 | Splatoon 2 | `splatoon2` | leftover-20 extra | **MISS** |
-| 23 | NotPetya | `notpetya` | leftover-20 extra | **MISS** |
-| 24 | KRACK | `krack` | leftover-20 extra | **MISS** |
-| 25 | TBH | `tbh` | leftover-20 extra | **MISS** |
-| 26 | Messenger Day | `messengerday` | leftover-20 extra | **MISS** |
-| 27 | Credit freeze | `creditfrz` | leftover-20 extra | **MISS** |
-| 28 | Cloudbleed | `cloudbleed` | leftover-20 extra | **MISS** |
-| 29 | Getting Over It | `gettingoverit` | leftover-20 extra | **MISS** |
-| 30 | Hollow Knight | `hollowknight` | leftover-20 extra | **MISS** |
+| 11 | Animoji | `animoji` | leftover-20 extra | **KEEP** |
+| 12 | iOS 11 | `ios11` | leftover-20 extra | **KEEP** |
+| 13 | PUBG Note | `pubgnote` | leftover-20 extra | **KEEP** |
+| 14 | Cuphead | `cuphead` | leftover-20 extra | **KEEP** |
+| 15 | Twitter Lite | `twitterlite` | leftover-20 extra | **KEEP** |
+| 16 | Snap IPO | `snapipo` | leftover-20 extra | **KEEP** |
+| 17 | Slack | `slack17` | leftover-20 extra | **DROP** |
+| 18 | Hangouts Chat | `hangoutschat` | leftover-20 extra | **KEEP** |
+| 19 | Snap Map | `snapmap` | leftover-20 extra | **KEEP** |
+| 20 | Instagram | `instagram17` | leftover-20 extra | **DROP** |
+| 21 | Breath of the Wild | `botw` | leftover-20 extra | **KEEP** |
+| 22 | Splatoon 2 | `splatoon2` | leftover-20 extra | **KEEP** |
+| 23 | NotPetya | `notpetya` | leftover-20 extra | **KEEP** |
+| 24 | KRACK | `krack` | leftover-20 extra | **KEEP** |
+| 25 | TBH | `tbh` | leftover-20 extra | **KEEP** |
+| 26 | Messenger Day | `messengerday` | leftover-20 extra | **KEEP** |
+| 27 | Credit freeze | `creditfrz` | leftover-20 extra | **DROP** |
+| 28 | Cloudbleed | `cloudbleed` | leftover-20 extra | **KEEP** |
+| 29 | Getting Over It | `gettingoverit` | leftover-20 extra | **KEEP** |
+| 30 | Hollow Knight | `hollowknight` | leftover-20 extra | **KEEP** |
 
 ## 2018 · star GDPR Manage · 44 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | GDPR Manage | `gdpr` | official 10 | **KEEP** |
-| 2 | TikTok For You | `tiktok` | official 10 | **MISS** |
-| 3 | Hearing | `trust` | official 10 | **MISS** |
-| 4 | IGTV | `instagram` | official 10 | **MISS** |
-| 5 | Chrome 68 | `chrome` | official 10 | **MISS** |
-| 6 | HomePod | `homepod` | official 10 | **MISS** |
-| 7 | Spectre | `spectre` | official 10 | **MISS** |
-| 8 | Fortnite on Switch | `fortnite` | official 10 | **MISS** |
-| 9 | GitHub $7.5B | `github` | official 10 | **MISS** |
+| 2 | TikTok For You | `tiktok` | official 10 | **KEEP** |
+| 3 | Hearing | `trust` | official 10 | **KEEP** |
+| 4 | IGTV | `instagram` | official 10 | **KEEP** |
+| 5 | Chrome 68 | `chrome` | official 10 | **KEEP** |
+| 6 | HomePod | `homepod` | official 10 | **KEEP** |
+| 7 | Spectre | `spectre` | official 10 | **KEEP** |
+| 8 | Fortnite on Switch | `fortnite` | official 10 | **KEEP** |
+| 9 | GitHub $7.5B | `github` | official 10 | **KEEP** |
 | 10 | Consent Dash | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
 | 12 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 | 13 | Read leftover | `wikipedia` | leftover-3× unique | **DO-NOT-APPLY** |
-| 14 | Scroll leftover | `facebook` | leftover dest | **MISS** |
-| 15 | Tweet leftover | `twitter` | leftover dest | **MISS** |
-| 16 | Browse leftover | `amazon` | leftover dest | **MISS** |
-| 17 | Search leftover | `google` | leftover dest | **MISS** |
-| 18 | Portal leftover | `yahoo` | leftover dest | **MISS** |
-| 19 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 20 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 21 | Play leftover | `netflix` | leftover dest | **MISS** |
-| 22 | Snap leftover | `snapchat` | leftover dest | **MISS** |
-| 23 | Join leftover | `discord` | leftover dest | **MISS** |
-| 24 | Sunset leftover | `gplusgone` | leftover dest | **MISS** |
-| 25 | Gesture leftover | `androidpie` | leftover dest | **MISS** |
-| 26 | Screen Time leftover | `ios12` | leftover dest | **MISS** |
-| 27 | Play leftover | `spotify` | leftover dest | **MISS** |
-| 28 | Watch leftover | `twitch` | leftover dest | **MISS** |
-| 29 | Chat leftover | `whatsapp` | leftover dest | **MISS** |
-| 30 | Connect leftover | `linkedin` | leftover dest | **MISS** |
-| 31 | Pin leftover | `pinterest` | leftover dest | **MISS** |
-| 32 | Library leftover | `steam` | leftover dest | **MISS** |
-| 33 | Chat leftover | `wechat` | leftover dest | **MISS** |
-| 34 | Swipe leftover | `tinder` | leftover dest | **MISS** |
-| 35 | Ride leftover | `uber` | leftover dest | **MISS** |
-| 36 | Book leftover | `airbnb` | leftover dest | **MISS** |
-| 37 | Drop leftover | `pubg` | leftover dest | **MISS** |
-| 38 | Ride leftover | `rdr2` | leftover dest | **MISS** |
-| 39 | Update leftover | `mojave` | leftover dest | **MISS** |
-| 40 | Resolve leftover | `onedot` | leftover dest | **MISS** |
-| 41 | Install leftover | `epicstore` | leftover dest | **MISS** |
-| 42 | Subscribe leftover | `nso` | leftover dest | **MISS** |
-| 43 | Stream leftover | `espnplus` | leftover dest | **MISS** |
-| 44 | Go live leftover | `caffeine` | leftover dest | **MISS** |
+| 14 | Scroll leftover | `facebook` | leftover dest | **DROP** |
+| 15 | Tweet leftover | `twitter` | leftover dest | **DROP** |
+| 16 | Browse leftover | `amazon` | leftover dest | **DROP** |
+| 17 | Search leftover | `google` | leftover dest | **DROP** |
+| 18 | Portal leftover | `yahoo` | leftover dest | **DROP** |
+| 19 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 20 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 21 | Play leftover | `netflix` | leftover dest | **DROP** |
+| 22 | Snap leftover | `snapchat` | leftover dest | **DROP** |
+| 23 | Join leftover | `discord` | leftover dest | **DROP** |
+| 24 | Sunset leftover | `gplusgone` | leftover dest | **KEEP** |
+| 25 | Gesture leftover | `androidpie` | leftover dest | **KEEP** |
+| 26 | Screen Time leftover | `ios12` | leftover dest | **KEEP** |
+| 27 | Play leftover | `spotify` | leftover dest | **DROP** |
+| 28 | Watch leftover | `twitch` | leftover dest | **DROP** |
+| 29 | Chat leftover | `whatsapp` | leftover dest | **DROP** |
+| 30 | Connect leftover | `linkedin` | leftover dest | **DROP** |
+| 31 | Pin leftover | `pinterest` | leftover dest | **DROP** |
+| 32 | Library leftover | `steam` | leftover dest | **DROP** |
+| 33 | Chat leftover | `wechat` | leftover dest | **DROP** |
+| 34 | Swipe leftover | `tinder` | leftover dest | **DROP** |
+| 35 | Ride leftover | `uber` | leftover dest | **DROP** |
+| 36 | Book leftover | `airbnb` | leftover dest | **DROP** |
+| 37 | Drop leftover | `pubg` | leftover dest | **KEEP** |
+| 38 | Ride leftover | `rdr2` | leftover dest | **KEEP** |
+| 39 | Update leftover | `mojave` | leftover dest | **KEEP** |
+| 40 | Resolve leftover | `onedot` | leftover dest | **KEEP** |
+| 41 | Install leftover | `epicstore` | leftover dest | **KEEP** |
+| 42 | Subscribe leftover | `nso` | leftover dest | **KEEP** |
+| 43 | Stream leftover | `espnplus` | leftover dest | **KEEP** |
+| 44 | Go live leftover | `caffeine` | leftover dest | **KEEP** |
 
 ## 2019 · star Disney+ Continue · 19 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | Disney+ Continue | `disneyplus` | official 10 | **MISS** |
-| 2 | TikTok For You | `tiktok` | official 10 | **MISS** |
-| 3 | Apple Arcade | `arcade` | official 10 | **MISS** |
-| 4 | Apple TV+ | `appletv` | official 10 | **MISS** |
-| 5 | Stadia | `stadia` | official 10 | **MISS** |
-| 6 | iPhone 11 | `iphone` | official 10 | **MISS** |
-| 7 | AirPods Pro | `airpodspro` | official 10 | **MISS** |
+| 1 | Disney+ Continue | `disneyplus` | official 10 | **KEEP** |
+| 2 | TikTok For You | `tiktok` | official 10 | **KEEP** |
+| 3 | Apple Arcade | `arcade` | official 10 | **KEEP** |
+| 4 | Apple TV+ | `appletv` | official 10 | **KEEP** |
+| 5 | Stadia | `stadia` | official 10 | **KEEP** |
+| 6 | iPhone 11 | `iphone` | official 10 | **KEEP** |
+| 7 | AirPods Pro | `airpodspro` | official 10 | **KEEP** |
 | 8 | Chrome habit | `chrome` | official 10 | **DO-NOT-APPLY** |
 | 9 | Windows 10 residual | `windows10` | official 10 | **DO-NOT-APPLY** |
 | 10 | Continue Row | `playable` | official 10 | **DO-NOT-APPLY** |
@@ -745,10 +745,10 @@
 | 12 | Feed leftover | `facebook` | leftover-3× unique | **DO-NOT-APPLY** |
 | 13 | Search leftover | `google` | leftover-3× unique | **DO-NOT-APPLY** |
 | 14 | Filter leftover | `instagram` | leftover-3× unique | **DO-NOT-APPLY** |
-| 15 | Headline leftover | `nyt` | leftover-3× unique | **MISS** |
+| 15 | Headline leftover | `nyt` | leftover-3× unique | **DO-NOT-APPLY** |
 | 16 | Quest leftover | `oculusquest` | leftover-3× unique | **KEEP** |
 | 17 | Tweet leftover | `twitter` | leftover-3× unique | **DO-NOT-APPLY** |
-| 18 | Portal leftover | `yahoo` | leftover-3× unique | **MISS** |
+| 18 | Portal leftover | `yahoo` | leftover-3× unique | **DO-NOT-APPLY** |
 | 19 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 
 ## 2020 · star Zoom Leave · 20 dest-true flows
@@ -757,73 +757,73 @@
 |---|-----------|------|-------|---------|
 | 1 | Zoom Leave | `zoom` | official 10 | **KEEP** |
 | 2 | Houseparty leftover | `houseparty` | official 10 | **KEEP** |
-| 3 | Discord leftover | `discord` | official 10 | **MISS** |
-| 4 | Teams leftover | `teams` | official 10 | **MISS** |
-| 5 | Classroom leftover | `classroom` | official 10 | **MISS** |
-| 6 | Netflix leftover | `netflix` | official 10 | **MISS** |
-| 7 | TikTok leftover | `tiktok` | official 10 | **MISS** |
+| 3 | Discord leftover | `discord` | official 10 | **KEEP** |
+| 4 | Teams leftover | `teams` | official 10 | **KEEP** |
+| 5 | Classroom leftover | `classroom` | official 10 | **KEEP** |
+| 6 | Netflix leftover | `netflix` | official 10 | **DROP** |
+| 7 | TikTok leftover | `tiktok` | official 10 | **KEEP** |
 | 8 | Among Us leftover | `amongus` | official 10 | **KEEP** |
-| 9 | Animal Crossing leftover | `animalcrossing` | official 10 | **MISS** |
+| 9 | Animal Crossing leftover | `animalcrossing` | official 10 | **KEEP** |
 | 10 | Year game leftover | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | Cart leftover | `amazon` | leftover-3× unique | **DO-NOT-APPLY** |
 | 12 | Feed leftover | `facebook` | leftover-3× unique | **DO-NOT-APPLY** |
 | 13 | Search leftover | `google` | leftover-3× unique | **DO-NOT-APPLY** |
 | 14 | Filter leftover | `instagram` | leftover-3× unique | **DO-NOT-APPLY** |
 | 15 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
-| 16 | Channel leftover | `slack` | leftover-3× unique | **MISS** |
+| 16 | Channel leftover | `slack` | leftover-3× unique | **DO-NOT-APPLY** |
 | 17 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
 | 18 | Read leftover | `wikipedia` | leftover-3× unique | **DO-NOT-APPLY** |
-| 19 | Headline leftover | `nyt` | leftover-3× unique | **MISS** |
-| 20 | Raise hand leftover | `clubhouse` | leftover dest | **MISS** |
+| 19 | Headline leftover | `nyt` | leftover-3× unique | **DO-NOT-APPLY** |
+| 20 | Raise hand leftover | `clubhouse` | leftover dest | **KEEP** |
 
 ## 2021 · star ATT Ask · 30 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
-| 1 | ATT Ask | `att` | official 10 | **MISS** |
-| 2 | Signal | `signal` | official 10 | **MISS** |
-| 3 | Copilot waitlist | `copilot` | official 10 | **MISS** |
-| 4 | Meta rename | `meta` | official 10 | **MISS** |
-| 5 | Windows 11 | `windows11` | official 10 | **MISS** |
-| 6 | Flash brick | `flash` | official 10 | **MISS** |
+| 1 | ATT Ask | `att` | official 10 | **KEEP** |
+| 2 | Signal | `signal` | official 10 | **KEEP** |
+| 3 | Copilot waitlist | `copilot` | official 10 | **KEEP** |
+| 4 | Meta rename | `meta` | official 10 | **KEEP** |
+| 5 | Windows 11 | `windows11` | official 10 | **KEEP** |
+| 6 | Flash brick | `flash` | official 10 | **KEEP** |
 | 7 | Chrome habit | `chrome` | official 10 | **DO-NOT-APPLY** |
 | 8 | Windows 10 residual | `windows10` | official 10 | **DO-NOT-APPLY** |
-| 9 | Facebook | `facebook` | official 10 | **MISS** |
+| 9 | Facebook | `facebook` | official 10 | **DROP** |
 | 10 | Five Letter | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | Cart leftover | `amazon` | leftover-3× unique | **DO-NOT-APPLY** |
 | 12 | Search leftover | `google` | leftover-3× unique | **DO-NOT-APPLY** |
 | 13 | Filter leftover | `instagram` | leftover-3× unique | **DO-NOT-APPLY** |
 | 14 | Tweet leftover | `twitter` | leftover-3× unique | **DO-NOT-APPLY** |
 | 15 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
-| 16 | Portal leftover | `yahoo` | leftover dest | **MISS** |
-| 17 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 18 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 19 | Edit leftover | `wikipedia` | leftover dest | **MISS** |
-| 20 | Upvote leftover | `reddit` | leftover dest | **MISS** |
-| 21 | Play leftover | `netflix` | leftover dest | **MISS** |
-| 22 | For You leftover | `tiktok` | leftover dest | **MISS** |
-| 23 | Join leftover | `discord` | leftover dest | **MISS** |
-| 24 | Watch leftover | `twitch` | leftover dest | **MISS** |
-| 25 | Push leftover | `github` | leftover dest | **MISS** |
-| 26 | Mint leftover | `nft` | leftover dest | **MISS** |
-| 27 | Direct list leftover | `coinbaseipo` | leftover dest | **MISS** |
-| 28 | Sideload leftover | `epicapple` | leftover dest | **MISS** |
-| 29 | Chip leftover | `m1` | leftover dest | **MISS** |
-| 30 | Room leftover | `clubhouse21` | leftover dest | **MISS** |
+| 16 | Portal leftover | `yahoo` | leftover dest | **DROP** |
+| 17 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 18 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 19 | Edit leftover | `wikipedia` | leftover dest | **DROP** |
+| 20 | Upvote leftover | `reddit` | leftover dest | **DROP** |
+| 21 | Play leftover | `netflix` | leftover dest | **DROP** |
+| 22 | For You leftover | `tiktok` | leftover dest | **DROP** |
+| 23 | Join leftover | `discord` | leftover dest | **DROP** |
+| 24 | Watch leftover | `twitch` | leftover dest | **DROP** |
+| 25 | Push leftover | `github` | leftover dest | **DROP** |
+| 26 | Mint leftover | `nft` | leftover dest | **KEEP** |
+| 27 | Direct list leftover | `coinbaseipo` | leftover dest | **KEEP** |
+| 28 | Sideload leftover | `epicapple` | leftover dest | **KEEP** |
+| 29 | Chip leftover | `m1` | leftover dest | **DROP** |
+| 30 | Room leftover | `clubhouse21` | leftover dest | **DROP** |
 
 ## 2022 · star ChatGPT Send · 38 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
 | 1 | ChatGPT Send | `chatgpt` | official 10 | **KEEP** |
-| 2 | Wordle | `wordle` | official 10 | **MISS** |
-| 3 | Twitter bird | `twitter` | official 10 | **MISS** |
-| 4 | BeReal | `bereal` | official 10 | **MISS** |
-| 5 | Dynamic Island | `iphone` | official 10 | **MISS** |
-| 6 | FTX | `ftx` | official 10 | **MISS** |
-| 7 | Mastodon | `mastodon` | official 10 | **MISS** |
-| 8 | TikTok | `tiktok` | official 10 | **MISS** |
-| 9 | Windows 11 | `windows11` | official 10 | **MISS** |
+| 2 | Wordle | `wordle` | official 10 | **KEEP** |
+| 3 | Twitter bird | `twitter` | official 10 | **KEEP** |
+| 4 | BeReal | `bereal` | official 10 | **KEEP** |
+| 5 | Dynamic Island | `iphone` | official 10 | **KEEP** |
+| 6 | FTX | `ftx` | official 10 | **KEEP** |
+| 7 | Mastodon | `mastodon` | official 10 | **KEEP** |
+| 8 | TikTok | `tiktok` | official 10 | **DROP** |
+| 9 | Windows 11 | `windows11` | official 10 | **DROP** |
 | 10 | Prompt Queue | `playable` | official 10 | **DO-NOT-APPLY** |
 | 11 | Cart leftover | `amazon` | leftover-3× unique | **DO-NOT-APPLY** |
 | 12 | Search leftover | `google` | leftover-3× unique | **DO-NOT-APPLY** |
@@ -832,28 +832,27 @@
 | 15 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 | 16 | Open leftover | `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
 | 17 | Read leftover | `wikipedia` | leftover-3× unique | **DO-NOT-APPLY** |
-| 18 | Queue leftover | `netflix` | leftover-3× unique | **MISS** |
-| 19 | Headline leftover | `nyt` | leftover-3× unique | **MISS** |
-| 20 | Shop leftover | `temu` | leftover dest | **MISS** |
-| 21 | Tab leftover | `chrome` | leftover dest | **MISS** |
-| 22 | Search leftover | `baidu` | leftover dest | **MISS** |
-| 23 | Search leftover | `yandex` | leftover dest | **MISS** |
-| 24 | Portal leftover | `yahoo` | leftover dest | **MISS** |
-| 25 | Push leftover | `github` | leftover dest | **MISS** |
-| 26 | Join leftover | `discord` | leftover dest | **MISS** |
-| 27 | Watch leftover | `twitch` | leftover dest | **MISS** |
-| 28 | Play leftover | `spotify` | leftover dest | **MISS** |
-| 29 | Snap leftover | `snapchat` | leftover dest | **MISS** |
-| 30 | Chat leftover | `whatsapp` | leftover dest | **MISS** |
-| 31 | Connect leftover | `linkedin` | leftover dest | **MISS** |
-| 32 | Pin leftover | `pinterest` | leftover dest | **MISS** |
-| 33 | Acquire leftover | `musk` | leftover dest | **MISS** |
-| 34 | Prompt leftover | `stablediff` | leftover dest | **MISS** |
-| 35 | Prompt leftover | `midjourney` | leftover dest | **MISS** |
-| 36 | Prompt leftover | `dalle2` | leftover dest | **MISS** |
-| 37 | Lock leftover | `ios16` | leftover dest | **MISS** |
-| 38 | Chip leftover | `m2` | leftover dest | **MISS** |
-
+| 18 | Queue leftover | `netflix` | leftover-3× unique | **DO-NOT-APPLY** |
+| 19 | Headline leftover | `nyt` | leftover-3× unique | **DO-NOT-APPLY** |
+| 20 | Shop leftover | `temu` | leftover dest | **KEEP** |
+| 21 | Tab leftover | `chrome` | leftover dest | **DROP** |
+| 22 | Search leftover | `baidu` | leftover dest | **DROP** |
+| 23 | Search leftover | `yandex` | leftover dest | **DROP** |
+| 24 | Portal leftover | `yahoo` | leftover dest | **DROP** |
+| 25 | Push leftover | `github` | leftover dest | **DROP** |
+| 26 | Join leftover | `discord` | leftover dest | **DROP** |
+| 27 | Watch leftover | `twitch` | leftover dest | **DROP** |
+| 28 | Play leftover | `spotify` | leftover dest | **DROP** |
+| 29 | Snap leftover | `snapchat` | leftover dest | **DROP** |
+| 30 | Chat leftover | `whatsapp` | leftover dest | **DROP** |
+| 31 | Connect leftover | `linkedin` | leftover dest | **DROP** |
+| 32 | Pin leftover | `pinterest` | leftover dest | **DROP** |
+| 33 | Acquire leftover | `musk` | leftover dest | **DROP** |
+| 34 | Prompt leftover | `stablediff` | leftover dest | **KEEP** |
+| 35 | Prompt leftover | `midjourney` | leftover dest | **KEEP** |
+| 36 | Prompt leftover | `dalle2` | leftover dest | **KEEP** |
+| 37 | Lock leftover | `ios16` | leftover dest | **KEEP** |
+| 38 | Chip leftover | `m2` | leftover dest | **KEEP** |
 ## MISS dests (continue)
 
 | Year | Slug | Class | Flow name |

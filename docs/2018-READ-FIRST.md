@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-08  
 **Status:** **LIVE lean door** (CUT-OPEN). Star = GDPR Manage `itt18-gdpr`. Accept All never writes.  
-**Disk truth:** Hub is **28 years open**. Dest-lock reverted: dest folders **13** (origin lean). **2009 boarded.** **2020 live lean** · Zoom Leave. **2022 ChatGPT live.** Do not restore a dest-farm forest.  
+**Disk truth:** Hub is **28 years open**. Dest-lock reverted: dest folders **24**. **2009 boarded.** **2020 live lean** · Zoom Leave. **2022 ChatGPT live.** Do not restore a dest-farm forest.  
 **Prefix:** `itt18`  
 **Clone shape from:** live `years/2017/` (lean door · Face ID star). **Do not** restore git `HEAD` / `52df8ae3` `years/2018/` (108-page forest). Leftover 2× ×2 on every dest HTML. Leftover 3× first (Reddit · YouTube · Wikipedia) + third. Second strip **not named**. Leftover 4× **0**.
 

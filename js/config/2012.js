@@ -15,7 +15,6 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
-    "sites/applemaps/index.html",
     "sites/buzzfeed/index.html",
     "sites/buzzfeed/more.html",
     "sites/chrome/index.html",
@@ -89,7 +88,7 @@
     "sites/windows8/about.html",
     "sites/windows8/index.html",
     "sites/youtube/index.html"
-  ];;;;;;;
+  ];;;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

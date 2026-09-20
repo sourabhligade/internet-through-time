@@ -72,7 +72,7 @@ GitHub **#11–#14** “Clutter clear · 2015–2018” are **stale dest-lock ti
 
 Only **2017** has unique leftover-20. leftover-3× unique dest-true dests (9 / 3 / 5) are a **different** map. Do not dest-farm leftover dest leftover-20 dests to “make unique leftover-20.”
 
-2017 leftover dest leftover-20 dests: dest-true dests exist. Shared `bootUniqueFlow` host. 18 leftover dests **failed-final on purpose**. Storm Circle complete gym untested.
+2017 leftover dest leftover-20 dests: dest-true dests exist. Shared `bootUniqueFlow` host. 18 leftover dests **failed-final on purpose**. Storm Circle gym complete e2e in `e2e/2017-unique-flows.spec.js`.
 
 ### 2.6 Dest-farm leftover dest leftover-3× dest-farm extra dests
 

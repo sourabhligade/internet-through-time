@@ -38,8 +38,8 @@ test("2015 / 2017 / 2019 / 2020 dest folders stay (no dest-farm)", () => {
   expect(destFolders(2020).length).toBe(39);
 });
 
-test("2016 dest folders 65 · 2018 dest folders 24", () => {
-  expect(destFolders(2016).length).toBe(65);
+test("2016 dest folders 66 · 2018 dest folders 24", () => {
+  expect(destFolders(2016).length).toBe(66);
   expect(destFolders(2018).length).toBe(24);
 });
 

@@ -8,10 +8,10 @@
 **`deep-research-4` implement (2026-09-14):** Official 10 dest-feel pass — preview examples + legal line, NYT Wordle kicker + key colors, bird Home + 280, BeReal stacked stills, Island expand, FTX Nov timeline, Mastodon instance, TikTok phone FYP, Win11 Settings leftover, Prompt Queue list. Leftover dests inject dest-face + dest-true result (not kind-echo). No dests added. Freeze still 85 / 98.  
 **How to use:** phases **0 → 6 in order**. Flip `[x]` only when Pass is true on disk **and** e2e named in the row. Do not skip a dest.
 
-**Dest map (all 85):** [`2022-DEST-MAP.md`](2022-DEST-MAP.md).  
+**Dest map:** [`2022-DEST-MAP.md`](2022-DEST-MAP.md) (live dest folders **25**).  
 **Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · I1–I14.  
 **Density sibling:** **2018 first-paint** · **2021 freeze ceiling 98**. **2020 live lean** · Zoom Leave.  
-**Disk now:** dests **85** (45 + 40 more) · HTML **95** · leftover-4× **0**. Freeze ceiling **98**. HTML cap **184**.
+**Disk now:** dests **25** · HTML **38** · leftover-4× **0**. Do not restore dest-farm to 85.
 
 ---
 

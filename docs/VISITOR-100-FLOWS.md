@@ -179,7 +179,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 - [x] ATT `data-official-need` (Phase 1). Ask + 2 ticks + Museum App field. Allow never writes.
 - [x] `period-2021.css` dest-true ATT chrome (phone · status 9:41 · home indicator · iOS alert · Fluent white card does not paint the alert).
-- [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **15** · leftover-3× unique dest-true dests **5** · 2022 live.
+- [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **18** · leftover-3× unique dest-true dests **5** · 2022 live.
 - [x] Failed-final + dest-true cites (ATT Apple Support · Signal is WhatsApp’s 15 May deadline · Copilot 29 Jun 2021 · Meta 28 Oct 2021 · Win11 4 Oct 2021 · Flash EOL 31 Dec 2020 / blocked 12 Jan 2021). No invented brand pixels.
 
 ### Phase 5 — period harvest 2011–2022 (optional, honest)
@@ -190,7 +190,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 ### Phase 6 — unique leftover-20 (only if named)
 
 - [ ] **Do not dest-farm leftover dest leftover-20 dests** on 2013 / 2014 / 2015 / 2018–2022.
-- [ ] 2017 leftover dest leftover-20 dests already dest-true (shared `bootUniqueFlow` · 18 failed-final on purpose · Storm Circle gym untested).
+- [x] 2017 leftover dest leftover-20 dests already dest-true (shared `bootUniqueFlow` · 18 failed-final on purpose · Storm Circle gym complete e2e).
 
 ---
 

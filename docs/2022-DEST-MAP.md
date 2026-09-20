@@ -3,7 +3,7 @@
 **Date:** 2026-09-14  
 **Status:** on disk. Research `deep-research-3` still running (cut-list check).  
 **Law:** [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · [`2022-IMPLEMENT.md`](2022-IMPLEMENT.md)  
-**Counts:** dest folders **85** · leftover dests **75** · official **10** · HTML **95** · leftover-4× **0**  
+**Counts:** dest folders **25** · official **10** · leftover dest KEEP **6** · leftover-3× unique **9** · leftover-4× **0** · HTML **38**. `2022-IMPLEMENT.md` “85 dests FINISHED” is stale — do not restore dest-farm.  
 **Ceiling:** 98 dests · HTML 184. **Star:** ChatGPT Send `itt22-chatgpt`. Not dest-farm.
 
 ```

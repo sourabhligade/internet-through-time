@@ -164,7 +164,6 @@
       "sites/infoseek/more.html": "http://museum.local/years/1994/sites/infoseek/more.html",
       "sites/pathfinder/more.html": "http://museum.local/years/1994/sites/pathfinder/more.html",
       "sites/prodigy/more.html": "http://museum.local/years/1994/sites/prodigy/more.html",
-      "sites/jumpstation/more.html": "http://museum.local/years/1994/sites/jumpstation/more.html",
       "sites/gnn/more.html": "http://museum.local/years/1994/sites/gnn/more.html",
       "sites/galaxy/more.html": "http://museum.local/years/1994/sites/galaxy/more.html",
       "sites/imdb/more.html": "http://museum.local/years/1994/sites/imdb/more.html",
@@ -204,7 +203,6 @@
       "sites/webcrawler/index.html": "http://museum.local/years/1994/webcrawler/",
       "sites/galaxy/index.html": "http://museum.local/years/1994/galaxy/",
       "sites/gnn/index.html": "http://museum.local/years/1994/gnn/",
-      "sites/jumpstation/index.html": "http://museum.local/years/1994/jumpstation/",
 
       "sites/playable/index.html": "http://museum.local/years/1994/playable/",
       "sites/playable/game.html": "http://museum.local/years/1994/playable/game.html",

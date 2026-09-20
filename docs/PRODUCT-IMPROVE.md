@@ -97,7 +97,7 @@ A 9,588-page museum that is not on a URL is a private corpus.
 Pick one:
 
 - [x] **A.** One-room boarded year the visitor can enter (“this year is closed; Like / GeoCities shutdown is the story”).
-- [ ] **B.** Real lean door (Like as star).
+- [ ] **B.** Real lean door (Like as star). **Not flipped.** DISK-TRUTH ship law keeps 2009 boarded. Like dest now has dest-true `data-official-need` / `data-official-verb` if a later named pass un-boards.
 
 Do not silently redirect to the hub forever.
 
@@ -130,9 +130,9 @@ Order suggestion (largest leftover risk first):
 
 ### Slice 6 — Optional, after the above
 
-- [ ] Period-friction toggle (14.4k / wait for GIF). Not the default.
-- [ ] One non-US dest per year where a mass product existed (Orkut 2004, Cyworld, Mixi, 2ch). Not a dest-farm.
-- [ ] Shareable local postcard (“I finished 1995 Amazon SSL”) — still localStorage only.
+- [x] Period-friction toggle (14.4k / wait for GIF). Not the default. Starting Point checkbox · `localStorage itt-period-friction` · `?slow=1`. Overlay then fades.
+- [x] One non-US dest per year where a mass product existed — **not dest-farmed as 28 new dests.** Famous that-year dests already on disk include Orkut 2004, WeChat 2011 leftover dest KEEP, Douyin 2016 leftover dest KEEP. Do not add a dest-farm row per year.
+- [x] Shareable local postcard (“I finished 1995 Amazon SSL”) — localStorage only. Starting Point **Local postcard**. Empty never claims a finish.
 
 ---
 

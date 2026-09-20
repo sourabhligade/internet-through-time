@@ -81,14 +81,6 @@
   },
   {
     "year": "2007",
-    "id": "feedburner",
-    "href": "/years/2007/sites/feedburner/index.html",
-    "key": "itt07-feedburner-lx",
-    "star": "itt07-iphone",
-    "verb": "Burn leftover"
-  },
-  {
-    "year": "2007",
     "id": "gears",
     "href": "/years/2007/sites/gears/index.html",
     "key": "itt07-gears-lx",
@@ -102,22 +94,6 @@
     "key": "itt07-iplayer-lx",
     "star": "itt07-iphone",
     "verb": "Play leftover"
-  },
-  {
-    "year": "2007",
-    "id": "lastfm",
-    "href": "/years/2007/sites/lastfm/index.html",
-    "key": "itt07-lastfm-lx",
-    "star": "itt07-iphone",
-    "verb": "Scrobble leftover"
-  },
-  {
-    "year": "2007",
-    "id": "clubpenguin",
-    "href": "/years/2007/sites/clubpenguin/index.html",
-    "key": "itt07-clubpenguin-lx",
-    "star": "itt07-iphone",
-    "verb": "Waddle leftover"
   },
   {
     "year": "2007",
@@ -209,27 +185,11 @@
   },
   {
     "year": "2010",
-    "id": "ios4",
-    "href": "/years/2010/sites/ios4/index.html",
-    "key": "itt10-ios4-lx",
+    "id": "angry",
+    "href": "/years/2010/sites/angry/index.html",
+    "key": "itt10-angry-lx",
     "star": "itt10-ig-posts",
-    "verb": "Multitask leftover"
-  },
-  {
-    "year": "2010",
-    "id": "nexusone",
-    "href": "/years/2010/sites/nexusone/index.html",
-    "key": "itt10-nexusone-lx",
-    "star": "itt10-ig-posts",
-    "verb": "Unlock leftover"
-  },
-  {
-    "year": "2010",
-    "id": "froyo",
-    "href": "/years/2010/sites/froyo/index.html",
-    "key": "itt10-froyo-lx",
-    "star": "itt10-ig-posts",
-    "verb": "Flash leftover"
+    "verb": "Fling leftover"
   },
   {
     "year": "2011",
@@ -361,27 +321,11 @@
   },
   {
     "year": "2011",
-    "id": "duolingo",
-    "href": "/years/2011/sites/duolingo/index.html",
-    "key": "itt11-duolingo-lx",
-    "star": "itt11-gplus",
-    "verb": "Lesson leftover"
-  },
-  {
-    "year": "2011",
     "id": "codecademy",
     "href": "/years/2011/sites/codecademy/index.html",
     "key": "itt11-codecademy-lx",
     "star": "itt11-gplus",
     "verb": "Lesson leftover"
-  },
-  {
-    "year": "2011",
-    "id": "path",
-    "href": "/years/2011/sites/path/index.html",
-    "key": "itt11-path-lx",
-    "star": "itt11-gplus",
-    "verb": "Moment leftover"
   },
   {
     "year": "2011",
@@ -473,14 +417,6 @@
   },
   {
     "year": "2012",
-    "id": "applemaps",
-    "href": "/years/2012/sites/applemaps/index.html",
-    "key": "itt12-applemaps-lx",
-    "star": "itt12-ig-android",
-    "verb": "Route leftover"
-  },
-  {
-    "year": "2012",
     "id": "googleplay",
     "href": "/years/2012/sites/googleplay/index.html",
     "key": "itt12-googleplay-lx",
@@ -550,14 +486,6 @@
     "key": "itt14-game2048-lx",
     "star": "itt14-wa-install",
     "verb": "Slide leftover"
-  },
-  {
-    "year": "2014",
-    "id": "androidl",
-    "href": "/years/2014/sites/androidl/index.html",
-    "key": "itt14-androidl-lx",
-    "star": "itt14-wa-install",
-    "verb": "Material leftover"
   },
   {
     "year": "2014",
@@ -744,36 +672,12 @@
     "verb": "Sideload leftover"
   },
   {
-    "year": "2021",
-    "id": "m1",
-    "href": "/years/2021/sites/m1/index.html",
-    "key": "itt21-m1-lx",
-    "star": "itt21-att",
-    "verb": "Chip leftover"
-  },
-  {
-    "year": "2021",
-    "id": "clubhouse21",
-    "href": "/years/2021/sites/clubhouse21/index.html",
-    "key": "itt21-clubhouse21-lx",
-    "star": "itt21-att",
-    "verb": "Room leftover"
-  },
-  {
     "year": "2022",
     "id": "temu",
     "href": "/years/2022/sites/temu/index.html",
     "key": "itt22-temu-lx",
     "star": "itt22-chatgpt",
     "verb": "Shop leftover"
-  },
-  {
-    "year": "2022",
-    "id": "musk",
-    "href": "/years/2022/sites/musk/index.html",
-    "key": "itt22-musk-lx",
-    "star": "itt22-chatgpt",
-    "verb": "Acquire leftover"
   },
   {
     "year": "2022",

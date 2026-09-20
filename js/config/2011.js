@@ -18,7 +18,6 @@
     "sites/codecademy/index.html",
     "sites/dropbox/index.html",
     "sites/dropbox/more.html",
-    "sites/duolingo/index.html",
     "sites/evernote/index.html",
     "sites/facebook/about.html",
     "sites/facebook/index.html",
@@ -68,7 +67,6 @@
     "sites/nintendo3ds/index.html",
     "sites/nytpaywall/index.html",
     "sites/pandora/index.html",
-    "sites/path/index.html",
     "sites/pinterest/index.html",
     "sites/pinterest/more.html",
     "sites/playable/close.html",
@@ -122,7 +120,7 @@
     "sites/youtube/index.html",
     "sites/youtube/more.html",
     "sites/zyngaipo/index.html"
-  ];;;;;;
+  ];;;;;;;
   var urlMap = {
     "pages/about.html": "http://museum.local/years/2011/pages/about.html",
     "pages/error/404.html": "http://museum.local/years/2011/pages/error/404.html",

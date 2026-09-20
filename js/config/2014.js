@@ -15,7 +15,6 @@
     "pages/map.html",
     "pages/whats-new.html",
     "sites/alibabaipo/index.html",
-    "sites/androidl/index.html",
     "sites/applepay/index.html",
     "sites/echo/index.html",
     "sites/facebook/index.html",
@@ -51,7 +50,7 @@
     "sites/whatsapp/index.html",
     "sites/wikipedia/index.html",
     "sites/youtube/index.html"
-  ];;;;;
+  ];;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

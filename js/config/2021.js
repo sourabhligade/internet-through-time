@@ -16,7 +16,6 @@
     "sites/att/index.html",
     "sites/att/more.html",
     "sites/chrome/index.html",
-    "sites/clubhouse21/index.html",
     "sites/coinbaseipo/index.html",
     "sites/copilot/about.html",
     "sites/copilot/c.html",
@@ -32,7 +31,6 @@
     "sites/instagram/c.html",
     "sites/instagram/index.html",
     "sites/instagram/more.html",
-    "sites/m1/index.html",
     "sites/meta/index.html",
     "sites/nft/index.html",
     "sites/playable/about.html",
@@ -72,7 +70,7 @@
     "sites/youtube/c.html",
     "sites/youtube/index.html",
     "sites/youtube/more.html"
-  ];;;;;
+  ];;;;;;
   var urlMap = {
     "index.html": "http://museum.local/index.html",
     "pages/home.html": "http://home.microsoft.com/intl/web2021/",

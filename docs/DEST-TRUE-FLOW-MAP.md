@@ -49,7 +49,7 @@ flowchart TD
 
 **Dest-true flows to recheck:** 699 (official 10 + leftover-3× unique + leftover dests + forest packs + 2017 leftover-20 extra). Not dest-folder count.
 
-Year-false KEEP / DROP / MISS (research Partial, not applied): [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md).
+Year-false KEEP / DROP / MISS (research continue complete, not applied): [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md).
 
 ---
 

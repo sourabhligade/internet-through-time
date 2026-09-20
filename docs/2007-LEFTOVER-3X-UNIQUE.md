@@ -8,7 +8,7 @@
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
 **Prefix:** `itt07`  
 **Star:** iPhone Safari `itt07-iphone` · `sites/iphone/index.html`  
-**Disk:** dest-lock lean door · dest folders **23**. Official dest leftover-2× panels = **0**. Leftover-4× = **0**.
+**Disk:** dest-lock lean door · dest folders **33**. Official dest leftover-2× panels = **0**. Leftover-4× = **0**.
 
 Do not dest-farm. Do not invent dests. Do not restore a 2007 forest.
 

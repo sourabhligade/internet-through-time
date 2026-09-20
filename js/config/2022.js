@@ -28,7 +28,6 @@
     "sites/m2/index.html",
     "sites/mastodon/index.html",
     "sites/midjourney/index.html",
-    "sites/musk/index.html",
     "sites/netflix/index.html",
     "sites/nyt/index.html",
     "sites/playable/game.html",
@@ -46,7 +45,7 @@
     "sites/wordle/index.html",
     "sites/youtube/index.html",
     "sites/youtube/shorts.html"
-  ];;;;;
+  ];;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

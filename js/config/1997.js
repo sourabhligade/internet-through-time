@@ -207,7 +207,6 @@
 
       "sites/aim/index.html": "http://museum.local/years/1997/aim/",
       "sites/winamp/index.html": "http://museum.local/years/1997/winamp/",
-      "sites/javaplugin/index.html": "http://museum.local/years/1997/javaplugin/",
       "sites/scripting/index.html": "http://museum.local/years/1997/scripting/",
 
       "sites/playable/index.html": "http://museum.local/years/1997/playable/",

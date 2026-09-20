@@ -7,7 +7,7 @@ Do not `git checkout` an old 2020 forest.
 
 | Lock | Value |
 |------|--------|
-| Disk | **38 dest folders** · dest-lock parent had no 2020 tree · official 10 + leftover-3× 9 + leftover dests 19 |
+| Disk | **39 dest folders** · dest-lock parent had no 2020 tree · official 10 + leftover-3× 9 + leftover dest Clubhouse |
 | Star | Zoom mute → chat → Leave `itt20-zoom` |
 | Scale | **No ILS June 2020 websites cell** — table ends 2018 |
 | Neighbors | 2019 Disney+ Continue · 2021 ATT Ask |

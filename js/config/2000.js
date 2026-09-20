@@ -162,8 +162,6 @@
       "sites/playable/extra-d.html": "http://museum.local/years/2000/sites/playable/extra-d.html",
       "sites/playable/extra-c.html": "http://museum.local/years/2000/sites/playable/extra-c.html",
       "sites/homestar/more.html": "http://museum.local/years/2000/sites/homestar/more.html",
-      "sites/travelocity/more.html": "http://museum.local/years/2000/sites/travelocity/more.html",
-      "sites/expedia/more.html": "http://museum.local/years/2000/sites/expedia/more.html",
       "sites/everything2/more.html": "http://museum.local/years/2000/sites/everything2/more.html",
       "sites/baidu/more.html": "http://museum.local/years/2000/sites/baidu/more.html",
       "sites/half/more.html": "http://museum.local/years/2000/sites/half/more.html",
@@ -192,8 +190,6 @@
       "sites/about/index.html": "http://museum.local/years/2000/sites/about/index.html",
 
       "sites/limewire/index.html": "http://museum.local/years/2000/limewire/",
-      "sites/expedia/index.html": "http://museum.local/years/2000/expedia/",
-      "sites/travelocity/index.html": "http://museum.local/years/2000/travelocity/",
       "sites/half/index.html": "http://museum.local/years/2000/half/",
 
       "sites/playable/index.html": "http://museum.local/years/2000/playable/",

@@ -86,7 +86,7 @@ test('fold 2008 Braid Fold edge click reaches 16', async ({ page }) => {
 });
 
 test('flap 2013 Pipe Flap click climb', async ({ page }) => {
-  test.skip(WIPED_2013, '2013 wiped');
+  test.skip(WIPED_2013, '2013 tree missing');
   test.skip(
     !fs.existsSync(path.join(__dirname, '..', 'years', '2013', 'sites', 'playable', 'more-c.html')),
     '2013 more-c dest not on disk (lean — game.html only)'
@@ -102,7 +102,7 @@ test('flap 2013 Pipe Flap click climb', async ({ page }) => {
 });
 
 test('idle 2013 Cookie Click bakery', async ({ page }) => {
-  test.skip(WIPED_2013, '2013 wiped');
+  test.skip(WIPED_2013, '2013 tree missing');
   test.skip(
     !fs.existsSync(path.join(__dirname, '..', 'years', '2013', 'sites', 'playable', 'more-d.html')),
     '2013 more-d dest not on disk (lean — game.html only)'

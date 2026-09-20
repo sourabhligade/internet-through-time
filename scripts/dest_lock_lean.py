@@ -24,27 +24,27 @@ LEAN = {
 
 EXTRA_KEEP = {
     "2007": {
-        "amazonmp3", "androidann", "appletv", "clubpenguin", "feedburner",
+        "amazonmp3", "androidann", "appletv",
         "friendfeed", "funnyordie", "gears", "hackernews", "icanhas", "iplayer",
-        "ipodtouch", "justintv", "lastfm", "netflix", "pownce", "safari3"
+        "ipodtouch", "justintv", "netflix", "pownce", "safari3"
     },
     "2010": {
-        "chromewebstore", "cityville", "flipboard", "froyo", "googlebuzz", "hulu",
-        "ibooks", "ios4", "kinect", "minecraft", "nexusone", "path"
+        "angry", "chromewebstore", "cityville", "flipboard", "googlebuzz", "hulu",
+        "ibooks", "kinect", "minecraft", "path"
     },
     "2011": {
-        "chromebook", "codecademy", "duolingo", "googlewallet", "gowalla",
+        "chromebook", "codecademy", "googlewallet", "gowalla",
         "grouponipo", "honeycomb", "ics", "imessage", "ios5", "line", "nintendo3ds",
-        "nytpaywall", "path", "psnhack", "skypebuy", "skyrim", "snapchat", "stripe",
+        "nytpaywall", "psnhack", "skypebuy", "skyrim", "snapchat", "stripe",
         "temple", "wechat", "zyngaipo"
     },
     "2012": {
-        "applemaps", "chrome", "coinbase", "coursera", "duolingo", "edx", "googleplay",
+        "chrome", "coinbase", "coursera", "duolingo", "edx", "googleplay",
         "ios6", "jellybean", "kindlefirehd", "nexus7", "soundcloud", "tinder",
         "twitter", "udacity"
     },
     "2014": {
-        "alibabaipo", "androidl", "applepay", "echo", "flappybird", "game2048",
+        "alibabaipo", "applepay", "echo", "flappybird", "game2048",
         "inbox", "ios8", "oculusfb"
     },
     "2019": {
@@ -58,10 +58,10 @@ EXTRA_KEEP = {
         "spotify", "twitch", "twitter", "uber", "whatsapp", "windows10"
     },
     "2021": {
-        "clubhouse21", "coinbaseipo", "epicapple", "m1", "nft"
+        "coinbaseipo", "epicapple", "nft"
     },
     "2022": {
-        "dalle2", "ios16", "m2", "midjourney", "musk", "stablediff", "temu"
+        "dalle2", "ios16", "m2", "midjourney", "stablediff", "temu"
     },
 }
 

@@ -26,7 +26,7 @@ test.describe("lean year game engines", () => {
   test("2013 Loop Six: New Game never writes · 15s trap never writes · six beats write itt13-game-loopsix", async ({
     page
   }) => {
-    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 tree missing");
     await openClear(page, "/years/2013/sites/playable/game.html", [
       "itt13-game-loopsix",
       "itt13-game-loopsix-lx"
@@ -49,7 +49,7 @@ test.describe("lean year game engines", () => {
   });
 
   test("2013 leftover Loop Six plaque does not stamp official", async ({ page }) => {
-    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 wiped");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 tree missing");
     await openClear(page, "/years/2013/sites/playable/game.html", [
       "itt13-game-loopsix",
       "itt13-game-lx"

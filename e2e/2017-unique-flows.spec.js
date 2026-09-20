@@ -76,6 +76,21 @@ async function getKey(page, k) {
   return page.evaluate((key) => localStorage.getItem(key), k);
 }
 
+test("Storm Circle gym complete writes itt17-game-stormcircle", async ({ page }) => {
+  await page.goto("/years/2017/sites/playable/game.html?fast=1");
+  await page.evaluate(() => localStorage.removeItem("itt17-game-stormcircle"));
+  await page.reload();
+  await expect.poll(() => page.evaluate(() => localStorage.getItem("itt17-game-stormcircle"))).toBeNull();
+  await page.locator("[data-game-start]").click();
+  const canvas = page.locator("canvas, #game-canvas").first();
+  await canvas.click({ position: { x: 60, y: 70 } });
+  await canvas.click({ position: { x: 200, y: 50 } });
+  await canvas.click({ position: { x: 200, y: 160 } });
+  await expect.poll(() => page.evaluate(() => localStorage.getItem("itt17-game-stormcircle")), { timeout: 8000 }).toBeTruthy();
+  const blob = await page.evaluate(() => localStorage.getItem("itt17-game-stormcircle"));
+  expect(blob).toMatch(/real|gold|official/);
+});
+
 test.describe("2017 unique leftover dests", () => {
   test("20 leftover dests exist and hrefs are unique", async ({ request }) => {
     const hrefs = new Set();

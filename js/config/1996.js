@@ -164,7 +164,6 @@
       "sites/plugin/more.html": "http://museum.local/years/1996/sites/plugin/more.html",
       "sites/msn/more.html": "http://museum.local/years/1996/sites/msn/more.html",
       "sites/totalny/more.html": "http://museum.local/years/1996/sites/totalny/more.html",
-      "sites/theglobe/more.html": "http://museum.local/years/1996/sites/theglobe/more.html",
       "sites/askjeeves/more.html": "http://museum.local/years/1996/sites/askjeeves/more.html",
       "sites/mtv/more.html": "http://museum.local/years/1996/sites/mtv/more.html",
       "sites/totalny/index.html": "http://museum.local/years/1996/sites/totalny/index.html",
@@ -194,7 +193,6 @@
 
       "sites/angelfire/index.html": "http://museum.local/years/1996/angelfire/",
       "sites/realplayer/index.html": "http://museum.local/years/1996/realplayer/",
-      "sites/theglobe/index.html": "http://museum.local/years/1996/theglobe/",
 
       "sites/playable/index.html": "http://museum.local/years/1996/playable/",
       "sites/playable/game.html": "http://museum.local/years/1996/playable/game.html",

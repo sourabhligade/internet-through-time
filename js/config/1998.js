@@ -194,9 +194,6 @@
       "sites/textfiles/index.html": "http://textfiles.com/",
       "sites/textfiles/about.html": "http://textfiles.com/about.html",
       "sites/goto/index.html": "http://museum.local/years/1998/goto/",
-      "sites/mp3com/index.html": "http://museum.local/years/1998/mp3com/",
-      "sites/realplayer/index.html": "http://museum.local/years/1998/realplayer/",
-      "sites/winamp/index.html": "http://museum.local/years/1998/winamp/",
 
       "sites/playable/index.html": "http://museum.local/years/1998/playable/",
       "sites/playable/game.html": "http://museum.local/years/1998/playable/game.html",

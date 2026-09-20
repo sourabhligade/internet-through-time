@@ -16,6 +16,7 @@
     "pages/map.html",
     "pages/whats-new.html",
     "sites/android/index.html",
+    "sites/angry/index.html",
     "sites/chrome/about.html",
     "sites/chrome/index.html",
     "sites/chromewebstore/index.html",
@@ -30,7 +31,6 @@
     "sites/formspring/index.html",
     "sites/foursquare/about.html",
     "sites/foursquare/index.html",
-    "sites/froyo/index.html",
     "sites/google/index.html",
     "sites/googlebuzz/index.html",
     "sites/groupon/index.html",
@@ -39,7 +39,6 @@
     "sites/imgur/index.html",
     "sites/instagram/about.html",
     "sites/instagram/index.html",
-    "sites/ios4/index.html",
     "sites/ipad/about.html",
     "sites/ipad/index.html",
     "sites/ipad/order.html",
@@ -50,7 +49,6 @@
     "sites/kinect/index.html",
     "sites/minecraft/index.html",
     "sites/netflix/index.html",
-    "sites/nexusone/index.html",
     "sites/path/index.html",
     "sites/playable/extra-a.html",
     "sites/playable/extra-b.html",
@@ -79,7 +77,7 @@
     "sites/wave/index.html",
     "sites/youtube/about.html",
     "sites/youtube/index.html"
-  ];;;;;;
+  ];;;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",
@@ -156,7 +154,6 @@
       { re: /groupon/i, path: "sites/groupon/index.html" },
       { re: /wave/i, path: "sites/wave/index.html" },
       { re: /google/i, path: "sites/google/index.html" },
-      { re: /yahoo/i, path: "sites/yahoo/index.html" },
       { re: /chrome/i, path: "sites/chrome/index.html" },
       { re: /nexus|android/i, path: "sites/android/index.html" },
     ]
