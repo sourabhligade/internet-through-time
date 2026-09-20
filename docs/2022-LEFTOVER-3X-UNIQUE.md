@@ -7,7 +7,7 @@
 **Implement map:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 2.  
 **Prefix:** `itt22`  
 **Star:** ChatGPT Send `itt22-chatgpt` · `sites/chatgpt/index.html`  
-**Disk:** dest-true lean door · dest folders **19**. Official dest leftover-2× panels = **0**. Leftover-4× = **0**.
+**Disk:** dest-true lean door · dest folders **25**. Official dest leftover-2× panels = **0**. Leftover-4× = **0**. Do not restore dest-farm to 85.
 
 Do not dest-farm dests. Do not invent dests. Do not dest-farm leftover dest leftover-20 dests. GPT-4 / X wordmark / empty never write `itt22-chatgpt`.
 

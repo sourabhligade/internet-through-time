@@ -32,7 +32,7 @@
 
 ## Do
 
-- Clone live **2017**, rewrite rooms. Guided **exactly 6**. Official dests named hooks. Dest folders **38**. 5k websites = research envelope, not dest farm.  
+- Guided **exactly 6**. Official dests named hooks. Dest folders **170** (dest-lock reverted warehouse). 5k websites = research envelope, not dest farm. Do not dest-lock 2019 again.  
 - Dual-cite: Live Stats June table **ends 2018** at **1,630,322,579 (−8%)**. Do **not** invent a June 2019 websites cell. ITU **4.1B / 53.6%** (Facts and Figures 2019 · PR 5 Nov 2019).  
 - Shell: Win10 mass · Chrome habit · iOS 13 / iPadOS. Chromium Edge is a **preview** (ships 15 Jan 2020).  
 - Star / trail #1 / year-start = `sites/disneyplus/home.html` (Continue). `index.html` is the trial trap only. Do not quote “Who’s watching” as 2019 Disney press.  

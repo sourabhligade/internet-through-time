@@ -9,13 +9,13 @@ Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay 
 |------|------|
 | **1994–2004** | Live dense / forest reconstructions |
 | **1999** | Live forest · AIM `itt99-aim` · dests **432** (144 + Board C 288) · leftover-2× on every dest · Board C rail `data-itt-2x-unique-c` |
-| **2000** | Live forest · MapQuest `itt00-mapquest` · dests **486** (162 + Board C 324) · leftover-2× on every dest · Board C rail |
+| **2000** | Live forest · MapQuest `itt00-mapquest` · dests **484** (Board C plus forest pack DROPs) · leftover-2× on every dest · Board C rail |
 | **2001** | **CUT-FOREST LIVE** · Wikipedia UseMod `itt01-wiki` · dests **261** (87 + Board C 174) · leftover 18 year-true · ILS 29,254,370 / 500,609,240 · Netcraft 29,302,656 labeled |
 | **2002** | **CUT-FOREST LIVE** · StumbleUpon `itt02-stumble` · dests **234** (78 + Board C 156) · leftover 18 year-true · ILS 38,760,373 / 662,663,600 · Pew 21% · Netcraft 38,807,788 labeled |
 | **2003** | **CUT-FOREST LIVE** · Photobucket upload `itt03-photobucket` · dests **206** (69 + Board C 137 · `agoda` skipped) · leftover 18 year-true |
 | **2004** | Live forest · thefacebook networks `itt04-thefacebook-networks` · dests **810** (270 + Board C 540) · leftover-2× on every dest · Board C rail |
 | **2005** | **Live** · YouTube upload gold · leftover 2× + leftover 4× on every dest · XP+IE6 |
-| **2006** | **Live** · Twttr update gold · leftover 2× + leftover 4× on every dest · XP+IE6 · dest folders **378** · HTML **637** (lock 126/385 and 379 are stale) |
+| **2006** | **Live** · Twttr update gold · leftover 2× + leftover 4× on every dest · XP+IE6 · dest folders **376** |
 | **2007** | **DONE** · live lean door · iPhone Safari `itt07-iphone` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **33** · XP+IE6 |
 | **2008** | **DONE** · live dense · GitHub issue `itt08-github` · dest-true official 10 · dest folders **597** (lock 199 / 598 are stale) · XP+IE7 |
 | **2009** | **Boarded** · tree stays · year-shell is a plaque (not a hub redirect) · `/pages/home.html` redirects to the plaque · Facebook Like dests still on disk |

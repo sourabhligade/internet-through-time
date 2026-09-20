@@ -39,7 +39,7 @@ Honesty may exist as `data-official-honesty="1"` (no checkbox theater). Trap is 
 
 | Knob | Target | Disk | Pass |
 |------|--------|------|------|
-| [x] Dest folders | **85** | 85 | count `years/2022/sites/*` |
+| [x] Dest folders | **25** | 25 | count `years/2022/sites/*` · do not restore dest-farm 85 |
 | [x] HTML | **≤90** | 55 | `rglob *.html` |
 | [x] Official 10 | 10 dest-true | 10 | `flow-trails.js` 2022 |
 | [x] Guided | **6** | 6 | `#ott-guided-2022 ol > li` |

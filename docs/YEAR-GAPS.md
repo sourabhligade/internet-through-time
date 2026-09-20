@@ -1,5 +1,7 @@
 # Year gaps — verified 2026-09-15
 
+**Recheck 2026-09-20:** official 10 files exist for **2012 / 2013 / 2014** (`data-official-need` 10/10). §2 “trail 9 / Apple Pay missing” below is **historical**. **2022 dest folders 25** (not 19). Do not dest-farm to match old counts.
+
 **Implemented this pass:** 2012 trail n=10 (FB 1B already on disk) · 2013 trail n=10 (Touch ID already on disk) · 2014 trail n=10 (chat already on disk + new Apple Pay literacy dest, no checkout) · A CSS on 2007/2010/2011/2012/2013/2021 · 2020 official dests 2–10 have `data-official-need` · 2017 WhatsApp bookmark/hint removed · checklist A3/A9 · 2019-READ-FIRST 38 dests · UNDONE dest counts.
 
 **Method (this file is only what the commands below proved):**
@@ -164,7 +166,7 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 
 `js/config/2017.js` `locationHints` `sites/whatsapp/index.html` **exists** after dest-lock revert.
 
-`FLOW-IMPLEMENT-CHECKLIST.md` **A9** · **2023–2025 wiped**. **2022 is live lean** (ChatGPT Send · dest folders 19).
+`FLOW-IMPLEMENT-CHECKLIST.md` **A9** · **2023–2025 wiped**. **2022 is live lean** (ChatGPT Send · dest folders 25).
 
 `UNDONE.md` dest-lock 2017 **40** dests is stale. Disk after dest-lock revert: 2017 **222** dest folders.
 

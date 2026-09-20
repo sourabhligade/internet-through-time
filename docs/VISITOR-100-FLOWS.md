@@ -73,23 +73,23 @@ Only **2017** has unique leftover-20. leftover-3× unique dest-true dests (9 / 3
 
 ## 4. Why 2021 looks kaggy
 
-2021 is a dest-lock **lean door** (15 dests), same class as 2018 GDPR (13 dests). It is **not** dest-lock-reverted 2019 (170 dests). Kaggy is **look + leftover-3× unique dest-true dests stop at 5**, not a missing year tree.
+2021 is a dest-lock **lean door** (18 dests), same class as 2018 GDPR (24 dests). It is **not** dest-lock-reverted 2019 (170 dests). Kaggy is **look + leftover-3× unique dest-true dests stop at 5**, not a missing year tree.
 
 | Fact | Disk | Stale copy |
 |------|------|------------|
-| Dest folders | **15** dest-lock lean | [`2021-READ-FIRST.md`](2021-READ-FIRST.md) still says **294** |
+| Dest folders | **18** dest-lock lean | older READ-FIRST **294** is dest-farm — do not restore |
 | Leftover dest leftover-2× warehouse | dest-lock **stripped** official dest leftover-2× **0** | READ-FIRST still says leftover-2× on every dest |
 | Leftover-3× unique dest-true dests | **5 leftover dests** · amazon / google / instagram · twitter / youtube · **third strip 0** | READ-FIRST still says first 3 + third 3 |
-| Period files | `assets/period/2021/` **does not exist** | — |
+| Period files | `assets/period/2021/README-PIXELS.txt` failed-final · 0 capture files | — |
 | `css/period-2021.css` | **3.2 KB** (imports 2019 + ATT phone chrome) | `period-2018.css` **14.7 KB** |
-| ATT star dest | **1.6 KB** dest-true I/O · phone frame · failed-final · **no `data-official-need`** | — |
-| 2022 | live lean 19 dests | **2022 live** (READ-FIRST dest-true 2026-09-20) |
+| ATT star dest | dest-true I/O · phone frame · failed-final · `data-official-need` | — |
+| 2022 | live lean **25** dests | **2022 live** |
 
 2018 feels complete because GDPR **Manage** is the year in the chrome. 2021 ATT **Ask** is dest-true in a phone frame, but dest-lock stripped leftover dest leftover-2× warehouse, leftover-3× unique dest-true dests stop at 5, and there is no period harvest.
 
 **Do not dest-lock revert 2021 to 294 dests.** That is dest-farm. **Do not dest-farm leftover dest leftover-3× unique dest-true dests to 9.** Criteria: **stop at 5**.
 
-### 2021 dests on disk (15 — do not add)
+### 2021 dests on disk (18 — do not dest-farm)
 
 Official 10: att · signal · copilot · meta · windows11 · flash · chrome · windows10 · facebook · playable.
 
