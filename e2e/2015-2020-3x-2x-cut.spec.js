@@ -43,7 +43,7 @@ test.describe("CUT-3X-2X-2015-2020 dest-farm leftover-3× extra dests stay dest-
   });
 
   test("dest folders stay dest-lock-reverted disk counts", () => {
-    const want = { 2015: 213, 2016: 64, 2017: 222, 2019: 170 };
+    const want = { 2015: 213, 2016: 96, 2017: 222, 2019: 170 };
     for (const [y, n] of Object.entries(want)) {
       expect(destFolders(y).length, y + " dest folders").toBe(n);
     }

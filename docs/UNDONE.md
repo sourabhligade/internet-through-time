@@ -17,7 +17,7 @@ Rechecked 2026-09-20: dest folders · leftover-3× unique dest-true dests · off
 | **28 years open** (1994–2008 + 2010–2022) · 2009 plaque · 2023–2025 wiped | Hub year hrefs 28 · DISK-TRUTH |
 | Official 10 files n=1–10 all live years including 2012 / 2013 / 2014 / 2022 | `flow-trails.js` · 0 missing hrefs |
 | Guided Starting Point exactly 6 | `ui/year/start-data.js` |
-| Dest-lock **reverted** 2015–2020 | dest folders **213 / 64 / 222 / 26 / 170 / 39** |
+| Dest-lock **reverted** 2015–2020 | dest folders **213 / 96 / 222 / 39 / 170 / 39** |
 | Dest-lock **still on** 2007 / 2010–2012 / 2014 / 2021 | leftover dests kept via EXTRA_KEEP · dest folders **46 / 44 / 62 / 48 / 36 / 30** |
 | Leftover-3× unique dest-true dests | **107** matrix dests including **2022 9 rows** · leftover go **1** each |
 | Official dest leftover-2× `data-lo-panel` = 0 on official 10 | **all playable years** · 2009 boarded leftover-2× is not a visitor door |
@@ -40,7 +40,7 @@ Stale hub copy struck 2026-09-20 (Phase 0): 28 years open · 2022 live · 2023�
 | 2010–2012 | **Still dest-lock** | 44 / 62 / 48 | **9** each (2012 + leftover-4× unique 3) |
 | 2013 | Never dest-lock | 54 | **9** |
 | 2014 | **Still dest-lock** | 36 | **9** |
-| **2015–2020** | **Reverted** | 213 / 64 / 222 / 26 / 170 / 39 | 9 / 9 / n/a (unique leftover-20) / 3 / 9 / 9 |
+| **2015–2020** | **Reverted** | 213 / 96 / 222 / 39 / 170 / 39 | 9 / 9 / n/a (unique leftover-20) / 3 / 9 / 9 |
 | 2021 | **Still dest-lock** | 30 | **5** (stop) |
 | 2022 | Dest-true lean | 38 | **9 dests on disk** · e2e matrix **9 rows** |
 

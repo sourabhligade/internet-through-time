@@ -25,16 +25,16 @@ Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay 
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover 3× first + third · leftover 4× **0** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **36** · Win7 + IE 9 |
 | **2015** | **Live lean door** · Periscope Go LIVE `itt15-periscope` · dest-lock **reverted** · dest folders **213** · leftover-2× on dests · leftover-3× unique 9 · Win7 residual + Chrome habit |
-| **2016** | Live lean door · IG Stories · dest-lock **reverted** · dest folders **64** · leftover-3× unique 9 · leftover dests · leftover 4× **0** |
+| **2016** | Live lean door · IG Stories · dest-lock **reverted** · dest folders **96** · leftover-3× unique 9 · leftover dests · leftover 4× **0** |
 | **2017** | Live lean door · Face ID · dest-lock **reverted** · dest folders **222** · leftover-3× unique dests n/a (unique leftover-20 dest-true) · leftover 4× **0** |
-| **2018** | **Live lean door** · GDPR Manage `itt18-gdpr` · dest-lock **reverted** · dest folders **26** · leftover-3× unique first 3 · leftover dests · leftover 4× **0** |
+| **2018** | **Live lean door** · GDPR Manage `itt18-gdpr` · dest-lock **reverted** · dest folders **39** · leftover-3× unique first 3 · leftover dests · leftover 4× **0** |
 | **2019** | **Live lean door** · Disney+ Continue `itt19-disneyplus` · dest-lock **reverted** · dest folders **170** · leftover-3× unique 9 · leftover 4× **0** |
 | **2020** | **Live lean door** · Zoom Leave `itt20-zoom` · dest-lock **reverted** (dest-lock parent had no 2020 tree) · dest folders **39** · leftover-3× unique 9 · leftover dest hole Clubhouse · leftover 4× **0** |
 | **2021** | **Live lean door** · ATT Ask `itt21-att` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **30** · leftover-4× **0** · Win10 + Chrome habit |
 | **2022** | **Live lean door** · ChatGPT Send `itt22-chatgpt` · dest-true official 10 + leftover-3× 9 + leftover dests · dest folders **38** · leftover-2× dest-farm dests not restored · leftover 4× **0** · Win10 + Chrome habit |
 | **2023–2025** | **Wiped** · no tree · no year card · no atlas tick |
 
-Lean doors: **2007 + 2010–2022**. Dest-lock applied 2026-09-15 on 2007/2010–2012/2014/2021. **2015–2020 dest-lock reverted** (213 / 64 / 222 / 26 / 170 / 39 dest folders). **2013 / 2022** dest-true lean. **2009 boarded.** **2023–2025 wiped.** Forests 1994–2006 + 2008 stay dense.  
+Lean doors: **2007 + 2010–2022**. Dest-lock applied 2026-09-15 on 2007/2010–2012/2014/2021. **2015–2020 dest-lock reverted** (213 / 96 / 222 / 39 / 170 / 39 dest folders). **2013 / 2022** dest-true lean. **2009 boarded.** **2023–2025 wiped.** Forests 1994–2006 + 2008 stay dense.  
 Games wing (`games/`) is separate and live.
 
 Rebuild a wiped year only when named. Do not `git checkout` an old forest. Live tree + this file win. Stale implement notebooks were removed.

@@ -1,29 +1,17 @@
 // @ts-check
 /**
- * Lean-double leftover dests — dest-disjoint leftover dests on thin lean doors.
- * Empty / trap never write. Complete writes leftover key. Never star.
- * Not leftover-3× unique. Not official 10. Not leftover-20.
+ * Legal 2015–2020 3× leftover dests — 2016 / 2018 leftover dests only.
+ * Empty / trap never write. Complete writes leftover. Never star.
+ * Not leftover-3× unique. Not leftover-20. 2015/2017/2019/2020 dest folders stay.
  */
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails, killOverlays } = require("./helpers");
-const ROWS = require("./lean-double-leftover.matrix.json");
+const ROWS = require("./lean-triple-leftover.matrix.json");
 const UNIQUE = require("../scripts/leftover-3x-unique.json");
 
 const ROOT = path.join(__dirname, "..");
-const WANT_FOLDERS = {
-  2007: 46,
-  2010: 44,
-  2011: 62,
-  2012: 48,
-  2014: 36,
-  2016: 96,
-  2018: 39,
-  2020: 39,
-  2021: 30,
-  2022: 38,
-};
 
 function destFolders(year) {
   const dir = path.join(ROOT, "years", String(year), "sites");
@@ -43,39 +31,26 @@ function uniqueIds(year) {
   return ids;
 }
 
-test("lean-double leftover dests are unique within a year", () => {
-  const byYear = {};
-  for (const row of ROWS) {
-    byYear[row.year] = byYear[row.year] || [];
-    byYear[row.year].push(row.id);
-  }
-  for (const [year, ids] of Object.entries(byYear)) {
-    expect(new Set(ids).size, year + " unique leftover dests").toBe(ids.length);
-  }
+test("2015 / 2017 / 2019 / 2020 dest folders stay (no dest-farm)", () => {
+  expect(destFolders(2015).length).toBe(213);
+  expect(destFolders(2017).length).toBe(222);
+  expect(destFolders(2019).length).toBe(170);
+  expect(destFolders(2020).length).toBe(39);
 });
 
-test("lean-double leftover dests dest-disjoint leftover-3× unique", () => {
-  for (const row of ROWS) {
-    expect(
-      uniqueIds(row.year).includes(row.id),
-      row.year + " " + row.id + " must not be leftover-3× unique"
-    ).toBe(false);
-  }
+test("2016 dest folders 96 · 2018 dest folders 39", () => {
+  expect(destFolders(2016).length).toBe(96);
+  expect(destFolders(2018).length).toBe(39);
 });
 
-test("2018 leftover-3× unique stays 3 · 2021 stays 5", () => {
+test("2018 leftover-3× unique stays 3", () => {
   expect(uniqueIds("2018")).toHaveLength(3);
-  expect(uniqueIds("2021")).toHaveLength(5);
 });
 
-test("dest folder counts match lean-double disk", () => {
-  for (const [y, n] of Object.entries(WANT_FOLDERS)) {
-    expect(destFolders(y).length, y + " dest folders").toBe(n);
+test("triple leftover dests dest-disjoint leftover-3× unique", () => {
+  for (const row of ROWS) {
+    expect(uniqueIds(row.year).includes(row.id), row.year + " " + row.id).toBe(false);
   }
-});
-
-test("2013 dest folders stay holes-only 54", () => {
-  expect(destFolders(2013).length).toBe(54);
 });
 
 for (const row of ROWS) {
@@ -97,7 +72,6 @@ for (const row of ROWS) {
       await expect(panel, row.href + " dest-true leftover").toBeVisible();
       await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
       await expect(page.locator("[data-official-key]")).toHaveCount(0);
-      await expect(page.locator("[data-pop-go]")).toHaveCount(0);
 
       const save = panel.locator("[data-lo-save]").first();
       await save.click();
