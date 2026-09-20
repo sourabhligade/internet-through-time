@@ -1,7 +1,7 @@
 # What is undone
 
 **Date:** 2026-09-20  
-**Tree:** `museum/1994-2020-lean` (working tree dirty)  
+**Tree:** `museum/1994-2020-lean` (pushed `0ed638bb5`)  
 **Status:** Recheck vs disk. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Out of scope:** restore wiped years (`years/2023`–`years/2025`). 2009 boarded. Do not dest-farm dests.
@@ -20,7 +20,7 @@ Rechecked 2026-09-20: dest folders · leftover-3× unique dest-true dests · off
 | Dest-lock **reverted** 2015–2020 | dest folders **213 / 64 / 222 / 26 / 170 / 39** |
 | Dest-lock **still on** 2007 / 2010–2012 / 2014 / 2021 | leftover dests kept via EXTRA_KEEP · dest folders **46 / 44 / 62 / 48 / 36 / 30** |
 | Leftover-3× unique dest-true dests | **107** matrix dests including **2022 9 rows** · leftover go **1** each |
-| Official dest leftover-2× `data-lo-panel` = 0 on official 10 | **2016–2022** (except 2013 leftover **1** · 2006 **3** · 1998 **1** · 2009 boarded **30**) |
+| Official dest leftover-2× `data-lo-panel` = 0 on official 10 | **all playable years** · 2009 boarded leftover-2× is not a visitor door |
 | Mock-flow audit DEST_FIELD / WEAK_REAL / HASH_CTA / PACK | **0** · year-true pack mock dest-true leftover |
 | Dest-farm leftover-3× CUT specs walk leftover-3× unique dest-true dests | `2010-2015-3x-cut` · `2015-2020-3x-cut` · `2015-2020-3x-2x-cut` **115 passed** |
 | 2017 unique leftover-20 dest folders | all 20 exist |
@@ -58,7 +58,7 @@ GitHub **#11–#14** “Clutter clear · 2015–2018” are **stale dest-lock ti
 
 ### 2.2 Official dest leftover-2× leftover (not dest-farm)
 
-Official dest leftover-2× `data-lo-panel` leftover: **1998 1** · **2006 3** · **2013 1**. 2009 boarded 30 is not a visitor door.
+**Done.** Official dest leftover-2× `data-lo-panel` = **0** on playable official 10 (1998 Snap · 2006 Line Rider · 2013 Loop Six stripped). 2009 boarded leftover-2× is not a visitor door.
 
 ### 2.3 Period assets 2011–2022
 
@@ -112,7 +112,7 @@ Dest-disjoint leftover dest leftover-3× dest-farm extra dests (2015 facebook / 
 | 2017 unique 72/72 | Last claimed 2026-09-14 · **not re-run this recheck** |
 | Museum-scale `*-flows` / `*-mvp` | Last full run **1,958 passed · 404 failed** before leftover-3× reveal/skip · **stale** |
 | `year-3x3-all` | 5 passed · 211 skipped · 0 failed (2026-09-14 official dest leftover-3× gold-only) |
-| leftover-3× unique dest-true **2022** | **No matrix rows** |
+| leftover-3× unique dest-true **2022** | **9 matrix rows** |
 
 No unique leftover-**20** spec except 2017.
 
@@ -127,7 +127,7 @@ No unique leftover-**20** spec except 2017.
 | #8 live years boarded / dest-farm e2e | Closed | dest-farm leftover-3× CUT retargeted 2026-09-20 |
 | #9 dest-farm default | Closed | Forests stay dense. Dest-lock lean years stay dest-lock. 2015–2020 dest-lock reverted |
 | #10 dead config / weak cites | Closed | STAR_CITE failed-final |
-| **#11–#14** Clutter clear 2015–2018 | **OPEN · stale** | Dest-lock on 2015–2018 was **reverted**. Do not dest-lock those years |
+| **#11–#14** Clutter clear 2015–2018 | **Closed** | Dest-lock on 2015–2018 was **reverted**. Do not dest-lock those years |
 
 ---
 
@@ -135,13 +135,9 @@ No unique leftover-**20** spec except 2017.
 
 ## 6. Do next (order)
 
-1. Official dest `data-official-need` on thin years (2019 0/10 · 2010 1/10 · 2016 2/10 · 2017 3/10). Do not add dest folders.
-2. Add **2022** leftover-3× unique dest-true dests to `e2e/leftover-3x-unique.matrix.json` + walk empty/complete/never star. Dest-true dests already on disk.
-3. Official dest leftover-2× leftover **1998 / 2006 / 2013** (1 / 3 / 1).
-4. Period assets 2011+ (0 files) — failed-final stays honest until harvest.
-5. Close or retitle GitHub **#11–#14** (dest-lock revert).
-6. Re-run 2017 unique 72/72 if claimed green.
-7. Unique leftover-**20** maps for other years — **only if named**. leftover-3× unique dest-true dests already ship. Do not dest-farm leftover dest leftover-20 dests.
+1. Period assets 2011+ (0 files) — failed-final stays honest until harvest. Do not invent brand pixels.
+2. Re-run 2017 unique 72/72 if claimed green.
+3. Unique leftover-**20** maps for other years — **only if named**. leftover-3× unique dest-true dests already ship. Do not dest-farm leftover dest leftover-20 dests.
 
 **Not leftover:** dest-lock 2015–2020 · dest-farm 2008/2009 leftover-3× unique dest-true dests · restore 2009 as a playable door · restore 2023+ · dest-farm dest-lock dests.
 

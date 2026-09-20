@@ -90,6 +90,20 @@ test.describe("visitor door", () => {
     expect(missing, missing.join("\n")).toEqual([]);
   });
 
+  test("official dest leftover-2× panels = 0", () => {
+    /** @type {string[]} */
+    const hits = [];
+    for (const y of SHIP) {
+      for (const row of officialTen(y)) {
+        const href = path.join(ROOT, "years", y, row.href);
+        if (!fs.existsSync(href)) continue;
+        const html = fs.readFileSync(href, "utf8");
+        if (html.indexOf("data-lo-panel") !== -1) hits.push(y + "/" + row.href);
+      }
+    }
+    expect(hits, hits.join("\n")).toEqual([]);
+  });
+
   test("Starting Point guided ol is 6 on forest, GDPR, and ChatGPT doors", async ({ page }) => {
     for (const y of ["1994", "2018", "2022"]) {
       await page.goto("/years/" + y + "/pages/home.html");

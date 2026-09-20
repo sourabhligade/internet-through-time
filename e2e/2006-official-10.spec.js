@@ -156,6 +156,7 @@ test.describe("2006 official 10 · dest machines", () => {
     await openClear(page, "/years/2006/sites/playable/linerider.html", "itt06-game-linerider");
     await page.locator("[data-official-verb]").click();
     expect(await getKey(page, "itt06-game-linerider")).toBeFalsy();
+    await page.locator("[data-official-need]").fill("Line Rider");
     const reqs = page.locator("[data-official-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
