@@ -53,42 +53,6 @@ const DESTS = loadTrails().filter((d) => {
  * @type {Record<string, { incomplete: (p: import("@playwright/test").Page) => Promise<void>, complete: (p: import("@playwright/test").Page) => Promise<void>, seedOk?: boolean }>}
  */
 const STAR = {
-  "itt99-amazon": {
-    incomplete: async () => {},
-    complete: async (page) => {
-      const add = page.locator("[data-add-cart]");
-      if ((await add.count()) > 0) await add.first().click({ force: true });
-      const need = page.locator("[data-official-need]");
-      if ((await need.count()) > 0) await need.first().fill("leftover residual");
-      const reqs = page.locator("[data-official-req]");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    },
-  },
-  "itt00-amazon": {
-    incomplete: async () => {},
-    complete: async (page) => {
-      const add = page.locator("[data-add-cart]");
-      if ((await add.count()) > 0) await add.first().click({ force: true });
-      const need = page.locator("[data-official-need]");
-      if ((await need.count()) > 0) await need.first().fill("leftover residual");
-      const reqs = page.locator("[data-official-req]");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    },
-  },
-  "itt04-digg": {
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").click({ force: true });
-    },
-    complete: async (page) => {
-      await page.locator('[data-official-pick="firefox"]').click({ force: true });
-      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await page.locator("[data-official-verb-host] [data-official-verb]").click({ force: true });
-    },
-  },
   "itt94-csotd": {
     incomplete: async (page) => {
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
@@ -280,7 +244,11 @@ const STAR = {
       await page.locator("[data-vn13-post]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-vn13-hold]").click();
+      const hold = page.locator("[data-vn13-hold]");
+      await hold.waitFor({ state: "visible", timeout: 15000 });
+      await hold.dispatchEvent("pointerdown");
+      await page.waitForTimeout(6200);
+      await hold.dispatchEvent("pointerup");
       await page.locator("[data-vn13-post]").click();
     },
   },
@@ -385,7 +353,40 @@ const STAR = {
 
 /** @param {import("@playwright/test").Page} page @param {string} key */
 async function getKey(page, key) {
+  for (let i = 0; i < 5; i++) {
+    try {
+      return await page.evaluate((k) => localStorage.getItem(k), key);
+    } catch (e) {
+      const msg = String((e && e.message) || e);
+      if (!/Execution context was destroyed|Target closed|destroyed/i.test(msg)) throw e;
+      await page.waitForLoadState("domcontentloaded").catch(() => {});
+    }
+  }
   return page.evaluate((k) => localStorage.getItem(k), key);
+}
+
+/**
+ * Official-verb may write then navigate (search dests, Amazon add-to-cart).
+ * Survive the reload and return to the dest so complete I/O can finish.
+ * @param {import("@playwright/test").Page} page
+ * @param {string} destUrl
+ */
+async function clickOfficialVerb(page, destUrl) {
+  await killOverlays(page);
+  const url0 = page.url();
+  await page.evaluate(() => {
+    const v = document.querySelector("[data-official-verb]");
+    if (v) v.click();
+  }).catch(() => {});
+  await Promise.race([
+    page.waitForURL((u) => u.toString() !== url0, { timeout: 500 }).catch(() => {}),
+    page.waitForTimeout(150),
+  ]);
+  await page.waitForLoadState("domcontentloaded").catch(() => {});
+  if (destUrl && (await page.locator("[data-official-verb]").count()) === 0) {
+    await page.goto(destUrl);
+    await revealLeftoverRails(page);
+  }
 }
 
 /**
@@ -424,7 +425,9 @@ async function runDest(page, d) {
 
   await openClear(page, d.year, d.href, d.whenKey);
 
-  if (html.indexOf("data-official-verb") !== -1 && !STAR[d.whenKey]) {
+  const officialKey = (html.match(/data-official-key="([^"]+)"/) || [])[1] || "";
+  if (html.indexOf("data-official-verb") !== -1 && !STAR[d.whenKey] && officialKey === d.whenKey) {
+    const destUrl = "/years/" + d.year + "/" + d.href;
     await revealLeftoverRails(page);
     await page.locator("[data-official-verb]").first().waitFor({ state: "attached", timeout: 15000 });
     await page.evaluate(() => {
@@ -432,18 +435,16 @@ async function runDest(page, d) {
         el.value = "";
       });
     });
-    await killOverlays(page);
-    await page.evaluate(() => {
-      const v = document.querySelector("[data-official-verb]");
-      if (v) v.click();
-    });
-    await page.waitForLoadState("domcontentloaded").catch(() => {});
-    await killOverlays(page);
+    await clickOfficialVerb(page, destUrl);
     if (await getKey(page, d.whenKey)) return;
     await page.evaluate(() => {
       const boxes = document.querySelectorAll("input[type='checkbox']");
       for (let i = 0; i < boxes.length; i++) {
         const el = boxes[i];
+        if (el.getAttribute("data-official-req") != null) {
+          el.checked = true;
+          continue;
+        }
         if (el.closest("[data-lo-panel], [data-pop-panel], .itt-also-year")) continue;
         el.checked = true;
       }
@@ -458,11 +459,7 @@ async function runDest(page, d) {
     }
     const pick = page.locator("[data-official-pick]").first();
     if ((await pick.count()) > 0) await pick.click({ force: true });
-    await killOverlays(page);
-    await page.evaluate(() => {
-      const v = document.querySelector("[data-official-verb]");
-      if (v) v.click();
-    });
+    await clickOfficialVerb(page, destUrl);
     await expect.poll(() => getKey(page, d.whenKey), { timeout: 8000 }).toBeTruthy();
     return;
   }

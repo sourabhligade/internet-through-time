@@ -152,7 +152,8 @@
       verbs[i].addEventListener("click", function (ev) {
         /* Only stop navigation. Forms with an existing period machine
            (no action / action="#") must still fire submit. */
-        if (this.getAttribute("type") === "submit" && ev && ev.preventDefault) {
+        var typ = (this.getAttribute("type") || "").toLowerCase();
+        if ((typ === "submit" || typ === "image") && ev && ev.preventDefault) {
           var form = this.form || (this.closest && this.closest("form"));
           var action = form ? String(form.getAttribute("action") || "").replace(/^\s+|\s+$/g, "") : "";
           if (action && action !== "#") ev.preventDefault();
