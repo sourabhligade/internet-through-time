@@ -55,13 +55,13 @@ Year-false KEEP / DROP / MISS (research continue complete, not applied): [`YEAR-
 
 ## 1994
 
-Star: `csotd` · CSotD guestbook. Dest folders **159**.
+Star: `csotd` · CSotD guestbook. Dest folders **158**.
 
 **Official 10** (10): `csotd` · `yahoo` · `cern` · `fishcam` · `whitehouse` · `nasa` · `iuma` · `hotwired` · `lycos` · `playable`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (4): `webcrawler` · `galaxy` · `gnn` · `jumpstation`
+**Forest leftover dest-true packs** (3): `webcrawler` · `galaxy` · `gnn` · (`jumpstation` DROP, dest gone)
 
 Dest-true flows this year: **14**.
 
@@ -79,37 +79,37 @@ Dest-true flows this year: **14**.
 
 ## 1996
 
-Star: `portals` · Portal wars. Dest folders **156**.
+Star: `portals` · Portal wars. Dest folders **154**.
 
 **Official 10** (10): `portals` · `hotmail` · `spacejam` · `yahoo` · `geocities` · `amazon` · `auctionweb` · `excite` · `altavista` · `playable`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (4): `angelfire` · `aolportal` · `realplayer` · `theglobe`
+**Forest leftover dest-true packs** (2): `angelfire` · `realplayer` · (`aolportal` / `theglobe` DROP, dests gone)
 
 Dest-true flows this year: **14**.
 
 ## 1997
 
-Star: `pointcast` · PointCast. Dest folders **168**.
+Star: `pointcast` · PointCast. Dest folders **167**.
 
 **Official 10** (10): `pointcast` · `icq` · `ebay` · `hotmail` · `slashdot` · `drudge` · `hotbot` · `apple` · `microsoft` · `playable`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (4): `aim` · `winamp` · `javaplugin` · `scripting`
+**Forest leftover dest-true packs** (3): `aim` · `winamp` · `scripting` · (`javaplugin` DROP, dest gone)
 
 Dest-true flows this year: **14**.
 
 ## 1998
 
-Star: `google` · I'm Feeling Lucky. Dest folders **156**.
+Star: `google` · I'm Feeling Lucky. Dest folders **153**.
 
 **Official 10** (10): `google` · `yahoo` · `amazon` · `ebay` · `cdnow` · `hotmail` · `mozilla` · `slashdot` · `dmoz` · `snap`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (4): `goto` · `mp3com` · `realplayer` · `winamp`
+**Forest leftover dest-true packs** (1): `goto` · (`mp3com` / `realplayer` / `winamp` DROP, dests gone)
 
 Dest-true flows this year: **14**.
 
@@ -127,13 +127,13 @@ Dest-true flows this year: **14**.
 
 ## 2000
 
-Star: `mapquest` · MapQuest. Dest folders **486**.
+Star: `mapquest` · MapQuest. Dest folders **484**.
 
 **Official 10** (10): `mapquest` · `amazon` · `ebay` · `paypal` · `napster` · `gnutella` · `pets` · `google` · `cnn` · `y2k`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (3): `limewire` · `expedia` · `travelocity`
+**Forest leftover dest-true packs** (1): `limewire` · (`expedia` / `travelocity` DROP, dests gone)
 
 Dest-true flows this year: **13**.
 
@@ -181,31 +181,31 @@ Dest-true flows this year: **11**.
 
 ## 2005
 
-Star: `youtube` · YouTube upload. Dest folders **351**.
+Star: `youtube` · YouTube upload. Dest folders **350**.
 
 **Official 10** (10): `youtube` · `maps` · `pandora` · `housingmaps` · `digg` · `reddit` · `flickr` · `itunes` · `techcrunch` · `playable`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (4): `utorrent` · `googleearth` · `kayak` · `secondlife`
+**Forest leftover dest-true packs** (3): `utorrent` · `googleearth` · `kayak` · (`secondlife` DROP, dest gone)
 
 Dest-true flows this year: **14**.
 
 ## 2006
 
-Star: `twitter` · Twttr. Dest folders **378**.
+Star: `twitter` · Twttr. Dest folders **376**.
 
 **Official 10** (9): `twitter` · `facebook` · `youtube` · `googledocs` · `aws` · `ie7` · `wikipedia` · `roblox` · `playable`
 
 **Leftover-3× unique:** none
 
-**Forest leftover dest-true packs** (2): `meebo` · `huffpost`
+**Forest leftover dest-true packs** (0): (`meebo` / `huffpost` DROP, dests gone)
 
 Dest-true flows this year: **11**.
 
 ## 2007
 
-Star: `iphone` · iPhone Safari. Dest folders **46**.
+Star: `iphone` · iPhone Safari. Dest folders **33**.
 
 **Official 10** (10): `iphone` · `streetview` · `gmail` · `fbplat` · `twitter` · `youtube` · `tumblr` · `kindle` · `ie6` · `playable`
 
