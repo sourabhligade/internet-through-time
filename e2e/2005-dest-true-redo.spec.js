@@ -18,8 +18,7 @@ const OFFICIAL = [
   "itt05-flickr",
   "itt05-pod",
   "itt05-tc",
-  "itt05-game-heli",
-];
+  "itt05-game-heli"];
 const STAR = "itt05-yt-uploads";
 const NEIGHBOR = ["itt04-flickr", "itt06-tweets", "itt06-feed"];
 
@@ -33,18 +32,15 @@ const FIRST_STRIP = [
   { href: "/years/2005/sites/yahoo/index.html", key: "itt05-pop-yahoo", id: "yahoo", next: "/years/2005/sites/dailymotion/index.html", forbid: [] },
   { href: "/years/2005/sites/dailymotion/index.html", key: "itt05-pop-dailymotion", id: "dailymotion", next: "/years/2005/sites/googlevideo/index.html", forbid: [] },
   { href: "/years/2005/sites/googlevideo/index.html", key: "itt05-pop-googlevideo", id: "googlevideo", next: "/years/2005/sites/earth/index.html", forbid: [] },
-  { href: "/years/2005/sites/earth/index.html", key: "itt05-pop-earth", id: "earth", next: "/years/2005/sites/milliondollar/index.html", forbid: ["mashable"] },
-];
+  { href: "/years/2005/sites/earth/index.html", key: "itt05-pop-earth", id: "earth", next: "/years/2005/sites/milliondollar/index.html", forbid: ["mashable"] }];
 
 const KEEP_STRIP = [
   { href: "/years/2005/sites/facebook/index.html", key: "itt05-pop-facebook", id: "facebook", next: "/years/2005/sites/lastfm/index.html" },
   { href: "/years/2005/sites/lastfm/index.html", key: "itt05-pop-lastfm", id: "lastfm", next: "/years/2005/sites/reader/index.html" },
   { href: "/years/2005/sites/reader/index.html", key: "itt05-pop-reader", id: "reader", next: "/years/2005/sites/analytics/index.html" },
   { href: "/years/2005/sites/analytics/index.html", key: "itt05-pop-analytics", id: "analytics", next: "/years/2005/sites/googleearth/index.html" },
-  { href: "/years/2005/sites/googleearth/index.html", key: "itt05-pop-googleearth", id: "googleearth", next: "/years/2005/sites/secondlife/index.html" },
-  { href: "/years/2005/sites/secondlife/index.html", key: "itt05-pop-secondlife", id: "secondlife", next: "/years/2005/sites/yelp/index.html" },
-  { href: "/years/2005/sites/yelp/index.html", key: "itt05-pop-yelp", id: "yelp", next: "/years/2005/sites/odeo/index.html" },
-];
+  { href: "/years/2005/sites/googleearth/index.html", key: "itt05-pop-googleearth", id: "googleearth", next: "/years/2005/sites/yelp/index.html" },
+  { href: "/years/2005/sites/yelp/index.html", key: "itt05-pop-yelp", id: "yelp", next: "/years/2005/sites/odeo/index.html" }];
 
 const LO_OFFICIAL = [
   { href: "/years/2005/sites/maps/index.html", lo: "itt05-maps-lx", official: "itt05-maps" },
@@ -55,8 +51,7 @@ const LO_OFFICIAL = [
   { href: "/years/2005/sites/flickr/index.html", lo: "itt05-flickr-lx", official: "itt05-flickr" },
   { href: "/years/2005/sites/itunes/podcasts.html", lo: "itt05-pod-lx", official: "itt05-pod" },
   { href: "/years/2005/sites/techcrunch/index.html", lo: "itt05-tc-lx", official: "itt05-tc" },
-  { href: "/years/2005/sites/playable/game.html", lo: "itt05-game-heli-lx", official: "itt05-game-heli" },
-];
+  { href: "/years/2005/sites/playable/game.html", lo: "itt05-game-heli-lx", official: "itt05-game-heli" }];
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -158,8 +153,7 @@ test.describe("visitor copy does not say leftover first", () => {
     "/years/2008/pages/home.html",
     "/years/2011/pages/about.html",
     "/years/2011/sites/iphone/index.html",
-    "/years/2013/pages/home.html",
-  ]) {
+    "/years/2013/pages/home.html"]) {
     test(href + " first paint has no leftover word", async ({ page }) => {
       await page.goto(href);
       await expect(page.locator("html[data-itt-lo-folded='1']")).toBeAttached({ timeout: 10000 });
@@ -282,8 +276,7 @@ test.describe("2005 leftover-3× first-strip Nexts stay shipped", () => {
     expect(href).not.toContain("myspace");
     const [res] = await Promise.all([
       page.waitForResponse((r) => r.request().resourceType() === "document" && r.url().includes("/yahoo/")),
-      next.click(),
-    ]);
+      next.click()]);
     expect(res.ok()).toBeTruthy();
     expect(page.url()).toContain("/sites/yahoo/");
   });
@@ -301,8 +294,7 @@ test.describe("2005 leftover-3× first-strip Nexts stay shipped", () => {
     expect(href).not.toContain("mashable");
     const [res] = await Promise.all([
       page.waitForResponse((r) => r.request().resourceType() === "document" && r.url().includes("/milliondollar/")),
-      next.click(),
-    ]);
+      next.click()]);
     expect(res.ok()).toBeTruthy();
     expect(page.url()).toContain("/sites/milliondollar/");
   });

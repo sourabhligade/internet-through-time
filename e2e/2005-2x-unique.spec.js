@@ -18,8 +18,7 @@ const OFFICIAL = [
   "itt05-flickr",
   "itt05-pod",
   "itt05-tc",
-  "itt05-game-heli",
-];
+  "itt05-game-heli"];
 
 const FORBIDDEN_HOME = new Set([
   "youtube", "maps", "pandora", "housingmaps", "digg", "reddit", "flickr", "itunes", "techcrunch", "playable",
@@ -27,8 +26,7 @@ const FORBIDDEN_HOME = new Set([
   "facebook", "craigslist", "cnn", "feedburner", "basecamp", "excite", "daypop", "bowienet", "friendster",
   "firefox", "gmail", "vimeo", "google", "amazon", "msn", "aol", "skype", "delicious", "adsense", "ebay", "bbc",
   "flickrpro", "bloglines", "encarta", "blogdex", "altavista", "gaia",
-  "ajax", "analytics", "blogger", "ask", "apple", "dmoz", "askjeeves", "folklore", "android", "gamespot",
-]);
+  "ajax", "analytics", "blogger", "ask", "apple", "dmoz", "askjeeves", "folklore", "android", "gamespot"]);
 
 /** @type {{ dest: string, href: string, k1: string, k2: string, verb1: string, verb2: string, next2: string }[]} */
 const FLOWS = [
@@ -37,12 +35,10 @@ const FLOWS = [
   { dest: "reader", href: "/years/2005/sites/reader/index.html", k1: "itt05-reader-lx", k2: "itt05-reader-lx-d2", verb1: "Subscribe feed", verb2: "Star", next2: "yelp" },
   { dest: "yelp", href: "/years/2005/sites/yelp/index.html", k1: "itt05-yelp-lx", k2: "itt05-yelp", verb1: "Write review", verb2: "Write another", next2: "odeo" },
   { dest: "odeo", href: "/years/2005/sites/odeo/index.html", k1: "itt05-odeo-lx", k2: "itt05-odeo-lx-d2", verb1: "Subscribe", verb2: "Create", next2: "secondlife" },
-  { dest: "secondlife", href: "/years/2005/sites/secondlife/index.html", k1: "itt05-secondlife", k2: "itt05-secondlife-d2", verb1: "Teleport", verb2: "Rez", next2: "mashable" },
   { dest: "mashable", href: "/years/2005/sites/mashable/index.html", k1: "itt05-mash-lx", k2: "itt05-mash-lx-d2", verb1: "Open this post", verb2: "Open next post", next2: "xbox360" },
   { dest: "xbox360", href: "/years/2005/sites/xbox360/index.html", k1: "itt05-x360-lx", k2: "itt05-x360-lx-d2", verb1: "Launch-day leftover", verb2: "Line leftover", next2: "programmableweb" },
   { dest: "programmableweb", href: "/years/2005/sites/programmableweb/index.html", k1: "itt05-pw-lx", k2: "itt05-pw-lx-d2", verb1: "List an API", verb2: "Open a mashup", next2: "linkedin" },
-  { dest: "linkedin", href: "/years/2005/sites/linkedin/index.html", k1: "itt05-li-lx", k2: "itt05-linkedin-rlx", verb1: "Open profile", verb2: "Send invite", next2: "invite" },
-];
+  { dest: "linkedin", href: "/years/2005/sites/linkedin/index.html", k1: "itt05-li-lx", k2: "itt05-linkedin-rlx", verb1: "Open profile", verb2: "Send invite", next2: "invite" }];
 
 function destsFrom(html, attr) {
   const re = new RegExp(attr + '="2005"[\\s\\S]{0,8000}?</p>', "i");

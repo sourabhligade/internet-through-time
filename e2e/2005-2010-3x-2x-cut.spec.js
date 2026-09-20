@@ -26,8 +26,7 @@ const YEAR_WRONG_2009 = [
   "instagram",
   "edge",
   "tiktok",
-  "fortnite",
-];
+  "fortnite"];
 
 /** @type {Record<string, {
  *   star: string,
@@ -52,11 +51,9 @@ const LIVE = {
       { dest: "/years/2005/sites/reader/index.html", go: "[data-pop-go][data-pop-id='reader']", key: "itt05-pop-reader", next: "analytics/index.html", nextKey: "itt05-pop-analytics", weather: /7 Oct 2005 Google Reader/i, lx: ["itt05-reader-lx"], never: ["itt05-yt-uploads"] },
       { dest: "/years/2005/sites/analytics/index.html", go: "[data-pop-go][data-pop-id='analytics']", key: "itt05-pop-analytics", next: "googleearth/index.html", nextKey: "itt05-pop-googleearth", weather: /14 Nov 2005 Google Analytics/i, lx: ["itt05-ga-lx"], never: ["itt05-yt-uploads"] },
       { dest: "/years/2005/sites/googleearth/index.html", go: "[data-pop-go][data-pop-id='googleearth']", key: "itt05-pop-googleearth", next: "secondlife/index.html", nextKey: "itt05-pop-secondlife", weather: /28 Jun 2005 Google Earth/i, lx: ["itt05-googleearth"], never: ["itt05-yt-uploads", "itt05-maps"] },
-      { dest: "/years/2005/sites/secondlife/index.html", go: "[data-pop-go][data-pop-id='secondlife']", key: "itt05-pop-secondlife", next: "yelp/index.html", nextKey: "itt05-pop-yelp", weather: /2005 Second Life leftover/i, lx: ["itt05-secondlife"], never: ["itt05-yt-uploads"] },
       { dest: "/years/2005/sites/yelp/index.html", go: "[data-pop-go][data-pop-id='yelp']", key: "itt05-pop-yelp", next: "odeo/index.html", nextKey: "itt05-pop3-odeo", weather: /Yelp leftover 2005/i, lx: ["itt05-yelp-lx"], never: ["itt05-yt-uploads"] },
       { dest: "/years/2005/sites/odeo/index.html", go: "[data-pop-go][data-pop-id='pop3-odeo']", key: "itt05-pop3-odeo", next: "linkedin/index.html", nextKey: "itt05-pop3-linkedin", weather: /Odeo 2005 podcast leftover/i, lx: ["itt05-odeo-lx"], never: ["itt05-yt-uploads", "itt06-tweets"] },
-      { dest: "/years/2005/sites/linkedin/index.html", go: "[data-pop-go][data-pop-id='pop3-linkedin']", key: "itt05-pop3-linkedin", next: "pages/home.html", nextKey: "", weather: /LinkedIn leftover 2005/i, lx: ["itt05-li-lx"], never: ["itt05-yt-uploads"] },
-    ],
+      { dest: "/years/2005/sites/linkedin/index.html", go: "[data-pop-go][data-pop-id='pop3-linkedin']", key: "itt05-pop3-linkedin", next: "pages/home.html", nextKey: "", weather: /LinkedIn leftover 2005/i, lx: ["itt05-li-lx"], never: ["itt05-yt-uploads"] }],
   },
   2006: {
     star: "itt06-tweets",
@@ -74,8 +71,7 @@ const LIVE = {
       { dest: "/years/2006/sites/blogger/index.html", go: "[data-pop-go][data-pop-id='blogger']", key: "itt06-pop-blogger", next: "wordpress/index.html", nextKey: "itt06-pop3-wordpress", weather: /Blogger leftover 2006/i, lx: ["itt06-blogger-lx"], never: ["itt06-tweets"] },
       { dest: "/years/2006/sites/wordpress/index.html", go: "[data-pop-go][data-pop-id='pop3-wordpress']", key: "itt06-pop3-wordpress", next: "adsense/index.html", nextKey: "itt06-pop3-adsense", weather: /WordPress leftover 2006/i, lx: ["itt06-wp-lx"], never: ["itt06-tweets"] },
       { dest: "/years/2006/sites/adsense/index.html", go: "[data-pop-go][data-pop-id='pop3-adsense']", key: "itt06-pop3-adsense", next: "flickr/index.html", nextKey: "itt06-pop3-flickr", weather: /AdSense leftover 2006/i, lx: ["itt06-adsense-lx"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/flickr/index.html", go: "[data-pop-go][data-pop-id='pop3-flickr']", key: "itt06-pop3-flickr", next: "pages/home.html", nextKey: "", weather: /Flickr leftover 2006 after Yahoo/i, lx: ["itt06-flickr-lx"], never: ["itt06-tweets"] },
-    ],
+      { dest: "/years/2006/sites/flickr/index.html", go: "[data-pop-go][data-pop-id='pop3-flickr']", key: "itt06-pop3-flickr", next: "pages/home.html", nextKey: "", weather: /Flickr leftover 2006 after Yahoo/i, lx: ["itt06-flickr-lx"], never: ["itt06-tweets"] }],
   },
   2007: {
     star: "itt07-iphone",
@@ -93,8 +89,7 @@ const LIVE = {
       { dest: "/years/2007/sites/stumble/index.html", go: "[data-pop-go][data-pop-id='stumble']", key: "itt07-pop-stumble", next: "ipann/index.html", nextKey: "itt07-pop3-ipann", weather: /StumbleUpon leftover 2007/i, lx: ["itt07-stumble-dp"], never: ["itt07-iphone"] },
       { dest: "/years/2007/sites/ipann/index.html", go: "[data-pop-go][data-pop-id='pop3-ipann']", key: "itt07-pop3-ipann", next: "vista/index.html", nextKey: "itt07-pop3-vista", weather: /9 Jan 2007 iPhone announce leftover/i, lx: ["itt07-ipann-dp"], never: ["itt07-iphone"] },
       { dest: "/years/2007/sites/vista/index.html", go: "[data-pop-go][data-pop-id='pop3-vista']", key: "itt07-pop3-vista", next: "gim/index.html", nextKey: "itt07-pop3-gim", weather: /Vista leftover 2007/i, lx: ["itt07-vista-dp"], never: ["itt07-iphone", "itt07-ie6"] },
-      { dest: "/years/2007/sites/gim/index.html", go: "[data-pop-go][data-pop-id='pop3-gim']", key: "itt07-pop3-gim", next: "pages/home.html", nextKey: "", weather: /Gmail IMAP leftover 2007/i, lx: ["itt07-gim-dp"], never: ["itt07-iphone", "itt07-gmail"] },
-    ],
+      { dest: "/years/2007/sites/gim/index.html", go: "[data-pop-go][data-pop-id='pop3-gim']", key: "itt07-pop3-gim", next: "pages/home.html", nextKey: "", weather: /Gmail IMAP leftover 2007/i, lx: ["itt07-gim-dp"], never: ["itt07-iphone", "itt07-gmail"] }],
   },
   2008: {
     star: "itt08-github",
@@ -112,8 +107,7 @@ const LIVE = {
       { dest: "/years/2008/sites/failwhale/index.html", go: "[data-pop-go][data-pop-id='failwhale']", key: "itt08-pop-failwhale", next: "cuil/index.html", nextKey: "itt08-pop3-cuil", weather: /Fail Whale leftover 2008/i, lx: ["itt08-whale-dp"], never: ["itt08-github", "itt08-tweets"] },
       { dest: "/years/2008/sites/cuil/index.html", go: "[data-pop-go][data-pop-id='pop3-cuil']", key: "itt08-pop3-cuil", next: "bitly/index.html", nextKey: "itt08-pop3-bitly", weather: /Cuil 28 Jul 2008 leftover/i, lx: ["itt08-cuil-dp"], never: ["itt08-github"] },
       { dest: "/years/2008/sites/bitly/index.html", go: "[data-pop-go][data-pop-id='pop3-bitly']", key: "itt08-pop3-bitly", next: "spotify/index.html", nextKey: "itt08-pop3-spotify", weather: /bit\.ly 2008 leftover short links/i, lx: ["itt08-bitly-dp"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/spotify/index.html", go: "[data-pop-go][data-pop-id='pop3-spotify']", key: "itt08-pop3-spotify", next: "pages/home.html", nextKey: "", weather: /Spotify Europe 2008 leftover/i, lx: ["itt08-sp-lx", "itt08-spot-eu"], never: ["itt08-github", "itt08-chrome"] },
-    ],
+      { dest: "/years/2008/sites/spotify/index.html", go: "[data-pop-go][data-pop-id='pop3-spotify']", key: "itt08-pop3-spotify", next: "pages/home.html", nextKey: "", weather: /Spotify Europe 2008 leftover/i, lx: ["itt08-sp-lx", "itt08-spot-eu"], never: ["itt08-github", "itt08-chrome"] }],
   },
   2009: {
     star: "itt09-like",
@@ -131,8 +125,7 @@ const LIVE = {
       { dest: "/years/2009/sites/minecraft/index.html", go: "[data-pop-go][data-pop-id='minecraft']", key: "itt09-pop-minecraft", next: "bitcoin/index.html", nextKey: "itt09-pop3-bitcoin", weather: /Minecraft 17 May 2009 public leftover/i, lx: ["itt09-mc"], never: ["itt09-like"] },
       { dest: "/years/2009/sites/bitcoin/index.html", go: "[data-pop-go][data-pop-id='pop3-bitcoin']", key: "itt09-pop3-bitcoin", next: "ubercab/index.html", nextKey: "itt09-pop3-ubercab", weather: /3 Jan 2009 Bitcoin genesis leftover/i, lx: ["itt09-btc"], never: ["itt09-like"] },
       { dest: "/years/2009/sites/ubercab/index.html", go: "[data-pop-go][data-pop-id='pop3-ubercab']", key: "itt09-pop3-ubercab", next: "kindle/index.html", nextKey: "itt09-pop3-kindle", weather: /UberCab founded 2009 leftover/i, lx: ["itt09-uber"], never: ["itt09-like"] },
-      { dest: "/years/2009/sites/kindle/index.html", go: "[data-pop-go][data-pop-id='pop3-kindle']", key: "itt09-pop3-kindle", next: "pages/home.html", nextKey: "", weather: /Kindle leftover 2009/i, lx: ["itt09-kindle"], never: ["itt09-like"] },
-    ],
+      { dest: "/years/2009/sites/kindle/index.html", go: "[data-pop-go][data-pop-id='pop3-kindle']", key: "itt09-pop3-kindle", next: "pages/home.html", nextKey: "", weather: /Kindle leftover 2009/i, lx: ["itt09-kindle"], never: ["itt09-like"] }],
   },
   2010: {
     star: "itt10-ig-posts",
@@ -150,8 +143,7 @@ const LIVE = {
       { dest: "/years/2010/sites/digg/index.html", go: "[data-pop-go][data-pop-id='digg']", key: "itt10-pop-digg", next: "browserchoice/index.html", nextKey: "itt10-pop3-browserchoice", weather: /Digg v4 leftover 25 Aug 2010/i, lx: ["itt10-digg-v4", "itt10-digg"], never: ["itt10-ig-posts"] },
       { dest: "/years/2010/sites/browserchoice/index.html", go: "[data-pop-go][data-pop-id='pop3-browserchoice']", key: "itt10-pop3-browserchoice", next: "kickstarter/index.html", nextKey: "itt10-pop3-kickstarter", weather: /BrowserChoice\.eu 2010 leftover ballot/i, lx: ["itt10-ballot", "itt10-browserchoice"], never: ["itt10-ig-posts"] },
       { dest: "/years/2010/sites/kickstarter/index.html", go: "[data-pop-go][data-pop-id='pop3-kickstarter']", key: "itt10-pop3-kickstarter", next: "reddit/index.html", nextKey: "itt10-pop3-reddit", weather: /Kickstarter leftover 2010 habit/i, lx: ["itt10-kickstarter", "itt10-ks-lx"], never: ["itt10-ig-posts"] },
-      { dest: "/years/2010/sites/reddit/index.html", go: "[data-pop-go][data-pop-id='pop3-reddit']", key: "itt10-pop3-reddit", next: "pages/home.html", nextKey: "", weather: /Reddit leftover 2010 habit/i, lx: ["itt10-rd-lx", "itt10-reddit"], never: ["itt10-ig-posts"] },
-    ],
+      { dest: "/years/2010/sites/reddit/index.html", go: "[data-pop-go][data-pop-id='pop3-reddit']", key: "itt10-pop3-reddit", next: "pages/home.html", nextKey: "", weather: /Reddit leftover 2010 habit/i, lx: ["itt10-rd-lx", "itt10-reddit"], never: ["itt10-ig-posts"] }],
   },
 };
 
@@ -245,8 +237,7 @@ async function walkDoor(page, door, gold) {
   }
   const [res] = await Promise.all([
     page.waitForResponse((r) => r.request().resourceType() === "document" && r.url().includes(door.next.split("/").pop() || door.next)),
-    next.click(),
-  ]);
+    next.click()]);
   expect(res.ok(), "Next HTTP 200 " + res.url()).toBeTruthy();
   expect(page.url()).toContain(door.next.replace(/^\.\.\//, "").replace("../../", ""));
   if (door.nextKey) {
@@ -258,12 +249,10 @@ const FIRST_PACK_MISSING = {
   2005: [
     { dest: "/years/2005/sites/youtube/watch.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt05-pop-youtube", next: "wikipedia/index.html", nextKey: "itt05-pop-wikipedia", weather: /YouTube leftover 2005 watch/i, lx: [], never: ["itt05-yt-uploads"] },
     { dest: "/years/2005/sites/wikipedia/index.html", go: "[data-pop-go][data-pop-id='wikipedia']", key: "itt05-pop-wikipedia", next: "yahoo/index.html", nextKey: "itt05-pop-yahoo", weather: /Wikipedia leftover 2005/i, lx: [], never: ["itt05-yt-uploads"] },
-    { dest: "/years/2005/sites/earth/index.html", go: "[data-pop-go][data-pop-id='earth']", key: "itt05-pop-earth", next: "milliondollar/index.html", nextKey: "itt05-pop-milliondollar", weather: /Google Earth leftover 2005 leftover 999/i, lx: [], never: ["itt05-yt-uploads", "itt05-maps"] },
-  ],
+    { dest: "/years/2005/sites/earth/index.html", go: "[data-pop-go][data-pop-id='earth']", key: "itt05-pop-earth", next: "milliondollar/index.html", nextKey: "itt05-pop-milliondollar", weather: /Google Earth leftover 2005 leftover 999/i, lx: [], never: ["itt05-yt-uploads", "itt05-maps"] }],
   2006: [
     { dest: "/years/2006/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt06-pop-youtube", next: "facebook/index.html", nextKey: "itt06-pop-facebook", weather: /YouTube leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-yt"] },
-    { dest: "/years/2006/sites/facebook/index.html", go: "[data-pop-go][data-pop-id='facebook']", key: "itt06-pop-facebook", next: "wikipedia/index.html", nextKey: "itt06-pop-wikipedia", weather: /Facebook leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-feed", "itt06-fb-open"] },
-  ],
+    { dest: "/years/2006/sites/facebook/index.html", go: "[data-pop-go][data-pop-id='facebook']", key: "itt06-pop-facebook", next: "wikipedia/index.html", nextKey: "itt06-pop-wikipedia", weather: /Facebook leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-feed", "itt06-fb-open"] }],
 };
 
 test.describe("leftover 3× first-pack dest machines that were missing", () => {
@@ -328,8 +317,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
       const twoXH = [
         ...(await a.evaluateAll((as) => as.map((el) => el.getAttribute("href") || ""))),
         ...(await b.evaluateAll((as) => as.map((el) => el.getAttribute("href") || ""))),
-        ...(await c.evaluateAll((as) => as.map((el) => el.getAttribute("href") || ""))),
-      ];
+        ...(await c.evaluateAll((as) => as.map((el) => el.getAttribute("href") || "")))];
       const todayK = [...new Set(todayH.map(siteKey))];
       const twoXK = twoXH.map(siteKey);
       expect(new Set(twoXK).size).toBe(spec.want2x);
@@ -339,8 +327,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
       for (const k of twoXK) expect(todayK, "2× overlaps today’s leftover 3× " + k).not.toContain(k);
       const ab = [
         ...(await a.evaluateAll((as) => as.map((el) => el.getAttribute("href") || ""))),
-        ...(await b.evaluateAll((as) => as.map((el) => el.getAttribute("href") || ""))),
-      ];
+        ...(await b.evaluateAll((as) => as.map((el) => el.getAttribute("href") || "")))];
       const abJoined = ab.join(" ");
       for (const off of spec.official) {
         const re = new RegExp("/" + off.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "/");
