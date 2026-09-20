@@ -256,6 +256,86 @@
     "verb": "Shop leftover"
   },
   {
+    "year": "2016",
+    "id": "mastodon",
+    "href": "/years/2016/sites/mastodon/index.html",
+    "key": "itt16-mastodon-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Toot leftover"
+  },
+  {
+    "year": "2016",
+    "id": "ringer",
+    "href": "/years/2016/sites/ringer/index.html",
+    "key": "itt16-ringer-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Read leftover"
+  },
+  {
+    "year": "2016",
+    "id": "athletic",
+    "href": "/years/2016/sites/athletic/index.html",
+    "key": "itt16-athletic-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Subscribe leftover"
+  },
+  {
+    "year": "2016",
+    "id": "peach",
+    "href": "/years/2016/sites/peach/index.html",
+    "key": "itt16-peach-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Share leftover"
+  },
+  {
+    "year": "2016",
+    "id": "tay",
+    "href": "/years/2016/sites/tay/index.html",
+    "key": "itt16-tay-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Bot leftover"
+  },
+  {
+    "year": "2016",
+    "id": "zcash",
+    "href": "/years/2016/sites/zcash/index.html",
+    "key": "itt16-zcash-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Shield leftover"
+  },
+  {
+    "year": "2016",
+    "id": "prisma",
+    "href": "/years/2016/sites/prisma/index.html",
+    "key": "itt16-prisma-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Filter leftover"
+  },
+  {
+    "year": "2016",
+    "id": "vive",
+    "href": "/years/2016/sites/vive/index.html",
+    "key": "itt16-vive-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Strap leftover"
+  },
+  {
+    "year": "2016",
+    "id": "miitomo",
+    "href": "/years/2016/sites/miitomo/index.html",
+    "key": "itt16-miitomo-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Mii leftover"
+  },
+  {
+    "year": "2016",
+    "id": "iana",
+    "href": "/years/2016/sites/iana/index.html",
+    "key": "itt16-iana-lx",
+    "star": "itt16-ig-stories",
+    "verb": "Transition leftover"
+  },
+  {
     "year": "2018",
     "id": "spotify",
     "href": "/years/2018/sites/spotify/index.html",
@@ -358,5 +438,45 @@
     "key": "itt18-mojave-lx",
     "star": "itt18-gdpr",
     "verb": "Update leftover"
+  },
+  {
+    "year": "2018",
+    "id": "onedot",
+    "href": "/years/2018/sites/onedot/index.html",
+    "key": "itt18-onedot-lx",
+    "star": "itt18-gdpr",
+    "verb": "Resolve leftover"
+  },
+  {
+    "year": "2018",
+    "id": "epicstore",
+    "href": "/years/2018/sites/epicstore/index.html",
+    "key": "itt18-epicstore-lx",
+    "star": "itt18-gdpr",
+    "verb": "Install leftover"
+  },
+  {
+    "year": "2018",
+    "id": "nso",
+    "href": "/years/2018/sites/nso/index.html",
+    "key": "itt18-nso-lx",
+    "star": "itt18-gdpr",
+    "verb": "Subscribe leftover"
+  },
+  {
+    "year": "2018",
+    "id": "espnplus",
+    "href": "/years/2018/sites/espnplus/index.html",
+    "key": "itt18-espnplus-lx",
+    "star": "itt18-gdpr",
+    "verb": "Stream leftover"
+  },
+  {
+    "year": "2018",
+    "id": "caffeine",
+    "href": "/years/2018/sites/caffeine/index.html",
+    "key": "itt18-caffeine-lx",
+    "star": "itt18-gdpr",
+    "verb": "Go live leftover"
   }
 ]

@@ -46,7 +46,7 @@ If 3× is done, a visitor still sees **lean I/O**, not 3× dests.
 
 Origin lean was **32**. Now **64**. Legal 3× dests = **96** (+32 leftover dests). Flows **19 → 51**.
 
-- [x] B1 Dest folders **96** (not 192)
+- [x] B1 Dest folders **106** (year-mass leftover dests + established-in-year leftover dests; not 192)
 - [x] B2 Official 10 still IG Stories / Pokémon GO / Facebook Live / WhatsApp / iPhone 7 / Vine / Snapchat / musical.ly / Windows 10 / playable
 - [x] B3 Leftover-3× unique still **9** (slack reddit netflix youtube alphago assistant dyn fblive moments) — not 27
 - [x] B4 +32 leftover dests dest-disjoint from official 10 ∪ leftover-3× unique ∪ lean-double leftover dests already on disk
@@ -63,7 +63,7 @@ Origin lean was **32**. Now **64**. Legal 3× dests = **96** (+32 leftover dests
 
 Origin lean was **13**. Now **26**. Legal 3× dests = **39** (+13 leftover dests). Flows **13 → 26**. Leftover-3× unique stays **3**.
 
-- [x] C1 Dest folders **39** (not 78)
+- [x] C1 Dest folders **44** (year-mass leftover dests + established-in-year leftover dests; not 78)
 - [x] C2 Star still GDPR Manage `itt18-gdpr`. Accept All never writes
 - [x] C3 Leftover-3× unique still **reddit / youtube / wikipedia** only (stop 3)
 - [x] C4 +13 leftover dests dest-disjoint from official 10 ∪ leftover-3× unique ∪ lean-double leftover dests (facebook twitter amazon google yahoo baidu yandex netflix snapchat discord gplusgone androidpie ios12)

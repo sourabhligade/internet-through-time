@@ -18,8 +18,11 @@
     "sites/amazon/index.html",
     "sites/androidpie/index.html",
     "sites/baidu/index.html",
+    "sites/caffeine/index.html",
     "sites/chrome/not-secure.html",
     "sites/discord/index.html",
+    "sites/epicstore/index.html",
+    "sites/espnplus/index.html",
     "sites/facebook/index.html",
     "sites/fortnite/switch.html",
     "sites/gdpr/index.html",
@@ -33,6 +36,8 @@
     "sites/linkedin/index.html",
     "sites/mojave/index.html",
     "sites/netflix/index.html",
+    "sites/nso/index.html",
+    "sites/onedot/index.html",
     "sites/pinterest/index.html",
     "sites/playable/game.html",
     "sites/pubg/index.html",
@@ -55,7 +60,7 @@
     "sites/yahoo/index.html",
     "sites/yandex/index.html",
     "sites/youtube/index.html"
-  ];;;;;
+  ];;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",
