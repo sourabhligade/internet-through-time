@@ -134,23 +134,21 @@ def test_playwright_config_ci() -> None:
 # Merge CI Playwright allowlist — not npm test / not the full e2e/ tree.
 CI_E2E_ALLOWLIST = (
     "e2e/hub-years.spec.js",
-    "e2e/atlas.spec.js",
-    "e2e/3x-links.spec.js",
-    "e2e/all-years-smoke.spec.js",
-    "e2e/gold-a-leftover-pack.spec.js",
-    "e2e/popular-3x-sites.spec.js",
+    "e2e/year-start-trails.spec.js",
+    "e2e/visitor-door.spec.js",
+    "e2e/flow-check-pipeline.spec.js",
     "e2e/one-thing-per-year.spec.js",
-    "e2e/2005-2010-leftover-4x.spec.js",
-    "e2e/2008-cut-double-dest-minutes.spec.js",
-    "e2e/2008-5x-live.spec.js",
-    "e2e/2014-mvp.spec.js",
-    "e2e/2014-flows.spec.js",
-    "e2e/2014-4x-flows.spec.js",
-    "e2e/2018-mvp.spec.js",
-    "e2e/2018-flows.spec.js",
+    "e2e/all-years-official-10-real.spec.js",
+    "e2e/leftover-3x-unique.spec.js",
+    "e2e/official-leftover-2x.spec.js",
+    "e2e/lean-triple-leftover.spec.js",
+    "e2e/year-true-packs.spec.js",
     "e2e/2016-2018-3x-detail.spec.js",
-    "e2e/2016-2018-trail-chain.spec.js",
-    "e2e/2017-2019-deepen-theater.spec.js",
+    "e2e/2018-flows.spec.js",
+    "e2e/2020-mvp.spec.js",
+    "e2e/2021-mvp.spec.js",
+    "e2e/2022-mvp.spec.js",
+    "e2e/2022-flows.spec.js",
 )
 
 
@@ -175,8 +173,8 @@ def test_ci_e2e_allowlist() -> None:
         fail("ci-e2e-allowlist", "ci.yml/ci.sh missing " + ", ".join(missing))
         return
     extra_hint = "This is a subset of e2e/; npm test runs the full tree"
-    if "ship pack" not in sh.lower() and "ship e2e" not in wf.lower():
-        fail("ci-e2e-allowlist", "ci.sh / ci.yml should label the pack as a ship subset")
+    if "dest-true" not in sh.lower() and "dest-true" not in wf.lower():
+        fail("ci-e2e-allowlist", "ci.sh / ci.yml should label the pack dest-true I/O")
         return
     for rel in CI_E2E_ALLOWLIST:
         if not (ROOT / rel).is_file():

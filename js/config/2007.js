@@ -169,20 +169,15 @@
     "sites/wiki/edit.html": "http://museum.local/years/2007/sites/wiki/edit.html",
     "sites/reddit/c.html": "http://museum.local/years/2007/sites/reddit/c.html",
     "sites/myspace/c.html": "http://museum.local/years/2007/sites/myspace/c.html",
-    "sites/facebook/index.html": "http://museum.local/years/2007/sites/facebook/index.html",
     "sites/twitter/c.html": "http://museum.local/years/2007/sites/twitter/c.html",
     "sites/digg/c.html": "http://museum.local/years/2007/sites/digg/c.html",
-    "sites/google/index.html": "http://museum.local/years/2007/sites/google/index.html",
     "sites/gmail/c.html": "http://museum.local/years/2007/sites/gmail/c.html",
     "sites/maps/c.html": "http://museum.local/years/2007/sites/maps/c.html",
     "sites/flickr/c.html": "http://museum.local/years/2007/sites/flickr/c.html",
     "sites/stumble/c.html": "http://museum.local/years/2007/sites/stumble/c.html",
     "sites/ebay/c.html": "http://museum.local/years/2007/sites/ebay/c.html",
-    "sites/xbox/index.html": "http://museum.local/years/2007/sites/xbox/index.html",
     "sites/wow/c.html": "http://museum.local/years/2007/sites/wow/c.html",
     "sites/playable/close.html": "http://museum.local/years/2007/sites/playable/close.html",
-    "sites/facebook/more.html": "http://museum.local/years/2007/sites/facebook/more.html",
-    "sites/google/more.html": "http://museum.local/years/2007/sites/google/more.html",
     "sites/wow/more.html": "http://museum.local/years/2007/sites/wow/more.html"};
   var i;
   for (i = 0; i < rooms.length; i++) {

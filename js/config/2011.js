@@ -151,7 +151,6 @@
     "sites/minecraft/index.html": "http://museum.local/years/2011/sites/minecraft/index.html",
     "sites/dropbox/index.html": "http://museum.local/years/2011/sites/dropbox/index.html",
     "sites/youtube/index.html": "http://museum.local/years/2011/sites/youtube/index.html",
-    "sites/chrome/index.html": "http://museum.local/years/2011/sites/chrome/index.html",
     "sites/googleplus/about.html": "http://museum.local/years/2011/sites/googleplus/about.html",
     "sites/googleplus/hangouts.html": "http://museum.local/years/2011/sites/googleplus/hangouts.html",
     "sites/spotify/about.html": "http://museum.local/years/2011/sites/spotify/about.html",
@@ -166,7 +165,6 @@
     "sites/icloud/more.html": "http://museum.local/years/2011/sites/icloud/more.html",
     "sites/pinterest/more.html": "http://museum.local/years/2011/sites/pinterest/more.html",
     "sites/twitch/more.html": "http://museum.local/years/2011/sites/twitch/more.html",
-    "sites/chrome/more.html": "http://museum.local/years/2011/sites/chrome/more.html",
     "sites/youtube/more.html": "http://museum.local/years/2011/sites/youtube/more.html",
     "sites/facebook/more.html": "http://museum.local/years/2011/sites/facebook/more.html",
     "sites/spotify/more.html": "http://museum.local/years/2011/sites/spotify/more.html",
@@ -186,7 +184,6 @@
     "sites/youtube/c.html": "http://museum.local/years/2011/sites/youtube/c.html",
     "sites/spotify/c.html": "http://museum.local/years/2011/sites/spotify/c.html",
     "sites/twitter/c.html": "http://museum.local/years/2011/sites/twitter/c.html",
-    "sites/google/index.html": "http://museum.local/years/2011/sites/google/index.html",
     "sites/twitch/c.html": "http://museum.local/years/2011/sites/twitch/c.html",
     "sites/icloud/c.html": "http://museum.local/years/2011/sites/icloud/c.html",
     "sites/playable/close.html": "http://museum.local/years/2011/sites/playable/close.html"};

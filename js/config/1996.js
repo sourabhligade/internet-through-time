@@ -193,7 +193,6 @@
       "sites/msn/index.html": "http://museum.local/years/1996/sites/msn/index.html",
 
       "sites/angelfire/index.html": "http://museum.local/years/1996/angelfire/",
-      "sites/aolportal/index.html": "http://museum.local/years/1996/aolportal/",
       "sites/realplayer/index.html": "http://museum.local/years/1996/realplayer/",
       "sites/theglobe/index.html": "http://museum.local/years/1996/theglobe/",
 

@@ -1590,7 +1590,7 @@ def test_2007_signature() -> None:
         "years/2007/sites/iphone/index.html",
         "years/2007/sites/gmail/index.html",
         "years/2007/sites/maps/index.html",
-        "years/2007/sites/facebook/index.html",
+        "years/2007/sites/fbplat/index.html",
         "years/2007/sites/twitter/index.html",
         "years/2007/sites/youtube/index.html",
         "js/config/2007.js",
