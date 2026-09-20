@@ -24,14 +24,6 @@
     "title": "Global Network Navigator"
   },
   {
-    "year": "1994",
-    "id": "jumpstation",
-    "path": "/years/1994/sites/jumpstation/index.html",
-    "key": "itt94-jumpstation",
-    "type": "fillGo",
-    "title": "JumpStation"
-  },
-  {
     "year": "1995",
     "id": "classmates",
     "path": "/years/1995/sites/classmates/index.html",
@@ -80,14 +72,6 @@
     "title": "RealPlayer / RealAudio"
   },
   {
-    "year": "1996",
-    "id": "theglobe",
-    "path": "/years/1996/sites/theglobe/index.html",
-    "key": "itt96-theglobe",
-    "type": "twoClick",
-    "title": "theGlobe.com"
-  },
-  {
     "year": "1997",
     "id": "aim",
     "path": "/years/1997/sites/aim/index.html",
@@ -105,14 +89,6 @@
   },
   {
     "year": "1997",
-    "id": "javaplugin",
-    "path": "/years/1997/sites/javaplugin/index.html",
-    "key": "itt97-javaplugin",
-    "type": "twoClick",
-    "title": "Java plugin nag"
-  },
-  {
-    "year": "1997",
     "id": "scripting",
     "path": "/years/1997/sites/scripting/index.html",
     "key": "itt97-scripting",
@@ -126,30 +102,6 @@
     "key": "itt98-goto",
     "type": "fillGo",
     "title": "GoTo.com"
-  },
-  {
-    "year": "1998",
-    "id": "mp3com",
-    "path": "/years/1998/sites/mp3com/index.html",
-    "key": "itt98-mp3com",
-    "type": "twoClick",
-    "title": "MP3.com"
-  },
-  {
-    "year": "1998",
-    "id": "realplayer",
-    "path": "/years/1998/sites/realplayer/index.html",
-    "key": "itt98-realplayer",
-    "type": "twoClick",
-    "title": "RealPlayer 5 residual"
-  },
-  {
-    "year": "1998",
-    "id": "winamp",
-    "path": "/years/1998/sites/winamp/index.html",
-    "key": "itt98-winamp",
-    "type": "twoClick",
-    "title": "Winamp 2 residual"
   },
   {
     "year": "1999",
@@ -190,22 +142,6 @@
     "key": "itt00-limewire",
     "type": "fillGo",
     "title": "LimeWire residual"
-  },
-  {
-    "year": "2000",
-    "id": "expedia",
-    "path": "/years/2000/sites/expedia/index.html",
-    "key": "itt00-expedia",
-    "type": "fillGo",
-    "title": "Expedia residual"
-  },
-  {
-    "year": "2000",
-    "id": "travelocity",
-    "path": "/years/2000/sites/travelocity/index.html",
-    "key": "itt00-travelocity",
-    "type": "fillGo",
-    "title": "Travelocity residual"
   },
   {
     "year": "2004",
@@ -262,30 +198,6 @@
     "key": "itt05-kayak",
     "type": "fillGo",
     "title": "KAYAK residual"
-  },
-  {
-    "year": "2005",
-    "id": "secondlife",
-    "path": "/years/2005/sites/secondlife/index.html",
-    "key": "itt05-secondlife",
-    "type": "twoClick",
-    "title": "Second Life residual"
-  },
-  {
-    "year": "2006",
-    "id": "meebo",
-    "path": "/years/2006/sites/meebo/index.html",
-    "key": "itt06-meebo",
-    "type": "fillGo",
-    "title": "Meebo residual"
-  },
-  {
-    "year": "2006",
-    "id": "huffpost",
-    "path": "/years/2006/sites/huffpost/index.html",
-    "key": "itt06-huffpost",
-    "type": "twoClick",
-    "title": "Huffington Post residual"
   },
   {
     "year": "2008",
