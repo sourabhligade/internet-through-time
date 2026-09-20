@@ -66,7 +66,20 @@ test.describe("2006 official 10 · dest machines", () => {
     await openClear(page, "/years/2006/sites/facebook/feed.html", "itt06-feed-lx");
     await completeLo(page, "itt06-feed-lx");
   });
-  test("3 Facebook open hops", async ({ page }) => {
+  test("3 Gmail official dest", async ({ page }) => {
+    await openClear(page, "/years/2006/sites/gmail/index.html", "itt06-gmail");
+    await page.locator("[data-official-verb]").click();
+    expect(await getKey(page, "itt06-gmail")).toBeFalsy();
+    await page.locator("[data-official-need]").fill("you@gmail.com");
+    const reqs = page.locator("[data-official-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await page.locator("[data-official-verb]").click();
+    await expect.poll(() => getKey(page, "itt06-gmail"), { timeout: 8000 }).toBeTruthy();
+    expect(JSON.parse((await getKey(page, "itt06-gmail")) || "{}").official).toBe(true);
+    expect(await getKey(page, "itt06-tweets")).toBeFalsy();
+  });
+  test("3b Facebook open dest room (not official-10 n)", async ({ page }) => {
     await openClear(page, "/years/2006/sites/facebook/open.html", "itt06-fb-open");
     await page.locator("[data-official-trap]").first().click();
     expect(await getKey(page, "itt06-fb-open")).toBeFalsy();

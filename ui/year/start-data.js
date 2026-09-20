@@ -262,36 +262,36 @@
  "href": "../sites/periscope/index.html",
  "label": "★ One-thing · Periscope Go LIVE REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#ffcdd2\">About 2015</a> — dual scale · bans",
- " <a href=\"../sites/periscope/index.html\" style=\"color:#ffcdd2\">Periscope</a> — title then Go LIVE",
- " <a href=\"../sites/googlephotos/index.html\" style=\"color:#ffcdd2\">Google Photos</a> — backup HQ",
- " <a href=\"../sites/windows10/index.html\" style=\"color:#ffcdd2\">Windows 10</a> — free upgrade",
- " <a href=\"../sites/applemusic/index.html\" style=\"color:#ffcdd2\">Apple Music</a> — 3-month trial",
- " <a href=\"map.html\" style=\"color:#ffcdd2\">Year flow map</a> "
+ " <a href=\"about.html\">About 2015</a> — dual scale · bans",
+ " <a href=\"../sites/periscope/index.html\">Periscope</a> — title then Go LIVE",
+ " <a href=\"../sites/googlephotos/index.html\">Google Photos</a> — backup HQ",
+ " <a href=\"../sites/windows10/index.html\">Windows 10</a> — free upgrade",
+ " <a href=\"../sites/applemusic/index.html\">Apple Music</a> — 3-month trial",
+ " <a href=\"map.html\">Year flow map</a> "
  ]
 },
  "2016": {
  "href": "../sites/instagram/stories.html",
  "label": "★ One-thing · Instagram Stories REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#f8bbd0\">About 2016</a> — dual scale · bans",
- " <a href=\"../sites/instagram/stories.html\" style=\"color:#f8bbd0\">Instagram Stories</a> — 24h slide",
- " <a href=\"../sites/pokemongo/index.html\" style=\"color:#f8bbd0\">Pokémon GO</a> — sidewalks",
- " <a href=\"../sites/facebook/reactions.html\" style=\"color:#f8bbd0\">Reactions</a> — five faces",
- " <a href=\"../sites/whatsapp/e2e.html\" style=\"color:#f8bbd0\">WhatsApp E2E</a> — default lock",
- " <a href=\"map.html\" style=\"color:#f8bbd0\">Year flow map</a> "
+ " <a href=\"about.html\">About 2016</a> — dual scale · bans",
+ " <a href=\"../sites/instagram/stories.html\">Instagram Stories</a> — 24h slide",
+ " <a href=\"../sites/pokemongo/index.html\">Pokémon GO</a> — sidewalks",
+ " <a href=\"../sites/facebook/reactions.html\">Reactions</a> — five faces",
+ " <a href=\"../sites/whatsapp/e2e.html\">WhatsApp E2E</a> — default lock",
+ " <a href=\"map.html\">Year flow map</a> "
  ]
 },
  "2017": {
  "href": "../sites/iphone/x.html",
  "label": "★ One-thing · iPhone X / Face ID REAL",
  "items": [
- " <a href=\"about.html\" style=\"color:#ce93d8\">About 2017</a> — 1,766,926,408 · ITU users · bans",
- " <a href=\"../sites/iphone/x.html\" style=\"color:#ce93d8\">Face ID / iPhone X</a> — no Home · swipe up",
- " <a href=\"../sites/fortnite/index.html\" style=\"color:#ce93d8\">Fortnite BR</a> — · free · 100",
- " <a href=\"../sites/twitter/280.html\" style=\"color:#ce93d8\">Twitter 280</a> — type past 140",
- " <a href=\"../sites/teams/index.html\" style=\"color:#ce93d8\">Teams GA</a> — 2016 was preview",
- " <a href=\"map.html\" style=\"color:#ce93d8\">Year flow map</a> "
+ " <a href=\"about.html\">About 2017</a> — 1,766,926,408 · ITU users · bans",
+ " <a href=\"../sites/iphone/x.html\">Face ID / iPhone X</a> — no Home · swipe up",
+ " <a href=\"../sites/fortnite/index.html\">Fortnite BR</a> — · free · 100",
+ " <a href=\"../sites/twitter/280.html\">Twitter 280</a> — type past 140",
+ " <a href=\"../sites/teams/index.html\">Teams GA</a> — 2016 was preview",
+ " <a href=\"map.html\">Year flow map</a> "
  ]
 },
  "2018": {

@@ -696,3 +696,51 @@ html[data-itt-year="1999"] .itt-felt-trail {
   overflow: visible;
   margin: 8px 0 !important;
 }
+
+/* 2015–2022 Starting Point must beat period-1995 * flatten / navy exhibit nav.
+   period-2017.css still imports 1995 via the year chain. */
+html[data-itt-year="2015"] #itt-exhibit-nav,
+html[data-itt-year="2016"] #itt-exhibit-nav,
+html[data-itt-year="2017"] #itt-exhibit-nav,
+html[data-itt-year="2018"] #itt-exhibit-nav,
+html[data-itt-year="2019"] #itt-exhibit-nav,
+html[data-itt-year="2020"] #itt-exhibit-nav,
+html[data-itt-year="2021"] #itt-exhibit-nav,
+html[data-itt-year="2022"] #itt-exhibit-nav,
+html[data-itt-year="2015"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2016"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2017"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2018"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2019"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2020"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2021"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2022"] body.itt-start-page .itt-nav-slot {
+  display: none !important;
+}
+html[data-itt-year="2015"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2016"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2017"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2018"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2019"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2020"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2021"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2022"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2015"] body.itt-start-page .ott-guided,
+html[data-itt-year="2016"] body.itt-start-page .ott-guided,
+html[data-itt-year="2017"] body.itt-start-page .ott-guided,
+html[data-itt-year="2018"] body.itt-start-page .ott-guided,
+html[data-itt-year="2019"] body.itt-start-page .ott-guided,
+html[data-itt-year="2020"] body.itt-start-page .ott-guided,
+html[data-itt-year="2021"] body.itt-start-page .ott-guided,
+html[data-itt-year="2022"] body.itt-start-page .ott-guided,
+html[data-itt-year="2015"] body.itt-start-page .ott-flows,
+html[data-itt-year="2016"] body.itt-start-page .ott-flows,
+html[data-itt-year="2017"] body.itt-start-page .ott-flows,
+html[data-itt-year="2018"] body.itt-start-page .ott-flows,
+html[data-itt-year="2019"] body.itt-start-page .ott-flows,
+html[data-itt-year="2020"] body.itt-start-page .ott-flows,
+html[data-itt-year="2021"] body.itt-start-page .ott-flows,
+html[data-itt-year="2022"] body.itt-start-page .ott-flows {
+  border-radius: 8px !important;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.12) !important;
+}
