@@ -26,11 +26,11 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2020 live lean** · Zoom Leave. **2022–2025 wiped.**
+Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023–2025 wiped.**
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|
-| Playable years | 27 |
+| Playable years | 28 |
 | Dest folders | 6,449 |
 | HTML pages | 9,588 |
 | e2e specs | 330 + 19 matrices |

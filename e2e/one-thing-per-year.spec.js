@@ -404,6 +404,22 @@ const THINGS = [
       await page.locator("[data-official-verb-host] [data-official-verb]").click();
     },
   },
+  {
+    year: "2022",
+    path: "/years/2022/sites/chatgpt/index.html",
+    key: "itt22-chatgpt",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      const need = page.locator("[data-official-need]");
+      if (await need.count()) await need.fill("explain this like I am five");
+      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-verb-host] [data-official-verb]").click();
+    },
+  },
 ];
 
 test.describe("One-thing per year — load + REAL gate", () => {

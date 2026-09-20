@@ -27,14 +27,14 @@
 | 2009 | 78 | 10 | plaque (Like dest exists) | none |
 | 2010 | 22 | **10** | Instagram iOS | 9/9 |
 | 2011 | 31 | **10** | Google+ | 9/9 |
-| 2015 | 26 | **10** | Periscope | 9/9 |
-| 2016 | 21 | **10** | IG Stories | 9/9 |
-| 2017 | 40 | **10** | Face ID | **no leftover-3× unique map** (uses 20 unique leftover dests; all 20 folders exist) |
-| 2018 | 13 | **10** | GDPR | **3/3** (I/O first-3 leftover only) |
-| 2019 | 38 | **10** | Disney+ | 9/9 |
-| 2020 | 38 | **10** | Zoom Leave | 9/9 |
-| 2021 | 15 | **10** | ATT Ask | **5/5** (law: stop, do not grow to 9) |
-| 2022 | 85 | **10** | ChatGPT | 9/9 |
+| 2015 | **213** dest-lock reverted | **10** | Periscope | 9/9 |
+| 2016 | **32** dest-lock reverted | **10** | IG Stories | 9/9 |
+| 2017 | **222** dest-lock reverted | **10** | Face ID | **no leftover-3× unique map** (uses 20 unique leftover dests; all 20 folders exist) |
+| 2018 | 13 dest-lock reverted origin-lean | **10** | GDPR | **3/3** (I/O first-3 leftover only) |
+| 2019 | **170** dest-lock reverted | **10** | Disney+ | 9/9 |
+| 2020 | **38** dest-lock reverted | **10** | Zoom Leave | 9/9 |
+| 2021 | 15 dest-lock lean | **10** | ATT Ask | **5/5** (law: stop, do not grow to 9) |
+| 2022 | **19** dest-true lean | **10** | ChatGPT | 9/9 |
 
 Guided 6 hrefs: **0 missing** 1994–2022.
 
@@ -83,15 +83,15 @@ Trail n=8. Checklist A3 `[x]` is **false** for 2014.
 
 `leftover-3x-unique.json` has **no `"2017"` key**. `2017-UNIQUE-FLOWS.md` §4: 10 official + 20 unique leftover dests. All 20 leftover folders exist (`ios11`, `pubgnote`, `cuphead`, … `hollowknight`). Not a missing dest. Gap is: leftover-3× unique e2e pack does not cover 2017 (by design of that map).
 
-### 2019-READ-FIRST dest count is a lie
+### 2019 dest count
 
-Header: **165 dests · 202 HTML**. Disk: **38 dest folders**. DISK-TRUTH table says 38. The READ-FIRST number is stale. Dest set is not 165.
+Dest-lock reverted: dest folders **170**. DISK-TRUTH / 2019-READ-FIRST dest-lock **reverted**.
 
 ---
 
 ## 3. Official dests with a verb and no required field
 
-Lean-year HTML that has `data-official-verb` and **no** `data-official-need` (counted this pass):
+Lean-year HTML that has `data-official-verb` and **no** `data-official-need` (counted 2026-09-15; **stale vs Phase 1 2026-09-20** — lean doors 2010 / 2012 / 2016 / 2017 / 2019 / 2020 / 2021 / 2022 are **10/10** `data-official-need` on disk):
 
 | Year | Count | Examples |
 |------|------:|----------|
@@ -159,14 +159,14 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 | `year-2010-plus-3x-unique.spec.js` | `/years/2010/sites/instant/index.html` |
 | `2012-flows.spec.js` | `/years/2012/sites/vinewait/index.html` |
 | `2014-4x-flows.spec.js` | `/years/2014/sites/oculus/index.html` (Serial dest also gone) |
-| `2013-2018-leftover-dest-true.spec.js` | `/years/2019/sites/fortnite/index.html` |
-| `2017-2019-deepen-theater.spec.js` | 2017 Zoom dest (skipped in last run) |
+| `2013-2018-leftover-dest-true.spec.js` | `/years/2019/sites/fortnite/index.html` **on disk** (dest-lock reverted) |
+| `2017-2019-deepen-theater.spec.js` | 2017 Zoom leftover dest is `zoom17` **on disk** |
 
-`js/config/2017.js` `locationHints` still has `sites/whatsapp/index.html`. **`years/2017/sites/whatsapp/` does not exist.** Only remaining dead hint after dest-lock strip.
+`js/config/2017.js` `locationHints` `sites/whatsapp/index.html` **exists** after dest-lock revert.
 
-`FLOW-IMPLEMENT-CHECKLIST.md` **A9** · **2022 wiped** · no tree · no hub card. Hallway ends at 2021.
+`FLOW-IMPLEMENT-CHECKLIST.md` **A9** · **2023–2025 wiped**. **2022 is live lean** (ChatGPT Send · dest folders 19).
 
-`UNDONE.md` still says 2017 dest folders **222** and leftover-official **11,336**. Disk: 2017 **40** dests; leftover-official matrix **166**.
+`UNDONE.md` dest-lock 2017 **40** dests is stale. Disk after dest-lock revert: 2017 **222** dest folders.
 
 ---
 
@@ -178,7 +178,7 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 
 Not in that list: **2007, 2010, 2011, 2012, 2013, 2021.**
 
-Open GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold is **already on this tree**. Tickets are confirm/ship, not missing dests.
+GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold is **already on this tree**. Dest-lock 2015–2018 **reverted**. Tickets close as shipped, not dest-lock.
 
 ---
 
@@ -186,13 +186,13 @@ Open GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also
 
 | Year | Gap |
 |------|-----|
-| **2012** | Official trail **9** not 10. READ-FIRST **FB 1B** dest not on disk / not on trail. |
+| **2012** | Official trail **10** on disk. Dest-lock lean dest folders 24. |
 | **2013** | Official trail **9** not 10. 54 dests, leftover-2× first paint on 45 dests (DISK-TRUTH: not dest-locked). leftover-3× first paint 10 dests. No A CSS. |
 | **2014** | Official trail **8**. **Apple Pay dest missing.** WhatsApp `chat.html` exists, not on trail. leftover-4× e2e still names Oculus/Serial (deleted). |
 | **2007, 2010, 2011** | No A CSS. leftover-3× unique dests first paint (U9-legal). 2010 e2e still lists dest-lock dests (skipped). |
 | **2017** | Dead `locationHints` → `sites/whatsapp/index.html`. No leftover-3× unique map (20 unique leftover dests exist). 6 official dests have no `data-official-need`. |
 | **2018** | leftover-3× unique = 3 (I/O stop). A already applied. |
-| **2019** | READ-FIRST says **165 dests**; disk **38**. 19 leftover dests are lx+d2 clones. |
+| **2019** | Dest-lock reverted: dest folders **170**. |
 | **2020** | Official dests 2–10 have **no required field**. 29 leftover dests still show leftover-2× first paint. |
 | **2021** | leftover-3× unique = 5 (stop). No A CSS. leftover-3× first paint on 5 dests. |
 | **2022** | Start `#itt-exhibit-foot` layout still contested in the visitor browser (light/dark + mid-pane). Dest set complete. |
@@ -206,6 +206,6 @@ Open GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also
 ## 9. What this file is not
 
 - Not a dest-farm plan.
-- Not “2017 is missing 182 dests” (UNDONE 222 is stale; dest-lock left 40).
+- Dest-lock reverted: 2017 dest folders **222**.
 - Not “2020 wiped” (disk + gate + hub card live).
 - Not proof the full Playwright suite is green (this pass did not re-run the whole suite).

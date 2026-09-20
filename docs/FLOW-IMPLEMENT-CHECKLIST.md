@@ -20,7 +20,7 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 - [x] A6 Leftover never writes the star key — dest-face complete + 2018 leftover-2× never gold
 - [x] A7 Official dest leftover-2× / leftover-3× hidden (gold-only) — dest-face official lycos + `year-3x3-all` official dest skips
 - [x] A8 Leftover dest leftover-3× dest face **visible** without `?deep=1` — dest-face 2010 chrome / 2012 reddit / 2013 reddit
-- [x] A9 No 2022+ year tree — `years/2022`–`years/2025` wiped.
+- [x] A9 No 2023+ year tree — `years/2023`–`years/2025` wiped. **2022 is live lean** (ChatGPT Send · dest folders 19).
 - [x] A10 No invented brand pixels / no visitor sent to `SOURCES.md` for the star — failed-final / capture-cite on dests; e2e does not open SOURCES
 
 ## B. I/O I1–I14 (2016–2021 + 2013)
@@ -111,4 +111,4 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 
 Engine: `js/immersion/leftover-official.js` `isDestTrueLeftoverFace` · `css/itt-leftover-fold.css` · `js/immersion/registry.js` NoMock parts.
 
-Not implemented (criteria forbid): dest-farm lock, unique leftover maps without a plan, period pixels, 2022+.
+Not implemented (criteria forbid): dest-farm lock, unique leftover maps without a plan, invent brand pixels, restore 2023+.

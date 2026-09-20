@@ -14,29 +14,43 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "sites/amazon/index.html",
+    "sites/androidpie/index.html",
+    "sites/baidu/index.html",
     "sites/chrome/not-secure.html",
+    "sites/discord/index.html",
+    "sites/facebook/index.html",
     "sites/fortnite/switch.html",
     "sites/gdpr/index.html",
     "sites/github/index.html",
     "sites/github/microsoft.html",
+    "sites/google/index.html",
+    "sites/gplusgone/index.html",
     "sites/homepod/index.html",
     "sites/instagram/igtv.html",
+    "sites/ios12/index.html",
+    "sites/netflix/index.html",
     "sites/playable/game.html",
     "sites/reddit/index.html",
+    "sites/snapchat/index.html",
     "sites/spectre/index.html",
     "sites/tiktok/fyp.html",
     "sites/tiktok/index.html",
     "sites/trust/index.html",
+    "sites/twitter/index.html",
     "sites/wikipedia/index.html",
+    "sites/yahoo/index.html",
+    "sites/yandex/index.html",
     "sites/youtube/index.html"
-  ];
+  ];;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",
     "pages/home.html": "http://home.microsoft.com/intl/web2018/",
     "pages/about.html": "http://home.microsoft.com/intl/web2018/about.html",
     "pages/map.html": "http://museum.local/years/2018/map/",
-    "pages/whats-new.html": "http://museum.local/pages/whats-new.html"};
+    "pages/whats-new.html": "http://museum.local/pages/whats-new.html"
+  };
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {

@@ -1,64 +1,19 @@
 // @ts-check
 /**
- * CUT-3X-2015-2020 — leftover 3× dest-minutes, E2E, not mock.
- * Live years 2015 / 2016 / 2017: 9 doors each. 2019 is live lean (2019-flows).
- * 2018 / 2020 are live lean doors (first + third leftover-3×). Stars / guided 6 / official gold stay put.
+ * CUT-3X-2015-2020 — leftover-3× unique dest-true dests, E2E, not dest-farm leftover-3× dest-farm.
+ * Live years 2015 / 2016 / 2019 / 2020: 9 leftover dests. 2018 first 3 only.
+ * 2017 leftover uniqueness is unique leftover-20, not leftover-3× unique dest-true.
+ * Stars / guided 6 / official gold stay put.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
+const { liveYears } = require("./leftover-3x-unique-doors");
 const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 
-/** @type {Record<string, { star: string, gold: string[], doors: { dest: string, go: string, key: string, next: string }[] }>} */
-const LIVE = {
-  2015: {
-    star: "itt15-periscope",
-    gold: ["itt15-periscope", "itt15-applemusic", "itt15-win10", "itt15-discord", "itt15-snap-discover"],
-    doors: [
-      { dest: "/years/2015/sites/instagram/index.html", go: "[data-pop-go][data-pop-id='instagram']", key: "itt15-pop-instagram", next: "spotify/index.html" },
-      { dest: "/years/2015/sites/spotify/index.html", go: "[data-pop-go][data-pop-id='spotify']", key: "itt15-pop-spotify", next: "netflix/index.html" },
-      { dest: "/years/2015/sites/netflix/index.html", go: "[data-pop-go][data-pop-id='netflix']", key: "itt15-pop-netflix", next: "meerkat/index.html" },
-      { dest: "/years/2015/sites/meerkat/index.html", go: "[data-pop-go][data-pop-id='meerkat']", key: "itt15-pop-meerkat", next: "applemusicsub/index.html" },
-      { dest: "/years/2015/sites/applemusicsub/index.html", go: "[data-pop-go][data-pop-id='applemusicsub']", key: "itt15-pop-applemusicsub", next: "win10get/index.html" },
-      { dest: "/years/2015/sites/win10get/index.html", go: "[data-pop-go][data-pop-id='win10get']", key: "itt15-pop-win10get", next: "vine/index.html" },
-      { dest: "/years/2015/sites/vine/index.html", go: "[data-pop-go][data-pop-id='pop3-vine']", key: "itt15-pop3-vine", next: "echo/index.html" },
-      { dest: "/years/2015/sites/echo/index.html", go: "[data-pop-go][data-pop-id='pop3-echo']", key: "itt15-pop3-echo", next: "snapchat/index.html" },
-      { dest: "/years/2015/sites/snapchat/index.html", go: "[data-pop-go][data-pop-id='pop3-snapchat']", key: "itt15-pop3-snapchat", next: "pages/home.html" },
-    ],
-  },
-  2016: {
-    star: "itt16-ig-stories",
-    gold: ["itt16-ig-stories", "itt16-musically", "itt16-vine-end"],
-    doors: [
-      { dest: "/years/2016/sites/reddit/index.html", go: "[data-pop-go][data-pop-id='reddit']", key: "itt16-pop-reddit", next: "netflix/index.html" },
-      { dest: "/years/2016/sites/netflix/index.html", go: "[data-pop-go][data-pop-id='netflix']", key: "itt16-pop-netflix", next: "youtube/index.html" },
-      { dest: "/years/2016/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt16-pop-youtube", next: "slack/index.html" },
-      { dest: "/years/2016/sites/slack/index.html", go: "[data-pop-go][data-pop-id='slack']", key: "itt16-pop-slack", next: "fblive/index.html" },
-      { dest: "/years/2016/sites/fblive/index.html", go: "[data-pop-go][data-pop-id='fblive']", key: "itt16-pop-fblive", next: "smario/index.html" },
-      { dest: "/years/2016/sites/smario/index.html", go: "[data-pop-go][data-pop-id='smario']", key: "itt16-pop-smario", next: "musically/index.html" },
-      { dest: "/years/2016/sites/musically/index.html", go: "[data-pop-go][data-pop-id='pop3-musically']", key: "itt16-pop3-musically", next: "vine/index.html" },
-      { dest: "/years/2016/sites/vine/index.html", go: "[data-pop-go][data-pop-id='pop3-vine']", key: "itt16-pop3-vine", next: "snapchat/index.html" },
-      { dest: "/years/2016/sites/snapchat/index.html", go: "[data-pop-go][data-pop-id='pop3-snapchat']", key: "itt16-pop3-snapchat", next: "pages/home.html" },
-    ],
-  },
-  2017: {
-    star: "itt17-faceid",
-    gold: ["itt17-faceid", "itt17-fortnite", "itt17-teams", "itt17-switch"],
-    doors: [
-      { dest: "/years/2017/sites/reddit/index.html", go: "[data-pop-go][data-pop-id='reddit']", key: "itt17-pop-reddit", next: "youtube/index.html" },
-      { dest: "/years/2017/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt17-pop-youtube", next: "amazon/index.html" },
-      { dest: "/years/2017/sites/amazon/index.html", go: "[data-pop-go][data-pop-id='amazon']", key: "itt17-pop-amazon", next: "snapipo/index.html" },
-      { dest: "/years/2017/sites/snapipo/index.html", go: "[data-pop-go][data-pop-id='snapipo']", key: "itt17-pop-snapipo", next: "bitcoinath/index.html" },
-      { dest: "/years/2017/sites/bitcoinath/index.html", go: "[data-pop-go][data-pop-id='bitcoinath']", key: "itt17-pop-bitcoinath", next: "echoshow/index.html" },
-      { dest: "/years/2017/sites/echoshow/index.html", go: "[data-pop-go][data-pop-id='echoshow']", key: "itt17-pop-echoshow", next: "fortnite/index.html" },
-      { dest: "/years/2017/sites/fortnite/index.html", go: "[data-pop-go][data-pop-id='pop3-fortnite']", key: "itt17-pop3-fortnite", next: "teams/index.html" },
-      { dest: "/years/2017/sites/teams/index.html", go: "[data-pop-go][data-pop-id='pop3-teams']", key: "itt17-pop3-teams", next: "switch/index.html" },
-      { dest: "/years/2017/sites/switch/index.html", go: "[data-pop-go][data-pop-id='pop3-switch']", key: "itt17-pop3-switch", next: "pages/home.html" },
-    ],
-  },
-};
+const LIVE = liveYears(["2015", "2016", "2018", "2019", "2020"]);
 
 function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -87,7 +42,7 @@ async function walkDoor(page, door, gold) {
     door.go,
     { timeout: 15000 }
   );
-  const panel = page.locator(`${door.go}`).first().locator("xpath=ancestor::*[@data-pop-panel='1' or contains(@class,'itt-pop3') or contains(@class,'itt-pop3x-flow')][1]");
+  const panel = page.locator(`${door.go}`).first().locator("xpath=ancestor::*[@data-itt-lo3x][1]");
   const scope = (await panel.count()) ? panel : page;
 
   await go.click();
@@ -127,7 +82,7 @@ async function walkDoor(page, door, gold) {
   for (const g of gold) {
     expect(await getKey(page, g), door.key + " must not write " + g).toBeFalsy();
   }
-  const next = page.locator(`[data-next-when-key="${door.key}"] a`).first();
+  const next = page.locator(`[data-itt-lo3x] [data-next-when-key="${door.key}"] a`).first();
   await expect(next).toBeVisible();
   const href = (await next.getAttribute("href")) || "";
   expect(href).toContain(door.next);
@@ -163,32 +118,41 @@ test.describe("CUT-3X-2015-2020 boarded stay empty", () => {
 
 for (const [year, spec] of Object.entries(LIVE)) {
   test.describe(`${year} leftover 3× nine doors`, () => {
-    test(`home strips are 3+3+3 unique and not the star`, async ({ page }) => {
+    test(`home leftover-3× unique dest-true warehouse is 3+3+3 unique dests and not the star`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/home.html`);
+      await revealLeftoverRails(page);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
+      const nFirst = spec.doors.filter((d) => d.kind === "first").length;
+      const nSecond = spec.doors.filter((d) => d.kind === "second").length;
+      const nThird = spec.doors.filter((d) => d.kind === "third").length;
       const first = page.locator(`[data-itt-pop3x="${year}"]`).first().locator('a[href*="sites/"]');
       const more = page.locator(`[data-itt-pop-more="${year}"]`).first().locator('a[href*="sites/"]');
       const third = page.locator(`[data-itt-pop-3x3="${year}"]`).first().locator('a[href*="sites/"]');
-      await expect(first).toHaveCount(3);
-      await expect(more).toHaveCount(3);
-      await expect(third).toHaveCount(3);
+      await expect(first).toHaveCount(nFirst);
+      if (nSecond) await expect(more).toHaveCount(nSecond);
+      else await expect(page.locator(`[data-itt-pop-more="${year}"]`)).toHaveCount(0);
+      if (nThird) await expect(third).toHaveCount(nThird);
+      else await expect(page.locator(`[data-itt-pop-3x3="${year}"]`)).toHaveCount(0);
       const all = [
         ...(await first.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))),
-        ...(await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))),
-        ...(await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))),
+        ...(nSecond ? await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || "")) : []),
+        ...(nThird ? await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || "")) : []),
       ];
       const keys = all.map((h) => (String(h).match(/sites\/[^?#]+/) || [h])[0]);
-      expect(new Set(keys).size).toBe(9);
+      expect(new Set(keys).size).toBe(spec.doors.length);
       const star = (await page.locator(`[data-ott-one-thing="${year}"]`).getAttribute("href")) || "";
       const starK = (star.match(/sites\/[^?#]+/) || [star])[0];
       expect(keys).not.toContain(starK);
       const firstJoined = (await first.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))).join(" ");
-      const moreJoined = (await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))).join(" ");
-      const thirdJoined = (await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))).join(" ");
+      const moreJoined = nSecond
+        ? (await more.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))).join(" ")
+        : "";
+      const thirdJoined = nThird
+        ? (await third.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""))).join(" ")
+        : "";
       expect(firstJoined + moreJoined + thirdJoined).not.toMatch(/discord/);
-      expect(moreJoined).not.toMatch(/moments/);
       if (year === "2015") expect(thirdJoined).toMatch(/vine/);
-      if (year === "2016") expect(moreJoined).toMatch(/houseparty/);
+      if (year === "2016") expect(thirdJoined).toMatch(/moments/);
       for (const h of all) {
         const dest = h.replace(/^\.\.\//, `/years/${year}/`);
         const res = await page.goto(dest);
@@ -196,11 +160,10 @@ for (const [year, spec] of Object.entries(LIVE)) {
       }
     });
 
-    test(`map lists all 9 leftover 3× hrefs`, async ({ page }) => {
-      await page.goto(`/years/${year}/pages/map.html`);
+    test(`leftover-3× unique dest-true dest files exist`, () => {
       for (const door of spec.doors) {
-        const slug = door.dest.replace(`/years/${year}/sites/`, "");
-        await expect(page.locator(`a[href*="${slug}"]`).first()).toBeVisible();
+        const rel = door.dest.replace(/^\//, "");
+        expect(fs.existsSync(path.join(ROOT, rel)), door.dest).toBe(true);
       }
     });
 
@@ -254,56 +217,18 @@ const STAR_WALK = {
   },
 };
 
-const LO_SECOND = {
-  2015: [
-    ["/years/2015/sites/meerkat/index.html", "meer-lx", "itt15-periscope"],
-    ["/years/2015/sites/applemusicsub/index.html", "am-sub", "itt15-applemusic"],
-    ["/years/2015/sites/win10get/index.html", "gwx-lx", "itt15-win10"],
-  ],
+const ABOUT_STAR = {
+  2015: "itt15-periscope",
+  2016: "itt16-ig-stories",
+  2017: "itt17-faceid",
 };
 
-async function completeLo(page, dest, suffix, star) {
-  const key = "itt" + dest.split("/years/")[1].slice(2, 4) + "-" + suffix;
-  await page.goto(dest);
-  await page.evaluate((k) => localStorage.removeItem(k), key);
-  if (star) await page.evaluate((k) => localStorage.removeItem(k), star);
-  await page.reload();
-  const save = page.locator(`[data-lo-save][data-lo-key="${suffix}"]`).first();
-  const lo = page.locator(`[data-lo-panel]:has([data-lo-save][data-lo-key="${suffix}"])`).first();
-  await revealLeftoverRails(page);
-  await save.waitFor({ state: "attached", timeout: 20000 });
-  await page.waitForFunction((s) => {
-    const b = document.querySelector('[data-lo-save][data-lo-key="' + s + '"]');
-    return !!(b && b.getAttribute("data-lo-bound") === "1");
-  }, suffix, { timeout: 20000 });
-  if ((await lo.locator("[data-lo-trap]").count()) > 0) {
-    await lo.locator("[data-lo-trap]").first().click({ force: true });
-    expect(await getKey(page, key), key + " trap").toBeFalsy();
-  }
-  await save.click({ force: true });
-  expect(await getKey(page, key), key + " 0 ticks").toBeFalsy();
-  const reqs = lo.locator("[data-lo-req]");
-  const nReq = await reqs.count();
-  for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
-  const need = await save.getAttribute("data-lo-need-pick");
-  if (need) await lo.locator(`[data-lo-pick="${need}"]`).first().click({ force: true });
-  else if ((await lo.locator("[data-lo-pick]").count()) > 0) await lo.locator("[data-lo-pick]").first().click({ force: true });
-  if ((await lo.locator("[data-lo-field]").count()) > 0) {
-    await lo.locator("[data-lo-field]").first().fill("museum leftover");
-  }
-  await save.click({ force: true });
-  await expect.poll(() => getKey(page, key), { timeout: 8000 }).toBeTruthy();
-  const blob = JSON.parse((await getKey(page, key)) || "{}");
-  expect(blob.leftover, key + " leftover").toBe(true);
-  if (star) expect(await getKey(page, star), key + " must not write gold").toBeFalsy();
-}
-
-test.describe("CUT-3X visitor machine · About · star · leftover second trio", () => {
+test.describe("CUT-3X visitor machine · About · star", () => {
   for (const [year, about] of Object.entries(ABOUT)) {
     test(`${year} About prints ILS and does not write gold`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/about.html`);
       for (const s of about.print) await expect(page.locator("body")).toContainText(s);
-      expect(await getKey(page, LIVE[year].star)).toBeFalsy();
+      expect(await getKey(page, ABOUT_STAR[year])).toBeFalsy();
     });
   }
 
@@ -317,13 +242,5 @@ test.describe("CUT-3X visitor machine · About · star · leftover second trio",
       await star.complete(page);
       await expect.poll(() => getKey(page, star.key), { timeout: 8000 }).toBeTruthy();
     });
-  }
-
-  for (const [year, rows] of Object.entries(LO_SECOND)) {
-    for (const [dest, suffix, gold] of rows) {
-      test(`${year} leftover ${suffix} never writes ${gold}`, async ({ page }) => {
-        await completeLo(page, dest, suffix, gold);
-      });
-    }
   }
 });

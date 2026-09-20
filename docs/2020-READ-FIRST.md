@@ -1,13 +1,13 @@
 # 2020 — read first
 
 **Date:** 2026-09-14  
-**Status:** **LIVE lean door.** Hub card open. `years/2020/` on disk (**38 dests**). Hub **27 years open** (1994–2008 + 2010–2021). **2009 boarded.** **2022–2025 wiped.**
+**Status:** **LIVE lean door.** Hub card open. Dest-lock reverted (dest-lock parent had no 2020 tree). `years/2020/` on disk (**38 dests**). Hub **28 years open**. **2009 boarded.** **2022 ChatGPT live.** **2023–2025 wiped.**
 
 Do not `git checkout` an old 2020 forest.
 
 | Lock | Value |
 |------|--------|
-| Disk | **38 dest folders** · official 10 + leftover-3× 9 + leftover dests 19 |
+| Disk | **38 dest folders** · dest-lock parent had no 2020 tree · official 10 + leftover-3× 9 + leftover dests 19 |
 | Star | Zoom mute → chat → Leave `itt20-zoom` |
 | Scale | **No ILS June 2020 websites cell** — table ends 2018 |
 | Neighbors | 2019 Disney+ Continue · 2021 ATT Ask |

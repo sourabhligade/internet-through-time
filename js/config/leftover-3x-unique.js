@@ -561,6 +561,24 @@
       { "id": "wikipedia", "name": "Wikipedia", "key": "itt20-pop3-wikipedia" },
       { "id": "nyt", "name": "NYT leftover", "key": "itt20-pop3-nyt" }
     ]
+  },
+  "2022": {
+    "star": "itt22-chatgpt",
+    "first": [
+      { "id": "amazon", "name": "Amazon", "key": "itt22-pop-amazon" },
+      { "id": "google", "name": "Google", "key": "itt22-pop-google" },
+      { "id": "instagram", "name": "Instagram", "key": "itt22-pop-instagram" }
+    ],
+    "second": [
+      { "id": "facebook", "name": "Facebook", "key": "itt22-pop2-facebook" },
+      { "id": "youtube", "name": "YouTube", "key": "itt22-pop2-youtube" },
+      { "id": "reddit", "name": "Reddit", "key": "itt22-pop2-reddit" }
+    ],
+    "third": [
+      { "id": "wikipedia", "name": "Wikipedia", "key": "itt22-pop3-wikipedia" },
+      { "id": "netflix", "name": "Netflix", "key": "itt22-pop3-netflix" },
+      { "id": "nyt", "name": "NYT", "key": "itt22-pop3-nyt" }
+    ]
   }
 };
 })(typeof window !== "undefined" ? window : this);

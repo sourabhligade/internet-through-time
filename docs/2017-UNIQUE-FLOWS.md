@@ -23,7 +23,7 @@
 | Official flows | **10** | Unique dests · unique keys |
 | Unique leftover flows | **20** | Unique dests · unique keys |
 | **Total unique flows** | **30** | **30 dest folders** |
-| Dest-farm still on disk | **0** (dest-lock 2026-09-15 · 40 dest folders = 30 unique + leftover-3× dests) | Workshop dests deleted |
+| Dest-farm still on disk | dest-lock **reverted** · dest folders **222** | Unique leftover-20 dest-true dests kept |
 
 ---
 

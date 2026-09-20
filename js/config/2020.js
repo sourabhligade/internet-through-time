@@ -16,6 +16,7 @@
     "sites/animalcrossing/index.html",
     "sites/chrome/index.html",
     "sites/classroom/index.html",
+    "sites/clubhouse/index.html",
     "sites/coinbase/index.html",
     "sites/discord/index.html",
     "sites/edge/index.html",
@@ -50,7 +51,7 @@
     "sites/youtube/index.html",
     "sites/zoom/index.html",
     "sites/zoom/meeting.html"
-  ];;
+  ];;;;
   var urlMap = {
     "index.html": "http://museum.local/index.html",
     "pages/home.html": "http://home.microsoft.com/intl/web2020/",

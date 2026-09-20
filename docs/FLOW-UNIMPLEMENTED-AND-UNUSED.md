@@ -21,7 +21,7 @@ It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`.
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **27 years open** (1994–2008 + 2010–2021). **2009 boarded** (tree stays; year-shell is a plaque). **2020 live lean** · Zoom Leave. **2022–2025 wiped.**
+The museum is year-locked rooms in period chrome. Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2023–2025 wiped.**
 
 Visitor product (I/O):
 
@@ -147,7 +147,7 @@ Writing them is new work, not finishing an existing plan.
 | 2004 | 810 | 1039 | Largest forest |
 | 2005 | 351 | 596 | Live |
 | 2006 | 378 | 637 | Live |
-| 2007 | 246 | 330 | Lean door + dest-farm |
+| 2007 | 46 | 330 | Lean door · dest-lock · leftover dests 46 |
 | 2008 | 597 | 949 | Live dense |
 | 2009 | 78 | 149 | **Boarded** |
 | 2010 | 183 | 223 | Lean + dest-farm |
@@ -156,13 +156,14 @@ Writing them is new work, not finishing an existing plan.
 | 2013 | 54 | 62 | Lean door · Vine |
 | 2014 | 114 | 132 | Lean door · WhatsApp |
 | 2015 | 213 | 316 | Lean door + dest-farm |
-| 2016 | 32 | 82 | Lean (origin revert) |
+| 2016 | 64 | 82 | Lean (origin revert) + leftover dests |
 | 2017 | 222 | 258 | Lean door + dest-farm (30 unique + 193 workshop) |
-| 2018 | 13 | 22 | **I/O model** lean door |
+| 2018 | 26 | 22 | **I/O model** lean door + leftover dests |
 | 2019 | 165 | 202 | Lean door + dest-farm |
-| 2020 | 45 | 52 | Lean door |
-| 2021 | 294 | 380 | Lean door + dest-farm |
-| 2022–2025 | — | — | **No tree** |
+| 2020 | 39 | 52 | Lean door · Zoom Leave |
+| 2021 | 30 | 380 | Lean door · dest-lock · leftover dests 30 · leftover-3× unique **5** (do not dest-farm to 294) |
+| 2022 | 38 | — | **Live lean** · ChatGPT Send · leftover-3× unique **9** |
+| 2023–2025 | — | — | **Wiped** · no tree |
 
 ### 2.2 leftover-official.matrix.json writers by year
 
@@ -408,7 +409,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | Item | Evidence |
 |------|----------|
-| 27 years open · 2009 plaque · 2020 Zoom Leave · 2022 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
+| 28 years open · 2009 plaque · 2022 live lean · 2023–2025 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 30 unique dests | Disk + 72/72 e2e |
 | Official dest leftover-2× panels = 0 on 2016–2021 official 10 (and sampled earlier official dests) | HTML `data-lo-panel` count |
 | Empty leftover save without field/pick/req/wait | `leftover-official.js` guard |

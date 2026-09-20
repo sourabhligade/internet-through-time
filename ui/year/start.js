@@ -26,7 +26,7 @@
     }
     var el = document.createElement("link");
     el.rel = "stylesheet";
-    el.href = scriptDir() + "start.css?v=20260914quiet";
+    el.href = scriptDir() + "start.css?v=20260916ntp";
     el.setAttribute("data-itt-year-start-css", "1");
     (document.head || document.documentElement).appendChild(el);
   }
@@ -47,7 +47,7 @@
       "html[data-itt-year=\"2015\"] body.itt-start-page,html[data-itt-year=\"2016\"] body.itt-start-page," +
       "html[data-itt-year=\"2017\"] body.itt-start-page,html[data-itt-year=\"2018\"] body.itt-start-page," +
       "html[data-itt-year=\"2019\"] body.itt-start-page,html[data-itt-year=\"2020\"] body.itt-start-page," +
-      "html[data-itt-year=\"2021\"] body.itt-start-page,html[data-itt-year=\"2022\"] body.itt-start-page{background:#f3f3f3!important;color:#111!important}" +
+      "html[data-itt-year=\"2021\"] body.itt-start-page,html[data-itt-year=\"2022\"] body.itt-start-page{background:#f8f9fa!important;color:#202124!important}" +
       "html[data-itt-year=\"2015\"] .ott-guided,html[data-itt-year=\"2015\"] .ott-flows," +
       "html[data-itt-year=\"2016\"] .ott-guided,html[data-itt-year=\"2016\"] .ott-flows," +
       "html[data-itt-year=\"2017\"] .ott-guided,html[data-itt-year=\"2017\"] .ott-flows," +
@@ -75,6 +75,9 @@
     ensureFill();
     try {
       document.documentElement.setAttribute("data-itt-year", year);
+      if (isHabitYear(year)) {
+        document.documentElement.setAttribute("data-itt-start-habit", "1");
+      }
       if (isDeep()) document.documentElement.setAttribute("data-itt-deep", "1");
       if (document.body) {
         document.body.setAttribute("data-itt-year", year);
@@ -103,20 +106,35 @@
       var i;
       var lis = "";
       for (i = 0; i < (spec.items || []).length; i++) {
-        lis += "<li>" + spec.items[i] + "</li>";
+        lis +=
+          "<li>" +
+          (isHabitYear(year) ? stripLeftoverWord(spec.items[i]) : spec.items[i]) +
+          "</li>";
       }
-      host.innerHTML =
+      var starInner =
         '<p class="itt-year-star"><a data-ott-one-thing="' +
         year +
         '" href="' +
         spec.href +
         '">' +
-        spec.label +
-        "</a></p>" +
+        (isHabitYear(year) ? habitStarLabel(spec.label) : spec.label) +
+        "</a></p>";
+      if (year === "2021") {
+        starInner =
+          '<div class="itt-start-hero">' +
+          '<p class="itt-start-kicker">26 April 2021 · iOS 14.5</p>' +
+          '<p class="itt-year-star"><a data-ott-one-thing="2021" href="' +
+          spec.href +
+          '">Ask App Not to Track</a></p>' +
+          '<p class="itt-start-sub">Allow never writes. Ask App Not to Track is the save.</p>' +
+          "</div>";
+      }
+      host.innerHTML =
+        starInner +
         '<div class="ott-guided" id="ott-guided-' +
         year +
-        '"><b>Do this first · steps · ' +
-        year +
+        '"><b>' +
+        (isHabitYear(year) ? "Start here" : "Do this first · steps · " + year) +
         "</b><ol>" +
         lis +
         "</ol></div>" +
@@ -238,6 +256,22 @@
       .replace(/"/g, "&quot;");
   }
 
+  function isHabitYear(year) {
+    var y = parseInt(year, 10);
+    return y >= 2015 && y <= 2022;
+  }
+
+  function stripLeftoverWord(s) {
+    return String(s || "")
+      .replace(/\s*leftover(?:s)?(?:-\d+[×x]|[\s-]*[234][×x])?/gi, "")
+      .replace(/\s{2,}/g, " ")
+      .replace(/^\s+|\s+$/g, "");
+  }
+
+  function habitStarLabel(label) {
+    return stripLeftoverWord(String(label || "").replace(/^★\s*One-thing\s*·\s*/i, "★ "));
+  }
+
   function flowHref(href) {
     href = String(href || "");
     if (!href) return "";
@@ -262,14 +296,14 @@
         "\"><b>" +
         esc(t.n || i + 1) +
         " · " +
-        esc(t.name || "") +
+        esc(stripLeftoverWord(t.name || "")) +
         "</b></a></li>";
     }
     return (
       '<div class="ott-flows" id="ott-flows-' +
       year +
-      '"><b>This year\'s flows · ' +
-      year +
+      '"><b>' +
+      (isHabitYear(year) ? "This year" : "This year's flows · " + year) +
       '</b><ol data-itt-ten-flows>' +
       lis +
       '</ol><p class="ott-flows-map"><a href="map.html">Full year flow map</a></p></div>'

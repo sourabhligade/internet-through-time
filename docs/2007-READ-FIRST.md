@@ -23,6 +23,7 @@
 | Official 10 | ★ Safari · Street View leftover · Gmail open leftover · Facebook Platform leftover · Twitter leftover · YouTube leftover · Tumblr leftover · Kindle leftover · XP/IE6 residual · Safari Queue |
 | First door | **lean from scratch**. Do **not** restore an old forest. |
 | 2× leftover | **120** writers (40+40+40). Older 5× / 49-row notebooks are **not** 2×. |
+| Leftover-3× unique dest-true | **9 leftover dests** · map [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) · wiki / myspace / maps · ebay / stumble / wow · flickr / reddit / digg |
 
 ## Dual-cite (reopened 2026-09-01)
 

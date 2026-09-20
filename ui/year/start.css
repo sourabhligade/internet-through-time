@@ -304,6 +304,166 @@ html[data-itt-year="2013"] .ott-flows a {
   color: #e8fff8;
 }
 
+/* 2015–2021 · Chrome habit landing. Not GeoCities list. Not IE 5. No brand pixels. */
+html[data-itt-start-habit],
+html[data-itt-year="2015"],
+html[data-itt-year="2016"],
+html[data-itt-year="2017"],
+html[data-itt-year="2018"],
+html[data-itt-year="2019"],
+html[data-itt-year="2020"],
+html[data-itt-year="2021"],
+html[data-itt-year="2022"] {
+  color-scheme: only light !important;
+  background: #f8f9fa !important;
+}
+html[data-itt-start-habit] body.itt-start-page,
+html[data-itt-year="2015"] body.itt-start-page,
+html[data-itt-year="2016"] body.itt-start-page,
+html[data-itt-year="2017"] body.itt-start-page,
+html[data-itt-year="2018"] body.itt-start-page,
+html[data-itt-year="2019"] body.itt-start-page,
+html[data-itt-year="2020"] body.itt-start-page,
+html[data-itt-year="2021"] body.itt-start-page,
+html[data-itt-year="2022"] body.itt-start-page {
+  background: #f8f9fa !important;
+  color: #202124 !important;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+  color-scheme: only light !important;
+}
+html[data-itt-start-habit] #itt-exhibit-nav,
+html[data-itt-start-habit] #itt-wayfind,
+html[data-itt-start-habit] .itt-hub-exit,
+html[data-itt-year="2015"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2016"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2017"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2018"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2019"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2020"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2021"] body.itt-start-page #itt-exhibit-nav {
+  display: none !important;
+}
+html[data-itt-start-habit] #itt-year-start,
+html[data-itt-year="2015"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2016"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2017"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2018"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2019"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2020"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2021"] body.itt-start-page #itt-year-start {
+  max-width: 720px;
+  margin: 28px auto 48px;
+  padding: 0 20px;
+}
+html[data-itt-start-habit] .itt-year-star,
+html[data-itt-year="2015"] .itt-year-star,
+html[data-itt-year="2016"] .itt-year-star,
+html[data-itt-year="2017"] .itt-year-star,
+html[data-itt-year="2018"] .itt-year-star,
+html[data-itt-year="2019"] .itt-year-star,
+html[data-itt-year="2020"] .itt-year-star,
+html[data-itt-year="2021"] .itt-year-star {
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+html[data-itt-start-habit] .itt-year-star a,
+html[data-itt-year="2015"] .itt-year-star a,
+html[data-itt-year="2016"] .itt-year-star a,
+html[data-itt-year="2017"] .itt-year-star a,
+html[data-itt-year="2018"] .itt-year-star a,
+html[data-itt-year="2019"] .itt-year-star a,
+html[data-itt-year="2020"] .itt-year-star a,
+html[data-itt-year="2021"] .itt-year-star a {
+  display: block;
+  padding: 18px 20px;
+  background: #fff !important;
+  border: 1px solid #dadce0 !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #202124 !important;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.12);
+}
+html[data-itt-start-habit] .itt-year-star a:hover,
+html[data-itt-year="2015"] .itt-year-star a:hover,
+html[data-itt-year="2016"] .itt-year-star a:hover,
+html[data-itt-year="2017"] .itt-year-star a:hover,
+html[data-itt-year="2018"] .itt-year-star a:hover,
+html[data-itt-year="2019"] .itt-year-star a:hover,
+html[data-itt-year="2020"] .itt-year-star a:hover,
+html[data-itt-year="2021"] .itt-year-star a:hover {
+  border-color: #1967d2 !important;
+  color: #1967d2 !important;
+}
+
+/* 2021 New Tab door — hero + shortcut tiles. Keep ol for e2e. No brand pixels. */
+html[data-itt-year="2021"] .itt-start-hero {
+  margin: 0 0 24px;
+}
+html[data-itt-year="2021"] .itt-start-kicker {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+html[data-itt-year="2021"] .itt-start-hero .itt-year-star {
+  margin: 0;
+}
+html[data-itt-year="2021"] .itt-start-hero .itt-year-star a {
+  font-size: 22px;
+  line-height: 1.3;
+  border-radius: 8px;
+}
+html[data-itt-year="2021"] .itt-start-sub {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #5f6368;
+}
+html[data-itt-year="2021"] .ott-guided ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+html[data-itt-year="2021"] .ott-guided ol > li {
+  margin: 0;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 16px;
+  font-size: 13px;
+}
+html[data-itt-year="2021"] .ott-flows ol[data-itt-ten-flows] {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+html[data-itt-year="2021"] .ott-flows ol[data-itt-ten-flows] > li {
+  margin: 0;
+  min-height: 72px;
+  padding: 12px 10px;
+  background: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+html[data-itt-year="2021"] .ott-flows ol[data-itt-ten-flows] > li a {
+  display: block;
+  height: 100%;
+}
+@media (max-width: 720px) {
+  html[data-itt-year="2021"] .ott-flows ol[data-itt-ten-flows] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* 2015–2019 · Chrome habit / Win10, not IE 5 black cards */
 html[data-itt-year="2015"] .ott-guided,
 html[data-itt-year="2015"] .ott-flows,
@@ -322,10 +482,12 @@ html[data-itt-year="2021"] .ott-flows,
 html[data-itt-year="2022"] .ott-guided,
 html[data-itt-year="2022"] .ott-flows {
   background: #ffffff !important;
-  color: #111 !important;
-  border: 1px solid #c8c8c8 !important;
-  border-radius: 0;
+  color: #202124 !important;
+  border: 1px solid #dadce0 !important;
+  border-radius: 8px;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  padding: 16px 20px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.08);
 }
 html[data-itt-year="2015"] .ott-guided a,
 html[data-itt-year="2015"] .ott-flows a,
@@ -341,7 +503,24 @@ html[data-itt-year="2020"] .ott-guided a,
 html[data-itt-year="2020"] .ott-flows a,
 html[data-itt-year="2021"] .ott-guided a,
 html[data-itt-year="2021"] .ott-flows a {
-  color: #125688 !important;
+  color: #1967d2 !important;
+  text-decoration: none;
+}
+html[data-itt-year="2015"] .ott-guided a:hover,
+html[data-itt-year="2015"] .ott-flows a:hover,
+html[data-itt-year="2016"] .ott-guided a:hover,
+html[data-itt-year="2016"] .ott-flows a:hover,
+html[data-itt-year="2017"] .ott-guided a:hover,
+html[data-itt-year="2017"] .ott-flows a:hover,
+html[data-itt-year="2018"] .ott-guided a:hover,
+html[data-itt-year="2018"] .ott-flows a:hover,
+html[data-itt-year="2019"] .ott-guided a:hover,
+html[data-itt-year="2019"] .ott-flows a:hover,
+html[data-itt-year="2020"] .ott-guided a:hover,
+html[data-itt-year="2020"] .ott-flows a:hover,
+html[data-itt-year="2021"] .ott-guided a:hover,
+html[data-itt-year="2021"] .ott-flows a:hover {
+  text-decoration: underline;
 }
 
 /* 2022 Starting Point — Chrome-era links, not Netscape underlines */

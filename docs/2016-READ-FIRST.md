@@ -1,9 +1,9 @@
 # 2016 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **27 years open**. `years/2016/` is the **live lean door** (Instagram Stories star). **2020 live lean** · Zoom Leave. **2022–2025 wiped.** 2013 Vine, 2018 GDPR, 2021 ATT, are live lean doors · 2022 wiped.  
+**Disk truth:** Hub is **28 years open**. `years/2016/` is the **live lean door** (Instagram Stories star). Dest-lock reverted: dest folders **32** (origin lean). **2020 live lean** · Zoom Leave. **2022 ChatGPT live.** 2013 Vine, 2018 GDPR, 2021 ATT, are live lean doors.  
 **Prefix:** `itt16`  
-**Clone shape from:** live `years/2015/` (lean door · ~32 HTML · Periscope star). **Do not** restore git `HEAD` `years/2016/` or `/tmp/itt-2016-forest-backup-*`.
+**Clone shape from:** live `years/2015/` (lean door · Periscope star). **Do not** restore git dest-farm `years/2016/` (132 dests) or `/tmp/itt-2016-forest-backup-*`.
 
 | Doc | Role |
 |-----|------|
@@ -60,4 +60,4 @@
 
 1. This file.  
 2. [`DISK-TRUTH.md`](DISK-TRUTH.md).  
-3. Do not dest-farm. Do not restore an old 2016 forest.
+3. Dest-lock reverted: dest folders **32** (origin lean). Do not restore the 132-dest dest-farm forest. Do not add more dests.

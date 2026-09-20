@@ -226,6 +226,19 @@ const STAR = {
       await page.locator("[data-ig12-share]").click();
     },
   },
+  "itt12-pin": {
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("Pinterest leftover");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator('[data-pin-tile="kitchen"]').click();
+      await page.locator('[data-pin-tile="wedding"]').click();
+      await page.locator("[data-pin-save]").click();
+    },
+  },
   "itt13-vine-posts": {
     incomplete: async (page) => {
       await page.locator("[data-vn13-post]").click();
@@ -301,9 +314,9 @@ const STAR = {
       await page.locator("[data-zoom-leave]").click();
     },
     complete: async (page) => {
-      await page.locator("[data-zoom-req]").nth(0).check();
-      await page.locator("[data-zoom-req]").nth(1).check();
-      await page.locator("[data-zoom-mute]").click();
+      const reqs = page.locator("[data-official-verb-host] [data-zoom-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
       await page.locator("[data-zoom-chat]").fill("can you hear me");
       await page.locator("[data-zoom-send]").click();
       await page.locator("[data-zoom-leave]").click();
@@ -314,8 +327,7 @@ const STAR = {
       await page.locator("[data-official-trap]").click();
     },
     complete: async (page) => {
-      await page.locator('[data-att-hop="privacy"]').click();
-      await page.locator('[data-att-hop="tracking"]').click();
+      await page.locator("[data-official-need]").fill("Museum App");
       await page.locator("[data-official-req]").nth(0).check();
       await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-official-verb]").click();
@@ -463,7 +475,7 @@ async function runDest(page, d) {
     return;
   }
 
-  if (html.indexOf('data-storage-key="' + suffix + '"') !== -1) {
+  if (html.indexOf('data-storage-key="' + suffix + '"') !== -1 && html.indexOf("data-official-verb") === -1) {
     const btn = page.locator(`[data-itt-real-save][data-storage-key="${suffix}"]`).first();
     await btn.waitFor({ timeout: 20000 });
     await page.waitForFunction(

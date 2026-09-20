@@ -9,7 +9,7 @@
 | [`references/2010/`](references/2010/) | Wikipedia 2010 list · extlinks · CDX · visit log |
 | Parent live year | `years/2009/` · `itt09` |
 
-**Disk truth:** Hub is **27 years open** · **2009 boarded** · **2020 Zoom Leave live** · **2022 wiped**. 2013 Vine and 2018 GDPR are live lean doors. `years/2010/` is a **lean door**. Prior 2010 forest is **not** the source of truth. Do not restore it.
+**Disk truth:** Hub is **28 years open** · **2009 boarded** · **2023–2025 wiped**. 2013 Vine, 2018 GDPR, and 2022 ChatGPT are live lean doors. `years/2010/` is a **dest-lock lean door**. Prior 2010 forest is **not** the source of truth. Do not restore it.
 
 ---
 
@@ -46,4 +46,6 @@
 ## Door status
 
 **2010 is live.** Instagram iOS is the star. Do not restore the old 115-HTML forest.
+
+Leftover-3× unique dest-true: **9 leftover dests**. Map [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md). Incomplete never writes. Leftover never writes `itt10-ig-posts`.
 

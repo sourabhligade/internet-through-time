@@ -121,6 +121,19 @@
   color: #fff;
 }
 
+/* 2015–2021: Win95 “Navigate:” legend + Machine/Web/Game band are 1995 museum chrome.
+   Chrome habit already has Back, Start, and window ×. Do not invent brand pixels. */
+.os-win10 #itt-shell-nav-legend,
+.os-win10 .shell-nav-legend,
+.browser-chrome-habit #itt-shell-nav-legend,
+.browser-chrome-habit .shell-nav-legend,
+.os-win10 #itt-layer-legend,
+.os-win10 .itt-layer-legend,
+.browser-chrome-habit #itt-layer-legend,
+.browser-chrome-habit .itt-layer-legend {
+  display: none !important;
+}
+
 /* Chrome-habit costume: kill leftover Win95 bevels so the year does not read as IE 5 */
 .os-win10 .browser.maximized,
 .os-win10 .browser {

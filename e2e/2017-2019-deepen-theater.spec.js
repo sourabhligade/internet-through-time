@@ -66,7 +66,7 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   const path = require("path");
   test.skip(
     !destOnDisk("/years/2017/sites/zoom17/index.html"),
-    "2017 dest-lock leftover dest gone"
+    "2017 Zoom leftover dest zoom17 missing"
   );
   await walkTheater(page, {
     path: "/years/2017/sites/zoom17/index.html",

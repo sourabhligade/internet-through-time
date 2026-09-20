@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 
 const OPEN = [
-  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'
+  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'
 ];
 const BOARDED = ['2009', '2023', '2024', '2025'];
 const LOCKED = [];
@@ -18,7 +18,8 @@ test.describe('hub + year shells', () => {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
       await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
     }
-    await expect(page.locator('body')).toContainText(/27 years open/i);
+    await expect(page.locator('body')).toContainText(/28 years open/i);
+    await expect(page.locator('body')).not.toContainText(/27 years open/i);
     await expect(page.locator('body')).not.toContainText(/2021[–-]2025 boarded/i);
     await expect(page.locator('a.year-card.available[href*="years/2018"]')).toBeVisible();
     await expect(page.locator('a.year-card.available[href*="years/2015"]')).toBeVisible();
@@ -27,10 +28,12 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.year-card.y2019.available')).toBeVisible();
     await expect(page.locator('a.year-card.available[href*="years/2020"]')).toBeVisible();
     await expect(page.locator('a.year-card.available[href*="years/2021"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[href*="years/2022"]')).toBeVisible();
+    await expect(page.locator('.year-card.locked.y2022')).toHaveCount(0);
     await expect(page.locator('.year-card.y2025')).toHaveCount(0);
   });
 
-  test('passport treats 2020–2021 live and 2022–2025 wiped', async ({ page }) => {
+  test('passport treats 2020–2022 live and 2009 / 2023–2025 not live', async ({ page }) => {
     await page.goto('/');
     const live = await page.evaluate(() => {
       const mp = window.ITT && window.ITT.MuseumProgress;
@@ -56,12 +59,11 @@ test.describe('hub + year shells', () => {
     expect(live.y2009).toBe(false);
     expect(live.y2020).toBe(true);
     expect(live.y2021).toBe(true);
-    expect(live.y2022).toBe(false);
+    expect(live.y2022).toBe(true);
     expect(live.y2023).toBe(false);
     expect(live.y2024).toBe(false);
     expect(live.y2025).toBe(false);
-    expect(live.trails).toEqual(expect.arrayContaining(['2019-start', '2020-start', '2021-start']));
-    expect(live.trails).not.toEqual(expect.arrayContaining(['2022-start']));
+    expect(live.trails).toEqual(expect.arrayContaining(['2019-start', '2020-start', '2021-start', '2022-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['2023-start', '2024-start', '2025-start']));
   });
 
@@ -112,9 +114,10 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2019.available')).toBeVisible();
     await expect(page.locator('.y2020.available')).toBeVisible();
     await expect(page.locator('.y2021.available')).toBeVisible();
-    await expect(page.locator('.y2022.available')).toHaveCount(0);
+    await expect(page.locator('.y2022.available')).toBeVisible();
+    await expect(page.locator('.y2022.locked')).toHaveCount(0);
     await expect(page.locator('.y2025')).toHaveCount(0);
-    await expect(page.locator('body')).toContainText(/27 years open/i);
+    await expect(page.locator('body')).toContainText(/28 years open/i);
     await expect(page.locator('h1')).toHaveCount(1);
   });
 

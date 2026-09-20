@@ -18,27 +18,59 @@ LEAN = {
     "2011",
     "2012",
     "2014",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020",
     "2021",
+    "2022",
 }
 
 EXTRA_KEEP = {
-    "2012": {"chrome", "twitter", "soundcloud"},
-    "2014": {"applepay"},
+    "2007": {
+        "amazon", "amazonmp3", "androidann", "aol", "appletv", "ask", "bbc",
+        "clubpenguin", "feedburner", "friendfeed", "funnyordie", "gears", "hackernews",
+        "icanhas", "iplayer", "ipodtouch", "justintv", "lastfm", "msn", "netflix",
+        "pownce", "safari3", "tesla"
+    },
+    "2010": {
+        "angry", "baidu", "bing", "chromewebstore", "cityville", "ebay", "flickr",
+        "flipboard", "froyo", "googlebuzz", "hulu", "ibooks", "ios4", "kinect",
+        "minecraft", "nexusone", "path", "paypal", "skype", "wikipedia", "wordpress",
+        "yandex"
+    },
+    "2011": {
+        "amazon", "baidu", "chromebook", "codecademy", "duolingo", "github",
+        "googlewallet", "gowalla", "grouponipo", "honeycomb", "ics", "imessage",
+        "ios5", "line", "netflix", "nintendo3ds", "nytpaywall", "path", "psnhack",
+        "reddit", "skypebuy", "skyrim", "snapchat", "stripe", "temple", "tumblr",
+        "wechat", "whatsapp", "wikipedia", "yandex", "zyngaipo"
+    },
+    "2012": {
+        "applemaps", "baidu", "chrome", "coinbase", "coursera", "dropbox", "duolingo",
+        "edx", "etsy", "evernote", "github", "googleplay", "hulu", "ios6", "jellybean",
+        "kindlefirehd", "linkedin", "netflix", "nexus7", "soundcloud", "tinder",
+        "tumblr", "twitter", "udacity", "vk", "whatsapp", "yandex"
+    },
+    "2014": {
+        "alibabaipo", "amazon", "androidl", "applepay", "baidu", "chrome", "echo",
+        "flappybird", "game2048", "github", "google", "inbox", "ios8", "netflix",
+        "oculusfb", "reddit", "vk", "yahoo", "yandex"
+    },
     "2019": {
-        "reddit", "wikipedia", "netflix", "spotify", "snapchat", "twitch",
-        "slack", "uber", "whatsapp", "linkedin", "github", "hulu",
-        "switchlite", "applecard", "pinterest", "cnil", "ftc", "ios13", "ipados",
+        "applecard", "cnil", "ftc", "github", "hulu", "ios13", "ipados", "linkedin",
+        "netflix", "pinterest", "reddit", "slack", "snapchat", "spotify", "switchlite",
+        "twitch", "uber", "whatsapp", "wikipedia"
     },
     "2020": {
-        "twitter", "chrome", "windows10", "iphone", "spotify", "twitch", "uber",
-        "whatsapp", "linkedin", "github", "hulu", "airbnb", "peacock", "hbomax",
-        "edge", "notion", "figma", "robinhood", "coinbase",
+        "airbnb", "chrome", "clubhouse", "coinbase", "edge", "figma", "github",
+        "hbomax", "hulu", "iphone", "linkedin", "notion", "peacock", "robinhood",
+        "spotify", "twitch", "twitter", "uber", "whatsapp", "windows10"
+    },
+    "2021": {
+        "baidu", "clubhouse21", "coinbaseipo", "discord", "epicapple", "github", "m1",
+        "netflix", "nft", "reddit", "tiktok", "twitch", "wikipedia", "yahoo", "yandex"
+    },
+    "2022": {
+        "baidu", "chrome", "dalle2", "discord", "github", "ios16", "linkedin", "m2",
+        "midjourney", "musk", "pinterest", "snapchat", "spotify", "stablediff", "temu",
+        "twitch", "whatsapp", "yahoo", "yandex"
     },
 }
 

@@ -1,8 +1,7 @@
 // @ts-check
 /**
- * Year-true PACK dests — dest-true leftover, not two-click mock.
- * Empty / one click / product without honesty never writes.
- * Complete writes leftover key only. Never the year star.
+ * Year-true leftover dests — dest-true leftover, not two-click mock PACK.
+ * Empty / trap / no honesty never writes. Complete writes leftover. Never star.
  */
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
@@ -25,17 +24,6 @@ const STAR = {
   2008: "itt08-github",
 };
 
-async function waitPack(page) {
-  await page.waitForFunction(
-    () =>
-      document.documentElement.getAttribute("data-itt-feat-yearTruePacks") === "1" ||
-      document.documentElement.getAttribute("data-itt-immersion-booted") != null,
-    null,
-    { timeout: 20000 }
-  );
-  await page.waitForTimeout(150);
-}
-
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
     ks.forEach((k) => {
@@ -48,32 +36,11 @@ async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-async function doProduct(page, type) {
-  if (type === "fillGo") {
-    await page.locator("[data-pack-q]").fill("museum residual");
-    await page.locator("[data-pack-go]").click();
-    return;
-  }
-  if (type === "pickStart") {
-    await page.locator("[data-pack-pick]").first().click();
-    await page.locator("[data-pack-start]").click();
-    return;
-  }
-  await page.locator("[data-pack-a]").click();
-  await page.locator("[data-pack-b]").click();
+function leftoverKey(year, suffix) {
+  return "itt" + String(year).slice(2) + "-" + suffix;
 }
 
-async function doHonest(page) {
-  const reqs = page.locator("[data-pack-req]");
-  const n = await reqs.count();
-  expect(n, "pack honesty ticks").toBeGreaterThanOrEqual(2);
-  for (let i = 0; i < n; i++) await reqs.nth(i).check();
-  const field = page.locator("[data-pack-field]").first();
-  await expect(field, "pack dest-true field").toBeVisible();
-  await field.fill("leftover residual");
-}
-
-test("catalog packs that still have a pack UI are dest-true leftover", () => {
+test("catalog leftover dests are dest-true leftover, not PACK mock", () => {
   const hits = [];
   for (const p of PACKS) {
     const file = path.join(ROOT, p.path.replace(/^\//, ""));
@@ -82,53 +49,63 @@ test("catalog packs that still have a pack UI are dest-true leftover", () => {
       continue;
     }
     const html = fs.readFileSync(file, "utf8");
-    if (!/data-itt-pack=/.test(html)) continue;
-    if ((html.match(/data-pack-req/g) || []).length < 2) hits.push(p.year + "/" + p.id + " <2 pack ticks");
-    if (!/data-pack-field/.test(html)) hits.push(p.year + "/" + p.id + " no pack field");
+    if (/data-itt-pack(?:=|-type)/.test(html)) hits.push(p.year + "/" + p.id + " still PACK mock");
+    if (/data-official-key=/.test(html)) continue;
+    if (!/data-itt-dest-true/.test(html)) hits.push(p.year + "/" + p.id + " no dest-true leftover");
+    if (!/data-lo-save/.test(html)) hits.push(p.year + "/" + p.id + " no leftover save");
+    if (!/data-lo-field/.test(html)) hits.push(p.year + "/" + p.id + " no leftover field");
   }
   expect(hits, hits.join(" · ")).toEqual([]);
 });
 
-test.describe("Year-true packs — dest-true leftover", () => {
+test.describe("Year-true leftover dests — dest-true leftover", () => {
   for (const p of PACKS) {
     const star = STAR[p.year];
-    test(`${p.year} ${p.id} incomplete / no honesty never writes ${p.key}`, async ({ page }) => {
+    test(`${p.year} ${p.id} empty / trap never writes leftover never star`, async ({ page }) => {
       await page.goto(p.path);
-      await clearKeys(page, [p.key, star]);
+      const panel = page.locator("[data-lo-panel][data-itt-dest-true]").first();
+      test.skip((await panel.count()) === 0, p.id + " official dest / no leftover panel");
+      const suffix = await panel.locator("[data-lo-save]").first().getAttribute("data-lo-key");
+      const key = leftoverKey(p.year, suffix || p.id);
+      await clearKeys(page, [key, p.key, star]);
       await page.reload();
-      await waitPack(page);
-      const packUi = page.locator("[data-itt-pack], [data-pack-a], [data-pack-go], [data-pack-start]");
-      test.skip((await packUi.count()) === 0, p.id + " dest is not a year-true pack anymore");
-
-      if (p.type === "fillGo") {
-        await page.locator("[data-pack-go]").click();
-      } else if (p.type === "pickStart") {
-        await page.locator("[data-pack-start]").click();
-      } else {
-        await page.locator("[data-pack-a]").click();
-      }
-      expect(await getKey(page, p.key), "one click").toBeFalsy();
-
-      await doProduct(page, p.type);
-      expect(await getKey(page, p.key), "product without honesty").toBeFalsy();
+      const p2 = page.locator("[data-lo-panel][data-itt-dest-true]").first();
+      await p2.locator("[data-lo-save]").first().click();
+      expect(await getKey(page, key), "empty save").toBeFalsy();
+      const trap = p2.locator("[data-lo-trap]").first();
+      if ((await trap.count()) > 0) await trap.click();
+      expect(await getKey(page, key), "trap").toBeFalsy();
       expect(await getKey(page, star), "star after incomplete").toBeFalsy();
     });
 
-    test(`${p.year} ${p.id} complete writes leftover ${p.key} never star`, async ({ page }) => {
+    test(`${p.year} ${p.id} complete writes leftover never star`, async ({ page }) => {
       await page.goto(p.path);
-      await clearKeys(page, [p.key, star]);
+      const panel = page.locator("[data-lo-panel][data-itt-dest-true]").first();
+      test.skip((await panel.count()) === 0, p.id + " official dest / no leftover panel");
+      const suffix = await panel.locator("[data-lo-save]").first().getAttribute("data-lo-key");
+      const key = leftoverKey(p.year, suffix || p.id);
+      await clearKeys(page, [key, p.key, star]);
       await page.reload();
-      await waitPack(page);
-      const packUi = page.locator("[data-itt-pack], [data-pack-a], [data-pack-go], [data-pack-start]");
-      test.skip((await packUi.count()) === 0, p.id + " dest is not a year-true pack anymore");
-
-      await doHonest(page);
-      await doProduct(page, p.type);
-      await expect.poll(() => getKey(page, p.key), { timeout: 8000 }).toBeTruthy();
-      const blob = JSON.parse((await getKey(page, p.key)) || "{}");
-      expect(blob.real, p.key + " real").toBe(true);
-      expect(blob.leftover, p.key + " leftover").toBe(true);
-      expect(await getKey(page, star), p.key + " wrote star").toBeFalsy();
+      const p2 = page.locator("[data-lo-panel][data-itt-dest-true]").first();
+      const keep = p2.locator('[data-lo-pick="keep"]');
+      if ((await keep.count()) > 0) {
+        await keep.first().click();
+      } else {
+        const picks = p2.locator("[data-lo-pick]");
+        const pn = await picks.count();
+        for (let i = 0; i < Math.min(pn, 2); i++) await picks.nth(i).click();
+      }
+      const reqs = p2.locator("[data-lo-req]");
+      const n = await reqs.count();
+      expect(n, "leftover honesty ticks").toBeGreaterThanOrEqual(2);
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await p2.locator("[data-lo-field]").first().fill("leftover residual");
+      await p2.locator("[data-lo-save]").first().click();
+      await expect.poll(() => getKey(page, key), { timeout: 8000 }).toBeTruthy();
+      const blob = JSON.parse((await getKey(page, key)) || "{}");
+      expect(blob.leftover, key + " leftover").toBe(true);
+      expect(blob.official, key + " official").toBeFalsy();
+      expect(await getKey(page, star), key + " wrote star").toBeFalsy();
     });
   }
 });

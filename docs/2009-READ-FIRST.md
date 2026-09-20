@@ -19,7 +19,7 @@
 | Scale June | **238,027,855** sites (+38%) · **~1,766,403,814** users · ILS |
 | Dual-cite | Pingdom Dec **~234 million** hostnames — label, do not blend |
 | Guided `<ol>` | **exactly 6** |
-| 3× leftover | Omegle · Chatroulette · Wikipedia |
+| 3× leftover | Catalog leftover-3× (Omegle · Chatroulette · Wikipedia) is **not** a visitor flow. Map [`2009-LEFTOVER-3X-UNIQUE.md`](2009-LEFTOVER-3X-UNIQUE.md). Do not dest-true leftover-3× unique dest-true dests. |
 | HTML cap | ~50. No forest restore. |
 
 ## Do not

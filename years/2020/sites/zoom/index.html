@@ -13,13 +13,14 @@
 <div style="max-width:28em;margin:24px auto;padding:20px;background:#2d2d2d;border-radius:8px;font-family:Segoe UI,Arial,sans-serif" data-official-verb-host="1">
 <h1 style="font-size:20px">Leave meeting</h1>
 <p>Mute, then chat, then Leave. Empty / Stay never writes <code>itt20-zoom</code>.</p>
-<label style="display:block;font-size:12px;margin:8px 0"><input type="checkbox" data-official-req> Mute</label>
-<p><input type="text" data-official-need maxlength="80" placeholder="chat leftover" aria-label="chat" style="width:100%;box-sizing:border-box;padding:8px"></p>
-<label style="display:block;font-size:12px;margin:8px 0"><input type="checkbox" data-official-req> Honesty. Empty / Stay never write.</label>
-<label style="display:block;font-size:12px;margin:8px 0"><input type="checkbox" data-official-req> This dest, not Disney+ Continue / ATT Ask.</label>
+<label style="display:block;font-size:12px;margin:8px 0"><input type="checkbox" data-official-req data-zoom-req data-zoom-mute> Mute</label>
+<p><input type="text" data-official-need data-zoom-chat maxlength="80" placeholder="chat leftover" aria-label="chat" style="width:100%;box-sizing:border-box;padding:8px"></p>
+<label style="display:block;font-size:12px;margin:8px 0"><input type="checkbox" data-official-req data-zoom-req> Honesty. Empty / Stay never write.</label>
+<label style="display:block;font-size:12px;margin:8px 0"><input type="checkbox" data-official-req data-zoom-req> This dest, not Disney+ Continue / ATT Ask.</label>
 <p>
 <button type="button" data-official-trap>Stay</button>
-<button type="button" data-official-verb>Leave</button>
+<button type="button" data-zoom-send>Send chat</button>
+<button type="button" data-official-verb data-zoom-leave>Leave</button>
 <span data-official-status></span>
 </p>
 </div>

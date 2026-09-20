@@ -90,6 +90,118 @@ test("2021 unique leftover-3×n stops at 5 leftover dests", () => {
   expect(rows).toHaveLength(5);
 });
 
+test("2022 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
+  const rows = ROWS.filter((r) => r.year === "2022");
+  expect(rows.map((r) => r.id)).toEqual([
+    "amazon",
+    "google",
+    "instagram",
+    "facebook",
+    "youtube",
+    "reddit",
+    "wikipedia",
+    "netflix",
+    "nyt",
+  ]);
+  const official = new Set([
+    "chatgpt",
+    "wordle",
+    "twitter",
+    "bereal",
+    "iphone",
+    "ftx",
+    "mastodon",
+    "tiktok",
+    "windows11",
+    "playable",
+  ]);
+  for (const r of rows) {
+    expect(official.has(r.id), r.id + " must not be official dest").toBe(false);
+  }
+});
+
+test("2007 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
+  const rows = ROWS.filter((r) => r.year === "2007");
+  expect(rows.map((r) => r.id)).toEqual([
+    "wiki",
+    "myspace",
+    "maps",
+    "ebay",
+    "stumble",
+    "wow",
+    "flickr",
+    "reddit",
+    "digg",
+  ]);
+  const official = new Set([
+    "iphone",
+    "streetview",
+    "gmail",
+    "fbplat",
+    "twitter",
+    "youtube",
+    "tumblr",
+    "kindle",
+    "ie6",
+    "playable",
+  ]);
+  for (const r of rows) {
+    expect(official.has(r.id), r.id + " must not be official dest").toBe(false);
+  }
+});
+
+test("2010 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
+  const rows = ROWS.filter((r) => r.year === "2010");
+  expect(rows.map((r) => r.id)).toEqual([
+    "netflix",
+    "tumblr",
+    "formspring",
+    "chrome",
+    "wave",
+    "android",
+    "reddit",
+    "google",
+    "groupon",
+  ]);
+  const official = new Set([
+    "instagram",
+    "iphone",
+    "ipad",
+    "facebook",
+    "farmville",
+    "imgur",
+    "foursquare",
+    "twitter",
+    "youtube",
+    "playable",
+  ]);
+  for (const r of rows) {
+    expect(official.has(r.id), r.id + " must not be official dest").toBe(false);
+  }
+});
+
+test("2008 and 2009 are not leftover-3× unique dest-true rows", () => {
+  expect(ROWS.filter((r) => r.year === "2008")).toHaveLength(0);
+  expect(ROWS.filter((r) => r.year === "2009")).toHaveLength(0);
+});
+
+for (const row of ROWS.filter((r) => r.year === "2007" || r.year === "2010")) {
+  test(`${row.year} ${row.id} has one dest-true leftover-3× go · no mock leftover go`, async ({
+    page,
+  }) => {
+    await page.goto(row.href);
+    await revealLeftoverRails(page);
+    const lo3xGo = page.locator("[data-itt-lo3x] [data-pop-go]");
+    await expect(lo3xGo, row.href + " dest-true leftover-3× go").toHaveCount(1);
+    const allGo = page.locator("[data-pop-go]");
+    await expect(allGo, row.href + " no mock leftover go").toHaveCount(1);
+    await expect(
+      page.locator("[data-itt-capture-cite], .itt-pixel-failed").first(),
+      row.href + " failed-final / capture-cite"
+    ).toBeAttached();
+  });
+}
+
 test("2020 unique leftover-3×n is 9 dests dest-disjoint from official 10", () => {
   const rows = ROWS.filter((r) => r.year === "2020");
   expect(rows.map((r) => r.id)).toEqual([

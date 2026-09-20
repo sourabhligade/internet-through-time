@@ -468,16 +468,28 @@
       {"n": 10, "name": "Safari Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt07-game-safariq", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone Safari"}
     ],
     "2021": [
-      {"n": 1, "name": "ATT Ask", "href": "sites/att/index.html", "match": "/att/", "whenKey": "itt21-att", "nextHref": "sites/signal/index.html", "nextLabel": "Signal leftover"},
-      {"n": 2, "name": "Signal leftover", "href": "sites/signal/index.html", "match": "/signal/", "whenKey": "itt21-signal", "nextHref": "sites/copilot/index.html", "nextLabel": "Copilot waitlist"},
-      {"n": 3, "name": "Copilot waitlist", "href": "sites/copilot/index.html", "match": "/copilot/", "whenKey": "itt21-copilot", "nextHref": "sites/meta/index.html", "nextLabel": "Meta rename leftover"},
-      {"n": 4, "name": "Meta rename leftover", "href": "sites/meta/index.html", "match": "/meta/", "whenKey": "itt21-meta", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11 leftover"},
-      {"n": 5, "name": "Windows 11 leftover", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt21-win11", "nextHref": "sites/flash/index.html", "nextLabel": "Flash brick"},
+      {"n": 1, "name": "ATT Ask", "href": "sites/att/index.html", "match": "/att/", "whenKey": "itt21-att", "nextHref": "sites/signal/index.html", "nextLabel": "Signal"},
+      {"n": 2, "name": "Signal", "href": "sites/signal/index.html", "match": "/signal/", "whenKey": "itt21-signal", "nextHref": "sites/copilot/index.html", "nextLabel": "Copilot waitlist"},
+      {"n": 3, "name": "Copilot waitlist", "href": "sites/copilot/index.html", "match": "/copilot/", "whenKey": "itt21-copilot", "nextHref": "sites/meta/index.html", "nextLabel": "Meta rename"},
+      {"n": 4, "name": "Meta rename", "href": "sites/meta/index.html", "match": "/meta/", "whenKey": "itt21-meta", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11"},
+      {"n": 5, "name": "Windows 11", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt21-win11", "nextHref": "sites/flash/index.html", "nextLabel": "Flash brick"},
       {"n": 6, "name": "Flash brick", "href": "sites/flash/index.html", "match": "/flash/", "whenKey": "itt21-flash-brick", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome habit"},
       {"n": 7, "name": "Chrome habit", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt21-chrome", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10 residual"},
-      {"n": 8, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt21-win10", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook leftover"},
-      {"n": 9, "name": "Facebook leftover", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt21-pop-facebook", "nextHref": "sites/playable/game.html", "nextLabel": "Five Letter"},
+      {"n": 8, "name": "Windows 10 residual", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt21-win10", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook"},
+      {"n": 9, "name": "Facebook", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt21-pop-facebook", "nextHref": "sites/playable/game.html", "nextLabel": "Five Letter"},
       {"n": 10, "name": "Five Letter", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt21-game-five", "nextHref": "sites/att/index.html", "nextLabel": "ATT Ask"}
+    ],
+    "2022": [
+      {"n": 1, "name": "ChatGPT Send", "href": "sites/chatgpt/index.html", "match": "/chatgpt/", "whenKey": "itt22-chatgpt", "nextHref": "sites/wordle/index.html", "nextLabel": "Wordle"},
+      {"n": 2, "name": "Wordle", "href": "sites/wordle/index.html", "match": "/wordle/", "whenKey": "itt22-wordle", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter bird"},
+      {"n": 3, "name": "Twitter bird", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt22-twitter", "nextHref": "sites/bereal/index.html", "nextLabel": "BeReal"},
+      {"n": 4, "name": "BeReal", "href": "sites/bereal/index.html", "match": "/bereal/", "whenKey": "itt22-bereal", "nextHref": "sites/iphone/14.html", "nextLabel": "Dynamic Island"},
+      {"n": 5, "name": "Dynamic Island", "href": "sites/iphone/14.html", "match": "/iphone/", "whenKey": "itt22-island", "nextHref": "sites/ftx/index.html", "nextLabel": "FTX"},
+      {"n": 6, "name": "FTX", "href": "sites/ftx/index.html", "match": "/ftx/", "whenKey": "itt22-ftx", "nextHref": "sites/mastodon/index.html", "nextLabel": "Mastodon"},
+      {"n": 7, "name": "Mastodon", "href": "sites/mastodon/index.html", "match": "/mastodon/", "whenKey": "itt22-mastodon", "nextHref": "sites/tiktok/index.html", "nextLabel": "TikTok"},
+      {"n": 8, "name": "TikTok", "href": "sites/tiktok/index.html", "match": "/tiktok/", "whenKey": "itt22-tiktok", "nextHref": "sites/windows11/index.html", "nextLabel": "Windows 11"},
+      {"n": 9, "name": "Windows 11", "href": "sites/windows11/index.html", "match": "/windows11/", "whenKey": "itt22-win11", "nextHref": "sites/playable/game.html", "nextLabel": "Prompt Queue"},
+      {"n": 10, "name": "Prompt Queue", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt22-game-prompt", "nextHref": "sites/chatgpt/index.html", "nextLabel": "ChatGPT Send"}
     ]
   };
 })(typeof window !== "undefined" ? window : this);
