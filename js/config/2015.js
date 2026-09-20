@@ -54,6 +54,7 @@
     "sites/instantarticles/index.html",
     "sites/ios9/about.html",
     "sites/ios9/blockers.html",
+    "sites/ios9/index.html",
     "sites/ipadpro/index.html",
     "sites/ipfs/index.html",
     "sites/iphone6s/index.html",

@@ -1,7 +1,7 @@
 # TODO — full audit map (every year, every leftover, every stale MD)
 
 **Date:** 2026-09-20  
-**Source:** live `years/` · every museum Markdown in `docs/` + root `README.md` + `ui/year/README.md` (66 files) · every `e2e/*.spec.js` (328) · every `js/config/1994.js`–`2022.js` (29, all parse, 0 missing urlMap files) · `docs/DEST-TRUE-FLOW-NAMES.md` · `docs/YEAR-FALSE-KEEP-DROP.md` · `docs/DISK-TRUTH.md` · `docs/VISITOR-100-FLOWS.md`.  
+**Source:** live `years/` · every museum Markdown in `docs/` + root `README.md` + `ui/year/README.md` (66 files) · every `e2e/*.spec.js` (328) · every `js/config/1994.js`–`2022.js` (29, all parse, 0 missing urlMap files) · `docs/DEST-TRUE-FLOW-NAMES.md` · `docs/YEAR-FALSE-KEEP-DROP.md` · `docs/DISK-TRUTH.md` · `docs/VISITOR-100-FLOWS.md` · `docs/YEAR-BY-YEAR-RESEARCH-STEPS.md`.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`. This file does not override that.  
 **Out of this file:** git **push**. Do not push unless a later message says push.  
 **Flip `[x]` only after disk + e2e (or a named skip with reason).** Open boxes are work, stops, or stale-doc strikes. Read the row. Do not dest-farm to close a box.
@@ -67,7 +67,7 @@ Leftover dest KEEP slugs still on disk (do not delete):
 |------|--------------------------|
 | 2007 | hackernews, friendfeed, netflix, appletv, ipodtouch, justintv, icanhas, funnyordie, pownce, androidann, gears, iplayer, amazonmp3, safari3 |
 | 2010 | flipboard, minecraft, hulu, angry, path, googlebuzz, chromewebstore, kinect, cityville, ibooks |
-| 2011 | snapchat, ios5, imessage, chromebook, honeycomb, ics, wechat, line, temple, skyrim, nytpaywall, skypebuy, grouponipo, zyngaipo, googlewallet, stripe, codecademy, nintendo3ds, psnhack, gowalla |
+| 2011 | snapchat, ios5, imessage, chromebook, honeycomb, ics, wechat, line, temple, skyrim, nytpaywall, skypebuy, grouponipo, zyngaipo, googlewallet, stripe, codecademy, nintendo3ds, psnhack, gowalla. Extra dest KEEP leftover dest-true I/O (not leftover dest KEEP): gmusic, pandora. |
 | 2012 | tinder, duolingo, coursera, udacity, edx, nexus7, jellybean, ios6, googleplay, kindlefirehd, coinbase |
 | 2014 | alibabaipo, oculusfb, inbox, echo, flappybird, game2048, ios8 |
 | 2016 | douyin, airpods, pixel, nougat, allo, duo, googlehome, oculusrift, psvr, overwatch, doom2016, uncharted4, nomanssky, clashroyale, panamapapers, figma, thedao, ethereum, ios10, sierra, daydream, battlefield1, letsencrypt, tesla, mastodon, ringer, athletic, peach, tay, zcash, prisma, vive, miitomo, iana |

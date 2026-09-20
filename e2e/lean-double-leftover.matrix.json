@@ -352,6 +352,22 @@
     "verb": "Check in leftover"
   },
   {
+    "year": "2011",
+    "id": "gmusic",
+    "href": "/years/2011/sites/gmusic/index.html",
+    "key": "itt11-gmusic-lx",
+    "star": "itt11-gplus",
+    "verb": "Play leftover"
+  },
+  {
+    "year": "2011",
+    "id": "pandora",
+    "href": "/years/2011/sites/pandora/index.html",
+    "key": "itt11-pandora-lx",
+    "star": "itt11-gplus",
+    "verb": "Thumb leftover"
+  },
+  {
     "year": "2012",
     "id": "tinder",
     "href": "/years/2012/sites/tinder/index.html",

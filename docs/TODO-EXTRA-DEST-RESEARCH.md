@@ -1,7 +1,7 @@
 # Extra dest drop / replace checklist
 
 **Date:** 2026-09-20
-**Status:** DROP applied 2026-09-20. **539 dest folders deleted.** KEEP extra dests stay. Hrefs retargeted to dests already on disk. Links audit 0 broken.
+**Status:** DROP applied 2026-09-20. **539 dest folders deleted.** KEEP extra dests stay. Hrefs retargeted to dests already on disk. Links audit 0 broken. Extra dest KEEP leftover dest-true I/O implemented 2026-09-20 (`gmusic` · `pandora` · `ios9` dest door). Implement steps per year: [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md).
 **Law:** Do not invent dests. Replacement is a dest **already on disk**. KEEP the extra dest instead of dropping it only if research cites famous-that-year **and** dest-disjoint from official 10 ∪ leftover dest KEEP ∪ leftover-3× unique ∪ leftover-4× unique ∪ 2017 leftover-20.
 **Verdicts:** `DROP` retarget · `KEEP` extra dest stays · `MISS` not researched yet.
 
