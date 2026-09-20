@@ -45,7 +45,6 @@
     "sites/ipad/safari.html",
     "sites/iphone/about.html",
     "sites/iphone/index.html",
-    "sites/kickstarter/index.html",
     "sites/kinect/index.html",
     "sites/minecraft/index.html",
     "sites/netflix/index.html",
@@ -77,7 +76,7 @@
     "sites/wave/index.html",
     "sites/youtube/about.html",
     "sites/youtube/index.html"
-  ];;;;;;;;
+  ];;;;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",
@@ -141,7 +140,6 @@
     fallbackUrlBase: "http://home.microsoft.com/intl/web2010/",
     locationHints: [
       { re: /instagram|instagr\.am/i, path: "sites/instagram/index.html" },
-      { re: /kickstarter/i, path: "sites/kickstarter/index.html" },
       { re: /reddit/i, path: "sites/reddit/index.html" },
       { re: /ipad/i, path: "sites/ipad/index.html" },
       { re: /iphone/i, path: "sites/iphone/index.html" },

@@ -32,14 +32,14 @@ function uniqueIds(year) {
 }
 
 test("2015 / 2017 / 2019 / 2020 dest folders stay (no dest-farm)", () => {
-  expect(destFolders(2015).length).toBe(213);
-  expect(destFolders(2017).length).toBe(222);
-  expect(destFolders(2019).length).toBe(170);
-  expect(destFolders(2020).length).toBe(39);
+  expect(destFolders(2015).length).toBe(50);
+  expect(destFolders(2017).length).toBe(68);
+  expect(destFolders(2019).length).toBe(73);
+  expect(destFolders(2020).length).toBe(22);
 });
 
-test("2016 dest folders 66 · 2018 dest folders 24", () => {
-  expect(destFolders(2016).length).toBe(66);
+test("2016 dest folders 57 · 2018 dest folders 24", () => {
+  expect(destFolders(2016).length).toBe(57);
   expect(destFolders(2018).length).toBe(24);
 });
 

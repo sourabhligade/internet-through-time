@@ -14,13 +14,13 @@ const UNIQUE = require("../scripts/leftover-3x-unique.json");
 const ROOT = path.join(__dirname, "..");
 const WANT_FOLDERS = {
   2007: 33,
-  2010: 30,
-  2011: 48,
+  2010: 29,
+  2011: 41,
   2012: 32,
   2014: 25,
-  2016: 66,
+  2016: 57,
   2018: 24,
-  2020: 39,
+  2020: 22,
   2021: 18,
   2022: 25,
 };
@@ -74,8 +74,8 @@ test("dest folder counts match lean-double disk", () => {
   }
 });
 
-test("2013 dest folders stay holes-only 54", () => {
-  expect(destFolders(2013).length).toBe(54);
+test("2013 dest folders stay holes-only 52", () => {
+  expect(destFolders(2013).length).toBe(52);
 });
 
 for (const row of ROWS) {

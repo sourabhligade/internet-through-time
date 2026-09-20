@@ -239,7 +239,6 @@
       "sites/altavista/about.html": "http://www.altavista.com/about.html",
       "sites/netscape/about.html": "http://www.netscape.com/about.html",
       "sites/plugin/about.html": "http://www.plugin.com/about.html",
-      "sites/microsoft/about.html": "http://www.microsoft.com/about.html",
       "pages/home.html": "http://home.nerf.edu/web1996/",
       "pages/map.html": "http://museum.local/years/1996/map/",
       "pages/about.html": "http://home.nerf.edu/web1996/about.html",
@@ -301,7 +300,6 @@
       "sites/cnn/scitech.html": "http://www.cnn.com/TECH/",
       "sites/cnn/showbiz.html": "http://www.cnn.com/SHOWBIZ/",
       "sites/netscape/index.html": "http://home.netscape.com/",
-      "sites/microsoft/index.html": "http://www.microsoft.com/ie/",
       "sites/plugin/index.html": "http://www.futurewave.com/",
           "sites/portals/wars.html": "http://www.yahoo.com/wars.html",
 },
@@ -351,7 +349,6 @@
       "sites/altavista/about.html": "About",
       "sites/netscape/about.html": "About",
       "sites/plugin/about.html": "About",
-      "sites/microsoft/about.html": "About",
       "pages/home.html": "Welcome to the World Wide Web — 1996",
       "pages/map.html": "1996 — UX flow map",
       "pages/about.html": "About 1996",
@@ -401,7 +398,6 @@
       "sites/cnn/scitech.html": "CNN Interactive - Sci-Tech",
       "sites/cnn/showbiz.html": "CNN Interactive - Showbiz",
       "sites/netscape/index.html": "Netscape",
-      "sites/microsoft/index.html": "Internet Explorer 3.0",
       "sites/plugin/index.html": "FutureSplash"
     },
     defaultBookmarks: [
@@ -491,7 +487,6 @@
         stripIndex: true
       },
       {
-        prefix: "sites/microsoft/",
         base: "http://www.microsoft.com/ie/",
         stripIndex: true
       },
@@ -513,7 +508,6 @@
       { re: /excite/i, path: "sites/excite/index.html" },
       { re: /cnn/i, path: "sites/cnn/index.html" },
       { re: /netscape/i, path: "sites/netscape/index.html" },
-      { re: /microsoft|explorer/i, path: "sites/microsoft/index.html" },
       { re: /futurewave|flash/i, path: "sites/plugin/index.html" },
       { re: /home|nerf/i, path: "pages/home.html" }
     ],

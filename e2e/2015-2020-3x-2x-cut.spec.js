@@ -43,7 +43,7 @@ test.describe("CUT-3X-2X-2015-2020 dest-farm leftover-3× extra dests stay dest-
   });
 
   test("dest folders stay dest-lock-reverted disk counts", () => {
-    const want = { 2015: 213, 2016: 66, 2017: 222, 2019: 170 };
+    const want = { 2015: 50, 2016: 57, 2017: 68, 2019: 73 };
     for (const [y, n] of Object.entries(want)) {
       expect(destFolders(y).length, y + " dest folders").toBe(n);
     }
@@ -51,9 +51,9 @@ test.describe("CUT-3X-2X-2015-2020 dest-farm leftover-3× extra dests stay dest-
 
   test("dest-farm leftover-3× extra dests dest-disjoint leftover dest leftover-3× unique dest-true dests", () => {
     const extra = {
-      2015: ["facebook", "hbonow", "slack", "waweb", "agario", "adblock", "ytgaming", "instant"],
+      2015: ["applewatch", "ios9", "marshmallow", "ethereum", "k8s"],
       2016: ["linkedinms", "jio", "houseparty"],
-      2017: ["hqtrivia", "pubgnote", "facebook2b", "youtubetv", "notpetya", "nnrepeal", "yahoo3b", "iphone8", "pixel2"],
+      2017: ["hqtrivia", "pubgnote", "notpetya", "iphone8", "pixel2"],
     };
     for (const [year, dests] of Object.entries(extra)) {
       const unique = new Set(ROWS.filter((r) => r.year === year).map((r) => r.id));

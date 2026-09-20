@@ -22,6 +22,8 @@ Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023�
 9e. [`LEAN-TRIPLE-2015-2020.md`](LEAN-TRIPLE-2015-2020.md) — 2015–2020 triple look. Criteria. Do not dest-farm 2015/2017/2019. Do not implement dest folders from that file. Checklist: [`LEAN-TRIPLE-2015-2020-CHECKLIST.md`](LEAN-TRIPLE-2015-2020-CHECKLIST.md).
 10. [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) — every plan MD, related code, unimplemented leftover, unused/delete list.
 10b. [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) — start-to-end todo from the 2026-09-20 full audit (every year, every leftover, every stale MD). Push is out of that file.
+10c. [`TODO-EXTRA-DEST-REVERT.md`](TODO-EXTRA-DEST-REVERT.md) — extra leftover dest leftover: how to drop and retarget.
+10d. [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) — every extra dest checklist. KEEP 166 · DROP 539 · MISS 0. Not dest HTML until a named apply pass.
 11. [`FLOW-IMPLEMENT-CHECKLIST.md`](FLOW-IMPLEMENT-CHECKLIST.md) — implement + recheck of every allowed criterion.
 12. [`SOURCES.md`](SOURCES.md) — bibliography.
 

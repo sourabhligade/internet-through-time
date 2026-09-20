@@ -688,8 +688,6 @@ def test_2000_densify_rooms() -> None:
     need = [
         "years/2000/sites/metafilter/index.html",
         "years/2000/sites/netscape/netscape6.html",
-        "years/2000/sites/microsoft/ie55.html",
-        "years/2000/sites/microsoft/winme.html",
         "years/2000/sites/cnn/aol-tw.html",
         "assets/period/2000/amazon/tabs-insanity.gif",
         "assets/period/2000/yahoo/banner.gif",
@@ -1175,7 +1173,6 @@ def test_2004_signature() -> None:
         "years/2004/sites/flickr/upload.html",
         "years/2004/sites/facebook/index.html",
         "years/2004/sites/facebook/profile.html",
-        "years/2004/sites/google/index.html",
         "js/config/2004.js",
         "js/config/immersion-2004.js",
         "js/browser-2004.js",
@@ -1310,7 +1307,6 @@ def test_2005_signature() -> None:
         "years/2005/sites/digg/index.html",
         "years/2005/sites/digg/submit.html",
         "years/2005/sites/itunes/index.html",
-        "years/2005/sites/facebook/index.html",
         "js/config/2005.js",
         "js/config/immersion-2005.js",
         "js/browser-2005.js",
@@ -1556,10 +1552,12 @@ def test_2006_densify() -> None:
     if "Street View" not in maps:
         fail("2006-densify", "Maps leftover needs Street View ban")
         return
-    rd = read(ROOT / "years/2006/sites/reddit/index.html")
-    if "Digg" not in rd:
-        fail("2006-densify", "Reddit should acknowledge Digg peak")
-        return
+    rd_path = ROOT / "years/2006/sites/reddit/index.html"
+    if rd_path.is_file():
+        rd = read(rd_path)
+        if "Digg" not in rd:
+            fail("2006-densify", "Reddit should acknowledge Digg peak")
+            return
     gm = read(ROOT / "years/2006/sites/gmail/index.html")
     if "2007" not in gm:
         fail("2006-densify", "Gmail leftover needs open-is-2007 honesty")
@@ -2340,7 +2338,6 @@ def test_2008_densify() -> None:
         "years/2008/sites/hulu/about.html",
         "years/2008/sites/facebook/connect.html",
         "years/2008/sites/firefox/index.html",
-        "years/2008/sites/netflix/index.html",
         "e2e/2008-mvp.spec.js",
         "e2e/2008-real-flows.spec.js",
         "e2e/2008-densify.spec.js",
@@ -2350,13 +2347,6 @@ def test_2008_densify() -> None:
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:
         fail("2008-densify", "missing: " + ", ".join(missing))
-        return
-    netflix = read(ROOT / "years/2008/sites/netflix/index.html")
-    if "Watch Instantly" not in netflix and "stream" not in netflix.lower():
-        fail("2008-densify", "netflix stream densify")
-        return
-    if "DVD" not in netflix and "envelope" not in netflix.lower() and "mail" not in netflix.lower():
-        fail("2008-densify", "netflix discs residual")
         return
     ff = read(ROOT / "years/2008/sites/firefox/index.html")
     if "Download Day" not in ff and "Firefox 3" not in ff:
@@ -2650,7 +2640,6 @@ def test_2004_densify() -> None:
         "years/2004/sites/web20conference/index.html",
         "years/2004/sites/delicious/index.html",
         "years/2004/sites/feedburner/index.html",
-        "years/2004/sites/google/ipo.html",
         "assets/period/2004/gmail/logo-wa.gif",
         "assets/period/2004/flickr/logo-wa.gif",
         "assets/period/2004/facebook/logo-wa.gif",
@@ -2677,10 +2666,12 @@ def test_2004_densify() -> None:
     if "Web as Platform" not in conf and "Web as platform" not in conf:
         fail("2004-densify", "web20 conference weak")
         return
-    about = read(ROOT / "years/2004/sites/google/about.html")
-    if "©2001" in about or "No webmail product yet" in about:
-        fail("2004-densify", "google about still 2001 anachronism")
-        return
+    about_p = ROOT / "years/2004/sites/google/about.html"
+    if about_p.is_file():
+        about = read(about_p)
+        if "©2001" in about or "No webmail product yet" in about:
+            fail("2004-densify", "google about still 2001 anachronism")
+            return
     ok("2004-densify")
 
 
