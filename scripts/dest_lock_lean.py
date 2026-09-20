@@ -24,34 +24,28 @@ LEAN = {
 
 EXTRA_KEEP = {
     "2007": {
-        "amazon", "amazonmp3", "androidann", "aol", "appletv", "ask", "bbc",
-        "clubpenguin", "feedburner", "friendfeed", "funnyordie", "gears", "hackernews",
-        "icanhas", "iplayer", "ipodtouch", "justintv", "lastfm", "msn", "netflix",
-        "pownce", "safari3", "tesla"
+        "amazonmp3", "androidann", "appletv", "clubpenguin", "feedburner",
+        "friendfeed", "funnyordie", "gears", "hackernews", "icanhas", "iplayer",
+        "ipodtouch", "justintv", "lastfm", "netflix", "pownce", "safari3"
     },
     "2010": {
-        "angry", "baidu", "bing", "chromewebstore", "cityville", "ebay", "flickr",
-        "flipboard", "froyo", "googlebuzz", "hulu", "ibooks", "ios4", "kinect",
-        "minecraft", "nexusone", "path", "paypal", "skype", "wikipedia", "wordpress",
-        "yandex"
+        "chromewebstore", "cityville", "flipboard", "froyo", "googlebuzz", "hulu",
+        "ibooks", "ios4", "kinect", "minecraft", "nexusone", "path"
     },
     "2011": {
-        "amazon", "baidu", "chromebook", "codecademy", "duolingo", "github",
-        "googlewallet", "gowalla", "grouponipo", "honeycomb", "ics", "imessage",
-        "ios5", "line", "netflix", "nintendo3ds", "nytpaywall", "path", "psnhack",
-        "reddit", "skypebuy", "skyrim", "snapchat", "stripe", "temple", "tumblr",
-        "wechat", "whatsapp", "wikipedia", "yandex", "zyngaipo"
+        "chromebook", "codecademy", "duolingo", "googlewallet", "gowalla",
+        "grouponipo", "honeycomb", "ics", "imessage", "ios5", "line", "nintendo3ds",
+        "nytpaywall", "path", "psnhack", "skypebuy", "skyrim", "snapchat", "stripe",
+        "temple", "wechat", "zyngaipo"
     },
     "2012": {
-        "applemaps", "baidu", "chrome", "coinbase", "coursera", "dropbox", "duolingo",
-        "edx", "etsy", "evernote", "github", "googleplay", "hulu", "ios6", "jellybean",
-        "kindlefirehd", "linkedin", "netflix", "nexus7", "soundcloud", "tinder",
-        "tumblr", "twitter", "udacity", "vk", "whatsapp", "yandex"
+        "applemaps", "chrome", "coinbase", "coursera", "duolingo", "edx", "googleplay",
+        "ios6", "jellybean", "kindlefirehd", "nexus7", "soundcloud", "tinder",
+        "twitter", "udacity"
     },
     "2014": {
-        "alibabaipo", "amazon", "androidl", "applepay", "baidu", "chrome", "echo",
-        "flappybird", "game2048", "github", "google", "inbox", "ios8", "netflix",
-        "oculusfb", "reddit", "vk", "yahoo", "yandex"
+        "alibabaipo", "androidl", "applepay", "echo", "flappybird", "game2048",
+        "inbox", "ios8", "oculusfb"
     },
     "2019": {
         "applecard", "cnil", "ftc", "github", "hulu", "ios13", "ipados", "linkedin",
@@ -64,13 +58,10 @@ EXTRA_KEEP = {
         "spotify", "twitch", "twitter", "uber", "whatsapp", "windows10"
     },
     "2021": {
-        "baidu", "clubhouse21", "coinbaseipo", "discord", "epicapple", "github", "m1",
-        "netflix", "nft", "reddit", "tiktok", "twitch", "wikipedia", "yahoo", "yandex"
+        "clubhouse21", "coinbaseipo", "epicapple", "m1", "nft"
     },
     "2022": {
-        "baidu", "chrome", "dalle2", "discord", "github", "ios16", "linkedin", "m2",
-        "midjourney", "musk", "pinterest", "snapchat", "spotify", "stablediff", "temu",
-        "twitch", "whatsapp", "yahoo", "yandex"
+        "dalle2", "ios16", "m2", "midjourney", "musk", "stablediff", "temu"
     },
 }
 

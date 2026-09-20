@@ -17,6 +17,7 @@ Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023�
 9. [`UNDONE.md`](UNDONE.md) — what is still incomplete (plans vs code vs e2e). Missing years out of scope.
 9b. [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows on dests already on disk, not dest-farm links. Why 2021 looks kaggy. Implement order.
 9c. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — check links then dest-true I/O (empty never writes).
+9c-flow. [`DEST-TRUE-FLOW-MAP.md`](DEST-TRUE-FLOW-MAP.md) · named list [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md) · KEEP/DROP/MISS [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md).
 9d. [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) — 5k walk, not 5k dests. Double leftover dests on thin lean doors only. Step 2 implemented 2026-09-20.
 9e. [`LEAN-TRIPLE-2015-2020.md`](LEAN-TRIPLE-2015-2020.md) — 2015–2020 triple look. Criteria. Do not dest-farm 2015/2017/2019. Do not implement dest folders from that file. Checklist: [`LEAN-TRIPLE-2015-2020-CHECKLIST.md`](LEAN-TRIPLE-2015-2020-CHECKLIST.md).
 10. [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) — every plan MD, related code, unimplemented leftover, unused/delete list.

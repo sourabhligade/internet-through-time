@@ -13,16 +13,16 @@ const UNIQUE = require("../scripts/leftover-3x-unique.json");
 
 const ROOT = path.join(__dirname, "..");
 const WANT_FOLDERS = {
-  2007: 46,
-  2010: 44,
-  2011: 62,
-  2012: 48,
-  2014: 36,
-  2016: 106,
-  2018: 44,
+  2007: 40,
+  2010: 34,
+  2011: 53,
+  2012: 36,
+  2014: 26,
+  2016: 65,
+  2018: 24,
   2020: 39,
-  2021: 30,
-  2022: 38,
+  2021: 20,
+  2022: 26,
 };
 
 function destFolders(year) {

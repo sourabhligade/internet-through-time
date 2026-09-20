@@ -15,13 +15,9 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
-    "sites/amazon/index.html",
     "sites/amazonmp3/index.html",
     "sites/androidann/index.html",
-    "sites/aol/index.html",
     "sites/appletv/index.html",
-    "sites/ask/index.html",
-    "sites/bbc/index.html",
     "sites/clubpenguin/index.html",
     "sites/digg/c.html",
     "sites/digg/index.html",
@@ -68,7 +64,6 @@
     "sites/lastfm/index.html",
     "sites/maps/c.html",
     "sites/maps/index.html",
-    "sites/msn/index.html",
     "sites/myspace/c.html",
     "sites/myspace/index.html",
     "sites/myspace/more.html",
@@ -89,7 +84,6 @@
     "sites/streetview/more.html",
     "sites/stumble/c.html",
     "sites/stumble/index.html",
-    "sites/tesla/index.html",
     "sites/tumblr/3x.html",
     "sites/tumblr/about.html",
     "sites/tumblr/index.html",
@@ -113,7 +107,7 @@
     "sites/youtube/more.html",
     "sites/youtube/pop.html",
     "sites/youtube/watch.html"
-  ];;;;
+  ];;;;;
 
   var urlMap = {
     "pages/about.html": "http://museum.local/years/2007/pages/about.html",

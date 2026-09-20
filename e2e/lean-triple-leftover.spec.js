@@ -38,9 +38,9 @@ test("2015 / 2017 / 2019 / 2020 dest folders stay (no dest-farm)", () => {
   expect(destFolders(2020).length).toBe(39);
 });
 
-test("2016 dest folders 106 · 2018 dest folders 44", () => {
-  expect(destFolders(2016).length).toBe(106);
-  expect(destFolders(2018).length).toBe(44);
+test("2016 dest folders 65 · 2018 dest folders 24", () => {
+  expect(destFolders(2016).length).toBe(65);
+  expect(destFolders(2018).length).toBe(24);
 });
 
 test("2018 leftover-3× unique stays 3", () => {
