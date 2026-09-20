@@ -398,6 +398,7 @@ const THINGS = [
       await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
+      await page.locator("[data-official-need]").fill("Museum App");
       const reqs = page.locator("[data-official-verb-host] [data-official-req]");
       const n = await reqs.count();
       for (let i = 0; i < n; i++) await reqs.nth(i).check();

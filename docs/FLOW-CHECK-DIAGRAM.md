@@ -113,12 +113,16 @@ flowchart TD
 
 | Check | Pack |
 |-------|------|
-| FLOW-CHECK walk (hub · guided 6 · leftover-2×=0 · leftover-3× stops · leftover I/O sample) | `e2e/flow-check-pipeline.spec.js` · `e2e/visitor-door.spec.js` |
+| CI dest-true I/O only | `npm run test:e2e:dest-true` · `scripts/ci.sh` · `.github/workflows/ci.yml` |
+| FLOW-CHECK walk | `e2e/flow-check-pipeline.spec.js` · `e2e/visitor-door.spec.js` |
+| Star dest | `e2e/one-thing-per-year.spec.js` |
+| Official dest empty/complete | `e2e/all-years-official-10-real.spec.js` |
 | Leftover-3× unique dest-true dests | `e2e/leftover-3x-unique.spec.js` |
 | Official dest leftover-2× gone | `e2e/official-leftover-2x.spec.js` |
-| Official dest empty/complete | `e2e/all-years-official-10-real.spec.js` |
-| Dest-farm leftover-3× CUT (walks unique dest-true dests) | `e2e/2010-2015-3x-cut.spec.js` · `e2e/2015-2020-3x-cut.spec.js` |
-| Mock | `node scripts/audit-mock-flows.js` |
+| Leftover dests 2016/2018 | `e2e/lean-triple-leftover.spec.js` |
+| Mock scan | `node scripts/audit-mock-flows.js` |
+
+CI does **not** run leftover-3× directory (`3x-links`), leftover-5× live, leftover-4×, or dest-farm theater packs.
 
 ---
 
