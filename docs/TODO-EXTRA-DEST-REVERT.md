@@ -193,5 +193,4 @@ After each pass: links audit 0 broken · dest-true e2e · dest-folder asserts.
 - Delete leftover dest KEEP, leftover-3× unique dests, leftover-4× unique chrome/twitter/soundcloud, 2017 leftover-20 extras, official 10, playable.  
 - Replace a dropped dest with a **new** dest folder. Retarget only.  
 - Dest-farm leftover-20 on 2013–2015 / 2018–2022.  
-- Grow leftover-3× unique past 2018=3 / 2021=5.  
-- Push unless a later message says push.
+- Grow leftover-3× unique past 2018=3 / 2021=5.

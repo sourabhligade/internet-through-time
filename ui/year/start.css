@@ -140,7 +140,9 @@ body.itt-start-page .itt-3x-visible,
 body.itt-start-page [data-itt-year-extras],
 body.itt-start-page [data-itt-famous-more],
 body.itt-start-page nav.itt-3x-also,
-body.itt-start-page [data-itt-3x-links] {
+body.itt-start-page [data-itt-3x-links],
+body.itt-start-page [data-itt-3x-unique-links],
+body.itt-start-page .itt-3x-unique-links {
   display: none !important;
 }
 html[data-itt-deep] body.itt-start-page .itt-2x-strip,
@@ -148,7 +150,9 @@ html[data-itt-deep] body.itt-start-page .itt-3x-visible,
 html[data-itt-deep] body.itt-start-page [data-itt-year-extras],
 html[data-itt-deep] body.itt-start-page [data-itt-famous-more],
 html[data-itt-deep] body.itt-start-page nav.itt-3x-also,
-html[data-itt-deep] body.itt-start-page [data-itt-3x-links] {
+html[data-itt-deep] body.itt-start-page [data-itt-3x-links],
+html[data-itt-deep] body.itt-start-page [data-itt-3x-unique-links],
+html[data-itt-deep] body.itt-start-page .itt-3x-unique-links {
   display: block !important;
 }
 .ott-flows-map {
@@ -525,7 +529,6 @@ html[data-itt-year="2021"] .ott-flows a:hover {
 
 /* 2022 Starting Point — Chrome-era links, not Netscape underlines */
 html[data-itt-year="2022"]:has(body.itt-start-page) {
-  height: 100%;
   color-scheme: only light;
   background: #f8f9fa;
 }
@@ -534,17 +537,29 @@ html[data-itt-year="2022"] body.itt-start-page {
   color: #202124 !important;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color-scheme: only light !important;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
-html[data-itt-year="2022"] body.itt-start-page #itt-year-start {
-  flex: 1 1 auto;
+
+/* Standalone Starting Point (top tab): content-tall. Iframe start still
+   uses boot.js #itt-page-fill min-height:100% so the year desktop pane fills. */
+html[data-itt-start-standalone],
+html[data-itt-start-standalone] body.itt-start-page {
+  height: auto !important;
+  min-height: 0 !important;
 }
-html[data-itt-year="2022"] body.itt-start-page #itt-exhibit-foot {
+html[data-itt-start-standalone] body.itt-start-page {
   display: block !important;
-  margin-top: auto;
-  flex: 0 0 auto;
+  padding-bottom: 0 !important;
+}
+html[data-itt-start-standalone] body.itt-start-page #itt-exhibit-foot {
+  display: block !important;
+  margin-top: 12px !important;
+  padding-bottom: 16px !important;
+}
+html[data-itt-start-standalone] #itt-wayfind {
+  display: none !important;
+}
+html[data-itt-start-standalone] body.itt-start-page.has-itt-wayfind {
+  padding-bottom: 0 !important;
 }
 html[data-itt-year="2022"] body.itt-start-page a,
 html[data-itt-year="2022"] .ott-guided a,

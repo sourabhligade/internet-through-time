@@ -1,8 +1,7 @@
 # 2012 — READ FIRST
 
 **Date:** 2026-08-19  
-**Status:** **lean door on disk** (~89 HTML). Official dests + densify check live. **Do not** `git checkout` an old 115-room / dest-field forest.  
-**Git only if asked.**
+**Status:** **lean door on disk** (~89 HTML). Official dests + densify check live. **Do not** `git checkout` an old 115-room / dest-field forest.
 
 ## One line
 

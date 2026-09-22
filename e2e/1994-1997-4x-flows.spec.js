@@ -154,7 +154,7 @@ const Y97 = [
   { path: '/years/1997/sites/bbc/index.html', key: 'itt97-bbc', kind: 'hops', yy: '97' },
   { path: '/years/1997/sites/scripting/index.html', key: 'itt97-scripting', kind: 'checks', yy: '97' },
   { path: '/years/1997/sites/newscom/index.html', key: 'itt97-newscom', kind: 'hops', yy: '97' },
-  { path: '/years/1997/sites/amazon/index.html', key: 'itt97-amzn-ipo', kind: 'checks', yy: '97' },
+  { path: '/years/1997/sites/amazonipo/index.html', key: 'itt97-amazonipo-lx', kind: 'checks', yy: '97' },
   { path: '/years/1997/sites/ebay/index.html', key: 'itt97-ebay-name', kind: 'checks', yy: '97' },
   { path: '/years/1997/sites/microsoft/ie4.html', key: 'itt97-ie4', kind: 'checks', yy: '97' },
   { path: '/years/1997/sites/altavista/index.html', key: 'itt97-av', kind: 'query', yy: '97' },

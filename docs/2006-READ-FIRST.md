@@ -3,8 +3,7 @@
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door scaffolded from `years/2005`. Do **not** `git checkout` the wiped tree.  
 **This file is the year lock.**  
-**Parent:** 2005 (Upload · Maps · independent YouTube). **Child:** 2007 (iPhone · Street View) — **bans here**.  
-**Git only if asked.**
+**Parent:** 2005 (Upload · Maps · independent YouTube). **Child:** 2007 (iPhone · Street View) — **bans here**.
 
 ## One line
 

@@ -176,6 +176,9 @@ blink { animation: blink 1s step-end infinite; }
   padding-bottom: 3em; /* room above sticky wayfind */
   font-family: "Times New Roman", Times, serif;
 }
+html[data-itt-start-standalone] #itt-exhibit-foot {
+  padding-bottom: 16px;
+}
 #itt-exhibit-foot a.itt-foot-home {
   color: #000080;
   font-size: 1.05em;

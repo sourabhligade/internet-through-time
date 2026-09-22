@@ -280,8 +280,14 @@
     "sites/xboxlive/index.html",
     "sites/xp/about.html",
     "sites/xp/index.html",
-    "sites/yahoomaps/index.html"
-  ];;
+    "sites/yahoomaps/index.html",
+    "sites/amazon/index.html",
+    "sites/ebay/index.html",
+    "sites/google/index.html",
+    "sites/netflix/index.html",
+    "sites/wikipedia/index.html",
+    "sites/yahoo/index.html"
+  ];
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

@@ -4,8 +4,7 @@
 **Status:** **implemented 2026-08-31.** Full-year door from 2004 scaffold. Official dests are dest machines, not Type leftover plaques. Do **not** `git checkout` the wiped tree.  
 **URL corpus:** [`references/2005/harvest/URL-CORPUS-2005.txt`](references/2005/harvest/URL-CORPUS-2005.txt) — **43,732** unique (2026-09-10 restack; beats 2011’s 10,320)  
 **Visit log:** [`references/2005/notes/VISIT-LOG-2026-08-31.txt`](references/2005/notes/VISIT-LOG-2026-08-31.txt)  
-**Parent:** 2004 (Thefacebook · Gmail invite · Flickr · Firefox 1.0). **Child:** 2006 (Twttr · News Feed · Google←YouTube) — **bans here**.  
-**Git only if asked.**
+**Parent:** 2004 (Thefacebook · Gmail invite · Flickr · Firefox 1.0). **Child:** 2006 (Twttr · News Feed · Google←YouTube) — **bans here**.
 
 ## One line
 

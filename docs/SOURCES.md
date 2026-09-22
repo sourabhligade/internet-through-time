@@ -11,7 +11,7 @@ Visitor-facing capture cites live on **star dests** (`data-itt-capture-cite`), n
 
 Deleted research dossiers (`MASTER-PROVENANCE.md`, `LEFT-OUT.md`, `docs/references/**`, year implement notebooks) stay deleted. Do not restore them.
 
-**Last expanded:** 2026-07-24. Ship state lives in DISK-TRUTH, not here.
+**Last expanded:** 2026-07-24. Ship state lives in DISK-TRUTH, not here. A 2026-09-22 visit of the URLs in this file, plus the off-disk and incomplete lists, is [`SOURCE-PASS-2026-09-22.md`](SOURCE-PASS-2026-09-22.md). That note is not ship law.
 
 ---
 

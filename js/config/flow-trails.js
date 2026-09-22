@@ -26,7 +26,8 @@
       {"n": 16, "name": "NCSA", "href": "sites/ncsa/index.html", "match": "/ncsa/", "whenKey": "itt94-trail-q", "nextHref": "sites/imdb/index.html", "nextLabel": "IMDb"},
       {"n": 17, "name": "IMDb", "href": "sites/imdb/index.html", "match": "/imdb/", "whenKey": "itt94-imdb", "nextHref": "sites/infoseek/index.html", "nextLabel": "Infoseek"},
       {"n": 18, "name": "Infoseek", "href": "sites/infoseek/index.html", "match": "/infoseek/", "whenKey": "itt94-is-lx", "nextHref": "sites/mcom/index.html", "nextLabel": "Mosaic"},
-      {"n": 19, "name": "Mosaic", "href": "sites/mcom/index.html", "match": "/mcom/", "whenKey": "itt94-mcom-lx", "nextHref": "sites/csotd/index.html", "nextLabel": "★ year gold"}
+      {"n": 19, "name": "Mosaic", "href": "sites/mcom/index.html", "match": "/mcom/", "whenKey": "itt94-mcom-lx", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape"},
+      {"n": 20, "name": "Netscape", "href": "sites/netscape/index.html", "match": "/netscape/", "whenKey": "itt94-netscape-lx", "nextHref": "sites/csotd/index.html", "nextLabel": "★ year gold"}
     ],
     "1995": [
       {"n": 1, "name": "SSL checkout", "href": "sites/amazon/ssl-checkout.html", "match": "/amazon/ssl-checkout", "whenKey": "itt95-ssl-checkout", "nextHref": "sites/auctionweb/item-laser.html", "nextLabel": "AuctionWeb bid"},
@@ -47,7 +48,8 @@
       {"n": 16, "name": "Infoseek", "href": "sites/infoseek/index.html", "match": "/infoseek/", "whenKey": "itt95-infoseek", "nextHref": "sites/nyt/index.html", "nextLabel": "NYT"},
       {"n": 17, "name": "NYT", "href": "sites/nyt/index.html", "match": "/nyt/", "whenKey": "itt95-nyt-dp", "nextHref": "sites/webcrawler/index.html", "nextLabel": "WebCrawler"},
       {"n": 18, "name": "WebCrawler", "href": "sites/webcrawler/index.html", "match": "/webcrawler/", "whenKey": "itt95-webcrawler-dp", "nextHref": "sites/zdnet/index.html", "nextLabel": "ZDNet"},
-      {"n": 19, "name": "ZDNet", "href": "sites/zdnet/index.html", "match": "/zdnet/", "whenKey": "itt95-zdnet-dp", "nextHref": "sites/amazon/ssl-checkout.html", "nextLabel": "★ year gold"}
+      {"n": 19, "name": "ZDNet", "href": "sites/zdnet/index.html", "match": "/zdnet/", "whenKey": "itt95-zdnet-dp", "nextHref": "sites/excite/index.html", "nextLabel": "Excite"},
+      {"n": 20, "name": "Excite", "href": "sites/excite/index.html", "match": "/excite/", "whenKey": "itt95-excite-lx", "nextHref": "sites/amazon/ssl-checkout.html", "nextLabel": "★ year gold"}
     ],
     "1996": [
       {"n": 1, "name": "Portal wars", "href": "sites/portals/wars.html", "match": "/portals/", "whenKey": "itt96-portal-wars", "nextHref": "sites/hotmail/index.html", "nextLabel": "HoTMaiL"},
@@ -82,7 +84,7 @@
       {"n": 8, "name": "Apple", "href": "sites/apple/think-different.html", "match": "/apple/", "whenKey": "itt97-td", "nextHref": "sites/microsoft/index.html", "nextLabel": "Microsoft"},
       {"n": 9, "name": "Microsoft", "href": "sites/microsoft/index.html", "match": "/microsoft/", "whenKey": "itt97-ms", "nextHref": "sites/playable/game.html", "nextLabel": "Year game"},
       {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt97-game", "nextHref": "sites/pointcast/index.html", "nextLabel": "PointCast"},
-      {"n": 11, "name": "Amazon", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt97-amzn-ipo", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo"},
+      {"n": 11, "name": "Amazon IPO", "href": "sites/amazonipo/index.html", "match": "/amazonipo/", "whenKey": "itt97-amazonipo-lx", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo"},
       {"n": 12, "name": "Yahoo", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt97-yh-lx", "nextHref": "sites/cnn/index.html", "nextLabel": "CNN"},
       {"n": 13, "name": "CNN", "href": "sites/cnn/index.html", "match": "/cnn/", "whenKey": "itt97-cnn-lx", "nextHref": "sites/geocities/index.html", "nextLabel": "GeoCities"},
       {"n": 14, "name": "GeoCities", "href": "sites/geocities/index.html", "match": "/geocities/", "whenKey": "itt97-geo-lx", "nextHref": "sites/netscape/index.html", "nextLabel": "Netscape"},
@@ -90,7 +92,8 @@
       {"n": 16, "name": "AltaVista", "href": "sites/altavista/index.html", "match": "/altavista/", "whenKey": "itt97-av-lx", "nextHref": "sites/espn/index.html", "nextLabel": "ESPN"},
       {"n": 17, "name": "ESPN", "href": "sites/espn/index.html", "match": "/espn/", "whenKey": "itt97-espn-dp", "nextHref": "sites/disney/index.html", "nextLabel": "Disney"},
       {"n": 18, "name": "Disney", "href": "sites/disney/index.html", "match": "/disney/", "whenKey": "itt97-disney-dp", "nextHref": "sites/netflix/index.html", "nextLabel": "Netflix"},
-      {"n": 19, "name": "Netflix", "href": "sites/netflix/index.html", "match": "/netflix/", "whenKey": "itt97-netflix-dp", "nextHref": "sites/pointcast/index.html", "nextLabel": "★ year gold"}
+      {"n": 19, "name": "Netflix", "href": "sites/netflix/index.html", "match": "/netflix/", "whenKey": "itt97-netflix-dp", "nextHref": "sites/aol/index.html", "nextLabel": "AOL"},
+      {"n": 20, "name": "AOL", "href": "sites/aol/index.html", "match": "/aol/", "whenKey": "itt97-aol-lx", "nextHref": "sites/pointcast/index.html", "nextLabel": "★ year gold"}
     ],
     "1998": [
       {"n": 1, "name": "I'm Feeling Lucky", "href": "sites/google/lucky.html", "match": "/google/lucky", "whenKey": "itt98-lucky", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo packed"},
@@ -111,7 +114,8 @@
       {"n": 16, "name": "AOL", "href": "sites/aol/index.html", "match": "/aol/", "whenKey": "itt98-aol-lx", "nextHref": "sites/lycos/index.html", "nextLabel": "Lycos"},
       {"n": 17, "name": "Lycos", "href": "sites/lycos/index.html", "match": "/lycos/", "whenKey": "itt98-ly-lx", "nextHref": "sites/icq/index.html", "nextLabel": "ICQ"},
       {"n": 18, "name": "ICQ", "href": "sites/icq/index.html", "match": "/icq/", "whenKey": "itt98-icq-lx", "nextHref": "sites/altavista/index.html", "nextLabel": "AltaVista"},
-      {"n": 19, "name": "AltaVista", "href": "sites/altavista/index.html", "match": "/altavista/", "whenKey": "itt98-av-lx", "nextHref": "sites/google/lucky.html", "nextLabel": "★ year gold"}
+      {"n": 19, "name": "AltaVista", "href": "sites/altavista/index.html", "match": "/altavista/", "whenKey": "itt98-av-lx", "nextHref": "sites/americangreetings/index.html", "nextLabel": "American Greetings"},
+      {"n": 20, "name": "American Greetings", "href": "sites/americangreetings/index.html", "match": "/americangreetings/", "whenKey": "itt98-americangreetings-lx", "nextHref": "sites/google/lucky.html", "nextLabel": "★ year gold"}
     ],
     "1999": [
       {"n": 1, "name": "AIM sign-on", "href": "sites/aim/index.html", "match": "/aim/", "whenKey": "itt99-aim", "nextHref": "sites/napster/search.html", "nextLabel": "Napster"},

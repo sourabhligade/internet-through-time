@@ -8,16 +8,16 @@ Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (trees stay 
 | Year | Disk |
 |------|------|
 | **1994–2004** | Live dense / forest reconstructions |
-| **1999** | Live forest · AIM `itt99-aim` · dests **426** · leftover-2× on every dest · Board C rail `data-itt-2x-unique-c` |
-| **2000** | Live forest · MapQuest `itt00-mapquest` · dests **477** · leftover-2× on every dest · Board C rail |
-| **2001** | **CUT-FOREST LIVE** · Wikipedia UseMod `itt01-wiki` · dests **257** · leftover 18 year-true |
-| **2002** | **CUT-FOREST LIVE** · StumbleUpon `itt02-stumble` · dests **224** · leftover 18 year-true |
-| **2003** | **CUT-FOREST LIVE** · Photobucket upload `itt03-photobucket` · dests **199** · leftover 18 year-true |
-| **2004** | Live forest · thefacebook networks `itt04-thefacebook-networks` · dests **800** · leftover-2× on every dest · Board C rail |
+| **1999** | Live forest · AIM `itt99-aim` · dests **429** · leftover-2× on every dest · Board C rail `data-itt-2x-unique-c` |
+| **2000** | Live forest · MapQuest `itt00-mapquest` · dests **481** · leftover-2× on every dest · Board C rail |
+| **2001** | **CUT-FOREST LIVE** · Wikipedia UseMod `itt01-wiki` · dests **259** · leftover 18 year-true |
+| **2002** | **CUT-FOREST LIVE** · StumbleUpon `itt02-stumble` · dests **230** · leftover 18 year-true |
+| **2003** | **CUT-FOREST LIVE** · Photobucket upload `itt03-photobucket` · dests **203** · leftover 18 year-true |
+| **2004** | Live forest · thefacebook networks `itt04-thefacebook-networks` · dests **805** · leftover-2× on every dest · Board C rail |
 | **2005** | **Live** · YouTube upload gold · leftover 2× + leftover 4× on every dest · XP+IE6 |
-| **2006** | **Live** · Twttr update gold · leftover 2× + leftover 4× on every dest · XP+IE6 · dest folders **366** |
+| **2006** | **Live** · Twttr update gold · leftover 2× + leftover 4× on every dest · XP+IE6 · dest folders **370** |
 | **2007** | **DONE** · live lean door · iPhone Safari `itt07-iphone` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **33** · XP+IE6 |
-| **2008** | **DONE** · live dense · GitHub issue `itt08-github` · dest-true official 10 · dest folders **586** · XP+IE7 |
+| **2008** | **DONE** · live dense · GitHub issue `itt08-github` · dest-true official 10 · dest folders **591** · XP+IE7 |
 | **2009** | **Boarded** · tree stays · year-shell is a plaque (not a hub redirect) · `/pages/home.html` redirects to the plaque · Facebook Like dests still on disk |
 | **2010** | Live lean · Instagram iOS · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **29** |
 | **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover-3× dests + leftover dests · dest folders **41** · leftover-4× **0** |

@@ -68,19 +68,23 @@ test.describe("visitor door", () => {
     await expectYearBoarded(page, "2025");
   });
 
-  test("every ship year has shell, Starting Point, About, Map, official 10 files", () => {
+  test("every ship year has shell, Starting Point, About, Map, dest-unique official n files", () => {
     /** @type {string[]} */
     const missing = [];
+    /** @type {Record<string, number>} */
+    const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
     for (const y of SHIP) {
       const rooms = ["index.html", "pages/home.html", "pages/about.html", "pages/map.html"];
       for (const room of rooms) {
         if (!fs.existsSync(path.join(ROOT, "years", y, room))) missing.push(y + "/" + room);
       }
       const ten = officialTen(y);
-      if (ten.length !== 10) missing.push(y + " official n=1–10 count " + ten.length);
+      const cap = officialCap[y] || 10;
+      if (ten.length !== cap) missing.push(y + " official n=1–" + cap + " count " + ten.length);
       const nums = ten.map((r) => r.n).sort((a, b) => a - b);
-      if (nums.join(",") !== "1,2,3,4,5,6,7,8,9,10") {
-        missing.push(y + " official n set " + nums.join(","));
+      const want = Array.from({ length: cap }, (_, i) => i + 1).join(",");
+      if (nums.join(",") !== want) {
+        missing.push(y + " official n set " + nums.join(",") + " want " + want);
       }
       for (const row of ten) {
         const href = "years/" + y + "/" + row.href;
@@ -154,5 +158,59 @@ test.describe("visitor door", () => {
     await page.goto("/years/1994/pages/home.html");
     const on = await page.locator("[data-itt-friction]").isChecked();
     expect(on).toBeFalsy();
+  });
+
+  test("14.4k wait is gone on 2000–2022 Starting Point", async ({ page }) => {
+    await page.goto("/years/2022/pages/home.html");
+    await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
+    await page.goto("/years/2017/pages/home.html");
+    await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
+    await page.goto("/years/2010/pages/home.html");
+    await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
+  });
+
+  test("standalone Starting Point has no boot.js cavern", async ({ page }) => {
+    for (const y of ["1994", "2007", "2021", "2022"]) {
+      await page.goto("/years/" + y + "/pages/home.html");
+      await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
+      await expect(page.locator("[data-itt-postcard]")).toBeVisible();
+      await expect(page.locator("#itt-exhibit-foot")).toBeVisible();
+      const info = await page.evaluate(() => {
+        const fill = document.getElementById("itt-page-fill");
+        const postcard = document.querySelector("[data-itt-postcard]");
+        const foot = document.getElementById("itt-exhibit-foot");
+        return {
+          fill: !!fill,
+          standalone: document.documentElement.getAttribute("data-itt-start-standalone"),
+          gap: foot.getBoundingClientRect().top - postcard.getBoundingClientRect().bottom,
+        };
+      });
+      expect(info.fill, y + " #itt-page-fill").toBe(false);
+      expect(info.standalone, y + " standalone").toBe("1");
+      expect(info.gap, y + " postcard→footer gap " + info.gap).toBeGreaterThanOrEqual(0);
+      if (y === "2021" || y === "2022") {
+        expect(info.gap, y + " postcard→footer gap " + info.gap).toBeLessThan(80);
+      }
+    }
+  });
+
+  test("iframe Starting Point still fills the year desktop pane", async ({ page }) => {
+    for (const y of ["1994", "2021"]) {
+      await page.goto("/years/" + y + "/");
+      const frame = page.frameLocator("iframe#content");
+      await expect(frame.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
+      await expect.poll(async () =>
+        page.evaluate(() => {
+          const iframe = document.getElementById("content");
+          const doc = iframe && iframe.contentDocument;
+          if (!doc) return null;
+          const fill = doc.getElementById("itt-page-fill");
+          return {
+            fill: !!(fill && /min-height:\s*100%/.test(fill.textContent || "")),
+            standalone: doc.documentElement.getAttribute("data-itt-start-standalone"),
+          };
+        })
+      ).toEqual({ fill: true, standalone: null });
+    }
   });
 });

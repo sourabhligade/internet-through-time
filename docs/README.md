@@ -20,13 +20,16 @@ Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023�
 9c. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — check links then dest-true I/O (empty never writes).
 9c-flow. [`DEST-TRUE-FLOW-MAP.md`](DEST-TRUE-FLOW-MAP.md) · named list [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md) · KEEP/DROP/MISS [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md).
 9d. [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) — 5k walk, not 5k dests. Double leftover dests on thin lean doors only. Step 2 implemented 2026-09-20.
+9d-2x. [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) — leftover-2× unique dest **links** implemented. Dest folders already on disk. 2000–2006 original unique dests stay. Official dest leftover-2× first paint 0. Stepwise check walk: that file §10.
+9d-3x. [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) — leftover-3× unique dest **links** implemented 2026-09-21. KEEP original leftover-3× unique dests. Leftover-3× unique dest-true dests stay 2018=3 / 2021=5. MISS remainder stands. Official dest leftover-3× unique dest links first paint 0.
 9e. [`LEAN-TRIPLE-2015-2020.md`](LEAN-TRIPLE-2015-2020.md) — 2015–2020 triple look. Criteria. Do not dest-farm 2015/2017/2019. Do not implement dest folders from that file. Checklist: [`LEAN-TRIPLE-2015-2020-CHECKLIST.md`](LEAN-TRIPLE-2015-2020-CHECKLIST.md).
 10. [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) — every plan MD, related code, unimplemented leftover, unused/delete list.
-10b. [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) — start-to-end todo from the 2026-09-20 full audit (every year, every leftover, every stale MD). Push is out of that file.
+10b. [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) — start-to-end todo from the 2026-09-20 full audit (every year, every leftover, every stale MD).
 10c. [`TODO-EXTRA-DEST-REVERT.md`](TODO-EXTRA-DEST-REVERT.md) — extra leftover dest leftover: how to drop and retarget.
 10d. [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) — every extra dest checklist. KEEP 166 · DROP 539 · MISS 0. DROP applied. Extra dest KEEP leftover dest-true I/O implemented.
 10e. [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) — extra dest + year-false research as implement steps for every year 1994–2025.
 11. [`FLOW-IMPLEMENT-CHECKLIST.md`](FLOW-IMPLEMENT-CHECKLIST.md) — implement + recheck of every allowed criterion.
 12. [`SOURCES.md`](SOURCES.md) — bibliography.
+12b. [`SOURCE-PASS-2026-09-22.md`](SOURCE-PASS-2026-09-22.md) — 2026-09-22 visit of those URLs, and the off-disk / incomplete lists. Not ship law.
 
 Everything else (implement notebooks, leftover catalogs, Board A/B harvest logs, museum-grade scans) is gone. Board C lock for 1999–2004 stays.

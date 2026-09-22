@@ -31,6 +31,10 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('a.year-card.available[href*="years/2022"]')).toBeVisible();
     await expect(page.locator('.year-card.locked.y2022')).toHaveCount(0);
     await expect(page.locator('.year-card.y2025')).toHaveCount(0);
+    await expect(page.locator(".y2007 .era-chip")).toContainText("33 dests");
+    await expect(page.locator(".y2011 .era-chip")).toContainText("41 dests");
+    await expect(page.locator(".y2012 .era-chip")).toContainText("32 dests");
+    await expect(page.locator(".y2018 .era-chip")).toContainText("24 dests");
   });
 
   test('passport treats 2020–2022 live and 2009 / 2023–2025 not live', async ({ page }) => {

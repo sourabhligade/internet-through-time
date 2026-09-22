@@ -3,8 +3,7 @@
 **Date:** 2026-09-13  
 **Status:** **boarded.** `years/2009/` stays on disk. Year-shell `index.html` is a plaque (not a hub redirect). `/pages/home.html` redirects to the plaque. No year card. No leftover implement pass. Star on disk remains Facebook Like `itt09-like`.  
 **Disk law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
-**Prefix:** `itt09-*`  
-**Git only if asked.**
+**Prefix:** `itt09-*`
 
 ## One line
 

@@ -129,4 +129,25 @@ test.describe("leftover dest leftover-3× dest face", () => {
       await expect(page.locator(`[data-itt-lo3x]:not(.itt-also-year *)`)).toHaveCount(0);
     }
   });
+
+  test("Starting Point is not leftover dest period skin", async ({ page }) => {
+    await page.goto("/years/1994/pages/home.html");
+    await expect(page.locator("#ott-guided-1994 ol > li")).toHaveCount(6);
+    const startHit = await page.evaluate(() =>
+      document.body.matches(
+        "body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]), body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true])"
+      )
+    );
+    expect(startHit, "1994 start leftover dest body:has").toBe(false);
+    await page.goto("/years/2018/sites/reddit/index.html");
+    await expect(page.locator("[data-itt-lo3x] [data-pop-go]").first()).toBeVisible();
+    const destHit = await page.evaluate(() => ({
+      official: document.documentElement.hasAttribute("data-official-key"),
+      bodyHit: document.body.matches(
+        "body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]), body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true])"
+      ),
+    }));
+    expect(destHit.official, "2018 reddit official stamp").toBe(false);
+    expect(destHit.bodyHit, "2018 reddit leftover dest face").toBe(true);
+  });
 });

@@ -1,7 +1,6 @@
 # 2010 — READ FIRST
 
-**Date:** 2026-08-17  
-**Git only if asked.**
+**Date:** 2026-08-17
 
 | Doc | Role |
 |-----|------|

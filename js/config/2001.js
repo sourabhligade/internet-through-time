@@ -333,8 +333,10 @@
     "sites/yahoogroups/index.html",
     "sites/yahoomusic/index.html",
     "sites/ytmnd/index.html",
-    "sites/yurisrevenge/index.html"
-  ];;
+    "sites/yurisrevenge/index.html",
+    "sites/ebay/index.html",
+    "sites/microsoft/index.html"
+  ];
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

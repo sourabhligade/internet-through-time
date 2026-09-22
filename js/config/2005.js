@@ -553,7 +553,7 @@
       "sites/technorati/cosmos.html": "http://www.technorati.com/cosmos/",
       "sites/technorati/popular.html": "http://www.technorati.com/pop/",
       "sites/technorati/about.html": "http://www.technorati.com/about/",
-      "sites/zombo/index.html": "http://www.zombo.com/"
+      "sites/zombo/index.html": "http://www.zombo.com/",
     },
     titleMap: {
       "sites/flickr/fave.html": "Fave",

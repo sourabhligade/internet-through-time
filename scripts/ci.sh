@@ -58,6 +58,8 @@ npx playwright test \
   e2e/one-thing-per-year.spec.js \
   e2e/all-years-official-10-real.spec.js \
   e2e/leftover-3x-unique.spec.js \
+  e2e/leftover-2x-unique-links.spec.js \
+  e2e/leftover-3x-unique-links.spec.js \
   e2e/official-leftover-2x.spec.js \
   e2e/lean-triple-leftover.spec.js \
   e2e/year-true-packs.spec.js \

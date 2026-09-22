@@ -14,6 +14,21 @@ function goSel(row) {
   return `[data-itt-lo3x] [data-pop-go][data-pop-id='${row.id}']:not([data-pop-key])`;
 }
 
+test("leftover-3× unique dests are one leftover dest-true writer — no leftover-official cream", () => {
+  const fs = require("fs");
+  const path = require("path");
+  const hits = [];
+  for (const row of ROWS) {
+    const file = path.join(__dirname, "..", row.href.replace(/^\//, ""));
+    if (!fs.existsSync(file)) continue;
+    const html = fs.readFileSync(file, "utf8");
+    if (/data-lo-panel/.test(html) && /data-itt-dest-true/.test(html) && /data-lo-save/.test(html)) {
+      hits.push(row.year + "/" + row.id);
+    }
+  }
+  expect(hits, hits.join("\n")).toEqual([]);
+});
+
 test("unique leftover-3× dests are a set — no dest twice inside a year", () => {
   const byYear = {};
   for (const row of ROWS) {

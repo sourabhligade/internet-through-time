@@ -21,12 +21,12 @@
   }
 
   function ensureCss() {
-    if (document.querySelector("link[data-itt-year-start-css], link[href*='start.css'], link[href*='year-start-quiet.css']")) {
+    if (document.querySelector("link[data-itt-year-start-css], link[href*='start.css']")) {
       return;
     }
     var el = document.createElement("link");
     el.rel = "stylesheet";
-    el.href = scriptDir() + "start.css?v=20260921start";
+    el.href = scriptDir() + "start.css?v=20260921boot2";
     el.setAttribute("data-itt-year-start-css", "1");
     (document.head || document.documentElement).appendChild(el);
   }
@@ -42,8 +42,9 @@
     el.textContent =
       "html,body{color-scheme:only light!important}" +
       "html,body.itt-start-page,body[data-itt-start]{" +
-      "width:100%!important;max-width:none!important;min-width:100%!important;" +
-      "min-height:100%!important;margin:0}" +
+      "width:100%!important;max-width:none!important;min-width:100%!important;margin:0}" +
+      "html[data-itt-start-standalone],html[data-itt-start-standalone] body.itt-start-page{" +
+      "height:auto!important;min-height:0!important}" +
       "html[data-itt-year=\"2015\"],html[data-itt-year=\"2016\"],html[data-itt-year=\"2017\"]," +
       "html[data-itt-year=\"2018\"],html[data-itt-year=\"2019\"],html[data-itt-year=\"2020\"]," +
       "html[data-itt-year=\"2021\"],html[data-itt-year=\"2022\"]{" +
@@ -96,7 +97,14 @@
       "html[data-itt-friction='1']::after{content:'14.4k…';position:fixed;z-index:9999;inset:0;" +
       "background:#000;color:#0f0;font:14px monospace;display:flex;align-items:center;justify-content:center;" +
       "animation:ittFriction 1.2s ease forwards;pointer-events:none}" +
-      "@keyframes ittFriction{0%{opacity:1}70%{opacity:1}100%{opacity:0;visibility:hidden}}";
+      "@keyframes ittFriction{0%{opacity:1}70%{opacity:1}100%{opacity:0;visibility:hidden}}" +
+      "html[data-itt-start-standalone]{height:auto!important;min-height:0!important}" +
+      "html[data-itt-start-standalone] body.itt-start-page{" +
+      "min-height:0!important;height:auto!important;display:block!important;padding-bottom:0!important}" +
+      "html[data-itt-start-standalone] body.itt-start-page #itt-exhibit-foot{" +
+      "display:block!important;margin-top:12px!important;padding-bottom:16px!important}" +
+      "html[data-itt-start-standalone] body.itt-start-page.has-itt-wayfind{padding-bottom:0!important}" +
+      "html[data-itt-start-standalone] #itt-wayfind{display:none!important}";
   }
 
   function paintStart(year) {
@@ -108,6 +116,19 @@
       console.error("ITT.YearUI.START missing " + year);
       return;
     }
+    try {
+      var standalone = false;
+      try {
+        standalone = window.self === window.top;
+      } catch (eTop) {
+        standalone = false;
+      }
+      if (standalone) {
+        document.documentElement.setAttribute("data-itt-start-standalone", "1");
+      } else {
+        document.documentElement.removeAttribute("data-itt-start-standalone");
+      }
+    } catch (eStand) { /* */ }
     ensureCss();
     ensureFill();
     try {
@@ -117,8 +138,13 @@
       }
       if (isDeep()) document.documentElement.setAttribute("data-itt-deep", "1");
       try {
-        if (/\bslow=1\b/.test(String(location.search || "")) || localStorage.getItem("itt-period-friction") === "1") {
+        if (
+          is144kYear(year) &&
+          (/\bslow=1\b/.test(String(location.search || "")) || localStorage.getItem("itt-period-friction") === "1")
+        ) {
           document.documentElement.setAttribute("data-itt-friction", "1");
+        } else {
+          document.documentElement.removeAttribute("data-itt-friction");
         }
       } catch (eFr) { /* */ }
       if (document.body) {
@@ -183,7 +209,9 @@
         flowsHtml(year) +
         '<p class="itt-start-tools" data-itt-start-tools="1" style="font-size:12px;margin:10px 0">' +
         '<button type="button" data-itt-postcard>Local postcard</button> ' +
-        '<label><input type="checkbox" data-itt-friction> 14.4k wait (off by default)</label> ' +
+        (is144kYear(year)
+          ? '<label><input type="checkbox" data-itt-friction> 14.4k wait (off by default)</label> '
+          : "") +
         '<span data-itt-postcard-out></span></p>';
 
       var extraHtml = spec.extraHtml;
@@ -359,6 +387,12 @@
     return y >= 2015 && y <= 2022;
   }
 
+  /** 14.4k hang is 1994–1999. Not 2000–2022. */
+  function is144kYear(year) {
+    var y = parseInt(year, 10);
+    return y >= 1994 && y <= 1999;
+  }
+
   function stripLeftoverWord(s) {
     return String(s || "")
       .replace(/\s*leftover(?:s)?(?:-\d+[×x]|[\s-]*[234][×x])?/gi, "")
@@ -447,6 +481,8 @@
     "[data-itt-cut-3x-trios]",
     "[data-itt-3x-also]",
     "[data-itt-3x-links]",
+    "[data-itt-3x-unique-links]",
+    ".itt-3x-unique-links",
     "[data-itt-popular-pack]",
     "[data-itt-5x-atlas]",
     "[data-itt-densify]",

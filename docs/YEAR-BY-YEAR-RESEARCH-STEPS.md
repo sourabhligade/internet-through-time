@@ -1,7 +1,7 @@
 # Year-by-year research → implement steps
 
 **Date:** 2026-09-20
-**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Do not dest-farm leftover-20 except 2017. Do not push from this file.
+**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Do not dest-farm leftover-20 except 2017.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md).
 
 Visitor 100% is dest-true I/O on dests already on disk, not dest-folder count. Empty / trap never write. Leftover never writes the year star. KEEP leftover dests only if famous that year and cited. Miss the cap rather than invent.
@@ -100,7 +100,7 @@ No extra dest KEEP. DROP 2 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (2 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 156 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 1995
 
@@ -131,7 +131,7 @@ No extra dest KEEP. DROP 1 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (1 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 152 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 1996
 
@@ -162,7 +162,7 @@ No extra dest KEEP. DROP 2 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (2 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 152 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 1997
 
@@ -193,7 +193,7 @@ No extra dest KEEP. DROP 4 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (4 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 163 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 1998
 
@@ -224,7 +224,7 @@ No extra dest KEEP. DROP 4 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (4 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 149 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 1999
 
@@ -255,7 +255,7 @@ No extra dest KEEP. DROP 6 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (6 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 426 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2000
 
@@ -286,7 +286,7 @@ No extra dest KEEP. DROP 7 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (7 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 477 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2001
 
@@ -317,7 +317,7 @@ No extra dest KEEP. DROP 4 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (4 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 257 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2002
 
@@ -348,7 +348,7 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (10 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 224 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2003
 
@@ -379,7 +379,7 @@ No extra dest KEEP. DROP 7 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (7 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 199 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2004
 
@@ -410,7 +410,7 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (10 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 800 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2005
 
@@ -441,7 +441,7 @@ No extra dest KEEP. DROP 11 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (11 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 339 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2006
 
@@ -472,7 +472,7 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (10 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 366 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2007
 
@@ -501,7 +501,7 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 33 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2008
 
@@ -532,7 +532,7 @@ No extra dest KEEP. DROP 11 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (11 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 586 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2009
 
@@ -578,7 +578,7 @@ No extra dest KEEP. DROP 1 clone leftover dest leftover folders already gone.
 - [x] 5 Extra dest DROP applied (1 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 29 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2011
 
@@ -614,7 +614,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (7 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (2): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt11-gplus`.
 - [x] 7 Dest-folder count 41 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 This pass leftover I/O (extra dest KEEP that were missing dest-true leftover I/O):
 
@@ -649,7 +649,7 @@ This pass leftover I/O (extra dest KEEP that were missing dest-true leftover I/O
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 32 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2013
 
@@ -717,7 +717,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (2 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (34): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt13-vine-posts`.
 - [x] 7 Dest-folder count 52 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2014
 
@@ -746,7 +746,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 25 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2015
 
@@ -811,7 +811,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (163 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (31): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt15-periscope`.
 - [x] 7 Dest-folder count 50 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 This pass leftover I/O (extra dest KEEP dest door missing `index.html`):
 
@@ -856,7 +856,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (9 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (4): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt16-ig-stories`.
 - [x] 7 Dest-folder count 57 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2017
 
@@ -929,7 +929,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (154 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (39): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt17-faceid`.
 - [x] 7 Dest-folder count 68 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2018
 
@@ -958,7 +958,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 24 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2019
 
@@ -1046,7 +1046,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (97 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (54): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt19-disneyplus`.
 - [x] 7 Dest-folder count 73 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2020
 
@@ -1082,7 +1082,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 Extra dest DROP applied (17 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (2): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt20-zoom`.
 - [x] 7 Dest-folder count 22 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2021
 
@@ -1111,7 +1111,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 18 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2022
 
@@ -1140,7 +1140,7 @@ KEEP extra dest leftover I/O:
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 25 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels · no push from this file.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
 ## 2023
 
@@ -1189,5 +1189,4 @@ After this pass:
 - Extra dest DROP dests on disk: **0**.
 - Extra dest KEEP dests on disk: **166**.
 - Dest-true leftover I/O engine unchanged: `js/immersion/leftover-official.js` (`bootOne`). Dest HTML only.
-- Do not push unless a later message says push.
 

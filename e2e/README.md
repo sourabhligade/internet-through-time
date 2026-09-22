@@ -10,6 +10,8 @@ flow-check-pipeline.spec.js
 one-thing-per-year.spec.js
 all-years-official-10-real.spec.js
 leftover-3x-unique.spec.js
+leftover-2x-unique-links.spec.js
+leftover-3x-unique-links.spec.js
 official-leftover-2x.spec.js
 lean-triple-leftover.spec.js
 year-true-packs.spec.js

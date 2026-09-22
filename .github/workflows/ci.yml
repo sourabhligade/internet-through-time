@@ -102,7 +102,7 @@ jobs:
           CI: true
 
       - name: Dest-true I/O e2e (empty never writes · leftover never writes the star)
-        run: npx playwright test e2e/hub-years.spec.js e2e/year-start-trails.spec.js e2e/visitor-door.spec.js e2e/flow-check-pipeline.spec.js e2e/one-thing-per-year.spec.js e2e/all-years-official-10-real.spec.js e2e/leftover-3x-unique.spec.js e2e/official-leftover-2x.spec.js e2e/lean-triple-leftover.spec.js e2e/year-true-packs.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2018-flows.spec.js e2e/2020-mvp.spec.js e2e/2021-mvp.spec.js e2e/2022-mvp.spec.js e2e/2022-flows.spec.js --workers=2
+        run: npx playwright test e2e/hub-years.spec.js e2e/year-start-trails.spec.js e2e/visitor-door.spec.js e2e/flow-check-pipeline.spec.js e2e/one-thing-per-year.spec.js e2e/all-years-official-10-real.spec.js e2e/leftover-3x-unique.spec.js e2e/leftover-2x-unique-links.spec.js e2e/leftover-3x-unique-links.spec.js e2e/official-leftover-2x.spec.js e2e/lean-triple-leftover.spec.js e2e/year-true-packs.spec.js e2e/2016-2018-3x-detail.spec.js e2e/2018-flows.spec.js e2e/2020-mvp.spec.js e2e/2021-mvp.spec.js e2e/2022-mvp.spec.js e2e/2022-flows.spec.js --workers=2
         env:
           CI: true
 

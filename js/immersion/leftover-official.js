@@ -461,7 +461,7 @@
     } catch (eK2) { /* */ }
     unwrapDestTrueLo3x(doc);
     var nodeList = doc.querySelectorAll(
-      "[data-itt-2x-links], [data-itt-2x-unique], [data-itt-2x-unique-b], [data-itt-2x-unique-c], [data-itt-3x-also], [data-itt-3x-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-3x-board, .itt-pop-more, .itt-pop-3x3"
+      "[data-itt-2x-links], [data-itt-2x-unique], [data-itt-2x-unique-b], [data-itt-2x-unique-c], [data-itt-3x-also], [data-itt-3x-links], [data-itt-3x-unique-links], [data-itt-pop-more], [data-itt-pop-3x3], [data-itt-pop3x], [data-itt-lo3x], [data-5x-loop], [data-lo-panel], [data-4x-panel], .itt-pop3, .itt-pop3x-flow, .itt-3x-also, .itt-3x-links, .itt-3x-unique-links, .itt-3x-board, .itt-pop-more, .itt-pop-3x3"
     );
     var extra = leftoverNoteNodes(doc);
     var nodes = [];
@@ -486,6 +486,14 @@
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
       if (isDestTrueLeftoverFace(n, destKey)) continue;
+      if (
+        !destKey &&
+        n.getAttribute &&
+        (n.getAttribute("data-itt-3x-unique-links") != null ||
+          /(^|\s)itt-3x-unique-links(\s|$)/.test(String(n.className || "")))
+      ) {
+        continue;
+      }
       if (!firstOutside) firstOutside = n;
     }
     if (firstOutside && firstOutside.parentNode && !box.parentNode) {
@@ -497,6 +505,14 @@
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
       if (isDestTrueLeftoverFace(n, destKey)) continue;
+      if (
+        !destKey &&
+        n.getAttribute &&
+        (n.getAttribute("data-itt-3x-unique-links") != null ||
+          /(^|\s)itt-3x-unique-links(\s|$)/.test(String(n.className || "")))
+      ) {
+        continue;
+      }
       body.appendChild(n);
       moved++;
     }

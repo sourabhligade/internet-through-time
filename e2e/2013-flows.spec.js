@@ -31,6 +31,11 @@ test.describe("2013 flows", () => {
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
     await page.locator("[data-vn13-hold]").click();
     await page.locator("[data-vn13-post]").click();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.fill("[data-official-need]", "6s leftover");
+    await page.locator("[data-vn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-vine-posts")).toBeTruthy();
   });
   test("Chrome IE trap / empty URL never writes; habit writes", async ({ page }) => {
@@ -105,32 +110,11 @@ test.describe("2013 flows", () => {
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 
-  test("Vine leftover-2× empty never writes · lx then d2 · gold empty", async ({ page }) => {
+  test("Vine star dest leftover-2× first paint 0", async ({ page }) => {
     await page.goto("/years/2013/sites/vine/record.html");
-    await page.evaluate(() => {
-      localStorage.removeItem("itt13-vine-lx");
-      localStorage.removeItem("itt13-vine-d2");
-      localStorage.removeItem("itt13-vine-posts");
-    });
-    await page.reload();
-    await revealLeftoverRails(page);
-    const p1 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="vine-lx"]') }).first();
-    await p1.locator("[data-lo-save]").click();
-    expect(await getKey(page, "itt13-vine-lx")).toBeFalsy();
-    await p1.locator("[data-lo-pick='keep']").click();
-    const r1 = p1.locator("[data-lo-req]");
-    for (let i = 0; i < (await r1.count()); i++) await r1.nth(i).check();
-    await p1.locator("[data-lo-field]").fill("vine leftover");
-    await p1.locator("[data-lo-save]").click();
-    await expect.poll(() => getKey(page, "itt13-vine-lx")).toBeTruthy();
-    const p2 = page.locator("[data-lo-panel]").filter({ has: page.locator('[data-lo-save][data-lo-key="vine-d2"]') }).first();
-    await p2.locator("[data-lo-pick='keep']").click();
-    const r2 = p2.locator("[data-lo-req]");
-    for (let i = 0; i < (await r2.count()); i++) await r2.nth(i).check();
-    await p2.locator("[data-lo-field]").fill("vine leftover two");
-    await p2.locator("[data-lo-save]").click();
-    await expect.poll(() => getKey(page, "itt13-vine-d2")).toBeTruthy();
-    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    await expect(page.locator("html")).toHaveAttribute("data-official-key", "itt13-vine-posts");
+    await expect(page.locator("[data-lo-save]")).toHaveCount(0);
+    await expect(page.locator("[data-lo-panel][data-itt-dest-true]")).toHaveCount(0);
   });
 
   test("Snap Stories trap/empty never writes then save", async ({ page }) => {

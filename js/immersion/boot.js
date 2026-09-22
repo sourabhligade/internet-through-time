@@ -24,7 +24,19 @@
       _ds.textContent = "img,table,video{max-width:100%;height:auto}table{box-sizing:border-box}";
       (document.head || document.documentElement).appendChild(_ds);
     }
-    if (/\/years\/\d{4}\/pages\//.test(_p) && !document.getElementById("itt-page-fill")) {
+    /* Fill About/map when they sit in the year iframe. Standalone Starting Point
+       (top window) must not min-height:100% — that is the cavern under the footer. */
+    var _inFrame = false;
+    try {
+      _inFrame = window.self !== window.top;
+    } catch (eFrame) {
+      _inFrame = true;
+    }
+    if (
+      _inFrame &&
+      /\/years\/\d{4}\/pages\//.test(_p) &&
+      !document.getElementById("itt-page-fill")
+    ) {
       var _s = document.createElement("style");
       _s.id = "itt-page-fill";
       _s.textContent =
@@ -240,9 +252,15 @@
     maybePack("[data-5x-save], [data-5x-loop]", "immersion/year-5x-pack.js");
     maybePack("[data-itt-pack], .itt-year-true-pack", "immersion/year-true-packs.js");
     maybePack("[data-pop-go], [data-itt-pop3x], [data-pop-panel]", "immersion/year-popular-3x.js");
-    if (path.indexOf("/pages/") !== -1 || hasSel("#itt-year-start, .itt-start-page")) {
+    if (
+      path.indexOf("/pages/") !== -1 ||
+      hasSel("#itt-year-start, .itt-start-page") ||
+      hasSel("[data-itt-lo3x], [data-itt-3x-unique-links], .itt-3x-unique-links")
+    ) {
       add("config/leftover-3x-unique.js");
       add("immersion/leftover-3x-unique.js");
+      add("config/leftover-3x-unique-links.js");
+      add("immersion/leftover-3x-unique-links.js");
     }
     maybePack("[data-ytl-save], [data-ytl]", "immersion/year-true-leftover.js");
     maybePack("[data-lo-save], [data-lo-pick]", "immersion/leftover-official.js");

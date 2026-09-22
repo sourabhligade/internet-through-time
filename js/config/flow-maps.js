@@ -935,8 +935,8 @@
                     },
                     {
                               "name": "N11 Amazon IPO",
-                              "href": "sites/amazon/index.html",
-                              "do": "4\u00d7 \u2192 itt97-amzn-ipo"
+                              "href": "sites/amazonipo/index.html",
+                              "do": "leftover \u2192 itt97-amazonipo-lx"
                     },
                     {
                               "name": "N12 eBay rename",

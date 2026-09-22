@@ -3,7 +3,6 @@
 **Date:** 2026-09-20  
 **Source:** live `years/` · every museum Markdown in `docs/` + root `README.md` + `ui/year/README.md` (66 files) · every `e2e/*.spec.js` (328) · every `js/config/1994.js`–`2022.js` (29, all parse, 0 missing urlMap files) · `docs/DEST-TRUE-FLOW-NAMES.md` · `docs/YEAR-FALSE-KEEP-DROP.md` · `docs/DISK-TRUTH.md` · `docs/VISITOR-100-FLOWS.md` · `docs/YEAR-BY-YEAR-RESEARCH-STEPS.md`.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`. This file does not override that.  
-**Out of this file:** git **push**. Do not push unless a later message says push.  
 **Flip `[x]` only after disk + e2e (or a named skip with reason).** Open boxes are work, stops, or stale-doc strikes. Read the row. Do not dest-farm to close a box.
 
 ---
@@ -23,7 +22,7 @@ Stops stay `[ ]` so nobody implements them. They are not a backlog.
 
 ---
 
-## 1. Machine state right now (no push)
+## 1. Machine state right now
 
 Branch `museum/1994-2020-lean`.
 
@@ -32,10 +31,9 @@ Branch `museum/1994-2020-lean`.
 | Local HEAD | `9206ac39e` Dest-true official dest complete I/O: Amazon, Digg, search dests, Vine. Dest-true e2e pack was 860 passed / 2 skipped / 0 failed locally. |
 | Origin | `9544742b7` Fix origin CI static checks after year-false leftover dest drops. Origin CI on this branch is red. Ahead **1**. |
 | Uncommitted | Year-false map (KEEP 405 · DROP 191 · DO-NOT-APPLY 103 · MISS 0). Leftover dest DROP folders deleted (13 still-on-disk leftover dests). Angry Birds 2010 + Tesla Autopilot 2016 restored KEEP. `EXTRA_KEEP`, leftover dest matrices, folder-count asserts, `DISK-TRUTH` dest folder numbers. |
-| Push | **Not a todo in this file.** |
 
-- [x] Leftover dest drop + year-false maps + restored dests + dest-lock `EXTRA_KEEP` + e2e folder counts are on the working tree (commit with the rest of this implement pass). Do not push from this box.
-- [x] Stale dest-count rows in §8 struck / YEAR-E2E-POTENTIAL regenerated. Do not push.
+- [x] Leftover dest drop + year-false maps + restored dests + dest-lock `EXTRA_KEEP` + e2e folder counts are on the working tree (commit with the rest of this implement pass).
+- [x] Stale dest-count rows in §8 struck / YEAR-E2E-POTENTIAL regenerated.
 
 Hub **28 years** 1994–2008 + 2010–2022. **2009 boarded.** **2023–2025 wiped.** Serve: `python3 -m http.server 8080 --bind 127.0.0.1`. Dest-true CI pack is 16 specs in `package.json` `test:e2e:dest-true`, not full `npm test` (328 specs).
 
@@ -369,7 +367,7 @@ Visitor Phase 5 is `[x]` as failed-final honest. Harvest is optional.
 
 ## 11. Optional product slices (`PRODUCT-IMPROVE.md`) — not dest HTML unless named
 
-- [ ] Slice 0: public URL (GitHub Pages / Netlify / Vercel). Unlock Actions billing or stop claiming CI. **Not push of this branch.** Publish is separate.
+- [ ] Slice 0: public URL (GitHub Pages / Netlify / Vercel). Unlock Actions billing or stop claiming CI. Publish is a separate step from this branch.
 - [ ] Slice 2B: 2009 Like live door (§5.1).
 - [ ] Slice 6: period-friction toggle (14.4k / wait for GIF), not default.
 - [ ] Slice 6: one non-US dest per year where a mass product existed (Orkut 2004, Cyworld, Mixi, 2ch). Not dest-farm. Famous that year, cited, dest-disjoint from official 10.
@@ -379,11 +377,11 @@ Slice 1–4 are `[x]`. Slice 5 dest-farm lock is a **stop** (§3).
 
 ---
 
-## 12. Implement order (if continuing after commit, still no push)
+## 12. Implement order
 
 Do not dest-farm. Do not invent dests. Do not grow leftover-3× unique past the stops.
 
-1. **Commit** uncommitted leftover dest drop + maps + restored Angry Birds / Tesla + folder asserts (`DISK-TRUTH`, matrices, `EXTRA_KEEP`). No push.
+1. **Commit** uncommitted leftover dest drop + maps + restored Angry Birds / Tesla + folder asserts (`DISK-TRUTH`, matrices, `EXTRA_KEEP`).
 2. **Strike stale MD dest counts** in §8 (same or next commit). `YEAR-GAPS` 2012/2013/2014 holes, `2022-IMPLEMENT` 85, `2019-2020-DEST-DENSITY` 38, READ-FIRST 23/32/13/15/111, `YEAR-E2E-POTENTIAL` regenerate or mark V5 forest-only, `UNDONE` / `FLOW-UNIMPLEMENTED` open-issue and dest-count tables, `YEAR-FALSE` header “map only”.
 3. **Fix stale 2013 wiped skips** in e2e (§6 2013).
 4. **Storm Circle gym e2e** if named (§5.3).
@@ -446,4 +444,4 @@ DO-NOT-APPLY = playable year-game · leftover-3× unique dest-disjoint leftovers
 
 ---
 
-End of map. Next named message picks a numbered section. Do not push.
+End of map. Next named message picks a numbered section.

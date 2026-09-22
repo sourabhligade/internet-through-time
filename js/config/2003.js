@@ -268,8 +268,12 @@
     "sites/wordpress/post.html",
     "sites/xbox/index.html",
     "sites/xda/index.html",
-    "sites/xing/index.html"
-  ];;
+    "sites/xing/index.html",
+    "sites/amazon/index.html",
+    "sites/google/index.html",
+    "sites/wikipedia/index.html",
+    "sites/yahoo/index.html"
+  ];
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

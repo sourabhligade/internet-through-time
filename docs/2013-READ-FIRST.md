@@ -4,7 +4,6 @@
 **Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023–2025 wiped.** Do not `git checkout` an old 2013 forest.  
 **Prefix:** `itt13-*`  
 **Official 10 keys already live in `flow-trails.js` — dest paths must match.**  
-**Git only if asked.**  
 **Leftover:** 2× ×2 on every dest HTML. Leftover 3× first (Ask.fm · Whisper · YouTube) + second (Chrome · Medium) + third. Leftover 4× **0**.
 
 ## One line
