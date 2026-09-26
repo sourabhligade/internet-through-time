@@ -93,3 +93,26 @@ test("2008 and 2009 are not leftover-3× unique dest-true rows", () => {
   expect(ROWS.filter((r) => r.year === "2008")).toHaveLength(0);
   expect(ROWS.filter((r) => r.year === "2009")).toHaveLength(0);
 });
+
+test("2012 leftover-4× unique dest faces stay · not leftover-3× catalog", () => {
+  const fs = require("fs");
+  const path = require("path");
+  const ids = ["chrome", "twitter", "soundcloud"];
+  for (const id of ids) {
+    const file = path.join(__dirname, "..", "years/2012/sites", id, "index.html");
+    expect(fs.existsSync(file), id).toBe(true);
+    const html = fs.readFileSync(file, "utf8");
+    expect(html, id + " leftover-4×").toMatch(/data-itt-lo3x/);
+    expect(html, id + " pop4").toMatch(/pop4-/);
+  }
+  expect(ROWS.filter((r) => r.year === "2012")).toEqual([]);
+});
+
+test("2005 leftover-3× dest faces are forest leftover · not unique catalog", () => {
+  const fs = require("fs");
+  const path = require("path");
+  const file = path.join(__dirname, "..", "years/2005/sites/adsense/index.html");
+  expect(fs.existsSync(file)).toBe(true);
+  expect(fs.readFileSync(file, "utf8")).toMatch(/data-itt-lo3x/);
+  expect(ROWS.filter((r) => r.year === "2005")).toEqual([]);
+});

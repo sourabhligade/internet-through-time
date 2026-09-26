@@ -36,4 +36,13 @@ test.describe("follow-a-site", () => {
     await expect(next).toBeVisible({ timeout: 15000 });
     await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
   });
+
+  test("2005 Yahoo next stays Yahoo 2006", async ({ page }) => {
+    await page.goto("/years/2005/?room=sites/yahoo/index.html");
+    const next = page.locator("#itt-follow-next");
+    await expect(next).toBeVisible({ timeout: 15000 });
+    await expect(next).toHaveAttribute("href", /years\/2006\/\?room=/);
+    await expect(next).toContainText("Yahoo");
+    await expect(next).not.toContainText("Amazon");
+  });
 });

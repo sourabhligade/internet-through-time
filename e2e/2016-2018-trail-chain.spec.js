@@ -5,6 +5,7 @@
  * and the previous dest must stay clickable (the mid-trail break).
  */
 const { test, expect } = require("@playwright/test");
+const { yearHtmlOnDisk } = require("./helpers");
 
 
 async function getKey(page, key) {
@@ -120,111 +121,9 @@ const YEARS = [
       },
     ],
   },
-  {
-    year: "2017",
-    stops: [
-      {
-        path: "/years/2017/sites/iphone/x.html",
-        key: "itt17-faceid",
-        next: /fortnite/,
-        complete: async (page) => {
-          await page.locator("[data-faceid-look]").click();
-          await page.locator("[data-faceid-unlock]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/fortnite/index.html",
-        key: "itt17-fortnite",
-        next: /280/,
-        prev: /iphone\/x/,
-        complete: async (page) => {
-          await checkAll(page, "[data-fn-req]");
-          await page.locator("[data-fn-drop]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/twitter/280.html",
-        key: "itt17-twitter-280",
-        next: /teams/,
-        prev: /fortnite/,
-        complete: async (page) => {
-          await page.fill("[data-tw-280-text]", "x".repeat(160));
-          await page.locator("[data-tw-280-send]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/teams/index.html",
-        key: "itt17-teams",
-        next: /vine/,
-        prev: /280/,
-        complete: async (page) => {
-          await checkAll(page, "[data-teams-req]");
-          await page.fill("[data-teams-name]", "museum desk");
-          await page.locator("[data-teams-create]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/vine/gone.html",
-        key: "itt17-vine-gone",
-        next: /switch/,
-        prev: /teams/,
-        complete: async (page) => {
-          await checkAll(page, "[data-vine-gone-req]");
-          await page.locator("[data-vine-gone-ack]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/switch/index.html",
-        key: "itt17-switch",
-        next: /wannacry/,
-        prev: /vine/,
-        complete: async (page) => {
-          await checkAll(page, "[data-switch-req]");
-          await page.locator("[data-switch-reserve]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/wannacry/index.html",
-        key: "itt17-wannacry",
-        next: /musically/,
-        prev: /switch/,
-        complete: async (page) => {
-          await checkAll(page, "[data-wc-req]");
-          await page.locator("[data-wc-ack]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/musically/index.html",
-        key: "itt17-musically",
-        next: /equifax/,
-        prev: /wannacry/,
-        complete: async (page) => {
-          await page.fill("[data-ml-caption]", "not tiktok yet");
-          await page.locator("[data-ml-post]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/equifax/index.html",
-        key: "itt17-equifax",
-        next: /playable\/game/,
-        prev: /musically/,
-        complete: async (page) => {
-          await checkAll(page, "[data-eq-req]");
-          await page.locator("[data-eq-freeze]").click();
-        },
-      },
-      {
-        path: "/years/2017/sites/playable/game.html",
-        key: null,
-        next: null,
-        prev: /equifax/,
-        complete: null,
-      },
-    ],
-  },
 ];
 
-for (const y of YEARS) {
+for (const y of YEARS.filter((row) => yearHtmlOnDisk(row.year))) {
   test.describe(`${y.year} official trail chain`, () => {
     test(`walk dests 1→10 · Next lands · prev stays visible`, async ({ page }) => {
       for (let i = 0; i < y.stops.length; i++) {

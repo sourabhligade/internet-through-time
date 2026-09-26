@@ -1,34 +1,38 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-
 test.describe("2017 official trail dests exist", () => {
-  const stops = [
-    "sites/iphone/x.html",
-    "sites/fortnite/index.html",
-    "sites/twitter/280.html",
-    "sites/teams/index.html",
-    "sites/vine/gone.html",
-    "sites/switch/index.html",
-    "sites/wannacry/index.html",
-    "sites/musically/index.html",
-    "sites/equifax/index.html",
-    "sites/playable/game.html",
+  const keys = [
+    "itt17-faceid",
+    "itt17-fortnite",
+    "itt17-twitter-280",
+    "itt17-teams",
+    "itt17-vine-gone",
+    "itt17-switch",
+    "itt17-wannacry",
+    "itt17-musically",
+    "itt17-equifax",
+    "itt17-game-stormcircle",
   ];
-  for (const href of stops) {
-    test(href + " loads", async ({ page }) => {
-      const res = await page.goto("/years/2017/" + href);
-      expect(res && res.ok()).toBeTruthy();
+
+  test("React door loads Face ID", async ({ page }) => {
+    const res = await page.goto("/app/index.html#/year/2017");
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
+  });
+
+  for (const key of keys) {
+    test(key + " is on the official rail", async ({ page }) => {
+      await page.goto("/app/index.html#/year/2017");
+      await expect(page.locator(".rails li code", { hasText: key })).toHaveCount(1);
     });
   }
 
-  test("map lists official ten hrefs", async ({ page }) => {
-    await page.goto("/years/2017/pages/map.html");
-    await expect(page.locator("ol[data-itt-ten-flows] > li")).toHaveCount(10);
-    await expect(page.locator("[data-itt-ten-flows] a[href*='iphone/x']").first()).toBeVisible();
-    await expect(page.locator("[data-itt-ten-flows] a[href*='fortnite']").first()).toBeVisible();
-    await expect(page.locator("[data-itt-ten-flows] a[href*='playable/game']").first()).toBeVisible();
-    await expect(page.locator('a[href*="reddit"]')).toHaveCount(0);
-    await expect(page.locator('a[href*="amazon"]')).toHaveCount(0);
+  test("guided six stays six · no reddit/amazon gold", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2017");
+    await expect(page.locator("article.stop ol > li")).toHaveCount(6);
+    await expect(page.locator(".rails code", { hasText: "itt17-faceid" })).toHaveCount(1);
+    await expect(page.locator(".rails code", { hasText: "itt17-fortnite" })).toHaveCount(1);
+    await expect(page.locator(".rails code", { hasText: "itt17-game-stormcircle" })).toHaveCount(1);
   });
 });

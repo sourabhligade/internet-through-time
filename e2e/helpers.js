@@ -12,6 +12,37 @@ function destOnDisk(href) {
   return fs.existsSync(path.join(__dirname, "..", clean));
 }
 
+/** True when the static year HTML shell exists. React-only years are false. */
+function yearHtmlOnDisk(year) {
+  return fs.existsSync(path.join(__dirname, "..", "years", String(year), "index.html"));
+}
+
+/**
+ * Open a React year door and click the rail button whose code is `key`.
+ * @param {import('@playwright/test').Page} page
+ * @param {string} year
+ * @param {string} key
+ */
+async function openReactStop(page, year, key) {
+  await page.goto("/app/index.html#/year/" + year);
+  await page.locator(".rails li", { has: page.locator("code", { hasText: key }) }).getByRole("button").click();
+  return page.locator("article.stop");
+}
+
+/**
+ * Finish a React OfficialStop: ticks + field + last action button.
+ * @param {import('@playwright/test').Page} page
+ * @param {import('@playwright/test').Locator} room
+ */
+async function completeReactStop(page, room) {
+  const boxes = room.locator("input[type='checkbox']");
+  const n = await boxes.count();
+  for (let i = 0; i < n; i++) await boxes.nth(i).check();
+  const field = room.locator("input:not([type='checkbox'])");
+  if ((await field.count()) > 0) await field.fill("done leftover");
+  await room.locator(".actions button").last().click();
+}
+
 function isLiveYear(year) {
   return !BOARDED_YEARS.has(String(year));
 }
@@ -747,6 +778,9 @@ async function leftoverOfficialDest(page, href, suffix, goldKey) {
 module.exports = {
   BOARDED_YEARS,
   destOnDisk,
+  yearHtmlOnDisk,
+  openReactStop,
+  completeReactStop,
   isLiveYear,
   expectYearBoarded,
   enterYear,

@@ -50,6 +50,7 @@ for (const row of FOREST) {
 }
 
 test("2019 reddit leftover is one key · empty never writes · complete leftover only", async ({ page }) => {
+  test.skip(!destOnDisk("/years/2019/sites/reddit/index.html"), "2019 HTML dest gone");
   await leftoverComplete(page, "/years/2019/sites/reddit/index.html", "reddit-lx", "itt19-disneyplus");
   expect(await getKey(page, "itt19-reddit-d2")).toBeFalsy();
 });

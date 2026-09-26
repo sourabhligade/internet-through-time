@@ -72,16 +72,6 @@ const YEARS = [
       { href: "/years/2016/sites/whatsapp/e2e.html", suffix: "wa-e2e" },
     ],
   },
-  {
-    year: "2017",
-    star: "itt17-faceid",
-    gold: "/years/2017/sites/iphone/x.html",
-    leftover: [
-      { href: "/years/2017/sites/fortnite/index.html", suffix: "fortnite" },
-      { href: "/years/2017/sites/teams/index.html", suffix: "teams" },
-      { href: "/years/2017/sites/switch/index.html", suffix: "switch" },
-    ],
-  },
 ].filter((y) => fs.existsSync(path.join(ROOT, "years", y.year, "index.html")))
   .map((y) => {
     y.leftover = (y.leftover || []).filter((row) => destOnDisk(row.href));

@@ -49,16 +49,19 @@ async function walkTheater(page, spec) {
 }
 
 test("2017 Face ID gold dest is still Face ID, leftover Cloudbleed never writes gold", async ({ page }) => {
-  await page.goto("/years/2017/sites/iphone/x.html");
-  await expect(page.locator("[data-faceid], [data-faceid-unlock], [data-x-unlock]").first()).toBeVisible();
-  await walkTheater(page, {
-    path: "/years/2017/sites/cloudbleed/index.html",
-    key: "itt17-cbleed-dp",
-    ns: "p17",
-    kind: "checks",
+  const { openReactStop, completeReactStop } = require("./helpers");
+  await page.goto("/app/index.html#/year/2017");
+  await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
+  const room = await openReactStop(page, "2017", "itt17-cloudbleed");
+  await page.evaluate(() => {
+    localStorage.removeItem("itt17-cloudbleed");
+    localStorage.removeItem("itt17-faceid");
   });
-  const gold = await page.evaluate(() => localStorage.getItem("itt17-faceid"));
-  expect(gold).toBeFalsy();
+  await room.locator(".actions button").last().click();
+  expect(await getKey(page, "itt17-cloudbleed")).toBeFalsy();
+  await completeReactStop(page, room);
+  await expect.poll(async () => getKey(page, "itt17-cloudbleed"), { timeout: 8000 }).toBeTruthy();
+  expect(await getKey(page, "itt17-faceid")).toBeFalsy();
 });
 
 test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
@@ -88,10 +91,7 @@ test("2019 is live lean", async ({ page }) => {
 });
 
 test("2017 guided list stays 6 · deepen strip is outside", async ({ page }) => {
-  for (const y of ["2017"]) {
-    await page.goto(`/years/${y}/pages/home.html`);
-    await expect(page.locator(`#ott-guided-${y} ol > li`)).toHaveCount(6);
-    await expect(page.locator(`[data-ott-one-thing="${y}"]`)).toBeVisible();
-    await expect(page.locator(`#ott-2x-${y}-dp:visible`)).toHaveCount(0);
-  }
+  await page.goto("/app/index.html#/year/2017");
+  await expect(page.locator("article.stop ol > li")).toHaveCount(6);
+  await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
 });

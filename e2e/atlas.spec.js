@@ -11,6 +11,11 @@ const OPEN = [
   "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019",
   "2020", "2021", "2022",
 ];
+const REACT_DOORS = new Set(["2017", "2019", "2020", "2021"]);
+function doorHrefRe(year) {
+  if (REACT_DOORS.has(year)) return new RegExp("app/index\\.html#/year/" + year);
+  return new RegExp("years/" + year + "/?$");
+}
 const WIPED = [];
 const THREADS = ["yahoo", "amazon", "google", "facebook", "youtube", "mail", "search", "phone", "im"];
 const TOURS = ["first-night", "find", "buy", "talk", "phone-trail", "broadcast", "games"];
@@ -74,7 +79,7 @@ test.describe("museum atlas", () => {
       const door = page.locator(`#atlas-spine a.spine-year[data-atlas-year="${y}"]`);
       await expect(door, y + " door").toBeVisible();
       const href = await door.getAttribute("href");
-      expect(href, y + " href").toMatch(new RegExp("years/" + y + "/?$"));
+      expect(href, y + " href").toMatch(doorHrefRe(y));
       await expectLive(page, href, y + " door");
     }
     await page.locator('#atlas-spine a[data-atlas-year="1999"]').click();
@@ -115,6 +120,13 @@ test.describe("museum atlas", () => {
       );
       expect(trailHrefs.length, y + " trail").toBeGreaterThanOrEqual(7);
       expect(trailHrefs.length, y + " trail").toBeLessThanOrEqual(10);
+      if (REACT_DOORS.has(y)) {
+        for (const h of trailHrefs) {
+          expect(h, y + " trail").toMatch(doorHrefRe(y));
+          await expectLive(page, h, y + " trail");
+        }
+        continue;
+      }
       const pages = trailHrefs.map((h) => String(h).replace(/\\/g, "/").split("?")[0].toLowerCase());
       expect(new Set(pages).size, y + " official dests must be unique hrefs").toBe(pages.length);
       for (const h of trailHrefs) await expectLive(page, h, y + " trail");
@@ -159,11 +171,10 @@ test.describe("museum atlas", () => {
     await page.goto("/atlas/");
     const tick = page.locator('#atlas-spine [data-atlas-year="2019"]');
     await expect(tick).not.toHaveClass(/wiped/);
-    await expect(tick).toHaveAttribute("href", /years\/2019\/?$/);
+    await expect(tick).toHaveAttribute("href", /app\/index\.html#\/year\/2019/);
     await tick.click();
-    await expect(page).toHaveURL(/\/years\/2019\/?/);
-    const res = await page.request.get("/years/2019/sites/disneyplus/home.html");
-    expect(res.status()).toBe(200);
+    await expect(page).toHaveURL(/app\/index\.html#\/year\/2019/);
+    await expect(page.getByRole("heading", { name: "Disney+ Continue" })).toBeVisible();
   });
 
   test("hallway ends at 2021 · no 2009 / 2023–2025 ticks", async ({ page }) => {

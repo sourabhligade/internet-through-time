@@ -156,7 +156,7 @@
       { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep leftover. Not the chip.", match: "/facebook/feed" }),
     "2008": yearVisitTour("2008",
       { path: "sites/github/issue.html", label: "GitHub issue", blurb: "Title + body. The 2008 save.", match: "/github/issue" },
-      { path: "sites/appstore/index.html", label: "App Store leftover", blurb: "~500 apps. Not the chip.", match: "/appstore/" }),
+      { path: "sites/appstore/index.html", label: "App Store", blurb: "~500 apps. Official stop 2. GitHub issue is the chip.", match: "/appstore/" }),
     "2009": yearVisitTour("2009",
       { path: "sites/facebook/index.html", label: "Facebook Like", blurb: "9 Feb. Two partner Likes. Not Reactions.", match: "/facebook/" },
       { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Plant / harvest. Social game year.", match: "/farmville/" }),

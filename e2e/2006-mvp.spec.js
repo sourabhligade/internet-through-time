@@ -20,6 +20,6 @@ test.describe('2006 MVP', () => {
   });
   test('2007 hub card is open', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card[href*="years/2007"]')).toHaveCount(0);
+    await expect(page.locator('a.year-card.available[href*="years/2007"]').first()).toBeVisible();
   });
 });

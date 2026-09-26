@@ -107,30 +107,6 @@ const YEARS = [
     ],
   },
   {
-    year: "2017",
-    star: "itt17-faceid",
-    gold: async (page) => {
-      await openClear(page, "/years/2017/sites/iphone/x.html", "itt17-faceid");
-      await page.locator("[data-faceid-unlock]").click();
-      expect(await getKey(page, "itt17-faceid")).toBeFalsy();
-      await page.locator("[data-faceid-look]").click();
-      await page.locator("[data-faceid-unlock]").click();
-      await expect.poll(() => getKey(page, "itt17-faceid"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2017/sites/fortnite/index.html", "itt17-fortnite-lx"],
-      ["/years/2017/sites/twitter/280.html", "itt17-twitter-280-lx"],
-      ["/years/2017/sites/teams/index.html", "itt17-teams-lx"],
-      ["/years/2017/sites/vine/gone.html", "itt17-vine-gone-lx"],
-      ["/years/2017/sites/switch/index.html", "itt17-switch-lx"],
-      ["/years/2017/sites/wannacry/index.html", "itt17-wannacry-lx"],
-      ["/years/2017/sites/musically/index.html", "itt17-musically-lx"],
-      ["/years/2017/sites/equifax/index.html", "itt17-equifax-lx"],
-      ["/years/2017/sites/playable/game.html", "itt17-game-stormcircle-lx"],
-    ],
-  },
-
-  {
     year: "2014",
     star: "itt14-wa-install",
     gold: async (page) => {
@@ -168,8 +144,8 @@ test.describe("wiped years stay boarded", () => {
     for (const y of ["2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
-    expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(true);
-    expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(false);
+    expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(root, "years", "2022", "index.html"))).toBe(true);
   });

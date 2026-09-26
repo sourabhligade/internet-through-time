@@ -1,7 +1,7 @@
 # Open checklist
 
-**Date:** 2026-09-24  
-**Branch:** `museum/1994-2020-lean` (uncommitted). GitHub is still `20b7730ca` from 22 Sep.  
+**Date:** 2026-09-26  
+**Branch:** `museum/1994-2020-lean`. This commit ships React-door atlas, dest-true 2017/2019 MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) and `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Live museum:** 27 doors (1994–2008, 2010–2017, 2019–2022). 2009 is boarded. 2018 and 2023–2025 are wiped. Leftover-3× catalogs are empty.
 
@@ -20,7 +20,7 @@ Checked boxes are already true on disk. Unchecked boxes are the work.
 - [x] 1994 Cool Site of the Day writes `itt94-csotd` only after today’s pick and a real name.
 - [x] Each open year loads `css/period-YYYY.css`.
 - [x] Buttons that said “(theater)” on the year pages now use the period verb. The save hook is the same.
-- [x] 2005 leftover-2× rail is the cited 105 links. The 806 destination folders stay.
+- [x] 2005 leftover-2× rail is the cited **91** links. The 806 destination folders stay.
 - [x] Five-k walk is written in [`FIVE-K-SITE-WALK.md`](FIVE-K-SITE-WALK.md). No new forest folders came from it.
 
 ---
@@ -36,7 +36,7 @@ On every leftover stop below, a visitor check is:
 3. A finished visit writes that page’s one key.
 4. The year star stays empty (`itt17-faceid` or `itt19-disneyplus`).
 
-AirPods 2, Cuphead, and Animoji were the three clicked in the browser. The spec covers the save shape. The other 37 pages still need that same click.
+AirPods 2, Cuphead, and Animoji were clicked in the browser. React leftover-20 + unique-flows **75 passed** 2026-09-26: every leftover stop 11–30 on 2017 and 2019 got empty click, trap click, and a finished visit. Stars stayed empty. HTML paths below are trail names; live rooms are the React rail.
 
 ### 2017 leftover stops 11–30
 
@@ -44,7 +44,7 @@ Star stays `itt17-faceid`. Keys do not end in `-lx`.
 
 | n | Page | Key | Browser click |
 |--:|------|-----|:---:|
-| 11 | `years/2017/sites/iphone/animoji.html` | `itt17-animoji` | done (needs Face ID saved, a face pick, and two ticks) |
+| 11 | React leftover n=11 Animoji | `itt17-animoji` | spec (React leftover · never writes Face ID) |
 | 12 | `years/2017/sites/ios11/index.html` | `itt17-ios11` | spec |
 | 13 | `years/2017/sites/pubgnote/index.html` | `itt17-pubgnote` | spec |
 | 14 | `years/2017/sites/cuphead/index.html` | `itt17-cuphead` | done |
@@ -308,8 +308,9 @@ Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 27 doors, 2009 boarded, 2018 wi
 - [x] Re-ran `e2e/2017-unique-flows.spec.js` on 2026-09-24. 38 passed on the first run. The next-link test expected the old official hops. Those hrefs now follow the leftover trail, ending at Face ID. That one test was updated and passed.
 - [x] Full suite `npx playwright test --workers=2` finished 2026-09-25 after 2.7h. **6,238** tests: **4,837 passed**, **968 failed**, **433 skipped**. Exit code 1.
 - [x] Counts are the line above. Failures clustered on old leftover-panel specs (`1997-2000-leftover-4x`, `1994-1999-official-10`, `1994-2000-2009-href-2x-real-flows`, `1994-2000-dest-true-leftover-note`). The run loaded those files before the strip assertions were updated, so this result still includes the old 9+9+9 expects.
-- [x] Dest-true pack 2026-09-25 after leftover-2× owned-dest strip + official dest leftover-panel strip + Amazon WDM cite: **502 passed, 2 skipped, 0 failed**. GitHub Playwright is this pack, not the full tree.
-- [ ] Commit only when you ask. Branch `museum/1994-2020-lean`. GitHub `20b7730ca`.
+- [x] Dest-true pack 2026-09-26: **511 passed, 2 skipped**. GitHub Playwright is this pack (19 files including 2017-mvp and 2019-mvp), not the full tree.
+- [x] Leftover-20 + unique-flows 2026-09-26: **75 passed**.
+- [x] Shipped `cbbd243a6` on ask (2026-09-26). This commit ships React-door atlas, dest-true 2017/2019 MVP, leftover-20 React I/O, and dest-count docs. Branch `museum/1994-2020-lean`.
 
 **Done when:** the suite result is written in this file, and a commit exists only if you asked for one.
 

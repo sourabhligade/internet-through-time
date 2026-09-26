@@ -52,7 +52,17 @@
   }
 
   function yearHome(year) {
+    if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[String(year)]) {
+      return "/app/index.html#/year/" + year;
+    }
     return "/years/" + year + "/";
+  }
+
+  function yearRoom(year, rel) {
+    if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[String(year)]) {
+      return yearHome(year);
+    }
+    return "years/" + year + "/" + String(rel || "").replace(/^\//, "");
   }
 
   function isOpen(year) {
@@ -394,13 +404,13 @@
     html += "<p class='doors'>";
     html += a(yearHome(year), "Enter " + year + " →", "start-btn start-primary");
     html += " ";
-    html += a("years/" + year + "/pages/home.html", "Starting Point");
+    html += a(yearRoom(year, "pages/home.html"), "Starting Point");
     html += " · ";
-    html += a("years/" + year + "/pages/about.html", "About");
+    html += a(yearRoom(year, "pages/about.html"), "About");
     html += " · ";
-    html += a("years/" + year + "/pages/map.html", "Year map");
+    html += a(yearRoom(year, "pages/map.html"), "Year map");
     html += " · ";
-    html += a("years/" + year + "/?trail=" + year + "-start", "Guided start");
+    html += a(yearRoom(year, "?trail=" + year + "-start"), "Guided start");
     html += "</p>";
 
     html += "<h3>Do this one thing</h3><ul>";
@@ -440,7 +450,7 @@
         stops.length +
         "</span></summary><ol class='ten'>";
       stops.forEach(function (s) {
-        var path = "years/" + year + "/" + String(s.href || "").replace(/^\//, "");
+        var path = yearRoom(year, s.href);
         html += "<li>" + a(path, s.name || "stop");
         if (s.nextLabel) html += " <span class='muted'>→ " + esc(s.nextLabel) + "</span>";
         html += "</li>";

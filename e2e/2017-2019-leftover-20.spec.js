@@ -5,117 +5,71 @@ const { test, expect } = require("@playwright/test");
 const STAR = { 2017: "itt17-faceid", 2019: "itt19-disneyplus" };
 
 const LO = [
-  ["2019", "/years/2019/sites/airpods2/index.html", "itt19-airpods2-lx"],
-  ["2019", "/years/2019/sites/android10/index.html", "itt19-android10-lx"],
-  ["2019", "/years/2019/sites/anthem19/index.html", "itt19-anthem19-lx"],
-  ["2019", "/years/2019/sites/apex/index.html", "itt19-apex-lx"],
-  ["2019", "/years/2019/sites/applecard/index.html", "itt19-applecard-lx"],
-  ["2019", "/years/2019/sites/applewatch5/index.html", "itt19-applewatch5-lx"],
-  ["2019", "/years/2019/sites/astralchain/index.html", "itt19-astralchain-lx"],
-  ["2019", "/years/2019/sites/bloodstained/index.html", "itt19-bloodstained-lx"],
-  ["2019", "/years/2019/sites/borderlands3/index.html", "itt19-borderlands3-lx"],
-  ["2019", "/years/2019/sites/catalina/index.html", "itt19-catalina-lx"],
-  ["2019", "/years/2019/sites/control19/index.html", "itt19-control19-lx"],
-  ["2019", "/years/2019/sites/crashteamracing/index.html", "itt19-crashteamracing-lx"],
-  ["2019", "/years/2019/sites/daysgone/index.html", "itt19-daysgone-lx"],
-  ["2019", "/years/2019/sites/deathstranding/index.html", "itt19-deathstranding-lx"],
-  ["2019", "/years/2019/sites/discoelysium/index.html", "itt19-discoelysium-lx"],
-  ["2019", "/years/2019/sites/dmc5/index.html", "itt19-dmc5-lx"],
-  ["2019", "/years/2019/sites/fireemblem3h/index.html", "itt19-fireemblem3h-lx"],
-  ["2019", "/years/2019/sites/galaxyfold/index.html", "itt19-galaxyfold-lx"],
-  ["2019", "/years/2019/sites/galaxynote10/index.html", "itt19-galaxynote10-lx"],
-  ["2019", "/years/2019/sites/galaxys10/index.html", "itt19-galaxys10-lx"],
-  ["2017", "/years/2017/sites/ios11/index.html", "itt17-ios11"],
+  ["2019", "itt19-airpods2-lx"],
+  ["2019", "itt19-android10-lx"],
+  ["2019", "itt19-anthem19-lx"],
+  ["2019", "itt19-apex-lx"],
+  ["2019", "itt19-applecard-lx"],
+  ["2019", "itt19-applewatch5-lx"],
+  ["2019", "itt19-astralchain-lx"],
+  ["2019", "itt19-bloodstained-lx"],
+  ["2019", "itt19-borderlands3-lx"],
+  ["2019", "itt19-catalina-lx"],
+  ["2019", "itt19-control19-lx"],
+  ["2019", "itt19-crashteamracing-lx"],
+  ["2019", "itt19-daysgone-lx"],
+  ["2019", "itt19-deathstranding-lx"],
+  ["2019", "itt19-discoelysium-lx"],
+  ["2019", "itt19-dmc5-lx"],
+  ["2019", "itt19-fireemblem3h-lx"],
+  ["2019", "itt19-galaxyfold-lx"],
+  ["2019", "itt19-galaxynote10-lx"],
+  ["2019", "itt19-galaxys10-lx"],
+  ["2017", "itt17-animoji"],
+  ["2017", "itt17-ios11"],
+  ["2017", "itt17-pubgnote"],
+  ["2017", "itt17-cuphead"],
+  ["2017", "itt17-twitterlite"],
+  ["2017", "itt17-snapipo"],
+  ["2017", "itt17-slack17"],
+  ["2017", "itt17-hangoutschat"],
+  ["2017", "itt17-snapmap"],
+  ["2017", "itt17-instagram17"],
+  ["2017", "itt17-botw"],
+  ["2017", "itt17-splatoon2"],
+  ["2017", "itt17-notpetya"],
+  ["2017", "itt17-krack"],
+  ["2017", "itt17-tbh"],
+  ["2017", "itt17-messengerday"],
+  ["2017", "itt17-creditfrz"],
+  ["2017", "itt17-cloudbleed"],
+  ["2017", "itt17-gettingoverit"],
+  ["2017", "itt17-hollowknight"],
 ];
 
-for (const [year, href, key] of LO) {
-  test(`${year} ${key} one leftover save`, async ({ page }) => {
-    if (year === "2017" || year === "2019") {
-      await page.goto("/app/index.html#/year/2019");
-      await page.locator(".rails li", { has: page.locator("code", { hasText: key }) }).getByRole("button").click();
-      const room = page.locator("article.stop");
-      const verb = room.locator(".actions button").last();
-      await verb.click();
-      expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-      await room.locator(".actions button").first().click();
-      expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-      expect(await page.evaluate((k) => localStorage.getItem(k), STAR[year])).toBeFalsy();
-      const boxes = room.locator("input[type='checkbox']");
-      await boxes.nth(0).check();
-      await boxes.nth(1).check();
-      await room.locator("input:not([type='checkbox'])").fill("done");
-      await verb.click();
-      const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-      expect(JSON.parse(raw || "{}").leftover).toBe(true);
-      expect(await page.evaluate((k) => localStorage.getItem(k), STAR[year])).toBeFalsy();
-      return;
-    }
-    await page.goto(href);
-    await expect(page.locator("[data-lo-save]")).toHaveCount(1);
-    await expect(page.locator('[data-lo-key$="-d2"]')).toHaveCount(0);
-    const save = page.locator("[data-lo-save]");
-    await save.click();
-    expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-    const trap = page.locator("[data-lo-trap]");
-    if (await trap.count()) {
-      await trap.first().click();
-      expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-      expect(await page.evaluate((k) => localStorage.getItem(k), STAR[year])).toBeFalsy();
-    }
-    await page.locator('[data-lo-pick="keep"]').click();
-    await page.locator("[data-lo-req]").nth(0).check();
-    await page.locator("[data-lo-req]").nth(1).check();
-    await page.locator("[data-lo-field]").fill("done");
-    await save.click();
-    const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-    expect(JSON.parse(raw || "{}").leftover).toBe(true);
-    expect(await page.evaluate((k) => localStorage.getItem(k), STAR[year])).toBeFalsy();
-  });
+async function leftoverVisit(page, year, key) {
+  await page.goto("/app/index.html#/year/" + year);
+  await page.locator(".rails li", { has: page.locator("code", { hasText: key }) }).getByRole("button").click();
+  const room = page.locator("article.stop");
+  const verb = room.locator(".actions button").last();
+  await verb.click();
+  expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
+  await room.locator(".actions button").first().click();
+  expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
+  expect(await page.evaluate((k) => localStorage.getItem(k), STAR[year])).toBeFalsy();
+  const boxes = room.locator("input[type='checkbox']");
+  await boxes.nth(0).check();
+  await boxes.nth(1).check();
+  await room.locator("input:not([type='checkbox'])").fill("done");
+  await verb.click();
+  const raw = await page.evaluate((k) => localStorage.getItem(k), key);
+  expect(JSON.parse(raw || "{}").leftover).toBe(true);
+  expect(await page.evaluate((k) => localStorage.getItem(k), STAR[year])).toBeFalsy();
 }
 
-const UF = [
-  ["/years/2017/sites/pubgnote/index.html", "itt17-pubgnote"],
-  ["/years/2017/sites/cuphead/index.html", "itt17-cuphead"],
-  ["/years/2017/sites/twitterlite/index.html", "itt17-twitterlite"],
-  ["/years/2017/sites/snapipo/index.html", "itt17-snapipo"],
-  ["/years/2017/sites/slack17/index.html", "itt17-slack17"],
-  ["/years/2017/sites/hangoutschat/index.html", "itt17-hangoutschat"],
-  ["/years/2017/sites/snapmap/index.html", "itt17-snapmap"],
-  ["/years/2017/sites/instagram17/index.html", "itt17-instagram17"],
-  ["/years/2017/sites/botw/index.html", "itt17-botw"],
-  ["/years/2017/sites/splatoon2/index.html", "itt17-splatoon2"],
-  ["/years/2017/sites/notpetya/index.html", "itt17-notpetya"],
-  ["/years/2017/sites/krack/index.html", "itt17-krack"],
-  ["/years/2017/sites/tbh/index.html", "itt17-tbh"],
-  ["/years/2017/sites/messengerday/index.html", "itt17-messengerday"],
-  ["/years/2017/sites/creditfrz/index.html", "itt17-creditfrz"],
-  ["/years/2017/sites/cloudbleed/index.html", "itt17-cloudbleed"],
-  ["/years/2017/sites/gettingoverit/index.html", "itt17-gettingoverit"],
-  ["/years/2017/sites/hollowknight/index.html", "itt17-hollowknight"],
-];
-
-for (const [href, key] of UF) {
-  test(`2017 ${key} unique leftover`, async ({ page }) => {
-    await page.goto(href);
-    await page.locator("[data-uf17-save]").click();
-    expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-    const trap = page.locator("[data-uf17-trap]");
-    if (await trap.count()) {
-      await trap.first().click();
-      expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
-      expect(await page.evaluate(() => localStorage.getItem("itt17-faceid"))).toBeFalsy();
-    }
-    const pick = page.locator("[data-uf17-pick]").first();
-    if (await pick.count()) await pick.click();
-    const field = page.locator("[data-uf17-field]");
-    if (await field.count()) await field.fill("done");
-    const reqs = page.locator("[data-uf17-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-uf17-save]").click();
-    const raw = await page.evaluate((k) => localStorage.getItem(k), key);
-    expect(JSON.parse(raw || "{}").leftover).toBe(true);
-    expect(await page.evaluate(() => localStorage.getItem("itt17-faceid"))).toBeFalsy();
+for (const [year, key] of LO) {
+  test(`${year} ${key} one leftover save`, async ({ page }) => {
+    await leftoverVisit(page, year, key);
   });
 }
 
@@ -140,28 +94,9 @@ test("2019 AirPods 2 has one leftover key", async ({ page }) => {
 });
 
 test("2017 Cuphead leftover writes one key", async ({ page }) => {
-  await page.goto("/years/2017/sites/cuphead/index.html");
-  await page.locator("[data-uf17-save]").click();
-  expect(await page.evaluate(() => localStorage.getItem("itt17-cuphead"))).toBeFalsy();
-  await page.locator("[data-uf17-trap]").click();
-  expect(await page.evaluate(() => localStorage.getItem("itt17-faceid"))).toBeFalsy();
-  await page.locator('[data-uf17-pick="goopy"]').click();
-  await page.locator("[data-uf17-save]").click();
-  const raw = await page.evaluate(() => localStorage.getItem("itt17-cuphead"));
-  expect(JSON.parse(raw || "{}").leftover).toBe(true);
-  expect(await page.evaluate(() => localStorage.getItem("itt17-faceid"))).toBeFalsy();
+  await leftoverVisit(page, "2017", "itt17-cuphead");
 });
 
-test("2017 Animoji needs a pick and two ticks", async ({ page }) => {
-  await page.goto("/years/2017/sites/iphone/animoji.html");
-  await page.evaluate(() => localStorage.setItem("itt17-faceid", '{"real":true}'));
-  await page.locator("[data-animoji-send]").click();
-  expect(await page.evaluate(() => localStorage.getItem("itt17-animoji"))).toBeFalsy();
-  await page.locator('[data-animoji-pick="panda"]').click();
-  await page.locator("[data-animoji-req]").nth(0).check();
-  await page.locator("[data-animoji-req]").nth(1).check();
-  await page.locator("[data-animoji-send]").click();
-  const raw = await page.evaluate(() => localStorage.getItem("itt17-animoji"));
-  expect(JSON.parse(raw || "{}").leftover).toBe(true);
-  expect(JSON.parse(await page.evaluate(() => localStorage.getItem("itt17-faceid")) || "{}").real).toBe(true);
+test("2017 Animoji leftover writes itt17-animoji never the star", async ({ page }) => {
+  await leftoverVisit(page, "2017", "itt17-animoji");
 });
