@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { OfficialStop } from "./OfficialStop.jsx";
+import { YearRails } from "./YearRails.jsx";
 
 export function YearRail({ year, star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
   const stop = stopByKey(view);
 
-  function openGuided(name, target) {
+  const openStart = useCallback(() => {
+    setView("start");
+    setLabel("Starting Point");
+  }, []);
+
+  const openGuided = useCallback((name, target) => {
     if (target === "about" || target === "map") {
       setView(target);
       setLabel(name);
@@ -16,7 +22,12 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
     const row = stopByKey(target);
     setView(target);
     setLabel(row ? row.n + " " + row.name : name);
-  }
+  }, [stopByKey]);
+
+  const openStop = useCallback((row) => {
+    setView(row.whenKey);
+    setLabel(row.n + " " + row.name);
+  }, []);
 
   function openNext() {
     if (!stop) return;
@@ -40,39 +51,14 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
         <span>{star}</span>
         <em>{label}</em>
       </header>
-      <div className="rails">
-        <section>
-          <h2>Guided six</h2>
-          <button type="button" onClick={() => { setView("start"); setLabel("Starting Point"); }}>Starting Point</button>
-          {guided.map(([name, target]) => (
-            <button key={target} type="button" onClick={() => openGuided(name, target)}>{name}</button>
-          ))}
-        </section>
-        <section>
-          <h2>Official ten</h2>
-          <ol>
-            {trail.map((row) => (
-              <li key={row.whenKey}>
-                <button type="button" onClick={() => { setView(row.whenKey); setLabel(row.n + " " + row.name); }}>{row.n} {row.name}</button>
-                <code>{row.whenKey}</code>
-              </li>
-            ))}
-          </ol>
-        </section>
-        {also.length ? (
-          <section>
-            <h2>Also this year</h2>
-            <ol>
-              {also.map((row) => (
-                <li key={row.whenKey}>
-                  <button type="button" onClick={() => { setView(row.whenKey); setLabel(row.n + " " + row.name); }}>{row.n} {row.name}</button>
-                  <code>{row.whenKey}</code>
-                </li>
-              ))}
-            </ol>
-          </section>
-        ) : null}
-      </div>
+      <YearRails
+        guided={guided}
+        trail={trail}
+        also={also}
+        onStart={openStart}
+        onGuided={openGuided}
+        onOpenStop={openStop}
+      />
       {view === "start" ? (
         <article className="stop">
           <p className="kicker">{year}</p>
