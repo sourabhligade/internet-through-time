@@ -59,7 +59,7 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | **2015** | live lean HTML | HTML | Periscope Go LIVE | 10 | 0 | 9 | 50 | readme-only |
 | **2016** | live lean HTML | HTML | Instagram Stories | 10 | 0 | 19 | 57 | readme-only |
 | **2017** | react lean | React | Face ID | 10 | 20 | 0 | 0 | readme-only |
-| **2018** | wiped | off hub · React hall only | GDPR Manage research | — | — | — | 0 | no folder |
+| **2018** | wiped hub · React hall | off hub · React | GDPR Manage | 10 | 11 KEEP | 0 | 0 | readme-only |
 | **2019** | react lean | React | Disney+ Continue | 10 | 20 | 13 | 0 | readme-only |
 | **2020** | react lean | React | Zoom Leave | 10 | 0 | 0 | 0 | readme-only |
 | **2021** | react lean | React | ATT Ask | 10 | 0 | 0 | 0 | readme-only |
@@ -1731,12 +1731,14 @@ Empty catalog. Do not dest-farm a rail.
 
 ## 2018
 
-**Wiped.** Research only: GDPR Manage `itt18-gdpr`. Do not restore `years/2018/` or period assets.
+**Wiped hub.** React hall off-hub: GDPR Manage `itt18-gdpr` + leftover KEEP 11. Do not restore `years/2018/` or period assets. Do not dest-farm leftover-3×.
 
 - [x] No hub card
 - [x] No HTML year tree
 - [x] React hall exists off-hub and stays off-hub
+- [x] Official 10 + leftover KEEP 11 (`ALSO_2018`)
 - [x] Leftover-3× catalog empty
+- [x] `e2e/2018-leftover-keep.spec.js` 15 passed
 
 ## 2019
 

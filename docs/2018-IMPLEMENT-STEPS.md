@@ -76,7 +76,7 @@ File: `react/src/year2018.js` `TRAIL_2018`. Screen: `OfficialStop`. Door: `Year2
 Stop 10 next-wraps to GDPR Manage until Phase 3 adds leftover. After Phase 3, official ten still wrap inside `trail`. Leftover wraps inside `also`, last leftover returns to GDPR Manage (`YearRail` already does this).
 
 - [x] 0.1 Ten official keys exist in `TRAIL_2018`.
-- [x] 0.2 `ALSO_2018` is `[]`.
+- [x] 0.2 `ALSO_2018` is leftover KEEP 11 (was `[]` before Phase 2).
 - [x] 0.3 Hub has no 2018 year card (`index.html` year-gap).
 - [x] 0.4 `years/2018/` absent.
 - [ ] 0.5 Recheck four-point I/O on n=1 (empty / Accept All / Manage / leftover never writes star). Browser: `/app/index.html#/year/2018`.
@@ -205,7 +205,7 @@ Also:
 
 - [x] 5.1 This file: tick Phases 2–4.
 - [x] 5.2 [`2018-REACT-FLOW.md`](2018-REACT-FLOW.md) — leftover list n=11–21, still “hub wiped / HTML gone.”
-- [ ] 5.3 [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) §2018 dest-folder line: React leftover KEEP 11, HTML 0.
+- [x] 5.3 [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) §2018 dest-folder line: React leftover KEEP 11, HTML 0.
 - [ ] 5.4 Do **not** put 2018 back in `SHIP_YEARS` or hub in this phase.
 
 **Done when:** docs match the React rail. Hub still wiped.

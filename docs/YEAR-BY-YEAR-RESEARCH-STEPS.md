@@ -1,7 +1,7 @@
 # Year-by-year research → implement steps
 
 **Date:** 2026-09-20
-**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Leftover-20 trails that are already wired: 2017 and 2019 stops 11–30. Do not add a 31st stop. Do not dest-farm a leftover-20 on any other year. 2018 stays wiped.
+**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Leftover-20 trails that are already wired: 2017 and 2019 stops 11–30. Do not add a 31st stop. Do not dest-farm a leftover-20 on any other year. 2018 stays off the hub: React hall leftover KEEP 11, HTML tree gone, leftover-3× catalog empty.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md).
 
 Visitor 100% is dest-true I/O on dests already on disk, not dest-folder count. Empty / trap never write. Leftover never writes the year star. KEEP leftover dests only if famous that year and cited. Miss the cap rather than invent.
@@ -60,7 +60,7 @@ Named lists live in the source files. This file is the implement order, not a se
 | 2015 | dest-lock reverted | 50 | KEEP 11 · DROP 2 · DO-NOT-APPLY 6 · MISS 0 | 31 | 163 | 9 | 0 | all KEEP leftover I/O |
 | 2016 | dest-lock reverted | 57 | KEEP 47 · DROP 40 · DO-NOT-APPLY 6 · MISS 0 | 4 | 9 | 9 | 34 | all KEEP leftover I/O |
 | 2017 | dest-lock reverted leftover-20 | 68 | KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0 | 39 | 154 | 0 (leftover-20) | 0 (leftover-20 extras 20) | all KEEP leftover I/O |
-| 2018 | dest-lock reverted lean-door | 24 | KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0 | 0 | 0 | 3 | 11 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
+| 2018 | wiped hub · React hall | 0 HTML | KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0 | 0 | 0 | 0 (catalog empty) | 11 (React `ALSO_2018`) | leftover KEEP I/O on React rail |
 | 2019 | dest-lock reverted | 73 | KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0 | 54 | 97 | 9 | 0 | all KEEP leftover I/O |
 | 2020 | dest-lock reverted | 22 | KEEP 9 · DROP 1 · DO-NOT-APPLY 10 · MISS 0 | 2 | 17 | 9 | 1 | all KEEP leftover I/O |
 | 2021 | dest-lock lean stop-5 | 18 | KEEP 9 · DROP 13 · DO-NOT-APPLY 8 · MISS 0 | 0 | 0 | 5 | 3 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
@@ -933,32 +933,32 @@ KEEP extra dest leftover I/O:
 
 ## 2018
 
-**Kind:** Dest-lock reverted lean-door model (GDPR Manage). leftover-3× unique stop 3. Leftover dest KEEP leftover I/O.
+**Kind:** Wiped hub · React hall off-hub. GDPR Manage. Leftover KEEP 11 on `ALSO_2018`. Leftover-3× catalog empty. HTML tree gone.
 
 **Star:** `gdpr` · GDPR Manage · `itt18-gdpr`. Empty / trap never write this key. Leftover never writes this key.
 
-**Dest folders on disk:** 24.
+**Dest folders on disk:** 0 (`years/2018/` absent). React keys **21**.
 
 **Official 10:** gdpr · tiktok · trust · instagram · chrome · homepod · spectre · fortnite · github · playable
 
-**Year-false (dest-true map):** KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0. Named rows: [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md). Official 10 DROPs stay on disk. Playable is DO-NOT-APPLY.
+**Year-false (dest-true map):** KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0. Named rows: [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md). DROP leftover dests stay gone. Playable is DO-NOT-APPLY (Consent Dash is React n=10).
 
-**Leftover-3× unique:** reddit · youtube · wikipedia  (stop 3)
+**Leftover-3× unique:** catalogs empty. Research cap was reddit · youtube · wikipedia. Do not dest-farm.
 
-**Leftover dest KEEP:** gplusgone · androidpie · ios12 · pubg · rdr2 · mojave · onedot · epicstore · nso · espnplus · caffeine
+**Leftover dest KEEP (React n=11–21):** gplusgone · androidpie · ios12 · pubg · rdr2 · mojave · onedot · epicstore · nso · espnplus · caffeine
 
 **Extra dest research:** no extra dest leftover dest leftover on this year (or not in extra dest table).
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted lean-door. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
-- [x] 2 Official 10 dest-true I/O on disk. Star `itt18-gdpr`. `data-official-need` filled. Empty / trap never write the star.
-- [x] 3 Leftover-3× unique dest-true dests (3 stop). Incomplete never writes leftover. Leftover never writes the star.
-- [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
+- [x] 1 Year kind locked: wiped hub · React hall. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 2 Official 10 dest-true I/O on the React door. Star `itt18-gdpr`. Empty / trap never write the star.
+- [x] 3 Leftover-3× unique dest-true dests stay **0**. Do not rebuild reddit / youtube / wikipedia dest folders.
+- [x] 4 Year-false KEEP leftover dests live on React `ALSO_2018`. Year-false DROP leftover dests stay gone. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
-- [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
-- [x] 7 Dest-folder count 24 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 6 Leftover dest KEEP leftover dest-true I/O on React n=11–21 (`-lx` keys). No extra dest KEEP this year.
+- [x] 7 Dest-folder count **0** matches DISK-TRUTH. React leftover KEEP 11. HTML links to `years/2018/` stay unrestored.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique dest-farm · no invented brand pixels · no hub card unless named.
 
 ## 2019
 

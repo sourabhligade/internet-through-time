@@ -96,7 +96,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2015/` | **wiped** · off hub |
 | `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
 | `/app/index.html#/year/2017` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean · React** |
-| `/years/2018/` | **Wiped** — no tree. Research record only: GDPR Manage `itt18-gdpr`, 13 rooms, leftover-3× cap 3, double aim 26. Do not restore. |
+| `/app/index.html#/year/2018` | **Wiped hub** — no HTML tree · React hall off-hub · GDPR Manage `itt18-gdpr` · leftover KEEP 11 · leftover-3× **0**. Do not restore `years/2018/`. |
 | `/app/index.html#/year/2019` | **Live lean door** — Disney+ Continue · React |
 | `/app/index.html#/year/2020` | **Live lean door** — Zoom Leave `itt20-zoom` · React |
 | `/app/index.html#/year/2021` | **Live lean door** — ATT Ask `itt21-att` · React |

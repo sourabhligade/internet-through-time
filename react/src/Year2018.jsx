@@ -17,8 +17,9 @@ export function Year2018() {
         "This door is on the React hall. The museum hub still has no 2018 card.",
       ]}
       about={[
-        "2018 stays off the main hub. The ten stops live here: GDPR Manage through Consent Dash.",
-        "Accept All is the trap on the star. A finished Manage writes only itt18-gdpr.",
+        "2018 stays off the main hub. Official ten: GDPR Manage through Consent Dash. Leftover KEEP 11 is Also this year.",
+        "Live Stats June 1,630,322,579 (−8%). Users cell blank. ITU 51.2% / ~3.9B. Table ends 2018.",
+        "Accept All is the trap on the star. A finished Manage writes only itt18-gdpr. Leftover never writes the star.",
       ]}
     />
   );

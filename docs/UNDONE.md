@@ -43,7 +43,7 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 | 2014 | **Still dest-lock** | **25** HTML + React official 9 | **0** catalog |
 | **2015–2016** | **Reverted** | **50 / 57** | Catalogs empty |
 | **2017 / 2019–2021** | React doors | **0** HTML | Catalogs empty · leftover-20 on 2017 and 2019 |
-| **2018** | **Wiped** | 0 | Research only. Do not restore |
+| **2018** | **Wiped hub** | 0 HTML · React 21 keys | Leftover KEEP 11 on rail. Do not restore HTML |
 | 2021 | **Still dest-lock** | React (0 HTML) | **0** catalog |
 | 2022 | Dest-true lean | **25** | **0** catalog |
 

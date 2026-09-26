@@ -96,6 +96,15 @@ for (const key of LO) {
   });
 }
 
+test("2018 about dual-cite Live Stats and ITU", async ({ page }) => {
+  await page.goto(DOOR);
+  await page.locator(".rails").getByRole("button", { name: "About 2018" }).click();
+  const about = page.locator("article.stop");
+  await expect(about).toContainText("1,630,322,579");
+  await expect(about).toContainText("51.2%");
+  await expect(about).toContainText("Leftover KEEP 11");
+});
+
 test("2018 star Manage still writes; Accept All never writes", async ({ page }) => {
   await page.goto(DOOR);
   await page.getByRole("button", { name: "1 GDPR Manage" }).click();
