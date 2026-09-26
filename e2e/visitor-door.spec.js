@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 27 years (1994–2008 + 2010–2017 + 2019–2022). 2005 restored. 2018 wiped. 2009 boarded. 2023–2025 wiped.
+ * Hub 26 years (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). 2005 restored. 2015 wiped. 2018 wiped. 2009 boarded. 2023–2025 wiped.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -48,8 +48,8 @@ test.describe("visitor door", () => {
   test("hub lists 27 years including 2022 and 2005 · no 2018 · no 2009 · no 2023+", async ({ page }) => {
     expect(SHIP).toHaveLength(27);
     await page.goto("/");
-    await expect(page.locator("body")).toContainText(/27 years open/i);
-    await expect(page.locator("body")).not.toContainText(/26 years open/i);
+    await expect(page.locator("body")).toContainText(/26 years open/i);
+    await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card[href*='years/2018']")).toHaveCount(0);
     const reactDoor = new Set(["2017", "2019", "2020", "2021"]);

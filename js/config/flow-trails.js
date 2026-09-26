@@ -402,18 +402,7 @@
       {"n": 8, "name": "Twitch", "href": "sites/twitch/index.html", "match": "/twitch/", "whenKey": "itt14-twitch", "nextHref": "sites/playable/game.html", "nextLabel": "Tile Fold"},
       {"n": 9, "name": "Tile Fold", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt14-game-tilefold", "nextHref": "sites/whatsapp/index.html", "nextLabel": "WhatsApp"}
     ],
-    "2015": [
-      {"n": 1, "name": "Periscope Go LIVE", "href": "sites/periscope/index.html", "match": "/periscope/", "whenKey": "itt15-periscope", "nextHref": "sites/googlephotos/index.html", "nextLabel": "Google Photos"},
-      {"n": 2, "name": "Google Photos", "href": "sites/googlephotos/index.html", "match": "/googlephotos/", "whenKey": "itt15-googlephotos", "nextHref": "sites/windows10/index.html", "nextLabel": "Windows 10"},
-      {"n": 3, "name": "Windows 10", "href": "sites/windows10/index.html", "match": "/windows10/", "whenKey": "itt15-win10", "nextHref": "sites/applemusic/index.html", "nextLabel": "Apple Music"},
-      {"n": 4, "name": "Apple Music", "href": "sites/applemusic/index.html", "match": "/applemusic/", "whenKey": "itt15-applemusic", "nextHref": "sites/edge/index.html", "nextLabel": "Edge Spartan"},
-      {"n": 5, "name": "Edge Spartan", "href": "sites/edge/index.html", "match": "/edge/", "whenKey": "itt15-edge", "nextHref": "sites/apple/watch.html", "nextLabel": "Watch"},
-      {"n": 6, "name": "Watch", "href": "sites/apple/watch.html", "match": "/apple/watch", "whenKey": "itt15-watch", "nextHref": "sites/snapchat/discover.html", "nextLabel": "Snap Discover"},
-      {"n": 7, "name": "Snap Discover", "href": "sites/snapchat/discover.html", "match": "/snapchat/", "whenKey": "itt15-snap-discover", "nextHref": "sites/discord/index.html", "nextLabel": "Discord"},
-      {"n": 8, "name": "Discord", "href": "sites/discord/index.html", "match": "/discord/", "whenKey": "itt15-discord", "nextHref": "sites/letsencrypt/index.html", "nextLabel": "Let's Encrypt"},
-      {"n": 9, "name": "Let's Encrypt", "href": "sites/letsencrypt/index.html", "match": "/letsencrypt/", "whenKey": "itt15-le", "nextHref": "sites/playable/game.html", "nextLabel": "Blob Rush"},
-      {"n": 10, "name": "Blob Rush", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt15-game-blobrush", "nextHref": "sites/periscope/index.html", "nextLabel": "Periscope Go LIVE"}
-    ],
+
     "2016": [
       {"n": 1, "name": "Instagram Stories", "href": "sites/instagram/stories.html", "match": "/instagram/stories", "whenKey": "itt16-ig-stories", "nextHref": "sites/pokemongo/index.html", "nextLabel": "Pokémon GO"},
       {"n": 2, "name": "Pokémon GO", "href": "sites/pokemongo/index.html", "match": "/pokemongo/", "whenKey": "itt16-pogo", "nextHref": "sites/facebook/reactions.html", "nextLabel": "Reactions"},

@@ -175,11 +175,11 @@ test.describe("leftover-2× unique dest links", () => {
     expect(byYear["1995"]).toBe(117);
     expect(byYear["1999"]).toBe(138);
     expect(byYear["2000"]).toBeGreaterThanOrEqual(70);
-    expect(byYear["2007"]).toBe(5);
+    expect(byYear["2007"]).toBe(14);
     expect(byYear["2011"]).toBe(20);
     expect(byYear["2013"]).toBe(25);
     expect(byYear["2018"]).toBeUndefined();
-    expect(byYear["2022"]).toBe(0);
+    expect(byYear["2022"]).toBe(12);
   });
 
   test("leftover-2× unique dest links dest-disjoint leftover-3× unique dest links", () => {
@@ -307,6 +307,30 @@ test.describe("leftover-2× unique dest links", () => {
     await expect(page.locator("[data-official-key]")).toHaveCount(1);
   });
 
+  test("2022 leftover-2× unique dests 12 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/2022/sites/temu/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(11);
+    expect(slugs).toContain("stablediff");
+    expect(slugs).toContain("google");
+    expect(slugs).not.toContain("temu");
+    expect(slugs).not.toContain("chatgpt");
+    expect(slugs).not.toContain("twitter");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "2022", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/2022/sites/chatgpt/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+    await expect(page.locator("[data-official-key]")).toHaveCount(1);
+  });
+
   test("2007 leftover dest KEEP rail · official dest leftover-2× first paint 0", async ({ page }) => {
     await page.goto("/years/2007/sites/hackernews/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
@@ -315,7 +339,13 @@ test.describe("leftover-2× unique dest links", () => {
     );
     const slugs = hrefs.map(destSlug).filter(Boolean);
     expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(13);
     expect(slugs).toContain("safari3");
+    expect(slugs).toContain("friendfeed");
+    expect(slugs).not.toContain("hackernews");
+    expect(slugs).not.toContain("iphone");
+    expect(slugs).not.toContain("myspace");
+    expect(slugs).not.toContain("ebay");
 
     await page.goto("/years/2007/sites/iphone/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
@@ -345,7 +375,7 @@ test.describe("leftover-2× unique dest links", () => {
 
   test("2022 leftover dest KEEP · ChatGPT leftover-2× first paint 0", async ({ page }) => {
     await page.goto("/years/2022/sites/temu/index.html");
-    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
     await page.goto("/years/2022/sites/chatgpt/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
   });
@@ -355,6 +385,79 @@ test.describe("leftover-2× unique dest links", () => {
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
     await page.goto("/years/2010/sites/instagram/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+  });
+
+  test("2014 leftover-2× unique dests 16 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/2014/sites/alibabaipo/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(15);
+    expect(slugs).toContain("flappybird");
+    expect(slugs).toContain("facebook");
+    expect(slugs).not.toContain("alibabaipo");
+    expect(slugs).not.toContain("whatsapp");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "2014", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/2014/sites/whatsapp/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+    await expect(page.locator("[data-official-key]")).toHaveCount(1);
+  });
+
+  test("2012 leftover-2× unique dests 11 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/2012/sites/tinder/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(10);
+    expect(slugs).toContain("coursera");
+    expect(slugs).toContain("coinbase");
+    expect(slugs).not.toContain("tinder");
+    expect(slugs).not.toContain("instagram");
+    expect(slugs).not.toContain("chrome");
+    expect(slugs).not.toContain("youtube");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "2012", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/2012/sites/instagram/android.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+    await expect(page.locator("[data-official-key]")).toHaveCount(1);
+  });
+
+  test("2010 leftover-2× unique dests 10 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/2010/sites/flipboard/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(9);
+    expect(slugs).toContain("angry");
+    expect(slugs).toContain("path");
+    expect(slugs).not.toContain("flipboard");
+    expect(slugs).not.toContain("instagram");
+    expect(slugs).not.toContain("facebook");
+    expect(slugs).not.toContain("groupon");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "2010", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/2010/sites/instagram/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+    await expect(page.locator("[data-official-key]")).toHaveCount(1);
   });
 
   test("2022 Starting Point leftover-2× unique dest rail 0", async ({ page }) => {
@@ -379,6 +482,36 @@ test.describe("leftover-2× unique dest links", () => {
       "temu-lx",
       "itt22-chatgpt",
       "2022"
+    );
+  });
+
+  test("2010 leftover dest KEEP dest-true leftover dest I/O never writes star", async ({ page }) => {
+    await completeLeftoverDest(
+      page,
+      "/years/2010/sites/flipboard/index.html",
+      "flipboard-lx",
+      "itt10-ig-posts",
+      "2010"
+    );
+  });
+
+  test("2014 leftover dest KEEP dest-true leftover dest I/O never writes star", async ({ page }) => {
+    await completeLeftoverDest(
+      page,
+      "/years/2014/sites/alibabaipo/index.html",
+      "alibabaipo-lx",
+      "itt14-wa-install",
+      "2014"
+    );
+  });
+
+  test("2012 leftover dest KEEP dest-true leftover dest I/O never writes star", async ({ page }) => {
+    await completeLeftoverDest(
+      page,
+      "/years/2012/sites/tinder/index.html",
+      "tinder-lx",
+      "itt12-ig-android",
+      "2012"
     );
   });
 });

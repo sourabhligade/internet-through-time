@@ -1053,13 +1053,22 @@
   {
     "year": "2007",
     "dests": [
+      "hackernews",
+      "friendfeed",
+      "netflix",
+      "appletv",
+      "ipodtouch",
+      "justintv",
+      "icanhas",
+      "funnyordie",
+      "pownce",
       "androidann",
       "gears",
       "iplayer",
       "amazonmp3",
       "safari3"
     ],
-    "n": 5
+    "n": 14
   },
   {
     "year": "2008",
@@ -1179,9 +1188,18 @@
   {
     "year": "2010",
     "dests": [
-      "path"
+      "angry",
+      "flipboard",
+      "cityville",
+      "kinect",
+      "minecraft",
+      "hulu",
+      "googlebuzz",
+      "path",
+      "ibooks",
+      "chromewebstore"
     ],
-    "n": 1
+    "n": 10
   },
   {
     "year": "2011",
@@ -1212,10 +1230,19 @@
   {
     "year": "2012",
     "dests": [
+      "tinder",
+      "duolingo",
+      "coursera",
+      "udacity",
+      "edx",
+      "nexus7",
+      "jellybean",
+      "ios6",
+      "googleplay",
       "kindlefirehd",
       "coinbase"
     ],
-    "n": 2
+    "n": 11
   },
   {
     "year": "2013",
@@ -1250,23 +1277,30 @@
   },
   {
     "year": "2014",
-    "dests": [],
-    "n": 0
+    "dests": [
+      "alibabaipo",
+      "oculusfb",
+      "inbox",
+      "echo",
+      "flappybird",
+      "game2048",
+      "ios8",
+      "facebook",
+      "youtube",
+      "wikipedia",
+      "twitter",
+      "musically14",
+      "truecrypt",
+      "instagram",
+      "snapchat",
+      "uber"
+    ],
+    "n": 16
   },
   {
     "year": "2015",
-    "dests": [
-      "amppage",
-      "applepencil",
-      "dx12",
-      "elcapitan",
-      "fblive",
-      "http2",
-      "instantarticles",
-      "ipfs",
-      "iphone6s"
-    ],
-    "n": 9
+    "dests": [],
+    "n": 0
   },
   {
     "year": "2016",
@@ -1329,7 +1363,20 @@
   },
   {
     "year": "2022",
-    "dests": [],
-    "n": 0
+    "dests": [
+      "temu",
+      "stablediff",
+      "midjourney",
+      "dalle2",
+      "ios16",
+      "m2",
+      "google",
+      "youtube",
+      "facebook",
+      "wikipedia",
+      "reddit",
+      "instagram"
+    ],
+    "n": 12
   }
 ]

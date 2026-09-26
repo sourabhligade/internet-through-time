@@ -14,7 +14,7 @@ const TRAIL = [
   "sites/playable/game.html"
 ];
 
-test.describe("2015 official trail dests exist", () => {
+test.describe.skip("2015 official trail dests exist", () => {
   for (const href of TRAIL) {
     test(href + " loads", async ({ page }) => {
       const res = await page.goto("/years/2015/" + href);

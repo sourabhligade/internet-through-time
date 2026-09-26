@@ -1355,63 +1355,6 @@
   "hasTaskbar": true,
   "maximized": true
 },
-  "2015": {
-  "title": "Chrome habit — 2015",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-      "period-2015.css"],
-  "bodyClass": "year-2015 os-win7 browser-chrome-habit",
-  "boot": "browser-2015.js",
-  "dir": [
-    {
-      "go": "pages/home.html",
-      "label": "Start"
-    },
-    {
-      "go": "sites/periscope/index.html",
-      "label": "Periscope"
-    },
-    {
-      "go": "sites/googlephotos/index.html",
-      "label": "Photos"
-    },
-    {
-      "go": "sites/windows10/index.html",
-      "label": "Win10"
-    },
-    {
-      "go": "sites/applemusic/index.html",
-      "label": "Music"
-    },
-    {
-      "go": "pages/about.html",
-      "label": "About"
-    }
-  ],
-  "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
-  "location": "http://home.microsoft.com/intl/web2015/",
-  "prefHome": "http://home.microsoft.com/intl/web2015/",
-  "yearLabel": "2015 · Windows 7 residual · Chrome habit · the year lives in Periscope / Photos rooms",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2015 thesis: the phone goes live · free photo locker · Get Windows 10. Periscope · Google Photos · Win10 free upgrade · Apple Music.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>7</b> residual",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
   "2016": {
   "title": "Chrome habit — 2016",
   "css": [

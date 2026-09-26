@@ -258,18 +258,6 @@
  " <a href=\"map.html\" style=\"color:#cfe8ff\">Year flow map</a> "
  ]
 },
- "2015": {
- "href": "../sites/periscope/index.html",
- "label": "★ One-thing · Periscope Go LIVE REAL",
- "items": [
- " <a href=\"about.html\">About 2015</a> — dual scale · bans",
- " <a href=\"../sites/periscope/index.html\">Periscope</a> — title then Go LIVE",
- " <a href=\"../sites/googlephotos/index.html\">Google Photos</a> — backup HQ",
- " <a href=\"../sites/windows10/index.html\">Windows 10</a> — free upgrade",
- " <a href=\"../sites/applemusic/index.html\">Apple Music</a> — 3-month trial",
- " <a href=\"map.html\">Year flow map</a> "
- ]
-},
  "2016": {
  "href": "../sites/instagram/stories.html",
  "label": "★ One-thing · Instagram Stories REAL",

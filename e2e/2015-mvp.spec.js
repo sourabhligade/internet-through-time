@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-test.describe("2015 mvp", () => {
+test.describe.skip("2015 mvp · year wiped", () => {
   test("hub card is live", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator(`a.year-card.available[href*="years/2015"]`)).toBeVisible();

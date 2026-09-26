@@ -41,8 +41,6 @@
 
  "2014": "<p class=\"itt-felt-trail\">Install, not messenger: <a href=\"../sites/whatsapp/index.html\">WhatsApp Install</a>. Heartbleed is literacy.</p>",
 
- "2015": "<p class=\"itt-felt-trail\">Title then Go LIVE: <a href=\"../sites/periscope/index.html\">Periscope</a>— empty title never writes.</p>",
-
  "2016": "<p class=\"itt-felt-trail\">24 hours: <a href=\"../sites/instagram/stories.html\">Instagram Stories</a>. Pokémon GO is outdoor AR, not the chip.</p>",
 
  "2017": "<p class=\"itt-felt-trail\">Look, then unlock: <a href=\"/app/index.html#/year/2017\">Face ID</a>— unlock without look never writes.</p>",

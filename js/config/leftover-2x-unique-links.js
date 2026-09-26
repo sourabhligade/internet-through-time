@@ -3923,26 +3923,20 @@
     }
   ],
   "2007": [
-    {
-      "id": "androidann",
-      "name": "Open Handset Alliance leftover"
-    },
-    {
-      "id": "gears",
-      "name": "Google Gears leftover"
-    },
-    {
-      "id": "iplayer",
-      "name": "BBC iPlayer leftover"
-    },
-    {
-      "id": "amazonmp3",
-      "name": "Amazon MP3 leftover"
-    },
-    {
-      "id": "safari3",
-      "name": "Safari 3 leftover"
-    }
+    { "id": "hackernews", "name": "Hacker News leftover" },
+    { "id": "friendfeed", "name": "FriendFeed leftover" },
+    { "id": "netflix", "name": "Netflix leftover" },
+    { "id": "appletv", "name": "Apple TV leftover" },
+    { "id": "ipodtouch", "name": "iPod touch leftover" },
+    { "id": "justintv", "name": "Justin.tv leftover" },
+    { "id": "icanhas", "name": "I Can Has Cheezburger leftover" },
+    { "id": "funnyordie", "name": "Funny or Die leftover" },
+    { "id": "pownce", "name": "Pownce leftover" },
+    { "id": "androidann", "name": "Open Handset Alliance leftover" },
+    { "id": "gears", "name": "Google Gears leftover" },
+    { "id": "iplayer", "name": "BBC iPlayer leftover" },
+    { "id": "amazonmp3", "name": "Amazon MP3 leftover" },
+    { "id": "safari3", "name": "Safari 3 leftover" }
   ],
   "2008": [
     {
@@ -4383,10 +4377,16 @@
     }
   ],
   "2010": [
-    {
-      "id": "path",
-      "name": "Path leftover"
-    }
+    { "id": "angry", "name": "Angry Birds leftover" },
+    { "id": "flipboard", "name": "Flipboard leftover" },
+    { "id": "cityville", "name": "CityVille leftover" },
+    { "id": "kinect", "name": "Kinect leftover" },
+    { "id": "minecraft", "name": "Minecraft Forum leftover" },
+    { "id": "hulu", "name": "Hulu Plus leftover" },
+    { "id": "googlebuzz", "name": "Google Buzz leftover" },
+    { "id": "path", "name": "Path leftover" },
+    { "id": "ibooks", "name": "iBooks leftover" },
+    { "id": "chromewebstore", "name": "Chrome Web Store leftover" }
   ],
   "2011": [
     {
@@ -4471,14 +4471,17 @@
     }
   ],
   "2012": [
-    {
-      "id": "kindlefirehd",
-      "name": "Kindle Fire HD leftover"
-    },
-    {
-      "id": "coinbase",
-      "name": "Coinbase leftover"
-    }
+    { "id": "tinder", "name": "Tinder leftover" },
+    { "id": "duolingo", "name": "Duolingo leftover" },
+    { "id": "coursera", "name": "Coursera leftover" },
+    { "id": "udacity", "name": "Udacity leftover" },
+    { "id": "edx", "name": "edX leftover" },
+    { "id": "nexus7", "name": "Nexus 7 leftover" },
+    { "id": "jellybean", "name": "Jelly Bean leftover" },
+    { "id": "ios6", "name": "iOS 6 leftover" },
+    { "id": "googleplay", "name": "Google Play leftover" },
+    { "id": "kindlefirehd", "name": "Kindle Fire HD leftover" },
+    { "id": "coinbase", "name": "Coinbase leftover" }
   ],
   "2013": [
     {
@@ -4582,45 +4585,25 @@
       "name": "Xbox One"
     }
   ],
-  "2014": [],
-  "2015": [
-    {
-      "id": "amppage",
-      "name": "AMP announce"
-    },
-    {
-      "id": "applepencil",
-      "name": "Apple Pencil"
-    },
-    {
-      "id": "dx12",
-      "name": "DirectX 12"
-    },
-    {
-      "id": "elcapitan",
-      "name": "OS X El Capitan"
-    },
-    {
-      "id": "fblive",
-      "name": "Facebook Live"
-    },
-    {
-      "id": "http2",
-      "name": "HTTP/2"
-    },
-    {
-      "id": "instantarticles",
-      "name": "Facebook Instant Articles"
-    },
-    {
-      "id": "ipfs",
-      "name": "Ipfs"
-    },
-    {
-      "id": "iphone6s",
-      "name": "iPhone 6s"
-    }
+  "2014": [
+    { "id": "alibabaipo", "name": "Alibaba IPO" },
+    { "id": "oculusfb", "name": "Facebook buys Oculus" },
+    { "id": "inbox", "name": "Inbox by Gmail" },
+    { "id": "echo", "name": "Amazon Echo" },
+    { "id": "flappybird", "name": "Flappy Bird" },
+    { "id": "game2048", "name": "2048" },
+    { "id": "ios8", "name": "iOS 8" },
+    { "id": "facebook", "name": "Facebook" },
+    { "id": "youtube", "name": "YouTube" },
+    { "id": "wikipedia", "name": "Wikipedia" },
+    { "id": "twitter", "name": "Twitter" },
+    { "id": "musically14", "name": "musical.ly" },
+    { "id": "truecrypt", "name": "TrueCrypt shutdown" },
+    { "id": "instagram", "name": "Instagram" },
+    { "id": "snapchat", "name": "Snapchat" },
+    { "id": "uber", "name": "Uber" }
   ],
+  "2015": [],
   "2016": [
     {
       "id": "houseparty",
@@ -4756,7 +4739,20 @@
   ],
   "2020": [],
   "2021": [],
-  "2022": []
+  "2022": [
+    { "id": "temu", "name": "Temu" },
+    { "id": "stablediff", "name": "Stable Diffusion" },
+    { "id": "midjourney", "name": "Midjourney" },
+    { "id": "dalle2", "name": "DALL-E 2" },
+    { "id": "ios16", "name": "iOS 16" },
+    { "id": "m2", "name": "Apple M2" },
+    { "id": "google", "name": "Google" },
+    { "id": "youtube", "name": "YouTube" },
+    { "id": "facebook", "name": "Facebook" },
+    { "id": "wikipedia", "name": "Wikipedia" },
+    { "id": "reddit", "name": "Reddit" },
+    { "id": "instagram", "name": "Instagram" }
+  ]
 }
 ;
 })(typeof window !== "undefined" ? window : this);

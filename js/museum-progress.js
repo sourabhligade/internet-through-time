@@ -175,9 +175,7 @@
     "2014": yearVisitTour("2014",
       { path: "sites/whatsapp/index.html", label: "WhatsApp Install", blurb: "$19B. Install is the save. Messenger is the trap.", match: "/whatsapp/" },
       { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "Rotate the leftover. CVE-2014-0160.", match: "/heartbleed/" }),
-    "2015": yearVisitTour("2015",
-      { path: "sites/periscope/index.html", label: "Periscope", blurb: "Title. Go LIVE. App of the Year.", match: "/periscope/" },
-      { path: "sites/googlephotos/index.html", label: "Google Photos", blurb: "Unlimited high quality locker.", match: "/googlephotos/" }),
+
     "2016": yearVisitTour("2016",
       { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/stories" },
       { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Outdoor AR. Empty / trap never write. Not the chip.", match: "/pokemongo/" }),

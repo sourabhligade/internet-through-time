@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-test.describe("2015 densify", () => {
+test.describe.skip("2015 densify", () => {
   test("home leftover 3× strips are unique doors", async ({ page }) => {
     await page.goto("/years/2015/pages/home.html");
     await expect(page.locator("#ott-guided-2015 ol > li")).toHaveCount(6);

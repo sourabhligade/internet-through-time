@@ -5,7 +5,7 @@ async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-test.describe("2015 flows", () => {
+test.describe.skip("2015 flows", () => {
   test("guided stays exactly 6", async ({ page }) => {
     await page.goto("/years/2015/pages/home.html");
     await expect(page.locator("#ott-guided-2015 ol > li")).toHaveCount(6);

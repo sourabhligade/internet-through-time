@@ -14,20 +14,7 @@ export const REACT_YEARS = [
       ["Year flow map", "/years/2014/pages/map.html"],
     ],
   },
-  {
-    year: "2015",
-    star: "Periscope Go LIVE",
-    blurb: "Periscope Go LIVE. Photos locker. Windows 10 is a product room.",
-    home: "/years/2015/pages/home.html",
-    steps: [
-      ["About 2015", "/years/2015/pages/about.html"],
-      ["Periscope", "/years/2015/sites/periscope/index.html"],
-      ["Google Photos", "/years/2015/sites/googlephotos/index.html"],
-      ["Windows 10", "/years/2015/sites/windows10/index.html"],
-      ["Apple Music", "/years/2015/sites/applemusic/index.html"],
-      ["Year flow map", "/years/2015/pages/map.html"],
-    ],
-  },
+
   {
     year: "2016",
     star: "Instagram Stories",

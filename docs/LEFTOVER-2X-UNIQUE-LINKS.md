@@ -367,13 +367,9 @@ KEEP original leftover-2× unique dests: **none**.
 ADD leftover dest KEEP first: `alibabaipo` · `oculusfb` · `inbox` · `echo` · `flappybird` · `game2048` · `ios8`  
 Then dests already on disk: `applepay` · `facebook` · `heartbleed` · `icebucket` · `instagram` · `iphone` · `material` · `musically14` · `playable` · `slack` · `snapchat` · `truecrypt` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `youtube`
 
-### 2015 — after 30 · add 15 · star `itt15-periscope`
+### 2015 — wiped
 
-KEEP original (15): `amppage` · `apple` · `discord` · `echo` · `googlephotos` · `instagram` · `ios9` · `meerkat` · `netflix` · `periscope` · `snapchat` · `spotify` · `vine` · `windows10` · `youtube`
-
-ADD dests already on disk: `androidpay` · `applemusic` · `applemusicsub` · `applenews` · `applepencil` · `applewatch` · `beats1` · `dx12` · `edge` · `elcapitan` · `ethereum` · `fblive` · `http2` · `instantarticles` · `ipadpro`
-
-Do not dest-farm leftover dest leftover-20 dests. Dest folders stay **50**.
+2015 is off hub. leftover dest leftover-2× unique dest catalog is empty. Do not restore `years/2015/`.
 
 ### 2016 — after 46 · add 23 · star `itt16-ig-stories`
 

@@ -277,18 +277,7 @@ const THINGS = [
       await page.locator("[data-ig12-share]").click();
     },
   },
-  {
-    year: "2015",
-    path: "/years/2015/sites/periscope/index.html",
-    key: "itt15-periscope",
-    incomplete: async (page) => {
-      await page.locator("[data-peri-live]").click();
-    },
-    complete: async (page) => {
-      await page.fill("[data-peri-title]", "museum rooftop");
-      await page.locator("[data-peri-live]").click();
-    },
-  },
+
   {
     year: "2016",
     path: "/years/2016/sites/instagram/stories.html",

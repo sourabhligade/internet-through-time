@@ -4,7 +4,7 @@
 **Tree:** `museum/1994-2020-lean`  
 **Status:** Recheck vs disk. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Live:** 27 doors (1994–2008 and 2010–2017 plus 2019–2022). 2009 boarded. 2018 wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.
+**Live:** 26 doors (1994–2008 and 2010–2014 plus 2016–2017 plus 2019–2022). 2009 boarded. 2015 wiped. 2018 wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.
 
 Rechecked 2026-09-26: dest folders · leftover-3× unique catalogs empty · official 10 files · official dest leftover-2× `data-lo-panel` 0 on playable years · period assets · dest-true 511 passed.
 
@@ -16,10 +16,10 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 
 | Item | Disk |
 |------|------|
-| **27 years open** (1994–2008 + 2010–2017 + 2019–2022) · 2009 boarded · 2018 wiped · 2023–2025 wiped | Hub · `DISK-TRUTH.md` |
+| **26 years open** (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022) · 2009 boarded · 2015 wiped · 2018 wiped · 2023–2025 wiped | Hub · `DISK-TRUTH.md` |
 | Official trail dests | `flow-trails.js` · `check-every-flow.py` **475 stops, 0 missing** |
 | Guided Starting Point exactly 6 | `ui/year/start-data.js` |
-| Dest-lock **reverted** 2015–2016 HTML | dest folders **50 / 57** |
+| Dest-lock **reverted** 2016 HTML | dest folders **57** · **2015 wiped** |
 | Dest-lock **still on** 2007 / 2010–2012 / 2014 / 2021 | dest folders **33 / 29 / 41 / 32 / 25 / 0 HTML** (2021 is React) |
 | 2017 / 2019–2021 | React doors · HTML dest folders **0** · React keys **30 / 83 / 22 / 13** |
 | Leftover-3× unique catalogs | **Empty.** `ITT.leftover3xUnique = {}` |

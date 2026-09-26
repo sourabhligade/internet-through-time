@@ -2,7 +2,7 @@
 /**
  * Legal 2015–2020 3× leftover dests — 2016 / 2018 leftover dests only.
  * Empty / trap never write. Complete writes leftover. Never star.
- * Not leftover-3× unique. Not leftover-20. 2015/2017/2019/2020 dest folders stay.
+ * Not leftover-3× unique. Not leftover-20. 2015 wiped. 2017/2019/2020 dest folders stay.
  */
 const fs = require("fs");
 const path = require("path");
@@ -31,8 +31,8 @@ function uniqueIds(year) {
   return ids;
 }
 
-test("2015 / 2017 dest folders stay · 2019 / 2020 are React doors", () => {
-  expect(destFolders(2015).length).toBe(50);
+test("2015 wiped · 2017 dest folders stay · 2019 / 2020 are React doors", () => {
+  expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "years", "2019"))).toBe(false);

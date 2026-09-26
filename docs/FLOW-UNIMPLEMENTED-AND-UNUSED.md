@@ -21,7 +21,7 @@ It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`.
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **27 years open** (1994–2008 + 2010–2017 + 2019–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2018 wiped.** **2023–2025 wiped.**
+The museum is year-locked rooms in period chrome. Hub is **26 years open** (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2015 wiped.** **2018 wiped.** **2023–2025 wiped.**
 
 Visitor product (I/O):
 

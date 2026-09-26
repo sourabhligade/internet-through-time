@@ -247,18 +247,7 @@
       famous: "Mines + Pocket Snake",
       accent: "#25d366"
     },
-    "2015": {
-      id: "blobrush",
-      title: "Blob Rush",
-      href: "game.html",
-      key: "itt15-game-blobrush",
-      inspire: "agar.io-class 2015 tab mania — not agar art; slither is 2016",
-      blurb: "Eat · grow · Space splits. Incomplete never writes.",
-      why: "agar.io ate the browser tab. This cabinet is original cells — not their source.",
-      era: "Go LIVE. Free locker. Get Windows 10. No Stories.",
-      famous: "Blob Rush",
-      accent: "#e53935"
-    },
+
     "2016": {
       id: "gymrush",
       title: "Gym Rush",

@@ -3,7 +3,7 @@
 **Date:** 2026-09-26
 **Status:** Working checklist vs live disk. Not ship law. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14. Lean leftover: [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) D1–D15. Leftover-2× rails: [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1–L13. Visitor 100%: dest-true **flows**, not dest-folder count.
-**Live:** 27 doors (1994–2008 + 2010–2017 + 2019–2022). 2009 boarded. 2018 / 2023–2025 wiped. Leftover-3× unique catalogs empty.
+**Live:** 26 doors (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). 2009 boarded. 2015 / 2018 / 2023–2025 wiped. Leftover-3× unique catalogs empty.
 
 A flow **passes** only if empty / trap never write, a finished visit writes **that** key, leftover never writes the star, and official dest leftover-2× first paint is 0.
 

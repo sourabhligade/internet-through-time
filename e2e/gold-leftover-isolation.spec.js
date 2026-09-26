@@ -33,7 +33,7 @@ const GOLD = [
   { year: "2012", dest: "sites/instagram/android.html", star: "itt12-ig-android" },
   { year: "2013", dest: "sites/vine/record.html", star: "itt13-vine-posts" },
   { year: "2014", dest: "sites/whatsapp/index.html", star: "itt14-wa-install" },
-  { year: "2015", dest: "sites/periscope/index.html", star: "itt15-periscope" },
+
   { year: "2016", dest: "sites/instagram/stories.html", star: "itt16-ig-stories" },
   { year: "2017", dest: "sites/iphone/x.html", star: "itt17-faceid" },
   { year: "2019", dest: "sites/disneyplus/index.html", star: "itt19-disneyplus" },

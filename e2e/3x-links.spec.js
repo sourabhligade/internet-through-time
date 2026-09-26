@@ -30,7 +30,7 @@ test.describe("3× links every implemented year", () => {
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);
       await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
-      const LEAN = new Set(["2007", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2021"]);
+      const LEAN = new Set(["2007", "2010", "2011", "2012", "2013", "2014", "2016", "2017", "2018", "2019", "2020", "2021"]);
       if (LEAN.has(year) || year === "2009") {
         await expect(page.locator("[data-itt-pop3x]:visible, [data-itt-3x-links]:visible")).toHaveCount(0);
         return;

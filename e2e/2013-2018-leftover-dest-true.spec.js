@@ -191,7 +191,7 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     expect(await getKey(page, "itt19-disneyplus")).toBeFalsy();
   });
   test("2015 apple about leftover-2× lx then d2 · gold empty", async ({ page }) => {
-    test.skip(true, "official dest leftover-2× panels = 0");
+    test.skip(true, "2015 wiped");
     await page.goto("/years/2015/sites/apple/about.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt15-apple-lx");

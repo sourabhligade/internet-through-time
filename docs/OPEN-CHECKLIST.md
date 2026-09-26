@@ -3,7 +3,7 @@
 **Date:** 2026-09-26  
 **Branch:** `museum/1994-2020-lean`. This commit ships React-door atlas, dest-true 2017/2019 MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) and `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Live museum:** 27 doors (1994–2008, 2010–2017, 2019–2022). 2009 is boarded. 2018 and 2023–2025 are wiped. Leftover-3× catalogs are empty.
+**Live museum:** 26 doors (1994–2008, 2010–2014, 2016–2017, 2019–2022). 2009 is boarded. 2015, 2018, and 2023–2025 are wiped. Leftover-3× catalogs are empty.
 
 Do the steps in order. A later step does not start while an earlier step is still open. Nothing here is a commit until step 8, and only if you ask for one.
 

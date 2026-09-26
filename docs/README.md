@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **27 years open** (1994–2008 + 2010–2017 + 2019–2022). **2009 boarded.** **2018 wiped.** **2023–2025 wiped.**
+Hub is **26 years open** (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.**
 
 ## Read first
 

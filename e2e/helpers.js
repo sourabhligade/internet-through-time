@@ -5,6 +5,8 @@ const path = require("path");
 
 /** Boarded from the visitor UI. 2009 is a plaque (tree stays). 2023+ have no tree. */
 const BOARDED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
+/** Wiped years: no hub card, no HTML tree. */
+const WIPED_YEARS = new Set(["2015", "2018", "2023", "2024", "2025"]);
 
 /** True when years/YYYY/... is on disk (dest-lock deletes workshop dests). */
 function destOnDisk(href) {
@@ -44,7 +46,8 @@ async function completeReactStop(page, room) {
 }
 
 function isLiveYear(year) {
-  return !BOARDED_YEARS.has(String(year));
+  const y = String(year);
+  return !BOARDED_YEARS.has(y) && !WIPED_YEARS.has(y);
 }
 
 /**
@@ -71,7 +74,7 @@ async function expectYearBoarded(page, year) {
     return;
   }
   await expect(page).toHaveURL(/\/(index\.html)?$/);
-  await expect(page.locator("body")).toContainText(/27 years open|28 years open|boarded/i);
+  await expect(page.locator("body")).toContainText(/26 years open|27 years open|28 years open|boarded/i);
   await expect(page.locator("#dirbar")).toHaveCount(0);
 }
 
@@ -777,6 +780,7 @@ async function leftoverOfficialDest(page, href, suffix, goldKey) {
 
 module.exports = {
   BOARDED_YEARS,
+  WIPED_YEARS,
   destOnDisk,
   yearHtmlOnDisk,
   openReactStop,

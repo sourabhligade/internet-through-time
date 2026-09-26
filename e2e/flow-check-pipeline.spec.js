@@ -65,7 +65,7 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
   test("1 hub 27 cards · no 2009 · no 2018 · no 2023+", async ({ page }) => {
     expect(SHIP).toHaveLength(27);
     await page.goto("/");
-    await expect(page.locator("body")).toContainText(/27 years open/i);
+    await expect(page.locator("body")).toContainText(/26 years open/i);
     const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {

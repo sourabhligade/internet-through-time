@@ -8,7 +8,7 @@
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
@@ -20,12 +20,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2008", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2016", "2017", "2019", "2020", "2021", "2022"] }
     ],
 
     leanYears: [
       "2007", "2010", "2011", "2012",
-      "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"
+      "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -50,7 +50,6 @@
       "2012": "The square photo leaves the iPhone.",
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
-      "2015": "Go LIVE. No Stories on Instagram yet.",
       "2016": "Snapchat invented the 24-hour slide.",
       "2017": "Look to unlock. Fortnite is.",
       "2019": "2018 is wiped. Zoom Leave is 2020. Reels are not this year.",
@@ -81,7 +80,6 @@
       "2012": "The square left the iPhone. Wikipedia went dark for a day.",
       "2013": "The loop was six seconds. Stories here are Snapchat, not Instagram.",
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
-      "2015": "You titled it. Then you went LIVE. The locker said unlimited high quality.",
       "2016": "The slide lasted twenty-four hours. Snapchat invented the format. People walked into lamp posts.",
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters.",
       "2019": "You subscribed. The Mouse became a stream. $6.99. The Mandalorian Chapter 1.",
@@ -122,14 +120,6 @@
         { label: "Ice Bucket — nominate", href: "years/2014/sites/icebucket/index.html" },
         { label: "iPhone 6", href: "years/2014/sites/iphone/index.html" },
         { label: "Year flow map", href: "years/2014/pages/map.html" }
-      ],
-      "2015": [
-        { label: "About 2015", href: "years/2015/pages/about.html" },
-        { label: "Periscope — title then Go LIVE", href: "years/2015/sites/periscope/index.html" },
-        { label: "Google Photos — backup HQ", href: "years/2015/sites/googlephotos/index.html" },
-        { label: "Windows 10 — free upgrade", href: "years/2015/sites/windows10/index.html" },
-        { label: "Apple Music — 3-month trial", href: "years/2015/sites/applemusic/index.html" },
-        { label: "Year flow map", href: "years/2015/pages/map.html" }
       ],
       "2016": [
         { label: "About 2016", href: "years/2016/pages/about.html" },
@@ -371,16 +361,7 @@
         ],
         game: { label: "Tile Fold", href: "years/2014/sites/playable/game.html" }
       },
-      "2015": {
-        era: "Go LIVE · Photos locker · Win10",
-        thesis: "Lean door. Periscope titled Go LIVE is the gold.",
-        gold: { label: "Periscope Go LIVE", href: "years/2015/sites/periscope/index.html", key: "itt15-periscope" },
-        guided: [
-          { label: "Google Photos", href: "years/2015/sites/googlephotos/index.html" },
-          { label: "Windows 10 upgrade", href: "years/2015/sites/windows10/index.html" }
-        ],
-        game: { label: "Blob Rush", href: "years/2015/sites/playable/game.html" }
-      },
+
       "2016": {
         era: "Stories · sidewalks · five faces",
         thesis: "Lean door. 24-hour slide. Snapchat invented the format.",
@@ -497,7 +478,6 @@
           { year: "2006", href: "years/2006/sites/google/index.html", note: "YouTube deal year" },
           { year: "2008", href: "years/2008/sites/google/index.html", note: "Chrome year" },
           { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" },
-          { year: "2015", href: "years/2015/sites/googlephotos/index.html", note: "Photos locker" },
           { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" },
           { year: "2021", href: "/app/index.html#/year/2021", note: "ATT year" }
         ]
@@ -627,7 +607,6 @@
         label: "Broadcast yourself",
         blurb: "Upload → live → 24-hour slide. Vine is the 2013 gold.",
         steps: [
-          { year: "2015", label: "Periscope LIVE", href: "years/2015/sites/periscope/index.html" },
           { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" },
           { year: "2017", label: "musical.ly", href: "/app/index.html#/year/2017" }
         ]
