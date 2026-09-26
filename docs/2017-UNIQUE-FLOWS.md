@@ -139,7 +139,7 @@ All 30 paths exist on disk today. Do not add dests.
 
 ### Phase 6 — Docs + e2e
 
-- [x] `flow-trails` official 10 only. Matrices that treat 332 keys as visitor flows stay workshop. e2e: 10 official + 20 leftover unique href/key.
+- [x] `flow-trails` is official 10 then leftover 20 (stops 11–30). Star stays Face ID. Matrices that treat 332 keys as visitor flows stay workshop.
 
 ### Phase H — Optional dest lock (last)
 
@@ -182,7 +182,26 @@ Leftover dests (deep-research-3, Partial):
 |------|------|
 | iOS 11 | [Apple Newsroom 18 Sep 2017](https://www.apple.com/newsroom/2017/09/ios-11-available-tomorrow/) — ship 19 Sep |
 | Cloudbleed | [Cloudflare incident 23 Feb 2017](https://blog.cloudflare.com/incident-report-on-memory-leak-caused-by-cloudflare-parser-bug/) |
-| Other 18 leftover dests | **failed-final** until each has its own capture |
+| Animoji | [Apple Newsroom, iPhone X](https://www.apple.com/newsroom/2017/09/the-future-is-here-iphone-x/) |
+| PUBG | [Steam, PUBG: BATTLEGROUNDS](https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/) |
+| Cuphead | [cupheadgame.com](https://cupheadgame.com/) |
+| Twitter Lite | [Wikipedia, Twitter](https://en.wikipedia.org/wiki/Twitter) |
+| Snap IPO | [Wikipedia, Snap Inc.](https://en.wikipedia.org/wiki/Snap_Inc.) |
+| Slack | [slack.com](https://slack.com/) |
+| Hangouts Chat | [Wikipedia, Google Chat](https://en.wikipedia.org/wiki/Google_Chat) |
+| Snap Map | [Wikipedia, Snapchat](https://en.wikipedia.org/wiki/Snapchat) |
+| Instagram 2017 | [about.instagram.com](https://about.instagram.com/) |
+| Breath of the Wild | [zelda.com](https://www.zelda.com/breath-of-the-wild/) |
+| Splatoon 2 | [splatoon.nintendo.com](https://splatoon.nintendo.com/) |
+| NotPetya | [Wikipedia, 2017 Ukraine ransomware attacks](https://en.wikipedia.org/wiki/2017_Ukraine_ransomware_attacks) |
+| KRACK | [krackattacks.com](https://www.krackattacks.com/) |
+| tbh | [Wikipedia, tbh](https://en.wikipedia.org/wiki/Tbh_(app)) |
+| Messenger Day | [Wikipedia, Facebook Messenger](https://en.wikipedia.org/wiki/Facebook_Messenger) |
+| Credit freeze | [CFPB newsroom](https://www.consumerfinance.gov/about-us/newsroom/) |
+| Getting Over It | [foddy.net](https://www.foddy.net/) |
+| Hollow Knight | [hollowknight.com](https://www.hollowknight.com/) |
+
+`[failed-final]` stays on a missing brand pixel. These rows are the page links. They are not new logos.
 
 Research also flags **U3**: leftover dests still use a shared “Ack leftover” host, not a dest-unique period verb. Official 10 dests keep dest-unique verbs. Clone leftover-2× (`lx`/`d2`) is rejected.
 

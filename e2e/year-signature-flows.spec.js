@@ -812,29 +812,6 @@ test.describe('year-signature 2017', () => {
   });
 });
 
-test.describe('year-signature 2018', () => {
-  test('GDPR Accept All never writes · Manage + Save → itt18-gdpr', async ({ page }) => {
-    skipIfWiped('2018');
-    await enterYear(page, '2018');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt18-gdpr');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2018', 'sites/gdpr/index.html');
-    const frame = contentFrame(page);
-    await frame.locator('[data-gdpr-accept-all]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt18-gdpr'))).toBeFalsy();
-    await frame.locator('[data-gdpr-manage]').click();
-    await frame.locator('[data-gdpr-save]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt18-gdpr')), { timeout: 8000 })
-      .toBeTruthy();
-  });
-});
-
 test.describe('year-signature 2019', () => {
   test('Disney+ Who’s watching REAL → itt19-disneyplus', async ({ page }) => {
     skipIfWiped('2019');

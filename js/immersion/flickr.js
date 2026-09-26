@@ -54,13 +54,12 @@
   function seed() {
     var list = load();
     if (list && list.length) return list;
-    list = [
+    /* Paint the sample stream. Persist only after the visitor uploads. */
+    return [
       { title: "ETech demo", tags: "conference,2004", note: "Feb 10 launch vibes" },
       { title: "Pink & blue", tags: "flickr,design", note: "Ludicorp chrome" },
       { title: "Tagged cat", tags: "cat,cute,folksonomy", note: "Tags arrive mid-2004" }
     ];
-    save(list);
-    return list;
   }
   function render(doc) {
     var el = doc.querySelector("[data-flickr-stream]");
@@ -116,6 +115,22 @@
                   real: true,
                   official: true,
                   year: "2005",
+                  title: title.slice(0, 80),
+                  tags: String(tags || "").slice(0, 80),
+                  ts: Date.now()
+                })
+              );
+            }
+            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          } else if (ok === "itt06-flickr") {
+            if (!localStorage.getItem("itt06-flickr")) {
+              localStorage.setItem(
+                "itt06-flickr",
+                JSON.stringify({
+                  multiStep: true,
+                  real: true,
+                  leftover: true,
+                  year: "2006",
                   title: title.slice(0, 80),
                   tags: String(tags || "").slice(0, 80),
                   ts: Date.now()

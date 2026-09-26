@@ -10,6 +10,7 @@
   var rooms = [
     "index.html",
     "pages/about.html",
+    "pages/checklist.html",
     "pages/error/404.html",
     "pages/error/unreachable.html",
     "pages/home.html",
@@ -76,7 +77,7 @@
     "sites/wave/index.html",
     "sites/youtube/about.html",
     "sites/youtube/index.html"
-  ];;;;;;;;;
+  ];;;;;;;;;;
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",

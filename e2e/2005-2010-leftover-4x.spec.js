@@ -8,9 +8,8 @@ const path = require("path");
 const { test, expect } = require("@playwright/test");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2005", "2006", "2007", "2008", "2010"];
+const YEARS = ["2006", "2007", "2008", "2010"];
 const GOLD = {
-  2005: "itt05-yt-uploads",
   2006: "itt06-tweets",
   2007: "itt07-iphone",
   2008: "itt08-github",
@@ -19,7 +18,6 @@ const GOLD = {
 };
 const GOLD2 = { 2010: "itt10-ig-posts" };
 const OFFICIAL = {
-  2005: ["yt-uploads", "maps", "pandora", "hm", "digg", "reddit", "flickr", "pod", "tc", "game-heli"],
   2006: ["tweets", "feed", "fb-open", "yt", "gdocs", "s3", "ie7", "wiki-1m", "roblox", "game-linerider"],
   2007: ["iphone", "streetview", "gmail", "fbplat", "twitter", "youtube", "tumblr", "kindle", "ie6", "game-safariq"],
   2008: ["github", "apps", "chrome", "android", "hulu", "facebook", "tweets", "yt", "dropbox", "iphone3g"],
@@ -27,11 +25,6 @@ const OFFICIAL = {
   2010: ["ig", "ig-posts", "iphone4", "ipad", "fb-og", "farm", "imgur", "4sq", "tweets", "yt", "game-slingnest"],
 };
 const SAMPLE = {
-  2005: [
-    { path: "/years/2005/sites/maps/index.html", go: "maps-lx-4x" },
-    { path: "/years/2005/sites/reddit/index.html", go: "reddit-lx-4x" },
-    { path: "/years/2005/sites/firefox/index.html", go: "fx15-lx-4x" },
-  ],
   2006: [
     { path: "/years/2006/sites/twitter/index.html", go: "t140-4x" },
     { path: "/years/2006/sites/youtube/index.html", go: "yt-lx-4x" },

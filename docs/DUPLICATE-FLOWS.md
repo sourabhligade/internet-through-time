@@ -6,6 +6,8 @@
 
 This is the leftover duplicate-flow list. Forest stacked leftover-3× workshop stays. Leftover-3× unique dest-true dests stay **107**. Leftover-3× unique dest **links** caps are filled. Leftover-2× harvest MISS stays miss.
 
+**Leftover unique dest link paste killed 2026-09-22:** leftover-2× unique dest **links** dest-disjoint leftover-3× unique dest **links**, official dests, leftover trail n=11–20 dests, leftover-4× unique dests. leftover-3× unique dest-true dests host leftover-3× unique dest **links** only. Full map: [`DUPLICATE-UNIQUE-LINKS.md`](DUPLICATE-UNIQUE-LINKS.md).
+
 ---
 
 ## Killed this pass
@@ -17,6 +19,7 @@ This is the leftover duplicate-flow list. Forest stacked leftover-3× workshop s
 | **Hub CSS duplicate year skins** | `.year-card.y2015` ×2, `y2016` ×2, `y2017` ×3, `y2018` ×2 | Keep the last winning block each |
 | **Dead `year-start-quiet.css` check** | `start.js` `ensureCss` still looked for a deleted file | Drop that selector |
 | **Vine star leftover-2× cream** | `2013-flows` still walked `vine-lx` / `vine-d2` on the star dest | Official dest leftover-2× first paint **0**. Leftover never writes the star |
+| **leftover-2× unique dest links ∩ leftover-3× unique dest links** | 204 dests on both unique dest **link** catalogs · 162 leftover-3× unique dest pages hosted both rails | Drop dest from leftover-2× unique dest **links** only. leftover-3× unique dest-true dests stay 107 |
 
 ---
 

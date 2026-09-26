@@ -165,17 +165,7 @@
     }
     var el = document.createElement("script");
     el.src = jsRoot() + "config/flow-trails.js";
-    el.onload = function () {
-      if (ITT._flowTrails5x) {
-        cb();
-        return;
-      }
-      var extra = document.createElement("script");
-      extra.src = jsRoot() + "config/flow-trails-5x.js";
-      extra.onload = cb;
-      extra.onerror = cb;
-      (document.head || document.documentElement).appendChild(extra);
-    };
+    el.onload = cb;
     el.onerror = cb;
     (document.head || document.documentElement).appendChild(el);
   }

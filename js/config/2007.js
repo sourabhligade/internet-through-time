@@ -10,6 +10,7 @@
   var rooms = [
     "index.html",
     "pages/about.html",
+    "pages/checklist.html",
     "pages/error/404.html",
     "pages/error/unreachable.html",
     "pages/home.html",
@@ -98,7 +99,7 @@
     "sites/youtube/more.html",
     "sites/youtube/pop.html",
     "sites/youtube/watch.html"
-  ];;;;;;;
+  ];;;;;;;;
 
   var urlMap = {
     "pages/about.html": "http://museum.local/years/2007/pages/about.html",

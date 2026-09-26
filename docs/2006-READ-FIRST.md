@@ -7,7 +7,7 @@
 
 ## One line
 
-**2006 is the year the feed and the 140-character update become the session — Twttr is the save, News Feed / open Facebook / Google←YouTube / Docs / S3 are leftover, and the iPhone is not here yet.**
+**2006 is the year the feed and the 140-character update become the session — Twttr is the save, News Feed / Google←YouTube / Docs / S3 are official stops, and the iPhone is not here yet.**
 
 ## Lock before you type HTML
 
@@ -21,7 +21,7 @@
 | Trap | iPhone · Street View · Chrome · modern X / For You · 280-as-default · News Feed as the star |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | Twttr update · News Feed · Facebook open · YouTube Google-owned · Google Docs · AWS S3 · IE7 · Wikipedia millionth · Roblox · Line Rider |
-| First door | **full year**. HTML **≥ 349**. dests **≥ 105**. Match **2005 / 2008**. |
+| First door | **full year**. Disk is **370** site folders · **562** HTML. |
 | 2× leftover | **≥ 120** writers. |
 | 5k-web | research envelope, not dest count. ILS June **includes 2006** (legal cell). |
 

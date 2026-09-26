@@ -11,7 +11,7 @@ test.describe("Per-year guided start trails", () => {
       const ids = Object.keys(T).filter((k) => /-start$/.test(k)).sort();
       return ids;
     });
-    expect(trails.length).toBe(28);
+    expect(trails.length).toBe(27);
     expect(trails[0]).toBe("1994-start");
     expect(trails).toContain("2005-start");
     expect(trails).toContain("2006-start");
@@ -20,7 +20,7 @@ test.describe("Per-year guided start trails", () => {
     expect(trails).not.toContain("2009-start");
     expect(trails).toContain("2011-start");
     expect(trails).toContain("2015-start");
-    expect(trails).toContain("2018-start");
+    expect(trails).not.toContain("2018-start");
     expect(trails).toContain("2019-start");
     expect(trails).toContain("2020-start");
     expect(trails).toContain("2021-start");
@@ -55,5 +55,11 @@ test.describe("Per-year guided start trails", () => {
       await expect(rail.locator("ol li")).toHaveCount(6);
       await expect(rail.locator('a[href="about.html"]').first()).toBeVisible();
     }
+  });
+
+  test("2020 guided six is the React door", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2020");
+    await expect(page.locator("article.stop ol > li")).toHaveCount(6);
+    await expect(page.getByRole("button", { name: "About 2020" }).first()).toBeVisible();
   });
 });

@@ -48,6 +48,11 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "pages/checklist.html": "http://museum.local/years/2006/pages/checklist.html",
+      "sites/amazon/index.html": "http://museum.local/years/2006/sites/amazon/index.html",
+      "sites/google/index.html": "http://museum.local/years/2006/sites/google/index.html",
+      "sites/reddit/index.html": "http://museum.local/years/2006/sites/reddit/index.html",
+      "sites/yahoo/index.html": "http://museum.local/years/2006/sites/yahoo/index.html",
       "sites/whatculture/index.html": "http://museum.local/years/2006/sites/whatculture/index.html",
       "sites/wesleying/index.html": "http://museum.local/years/2006/sites/wesleying/index.html",
       "sites/u17/index.html": "http://museum.local/years/2006/sites/u17/index.html",

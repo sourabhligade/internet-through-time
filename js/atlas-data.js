@@ -8,7 +8,7 @@
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
@@ -20,12 +20,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
       { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2008", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, GDPR Manage, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"] }
     ],
 
     leanYears: [
       "2007", "2010", "2011", "2012",
-      "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+      "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -53,8 +53,7 @@
       "2015": "Go LIVE. No Stories on Instagram yet.",
       "2016": "Snapchat invented the 24-hour slide.",
       "2017": "Look to unlock. Fortnite is.",
-      "2018": "Accept All never writes. Reels are not this year.",
-      "2019": "GDPR is 2018 gold. Zoom Leave is 2020. Reels are not this year.",
+      "2019": "2018 is wiped. Zoom Leave is 2020. Reels are not this year.",
       "2020": "Disney+ Continue is 2019. ATT Ask is 2021. ChatGPT is 2022. No case-count dashboard.",
 
       "2021": "Apps keep their names. Win11 is leftover. ChatGPT dest never."},
@@ -85,7 +84,6 @@
       "2015": "You titled it. Then you went LIVE. The locker said unlimited high quality.",
       "2016": "The slide lasted twenty-four hours. Snapchat invented the format. People walked into lamp posts.",
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters.",
-      "2018": "The banner was the door. Accept All never wrote. Manage did. The loops changed their name.",
       "2019": "You subscribed. The Mouse became a stream. $6.99. The Mandalorian Chapter 1.",
 
       "2021": "The company was renamed. Facebook, Instagram, WhatsApp, and Messenger kept their names."
@@ -142,28 +140,20 @@
         { label: "Year flow map", href: "years/2016/pages/map.html" }
       ],
       "2017": [
-        { label: "About 2017", href: "years/2017/pages/about.html" },
-        { label: "Face ID / iPhone X", href: "years/2017/sites/iphone/x.html" },
-        { label: "Fortnite BR", href: "years/2017/sites/fortnite/index.html" },
-        { label: "Twitter 280", href: "years/2017/sites/twitter/280.html" },
-        { label: "Teams GA", href: "years/2017/sites/teams/index.html" },
-        { label: "Year flow map", href: "years/2017/pages/map.html" }
-      ],
-      "2018": [
-        { label: "About 2018", href: "years/2018/pages/about.html" },
-        { label: "GDPR Manage — Accept All never writes", href: "years/2018/sites/gdpr/index.html" },
-        { label: "TikTok For You — Aug 2 merge", href: "years/2018/sites/tiktok/fyp.html" },
-        { label: "Hearing — Apr 10", href: "years/2018/sites/trust/index.html" },
-        { label: "IGTV — not Reels", href: "years/2018/sites/instagram/igtv.html" },
-        { label: "Year flow map", href: "years/2018/pages/map.html" }
+        { label: "About 2017", href: "/app/index.html#/year/2017" },
+        { label: "Face ID / iPhone X", href: "/app/index.html#/year/2017" },
+        { label: "Fortnite BR", href: "/app/index.html#/year/2017" },
+        { label: "Twitter 280", href: "/app/index.html#/year/2017" },
+        { label: "Teams GA", href: "/app/index.html#/year/2017" },
+        { label: "Year flow map", href: "/app/index.html#/year/2017" }
       ],
       "2021": [
-        { label: "About 2021", href: "years/2021/pages/about.html" },
-        { label: "ATT Ask — Allow never writes", href: "years/2021/sites/att/index.html" },
-        { label: "Signal leftover — 15 May delay", href: "years/2021/sites/signal/index.html" },
-        { label: "Copilot waitlist — not ChatGPT", href: "years/2021/sites/copilot/index.html" },
-        { label: "Meta rename leftover — app still Facebook", href: "years/2021/sites/meta/index.html" },
-        { label: "Year flow map", href: "years/2021/pages/map.html" }
+        { label: "About 2021", href: "/app/index.html#/year/2021" },
+        { label: "ATT Ask — Allow never writes", href: "/app/index.html#/year/2021" },
+        { label: "Signal leftover — 15 May delay", href: "/app/index.html#/year/2021" },
+        { label: "Copilot waitlist — not ChatGPT", href: "/app/index.html#/year/2021" },
+        { label: "Meta rename leftover — app still Facebook", href: "/app/index.html#/year/2021" },
+        { label: "Year flow map", href: "/app/index.html#/year/2021" }
       ]
       },
 
@@ -404,56 +394,55 @@
       "2017": {
         era: "Face ID · free storm · 280",
         thesis: "Lean door. Look to unlock. Fortnite is.",
-        gold: { label: "Face ID / iPhone X", href: "years/2017/sites/iphone/x.html", key: "itt17-faceid" },
+        gold: { label: "Face ID / iPhone X", href: "/app/index.html#/year/2017", key: "itt17-faceid" },
         guided: [
-          { label: "Fortnite", href: "years/2017/sites/fortnite/index.html" },
-          { label: "Twitter 280", href: "years/2017/sites/twitter/280.html" }
+          { label: "Fortnite", href: "/app/index.html#/year/2017" },
+          { label: "Twitter 280", href: "/app/index.html#/year/2017" }
         ],
-        game: { label: "Storm Circle", href: "years/2017/sites/playable/game.html" }
-      },
-      "2018": {
-        era: "Banner · hearing · For You",
-        thesis: "Lean door. Accept All never writes. Manage is the save.",
-        gold: { label: "GDPR Manage", href: "years/2018/sites/gdpr/index.html", key: "itt18-gdpr" },
-        guided: [
-          { label: "TikTok For You", href: "years/2018/sites/tiktok/fyp.html" },
-          { label: "Hearing", href: "years/2018/sites/trust/index.html" }
-        ],
-        game: { label: "Consent Dash", href: "years/2018/sites/playable/game.html" }
+        game: { label: "Storm Circle", href: "/app/index.html#/year/2017" }
       },
       "2019": {
         era: "Continue watching",
         thesis: "Profiles become the door. A weeklong trial is the trap. Continue watching is the save.",
-        gold: { label: "Disney+ Continue", href: "years/2019/sites/disneyplus/home.html", key: "itt19-disneyplus" },
+        gold: { label: "Disney+ Continue", href: "/app/index.html#/year/2019", key: "itt19-disneyplus" },
         guided: [
-          { label: "TikTok For You", href: "years/2019/sites/tiktok/index.html" },
-          { label: "Apple Arcade", href: "years/2019/sites/arcade/index.html" },
-          { label: "Stadia Founder's", href: "years/2019/sites/stadia/index.html" }
+          { label: "TikTok For You", href: "/app/index.html#/year/2019" },
+          { label: "Apple Arcade", href: "/app/index.html#/year/2019" },
+          { label: "Stadia Founder's", href: "/app/index.html#/year/2019" }
         ],
-        game: { label: "Continue Row", href: "years/2019/sites/playable/game.html" }
+        game: { label: "Continue Row", href: "/app/index.html#/year/2019" }
       },
       "2020": {
         era: "Leave meeting",
         thesis: "The meeting is the room. Mute, then chat, then Leave. Empty never writes.",
-        gold: { label: "Zoom Leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
+        gold: { label: "Zoom Leave", href: "/app/index.html#/year/2020", key: "itt20-zoom" },
         guided: [
-          { label: "Houseparty leftover", href: "years/2020/sites/houseparty/index.html" },
-          { label: "Classroom leftover", href: "years/2020/sites/classroom/index.html" },
-          { label: "Among Us leftover", href: "years/2020/sites/amongus/index.html" }
+          { label: "Houseparty leftover", href: "/app/index.html#/year/2020" },
+          { label: "Classroom leftover", href: "/app/index.html#/year/2020" },
+          { label: "Among Us leftover", href: "/app/index.html#/year/2020" }
         ],
-        game: { label: "Year game leftover", href: "years/2020/sites/playable/game.html" }
+        game: { label: "Year game leftover", href: "/app/index.html#/year/2020" }
       },
 
       "2021": {
         era: "Ask · Allow never writes",
         thesis: "Lean door. Ask App Not to Track is the save. Allow never writes. Desktop stays Win10 + Chrome habit.",
-        gold: { label: "ATT Ask", href: "years/2021/sites/att/index.html", key: "itt21-att" },
+        gold: { label: "ATT Ask", href: "/app/index.html#/year/2021", key: "itt21-att" },
         guided: [
-          { label: "Signal leftover", href: "years/2021/sites/signal/index.html" },
-          { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" },
-          { label: "Meta rename leftover", href: "years/2021/sites/meta/index.html" }
+          { label: "Signal leftover", href: "/app/index.html#/year/2021" },
+          { label: "Copilot waitlist", href: "/app/index.html#/year/2021" },
+          { label: "Meta rename leftover", href: "/app/index.html#/year/2021" }
         ],
-        game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
+        game: { label: "Five Letter", href: "/app/index.html#/year/2021" }
+      },
+      "2022": {
+        era: "ChatGPT Send",
+        thesis: "Empty and GPT-4 never write. Send does. Wordle is leftover.",
+        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
+        guided: [
+          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" }
+        ],
+        game: { label: "Year game", href: "years/2022/sites/playable/game.html" }
       }
       },
 
@@ -476,13 +465,8 @@
           { year: "2004", href: "years/2004/sites/yahoo/index.html", note: "Web 2.0 year" },
           { year: "2005", href: "years/2005/sites/yahoo/index.html", note: "still #1" },
           { year: "2006", href: "years/2006/sites/yahoo/index.html", note: "Twttr year" },
-          { year: "2007", href: "years/2007/sites/yahoo/index.html", note: "iPhone year" },
           { year: "2008", href: "years/2008/sites/yahoo/index.html", note: "App Store year" },
-          { year: "2010", href: "years/2010/sites/yahoo/index.html", note: "lean" },
-          { year: "2011", href: "years/2011/sites/yahoo/index.html", note: "Circles year" },
-          { year: "2012", href: "years/2012/sites/yahoo/index.html", note: "IPO year" },
-          { year: "2015", href: "years/2015/sites/yahoo/index.html", note: "Go LIVE year" },
-          { year: "2019", href: "years/2019/sites/yahoo/index.html", note: "Continue year" }
+          { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" }
         ]
       },
       {
@@ -511,14 +495,11 @@
           { year: "2004", href: "years/2004/sites/google/index.html", note: "thefacebook year" },
           { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps leftover" },
           { year: "2006", href: "years/2006/sites/google/index.html", note: "YouTube deal year" },
-          { year: "2007", href: "years/2007/sites/google/index.html", note: "iPhone year" },
           { year: "2008", href: "years/2008/sites/google/index.html", note: "Chrome year" },
           { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" },
-          { year: "2011", href: "years/2011/sites/google/index.html", note: "Circles year" },
-          { year: "2012", href: "years/2012/sites/google/index.html", note: "IPO year" },
           { year: "2015", href: "years/2015/sites/googlephotos/index.html", note: "Photos locker" },
-          { year: "2019", href: "years/2019/sites/google/index.html", note: "Continue year" },
-          { year: "2021", href: "years/2021/sites/google/index.html", note: "ATT year" }
+          { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" },
+          { year: "2021", href: "/app/index.html#/year/2021", note: "ATT year" }
         ]
       },
       {
@@ -536,9 +517,9 @@
         label: "YouTube",
         blurb: "Independent upload → Google-owned → leftover lean rooms.",
         stops: [
+          { year: "2005", href: "years/2005/sites/youtube/upload.html", note: "upload" },
           { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean" },
-          { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean" },
-          { year: "2017", href: "years/2017/sites/youtube/index.html", note: "lean" }
+          { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean" }
         ]
       },
       {
@@ -569,7 +550,7 @@
         stops: [
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
           { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" },
-          { year: "2017", href: "years/2017/sites/iphone/x.html", note: "Face ID" }
+          { year: "2017", href: "/app/index.html#/year/2017", note: "Face ID" }
         ]
       },
       {
@@ -638,7 +619,7 @@
         steps: [
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
           { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" },
-          { year: "2017", label: "Face ID", href: "years/2017/sites/iphone/x.html" }
+          { year: "2017", label: "Face ID", href: "/app/index.html#/year/2017" }
         ]
       },
       {
@@ -648,7 +629,7 @@
         steps: [
           { year: "2015", label: "Periscope LIVE", href: "years/2015/sites/periscope/index.html" },
           { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" },
-          { year: "2017", label: "musical.ly", href: "years/2017/sites/musically/index.html" }
+          { year: "2017", label: "musical.ly", href: "/app/index.html#/year/2017" }
         ]
       },
       {

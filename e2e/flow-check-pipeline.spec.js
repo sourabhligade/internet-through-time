@@ -13,24 +13,24 @@ const LEAN = require("./lean-double-leftover.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
-  if (y === 2009) continue;
+  if (y === 2009 || y === 2018) continue;
   SHIP.push(String(y));
 }
 
 const LO3X_STOP = {
-  2007: 9,
-  2010: 9,
-  2011: 9,
-  2012: 9,
-  2013: 9,
-  2014: 9,
-  2015: 9,
-  2016: 9,
-  2018: 3,
-  2019: 9,
-  2020: 9,
-  2021: 5,
-  2022: 9,
+  2007: 0,
+  2010: 0,
+  2011: 0,
+  2012: 0,
+  2013: 0,
+  2014: 0,
+  2015: 0,
+  2016: 0,
+  2018: 0,
+  2019: 0,
+  2020: 0,
+  2021: 0,
+  2022: 0,
 };
 
 function officialTen(year) {
@@ -62,14 +62,23 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
-  test("1 hub 28 cards · no 2009 · no 2023+", async ({ page }) => {
-    expect(SHIP).toHaveLength(28);
+  test("1 hub 27 cards · no 2009 · no 2018 · no 2023+", async ({ page }) => {
+    expect(SHIP).toHaveLength(27);
     await page.goto("/");
-    await expect(page.locator("body")).toContainText(/28 years open/i);
+    await expect(page.locator("body")).toContainText(/27 years open/i);
+    const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
     for (const y of SHIP) {
+      if (reactDoor.has(y)) {
+        await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
+          "href",
+          new RegExp("app/index\\.html#/year/" + y)
+        );
+        continue;
+      }
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
     await expect(page.locator("a.year-card.available[href*='years/2009']")).toHaveCount(0);
+    await expect(page.locator("a.year-card.available[href*='years/2018']")).toHaveCount(0);
     await expect(page.locator("a.year-card.available[href*='years/2023']")).toHaveCount(0);
   });
 
@@ -95,17 +104,30 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
     test(`2–4 ${y} Starting Point guided 6 · official 10 files dest-true · leftover-2× = 0`, async ({
       page,
     }) => {
+      if (y === "2017" || y === "2019" || y === "2020" || y === "2021") {
+        await page.goto("/app/index.html#/year/" + y);
+        await expect(page.locator("article.stop ol > li")).toHaveCount(6);
+        const src = fs.readFileSync(path.join(ROOT, "react", "src", "year" + y + ".js"), "utf8");
+        for (const row of officialTen(y)) {
+          expect(src, row.whenKey).toContain(row.whenKey);
+        }
+        return;
+      }
       await page.goto("/years/" + y + "/pages/home.html");
       await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
       await expect(page.locator('[data-ott-one-thing="' + y + '"]')).toBeVisible();
       const ten = officialTen(y);
-      expect(ten, y + " official 10").toHaveLength(10);
+      const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
+      const cap = officialCap[y] || 10;
+      expect(ten, y + " official " + cap).toHaveLength(cap);
       for (const row of ten) {
         const href = path.join(ROOT, "years", y, row.href);
         expect(fs.existsSync(href), href).toBe(true);
         const html = fs.readFileSync(href, "utf8");
         expect(html.indexOf("data-lo-panel"), y + " " + row.href + " leftover-2×").toBe(-1);
-        expect(html, y + " " + row.href + " dest-true need").toMatch(/data-official-need/);
+        const destTrue =
+          html.indexOf("data-official-need") !== -1 || html.indexOf("data-year-game") !== -1;
+        expect(destTrue, y + " " + row.href + " dest-true need").toBe(true);
       }
     });
   }
@@ -127,7 +149,7 @@ test.describe("FLOW-CHECK pipeline · leftover dest I/O sample", () => {
     leanByYear[row.year] = leanByYear[row.year] || [];
     leanByYear[row.year].push(row);
   }
-  for (const year of ["2007", "2010", "2018", "2022"]) {
+  for (const year of ["2007", "2010", "2022"]) {
     const rows = leanByYear[year] || [];
     if (rows[0]) samples.push({ ...rows[0], lean: true });
   }

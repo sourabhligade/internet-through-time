@@ -87,10 +87,6 @@
     "immersion/leftover-official.js",
     "config/leftover-2x-unique-links.js",
     "immersion/leftover-2x-unique-links.js",
-    "config/leftover-3x-unique.js",
-    "immersion/leftover-3x-unique.js",
-    "config/leftover-3x-unique-links.js",
-    "immersion/leftover-3x-unique-links.js",
     "immersion/year-4x-flows.js",
     "immersion/official-dest-gold.js",
     "immersion/official-verb.js",
@@ -412,17 +408,6 @@
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
       "immersion/year-2017-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
-    "2018": [
-      "immersion/no-mock-gfc.js",
-      "immersion/no-mock-sopa.js",
-      "immersion/no-mock-uber.js",
-      "immersion/no-mock-wave.js",
-      "immersion/no-mock-fb-connect.js",
-      "immersion/no-mock-culture-ack.js",
-      "immersion/no-mock-common.js",
-      "immersion/year-2018-extras.js",
       "immersion/one-thing-machines.js"
     ],
     "2019": [

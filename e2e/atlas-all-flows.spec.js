@@ -11,19 +11,19 @@ const trio = require("../scripts/popular-3x3-sites.json");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2021"
+  "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"
 ];
 const WIPED = ["2023", "2024", "2025"];
 const LEAN = [
   "2007", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2021"
+  "2013", "2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
   rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
   phone: ["2008", "2010", "2011", "2012", "2013"],
-  stream: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2021"]
+  stream: ["2014", "2015", "2016", "2017", "2019", "2020", "2021", "2022"]
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -51,11 +51,10 @@ const GOLD = {
   "2015": /Periscope|Go LIVE/i,
   "2016": /Instagram Stories/i,
   "2017": /Face ID|iPhone X/i,
-  "2018": /GDPR Manage/i,
   "2019": /Disney\+/i,
   "2020": /Zoom|Leave/i,
   "2021": /ATT|Ask/i,
-  "2021": /ChatGPT/i
+  "2022": /ChatGPT/i
 };
 
 function twoXByYear() {
@@ -228,16 +227,16 @@ test.describe("atlas hallway — all flows", () => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(28);
+    await expect(golds).toHaveCount(27);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(28);
+    expect(goldHrefs.length).toBe(27);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(28);
+    await expect(officialYears).toHaveCount(27);
   });
 
   test("first night is the real 5-stop walk; hallway ends at 2021", async ({ page }) => {

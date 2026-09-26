@@ -48,6 +48,12 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "pages/checklist.html": "http://museum.local/years/2004/pages/checklist.html",
+      "sites/amazon/index.html": "http://museum.local/years/2004/sites/amazon/index.html",
+      "sites/ebay/index.html": "http://museum.local/years/2004/sites/ebay/index.html",
+      "sites/google/index.html": "http://museum.local/years/2004/sites/google/index.html",
+      "sites/wikipedia/index.html": "http://museum.local/years/2004/sites/wikipedia/index.html",
+      "sites/yahoo/index.html": "http://museum.local/years/2004/sites/yahoo/index.html",
       "sites/altsounds/index.html": "http://museum.local/years/2004/sites/altsounds/index.html",
       "sites/quarks/index.html": "http://museum.local/years/2004/sites/quarks/index.html",
       "sites/getjar/index.html": "http://museum.local/years/2004/sites/getjar/index.html",

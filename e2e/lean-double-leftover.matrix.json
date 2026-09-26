@@ -137,6 +137,14 @@
   },
   {
     "year": "2010",
+    "id": "angry",
+    "href": "/years/2010/sites/angry/index.html",
+    "key": "itt10-angry-lx",
+    "star": "itt10-ig-posts",
+    "verb": "Fling leftover"
+  },
+  {
+    "year": "2010",
     "id": "path",
     "href": "/years/2010/sites/path/index.html",
     "key": "itt10-path-lx",
@@ -182,14 +190,6 @@
     "key": "itt10-ibooks-lx",
     "star": "itt10-ig-posts",
     "verb": "Shelf leftover"
-  },
-  {
-    "year": "2010",
-    "id": "angry",
-    "href": "/years/2010/sites/angry/index.html",
-    "key": "itt10-angry-lx",
-    "star": "itt10-ig-posts",
-    "verb": "Fling leftover"
   },
   {
     "year": "2011",
@@ -352,22 +352,6 @@
     "verb": "Check in leftover"
   },
   {
-    "year": "2011",
-    "id": "gmusic",
-    "href": "/years/2011/sites/gmusic/index.html",
-    "key": "itt11-gmusic-lx",
-    "star": "itt11-gplus",
-    "verb": "Play leftover"
-  },
-  {
-    "year": "2011",
-    "id": "pandora",
-    "href": "/years/2011/sites/pandora/index.html",
-    "key": "itt11-pandora-lx",
-    "star": "itt11-gplus",
-    "verb": "Thumb leftover"
-  },
-  {
     "year": "2012",
     "id": "tinder",
     "href": "/years/2012/sites/tinder/index.html",
@@ -504,14 +488,6 @@
     "verb": "Slide leftover"
   },
   {
-    "year": "2014",
-    "id": "ios8",
-    "href": "/years/2014/sites/ios8/index.html",
-    "key": "itt14-ios8-lx",
-    "star": "itt14-wa-install",
-    "verb": "Update leftover"
-  },
-  {
     "year": "2016",
     "id": "douyin",
     "href": "/years/2016/sites/douyin/index.html",
@@ -520,219 +496,11 @@
     "verb": "For You leftover"
   },
   {
-    "year": "2016",
-    "id": "airpods",
-    "href": "/years/2016/sites/airpods/index.html",
-    "key": "itt16-airpods-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Pair leftover"
-  },
-  {
-    "year": "2016",
-    "id": "pixel",
-    "href": "/years/2016/sites/pixel/index.html",
-    "key": "itt16-pixel-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Assistant leftover"
-  },
-  {
-    "year": "2016",
-    "id": "nougat",
-    "href": "/years/2016/sites/nougat/index.html",
-    "key": "itt16-nougat-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Update leftover"
-  },
-  {
-    "year": "2016",
-    "id": "allo",
-    "href": "/years/2016/sites/allo/index.html",
-    "key": "itt16-allo-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Chat leftover"
-  },
-  {
-    "year": "2016",
-    "id": "duo",
-    "href": "/years/2016/sites/duo/index.html",
-    "key": "itt16-duo-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Call leftover"
-  },
-  {
-    "year": "2016",
-    "id": "googlehome",
-    "href": "/years/2016/sites/googlehome/index.html",
-    "key": "itt16-googlehome-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Hey leftover"
-  },
-  {
-    "year": "2016",
-    "id": "oculusrift",
-    "href": "/years/2016/sites/oculusrift/index.html",
-    "key": "itt16-oculusrift-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Strap leftover"
-  },
-  {
-    "year": "2016",
-    "id": "psvr",
-    "href": "/years/2016/sites/psvr/index.html",
-    "key": "itt16-psvr-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Strap leftover"
-  },
-  {
-    "year": "2016",
-    "id": "overwatch",
-    "href": "/years/2016/sites/overwatch/index.html",
-    "key": "itt16-overwatch-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Queue leftover"
-  },
-  {
-    "year": "2016",
-    "id": "doom2016",
-    "href": "/years/2016/sites/doom2016/index.html",
-    "key": "itt16-doom2016-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Rip leftover"
-  },
-  {
-    "year": "2016",
-    "id": "uncharted4",
-    "href": "/years/2016/sites/uncharted4/index.html",
-    "key": "itt16-uncharted4-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Climb leftover"
-  },
-  {
-    "year": "2016",
-    "id": "nomanssky",
-    "href": "/years/2016/sites/nomanssky/index.html",
-    "key": "itt16-nomanssky-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Warp leftover"
-  },
-  {
-    "year": "2016",
-    "id": "clashroyale",
-    "href": "/years/2016/sites/clashroyale/index.html",
-    "key": "itt16-clashroyale-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Battle leftover"
-  },
-  {
-    "year": "2016",
-    "id": "panamapapers",
-    "href": "/years/2016/sites/panamapapers/index.html",
-    "key": "itt16-panamapapers-lx",
-    "star": "itt16-ig-stories",
-    "verb": "Leak leftover"
-  },
-  {
-    "year": "2018",
-    "id": "gplusgone",
-    "href": "/years/2018/sites/gplusgone/index.html",
-    "key": "itt18-gplusgone-lx",
-    "star": "itt18-gdpr",
-    "verb": "Sunset leftover"
-  },
-  {
-    "year": "2018",
-    "id": "androidpie",
-    "href": "/years/2018/sites/androidpie/index.html",
-    "key": "itt18-androidpie-lx",
-    "star": "itt18-gdpr",
-    "verb": "Gesture leftover"
-  },
-  {
-    "year": "2018",
-    "id": "ios12",
-    "href": "/years/2018/sites/ios12/index.html",
-    "key": "itt18-ios12-lx",
-    "star": "itt18-gdpr",
-    "verb": "Screen Time leftover"
-  },
-  {
-    "year": "2020",
-    "id": "clubhouse",
-    "href": "/years/2020/sites/clubhouse/index.html",
-    "key": "itt20-clubhouse-lx",
-    "star": "itt20-zoom",
-    "verb": "Raise hand leftover"
-  },
-  {
-    "year": "2021",
-    "id": "nft",
-    "href": "/years/2021/sites/nft/index.html",
-    "key": "itt21-nft-lx",
-    "star": "itt21-att",
-    "verb": "Mint leftover"
-  },
-  {
-    "year": "2021",
-    "id": "coinbaseipo",
-    "href": "/years/2021/sites/coinbaseipo/index.html",
-    "key": "itt21-coinbaseipo-lx",
-    "star": "itt21-att",
-    "verb": "Direct list leftover"
-  },
-  {
-    "year": "2021",
-    "id": "epicapple",
-    "href": "/years/2021/sites/epicapple/index.html",
-    "key": "itt21-epicapple-lx",
-    "star": "itt21-att",
-    "verb": "Sideload leftover"
-  },
-  {
     "year": "2022",
     "id": "temu",
     "href": "/years/2022/sites/temu/index.html",
     "key": "itt22-temu-lx",
     "star": "itt22-chatgpt",
     "verb": "Shop leftover"
-  },
-  {
-    "year": "2022",
-    "id": "stablediff",
-    "href": "/years/2022/sites/stablediff/index.html",
-    "key": "itt22-stablediff-lx",
-    "star": "itt22-chatgpt",
-    "verb": "Prompt leftover"
-  },
-  {
-    "year": "2022",
-    "id": "midjourney",
-    "href": "/years/2022/sites/midjourney/index.html",
-    "key": "itt22-midjourney-lx",
-    "star": "itt22-chatgpt",
-    "verb": "Prompt leftover"
-  },
-  {
-    "year": "2022",
-    "id": "dalle2",
-    "href": "/years/2022/sites/dalle2/index.html",
-    "key": "itt22-dalle2-lx",
-    "star": "itt22-chatgpt",
-    "verb": "Prompt leftover"
-  },
-  {
-    "year": "2022",
-    "id": "ios16",
-    "href": "/years/2022/sites/ios16/index.html",
-    "key": "itt22-ios16-lx",
-    "star": "itt22-chatgpt",
-    "verb": "Lock leftover"
-  },
-  {
-    "year": "2022",
-    "id": "m2",
-    "href": "/years/2022/sites/m2/index.html",
-    "key": "itt22-m2-lx",
-    "star": "itt22-chatgpt",
-    "verb": "Chip leftover"
   }
 ]

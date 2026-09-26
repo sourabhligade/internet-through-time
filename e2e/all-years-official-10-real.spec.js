@@ -23,7 +23,7 @@ function loadTrails() {
   while ((m = yearRe.exec(src))) starts.push({ year: m[1], at: m.index + m[0].length });
   for (let i = 0; i < starts.length; i++) {
     const year = starts[i].year;
-    if (year === "2025") continue;
+    if (year === "2009" || year === "2025") continue;
     if (!fs.existsSync(path.join(ROOT, "years", year, "index.html"))) continue;
     const end = i + 1 < starts.length ? starts[i + 1].at : src.length;
     const block = src.slice(starts[i].at, end);
@@ -31,9 +31,11 @@ function loadTrails() {
       /\{[^}]*"n":\s*(\d+)[^}]*"name":\s*"([^"]*)"[^}]*"href":\s*"([^"]*)"[^}]*"whenKey":\s*"([^"]*)"/g;
     let r;
     while ((r = rowRe.exec(block))) {
+      const n = parseInt(r[1], 10);
+      if (n < 1 || n > 10) continue;
       dests.push({
         year,
-        n: parseInt(r[1], 10),
+        n: n,
         name: r[2],
         href: r[3],
         whenKey: r[4],
@@ -56,7 +58,7 @@ const DESTS = loadTrails().filter((d) => {
 const STAR = {
   "itt94-csotd": {
     incomplete: async (page) => {
-      await page.locator("form[data-csotd-gb] input[type='submit']").click();
+      await page.locator("form[data-csotd-gb] [data-official-verb]").click();
     },
     complete: async (page) => {
       await page.evaluate(() => {
@@ -64,7 +66,7 @@ const STAR = {
       });
       await page.fill("[name='gbname']", "Glenn residual");
       await page.fill("[name='gbnote']", "Modem worthy.");
-      await page.locator("form[data-csotd-gb] input[type='submit']").click();
+      await page.locator("form[data-csotd-gb] [data-official-verb]").click();
     },
   },
   "itt95-ssl-checkout": {
@@ -288,15 +290,6 @@ const STAR = {
     complete: async (page) => {
       await page.locator("[data-faceid-look]").click();
       await page.locator("[data-faceid-unlock]").click();
-    },
-  },
-  "itt18-gdpr": {
-    incomplete: async (page) => {
-      await page.locator("[data-gdpr-accept-all]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-gdpr-manage]").click();
-      await page.locator("[data-gdpr-save]").click();
     },
   },
   "itt19-disneyplus": {
@@ -730,7 +723,8 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(24 * 10);
+    // 2019–2021 are React doors. Their official saves are in the year mvp specs.
+    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(21 * 10);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);
   });

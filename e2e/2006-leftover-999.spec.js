@@ -22,7 +22,7 @@ const FLOWS = [
   { path: "/years/2006/sites/gmail/invite.html", key: "itt06-gmail-invite", title: "gmail-invite leftover" },
   { path: "/years/2006/sites/flickr/index.html", key: "itt06-flickr", title: "flickr leftover" },
   { path: "/years/2006/sites/skype/index.html", key: "itt06-skype-lx", title: "skype leftover" },
-  { path: "/years/2006/sites/delicious/index.html", key: "itt06-deli-lx", title: "delicious leftover" },
+  { path: "/years/2006/sites/delicious/index.html", key: "itt06-delicious", title: "delicious leftover" },
   { path: "/years/2006/sites/blogger/index.html", key: "itt06-blogger-lx", title: "blogger leftover" },
   { path: "/years/2006/sites/wordpress/index.html", key: "itt06-wp-lx", title: "wordpress leftover" },
   { path: "/years/2006/sites/cnn/index.html", key: "itt06-cnn-lx", title: "cnn leftover" },
@@ -100,11 +100,11 @@ async function completeLo(page, destPath, key) {
 }
 
 test.describe("2006 leftover 9+9+9", () => {
-  test("home leftover strips are 9+9+9 dests from the bible", async ({ page }) => {
+  test("home has no leftover-3× strips", async ({ page }) => {
     await page.goto("/years/2006/pages/home.html");
-    await expect(page.locator('nav[data-itt-pop3x="2006"] a')).toHaveCount(9);
-    await expect(page.locator('[data-itt-pop-more="2006"] a')).toHaveCount(9);
-    await expect(page.locator('[data-itt-pop-3x3="2006"] a')).toHaveCount(9);
+    await expect(page.locator('nav[data-itt-pop3x="2006"] a')).toHaveCount(0);
+    await expect(page.locator('[data-itt-pop-more="2006"] a')).toHaveCount(0);
+    await expect(page.locator('[data-itt-pop-3x3="2006"] a')).toHaveCount(0);
     await expect(page.locator("body")).toContainText("2006 honesty");
     await expect(page.locator("body")).toContainText("Twttr");
     await expect(page.locator("body")).not.toContainText("2005 honesty");

@@ -375,8 +375,13 @@ def main() -> None:
     matrix = []
     extra: dict[str, set[str]] = {}
     lock_years = {"2007", "2010", "2011", "2012", "2014", "2021", "2022"}
+    caps = {2007: 46, 2010: 44, 2011: 62, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2021: 30, 2022: 38}
     for year, rows in DESTS.items():
+        if year == 2018:
+            continue
         existing = disk_slugs(year)
+        added_year = 0
+        cap = caps.get(year)
         unique3 = pop_ids(str(year))
         seen: set[str] = set()
         for slug, product, verb, why, cite in rows:
@@ -389,6 +394,9 @@ def main() -> None:
                 continue
             if slug in unique3:
                 collisions.append((year, slug, "leftover-3x-unique"))
+                continue
+            if cap is not None and len(existing) + added_year >= cap:
+                collisions.append((year, slug, "cap"))
                 continue
             star_key, _trap = STARS[year]
             row = {
@@ -412,6 +420,7 @@ def main() -> None:
                 encoding="utf-8",
             )
             wrote.append((year, slug))
+            added_year += 1
             matrix.append(row)
         extra.setdefault(str(year), set())
 

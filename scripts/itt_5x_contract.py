@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Single 5× leftover contract — plaques vs native gold dests.
+"""Single 5× leftover contract.
 
-Used by the static gate and by strip-official-5x-plaques.py so those two
-scripts cannot disagree. 5x-live specs that assert data-5x-save count 0
-are the gold list; every other 5x-recheck.matrix dest must keep a plaque.
+2008 F1–F5 keep a 5× plaque. Every other room stays clear.
+Famous-game cabinets are still required on the years in FAMOUS_YEARS.
 """
 from __future__ import annotations
 
@@ -46,6 +45,11 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (2008, "sites/android/index.html"),
         (2008, "sites/hulu/index.html"),
         (2008, "sites/dropbox/index.html"),
+        (2009, "sites/farmville/index.html"),
+        (2009, "sites/bing/index.html"),
+        (2009, "sites/iphone/index.html"),
+        (2009, "sites/foursquare/index.html"),
+        (2009, "sites/windows7/index.html"),
         (2012, "sites/pinterest/index.html"),
         (2012, "sites/facebook/ipo.html"),
         (2012, "sites/facebook/index.html"),
@@ -62,7 +66,7 @@ POP_PANEL_2020 = ()
 FAMOUS_YEARS = [
     y
     for y in list(range(1994, 2020))
-    if y not in {2001, 2002, 2003, 2007, 2009, 2011, 2013, 2018}
+    if y not in {2001, 2002, 2003, 2007, 2009, 2011, 2013, 2017, 2018, 2019}
     and y not in WIPED_YEARS
     and y not in BOARDED_YEARS
 ]
@@ -100,15 +104,8 @@ _OFFICIAL_ROOMS = official_trail_rooms()
 
 
 def plaque_required(year: int, room: str, html: str = "") -> bool:
-    if html and "data-official-key" in html:
-        return False
-    if room in _OFFICIAL_ROOMS.get(year, set()):
-        return False
-    if (year, room) in ALLOW_PLAQUE:
-        return True
-    if year in NO_PLAQUE_YEARS:
-        return False
-    return (year, room) not in NO_PLAQUE
+    """2008 and 2009 F1–F5 keep a 5× plaque. Other rooms, including the unbuilt 2012 set, stay clear."""
+    return year in (2008, 2009) and (year, room) in ALLOW_PLAQUE
 
 
 def dest_html(year: int, room: str) -> Path:

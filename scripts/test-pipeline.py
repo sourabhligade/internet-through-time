@@ -140,11 +140,12 @@ CI_E2E_ALLOWLIST = (
     "e2e/one-thing-per-year.spec.js",
     "e2e/all-years-official-10-real.spec.js",
     "e2e/leftover-3x-unique.spec.js",
+    "e2e/leftover-2x-unique-links.spec.js",
+    "e2e/leftover-3x-unique-links.spec.js",
     "e2e/official-leftover-2x.spec.js",
     "e2e/lean-triple-leftover.spec.js",
     "e2e/year-true-packs.spec.js",
     "e2e/2016-2018-3x-detail.spec.js",
-    "e2e/2018-flows.spec.js",
     "e2e/2020-mvp.spec.js",
     "e2e/2021-mvp.spec.js",
     "e2e/2022-mvp.spec.js",
@@ -209,15 +210,18 @@ def test_sitemap_ship_years() -> None:
         if f"/years/{ys}/" in sm:
             fail("sitemap-years", f"{'boarded' if ys in _BOARDED else 'wiped'} {ys} still listed")
             return
+    react_doors = {"2017", "2019", "2020", "2021"}
     for ys in SHIP_YEARS:
+        if ys in react_doors:
+            if f"/app/index.html#/year/{ys}" not in sm:
+                fail("sitemap-years", f"missing React door /app/index.html#/year/{ys}")
+                return
+            continue
         if f"/years/{ys}/" not in sm:
             fail("sitemap-years", f"missing /years/{ys}/")
             return
     if "/years/2004/pages/home.html" not in sm:
         fail("sitemap-years", "missing 2004 Starting Point")
-        return
-    if "/years/2017/pages/home.html" not in sm:
-        fail("sitemap-years", "missing 2017 Starting Point")
         return
     ok("sitemap-years")
 

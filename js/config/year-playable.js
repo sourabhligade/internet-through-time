@@ -283,18 +283,6 @@
       famous: "Storm Circle",
       accent: "#5e35b1"
     },
-    "2018": {
-      id: "consentdash",
-      title: "Consent Dash",
-      href: "game.html",
-      key: "itt18-game-consentdash",
-      inspire: "GDPR-class Manage path — Accept All is the trap; no CMP art",
-      blurb: "Click Manage. Incomplete never writes.",
-      why: "The banner is the door. The star is still GDPR.",
-      era: "Accept All is highlighted. Manage is the real click.",
-      famous: "Consent Dash",
-      accent: "#1565c0"
-    },
     
     "2007": {
       id: "safariq",

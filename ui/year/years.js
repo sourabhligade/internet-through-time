@@ -104,8 +104,8 @@
   "1995": {
     "title": "Netscape Navigator 2.0 — 1995",
     "css": [
-      "win95-netscape.css"
-    ],
+      "win95-netscape.css",
+      "period-1995.css"],
     "bodyClass": "",
     "boot": "browser-1995.js",
     "dir": [
@@ -188,8 +188,8 @@
   "1996": {
     "title": "Netscape Navigator 3.0 — 1996",
     "css": [
-      "win95-netscape.css"
-    ],
+      "win95-netscape.css",
+      "period-1996.css"],
     "bodyClass": "",
     "boot": "browser-1996.js",
     "dir": [
@@ -281,8 +281,8 @@
     "title": "Internet Explorer 4.0 — 1997",
     "css": [
       "win95-netscape.css",
-      "ie4-overrides.css"
-    ],
+      "ie4-overrides.css",
+      "period-1997.css"],
     "bodyClass": "",
     "boot": "browser-1997.js",
     "dir": [
@@ -358,8 +358,8 @@
     "title": "Internet Explorer 4.0 — 1998",
     "css": [
       "win95-netscape.css",
-      "ie4-overrides.css"
-    ],
+      "ie4-overrides.css",
+      "period-1998.css"],
     "bodyClass": "year-1998 os-win98 browser-ie4",
     "boot": "browser-1998.js",
     "dir": [
@@ -431,8 +431,8 @@
     "title": "Internet Explorer 5.0 — 1999",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-1999.css"],
     "bodyClass": "year-1999 os-win98 browser-ie5",
     "boot": "browser-1999.js",
     "dir": [
@@ -508,8 +508,8 @@
     "title": "Internet Explorer 5.5 — 2000",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-2000.css"],
     "bodyClass": "year-2000 os-win98 browser-ie5",
     "boot": "browser-2000.js",
     "dir": [
@@ -579,7 +579,7 @@
   },
   "2001": {
     "title": "Internet Explorer 6.0 — 2001",
-    "css": ["win95-netscape.css", "ie5-overrides.css"],
+    "css": ["win95-netscape.css", "ie5-overrides.css", "period-2001.css"],
     "bodyClass": "year-2001 os-winxp browser-ie6",
     "boot": "browser-2001.js",
             "dir": [
@@ -620,7 +620,7 @@
   },
   "2002": {
     "title": "Internet Explorer 6.0 — 2002",
-    "css": ["win95-netscape.css", "ie5-overrides.css"],
+    "css": ["win95-netscape.css", "ie5-overrides.css", "period-2002.css"],
     "bodyClass": "year-2002 os-winxp browser-ie6",
     "boot": "browser-2002.js",
             "dir": [
@@ -661,7 +661,7 @@
   },
   "2003": {
     "title": "Internet Explorer 6.0 — 2003",
-    "css": ["win95-netscape.css", "ie5-overrides.css"],
+    "css": ["win95-netscape.css", "ie5-overrides.css", "period-2003.css"],
     "bodyClass": "year-2003 os-winxp browser-ie6",
     "boot": "browser-2003.js",
     "dir": [
@@ -704,8 +704,8 @@
     "title": "Internet Explorer 6.0 — 2004",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-2004.css"],
     "bodyClass": "year-2004 os-winxp browser-ie6",
     "boot": "browser-2004.js",
     "dir": [
@@ -789,8 +789,8 @@
     "title": "Internet Explorer 6.0 — 2005",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-2005.css"],
     "bodyClass": "year-2005 os-winxp browser-ie6",
     "boot": "browser-2005.js",
     "dir": [
@@ -832,8 +832,8 @@
     "title": "Internet Explorer 6.0 — 2006",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-2006.css"],
     "bodyClass": "year-2006 os-winxp browser-ie6",
     "boot": "browser-2006.js",
     "dir": [
@@ -872,8 +872,8 @@
     "title": "Internet Explorer 6.0 — 2007",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-2007.css"],
     "bodyClass": "year-2007 os-winxp browser-ie6",
     "boot": "browser-2007.js",
     "dir": [
@@ -911,7 +911,8 @@
     "title": "Internet Explorer 7.0 — 2008",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
+      "ie5-overrides.css",
+      "period-2008.css"
     ],
     "bodyClass": "year-2008 os-winxp browser-ie7",
     "boot": "browser-2008.js",
@@ -980,8 +981,8 @@
     "title": "Internet Explorer 8.0 — 2009",
     "css": [
       "win95-netscape.css",
-      "ie5-overrides.css"
-    ],
+      "ie5-overrides.css",
+      "period-2009.css"],
     "bodyClass": "year-2009 os-winxp browser-ie8",
     "boot": "browser-2009.js",
     "dir": [
@@ -1045,8 +1046,8 @@
   "title": "Win7 · IE 8 residual — 2010",
   "css": [
     "win95-netscape.css",
-    "ie5-overrides.css"
-  ],
+    "ie5-overrides.css",
+      "period-2010.css"],
   "bodyClass": "year-2010 os-win7 browser-ie8",
   "boot": "browser-2010.js",
   "dir": [
@@ -1110,8 +1111,8 @@
   "title": "Internet Explorer 9.0 — 2011",
   "css": [
     "win95-netscape.css",
-    "ie5-overrides.css"
-  ],
+    "ie5-overrides.css",
+      "period-2011.css"],
   "bodyClass": "year-2011 os-win7 browser-ie9",
   "boot": "browser-2011.js",
   "dir": [
@@ -1175,8 +1176,8 @@
   "title": "Internet Explorer 9.0 — 2012",
   "css": [
     "win95-netscape.css",
-    "ie5-overrides.css"
-  ],
+    "ie5-overrides.css",
+      "period-2012.css"],
   "bodyClass": "year-2012 os-win7 browser-ie9",
   "boot": "browser-2012.js",
   "dir": [
@@ -1240,8 +1241,8 @@
   "title": "Win7 residual — 2013",
   "css": [
     "win95-netscape.css",
-    "ie5-overrides.css"
-  ],
+    "ie5-overrides.css",
+      "period-2013.css"],
   "bodyClass": "year-2013 os-win7 browser-ie9",
   "boot": "browser-2013.js",
   "dir": [
@@ -1301,8 +1302,8 @@
   "title": "Internet Explorer residual — 2014",
   "css": [
     "win95-netscape.css",
-    "ie5-overrides.css"
-  ],
+    "ie5-overrides.css",
+      "period-2014.css"],
   "bodyClass": "year-2014 os-win7 browser-ie9",
   "boot": "browser-2014.js",
   "dir": [
@@ -1358,8 +1359,8 @@
   "title": "Chrome habit — 2015",
   "css": [
     "win95-netscape.css",
-    "chrome-habit.css"
-  ],
+    "chrome-habit.css",
+      "period-2015.css"],
   "bodyClass": "year-2015 os-win7 browser-chrome-habit",
   "boot": "browser-2015.js",
   "dir": [
@@ -1415,8 +1416,8 @@
   "title": "Chrome habit — 2016",
   "css": [
     "win95-netscape.css",
-    "chrome-habit.css"
-  ],
+    "chrome-habit.css",
+      "period-2016.css"],
   "bodyClass": "year-2016 os-win10 browser-chrome-habit",
   "boot": "browser-2016.js",
   "dir": [
@@ -1472,8 +1473,8 @@
   "title": "Chrome habit — 2017",
   "css": [
     "win95-netscape.css",
-    "chrome-habit.css"
-  ],
+    "chrome-habit.css",
+      "period-2017.css"],
   "bodyClass": "year-2017 os-win10 browser-chrome-habit",
   "boot": "browser-2017.js",
   "dir": [
@@ -1513,64 +1514,6 @@
   "connectBtn": "Connect (always-on broadband)",
   "skipBtn": "Skip connect",
   "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2017 thesis: Face ID · free storm · tweets get twice as long. iPhone X / Face ID · Fortnite leftover · Twitter 280 · Teams GA.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
-  "2018": {
-  "title": "Chrome habit — 2018",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-    "period-2018.css"
-  ],
-  "bodyClass": "year-2018 os-win10 browser-chrome-habit",
-  "boot": "browser-2018.js",
-  "dir": [
-    {
-      "go": "pages/home.html",
-      "label": "Start"
-    },
-    {
-      "go": "sites/gdpr/index.html",
-      "label": "GDPR"
-    },
-    {
-      "go": "sites/tiktok/fyp.html",
-      "label": "TikTok"
-    },
-    {
-      "go": "sites/trust/index.html",
-      "label": "Hearing"
-    },
-    {
-      "go": "sites/instagram/igtv.html",
-      "label": "IGTV"
-    },
-    {
-      "go": "pages/about.html",
-      "label": "About"
-    }
-  ],
-  "chrome": "2007",
-  "toolbar": "chrome22",
-  "family": "chrome",
-  "location": "http://home.microsoft.com/intl/web2018/",
-  "prefHome": "http://home.microsoft.com/intl/web2018/",
-  "yearLabel": "2018 · Windows 10 mass · Chrome habit · EdgeHTML residual",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2018 thesis: the banner is the door · a quiz becomes a hearing · the loops change their name. GDPR Manage · TikTok For You · hearing Apr 10 · IGTV.",
   "openLoc": "Open Location:",
   "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
   "startBanner": "Windows<b>10</b>",

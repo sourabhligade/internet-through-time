@@ -18,7 +18,7 @@ html[data-official-key] [data-itt-pop-more],
 html[data-official-key] [data-itt-pop-3x3],
 html[data-official-key] [data-itt-pop3x],
 html[data-official-key] [data-itt-lo3x],
-html[data-official-key] [data-5x-loop],
+html[data-official-key] [data-5x-loop]:not([data-5x-live]),
 html[data-official-key] [data-4x-panel],
 html[data-official-key] .itt-pop3,
 html[data-official-key] .itt-pop3x-flow:not([data-itt-dest-true]),
@@ -55,6 +55,9 @@ html:not([data-official-key]):not([data-itt-start]) [data-itt-lo3x][data-pop-pan
 }
 
 /* Leftover dest warehouse clones still fold. Leftover-3× dest face stays (rule above). */
+html:not([data-official-key]):not([data-itt-start]) [data-lo-panel][data-itt-trail-stop] {
+  display: block;
+}
 html:not([data-official-key]):not([data-itt-start]) [data-lo-panel]:not([data-itt-dest-true]),
 html:not([data-official-key]):not([data-itt-start]) [data-itt-3x-also]:not(details),
 html:not([data-official-key]):not([data-itt-start]) .itt-3x-also:not(details),
@@ -75,7 +78,8 @@ html:not([data-official-key]):not([data-itt-start]) [data-itt-lo3x],
 html:not([data-official-key]):not([data-itt-start]) [data-itt-dest-true][data-pop-panel] {
   display: block;
 }
-[data-lo-panel][data-itt-dest-true] {
+[data-lo-panel][data-itt-dest-true],
+[data-lo-panel][data-itt-trail-stop] {
   display: block;
 }
 

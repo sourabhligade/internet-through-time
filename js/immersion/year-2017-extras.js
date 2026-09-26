@@ -100,8 +100,12 @@
         feedback("Pick a face class first. Empty never writes.", st, { error: true });
         return;
       }
+      if (countChecked(doc, "[data-animoji-req]") < 2) {
+        feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
+        return;
+      }
       saveJSON(key("animoji"), blob({ leftover: true, unique: true, face: picked }));
-      feedback("Sent (theater) · leftover · itt17-animoji", st);
+      feedback("Sent leftover · itt17-animoji", st);
       reveal(doc);
     });
   }

@@ -33,7 +33,7 @@
   function href(path) {
     if (!path) return "#";
     if (/^https?:/i.test(path) || path.charAt(0) === "#") return path;
-    if (path.indexOf("/years/") === 0) return path;
+    if (path.indexOf("/years/") === 0 || path.indexOf("/app/") === 0) return path;
     if (path.indexOf("years/") === 0) return "/" + path;
     if (path.indexOf("../") === 0) return path;
     return "../" + String(path).replace(/^\//, "");
@@ -907,6 +907,10 @@
     bind();
     var hash = (location.hash || "").replace(/^#year-/, "");
     if (/^\d{4}$/.test(hash)) selectYear(hash);
+    window.addEventListener("hashchange", function () {
+      var next = (location.hash || "").replace(/^#year-/, "");
+      if (/^\d{4}$/.test(next)) selectYear(next);
+    });
     loadExtras();
   }
 

@@ -24,38 +24,34 @@ LEAN = {
 
 EXTRA_KEEP = {
     "2007": {
-        "amazonmp3", "androidann", "appletv",
-        "friendfeed", "funnyordie", "gears", "hackernews", "icanhas", "iplayer",
-        "ipodtouch", "justintv", "netflix", "pownce", "safari3"
+        "amazonmp3", "androidann", "appletv", "friendfeed", "funnyordie", "gears",
+        "hackernews", "icanhas", "iplayer", "ipodtouch", "justintv", "netflix",
+        "pownce", "safari3"
     },
     "2010": {
         "angry", "chromewebstore", "cityville", "flipboard", "googlebuzz", "hulu",
         "ibooks", "kinect", "minecraft", "path"
     },
     "2011": {
-        "chromebook", "codecademy", "googlewallet", "gowalla",
-        "grouponipo", "honeycomb", "ics", "imessage", "ios5", "line", "nintendo3ds",
-        "nytpaywall", "psnhack", "skypebuy", "skyrim", "snapchat", "stripe",
-        "temple", "wechat", "zyngaipo"
+        "chromebook", "codecademy", "googlewallet", "gowalla", "grouponipo",
+        "honeycomb", "ics", "imessage", "ios5", "line", "nintendo3ds", "nytpaywall",
+        "psnhack", "skypebuy", "skyrim", "snapchat", "stripe", "temple", "wechat",
+        "zyngaipo"
     },
     "2012": {
-        "chrome", "coinbase", "coursera", "duolingo", "edx", "googleplay",
-        "ios6", "jellybean", "kindlefirehd", "nexus7", "soundcloud", "tinder",
-        "twitter", "udacity"
+        "chrome", "coinbase", "coursera", "duolingo", "edx", "googleplay", "ios6",
+        "jellybean", "kindlefirehd", "nexus7", "soundcloud", "tinder", "twitter",
+        "udacity"
     },
     "2014": {
-        "alibabaipo", "applepay", "echo", "flappybird", "game2048",
-        "inbox", "ios8", "oculusfb"
+        "alibabaipo", "applepay", "echo", "flappybird", "game2048", "inbox", "ios8",
+        "oculusfb"
     },
     "2019": {
-        "applecard", "cnil", "ftc", "github", "hulu", "ios13", "ipados", "linkedin",
-        "netflix", "pinterest", "reddit", "slack", "snapchat", "spotify", "switchlite",
-        "twitch", "uber", "whatsapp", "wikipedia"
+        "applecard", "ios13", "ipados", "switchlite"
     },
     "2020": {
-        "airbnb", "chrome", "clubhouse", "coinbase", "edge", "figma", "github",
-        "hbomax", "hulu", "iphone", "linkedin", "notion", "peacock", "robinhood",
-        "spotify", "twitch", "twitter", "uber", "whatsapp", "windows10"
+        "clubhouse", "hbomax", "peacock"
     },
     "2021": {
         "coinbaseipo", "epicapple", "nft"

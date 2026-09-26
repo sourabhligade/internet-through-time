@@ -382,4 +382,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit("leftover-3× unique links were removed. This script does not write them back.")

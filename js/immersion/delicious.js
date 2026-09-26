@@ -151,6 +151,27 @@
           mine: true
         });
         save(list.slice(0, 40));
+        /* 2005 n=18 and 2006 n=18 are leftover copies. 2004 stays on official-verb. */
+        try {
+          var yLo = year();
+          if ((yLo === "2005" || yLo === "2006") && url && url !== "http://") {
+            var loKey = "itt" + yLo.slice(2) + "-delicious";
+            if (!localStorage.getItem(loKey)) {
+              localStorage.setItem(
+                loKey,
+                JSON.stringify({
+                  multiStep: true,
+                  real: true,
+                  leftover: true,
+                  year: yLo,
+                  q: String(title || "").slice(0, 80),
+                  ts: Date.now()
+                })
+              );
+            }
+            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+          }
+        } catch (eLo) { /* */ }
         var st = doc.querySelector("[data-delicious-status]");
         if (st) {
           st.textContent = "Posted to del.icio.us (this browser) — " + title;

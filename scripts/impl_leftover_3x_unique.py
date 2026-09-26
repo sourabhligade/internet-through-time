@@ -540,4 +540,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit("leftover-3× unique flows were removed. This script does not write them back.")

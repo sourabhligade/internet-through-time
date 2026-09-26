@@ -3,6 +3,7 @@
   var ITT = global.ITT || (global.ITT = {});
   ITT.configs = ITT.configs || {};
   var rooms = [
+    "pages/checklist.html",
     "pages/about.html",
     "pages/error/404.html",
     "pages/error/unreachable.html",

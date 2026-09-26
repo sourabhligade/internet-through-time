@@ -946,6 +946,49 @@
       imageRevealTimers.push(window.setTimeout(revealNext, PERF.imageStartMs));
     }
 
+    /* Same-path reload still swaps about:blank so the room is fresh.
+       boot.js can finish after the button is already on screen. A click in
+       that gap is held and replayed once the save handler is bound. */
+    function armFreshSave(doc) {
+      if (!doc || doc.__ittFreshSave) return;
+      doc.__ittFreshSave = true;
+      var pairs = [
+        ["[data-lo-save]", "data-lo-bound"],
+        ["[data-itt-real-save]", "data-itt-real-bound"],
+        ["[data-official-verb]", "data-official-verb-bound"]
+      ];
+      doc.addEventListener("click", function (ev) {
+        var t = ev.target;
+        if (!t || !t.closest) return;
+        var btn = null;
+        var attr = "";
+        var i;
+        for (i = 0; i < pairs.length; i++) {
+          btn = t.closest(pairs[i][0]);
+          if (btn) {
+            attr = pairs[i][1];
+            break;
+          }
+        }
+        if (!btn || !attr) return;
+        if (btn.getAttribute(attr) === "1") return;
+        ev.preventDefault();
+        ev.stopImmediatePropagation();
+        if (btn.getAttribute("data-itt-save-wait") === "1") return;
+        btn.setAttribute("data-itt-save-wait", "1");
+        var tries = 0;
+        var win = doc.defaultView || window;
+        var timer = win.setInterval(function () {
+          tries += 1;
+          if (btn.getAttribute(attr) === "1" || tries > 40) {
+            win.clearInterval(timer);
+            btn.removeAttribute("data-itt-save-wait");
+            if (btn.getAttribute(attr) === "1") btn.click();
+          }
+        }, 50);
+      }, true);
+    }
+
     iframe.addEventListener("load", function () {
       if (ignoreIframeLoad) return;
       var path = pathFromIframe();
@@ -966,6 +1009,7 @@
 
       try {
         var doc = iframe.contentDocument || iframe.contentWindow.document;
+        armFreshSave(doc);
         if (path.indexOf("pages/error/") === 0) {
           var urlEl = doc.getElementById("err-url");
           if (urlEl) {

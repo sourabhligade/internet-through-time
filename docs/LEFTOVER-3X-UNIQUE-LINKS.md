@@ -1,7 +1,9 @@
 # Leftover-3× unique dest links — 2× map
 
+**Removed.** Leftover-3× unique links are gone. No rails, no 107-dest set, no 2018=3 or 2021=5 cap. The text below is the old map.
+
 **Date:** 2026-09-22  
-**Status:** Implemented. Leftover-3× unique dest **links** on leftover dest leftover-3× unique dest-true dest HTML. Official dest leftover-3× unique dest links first paint **0**. Leftover-3× unique dest-true dests stay **107**. The 2014 / 2020 / 2021 / 2022 caps were filled 2026-09-22 with official dest **hrefs** already on disk (T6). No new dest folders. Deep-research-2 **partial** (Hosting.com / Wikipedia category membership unverified). Leftover dest KEEP dest-disjoint cite walks 2007–2014 and 2015–2022 **KEEP**. Leftover dest DROP dests stay gone and must not be restored.  
+**Status:** Removed. Was: leftover-3× unique dest links on leftover dest HTML. Official dest first paint 0. The old set was 107. The 2014 / 2020 / 2021 / 2022 caps were filled 2026-09-22 with official dest **hrefs** already on disk (T6). No new dest folders. Deep-research-2 **partial** (Hosting.com / Wikipedia category membership unverified). Leftover dest KEEP dest-disjoint cite walks 2007–2014 and 2015–2022 **KEEP**. Leftover dest DROP dests stay gone and must not be restored.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true dests:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) · `e2e/leftover-3x-unique.matrix.json`.  
 **Leftover-2× unique dest links (already implemented):** [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md).  

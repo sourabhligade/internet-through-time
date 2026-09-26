@@ -134,7 +134,9 @@ Star trap: Watch · Win10 · IG Stories · Snap Discover · Periscope · Heartbl
 
 Star trap: TikTok brand · Reels · Meta · Chromium Edge · Face ID / iPhone X · AirPods Pro · Switch as a 2016 buy.
 
-### 2018 (13)
+### 2018 (13) — research record, tree wiped
+
+Live disk has no `years/2018`. Do not restore this list.
 
 `chrome` · `fortnite` · `gdpr` · `github` · `homepod` · `instagram` · `playable` · `reddit` · `spectre` · `tiktok` · `trust` · `wikipedia` · `youtube`
 
@@ -476,9 +478,9 @@ IG Stories stays the chip. Douyin 2016 leftover dest, not a TikTok 2018 leftover
 | `applepay` | Tap leftover | Reels | https://en.wikipedia.org/wiki/Apple_Pay |
 | `panamapapers` | Leak leftover | Reels | https://en.wikipedia.org/wiki/Panama_Papers |
 
-### 2018
+### 2018 — research record, tree wiped
 
-GDPR Manage stays the chip. Extra dests are leftover dests, **not** leftover-3× unique (stop 3).
+GDPR Manage (`itt18-gdpr`) was the chip. Extra dests below are the research list, not folders to build. Leftover-3× unique stays stopped at 3. Do not restore `years/2018`.
 
 | Slug | Verb | Trap | Cite |
 |------|------|------|------|
@@ -585,7 +587,7 @@ Holes only. Dest folders stay **54**. No dest this pass.
 | 2013 | 54 | **54** | 54 | 0 | 9 stop | 10 |
 | 2014 | 18 | **36** | 36 | 18 | 9 stop | 10 |
 | 2016 | 32 | **64** | 64 | 32 | 9 stop | 10 |
-| 2018 | 13 | **26** | 26 | 13 | 3 stop | 10 |
+| 2018 | 13 | **0 wiped** | 26 research aim | 0 | 3 stop, not on disk | 10 research |
 | 2020 | 38 | **39** | 38 | 1 hole | 9 stop | 10 |
 | 2021 | 15 | **30** | 30 | 15 | 5 stop | 10 |
 | 2022 | 19 | **38** | 38 | 19 | 9 stop | 10 |

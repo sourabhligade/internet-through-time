@@ -330,3 +330,60 @@
     bootRevealNext(document);
   }
 })(typeof window !== "undefined" ? window : this);
+
+/* 2005 leftover Firefox. The kit already runs on every room, so this does not retarget the page loader. */
+(function (global) {
+  "use strict";
+  var ITT = global.ITT || (global.ITT = {});
+
+  function bootFx15(doc) {
+    var form = doc.querySelector("[data-fx15-download]");
+    if (!form || form.getAttribute("data-fx15-bound") === "1") return;
+    form.setAttribute("data-fx15-bound", "1");
+    form.addEventListener("submit", function (ev) {
+      if (ev && ev.preventDefault) ev.preventDefault();
+      var picked = form.querySelector('input[name="os"]:checked');
+      var st = doc.querySelector("[data-fx15-status]");
+      if (!picked) {
+        if (st) st.textContent = "Pick a system first. Empty download stores nothing.";
+        return;
+      }
+      try {
+        if (!localStorage.getItem("itt05-fx")) {
+          localStorage.setItem(
+            "itt05-fx",
+            JSON.stringify({
+              multiStep: true,
+              real: true,
+              leftover: true,
+              year: "2005",
+              os: picked.value,
+              ts: Date.now()
+            })
+          );
+        }
+      } catch (eFx) { /* */ }
+      try {
+        if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+      } catch (eN) { /* */ }
+      if (st) st.textContent = "Download started · " + picked.value;
+      setTimeout(function () {
+        try {
+          if (global.location) global.location.href = "download.html";
+        } catch (eGo) { /* */ }
+      }, 200);
+    });
+  }
+
+  function go() {
+    try {
+      bootFx15(document);
+    } catch (e) { /* */ }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", go);
+  } else {
+    go();
+  }
+})(typeof window !== "undefined" ? window : this);

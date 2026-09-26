@@ -15,4 +15,25 @@ test.describe("follow-a-site", () => {
     await expect(next).toHaveAttribute("href", /years\/1996\/\?room=/);
     await expect(next).toContainText("Yahoo");
   });
+
+  test("2016 Instagram follow next opens the 2017 React door", async ({ page }) => {
+    await page.goto("/years/2016/?room=sites/instagram/stories.html");
+    const next = page.locator("#itt-follow-next");
+    await expect(next).toBeVisible({ timeout: 15000 });
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+  });
+
+  test("2016 iPhone follow next opens the 2017 React door", async ({ page }) => {
+    await page.goto("/years/2016/?room=sites/iphone/index.html");
+    const next = page.locator("#itt-follow-next");
+    await expect(next).toBeVisible({ timeout: 15000 });
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+  });
+
+  test("2016 Facebook follow next opens the 2017 React door", async ({ page }) => {
+    await page.goto("/years/2016/?room=sites/facebook/reactions.html");
+    const next = page.locator("#itt-follow-next");
+    await expect(next).toBeVisible({ timeout: 15000 });
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+  });
 });

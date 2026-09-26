@@ -38,19 +38,24 @@
     "/years/2013/sites/vine/": { href: "", note: "[failed-final] Vine 6s · WDM year-index is not a named exhibit" },
     "/years/2014/sites/whatsapp/": { href: "", note: "[failed-final] WhatsApp Install · WDM year-index is not a named exhibit" },
     "/years/2015/sites/periscope/": { href: "", note: "[failed-final] Periscope · WDM year-index is not a named exhibit" },
-    "/years/2016/sites/instagram/": { href: "", note: "[failed-final] IG Stories · WDM year-index is not a named exhibit" },
+    "/years/2016/sites/instagram/": { href: "https://web.archive.org/web/20160804025832/http://blog.instagram.com/post/148348940287/160802-stories", note: "[failed-final] IG Stories · WDM has no Stories exhibit · dated capture is the 2 Aug 2016 blog" },
     "/years/2017/sites/iphone/": { href: "", note: "[failed-final] Face ID · WDM year-index is not a named exhibit" },
+    "/app/index.html#/year/2017": { href: "", note: "[failed-final] Face ID · WDM year-index is not a named exhibit" },
     "/years/2018/sites/gdpr/": { href: "", note: "[failed-final] GDPR Manage · WDM year-index is not a named exhibit" },
     "/years/2019/sites/disneyplus/": { href: "", note: "[failed-final] Disney+ Continue · WDM year-index is not a named exhibit" },
+    "/app/index.html#/year/2019": { href: "", note: "[failed-final] Disney+ Continue · WDM year-index is not a named exhibit" },
     "/years/2020/sites/zoom/": { href: "", note: "[failed-final] Zoom Leave · WDM year-index is not a named exhibit" },
-    "/years/2021/sites/att/": { href: "", note: "[failed-final] ATT Ask · WDM year-index is not a named exhibit" }
+    "/app/index.html#/year/2020": { href: "", note: "[failed-final] Zoom Leave · WDM year-index is not a named exhibit" },
+    "/years/2021/sites/att/": { href: "", note: "[failed-final] ATT Ask · WDM year-index is not a named exhibit" },
+    "/app/index.html#/year/2021": { href: "", note: "[failed-final] ATT Ask · WDM year-index is not a named exhibit" }
   };
 
   function paintStarCite(doc) {
     doc = doc || document;
     try {
       if (doc.querySelector("[data-itt-capture-cite]")) return;
-      var path = String((doc.defaultView && doc.defaultView.location && doc.defaultView.location.pathname) || location.pathname || "");
+      var loc = (doc.defaultView && doc.defaultView.location) || location;
+      var path = String((loc && loc.pathname) || "") + String((loc && loc.hash) || "");
       var rec = null;
       var k;
       for (k in STAR_CITE) {
@@ -453,6 +458,26 @@
     }
   }
 
+  function isCurrentTrailPanel(doc, n) {
+    if (!n || !n.querySelector || !ITT.flowTrails) return false;
+    var save = n.querySelector("[data-lo-save][data-lo-key]");
+    if (!save) return false;
+    var year = yearOf(doc);
+    var rows = ITT.flowTrails[year];
+    if (!rows || !rows.length) return false;
+    var key = keyOf(year, save.getAttribute("data-lo-key"));
+    var path = "";
+    try { path = location.pathname || ""; } catch (eP) { path = ""; }
+    var i;
+    var row;
+    for (i = 0; i < rows.length; i++) {
+      row = rows[i];
+      if (!row || row.whenKey !== key || !row.match) continue;
+      if (path.indexOf(row.match) !== -1) return true;
+    }
+    return false;
+  }
+
   function foldLeftoverRails(doc) {
     doc = doc || document;
     var destKey = "";
@@ -485,6 +510,9 @@
       if (!n || inAlsoYear(n)) continue;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
+      if (n.getAttribute && n.getAttribute("data-itt-trail-stop") === "1") continue;
+      if (n.getAttribute && n.getAttribute("data-5x-live") === "1") continue;
+      if (isCurrentTrailPanel(doc, n)) continue;
       if (isDestTrueLeftoverFace(n, destKey)) continue;
       if (
         !destKey &&
@@ -504,6 +532,9 @@
       if (!n || inAlsoYear(n) || box.contains(n)) continue;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
+      if (n.getAttribute && n.getAttribute("data-itt-trail-stop") === "1") continue;
+      if (n.getAttribute && n.getAttribute("data-5x-live") === "1") continue;
+      if (isCurrentTrailPanel(doc, n)) continue;
       if (isDestTrueLeftoverFace(n, destKey)) continue;
       if (
         !destKey &&
@@ -517,6 +548,9 @@
       moved++;
     }
     if (doc.documentElement) doc.documentElement.setAttribute("data-itt-lo-folded", "1");
+    try {
+      if (typeof ITT._revealTrailPanel === "function") ITT._revealTrailPanel(doc);
+    } catch (eR) { /* */ }
     foldImplementerDumps(doc, box, body);
     stripVisitorLeftoverWord(doc);
     return moved;

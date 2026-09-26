@@ -1,7 +1,7 @@
 # 2007 leftover-3× unique dest-true
 
 **Date:** 2026-09-19  
-**Status:** Unique leftover dests on disk. This file is the leftover-3× unique dest-true map. Not dest-farm.  
+**Status:** Leftover-3× catalogs are empty. Do not dest-farm nine unique dests. This file is the retired map.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2007-READ-FIRST.md`](2007-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
 **Template shape:** [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) · [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md).  

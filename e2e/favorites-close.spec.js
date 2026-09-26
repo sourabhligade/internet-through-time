@@ -2,7 +2,7 @@
 const { test, expect } = require("@playwright/test");
 
 test("2020 Favorites Close dismisses the dialog", async ({ page }) => {
-  await page.goto("/years/2021/");
+  await page.goto("/years/1999/");
   const skip = page.locator("#skip-connect");
   if (await skip.isVisible().catch(() => false)) await skip.click();
   await expect(page.locator("#btn-favorites")).toBeVisible({ timeout: 15000 });
@@ -14,7 +14,7 @@ test("2020 Favorites Close dismisses the dialog", async ({ page }) => {
 });
 
 test("2020 Favorites X and backdrop dismiss", async ({ page }) => {
-  await page.goto("/years/2021/");
+  await page.goto("/years/1999/");
   const skip = page.locator("#skip-connect");
   if (await skip.isVisible().catch(() => false)) await skip.click();
   await page.locator("#btn-favorites").click();

@@ -13,7 +13,6 @@ function destOnDisk(href) {
 }
 
 const WANT = {
-  2018: { first: 3, more: 0, third: 3 },
   2021: { first: 9, more: 9, third: 9 },
 };
 
@@ -67,7 +66,7 @@ test.describe("2018–2021 leftover-3× home strips", () => {
   }
 });
 
-for (const row of ROWS) {
+for (const row of ROWS.filter((row) => String(row.year) !== "2018")) {
   test.describe(`${row.year} leftover-3× ${row.kind} ${row.id}`, () => {
     test.beforeEach(() => {
       test.skip(!destOnDisk(row.href), row.year + " boarded");

@@ -4,7 +4,7 @@
 **Tree:** `museum/1994-2020-lean` (working tree dirty; lean Starting Point + leftover fold in progress)  
 **Status:** Audit report. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Out of scope:** adding `years/2022`–`years/2025`. Missing years are not leftover.
+**Out of scope:** restoring wiped 2018 and 2023–2025. 2022 is a live door. 2009 stays boarded. Leftover-3× catalogs are empty. This file is not ship law when it still describes 28 open years.
 
 This file is the full map from:
 
@@ -21,7 +21,7 @@ It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`.
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **28 years open** (1994–2008 + 2010–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2023–2025 wiped.**
+The museum is year-locked rooms in period chrome. Hub is **27 years open** (1994–2008 + 2010–2017 + 2019–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2018 wiped.** **2023–2025 wiped.**
 
 Visitor product (I/O):
 
@@ -34,7 +34,7 @@ Visitor product (I/O):
 - do not dest-farm to look complete
 - do not invent brand pixels; failed-final is honest
 
-2018 (13 dests · GDPR Manage) is the lean-door model. 2017 (222 dests) / 2019 (165) / 2021 (294) dest-farm is the anti-model.
+2018 was the lean-door research model (13 dests · GDPR Manage `itt18-gdpr`). The live tree has no `years/2018`. Do not restore it. 2017 and 2019 dense dest-farms are the anti-model.
 
 ---
 
@@ -264,7 +264,7 @@ These are year product machines, not leftover-unique maps. They stay.
 | File | Role |
 |------|------|
 | `js/config/flow-trails.js` | Official 10 (+ n=11–20 leftover dests on early years) |
-| `js/config/flow-trails-5x.js` | 5× trails |
+| `js/config/flow-trails-5x.js` | Removed. Empty stub. Do not append 5× rows. |
 | `js/config/flow-maps.js` | Flow maps |
 | `js/config/flow-maps-3x.js` | Leftover-3× maps |
 | `js/config/flow-maps-5x-atlas.js` | 5× atlas |

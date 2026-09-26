@@ -5,7 +5,7 @@
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
 **Star:** GitHub issue `itt08-github` · `sites/github/issue.html`  
-**Disk:** forest · dest folders **~598**. Forests stay dense leftover-2×. Do not dest-lock 2008.
+**Disk:** forest · dest folders **591**. Leftover-3× catalogs are empty. Do not dest-lock 2008.
 
 ---
 

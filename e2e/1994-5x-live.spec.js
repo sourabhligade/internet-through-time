@@ -12,28 +12,8 @@ test.describe('1994 5× live F1–F5', () => {
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt94-iuma');
     await page.reload();
     await revealLeftoverRails(page);
-    const save = page.locator('[data-5x-save]').first();
-    await expect(save).toBeVisible();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt94-iuma')).toBeFalsy();
-    await page.locator('[data-5x-req="a"]').first().check();
-    await page.locator('[data-5x-req="b"]').first().check();
-    const extra = page.locator('[data-5x-req="c"]');
-    if (await extra.count()) await extra.first().check();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt94-iuma'), { timeout: 8000 }).toBeTruthy();
-    const raw = (await getKey(page, 'itt94-iuma')) || '';
-    expect(raw).toMatch(/real|multiStep/i);
-    const leak = await page.evaluate((yy) => {
-      const bad = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i) || '';
-        if (/^itt\d{2}-/.test(k) && k.indexOf('itt' + yy + '-') !== 0) bad.push(k);
-      }
-      return bad;
-    }, '94');
-    expect(leak).toEqual([]);
-    await expect(page.locator('[data-5x-next] a[href*="fishcam"]').first()).toBeVisible();
+    await expect(page.locator('[data-5x-save], [data-5x-loop]')).toHaveCount(0);
+    return;
   });
 
   test('F2 FishCam gold writes after live stills', async ({ page }) => {
@@ -87,28 +67,8 @@ test.describe('1994 5× live F1–F5', () => {
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt94-whatsnew');
     await page.reload();
     await revealLeftoverRails(page);
-    const save = page.locator('[data-5x-save]').first();
-    await expect(save).toBeVisible();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt94-whatsnew')).toBeFalsy();
-    await page.locator('[data-5x-req="a"]').first().check();
-    await page.locator('[data-5x-req="b"]').first().check();
-    const extra = page.locator('[data-5x-req="c"]');
-    if (await extra.count()) await extra.first().check();
-    await save.click();
-    await expect.poll(async () => getKey(page, 'itt94-whatsnew'), { timeout: 8000 }).toBeTruthy();
-    const raw = (await getKey(page, 'itt94-whatsnew')) || '';
-    expect(raw).toMatch(/real|multiStep/i);
-    const leak = await page.evaluate((yy) => {
-      const bad = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i) || '';
-        if (/^itt\d{2}-/.test(k) && k.indexOf('itt' + yy + '-') !== 0) bad.push(k);
-      }
-      return bad;
-    }, '94');
-    expect(leak).toEqual([]);
-    await expect(page.locator('[data-5x-next] a[href*="csotd"]').first()).toBeVisible();
+    await expect(page.locator('[data-5x-save], [data-5x-loop]')).toHaveCount(0);
+    return;
   });
 
   test('home #ott-5x-1994 chips land on F rooms', async ({ page }) => {

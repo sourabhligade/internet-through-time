@@ -95,11 +95,11 @@ async function completeLo(page, destPath, year, suffix, star) {
 
 for (const y of YEARS) {
   test.describe(`${y.year} leftover 9+9+9`, () => {
-    test("home leftover strips are 9+9+9 dests", async ({ page }) => {
+    test("home has no leftover-3× strips", async ({ page }) => {
       await page.goto(`/years/${y.year}/pages/home.html`);
-      expect(await page.locator(`[data-itt-pop3x="${y.year}"] a`).count()).toBeGreaterThanOrEqual(9);
-      expect(await page.locator(`[data-itt-pop-more="${y.year}"] a`).count()).toBeGreaterThanOrEqual(9);
-      expect(await page.locator(`[data-itt-pop-3x3="${y.year}"] a`).count()).toBeGreaterThanOrEqual(9);
+      expect(await page.locator(`[data-itt-pop3x="${y.year}"] a`).count()).toBe(0);
+      expect(await page.locator(`[data-itt-pop-more="${y.year}"] a`).count()).toBe(0);
+      expect(await page.locator(`[data-itt-pop-3x3="${y.year}"] a`).count()).toBe(0);
     });
 
     for (const dest of popDests(y.year)) {

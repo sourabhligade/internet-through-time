@@ -104,13 +104,15 @@
     } catch (e) {
       path = "";
     }
-    if (/\/sites\/[^/]+\//.test(path)) {
-      if (rel.indexOf("sites/") === 0 || rel.indexOf("pages/") === 0) return "../../" + rel;
-      return rel;
-    }
-    if (path.indexOf("/pages/") !== -1) {
-      if (rel.indexOf("sites/") === 0 || rel.indexOf("pages/") === 0) return "../" + rel;
-      return rel;
+    var m = path.match(/\/years\/\d{4}\/(.+)$/);
+    var after = m ? m[1].split("?")[0].split("#")[0] : "";
+    var dir = after.replace(/[^/]*$/, "");
+    var depth = dir.split("/").filter(Boolean).length;
+    if (depth && (rel.indexOf("sites/") === 0 || rel.indexOf("pages/") === 0)) {
+      var ups = "";
+      var i;
+      for (i = 0; i < depth; i++) ups += "../";
+      return ups + rel;
     }
     return rel;
   }

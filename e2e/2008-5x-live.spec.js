@@ -36,19 +36,19 @@ test.describe('2008 5× live F1–F5', () => {
 
   test('F2 Chrome 3-check empty never writes', async ({ page }) => {
     await page.goto('/years/2008/sites/chrome/index.html');
-    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt08-chrome');
+    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt08-omni');
     await page.reload();
     const save = page.locator('[data-5x-save]').first();
     await expect(save).toBeVisible();
     await save.click();
-    await expect.poll(async () => getKey(page, 'itt08-chrome')).toBeFalsy();
+    await expect.poll(async () => getKey(page, 'itt08-omni')).toBeFalsy();
     await page.locator('[data-5x-req="a"]').first().check();
     await page.locator('[data-5x-req="b"]').first().check();
     const extra = page.locator('[data-5x-req="c"]');
     if (await extra.count()) await extra.first().check();
     await save.click();
-    await expect.poll(async () => getKey(page, 'itt08-chrome'), { timeout: 8000 }).toBeTruthy();
-    const raw = (await getKey(page, 'itt08-chrome')) || '';
+    await expect.poll(async () => getKey(page, 'itt08-omni'), { timeout: 8000 }).toBeTruthy();
+    const raw = (await getKey(page, 'itt08-omni')) || '';
     expect(raw).toMatch(/real|multiStep/i);
     const leak = await page.evaluate((yy) => {
       const bad = [];
@@ -92,19 +92,19 @@ test.describe('2008 5× live F1–F5', () => {
 
   test('F4 Hulu queue empty never writes', async ({ page }) => {
     await page.goto('/years/2008/sites/hulu/index.html');
-    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt08-hulu');
+    await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt08-queue');
     await page.reload();
     const save = page.locator('[data-5x-save]').first();
     await expect(save).toBeVisible();
     await save.click();
-    await expect.poll(async () => getKey(page, 'itt08-hulu')).toBeFalsy();
+    await expect.poll(async () => getKey(page, 'itt08-queue')).toBeFalsy();
     await page.locator('[data-5x-req="a"]').first().check();
     await page.locator('[data-5x-req="b"]').first().check();
     const extra = page.locator('[data-5x-req="c"]');
     if (await extra.count()) await extra.first().check();
     await save.click();
-    await expect.poll(async () => getKey(page, 'itt08-hulu'), { timeout: 8000 }).toBeTruthy();
-    const raw = (await getKey(page, 'itt08-hulu')) || '';
+    await expect.poll(async () => getKey(page, 'itt08-queue'), { timeout: 8000 }).toBeTruthy();
+    const raw = (await getKey(page, 'itt08-queue')) || '';
     expect(raw).toMatch(/real|multiStep/i);
     const leak = await page.evaluate((yy) => {
       const bad = [];

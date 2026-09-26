@@ -19,9 +19,6 @@ const WANT_FOLDERS = {
   2012: 32,
   2014: 25,
   2016: 57,
-  2018: 24,
-  2020: 22,
-  2021: 18,
   2022: 25,
 };
 
@@ -63,9 +60,13 @@ test("lean-double leftover dests dest-disjoint leftover-3× unique", () => {
   }
 });
 
-test("2018 leftover-3× unique stays 3 · 2021 stays 5", () => {
-  expect(uniqueIds("2018")).toHaveLength(3);
-  expect(uniqueIds("2021")).toHaveLength(5);
+test("2018 and 2021 leftover-3× unique are gone", () => {
+  expect(uniqueIds("2018")).toHaveLength(0);
+  expect(uniqueIds("2021")).toHaveLength(0);
+});
+
+test("2018 stays wiped", () => {
+  expect(fs.existsSync(path.join(ROOT, "years", "2018"))).toBe(false);
 });
 
 test("dest folder counts match lean-double disk", () => {

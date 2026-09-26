@@ -93,7 +93,7 @@ test.describe("2013 leftover dest-true", () => {
   });
 });
 
-test.describe("2018 leftover dest-true", () => {
+test.describe.skip("2018 leftover dest-true removed with the year", () => {
   test("Reddit leftover-3× dest-true", async ({ page }) => {
     await page.goto("/years/2018/sites/reddit/index.html");
     await completePop(page, "reddit", "itt18-pop-reddit", "itt18-gdpr", "reddit leftover");

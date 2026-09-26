@@ -276,6 +276,28 @@ def check_year(year: str, http_base: str | None) -> dict:
         if not research_ok and not on_disk:
             result["warnings"].append("research markers incomplete")
 
+    react_src = {
+        "2017": ROOT / "react/src/year2017.js",
+        "2019": ROOT / "react/src/year2019.js",
+        "2020": ROOT / "react/src/year2020.js",
+        "2021": ROOT / "react/src/year2021.js",
+    }.get(year)
+    if not on_disk and react_src is not None:
+        hub = (ROOT / "index.html").read_text(errors="ignore")
+        door = "app/index.html#/year/{y}".format(y=year)
+        if door not in hub:
+            result["errors"].append("hub card does not open " + door)
+        if not react_src.is_file():
+            result["errors"].append("react module missing: " + str(react_src.name))
+        app_index = ROOT / "app" / "index.html"
+        if not app_index.is_file():
+            result["errors"].append("missing app/index.html")
+        result["checks"]["react"] = react_src.is_file() and door in hub and app_index.is_file()
+        result["status"] = "fail" if result["errors"] else "pass"
+        if result["status"] == "pass":
+            result["warnings"].append("react door, no years/{y} html".format(y=year))
+        return result
+
     if not on_disk:
         result["status"] = "research_only" if research_ok else "absent"
         if year in hub_available_years():

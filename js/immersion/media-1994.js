@@ -139,6 +139,19 @@ function initCsotd(root) {
   if (link) {
     link.href = pick.href;
     link.textContent = pick.title;
+    link.setAttribute("data-official-pick", "today");
+    try {
+      if (sessionStorage.getItem("itt94-csotd-pick") === "1") {
+        link.className = (String(link.className || "") + " is-on").replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
+        link.setAttribute("aria-pressed", "true");
+      }
+    } catch (ePick) { /* */ }
+    if (link.getAttribute("data-csotd-pick-bound") !== "1") {
+      link.setAttribute("data-csotd-pick-bound", "1");
+      link.addEventListener("click", function () {
+        try { sessionStorage.setItem("itt94-csotd-pick", "1"); } catch (eStore) { /* */ }
+      });
+    }
   }
   if (blurb) blurb.textContent = pick.blurb;
   if (stampEl) {

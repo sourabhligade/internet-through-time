@@ -1,7 +1,7 @@
 # Leftover-2× unique dest links — 2× map
 
 **Date:** 2026-09-21  
-**Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm.  
+**Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm. Leftover-3× unique flows and links were removed. Do not treat 2018=3 or 2021=5 as a live cap.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O:** leftover never writes the star · empty / trap never write.  
 **Census:** live `years/` leftover-2× rails (`data-itt-2x-links` / `data-itt-2x-unique` / `ITT-2X-LINKS`).  
@@ -13,7 +13,7 @@
 
 ## 1. One-line law
 
-**2× unique dest slugs in leftover-2× rails. One dest once. Dest folders already on disk. 2000–2006 keep original unique dests. Strip duplicate hrefs. Do not dest-farm dest folders. Do not grow leftover-3× unique past 2018=3 / 2021=5. Official dest leftover-2× first paint stays 0.**
+**2× unique dest slugs in leftover-2× rails. One dest once. Dest folders already on disk. 2000–2006 keep original unique dests. Strip duplicate hrefs. Leftover-2× unique dest links dest-disjoint leftover-3× unique dest links, official dests, leftover trail n=11–20 dests, leftover-4× unique dests. leftover-3× unique dest-true dests host leftover-3× unique dest links only. Do not dest-farm dest folders. Do not grow leftover-3× unique past 2018=3 / 2021=5. Official dest leftover-2× first paint stays 0.**
 
 Leftover-2× rails are **hrefs**, not dest folders. Dest-true leftover dests (keep / trap / field / leftover Go) do **not** 2× in this pass.
 

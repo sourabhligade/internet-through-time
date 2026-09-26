@@ -5,7 +5,9 @@
 2000–2006 KEEP original unique dests. Strip duplicate hrefs. Official dest leftover-2×
 first paint = 0. Do not dest-farm dest folders. Do not grow leftover-3× unique.
 Do not write dest-true leftover dest I/O. 2009 boarded. 2023–2025 wiped.
-Cite: docs/LEFTOVER-2X-UNIQUE-LINKS.md
+Leftover-2× unique dest links stay dest-disjoint from leftover-3× unique dest links
+(one dest once as a link). Cite: docs/LEFTOVER-2X-UNIQUE-LINKS.md ·
+docs/DUPLICATE-UNIQUE-LINKS.md
 """
 from __future__ import annotations
 
@@ -265,12 +267,12 @@ def unique_dests(year: str) -> list[str]:
     return out
 
 
-def official_slugs(year: str) -> set[str]:
+def _flow_trail_chunk(year: str) -> str:
     trails = ROOT / "js" / "config" / "flow-trails.js"
     text = trails.read_text(encoding="utf-8", errors="replace")
     m = re.search(rf'"{year}"\s*:\s*\[', text)
     if not m:
-        return set()
+        return ""
     i = m.end()
     depth = 1
     while i < len(text) and depth:
@@ -279,14 +281,60 @@ def official_slugs(year: str) -> set[str]:
         elif text[i] == "]":
             depth -= 1
         i += 1
-    chunk = text[m.end() : i]
+    return text[m.end() : i]
+
+
+def official_slugs(year: str) -> set[str]:
     out = set()
     for stop in re.finditer(
         r'\{\s*"n":\s*(\d+),\s*"name":\s*"[^"]*",\s*"href":\s*"sites/([^/]+)/',
-        chunk,
+        _flow_trail_chunk(year),
     ):
         if 1 <= int(stop.group(1)) <= 10:
             out.add(stop.group(2))
+    return out
+
+
+def leftover_trail_slugs(year: str) -> set[str]:
+    out = set()
+    for stop in re.finditer(
+        r'\{\s*"n":\s*(\d+),\s*"name":\s*"[^"]*",\s*"href":\s*"sites/([^/]+)/',
+        _flow_trail_chunk(year),
+    ):
+        if int(stop.group(1)) >= 11:
+            out.add(stop.group(2))
+    return out
+
+
+def leftover_4x_unique_ids() -> dict[str, set[str]]:
+    path = ROOT / "e2e" / "leftover-4x-unique.matrix.json"
+    out: dict[str, set[str]] = {}
+    if not path.is_file():
+        return out
+    data = json.loads(path.read_text(encoding="utf-8"))
+    for row in data if isinstance(data, list) else []:
+        y = str(row.get("year") or "")
+        slug = row.get("id") or ""
+        if y and slug:
+            out.setdefault(y, set()).add(slug)
+    return out
+
+
+def leftover_3x_unique_dest_true_ids() -> dict[str, set[str]]:
+    path = ROOT / "js" / "config" / "leftover-3x-unique.js"
+    out: dict[str, set[str]] = {}
+    if not path.is_file():
+        return out
+    cur = None
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = re.match(r'\s*"(\d{4})"\s*:', line)
+        if m:
+            cur = m.group(1)
+            out.setdefault(cur, set())
+            continue
+        m = re.search(r'"id":\s*"([^"]+)"', line)
+        if m and cur:
+            out[cur].add(m.group(1))
     return out
 
 
@@ -349,6 +397,140 @@ def inject_or_replace(html: str, rail: str) -> str:
     return html + rail
 
 
+def leftover_3x_unique_link_ids() -> dict[str, set[str]]:
+    """Dest slugs already on leftover-3× unique dest links. One dest once as a link."""
+    path = ROOT / "js" / "config" / "leftover-3x-unique-links.js"
+    out: dict[str, set[str]] = {}
+    if not path.is_file():
+        return out
+    cur = None
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = re.match(r'\s*"(\d{4})"\s*:', line)
+        if m:
+            cur = m.group(1)
+            out.setdefault(cur, set())
+            continue
+        m = re.search(r'"id":\s*"([^"]+)"', line)
+        if m and cur:
+            out[cur].add(m.group(1))
+    return out
+
+
+def dest_disjoint_3x_unique_links(
+    catalog: dict[str, list[dict]],
+) -> dict[str, list[str]]:
+    """Drop leftover-3× unique dest link dests from leftover-2× unique dest links."""
+    return _drop_ids(catalog, leftover_3x_unique_link_ids())
+
+
+def dest_disjoint_owned_dests(
+    catalog: dict[str, list[dict]],
+) -> dict[str, list[str]]:
+    """Drop dests that already have another year map from leftover-2× unique dest links."""
+    lo4 = leftover_4x_unique_ids()
+    skip: dict[str, set[str]] = {}
+    for year in list(catalog.keys()):
+        ban = set()
+        ban |= leftover_3x_unique_link_ids().get(year) or set()
+        ban |= official_slugs(year)
+        ban |= leftover_trail_slugs(year)
+        ban |= lo4.get(year) or set()
+        if year == "2016":
+            try:
+                trip = json.loads(
+                    (ROOT / "e2e" / "lean-triple-leftover.matrix.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                ban |= {r["id"] for r in trip if str(r.get("year")) == "2016"}
+            except OSError:
+                pass
+        if ban:
+            skip[year] = ban
+    return _drop_ids(catalog, skip)
+
+
+def _drop_ids(
+    catalog: dict[str, list[dict]], skip: dict[str, set[str]]
+) -> dict[str, list[str]]:
+    dropped: dict[str, list[str]] = {}
+    for year, rows in list(catalog.items()):
+        ban = skip.get(year) or set()
+        if not ban:
+            continue
+        keep = []
+        gone = []
+        for row in rows:
+            if row["id"] in ban:
+                gone.append(row["id"])
+            else:
+                keep.append(row)
+        if gone:
+            catalog[year] = keep
+            dropped[year] = gone
+    return dropped
+
+
+def load_js_catalog() -> dict[str, list[dict]]:
+    text = (ROOT / "js" / "config" / "leftover-2x-unique-links.js").read_text(
+        encoding="utf-8"
+    )
+    m = re.search(r"ITT\.leftover2xUniqueLinks = \s*(\{.*\})\s*;", text, re.S)
+    if not m:
+        raise SystemExit("leftover-2x unique dest links catalog missing")
+    raw = json.loads(m.group(1))
+    return {str(y): list(rows) for y, rows in raw.items()}
+
+
+def leftover_href_count(year: str, dests: list[str], from_slug: str | None) -> int:
+    n = 0
+    for slug in dests:
+        if from_slug and slug == from_slug:
+            continue
+        dest = ROOT / "years" / year / "sites" / slug / "index.html"
+        if dest.is_file():
+            n += 1
+    return n
+
+
+def rewrite_existing_rails(catalog: dict[str, list[dict]], years: list[str] | None = None) -> int:
+    """Replace ITT-2X-LINKS on leftover dest HTML that already has a rail. No new injects."""
+    rewritten = 0
+    years = years or list(catalog.keys())
+    lo3x_true = leftover_3x_unique_dest_true_ids()
+    for year in years:
+        dests = [r["id"] for r in catalog.get(year, [])]
+        year_root = ROOT / "years" / year
+        if not year_root.is_dir():
+            continue
+        off = official_slugs(year)
+        unique_true = lo3x_true.get(year) or set()
+        htmls = list(year_root.rglob("*.html")) + list(year_root.rglob("*.htm"))
+        for path in htmls:
+            html = path.read_text(encoding="utf-8", errors="replace")
+            if is_start_or_pages(year, path):
+                continue
+            if official_dest_html(year, path, html, off):
+                continue
+            if not has_leftover_rail(html):
+                continue
+            from_slug = None
+            m = re.search(r"/sites/([^/]+)/", path.as_posix())
+            if m:
+                from_slug = m.group(1)
+            if from_slug and from_slug in unique_true:
+                new = strip_rails(html)
+            elif leftover_href_count(year, dests, from_slug) == 0:
+                new = strip_rails(html)
+            else:
+                rail = rail_html(year, dests, from_slug)
+                new = inject_or_replace(html, rail)
+            if new != html:
+                path.write_text(new, encoding="utf-8")
+                rewritten += 1
+    return rewritten
+
+
 def write_catalog(catalog: dict[str, list[dict]]) -> None:
     write_js(catalog)
     matrix = []
@@ -392,6 +574,7 @@ def build_catalog() -> dict[str, list[dict]]:
             name = dest_label(dest) if dest.is_file() else s
             rows.append({"id": s, "name": name})
         catalog[year] = rows
+    dest_disjoint_owned_dests(catalog)
     return catalog
 
 
@@ -438,6 +621,31 @@ def rewrite_dest_html(catalog: dict[str, list[dict]]) -> tuple[int, int, int]:
 
 def main() -> int:
     catalog_only = "--catalog-only" in sys.argv
+    strip_overlap = "--strip-3x-overlap" in sys.argv
+    strip_owned = "--strip-owned-dests" in sys.argv
+    if strip_overlap or strip_owned:
+        catalog = load_js_catalog()
+        dropped = (
+            dest_disjoint_owned_dests(catalog)
+            if strip_owned
+            else dest_disjoint_3x_unique_links(catalog)
+        )
+        write_catalog(catalog)
+        years = sorted(set(dropped.keys()) | set(catalog.keys()))
+        rewritten = rewrite_existing_rails(catalog, years)
+        n_drop = sum(len(v) for v in dropped.values())
+        label = (
+            "owned dests (official · leftover trail n=11+ · leftover-4× unique dests · leftover-3× unique dest links)"
+            if strip_owned
+            else "leftover-3× unique dest link dests"
+        )
+        print(
+            f"stripped {label} from leftover-2× unique dest links "
+            f"{n_drop} dests · years {len(dropped)} · rewrote existing rails {rewritten}"
+        )
+        for year in sorted(dropped.keys()):
+            print(f"  {year} dropped {len(dropped[year])} remain {len(catalog[year])}")
+        return 0
     catalog = build_catalog()
     write_catalog(catalog)
     rewritten = injected = stripped_official = 0

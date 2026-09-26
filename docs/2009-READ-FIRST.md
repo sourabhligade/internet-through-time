@@ -19,7 +19,7 @@
 | Dual-cite | Pingdom Dec **~234 million** hostnames — label, do not blend |
 | Guided `<ol>` | **exactly 6** |
 | 3× leftover | Catalog leftover-3× (Omegle · Chatroulette · Wikipedia) is **not** a visitor flow. Map [`2009-LEFTOVER-3X-UNIQUE.md`](2009-LEFTOVER-3X-UNIQUE.md). Do not dest-true leftover-3× unique dest-true dests. |
-| HTML cap | ~50. No forest restore. |
+| HTML on disk | **150** HTML files · **78** site folders. No forest restore. |
 
 ## Do not
 

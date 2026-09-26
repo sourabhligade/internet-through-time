@@ -35,7 +35,6 @@ const GOLD = [
   { year: "2015", writer: "sites/periscope/index.html", key: "itt15-periscope", nextNeedle: "googlephotos", chipHref: "sites/periscope/index.html" },
   { year: "2016", writer: "sites/instagram/stories.html", key: "itt16-ig-stories", nextNeedle: "pokemongo", chipHref: "sites/instagram/stories.html" },
   { year: "2017", writer: "sites/iphone/x.html", key: "itt17-faceid", nextNeedle: "fortnite", chipHref: "sites/iphone/x.html" },
-  { year: "2018", writer: "sites/gdpr/index.html", key: "itt18-gdpr", nextNeedle: "tiktok", chipHref: "sites/gdpr/index.html" },
   { year: "2019", writer: "sites/disneyplus/home.html", key: "itt19-disneyplus", nextNeedle: "tiktok", chipHref: "sites/disneyplus/home.html" },
 ];
 
@@ -43,7 +42,7 @@ function yearFile(year, rel) {
   return path.join(ROOT, "years", year, rel);
 }
 
-const BOARDED = new Set(["2009", "2023", "2024", "2025"]);
+const BOARDED = new Set(["2009", "2018", "2023", "2024", "2025"]);
 
 test("gold-a table covers every live year on disk", () => {
   const years = GOLD.map((g) => g.year);

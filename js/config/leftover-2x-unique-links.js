@@ -6,10 +6,6 @@
 {
   "1994": [
     {
-      "id": "csotd",
-      "name": "Cool Site of the Day \u00b7 REAL"
-    },
-    {
       "id": "weblouvre",
       "name": "WebLouvre \u2014 art on the Internet"
     },
@@ -18,60 +14,12 @@
       "name": "WWW Worm"
     },
     {
-      "id": "yahoo",
-      "name": "Yahoo!"
-    },
-    {
-      "id": "cern",
-      "name": "CERN & the birth of the Web"
-    },
-    {
-      "id": "ncsa",
-      "name": "National Center for Supercomputing Applica"
-    },
-    {
-      "id": "lycos",
-      "name": "Lycos Catalog of the Internet"
-    },
-    {
       "id": "webcrawler",
       "name": "WebCrawler \u00b7 1994"
     },
     {
-      "id": "hotwired",
-      "name": "Hotwired"
-    },
-    {
-      "id": "whitehouse",
-      "name": "Welcome to the White House"
-    },
-    {
-      "id": "nasa",
-      "name": "National Aeronautics and Space Administrat"
-    },
-    {
-      "id": "iuma",
-      "name": "Internet Underground Music Archive"
-    },
-    {
-      "id": "fishcam",
-      "name": "Netscape FishCam"
-    },
-    {
-      "id": "mcom",
-      "name": "Mosaic Communications (mcom.com)"
-    },
-    {
-      "id": "cnn",
-      "name": "Cnn"
-    },
-    {
       "id": "aliweb",
       "name": "Aliweb"
-    },
-    {
-      "id": "bbc",
-      "name": "Bbc"
     },
     {
       "id": "bbs",
@@ -116,18 +64,6 @@
     {
       "id": "harvest",
       "name": "Harvest"
-    },
-    {
-      "id": "ibm",
-      "name": "IBM.com"
-    },
-    {
-      "id": "imdb",
-      "name": "Internet Movie Database"
-    },
-    {
-      "id": "infoseek",
-      "name": "Infoseek"
     },
     {
       "id": "intel",
@@ -196,10 +132,6 @@
     {
       "id": "weather",
       "name": "Weather"
-    },
-    {
-      "id": "netscape",
-      "name": "Mosaic Netscape 0.9 / Navigator 1.0"
     },
     {
       "id": "cdnow",
@@ -360,10 +292,6 @@
   ],
   "1995": [
     {
-      "id": "amazon",
-      "name": "Amazon.com Books! Earth's Biggest Bookstor"
-    },
-    {
       "id": "weather",
       "name": "Weather"
     },
@@ -372,44 +300,8 @@
       "name": "Welcome to the White House"
     },
     {
-      "id": "yahoo",
-      "name": "Yahoo!"
-    },
-    {
-      "id": "netscape",
-      "name": "Welcome to Netscape"
-    },
-    {
-      "id": "altavista",
-      "name": "AltaVista: Main Page"
-    },
-    {
-      "id": "geocities",
-      "name": "Geocities"
-    },
-    {
-      "id": "auctionweb",
-      "name": "Auctionweb"
-    },
-    {
-      "id": "cnn",
-      "name": "CNN Interactive"
-    },
-    {
-      "id": "microsoft",
-      "name": "Microsoft Internet Explorer"
-    },
-    {
       "id": "classmates",
       "name": "Classmates.com \u00b7 1995"
-    },
-    {
-      "id": "webcrawler",
-      "name": "Webcrawler"
-    },
-    {
-      "id": "aol",
-      "name": "AOL \u2014 You\u2019ve Got Mail"
     },
     {
       "id": "bbc",
@@ -428,10 +320,6 @@
       "name": "Compuserve \u2014 GO word"
     },
     {
-      "id": "espn",
-      "name": "ESPNet SportsZone"
-    },
-    {
       "id": "fbi",
       "name": "Fbi"
     },
@@ -442,18 +330,6 @@
     {
       "id": "hotbot",
       "name": "Hotbot"
-    },
-    {
-      "id": "hotwired",
-      "name": "Hotwired"
-    },
-    {
-      "id": "ibm",
-      "name": "Ibm"
-    },
-    {
-      "id": "infoseek",
-      "name": "Infoseek"
     },
     {
       "id": "intel",
@@ -480,16 +356,8 @@
       "name": "Npr"
     },
     {
-      "id": "nyt",
-      "name": "Nyt"
-    },
-    {
       "id": "opentext",
       "name": "Open Text"
-    },
-    {
-      "id": "pathfinder",
-      "name": "Pathfinder \u00b7 1995"
     },
     {
       "id": "pbs",
@@ -548,16 +416,8 @@
       "name": "Wall Street Journal"
     },
     {
-      "id": "zdnet",
-      "name": "Zdnet"
-    },
-    {
       "id": "well",
       "name": "The WELL"
-    },
-    {
-      "id": "excite",
-      "name": "Excite"
     },
     {
       "id": "msn",
@@ -754,10 +614,6 @@
   ],
   "1996": [
     {
-      "id": "portals",
-      "name": "Portal wars lobby"
-    },
-    {
       "id": "webcrawler",
       "name": "Webcrawler"
     },
@@ -766,52 +622,8 @@
       "name": "Xoom"
     },
     {
-      "id": "yahoo",
-      "name": "Yahoo!"
-    },
-    {
-      "id": "hotmail",
-      "name": "HoTMaiL - The World's FREE Web-Based Email"
-    },
-    {
-      "id": "excite",
-      "name": "Excite"
-    },
-    {
-      "id": "altavista",
-      "name": "Altavista"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon.com \u2014 Earth's Biggest Bookstore"
-    },
-    {
-      "id": "geocities",
-      "name": "Geocities"
-    },
-    {
-      "id": "spacejam",
-      "name": "Space Jam"
-    },
-    {
-      "id": "auctionweb",
-      "name": "Auctionweb"
-    },
-    {
-      "id": "netscape",
-      "name": "Netscape"
-    },
-    {
       "id": "angelfire",
       "name": "Angelfire \u00b7 1996"
-    },
-    {
-      "id": "archive",
-      "name": "Internet Archive"
-    },
-    {
-      "id": "askjeeves",
-      "name": "Ask Jeeves"
     },
     {
       "id": "barnes",
@@ -826,22 +638,6 @@
       "name": "Blue Mountain"
     },
     {
-      "id": "cnn",
-      "name": "CNN Interactive"
-    },
-    {
-      "id": "craigslist",
-      "name": "Craigslist"
-    },
-    {
-      "id": "disney",
-      "name": "Disney Online"
-    },
-    {
-      "id": "espn",
-      "name": "Espn"
-    },
-    {
       "id": "four11",
       "name": "Four11"
     },
@@ -852,10 +648,6 @@
     {
       "id": "ibm",
       "name": "Ibm"
-    },
-    {
-      "id": "icq",
-      "name": "Icq"
     },
     {
       "id": "infoseek",
@@ -880,10 +672,6 @@
     {
       "id": "msn",
       "name": "MSN.com \u2014 start page 1996"
-    },
-    {
-      "id": "mtv",
-      "name": "mtv.com"
     },
     {
       "id": "nyt",
@@ -1132,10 +920,6 @@
   ],
   "1997": [
     {
-      "id": "pointcast",
-      "name": "PointCast Network"
-    },
-    {
       "id": "webcrawler",
       "name": "Webcrawler"
     },
@@ -1144,44 +928,8 @@
       "name": "Winamp \u00b7 1997"
     },
     {
-      "id": "ebay",
-      "name": "eBay - Your Personal Trading Community"
-    },
-    {
-      "id": "hotmail",
-      "name": "HoTMaiL - The World's FREE Web-Based Email"
-    },
-    {
-      "id": "icq",
-      "name": "ICQ \u2014 I Seek You (1997)"
-    },
-    {
-      "id": "slashdot",
-      "name": "Slashdot: News for Nerds. Stuff that Matte"
-    },
-    {
-      "id": "hotbot",
-      "name": "HotBot - The Wired Search Center"
-    },
-    {
       "id": "aim",
       "name": "AOL Instant Messenger \u00b7 1997"
-    },
-    {
-      "id": "netscape",
-      "name": "Netscape Communicator"
-    },
-    {
-      "id": "altavista",
-      "name": "AltaVista \u2014 Search + Babel Fish (1997)"
-    },
-    {
-      "id": "aol",
-      "name": "AOL.com residual 1997"
-    },
-    {
-      "id": "apple",
-      "name": "Apple Computer"
     },
     {
       "id": "archive",
@@ -1200,28 +948,12 @@
       "name": "Blue Mountain"
     },
     {
-      "id": "cnn",
-      "name": "CNN Interactive"
-    },
-    {
       "id": "dancing-baby",
       "name": "Dancing Baby"
     },
     {
-      "id": "disney",
-      "name": "Disney Online"
-    },
-    {
-      "id": "drudge",
-      "name": "DRUDGE REPORT"
-    },
-    {
       "id": "drudgereport",
       "name": "Drudge Report"
-    },
-    {
-      "id": "espn",
-      "name": "Espn"
     },
     {
       "id": "excite",
@@ -1258,10 +990,6 @@
     {
       "id": "lycos",
       "name": "Lycos catalog 1997"
-    },
-    {
-      "id": "microsoft",
-      "name": "Microsoft \u2014 Internet Explorer 4.0 (1997)"
     },
     {
       "id": "mit",
@@ -1352,10 +1080,6 @@
       "name": "Backweb"
     },
     {
-      "id": "amazonipo",
-      "name": "Amazon IPO"
-    },
-    {
       "id": "sixdegrees",
       "name": "Sixdegrees"
     },
@@ -1382,56 +1106,12 @@
   ],
   "1998": [
     {
-      "id": "google",
-      "name": "Google!"
-    },
-    {
       "id": "netcenter",
       "name": "Netcenter"
     },
     {
-      "id": "yahoo",
-      "name": "Yahoo!"
-    },
-    {
-      "id": "ebay",
-      "name": "eBay - The World&#39;s Online Marketplace"
-    },
-    {
-      "id": "hotmail",
-      "name": "Hotmail - free web-based e-mail"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon.com \u2014 Books, Music and More"
-    },
-    {
-      "id": "slashdot",
-      "name": "Slashdot: News for Nerds. Stuff that Matte"
-    },
-    {
-      "id": "netscape",
-      "name": "Netscape Communicator"
-    },
-    {
-      "id": "cdnow",
-      "name": "Cdnow"
-    },
-    {
-      "id": "dmoz",
-      "name": "Open Directory Project \u2014 DMOZ (1998)"
-    },
-    {
       "id": "about",
       "name": "About"
-    },
-    {
-      "id": "altavista",
-      "name": "Altavista"
-    },
-    {
-      "id": "aol",
-      "name": "AOL.com 1998"
     },
     {
       "id": "ayb",
@@ -1452,14 +1132,6 @@
     {
       "id": "broadcastcom",
       "name": "broadcast.com"
-    },
-    {
-      "id": "cnn",
-      "name": "CNN Interactive"
-    },
-    {
-      "id": "excite",
-      "name": "Excite \u2014 My Excite"
     },
     {
       "id": "four11",
@@ -1486,10 +1158,6 @@
       "name": "HotBot - The Wired Search Center"
     },
     {
-      "id": "icq",
-      "name": "ICQ \u2014 I Seek You"
-    },
-    {
       "id": "icqweb",
       "name": "ICQ on the web"
     },
@@ -1506,24 +1174,12 @@
       "name": "Larry Page \u00b7 Stanford context"
     },
     {
-      "id": "lycos",
-      "name": "Lycos catalog 1998"
-    },
-    {
-      "id": "mozilla",
-      "name": "mozilla.org"
-    },
-    {
       "id": "msn",
       "name": "MSN.com start 1998"
     },
     {
       "id": "sergeybrin",
       "name": "Sergey Brin \u2014 Stanford"
-    },
-    {
-      "id": "snap",
-      "name": "Snap"
     },
     {
       "id": "textfiles",
@@ -1560,48 +1216,12 @@
     {
       "id": "opendiary",
       "name": "Open Diary"
-    },
-    {
-      "id": "americangreetings",
-      "name": "AmericanGreetings.com"
     }
   ],
   "1999": [
     {
-      "id": "aim",
-      "name": "AOL Instant Messenger"
-    },
-    {
       "id": "youvegotmail",
       "name": "You've Got Mail"
-    },
-    {
-      "id": "google",
-      "name": "Google"
-    },
-    {
-      "id": "ebay",
-      "name": "eBay - Your Personal Trading Community"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon.com--Earth's Biggest Selection"
-    },
-    {
-      "id": "napster",
-      "name": "Napster"
-    },
-    {
-      "id": "blogger",
-      "name": "blogger!"
-    },
-    {
-      "id": "paypal",
-      "name": "Paypal"
-    },
-    {
-      "id": "askjeeves",
-      "name": "Ask Jeeves!"
     },
     {
       "id": "about",
@@ -1612,24 +1232,12 @@
       "name": "Altavista"
     },
     {
-      "id": "aol",
-      "name": "AOL.com 1999"
-    },
-    {
       "id": "boocom",
       "name": "Boo.com \u00b7 1999"
     },
     {
       "id": "bowienet",
       "name": "Bowienet"
-    },
-    {
-      "id": "cnn",
-      "name": "CNN.com"
-    },
-    {
-      "id": "dmoz",
-      "name": "Open Directory Project (DMOZ)"
     },
     {
       "id": "drkoop",
@@ -1642,10 +1250,6 @@
     {
       "id": "etrade",
       "name": "E*TRADE \u00b7 1999"
-    },
-    {
-      "id": "excite",
-      "name": "Excite \u2014 My Excite"
     },
     {
       "id": "flash4",
@@ -1672,10 +1276,6 @@
       "name": "Infoseek"
     },
     {
-      "id": "livejournal",
-      "name": "Livejournal"
-    },
-    {
       "id": "matrix",
       "name": "The Matrix \u2014 official web (1999)"
     },
@@ -1700,10 +1300,6 @@
       "name": "Netscape Netcenter"
     },
     {
-      "id": "netscape",
-      "name": "Netscape"
-    },
-    {
       "id": "seti",
       "name": "SETI@home"
     },
@@ -1712,24 +1308,12 @@
       "name": "Sixdegrees"
     },
     {
-      "id": "slashdot",
-      "name": "Slashdot: News for Nerds. Stuff that Matte"
-    },
-    {
-      "id": "sourceforge",
-      "name": "Find software"
-    },
-    {
       "id": "theonion",
       "name": "The Onion"
     },
     {
       "id": "webvan",
       "name": "Webvan \u00b7 1999"
-    },
-    {
-      "id": "y2k",
-      "name": "Y2K Information"
     },
     {
       "id": "yahoomessenger",
@@ -1914,40 +1498,8 @@
   ],
   "2000": [
     {
-      "id": "mapquest",
-      "name": "MapQuest \u00b7 directions REAL 2000"
-    },
-    {
       "id": "youvegotmail",
       "name": "You've Got Mail"
-    },
-    {
-      "id": "google",
-      "name": "Google"
-    },
-    {
-      "id": "ebay",
-      "name": "eBay - Your Personal Trading Community"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon.com--Earth's Biggest Selection"
-    },
-    {
-      "id": "napster",
-      "name": "Napster \u2014 music at Internet speed"
-    },
-    {
-      "id": "paypal",
-      "name": "PayPal \u2014 email money (2000)"
-    },
-    {
-      "id": "gnutella",
-      "name": "Gnutella"
-    },
-    {
-      "id": "cnn",
-      "name": "CNN.com"
     },
     {
       "id": "about",
@@ -1958,20 +1510,12 @@
       "name": "Altavista"
     },
     {
-      "id": "aol",
-      "name": "AOL.com 2000"
-    },
-    {
       "id": "askjeeves",
       "name": "Ask Jeeves!"
     },
     {
       "id": "bbc",
       "name": "BBC News 2000"
-    },
-    {
-      "id": "blogger",
-      "name": "blogger!"
     },
     {
       "id": "bowienet",
@@ -1982,16 +1526,8 @@
       "name": "Camworld"
     },
     {
-      "id": "dmoz",
-      "name": "Open Directory Project (DMOZ)"
-    },
-    {
       "id": "everything2",
       "name": "Everything2"
-    },
-    {
-      "id": "excite",
-      "name": "Excite \u2014 My Excite"
     },
     {
       "id": "flash4",
@@ -2070,28 +1606,12 @@
       "name": "Netscape Netcenter"
     },
     {
-      "id": "netscape",
-      "name": "Netscape"
-    },
-    {
-      "id": "pets",
-      "name": "Pets.com \u2014 because pets can't drive (2000)"
-    },
-    {
-      "id": "slashdot",
-      "name": "Slashdot: News for Nerds. Stuff that Matte"
-    },
-    {
       "id": "startupfailures",
       "name": "Startup Failures"
     },
     {
       "id": "womencom",
       "name": "Women.com"
-    },
-    {
-      "id": "y2k",
-      "name": "Y2K Information"
     },
     {
       "id": "zombo",
@@ -2284,34 +1804,6 @@
   ],
   "2001": [
     {
-      "id": "wikipedia",
-      "name": "Wikipedia"
-    },
-    {
-      "id": "askjeeves",
-      "name": "Ask Jeeves"
-    },
-    {
-      "id": "dmoz",
-      "name": "Dmoz"
-    },
-    {
-      "id": "yahoo",
-      "name": "Yahoo!"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon.com \u2014 smile 2001"
-    },
-    {
-      "id": "google",
-      "name": "Google"
-    },
-    {
-      "id": "cnn",
-      "name": "CNN.com"
-    },
-    {
       "id": "msn",
       "name": "Msn"
     },
@@ -2320,52 +1812,16 @@
       "name": "Excite"
     },
     {
-      "id": "paypal",
-      "name": "Paypal"
-    },
-    {
-      "id": "slashdot",
-      "name": "Slashdot"
-    },
-    {
-      "id": "blogger",
-      "name": "Blogger"
-    },
-    {
       "id": "appleimac",
       "name": "iMac"
-    },
-    {
-      "id": "archive",
-      "name": "Internet Archive Wayback Machine"
-    },
-    {
-      "id": "encarta",
-      "name": "Encarta"
     },
     {
       "id": "grok",
       "name": "Grokster"
     },
     {
-      "id": "itunes",
-      "name": "Itunes"
-    },
-    {
-      "id": "movabletype",
-      "name": "Movable Type"
-    },
-    {
       "id": "moveon",
       "name": "Moveon"
-    },
-    {
-      "id": "mozilla",
-      "name": "Mozilla"
-    },
-    {
-      "id": "napster",
-      "name": "Napster \u2014 the war is over"
     },
     {
       "id": "tpm",
@@ -2490,68 +1946,16 @@
   ],
   "2002": [
     {
-      "id": "stumbleupon",
-      "name": "Stumbleupon"
-    },
-    {
-      "id": "wired",
-      "name": "Wired News"
-    },
-    {
-      "id": "daypop",
-      "name": "Daypop"
-    },
-    {
-      "id": "friendster",
-      "name": "Friendster seed"
-    },
-    {
       "id": "blogger",
       "name": "Blogger"
-    },
-    {
-      "id": "mozilla",
-      "name": "Mozilla 1.0"
     },
     {
       "id": "fark",
       "name": "Fark"
     },
     {
-      "id": "googlenews",
-      "name": "Google News"
-    },
-    {
       "id": "homestar",
       "name": "Homestar Runner"
-    },
-    {
-      "id": "ipod",
-      "name": "iPod (second generation)"
-    },
-    {
-      "id": "isp",
-      "name": "Always-on"
-    },
-    {
-      "id": "kazaa",
-      "name": "Kazaa"
-    },
-    {
-      "id": "lastfm",
-      "name": "last.fm"
-    },
-    {
-      "id": "movabletype",
-      "name": "Movable Type 2.x"
-    },
-    {
-      "id": "mtv",
-      "name": "Mtv"
-    },
-    {
-      "id": "phoenix",
-      "name": "Phoenix"
     },
     {
       "id": "technorati",
@@ -2644,72 +2048,12 @@
   ],
   "2003": [
     {
-      "id": "photobucket",
-      "name": "Photobucket"
-    },
-    {
-      "id": "kazaa",
-      "name": "Kazaa"
-    },
-    {
-      "id": "wordpress",
-      "name": "Wordpress"
-    },
-    {
-      "id": "friendster",
-      "name": "Friendster"
-    },
-    {
-      "id": "myspace",
-      "name": "Myspace"
-    },
-    {
-      "id": "linkedin",
-      "name": "Linkedin"
-    },
-    {
-      "id": "skype",
-      "name": "Skype"
-    },
-    {
-      "id": "blogger",
-      "name": "Blogger (Google)"
-    },
-    {
-      "id": "cnn",
-      "name": "Cnn"
-    },
-    {
       "id": "4chan",
       "name": "4chan literacy"
     },
     {
-      "id": "adsense",
-      "name": "Google AdSense"
-    },
-    {
-      "id": "bloglines",
-      "name": "Bloglines"
-    },
-    {
-      "id": "delicious",
-      "name": "del.icio.us"
-    },
-    {
       "id": "firebird",
       "name": "Firebird hop"
-    },
-    {
-      "id": "flash",
-      "name": "Flash / FWA"
-    },
-    {
-      "id": "hi5",
-      "name": "Hi5"
-    },
-    {
-      "id": "itunes",
-      "name": "iTunes Music Store"
     },
     {
       "id": "phoenix",
@@ -2790,36 +2134,8 @@
   ],
   "2004": [
     {
-      "id": "facebook",
-      "name": "Welcome to Thefacebook"
-    },
-    {
       "id": "youvegotmail",
       "name": "You've Got Mail"
-    },
-    {
-      "id": "gmail",
-      "name": "Welcome to Gmail"
-    },
-    {
-      "id": "flickr",
-      "name": "Your photostream"
-    },
-    {
-      "id": "myspace",
-      "name": "MySpace \u2014 a place for friends (2004)"
-    },
-    {
-      "id": "cnn",
-      "name": "CNN.com - Breaking News, U.S., World, Weat"
-    },
-    {
-      "id": "digg",
-      "name": "Digg"
-    },
-    {
-      "id": "delicious",
-      "name": "del.icio.us"
     },
     {
       "id": "adsense",
@@ -2886,10 +2202,6 @@
       "name": "Feedburner"
     },
     {
-      "id": "firefox",
-      "name": "Firefox 1.0"
-    },
-    {
       "id": "flickrpro",
       "name": "Flickr Pro"
     },
@@ -2954,10 +2266,6 @@
       "name": "LinkedIn \u2014 relationships matter (2004)"
     },
     {
-      "id": "livejournal",
-      "name": "Your journal"
-    },
-    {
       "id": "loudcloud",
       "name": "Loudcloud"
     },
@@ -3006,10 +2314,6 @@
       "name": "Odeo"
     },
     {
-      "id": "orkut",
-      "name": "Welcome to orkut"
-    },
-    {
       "id": "orkutcircle",
       "name": "Orkut"
     },
@@ -3032,10 +2336,6 @@
     {
       "id": "piczo",
       "name": "Piczo"
-    },
-    {
-      "id": "skype",
-      "name": "Free internet telephony"
     },
     {
       "id": "slashdot",
@@ -3072,10 +2372,6 @@
     {
       "id": "weather",
       "name": "Weather.com zip"
-    },
-    {
-      "id": "web20conference",
-      "name": "Web 2.0 Conference"
     },
     {
       "id": "wired",
@@ -3432,74 +2728,6 @@
   ],
   "2005": [
     {
-      "id": "googlenews",
-      "name": "Google News"
-    },
-    {
-      "id": "metafilter",
-      "name": "Metafilter"
-    },
-    {
-      "id": "tinypic",
-      "name": "TinyPic \u00b7 2005"
-    },
-    {
-      "id": "tagged",
-      "name": "Tagged"
-    },
-    {
-      "id": "piczo",
-      "name": "Piczo"
-    },
-    {
-      "id": "steam",
-      "name": "Steam \u00b7 early client era"
-    },
-    {
-      "id": "wow",
-      "name": "Azeroth goes live"
-    },
-    {
-      "id": "paypal",
-      "name": "Paypal"
-    },
-    {
-      "id": "wired",
-      "name": "Wired News"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube \u00b7 independent 2005"
-    },
-    {
-      "id": "mashable",
-      "name": "Mashable \u00b7 open this post \u00b7 Jul 2005"
-    },
-    {
-      "id": "myspace",
-      "name": "Myspace"
-    },
-    {
-      "id": "flickr",
-      "name": "Your photostream"
-    },
-    {
-      "id": "gmail",
-      "name": "Gmail invite"
-    },
-    {
-      "id": "maps",
-      "name": "Google Maps"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "digg",
-      "name": "Digg \u00b7 rise year"
-    },
-    {
       "id": "adsense",
       "name": "Google AdSense"
     },
@@ -3576,10 +2804,6 @@
       "name": "Daypop"
     },
     {
-      "id": "delicious",
-      "name": "del.icio.us"
-    },
-    {
       "id": "dmoz",
       "name": "Dmoz"
     },
@@ -3598,10 +2822,6 @@
     {
       "id": "feedburner",
       "name": "Feedburner"
-    },
-    {
-      "id": "firefox",
-      "name": "Firefox 1.0"
     },
     {
       "id": "flickrpro",
@@ -3632,6 +2852,10 @@
       "name": "Google Earth \u00b7 28 Jun 2005 \u00b7 Keyhole lefto"
     },
     {
+      "id": "googlenews",
+      "name": "Google News"
+    },
+    {
       "id": "googlevideo",
       "name": "Google Video \u2014 25 Jan 2005"
     },
@@ -3642,10 +2866,6 @@
     {
       "id": "hotbot",
       "name": "Hotbot"
-    },
-    {
-      "id": "housingmaps",
-      "name": "Housing Maps"
     },
     {
       "id": "icq",
@@ -3662,10 +2882,6 @@
     {
       "id": "isp",
       "name": "Get CableNet Broadband"
-    },
-    {
-      "id": "itunes",
-      "name": "iTunes Music Store"
     },
     {
       "id": "kayak",
@@ -3698,6 +2914,18 @@
     {
       "id": "mapquest",
       "name": "MapQuest \u2014 print trap"
+    },
+    {
+      "id": "mashable",
+      "name": "Mashable \u00b7 open this post \u00b7 Jul 2005"
+    },
+    {
+      "id": "memeorandum",
+      "name": "Memeorandum"
+    },
+    {
+      "id": "metafilter",
+      "name": "Metafilter"
     },
     {
       "id": "milliondollar",
@@ -3752,8 +2980,8 @@
       "name": "Orkut residual densify \u00b7 2005"
     },
     {
-      "id": "pandora",
-      "name": "Pandora \u00b7 not the chip"
+      "id": "paypal",
+      "name": "Paypal"
     },
     {
       "id": "pets",
@@ -3762,6 +2990,10 @@
     {
       "id": "phoenix",
       "name": "Mozilla Firebird"
+    },
+    {
+      "id": "piczo",
+      "name": "Piczo"
     },
     {
       "id": "programmableweb",
@@ -3784,20 +3016,24 @@
       "name": "Startup-failures"
     },
     {
-      "id": "techcrunch",
-      "name": "Techcrunch"
+      "id": "steam",
+      "name": "Steam \u00b7 early client era"
+    },
+    {
+      "id": "tagged",
+      "name": "Tagged"
     },
     {
       "id": "technorati",
       "name": "What's happening in the blogosphere"
     },
     {
-      "id": "utorrent",
-      "name": "\u00b5Torrent"
+      "id": "tinypic",
+      "name": "TinyPic \u00b7 2005"
     },
     {
-      "id": "vimeo",
-      "name": "Vimeo \u2014 18 Jun 2005"
+      "id": "utorrent",
+      "name": "\u00b5Torrent"
     },
     {
       "id": "walmart",
@@ -3816,12 +3052,20 @@
       "name": "Web 2.0 Conference"
     },
     {
+      "id": "wired",
+      "name": "Wired News"
+    },
+    {
       "id": "wordpress",
       "name": "Wordpress"
     },
     {
       "id": "worldofwarcraft",
       "name": "World of Warcraft \u00b7 2005"
+    },
+    {
+      "id": "wow",
+      "name": "Azeroth goes live"
     },
     {
       "id": "xbox360",
@@ -3846,17 +3090,9 @@
     {
       "id": "zombo",
       "name": "Zombo"
-    },
-    {
-      "id": "memeorandum",
-      "name": "Memeorandum"
     }
   ],
   "2006": [
-    {
-      "id": "twitter",
-      "name": "twitter \u2014 What are you doing?"
-    },
     {
       "id": "mashable",
       "name": "Mashable \u2014 ~Jul 2005"
@@ -3864,34 +3100,6 @@
     {
       "id": "metafilter",
       "name": "Metafilter"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube \u2014 Broadcast Yourself"
-    },
-    {
-      "id": "myspace",
-      "name": "Myspace"
-    },
-    {
-      "id": "facebook",
-      "name": "Welcome to Thefacebook"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia"
-    },
-    {
-      "id": "flickr",
-      "name": "Your photostream"
-    },
-    {
-      "id": "gmail",
-      "name": "Gmail invite"
-    },
-    {
-      "id": "digg",
-      "name": "Digg \u00b7 rise year"
     },
     {
       "id": "adsense",
@@ -3924,10 +3132,6 @@
     {
       "id": "askjeeves",
       "name": "Ask Jeeves"
-    },
-    {
-      "id": "aws",
-      "name": "AWS S3"
     },
     {
       "id": "basecamp",
@@ -3978,16 +3182,8 @@
       "name": "Daypop"
     },
     {
-      "id": "delicious",
-      "name": "del.icio.us"
-    },
-    {
       "id": "dmoz",
       "name": "Dmoz"
-    },
-    {
-      "id": "docs",
-      "name": "Google Docs &amp; Spreadsheets"
     },
     {
       "id": "earth",
@@ -4034,10 +3230,6 @@
       "name": "Gnutella"
     },
     {
-      "id": "googledocs",
-      "name": "Google Docs"
-    },
-    {
       "id": "googleearth",
       "name": "Google Earth (alias)"
     },
@@ -4064,10 +3256,6 @@
     {
       "id": "icq",
       "name": "Icq"
-    },
-    {
-      "id": "ie7",
-      "name": "Ie7"
     },
     {
       "id": "imdb",
@@ -4116,10 +3304,6 @@
     {
       "id": "mapquest",
       "name": "MapQuest \u2014 print trap"
-    },
-    {
-      "id": "maps",
-      "name": "Google Maps"
     },
     {
       "id": "milliondollar",
@@ -4200,10 +3384,6 @@
     {
       "id": "reader",
       "name": "Google Reader"
-    },
-    {
-      "id": "roblox",
-      "name": "Roblox"
     },
     {
       "id": "secondlife",
@@ -4320,42 +3500,6 @@
   ],
   "2007": [
     {
-      "id": "hackernews",
-      "name": "Hacker News leftover"
-    },
-    {
-      "id": "friendfeed",
-      "name": "FriendFeed leftover"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix leftover"
-    },
-    {
-      "id": "appletv",
-      "name": "Apple TV leftover"
-    },
-    {
-      "id": "ipodtouch",
-      "name": "iPod touch leftover"
-    },
-    {
-      "id": "justintv",
-      "name": "Justin.tv leftover"
-    },
-    {
-      "id": "icanhas",
-      "name": "I Can Has Cheezburger leftover"
-    },
-    {
-      "id": "funnyordie",
-      "name": "Funny or Die leftover"
-    },
-    {
-      "id": "pownce",
-      "name": "Pownce leftover"
-    },
-    {
       "id": "androidann",
       "name": "Open Handset Alliance leftover"
     },
@@ -4374,89 +3518,9 @@
     {
       "id": "safari3",
       "name": "Safari 3 leftover"
-    },
-    {
-      "id": "wiki",
-      "name": "Wikipedia"
-    },
-    {
-      "id": "myspace",
-      "name": "Myspace"
-    },
-    {
-      "id": "ebay",
-      "name": "Ebay"
-    },
-    {
-      "id": "stumble",
-      "name": "StumbleUpon"
-    },
-    {
-      "id": "wow",
-      "name": "WoW leftover"
-    },
-    {
-      "id": "flickr",
-      "name": "Flickr"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "digg",
-      "name": "Digg"
-    },
-    {
-      "id": "iphone",
-      "name": "Safari"
-    },
-    {
-      "id": "streetview",
-      "name": "Street View"
-    },
-    {
-      "id": "gmail",
-      "name": "Gmail open"
-    },
-    {
-      "id": "fbplat",
-      "name": "Facebook Platform"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "tumblr",
-      "name": "Tumblr"
-    },
-    {
-      "id": "kindle",
-      "name": "Kindle"
-    },
-    {
-      "id": "ie6",
-      "name": "XP/IE6 residual"
-    },
-    {
-      "id": "playable",
-      "name": "Safari Queue \u00b7 2007 game cabinet"
-    },
-    {
-      "id": "maps",
-      "name": "Maps"
     }
   ],
   "2008": [
-    {
-      "id": "github",
-      "name": "Github"
-    },
     {
       "id": "mashable",
       "name": "Mashable"
@@ -4464,30 +3528,6 @@
     {
       "id": "metafilter",
       "name": "MetaFilter (2007)"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube - Broadcast Yourself."
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook"
-    },
-    {
-      "id": "myspace",
-      "name": "MySpace \u2014 a place for friends (2007)"
-    },
-    {
-      "id": "gmail",
-      "name": "Sign in to Gmail"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter / Twttr \u2014 What are you doing?"
-    },
-    {
-      "id": "flickr",
-      "name": "Your photostream"
     },
     {
       "id": "digg",
@@ -4504,14 +3544,6 @@
     {
       "id": "altavista",
       "name": "Altavista"
-    },
-    {
-      "id": "android",
-      "name": "T-Mobile G1"
-    },
-    {
-      "id": "appstore",
-      "name": "App Store"
     },
     {
       "id": "ask",
@@ -4542,10 +3574,6 @@
       "name": "Bowienet"
     },
     {
-      "id": "chrome",
-      "name": "Google Chrome"
-    },
-    {
       "id": "cnn",
       "name": "CNN.com - Breaking News, U.S., World, Weat"
     },
@@ -4554,20 +3582,12 @@
       "name": "Daypop"
     },
     {
-      "id": "delicious",
-      "name": "del.icio.us"
-    },
-    {
       "id": "dmoz",
       "name": "Open Directory Project (DMOZ)"
     },
     {
       "id": "docs",
       "name": "Your documents"
-    },
-    {
-      "id": "dropbox",
-      "name": "Dropbox"
     },
     {
       "id": "dropboxfolder",
@@ -4638,10 +3658,6 @@
       "name": "Housingmaps"
     },
     {
-      "id": "hulu",
-      "name": "Hulu"
-    },
-    {
       "id": "huluwatch",
       "name": "Hulu"
     },
@@ -4652,10 +3668,6 @@
     {
       "id": "infoseek",
       "name": "Infoseek"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 3G"
     },
     {
       "id": "isp",
@@ -4768,10 +3780,6 @@
     {
       "id": "spotifyseed",
       "name": "Spotify invite \u00b7 2008"
-    },
-    {
-      "id": "stackoverflow",
-      "name": "Stack Overflow"
     },
     {
       "id": "startupfailures",
@@ -4952,202 +3960,14 @@
   ],
   "2010": [
     {
-      "id": "android",
-      "name": "Nexus One \u00b7 Android 2.2"
-    },
-    {
-      "id": "chrome",
-      "name": "Google Chrome"
-    },
-    {
-      "id": "facebook",
-      "name": "Open Graph"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter"
-    },
-    {
-      "id": "tumblr",
-      "name": "Tumblr"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix"
-    },
-    {
-      "id": "google",
-      "name": "Google"
-    },
-    {
-      "id": "farmville",
-      "name": "Farmville"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram"
-    },
-    {
-      "id": "imgur",
-      "name": "Imgur"
-    },
-    {
-      "id": "foursquare",
-      "name": "Foursquare"
-    },
-    {
-      "id": "groupon",
-      "name": "Groupon"
-    },
-    {
-      "id": "ipad",
-      "name": "Ipad"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 4"
-    },
-    {
       "id": "path",
       "name": "Path leftover"
-    },
-    {
-      "id": "wave",
-      "name": "Google Wave"
-    },
-    {
-      "id": "formspring",
-      "name": "Formspring"
-    },
-    {
-      "id": "flipboard",
-      "name": "Flipboard leftover"
-    },
-    {
-      "id": "minecraft",
-      "name": "Minecraft Forum leftover"
-    },
-    {
-      "id": "hulu",
-      "name": "Hulu Plus leftover"
-    },
-    {
-      "id": "angry",
-      "name": "Angry Birds leftover"
-    },
-    {
-      "id": "googlebuzz",
-      "name": "Google Buzz leftover"
-    },
-    {
-      "id": "chromewebstore",
-      "name": "Chrome Web Store leftover"
-    },
-    {
-      "id": "kinect",
-      "name": "Kinect leftover"
-    },
-    {
-      "id": "cityville",
-      "name": "CityVille leftover"
-    },
-    {
-      "id": "playable",
-      "name": "Sling Nest \u00b7 2010 game cabinet"
-    },
-    {
-      "id": "ibooks",
-      "name": "iBooks leftover"
     }
   ],
   "2011": [
     {
-      "id": "airbnb",
-      "name": "Airbnb"
-    },
-    {
       "id": "chromebook",
       "name": "Chromebook leftover"
-    },
-    {
-      "id": "facebook",
-      "name": "Timeline"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "googleplus",
-      "name": "Google+"
-    },
-    {
-      "id": "spotify",
-      "name": "Spotify US"
-    },
-    {
-      "id": "instagram",
-      "name": "IG iOS"
-    },
-    {
-      "id": "pinterest",
-      "name": "Pinterest"
-    },
-    {
-      "id": "dropbox",
-      "name": "Dropbox"
-    },
-    {
-      "id": "linkedin",
-      "name": "LinkedIn IPO"
-    },
-    {
-      "id": "gmusic",
-      "name": "Google Music"
-    },
-    {
-      "id": "icloud",
-      "name": "Icloud"
-    },
-    {
-      "id": "ipad",
-      "name": "iPad 2"
-    },
-    {
-      "id": "iphone",
-      "name": "Siri"
-    },
-    {
-      "id": "minecraft",
-      "name": "Minecraft"
-    },
-    {
-      "id": "qwikster",
-      "name": "Qwikster"
-    },
-    {
-      "id": "twitch",
-      "name": "Twitch"
-    },
-    {
-      "id": "snapchat",
-      "name": "Snapchat leftover"
-    },
-    {
-      "id": "ios5",
-      "name": "iOS 5 leftover"
-    },
-    {
-      "id": "imessage",
-      "name": "iMessage leftover"
     },
     {
       "id": "honeycomb",
@@ -5156,14 +3976,6 @@
     {
       "id": "ics",
       "name": "Ice Cream Sandwich leftover"
-    },
-    {
-      "id": "wechat",
-      "name": "WeChat leftover"
-    },
-    {
-      "id": "line",
-      "name": "LINE leftover"
     },
     {
       "id": "temple",
@@ -5194,14 +4006,6 @@
       "name": "Google Wallet leftover"
     },
     {
-      "id": "stripe",
-      "name": "Stripe leftover"
-    },
-    {
-      "id": "codecademy",
-      "name": "Codecademy leftover"
-    },
-    {
       "id": "nintendo3ds",
       "name": "Nintendo 3DS leftover"
     },
@@ -5212,125 +4016,9 @@
     {
       "id": "gowalla",
       "name": "Gowalla leftover"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter"
-    },
-    {
-      "id": "kindlefire",
-      "name": "Kindle Fire"
     }
   ],
   "2012": [
-    {
-      "id": "buzzfeed",
-      "name": "Buzzfeed"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome"
-    },
-    {
-      "id": "drawsomething",
-      "name": "Draw Something"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter"
-    },
-    {
-      "id": "pinterest",
-      "name": "Pinterest"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "googledrive",
-      "name": "Google Drive"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 5"
-    },
-    {
-      "id": "medium",
-      "name": "Medium"
-    },
-    {
-      "id": "path",
-      "name": "Path"
-    },
-    {
-      "id": "snapchat",
-      "name": "Snapchat"
-    },
-    {
-      "id": "soundcloud",
-      "name": "Soundcloud"
-    },
-    {
-      "id": "surface",
-      "name": "Surface"
-    },
-    {
-      "id": "windows8",
-      "name": "Windows 8"
-    },
-    {
-      "id": "tinder",
-      "name": "Tinder leftover"
-    },
-    {
-      "id": "duolingo",
-      "name": "Duolingo leftover"
-    },
-    {
-      "id": "coursera",
-      "name": "Coursera leftover"
-    },
-    {
-      "id": "udacity",
-      "name": "Udacity leftover"
-    },
-    {
-      "id": "edx",
-      "name": "edX leftover"
-    },
-    {
-      "id": "nexus7",
-      "name": "Nexus 7 leftover"
-    },
-    {
-      "id": "jellybean",
-      "name": "Jelly Bean leftover"
-    },
-    {
-      "id": "ios6",
-      "name": "iOS 6 leftover"
-    },
-    {
-      "id": "googleplay",
-      "name": "Google Play leftover"
-    },
     {
       "id": "kindlefirehd",
       "name": "Kindle Fire HD leftover"
@@ -5338,36 +4026,12 @@
     {
       "id": "coinbase",
       "name": "Coinbase leftover"
-    },
-    {
-      "id": "playable",
-      "name": "2012 cabinet"
-    },
-    {
-      "id": "flipboard",
-      "name": "Flipboard"
-    },
-    {
-      "id": "uber",
-      "name": "UberX"
     }
   ],
   "2013": [
     {
-      "id": "bitcoin",
-      "name": "Bitcoin 2013 leftover"
-    },
-    {
-      "id": "bustle",
-      "name": "Bustle"
-    },
-    {
       "id": "canva13",
       "name": "Canva"
-    },
-    {
-      "id": "chromecast",
-      "name": "Chromecast"
     },
     {
       "id": "deliveroo",
@@ -5378,20 +4042,12 @@
       "name": "Dogecoin"
     },
     {
-      "id": "doordash",
-      "name": "Doordash"
-    },
-    {
       "id": "emojipedia",
       "name": "Emojipedia"
     },
     {
       "id": "facebookhome",
       "name": "Facebook Home"
-    },
-    {
-      "id": "giphy",
-      "name": "Giphy"
     },
     {
       "id": "googlekeep",
@@ -5434,20 +4090,8 @@
       "name": "iTunes Radio"
     },
     {
-      "id": "kahoot",
-      "name": "Kahoot!"
-    },
-    {
-      "id": "kitkat",
-      "name": "Android 4.4 KitKat"
-    },
-    {
       "id": "mega",
       "name": "Mega"
-    },
-    {
-      "id": "patreon",
-      "name": "Patreon"
     },
     {
       "id": "pluto",
@@ -5484,242 +4128,17 @@
     {
       "id": "xboxone13",
       "name": "Xbox One"
-    },
-    {
-      "id": "askfm",
-      "name": "Ask.fm"
-    },
-    {
-      "id": "whisper",
-      "name": "Whisper"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome habit"
-    },
-    {
-      "id": "medium",
-      "name": "Medium"
-    },
-    {
-      "id": "yikyak",
-      "name": "Yik Yak"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter"
-    },
-    {
-      "id": "snowden",
-      "name": "Snowden literacy"
-    },
-    {
-      "id": "telegram",
-      "name": "Telegram"
-    },
-    {
-      "id": "tumblr",
-      "name": "Yahoo buys Tumblr"
-    },
-    {
-      "id": "windows81",
-      "name": "Windows 8.1"
-    },
-    {
-      "id": "ios7",
-      "name": "iOS 7"
     }
   ],
-  "2014": [
-    {
-      "id": "alibabaipo",
-      "name": "Alibaba IPO leftover"
-    },
-    {
-      "id": "inbox",
-      "name": "Inbox by Gmail leftover"
-    },
-    {
-      "id": "echo",
-      "name": "Amazon Echo leftover"
-    },
-    {
-      "id": "flappybird",
-      "name": "Flappy Bird leftover"
-    },
-    {
-      "id": "game2048",
-      "name": "2048 leftover"
-    },
-    {
-      "id": "ios8",
-      "name": "iOS 8 leftover"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter"
-    },
-    {
-      "id": "applepay",
-      "name": "Apple Pay"
-    },
-    {
-      "id": "heartbleed",
-      "name": "Heartbleed"
-    },
-    {
-      "id": "icebucket",
-      "name": "Ice Bucket"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 6"
-    },
-    {
-      "id": "material",
-      "name": "Material"
-    },
-    {
-      "id": "musically14",
-      "name": "musical.ly"
-    },
-    {
-      "id": "playable",
-      "name": "2014 playables"
-    },
-    {
-      "id": "slack",
-      "name": "Slack"
-    },
-    {
-      "id": "snapchat",
-      "name": "Snapchat"
-    },
-    {
-      "id": "truecrypt",
-      "name": "Truecrypt"
-    },
-    {
-      "id": "twitch",
-      "name": "Twitch"
-    },
-    {
-      "id": "uber",
-      "name": "Uber"
-    },
-    {
-      "id": "whatsapp",
-      "name": "WhatsApp Install literacy"
-    },
-    {
-      "id": "oculusfb",
-      "name": "Oculus leftover"
-    }
-  ],
+  "2014": [],
   "2015": [
-    {
-      "id": "vine",
-      "name": "Vine"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube \u00b7 watch"
-    },
-    {
-      "id": "periscope",
-      "name": "Go LIVE"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram \u00b7 square feed"
-    },
-    {
-      "id": "spotify",
-      "name": "Spotify"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix"
-    },
-    {
-      "id": "echo",
-      "name": "$179.99 \u00b7 ships 14 Jul"
-    },
-    {
-      "id": "snapchat",
-      "name": "Snapchat"
-    },
-    {
-      "id": "meerkat",
-      "name": "Meerkat"
-    },
     {
       "id": "amppage",
       "name": "AMP announce"
     },
     {
-      "id": "windows10",
-      "name": "Get Windows 10"
-    },
-    {
-      "id": "googlephotos",
-      "name": "Unlimited high quality"
-    },
-    {
-      "id": "discord",
-      "name": "discordapp.com"
-    },
-    {
-      "id": "ios9",
-      "name": "iOS 9 leftover"
-    },
-    {
-      "id": "androidpay",
-      "name": "Android Pay"
-    },
-    {
-      "id": "applenews",
-      "name": "Apple News"
-    },
-    {
       "id": "applepencil",
       "name": "Apple Pencil"
-    },
-    {
-      "id": "applewatch",
-      "name": "Apple Watch"
-    },
-    {
-      "id": "beats1",
-      "name": "Beats 1"
     },
     {
       "id": "dx12",
@@ -5728,10 +4147,6 @@
     {
       "id": "elcapitan",
       "name": "OS X El Capitan"
-    },
-    {
-      "id": "ethereum",
-      "name": "Ethereum"
     },
     {
       "id": "fblive",
@@ -5746,66 +4161,18 @@
       "name": "Facebook Instant Articles"
     },
     {
-      "id": "ipadpro",
-      "name": "iPad Pro"
-    },
-    {
       "id": "ipfs",
       "name": "Ipfs"
     },
     {
       "id": "iphone6s",
       "name": "iPhone 6s"
-    },
-    {
-      "id": "k8s",
-      "name": "Kubernetes"
     }
   ],
   "2016": [
     {
-      "id": "alphago",
-      "name": "Alphago"
-    },
-    {
-      "id": "dyn",
-      "name": "The web blinked"
-    },
-    {
-      "id": "mastodon",
-      "name": "Mastodon leftover"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "vine",
-      "name": "Vine"
-    },
-    {
-      "id": "snapchat",
-      "name": "Snapchat"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "fblive",
-      "name": "Facebook Live"
-    },
-    {
       "id": "houseparty",
       "name": "Houseparty"
-    },
-    {
-      "id": "iphone",
-      "name": "iPhone 7"
     },
     {
       "id": "jio",
@@ -5816,28 +4183,8 @@
       "name": "LinkedIn"
     },
     {
-      "id": "moments",
-      "name": "Twitter Moments"
-    },
-    {
-      "id": "musically",
-      "name": "musical.ly"
-    },
-    {
-      "id": "slack",
-      "name": "Slack"
-    },
-    {
       "id": "smario",
       "name": "Super Mario Run"
-    },
-    {
-      "id": "douyin",
-      "name": "Douyin leftover"
-    },
-    {
-      "id": "airpods",
-      "name": "AirPods leftover"
     },
     {
       "id": "pixel",
@@ -5848,16 +4195,8 @@
       "name": "Android Nougat leftover"
     },
     {
-      "id": "allo",
-      "name": "Allo leftover"
-    },
-    {
       "id": "duo",
       "name": "Duo leftover"
-    },
-    {
-      "id": "googlehome",
-      "name": "Google Home leftover"
     },
     {
       "id": "oculusrift",
@@ -5892,399 +4231,24 @@
       "name": "Panama Papers leftover"
     },
     {
-      "id": "figma",
-      "name": "Figma leftover"
+      "id": "douyin",
+      "name": "Douyin leftover"
     },
     {
-      "id": "thedao",
-      "name": "The DAO leftover"
+      "id": "airpods",
+      "name": "AirPods leftover"
     },
     {
-      "id": "ethereum",
-      "name": "Ethereum leftover"
+      "id": "allo",
+      "name": "Allo leftover"
     },
     {
-      "id": "ios10",
-      "name": "iOS 10 leftover"
-    },
-    {
-      "id": "sierra",
-      "name": "macOS Sierra leftover"
-    },
-    {
-      "id": "daydream",
-      "name": "Daydream leftover"
-    },
-    {
-      "id": "battlefield1",
-      "name": "Battlefield 1 leftover"
-    },
-    {
-      "id": "letsencrypt",
-      "name": "Let&#x27;s Encrypt leftover"
-    },
-    {
-      "id": "pokemongo",
-      "name": "Pok\u00e9mon GO"
-    },
-    {
-      "id": "assistant",
-      "name": "Google Assistant"
+      "id": "googlehome",
+      "name": "Google Home leftover"
     }
   ],
-  "2017": [
-    {
-      "id": "slack17",
-      "name": "Send leftover"
-    },
-    {
-      "id": "cloudbleed",
-      "name": "Rotate leftover"
-    },
-    {
-      "id": "fortnite",
-      "name": "Fortnite Battle Royale"
-    },
-    {
-      "id": "teams",
-      "name": "Microsoft Teams"
-    },
-    {
-      "id": "musically",
-      "name": "musical.ly"
-    },
-    {
-      "id": "switch",
-      "name": "Nintendo Switch"
-    },
-    {
-      "id": "wannacry",
-      "name": "WannaCry \u00b7 literacy"
-    },
-    {
-      "id": "coreml",
-      "name": "Core ML"
-    },
-    {
-      "id": "creditfrz",
-      "name": "Freeze leftover"
-    },
-    {
-      "id": "echoshow",
-      "name": "Echo Show"
-    },
-    {
-      "id": "equifax",
-      "name": "Equifax \u00b7 freeze literacy"
-    },
-    {
-      "id": "homepodann",
-      "name": "HomePod announce"
-    },
-    {
-      "id": "hqtrivia",
-      "name": "HQ Trivia"
-    },
-    {
-      "id": "ios11",
-      "name": "iOS 11"
-    },
-    {
-      "id": "notpetya",
-      "name": "NotPetya leftover"
-    },
-    {
-      "id": "pixel2",
-      "name": "Pixel 2"
-    },
-    {
-      "id": "pixelbook",
-      "name": "Pixelbook"
-    },
-    {
-      "id": "pubgnote",
-      "name": "Chicken dinner leftover"
-    },
-    {
-      "id": "snapipo",
-      "name": "Snap IPO leftover"
-    },
-    {
-      "id": "watch3",
-      "name": "Watch Series 3"
-    },
-    {
-      "id": "iphone8",
-      "name": "iPhone 8"
-    },
-    {
-      "id": "bch",
-      "name": "Bitcoin Cash"
-    },
-    {
-      "id": "krack",
-      "name": "KRACK leftover"
-    },
-    {
-      "id": "cuphead",
-      "name": "Fight a boss leftover"
-    },
-    {
-      "id": "twitterlite",
-      "name": "Open Lite leftover"
-    },
-    {
-      "id": "hangoutschat",
-      "name": "Chat leftover"
-    },
-    {
-      "id": "snapmap",
-      "name": "Pinch leftover"
-    },
-    {
-      "id": "instagram17",
-      "name": "Feed leftover"
-    },
-    {
-      "id": "botw",
-      "name": "Climb leftover"
-    },
-    {
-      "id": "splatoon2",
-      "name": "Turf leftover"
-    },
-    {
-      "id": "tbh",
-      "name": "Vote leftover"
-    },
-    {
-      "id": "messengerday",
-      "name": "Day leftover"
-    },
-    {
-      "id": "gettingoverit",
-      "name": "Climb leftover"
-    },
-    {
-      "id": "hollowknight",
-      "name": "Bench leftover"
-    },
-    {
-      "id": "cardano",
-      "name": "Cardano"
-    },
-    {
-      "id": "codww2",
-      "name": "Call of Duty: WWII"
-    },
-    {
-      "id": "destiny2",
-      "name": "Destiny 2"
-    },
-    {
-      "id": "essentialph1",
-      "name": "Essential PH-1"
-    },
-    {
-      "id": "galaxys8",
-      "name": "Galaxy S8"
-    },
-    {
-      "id": "googlehomemini",
-      "name": "Google Home Mini"
-    },
-    {
-      "id": "googlelens",
-      "name": "Google Lens"
-    },
-    {
-      "id": "googlepay",
-      "name": "Google Pay"
-    },
-    {
-      "id": "highsierra",
-      "name": "macOS High Sierra"
-    },
-    {
-      "id": "horizonzd",
-      "name": "Horizon Zero Dawn"
-    },
-    {
-      "id": "imacpro",
-      "name": "iMac Pro"
-    },
-    {
-      "id": "injustice2",
-      "name": "Injustice 2"
-    },
-    {
-      "id": "ipadpro105",
-      "name": "iPad Pro 10.5"
-    },
-    {
-      "id": "ipadpro129",
-      "name": "iPad Pro 12.9 (2nd)"
-    },
-    {
-      "id": "iphone8plus",
-      "name": "iPhone 8 Plus"
-    }
-  ],
-  "2018": [
-    {
-      "id": "gplusgone",
-      "name": "Google+ leftover"
-    },
-    {
-      "id": "androidpie",
-      "name": "Android Pie leftover"
-    },
-    {
-      "id": "ios12",
-      "name": "iOS 12 leftover"
-    },
-    {
-      "id": "pubg",
-      "name": "PUBG leftover"
-    },
-    {
-      "id": "rdr2",
-      "name": "Red Dead Redemption 2 leftover"
-    },
-    {
-      "id": "mojave",
-      "name": "macOS Mojave leftover"
-    },
-    {
-      "id": "onedot",
-      "name": "1.1.1.1 leftover"
-    },
-    {
-      "id": "epicstore",
-      "name": "Epic Games Store leftover"
-    },
-    {
-      "id": "nso",
-      "name": "Nintendo Switch Online leftover"
-    },
-    {
-      "id": "espnplus",
-      "name": "ESPN+ leftover"
-    },
-    {
-      "id": "caffeine",
-      "name": "Caffeine leftover"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "gdpr",
-      "name": "25 May 2018"
-    },
-    {
-      "id": "github",
-      "name": "Github"
-    },
-    {
-      "id": "homepod",
-      "name": "HomePod \u00b7 $349"
-    },
-    {
-      "id": "spectre",
-      "name": "Spectre"
-    },
-    {
-      "id": "tiktok",
-      "name": "Tiktok"
-    },
-    {
-      "id": "trust",
-      "name": "Hearing"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia"
-    }
-  ],
+  "2017": [],
   "2019": [
-    {
-      "id": "disneyplus",
-      "name": "Disney+ \u00b7 join"
-    },
-    {
-      "id": "tiktok",
-      "name": "TikTok \u00b7 For You"
-    },
-    {
-      "id": "arcade",
-      "name": "Apple Arcade \u00b7 $4.99"
-    },
-    {
-      "id": "appletv",
-      "name": "Apple TV+ \u00b7 $4.99"
-    },
-    {
-      "id": "stadia",
-      "name": "Stadia \u00b7 Founder's Edition"
-    },
-    {
-      "id": "airpodspro",
-      "name": "AirPods Pro \u00b7 $249"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome habit"
-    },
-    {
-      "id": "windows10",
-      "name": "Windows 10 \u00b7 still mass"
-    },
-    {
-      "id": "playable",
-      "name": "2019 cabinet"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube \u00b7"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram \u00b7"
-    },
-    {
-      "id": "google",
-      "name": "Google \u00b7"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook \u00b7 News Feed"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon \u00b7"
-    },
-    {
-      "id": "yahoo",
-      "name": "Yahoo \u00b7 portal"
-    },
-    {
-      "id": "nyt",
-      "name": "NYT \u00b7"
-    },
-    {
-      "id": "ios13",
-      "name": "iOS 13 leftover"
-    },
-    {
-      "id": "ipados",
-      "name": "iPadOS leftover"
-    },
     {
       "id": "libra",
       "name": "Libra \u00b7"
@@ -6298,96 +4262,12 @@
       "name": "Instagram \u00b7 hide likes"
     },
     {
-      "id": "applecard",
-      "name": "Apple Card leftover"
-    },
-    {
-      "id": "oculusquest",
-      "name": "Oculus Quest \u00b7"
-    },
-    {
       "id": "wework",
       "name": "WeWork \u00b7 IPO collapse"
     },
     {
       "id": "area51",
       "name": "Area 51 \u00b7 raid meme"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter \u00b7 280"
-    },
-    {
-      "id": "apex",
-      "name": "Apex Legends"
-    },
-    {
-      "id": "airpods2",
-      "name": "AirPods (2nd gen)"
-    },
-    {
-      "id": "android10",
-      "name": "Android 10"
-    },
-    {
-      "id": "applewatch5",
-      "name": "Apple Watch Series 5"
-    },
-    {
-      "id": "astralchain",
-      "name": "Astral Chain"
-    },
-    {
-      "id": "bloodstained",
-      "name": "Bloodstained: Ritual of the Night"
-    },
-    {
-      "id": "borderlands3",
-      "name": "Borderlands 3"
-    },
-    {
-      "id": "catalina",
-      "name": "macOS Catalina"
-    },
-    {
-      "id": "control19",
-      "name": "Control"
-    },
-    {
-      "id": "crashteamracing",
-      "name": "Crash Team Racing Nitro-Fueled"
-    },
-    {
-      "id": "daysgone",
-      "name": "Days Gone"
-    },
-    {
-      "id": "deathstranding",
-      "name": "Death Stranding"
-    },
-    {
-      "id": "discoelysium",
-      "name": "Disco Elysium"
-    },
-    {
-      "id": "dmc5",
-      "name": "Devil May Cry 5"
-    },
-    {
-      "id": "fireemblem3h",
-      "name": "Fire Emblem: Three Houses"
-    },
-    {
-      "id": "galaxyfold",
-      "name": "Galaxy Fold"
-    },
-    {
-      "id": "galaxynote10",
-      "name": "Galaxy Note 10"
-    },
-    {
-      "id": "galaxys10",
-      "name": "Galaxy S10"
     },
     {
       "id": "geforcenow",
@@ -6422,244 +4302,9 @@
       "name": "MacBook Pro 16-inch"
     }
   ],
-  "2020": [
-    {
-      "id": "clubhouse",
-      "name": "Clubhouse leftover"
-    },
-    {
-      "id": "peacock",
-      "name": "Peacock leftover"
-    },
-    {
-      "id": "google",
-      "name": "Google leftover"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube leftover"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook leftover"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia leftover"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram leftover"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon leftover"
-    },
-    {
-      "id": "amongus",
-      "name": "Among Us leftover"
-    },
-    {
-      "id": "animalcrossing",
-      "name": "Animal Crossing leftover"
-    },
-    {
-      "id": "classroom",
-      "name": "Classroom leftover"
-    },
-    {
-      "id": "discord",
-      "name": "Discord leftover"
-    },
-    {
-      "id": "houseparty",
-      "name": "Houseparty leftover"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix leftover"
-    },
-    {
-      "id": "playable",
-      "name": "Year game leftover"
-    },
-    {
-      "id": "hbomax",
-      "name": "HBO Max leftover"
-    }
-  ],
-  "2021": [
-    {
-      "id": "nft",
-      "name": "NFT leftover"
-    },
-    {
-      "id": "coinbaseipo",
-      "name": "Coinbase IPO leftover"
-    },
-    {
-      "id": "epicapple",
-      "name": "Epic v Apple leftover"
-    },
-    {
-      "id": "google",
-      "name": "Google leftover"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon leftover"
-    },
-    {
-      "id": "att",
-      "name": "Allow \u201cMuseum App\u201d to track your activity"
-    },
-    {
-      "id": "chrome",
-      "name": "Chrome habit"
-    },
-    {
-      "id": "copilot",
-      "name": "Copilot waitlist"
-    },
-    {
-      "id": "flash",
-      "name": "Flash brick"
-    },
-    {
-      "id": "meta",
-      "name": "Meta rename"
-    },
-    {
-      "id": "playable",
-      "name": "Year games"
-    },
-    {
-      "id": "signal",
-      "name": "Signal"
-    },
-    {
-      "id": "windows10",
-      "name": "Windows 10 residual"
-    },
-    {
-      "id": "windows11",
-      "name": "Windows 11"
-    },
-    {
-      "id": "twitter",
-      "name": "Twitter leftover"
-    }
-  ],
-  "2022": [
-    {
-      "id": "temu",
-      "name": "Temu leftover"
-    },
-    {
-      "id": "midjourney",
-      "name": "Midjourney leftover"
-    },
-    {
-      "id": "dalle2",
-      "name": "DALL-E 2 leftover"
-    },
-    {
-      "id": "ios16",
-      "name": "iOS 16 leftover"
-    },
-    {
-      "id": "m2",
-      "name": "M2 leftover"
-    },
-    {
-      "id": "google",
-      "name": "Google"
-    },
-    {
-      "id": "youtube",
-      "name": "Youtube"
-    },
-    {
-      "id": "facebook",
-      "name": "Facebook"
-    },
-    {
-      "id": "wikipedia",
-      "name": "Wikipedia"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram"
-    },
-    {
-      "id": "amazon",
-      "name": "Amazon"
-    },
-    {
-      "id": "bereal",
-      "name": "BeReal leftover"
-    },
-    {
-      "id": "chatgpt",
-      "name": "ChatGPT Send"
-    },
-    {
-      "id": "ftx",
-      "name": "FTX leftover"
-    },
-    {
-      "id": "mastodon",
-      "name": "Mastodon leftover"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix"
-    },
-    {
-      "id": "nyt",
-      "name": "NYT leftover"
-    },
-    {
-      "id": "playable",
-      "name": "2022 playables"
-    },
-    {
-      "id": "tiktok",
-      "name": "TikTok leftover"
-    },
-    {
-      "id": "windows11",
-      "name": "Windows 11 leftover"
-    },
-    {
-      "id": "wordle",
-      "name": "Wordle"
-    },
-    {
-      "id": "twitter",
-      "name": "Home"
-    },
-    {
-      "id": "stablediff",
-      "name": "Stable Diffusion leftover"
-    }
-  ]
+  "2020": [],
+  "2021": [],
+  "2022": []
 }
 ;
 })(typeof window !== "undefined" ? window : this);

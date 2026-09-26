@@ -6,7 +6,7 @@
 
 ## One line
 
-**2007 is when the phone becomes a browser — iPhone Safari is the save, empty URL / App Store / Chrome never write, Street View / Gmail open / Facebook Platform are leftover, the mass shell is still XP + IE6, and App Store / Chrome / Android are next year.**
+**2007 is when the phone becomes a browser — iPhone Safari is the save, empty URL / App Store / Chrome never write, Street View / Gmail open / Facebook Platform are official stops 2–4, the mass shell is still XP + IE6, and App Store / Chrome / Android are next year.**
 
 ## Lock before you type HTML
 
@@ -22,7 +22,7 @@
 | Official 10 | ★ Safari · Street View leftover · Gmail open leftover · Facebook Platform leftover · Twitter leftover · YouTube leftover · Tumblr leftover · Kindle leftover · XP/IE6 residual · Safari Queue |
 | First door | **lean from scratch**. Do **not** restore an old forest. |
 | 2× leftover | **120** writers (40+40+40). Older 5× / 49-row notebooks are **not** 2×. |
-| Leftover-3× unique dest-true | **9 leftover dests** · map [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) · wiki / myspace / maps · ebay / stumble / wow · flickr / reddit / digg |
+| Leftover-3× unique dest-true | **0.** Catalogs are empty. Trail is the official 10 only. Street View, Gmail open, and Facebook Platform are stops 2–4. |
 
 ## Dual-cite (reopened 2026-09-01)
 

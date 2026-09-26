@@ -240,23 +240,6 @@ const THINGS = [
     },
   },
   {
-    year: "2005",
-    path: "/years/2005/sites/youtube/upload.html",
-    key: "itt05-yt-uploads",
-    seedOk: true,
-    incomplete: async (page) => {
-      await page.locator("form[data-yt-upload] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.fill("[name='title']", "Me at the zoo residual");
-      await page.fill("[name='desc']", "first clip");
-      const reqs = page.locator("[data-yt-req]");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await page.locator("form[data-yt-upload] button[type='submit']").click();
-    },
-  },
-  {
     year: "2008",
     path: "/years/2008/sites/github/issue.html",
     key: "itt08-github",
@@ -320,44 +303,42 @@ const THINGS = [
   },
   {
     year: "2017",
-    path: "/years/2017/sites/iphone/x.html",
+    react: true,
+    path: "/app/index.html#/year/2017",
     key: "itt17-faceid",
     incomplete: async (page) => {
-      await page.locator("[data-faceid-unlock]").click();
+      await page.getByRole("button", { name: "1 Face ID / iPhone X" }).click();
+      await page.locator("article.stop").getByRole("button", { name: "Swipe up", exact: true }).click();
     },
     complete: async (page) => {
-      await page.locator("[data-faceid-look]").click();
-      await page.locator("[data-faceid-unlock]").click();
-    },
-  },
-  {
-    year: "2018",
-    path: "/years/2018/sites/gdpr/index.html",
-    key: "itt18-gdpr",
-    incomplete: async (page) => {
-      await page.locator("[data-gdpr-accept-all]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-gdpr-manage]").click();
-      await page.locator("[data-gdpr-save]").click();
+      await page.getByRole("button", { name: "1 Face ID / iPhone X" }).click();
+      const room = page.locator("article.stop");
+      await room.locator("input[type='checkbox']").first().check();
+      await room.locator("input:not([type='checkbox'])").fill("Look");
+      await room.getByRole("button", { name: "Swipe up", exact: true }).click();
     },
   },
   {
     year: "2019",
-    path: "/years/2019/sites/disneyplus/home.html",
+    react: true,
+    path: "/app/index.html#/year/2019",
     key: "itt19-disneyplus",
     incomplete: async (page) => {
-      await page.locator("[data-dplus-continue]").click();
+      await page.getByRole("button", { name: "1 Disney+ Continue" }).click();
+      await page.locator("article.stop").getByRole("button", { name: "Continue", exact: true }).click();
     },
     complete: async (page) => {
-      await page.locator("[data-dplus-req]").nth(0).check();
-      await page.locator("[data-dplus-req]").nth(1).check();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-add]").nth(0).click();
-      await page.locator("[data-dplus-add]").nth(1).click();
-      await page.locator('[data-dplus-profile="kids"]').click();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-continue]").click();
+      await page.getByRole("button", { name: "1 Disney+ Continue" }).click();
+      const room = page.locator("article.stop");
+      const boxes = room.locator("input[type='checkbox']");
+      await boxes.nth(0).check();
+      await boxes.nth(1).check();
+      await room.getByRole("button", { name: "Adult" }).click();
+      await room.getByRole("button", { name: "The Mandalorian" }).click();
+      await room.getByRole("button", { name: "Frozen 2" }).click();
+      await room.getByRole("button", { name: "Kids" }).click();
+      await room.getByRole("button", { name: "Adult" }).click();
+      await room.getByRole("button", { name: "Continue", exact: true }).click();
     },
   },
   {
@@ -377,32 +358,40 @@ const THINGS = [
 
   {
     year: "2020",
-    path: "/years/2020/sites/zoom/meeting.html",
+    react: true,
+    path: "/app/index.html#/year/2020",
     key: "itt20-zoom",
     incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
+      await page.getByRole("button", { name: "1 Zoom Leave" }).click();
+      await page.locator("article.stop").getByRole("button", { name: "Stay" }).click();
     },
     complete: async (page) => {
-      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      await page.getByRole("button", { name: "1 Zoom Leave" }).click();
+      const room = page.locator("article.stop");
+      const reqs = room.locator("input[type='checkbox']");
       const n = await reqs.count();
       for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await page.locator("[data-official-need]").fill("brb leftover");
-      await page.locator("[data-official-verb-host] [data-official-verb]").click();
+      await room.getByPlaceholder("chat leftover").fill("brb leftover");
+      await room.getByRole("button", { name: "Leave", exact: true }).click();
     },
   },
   {
     year: "2021",
-    path: "/years/2021/sites/att/index.html",
+    react: true,
+    path: "/app/index.html#/year/2021",
     key: "itt21-att",
     incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
+      await page.getByRole("button", { name: "1 ATT Ask" }).click();
+      await page.locator("article.stop").getByRole("button", { name: "Allow", exact: true }).click();
     },
     complete: async (page) => {
-      await page.locator("[data-official-need]").fill("Museum App");
-      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      await page.getByRole("button", { name: "1 ATT Ask" }).click();
+      const room = page.locator("article.stop");
+      const reqs = room.locator("input[type='checkbox']");
       const n = await reqs.count();
       for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await page.locator("[data-official-verb-host] [data-official-verb]").click();
+      await room.getByPlaceholder("Museum App").fill("Museum App");
+      await room.getByRole("button", { name: "Ask App Not to Track", exact: true }).click();
     },
   },
   {
@@ -427,7 +416,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   for (const t of THINGS) {
     if (t.year === "2009") continue;
     test(`${t.year} loads and incomplete does not write ${t.key}`, async ({ page }) => {
-      test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
+      test.skip(!t.react && !fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
       await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);
@@ -452,7 +441,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
     });
 
     test(`${t.year} complete writes ${t.key}`, async ({ page }) => {
-      test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
+      test.skip(!t.react && !fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
       await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);

@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2018": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -179,8 +179,8 @@
       { path: "sites/periscope/index.html", label: "Periscope", blurb: "Title. Go LIVE. App of the Year.", match: "/periscope/" },
       { path: "sites/googlephotos/index.html", label: "Google Photos", blurb: "Unlimited high quality locker.", match: "/googlephotos/" }),
     "2016": yearVisitTour("2016",
-      { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/" },
-      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Team. Sidewalk. Catch leftover.", match: "/pokemongo/" }),
+      { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/stories" },
+      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Outdoor AR. Empty / trap never write. Not the chip.", match: "/pokemongo/" }),
     "2017": yearVisitTour("2017",
       { path: "sites/iphone/x.html", label: "Face ID / iPhone X", blurb: "No Home. Look. Swipe up.", match: "/iphone/x" },
       { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Free. 100. Drop leftover.", match: "/fortnite/" }),
@@ -415,6 +415,9 @@
 
   function stepHref(step, trailId) {
     if (!step) return "/index.html#passport";
+    if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[step.year]) {
+      return "/app/index.html#/year/" + step.year;
+    }
     var tid = trailId || (getNight().trail || "first-night");
     return (
       "/years/" +
@@ -519,6 +522,12 @@
       var m = (location.pathname || "").match(/\/years\/(\d{4})\//);
       if (m) return m[1];
     } catch (e) {
+      /* */
+    }
+    try {
+      var h = String(location.hash || "").match(/#\/year\/(\d{4})/);
+      if (h) return h[1];
+    } catch (eH) {
       /* */
     }
     try {

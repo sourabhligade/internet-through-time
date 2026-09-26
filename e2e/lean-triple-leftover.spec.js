@@ -31,20 +31,23 @@ function uniqueIds(year) {
   return ids;
 }
 
-test("2015 / 2017 / 2019 / 2020 dest folders stay (no dest-farm)", () => {
+test("2015 / 2017 dest folders stay · 2019 / 2020 are React doors", () => {
   expect(destFolders(2015).length).toBe(50);
-  expect(destFolders(2017).length).toBe(68);
-  expect(destFolders(2019).length).toBe(73);
-  expect(destFolders(2020).length).toBe(22);
+  expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
+  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(true);
+  expect(fs.existsSync(path.join(ROOT, "years", "2019"))).toBe(false);
+  expect(fs.existsSync(path.join(ROOT, "years", "2020"))).toBe(false);
+  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2019.js"))).toBe(true);
+  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2020.js"))).toBe(true);
 });
 
-test("2016 dest folders 57 · 2018 dest folders 24", () => {
+test("2016 dest folders 57 · 2018 year tree is gone", () => {
   expect(destFolders(2016).length).toBe(57);
-  expect(destFolders(2018).length).toBe(24);
+  expect(fs.existsSync(path.join(ROOT, "years", "2018"))).toBe(false);
 });
 
-test("2018 leftover-3× unique stays 3", () => {
-  expect(uniqueIds("2018")).toHaveLength(3);
+test("2018 leftover-3× unique is gone", () => {
+  expect(uniqueIds("2018")).toHaveLength(0);
 });
 
 test("triple leftover dests dest-disjoint leftover-3× unique", () => {

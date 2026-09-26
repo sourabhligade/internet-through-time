@@ -8,6 +8,7 @@
   var rooms = [
     "index.html",
     "pages/about.html",
+    "pages/checklist.html",
     "pages/home.html",
     "pages/map.html",
     "sites/amazon/index.html",
@@ -34,7 +35,7 @@
     "sites/youtube/index.html",
     "sites/zoom/index.html",
     "sites/zoom/meeting.html"
-  ];;;;;
+  ];;;;;;
   var urlMap = {
     "index.html": "http://museum.local/index.html",
     "pages/home.html": "http://home.microsoft.com/intl/web2020/",

@@ -438,7 +438,7 @@
       (isHabitYear(year) ? "This year" : "This year's flows · " + year) +
       '</b><ol data-itt-ten-flows>' +
       lis +
-      '</ol><p class="ott-flows-map"><a href="map.html">Full year flow map</a></p></div>'
+      '</ol><p class="ott-flows-map"><a href="map.html">Full year flow map</a> · <a href="checklist.html">Flow checklist</a></p></div>'
     );
   }
 

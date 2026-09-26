@@ -1,7 +1,9 @@
 # Leftover-3× · unique-flow criteria
 
+**Removed.** Leftover-3× unique flows are gone. The catalog is empty. The cream panels are off the pages. The text below is the old criteria, not current law.
+
 **Date:** 2026-09-15  
-**Status:** Criteria + unique leftover dests implemented 2026-09-15. Not dest-farm. Not ship law.  
+**Status:** Removed. Was criteria + unique leftover dests implemented 2026-09-15. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Template:** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests, 30 unique verbs, 30 unique keys.  
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  

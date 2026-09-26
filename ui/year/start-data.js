@@ -294,18 +294,6 @@
  " <a href=\"map.html\">Year flow map</a> "
  ]
 },
- "2018": {
- "href": "../sites/gdpr/index.html",
- "label": "★ One-thing · GDPR Manage REAL",
- "items": [
- " <a href=\"about.html\" style=\"color:#1565c0\">About 2018</a> — 1,630,322,579 · −8% · ITU",
- " <a href=\"../sites/gdpr/index.html\" style=\"color:#1565c0\">GDPR Manage</a> — Accept All never writes",
- " <a href=\"../sites/tiktok/fyp.html\" style=\"color:#1565c0\">TikTok For You</a> — Aug 2 merge",
- " <a href=\"../sites/trust/index.html\" style=\"color:#1565c0\">Hearing</a> — Apr 10",
- " <a href=\"../sites/instagram/igtv.html\" style=\"color:#1565c0\">IGTV</a> — not Reels",
- " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
- ]
-},
  
  "2007": {
  "href": "../sites/iphone/index.html",

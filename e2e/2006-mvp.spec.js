@@ -12,13 +12,11 @@ test.describe('2006 MVP', () => {
     await page.goto('/years/2006/');
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2006');
   });
-  test('home lists guided 6 and leftover 3×3', async ({ page }) => {
+  test('home lists guided 6 and no leftover-3× strip', async ({ page }) => {
     await page.goto('/years/2006/pages/home.html');
     await expect(page.locator('#ott-guided-2006 ol li')).toHaveCount(6);
     await expect(page.locator('body')).toContainText('Twttr');
-    await expect(
-      page.locator('p.itt-pop-3x3[data-itt-pop-3x3="2006"]').first().locator('a[href*="sites/"]')
-    ).toHaveCount(9);
+    await expect(page.locator('[data-itt-pop-3x3="2006"] a')).toHaveCount(0);
   });
   test('2007 hub card is open', async ({ page }) => {
     await page.goto('/');

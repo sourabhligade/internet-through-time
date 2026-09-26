@@ -45,13 +45,12 @@ function starKey(year) {
     2015: "itt15-periscope",
     2016: "itt16-ig-stories",
     2017: "itt17-faceid",
-    2018: "itt18-gdpr",
     2019: "itt19-disneyplus"};
   return map[year] || "";
 }
 
 test("every live year has more-a and more-b", () => {
-  expect(YEARS.length, "live years with more-a").toBe(23);
+  expect(YEARS.length, "live years with more-a").toBe(24);
 });
 
 /**

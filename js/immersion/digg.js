@@ -199,9 +199,8 @@
   function seed() {
     var list = load();
     if (list && list.length) return ensureIds(list);
-    list = ensureIds(defaultSeed());
-    save(list);
-    return list;
+    /* Show the seed stories. Persist the list only after a digg or bury. */
+    return ensureIds(defaultSeed());
   }
 
   function render(doc) {
@@ -339,6 +338,26 @@
                 try {
                   if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
                 } catch (eN) { /* */ }
+              } else if (want === "itt06-digg") {
+                try {
+                  if (!localStorage.getItem("itt06-digg")) {
+                    localStorage.setItem(
+                      "itt06-digg",
+                      JSON.stringify({
+                        multiStep: true,
+                        real: true,
+                        leftover: true,
+                        year: "2006",
+                        ts: Date.now(),
+                        bury: delta < 0,
+                        story: String(row.title || "").slice(0, 80)
+                      })
+                    );
+                  }
+                } catch (e06) { /* */ }
+                try {
+                  if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
+                } catch (eN6) { /* */ }
               }
             }
             var msg =

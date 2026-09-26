@@ -1,7 +1,7 @@
 # 2003 — READ FIRST (**CUT-FOREST LIVE**)
 
 **Date:** 2026-08-30
-**Status:** **CUT-FOREST LIVE** (named leftover 18 year-true · not a 2002 clone). Prefix `itt03`. Star = Photobucket upload · empty filename never writes. Disk **206 dests · 276 HTML** (23/93 is stale).
+**Status:** **CUT-FOREST LIVE** (named leftover 18 year-true · not a 2002 clone). Prefix `itt03`. Star = Photobucket upload · empty filename never writes. Disk **203 dests · 267 HTML**.
 
 Do **not** `git checkout` the old forest.
 

@@ -43,7 +43,7 @@
 
  "2015": "<p class=\"itt-felt-trail\">Title then Go LIVE: <a href=\"../sites/periscope/index.html\">Periscope</a>— empty title never writes.</p>",
 
- "2016": "<p class=\"itt-felt-trail\">24 hours: <a href=\"../sites/instagram/stories.html\">Instagram Stories</a>. Pokémon GO is.</p>",
+ "2016": "<p class=\"itt-felt-trail\">24 hours: <a href=\"../sites/instagram/stories.html\">Instagram Stories</a>. Pokémon GO is outdoor AR, not the chip.</p>",
 
  "2017": "<p class=\"itt-felt-trail\">Look, then unlock: <a href=\"../sites/iphone/x.html\">Face ID</a>— unlock without look never writes.</p>",
 

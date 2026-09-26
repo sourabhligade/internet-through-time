@@ -1,7 +1,7 @@
 # Year-by-year research → implement steps
 
 **Date:** 2026-09-20
-**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Do not dest-farm leftover-20 except 2017.
+**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Leftover-20 trails that are already wired: 2017 and 2019 stops 11–30. Do not add a 31st stop. Do not dest-farm a leftover-20 on any other year. 2018 stays wiped.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md).
 
 Visitor 100% is dest-true I/O on dests already on disk, not dest-folder count. Empty / trap never write. Leftover never writes the year star. KEEP leftover dests only if famous that year and cited. Miss the cap rather than invent.
@@ -962,7 +962,7 @@ KEEP extra dest leftover I/O:
 
 ## 2019
 
-**Kind:** Dest-lock reverted. Official 10 dest-true. Leftover-3× unique 9. Extra dest KEEP leftover I/O. Do not dest-farm leftover-20.
+**Kind:** Dest-lock reverted. Official 10 dest-true. Leftover-3× catalogs are empty. Extra dest KEEP leftover I/O. Trail stops 11–30 are the 20 leftover flows in `js/config/flow-trails.js`. The other cited KEEP slugs stay off that trail.
 
 **Star:** `disneyplus` · Disney+ Continue · `itt19-disneyplus`. Empty / trap never write this key. Leftover never writes this key.
 
@@ -1039,7 +1039,7 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock 2015–2020 again. 2019 stops 11–30 are the wired leftover trail. Do not add a 31st. 2018 stays wiped.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt19-disneyplus`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.

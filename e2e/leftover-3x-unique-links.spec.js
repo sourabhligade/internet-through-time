@@ -1,8 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× unique dest links: one dest slug once. Official dest leftover-3× first paint 0.
- * KEEP original leftover-3× unique dests. Leftover-3× unique dest-true dests stay 2018=3 / 2021=5.
- * Dests already on disk. Dest-true leftover dest I/O unchanged.
+ * Leftover-3× unique dest links. Catalogs empty; leftover-3× unique dests are gone.
  */
 const fs = require("fs");
 const path = require("path");
@@ -14,21 +12,7 @@ const leftover3x = require("./leftover-3x-unique.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const WAREHOUSE = new Set(["123-reg", "a21-inc", "123reg"]);
 const LO4X_2012 = new Set(["chrome", "twitter", "soundcloud"]);
-const WANT = {
-  2007: 18,
-  2010: 18,
-  2011: 18,
-  2012: 18,
-  2013: 18,
-  2014: 18,
-  2015: 18,
-  2016: 18,
-  2018: 6,
-  2019: 18,
-  2020: 18,
-  2021: 10,
-  2022: 18,
-};
+const WANT = {};
 const BLOCK = /<!-- ITT-3X-UNIQUE-LINKS:(\d{4}):start -->([\s\S]*?)<!-- ITT-3X-UNIQUE-LINKS:\d{4}:end -->/;
 const HREF = /href="([^"]+)"/g;
 
@@ -127,15 +111,15 @@ test.describe("leftover-3× unique dest links", () => {
     }
   });
 
-  test("leftover-3× unique dest-true dests stay 2018=3 · 2021=5 · sum 107", () => {
+  test("leftover-3× unique dest-true dests stay empty", () => {
     const byYear = {};
     for (const row of leftover3x) {
       byYear[row.year] = (byYear[row.year] || 0) + 1;
     }
-    expect(byYear["2018"]).toBe(3);
-    expect(byYear["2021"]).toBe(5);
+    expect(byYear["2018"]).toBeUndefined();
+    expect(byYear["2021"]).toBeUndefined();
     expect(byYear["2017"]).toBeUndefined();
-    expect(Object.values(byYear).reduce((a, b) => a + b, 0)).toBe(107);
+    expect(Object.values(byYear).reduce((a, b) => a + b, 0)).toBe(0);
   });
 
   test("live leftover dest leftover-3× unique dest links: no dups · official dest 0 · no 123-reg · no pop-more", () => {
@@ -171,63 +155,27 @@ test.describe("leftover-3× unique dest links", () => {
     expect(startWith3x, "Starting Point leftover-3× unique dest links first paint").toBe(0);
     expect(warehouseHref, "123-reg in leftover-3× unique dest hrefs").toBe(0);
     expect(popMore, "leftover-3× unique dest links tagged itt-pop-more").toBe(0);
-    expect(railPages).toBeGreaterThan(100);
+    expect(railPages).toBe(0);
   });
 
   test("2007 leftover dest leftover-3× unique dest wiki · official dest leftover-3× unique dest links 0", async ({
     page,
   }) => {
     await page.goto("/years/2007/sites/wiki/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-3x-unique-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs.length).toBe(17);
-    expect(slugs).toContain("friendfeed");
-    expect(slugs).toContain("hackernews");
-    expect(slugs).not.toContain("wiki");
-    expect(slugs).not.toContain("123-reg");
-    const cls = await page.locator("[data-itt-3x-unique-links]").first().getAttribute("class");
-    expect(cls || "").not.toMatch(/itt-pop-more/);
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
     await page.goto("/years/2007/sites/iphone/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-  });
-
-  test("2018 leftover dest leftover-3× unique dest reddit · GDPR leftover-3× unique dest links 0", async ({
-    page,
-  }) => {
-    await page.goto("/years/2018/sites/reddit/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-3x-unique-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).toEqual(expect.arrayContaining(["youtube", "wikipedia", "gplusgone", "epicstore", "ios12"]));
-    expect(slugs).not.toContain("reddit");
-    await page.goto("/years/2018/sites/gplusgone/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-    await page.goto("/years/2018/sites/gdpr/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-    await expect(page.locator("[data-official-key], html[data-official-key]")).toHaveCount(1);
   });
 
   test("2021 leftover dest leftover-3× unique dest amazon · ATT leftover-3× unique dest links 0", async ({
     page,
   }) => {
-    await page.goto("/years/2021/sites/amazon/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-3x-unique-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).toContain("nft");
-    expect(slugs).toContain("coinbaseipo");
-    expect(slugs).toContain("epicapple");
-    await page.goto("/years/2021/sites/att/index.html");
+    await page.goto("/app/index.html#/year/2021");
+    await page.getByRole("button", { name: "Amazon", exact: true }).click();
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
+    await page.getByRole("button", { name: "1 ATT Ask" }).click();
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
 
@@ -235,14 +183,8 @@ test.describe("leftover-3× unique dest links", () => {
     page,
   }) => {
     await page.goto("/years/2022/sites/amazon/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-3x-unique-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).toContain("temu");
-    expect(slugs).not.toContain("amazon");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
     await page.goto("/years/2022/sites/chatgpt/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
@@ -251,12 +193,8 @@ test.describe("leftover-3× unique dest links", () => {
     page,
   }) => {
     await page.goto("/years/2010/sites/netflix/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-3x-unique-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(slugs).toContain("flipboard");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
     await page.goto("/years/2010/sites/instagram/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
@@ -277,28 +215,9 @@ test.describe("leftover-3× unique dest links", () => {
     ]);
     await page.reload();
     await revealLeftoverRails(page);
-    const go = page.locator("[data-itt-lo3x] [data-pop-go][data-pop-id='wiki']:not([data-pop-key])").first();
-    await expect(go).toBeVisible();
-    const panel = go.locator("xpath=ancestor::*[@data-itt-lo3x][1]");
-    await go.click();
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
     expect(await getKey(page, "itt07-pop-wiki")).toBeFalsy();
-    await panel.locator('[data-pop-pick="keep"]').click();
-    await panel.locator("[data-pop-req]").nth(0).check();
-    await panel.locator("[data-pop-req]").nth(1).check();
-    await panel.locator("[data-pop-field]").fill("wiki leftover");
-    await go.click();
-    await expect.poll(() => getKey(page, "itt07-pop-wiki")).toBeTruthy();
     expect(await getKey(page, "itt07-iphone")).toBeFalsy();
-  });
-
-  test("2018 leftover dest KEEP dest-true leftover dest I/O never writes star", async ({ page }) => {
-    await completeLeftoverDest(
-      page,
-      "/years/2018/sites/gplusgone/index.html",
-      "gplusgone-lx",
-      "itt18-gdpr",
-      "2018"
-    );
   });
 
   test("2022 leftover dest leftover-3× unique dest-true leftover dest I/O never writes star", async ({
@@ -312,17 +231,8 @@ test.describe("leftover-3× unique dest links", () => {
     ]);
     await page.reload();
     await revealLeftoverRails(page);
-    const go = page.locator("[data-itt-lo3x] [data-pop-go][data-pop-id='amazon']:not([data-pop-key])").first();
-    await expect(go).toBeVisible();
-    const panel = go.locator("xpath=ancestor::*[@data-itt-lo3x][1]");
-    await go.click();
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
     expect(await getKey(page, "itt22-pop-amazon")).toBeFalsy();
-    await panel.locator('[data-pop-pick="keep"]').click();
-    await panel.locator("[data-pop-req]").nth(0).check();
-    await panel.locator("[data-pop-req]").nth(1).check();
-    await panel.locator("[data-pop-field]").fill("amazon leftover");
-    await go.click();
-    await expect.poll(() => getKey(page, "itt22-pop-amazon")).toBeTruthy();
     expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
   });
 });

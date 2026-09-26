@@ -123,7 +123,6 @@ const Y00 = [
   { path: '/years/2000/sites/amazon/index.html', key: 'itt00-smile-tab', kind: 'hops', yy: '00', year: '2000' },
   { path: '/years/2000/sites/pets/shutdown.html', key: 'itt00-pets-end', kind: 'checks', yy: '00', year: '2000' },
   { path: '/years/2000/sites/startupfailures/index.html', key: 'itt00-fail', kind: 'hops', yy: '00', year: '2000' },
-  ,
   { path: '/years/2000/sites/half/index.html', key: 'itt00-half', kind: 'checks', yy: '00', year: '2000' },
   { path: '/years/2000/sites/baidu/index.html', key: 'itt00-baidu', kind: 'query', yy: '00', year: '2000' },
   { path: '/years/2000/sites/everything2/index.html', key: 'itt00-e2', kind: 'query', yy: '00', year: '2000' },

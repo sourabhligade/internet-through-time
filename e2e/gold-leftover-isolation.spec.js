@@ -36,7 +36,6 @@ const GOLD = [
   { year: "2015", dest: "sites/periscope/index.html", star: "itt15-periscope" },
   { year: "2016", dest: "sites/instagram/stories.html", star: "itt16-ig-stories" },
   { year: "2017", dest: "sites/iphone/x.html", star: "itt17-faceid" },
-  { year: "2018", dest: "sites/gdpr/index.html", star: "itt18-gdpr" },
   { year: "2019", dest: "sites/disneyplus/index.html", star: "itt19-disneyplus" },
 ];
 

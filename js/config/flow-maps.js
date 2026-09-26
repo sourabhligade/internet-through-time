@@ -2007,7 +2007,7 @@
 ],
     "year": "2004"
   };
-  ITT.flowMaps["2005"] = {
+ITT.flowMaps["2005"] = {
     "year": "2005",
     "thesis": "YouTube upload is the gold. Maps / Reddit / Digg are. XP + IE6.",
     "shell": "Windows XP · IE 6",
@@ -2045,7 +2045,7 @@
       }
     ]
   };
-  ITT.flowMaps["2006"] = {
+    ITT.flowMaps["2006"] = {
     "year": "2006",
     "thesis": "Twttr update is the gold. News Feed / Google←YouTube. XP + IE6.",
     "shell": "Windows XP · IE 6",
@@ -3245,44 +3245,7 @@
     ]
   };
 
-  ITT.flowMaps["2018"] = {
-    thesis: "The banner is the door. A quiz becomes a hearing. The loops change their name.",
-    shell: "Win10 mass · Chrome habit · EdgeHTML residual",
-    year: "2018",
-    how: [
-      "GDPR: Accept All never writes · Manage + 2 ticks → Save → itt18-gdpr",
-      "TikTok: tap two clips + merge honesty → itt18-tiktok-fyp",
-      "Next waits for the write. Crumb ← last dest is visible on land.",
-      "Reels / Meta / Chromium Edge-as-default / Marshmello are not this year."
-    ],
-    branches: [
-      {
-        label: "★ Official 10",
-        do: "Star stays GDPR Manage. Accept All never writes.",
-        sites: [
-          { name: "1 GDPR banner", href: "sites/gdpr/index.html", do: "Manage → itt18-gdpr → TikTok" },
-          { name: "2 TikTok For You", href: "sites/tiktok/fyp.html", do: "two taps + merge → itt18-tiktok-fyp → Hearing" },
-          { name: "3 Hearing", href: "sites/trust/index.html", do: "Apr 10 → itt18-hearing → IGTV" },
-          { name: "4 IGTV", href: "sites/instagram/igtv.html", do: "not Reels + title → itt18-igtv → Chrome 68" },
-          { name: "5 Chrome 68", href: "sites/chrome/not-secure.html", do: "Not secure · not Chromium Edge → itt18-not-secure → HomePod" },
-          { name: "6 HomePod", href: "sites/homepod/index.html", do: "$349 buy this year → itt18-homepod → Spectre" },
-          { name: "7 Spectre", href: "sites/spectre/index.html", do: "literacy · no exploit → itt18-spectre → Fortnite/Switch" },
-          { name: "8 Fortnite on Switch", href: "sites/fortnite/switch.html", do: "not Marshmello → itt18-fn-switch → GitHub" },
-          { name: "9 GitHub $7.5B", href: "sites/github/microsoft.html", do: "2008 was the issue dest → itt18-github → Consent Dash" },
-          { name: "10 Consent Dash", href: "sites/playable/game.html", do: "Manage is the save → itt18-game-consentdash → GDPR" }
-        ]
-      },
-      {
-        label: "Side · rejoin official",
-        do: "Never a second star",
-        sites: [
-          { name: "Manage replay", href: "sites/gdpr/index.html", do: "replay · no second official write" },
-          { name: "Famous", href: "sites/playable/game.html", do: "cabinet · gold is Consent Dash" }
-        ]
-      }
-    ]
-  };
-
+  
 ITT.flowMaps["2007"] = {
     thesis: "The phone becomes a browser. Empty / App Store / Chrome never write. Go is the save.",
     shell: "XP mass · IE6 · iPhone is a room",

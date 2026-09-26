@@ -1,33 +1,30 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-const { enterYear, contentFrame } = require("./helpers");
-
 test.describe("2019 MVP", () => {
-  test("2019 is live", async ({ page }) => {
-    const fs = require("fs");
-    const path = require("path");
-    expect(fs.existsSync(path.join(__dirname, "..", "years", "2019", "index.html"))).toBe(true);
+  test("2019 card opens the React year", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator("a.year-card.available[href*='years/2019']")).toBeVisible();
+    const card = page.locator("a.year-card.available[data-year='2019']");
+    await expect(card).toBeVisible();
+    await expect(card).toHaveAttribute("href", /app\/index\.html#\/year\/2019/);
     await expect(page.locator(".year-card.locked.y2019")).toHaveCount(0);
   });
 
-  test("shell boots and home chip is Disney+ Continue", async ({ page }) => {
-    await enterYear(page, "2019");
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-ott-one-thing="2019"]')).toBeVisible({ timeout: 20000 });
-    await expect(frame.locator('[data-ott-one-thing="2019"]')).toHaveAttribute("href", /disneyplus\/home/);
-    await expect(frame.locator("#ott-guided-2019 ol > li")).toHaveCount(6);
+  test("React door shows Disney+ Continue and six guided steps", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2019");
+    await expect(page.getByRole("heading", { name: "Disney+ Continue" })).toBeVisible();
+    await expect(page.locator("article.stop ol > li")).toHaveCount(6);
   });
 
-  test("about dual-cite and bans", async ({ page }) => {
-    await page.goto("/years/2019/pages/about.html");
-    await expect(page.locator("body")).toContainText("1,630,322,579");
-    await expect(page.locator("body")).toContainText("ends 2018");
-    await expect(page.locator("body")).toContainText(/ITU/i);
-    await expect(page.locator("body")).toContainText(/4\.1/);
-    await expect(page.locator("body")).toContainText(/Disney/i);
-    await expect(page.locator("body")).toContainText(/Reels/i);
+  test("about keeps the 2018 table and the ITU cite", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2019");
+    await page.locator(".rails").getByRole("button", { name: "About 2019" }).click();
+    const about = page.locator("article.stop");
+    await expect(about).toContainText("1,630,322,579");
+    await expect(about).toContainText("ends 2018");
+    await expect(about).toContainText(/ITU/i);
+    await expect(about).toContainText(/4\.1/);
+    await expect(about).toContainText(/Disney/i);
+    await expect(about).toContainText(/Reels/i);
   });
 });

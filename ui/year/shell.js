@@ -654,7 +654,11 @@
         return;
       }
       link.hidden = false;
-      link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
+      if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[rec.year]) {
+        link.href = "../../app/index.html#/year/" + rec.year;
+      } else {
+        link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
+      }
       link.textContent = rec.label + " · " + rec.year + " →";
       link.title = "Same brand, next year" + (rec.note ? " · " + rec.note : "");
     }

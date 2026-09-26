@@ -30,7 +30,6 @@
     "2015": ["instagram|Instagram", "spotify|Spotify", "netflix|Netflix"],
     "2016": ["slack|Slack", "reddit|Reddit", "netflix|Netflix"],
     "2017": ["snapipo|Snap IPO","bitcoinath|Bitcoin","echoshow|Echo Show","reddit|Reddit","youtube|YouTube","hqtrivia|HQ Trivia","notpetya|NotPetya","yahoo3b|Yahoo","discord17|Discord"],
-    "2018": ["reddit|Reddit", "youtube|YouTube", "wikipedia|Wikipedia"],
     
     "2020": ["youtube|YouTube", "wikipedia|Wikipedia", "airbnb|Airbnb leftover"]
   };

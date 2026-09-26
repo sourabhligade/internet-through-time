@@ -38,23 +38,6 @@ const YEAR_WRONG_2009 = [
  *   doors: { dest: string, go: string, key: string, next: string, nextKey: string, weather: RegExp, lx: string[], never: string[] }[]
  * }>} */
 const LIVE = {
-  2005: {
-    star: "itt05-yt-uploads",
-    starHref: "youtube",
-    gold: ["itt05-yt-uploads", "itt05-maps", "itt05-pandora", "itt05-digg", "itt05-reddit", "itt05-flickr"],
-    want2x: 9,
-    official: ["youtube", "maps", "pandora", "housingmaps", "digg", "reddit", "flickr", "itunes", "techcrunch", "playable"],
-    ils: ["64,780,617"],
-    doors: [
-      { dest: "/years/2005/sites/facebook/index.html", go: "[data-pop-go][data-pop-id='facebook']", key: "itt05-pop-facebook", next: "lastfm/index.html", nextKey: "itt05-pop-lastfm", weather: /Sep 2005 high school|Thefacebook college leftover/i, lx: ["itt05-fb-hs", "itt05-fb-rename"], never: ["itt05-yt-uploads"] },
-      { dest: "/years/2005/sites/lastfm/index.html", go: "[data-pop-go][data-pop-id='lastfm']", key: "itt05-pop-lastfm", next: "reader/index.html", nextKey: "itt05-pop-reader", weather: /9 Aug 2005 Audioscrobbler|2003 seed leftover/i, lx: ["itt05-lastfm-lx"], never: ["itt05-yt-uploads"] },
-      { dest: "/years/2005/sites/reader/index.html", go: "[data-pop-go][data-pop-id='reader']", key: "itt05-pop-reader", next: "analytics/index.html", nextKey: "itt05-pop-analytics", weather: /7 Oct 2005 Google Reader/i, lx: ["itt05-reader-lx"], never: ["itt05-yt-uploads"] },
-      { dest: "/years/2005/sites/analytics/index.html", go: "[data-pop-go][data-pop-id='analytics']", key: "itt05-pop-analytics", next: "googleearth/index.html", nextKey: "itt05-pop-googleearth", weather: /14 Nov 2005 Google Analytics/i, lx: ["itt05-ga-lx"], never: ["itt05-yt-uploads"] },
-      { dest: "/years/2005/sites/googleearth/index.html", go: "[data-pop-go][data-pop-id='googleearth']", key: "itt05-pop-googleearth", next: "secondlife/index.html", nextKey: "itt05-pop-secondlife", weather: /28 Jun 2005 Google Earth/i, lx: ["itt05-googleearth"], never: ["itt05-yt-uploads", "itt05-maps"] },
-      { dest: "/years/2005/sites/yelp/index.html", go: "[data-pop-go][data-pop-id='yelp']", key: "itt05-pop-yelp", next: "odeo/index.html", nextKey: "itt05-pop3-odeo", weather: /Yelp leftover 2005/i, lx: ["itt05-yelp-lx"], never: ["itt05-yt-uploads"] },
-      { dest: "/years/2005/sites/odeo/index.html", go: "[data-pop-go][data-pop-id='pop3-odeo']", key: "itt05-pop3-odeo", next: "linkedin/index.html", nextKey: "itt05-pop3-linkedin", weather: /Odeo 2005 podcast leftover/i, lx: ["itt05-odeo-lx"], never: ["itt05-yt-uploads", "itt06-tweets"] },
-      { dest: "/years/2005/sites/linkedin/index.html", go: "[data-pop-go][data-pop-id='pop3-linkedin']", key: "itt05-pop3-linkedin", next: "pages/home.html", nextKey: "", weather: /LinkedIn leftover 2005/i, lx: ["itt05-li-lx"], never: ["itt05-yt-uploads"] }],
-  },
   2006: {
     star: "itt06-tweets",
     starHref: "twitter",
@@ -246,10 +229,6 @@ async function walkDoor(page, door, gold) {
 }
 
 const FIRST_PACK_MISSING = {
-  2005: [
-    { dest: "/years/2005/sites/youtube/watch.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt05-pop-youtube", next: "wikipedia/index.html", nextKey: "itt05-pop-wikipedia", weather: /YouTube leftover 2005 watch/i, lx: [], never: ["itt05-yt-uploads"] },
-    { dest: "/years/2005/sites/wikipedia/index.html", go: "[data-pop-go][data-pop-id='wikipedia']", key: "itt05-pop-wikipedia", next: "yahoo/index.html", nextKey: "itt05-pop-yahoo", weather: /Wikipedia leftover 2005/i, lx: [], never: ["itt05-yt-uploads"] },
-    { dest: "/years/2005/sites/earth/index.html", go: "[data-pop-go][data-pop-id='earth']", key: "itt05-pop-earth", next: "milliondollar/index.html", nextKey: "itt05-pop-milliondollar", weather: /Google Earth leftover 2005 leftover 999/i, lx: [], never: ["itt05-yt-uploads", "itt05-maps"] }],
   2006: [
     { dest: "/years/2006/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt06-pop-youtube", next: "facebook/index.html", nextKey: "itt06-pop-facebook", weather: /YouTube leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-yt"] },
     { dest: "/years/2006/sites/facebook/index.html", go: "[data-pop-go][data-pop-id='facebook']", key: "itt06-pop-facebook", next: "wikipedia/index.html", nextKey: "itt06-pop-wikipedia", weather: /Facebook leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-feed", "itt06-fb-open"] }],
@@ -266,7 +245,6 @@ test.describe("leftover 3× first-pack dest machines that were missing", () => {
   }
 
   test("leftover-2× dest-wrong Maps leftover is gone on KEEP dests", async ({ page }) => {
-    await page.goto("/years/2005/sites/lastfm/index.html");
   await revealLeftoverRails(page);
     const labels = await page.locator("[data-lo-save]").allTextContents();
     expect(labels.join(" ")).not.toMatch(/Maps leftover/);
@@ -276,7 +254,7 @@ test.describe("leftover 3× first-pack dest machines that were missing", () => {
 
 test.describe("CUT-3X-2X-2005-2010 dest folders stay frozen", () => {
   test("dest folders stay 117 / 126 / 55 / 199 / 68 / 44", () => {
-    const want = { 2005: 117, 2006: 126, 2007: 55, 2008: 199, 2009: 68, 2010: 44 };
+    const want = { 2006: 126, 2007: 55, 2008: 199, 2009: 68, 2010: 44 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;
@@ -339,7 +317,6 @@ for (const [year, spec] of Object.entries(LIVE)) {
           expect(joined, "year-wrong 2009 dest " + bad).not.toMatch(new RegExp("/" + bad + "/"));
         }
       }
-      if (year === "2005") expect(twoXH.join(" ")).toMatch(/facebook/);
       if (year === "2006") expect(twoXH.join(" ")).toMatch(/wii/);
       if (year === "2007") expect(twoXH.join(" ")).toMatch(/iptouch/);
       if (year === "2008") expect(twoXH.join(" ")).toMatch(/airbnb/);

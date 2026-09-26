@@ -8,7 +8,7 @@
 
 ## One line
 
-**2005 is when Web 2.0 becomes a business boom — YouTube upload is the save, Maps / Reddit / Digg / Pandora / iTunes podcasts are leftover, Yahoo is still #1 visits, and Google does not own YouTube yet.**
+**2005 is when Web 2.0 becomes a business boom — YouTube upload is the save, Maps / Reddit / Digg / Pandora / iTunes podcasts are official stops, Yahoo is still #1 visits, and Google does not own YouTube yet.**
 
 ## Lock before you type HTML
 
@@ -22,7 +22,7 @@
 | Trap | Google owns YouTube (Oct **2006**) · Twitter · open Facebook · Street View · Chrome · iPhone |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | YouTube upload · Maps What/Where or drag · Pandora Create station · HousingMaps Refresh listings · Digg bury · Reddit boost · Flickr photostream Upload · iTunes Subscribe · TechCrunch Open this post · HoverChop start/crash. **Not leftover-note plaques.** |
-| First door | **full year**. **350 dest folders** · HTML **≥ 349**. Match **2008 or more**. Not a lean door. |
+| First door | **full year**. Disk is **806** site folders · **966** HTML. Not a lean door. |
 | 2× leftover | **120** writers. Beat 2008’s **116**. |
 | 5k-web | research envelope, not dest count. ILS June **includes 2005** (legal cell). |
 
@@ -87,4 +87,4 @@ Treat YouTube as Google-owned · Twitter / Twttr · Facebook open / News Feed ·
 
 **Did:** opened ILS · WDM 2005 · Cybercultural 2005 · Google Maps blog · Apple podcast PRs · Flickr acquire blog · Hosting.com 2005 ranks · Netcraft Jun/Dec 2005 · harvested 80 deleted local 2005 MD/extract files · Wikipedia **303** 2005 properties + citation URL harvest.
 
-**Did not:** restore `years/2005/` · unlock the hub card · GET 64 million hostnames · invent brand pixels · move the star to Pandora · unlock 2006.
+**Did not:** GET 64 million hostnames · invent brand pixels · move the star to Pandora. `years/2005/` is on disk and the hub card is open.

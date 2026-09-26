@@ -14,7 +14,7 @@ const OFFICIAL = [
 ];
 
 const LEFTOVER = [
-  { path: "/years/2017/sites/iphone/animoji.html", key: "itt17-animoji", empty: async (p) => p.locator("[data-animoji-send]").click(), fill: async (p) => { await p.locator("[data-animoji-pick=panda]").click(); await p.locator("[data-animoji-send]").click(); } },
+  { path: "/years/2017/sites/iphone/animoji.html", key: "itt17-animoji", empty: async (p) => p.locator("[data-animoji-send]").click(), fill: async (p) => { await p.evaluate(() => localStorage.setItem("itt17-faceid", "{\"real\":true}")); await p.locator("[data-animoji-pick=panda]").click(); await p.locator("[data-animoji-req]").nth(0).check(); await p.locator("[data-animoji-req]").nth(1).check(); await p.locator("[data-animoji-send]").click(); } },
   { path: "/years/2017/sites/ios11/index.html", key: "itt17-ios11", empty: async (p) => p.locator("[data-p17-go]").click(), fill: async (p) => { await p.locator("[data-p17-req]").nth(0).check(); await p.locator("[data-p17-req]").nth(1).check(); await p.locator("[data-p17-go]").click(); } },
   { path: "/years/2017/sites/pubgnote/index.html", key: "itt17-pubgnote", kind: "pick" },
   { path: "/years/2017/sites/cuphead/index.html", key: "itt17-cuphead", kind: "pick" },
@@ -51,25 +51,25 @@ const TRAILS = [
 
 const LEFTOVER_NEXT = [
   { from: "/years/2017/sites/iphone/animoji.html", href: "ios11", key: "itt17-animoji" },
-  { from: "/years/2017/sites/ios11/index.html", href: "iphone/x.html", key: "itt17-ios11" },
+  { from: "/years/2017/sites/ios11/index.html", href: "pubgnote", key: "itt17-ios11" },
   { from: "/years/2017/sites/pubgnote/index.html", href: "cuphead", key: "itt17-pubgnote" },
-  { from: "/years/2017/sites/cuphead/index.html", href: "fortnite", key: "itt17-cuphead" },
+  { from: "/years/2017/sites/cuphead/index.html", href: "twitterlite", key: "itt17-cuphead" },
   { from: "/years/2017/sites/twitterlite/index.html", href: "snapipo", key: "itt17-twitterlite" },
-  { from: "/years/2017/sites/snapipo/index.html", href: "twitter/280", key: "itt17-snapipo" },
+  { from: "/years/2017/sites/snapipo/index.html", href: "slack17", key: "itt17-snapipo" },
   { from: "/years/2017/sites/slack17/index.html", href: "hangoutschat", key: "itt17-slack17" },
-  { from: "/years/2017/sites/hangoutschat/index.html", href: "teams", key: "itt17-hangoutschat" },
+  { from: "/years/2017/sites/hangoutschat/index.html", href: "snapmap", key: "itt17-hangoutschat" },
   { from: "/years/2017/sites/snapmap/index.html", href: "instagram17", key: "itt17-snapmap" },
-  { from: "/years/2017/sites/instagram17/index.html", href: "vine/gone", key: "itt17-instagram17" },
+  { from: "/years/2017/sites/instagram17/index.html", href: "botw", key: "itt17-instagram17" },
   { from: "/years/2017/sites/botw/index.html", href: "splatoon2", key: "itt17-botw" },
-  { from: "/years/2017/sites/splatoon2/index.html", href: "switch", key: "itt17-splatoon2" },
+  { from: "/years/2017/sites/splatoon2/index.html", href: "notpetya", key: "itt17-splatoon2" },
   { from: "/years/2017/sites/notpetya/index.html", href: "krack", key: "itt17-notpetya" },
-  { from: "/years/2017/sites/krack/index.html", href: "wannacry", key: "itt17-krack" },
+  { from: "/years/2017/sites/krack/index.html", href: "tbh", key: "itt17-krack" },
   { from: "/years/2017/sites/tbh/index.html", href: "messengerday", key: "itt17-tbh" },
-  { from: "/years/2017/sites/messengerday/index.html", href: "musically", key: "itt17-messengerday" },
+  { from: "/years/2017/sites/messengerday/index.html", href: "creditfrz", key: "itt17-messengerday" },
   { from: "/years/2017/sites/creditfrz/index.html", href: "cloudbleed", key: "itt17-creditfrz" },
-  { from: "/years/2017/sites/cloudbleed/index.html", href: "equifax", key: "itt17-cloudbleed" },
+  { from: "/years/2017/sites/cloudbleed/index.html", href: "gettingoverit", key: "itt17-cloudbleed" },
   { from: "/years/2017/sites/gettingoverit/index.html", href: "hollowknight", key: "itt17-gettingoverit" },
-  { from: "/years/2017/sites/hollowknight/index.html", href: "playable/game", key: "itt17-hollowknight" },
+  { from: "/years/2017/sites/hollowknight/index.html", href: "iphone/x.html", key: "itt17-hollowknight" },
 ];
 
 async function getKey(page, k) {
@@ -151,29 +151,16 @@ test.describe("2017 unique leftover dests", () => {
     await expect(page.locator("[data-animoji-send]")).toBeVisible();
   });
 
-  test("YouTube dest-true watch face is visible and writes leftover", async ({ page }) => {
+  test("YouTube has no leftover-3× pop face", async ({ page }) => {
     await page.goto("/years/2017/sites/youtube/index.html");
-    await page.evaluate(() => {
-      localStorage.removeItem("itt17-pop-youtube");
-      localStorage.removeItem("itt17-faceid");
-    });
-    await page.reload();
-    const watch = page.locator(".pop-yt-2017 [data-pop-go][data-pop-id=youtube]").first();
-    await expect(watch).toBeVisible();
-    await watch.click();
+    await expect(page.locator(".pop-yt-2017")).toHaveCount(0);
     expect(await getKey(page, "itt17-pop-youtube")).toBeFalsy();
-    await page.locator(".pop-yt-2017 [data-pop-pick]").first().click();
-    await page.locator(".pop-yt-2017 [data-pop-req]").first().check();
-    await page.locator(".pop-yt-2017 [data-pop-field]").fill("Despacito");
-    await watch.click();
-    await expect.poll(() => getKey(page, "itt17-pop-youtube"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt17-faceid")).toBeFalsy();
   });
 
-  test("Reddit dest-true next links to YouTube", async ({ page }) => {
+  test("Reddit has no leftover-3× pop face", async ({ page }) => {
     await page.goto("/years/2017/sites/reddit/index.html");
-    await expect(page.locator(".pop-reddit-2017")).toBeVisible();
-    await expect(page.locator('a[href*="youtube"]').first()).toBeAttached();
+    await expect(page.locator(".pop-reddit-2017")).toHaveCount(0);
   });
 
   test("official dests have no leftover panels", async ({ page }) => {
@@ -241,7 +228,11 @@ test.describe("2017 unique leftover dests", () => {
         await page.locator("[data-uf17-save]").click();
       }
       await expect.poll(() => getKey(page, row.key), { timeout: 8000 }).toBeTruthy();
-      expect(await getKey(page, "itt17-faceid"), row.key + " gold").toBeFalsy();
+      if (row.key === "itt17-animoji") {
+        expect(await getKey(page, "itt17-faceid"), "animoji leaves the star").toBe("{\"real\":true}");
+      } else {
+        expect(await getKey(page, "itt17-faceid"), row.key + " gold").toBeFalsy();
+      }
       const parsed = await page.evaluate((k) => {
         try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; }
       }, row.key);

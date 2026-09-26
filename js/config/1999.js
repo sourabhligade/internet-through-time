@@ -45,6 +45,10 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "pages/checklist.html": "http://museum.local/years/1999/pages/checklist.html",
+      "sites/geocities/index.html": "http://museum.local/years/1999/sites/geocities/index.html",
+      "sites/microsoft/index.html": "http://museum.local/years/1999/sites/microsoft/index.html",
+      "sites/yahoo/index.html": "http://museum.local/years/1999/sites/yahoo/index.html",
       "sites/beliefnet/index.html": "http://museum.local/years/1999/sites/beliefnet/index.html",
       "sites/albino/index.html": "http://museum.local/years/1999/sites/albino/index.html",
       "sites/tivo/index.html": "http://museum.local/years/1999/sites/tivo/index.html",

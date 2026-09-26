@@ -49,18 +49,22 @@
     }
   }
 
+  function upsToYear() {
+    var cur = yearRelPath().split("?")[0].split("#")[0];
+    var dir = cur.replace(/[^/]*$/, "");
+    var depth = dir.split("/").filter(Boolean).length;
+    var ups = "";
+    var i;
+    for (i = 0; i < depth; i++) ups += "../";
+    return ups;
+  }
+
   function toRelative(href) {
-    var cur = yearRelPath();
     href = String(href || "");
-    if (cur.indexOf("sites/") === 0) {
-      if (href.indexOf("sites/") === 0) return "../" + href.slice("sites/".length);
-      if (href.indexOf("pages/") === 0) return "../../" + href;
+    if (href.indexOf("sites/") === 0 || href.indexOf("pages/") === 0) {
+      return upsToYear() + href;
     }
-    if (cur.indexOf("pages/") === 0) {
-      if (href.indexOf("sites/") === 0) return "../" + href;
-      if (href.indexOf("pages/") === 0) return href.slice("pages/".length);
-    }
-    return "../" + href;
+    return href;
   }
 
   function esc(s) {
@@ -201,41 +205,62 @@
 
   ITT.lockedFlowTrails = lockedTen;
 
+  function measurableTrails(y) {
+    var all = trailsFor(y);
+    var out = [];
+    var i;
+    for (i = 0; i < all.length; i++) {
+      if (all[i] && all[i].whenKey && all[i].href) out.push(all[i]);
+    }
+    out.sort(function (a, b) {
+      return Number(a.n) - Number(b.n);
+    });
+    return out;
+  }
+
+  function revealTrailPanel(doc, here) {
+    doc = doc || document;
+    if (!here) here = currentTrail(measurableTrails(yearOf()), yearRelPath());
+    if (!here || !here.whenKey) return;
+    var suffix = String(here.whenKey).replace(/^itt\d{2}-/, "");
+    var save = doc.querySelector('[data-lo-save][data-lo-key="' + suffix + '"]');
+    if (!save) return;
+    var panel = save;
+    while (panel && panel !== doc.body) {
+      if (panel.getAttribute && panel.getAttribute("data-lo-panel")) break;
+      panel = panel.parentNode;
+    }
+    if (!panel || panel === doc.body) panel = save.parentNode;
+    if (!panel) return;
+    var folded = panel.closest ? panel.closest("details.itt-also-year") : null;
+    if (folded && folded.parentNode) {
+      folded.parentNode.insertBefore(panel, folded);
+    }
+    panel.setAttribute("data-itt-trail-stop", "1");
+    panel.style.display = "block";
+  }
+
+  ITT._revealTrailPanel = revealTrailPanel;
+
   function boot(doc) {
     doc = doc || document;
     if (skipPage()) return;
     var y = yearOf();
-    var trails = lockedTen(y);
+    var trails = measurableTrails(y);
     if (!trails.length) return;
     paint(doc, trails);
+    revealTrailPanel(doc, currentTrail(trails, yearRelPath()));
   }
 
   function ensureDataThenBoot(doc) {
     if (trailsFor(yearOf()).length) {
-      if (ITT._flowTrails5x) {
-        boot(doc);
-        return;
-      }
-      var extra0 = doc.createElement("script");
-      extra0.src = jsRoot() + "config/flow-trails-5x.js";
-      extra0.onload = function () { boot(doc); };
-      extra0.onerror = function () { boot(doc); };
-      (doc.head || doc.documentElement).appendChild(extra0);
+      boot(doc);
       return;
     }
     var el = doc.createElement("script");
     el.src = jsRoot() + "config/flow-trails.js";
-    el.onload = function () {
-      if (ITT._flowTrails5x) {
-        boot(doc);
-        return;
-      }
-      var extra = doc.createElement("script");
-      extra.src = jsRoot() + "config/flow-trails-5x.js";
-      extra.onload = function () { boot(doc); };
-      extra.onerror = function () { boot(doc); };
-      (doc.head || doc.documentElement).appendChild(extra);
-    };
+    el.onload = function () { boot(doc); };
+    el.onerror = function () { boot(doc); };
     (doc.head || doc.documentElement).appendChild(el);
   }
 

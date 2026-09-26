@@ -5,6 +5,7 @@
   var rooms = [
     "index.html",
     "pages/about.html",
+    "pages/checklist.html",
     "pages/error/404.html",
     "pages/error/unreachable.html",
     "pages/home.html",
@@ -113,7 +114,7 @@
     "sites/youtube/index.html",
     "sites/youtube/more.html",
     "sites/zyngaipo/index.html"
-  ];;;;;;;;
+  ];;;;;;;;;
   var urlMap = {
     "pages/about.html": "http://museum.local/years/2011/pages/about.html",
     "pages/error/404.html": "http://museum.local/years/2011/pages/error/404.html",

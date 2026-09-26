@@ -1,10 +1,10 @@
 # What is undone
 
-**Date:** 2026-09-20  
-**Tree:** `museum/1994-2020-lean` (pushed `0ed638bb5`)  
+**Date:** 2026-09-24  
+**Tree:** `museum/1994-2020-lean`  
 **Status:** Recheck vs disk. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Out of scope:** restore wiped years (`years/2023`–`years/2025`). 2009 boarded. Do not dest-farm dests.
+**Live:** 27 doors (1994–2008 and 2010–2017 plus 2019–2022). 2009 boarded. 2018 wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.
 
 Rechecked 2026-09-20: dest folders · leftover-3× unique dest-true dests · official 10 files · official dest leftover-2× `data-lo-panel` · `data-official-need` · period assets · leftover-3× unique dest-true leftover go · GitHub issues.
 
@@ -14,12 +14,12 @@ Rechecked 2026-09-20: dest folders · leftover-3× unique dest-true dests · off
 
 | Item | Disk |
 |------|------|
-| **28 years open** (1994–2008 + 2010–2022) · 2009 plaque · 2023–2025 wiped | Hub year hrefs 28 · DISK-TRUTH |
+| **27 years open** (1994–2008 + 2010–2017 + 2019–2022) · 2009 boarded · 2018 wiped · 2023–2025 wiped | Hub · `DISK-TRUTH.md` |
 | Official 10 files n=1–10 all live years including 2012 / 2013 / 2014 / 2022 | `flow-trails.js` · 0 missing hrefs |
 | Guided Starting Point exactly 6 | `ui/year/start-data.js` |
 | Dest-lock **reverted** 2015–2020 | dest folders **213 / 65 / 222 / 24 / 170 / 39** |
 | Dest-lock **still on** 2007 / 2010–2012 / 2014 / 2021 | leftover dests kept via EXTRA_KEEP · dest folders **46 / 44 / 62 / 48 / 36 / 30** |
-| Leftover-3× unique dest-true dests | **107** matrix dests including **2022 9 rows** · leftover go **1** each |
+| Leftover-3× unique catalogs | **Empty.** The old 107-row matrix is not the live catalog. |
 | Official dest leftover-2× `data-lo-panel` = 0 on official 10 | **all playable years** · 2009 boarded leftover-2× is not a visitor door |
 | Mock-flow audit DEST_FIELD / WEAK_REAL / HASH_CTA / PACK | **0** · year-true pack mock dest-true leftover |
 | Dest-farm leftover-3× CUT specs walk leftover-3× unique dest-true dests | `2010-2015-3x-cut` · `2015-2020-3x-cut` · `2015-2020-3x-2x-cut` **115 passed** |
@@ -40,7 +40,8 @@ Stale hub copy struck 2026-09-20 (Phase 0): 28 years open · 2022 live · 2023�
 | 2010–2012 | **Still dest-lock** | 44 / 62 / 48 | **9** each (2012 + leftover-4× unique 3) |
 | 2013 | Never dest-lock | 54 | **9** |
 | 2014 | **Still dest-lock** | 36 | **9** |
-| **2015–2020** | **Reverted** | 213 / 65 / 222 / 24 / 170 / 39 | 9 / 9 / n/a (unique leftover-20) / 3 / 9 / 9 |
+| **2015–2017, 2019–2020** | **Reverted** | 213 / 65 / 222 / 170 / 39 | Catalogs empty. 2017 leftover trail is 30 stops |
+| **2018** | **Wiped** | 0 | Research only: 13 rooms, leftover-3× cap 3, aim 26. Do not restore |
 | 2021 | **Still dest-lock** | 30 | **5** (stop) |
 | 2022 | Dest-true lean | 38 | **9 dests on disk** · e2e matrix **9 rows** |
 
@@ -66,7 +67,7 @@ GitHub **#11–#14** “Clutter clear · 2015–2018” are **stale dest-lock ti
 
 ### 2.4 2022 leftover-3× unique dest-true dests vs e2e
 
-**Done.** `e2e/leftover-3x-unique.matrix.json` has **9** 2022 rows. Dest-true leftover go 1. Do not dest-farm leftover-20.
+**Removed.** Leftover-3× unique flows and links are gone. The matrix is empty. Do not dest-farm leftover-20.
 
 ### 2.5 Unique leftover-**20** maps (not leftover-3× unique dest-true)
 
@@ -95,7 +96,7 @@ Dest-disjoint leftover dest leftover-3× dest-farm extra dests (2015 facebook / 
 | 30 unique dests | **Pass** | — |
 | Official dest leftover-2× | **0** | — |
 | Leftover dest dest-unique engines | Shared `bootUniqueFlow` | Dest-unique leftover *products* better |
-| Cite | 18 failed-final · iOS 11 + Cloudbleed named | Left failed-final on purpose |
+| Cite | Primary link on all 20 leftover pages. iOS 11 and Cloudbleed were already named. The other 18 now link to an official page or Wikipedia. | `[failed-final]` stays only where the brand pixel is missing. Do not invent logos. |
 | Storm Circle | Empty e2e | Complete gym untested |
 | Dest folders | **222** dest-lock reverted | Unique leftover-20 dest-true dests kept. Do not dest-lock 2017 again |
 | Period assets | **0** | Same as §2.3 |
@@ -136,7 +137,7 @@ No unique leftover-**20** spec except 2017.
 ## 6. Do next (order)
 
 1. Period assets 2011+ (0 files) — failed-final stays honest until harvest. Do not invent brand pixels.
-2. Re-run 2017 unique 72/72 if claimed green.
+2. Re-run 2017 unique flows — **done 2026-09-24.** `e2e/2017-unique-flows.spec.js` 39 passed. YouTube and Reddit no longer expect the removed leftover-3× pop face.
 3. Unique leftover-**20** maps for other years — **only if named**. leftover-3× unique dest-true dests already ship. Do not dest-farm leftover dest leftover-20 dests.
 
 **Not leftover:** dest-lock 2015–2020 · dest-farm 2008/2009 leftover-3× unique dest-true dests · restore 2009 as a playable door · restore 2023+ · dest-farm dest-lock dests.

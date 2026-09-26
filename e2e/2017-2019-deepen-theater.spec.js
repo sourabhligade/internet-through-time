@@ -79,9 +79,12 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
 test("2019 is live lean", async ({ page }) => {
   const fs = require("fs");
   const path = require("path");
-  expect(fs.existsSync(path.join(__dirname, "..", "years", "2019", "index.html"))).toBe(true);
+  expect(fs.existsSync(path.join(__dirname, "..", "react", "src", "year2019.js"))).toBe(true);
   await page.goto("/");
-  await expect(page.locator("a.year-card.available[href*='years/2019']")).toBeVisible();
+  await expect(page.locator("a.year-card.available[data-year='2019']")).toHaveAttribute(
+    "href",
+    /app\/index\.html#\/year\/2019/
+  );
 });
 
 test("2017 guided list stays 6 · deepen strip is outside", async ({ page }) => {

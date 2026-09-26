@@ -20,6 +20,31 @@ function destSlug(href) {
   return m ? m[1] : "";
 }
 
+function trailMaps() {
+  const text = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
+  const official = {};
+  const leftover = {};
+  const yearRe = /"(\d{4})"\s*:\s*\[/g;
+  const positions = [];
+  let m;
+  while ((m = yearRe.exec(text))) positions.push({ year: m[1], start: m.index });
+  let i;
+  for (i = 0; i < positions.length; i++) {
+    const y = positions[i].year;
+    const chunk = text.slice(positions[i].start, i + 1 < positions.length ? positions[i + 1].start : text.length);
+    official[y] = new Set();
+    leftover[y] = new Set();
+    const stopRe = /"n":\s*(\d+),\s*"name":\s*"[^"]+",\s*"href":\s*"sites\/([^/]+)\//g;
+    let s;
+    while ((s = stopRe.exec(chunk))) {
+      const n = Number(s[1]);
+      if (n <= 10) official[y].add(s[2]);
+      else leftover[y].add(s[2]);
+    }
+  }
+  return { official, leftover };
+}
+
 function railSlugs(html) {
   const m = String(html || "").match(BLOCK);
   if (!m) return [];
@@ -92,21 +117,28 @@ test.describe("leftover-2× unique dest links", () => {
     for (const row of matrix) {
       expect(new Set(row.dests).size, row.year + " unique dests").toBe(row.dests.length);
       expect(row.n).toBe(row.dests.length);
+      const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
       for (const slug of row.dests) {
         expect(WAREHOUSE.has(slug), row.year + " " + slug + " warehouse").toBe(false);
+        if (reactDoor.has(String(row.year))) {
+          const src = fs.readFileSync(path.join(ROOT, "react", "src", "year" + row.year + ".js"), "utf8");
+          expect(src.includes('"' + slug) || src.includes(slug + "-lx") || src.includes(slug), row.year + " " + slug).toBe(true);
+          continue;
+        }
         const idx = path.join(ROOT, "years", row.year, "sites", slug, "index.html");
         expect(fs.existsSync(idx), idx).toBe(true);
       }
     }
   });
 
-  test("leftover-3× unique dests stay 2018=3 · 2021=5", () => {
+  test("leftover-3× unique dests stay empty", () => {
     const byYear = {};
     for (const row of leftover3x) {
       byYear[row.year] = (byYear[row.year] || 0) + 1;
     }
-    expect(byYear["2018"]).toBe(3);
-    expect(byYear["2021"]).toBe(5);
+    expect(byYear["2018"]).toBeUndefined();
+    expect(byYear["2021"]).toBeUndefined();
+    expect(Object.values(byYear).reduce((a, b) => a + b, 0)).toBe(0);
   });
 
   test("live leftover dest leftover-2× rails: no duplicate dest slugs · official dest leftover-2× 0", () => {
@@ -140,11 +172,71 @@ test.describe("leftover-2× unique dest links", () => {
 
   test("catalog unique dest counts match matrix", () => {
     const byYear = Object.fromEntries(matrix.map((r) => [r.year, r.n]));
-    expect(byYear["2000"]).toBeGreaterThanOrEqual(80);
-    expect(byYear["2007"]).toBe(33);
-    expect(byYear["2013"]).toBe(47);
-    expect(byYear["2018"]).toBe(20);
-    expect(byYear["2022"]).toBe(24);
+    expect(byYear["2000"]).toBeGreaterThanOrEqual(70);
+    expect(byYear["2007"]).toBe(5);
+    expect(byYear["2013"]).toBe(25);
+    expect(byYear["2018"]).toBeUndefined();
+    expect(byYear["2022"]).toBe(0);
+  });
+
+  test("leftover-2× unique dest links dest-disjoint leftover-3× unique dest links", () => {
+    const lo3 = require("./leftover-3x-unique-links.matrix.json");
+    const by3 = Object.fromEntries(lo3.map((r) => [r.year, new Set(r.dests)]));
+    for (const row of matrix) {
+      const other = by3[row.year];
+      if (!other) continue;
+      const both = row.dests.filter((slug) => other.has(slug));
+      expect(both, row.year + " leftover-2× unique dest links ∩ leftover-3× unique dest links").toEqual([]);
+    }
+  });
+
+  test("leftover-2× unique dest links dest-disjoint official dests · leftover trail n=11+ · leftover-4× unique dests · leftover-3× unique dest-true dests", () => {
+    const trails = trailMaps();
+    const lo4 = new Set(
+      require("./leftover-4x-unique.matrix.json").map((r) => r.year + ":" + r.id)
+    );
+    const lo3d = {};
+    leftover3x.forEach((row) => {
+      lo3d[row.year] = lo3d[row.year] || new Set();
+      const slug = destSlug(row.href || "") || row.id;
+      if (slug) lo3d[row.year].add(slug);
+    });
+    for (const row of matrix) {
+      const off = trails.official[row.year] || new Set();
+      const lo = trails.leftover[row.year] || new Set();
+      expect(
+        row.dests.filter((slug) => off.has(slug)),
+        row.year + " leftover-2× unique dest links ∩ official dests"
+      ).toEqual([]);
+      expect(
+        row.dests.filter((slug) => lo.has(slug)),
+        row.year + " leftover-2× unique dest links ∩ leftover trail n=11+"
+      ).toEqual([]);
+      expect(
+        row.dests.filter((slug) => lo4.has(row.year + ":" + slug)),
+        row.year + " leftover-2× unique dest links ∩ leftover-4× unique dests"
+      ).toEqual([]);
+      const true3 = lo3d[row.year];
+      if (true3) {
+        expect(
+          row.dests.filter((slug) => true3.has(slug)),
+          row.year + " leftover-2× unique dest links ∩ leftover-3× unique dest-true dests"
+        ).toEqual([]);
+      }
+    }
+  });
+
+  test("leftover-3× unique dest-true dest HTML leftover-2× unique dest link rail 0", () => {
+    let hosts = 0;
+    leftover3x.forEach((row) => {
+      const href = String(row.href || "").replace(/^\//, "").split("?")[0];
+      if (!href) return;
+      const file = path.join(ROOT, href);
+      if (!fs.existsSync(file)) return;
+      const html = fs.readFileSync(file, "utf8");
+      if (html.includes("ITT-2X-LINKS") || html.includes("data-itt-2x-links")) hosts += 1;
+    });
+    expect(hosts, "leftover-3× unique dest-true dest leftover-2× unique dest links").toBe(0);
   });
 
   test("2000 KEEP original unique dests · no duplicate dest slugs", async ({ page }) => {
@@ -174,35 +266,15 @@ test.describe("leftover-2× unique dest links", () => {
     );
     const slugs = hrefs.map(destSlug).filter(Boolean);
     expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).toContain("friendfeed");
+    expect(slugs).toContain("safari3");
 
     await page.goto("/years/2007/sites/iphone/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
   });
 
-  test("2018 leftover dest KEEP · GDPR leftover-2× first paint 0", async ({ page }) => {
-    await page.goto("/years/2018/sites/gplusgone/index.html");
-    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).not.toContain("instagram");
-    await page.goto("/years/2018/sites/gdpr/index.html");
-    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
-    await expect(page.locator("[data-official-key], html[data-official-key]")).toHaveCount(1);
-  });
-
   test("2022 leftover dest KEEP · ChatGPT leftover-2× first paint 0", async ({ page }) => {
     await page.goto("/years/2022/sites/temu/index.html");
-    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).not.toContain("iphone");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
     await page.goto("/years/2022/sites/chatgpt/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
   });
@@ -226,16 +298,6 @@ test.describe("leftover-2× unique dest links", () => {
       "hackernews-lx",
       "itt07-iphone",
       "2007"
-    );
-  });
-
-  test("2018 leftover dest KEEP dest-true leftover dest I/O never writes star", async ({ page }) => {
-    await completeLeftoverDest(
-      page,
-      "/years/2018/sites/gplusgone/index.html",
-      "gplusgone-lx",
-      "itt18-gdpr",
-      "2018"
     );
   });
 

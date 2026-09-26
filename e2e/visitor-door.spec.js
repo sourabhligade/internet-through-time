@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 28 years (1994–2008 + 2010–2022). 2009 boarded. 2023–2025 wiped.
+ * Hub 27 years (1994–2008 + 2010–2017 + 2019–2022). 2005 restored. 2018 wiped. 2009 boarded. 2023–2025 wiped.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
-  if (y === 2009) continue;
+  if (y === 2009 || y === 2018) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2009", "2023", "2024", "2025"];
@@ -45,12 +45,22 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
-  test("hub lists 28 years including 2022 · no 2009 · no 2023+", async ({ page }) => {
-    expect(SHIP).toHaveLength(28);
+  test("hub lists 27 years including 2022 and 2005 · no 2018 · no 2009 · no 2023+", async ({ page }) => {
+    expect(SHIP).toHaveLength(27);
     await page.goto("/");
-    await expect(page.locator("body")).toContainText(/28 years open/i);
-    await expect(page.locator("body")).not.toContainText(/27 years open/i);
+    await expect(page.locator("body")).toContainText(/27 years open/i);
+    await expect(page.locator("body")).not.toContainText(/26 years open/i);
+    await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
+    await expect(page.locator("a.year-card[href*='years/2018']")).toHaveCount(0);
+    const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
     for (const y of SHIP) {
+      if (reactDoor.has(y)) {
+        await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
+          "href",
+          new RegExp("app/index\\.html#/year/" + y)
+        );
+        continue;
+      }
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
     await expect(page.locator("a.year-card.available[href*='years/2022']")).toBeVisible();
@@ -73,7 +83,16 @@ test.describe("visitor door", () => {
     const missing = [];
     /** @type {Record<string, number>} */
     const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
+    const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
     for (const y of SHIP) {
+      if (reactDoor.has(y)) {
+        if (!fs.existsSync(path.join(ROOT, "react", "src", "year" + y + ".js"))) {
+          missing.push(y + " react module");
+        }
+        const hub = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
+        if (hub.indexOf("app/index.html#/year/" + y) === -1) missing.push(y + " hub react href");
+        continue;
+      }
       const rooms = ["index.html", "pages/home.html", "pages/about.html", "pages/map.html"];
       for (const room of rooms) {
         if (!fs.existsSync(path.join(ROOT, "years", y, room))) missing.push(y + "/" + room);
@@ -108,28 +127,12 @@ test.describe("visitor door", () => {
     expect(hits, hits.join("\n")).toEqual([]);
   });
 
-  test("Starting Point guided ol is 6 on forest, GDPR, and ChatGPT doors", async ({ page }) => {
-    for (const y of ["1994", "2018", "2022"]) {
+  test("Starting Point guided ol is 6 on forest and ChatGPT doors", async ({ page }) => {
+    for (const y of ["1994", "2022"]) {
       await page.goto("/years/" + y + "/pages/home.html");
       await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
       await expect(page.locator('[data-ott-one-thing="' + y + '"]')).toBeVisible();
     }
-  });
-
-  test("2018 GDPR Accept All never writes · Manage writes", async ({ page }) => {
-    await page.goto("/years/2018/sites/gdpr/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt18-gdpr"));
-    await page.reload();
-    await page.locator("[data-official-trap]").click();
-    expect(await getKey(page, "itt18-gdpr")).toBeFalsy();
-    await page.locator("[data-gdpr-manage]").click();
-    await page.locator("[data-official-need]").fill("analytics leftover");
-    const reqs = page.locator("[data-official-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-official-verb]").click();
-    await expect.poll(() => getKey(page, "itt18-gdpr")).toBeTruthy();
-    await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
   });
 
   test("2022 ChatGPT empty / GPT-4 never write · Send writes", async ({ page }) => {
@@ -163,14 +166,14 @@ test.describe("visitor door", () => {
   test("14.4k wait is gone on 2000–2022 Starting Point", async ({ page }) => {
     await page.goto("/years/2022/pages/home.html");
     await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
-    await page.goto("/years/2017/pages/home.html");
+    await page.goto("/app/index.html#/year/2017");
     await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
     await page.goto("/years/2010/pages/home.html");
     await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
   });
 
   test("standalone Starting Point has no boot.js cavern", async ({ page }) => {
-    for (const y of ["1994", "2007", "2021", "2022"]) {
+    for (const y of ["1994", "2007", "2022"]) {
       await page.goto("/years/" + y + "/pages/home.html");
       await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
       await expect(page.locator("[data-itt-postcard]")).toBeVisible();
@@ -188,14 +191,14 @@ test.describe("visitor door", () => {
       expect(info.fill, y + " #itt-page-fill").toBe(false);
       expect(info.standalone, y + " standalone").toBe("1");
       expect(info.gap, y + " postcard→footer gap " + info.gap).toBeGreaterThanOrEqual(0);
-      if (y === "2021" || y === "2022") {
+      if (y === "2022") {
         expect(info.gap, y + " postcard→footer gap " + info.gap).toBeLessThan(80);
       }
     }
   });
 
   test("iframe Starting Point still fills the year desktop pane", async ({ page }) => {
-    for (const y of ["1994", "2021"]) {
+    for (const y of ["1994", "2022"]) {
       await page.goto("/years/" + y + "/");
       const frame = page.frameLocator("iframe#content");
       await expect(frame.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);

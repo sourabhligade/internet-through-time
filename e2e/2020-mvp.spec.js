@@ -1,42 +1,42 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
-const { enterYear, contentFrame } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
 test.describe("2020 MVP", () => {
-  test("2020 is live", async ({ page }) => {
-    const fs = require("fs");
-    const path = require("path");
-    expect(fs.existsSync(path.join(__dirname, "..", "years", "2020", "index.html"))).toBe(true);
+  test("2020 card opens the React year", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator("a.year-card.available[href*='years/2020']")).toBeVisible();
+    const card = page.locator("a.year-card.available[data-year='2020']");
+    await expect(card).toBeVisible();
+    await expect(card).toHaveAttribute("href", /app\/index\.html#\/year\/2020/);
     await expect(page.locator(".year-card.locked.y2020")).toHaveCount(0);
   });
 
-  test("shell boots and home chip is Zoom Leave", async ({ page }) => {
-    await enterYear(page, "2020");
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-ott-one-thing="2020"]')).toBeVisible({ timeout: 20000 });
-    await expect(frame.locator('[data-ott-one-thing="2020"]')).toHaveAttribute("href", /zoom\/meeting/);
-    await expect(frame.locator("#ott-guided-2020 ol > li")).toHaveCount(6);
+  test("React door shows Zoom Leave and six guided steps", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2020");
+    await expect(page.getByRole("heading", { name: "Zoom Leave" })).toBeVisible();
+    await expect(page.locator("article.stop ol > li")).toHaveCount(6);
   });
 
   test("Stay / empty never writes; mute + chat + Leave writes", async ({ page }) => {
-    await page.goto("/years/2020/sites/zoom/meeting.html");
+    await page.goto("/app/index.html#/year/2020");
     await page.evaluate(() => localStorage.removeItem("itt20-zoom"));
-    await page.reload();
-    await page.locator("[data-official-trap]").click();
+    await page.getByRole("button", { name: "1 Zoom Leave" }).click();
+    const room = page.locator("article.stop");
+    await room.getByRole("button", { name: "Stay" }).click();
     expect(await getKey(page, "itt20-zoom")).toBeFalsy();
-    await page.locator("[data-official-verb]").click();
+    await room.getByRole("button", { name: "Leave", exact: true }).click();
     expect(await getKey(page, "itt20-zoom")).toBeFalsy();
-    const reqs = page.locator("[data-official-verb-host] [data-official-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await page.locator("[data-official-need]").fill("brb leftover");
-    await page.locator("[data-official-verb]").click();
+    const boxes = room.locator("input[type='checkbox']");
+    const n = await boxes.count();
+    for (let i = 0; i < n; i++) await boxes.nth(i).check();
+    await room.getByPlaceholder("chat leftover").fill("brb leftover");
+    await room.getByRole("button", { name: "Leave", exact: true }).click();
     await expect.poll(() => getKey(page, "itt20-zoom")).toBeTruthy();
+    const blob = JSON.parse((await getKey(page, "itt20-zoom")) || "{}");
+    expect(blob.official).toBe(true);
+    expect(blob.year).toBe("2020");
   });
 });

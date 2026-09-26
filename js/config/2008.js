@@ -48,6 +48,12 @@
       connectBusyChance: 0.11
     },
     urlMap: {
+      "pages/checklist.html": "http://museum.local/years/2008/pages/checklist.html",
+      "sites/amazon/index.html": "http://museum.local/years/2008/sites/amazon/index.html",
+      "sites/google/index.html": "http://museum.local/years/2008/sites/google/index.html",
+      "sites/reddit/index.html": "http://museum.local/years/2008/sites/reddit/index.html",
+      "sites/wikipedia/index.html": "http://museum.local/years/2008/sites/wikipedia/index.html",
+      "sites/yahoo/index.html": "http://museum.local/years/2008/sites/yahoo/index.html",
       "sites/yammer/index.html": "http://museum.local/years/2008/sites/yammer/index.html",
       "sites/lotro/index.html": "http://museum.local/years/2008/sites/lotro/index.html",
       "sites/crysiswarhead/index.html": "http://museum.local/years/2008/sites/crysiswarhead/index.html",

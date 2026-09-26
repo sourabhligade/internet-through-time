@@ -1,7 +1,8 @@
 // @ts-check
 /**
- * 2012–2019 leftover 9+9+9 + dest-true leftover-official.
- * Home strips 9+9+9. Trap / 0 ticks never write. Leftover never writes the year star.
+ * 2012 / 2016 / 2017 dest-true leftover-official.
+ * The old 9+9+9 pop3x rails were duplicate flows and stay off the home page.
+ * Trap / 0 ticks never write. Leftover never writes the year star.
  * 2020–2022 are live lean doors. 2023–2025 wiped.
  */
 const fs = require("fs");
@@ -102,12 +103,12 @@ test.describe("wiped years stay boarded", () => {
 });
 
 for (const y of YEARS) {
-  test.describe(`${y.year} leftover 9+9+9`, () => {
-    test("home leftover strips are 9+9+9 dests", async ({ page }) => {
+  test.describe(`${y.year} leftover unique`, () => {
+    test("home has no duplicate pop3x rails", async ({ page }) => {
       await page.goto(`/years/${y.year}/pages/home.html`);
-      expect(await page.locator(`[data-itt-pop3x="${y.year}"] a`).count()).toBeGreaterThanOrEqual(9);
-      expect(await page.locator(`[data-itt-pop-more="${y.year}"] a`).count()).toBeGreaterThanOrEqual(9);
-      expect(await page.locator(`[data-itt-pop-3x3="${y.year}"] a`).count()).toBeGreaterThanOrEqual(9);
+      expect(await page.locator(`[data-itt-pop3x="${y.year}"] a`).count()).toBe(0);
+      expect(await page.locator(`[data-itt-pop-more="${y.year}"] a`).count()).toBe(0);
+      expect(await page.locator(`[data-itt-pop-3x3="${y.year}"] a`).count()).toBe(0);
       await expect(page.locator("body")).toContainText(y.year + " honesty");
       await expect(page.locator("body")).toContainText(y.honesty);
     });

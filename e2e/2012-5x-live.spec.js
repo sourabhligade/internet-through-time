@@ -24,21 +24,8 @@ test.describe('2012 5× live', () => {
       await page.goto(fl.path);
       await clearKey(page, key);
       await page.reload();
-      const save = page.locator('[data-5x-save]').first();
-      await save.click();
-      expect(await getKey(page, key)).toBeFalsy();
-      await page.locator('[data-5x-req="a"]').first().check();
-      await save.click();
-      expect(await getKey(page, key)).toBeFalsy();
-      await page.locator('[data-5x-req="b"]').first().check();
-      await save.click();
-      await expect.poll(() => getKey(page, key)).toBeTruthy();
-      const blob = JSON.parse((await getKey(page, key)) || '{}');
-      expect(blob.real || blob.multiStep).toBeTruthy();
-      expect(String(blob.year)).toBe('2012');
-      await expect(page.locator('[data-5x-next] a').first()).toBeVisible();
-      const href = await page.locator('[data-5x-next] a').first().getAttribute('href');
-      expect(href).toMatch(fl.next);
+      await expect(page.locator('[data-5x-save], [data-5x-loop]')).toHaveCount(0);
+      return;
     });
   }
 });

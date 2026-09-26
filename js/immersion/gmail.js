@@ -133,7 +133,18 @@
           }
           return;
         }
-        saveUser({ email: email, invited: true, ts: Date.now() });
+        var user = { email: email, invited: true, ts: Date.now() };
+        var pageKey = "";
+        try {
+          pageKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
+        } catch (eKey) { /* */ }
+        /* 2005 leftover stop 15. 2004 and 2006 Gmail stay their own official saves. */
+        if (year() === "2005" && pageKey === "itt05-gmail") {
+          user.real = true;
+          user.leftover = true;
+          user.year = "2005";
+        }
+        saveUser(user);
         var msg = "Signed in. Opening inbox…";
         if (st) st.textContent = msg;
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
