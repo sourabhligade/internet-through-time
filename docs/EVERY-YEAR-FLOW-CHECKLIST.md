@@ -1746,6 +1746,7 @@ Empty catalog. Do not dest-farm a rail.
 **Door:** `/app/index.html#/year/2019`  
 **Star:** Disney+ Continue `itt19-disneyplus`  
 **Dest folders:** 0  
+**React keys:** 64 (official 10 + leftover 54). 19 cabinet fillers dropped.  
 **leftover-2× unique dests:** 13  
 **leftover-3× unique catalog:** empty
 
@@ -1807,7 +1808,7 @@ I/O for each official stop: empty never writes · trap never writes · finished 
 
 I/O: empty never writes · trap never writes · finished visit writes leftover only · star stays empty.
 
-Spec: `e2e/2017-2019-leftover-20.spec.js` (React). 34 extra 2019 leftovers stay off the trail.
+Spec: `e2e/2017-2019-leftover-20.spec.js` + `e2e/2019-mvp.spec.js` (React). Leftover KEEP **54** on `ALSO_2019` (20 leftover-20 + 34 extra dest KEEP). 19 cabinet fillers dropped.
 
 ### leftover-2× unique dest links
 

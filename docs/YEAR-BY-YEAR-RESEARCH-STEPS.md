@@ -61,7 +61,7 @@ Named lists live in the source files. This file is the implement order, not a se
 | 2016 | dest-lock reverted | 57 | KEEP 47 · DROP 40 · DO-NOT-APPLY 6 · MISS 0 | 4 | 9 | 9 | 34 | all KEEP leftover I/O |
 | 2017 | dest-lock reverted leftover-20 | 68 | KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0 | 39 | 154 | 0 (leftover-20) | 0 (leftover-20 extras 20) | all KEEP leftover I/O |
 | 2018 | wiped hub · React hall | 0 HTML | KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0 | 0 | 0 | 0 (catalog empty) | 11 (React `ALSO_2018`) | leftover KEEP I/O on React rail |
-| 2019 | dest-lock reverted | 73 | KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0 | 54 | 97 | 9 | 0 | all KEEP leftover I/O |
+| 2019 | dest-lock reverted · React hall | 0 HTML | KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0 | 54 | 97 | 0 (catalog empty) | 54 (React `ALSO_2019`; 19 cabinets dropped) | leftover KEEP I/O on React rail |
 | 2020 | dest-lock reverted | 22 | KEEP 9 · DROP 1 · DO-NOT-APPLY 10 · MISS 0 | 2 | 17 | 9 | 1 | all KEEP leftover I/O |
 | 2021 | dest-lock lean stop-5 | 18 | KEEP 9 · DROP 13 · DO-NOT-APPLY 8 · MISS 0 | 0 | 0 | 5 | 3 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
 | 2022 | dest-true lean | 25 | KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0 | 0 | 0 | 9 | 6 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
@@ -962,11 +962,11 @@ KEEP extra dest leftover I/O:
 
 ## 2019
 
-**Kind:** Dest-lock reverted. Official 10 dest-true. Leftover-3× catalogs are empty. Extra dest KEEP leftover I/O. Trail stops 11–30 are the 20 leftover flows in `js/config/flow-trails.js`. The other cited KEEP slugs stay off that trail.
+**Kind:** Dest-lock reverted · React hall. Official 10 dest-true. Leftover-3× catalogs are empty. Extra dest KEEP leftover I/O on `ALSO_2019`. Trail stops 11–30 are the 20 leftover-20 flows. 19 museum cabinet fillers (`extra a` … `more`) are dropped.
 
 **Star:** `disneyplus` · Disney+ Continue · `itt19-disneyplus`. Empty / trap never write this key. Leftover never writes this key.
 
-**Dest folders on disk:** 73.
+**Dest folders on disk:** 0 (`years/2019/` absent). React keys **64** (official 10 + leftover 54).
 
 **Official 10:** disneyplus · tiktok · arcade · appletv · stadia · iphone · airpodspro · chrome · windows10 · playable
 

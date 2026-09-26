@@ -21,7 +21,7 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 | Guided Starting Point exactly 6 | `ui/year/start-data.js` |
 | Dest-lock **reverted** 2016 HTML | dest folders **57** · **2015 wiped** |
 | Dest-lock **still on** 2007 / 2010–2012 / 2014 / 2021 | dest folders **33 / 29 / 41 / 32 / 25 / 0 HTML** (2021 is React) |
-| 2017 / 2019–2021 | React doors · HTML dest folders **0** · React keys **30 / 83 / 22 / 13** |
+| 2017 / 2019–2021 | React doors · HTML dest folders **0** · React keys **30 / 64 / 22 / 13** |
 | Leftover-3× unique catalogs | **Empty.** `ITT.leftover3xUnique = {}` |
 | Official dest leftover-2× `data-lo-panel` = 0 on official 10 | **all playable years** · 2009 boarded leftover-2× is not a visitor door |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA / PACK | **0** |
