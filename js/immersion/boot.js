@@ -18,11 +18,24 @@
       _vp.content = "width=device-width, initial-scale=1";
       (document.head || document.documentElement).insertBefore(_vp, (document.head && document.head.firstChild) || null);
     }
-    if (/\/years\/\d{4}\/sites\//.test(_p) && !document.getElementById("itt-dest-resize")) {
-      var _ds = document.createElement("style");
-      _ds.id = "itt-dest-resize";
-      _ds.textContent = "img,table,video{max-width:100%;height:auto}table{box-sizing:border-box}";
-      (document.head || document.documentElement).appendChild(_ds);
+    if (/\/years\/\d{4}\/sites\//.test(_p) && !document.getElementById("itt-dest-page-css")) {
+      var _base = "";
+      var _idx = _p.indexOf("/years/");
+      if (_idx !== -1) _base = _p.slice(0, _idx);
+      var _link = document.createElement("link");
+      _link.id = "itt-dest-page-css";
+      _link.rel = "stylesheet";
+      _link.href = _base + "/css/itt-dest-page.css?v=20260926dest3";
+      (document.head || document.documentElement).appendChild(_link);
+      if (!document.querySelector('meta[name="color-scheme"]')) {
+        var _cs = document.createElement("meta");
+        _cs.name = "color-scheme";
+        _cs.content = "only light";
+        (document.head || document.documentElement).insertBefore(
+          _cs,
+          (document.head && document.head.firstChild) || null
+        );
+      }
     }
     /* Fill About/map when they sit in the year iframe. Standalone Starting Point
        (top window) must not min-height:100% — that is the cavern under the footer. */
@@ -243,6 +256,8 @@
        leftover markup is common but not universal; deferring unused writers
        cuts the first-visit waterfall on gold rooms. */
     add("immersion/shared.js");
+    add("config/link-seqs.js");
+    add("immersion/link-seq.js");
     add("immersion/residual-placard.js");
     add("immersion/real-gate.js");
     add("immersion/residual-real.js");

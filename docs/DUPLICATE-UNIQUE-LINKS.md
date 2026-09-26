@@ -635,7 +635,7 @@ Leftover dest KEEP leftover dest-true I/O stays. leftover-3× unique dest **link
 | 2022 | 6 | `dalle2` · `ios16` · `m2` · `midjourney` · `stablediff` · `temu` |
 | **sum** | **94** | |
 
-### R7. leftover dest leftover dest-true I/O dests also leftover-2× unique dest **link** dests (**706**)
+### R7. leftover dest leftover dest-true I/O dests also leftover-2× unique dest **link** dests (**713**)
 
 Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftover-2× unique dest **link** dests. leftover unique dest **links** are hrefs; leftover dest leftover dest-true I/O stays. Forests carry most of this.
 
@@ -657,7 +657,7 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2007 | 5 |
 | 2008 | 39 |
 | 2010 | 1 |
-| 2011 | 13 |
+| 2011 | 20 |
 | 2012 | 2 |
 | 2013 | 25 |
 | 2015 | 7 |
@@ -665,7 +665,7 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2017 | 20 |
 | 2018 | 8 |
 | 2019 | 21 |
-| **sum** | **706** |
+| **sum** | **713** |
 
 ### R8. Forest leftover dest leftover-3× dests also leftover-2× unique dest **links** (**189** dest indexes)
 

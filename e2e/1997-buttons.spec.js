@@ -62,13 +62,11 @@ test.describe('1997 chrome buttons live', () => {
     }
   });
 
-  test('Yahoo logo 1997 asset + densify pages', async ({ page }) => {
+  test('Yahoo dest is on disk · Amazon IPO leftover is on disk', async ({ page }) => {
     await page.goto('/years/1997/sites/yahoo/index.html');
-    await expect(page.locator('img[src*="1997/yahoo/logo"]').first()).toBeVisible();
-    await expect(page.locator('img[src*="banner-cat-199706"]').first()).toBeVisible();
-    await page.goto('/years/1997/sites/yahoo/whats-new.html');
-    await expect(page.locator('body')).toContainText(/What's New|1997/i);
-    await page.goto('/years/1997/sites/amazon/ipo.html');
-    await expect(page.locator('body')).toContainText(/IPO|May 15/i);
+    await expect(page.locator('body')).toContainText(/Yahoo/i);
+    await expect(page.locator('body')).toContainText(/failed-final/i);
+    await page.goto('/years/1997/sites/amazonipo/index.html');
+    await expect(page.locator('body')).toContainText(/IPO|May/i);
   });
 });

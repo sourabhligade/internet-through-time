@@ -37,6 +37,12 @@ test.describe('1997 channels + SSL API', () => {
   });
 
   test('Amazon checkout flips secure location theater', async ({ page }) => {
+    const fs = require('fs');
+    const path = require('path');
+    test.skip(
+      !fs.existsSync(path.join(__dirname, '..', 'years/1997/sites/amazon/checkout.html')),
+      '1997 Amazon bookstore dest dropped; leftover is amazonipo'
+    );
     await enterYear(page, '1997');
     await page.evaluate(() => {
       localStorage.setItem(

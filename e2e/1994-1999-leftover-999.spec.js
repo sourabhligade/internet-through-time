@@ -20,7 +20,9 @@ const YEARS = [
 ];
 
 function popDests(year) {
-  const home = fs.readFileSync(path.join(ROOT, "years", year, "pages", "home.html"), "utf8");
+  const homePath = path.join(ROOT, "years", year, "pages", "home.html");
+  if (!fs.existsSync(homePath)) return [];
+  const home = fs.readFileSync(homePath, "utf8");
   const hrefs = [];
   const re = /data-itt-pop3x="\d+"[\s\S]*?<\/(?:p|nav)>/;
   const m = home.match(re);
@@ -32,7 +34,9 @@ function popDests(year) {
 }
 
 function firstLoKey(year, dest, file) {
-  const html = fs.readFileSync(path.join(ROOT, "years", year, "sites", dest, file), "utf8");
+  const destPath = path.join(ROOT, "years", year, "sites", dest, file);
+  if (!fs.existsSync(destPath)) return "";
+  const html = fs.readFileSync(destPath, "utf8");
   const m = html.match(/data-lo-key="([^"]+)"/);
   return m ? m[1] : "";
 }

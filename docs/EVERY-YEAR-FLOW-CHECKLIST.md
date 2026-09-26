@@ -40,7 +40,7 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | **1996** | forest | HTML | Portal wars | 10 | 10 | 76 | 153 | period set |
 | **1997** | forest | HTML | PointCast | 10 | 10 | 46 | 166 | period set |
 | **1998** | forest | HTML | I'm Feeling Lucky | 10 | 10 | 28 | 151 | period set |
-| **1999** | forest | HTML | AIM sign-on | 10 | 10 | 69 | 429 | period set |
+| **1999** | forest | HTML | AIM sign-on | 10 | 10 | 138 | 429 | period set |
 | **2000** | forest | HTML | MapQuest | 10 | 30 | 76 | 501 | period set |
 | **2001** | forest | HTML | Wikipedia UseMod | 10 | 10 | 35 | 259 | period set |
 | **2002** | forest | HTML | StumbleUpon | 10 | 10 | 25 | 230 | period set |
@@ -52,7 +52,7 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | **2008** | forest | HTML | GitHub issue | 10 | 10 | 109 | 591 | period set |
 | **2009** | boarded | plaque | Facebook Like | 10 | 0 | 0 | 78 | period set |
 | **2010** | dest-lock lean | HTML | Instagram posts | 10 | 0 | 1 | 29 | 3–4 files |
-| **2011** | dest-lock lean | HTML | Google+ | 10 | 0 | 13 | 41 | readme-only |
+| **2011** | dest-lock lean | HTML | Google+ | 10 | 0 | 20 | 41 | readme-only |
 | **2012** | dest-lock lean | HTML | Instagram Android | 9 | 0 | 2 | 32 | readme-only |
 | **2013** | dest-true lean (Vine) | HTML | Vine 6s | 9 | 0 | 25 | 52 | readme-only |
 | **2014** | dest-lock lean + React official 9 | HTML + React | WhatsApp Install | 9 | 0 | 0 | 25 | readme-only |
@@ -443,7 +443,7 @@ I/O: empty never writes · trap never writes · finished visit writes leftover o
 **Door:** `/years/1999/`  
 **Star:** AIM sign-on `itt99-aim`  
 **Dest folders:** 429  
-**leftover-2× unique dests:** 69  
+**leftover-2× unique dests:** 138  
 **leftover-3× unique catalog:** empty
 
 ### Year law
@@ -495,11 +495,11 @@ I/O: empty never writes · trap never writes · finished visit writes leftover o
 
 ### leftover-2× unique dest links
 
-69 dests. One dest once. Links only. Official dest leftover-2× first paint 0. Dest-disjoint from official 10 and leftover trail.
+138 dests (2× of live 69). One dest once. Links only. Official dest leftover-2× first paint 0. Dest-disjoint from official 10 and leftover trail. Dests already on disk. Research: [`1999-LEFTOVER-2X-DOUBLE-RESEARCH.md`](1999-LEFTOVER-2X-DOUBLE-RESEARCH.md).
 
 <details><summary>slugs</summary>
 
-`youvegotmail`, `about`, `altavista`, `boocom`, `bowienet`, `drkoop`, `egroups`, `etrade`, `flash4`, `gamespot`, `hampsterdance`, `hotbot`, `icq`, `infoseek`, `matrix`, `msn`, `msngaming`, `mynetscape`, `neopets`, `netcenter`, `seti`, `sixdegrees`, `theonion`, `webvan`, `yahoomessenger`, `zombo`, `lycos`, `go`, `bbc`, `infospace`, `bluemountain`, `realplayer`, `tripod`, `passport`, `looksmart`, `snap`, `xoom`, `goto`, `juno`, `weather`, `attnet`, `mtv`, `fortunecity`, `citysearch`, `sportsline`, `earthlink`, `barnes`, `womencom`, `ivillage`, `foxnews`, `macromedia`, `cdnow`, `mindspring`, `sony`, `snowball`, `idg`, `mypoints`, `travelocity`, `mcafee`, `mapquest`, `msnbc`, `pathfinder`, `digitalcity`, `expedia`, `broadcastcom`, `warnerbros`, `go2net`, `exciteathome`, `nbci`
+`youvegotmail`, `about`, `altavista`, `boocom`, `bowienet`, `drkoop`, `egroups`, `etrade`, `flash4`, `gamespot`, `hampsterdance`, `hotbot`, `icq`, `infoseek`, `matrix`, `msn`, `msngaming`, `mynetscape`, `neopets`, `netcenter`, `seti`, `sixdegrees`, `theonion`, `webvan`, `yahoomessenger`, `zombo`, `lycos`, `go`, `bbc`, `infospace`, `bluemountain`, `realplayer`, `tripod`, `passport`, `looksmart`, `snap`, `xoom`, `goto`, `juno`, `weather`, `attnet`, `mtv`, `fortunecity`, `citysearch`, `sportsline`, `earthlink`, `barnes`, `womencom`, `ivillage`, `foxnews`, `macromedia`, `cdnow`, `mindspring`, `sony`, `snowball`, `idg`, `mypoints`, `travelocity`, `mcafee`, `mapquest`, `msnbc`, `pathfinder`, `digitalcity`, `expedia`, `broadcastcom`, `warnerbros`, `go2net`, `exciteathome`, `nbci`, `craigslist`, `cyworld`, `diaryland`, `digitalspy`, `disney`, `drudge`, `drugstore`, `dslreports`, `ehow`, `epinions`, `espn`, `etoys`, `eurogamer`, `everquest`, `ezboard`, `fark`, `fatwallet`, `flooz`, `freeserve`, `freshdirect`, `gamefaqs`, `gamerankings`, `garageband`, `h2g2`, `halfcom`, `hushmail`, `ie5`, `imode`, `surveymonkey`, `seamless`, `overstock`, `ofoto`, `jibjab`, `fastmail`, `slickdeals`, `trademe`, `ctrip`, `dangdang`, `dcinside`, `fc2`, `kaskus`, `tianya`, `eksisozluk`, `indexhu`, `nunl`, `malaysiakini`, `bungie`, `neogaf`, `dvdtalk`, `adventuregamers`, `ocremix`, `advogato`, `postini`, `singingfish`, `icravetv`, `pitas`, `thirdvoice`, `webshots`, `cluetrain`, `healthline`, `speechbot`, `internet2`, `asheron`, `quake3`, `unreal`, `aoe2`, `dreamcast`, `counterstrike`, `healtheon`
 
 </details>
 
@@ -1289,7 +1289,7 @@ None. Official trail ends at n=10. Do not dest-farm leftover-20.
 **Door:** `/years/2011/`  
 **Star:** Google+ `itt11-gplus`  
 **Dest folders:** 41  
-**leftover-2× unique dests:** 13  
+**leftover-2× unique dests:** 20  
 **leftover-3× unique catalog:** empty
 
 ### Year law
@@ -1329,11 +1329,11 @@ None. Official trail ends at n=10. Do not dest-farm leftover-20.
 
 ### leftover-2× unique dest links
 
-13 dests. One dest once. Links only. Official dest leftover-2× first paint 0. Dest-disjoint from official 10 and leftover trail.
+20 dests (2× of official 10). One dest once. Links only. Official dest leftover-2× first paint 0. Dest-disjoint from official 10 and leftover trail. Dests already on disk.
 
 <details><summary>slugs</summary>
 
-`chromebook`, `honeycomb`, `ics`, `temple`, `skyrim`, `nytpaywall`, `skypebuy`, `grouponipo`, `zyngaipo`, `googlewallet`, `nintendo3ds`, `psnhack`, `gowalla`
+`chromebook`, `honeycomb`, `ics`, `temple`, `skyrim`, `nytpaywall`, `skypebuy`, `grouponipo`, `zyngaipo`, `googlewallet`, `nintendo3ds`, `psnhack`, `gowalla`, `snapchat`, `ios5`, `imessage`, `wechat`, `line`, `stripe`, `codecademy`
 
 </details>
 

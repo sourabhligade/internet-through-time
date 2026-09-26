@@ -25,6 +25,12 @@ const CASES = [
 test.describe('Amazon cart (parametrized years)', () => {
   for (const c of CASES) {
     test(`${c.year}: add to cart writes ${c.storageKey}`, async ({ page }) => {
+      const fs = require('fs');
+      const path = require('path');
+      test.skip(
+        !fs.existsSync(path.join(__dirname, '..', 'years', c.year, c.page)),
+        `${c.year} Amazon dest ${c.page} is not on disk`
+      );
       await enterYear(page, c.year);
       await goInFrame(page, c.page);
       await waitForImmersion(page, c.year);

@@ -22,7 +22,7 @@ body.hub-lean {
   z-index: 1;
   max-width: 920px;
   margin: 0 auto;
-  padding: 12vh 20px 48px;
+  padding: 7vh 20px 48px;
 }
 
 .hub-lean .hub-header {
@@ -49,10 +49,57 @@ body.hub-lean {
   color: rgba(244, 241, 234, 0.78);
 }
 
+.hub-lean .decade-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 6px;
+  margin: 1.1rem 0 0;
+}
+
+.hub-lean .decade-jump a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  color: rgba(244, 241, 234, 0.78);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.hub-lean .decade-jump a:hover,
+.hub-lean .decade-jump a:focus,
+.hub-lean .decade-jump a:focus-visible {
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.hub-lean .decade {
+  margin: 0 0 1.85rem;
+}
+
+.hub-lean .decade:last-child {
+  margin-bottom: 0;
+}
+
+.hub-lean .decade-label {
+  margin: 0 0 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(244, 241, 234, 0.62);
+  scroll-margin-top: 16px;
+}
+
 .hub-lean .year-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
   margin: 0;
   padding: 0;
   background: transparent !important;
@@ -66,6 +113,8 @@ body.hub-lean {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 88px;
+  width: 88px;
   min-height: 64px;
   padding: 0;
   margin: 0;
@@ -79,8 +128,14 @@ body.hub-lean {
 .hub-lean .year-card:focus,
 .hub-lean .year-card.available:hover,
 .hub-lean .year-card.available:focus {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.14) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.hub-lean .year-card:focus,
+.hub-lean .year-card:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .hub-lean .year-card .year-card-inner {
@@ -118,11 +173,43 @@ body.hub-lean {
   display: none;
 }
 
+.hub-lean .year-gap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 88px;
+  width: 88px;
+  min-height: 64px;
+  box-sizing: border-box;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: rgba(244, 241, 234, 0.38);
+  text-align: center;
+}
+
+.hub-lean .year-gap-year {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hub-lean .year-gap-note {
+  margin-top: 2px;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 560px) {
   .hub-lean .hub {
     padding-top: 8vh;
   }
-  .hub-lean .year-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .hub-lean .year-card,
+  .hub-lean .year-card.available,
+  .hub-lean .year-gap {
+    flex: 0 0 calc((100% - 30px) / 4);
+    width: auto;
+    min-width: 0;
+    box-sizing: border-box;
   }
 }

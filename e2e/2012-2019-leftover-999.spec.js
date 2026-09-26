@@ -18,8 +18,14 @@ const YEARS = [
   { year: "2017", star: "itt17-faceid", honesty: "Face ID" },
 ];
 
+function yearHomePath(year) {
+  return path.join(ROOT, "years", year, "pages", "home.html");
+}
+
 function popDests(year) {
-  const home = fs.readFileSync(path.join(ROOT, "years", year, "pages", "home.html"), "utf8");
+  const homePath = yearHomePath(year);
+  if (!fs.existsSync(homePath)) return [];
+  const home = fs.readFileSync(homePath, "utf8");
   const hrefs = [];
   const re = /data-itt-pop3x="\d+"[\s\S]*?<\/(?:p|nav)>/;
   const m = home.match(re);
@@ -31,7 +37,9 @@ function popDests(year) {
 }
 
 function firstLoKey(year, dest, file) {
-  const html = fs.readFileSync(path.join(ROOT, "years", year, "sites", dest, file), "utf8");
+  const destPath = path.join(ROOT, "years", year, "sites", dest, file);
+  if (!fs.existsSync(destPath)) return "";
+  const html = fs.readFileSync(destPath, "utf8");
   const m = html.match(/data-lo-key="([^"]+)"/);
   return m ? m[1] : "";
 }
@@ -105,6 +113,7 @@ test.describe("wiped years stay boarded", () => {
 for (const y of YEARS) {
   test.describe(`${y.year} leftover unique`, () => {
     test("home has no duplicate pop3x rails", async ({ page }) => {
+      test.skip(!fs.existsSync(yearHomePath(y.year)), `${y.year} HTML home is gone (React / wiped door)`);
       await page.goto(`/years/${y.year}/pages/home.html`);
       expect(await page.locator(`[data-itt-pop3x="${y.year}"] a`).count()).toBe(0);
       expect(await page.locator(`[data-itt-pop-more="${y.year}"] a`).count()).toBe(0);

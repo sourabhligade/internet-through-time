@@ -57,6 +57,15 @@ test.describe('1997 flow: eBay bid', () => {
 });
 
 test.describe('1997 flow: Amazon cart + IPO era', () => {
+  test.beforeEach(() => {
+    const fs = require('fs');
+    const path = require('path');
+    test.skip(
+      !fs.existsSync(path.join(__dirname, '..', 'years/1997/sites/amazon/book-being-digital.html')),
+      '1997 Amazon bookstore dest dropped; leftover is amazonipo'
+    );
+  });
+
   test('add-to-cart uses itt97 prefix', async ({ page }) => {
     await enterYear(page, '1997');
     await page.evaluate(() => localStorage.setItem('itt97-amazon-cart', '[]'));
@@ -128,17 +137,17 @@ test.describe('1997 flow: ICQ', () => {
 test.describe('1997 flow: Start menu', () => {
   test('data-start-cmd buttons exist and respond', async ({ page }) => {
     await enterYear(page, '1997');
+    await page.locator('#btn-start').click();
     const items = page.locator('[data-start-cmd]');
-    await expect(items.first()).toBeAttached({ timeout: 10000 });
+    await expect(items.first()).toBeVisible({ timeout: 10000 });
     const n = await items.count();
     expect(n).toBeGreaterThanOrEqual(3);
-    // Open start if needed
-    const start = page.locator('#start-button, .start-btn, [id*="start"]').first();
-    if (await start.isVisible().catch(() => false)) {
-      await start.click({ force: true });
-    }
-    await page.locator('[data-start-cmd="help"]').click({ force: true }).catch(() => {});
-    // Should not throw; shell remains usable
+    await page.locator('[data-start-cmd="settings"]').click({ force: true });
+    await expect(page.locator('#dlg-prefs')).not.toHaveClass(/hidden/);
+    await page.evaluate(() => {
+      document.getElementById('dlg-prefs')?.classList.add('hidden');
+      document.getElementById('modal-backdrop')?.classList.add('hidden');
+    });
     await expect(page.locator('#content')).toBeVisible();
   });
 });
@@ -157,10 +166,10 @@ test.describe('1997 flow: Yahoo + HotBot navigation', () => {
 
 test.describe('1997 flow: Amazon no smile', () => {
   test('amazon pages do not use smile branding', async ({ page }) => {
-    const frame = await boot(page, 'sites/amazon/index.html');
+    const frame = await boot(page, 'sites/amazonipo/index.html');
     const html = await frame.locator('body').innerHTML();
     expect(html.toLowerCase()).not.toMatch(/logo-smile|smile\.gif/);
-    await expect(frame.locator('body')).toContainText(/Amazon|book/i);
+    await expect(frame.locator('body')).toContainText(/Amazon|IPO/i);
   });
 });
 
@@ -177,6 +186,15 @@ test.describe('1997 flow: eBay PDA second listing', () => {
 });
 
 test.describe('1997 flow: full path eBay then Amazon', () => {
+  test.beforeEach(() => {
+    const fs = require('fs');
+    const path = require('path');
+    test.skip(
+      !fs.existsSync(path.join(__dirname, '..', 'years/1997/sites/amazon/book-being-digital.html')),
+      '1997 Amazon bookstore dest dropped; leftover is amazonipo'
+    );
+  });
+
   test('bid on laptop then checkout a book', async ({ page }) => {
     await enterYear(page, '1997');
     await page.evaluate(() => {

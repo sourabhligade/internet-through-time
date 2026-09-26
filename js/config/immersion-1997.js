@@ -13,7 +13,7 @@
     features: {
       flowMap: true,
       nav: true,
-      amazon: true,
+      amazon: false,
       auction: true,
       hotmail: true,
       icq: true
@@ -36,9 +36,9 @@
         match: "/hotmail/"
       },
       {
-        label: "Amazon",
-        href: "sites/amazon/index.html",
-        match: "/amazon/"
+        label: "Amazon IPO",
+        href: "sites/amazonipo/index.html",
+        match: "/amazonipo/"
       },
       {
         label: "CNN",
@@ -109,11 +109,11 @@
       },
       {
         id: "amazon",
-        label: "Amazon.com",
-        href: "sites/amazon/index.html",
-        match: "/amazon/",
-        hint: "IPO-era bookstore · optional cart",
-        doneMessage: "Amazon — IPO era, still just books."
+        label: "Amazon IPO",
+        href: "sites/amazonipo/index.html",
+        match: "/amazonipo/",
+        hint: "May 1997 IPO leftover · not a bookstore cart",
+        doneMessage: "Amazon IPO leftover — bookstore dest is gone."
       },
       {
         id: "cnn",
@@ -227,10 +227,10 @@
         blurb: "Matt Drudge's news aggregator."
       },
       {
-        title: "Being Digital",
-        path: "sites/amazon/book-being-digital.html",
-        kw: "being digital negroponte book",
-        blurb: "Negroponte at Amazon."
+        title: "Amazon IPO",
+        path: "sites/amazonipo/index.html",
+        kw: "amazon ipo negroponte being digital",
+        blurb: "Amazon IPO leftover. Bookstore dest is gone."
       },
       {
         title: "Starting Point",

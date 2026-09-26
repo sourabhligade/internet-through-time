@@ -130,15 +130,15 @@
         "label": "AltaVista"
       },
       {
-        "go": "sites/amazon/index.html",
-        "label": "Amazon"
+        "go": "sites/amazon/ssl-checkout.html",
+        "label": "SSL checkout"
       },
       {
-        "go": "sites/auctionweb/index.html",
+        "go": "sites/auctionweb/item-laser.html",
         "label": "AuctionWeb"
       },
       {
-        "go": "sites/geocities/index.html",
+        "go": "sites/geocities/homestead.html",
         "label": "GeoCities"
       },
       {
@@ -151,7 +151,7 @@
       },
       {
         "go": "sites/microsoft/index.html",
-        "label": "IE"
+        "label": "Microsoft"
       },
       {
         "go": "sites/hotwired/index.html",
@@ -303,8 +303,8 @@
         "label": "Yahoo!"
       },
       {
-        "go": "sites/amazon/index.html",
-        "label": "Amazon"
+        "go": "sites/amazonipo/index.html",
+        "label": "Amazon IPO"
       },
       {
         "go": "sites/ebay/index.html",

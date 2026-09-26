@@ -671,33 +671,17 @@
       /* Sticky wayfind: always reachable exit to year landing (not on Starting Point) */
       if (!onHome && !document.getElementById("itt-wayfind")) {
         /* Inline CSS so 1994 Mosaic + every year get the bar (not only period-1995 chain) */
-        if (!document.getElementById("itt-wayfind-css")) {
-          var st = document.createElement("style");
-          st.id = "itt-wayfind-css";
-          st.type = "text/css";
-          st.appendChild(
-            document.createTextNode(
-              /* pointer-events:none on bar so bid/checkout submits under the strip still work;
-               * only anchors capture clicks (flow masterpiece Pass 1). */
-              "#itt-wayfind{position:fixed;left:0;right:0;bottom:0;z-index:9999;" +
-                "display:block;text-align:left;padding:7px 12px;background:#000080;color:#fff;" +
-                "font-family:Arial,Helvetica,sans-serif;font-size:12px;border-top:2px solid #99ccff;" +
-                "pointer-events:none;}" +
-              "#itt-wayfind a{color:#ffff99;font-weight:bold;text-decoration:underline;margin:0 4px;" +
-                "pointer-events:auto;}" +
-              "#itt-wayfind a.itt-wayfind-home{color:#fff;background:#000060;border:1px solid #99ccff;" +
-                "text-decoration:none;padding:3px 10px;display:inline-block;}" +
-              "#itt-wayfind a.itt-wayfind-home:hover{background:#0000aa;}" +
-              "#itt-wayfind .itt-wayfind-sep{color:#99ccff;margin:0 2px;}" +
-              "body.has-itt-wayfind{padding-bottom:56px !important;}" +
-              "html.has-itt-wayfind,body.has-itt-wayfind{scroll-padding-bottom:64px;}" +
-              "html,body{max-width:100%;overflow-x:hidden;}" +
-              ".itt-nav-slot{max-width:100%;width:100%;box-sizing:border-box;overflow:hidden;margin-left:0;margin-right:0;}" +
-              "#itt-exhibit-nav a.itt-nav-home{display:inline-block;padding:1px 8px;border:1px solid #99ccff;" +
-                "background:#000060;text-decoration:none !important;}" +
-              "#itt-exhibit-nav a.itt-nav-home:hover{background:#0000aa;}"
-            )
-          );
+        if (!document.getElementById("itt-dest-page-css") && !document.getElementById("itt-wayfind-css")) {
+          var st = document.createElement("link");
+          st.id = "itt-dest-page-css";
+          st.rel = "stylesheet";
+          var href = "../../../css/itt-dest-page.css?v=20260926dest3";
+          try {
+            var path = location.pathname || "";
+            var yi = path.indexOf("/years/");
+            if (yi !== -1) href = path.slice(0, yi) + "/css/itt-dest-page.css?v=20260926dest3";
+          } catch (eHref) { /* */ }
+          st.href = href;
           (document.head || document.documentElement).appendChild(st);
         }
         var way = document.createElement("div");
@@ -725,6 +709,9 @@
           if (document.documentElement) {
             document.documentElement.className =
               (document.documentElement.className || "") + " has-itt-wayfind";
+          }
+          if (window.self === window.top && /\/years\/\d{4}\/sites\//.test(location.pathname || "")) {
+            document.documentElement.className += " itt-dest-top";
           }
         } catch (eCls) { /* */ }
       }
@@ -796,6 +783,17 @@
           ITT.UX.bootContent(document);
         }
       } catch (eUx) { /* */ }
+      function pinDestTopFooters() {
+        try {
+          if ((document.documentElement.className || "").indexOf("itt-dest-top") === -1) return;
+          var footE = document.getElementById("itt-exhibit-foot");
+          var wayE = document.getElementById("itt-wayfind");
+          if (footE) document.body.appendChild(footE);
+          if (wayE) document.body.appendChild(wayE);
+        } catch (ePin) { /* */ }
+      }
+      pinDestTopFooters();
+      setTimeout(pinDestTopFooters, 0);
     };
     api.ensureFlashHost = ensureFlashHost;
   };

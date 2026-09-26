@@ -1,0 +1,132 @@
+/**
+ * Dest room chrome — every years/YYYY/sites/* page (top window and iframe).
+ *
+ * Layers:
+ *   hub          css/hub-lean.css
+ *   year shell   css/year-shell.css   (html/body height 100% — SHELL ONLY)
+ *   dest rooms   css/itt-dest-page.css (this file)
+ *   period look  css/period-YYYY.css
+ *   React door   react/src/styles.css  (.door is the shell analog)
+ *
+ * Dest html/body never min-height 100% / 100vh. That cavern parks
+ * #itt-exhibit-foot at the bottom of the window.
+ */
+html {
+  color-scheme: only light;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+body {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+img,
+table,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  box-sizing: border-box;
+}
+
+#itt-wayfind {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: block;
+  text-align: left;
+  padding: 7px 12px;
+  background: #000080;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 2px solid #99ccff;
+  pointer-events: none;
+}
+
+#itt-wayfind a {
+  color: #ffff99;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 0 4px;
+  pointer-events: auto;
+}
+
+#itt-wayfind a.itt-wayfind-home {
+  color: #fff;
+  background: #000060;
+  border: 1px solid #99ccff;
+  text-decoration: none;
+  padding: 3px 10px;
+  display: inline-block;
+}
+
+#itt-wayfind a.itt-wayfind-home:hover {
+  background: #0000aa;
+}
+
+#itt-wayfind .itt-wayfind-sep {
+  color: #99ccff;
+  margin: 0 2px;
+}
+
+html.has-itt-wayfind,
+body.has-itt-wayfind {
+  min-height: 0 !important;
+  height: auto !important;
+  scroll-padding-bottom: 64px;
+}
+
+body.has-itt-wayfind {
+  padding-bottom: 56px !important;
+}
+
+/* Dest opened as its own tab (not the year-shell iframe): do not pin a
+ * footer to the viewport. That is the empty band under the trail. */
+html.itt-dest-top #itt-wayfind {
+  position: static !important;
+  pointer-events: auto;
+}
+
+html.itt-dest-top body.has-itt-wayfind {
+  padding-bottom: 0 !important;
+}
+
+#itt-exhibit-foot {
+  clear: both;
+  margin-top: 8px !important;
+  padding-bottom: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.itt-nav-slot {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#itt-exhibit-nav a.itt-nav-home {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #99ccff;
+  background: #000060;
+  text-decoration: none !important;
+}
+
+#itt-exhibit-nav a.itt-nav-home:hover {
+  background: #0000aa;
+}

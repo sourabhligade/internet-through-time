@@ -11,13 +11,15 @@
 }
 
 /* 1995 document defaults — tables for layout, commercial web */
-html { background: #ffffff; }
+html { background: #ffffff; min-height: 0; height: auto; color-scheme: only light; }
 body {
   background: #ffffff;
   color: #000000;
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   margin: 8px;
+  min-height: 0;
+  height: auto;
   line-height: 1.25;
 }
 a:link { color: #0000ee; text-decoration: underline; }
@@ -170,79 +172,14 @@ blink { animation: blink 1s step-end infinite; }
 #itt-exhibit-nav td.itt-nav-home-cell {
   padding-left: 8px;
 }
-#itt-exhibit-foot {
-  clear: both;
-  margin-top: 1.5em;
-  padding-bottom: 3em; /* room above sticky wayfind */
-  font-family: "Times New Roman", Times, serif;
-}
-html[data-itt-start-standalone] #itt-exhibit-foot {
-  padding-bottom: 16px;
-}
 #itt-exhibit-foot a.itt-foot-home {
   color: #000080;
   font-size: 1.05em;
 }
 
-/* Sticky wayfind — always-visible path back to year landing.
- * pointer-events:none on the bar so form submits / buttons under the strip
- * still receive clicks; only the links are clickable (Pass 1 flow fix 2026-08). */
-#itt-wayfind {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 6px 10px;
-  padding: 7px 12px;
-  background: #000080;
-  color: #fff;
-  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
-  font-size: 12px;
-  border-top: 2px solid #99ccff;
-  pointer-events: none;
-}
-#itt-wayfind a {
-  color: #ffff99;
-  font-weight: bold;
-  text-decoration: underline;
-  padding: 2px 6px;
-  pointer-events: auto;
-}
-#itt-wayfind a.itt-wayfind-home {
-  color: #fff;
-  background: #000060;
-  border: 1px solid #99ccff;
-  text-decoration: none;
-  padding: 3px 10px;
-}
-#itt-wayfind a.itt-wayfind-home:hover,
-#itt-wayfind a.itt-wayfind-home:focus {
-  background: #0000aa;
-  color: #fff;
-  outline: none;
-}
-#itt-wayfind a:hover,
-#itt-wayfind a:focus {
-  color: #fff;
-}
-#itt-wayfind .itt-wayfind-sep {
-  color: #99ccff;
-  opacity: 0.8;
-}
-body.has-itt-wayfind {
-  /* Clearance so last form controls are not under the sticky strip */
-  padding-bottom: 56px !important;
-}
-@media (prefers-reduced-motion: reduce) {
-  #itt-wayfind {
-    box-shadow: none;
-  }
-}
+/* Dest chrome (wayfind, exhibit-foot clearance) lives in css/itt-dest-page.css.
+ * This file is @imported by 1996–2022. Do not put html/body height or
+ * sticky-footer chrome here. */
 
 /* Cleaner content rhythm */
 body {

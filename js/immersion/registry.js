@@ -87,6 +87,8 @@
     "immersion/leftover-official.js",
     "config/leftover-2x-unique-links.js",
     "immersion/leftover-2x-unique-links.js",
+    "config/link-seqs.js",
+    "immersion/link-seq.js",
     "immersion/year-4x-flows.js",
     "immersion/official-dest-gold.js",
     "immersion/official-verb.js",

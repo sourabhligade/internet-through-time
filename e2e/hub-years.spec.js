@@ -176,6 +176,26 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('#resume-link, #resume-wrap')).toHaveCount(0);
   });
 
+  test('hub decade timeline rails · 2009 and 2018 are gaps', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('section.decade')).toHaveCount(4);
+    await expect(page.locator('#decade-1990s a.year-card.available')).toHaveCount(6);
+    await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(9);
+    await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(9);
+    await expect(page.locator('#decade-2020s a.year-card.available')).toHaveCount(3);
+    await expect(page.locator('.year-gap')).toHaveCount(2);
+    await expect(page.locator('#decade-2000s .year-gap')).toContainText(/2009/);
+    await expect(page.locator('#decade-2000s .year-gap')).toContainText(/boarded/i);
+    await expect(page.locator('#decade-2010s .year-gap')).toContainText(/2018/);
+    await expect(page.locator('a.year-card[href*="years/2009"]')).toHaveCount(0);
+    await expect(page.locator('a.year-card[href*="years/2018"]')).toHaveCount(0);
+    await expect(page.locator('a.era-jump-chip')).toHaveCount(0);
+    await page.locator('.decade-jump a[href="#decade-2010s"]').click();
+    await expect(page.locator('#decade-2010s')).toBeInViewport();
+    await page.locator('a.year-card.available[data-year="2011"]').click();
+    await expect(page).toHaveURL(/\/years\/2011\//);
+  });
+
   for (const year of OPEN) {
     test(`${year} shell boots with content iframe`, async ({ page }) => {
       if (year === "2021") {

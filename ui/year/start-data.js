@@ -23,8 +23,8 @@
  "items": [
  " <a href=\"about.html\">About 1995</a> — Win95 · commercial Web",
  " <a href=\"../sites/amazon/ssl-checkout.html\">SSL checkout</a> — name + card + city REAL",
- " <a href=\"../sites/amazon/index.html\">Amazon books</a> → cart",
- " <a href=\"../sites/auctionweb/index.html\">AuctionWeb</a> — bid higher (not eBay yet)",
+ " <a href=\"../sites/amazon/index.html\">Amazon books</a> — bookstore hop, not the star",
+ " <a href=\"../sites/auctionweb/item-laser.html\">AuctionWeb</a> — bid higher (not eBay yet)",
  " <a href=\"../sites/geocities/homestead.html\">GeoCities homestead</a> — claim a free page",
  " <a href=\"map.html\">Year flow map</a> — full trail tree"
  

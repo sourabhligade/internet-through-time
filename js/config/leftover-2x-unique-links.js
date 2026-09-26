@@ -305,7 +305,7 @@
     },
     {
       "id": "bbc",
-      "name": "Bbc"
+      "name": "BBC"
     },
     {
       "id": "beanies",
@@ -313,7 +313,7 @@
     },
     {
       "id": "cnet",
-      "name": "Cnet"
+      "name": "CNET"
     },
     {
       "id": "compuserve",
@@ -321,7 +321,7 @@
     },
     {
       "id": "fbi",
-      "name": "Fbi"
+      "name": "FBI"
     },
     {
       "id": "harvest",
@@ -329,7 +329,7 @@
     },
     {
       "id": "hotbot",
-      "name": "Hotbot"
+      "name": "HotBot"
     },
     {
       "id": "intel",
@@ -345,7 +345,7 @@
     },
     {
       "id": "mit",
-      "name": "Mit"
+      "name": "MIT"
     },
     {
       "id": "netcom",
@@ -353,7 +353,7 @@
     },
     {
       "id": "npr",
-      "name": "Npr"
+      "name": "NPR"
     },
     {
       "id": "opentext",
@@ -361,7 +361,7 @@
     },
     {
       "id": "pbs",
-      "name": "Pbs"
+      "name": "PBS"
     },
     {
       "id": "prodigy",
@@ -373,7 +373,7 @@
     },
     {
       "id": "startingpoint",
-      "name": "Starting Point"
+      "name": "Starting Point catalog leftover"
     },
     {
       "id": "starwave",
@@ -409,7 +409,7 @@
     },
     {
       "id": "uunet",
-      "name": "Uunet"
+      "name": "UUNET"
     },
     {
       "id": "wsj",
@@ -610,6 +610,154 @@
     {
       "id": "wunderground",
       "name": "Weather Underground"
+    },
+    {
+      "id": "webex",
+      "name": "Webex"
+    },
+    {
+      "id": "vrbo",
+      "name": "Vrbo"
+    },
+    {
+      "id": "getty",
+      "name": "Getty Images"
+    },
+    {
+      "id": "worlds",
+      "name": "Worlds.com"
+    },
+    {
+      "id": "telegarden",
+      "name": "Telegarden"
+    },
+    {
+      "id": "iep",
+      "name": "Internet Encyclopedia of Philosophy"
+    },
+    {
+      "id": "datalounge",
+      "name": "Datalounge"
+    },
+    {
+      "id": "wirtualna",
+      "name": "Wirtualna Polska"
+    },
+    {
+      "id": "walla",
+      "name": "Walla!"
+    },
+    {
+      "id": "townhall",
+      "name": "Townhall"
+    },
+    {
+      "id": "versiontracker",
+      "name": "Versiontracker"
+    },
+    {
+      "id": "waiter",
+      "name": "Waiter.com"
+    },
+    {
+      "id": "starbright",
+      "name": "Starbright World"
+    },
+    {
+      "id": "fics",
+      "name": "Free Internet Chess Server"
+    },
+    {
+      "id": "allaboutjazz",
+      "name": "All About Jazz"
+    },
+    {
+      "id": "asiaone",
+      "name": "Asiaone"
+    },
+    {
+      "id": "charityvillage",
+      "name": "Charityvillage"
+    },
+    {
+      "id": "cruisecritic",
+      "name": "Cruise Critic"
+    },
+    {
+      "id": "mythica",
+      "name": "Encyclopedia Mythica"
+    },
+    {
+      "id": "zug",
+      "name": "Zug"
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline Vault"
+    },
+    {
+      "id": "covers",
+      "name": "Covers.com"
+    },
+    {
+      "id": "cyclingnews",
+      "name": "Cyclingnews"
+    },
+    {
+      "id": "dermnet",
+      "name": "Dermnet"
+    },
+    {
+      "id": "eighttrack",
+      "name": "8-Track Heaven"
+    },
+    {
+      "id": "folkden",
+      "name": "Folk Den"
+    },
+    {
+      "id": "mudconnector",
+      "name": "The Mud Connector"
+    },
+    {
+      "id": "outpostgallifrey",
+      "name": "Outpost Gallifrey"
+    },
+    {
+      "id": "raptureready",
+      "name": "Rapture Ready"
+    },
+    {
+      "id": "rxlist",
+      "name": "Rxlist"
+    },
+    {
+      "id": "shetland",
+      "name": "Shetland News"
+    },
+    {
+      "id": "swissinfo",
+      "name": "SWI swissinfo"
+    },
+    {
+      "id": "technosphere",
+      "name": "Technosphere"
+    },
+    {
+      "id": "terraquest",
+      "name": "Terraquest"
+    },
+    {
+      "id": "wargamer",
+      "name": "Wargamer"
+    },
+    {
+      "id": "wireplay",
+      "name": "Wireplay"
+    },
+    {
+      "id": "yachtworld",
+      "name": "Yachtworld"
     }
   ],
   "1996": [
@@ -1494,6 +1642,282 @@
     {
       "id": "nbci",
       "name": "Nbci"
+    },
+    {
+      "id": "craigslist",
+      "name": "Craigslist"
+    },
+    {
+      "id": "cyworld",
+      "name": "Cyworld"
+    },
+    {
+      "id": "diaryland",
+      "name": "Diaryland"
+    },
+    {
+      "id": "digitalspy",
+      "name": "Digital Spy"
+    },
+    {
+      "id": "disney",
+      "name": "Disney / Go"
+    },
+    {
+      "id": "drudge",
+      "name": "Drudge Report"
+    },
+    {
+      "id": "drugstore",
+      "name": "Drugstore.com"
+    },
+    {
+      "id": "dslreports",
+      "name": "Dslreports"
+    },
+    {
+      "id": "ehow",
+      "name": "Ehow"
+    },
+    {
+      "id": "epinions",
+      "name": "Epinions"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN.com"
+    },
+    {
+      "id": "etoys",
+      "name": "Etoys"
+    },
+    {
+      "id": "eurogamer",
+      "name": "Eurogamer"
+    },
+    {
+      "id": "everquest",
+      "name": "Everquest"
+    },
+    {
+      "id": "ezboard",
+      "name": "Ezboard"
+    },
+    {
+      "id": "fark",
+      "name": "Fark"
+    },
+    {
+      "id": "fatwallet",
+      "name": "Fatwallet"
+    },
+    {
+      "id": "flooz",
+      "name": "Flooz.com"
+    },
+    {
+      "id": "freeserve",
+      "name": "Freeserve"
+    },
+    {
+      "id": "freshdirect",
+      "name": "Freshdirect"
+    },
+    {
+      "id": "gamefaqs",
+      "name": "Gamefaqs"
+    },
+    {
+      "id": "gamerankings",
+      "name": "Gamerankings"
+    },
+    {
+      "id": "garageband",
+      "name": "GarageBand.com"
+    },
+    {
+      "id": "h2g2",
+      "name": "H2g2"
+    },
+    {
+      "id": "halfcom",
+      "name": "Half.com"
+    },
+    {
+      "id": "hushmail",
+      "name": "Hushmail"
+    },
+    {
+      "id": "ie5",
+      "name": "Internet Explorer 5"
+    },
+    {
+      "id": "imode",
+      "name": "i-mode"
+    },
+    {
+      "id": "surveymonkey",
+      "name": "Surveymonkey"
+    },
+    {
+      "id": "seamless",
+      "name": "SeamlessWeb"
+    },
+    {
+      "id": "overstock",
+      "name": "Overstock.com"
+    },
+    {
+      "id": "ofoto",
+      "name": "Ofoto"
+    },
+    {
+      "id": "jibjab",
+      "name": "Jibjab"
+    },
+    {
+      "id": "fastmail",
+      "name": "Fastmail"
+    },
+    {
+      "id": "slickdeals",
+      "name": "Slickdeals"
+    },
+    {
+      "id": "trademe",
+      "name": "Trade Me"
+    },
+    {
+      "id": "ctrip",
+      "name": "Ctrip"
+    },
+    {
+      "id": "dangdang",
+      "name": "Dangdang"
+    },
+    {
+      "id": "dcinside",
+      "name": "Dcinside"
+    },
+    {
+      "id": "fc2",
+      "name": "Fc2"
+    },
+    {
+      "id": "kaskus",
+      "name": "Kaskus"
+    },
+    {
+      "id": "tianya",
+      "name": "Tianya Club"
+    },
+    {
+      "id": "eksisozluk",
+      "name": "Ek\u015fi S\u00f6zl\u00fck"
+    },
+    {
+      "id": "indexhu",
+      "name": "Index.hu"
+    },
+    {
+      "id": "nunl",
+      "name": "NU.nl"
+    },
+    {
+      "id": "malaysiakini",
+      "name": "Malaysiakini"
+    },
+    {
+      "id": "bungie",
+      "name": "Halo.Bungie.Org"
+    },
+    {
+      "id": "neogaf",
+      "name": "Gaming-Age Forums"
+    },
+    {
+      "id": "dvdtalk",
+      "name": "DVD Talk"
+    },
+    {
+      "id": "adventuregamers",
+      "name": "Adventure Gamers"
+    },
+    {
+      "id": "ocremix",
+      "name": "OverClocked ReMix"
+    },
+    {
+      "id": "advogato",
+      "name": "Advogato"
+    },
+    {
+      "id": "postini",
+      "name": "Postini"
+    },
+    {
+      "id": "singingfish",
+      "name": "Singingfish"
+    },
+    {
+      "id": "icravetv",
+      "name": "Icravetv"
+    },
+    {
+      "id": "pitas",
+      "name": "Pitas.com"
+    },
+    {
+      "id": "thirdvoice",
+      "name": "Third Voice"
+    },
+    {
+      "id": "webshots",
+      "name": "Webshots Community"
+    },
+    {
+      "id": "cluetrain",
+      "name": "Cluetrain Manifesto"
+    },
+    {
+      "id": "healthline",
+      "name": "Healthline"
+    },
+    {
+      "id": "speechbot",
+      "name": "Speechbot"
+    },
+    {
+      "id": "internet2",
+      "name": "Internet2 / Abilene"
+    },
+    {
+      "id": "asheron",
+      "name": "Asheron&#x27;s Call"
+    },
+    {
+      "id": "quake3",
+      "name": "Quake III Arena"
+    },
+    {
+      "id": "unreal",
+      "name": "Unreal Tournament"
+    },
+    {
+      "id": "aoe2",
+      "name": "Age of Empires II"
+    },
+    {
+      "id": "dreamcast",
+      "name": "Dreamcast / Sega.com"
+    },
+    {
+      "id": "counterstrike",
+      "name": "Counter-Strike beta"
+    },
+    {
+      "id": "healtheon",
+      "name": "Healtheon"
     }
   ],
   "2000": [
@@ -4016,6 +4440,34 @@
     {
       "id": "gowalla",
       "name": "Gowalla leftover"
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat leftover"
+    },
+    {
+      "id": "ios5",
+      "name": "iOS 5 leftover"
+    },
+    {
+      "id": "imessage",
+      "name": "iMessage leftover"
+    },
+    {
+      "id": "wechat",
+      "name": "WeChat leftover"
+    },
+    {
+      "id": "line",
+      "name": "LINE leftover"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe leftover"
+    },
+    {
+      "id": "codecademy",
+      "name": "Codecademy leftover"
     }
   ],
   "2012": [

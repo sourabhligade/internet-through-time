@@ -8,7 +8,7 @@ Hub **27 years open** (1994–2008 + 2010–2017 + 2019–2022). **2018 wiped** 
 | Year | Disk |
 |------|------|
 | **1994–2004** | Live dense / forest reconstructions |
-| **1999** | Live forest · AIM `itt99-aim` · dests **429** · leftover-2× on every dest · Board C rail `data-itt-2x-unique-c` |
+| **1999** | Live forest · AIM `itt99-aim` · dests **429** · leftover-2× unique dests **138** · leftover-2× on leftover dests · Board C rail `data-itt-2x-unique-c` |
 | **2000** | Live forest · MapQuest `itt00-mapquest` · dests **501** · trail stops **40** (official 10 + leftover 30) · leftover-2× on every dest · Board C rail |
 | **2001** | **CUT-FOREST LIVE** · Wikipedia UseMod `itt01-wiki` · dests **259** · leftover 18 year-true |
 | **2002** | **CUT-FOREST LIVE** · StumbleUpon `itt02-stumble` · dests **230** · leftover 18 year-true |
@@ -20,7 +20,7 @@ Hub **27 years open** (1994–2008 + 2010–2017 + 2019–2022). **2018 wiped** 
 | **2008** | **DONE** · live dense · GitHub issue `itt08-github` · dest-true official 10 + leftover 10 · 5× F1–F5 App Store, Chrome, Android, Hulu, Dropbox · dest folders **591** · XP+IE7 |
 | **2009** | **Boarded** · no hub card · year-shell is a plaque · `/pages/home.html` redirects to the plaque · 5× F1–F5 on FarmVille, Bing, iPhone 3GS, Foursquare, Windows 7 · star stays Facebook Like `itt09-like` |
 | **2010** | Live lean · Instagram iOS · dest-lock official 10 + leftover dests · leftover-3× unique **0** · dest folders **29** |
-| **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover dests · leftover-3× unique **0** · dest folders **41** · leftover-4× **0** |
+| **2011** | **Live lean door** · Google+ Circles / Hangout `itt11-gplus` · dest-lock official 10 + leftover dests · leftover-2× unique dests **20** · leftover-3× unique **0** · dest folders **41** · leftover-4× **0** |
 | **2012** | Live lean · IG Android · dest-lock official 10 + leftover-4× unique **3** (chrome · twitter · soundcloud) + leftover dests · leftover-3× unique **0** · dest folders **32** · stacked leftover-4× **0** |
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover-3× unique **0** · leftover 4× **0** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover dests · leftover-3× unique **0** · dest folders **25** · Win7 + IE 9 |

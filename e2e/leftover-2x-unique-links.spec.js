@@ -172,8 +172,11 @@ test.describe("leftover-2× unique dest links", () => {
 
   test("catalog unique dest counts match matrix", () => {
     const byYear = Object.fromEntries(matrix.map((r) => [r.year, r.n]));
+    expect(byYear["1995"]).toBe(117);
+    expect(byYear["1999"]).toBe(138);
     expect(byYear["2000"]).toBeGreaterThanOrEqual(70);
     expect(byYear["2007"]).toBe(5);
+    expect(byYear["2011"]).toBe(20);
     expect(byYear["2013"]).toBe(25);
     expect(byYear["2018"]).toBeUndefined();
     expect(byYear["2022"]).toBe(0);
@@ -258,6 +261,52 @@ test.describe("leftover-2× unique dest links", () => {
     expect(lycos && lycos.ok()).toBeTruthy();
   });
 
+  test("1999 leftover-2× unique dests 138 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/1999/sites/craigslist/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(137);
+    expect(slugs).toContain("espn");
+    expect(slugs).toContain("healtheon");
+    expect(slugs).not.toContain("craigslist");
+    expect(slugs).not.toContain("aim");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "1999", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/1999/sites/aim/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+  });
+
+  test("1995 leftover-2× unique dests 117 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/1995/sites/classmates/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(116);
+    expect(slugs).toContain("webex");
+    expect(slugs).toContain("yachtworld");
+    expect(slugs).not.toContain("classmates");
+    expect(slugs).not.toContain("amazon");
+    expect(slugs).not.toContain("apple");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "1995", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/1995/sites/amazon/ssl-checkout.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+    await expect(page.locator("[data-official-key]")).toHaveCount(1);
+  });
+
   test("2007 leftover dest KEEP rail · official dest leftover-2× first paint 0", async ({ page }) => {
     await page.goto("/years/2007/sites/hackernews/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
@@ -269,6 +318,28 @@ test.describe("leftover-2× unique dest links", () => {
     expect(slugs).toContain("safari3");
 
     await page.goto("/years/2007/sites/iphone/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
+  });
+
+  test("2011 leftover-2× unique dests 20 · official dest leftover-2× first paint 0", async ({ page }) => {
+    await page.goto("/years/2011/sites/snapchat/index.html");
+    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
+    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
+      as.map((a) => a.getAttribute("href") || "")
+    );
+    const slugs = hrefs.map(destSlug).filter(Boolean);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    expect(slugs.length).toBe(19);
+    expect(slugs).toContain("codecademy");
+    expect(slugs).toContain("ios5");
+    expect(slugs).not.toContain("snapchat");
+    expect(slugs).not.toContain("googleplus");
+    hrefs.forEach((h) => {
+      const slug = destSlug(h);
+      expect(fs.existsSync(path.join(ROOT, "years", "2011", "sites", slug, "index.html")), slug).toBe(true);
+    });
+
+    await page.goto("/years/2011/sites/googleplus/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
   });
 
