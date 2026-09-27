@@ -67,9 +67,9 @@ Alphabetical dests-on-disk fill is **out**. ADD dests must be famous that year *
 | ClickZ / Media Metrix | https://clickz.com/top-50-sites-of-december-2000/57100/ · Sep 1999 properties | 2000 Passport #5 · NBCi #12 · Blue Mountain #13 · Tripod #18 · iWon #20 |
 | Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. |
 | Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007/2010–2012/2014/2016/2018/2021/2022 leftover dest KEEP dests on disk. |
-| Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2008 · 2011 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ 2011 · IG Android 2012 |
+| Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 ·  · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012 |
 | Web Design Museum year galleries | https://www.webdesignmuseum.org/gallery/year-1995 | Period exhibits. Failed-final stays honest. |
-| Wikipedia envelope (category sizes, not dest-farm quota) | https://en.wikipedia.org/wiki/Category:Internet_properties_by_year_of_establishment | 2007 **369** · 2010 **286** · 2011 **320** · 2018 **91** · 2021 **78** · 2022 **48** |
+| Wikipedia envelope (category sizes, not dest-farm quota) | https://en.wikipedia.org/wiki/Category:Internet_properties_by_year_of_establishment | 2007 **369** · 2010 **286** ·  **320** · 2018 **91** · 2021 **78** · 2022 **48** |
 
 ### Hosting.com June dests on disk, not in leftover-2× unique dests (ADD)
 
@@ -85,7 +85,6 @@ These dests are on disk and missing from leftover-2× unique dest rails. Cite: H
 | 2002 | `msn` (#2) · `aol` (#3) · `bbc` (#6) · `askjeeves` (#8) · `about` (#9) · `lycos` (#10) | — | Yahoo Google eBay Amazon dest folders |
 | 2003 | `msn` (#2) · `aol` (#4) · `askjeeves` (#7) · `bbc` (#8) · `walmart` (#9) · `cnet` (#10) | — | Yahoo Google eBay Amazon dest folders |
 | 2007 | `myspace` (#4) · `ebay` (#5) | — | Google Yahoo dest folders (dest-lock lean) |
-| 2008 | `bbc` (#10) | YouTube Facebook MSN Ask Amazon MySpace | Google Yahoo dest folders |
 | 2013 | `facebook` (#2) · `youtube` (#3) · `twitter` (#6) | leftover-3× unique dests | Google Yahoo dest folders |
 | 2014 | `facebook` (#2) · `youtube` (#3) · `wikipedia` (#5) · `twitter` (#6) | leftover-3× unique dests | Google dest folder |
 | 2018 | `youtube` (#2) · `wikipedia` (#5) · `instagram` (#8) | leftover-3× unique dests stay **3** | Google dest folder |
@@ -133,7 +132,7 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 |------|-------------|------|
 | 2007 | leftover dest KEEP 14: `hackernews` `friendfeed` `netflix` `appletv` `ipodtouch` `justintv` `icanhas` `funnyordie` `pownce` `androidann` `gears` `iplayer` `amazonmp3` `safari3` · then Hosting.com `myspace` `ebay` | HN Oct 2007 · FriendFeed 2007 · Netflix Watch Instantly 2007 · Justin.tv 2007 · iPhone Safari is the star not leftover · Hosting.com June 2007 MySpace #4 eBay #5 |
 | 2010 | leftover dest KEEP: `flipboard` `minecraft` `hulu` `angry` `googlebuzz` `chromewebstore` `kinect` `cityville` `ibooks` | Cybercultural 2010 Instagram/iPad/Foursquare · Angry Birds Dec 2009 / 2010 mass · Minecraft 2010 · Hulu leftover |
-| 2011 | leftover dest KEEP 19 + extra dest KEEP `gmusic` `pandora` | Google Music 16 Nov 2011 (The Verge) · Pandora IPO Jun 2011 (TechCrunch) · Snapchat 2011 · iMessage iOS 5 |
+|  | leftover dest KEEP 19 + extra dest KEEP `gmusic` `pandora` | Google Music 16 Nov  (The Verge) · Pandora IPO Jun  (TechCrunch) · Snapchat  · iMessage iOS 5 |
 | 2012 | leftover dest KEEP: `tinder` `duolingo` `coursera` `udacity` `edx` `nexus7` `jellybean` `ios6` `googleplay` `kindlefirehd` `coinbase` | Cybercultural 2012 IG Android / Pinterest / Facebook IPO · Tinder 2012 · Coursera 2012 |
 | 2013 | extra dest KEEP 34 (first ADD) then leftover-3× unique dests as href targets | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · Hosting.com Facebook #2 YouTube #3 Twitter #6 |
 | 2014 | leftover dest KEEP: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` · Hosting.com `facebook` `youtube` `wikipedia` `twitter` | Alibaba IPO 2014 · Flappy Bird 2014 · Echo Nov 2014 · Hosting.com June 2014 |
@@ -157,9 +156,8 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 | 1998 | 45 | `americangreetings` Hosting.com #10 | **MISS remainder** |
 | 2005 | 105 | Hosting.com already in KEEP original | **MISS remainder** |
 | 2006 | 116 | Hosting.com already in KEEP original | **MISS remainder** |
-| 2008 | 123 | `bbc` Hosting.com #10 + KEEP original 123 dests | **MISS remainder** after cited dests |
 
-Do **not** fill MISS with `123-reg` / `a21-inc` / language-Wikipedia dumps. Next research pass: Board C–style harvest cites for 1994–1998 and 2005–2008 leftover-2× unique dest **links** only (dests already on disk).
+Do **not** fill MISS with `123-reg` / `a21-inc` / language-Wikipedia dumps. Next research pass: Board C–style harvest cites for 1994–1998 and 2005– leftover-2× unique dest **links** only (dests already on disk).
 
 ---
 
@@ -185,10 +183,9 @@ When leftover-2× unique dests now = 0, after = min(2 × unique dest hrefs in th
 | **2005** | 339 | 105 | 206 | **210** | 105 |
 | **2006** | 366 | 116 | 236 | **232** | 116 |
 | 2007 | 33 | 0 | 0 | **33** | 33 |
-| 2008 | 586 | 123 | 199 | **246** | 123 |
 | 2009 | 78 | 62 | 132 | **stop boarded** | 0 |
 | 2010 | 29 | 19 | 29 | **29** | 10 |
-| 2011 | 41 | 19 | 41 | **38** | 19 |
+|  | 41 | 19 | 41 | **38** | 19 |
 | 2012 | 32 | 20 | 35 | **32** | 12 |
 | 2013 | 52 | 0 | 0 | **47** | 47 |
 | 2014 | 25 | 0 | 0 | **25** | 25 |
@@ -266,7 +263,7 @@ Add **105**. Cap after **210**. Star `itt05-yt-uploads`.
 
 Add **116**. Cap after **232**. Star `itt06-tweets`.
 
-Forest ADD dests are **cited** dests already on disk (§2b). 1999–2004 Board C harvest fills the cap. 1994–1998 and 2005–2008 MISS remainder rather than alphabetical dests.
+Forest ADD dests are **cited** dests already on disk (§2b). 1999–2004 Board C harvest fills the cap. 1994–1998 and 2005– MISS remainder rather than alphabetical dests.
 
 ---
 
@@ -310,14 +307,6 @@ Add **45**. Cap after **90**. Star `itt98-lucky`.
 
 Add **43**. Cap after **86**. Star `itt99-aim`.
 
-### 2008 KEEP original (123)
-
-`adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · `delicious` · `digg` · `dmoz` · `docs` · `dropbox` · `dropboxfolder` · `encarta` · `engadget` · `evernote` · `excite` · `facebook` · `failblog` · `failwhale` · `feedburner` · `firefox` · `flickr` · `friendconnect` · `friendster` · `gamespot` · `github` · `gmail` · `gnutella` · `googlenews` · `googlevideo` · `grooveshark` · `groupon` · `gtaiv` · `hampsterdance` · `heroku` · `hotbot` · `housingmaps` · `html5` · `huffpo` · `hulu` · `huluwatch` · `icq` · `identica` · `ie8` · `infoseek` · `iphone` · `isp` · `itunes` · `kazaa` · `kongregate` · `lastfm` · `linkedin` · `loudcloud` · `macromedia` · `mafiawars` · `maps` · `mashable` · `memeorandum` · `metafilter` · `milliondollar` · `miniclip` · `mint` · `mobileme` · `moreover` · `movabletype` · `mozilla` · `msn` · `mtv` · `myspace` · `napster` · `netcenter` · `netscape` · `newgrounds` · `ning` · `paypal` · `pets` · `phoenix` · `piratebay` · `plurk` · `posterous` · `programmableweb` · `reader` · `recaptcha` · `scribd` · `seesmic` · `skype` · `slashdot` · `spotify` · `spotifyeu` · `spotifyseed` · `stackoverflow` · `startupfailures` · `steam` · `techcrunch` · `technorati` · `time-you` · `tripadvisor` · `tumblr` · `tweetdeck` · `twitter` · `wayback` · `web20conference` · `wikileaks` · `wired` · `wordpress` · `y2k` · `yelp` · `youtube` · `youvegotmail` · `zombo`
-
-Add **123**. Cap after **246**. Star `itt08-github`.
-
----
-
 ## 7. Lean doors — leftover dest KEEP first
 
 Leftover-2× unique dest rails live on leftover dest pages. Official dest HTML leftover-2× first paint stays **0**. Official dests may be href **targets**.
@@ -338,7 +327,7 @@ KEEP original (19): `android` · `chrome` · `facebook` · `farmville` · `forms
 
 ADD leftover dest KEEP: `flipboard` · `minecraft` · `hulu` · `angry` · `googlebuzz` · `chromewebstore` · `kinect` · `cityville` · `ibooks` · then `playable`
 
-### 2011 — after 38 · add 19 · star `itt11-gplus`
+###  — after 38 · add 19 · star `itt11-gplus`
 
 KEEP original (19): `airbnb` · `chromebook` · `dropbox` · `facebook` · `gmusic` · `googleplus` · `icloud` · `instagram` · `ipad` · `iphone` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `qwikster` · `spotify` · `twitch` · `twitter` · `youtube`
 
@@ -477,7 +466,7 @@ flowchart TD
   RAIL --> MISS["MISS remainder years unique dests less than 2x cap"]
 ```
 
-Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** · 2008 **124** · 2010 **29** · 2011 **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2016 **42** · 2017 **49** · 2018 **20** · 2019 **52** · 2020 **16** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
+Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** ·  **124** · 2010 **29** ·  **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2016 **42** · 2017 **49** · 2018 **20** · 2019 **52** · 2020 **16** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
 
 ### A. Leftover dest leftover-2× unique dest rail (hrefs)
 
@@ -532,7 +521,6 @@ Unique dests in leftover-2× rails are **less than** 2× dests on disk. Pass = n
 | **22** | 1998 | http://127.0.0.1:8080/years/1998/sites/about/index.html | 46 | 90 | MISS remainder |
 | **23** | 2005 | http://127.0.0.1:8080/years/2005/sites/about/index.html | 105 | 210 | MISS remainder |
 | **24** | 2006 | http://127.0.0.1:8080/years/2006/sites/aboutus/index.html | 116 | 232 | MISS remainder |
-| **25** | 2008 | http://127.0.0.1:8080/years/2008/sites/about/index.html | 124 | 246 | MISS remainder |
 
 ### E. Boarded / wiped / leftover-3× unique stop
 

@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 
 const OPEN = [
-  '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2010', '2011', '2012', '2013', '2014', '2016', '2017', '2019', '2020', '2021', '2022'
+ '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2010', '2012', '2013', '2014', '2016', '2017', '2019', '2020', '2021', '2022'
 ];
 const BOARDED = ['2009', '2023', '2024', '2025'];
 const LOCKED = [];
@@ -46,7 +46,7 @@ test.describe('hub + year shells', () => {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
       await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
     }
-    await expect(page.locator('body')).toContainText(/26 years open/i);
+ await expect(page.locator('body')).toContainText(/24 years open/i);
     await expect(page.locator('body')).not.toContainText(/27 years open/i);
     await expect(page.locator('body')).not.toContainText(/2021[–-]2025 boarded/i);
     await expect(page.locator('a.year-card[href*="years/2018"]')).toHaveCount(0);
@@ -69,7 +69,6 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.year-card.locked.y2022')).toHaveCount(0);
     await expect(page.locator('.year-card.y2025')).toHaveCount(0);
     await expect(page.locator(".y2007 .era-chip")).toContainText("33 dests");
-    await expect(page.locator(".y2011 .era-chip")).toContainText("41 dests");
     await expect(page.locator(".y2012 .era-chip")).toContainText("32 dests");
   });
 
@@ -81,7 +80,6 @@ test.describe('hub + year shells', () => {
       return {
         y2006: mp.isLiveYear('2006'),
         y2007: mp.isLiveYear('2007'),
-        y2008: mp.isLiveYear('2008'),
         y2009: mp.isLiveYear('2009'),
         y2020: mp.isLiveYear('2020'),
         y2021: mp.isLiveYear('2021'),
@@ -95,7 +93,6 @@ test.describe('hub + year shells', () => {
     expect(live, 'MuseumProgress on hub').toBeTruthy();
     expect(live.y2006).toBe(true);
     expect(live.y2007).toBe(true);
-    expect(live.y2008).toBe(true);
     expect(live.y2009).toBe(false);
     expect(live.y2020).toBe(true);
     expect(live.y2021).toBe(true);
@@ -140,11 +137,9 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2005.available')).toBeVisible();
     await expect(page.locator('.y2006.available')).toBeVisible();
     await expect(page.locator('.y2007.available')).toBeVisible();
-    await expect(page.locator('.y2008.available')).toBeVisible();
     await expect(page.locator('.y2009')).toHaveCount(0);
     await expect(page.locator('.y2010')).toBeVisible();
-    await expect(page.locator('.y2011.available')).toBeVisible();
-    await expect(page.locator('.y2011.locked')).toHaveCount(0);
+ await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y2012.available')).toBeVisible();
     await expect(page.locator('.y2013.available')).toBeVisible();
     await expect(page.locator('.y2013.locked')).toHaveCount(0);
@@ -160,7 +155,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2022.available')).toBeVisible();
     await expect(page.locator('.y2022.locked')).toHaveCount(0);
     await expect(page.locator('.y2025')).toHaveCount(0);
-    await expect(page.locator('body')).toContainText(/26 years open/i);
+ await expect(page.locator('body')).toContainText(/24 years open/i);
     await expect(page.locator('h1')).toHaveCount(1);
   });
 
@@ -182,8 +177,8 @@ test.describe('hub + year shells', () => {
     await page.goto('/');
     await expect(page.locator('section.decade')).toHaveCount(4);
     await expect(page.locator('#decade-1990s a.year-card.available')).toHaveCount(6);
-    await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(9);
-    await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(8);
+    await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(8);
+ await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(7);
     await expect(page.locator('#decade-2020s a.year-card.available')).toHaveCount(3);
     await expect(page.locator('.year-gap')).toHaveCount(3);
     await expect(page.locator('#decade-2000s .year-gap')).toContainText(/2009/);
@@ -195,8 +190,8 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('a.era-jump-chip')).toHaveCount(0);
     await page.locator('.decade-jump a[href="#decade-2010s"]').click();
     await expect(page.locator('#decade-2010s')).toBeInViewport();
-    await page.locator('a.year-card.available[data-year="2011"]').click();
-    await expect(page).toHaveURL(/\/years\/2011\//);
+ await page.locator('a.year-card.available[data-year="2012"]').click();
+ await expect(page).toHaveURL(/\/years\/2012\//);
   });
 
   for (const year of OPEN) {

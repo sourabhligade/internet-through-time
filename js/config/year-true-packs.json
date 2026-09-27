@@ -198,37 +198,5 @@
     "key": "itt05-kayak",
     "type": "fillGo",
     "title": "KAYAK residual"
-  },
-  {
-    "year": "2008",
-    "id": "evernote",
-    "path": "/years/2008/sites/evernote/index.html",
-    "key": "itt08-evernote",
-    "type": "twoClick",
-    "title": "Evernote residual"
-  },
-  {
-    "year": "2008",
-    "id": "groupon",
-    "path": "/years/2008/sites/groupon/index.html",
-    "key": "itt08-groupon",
-    "type": "twoClick",
-    "title": "Groupon residual"
-  },
-  {
-    "year": "2008",
-    "id": "airbnb",
-    "path": "/years/2008/sites/airbnb/index.html",
-    "key": "itt08-airbnb",
-    "type": "fillGo",
-    "title": "Airbnb residual"
-  },
-  {
-    "year": "2008",
-    "id": "spotifyseed",
-    "path": "/years/2008/sites/spotifyseed/index.html",
-    "key": "itt08-spotifyseed",
-    "type": "twoClick",
-    "title": "Spotify invite residual"
   }
 ]

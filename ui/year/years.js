@@ -1,6 +1,6 @@
 /**
  * Year shell data — used by ui/year/shell.js
- * Year differences live here. Chrome markup lives once in shell.js.
+ * Year differences live here. Chrome markup lives in chrome.js. shell.js paints it.
  */
 (function (global) {
   "use strict";
@@ -907,76 +907,6 @@
     "hasTaskbar": true,
     "maximized": true
   },
-  "2008": {
-    "title": "Internet Explorer 7.0 — 2008",
-    "css": [
-      "win95-netscape.css",
-      "ie5-overrides.css",
-      "period-2008.css"
-    ],
-    "bodyClass": "year-2008 os-winxp browser-ie7",
-    "boot": "browser-2008.js",
-    "dir": [
-      {
-        "go": "pages/home.html",
-        "label": "Start"
-      },
-      {
-        "go": "sites/github/issue.html",
-        "label": "★ GitHub"
-      },
-      {
-        "go": "sites/appstore/index.html",
-        "label": "App Store"
-      },
-      {
-        "go": "sites/iphone/index.html",
-        "label": "iPhone"
-      },
-      {
-        "go": "sites/chrome/index.html",
-        "label": "Chrome"
-      },
-      {
-        "go": "sites/android/index.html",
-        "label": "Android"
-      },
-      {
-        "go": "sites/hulu/index.html",
-        "label": "Hulu"
-      },
-      {
-        "go": "sites/facebook/index.html",
-        "label": "Facebook"
-      },
-      {
-        "go": "sites/youtube/index.html",
-        "label": "YouTube"
-      }
-    ],
-    "chrome": "2007",
-    "toolbar": "ie",
-    "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2008/",
-    "prefHome": "http://home.microsoft.com/intl/web2008/",
-    "yearLabel": "2008 · Windows XP · Internet Explorer 7 · Chrome product",
-    "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2008 thesis: apps + browser reinvention · still mostly PC. App Store · iPhone 3G · Chrome beta · Android G1 · Hulu.",
-    "openLoc": "Open Location in Internet Explorer:",
-    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 7.0<br>Copyright © 1995–2008 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Always-on broadband minority · IE 7 · Chrome is a <b>product</b> this year, not the default shell.</p>",
-    "startBanner": "Windows<b>XP</b>",
-    "taskBtn": "Internet Explorer",
-    "icon": "e",
-    "aria": "Internet Explorer 7",
-    "locLabel": "Address",
-    "bookmarksTitle": "Favorites",
-    "mailPh": "friend@aol.com",
-    "hasTaskbar": true,
-    "maximized": true
-  },
   "2009": {
     "title": "Internet Explorer 8.0 — 2009",
     "css": [
@@ -1095,71 +1025,6 @@
   "connectBtn": "Connect (always-on broadband)",
   "skipBtn": "Skip connect",
   "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2010 thesis: tablet + filter + Like on the open web · still mostly PC. iPad · iPhone 4 · Instagram iOS · Open Graph.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p><p>Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>7</b>",
-  "taskBtn": "Internet Explorer",
-  "icon": "e",
-  "aria": "Internet Explorer",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
-  "2011": {
-  "title": "Internet Explorer 9.0 — 2011",
-  "css": [
-    "win95-netscape.css",
-    "ie5-overrides.css",
-      "period-2011.css"],
-  "bodyClass": "year-2011 os-win7 browser-ie9",
-  "boot": "browser-2011.js",
-  "dir": [
-    {
-      "go": "pages/home.html",
-      "label": "Start"
-    },
-    {
-      "go": "sites/googleplus/index.html",
-      "label": "Google+"
-    },
-    {
-      "go": "sites/spotify/index.html",
-      "label": "Spotify"
-    },
-    {
-      "go": "sites/iphone/index.html",
-      "label": "Siri"
-    },
-    {
-      "go": "sites/facebook/index.html",
-      "label": "Timeline"
-    },
-    {
-      "go": "sites/pinterest/index.html",
-      "label": "Pinterest"
-    },
-    {
-      "go": "sites/twitter/index.html",
-      "label": "Twitter"
-    },
-    {
-      "go": "pages/about.html",
-      "label": "About"
-    }
-  ],
-  "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
-  "location": "http://home.microsoft.com/intl/web2011/",
-  "prefHome": "http://home.microsoft.com/intl/web2011/",
-  "yearLabel": "2011 · Windows 7 · Internet Explorer 9 · IE8 residual",
-  "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2011 thesis: Google tries to rebuild Facebook as Circles, and the phone grows a voice. Google+ · Spotify US · Siri · Timeline. Still a Win7 / IE 9 laptop.",
   "openLoc": "Open Location:",
   "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p><p>Educational historical Web exhibit.</p>",
   "startBanner": "Windows<b>7</b>",

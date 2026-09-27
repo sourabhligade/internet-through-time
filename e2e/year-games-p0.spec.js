@@ -9,7 +9,7 @@ const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, isLiveYear 
 const fs = require('fs');
 const path = require('path');
 const YEARS = [];
-for (let y = 1994; y <= 2008; y++) {
+for (let y = 1994; y <= 2007; y++) {
   const s = String(y);
   if (fs.existsSync(path.join(__dirname, '..', 'years', s, 'index.html')) && isLiveYear(s)) YEARS.push(s);
 }
@@ -26,7 +26,6 @@ const FEATURED = {
   2002: 'roomsticky',
   2003: 'gagslite',
   2004: 'gemcascade',
-  2008: 'goospan',
   2009: 'plotneighbors',
 };
 
@@ -115,9 +114,9 @@ test.describe('P0 2004 Gem Cascade fixtures', () => {
   });
 });
 
-test.describe('P0 2008 Goo Span far click', () => {
+test.describe('P0  Goo Span far click', () => {
   test('far click does not add a node', async ({ page }) => {
-    const frame = await openGame(page, '2008');
+    const frame = await openGame(page);
     await frame.locator('[data-game-start]').click();
     await expect(frame.locator('[data-year-game]')).toHaveAttribute('data-goo-nodes', '2');
     const canvas = frame.locator('canvas');

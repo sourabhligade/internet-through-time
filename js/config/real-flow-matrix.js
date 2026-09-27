@@ -99,15 +99,6 @@
       complete: { action: "gmail", expect: null }
     },
     {
-      year: "2008",
-      prefix: "itt08",
-      path: "sites/github/issue.html",
-      kind: "product",
-      key: "itt08-github",
-      hook: "form[data-gh-issue-form]",
-      complete: { action: "github", expect: null }
-    },
-    {
       year: "2009",
       prefix: "itt09",
       path: "sites/stackoverflow/index.html",

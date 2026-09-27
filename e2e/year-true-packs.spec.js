@@ -21,7 +21,6 @@ const STAR = {
   2004: "itt04-thefacebook-networks",
   2005: "itt05-yt-uploads",
   2006: "itt06-tweets",
-  2008: "itt08-github",
 };
 
 async function clearKeys(page, keys) {

@@ -1,13 +1,13 @@
 # 2021 — READ FIRST
 
-**Date:** 2026-09-20  
-**Status:** **LIVE dest-lock lean door.** Dest folders **18**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests.  
+**Date:** 2026-09-27  
+**Status:** **LIVE React door.** HTML dest folders **0**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests. Hub **24 years open**. **2015 wiped.** **2018 wiped.**  
 **Parent:** 2020 Zoom Leave `itt20-zoom`. **2022 is live lean** (ChatGPT Send).  
 **Look:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 4. Leftover-3× unique dest-true dests **5**. Map stop.
 
 ## One line
 
-**2021 is when the phone asks not to track — ATT Ask is the save, Allow never writes, leftover-3× unique dest-true dests stop at 5, the mass shell is still Win10 + Chrome habit, ILS June 2021 websites does not exist, and ChatGPT / Wordle mass are 2022.**
+**2021 is when the phone asks not to track — ATT Ask is the save, Allow never writes, leftover-3× catalogs stay empty, the mass shell is still Win10 + Chrome habit, ILS June 2021 websites does not exist, and ChatGPT / Wordle mass are 2022.**
 
 ## Lock before you type HTML
 
@@ -15,15 +15,15 @@
 |------|-------|
 | Prefix | `itt21-*` only |
 | Shell | **Win10 + Chrome habit** · ATT is a **phone room** |
-| ★ Star | **Ask App Not to Track** · `sites/att/index.html` · `itt21-att` · Ask + honesty + app field writes · Allow never writes |
+| ★ Star | **Ask App Not to Track** · React door · `itt21-att` · Ask + honesty + app field writes · Allow never writes |
 | Incomplete | Allow · empty field · 0 ticks · ChatGPT · never writes |
 | Complete | Ask + 2 ticks + app field · `{official:true, year:"2021"}` |
 | Trap | Allow · ChatGPT dest · Wordle-as-2021-mass · Zoom Leave as this dest |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ★ ATT · Signal leftover · Copilot waitlist · Meta rename leftover · Win11 leftover · Flash brick · Chrome habit · Win10 residual · Facebook leftover · Five Letter |
-| Dest folders | **15** dest-lock lean (official 10 + leftover-3× unique dest-true dests 5) |
+| Dest folders | **0** HTML. React door. Do not restore the old 15-folder lean tree. |
 | Official dest leftover-2× | **0** first paint |
-| Leftover-3× unique dest-true dests | **5** · amazon / google / instagram · twitter / youtube · **third strip 0** · **stop** |
+| Leftover-3× unique dest-true dests | **0** · catalogs empty · do not grow a 5-dest strip |
 | Leftover-4× | **0** |
 | 5k | walk envelope · ILS June table **ends 2018** · do not invent June 2021 websites |
 | Scale | ITU **4.9B / 63%** on About · [failed-final] ITU Facts and Figures 2021 not independently fetched · not websites |

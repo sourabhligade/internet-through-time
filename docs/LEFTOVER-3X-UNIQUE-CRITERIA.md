@@ -8,7 +8,7 @@
 **Template:** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests, 30 unique verbs, 30 unique keys.  
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
-**Years:** ship years **1994–2008 + 2010–2022**. **2009 boarded.** **2023–2025 wiped.**
+**Years:** ship years **1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022**. ** wiped.** **2009 boarded.** **2023–2025 wiped.**
 
 Leftover-3× here means **first / second / third leftover dests**, not three machines on one dest. Counting `pop` + `pop2` + `pop3` on Pizza Hut is **not** unique.
 
@@ -85,10 +85,10 @@ Catalogs: `scripts/popular-3x-sites.json` (first) · `scripts/popular-3x3-sites.
 
 | Year | Dest folders | First | Second | Third | Unique leftover-3×n |
 |------|-------------:|------:|-------:|------:|---------------------|
-| 1994–2006 + **2008** | forest | stacked | stacked | stacked | **Workshop.** Forests stay stacked `pop`/`pop2`/`pop3`. Unique leftover-3×n is not the forest job. Map [`2008-LEFTOVER-3X-UNIQUE.md`](2008-LEFTOVER-3X-UNIQUE.md) |
+| 1994–2006 + **** | forest | stacked | stacked | stacked | **Workshop.** Forests stay stacked `pop`/`pop2`/`pop3`. Unique leftover-3×n is not the forest job. Map [`-LEFTOVER-3X-UNIQUE.md`](-LEFTOVER-3X-UNIQUE.md) |
 | **2007** | 23 | 3 | 3 | 3 | **Pass 9** · wiki / myspace / maps · ebay / stumble / wow · flickr / reddit / digg · map [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) |
 | **2010** | 22 | 3 | 3 | 3 | **Pass 9** · netflix / tumblr / formspring · chrome / wave / android · reddit / google / groupon · map [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) |
-| **2011** | 31 | 3 | 3 | 3 | **Pass 9** · icloud / pinterest / linkedin · kindlefire / minecraft / twitch · youtube / dropbox / hulu |
+| **** | 31 | 3 | 3 | 3 | **Pass 9** · icloud / pinterest / linkedin · kindlefire / minecraft / twitch · youtube / dropbox / hulu |
 | **2012** | 24 | 3 | 3 | 3 | **Pass 9** · drawsomething / googledrive / snapchat · uber / buzzfeed / youtube · reddit / surface / windows8 |
 | **2013** | 54 | 3 | 3 | 3 | **Pass 9** · askfm / whisper / youtube · chrome / medium / yikyak · reddit / facebook / twitter |
 | **2014** | 17 | 3 | 3 | 3 | **Pass 9** · snapchat / instagram / uber · twitter / musically14 / truecrypt · facebook / wikipedia / youtube |
@@ -116,7 +116,7 @@ Do not pick the dests in this file unless a later implement pass is named.
 | 2018 | **No** | 13 dests = official 10 folders + first 3. Third is official. Stop. |
 | 2021 | **No** | 5 leftover dest folders shipped as leftover-3× first 3 + second 2. Stop. |
 | 2022 | **Yes — shipped 9** | dest-true dests already on disk. Unique leftover-20 is not this pass. Map [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md). |
-| Forests 1994–2006 + 2008 | Capacity yes. Unique leftover-3×n **not the forest job.** | Forests stay dense. Stacked first+second+third is workshop. Do not dest-lock forests. |
+| Forests 1994–2006 | Capacity yes. Unique leftover-3×n **not the forest job.** | Forests stay dense. Stacked first+second+third is workshop. Do not dest-lock forests. |
 | Dest-locked lean 2007 / 2010–2012 / 2014 | **Shipped 9 unique leftover dests each** on dests already kept. | **2015–2020 dest-lock reverted** (213 / 32 / 222 / 13 / 170 / 38). Do not dest-lock 2013 / 2022. |
 
 ---
@@ -170,7 +170,7 @@ Implement leftover-3× unique dests **only when named**. Criteria is not a licen
 - Write a 2022 unique leftover-20 dest list in this file. Leftover-3× unique dest-true dests 9 already ship.
 - Add dests to 2018 or 2021 to “make 9.”
 - Dest-lock 2013 / 2018 / 2022.
-- Dest-lock forests 1994–2006 + 2008.
+- Dest-lock forests 1994–2006.
 - Restore 2009 as playable · restore 2023+.
 - Invent brand pixels.
 - Let leftover-3× write the year star.
@@ -184,7 +184,7 @@ Implement leftover-3× unique dests **only when named**. Criteria is not a licen
 |-----|------|
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years · dest-lock counts |
 | [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) | 2007 leftover-3× unique dest-true 9 |
-| [`2008-LEFTOVER-3X-UNIQUE.md`](2008-LEFTOVER-3X-UNIQUE.md) | 2008 forest stacked leftover-3× workshop · unique leftover-3×n stop |
+| [`-LEFTOVER-3X-UNIQUE.md`](-LEFTOVER-3X-UNIQUE.md) |  forest stacked leftover-3× workshop · unique leftover-3×n stop |
 | [`2009-LEFTOVER-3X-UNIQUE.md`](2009-LEFTOVER-3X-UNIQUE.md) | 2009 boarded · leftover-3× catalogs are not visitor flows |
 | [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) | 2010 leftover-3× unique dest-true 9 |
 | [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md) | 2022 leftover-3× unique dest-true 9 |

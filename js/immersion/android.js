@@ -1,5 +1,5 @@
 /**
- * Android G1 / Market 2008 — first consumer Android theater
+ * Android G1 / Market  — first consumer Android theater
  * Keys: itt08-android · itt08-android-apps
  */
 (function (global) {

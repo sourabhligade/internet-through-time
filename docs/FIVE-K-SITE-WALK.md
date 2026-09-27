@@ -9,7 +9,7 @@ Build a row only when the action is **build**, or **hole** and you accept that c
 
 | Year | Pass | Cap |
 |---|---|---:|
-| 2007 · 2010 · 2011 · 2012 · 2014 · 2016 · 2021 · 2022 | Double | 46 · 44 · 62 · 48 · 36 · 64 · 30 · 38 |
+| 2007 · 2010 · 2012 · 2014 · 2016 · 2021 · 2022 | Double | 46 · 44 · 62 · 48 · 36 · 64 · 30 · 38 |
 | 2013 · 2020 | Holes only | 54 · 38 |
 | Other years | Stop | — |
 
@@ -81,7 +81,7 @@ KEEP 29. Rows with a cite that are not already on disk: 0.
 | do not add | `quora` |  | Star trap: Instagram Android · Stories · Reels · iPad 2 · Siri · Timeline · Google+ · Snapchat · Spotify US · UberX mass. Do not restore dest-lock dests (`groupondeal` · `quorawait` · `instant` · `pinterest` · `uber` · ` |  | docs/LEAN-DOUBLE-CRITERIA.md:111 |
 | do not add | `wikileaks` |  | Star trap: Instagram Android · Stories · Reels · iPad 2 · Siri · Timeline · Google+ · Snapchat · Spotify US · UberX mass. Do not restore dest-lock dests (`groupondeal` · `quorawait` · `instant` · `pinterest` · `uber` · ` |  | docs/LEAN-DOUBLE-CRITERIA.md:111 |
 
-### 2011
+### 
 
 KEEP 12. Rows with a cite that are not already on disk: 0.
 
@@ -95,8 +95,8 @@ KEEP 12. Rows with a cite that are not already on disk: 0.
 | named in a list, no cite row | `gowalla` |  | **Leftover dests** (31): `snapchat` · `ios5` · `imessage` · `chromebook` · `honeycomb` · `ics` · `wechat` · `line` · `temple` · `skyrim` · `nytpaywall` · `skypebuy` · `grouponipo` · `zyngaipo` · `googlewallet` · `stripe` |  | docs/DEST-TRUE-FLOW-MAP.md:250 |
 | named in a list, no cite row | `icloud` |  | **Leftover-3× unique** (9): `icloud` · `pinterest` · `linkedin` · `kindlefire` · `minecraft` · `twitch` · `youtube` · `dropbox` · `hulu` |  | docs/DEST-TRUE-FLOW-MAP.md:248 |
 | named in a list, no cite row | `stripe` |  | **Leftover dests** (31): `snapchat` · `ios5` · `imessage` · `chromebook` · `honeycomb` · `ics` · `wechat` · `line` · `temple` · `skyrim` · `nytpaywall` · `skypebuy` · `grouponipo` · `zyngaipo` · `googlewallet` · `stripe` |  | docs/DEST-TRUE-FLOW-MAP.md:250 |
-| do not add | `itt11-airbnb` |  | / **Leftover gold** / **Airbnb** request / Search → pick → host note. `itt11-airbnb`. / |  | docs/2011-READ-FIRST.md:29 |
-| do not add | `itt11-gplus` |  | **Status:** **live lean door**. `years/2011/` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× every dest · leftover-3× **18+18+18**. Leftover-4× **0**. |  | docs/2011-READ-FIRST.md:4 |
+| do not add | `itt11-airbnb` |  | / **Leftover gold** / **Airbnb** request / Search → pick → host note. `itt11-airbnb`. / |  | docs/-READ-FIRST.md:29 |
+| do not add | `itt11-gplus` |  | **Status:** **live lean door**. `years//` is on disk. Hub card **available**. Star `itt11-gplus`. Leftover 2× every dest · leftover-3× **18+18+18**. Leftover-4× **0**. |  | docs/-READ-FIRST.md:4 |
 | do not add | `itt11-qwikster` | itt11-qwikster | sites/qwikster/index.html |  | docs/AUDIT-MAP-2026-09-23.md:511 |
 | do not add | `itt11-tweets` | itt11-tweets | sites/twitter/index.html |  | docs/AUDIT-MAP-2026-09-23.md:510 |
 
@@ -1206,7 +1206,7 @@ KEEP 7. Rows with a cite that are not already on disk: 0.
 | `plastic` | Network for Good | Founded **2001** by AOL + Cisco + Yahoo. Donate leftover. | https://en.wikipedia.org/wiki/Network_for_Good | docs/2x-harvest-c-2001.md:112 |
 | `portadown` |  | / Sourced extras not in the 87 (still year-true if a later pass needs them) / `cram` Flashcard Exchange · `animutation` · `memestreams` · `catalogueoflife` · `physicsforums` · `pgau` · `samizdata` · `tshirthell` · `where |  | docs/2x-harvest-c-2001.md:204 |
 | `postopia` | OldVersion.com | Founded **2001**. Older-build leftover. | https://en.wikipedia.org/wiki/OldVersion.com | docs/2x-harvest-c-2001.md:97 |
-| `profootballtalk` | Postopia | Post Cereals advergame portal **2001–2011**. | https://en.wikipedia.org/wiki/Postopia | docs/2x-harvest-c-2001.md:98 |
+| `profootballtalk` | Postopia | Post Cereals advergame portal **2001–**. | https://en.wikipedia.org/wiki/Postopia | docs/2x-harvest-c-2001.md:98 |
 | `ratemyteachers` | My Opera | Category 2001. Opera-community leftover. Not Firefox. | https://en.wikipedia.org/wiki/My_Opera | docs/2x-harvest-c-2001.md:89 |
 | `resellerratings` |  | / Sourced extras not in the 87 (still year-true if a later pass needs them) / `cram` Flashcard Exchange · `animutation` · `memestreams` · `catalogueoflife` · `physicsforums` · `pgau` · `samizdata` · `tshirthell` · `where |  | docs/2x-harvest-c-2001.md:204 |
 | `rotten` | GameSpot | 2001 review leftover. Not on 2001 disk. | https://en.wikipedia.org/wiki/GameSpot | docs/2x-harvest-c-2001.md:159 |
@@ -1320,7 +1320,7 @@ KEEP 7. Rows with a cite that are not already on disk: 0.
 | `mvgroup` | Modern Tales | Established **2002** (Wikipedia). Modern Tales leftover. | https://en.wikipedia.org/wiki/Modern_Tales | docs/2x-harvest-c-2002.md:272 |
 | `my-medical-education` | MVGroup | Established **2002** (Wikipedia). MVGroup leftover. | https://en.wikipedia.org/wiki/MVGroup | docs/2x-harvest-c-2002.md:273 |
 | `mycoke` | My Medical Education | Established **2002** (Wikipedia). My Medical Education leftover. | https://en.wikipedia.org/wiki/My_Medical_Education | docs/2x-harvest-c-2002.md:274 |
-| `mylife` | CSN Stores | Shah + Conine **Aug 2002**. racksandstands leftover. Wayfair brand is **2011**. | https://en.wikipedia.org/wiki/Wayfair | docs/2x-harvest-c-2002.md:100 |
+| `mylife` | CSN Stores | Shah + Conine **Aug 2002**. racksandstands leftover. Wayfair brand is ****. | https://en.wikipedia.org/wiki/Wayfair | docs/2x-harvest-c-2002.md:100 |
 | `nearlyfreespeech` | MyCoke | Established **2002** (Wikipedia). MyCoke leftover. | https://en.wikipedia.org/wiki/MyCoke | docs/2x-harvest-c-2002.md:275 |
 | `opensourcevulnerabilit` | Niche (company) | Established **2002** (Wikipedia). Niche (company) leftover. | https://en.wikipedia.org/wiki/Niche_%28company%29 | docs/2x-harvest-c-2002.md:277 |
 | `osdn` | Open Source Vulnerability Database | Established **2002** (Wikipedia). Open Source Vulnerability Database leftover. | https://en.wikipedia.org/wiki/Open_Source_Vulnerability_Database | docs/2x-harvest-c-2002.md:278 |
@@ -1469,7 +1469,7 @@ KEEP 7. Rows with a cite that are not already on disk: 0.
 | `shutterstock` | tribe.net | Founded **early 2003** (Pincus / Martino / Syme). Bay Area tribes leftover. | https://en.wikipedia.org/wiki/Tribe.net | docs/2x-harvest-c-2003.md:81 |
 | `simplyhired` | FirstVoices | Established **2003** (Wikipedia). FirstVoices leftover. | https://en.wikipedia.org/wiki/FirstVoices | docs/2x-harvest-c-2003.md:231 |
 | `sneeze` | GoFish | Established **2003** (Wikipedia). GoFish leftover. | https://en.wikipedia.org/wiki/GoFish | docs/2x-harvest-c-2003.md:241 |
-| `terranova` | Quickflix | Founded **2003** Perth. AU DVD-by-mail leftover. Streaming is 2011. | https://en.wikipedia.org/wiki/Quickflix | docs/2x-harvest-c-2003.md:88 |
+| `terranova` | Quickflix | Founded **2003** Perth. AU DVD-by-mail leftover. Streaming is . | https://en.wikipedia.org/wiki/Quickflix | docs/2x-harvest-c-2003.md:88 |
 | `tokyoplastic` | Mac OS X 10.3 Panther | **Oct 2003**. Safari 1.0 becomes default. Safari dest reserved. | https://www.webdesignmuseum.org/web-design-history/safari-1-0-2003 | docs/2x-harvest-c-2003.md:98 |
 | `tolkiengateway` | The Free Dictionary | Established **2003** (Wikipedia). The Free Dictionary leftover. | https://en.wikipedia.org/wiki/The_Free_Dictionary | docs/2x-harvest-c-2003.md:234 |
 | `tribe` |  | 5. Next: `tribe`. |  | docs/2x-harvest-c-1999-2004-STEPS.md:412 |
@@ -1966,59 +1966,13 @@ KEEP 7. Rows with a cite that are not already on disk: 0.
 | `meebo` |  | **Forest leftover dest-true packs** (0): (`meebo` / `huffpost` DROP, dests gone) |  | docs/DEST-TRUE-FLOW-MAP.md:202 |
 | `roblox` |  | **Official 10** (9): `twitter` · `facebook` · `youtube` · `googledocs` · `aws` · `ie7` · `wikipedia` · `roblox` · `playable` |  | docs/DEST-TRUE-FLOW-MAP.md:198 |
 
-### 2008 — 41 KEEP, do not build
-
-| Slug | Name | What the source says | Cite | Source |
-|---|---|---|---|---|
-| `bitbucket` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `cuil` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `dropbox` |  | **Official 10** (10): `github` · `appstore` · `chrome` · `android` · `hulu` · `facebook` · `twitter` · `youtube` · `dropbox` · `iphone` |  | docs/DEST-TRUE-FLOW-MAP.md:222 |
-| `engadget` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `evernote` |  | **Forest leftover dest-true packs** (4): `evernote` · `groupon` · `airbnb` · `spotifyseed` |  | docs/DEST-TRUE-FLOW-MAP.md:226 |
-| `failblog` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `grooveshark` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `groupon` |  | **Forest leftover dest-true packs** (4): `evernote` · `groupon` · `airbnb` · `spotifyseed` |  | docs/DEST-TRUE-FLOW-MAP.md:226 |
-| `heroku` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `huffpo` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `identica` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `itt08-amazon-rlx` | itt08-amazon-rlx | sites/amazon/index.html |  | docs/AUDIT-MAP-2026-09-23.md:464 |
-| `itt08-db` |  | / F5 / `years/2008/sites/dropbox/index.html` / `itt08-db` / 2 / `sites/github/issue.html` / |  | docs/2008-2009-5X-PLAN.md:105 |
-| `itt08-delicious-rlx` | itt08-delicious-rlx | sites/delicious/index.html |  | docs/AUDIT-MAP-2026-09-23.md:466 |
-| `itt08-dropbox` |  | / 9 / Dropbox / `itt08-dropbox` / |  | docs/2008-LEFTOVER-3X-UNIQUE.md:62 |
-| `itt08-flickr-rlx` | itt08-flickr-rlx | sites/flickr/index.html |  | docs/AUDIT-MAP-2026-09-23.md:462 |
-| `itt08-github` |  | / Trail stops / 20. Star `itt08-github` / 10. Star `itt09-like` / |  | docs/2008-2009-5X-PLAN.md:94 |
-| `itt08-gmail-rlx` | itt08-gmail-rlx | sites/gmail/index.html |  | docs/AUDIT-MAP-2026-09-23.md:461 |
-| `itt08-google-rlx` | itt08-google-rlx | sites/google/index.html |  | docs/AUDIT-MAP-2026-09-23.md:458 |
-| `itt08-hulu` |  | / F4 / `years/2008/sites/hulu/index.html` / `itt08-hulu` / 2 / Dropbox / |  | docs/2008-2009-5X-PLAN.md:104 |
-| `itt08-myspace-rlx` | itt08-myspace-rlx | sites/myspace/index.html |  | docs/AUDIT-MAP-2026-09-23.md:465 |
-| `itt08-rd-lx` | itt08-rd-lx | sites/reddit/index.html |  | docs/AUDIT-MAP-2026-09-23.md:463 |
-| `itt08-so-lx` | itt08-so-lx | sites/stackoverflow/index.html |  | docs/AUDIT-MAP-2026-09-23.md:467 |
-| `itt08-wikipedia-rlx` | itt08-wikipedia-rlx | sites/wikipedia/index.html |  | docs/AUDIT-MAP-2026-09-23.md:460 |
-| `itt08-yahoo-rlx` | itt08-yahoo-rlx | sites/yahoo/index.html |  | docs/AUDIT-MAP-2026-09-23.md:459 |
-| `itt08-yt` |  | / 8 / YouTube / `itt08-yt` / |  | docs/2008-LEFTOVER-3X-UNIQUE.md:61 |
-| `kongregate` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `mafiawars` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `miniclip` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `mint` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `mobileme` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `newgrounds` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `ning` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `piratebay` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `plurk` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `posterous` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `scribd` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `seesmic` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `stackoverflow` |  | / 2008 / 5 / `delicious` · `flickr` · `gmail` · `myspace` · `stackoverflow` / |  | docs/DUPLICATE-UNIQUE-LINKS.md:596 |
-| `tripadvisor` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-| `tweetdeck` |  | `adsense` · `airbnb` · `altavista` · `android` · `appstore` · `ars` · `ask` · `askjeeves` · `aws` · `bitbucket` · `blogdex` · `blogger` · `bloglines` · `bowienet` · `chrome` · `cnn` · `collegehumor` · `cuil` · `daypop` · |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:315 |
-
 ### 2009 — 5 KEEP, do not build
 
 | Slug | Name | What the source says | Cite | Source |
 |---|---|---|---|---|
-| `itt09-4sq` |  | / F4 / `years/2009/sites/foursquare/index.html` / venue / n=7 / `itt09-4sq` / |  | docs/2008-2009-5X-PLAN.md:118 |
-| `itt09-bing` |  | / F2 / `years/2009/sites/bing/index.html` / decision / n=3 / `itt09-bing` / |  | docs/2008-2009-5X-PLAN.md:116 |
-| `itt09-farm` |  | / F1 / `years/2009/sites/farmville/index.html` / plant / n=2 / `itt09-farm` / |  | docs/2008-2009-5X-PLAN.md:115 |
+| `itt09-4sq` |  | / F4 / `years/2009/sites/foursquare/index.html` / venue / n=7 / `itt09-4sq` / |  | docs/-2009-5X-PLAN.md:118 |
+| `itt09-bing` |  | / F2 / `years/2009/sites/bing/index.html` / decision / n=3 / `itt09-bing` / |  | docs/-2009-5X-PLAN.md:116 |
+| `itt09-farm` |  | / F1 / `years/2009/sites/farmville/index.html` / plant / n=2 / `itt09-farm` / |  | docs/-2009-5X-PLAN.md:115 |
 | `itt09-kickstarter` | itt09-kickstarter | sites/kickstarter/index.html |  | docs/AUDIT-MAP-2026-09-23.md:480 |
 | `itt09-tweets` | itt09-tweets | sites/twitter/index.html |  | docs/AUDIT-MAP-2026-09-23.md:478 |
 

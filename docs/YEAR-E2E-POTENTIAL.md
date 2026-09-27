@@ -20,9 +20,8 @@
 | 2005 | 350 | 595 | 341 | 96 | 19 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | second 0/9; doors 18/27; 96/350 dests |
 | 2006 | 376 | 635 | 368 | 108 | 23 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 108/376 dests |
 | 2007 | 33 | 90 | 14 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/33 dests |
-| 2008 | 597 | 949 | 587 | 178 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 178/597 dests |
 | 2010 | 30 | 69 | 10 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/30 dests |
-| 2011 | 48 | 110 | 20 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+|  | 48 | 110 | 20 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2012 | 32 | 77 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2013 | 54 | 62 | 45 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2014 | 25 | 43 | 7 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/25 dests |

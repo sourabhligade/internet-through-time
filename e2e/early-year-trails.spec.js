@@ -46,10 +46,6 @@ const YEARS = [
     y: '2004',
     must: [/Connection trails|REAL multipath/i, /Firefox|Gmail/i, /Flickr|Thefacebook|facebook/i, /Starting Point/i],
   },
-  {
-    y: '2008',
-    must: [/Connection trails|REAL multipath/i, /App Store|Chrome|Android/i],
-  },
 ];
 
 test.describe('Early-year connection trails', () => {

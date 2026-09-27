@@ -17,7 +17,7 @@ Default replacement: `path` (leftover dest KEEP Path). Override per row if resea
 |--:|-----------|-----------------|--------:|---------------|
 | 1 | `kickstarter` | `path` | **DROP** | Launch 2009 (kickstarter.com/about). Neighbor gold. Replace `path`. |
 
-## 2011 — 9 extra dests
+##  — 9 extra dests
 
 Pass 1. Dest-lock lean. 9 extra dests.
 
@@ -25,13 +25,13 @@ Default replacement: `snapchat` (leftover dest KEEP Snapchat). Override per row 
 
 | # | Drop dest | Default replace | Verdict | Cite / reason |
 |--:|-----------|-----------------|--------:|---------------|
-| 1 | `evernote` | `snapchat` | **DROP** | Evernote 2008. Neighbor gold. Replace `snapchat`. |
+| 1 | `evernote` | `snapchat` | **DROP** | Evernote . Neighbor gold. Replace `snapchat`. |
 | 2 | `foursquare` | `snapchat` | **DROP** | 2010 official dest. Clone leftover dest. Replace `snapchat`. |
-| 3 | `gmusic` | `snapchat` | **KEEP** | Google Music store launch 16 Nov 2011 (The Verge). Dest-disjoint. Extra dest stays. |
+| 3 | `gmusic` | `snapchat` | **KEEP** | Google Music store launch 16 Nov  (The Verge). Dest-disjoint. Extra dest stays. |
 | 4 | `huffpost` | `snapchat` | **DROP** | HuffPost 2005. Neighbor gold. Replace `snapchat`. |
 | 5 | `imgur` | `snapchat` | **DROP** | 2010 official dest. Clone leftover dest. Replace `snapchat`. |
 | 6 | `kickstarter` | `snapchat` | **DROP** | Launch 2009. Neighbor gold. Replace `snapchat`. |
-| 7 | `pandora` | `snapchat` | **KEEP** | Pandora IPO 14–15 Jun 2011 (TechCrunch). Dest-disjoint. Extra dest stays. |
+| 7 | `pandora` | `snapchat` | **KEEP** | Pandora IPO 14–15 Jun  (TechCrunch). Dest-disjoint. Extra dest stays. |
 | 8 | `quora` | `snapchat` | **DROP** | Quora 2010. Neighbor gold. Replace `snapchat`. |
 | 9 | `vimeo` | `snapchat` | **DROP** | Vimeo 2004. Neighbor gold. Replace `snapchat`. |
 
@@ -65,20 +65,20 @@ Default replacement: `clubhouse` (leftover dest KEEP Clubhouse). Override per ro
 
 | # | Drop dest | Default replace | Verdict | Cite / reason |
 |--:|-----------|-----------------|--------:|---------------|
-| 1 | `airbnb` | `clubhouse` | **DROP** | Airbnb leftover dest leftover; 2011 leftover dest KEEP `airbnb` other year. Replace `clubhouse`. |
+| 1 | `airbnb` | `clubhouse` | **DROP** | Airbnb leftover dest leftover;  leftover dest KEEP `airbnb` other year. Replace `clubhouse`. |
 | 2 | `chrome` | `clubhouse` | **DROP** | Clone leftover dest leftover-3× unique / 2012 leftover-4× unique. Replace `clubhouse`. |
 | 3 | `coinbase` | `clubhouse` | **DROP** | 2012 leftover dest KEEP already. Clone leftover dest. Replace `clubhouse`. |
 | 4 | `edge` | `clubhouse` | **DROP** | 2015 official dest. Neighbor gold. Replace `clubhouse`. |
 | 5 | `figma` | `clubhouse` | **DROP** | Figma 2016 leftover dest KEEP already. Clone leftover dest. Replace `clubhouse`. |
-| 6 | `github` | `clubhouse` | **DROP** | 2008 official dest. Neighbor gold. Replace `clubhouse`. |
+| 6 | `github` | `clubhouse` | **DROP** |  official dest. Neighbor gold. Replace `clubhouse`. |
 | 7 | `hbomax` | `clubhouse` | **KEEP** | HBO Max launch 27 May 2020 (WarnerMedia press). Dest-disjoint. Extra dest stays. |
 | 8 | `hulu` | `clubhouse` | **DROP** | Leftover dest leftover / leftover-3× unique other years. Replace `clubhouse`. |
 | 9 | `iphone` | `clubhouse` | **DROP** | Leftover dest leftover, not Zoom. Clone leftover dest. Replace `clubhouse`. |
-| 10 | `linkedin` | `clubhouse` | **DROP** | 2011 leftover-3× unique dest. Neighbor gold. Replace `clubhouse`. |
+| 10 | `linkedin` | `clubhouse` | **DROP** |  leftover-3× unique dest. Neighbor gold. Replace `clubhouse`. |
 | 11 | `notion` | `clubhouse` | **DROP** | Leftover dest leftover. Replace `clubhouse`. |
 | 12 | `peacock` | `clubhouse` | **KEEP** | Peacock national launch 15 Jul 2020 (TechCrunch / Forbes). Dest-disjoint. Extra dest stays. |
 | 13 | `robinhood` | `clubhouse` | **DROP** | GameStop squeeze is 2021. Year-false leftover dest leftover. Replace `clubhouse`. |
-| 14 | `spotify` | `clubhouse` | **DROP** | 2011 official dest. Neighbor gold. Replace `clubhouse`. |
+| 14 | `spotify` | `clubhouse` | **DROP** |  official dest. Neighbor gold. Replace `clubhouse`. |
 | 15 | `twitch` | `clubhouse` | **DROP** | 2014 official dest. Neighbor gold. Replace `clubhouse`. |
 | 16 | `twitter` | `clubhouse` | **DROP** | Clone leftover dest leftover-3× unique / official other years. Replace `clubhouse`. |
 | 17 | `uber` | `clubhouse` | **DROP** | 2012 leftover-3× unique dest. Neighbor gold. Replace `clubhouse`. |
@@ -328,26 +328,6 @@ Default replacement: `twitter` (official Twttr). Override per row if research na
 | 8 | `netflix` | `twitter` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
 | 9 | `reddit` | `twitter` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
 | 10 | `yahoo` | `twitter` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-
-## 2008 — 11 extra dests
-
-Forest clone leftover dest folders. Leftover-2× dests not listed stay.
-
-Default replacement: `github` (official GitHub). Override per row if research names a better dest-true dest on disk.
-
-| # | Drop dest | Default replace | Verdict | Cite / reason |
-|--:|-----------|-----------------|--------:|---------------|
-| 1 | `amazon` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 2 | `apple` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 3 | `baidu` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 4 | `ebay` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 5 | `geocities` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 6 | `google` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 7 | `microsoft` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 8 | `netflix` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 9 | `reddit` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 10 | `wikipedia` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
-| 11 | `yahoo` | `github` | **DROP** | Generic clone leftover dest. Not dest-disjoint leftover dest KEEP. Replace that year official dest. |
 
 ## 2015 — 194 extra dests
 

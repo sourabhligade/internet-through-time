@@ -384,10 +384,8 @@
     "2002": "Place stickers. Make the room yours.",
     "2003": "Start a gag fight. Land the bit.",
     "2004": "Swap neighbors. Match three. Ride the cascade.",
-    "2008": "Stick goo. Build a span. Reach the pipe.",
     "2009": "Check literacy · plant · harvest before wilt.",
     "2010": "Fling the pebble. Hit the nest.",
-    "2011": "Deal a rack. Play a word.",
     "2012": "Look at the doodle. Pick the word.",
     "2013": "Hold the loop. Six seconds."
   };
@@ -401,10 +399,8 @@
     "1999": { href: "../geocities/index.html", label: "GeoCities 1999" },
     "2000": { href: "../homestar/index.html", label: "Homestar Runner" },
     "2004": { href: "../facebook/index.html", label: "thefacebook 2004" },
-    "2008": { href: "../appstore/index.html", label: "App Store 2008" },
     "2009": { href: "../farmville/index.html", label: "FarmVille residual" },
     "2010": { href: "../instagram/index.html", label: "Instagram iOS" },
-    "2011": { href: "../googleplus/index.html", label: "Google+" },
     "2012": { href: "../instagram/android.html", label: "Instagram Android" },
     "2013": { href: "../vine/record.html", label: "Vine 6s" }
   };

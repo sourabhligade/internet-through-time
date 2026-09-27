@@ -87,15 +87,26 @@ body.has-itt-wayfind {
   padding-bottom: 56px !important;
 }
 
-/* Dest opened as its own tab (not the year-shell iframe): do not pin a
- * footer to the viewport. That is the empty band under the trail. */
+/* Dest opened as its own tab (not the year-shell iframe): exhibit-foot is
+ * the single footer. Hide leftover wayfind so Starting Point / Year menu
+ * are not duplicated. */
 html.itt-dest-top #itt-wayfind {
-  position: static !important;
-  pointer-events: auto;
+  display: none !important;
 }
 
 html.itt-dest-top body.has-itt-wayfind {
   padding-bottom: 0 !important;
+}
+
+/* 2022 period CSS hides the foot on dest pages. A top-window dest
+ * has no year shell, so this foot is the way back. */
+html.itt-dest-top[data-itt-year="2022"] body:not(.itt-start-page) #itt-exhibit-foot {
+  display: block !important;
+}
+
+/* In-page crumbs that repeat the footer Starting Point. */
+html.itt-dest-top .crumb:has(a[href*="pages/home"]) {
+  display: none;
 }
 
 #itt-exhibit-foot {

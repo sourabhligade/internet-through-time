@@ -1,8 +1,8 @@
 # 2015 — READ FIRST (from-scratch rebuild)
 
-**Date:** 2026-09-04  
-**Status:** **LIVE lean door.** Star is Periscope Go LIVE `itt15-periscope`. Hub card open. Dest-lock reverted: dest folders **213**. Do not `git checkout` the wiped pre-rebuild forest.  
-**Disk truth:** Hub is **28 years open** · **2009 boarded** · **2020 Zoom Leave live** · **2022 ChatGPT live**. 2013 Vine and 2018 GDPR are live lean doors.  
+**Date:** 2026-09-27  
+**Status:** **WIPED.** No hub card. No year tree. Do not restore. Star was Periscope Go LIVE `itt15-periscope`.  
+**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · **2018 wiped** · **2020 Zoom Leave live** · **2022 ChatGPT live**. 2013 Vine is a live lean door.  
 **Prefix:** `itt15`  
 **Clone shape from:** live `years/2014/` (lean door). **Do not** restore `/tmp` or git leftovers.
 
@@ -61,4 +61,4 @@ This rebuild picks a **verb you can do in the frame**.
 
 1. This file.  
 2. [`DISK-TRUTH.md`](DISK-TRUTH.md).  
-3. Dest-lock dest-farm dests are restored (**213** folders). Do not restore the wiped pre-rebuild forest. Do not add more dests.
+3. The year tree is gone. Do not restore the old 213-folder forest. Do not add dests.

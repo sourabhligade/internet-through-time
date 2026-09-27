@@ -10,8 +10,7 @@ const FLOWS = [
   { year: "2005", href: "/years/2005/sites/youtube/index.html", k1: "itt05-yt-lx", k2: "itt05-yt-lx-d2", star: "itt05-yt-uploads" },
   { year: "2006", href: "/years/2006/sites/youtube/index.html", k1: "itt06-yt-lx", k2: "itt06-yt-ack", star: "itt06-tweets" },
   { year: "2007", href: "/years/2007/sites/youtube/index.html", k1: "itt07-youtube-lx", k2: "itt07-youtube-d2", star: "itt07-iphone" },
-  { year: "2008", href: "/years/2008/sites/youtube/index.html", k1: "itt08-yt-ab", k2: "itt08-yt-lx", star: "itt08-github" },
-  { year: "2009", href: "/years/2009/sites/youtube/index.html", k1: "itt09-yt", k2: "itt09-yt-d2", star: "itt09-like" },
+    { year: "2009", href: "/years/2009/sites/youtube/index.html", k1: "itt09-yt", k2: "itt09-yt-d2", star: "itt09-like" },
   { year: "2010", href: "/years/2010/sites/youtube/index.html", k1: "itt10-yt-lx", k2: "itt10-youtube-d3", star: "itt10-ig-posts" },
 ];
 

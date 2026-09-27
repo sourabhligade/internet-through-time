@@ -18,6 +18,14 @@
       _vp.content = "width=device-width, initial-scale=1";
       (document.head || document.documentElement).insertBefore(_vp, (document.head && document.head.firstChild) || null);
     }
+ if (/\/years\/\d{4}\/sites\//.test(_p)) {
+ try {
+ if (window.self === window.top) {
+ document.documentElement.className =
+ (document.documentElement.className || "") + " itt-dest-top";
+ }
+ } catch (eDestTop) { /* */ }
+ }
     if (/\/years\/\d{4}\/sites\//.test(_p) && !document.getElementById("itt-dest-page-css")) {
       var _base = "";
       var _idx = _p.indexOf("/years/");
@@ -25,7 +33,7 @@
       var _link = document.createElement("link");
       _link.id = "itt-dest-page-css";
       _link.rel = "stylesheet";
-      _link.href = _base + "/css/itt-dest-page.css?v=20260926dest3";
+ _link.href = _base + "/css/itt-dest-page.css?v=20260927dest4";
       (document.head || document.documentElement).appendChild(_link);
       if (!document.querySelector('meta[name="color-scheme"]')) {
         var _cs = document.createElement("meta");
@@ -180,10 +188,7 @@
       ["pinterest", "immersion/pinterest.js"],
       ["feedburner", "immersion/feedburner.js"],
       ["podcasts", "immersion/podcasts.js"],
-      /* 2008 Europe dest must not load 2011 US invite engine */
-      path.indexOf("/years/2008/") === -1 && path.indexOf("/2008/") === -1
-        ? ["spotify", "immersion/spotify.js"]
-        : ["__itt_skip_spotify__", ""],
+      ["spotify", "immersion/spotify.js"],
       ["googleplus", "immersion/googleplus.js"],
       ["snapchat", "immersion/snapchat.js"],
       ["siri", "immersion/siri.js"],
@@ -307,14 +312,9 @@
           ["[data-appstore-install], [data-appstore-apps], [data-appstore-catalog]", "immersion/appstore.js"],
           ["[data-hulu-play]", "immersion/hulu.js"],
           ["[data-itunes-buy]", "immersion/itunes.js"],
-          ["form[data-tc-open], [data-tc-open]", "immersion/techcrunch.js"]
+          ["form[data-tc-open], [data-tc-open]", "immersion/techcrunch.js"],
+          ["[data-spotify-invite], [data-spotify-plan], [data-spotify-play], [data-spotify-ack]", "immersion/spotify.js"]
         ];
-        if (path.indexOf("/years/2008/") === -1 && path.indexOf("/2008/") === -1) {
-          hookEngines.push([
-            "[data-spotify-invite], [data-spotify-plan], [data-spotify-play], [data-spotify-ack]",
-            "immersion/spotify.js"
-          ]);
-        }
         var hi;
         for (hi = 0; hi < hookEngines.length; hi++) {
           if (hookEngines[hi] && document.querySelector(hookEngines[hi][0])) addEngine(hookEngines[hi][1]);
@@ -509,6 +509,36 @@
         }
         phase1 = withoutKit(phase1);
         split.rest = withoutKit(split.rest);
+
+ /* shared.js is the composer. Parts must parse before it. */
+ function withSharedParts(list) {
+ var parts = [
+ "immersion/shared-alerts.js",
+ "immersion/shared-tour.js",
+ "immersion/shared-nav.js",
+ "immersion/shared-live.js"
+ ];
+ var out = [];
+ var seen = {};
+ var i, j;
+ for (i = 0; i < (list || []).length; i++) {
+ if (list[i] === "immersion/shared.js") {
+ for (j = 0; j < parts.length; j++) {
+ if (!seen[parts[j]]) {
+ seen[parts[j]] = 1;
+ out.push(parts[j]);
+ }
+ }
+ }
+ if (!seen[list[i]]) {
+ seen[list[i]] = 1;
+ out.push(list[i]);
+ }
+ }
+ return out;
+ }
+ phase1 = withSharedParts(phase1);
+ split.rest = withSharedParts(split.rest);
 
         var PLAY_DATA = "config/year-playable.js";
         var needPlayData = false;

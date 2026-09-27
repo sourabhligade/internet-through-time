@@ -1,5 +1,5 @@
 /**
- * Hulu 2008 — public watch theater (localStorage)
+ * Hulu  — public watch theater (localStorage)
  * Keys: itt08-hulu
  */
 (function (global) {
@@ -75,7 +75,7 @@
           }
         }
         var list = load();
-        list.unshift({ title: title, multiStep: true, real: true, official: true, year: "2008", ts: Date.now() });
+        list.unshift();
         save(list.slice(0, 40));
         if (st) {
           st.textContent = "Watching (ad-supported theater): " + title + " · " + storageKey();
@@ -86,7 +86,7 @@
           screen.innerHTML =
             "<b>" +
             esc(title) +
-            "</b><br><font size='2' color='#666'>Full episode · ads · US public Mar 12, 2008 · no real stream.</font>";
+            "</b><br><font size='2' color='#666'>Full episode · ads · US public Mar 12,  · no real stream.</font>";
         }
         render(doc);
       });

@@ -178,14 +178,14 @@ def render(data: dict) -> str:
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Museum map — 29 live years (author only)</title>
+<title>Museum map — 24 open years (author only)</title>
 <style>{CSS}</style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1>Internet Through Time — disk map</h1>
-  <p class="lede">28 years open · 2009 boarded · 2023+ wiped · leftover-2× ×2 on every dest · incomplete never writes.</p>
+  <p class="lede">24 years open · 2009 boarded · 2015 / 2018 wiped · 2023+ wiped · leftover-2× hrefs · incomplete never writes.</p>
   <p class="banner">Author only. Not linked from the hub. Names come from <code>js/atlas-data.js</code>, <code>js/config/flow-trails.js</code>, and <code>scripts/popular-3x-sites.json</code>.</p>
 </header>
 
@@ -234,7 +234,7 @@ def render(data: dict) -> str:
       <li>oss-visitor-gate — enter all 29</li>
       <li>hub · atlas · 3× links · all-years smoke</li>
       <li>Gold-A · popular 3× · one-thing</li>
-      <li>2005–2010 leftover-4× · 2008 CUT-DOUBLE + 5×</li>
+      <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>
       <li>2014 mvp/flows/4× · 2018 mvp/flows</li>
       <li>2022 mvp/flows</li>
       <li>2016–2018 3× + trail · 2017–2019 deepen</li>

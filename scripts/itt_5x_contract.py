@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Single 5× leftover contract.
 
-2008 F1–F5 keep a 5× plaque. Every other room stays clear.
+ F1–F5 keep a 5× plaque. Every other room stays clear.
 Famous-game cabinets are still required on the years in FAMOUS_YEARS.
 """
 from __future__ import annotations
@@ -34,17 +34,12 @@ NO_PLAQUE: frozenset[tuple[int, str]] = frozenset(
 )
 
 # Years restored to committed dests (no leftover 5× plaques) except ALLOW_PLAQUE.
-NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2008, 2009, 2010, 2011, 2012, 2013, 2021, 2022, 2023})
+NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2009, 2010, 2012, 2013, 2021, 2022, 2023})
 
 # 5×-live F1–F5 leftover plaques (keys are not official gold, except Hulu/Chrome
-# share a dest with gold). 2008-5x-live / 2012-5x-live require data-5x-save here.
+# share a dest with gold). -5x-live / 2012-5x-live require data-5x-save here.
 ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
     {
-        (2008, "sites/appstore/index.html"),
-        (2008, "sites/chrome/index.html"),
-        (2008, "sites/android/index.html"),
-        (2008, "sites/hulu/index.html"),
-        (2008, "sites/dropbox/index.html"),
         (2009, "sites/farmville/index.html"),
         (2009, "sites/bing/index.html"),
         (2009, "sites/iphone/index.html"),
@@ -66,7 +61,7 @@ POP_PANEL_2020 = ()
 FAMOUS_YEARS = [
     y
     for y in list(range(1994, 2020))
-    if y not in {2001, 2002, 2003, 2007, 2009, 2011, 2013, 2017, 2018, 2019}
+    if y not in {2001, 2002, 2003, 2007, 2009, 2013, 2017, 2018, 2019}
     and y not in WIPED_YEARS
     and y not in BOARDED_YEARS
 ]
@@ -104,8 +99,8 @@ _OFFICIAL_ROOMS = official_trail_rooms()
 
 
 def plaque_required(year: int, room: str, html: str = "") -> bool:
-    """2008 and 2009 F1–F5 keep a 5× plaque. Other rooms, including the unbuilt 2012 set, stay clear."""
-    return year in (2008, 2009) and (year, room) in ALLOW_PLAQUE
+    """2009 F1–F5 keep a 5× plaque. Other rooms, including the unbuilt 2012 set, stay clear."""
+    return year in (2009,) and (year, room) in ALLOW_PLAQUE
 
 
 def dest_html(year: int, room: str) -> Path:

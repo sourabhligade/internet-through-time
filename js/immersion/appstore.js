@@ -1,5 +1,5 @@
 /**
- * App Store 2008 — install/remove theater (localStorage)
+ * App Store  — install/remove theater (localStorage)
  * Keys: itt08-apps · launch ~500 honesty · no real IPA
  */
 (function (global) {
@@ -114,7 +114,7 @@
       if (list[i].id === app.id) { exists = true; break; }
     }
     if (!exists) {
-      list.unshift({ id: app.id, name: app.name, price: app.price, cat: app.cat, official: true, year: "2008", ts: Date.now() });
+      list.unshift();
       save(list.slice(0, 40));
     }
     if (st) {

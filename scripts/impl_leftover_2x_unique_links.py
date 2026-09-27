@@ -6,7 +6,7 @@
 first paint = 0. Do not dest-farm dest folders. Do not grow leftover-3× unique.
 Do not write dest-true leftover dest I/O. 2009 boarded. 2023–2025 wiped.
 Leftover-2× unique dest links stay dest-disjoint from leftover-3× unique dest links
-(one dest once as a link). Cite: docs/LEFTOVER-2X-UNIQUE-LINKS.md ·
+(one dest once as a link). Cite: docs/LEFTOVER-2X-UNIQUE-LINKS.md
 docs/DUPLICATE-UNIQUE-LINKS.md
 """
 from __future__ import annotations
@@ -150,15 +150,9 @@ CITED_ADD: dict[str, list[str]] = {
         "flickr", "reddit", "digg", "iphone", "streetview", "gmail", "fbplat",
         "twitter", "youtube", "tumblr", "kindle", "ie6", "playable",
     ],
-    "2008": ["bbc", "wikipedia", "reddit", "netflix"],
     "2010": [
         "flipboard", "minecraft", "hulu", "angry", "googlebuzz", "chromewebstore",
         "kinect", "cityville", "ibooks", "playable",
-    ],
-    "2011": [
-        "snapchat", "ios5", "imessage", "honeycomb", "ics", "wechat", "line", "temple",
-        "skyrim", "nytpaywall", "skypebuy", "grouponipo", "zyngaipo", "googlewallet",
-        "stripe", "codecademy", "nintendo3ds", "psnhack", "gowalla",
     ],
     "2012": [
         "tinder", "duolingo", "coursera", "udacity", "edx", "nexus7", "jellybean",

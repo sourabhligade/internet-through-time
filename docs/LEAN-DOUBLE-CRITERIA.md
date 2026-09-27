@@ -23,7 +23,7 @@ A year that looks full because it has 200 leftover dests has **failed I/O**. **2
 |--|-----------|---------------|
 | Envelope | Read / cite ~5,000 period sites, blogs, galleries, ranks | 5,000 dest folders |
 | New dests | Leftover dests · dest-disjoint · year-mass or year-launch · one dest / one verb / one key | Official 11th · leftover-3× unique past the stop · `lx`+`d2` clones |
-| Years | Thin lean doors listed in §4 | Forests 1994–2006 + 2008 · dest-farm years already dense · 2009 · 2023–2025 |
+| Years | Thin lean doors listed in §4 | Forests 1994–2006 · dest-farm years already dense · 2009 · 2023–2025 |
 | When HTML | After a **named** implement pass **and** a cite | Silent dest-farm from this file |
 
 ---
@@ -46,7 +46,7 @@ A dest **fails** if any row is N. One miss is a fail. Inherits leftover-3× **U1
 | **D10** | No invented ILS | About dual-cite. ILS June table **ends 2018** | Invented June 2019–2025 websites cell |
 | **D11** | I/O lean | Starting Point = guided **6** + star + official 10. Warehouse folded | First paint dest dump · 7th guided `<li>` |
 | **D12** | Cite or drop | Primary or labeled secondary cite, or drop the row | Invent a dest to hit the double |
-| **D13** | Not a forest | Target is lean-door 2×, not 2004 **810** / 2008 **597** | Board C again · dest-lock revert of dest-lock years |
+| **D13** | Not a forest | Target is lean-door 2×, not 2004 **810** /  **597** | Board C again · dest-lock revert of dest-lock years |
 | **D14** | Leftover-3× stop | 2018 leftover-3× unique stays **3**. 2021 stays **5**. Extra dests are leftover dests, not leftover-3× unique dest-true dests | Growing leftover-3× unique to 9 on 2018 / 2021 |
 | **D15** | Unique leftover-20 | Only **2017** has unique leftover-20. Do not dest-farm leftover-20 maps on other years | 20 unique leftover dests on 2018–2022 to “look like 2017” |
 | **M1–M4** | Dest-true leftover | keep vs trap · field · 2 ticks · Go | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` |
@@ -61,7 +61,7 @@ Disk counts = first-level dirs under `years/YYYY/sites/` (2026-09-20).
 
 | Class | Years | Disk dests | This pass |
 |-------|-------|------------|-----------|
-| Forest | 1994–2006 + 2008 | 153–810 | **Stop.** Stacked leftover-2× / leftover-3× workshop. Board C already doubled 1999–2004. Do not dest-farm unique leftover-3×n. Do not dest-lock forests. |
+| Forest | 1994–2006 | 153–810 | **Stop.** Stacked leftover-2× / leftover-3× workshop. Board C already doubled 1999–2004. Do not dest-farm unique leftover-3×n. Do not dest-lock forests. |
 | Dest-lock lean (thin) | 2007 · 2010–2012 · 2014 · 2021 | 23 / 22 / 31 / 24 / 18 / **15** | **Double leftover dests** to the aim in §4. Do not dest-lock revert. |
 | Dest-true lean (thin) | 2018 · 2022 | 13 / 19 | **Double leftover dests** to the aim in §4. Leftover-3× unique stops stay. |
 | Dest-true lean (upper) | 2013 | 54 | **Holes only.** Do not grow to a forest. |
@@ -80,7 +80,7 @@ Official 10 stays 10. Leftover-3× unique dest-true dests stay at the stop alrea
 |------|------|-----|----------:|-------------------:|----------:|-------------------------:|-----------|
 | **2007** | iPhone Safari | `itt07-iphone` | 23 | 9 | **46** | **23** | Double |
 | **2010** | Instagram iOS | `itt10-ig-posts` | 22 | 9 | **44** | **22** | Double |
-| **2011** | Google+ | `itt11-gplus` | 31 | 9 | **62** | **31** | Double |
+| **** | Google+ | `itt11-gplus` | 31 | 9 | **62** | **31** | Double |
 | **2012** | IG Android | `itt12-ig-android` | 24 | 9 + leftover-4× unique 3 | **48** | **24** | Double |
 | **2013** | Vine 6s | `itt13-vine-posts` | 54 | 9 | **54** | **0** unless a cited hole | Holes only |
 | **2014** | WhatsApp Install | `itt14-wa-install` | 18 | 9 | **36** | **18** | Double |
@@ -110,7 +110,7 @@ Star trap: App Store · Chrome · Android G1 · iPhone 3G · Street View as the 
 
 Star trap: Instagram Android · Stories · Reels · iPad 2 · Siri · Timeline · Google+ · Snapchat · Spotify US · UberX mass. Do not restore dest-lock dests (`groupondeal` · `quorawait` · `instant` · `pinterest` · `uber` · `quora` · `digg` · `wikileaks` · `browserchoice` · `ask` · `facetime` · `windowsphone` · `dropbox`).
 
-### 2011 (31)
+###  (31)
 
 `airbnb` · `chrome` · `dropbox` · `evernote` · `facebook` · `foursquare` · `gmusic` · `google` · `googleplus` · `huffpost` · `hulu` · `icloud` · `imgur` · `instagram` · `ipad` · `iphone` · `kickstarter` · `kindlefire` · `linkedin` · `minecraft` · `pandora` · `pinterest` · `playable` · `quora` · `qwikster` · `spotify` · `twitch` · `twitter` · `vimeo` · `yahoo` · `youtube`
 
@@ -210,7 +210,7 @@ Do not skip ahead to dest HTML.
 
 - Dest-farm dests to raise a percentage.
 - Treat 5,000 websites as 5,000 dest folders.
-- Double forests 1994–2006 + 2008.
+- Double forests 1994–2006.
 - Double dest-lock-reverted warehouses 2015 **213** · 2017 **222** · 2019 **170**.
 - Dest-lock revert 2007 / 2010–2012 / 2014 / 2021.
 - Dest-lock 2015–2020 again.
@@ -280,7 +280,7 @@ CNIL-shaped leftover dest. One writer. Cream panel. Not leftover-3× unique.
 
 New leftover dest slug ∩ (official 10 ∪ leftover-3× unique ∪ leftover-4× unique ∪ unique leftover-20) = **∅** inside that year.
 
-Dropped clones (not dests): 2011 Siri / iPhone 4S (official `iphone` is already Siri) · 2011 Timeline (official `facebook` is Timeline) · 2011 LinkedIn IPO (leftover-3× unique `linkedin`) · 2012 Facebook IPO (official `facebook` is 1bn MAU) · 2018 Cambridge (official `trust` is the 10 Apr hearing).
+Dropped clones (not dests):  Siri / iPhone 4S (official `iphone` is already Siri) ·  Timeline (official `facebook` is Timeline) ·  LinkedIn IPO (leftover-3× unique `linkedin`) · 2012 Facebook IPO (official `facebook` is 1bn MAU) · 2018 Cambridge (official `trust` is the 10 Apr hearing).
 
 ## 13. Implemented leftover dests
 
@@ -345,7 +345,7 @@ Instagram iOS stays the chip. Do not restore dest-lock dests. Flipboard / Minecr
 | `ebay` | Bid leftover | Instagram Android | https://en.wikipedia.org/wiki/EBay |
 | `paypal` | Send leftover | Instagram Android | https://en.wikipedia.org/wiki/PayPal |
 
-### 2011
+### 
 
 Google+ stays the chip. Snapchat is year-true here (2012 dest is a different year). No Siri clone.
 
@@ -380,7 +380,7 @@ Google+ stays the chip. Snapchat is year-true here (2012 dest is a different yea
 | `whatsapp` | Chat leftover | Instagram Android | https://en.wikipedia.org/wiki/WhatsApp |
 | `path` | Moment leftover | Instagram Android | https://en.wikipedia.org/wiki/Path_(social_network) |
 | `nintendo3ds` | StreetPass leftover | Instagram Android | https://en.wikipedia.org/wiki/Nintendo_3DS |
-| `psnhack` | Reset leftover | Instagram Android | https://en.wikipedia.org/wiki/2011_PlayStation_Network_outage |
+| `psnhack` | Reset leftover | Instagram Android | https://en.wikipedia.org/wiki/_PlayStation_Network_outage |
 | `gowalla` | Check in leftover | Instagram Android | https://en.wikipedia.org/wiki/Gowalla |
 
 ### 2012
@@ -564,7 +564,7 @@ Holes only. Dest folders stay **54**. No dest this pass.
 |------|--------|-----|
 | 2007 | App Store · Chrome · Android G1 · iPhone 3G · Hulu public | Neighbor gold |
 | 2010 | `pinterest` · `uber` · `quora` · `digg` · `dropbox` · `facetime` · `windowsphone` · `wikileaks` · `instant` | Dest-lock skip restore |
-| 2011 | `siri` · `iphone4s` · `facebooktimeline` · `linkedinipo` | Clone of official / leftover-3× unique dests already on disk |
+|  | `siri` · `iphone4s` · `facebooktimeline` · `linkedinipo` | Clone of official / leftover-3× unique dests already on disk |
 | 2012 | Vine · Snap Stories · `facebookipo` | Vine is 2013 star · facebook dest is already 1bn |
 | 2013 | Any dest | Holes only · no cited hole this pass |
 | 2014 | Watch as dest · Heartbleed exploit | Trap |
@@ -582,7 +582,7 @@ Holes only. Dest folders stay **54**. No dest this pass.
 |------|----:|----:|----:|-------------------:|-------------------:|------------:|
 | 2007 | 23 | **46** | 46 | 23 | 9 stop | 10 |
 | 2010 | 22 | **44** | 44 | 22 | 9 stop | 10 |
-| 2011 | 31 | **62** | 62 | 31 | 9 stop | 10 |
+|  | 31 | **62** | 62 | 31 | 9 stop | 10 |
 | 2012 | 24 | **48** | 48 | 24 | 9 stop | 10 |
 | 2013 | 54 | **54** | 54 | 0 | 9 stop | 10 |
 | 2014 | 18 | **36** | 36 | 18 | 9 stop | 10 |

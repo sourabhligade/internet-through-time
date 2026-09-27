@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Dest-lock lean doors: keep official 10 + guided + unique leftover + leftover-3× dests.
 
-Forests (1994–2006, 2008) stay. 2009 boarded. 2020 live lean.
+Forests (1994–2006, ) stay. 2009 boarded. 2020 live lean.
 Does not invent dests. Same pass rewrites rooms[], sitemap, leftover matrices.
 """
 from __future__ import annotations
@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[1]
 LEAN = {
     "2007",
     "2010",
-    "2011",
     "2012",
     "2014",
     "2021",
@@ -31,12 +30,6 @@ EXTRA_KEEP = {
     "2010": {
         "angry", "chromewebstore", "cityville", "flipboard", "googlebuzz", "hulu",
         "ibooks", "kinect", "minecraft", "path"
-    },
-    "2011": {
-        "chromebook", "codecademy", "googlewallet", "gowalla", "grouponipo",
-        "honeycomb", "ics", "imessage", "ios5", "line", "nintendo3ds", "nytpaywall",
-        "psnhack", "skypebuy", "skyrim", "snapchat", "stripe", "temple", "wechat",
-        "zyngaipo"
     },
     "2012": {
         "chrome", "coinbase", "coursera", "duolingo", "edx", "googleplay", "ios6",

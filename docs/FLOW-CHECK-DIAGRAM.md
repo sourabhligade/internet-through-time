@@ -52,7 +52,7 @@ flowchart TD
 ```mermaid
 flowchart LR
   subgraph PLAY["Playable 28"]
-    FOR["Forests 1994–2006 + 2008<br/>dense leftover-2× · leftover-3× stacked workshop"]
+    FOR["Forests 1994–2006<br/>dense leftover-2× · leftover-3× stacked workshop"]
     LOCK["Dest-lock lean<br/>2007 · 2010–2012 · 2014 · 2021<br/>official 10 + leftover-3× unique dest-true dests"]
     REV["Dest-lock reverted<br/>2015–2020 dest folders stay"]
     LEAN["Dest-true lean<br/>2013 · 2018 · 2022"]
@@ -63,7 +63,7 @@ flowchart LR
 
 | Class | Years | Official 10 | Leftover-3× unique dest-true dests | Check |
 |-------|-------|-------------|-----------------------------------|-------|
-| Forest | 1994–2006 + 2008 | 10 files | **Workshop stacked** — not unique dest-true 9 | Links + dest-true official dest I/O. Do not dest-farm unique leftover-3×n |
+| Forest | 1994–2006 | 10 files | **Workshop stacked** — not unique dest-true 9 | Links + dest-true official dest I/O. Do not dest-farm unique leftover-3×n |
 | Dest-lock lean | 2007, 2010–2012, 2014, 2021 | 10 | 9 / 9 / 9 / 9 / 9 / **5 stop** | Do not dest-lock revert dest-farm dests |
 | Dest-lock reverted | 2015–2020 | 10 | 9 / 9 / leftover-20 (2017) / 3 / 9 / 9 | Dest folders stay. Unique dest-true dests dest-disjoint |
 | Dest-true lean | 2013, 2018, 2022 | 10 | 9 / **3 stop** / 9 | 2018 GDPR Manage is the I/O model |
@@ -141,7 +141,7 @@ flowchart LR
 |------|------------------------|--------------------------------|
 | 2007 | 9 wiki…digg | `itt07-iphone` |
 | 2010 | 9 netflix…groupon | `itt10-ig-posts` |
-| 2011 | 9 | `itt11-gplus` |
+|  | 9 | `itt11-gplus` |
 | 2012 | 9 + leftover-4× unique 3 | `itt12-ig-android` |
 | 2013 | 9 | Vine record |
 | 2014 | 9 | `itt14-wa-install` |

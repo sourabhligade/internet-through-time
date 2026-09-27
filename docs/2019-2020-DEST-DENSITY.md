@@ -41,7 +41,7 @@ Folders under `years/YYYY/sites/`. Counted 2026-09-15.
 | 2017 | 40 | dest-lock 30 unique + leftover-3× dests | **Closest density peer** |
 | 2013 | 54 | lean door · leftover-2× on dests | Upper lean bound |
 | 2022 | 85 | lean door · leftover dests + leftover-3× unique 9 | Densest lean. **Not** the 2019 target. |
-| Forests 1994–2006 + 2008 | 153–810 | leftover-2× workshop | **Do not** dest-lock or dest-farm forests. |
+| Forests 1994–2006 | 153–810 | leftover-2× workshop | **Do not** dest-lock or dest-farm forests. |
 
 **2× 2019 = 38 dest folders.** That is **2017 (40)**, not 2022 (85), not 2004 (810).
 

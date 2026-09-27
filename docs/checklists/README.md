@@ -17,10 +17,10 @@ Wiped, no checklist: 2018, 2023–2025. 2005 is restored.
 - [2004](2004.md) — 8 official, 10 leftover, 151 pictures
 - [2005](2005.md) — 10 official, 10 leftover, pictures restored
 - [2006](2006.md) — 10 official, 10 leftover, 150 pictures
-- [2008](2008.md) — 10 official, 10 leftover, 15 pictures
+- [](.md) — 10 official, 10 leftover, 15 pictures
 - [2009](2009.md) — 10 official, 0 leftover, 17 pictures
 - [2010](2010.md) — 10 official, 0 leftover, 3 pictures
-- [2011](2011.md) — 10 official, 0 leftover, 0 pictures
+- [](.md) — 10 official, 0 leftover, 0 pictures
 - [2012](2012.md) — 9 official, 0 leftover, 0 pictures
 - [2013](2013.md) — 9 official, 0 leftover, 0 pictures
 - [2014](2014.md) — 9 official, 0 leftover, 0 pictures

@@ -15,7 +15,6 @@ const ROOT = path.join(__dirname, "..");
 const WANT_FOLDERS = {
   2007: 33,
   2010: 29,
-  2011: 41,
   2012: 32,
   2014: 25,
   2016: 57,

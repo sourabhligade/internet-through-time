@@ -311,28 +311,6 @@
       {"n": 19, "name": "Digg", "href": "sites/digg/index.html", "match": "/digg/", "whenKey": "itt06-digg", "nextHref": "sites/maps/index.html", "nextLabel": "Maps"},
       {"n": 20, "name": "Maps", "href": "sites/maps/index.html", "match": "/maps/", "whenKey": "itt06-maps", "nextHref": "sites/twitter/index.html", "nextLabel": "★ year gold"}
     ],
-    "2008": [
-      {"n": 1, "name": "GitHub issue", "href": "sites/github/issue.html", "match": "/github/", "whenKey": "itt08-github", "nextHref": "sites/appstore/index.html", "nextLabel": "App Store"},
-      {"n": 2, "name": "App Store", "href": "sites/appstore/index.html", "match": "/appstore/", "whenKey": "itt08-apps", "nextHref": "sites/chrome/index.html", "nextLabel": "Chrome"},
-      {"n": 3, "name": "Chrome", "href": "sites/chrome/index.html", "match": "/chrome/", "whenKey": "itt08-chrome", "nextHref": "sites/android/index.html", "nextLabel": "Android G1"},
-      {"n": 4, "name": "Android G1", "href": "sites/android/index.html", "match": "/android/", "whenKey": "itt08-android", "nextHref": "sites/hulu/index.html", "nextLabel": "Hulu"},
-      {"n": 5, "name": "Hulu", "href": "sites/hulu/index.html", "match": "/hulu/", "whenKey": "itt08-hulu", "nextHref": "sites/facebook/index.html", "nextLabel": "Facebook"},
-      {"n": 6, "name": "Facebook", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt08-facebook", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter"},
-      {"n": 7, "name": "Twitter", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt08-tweets", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube"},
-      {"n": 8, "name": "YouTube", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt08-yt", "nextHref": "sites/dropbox/index.html", "nextLabel": "Dropbox"},
-      {"n": 9, "name": "Dropbox", "href": "sites/dropbox/index.html", "match": "/dropbox/", "whenKey": "itt08-dropbox", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone 3G"},
-      {"n": 10, "name": "iPhone 3G", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt08-iphone3g", "nextHref": "sites/github/issue.html", "nextLabel": "GitHub issue"},
-      {"n": 11, "name": "Google", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt08-google-rlx", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo"},
-      {"n": 12, "name": "Yahoo", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt08-yahoo-rlx", "nextHref": "sites/wikipedia/index.html", "nextLabel": "Wikipedia"},
-      {"n": 13, "name": "Wikipedia", "href": "sites/wikipedia/index.html", "match": "/wikipedia/", "whenKey": "itt08-wikipedia-rlx", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail"},
-      {"n": 14, "name": "Gmail", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt08-gmail-rlx", "nextHref": "sites/flickr/index.html", "nextLabel": "Flickr"},
-      {"n": 15, "name": "Flickr", "href": "sites/flickr/index.html", "match": "/flickr/", "whenKey": "itt08-flickr-rlx", "nextHref": "sites/reddit/index.html", "nextLabel": "Reddit"},
-      {"n": 16, "name": "Reddit", "href": "sites/reddit/index.html", "match": "/reddit/", "whenKey": "itt08-rd-lx", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon"},
-      {"n": 17, "name": "Amazon", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt08-amazon-rlx", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace"},
-      {"n": 18, "name": "MySpace", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt08-myspace-rlx", "nextHref": "sites/delicious/index.html", "nextLabel": "del.icio.us"},
-      {"n": 19, "name": "del.icio.us", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt08-delicious-rlx", "nextHref": "sites/stackoverflow/index.html", "nextLabel": "Stack Overflow"},
-      {"n": 20, "name": "Stack Overflow", "href": "sites/stackoverflow/index.html", "match": "/stackoverflow/", "whenKey": "itt08-so-lx", "nextHref": "sites/github/issue.html", "nextLabel": "★ year gold"}
-    ],
     "2009": [
       {"n": 1, "name": "Facebook Like", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt09-like", "nextHref": "sites/farmville/index.html", "nextLabel": "FarmVille"},
       {"n": 2, "name": "FarmVille", "href": "sites/farmville/index.html", "match": "/farmville/", "whenKey": "itt09-farm", "nextHref": "sites/bing/index.html", "nextLabel": "Bing"},
@@ -356,18 +334,6 @@
       {"n": 8, "name": "Twitter", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt10-tweets", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube"},
       {"n": 9, "name": "YouTube", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt10-yt", "nextHref": "sites/playable/game.html", "nextLabel": "Sling Nest"},
       {"n": 10, "name": "Sling Nest", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt10-game-slingnest", "nextHref": "sites/instagram/index.html", "nextLabel": "Instagram"}
-    ],
-    "2011": [
-      {"n": 1, "name": "Google+", "href": "sites/googleplus/index.html", "match": "/googleplus/", "whenKey": "itt11-gplus", "nextHref": "sites/spotify/index.html", "nextLabel": "Spotify US"},
-      {"n": 2, "name": "Spotify US", "href": "sites/spotify/index.html", "match": "/spotify/", "whenKey": "itt11-spotify", "nextHref": "sites/iphone/index.html", "nextLabel": "Siri"},
-      {"n": 3, "name": "Siri", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt11-siri", "nextHref": "sites/facebook/index.html", "nextLabel": "Timeline"},
-      {"n": 4, "name": "Timeline", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt11-timeline", "nextHref": "sites/ipad/index.html", "nextLabel": "iPad 2"},
-      {"n": 5, "name": "iPad 2", "href": "sites/ipad/index.html", "match": "/ipad/", "whenKey": "itt11-ipad2", "nextHref": "sites/airbnb/index.html", "nextLabel": "Airbnb"},
-      {"n": 6, "name": "Airbnb", "href": "sites/airbnb/index.html", "match": "/airbnb/", "whenKey": "itt11-airbnb", "nextHref": "sites/instagram/index.html", "nextLabel": "IG iOS"},
-      {"n": 7, "name": "IG iOS", "href": "sites/instagram/index.html", "match": "/instagram/", "whenKey": "itt11-ig", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter"},
-      {"n": 8, "name": "Twitter", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt11-tweets", "nextHref": "sites/qwikster/index.html", "nextLabel": "Qwikster"},
-      {"n": 9, "name": "Qwikster", "href": "sites/qwikster/index.html", "match": "/qwikster/", "whenKey": "itt11-qwikster", "nextHref": "sites/playable/game.html", "nextLabel": "Letter Swap"},
-      {"n": 10, "name": "Letter Swap", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt11-game-letterswap", "nextHref": "sites/googleplus/index.html", "nextLabel": "Google+"}
     ],
     "2012": [
       {"n": 1, "name": "Instagram Android", "href": "sites/instagram/android.html", "match": "/instagram/android", "whenKey": "itt12-ig-android", "nextHref": "sites/pinterest/index.html", "nextLabel": "Pinterest"},

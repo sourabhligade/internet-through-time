@@ -1,5 +1,5 @@
 /**
- * Siri 2011 beta theater — canned phrases (iPhone 4S / iOS 5)
+ * Siri  beta theater — canned phrases (iPhone 4S / iOS 5)
  * localStorage history only — no speech API.
  */
 (function (global) {
@@ -47,7 +47,7 @@
         (typeof document !== "undefined" &&
           document.documentElement &&
           document.documentElement.getAttribute("data-itt-year")) ||
-        "2011"
+        ""
     );
   }
   function key(kind) {
@@ -67,7 +67,7 @@
     for (i = 0; i < ANSWERS.length; i++) {
       if (ANSWERS[i].match.test(q)) return ANSWERS[i].a;
     }
-    return "I’m not sure I understand. Try weather, traffic, or “remind me to call Mom.” (Siri beta · limited 2011 phrases)";
+    return "I’m not sure I understand. Try weather, traffic, or “remind me to call Mom.” (Siri beta · limited  phrases)";
   }
 
   function boot(doc) {

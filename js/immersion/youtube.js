@@ -107,11 +107,6 @@
       );
       bits.push('<a href="../instagram/index.html">Instagram iOS</a>');
     }
-    if (y === 2011) {
-      bits.push('<a href="../googleplus/index.html">Google+</a>');
-      bits.push('<a href="../facebook/timeline.html">Timeline</a>');
-      bits.push('<a href="../netflix/index.html">Netflix / Qwikster</a>');
-    }
     if (y === 2012) {
       bits.push('<a href="../instagram/android.html">Instagram Android</a>');
       bits.push('<a href="../facebook/ipo.html">Facebook IPO</a>');

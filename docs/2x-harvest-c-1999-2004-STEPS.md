@@ -383,7 +383,7 @@ Skip `ogrish` · `bet365` · `betsson` · `hollywoodbets`.
 |---|------|-----------|--------------|------|
 | 154 | `steam` | WDM Steam in 2002. Reserved 2003–04, **not** 2002 disk. | Try Steam leftover / Download leftover | Steam Deck as 2002 · live download |
 | 155 | `radiouserland` | Cybercultural 2002 blog-software leftover | Write leftover / Publish leftover | Blogger dest · Stumble as this dest |
-| 156 | `wayfair` | CSN Stores / racksandstands.com **Aug 2002**. Wayfair.com is **1 Sep 2011**. | Browse racks leftover / Add leftover | Wayfair.com 2011 as 2002 gold · live card |
+| 156 | `wayfair` | CSN Stores / racksandstands.com **Aug 2002**. Wayfair.com is **1 Sep **. | Browse racks leftover / Add leftover | Wayfair.com  as 2002 gold · live card |
 
 `csnstores` is already an earlier dest — do not merge it with `wayfair`. Two folders, two products (CSN house vs racksandstands first site).
 
@@ -630,7 +630,7 @@ Use these as the mkdir / Next checklist. Minutes stay in the year harvest table.
 - Invent brand pixels.
 - Ship porn / live money / live P2P / live mail / live registrar as gold.
 - Pad 2004 with language-Wikipedia dests.
-- Treat Wayfair.com 2011 as 2002 gold (`wayfair` dest is CSN / racksandstands leftover).
+- Treat Wayfair.com  as 2002 gold (`wayfair` dest is CSN / racksandstands leftover).
 - Treat Steam Deck, Chrome, iPhone, Gmail-before-2004, YouTube-before-2005 as year product.
 
 ---

@@ -19,7 +19,7 @@
       leftoverOfficial: true,
       officialVerb: true
     },
-    navSubtitle: "XP · IE6 · iPhone Safari is a room · App Store is 2008",
+    navSubtitle: "XP · IE6 · iPhone Safari is a room · App Store is ",
     nav: [
       { label: "Start", href: "pages/home.html", match: "/pages/" },
       { label: "Safari", href: "sites/iphone/index.html", match: "/iphone/" },

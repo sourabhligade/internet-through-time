@@ -1,7 +1,7 @@
 # 2017 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **28 years open**. `years/2017/` is the **live lean door** (Face ID star). Dest-lock reverted: dest folders **222**. **2009 boarded.** **2020 live lean** · Zoom Leave. 2013 Vine, 2018 GDPR, are live lean doors · **2022 ChatGPT live.**  
+**Disk truth:** Hub is **24 years open**. 2017 is a **live React door** (Face ID star). HTML dest folders **0**. **2009 boarded.** **2015 wiped.** **2018 wiped.** **2020 live lean** · Zoom Leave. 2013 Vine is a live lean door · **2022 ChatGPT live.**  
 **Prefix:** `itt17`  
 **Clone shape from:** live `years/2016/` (lean door · ~25 HTML · Instagram Stories star). **Do not** restore git `HEAD` / `52df8ae3` `years/2017/` (108-page forest) or the older 43-HTML lean tree. **Do not** restore `/tmp/itt-2017-*`.
 

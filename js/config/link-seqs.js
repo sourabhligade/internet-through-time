@@ -3,9 +3,9 @@
  * Official dest / Starting Point first paint stays 0.
  *
  * Add a walk:
- *   ITT.linkSeqs["2011-phones"] = {
- *     year: "2011",
- *     title: "2011 phones",
+ *   ITT.linkSeqs["-phones"] = {
+ *     year: "",
+ *     title: " phones",
  *     dests: [
  *       { id: "ios5", name: "iOS 5 leftover" },
  *       { id: "imessage", name: "iMessage leftover" }

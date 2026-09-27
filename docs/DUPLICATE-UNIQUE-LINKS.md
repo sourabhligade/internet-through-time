@@ -6,7 +6,7 @@
 **Law:** one dest once as a **link** per year ([`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1 · [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) T1 / T14).
 **Sibling:** [`DUPLICATE-FLOWS.md`](DUPLICATE-FLOWS.md).
 
-Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2006 + 2008 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). 2017 leftover-20 has leftover-2× unique dest links only.
+Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2006 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). 2017 leftover-20 has leftover-2× unique dest links only.
 
 This file maps every dest that sits on **both** leftover-2× unique dest **links** (`js/config/leftover-2x-unique-links.js` · `ITT-2X-LINKS`) and leftover-3× unique dest **links** (`js/config/leftover-3x-unique-links.js` · `ITT-3X-UNIQUE-LINKS`). Those dests appear twice as hrefs on leftover-3× unique dest-true dest pages (162 pages).
 
@@ -18,7 +18,7 @@ Strip applied: drop the dest from leftover-2× unique dest **links** only (`scri
 |-----:|-------------------------:|-------------------------:|-----------------------------:|-------------------------:|----------------------------------------------:|
 | 2007 | 33 | 18 | 9 | **18** | 9 |
 | 2010 | 29 | 18 | 9 | **18** | 9 |
-| 2011 | 38 | 18 | 9 | **16** | 9 |
+|  | 38 | 18 | 9 | **16** | 9 |
 | 2012 | 32 | 18 | 9 | **18** | 9 |
 | 2013 | 47 | 18 | 9 | **18** | 9 |
 | 2014 | 25 | 18 | 9 | **18** | 9 |
@@ -31,9 +31,9 @@ Strip applied: drop the dest from leftover-2× unique dest **links** only (`scri
 | 2022 | 24 | 18 | 9 | **18** | 9 |
 | **sum** | | | **107** | **204** | **107 dest indexes · 162 HTML files** |
 
-After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · 2011=22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · 2016=24 · 2018=14 · 2019=35 · 2020=2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
+After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · =22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · 2016=24 · 2018=14 · 2019=35 · 2020=2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
 
-2011 leftover-3× unique dest-true dests on leftover-3× unique dest links: all 9. leftover-2× unique dest links miss `pandora` (extra dest KEEP) from the leftover-3× unique dest **links** list, so 2×∩3× unique dest **links** = 16 not 18.
+ leftover-3× unique dest-true dests on leftover-3× unique dest links: all 9. leftover-2× unique dest links miss `pandora` (extra dest KEEP) from the leftover-3× unique dest **links** list, so 2×∩3× unique dest **links** = 16 not 18.
 2015 leftover-2× unique dest links miss 3 leftover-3× unique dest **link** dests (`pandora` not in 2015 3× links — see year table).
 2019 leftover-2× unique dest links miss 1 leftover-3× unique dest **link** dest.
 2020 leftover-2× unique dest links miss 4 leftover-3× unique dest **link** dests (tiktok is official dest leftover-3× unique dest **link** ADD).
@@ -90,7 +90,7 @@ leftover-3× unique dest-true dests (9): `android` · `chrome` · `formspring` �
 | `tumblr` | leftover-3× unique dest-true | yes | yes | yes |
 | `wave` | leftover-3× unique dest-true | yes | yes | yes |
 
-### 2011
+### 
 
 leftover-3× unique dest-true dests (9): `dropbox` · `hulu` · `icloud` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `twitch` · `youtube`
 
@@ -394,26 +394,26 @@ Every leftover-3× unique dest-true dest `index.html` (and sibling HTML under th
 | `years/2010/sites/reddit/submit.html` | 17 |
 | `years/2010/sites/tumblr/index.html` | 17 |
 | `years/2010/sites/wave/index.html` | 17 |
-| `years/2011/sites/dropbox/index.html` | 15 |
-| `years/2011/sites/dropbox/more.html` | 15 |
-| `years/2011/sites/hulu/index.html` | 16 |
-| `years/2011/sites/icloud/c.html` | 15 |
-| `years/2011/sites/icloud/index.html` | 15 |
-| `years/2011/sites/icloud/more.html` | 15 |
-| `years/2011/sites/kindlefire/index.html` | 15 |
-| `years/2011/sites/kindlefire/more.html` | 15 |
-| `years/2011/sites/linkedin/index.html` | 15 |
-| `years/2011/sites/linkedin/more.html` | 15 |
-| `years/2011/sites/minecraft/index.html` | 15 |
-| `years/2011/sites/minecraft/more.html` | 15 |
-| `years/2011/sites/pinterest/index.html` | 15 |
-| `years/2011/sites/pinterest/more.html` | 15 |
-| `years/2011/sites/twitch/c.html` | 15 |
-| `years/2011/sites/twitch/index.html` | 15 |
-| `years/2011/sites/twitch/more.html` | 15 |
-| `years/2011/sites/youtube/c.html` | 15 |
-| `years/2011/sites/youtube/index.html` | 15 |
-| `years/2011/sites/youtube/more.html` | 15 |
+| `years//sites/dropbox/index.html` | 15 |
+| `years//sites/dropbox/more.html` | 15 |
+| `years//sites/hulu/index.html` | 16 |
+| `years//sites/icloud/c.html` | 15 |
+| `years//sites/icloud/index.html` | 15 |
+| `years//sites/icloud/more.html` | 15 |
+| `years//sites/kindlefire/index.html` | 15 |
+| `years//sites/kindlefire/more.html` | 15 |
+| `years//sites/linkedin/index.html` | 15 |
+| `years//sites/linkedin/more.html` | 15 |
+| `years//sites/minecraft/index.html` | 15 |
+| `years//sites/minecraft/more.html` | 15 |
+| `years//sites/pinterest/index.html` | 15 |
+| `years//sites/pinterest/more.html` | 15 |
+| `years//sites/twitch/c.html` | 15 |
+| `years//sites/twitch/index.html` | 15 |
+| `years//sites/twitch/more.html` | 15 |
+| `years//sites/youtube/c.html` | 15 |
+| `years//sites/youtube/index.html` | 15 |
+| `years//sites/youtube/more.html` | 15 |
 | `years/2012/sites/buzzfeed/index.html` | 17 |
 | `years/2012/sites/buzzfeed/more.html` | 17 |
 | `years/2012/sites/drawsomething/index.html` | 17 |
@@ -529,7 +529,7 @@ Host pages: **162**.
 - Forest leftover dests with stacked leftover-3× workshop (`data-itt-lo3x` count ≥ 2). Named stacked workshop. Unique leftover-3×n is not the forest job.
 - Official dests as leftover unique dest **link targets** on leftover dest pages. Allowed (L6 / T6). Official dest HTML leftover unique-link first paint stays 0.
 - leftover dest KEEP leftover dest-true I/O (`data-lo-panel`). Not a unique dest **link**.
-- leftover-2× harvest MISS forests 1994–1998 / 2005 / 2006 / 2008.
+- leftover-2× harvest MISS forests 1994–1998 / 2005 / 2006 / .
 - 2009 boarded. 2023–2025 wiped.
 
 ## Remaining after leftover-2× ∩ leftover-3× unique dest link kill
@@ -560,9 +560,8 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2005 | 9 | `digg` · `flickr` · `housingmaps` · `itunes` · `maps` · `pandora` · `reddit` · `techcrunch` · `youtube` |
 | 2006 | 9 | `aws` · `facebook` · `gmail` · `googledocs` · `ie7` · `roblox` · `twitter` · `wikipedia` · `youtube` |
 | 2007 | 10 | `fbplat` · `gmail` · `ie6` · `iphone` · `kindle` · `playable` · `streetview` · `tumblr` · `twitter` · `youtube` |
-| 2008 | 10 | `android` · `appstore` · `chrome` · `dropbox` · `facebook` · `github` · `hulu` · `iphone` · `twitter` · `youtube` |
 | 2010 | 10 | `facebook` · `farmville` · `foursquare` · `imgur` · `instagram` · `ipad` · `iphone` · `playable` · `twitter` · `youtube` |
-| 2011 | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
+|  | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
 | 2012 | 9 | `facebook` · `flipboard` · `instagram` · `iphone` · `medium` · `path` · `pinterest` · `playable` · `wikipedia` |
 | 2013 | 4 | `snowden` · `telegram` · `tumblr` · `windows81` |
 | 2014 | 7 | `applepay` · `iphone` · `material` · `playable` · `slack` · `twitch` · `whatsapp` |
@@ -593,7 +592,6 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2004 | 5 | `cnn` · `livejournal` · `myspace` · `orkut` · `skype` |
 | 2005 | 5 | `delicious` · `firefox` · `gmail` · `myspace` · `vimeo` |
 | 2006 | 6 | `delicious` · `digg` · `docs` · `flickr` · `maps` · `myspace` |
-| 2008 | 5 | `delicious` · `flickr` · `gmail` · `myspace` · `stackoverflow` |
 | **sum** | **93** | |
 
 ### R3. Official dests still leftover-3× unique dest **link** dests (**13**) · T6 href-target
@@ -622,7 +620,7 @@ Leftover dest KEEP leftover dest-true I/O stays. leftover-3× unique dest **link
 |-----:|--:|-------|
 | 2007 | 9 | `appletv` · `friendfeed` · `funnyordie` · `hackernews` · `icanhas` · `ipodtouch` · `justintv` · `netflix` · `pownce` |
 | 2010 | 9 | `angry` · `chromewebstore` · `cityville` · `flipboard` · `googlebuzz` · `hulu` · `ibooks` · `kinect` · `minecraft` |
-| 2011 | 9 | `codecademy` · `gmusic` · `imessage` · `ios5` · `line` · `pandora` · `snapchat` · `stripe` · `wechat` |
+|  | 9 | `codecademy` · `gmusic` · `imessage` · `ios5` · `line` · `pandora` · `snapchat` · `stripe` · `wechat` |
 | 2012 | 9 | `coursera` · `duolingo` · `edx` · `googleplay` · `ios6` · `jellybean` · `nexus7` · `tinder` · `udacity` |
 | 2013 | 9 | `bitcoin` · `bustle` · `chromecast` · `doordash` · `giphy` · `ios7` · `kahoot` · `kitkat` · `patreon` |
 | 2014 | 7 | `alibabaipo` · `echo` · `flappybird` · `game2048` · `inbox` · `ios8` · `oculusfb` |
@@ -655,9 +653,8 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2005 | 35 |
 | 2006 | 35 |
 | 2007 | 5 |
-| 2008 | 39 |
 | 2010 | 1 |
-| 2011 | 20 |
+|  | 20 |
 | 2012 | 2 |
 | 2013 | 25 |
 | 2015 | 7 |

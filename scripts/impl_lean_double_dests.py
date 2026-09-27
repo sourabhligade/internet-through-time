@@ -22,7 +22,6 @@ import dest_lock_lean  # noqa: E402
 STARS = {
     2007: ("itt07-iphone", "App Store"),
     2010: ("itt10-ig-posts", "Instagram Android"),
-    2011: ("itt11-gplus", "Instagram Android"),
     2012: ("itt12-ig-android", "Vine 6s"),
     2014: ("itt14-wa-install", "Watch"),
     2016: ("itt16-ig-stories", "Reels"),
@@ -51,7 +50,7 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("icanhas", "I Can Has Cheezburger", "LOL leftover", "I Can Has Cheezburger launched January 2007.", "https://en.wikipedia.org/wiki/I_Can_Has_Cheezburger%3F"),
         ("funnyordie", "Funny or Die", "Watch leftover", "Funny or Die launched 12 Apr 2007.", "https://en.wikipedia.org/wiki/Funny_or_Die"),
         ("pownce", "Pownce", "Send leftover", "Pownce launched 27 Jun 2007.", "https://en.wikipedia.org/wiki/Pownce"),
-        ("androidann", "Open Handset Alliance", "Announce leftover", "OHA announced 5 Nov 2007. Android G1 is a 2008 trap.", "https://en.wikipedia.org/wiki/Open_Handset_Alliance"),
+        ("androidann", "Open Handset Alliance", "Announce leftover", "OHA announced 5 Nov 2007. Android G1 is a  trap.", "https://en.wikipedia.org/wiki/Open_Handset_Alliance"),
         ("feedburner", "FeedBurner", "Burn leftover", "Google acquired FeedBurner June 2007.", "https://en.wikipedia.org/wiki/FeedBurner"),
         ("gears", "Google Gears", "Enable leftover", "Google Gears announced 31 May 2007.", "https://en.wikipedia.org/wiki/Gears_(software)"),
         ("iplayer", "BBC iPlayer", "Play leftover", "BBC iPlayer public Christmas 2007.", "https://en.wikipedia.org/wiki/BBC_iPlayer"),
@@ -83,39 +82,6 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("wikipedia", "Wikipedia", "Edit leftover", "Wikipedia 2010 year-mass.", "https://en.wikipedia.org/wiki/Wikipedia"),
         ("ebay", "eBay", "Bid leftover", "eBay 2010 year-mass.", "https://en.wikipedia.org/wiki/EBay"),
         ("paypal", "PayPal", "Send leftover", "PayPal 2010 year-mass.", "https://en.wikipedia.org/wiki/PayPal"),
-    ],
-    2011: [
-        ("snapchat", "Snapchat", "Snap leftover", "Picaboo 8 Jul 2011 · Snapchat September 2011.", "https://en.wikipedia.org/wiki/Snapchat"),
-        ("ios5", "iOS 5", "Notify leftover", "iOS 5 released 12 Oct 2011.", "https://en.wikipedia.org/wiki/IOS_5"),
-        ("imessage", "iMessage", "Blue leftover", "iMessage shipped with iOS 5.", "https://en.wikipedia.org/wiki/IMessage"),
-        ("chromebook", "Chromebook", "Sign in leftover", "Chromebooks launched June 2011.", "https://en.wikipedia.org/wiki/Chromebook"),
-        ("honeycomb", "Android 3.0 Honeycomb", "Tablet leftover", "Honeycomb launched February 2011.", "https://en.wikipedia.org/wiki/Android_Honeycomb"),
-        ("ics", "Ice Cream Sandwich", "Beam leftover", "Android 4.0 Ice Cream Sandwich 19 Oct 2011.", "https://en.wikipedia.org/wiki/Android_Ice_Cream_Sandwich"),
-        ("wechat", "WeChat", "Chat leftover", "WeChat launched 21 Jan 2011.", "https://en.wikipedia.org/wiki/WeChat"),
-        ("line", "LINE", "Sticker leftover", "LINE launched 23 Jun 2011.", "https://en.wikipedia.org/wiki/Line_(software)"),
-        ("temple", "Temple Run", "Run leftover", "Temple Run launched August 2011.", "https://en.wikipedia.org/wiki/Temple_Run"),
-        ("skyrim", "Skyrim", "Adventure leftover", "The Elder Scrolls V: Skyrim 11 Nov 2011.", "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim"),
-        ("nytpaywall", "NYT paywall", "Subscribe leftover", "NYT digital paywall March 2011.", "https://en.wikipedia.org/wiki/The_New_York_Times"),
-        ("skypebuy", "Skype buy", "Acquire leftover", "Microsoft acquired Skype 10 May 2011.", "https://en.wikipedia.org/wiki/Skype"),
-        ("grouponipo", "Groupon IPO", "File leftover", "Groupon IPO November 2011.", "https://en.wikipedia.org/wiki/Groupon"),
-        ("zyngaipo", "Zynga IPO", "File leftover", "Zynga IPO December 2011.", "https://en.wikipedia.org/wiki/Zynga"),
-        ("googlewallet", "Google Wallet", "Tap leftover", "Google Wallet launched September 2011.", "https://en.wikipedia.org/wiki/Google_Wallet"),
-        ("stripe", "Stripe", "Charge leftover", "Stripe launched 2011.", "https://en.wikipedia.org/wiki/Stripe,_Inc."),
-        ("duolingo", "Duolingo", "Lesson leftover", "Duolingo launched 2011 (public 2012 site).", "https://en.wikipedia.org/wiki/Duolingo"),
-        ("codecademy", "Codecademy", "Lesson leftover", "Codecademy launched 2011.", "https://en.wikipedia.org/wiki/Codecademy"),
-        ("baidu", "Baidu", "Search leftover", "Hosting.com 2011 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("yandex", "Yandex", "Search leftover", "Hosting.com 2011 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("wikipedia", "Wikipedia", "Edit leftover", "Wikipedia 2011 year-mass.", "https://en.wikipedia.org/wiki/Wikipedia"),
-        ("amazon", "Amazon", "Browse leftover", "Amazon 2011 year-mass.", "https://en.wikipedia.org/wiki/Amazon_(company)"),
-        ("reddit", "Reddit", "Upvote leftover", "Reddit 2011 year-mass.", "https://en.wikipedia.org/wiki/Reddit"),
-        ("tumblr", "Tumblr", "Reblog leftover", "Tumblr 2011 year-mass.", "https://en.wikipedia.org/wiki/Tumblr"),
-        ("netflix", "Netflix", "Play leftover", "Netflix streaming 2011 mass (Qwikster is official).", "https://en.wikipedia.org/wiki/Netflix"),
-        ("github", "GitHub", "Push leftover", "GitHub 2011 year-mass.", "https://en.wikipedia.org/wiki/GitHub"),
-        ("whatsapp", "WhatsApp", "Chat leftover", "WhatsApp 2011 year-mass.", "https://en.wikipedia.org/wiki/WhatsApp"),
-        ("path", "Path", "Moment leftover", "Path 2011 iOS social.", "https://en.wikipedia.org/wiki/Path_(social_network)"),
-        ("nintendo3ds", "Nintendo 3DS", "StreetPass leftover", "Nintendo 3DS launched 26 Feb 2011 JP / 25 Mar NA.", "https://en.wikipedia.org/wiki/Nintendo_3DS"),
-        ("psnhack", "PSN hack", "Reset leftover", "PlayStation Network outage April 2011.", "https://en.wikipedia.org/wiki/2011_PlayStation_Network_outage"),
-        ("gowalla", "Gowalla", "Check in leftover", "Facebook acquired Gowalla December 2011.", "https://en.wikipedia.org/wiki/Gowalla"),
     ],
     2012: [
         ("tinder", "Tinder", "Swipe leftover", "Tinder launched 12 Sep 2012.", "https://en.wikipedia.org/wiki/Tinder_(app)"),
@@ -374,8 +340,8 @@ def main() -> None:
     collisions = []
     matrix = []
     extra: dict[str, set[str]] = {}
-    lock_years = {"2007", "2010", "2011", "2012", "2014", "2021", "2022"}
-    caps = {2007: 46, 2010: 44, 2011: 62, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2021: 30, 2022: 38}
+    lock_years = {"2007", "2010", "2012", "2014", "2021", "2022"}
+    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2021: 30, 2022: 38}
     for year, rows in DESTS.items():
         if year == 2018:
             continue

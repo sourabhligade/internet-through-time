@@ -17,6 +17,6 @@ Rule: NEVER invent brand logo/chrome pixels.
   kickstarter/ empty — text RECON header
   wave/ whatsapp/ friendfeed/ ie8/  optional thin seeds
 
-Continuity OK from assets/period/2008/ when year-true.
+Continuity OK from assets/period// when year-true.
 
 See: docs/references/2009/CAPTURE-LOG.md

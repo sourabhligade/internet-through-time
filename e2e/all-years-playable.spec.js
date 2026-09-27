@@ -8,7 +8,7 @@ const { test, expect } = require('@playwright/test');
 
 const WIPED = new Set(['2009', '2023', '2024', '2025']);
 const YEARS = [];
-for (let y = 1994; y <= 2011; y++) {
+for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -25,10 +25,8 @@ const FEATURED = {
   2002: 'roomsticky',
   2003: 'gagslite',
   2004: 'gemcascade',
-  2008: 'goospan',
   2009: 'plot',
   2010: 'slingnest',
-  2011: 'letterswap',
 };
 
 async function waitCabinet(page) {
@@ -59,7 +57,7 @@ for (const year of YEARS) {
 }
 
 test('home pages link the year game, not toy slots', async ({ page }) => {
-  for (const y of ['1994', '2000', '2004', '2008', '2010']) {
+  for (const y of ['1994', '2000', '2004','2010']) {
     await page.goto(`/years/${y}/pages/home.html`);
     await expect(page.locator('a[href*="playable/game.html"]').first()).toBeVisible({
       timeout: 10000,
@@ -69,8 +67,8 @@ test('home pages link the year game, not toy slots', async ({ page }) => {
   }
 });
 
-test('2000 2004 2008 featured ids match replacements', async ({ page }) => {
-  for (const y of ['2000', '2004', '2008']) {
+test('2000 2004  featured ids match replacements', async ({ page }) => {
+  for (const y of ['2000', '2004']) {
     await page.goto(`/years/${y}/sites/playable/game.html`);
     await expect(page.locator(`[data-year-game][data-game-id="${FEATURED[y]}"]`)).toBeVisible({
       timeout: 15000,

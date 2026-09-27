@@ -36,7 +36,7 @@
           (ITT._immersionYear && String(ITT._immersionYear)) ||
           (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) ||
           "";
-        if (iy === "2011") yNote = "iOS only · Android next year";
+        if (iy === "") yNote = "iOS only · Android next year";
         else if (iy === "2012" || parseInt(iy, 10) >= 2012) yNote = "iOS + Android";
       } catch (eY) { /* */ }
       st.textContent = list.length ? list.length + " post(s) · " + yNote : yNote;

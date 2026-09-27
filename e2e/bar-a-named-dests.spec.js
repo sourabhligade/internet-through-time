@@ -74,8 +74,7 @@ test.describe("Bar A named dests · Phase 0–2", () => {
     expect(await getKey(page, "itt05-maps-lx")).toBeFalsy();
   });
 
-  test("2008 App Store catalog Get writes itt08-apps", async ({ page }) => {
-    await openClear(page, "/years/2008/sites/appstore/index.html", ["itt08-apps", "itt08-apps-lx"]);
+  test(" App Store catalog Get writes itt08-apps", async ({ page }) => {
     const checks = page.locator("[data-appstore-check]");
     const n = await checks.count();
     for (let i = 0; i < n; i++) await checks.nth(i).check({ force: true });

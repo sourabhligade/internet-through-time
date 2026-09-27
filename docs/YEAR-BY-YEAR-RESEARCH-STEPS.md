@@ -50,10 +50,9 @@ Named lists live in the source files. This file is the implement order, not a se
 | 2005 | forest | 339 | KEEP 12 · DROP 1 · DO-NOT-APPLY 1 · MISS 0 | 0 | 11 | 0 | 0 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
 | 2006 | forest | 366 | KEEP 8 · DROP 2 · DO-NOT-APPLY 1 · MISS 0 | 0 | 10 | 0 | 0 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
 | 2007 | dest-lock lean | 33 | KEEP 21 · DROP 14 · DO-NOT-APPLY 7 · MISS 0 | 0 | 0 | 9 | 14 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
-| 2008 | forest | 586 | KEEP 12 · DROP 2 · DO-NOT-APPLY 0 · MISS 0 | 0 | 11 | 0 | 0 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
 | 2009 | boarded | 78 | boarded (not dest-true map) | 0 | 0 | 0 | 0 | STOP boarded |
 | 2010 | dest-lock lean | 29 | KEEP 19 · DROP 16 · DO-NOT-APPLY 6 · MISS 0 | 0 | 1 | 9 | 10 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
-| 2011 | dest-lock lean | 41 | KEEP 32 · DROP 14 · DO-NOT-APPLY 4 · MISS 0 | 2 | 7 | 9 | 20 | all KEEP leftover I/O |
+|  | dest-lock lean | 41 | KEEP 32 · DROP 14 · DO-NOT-APPLY 4 · MISS 0 | 2 | 7 | 9 | 20 | all KEEP leftover I/O |
 | 2012 | dest-lock lean | 32 | KEEP 24 · DROP 13 · DO-NOT-APPLY 5 · MISS 0 | 0 | 0 | 9 | 11 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
 | 2013 | lean Vine | 52 | KEEP 10 · DROP 0 · DO-NOT-APPLY 8 · MISS 0 | 34 | 2 | 9 | 0 | all KEEP leftover I/O |
 | 2014 | dest-lock lean | 25 | KEEP 17 · DROP 11 · DO-NOT-APPLY 8 · MISS 0 | 0 | 0 | 9 | 7 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
@@ -69,7 +68,7 @@ Named lists live in the source files. This file is the implement order, not a se
 | 2024 | wiped | 0 (no tree) | wiped | 0 | 0 | 0 | 0 | STOP wiped |
 | 2025 | wiped | 0 (no tree) | wiped | 0 | 0 | 0 | 0 | STOP wiped |
 
-Hub **28 years** 1994–2008 + 2010–2022. **2009 boarded.** **2023–2025 wiped.**
+Hub **24 years** 1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022. **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.**
 
 ## 1994
 
@@ -503,37 +502,6 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 - [x] 7 Dest-folder count 33 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
 - [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
-## 2008
-
-**Kind:** Forest leftover-2× workshop. Official 10 dest-true. Unique leftover-3× is not the forest job.
-
-**Star:** `github` · GitHub issue · `itt08-github`. Empty / trap never write this key. Leftover never writes this key.
-
-**Dest folders on disk:** 586.
-
-**Official 10:** github · appstore · chrome · android · hulu · facebook · twitter · youtube · dropbox · iphone
-
-**Year-false (dest-true map):** KEEP 12 · DROP 2 · DO-NOT-APPLY 0 · MISS 0. Named rows: [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md). Official 10 DROPs stay on disk. Playable is DO-NOT-APPLY.
-
-**Leftover-3× unique:** none (forest leftover-2× / boarded).
-
-**Leftover dest KEEP:** none as leftover dest leftover dests. Forest leftover dest-true packs live in `js/config/year-true-packs.json`.
-
-**Extra dest research:** KEEP 0 · DROP 11 (DROP applied). Cite rows: [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
-
-No extra dest KEEP. DROP 11 clone leftover dest leftover folders already gone.
-
-### Implement steps
-
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
-- [x] 2 Official 10 dest-true I/O on disk. Star `itt08-github`. `data-official-need` filled. Empty / trap never write the star.
-- [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
-- [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
-- [x] 5 Extra dest DROP applied (11 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
-- [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
-- [x] 7 Dest-folder count 586 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
-
 ## 2009
 
 **Kind:** Boarded plaque. Tree stays. Not a visitor leftover warehouse. Do not un-board.
@@ -580,7 +548,7 @@ No extra dest KEEP. DROP 1 clone leftover dest leftover folders already gone.
 - [x] 7 Dest-folder count 29 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
 - [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
 
-## 2011
+## 
 
 **Kind:** Dest-lock lean door. Leftover dest KEEP leftover I/O. Leftover-3× unique 9.
 
@@ -602,8 +570,8 @@ KEEP extra dest leftover I/O:
 
 | Slug | Cite (from extra dest research) | Leftover I/O |
 |------|---------------------------------|--------------|
-| `gmusic` | Google Music store launch 16 Nov 2011 (The Verge). Dest-disjoint. Extra dest stays. | dest-true leftover I/O |
-| `pandora` | Pandora IPO 14–15 Jun 2011 (TechCrunch). Dest-disjoint. Extra dest stays. | dest-true leftover I/O |
+| `gmusic` | Google Music store launch 16 Nov  (The Verge). Dest-disjoint. Extra dest stays. | dest-true leftover I/O |
+| `pandora` | Pandora IPO 14–15 Jun  (TechCrunch). Dest-disjoint. Extra dest stays. | dest-true leftover I/O |
 
 ### Implement steps
 
@@ -618,8 +586,8 @@ KEEP extra dest leftover I/O:
 
 This pass leftover I/O (extra dest KEEP that were missing dest-true leftover I/O):
 
-- [x] `years/2011/sites/gmusic/index.html` — Google Music store 16 Nov 2011 (The Verge). Key `itt11-gmusic-lx`. Trap = Google+ as gold. Next leftover dest KEEP `snapchat`.
-- [x] `years/2011/sites/pandora/index.html` — Pandora IPO 14–15 Jun 2011 (TechCrunch). Key `itt11-pandora-lx`. Trap = Google+ as gold. Next leftover dest KEEP `snapchat`.
+- [x] `years//sites/gmusic/index.html` — Google Music store 16 Nov  (The Verge). Key `itt11-gmusic-lx`. Trap = Google+ as gold. Next leftover dest KEEP `snapchat`.
+- [x] `years//sites/pandora/index.html` — Pandora IPO 14–15 Jun  (TechCrunch). Key `itt11-pandora-lx`. Trap = Google+ as gold. Next leftover dest KEEP `snapchat`.
 - [x] Both dests dest-disjoint leftover dest KEEP 20 ∪ leftover-3× unique 9 ∪ official 10. Added to `e2e/lean-double-leftover.matrix.json`.
 
 ## 2012

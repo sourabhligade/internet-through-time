@@ -312,27 +312,6 @@ KEEP 8 · DROP 2 · DO-NOT-APPLY 1 · MISS 0
 | `safari3` | leftover dest | **KEEP** |
 KEEP 21 · DROP 14 · DO-NOT-APPLY 7 · MISS 0
 
-## 2008 · star `github`
-
-| Slug | Class | Verdict |
-|------|-------|---------|
-| `github` | official 10 | **KEEP** |
-| `appstore` | official 10 | **KEEP** |
-| `chrome` | official 10 | **KEEP** |
-| `android` | official 10 | **KEEP** |
-| `hulu` | official 10 | **KEEP** |
-| `facebook` | official 10 | **KEEP** |
-| `twitter` | official 10 | **DROP** |
-| `youtube` | official 10 | **DROP** |
-| `dropbox` | official 10 | **KEEP** |
-| `iphone` | official 10 | **KEEP** |
-| `evernote` | forest pack | **KEEP** |
-| `groupon` | forest pack | **KEEP** |
-| `airbnb` | forest pack | **KEEP** |
-| `spotifyseed` | forest pack | **KEEP** |
-
-KEEP 12 · DROP 2 · DO-NOT-APPLY 0 · MISS 0
-
 ## 2010 · star `instagram`
 
 | Slug | Class | Verdict |
@@ -380,7 +359,7 @@ KEEP 12 · DROP 2 · DO-NOT-APPLY 0 · MISS 0
 | `paypal` | leftover dest | **DROP** |
 KEEP 19 · DROP 16 · DO-NOT-APPLY 6 · MISS 0
 
-## 2011 · star `googleplus`
+##  · star `googleplus`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -898,7 +877,7 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 | 1994 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2007 | `ie6` | XP/IE6 residual official dest · not leftover dest |
 | 2010 | `playable` | year-game dest · official n=10 · not leftover dest |
-| 2011 | `playable` | year-game dest · official n=10 · not leftover dest |
+|  | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2012 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2013 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2014 | `playable` | year-game dest · official n=10 · not leftover dest |
@@ -947,5 +926,5 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 
 Named dest-true flows: KEEP 405 · DROP 191 · DO-NOT-APPLY 103 · MISS **0**. Research continue `year-false-keep-drop` scored every remaining MISS row. Cites live in the workflow scratch report.
 
-Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo · 2011 duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests, playable year-games, leftover-4× unique chrome/twitter/soundcloud, and 2017 leftover-20 extras stay. Do not dest-farm 2015/2017/2019 dest folders. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the 2018=3 / 2021=5 stops because they launched earlier.
+Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo ·  duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests, playable year-games, leftover-4× unique chrome/twitter/soundcloud, and 2017 leftover-20 extras stay. Do not dest-farm 2015/2017/2019 dest folders. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the 2018=3 / 2021=5 stops because they launched earlier.
 

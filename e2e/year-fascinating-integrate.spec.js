@@ -60,10 +60,8 @@ test.describe("Fascinating integrate leftovers", () => {
     const dests = [
       "/years/2012/sites/wikipedia/sopa.html",
       "/years/2009/sites/farmville/index.html",
-      "/years/2011/sites/iphone/index.html",
       "/years/1994/sites/hotwired/ad-att.html",
       "/years/2000/sites/pets/shutdown.html",
-      "/years/2008/sites/chrome/index.html",
       "/years/1999/sites/seti/index.html",
       "/years/2013/sites/askfm/index.html",
       "/years/2010/sites/instant/index.html",
@@ -153,19 +151,6 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt09-like")).toBeFalsy();
   });
 
-  test("2011 Siri empty / iPhone 4 trap never write · phrase writes", async ({ page }) => {
-    await openClean(page, "/years/2011/sites/iphone/index.html", ["itt11-siri", "itt11-gplus"]);
-    test.skip((await page.locator("[data-sr11-iphone4]").count()) === 0, "Siri dest remade");
-    await page.locator("[data-sr11-iphone4]").click();
-    await page.locator("[data-sr11-ask]").click();
-    expect(await getKey(page, "itt11-siri")).toBeFalsy();
-    await page.fill("[data-sr11-phrase]", "will I need an umbrella");
-    await page.locator("[data-sr11-ask]").click();
-    await expect.poll(() => getKey(page, "itt11-siri")).toBeTruthy();
-    const blob = await blobOf(page, "itt11-siri");
-    expect(blob && blob.year).toBe("2011");
-    expect(await getKey(page, "itt11-gplus")).toBeFalsy();
-  });
 
   test("1994 banner skip never writes · I clicked HERE writes itt94-banner", async ({ page }) => {
     await openClean(page, "/years/1994/sites/hotwired/ad-att.html", ["itt94-banner", "itt94-csotd"]);
@@ -201,22 +186,6 @@ test.describe("Fascinating integrate leftovers", () => {
     const blob = await blobOf(page, "itt06-feed");
     expect(blob && blob.year).toBe("2006");
     expect(await getKey(page, "itt06-tweets")).toBeFalsy();
-  });
-
-  test("2008 Chrome Mac trap / one check never write · three checks write", async ({ page }) => {
-    await openClean(page, "/years/2008/sites/chrome/index.html", ["itt08-chrome", "itt08-github"]);
-    await page.locator("[data-chrome-mac]").click();
-    expect(await getKey(page, "itt08-chrome")).toBeFalsy();
-    await page.locator("[data-chrome-req]").nth(0).check();
-    await page.locator("[data-chrome-download]").click();
-    expect(await getKey(page, "itt08-chrome")).toBeFalsy();
-    await page.locator("[data-chrome-req]").nth(1).check();
-    await page.locator("[data-chrome-req]").nth(2).check();
-    await page.locator("[data-chrome-download]").click();
-    await expect.poll(() => getKey(page, "itt08-chrome")).toBeTruthy();
-    const blob = await blobOf(page, "itt08-chrome");
-    expect(blob && blob.real).toBeTruthy();
-    expect(await getKey(page, "itt08-github")).toBeFalsy();
   });
 
   test("1999 SETI signal trap never writes · ticks+install writes itt99-seti", async ({ page }) => {
@@ -335,10 +304,10 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2002", /stumbleupon/],
       ["2006", /twitter/],
       ["2007", /iphone/],
-      ["2008", /github\/issue/],
+      [/github\/issue/],
       ["2009", /facebook/],
       ["2010", /instagram/],
-      ["2011", /googleplus/],
+      ["", /googleplus/],
       ["2012", /instagram\/android/],
       ["2013", /vine\/record/],
       ["2016", /instagram\/stories/],

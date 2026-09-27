@@ -163,18 +163,6 @@
       famous: "TrailSled",
       accent: "#00aced"
     },
-        "2008": {
-      id: "goospan",
-      title: "Goo Span",
-      href: "game.html",
-      key: "itt08-game-goospan",
-      inspire: "World of Goo (13 Oct 2008)",
-      blurb: "Stick goo. Build a span. Reach the pipe before the structure sags.",
-      why: "World of Goo was 2008’s indie proof that physics-and-blobs could be a masterpiece. The App Store opened in July — this is not a tap grid.",
-      era: "Spore, Braid, and Left 4 Dead shipped. In the browser and on indie PC, goo was the story.",
-      famous: "Pocket Snake + Concentration",
-      accent: "#5d4037"
-    },
     "2009": {
       id: "plot",
       title: "Plot Neighbors",
@@ -199,19 +187,7 @@
       famous: "Pocket Snake + Brick Bat",
       accent: "#c62828"
     },
-    "2011": {
-      id: "letterswap",
-      title: "Letter Swap",
-      href: "game.html",
-      key: "itt11-game-letterswap",
-      inspire: "Words-with-friends-class leftover — not Zynga art",
-      blurb: "Swap two leftover tiles. Zynga board never scores.",
-      why: "2011 leftover cabinet. The star is still Google+.",
-      era: "Win7 + IE 9. Circles. Spotify US. Siri.",
-      famous: "Pocket Snake + Concentration",
-      accent: "#dd4b39"
-    },
-        "2012": {
+    "2012": {
       id: "guessdoodle",
       title: "Guess Doodle",
       href: "game.html",

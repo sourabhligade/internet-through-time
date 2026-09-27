@@ -15,13 +15,13 @@ This file is the full map from:
 - what is unused and worth deleting
 - what looks unused but must stay
 
-It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`.
+It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`. Live year list is 25 doors (2015 and 2018 wiped).
 
 ---
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **26 years open** (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2015 wiped.** **2018 wiped.** **2023–2025 wiped.**
+The museum is year-locked rooms in period chrome. Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded** (tree stays; year-shell is a plaque). **2015 wiped.** **2018 wiped.** **2023–2025 wiped.**
 
 Visitor product (I/O):
 
@@ -59,7 +59,7 @@ There are no other `.md` files outside `node_modules` / Playwright report dirs.
 
 | File | What it plans | Still open |
 |------|----------------|------------|
-| [`UNDONE.md`](UNDONE.md) | Master leftover vs disk | Dest-farm lock · unique leftover maps except 2017 · leftover dest leftover-3× dest faces · period assets 2011+ · Pages/Actions |
+| [`UNDONE.md`](UNDONE.md) | Master leftover vs disk | Dest-farm lock · unique leftover maps except 2017 · leftover dest leftover-3× dest faces · period assets + · Pages/Actions |
 | [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) | Visitor slices 0–6 | Slice 0 billing/Pages · Slice 2B 2009 Like door · Slice 5 dest-farm lock · Slice 6 optional |
 | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Only unique-flow map: 10 official + 20 leftover = 30 dests | Phases 0–6 shipped. **Phase H dest lock not started.** Leftover dests share `bootUniqueFlow` host. 18 leftover dests failed-final on purpose. |
 | [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 + sequence A–H for 2016–2021 | Unique leftover dest maps: **none except 2017**. Step H dest-farm lock not done for 2017/2019/2021. L5 fail on dest-farm years. |
@@ -78,7 +78,7 @@ These lock stars and leftover names. They are not unique leftover-20 maps.
 
 | File | Flows named |
 |------|-------------|
-| [`2011-READ-FIRST.md`](2011-READ-FIRST.md) | Star Google+ · leftover Spotify / iPad 2 / Siri / Timeline / Airbnb |
+| [`-READ-FIRST.md`](-READ-FIRST.md) | Star Google+ · leftover Spotify / iPad 2 / Siri / Timeline / Airbnb |
 | [`2012-READ-FIRST.md`](2012-READ-FIRST.md) | Star IG Android · leftover-3× Medium / Path / Flipboard · leftover-4× **0** |
 | [`2013-READ-FIRST.md`](2013-READ-FIRST.md) | Star Vine `record.html` · leftover-3× Ask.fm / Whisper / YouTube |
 | [`2018-READ-FIRST.md`](2018-READ-FIRST.md) | Star GDPR · leftover TikTok FYP / Hearing / IGTV |
@@ -93,7 +93,7 @@ These lock stars and leftover names. They are not unique leftover-20 maps.
 | [`2003-READ-FIRST.md`](2003-READ-FIRST.md) | CUT-FOREST live · Photobucket star |
 | [`2009-READ-FIRST.md`](2009-READ-FIRST.md) | **Boarded.** “No leftover implement pass.” Like stays on disk |
 
-There is **no** `1994`–`2000`, `2004`, or `2008` READ-FIRST.
+There is **no** `1994`–`2000`, `2004`, or `` READ-FIRST.
 
 ### 1.4 Harvest flow plans — already implemented (keep as lock)
 
@@ -148,10 +148,9 @@ Writing them is new work, not finishing an existing plan.
 | 2005 | 351 | 596 | Live |
 | 2006 | 378 | 637 | Live |
 | 2007 | 46 | 330 | Lean door · dest-lock · leftover dests 46 |
-| 2008 | 597 | 949 | Live dense |
 | 2009 | 78 | 149 | **Boarded** |
 | 2010 | 183 | 223 | Lean + dest-farm |
-| 2011 | 98 | 183 | Lean door |
+|  | 98 | 183 | Lean door |
 | 2012 | 45 | 95 | Lean |
 | 2013 | 54 | 62 | Lean door · Vine |
 | 2014 | 114 | 132 | Lean door · WhatsApp |
@@ -171,10 +170,10 @@ Total **11,336** dest rows. Workshop leftover-2×, not unique flows.
 
 | Year | Rows | Year | Rows |
 |------|-----:|------|-----:|
-| 1994 | 540 | 2008 | 1131 |
+| 1994 | 540 |  | 1131 |
 | 1995 | 486 | 2009 | 332 |
 | 1996 | 386 | 2010 | 317 |
-| 1997 | 670 | 2011 | 313 |
+| 1997 | 670 |  | 313 |
 | 1998 | 744 | 2012 | 314 |
 | 1999 | 802 | 2013 | 36 |
 | 2000 | 802 | 2014 | 96 |
@@ -195,9 +194,9 @@ Missing dests in this matrix: **0** (issue #7 closed).
 | 1994–2002 | 22 / 27 / 50 / 36 / 30 / 52 / 68 / 82 / 93 |
 | 2003 | 11 |
 | 2004–2007 | 161 / 162 / 162 / 162 |
-| 2008–2009 | 16 / 18 |
+| –2009 | 16 / 18 |
 | 2010 | 4 |
-| **2011–2021** | **0** |
+| **–2021** | **0** |
 
 ---
 
@@ -240,7 +239,7 @@ Loaded via `js/immersion/registry.js` CORE and `js/immersion/boot.js`:
 | `js/immersion/year-2006-extras.js` | 2006 |
 | `js/immersion/year-2009-extras.js` | 2009 boarded |
 | `js/immersion/year-2010-extras.js` | 2010 |
-| `js/immersion/year-2011-extras.js` | 2011 |
+| `js/immersion/year--extras.js` |  |
 | `js/immersion/year-2012-extras.js` | 2012 |
 | `js/immersion/year-2013-extras.js` | 2013 |
 | `js/immersion/year-2014-extras.js` | 2014 |
@@ -297,7 +296,7 @@ Thin year stubs (year id only): `js/immersion-YYYY.js`, `js/browser-YYYY.js` for
 | `js/museum-progress.js` | First night + year-start paths |
 | `js/atlas.js` · `js/atlas-data.js` | Atlas walk |
 | `atlas/index.html` | Atlas page |
-| `index.html` | Hub (27 cards + follow-a-site) |
+| `index.html` | Hub (26 cards + follow-a-site) |
 | `years/YYYY/pages/home.html` | Lean `paintStart` stub on every live year |
 | `years/YYYY/pages/about.html` · `map.html` | About / flow map |
 
@@ -387,7 +386,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | # | Item | Plan source | Disk now | Do not |
 |---|------|-------------|----------|--------|
-| 1 | **Dest-farm lock (Phase H / GitHub #9)** | UNDONE §8.4 · PRODUCT-IMPROVE Slice 5 · 2017-UNIQUE-FLOWS Phase H · 2016-2021-IO L5/H | 2017=222 (193 workshop) · 2019=165 · 2021=294 · 2015=213 · 2007=246 · forests 1999–2008 · 2004=810 | Dest-farm to “look full.” Must be dests = `urlMap` ∩ disk **same commit** as leftover-official / matrices / READ-FIRST / sitemap |
+| 1 | **Dest-farm lock (Phase H / GitHub #9)** | UNDONE §8.4 · PRODUCT-IMPROVE Slice 5 · 2017-UNIQUE-FLOWS Phase H · 2016-2021-IO L5/H | 2017=222 (193 workshop) · 2019=165 · 2021=294 · 2015=213 · 2007=246 · forests 1999– · 2004=810 | Dest-farm to “look full.” Must be dests = `urlMap` ∩ disk **same commit** as leftover-official / matrices / READ-FIRST / sitemap |
 | 2 | **Leftover dest leftover-3× dest face** | I7 / U9: leftover dest *is* leftover first paint on that dest | `itt-leftover-fold.css` + `leftover-official.js` `isDestTrueLeftoverFace` treat `data-itt-lo3x` as warehouse. Hidden unless `?deep=1`. `year-3x3-all` = 5 pass / 211 skip / 0 fail | Un-fold leftover-3× on **official** dests (`data-official-key`) |
 | 3 | **Unique leftover dest maps** | UNDONE §8.5 · 2013-IO-CRITERIA · 2016-2021-IO | Only 2017 has 30 dests + `year-2017-extras.js` + unique e2e. No maps for 2013–2016, 2018–2021. No `year-2021-extras.js` | Count leftover-official 332 keys as unique flows |
 
@@ -396,7 +395,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 | Item | Plan | Notes |
 |------|------|-------|
 | Unique leftover-20 for 2013–2016, 2018–2021 | None written | New plans required first |
-| Period assets 2011–2021 | UNDONE §8.9 · IO L1 | 0 files. failed-final is the honest lock. Do not invent brand pixels |
+| Period assets –2021 | UNDONE §8.9 · IO L1 | 0 files. failed-final is the honest lock. Do not invent brand pixels |
 | 18 leftover 2017 capture cites | 2017-UNIQUE-FLOWS §7 | Left **failed-final on purpose** |
 | 2009 Like as a live door | PRODUCT-IMPROVE Slice 2B | Plaque (2A) is shipped |
 | Period-friction toggle | Slice 6 | 14.4k / wait for GIF. Not default |
@@ -409,7 +408,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | Item | Evidence |
 |------|----------|
-| 28 years open · 2009 plaque · 2022 live lean · 2023–2025 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
+| 24 years open · 2009 plaque · 2015 wiped · 2018 wiped · 2022 live lean · 2023–2025 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 30 unique dests | Disk + 72/72 e2e |
 | Official dest leftover-2× panels = 0 on 2016–2021 official 10 (and sampled earlier official dests) | HTML `data-lo-panel` count |
 | Empty leftover save without field/pick/req/wait | `leftover-official.js` guard |

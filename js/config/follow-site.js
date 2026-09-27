@@ -29,9 +29,7 @@
         stop("2005", "sites/yahoo/index.html", "still #1"),
         stop("2006", "sites/yahoo/index.html", "Twttr year"),
         stop("2007", "sites/yahoo/index.html", "iPhone year"),
-        stop("2008", "sites/yahoo/index.html", "App Store year"),
         stop("2010", "sites/yahoo/index.html", "lean"),
-        stop("2011", "sites/yahoo/index.html", "Circles year"),
         stop("2012", "sites/yahoo/index.html", "IPO year"),
         stop("2015", "sites/yahoo/index.html", "Go LIVE year"),
         stop("2019", "sites/yahoo/index.html", "Continue year")
@@ -39,11 +37,11 @@
     },
     amazon: {
       label: "Amazon",
-      match: /\/sites\/amazon\//,
+ match: /\/sites\/amazon(ipo)?\//,
       stops: [
         stop("1995", "sites/amazon/ssl-checkout.html", "SSL gold"),
         stop("1996", "sites/amazon/index.html", "catalog"),
-        stop("1997", "sites/amazon/index.html", "IPO year"),
+ stop("1997", "sites/amazonipo/index.html", "IPO year"),
         stop("1998", "sites/amazon/music.html", "Music"),
         stop("1999", "sites/amazon/index.html", "multi-cat"),
         stop("2000", "sites/amazon/index.html", "smile"),
@@ -52,7 +50,6 @@
         stop("2003", "sites/amazon/index.html", "99¢ year"),
         stop("2004", "sites/amazon/index.html", "Web 2.0 year"),
         stop("2006", "sites/amazon/index.html", "Twttr year"),
-        stop("2008", "sites/amazon/index.html", "App Store year"),
         stop("2010", "sites/amazon/index.html", "lean"),
         stop("2012", "sites/amazon/index.html", "IPO year"),
         stop("2015", "sites/amazon/index.html", "Go LIVE year"),
@@ -75,9 +72,7 @@
         stop("2004", "sites/google/index.html", "thefacebook year"),
         stop("2006", "sites/google/index.html", "YouTube deal year"),
         stop("2007", "sites/google/index.html", "iPhone year"),
-        stop("2008", "sites/google/index.html", "Chrome year"),
         stop("2010", "sites/google/index.html", "lean"),
-        stop("2011", "sites/google/index.html", "Circles year"),
         stop("2012", "sites/google/index.html", "IPO year"),
         stop("2015", "sites/googlephotos/index.html", "Photos locker"),
         stop("2019", "sites/google/index.html", "Continue year"),
@@ -92,9 +87,7 @@
         stop("2004", "sites/facebook/networks.html", "thefacebook"),
         stop("2006", "sites/facebook/feed.html", "News Feed"),
         stop("2007", "sites/facebook/index.html", "Platform leftover"),
-        stop("2008", "sites/facebook/index.html", "continuity"),
         stop("2010", "sites/facebook/index.html", "Open Graph"),
-        stop("2011", "sites/facebook/index.html", "Timeline"),
         stop("2012", "sites/facebook/index.html", "IPO"),
         stop("2013", "sites/facebook/index.html", "Vine year"),
         stop("2014", "sites/facebook/index.html", "Install year"),
@@ -110,9 +103,7 @@
       stops: [
         stop("2006", "sites/youtube/index.html", "Google deal"),
         stop("2007", "sites/youtube/index.html", "iPhone year"),
-        stop("2008", "sites/youtube/index.html", "App Store year"),
         stop("2010", "sites/youtube/index.html", "lean"),
-        stop("2011", "sites/youtube/index.html", "Circles year"),
         stop("2012", "sites/youtube/index.html", "IPO year"),
         stop("2013", "sites/youtube/index.html", "Vine year"),
         stop("2014", "sites/youtube/index.html", "Install year"),
@@ -126,9 +117,7 @@
       stops: [
         stop("2006", "sites/twitter/index.html", "Twttr"),
         stop("2007", "sites/twitter/index.html", "iPhone year"),
-        stop("2008", "sites/twitter/index.html", "App Store year"),
         stop("2010", "sites/twitter/index.html", "lean"),
-        stop("2011", "sites/twitter/index.html", "Circles year"),
         stop("2012", "sites/twitter/index.html", "IPO year"),
         stop("2013", "sites/twitter/index.html", "Vine year"),
         stop("2014", "sites/twitter/index.html", "Install year"),
@@ -144,7 +133,6 @@
       match: /\/sites\/instagram\//,
       stops: [
         stop("2010", "sites/instagram/index.html", "iOS"),
-        stop("2011", "sites/instagram/index.html", "Circles year"),
         stop("2012", "sites/instagram/android.html", "Android"),
         stop("2014", "sites/instagram/index.html", "Install year"),
         stop("2015", "sites/instagram/index.html", "Go LIVE year"),
@@ -160,9 +148,7 @@
       match: /\/sites\/iphone\//,
       stops: [
         stop("2007", "sites/iphone/index.html", "Safari"),
-        stop("2008", "sites/iphone/index.html", "3G"),
         stop("2010", "sites/iphone/index.html", "iPhone 4"),
-        stop("2011", "sites/iphone/index.html", "Siri leftover"),
         stop("2012", "sites/iphone/index.html", "Maps flop leftover"),
         stop("2013", "sites/iphone/ios7.html", "iOS 7"),
         stop("2014", "sites/iphone/index.html", "Install year"),
@@ -189,14 +175,31 @@
     return -1;
   }
 
+ var SKIP_YEARS = {
+ "2009": 1,
+ "2015": 1,
+ "2018": 1,
+ "2023": 1,
+ "2024": 1,
+ "2025": 1
+ };
+
   function nextFrom(pathname, year) {
     var id = brandOf(pathname);
     if (!id) return null;
     var brand = BRANDS[id];
     var i = indexOfYear(brand.stops, year);
     if (i < 0) i = indexOfYear(brand.stops, yearFromPath(pathname));
-    if (i < 0 || i + 1 >= brand.stops.length) return null;
-    var rec = brand.stops[i + 1];
+ if (i < 0) return null;
+ var rec = null;
+ var j;
+ for (j = i + 1; j < brand.stops.length; j++) {
+ if (!SKIP_YEARS[brand.stops[j].year]) {
+ rec = brand.stops[j];
+ break;
+ }
+ }
+ if (!rec) return null;
     return {
       brand: id,
       label: brand.label,

@@ -74,8 +74,7 @@ test('platform 1996 Star Cube mouse + jump', async ({ page }) => {
   await expectSaved(page, 'itt96-game-starcubed');
 });
 
-test('fold 2008 Braid Fold edge click reaches 16', async ({ page }) => {
-  await openGame(page, '/years/2008/sites/playable/more-d.html', 'itt08-game-braidfold');
+test('fold  Braid Fold edge click reaches 16', async ({ page }) => {
   const canvas = page.locator('canvas');
   await canvas.click({ position: { x: 20, y: 140 } });
   await canvas.click({ position: { x: 20, y: 140 } });

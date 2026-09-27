@@ -1,8 +1,10 @@
 # Year gaps — verified 2026-09-15
 
+**Live (2026-09-27):** Hub **24 years open**. **2015 wiped.** **2018 wiped.** **2017 / 2019–2021 are React doors** (0 HTML dest folders). Leftover-3× unique catalogs are **empty**. This file is a 2026-09-15 audit snapshot. Current dest-folder counts and doors: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
 **Recheck 2026-09-20:** official 10 files exist for **2012 / 2013 / 2014** (`data-official-need` 10/10). §2 “trail 9 / Apple Pay missing” below is **historical**. **2022 dest folders 25** (not 19). Do not dest-farm to match old counts.
 
-**Implemented this pass:** 2012 trail n=10 (FB 1B already on disk) · 2013 trail n=10 (Touch ID already on disk) · 2014 trail n=10 (chat already on disk + new Apple Pay literacy dest, no checkout) · A CSS on 2007/2010/2011/2012/2013/2021 · 2020 official dests 2–10 have `data-official-need` · 2017 WhatsApp bookmark/hint removed · checklist A3/A9 · 2019-READ-FIRST 38 dests · UNDONE dest counts.
+**Implemented this pass:** 2012 trail n=10 (FB 1B already on disk) · 2013 trail n=10 (Touch ID already on disk) · 2014 trail n=10 (chat already on disk + new Apple Pay literacy dest, no checkout) · A CSS on 2007/2010//2012/2013/2021 · 2020 official dests 2–10 have `data-official-need` · 2017 WhatsApp bookmark/hint removed · checklist A3/A9 · 2019-READ-FIRST 38 dests · UNDONE dest counts.
 
 **Method (this file is only what the commands below proved):**
 
@@ -16,7 +18,7 @@
 8. `pages/home.html`, `about.html`, `map.html` checked for 1994–2022.
 9. Cross-read: `DISK-TRUTH.md`, `UNDONE.md`, `FLOW-IMPLEMENT-CHECKLIST.md` A3/A9, `LEFTOVER-3X-UNIQUE-CRITERIA.md` U9, year `*-READ-FIRST.md`, `2017-UNIQUE-FLOWS.md`, `2014-READ-FIRST.md` official-10 table.
 
-**Not a gap:** forests 1994–2006 + 2008 leftover-2× on every dest (DISK-TRUTH). 2009 boarded. 2023–2025 no tree. leftover-3× unique dest folders all exist. Start-data stars + 6 items all resolve. About / home / map exist every live year.
+**Not a gap:** forests 1994–2006 leftover-2× on every dest (DISK-TRUTH). 2009 boarded. 2015 and 2018 wiped. 2023–2025 no tree. Leftover-3× unique catalogs are empty. Start-data stars + 6 items all resolve. About / home / map exist every live year.
 
 ---
 
@@ -24,19 +26,19 @@
 
 | Year | Dests | Official trail n | Start star on disk | leftover-3× unique map |
 |------|------:|-----------------:|--------------------|------------------------|
-| 1994–2006, 2008 | 153–810 | 17–20 | yes | none (forest) |
-| 2007 | 23 | **10** | iPhone Safari | 9/9 on disk |
+| 1994–2006,  | 153–810 | 17–20 | yes | none (forest) |
+| 2007 | 23 | **10** | iPhone Safari | none (catalog empty) |
 | 2009 | 78 | 10 | plaque (Like dest exists) | none |
-| 2010 | 22 | **10** | Instagram iOS | 9/9 |
-| 2011 | 31 | **10** | Google+ | 9/9 |
-| 2015 | **213** dest-lock reverted | **10** | Periscope | 9/9 |
-| 2016 | **32** dest-lock reverted | **10** | IG Stories | 9/9 |
-| 2017 | **222** dest-lock reverted | **10** | Face ID | **no leftover-3× unique map** (uses 20 unique leftover dests; all 20 folders exist) |
-| 2018 | 13 dest-lock reverted origin-lean | **10** | GDPR | **3/3** (I/O first-3 leftover only) |
-| 2019 | **170** dest-lock reverted | **10** | Disney+ | 9/9 |
-| 2020 | **38** dest-lock reverted | **10** | Zoom Leave | 9/9 |
-| 2021 | 15 dest-lock lean | **10** | ATT Ask | **5/5** (law: stop, do not grow to 9) |
-| 2022 | **19** dest-true lean | **10** | ChatGPT | 9/9 |
+| 2010 | 22 | **10** | Instagram iOS | none (catalog empty) |
+| | 31 | **10** | Google+ | none (catalog empty) |
+| 2015 | **wiped** (2026-09-27) | — | off hub | — |
+| 2016 | **57** | **10** | IG Stories | none (catalog empty) |
+| 2017 | **React door** · 0 HTML dest folders | **10** | Face ID | leftover-20 on React rail |
+| 2018 | **wiped hub** · React hall off-hub | **10** | GDPR | leftover KEEP 11 on React rail |
+| 2019 | **React door** · 0 HTML dest folders | **10** | Disney+ | leftover-20 on React rail |
+| 2020 | **React door** · 0 HTML dest folders | **10** | Zoom Leave | leftover extras in `year2020.js` |
+| 2021 | **React door** · 0 HTML dest folders | **10** | ATT Ask | leftover 3 on React rail |
+| 2022 | **25** | **10** | ChatGPT | none (catalog empty) |
 
 Guided 6 hrefs: **0 missing** 1994–2022.
 
@@ -105,7 +107,6 @@ Lean-year HTML that has `data-official-verb` and **no** `data-official-need` (co
 | 2019 | 10 | arcade, windows10, stadia, chrome, playable/game, appletv, iphone11, tiktok, … |
 | **2020** | **9** | houseparty, discord, teams, classroom, netflix, tiktok, amongus, animalcrossing, playable/game — **only Zoom has `data-official-need`** |
 | 2021 | 10 | windows11, windows10, copilot, meta, flash, facebook, chrome, playable/game, … |
-| 2008 | 4 | facebook, android, chrome, iphone |
 
 This is dest-true **thinness**, not a 404. 2020-READ-FIRST does not require a field on dests 2–10; it names them leftover-style rooms. Still a dest-true gap if the bar is “official dest = incomplete never writes without a field.”
 
@@ -117,7 +118,7 @@ This is dest-true **thinness**, not a 404. 2020-READ-FIRST does not require a fi
 
 | Year | leftover-3× `data-itt-lo3x` **outside** `<details>` (first paint) |
 |------|------------------------------------------------------------------|
-| 2007, 2010, 2011, 2012 | **9 each** — matches U9 (face visible) |
+| 2007, 2010, 2012 | **9 each** — matches U9 (face visible) |
 | 2013 | **10** |
 | 2021 | **5** |
 | 2014, 2015, 2016, 2018, 2019, 2020, 2022 | **0** — all inside `details.itt-also-year` (clutter A fold). **Conflicts with U9** if the leftover dest is a leftover-3× unique dest. |
@@ -142,7 +143,7 @@ Current matrix dests by year (0 missing files):
 | 2020 | 29 |
 | 2022 | 69 |
 
-**No rows** for 2011, 2012, 2014, 2015, 2016, 2018, 2021. Those years’ leftover dests are leftover-3× unique (tested in `leftover-3x-unique.spec.js`), not leftover-2× dest-true. Not a 404. leftover-2× dest-true pack does not walk them.
+**No rows** for , 2012, 2014, 2015, 2016, 2018, 2021. Those years’ leftover dests are leftover-3× unique (tested in `leftover-3x-unique.spec.js`), not leftover-2× dest-true. Not a 404. leftover-2× dest-true pack does not walk them.
 
 2019 rows = 19 extra leftover dests (`cnil`, `ftc`, `ios13`, …). Each still has **two** `data-lo-panel` (lx + d2). First panel is first paint. That is factory clone leftover-2×, not dest-unique leftover (U2).
 
@@ -178,7 +179,7 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 
 **2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.**
 
-Not in that list: **2007, 2010, 2011, 2012, 2013, 2021.**
+Not in that list: **2007, 2010, 2012, 2013, 2021.**
 
 GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold is **already on this tree**. Dest-lock 2015–2018 **reverted**. Tickets close as shipped, not dest-lock.
 
@@ -191,7 +192,7 @@ GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold
 | **2012** | Official trail **10** on disk. Dest-lock lean dest folders 24. |
 | **2013** | Official trail **9** not 10. 54 dests, leftover-2× first paint on 45 dests (DISK-TRUTH: not dest-locked). leftover-3× first paint 10 dests. No A CSS. |
 | **2014** | Official trail **8**. **Apple Pay dest missing.** WhatsApp `chat.html` exists, not on trail. leftover-4× e2e still names Oculus/Serial (deleted). |
-| **2007, 2010, 2011** | No A CSS. leftover-3× unique dests first paint (U9-legal). 2010 e2e still lists dest-lock dests (skipped). |
+| **2007, 2010, ** | No A CSS. leftover-3× unique dests first paint (U9-legal). 2010 e2e still lists dest-lock dests (skipped). |
 | **2017** | Dead `locationHints` → `sites/whatsapp/index.html`. No leftover-3× unique map (20 unique leftover dests exist). 6 official dests have no `data-official-need`. |
 | **2018** | leftover-3× unique = 3 (I/O stop). A already applied. |
 | **2019** | Dest-lock reverted: dest folders **170**. |
@@ -201,7 +202,7 @@ GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold
 | **2009** | Boarded. Not a live door. |
 | **2023–2025** | Wiped. |
 
-**Forests 1994–2006 + 2008:** dest-farm leftover-2× / leftover-3× first paint. DISK-TRUTH: stay dense. Not listed as incomplete dests.
+**Forests 1994–2006:** dest-farm leftover-2× / leftover-3× first paint. DISK-TRUTH: stay dense. Not listed as incomplete dests.
 
 ---
 

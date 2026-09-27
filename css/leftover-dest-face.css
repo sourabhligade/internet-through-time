@@ -108,14 +108,13 @@ html[data-itt-year="2001"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 2002–2008 XP / IE */
+/* 2002–2007 XP / IE */
 html[data-itt-year="2002"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2003"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2004"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2005"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2006"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2007"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
-html[data-itt-year="2008"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2009"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2002"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2003"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
@@ -123,7 +122,6 @@ html[data-itt-year="2004"]:not([data-official-key]) body:not(.itt-start-page):no
 html[data-itt-year="2005"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2006"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2007"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
-html[data-itt-year="2008"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2009"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]) {
   background: #ece9d8 !important;
   color: #000 !important;
@@ -135,7 +133,6 @@ html[data-itt-year="2004"]:not([data-official-key]) [data-lo-panel][data-itt-des
 html[data-itt-year="2005"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2006"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2007"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
-html[data-itt-year="2008"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2009"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2002"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2003"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
@@ -143,7 +140,6 @@ html[data-itt-year="2004"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
 html[data-itt-year="2005"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2006"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2007"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
-html[data-itt-year="2008"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2009"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] {
   background: #fff !important;
   border: 2px outset #fff !important;
@@ -156,7 +152,6 @@ html[data-itt-year="2004"]:not([data-official-key]) [data-lo-panel][data-itt-des
 html[data-itt-year="2005"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2006"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2007"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
-html[data-itt-year="2008"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2009"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2002"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2003"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
@@ -164,7 +159,6 @@ html[data-itt-year="2004"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
 html[data-itt-year="2005"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2006"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2007"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
-html[data-itt-year="2008"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2009"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button {
   background: #ece9d8;
   border: 2px outset #fff;
@@ -175,12 +169,12 @@ html[data-itt-year="2009"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
 
 /* 2010–2014 iOS / Android / Win7 */
 html[data-itt-year="2010"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
-html[data-itt-year="2011"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
+html[data-itt-year=""]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2012"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2013"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2014"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2010"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
-html[data-itt-year="2011"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
+html[data-itt-year=""]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2012"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2013"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2014"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]) {
@@ -189,12 +183,12 @@ html[data-itt-year="2014"]:not([data-official-key]) body:not(.itt-start-page):no
   font-family: Helvetica, Arial, sans-serif !important;
 }
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
+html[data-itt-year=""]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2010"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
-html[data-itt-year="2011"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
+html[data-itt-year=""]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2012"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2013"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2014"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] {
@@ -205,12 +199,12 @@ html[data-itt-year="2014"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
   color: #111 !important;
 }
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
+html[data-itt-year=""]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2010"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
-html[data-itt-year="2011"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
+html[data-itt-year=""]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2012"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2013"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2014"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button {

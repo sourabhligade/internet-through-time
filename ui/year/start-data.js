@@ -173,19 +173,6 @@
  
  ]
  },
- "2008": {
- "href": "../sites/github/issue.html",
- "label": "★ One-thing · GitHub issue REAL",
- "items": [
- " <a href=\"about.html\">About 2008</a> — phone as platform",
- " <a href=\"../sites/github/issue.html\">★ GitHub issue</a> — title + body REAL",
- " <a href=\"../sites/appstore/index.html\">App Store</a> — ~500 apps leftover",
- " <a href=\"../sites/chrome/index.html\">Chrome</a> — Sep Windows beta leftover",
- " <a href=\"../sites/android/index.html\">Android G1</a> · <a href=\"../sites/hulu/index.html\">Hulu</a> ",
- " <a href=\"map.html\">Year flow map</a> "
- 
- ]
- },
  "2009": {
  "href": "../sites/facebook/index.html",
  "label": "★ One-thing · Facebook Like REAL",
@@ -208,18 +195,6 @@
  " <a href=\"../sites/ipad/index.html\" style=\"color:#9fd4f0\">iPad</a> — $499 · 300k day one",
  " <a href=\"../sites/facebook/index.html\" style=\"color:#9fd4f0\">Open Graph</a> — Like ×2",
  " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
- ]
-},
- "2011": {
- "href": "../sites/googleplus/index.html",
- "label": "★ One-thing · Google+ REAL",
- "items": [
- " <a href=\"about.html\">About 2011 — dual scale · bans</a> ",
- " <a href=\"../sites/googleplus/index.html\">Google+ — Circles · Hangout</a> ",
- " <a href=\"../sites/spotify/index.html\">Spotify US — invite</a> ",
- " <a href=\"../sites/iphone/index.html\">Siri — 4S</a> ",
- " <a href=\"../sites/facebook/index.html\">Timeline — memoir</a> ",
- " <a href=\"map.html\">Year flow map</a> "
  ]
 },
  "2012": {

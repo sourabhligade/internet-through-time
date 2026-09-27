@@ -262,11 +262,11 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt06-tweets');
   });
 
-  test('2008 GitHub issue → itt08-github', async ({ page }) => {
-    test.skip(!isLiveYear('2008'), '2008 boarded from visitor UI');
-    await enterYear(page, '2008');
+  test(' GitHub issue → itt08-github', async ({ page }) => {
+    test.skip(!isLiveYear(''), ' boarded from visitor UI');
+    await enterYear(page);
     await clearPrefix(page, 'itt08-github');
-    await goImmersion(page, '2008', 'sites/github/issue.html');
+    await goImmersion(page,'sites/github/issue.html');
     const frame = contentFrame(page);
     const form = frame.locator('form[data-gh-issue-form]');
     await expect(form).toBeVisible({ timeout: 15000 });

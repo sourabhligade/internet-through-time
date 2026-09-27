@@ -8,5 +8,7 @@
   var src = (me && me.src) || "";
   var dest = src.replace(/\/js\/year-ui\/shell\.js(?:\?.*)?$/, "/ui/year/shell.js");
   if (dest === src) dest = "/ui/year/shell.js";
+  var chrome = dest.replace(/shell\.js(?:\?.*)?$/, "chrome.js");
+  document.write('<script src="' + chrome + '"><\/script>');
   document.write('<script src="' + dest + '"><\/script>');
 })();

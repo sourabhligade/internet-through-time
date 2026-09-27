@@ -1,5 +1,5 @@
 /**
- * GitHub 2008 — fake tree · README · issues · fork (no real git)
+ * GitHub  — fake tree · README · issues · fork (no real git)
  * Keys: itt08-github-issues · itt08-github-fork · summary itt08-github
  */
 (function (global) {
@@ -7,7 +7,7 @@
   var ITT = global.ITT || (global.ITT = {});
 
   var FILES = {
-    "README.md": "# hello-web\nMuseum residual repository — educational reconstruction.\n\nApr 2008 public launch class · no real git.",
+    "README.md": "# hello-web\nMuseum residual repository — educational reconstruction.\n\nApr  public launch class · no real git.",
     "index.html": "<!DOCTYPE html>\n<title>hello-web</title>\n<p>Museum residual.</p>\n",
     LICENSE: "Educational exhibit · trademarks belong to their owners.\n"
   };
@@ -61,7 +61,6 @@
       multiStep: true,
       real: true,
       official: true,
-      year: "2008",
       issues: issues.length,
       forked: !!(fork && fork.from),
       ts: Date.now()

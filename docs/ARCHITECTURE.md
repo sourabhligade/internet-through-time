@@ -1,6 +1,6 @@
 # Architecture — Internet Through Time
 
-**Purpose:** Keep the repo aligned as years grow (1994–2008 + 2010–2022 live · 2009 boarded · 2023+ wiped).  
+**Purpose:** Keep the repo aligned as years grow (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022 live ·  wiped · 2009 boarded · 2023+ wiped).  
 **Rule of thumb:** *Year differences live in config + content. Shared behavior lives once in `js/`.*  
 **SRP map:** [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md).
 
@@ -174,7 +174,7 @@ Avoid full-file copies of period CSS when only a few rules change.
 - [x] Thin year stubs only  
 - [x] Thin browser year stubs + `bootBrowserYear`  
 - [x] `browser/chrome-ui.js` extracted (dialogs / menus / prefs / bookmarks / find) · create.js still owns navigate + connect  
-- [x] Period CSS composition (`@import` deltas) for 1998+ · 2011 no longer imports 2012 (cycle broken)  
+- [x] Period CSS composition (`@import` deltas) for 1998+ ·  no longer imports 2012 (cycle broken)  
 - [x] Optional codegen script: `scripts/new-year.py YYYY` scaffolding stubs + empty dirs  
 
 When in doubt: **add data and content, not new engines.**

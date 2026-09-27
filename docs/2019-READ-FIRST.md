@@ -1,15 +1,15 @@
 # 2019 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-09-05  
-**Status:** **LIVE lean door.** Hub card open. Dest-lock reverted: dest folders **170**. Do not `git checkout` a pre-rebuild 2019 forest.  
-**Disk truth:** Hub is **28 years open** · **2009 boarded** · **2020 Zoom Leave live** · **2022 ChatGPT live**. 2013 Vine and 2018 GDPR are live lean doors.  
+**Status:** **LIVE React door.** Hub card `/app/index.html#/year/2019`. HTML dest folders **0**. Do not `git checkout` a pre-rebuild 2019 forest.  
+**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · **2018 wiped** · **2020 Zoom Leave live** · **2022 ChatGPT live**. 2013 Vine is a live lean door.  
 **Prefix:** `itt19`  
-**Clone shape from:** live `years/2017/` (Face ID lean door · dest-farm still on disk, not a dest target). **Do not** clone wiped `years/2018/`. **Do not** restore `/tmp/itt-2019-forest-backup-20260815`, git `HEAD` `years/2019/`, or any 2019 Consent Dash clone.
+**Clone shape from:** the 2017 React door (`/app/index.html#/year/2017`). There is no `years/2017/` or `years/2019/` tree. **Do not** restore `/tmp/itt-2019-forest-backup-20260815`, git `HEAD` `years/2019/`, or any 2019 Consent Dash clone.
 
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| Parent live year | `years/2017/` · Face ID · `itt17` |
+| Parent live year | React 2017 · Face ID · `itt17-faceid` |
 
 **Legal:** Educational. `localStorage` only. Never invent brand pixels. No Disney / Marvel / Star Wars / Grogu art. No Epic concert rip. No CMP vendor UI. No COVID case-count dashboard.
 
@@ -32,10 +32,10 @@
 
 ## Do
 
-- Guided **exactly 6**. Official dests named hooks. Dest folders **170** (dest-lock reverted warehouse). 5k websites = research envelope, not dest farm. Do not dest-lock 2019 again.  
+- Guided **exactly 6**. Official stops live on the React rail. HTML dest folders **0**. 5k websites = research envelope, not dest farm. Do not rebuild a 2019 HTML tree.  
 - Dual-cite: Live Stats June table **ends 2018** at **1,630,322,579 (−8%)**. Do **not** invent a June 2019 websites cell. ITU **4.1B / 53.6%** (Facts and Figures 2019 · PR 5 Nov 2019).  
 - Shell: Win10 mass · Chrome habit · iOS 13 / iPadOS. Chromium Edge is a **preview** (ships 15 Jan 2020).  
-- Star / trail #1 / year-start = `sites/disneyplus/home.html` (Continue). `index.html` is the trial trap only. Do not quote “Who’s watching” as 2019 Disney press.  
+- Star / trail #1 / year-start = Disney+ Continue on the React door (`itt19-disneyplus`). There is no `sites/disneyplus/home.html`. Do not quote “Who’s watching” as 2019 Disney press.  
 - Year game is **Continue Row**, not Consent Dash.
 
 ## Do not

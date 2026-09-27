@@ -8,7 +8,7 @@ Do not dest-farm leftover-20. Do not grow leftover-3× unique past 2018=3 / 2021
 
 ```mermaid
 flowchart TD
-  HUB["Hub 28 years"] --> SP["Starting Point guided 6"]
+ HUB["Hub 25 years"] --> SP["Starting Point guided 6"]
   SP --> STAR["Star dest n=1"]
   STAR --> OFF["Official n=2–10"]
   SP --> U3["Leftover-3× unique dests"]
@@ -32,9 +32,8 @@ flowchart TD
 | **2005** | 351 | YouTube upload | 10 | 0 | 0 | 4 | **14** |
 | **2006** | 378 | Twttr | 9 | 0 | 0 | 2 | **11** |
 | **2007** | 46 | iPhone Safari | 10 | 9 | 23 | 0 | **42** |
-| **2008** | 597 | GitHub issue | 10 | 0 | 0 | 4 | **14** |
 | **2010** | 44 | Instagram iOS | 10 | 9 | 22 | 0 | **41** |
-| **2011** | 62 | Google+ Hangout | 10 | 9 | 31 | 0 | **50** |
+| **** | 62 | Google+ Hangout | 10 | 9 | 31 | 0 | **50** |
 | **2012** | 48 | IG Android | 9 | 9 | 24 | 0 | **42** |
 | **2013** | 54 | Vine 6s | 9 | 9 | 0 | 0 | **18** |
 | **2014** | 36 | WhatsApp Install | 9 | 9 | 18 | 0 | **36** |
@@ -215,18 +214,6 @@ Star: `iphone` · iPhone Safari. Dest folders **33**.
 
 Dest-true flows this year: **42**.
 
-## 2008
-
-Star: `github` · GitHub issue. Dest folders **597**.
-
-**Official 10** (10): `github` · `appstore` · `chrome` · `android` · `hulu` · `facebook` · `twitter` · `youtube` · `dropbox` · `iphone`
-
-**Leftover-3× unique:** none
-
-**Forest leftover dest-true packs** (4): `evernote` · `groupon` · `airbnb` · `spotifyseed`
-
-Dest-true flows this year: **14**.
-
 ## 2010
 
 Star: `instagram` · Instagram iOS. Dest folders **44**.
@@ -239,7 +226,7 @@ Star: `instagram` · Instagram iOS. Dest folders **44**.
 
 Dest-true flows this year: **41**.
 
-## 2011
+## 
 
 Star: `googleplus` · Google+ Hangout. Dest folders **62**.
 

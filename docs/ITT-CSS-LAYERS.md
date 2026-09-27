@@ -19,8 +19,8 @@ That dest chrome is **removed from `period-1995.css`**. Wayfind + footer clearan
 
 ## Injected JS (keep small)
 
-- `boot.js` — dest: link `itt-dest-page.css`. Pages in iframe: `min-height:100%` fill (Starting Point in shell).
-- `shared.js` — period alert modal styles; exhibit-nav wrap styles. Wayfind **stylesheet** is `itt-dest-page.css`, not a second inline dump.
+- `boot.js` — dest: link `itt-dest-page.css`. Top-window dest path stamps `html.itt-dest-top`. Pages in iframe: `min-height:100%` fill (Starting Point in shell).
+- `shared.js` — period alert modal styles; exhibit-nav wrap styles. Wayfind **stylesheet** is `itt-dest-page.css`, not a second inline dump. Dest-as-tab skips `#itt-wayfind`; `#itt-exhibit-foot` is the single footer (Starting Point + Year menu).
 
 ## Not this file
 

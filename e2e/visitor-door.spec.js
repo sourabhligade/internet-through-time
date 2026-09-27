@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 26 years (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). 2005 restored. 2015 wiped. 2018 wiped. 2009 boarded. 2023–2025 wiped.
+ * Hub 24 years (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). 2005 restored. 2015 wiped. 2018 wiped. 2009 boarded. 2023–2025 wiped.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
-  if (y === 2009 || y === 2015 || y === 2018) continue;
+ if ((y > 2007 && y < 2009) || y === 2009 || y === 2015 || y === 2018 || (y > 2010 && y < 2012)) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2009", "2023", "2024", "2025"];
@@ -45,10 +45,10 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
-  test("hub lists 26 years including 2022 and 2005 · no 2015 · no 2018 · no 2009 · no 2023+", async ({ page }) => {
-    expect(SHIP).toHaveLength(26);
+ test("hub lists 24 years including 2022 and 2005 · no 2015 · no 2018 · no 2009 · no 2023+", async ({ page }) => {
+ expect(SHIP).toHaveLength(24);
     await page.goto("/");
-    await expect(page.locator("body")).toContainText(/26 years open/i);
+ await expect(page.locator("body")).toContainText(/24 years open/i);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);

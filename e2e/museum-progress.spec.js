@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Passport stamps + first-night trail (hub + 1994 CSotD + 2008 App Store + 2010 Instagram)
+ * Passport stamps + first-night trail (hub + 1994 CSotD +  App Store + 2010 Instagram)
  */
 const { test, expect } = require('@playwright/test');
 
@@ -26,7 +26,7 @@ test.describe('Museum passport + first night', () => {
     await page.goto('/');
     await expect(page.locator('#itt-passport-root, #begin-first-night, [data-itt-year-tour]')).toHaveCount(0);
     await expect(page.locator('a.year-card.available.y2006[href*="years/2006"]')).toBeVisible();
-    await expect(page.locator('a.year-card.available[href*="years/2008"]')).toBeVisible();
+    await expect(page.locator("a.year-card.available.y")).toHaveCount(0);
     await expect(page.locator('a.year-card.available.y2010[href*="years/2010"]')).toBeVisible();
     const live = await page.evaluate(() => {
       const mp = window.ITT && window.ITT.MuseumProgress;

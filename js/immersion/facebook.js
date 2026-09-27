@@ -107,7 +107,6 @@
     if (y >= "2006") {
       var status = "joined Facebook";
       if (y === "2007") status = "using Facebook Platform apps";
-      else if (y === "2008") status = "using Facebook Connect";
       else if (y === "2009") status = "Liking everything · FarmVille later";
       return {
         name: "You",

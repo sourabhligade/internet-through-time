@@ -1,4 +1,4 @@
-/** Auto word list for Letter Swap 2011 */
+/** Auto word list for Letter Swap  */
 (function(g){
 g.ITT_LETTER_WORDS = {
 "able":1,

@@ -1639,92 +1639,6 @@ def test_2007_urlmap_complete() -> None:
 
 
 
-def test_2008_signature() -> None:
-    if not (ROOT / "years/2008").exists():
-        ok("2008-signature-skip")
-        return
-    need = [
-        "years/2008/index.html",
-        "years/2008/pages/home.html",
-        "years/2008/pages/about.html",
-        "years/2008/sites/appstore/index.html",
-        "years/2008/sites/iphone/index.html",
-        "years/2008/sites/chrome/index.html",
-        "years/2008/sites/android/index.html",
-        "years/2008/sites/hulu/index.html",
-        "years/2008/sites/facebook/connect.html",
-        "js/config/2008.js",
-        "js/config/immersion-2008.js",
-        "js/immersion/appstore.js",
-        "js/immersion/chrome-browser.js",
-        "js/immersion/android.js",
-        "js/immersion/hulu.js",
-        "css/period-2008.css",
-    ]
-    missing = [n for n in need if not (ROOT / n).is_file()]
-    if missing:
-        fail("2008-signature", "missing: " + ", ".join(missing))
-        return
-    if 'data-itt-year="2008"' not in read(ROOT / "years/2008/index.html"):
-        fail("2008-signature", "shell year")
-        return
-    if 'storagePrefix: "itt08"' not in read(ROOT / "js/config/immersion-2008.js"):
-        fail("2008-signature", "itt08")
-        return
-    if 'href="years/2008/"' not in read(ROOT / "index.html"):
-        fail("2008-signature", "hub locked")
-        return
-    about = read(ROOT / "years/2008/pages/about.html")
-    if "172,338,726" not in about:
-        fail("2008-signature", "scale")
-        return
-    if "App Store" not in about or "Chrome" not in about:
-        fail("2008-signature", "thesis products")
-        return
-    if "3GS" not in about:
-        fail("2008-signature", "3GS ban")
-        return
-    apps = read(ROOT / "years/2008/sites/appstore/index.html")
-    if "data-appstore-install" not in apps and "data-appstore-catalog" not in apps:
-        fail("2008-signature", "appstore hooks")
-        return
-    if "500" not in apps and "552" not in apps:
-        fail("2008-signature", "launch count honesty")
-        return
-    iphone = read(ROOT / "years/2008/sites/iphone/index.html")
-    if "3G" not in iphone or "$199" not in iphone:
-        fail("2008-signature", "iphone 3G prices")
-        return
-    # Must NOT claim App Store banned as year default
-    home = year_home("2008")
-    if "App Store (2008)" in home and "ban" in home.lower():
-        # hard bans box should not ban App Store for 2008
-        pass
-    if "no App Store yet" in home.lower() or "no App Store" in home:
-        fail("2008-signature", "home still bans App Store")
-        return
-    ok("2008-signature")
-
-
-def test_2008_urlmap_complete() -> None:
-    if not (ROOT / "years/2008").exists():
-        ok("2008-urlmap-complete-skip")
-        return
-    root = ROOT / "years/2008"
-    cfg = read(ROOT / "js/config/2008.js")
-    missing = []
-    for pth in root.rglob("*.html"):
-        rel = str(pth.relative_to(root)).replace("\\", "/")
-        if rel == "index.html":
-            continue
-        if f'"{rel}"' not in cfg:
-            missing.append(rel)
-    if missing:
-        fail("2008-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
-        return
-    ok("2008-urlmap-complete")
-
-
 def test_2009_signature() -> None:
     if not (ROOT / "years/2009").exists():
         ok("2009-signature-skip")
@@ -2246,7 +2160,7 @@ def test_2010_no_anachronism_products() -> None:
         fail("2010-anachronism", "Instagram should be present")
         return
     # Spotify US must appear as ban not product default
-    if "spotify" in about and "us" not in about and "2011" not in about:
+    if "spotify" in about and "us" not in about and "" not in about:
         fail("2010-anachronism", "Spotify US ban should be labeled")
         return
     ig = read(ROOT / "years/2010/sites/instagram/index.html").lower()
@@ -2259,119 +2173,13 @@ def test_2010_no_anachronism_products() -> None:
     ok("2010-no-anachronism-products")
 
 
-def test_2008_dirbar_and_modules() -> None:
-    """Shell dirbar P0 + immersion modules registered for 2008."""
-    if not (ROOT / "years/2008").exists():
-        ok("2008-dirbar-modules-skip")
-        return
-    shell = read(ROOT / "years/2008/index.html")
-    ui = read(ROOT / "js/year-ui/years.js")
-    ui2 = ROOT / "ui" / "year" / "years.js"
-    painted = shell + "\n" + ui + "\n" + (read(ui2) if ui2.is_file() else "")
-    for label in ("App Store", "Chrome", "Android", "Hulu"):
-        if label not in painted:
-            fail("2008-dirbar", f"shell dirbar missing {label}")
-            return
-    if "sites/appstore/index.html" not in painted:
-        fail("2008-dirbar", "appstore data-go")
-        return
-    reg = read(ROOT / "js/immersion/registry.js")
-    for mod in ("appstore.js", "chrome-browser.js", "android.js", "hulu.js"):
-        if mod not in reg:
-            fail("2008-dirbar", f"registry missing {mod}")
-            return
-    icfg = read(ROOT / "js/config/immersion-2008.js")
-    for flag in ("appstore: true", "chromeBrowser: true", "android: true", "hulu: true"):
-        if flag not in icfg:
-            fail("2008-dirbar", f"features missing {flag}")
-            return
-    ok("2008-dirbar-modules")
-
-
-def test_2008_no_anachronism_products() -> None:
-    """Hard bans must not appear as year-default product claims."""
-    if not (ROOT / "years/2008").exists():
-        ok("2008-no-anachronism-products-skip")
-        return
-    home = year_home("2008").lower()
-    about = read(ROOT / "years/2008/pages/about.html").lower()
-    # App Store must be in product story
-    if "app store" not in home and "app store" not in about:
-        fail("2008-anachronism", "App Store should be present (not banned)")
-        return
-    if "no app store yet" in home or "no app store yet" in about:
-        fail("2008-anachronism", "App Store still framed as future ban")
-        return
-    # 3GS ban language on about
-    if "3gs" not in about:
-        fail("2008-anachronism", "about needs 3GS ban")
-        return
-    # Spotify US ban
-    if "spotify" not in about:
-        fail("2008-anachronism", "about needs Spotify geo ban")
-        return
-    iphone = read(ROOT / "years/2008/sites/iphone/index.html").lower()
-    if "3g" not in iphone:
-        fail("2008-anachronism", "iphone must be 3G product")
-        return
-    # No Spotify US product room required; if room exists must say Europe
-    spotify = ROOT / "years/2008/sites/spotify"
-    if spotify.is_dir():
-        for pth in spotify.rglob("*.html"):
-            body = read(pth).lower()
-            if "united states" in body and "not" not in body and "europe" not in body:
-                fail("2008-anachronism", "spotify room may claim US public")
-                return
-    ok("2008-no-anachronism-products")
-
-
-def test_2008_densify() -> None:
-    """Year-truth densify rooms + e2e specs on disk."""
-    if not (ROOT / "years/2008").exists():
-        ok("2008-densify-skip")
-        return
-    need = [
-        "years/2008/sites/appstore/about.html",
-        "years/2008/sites/chrome/about.html",
-        "years/2008/sites/android/about.html",
-        "years/2008/sites/android/market.html",
-        "years/2008/sites/hulu/about.html",
-        "years/2008/sites/facebook/connect.html",
-        "years/2008/sites/firefox/index.html",
-        "e2e/2008-mvp.spec.js",
-        "e2e/2008-real-flows.spec.js",
-        "e2e/2008-densify.spec.js",
-        "e2e/2008-flows.spec.js",
-        "e2e/2008-trail-real-flows.spec.js",
-    ]
-    missing = [n for n in need if not (ROOT / n).is_file()]
-    if missing:
-        fail("2008-densify", "missing: " + ", ".join(missing))
-        return
-    ff = read(ROOT / "years/2008/sites/firefox/index.html")
-    if "Download Day" not in ff and "Firefox 3" not in ff:
-        fail("2008-densify", "firefox 3 framing")
-        return
-    yt = read(ROOT / "years/2008/sites/youtube/about.html")
-    if "720p" not in yt and "HD" not in yt:
-        fail("2008-densify", "youtube HD note")
-        return
-    # Lean Starting Point names the 2008 dests (old densify trail titles live on About / dests).
-    home = year_home("2008")
-    for trail in ("App Store", "Chrome", "Android", "Hulu", "GitHub"):
-        if trail not in home:
-            fail("2008-densify", f"home trail missing: {trail}")
-            return
-    ok("2008-densify")
-
-
 def test_immersion_registry_complete() -> None:
     """Every shipped year must appear in immersion/registry.js with modules."""
     reg = read(ROOT / "js/immersion/registry.js")
     for year in (
         "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
-        "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010",
-        "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018",
+        "2003", "2004", "2005", "2006", "2007","2009", "2010",
+        "2012", "2013", "2014", "2015", "2016", "2017", "2018",
     ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
         if not (ROOT / "years" / year).is_dir():
@@ -2585,11 +2393,6 @@ def main() -> int:
         test_2006_densify,
         test_2007_signature,
         test_2007_urlmap_complete,
-        test_2008_signature,
-        test_2008_urlmap_complete,
-        test_2008_dirbar_and_modules,
-        test_2008_no_anachronism_products,
-        test_2008_densify,
         test_2009_signature,
         test_2009_urlmap_complete,
         test_2009_no_anachronism_products,

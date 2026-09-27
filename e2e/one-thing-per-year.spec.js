@@ -198,20 +198,6 @@ const THINGS = [
     },
   },
   {
-    year: "2011",
-    path: "/years/2011/sites/googleplus/index.html",
-    key: "itt11-gplus",
-    incomplete: async (page) => {
-      await page.locator("[data-gp11-hangout]").click();
-    },
-    complete: async (page) => {
-      await page.fill("[data-gp11-circle]", "Friends");
-      await page.locator('[data-gp11-person="ada"]').click();
-      await page.locator('[data-gp11-person="al"]').click();
-      await page.locator("[data-gp11-hangout]").click();
-    },
-  },
-  {
     year: "2014",
     path: "/years/2014/sites/whatsapp/index.html",
     key: "itt14-wa-install",
@@ -237,19 +223,6 @@ const THINGS = [
       await page.waitForTimeout(6200);
       await hold.dispatchEvent("pointerup");
       await page.locator("[data-vn13-post]").click();
-    },
-  },
-  {
-    year: "2008",
-    path: "/years/2008/sites/github/issue.html",
-    key: "itt08-github",
-    incomplete: async (page) => {
-      await page.locator("form[data-gh-issue-form] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.fill("[name='title']", "Cannot center logo residual");
-      await page.fill("[name='body']", "Steps to reproduce residual");
-      await page.locator("form[data-gh-issue-form] button[type='submit']").click();
     },
   },
   {
@@ -488,7 +461,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
   });
 
   test("home chips present for sample years", async ({ page }) => {
-    for (const y of ["1999", "2000", "2008", "2010", "2012"]) {
+    for (const y of ["1999", "2000","2010", "2012"]) {
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
     }

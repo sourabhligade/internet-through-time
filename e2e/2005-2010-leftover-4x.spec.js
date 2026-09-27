@@ -8,11 +8,10 @@ const path = require("path");
 const { test, expect } = require("@playwright/test");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2006", "2007", "2008", "2010"];
+const YEARS = ["2006", "2007","2010"];
 const GOLD = {
   2006: "itt06-tweets",
   2007: "itt07-iphone",
-  2008: "itt08-github",
   2009: "itt09-like",
   2010: "itt10-ig",
 };
@@ -20,7 +19,6 @@ const GOLD2 = { 2010: "itt10-ig-posts" };
 const OFFICIAL = {
   2006: ["tweets", "feed", "fb-open", "yt", "gdocs", "s3", "ie7", "wiki-1m", "roblox", "game-linerider"],
   2007: ["iphone", "streetview", "gmail", "fbplat", "twitter", "youtube", "tumblr", "kindle", "ie6", "game-safariq"],
-  2008: ["github", "apps", "chrome", "android", "hulu", "facebook", "tweets", "yt", "dropbox", "iphone3g"],
   2009: ["like", "farm", "bing", "iphone", "apps", "tweets", "4sq", "kickstarter", "win7", "game-plot"],
   2010: ["ig", "ig-posts", "iphone4", "ipad", "fb-og", "farm", "imgur", "4sq", "tweets", "yt", "game-slingnest"],
 };
@@ -34,11 +32,6 @@ const SAMPLE = {
     { path: "/years/2007/sites/iphone/index.html", go: "iphone-lx-4x" },
     { path: "/years/2007/sites/maps/index.html", go: "maps-dp-4x" },
     { path: "/years/2007/sites/twitter/index.html", go: "twitter-lx-4x" },
-  ],
-  2008: [
-    { path: "/years/2008/sites/github/issue.html", go: "gh-issue-4x" },
-    { path: "/years/2008/sites/chrome/index.html", go: "chrome-lx-4x" },
-    { path: "/years/2008/sites/firefox/index.html", go: "firefox-rlx-4x" },
   ],
   2009: [
     { path: "/years/2009/sites/facebook/index.html", go: "like-lx-4x" },

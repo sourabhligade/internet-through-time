@@ -35,7 +35,7 @@ Do not compete with Wayback on coverage or Web Design Museum on screenshot count
 | Official trail | **10** looping dests. No leftover-trail n=11–20 |
 | Leftover-3× unique dests | Catalogs **empty** (`ITT.leftover3xUnique = {}`, matrices `[]`) |
 | Leftover-4× unique dests | Omit 2016 |
-| Live 5× | Not on 2016 (live 5× is 2008 + boarded 2009) |
+| Live 5× | Not on 2016 (live 5× is  + boarded 2009) |
 | One dest slug once as leftover-2× unique dest **link** | Live catalog **19** hrefs |
 | `[failed-final]` | Keep when no official brand pixels. `assets/period/2016/` is `README-PIXELS.txt` only |
 | Cites | On the room. Never send visitors to `SOURCES.md` |
@@ -211,7 +211,7 @@ Mission: thousands of **screenshots and videos**, mapping trends from 1991 until
 
 | Product | WDM live page | What the visitor sees |
 |---------|---------------|------------------------|
-| Instagram | [instagram-2010](https://www.webdesignmuseum.org/web-design-history/instagram-2010) | Founding 6 Oct 2010, “Instagram website in 2011.” **No Stories exhibit.** STAR_CITE already says `[failed-final] IG Stories · WDM year-index is not a named exhibit` |
+| Instagram | [instagram-2010](https://www.webdesignmuseum.org/web-design-history/instagram-2010) | Founding 6 Oct 2010, “Instagram website in .” **No Stories exhibit.** STAR_CITE already says `[failed-final] IG Stories · WDM year-index is not a named exhibit` |
 | Pokémon GO | [pokemon-go-for-iphone-in-2016](https://www.webdesignmuseum.org/iphone/pokemon-go-for-iphone-in-2016) | Titled stills: Logo, Charmander, Bayside Fountain. Look only. ITT room currently has **no capture-cite**, only `[failed-final] gym silhouette` |
 | WhatsApp | [WhatsApp Messenger 2010](https://www.webdesignmuseum.org/iphone) + [WP 2013](https://www.webdesignmuseum.org/windows-phone/whatsapp-for-windows-phone-in-2013) | Chat stills years early. **No E2E 2016** |
 | Vine | [Vine for WP in 2013](https://www.webdesignmuseum.org/windows-phone/vine-for-windows-phone-in-2013) | Share / Profile stills. **No shutdown** |

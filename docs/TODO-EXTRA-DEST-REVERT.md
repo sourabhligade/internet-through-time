@@ -40,7 +40,7 @@ Never retarget to a dest you are deleting in the same pass.
 1. Confirm the slug is in this file’s extra list and **not** in §0.  
 2. `rm -rf years/YYYY/sites/SLUG/`  
 3. Strip `urlMap` keys `sites/SLUG/` from `js/config/YYYY.js`. Lean years: `rewrite_rooms(YYYY)` in `scripts/dest_lock_lean.py`. Forests have no `var rooms` — urlMap only.  
-4. In that year’s remaining HTML only, replace hrefs to `sites/SLUG/` and `../SLUG/` with the replacement from the year table below. Do not rewrite other years (2012 Duolingo stays if you drop 2011 Duolingo).  
+4. In that year’s remaining HTML only, replace hrefs to `sites/SLUG/` and `../SLUG/` with the replacement from the year table below. Do not rewrite other years (2012 Duolingo stays if you drop  Duolingo).  
 5. Drop matrix rows whose `href`/`path` is that dest (`e2e/*.json`, `js/config/year-true-packs.json`).  
 6. `python3 scripts/audit-internal-links.py` then dest-true e2e.  
 7. Update dest-folder counts in `DISK-TRUTH.md` + leftover dest e2e `WANT_FOLDERS`.
@@ -59,13 +59,13 @@ Do not dest-farm leftover-20. Do not grow leftover-3× unique past 2018=3 / 2021
 
 Official 10 / leftover-3× unique / leftover dest KEEP stay (angry, minecraft, hulu, …).
 
-### 2011 — drop 9
+###  — drop 9
 
 | Drop | Replace hrefs with |
 |------|-------------------|
-| `evernote` `foursquare` `gmusic` `huffpost` `imgur` `kickstarter` `pandora` `quora` `vimeo` | leftover dest KEEP `snapchat` (`years/2011/sites/snapchat/`) |
+| `evernote` `foursquare` `gmusic` `huffpost` `imgur` `kickstarter` `pandora` `quora` `vimeo` | leftover dest KEEP `snapchat` (`years//sites/snapchat/`) |
 
-`imgur` 2010 official dest stays. This is **2011** imgur leftover dest leftover.
+`imgur` 2010 official dest stays. This is **** imgur leftover dest leftover.
 
 ### 2012 — drop 0
 
@@ -170,7 +170,6 @@ Optional: drop **generic clone dest folders** whose slug is a neighbor-year gold
 | 2004 | `amazon` `apple` `baidu` `ebay` `geocities` `google` `microsoft` `netflix` `wikipedia` `yahoo` | official `thefacebook` |
 | 2005 | `amazon` `apple` `baidu` `ebay` `facebook` `geocities` `google` `microsoft` `netflix` `wikipedia` `yahoo` | official `youtube` |
 | 2006 | `amazon` `apple` `baidu` `ebay` `geocities` `google` `microsoft` `netflix` `reddit` `yahoo` | official `twitter` |
-| 2008 | `amazon` `apple` `baidu` `ebay` `geocities` `google` `microsoft` `netflix` `reddit` `wikipedia` `yahoo` | official `github` |
 
 If the slug **is** official 10 that year, **do not drop** (e.g. 1998 `yahoo` official dest stays).
 
@@ -178,7 +177,7 @@ If the slug **is** official 10 that year, **do not drop** (e.g. 1998 `yahoo` off
 
 ## 5. Pass order (if named)
 
-1. Lean extras with leftover dest KEEP replacements: **2010 kickstarter · 2011 nine · 2016 thirteen · 2020 nineteen**. Safest.  
+1. Lean extras with leftover dest KEEP replacements: **2010 kickstarter ·  nine · 2016 thirteen · 2020 nineteen**. Safest.  
 2. **2013 leftover-2× dest leftover** (36 dests) → leftover-3× unique twitter/youtube.  
 3. Forest **clone dest folders only** (§4).  
 4. Warehouse dest-lock **only if named**: 2015 clones → 2015 all extra → 2019 clones → 2019 all extra → 2017 extra minus leftover-20.

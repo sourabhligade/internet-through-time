@@ -1,5 +1,5 @@
 /**
- * Snapchat 2011 seed — timer snap theater (localStorage only)
+ * Snapchat  seed — timer snap theater (localStorage only)
  */
 (function (global) {
   "use strict";
@@ -79,7 +79,7 @@
           "s</div>";
         window.setTimeout(function () {
           out.innerHTML =
-            "<div style='padding:20px;color:#666;font-size:12px'>Snap expired · Picaboo→Snapchat 2011 seed · not mass default all year</div>";
+            "<div style='padding:20px;color:#666;font-size:12px'>Snap expired · Picaboo→Snapchat  seed · not mass default all year</div>";
         }, secs * 1000);
       }
       try {

@@ -89,8 +89,8 @@ test("leftover-3× unique catalog is empty", () => {
   expect(ROWS).toEqual([]);
 });
 
-test("2008 and 2009 are not leftover-3× unique dest-true rows", () => {
-  expect(ROWS.filter((r) => r.year === "2008")).toHaveLength(0);
+test(" and 2009 are not leftover-3× unique dest-true rows", () => {
+  expect(ROWS.filter((r) => r.year === "")).toHaveLength(0);
   expect(ROWS.filter((r) => r.year === "2009")).toHaveLength(0);
 });
 

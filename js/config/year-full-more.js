@@ -38,10 +38,6 @@
       { id: "wowchore", slot: "c", title: "WoW Chore", engine: "gather", key: "itt04-game-wowchore", inspire: "World of Warcraft · 23 Nov 2004", trap: "Gold seller" },
       { id: "hl2grav", slot: "d", title: "HL2 Grav", engine: "corridor", key: "itt04-game-hl2grav", inspire: "Half-Life 2 · 16 Nov 2004", trap: "Gravity gun rip" }
     ],
-    "2008": [
-      { id: "sporecell", slot: "c", title: "Spore Cell", engine: "craft", key: "itt08-game-sporecell", inspire: "Spore · 7 Sep 2008", trap: "Official cell" },
-      { id: "braidfold", slot: "d", title: "Braid Fold", engine: "fold", key: "itt08-game-braidfold", inspire: "Braid · 6 Aug 2008", trap: "Official Tim" }
-    ],
     "2009": [
       { id: "craftmine", slot: "c", title: "Craft Mine", engine: "craft", key: "itt09-game-craftmine", inspire: "Minecraft Classic · 17 May 2009", trap: "Official steve" },
       { id: "lolcs", slot: "d", title: "LoL CS", engine: "gather", key: "itt09-game-lolcs", inspire: "League of Legends · 27 Oct 2009", trap: "RP buy" }
@@ -49,10 +45,6 @@
     "2010": [
       { id: "meatboyr", slot: "c", title: "Meat Boy Run", engine: "platform", key: "itt10-game-meatboyr", inspire: "Super Meat Boy · 20 Oct 2010", trap: "Official meat" },
       { id: "limbowalk", slot: "d", title: "Limbo Walk", engine: "flap", key: "itt10-game-limbowalk", inspire: "Limbo · 21 Jul 2010", trap: "Official boy" }
-    ],
-    "2011": [
-      { id: "skyrimsh", slot: "c", title: "Sky Shout", engine: "corridor", key: "itt11-game-skyrimsh", inspire: "Skyrim · 11 Nov 2011", trap: "Fus ro dah rip" },
-      { id: "darkbon", slot: "d", title: "Dark Bonfire", engine: "cards", key: "itt11-game-darkbon", inspire: "Dark Souls · 22 Sep 2011", trap: "Estus art" }
     ],
     "2012": [
       { id: "journeysc", slot: "c", title: "Journey Scarf", engine: "platform", key: "itt12-game-journeysc", inspire: "Journey · 13 Mar 2012", trap: "Official scarf" },

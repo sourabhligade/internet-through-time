@@ -385,7 +385,7 @@
       ]
     },
     {
-      "year": 2008,
+      "year": ,
       "yy": "08",
       "mode": "panel",
       "star": "sites/github/issue.html",
@@ -521,54 +521,6 @@
       ]
     },
     {
-      "year": 2011,
-      "yy": "11",
-      "mode": "panel",
-      "star": "sites/googleplus/index.html",
-      "flows": [
-        {
-          "suffix": "spotify",
-          "room": "sites/spotify/index.html",
-          "next": "sites/iphone/index.html",
-          "key": "itt11-spotify",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "siri",
-          "room": "sites/iphone/index.html",
-          "next": "sites/facebook/index.html",
-          "key": "itt11-siri",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "timeline",
-          "room": "sites/facebook/index.html",
-          "next": "sites/airbnb/index.html",
-          "key": "itt11-timeline",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "airbnb",
-          "room": "sites/airbnb/index.html",
-          "next": "sites/qwikster/index.html",
-          "key": "itt11-airbnb",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "qwikster",
-          "room": "sites/qwikster/index.html",
-          "next": "sites/googleplus/index.html",
-          "key": "itt11-qwikster",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
       "year": 2012,
       "yy": "12",
       "mode": "panel",
@@ -677,10 +629,8 @@
     "2005": "sites/pandora/index.html",
     "2006": "sites/twitter/index.html",
     "2007": "sites/iphone/index.html",
-    "2008": "sites/github/issue.html",
     "2009": "sites/facebook/index.html",
     "2010": "sites/instagram/index.html",
-    "2011": "sites/googleplus/index.html",
     "2012": "sites/instagram/android.html",
     "2013": "sites/vine/record.html",
     "2014": "sites/whatsapp/index.html",

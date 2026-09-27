@@ -3,7 +3,7 @@
 **Date:** 2026-09-26
 **Status:** Working checklist vs live disk. Not ship law. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14. Lean leftover: [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) D1–D15. Leftover-2× rails: [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1–L13. Visitor 100%: dest-true **flows**, not dest-folder count.
-**Live:** 26 doors (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022). 2009 boarded. 2015 / 2018 / 2023–2025 wiped. Leftover-3× unique catalogs empty.
+**Live:** 24 doors (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). 2009 boarded. 2015 / 2018 / 2023–2025 wiped. Leftover-3× unique catalogs empty.
 
 A flow **passes** only if empty / trap never write, a finished visit writes **that** key, leftover never writes the star, and official dest leftover-2× first paint is 0.
 
@@ -26,7 +26,7 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | L5 | Official dest leftover-2× first paint 0 | [x] playable years (2009 boarded only) |
 | leftover-3× unique catalog | Empty | [x] `ITT.leftover3xUnique = {}` |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | 0 | [x] audit-mock-flows OK |
-| 5× | Only 2008 live + 2009 boarded | [x] 10 `data-5x-save` pages |
+| 5× | Only  live + 2009 boarded | [x] 10 `data-5x-save` pages |
 | Unique leftover-20 | Only 2017 and 2019 trails | [x] other years 0 leftover-trail 20 |
 
 ---
@@ -49,10 +49,8 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | **2005** | forest | HTML | YouTube upload | 10 | 10 | 91 | 806 | period set |
 | **2006** | forest | HTML | Twttr | 10 | 10 | 101 | 370 | period set |
 | **2007** | dest-lock lean | HTML | iPhone Safari | 10 | 0 | 5 | 33 | period set |
-| **2008** | forest | HTML | GitHub issue | 10 | 10 | 109 | 591 | period set |
 | **2009** | boarded | plaque | Facebook Like | 10 | 0 | 0 | 78 | period set |
 | **2010** | dest-lock lean | HTML | Instagram posts | 10 | 0 | 1 | 29 | 3–4 files |
-| **2011** | dest-lock lean | HTML | Google+ | 10 | 0 | 20 | 41 | readme-only |
 | **2012** | dest-lock lean | HTML | Instagram Android | 9 | 0 | 2 | 32 | readme-only |
 | **2013** | dest-true lean (Vine) | HTML | Vine 6s | 9 | 0 | 25 | 52 | readme-only |
 | **2014** | dest-lock lean + React official 9 | HTML + React | WhatsApp Install | 9 | 0 | 0 | 25 | readme-only |
@@ -1099,80 +1097,6 @@ None. Official trail ends at n=10. Do not dest-farm leftover-20.
 
 ---
 
-## 2008
-
-**Class:** forest  
-**Door:** `/years/2008/`  
-**Star:** GitHub issue `itt08-github`  
-**Dest folders:** 591  
-**leftover-2× unique dests:** 109  
-**leftover-3× unique catalog:** empty
-
-### Year law
-
-- [x] Hub card open
-- [x] One star `itt08-github`
-- [x] Guided Starting Point 6
-- [x] Official dest leftover-2× first paint 0
-- [x] Leftover-3× unique catalog empty
-- [x] Empty / trap never write the star
-- [x] Leftover never writes the star
-- [x] Official trail n=1–10
-- [x] No unique leftover-20 map added
-- [x] Live 5× F1–F5 (App Store, Chrome, Android, Hulu, Dropbox)
-
-### Official flows
-
-| n | Name | Key | Path | I/O |
-|--:|------|-----|------|:---:|
-| 1 | GitHub issue | `itt08-github` | `sites/github/issue.html` | [x] |
-| 2 | App Store | `itt08-apps` | `sites/appstore/index.html` | [x] |
-| 3 | Chrome | `itt08-chrome` | `sites/chrome/index.html` | [x] |
-| 4 | Android G1 | `itt08-android` | `sites/android/index.html` | [x] |
-| 5 | Hulu | `itt08-hulu` | `sites/hulu/index.html` | [x] |
-| 6 | Facebook | `itt08-facebook` | `sites/facebook/index.html` | [x] |
-| 7 | Twitter | `itt08-tweets` | `sites/twitter/index.html` | [x] |
-| 8 | YouTube | `itt08-yt` | `sites/youtube/index.html` | [x] |
-| 9 | Dropbox | `itt08-dropbox` | `sites/dropbox/index.html` | [x] |
-| 10 | iPhone 3G | `itt08-iphone3g` | `sites/iphone/index.html` | [x] |
-
-I/O for each official stop: empty never writes · trap never writes · finished visit writes that key · leftover panel not on first paint.
-
-### Leftover trail flows
-
-| n | Name | Key | Path | I/O |
-|--:|------|-----|------|:---:|
-| 11 | Google | `itt08-google-rlx` | `sites/google/index.html` | [x] |
-| 12 | Yahoo | `itt08-yahoo-rlx` | `sites/yahoo/index.html` | [x] |
-| 13 | Wikipedia | `itt08-wikipedia-rlx` | `sites/wikipedia/index.html` | [x] |
-| 14 | Gmail | `itt08-gmail-rlx` | `sites/gmail/index.html` | [x] |
-| 15 | Flickr | `itt08-flickr-rlx` | `sites/flickr/index.html` | [x] |
-| 16 | Reddit | `itt08-rd-lx` | `sites/reddit/index.html` | [x] |
-| 17 | Amazon | `itt08-amazon-rlx` | `sites/amazon/index.html` | [x] |
-| 18 | MySpace | `itt08-myspace-rlx` | `sites/myspace/index.html` | [x] |
-| 19 | del.icio.us | `itt08-delicious-rlx` | `sites/delicious/index.html` | [x] |
-| 20 | Stack Overflow | `itt08-so-lx` | `sites/stackoverflow/index.html` | [x] |
-
-I/O: empty never writes · trap never writes · finished visit writes leftover only · star stays empty.
-
-### leftover-2× unique dest links
-
-109 dests. One dest once. Links only. Official dest leftover-2× first paint 0. Dest-disjoint from official 10 and leftover trail.
-
-<details><summary>slugs</summary>
-
-`mashable`, `metafilter`, `digg`, `adsense`, `airbnb`, `altavista`, `ask`, `askjeeves`, `aws`, `blogdex`, `blogger`, `bloglines`, `bowienet`, `cnn`, `daypop`, `dmoz`, `docs`, `dropboxfolder`, `encarta`, `evernote`, `excite`, `feedburner`, `firefox`, `friendconnect`, `friendster`, `gamespot`, `gnutella`, `googlenews`, `googlevideo`, `grooveshark`, `groupon`, `hampsterdance`, `hotbot`, `housingmaps`, `huluwatch`, `icq`, `infoseek`, `isp`, `itunes`, `kazaa`, `lastfm`, `linkedin`, `loudcloud`, `macromedia`, `maps`, `milliondollar`, `moreover`, `movabletype`, `mozilla`, `msn`, `mtv`, `napster`, `netcenter`, `netscape`, `paypal`, `pets`, `phoenix`, `posterous`, `programmableweb`, `reader`, `skype`, `slashdot`, `spotify`, `spotifyeu`, `spotifyseed`, `startupfailures`, `steam`, `techcrunch`, `technorati`, `time-you`, `tumblr`, `wayback`, `web20conference`, `wired`, `wordpress`, `y2k`, `youvegotmail`, `zombo`, `memeorandum`, `ning`, `plurk`, `seesmic`, `scribd`, `recaptcha`, `kongregate`, `miniclip`, `newgrounds`, `piratebay`, `collegehumor`, `tweetdeck`, `failwhale`, `heroku`, `mint`, `tripadvisor`, `wikileaks`, `identica`, `cuil`, `gtaiv`, `bitbucket`, `huffpo`, `ars`, `engadget`, `mafiawars`, `html5`, `mobileme`, `ie8`, `failblog`, `yelp`, `bbc`
-
-</details>
-
-### Specs that cover this year
-
-- dest-true: `all-years-official-10-real.spec.js` official 10
-- leftover-2× unique links pack
-- 5× live specs
-
----
-
 ## 2009
 
 **Class:** boarded  
@@ -1273,67 +1197,6 @@ None. Official trail ends at n=10. Do not dest-farm leftover-20.
 <details><summary>slugs</summary>
 
 `path`
-
-</details>
-
-### Specs that cover this year
-
-- dest-true: `all-years-official-10-real.spec.js` official 10
-- leftover-2× unique links pack
-
----
-
-## 2011
-
-**Class:** dest-lock lean  
-**Door:** `/years/2011/`  
-**Star:** Google+ `itt11-gplus`  
-**Dest folders:** 41  
-**leftover-2× unique dests:** 20  
-**leftover-3× unique catalog:** empty
-
-### Year law
-
-- [x] Hub card open
-- [x] One star `itt11-gplus`
-- [x] Guided Starting Point 6
-- [x] Official dest leftover-2× first paint 0
-- [x] Leftover-3× unique catalog empty
-- [x] Empty / trap never write the star
-- [x] Leftover never writes the star
-- [x] Official trail n=1–10
-- [x] No unique leftover-20 map added
-- [x] No 5× pack
-- [x] Period assets readme-only · `[failed-final]` stays
-
-### Official flows
-
-| n | Name | Key | Path | I/O |
-|--:|------|-----|------|:---:|
-| 1 | Google+ | `itt11-gplus` | `sites/googleplus/index.html` | [x] |
-| 2 | Spotify US | `itt11-spotify` | `sites/spotify/index.html` | [x] |
-| 3 | Siri | `itt11-siri` | `sites/iphone/index.html` | [x] |
-| 4 | Timeline | `itt11-timeline` | `sites/facebook/index.html` | [x] |
-| 5 | iPad 2 | `itt11-ipad2` | `sites/ipad/index.html` | [x] |
-| 6 | Airbnb | `itt11-airbnb` | `sites/airbnb/index.html` | [x] |
-| 7 | IG iOS | `itt11-ig` | `sites/instagram/index.html` | [x] |
-| 8 | Twitter | `itt11-tweets` | `sites/twitter/index.html` | [x] |
-| 9 | Qwikster | `itt11-qwikster` | `sites/qwikster/index.html` | [x] |
-| 10 | Letter Swap | `itt11-game-letterswap` | `sites/playable/game.html` | [x] |
-
-I/O for each official stop: empty never writes · trap never writes · finished visit writes that key · leftover panel not on first paint.
-
-### Leftover trail flows
-
-None. Official trail ends at n=10. Do not dest-farm leftover-20.
-
-### leftover-2× unique dest links
-
-20 dests (2× of official 10). One dest once. Links only. Official dest leftover-2× first paint 0. Dest-disjoint from official 10 and leftover trail. Dests already on disk.
-
-<details><summary>slugs</summary>
-
-`chromebook`, `honeycomb`, `ics`, `temple`, `skyrim`, `nytpaywall`, `skypebuy`, `grouponipo`, `zyngaipo`, `googlewallet`, `nintendo3ds`, `psnhack`, `gowalla`, `snapchat`, `ios5`, `imessage`, `wechat`, `line`, `stripe`, `codecademy`
 
 </details>
 

@@ -1,12 +1,12 @@
 # Visitor 100% — dest-true flows, not dest-farm links
 
-**Date:** 2026-09-20  
+**Date:** 2026-09-27 
 **Status:** Implement map. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O law:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
 **Leftover list:** [`UNDONE.md`](UNDONE.md).  
-**Scan:** door **100%** · dest-true I/O **~87%** · look **~81%** · combined **~89%** of 28 playable years.
+**Scan:** door **100%** of **26** playable years · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 wiped.** **2018 wiped.** Leftover-3× unique catalogs are **empty**.
 
 **One-line law:** 100% is dest-true **flows** on dests already on disk. Dest-farm **links** (new dest folders, dest-lock revert of dest-lock years, leftover dest leftover-3× dest-farm extra dests as leftover-3× unique dest-true dests) fail I/O.
 
@@ -21,7 +21,7 @@ Do not dest-farm dests. Do not dest-lock 2015–2020 again. Do not dest-lock for
 | **Flows** | Official dest `data-official-need` · leftover-3× unique dest-true dests (one dest / one verb / one key) · star empty/trap never writes · cream leftover-3× unique dest-true leftover go 1 · period look / failed-final | **This is 100%.** |
 | **Links** | More dest folders · dest-farm leftover dest leftover-3× dest-farm extra dests · dest-lock revert of 2007 / 2010–2012 / 2014 / 2021 · leftover dest leftover-20 dest-farm on years that are not 2017 | **Fails I/O.** A year that looks full because it has 200 leftover dests has failed I/O. |
 
-Dest folders (2015 **213** · 2017 **222** · 2019 **170**) are dest-lock **reverted** leftover dest leftover-2× warehouse. They are **not** leftover-3× unique dest-true dests. They do not raise visitor 100%.
+2015 and 2018 are **wiped**. 2017 / 2019–2021 are **React doors** (0 HTML dest folders). Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
 
 ---
 
@@ -29,13 +29,13 @@ Dest folders (2015 **213** · 2017 **222** · 2019 **170**) are dest-lock **reve
 
 | Bar | Disk |
 |------|------|
-| Door | **28/28** playable years: hub card · year-shell · Starting Point · About · Map · star file · guided **6** · official 10 files |
+| Door | **26/26** playable years: hub card · year-shell or React door · Starting Point · About · Map · star file · guided **6** · official 10 files |
 | Official 10 hrefs | **0 missing** including 2012 / 2013 / 2014 / 2022 |
-| Official dest leftover-2× | **0** on 25/28 years (leftover: 1998 **1** · 2006 **3** · 2013 **1**) |
-| Leftover-3× unique dest-true dests | **98** matrix dests dest-true · leftover go **1** · empty never writes · leftover never writes the star |
-| Dest-farm leftover-3× CUT specs | Walk leftover-3× unique dest-true dests · **115 passed** |
+| Official dest leftover-2× | **0** on playable years (1998 / 2006 / 2013 leftover-2× first paint is warehouse, not visitor first paint) |
+| Leftover-3× unique dest-true dests | **0** · catalogs empty · leftover go **1** · empty never writes · leftover never writes the star |
+| Dest-farm leftover-3× CUT specs | Dest-true pack asserts the catalogs stay empty |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | **0** |
-| Wiped | **2023 · 2024 · 2025** no tree |
+| Wiped | **2015 · 2018 · 2023 · 2024 · 2025** no tree |
 | Boarded | **2009** plaque · tree stays · not a visitor door |
 
 ---
@@ -59,9 +59,9 @@ Dest folders (2015 **213** · 2017 **222** · 2019 **170**) are dest-lock **reve
 | 2013 | 1 | Same |
 | 2009 | 30 | Boarded · not a visitor door |
 
-### 3.4 Period look 2011–2022
+### 3.4 Period look –2022
 
-`assets/period/2010/` = **4** files. **2011–2022 = 0 files.** Failed-final on leftover dest leftover-3× unique dest-true dests is honest. Do not invent brand pixels.
+`assets/period/2010/` = **4** files. **–2022 = 0 files.** Failed-final on leftover dest leftover-3× unique dest-true dests is honest. Do not invent brand pixels.
 
 **Pass:** harvest a dated capture **or** keep `[failed-final]`. Look is L1–L5 in [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md). Do not dest-farm dests to “look full.”
 
@@ -127,7 +127,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
-| Forests 1994–2006 + 2008 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
+| Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
 | 2007 / 2010–2016 / 2019–2020 | **9** | Shipped |
 | 2017 | **0 leftover-3× unique dest-true dests** | Unique leftover-20 already shipped |
 | 2018 | **3** (first only) | Cannot pass 9 without new dests |
@@ -141,7 +141,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 ### Phase 0 — law / docs (no dest HTML)
 
-- [x] Strike stale 27 years / 2022 wiped / dest-lock 2015–2020 still on / 2021 dests 294 in READ-FIRST + YEAR-GAPS + FLOW-UNIMPLEMENTED + FLOW-IMPLEMENT-CHECKLIST A9. Hub **28 years**. **2022 live**. **2023–2025 wiped**.
+- [x] Strike stale 27 / 28 years. Hub **24 years**. **2015 wiped.** **2018 wiped.** **2022 live**. **2023–2025 wiped**.
 - [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015–2018 reverted · not dest-lock tickets).
 - [x] Link this file from [`docs/README.md`](README.md) + [`UNDONE.md`](UNDONE.md).
 
@@ -182,9 +182,9 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 - [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **18** · leftover-3× unique dest-true dests **5** · 2022 live.
 - [x] Failed-final + dest-true cites (ATT Apple Support · Signal is WhatsApp’s 15 May deadline · Copilot 29 Jun 2021 · Meta 28 Oct 2021 · Win11 4 Oct 2021 · Flash EOL 31 Dec 2020 / blocked 12 Jan 2021). No invented brand pixels.
 
-### Phase 5 — period harvest 2011–2022 (optional, honest)
+### Phase 5 — period harvest –2022 (optional, honest)
 
-- [x] Harvest or keep failed-final. Do not invent brand pixels. **2011–2022 harvest = 0 files.** Dest rooms stamp `[failed-final]` / `data-itt-capture-cite` (leftover-3× unique dest-true dests + official dests 2011–2022). Inventory: `assets/period/README-PIXELS.txt`.
+- [x] Harvest or keep failed-final. Do not invent brand pixels. **–2022 harvest = 0 files.** Dest rooms stamp `[failed-final]` / `data-itt-capture-cite` (leftover-3× unique dest-true dests + official dests –2022). Inventory: `assets/period/README-PIXELS.txt`.
 - [x] 2010 already has 4 period files (`foursquare/logo-wa.png` · `iphone/hero-4-wa.jpg` · `ipad/hero-wa.jpg` · README).
 
 ### Phase 6 — unique leftover-20 (only if named)
@@ -201,7 +201,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 - Dest-lock 2015–2020 again.
 - Dest-farm leftover dest leftover-3× unique dest-true dests on 2018 past 3 or 2021 past 5.
 - Dest-farm leftover dest leftover-3× dest-farm extra dests (facebook / hbonow / hqtrivia) as leftover-3× unique dest-true dests.
-- Unique leftover-3×n on forests 1994–2006 + 2008.
+- Unique leftover-3×n on forests 1994–2006.
 - Restore 2009 as a playable door.
 - Restore 2023–2025.
 - Invent brand pixels.
@@ -213,7 +213,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 | Bar | Now | 100% |
 |-----|-----|------|
-| Door A | **100%** 28/28 | Stay |
-| Dest-true I/O B | **~87%** | Official dest `data-official-need` **280/280** · leftover-3× unique dest-true dests dest-true + e2e (incl. 2022) · official dest leftover-2× **0** |
-| Look C | **~81%** | Star cite already 28/28 · period files **or** failed-final honest · 2021 ATT chrome dest-true |
+| Door A | **100%** 26/26 | Stay |
+| Dest-true I/O B | **~87%** | Official dest `data-official-need` on playable years · leftover-3× unique catalogs **empty** · official dest leftover-2× first paint **0** |
+| Look C | **~81%** | Star cite on playable years · period files **or** failed-final honest · 2021 ATT chrome dest-true |
 | Combined | **~89%** | **~100% visitor product without dest-farm dests** |

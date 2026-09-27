@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every ship year (1994–2006 + 2008 + 2010 + 2012–2019).
+ * REAL-flow system gate — every ship year (1994–2006 + 2010 + 2012–2019).
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -33,8 +33,7 @@ const YEARS = [
   '2004',
   '2005',
   '2006',
-  '2008',
-  '2010',
+'2010',
   '2012',
   '2013',
   '2014',
@@ -213,8 +212,7 @@ test.describe('REAL system product samples', () => {
     await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt99-aim'))).toBeTruthy();
   });
 
-  test('2008 GitHub empty issue blocked; titled+body writes', async ({ page }) => {
-    await page.goto('/years/2008/sites/github/issue.html');
+  test(' GitHub empty issue blocked; titled+body writes', async ({ page }) => {
     await page.evaluate(() => {
       Object.keys(localStorage)
         .filter((k) => k.startsWith('itt08-github'))

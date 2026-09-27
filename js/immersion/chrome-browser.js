@@ -1,5 +1,5 @@
 /**
- * Google Chrome 2008 — download / prefer theater (Windows-first)
+ * Google Chrome  — download / prefer theater (Windows-first)
  * Keys: itt08-chrome
  */
 (function (global) {
@@ -68,7 +68,7 @@
         o.year = yLabel || undefined;
         save(o);
         var era =
-          yLabel === "2008" || yLabel === "2009"
+          yLabel === "" || yLabel === "2009"
             ? "Windows beta/1.0 class"
             : yLabel
               ? "stable auto-update · " + yLabel

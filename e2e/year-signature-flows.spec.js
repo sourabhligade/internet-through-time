@@ -448,10 +448,10 @@ test.describe('year-signature 2006', () => {
   });
 });
 
-test.describe('year-signature 2008', () => {
+test.describe('year-signature ', () => {
   test('Chrome download theater → itt08-chrome', async ({ page }) => {
-    skipIfWiped('2008');
-    await enterYear(page, '2008');
+    skipIfWiped('');
+    await enterYear(page);
     await page.evaluate(() => {
       try {
         localStorage.removeItem('itt08-chrome');
@@ -459,7 +459,7 @@ test.describe('year-signature 2008', () => {
         /* */
       }
     });
-    await goImmersion(page, '2008', 'sites/chrome/index.html');
+    await goImmersion(page,'sites/chrome/index.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Chrome|beta|download/i, { timeout: 15000 });
     const dl = frame.locator('[data-chrome-download]');
@@ -476,8 +476,8 @@ test.describe('year-signature 2008', () => {
   });
 
   test('App Store install theater', async ({ page }) => {
-    skipIfWiped('2008');
-    await enterYear(page, '2008');
+    skipIfWiped('');
+    await enterYear(page);
     await page.evaluate(() => {
       try {
         localStorage.removeItem('itt08-apps');
@@ -485,7 +485,7 @@ test.describe('year-signature 2008', () => {
         /* */
       }
     });
-    await goImmersion(page, '2008', 'sites/appstore/index.html');
+    await goImmersion(page,'sites/appstore/index.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/App Store|app/i, { timeout: 15000 });
     await expect(frame.locator('[data-appstore-catalog]')).toBeVisible({ timeout: 15000 });
@@ -644,31 +644,6 @@ test.describe('year-signature 2010', () => {
     await frame.locator('[data-ig-share]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt10-ig')), { timeout: 8000 })
-      .toBeTruthy();
-  });
-});
-
-test.describe('year-signature 2011', () => {
-  test('Google+ Circles hangout REAL → itt11-gplus', async ({ page }) => {
-    skipIfWiped('2011');
-    await enterYear(page, '2011');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt11-gplus');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2011', 'sites/googleplus/index.html');
-    const frame = contentFrame(page);
-    await frame.locator('[data-gp11-hangout]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt11-gplus'))).toBeFalsy();
-    await frame.locator('[data-gp11-circle]').fill('Friends');
-    await frame.locator('[data-gp11-person="ada"]').click();
-    await frame.locator('[data-gp11-person="al"]').click();
-    await frame.locator('[data-gp11-hangout]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt11-gplus')), { timeout: 8000 })
       .toBeTruthy();
   });
 });

@@ -84,7 +84,7 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 
 - [x] F1 Dest-farm lock — optional; delete dests only in a named lock commit
 - [x] F2 Unique leftover-20 maps for 2013–2016 / 2018–2021 — no plan files; do not invent dests
-- [x] F3 Period assets 2011+ — 0 files; do not invent brand pixels
+- [x] F3 Period assets + — 0 files; do not invent brand pixels
 - [x] F4 18 leftover 2017 cites — failed-final on purpose
 - [x] F5 2009 Like as a live door — plaque is shipped
 - [x] F6 Add 2022+

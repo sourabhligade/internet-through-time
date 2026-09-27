@@ -19,10 +19,8 @@
     "2002": { machine: "Windows XP · Internet Explorer 6", star: "StumbleUpon", starHref: "sites/stumbleupon/index.html", game: "Room Sticky" },
     "2003": { machine: "Windows XP · Internet Explorer 6", star: "Photobucket", starHref: "sites/photobucket/index.html", game: "Gags Lite" },
     "2004": { machine: "Windows XP · Internet Explorer 6", star: "thefacebook networks", starHref: "sites/facebook/networks.html", game: "Cube Whack" },
-    "2008": { machine: "Windows XP · Internet Explorer 7", star: "GitHub issue", starHref: "sites/github/issue.html", game: "Tap Grid" },
     "2009": { machine: "Windows XP residual · IE8 (Win7 ships)", star: "Facebook Like", starHref: "sites/facebook/index.html", game: "Plot Neighbors" },
     "2010": { machine: "Windows 7 · Internet Explorer 8", star: "Instagram iOS", starHref: "sites/instagram/index.html", game: "Sling Nest" },
-    "2011": { machine: "Windows 7 · Internet Explorer 9", star: "Google+", starHref: "sites/googleplus/index.html", game: "Letter Swap" },
     "2012": { machine: "Windows 7 · Internet Explorer 9", star: "Instagram Android", starHref: "sites/instagram/android.html", game: "Guess Doodle" },
     "2005": { machine: "Windows XP · Internet Explorer 6", star: "YouTube upload", starHref: "sites/youtube/upload.html", game: "" },
     "2006": { machine: "Windows XP · Internet Explorer 6", star: "Twttr", starHref: "sites/twitter/index.html", game: "" },
@@ -62,7 +60,7 @@
     if (n <= 1994) return "a";
     if (n <= 1997) return "b";
     if (n <= 2000) return "c";
-    if (n <= 2008) return "d";
+    if (n <= 2007) return "d";
     if (n <= 2021) return "e";
     return "f";
   }
@@ -238,7 +236,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

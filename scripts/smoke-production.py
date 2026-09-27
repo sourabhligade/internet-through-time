@@ -84,14 +84,6 @@ def check_files() -> None:
         "years/2000/sites/napster/index.html",
         "years/2000/sites/pets/index.html",
         "assets/period/2000/amazon/logo-smile.gif",
-        "years/2008/index.html",
-        "years/2008/sites/appstore/index.html",
-        "years/2008/sites/chrome/index.html",
-        "years/2008/sites/android/index.html",
-        "years/2008/sites/hulu/index.html",
-        "years/2008/sites/dropbox/index.html",
-        "years/2008/sites/spotify/index.html",
-        "years/2008/sites/friendconnect/index.html",
         "js/immersion/spotify.js",
     ]
     for rel in required:
@@ -202,7 +194,6 @@ def check_http(base: str) -> None:
         "/years/2004/pages/home.html",
         "/years/2004/sites/gmail/index.html",
         "/years/2004/sites/firefox/index.html",
-        "/years/2008/",
         "/years/2010/",
         "/js/browser-core.js",
         "/js/immersion-core.js",

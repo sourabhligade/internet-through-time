@@ -70,6 +70,8 @@ npx playwright test \
   e2e/2021-mvp.spec.js \
   e2e/2022-mvp.spec.js \
   e2e/2022-flows.spec.js \
+  e2e/dest-top.spec.js \
+  e2e/follow-site.spec.js \
   --workers=2
 
 echo "==> CI OK"

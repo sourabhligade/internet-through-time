@@ -13,7 +13,6 @@ const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },
   2005: { file: 'game-2.html', gid: 'g2', key: 'itt05-game-g2', need: 2 },
   2010: { file: 'game-2.html', gid: 'igfilter', key: 'itt10-game-igfilter', need: 2 },
-  2011: { file: 'game-2.html', gid: 'siriline', key: 'itt11-game-siriline', need: 2 },
   2015: { file: 'game-2.html', gid: 'meerkathop', key: 'itt15-game-meerkathop', need: 2 },
   2016: { file: 'game-2.html', gid: 'story24', key: 'itt16-game-story24', need: 2 },
 };

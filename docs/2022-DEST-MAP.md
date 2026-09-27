@@ -66,7 +66,7 @@ Room + leftover-2× ×2. Empty / trap never write. Never `itt22-chatgpt`. e2e: l
 | [x] coinbase | coinbase-lx / coinbase-d2 | no live wallet |
 | [x] discord | discord-lx / discord-d2 | |
 | [x] edge | edge-lx / edge-d2 | |
-| [x] github | github-lx / github-d2 | issue gold is 2008 |
+| [x] github | github-lx / github-d2 | issue gold is  |
 | [x] layoffs | layoffs-lx / layoffs-d2 | literacy |
 | [x] linkedin | linkedin-lx / linkedin-d2 | |
 | [x] midjourney | midjourn-lx / midjourn-d2 | not ChatGPT gold |

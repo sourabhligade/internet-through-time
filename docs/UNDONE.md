@@ -4,7 +4,7 @@
 **Tree:** `museum/1994-2020-lean`  
 **Status:** Recheck vs disk. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Live:** 26 doors (1994–2008 and 2010–2014 plus 2016–2017 plus 2019–2022). 2009 boarded. 2015 wiped. 2018 wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.
+**Live:** 24 doors (1994–2007 and 2010 + 2012–2014 plus 2016–2017 plus 2019–2022).  wiped. 2009 boarded. 2015 wiped. 2018 wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.
 
 Rechecked 2026-09-26: dest folders · leftover-3× unique catalogs empty · official 10 files · official dest leftover-2× `data-lo-panel` 0 on playable years · period assets · dest-true 511 passed.
 
@@ -16,7 +16,7 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 
 | Item | Disk |
 |------|------|
-| **26 years open** (1994–2008 + 2010–2014 + 2016–2017 + 2019–2022) · 2009 boarded · 2015 wiped · 2018 wiped · 2023–2025 wiped | Hub · `DISK-TRUTH.md` |
+| **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022) · 2009 boarded · 2015 wiped · 2018 wiped · 2023–2025 wiped | Hub · `DISK-TRUTH.md` |
 | Official trail dests | `flow-trails.js` · `check-every-flow.py` **475 stops, 0 missing** |
 | Guided Starting Point exactly 6 | `ui/year/start-data.js` |
 | Dest-lock **reverted** 2016 HTML | dest folders **57** · **2015 wiped** |
@@ -35,7 +35,7 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 
 | Year | Dest-lock | Dest folders | Leftover-3× unique |
 |------|-----------|-------------:|--------------------|
-| 1994–2006 + 2008 | Never | forests (158–806) | Workshop stacked leftover-3× dest faces · catalog empty |
+| 1994–2006 | Never | forests (158–806) | Workshop stacked leftover-3× dest faces · catalog empty |
 | 2007 | **Still dest-lock** | **33** | **0** catalog |
 | 2009 | Boarded | **78** | Catalog empty · plaque |
 | 2010–2012 | **Still dest-lock** | **29 / 41 / 32** | **0** catalog · 2012 leftover-4× unique **3** (chrome · twitter · soundcloud) |
@@ -47,7 +47,7 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 | 2021 | **Still dest-lock** | React (0 HTML) | **0** catalog |
 | 2022 | Dest-true lean | **25** | **0** catalog |
 
-`scripts/dest_lock_lean.py` `LEAN` = `{2007, 2010, 2011, 2012, 2014, 2021, 2022}`. Do not dest-lock 2015–2020 again. Do not dest-lock forests / 2013.
+`scripts/dest_lock_lean.py` `LEAN` = `{2007, 2010, 2012, 2014, 2021, 2022}`. Do not dest-lock 2015–2020 again. Do not dest-lock forests / 2013.
 
 ---
 
@@ -61,9 +61,9 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 
 **Done.** Official dest leftover-2× `data-lo-panel` = **0** on playable official 10. 2009 boarded leftover-2× is not a visitor door.
 
-### 2.3 Period assets 2011–2022
+### 2.3 Period assets –2022
 
-`assets/period/2010/` has a few files. **2011–2022 = 0 image files.** `[failed-final]` stays honest. Do not invent brand pixels. Left readme-only on [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) step 3.
+`assets/period/2010/` has a few files. **–2022 = 0 image files.** `[failed-final]` stays honest. Do not invent brand pixels. Left readme-only on [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) step 3.
 
 ### 2.4 Leftover-3× unique dest-true
 
@@ -125,7 +125,7 @@ Warehouse leftover dest leftover-2× matrix, not leftover-3× unique dest-true d
 
 ## 6. Do next (order)
 
-1. Period assets 2011+ (0 files) — failed-final stays honest until harvest. Do not invent brand pixels.
+1. Period assets + (0 files) — failed-final stays honest until harvest. Do not invent brand pixels.
 2. Unique leftover-**20** maps for other years — **only if named**.
 
 **Not leftover:** dest-lock 2015–2020 · dest-farm leftover-3× unique dest-true dests · restore 2009 as a playable door · restore 2023+ · dest-farm dest-lock dests.

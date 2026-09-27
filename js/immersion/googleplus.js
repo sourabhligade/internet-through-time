@@ -1,5 +1,5 @@
 /**
- * Google+ 2011 — Circles · +1 · Hangouts offline theater (localStorage only)
+ * Google+  — Circles · +1 · Hangouts offline theater (localStorage only)
  */
 (function (global) {
   "use strict";
@@ -12,7 +12,7 @@
     return String(
       ITT._immersionYear ||
         (document.documentElement && document.documentElement.getAttribute("data-itt-year")) ||
-        "2011"
+        ""
     );
   }
   function key(kind) {
@@ -78,7 +78,7 @@
         saveJSON(key("gplus-circles-ack"), {
           multiStep: true,
           real: true,
-          year: "2011",
+          year: "",
           name: n,
           ts: Date.now()
         });
@@ -144,7 +144,7 @@
           "<span style='display:inline-block;width:48px;height:48px;background:#444;margin:6px;text-align:center;line-height:48px'>A</span>" +
           "<span style='display:inline-block;width:48px;height:48px;background:#555;margin:6px;text-align:center;line-height:48px'>S</span>" +
           "<span style='display:inline-block;width:48px;height:48px;background:#1a73e8;margin:6px;text-align:center;line-height:48px'>You</span>" +
-          "<p style='font-size:11px;color:#aaa'>Multi-person video in this browser only · no live camera · 2011 field-trial theater</p></div>";
+          "<p style='font-size:11px;color:#aaa'>Multi-person video in this browser only · no live camera ·  field-trial theater</p></div>";
         saveJSON(key("gplus-hangout"), session);
         setStatus("Hangout started with " + session.tiles.length + " people · saved.");
         try {

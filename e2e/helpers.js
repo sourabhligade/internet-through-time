@@ -6,7 +6,7 @@ const path = require("path");
 /** Boarded from the visitor UI. 2009 is a plaque (tree stays). 2023+ have no tree. */
 const BOARDED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
 /** Wiped years: no hub card, no HTML tree. */
-const WIPED_YEARS = new Set(["2015", "2018", "2023", "2024", "2025"]);
+const WIPED_YEARS = new Set(["2011", "2015", "2018", "2023", "2024", "2025"]);
 
 /** True when years/YYYY/... is on disk (dest-lock deletes workshop dests). */
 function destOnDisk(href) {
@@ -47,6 +47,7 @@ async function completeReactStop(page, room) {
 
 function isLiveYear(year) {
   const y = String(year);
+  if (!/^(199[4-9]|200[0-7]|201[0234679]|202[0-2])$/.test(y)) return false;
   return !BOARDED_YEARS.has(y) && !WIPED_YEARS.has(y);
 }
 
@@ -74,7 +75,7 @@ async function expectYearBoarded(page, year) {
     return;
   }
   await expect(page).toHaveURL(/\/(index\.html)?$/);
-  await expect(page.locator("body")).toContainText(/26 years open|27 years open|28 years open|boarded/i);
+  await expect(page.locator("body")).toContainText(/24 years open|27 years open|28 years open|boarded/i);
   await expect(page.locator("#dirbar")).toHaveCount(0);
 }
 

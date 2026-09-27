@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door from 2004 scaffold. Official dests are dest machines, not Type leftover plaques. Do **not** `git checkout` the wiped tree.  
-**URL corpus:** [`references/2005/harvest/URL-CORPUS-2005.txt`](references/2005/harvest/URL-CORPUS-2005.txt) — **43,732** unique (2026-09-10 restack; beats 2011’s 10,320)  
+**URL corpus:** [`references/2005/harvest/URL-CORPUS-2005.txt`](references/2005/harvest/URL-CORPUS-2005.txt) — **43,732** unique (2026-09-10 restack; beats ’s 10,320)  
 **Visit log:** [`references/2005/notes/VISIT-LOG-2026-08-31.txt`](references/2005/notes/VISIT-LOG-2026-08-31.txt)  
 **Parent:** 2004 (Thefacebook · Gmail invite · Flickr · Firefox 1.0). **Child:** 2006 (Twttr · News Feed · Google←YouTube) — **bans here**.
 
@@ -23,12 +23,12 @@
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | YouTube upload · Maps What/Where or drag · Pandora Create station · HousingMaps Refresh listings · Digg bury · Reddit boost · Flickr photostream Upload · iTunes Subscribe · TechCrunch Open this post · HoverChop start/crash. **Not leftover-note plaques.** |
 | First door | **full year**. Disk is **806** site folders · **966** HTML. Not a lean door. |
-| 2× leftover | **120** writers. Beat 2008’s **116**. |
+| 2× leftover | **120** writers. Beat ’s **116**. |
 | 5k-web | research envelope, not dest count. ILS June **includes 2005** (legal cell). |
 
 ## Size floor (neighbors on this branch)
 
-| Metric | 2004 | **2005 target** | 2008 |
+| Metric | 2004 | **2005 target** |  |
 |--------|-----:|----------------:|-----:|
 | HTML | 315 | **≥ 349** | 349 |
 | Site folders | 90 | **≥ 105** | 105 |

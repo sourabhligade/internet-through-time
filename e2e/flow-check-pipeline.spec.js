@@ -13,14 +13,13 @@ const LEAN = require("./lean-double-leftover.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
-  if (y === 2009 || y === 2015 || y === 2018) continue;
+ if ((y > 2007 && y < 2009) || y === 2009 || y === 2015 || y === 2018 || (y > 2010 && y < 2012)) continue;
   SHIP.push(String(y));
 }
 
 const LO3X_STOP = {
   2007: 0,
   2010: 0,
-  2011: 0,
   2012: 0,
   2013: 0,
   2014: 0,
@@ -62,10 +61,10 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
-  test("1 hub 26 cards · no 2009 · no 2015 · no 2018 · no 2023+", async ({ page }) => {
-    expect(SHIP).toHaveLength(26);
+ test("1 hub 24 cards · no 2009 · no 2015 · no 2018 · no 2023+", async ({ page }) => {
+ expect(SHIP).toHaveLength(24);
     await page.goto("/");
-    await expect(page.locator("body")).toContainText(/26 years open/i);
+ await expect(page.locator("body")).toContainText(/24 years open/i);
     const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {

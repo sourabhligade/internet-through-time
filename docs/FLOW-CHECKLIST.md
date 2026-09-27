@@ -23,10 +23,9 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 | 2004 | 151 | Use the files in `assets/period/2004/`. |
 | 2006 | 150 | Use the files in `assets/period/2006/`. |
 | 2007 | 150 | Use the files in `assets/period/2007/`. |
-| 2008 | 15 | Use the files in `assets/period/2008/`. |
 | 2009 | 17 | Use the files in `assets/period/2009/`. |
 | 2010 | 3 | Few captures. Do not fill the year with new art. |
-| 2011 | 0 | Readme only. Do not draw a logo. |
+|  | 0 | Readme only. Do not draw a logo. |
 | 2012 | 0 | Readme only. Do not draw a logo. |
 | 2013 | 0 | Readme only. Do not draw a logo. |
 | 2014 | 0 | Readme only. Do not draw a logo. |
@@ -39,16 +38,6 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 | 2022 | 0 | Readme only. Do not draw a logo. |
 
 ## 5× loops
-
-### 2008
-
-Pictures in `assets/period/2008/`: 15.
-
-- [ ] F1 App Store `itt08-appstore` — http://127.0.0.1:8080/years/2008/sites/appstore/index.html
-- [ ] F2 Chrome `itt08-chrome` — http://127.0.0.1:8080/years/2008/sites/chrome/index.html
-- [ ] F3 Android `itt08-g1` — http://127.0.0.1:8080/years/2008/sites/android/index.html
-- [ ] F4 Hulu `itt08-hulu` — http://127.0.0.1:8080/years/2008/sites/hulu/index.html
-- [ ] F5 Dropbox `itt08-db` — http://127.0.0.1:8080/years/2008/sites/dropbox/index.html
 
 ### 2009 (boarded year, loops are on the site pages)
 
@@ -380,31 +369,6 @@ Images: 150 in `assets/period/2006/`.
 - [ ] 19 · Digg `itt06-digg` — http://127.0.0.1:8080/years/2006/sites/digg/index.html
 - [ ] 20 · Maps `itt06-maps` — http://127.0.0.1:8080/years/2006/sites/maps/index.html
 
-### 2008
-
-Images: 15 in `assets/period/2008/`.
-
-- [ ] 1 · GitHub issue `itt08-github` — http://127.0.0.1:8080/years/2008/sites/github/issue.html
-- [ ] 2 · App Store `itt08-apps` — http://127.0.0.1:8080/years/2008/sites/appstore/index.html
-- [ ] 3 · Chrome `itt08-chrome` — http://127.0.0.1:8080/years/2008/sites/chrome/index.html
-- [ ] 4 · Android G1 `itt08-android` — http://127.0.0.1:8080/years/2008/sites/android/index.html
-- [ ] 5 · Hulu `itt08-hulu` — http://127.0.0.1:8080/years/2008/sites/hulu/index.html
-- [ ] 6 · Facebook `itt08-facebook` — http://127.0.0.1:8080/years/2008/sites/facebook/index.html
-- [ ] 7 · Twitter `itt08-tweets` — http://127.0.0.1:8080/years/2008/sites/twitter/index.html
-- [ ] 8 · YouTube `itt08-yt` — http://127.0.0.1:8080/years/2008/sites/youtube/index.html
-- [ ] 9 · Dropbox `itt08-dropbox` — http://127.0.0.1:8080/years/2008/sites/dropbox/index.html
-- [ ] 10 · iPhone 3G `itt08-iphone3g` — http://127.0.0.1:8080/years/2008/sites/iphone/index.html
-- [ ] 11 · Google `itt08-google-rlx` — http://127.0.0.1:8080/years/2008/sites/google/index.html
-- [ ] 12 · Yahoo `itt08-yahoo-rlx` — http://127.0.0.1:8080/years/2008/sites/yahoo/index.html
-- [ ] 13 · Wikipedia `itt08-wikipedia-rlx` — http://127.0.0.1:8080/years/2008/sites/wikipedia/index.html
-- [ ] 14 · Gmail `itt08-gmail-rlx` — http://127.0.0.1:8080/years/2008/sites/gmail/index.html
-- [ ] 15 · Flickr `itt08-flickr-rlx` — http://127.0.0.1:8080/years/2008/sites/flickr/index.html
-- [ ] 16 · Reddit `itt08-rd-lx` — http://127.0.0.1:8080/years/2008/sites/reddit/index.html
-- [ ] 17 · Amazon `itt08-amazon-rlx` — http://127.0.0.1:8080/years/2008/sites/amazon/index.html
-- [ ] 18 · MySpace `itt08-myspace-rlx` — http://127.0.0.1:8080/years/2008/sites/myspace/index.html
-- [ ] 19 · del.icio.us `itt08-delicious-rlx` — http://127.0.0.1:8080/years/2008/sites/delicious/index.html
-- [ ] 20 · Stack Overflow `itt08-so-lx` — http://127.0.0.1:8080/years/2008/sites/stackoverflow/index.html
-
 ### 2009
 
 Images: 17 in `assets/period/2009/`.
@@ -434,21 +398,6 @@ Images: 3 in `assets/period/2010/`.
 - [ ] 8 · Twitter `itt10-tweets` — http://127.0.0.1:8080/years/2010/sites/twitter/index.html
 - [ ] 9 · YouTube `itt10-yt` — http://127.0.0.1:8080/years/2010/sites/youtube/index.html
 - [ ] 10 · Sling Nest `itt10-game-slingnest` — http://127.0.0.1:8080/years/2010/sites/playable/game.html
-
-### 2011
-
-Images: none. `assets/period/2011/` is a readme only. Do not draw a logo for this year.
-
-- [ ] 1 · Google+ `itt11-gplus` — http://127.0.0.1:8080/years/2011/sites/googleplus/index.html
-- [ ] 2 · Spotify US `itt11-spotify` — http://127.0.0.1:8080/years/2011/sites/spotify/index.html
-- [ ] 3 · Siri `itt11-siri` — http://127.0.0.1:8080/years/2011/sites/iphone/index.html
-- [ ] 4 · Timeline `itt11-timeline` — http://127.0.0.1:8080/years/2011/sites/facebook/index.html
-- [ ] 5 · iPad 2 `itt11-ipad2` — http://127.0.0.1:8080/years/2011/sites/ipad/index.html
-- [ ] 6 · Airbnb `itt11-airbnb` — http://127.0.0.1:8080/years/2011/sites/airbnb/index.html
-- [ ] 7 · IG iOS `itt11-ig` — http://127.0.0.1:8080/years/2011/sites/instagram/index.html
-- [ ] 8 · Twitter `itt11-tweets` — http://127.0.0.1:8080/years/2011/sites/twitter/index.html
-- [ ] 9 · Qwikster `itt11-qwikster` — http://127.0.0.1:8080/years/2011/sites/qwikster/index.html
-- [ ] 10 · Letter Swap `itt11-game-letterswap` — http://127.0.0.1:8080/years/2011/sites/playable/game.html
 
 ### 2012
 

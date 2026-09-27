@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Working probe of the implement pass — leftover-trail writers, dest-true official,
- * 2011 extras, 2022 dest-first, 2019 one-key, year-lock chrome.
+ *  extras, 2022 dest-first, 2019 one-key, year-lock chrome.
  */
 const { test, expect } = require("@playwright/test");
 const { destOnDisk } = require("./helpers");
@@ -39,8 +39,7 @@ const FOREST = [
   { href: "/years/2000/sites/yahoo/index.html", suffix: "yahoo", star: "itt00-mapquest" },
   { href: "/years/2003/sites/yahoo/index.html", suffix: "yahoo", star: "itt03-photobucket" },
   { href: "/years/2006/sites/google/index.html", suffix: "google-q", star: "itt06-tweets" },
-  { href: "/years/2008/sites/google/index.html", suffix: "google-rlx", star: "itt08-github" },
-];
+  ];
 
 for (const row of FOREST) {
   test(`leftover-trail ${row.href} empty never writes · complete leftover only`, async ({ page }) => {
@@ -75,28 +74,6 @@ test("2002 KaZaA dest-true official empty never writes · complete writes itt02-
   expect(await getKey(page, "itt02-stumble")).toBeFalsy();
 });
 
-test("2011 Spotify extras attach · SKU+ticks write itt11-spotify · stream trap never", async ({ page }) => {
-  await page.goto("/years/2011/sites/spotify/index.html");
-  await page.evaluate(() => {
-    localStorage.removeItem("itt11-spotify");
-    localStorage.removeItem("itt11-gplus");
-  });
-  await page.reload();
-  await page.locator("[data-sp11-invite]").click();
-  expect(await getKey(page, "itt11-spotify")).toBeFalsy();
-  await page.locator("[data-sp11-stream]").first().click();
-  expect(await getKey(page, "itt11-spotify")).toBeFalsy();
-  await page.locator('[data-sp11-sku="premium"]').click();
-  const reqs = page.locator("[data-sp11-req]");
-  const n = await reqs.count();
-  for (let i = 0; i < n; i++) await reqs.nth(i).check();
-  await page.locator("[data-official-need]").fill("Play leftover");
-  await page.locator("[data-sp11-invite]").click();
-  await expect.poll(() => getKey(page, "itt11-spotify")).toBeTruthy();
-  expect(await getKey(page, "itt11-gplus")).toBeFalsy();
-});
-
-
 test("2005 Starting Point title is 2005 not 2004", async ({ page }) => {
   await page.goto("/years/2005/");
   const skip = page.locator("#skip-connect");
@@ -114,11 +91,3 @@ test("2006 dirbar names Twttr", async ({ page }) => {
   await expect(page.locator("body")).toContainText(/Twttr|Twitter/i);
 });
 
-test("2008 shell is IE7 + XP", async ({ page }) => {
-  await page.goto("/years/2008/");
-  const skip = page.locator("#skip-connect");
-  if (await skip.isVisible().catch(() => false)) await skip.click();
-  await expect(page.locator("body")).toHaveAttribute("data-itt-year", "2008");
-  await expect(page.locator("body")).toHaveClass(/browser-ie7/);
-  await expect(page.locator("body")).toHaveClass(/os-winxp/);
-});

@@ -35,7 +35,7 @@ Leftover trail 11–20: AOL · Apple · ESPN · HotWired · IBM · Infoseek · N
 - Stamp leftover-2× rails on official dests.  
 - Restore extra dest DROP `apple` as a unique dest (it is leftover trail n=12).  
 - Invent Lycos dest (Hosting.com June 1995 #9, no folder).  
-- Add 5× as live 1995 (live 5× is 2008; 2009 boarded plaque).
+- Add 5× as live 1995 (live 5× is ; 2009 boarded plaque).
 
 ---
 
@@ -75,7 +75,7 @@ Leftover dest missing leftover-2× rail: **`apple`** (trail n=12). Can host rail
 - Leftover trail dests exist. Excite stacks `itt95-excite-lx` **and** `itt95-excite-d2` (cream). IBM leftover key `ibm-dp` vs trail `itt95-ibm-dp`.  
 - Guided sells Amazon cart + AuctionWeb home; official n=1/2 are SSL form and laser bid. Strip `itt95-amazon` official key.  
 - Official 10 loops to SSL; leftover 20 nextLabel is “★ year gold”.  
-- Live 5× is 2008. Cut 5×/4× from the 1995 map so leftover 11–20 is visible.
+- Live 5× is . Cut 5×/4× from the 1995 map so leftover 11–20 is visible.
 
 ---
 

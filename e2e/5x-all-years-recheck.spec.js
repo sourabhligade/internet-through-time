@@ -71,7 +71,6 @@ async function tickChecks(page, n) {
 }
 
 const GOLD_HOMES = [
-  { year: 2008, star: 'sites/github/issue.html', chipMin: 4 },
   { year: 2010, star: 'sites/instagram/index.html', chipMin: 4 },
 ];
 
@@ -177,7 +176,7 @@ for (const yearPack of matrix.panel) {
   });
 }
 
-test.describe('gold 2008 + 2010 lock + chips live', () => {
+test.describe('gold  + 2010 lock + chips live', () => {
   for (const g of GOLD_HOMES) {
     test(`${g.year} guided 6 · chips live · star live`, async ({ page }) => {
       await page.goto(`/years/${g.year}/pages/home.html`);

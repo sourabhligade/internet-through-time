@@ -18,7 +18,6 @@ const CABINETS = {
   2002: { title: 'Room Sticky', id: 'roomsticky' },
   2003: { title: 'Gags Lite', id: 'gagslite' },
   2004: { title: 'Gem Cascade', id: 'gemcascade' },
-  2008: { title: 'Goo Span', id: 'goospan' },
 };
 
 const fs = require('fs');

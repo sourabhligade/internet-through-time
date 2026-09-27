@@ -75,18 +75,4 @@ test.describe("complex products · incomplete / persist", () => {
       .toMatch(/White Stripes/);
   });
 
-  test("GitHub issue empty body blocked", async ({ page }) => {
-    await page.goto("/years/2008/sites/github/issue.html");
-    await clearPrefix(page, "itt08-github");
-    await page.reload();
-    await page.waitForTimeout(400);
-    await page.fill("[name='title']", "Only a title");
-    await page.locator("form[data-gh-issue-form] button[type='submit']").click();
-    expect(await page.evaluate(() => localStorage.getItem("itt08-github-issues"))).toBeNull();
-    await page.fill("[name='body']", "Need a body");
-    await page.locator("form[data-gh-issue-form] button[type='submit']").click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem("itt08-github-issues")))
-      .toMatch(/Need a body/);
-  });
 });

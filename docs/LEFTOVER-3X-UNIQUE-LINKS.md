@@ -50,7 +50,7 @@ A year **fails** if any row is N.
 | **T8** | Leftover-20 | Only 2017. Skip leftover-3× unique dests on 2017 | leftover-3× unique dests on 2017 leftover-20 |
 | **T9** | Star | Leftover never writes the year star | leftover-3× unique dest **links** write gold |
 | **T10** | Dest-true leftover dest I/O | Leftover-3× unique dest-true dest counts stay · leftover dest KEEP dest-true leftover dest I/O stays | New leftover dest dest-true leftover dest I/O machines from leftover-3× unique dest **links** |
-| **T11** | Forests | Forests 1994–2006 + 2008 leftover-3× unique dest-true dests **not the forest job** (stacked workshop) | Dest-lock forests · unique leftover-3×n dest-farm |
+| **T11** | Forests | Forests 1994–2006 leftover-3× unique dest-true dests **not the forest job** (stacked workshop) | Dest-lock forests · unique leftover-3×n dest-farm |
 | **T12** | Boarded / wiped | 2009 skip · 2023–2025 skip | Un-board 2009 · restore wiped years |
 | **T13** | Cite | ADD dest has a year-true cite **and** dest on disk dest-disjoint from leftover-3× unique dests | Alphabetical dests-on-disk (`123-reg`) · invent dests |
 | **T14** | Not leftover-2× clone | leftover-3× unique dest **links** must not be leftover-2× unique dest rails pasted as leftover-3× unique dest pop-more | leftover-2× unique dest rail tagged `data-itt-pop-more` |
@@ -70,7 +70,7 @@ Alphabetical dests-on-disk fill is **out**. ADD dests must be famous that year *
 | Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007 / 2010–2012 / 2014 / 2016 / 2018 / 2021 / 2022 leftover dest KEEP dests on disk dest-disjoint. |
 | Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. 2013 extra dest KEEP **34** · 2015 extra dest KEEP **31** · 2019 extra dest KEEP **54**. |
 | Leftover-3× unique dest-true dests | [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) · `e2e/leftover-3x-unique.matrix.json` | KEEP original leftover-3× unique dests. 2018=**3** · 2021=**5** · 2017 leftover-20. |
-| Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2011 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ 2011 · IG Android 2012. |
+| Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012. |
 | Web Design Museum year galleries | https://www.webdesignmuseum.org/gallery/year-1995 | Period exhibits. Failed-final stays honest. |
 | 2017 leftover-20 | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Skip leftover-3× unique dests on 2017 leftover-20. |
 
@@ -86,11 +86,11 @@ Verified leftover dest KEEP dest-disjoint ADD dests (independently checked):
 |------|-------------------|------|
 | 2007 | `friendfeed` | FriendFeed launched Oct 2007 · [Cybercultural 2007](https://cybercultural.com/p/internet-2007/) · [FriendFeed](https://en.wikipedia.org/wiki/FriendFeed) |
 | 2010 | `flipboard` | Flipboard Jul 2010 · [Cybercultural 2010](https://cybercultural.com/p/internet-2010/) · [Flipboard launches](https://about.flipboard.com/press/flipboard-launches-worlds-first-social-magazine/) |
-| 2011 | `snapchat` | Snapchat Sep 2011 · [Cybercultural 2011](https://cybercultural.com/p/internet-2011/) · [Snapchat](https://en.wikipedia.org/wiki/Snapchat) |
+|  | `snapchat` | Snapchat Sep  · [Cybercultural ](https://cybercultural.com/p/internet-/) · [Snapchat](https://en.wikipedia.org/wiki/Snapchat) |
 | 2014 | leftover dest KEEP dest-disjoint **7**: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` | leftover dest dests on disk dest-disjoint leftover dest KEEP dest-true dests are these 7. Dest folders **25** = leftover-3× unique dests 9 + official dests 9 + leftover dest KEEP dest-disjoint 7 |
 | 2021 | leftover dest KEEP dest-disjoint **3**: `nft` `coinbaseipo` `epicapple` | Coinbase IPO Apr 2021. Dest folders **18** = leftover-3× unique dests 5 + official dests 10 + leftover dest KEEP dest-disjoint 3. leftover-3× unique dest-true dests stay **5** |
 
-Leftover dest KEEP dest-disjoint ADD dests in leftover-3× unique dest **links** §6 (2007 hackernews…pownce · 2010 hulu…ibooks · 2011 ios5…codecademy · 2012 tinder…googleplay · 2013 extra dest KEEP · 2015 extra dest KEEP · 2016 leftover dest KEEP · 2018 gplusgone epicstore ios12 · 2019 extra dest KEEP · 2020 clubhouse hbomax peacock · 2022 temu…m2) stay leftover dest KEEP dests on disk dest-disjoint. Extra dest KEEP ADD dests (2013 / 2015 / 2019) stay cited in [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
+Leftover dest KEEP dest-disjoint ADD dests in leftover-3× unique dest **links** §6 (2007 hackernews…pownce · 2010 hulu…ibooks ·  ios5…codecademy · 2012 tinder…googleplay · 2013 extra dest KEEP · 2015 extra dest KEEP · 2016 leftover dest KEEP · 2018 gplusgone epicstore ios12 · 2019 extra dest KEEP · 2020 clubhouse hbomax peacock · 2022 temu…m2) stay leftover dest KEEP dests on disk dest-disjoint. Extra dest KEEP ADD dests (2013 / 2015 / 2019) stay cited in [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
 
 ---
 
@@ -102,7 +102,7 @@ Metric: **unique dest slugs in leftover-3× unique dest rails** (hrefs). Leftove
 |------|--------------:|---------------------------------------:|---------------------------------:|----------------------------------------:|----------------------:|-----------------------------------------:|
 | 2007 | 33 | 9 | 14 | **18** | 9 | **9** |
 | 2010 | 29 | 9 | 10 | **18** | 9 | **9** |
-| 2011 | 41 | 9 | 22 | **18** | 9 | **9** |
+|  | 41 | 9 | 22 | **18** | 9 | **9** |
 | 2012 | 32 | 9 | 11 (leftover-4× unique dests out) | **18** | 9 | **9** |
 | 2013 | 52 | 9 | 34 | **18** | 9 | **9** |
 | 2014 | 25 | 9 | 7 | **18** | 9 | **9** |
@@ -114,7 +114,7 @@ Metric: **unique dest slugs in leftover-3× unique dest rails** (hrefs). Leftove
 | 2020 | 22 | 9 | 3 | **18** | 9 | **9** |
 | 2021 | 18 | **5** | 3 | **10** leftover-3× unique dest **links** | 5 | **5** |
 | 2022 | 25 | 9 | 6 | **18** | 9 | **9** |
-| Forests 1994–2006 + 2008 | dense | stacked workshop | — | **stop forests** | 0 | stacked workshop |
+| Forests 1994–2006 | dense | stacked workshop | — | **stop forests** | 0 | stacked workshop |
 | 2009 | 78 | boarded | — | **stop boarded** | 0 | — |
 | 2023–2025 | 0 | wiped | — | **stop wiped** | 0 | — |
 
@@ -144,7 +144,7 @@ Do not drop these leftover-3× unique dest-true dests. leftover-3× unique dest 
 |------|-------|--------|-------|------|
 | 2007 | `wiki` `myspace` `maps` | `ebay` `stumble` `wow` | `flickr` `reddit` `digg` | `itt07-iphone` |
 | 2010 | `netflix` `tumblr` `formspring` | `chrome` `wave` `android` | `reddit` `google` `groupon` | `itt10-ig-posts` |
-| 2011 | `icloud` `pinterest` `linkedin` | `kindlefire` `minecraft` `twitch` | `youtube` `dropbox` `hulu` | `itt11-gplus` |
+|  | `icloud` `pinterest` `linkedin` | `kindlefire` `minecraft` `twitch` | `youtube` `dropbox` `hulu` | `itt11-gplus` |
 | 2012 | `drawsomething` `googledrive` `snapchat` | `uber` `buzzfeed` `youtube` | `reddit` `surface` `windows8` | `itt12-ig-android` |
 | 2013 | `askfm` `whisper` `youtube` | `chrome` `medium` `yikyak` | `reddit` `facebook` `twitter` | `itt13-vine-posts` |
 | 2014 | `snapchat` `instagram` `uber` | `twitter` `musically14` `truecrypt` | `facebook` `wikipedia` `youtube` | `itt14-wa-install` |
@@ -180,12 +180,12 @@ Cites: Cybercultural 2010 · Angry Birds 2010 mass · Minecraft 2010.
 
 Leftover dest KEEP leftover dest-true stays dest-true leftover dest: `path`
 
-### 2011 — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt11-gplus`
+###  — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt11-gplus`
 
 KEEP original leftover-3× unique dests: `icloud` · `pinterest` · `linkedin` · `kindlefire` · `minecraft` · `twitch` · `youtube` · `dropbox` · `hulu`
 
 ADD leftover dest KEEP dest-disjoint: `snapchat` · `ios5` · `imessage` · `gmusic` · `pandora` · `wechat` · `line` · `stripe` · `codecademy`  
-Cites: Snapchat 2011 · Google Music 16 Nov 2011 (The Verge) · Pandora IPO Jun 2011 (TechCrunch) · iMessage iOS 5.
+Cites: Snapchat  · Google Music 16 Nov  (The Verge) · Pandora IPO Jun  (TechCrunch) · iMessage iOS 5.
 
 ### 2012 — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt12-ig-android`
 
@@ -318,7 +318,7 @@ Leftover dest leftover-3× unique dest-true dest check: http://127.0.0.1:8080/ye
 - [ ] Do not dest-farm dest folders.
 - [ ] Do not grow leftover-3× unique dest-true dests past **2018=3** / **2021=5**.
 - [ ] Do not leftover-3× unique dests on **2017** leftover-20.
-- [ ] Do not leftover-3× unique dest-true dests on forests 1994–2006 + 2008.
+- [ ] Do not leftover-3× unique dest-true dests on forests 1994–2006.
 - [ ] Do not dest-lock 2015–2020 / forests / 2013 / 2018 / 2022 again.
 - [ ] Do not un-board **2009**.
 - [ ] Do not restore **2023–2025**.

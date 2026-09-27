@@ -3,8 +3,8 @@
     {
       "id": "ebay",
       "name": "eBay",
-      "title": "eBay leftover \u2014 2007",
-      "why": "2007 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "eBay leftover — 2007",
+      "why": "2007 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Bid leftover",
       "ph": "ebay",
       "btn": "Bid leftover"
@@ -12,8 +12,8 @@
     {
       "id": "stumble",
       "name": "StumbleUpon",
-      "title": "StumbleUpon leftover \u2014 2007",
-      "why": "2007 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "StumbleUpon leftover — 2007",
+      "why": "2007 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Stumble leftover",
       "ph": "stumble",
       "btn": "Stumble leftover"
@@ -21,8 +21,8 @@
     {
       "id": "wow",
       "name": "World of Warcraft",
-      "title": "World of Warcraft leftover \u2014 2007",
-      "why": "2007 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "World of Warcraft leftover — 2007",
+      "why": "2007 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Log leftover",
       "ph": "wow",
       "btn": "Log leftover"
@@ -32,8 +32,8 @@
     {
       "id": "chrome",
       "name": "Chrome",
-      "title": "Chrome leftover \u2014 2010",
-      "why": "2010 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Chrome leftover — 2010",
+      "why": "2010 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Tab leftover",
       "ph": "chrome",
       "btn": "Tab leftover"
@@ -41,8 +41,8 @@
     {
       "id": "wave",
       "name": "Google Wave",
-      "title": "Google Wave leftover \u2014 2010",
-      "why": "2010 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Google Wave leftover — 2010",
+      "why": "2010 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Wave leftover",
       "ph": "wave",
       "btn": "Wave leftover"
@@ -50,48 +50,19 @@
     {
       "id": "android",
       "name": "Android",
-      "title": "Android leftover \u2014 2010",
-      "why": "2010 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Android leftover — 2010",
+      "why": "2010 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Froyo leftover",
       "ph": "android",
       "btn": "Froyo leftover"
-    }
-  ],
-  "2011": [
-    {
-      "id": "kindlefire",
-      "name": "Kindle Fire",
-      "title": "Kindle Fire leftover \u2014 2011",
-      "why": "2011 leftover-3\u00d7 second. Unique dest. Not the chip.",
-      "verb": "Silk leftover",
-      "ph": "kindlefire",
-      "btn": "Silk leftover"
-    },
-    {
-      "id": "minecraft",
-      "name": "Minecraft",
-      "title": "Minecraft leftover \u2014 2011",
-      "why": "2011 leftover-3\u00d7 second. Unique dest. Not the chip.",
-      "verb": "World leftover",
-      "ph": "minecraft",
-      "btn": "World leftover"
-    },
-    {
-      "id": "twitch",
-      "name": "Twitch",
-      "title": "Twitch leftover \u2014 2011",
-      "why": "2011 leftover-3\u00d7 second. Unique dest. Not the chip.",
-      "verb": "Watch leftover",
-      "ph": "twitch",
-      "btn": "Watch leftover"
     }
   ],
   "2012": [
     {
       "id": "uber",
       "name": "Uber",
-      "title": "Uber leftover \u2014 2012",
-      "why": "2012 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Uber leftover — 2012",
+      "why": "2012 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Ride leftover",
       "ph": "uber",
       "btn": "Ride leftover"
@@ -99,8 +70,8 @@
     {
       "id": "buzzfeed",
       "name": "BuzzFeed",
-      "title": "BuzzFeed leftover \u2014 2012",
-      "why": "2012 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "BuzzFeed leftover — 2012",
+      "why": "2012 leftover-3× second. Unique dest. Not the chip.",
       "verb": "List leftover",
       "ph": "buzzfeed",
       "btn": "List leftover"
@@ -108,8 +79,8 @@
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube leftover \u2014 2012",
-      "why": "2012 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "YouTube leftover — 2012",
+      "why": "2012 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Watch leftover",
       "ph": "youtube",
       "btn": "Watch leftover"
@@ -119,8 +90,8 @@
     {
       "id": "chrome",
       "name": "Chrome",
-      "title": "Chrome leftover \u2014 2013",
-      "why": "2013 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Chrome leftover — 2013",
+      "why": "2013 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Tab leftover",
       "ph": "chrome",
       "btn": "Tab leftover"
@@ -128,8 +99,8 @@
     {
       "id": "medium",
       "name": "Medium",
-      "title": "Medium leftover \u2014 2013",
-      "why": "2013 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Medium leftover — 2013",
+      "why": "2013 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Publish leftover",
       "ph": "medium",
       "btn": "Publish leftover"
@@ -137,8 +108,8 @@
     {
       "id": "yikyak",
       "name": "Yik Yak",
-      "title": "Yik Yak leftover \u2014 2013",
-      "why": "2013 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Yik Yak leftover — 2013",
+      "why": "2013 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Yak leftover",
       "ph": "yikyak",
       "btn": "Yak leftover"
@@ -148,8 +119,8 @@
     {
       "id": "twitter",
       "name": "Twitter",
-      "title": "Twitter leftover \u2014 2014",
-      "why": "2014 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Twitter leftover — 2014",
+      "why": "2014 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Tweet leftover",
       "ph": "twitter",
       "btn": "Tweet leftover"
@@ -157,8 +128,8 @@
     {
       "id": "musically14",
       "name": "musical.ly",
-      "title": "musical.ly leftover \u2014 2014",
-      "why": "2014 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "musical.ly leftover — 2014",
+      "why": "2014 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Clip leftover",
       "ph": "musically14",
       "btn": "Clip leftover"
@@ -166,8 +137,8 @@
     {
       "id": "truecrypt",
       "name": "TrueCrypt",
-      "title": "TrueCrypt leftover \u2014 2014",
-      "why": "2014 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "TrueCrypt leftover — 2014",
+      "why": "2014 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Volume leftover",
       "ph": "truecrypt",
       "btn": "Volume leftover"
@@ -177,8 +148,8 @@
     {
       "id": "meerkat",
       "name": "Meerkat",
-      "title": "Meerkat leftover \u2014 2015",
-      "why": "2015 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Meerkat leftover — 2015",
+      "why": "2015 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Go live leftover",
       "ph": "meerkat",
       "btn": "Go live leftover"
@@ -186,8 +157,8 @@
     {
       "id": "applemusicsub",
       "name": "Apple Music leftover",
-      "title": "Apple Music leftover leftover \u2014 2015",
-      "why": "2015 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Apple Music leftover leftover — 2015",
+      "why": "2015 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Trial leftover",
       "ph": "applemusicsub",
       "btn": "Trial leftover"
@@ -195,8 +166,8 @@
     {
       "id": "win10get",
       "name": "Get Windows 10",
-      "title": "Get Windows 10 leftover \u2014 2015",
-      "why": "2015 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Get Windows 10 leftover — 2015",
+      "why": "2015 leftover-3× second. Unique dest. Not the chip.",
       "verb": "GWX leftover",
       "ph": "win10get",
       "btn": "GWX leftover"
@@ -206,8 +177,8 @@
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube leftover \u2014 2016",
-      "why": "2016 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "YouTube leftover — 2016",
+      "why": "2016 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Watch leftover",
       "ph": "youtube",
       "btn": "Watch leftover"
@@ -215,8 +186,8 @@
     {
       "id": "alphago",
       "name": "AlphaGo",
-      "title": "AlphaGo leftover \u2014 2016",
-      "why": "2016 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "AlphaGo leftover — 2016",
+      "why": "2016 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Match leftover",
       "ph": "alphago",
       "btn": "Match leftover"
@@ -224,8 +195,8 @@
     {
       "id": "assistant",
       "name": "Assistant",
-      "title": "Assistant leftover \u2014 2016",
-      "why": "2016 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Assistant leftover — 2016",
+      "why": "2016 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Ask leftover",
       "ph": "assistant",
       "btn": "Ask leftover"
@@ -235,8 +206,8 @@
     {
       "id": "instagram",
       "name": "Instagram",
-      "title": "Instagram leftover \u2014 2019",
-      "why": "2019 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Instagram leftover — 2019",
+      "why": "2019 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Filter leftover",
       "ph": "instagram",
       "btn": "Filter leftover"
@@ -244,8 +215,8 @@
     {
       "id": "nyt",
       "name": "NYT leftover",
-      "title": "NYT leftover leftover \u2014 2019",
-      "why": "2019 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "NYT leftover leftover — 2019",
+      "why": "2019 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Headline leftover",
       "ph": "nyt",
       "btn": "Headline leftover"
@@ -253,8 +224,8 @@
     {
       "id": "oculusquest",
       "name": "Oculus Quest",
-      "title": "Oculus Quest leftover \u2014 2019",
-      "why": "2019 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Oculus Quest leftover — 2019",
+      "why": "2019 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Quest leftover",
       "ph": "oculusquest",
       "btn": "Quest leftover"
@@ -264,8 +235,8 @@
     {
       "id": "twitter",
       "name": "Twitter",
-      "title": "Twitter leftover \u2014 2021",
-      "why": "2021 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "Twitter leftover — 2021",
+      "why": "2021 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Tweet leftover",
       "ph": "twitter",
       "btn": "Tweet leftover"
@@ -273,8 +244,8 @@
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube leftover \u2014 2021",
-      "why": "2021 leftover-3\u00d7 second. Unique dest. Not the chip.",
+      "title": "YouTube leftover — 2021",
+      "why": "2021 leftover-3× second. Unique dest. Not the chip.",
       "verb": "Watch leftover",
       "ph": "youtube",
       "btn": "Watch leftover"

@@ -253,15 +253,6 @@ const SIGNATURE = {
       await form.locator('button[type="submit"]').click();
     },
   },
-  '2008': {
-    path: 'sites/appstore/index.html',
-    keySuffix: 'apps',
-    body: /App Store|app/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await twoStepInFrame(page, frame, '[data-appstore-install]');
-    },
-  },
   '2009': {
     path: 'sites/farmville/index.html',
     keySuffix: 'farm',
@@ -284,7 +275,7 @@ const SIGNATURE = {
       await share.click();
     },
   },
-  '2011': {
+  '': {
     path: 'sites/spotify/index.html',
     keySuffix: 'spotify-invited',
     body: /Spotify|United States|July 14/i,

@@ -3,7 +3,7 @@
 **Date:** 2026-09-26  
 **Branch:** `museum/1994-2020-lean`. This commit ships React-door atlas, dest-true 2017/2019 MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) and `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Live museum:** 26 doors (1994–2008, 2010–2014, 2016–2017, 2019–2022). 2009 is boarded. 2015, 2018, and 2023–2025 are wiped. Leftover-3× catalogs are empty.
+**Live museum:** 24 doors (1994–2007, 2010 + 2012–2014, 2016–2017, 2019–2022).  wiped. 2009 is boarded. 2015, 2018, and 2023–2025 are wiped. Leftover-3× catalogs are empty.
 
 Do the steps in order. A later step does not start while an earlier step is still open. Nothing here is a commit until step 8, and only if you ask for one.
 
@@ -13,7 +13,7 @@ Checked boxes are already true on disk. Unchecked boxes are the work.
 
 ## Already done (do not redo)
 
-- [x] Hub is 27 doors. 2009 stays boarded. 2018 and 2023–2025 stay wiped.
+- [x] Hub is 26 doors. 2009 stays boarded. 2015, 2018, and 2023–2025 stay wiped.
 - [x] 2017 and 2019 trails in `js/config/flow-trails.js` are 30 stops each. Stars stay Face ID (`itt17-faceid`) and Disney+ (`itt19-disneyplus`).
 - [x] 2019 leftover keys are one per page, ending in `-lx`. Apple Card is `itt19-applecard-lx`. The second `-d2` writer is gone.
 - [x] `e2e/2017-2019-leftover-20.spec.js` passed 42 tests. `e2e/2017-unique-flows.spec.js` passed 39. `e2e/implemented-flow-links.spec.js` passed 271. `e2e/lean-double-leftover.spec.js` passed 73.
@@ -162,13 +162,13 @@ These 34 are in the §2019 KEEP table and are not stops 11–30. They stay folde
 
 ---
 
-## Step 3 — Period pictures, 2011–2022
+## Step 3 — Period pictures, –2022
 
 Counted on disk 2026-09-24. 1994–2009 already have real image sets. 2010 has 3 images.
 
 | Year | Image files now | What to do |
 |------|----------------:|------------|
-| 2011 | 0 | [x] Left the readme. No file and cite to add |
+|  | 0 | [x] Left the readme. No file and cite to add |
 | 2012 | 0 | [x] Left the readme |
 | 2013 | 0 | [x] Left the readme |
 | 2014 | 0 | [x] Left the readme |
@@ -181,7 +181,7 @@ Counted on disk 2026-09-24. 1994–2009 already have real image sets. 2010 has 3
 | 2021 | 0 | [x] Left the readme |
 | 2022 | 0 | [x] Left the readme |
 
-- [x] No image file was added. 2011–2017 and 2019–2022 stay readme-only. 2018 has no folder.
+- [x] No image file was added. –2017 and 2019–2022 stay readme-only. 2018 has no folder.
 - [x] No brand mark was drawn.
 - [x] A page with no capture keeps `[failed-final]`.
 
@@ -236,9 +236,9 @@ These files are the research. They are not a license to add folders.
 
 | Class | Years | Rule |
 |-------|-------|------|
-| Double | 2007, 2010, 2011, 2012, 2014, 2016, 2021, 2022 | A new leftover dest only with a cite, year-true fame, and a slug that is not already used. One folder, one verb, one key `ittYY-<slug>-lx`. |
+| Double | 2007, 2010, 2012, 2014, 2016, 2021, 2022 | A new leftover dest only with a cite, year-true fame, and a slug that is not already used. One folder, one verb, one key `ittYY-<slug>-lx`. |
 | Holes only | 2013, 2020 | A row only when a cite names a real hole. |
-| Stop | Forests 1994–2006 and 2008, boarded 2009, dense 2015 / 2017 / 2019, wiped 2018 and 2023–2025 | No new destinations. |
+| Stop | Forests 1994–2006 and , boarded 2009, dense 2015 / 2017 / 2019, wiped 2018 and 2023–2025 | No new destinations. |
 
 Room under the cap, from the phases file (live folders / cap):
 
@@ -246,7 +246,7 @@ Room under the cap, from the phases file (live folders / cap):
 |------|-----:|----:|-----:|----------------|
 | 2007 | 33 | 46 | 13 | [x] Nothing added |
 | 2010 | 29 | 44 | 15 | [x] Nothing added |
-| 2011 | 41 | 62 | 21 | [x] Nothing added |
+|  | 41 | 62 | 21 | [x] Nothing added |
 | 2012 | 32 | 48 | 16 | [x] Nothing added |
 | 2013 | 47 | 54 | 7 | [x] No hole added |
 | 2014 | 25 | 36 | 11 | [x] Nothing added |
@@ -287,16 +287,16 @@ No year-true cite was found for a destination that is not already on these trail
 
 ## Step 7 — Docs that still describe an older museum
 
-Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 27 doors, 2009 boarded, 2018 wiped, leftover-3× catalogs empty.
+Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 26 doors, 2009 boarded, 2015 wiped, 2018 wiped, leftover-3× catalogs empty.
 
-- [x] [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) year list is 27 doors. 2018 is the wiped research model.
+- [x] [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) year list is 26 doors. 2018 is the wiped research model.
 - [x] [`UNDONE.md`](UNDONE.md) §1 splits 2018 out as wiped. Live leftover-3× catalogs stay empty.
 - [x] [`2017-2019-2X-FLOWS-RESEARCH.md`](2017-2019-2X-FLOWS-RESEARCH.md) header says 30 stops.
 - [x] [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §7 lists the page URL for each leftover stop.
 - [x] [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) header and §2019 step 1 allow the wired 2019 stops 11–30 and forbid a 31st.
 - [x] [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) keeps the 2018 research tables and marks them wiped. The scorecard row is 0 on disk, aim 26.
 - [x] Root [`README.md`](../README.md) 2018 row says wiped.
-- [x] [`SOURCES.md`](SOURCES.md) and [`docs/README.md`](README.md) say 27 years and 2018 wiped.
+- [x] [`SOURCES.md`](SOURCES.md) and [`docs/README.md`](README.md) say 25 years and 2015 / 2018 wiped.
 
 **Done when:** a reader of those files gets the same year list as the hub.
 

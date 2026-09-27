@@ -176,7 +176,7 @@ test.describe("leftover-2× unique dest links", () => {
     expect(byYear["1999"]).toBe(138);
     expect(byYear["2000"]).toBeGreaterThanOrEqual(70);
     expect(byYear["2007"]).toBe(14);
-    expect(byYear["2011"]).toBe(20);
+    expect(byYear[""]).toBe(20);
     expect(byYear["2013"]).toBe(25);
     expect(byYear["2018"]).toBeUndefined();
     expect(byYear["2022"]).toBe(12);
@@ -348,28 +348,6 @@ test.describe("leftover-2× unique dest links", () => {
     expect(slugs).not.toContain("ebay");
 
     await page.goto("/years/2007/sites/iphone/index.html");
-    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
-  });
-
-  test("2011 leftover-2× unique dests 20 · official dest leftover-2× first paint 0", async ({ page }) => {
-    await page.goto("/years/2011/sites/snapchat/index.html");
-    await expect(page.locator("[data-itt-2x-links]")).toHaveCount(1);
-    const hrefs = await page.locator("[data-itt-2x-links] a").evaluateAll((as) =>
-      as.map((a) => a.getAttribute("href") || "")
-    );
-    const slugs = hrefs.map(destSlug).filter(Boolean);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs.length).toBe(19);
-    expect(slugs).toContain("codecademy");
-    expect(slugs).toContain("ios5");
-    expect(slugs).not.toContain("snapchat");
-    expect(slugs).not.toContain("googleplus");
-    hrefs.forEach((h) => {
-      const slug = destSlug(h);
-      expect(fs.existsSync(path.join(ROOT, "years", "2011", "sites", slug, "index.html")), slug).toBe(true);
-    });
-
-    await page.goto("/years/2011/sites/googleplus/index.html");
     await expect(page.locator("[data-itt-2x-links]")).toHaveCount(0);
   });
 

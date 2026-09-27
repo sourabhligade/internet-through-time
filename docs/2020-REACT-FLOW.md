@@ -108,6 +108,6 @@ Order:
 | 25 | PayPal crypto | Buy | 21 Oct 2020 | https://newsroom.paypal-corp.com/2020-10-21-PayPal-Launches-New-Service-Enabling-Users-to-Buy-Hold-and-Sell-Cryptocurrency |
 | 26 | Google News Showcase | Read | 1 Oct 2020 | https://blog.google/company-news/outreach-and-initiatives/google-news-initiative/google-news-showcase/ |
 
-Dropped: Coinbase, Figma, HBO Max, Notion, Peacock, and Robinhood had no cite row in the five-thousand-site note. Robinhood’s buy limit is 28 Jan 2021. Airbnb stays on the 2011 key. Clubhouse had no 2020 public-launch post. Slack Connect and Skype Meet Now had no company post opened. Quibi, Byte, and Genshin had no primary page opened in this pass.
+Dropped: Coinbase, Figma, HBO Max, Notion, Peacock, and Robinhood had no cite row in the five-thousand-site note. Robinhood’s buy limit is 28 Jan 2021. Airbnb stays on the  key. Clubhouse had no 2020 public-launch post. Slack Connect and Skype Meet Now had no company post opened. Quibi, Byte, and Genshin had no primary page opened in this pass.
 
 Holds before any of these become a screen: Messenger Rooms rolled out in some countries that week, not worldwide on 24 Apr. Amazon Live itself started in 2019; the September page is a Prime Day feature. The Chrome cookie day is the Wayback capture time, not a byline printed on the live post. PayPal merchant checkout is early 2021. Only the US buy, hold, and sell date is 2020.

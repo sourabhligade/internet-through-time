@@ -16,7 +16,6 @@ ROOT = Path(__file__).resolve().parents[1]
 STAR = {
     "2007": ("iPhone Safari", "itt07-iphone"),
     "2010": ("Instagram iOS", "itt10-ig-posts"),
-    "2011": ("Google+", "itt11-gplus"),
     "2012": ("Instagram Android", "itt12-ig-android"),
     "2013": ("Vine 6s", "itt13-vine-posts"),
     "2014": ("WhatsApp Install", "itt14-wa-install"),
@@ -40,11 +39,6 @@ UNIQUE = {
         "first": ["netflix", "tumblr", "formspring"],
         "second": ["chrome", "wave", "android"],
         "third": ["reddit", "google", "groupon"],
-    },
-    "2011": {
-        "first": ["icloud", "pinterest", "linkedin"],
-        "second": ["kindlefire", "minecraft", "twitch"],
-        "third": ["youtube", "dropbox", "hulu"],
     },
     "2012": {
         "first": ["drawsomething", "googledrive", "snapchat"],
@@ -522,7 +516,7 @@ def main() -> None:
     rewrite_matrix(
         ROOT / "e2e" / "2010-2015-leftover-3x.matrix.json",
         all_rows,
-        {"2010", "2011", "2012", "2014", "2015"},
+        {"2010", "2012", "2014", "2015"},
     )
     rewrite_matrix(
         ROOT / "e2e" / "2016-2019-leftover-3x.matrix.json",

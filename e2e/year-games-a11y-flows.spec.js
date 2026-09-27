@@ -9,7 +9,7 @@ const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helper
 
 const WIPED = new Set(['2009', '2022', '2023', '2024', '2025']);
 const YEARS = [];
-for (let y = 1994; y <= 2011; y++) {
+for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
   if (!WIPED.has(s)) YEARS.push(s);
 }
@@ -24,10 +24,9 @@ const FLOW = {
   '1999': { id: 'petdash', primary: '[data-feed]', flow: 'click-primary' },
   '2000': { id: 'lotlife', primary: '[data-game-start]', flow: 'literacy' },
   '2004': { id: 'gemcascade', primary: '[data-game-start]', flow: 'click-start' },
-  '2008': { id: 'goospan', primary: '[data-game-start]', flow: 'click-start' },
   '2009': { id: 'plot', primary: '[data-game-start]', flow: 'plant' },
   '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
-  '2011': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
+  '': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
   '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
   '2018': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
 };
@@ -155,7 +154,7 @@ test.describe('Year games — each flow + UI accessible', () => {
 });
 
 test.describe('Playables lobby a11y smoke (sample years)', () => {
-  for (const year of ['1994', '2000', '2004', '2008']) {
+  for (const year of ['1994', '2000', '2004']) {
     test(`${year} playable lobby has heading and cabinet`, async ({ page }) => {
       await enterYear(page, year);
       await goImmersion(page, year, 'sites/playable/index.html');

@@ -47,7 +47,6 @@ Leftover-trail stops in `js/config/flow-trails.js` at n≥11 whose `years/YYYY/s
 | 2004 | google (n=11), yahoo (n=12), amazon (n=13), ebay (n=14), wikipedia (n=16) |
 | 2005 | google (n=11), yahoo (n=12), amazon (n=13), facebook (n=14), wikipedia (n=17) |
 | 2006 | google (n=11), yahoo (n=12), amazon (n=13), reddit (n=17) |
-| 2008 | google (n=11), yahoo (n=12), wikipedia (n=13), reddit (n=16), amazon (n=17) |
 
 Nearby folders are different rooms. Checked on disk: `yahoomail` / `yahoofinance` are not `yahoo`, `googlenews` is not `google`, `amazonipo` is not `amazon`, `amazonvod` is not `amazon`, `ie3` is not `microsoft`.
 
@@ -94,7 +93,7 @@ These dests are already on disk, not on that year’s trail, and were named by t
 
 ### Cybercultural year essays
 
-All of these loaded, including `https://cybercultural.com/p/internet-2008/` and the GeoCities 1995 and Google 1999 essays. A brand is listed only when that essay places a public site in that calendar year.
+All of these loaded, including `https://cybercultural.com/p/internet-/` and the GeoCities 1995 and Google 1999 essays. A brand is listed only when that essay places a public site in that calendar year.
 
 | Brand | First year the essay places a public site |
 |-------|------------------------------------------|
@@ -108,7 +107,7 @@ All of these loaded, including `https://cybercultural.com/p/internet-2008/` and 
 | Wikipedia | 15 January 2001 |
 | Facebook | 2004 at Harvard. Open registration is in the 2006 essay. The 2005 essay says it was still for students. |
 | Reddit | June 2005 |
-| Netflix | 2007, as DVD rental plus a limited stream. The 2008 essay adds unlimited streaming for disc subscribers. The 1996 essay uses Netflix only as a later analogy. |
+| Netflix | 2007, as DVD rental plus a limited stream. The  essay adds unlimited streaming for disc subscribers. The 1996 essay uses Netflix only as a later analogy. |
 
 The 2000 essay did not place any of these eleven brands. That is a gap in that essay, not a claim they had no site.
 
@@ -161,7 +160,7 @@ Apple, Microsoft, Google, eBay, Wikipedia, Netflix, Facebook, and Reddit were no
 
 - Wikipedia’s [list of websites founded before 1995](https://en.wikipedia.org/wiki/List_of_websites_founded_before_1995) was reported to treat apple.com and an early Microsoft corporate site as 1994 sites. That disagrees with the Cybercultural 1994 essay, which places Yahoo and does not place apple.com. Both reports were unverified against each other.
 - Wikipedia’s Netflix article was reported to date the public website to 14 April 1998, which would leave the 1997 Netflix trail stop without a 1997 public site. Internet Live Stats still lists a 1997 launch with no streaming claim.
-- Hosting.com’s June tables were reported to rank Yahoo and GeoCities in the 1997 top 10, and Yahoo, Google, eBay, and Amazon in 2002. Wikipedia and Reddit were reported absent from the 2002 and 2008 top 10s retrieved there.
+- Hosting.com’s June tables were reported to rank Yahoo and GeoCities in the 1997 top 10, and Yahoo, Google, eBay, and Amazon in 2002. Wikipedia and Reddit were reported absent from the 2002 and  top 10s retrieved there.
 - The category title “Websites established in 2001” (and the same title for 1999, 2000, 2002, 2003, 2004) was reported missing on English Wikipedia. The live category name reported back is “Internet properties established in” that year. `docs/2x-harvest-c-2003.md` already records the 2003 title as missing.
 - One reader reported that `https://www.webdesignmuseum.org/years/1995` is the live 1995 index and lists Amazon, Yahoo, GeoCities, CNN, the White House, and Apple, while `/gallery/year-1995` is not. Another reader could not open `/gallery/year-1995` (403). Those two reports were not reconciled.
 - Cybercultural’s 2003 essay was reported not to name several brands that `docs/2x-harvest-c-2003.md` cites that URL for (MetaFilter, NeoPets, Homestar Runner, and others in that claim).
@@ -192,9 +191,8 @@ The first draft of this note kept names and dates. This section is the rest of w
 | `years/1997/sites/amazonipo/index.html` | “Amazon IPO — 1997”, May 1997, not the smile logo. Not a trail href. The missing n=11 stop is `sites/amazon/index.html` with `whenKey` `itt97-amzn-ipo`. | The bookstore slug `amazon`. This is the one room the key already names. |
 | `years/2002/sites/googlenews/index.html` | Google News BETA, Sep 2002. Already trail n=16. | `sites/google/index.html` (trail n=13, folder absent) |
 | `years/2002/sites/wiktionary/index.html` | Wiktionary, a sister leftover. Not a 2002 trail href. | `sites/wikipedia/index.html` |
-| `years/2008/sites/amazonvod/index.html` | Amazon Video on Demand / Unbox. Not a trail href. | `sites/amazon/index.html` (trail n=17, folder absent) |
 
-Other same-year stand-ins that were looked for and not found: no `lycos` in 1995; no `geocities` in 1997–2000 (`angelfire` and `tripod` are other hosts); no `facebook` or `thefacebook` in 2005; no `reddit` in 2006 or 2008; no `auctionweb` or `half` standing in for missing `ebay` in 2001, 2002, or 2004.
+Other same-year stand-ins that were looked for and not found: no `lycos` in 1995; no `geocities` in 1997–2000 (`angelfire` and `tripod` are other hosts); no `facebook` or `thefacebook` in 2005; no `reddit` in 2006 or ; no `auctionweb` or `half` standing in for missing `ebay` in 2001, 2002, or 2004.
 
 `years/2014/sites/google`, `years/2018/sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2020 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
 
@@ -251,9 +249,8 @@ From [the most visited websites every year since 1995](https://hosting.com/blog/
 | 2002 | Yahoo.com #1, Google.com #4, eBay.com #5, Amazon.com #7. Wikipedia and Reddit not in that top 10. |
 | 2003 | Yahoo, MSN, Google, AOL, eBay, Amazon, Ask, BBC, Walmart, CNET. |
 | 2005 | Yahoo ~6.2 billion, Google ~2.98 billion, MSN ~1.73 billion, MySpace at #9. |
-| 2008 | Google.com #1, Yahoo.com #2, Amazon.com #7. Wikipedia and Reddit not in that top 10. |
 
-The same pass said Hosting.com’s mid-1990s ranks name MSN.com, not microsoft.com, so 1996 `microsoft` was not shown by an opened page. It also said Wikipedia’s first Hosting.com top-10 appearance in that article is 2006, which does not date a Wikipedia homepage for 2002, 2003, 2004, 2005, or 2008.
+The same pass said Hosting.com’s mid-1990s ranks name MSN.com, not microsoft.com, so 1996 `microsoft` was not shown by an opened page. It also said Wikipedia’s first Hosting.com top-10 appearance in that article is 2006, which does not date a Wikipedia homepage for 2002, 2003, 2004, 2005, or .
 
 ### 7.5 Launch dates that cut against a trail stop (unverified)
 
@@ -262,7 +259,7 @@ The same pass said Hosting.com’s mid-1990s ranks name MSN.com, not microsoft.c
 | 1997 `netflix` | [Wikipedia: Netflix](https://en.wikipedia.org/wiki/Netflix) dates the public DVD-by-mail site to 14 April 1998. That does not show a 1997 public site. Internet Live Stats still lists Netflix in a 1997 launch column with no streaming sentence. Cybercultural’s 1997 essay does not place Netflix. |
 | 1994 `apple`, 1994 `microsoft` | [List of websites founded before 1995](https://en.wikipedia.org/wiki/List_of_websites_founded_before_1995) was reported to treat apple.com and an early Microsoft corporate site as 1994 sites. The Cybercultural 1994 essay does not. Both reports stand unverified against each other. The same Wikipedia list was reported to include Yahoo and not to give Amazon or GeoCities their own entries. |
 | 1995 `apple` | Web Design Museum’s first-versions exhibition was reported to include an Apple website dated 1995. That exhibition URL returned 403 to the bibliography checker. |
-| 2002 `netflix`, 2006 `reddit`, 2008 `reddit` | No year-dated capture of those sites is in the opened `SOURCES.md` Wayback list. The Reddit capture that did open is 25 July 2005. |
+| 2002 `netflix`, 2006 `reddit`,  `reddit` | No year-dated capture of those sites is in the opened `SOURCES.md` Wayback list. The Reddit capture that did open is 25 July 2005. |
 | Amazon IPO cite for the 1997 retarget | Search snippets, not a full fetch, for the 15 May 1997 S-1 (3 million shares at $18, Nasdaq AMZN): `https://www.sec.gov/Archives/edgar/data/1018724/0000891020-97-000868.txt` and [History of Amazon](https://en.wikipedia.org/wiki/History_of_Amazon). |
 
 ### 7.6 Bibliography URLs that do not say what the harvest docs cite them for (unverified)

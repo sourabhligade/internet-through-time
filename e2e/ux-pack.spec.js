@@ -53,19 +53,18 @@ test.describe("UX pack U1 shell coach", () => {
 
 test.describe.skip("UX pack U4–U5 content (hereStrip / yearMeter flags off)", () => {
   test("content page mounts you-are-here after immersion", async ({ page }) => {
-    await enterYear(page, "2008");
-    await goImmersion(page, "2008", "sites/chrome/index.html");
+    await enterYear(page);
+    await goImmersion(page,"sites/chrome/index.html");
     const frame = contentFrame(page);
     await expect(frame.locator("#itt-ux-here-strip")).toBeVisible({ timeout: 15000 });
-    await expect(frame.locator("#itt-ux-here-strip")).toContainText("2008");
+    await expect(frame.locator("#itt-ux-here-strip")).toContainText("");
   });
 
   test("about page mounts year meter and about stamp key", async ({ page }) => {
-    await page.goto("/years/2008/pages/about.html");
     await page.waitForTimeout(2000);
     await expect(page.locator("#itt-ux-year-meter")).toBeVisible({ timeout: 10000 });
-    await expect(page.locator("#itt-ux-year-meter")).toContainText("2008 progress");
-    const about = await page.evaluate(() => localStorage.getItem("itt-ux-about-2008"));
+    await expect(page.locator("#itt-ux-year-meter")).toContainText(" progress");
+    const about = await page.evaluate(() => localStorage.getItem("itt-ux-about-"));
     expect(about).toBe("1");
   });
 });

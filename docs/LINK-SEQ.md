@@ -20,9 +20,9 @@ Dest folders must already exist. Do not dest-farm.
 Edit `js/config/link-seqs.js`:
 
 ```js
-ITT.linkSeqs["2011-phones"] = {
-  year: "2011",
-  title: "2011 phones",
+ITT.linkSeqs["-phones"] = {
+  year: "",
+  title: " phones",
   dests: [
     { id: "ios5", name: "iOS 5 leftover" },
     { id: "imessage", name: "iMessage leftover" }

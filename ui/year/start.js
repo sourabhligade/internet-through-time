@@ -597,10 +597,7 @@
     }
     for (i = 0; i < kids.length; i++) {
       n = kids[i];
-      if (n && n.nodeType === 1 && /(?:^|\s)itt-2x-2008(?:-[abc])?(?:\s|$)/.test(n.className || "")) {
-        if (extra.parentNode) extra.parentNode.insertBefore(n, extra);
-      }
-      if (n && n.nodeType === 1 && (n.id === "ott-5x-2008" || n.id === "ott-5x-2012")) {
+      if (n && n.nodeType === 1 && n.id === "ott-5x-2012") {
         if (extra.parentNode) extra.parentNode.insertBefore(n, extra);
       }
     }
@@ -661,8 +658,7 @@
       if (nested) continue;
       /* Deepen theater strip stays visible outside the fold. */
       if (n.id && /-dp$/.test(n.id)) continue;
-      if (/(?:^|\s)itt-2x-2008(?:-[abc])?(?:\s|$)/.test(n.className || "")) continue;
-      if (n.id === "ott-5x-2008" || n.id === "ott-5x-2012") continue;
+      if (n.id === "ott-5x-2012") continue;
       if (/(?:^|\s)itt-5x-trails(?:\s|$)/.test(n.className || "") && n.id && n.id.indexOf("ott-5x-") === 0) continue;
       body.appendChild(n);
       moved++;

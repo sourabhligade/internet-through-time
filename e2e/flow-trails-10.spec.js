@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every open year 1994–2008 has a dest-unique official trail on the gold room and the map.
+ * Every open year 1994–2007 has a dest-unique official trail on the gold room and the map.
  */
 const fs = require('fs');
 const path = require('path');
@@ -23,8 +23,7 @@ const YEARS = [
   { year: '2004', gold: 'sites/facebook/networks.html', name: /thefacebook|Gmail/i },
   { year: '2005', gold: 'sites/youtube/upload.html', name: /Pandora|YouTube/i },
   { year: '2006', gold: 'sites/twitter/index.html', name: /Twitter|News Feed/i },
-  { year: '2008', gold: 'sites/appstore/index.html', name: /GitHub|App Store/i },
-];
+  ];
 
 test("official trail dests are unique websites inside each year", () => {
   const src = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");

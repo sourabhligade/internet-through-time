@@ -38,10 +38,6 @@ KEEP: dict[str, list[str]] = {
         "netflix", "tumblr", "formspring", "chrome", "wave", "android", "reddit",
         "google", "groupon",
     ],
-    "2011": [
-        "icloud", "pinterest", "linkedin", "kindlefire", "minecraft", "twitch",
-        "youtube", "dropbox", "hulu",
-    ],
     "2012": [
         "drawsomething", "googledrive", "snapchat", "uber", "buzzfeed", "youtube",
         "reddit", "surface", "windows8",
@@ -90,10 +86,6 @@ CITED_ADD: dict[str, list[str]] = {
         "flipboard", "minecraft", "hulu", "angry", "googlebuzz", "chromewebstore",
         "kinect", "cityville", "ibooks",
     ],
-    "2011": [
-        "snapchat", "ios5", "imessage", "gmusic", "pandora", "wechat", "line",
-        "stripe", "codecademy",
-    ],
     "2012": [
         "tinder", "duolingo", "coursera", "udacity", "edx", "nexus7", "jellybean",
         "ios6", "googleplay",
@@ -133,7 +125,6 @@ CITED_ADD: dict[str, list[str]] = {
 WANT_AFTER = {
     "2007": 18,
     "2010": 18,
-    "2011": 18,
     "2012": 18,
     "2013": 18,
     "2014": 18,

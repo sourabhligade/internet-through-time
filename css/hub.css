@@ -1166,44 +1166,6 @@ body {
   color: inherit;
 }
 
-/* 2008 — App Store green + Chrome blue energy */
-.y2008 {
-  --card-accent: #34a853;
-}
-.y2008::before {
-  background: linear-gradient(90deg, #4285f4, #34a853 40%, #fbbc05 70%, #ea4335);
-  opacity: 0.9;
-}
-.y2008 .year-card-inner {
-  border-color: #c8e6c9;
-}
-.y2008 .year {
-  color: #1b5e20;
-}
-.y2008 .label {
-  color: #222;
-}
-.y2008 .era-chip {
-  background: #e8f5e9;
-  color: #1b5e20;
-  border: 1px solid #a5d6a7;
-}
-.y2008 .meta {
-  color: #2e7d32;
-}
-.y2008 .motif {
-  background: radial-gradient(circle at 30% 30%, rgba(66, 133, 244, 0.25), transparent 55%),
-    radial-gradient(circle at 70% 60%, rgba(52, 168, 83, 0.2), transparent 50%);
-}
-.y2008:hover,
-.y2008:focus {
-  box-shadow: 0 4px 16px rgba(52, 168, 83, 0.25);
-}
-.y2008.available:hover .year,
-.y2008.available:focus .year {
-  color: #0d47a1;
-}
-
 /* 2009 — social blue + FarmVille green + Bing teal */
 .y2009 {
   --card-accent: #3b5998;
@@ -1280,42 +1242,6 @@ body {
   color: #1a6fb5;
 }
 
-.y2011 {
-  background: #0d0d0d;
-  border-color: #1db954;
-}
-.y2011::before {
-  background: linear-gradient(90deg, #1db954, #3b5998, #dd4b39);
-}
-.y2011 .year-card-inner {
-  background: #121212;
-  color: #eee;
-}
-.y2011 .year {
-  color: #1db954;
-}
-.y2011 .label {
-  color: #ccc;
-}
-.y2011 .era-chip {
-  background: #1a1a1a;
-  border-color: #1db954;
-  color: #1db954;
-}
-.y2011 .meta {
-  color: #1db954;
-}
-.y2011 .motif {
-  opacity: 0.15;
-}
-.y2011:hover,
-.y2011:focus {
-  box-shadow: 0 0 0 2px #1db954;
-}
-.y2011.available:hover .year,
-.y2011.available:focus .year {
-  color: #1565c0;
-}
 
 .y2012 {
   background: #1a1a2e;
@@ -1354,7 +1280,7 @@ body {
   color: #5eb0ff;
 }
 
-.year-card.available:not(.y1996):not(.y1999):not(.y2007):not(.y2008):not(.y2009):not(.y2010):not(.y2011):not(.y2012):not(.y2013):not(.y2014):not(.y2015):not(.y2016):not(.y2017):not(.y2018):hover .year {
+.year-card.available:not(.y1996):not(.y1999):not(.y2007):not({
   filter: brightness(0.92);
 }
 

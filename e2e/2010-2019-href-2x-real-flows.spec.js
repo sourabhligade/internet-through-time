@@ -23,16 +23,6 @@ const YEARS = [
     ],
   },
   {
-    year: "2011",
-    star: "itt11-gplus",
-    gold: "/years/2011/sites/googleplus/index.html",
-    leftover: [
-      { href: "/years/2011/sites/youtube/index.html", suffix: "yt" },
-      { href: "/years/2011/sites/gmail/index.html", suffix: "c11" },
-      { href: "/years/2011/sites/reddit/index.html", suffix: "reddit" },
-    ],
-  },
-  {
     year: "2012",
     star: "itt12-ig-android",
     gold: "/years/2012/sites/instagram/android.html",

@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * 2007 dest-true official 10 — period control writes official:true.
- * Trap / empty never write. Neighbor 2006 / 2008 keys stay empty.
+ * Trap / empty never write. Neighbor 2006 /  keys stay empty.
  */
 const { test, expect } = require("@playwright/test");
 

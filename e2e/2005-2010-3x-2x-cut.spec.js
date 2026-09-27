@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * CUT-3X-2X-2005-2010 — leftover 3× second pack, E2E, not mock.
- * Live years: 2005 / 2006 / 2007 / 2008 / 2009 / 2010.
+ * Live years: 2005 / 2006 / 2007 /  / 2009 / 2010.
  * Doors 10–18. Today’s leftover 3× / leftover 999 stay.
  * Lean 2006 / 2007 / 2009 stay at 6 leftover-3× (no invented pop-more).
  * Stars / guided 6 / official gold stay put.
@@ -73,24 +73,6 @@ const LIVE = {
       { dest: "/years/2007/sites/ipann/index.html", go: "[data-pop-go][data-pop-id='pop3-ipann']", key: "itt07-pop3-ipann", next: "vista/index.html", nextKey: "itt07-pop3-vista", weather: /9 Jan 2007 iPhone announce leftover/i, lx: ["itt07-ipann-dp"], never: ["itt07-iphone"] },
       { dest: "/years/2007/sites/vista/index.html", go: "[data-pop-go][data-pop-id='pop3-vista']", key: "itt07-pop3-vista", next: "gim/index.html", nextKey: "itt07-pop3-gim", weather: /Vista leftover 2007/i, lx: ["itt07-vista-dp"], never: ["itt07-iphone", "itt07-ie6"] },
       { dest: "/years/2007/sites/gim/index.html", go: "[data-pop-go][data-pop-id='pop3-gim']", key: "itt07-pop3-gim", next: "pages/home.html", nextKey: "", weather: /Gmail IMAP leftover 2007/i, lx: ["itt07-gim-dp"], never: ["itt07-iphone", "itt07-gmail"] }],
-  },
-  2008: {
-    star: "itt08-github",
-    starHref: "github",
-    gold: ["itt08-github", "itt08-apps", "itt08-chrome", "itt08-hulu", "itt08-tweets", "itt08-dropbox"],
-    want2x: 9,
-    official: ["github", "appstore", "chrome", "android", "hulu", "facebook", "twitter", "youtube", "dropbox", "iphone"],
-    ils: ["172,338,726"],
-    doors: [
-      { dest: "/years/2008/sites/airbnb/index.html", go: "[data-pop-go][data-pop-id='airbnb']", key: "itt08-pop-airbnb", next: "bitcoin/index.html", nextKey: "itt08-pop-bitcoin", weather: /Airbnb 2008 leftover/i, lx: ["itt08-ab-lx", "itt08-abnb"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/bitcoin/index.html", go: "[data-pop-go][data-pop-id='bitcoin']", key: "itt08-pop-bitcoin", next: "duckduckgo/index.html", nextKey: "itt08-pop-duckduckgo", weather: /31 Oct 2008 Bitcoin P2P e-cash paper/i, lx: ["itt08-btc-paper"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/duckduckgo/index.html", go: "[data-pop-go][data-pop-id='duckduckgo']", key: "itt08-pop-duckduckgo", next: "groupon/index.html", nextKey: "itt08-pop-groupon", weather: /DuckDuckGo 2008 leftover search/i, lx: ["itt08-ddg-dp"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/groupon/index.html", go: "[data-pop-go][data-pop-id='groupon']", key: "itt08-pop-groupon", next: "tweetdeck/index.html", nextKey: "itt08-pop-tweetdeck", weather: /Groupon 2008 leftover/i, lx: ["itt08-gp-lx"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/tweetdeck/index.html", go: "[data-pop-go][data-pop-id='tweetdeck']", key: "itt08-pop-tweetdeck", next: "failwhale/index.html", nextKey: "itt08-pop-failwhale", weather: /TweetDeck 2008 leftover desktop/i, lx: ["itt08-tdeck-dp"], never: ["itt08-github", "itt08-tweets"] },
-      { dest: "/years/2008/sites/failwhale/index.html", go: "[data-pop-go][data-pop-id='failwhale']", key: "itt08-pop-failwhale", next: "cuil/index.html", nextKey: "itt08-pop3-cuil", weather: /Fail Whale leftover 2008/i, lx: ["itt08-whale-dp"], never: ["itt08-github", "itt08-tweets"] },
-      { dest: "/years/2008/sites/cuil/index.html", go: "[data-pop-go][data-pop-id='pop3-cuil']", key: "itt08-pop3-cuil", next: "bitly/index.html", nextKey: "itt08-pop3-bitly", weather: /Cuil 28 Jul 2008 leftover/i, lx: ["itt08-cuil-dp"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/bitly/index.html", go: "[data-pop-go][data-pop-id='pop3-bitly']", key: "itt08-pop3-bitly", next: "spotify/index.html", nextKey: "itt08-pop3-spotify", weather: /bit\.ly 2008 leftover short links/i, lx: ["itt08-bitly-dp"], never: ["itt08-github"] },
-      { dest: "/years/2008/sites/spotify/index.html", go: "[data-pop-go][data-pop-id='pop3-spotify']", key: "itt08-pop3-spotify", next: "pages/home.html", nextKey: "", weather: /Spotify Europe 2008 leftover/i, lx: ["itt08-sp-lx", "itt08-spot-eu"], never: ["itt08-github", "itt08-chrome"] }],
   },
   2009: {
     star: "itt09-like",
@@ -254,7 +236,7 @@ test.describe("leftover 3× first-pack dest machines that were missing", () => {
 
 test.describe("CUT-3X-2X-2005-2010 dest folders stay frozen", () => {
   test("dest folders stay 117 / 126 / 55 / 199 / 68 / 44", () => {
-    const want = { 2006: 126, 2007: 55, 2008: 199, 2009: 68, 2010: 44 };
+    const want = { 2006: 126, 2007: 55, 2009: 68, 2010: 44 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;
@@ -319,7 +301,7 @@ for (const [year, spec] of Object.entries(LIVE)) {
       }
       if (year === "2006") expect(twoXH.join(" ")).toMatch(/wii/);
       if (year === "2007") expect(twoXH.join(" ")).toMatch(/iptouch/);
-      if (year === "2008") expect(twoXH.join(" ")).toMatch(/airbnb/);
+      if (year === "") expect(twoXH.join(" ")).toMatch(/airbnb/);
       if (year === "2009") expect(twoXH.join(" ")).toMatch(/wolfram/);
       if (year === "2010") expect(twoXH.join(" ")).toMatch(/uber/);
 

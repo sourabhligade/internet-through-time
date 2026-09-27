@@ -2,9 +2,9 @@
 
 **Date:** 2026-09-26  
 **Commit:** `cbbd243a6` on `museum/1994-2020-lean`  
-**Scope:** Major bugs on the shipped museum. Incomplete years (2014 React dual door, period pixels 2011+, short official trails, wiped 2018) stay out of this list.
+**Scope:** Major bugs on the shipped museum. Incomplete years (2014 React dual door, period pixels +, short official trails, wiped 2018) stay out of this list.
 
-Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md). Live 5× stays 2008 + boarded 2009.
+Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md). Live 5× stays  + boarded 2009.
 
 ---
 
@@ -46,13 +46,12 @@ Official and leftover rows `goto` `/years/2017/sites/...`. Those files are gone.
 
 **Verify:** `npx playwright test e2e/follow-site.spec.js` plus a 2005 Yahoo → 2006 Yahoo href assert.
 
-## 5. 2008 Starting Point calls App Store leftover
+## 5.  Starting Point calls App Store leftover
 
 Official n=1 is GitHub issue (`itt08-github`). Official n=2 is App Store (`itt08-apps`). `YEAR_STARTS` and `start-extra.js` still say App Store is leftover / not the chip.
 
 **Fix:** GitHub issue is the star. App Store is official stop 2.
 
-**Verify:** open `/years/2008/pages/home.html` and read the Starting Point copy.
 
 ## 6. 2017 MVP still boots a missing HTML shell
 
@@ -80,9 +79,9 @@ Test title is “2007 hub card is open”. Body expects `a.year-card[href*="year
 
 ## 10. 2016 READ-FIRST disagrees with disk
 
-File still says hub **28** years, dest folders **66**, and 2018 GDPR as a live lean door. Disk: 27 doors, 57 dest folders, 2018 wiped.
+File still says hub **28** years, dest folders **66**, and 2018 GDPR as a live lean door. Disk: 26 doors, 57 dest folders, 2015 / 2018 wiped.
 
-**Fix:** 27 doors, 57 dests, 2018 wiped.
+**Fix:** 26 doors, 57 dests, 2015 / 2018 wiped.
 
 ## 11. OPEN-CHECKLIST still names GitHub `20b7730ca`
 
@@ -102,7 +101,7 @@ Same skip: no `years/2017/index.html`.
 
 ## 14. Frozen dest counts vs disk
 
-`1994-2000-2009-href-2x` and `2001-2008-href-2x` freeze 2005 dests=117, 2008 dests=105, 2009 dests=68. Leftover-2× 2005 remain is 91. Full warehouse stays expected red; do not treat freeze counts as ship law.
+`1994-2000-2009-href-2x` and `2001-2007-href-2x` freeze 2005 dests=117,  dests=105, 2009 dests=68. Leftover-2× 2005 remain is 91. Full warehouse stays expected red; do not treat freeze counts as ship law.
 
 **Fix:** Leave warehouse freeze files red unless a named pack is retargeted. Dest-true leftover-2× catalog is the live number.
 
@@ -123,7 +122,7 @@ HTML Animoji needed Face ID saved + a face pick + two ticks. React Animoji is le
 ## Out of scope (incomplete years / research)
 
 - 2014 About / Starting Point / map still static HTML beside React official nine
-- Period `assets/period/2011–2022` readme-only
+- Period `assets/period/–2022` readme-only
 - 2004 official 8, 2012–2014 official 9
 - 2016 flow-improve research extras (moment cites, leftover empty dests) wait on a named go-ahead beyond this map
 - Full `e2e/` warehouse (6k tests) stays expected red
@@ -132,7 +131,7 @@ HTML Animoji needed Face ID saved + a face pick + two ticks. React Animoji is le
 
 ## Implement order
 
-1. Follow-a-site Yahoo 2005 + 2008 Starting Point copy (visitor)
+1. Follow-a-site Yahoo 2005 +  Starting Point copy (visitor)
 2. Start-extra / start-data React hrefs
 3. 2017-mvp React + dest-true allowlist
 4. leftover-20 React year door

@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2018": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2011": 1, "2015": 1, "2018": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -154,18 +154,12 @@
     "2006": yearVisitTour("2006",
       { path: "sites/twitter/index.html", label: "Twttr", blurb: "Empty / 280 / iPhone never write.", match: "/twitter/" },
       { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep leftover. Not the chip.", match: "/facebook/feed" }),
-    "2008": yearVisitTour("2008",
-      { path: "sites/github/issue.html", label: "GitHub issue", blurb: "Title + body. The 2008 save.", match: "/github/issue" },
-      { path: "sites/appstore/index.html", label: "App Store", blurb: "~500 apps. Official stop 2. GitHub issue is the chip.", match: "/appstore/" }),
     "2009": yearVisitTour("2009",
       { path: "sites/facebook/index.html", label: "Facebook Like", blurb: "9 Feb. Two partner Likes. Not Reactions.", match: "/facebook/" },
       { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Plant / harvest. Social game year.", match: "/farmville/" }),
     "2010": yearVisitTour("2010",
       { path: "sites/instagram/index.html", label: "Instagram", blurb: "iOS filter → share. The 2010 object.", match: "/instagram/" },
       { path: "sites/ipad/index.html", label: "iPad", blurb: "$499 · no camera · magazine Safari.", match: "/ipad/" }),
-    "2011": yearVisitTour("2011",
-      { path: "sites/googleplus/index.html", label: "Google+", blurb: "Circles · Hangout. The 2011 object.", match: "/googleplus/" },
-      { path: "sites/spotify/index.html", label: "Spotify US", blurb: "Legal US streaming. Invite FOMO.", match: "/spotify/" }),
     "2012": yearVisitTour("2012",
       { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "Named filter → share. The 2012 object.", match: "/instagram/android" },
       { path: "sites/facebook/ipo.html", label: "Facebook IPO", blurb: "$38 · Nasdaq delay · 18 May.", match: "/facebook/ipo" }),
@@ -217,7 +211,7 @@
     var y;
     for (y = 1994; y <= 2022; y++) {
       var ys = String(y);
-      if (WIPED[ys]) continue;
+      if (!isLiveYear(ys)) continue;
       var steps = YEAR_STARTS[ys];
       if (!steps || !steps.length) continue;
       var tid = ys + "-start";
@@ -665,7 +659,7 @@
 
   function isLiveYear(year) {
     year = String(year || "");
-    if (!/^(199[4-9]|200[0-9]|201[0-9]|202[0-2])$/.test(year)) return false;
+    if (!/^(199[4-9]|200[0-7]|2009|201[0-9]|202[0-2])$/.test(year)) return false;
     return !WIPED[year];
   }
 
@@ -682,7 +676,7 @@
     var years = [];
     var y;
     for (y = 1994; y <= 2022; y++) {
-      if (WIPED[String(y)]) continue;
+      if (!isLiveYear(String(y))) continue;
       years.push(String(y));
     }
     var total = totalStamps();

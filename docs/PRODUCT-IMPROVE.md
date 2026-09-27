@@ -1,10 +1,10 @@
 # Product improve map
 
-**Date:** 2026-09-13  
-**Status:** Recommendation. Not ship law.  
+**Date:** 2026-09-27 
+**Status:** Recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](DISK-TRUTH.md). 
 **Canonical year law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
 
-This file maps the 2026-09-13 audit: what is on disk, what live web-history museums do, and how to improve *this* museum without dest-farming.
+Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.** This file maps the 2026-09-13 audit against that live list: what is on disk, what live web-history museums do, and how to improve *this* museum without dest-farming.
 
 ---
 
@@ -16,7 +16,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 |---|---|---|---|---|
 | Curated year + OS + browser | Any URL + date | Screenshots / video | Period browser + archive | Restored ruins (GeoCities, MySpace Music) |
 | Star / leftover / incomplete-never-writes | No year law | Look, don’t use | Rendering is the exhibit | Wander neighborhoods |
-| ~27 playable years | 800B+ pages | Thousands of captures | Emulation | Millions of lost pages |
+| 26 playable years | 800B+ pages | Thousands of captures | Emulation | Millions of lost pages |
 
 **Advantage:** meaning. 2005 does not give you the iPhone. Accept All never writes. Follow Yahoo through years in that year’s chrome.
 
@@ -26,15 +26,15 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-Hub **28 years open** (1994–2008 + 2010–2022). **2009 boarded.** **2023–2025 wiped.**
+Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.** Counts below are the 2026-09-13 audit snapshot; live dest-folder counts are in [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|
-| Playable years | 28 |
+| Playable years | 26 |
 | Dest folders | 6,449 |
 | HTML pages | 9,588 |
 | e2e specs | 330 + 19 matrices |
-| Period assets | Strong 1994–2007. **2012 / 2013 / 2015 = 0 files.** 2010 = 4. 2008–2009 thin. |
+| Period assets | Strong 1994–2007. **2012 / 2013 / 2015 = 0 files.** 2010 = 4. –2009 thin. |
 
 Density is harvest history, not “how big the year was”:
 
@@ -42,9 +42,8 @@ Density is harvest history, not “how big the year was”:
 |---|---|---|
 | 2004 | 810 | Forest / warehouse |
 | 1999 / 2000 | 432 / 486 | Forest |
-| 2008 | 597 | Forest |
 | 2007 | 246 | Lean door (iPhone Safari) |
-| 2011 / 2012 / 2018 | 98 / 45 / 13 | Lean door (reverted to HEAD) |
+|  / 2012 / 2018 | 98 / 45 / 13 | Lean door (reverted to HEAD) |
 | 2019 / 2021 | 165 / 294 | Lean + leftover dest-farm still on disk |
 | 2009 | 78 | Boarded — visitor never enters |
 | 2022+ | — | Wiped |
@@ -79,11 +78,12 @@ Do these in order. Do not dest-farm to “look complete.” Do not add 2022+ to 
 
 A 9,588-page museum that is not on a URL is a private corpus.
 
-- [x] `museum/1994-2020-lean` pushed (`20b20c076`+). Hub 27 cards. No 2022 year tree.
+- [x] `museum/1994-2020-lean` pushed. Hub **26** cards. 2022 is a live lean door.
+- [x] Deploy configs: `netlify.toml` publish `.`, `vercel.json` trailingSlash + year page rewrites, `.github/workflows/pages.yml` is **workflow_dispatch only**. Repo root is the document root.
 - [ ] Unlock GitHub Actions billing or stop claiming CI (not verified this pass).
-- [ ] Enable GitHub Pages / Netlify / Vercel public URL (repo is on origin; Pages not verified).
+- [ ] Enable GitHub Pages / Netlify / Vercel public URL — user credentials / Settings → Pages. Do not flip Pages on from this pass.
 
-### Slice 1 — Visitor product is 27 doors + 5 walks
+### Slice 1 — Visitor product is 26 doors + 5 walks
 
 - [x] Hub leads with **first night**, **follow-a-site**, **one star per year**.
 - [x] Leftover-2× / leftover-3× default **off** (workshop / `?deep=1`). Keep for e2e.
@@ -92,7 +92,7 @@ A 9,588-page museum that is not on a URL is a private corpus.
 
 ### Slice 2 — 2009 is a hole or a door
 
-2009 is GeoCities death + Like. restorativland’s gallery *is* that wound. Boarding 78 dests reads as a bug between 2008 and 2010.
+2009 is GeoCities death + Like. restorativland’s gallery *is* that wound. Boarding 78 dests reads as a bug between  and 2010.
 
 Pick one:
 
@@ -120,25 +120,25 @@ Nobody else does Yahoo 1994→2010 in that year’s chrome.
 
 ### Slice 5 — Dest-farm lock (remaining forests)
 
-Same pass as 2011 / 2012 / 2018: dests = `urlMap` ∩ disk, then delete the rest. Shared refs (flow-maps, leftover matrices, unique-manifest, READ-FIRST) in the **same** pass.
+Same pass as  / 2012 / 2018: dests = `urlMap` ∩ disk, then delete the rest. Shared refs (flow-maps, leftover matrices, unique-manifest, READ-FIRST) in the **same** pass.
 
 Order suggestion (largest leftover risk first):
 
-- [ ] 2019, 2021, 2017, 2015
-- [ ] 2004, 2008, 1999–2003, 2005–2007, 2010
+- [x] 2015 wiped · 2017 / 2019 / 2021 are React doors (0 HTML dest folders)
+- [ ] 2004, , 1999–2003, 2005–2007, 2010
 - [ ] 2009 only after Slice 2
 
 ### Slice 6 — Optional, after the above
 
 - [x] Period-friction toggle (14.4k / wait for GIF). Not the default. Starting Point checkbox · `localStorage itt-period-friction` · `?slow=1`. Overlay then fades.
-- [x] One non-US dest per year where a mass product existed — **not dest-farmed as 28 new dests.** Famous that-year dests already on disk include Orkut 2004, WeChat 2011 leftover dest KEEP, Douyin 2016 leftover dest KEEP. Do not add a dest-farm row per year.
+- [x] One non-US dest per year where a mass product existed — **not dest-farmed as 28 new dests.** Famous that-year dests already on disk include Orkut 2004, WeChat  leftover dest KEEP, Douyin 2016 leftover dest KEEP. Do not add a dest-farm row per year.
 - [x] Shareable local postcard (“I finished 1995 Amazon SSL”) — localStorage only. Starting Point **Local postcard**. Empty never claims a finish.
 
 ---
 
 ## 5. If only three things
 
-1. Publish the 27-year hub.
+1. Publish the 26-year hub.
 2. Lead with first night + follow-a-site + one star; fold leftover machines.
 3. Dated capture on every star dest; label lean vs dense.
 

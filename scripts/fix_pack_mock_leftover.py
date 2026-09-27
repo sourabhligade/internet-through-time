@@ -26,7 +26,6 @@ STAR_TRAP = {
     "2004": "thefacebook networks",
     "2005": "YouTube upload",
     "2006": "Twttr",
-    "2008": "GitHub issue",
 }
 
 PACK_TABLE = re.compile(

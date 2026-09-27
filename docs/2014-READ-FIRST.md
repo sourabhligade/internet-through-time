@@ -2,15 +2,15 @@
 
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Hub card is available.  
-**Disk truth:** Hub is **28 years open** · **2009 boarded** · **2023–2025 wiped**. 2013 Vine, 2018 GDPR, and 2022 ChatGPT are live lean doors. This file is the lock. Star is WhatsApp Install.  
+**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · **2018 wiped** · **2023–2025 wiped**. 2013 Vine and 2022 ChatGPT are live lean doors. This file is the lock. Star is WhatsApp Install.  
 **Prefix:** `itt14`  
-**Clone shape:** live `years/2012/` (Win7 + IE 9 residual). Costume note from live `years/2015/` (Chrome habit is **2015+**). **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
+**Clone shape:** live `years/2012/` (Win7 + IE 9 residual). Chrome habit is a later-year look. **Do not** clone wiped `years/2015/`. **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
 
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · bans · scale |
 | Parent year (live) | 2013 Vine 6s — `years/2013/` is a live lean door. Clone shape stays `years/2012/`. |
-| Child live year | `years/2015/` · `itt15` · Periscope Go LIVE |
+| Next open year | 2016 Instagram Stories. 2015 is wiped. Periscope is not a door. |
 
 **Legal:** Educational. `localStorage` only. Never invent brand pixels. No WhatsApp wordmark. No OpenSSL exploit. No Ice Bucket celebrity stills. No Apple Pay checkout. No Slack Nitro-class bill.
 

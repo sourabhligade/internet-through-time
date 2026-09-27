@@ -3,7 +3,7 @@
  * 2012–2019 official 10 dest-true.
  * Gold dests: dest-specific incomplete never writes, complete writes star.
  * Official leftover: leftover-official dest-true · leftover never writes star.
- * Guided stays 6. 2011 live. 2020 Zoom Leave live.
+ * Guided stays 6.  live. 2020 Zoom Leave live.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");

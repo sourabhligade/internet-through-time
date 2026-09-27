@@ -8,16 +8,6 @@ Official stops are n=1–10. Leftover stops are n above 10. An empty click store
 
 These are not extra trail stops. Empty Save writes nothing. Finished Save writes `pack: "5x"`. Next stays hidden until that key exists.
 
-### 2008
-
-| Step | Room | Key | Next |
-|---|---|---|---|
-| F1 | App Store | `itt08-appstore` | Chrome |
-| F2 | Chrome | `itt08-chrome` | Android |
-| F3 | Android | `itt08-g1` | Hulu |
-| F4 | Hulu | `itt08-hulu` | Dropbox |
-| F5 | Dropbox | `itt08-db` | GitHub issue `itt08-github` |
-
 ### 2009
 
 2009 is boarded. No hub card. The 5× keys are not the official trail keys.
@@ -350,31 +340,6 @@ These are not extra trail stops. Empty Save writes nothing. Finished Save writes
 | 19 | Digg | `itt06-digg` | `sites/digg/index.html` |
 | 20 | Maps | `itt06-maps` | `sites/maps/index.html` |
 
-### 2008 · 20 stops · official 10 · leftover 10
-
-| n | Name | Key | Href |
-|---:|---|---|---|
-| 1 | GitHub issue | `itt08-github` | `sites/github/issue.html` |
-| 2 | App Store | `itt08-apps` | `sites/appstore/index.html` |
-| 3 | Chrome | `itt08-chrome` | `sites/chrome/index.html` |
-| 4 | Android G1 | `itt08-android` | `sites/android/index.html` |
-| 5 | Hulu | `itt08-hulu` | `sites/hulu/index.html` |
-| 6 | Facebook | `itt08-facebook` | `sites/facebook/index.html` |
-| 7 | Twitter | `itt08-tweets` | `sites/twitter/index.html` |
-| 8 | YouTube | `itt08-yt` | `sites/youtube/index.html` |
-| 9 | Dropbox | `itt08-dropbox` | `sites/dropbox/index.html` |
-| 10 | iPhone 3G | `itt08-iphone3g` | `sites/iphone/index.html` |
-| 11 | Google | `itt08-google-rlx` | `sites/google/index.html` |
-| 12 | Yahoo | `itt08-yahoo-rlx` | `sites/yahoo/index.html` |
-| 13 | Wikipedia | `itt08-wikipedia-rlx` | `sites/wikipedia/index.html` |
-| 14 | Gmail | `itt08-gmail-rlx` | `sites/gmail/index.html` |
-| 15 | Flickr | `itt08-flickr-rlx` | `sites/flickr/index.html` |
-| 16 | Reddit | `itt08-rd-lx` | `sites/reddit/index.html` |
-| 17 | Amazon | `itt08-amazon-rlx` | `sites/amazon/index.html` |
-| 18 | MySpace | `itt08-myspace-rlx` | `sites/myspace/index.html` |
-| 19 | del.icio.us | `itt08-delicious-rlx` | `sites/delicious/index.html` |
-| 20 | Stack Overflow | `itt08-so-lx` | `sites/stackoverflow/index.html` |
-
 ### 2009 · 10 stops · official 10 · leftover 0
 
 | n | Name | Key | Href |
@@ -405,7 +370,7 @@ These are not extra trail stops. Empty Save writes nothing. Finished Save writes
 | 9 | YouTube | `itt10-yt` | `sites/youtube/index.html` |
 | 10 | Sling Nest | `itt10-game-slingnest` | `sites/playable/game.html` |
 
-### 2011 · 10 stops · official 10 · leftover 0
+###  · 10 stops · official 10 · leftover 0
 
 | n | Name | Key | Href |
 |---:|---|---|---|

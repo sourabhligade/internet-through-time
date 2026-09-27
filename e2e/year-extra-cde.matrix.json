@@ -239,37 +239,7 @@
     "title": "Puck Slap",
     "next": "/years/2004/sites/playable/game.html"
   },
-  {
-    "year": "2008",
-    "role": "c",
-    "path": "/years/2008/sites/playable/extra-c.html",
-    "key": "itt08-game-fourkey",
-    "id": "fourkey",
-    "kind": "runner",
-    "title": "Four Key Dash",
-    "next": "/years/2008/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2008",
-    "role": "d",
-    "path": "/years/2008/sites/playable/extra-d.html",
-    "key": "itt08-game-touchroom",
-    "id": "touchroom",
-    "kind": "parlor",
-    "title": "Touch Room",
-    "next": "/years/2008/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2008",
-    "role": "e",
-    "path": "/years/2008/sites/playable/extra-e.html",
-    "key": "itt08-game-burnrope",
-    "id": "burnrope",
-    "kind": "quiz",
-    "title": "Burn Rope",
-    "next": "/years/2008/sites/playable/game.html"
-  },
-  {
+        {
     "year": "2009",
     "role": "c",
     "path": "/years/2009/sites/playable/extra-c.html",
@@ -328,36 +298,6 @@
     "kind": "hold",
     "title": "Filter Hold",
     "next": "/years/2010/sites/playable/game.html"
-  },
-  {
-    "year": "2011",
-    "role": "c",
-    "path": "/years/2011/sites/playable/extra-c.html",
-    "key": "itt11-game-rushlane",
-    "id": "rushlane",
-    "kind": "place",
-    "title": "Rush Lane",
-    "next": "/years/2011/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2011",
-    "role": "d",
-    "path": "/years/2011/sites/playable/extra-d.html",
-    "key": "itt11-game-griphold",
-    "id": "griphold",
-    "kind": "hold",
-    "title": "Grip Hold",
-    "next": "/years/2011/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2011",
-    "role": "e",
-    "path": "/years/2011/sites/playable/extra-e.html",
-    "key": "itt11-game-spentweek",
-    "id": "spentweek",
-    "kind": "quiz",
-    "title": "Spent Week",
-    "next": "/years/2011/sites/playable/game.html"
   },
   {
     "year": "2012",

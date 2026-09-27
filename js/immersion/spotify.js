@@ -1,5 +1,5 @@
 /**
- * Spotify US launch theater (2011) — invite free · plans · playlist · ad flash
+ * Spotify US launch theater () — invite free · plans · playlist · ad flash
  * localStorage only — no real streams.
  */
 (function (global) {
@@ -15,7 +15,7 @@
         (typeof document !== "undefined" &&
           document.documentElement &&
           document.documentElement.getAttribute("data-itt-year")) ||
-        "2011"
+        ""
     );
   }
   function key(kind) {
@@ -94,7 +94,7 @@
           "</b> · this browser only"
       );
     } else {
-      setStatus("US launch Jul 14, 2011 — free tier starts <b>invite-only</b>.");
+      setStatus("US launch Jul 14,  — free tier starts <b>invite-only</b>.");
     }
     renderList();
 

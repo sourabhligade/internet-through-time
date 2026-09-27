@@ -3,11 +3,11 @@
  * Leftover-2× 3× — every dest on strips A/B/C is a REAL dest-true leftover
  * machine, not a mock plaque.
  *
- * Real: dest-true leftover pair · field · two honesty ticks · trap · keep pick ·
- * empty/trap/0 ticks never write · complete writes { real, leftover, year } ·
+ * Real: dest-true leftover pair · field · two honesty ticks · trap · keep pick
+ * empty/trap/0 ticks never write · complete writes { real, leftover, year }
  * star stays empty · Next is a live dest (HTTP 200).
  *
- * Mock: dest-field factory · "I saw / I watched / period note" · one-click save ·
+ * Mock: dest-field factory · "I saw / I watched / period note" · one-click save
  * open leftover as the only verb · leftover write without real:true.
  */
 const { test, expect } = require("@playwright/test");
@@ -16,15 +16,13 @@ const path = require("path");
 const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2005", "2006", "2008"];
+const YEARS = ["2005", "2006"];
 const STAR = {
   2005: "itt05-yt-uploads",
   2006: "itt06-tweets",
   2007: "itt07-iphone",
-  2008: "itt08-github",
   2009: "itt09-like",
   2010: "itt10-ig-posts",
-  2011: "itt11-gplus",
   2017: "itt17-faceid",
 };
 const MOCK_COPY =

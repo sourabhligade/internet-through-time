@@ -1034,7 +1034,7 @@
           } catch (eGo) { /* */ }
           return;
         }
-        saveJSON(key, blob({ city: city, listing: listing, requested: true, note: note || "request residual", year: "2011" }));
+        saveJSON(key, blob({ city: city, listing: listing, requested: true, note: note || "request residual", year: "" }));
         stamp();
         feedback("Request sent (no payment · this browser).", st);
         revealNext(doc);

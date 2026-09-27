@@ -147,7 +147,6 @@
       "2005": "#3a6ea5",
       "2006": "#3a6ea5",
       "2007": "#3a6ea5",
-      "2008": "#3a6ea5"
     };
     var wantDesk = (config.defaultPrefs && config.defaultPrefs.desktopBg) || PERIOD_DESK[YEAR] || "#008080";
     if (String(wantDesk).toLowerCase() === "#000000") {
@@ -1278,7 +1277,6 @@
         "2005": "YouTube · Maps · Reddit",
         "2006": "Twitter · YouTube · Facebook",
         "2007": "iPhone · Gmail · Street View",
-        "2008": "App Store · Chrome · Android",
         "2009": "Like · FarmVille · Bing"
         
         
@@ -1307,7 +1305,6 @@
         "2005": "youtube or reddit",
         "2006": "twitter or youtube",
         "2007": "iphone or gmail",
-        "2008": "chrome or appstore",
         "2009": "facebook or farmville"
         
         

@@ -1,14 +1,14 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2011 / 2013–2022 lean doors live. 2009 boarded. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
+ * 2007 / 2010 / 2012–2014 / 2016–2017 / 2019–2022 lean doors live. 2009 boarded. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
-    "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2010", "2011", "2012", "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
+ "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2010", "2012", "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
@@ -19,12 +19,12 @@
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
-      { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2008", "2010", "2011", "2012", "2013"] },
+ { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2010", "2012", "2013"] },
       { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2016", "2017", "2019", "2020", "2021", "2022"] }
     ],
 
     leanYears: [
-      "2007", "2010", "2011", "2012",
+ "2007", "2010", "2012",
       "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
     ],
 
@@ -42,11 +42,9 @@
       "2004": "College network only. Not modern Facebook.",
       "2005": "YouTube upload is the save. Maps / Reddit / Digg. Google does not own YouTube.",
       "2006": "140 because SMS. News Feed. No iPhone.",
-      "2007": "Safari only. App Store is 2008. Desktop still mass.",
-      "2008": "Apps arrive. Desktop is still mass.",
+      "2007": "Safari only. App Store is . Desktop still mass.",
       "2009": "Like, not Reactions. No iPad.",
       "2010": "iPhone only. Android Instagram is next year.",
-      "2011": "Circles and Siri. Timeline is.",
       "2012": "The square photo leaves the iPhone.",
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
@@ -73,10 +71,8 @@
       "2005": "You uploaded a clip. You dragged a map. You boosted a link. Google did not own YouTube yet.",
       "2006": "You typed 140 because SMS. News Feed was. There was no iPhone yet.",
       "2007": "You used Safari on the phone. The App Store was next year. Desktop was still mass.",
-      "2008": "There were about five hundred apps. The desktop was still mass. Chrome was a product room.",
       "2009": "You Liked a partner page. Beacon never wrote. Reactions were not here yet.",
       "2010": "The photo was square. The filter had a name. Android is next year.",
-      "2011": "You named a circle. Hangout was the save. G+ won never wrote.",
       "2012": "The square left the iPhone. Wikipedia went dark for a day.",
       "2013": "The loop was six seconds. Stories here are Snapchat, not Instagram.",
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
@@ -280,17 +276,6 @@
         ],
         game: { label: "TrailSled", href: "years/2006/sites/playable/game.html" }
       },
-            "2008": {
-        era: "App Store · Chrome · G1",
-        thesis: "GitHub issue is the star. App Store · Chrome · G1. Chrome is a product room.",
-        gold: { label: "GitHub issue", href: "years/2008/sites/github/issue.html", key: "itt08-github" },
-        leftoverGold: { label: "App Store", href: "years/2008/sites/appstore/index.html", key: "itt08-apps" },
-        guided: [
-          { label: "Chrome", href: "years/2008/sites/chrome/index.html" },
-          { label: "Android G1", href: "years/2008/sites/android/index.html" }
-        ],
-        game: { label: "Goo Span", href: "years/2008/sites/playable/game.html" }
-      },
             "2010": {
         era: "iPad · Instagram iOS · Open Graph",
         thesis: "Filter on iPhone only. Android is next year.",
@@ -330,16 +315,6 @@
           { label: "Bing", href: "years/2009/sites/bing/index.html" }
         ],
         game: { label: "Plot Neighbors", href: "years/2009/sites/playable/game.html" }
-      },
-      "2011": {
-        era: "Circles · Hangout · Win7 + IE 9",
-        thesis: "Hangout is the save. G+ won never writes. IG Android is 2012.",
-        gold: { label: "Google+ Hangout", href: "years/2011/sites/googleplus/index.html", key: "itt11-gplus" },
-        guided: [
-          { label: "Spotify US", href: "years/2011/sites/spotify/index.html" },
-          { label: "Siri", href: "years/2011/sites/iphone/index.html" }
-        ],
-        game: { label: "Letter Swap", href: "years/2011/sites/playable/game.html" }
       },
       "2013": {
         era: "Vine 6s · iOS 7 · Stories",
@@ -446,8 +421,7 @@
           { year: "2004", href: "years/2004/sites/yahoo/index.html", note: "Web 2.0 year" },
           { year: "2005", href: "years/2005/sites/yahoo/index.html", note: "still #1" },
           { year: "2006", href: "years/2006/sites/yahoo/index.html", note: "Twttr year" },
-          { year: "2008", href: "years/2008/sites/yahoo/index.html", note: "App Store year" },
-          { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" }
+                    { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" }
         ]
       },
       {
@@ -476,8 +450,7 @@
           { year: "2004", href: "years/2004/sites/google/index.html", note: "thefacebook year" },
           { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps leftover" },
           { year: "2006", href: "years/2006/sites/google/index.html", note: "YouTube deal year" },
-          { year: "2008", href: "years/2008/sites/google/index.html", note: "Chrome year" },
-          { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" },
+                    { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" },
           { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" },
           { year: "2021", href: "/app/index.html#/year/2021", note: "ATT year" }
         ]

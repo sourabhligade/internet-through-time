@@ -290,7 +290,7 @@ Use the next reserve row only when a Phase 0 box fails. Do not add a reserve on 
 | `skatejam2000` | Museum card 1 Jun 2000. CDX earliest 200 is 20 Jun 2000. | 20 Jun 2000 | https://www.webdesignmuseum.org/gallery/skatejam2000-2000 | tick |
 | `theatlantic` | September 2000 directory beside the Napster essay. The magazine is older. Only the sidebar is the 2000 page. | Sep 2000 | https://www.theatlantic.com/past/docs/issues/2000/09/mannlinks.htm | tick |
 
-`quickhoney` stays off the reserve until a 2000 page, not the 2011 Dallas Observer interview, is opened. `memento` the film site and `otnemem` must not both be built.
+`quickhoney` stays off the reserve until a 2000 page, not the  Dallas Observer interview, is opened. `memento` the film site and `otnemem` must not both be built.
 
 ## Do not build
 

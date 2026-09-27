@@ -148,7 +148,7 @@
       if (verbs[i].getAttribute("data-official-verb-bound") === "1") continue;
       verbs[i].setAttribute("data-official-verb-bound", "1");
       /* Capture so we write the official key before a product machine
-         clears the field (2008 Dropbox). residual-real still blocks first. */
+         clears the field ( Dropbox). residual-real still blocks first. */
       verbs[i].addEventListener("click", function (ev) {
         /* Only stop navigation. Forms with an existing period machine
            (no action / action="#") must still fire submit. */

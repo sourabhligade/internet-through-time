@@ -77,7 +77,7 @@ amazon audioscrobbler bittorrent blogger blogspot cnet craigslist dailykos daypo
 | 4 | `picasa` | Picasa | Lifescape **15 Oct 2002**. Organize leftover. Google buy is 2004. | https://en.wikipedia.org/wiki/Picasa | Import leftover `itt02-picasa-lx` | Organize leftover `itt02-picasa-d2` | Google Photos as 2002 · Flickr 2004 | `flashmx` |
 | 5 | `flashmx` | Macromedia Flash MX | Ships **15 Mar 2002** + Player 6. Video leftover. | https://www.webdesignmuseum.org/software/macromedia-flash-mx-in-2002 | Open a FLA leftover `itt02-flashmx-lx` | Publish leftover `itt02-flashmx-d2` | Flash 8 as 2002 · YouTube as 2002 | `emule` |
 | 6 | `emule` | eMule | Project **13 May 2002**. Binary **4 Aug 2002**. eDonkey dest is reserved — this is the mule. | https://en.wikipedia.org/wiki/EMule | Search leftover `itt02-emule-lx` | Queue leftover `itt02-emule-d2` | Live P2P · eDonkey dest as this dest | `tor` |
-| 7 | `tor` | Tor alpha | Announced **20 Sep 2002**. Onion leftover. Not Tor Browser 2008. | https://en.wikipedia.org/wiki/Tor_(network) | Open an onion leftover `itt02-tor-lx` | Route leftover `itt02-tor-d2` | Dark-web shop as gold · live relay | `gametrailers` |
+| 7 | `tor` | Tor alpha | Announced **20 Sep 2002**. Onion leftover. Not Tor Browser . | https://en.wikipedia.org/wiki/Tor_(network) | Open an onion leftover `itt02-tor-lx` | Route leftover `itt02-tor-d2` | Dark-web shop as gold · live relay | `gametrailers` |
 | 8 | `gametrailers` | GameTrailers | Founded **25 Mar 2002**. Trailer leftover. YouTube is 2005. | https://en.wikipedia.org/wiki/GameTrailers | Watch leftover `itt02-gametrailers-lx` | Queue leftover `itt02-gametrailers-d2` | YouTube as 2002 · IGN dest as this dest | `afterellen` |
 | 9 | `afterellen` | AfterEllen | Commons **2002**. Lesbian-pop leftover. | https://commons.wikimedia.org/wiki/Category:Internet_properties_established_in_2002 | Open a post leftover `itt02-afterellen-lx` | Read leftover `itt02-afterellen-d2` | Live comments · AfterElton as only gold | `stereogum` |
 | 10 | `stereogum` | Stereogum | Scott Lapatine **Jan 2002**. MP3-blog leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Open a track leftover `itt02-stereogum-lx` | Stream leftover `itt02-stereogum-d2` | Pitchfork as this dest · iTunes Store | `metrolyrics` |
@@ -97,7 +97,7 @@ amazon audioscrobbler bittorrent blogger blogspot cnet craigslist dailykos daypo
 | 24 | `pastebin` | Pastebin.com | 2002 paste leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Paste leftover `itt02-pastebin-lx` | Share leftover `itt02-pastebin-d2` | Live leak · GitHub gist as 2002 | `payscale` |
 | 25 | `payscale` | PayScale | 2002 salary leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Compare leftover `itt02-payscale-lx` | Read leftover `itt02-payscale-d2` | Live résumé · LinkedIn dest as this dest | `hostgator` |
 | 26 | `hostgator` | HostGator | Founded **22 Oct 2002**. Shared leftover. | https://en.wikipedia.org/wiki/HostGator | Sign leftover `itt02-hostgator-lx` | Park leftover `itt02-hostgator-d2` | Live bill · WordPress as 2002 gold | `csnstores` |
-| 27 | `csnstores` | CSN Stores | Shah + Conine **Aug 2002**. racksandstands leftover. Wayfair brand is **2011**. | https://en.wikipedia.org/wiki/Wayfair | Browse leftover `itt02-csnstores-lx` | Add leftover `itt02-csnstores-d2` | Wayfair 2011 as 2002 gold · live card | `mylife` |
+| 27 | `csnstores` | CSN Stores | Shah + Conine **Aug 2002**. racksandstands leftover. Wayfair brand is ****. | https://en.wikipedia.org/wiki/Wayfair | Browse leftover `itt02-csnstores-lx` | Add leftover `itt02-csnstores-d2` | Wayfair  as 2002 gold · live card | `mylife` |
 | 28 | `mylife` | Reunion.com / MyLife | 2002 people-find leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Find leftover `itt02-mylife-lx` | Register leftover `itt02-mylife-d2` | Facebook 2004 · Classmates as this dest | `maxpreps` |
 | 29 | `maxpreps` | MaxPreps | 2002 HS-sports leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Search leftover `itt02-maxpreps-lx` | Read leftover `itt02-maxpreps-d2` | ESPN dest as this dest | `animesuki` |
 | 30 | `animesuki` | AnimeSuki | Commons **2002**. Fansub-index leftover. No live torrent. | https://commons.wikimedia.org/wiki/Category:Internet_properties_established_in_2002 | Browse leftover `itt02-animesuki-lx` | Read leftover `itt02-animesuki-d2` | Live torrent · Crunchyroll as 2002 | `blogcritics` |
@@ -168,7 +168,7 @@ amazon audioscrobbler bittorrent blogger blogspot cnet craigslist dailykos daypo
 
 Every slug above is **absent** from the reserved 2002 list of 78. Cross-year repeats (`slashdot`, `cnn`, `ie6`, `xbox`) are intentional: same product, year-true 2002 verb, **not** on 2002 disk. `playable` / official dests / `stumbleupon` / reserved Board A+B slugs are never in this set.
 
-`ipod2` ≠ reserved `ipod`. `xboxlive` ≠ carry `xbox`. `emule` ≠ reserved `edonkey`. `radiotime` ≠ TuneIn-app 2010 gold. `csnstores` ≠ Wayfair 2011 brand.
+`ipod2` ≠ reserved `ipod`. `xboxlive` ≠ carry `xbox`. `emule` ≠ reserved `edonkey`. `radiotime` ≠ TuneIn-app 2010 gold. `csnstores` ≠ Wayfair  brand.
 
 ## Counts
 

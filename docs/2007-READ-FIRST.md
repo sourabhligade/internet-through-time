@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-01  
 **Status:** **DONE**. Live lean door. Dest-true official 10. Dest folders **33** (dest-lock). Follow this lock. Do **not** `git checkout` an old 2007 forest.  
-**Parent (live):** 2006 Twttr. **Child:** 2008 GitHub issue (**live**).
+**Parent (live):** 2006 Twttr. ** is wiped** (no tree, no hub card).
 
 ## One line
 
@@ -17,7 +17,7 @@
 | ★ Star | **iPhone Safari** · announce **9 Jan 2007** · US ship **29 Jun 2007** · `sites/iphone/index.html` · `itt07-iphone` · type a URL + both honesties + **Go** is the save |
 | Incomplete | empty URL · 0 ticks · App Store · Chrome · buy-as-gold · never writes |
 | Complete | URL ≥2 + both honesties + Go · reload persist |
-| Trap | **App Store** (2008) · **Chrome** (2008) · **Android G1** (2008) · iPhone 3G · Street View as the chip |
+| Trap | **App Store** () · **Chrome** () · **Android G1** () · iPhone 3G · Street View as the chip |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ★ Safari · Street View leftover · Gmail open leftover · Facebook Platform leftover · Twitter leftover · YouTube leftover · Tumblr leftover · Kindle leftover · XP/IE6 residual · Safari Queue |
 | First door | **lean from scratch**. Do **not** restore an old forest. |
@@ -31,7 +31,7 @@
 | ILS June websites | **2007 row exists:** **121,892,559 (+43%)** · users **1,373,327,790** · 11.3 users/site · birthmark Tumblr — [ILS](https://www.internetlivestats.com/total-number-of-websites/) |
 | Netcraft January 2007 | **106,875,138** sites (+1.63M) — Wayback [Netcraft 5 Jan 2007](http://web.archive.org/web/20111021072331/http://news.netcraft.com/archives/2007/01/05/january_2007_web_server_survey.html) · pair Microsoft blog reprint |
 | ILS June people (same table) | **1,373,327,790**. Do **not** blend ITU Trends Sept 2007 “1.1B” chart (2006-class) into this June cell. |
-| iPhone | Announce **9 Jan** · ship **29 Jun** US — Apple. Safari on the phone is the museum verb. App Store is **2008**. |
+| iPhone | Announce **9 Jan** · ship **29 Jun** US — Apple. Safari on the phone is the museum verb. App Store is ****. |
 | Street View | **29 May 2007** — Google. Leftover dest. Not January Maps. |
 | Gmail open | **7 Feb 2007** — Google opens Gmail to everyone (invite leftover). |
 | Facebook Platform | **24 May 2007** leftover. Not Like (2009). |

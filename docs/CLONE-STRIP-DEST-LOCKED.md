@@ -23,20 +23,20 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 
 | This pass | Not this pass |
 |-----------|---------------|
-| Strip leftover clone machines on dest-locked lean dests | Dest-lock forests 1994–2006 + 2008 |
+| Strip leftover clone machines on dest-locked lean dests | Dest-lock forests 1994–2006 |
 | Replace leftover dest leftover-2× **pairs** with one dest-true leftover writer | Dest-lock 2013 leftover 2× ×2 (year law) |
 | Delete leftover warehouse on official dest HTML | Open 2009 as a live door |
 | Keep leftover-3× unique dest-true cream face | Add dests · unique leftover-20 maps |
-| Update leftover-official matrix + e2e | Invent 2011+ brand pixels · 2022+ |
+| Update leftover-official matrix + e2e | Invent + brand pixels · 2022+ |
 
 **Out of scope (do not touch):**
 
 | Year | Why |
 |------|-----|
-| 1994–2006 + 2008 | Forests. Leftover-2× on dests is DISK-TRUTH. |
+| 1994–2006 | Forests. Leftover-2× on dests is DISK-TRUTH. |
 | 2013 | READ-FIRST: leftover 2× ×2 on every dest. Never dest-locked. |
 | 2009 | Boarded plaque. |
-| 2011, 2014, 2018, 2019, 2021 | Already **0** clone dests. |
+| , 2014, 2018, 2019, 2021 | Already **0** clone dests. |
 | 2015–2020 | Dest-lock **reverted**. Leftover dest leftover-2× is dest-farm leftover-2× (not this strip). |
 | 2019 leftover dests (19) | Already one leftover writer each. Model, not target. |
 
@@ -322,7 +322,7 @@ A mechanical pass is allowed: delete `details.itt-also-year` leftover-2× blocks
 ## 12. Do not
 
 - Dest-lock 2013 leftover 2× ×2.
-- Dest-lock forests 1994–2006 + 2008.
+- Dest-lock forests 1994–2006.
 - Strip leftover-3× unique dest-true cream faces.
 - Strip 2017 unique leftover dest dest-true verbs (`data-uf17-*`).
 - Add dests to 2018 / 2021 “to make leftover-3× 9.”
